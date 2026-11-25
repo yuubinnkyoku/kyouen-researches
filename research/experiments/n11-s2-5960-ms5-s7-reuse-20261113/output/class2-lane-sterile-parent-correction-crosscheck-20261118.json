@@ -1,0 +1,1733 @@
+{
+ "schema": "n11-class2-lane-sterile-parent-correction-crosscheck-20261118-v1",
+ "date": "2026-11-18",
+ "role": "verification-side crosscheck of the coordinator sterile-parent correction (commits 1d05b0a1/e3db912a/4ffdf3b6/8c04f41e) by the long-term lane that published census v19, the cost82e claim v1 and the cost82e revalidation sweep",
+ "inputs": {
+  "census_v19": "git blob a0c6abaf0df163eddc35f8b8dc0f8c0eb4268fe6 (commit 122cb6c6, this lane)",
+  "k0865": "git blob 9c251da3138c5cb0516e097be5e5d0427dfaf5f0 (commit 5ada304a, parallel lane)",
+  "filter_audit": "git blob 60233241c6c48ab5085bf125b3edfb1cf56941a6 (commit 1d05b0a1, parallel lane; audited_main 43f9e07a)",
+  "cost82e_audit": "git blob 49757780129b0e7de130245306237f3f108aa79d (commit beb41b19, this lane)"
+ },
+ "parent": {
+  "hex": "00000000020000003800000080000000",
+  "classification": "all_remaining_sterile (K0865)",
+  "remaining_s6_orbits": 18,
+  "sterile_cost": 1460,
+  "one_bit_diff_bits": {
+   "000000000200000038000000c0000000": 30,
+   "00000000020000003800000080000020": 5,
+   "00000000020000003800000088000000": 27,
+   "00000000020000003800020080000000": 41,
+   "00000000020000003800000880000000": 35,
+   "00000000020000003800400080000000": 46,
+   "00000000020000003800000180000000": 32,
+   "00000000020000003800200080000000": 45,
+   "00000000020000003800000080008000": 15,
+   "00000000020000003800000080000800": 11,
+   "00000000020000003800000090000000": 28,
+   "00000000020000003800000080000400": 10,
+   "00000000020000003800000080000100": 8,
+   "00000000020000003800000080004000": 14,
+   "00000000020000003800000280000000": 33,
+   "00000000020000003800100080000000": 44,
+   "00000000020000003840000080000000": 54,
+   "00000000020000003800000080000004": 2
+  }
+ },
+ "checks": [
+  {
+   "check": "H.pin.census_v19",
+   "pass": true,
+   "detail": "a0c6abaf0df163eddc35f8b8dc0f8c0eb4268fe6 (140936 bytes)"
+  },
+  {
+   "check": "H.pin.k0865",
+   "pass": true,
+   "detail": "9c251da3138c5cb0516e097be5e5d0427dfaf5f0 (112531 bytes)"
+  },
+  {
+   "check": "H.pin.filter_audit",
+   "pass": true,
+   "detail": "60233241c6c48ab5085bf125b3edfb1cf56941a6 (6146 bytes)"
+  },
+  {
+   "check": "H.pin.cost82e_audit",
+   "pass": true,
+   "detail": "49757780129b0e7de130245306237f3f108aa79d (21905 bytes)"
+  },
+  {
+   "check": "A.totals.open_s5",
+   "pass": true,
+   "detail": "174"
+  },
+  {
+   "check": "A.totals.unclosable",
+   "pass": true,
+   "detail": "3"
+  },
+  {
+   "check": "A.totals.partial",
+   "pass": true,
+   "detail": "57"
+  },
+  {
+   "check": "A.totals.no_sterile",
+   "pass": true,
+   "detail": "114"
+  },
+  {
+   "check": "A.totals.sterile_refs",
+   "pass": true,
+   "detail": "91"
+  },
+  {
+   "check": "A.totals.remaining_row_refs",
+   "pass": true,
+   "detail": "12274"
+  },
+  {
+   "check": "A.totals.eff_remaining",
+   "pass": true,
+   "detail": "12183"
+  },
+  {
+   "check": "A.filter_audit_k0865.open_s5",
+   "pass": true,
+   "detail": "174"
+  },
+  {
+   "check": "B.parent_in_unclosable",
+   "pass": true,
+   "detail": "1 entries"
+  },
+  {
+   "check": "B.parent_rem",
+   "pass": true,
+   "detail": "18"
+  },
+  {
+   "check": "B.parent_rem_cost",
+   "pass": true,
+   "detail": "1460"
+  },
+  {
+   "check": "B.parent_sterile_cost",
+   "pass": true,
+   "detail": "1460"
+  },
+  {
+   "check": "B.parent_sterile_refs_count",
+   "pass": true,
+   "detail": "18"
+  },
+  {
+   "check": "B.parent_classes",
+   "pass": true,
+   "detail": "4"
+  },
+  {
+   "check": "B.filter_parent_hex",
+   "pass": true,
+   "detail": "00000000020000003800000080000000"
+  },
+  {
+   "check": "B.filter_parent_rem",
+   "pass": true,
+   "detail": "18"
+  },
+  {
+   "check": "B.filter_parent_sterile_cost",
+   "pass": true,
+   "detail": "1460"
+  },
+  {
+   "check": "B.filter_parent_all18",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "C.refs_distinct",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "C.one_bit_diff.000000000200000038000000c0000000",
+   "pass": true,
+   "detail": "xor 00000000000000000000000040000000"
+  },
+  {
+   "check": "C.canon_equals_hex.000000000200000038000000c0000000",
+   "pass": true,
+   "detail": "canon 000000000200000038000000c0000000"
+  },
+  {
+   "check": "C.popcount_six.000000000200000038000000c0000000",
+   "pass": true,
+   "detail": "6"
+  },
+  {
+   "check": "C.one_bit_diff.00000000020000003800000080000020",
+   "pass": true,
+   "detail": "xor 00000000000000000000000000000020"
+  },
+  {
+   "check": "C.canon_equals_hex.00000000020000003800000080000020",
+   "pass": true,
+   "detail": "canon 00000000020000003800000080000020"
+  },
+  {
+   "check": "C.popcount_six.00000000020000003800000080000020",
+   "pass": true,
+   "detail": "6"
+  },
+  {
+   "check": "C.one_bit_diff.00000000020000003800000088000000",
+   "pass": true,
+   "detail": "xor 00000000000000000000000008000000"
+  },
+  {
+   "check": "C.canon_equals_hex.00000000020000003800000088000000",
+   "pass": true,
+   "detail": "canon 00000000020000003800000088000000"
+  },
+  {
+   "check": "C.popcount_six.00000000020000003800000088000000",
+   "pass": true,
+   "detail": "6"
+  },
+  {
+   "check": "C.one_bit_diff.00000000020000003800020080000000",
+   "pass": true,
+   "detail": "xor 00000000000000000000020000000000"
+  },
+  {
+   "check": "C.canon_equals_hex.00000000020000003800020080000000",
+   "pass": true,
+   "detail": "canon 00000000020000003800020080000000"
+  },
+  {
+   "check": "C.popcount_six.00000000020000003800020080000000",
+   "pass": true,
+   "detail": "6"
+  },
+  {
+   "check": "C.one_bit_diff.00000000020000003800000880000000",
+   "pass": true,
+   "detail": "xor 00000000000000000000000800000000"
+  },
+  {
+   "check": "C.canon_equals_hex.00000000020000003800000880000000",
+   "pass": true,
+   "detail": "canon 00000000020000003800000880000000"
+  },
+  {
+   "check": "C.popcount_six.00000000020000003800000880000000",
+   "pass": true,
+   "detail": "6"
+  },
+  {
+   "check": "C.one_bit_diff.00000000020000003800400080000000",
+   "pass": true,
+   "detail": "xor 00000000000000000000400000000000"
+  },
+  {
+   "check": "C.canon_equals_hex.00000000020000003800400080000000",
+   "pass": true,
+   "detail": "canon 00000000020000003800400080000000"
+  },
+  {
+   "check": "C.popcount_six.00000000020000003800400080000000",
+   "pass": true,
+   "detail": "6"
+  },
+  {
+   "check": "C.one_bit_diff.00000000020000003800000180000000",
+   "pass": true,
+   "detail": "xor 00000000000000000000000100000000"
+  },
+  {
+   "check": "C.canon_equals_hex.00000000020000003800000180000000",
+   "pass": true,
+   "detail": "canon 00000000020000003800000180000000"
+  },
+  {
+   "check": "C.popcount_six.00000000020000003800000180000000",
+   "pass": true,
+   "detail": "6"
+  },
+  {
+   "check": "C.one_bit_diff.00000000020000003800200080000000",
+   "pass": true,
+   "detail": "xor 00000000000000000000200000000000"
+  },
+  {
+   "check": "C.canon_equals_hex.00000000020000003800200080000000",
+   "pass": true,
+   "detail": "canon 00000000020000003800200080000000"
+  },
+  {
+   "check": "C.popcount_six.00000000020000003800200080000000",
+   "pass": true,
+   "detail": "6"
+  },
+  {
+   "check": "C.one_bit_diff.00000000020000003800000080008000",
+   "pass": true,
+   "detail": "xor 00000000000000000000000000008000"
+  },
+  {
+   "check": "C.canon_equals_hex.00000000020000003800000080008000",
+   "pass": true,
+   "detail": "canon 00000000020000003800000080008000"
+  },
+  {
+   "check": "C.popcount_six.00000000020000003800000080008000",
+   "pass": true,
+   "detail": "6"
+  },
+  {
+   "check": "C.one_bit_diff.00000000020000003800000080000800",
+   "pass": true,
+   "detail": "xor 00000000000000000000000000000800"
+  },
+  {
+   "check": "C.canon_equals_hex.00000000020000003800000080000800",
+   "pass": true,
+   "detail": "canon 00000000020000003800000080000800"
+  },
+  {
+   "check": "C.popcount_six.00000000020000003800000080000800",
+   "pass": true,
+   "detail": "6"
+  },
+  {
+   "check": "C.one_bit_diff.00000000020000003800000090000000",
+   "pass": true,
+   "detail": "xor 00000000000000000000000010000000"
+  },
+  {
+   "check": "C.canon_equals_hex.00000000020000003800000090000000",
+   "pass": true,
+   "detail": "canon 00000000020000003800000090000000"
+  },
+  {
+   "check": "C.popcount_six.00000000020000003800000090000000",
+   "pass": true,
+   "detail": "6"
+  },
+  {
+   "check": "C.one_bit_diff.00000000020000003800000080000400",
+   "pass": true,
+   "detail": "xor 00000000000000000000000000000400"
+  },
+  {
+   "check": "C.canon_equals_hex.00000000020000003800000080000400",
+   "pass": true,
+   "detail": "canon 00000000020000003800000080000400"
+  },
+  {
+   "check": "C.popcount_six.00000000020000003800000080000400",
+   "pass": true,
+   "detail": "6"
+  },
+  {
+   "check": "C.one_bit_diff.00000000020000003800000080000100",
+   "pass": true,
+   "detail": "xor 00000000000000000000000000000100"
+  },
+  {
+   "check": "C.canon_equals_hex.00000000020000003800000080000100",
+   "pass": true,
+   "detail": "canon 00000000020000003800000080000100"
+  },
+  {
+   "check": "C.popcount_six.00000000020000003800000080000100",
+   "pass": true,
+   "detail": "6"
+  },
+  {
+   "check": "C.one_bit_diff.00000000020000003800000080004000",
+   "pass": true,
+   "detail": "xor 00000000000000000000000000004000"
+  },
+  {
+   "check": "C.canon_equals_hex.00000000020000003800000080004000",
+   "pass": true,
+   "detail": "canon 00000000020000003800000080004000"
+  },
+  {
+   "check": "C.popcount_six.00000000020000003800000080004000",
+   "pass": true,
+   "detail": "6"
+  },
+  {
+   "check": "C.one_bit_diff.00000000020000003800000280000000",
+   "pass": true,
+   "detail": "xor 00000000000000000000000200000000"
+  },
+  {
+   "check": "C.canon_equals_hex.00000000020000003800000280000000",
+   "pass": true,
+   "detail": "canon 00000000020000003800000280000000"
+  },
+  {
+   "check": "C.popcount_six.00000000020000003800000280000000",
+   "pass": true,
+   "detail": "6"
+  },
+  {
+   "check": "C.one_bit_diff.00000000020000003800100080000000",
+   "pass": true,
+   "detail": "xor 00000000000000000000100000000000"
+  },
+  {
+   "check": "C.canon_equals_hex.00000000020000003800100080000000",
+   "pass": true,
+   "detail": "canon 00000000020000003800100080000000"
+  },
+  {
+   "check": "C.popcount_six.00000000020000003800100080000000",
+   "pass": true,
+   "detail": "6"
+  },
+  {
+   "check": "C.one_bit_diff.00000000020000003840000080000000",
+   "pass": true,
+   "detail": "xor 00000000000000000040000000000000"
+  },
+  {
+   "check": "C.canon_equals_hex.00000000020000003840000080000000",
+   "pass": true,
+   "detail": "canon 00000000020000003840000080000000"
+  },
+  {
+   "check": "C.popcount_six.00000000020000003840000080000000",
+   "pass": true,
+   "detail": "6"
+  },
+  {
+   "check": "C.one_bit_diff.00000000020000003800000080000004",
+   "pass": true,
+   "detail": "xor 00000000000000000000000000000004"
+  },
+  {
+   "check": "C.canon_equals_hex.00000000020000003800000080000004",
+   "pass": true,
+   "detail": "canon 00000000020000003800000080000004"
+  },
+  {
+   "check": "C.popcount_six.00000000020000003800000080000004",
+   "pass": true,
+   "detail": "6"
+  },
+  {
+   "check": "C.cost_sum_1460",
+   "pass": true,
+   "detail": "1460"
+  },
+  {
+   "check": "C.parent_popcount_five",
+   "pass": true,
+   "detail": "5"
+  },
+  {
+   "check": "D.pool_rows",
+   "pass": true,
+   "detail": "9"
+  },
+  {
+   "check": "D.pool_distinct",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "D.pool_parent.00000000020000003800000080000800",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "D.pool_in_sterile_refs.00000000020000003800000080000800",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "D.pool_cost.00000000020000003800000080000800",
+   "pass": true,
+   "detail": "82"
+  },
+  {
+   "check": "D.pool_parent.00000000020000003800000090000000",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "D.pool_in_sterile_refs.00000000020000003800000090000000",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "D.pool_cost.00000000020000003800000090000000",
+   "pass": true,
+   "detail": "82"
+  },
+  {
+   "check": "D.pool_parent.00000000020000003800000080000400",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "D.pool_in_sterile_refs.00000000020000003800000080000400",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "D.pool_cost.00000000020000003800000080000400",
+   "pass": true,
+   "detail": "84"
+  },
+  {
+   "check": "D.pool_parent.00000000020000003800000080000100",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "D.pool_in_sterile_refs.00000000020000003800000080000100",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "D.pool_cost.00000000020000003800000080000100",
+   "pass": true,
+   "detail": "86"
+  },
+  {
+   "check": "D.pool_parent.00000000020000003800000080004000",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "D.pool_in_sterile_refs.00000000020000003800000080004000",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "D.pool_cost.00000000020000003800000080004000",
+   "pass": true,
+   "detail": "86"
+  },
+  {
+   "check": "D.pool_parent.00000000020000003800000280000000",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "D.pool_in_sterile_refs.00000000020000003800000280000000",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "D.pool_cost.00000000020000003800000280000000",
+   "pass": true,
+   "detail": "86"
+  },
+  {
+   "check": "D.pool_parent.00000000020000003800100080000000",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "D.pool_in_sterile_refs.00000000020000003800100080000000",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "D.pool_cost.00000000020000003800100080000000",
+   "pass": true,
+   "detail": "86"
+  },
+  {
+   "check": "D.pool_parent.00000000020000003840000080000000",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "D.pool_in_sterile_refs.00000000020000003840000080000000",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "D.pool_cost.00000000020000003840000080000000",
+   "pass": true,
+   "detail": "86"
+  },
+  {
+   "check": "D.pool_parent.00000000020000003800000080000004",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "D.pool_in_sterile_refs.00000000020000003800000080000004",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "D.pool_cost.00000000020000003800000080000004",
+   "pass": true,
+   "detail": "87"
+  },
+  {
+   "check": "D.eligible_zero",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "D.selected_unclosable",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "D.runner_up_unclosable",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "D.all_rows_same_parent",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "D.all_rows_in_registry",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "E.v19_ranking_rows",
+   "pass": true,
+   "detail": "8"
+  },
+  {
+   "check": "E.v19_pool_minus_82d",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "E.parent.00000000020000003800000090000000",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "E.cost.00000000020000003800000090000000",
+   "pass": true,
+   "detail": "82"
+  },
+  {
+   "check": "E.open_minus_two.00000000020000003800000090000000",
+   "pass": true,
+   "detail": "v18 65 -> v19 63"
+  },
+  {
+   "check": "E.parent.00000000020000003800000080000400",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "E.cost.00000000020000003800000080000400",
+   "pass": true,
+   "detail": "84"
+  },
+  {
+   "check": "E.open_minus_two.00000000020000003800000080000400",
+   "pass": true,
+   "detail": "v18 66 -> v19 64"
+  },
+  {
+   "check": "E.parent.00000000020000003800000080000100",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "E.cost.00000000020000003800000080000100",
+   "pass": true,
+   "detail": "86"
+  },
+  {
+   "check": "E.open_minus_two.00000000020000003800000080000100",
+   "pass": true,
+   "detail": "v18 68 -> v19 66"
+  },
+  {
+   "check": "E.parent.00000000020000003800000080004000",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "E.cost.00000000020000003800000080004000",
+   "pass": true,
+   "detail": "86"
+  },
+  {
+   "check": "E.open_minus_two.00000000020000003800000080004000",
+   "pass": true,
+   "detail": "v18 68 -> v19 66"
+  },
+  {
+   "check": "E.parent.00000000020000003800000280000000",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "E.cost.00000000020000003800000280000000",
+   "pass": true,
+   "detail": "86"
+  },
+  {
+   "check": "E.open_minus_two.00000000020000003800000280000000",
+   "pass": true,
+   "detail": "v18 68 -> v19 66"
+  },
+  {
+   "check": "E.parent.00000000020000003800100080000000",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "E.cost.00000000020000003800100080000000",
+   "pass": true,
+   "detail": "86"
+  },
+  {
+   "check": "E.open_minus_two.00000000020000003800100080000000",
+   "pass": true,
+   "detail": "v18 68 -> v19 66"
+  },
+  {
+   "check": "E.parent.00000000020000003840000080000000",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "E.cost.00000000020000003840000080000000",
+   "pass": true,
+   "detail": "86"
+  },
+  {
+   "check": "E.open_minus_two.00000000020000003840000080000000",
+   "pass": true,
+   "detail": "v18 70 -> v19 68"
+  },
+  {
+   "check": "E.parent.00000000020000003800000080000004",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "E.cost.00000000020000003800000080000004",
+   "pass": true,
+   "detail": "87"
+  },
+  {
+   "check": "E.open_minus_two.00000000020000003800000080000004",
+   "pass": true,
+   "detail": "v18 69 -> v19 67"
+  },
+  {
+   "check": "F.family_rows",
+   "pass": true,
+   "detail": "18"
+  },
+  {
+   "check": "F.family_equals_refs",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "F.family_cost.000000000200000038000000c0000000",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "F.family_cost.00000000020000003800000080000020",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "F.family_cost.00000000020000003800000088000000",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "F.family_cost.00000000020000003800020080000000",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "F.family_cost.00000000020000003800000880000000",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "F.family_cost.00000000020000003800400080000000",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "F.family_cost.00000000020000003800000180000000",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "F.family_cost.00000000020000003800200080000000",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "F.family_cost.00000000020000003800000080008000",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "F.family_cost.00000000020000003800000080000800",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "F.family_cost.00000000020000003800000090000000",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "F.family_cost.00000000020000003800000080000400",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "F.family_cost.00000000020000003800000080000100",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "F.family_cost.00000000020000003800000080004000",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "F.family_cost.00000000020000003800000280000000",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "F.family_cost.00000000020000003800100080000000",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "F.family_cost.00000000020000003840000080000000",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "F.family_cost.00000000020000003800000080000004",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "F.swept_rows",
+   "pass": true,
+   "detail": "10"
+  },
+  {
+   "check": "F.remaining_rows",
+   "pass": true,
+   "detail": "8"
+  },
+  {
+   "check": "F.remaining_equals_ranking",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "F.swept_disjoint",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "G.child_in_refs",
+   "pass": true,
+   "detail": "cost 82"
+  },
+  {
+   "check": "G.selected_child",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "G.selected_bits_82",
+   "pass": true,
+   "detail": "82"
+  },
+  {
+   "check": "G.audit_counts",
+   "pass": true,
+   "detail": "{\"win7_d10\": 0, \"refuted_d10\": 82, \"capped\": 0, \"total_bits\": 82}"
+  },
+  {
+   "check": "G.audit_total_nodes",
+   "pass": true,
+   "detail": "70583627"
+  },
+  {
+   "check": "G.audit_bits_match",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "G.root_canon.bit0",
+   "pass": true,
+   "detail": "00000000020000003800000090000001 vs 00000000020000003800000090000001"
+  },
+  {
+   "check": "G.refuted.bit0",
+   "pass": true,
+   "detail": "REFUTED-D10"
+  },
+  {
+   "check": "G.root_canon.bit2",
+   "pass": true,
+   "detail": "00000000020000003800000090000004 vs 00000000020000003800000090000004"
+  },
+  {
+   "check": "G.refuted.bit2",
+   "pass": true,
+   "detail": "REFUTED-D10"
+  },
+  {
+   "check": "G.root_canon.bit3",
+   "pass": true,
+   "detail": "00000000020000003800000090000008 vs 00000000020000003800000090000008"
+  },
+  {
+   "check": "G.refuted.bit3",
+   "pass": true,
+   "detail": "REFUTED-D10"
+  },
+  {
+   "check": "G.root_canon.bit4",
+   "pass": true,
+   "detail": "00000000020000003800000090000010 vs 00000000020000003800000090000010"
+  },
+  {
+   "check": "G.refuted.bit4",
+   "pass": true,
+   "detail": "REFUTED-D10"
+  },
+  {
+   "check": "G.root_canon.bit5",
+   "pass": true,
+   "detail": "00000000020000003800000090000020 vs 00000000020000003800000090000020"
+  },
+  {
+   "check": "G.refuted.bit5",
+   "pass": true,
+   "detail": "REFUTED-D10"
+  },
+  {
+   "check": "G.root_canon.bit6",
+   "pass": true,
+   "detail": "00000000020000003800000090000040 vs 00000000020000003800000090000040"
+  },
+  {
+   "check": "G.refuted.bit6",
+   "pass": true,
+   "detail": "REFUTED-D10"
+  },
+  {
+   "check": "G.root_canon.bit7",
+   "pass": true,
+   "detail": "00000000020000003800000090000080 vs 00000000020000003800000090000080"
+  },
+  {
+   "check": "G.refuted.bit7",
+   "pass": true,
+   "detail": "REFUTED-D10"
+  },
+  {
+   "check": "G.root_canon.bit8",
+   "pass": true,
+   "detail": "00000000020000003800000090000100 vs 00000000020000003800000090000100"
+  },
+  {
+   "check": "G.refuted.bit8",
+   "pass": true,
+   "detail": "REFUTED-D10"
+  },
+  {
+   "check": "G.root_canon.bit10",
+   "pass": true,
+   "detail": "00000000020000003800000090000400 vs 00000000020000003800000090000400"
+  },
+  {
+   "check": "G.refuted.bit10",
+   "pass": true,
+   "detail": "REFUTED-D10"
+  },
+  {
+   "check": "G.root_canon.bit11",
+   "pass": true,
+   "detail": "00000000020000003800000090000800 vs 00000000020000003800000090000800"
+  },
+  {
+   "check": "G.refuted.bit11",
+   "pass": true,
+   "detail": "REFUTED-D10"
+  },
+  {
+   "check": "G.root_canon.bit12",
+   "pass": true,
+   "detail": "00000000020000003800000090001000 vs 00000000020000003800000090001000"
+  },
+  {
+   "check": "G.refuted.bit12",
+   "pass": true,
+   "detail": "REFUTED-D10"
+  },
+  {
+   "check": "G.root_canon.bit14",
+   "pass": true,
+   "detail": "00000000020000003800000090004000 vs 00000000020000003800000090004000"
+  },
+  {
+   "check": "G.refuted.bit14",
+   "pass": true,
+   "detail": "REFUTED-D10"
+  },
+  {
+   "check": "G.root_canon.bit15",
+   "pass": true,
+   "detail": "00000000020000003800000090008000 vs 00000000020000003800000090008000"
+  },
+  {
+   "check": "G.refuted.bit15",
+   "pass": true,
+   "detail": "REFUTED-D10"
+  },
+  {
+   "check": "G.root_canon.bit16",
+   "pass": true,
+   "detail": "00000000020000003800000090010000 vs 00000000020000003800000090010000"
+  },
+  {
+   "check": "G.refuted.bit16",
+   "pass": true,
+   "detail": "REFUTED-D10"
+  },
+  {
+   "check": "G.root_canon.bit17",
+   "pass": true,
+   "detail": "00000000020000003800000090020000 vs 00000000020000003800000090020000"
+  },
+  {
+   "check": "G.refuted.bit17",
+   "pass": true,
+   "detail": "REFUTED-D10"
+  },
+  {
+   "check": "G.root_canon.bit18",
+   "pass": true,
+   "detail": "00000000020000003800000090040000 vs 00000000020000003800000090040000"
+  },
+  {
+   "check": "G.refuted.bit18",
+   "pass": true,
+   "detail": "REFUTED-D10"
+  },
+  {
+   "check": "G.root_canon.bit19",
+   "pass": true,
+   "detail": "00000000020000003800000090080000 vs 00000000020000003800000090080000"
+  },
+  {
+   "check": "G.refuted.bit19",
+   "pass": true,
+   "detail": "REFUTED-D10"
+  },
+  {
+   "check": "G.root_canon.bit21",
+   "pass": true,
+   "detail": "00000000020000003800000090200000 vs 00000000020000003800000090200000"
+  },
+  {
+   "check": "G.refuted.bit21",
+   "pass": true,
+   "detail": "REFUTED-D10"
+  },
+  {
+   "check": "G.root_canon.bit29",
+   "pass": true,
+   "detail": "000000000200000038000000b0000000 vs 000000000200000038000000b0000000"
+  },
+  {
+   "check": "G.refuted.bit29",
+   "pass": true,
+   "detail": "REFUTED-D10"
+  },
+  {
+   "check": "G.root_canon.bit30",
+   "pass": true,
+   "detail": "000000000200000038000000d0000000 vs 000000000200000038000000d0000000"
+  },
+  {
+   "check": "G.refuted.bit30",
+   "pass": true,
+   "detail": "REFUTED-D10"
+  },
+  {
+   "check": "G.root_canon.bit32",
+   "pass": true,
+   "detail": "00000000020000003800000190000000 vs 00000000020000003800000190000000"
+  },
+  {
+   "check": "G.refuted.bit32",
+   "pass": true,
+   "detail": "REFUTED-D10"
+  },
+  {
+   "check": "G.root_canon.bit33",
+   "pass": true,
+   "detail": "00000000020000003800000290000000 vs 00000000020000003800000290000000"
+  },
+  {
+   "check": "G.refuted.bit33",
+   "pass": true,
+   "detail": "REFUTED-D10"
+  },
+  {
+   "check": "G.root_canon.bit34",
+   "pass": true,
+   "detail": "00000000020000003800000490000000 vs 00000000020000003800000490000000"
+  },
+  {
+   "check": "G.refuted.bit34",
+   "pass": true,
+   "detail": "REFUTED-D10"
+  },
+  {
+   "check": "G.root_canon.bit35",
+   "pass": true,
+   "detail": "00000000020000003800000890000000 vs 00000000020000003800000890000000"
+  },
+  {
+   "check": "G.refuted.bit35",
+   "pass": true,
+   "detail": "REFUTED-D10"
+  },
+  {
+   "check": "G.root_canon.bit36",
+   "pass": true,
+   "detail": "00000000020000003800001090000000 vs 00000000020000003800001090000000"
+  },
+  {
+   "check": "G.refuted.bit36",
+   "pass": true,
+   "detail": "REFUTED-D10"
+  },
+  {
+   "check": "G.root_canon.bit38",
+   "pass": true,
+   "detail": "00000000020000003800004090000000 vs 00000000020000003800004090000000"
+  },
+  {
+   "check": "G.refuted.bit38",
+   "pass": true,
+   "detail": "REFUTED-D10"
+  },
+  {
+   "check": "G.root_canon.bit39",
+   "pass": true,
+   "detail": "00000000020000003800008090000000 vs 00000000020000003800008090000000"
+  },
+  {
+   "check": "G.refuted.bit39",
+   "pass": true,
+   "detail": "REFUTED-D10"
+  },
+  {
+   "check": "G.root_canon.bit41",
+   "pass": true,
+   "detail": "00000000020000003800020090000000 vs 00000000020000003800020090000000"
+  },
+  {
+   "check": "G.refuted.bit41",
+   "pass": true,
+   "detail": "REFUTED-D10"
+  },
+  {
+   "check": "G.root_canon.bit42",
+   "pass": true,
+   "detail": "00000000020000003800040090000000 vs 00000000020000003800040090000000"
+  },
+  {
+   "check": "G.refuted.bit42",
+   "pass": true,
+   "detail": "REFUTED-D10"
+  },
+  {
+   "check": "G.root_canon.bit43",
+   "pass": true,
+   "detail": "00000000020000003800080090000000 vs 00000000020000003800080090000000"
+  },
+  {
+   "check": "G.refuted.bit43",
+   "pass": true,
+   "detail": "REFUTED-D10"
+  },
+  {
+   "check": "G.root_canon.bit44",
+   "pass": true,
+   "detail": "00000000020000003800100090000000 vs 00000000020000003800100090000000"
+  },
+  {
+   "check": "G.refuted.bit44",
+   "pass": true,
+   "detail": "REFUTED-D10"
+  },
+  {
+   "check": "G.root_canon.bit45",
+   "pass": true,
+   "detail": "00000000020000003800200090000000 vs 00000000020000003800200090000000"
+  },
+  {
+   "check": "G.refuted.bit45",
+   "pass": true,
+   "detail": "REFUTED-D10"
+  },
+  {
+   "check": "G.root_canon.bit46",
+   "pass": true,
+   "detail": "00000000020000003800400090000000 vs 00000000020000003800400090000000"
+  },
+  {
+   "check": "G.refuted.bit46",
+   "pass": true,
+   "detail": "REFUTED-D10"
+  },
+  {
+   "check": "G.root_canon.bit49",
+   "pass": true,
+   "detail": "00000000020000003802000090000000 vs 00000000020000003802000090000000"
+  },
+  {
+   "check": "G.refuted.bit49",
+   "pass": true,
+   "detail": "REFUTED-D10"
+  },
+  {
+   "check": "G.root_canon.bit50",
+   "pass": true,
+   "detail": "00000000020000003804000090000000 vs 00000000020000003804000090000000"
+  },
+  {
+   "check": "G.refuted.bit50",
+   "pass": true,
+   "detail": "REFUTED-D10"
+  },
+  {
+   "check": "G.root_canon.bit53",
+   "pass": true,
+   "detail": "00000000020000003820000090000000 vs 00000000020000003820000090000000"
+  },
+  {
+   "check": "G.refuted.bit53",
+   "pass": true,
+   "detail": "REFUTED-D10"
+  },
+  {
+   "check": "G.root_canon.bit54",
+   "pass": true,
+   "detail": "00000000020000003840000090000000 vs 00000000020000003840000090000000"
+  },
+  {
+   "check": "G.refuted.bit54",
+   "pass": true,
+   "detail": "REFUTED-D10"
+  },
+  {
+   "check": "G.root_canon.bit66",
+   "pass": true,
+   "detail": "00000000020000043800000090000000 vs 00000000020000043800000090000000"
+  },
+  {
+   "check": "G.refuted.bit66",
+   "pass": true,
+   "detail": "REFUTED-D10"
+  },
+  {
+   "check": "G.root_canon.bit67",
+   "pass": true,
+   "detail": "00000000020000083800000090000000 vs 00000000020000083800000090000000"
+  },
+  {
+   "check": "G.refuted.bit67",
+   "pass": true,
+   "detail": "REFUTED-D10"
+  },
+  {
+   "check": "G.root_canon.bit69",
+   "pass": true,
+   "detail": "00000000020000203800000090000000 vs 00000000020000203800000090000000"
+  },
+  {
+   "check": "G.refuted.bit69",
+   "pass": true,
+   "detail": "REFUTED-D10"
+  },
+  {
+   "check": "G.root_canon.bit70",
+   "pass": true,
+   "detail": "00000000020000403800000090000000 vs 00000000020000403800000090000000"
+  },
+  {
+   "check": "G.refuted.bit70",
+   "pass": true,
+   "detail": "REFUTED-D10"
+  },
+  {
+   "check": "G.root_canon.bit71",
+   "pass": true,
+   "detail": "00000000020000803800000090000000 vs 00000000020000803800000090000000"
+  },
+  {
+   "check": "G.refuted.bit71",
+   "pass": true,
+   "detail": "REFUTED-D10"
+  },
+  {
+   "check": "G.root_canon.bit72",
+   "pass": true,
+   "detail": "00000000020001003800000090000000 vs 00000000020001003800000090000000"
+  },
+  {
+   "check": "G.refuted.bit72",
+   "pass": true,
+   "detail": "REFUTED-D10"
+  },
+  {
+   "check": "G.root_canon.bit74",
+   "pass": true,
+   "detail": "00000000020004003800000090000000 vs 00000000020004003800000090000000"
+  },
+  {
+   "check": "G.refuted.bit74",
+   "pass": true,
+   "detail": "REFUTED-D10"
+  },
+  {
+   "check": "G.root_canon.bit75",
+   "pass": true,
+   "detail": "00000000020008003800000090000000 vs 00000000020008003800000090000000"
+  },
+  {
+   "check": "G.refuted.bit75",
+   "pass": true,
+   "detail": "REFUTED-D10"
+  },
+  {
+   "check": "G.root_canon.bit76",
+   "pass": true,
+   "detail": "00000000020010003800000090000000 vs 00000000020010003800000090000000"
+  },
+  {
+   "check": "G.refuted.bit76",
+   "pass": true,
+   "detail": "REFUTED-D10"
+  },
+  {
+   "check": "G.root_canon.bit77",
+   "pass": true,
+   "detail": "00000000020020003800000090000000 vs 00000000020020003800000090000000"
+  },
+  {
+   "check": "G.refuted.bit77",
+   "pass": true,
+   "detail": "REFUTED-D10"
+  },
+  {
+   "check": "G.root_canon.bit78",
+   "pass": true,
+   "detail": "00000000020040003800000090000000 vs 00000000020040003800000090000000"
+  },
+  {
+   "check": "G.refuted.bit78",
+   "pass": true,
+   "detail": "REFUTED-D10"
+  },
+  {
+   "check": "G.root_canon.bit79",
+   "pass": true,
+   "detail": "00000000020080003800000090000000 vs 00000000020080003800000090000000"
+  },
+  {
+   "check": "G.refuted.bit79",
+   "pass": true,
+   "detail": "REFUTED-D10"
+  },
+  {
+   "check": "G.root_canon.bit80",
+   "pass": true,
+   "detail": "00000000020100003800000090000000 vs 00000000020100003800000090000000"
+  },
+  {
+   "check": "G.refuted.bit80",
+   "pass": true,
+   "detail": "REFUTED-D10"
+  },
+  {
+   "check": "G.root_canon.bit81",
+   "pass": true,
+   "detail": "00000000020200003800000090000000 vs 00000000020200003800000090000000"
+  },
+  {
+   "check": "G.refuted.bit81",
+   "pass": true,
+   "detail": "REFUTED-D10"
+  },
+  {
+   "check": "G.root_canon.bit82",
+   "pass": true,
+   "detail": "00000000020400003800000090000000 vs 00000000020400003800000090000000"
+  },
+  {
+   "check": "G.refuted.bit82",
+   "pass": true,
+   "detail": "REFUTED-D10"
+  },
+  {
+   "check": "G.root_canon.bit83",
+   "pass": true,
+   "detail": "00000000020800003800000090000000 vs 00000000020800003800000090000000"
+  },
+  {
+   "check": "G.refuted.bit83",
+   "pass": true,
+   "detail": "REFUTED-D10"
+  },
+  {
+   "check": "G.root_canon.bit84",
+   "pass": true,
+   "detail": "00000000021000003800000090000000 vs 00000000021000003800000090000000"
+  },
+  {
+   "check": "G.refuted.bit84",
+   "pass": true,
+   "detail": "REFUTED-D10"
+  },
+  {
+   "check": "G.root_canon.bit85",
+   "pass": true,
+   "detail": "00000000022000003800000090000000 vs 00000000022000003800000090000000"
+  },
+  {
+   "check": "G.refuted.bit85",
+   "pass": true,
+   "detail": "REFUTED-D10"
+  },
+  {
+   "check": "G.root_canon.bit86",
+   "pass": true,
+   "detail": "00000000024000003800000090000000 vs 00000000024000003800000090000000"
+  },
+  {
+   "check": "G.refuted.bit86",
+   "pass": true,
+   "detail": "REFUTED-D10"
+  },
+  {
+   "check": "G.root_canon.bit87",
+   "pass": true,
+   "detail": "00000000028000003800000090000000 vs 00000000028000003800000090000000"
+  },
+  {
+   "check": "G.refuted.bit87",
+   "pass": true,
+   "detail": "REFUTED-D10"
+  },
+  {
+   "check": "G.root_canon.bit88",
+   "pass": true,
+   "detail": "00000000030000003800000090000000 vs 00000000030000003800000090000000"
+  },
+  {
+   "check": "G.refuted.bit88",
+   "pass": true,
+   "detail": "REFUTED-D10"
+  },
+  {
+   "check": "G.root_canon.bit90",
+   "pass": true,
+   "detail": "00000000060000003800000090000000 vs 00000000060000003800000090000000"
+  },
+  {
+   "check": "G.refuted.bit90",
+   "pass": true,
+   "detail": "REFUTED-D10"
+  },
+  {
+   "check": "G.root_canon.bit91",
+   "pass": true,
+   "detail": "000000000a0000003800000090000000 vs 000000000a0000003800000090000000"
+  },
+  {
+   "check": "G.refuted.bit91",
+   "pass": true,
+   "detail": "REFUTED-D10"
+  },
+  {
+   "check": "G.root_canon.bit92",
+   "pass": true,
+   "detail": "00000000120000003800000090000000 vs 00000000120000003800000090000000"
+  },
+  {
+   "check": "G.refuted.bit92",
+   "pass": true,
+   "detail": "REFUTED-D10"
+  },
+  {
+   "check": "G.root_canon.bit93",
+   "pass": true,
+   "detail": "00000000120000003800000088000000 vs 00000000120000003800000088000000"
+  },
+  {
+   "check": "G.refuted.bit93",
+   "pass": true,
+   "detail": "REFUTED-D10"
+  },
+  {
+   "check": "G.root_canon.bit94",
+   "pass": true,
+   "detail": "00000000120000003800000084000000 vs 00000000120000003800000084000000"
+  },
+  {
+   "check": "G.refuted.bit94",
+   "pass": true,
+   "detail": "REFUTED-D10"
+  },
+  {
+   "check": "G.root_canon.bit95",
+   "pass": true,
+   "detail": "00000000120000003800000082000000 vs 00000000120000003800000082000000"
+  },
+  {
+   "check": "G.refuted.bit95",
+   "pass": true,
+   "detail": "REFUTED-D10"
+  },
+  {
+   "check": "G.root_canon.bit99",
+   "pass": true,
+   "detail": "00000000120000003800000080200000 vs 00000000120000003800000080200000"
+  },
+  {
+   "check": "G.refuted.bit99",
+   "pass": true,
+   "detail": "REFUTED-D10"
+  },
+  {
+   "check": "G.root_canon.bit101",
+   "pass": true,
+   "detail": "00000000120000003800000080080000 vs 00000000120000003800000080080000"
+  },
+  {
+   "check": "G.refuted.bit101",
+   "pass": true,
+   "detail": "REFUTED-D10"
+  },
+  {
+   "check": "G.root_canon.bit102",
+   "pass": true,
+   "detail": "00000000120000003800000080040000 vs 00000000120000003800000080040000"
+  },
+  {
+   "check": "G.refuted.bit102",
+   "pass": true,
+   "detail": "REFUTED-D10"
+  },
+  {
+   "check": "G.root_canon.bit103",
+   "pass": true,
+   "detail": "00000000120000003800000080020000 vs 00000000120000003800000080020000"
+  },
+  {
+   "check": "G.refuted.bit103",
+   "pass": true,
+   "detail": "REFUTED-D10"
+  },
+  {
+   "check": "G.root_canon.bit104",
+   "pass": true,
+   "detail": "00000000120000003800000080010000 vs 00000000120000003800000080010000"
+  },
+  {
+   "check": "G.refuted.bit104",
+   "pass": true,
+   "detail": "REFUTED-D10"
+  },
+  {
+   "check": "G.root_canon.bit105",
+   "pass": true,
+   "detail": "00000000120000003800000080008000 vs 00000000120000003800000080008000"
+  },
+  {
+   "check": "G.refuted.bit105",
+   "pass": true,
+   "detail": "REFUTED-D10"
+  },
+  {
+   "check": "G.root_canon.bit106",
+   "pass": true,
+   "detail": "00000000120000003800000080004000 vs 00000000120000003800000080004000"
+  },
+  {
+   "check": "G.refuted.bit106",
+   "pass": true,
+   "detail": "REFUTED-D10"
+  },
+  {
+   "check": "G.root_canon.bit108",
+   "pass": true,
+   "detail": "00000000120000003800000080001000 vs 00000000120000003800000080001000"
+  },
+  {
+   "check": "G.refuted.bit108",
+   "pass": true,
+   "detail": "REFUTED-D10"
+  },
+  {
+   "check": "G.root_canon.bit109",
+   "pass": true,
+   "detail": "00000000120000003800000080000800 vs 00000000120000003800000080000800"
+  },
+  {
+   "check": "G.refuted.bit109",
+   "pass": true,
+   "detail": "REFUTED-D10"
+  },
+  {
+   "check": "G.root_canon.bit110",
+   "pass": true,
+   "detail": "00000000120000003800000080000400 vs 00000000120000003800000080000400"
+  },
+  {
+   "check": "G.refuted.bit110",
+   "pass": true,
+   "detail": "REFUTED-D10"
+  },
+  {
+   "check": "G.root_canon.bit112",
+   "pass": true,
+   "detail": "00000000120000003800000080000100 vs 00000000120000003800000080000100"
+  },
+  {
+   "check": "G.refuted.bit112",
+   "pass": true,
+   "detail": "REFUTED-D10"
+  },
+  {
+   "check": "G.root_canon.bit113",
+   "pass": true,
+   "detail": "00000000120000003800000080000080 vs 00000000120000003800000080000080"
+  },
+  {
+   "check": "G.refuted.bit113",
+   "pass": true,
+   "detail": "REFUTED-D10"
+  },
+  {
+   "check": "G.root_canon.bit114",
+   "pass": true,
+   "detail": "00000000120000003800000080000040 vs 00000000120000003800000080000040"
+  },
+  {
+   "check": "G.refuted.bit114",
+   "pass": true,
+   "detail": "REFUTED-D10"
+  },
+  {
+   "check": "G.root_canon.bit115",
+   "pass": true,
+   "detail": "00000000120000003800000080000020 vs 00000000120000003800000080000020"
+  },
+  {
+   "check": "G.refuted.bit115",
+   "pass": true,
+   "detail": "REFUTED-D10"
+  },
+  {
+   "check": "G.root_canon.bit116",
+   "pass": true,
+   "detail": "00000000120000003800000080000010 vs 00000000120000003800000080000010"
+  },
+  {
+   "check": "G.refuted.bit116",
+   "pass": true,
+   "detail": "REFUTED-D10"
+  },
+  {
+   "check": "G.root_canon.bit117",
+   "pass": true,
+   "detail": "00000000120000003800000080000008 vs 00000000120000003800000080000008"
+  },
+  {
+   "check": "G.refuted.bit117",
+   "pass": true,
+   "detail": "REFUTED-D10"
+  },
+  {
+   "check": "G.root_canon.bit118",
+   "pass": true,
+   "detail": "00000000120000003800000080000004 vs 00000000120000003800000080000004"
+  },
+  {
+   "check": "G.refuted.bit118",
+   "pass": true,
+   "detail": "REFUTED-D10"
+  },
+  {
+   "check": "G.root_canon.bit120",
+   "pass": true,
+   "detail": "00000000120000003800000080000001 vs 00000000120000003800000080000001"
+  },
+  {
+   "check": "G.refuted.bit120",
+   "pass": true,
+   "detail": "REFUTED-D10"
+  },
+  {
+   "check": "G.confirmation_match",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "G.v15_agreement",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "G.pilot_controls",
+   "pass": true,
+   "detail": ""
+  }
+ ],
+ "check_count": 336,
+ "all_pass": true,
+ "key_findings": {
+  "v18_pool_rows": 9,
+  "v18_pool_all_in_sterile_parent": true,
+  "v19_ranking_rows": 8,
+  "v19_ranking_equals_v18_pool_minus_cost82d": true,
+  "open_delta_v18_to_v19": "every one of the 8 remaining rows lost exactly 2 open bits to the 82d verdict map (the 2 symmetric bits each sibling row shares with the swept 82d child)",
+  "family_split": "18 sterile refs = 10 swept/excluded rows + 8 remaining rows, set-equal to the census v19 family table",
+  "cost82e_revalidation": "the swept 82e child is sterile ref #11 (cost 82); its published v17 sweep (0 WIN7-D10 / 82 REFUTED-D10 / 0 capped, 70,583,627 candidate nodes, det1/det7 field-identical, v15 crosscheck 19/19, all 82 per-bit root canons re-derived here) is consistent with the K0865 STERILE classification - a cross-version revalidation, not new receipt-closure progress",
+  "eligible_rows_after_sterile_filter": 0,
+  "correction_confirmed": "the coordinator correction's factual basis is independently reproduced: no row of the v18/v19 remaining pool can produce a D10 WIN7 receipt for its parent (K0863), so a D10 receipt-closure sweep of any of them would be misdirected; further historical-row sweeps are only cross-version revalidations"
+ },
+ "interpretation_guard": "verification-side bookkeeping only: no engine run, no new verdict. REFUTED-D10 is not a LOSS proof, STERILE is not a LOSS proof, and the 11x11 empty board, the two-stone roots {49,60}/{59,60}, S2 {59,60} and classes 1/2/4 all remain UNKNOWN."
+}

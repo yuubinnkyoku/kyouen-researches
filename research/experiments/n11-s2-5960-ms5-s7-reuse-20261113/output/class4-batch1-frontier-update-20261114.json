@@ -1,0 +1,118 @@
+{
+  "schema": "n11-class4-batch1-frontier-update-20261114-v1",
+  "date": "2026-11-14",
+  "trigger": "session 16 next / session-15 next item 2: recompute the class-2/4 frontier with the seven batch1 WIN7 certificates",
+  "method": "repo scripts/audit_class_frontier.py recomputation with an added verified-receipts file output/class4-batch1-certificates-verified.json (the seven verified WIN7 roots of sessions 7/9/16: bit7, bit25, bit18, bit67, bit82, bit117, bit120). All other inputs are the published main files (win7-reuse-hits.csv.gz, the 12 class2 verified JSONs, the ms5 S6 manifest, s5-remaining-after-reuse.csv.gz, s5-s6-remaining-incidences.csv.gz). The script's snapshot asserts pin the pre-batch1 baseline and are invalidated by design; they were disabled in the local run only (if False: assert) - no repo file changed",
+  "covers_analysis": {
+    "union_s6_orbits_covered_by_the_7_certificates": 43,
+    "marginal_vs_baseline": 40,
+    "marginal_in_manifest": 19,
+    "per_certificate": {
+      "bit7": {
+        "covers": 7,
+        "marginal": 6,
+        "marginal_in_manifest": 3
+      },
+      "bit25": {
+        "covers": 7,
+        "marginal": 7,
+        "marginal_in_manifest": 4
+      },
+      "bit18": {
+        "covers": 7,
+        "marginal": 7,
+        "marginal_in_manifest": 4
+      },
+      "bit67": {
+        "covers": 7,
+        "marginal": 6,
+        "marginal_in_manifest": 3
+      },
+      "bit82": {
+        "covers": 7,
+        "marginal": 7,
+        "marginal_in_manifest": 4
+      },
+      "bit117": {
+        "covers": 7,
+        "marginal": 7,
+        "marginal_in_manifest": 4
+      },
+      "bit120": {
+        "covers": 7,
+        "marginal": 6,
+        "marginal_in_manifest": 3
+      }
+    },
+    "newly_solved_manifest_hexes": [
+      "00000000000000003800000000806000",
+      "00000000000000003800000020802000",
+      "00000000000000083800000080080000",
+      "00000000000000801002000280080000",
+      "00000000000000801402000080080000",
+      "00000000020000003800000000080080",
+      "000000000200000038000000000c0000",
+      "00000000020000003800000002080000",
+      "00000000020000003800000080000001",
+      "00000000020000003800000080000008",
+      "00000000020000003800000080000080",
+      "00000000020000003800000080040000",
+      "00000000020000003800000080080000",
+      "00000000020000003800000082000000",
+      "00000000020000003800004080000000",
+      "00000000020000003820000080000000",
+      "00000000020000805002000000080000",
+      "00000000028000801002000000080000",
+      "00000020000000003800000080000001"
+    ]
+  },
+  "frontier_delta": {
+    "solved_s6_in_manifest": {
+      "baseline": 638,
+      "after_batch1": 657
+    },
+    "unique_remaining_s6": {
+      "baseline": 7208,
+      "after_batch1": 7189
+    },
+    "sum_remaining_cost": {
+      "baseline": 565500,
+      "after_batch1": 564070
+    },
+    "s6_needed_by_open_classes": {
+      "baseline": 5425,
+      "after_batch1": 5406
+    },
+    "cost_needed_by_open_classes": {
+      "baseline": null,
+      "after_batch1": 424077
+    },
+    "best_class2_blocker": {
+      "s5_hex": "00000000000000003802000008000000",
+      "remaining_s6_orbits": 32,
+      "remaining_s7_edge_cost": 2206,
+      "change": "unchanged (class-2 family unaffected)"
+    },
+    "best_class4_blocker": {
+      "s5_hex": "00000000020000003800000080000000",
+      "remaining_s6_orbits": {
+        "baseline": 43,
+        "after_batch1": 35
+      },
+      "remaining_s7_edge_cost": {
+        "baseline": 3391,
+        "after_batch1": 2756
+      },
+      "note": "this S5 is the current lane target: its own S6 child #1 sweep is fully certified and now closes 8 of its remaining S6 orbits"
+    }
+  },
+  "outputs": [
+    "output/class-frontier-s5-ranking-after-batch1.csv",
+    "output/class-frontier-top-candidates-s6-after-batch1.csv"
+  ],
+  "interpretation_guard": [
+    "bookkeeping over published receipts; no new search verdict is claimed here",
+    "11x11 empty root, two-stone root {49,60}, S2 {59,60} and class 4 itself remain UNKNOWN",
+    "the bit7 400-node aggregation discrepancy reserve remains open and unrelated"
+  ]
+}

@@ -1,0 +1,1680 @@
+{
+ "date": "2026-11-16",
+ "inputs": {
+  "audit_json_pins": {
+   "class2-lane-published-chain-roots-independent-audit-20261115.json": "9ae579545b463e30dfa54bc44cd1fbc41b31e670",
+   "class2-lane-published-chain-roots-independent-audit-v10-20261115.json": "b4c4348dbcc2fab649d5889149adc20e80d468a4",
+   "class2-lane-published-chain-roots-independent-audit-v11-20261115.json": "63d808d41d275ab8fdc01b530fe104679ce2f4ef",
+   "class2-lane-published-chain-roots-independent-audit-v12-20261115.json": "2011009e78bc98acbcef505117d0f9bac0250cf3",
+   "class2-lane-published-chain-roots-independent-audit-v2-20261115.json": "db0916c0ecb64a475537bc0ac9028c73dd3f5294",
+   "class2-lane-published-chain-roots-independent-audit-v4-20261115.json": "c3df2d1e5d4a4c698b9c8bcc401182524d93f218",
+   "class2-lane-published-chain-roots-independent-audit-v5-20261115.json": "d648ed70e8ccafea0ab3cdafe8a3e9cb494f85c7",
+   "class2-lane-published-chain-roots-independent-audit-v6-20261115.json": "e231b79a037ce1b66b4501a241ce12b8c4f24a04",
+   "class2-lane-published-chain-roots-independent-audit-v7-20261115.json": "76d42c03436016c89e34cf263412894cb0508a71",
+   "class2-lane-published-chain-roots-independent-audit-v8-20261115.json": "232e9d6b930e300402e8191aaf20ac1c40a70e45",
+   "class2-lane-published-chain-roots-independent-audit-v9-20261115.json": "c199accf70737250c1484a328eee6e6b51bf0196",
+   "class2-lane-published-chain-roots-second-independent-audit-v10-20261115.json": "8b2b542829ac5df2ef05c4fda9fa01636d099555",
+   "class2-lane-published-chain-roots-second-independent-audit-v11-20261115.json": "e43ef238e13f19c0343da0e455968bc9343be214",
+   "class2-lane-published-chain-roots-second-independent-audit-v12-20261115.json": "d788e238c33f598bed1087b4ab3bdf7cf1b28909",
+   "class2-lane-published-chain-roots-second-independent-audit-v4-20261115.json": "e3a0b7da0a7b1e59137bc4bf5f82ce3e8892a59d",
+   "class2-lane-published-chain-roots-second-independent-audit-v5-20261115.json": "af86251aa390c4835e56d2948f69b5504d9921a8",
+   "class2-lane-published-chain-roots-second-independent-audit-v6-20261115.json": "075723e594af4744d1fe7b4b09a9b2bb8ec7d449",
+   "class2-lane-published-chain-roots-second-independent-audit-v7-20261115.json": "cc8301f4936572b23f051737679f0d30ae05465b",
+   "class2-lane-published-chain-roots-second-independent-audit-v8-20261115.json": "ad1261bd563f7f524553a8d07fcb8b7f6da92722",
+   "class2-lane-published-chain-roots-second-independent-audit-v9-20261115.json": "c9c1eb07359510eed083de3f7271fe2319c9ebc9"
+  },
+  "first_implementation_schemas": [
+   "n11-class2-lane-published-chain-roots-independent-audit-20261115-v3",
+   "n11-class2-lane-published-chain-roots-independent-audit-20261115-v4",
+   "n11-class2-lane-published-chain-roots-independent-audit-20261115-v5",
+   "n11-class2-lane-published-chain-roots-independent-audit-20261115-v6",
+   "n11-class2-lane-published-chain-roots-independent-audit-20261115-v7",
+   "n11-class2-lane-published-chain-roots-independent-audit-20261115-v8",
+   "n11-class2-lane-published-chain-roots-independent-audit-20261115-v9",
+   "n11-class2-lane-published-chain-roots-independent-audit-20261115-v10",
+   "n11-class2-lane-published-chain-roots-independent-audit-20261115-v11",
+   "n11-class2-lane-published-chain-roots-independent-audit-20261115-v12"
+  ],
+  "second_implementation_schemas": [
+   "n11-class2-lane-published-chain-roots-independent-audit-20261115-v2",
+   "n11-class2-lane-published-chain-roots-second-independent-audit-20261115-v4",
+   "n11-class2-lane-published-chain-roots-second-independent-audit-20261115-v5",
+   "n11-class2-lane-published-chain-roots-second-independent-audit-20261115-v6",
+   "n11-class2-lane-published-chain-roots-second-independent-audit-20261115-v7",
+   "n11-class2-lane-published-chain-roots-second-independent-audit-20261115-v8",
+   "n11-class2-lane-published-chain-roots-second-independent-audit-20261115-v9",
+   "n11-class2-lane-published-chain-roots-second-independent-audit-20261115-v10",
+   "n11-class2-lane-published-chain-roots-second-independent-audit-20261115-v11",
+   "n11-class2-lane-published-chain-roots-second-independent-audit-20261115-v12"
+  ]
+ },
+ "interpretation_guard": "bookkeeping agreement crosscheck over published audit outputs only; solved counts measure manifest coverage, not the game-theoretic value of any position; nothing here decides any S5 parent, any class, the two-stone root {49,60} or the 11x11 empty board: 11x11 empty board / two-stone root {49,60} / S2 {59,60} / class 1 / class 2 / class 4 remain UNKNOWN",
+ "method": "third, machine crosscheck of the two independently developed published-fold-chain root audit implementations over their twenty published audit JSONs (blob-pinned): at all eleven endpoint pairs (75d, 80d, 82c, 83a, 83b/83c, 83d, 84a/62a, 58c/63h, 63i/merged and reconciled-1405), the cumulative per-head bookkeeping (sequence and all fields), D4 orbit structure, per-record geometry counts and errata, head arithmetic classification/quote/anomaly counts, canonical-line exactly-once totals, convention-external receipts, child-closure bookkeeping, base/chain/baseline inventory and the endpoint head records agree exactly; the pin count difference is exactly the four v2 pin proposals pinned only by the first implementation; at the 80d, 82c, 83a, 83b/83c, 83d, 58c/63h and 63i/merged endpoints the bit-78 duplicate-root bookkeeping reports the identical root",
+ "pair_58c63h": {
+  "arith": {
+   "anomalies": 0,
+   "classification_counts": {
+    "cross-head-merge": 1,
+    "no_numeric_baseline_quote": 7,
+    "own-label-recompute": 1,
+    "parallel-batch-union": 11,
+    "sequential-fold-union": 62
+   },
+   "heads": 82,
+   "pointer_name_differs_cases": [
+    {
+     "head": "class-frontier-cost74g-receipts-recompute-20261115.json",
+     "matched_states": [
+      "class-frontier-cost73h-receipts-recompute-20261115.json:frontier_after_cost73h"
+     ],
+     "prose_pointer_head": "class-frontier-cost72c-receipts-recompute-20261115.json"
+    }
+   ],
+   "quote_errata": [
+    {
+     "characterization": "quoted solved count matches the pointer head final state but the four remaining-fields quote the pre-lane baseline state; quoted 5-tuple matches no published head; delta arithmetic uses the correct solved baseline and reconciles with the head receipts",
+     "head": "class-frontier-cost70f-receipts-recompute-20261115.json",
+     "pointer_actual_final_state": [
+      1235,
+      6612,
+      521988,
+      4882,
+      385711
+     ],
+     "prose_pointer_head": "class-frontier-cost71c-receipts-recompute-20261115.json",
+     "quoted": [
+      1235,
+      6614,
+      522131,
+      4884,
+      385854
+     ]
+    }
+   ],
+   "quote_status_counts": {
+    "matched_published_state": 74,
+    "unmatched_quote": 1,
+    "unverifiable_quote": 7
+   }
+  },
+  "base_roots_distinct": 194,
+  "bit78_root_hex": "00000000100040801202000000200000",
+  "canonical_line": {
+   "baseline_solved": 1233,
+   "distinct_marginal_hexes": 129,
+   "endpoint_solved": 1362,
+   "multi_claims": 0,
+   "total_mim": 129
+  },
+  "chain_head_roots_distinct": 402,
+  "child_closure_heads": 37,
+  "convention_external_receipts": [
+   {
+    "d4_orbit": "00000008000000803800000008200000",
+    "d4_twin_of_inventory": true,
+    "head": "class-frontier-cost75c-recompute-20261115.json",
+    "marginal_in_manifest": 2,
+    "path": "cost72_fold",
+    "root_hex": "00008000000000803202000000000200"
+   }
+  ],
+  "cumulative_final_document_order": 650,
+  "cumulative_final_own_branch": 650,
+  "cumulative_heads": 30,
+  "d4": {
+   "orbits": 639,
+   "roots": 650,
+   "twin_pairs": 11
+  },
+  "endpoint_58c": {
+   "child_closed_by_bit": 1,
+   "cost_needed_by_open_classes": 376508,
+   "git_blob_sha": "62a411bb1a6debc33782c07062843650c556c747",
+   "head": "class-frontier-cost58c-receipts-recompute-20261116.json",
+   "receipts": 34,
+   "s6_needed_by_open_classes": 4758,
+   "solved_s6_in_manifest": 1360,
+   "sum_remaining_cost": 512785,
+   "unique_remaining_s6": 6488
+  },
+  "endpoint_63h": {
+   "child_closed_by_bit": 89,
+   "cost_needed_by_open_classes": 376376,
+   "git_blob_sha": "647498b995770ff87b12e868a5b89015c26be51e",
+   "head": "class-frontier-cost63h-receipts-recompute-20261115.json",
+   "receipts": 1,
+   "s6_needed_by_open_classes": 4756,
+   "solved_s6_in_manifest": 1362,
+   "sum_remaining_cost": 512653,
+   "unique_remaining_s6": 6486
+  },
+  "geometry": {
+   "anomalies": 0,
+   "group_records": 40,
+   "published_hex_errata": [
+    {
+     "check": "malformed_marginal_hex",
+     "head": "class2-lane-cost63cd-frontier-recompute-20261114.json",
+     "key": "cost63b_addition",
+     "marginal_in_manifest": 8,
+     "n_valid_entries": 7,
+     "value": [
+      "00000000000010000003800000000100020"
+     ]
+    }
+   ],
+   "receipt_records": 527
+  },
+  "inventory_at_1233": 497,
+  "pins": {
+   "first_implementation": 108,
+   "pin_groups": {
+    "base": 26,
+    "chain": 52,
+    "post70e": 30
+   },
+   "pin_groups_2": {
+    "base": 26,
+    "chain": 52,
+    "post70e": 26
+   },
+   "post70e_delta": "exactly the four v2 pin proposals (71c/70f/73g/70g) pinned only by the first implementation; the audited corpus endpoints agree",
+   "second_implementation": 104
+  }
+ },
+ "pair_63i_merged": {
+  "arith": {
+   "anomalies": 0,
+   "classification_counts": {
+    "cross-head-merge": 1,
+    "fork-merge-rebase": 1,
+    "no_numeric_baseline_quote": 7,
+    "own-label-recompute": 1,
+    "parallel-batch-union": 11,
+    "sequential-fold-union": 63
+   },
+   "heads": 84,
+   "pointer_name_differs_cases": [
+    {
+     "head": "class-frontier-cost74g-receipts-recompute-20261115.json",
+     "matched_states": [
+      "class-frontier-cost73h-receipts-recompute-20261115.json:frontier_after_cost73h"
+     ],
+     "prose_pointer_head": "class-frontier-cost72c-receipts-recompute-20261115.json"
+    }
+   ],
+   "quote_errata": [
+    {
+     "characterization": "quoted solved count matches the pointer head final state but the four remaining-fields quote the pre-lane baseline state; quoted 5-tuple matches no published head; delta arithmetic uses the correct solved baseline and reconciles with the head receipts",
+     "head": "class-frontier-cost70f-receipts-recompute-20261115.json",
+     "pointer_actual_final_state": [
+      1235,
+      6612,
+      521988,
+      4882,
+      385711
+     ],
+     "prose_pointer_head": "class-frontier-cost71c-receipts-recompute-20261115.json",
+     "quoted": [
+      1235,
+      6614,
+      522131,
+      4884,
+      385854
+     ]
+    }
+   ],
+   "quote_status_counts": {
+    "matched_published_state": 76,
+    "unmatched_quote": 1,
+    "unverifiable_quote": 7
+   }
+  },
+  "base_roots_distinct": 194,
+  "bit78_root_hex": "00000000100040801202000000200000",
+  "canonical_line": {
+   "baseline_solved": 1233,
+   "distinct_marginal_hexes": 136,
+   "endpoint_solved": 1369,
+   "multi_claims": 0,
+   "total_mim": 136
+  },
+  "chain_head_roots_distinct": 402,
+  "child_closure_heads": 39,
+  "convention_external_receipts": [
+   {
+    "d4_orbit": "00000008000000803800000008200000",
+    "d4_twin_of_inventory": true,
+    "head": "class-frontier-cost75c-recompute-20261115.json",
+    "marginal_in_manifest": 2,
+    "path": "cost72_fold",
+    "root_hex": "00008000000000803202000000000200"
+   }
+  ],
+  "cumulative_final_document_order": 668,
+  "cumulative_final_own_branch": 668,
+  "cumulative_heads": 32,
+  "d4": {
+   "orbits": 657,
+   "roots": 668,
+   "twin_pairs": 11
+  },
+  "endpoint_63i": {
+   "child_closed_by_bit": 30,
+   "cost_needed_by_open_classes": 376018,
+   "git_blob_sha": "db0288f15f1538293e66146542a938c9ebf8b91c",
+   "head": "class-frontier-cost63i-receipts-recompute-20261116.json",
+   "receipts": 18,
+   "s6_needed_by_open_classes": 4751,
+   "solved_s6_in_manifest": 1367,
+   "sum_remaining_cost": 512295,
+   "unique_remaining_s6": 6481
+  },
+  "endpoint_merged_63h_63i": {
+   "child_closed_by_bit": 89,
+   "cost_needed_by_open_classes": 375886,
+   "git_blob_sha": "c3ff50364499014a7096151bd9893a6510386c05",
+   "head": "class-frontier-merged-cost63h-63i-recompute-20261116.json",
+   "receipts": 1,
+   "s6_needed_by_open_classes": 4749,
+   "solved_s6_in_manifest": 1369,
+   "sum_remaining_cost": 512163,
+   "unique_remaining_s6": 6479
+  },
+  "fork_merge_head_63h_63i": {
+   "baseline_quote": [
+    1360,
+    6488,
+    512785,
+    4758,
+    376508
+   ],
+   "classification": "fork-merge-rebase",
+   "delta": 9,
+   "external_branch_mim": 7,
+   "frontier_key": "frontier_after_merged",
+   "frontier_solved": 1369,
+   "head": "class-frontier-merged-cost63h-63i-recompute-20261116.json",
+   "prose_pointer_head": "class-frontier-cost58c-receipts-recompute-20261116.json",
+   "quote_state_matches": [
+    "class-frontier-cost58c-receipts-recompute-20261116.json:frontier_after_cost58c"
+   ],
+   "quote_status": "matched_published_state",
+   "sum_mim": 2,
+   "union_mim": 2
+  },
+  "geometry": {
+   "anomalies": 0,
+   "group_records": 40,
+   "published_hex_errata": [
+    {
+     "check": "malformed_marginal_hex",
+     "head": "class2-lane-cost63cd-frontier-recompute-20261114.json",
+     "key": "cost63b_addition",
+     "marginal_in_manifest": 8,
+     "n_valid_entries": 7,
+     "value": [
+      "00000000000010000003800000000100020"
+     ]
+    }
+   ],
+   "receipt_records": 546
+  },
+  "inventory_at_1233": 497,
+  "pins": {
+   "first_implementation": 110,
+   "pin_groups": {
+    "base": 26,
+    "chain": 52,
+    "post70e": 32
+   },
+   "pin_groups_2": {
+    "base": 26,
+    "chain": 52,
+    "post70e": 28
+   },
+   "post70e_delta": "exactly the four v2 pin proposals (71c/70f/73g/70g) pinned only by the first implementation; the audited corpus endpoints agree",
+   "second_implementation": 106
+  }
+ },
+ "pair_75d": {
+  "arith": {
+   "anomalies": 0,
+   "classification_counts": {
+    "cross-head-merge": 1,
+    "no_numeric_baseline_quote": 7,
+    "own-label-recompute": 1,
+    "parallel-batch-union": 11,
+    "sequential-fold-union": 49
+   },
+   "heads": 69,
+   "pointer_name_differs_cases": [
+    {
+     "head": "class-frontier-cost74g-receipts-recompute-20261115.json",
+     "matched_states": [
+      "class-frontier-cost73h-receipts-recompute-20261115.json:frontier_after_cost73h"
+     ],
+     "prose_pointer_head": "class-frontier-cost72c-receipts-recompute-20261115.json"
+    }
+   ],
+   "quote_errata": [
+    {
+     "characterization": "quoted solved count matches the pointer head final state but the four remaining-fields quote the pre-lane baseline state; quoted 5-tuple matches no published head; delta arithmetic uses the correct solved baseline and reconciles with the head receipts",
+     "head": "class-frontier-cost70f-receipts-recompute-20261115.json",
+     "pointer_actual_final_state": [
+      1235,
+      6612,
+      521988,
+      4882,
+      385711
+     ],
+     "prose_pointer_head": "class-frontier-cost71c-receipts-recompute-20261115.json",
+     "quoted": [
+      1235,
+      6614,
+      522131,
+      4884,
+      385854
+     ]
+    }
+   ],
+   "quote_status_counts": {
+    "matched_published_state": 61,
+    "unmatched_quote": 1,
+    "unverifiable_quote": 7
+   }
+  },
+  "base_roots_distinct": 194,
+  "canonical_line": {
+   "baseline_solved": 1233,
+   "distinct_marginal_hexes": 63,
+   "endpoint_solved": 1296,
+   "multi_claims": 0,
+   "total_mim": 63
+  },
+  "chain_head_roots_distinct": 402,
+  "child_closure_heads": 24,
+  "convention_external_receipts": [
+   {
+    "d4_orbit": "00000008000000803800000008200000",
+    "d4_twin_of_inventory": true,
+    "head": "class-frontier-cost75c-recompute-20261115.json",
+    "marginal_in_manifest": 2,
+    "path": "cost72_fold",
+    "root_hex": "00008000000000803202000000000200"
+   }
+  ],
+  "cumulative_final_document_order": 569,
+  "cumulative_final_own_branch": 569,
+  "cumulative_heads": 17,
+  "d4": {
+   "orbits": 558,
+   "roots": 569,
+   "twin_pairs": 11
+  },
+  "endpoint_75d": {
+   "child_closed_by_bit": 12,
+   "cost_needed_by_open_classes": 381191,
+   "git_blob_sha": "c801e60578ee5c5272e75719e35847052ac58314",
+   "head": "class-frontier-cost75d-receipts-recompute-20261115.json",
+   "receipts": 4,
+   "s6_needed_by_open_classes": 4821,
+   "solved_s6_in_manifest": 1296,
+   "sum_remaining_cost": 517468,
+   "unique_remaining_s6": 6551
+  },
+  "geometry": {
+   "anomalies": 0,
+   "group_records": 40,
+   "published_hex_errata": [
+    {
+     "check": "malformed_marginal_hex",
+     "head": "class2-lane-cost63cd-frontier-recompute-20261114.json",
+     "key": "cost63b_addition",
+     "marginal_in_manifest": 8,
+     "n_valid_entries": 7,
+     "value": [
+      "00000000000010000003800000000100020"
+     ]
+    }
+   ],
+   "receipt_records": 434
+  },
+  "inventory_at_1233": 497,
+  "pins": {
+   "first_implementation": 95,
+   "pin_groups": {
+    "base": 26,
+    "chain": 52,
+    "post70e": 17
+   },
+   "pin_groups_2": {
+    "base": 26,
+    "chain": 52,
+    "post70e": 13
+   },
+   "post70e_delta": "exactly the four v2 pin proposals (71c/70f/73g/70g) pinned only by the first implementation; the audited corpus endpoints agree",
+   "second_implementation": 91
+  }
+ },
+ "pair_80d": {
+  "arith": {
+   "anomalies": 0,
+   "classification_counts": {
+    "cross-head-merge": 1,
+    "no_numeric_baseline_quote": 7,
+    "own-label-recompute": 1,
+    "parallel-batch-union": 11,
+    "sequential-fold-union": 53
+   },
+   "heads": 73,
+   "pointer_name_differs_cases": [
+    {
+     "head": "class-frontier-cost74g-receipts-recompute-20261115.json",
+     "matched_states": [
+      "class-frontier-cost73h-receipts-recompute-20261115.json:frontier_after_cost73h"
+     ],
+     "prose_pointer_head": "class-frontier-cost72c-receipts-recompute-20261115.json"
+    }
+   ],
+   "quote_errata": [
+    {
+     "characterization": "quoted solved count matches the pointer head final state but the four remaining-fields quote the pre-lane baseline state; quoted 5-tuple matches no published head; delta arithmetic uses the correct solved baseline and reconciles with the head receipts",
+     "head": "class-frontier-cost70f-receipts-recompute-20261115.json",
+     "pointer_actual_final_state": [
+      1235,
+      6612,
+      521988,
+      4882,
+      385711
+     ],
+     "prose_pointer_head": "class-frontier-cost71c-receipts-recompute-20261115.json",
+     "quoted": [
+      1235,
+      6614,
+      522131,
+      4884,
+      385854
+     ]
+    }
+   ],
+   "quote_status_counts": {
+    "matched_published_state": 65,
+    "unmatched_quote": 1,
+    "unverifiable_quote": 7
+   }
+  },
+  "base_roots_distinct": 194,
+  "bit78_root_hex": "00000000100040801202000000200000",
+  "canonical_line": {
+   "baseline_solved": 1233,
+   "distinct_marginal_hexes": 72,
+   "endpoint_solved": 1305,
+   "multi_claims": 0,
+   "total_mim": 72
+  },
+  "chain_head_roots_distinct": 402,
+  "child_closure_heads": 28,
+  "convention_external_receipts": [
+   {
+    "d4_orbit": "00000008000000803800000008200000",
+    "d4_twin_of_inventory": true,
+    "head": "class-frontier-cost75c-recompute-20261115.json",
+    "marginal_in_manifest": 2,
+    "path": "cost72_fold",
+    "root_hex": "00008000000000803202000000000200"
+   }
+  ],
+  "cumulative_final_document_order": 587,
+  "cumulative_final_own_branch": 587,
+  "cumulative_heads": 21,
+  "d4": {
+   "orbits": 576,
+   "roots": 587,
+   "twin_pairs": 11
+  },
+  "endpoint_80d": {
+   "child_closed_by_bit": 48,
+   "cost_needed_by_open_classes": 380516,
+   "git_blob_sha": "289c93373692d6627347dc9bbb9ffdc3653f508b",
+   "head": "class-frontier-cost80d-receipts-recompute-20261115.json",
+   "receipts": 4,
+   "s6_needed_by_open_classes": 4812,
+   "solved_s6_in_manifest": 1305,
+   "sum_remaining_cost": 516793,
+   "unique_remaining_s6": 6542
+  },
+  "geometry": {
+   "anomalies": 0,
+   "group_records": 40,
+   "published_hex_errata": [
+    {
+     "check": "malformed_marginal_hex",
+     "head": "class2-lane-cost63cd-frontier-recompute-20261114.json",
+     "key": "cost63b_addition",
+     "marginal_in_manifest": 8,
+     "n_valid_entries": 7,
+     "value": [
+      "00000000000010000003800000000100020"
+     ]
+    }
+   ],
+   "receipt_records": 464
+  },
+  "inventory_at_1233": 497,
+  "pins": {
+   "first_implementation": 99,
+   "pin_groups": {
+    "base": 26,
+    "chain": 52,
+    "post70e": 21
+   },
+   "pin_groups_2": {
+    "base": 26,
+    "chain": 52,
+    "post70e": 17
+   },
+   "post70e_delta": "exactly the four v2 pin proposals (71c/70f/73g/70g) pinned only by the first implementation; the audited corpus endpoints agree",
+   "second_implementation": 95
+  }
+ },
+ "pair_82c": {
+  "arith": {
+   "anomalies": 0,
+   "classification_counts": {
+    "cross-head-merge": 1,
+    "no_numeric_baseline_quote": 7,
+    "own-label-recompute": 1,
+    "parallel-batch-union": 11,
+    "sequential-fold-union": 54
+   },
+   "heads": 74,
+   "pointer_name_differs_cases": [
+    {
+     "head": "class-frontier-cost74g-receipts-recompute-20261115.json",
+     "matched_states": [
+      "class-frontier-cost73h-receipts-recompute-20261115.json:frontier_after_cost73h"
+     ],
+     "prose_pointer_head": "class-frontier-cost72c-receipts-recompute-20261115.json"
+    }
+   ],
+   "quote_errata": [
+    {
+     "characterization": "quoted solved count matches the pointer head final state but the four remaining-fields quote the pre-lane baseline state; quoted 5-tuple matches no published head; delta arithmetic uses the correct solved baseline and reconciles with the head receipts",
+     "head": "class-frontier-cost70f-receipts-recompute-20261115.json",
+     "pointer_actual_final_state": [
+      1235,
+      6612,
+      521988,
+      4882,
+      385711
+     ],
+     "prose_pointer_head": "class-frontier-cost71c-receipts-recompute-20261115.json",
+     "quoted": [
+      1235,
+      6614,
+      522131,
+      4884,
+      385854
+     ]
+    }
+   ],
+   "quote_status_counts": {
+    "matched_published_state": 66,
+    "unmatched_quote": 1,
+    "unverifiable_quote": 7
+   }
+  },
+  "base_roots_distinct": 194,
+  "bit78_root_hex": "00000000100040801202000000200000",
+  "canonical_line": {
+   "baseline_solved": 1233,
+   "distinct_marginal_hexes": 73,
+   "endpoint_solved": 1306,
+   "multi_claims": 0,
+   "total_mim": 73
+  },
+  "chain_head_roots_distinct": 402,
+  "child_closure_heads": 29,
+  "convention_external_receipts": [
+   {
+    "d4_orbit": "00000008000000803800000008200000",
+    "d4_twin_of_inventory": true,
+    "head": "class-frontier-cost75c-recompute-20261115.json",
+    "marginal_in_manifest": 2,
+    "path": "cost72_fold",
+    "root_hex": "00008000000000803202000000000200"
+   }
+  ],
+  "cumulative_final_document_order": 592,
+  "cumulative_final_own_branch": 592,
+  "cumulative_heads": 22,
+  "d4": {
+   "orbits": 581,
+   "roots": 592,
+   "twin_pairs": 11
+  },
+  "endpoint_82c": {
+   "child_closed_by_bit": 16,
+   "cost_needed_by_open_classes": 380434,
+   "git_blob_sha": "4ee6aaab50b61e8d48e1d37afed373cd01094620",
+   "head": "class-frontier-cost82c-receipts-recompute-20261115.json",
+   "receipts": 5,
+   "s6_needed_by_open_classes": 4811,
+   "solved_s6_in_manifest": 1306,
+   "sum_remaining_cost": 516711,
+   "unique_remaining_s6": 6541
+  },
+  "geometry": {
+   "anomalies": 0,
+   "group_records": 40,
+   "published_hex_errata": [
+    {
+     "check": "malformed_marginal_hex",
+     "head": "class2-lane-cost63cd-frontier-recompute-20261114.json",
+     "key": "cost63b_addition",
+     "marginal_in_manifest": 8,
+     "n_valid_entries": 7,
+     "value": [
+      "00000000000010000003800000000100020"
+     ]
+    }
+   ],
+   "receipt_records": 469
+  },
+  "inventory_at_1233": 497,
+  "pins": {
+   "first_implementation": 100,
+   "pin_groups": {
+    "base": 26,
+    "chain": 52,
+    "post70e": 22
+   },
+   "pin_groups_2": {
+    "base": 26,
+    "chain": 52,
+    "post70e": 18
+   },
+   "post70e_delta": "exactly the four v2 pin proposals (71c/70f/73g/70g) pinned only by the first implementation; the audited corpus endpoints agree",
+   "second_implementation": 96
+  }
+ },
+ "pair_83a": {
+  "arith": {
+   "anomalies": 0,
+   "classification_counts": {
+    "cross-head-merge": 1,
+    "no_numeric_baseline_quote": 7,
+    "own-label-recompute": 1,
+    "parallel-batch-union": 11,
+    "sequential-fold-union": 55
+   },
+   "heads": 75,
+   "pointer_name_differs_cases": [
+    {
+     "head": "class-frontier-cost74g-receipts-recompute-20261115.json",
+     "matched_states": [
+      "class-frontier-cost73h-receipts-recompute-20261115.json:frontier_after_cost73h"
+     ],
+     "prose_pointer_head": "class-frontier-cost72c-receipts-recompute-20261115.json"
+    }
+   ],
+   "quote_errata": [
+    {
+     "characterization": "quoted solved count matches the pointer head final state but the four remaining-fields quote the pre-lane baseline state; quoted 5-tuple matches no published head; delta arithmetic uses the correct solved baseline and reconciles with the head receipts",
+     "head": "class-frontier-cost70f-receipts-recompute-20261115.json",
+     "pointer_actual_final_state": [
+      1235,
+      6612,
+      521988,
+      4882,
+      385711
+     ],
+     "prose_pointer_head": "class-frontier-cost71c-receipts-recompute-20261115.json",
+     "quoted": [
+      1235,
+      6614,
+      522131,
+      4884,
+      385854
+     ]
+    }
+   ],
+   "quote_status_counts": {
+    "matched_published_state": 67,
+    "unmatched_quote": 1,
+    "unverifiable_quote": 7
+   }
+  },
+  "base_roots_distinct": 194,
+  "bit78_root_hex": "00000000100040801202000000200000",
+  "canonical_line": {
+   "baseline_solved": 1233,
+   "distinct_marginal_hexes": 76,
+   "endpoint_solved": 1309,
+   "multi_claims": 0,
+   "total_mim": 76
+  },
+  "chain_head_roots_distinct": 402,
+  "child_closure_heads": 30,
+  "convention_external_receipts": [
+   {
+    "d4_orbit": "00000008000000803800000008200000",
+    "d4_twin_of_inventory": true,
+    "head": "class-frontier-cost75c-recompute-20261115.json",
+    "marginal_in_manifest": 2,
+    "path": "cost72_fold",
+    "root_hex": "00008000000000803202000000000200"
+   }
+  ],
+  "cumulative_final_document_order": 596,
+  "cumulative_final_own_branch": 596,
+  "cumulative_heads": 23,
+  "d4": {
+   "orbits": 585,
+   "roots": 596,
+   "twin_pairs": 11
+  },
+  "endpoint_83a": {
+   "child_closed_by_bit": 12,
+   "cost_needed_by_open_classes": 380200,
+   "git_blob_sha": "74e35f224e4e46f9464bcaed14c5ea073f4bee5c",
+   "head": "class-frontier-cost83a-receipts-recompute-20261115.json",
+   "receipts": 4,
+   "s6_needed_by_open_classes": 4808,
+   "solved_s6_in_manifest": 1309,
+   "sum_remaining_cost": 516477,
+   "unique_remaining_s6": 6538
+  },
+  "geometry": {
+   "anomalies": 0,
+   "group_records": 40,
+   "published_hex_errata": [
+    {
+     "check": "malformed_marginal_hex",
+     "head": "class2-lane-cost63cd-frontier-recompute-20261114.json",
+     "key": "cost63b_addition",
+     "marginal_in_manifest": 8,
+     "n_valid_entries": 7,
+     "value": [
+      "00000000000010000003800000000100020"
+     ]
+    }
+   ],
+   "receipt_records": 473
+  },
+  "inventory_at_1233": 497,
+  "pins": {
+   "first_implementation": 101,
+   "pin_groups": {
+    "base": 26,
+    "chain": 52,
+    "post70e": 23
+   },
+   "pin_groups_2": {
+    "base": 26,
+    "chain": 52,
+    "post70e": 19
+   },
+   "post70e_delta": "exactly the four v2 pin proposals (71c/70f/73g/70g) pinned only by the first implementation; the audited corpus endpoints agree",
+   "second_implementation": 97
+  }
+ },
+ "pair_83c": {
+  "arith": {
+   "anomalies": 0,
+   "classification_counts": {
+    "cross-head-merge": 1,
+    "no_numeric_baseline_quote": 7,
+    "own-label-recompute": 1,
+    "parallel-batch-union": 11,
+    "sequential-fold-union": 57
+   },
+   "heads": 77,
+   "pointer_name_differs_cases": [
+    {
+     "head": "class-frontier-cost74g-receipts-recompute-20261115.json",
+     "matched_states": [
+      "class-frontier-cost73h-receipts-recompute-20261115.json:frontier_after_cost73h"
+     ],
+     "prose_pointer_head": "class-frontier-cost72c-receipts-recompute-20261115.json"
+    }
+   ],
+   "quote_errata": [
+    {
+     "characterization": "quoted solved count matches the pointer head final state but the four remaining-fields quote the pre-lane baseline state; quoted 5-tuple matches no published head; delta arithmetic uses the correct solved baseline and reconciles with the head receipts",
+     "head": "class-frontier-cost70f-receipts-recompute-20261115.json",
+     "pointer_actual_final_state": [
+      1235,
+      6612,
+      521988,
+      4882,
+      385711
+     ],
+     "prose_pointer_head": "class-frontier-cost71c-receipts-recompute-20261115.json",
+     "quoted": [
+      1235,
+      6614,
+      522131,
+      4884,
+      385854
+     ]
+    }
+   ],
+   "quote_status_counts": {
+    "matched_published_state": 69,
+    "unmatched_quote": 1,
+    "unverifiable_quote": 7
+   }
+  },
+  "base_roots_distinct": 194,
+  "bit78_root_hex": "00000000100040801202000000200000",
+  "canonical_line": {
+   "baseline_solved": 1233,
+   "distinct_marginal_hexes": 80,
+   "endpoint_solved": 1313,
+   "multi_claims": 0,
+   "total_mim": 80
+  },
+  "chain_head_roots_distinct": 402,
+  "child_closure_heads": 32,
+  "convention_external_receipts": [
+   {
+    "d4_orbit": "00000008000000803800000008200000",
+    "d4_twin_of_inventory": true,
+    "head": "class-frontier-cost75c-recompute-20261115.json",
+    "marginal_in_manifest": 2,
+    "path": "cost72_fold",
+    "root_hex": "00008000000000803202000000000200"
+   }
+  ],
+  "cumulative_final_document_order": 603,
+  "cumulative_final_own_branch": 603,
+  "cumulative_heads": 25,
+  "d4": {
+   "orbits": 592,
+   "roots": 603,
+   "twin_pairs": 11
+  },
+  "endpoint_83b": {
+   "child_closed_by_bit": 9,
+   "cost_needed_by_open_classes": 379950,
+   "git_blob_sha": "b089bd955efaf51933c892ca1877ca6ac8062f75",
+   "head": "class-frontier-cost83b-receipts-recompute-20261115.json",
+   "receipts": 5,
+   "s6_needed_by_open_classes": 4805,
+   "solved_s6_in_manifest": 1312,
+   "sum_remaining_cost": 516227,
+   "unique_remaining_s6": 6535
+  },
+  "endpoint_83c": {
+   "child_closed_by_bit": 16,
+   "cost_needed_by_open_classes": 379867,
+   "git_blob_sha": "fc7832edce1f736ea5f15b2632d79d709fa004f4",
+   "head": "class-frontier-cost83c-receipts-recompute-20261115.json",
+   "receipts": 2,
+   "s6_needed_by_open_classes": 4804,
+   "solved_s6_in_manifest": 1313,
+   "sum_remaining_cost": 516144,
+   "unique_remaining_s6": 6534
+  },
+  "geometry": {
+   "anomalies": 0,
+   "group_records": 40,
+   "published_hex_errata": [
+    {
+     "check": "malformed_marginal_hex",
+     "head": "class2-lane-cost63cd-frontier-recompute-20261114.json",
+     "key": "cost63b_addition",
+     "marginal_in_manifest": 8,
+     "n_valid_entries": 7,
+     "value": [
+      "00000000000010000003800000000100020"
+     ]
+    }
+   ],
+   "receipt_records": 480
+  },
+  "inventory_at_1233": 497,
+  "pins": {
+   "first_implementation": 103,
+   "pin_groups": {
+    "base": 26,
+    "chain": 52,
+    "post70e": 25
+   },
+   "pin_groups_2": {
+    "base": 26,
+    "chain": 52,
+    "post70e": 21
+   },
+   "post70e_delta": "exactly the four v2 pin proposals (71c/70f/73g/70g) pinned only by the first implementation; the audited corpus endpoints agree",
+   "second_implementation": 99
+  }
+ },
+ "pair_83d": {
+  "arith": {
+   "anomalies": 0,
+   "classification_counts": {
+    "cross-head-merge": 1,
+    "no_numeric_baseline_quote": 7,
+    "own-label-recompute": 1,
+    "parallel-batch-union": 11,
+    "sequential-fold-union": 58
+   },
+   "heads": 78,
+   "pointer_name_differs_cases": [
+    {
+     "head": "class-frontier-cost74g-receipts-recompute-20261115.json",
+     "matched_states": [
+      "class-frontier-cost73h-receipts-recompute-20261115.json:frontier_after_cost73h"
+     ],
+     "prose_pointer_head": "class-frontier-cost72c-receipts-recompute-20261115.json"
+    }
+   ],
+   "quote_errata": [
+    {
+     "characterization": "quoted solved count matches the pointer head final state but the four remaining-fields quote the pre-lane baseline state; quoted 5-tuple matches no published head; delta arithmetic uses the correct solved baseline and reconciles with the head receipts",
+     "head": "class-frontier-cost70f-receipts-recompute-20261115.json",
+     "pointer_actual_final_state": [
+      1235,
+      6612,
+      521988,
+      4882,
+      385711
+     ],
+     "prose_pointer_head": "class-frontier-cost71c-receipts-recompute-20261115.json",
+     "quoted": [
+      1235,
+      6614,
+      522131,
+      4884,
+      385854
+     ]
+    }
+   ],
+   "quote_status_counts": {
+    "matched_published_state": 70,
+    "unmatched_quote": 1,
+    "unverifiable_quote": 7
+   }
+  },
+  "base_roots_distinct": 194,
+  "bit78_root_hex": "00000000100040801202000000200000",
+  "canonical_line": {
+   "baseline_solved": 1233,
+   "distinct_marginal_hexes": 81,
+   "endpoint_solved": 1314,
+   "multi_claims": 0,
+   "total_mim": 81
+  },
+  "chain_head_roots_distinct": 402,
+  "child_closure_heads": 33,
+  "convention_external_receipts": [
+   {
+    "d4_orbit": "00000008000000803800000008200000",
+    "d4_twin_of_inventory": true,
+    "head": "class-frontier-cost75c-recompute-20261115.json",
+    "marginal_in_manifest": 2,
+    "path": "cost72_fold",
+    "root_hex": "00008000000000803202000000000200"
+   }
+  ],
+  "cumulative_final_document_order": 606,
+  "cumulative_final_own_branch": 606,
+  "cumulative_heads": 26,
+  "d4": {
+   "orbits": 595,
+   "roots": 606,
+   "twin_pairs": 11
+  },
+  "endpoint_83d": {
+   "child_closed_by_bit": 16,
+   "cost_needed_by_open_classes": 379784,
+   "git_blob_sha": "49cb8022bc715fa22d7c2d483160083478676caa",
+   "head": "class-frontier-cost83d-receipts-recompute-20261115.json",
+   "receipts": 3,
+   "s6_needed_by_open_classes": 4803,
+   "solved_s6_in_manifest": 1314,
+   "sum_remaining_cost": 516061,
+   "unique_remaining_s6": 6533
+  },
+  "geometry": {
+   "anomalies": 0,
+   "group_records": 40,
+   "published_hex_errata": [
+    {
+     "check": "malformed_marginal_hex",
+     "head": "class2-lane-cost63cd-frontier-recompute-20261114.json",
+     "key": "cost63b_addition",
+     "marginal_in_manifest": 8,
+     "n_valid_entries": 7,
+     "value": [
+      "00000000000010000003800000000100020"
+     ]
+    }
+   ],
+   "receipt_records": 483
+  },
+  "inventory_at_1233": 497,
+  "pins": {
+   "first_implementation": 104,
+   "pin_groups": {
+    "base": 26,
+    "chain": 52,
+    "post70e": 26
+   },
+   "pin_groups_2": {
+    "base": 26,
+    "chain": 52,
+    "post70e": 22
+   },
+   "post70e_delta": "exactly the four v2 pin proposals (71c/70f/73g/70g) pinned only by the first implementation; the audited corpus endpoints agree",
+   "second_implementation": 100
+  }
+ },
+ "pair_84a62a": {
+  "arith": {
+   "anomalies": 0,
+   "classification_counts": {
+    "cross-head-merge": 1,
+    "no_numeric_baseline_quote": 7,
+    "own-label-recompute": 1,
+    "parallel-batch-union": 11,
+    "sequential-fold-union": 60
+   },
+   "heads": 80,
+   "pointer_name_differs_cases": [
+    {
+     "head": "class-frontier-cost74g-receipts-recompute-20261115.json",
+     "matched_states": [
+      "class-frontier-cost73h-receipts-recompute-20261115.json:frontier_after_cost73h"
+     ],
+     "prose_pointer_head": "class-frontier-cost72c-receipts-recompute-20261115.json"
+    }
+   ],
+   "quote_errata": [
+    {
+     "characterization": "quoted solved count matches the pointer head final state but the four remaining-fields quote the pre-lane baseline state; quoted 5-tuple matches no published head; delta arithmetic uses the correct solved baseline and reconciles with the head receipts",
+     "head": "class-frontier-cost70f-receipts-recompute-20261115.json",
+     "pointer_actual_final_state": [
+      1235,
+      6612,
+      521988,
+      4882,
+      385711
+     ],
+     "prose_pointer_head": "class-frontier-cost71c-receipts-recompute-20261115.json",
+     "quoted": [
+      1235,
+      6614,
+      522131,
+      4884,
+      385854
+     ]
+    }
+   ],
+   "quote_status_counts": {
+    "matched_published_state": 72,
+    "unmatched_quote": 1,
+    "unverifiable_quote": 7
+   }
+  },
+  "base_roots_distinct": 194,
+  "bit78_root_hex": "00000000100040801202000000200000",
+  "canonical_line": {
+   "baseline_solved": 1233,
+   "distinct_marginal_hexes": 93,
+   "endpoint_solved": 1326,
+   "multi_claims": 0,
+   "total_mim": 93
+  },
+  "chain_head_roots_distinct": 402,
+  "child_closure_heads": 35,
+  "convention_external_receipts": [
+   {
+    "d4_orbit": "00000008000000803800000008200000",
+    "d4_twin_of_inventory": true,
+    "head": "class-frontier-cost75c-recompute-20261115.json",
+    "marginal_in_manifest": 2,
+    "path": "cost72_fold",
+    "root_hex": "00008000000000803202000000000200"
+   }
+  ],
+  "cumulative_final_document_order": 616,
+  "cumulative_final_own_branch": 616,
+  "cumulative_heads": 28,
+  "d4": {
+   "orbits": 605,
+   "roots": 616,
+   "twin_pairs": 11
+  },
+  "endpoint_62a": {
+   "child_closed_by_bit": 7,
+   "cost_needed_by_open_classes": 378974,
+   "git_blob_sha": "3989e9ddfa43d0951a9a58c10919ce5087eb8733",
+   "head": "class-frontier-cost62a-receipts-recompute-20261116.json",
+   "receipts": 6,
+   "s6_needed_by_open_classes": 4792,
+   "solved_s6_in_manifest": 1326,
+   "sum_remaining_cost": 515251,
+   "unique_remaining_s6": 6522
+  },
+  "endpoint_84a": {
+   "child_closed_by_bit": 1,
+   "cost_needed_by_open_classes": 379545,
+   "git_blob_sha": "f5624e99f8603ea612a862ed63539011989b5506",
+   "head": "class-frontier-cost84a-receipts-recompute-20261115.json",
+   "receipts": 4,
+   "s6_needed_by_open_classes": 4800,
+   "solved_s6_in_manifest": 1318,
+   "sum_remaining_cost": 515822,
+   "unique_remaining_s6": 6530
+  },
+  "geometry": {
+   "anomalies": 0,
+   "group_records": 40,
+   "published_hex_errata": [
+    {
+     "check": "malformed_marginal_hex",
+     "head": "class2-lane-cost63cd-frontier-recompute-20261114.json",
+     "key": "cost63b_addition",
+     "marginal_in_manifest": 8,
+     "n_valid_entries": 7,
+     "value": [
+      "00000000000010000003800000000100020"
+     ]
+    }
+   ],
+   "receipt_records": 493
+  },
+  "inventory_at_1233": 497,
+  "pins": {
+   "first_implementation": 106,
+   "pin_groups": {
+    "base": 26,
+    "chain": 52,
+    "post70e": 28
+   },
+   "pin_groups_2": {
+    "base": 26,
+    "chain": 52,
+    "post70e": 24
+   },
+   "post70e_delta": "exactly the four v2 pin proposals (71c/70f/73g/70g) pinned only by the first implementation; the audited corpus endpoints agree",
+   "second_implementation": 102
+  }
+ },
+ "pair_reconciled_canonical1405": {
+  "arith": {
+   "anomalies": 0,
+   "classification_counts": {
+    "cross-head-merge": 1,
+    "fork-merge-rebase": 3,
+    "fork-reconcile": 1,
+    "no_numeric_baseline_quote": 7,
+    "own-label-recompute": 1,
+    "parallel-batch-union": 11,
+    "sequential-fold-union": 65,
+    "stale-baseline-quote": 2
+   },
+   "heads": 91,
+   "pointer_name_differs_cases": [
+    {
+     "head": "class-frontier-cost74g-receipts-recompute-20261115.json",
+     "matched_states": [
+      "class-frontier-cost73h-receipts-recompute-20261115.json:frontier_after_cost73h"
+     ],
+     "prose_pointer_head": "class-frontier-cost72c-receipts-recompute-20261115.json"
+    },
+    {
+     "head": "class-frontier-cost63j-receipts-recompute-20261116.json",
+     "matched_states": [
+      "class-frontier-cost63i-receipts-recompute-20261116.json:frontier_after_cost63i"
+     ],
+     "prose_pointer_head": "class-frontier-cost58c-receipts-recompute-20261116.json"
+    },
+    {
+     "head": "class-frontier-cost65m-receipts-recompute-20261116.json",
+     "matched_states": [
+      "class-frontier-cost63j-receipts-recompute-20261116.json:frontier_after_cost63j"
+     ],
+     "prose_pointer_head": "class-frontier-cost58c-receipts-recompute-20261116.json"
+    },
+    {
+     "head": "class-frontier-cost67d-receipts-recompute-20261116.json",
+     "matched_states": [
+      "class-frontier-cost63j-receipts-recompute-20261116.json:frontier_after_cost63j"
+     ],
+     "prose_pointer_head": "class-frontier-cost58c-receipts-recompute-20261116.json"
+    },
+    {
+     "head": "class-frontier-cost70g-receipts-recompute-20261116.json",
+     "matched_states": [
+      "class-frontier-cost63j-receipts-recompute-20261116.json:frontier_after_cost63j"
+     ],
+     "prose_pointer_head": "class-frontier-cost58c-receipts-recompute-20261116.json"
+    }
+   ],
+   "quote_errata": [
+    {
+     "characterization": "quoted solved count matches the pointer head final state but the four remaining-fields quote the pre-lane baseline state; quoted 5-tuple matches no published head; delta arithmetic uses the correct solved baseline and reconciles with the head receipts",
+     "head": "class-frontier-cost70f-receipts-recompute-20261115.json",
+     "pointer_actual_final_state": [
+      1235,
+      6612,
+      521988,
+      4882,
+      385711
+     ],
+     "prose_pointer_head": "class-frontier-cost71c-receipts-recompute-20261115.json",
+     "quoted": [
+      1235,
+      6614,
+      522131,
+      4884,
+      385854
+     ]
+    }
+   ],
+   "quote_status_counts": {
+    "matched_published_state": 83,
+    "unmatched_quote": 1,
+    "unverifiable_quote": 7
+   }
+  },
+  "base_roots_distinct": 194,
+  "bit78_root_hex": "00000000100040801202000000200000",
+  "canonical_line": {
+   "baseline_solved": 1233,
+   "distinct_marginal_hexes": 172,
+   "endpoint_solved": 1405,
+   "multi_claims": 0,
+   "total_mim": 172
+  },
+  "chain_head_roots_distinct": 402,
+  "child_closure_heads": 46,
+  "convention_external_receipts": [
+   {
+    "d4_orbit": "00000008000000803800000008200000",
+    "d4_twin_of_inventory": true,
+    "head": "class-frontier-cost75c-recompute-20261115.json",
+    "marginal_in_manifest": 2,
+    "path": "cost72_fold",
+    "root_hex": "00008000000000803202000000000200"
+   }
+  ],
+  "cumulative_final_document_order": 713,
+  "cumulative_final_own_branch": 713,
+  "cumulative_heads": 39,
+  "d4": {
+   "orbits": 702,
+   "roots": 713,
+   "twin_pairs": 11
+  },
+  "endpoint_merged_63h_63i_63j_65m": {
+   "child_closed_by_bit": 89,
+   "cost_needed_by_open_classes": 373706,
+   "git_blob_sha": "a4cc8e95145a8796ff53b7686bf9cffc3d6e24cb",
+   "head": "class-frontier-merged-cost63h-63i-63j-65m-recompute-20261116.json",
+   "receipts": 1,
+   "s6_needed_by_open_classes": 4720,
+   "solved_s6_in_manifest": 1398,
+   "sum_remaining_cost": 509983,
+   "unique_remaining_s6": 6450
+  },
+  "endpoint_merged_63h_63i_63j_65m_67d": {
+   "child_closed_by_bits": {
+    "cost63h_child": 89,
+    "cost67d_child": 97
+   },
+   "cost_needed_by_open_classes": 373565,
+   "git_blob_sha": "777474faf6730242b7e0080bfcdad390cca3a0ee",
+   "head": "class-frontier-merged-cost63h-63i-63j-65m-67d-recompute-20261116.json",
+   "receipts": 2,
+   "s6_needed_by_open_classes": 4718,
+   "solved_s6_in_manifest": 1400,
+   "sum_remaining_cost": 509842,
+   "unique_remaining_s6": 6448
+  },
+  "endpoint_reconciled_canonical1405": {
+   "child_closed_by_bit": 18,
+   "cost_needed_by_open_classes": 373180,
+   "git_blob_sha": "b3ad19d7bfd48c771d5a6827707a9f26940dc1bb",
+   "head": "class-frontier-reconciled-canonical1400-cost70g-recompute-20261116.json",
+   "receipts": 7,
+   "s6_needed_by_open_classes": 4713,
+   "solved_s6_in_manifest": 1405,
+   "sum_remaining_cost": 509457,
+   "unique_remaining_s6": 6443
+  },
+  "fork_merge_head_63h_63i_63j_65m": {
+   "baseline_quote": [
+    1360,
+    6488,
+    512785,
+    4758,
+    376508
+   ],
+   "classification": "fork-merge-rebase",
+   "delta": 38,
+   "external_branch_heads": [
+    "class-frontier-cost63i-receipts-recompute-20261116.json",
+    "class-frontier-cost63j-receipts-recompute-20261116.json",
+    "class-frontier-cost65m-receipts-recompute-20261116.json"
+   ],
+   "external_branch_mim": 36,
+   "frontier_key": "frontier_after_merged",
+   "frontier_solved": 1398,
+   "head": "class-frontier-merged-cost63h-63i-63j-65m-recompute-20261116.json",
+   "prose_pointer_head": "class-frontier-cost58c-receipts-recompute-20261116.json",
+   "quote_state_matches": [
+    "class-frontier-cost58c-receipts-recompute-20261116.json:frontier_after_cost58c"
+   ],
+   "quote_status": "matched_published_state",
+   "sum_mim": 2,
+   "union_mim": 2
+  },
+  "fork_merge_head_63h_63i_63j_65m_67d": {
+   "baseline_quote": [
+    1396,
+    6452,
+    510115,
+    4722,
+    373838
+   ],
+   "classification": "fork-merge-rebase",
+   "delta": 4,
+   "external_branch_heads": [],
+   "external_branch_mim": 0,
+   "frontier_key": "frontier_after_merged",
+   "frontier_solved": 1400,
+   "head": "class-frontier-merged-cost63h-63i-63j-65m-67d-recompute-20261116.json",
+   "prose_pointer_head": "class-frontier-cost65m-receipts-recompute-20261116.json",
+   "quote_state_matches": [
+    "class-frontier-cost65m-receipts-recompute-20261116.json:frontier_after_cost65m"
+   ],
+   "quote_status": "matched_published_state",
+   "sum_mim": 4,
+   "union_mim": 4
+  },
+  "geometry": {
+   "anomalies": 0,
+   "group_records": 40,
+   "published_hex_errata": [
+    {
+     "check": "malformed_marginal_hex",
+     "head": "class2-lane-cost63cd-frontier-recompute-20261114.json",
+     "key": "cost63b_addition",
+     "marginal_in_manifest": 8,
+     "n_valid_entries": 7,
+     "value": [
+      "00000000000010000003800000000100020"
+     ]
+    }
+   ],
+   "receipt_records": 601
+  },
+  "inventory_at_1233": 497,
+  "pins": {
+   "first_implementation": 117,
+   "pin_groups": {
+    "base": 26,
+    "chain": 52,
+    "post70e": 39
+   },
+   "pin_groups_2": {
+    "base": 26,
+    "chain": 52,
+    "post70e": 35
+   },
+   "post70e_delta": "exactly the four v2 pin proposals (71c/70f/73g/70g) pinned only by the first implementation; the audited corpus endpoints agree",
+   "second_implementation": 113
+  },
+  "reconciled_head": {
+   "baseline_quote": [
+    1400,
+    6448,
+    509842,
+    4718,
+    373565
+   ],
+   "classification": "fork-reconcile",
+   "delta": 5,
+   "external_branch_heads": [],
+   "external_branch_mim": 0,
+   "frontier_key": "frontier_after_reconciled",
+   "frontier_solved": 1405,
+   "head": "class-frontier-reconciled-canonical1400-cost70g-recompute-20261116.json",
+   "prose_pointer_head": "class-frontier-merged-cost63h-63i-63j-65m-67d-recompute-20261116.json",
+   "quote_state_matches": [
+    "class-frontier-merged-cost63h-63i-63j-65m-67d-recompute-20261116.json:frontier_after_merged"
+   ],
+   "quote_status": "matched_published_state",
+   "sum_mim": 5,
+   "union_mim": 5
+  },
+  "stale_baseline_quote_errata": [
+   {
+    "characterization": "the baseline_main quote is a stale copy of the 63j head baseline quote (a published state, so the quote matches a real head - the 63j head - not the fold's actual baseline); the fold's completed claim chain_head_before documents the actual baseline, and the corrected-baseline delta equals the head's own sum and union of receipt marginals exactly",
+    "corrected_baseline_head": "class-frontier-cost65m-receipts-recompute-20261116.json",
+    "corrected_baseline_state": [
+     1396,
+     6452,
+     510115,
+     4722,
+     373838
+    ],
+    "corrected_delta": 2,
+    "delta_from_quoted_baseline": 4,
+    "head": "class-frontier-cost67d-receipts-recompute-20261116.json",
+    "quote_matches": [
+     "class-frontier-cost63j-receipts-recompute-20261116.json:frontier_after_cost63j"
+    ],
+    "quoted_state": [
+     1394,
+     6454,
+     510249,
+     4724,
+     373972
+    ]
+   },
+   {
+    "characterization": "the baseline_main quote is a stale copy of the 63j head baseline quote (a published state, so the quote matches a real head - the 63j head - not the fold's actual baseline); the fold's completed claim chain_head_before documents the actual baseline, and the corrected-baseline delta equals the head's own sum and union of receipt marginals exactly",
+    "corrected_baseline_head": "class-frontier-cost67d-receipts-recompute-20261116.json",
+    "corrected_baseline_state": [
+     1398,
+     6450,
+     509974,
+     4720,
+     373697
+    ],
+    "corrected_delta": 5,
+    "delta_from_quoted_baseline": 9,
+    "head": "class-frontier-cost70g-receipts-recompute-20261116.json",
+    "quote_matches": [
+     "class-frontier-cost63j-receipts-recompute-20261116.json:frontier_after_cost63j"
+    ],
+    "quoted_state": [
+     1394,
+     6454,
+     510249,
+     4724,
+     373972
+    ]
+   }
+  ],
+  "v12_method_prose_errata": [
+   {
+    "basis": "the structured records (target counts, totals, addition records, completed claim) are internally consistent and cross-verified; the method/controls prose is template-copied from the 63j fold script and is not used by any audit control",
+    "child_closed_by_bit_structured": 1,
+    "head": "class-frontier-cost63j-receipts-recompute-20261116.json",
+    "prose_errata": [
+     "method quotes 45 REFUTED-D10 / 40,372,308 nodes (target: 34 refuted / 67,040,399 nodes)",
+     "method/controls quote 18 roots disjoint vs 649 (29 roots vs the 667 63i-branch lineage; the 649 figure is the pre-63i count)",
+     "controls set_equality_after_18 (29 receipts folded)"
+    ]
+   },
+   {
+    "basis": "the structured records (target counts, totals, addition records, completed claim) are internally consistent and cross-verified; the method/controls prose is template-copied from the 63j fold script and is not used by any audit control",
+    "child_closed_by_bit_structured": 21,
+    "head": "class-frontier-cost65m-receipts-recompute-20261116.json",
+    "prose_errata": [
+     "method quotes the 63j sweep numbers (63 candidates / 45 REFUTED / 40,372,308 nodes; target: 65 candidates / 57 refuted / 74,130,403 nodes)",
+     "method/controls quote 18 roots disjoint vs 649 (8 roots folded)",
+     "target.child_orbit_closure and the controls closure prose say bit-1 (the child is closed by bit 21 per the totals, the claim and the bit-21 receipt record)",
+     "controls set_equality_after_18 (8 receipts folded)"
+    ]
+   },
+   {
+    "basis": "the structured records (target counts, totals, addition records, completed claim) are internally consistent and cross-verified; the method/controls prose is template-copied from the 63j fold script and is not used by any audit control",
+    "child_closed_by_bit_structured": 97,
+    "head": "class-frontier-cost67d-receipts-recompute-20261116.json",
+    "prose_errata": [
+     "method/controls quote the 63j baseline 1394 (actual baseline the 65m head 1396 per the claim chain_head_before)",
+     "method quotes the 63j sweep numbers (63 candidates / 8 WIN7 / 45 REFUTED / 40,372,308 nodes; target: 67 candidates / 1 win / 66 refuted / 65,246,890 nodes)",
+     "method/controls quote 18 roots disjoint vs 649 (1 root folded)",
+     "target.child_orbit_closure and the controls closure prose say bit-1 (the child is closed by bit 97 per the totals, the claim and the bit-97 receipt record)",
+     "controls set_equality_after_18 (1 receipt folded)"
+    ]
+   },
+   {
+    "basis": "the structured records (target counts, totals, addition records, completed claim) are internally consistent and cross-verified; the method/controls prose is template-copied from the 63j fold script and is not used by any audit control",
+    "child_closed_by_bit_structured": 18,
+    "head": "class-frontier-cost70g-receipts-recompute-20261116.json",
+    "prose_errata": [
+     "method/controls quote the 63j baseline 1394 (actual baseline the 67d branch-D head 1398 per the claim chain_head_before)",
+     "method quotes 8 receipts / 18 roots (7 receipts folded)",
+     "method quotes the 63j sweep numbers (63 candidates / 8 WIN7 / 45 REFUTED / 40,372,308 nodes; target: 70 candidates / 7 win / 63 refuted / 124,066,734 nodes)",
+     "target.child_orbit_closure and the controls closure prose say bit-1 (the child is closed by bit 18 per the totals, the claim and the bit-18 receipt record)",
+     "controls set_equality_after_18 (7 receipts folded)"
+    ]
+   }
+  ],
+  "v12_sweep_endpoints": {
+   "63j": {
+    "claim_fold_details_checked": {
+     "certificates": 29,
+     "certificates_dir": "class2-lane-cost63j-certificates",
+     "chain_head_before": "1367/6481/512295/4751/376018",
+     "parents_after": {
+      "parent1": "10 rows / 704",
+      "parent2": "31 rows / 2351"
+     },
+     "total_marginal": 138,
+     "total_marginal_in_manifest": 27,
+     "zero_marginal_in_manifest": [
+      7,
+      44,
+      54,
+      73,
+      81,
+      93,
+      102,
+      107
+     ]
+    },
+    "endpoint": {
+     "child_closed_by_bit": 1,
+     "cost_needed_by_open_classes": 373972,
+     "git_blob_sha": "35236daf18e6207d2ed20c168bb8a6111f17d4e8",
+     "head": "class-frontier-cost63j-receipts-recompute-20261116.json",
+     "receipts": 29,
+     "s6_needed_by_open_classes": 4724,
+     "solved_s6_in_manifest": 1394,
+     "sum_remaining_cost": 510249,
+     "unique_remaining_s6": 6454
+    }
+   },
+   "65m": {
+    "claim_fold_details_checked": {
+     "certificates": 8,
+     "certificates_dir": "class2-lane-cost65m-certificates",
+     "chain_head_before": "1394/6454/510249/4724/373972",
+     "parents_after": {
+      "parent1": "9 rows / 639",
+      "parent2": "46 rows / 3448"
+     },
+     "total_marginal": 35,
+     "total_marginal_in_manifest": 2,
+     "zero_marginal_in_manifest": [
+      22,
+      28,
+      44,
+      67,
+      76,
+      83
+     ]
+    },
+    "endpoint": {
+     "child_closed_by_bit": 21,
+     "cost_needed_by_open_classes": 373838,
+     "git_blob_sha": "9798a9fc53b2277b17744737511354b1a830c4d2",
+     "head": "class-frontier-cost65m-receipts-recompute-20261116.json",
+     "receipts": 8,
+     "s6_needed_by_open_classes": 4722,
+     "solved_s6_in_manifest": 1396,
+     "sum_remaining_cost": 510115,
+     "unique_remaining_s6": 6452
+    }
+   },
+   "67d": {
+    "claim_fold_details_checked": {
+     "certificates": 1,
+     "certificates_dir": "class2-lane-cost67d-certificates",
+     "chain_head_before": "1396/6452/510115/4722/373838",
+     "parents_after": {
+      "parent1": "8 rows / 572",
+      "parent2": "82 rows / 6269"
+     },
+     "total_marginal": 5,
+     "total_marginal_in_manifest": 2,
+     "zero_marginal_in_manifest": []
+    },
+    "endpoint": {
+     "child_closed_by_bit": 97,
+     "cost_needed_by_open_classes": 373697,
+     "git_blob_sha": "304c6afe68697ee63162a9de5e91fe2b230255c3",
+     "head": "class-frontier-cost67d-receipts-recompute-20261116.json",
+     "receipts": 1,
+     "s6_needed_by_open_classes": 4720,
+     "solved_s6_in_manifest": 1398,
+     "sum_remaining_cost": 509974,
+     "unique_remaining_s6": 6450
+    }
+   },
+   "70g": {
+    "claim_fold_details_checked": {
+     "certificates": 15,
+     "certificates_dir": "class2-lane-cost70g-certificates",
+     "chain_head_before": "1398/6450/509974/4720/373697",
+     "parents_after": {
+      "parent1": "7 rows / 502",
+      "parent2": "48 rows / 3885"
+     },
+     "total_marginal": 33,
+     "total_marginal_in_manifest": 5,
+     "zero_marginal_in_manifest": [
+      59,
+      89,
+      112
+     ]
+    },
+    "endpoint": {
+     "child_closed_by_bit": 18,
+     "cost_needed_by_open_classes": 373312,
+     "git_blob_sha": "8eb71c91bd39f5899171dd588156e0c10a763c63",
+     "head": "class-frontier-cost70g-receipts-recompute-20261116.json",
+     "receipts": 7,
+     "s6_needed_by_open_classes": 4715,
+     "solved_s6_in_manifest": 1403,
+     "sum_remaining_cost": 509589,
+     "unique_remaining_s6": 6445
+    }
+   }
+  }
+ },
+ "schema": "n11-class2-lane-published-fold-chain-dual-implementation-agreement-20261115-v9",
+ "supersedes": "class2-lane-published-fold-chain-dual-implementation-agreement-v8-20261115.json (schema v8, the endpoint pairs through the merged 63h+63i 1369 endpoint); this v9 output adds the reconciled-1405 endpoint pair (first-impl v12 vs second-impl v12, both extending the pinned chain through the second receipts fork at the 63i head 1367 - the 63j/65m branch-B folds, the merged-4 branch-C re-fold, the 67d branch-D fold, the merged-5 canonical-1400 head - and the reconciled canonical-1405 head with the 7 re-based cost-70g receipts; 117 vs 113 pins, 39 post-70e heads each, 713 roots / 702 orbits / 11 twin pairs, canonical-line exactly-once extended to 1405, the four v12 sweep / two merged / one reconciled endpoint records, the fork-merge-rebase and fork-reconcile arithmetic, the stale-baseline quote errata and the v12 method prose errata agreeing record-for-record); the v8 file remains published unchanged",
+ "verdict": "AGREEMENT CONFIRMED"
+}

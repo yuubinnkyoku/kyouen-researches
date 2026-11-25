@@ -1,0 +1,418 @@
+{
+ "schema": "n11-class2-lane-cost76a-win7-certificates-20261115-v1",
+ "date": "2026-11-15",
+ "relation": "completes the certificate provenance for all 6 WIN7-D10 search candidates of the cost-76a child sweep (class2-lane-cost76a-sweep-audit-20261115.json); this record certifies win7_d10_bits [11,29,66,80,92,96]: 6 certificate bodies published on main; closes the sweep audit proof_boundary.certificate_extraction and independent_certificate_verification items",
+ "sweep_source": {
+  "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost76a-sweep-audit-20261115.json",
+  "s6_child_hex": "00000000000000809102000000000001",
+  "s5_parent_hex": "00000000000000809102000000000000",
+  "s6_s7_edge_cost": 76,
+  "demand": {
+   "c1": 0,
+   "c2": 2,
+   "c4": 0
+  },
+  "win7_d10_bits": [
+   11,
+   29,
+   66,
+   80,
+   92,
+   96
+  ],
+  "refuted_d10": 70,
+  "capped": 0,
+  "candidate_nodes": 131329581,
+  "certified_bits_this_record": [
+   11,
+   29,
+   66,
+   80,
+   92,
+   96
+  ],
+  "certified_bits_after": [
+   11,
+   29,
+   66,
+   80,
+   92,
+   96
+  ],
+  "uncertified_bits_after": [],
+  "claim_path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost76a-inflight-20261115.json",
+  "chain_head_at_claim": "1188/6659/525437/4929/389160 (class-frontier-cost72b-receipts-recompute-20261115.json)"
+ },
+ "extraction": {
+  "engine": "repo-verbatim class4_child1_cert_extractor_exact.ts (FBS 1<<20, drop-counting fbt cache) driven per bit in node processes via scripts/cert_driver76a.ts (published this session, git blob sha 68336cdfe7c3eba4c0479bf79a1b309a3d32c191), one bit per chunk invocation with the full loser-first-move list split into 3-4 chunks per bit",
+  "kill_table": "empty (pref=null): no pref hints, no verdict cache, no reuse of any prior verdict; every recorded row was re-proved from scratch by the extractor self-checking uncapped depth-bounded recursion and then independently verified",
+  "fbs": 1048576,
+  "loser_first_moves": "full legal_candidates.py expansion from the 7-stone root (all mobility moves, independent Bareiss 4x4 enumeration); per-move terminalRange variations ([13,15]/[15,17] on individual subgames) are normal observed terminal-depth ranges, all certificate-level ranges [13,17]",
+  "row_order": "LC_ALL=C byte order (ASCII hex rows), sorted-unique asserted by the independent verifier",
+  "format": "n11-terminal-strategy-v1 original_first_WIN7 second_to_move_LOSS + root line + rows",
+  "fbt_drops_all": 0,
+  "chunk_merge": "per-bit chunk row files merged with sort -u; duplicate full rows across chunks are expected deep-tree convergence; per-board conflicting-move duplicates asserted 0 for every bit (uniq -d on board column)"
+ },
+ "verification_method": "double independent verification on all 6 certificates in this session: verify_win7_certificate_bigint_independent.mjs (BigInt 3x3 cofactor expansion, no engine import) 6/6 PASS and verify_bit7_win7_cert.ts (Number Bareiss independent verifier, --root-check, --subroots all, --consumed-out) 6/6 PASS (root safety, per-sub-root full strategy replay over ALL loser defenses, consumed-row union == certificate rows comm diff 0, terminal stone range [13,17], loser mobility == legal_candidates.py); remote git blob sha verification of all 8 published files byte-exact vs the local inventory hashes; v15 cross-engine anchors asserted in the sweep audit and published as class2-lane-cost76a-v15-crosscheck-20261115.jsonl (all 6 WIN7 bits loss=true, 3 REFUTED anchors loss=false, pilot d6 7/7 PASS)",
+ "certificates": [
+  {
+   "bit": 11,
+   "child_hex": "00000000000000809102000000000001",
+   "root_hex": "00000000000000809102000000000801",
+   "d4_canonical_hex": "00000000000000809102000000000801",
+   "verdict": "WIN7",
+   "rows": 48653,
+   "extraction_nodes": 13521724,
+   "fbt_drops": 0,
+   "fatal": null,
+   "all_loser_first_moves_extracted_ok": true,
+   "rows_sorted_unique": true,
+   "sub_roots_pass": 62,
+   "sub_roots_total": 62,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_count": 16618,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "winner_states": 66459,
+   "loser_states": 20166,
+   "loser_reply_edges": 92356,
+   "visited_states_across_subroots": 103243,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 62,
+    "match": true
+   },
+   "v15_anchor_crosscheck": {
+    "loss": true,
+    "nodes": 7665696
+   },
+   "v16_sweep_nodes": 2270437,
+   "md5": "84dba7575fadb74d7838e2d72c45eb33",
+   "sha256": "3a23b3f2eb1d9754c13a6a1d62b30809be5c945d57f5f983a63fa8b9559d9f3b",
+   "bytes": 1763791,
+   "whole_git_blob_sha": "516c15a5b6f6f47f692cb5ad6e36923d5a1efabf",
+   "storage": {
+    "layout": "single file",
+    "parts": [
+     {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost76a-certificates/bit11-root-00000000000000809102000000000801.cert",
+      "bytes": 1763791,
+      "md5": "84dba7575fadb74d7838e2d72c45eb33",
+      "git_blob_sha": "516c15a5b6f6f47f692cb5ad6e36923d5a1efabf",
+      "push_commit": "b3d3919575432be5aeadc7cda049ca0732904a4e"
+     }
+    ]
+   }
+  },
+  {
+   "bit": 29,
+   "child_hex": "00000000000000809102000000000001",
+   "root_hex": "00000000000000809102000020000001",
+   "d4_canonical_hex": "00000000000000809102000020000001",
+   "verdict": "WIN7",
+   "rows": 57930,
+   "extraction_nodes": 17130596,
+   "fbt_drops": 0,
+   "fatal": null,
+   "all_loser_first_moves_extracted_ok": true,
+   "rows_sorted_unique": true,
+   "sub_roots_pass": 60,
+   "sub_roots_total": 60,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_count": 19661,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "winner_states": 74266,
+   "loser_states": 21758,
+   "loser_reply_edges": 102001,
+   "visited_states_across_subroots": 115685,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 60,
+    "match": true
+   },
+   "v15_anchor_crosscheck": {
+    "loss": true,
+    "nodes": 10956610
+   },
+   "v16_sweep_nodes": 3378873,
+   "md5": "0a55d6b0916d2a11e265c8b86f70156d",
+   "sha256": "a0da1e7dd20a860d83518f7302e7ac98eb1f274564d69a2a8e39d3ab6fcdc4a6",
+   "bytes": 2097005,
+   "whole_git_blob_sha": "a09d9f29a03ad9b7ed89d695a13ea5eda6daa20b",
+   "storage": {
+    "layout": "2 parts (repo convention for >1.75 MB certificates)",
+    "parts": [
+     {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost76a-certificates/bit29-root-00000000000000809102000020000001.cert.part1of2",
+      "bytes": 1049295,
+      "md5": "ee8a389d98af5bea8ee098863ab5010a",
+      "git_blob_sha": "a2426568676d392ebe50872dccf9ec5ac8de8b23",
+      "push_commit": "9cc82f22c1e97b2aff3dc90bfc6d813202f92fc2"
+     },
+     {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost76a-certificates/bit29-root-00000000000000809102000020000001.cert.part2of2",
+      "bytes": 1047710,
+      "md5": "0fc829fb2d8db206b24513c3c4cb3f44",
+      "git_blob_sha": "001d3730ac7a820ce171b896839fcd9bbf212d5f",
+      "push_commit": "bc400c7649ba76ab17b17811670e3b735e1b404a"
+     }
+    ]
+   }
+  },
+  {
+   "bit": 66,
+   "child_hex": "00000000000000809102000000000001",
+   "root_hex": "00000000000000849102000000000001",
+   "d4_canonical_hex": "00000000000000849102000000000001",
+   "verdict": "WIN7",
+   "rows": 52883,
+   "extraction_nodes": 10787042,
+   "fbt_drops": 0,
+   "fatal": null,
+   "all_loser_first_moves_extracted_ok": true,
+   "rows_sorted_unique": true,
+   "sub_roots_pass": 61,
+   "sub_roots_total": 61,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_count": 18400,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "winner_states": 71211,
+   "loser_states": 20992,
+   "loser_reply_edges": 98645,
+   "visited_states_across_subroots": 110603,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 61,
+    "match": true
+   },
+   "v15_anchor_crosscheck": {
+    "loss": true,
+    "nodes": 6198635
+   },
+   "v16_sweep_nodes": 2237413,
+   "md5": "cf0ad1b6941b3cbb65410a5f55ee4922",
+   "sha256": "8999f79ba94e3cba60ad380d33737b5ba06232372406d17485221f65b66e27f8",
+   "bytes": 1914257,
+   "whole_git_blob_sha": "5f28b194bd2b7112c7c9d9bd4195131147885bc6",
+   "storage": {
+    "layout": "2 parts (repo convention for >1.75 MB certificates)",
+    "parts": [
+     {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost76a-certificates/bit66-root-00000000000000849102000000000001.cert.part1of2",
+      "bytes": 957463,
+      "md5": "582240a70c43aee89b81adddd5f79aeb",
+      "git_blob_sha": "cc91d3f77bf59fa313af1686f08622d6a42e0952",
+      "push_commit": "789428351d8097ca0c7be3ff51fa9760a55730e6"
+     },
+     {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost76a-certificates/bit66-root-00000000000000849102000000000001.cert.part2of2",
+      "bytes": 956794,
+      "md5": "a59d367461455b42099db5bc85dd445b",
+      "git_blob_sha": "9f1e587d806f315aadaf73f9ba2eaf5398e7ac2a",
+      "push_commit": "2873523cefbb4d7640c257094027251eb9e7e5d1"
+     }
+    ]
+   }
+  },
+  {
+   "bit": 80,
+   "child_hex": "00000000000000809102000000000001",
+   "root_hex": "00000000000100809102000000000001",
+   "d4_canonical_hex": "00000000000100809102000000000001",
+   "verdict": "WIN7",
+   "rows": 49741,
+   "extraction_nodes": 15010982,
+   "fbt_drops": 0,
+   "fatal": null,
+   "all_loser_first_moves_extracted_ok": true,
+   "rows_sorted_unique": true,
+   "sub_roots_pass": 59,
+   "sub_roots_total": 59,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_count": 17034,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "winner_states": 67272,
+   "loser_states": 19969,
+   "loser_reply_edges": 93738,
+   "visited_states_across_subroots": 104275,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 59,
+    "match": true
+   },
+   "v15_anchor_crosscheck": {
+    "loss": true,
+    "nodes": 10820542
+   },
+   "v16_sweep_nodes": 3163271,
+   "md5": "237efa149a6d1cfde2e2151dd8a35d02",
+   "sha256": "45b1cd81dfba97392f9bcea48527d2d58074fd667801be158b3ae9a146354c07",
+   "bytes": 1799675,
+   "whole_git_blob_sha": "f4573437e5a3112f0f1a79fc42ae38c731160e9a",
+   "storage": {
+    "layout": "single file",
+    "parts": [
+     {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost76a-certificates/bit80-root-00000000000100809102000000000001.cert",
+      "bytes": 1799675,
+      "md5": "237efa149a6d1cfde2e2151dd8a35d02",
+      "git_blob_sha": "f4573437e5a3112f0f1a79fc42ae38c731160e9a",
+      "push_commit": "ca9b9e88b1cfe7db5362cb1dfdd7788fa8de3857"
+     }
+    ]
+   }
+  },
+  {
+   "bit": 92,
+   "child_hex": "00000000000000809102000000000001",
+   "root_hex": "00000000100000809102000000000001",
+   "d4_canonical_hex": "00000000100000809102000000000001",
+   "verdict": "WIN7",
+   "rows": 35456,
+   "extraction_nodes": 7818115,
+   "fbt_drops": 0,
+   "fatal": null,
+   "all_loser_first_moves_extracted_ok": true,
+   "rows_sorted_unique": true,
+   "sub_roots_pass": 54,
+   "sub_roots_total": 54,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_count": 12962,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "winner_states": 52784,
+   "loser_states": 15993,
+   "loser_reply_edges": 73265,
+   "visited_states_across_subroots": 81739,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 54,
+    "match": true
+   },
+   "v15_anchor_crosscheck": {
+    "loss": true,
+    "nodes": 4876955
+   },
+   "v16_sweep_nodes": 1430262,
+   "md5": "cae52d2ed7a274b9eb16eb968148f4ee",
+   "sha256": "c14e1a5a407fbb0dd2199024045100b8ae081ce1501b4fc18d408782db11801c",
+   "bytes": 1281708,
+   "whole_git_blob_sha": "4ec790fee376529edcc914ac84e36c19c5139178",
+   "storage": {
+    "layout": "single file",
+    "parts": [
+     {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost76a-certificates/bit92-root-00000000100000809102000000000001.cert",
+      "bytes": 1281708,
+      "md5": "cae52d2ed7a274b9eb16eb968148f4ee",
+      "git_blob_sha": "4ec790fee376529edcc914ac84e36c19c5139178",
+      "push_commit": "69a536fc0f34de3e93e01b51fbc8aed229215b84"
+     }
+    ]
+   }
+  },
+  {
+   "bit": 96,
+   "child_hex": "00000000000000809102000000000001",
+   "root_hex": "00000001000000809102000000000001",
+   "d4_canonical_hex": "00000000040000811202000000000400",
+   "verdict": "WIN7",
+   "rows": 34681,
+   "extraction_nodes": 6642969,
+   "fbt_drops": 0,
+   "fatal": null,
+   "all_loser_first_moves_extracted_ok": true,
+   "rows_sorted_unique": true,
+   "sub_roots_pass": 55,
+   "sub_roots_total": 55,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_count": 12989,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "winner_states": 49857,
+   "loser_states": 14755,
+   "loser_reply_edges": 68173,
+   "visited_states_across_subroots": 77601,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 55,
+    "match": true
+   },
+   "v15_anchor_crosscheck": {
+    "loss": true,
+    "nodes": 3556006
+   },
+   "v16_sweep_nodes": 1044810,
+   "md5": "08c4085b25d59dbb666cd23178a42c66",
+   "sha256": "4fb72afa970a605f5ebb2fe5f15a6bbb4ef0c19a0026024f710c152469be806e",
+   "bytes": 1254483,
+   "whole_git_blob_sha": "b41bb8a45c7a6463625685e6fa6559853d8d7ec6",
+   "storage": {
+    "layout": "single file",
+    "parts": [
+     {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost76a-certificates/bit96-root-00000001000000809102000000000001.cert",
+      "bytes": 1254483,
+      "md5": "08c4085b25d59dbb666cd23178a42c66",
+      "git_blob_sha": "b41bb8a45c7a6463625685e6fa6559853d8d7ec6",
+      "push_commit": "7fc7e8d5d02130485ea7e219c649959ac4cb55a0"
+     }
+    ]
+   }
+  }
+ ],
+ "totals": {
+  "certificates": 6,
+  "published_certificates": 6,
+  "d4_duplicate_backed": 0,
+  "rows": 279344,
+  "extraction_nodes": 70911428,
+  "sub_roots": 351,
+  "visited_states_across_subroots": 593146,
+  "winner_states": 381849,
+  "loser_states": 113633,
+  "terminal_count": 97664,
+  "loser_reply_edges": 528178,
+  "v15_crosscheck_nodes_sum": 44074444,
+  "v16_sweep_nodes_sum": 13525066,
+  "published_remote_files_blob_verified": 8
+ },
+ "push_sequence": "one part per commit, (1/6)..(6/6) messages n11 cost-76a WIN7 certificate; post-push verification: all 8 remote files git-blob-sha byte-exact vs local hashes (8/8)",
+ "incident_note": "sandbox memory limit (16 MiB) aborted two push programs (bit11, bit80) AFTER the push_files call had executed; each landing was verified remotely byte-exact before proceeding; no truncated or partial file landed (8/8 blob-exact)",
+ "controls": {
+  "all_certificates_independently_verified_double": true,
+  "all_root_mobility_matches_legal_candidates_py": true,
+  "all_rows_sorted_unique": true,
+  "all_union_zero_missing_zero_extra": true,
+  "all_terminal_range_within_13_17": true,
+  "all_v15_anchor_loss_true": true,
+  "all_fbt_drops_zero": true,
+  "all_joined_part_md5_equals_whole_md5": true,
+  "all_part_splits_at_line_boundaries": true,
+  "all_git_blob_shas_verified_on_main_8_of_8": true,
+  "driver_published_blob_sha_verified": true
+ },
+ "frontier_impact": "certificates close the certificate-extraction proof boundary for all 6 WIN7 roots of the cost-76a sweep; the raw sweep receipts have NOT yet been folded into the canonical chain (the cost-76a receipt fold at head 1188, asserting 1188/6659/525437/4929/389160, is the next step and is not claimed here); publication upgrades proof backing without changing frontier counts",
+ "interpretation_guard": "WIN7 certificates prove a first-player win within the certified strategy from the 7-stone root only; they do not by themselves close the six-stone child, the S5 parent, the S2 {59,60} root, or the 11x11 empty board; solved counts measure manifest bookkeeping, not game-theoretic values; standard 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, class 2, class 4 all remain UNKNOWN"
+}

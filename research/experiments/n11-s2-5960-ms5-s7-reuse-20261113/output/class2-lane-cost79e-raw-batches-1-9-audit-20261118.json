@@ -1,0 +1,1156 @@
+{
+ "schema": "n11-class2-lane-cost79e-raw-batches-1-9-audit-20261118-v1",
+ "date": "2026-11-18",
+ "child": "00000000020000003800000880000000",
+ "engine": "class4_child1_runner_v17.ts (git blob c132cc6425eee3feaeef1d697dd74f968cfedb59), depth 10, cap 1e9 per bit, andclose 1",
+ "batches": {
+  "1": {
+   "bits": [
+    0,
+    2,
+    3,
+    6,
+    7,
+    8,
+    10,
+    11,
+    12
+   ],
+   "pilot_nodes": 3402,
+   "candidate_nodes": 9966869,
+   "file_sha1": "6e5dee4e497598a418ec5635c2dc04743091457d",
+   "file_bytes": 1037
+  },
+  "2": {
+   "bits": [
+    14,
+    15,
+    16,
+    17,
+    18,
+    21,
+    25,
+    26,
+    28
+   ],
+   "pilot_nodes": 3402,
+   "candidate_nodes": 14504749,
+   "file_sha1": "eac78092ce07c892b47665d5e3e620e55066faed",
+   "file_bytes": 1051
+  },
+  "3": {
+   "bits": [
+    32,
+    33,
+    36,
+    37,
+    38,
+    39,
+    43,
+    44,
+    45
+   ],
+   "pilot_nodes": 3402,
+   "candidate_nodes": 4452840,
+   "file_sha1": "1d8d37e65e392575fcb68047c7e86b84ac2d22ae",
+   "file_bytes": 1043
+  },
+  "4": {
+   "bits": [
+    48,
+    49,
+    50,
+    51,
+    53,
+    54,
+    66,
+    67,
+    69
+   ],
+   "pilot_nodes": 3402,
+   "candidate_nodes": 7640188,
+   "file_sha1": "c0427ae59a03cce4d6a96731bba4cffa4c8b72b7",
+   "file_bytes": 1043
+  },
+  "5": {
+   "bits": [
+    71,
+    72,
+    75,
+    76,
+    77,
+    78,
+    80,
+    81,
+    82
+   ],
+   "pilot_nodes": 3402,
+   "candidate_nodes": 4753807,
+   "file_sha1": "b6a8e430d036671b93f78d793bf021aef9f781f7",
+   "file_bytes": 1041
+  },
+  "6": {
+   "bits": [
+    83,
+    84,
+    85,
+    86,
+    87,
+    88,
+    91,
+    92,
+    94
+   ],
+   "pilot_nodes": 3402,
+   "candidate_nodes": 6763614,
+   "file_sha1": "6488dc4cef587ade9a440f0ae5a763e8c5b276dc",
+   "file_bytes": 1041
+  },
+  "7": {
+   "bits": [
+    95,
+    99,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    108
+   ],
+   "pilot_nodes": 3402,
+   "candidate_nodes": 10536030,
+   "file_sha1": "a186ba34fb3cc44e9296cc926b514fc6410c7024",
+   "file_bytes": 1052
+  },
+  "8": {
+   "bits": [
+    109,
+    110,
+    112,
+    113,
+    114,
+    116,
+    117,
+    118,
+    120
+   ],
+   "pilot_nodes": 3402,
+   "candidate_nodes": 8111032,
+   "file_sha1": "243d3b8c04c6e14cc27f9ae31ce69a9cdc6bfa2e",
+   "file_bytes": 1055
+  },
+  "9": {
+   "bits": [
+    27,
+    30,
+    46,
+    74,
+    79,
+    93,
+    115
+   ],
+   "pilot_nodes": 3402,
+   "candidate_nodes": 7721404,
+   "file_sha1": "fa118202ea230556c8d73a9d1f8376a3c9df9ead",
+   "file_bytes": 828
+  }
+ },
+ "pilot_controls_pass": "9/9",
+ "per_bit": {
+  "0": {
+   "batch": 1,
+   "verdict": "REFUTED-D10",
+   "nodes": 2133601,
+   "ms": 5995,
+   "root_canon": "00000000020000003800000880000001",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "2": {
+   "batch": 1,
+   "verdict": "REFUTED-D10",
+   "nodes": 927298,
+   "ms": 2169,
+   "root_canon": "00000000020000003800000880000004",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "3": {
+   "batch": 1,
+   "verdict": "REFUTED-D10",
+   "nodes": 370995,
+   "ms": 782,
+   "root_canon": "00000000020000003800000880000008",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "6": {
+   "batch": 1,
+   "verdict": "REFUTED-D10",
+   "nodes": 450404,
+   "ms": 996,
+   "root_canon": "00000000020000003800000880000040",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "7": {
+   "batch": 1,
+   "verdict": "REFUTED-D10",
+   "nodes": 4196881,
+   "ms": 11297,
+   "root_canon": "00000000020000003800000880000080",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "8": {
+   "batch": 1,
+   "verdict": "REFUTED-D10",
+   "nodes": 599441,
+   "ms": 1289,
+   "root_canon": "00000000020000003800000880000100",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "10": {
+   "batch": 1,
+   "verdict": "REFUTED-D10",
+   "nodes": 414374,
+   "ms": 983,
+   "root_canon": "00000000020000003800000880000400",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "11": {
+   "batch": 1,
+   "verdict": "REFUTED-D10",
+   "nodes": 422207,
+   "ms": 950,
+   "root_canon": "00000000020000003800000880000800",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "12": {
+   "batch": 1,
+   "verdict": "REFUTED-D10",
+   "nodes": 451668,
+   "ms": 975,
+   "root_canon": "00000000020000003800000880001000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "14": {
+   "batch": 2,
+   "verdict": "REFUTED-D10",
+   "nodes": 737206,
+   "ms": 1752,
+   "root_canon": "00000000020000003800000880004000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "15": {
+   "batch": 2,
+   "verdict": "REFUTED-D10",
+   "nodes": 1114196,
+   "ms": 2389,
+   "root_canon": "00000000020000003800000880008000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "16": {
+   "batch": 2,
+   "verdict": "REFUTED-D10",
+   "nodes": 4075989,
+   "ms": 10095,
+   "root_canon": "00000000020000003800000880010000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "17": {
+   "batch": 2,
+   "verdict": "REFUTED-D10",
+   "nodes": 477802,
+   "ms": 1182,
+   "root_canon": "00000000020000003800000880020000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "18": {
+   "batch": 2,
+   "verdict": "REFUTED-D10",
+   "nodes": 4436021,
+   "ms": 11838,
+   "root_canon": "00000000020000003800000880040000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "21": {
+   "batch": 2,
+   "verdict": "REFUTED-D10",
+   "nodes": 1117823,
+   "ms": 2759,
+   "root_canon": "00000000020000003800000880200000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "25": {
+   "batch": 2,
+   "verdict": "REFUTED-D10",
+   "nodes": 1442658,
+   "ms": 3109,
+   "root_canon": "00000000020000003800000882000000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "26": {
+   "batch": 2,
+   "verdict": "REFUTED-D10",
+   "nodes": 774329,
+   "ms": 1770,
+   "root_canon": "00000000020000003800000884000000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "27": {
+   "batch": 9,
+   "verdict": "REFUTED-D10",
+   "nodes": 2857518,
+   "ms": 6560,
+   "root_canon": "00000000020000003800000888000000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "28": {
+   "batch": 2,
+   "verdict": "REFUTED-D10",
+   "nodes": 328725,
+   "ms": 747,
+   "root_canon": "00000000020000003800000890000000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "30": {
+   "batch": 9,
+   "verdict": "REFUTED-D10",
+   "nodes": 193352,
+   "ms": 413,
+   "root_canon": "000000000200000038000008c0000000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "32": {
+   "batch": 3,
+   "verdict": "REFUTED-D10",
+   "nodes": 418277,
+   "ms": 1105,
+   "root_canon": "00000000020000003800000980000000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "33": {
+   "batch": 3,
+   "verdict": "REFUTED-D10",
+   "nodes": 178534,
+   "ms": 426,
+   "root_canon": "00000000020000003800000a80000000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "36": {
+   "batch": 3,
+   "verdict": "REFUTED-D10",
+   "nodes": 1014272,
+   "ms": 2589,
+   "root_canon": "00000000020000003800001880000000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "37": {
+   "batch": 3,
+   "verdict": "REFUTED-D10",
+   "nodes": 647405,
+   "ms": 1681,
+   "root_canon": "00000000020000003800002880000000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "38": {
+   "batch": 3,
+   "verdict": "REFUTED-D10",
+   "nodes": 161340,
+   "ms": 394,
+   "root_canon": "00000000020000003800004880000000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "39": {
+   "batch": 3,
+   "verdict": "REFUTED-D10",
+   "nodes": 114931,
+   "ms": 276,
+   "root_canon": "00000000020000003800008880000000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "43": {
+   "batch": 3,
+   "verdict": "REFUTED-D10",
+   "nodes": 992627,
+   "ms": 2497,
+   "root_canon": "00000000020000003800080880000000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "44": {
+   "batch": 3,
+   "verdict": "REFUTED-D10",
+   "nodes": 435233,
+   "ms": 1167,
+   "root_canon": "00000000020000003800100880000000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "45": {
+   "batch": 3,
+   "verdict": "REFUTED-D10",
+   "nodes": 490221,
+   "ms": 1112,
+   "root_canon": "00000000020000003800200880000000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "46": {
+   "batch": 9,
+   "verdict": "REFUTED-D10",
+   "nodes": 818940,
+   "ms": 1812,
+   "root_canon": "00000000020000003800400880000000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "48": {
+   "batch": 4,
+   "verdict": "REFUTED-D10",
+   "nodes": 269919,
+   "ms": 652,
+   "root_canon": "00000000020000003801000880000000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "49": {
+   "batch": 4,
+   "verdict": "REFUTED-D10",
+   "nodes": 386060,
+   "ms": 818,
+   "root_canon": "00000000020000003802000880000000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "50": {
+   "batch": 4,
+   "verdict": "REFUTED-D10",
+   "nodes": 501893,
+   "ms": 1089,
+   "root_canon": "00000000020000003804000880000000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "51": {
+   "batch": 4,
+   "verdict": "REFUTED-D10",
+   "nodes": 300696,
+   "ms": 600,
+   "root_canon": "00000000020000003808000880000000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "53": {
+   "batch": 4,
+   "verdict": "REFUTED-D10",
+   "nodes": 1201896,
+   "ms": 2737,
+   "root_canon": "00000000020000003820000880000000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "54": {
+   "batch": 4,
+   "verdict": "REFUTED-D10",
+   "nodes": 901414,
+   "ms": 2280,
+   "root_canon": "00000000020000003840000880000000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "66": {
+   "batch": 4,
+   "verdict": "REFUTED-D10",
+   "nodes": 972996,
+   "ms": 2293,
+   "root_canon": "00000000020000043800000880000000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "67": {
+   "batch": 4,
+   "verdict": "REFUTED-D10",
+   "nodes": 2784197,
+   "ms": 5993,
+   "root_canon": "00000000020000083800000880000000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "69": {
+   "batch": 4,
+   "verdict": "REFUTED-D10",
+   "nodes": 321117,
+   "ms": 644,
+   "root_canon": "00000000020000203800000880000000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "71": {
+   "batch": 5,
+   "verdict": "REFUTED-D10",
+   "nodes": 261634,
+   "ms": 622,
+   "root_canon": "00000000020000803800000880000000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "72": {
+   "batch": 5,
+   "verdict": "REFUTED-D10",
+   "nodes": 550287,
+   "ms": 1211,
+   "root_canon": "00000000020001003800000880000000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "74": {
+   "batch": 9,
+   "verdict": "REFUTED-D10",
+   "nodes": 250855,
+   "ms": 513,
+   "root_canon": "00000000020004003800000880000000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "75": {
+   "batch": 5,
+   "verdict": "REFUTED-D10",
+   "nodes": 277557,
+   "ms": 636,
+   "root_canon": "00000000020008003800000880000000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "76": {
+   "batch": 5,
+   "verdict": "REFUTED-D10",
+   "nodes": 734401,
+   "ms": 1692,
+   "root_canon": "00000000020010003800000880000000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "77": {
+   "batch": 5,
+   "verdict": "REFUTED-D10",
+   "nodes": 1600651,
+   "ms": 3576,
+   "root_canon": "00000000020020003800000880000000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "78": {
+   "batch": 5,
+   "verdict": "REFUTED-D10",
+   "nodes": 395826,
+   "ms": 832,
+   "root_canon": "00000000020040003800000880000000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "79": {
+   "batch": 9,
+   "verdict": "REFUTED-D10",
+   "nodes": 1473664,
+   "ms": 3369,
+   "root_canon": "00000000020080003800000880000000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "80": {
+   "batch": 5,
+   "verdict": "REFUTED-D10",
+   "nodes": 169710,
+   "ms": 352,
+   "root_canon": "00000000020100003800000880000000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "81": {
+   "batch": 5,
+   "verdict": "REFUTED-D10",
+   "nodes": 590596,
+   "ms": 1278,
+   "root_canon": "00000000020200003800000880000000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "82": {
+   "batch": 5,
+   "verdict": "REFUTED-D10",
+   "nodes": 173145,
+   "ms": 371,
+   "root_canon": "00000000020400003800000880000000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "83": {
+   "batch": 6,
+   "verdict": "REFUTED-D10",
+   "nodes": 103665,
+   "ms": 249,
+   "root_canon": "00000000020800003800000880000000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "84": {
+   "batch": 6,
+   "verdict": "REFUTED-D10",
+   "nodes": 494345,
+   "ms": 1143,
+   "root_canon": "00000000021000003800000880000000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "85": {
+   "batch": 6,
+   "verdict": "REFUTED-D10",
+   "nodes": 1706300,
+   "ms": 3911,
+   "root_canon": "00000000022000003800000880000000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "86": {
+   "batch": 6,
+   "verdict": "REFUTED-D10",
+   "nodes": 394807,
+   "ms": 842,
+   "root_canon": "00000000022000003800000480000000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "87": {
+   "batch": 6,
+   "verdict": "REFUTED-D10",
+   "nodes": 358222,
+   "ms": 710,
+   "root_canon": "00000000022000003800000280000000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "88": {
+   "batch": 6,
+   "verdict": "REFUTED-D10",
+   "nodes": 364954,
+   "ms": 730,
+   "root_canon": "00000000022000003800000180000000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "91": {
+   "batch": 6,
+   "verdict": "REFUTED-D10",
+   "nodes": 103358,
+   "ms": 220,
+   "root_canon": "000000000220000038000000a0000000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "92": {
+   "batch": 6,
+   "verdict": "REFUTED-D10",
+   "nodes": 3067580,
+   "ms": 7659,
+   "root_canon": "00000000022000003800000090000000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "93": {
+   "batch": 9,
+   "verdict": "REFUTED-D10",
+   "nodes": 325082,
+   "ms": 666,
+   "root_canon": "00000000022000003800000088000000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "94": {
+   "batch": 6,
+   "verdict": "REFUTED-D10",
+   "nodes": 170383,
+   "ms": 343,
+   "root_canon": "00000000022000003800000084000000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "95": {
+   "batch": 7,
+   "verdict": "REFUTED-D10",
+   "nodes": 72969,
+   "ms": 228,
+   "root_canon": "00000000022000003800000082000000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "99": {
+   "batch": 7,
+   "verdict": "REFUTED-D10",
+   "nodes": 487096,
+   "ms": 1081,
+   "root_canon": "00000000022000003800000080200000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "101": {
+   "batch": 7,
+   "verdict": "REFUTED-D10",
+   "nodes": 346009,
+   "ms": 648,
+   "root_canon": "00000000022000003800000080080000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "102": {
+   "batch": 7,
+   "verdict": "REFUTED-D10",
+   "nodes": 471470,
+   "ms": 1095,
+   "root_canon": "00000000022000003800000080040000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "103": {
+   "batch": 7,
+   "verdict": "REFUTED-D10",
+   "nodes": 608905,
+   "ms": 1386,
+   "root_canon": "00000000022000003800000080020000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "104": {
+   "batch": 7,
+   "verdict": "REFUTED-D10",
+   "nodes": 513050,
+   "ms": 1221,
+   "root_canon": "00000000022000003800000080010000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "105": {
+   "batch": 7,
+   "verdict": "REFUTED-D10",
+   "nodes": 1143901,
+   "ms": 2731,
+   "root_canon": "00000000022000003800000080008000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "106": {
+   "batch": 7,
+   "verdict": "REFUTED-D10",
+   "nodes": 6068334,
+   "ms": 23271,
+   "root_canon": "00000000022000003800000080004000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "108": {
+   "batch": 7,
+   "verdict": "REFUTED-D10",
+   "nodes": 824296,
+   "ms": 1832,
+   "root_canon": "00000000022000003800000080001000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "109": {
+   "batch": 8,
+   "verdict": "REFUTED-D10",
+   "nodes": 260163,
+   "ms": 668,
+   "root_canon": "00000000022000003800000080000800",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "110": {
+   "batch": 8,
+   "verdict": "REFUTED-D10",
+   "nodes": 1416974,
+   "ms": 4044,
+   "root_canon": "00000000022000003800000080000400",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "112": {
+   "batch": 8,
+   "verdict": "REFUTED-D10",
+   "nodes": 222446,
+   "ms": 485,
+   "root_canon": "00000000022000003800000080000100",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "113": {
+   "batch": 8,
+   "verdict": "REFUTED-D10",
+   "nodes": 103341,
+   "ms": 208,
+   "root_canon": "00000000022000003800000080000080",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "114": {
+   "batch": 8,
+   "verdict": "REFUTED-D10",
+   "nodes": 1458730,
+   "ms": 3450,
+   "root_canon": "00000000022000003800000080000040",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "115": {
+   "batch": 9,
+   "verdict": "REFUTED-D10",
+   "nodes": 1801993,
+   "ms": 4288,
+   "root_canon": "00000000022000003800000080000020",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "116": {
+   "batch": 8,
+   "verdict": "REFUTED-D10",
+   "nodes": 330762,
+   "ms": 699,
+   "root_canon": "00000000022000003800000080000010",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "117": {
+   "batch": 8,
+   "verdict": "REFUTED-D10",
+   "nodes": 1813938,
+   "ms": 5619,
+   "root_canon": "00000000022000003800000080000008",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "118": {
+   "batch": 8,
+   "verdict": "REFUTED-D10",
+   "nodes": 1124064,
+   "ms": 2981,
+   "root_canon": "00000000022000003800000080000004",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "120": {
+   "batch": 8,
+   "verdict": "REFUTED-D10",
+   "nodes": 1380614,
+   "ms": 3894,
+   "root_canon": "00000000022000003800000080000001",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  }
+ },
+ "win7_d10_bits": [],
+ "refuted_d10_bits": [
+  0,
+  2,
+  3,
+  6,
+  7,
+  8,
+  10,
+  11,
+  12,
+  14,
+  15,
+  16,
+  17,
+  18,
+  21,
+  25,
+  26,
+  27,
+  28,
+  30,
+  32,
+  33,
+  36,
+  37,
+  38,
+  39,
+  43,
+  44,
+  45,
+  46,
+  48,
+  49,
+  50,
+  51,
+  53,
+  54,
+  66,
+  67,
+  69,
+  71,
+  72,
+  74,
+  75,
+  76,
+  77,
+  78,
+  79,
+  80,
+  81,
+  82,
+  83,
+  84,
+  85,
+  86,
+  87,
+  88,
+  91,
+  92,
+  93,
+  94,
+  95,
+  99,
+  101,
+  102,
+  103,
+  104,
+  105,
+  106,
+  108,
+  109,
+  110,
+  112,
+  113,
+  114,
+  115,
+  116,
+  117,
+  118,
+  120
+ ],
+ "capped_bits": [],
+ "counts": {
+  "win7_d10": 0,
+  "refuted_d10": 79,
+  "capped": 0,
+  "total_bits": 79
+ },
+ "confirmation_bits": [
+  "27",
+  "30",
+  "46",
+  "74",
+  "79",
+  "93",
+  "115"
+ ],
+ "confirmation_outcome": {
+  "27": "REFUTED-D10",
+  "30": "REFUTED-D10",
+  "46": "REFUTED-D10",
+  "74": "REFUTED-D10",
+  "79": "REFUTED-D10",
+  "93": "REFUTED-D10",
+  "115": "REFUTED-D10"
+ },
+ "confirmation_prediction_match": "7/7 REFUTED-D10 as predicted by the census v14 overlay (0 conflicts)",
+ "confirmation_root_canons_match_census_v14_transfers": true,
+ "root_canon_rule": "per-bit root_canon == D4 canon(child | 1<<bit), recomputed independently in this audit",
+ "total_candidate_nodes": 74450533,
+ "open_bits_total": 72,
+ "checks_log": [
+  "batch 1: pilot 3402 + 9 bits, 9966869 candidate nodes",
+  "batch 2: pilot 3402 + 9 bits, 14504749 candidate nodes",
+  "batch 3: pilot 3402 + 9 bits, 4452840 candidate nodes",
+  "batch 4: pilot 3402 + 9 bits, 7640188 candidate nodes",
+  "batch 5: pilot 3402 + 9 bits, 4753807 candidate nodes",
+  "batch 6: pilot 3402 + 9 bits, 6763614 candidate nodes",
+  "batch 7: pilot 3402 + 9 bits, 10536030 candidate nodes",
+  "batch 8: pilot 3402 + 9 bits, 8111032 candidate nodes",
+  "batch 9: pilot 3402 + 7 bits, 7721404 candidate nodes"
+ ],
+ "verdict_semantics": "loss=true => WIN7-D10 (certificate rebuild target); loss=false && !capped => REFUTED-D10, no first-player win within depth 10 from this root (NOT a LOSS proof); verdicts are per 7-stone root only",
+ "unknown_status": "11x11 empty board: UNKNOWN. This sweep proves only WIN7-D10/REFUTED-D10 verdicts for the 79 seven-stone roots of this child and closes no family row by itself; the 11x11 empty board, the two-stone roots {49,60} and {59,60}, S2 {59,60}, and classes 1/2/4 remain UNKNOWN regardless of this sweep's outcome"
+}

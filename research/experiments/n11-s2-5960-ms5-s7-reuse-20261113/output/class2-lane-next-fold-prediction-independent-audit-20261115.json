@@ -1,0 +1,162 @@
+{
+ "schema": "n11-class2-lane-fold-prediction-independent-audit-20261115-v1",
+ "date": "2026-11-15",
+ "lane": "class2-lane long-term lane (third-method independent audit of the parallel-lane fold prediction)",
+ "audited_artifacts": [
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-next-fold-marginal-prediction-20261115.json (schema v2, baseline 1154 head)",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost70c-warm-batch3-records-20261115.json (v1, warm batch-3 claim b9822fb0)"
+ ],
+ "input_state_sha": "30c638d57a5f73afb4d1b86fc8cafbde7cfb453e",
+ "inputs": {
+  "manifest": "ms5_s6_manifest_part1..6.csv (7,867 rows, hex/cost/classes)",
+  "ranking": "class-frontier-s5-ranking-after-merged-multiband2-68dhyg-20261115.csv (175 open S5, per-S5 remaining counts; 1148-state, multiplicity-counting: sum 12,773 orbits / 1,007,211 cost)",
+  "warm6_marginal_C": [
+   "00000000000000849002000000008000",
+   "00000000000000849002000010000000",
+   "00000000000000801242010000000000",
+   "00000000000000801242000001000000",
+   "00000000000000801242000000000800",
+   "00000000000000801242000000000100"
+  ]
+ },
+ "method": "independent D4 canonicalization (8 transforms, bit index 11*b+a, BigInt), lift re-derivation by one-stone deletion, concyclicity via 4x4 determinant |x^2+y^2,x,y,1| (zero determinant covers collinear quadruples too), collinearity via 3x3; per-S5 serving relation by parent-orbit membership canon(h ^ 1<<s) in the open-S5 set; no repo verifier, solver, cache or df-pn import",
+ "results": {
+  "root_identity_and_safety": {
+   "checked": 13,
+   "root_equals_child_or_bit": 13,
+   "popcount_7_6_ok": 13,
+   "claimed_root_hex_match": 13,
+   "concyclic_or_degenerate_quads_zero": 13,
+   "collinear_triples_per_root": "2 (bit 118 root: 3); harmless: kyouen win needs 4 points on a circle/line",
+   "covers_7": 13
+  },
+  "batch3_cost70c_gain0_structure": {
+   "bits": {
+    "3": {
+     "in_manifest_lifts": [
+      "00000000000000803242000000000000",
+      "00000000000000803202000000000008",
+      "00000000000000801242000000000008"
+     ],
+     "non_manifest": 4,
+     "claimed_marginal": 0
+    },
+    "42": {
+     "in_manifest_lifts": [
+      "00000000000000803242000000000000",
+      "00000000000000803202040000000000",
+      "00000000000000801242040000000000"
+     ],
+     "non_manifest": 4,
+     "claimed_marginal": 4
+    },
+    "86": {
+     "in_manifest_lifts": [
+      "00000000000000803202040000000000",
+      "00000000000000849002000400000000",
+      "00000000000000803242000000000000"
+     ],
+     "non_manifest": 4,
+     "claimed_marginal": 4
+    },
+    "103": {
+     "in_manifest_lifts": [
+      "00000000000000803202000000008000",
+      "00000000000000849002000000020000",
+      "00000000000000803242000000000000"
+     ],
+     "non_manifest": 4,
+     "claimed_marginal": 0
+    }
+   },
+   "consistency": "bits 42/86 claimed marginal 4 equals the regenerated non-manifest lift count exactly; marginal_in_manifest 0 consistent with all 3 in-manifest lifts pre-covered (shared child closed by cost69e bit76, K0783); batch-3 in-manifest lifts are disjoint from both the warm6 C set and the 69f D set",
+   "records_fields_check": "4/4 records: root_hex matches recomputed root, verdict WIN7, sub_roots_pass == sub_roots_verified, union_missing/extra 0, mobility match true (field-level cross-read; certificate internals not re-verified here)"
+  },
+  "cost69f_fold_enumeration": {
+   "marginal_manifest_hexes_are_lifts_and_manifest_rows": true,
+   "growing_union_marginals_recomputed": [
+    2,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "growing_union_marginals_claimed": [
+    2,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "distinct_union_size": 9,
+   "distinct_union_claimed": 9,
+   "predicted_solved_increment": 9
+  },
+  "D_hex_costs": {
+   "00000000000000801202000000000180": 75,
+   "00000000000000801242000000000080": 77,
+   "00000000000000809102000000000008": 69,
+   "00000000000000909002000000000008": 78,
+   "00000000000000a09002000000000008": 68,
+   "00000000000020003800000008000200": 75,
+   "00000000000020003800000008200000": 78,
+   "00000000000020003800000108000000": 72,
+   "00000000000020003810000008000000": 77,
+   "sum": 669,
+   "predicted_sum_drop": "527949 - 527280 = 669",
+   "match": true
+  },
+  "per_S5_effects": {
+   "third_class2_target": {
+    "s5": "00000000000000809102000000000000",
+    "rem": "8 -> 8 (no C effect) -> 7",
+    "cost": "588 -> 588 -> 519",
+    "claimed": "8/588 -> 7/519",
+    "match": true
+   },
+   "hub_s5_serves_all_9_D": {
+    "s5": "00000000000000801202000000000080",
+    "classes": 2,
+    "rem": 68,
+    "cost": 5093,
+    "conditional_after_fold": {
+     "rem": 59,
+     "cost": 4424
+    }
+   },
+   "each_D_hex_serves_exactly": "2 open S5s (hub plus one other)",
+   "C_hexes_all_serve": {
+    "s5": "00000000000000801242000000000000",
+    "classes": 2,
+    "rem": 70,
+    "cost": 5517,
+    "after_warm6": {
+     "rem": 64,
+     "cost": 5043
+    }
+   }
+  },
+  "cheapest_unswept_child": {
+   "hex": "00000000000000809102000000002000",
+   "manifest_row": true,
+   "cost": 69,
+   "open_serving_s5s_measured": 3,
+   "note_claimed_c1_c2_c4": "c1=0,c2=2,c4=2 (4 servers)",
+   "discrepancy_flagged": "measured 3 distinct open S5 parents among the 175-row ranking; does not affect any endpoint arithmetic since this hex is not in D; recommend the lane reconcile (non-open servers or class accounting)"
+  }
+ },
+ "caveats": [
+  "unsolved-at-1154 status of the 9 D hexes is asserted by the prediction against the chain solved set and is not independently recomputable here (no solved-set fetch); per-S5 membership consistency was verified instead",
+  "per-S5 remaining sums are multiplicity-counting (12,773 at the 1148 state) and are distinct from the distinct-orbit head numbers (4,963 / 391,672); the fold drops per-S5 sums by 18 (2 x 9) and distinct demand by 9 - both consistent under the distinct-count ledger",
+  "the fold itself remains conditional on publication and independent verification of the 4 pending cost-69f certificates (bits 2/94/109/119); this audit covers enumeration and arithmetic only, not certificate proofs"
+ ],
+ "unknown_status": "solved counts measure manifest coverage, not the game-theoretic value of any position; WIN7-D10 proves only a win within depth 10 from the individual 7-stone roots; 11x11 empty board, two-stone root {49,60}, S2 {59,60}, class 2 and class 4 remain UNKNOWN"
+}

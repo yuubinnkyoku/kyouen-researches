@@ -1,0 +1,77 @@
+{
+  "schema": "n11-class4-batch1-bit40-campaign",
+  "date": "2026-11-14",
+  "root_hex": "00000000020000003800010080080000",
+  "mob": 50,
+  "method": {
+    "decomposition": "lossAt(root,10)=false <=> EXISTS loser first move m: FOR ALL winner replies r: lossAt(root+m+r,8)=false (pass chunk); kill chunk = loss=true",
+    "chunk_depth": 8,
+    "chunk_cap": 300000,
+    "run_budget": 650000,
+    "reply_order": "wscore descending (fail-fast)",
+    "reply_enumeration": "legal moves at root+m (m occupied, so r != m structurally; the bit32 r===m driver bug class cannot occur)",
+    "resume": "per-candidate state file (kill table + done replies) flushed after every run; skips recorded chunks exactly"
+  },
+  "verdict": "REFUTED within depth 10: lossAt(root,10)=false via witness m=8 - all 44 winner replies at root+8 solved uncapped with loss=false; 5 other first moves killed before the witness was found; 44 first moves unexamined (not needed for the verdict)",
+  "witness": {
+    "m": 8,
+    "replies_total": 44,
+    "replies_solved": 44,
+    "missing": 0,
+    "all_loss_false": true,
+    "all_uncapped": true
+  },
+  "kill_table": {
+    "0": 18,
+    "2": 90,
+    "3": 85,
+    "6": 84,
+    "7": 18
+  },
+  "totals": {
+    "nodes": 3101124,
+    "runs": 5,
+    "batch_nodes": [
+      656192,
+      650950,
+      660051,
+      650062,
+      483869
+    ],
+    "capped_chunks": 0,
+    "single_chunk_max_nodes": 162444,
+    "chunks_total": 85,
+    "kill_chunks": 5,
+    "pass_chunks": 80
+  },
+  "controls": {
+    "pilot_d6": "loss=false, 5,949 nodes at the start of every run (5/5 PASS)",
+    "determinism_fresh_resolves": {
+      "(8,44)": {
+        "loss": false,
+        "nodes": 79103
+      },
+      "(8,104)": {
+        "loss": false,
+        "nodes": 68443
+      },
+      "(0,18)": {
+        "loss": true,
+        "nodes": 28157
+      },
+      "(2,90)": {
+        "loss": true,
+        "nodes": 97107
+      }
+    },
+    "note": "all four fresh re-solves identical to the campaign chunk records (node counts and verdicts)"
+  },
+  "root_mob": 50,
+  "kill_r_ne_m_all": true,
+  "interpretation_guard": [
+    "REFUTED within depth 10 means no winner win within 10 ply from this root; it does NOT exclude deeper wins",
+    "verdicts are WIN7-within-depth-10 class only; class 4 / S2 {59,60} / two-stone root {49,60} / 11x11 empty board all remain UNKNOWN",
+    "the bit7 400-node aggregation discrepancy reserve (2026-11-14) remains open and unrelated"
+  ],
+  "next": "heavy-pending is now {80,87,34} plus unprobed candidates; same chunk protocol (chunk depth 8, reply enumeration at root+m)"
+}

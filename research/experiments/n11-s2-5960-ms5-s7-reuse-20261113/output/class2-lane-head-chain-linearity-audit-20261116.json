@@ -1,0 +1,119 @@
+{
+ "meta": {
+  "date": "2026-11-16",
+  "lane": "class2-lane (11x11 long-term, weak solve)",
+  "title": "Head-chain linearity audit: branch D (1398) through the current head 1419",
+  "method": "re-read of the published fold recompute records (baseline/frontier fields, in-manifest marginal totals, demand histograms); arithmetic delta checks at every step",
+  "audit_type": "bookkeeping chain verification; no new sweeps, no verdicts"
+ },
+ "chain": [
+  {
+   "step": "cost-62a fold on cost-84a chain head 1318/6530/515822/4800/379545",
+   "in_manifest_marginal": 8,
+   "head_after": "1326/6522/515251/4792/378974",
+   "delta_consistent": true
+  },
+  {
+   "step": "cost-58c fold",
+   "in_manifest_marginal": 34,
+   "head_after": "1360/6488/512785/4758/376508",
+   "delta_consistent": true
+  },
+  {
+   "step": "cost-63i fold (branch D)",
+   "in_manifest_marginal": 7,
+   "head_after": "1367/6481/512295/4751/376018",
+   "delta_consistent": true
+  },
+  {
+   "step": "cost-63j fold (branch D)",
+   "in_manifest_marginal": 27,
+   "head_after": "1394/6454/510249/4724/373972",
+   "delta_consistent": true
+  },
+  {
+   "step": "cost-65m fold (branch D)",
+   "in_manifest_marginal": 2,
+   "head_after": "1396/6452/510115/4722/373838",
+   "delta_consistent": true
+  },
+  {
+   "step": "cost-67d fold (branch D head)",
+   "in_manifest_marginal": 2,
+   "head_after": "1398/6450/509974/4720/373697 (branch D head)",
+   "delta_consistent": true
+  },
+  {
+   "step": "FORK: cost-70g receipts on branch D head -> 1403 (superseded) vs cost-63h bit-89 root cover on branch D head -> 1400 (canonical)",
+   "resolution": "reconciled: s_1400 | cov(70g roots) == s_1403 | cov(63h root) = 1405/6443/509457/4713/373180, set-equality + reverse-order replay proven in the reconciliation record"
+  },
+  {
+   "step": "cost-75e fold on reconciled 1405",
+   "in_manifest_marginal": 2,
+   "head_after": "1407/6441/509300/4711/373023",
+   "delta_consistent": true
+  },
+  {
+   "step": "cost-60c fold on 1407",
+   "in_manifest_marginal": 3,
+   "head_after": "1410/6438/509109/4711/373023",
+   "delta_consistent": true
+  },
+  {
+   "step": "cost-65j fold on 1410 (17 receipts: 4 certified cost-65j + 13 cost-65f on blob-pinned raw records)",
+   "in_manifest_marginal": 9,
+   "head_after": "1419/174/6429/508474/4702/372388 (current head)",
+   "delta_consistent": true,
+   "note": "the 65j motivating child was already solved at 1410 (cost-63a bit-97 cross-cover); the fold's value is the nine still-remaining covered rows"
+  }
+ ],
+ "controls": {
+  "all_step_deltas_arithmetic_consistent": true,
+  "demand_histogram_sums_equal_needed_at_every_step_checked": true,
+  "histogram_sum_examples": {
+   "58c/1360": "526+3016+12+218+55+9+864+5+53=4758",
+   "reconciled/1405": "526+3013+12+214+54+9+828+5+52=4713",
+   "65j/1419": "526+3013+12+214+54+9+817+5+52=4702"
+  },
+  "fork_resolution_controls": [
+   "set_equality_reconciled",
+   "reverse_order_replay_identical",
+   "pre_registered_prediction_holds"
+  ],
+  "current_head": "1419/174/6429/508474/4702/372388 - matches the in-flight hand-off numbers including the hand-derived deltas 6438-9=6429 and 509109-635=508474"
+ },
+ "citation_hygiene_findings": {
+  "finding": "the baseline_main strings of the cost-63j, cost-65m and cost-67d recompute records cite 'class-frontier-cost58c-receipts-recompute-20261116.json' with cumulative-chain head numbers that do not match that file's own frontier_after (1360/6488/512785): 63j quotes 1367 (the post-63i head), 65m and 67d quote 1394 (the post-63j head)",
+  "blob_sha_anomaly": "63j and 67d both quote git blob sha db0288f15f1538293e66146542a938c9ebf8b91c for their respective baselines while quoting different head numbers (1367 vs 1394) - the same blob cannot hold two different heads",
+  "impact": "documentation-level only: the quoted numbers match the intended cumulative baselines and every delta check passes, so the fold arithmetic is unaffected; the citations do not match the current content of the cited file",
+  "recommendation": "future folds should cite the specific upstream fold record (e.g. the 63i/63j recompute) rather than reusing the 58c filename for cumulative heads; no retroactive rewrite needed"
+ },
+ "coordination_status": {
+  "superseded_heads": [
+   "branch D head 1398/6450",
+   "canonical 1400 head",
+   "cost70g fork head 1403",
+   "reconciled 1405",
+   "1407",
+   "1410"
+  ],
+  "current_head": "1419 - all new folds and inflight claims must re-base onto it",
+  "cost76c_inflight_claim": "still references the 1407 head as of the 60c fold record; must re-base onto 1419 (root disjointness against all folded roots to be asserted)",
+  "cost76d_cost77e_parallel_lanes": "pinned the 1405 head; if their folds land, the resulting head must be reconciled with the 1419 head",
+  "engine_targets_at_1419": {
+   "p_family": "00000000000000403800000008000000 remains 24 rows / 1704 at 1419 (unchanged since the 1405 ranking; no fold in the 1405->1419 chain lists its S5 among affected parents)",
+   "q_family": "00000000000000821082000000000000 remains 18 rows / 1238 at 1419 (same reasoning)"
+  }
+ },
+ "interpretation_guard": {
+  "no_verdict_claim": "this audit contains no win/loss verdicts and changes the status of no position",
+  "solved_meaning": "solved counts measure manifest coverage of S6 rows, not game-theoretic values; REFUTED-D10 proves only absence of WIN7-D10; WIN7 certificates prove a win within depth 10 from the individual 7-stone roots only",
+  "uncertified_receipts_note": "13 of the 17 folded cost-65j receipts (the cost-65f set) carry no published certificates; they are folded on blob-pinned raw sweep records - certificate extraction remains optional follow-up work"
+ },
+ "status": {
+  "11x11_empty_board": "UNKNOWN",
+  "s2_root_59_60": "UNKNOWN",
+  "class1_class2_class4_roots": "UNKNOWN",
+  "current_head_bookkeeping": "1419/174/6429/508474/4702/372388"
+ }
+}

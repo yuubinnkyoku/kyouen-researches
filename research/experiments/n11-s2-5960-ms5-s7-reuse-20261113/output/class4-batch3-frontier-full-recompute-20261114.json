@@ -1,0 +1,183 @@
+{
+ "schema": "n11-class4-batch3-frontier-full-recompute-20261114-v1",
+ "date": "2026-11-14",
+ "baseline_main": "08e060f0",
+ "method": "full recomputation of scripts/audit_class_frontier.py logic over win7-reuse-hits + 12 baseline verified JSONs + class4 batch1/batch2 verified + batch3 (bit37, child#3/#4 x3, child#5 x4, child#7 x5); controls reproduce the published baseline/after_batch1/after_batch2 snapshot values exactly before batch3 is measured",
+ "controls": {
+  "baseline": {
+   "solved_in_manifest": 638,
+   "unique_remaining": 7208,
+   "sum_cost": 565500,
+   "reproduced": true
+  },
+  "after_batch1": {
+   "solved_in_manifest": 657,
+   "unique_remaining": 7189,
+   "sum_cost": 564070,
+   "reproduced": true
+  },
+  "after_batch2": {
+   "solved_in_manifest": 665,
+   "unique_remaining": 7181,
+   "sum_cost": 563509,
+   "open_s6": 5398,
+   "open_cost": 423516,
+   "reproduced": true
+  },
+  "batch2_newly_solved_distinct_keys": 8,
+  "bit37_covers_matches_published_frontier_effect": true
+ },
+ "batch3_additions": {
+  "bit37": {
+   "roots": [
+    "00000000020000003802002080000000"
+   ],
+   "covers": 7,
+   "marginal": 7,
+   "marginal_in_manifest": 4,
+   "marginal_manifest_hexes": [
+    "00000000000000003802002080000000",
+    "00000000000000801802800000080000",
+    "00000000020000003800002080000000",
+    "00000000020000003802000080000000"
+   ]
+  },
+  "child34": {
+   "roots": [
+    "00000000420000003800000084000000",
+    "00000000020100003800000084000000",
+    "00000000024000003800000084000000"
+   ],
+   "covers": 16,
+   "marginal": 15,
+   "marginal_in_manifest": 7,
+   "marginal_manifest_hexes": [
+    "00000000000000801002410000080000",
+    "00000000000000901012000000002000",
+    "00000000000100003800000084000000",
+    "00000000020000003800000084000000",
+    "00000000020000003800000480000000",
+    "00000000020000003800010080000000",
+    "00000000024000003800000004000000"
+   ]
+  },
+  "child5": {
+   "roots": [
+    "00001000020000003800000080001000",
+    "00000000820000003800000080001000",
+    "00000008020000003800000080001000",
+    "00000000020000003800000080021000"
+   ],
+   "covers": 22,
+   "marginal": 19,
+   "marginal_in_manifest": 8,
+   "marginal_manifest_hexes": [
+    "00000000000000003800000000908000",
+    "00000000000080801002000000102000",
+    "00000000020000003800000080001000",
+    "00000000020000003800000080020000",
+    "00000000020000003800000080200000",
+    "00000000080000003800000000900000",
+    "00000008000000003800000080001000",
+    "00000010000000003800000000900000"
+   ]
+  },
+  "child7": {
+   "roots": [
+    "00000000020100003800010080000000",
+    "00000000420000003800010080000000",
+    "00000000020000003804010080000000",
+    "00000000020000003800018080000000",
+    "00200000020000003800010080000000"
+   ],
+   "covers": 28,
+   "marginal": 17,
+   "marginal_in_manifest": 6,
+   "marginal_manifest_hexes": [
+    "00000000000000003800003000800000",
+    "00000000000000003801001000800000",
+    "00000000000000801002010200080000",
+    "00000000000100003800010080000000",
+    "00000000000100403800000080000000",
+    "00000000000100a01002000000080000"
+   ]
+  }
+ },
+ "frontier_after_batch3": {
+  "solved_s6_in_manifest": 690,
+  "remaining_s5_orbits": 177,
+  "unique_remaining_s6": 7156,
+  "sum_remaining_cost": 561764,
+  "s6_needed_by_open_classes": 5373,
+  "cost_needed_by_open_classes": 421771,
+  "demand_histogram_open_only": {
+   "c2=0,c4=1": 528,
+   "c2=0,c4=2": 3046,
+   "c2=0,c4=3": 18,
+   "c2=1,c4=0": 279,
+   "c2=1,c4=1": 65,
+   "c2=1,c4=2": 9,
+   "c2=2,c4=0": 1356,
+   "c2=2,c4=1": 6,
+   "c2=2,c4=2": 66
+  },
+  "class_composition": {
+   "bit1": 49,
+   "bit2": 44,
+   "bit4": 88
+  },
+  "best_class2": {
+   "s5_hex": "00000000000000003802000008000000",
+   "classes": 2,
+   "remaining_s6_orbits": 32,
+   "remaining_s7_edge_cost": 2206
+  },
+  "next_class2": [
+   {
+    "s5_hex": "00000000000000809082000000000000",
+    "classes": 3,
+    "remaining_s6_orbits": 37,
+    "remaining_s7_edge_cost": 2507
+   },
+   {
+    "s5_hex": "00000000000000809102000000000000",
+    "classes": 2,
+    "remaining_s6_orbits": 40,
+    "remaining_s7_edge_cost": 2850
+   },
+   {
+    "s5_hex": "00000000000000803202000000000000",
+    "classes": 2,
+    "remaining_s6_orbits": 41,
+    "remaining_s7_edge_cost": 2776
+   }
+  ],
+  "best_class4": {
+   "s5_hex": "00000000020000003800000080000000",
+   "classes": 4,
+   "remaining_s6_orbits": 24,
+   "remaining_s7_edge_cost": 1934
+  },
+  "next_class4": [
+   {
+    "s5_hex": "00000000000000003800002000800000",
+    "classes": 4,
+    "remaining_s6_orbits": 60,
+    "remaining_s7_edge_cost": 4216
+   },
+   {
+    "s5_hex": "00000000000000003800000000802000",
+    "classes": 4,
+    "remaining_s6_orbits": 64,
+    "remaining_s7_edge_cost": 4598
+   },
+   {
+    "s5_hex": "00000000000000003800001000800000",
+    "classes": 4,
+    "remaining_s6_orbits": 66,
+    "remaining_s7_edge_cost": 4719
+   }
+  ]
+ },
+ "interpretation_guard": "bookkeeping over published receipts; REFUTED-D10 sweeps prove only absence of WIN7-D10; 11x11 empty root / {49,60} / S2 {59,60} / class 2 / class 4 remain UNKNOWN"
+}

@@ -1,0 +1,59 @@
+{
+ "schema": "n11-class4-lane-cost78b-win7-certificates-20261114-v1",
+ "date": "2026-11-14",
+ "target": {
+  "class4_lane_target_s5": "00000000020000003800000080000000",
+  "s6_child_hex": "00000000020000003800001080000000",
+  "s6_s7_edge_cost": 78,
+  "demand": "c4=3"
+ },
+ "engine": "v15 engine verbatim (scripts/class4_child1_runner.ts) for the sweep; class4_child1_cert_extractor_exact.ts (FBS=1<<20, probe 96, drop counter) for extraction; verify_bit7_win7_cert.ts (engine-independent exact Bareiss det4) for verification",
+ "summary": {
+  "win7_d10_bits": [
+   48,
+   113
+  ],
+  "total_new_certificate_rows": 55171,
+  "total_extraction_nodes": 33543295
+ },
+ "extraction_method": "per root: exact loser-first-move list enumerated by exact integer Bareiss over ALL C(7,3) triples of the root (truelegal.py protocol), one process per root via class4_child1_cert_extractor_exact.ts, fbt_drops=0 asserted, fatal=null, rows sort -u (no duplicates observed)",
+ "certificates": [
+  {
+   "bit": 48,
+   "root": "00000000020000003801001080000000",
+   "rows": 50433,
+   "extraction_nodes": 20700026,
+   "md5": "8d9a68e3db5f93248406459b43874f6d",
+   "certificate_path": "output/class4-lane-cost74b-certificates/n11_s7_00000000020000003801001080000000.cert",
+   "verification": {
+    "subroot_count": 58,
+    "union_diff": "0/0",
+    "root_check": "stones=7, loserMobility=58",
+    "terminal_range": [
+     13,
+     17
+    ]
+   },
+   "note": "SAME 7-stone root as cost-74b bit36 (reached from a different S6 child): the fresh extraction from this child reproduced the cost-74b bit36 certificate bit-exact (identical md5 over the full file with header), so the existing certificate on main is reused and no duplicate file was pushed. Cross-child reachability: S6 child 00000000020000003800001080000000 + 7th stone at bit48 == S6 child 00000000020000003801000080000000 + 7th stone at bit36."
+  },
+  {
+   "bit": 113,
+   "root": "00020000020000003800001080000000",
+   "rows": 55171,
+   "extraction_nodes": 12843269,
+   "md5": "0e45cacf6d5b561497ff3fbc9089f977",
+   "certificate_path": "output/class4-lane-cost78b-certificates/n11_s7_00020000020000003800001080000000.cert",
+   "verification": {
+    "subroot_count": 64,
+    "union_diff": "0/0",
+    "root_check": "stones=7, loserMobility=64",
+    "terminal_range": [
+     13,
+     17
+    ],
+    "note": "remote md5 verified bit-exact against the local file via commit-pinned raw fetch (trailing newline intact)"
+   }
+  }
+ ],
+ "interpretation_guard": "each certificate proves only a winner win within depth 10 from the individual 7-stone root (loser to move). No statement about deeper play, the S5/S6 orbits, the two-stone root {49,60}, S2 {59,60}, or the 11x11 empty board, all of which remain UNKNOWN."
+}

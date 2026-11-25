@@ -1,0 +1,327 @@
+{
+ "schema": "n11-class2-lane-cost74h-raw-sweep-audit-20261115-v1",
+ "date": "2026-11-15",
+ "independent_method": "Python standard library; exact Bareiss integer determinants; D4 canonicalization implemented independently; no repository engine/solver/cache, no floating point",
+ "target": {
+  "s5_parent1_hex": "00000000000000801222000000000000",
+  "s5_parent2_hex": "00000000000000801202000000200000",
+  "s6_child_hex": "00000000000000889002000000000800",
+  "edge_cost": 74,
+  "legal_candidate_count": 74
+ },
+ "source_claim": {
+  "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost74h-inflight-20261115.json",
+  "chain_head_at_claim": "1270/6577/519427/4847/383150 (class-frontier-merged-cost65l-74g-recompute-20261115.json, git blob sha 0210953083309c1dd2d8f1cf036ec1f91e88f267; the merged fork-resolution head of the concurrent cost-65l and cost-74g folds)"
+ },
+ "geometry": {
+  "child_stones": 6,
+  "child_safe": true,
+  "independent_legal_candidate_count": 74,
+  "candidate_bits_exact_match": true,
+  "lift_note": "one-stone deletions re-derived independently: stone 11 deletion reproduces the class-2 lift parent 00000000000000801222000000000000 bit-exact (75 rows / 5705, classes_bitmask 2 at the merged head 1270); stone 67 deletion reproduces the second coverable class-2 target S5 00000000000000801202000000200000 bit-exact (17 rows / 1325, classes_bitmask 2); the other four deletions (stones 49, 60, 63, 71) canonicalize to 00000000000000889000000000000800, 00000000000000888002000000000800, 00000000000000003800000000008200, 00000000000000089002000000000800: six distinct orbits, the remaining four closed and absent from the merged-head ranking; per-mask-bit demand is therefore c1=0, c2=2, c4=0, matching the claim and the merged-head top-candidates CSV row s5=00000000000000801202000000200000,s6=00000000000000889002000000000800,cost=74"
+ },
+ "batches": [
+  {
+   "batch": 1,
+   "file": "class2-lane-cost74h-raw-batch1-20261115.jsonl",
+   "candidate_bits": [
+    0,
+    2,
+    3,
+    4,
+    6,
+    7,
+    8,
+    9
+   ],
+   "pilot_nodes": 3402,
+   "nodes": 7869363
+  },
+  {
+   "batch": 2,
+   "file": "class2-lane-cost74h-raw-batch2-20261115.jsonl",
+   "candidate_bits": [
+    10,
+    14,
+    15,
+    18,
+    19,
+    20,
+    22,
+    23
+   ],
+   "pilot_nodes": 3402,
+   "nodes": 5262645
+  },
+  {
+   "batch": 3,
+   "file": "class2-lane-cost74h-raw-batch3-20261115.jsonl",
+   "candidate_bits": [
+    24,
+    25,
+    26,
+    28,
+    29,
+    30,
+    31,
+    32
+   ],
+   "pilot_nodes": 3402,
+   "nodes": 4990767
+  },
+  {
+   "batch": 4,
+   "file": "class2-lane-cost74h-raw-batch4-20261115.jsonl",
+   "candidate_bits": [
+    33,
+    36,
+    41,
+    42,
+    43,
+    44,
+    46,
+    47
+   ],
+   "pilot_nodes": 3402,
+   "nodes": 5498740
+  },
+  {
+   "batch": 5,
+   "file": "class2-lane-cost74h-raw-batch5-20261115.jsonl",
+   "candidate_bits": [
+    48,
+    54,
+    58,
+    59,
+    62,
+    64,
+    65,
+    66
+   ],
+   "pilot_nodes": 3402,
+   "nodes": 12136652
+  },
+  {
+   "batch": 6,
+   "file": "class2-lane-cost74h-raw-batch6-20261115.jsonl",
+   "candidate_bits": [
+    68,
+    69,
+    70,
+    76,
+    77,
+    78,
+    80,
+    85
+   ],
+   "pilot_nodes": 3402,
+   "nodes": 7322525
+  },
+  {
+   "batch": 7,
+   "file": "class2-lane-cost74h-raw-batch7-20261115.jsonl",
+   "candidate_bits": [
+    86,
+    87,
+    89,
+    90,
+    91,
+    92,
+    94,
+    95
+   ],
+   "pilot_nodes": 3402,
+   "nodes": 17716729
+  },
+  {
+   "batch": 8,
+   "file": "class2-lane-cost74h-raw-batch8-20261115.jsonl",
+   "candidate_bits": [
+    96,
+    97,
+    98,
+    100,
+    102,
+    103,
+    105,
+    106
+   ],
+   "pilot_nodes": 3402,
+   "nodes": 6124040
+  },
+  {
+   "batch": 9,
+   "file": "class2-lane-cost74h-raw-batch9-20261115.jsonl",
+   "candidate_bits": [
+    107,
+    108,
+    112,
+    113,
+    114,
+    116,
+    117,
+    118
+   ],
+   "pilot_nodes": 3402,
+   "nodes": 4815074
+  },
+  {
+   "batch": 10,
+   "file": "class2-lane-cost74h-raw-batch10-20261115.jsonl",
+   "candidate_bits": [
+    119,
+    120
+   ],
+   "pilot_nodes": 3402,
+   "nodes": 983601
+  }
+ ],
+ "aggregate": {
+  "candidates": 74,
+  "win7_d10_bits": [],
+  "win7_d10_nodes": {},
+  "refuted_d10": 74,
+  "refuted_d10_bits": [
+   0,
+   2,
+   3,
+   4,
+   6,
+   7,
+   8,
+   9,
+   10,
+   14,
+   15,
+   18,
+   19,
+   20,
+   22,
+   23,
+   24,
+   25,
+   26,
+   28,
+   29,
+   30,
+   31,
+   32,
+   33,
+   36,
+   41,
+   42,
+   43,
+   44,
+   46,
+   47,
+   48,
+   54,
+   58,
+   59,
+   62,
+   64,
+   65,
+   66,
+   68,
+   69,
+   70,
+   76,
+   77,
+   78,
+   80,
+   85,
+   86,
+   87,
+   89,
+   90,
+   91,
+   92,
+   94,
+   95,
+   96,
+   97,
+   98,
+   100,
+   102,
+   103,
+   105,
+   106,
+   107,
+   108,
+   112,
+   113,
+   114,
+   116,
+   117,
+   118,
+   119,
+   120
+  ],
+  "capped": 0,
+  "capped_bits": [],
+  "candidate_nodes": 72720136,
+  "pilots": 10,
+  "heaviest_bits_nodes": {
+   "87": 6415648,
+   "62": 4314481,
+   "86": 3558261,
+   "76": 3025475,
+   "106": 2977980,
+   "64": 2862033
+  }
+ },
+ "crosschecks": {
+  "v16_determinism_rerun": {
+   "file": "class2-lane-cost74h-v16-determinism-rerun-20261115.jsonl",
+   "batch_rerun": 5,
+   "identical_ignoring_ms": true,
+   "post_reset_note": "the sandbox environment reset mid-session and wiped the local mirror; all 10 raw batches and the determinism rerun were regenerated from scratch with the same v16 engine and reproduced the pre-reset aggregate node-exactly (74 candidates, 0 WIN7, 74 REFUTED, 0 capped, 72,720,136 nodes, 10 pilots at 3402), which doubles as an environment-reset determinism check"
+  },
+  "v15_cross_engine": {
+   "file": "class2-lane-cost74h-v15-crosscheck-20261115.jsonl",
+   "win_bits_agree": true,
+   "refuted_anchors": [
+    0,
+    2,
+    62,
+    86,
+    87
+   ],
+   "anchor_nodes": {
+    "0": 1779947,
+    "2": 2720409,
+    "62": 12542999,
+    "86": 11025261,
+    "87": 14940722
+   },
+   "pilots_5949": 3,
+   "run_note": "three foreground invocations (bits 0/2, bits 62/86, bit 87), each with its own d6 pilot at 5949 nodes; the first background attempt was killed by the sandbox environment reset and is not part of this file; bit 1 is not a legal candidate of this child (Bareiss-unsafe, absent from the 74-candidate enumeration) and was excluded from the anchors"
+  }
+ },
+ "d4_duplicate_scan": {
+  "roots_compared": 0,
+  "manifest_files_scanned": 0,
+  "duplicates": 0
+ },
+ "checks": {
+  "all_bits_exactly_once": true,
+  "all_terminal_ranges_within_depth10_bounds": true,
+  "distinct_terminal_ranges": [
+   [
+    13,
+    17
+   ]
+  ],
+  "pilot_3402_per_batch": true,
+  "independent_enumeration_matches_claim": true,
+  "one_stone_deletion_d4_canonicalization_verified": true,
+  "total_nodes_match": true
+ },
+ "proof_boundary": {
+  "raw_sweep_rederivation": "closed by this audit",
+  "certificate_extraction": "not required: the sweep is sterile (no WIN7-D10 bits)",
+  "fold_material": "none: no receipts, the canonical chain frontier is unchanged by this sweep",
+  "interpretation_of_refuted_d10": "all 74 candidates are REFUTED-D10: no first-player win within depth 10 from any of the 74 seven-stone roots. This is NOT a LOSS proof for those roots and does not close the child S6 row; closing this child row requires evidence beyond depth 10 (each candidate would need a refutation at depth > 10 or an equivalent invariant)"
+ },
+ "interpretation": "win7_d10_bits is empty: the sweep is sterile. refuted_d10 is NOT a LOSS proof. capped proves nothing (and there were no capped candidates). The sweep alone closes no S6 orbit and changes no frontier count; the child 00000000000000889002000000000800 remains an open S6 row (a remaining row of both open parents: the class-2 lift parent 00000000000000801222000000000000 stays at 75 rows / 5705 and the second coverable class-2 target S5 00000000000000801202000000200000 stays at 17 rows / 1325 in the claim-baseline merged head 1270). Note: while this sweep was in flight a parallel lane landed the cost-69i fold on a 1266-based chain (head 1273), forking the canonical chain against the merged head 1270; that fork is a receipt-bookkeeping fork only and is unaffected by this sterile sweep, whose claim baseline remains the merged head 1270. The standard 11x11 empty board, both two-stone roots {49,60}/{59,60}, S2 {59,60}, class 2 and class 4 all remain UNKNOWN."
+}

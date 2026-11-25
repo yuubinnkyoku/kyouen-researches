@@ -1,0 +1,242 @@
+{
+  "schema": "n11-class2-lane-cost74d-raw-sweep-audit-20261115-v1",
+  "date": "2026-11-15",
+  "independent_method": "Python standard library; exact Bareiss determinant; no floating point; d4 canonicalization validated against the published cost69f sweep audit",
+  "target": {
+    "s5_hex": "00000000000000809102000000000000",
+    "s6_child_hex": "00000000000000809102020000000000",
+    "edge_cost": 74,
+    "legal_candidate_count": 74
+  },
+  "source_claim": {
+    "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost74d-inflight-20261115.json",
+    "blob_sha": "dbc347f65866aab07a6f6b98166b516841770e78"
+  },
+  "geometry": {
+    "child_stones": 6,
+    "child_safe": true,
+    "independent_legal_candidate_count": 74,
+    "candidate_bits_exact_match": true
+  },
+  "batches": [
+    {
+      "batch": 1,
+      "input_path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost74d-raw-batch1-20261115.jsonl",
+      "input_blob_sha": "d387b6d62cc7001143e66764d20c118688eb863c",
+      "candidate_bits": [0, 1, 2, 3, 4, 6, 7, 8],
+      "pilot_nodes": 3402
+    },
+    {
+      "batch": 2,
+      "input_path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost74d-raw-batch2-20261115.jsonl",
+      "input_blob_sha": "90b4e3429f3fb1e7e7aa80d6bac13e30260adf7f",
+      "candidate_bits": [9, 10, 11, 12, 13, 14, 15, 17],
+      "pilot_nodes": 3402
+    },
+    {
+      "batch": 3,
+      "input_path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost74d-raw-batch3-20261115.jsonl",
+      "input_blob_sha": "c3f028669ec09e4627d7ec438eb6b4bbe014a1cd",
+      "candidate_bits": [18, 19, 20, 21, 22, 23, 24, 25],
+      "pilot_nodes": 3402
+    },
+    {
+      "batch": 4,
+      "input_path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost74d-raw-batch4-20261115.jsonl",
+      "input_blob_sha": "2d92dd60f6625185764f6e70d1ce3c81aba28826",
+      "candidate_bits": [26, 28, 30, 31, 32, 33, 35, 36],
+      "pilot_nodes": 3402
+    },
+    {
+      "batch": 5,
+      "input_path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost74d-raw-batch5-20261115.jsonl",
+      "input_blob_sha": "abcfb584b60e6add1f1fa733219bc2d84431c0e5",
+      "candidate_bits": [42, 44, 46, 47, 54, 66, 68, 69],
+      "pilot_nodes": 3402
+    },
+    {
+      "batch": 6,
+      "input_path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost74d-raw-batch6-20261115.jsonl",
+      "input_blob_sha": "b48d1aacefcb623629ed7d791a3a3a51f873d5bb",
+      "candidate_bits": [77, 78, 79, 80, 81, 86, 88, 89],
+      "pilot_nodes": 3402
+    },
+    {
+      "batch": 7,
+      "input_path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost74d-raw-batch7-20261115.jsonl",
+      "input_blob_sha": "27f459954758e22a5fd0125ae5672a8e6005ca98",
+      "candidate_bits": [90, 91, 92, 94, 97, 98, 99, 100],
+      "pilot_nodes": 3402
+    },
+    {
+      "batch": 8,
+      "input_path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost74d-raw-batch8-20261115.jsonl",
+      "input_blob_sha": "40c5e861052f8acc709423dfb4a7d2196c568d3d",
+      "candidate_bits": [101, 102, 103, 105, 106, 107, 108, 109],
+      "pilot_nodes": 3402
+    },
+    {
+      "batch": 9,
+      "input_path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost74d-raw-batch9-20261115.jsonl",
+      "input_blob_sha": "55b54a1a73b3c4c149067e3c1d3536c45f630718",
+      "candidate_bits": [110, 111, 112, 113, 114, 116, 117, 118],
+      "pilot_nodes": 3402
+    },
+    {
+      "batch": 10,
+      "input_path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost74d-raw-batch10-20261115.jsonl",
+      "input_blob_sha": "7d8b63882ed57e82008a8bc7ad96f9021946faee",
+      "candidate_bits": [119, 120],
+      "pilot_nodes": 3402
+    }
+  ],
+  "aggregate": {
+    "batches": 10,
+    "records": 74,
+    "candidates": 74,
+    "win7_d10": 15,
+    "win7_d10_bits": [2, 12, 28, 66, 68, 69, 80, 91, 92, 100, 102, 109, 112, 116, 118],
+    "refuted_d10": 59,
+    "capped": 0,
+    "candidate_nodes": 101848441,
+    "pilot_controls": 10,
+    "pilot_nodes": [3402, 3402, 3402, 3402, 3402, 3402, 3402, 3402, 3402, 3402],
+    "win_roots_d4_orbits": 15
+  },
+  "win_roots": [
+    {
+      "bit": 2,
+      "nodes": 1887907,
+      "root_hex": "00000000000000809102020000000004",
+      "d4_canonical_hex": "00000000000000809102020000000004",
+      "opponent_legal_replies": 60
+    },
+    {
+      "bit": 12,
+      "nodes": 1699411,
+      "root_hex": "00000000000000809102020000001000",
+      "d4_canonical_hex": "00000000000000809102020000001000",
+      "opponent_legal_replies": 58
+    },
+    {
+      "bit": 28,
+      "nodes": 1849335,
+      "root_hex": "00000000000000809102020010000000",
+      "d4_canonical_hex": "00000000000000809102020010000000",
+      "opponent_legal_replies": 62
+    },
+    {
+      "bit": 66,
+      "nodes": 1428442,
+      "root_hex": "00000000000000849102020000000000",
+      "d4_canonical_hex": "00000000000000849102020000000000",
+      "opponent_legal_replies": 59
+    },
+    {
+      "bit": 68,
+      "nodes": 1283700,
+      "root_hex": "00000000000000909102020000000000",
+      "d4_canonical_hex": "00000000000000909102020000000000",
+      "opponent_legal_replies": 58
+    },
+    {
+      "bit": 69,
+      "nodes": 1737558,
+      "root_hex": "00000000000000a09102020000000000",
+      "d4_canonical_hex": "00000000000000a09102020000000000",
+      "opponent_legal_replies": 55
+    },
+    {
+      "bit": 80,
+      "nodes": 1851654,
+      "root_hex": "00000000000100809102020000000000",
+      "d4_canonical_hex": "00000000000080811202010000000000",
+      "opponent_legal_replies": 55
+    },
+    {
+      "bit": 91,
+      "nodes": 1178026,
+      "root_hex": "00000000080000809102020000000000",
+      "d4_canonical_hex": "00000000000080811202000020000000",
+      "opponent_legal_replies": 55
+    },
+    {
+      "bit": 92,
+      "nodes": 1445828,
+      "root_hex": "00000000100000809102020000000000",
+      "d4_canonical_hex": "00000000000080811202000010000000",
+      "opponent_legal_replies": 56
+    },
+    {
+      "bit": 100,
+      "nodes": 2133713,
+      "root_hex": "00000010000000809102020000000000",
+      "d4_canonical_hex": "00000000000080811202000000100000",
+      "opponent_legal_replies": 60
+    },
+    {
+      "bit": 102,
+      "nodes": 6288355,
+      "root_hex": "00000040000000809102020000000000",
+      "d4_canonical_hex": "00000000000080811202000000040000",
+      "opponent_legal_replies": 66
+    },
+    {
+      "bit": 109,
+      "nodes": 2199589,
+      "root_hex": "00002000000000809102020000000000",
+      "d4_canonical_hex": "00000000000080811202000000000800",
+      "opponent_legal_replies": 60
+    },
+    {
+      "bit": 112,
+      "nodes": 3285680,
+      "root_hex": "00010000000000809102020000000000",
+      "d4_canonical_hex": "00000000000080811202000000000100",
+      "opponent_legal_replies": 64
+    },
+    {
+      "bit": 116,
+      "nodes": 2009277,
+      "root_hex": "00100000000000809102020000000000",
+      "d4_canonical_hex": "00000000000080811202000000000010",
+      "opponent_legal_replies": 65
+    },
+    {
+      "bit": 118,
+      "nodes": 456245,
+      "root_hex": "00400000000000809102020000000000",
+      "d4_canonical_hex": "00000000000080811202000000000004",
+      "opponent_legal_replies": 50
+    }
+  ],
+  "crosschecks": {
+    "v15_independent_engine": "class2-lane-cost74d-v15-crosscheck-20261115.jsonl: all 15 WIN7 bits loss=true on v15 (pilot 5949 x5), refuted anchors bits 25,103 loss=false",
+    "determinism_rerun": "class2-lane-cost74d-det-rerun-20261115.jsonl: bits 2,102,118 node-exact match vs sweep (1887907/6288355/456245)"
+  },
+  "checks": {
+    "all_74_claim_bits_present_in_order": true,
+    "all_74_bits_unique": true,
+    "all_batches_have_one_pilot": true,
+    "all_pilots_3402": true,
+    "all_candidate_verdicts_boolean": true,
+    "no_capped_candidates": true,
+    "win7_d10_roots_have_distinct_d4_orbits": true,
+    "d4_canonicalization_validated_against_69f_audit": true
+  },
+  "proof_boundary": {
+    "certificate_extraction": "not yet recorded on this main snapshot",
+    "independent_certificate_verification": "not yet recorded on this main snapshot",
+    "s6_frontier_contribution": 0,
+    "note": "WIN7-D10 is a raw depth-limited search verdict for a seven-stone root. It is not a certificate, does not close the six-stone parent by itself, and does not determine the empty-board winner. Fold into the canonical chain requires certificate extraction and independent verification first."
+  },
+  "interpretation": {
+    "win7_d10_is_not_a_certificate": true,
+    "refuted_d10_is_not_a_loss_proof": true,
+    "standard_11x11_empty_board": "UNKNOWN",
+    "two_stone_roots_49_60_and_59_60": "UNKNOWN",
+    "s2_59_60": "UNKNOWN",
+    "class_2": "UNKNOWN",
+    "class_4": "UNKNOWN"
+  }
+}

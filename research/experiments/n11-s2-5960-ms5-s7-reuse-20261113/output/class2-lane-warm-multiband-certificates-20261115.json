@@ -1,0 +1,1789 @@
+{
+ "schema": "class2-lane-warm-multiband-certificates-v1",
+ "generated_utc": "2026-11-14T19:30:00Z",
+ "lane": "class2-lane (11x11 class-2 long-term lane, warm multiband batch 2026-11-15)",
+ "baseline_frontier": "class-frontier-cost75b-recompute-20261115.json (1049 / 6798 / 535812 / 5068 / 399535)",
+ "candidate_ranking": "class2-lane-warm-candidate-ranking-20261115.json (coordinator: marginal_in_manifest greedy over uncertified WIN7 roots, my-lane bands only)",
+ "extraction": "warm_rebuild_pipeline_20261115.py (repo-verbatim class4_child1_cert_extractor_exact.ts, blind extraction, FBS=1<<20, fbt_drops=0, rows LC_ALL=C sorted-unique)",
+ "independent_verification": "scripts/verify_win7_certificate_bigint_independent.mjs re-run 2026-11-14 UTC on every certificate after extraction; all asserts passed (root stones/mobility vs legal_candidates.py, sub_roots==mobility all PASS, strategy/consumed union 0/0 both directions, terminal range within 13..17, rows sorted strictly ascending unique)",
+ "selection_note": "cost72 bit-52 was included because the cost-72 sweep owner explicitly deprioritized it (\"only when aiming at additional parent coverage\"); no 65h/67b/68c (parallel-lane bands) candidates were touched",
+ "records": [
+  {
+   "band": "class2-lane-cost71b",
+   "child_hex": "00000000000000803202000000400000",
+   "bit": 14,
+   "root_hex": "00000000000000803202000000404000",
+   "verdict": "WIN7",
+   "rows": 78999,
+   "extraction_nodes": 22433703,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (warm rebuild, 2026-11-15); sed -n 2p stdin recipe",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 63,
+    "independent_enumeration_legal": 63,
+    "match": true
+   },
+   "sub_roots_verified": 63,
+   "sub_roots_pass": 63,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "visited_states_across_subroots": 162374,
+   "winner_states": 105005,
+   "loser_states": 32130,
+   "loser_reply_edges": 148569,
+   "terminal_count": 25239,
+   "md5": "aaa837e0ef6e75890f2bfbaa6d2b4f52",
+   "sha256": "5b4cfab235e4c1ffff6683ef974566f15996ae7203b80a0bd2c21b72b31c3261",
+   "bytes": 2847673,
+   "extraction_ms": 160692,
+   "file": null,
+   "storage": {
+    "layout": "part1of2/part2of2 (line-boundary split; repo convention for >1.75 MB certificates)",
+    "part1": {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost71b-certificates/bit14-root-00000000000000803202000000404000.cert.part1of2",
+     "bytes": 1425717,
+     "md5": "ac37e6b1629aff4ea1eba81f2519092f"
+    },
+    "part2": {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost71b-certificates/bit14-root-00000000000000803202000000404000.cert.part2of2",
+     "bytes": 1421956,
+     "md5": "b546fea7cd6411ae36195e4b0ef73343"
+    },
+    "concat_md5_equals_whole": true
+   },
+   "root_absence_check": {
+    "method": "GitHub code search over yuubinnkyoku/kyouen-researches for the quoted root hex (2026-11-14 UTC, immediately after the certificate pushes of this batch; index lag means the new files are not yet searchable)",
+    "repo_search_hits": 1,
+    "hit_paths": [
+     "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost71b-sweep-20261115.json"
+    ],
+    "prior_certificate_hits": 0,
+    "note": "every hit is a sweep/inflight/audit record JSON or a log markdown listing the root; no certificate file predating this batch contained any of these root hexes"
+   },
+   "pushed": "2026-11-15"
+  },
+  {
+   "band": "class2-lane-cost65e",
+   "child_hex": "00000000000000809102000000800000",
+   "bit": 7,
+   "root_hex": "00000000000000809102000000800080",
+   "verdict": "WIN7",
+   "rows": 44561,
+   "extraction_nodes": 13454253,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (warm rebuild, 2026-11-15); sed -n 2p stdin recipe",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 56,
+    "independent_enumeration_legal": 56,
+    "match": true
+   },
+   "sub_roots_verified": 56,
+   "sub_roots_pass": 56,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "visited_states_across_subroots": 96376,
+   "winner_states": 62166,
+   "loser_states": 18579,
+   "loser_reply_edges": 86858,
+   "terminal_count": 15631,
+   "md5": "fcfe4eb170a8362794a8f8d475b97757",
+   "sha256": "90981af90ab51f90ea8f04235e0f6447102729f9505cfc3199f9e7d292f84d2e",
+   "bytes": 1611767,
+   "extraction_ms": 95775,
+   "file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65e-certificates/bit7-root-00000000000000809102000000800080.cert",
+   "storage": {
+    "layout": "single file"
+   },
+   "root_absence_check": {
+    "method": "GitHub code search over yuubinnkyoku/kyouen-researches for the quoted root hex (2026-11-14 UTC, immediately after the certificate pushes of this batch; index lag means the new files are not yet searchable)",
+    "repo_search_hits": 1,
+    "hit_paths": [
+     "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65e-sweep-20261114.json"
+    ],
+    "prior_certificate_hits": 0,
+    "note": "every hit is a sweep/inflight/audit record JSON or a log markdown listing the root; no certificate file predating this batch contained any of these root hexes"
+   },
+   "pushed": "2026-11-15"
+  },
+  {
+   "band": "class2-lane-cost65e",
+   "child_hex": "00000000000000809102000000800000",
+   "bit": 26,
+   "root_hex": "00000000000000809102000004800000",
+   "verdict": "WIN7",
+   "rows": 40340,
+   "extraction_nodes": 14445209,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (warm rebuild, 2026-11-15); sed -n 2p stdin recipe",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 50,
+    "independent_enumeration_legal": 50,
+    "match": true
+   },
+   "sub_roots_verified": 50,
+   "sub_roots_pass": 50,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "visited_states_across_subroots": 91153,
+   "winner_states": 59120,
+   "loser_states": 18436,
+   "loser_reply_edges": 84394,
+   "terminal_count": 13597,
+   "md5": "abcb6dcd6c2bb783cfaa9b62aab3684c",
+   "sha256": "70a8d5c2b4570c567be0c7c0a7a2133c19aac3facd63b7eb5a30d2a8b1efb61e",
+   "bytes": 1457674,
+   "extraction_ms": 100268,
+   "file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65e-certificates/bit26-root-00000000000000809102000004800000.cert",
+   "storage": {
+    "layout": "single file"
+   },
+   "root_absence_check": {
+    "method": "GitHub code search over yuubinnkyoku/kyouen-researches for the quoted root hex (2026-11-14 UTC, immediately after the certificate pushes of this batch; index lag means the new files are not yet searchable)",
+    "repo_search_hits": 1,
+    "hit_paths": [
+     "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65e-sweep-20261114.json"
+    ],
+    "prior_certificate_hits": 0,
+    "note": "every hit is a sweep/inflight/audit record JSON or a log markdown listing the root; no certificate file predating this batch contained any of these root hexes"
+   },
+   "pushed": "2026-11-15"
+  },
+  {
+   "band": "class2-lane-cost65e",
+   "child_hex": "00000000000000809102000000800000",
+   "bit": 29,
+   "root_hex": "00000000000000809102000020800000",
+   "verdict": "WIN7",
+   "rows": 32780,
+   "extraction_nodes": 7730471,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (warm rebuild, 2026-11-15); sed -n 2p stdin recipe",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 51,
+    "independent_enumeration_legal": 51,
+    "match": true
+   },
+   "sub_roots_verified": 51,
+   "sub_roots_pass": 51,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "visited_states_across_subroots": 73254,
+   "winner_states": 47454,
+   "loser_states": 14759,
+   "loser_reply_edges": 67023,
+   "terminal_count": 11041,
+   "md5": "fbea1400777759561c5150e63838c4c5",
+   "sha256": "47ef999edb3cb47350526a6a47bb9b83e854f118a2c6218410285f197ed19df4",
+   "bytes": 1186179,
+   "extraction_ms": 56994,
+   "file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65e-certificates/bit29-root-00000000000000809102000020800000.cert",
+   "storage": {
+    "layout": "single file"
+   },
+   "root_absence_check": {
+    "method": "GitHub code search over yuubinnkyoku/kyouen-researches for the quoted root hex (2026-11-14 UTC, immediately after the certificate pushes of this batch; index lag means the new files are not yet searchable)",
+    "repo_search_hits": 1,
+    "hit_paths": [
+     "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65e-sweep-20261114.json"
+    ],
+    "prior_certificate_hits": 0,
+    "note": "every hit is a sweep/inflight/audit record JSON or a log markdown listing the root; no certificate file predating this batch contained any of these root hexes"
+   },
+   "pushed": "2026-11-15"
+  },
+  {
+   "band": "class2-lane-cost65e",
+   "child_hex": "00000000000000809102000000800000",
+   "bit": 32,
+   "root_hex": "00000000000000809102000100800000",
+   "verdict": "WIN7",
+   "rows": 44577,
+   "extraction_nodes": 8035946,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (warm rebuild, 2026-11-15); sed -n 2p stdin recipe",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 56,
+    "independent_enumeration_legal": 56,
+    "match": true
+   },
+   "sub_roots_verified": 56,
+   "sub_roots_pass": 56,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "visited_states_across_subroots": 95799,
+   "winner_states": 61787,
+   "loser_states": 18111,
+   "loser_reply_edges": 85549,
+   "terminal_count": 15901,
+   "md5": "ab0940eb8dbbb1a409c1985341daf555",
+   "sha256": "c4f99a7d9ce5b2ca2921271697efa10931185d00ea2dc65e95e41be1e731efba",
+   "bytes": 1612164,
+   "extraction_ms": 63876,
+   "file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65e-certificates/bit32-root-00000000000000809102000100800000.cert",
+   "storage": {
+    "layout": "single file"
+   },
+   "root_absence_check": {
+    "method": "GitHub code search over yuubinnkyoku/kyouen-researches for the quoted root hex (2026-11-14 UTC, immediately after the certificate pushes of this batch; index lag means the new files are not yet searchable)",
+    "repo_search_hits": 1,
+    "hit_paths": [
+     "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65e-sweep-20261114.json"
+    ],
+    "prior_certificate_hits": 0,
+    "note": "every hit is a sweep/inflight/audit record JSON or a log markdown listing the root; no certificate file predating this batch contained any of these root hexes"
+   },
+   "pushed": "2026-11-15"
+  },
+  {
+   "band": "class2-lane-cost62a",
+   "child_hex": "00000000000000809102000001000000",
+   "bit": 32,
+   "root_hex": "00000000000000809102000101000000",
+   "verdict": "WIN7",
+   "rows": 29639,
+   "extraction_nodes": 11988338,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (warm rebuild, 2026-11-15); sed -n 2p stdin recipe",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 47,
+    "independent_enumeration_legal": 47,
+    "match": true
+   },
+   "sub_roots_verified": 47,
+   "sub_roots_pass": 47,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "visited_states_across_subroots": 63784,
+   "winner_states": 41300,
+   "loser_states": 12856,
+   "loser_reply_edges": 58135,
+   "terminal_count": 9628,
+   "md5": "5058d5c86521877c66ef73ce8d34bba3",
+   "sha256": "d47fd6e0fda6eb5a5f006a0a5179e5bf359a8ec5507c7689a832e553893174d0",
+   "bytes": 1069740,
+   "extraction_ms": 81784,
+   "file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost62a-certificates/bit32-root-00000000000000809102000101000000.cert",
+   "storage": {
+    "layout": "single file"
+   },
+   "root_absence_check": {
+    "method": "GitHub code search over yuubinnkyoku/kyouen-researches for the quoted root hex (2026-11-14 UTC, immediately after the certificate pushes of this batch; index lag means the new files are not yet searchable)",
+    "repo_search_hits": 2,
+    "hit_paths": [
+     "research/log/2026-11-14-n11-class2-cost62a-partial-raw-audit.md",
+     "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost62a-sweep-20261114.json"
+    ],
+    "prior_certificate_hits": 0,
+    "note": "every hit is a sweep/inflight/audit record JSON or a log markdown listing the root; no certificate file predating this batch contained any of these root hexes"
+   },
+   "pushed": "2026-11-15"
+  },
+  {
+   "band": "class2-lane-cost65e",
+   "child_hex": "00000000000000809102000000800000",
+   "bit": 33,
+   "root_hex": "00000000000000809102000200800000",
+   "verdict": "WIN7",
+   "rows": 40001,
+   "extraction_nodes": 12417207,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (warm rebuild, 2026-11-15); sed -n 2p stdin recipe",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 51,
+    "independent_enumeration_legal": 51,
+    "match": true
+   },
+   "sub_roots_verified": 51,
+   "sub_roots_pass": 51,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "visited_states_across_subroots": 86055,
+   "winner_states": 55514,
+   "loser_states": 16149,
+   "loser_reply_edges": 77513,
+   "terminal_count": 14392,
+   "md5": "3544879232fe3988d2d34355403f0a93",
+   "sha256": "d20c5f42883a7c3db7d5bf06068c2bbefcf491e0d65f7ba7e61154668c6385ed",
+   "bytes": 1446739,
+   "extraction_ms": 92191,
+   "file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65e-certificates/bit33-root-00000000000000809102000200800000.cert",
+   "storage": {
+    "layout": "single file"
+   },
+   "root_absence_check": {
+    "method": "GitHub code search over yuubinnkyoku/kyouen-researches for the quoted root hex (2026-11-14 UTC, immediately after the certificate pushes of this batch; index lag means the new files are not yet searchable)",
+    "repo_search_hits": 1,
+    "hit_paths": [
+     "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65e-sweep-20261114.json"
+    ],
+    "prior_certificate_hits": 0,
+    "note": "every hit is a sweep/inflight/audit record JSON or a log markdown listing the root; no certificate file predating this batch contained any of these root hexes"
+   },
+   "pushed": "2026-11-15"
+  },
+  {
+   "band": "class2-lane-cost63a",
+   "child_hex": "00000000000000809102000800000000",
+   "bit": 2,
+   "root_hex": "00000000000000809102000800000004",
+   "verdict": "WIN7",
+   "rows": 60177,
+   "extraction_nodes": 18197877,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (warm rebuild, 2026-11-15); sed -n 2p stdin recipe",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 58,
+    "independent_enumeration_legal": 58,
+    "match": true
+   },
+   "sub_roots_verified": 58,
+   "sub_roots_pass": 58,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "visited_states_across_subroots": 127848,
+   "winner_states": 82427,
+   "loser_states": 24381,
+   "loser_reply_edges": 115796,
+   "terminal_count": 21040,
+   "md5": "80b6087ef5bb38e1cbeaed1d7d6f0955",
+   "sha256": "a10a767a6dc041ff6f591f577784d724a95797ecdaa5bfdb4367e1c620ab75f4",
+   "bytes": 2182786,
+   "extraction_ms": 123496,
+   "file": null,
+   "storage": {
+    "layout": "part1of2/part2of2 (line-boundary split; repo convention for >1.75 MB certificates)",
+    "part1": {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost63a-certificates/bit2-root-00000000000000809102000800000004.cert.part1of2",
+     "bytes": 1092174,
+     "md5": "2fff8bc487deaef5fe162c251ae69aa7"
+    },
+    "part2": {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost63a-certificates/bit2-root-00000000000000809102000800000004.cert.part2of2",
+     "bytes": 1090612,
+     "md5": "f86f527654c8a43ca00d240f0cc2b0c0"
+    },
+    "concat_md5_equals_whole": true
+   },
+   "root_absence_check": {
+    "method": "GitHub code search over yuubinnkyoku/kyouen-researches for the quoted root hex (2026-11-14 UTC, immediately after the certificate pushes of this batch; index lag means the new files are not yet searchable)",
+    "repo_search_hits": 3,
+    "hit_paths": [
+     "research/log/2026-11-14-n11-class2-cost63a-batch1-independent-audit.md",
+     "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost63a-sweep-20261114.json",
+     "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost63a-batch1-independent-audit-20261114.json"
+    ],
+    "prior_certificate_hits": 0,
+    "note": "every hit is a sweep/inflight/audit record JSON or a log markdown listing the root; no certificate file predating this batch contained any of these root hexes"
+   },
+   "pushed": "2026-11-15"
+  },
+  {
+   "band": "class2-lane-cost63a",
+   "child_hex": "00000000000000809102000800000000",
+   "bit": 15,
+   "root_hex": "00000000000000809102000800008000",
+   "verdict": "WIN7",
+   "rows": 43426,
+   "extraction_nodes": 14954208,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (warm rebuild, 2026-11-15); sed -n 2p stdin recipe",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 50,
+    "independent_enumeration_legal": 50,
+    "match": true
+   },
+   "sub_roots_verified": 50,
+   "sub_roots_pass": 50,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "visited_states_across_subroots": 92160,
+   "winner_states": 59654,
+   "loser_states": 17912,
+   "loser_reply_edges": 84392,
+   "terminal_count": 14594,
+   "md5": "d0e96b8a3c320a1b389a79e44eb74271",
+   "sha256": "b53e2b4b445eaf212f7cab60723f0c2401ad19971f35081918f835d66e97c650",
+   "bytes": 1568212,
+   "extraction_ms": 107767,
+   "file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost63a-certificates/bit15-root-00000000000000809102000800008000.cert",
+   "storage": {
+    "layout": "single file"
+   },
+   "root_absence_check": {
+    "method": "GitHub code search over yuubinnkyoku/kyouen-researches for the quoted root hex (2026-11-14 UTC, immediately after the certificate pushes of this batch; index lag means the new files are not yet searchable)",
+    "repo_search_hits": 1,
+    "hit_paths": [
+     "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost63a-sweep-20261114.json"
+    ],
+    "prior_certificate_hits": 0,
+    "note": "every hit is a sweep/inflight/audit record JSON or a log markdown listing the root; no certificate file predating this batch contained any of these root hexes"
+   },
+   "pushed": "2026-11-15"
+  },
+  {
+   "band": "class2-lane-cost63a",
+   "child_hex": "00000000000000809102000800000000",
+   "bit": 28,
+   "root_hex": "00000000000000809102000810000000",
+   "verdict": "WIN7",
+   "rows": 48512,
+   "extraction_nodes": 16846479,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (warm rebuild, 2026-11-15); sed -n 2p stdin recipe",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 51,
+    "independent_enumeration_legal": 51,
+    "match": true
+   },
+   "sub_roots_verified": 51,
+   "sub_roots_pass": 51,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "visited_states_across_subroots": 103597,
+   "winner_states": 66761,
+   "loser_states": 19712,
+   "loser_reply_edges": 93572,
+   "terminal_count": 17124,
+   "md5": "0ed30a903e83bad467ae45bf4f600c46",
+   "sha256": "197590df091ea4d070d855e73170359fb15939d1e163b436ce6bb66ad88bad4b",
+   "bytes": 1751932,
+   "extraction_ms": 118806,
+   "file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost63a-certificates/bit28-root-00000000000000809102000810000000.cert",
+   "storage": {
+    "layout": "single file"
+   },
+   "root_absence_check": {
+    "method": "GitHub code search over yuubinnkyoku/kyouen-researches for the quoted root hex (2026-11-14 UTC, immediately after the certificate pushes of this batch; index lag means the new files are not yet searchable)",
+    "repo_search_hits": 1,
+    "hit_paths": [
+     "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost63a-sweep-20261114.json"
+    ],
+    "prior_certificate_hits": 0,
+    "note": "every hit is a sweep/inflight/audit record JSON or a log markdown listing the root; no certificate file predating this batch contained any of these root hexes"
+   },
+   "pushed": "2026-11-15"
+  },
+  {
+   "band": "class2-lane-cost65e",
+   "child_hex": "00000000000000809102000000800000",
+   "bit": 42,
+   "root_hex": "00000000000000809102040000800000",
+   "verdict": "WIN7",
+   "rows": 40642,
+   "extraction_nodes": 13205262,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (warm rebuild, 2026-11-15); sed -n 2p stdin recipe",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 52,
+    "independent_enumeration_legal": 52,
+    "match": true
+   },
+   "sub_roots_verified": 52,
+   "sub_roots_pass": 52,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "visited_states_across_subroots": 89800,
+   "winner_states": 58029,
+   "loser_states": 17968,
+   "loser_reply_edges": 81537,
+   "terminal_count": 13803,
+   "md5": "3fbe1e5709a7126e756f05b30542c5a0",
+   "sha256": "d25eafad430237ca94aad68704bc7b4a0303c014046f0cb3d5ef80aa6c82aac0",
+   "bytes": 1471328,
+   "extraction_ms": 95283,
+   "file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65e-certificates/bit42-root-00000000000000809102040000800000.cert",
+   "storage": {
+    "layout": "single file"
+   },
+   "root_absence_check": {
+    "method": "GitHub code search over yuubinnkyoku/kyouen-researches for the quoted root hex (2026-11-14 UTC, immediately after the certificate pushes of this batch; index lag means the new files are not yet searchable)",
+    "repo_search_hits": 1,
+    "hit_paths": [
+     "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65e-sweep-20261114.json"
+    ],
+    "prior_certificate_hits": 0,
+    "note": "every hit is a sweep/inflight/audit record JSON or a log markdown listing the root; no certificate file predating this batch contained any of these root hexes"
+   },
+   "pushed": "2026-11-15"
+  },
+  {
+   "band": "class2-lane-cost62a",
+   "child_hex": "00000000000000809102000001000000",
+   "bit": 66,
+   "root_hex": "00000000000000849102000001000000",
+   "verdict": "WIN7",
+   "rows": 26807,
+   "extraction_nodes": 5521716,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (warm rebuild, 2026-11-15); sed -n 2p stdin recipe",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 47,
+    "independent_enumeration_legal": 47,
+    "match": true
+   },
+   "sub_roots_verified": 47,
+   "sub_roots_pass": 47,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "visited_states_across_subroots": 57516,
+   "winner_states": 37213,
+   "loser_states": 11440,
+   "loser_reply_edges": 52057,
+   "terminal_count": 8863,
+   "md5": "cfbdee3082aa4fccd2c496fc2a4039a7",
+   "sha256": "b7edf59c0da300b67894158a0b42211e9c523d7d56bf05ee3b170c700887bca3",
+   "bytes": 967543,
+   "extraction_ms": 41663,
+   "file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost62a-certificates/bit66-root-00000000000000849102000001000000.cert",
+   "storage": {
+    "layout": "single file"
+   },
+   "root_absence_check": {
+    "method": "GitHub code search over yuubinnkyoku/kyouen-researches for the quoted root hex (2026-11-14 UTC, immediately after the certificate pushes of this batch; index lag means the new files are not yet searchable)",
+    "repo_search_hits": 2,
+    "hit_paths": [
+     "research/log/2026-11-14-n11-class2-cost62a-partial-raw-audit.md",
+     "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost62a-sweep-20261114.json"
+    ],
+    "prior_certificate_hits": 0,
+    "note": "every hit is a sweep/inflight/audit record JSON or a log markdown listing the root; no certificate file predating this batch contained any of these root hexes"
+   },
+   "pushed": "2026-11-15"
+  },
+  {
+   "band": "class2-lane-cost62a",
+   "child_hex": "00000000000000809102000001000000",
+   "bit": 86,
+   "root_hex": "00000000004000809102000001000000",
+   "verdict": "WIN7",
+   "rows": 44514,
+   "extraction_nodes": 20450286,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (warm rebuild, 2026-11-15); sed -n 2p stdin recipe",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 51,
+    "independent_enumeration_legal": 51,
+    "match": true
+   },
+   "sub_roots_verified": 51,
+   "sub_roots_pass": 51,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "visited_states_across_subroots": 92394,
+   "winner_states": 59836,
+   "loser_states": 18653,
+   "loser_reply_edges": 84492,
+   "terminal_count": 13905,
+   "md5": "e1d4b692fbee836a9982ea509fdb8edb",
+   "sha256": "a0b747405273a305771ef03c4932f82c192d8fd0f65268e95a8174a995503860",
+   "bytes": 1609548,
+   "extraction_ms": 145591,
+   "file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost62a-certificates/bit86-root-00000000004000809102000001000000.cert",
+   "storage": {
+    "layout": "single file"
+   },
+   "root_absence_check": {
+    "method": "GitHub code search over yuubinnkyoku/kyouen-researches for the quoted root hex (2026-11-14 UTC, immediately after the certificate pushes of this batch; index lag means the new files are not yet searchable)",
+    "repo_search_hits": 1,
+    "hit_paths": [
+     "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost62a-sweep-20261114.json"
+    ],
+    "prior_certificate_hits": 0,
+    "note": "every hit is a sweep/inflight/audit record JSON or a log markdown listing the root; no certificate file predating this batch contained any of these root hexes"
+   },
+   "pushed": "2026-11-15"
+  },
+  {
+   "band": "class2-lane-cost65e",
+   "child_hex": "00000000000000809102000000800000",
+   "bit": 94,
+   "root_hex": "00000000400000809102000000800000",
+   "verdict": "WIN7",
+   "rows": 56582,
+   "extraction_nodes": 17632164,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (warm rebuild, 2026-11-15); sed -n 2p stdin recipe",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 56,
+    "independent_enumeration_legal": 56,
+    "match": true
+   },
+   "sub_roots_verified": 56,
+   "sub_roots_pass": 56,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "visited_states_across_subroots": 120856,
+   "winner_states": 77932,
+   "loser_states": 22932,
+   "loser_reply_edges": 108822,
+   "terminal_count": 19992,
+   "md5": "6864b433657e3d5f374b23666bf7771a",
+   "sha256": "a18bc93518dfa1f14f4f13506a8ebc8af92926a09407073657e65a615823e732",
+   "bytes": 2048632,
+   "extraction_ms": 126970,
+   "file": null,
+   "storage": {
+    "layout": "part1of2/part2of2 (line-boundary split; repo convention for >1.75 MB certificates)",
+    "part1": {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65e-certificates/bit94-root-00000000400000809102000000800000.cert.part1of2",
+     "bytes": 1026236,
+     "md5": "605a5c254f3563583b73ee976d9def9d"
+    },
+    "part2": {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65e-certificates/bit94-root-00000000400000809102000000800000.cert.part2of2",
+     "bytes": 1022396,
+     "md5": "89d01647793b2c655a545ed4d48eb3e0"
+    },
+    "concat_md5_equals_whole": true
+   },
+   "root_absence_check": {
+    "method": "GitHub code search over yuubinnkyoku/kyouen-researches for the quoted root hex (2026-11-14 UTC, immediately after the certificate pushes of this batch; index lag means the new files are not yet searchable)",
+    "repo_search_hits": 1,
+    "hit_paths": [
+     "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65e-sweep-20261114.json"
+    ],
+    "prior_certificate_hits": 0,
+    "note": "every hit is a sweep/inflight/audit record JSON or a log markdown listing the root; no certificate file predating this batch contained any of these root hexes"
+   },
+   "pushed": "2026-11-15"
+  },
+  {
+   "band": "class2-lane-cost62a",
+   "child_hex": "00000000000000809102000001000000",
+   "bit": 95,
+   "root_hex": "00000000800000809102000001000000",
+   "verdict": "WIN7",
+   "rows": 34952,
+   "extraction_nodes": 13071050,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (warm rebuild, 2026-11-15); sed -n 2p stdin recipe",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 51,
+    "independent_enumeration_legal": 51,
+    "match": true
+   },
+   "sub_roots_verified": 51,
+   "sub_roots_pass": 51,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "visited_states_across_subroots": 73479,
+   "winner_states": 47747,
+   "loser_states": 14965,
+   "loser_reply_edges": 67885,
+   "terminal_count": 10767,
+   "md5": "3dfe06026872739465278b347320222d",
+   "sha256": "4bca004600c8cca8a34177b3e94675e68b554962d1c182146d922b624707b592",
+   "bytes": 1261381,
+   "extraction_ms": 99014,
+   "file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost62a-certificates/bit95-root-00000000800000809102000001000000.cert",
+   "storage": {
+    "layout": "single file"
+   },
+   "root_absence_check": {
+    "method": "GitHub code search over yuubinnkyoku/kyouen-researches for the quoted root hex (2026-11-14 UTC, immediately after the certificate pushes of this batch; index lag means the new files are not yet searchable)",
+    "repo_search_hits": 1,
+    "hit_paths": [
+     "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost62a-sweep-20261114.json"
+    ],
+    "prior_certificate_hits": 0,
+    "note": "every hit is a sweep/inflight/audit record JSON or a log markdown listing the root; no certificate file predating this batch contained any of these root hexes"
+   },
+   "pushed": "2026-11-15"
+  },
+  {
+   "band": "class2-lane-cost63a",
+   "child_hex": "00000000000000809102000800000000",
+   "bit": 100,
+   "root_hex": "00000010000000809102000800000000",
+   "verdict": "WIN7",
+   "rows": 49833,
+   "extraction_nodes": 18254873,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (warm rebuild, 2026-11-15); sed -n 2p stdin recipe",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 53,
+    "independent_enumeration_legal": 53,
+    "match": true
+   },
+   "sub_roots_verified": 53,
+   "sub_roots_pass": 53,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "visited_states_across_subroots": 110715,
+   "winner_states": 71471,
+   "loser_states": 21628,
+   "loser_reply_edges": 99024,
+   "terminal_count": 17616,
+   "md5": "e1c55f676106b579e807d7d8519c0550",
+   "sha256": "0ff835ce4ded4f2f800a51f5da371303d7650c8766521c52808ccc80ed2f132a",
+   "bytes": 1800180,
+   "extraction_ms": 131828,
+   "file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost63a-certificates/bit100-root-00000010000000809102000800000000.cert",
+   "storage": {
+    "layout": "single file"
+   },
+   "root_absence_check": {
+    "method": "GitHub code search over yuubinnkyoku/kyouen-researches for the quoted root hex (2026-11-14 UTC, immediately after the certificate pushes of this batch; index lag means the new files are not yet searchable)",
+    "repo_search_hits": 1,
+    "hit_paths": [
+     "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost63a-sweep-20261114.json"
+    ],
+    "prior_certificate_hits": 0,
+    "note": "every hit is a sweep/inflight/audit record JSON or a log markdown listing the root; no certificate file predating this batch contained any of these root hexes"
+   },
+   "pushed": "2026-11-15"
+  },
+  {
+   "band": "class2-lane-cost64b",
+   "child_hex": "00000000000000803202000000100000",
+   "bit": 102,
+   "root_hex": "00000040000000803202000000100000",
+   "verdict": "WIN7",
+   "rows": 45651,
+   "extraction_nodes": 8454604,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (warm rebuild, 2026-11-15); sed -n 2p stdin recipe",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 57,
+    "independent_enumeration_legal": 57,
+    "match": true
+   },
+   "sub_roots_verified": 57,
+   "sub_roots_pass": 57,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "visited_states_across_subroots": 94532,
+   "winner_states": 61064,
+   "loser_states": 19661,
+   "loser_reply_edges": 86905,
+   "terminal_count": 13807,
+   "md5": "0409cadf2f7ee6969f98a56bced28901",
+   "sha256": "afb95228da099d09be2c814474a02b4bf26371fa62c725fac5eb8413edd03149",
+   "bytes": 1644841,
+   "extraction_ms": 69998,
+   "file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost64b-certificates/bit102-root-00000040000000803202000000100000.cert",
+   "storage": {
+    "layout": "single file"
+   },
+   "root_absence_check": {
+    "method": "GitHub code search over yuubinnkyoku/kyouen-researches for the quoted root hex (2026-11-14 UTC, immediately after the certificate pushes of this batch; index lag means the new files are not yet searchable)",
+    "repo_search_hits": 1,
+    "hit_paths": [
+     "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost64b-sweep-20261114.json"
+    ],
+    "prior_certificate_hits": 0,
+    "note": "every hit is a sweep/inflight/audit record JSON or a log markdown listing the root; no certificate file predating this batch contained any of these root hexes"
+   },
+   "pushed": "2026-11-15"
+  },
+  {
+   "band": "class2-lane-cost61e",
+   "child_hex": "00000000000000803202000040000000",
+   "bit": 102,
+   "root_hex": "00000040000000803202000040000000",
+   "verdict": "WIN7",
+   "rows": 43648,
+   "extraction_nodes": 9442055,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (warm rebuild, 2026-11-15); sed -n 2p stdin recipe",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 55,
+    "independent_enumeration_legal": 55,
+    "match": true
+   },
+   "sub_roots_verified": 55,
+   "sub_roots_pass": 55,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "visited_states_across_subroots": 94980,
+   "winner_states": 61494,
+   "loser_states": 18301,
+   "loser_reply_edges": 85349,
+   "terminal_count": 15185,
+   "md5": "250487a518bea8d84ca8b09695d66781",
+   "sha256": "dfddf5c387ed2abd22b92b18c2c96aaef794091fa052a6a575e54297cea83639",
+   "bytes": 1575506,
+   "extraction_ms": 77429,
+   "file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost61e-certificates/bit102-root-00000040000000803202000040000000.cert",
+   "storage": {
+    "layout": "single file"
+   },
+   "root_absence_check": {
+    "method": "GitHub code search over yuubinnkyoku/kyouen-researches for the quoted root hex (2026-11-14 UTC, immediately after the certificate pushes of this batch; index lag means the new files are not yet searchable)",
+    "repo_search_hits": 2,
+    "hit_paths": [
+     "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost61e-inflight-20261114.json",
+     "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost61e-sweep-20261114.json"
+    ],
+    "prior_certificate_hits": 0,
+    "note": "every hit is a sweep/inflight/audit record JSON or a log markdown listing the root; no certificate file predating this batch contained any of these root hexes"
+   },
+   "pushed": "2026-11-15"
+  },
+  {
+   "band": "class2-lane-cost61f",
+   "child_hex": "00000000000000803202000080000000",
+   "bit": 102,
+   "root_hex": "00000040000000803202000080000000",
+   "verdict": "WIN7",
+   "rows": 58545,
+   "extraction_nodes": 24707124,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (warm rebuild, 2026-11-15); sed -n 2p stdin recipe",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 55,
+    "independent_enumeration_legal": 55,
+    "match": true
+   },
+   "sub_roots_verified": 55,
+   "sub_roots_pass": 55,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "visited_states_across_subroots": 125255,
+   "winner_states": 81477,
+   "loser_states": 25416,
+   "loser_reply_edges": 116824,
+   "terminal_count": 18362,
+   "md5": "3e38704c8b2f9f00fbc7753e0b935fd0",
+   "sha256": "03acc77ad9a5f750e8c2f305ea94759ea0dc9c02a4c0bc3a9c84b2f03597cd46",
+   "bytes": 2112735,
+   "extraction_ms": 178926,
+   "file": null,
+   "storage": {
+    "layout": "part1of2/part2of2 (line-boundary split; repo convention for >1.75 MB certificates)",
+    "part1": {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost61f-certificates/bit102-root-00000040000000803202000080000000.cert.part1of2",
+     "bytes": 1057912,
+     "md5": "55768ff2dabe4adb3d07f2c80073730d"
+    },
+    "part2": {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost61f-certificates/bit102-root-00000040000000803202000080000000.cert.part2of2",
+     "bytes": 1054823,
+     "md5": "f4ea90eef699287f6ff88ffc258df16e"
+    },
+    "concat_md5_equals_whole": true
+   },
+   "root_absence_check": {
+    "method": "GitHub code search over yuubinnkyoku/kyouen-researches for the quoted root hex (2026-11-14 UTC, immediately after the certificate pushes of this batch; index lag means the new files are not yet searchable)",
+    "repo_search_hits": 2,
+    "hit_paths": [
+     "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost61f-inflight-20261114.json",
+     "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost61f-sweep-20261114.json"
+    ],
+    "prior_certificate_hits": 0,
+    "note": "every hit is a sweep/inflight/audit record JSON or a log markdown listing the root; no certificate file predating this batch contained any of these root hexes"
+   },
+   "pushed": "2026-11-15"
+  },
+  {
+   "band": "class2-lane-cost65e",
+   "child_hex": "00000000000000809102000000800000",
+   "bit": 105,
+   "root_hex": "00000200000000809102000000800000",
+   "verdict": "WIN7",
+   "rows": 44511,
+   "extraction_nodes": 9471852,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (warm rebuild, 2026-11-15); sed -n 2p stdin recipe",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 56,
+    "independent_enumeration_legal": 56,
+    "match": true
+   },
+   "sub_roots_verified": 56,
+   "sub_roots_pass": 56,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "visited_states_across_subroots": 98974,
+   "winner_states": 63716,
+   "loser_states": 18372,
+   "loser_reply_edges": 87752,
+   "terminal_count": 16886,
+   "md5": "cf309a1d7a9daced758252553f7afdb5",
+   "sha256": "eaeb66f5d4220749316db8f1570dd43175d6fa60c49b635ddadb1e1106682cc4",
+   "bytes": 1607417,
+   "extraction_ms": 75404,
+   "file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65e-certificates/bit105-root-00000200000000809102000000800000.cert",
+   "storage": {
+    "layout": "single file"
+   },
+   "root_absence_check": {
+    "method": "GitHub code search over yuubinnkyoku/kyouen-researches for the quoted root hex (2026-11-14 UTC, immediately after the certificate pushes of this batch; index lag means the new files are not yet searchable)",
+    "repo_search_hits": 1,
+    "hit_paths": [
+     "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65e-sweep-20261114.json"
+    ],
+    "prior_certificate_hits": 0,
+    "note": "every hit is a sweep/inflight/audit record JSON or a log markdown listing the root; no certificate file predating this batch contained any of these root hexes"
+   },
+   "pushed": "2026-11-15"
+  },
+  {
+   "band": "class2-lane-cost62a",
+   "child_hex": "00000000000000809102000001000000",
+   "bit": 105,
+   "root_hex": "00000200000000809102000001000000",
+   "verdict": "WIN7",
+   "rows": 43256,
+   "extraction_nodes": 21218337,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (warm rebuild, 2026-11-15); sed -n 2p stdin recipe",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 50,
+    "independent_enumeration_legal": 50,
+    "match": true
+   },
+   "sub_roots_verified": 50,
+   "sub_roots_pass": 50,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "visited_states_across_subroots": 91967,
+   "winner_states": 59392,
+   "loser_states": 17985,
+   "loser_reply_edges": 83611,
+   "terminal_count": 14590,
+   "md5": "5e27ca7c232ad4997881888459cd55ff",
+   "sha256": "0afcfd185249d01a76a099b856321943fb73a8fc30569a49d29528b19b81aa6c",
+   "bytes": 1558827,
+   "extraction_ms": 137203,
+   "file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost62a-certificates/bit105-root-00000200000000809102000001000000.cert",
+   "storage": {
+    "layout": "single file"
+   },
+   "root_absence_check": {
+    "method": "GitHub code search over yuubinnkyoku/kyouen-researches for the quoted root hex (2026-11-14 UTC, immediately after the certificate pushes of this batch; index lag means the new files are not yet searchable)",
+    "repo_search_hits": 1,
+    "hit_paths": [
+     "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost62a-sweep-20261114.json"
+    ],
+    "prior_certificate_hits": 0,
+    "note": "every hit is a sweep/inflight/audit record JSON or a log markdown listing the root; no certificate file predating this batch contained any of these root hexes"
+   },
+   "pushed": "2026-11-15"
+  },
+  {
+   "band": "class2-lane-cost65e",
+   "child_hex": "00000000000000809102000000800000",
+   "bit": 106,
+   "root_hex": "00000400000000809102000000800000",
+   "verdict": "WIN7",
+   "rows": 58688,
+   "extraction_nodes": 15922365,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (warm rebuild, 2026-11-15); sed -n 2p stdin recipe",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 59,
+    "independent_enumeration_legal": 59,
+    "match": true
+   },
+   "sub_roots_verified": 59,
+   "sub_roots_pass": 59,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "visited_states_across_subroots": 126983,
+   "winner_states": 81796,
+   "loser_states": 24307,
+   "loser_reply_edges": 114030,
+   "terminal_count": 20880,
+   "md5": "0e8e6009ea9b0134448da21de20d72e5",
+   "sha256": "2b092b0c46e521554fc5e16d939819b3e667d76baa9f6580277e9625b3297e36",
+   "bytes": 2121779,
+   "extraction_ms": 125622,
+   "file": null,
+   "storage": {
+    "layout": "part1of2/part2of2 (line-boundary split; repo convention for >1.75 MB certificates)",
+    "part1": {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65e-certificates/bit106-root-00000400000000809102000000800000.cert.part1of2",
+     "bytes": 1062939,
+     "md5": "b9a7694b6638f8879e7e1e9c7d6f91f9"
+    },
+    "part2": {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65e-certificates/bit106-root-00000400000000809102000000800000.cert.part2of2",
+     "bytes": 1058840,
+     "md5": "e020392f427280009767956d18cecfb6"
+    },
+    "concat_md5_equals_whole": true
+   },
+   "root_absence_check": {
+    "method": "GitHub code search over yuubinnkyoku/kyouen-researches for the quoted root hex (2026-11-14 UTC, immediately after the certificate pushes of this batch; index lag means the new files are not yet searchable)",
+    "repo_search_hits": 1,
+    "hit_paths": [
+     "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65e-sweep-20261114.json"
+    ],
+    "prior_certificate_hits": 0,
+    "note": "every hit is a sweep/inflight/audit record JSON or a log markdown listing the root; no certificate file predating this batch contained any of these root hexes"
+   },
+   "pushed": "2026-11-15"
+  },
+  {
+   "band": "class2-lane-cost62a",
+   "child_hex": "00000000000000809102000001000000",
+   "bit": 109,
+   "root_hex": "00002000000000809102000001000000",
+   "verdict": "WIN7",
+   "rows": 33983,
+   "extraction_nodes": 11482358,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (warm rebuild, 2026-11-15); sed -n 2p stdin recipe",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 51,
+    "independent_enumeration_legal": 51,
+    "match": true
+   },
+   "sub_roots_verified": 51,
+   "sub_roots_pass": 51,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "visited_states_across_subroots": 77030,
+   "winner_states": 49696,
+   "loser_states": 14954,
+   "loser_reply_edges": 69013,
+   "terminal_count": 12380,
+   "md5": "a1c019c9c36c48704a2971135b823efc",
+   "sha256": "c24f64494773fd3971b9ec5da74811f5f217f94d8a6efd1927e1cd06a2ce13f0",
+   "bytes": 1226545,
+   "extraction_ms": 86694,
+   "file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost62a-certificates/bit109-root-00002000000000809102000001000000.cert",
+   "storage": {
+    "layout": "single file"
+   },
+   "root_absence_check": {
+    "method": "GitHub code search over yuubinnkyoku/kyouen-researches for the quoted root hex (2026-11-14 UTC, immediately after the certificate pushes of this batch; index lag means the new files are not yet searchable)",
+    "repo_search_hits": 1,
+    "hit_paths": [
+     "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost62a-sweep-20261114.json"
+    ],
+    "prior_certificate_hits": 0,
+    "note": "every hit is a sweep/inflight/audit record JSON or a log markdown listing the root; no certificate file predating this batch contained any of these root hexes"
+   },
+   "pushed": "2026-11-15"
+  },
+  {
+   "band": "class2-lane-cost65e",
+   "child_hex": "00000000000000809102000000800000",
+   "bit": 111,
+   "root_hex": "00008000000000809102000000800000",
+   "verdict": "WIN7",
+   "rows": 33530,
+   "extraction_nodes": 11645089,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (warm rebuild, 2026-11-15); sed -n 2p stdin recipe",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 52,
+    "independent_enumeration_legal": 52,
+    "match": true
+   },
+   "sub_roots_verified": 52,
+   "sub_roots_pass": 52,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "visited_states_across_subroots": 79740,
+   "winner_states": 51538,
+   "loser_states": 15702,
+   "loser_reply_edges": 71450,
+   "terminal_count": 12500,
+   "md5": "1f1a09d43fc51f1be4b1b0c52b7254f8",
+   "sha256": "cab22ec1aac68e31bc2473b298410b3c9b1f0676159c843bcc4f8cd9001fdc32",
+   "bytes": 1208790,
+   "extraction_ms": 94692,
+   "file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65e-certificates/bit111-root-00008000000000809102000000800000.cert",
+   "storage": {
+    "layout": "single file"
+   },
+   "root_absence_check": {
+    "method": "GitHub code search over yuubinnkyoku/kyouen-researches for the quoted root hex (2026-11-14 UTC, immediately after the certificate pushes of this batch; index lag means the new files are not yet searchable)",
+    "repo_search_hits": 1,
+    "hit_paths": [
+     "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65e-sweep-20261114.json"
+    ],
+    "prior_certificate_hits": 0,
+    "note": "every hit is a sweep/inflight/audit record JSON or a log markdown listing the root; no certificate file predating this batch contained any of these root hexes"
+   },
+   "pushed": "2026-11-15"
+  },
+  {
+   "band": "class2-lane-cost62a",
+   "child_hex": "00000000000000809102000001000000",
+   "bit": 112,
+   "root_hex": "00010000000000809102000001000000",
+   "verdict": "WIN7",
+   "rows": 30852,
+   "extraction_nodes": 7628170,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (warm rebuild, 2026-11-15); sed -n 2p stdin recipe",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 52,
+    "independent_enumeration_legal": 52,
+    "match": true
+   },
+   "sub_roots_verified": 52,
+   "sub_roots_pass": 52,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "visited_states_across_subroots": 67342,
+   "winner_states": 43353,
+   "loser_states": 12964,
+   "loser_reply_edges": 59061,
+   "terminal_count": 11025,
+   "md5": "40f11793e3651eb3aa1c656430358fb8",
+   "sha256": "9369ff956ff9ac376590ef7e6b350a5239520648e20f6a95d56ecc93c29665e7",
+   "bytes": 1113148,
+   "extraction_ms": 36518,
+   "file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost62a-certificates/bit112-root-00010000000000809102000001000000.cert",
+   "storage": {
+    "layout": "single file"
+   },
+   "root_absence_check": {
+    "method": "GitHub code search over yuubinnkyoku/kyouen-researches for the quoted root hex (2026-11-14 UTC, immediately after the certificate pushes of this batch; index lag means the new files are not yet searchable)",
+    "repo_search_hits": 1,
+    "hit_paths": [
+     "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost62a-sweep-20261114.json"
+    ],
+    "prior_certificate_hits": 0,
+    "note": "every hit is a sweep/inflight/audit record JSON or a log markdown listing the root; no certificate file predating this batch contained any of these root hexes"
+   },
+   "pushed": "2026-11-15"
+  },
+  {
+   "band": "class2-lane-cost65e",
+   "child_hex": "00000000000000809102000000800000",
+   "bit": 114,
+   "root_hex": "00040000000000809102000000800000",
+   "verdict": "WIN7",
+   "rows": 57588,
+   "extraction_nodes": 17815540,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (warm rebuild, 2026-11-15); sed -n 2p stdin recipe",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 57,
+    "independent_enumeration_legal": 57,
+    "match": true
+   },
+   "sub_roots_verified": 57,
+   "sub_roots_pass": 57,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "visited_states_across_subroots": 119428,
+   "winner_states": 76913,
+   "loser_states": 22488,
+   "loser_reply_edges": 106478,
+   "terminal_count": 20027,
+   "md5": "265956dde8e5e5516ec05bf032a6e35a",
+   "sha256": "cde76aa0a8e7c1c10e6e39a6cb1cbf0be0c517270aaa91506122fe1fb40622b4",
+   "bytes": 2081709,
+   "extraction_ms": 107532,
+   "file": null,
+   "storage": {
+    "layout": "part1of2/part2of2 (line-boundary split; repo convention for >1.75 MB certificates)",
+    "part1": {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65e-certificates/bit114-root-00040000000000809102000000800000.cert.part1of2",
+     "bytes": 1042029,
+     "md5": "939c6499c81cbca8286a1004e52cb233"
+    },
+    "part2": {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65e-certificates/bit114-root-00040000000000809102000000800000.cert.part2of2",
+     "bytes": 1039680,
+     "md5": "f71988b036c7033aee54c0c667028874"
+    },
+    "concat_md5_equals_whole": true
+   },
+   "root_absence_check": {
+    "method": "GitHub code search over yuubinnkyoku/kyouen-researches for the quoted root hex (2026-11-14 UTC, immediately after the certificate pushes of this batch; index lag means the new files are not yet searchable)",
+    "repo_search_hits": 1,
+    "hit_paths": [
+     "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65e-sweep-20261114.json"
+    ],
+    "prior_certificate_hits": 0,
+    "note": "every hit is a sweep/inflight/audit record JSON or a log markdown listing the root; no certificate file predating this batch contained any of these root hexes"
+   },
+   "pushed": "2026-11-15"
+  },
+  {
+   "band": "class2-lane-cost65e",
+   "child_hex": "00000000000000809102000000800000",
+   "bit": 116,
+   "root_hex": "00100000000000809102000000800000",
+   "verdict": "WIN7",
+   "rows": 39199,
+   "extraction_nodes": 12020136,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (warm rebuild, 2026-11-15); sed -n 2p stdin recipe",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 56,
+    "independent_enumeration_legal": 56,
+    "match": true
+   },
+   "sub_roots_verified": 56,
+   "sub_roots_pass": 56,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "visited_states_across_subroots": 90639,
+   "winner_states": 58441,
+   "loser_states": 17576,
+   "loser_reply_edges": 81522,
+   "terminal_count": 14622,
+   "md5": "b5de9631bc3c56af1170a00667c6f9c9",
+   "sha256": "bc0df95536c0e5016727a1d763745c5714f8d1186b35ac34b06349ed58f5ea60",
+   "bytes": 1414440,
+   "extraction_ms": 78873,
+   "file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65e-certificates/bit116-root-00100000000000809102000000800000.cert",
+   "storage": {
+    "layout": "single file"
+   },
+   "root_absence_check": {
+    "method": "GitHub code search over yuubinnkyoku/kyouen-researches for the quoted root hex (2026-11-14 UTC, immediately after the certificate pushes of this batch; index lag means the new files are not yet searchable)",
+    "repo_search_hits": 1,
+    "hit_paths": [
+     "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65e-sweep-20261114.json"
+    ],
+    "prior_certificate_hits": 0,
+    "note": "every hit is a sweep/inflight/audit record JSON or a log markdown listing the root; no certificate file predating this batch contained any of these root hexes"
+   },
+   "pushed": "2026-11-15"
+  },
+  {
+   "band": "class2-lane-cost62a",
+   "child_hex": "00000000000000809102000001000000",
+   "bit": 118,
+   "root_hex": "00400000000000809102000001000000",
+   "verdict": "WIN7",
+   "rows": 34974,
+   "extraction_nodes": 8689427,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (warm rebuild, 2026-11-15); sed -n 2p stdin recipe",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 50,
+    "independent_enumeration_legal": 50,
+    "match": true
+   },
+   "sub_roots_verified": 50,
+   "sub_roots_pass": 50,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "visited_states_across_subroots": 75593,
+   "winner_states": 49071,
+   "loser_states": 14938,
+   "loser_reply_edges": 68738,
+   "terminal_count": 11584,
+   "md5": "de7df89ebf44e5f43084fb4748d91ee9",
+   "sha256": "452e3bad1eaf75bef6a4d57d94dce96f6f869cba12638d68c8656e9b4d3c4666",
+   "bytes": 1261652,
+   "extraction_ms": 70390,
+   "file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost62a-certificates/bit118-root-00400000000000809102000001000000.cert",
+   "storage": {
+    "layout": "single file"
+   },
+   "root_absence_check": {
+    "method": "GitHub code search over yuubinnkyoku/kyouen-researches for the quoted root hex (2026-11-14 UTC, immediately after the certificate pushes of this batch; index lag means the new files are not yet searchable)",
+    "repo_search_hits": 1,
+    "hit_paths": [
+     "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost62a-sweep-20261114.json"
+    ],
+    "prior_certificate_hits": 0,
+    "note": "every hit is a sweep/inflight/audit record JSON or a log markdown listing the root; no certificate file predating this batch contained any of these root hexes"
+   },
+   "pushed": "2026-11-15"
+  },
+  {
+   "band": "class2-lane-cost63a",
+   "child_hex": "00000000000000809102000800000000",
+   "bit": 118,
+   "root_hex": "00400000000000809102000800000000",
+   "verdict": "WIN7",
+   "rows": 43423,
+   "extraction_nodes": 13357830,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (warm rebuild, 2026-11-15); sed -n 2p stdin recipe",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 50,
+    "independent_enumeration_legal": 50,
+    "match": true
+   },
+   "sub_roots_verified": 50,
+   "sub_roots_pass": 50,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "visited_states_across_subroots": 93908,
+   "winner_states": 60535,
+   "loser_states": 17785,
+   "loser_reply_edges": 83622,
+   "terminal_count": 15588,
+   "md5": "d0f4ee014b99e62f900a3172612f110f",
+   "sha256": "e4dcb3ad35933a46881e6172a7f8ebf5707c72a7b00bc97b9f1234fd5ee68035",
+   "bytes": 1566176,
+   "extraction_ms": 75993,
+   "file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost63a-certificates/bit118-root-00400000000000809102000800000000.cert",
+   "storage": {
+    "layout": "single file"
+   },
+   "root_absence_check": {
+    "method": "GitHub code search over yuubinnkyoku/kyouen-researches for the quoted root hex (2026-11-14 UTC, immediately after the certificate pushes of this batch; index lag means the new files are not yet searchable)",
+    "repo_search_hits": 1,
+    "hit_paths": [
+     "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost63a-sweep-20261114.json"
+    ],
+    "prior_certificate_hits": 0,
+    "note": "every hit is a sweep/inflight/audit record JSON or a log markdown listing the root; no certificate file predating this batch contained any of these root hexes"
+   },
+   "pushed": "2026-11-15"
+  },
+  {
+   "band": "class2-lane-cost61d",
+   "child_hex": "00000000000000803202000000000002",
+   "bit": 119,
+   "root_hex": "00800000000000803202000000000002",
+   "verdict": "WIN7",
+   "rows": 46185,
+   "extraction_nodes": 9410585,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (warm rebuild, 2026-11-15); sed -n 2p stdin recipe",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 54,
+    "independent_enumeration_legal": 54,
+    "match": true
+   },
+   "sub_roots_verified": 54,
+   "sub_roots_pass": 54,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "visited_states_across_subroots": 98696,
+   "winner_states": 64230,
+   "loser_states": 20722,
+   "loser_reply_edges": 92874,
+   "terminal_count": 13744,
+   "md5": "b626684714ffc2958e4d4b384959cf04",
+   "sha256": "49acdb6d10798596024f589a85b55a2a71bcdf806d3cb9d3bd6eeb518f1ff7ca",
+   "bytes": 1668128,
+   "extraction_ms": 58097,
+   "file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost61d-certificates/bit119-root-00800000000000803202000000000002.cert",
+   "storage": {
+    "layout": "single file"
+   },
+   "root_absence_check": {
+    "method": "GitHub code search over yuubinnkyoku/kyouen-researches for the quoted root hex (2026-11-14 UTC, immediately after the certificate pushes of this batch; index lag means the new files are not yet searchable)",
+    "repo_search_hits": 2,
+    "hit_paths": [
+     "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost61d-inflight-20261114.json",
+     "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost61d-sweep-20261114.json"
+    ],
+    "prior_certificate_hits": 0,
+    "note": "every hit is a sweep/inflight/audit record JSON or a log markdown listing the root; no certificate file predating this batch contained any of these root hexes"
+   },
+   "pushed": "2026-11-15"
+  },
+  {
+   "band": "class2-lane-cost72",
+   "child_hex": "00000000000000803202000000000200",
+   "bit": 52,
+   "root_hex": "00000000000000803212000000000200",
+   "verdict": "WIN7",
+   "rows": 65509,
+   "extraction_nodes": 25745661,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (warm rebuild, 2026-11-15); sed -n 2p stdin recipe",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 56,
+    "independent_enumeration_legal": 56,
+    "match": true
+   },
+   "sub_roots_verified": 56,
+   "sub_roots_pass": 56,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "visited_states_across_subroots": 152484,
+   "winner_states": 99245,
+   "loser_states": 32000,
+   "loser_reply_edges": 142994,
+   "terminal_count": 21239,
+   "md5": "3cb1df7c4e41aa2907d7ea55a32bf23e",
+   "sha256": "eb9bef99ba0bcaf56730ce399ac37e2f2d82b39a98dd23386df6082b0e9052c1",
+   "bytes": 2368490,
+   "extraction_ms": 138196,
+   "file": null,
+   "storage": {
+    "layout": "part1of2/part2of2 (line-boundary split; repo convention for >1.75 MB certificates)",
+    "part1": {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost72-certificates/bit52-root-00000000000000803212000000000200.cert.part1of2",
+     "bytes": 1185443,
+     "md5": "475ea3cac0ea5dc8ac974d7e6abe0a30"
+    },
+    "part2": {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost72-certificates/bit52-root-00000000000000803212000000000200.cert.part2of2",
+     "bytes": 1183047,
+     "md5": "78284bceae8082fa66d37f9cbd1b4596"
+    },
+    "concat_md5_equals_whole": true
+   },
+   "root_absence_check": {
+    "method": "GitHub code search over yuubinnkyoku/kyouen-researches for the quoted root hex (2026-11-14 UTC, immediately after the certificate pushes of this batch; index lag means the new files are not yet searchable)",
+    "repo_search_hits": 2,
+    "hit_paths": [
+     "research/log/2026-11-15-n11-class2-cost72-batches1-9-audit.md",
+     "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost72-batches1-9-audit-20261115.json"
+    ],
+    "prior_certificate_hits": 0,
+    "note": "every hit is a sweep/inflight/audit record JSON or a log markdown listing the root; no certificate file predating this batch contained any of these root hexes"
+   },
+   "pushed": "2026-11-15"
+  },
+  {
+   "band": "class2-lane-cost64b",
+   "child_hex": "00000000000000803202000000100000",
+   "bit": 8,
+   "root_hex": "00000000000000803202000000100100",
+   "verdict": "WIN7",
+   "rows": 40315,
+   "extraction_nodes": 6634859,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (warm rebuild, 2026-11-15); sed -n 2p stdin recipe",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 54,
+    "independent_enumeration_legal": 54,
+    "match": true
+   },
+   "sub_roots_verified": 54,
+   "sub_roots_pass": 54,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "visited_states_across_subroots": 84210,
+   "winner_states": 54694,
+   "loser_states": 17894,
+   "loser_reply_edges": 79292,
+   "terminal_count": 11622,
+   "md5": "376d5dc629529c1a36a702a8ec879e60",
+   "sha256": "0b271ed6300b3b7504d3778c887fadf0932092e71f21dcf071324821152257c0",
+   "bytes": 1456949,
+   "extraction_ms": 56512,
+   "file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost64b-certificates/bit8-root-00000000000000803202000000100100.cert",
+   "storage": {
+    "layout": "single file"
+   },
+   "root_absence_check": {
+    "method": "GitHub code search over yuubinnkyoku/kyouen-researches for the quoted root hex (2026-11-14 UTC, immediately after the certificate pushes of this batch; index lag means the new files are not yet searchable)",
+    "repo_search_hits": 1,
+    "hit_paths": [
+     "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost64b-sweep-20261114.json"
+    ],
+    "prior_certificate_hits": 0,
+    "note": "every hit is a sweep/inflight/audit record JSON or a log markdown listing the root; no certificate file predating this batch contained any of these root hexes"
+   },
+   "pushed": "2026-11-15"
+  },
+  {
+   "band": "class2-lane-cost61e",
+   "child_hex": "00000000000000803202000040000000",
+   "bit": 4,
+   "root_hex": "00000000000000803202000040000010",
+   "verdict": "WIN7",
+   "rows": 35674,
+   "extraction_nodes": 6640712,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (warm rebuild, 2026-11-15); sed -n 2p stdin recipe",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 54,
+    "independent_enumeration_legal": 54,
+    "match": true
+   },
+   "sub_roots_verified": 54,
+   "sub_roots_pass": 54,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "visited_states_across_subroots": 79810,
+   "winner_states": 51616,
+   "loser_states": 15641,
+   "loser_reply_edges": 72166,
+   "terminal_count": 12553,
+   "md5": "4d5d08907d491a6d186b13620acc9af1",
+   "sha256": "8a56cf3660063e1fdad5f0e6804bd78c29fce152d0a1c078d59ec95d383b5fdf",
+   "bytes": 1291154,
+   "extraction_ms": 41873,
+   "file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost61e-certificates/bit4-root-00000000000000803202000040000010.cert",
+   "storage": {
+    "layout": "single file"
+   },
+   "root_absence_check": {
+    "method": "GitHub code search over yuubinnkyoku/kyouen-researches for the quoted root hex (2026-11-14 UTC, immediately after the certificate pushes of this batch; index lag means the new files are not yet searchable)",
+    "repo_search_hits": 2,
+    "hit_paths": [
+     "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost61e-inflight-20261114.json",
+     "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost61e-sweep-20261114.json"
+    ],
+    "prior_certificate_hits": 0,
+    "note": "every hit is a sweep/inflight/audit record JSON or a log markdown listing the root; no certificate file predating this batch contained any of these root hexes"
+   },
+   "pushed": "2026-11-15"
+  },
+  {
+   "band": "class2-lane-cost71b",
+   "child_hex": "00000000000000803202000000400000",
+   "bit": 32,
+   "root_hex": "00000000000000803202000100400000",
+   "verdict": "WIN7",
+   "rows": 70892,
+   "extraction_nodes": 25509496,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (warm rebuild, 2026-11-15); sed -n 2p stdin recipe",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 64,
+    "independent_enumeration_legal": 64,
+    "match": true
+   },
+   "sub_roots_verified": 64,
+   "sub_roots_pass": 64,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "visited_states_across_subroots": 144489,
+   "winner_states": 93440,
+   "loser_states": 29006,
+   "loser_reply_edges": 132046,
+   "terminal_count": 22043,
+   "md5": "24a98b05d8edc1112871d15952bbfd53",
+   "sha256": "f17e3dde0b3819caea2b34622f933a18f90ad8e273a16c1267969c7c9f11b89c",
+   "bytes": 2561541,
+   "extraction_ms": 107884,
+   "file": null,
+   "storage": {
+    "layout": "part1of2/part2of2 (line-boundary split; repo convention for >1.75 MB certificates)",
+    "part1": {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost71b-certificates/bit32-root-00000000000000803202000100400000.cert.part1of2",
+     "bytes": 1282742,
+     "md5": "d48c4b4a3ea981f74f02ed585ad0ca7f"
+    },
+    "part2": {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost71b-certificates/bit32-root-00000000000000803202000100400000.cert.part2of2",
+     "bytes": 1278799,
+     "md5": "a6d2822daf718693fe86ebd651b04d97"
+    },
+    "concat_md5_equals_whole": true
+   },
+   "root_absence_check": {
+    "method": "GitHub code search over yuubinnkyoku/kyouen-researches for the quoted root hex (2026-11-14 UTC, immediately after the certificate pushes of this batch; index lag means the new files are not yet searchable)",
+    "repo_search_hits": 1,
+    "hit_paths": [
+     "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost71b-sweep-20261115.json"
+    ],
+    "prior_certificate_hits": 0,
+    "note": "every hit is a sweep/inflight/audit record JSON or a log markdown listing the root; no certificate file predating this batch contained any of these root hexes"
+   },
+   "pushed": "2026-11-15"
+  },
+  {
+   "band": "class2-lane-cost64b",
+   "child_hex": "00000000000000803202000000100000",
+   "bit": 33,
+   "root_hex": "00000000000000803202000200100000",
+   "verdict": "WIN7",
+   "rows": 43963,
+   "extraction_nodes": 7204330,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (warm rebuild, 2026-11-15); sed -n 2p stdin recipe",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 52,
+    "independent_enumeration_legal": 52,
+    "match": true
+   },
+   "sub_roots_verified": 52,
+   "sub_roots_pass": 52,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "visited_states_across_subroots": 95917,
+   "winner_states": 62239,
+   "loser_states": 19706,
+   "loser_reply_edges": 89493,
+   "terminal_count": 13972,
+   "md5": "84f88bc531e7531c336a96055a7fac7e",
+   "sha256": "3bc11e6a9a66226c606ee0fd6b2bbee91ddc2093e6128d61e27b2f2059037a1c",
+   "bytes": 1587726,
+   "extraction_ms": 31917,
+   "file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost64b-certificates/bit33-root-00000000000000803202000200100000.cert",
+   "storage": {
+    "layout": "single file"
+   },
+   "root_absence_check": {
+    "method": "GitHub code search over yuubinnkyoku/kyouen-researches for the quoted root hex (2026-11-14 UTC, immediately after the certificate pushes of this batch; index lag means the new files are not yet searchable)",
+    "repo_search_hits": 1,
+    "hit_paths": [
+     "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost64b-sweep-20261114.json"
+    ],
+    "prior_certificate_hits": 0,
+    "note": "every hit is a sweep/inflight/audit record JSON or a log markdown listing the root; no certificate file predating this batch contained any of these root hexes"
+   },
+   "pushed": "2026-11-15"
+  }
+ ]
+}

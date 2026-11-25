@@ -1,0 +1,127 @@
+{
+ "schema": "n11-class4-batch3-win7-certificates-child7-20261114-v1",
+ "date": "2026-11-14",
+ "sweep_source": "output/class4-batch3-child7-sweep.json",
+ "method": "kill-tree extraction via the class4_child1_cert_extractor.ts logic (engine v15 verbatim, closeScore ordering, per-first-loser-move batch subprocesses, sort -u merge), then independent verification with the verify_bit7_win7_cert.ts port (exact 4x4 Bareiss integer determinant, BigInt board masks, engine not used): every winner state consumed must have a legal strategy row, every loser state expands ALL legal replies, terminals must be loser-stuck, and the union of consumed winner states over all sub-roots must equal the certificate row set exactly.",
+ "certificates": [
+  {
+   "bit": 80,
+   "root_hex": "00000000020100003800010080000000",
+   "file": "output/class4-batch3-certificates/n11_s7_00000000020100003800010080000000.cert",
+   "rows": 17347,
+   "bytes": 626182,
+   "md5": "d690db281c27754a70be0242ee2e7438",
+   "sub_roots": 42,
+   "all_sub_roots_pass": true,
+   "union_exact": true,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "root_checks": {
+    "stones": 7,
+    "loserMobility": 42
+   }
+  },
+  {
+   "bit": 94,
+   "root_hex": "00000000420000003800010080000000",
+   "file": "output/class4-batch3-certificates/n11_s7_00000000420000003800010080000000.cert",
+   "rows": 20555,
+   "bytes": 740551,
+   "md5": "3187c94426adf65e034354a8de2312ce",
+   "sub_roots": 47,
+   "all_sub_roots_pass": true,
+   "union_exact": true,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "root_checks": {
+    "stones": 7,
+    "loserMobility": 47
+   }
+  },
+  {
+   "bit": 50,
+   "root_hex": "00000000020000003804010080000000",
+   "file": "output/class4-batch3-certificates/n11_s7_00000000020000003804010080000000.cert",
+   "rows": 46206,
+   "bytes": 1668271,
+   "md5": "a087cad24736f9c100f5bb32a6580c2a",
+   "sub_roots": 52,
+   "all_sub_roots_pass": true,
+   "union_exact": true,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "root_checks": {
+    "stones": 7,
+    "loserMobility": 52
+   }
+  },
+  {
+   "bit": 39,
+   "root_hex": "00000000020000003800018080000000",
+   "file": "output/class4-batch3-certificates/n11_s7_00000000020000003800018080000000.cert",
+   "rows": 48636,
+   "bytes": 1757568,
+   "md5": "d0ae88482d4ab8594e7b2ea652f59ee3",
+   "sub_roots": 53,
+   "all_sub_roots_pass": true,
+   "union_exact": true,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "root_checks": {
+    "stones": 7,
+    "loserMobility": 53
+   }
+  },
+  {
+   "bit": 117,
+   "root_hex": "00200000020000003800010080000000",
+   "file": "output/class4-batch3-certificates/n11_s7_00200000020000003800010080000000.cert",
+   "rows": 47555,
+   "bytes": 1712166,
+   "md5": "4d6c4b7cdc4e09599858523001b92715",
+   "sub_roots": 61,
+   "all_sub_roots_pass": true,
+   "union_exact": true,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "root_checks": {
+    "stones": 7,
+    "loserMobility": 61
+   }
+  }
+ ],
+ "extraction_totals": {
+  "nodes": 52979000,
+  "per_bit": {
+   "39": 22734810,
+   "50": 11357666,
+   "80": 2515454,
+   "94": 6517110,
+   "117": 9853960
+  }
+ },
+ "controls": {
+  "pilot_d6_nodes": 5949,
+  "result": "PASS"
+ },
+ "summary": {
+  "n_certificates": 5,
+  "total_rows": 180299,
+  "all_union_exact": true,
+  "all_sub_roots_pass": true
+ },
+ "interpretation_guard": [
+  "WIN7 certificates prove only a win within depth 10 from their 7-stone root.",
+  "class 4, S2 {59,60}, two-stone root {49,60}, and the 11x11 empty root remain UNKNOWN."
+ ]
+}

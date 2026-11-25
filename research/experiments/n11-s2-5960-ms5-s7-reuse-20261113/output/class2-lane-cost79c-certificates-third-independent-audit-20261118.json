@@ -1,0 +1,149 @@
+{
+  "schema": "n11-cost79c-certificates-bigint-general-circle-audit-20261118-v1",
+  "date": "2026-11-18",
+  "base_main_before_audit": "e83237a8d7d54ed93ab4954d256027b22a2bde1e",
+  "method": "BigInt一般化円方程式（3x3 Cramer係数）で各3石が定める円または退化直線を構成し、121セルを整数評価。探索器・verdict cache・4x4 Bareiss証明書検査器を呼ばず、各rootの全合法な敗者初手からAND/OR木を独立再走査。",
+  "certificates": [
+    {
+      "bit": 1,
+      "root": "00000000000000c09002000200000002",
+      "rows": 58324,
+      "rootMobility": 64,
+      "rootCanon": "00000000000000c09002000200000002",
+      "parts": [
+        {
+          "git_blob_sha": "a7b8d6ccbb96a6904d5b199bd6c3cc54428606a9",
+          "source_commit": "d4e60365e379aeac74b83b5896c6ef07fa673c35",
+          "bytes": 1055919
+        },
+        {
+          "git_blob_sha": "10e63e0a0dc5be1bc40a5275b8199e4ec75fb7a7",
+          "source_commit": "53c123abf7368de2683878f8b5b75d34dba448d2",
+          "bytes": 1053635
+        }
+      ],
+      "certificate_bytes": 2109554,
+      "subroot_count": 64,
+      "subrootSeen": 118778,
+      "winnerStates": 76165,
+      "loserStates": 21850,
+      "opponentEdges": 103330,
+      "terminals": 20763,
+      "terminal_range": [
+        13,
+        17
+      ],
+      "union": {
+        "consumed": 58324,
+        "missing": 0,
+        "extra": 0
+      }
+    },
+    {
+      "bit": 2,
+      "root": "00000000000000c09002000200000004",
+      "rows": 65440,
+      "rootMobility": 64,
+      "rootCanon": "00000000000000c09002000200000004",
+      "parts": [
+        {
+          "git_blob_sha": "9781f9dab5b0680d12b37a9f3983db2351ba0cb1",
+          "source_commit": "fec1912901342cd10988f5a56f299a8e859eee2c",
+          "bytes": 1181307
+        },
+        {
+          "git_blob_sha": "22ae865a4a465a3ff3a8c0eca4ad910378800b5a",
+          "source_commit": "bd7bd055585c45b1b126bc9b288607239da85174",
+          "bytes": 1178446
+        }
+      ],
+      "certificate_bytes": 2359753,
+      "subroot_count": 64,
+      "subrootSeen": 135045,
+      "winnerStates": 86614,
+      "loserStates": 26270,
+      "opponentEdges": 120569,
+      "terminals": 22161,
+      "terminal_range": [
+        13,
+        17
+      ],
+      "union": {
+        "consumed": 65440,
+        "missing": 0,
+        "extra": 0
+      }
+    },
+    {
+      "bit": 21,
+      "root": "00000000000000c09002000200200000",
+      "rows": 48856,
+      "rootMobility": 66,
+      "rootCanon": "00000000000000c09002000200200000",
+      "parts": [
+        {
+          "git_blob_sha": "09192d23c46a1d62c40a136df611c032a5c32988",
+          "source_commit": "462448cd31b56ab2470616ad450a105660c58428",
+          "bytes": 881366
+        },
+        {
+          "git_blob_sha": "ac7e789b4e880e562428f2cf5c0abbc9f49b758b",
+          "source_commit": "462448cd31b56ab2470616ad450a105660c58428",
+          "bytes": 879611
+        }
+      ],
+      "certificate_bytes": 1760977,
+      "subroot_count": 66,
+      "subrootSeen": 102570,
+      "winnerStates": 65879,
+      "loserStates": 20082,
+      "opponentEdges": 91063,
+      "terminals": 16609,
+      "terminal_range": [
+        13,
+        17
+      ],
+      "union": {
+        "consumed": 48856,
+        "missing": 0,
+        "extra": 0
+      }
+    }
+  ],
+  "totals": {
+    "certificates": 3,
+    "rows": 172620,
+    "root_replies": 194,
+    "subroot_seen": 356393,
+    "winner_states": 228658,
+    "loser_states": 68202,
+    "opponent_edges": 314962,
+    "terminals": 59533
+  },
+  "bit21_crosscheck": {
+    "rootcheck": {
+      "stones": 7,
+      "loserMobility": 66
+    },
+    "subroots_published": 66,
+    "subroots_recomputed": 66,
+    "all_66_equal": true
+  },
+  "metadata_pins": {
+    "bit21_subroots_git_blob_sha": "4a87b398dd7d34a258a83b5521e1fe07509a4eba",
+    "bit21_rootcheck_git_blob_sha": "8a26b3e7f6d411cdc5d28c97bd178171edf9e07c"
+  },
+  "parser_checks": {
+    "header_and_root": true,
+    "strictly_sorted_unique_rows": true,
+    "all_moves_in_range": true,
+    "part_boundary_checked": true
+  },
+  "all_pass": true,
+  "runtime_ms": 62334,
+  "geometry_cache": {
+    "triple_masks": 52419,
+    "legal_positions": 260722
+  },
+  "interpretation_guard": "3個の個別7石WIN7 rootのみ。REFUTED-D10はLOSS証明ではなく、receipt foldも実施していない。標準11×11空盤、二石root {49,60}/{59,60}、S2 {59,60}、class 1/2/4はUNKNOWN。"
+}

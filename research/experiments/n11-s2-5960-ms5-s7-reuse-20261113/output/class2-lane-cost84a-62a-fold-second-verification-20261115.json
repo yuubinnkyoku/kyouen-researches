@@ -1,0 +1,47 @@
+{
+ "chain_state_after": {
+  "head": "1326/6522/515251/4792/378974",
+  "head_json": "class-frontier-cost62a-receipts-recompute-20261116.json (blob 3989e9dd)",
+  "previous_head": "1314/6533/516061/4803/379784 (83d endpoint)"
+ },
+ "controls_passed": {
+  "cost62a_fold_two_isolated_runs_byte_identical": "two runs of the published fold script with the published raw batches (re-executing the 84a fold and the full chain in-step) complete with every in-script control and regenerate the head 1326/6522/515251/4792/378974 outputs byte-identically to each other and to main (head JSON 3989e9dd + 9,434 B; ranking f99c7561 + 7,537 B; top-candidates cec2b833 + 6,211 B); marginal 32/8, zero-mim [35], child closed by bit7, second candidate S5 39/2708 -> 34 rows / 2368, second open parent 52/3875 -> 48 rows / 3582",
+  "cost84a_fold_two_isolated_runs_byte_identical": "two runs of the published fold script with the published raw batches (each re-executing the full runpy chain through 83d/83c/... to the 1227 baseline) complete with every in-script control and regenerate the head 1318/6530/515822/4800/379545 outputs byte-identically to each other and to main (head JSON f5624e99 + 7,935 B; ranking 41fe1225 + 7,537 B; top-candidates c00f7306 + 6,641 B); 4 certificates 208,335 rows / 7,518,339 bytes / 249 sub-roots, BigInt + Number Bareiss 4/4 PASS, second target S5 4/293 -> 3 rows / 209",
+  "published_inputs_blob_verified": "all 84a/62a published artifacts used here were fetched fresh and byte-verified against their published git blob pins before use (6+6 certificate files, head JSONs, CSVs, claims, crosschecks, raw batches, repair scripts)",
+  "published_repair_scripts_executed_verbatim": "reconstruct_tmp_cost84a_20261116.py (4 files: legal-moves via the published legal_candidates enumeration, cert receipts, TS-Bareiss tsverify + consumed, BigInt verify) and reconstruct_tmp_cost62a_20261116.py (6 files, same pattern) executed unmodified from main bytes after wiping both tmp dirs: 84a 4/4 PASS, 62a 6/6 PASS, union 0/0 (re-asserted by the folds)",
+  "sweep_reexecuted_node_exact_vs_published": "full independent re-execution of the 62a sweep (pinned v16 engine blob 0a4a86f6, node v22.20.0, depth 10, cap 1e9, andclose 1, per-batch d6 pilot, claim batch layout): all 8 regenerated batches match the published raw batches line-for-line on every semantic field (bit order, loss, nodes, capped, terminalStoneRange, andclose, pilot nodes 3402 x8) - 62 candidates, 6 WIN7-D10 [7,15,35,76,81,98] / 56 REFUTED-D10 / 0 capped, total 46,968,169 nodes; only the wall-clock ms fields differ (not asserted anywhere); batch-5 bits additionally node-exact against the published v16 determinism rerun (8/8), v15 crosscheck pilot 5949 with 6/6 WIN + 3/3 refuted anchors (bits 0/1/2)"
+ },
+ "date": "2026-11-15",
+ "fold_script_blob_sha": {
+  "cost62a": {
+   "bytes": 22651,
+   "git_blob_sha": "24b1f1afaf197f6279b99674726d12de67feeb9e",
+   "md5": "72c90965157d4a33202074ca3fd26b2b"
+  },
+  "cost84a": {
+   "bytes": 21471,
+   "git_blob_sha": "f6451a6e7d639582212d39a4929d1e5e070c07e5",
+   "md5": "bd0f193c1b6599007492ffff391ee094"
+  }
+ },
+ "inputs": "published main bytes only: codeload main tarball mirror (HEAD 0a3e0a4b, contains everything through the 83d endpoint) plus the 84a/62a landing and repair artifacts fetched from the raw CDN and byte-verified against published git blob pins (84a: 6 certificate files 4e7453bb/5b645dc3/3e1477c7/3235dd6a/7d8e8f61/0614acec, head JSON f5624e99 + CSVs 41fe1225/c00f7306; 62a: head JSON 3989e9dd + CSVs f99c7561/cec2b833 via the completed claim record, raw batches 1-8, repair script f6b05836; 84a repair script 490d34ad); no state from the landing sessions was reused; the 62a sweep itself was re-executed from scratch here (independent engine runs over the claim batch layout)",
+ "interpretation_guard": "bookkeeping verification of receipts folds only; solved 1326 measures manifest coverage, not the game-theoretic value of any position; REFUTED-D10 sweeps prove only the absence of a WIN7-D10 certificate; WIN7 certificates prove a first-player win within depth 10 from the individual 7-stone roots only; the standard 11x11 empty board, the two-stone roots {49,60}/{59,60}, S2 {59,60}, class1, class2 and class4 all remain UNKNOWN",
+ "published_repair_scripts_blob_sha": {
+  "reconstruct_tmp_cost62a_20261116.py": {
+   "bytes": 2651,
+   "git_blob_sha": "f6b058365081f7cb3a2e1160aba8799b6205ce5e"
+  },
+  "reconstruct_tmp_cost84a_20261116.py": {
+   "bytes": 2563,
+   "git_blob_sha": "490d34ad70022a70598e2509ce63a3f84a9b8336"
+  }
+ },
+ "reproducibility_gap_history": {
+  "closed_concurrently_by_landing_lane": "while this lane was independently deriving the same repairs, the landing lane published the original raw batches (commit a7244ae2) and both tmp reconstruction scripts (f050254b/3c639ce3 for 62a, c3c5d785/94283c72 for 84a); their published bytes are canonical and were used as the fold inputs for all runs recorded here",
+  "gap_found": "at this session's start the published 62a fold script was NOT runnable from a fresh clone of main: it requires output/class2-lane-cost62a-raw-batch{1..8}-20261116.jsonl (then unpublished under any name; the 20261114 batches in main are a different sweep of a different child with pilot 5949 and 11 WIN bits) and output/tmp-cost62a/* (then unpublished); the 84a fold script additionally required output/tmp-cost84a/* (then unpublished)",
+  "independent_convergence": "this lane had independently written logically identical reconstruction scripts (identical ROOTS and verifier invocation logic; only the docstring differs) and its own batch regeneration before seeing the landing lane's commits; both derivations agree, and the fold now runs end-to-end from published main bytes alone"
+ },
+ "schema": "n11-class2-lane-cost84a-62a-fold-second-verification-20261115-v1",
+ "title": "cost-84a and cost-62a fold second independent verification: full sweep re-execution node-exact against the published raw batches, published repair scripts executed verbatim, both folds re-run twice byte-identically",
+ "unknown_status": "11x11 empty board: UNKNOWN"
+}

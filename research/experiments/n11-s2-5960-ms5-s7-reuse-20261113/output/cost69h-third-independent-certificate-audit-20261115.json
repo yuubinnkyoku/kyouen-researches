@@ -1,0 +1,192 @@
+{
+  "schema": "n11-class2-cost69h-third-independent-certificate-audit-20261115-v1",
+  "date": "2026-11-15",
+  "status": "PASS",
+  "method": "独立なBigInt有理中心分子＋共線分岐。浮動小数点、探索器、既存証明書検査器を使わず、全AND/OR戦略木を再走査。",
+  "baseline": {
+    "frontier_head_at_audit_start": "1219/6628/523173/4898/386896"
+  },
+  "certificates": [
+    {
+      "bit": 58,
+      "root_hex": "0000000000000080160a000000200000",
+      "d4_canonical_hex": "0000000000000080160a000000200000",
+      "rows": 46555,
+      "root_mobility": 60,
+      "unique_dag_states": 70783,
+      "winner_states": 46555,
+      "loser_states": 14126,
+      "loser_reply_edges": 67448,
+      "terminal_states": 10102,
+      "terminal_range": [
+        13,
+        17
+      ],
+      "missing": 0,
+      "extra": 0,
+      "parent_orbits": [
+        "0000000000000000160a000000200000",
+        "0000000000000080060a000000200000",
+        "0000000000000080120a000000200000",
+        "0000000000000080140a000000200000",
+        "00000000000000801602000000200000",
+        "00000000000000801608000000200000",
+        "0000000000000080160a000000000000"
+      ]
+    },
+    {
+      "bit": 96,
+      "root_hex": "0000000100000080120a000000200000",
+      "d4_canonical_hex": "00000000040000809002800000000800",
+      "rows": 44091,
+      "root_mobility": 53,
+      "unique_dag_states": 67055,
+      "winner_states": 44091,
+      "loser_states": 13410,
+      "loser_reply_edges": 64168,
+      "terminal_states": 9554,
+      "terminal_range": [
+        13,
+        17
+      ],
+      "missing": 0,
+      "extra": 0,
+      "parent_orbits": [
+        "00000000000000003800002040000002",
+        "0000000000000080120a000000200000",
+        "00000000000000a09002000001000000",
+        "00000000040000009002800000000800",
+        "00000000040000808002800000000800",
+        "00000000040000809000800000000800",
+        "00000000040000809002000000000800"
+      ]
+    }
+  ],
+  "totals": {
+    "certificates": 2,
+    "rows": 90646,
+    "unique_dag_states": 137838,
+    "winner_states": 90646,
+    "loser_states": 27536,
+    "loser_reply_edges": 131616,
+    "terminal_states": 19656,
+    "sub_roots": 113
+  },
+  "parent_lift": {
+    "parent_incidences": 14,
+    "unique_s6_parent_orbits": 13,
+    "shared_parent_orbits": [
+      {
+        "hex": "0000000000000080120a000000200000",
+        "bits": [
+          58,
+          96
+        ]
+      }
+    ],
+    "s6_manifest_rows": 7867,
+    "worklist_membership_hits": 5,
+    "worklist_parents": [
+      {
+        "hex": "0000000000000080120a000000200000",
+        "bits": [
+          58,
+          96
+        ],
+        "worklist": {
+          "cost": 69,
+          "classes": "2"
+        }
+      },
+      {
+        "hex": "00000000000000801602000000200000",
+        "bits": [
+          58
+        ],
+        "worklist": {
+          "cost": 72,
+          "classes": "2"
+        }
+      },
+      {
+        "hex": "0000000000000080160a000000000000",
+        "bits": [
+          58
+        ],
+        "worklist": {
+          "cost": 75,
+          "classes": "2"
+        }
+      },
+      {
+        "hex": "00000000000000a09002000001000000",
+        "bits": [
+          96
+        ],
+        "worklist": {
+          "cost": 69,
+          "classes": "2"
+        }
+      },
+      {
+        "hex": "00000000040000809002000000000800",
+        "bits": [
+          96
+        ],
+        "worklist": {
+          "cost": 70,
+          "classes": "2"
+        }
+      }
+    ],
+    "not_in_worklist": [
+      "0000000000000000160a000000200000",
+      "00000000000000003800002040000002",
+      "0000000000000080060a000000200000",
+      "0000000000000080140a000000200000",
+      "00000000000000801608000000200000",
+      "00000000040000009002800000000800",
+      "00000000040000808002800000000800",
+      "00000000040000809000800000000800"
+    ]
+  },
+  "child_s6": {
+    "hex": "0000000000000080120a000000200000",
+    "proven_win": true,
+    "winning_moves_to_distinct_second_to_move_loss_roots": [
+      58,
+      96
+    ],
+    "open_s5_parents": [
+      {
+        "s5_hex": "00000000000000801202000000200000",
+        "classes": 2,
+        "remaining_s6_orbits": 32,
+        "remaining_s7_edge_cost": 2403
+      },
+      {
+        "s5_hex": "0000000000000080120a000000000000",
+        "classes": 2,
+        "remaining_s6_orbits": 49,
+        "remaining_s7_edge_cost": 3593
+      }
+    ],
+    "top_candidate_rows": [
+      {
+        "s5_hex": "00000000000000801202000000200000",
+        "s6_hex": "0000000000000080120a000000200000",
+        "cost": 69
+      }
+    ],
+    "parent2_open_but_child_not_in_top_candidate_subset": true,
+    "claim_reports_child_remaining_in_both_open_parents": true
+  },
+  "frontier": {
+    "head_before_fold": "1219/6628/523173/4898/386896",
+    "fold_pending": true,
+    "official_head_after_audit": "1219/6628/523173/4898/386896",
+    "official_solved_s6_in_manifest_change": 0,
+    "note": "receipt fold未実施。子S6のWINは証明されたが公式frontierはfold scriptが更新する。"
+  },
+  "interpretation_guard": "各証明書は個別7石rootのWINを深さ10以内で証明する。二石root {49,60}/{59,60}、S2 {59,60}、class2、class4、標準11×11空盤の勝敗はUNKNOWN."
+}

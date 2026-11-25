@@ -1,0 +1,80 @@
+{
+ "conclusion": "all three landed artifacts (audit v8 first implementation, audit v8 second independent implementation, dual implementation agreement v5) reproduce from main bytes alone, byte-identically, on an environment that had no state from the landing session; the 83d endpoint is now quadruple-checked: fold landing + second independent fold verification + dual-implementation audit v8 + agreement v5",
+ "date": "2026-11-15",
+ "interpretation_guard": "audit and agreement bookkeeping only; solved 1314 measures manifest coverage, not the game-theoretic value of any position; the standard 11x11 empty board, the two-stone roots {49,60}/{59,60}, S2 {59,60}, class1, class2 and class4 all remain UNKNOWN",
+ "method": "fresh codeload main tarball mirror (HEAD 0a3e0a4b, md5 323548d7) containing the whole pinned corpus; the three scripts and the three published outputs fetched from the main raw CDN at current main (all landed >= 20 minutes before fetch, past the CDN stale window); each script executed twice in the mirror; each run's output compared byte-for-byte with the published output; the two runs also compared with each other",
+ "results": {
+  "agreement_v5": {
+   "agreements_confirmed": 2,
+   "match_published": 2,
+   "observed": "12 blob-pinned audit JSONs (v5 through v8, both implementations), bit-78 duplicate root 00000000100040801202000000200000 consistently exactly-once in every pair",
+   "observed_pair_progression": {
+    "75d": "17 heads / 569 roots / 558 orbits / 11 twins / canon 1233..1296 mim 63",
+    "80d": "21 heads / 587 roots / 576 orbits / 11 twins / canon 1233..1305 mim 72",
+    "82c": "22 heads / 592 roots / 581 orbits / 11 twins / canon 1233..1306 mim 73",
+    "83a": "23 heads / 596 roots / 585 orbits / 11 twins / canon 1233..1309 mim 76",
+    "83c_pair": "25 heads / 603 roots / 592 orbits / 11 twins / canon 1233..1313 mim 80",
+    "83d_pair": "26 heads / 606 roots / 595 orbits / 11 twins / canon 1233..1314 mim 81"
+   },
+   "run1_equals_run2": true,
+   "runs": 2
+  },
+  "v8_first": {
+   "audits_passed": 2,
+   "match_published": 2,
+   "observed": "AUDIT PASSED at the 83d endpoint (104 pins, canonical line 1233..1314 mim 81 / distinct 81 / multi 0, bit-78 duplicate root exactly-once)",
+   "run1_equals_run2": true,
+   "runs": 2
+  },
+  "v8_second": {
+   "audits_passed": 2,
+   "match_published": 2,
+   "observed": "AUDIT PASSED at the 83d endpoint (100 pins, 606 roots / 595 orbits / 11 twins, canonical 1233..1314 exactly-once)",
+   "run1_equals_run2": true,
+   "runs": 2
+  }
+ },
+ "schema": "n11-class2-lane-published-audit-v8-agreement-v5-reproduction-20261115-v1",
+ "subject": {
+  "agreement_v5": {
+   "bytes": 22087,
+   "git_blob_sha": "a19a684c9fb9c72051f8d0ba868db19652128d05",
+   "landing_commit": "bf3c46f1",
+   "md5": "03414596bb1cfeda44bad86676c4891d",
+   "published_output": "class2-lane-published-fold-chain-dual-implementation-agreement-v5-20261115.json",
+   "published_output_bytes": 24908,
+   "published_output_git_blob_sha": "efa291ed572e9ea2b0465319783d776dad7d9edd",
+   "published_output_md5": "c179c9ff17bdd9e42fea26ffcda45d19",
+   "script": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_dual_implementation_agreement_20261115.py"
+  },
+  "first_implementation_v8": {
+   "bytes": 71120,
+   "git_blob_sha": "b7117dbf93e831d9aae0386bae6beb045f03f565",
+   "landing_commits": [
+    "98f750b9",
+    "6b73f1cf"
+   ],
+   "md5": "82336ca5d39eb77941fbb2f8c22e52af",
+   "published_output": "class2-lane-published-chain-roots-independent-audit-v8-20261115.json",
+   "published_output_bytes": 106061,
+   "published_output_git_blob_sha": "232e9d6b930e300402e8191aaf20ac1c40a70e45",
+   "published_output_md5": "53716d55ee45d7426a50daeeca4df620",
+   "script": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_published_chain_roots_independent_20261115.py"
+  },
+  "second_implementation_v8": {
+   "bytes": 86288,
+   "git_blob_sha": "0cc99112b0fbc377f6f2da564603b1319c2d0da1",
+   "landing_commits": [
+    "2294c403",
+    "ea748af0"
+   ],
+   "md5": "d6b14f1b7b2b52703e115ef7c0631d2b",
+   "published_output": "class2-lane-published-chain-roots-second-independent-audit-v8-20261115.json",
+   "published_output_bytes": 105056,
+   "published_output_git_blob_sha": "ad1261bd563f7f524553a8d07fcb8b7f6da92722",
+   "published_output_md5": "598cfb8e9027bcd6657ebe85e1550d15",
+   "script": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_published_chain_roots_second_independent_v8_20261115.py"
+  }
+ },
+ "title": "Reproduction verification of the landed published chain-roots audit v8 (both implementations) and dual implementation agreement v5 at the 83d endpoint"
+}

@@ -1,0 +1,1187 @@
+{
+ "schema": "n11-class2-lane-cost80f-raw-batches-1-9-audit-20261118-v1",
+ "date": "2026-11-18",
+ "child": "00000000020000003800200080000000",
+ "engine": "class4_child1_runner_v17.ts (git blob c132cc6425eee3feaeef1d697dd74f968cfedb59), depth 10, cap 1e9 per bit, andclose 1",
+ "batches": {
+  "1": {
+   "bits": [
+    0,
+    2,
+    3,
+    4,
+    6,
+    7,
+    8,
+    10,
+    11
+   ],
+   "pilot_nodes": 3402,
+   "candidate_nodes": 11060724,
+   "file_sha1": "205426213e7d70306c059830becc753e033ef830",
+   "file_bytes": 1041
+  },
+  "2": {
+   "bits": [
+    12,
+    14,
+    15,
+    16,
+    17,
+    19,
+    21,
+    25,
+    26
+   ],
+   "pilot_nodes": 3402,
+   "candidate_nodes": 2897917,
+   "file_sha1": "25e1daad7a0aee98769c1aebebf75d3b888ad4c7",
+   "file_bytes": 1039
+  },
+  "3": {
+   "bits": [
+    28,
+    29,
+    33,
+    34,
+    36,
+    37,
+    38,
+    39,
+    40
+   ],
+   "pilot_nodes": 3402,
+   "candidate_nodes": 3714767,
+   "file_sha1": "6a7fff64d3ab4841c7084b73a527d3f28b6254ad",
+   "file_bytes": 1040
+  },
+  "4": {
+   "bits": [
+    42,
+    43,
+    44,
+    48,
+    49,
+    50,
+    51,
+    66,
+    67
+   ],
+   "pilot_nodes": 3402,
+   "candidate_nodes": 4553267,
+   "file_sha1": "7e1fa69a5a2361294a94d880cfb70ebdbdd3f677",
+   "file_bytes": 1042
+  },
+  "5": {
+   "bits": [
+    69,
+    70,
+    71,
+    72,
+    75,
+    76,
+    78,
+    80,
+    84
+   ],
+   "pilot_nodes": 3402,
+   "candidate_nodes": 12387175,
+   "file_sha1": "5171a07ce2ea7628e7096f7bcf7c8df9a57f9a2c",
+   "file_bytes": 1047
+  },
+  "6": {
+   "bits": [
+    86,
+    87,
+    92,
+    94,
+    95,
+    99,
+    101,
+    102,
+    103
+   ],
+   "pilot_nodes": 3402,
+   "candidate_nodes": 4790753,
+   "file_sha1": "af6d08b1d6e92d0bad3c209a5339ef86a9b326a0",
+   "file_bytes": 1044
+  },
+  "7": {
+   "bits": [
+    104,
+    105,
+    106,
+    108,
+    109,
+    110,
+    112,
+    113,
+    114
+   ],
+   "pilot_nodes": 3402,
+   "candidate_nodes": 6073868,
+   "file_sha1": "7de726b779b57f11d52b25249046e5d1990d21b6",
+   "file_bytes": 1054
+  },
+  "8": {
+   "bits": [
+    116,
+    117,
+    118,
+    120
+   ],
+   "pilot_nodes": 3402,
+   "candidate_nodes": 1188702,
+   "file_sha1": "b259194fd9ba5984fb1f397d6730702726729bc8",
+   "file_bytes": 501
+  },
+  "9": {
+   "bits": [
+    5,
+    27,
+    30,
+    35,
+    41,
+    46,
+    74,
+    79,
+    85,
+    88,
+    90,
+    93,
+    115
+   ],
+   "pilot_nodes": 3402,
+   "candidate_nodes": 4458475,
+   "file_sha1": "d7119e412453c251c42f3b9b977e20de72f6d9c0",
+   "file_bytes": 1471
+  }
+ },
+ "pilot_controls_pass": "9/9",
+ "per_bit": {
+  "0": {
+   "batch": 1,
+   "verdict": "REFUTED-D10",
+   "nodes": 3311745,
+   "ms": 15506,
+   "root_canon": "00000000020000003800200080000001",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "2": {
+   "batch": 1,
+   "verdict": "REFUTED-D10",
+   "nodes": 249828,
+   "ms": 697,
+   "root_canon": "00000000020000003800200080000004",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "3": {
+   "batch": 1,
+   "verdict": "REFUTED-D10",
+   "nodes": 561124,
+   "ms": 1622,
+   "root_canon": "00000000020000003800200080000008",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "4": {
+   "batch": 1,
+   "verdict": "REFUTED-D10",
+   "nodes": 1086323,
+   "ms": 3425,
+   "root_canon": "00000000020000003800200080000010",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "5": {
+   "batch": 9,
+   "verdict": "REFUTED-D10",
+   "nodes": 328658,
+   "ms": 977,
+   "root_canon": "00000000020000003800200080000020",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "6": {
+   "batch": 1,
+   "verdict": "REFUTED-D10",
+   "nodes": 520759,
+   "ms": 1507,
+   "root_canon": "00000000020000003800200080000040",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "7": {
+   "batch": 1,
+   "verdict": "REFUTED-D10",
+   "nodes": 233006,
+   "ms": 642,
+   "root_canon": "00000000020000003800200080000080",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "8": {
+   "batch": 1,
+   "verdict": "REFUTED-D10",
+   "nodes": 949833,
+   "ms": 3383,
+   "root_canon": "00000000020000003800200080000100",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "10": {
+   "batch": 1,
+   "verdict": "REFUTED-D10",
+   "nodes": 3642031,
+   "ms": 16489,
+   "root_canon": "00000000020000003800200080000400",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "11": {
+   "batch": 1,
+   "verdict": "REFUTED-D10",
+   "nodes": 506075,
+   "ms": 1327,
+   "root_canon": "00000000020000003800200080000800",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "12": {
+   "batch": 2,
+   "verdict": "REFUTED-D10",
+   "nodes": 113032,
+   "ms": 357,
+   "root_canon": "00000000020000003800200080001000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "14": {
+   "batch": 2,
+   "verdict": "REFUTED-D10",
+   "nodes": 352294,
+   "ms": 1004,
+   "root_canon": "00000000020000003800200080004000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "15": {
+   "batch": 2,
+   "verdict": "REFUTED-D10",
+   "nodes": 289437,
+   "ms": 829,
+   "root_canon": "00000000020000003800200080008000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "16": {
+   "batch": 2,
+   "verdict": "REFUTED-D10",
+   "nodes": 572300,
+   "ms": 1714,
+   "root_canon": "00000000020000003800200080010000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "17": {
+   "batch": 2,
+   "verdict": "REFUTED-D10",
+   "nodes": 211479,
+   "ms": 601,
+   "root_canon": "00000000020000003800200080020000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "19": {
+   "batch": 2,
+   "verdict": "REFUTED-D10",
+   "nodes": 337210,
+   "ms": 917,
+   "root_canon": "00000000020000003800200080080000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "21": {
+   "batch": 2,
+   "verdict": "REFUTED-D10",
+   "nodes": 156557,
+   "ms": 394,
+   "root_canon": "00000000020000003800200080200000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "25": {
+   "batch": 2,
+   "verdict": "REFUTED-D10",
+   "nodes": 740665,
+   "ms": 1995,
+   "root_canon": "00000000020000003800200082000000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "26": {
+   "batch": 2,
+   "verdict": "REFUTED-D10",
+   "nodes": 124943,
+   "ms": 315,
+   "root_canon": "00000000020000003800200084000000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "27": {
+   "batch": 9,
+   "verdict": "REFUTED-D10",
+   "nodes": 189787,
+   "ms": 466,
+   "root_canon": "00000000020000003800200088000000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "28": {
+   "batch": 3,
+   "verdict": "REFUTED-D10",
+   "nodes": 186197,
+   "ms": 550,
+   "root_canon": "00000000020000003800200090000000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "29": {
+   "batch": 3,
+   "verdict": "REFUTED-D10",
+   "nodes": 207813,
+   "ms": 501,
+   "root_canon": "000000000200000038002000a0000000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "30": {
+   "batch": 9,
+   "verdict": "REFUTED-D10",
+   "nodes": 179181,
+   "ms": 474,
+   "root_canon": "000000000200000038002000c0000000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "33": {
+   "batch": 3,
+   "verdict": "REFUTED-D10",
+   "nodes": 387588,
+   "ms": 1047,
+   "root_canon": "00000000020000003800200280000000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "34": {
+   "batch": 3,
+   "verdict": "REFUTED-D10",
+   "nodes": 646358,
+   "ms": 1790,
+   "root_canon": "00000000020000003800200480000000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "35": {
+   "batch": 9,
+   "verdict": "REFUTED-D10",
+   "nodes": 490221,
+   "ms": 1409,
+   "root_canon": "00000000020000003800200880000000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "36": {
+   "batch": 3,
+   "verdict": "REFUTED-D10",
+   "nodes": 288324,
+   "ms": 741,
+   "root_canon": "00000000020000003800201080000000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "37": {
+   "batch": 3,
+   "verdict": "REFUTED-D10",
+   "nodes": 747217,
+   "ms": 2087,
+   "root_canon": "00000000020000003800202080000000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "38": {
+   "batch": 3,
+   "verdict": "REFUTED-D10",
+   "nodes": 887725,
+   "ms": 2587,
+   "root_canon": "00000000020000003800204080000000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "39": {
+   "batch": 3,
+   "verdict": "REFUTED-D10",
+   "nodes": 103633,
+   "ms": 265,
+   "root_canon": "00000000020000003800208080000000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "40": {
+   "batch": 3,
+   "verdict": "REFUTED-D10",
+   "nodes": 259912,
+   "ms": 664,
+   "root_canon": "00000000020000003800210080000000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "41": {
+   "batch": 9,
+   "verdict": "REFUTED-D10",
+   "nodes": 546086,
+   "ms": 1522,
+   "root_canon": "00000000020000003800220080000000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "42": {
+   "batch": 4,
+   "verdict": "REFUTED-D10",
+   "nodes": 932563,
+   "ms": 2891,
+   "root_canon": "00000000020000003800240080000000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "43": {
+   "batch": 4,
+   "verdict": "REFUTED-D10",
+   "nodes": 239731,
+   "ms": 593,
+   "root_canon": "00000000020000003800280080000000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "44": {
+   "batch": 4,
+   "verdict": "REFUTED-D10",
+   "nodes": 268855,
+   "ms": 700,
+   "root_canon": "00000000020000003800300080000000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "46": {
+   "batch": 9,
+   "verdict": "REFUTED-D10",
+   "nodes": 352941,
+   "ms": 903,
+   "root_canon": "00000000020000003800600080000000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "48": {
+   "batch": 4,
+   "verdict": "REFUTED-D10",
+   "nodes": 464414,
+   "ms": 1137,
+   "root_canon": "00000000020000003801200080000000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "49": {
+   "batch": 4,
+   "verdict": "REFUTED-D10",
+   "nodes": 537735,
+   "ms": 1335,
+   "root_canon": "00000000020000003802200080000000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "50": {
+   "batch": 4,
+   "verdict": "REFUTED-D10",
+   "nodes": 244211,
+   "ms": 607,
+   "root_canon": "00000000020000003804200080000000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "51": {
+   "batch": 4,
+   "verdict": "REFUTED-D10",
+   "nodes": 480435,
+   "ms": 1189,
+   "root_canon": "00000000020000003808200080000000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "66": {
+   "batch": 4,
+   "verdict": "REFUTED-D10",
+   "nodes": 1025492,
+   "ms": 3140,
+   "root_canon": "00000000020000043800200080000000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "67": {
+   "batch": 4,
+   "verdict": "REFUTED-D10",
+   "nodes": 359831,
+   "ms": 987,
+   "root_canon": "00000000020000083800200080000000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "69": {
+   "batch": 5,
+   "verdict": "REFUTED-D10",
+   "nodes": 402106,
+   "ms": 1167,
+   "root_canon": "00000000020000203800200080000000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "70": {
+   "batch": 5,
+   "verdict": "REFUTED-D10",
+   "nodes": 367691,
+   "ms": 972,
+   "root_canon": "00000000020000403800200080000000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "71": {
+   "batch": 5,
+   "verdict": "REFUTED-D10",
+   "nodes": 488066,
+   "ms": 1149,
+   "root_canon": "00000000020000803800200080000000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "72": {
+   "batch": 5,
+   "verdict": "REFUTED-D10",
+   "nodes": 160194,
+   "ms": 419,
+   "root_canon": "00000000020001003800200080000000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "74": {
+   "batch": 9,
+   "verdict": "REFUTED-D10",
+   "nodes": 268661,
+   "ms": 677,
+   "root_canon": "00000000020004003800200080000000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "75": {
+   "batch": 5,
+   "verdict": "REFUTED-D10",
+   "nodes": 1311902,
+   "ms": 3865,
+   "root_canon": "00000000020008003800200080000000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "76": {
+   "batch": 5,
+   "verdict": "REFUTED-D10",
+   "nodes": 2880078,
+   "ms": 12660,
+   "root_canon": "00000000020008003800100080000000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "78": {
+   "batch": 5,
+   "verdict": "REFUTED-D10",
+   "nodes": 53149,
+   "ms": 124,
+   "root_canon": "00000000020008003800040080000000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "79": {
+   "batch": 9,
+   "verdict": "REFUTED-D10",
+   "nodes": 173038,
+   "ms": 441,
+   "root_canon": "00000000020008003800020080000000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "80": {
+   "batch": 5,
+   "verdict": "REFUTED-D10",
+   "nodes": 1049562,
+   "ms": 2766,
+   "root_canon": "00000000020008003800010080000000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "84": {
+   "batch": 5,
+   "verdict": "REFUTED-D10",
+   "nodes": 5674427,
+   "ms": 15829,
+   "root_canon": "00000000020008003800001080000000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "85": {
+   "batch": 9,
+   "verdict": "REFUTED-D10",
+   "nodes": 268252,
+   "ms": 695,
+   "root_canon": "00000000020008003800000880000000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "86": {
+   "batch": 6,
+   "verdict": "REFUTED-D10",
+   "nodes": 419551,
+   "ms": 1341,
+   "root_canon": "00000000020008003800000480000000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "87": {
+   "batch": 6,
+   "verdict": "REFUTED-D10",
+   "nodes": 992606,
+   "ms": 2722,
+   "root_canon": "00000000020008003800000280000000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "88": {
+   "batch": 9,
+   "verdict": "REFUTED-D10",
+   "nodes": 698145,
+   "ms": 2100,
+   "root_canon": "00000000020008003800000180000000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "90": {
+   "batch": 9,
+   "verdict": "REFUTED-D10",
+   "nodes": 111998,
+   "ms": 296,
+   "root_canon": "000000000200080038000000c0000000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "92": {
+   "batch": 6,
+   "verdict": "REFUTED-D10",
+   "nodes": 1740858,
+   "ms": 5210,
+   "root_canon": "00000000020008003800000090000000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "93": {
+   "batch": 9,
+   "verdict": "REFUTED-D10",
+   "nodes": 758388,
+   "ms": 2052,
+   "root_canon": "00000000020008003800000088000000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "94": {
+   "batch": 6,
+   "verdict": "REFUTED-D10",
+   "nodes": 171681,
+   "ms": 437,
+   "root_canon": "00000000020008003800000084000000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "95": {
+   "batch": 6,
+   "verdict": "REFUTED-D10",
+   "nodes": 181573,
+   "ms": 469,
+   "root_canon": "00000000020008003800000082000000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "99": {
+   "batch": 6,
+   "verdict": "REFUTED-D10",
+   "nodes": 363346,
+   "ms": 945,
+   "root_canon": "00000000020008003800000080200000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "101": {
+   "batch": 6,
+   "verdict": "REFUTED-D10",
+   "nodes": 128943,
+   "ms": 335,
+   "root_canon": "00000000020008003800000080080000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "102": {
+   "batch": 6,
+   "verdict": "REFUTED-D10",
+   "nodes": 207992,
+   "ms": 528,
+   "root_canon": "00000000020008003800000080040000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "103": {
+   "batch": 6,
+   "verdict": "REFUTED-D10",
+   "nodes": 584203,
+   "ms": 1600,
+   "root_canon": "00000000020008003800000080020000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "104": {
+   "batch": 7,
+   "verdict": "REFUTED-D10",
+   "nodes": 941207,
+   "ms": 2965,
+   "root_canon": "00000000020008003800000080010000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "105": {
+   "batch": 7,
+   "verdict": "REFUTED-D10",
+   "nodes": 1481196,
+   "ms": 4150,
+   "root_canon": "00000000020008003800000080008000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "106": {
+   "batch": 7,
+   "verdict": "REFUTED-D10",
+   "nodes": 380591,
+   "ms": 1065,
+   "root_canon": "00000000020008003800000080004000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "108": {
+   "batch": 7,
+   "verdict": "REFUTED-D10",
+   "nodes": 389482,
+   "ms": 1039,
+   "root_canon": "00000000020008003800000080001000",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "109": {
+   "batch": 7,
+   "verdict": "REFUTED-D10",
+   "nodes": 656790,
+   "ms": 1889,
+   "root_canon": "00000000020008003800000080000800",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "110": {
+   "batch": 7,
+   "verdict": "REFUTED-D10",
+   "nodes": 404758,
+   "ms": 1030,
+   "root_canon": "00000000020008003800000080000400",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "112": {
+   "batch": 7,
+   "verdict": "REFUTED-D10",
+   "nodes": 1382231,
+   "ms": 3923,
+   "root_canon": "00000000020008003800000080000100",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "113": {
+   "batch": 7,
+   "verdict": "REFUTED-D10",
+   "nodes": 213032,
+   "ms": 514,
+   "root_canon": "00000000020008003800000080000080",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "114": {
+   "batch": 7,
+   "verdict": "REFUTED-D10",
+   "nodes": 224581,
+   "ms": 568,
+   "root_canon": "00000000020008003800000080000040",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "115": {
+   "batch": 9,
+   "verdict": "REFUTED-D10",
+   "nodes": 93119,
+   "ms": 225,
+   "root_canon": "00000000020008003800000080000020",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "116": {
+   "batch": 8,
+   "verdict": "REFUTED-D10",
+   "nodes": 355634,
+   "ms": 954,
+   "root_canon": "00000000020008003800000080000010",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "117": {
+   "batch": 8,
+   "verdict": "REFUTED-D10",
+   "nodes": 169060,
+   "ms": 407,
+   "root_canon": "00000000020008003800000080000008",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "118": {
+   "batch": 8,
+   "verdict": "REFUTED-D10",
+   "nodes": 243695,
+   "ms": 642,
+   "root_canon": "00000000020008003800000080000004",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  },
+  "120": {
+   "batch": 8,
+   "verdict": "REFUTED-D10",
+   "nodes": 420313,
+   "ms": 1220,
+   "root_canon": "00000000020008003800000080000001",
+   "terminal_stone_range": [
+    13,
+    17
+   ]
+  }
+ },
+ "win7_d10_bits": [],
+ "refuted_d10_bits": [
+  0,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  10,
+  11,
+  12,
+  14,
+  15,
+  16,
+  17,
+  19,
+  21,
+  25,
+  26,
+  27,
+  28,
+  29,
+  30,
+  33,
+  34,
+  35,
+  36,
+  37,
+  38,
+  39,
+  40,
+  41,
+  42,
+  43,
+  44,
+  46,
+  48,
+  49,
+  50,
+  51,
+  66,
+  67,
+  69,
+  70,
+  71,
+  72,
+  74,
+  75,
+  76,
+  78,
+  79,
+  80,
+  84,
+  85,
+  86,
+  87,
+  88,
+  90,
+  92,
+  93,
+  94,
+  95,
+  99,
+  101,
+  102,
+  103,
+  104,
+  105,
+  106,
+  108,
+  109,
+  110,
+  112,
+  113,
+  114,
+  115,
+  116,
+  117,
+  118,
+  120
+ ],
+ "capped_bits": [],
+ "counts": {
+  "win7_d10": 0,
+  "refuted_d10": 80,
+  "capped": 0,
+  "total_bits": 80
+ },
+ "confirmation_bits": [
+  "5",
+  "27",
+  "30",
+  "35",
+  "41",
+  "46",
+  "74",
+  "79",
+  "85",
+  "88",
+  "90",
+  "93",
+  "115"
+ ],
+ "confirmation_outcome": {
+  "5": "REFUTED-D10",
+  "27": "REFUTED-D10",
+  "30": "REFUTED-D10",
+  "35": "REFUTED-D10",
+  "41": "REFUTED-D10",
+  "46": "REFUTED-D10",
+  "74": "REFUTED-D10",
+  "79": "REFUTED-D10",
+  "85": "REFUTED-D10",
+  "88": "REFUTED-D10",
+  "90": "REFUTED-D10",
+  "93": "REFUTED-D10",
+  "115": "REFUTED-D10"
+ },
+ "confirmation_prediction_match": "13/13 REFUTED-D10 as predicted by the census v16 overlay (0 conflicts)",
+ "confirmation_root_canons_match_census_v16_transfers": true,
+ "v15_crosscheck": {
+  "file": "class2-lane-cost80f-v15-crosscheck-a-20261118.jsonl",
+  "pilot_nodes": 5949,
+  "agreement": "13/13 loss=false (0 conflicts)",
+  "file_sha1": "ef2e85f5af2406236aec76c01fc1a7e3cb31a991"
+ },
+ "root_canon_rule": "per-bit root_canon == D4 canon(child | 1<<bit), recomputed independently in this audit",
+ "total_candidate_nodes": 51125648,
+ "open_bits_total": 67,
+ "checks_log": [
+  "batch 1: pilot 3402 + 9 bits, 11060724 candidate nodes",
+  "batch 2: pilot 3402 + 9 bits, 2897917 candidate nodes",
+  "batch 3: pilot 3402 + 9 bits, 3714767 candidate nodes",
+  "batch 4: pilot 3402 + 9 bits, 4553267 candidate nodes",
+  "batch 5: pilot 3402 + 9 bits, 12387175 candidate nodes",
+  "batch 6: pilot 3402 + 9 bits, 4790753 candidate nodes",
+  "batch 7: pilot 3402 + 9 bits, 6073868 candidate nodes",
+  "batch 8: pilot 3402 + 4 bits, 1188702 candidate nodes",
+  "batch 9: pilot 3402 + 13 bits, 4458475 candidate nodes"
+ ],
+ "verdict_semantics": "loss=true => WIN7-D10 (certificate rebuild target); loss=false && !capped => REFUTED-D10, no first-player win within depth 10 from this root (NOT a LOSS proof); verdicts are per 7-stone root only",
+ "unknown_status": "11x11 empty board: UNKNOWN. This sweep proves only WIN7-D10/REFUTED-D10 verdicts for the 80 seven-stone roots of this child and closes no family row by itself; the 11x11 empty board, the two-stone roots {49,60} and {59,60}, S2 {59,60}, and classes 1/2/4 remain UNKNOWN regardless of this sweep's outcome"
+}

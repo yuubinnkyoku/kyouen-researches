@@ -1,0 +1,130 @@
+{
+  "schema": "n11-class2-lane-sterile3-65k-70j-74h-v17-full-recheck-20261117-v1",
+  "date": "2026-11-17",
+  "status": "all 3 K0863-critical STERILE rows re-checked under v17: 209/209 candidates REFUTED-D10 with zero verdict flips, so every STERILE determination stands; however 17 bits across 70j/74h have v17-corrected node counts (v16 probe-exhaustion saturation affected their published raw records), and 65k is entirely fb-unsaturated",
+  "role": "Post-defect assurance re-check of the 3 STERILE rows that carry the K0863 depth-10 unclosability theorem (the best coverable class-2 S5 00000000000000801202000000200000's remaining rows 65k/70j/74h, 209 candidates total, all published REFUTED-D10 and swept with v16 before the cost76c fbtOR-saturation defect was found). Every candidate was re-run with the fbt-repaired v17 engine in a single full-row invocation per row.",
+  "rows": {
+    "65k": {
+      "s6_child": "00000000020000801202000000200000",
+      "candidate_count": 65,
+      "published_raw_batches": {
+        "class2-lane-cost65k-raw-batch1-20261115.jsonl": "4f01bf5784782a8450561b23f3fbf8d935d62075",
+        "class2-lane-cost65k-raw-batch2-20261115.jsonl": "7824ff6251b2980d3ad6cf55ee561772ad75fc55",
+        "class2-lane-cost65k-raw-batch3-20261115.jsonl": "238ae0293c996cd21557e669931ae27d60528814",
+        "class2-lane-cost65k-raw-batch4-20261115.jsonl": "7b7b2f0a0f579804d2c8ea920212f7cca0884f71",
+        "class2-lane-cost65k-raw-batch5-20261115.jsonl": "83f08a50db06cc4776619f1c71dc97936f21598d",
+        "class2-lane-cost65k-raw-batch6-20261115.jsonl": "90d8cab784230f98786b996b75ac30c74f8db8f7",
+        "class2-lane-cost65k-raw-batch7-20261115.jsonl": "754744f76f47b729404b87f7e9f462128a04e885",
+        "class2-lane-cost65k-raw-batch8-20261115.jsonl": "eb395584b6af07b84175dc4f9907560481a5d895"
+      },
+      "v17_output": "class2-lane-cost65k-v17-full-row-20261117.jsonl",
+      "v17_output_blob": "033c54f2a34b4292cee4821d93b7abfe5072b149",
+      "result": {
+        "bits_checked": 65,
+        "verdict_flips": [],
+        "node_count_changes": [],
+        "identical_bits": 65,
+        "v17_total_nodes": 32457462,
+        "v16_published_total_nodes": 32457462,
+        "conclusion": "entirely fb-unsaturated; the published v16 row is exactly reproduced by v17 (all non-timing fields record-identical), STERILE stands on its published basis unchanged"
+      }
+    },
+    "70j": {
+      "s6_child": "00000000000000801282000000200000",
+      "candidate_count": 70,
+      "published_raw_batches": {
+        "class2-lane-cost70j-raw-batch1-20261116.jsonl": "d286d33a422c1fce76209f2949791bfc1ce28628",
+        "class2-lane-cost70j-raw-batch2-20261116.jsonl": "2da34948cfffb92c62e5e2688598b0919fe53fc8",
+        "class2-lane-cost70j-raw-batch3-20261116.jsonl": "4d73908cad70e7543a4073bd2d5eea96bd7e641d",
+        "class2-lane-cost70j-raw-batch4-20261116.jsonl": "72a0033f3d2e8387fb4dd315705fa2f6dd872e38",
+        "class2-lane-cost70j-raw-batch5-20261116.jsonl": "12a44bc1c70dd33d658a367e6390d6328ba25be2",
+        "class2-lane-cost70j-raw-batch6-20261116.jsonl": "3c9e580507f9eedaa61b7fd9bc6dacf6e01bd846",
+        "class2-lane-cost70j-raw-batch7-20261116.jsonl": "c22a636e30ff7d172eccc7b61c59bf7cbaa60bda",
+        "class2-lane-cost70j-raw-batch8-20261116.jsonl": "0cb1a52611f444595f1e26964e5d062789e05e06",
+        "class2-lane-cost70j-raw-batch9-20261116.jsonl": "c652978f87c7d3c85e5b5806d77153b0de308546"
+      },
+      "v17_output": "class2-lane-cost70j-v17-full-row-20261117.jsonl",
+      "v17_output_blob": "0a6419c685f588e9ec3b39cd0bb7980c06dba210",
+      "result": {
+        "bits_checked": 70,
+        "verdict_flips": [],
+        "node_count_changes": {
+          "4": {"v16": 2995745, "v17": 2674531, "delta": -321214},
+          "42": {"v16": 2038300, "v17": 2029149, "delta": -9151},
+          "92": {"v16": 5321927, "v17": 5318901, "delta": -3026},
+          "114": {"v16": 3568157, "v17": 4132619, "delta": 564462},
+          "118": {"v16": 1269110, "v17": 1250100, "delta": -19010}
+        },
+        "identical_bits": 65,
+        "v17_total_nodes": 54103002,
+        "v16_published_total_nodes": 53890941,
+        "node_change_interpretation": "5 bits show v17-vs-v16 node disagreement, which by the established 76c diagnosis implies the v16 searches for those bits hit fbtOR probe exhaustion (dropped circle-block mask updates); the published v16 node counts for bits 4/42/92/114/118 are unreliable and superseded by the v17 values; verdicts are unaffected (all REFUTED-D10 in both engines)",
+        "order_independence_anchors": {
+          "bit 114": {"solo_v17_nodes": 4132619, "full_row_v17_nodes": 4132619, "file": "class2-lane-cost70j-v17-solo-bit114-20261117.jsonl", "blob": "74ac0c120ead1796db20364ab498cbdf9ed0d061"},
+          "bit 92": {"solo_v17_nodes": 5318901, "full_row_v17_nodes": 5318901, "file": "class2-lane-cost70j-v17-solo-bit92-20261117.jsonl", "blob": "91c7243b792c8e184c2dce9642795c0f6f8fc101"},
+          "bit 4": {"solo_v17_nodes": 2674531, "full_row_v17_nodes": 2674531, "file": "class2-lane-cost70j-v17-solo-bit4-20261117.jsonl", "blob": "516c085718618eaf021c1dbe18dc67ce14090372"}
+        },
+        "conclusion": "70/70 candidates REFUTED-D10 under v17, so the STERILE determination stands; 5 published v16 raw node counts are superseded by v17"
+      }
+    },
+    "74h": {
+      "s6_child": "00000000000000889002000000000800",
+      "candidate_count": 74,
+      "published_raw_batches": {
+        "class2-lane-cost74h-raw-batch1-20261115.jsonl": "cfc56f46e7536ddaecd88708fd765bed42ae8d92",
+        "class2-lane-cost74h-raw-batch2-20261115.jsonl": "4e39806e6d322eff7b8b70b2b057a7500c1cc118",
+        "class2-lane-cost74h-raw-batch3-20261115.jsonl": "4697750895c09d88c863301a2eb9d97fed9b8523",
+        "class2-lane-cost74h-raw-batch4-20261115.jsonl": "44f6515800983e3da7baecf4ec5b75ac07b0e567",
+        "class2-lane-cost74h-raw-batch5-20261115.jsonl": "226a333b52f97f998136069e6b02ac189674cd95",
+        "class2-lane-cost74h-raw-batch6-20261115.jsonl": "7b767d62d801df7151f930844c9809079bae4c5c",
+        "class2-lane-cost74h-raw-batch7-20261115.jsonl": "df382ea1d80983cf75022c0975e0b892e34f3d33",
+        "class2-lane-cost74h-raw-batch8-20261115.jsonl": "21a83f8ce5afba70d3bdf36c7590d11d660841d9",
+        "class2-lane-cost74h-raw-batch9-20261115.jsonl": "30070675dbfee3b7f25f37f4ad7ff614c8543a14",
+        "class2-lane-cost74h-raw-batch10-20261115.jsonl": "8e0547394eefd9fa5d86c955cece6527583952bc"
+      },
+      "v17_output": "class2-lane-cost74h-v17-full-row-20261117.jsonl",
+      "v17_output_blob": "dfc2271201c60adc105a7a72ca71e44071192414",
+      "result": {
+        "bits_checked": 74,
+        "verdict_flips": [],
+        "node_count_changes": {
+          "4": {"v16": 2071946, "v17": 2067581, "delta": -4365},
+          "14": {"v16": 1128637, "v17": 1128252, "delta": -385},
+          "32": {"v16": 1291934, "v17": 1268135, "delta": -23799},
+          "54": {"v16": 2666759, "v17": 2669691, "delta": 2932},
+          "64": {"v16": 2862033, "v17": 2966339, "delta": 104306},
+          "87": {"v16": 6415648, "v17": 6131802, "delta": -283846},
+          "89": {"v16": 2816749, "v17": 2818838, "delta": 2089},
+          "94": {"v16": 1436694, "v17": 1436643, "delta": -51},
+          "98": {"v16": 1317835, "v17": 1311610, "delta": -6225},
+          "106": {"v16": 2977980, "v17": 3434786, "delta": 456806},
+          "108": {"v16": 1390676, "v17": 1389698, "delta": -978},
+          "116": {"v16": 1438625, "v17": 1427242, "delta": -11383}
+        },
+        "identical_bits": 62,
+        "v17_total_nodes": 72955237,
+        "v16_published_total_nodes": 72720136,
+        "node_change_interpretation": "12 bits show v17-vs-v16 node disagreement (v16 probe-exhaustion saturation in those searches); the published v16 node counts for these 12 bits are superseded by the v17 values; verdicts are unaffected (all REFUTED-D10 in both engines); the unsaturated v16 records of this row remain exactly reproducible (62/62, including heaviest bits 62 4,314,481 and 86 3,558,261)",
+        "conclusion": "74/74 candidates REFUTED-D10 under v17, so the STERILE determination stands; 12 published v16 raw node counts are superseded by v17"
+      }
+    }
+  },
+  "aggregate": {
+    "rows": 3,
+    "candidates": 209,
+    "verdict_flips_total": 0,
+    "identical_bits_total": 192,
+    "node_corrected_bits_total": 17,
+    "v17_total_nodes": 159315701,
+    "v16_published_total_nodes": 159068539,
+    "conclusion": "every candidate of all three STERILE rows is REFUTED-D10 under the fbt-repaired v17 engine with zero verdict flips, so the K0863 STERILE-row depth-10 unclosability theorem's verdict basis is intact; 17 published v16 raw node counts (5 in 70j, 12 in 74h) are superseded by v17 values because their v16 searches hit fbtOR probe exhaustion"
+  },
+  "empirical_saturation_note": "saturation is not a function of node count alone: in this re-check the smallest node-corrected bit is 74h bit 14 at 1,128,637 nodes while 70j bit 9 at 5,928,340 nodes and 74h bits 62/86 (4.3M/3.6M) were unsaturated and exactly reproduced; the practical detector for past-lane rows remains the v17 node-count disagreement (or a direct probe measurement), not the node magnitude",
+  "engine_settings": "v17 (class4_child1_runner_v17.ts, blob c132cc6425eee3feaeef1d697dd74f968cfedb59), depth 10, cap 1e9, andclose 1, one full-row invocation per row (1 pilot_d6 control at exactly 3402 nodes per row); published v16 sweeps used 8-bit batches with a 3402-node pilot per batch",
+  "caveats": [
+    "REFUTED-D10 is not a LOSS proof; STERILE is not a game-theoretic value for the rows",
+    "the 4 cost-64e transferred bits and other cross-row REFUTED-D10 transfers inherit their verdicts from other published rows, which remain queued for their own v17 re-checks",
+    "folded WIN7-D10 receipts elsewhere were certificate-verified independently and remain valid proofs",
+    "11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, class 1/2/4 all remain UNKNOWN"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "schema": "n11-win7-certificate-independent-bigint-audit-v1",
+  "source_main_head": "7cec3e7e8960e2099d53d306a4ca0eafd6f284e4",
+  "certificate_path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost69e-certificates/bit21-root-00000000000000803202000000208000.cert",
+  "certificate_blob_sha": "507351ff0cb58df80d1231db9ea62228a7293d20",
+  "certificate_md5": "b229fe7c0c96901fe04ddf05763ffb9e",
+  "certificate_sha256": "8c730b8880f9734d5cc156b19a5b9c62484ba4ffea49494eb5913ae3d4d84203",
+  "independent_method": "BigInt 3x3 cofactor expansion of the exact lifted determinant [x²+y²,x,y,1]; no floating point; no solver, verdict cache, or repository verifier import.",
+  "execution_note": "The verifier core was executed in V8 in this run against five paged reads of the committed certificate. The committed Node CLI wrapper is the reusable source; it was not separately launched from a local repository checkout.",
+  "result": {
+    "root_hex": "00000000000000803202000000208000",
+    "root_stones": 7,
+    "root_safe": true,
+    "root_mobility": 45,
+    "strategy_rows": 22261,
+    "rows_sorted_unique": true,
+    "subroots_passed": 45,
+    "consumed_winner_rows": 22261,
+    "union_missing": 0,
+    "union_extra": 0,
+    "visited_states_across_subroots": 51285,
+    "winner_states": 33402,
+    "loser_states": 10753,
+    "loser_reply_edges": 48620,
+    "terminal_count": 7130,
+    "terminal_range": [
+      13,
+      17
+    ],
+    "forbidden_triple_cache_entries": 13504,
+    "legal_state_cache_entries": 33455
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "schema": "n11-class2-lane-cost74-sweep-20261114-v1",
+  "date": "2026-11-14",
+  "session": "long-term lane session 10 (2026-11-14)",
+  "s5_parent_hex": "00000000000000809082000000000000",
+  "s6_child_hex": "00000000000000809082000100000000",
+  "s6_s7_edge_cost": 74,
+  "demand_classes": {
+    "c1": 2,
+    "c2": 2,
+    "c4": 0
+  },
+  "candidate_enumeration": "legal_candidates.py independent Bareiss 4x4 enumeration: 74 legal candidates, bit-exact with the published edge cost 74 (after-cost71 CSV row); candidate list recorded in class2-lane-cost74-inflight-20261114.json",
+  "win7_d10": 0,
+  "win7_bits": [],
+  "refuted_d10": 74,
+  "capped": 0,
+  "total_nodes": 490965731,
+  "pilot_d6_controls": "loss=false at exactly 5,949 nodes in all 14 batch invocations (default control on every runner call)",
+  "terminal_stone_range_all": [
+    [
+      13,
+      17
+    ]
+  ],
+  "heaviest_bits": [
+    {
+      "bit": 15,
+      "nodes": 27452305
+    },
+    {
+      "bit": 70,
+      "nodes": 19146135
+    },
+    {
+      "bit": 20,
+      "nodes": 18131025
+    },
+    {
+      "bit": 12,
+      "nodes": 15359133
+    },
+    {
+      "bit": 23,
+      "nodes": 13783873
+    },
+    {
+      "bit": 9,
+      "nodes": 13772045
+    }
+  ],
+  "heaviest_fresh_rerun_node_exact": "bits 15 (27,452,305), 70 (19,146,135), 20 (18,131,025) re-solved fresh in separate processes after the sweep: node counts identical (class2-lane-cost74-determinism-rerun-20261114.jsonl)",
+  "raw_batches": "class2-lane-cost74-raw-batch1..13-20261114.jsonl (74 candidate lines + pilot control per batch)",
+  "notes": "18th sterile child overall; first sterile child at the cost-74 edge level of this target. All 74 REFUTED-D10 with cap 1e9, so no capped candidate weakens the result. Terminal stone range uniformly [13,17].",
+  "interpretation_guard": "REFUTED-D10 is the absence of a winner-win-within-depth-10 in each 7-stone subtree; it is NOT a refutation of the child, and this record is not a claim about the 11x11 empty root / {49,60} / S2 {59,60} / class 2 / class 4 which remain UNKNOWN",
+  "unknown_status": "11x11 empty board, two-stone root {49,60}, S2 {59,60}, class 2, class 4: UNKNOWN"
+}

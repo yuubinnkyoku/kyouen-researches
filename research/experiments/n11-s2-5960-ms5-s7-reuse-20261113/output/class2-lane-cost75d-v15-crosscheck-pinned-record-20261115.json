@@ -1,0 +1,82 @@
+{
+ "schema": "n11-class2-lane-cost75d-v15-crosscheck-pinned-record-20261115-v1",
+ "date": "2026-11-15",
+ "lane": "long-term class2 lane (75d sweep + certificates session, pre-reset)",
+ "purpose": "preserve the v15 cross-engine check-engine results for the cost-75d WIN7-D10 bits against unreproducible local-only state (the original local JSONL was not pushed before an execution-environment outage; this record transcribes the in-session verified pins)",
+ "provenance": "transcribed from the sweeping lane's own verified session pins (values recorded and checked when the crosscheck was originally run); NOT the original raw JSONL bytes; if the original local file survives, it supersedes this record and a fold script may assert original-vs-this equality",
+ "engine_note": "v15 cross-engine run of the cost-75d child 00000000000040801202000000200000 (75 candidates); pilot control d6 nodes=5949 per run; 3 pilot lines + 9 records = 12 lines",
+ "child": "00000000000040801202000000200000",
+ "edge_cost": 75,
+ "pilots": [
+  {
+   "control": "pilot_d6",
+   "loss": false,
+   "nodes": 5949,
+   "capped": false
+  },
+  {
+   "control": "pilot_d6",
+   "loss": false,
+   "nodes": 5949,
+   "capped": false
+  },
+  {
+   "control": "pilot_d6",
+   "loss": false,
+   "nodes": 5949,
+   "capped": false
+  }
+ ],
+ "win_records": [
+  {
+   "bit": 12,
+   "loss": true,
+   "nodes": 1406438
+  },
+  {
+   "bit": 40,
+   "loss": true,
+   "nodes": 7087163
+  },
+  {
+   "bit": 92,
+   "loss": true,
+   "nodes": 16644786
+  },
+  {
+   "bit": 111,
+   "loss": true,
+   "nodes": 10234430
+  }
+ ],
+ "refuted_anchor_records": [
+  {
+   "bit": 0,
+   "loss": false,
+   "nodes": 407624
+  },
+  {
+   "bit": 2,
+   "loss": false,
+   "nodes": 3150598
+  },
+  {
+   "bit": 4,
+   "loss": false,
+   "nodes": 1532737
+  },
+  {
+   "bit": 6,
+   "loss": false,
+   "nodes": 604694
+  },
+  {
+   "bit": 86,
+   "loss": false,
+   "nodes": 11782891
+  }
+ ],
+ "semantics": "loss=true => v15 agrees the 7-stone root is a WIN7-D10 candidate; loss=false on the five anchor bits => v15 agrees no first-player win within depth 10 there; REFUTED-D10 is NOT a LOSS proof",
+ "independent_audit_cross_reference": "class2-lane-cost75d-raw-sweep-independent-audit-20261115.json re-aggregated the ten raw v16 batches (75 candidates, WIN bits [12,40,92,111], 71 REFUTED, 0 capped, 143,552,593 nodes) from published main artifacts",
+ "unknown_status": "11x11 empty board: UNKNOWN. This record changes no frontier number and no game-theoretic value."
+}

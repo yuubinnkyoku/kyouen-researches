@@ -1,0 +1,327 @@
+{
+ "all_ok": true,
+ "band": "cost-73l",
+ "date": "2026-11-17",
+ "determinism": {
+  "bit": 1,
+  "md5_run1": "114b255f4bf3b4d1dfcb3f8cfe80795f",
+  "md5_run2": "114b255f4bf3b4d1dfcb3f8cfe80795f",
+  "nodes_run1": 1456164,
+  "nodes_run2": 1456164
+ },
+ "fixB_ratio_vs_published": 0.1226,
+ "fixB_total_nodes": 52079030,
+ "fix_level_source": "K0907 (commit b119a433) fixB battery on 73k",
+ "gates": {
+  "byte_identical_32of32": true,
+  "determinism_bit1_bytes": true,
+  "determinism_bit1_nodes": true,
+  "fatal_zero": true,
+  "fbt_drops_zero": true,
+  "pins_4of4": true,
+  "rows_match_32of32": true
+ },
+ "interpretation_guard": "Measurement only. No new WIN/LOSS verdicts, no manifest row opened or closed, certificate bytes unchanged. The fixed variant is not a replacement for the repo-verbatim extractor for published determinism chains; adoption for future bands is a separate lane decision. WIN7-D10 proves a first-player win within depth 10 from the individual 7-stone roots only; REFUTED-D10 is not a LOSS proof. The 11x11 empty board, both two-stone roots {49,60} and {59,60}, S2 {59,60} and classes 1/2/4 all remain UNKNOWN.",
+ "per_bit": [
+  {
+   "bit": 1,
+   "byte_identical": true,
+   "fixB_nodes": 1456164,
+   "md5": "114b255f4bf3b4d1dfcb3f8cfe80795f",
+   "published_verbatim_nodes": 11911796,
+   "ratio_vs_published": 0.1222,
+   "rows": 50377
+  },
+  {
+   "bit": 2,
+   "byte_identical": true,
+   "fixB_nodes": 1065412,
+   "md5": "39d7def0eb261a4f21392050e2e7d5c2",
+   "published_verbatim_nodes": 10434625,
+   "ratio_vs_published": 0.1021,
+   "rows": 40116
+  },
+  {
+   "bit": 3,
+   "byte_identical": true,
+   "fixB_nodes": 1926496,
+   "md5": "ed71500eb477107754a35c9c2648576a",
+   "published_verbatim_nodes": 16988371,
+   "ratio_vs_published": 0.1134,
+   "rows": 67015
+  },
+  {
+   "bit": 4,
+   "byte_identical": true,
+   "fixB_nodes": 1863645,
+   "md5": "b05f67c9827f3a33d28a453430a43c37",
+   "published_verbatim_nodes": 14334219,
+   "ratio_vs_published": 0.13,
+   "rows": 64430
+  },
+  {
+   "bit": 6,
+   "byte_identical": true,
+   "fixB_nodes": 1895488,
+   "md5": "2c003f15cbab235eee87426dd4ca6771",
+   "published_verbatim_nodes": 15666095,
+   "ratio_vs_published": 0.121,
+   "rows": 63971
+  },
+  {
+   "bit": 8,
+   "byte_identical": true,
+   "fixB_nodes": 1177805,
+   "md5": "9f245a01d0ce48a7e47782ecf1d4fd71",
+   "published_verbatim_nodes": 10638032,
+   "ratio_vs_published": 0.1107,
+   "rows": 49052
+  },
+  {
+   "bit": 9,
+   "byte_identical": true,
+   "fixB_nodes": 2214966,
+   "md5": "807c0aedd1edfd8c4266354a483f6bfe",
+   "published_verbatim_nodes": 16489294,
+   "ratio_vs_published": 0.1343,
+   "rows": 70732
+  },
+  {
+   "bit": 18,
+   "byte_identical": true,
+   "fixB_nodes": 2631373,
+   "md5": "e709c32e5d5c0daab4687188f7caf603",
+   "published_verbatim_nodes": 20672244,
+   "ratio_vs_published": 0.1273,
+   "rows": 82404
+  },
+  {
+   "bit": 21,
+   "byte_identical": true,
+   "fixB_nodes": 1347483,
+   "md5": "14b52357ac5b2edfb5e6a4f6115d4e60",
+   "published_verbatim_nodes": 9438456,
+   "ratio_vs_published": 0.1428,
+   "rows": 47227
+  },
+  {
+   "bit": 23,
+   "byte_identical": true,
+   "fixB_nodes": 1323384,
+   "md5": "97afa10bb0268c1aae9098c61d105204",
+   "published_verbatim_nodes": 12319308,
+   "ratio_vs_published": 0.1074,
+   "rows": 45805
+  },
+  {
+   "bit": 25,
+   "byte_identical": true,
+   "fixB_nodes": 1804772,
+   "md5": "2831eebf1cd44ba4b6a7e11434b89dc0",
+   "published_verbatim_nodes": 18394863,
+   "ratio_vs_published": 0.0981,
+   "rows": 56015
+  },
+  {
+   "bit": 28,
+   "byte_identical": true,
+   "fixB_nodes": 830511,
+   "md5": "ecd6f74c0373a5d1fdb376ec5bbf4d4f",
+   "published_verbatim_nodes": 6873526,
+   "ratio_vs_published": 0.1208,
+   "rows": 36144
+  },
+  {
+   "bit": 29,
+   "byte_identical": true,
+   "fixB_nodes": 1098951,
+   "md5": "dc03787da9e924e80a3498dd31607cb5",
+   "published_verbatim_nodes": 10313436,
+   "ratio_vs_published": 0.1066,
+   "rows": 44901
+  },
+  {
+   "bit": 32,
+   "byte_identical": true,
+   "fixB_nodes": 1664726,
+   "md5": "bc8fe36e98c88456d8cf52590db8d8df",
+   "published_verbatim_nodes": 12508103,
+   "ratio_vs_published": 0.1331,
+   "rows": 59751
+  },
+  {
+   "bit": 34,
+   "byte_identical": true,
+   "fixB_nodes": 1412352,
+   "md5": "7c5a9a17db46f55ede94b966b7d4a251",
+   "published_verbatim_nodes": 12403562,
+   "ratio_vs_published": 0.1139,
+   "rows": 50365
+  },
+  {
+   "bit": 41,
+   "byte_identical": true,
+   "fixB_nodes": 593853,
+   "md5": "2797dcc4bf0526eed375fde7eec1052e",
+   "published_verbatim_nodes": 4208674,
+   "ratio_vs_published": 0.1411,
+   "rows": 24672
+  },
+  {
+   "bit": 42,
+   "byte_identical": true,
+   "fixB_nodes": 1728646,
+   "md5": "eecdc2d6f19d1a5246cb909a1d993ea5",
+   "published_verbatim_nodes": 11830318,
+   "ratio_vs_published": 0.1461,
+   "rows": 53683
+  },
+  {
+   "bit": 44,
+   "byte_identical": true,
+   "fixB_nodes": 1645373,
+   "md5": "f2e8de82b0f298a0d1a91b3677fc8b3f",
+   "published_verbatim_nodes": 14887701,
+   "ratio_vs_published": 0.1105,
+   "rows": 50042
+  },
+  {
+   "bit": 47,
+   "byte_identical": true,
+   "fixB_nodes": 2627285,
+   "md5": "8d5d143c9ec1281bd1d168b17b494fbc",
+   "published_verbatim_nodes": 22283713,
+   "ratio_vs_published": 0.1179,
+   "rows": 76323
+  },
+  {
+   "bit": 53,
+   "byte_identical": true,
+   "fixB_nodes": 1370304,
+   "md5": "d5dd1ed309c8c4ac73941e71ed85bb6f",
+   "published_verbatim_nodes": 11424479,
+   "ratio_vs_published": 0.1199,
+   "rows": 45165
+  },
+  {
+   "bit": 54,
+   "byte_identical": true,
+   "fixB_nodes": 1246531,
+   "md5": "0f35153391b68f715d97418ee974d8d6",
+   "published_verbatim_nodes": 9826357,
+   "ratio_vs_published": 0.1269,
+   "rows": 42923
+  },
+  {
+   "bit": 61,
+   "byte_identical": true,
+   "fixB_nodes": 532698,
+   "md5": "1391b4c4faf8152ab706637280c0014c",
+   "published_verbatim_nodes": 3775056,
+   "ratio_vs_published": 0.1411,
+   "rows": 28229
+  },
+  {
+   "bit": 62,
+   "byte_identical": true,
+   "fixB_nodes": 1052375,
+   "md5": "0fb3a68b40cb03408e7747ef002b9d9b",
+   "published_verbatim_nodes": 9964422,
+   "ratio_vs_published": 0.1056,
+   "rows": 43253
+  },
+  {
+   "bit": 64,
+   "byte_identical": true,
+   "fixB_nodes": 2436021,
+   "md5": "9bf9a00ac7ac6623ecb2399078793710",
+   "published_verbatim_nodes": 22369552,
+   "ratio_vs_published": 0.1089,
+   "rows": 55024
+  },
+  {
+   "bit": 66,
+   "byte_identical": true,
+   "fixB_nodes": 1869470,
+   "md5": "6807fdc3e6c4c23b669e1521f45aee2e",
+   "published_verbatim_nodes": 14037499,
+   "ratio_vs_published": 0.1332,
+   "rows": 57251
+  },
+  {
+   "bit": 80,
+   "byte_identical": true,
+   "fixB_nodes": 1089773,
+   "md5": "29ccacbb30872331c7edf99fdfea87ca",
+   "published_verbatim_nodes": 9851145,
+   "ratio_vs_published": 0.1106,
+   "rows": 37590
+  },
+  {
+   "bit": 95,
+   "byte_identical": true,
+   "fixB_nodes": 1341762,
+   "md5": "b5eae4f903e4f0d177d95342b2674433",
+   "published_verbatim_nodes": 11436328,
+   "ratio_vs_published": 0.1173,
+   "rows": 49006
+  },
+  {
+   "bit": 105,
+   "byte_identical": true,
+   "fixB_nodes": 2152086,
+   "md5": "b37546e28aed898aea2fdeb2b7def0e4",
+   "published_verbatim_nodes": 16761836,
+   "ratio_vs_published": 0.1284,
+   "rows": 60179
+  },
+  {
+   "bit": 112,
+   "byte_identical": true,
+   "fixB_nodes": 2596088,
+   "md5": "af72c16c0d1f4da66dcd1574138e440b",
+   "published_verbatim_nodes": 19697224,
+   "ratio_vs_published": 0.1318,
+   "rows": 63235
+  },
+  {
+   "bit": 113,
+   "byte_identical": true,
+   "fixB_nodes": 1294190,
+   "md5": "8030a20eeff0493a7ff3293a56732162",
+   "published_verbatim_nodes": 8855424,
+   "ratio_vs_published": 0.1461,
+   "rows": 49267
+  },
+  {
+   "bit": 116,
+   "byte_identical": true,
+   "fixB_nodes": 2968444,
+   "md5": "1dec0c4b094e6a4b64fbb11aecf37164",
+   "published_verbatim_nodes": 22587921,
+   "ratio_vs_published": 0.1314,
+   "rows": 73217
+  },
+  {
+   "bit": 119,
+   "byte_identical": true,
+   "fixB_nodes": 1820603,
+   "md5": "0a8b2087ccb0dc0d5f9945504cca5fbe",
+   "published_verbatim_nodes": 11473533,
+   "ratio_vs_published": 0.1587,
+   "rows": 55839
+  }
+ ],
+ "pins": {
+  "driver_73l_blob": "f997a7cf33d60700c88a5b0314cf15dbe2f05f07",
+  "extractor_exact_blob": "52bcaf509ea12fad4c936501d30d26b5b66c0085",
+  "legal_blob": "8e97082c42838c7a4a4b6d2dd235276c8d43ab9a",
+  "manifest_blob": "6e0a94aba212ba54bb5329fbea4643c9dcdb1ec4"
+ },
+ "published_rows_total": 1693203,
+ "published_verbatim_ms23_total_nodes": 424657112,
+ "reference_73k_fixB_ratio": 0.2607,
+ "s6_child_hex": "00000000000000c09002000000400000",
+ "schema": "n11-class2-lane-fixed-memo-battery-73l-v1",
+ "variant": "fixB (BUG A Int32Array memo keys + BUG B sentinel-aware negative bounds; 3 line-level changes + published ms23 MS line)"
+}

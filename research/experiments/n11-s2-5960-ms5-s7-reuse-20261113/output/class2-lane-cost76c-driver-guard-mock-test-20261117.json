@@ -1,0 +1,88 @@
+{
+  "schema": "n11-cost76c-driver-guard-mock-test-v1",
+  "date": "2026-11-17",
+  "source_main_before_driver": "be687ae015357e84beffe9fad8bb842dd7db9ea1",
+  "claim_after_update": {
+    "schema": "n11-class2-lane-cost76c-sweep-complete-20261117-v6",
+    "blob_sha": "c58a35a960018ff0d45c44d3efa1383da5c4898f",
+    "commit": "ecd9317f9b358dabc66c9653ee2ccf3f8a31c724"
+  },
+  "target": {
+    "child_hex": "00000000010000809002000001000000",
+    "child_stones": [
+      24,
+      49,
+      60,
+      63,
+      71,
+      88
+    ],
+    "selected_bit": 61,
+    "seven_stone_root_hex": "0000000001000080b002000001000000"
+  },
+  "driver": {
+    "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/cert_driver76c.ts",
+    "blob_sha": "af6dc9b98de4e632246399077908a8d184c08f2a",
+    "extractor_path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/class4_child1_cert_extractor_exact_v16.ts",
+    "extractor_blob_sha": "5518d375fc6b4a7a14c22a1a65586f0c1c5731c0"
+  },
+  "test": {
+    "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/test_cert_driver76c_guard.mjs",
+    "blob_sha": "7e342afbec0455ce9dedb01870860f2e14ba0746",
+    "runtime": "Node v22.16.0 with --experimental-strip-types",
+    "mode": "mocked extractBatch; actual v16 extractor was not invoked"
+  },
+  "cases": [
+    {
+      "name": "success",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "output_created": true,
+      "pass": true
+    },
+    {
+      "name": "fatal_and_fbt_drops",
+      "expected_exit": 1,
+      "actual_exit": 1,
+      "output_created": false,
+      "pass": true
+    },
+    {
+      "name": "fbt_drops_without_fatal",
+      "expected_exit": 1,
+      "actual_exit": 1,
+      "output_created": false,
+      "pass": true
+    },
+    {
+      "name": "missing_rows",
+      "expected_exit": 1,
+      "actual_exit": 1,
+      "output_created": false,
+      "pass": true
+    },
+    {
+      "name": "incomplete_per_move",
+      "expected_exit": 1,
+      "actual_exit": 1,
+      "output_created": false,
+      "pass": true
+    },
+    {
+      "name": "selected_bit_already_occupied",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "output_created": false,
+      "pass": true
+    }
+  ],
+  "summary": {
+    "cases": 6,
+    "passed": 6,
+    "failed": 0,
+    "all_pass": true,
+    "actual_certificate_extracted": false,
+    "receipt_fold_changed": false,
+    "search_semantics_changed": false
+  }
+}

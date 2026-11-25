@@ -1,0 +1,158 @@
+{
+ "schema": "n11-corpus-raw-vs-audit-node-sum-audit-20261116-v1",
+ "date": "2026-11-16",
+ "method": "independent stdlib re-derivation from the raw batch jsonl files on current main: per-batch and total node sums, candidate bit sets, candidate counts, WIN7 bit sets, and recorded git blob sha1s, compared against every published sweep-audit JSON (5 schema generations)",
+ "audits_checked": 29,
+ "raw_batches_checked": 273,
+ "checks_passed": 471,
+ "mismatches": 0,
+ "motivation": "the 2026-11-15 concurrent-run race (10b054ef) drifted cost-69h batch1 node totals by +611,900 while keeping the bit set, which the X6 bit-set comparison of the second independent verification could not see; this node-sum audit closes that detection gap corpus-wide",
+ "per_audit": {
+  "class2-lane-cost60c-sweep-audit-20261116.json": {
+   "schema": "A",
+   "batches": 8,
+   "checks": 16
+  },
+  "class2-lane-cost62b-sweep-audit-20261116.json": {
+   "schema": "A",
+   "batches": 10,
+   "checks": 20
+  },
+  "class2-lane-cost63f-sweep-audit-20261115.json": {
+   "schema": "A",
+   "batches": 8,
+   "checks": 16
+  },
+  "class2-lane-cost64c-sweep-audit-20261116.json": {
+   "schema": "A",
+   "batches": 8,
+   "checks": 16
+  },
+  "class2-lane-cost65k-sweep-audit-20261115.json": {
+   "schema": "A",
+   "batches": 8,
+   "checks": 16
+  },
+  "class2-lane-cost69h-sweep-audit-20261115.json": {
+   "schema": "A",
+   "batches": 9,
+   "checks": 18
+  },
+  "class2-lane-cost70d-sweep-audit-20261115.json": {
+   "schema": "A",
+   "batches": 9,
+   "checks": 18
+  },
+  "class2-lane-cost70e-sweep-audit-20261115.json": {
+   "schema": "A",
+   "batches": 9,
+   "checks": 18
+  },
+  "class2-lane-cost70f-sweep-audit-20261115.json": {
+   "schema": "A",
+   "batches": 9,
+   "checks": 18
+  },
+  "class2-lane-cost70j-sweep-audit-20261116.json": {
+   "schema": "A",
+   "batches": 9,
+   "checks": 18
+  },
+  "class2-lane-cost71c-sweep-audit-20261115.json": {
+   "schema": "A",
+   "batches": 9,
+   "checks": 18
+  },
+  "class2-lane-cost72c-sweep-audit-20261115.json": {
+   "schema": "A",
+   "batches": 9,
+   "checks": 18
+  },
+  "class2-lane-cost73f-sweep-audit-20261115.json": {
+   "schema": "A",
+   "batches": 10,
+   "checks": 20
+  },
+  "class2-lane-cost73g-sweep-audit-20261115.json": {
+   "schema": "A",
+   "batches": 10,
+   "checks": 20
+  },
+  "class2-lane-cost73h-sweep-audit-20261115.json": {
+   "schema": "A",
+   "batches": 10,
+   "checks": 20
+  },
+  "class2-lane-cost74f-sweep-audit-20261115.json": {
+   "schema": "A",
+   "batches": 10,
+   "checks": 20
+  },
+  "class2-lane-cost74h-sweep-audit-20261115.json": {
+   "schema": "A",
+   "batches": 10,
+   "checks": 20
+  },
+  "class4-lane-cost82b-sweep-audit-20261115.json": {
+   "schema": "A",
+   "batches": 11,
+   "checks": 22
+  },
+  "class4-lane-cost84-sweep-audit-20261115.json": {
+   "schema": "A",
+   "batches": 11,
+   "checks": 22
+  },
+  "class4-lane-cost87-raw-sweep-audit-20261116.json": {
+   "schema": "A",
+   "batches": 11,
+   "checks": 22
+  },
+  "class2-lane-cost69f-sweep-audit-20261115.json": {
+   "schema": "B",
+   "batches": 9,
+   "checks": 19
+  },
+  "class2-lane-cost74d-sweep-audit-20261115.json": {
+   "schema": "B'",
+   "batches": 10,
+   "checks": 12
+  },
+  "class2-lane-cost76a-sweep-audit-20261115.json": {
+   "schema": "B'",
+   "batches": 10,
+   "checks": 12
+  },
+  "class2-lane-cost78a-sweep-audit-20261115.json": {
+   "schema": "B'",
+   "batches": 10,
+   "checks": 12
+  },
+  "class2-lane-cost75e-sweep-audit-20261116.json": {
+   "schema": "C",
+   "batches": 10,
+   "checks": 13
+  },
+  "class2-lane-cost76d-sweep-audit-20261116.json": {
+   "schema": "C",
+   "batches": 10,
+   "checks": 3
+  },
+  "class2-lane-cost70c-raw-sweep-audit-20261115.json": {
+   "schema": "D",
+   "batches": 9,
+   "checks": 3
+  },
+  "class2-lane-cost63g-sweep-audit-20261115.json": {
+   "schema": "E",
+   "batches": 8,
+   "checks": 10
+  },
+  "class2-lane-cost67c-sweep-audit-20261115.json": {
+   "schema": "E",
+   "batches": 9,
+   "checks": 11
+  }
+ },
+ "unknown_status": "bookkeeping only; REFUTED-D10 is NOT a loss proof; the 11x11 empty board, both two-stone roots {49,60}/{59,60}, S2 {59,60}, class 1/2/4 all remain UNKNOWN"
+}

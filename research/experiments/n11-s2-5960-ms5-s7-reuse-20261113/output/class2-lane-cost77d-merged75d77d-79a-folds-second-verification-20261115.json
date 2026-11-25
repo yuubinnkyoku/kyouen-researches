@@ -1,0 +1,217 @@
+{
+ "schema": "n11-class2-lane-cost77d-merged75d77d-79a-folds-second-verification-20261115-v1",
+ "date": "2026-11-15",
+ "lane": "class2-lane long-term lane (second independent verification session)",
+ "verified_folds": [
+  "cost-77d receipts fold: head 1290/6557/517923/4827/381646 -> 1299/6548/517249/4818/380972 (12 receipts, child closed by bit7)",
+  "merged cost-75d+77d warm-hygiene fold: head 1296/6551/517468/4821/381191 -> 1302/6545/517025/4815/380748 (11 receipts, bit-78 excluded as duplicate, no child closure claimed)",
+  "cost-79a receipts fold: head 1302 -> 1304/6543/516873/4813/380596 (3 receipts bits 9/50/64, child closed by bit9, second target S5 11/866 -> 10/787)",
+  "cost-80d receipts fold: head 1304 -> 1305/6542/516793/4812/380516 (4 receipts bits 48/61/81/96, child closed by bit48, second target S5 10/787 -> 9/707, now the best coverable class-2)"
+ ],
+ "method": "fresh codeload-main mirror (plus the published cost-80d artifacts fetched from main and blob-pinned before the rerun); the four published fold scripts re-executed end-to-end twice; every built-in control passed on both runs and all 12 regenerated artifacts were byte-identical to the published git blobs on both runs; additional independent controls: an 8-element D4 board-group implementation and exact-integer Bareiss determinants written for this verification (no repository engine, solver, cache or df-pn import, no floating point)",
+ "inputs": "published main bytes only (codeload tarball mirror); no state from the landing sessions was reused",
+ "fold_script_blobs": {
+  "recompute_frontier_cost77d_receipts_20261115.py": {
+   "git_blob_sha": "89f35fb40d36b9e5ffc8daaec965380aba307b2f",
+   "bytes": 23099,
+   "md5": "b91014eb4d550bb906803cf3373cb90f"
+  },
+  "recompute_frontier_merged_cost75d_77d_20261115.py": {
+   "git_blob_sha": "51e59bb6ee8e64e80c8765ccd3b71167679b1b29",
+   "bytes": 21536,
+   "md5": "783016b9af0addfaf83a699a17ed945a"
+  },
+  "recompute_frontier_cost79a_receipts_20261115.py": {
+   "git_blob_sha": "526e683b7409123a5b2234755038f921fcd3ff0f",
+   "bytes": 22512,
+   "md5": "549a4033a3532dfe08603cebdf4ac351"
+  },
+  "recompute_frontier_cost80d_receipts_20261115.py": {
+   "git_blob_sha": "31dc2cff87e064334668a8ef7c99a26cb311fef4",
+   "bytes": 22505,
+   "md5": "f660f62e2e9503d8846b03f5416e341d"
+  }
+ },
+ "outputs_byte_identical_to_main": {
+  "class-frontier-cost77d-receipts-recompute-20261115.json": {
+   "git_blob_sha": "d19c96b7cb0a01f8fd50179b3ff77595408537d7",
+   "bytes": 13128,
+   "md5": "77959f9d29bb6d64b2fdd7b565b59beb"
+  },
+  "class-frontier-s5-ranking-after-cost77d-receipts-20261115.csv": {
+   "git_blob_sha": "a69f5e7a19ccb0ef4565de6c6b5be303eb80e60c",
+   "bytes": 7538,
+   "md5": "fe65a756eadd5dc3334d14fc7115c068"
+  },
+  "class-frontier-top-candidates-s6-after-cost77d-receipts-20261115.csv": {
+   "git_blob_sha": "49b7f37815f120829d86cd2370dbd0026dec1d63",
+   "bytes": 7416,
+   "md5": "195c29a36867e2c0a7221ddb791d29d1"
+  },
+  "class-frontier-merged-cost75d-77d-receipts-recompute-20261115.json": {
+   "git_blob_sha": "97130384432e4a0e1e022292748f9fed1e957c0f",
+   "bytes": 12460,
+   "md5": "14ad1bed37890ab9d54784806b339740"
+  },
+  "class-frontier-s5-ranking-after-merged-cost75d-77d-20261115.csv": {
+   "git_blob_sha": "aba88980c02505b37da936de0f3d19eb23d37798",
+   "bytes": 7538,
+   "md5": "b8da63ad96b1567695da184579ef26cd"
+  },
+  "class-frontier-top-candidates-s6-after-merged-cost75d-77d-20261115.csv": {
+   "git_blob_sha": "49b7f37815f120829d86cd2370dbd0026dec1d63",
+   "bytes": 7416,
+   "md5": "195c29a36867e2c0a7221ddb791d29d1"
+  },
+  "class-frontier-cost79a-receipts-recompute-20261115.json": {
+   "git_blob_sha": "7dea99ffe76d767223666241964824f005843893",
+   "bytes": 7452,
+   "md5": "004f0a384266690c8a514d79acd8f01c"
+  },
+  "class-frontier-s5-ranking-after-cost79a-receipts-20261115.csv": {
+   "git_blob_sha": "d31201b1f846733e2510a57e4cb15281db8e9660",
+   "bytes": 7538,
+   "md5": "110ce4372450ecd447f9524daad5f44e"
+  },
+  "class-frontier-top-candidates-s6-after-cost79a-receipts-20261115.csv": {
+   "git_blob_sha": "34efacb35fc6437740745e0ed631c982d06feb96",
+   "bytes": 7330,
+   "md5": "648329517fee78d48713c6cb14064338"
+  },
+  "class-frontier-cost80d-receipts-recompute-20261115.json": {
+   "git_blob_sha": "289c93373692d6627347dc9bbb9ffdc3653f508b",
+   "bytes": 8033,
+   "md5": "6236f96121feed1b9cc4e2d4b0ed6cad"
+  },
+  "class-frontier-s5-ranking-after-cost80d-receipts-20261115.csv": {
+   "git_blob_sha": "723e1e1ec05ede265595d0ff997ff3a019eca8a1",
+   "bytes": 7537,
+   "md5": "018aae0f280b87a95bd4f1f2e1ca64c2"
+  },
+  "class-frontier-top-candidates-s6-after-cost80d-receipts-20261115.csv": {
+   "git_blob_sha": "a38f1563bb82de256922949d5b5ed8fe39f88cf5",
+   "bytes": 7243,
+   "md5": "3181473ba53378526eeb5b9a7223494a"
+  }
+ },
+ "controls_passed": {
+  "fold_scripts_rerun_end_to_end_twice": "both reruns passed every built-in control of all four scripts and regenerated all 12 artifacts byte-identically (also byte-identical between the two reruns), each script re-executed in its own short-lived subprocess (del+gc across runpy chains leaks past the ~1 GB cgroup limit, measured: run 1 in-process passes, run 2 OOMs; process exit releases everything)",
+  "bit78_duplicate_root_identity": {
+   "root_hex": "00000000100040801202000000200000",
+   "equals_75d_bit92_receipt_root_raw": true,
+   "in_1296_inventory_raw": true,
+   "independent_covers_all_pre_solved_at_1296": true,
+   "zero_marginal_at_1296": true,
+   "exclusion_from_receipt_list_justified": true
+  },
+  "independent_d4_disjointness": "12 77d roots: distinct D4 orbits, disjoint from the 565-root 1290 inventory raw+D4; the 11 folded roots disjoint from the 569-root 1296 inventory raw+D4 while bit-78 is in it as the 75d bit-92 duplicate; 3 79a roots: distinct D4 orbits, disjoint from the 580-root 1302 inventory raw+D4; 4 80d roots: distinct D4 orbits, disjoint from the 583-root 1304 inventory raw+D4; all 19 roots == child | 1<<bit, popcount 7",
+  "independent_candidate_enumeration": "77, 79 and 80 legal candidates re-derived from scratch with exact Bareiss determinants, bit-equal to the published claims",
+  "independent_marginal_arithmetic": "per-bit covers/marginals of the 11 merged receipts, 3 79a receipts and 4 80d receipts recomputed with the independent D4 group; all hex-sets set-equal to the published records; the unions reproduce the 1302, 1304 and 1305 solved states exactly",
+  "prediction_vs_actual": {
+   "head_five_numbers": "all 5 predicted head numbers match the landed merged head 1302/6545/517025/4815/380748",
+   "totals": "predicted union marginal 51 / in-manifest 6 == landed 51/6",
+   "per_bit": [
+    {
+     "bit": 7,
+     "predicted_marginal": 4,
+     "actual_marginal": 4,
+     "predicted_mim": 0,
+     "actual_mim": 0,
+     "match": true
+    },
+    {
+     "bit": 12,
+     "predicted_marginal": 5,
+     "actual_marginal": 5,
+     "predicted_mim": 1,
+     "actual_mim": 1,
+     "match": true
+    },
+    {
+     "bit": 39,
+     "predicted_marginal": 5,
+     "actual_marginal": 5,
+     "predicted_mim": 0,
+     "actual_mim": 0,
+     "match": true
+    },
+    {
+     "bit": 58,
+     "predicted_marginal": 4,
+     "actual_marginal": 4,
+     "predicted_mim": 0,
+     "actual_mim": 0,
+     "match": true
+    },
+    {
+     "bit": 62,
+     "predicted_marginal": 5,
+     "actual_marginal": 5,
+     "predicted_mim": 1,
+     "actual_mim": 1,
+     "match": true
+    },
+    {
+     "bit": 64,
+     "predicted_marginal": 4,
+     "actual_marginal": 4,
+     "predicted_mim": 0,
+     "actual_mim": 0,
+     "match": true
+    },
+    {
+     "bit": 66,
+     "predicted_marginal": 5,
+     "actual_marginal": 5,
+     "predicted_mim": 1,
+     "actual_mim": 1,
+     "match": true
+    },
+    {
+     "bit": 78,
+     "status": "predicted zero-marginal duplicate; landed fold excludes the root from the receipt list"
+    },
+    {
+     "bit": 94,
+     "predicted_marginal": 5,
+     "actual_marginal": 5,
+     "predicted_mim": 1,
+     "actual_mim": 1,
+     "match": true
+    },
+    {
+     "bit": 96,
+     "predicted_marginal": 5,
+     "actual_marginal": 5,
+     "predicted_mim": 1,
+     "actual_mim": 1,
+     "match": true
+    },
+    {
+     "bit": 108,
+     "predicted_marginal": 4,
+     "actual_marginal": 4,
+     "predicted_mim": 0,
+     "actual_mim": 0,
+     "match": true
+    },
+    {
+     "bit": 111,
+     "predicted_marginal": 5,
+     "actual_marginal": 5,
+     "predicted_mim": 1,
+     "actual_mim": 1,
+     "match": true
+    }
+   ],
+   "parent_effects": "second target 11->11 (lost none) and parent 00000000000000003800400008000000 64->58 (same 6 lost rows) as predicted",
+   "zero_mim_convention": "predicted [7, 39, 58, 64, 78, 108] vs landed [7, 39, 58, 64, 108]: the only difference is bit-78, predicted as a zero-marginal receipt and landed as an excluded duplicate root - semantically identical (zero contribution either way)"
+  },
+  "top_candidates_csv_identity_note": "the after-cost77d and after-merged top-candidates CSVs are byte-identical on main (git blob 49b7f37815f120829d86cd2370dbd0026dec1d63); this is genuine: both fold paths leave the same spotlight-candidate remaining-row sets (second target 11/866, class-4 18/1460, audit-blocked 10/698, second coverable 40/2778), confirmed by the byte-identical regeneration from both scripts"
+ },
+ "errata_recorded": [
+  "merged fold script prose (published head JSON method field and section-6 print) says 'the 12 roots asserted disjoint ... then the 12 receipts folded in publication order [7, 12, 39, 58, 62, 64, 66, 78, 94, 96, 108, 111]' and set_equality_after_12 'covers(12 cost-77d roots)', while the code folds 11 receipts (bit-78 excluded) and the disjointness assert covers 11 roots; the arithmetic is unaffected because the bit-78 root's covers are fully pre-solved at the 1296 baseline (zero marginal, independently confirmed here), so the 11-root set-equality and a hypothetical 12-root version coincide; prose-only, published blobs unchanged",
+  "merged fold script section-4 print says 'CONTROL 12 published certificates asserted ... 11/11 PASS' while 11 certificates are asserted; prose-only"
+ ],
+ "interpretation_guard": "bookkeeping verification of receipts folds only; solved 1305 measures manifest coverage, not the game-theoretic value of any position; REFUTED-D10 is not a LOSS proof; WIN7 certificates prove a win within depth 10 from the individual 7-stone roots only; the cost-80d fold (head 1304 -> 1305) landed during this session and is covered by this verification; the parallel lane may already be sweeping further children beyond head 1305; 11x11 empty board / two-stone root {49,60} / S2 {59,60} / class 1 / class 2 / class 4 all remain UNKNOWN"
+}

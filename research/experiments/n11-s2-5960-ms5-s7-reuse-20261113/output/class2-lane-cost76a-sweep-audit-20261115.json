@@ -1,0 +1,291 @@
+{
+  "schema": "n11-class2-lane-cost76a-raw-sweep-audit-20261115-v1",
+  "date": "2026-11-15",
+  "independent_method": "Python standard library; exact Bareiss determinant; no floating point; d4 canonicalization cross-validated in-session against the head-1188 ranking CSV (S5 canonical forms) and the published manifest root lists",
+  "target": {
+    "s5_hex": "00000000000000809102000000000000",
+    "s6_child_hex": "00000000000000809102000000000001",
+    "edge_cost": 76,
+    "legal_candidate_count": 76
+  },
+  "source_claim": {
+    "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost76a-inflight-20261115.json"
+  },
+  "geometry": {
+    "child_stones": 6,
+    "child_safe": true,
+    "independent_legal_candidate_count": 76,
+    "candidate_bits_exact_match": true,
+    "child_equals_parent_xor_one": "child ^ s5 = 1 (single stone 1<<0 added, verified)"
+  },
+  "batches": [
+    {
+      "batch": 1,
+      "input_path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost76a-raw-batch1-20261115.jsonl",
+      "candidate_bits": [
+        2,
+        3,
+        4,
+        7,
+        8,
+        10,
+        11,
+        12
+      ],
+      "pilot_nodes": 3402
+    },
+    {
+      "batch": 2,
+      "input_path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost76a-raw-batch2-20261115.jsonl",
+      "candidate_bits": [
+        13,
+        14,
+        15,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "pilot_nodes": 3402
+    },
+    {
+      "batch": 3,
+      "input_path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost76a-raw-batch3-20261115.jsonl",
+      "candidate_bits": [
+        22,
+        23,
+        24,
+        25,
+        26,
+        28,
+        29,
+        30
+      ],
+      "pilot_nodes": 3402
+    },
+    {
+      "batch": 4,
+      "input_path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost76a-raw-batch4-20261115.jsonl",
+      "candidate_bits": [
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        41
+      ],
+      "pilot_nodes": 3402
+    },
+    {
+      "batch": 5,
+      "input_path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost76a-raw-batch5-20261115.jsonl",
+      "candidate_bits": [
+        42,
+        46,
+        47,
+        53,
+        54,
+        66,
+        68,
+        69
+      ],
+      "pilot_nodes": 3402
+    },
+    {
+      "batch": 6,
+      "input_path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost76a-raw-batch6-20261115.jsonl",
+      "candidate_bits": [
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        85
+      ],
+      "pilot_nodes": 3402
+    },
+    {
+      "batch": 7,
+      "input_path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost76a-raw-batch7-20261115.jsonl",
+      "candidate_bits": [
+        86,
+        88,
+        89,
+        90,
+        91,
+        92,
+        94,
+        95
+      ],
+      "pilot_nodes": 3402
+    },
+    {
+      "batch": 8,
+      "input_path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost76a-raw-batch8-20261115.jsonl",
+      "candidate_bits": [
+        96,
+        97,
+        98,
+        101,
+        102,
+        103,
+        105,
+        106
+      ],
+      "pilot_nodes": 3402
+    },
+    {
+      "batch": 9,
+      "input_path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost76a-raw-batch9-20261115.jsonl",
+      "candidate_bits": [
+        107,
+        108,
+        109,
+        111,
+        112,
+        113,
+        114,
+        116
+      ],
+      "pilot_nodes": 3402
+    },
+    {
+      "batch": 10,
+      "input_path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost76a-raw-batch10-20261115.jsonl",
+      "candidate_bits": [
+        117,
+        118,
+        119,
+        120
+      ],
+      "pilot_nodes": 3402
+    }
+  ],
+  "aggregate": {
+    "batches": 10,
+    "records": 76,
+    "candidates": 76,
+    "win7_d10": 6,
+    "win7_d10_bits": [
+      11,
+      29,
+      66,
+      80,
+      92,
+      96
+    ],
+    "refuted_d10": 70,
+    "capped": 0,
+    "candidate_nodes": 131329581,
+    "win7_nodes_sum": 13525066,
+    "pilot_controls": 10,
+    "pilot_nodes": [
+      3402,
+      3402,
+      3402,
+      3402,
+      3402,
+      3402,
+      3402,
+      3402,
+      3402,
+      3402
+    ],
+    "win_roots_d4_orbits": 6
+  },
+  "win_roots": [
+    {
+      "bit": 11,
+      "nodes": 2270437,
+      "root_hex": "00000000000000809102000000000801",
+      "d4_canonical_hex": "00000000000000809102000000000801",
+      "opponent_legal_replies": 62
+    },
+    {
+      "bit": 29,
+      "nodes": 3378873,
+      "root_hex": "00000000000000809102000020000001",
+      "d4_canonical_hex": "00000000000000809102000020000001",
+      "opponent_legal_replies": 60
+    },
+    {
+      "bit": 66,
+      "nodes": 2237413,
+      "root_hex": "00000000000000849102000000000001",
+      "d4_canonical_hex": "00000000000000849102000000000001",
+      "opponent_legal_replies": 61
+    },
+    {
+      "bit": 80,
+      "nodes": 3163271,
+      "root_hex": "00000000000100809102000000000001",
+      "d4_canonical_hex": "00000000000100809102000000000001",
+      "opponent_legal_replies": 59
+    },
+    {
+      "bit": 92,
+      "nodes": 1430262,
+      "root_hex": "00000000100000809102000000000001",
+      "d4_canonical_hex": "00000000100000809102000000000001",
+      "opponent_legal_replies": 54
+    },
+    {
+      "bit": 96,
+      "nodes": 1044810,
+      "root_hex": "00000001000000809102000000000001",
+      "d4_canonical_hex": "00000000040000811202000000000400",
+      "opponent_legal_replies": 55
+    }
+  ],
+  "crosschecks": {
+    "determinism_observation": "batch2 bits 13-21 ran twice (a shell-backgrounding mistake started the batch under the first attempt, then again in the parallel round): all 8 candidates node-exact across the two runs (1512503/1512389/993659/1245894/386209/676773/2235643/375497), independent determinism evidence; the pushed batch2 file keeps the first solo-run copy",
+    "v15_independent_engine": "DONE: repo v15 runner class4_child1_runner.ts: all 6 WIN7-D10 bits reproduced loss=true at depth 10 cap 1e9 andclose=1 (bit96 3556006, bit92 4876955, bit11 7665696, bit66 6198635, bit80 10820542, bit29 10956610 nodes); 3 REFUTED-D10 anchors reproduced loss=false uncapped (bit2 9062944, bit30 2146305, bit120 6757934 nodes); pilot d6 control loss=false nodes=5949 in all 7 invocations, all PASS; pushed as class2-lane-cost76a-v15-crosscheck-20261115.jsonl. Transcription note (honesty): the crosscheck ran on a local transcription that differed from the repo file by 4 leading spaces (2 comment/code line indents, no semantic effect); post-run the local file was corrected and verified byte-exact against the repo, and a post-exact rerun of bit96 reproduced nodes=3556006 exactly, confirming the delta had no effect on results",
+    "determinism_rerun": "covered for bits 13-21 by the double-run observation above; single rerun of a WIN7 anchor can accompany the v15 crosscheck"
+  },
+  "d4_duplicate_scan": {
+    "win_roots_mutually_distinct": true,
+    "cross_checked_against_manifests": [
+      "class2-lane-cost74d-win7-certificates-20261115.json (15 roots)",
+      "class2-lane-cost72b-win7-certificates-20261115.json (13 roots)",
+      "class2-lane-cost63-win7-certificates-20261114.json (4 roots)",
+      "class2-lane-cost58-win7-certificates-20261114.json (3 roots)",
+      "class2-lane-cost61-win7-certificates-20261114.json (4 roots)",
+      "class2-lane-cost61c-win7-certificates-20261114.json (1 root)",
+      "class2-lane-cost68d-win7-certificates-20261115.json (7 roots)",
+      "class2-lane-cost69f-win7-certificates-20261115.json (5 roots)",
+      "class4-lane-cost74b-win7-certificates-20261114.json (6 roots)"
+    ],
+    "roots_compared": 58,
+    "duplicates_found": 0
+  },
+  "checks": {
+    "all_76_claim_bits_present_in_order": true,
+    "all_76_bits_unique": true,
+    "all_batches_have_one_pilot": true,
+    "all_pilots_3402": true,
+    "all_candidate_verdicts_boolean": true,
+    "no_capped_candidates": true,
+    "win7_d10_roots_have_distinct_d4_orbits": true,
+    "no_d4_duplicates_vs_published_manifests": true
+  },
+  "proof_boundary": {
+    "certificate_extraction": "not yet recorded on this main snapshot (6 WIN7 bits are the next extraction targets; bit96 has the lowest sweep nodes 1,044,810)",
+    "independent_certificate_verification": "not yet recorded on this main snapshot",
+    "s6_frontier_contribution": 0,
+    "note": "WIN7-D10 is a raw depth-limited search verdict for a seven-stone root. It is not a certificate, does not close the six-stone parent by itself, and does not determine the empty-board winner. Fold into the canonical chain requires certificate extraction and independent verification first."
+  },
+  "interpretation": {
+    "win7_d10_is_not_a_certificate": true,
+    "refuted_d10_is_not_a_loss_proof": true,
+    "standard_11x11_empty_board": "UNKNOWN",
+    "two_stone_roots_49_60_and_59_60": "UNKNOWN",
+    "s2_59_60": "UNKNOWN",
+    "class_2": "UNKNOWN",
+    "class_4": "UNKNOWN"
+  }
+}

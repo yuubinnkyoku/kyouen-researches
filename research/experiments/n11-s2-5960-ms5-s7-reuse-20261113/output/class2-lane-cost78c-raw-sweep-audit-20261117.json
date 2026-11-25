@@ -1,0 +1,335 @@
+{
+ "schema": "n11-class2-lane-cost78c-raw-sweep-audit-20261117-v1",
+ "date": "2026-11-17",
+ "status": "PASS: first fresh execution of the cost78c 78-bit v17 depth-10 sweep (head-1473 census v11 rank-1 row); 11 WIN7-D10 [1, 4, 9, 30, 49, 69, 75, 79, 100, 114, 116] / 67 REFUTED-D10 / 0 capped; 12/12 confirmation transfers with independent D4 canon re-derivation of both sides (6 raw-identical transfers with the same node count on both sides: bits 5/13/14/20/34/46 = cost69j/cost64d/cost72d/cost64h/cost73j/cost73i bit 3, the other six canon-equal only), every source verdict re-read from the published source raw batch line; det reruns of batches 1 and 8 field-identical (batch 1 first session, batch 8 post-reset session); v15 cross-engine 17/17 verdict agreement (12 confirmation bits + the 5 heaviest bits [34, 116, 41, 25, 99]; 16 loss=false + 1 loss=true at WIN bit 116), 2/2 pilots at 5949; the 11 WIN roots REQUIRE certificate extraction, verification and publication before any receipt fold; the receipt fold stays pending behind the 66i/66j/69j/71e/72d/73i/73j/73k/73l folds",
+ "target": {
+  "s6_child": "00000000000000403800000008000008",
+  "stone_bits": [
+   3,
+   27,
+   59,
+   60,
+   61,
+   70
+  ],
+  "candidate_bits": 78,
+  "open_bits": 66,
+  "confirmation_bits": [
+   5,
+   13,
+   14,
+   20,
+   34,
+   46,
+   97,
+   103,
+   108,
+   110,
+   115,
+   118
+  ]
+ },
+ "provenance": {
+  "original_run": "this audit's raw files are the original claiming session's own executions across two sandbox lifetimes: an infrastructure reset destroyed the local workspace after batch 6 (batches 1-6 had been published to main as they completed and were re-fetched byte-exact from main); batches 7-9 and the det/v15 control runs were re-executed after the reset; the pre-reset execution had already observed the identical 11-bit WIN list and the identical 78-bit node total (238,626,461), including the WIN bits 114: 5,630,090 and 116: 9,489,167 at identical node counts; the post-reset det reruns of batch 1 (first session) and batch 8 (second session) are field-identical, demonstrating cross-session determinism; no concurrent-session overlap existed for this child at claim time; the raw batch JSONLs, det rerun JSONLs and v15 crosscheck JSONLs are published together with this audit and the claim v2",
+  "engine": "class4_child1_runner_v17.ts, git blob c132cc6425eee3feaeef1d697dd74f968cfedb59, depth 10, cap 1e9 per bit, andclose 1, fresh engine state per candidate bit",
+  "v15_engine": "class4_child1_runner.ts, git blob 8744fc65b6b7cac6bd561403ce4c749e01c51359",
+  "batch_driver": "scripts/ev78c_batches_20261117.sh (same batch plan shape as the cost74i/75f runs: 66 open bits as 7x9 + 1x3 + 1 confirmation batch of 12 bits)"
+ },
+ "pilot_checks": "9/9 raw batches + 2/2 det reruns at pilot_d6 3402; 2/2 v15 chunks at pilot_d6 5949",
+ "verdicts": {
+  "win7_d10_bits": [
+   1,
+   4,
+   9,
+   30,
+   49,
+   69,
+   75,
+   79,
+   100,
+   114,
+   116
+  ],
+  "win7_d10_nodes": {
+   "1": 7264656,
+   "4": 7292768,
+   "9": 5853782,
+   "30": 2011603,
+   "49": 1818616,
+   "69": 1161282,
+   "75": 1264941,
+   "79": 1982518,
+   "100": 2234336,
+   "114": 5630090,
+   "116": 9489167
+  },
+  "refuted_d10_bits": [
+   2,
+   5,
+   10,
+   13,
+   14,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   23,
+   24,
+   25,
+   29,
+   31,
+   32,
+   33,
+   34,
+   35,
+   38,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46,
+   52,
+   53,
+   54,
+   66,
+   68,
+   74,
+   76,
+   78,
+   82,
+   83,
+   85,
+   86,
+   87,
+   88,
+   89,
+   90,
+   91,
+   92,
+   95,
+   96,
+   97,
+   98,
+   99,
+   101,
+   102,
+   103,
+   105,
+   106,
+   107,
+   108,
+   109,
+   110,
+   111,
+   112,
+   113,
+   115,
+   117,
+   118,
+   119,
+   120
+  ],
+  "refuted_d10_count": 67,
+  "capped_count": 0,
+  "candidate_nodes_total": 238626461,
+  "total_nodes_including_pilots": 238675781,
+  "terminal_stone_range": [
+   13,
+   17
+  ],
+  "terminal_stone_range_exceptions": {},
+  "heaviest_bit": 34,
+  "heaviest_bit_nodes": 11476946
+ },
+ "confirmation_bits": {
+  "bits": [
+   5,
+   13,
+   14,
+   20,
+   34,
+   46,
+   97,
+   103,
+   108,
+   110,
+   115,
+   118
+  ],
+  "fresh_vs_claim_transfers": "12/12",
+  "canon_rederivation": "independent D4 canon function (copied verbatim from the published census v11 script, git blob afcbe2c8468d166b500e5ac0c2623bc9bf715b9a): canon(source_child|source_bit) == claim root_canon == canon(78c_child|bit), 12/12; six transfers raw-identical (same mask and same node count on both sides: bit 5 = cost69j bit 3, bit 13 = cost64d bit 3, bit 14 = cost72d bit 3, bit 20 = cost64h bit 3, bit 34 = cost73j bit 3, bit 46 = cost73i bit 3), the other six canon-equal only",
+  "sources": {
+   "5": {
+    "source": "cost69j bit 3",
+    "source_file": "class2-lane-cost69j-raw-batch1-20261117.jsonl",
+    "source_verdict": "REFUTED-D10",
+    "source_nodes": 1767745,
+    "fresh_nodes": 1767745,
+    "canon_equal": true,
+    "raw_identical": true
+   },
+   "13": {
+    "source": "cost64d bit 3",
+    "source_file": "class2-lane-cost64d-raw-batch1-20261116.jsonl",
+    "source_verdict": "REFUTED-D10",
+    "source_nodes": 1601553,
+    "fresh_nodes": 1601553,
+    "canon_equal": true,
+    "raw_identical": true
+   },
+   "14": {
+    "source": "cost72d bit 3",
+    "source_file": "class2-lane-cost72d-raw-batch1-20261117.jsonl",
+    "source_verdict": "REFUTED-D10",
+    "source_nodes": 4833648,
+    "fresh_nodes": 4833648,
+    "canon_equal": true,
+    "raw_identical": true
+   },
+   "20": {
+    "source": "cost64h bit 3",
+    "source_file": "class2-lane-cost64h-raw-batch1-20261116.jsonl",
+    "source_verdict": "REFUTED-D10",
+    "source_nodes": 559638,
+    "fresh_nodes": 559638,
+    "canon_equal": true,
+    "raw_identical": true
+   },
+   "34": {
+    "source": "cost73j bit 3",
+    "source_file": "class2-lane-cost73j-raw-batch1-20261117.jsonl",
+    "source_verdict": "REFUTED-D10",
+    "source_nodes": 11476946,
+    "fresh_nodes": 11476946,
+    "canon_equal": true,
+    "raw_identical": true
+   },
+   "46": {
+    "source": "cost73i bit 3",
+    "source_file": "class2-lane-cost73i-raw-batch1-20261117.jsonl",
+    "source_verdict": "REFUTED-D10",
+    "source_nodes": 2439983,
+    "fresh_nodes": 2439983,
+    "canon_equal": true,
+    "raw_identical": true
+   },
+   "97": {
+    "source": "cost71e bit 87",
+    "source_file": "class2-lane-cost71e-raw-batch6-20261117.jsonl",
+    "source_verdict": "REFUTED-D10",
+    "source_nodes": 1872170,
+    "fresh_nodes": 1504774,
+    "canon_equal": true,
+    "raw_identical": false
+   },
+   "103": {
+    "source": "cost66i bit 33",
+    "source_file": "class2-lane-cost66i-raw-batch4-20261116.jsonl",
+    "source_verdict": "REFUTED-D10",
+    "source_nodes": 2605134,
+    "fresh_nodes": 1797204,
+    "canon_equal": true,
+    "raw_identical": false
+   },
+   "108": {
+    "source": "cost66j bit 87",
+    "source_file": "class2-lane-cost66j-raw-batch6-20261117.jsonl",
+    "source_verdict": "REFUTED-D10",
+    "source_nodes": 1428725,
+    "fresh_nodes": 2177185,
+    "canon_equal": true,
+    "raw_identical": false
+   },
+   "110": {
+    "source": "cost73k bit 33",
+    "source_file": "class2-lane-cost73k-raw-batch3-20261117.jsonl",
+    "source_verdict": "REFUTED-D10",
+    "source_nodes": 6520015,
+    "fresh_nodes": 5826593,
+    "canon_equal": true,
+    "raw_identical": false
+   },
+   "115": {
+    "source": "cost70b bit 48",
+    "source_file": "class2-lane-cost70b-raw-batch5-20261114.jsonl",
+    "source_verdict": "REFUTED-D10",
+    "source_nodes": 7073691,
+    "fresh_nodes": 1614250,
+    "canon_equal": true,
+    "raw_identical": false
+   },
+   "118": {
+    "source": "cost73l bit 87",
+    "source_file": "class2-lane-cost73l-raw-batch6-20261117.jsonl",
+    "source_verdict": "REFUTED-D10",
+    "source_nodes": 2407459,
+    "fresh_nodes": 3370672,
+    "canon_equal": true,
+    "raw_identical": false
+   }
+  }
+ },
+ "determinism_rerun": {
+  "batches": {
+   "class2-lane-cost78c-det-batch1-20261117.jsonl": {
+    "lines": 10,
+    "heaviest_bit": 4
+   },
+   "class2-lane-cost78c-det-batch8-20261117.jsonl": {
+    "lines": 4,
+    "heaviest_bit": 117
+   }
+  },
+  "result": "field-identical on every non-ms field"
+ },
+ "v15_cross_engine_check": {
+  "chunks": [
+   "a (12 confirmation bits)",
+   "b (5 heaviest bits [34, 116, 41, 25, 99])"
+  ],
+  "verdict_agreement": "17/17 (16 loss=false, 1 loss=true)",
+  "pilots": "2/2 at 5949",
+  "capped": 0,
+  "v15_nodes_total": 150314380
+ },
+ "pins": {
+  "claim_v1": "7c38b88e33d1c176bdedf582bea7138cfa6a067a",
+  "census_v11_script": "afcbe2c8468d166b500e5ac0c2623bc9bf715b9a",
+  "census_v11_json": "1e2b6a2b688db1a93098edea62b5793b54efaaba",
+  "engine_v17": "c132cc6425eee3feaeef1d697dd74f968cfedb59",
+  "engine_v15": "8744fc65b6b7cac6bd561403ce4c749e01c51359",
+  "sources": {
+   "5": "1cc2ee6080dee5c9242132c38a8bc7148ff4f3e2",
+   "13": "0f93456cfddb05a6fe3c1f236f84c5df245e4d4b",
+   "14": "3454dd496cbedca0c5a6ff3306441754b1d18df1",
+   "20": "47da4e04357b7012c55903aea22160f3ca0767c9",
+   "34": "2bf14d1244f42672be1cf0c88d60c4a6bb03cb93",
+   "46": "44bdbf5848539e4bf4ac09d148a9246d109b9be9",
+   "97": "7f2e1fe078468357112a22bf0a08494b14138d38",
+   "103": "13da15f8f3a30fe650bd9b7279b04278ec4b5355",
+   "108": "b210cae667030ce4e9f59699fcab5d6a233da574",
+   "110": "077b8d973b405d1f330375e68faf5de622be83e9",
+   "115": "67ded8a966b1880604985fd817fbe4195f29f47d",
+   "118": "d61176e07009be8fc4e8df94c0a9131ca3e55a14"
+  },
+  "raw_batches": {
+   "class2-lane-cost78c-raw-batch1-20261117.jsonl": "e7eaa4b466a71630b956ffba792f2bde1dd28957",
+   "class2-lane-cost78c-raw-batch2-20261117.jsonl": "ad7212628cf663c1681a0e0ef9b700fd6019873b",
+   "class2-lane-cost78c-raw-batch3-20261117.jsonl": "d5a4a4444d18592816ad7e64f492976d1567ca96",
+   "class2-lane-cost78c-raw-batch4-20261117.jsonl": "2a6cfd349519500e5eee17ce50455a7d2b00faeb",
+   "class2-lane-cost78c-raw-batch5-20261117.jsonl": "66d3b8544306a49d9be5030abc0ffb7f7e0dafcf",
+   "class2-lane-cost78c-raw-batch6-20261117.jsonl": "9596daf578bcdb549e1f5b37e87ff246df61c183",
+   "class2-lane-cost78c-raw-batch7-20261117.jsonl": "f47f3e4223e609082ba3cf92b37ed14dee0d0250",
+   "class2-lane-cost78c-raw-batch8-20261117.jsonl": "9062e781c8f9cb82d9ec2588fa2142f25c22d397",
+   "class2-lane-cost78c-raw-batch9-confirmation-20261117.jsonl": "1b39bcc49514d8b15255f6a2a64e433ccac71002",
+   "class2-lane-cost78c-det-batch1-20261117.jsonl": "9441ccd9d20da378bfafbda098b108525e6dfe4a",
+   "class2-lane-cost78c-det-batch8-20261117.jsonl": "f4ac21ad0a6dfe86a24c360e257be3c3e00143db",
+   "class2-lane-cost78c-v15-crosscheck-a-20261117.jsonl": "971dafbd5f7ce237b8a11c0575a3450c5233f421",
+   "class2-lane-cost78c-v15-crosscheck-b-20261117.jsonl": "7aa69943dae79ef686adc4080790ca1882cefc7d"
+  }
+ },
+ "interpretation_guard": "engine-search verdicts for the 78 seven-stone roots of this child only. WIN7-D10 proves a first-player win within depth 10 from the individual 7-stone root only; REFUTED-D10 is not a LOSS proof; no manifest row is closed by this sweep. The 11x11 empty board, the two-stone roots {49,60} and {59,60}, S2 {59,60}, and classes 1/2/4 all remain UNKNOWN."
+}

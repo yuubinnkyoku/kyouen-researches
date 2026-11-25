@@ -1,0 +1,1195 @@
+{
+ "schema": "n11-class2-lane-next-target-presweep-1452-v2-20261116-v1",
+ "date": "2026-11-16",
+ "chain_head": "1452/174/6396/506144/4669/370058",
+ "baseline": {
+  "v1_census_json": "class2-lane-next-target-presweep-1452-20261116.json (git blob 0d9a94a272de9fe45708757f17bfea60239a3c9b)",
+  "note": "v1 census head-1452 bit statuses carried over; this v2 overlays the post-census 64h/76c sweeps only"
+ },
+ "new_verdict_maps": {
+  "cost64h": {
+   "child": "00000000000000403800000008100000",
+   "bits": 64,
+   "win7_d10_bits": [
+    4,
+    6,
+    8,
+    33,
+    38,
+    42,
+    44,
+    49,
+    68,
+    74,
+    76,
+    77,
+    78,
+    79,
+    83,
+    89,
+    91,
+    101,
+    109,
+    113,
+    114,
+    116,
+    120
+   ],
+   "refuted_d10_bits": [
+    1,
+    2,
+    3,
+    5,
+    14,
+    16,
+    18,
+    21,
+    23,
+    25,
+    29,
+    34,
+    35,
+    43,
+    45,
+    46,
+    53,
+    54,
+    66,
+    69,
+    82,
+    85,
+    86,
+    87,
+    88,
+    92,
+    95,
+    96,
+    97,
+    98,
+    99,
+    102,
+    103,
+    105,
+    106,
+    107,
+    108,
+    111,
+    112,
+    115,
+    117
+   ],
+   "source": "raw batches 1-8 (blob-pinned), claim v2"
+  },
+  "cost76c": {
+   "child": "00000000010000809002000001000000",
+   "bits": 76,
+   "win7_d10_bits": [
+    61,
+    99
+   ],
+   "refuted_d10_bits": [
+    0,
+    1,
+    2,
+    4,
+    6,
+    7,
+    9,
+    10,
+    13,
+    14,
+    15,
+    17,
+    18,
+    19,
+    20,
+    21,
+    26,
+    28,
+    29,
+    30,
+    32,
+    34,
+    36,
+    41,
+    43,
+    45,
+    46,
+    47,
+    48,
+    53,
+    54,
+    56,
+    57,
+    59,
+    62,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    75,
+    76,
+    77,
+    78,
+    81,
+    85,
+    86,
+    87,
+    89,
+    91,
+    94,
+    95,
+    96,
+    97,
+    98,
+    102,
+    103,
+    105,
+    106,
+    107,
+    108,
+    109,
+    110,
+    111,
+    112,
+    113,
+    114,
+    116,
+    117,
+    118,
+    119,
+    120
+   ],
+   "source": "v17 raw batches 1-10 (blob-pinned, fbt-repaired engine; v16 agreement 75/76 with the single documented bit-113 flip)"
+  }
+ },
+ "cross_checks": {
+  "bit_table_canon_agreement": "16/16 rows, all bits",
+  "prereg_win_canon_agreement": "23/23 receipts",
+  "prereg_closed_rows_within_families": [
+   "00000000000000403800000008100000",
+   "00000000000000503800000008000000",
+   "00000000000000801206000000000080",
+   "00000000000000801206000000080000",
+   "00000000000000849003000000000000",
+   "00000000000000c09002000004000000"
+  ],
+  "v16_v17_disagreement_bits": [
+   113
+  ],
+  "verdict_conflicts": 0
+ },
+ "claim_hex_verification": {
+  "finding": "the cost-76c claim v4 (git blob 58b60b0c...) winner_roots and transfers root_canon hexes are all valid D4 images of the true roots child|1<<bit, recomputed and matched by this census (18/18); an earlier unpublished draft of this script carried a corrupted local child constant (8-stone 9002->9092 mistype, the same pattern as the recorded 77e child-hex incident) which produced a false data-quality suspicion against the claim; the constant was fixed before this run and nothing was published from the corrupted draft",
+  "claim_hexes_checked": 18,
+  "claim_hexes_valid_d4_images": 18,
+  "winner_roots_bit113_superseded_by_v17": {
+   "claim_v4_verdict": "WIN7-D10",
+   "v17_verdict": "REFUTED-D10",
+   "note": "claim v4 winner_roots bit 113 is superseded by the v17 fbt-repair audit (git blob 235f9643...); bits 61/99 stand as WIN7-D10 in both the claim and the v17 resweep"
+  }
+ },
+ "families_v2": {
+  "00000000000000403800000008000000": [
+   {
+    "census": {
+     "harvested_refuted": 0,
+     "harvested_win": 0,
+     "open": 64,
+     "receipt_win": 0
+    },
+    "cost": 64,
+    "demand": {
+     "c1": 0,
+     "c2": 2,
+     "c4": 0
+    },
+    "open_after_census": 64,
+    "s6_hex": "00000000000000403800000008100000",
+    "bits_in_new_sweeps": 64,
+    "new_refuted_bits": 41,
+    "new_win_bits": 23,
+    "pending_close_64h_fold_by_bit": 120,
+    "excluded": "swept/claimed by an in-flight lane (64h/76c)"
+   },
+   {
+    "census": {
+     "harvested_refuted": 2,
+     "harvested_win": 0,
+     "open": 64,
+     "receipt_win": 0
+    },
+    "cost": 66,
+    "demand": {
+     "c1": 0,
+     "c2": 2,
+     "c4": 0
+    },
+    "open_after_census": 64,
+    "s6_hex": "00000000000000801226000000000000",
+    "bits_in_new_sweeps": 1,
+    "new_refuted_bits": 1,
+    "new_win_bits": 0,
+    "open_after_census_v2": 63
+   },
+   {
+    "census": {
+     "harvested_refuted": 1,
+     "harvested_win": 0,
+     "open": 65,
+     "receipt_win": 0
+    },
+    "cost": 66,
+    "demand": {
+     "c1": 0,
+     "c2": 2,
+     "c4": 0
+    },
+    "open_after_census": 65,
+    "s6_hex": "00000000000000c09002000000001000",
+    "bits_in_new_sweeps": 1,
+    "new_refuted_bits": 1,
+    "new_win_bits": 0,
+    "open_after_census_v2": 64
+   },
+   {
+    "census": {
+     "harvested_refuted": 1,
+     "harvested_win": 0,
+     "open": 65,
+     "receipt_win": 0
+    },
+    "cost": 66,
+    "demand": {
+     "c1": 0,
+     "c2": 2,
+     "c4": 0
+    },
+    "open_after_census": 65,
+    "s6_hex": "00000000000000c09002000004000000",
+    "bits_in_new_sweeps": 1,
+    "new_refuted_bits": 0,
+    "new_win_bits": 1,
+    "pending_close_64h_fold_by_bit": 20,
+    "excluded": "closed by the pending cost-64h fold (prereg)"
+   },
+   {
+    "census": {
+     "harvested_refuted": 7,
+     "harvested_win": 0,
+     "open": 62,
+     "receipt_win": 0
+    },
+    "cost": 69,
+    "demand": {
+     "c1": 1,
+     "c2": 1,
+     "c4": 0
+    },
+    "open_after_census": 62,
+    "s6_hex": "00000000000000403800000008000020",
+    "bits_in_new_sweeps": 1,
+    "new_refuted_bits": 1,
+    "new_win_bits": 0,
+    "open_after_census_v2": 61
+   },
+   {
+    "census": {
+     "harvested_refuted": 0,
+     "harvested_win": 0,
+     "open": 71,
+     "receipt_win": 0
+    },
+    "cost": 71,
+    "demand": {
+     "c1": 0,
+     "c2": 2,
+     "c4": 0
+    },
+    "open_after_census": 71,
+    "s6_hex": "00000000000000503800000008000000",
+    "bits_in_new_sweeps": 1,
+    "new_refuted_bits": 0,
+    "new_win_bits": 1,
+    "pending_close_64h_fold_by_bit": 20,
+    "excluded": "closed by the pending cost-64h fold (prereg)"
+   },
+   {
+    "census": {
+     "harvested_refuted": 0,
+     "harvested_win": 0,
+     "open": 71,
+     "receipt_win": 0
+    },
+    "cost": 71,
+    "demand": {
+     "c1": 0,
+     "c2": 2,
+     "c4": 0
+    },
+    "open_after_census": 71,
+    "s6_hex": "00000000000000801206000000000080",
+    "bits_in_new_sweeps": 1,
+    "new_refuted_bits": 0,
+    "new_win_bits": 0,
+    "pending_close_64h_fold_by_bit": 100,
+    "excluded": "closed by the pending cost-64h fold (prereg)"
+   },
+   {
+    "census": {
+     "harvested_refuted": 1,
+     "harvested_win": 0,
+     "open": 70,
+     "receipt_win": 0
+    },
+    "cost": 71,
+    "demand": {
+     "c1": 0,
+     "c2": 2,
+     "c4": 2
+    },
+    "open_after_census": 70,
+    "s6_hex": "00000000000000801206000000080000",
+    "bits_in_new_sweeps": 1,
+    "new_refuted_bits": 0,
+    "new_win_bits": 0,
+    "pending_close_64h_fold_by_bit": 100,
+    "excluded": "closed by the pending cost-64h fold (prereg)"
+   },
+   {
+    "census": {
+     "harvested_refuted": 1,
+     "harvested_win": 0,
+     "open": 70,
+     "receipt_win": 0
+    },
+    "cost": 71,
+    "demand": {
+     "c1": 0,
+     "c2": 2,
+     "c4": 2
+    },
+    "open_after_census": 70,
+    "s6_hex": "00000000000000c09002000000002000",
+    "bits_in_new_sweeps": 1,
+    "new_refuted_bits": 0,
+    "new_win_bits": 0,
+    "open_after_census_v2": 70
+   },
+   {
+    "census": {
+     "harvested_refuted": 1,
+     "harvested_win": 0,
+     "open": 71,
+     "receipt_win": 0
+    },
+    "cost": 72,
+    "demand": {
+     "c1": 0,
+     "c2": 1,
+     "c4": 0
+    },
+    "open_after_census": 71,
+    "s6_hex": "00000000000000403800000008004000",
+    "bits_in_new_sweeps": 1,
+    "new_refuted_bits": 0,
+    "new_win_bits": 0,
+    "open_after_census_v2": 71
+   },
+   {
+    "census": {
+     "harvested_refuted": 2,
+     "harvested_win": 0,
+     "open": 70,
+     "receipt_win": 0
+    },
+    "cost": 72,
+    "demand": {
+     "c1": 0,
+     "c2": 2,
+     "c4": 0
+    },
+    "open_after_census": 70,
+    "s6_hex": "00000000000000849003000000000000",
+    "bits_in_new_sweeps": 1,
+    "new_refuted_bits": 0,
+    "new_win_bits": 0,
+    "pending_close_64h_fold_by_bit": 108,
+    "excluded": "closed by the pending cost-64h fold (prereg)"
+   },
+   {
+    "census": {
+     "harvested_refuted": 0,
+     "harvested_win": 0,
+     "open": 73,
+     "receipt_win": 0
+    },
+    "cost": 73,
+    "demand": {
+     "c1": 0,
+     "c2": 2,
+     "c4": 0
+    },
+    "open_after_census": 73,
+    "s6_hex": "00000000000000403800000408000000",
+    "bits_in_new_sweeps": 1,
+    "new_refuted_bits": 0,
+    "new_win_bits": 0,
+    "open_after_census_v2": 73
+   },
+   {
+    "census": {
+     "harvested_refuted": 1,
+     "harvested_win": 0,
+     "open": 72,
+     "receipt_win": 0
+    },
+    "cost": 73,
+    "demand": {
+     "c1": 0,
+     "c2": 2,
+     "c4": 0
+    },
+    "open_after_census": 72,
+    "s6_hex": "00000000000000403800400008000000",
+    "bits_in_new_sweeps": 1,
+    "new_refuted_bits": 0,
+    "new_win_bits": 0,
+    "open_after_census_v2": 72
+   },
+   {
+    "census": {
+     "harvested_refuted": 1,
+     "harvested_win": 0,
+     "open": 72,
+     "receipt_win": 0
+    },
+    "cost": 73,
+    "demand": {
+     "c1": 0,
+     "c2": 2,
+     "c4": 0
+    },
+    "open_after_census": 72,
+    "s6_hex": "00000000000000801206000000000400",
+    "bits_in_new_sweeps": 0,
+    "new_refuted_bits": 0,
+    "new_win_bits": 0,
+    "open_after_census_v2": 72
+   },
+   {
+    "census": {
+     "harvested_refuted": 1,
+     "harvested_win": 0,
+     "open": 72,
+     "receipt_win": 0
+    },
+    "cost": 73,
+    "demand": {
+     "c1": 0,
+     "c2": 2,
+     "c4": 0
+    },
+    "open_after_census": 72,
+    "s6_hex": "00000000000000c09002000000400000",
+    "bits_in_new_sweeps": 1,
+    "new_refuted_bits": 0,
+    "new_win_bits": 0,
+    "open_after_census_v2": 72
+   },
+   {
+    "census": {
+     "harvested_refuted": 2,
+     "harvested_win": 0,
+     "open": 76,
+     "receipt_win": 0
+    },
+    "cost": 78,
+    "demand": {
+     "c1": 0,
+     "c2": 1,
+     "c4": 0
+    },
+    "open_after_census": 76,
+    "s6_hex": "00000000000000403800000008000008",
+    "bits_in_new_sweeps": 1,
+    "new_refuted_bits": 0,
+    "new_win_bits": 0,
+    "open_after_census_v2": 76
+   },
+   {
+    "census": {
+     "harvested_refuted": 1,
+     "harvested_win": 0,
+     "open": 78,
+     "receipt_win": 0
+    },
+    "cost": 79,
+    "demand": {
+     "c1": 0,
+     "c2": 2,
+     "c4": 0
+    },
+    "open_after_census": 78,
+    "s6_hex": "00000000000000403800000008200000",
+    "bits_in_new_sweeps": 1,
+    "new_refuted_bits": 0,
+    "new_win_bits": 0,
+    "open_after_census_v2": 78
+   },
+   {
+    "census": {
+     "harvested_refuted": 1,
+     "harvested_win": 0,
+     "open": 78,
+     "receipt_win": 0
+    },
+    "cost": 79,
+    "demand": {
+     "c1": 0,
+     "c2": 2,
+     "c4": 0
+    },
+    "open_after_census": 78,
+    "s6_hex": "00000000000000c09002000200000000",
+    "bits_in_new_sweeps": 1,
+    "new_refuted_bits": 0,
+    "new_win_bits": 0,
+    "open_after_census_v2": 78
+   }
+  ],
+  "00000000000000801202000040000000": [
+   {
+    "census": {
+     "harvested_refuted": 8,
+     "harvested_win": 0,
+     "open": 56,
+     "receipt_win": 0
+    },
+    "cost": 64,
+    "demand": {
+     "c1": 1,
+     "c2": 1,
+     "c4": 0
+    },
+    "open_after_census": 56,
+    "s6_hex": "00000000000000801282000040000000",
+    "bits_in_new_sweeps": 1,
+    "new_refuted_bits": 1,
+    "new_win_bits": 0,
+    "open_after_census_v2": 55
+   },
+   {
+    "census": {
+     "harvested_refuted": 71,
+     "harvested_win": 0,
+     "open": 0,
+     "receipt_win": 0
+    },
+    "cost": 71,
+    "demand": {
+     "c1": 0,
+     "c2": 2,
+     "c4": 0
+    },
+    "open_after_census": 0,
+    "s6_hex": "00000000000000801202000040000400",
+    "bits_in_new_sweeps": 1,
+    "new_refuted_bits": 0,
+    "new_win_bits": 0,
+    "open_after_census_v2": 0,
+    "excluded": "no open bits remain after the 64h/76c overlay"
+   },
+   {
+    "census": {
+     "harvested_refuted": 5,
+     "harvested_win": 0,
+     "open": 71,
+     "receipt_win": 0
+    },
+    "cost": 76,
+    "demand": {
+     "c1": 0,
+     "c2": 2,
+     "c4": 0
+    },
+    "open_after_census": 71,
+    "s6_hex": "00000000010000809002000001000000",
+    "bits_in_new_sweeps": 76,
+    "new_refuted_bits": 69,
+    "new_win_bits": 2,
+    "pending_close_76c_fold_by_bit": 99,
+    "excluded": "swept/claimed by an in-flight lane (64h/76c)"
+   }
+  ],
+  "00000000020000003800000080000000": [
+   {
+    "census": {
+     "harvested_refuted": 73,
+     "harvested_win": 0,
+     "open": 0,
+     "receipt_win": 0
+    },
+    "cost": 73,
+    "demand": {
+     "c1": 0,
+     "c2": 0,
+     "c4": 3
+    },
+    "open_after_census": 0,
+    "s6_hex": "000000000200000038000000c0000000",
+    "bits_in_new_sweeps": 0,
+    "new_refuted_bits": 0,
+    "new_win_bits": 0,
+    "open_after_census_v2": 0,
+    "excluded": "no open bits remain after the 64h/76c overlay"
+   },
+   {
+    "census": {
+     "harvested_refuted": 74,
+     "harvested_win": 0,
+     "open": 0,
+     "receipt_win": 0
+    },
+    "cost": 74,
+    "demand": {
+     "c1": 2,
+     "c2": 0,
+     "c4": 3
+    },
+    "open_after_census": 0,
+    "s6_hex": "00000000020000003800000080000020",
+    "bits_in_new_sweeps": 0,
+    "new_refuted_bits": 0,
+    "new_win_bits": 0,
+    "open_after_census_v2": 0,
+    "excluded": "no open bits remain after the 64h/76c overlay"
+   },
+   {
+    "census": {
+     "harvested_refuted": 4,
+     "harvested_win": 0,
+     "open": 70,
+     "receipt_win": 0
+    },
+    "cost": 74,
+    "demand": {
+     "c1": 0,
+     "c2": 1,
+     "c4": 2
+    },
+    "open_after_census": 70,
+    "s6_hex": "00000000020000003800000088000000",
+    "bits_in_new_sweeps": 0,
+    "new_refuted_bits": 0,
+    "new_win_bits": 0,
+    "open_after_census_v2": 70
+   },
+   {
+    "census": {
+     "harvested_refuted": 2,
+     "harvested_win": 0,
+     "open": 73,
+     "receipt_win": 0
+    },
+    "cost": 75,
+    "demand": {
+     "c1": 0,
+     "c2": 0,
+     "c4": 3
+    },
+    "open_after_census": 73,
+    "s6_hex": "00000000020000003800020080000000",
+    "bits_in_new_sweeps": 0,
+    "new_refuted_bits": 0,
+    "new_win_bits": 0,
+    "open_after_census_v2": 73
+   },
+   {
+    "census": {
+     "harvested_refuted": 2,
+     "harvested_win": 0,
+     "open": 77,
+     "receipt_win": 0
+    },
+    "cost": 79,
+    "demand": {
+     "c1": 0,
+     "c2": 0,
+     "c4": 2
+    },
+    "open_after_census": 77,
+    "s6_hex": "00000000020000003800000880000000",
+    "bits_in_new_sweeps": 0,
+    "new_refuted_bits": 0,
+    "new_win_bits": 0,
+    "open_after_census_v2": 77
+   },
+   {
+    "census": {
+     "harvested_refuted": 3,
+     "harvested_win": 0,
+     "open": 76,
+     "receipt_win": 0
+    },
+    "cost": 79,
+    "demand": {
+     "c1": 0,
+     "c2": 0,
+     "c4": 3
+    },
+    "open_after_census": 76,
+    "s6_hex": "00000000020000003800400080000000",
+    "bits_in_new_sweeps": 0,
+    "new_refuted_bits": 0,
+    "new_win_bits": 0,
+    "open_after_census_v2": 76
+   },
+   {
+    "census": {
+     "harvested_refuted": 4,
+     "harvested_win": 0,
+     "open": 76,
+     "receipt_win": 0
+    },
+    "cost": 80,
+    "demand": {
+     "c1": 0,
+     "c2": 0,
+     "c4": 2
+    },
+    "open_after_census": 76,
+    "s6_hex": "00000000020000003800000180000000",
+    "bits_in_new_sweeps": 0,
+    "new_refuted_bits": 0,
+    "new_win_bits": 0,
+    "open_after_census_v2": 76
+   },
+   {
+    "census": {
+     "harvested_refuted": 4,
+     "harvested_win": 0,
+     "open": 76,
+     "receipt_win": 0
+    },
+    "cost": 80,
+    "demand": {
+     "c1": 0,
+     "c2": 0,
+     "c4": 1
+    },
+    "open_after_census": 76,
+    "s6_hex": "00000000020000003800200080000000",
+    "bits_in_new_sweeps": 0,
+    "new_refuted_bits": 0,
+    "new_win_bits": 0,
+    "open_after_census_v2": 76
+   },
+   {
+    "census": {
+     "harvested_refuted": 3,
+     "harvested_win": 0,
+     "open": 78,
+     "receipt_win": 0
+    },
+    "cost": 81,
+    "demand": {
+     "c1": 0,
+     "c2": 0,
+     "c4": 3
+    },
+    "open_after_census": 78,
+    "s6_hex": "00000000020000003800000080008000",
+    "bits_in_new_sweeps": 0,
+    "new_refuted_bits": 0,
+    "new_win_bits": 0,
+    "open_after_census_v2": 78
+   },
+   {
+    "census": {
+     "harvested_refuted": 4,
+     "harvested_win": 0,
+     "open": 78,
+     "receipt_win": 0
+    },
+    "cost": 82,
+    "demand": {
+     "c1": 0,
+     "c2": 0,
+     "c4": 2
+    },
+    "open_after_census": 78,
+    "s6_hex": "00000000020000003800000080000800",
+    "bits_in_new_sweeps": 0,
+    "new_refuted_bits": 0,
+    "new_win_bits": 0,
+    "open_after_census_v2": 78
+   },
+   {
+    "census": {
+     "harvested_refuted": 4,
+     "harvested_win": 0,
+     "open": 78,
+     "receipt_win": 0
+    },
+    "cost": 82,
+    "demand": {
+     "c1": 0,
+     "c2": 0,
+     "c4": 3
+    },
+    "open_after_census": 78,
+    "s6_hex": "00000000020000003800000090000000",
+    "bits_in_new_sweeps": 0,
+    "new_refuted_bits": 0,
+    "new_win_bits": 0,
+    "open_after_census_v2": 78
+   },
+   {
+    "census": {
+     "harvested_refuted": 4,
+     "harvested_win": 0,
+     "open": 80,
+     "receipt_win": 0
+    },
+    "cost": 84,
+    "demand": {
+     "c1": 0,
+     "c2": 0,
+     "c4": 3
+    },
+    "open_after_census": 80,
+    "s6_hex": "00000000020000003800000080000400",
+    "bits_in_new_sweeps": 0,
+    "new_refuted_bits": 0,
+    "new_win_bits": 0,
+    "open_after_census_v2": 80
+   },
+   {
+    "census": {
+     "harvested_refuted": 4,
+     "harvested_win": 0,
+     "open": 82,
+     "receipt_win": 0
+    },
+    "cost": 86,
+    "demand": {
+     "c1": 0,
+     "c2": 0,
+     "c4": 3
+    },
+    "open_after_census": 82,
+    "s6_hex": "00000000020000003800000080000100",
+    "bits_in_new_sweeps": 0,
+    "new_refuted_bits": 0,
+    "new_win_bits": 0,
+    "open_after_census_v2": 82
+   },
+   {
+    "census": {
+     "harvested_refuted": 4,
+     "harvested_win": 0,
+     "open": 82,
+     "receipt_win": 0
+    },
+    "cost": 86,
+    "demand": {
+     "c1": 0,
+     "c2": 0,
+     "c4": 3
+    },
+    "open_after_census": 82,
+    "s6_hex": "00000000020000003800000080004000",
+    "bits_in_new_sweeps": 0,
+    "new_refuted_bits": 0,
+    "new_win_bits": 0,
+    "open_after_census_v2": 82
+   },
+   {
+    "census": {
+     "harvested_refuted": 4,
+     "harvested_win": 0,
+     "open": 82,
+     "receipt_win": 0
+    },
+    "cost": 86,
+    "demand": {
+     "c1": 0,
+     "c2": 0,
+     "c4": 3
+    },
+    "open_after_census": 82,
+    "s6_hex": "00000000020000003800000280000000",
+    "bits_in_new_sweeps": 0,
+    "new_refuted_bits": 0,
+    "new_win_bits": 0,
+    "open_after_census_v2": 82
+   },
+   {
+    "census": {
+     "harvested_refuted": 4,
+     "harvested_win": 0,
+     "open": 82,
+     "receipt_win": 0
+    },
+    "cost": 86,
+    "demand": {
+     "c1": 0,
+     "c2": 0,
+     "c4": 3
+    },
+    "open_after_census": 82,
+    "s6_hex": "00000000020000003800100080000000",
+    "bits_in_new_sweeps": 0,
+    "new_refuted_bits": 0,
+    "new_win_bits": 0,
+    "open_after_census_v2": 82
+   },
+   {
+    "census": {
+     "harvested_refuted": 4,
+     "harvested_win": 0,
+     "open": 82,
+     "receipt_win": 0
+    },
+    "cost": 86,
+    "demand": {
+     "c1": 0,
+     "c2": 0,
+     "c4": 3
+    },
+    "open_after_census": 82,
+    "s6_hex": "00000000020000003840000080000000",
+    "bits_in_new_sweeps": 0,
+    "new_refuted_bits": 0,
+    "new_win_bits": 0,
+    "open_after_census_v2": 82
+   },
+   {
+    "census": {
+     "harvested_refuted": 4,
+     "harvested_win": 0,
+     "open": 83,
+     "receipt_win": 0
+    },
+    "cost": 87,
+    "demand": {
+     "c1": 0,
+     "c2": 0,
+     "c4": 3
+    },
+    "open_after_census": 83,
+    "s6_hex": "00000000020000003800000080000004",
+    "bits_in_new_sweeps": 0,
+    "new_refuted_bits": 0,
+    "new_win_bits": 0,
+    "open_after_census_v2": 83
+   }
+  ]
+ },
+ "ranking_top10": [
+  {
+   "s6_hex": "00000000000000801282000040000000",
+   "parent": "00000000000000801202000040000000",
+   "cost": 64,
+   "open_after_census_v2": 55,
+   "demand": {
+    "c1": 1,
+    "c2": 1,
+    "c4": 0
+   }
+  },
+  {
+   "s6_hex": "00000000000000801226000000000000",
+   "parent": "00000000000000403800000008000000",
+   "cost": 66,
+   "open_after_census_v2": 63,
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   }
+  },
+  {
+   "s6_hex": "00000000000000c09002000000001000",
+   "parent": "00000000000000403800000008000000",
+   "cost": 66,
+   "open_after_census_v2": 64,
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   }
+  },
+  {
+   "s6_hex": "00000000000000403800000008000020",
+   "parent": "00000000000000403800000008000000",
+   "cost": 69,
+   "open_after_census_v2": 61,
+   "demand": {
+    "c1": 1,
+    "c2": 1,
+    "c4": 0
+   }
+  },
+  {
+   "s6_hex": "00000000000000c09002000000002000",
+   "parent": "00000000000000403800000008000000",
+   "cost": 71,
+   "open_after_census_v2": 70,
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 2
+   }
+  },
+  {
+   "s6_hex": "00000000000000403800000008004000",
+   "parent": "00000000000000403800000008000000",
+   "cost": 72,
+   "open_after_census_v2": 71,
+   "demand": {
+    "c1": 0,
+    "c2": 1,
+    "c4": 0
+   }
+  },
+  {
+   "s6_hex": "00000000000000403800400008000000",
+   "parent": "00000000000000403800000008000000",
+   "cost": 73,
+   "open_after_census_v2": 72,
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   }
+  },
+  {
+   "s6_hex": "00000000000000801206000000000400",
+   "parent": "00000000000000403800000008000000",
+   "cost": 73,
+   "open_after_census_v2": 72,
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   }
+  },
+  {
+   "s6_hex": "00000000000000c09002000000400000",
+   "parent": "00000000000000403800000008000000",
+   "cost": 73,
+   "open_after_census_v2": 72,
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   }
+  },
+  {
+   "s6_hex": "00000000000000403800000408000000",
+   "parent": "00000000000000403800000008000000",
+   "cost": 73,
+   "open_after_census_v2": 73,
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   }
+  }
+ ],
+ "selection_policy": "primary family = the published next pure class-2 target 00000000000000403800000008000000 (18 rows / 1287 occurrences, designated effective next sweep target by the head-1452 census); within the family cheapest cost, then fewest open bits after the 64h/76c overlay, then hex. The globally cheapest remaining row 00000000000000801282000040000000 (cost 64, 56 open, best-coverable family) is the runner-up: that family's row 00000000000000801202000040000400 is STERILE (71/71 candidates REFUTED-D10 at the v1 census), so the family can never fully close under depth-10 receipts (K0863)",
+ "selected_target": {
+  "s6_hex": "00000000000000801226000000000000",
+  "parent": "00000000000000403800000008000000",
+  "cost": 66,
+  "demand": {
+   "c1": 0,
+   "c2": 2,
+   "c4": 0
+  },
+  "legal_candidates": 66,
+  "sweep_bits": [
+   0,
+   1,
+   3,
+   4,
+   6,
+   7,
+   8,
+   9,
+   10,
+   13,
+   14,
+   15,
+   18,
+   19,
+   20,
+   22,
+   24,
+   25,
+   26,
+   28,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   40,
+   42,
+   43,
+   55,
+   56,
+   58,
+   59,
+   62,
+   67,
+   73,
+   78,
+   79,
+   87,
+   88,
+   89,
+   90,
+   91,
+   92,
+   95,
+   96,
+   99,
+   101,
+   102,
+   103,
+   106,
+   107,
+   110,
+   111,
+   112,
+   113,
+   114,
+   116,
+   117,
+   118,
+   119,
+   120
+  ],
+  "confirmation_bits": [
+   23,
+   100,
+   109
+  ],
+  "runner_up": {
+   "s6_hex": "00000000000000801282000040000000",
+   "parent": "00000000000000801202000040000000",
+   "cost": 64,
+   "open_after_census_v2": 55
+  },
+  "note": "cheapest remaining unswept/unclaimed row of the primary family after excluding the 64h/76c children, the preregistered 64h-closed rows and the 76c-pending rows; the confirmation bits carry already-known REFUTED-D10 verdicts (2 v1 harvest transfers + 1 orbit transfer from the cost-64h sweep) and will be re-run fresh for confirmation, giving a complete fresh 66-bit row"
+ },
+ "interpretation_guard": "search-plan bookkeeping only; no engine search was run, no verdict was created, no row was closed; WIN7-D10 proves a first-player win within depth 10 from the individual 7-stone root only; REFUTED-D10 is not a LOSS proof; the 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60} and classes 1/2/4 all remain UNKNOWN"
+}

@@ -1,0 +1,542 @@
+{
+ "schema": "n11-class2-lane-second-candidate-worklist-head1326-20261115-v1",
+ "date": "2026-11-15",
+ "baseline_head": "1326/6522/515251/4792/378974 (class-frontier-cost62a-receipts-recompute-20261116.json, reproduced by the published fold script)",
+ "parent1": {
+  "s5_hex": "00000000000000801202000040000000",
+  "classes": 2,
+  "remaining_rows": 34,
+  "remaining_edge_cost": 2368
+ },
+ "parent2": {
+  "s5_hex": "00000000000000003800000008001000",
+  "classes": 2,
+  "remaining_rows": 48,
+  "remaining_edge_cost": 3582
+ },
+ "rows_shared_with_parent2": 1,
+ "shared_edge_cost_p1_view": 65,
+ "cost_histogram": {
+  "58": 1,
+  "63": 4,
+  "64": 2,
+  "65": 1,
+  "66": 1,
+  "67": 3,
+  "68": 2,
+  "69": 1,
+  "70": 2,
+  "71": 4,
+  "72": 2,
+  "73": 2,
+  "74": 2,
+  "75": 2,
+  "76": 4,
+  "77": 1
+ },
+ "inflight_58c_row": {
+  "s6_hex": "00000000000000801206000040000000",
+  "status": "IN FLIGHT claim 908716e1 (cost-58c, second candidate S5 cost-58 row) - do not touch",
+  "edge_cost": 58,
+  "in_worklist": true
+ },
+ "rows_sorted_by_cost": [
+  {
+   "s6_hex": "00000000000000801206000040000000",
+   "edge_cost": 58,
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "in_parent2_worklist": false,
+   "inflight_claim": true
+  },
+  {
+   "s6_hex": "00000000000000801202000040080000",
+   "edge_cost": 63,
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 2
+   },
+   "in_parent2_worklist": false,
+   "inflight_claim": false
+  },
+  {
+   "s6_hex": "00000000000000881202000040000000",
+   "edge_cost": 63,
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "in_parent2_worklist": false,
+   "inflight_claim": false
+  },
+  {
+   "s6_hex": "00000000000000c09002000001000000",
+   "edge_cost": 63,
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "in_parent2_worklist": false,
+   "inflight_claim": false
+  },
+  {
+   "s6_hex": "00000000040000003800000048000000",
+   "edge_cost": 63,
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "in_parent2_worklist": false,
+   "inflight_claim": false
+  },
+  {
+   "s6_hex": "00000000000000801202000050000000",
+   "edge_cost": 64,
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "in_parent2_worklist": false,
+   "inflight_claim": false
+  },
+  {
+   "s6_hex": "00000000000000801282000040000000",
+   "edge_cost": 64,
+   "demand": {
+    "c1": 1,
+    "c2": 1,
+    "c4": 0
+   },
+   "in_parent2_worklist": false,
+   "inflight_claim": false
+  },
+  {
+   "s6_hex": "00000000000000801202000040001000",
+   "edge_cost": 65,
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "in_parent2_worklist": true,
+   "inflight_claim": false
+  },
+  {
+   "s6_hex": "00000000000000801222000040000000",
+   "edge_cost": 66,
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "in_parent2_worklist": false,
+   "inflight_claim": false
+  },
+  {
+   "s6_hex": "00000000000000801202000040002000",
+   "edge_cost": 67,
+   "demand": {
+    "c1": 0,
+    "c2": 1,
+    "c4": 1
+   },
+   "in_parent2_worklist": false,
+   "inflight_claim": false
+  },
+  {
+   "s6_hex": "00000000000080801202000040000000",
+   "edge_cost": 67,
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "in_parent2_worklist": false,
+   "inflight_claim": false
+  },
+  {
+   "s6_hex": "00000000040000003800000008000400",
+   "edge_cost": 67,
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "in_parent2_worklist": false,
+   "inflight_claim": false
+  },
+  {
+   "s6_hex": "00000000000000801202000840000000",
+   "edge_cost": 68,
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "in_parent2_worklist": false,
+   "inflight_claim": false
+  },
+  {
+   "s6_hex": "00000000000000841202000040000000",
+   "edge_cost": 68,
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "in_parent2_worklist": false,
+   "inflight_claim": false
+  },
+  {
+   "s6_hex": "00000000000000801202000240000000",
+   "edge_cost": 69,
+   "demand": {
+    "c1": 0,
+    "c2": 1,
+    "c4": 0
+   },
+   "in_parent2_worklist": false,
+   "inflight_claim": false
+  },
+  {
+   "s6_hex": "00000000000000801202000040000001",
+   "edge_cost": 70,
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "in_parent2_worklist": false,
+   "inflight_claim": false
+  },
+  {
+   "s6_hex": "00000000000000889002000001000000",
+   "edge_cost": 70,
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "in_parent2_worklist": false,
+   "inflight_claim": false
+  },
+  {
+   "s6_hex": "00000000000000801202000040000400",
+   "edge_cost": 71,
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "in_parent2_worklist": false,
+   "inflight_claim": false
+  },
+  {
+   "s6_hex": "00000000000000801202000040004000",
+   "edge_cost": 71,
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "in_parent2_worklist": false,
+   "inflight_claim": false
+  },
+  {
+   "s6_hex": "00000000000000801202000040008000",
+   "edge_cost": 71,
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "in_parent2_worklist": false,
+   "inflight_claim": false
+  },
+  {
+   "s6_hex": "00000000000000801212000040000000",
+   "edge_cost": 71,
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "in_parent2_worklist": false,
+   "inflight_claim": false
+  },
+  {
+   "s6_hex": "00000000000000801202000040000100",
+   "edge_cost": 72,
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "in_parent2_worklist": false,
+   "inflight_claim": false
+  },
+  {
+   "s6_hex": "00000000040000809002000000000008",
+   "edge_cost": 72,
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "in_parent2_worklist": false,
+   "inflight_claim": false
+  },
+  {
+   "s6_hex": "00000000000000801202000040040000",
+   "edge_cost": 73,
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "in_parent2_worklist": false,
+   "inflight_claim": false
+  },
+  {
+   "s6_hex": "00000000040000003800000008200000",
+   "edge_cost": 73,
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "in_parent2_worklist": false,
+   "inflight_claim": false
+  },
+  {
+   "s6_hex": "00000000000000801202000140000000",
+   "edge_cost": 74,
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "in_parent2_worklist": false,
+   "inflight_claim": false
+  },
+  {
+   "s6_hex": "00000000000000801202080040000000",
+   "edge_cost": 74,
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "in_parent2_worklist": false,
+   "inflight_claim": false
+  },
+  {
+   "s6_hex": "00000000010000801202000040000000",
+   "edge_cost": 75,
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "in_parent2_worklist": false,
+   "inflight_claim": false
+  },
+  {
+   "s6_hex": "00000000040000809002000000000002",
+   "edge_cost": 75,
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "in_parent2_worklist": false,
+   "inflight_claim": false
+  },
+  {
+   "s6_hex": "00000000000000801202000040000008",
+   "edge_cost": 76,
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "in_parent2_worklist": false,
+   "inflight_claim": false
+  },
+  {
+   "s6_hex": "00000000000040809002000001000000",
+   "edge_cost": 76,
+   "demand": {
+    "c1": 0,
+    "c2": 1,
+    "c4": 0
+   },
+   "in_parent2_worklist": false,
+   "inflight_claim": false
+  },
+  {
+   "s6_hex": "00000000010000809002000001000000",
+   "edge_cost": 76,
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "in_parent2_worklist": false,
+   "inflight_claim": false
+  },
+  {
+   "s6_hex": "00000000040000003800080008000000",
+   "edge_cost": 76,
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "in_parent2_worklist": false,
+   "inflight_claim": false
+  },
+  {
+   "s6_hex": "00000000040000809002000000004000",
+   "edge_cost": 77,
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "in_parent2_worklist": false,
+   "inflight_claim": false
+  }
+ ],
+ "cheapest_next_rows_excluding_inflight": [
+  {
+   "s6_hex": "00000000000000801202000040080000",
+   "edge_cost": 63,
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 2
+   },
+   "in_parent2_worklist": false
+  },
+  {
+   "s6_hex": "00000000000000881202000040000000",
+   "edge_cost": 63,
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "in_parent2_worklist": false
+  },
+  {
+   "s6_hex": "00000000000000c09002000001000000",
+   "edge_cost": 63,
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "in_parent2_worklist": false
+  },
+  {
+   "s6_hex": "00000000040000003800000048000000",
+   "edge_cost": 63,
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "in_parent2_worklist": false
+  },
+  {
+   "s6_hex": "00000000000000801202000050000000",
+   "edge_cost": 64,
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "in_parent2_worklist": false
+  },
+  {
+   "s6_hex": "00000000000000801282000040000000",
+   "edge_cost": 64,
+   "demand": {
+    "c1": 1,
+    "c2": 1,
+    "c4": 0
+   },
+   "in_parent2_worklist": false
+  },
+  {
+   "s6_hex": "00000000000000801202000040001000",
+   "edge_cost": 65,
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "in_parent2_worklist": true
+  },
+  {
+   "s6_hex": "00000000000000801222000040000000",
+   "edge_cost": 66,
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "in_parent2_worklist": false
+  },
+  {
+   "s6_hex": "00000000000000801202000040002000",
+   "edge_cost": 67,
+   "demand": {
+    "c1": 0,
+    "c2": 1,
+    "c4": 1
+   },
+   "in_parent2_worklist": false
+  },
+  {
+   "s6_hex": "00000000000080801202000040000000",
+   "edge_cost": 67,
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "in_parent2_worklist": false
+  },
+  {
+   "s6_hex": "00000000040000003800000008000400",
+   "edge_cost": 67,
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "in_parent2_worklist": false
+  },
+  {
+   "s6_hex": "00000000000000801202000840000000",
+   "edge_cost": 68,
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "in_parent2_worklist": false
+  }
+ ],
+ "interpretation_guard": "bookkeeping only: remaining-row counts and edge costs are manifest coverage bookkeeping, not game-theoretic verdicts; REFUTED-D10 is not a LOSS proof; 11x11 empty board / two-stone root {49,60} / S2 {59,60} / class 1 / class 2 / class 4 all UNKNOWN"
+}

@@ -1,0 +1,723 @@
+{
+ "schema": "class2-lane-warm-multiband2-duplicate-crosscheck-v1",
+ "date": "2026-11-15",
+ "lane": "class2-lane (11x11 class-2 long-term lane), warm multiband batch 2 duplicate cross-check",
+ "context": "Two concurrent executions of the hourly class2-lane independently selected overlapping warm-multiband-2 candidate batches (this lane: own-lane greedy 31 roots incl. 64b-40 and 61d-23 unique to its ranking; the concurrent lane: all-band greedy-40 with 6 cost-70c candidates and additional 61d/62a/63a/71b hygiene roots). Both extracted with the same repo-verbatim blind extractor (FBS=1<<20, fbt_drops=0, deterministic), so duplicate pushes are expected byte-identical. This artifact records, for every one of the 31 roots folded by class-frontier-warm-multiband2-recompute-20261115.json, the current main entries and their byte-exact equality against the locally BigInt-verified certificates.",
+ "verification_methods": {
+  "git-blob-sha-equal": "current main entry git blob sha1 (from GitHub dir listing, fields name/sha/size) equals the locally computed sha1(\"blob <len>\\0\"+bytes) of the independently BigInt-verified local certificate (identical storage layout).",
+  "split-boundary-reproduction-blob-sha-equal": "remote part files re-derived by splitting the local single-file certificate at the remote part1 boundary (boundary asserted to be a line boundary); both part blob shas equal.",
+  "direct-byte-comparison": "SHA-pinned remote bytes fetched and cmp-compared byte-exact with the local certificate (cost-64b bit-92 parts, commits 61a3c7766a3b0c17f7ec24baecf27db28bb3636e / 5421cff1800784fc0a9c5c16088c04d131f02fef).",
+  "prior_crosscheck_same_session": "before the lane-takeover pushes: 11/11 md5 byte-exact of the concurrent lane first pushes + 4 roots direct BigInt independent verification of remote bytes (superseded by the blob-sha methods above)."
+ },
+ "roots": [
+  {
+   "label": "65e-120",
+   "root_hex": "01000000000000809102000000800000",
+   "bit": 120,
+   "band": "class2-lane-cost65e",
+   "published": true,
+   "first_pushed_by": "concurrent-batch2-lane",
+   "main_entries": [
+    {
+     "path": "bit120-root-01000000000000809102000000800000.cert.part1of2",
+     "size": 1047091,
+     "blob_sha": "81da61bc6b562dd95a90ac470a8a00178483e381",
+     "byte_exact_vs_local": true,
+     "method": "git-blob-sha-equal"
+    },
+    {
+     "path": "bit120-root-01000000000000809102000000800000.cert.part2of2",
+     "size": 1047064,
+     "blob_sha": "310d1422a8621a48eb0bf2e91b619dad48a5c0d1",
+     "byte_exact_vs_local": true,
+     "method": "git-blob-sha-equal"
+    }
+   ]
+  },
+  {
+   "label": "61e-120",
+   "root_hex": "01000000000000803202000040000000",
+   "bit": 120,
+   "band": "class2-lane-cost61e",
+   "published": true,
+   "first_pushed_by": "concurrent-batch2-lane",
+   "main_entries": [
+    {
+     "path": "bit120-root-01000000000000803202000040000000.cert",
+     "size": 1142542,
+     "blob_sha": "4930098726db2bc5b29c408cc2342dbb5314a1dd",
+     "byte_exact_vs_local": true,
+     "method": "git-blob-sha-equal"
+    }
+   ]
+  },
+  {
+   "label": "71b-117",
+   "root_hex": "00200000000000803202000000400000",
+   "bit": 117,
+   "band": "class2-lane-cost71b",
+   "published": true,
+   "first_pushed_by": "concurrent-batch2-lane",
+   "main_entries": [
+    {
+     "path": "bit117-root-00200000000000803202000000400000.cert",
+     "size": 1615736,
+     "blob_sha": "7c75495bd4562a3a7113891341fd6eea54c07b1f",
+     "byte_exact_vs_local": true,
+     "method": "git-blob-sha-equal"
+    }
+   ]
+  },
+  {
+   "label": "64b-117",
+   "root_hex": "00200000000000803202000000100000",
+   "bit": 117,
+   "band": "class2-lane-cost64b",
+   "published": true,
+   "first_pushed_by": "concurrent-batch2-lane",
+   "main_entries": [
+    {
+     "path": "bit117-root-00200000000000803202000000100000.cert",
+     "size": 1044462,
+     "blob_sha": "82b8356ea084696e39b64abb38d0b50ea7b80e1c",
+     "byte_exact_vs_local": true,
+     "method": "git-blob-sha-equal"
+    }
+   ]
+  },
+  {
+   "label": "64b-116",
+   "root_hex": "00100000000000803202000000100000",
+   "bit": 116,
+   "band": "class2-lane-cost64b",
+   "published": true,
+   "first_pushed_by": "concurrent-batch2-lane",
+   "main_entries": [
+    {
+     "path": "bit116-root-00100000000000803202000000100000.cert.part1of2",
+     "size": 791731,
+     "blob_sha": "1bbca18cdb265722dad8212be8baf524bb5b3727",
+     "byte_exact_vs_local": true,
+     "method": "split-boundary-reproduction-blob-sha-equal"
+    },
+    {
+     "path": "bit116-root-00100000000000803202000000100000.cert.part2of2",
+     "size": 791693,
+     "blob_sha": "d389080e7b0333e9606216875ed5297bf02eb61d",
+     "byte_exact_vs_local": true,
+     "method": "split-boundary-reproduction-blob-sha-equal"
+    }
+   ]
+  },
+  {
+   "label": "61d-116",
+   "root_hex": "00100000000000803202000000000002",
+   "bit": 116,
+   "band": "class2-lane-cost61d",
+   "published": true,
+   "first_pushed_by": "concurrent-batch2-lane",
+   "main_entries": [
+    {
+     "path": "bit116-root-00100000000000803202000000000002.cert.part1of2",
+     "size": 722321,
+     "blob_sha": "98a6e81c8f50d916c86a7421c2ce17db0dcfb49e",
+     "byte_exact_vs_local": true,
+     "method": "split-boundary-reproduction-blob-sha-equal"
+    },
+    {
+     "path": "bit116-root-00100000000000803202000000000002.cert.part2of2",
+     "size": 722256,
+     "blob_sha": "9508e614614b9572d6b48a507f2281911c8bdcc7",
+     "byte_exact_vs_local": true,
+     "method": "split-boundary-reproduction-blob-sha-equal"
+    }
+   ]
+  },
+  {
+   "label": "61d-114",
+   "root_hex": "00040000000000803202000000000002",
+   "bit": 114,
+   "band": "class2-lane-cost61d",
+   "published": true,
+   "first_pushed_by": "concurrent-batch2-lane",
+   "main_entries": [
+    {
+     "path": "bit114-root-00040000000000803202000000000002.cert.part1of2",
+     "size": 869489,
+     "blob_sha": "f09fbf191dd0428f45ed45052c11e59db6dbbf74",
+     "byte_exact_vs_local": true,
+     "method": "split-boundary-reproduction-blob-sha-equal"
+    },
+    {
+     "path": "bit114-root-00040000000000803202000000000002.cert.part2of2",
+     "size": 869435,
+     "blob_sha": "079f22e8319b40b517fec7e61a357710847af735",
+     "byte_exact_vs_local": true,
+     "method": "split-boundary-reproduction-blob-sha-equal"
+    }
+   ]
+  },
+  {
+   "label": "61e-105",
+   "root_hex": "00000200000000803202000040000000",
+   "bit": 105,
+   "band": "class2-lane-cost61e",
+   "published": true,
+   "first_pushed_by": "concurrent-batch2-lane",
+   "main_entries": [
+    {
+     "path": "bit105-root-00000200000000803202000040000000.cert",
+     "size": 1008619,
+     "blob_sha": "4740b195c2c13858dea8525d640e0a4b2d880c9f",
+     "byte_exact_vs_local": true,
+     "method": "git-blob-sha-equal"
+    }
+   ]
+  },
+  {
+   "label": "63a-97",
+   "root_hex": "00000002000000809102000800000000",
+   "bit": 97,
+   "band": "class2-lane-cost63a",
+   "published": true,
+   "first_pushed_by": "concurrent-batch2-lane",
+   "main_entries": [
+    {
+     "path": "bit97-root-00000002000000809102000800000000.cert.part1of2",
+     "size": 707361,
+     "blob_sha": "a33afbaba4c99511872108223b70c1f15e786db1",
+     "byte_exact_vs_local": true,
+     "method": "split-boundary-reproduction-blob-sha-equal"
+    },
+    {
+     "path": "bit97-root-00000002000000809102000800000000.cert.part2of2",
+     "size": 707359,
+     "blob_sha": "af1545ee1ebd70ab7f48274732678c15c286fa12",
+     "byte_exact_vs_local": true,
+     "method": "split-boundary-reproduction-blob-sha-equal"
+    }
+   ]
+  },
+  {
+   "label": "63a-96",
+   "root_hex": "00000001000000809102000800000000",
+   "bit": 96,
+   "band": "class2-lane-cost63a",
+   "published": true,
+   "first_pushed_by": "concurrent-batch2-lane",
+   "main_entries": [
+    {
+     "path": "bit96-root-00000001000000809102000800000000.cert.part1of2",
+     "size": 678663,
+     "blob_sha": "892ab60820fc61a549bd37523b3b76e7dfee68c0",
+     "byte_exact_vs_local": true,
+     "method": "split-boundary-reproduction-blob-sha-equal"
+    },
+    {
+     "path": "bit96-root-00000001000000809102000800000000.cert.part2of2",
+     "size": 678616,
+     "blob_sha": "26c1e883534f8db046daf7b626687ad4cc7dfeb3",
+     "byte_exact_vs_local": true,
+     "method": "split-boundary-reproduction-blob-sha-equal"
+    }
+   ]
+  },
+  {
+   "label": "71b-94",
+   "root_hex": "00000000400000803202000000400000",
+   "bit": 94,
+   "band": "class2-lane-cost71b",
+   "published": true,
+   "first_pushed_by": "concurrent-batch2-lane",
+   "main_entries": [
+    {
+     "path": "bit94-root-00000000400000803202000000400000.cert.part1of2",
+     "size": 954500,
+     "blob_sha": "8eba7c263a159ea09944009e8360cdfcd8ca63ae",
+     "byte_exact_vs_local": true,
+     "method": "git-blob-sha-equal"
+    },
+    {
+     "path": "bit94-root-00000000400000803202000000400000.cert.part2of2",
+     "size": 954437,
+     "blob_sha": "a2aa278226a2f26bc759ab839cc2440fb01e0539",
+     "byte_exact_vs_local": true,
+     "method": "git-blob-sha-equal"
+    }
+   ]
+  },
+  {
+   "label": "64b-94",
+   "root_hex": "00000000400000803202000000100000",
+   "bit": 94,
+   "band": "class2-lane-cost64b",
+   "published": true,
+   "first_pushed_by": "this-lane",
+   "main_entries": [
+    {
+     "path": "bit94-root-00000000400000803202000000100000.cert",
+     "size": 1311902,
+     "blob_sha": "ff71b331846ae1b1ae9a674e9efa36d41edd8e20",
+     "byte_exact_vs_local": true,
+     "method": "git-blob-sha-equal"
+    },
+    {
+     "path": "bit94-root-00000000400000803202000000100000.cert.part1of2",
+     "size": 655961,
+     "blob_sha": "6e4b1454eaa0277403147c2effeed29a3fc912fa",
+     "byte_exact_vs_local": true,
+     "method": "split-boundary-reproduction-blob-sha-equal"
+    },
+    {
+     "path": "bit94-root-00000000400000803202000000100000.cert.part2of2",
+     "size": 655941,
+     "blob_sha": "6ff7a82e30d14fa3aaae6de9db0b60cb1299ef19",
+     "byte_exact_vs_local": true,
+     "method": "split-boundary-reproduction-blob-sha-equal"
+    }
+   ]
+  },
+  {
+   "label": "61e-92",
+   "root_hex": "00000000100000803202000040000000",
+   "bit": 92,
+   "band": "class2-lane-cost61e",
+   "published": true,
+   "first_pushed_by": "this-lane",
+   "main_entries": [
+    {
+     "path": "bit92-root-00000000100000803202000040000000.cert",
+     "size": 1365252,
+     "blob_sha": "dbba8117f4fc62a906a8a4cb111feea1113a9e89",
+     "byte_exact_vs_local": true,
+     "method": "git-blob-sha-equal"
+    },
+    {
+     "path": "bit92-root-00000000100000803202000040000000.cert.part1of2",
+     "size": 682637,
+     "blob_sha": "a48b71b6c98dc182066a36d16b00e985584037a2",
+     "byte_exact_vs_local": true,
+     "method": "split-boundary-reproduction-blob-sha-equal"
+    },
+    {
+     "path": "bit92-root-00000000100000803202000040000000.cert.part2of2",
+     "size": 682615,
+     "blob_sha": "a0c43449e88b3b37d27850b1d7c220dd5a588018",
+     "byte_exact_vs_local": true,
+     "method": "split-boundary-reproduction-blob-sha-equal"
+    }
+   ]
+  },
+  {
+   "label": "64b-92",
+   "root_hex": "00000000100000803202000000100000",
+   "bit": 92,
+   "band": "class2-lane-cost64b",
+   "published": true,
+   "first_pushed_by": "this-lane",
+   "main_entries": [
+    {
+     "path": "bit92-root-00000000100000803202000000100000.cert.part1of2",
+     "size": 933685,
+     "blob_sha": "dbca05118cd731cb89523dde3a5a5fe7371470f1",
+     "byte_exact_vs_local": true,
+     "method": "git-blob-sha-equal"
+    },
+    {
+     "path": "bit92-root-00000000100000803202000000100000.cert.part2of2",
+     "size": 933652,
+     "blob_sha": "c09e3bb84829136b86ef92ff53df6eaffa569835",
+     "byte_exact_vs_local": true,
+     "method": "git-blob-sha-equal"
+    }
+   ]
+  },
+  {
+   "label": "61e-89",
+   "root_hex": "00000000020000803202000040000000",
+   "bit": 89,
+   "band": "class2-lane-cost61e",
+   "published": true,
+   "first_pushed_by": "this-lane",
+   "main_entries": [
+    {
+     "path": "bit89-root-00000000020000803202000040000000.cert",
+     "size": 1090932,
+     "blob_sha": "332e42d94008632b651568fe3df7eb5abd90989e",
+     "byte_exact_vs_local": true,
+     "method": "git-blob-sha-equal"
+    }
+   ]
+  },
+  {
+   "label": "61e-87",
+   "root_hex": "00000000008000803202000040000000",
+   "bit": 87,
+   "band": "class2-lane-cost61e",
+   "published": true,
+   "first_pushed_by": "this-lane",
+   "main_entries": [
+    {
+     "path": "bit87-root-00000000008000803202000040000000.cert",
+     "size": 1152351,
+     "blob_sha": "91c505d1d03ba7dc689b4951d1812ae70589e867",
+     "byte_exact_vs_local": true,
+     "method": "git-blob-sha-equal"
+    }
+   ]
+  },
+  {
+   "label": "61f-84",
+   "root_hex": "00000000001000803202000080000000",
+   "bit": 84,
+   "band": "class2-lane-cost61f",
+   "published": true,
+   "first_pushed_by": "this-lane",
+   "main_entries": [
+    {
+     "path": "bit84-root-00000000001000803202000080000000.cert",
+     "size": 1136493,
+     "blob_sha": "87116eab7217d400badc838ac001caf22b5da342",
+     "byte_exact_vs_local": true,
+     "method": "git-blob-sha-equal"
+    }
+   ]
+  },
+  {
+   "label": "64b-84",
+   "root_hex": "00000000001000803202000000100000",
+   "bit": 84,
+   "band": "class2-lane-cost64b",
+   "published": true,
+   "first_pushed_by": "this-lane",
+   "main_entries": [
+    {
+     "path": "bit84-root-00000000001000803202000000100000.cert",
+     "size": 1010443,
+     "blob_sha": "7e000da9477d4ad9f9924134ea9c26ae67ecb16c",
+     "byte_exact_vs_local": true,
+     "method": "git-blob-sha-equal"
+    }
+   ]
+  },
+  {
+   "label": "61d-84",
+   "root_hex": "00000000001000803202000000000002",
+   "bit": 84,
+   "band": "class2-lane-cost61d",
+   "published": true,
+   "first_pushed_by": "this-lane",
+   "main_entries": [
+    {
+     "path": "bit84-root-00000000001000803202000000000002.cert",
+     "size": 1141508,
+     "blob_sha": "89ab62a52e4bd61233621c46684a628015e4569f",
+     "byte_exact_vs_local": true,
+     "method": "git-blob-sha-equal"
+    }
+   ]
+  },
+  {
+   "label": "61f-77",
+   "root_hex": "00000000000020803202000080000000",
+   "bit": 77,
+   "band": "class2-lane-cost61f",
+   "published": true,
+   "first_pushed_by": "this-lane",
+   "main_entries": [
+    {
+     "path": "bit77-root-00000000000020803202000080000000.cert",
+     "size": 1574812,
+     "blob_sha": "a493f069d6c0c3bbef7627963ee2a34fbcd391f1",
+     "byte_exact_vs_local": true,
+     "method": "git-blob-sha-equal"
+    },
+    {
+     "path": "bit77-root-00000000000020803202000080000000.cert.part1of2",
+     "size": 787409,
+     "blob_sha": "e303c35a45366bc6001952f1510d56d1a79164d8",
+     "byte_exact_vs_local": true,
+     "method": "split-boundary-reproduction-blob-sha-equal"
+    },
+    {
+     "path": "bit77-root-00000000000020803202000080000000.cert.part2of2",
+     "size": 787403,
+     "blob_sha": "ae5ab9cb6a8365748a11903a2be159ac9a05ac48",
+     "byte_exact_vs_local": true,
+     "method": "split-boundary-reproduction-blob-sha-equal"
+    }
+   ]
+  },
+  {
+   "label": "61f-75",
+   "root_hex": "00000000000008803202000080000000",
+   "bit": 75,
+   "band": "class2-lane-cost61f",
+   "published": true,
+   "first_pushed_by": "this-lane",
+   "main_entries": [
+    {
+     "path": "bit75-root-00000000000008803202000080000000.cert",
+     "size": 1467042,
+     "blob_sha": "9f88540a8c069e13029f3250985bf3f9fc9881b9",
+     "byte_exact_vs_local": true,
+     "method": "git-blob-sha-equal"
+    },
+    {
+     "path": "bit75-root-00000000000008803202000080000000.cert.part1of2",
+     "size": 733550,
+     "blob_sha": "349ce5cc488cd9df947f72be214e35efed77e0c4",
+     "byte_exact_vs_local": true,
+     "method": "split-boundary-reproduction-blob-sha-equal"
+    },
+    {
+     "path": "bit75-root-00000000000008803202000080000000.cert.part2of2",
+     "size": 733492,
+     "blob_sha": "529928d3f53d39214f10deb932d33892d4e91ec8",
+     "byte_exact_vs_local": true,
+     "method": "split-boundary-reproduction-blob-sha-equal"
+    }
+   ]
+  },
+  {
+   "label": "61d-75",
+   "root_hex": "00000000000008803202000000000002",
+   "bit": 75,
+   "band": "class2-lane-cost61d",
+   "published": true,
+   "first_pushed_by": "this-lane",
+   "main_entries": [
+    {
+     "path": "bit75-root-00000000000008803202000000000002.cert",
+     "size": 1671243,
+     "blob_sha": "8f6d85108d2b576139fe889b61cf098769ca8b38",
+     "byte_exact_vs_local": true,
+     "method": "git-blob-sha-equal"
+    },
+    {
+     "path": "bit75-root-00000000000008803202000000000002.cert.part1of2",
+     "size": 835625,
+     "blob_sha": "f7e36ebf12efc8869b1c0b6ff2681b1d7be5304e",
+     "byte_exact_vs_local": true,
+     "method": "split-boundary-reproduction-blob-sha-equal"
+    },
+    {
+     "path": "bit75-root-00000000000008803202000000000002.cert.part2of2",
+     "size": 835618,
+     "blob_sha": "3f1f0c05e29609c687cb20f95ffd2606a869d70b",
+     "byte_exact_vs_local": true,
+     "method": "split-boundary-reproduction-blob-sha-equal"
+    }
+   ]
+  },
+  {
+   "label": "61e-74",
+   "root_hex": "00000000000004803202000040000000",
+   "bit": 74,
+   "band": "class2-lane-cost61e",
+   "published": true,
+   "first_pushed_by": "this-lane",
+   "main_entries": [
+    {
+     "path": "bit74-root-00000000000004803202000040000000.cert",
+     "size": 1113211,
+     "blob_sha": "978abb1a8ef8e80673e11536276d2fcd3b07e760",
+     "byte_exact_vs_local": true,
+     "method": "git-blob-sha-equal"
+    }
+   ]
+  },
+  {
+   "label": "71b-74",
+   "root_hex": "00000000000004803202000000400000",
+   "bit": 74,
+   "band": "class2-lane-cost71b",
+   "published": true,
+   "first_pushed_by": "this-lane",
+   "main_entries": [
+    {
+     "path": "bit74-root-00000000000004803202000000400000.cert.part1of2",
+     "size": 911874,
+     "blob_sha": "7ec054394135109e47399062d74bedecad6b003b",
+     "byte_exact_vs_local": true,
+     "method": "git-blob-sha-equal"
+    },
+    {
+     "path": "bit74-root-00000000000004803202000000400000.cert.part2of2",
+     "size": 911870,
+     "blob_sha": "8c458e77246fec698f67967c7ae4968d82f5849a",
+     "byte_exact_vs_local": true,
+     "method": "git-blob-sha-equal"
+    }
+   ]
+  },
+  {
+   "label": "61f-66",
+   "root_hex": "00000000000000843202000080000000",
+   "bit": 66,
+   "band": "class2-lane-cost61f",
+   "published": true,
+   "first_pushed_by": "this-lane",
+   "main_entries": [
+    {
+     "path": "bit66-root-00000000000000843202000080000000.cert",
+     "size": 1455272,
+     "blob_sha": "2e1616cb3c350e51c10c556cdca8da69a794fde7",
+     "byte_exact_vs_local": true,
+     "method": "git-blob-sha-equal"
+    },
+    {
+     "path": "bit66-root-00000000000000843202000080000000.cert.part1of2",
+     "size": 727658,
+     "blob_sha": "e7ba9a921608750ef1158baf81b819eab1231f4d",
+     "byte_exact_vs_local": true,
+     "method": "split-boundary-reproduction-blob-sha-equal"
+    },
+    {
+     "path": "bit66-root-00000000000000843202000080000000.cert.part2of2",
+     "size": 727614,
+     "blob_sha": "0053136a34be099cfc4ef2f75c24990e1bcef88f",
+     "byte_exact_vs_local": true,
+     "method": "split-boundary-reproduction-blob-sha-equal"
+    }
+   ]
+  },
+  {
+   "label": "65e-46",
+   "root_hex": "00000000000000809102400000800000",
+   "bit": 46,
+   "band": "class2-lane-cost65e",
+   "published": true,
+   "first_pushed_by": "this-lane",
+   "main_entries": [
+    {
+     "path": "bit46-root-00000000000000809102400000800000.cert",
+     "size": 1217832,
+     "blob_sha": "3ccaf4022979044a349c046f6b5d6d9a0250f73e",
+     "byte_exact_vs_local": true,
+     "method": "git-blob-sha-equal"
+    }
+   ]
+  },
+  {
+   "label": "65e-36",
+   "root_hex": "00000000000000809102001000800000",
+   "bit": 36,
+   "band": "class2-lane-cost65e",
+   "published": true,
+   "first_pushed_by": "this-lane",
+   "main_entries": [
+    {
+     "path": "bit36-root-00000000000000809102001000800000.cert",
+     "size": 1171399,
+     "blob_sha": "e208453ee5e8e04985425c10d71d4f8650a8f025",
+     "byte_exact_vs_local": true,
+     "method": "git-blob-sha-equal"
+    }
+   ]
+  },
+  {
+   "label": "64b-53",
+   "root_hex": "00000000000000803222000000100000",
+   "bit": 53,
+   "band": "class2-lane-cost64b",
+   "published": true,
+   "first_pushed_by": "concurrent-batch2-lane",
+   "main_entries": [
+    {
+     "path": "bit53-root-00000000000000803222000000100000.cert.part1of2",
+     "size": 730576,
+     "blob_sha": "8f26466169ab04f52787b1858267d7dac99e3568",
+     "byte_exact_vs_local": true,
+     "method": "split-boundary-reproduction-blob-sha-equal"
+    },
+    {
+     "path": "bit53-root-00000000000000803222000000100000.cert.part2of2",
+     "size": 730509,
+     "blob_sha": "5508d683da47650b27bd6d99d88fee1fff265e25",
+     "byte_exact_vs_local": true,
+     "method": "split-boundary-reproduction-blob-sha-equal"
+    }
+   ]
+  },
+  {
+   "label": "64b-43",
+   "root_hex": "00000000000000803202080000100000",
+   "bit": 43,
+   "band": "class2-lane-cost64b",
+   "published": true,
+   "first_pushed_by": "concurrent-batch2-lane",
+   "main_entries": [
+    {
+     "path": "bit43-root-00000000000000803202080000100000.cert.part1of2",
+     "size": 884247,
+     "blob_sha": "b49a1185f00266fb368ec57a4d44bb7dc0c1315d",
+     "byte_exact_vs_local": true,
+     "method": "git-blob-sha-equal"
+    },
+    {
+     "path": "bit43-root-00000000000000803202080000100000.cert.part2of2",
+     "size": 884223,
+     "blob_sha": "a40d742f25753855345c2af4b178ab4f5dcd5b55",
+     "byte_exact_vs_local": true,
+     "method": "git-blob-sha-equal"
+    }
+   ]
+  },
+  {
+   "label": "64b-40",
+   "root_hex": "00000000000000803202010000100000",
+   "bit": 40,
+   "band": "class2-lane-cost64b",
+   "published": true,
+   "first_pushed_by": "this-lane",
+   "main_entries": [
+    {
+     "path": "bit40-root-00000000000000803202010000100000.cert",
+     "size": 1126251,
+     "blob_sha": "97fd77250a236b3f3a84379a10be9c2c2fc2b94a",
+     "byte_exact_vs_local": true,
+     "method": "git-blob-sha-equal"
+    }
+   ]
+  },
+  {
+   "label": "61d-23",
+   "root_hex": "00000000000000803202000000800002",
+   "bit": 23,
+   "band": "class2-lane-cost61d",
+   "published": true,
+   "first_pushed_by": "this-lane",
+   "main_entries": [
+    {
+     "path": "bit23-root-00000000000000803202000000800002.cert",
+     "size": 1056049,
+     "blob_sha": "dc2bea03b3ca7910454c5182321943e53b4ecb78",
+     "byte_exact_vs_local": true,
+     "method": "git-blob-sha-equal"
+    }
+   ]
+  }
+ ],
+ "summary": {
+  "roots_published": 31,
+  "roots_checked": 31,
+  "remote_entries_checked": 54,
+  "byte_exact_all": true,
+  "win_loss_conflicts": 0,
+  "differing_byte_pushes": 0,
+  "first_pushed_by": {
+   "this-lane": 18,
+   "concurrent-batch2-lane": 13
+  },
+  "observed_duplicate_pushes": "both lanes pushed byte-identical bytes for the overlap (e.g. this lane 20:10-20:21Z and the concurrent lane 19:49-19:56Z + 20:16-20:21Z); every duplicate observed so far is byte-identical - no WIN/LOSS conflict and no divergent bytes anywhere"
+ },
+ "outstanding_published_not_folded_by_this_recompute": {
+  "cost-70c bit-105": "root 00000200000000803242000000000000, published by the concurrent lane (1877c390), parallel-lane band, left unfolded by the warm multiband 2 recompute (outstanding receipt for the next merged recompute)",
+  "concurrent-lane batch2 extras": "cost-61d child 00000000000000803242000000000000 bits 92/24/8/11 (roots 00000000100000803242000000000000 etc.), observed in commits 5014324a/e64f691c/633d1d0d/2576dd3d/585cb5de/8900eb78/838d3b3d; not in this lane 31, not independently re-verified here",
+  "warm band hygiene receipts": "cost-62a bits 89/1, cost-63a bits 109/11, cost-71b bit-1 (observed commits 890ad45a/daeb8b8e/764be9ff/49f4235c/d761f91a/f9a2cb00); gain-0 against the 1109 chain head per this lane ranking (frontier outstanding_not_folded.warm_candidates_without_records)",
+  "cost-68d WIN7 certificates": "7 WIN7 certificates of the third class-2 target child sweep (concurrent lane manifest 5a6ee373), separate sub-domain, not part of this warm fold",
+  "note": "all outstanding receipts are additive for the next merged recompute; none conflicts with the 31 folded here"
+ },
+ "interpretation_guard": "bookkeeping over published receipts; WIN7 certificates prove a win within depth 10 from the 7-stone root only; solved counts measure manifest coverage; the 11x11 empty root / {49,60} / S2 {59,60} / class 2 / class 4 remain UNKNOWN"
+}

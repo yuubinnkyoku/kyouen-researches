@@ -1,0 +1,105 @@
+{
+  "schema": "n11-class4-lane-cost74c-sweep-20261114-v1",
+  "date": "2026-11-14",
+  "session": "long-term lane session 9 continuation (2026-11-14)",
+  "s5_parent_hex": "00000000020000003800000080000000",
+  "s6_child_hex": "00000000020000003800000088000000",
+  "s6_s7_edge_cost": 74,
+  "demand_classes": {
+    "c1": 0,
+    "c2": 1,
+    "c4": 2
+  },
+  "candidate_enumeration": "legal_candidates.py independent Bareiss 4x4 enumeration: 74 legal candidates, bit-exact with the published edge cost 74; candidate list recorded in class4-lane-cost74c-inflight-20261114.json (claimed before the sweep)",
+  "win7_d10": 0,
+  "win7_bits": [],
+  "verdict": "STERILE",
+  "capped": 0,
+  "total_nodes": 250407651,
+  "pilot_d6_controls": "loss=false at exactly 5,949 nodes in all 21 batch invocations (batches 1-10 run as two parallel workers, each running its own pilot; batch 11 single-process; identical control lines)",
+  "terminal_stone_range_all": [
+    [
+      13,
+      17
+    ]
+  ],
+  "heaviest_bits": [
+    {
+      "bit": 116,
+      "nodes": 14575690
+    },
+    {
+      "bit": 88,
+      "nodes": 12807343
+    },
+    {
+      "bit": 4,
+      "nodes": 10148083
+    },
+    {
+      "bit": 35,
+      "nodes": 9264724
+    },
+    {
+      "bit": 42,
+      "nodes": 8826053
+    },
+    {
+      "bit": 79,
+      "nodes": 7683581
+    }
+  ],
+  "heaviest_fresh_rerun_node_exact": "bits 116 (14,575,690), 88 (12,807,343), 4 (10,148,083) re-solved fresh in a separate single-process run after the sweep: verdict/nodes/capped node-exact identical",
+  "refuted_d10": [
+    0, 2, 3, 4, 6, 7, 8, 10, 11, 12, 14, 15, 16, 21, 25, 29, 30,
+    32, 33, 34, 35, 38, 41, 42, 43, 44, 45, 46, 54, 66, 67, 69,
+    70, 71, 72, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85,
+    86, 87, 88, 90, 91, 92, 93, 94, 95, 99, 101, 102, 103, 104,
+    105, 106, 108, 109, 110, 112, 113, 114, 115, 116, 117, 118, 120
+  ],
+  "raw_batches": {
+    "files": [
+      "class4-lane-cost74c-raw-batch1-20261114.jsonl",
+      "class4-lane-cost74c-raw-batch2-20261114.jsonl",
+      "class4-lane-cost74c-raw-batch3-20261114.jsonl",
+      "class4-lane-cost74c-raw-batch4-20261114.jsonl",
+      "class4-lane-cost74c-raw-batch5-20261114.jsonl",
+      "class4-lane-cost74c-raw-batch6-20261114.jsonl",
+      "class4-lane-cost74c-raw-batch7-20261114.jsonl",
+      "class4-lane-cost74c-raw-batch8-20261114.jsonl",
+      "class4-lane-cost74c-raw-batch9-20261114.jsonl",
+      "class4-lane-cost74c-raw-batch10-20261114.jsonl",
+      "class4-lane-cost74c-raw-batch11-20261114.jsonl",
+      "class4-lane-cost74c-determinism-rerun-20261114.jsonl"
+    ],
+    "batch_bits": {
+      "1": [0, 2, 3, 4, 6, 7, 8],
+      "2": [10, 11, 12, 14, 15, 16, 21],
+      "3": [25, 29, 30, 32, 33, 34, 35],
+      "4": [38, 41, 42, 43, 44, 45, 46],
+      "5": [54, 66, 67, 69, 70, 71, 72],
+      "6": [74, 75, 76, 77, 78, 79, 80],
+      "7": [81, 82, 83, 84, 85, 86, 87],
+      "8": [88, 90, 91, 92, 93, 94, 95],
+      "9": [99, 101, 102, 103, 104, 105, 106],
+      "10": [108, 109, 110, 112, 113, 114, 115],
+      "11": [116, 117, 118, 120]
+    },
+    "md5_merged_batches": {
+      "1": "9036db086c662df84546a6368779a8c2",
+      "2": "e601fc4955abb1c8e94bfdf6511a50a4",
+      "3": "9263b65cfcae1c6e2ea311b228a7cb61",
+      "4": "48551047286c1dad6509df5277f02a21",
+      "5": "5c38176f179cdc42d0abdd4472af91b8",
+      "6": "314ca434f402efa2a644fe517eb8f532",
+      "7": "711dfb5fe74de02b48bc7ba812e7e815",
+      "8": "89dde9a6eac4f1c7afe396f4c8ab02f7",
+      "9": "343141c45784f51d81e27e35c2a9ec61",
+      "10": "c0901538ed2ddcde104bc474f257b197",
+      "11": "80616d37443a6e4d7d5fb701d0ec1ee0",
+      "determinism_rerun": "53f848080279ee27e3c94a7443fdb62a"
+    }
+  },
+  "interpretation_guard": "REFUTED-D10 is only the negation of a winner win within depth 10 from the individual 7-stone root (loser to move); it is NOT a statement about deeper play, the S5/S6 orbits, the two-stone root {49,60}, S2 {59,60}, or the 11x11 empty board. Sterile child: no depth<=10 WIN7 exists from any root in this child, so its c2/c4 demand can only be covered through other roots' certificates. 11x11 remains UNKNOWN.",
+  "unknown_status": "11x11 empty board, two-stone root {49,60}, S2 {59,60}, class 2, class 4: UNKNOWN"
+}

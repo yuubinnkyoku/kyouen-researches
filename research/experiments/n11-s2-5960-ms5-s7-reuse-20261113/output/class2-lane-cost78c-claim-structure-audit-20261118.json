@@ -1,0 +1,788 @@
+{
+  "schema": "n11-cost78c-claim-structure-audit-20261118-v1",
+  "date": "2026-11-18",
+  "base_main_before_publication": "9bf3866cd4a2b71cdf5d11cb313ffc7173abf1b2",
+  "input_pins": {
+    "claim": {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost78c-inflight-20261117.json",
+      "git_blob_sha": "7c38b88e33d1c176bdedf582bea7138cfa6a067a"
+    },
+    "census": {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-next-target-presweep-1473-v11-20261117.json",
+      "git_blob_sha": "1e2b6a2b688db1a93098edea62b5793b54efaaba"
+    },
+    "cost64d": {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost64d-inflight-20261116.json",
+      "git_blob_sha": "e3cf7378a08b156c5c0299c52e4ccbcd59de9236"
+    },
+    "cost70b": {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost70b-sweep-20261114.json",
+      "git_blob_sha": "d0eb4d23f674d218b23065ca72d4b63b58a9eeea"
+    },
+    "batch5": {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost70b-raw-batch5-20261114.jsonl",
+      "git_blob_sha": "67ded8a966b1880604985fd817fbe4195f29f47d"
+    },
+    "k0868": {
+      "path": "research/knowledge/items/K0868-n11-s6-s7-sweep-candidate-convention.md",
+      "git_blob_sha": "b097210d0b49d7cf014cc6a554298b1e49e83384"
+    }
+  },
+  "method": {
+    "geometry": "K0868: exact det4 != 0 for every triple of the six stones; det4=0 excludes a cell",
+    "symmetry": "D4 minimum over all eight square transforms",
+    "scope": "claim structure and transfer provenance only; no depth-10 search and no new verdict"
+  },
+  "child": {
+    "hex": "00000000000000403800000008000008",
+    "stone_bits": [
+      3,
+      27,
+      59,
+      60,
+      61,
+      70
+    ]
+  },
+  "geometry": {
+    "triple_count": 20,
+    "empty_cells": 115,
+    "legal_candidates": 78,
+    "forbidden_cells": 37,
+    "legal_candidate_bits": [
+      1,
+      2,
+      4,
+      5,
+      9,
+      10,
+      13,
+      14,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      23,
+      24,
+      25,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      38,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      49,
+      52,
+      53,
+      54,
+      66,
+      68,
+      69,
+      74,
+      75,
+      76,
+      78,
+      79,
+      82,
+      83,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103,
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      113,
+      114,
+      115,
+      116,
+      117,
+      118,
+      119,
+      120
+    ],
+    "forbidden_witnesses": [
+      {
+        "bit": 0,
+        "witness": [
+          3,
+          27,
+          60
+        ]
+      },
+      {
+        "bit": 6,
+        "witness": [
+          3,
+          59,
+          60
+        ]
+      },
+      {
+        "bit": 7,
+        "witness": [
+          3,
+          59,
+          61
+        ]
+      },
+      {
+        "bit": 8,
+        "witness": [
+          3,
+          60,
+          61
+        ]
+      },
+      {
+        "bit": 11,
+        "witness": [
+          3,
+          27,
+          59
+        ]
+      },
+      {
+        "bit": 12,
+        "witness": [
+          27,
+          60,
+          70
+        ]
+      },
+      {
+        "bit": 15,
+        "witness": [
+          27,
+          60,
+          70
+        ]
+      },
+      {
+        "bit": 22,
+        "witness": [
+          27,
+          60,
+          70
+        ]
+      },
+      {
+        "bit": 26,
+        "witness": [
+          27,
+          59,
+          60
+        ]
+      },
+      {
+        "bit": 28,
+        "witness": [
+          27,
+          60,
+          61
+        ]
+      },
+      {
+        "bit": 36,
+        "witness": [
+          27,
+          59,
+          60
+        ]
+      },
+      {
+        "bit": 37,
+        "witness": [
+          27,
+          60,
+          61
+        ]
+      },
+      {
+        "bit": 39,
+        "witness": [
+          27,
+          59,
+          60
+        ]
+      },
+      {
+        "bit": 40,
+        "witness": [
+          27,
+          60,
+          61
+        ]
+      },
+      {
+        "bit": 47,
+        "witness": [
+          27,
+          59,
+          60
+        ]
+      },
+      {
+        "bit": 48,
+        "witness": [
+          27,
+          60,
+          61
+        ]
+      },
+      {
+        "bit": 50,
+        "witness": [
+          27,
+          59,
+          60
+        ]
+      },
+      {
+        "bit": 51,
+        "witness": [
+          27,
+          60,
+          61
+        ]
+      },
+      {
+        "bit": 55,
+        "witness": [
+          27,
+          60,
+          70
+        ]
+      },
+      {
+        "bit": 56,
+        "witness": [
+          59,
+          60,
+          61
+        ]
+      },
+      {
+        "bit": 57,
+        "witness": [
+          59,
+          60,
+          61
+        ]
+      },
+      {
+        "bit": 58,
+        "witness": [
+          59,
+          60,
+          61
+        ]
+      },
+      {
+        "bit": 62,
+        "witness": [
+          59,
+          60,
+          61
+        ]
+      },
+      {
+        "bit": 63,
+        "witness": [
+          59,
+          60,
+          61
+        ]
+      },
+      {
+        "bit": 64,
+        "witness": [
+          59,
+          60,
+          61
+        ]
+      },
+      {
+        "bit": 65,
+        "witness": [
+          59,
+          60,
+          61
+        ]
+      },
+      {
+        "bit": 67,
+        "witness": [
+          27,
+          60,
+          70
+        ]
+      },
+      {
+        "bit": 71,
+        "witness": [
+          59,
+          60,
+          70
+        ]
+      },
+      {
+        "bit": 72,
+        "witness": [
+          3,
+          27,
+          61
+        ]
+      },
+      {
+        "bit": 73,
+        "witness": [
+          60,
+          61,
+          70
+        ]
+      },
+      {
+        "bit": 77,
+        "witness": [
+          3,
+          27,
+          60
+        ]
+      },
+      {
+        "bit": 80,
+        "witness": [
+          3,
+          27,
+          60
+        ]
+      },
+      {
+        "bit": 81,
+        "witness": [
+          60,
+          61,
+          70
+        ]
+      },
+      {
+        "bit": 84,
+        "witness": [
+          60,
+          61,
+          70
+        ]
+      },
+      {
+        "bit": 93,
+        "witness": [
+          60,
+          61,
+          70
+        ]
+      },
+      {
+        "bit": 94,
+        "witness": [
+          60,
+          61,
+          70
+        ]
+      },
+      {
+        "bit": 104,
+        "witness": [
+          3,
+          27,
+          61
+        ]
+      }
+    ]
+  },
+  "partition": {
+    "open_bits": [
+      1,
+      2,
+      4,
+      9,
+      10,
+      16,
+      17,
+      18,
+      19,
+      21,
+      23,
+      24,
+      25,
+      29,
+      30,
+      31,
+      32,
+      33,
+      35,
+      38,
+      41,
+      42,
+      43,
+      44,
+      45,
+      49,
+      52,
+      53,
+      54,
+      66,
+      68,
+      69,
+      74,
+      75,
+      76,
+      78,
+      79,
+      82,
+      83,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      95,
+      96,
+      98,
+      99,
+      100,
+      101,
+      102,
+      105,
+      106,
+      107,
+      109,
+      111,
+      112,
+      113,
+      114,
+      116,
+      117,
+      119,
+      120
+    ],
+    "confirmation_bits": [
+      5,
+      13,
+      14,
+      20,
+      34,
+      46,
+      97,
+      103,
+      108,
+      110,
+      115,
+      118
+    ],
+    "disjoint": true,
+    "union_count": 78
+  },
+  "target_transfers": [
+    {
+      "bit": 5,
+      "root_canon": "00000000000000403800000008000028",
+      "claim_root_canon": "00000000000000403800000008000028",
+      "canon_match": true,
+      "verdict": "REFUTED-D10"
+    },
+    {
+      "bit": 13,
+      "root_canon": "00000000000000403800000008002008",
+      "claim_root_canon": "00000000000000403800000008002008",
+      "canon_match": true,
+      "verdict": "REFUTED-D10"
+    },
+    {
+      "bit": 14,
+      "root_canon": "00000000000000403800000008004008",
+      "claim_root_canon": "00000000000000403800000008004008",
+      "canon_match": true,
+      "verdict": "REFUTED-D10"
+    },
+    {
+      "bit": 20,
+      "root_canon": "00000000000000403800000008100008",
+      "claim_root_canon": "00000000000000403800000008100008",
+      "canon_match": true,
+      "verdict": "REFUTED-D10"
+    },
+    {
+      "bit": 34,
+      "root_canon": "00000000000000403800000408000008",
+      "claim_root_canon": "00000000000000403800000408000008",
+      "canon_match": true,
+      "verdict": "REFUTED-D10"
+    },
+    {
+      "bit": 46,
+      "root_canon": "00000000000000403800400008000008",
+      "claim_root_canon": "00000000000000403800400008000008",
+      "canon_match": true,
+      "verdict": "REFUTED-D10"
+    },
+    {
+      "bit": 97,
+      "root_canon": "00000000000021801202000000080000",
+      "claim_root_canon": "00000000000021801202000000080000",
+      "canon_match": true,
+      "verdict": "REFUTED-D10"
+    },
+    {
+      "bit": 103,
+      "root_canon": "00000000000000801226000200000000",
+      "claim_root_canon": "00000000000000801226000200000000",
+      "canon_match": true,
+      "verdict": "REFUTED-D10"
+    },
+    {
+      "bit": 108,
+      "root_canon": "00000000000021801202000000100000",
+      "claim_root_canon": "00000000000021801202000000100000",
+      "canon_match": true,
+      "verdict": "REFUTED-D10"
+    },
+    {
+      "bit": 110,
+      "root_canon": "00000000000000801206000200000400",
+      "claim_root_canon": "00000000000000801206000200000400",
+      "canon_match": true,
+      "verdict": "REFUTED-D10"
+    },
+    {
+      "bit": 115,
+      "root_canon": "00000000000000809083080000000000",
+      "claim_root_canon": "00000000000000809083080000000000",
+      "canon_match": true,
+      "verdict": "REFUTED-D10"
+    },
+    {
+      "bit": 118,
+      "root_canon": "00000000000021801202000100000000",
+      "claim_root_canon": "00000000000021801202000100000000",
+      "canon_match": true,
+      "verdict": "REFUTED-D10"
+    }
+  ],
+  "source_provenance": [
+    {
+      "target_bit": 5,
+      "source": "cost69j",
+      "source_bit": 3,
+      "verdict_ok": true,
+      "root_relation_ok": true,
+      "relation": "D4-canon-equal"
+    },
+    {
+      "target_bit": 13,
+      "source": "cost64d",
+      "source_bit": 3,
+      "verdict_ok": true,
+      "root_relation_ok": true,
+      "relation": "raw-identical"
+    },
+    {
+      "target_bit": 14,
+      "source": "cost72d",
+      "source_bit": 3,
+      "verdict_ok": true,
+      "root_relation_ok": true,
+      "relation": "D4-canon-equal"
+    },
+    {
+      "target_bit": 20,
+      "source": "cost64h",
+      "source_bit": 3,
+      "verdict_ok": true,
+      "root_relation_ok": true,
+      "relation": "D4-canon-equal"
+    },
+    {
+      "target_bit": 34,
+      "source": "cost73j",
+      "source_bit": 3,
+      "verdict_ok": true,
+      "root_relation_ok": true,
+      "relation": "D4-canon-equal"
+    },
+    {
+      "target_bit": 46,
+      "source": "cost73i",
+      "source_bit": 3,
+      "verdict_ok": true,
+      "root_relation_ok": true,
+      "relation": "D4-canon-equal"
+    },
+    {
+      "target_bit": 97,
+      "source": "cost71e",
+      "source_bit": 87,
+      "verdict_ok": true,
+      "root_relation_ok": true,
+      "relation": "D4-canon-equal"
+    },
+    {
+      "target_bit": 103,
+      "source": "cost66i",
+      "source_bit": 33,
+      "verdict_ok": true,
+      "root_relation_ok": true,
+      "relation": "D4-canon-equal"
+    },
+    {
+      "target_bit": 108,
+      "source": "cost66j",
+      "source_bit": 87,
+      "verdict_ok": true,
+      "root_relation_ok": true,
+      "relation": "D4-canon-equal"
+    },
+    {
+      "target_bit": 110,
+      "source": "cost73k",
+      "source_bit": 33,
+      "verdict_ok": true,
+      "root_relation_ok": true,
+      "relation": "D4-canon-equal"
+    },
+    {
+      "target_bit": 115,
+      "source": "cost70b",
+      "source_bit": 48,
+      "verdict_ok": true,
+      "root_relation_ok": true,
+      "relation": "D4-canon-equal"
+    },
+    {
+      "target_bit": 118,
+      "source": "cost73l",
+      "source_bit": 87,
+      "verdict_ok": true,
+      "root_relation_ok": true,
+      "relation": "D4-canon-equal"
+    }
+  ],
+  "census_selection": {
+    "chain_head": "1473/174/6375/504596/4648/368510",
+    "selected_target": "00000000000000403800000008000008",
+    "edge_cost": 78,
+    "demand": {
+      "c1": 0,
+      "c2": 1,
+      "c4": 0
+    }
+  },
+  "checks": {
+    "child_hex_matches_stones": {
+      "ok": true,
+      "hex": "00000000000000403800000008000008",
+      "stones": [
+        3,
+        27,
+        59,
+        60,
+        61,
+        70
+      ]
+    },
+    "det4_legal_set_matches_claim": {
+      "ok": true,
+      "derived": 78,
+      "claimed": 78
+    },
+    "all_empty_cells_partitioned": {
+      "ok": true,
+      "empty": 115,
+      "legal": 78,
+      "forbidden": 37
+    },
+    "open_confirmation_disjoint": {
+      "ok": true,
+      "open": 66,
+      "confirmation": 12
+    },
+    "open_plus_confirmation_equals_legal": {
+      "ok": true,
+      "union": 78,
+      "legal": 78
+    },
+    "candidate_counts": {
+      "ok": true
+    },
+    "all_target_transfer_canons_and_verdict_labels": {
+      "ok": true,
+      "count": 12
+    },
+    "all_12_transfer_sources_verified": {
+      "ok": true,
+      "count": 12
+    },
+    "transfer_bits_match_confirmation": {
+      "ok": true,
+      "transfer_bits": [
+        5,
+        13,
+        14,
+        20,
+        34,
+        46,
+        97,
+        103,
+        108,
+        110,
+        115,
+        118
+      ]
+    },
+    "census_selection_matches_claim": {
+      "ok": true,
+      "chain_head": "1473/174/6375/504596/4648/368510",
+      "selected": "00000000000000403800000008000008"
+    },
+    "confirmation_prediction_all_refuted": {
+      "ok": true
+    },
+    "k0868_definition_pin_and_terms": {
+      "ok": true
+    }
+  },
+  "all_pass": true,
+  "failures": [],
+  "interpretation_guard": "Structural audit only. No depth-10 search was run, no WIN/LOSS verdict was created, no certificate or receipt was changed. REFUTED-D10 is not a LOSS proof; standard 11x11 remains UNKNOWN."
+}

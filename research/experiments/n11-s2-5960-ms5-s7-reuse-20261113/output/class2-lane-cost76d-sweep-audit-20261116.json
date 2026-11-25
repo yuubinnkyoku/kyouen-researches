@@ -1,0 +1,220 @@
+{
+  "schema": "n11-class2-lane-cost76d-raw-sweep-audit-20261116-v1",
+  "date": "2026-11-16",
+  "independent_method": "Python standard library re-derivation from raw batch JSONLs; candidate legality cross-checked by scripts/legal_candidates.py (exact Bareiss 4x4 determinants, no floating point)",
+  "target": {
+    "s5_hex": "00000000000000801202000040000000",
+    "s6_child_hex": "00000000040000003800080008000000",
+    "edge_cost": 76,
+    "legal_candidate_count": 76
+  },
+  "source_claim": {
+    "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost76d-inflight-20261116.json",
+    "git_commit": "6958761b",
+    "chain_head_at_claim": "1405/6443/509457/4713/373180"
+  },
+  "geometry": {
+    "child_stones": 6,
+    "child_safe": true,
+    "independent_legal_candidate_count": 76,
+    "candidate_bits_exact_match": true,
+    "child_equals_parent_xor_one": "D4 canonicalization (8 dihedral transforms, min mask) of the six one-stone deletions of the child (raw child is itself a canonical form, canon(child)==child): del 43 -> second candidate S5 00000000000000801202000040000000, del 90 -> class-2 S5 00000000000000003800000208000000, the other four deletions (27/59/60/61) give four distinct closed-row positions; exactly two open parents, matching the claim prep facts (re-derived in-session with the repo-standard D4 canon)"
+  },
+  "batches": [
+    {
+      "batch": 1,
+      "input_path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost76d-raw-batch1-20261116.jsonl",
+      "candidate_bits": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "pilot_nodes": 3402
+    },
+    {
+      "batch": 2,
+      "input_path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost76d-raw-batch2-20261116.jsonl",
+      "candidate_bits": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        15,
+        16,
+        17
+      ],
+      "pilot_nodes": 3402
+    },
+    {
+      "batch": 3,
+      "input_path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost76d-raw-batch3-20261116.jsonl",
+      "candidate_bits": [
+        18,
+        19,
+        20,
+        21,
+        23,
+        24,
+        25,
+        29
+      ],
+      "pilot_nodes": 3402
+    },
+    {
+      "batch": 4,
+      "input_path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost76d-raw-batch4-20261116.jsonl",
+      "candidate_bits": [
+        30,
+        31,
+        32,
+        35,
+        38,
+        41,
+        42,
+        44
+      ],
+      "pilot_nodes": 3402
+    },
+    {
+      "batch": 5,
+      "input_path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost76d-raw-batch5-20261116.jsonl",
+      "candidate_bits": [
+        45,
+        46,
+        49,
+        52,
+        53,
+        66,
+        67,
+        68
+      ],
+      "pilot_nodes": 3402
+    },
+    {
+      "batch": 6,
+      "input_path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost76d-raw-batch6-20261116.jsonl",
+      "candidate_bits": [
+        70,
+        71,
+        72,
+        73,
+        75,
+        76,
+        78,
+        80
+      ],
+      "pilot_nodes": 3402
+    },
+    {
+      "batch": 7,
+      "input_path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost76d-raw-batch7-20261116.jsonl",
+      "candidate_bits": [
+        81,
+        83,
+        85,
+        86,
+        87,
+        88,
+        89,
+        92
+      ],
+      "pilot_nodes": 3402
+    },
+    {
+      "batch": 8,
+      "input_path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost76d-raw-batch8-20261116.jsonl",
+      "candidate_bits": [
+        93,
+        94,
+        98,
+        99,
+        102,
+        103,
+        104,
+        105
+      ],
+      "pilot_nodes": 3402
+    },
+    {
+      "batch": 9,
+      "input_path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost76d-raw-batch9-20261116.jsonl",
+      "candidate_bits": [
+        106,
+        107,
+        109,
+        110,
+        111,
+        112,
+        113,
+        116
+      ],
+      "pilot_nodes": 3402
+    },
+    {
+      "batch": 10,
+      "input_path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost76d-raw-batch10-20261116.jsonl",
+      "candidate_bits": [
+        117,
+        118,
+        119,
+        120
+      ],
+      "pilot_nodes": 3402
+    }
+  ],
+  "pilots": {
+    "count": 10,
+    "nodes": 3402,
+    "all_loss_false_uncapped": true
+  },
+  "sweep_totals": {
+    "candidates": 76,
+    "win7_d10_bits": [
+      19,
+      49
+    ],
+    "refuted_d10_count": 74,
+    "capped_count": 0,
+    "node_sum": 96246915,
+    "win_roots": {
+      "19": "00000000040000003800080008080000",
+      "49": "00000000040000003802080008000000"
+    },
+    "terminal_stone_range_all": [
+      13,
+      17
+    ],
+    "andclose_all": true
+  },
+  "determinism_observations": [
+    {
+      "batch": 3,
+      "node_exact_rerun": true,
+      "note": "all verdict/nodes/capped/terminalRange fields identical; ms wall-clock fields differ"
+    },
+    {
+      "batch": 5,
+      "node_exact_rerun": true,
+      "note": "all verdict/nodes/capped/terminalRange fields identical; ms wall-clock fields differ"
+    }
+  ],
+  "v15_crosscheck": {
+    "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost76d-v15-crosscheck-20261116.jsonl",
+    "pilot_nodes": 5949,
+    "win_bits_loss_true": [
+      19,
+      49
+    ],
+    "note": "independent engine v15 (class4_child1_runner.ts) confirms both WIN7-D10 verdicts; node counts differ from v16 as expected for different move orderings"
+  },
+  "incident_note": "first sweep attempt passed --bits space-separated (unquoted) so each batch ran only its first candidate; all ten jsonl outputs were deleted and the sweep rerun with comma-separated bits before any publication; the space-separated runs produced no artifacts used here",
+  "verdict_semantics": "loss=true => WIN7-within-depth-10 candidate (certificate rebuild target); loss=false && !capped => REFUTED-D10, no first-player win within depth 10 (NOT a LOSS proof); capped => proves nothing either way",
+  "unknown_status": "11x11 empty board: UNKNOWN. This audit records WIN7-D10/REFUTED-D10 verdicts for the 7-stone roots of this child only.",
+  "interpretation_guard": "the two WIN7-D10 candidates close the certificate-extraction proof boundary for their roots only; they do not by themselves close the six-stone child, the S5 parents, the S2 {59,60} root, or the 11x11 empty board; solved counts are manifest bookkeeping, REFUTED-D10 is not a LOSS proof"
+}

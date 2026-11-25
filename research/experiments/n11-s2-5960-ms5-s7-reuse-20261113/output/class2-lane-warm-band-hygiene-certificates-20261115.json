@@ -1,0 +1,325 @@
+{
+ "schema": "class2-lane-warm-band-hygiene-certificates-v1",
+ "generated_utc": "2026-11-14T20:40:00Z",
+ "lane": "class2-lane (11x11 class-2 long-term lane, warm band hygiene batch 2026-11-15)",
+ "baseline_frontier": "class-frontier-warm-multiband-recompute-20261115.json (1109 / 6738 / 531295 / 5008 / 395018)",
+ "extraction": "warm_rebuild_pipeline_20261115.py process() (repo-verbatim class4_child1_cert_extractor_exact.ts, blind extraction, FBS=1<<20, fbt_drops=0, rows LC_ALL=C sorted-unique)",
+ "independent_verification": "scripts/verify_win7_certificate_bigint_independent.mjs run on every certificate after extraction; all asserts passed (root stones/mobility vs legal_candidates.py, sub_roots==mobility all PASS, strategy/consumed union 0/0 both directions, terminal range within 13..17, rows sorted strictly ascending unique)",
+ "frontier_effect": "none: marginal=4, mim=0; every root here was already WIN7-anchored by its band sweep receipt, so no secured/coverage/frontier number changes; this batch closes certificate gaps and resume-priority items only",
+ "records": [
+  {
+   "band": "class2-lane-cost62a",
+   "child_hex": "00000000000000809102000001000000",
+   "bit": 1,
+   "root_hex": "00000000000000809102000001000002",
+   "verdict": "WIN7",
+   "rows": 55447,
+   "extraction_nodes": 17549688,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (warm rebuild, 2026-11-15); sed -n 2p stdin recipe",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 55,
+    "independent_enumeration_legal": 55,
+    "match": true
+   },
+   "sub_roots_verified": 55,
+   "sub_roots_pass": 55,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "visited_states_across_subroots": 127661,
+   "winner_states": 82540,
+   "loser_states": 24954,
+   "loser_reply_edges": 116301,
+   "terminal_count": 20167,
+   "md5": "e4cb10a3a15dd2c01b8c698762b2d911",
+   "sha256": "029fc4550c4b327f366a18a01576bb2f045c5fa7578c76d89071a4d3b920151c",
+   "bytes": 2008189,
+   "extraction_ms": 62717,
+   "selection": "warm band hygiene: remaining uncertified WIN7 roots of the my-lane bands (coordinator marginal_in_manifest=4, mim=0: no frontier number changes)",
+   "file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost62a-certificates/bit1-root-00000000000000809102000001000002.cert.part1of2 + .part2of2",
+   "storage": {
+    "layout": "part1of2/part2of2 (line-boundary split; repo convention for >1.75 MB certificates)",
+    "part1": {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost62a-certificates/bit1-root-00000000000000809102000001000002.cert.part1of2",
+     "bytes": 1004733,
+     "md5": "fb98505c790de78f1d069ace127a181a"
+    },
+    "part2": {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost62a-certificates/bit1-root-00000000000000809102000001000002.cert.part2of2",
+     "bytes": 1003456,
+     "md5": "23caf3d774b5f313704fb2f9c7747bdf"
+    },
+    "concat_md5_equals_whole": true
+   },
+   "root_absence_check": {
+    "method": "GitHub code search over yuubinnkyoku/kyouen-researches for the quoted root hex (2026-11-14 UTC, before the certificate push)",
+    "repo_search_hits": 2,
+    "hit_paths": [
+     "research/log/2026-11-14-n11-class2-cost62a-partial-raw-audit.md",
+     "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost62a-sweep-20261114.json"
+    ],
+    "prior_certificate_hits": 0,
+    "note": "every hit is a sweep/inflight/audit/recompute record or a log markdown listing the root; no certificate file predating this batch contained the root hex"
+   },
+   "coverage_note": "closes the last two open cost-62a WIN7 bits (with bit-89 below); the 62a band is now fully certified: 11/11 WIN7 bits have published certificates (bit 11 original + bits 32/66/86/95/105/109/112/118 in the batch-1 warm multiband push + bits 1/89 here)",
+   "bigint_independent_audit": "WIN7 certificate independently verified by verify_win7_certificate_bigint_independent.mjs (BigInt 3x3 cofactor expansion, no solver/cache/repo-verifier import): root stones=7, rows sorted unique, all sub-roots passed, union 0/0 (per-extraction assert in the pipeline)",
+   "push_note": "full paged-read push; remote md5 verified byte-exact after landing"
+  },
+  {
+   "band": "class2-lane-cost62a",
+   "child_hex": "00000000000000809102000001000000",
+   "bit": 89,
+   "root_hex": "00000000020000809102000001000000",
+   "verdict": "WIN7",
+   "rows": 32471,
+   "extraction_nodes": 6191788,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (warm rebuild, 2026-11-15); sed -n 2p stdin recipe",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 50,
+    "independent_enumeration_legal": 50,
+    "match": true
+   },
+   "sub_roots_verified": 50,
+   "sub_roots_pass": 50,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "visited_states_across_subroots": 74763,
+   "winner_states": 48197,
+   "loser_states": 14097,
+   "loser_reply_edges": 66601,
+   "terminal_count": 12469,
+   "md5": "2f7427721039a848083749b0761b06a6",
+   "sha256": "badec4ee6a596362d77bb8a8f5bfaed873329b1957dab8eed9f634071b82ba6f",
+   "bytes": 1172565,
+   "extraction_ms": 24111,
+   "selection": "warm band hygiene: remaining uncertified WIN7 roots of the my-lane bands (coordinator marginal_in_manifest=4, mim=0: no frontier number changes)",
+   "file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost62a-certificates/bit89-root-00000000020000809102000001000000.cert",
+   "storage": {
+    "layout": "single file"
+   },
+   "root_absence_check": {
+    "method": "GitHub code search over yuubinnkyoku/kyouen-researches for the quoted root hex (2026-11-14 UTC, before the certificate push)",
+    "repo_search_hits": 1,
+    "hit_paths": [
+     "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost62a-sweep-20261114.json"
+    ],
+    "prior_certificate_hits": 0,
+    "note": "every hit is a sweep/inflight/audit/recompute record or a log markdown listing the root; no certificate file predating this batch contained the root hex"
+   },
+   "coverage_note": "with bit-1 above, completes the cost-62a band certificate coverage (11/11)",
+   "bigint_independent_audit": "WIN7 certificate independently verified by verify_win7_certificate_bigint_independent.mjs (BigInt 3x3 cofactor expansion, no solver/cache/repo-verifier import): root stones=7, rows sorted unique, all sub-roots passed, union 0/0 (per-extraction assert in the pipeline)",
+   "push_note": "full paged-read push; remote md5 verified byte-exact after landing"
+  },
+  {
+   "band": "class2-lane-cost63a",
+   "child_hex": "00000000000000809102000800000000",
+   "bit": 11,
+   "root_hex": "00000000000000809102000800000800",
+   "verdict": "WIN7",
+   "rows": 24243,
+   "extraction_nodes": 7160965,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (warm rebuild, 2026-11-15); sed -n 2p stdin recipe",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 45,
+    "independent_enumeration_legal": 45,
+    "match": true
+   },
+   "sub_roots_verified": 45,
+   "sub_roots_pass": 45,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "visited_states_across_subroots": 53214,
+   "winner_states": 34525,
+   "loser_states": 11164,
+   "loser_reply_edges": 49171,
+   "terminal_count": 7525,
+   "md5": "b38ead02cefef112ad621614b4435db7",
+   "sha256": "7dcaac6b0536fbb6ba55e5f529f1854c7edc65d15df29555831f2c62cc92fbbe",
+   "bytes": 877191,
+   "extraction_ms": 26053,
+   "selection": "warm band hygiene: remaining uncertified WIN7 roots of the my-lane bands (coordinator marginal_in_manifest=4, mim=0: no frontier number changes)",
+   "file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost63a-certificates/bit11-root-00000000000000809102000800000800.cert",
+   "storage": {
+    "layout": "single file"
+   },
+   "root_absence_check": {
+    "method": "GitHub code search over yuubinnkyoku/kyouen-researches for the quoted root hex (2026-11-14 UTC, before the certificate push)",
+    "repo_search_hits": 1,
+    "hit_paths": [
+     "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost63a-sweep-20261114.json"
+    ],
+    "prior_certificate_hits": 0,
+    "note": "every hit is a sweep/inflight/audit/recompute record or a log markdown listing the root; no certificate file predating this batch contained the root hex"
+   },
+   "coverage_note": "cost-63a moves to 8/10 certified (119 + batch-1 bits 2/15/28/100/118 + bits 11/109 here); the remaining bits 96/97 are claimed by the parallel warm-multiband batch-2 lane",
+   "bigint_independent_audit": "WIN7 certificate independently verified by verify_win7_certificate_bigint_independent.mjs (BigInt 3x3 cofactor expansion, no solver/cache/repo-verifier import): root stones=7, rows sorted unique, all sub-roots passed, union 0/0 (per-extraction assert in the pipeline)",
+   "push_note": "full paged-read push; remote md5 verified byte-exact after landing"
+  },
+  {
+   "band": "class2-lane-cost63a",
+   "child_hex": "00000000000000809102000800000000",
+   "bit": 109,
+   "root_hex": "00002000000000809102000800000000",
+   "verdict": "WIN7",
+   "rows": 38853,
+   "extraction_nodes": 14320132,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (warm rebuild, 2026-11-15); sed -n 2p stdin recipe",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 52,
+    "independent_enumeration_legal": 52,
+    "match": true
+   },
+   "sub_roots_verified": 52,
+   "sub_roots_pass": 52,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "visited_states_across_subroots": 85844,
+   "winner_states": 55517,
+   "loser_states": 17615,
+   "loser_reply_edges": 79656,
+   "terminal_count": 12712,
+   "md5": "cd58cd16122d98328c2c3678b282990e",
+   "sha256": "d9e78821485293df8ff093d49fbcba4b6ccf1f5c6e46e969283adfe1c5d1c88e",
+   "bytes": 1402575,
+   "extraction_ms": 51364,
+   "selection": "warm band hygiene: remaining uncertified WIN7 roots of the my-lane bands (coordinator marginal_in_manifest=4, mim=0: no frontier number changes)",
+   "file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost63a-certificates/bit109-root-00002000000000809102000800000000.cert",
+   "storage": {
+    "layout": "single file"
+   },
+   "root_absence_check": {
+    "method": "GitHub code search over yuubinnkyoku/kyouen-researches for the quoted root hex (2026-11-14 UTC, before the certificate push)",
+    "repo_search_hits": 1,
+    "hit_paths": [
+     "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost63a-sweep-20261114.json"
+    ],
+    "prior_certificate_hits": 0,
+    "note": "every hit is a sweep/inflight/audit/recompute record or a log markdown listing the root; no certificate file predating this batch contained the root hex"
+   },
+   "coverage_note": "with bit-11 above, cost-63a reaches 8/10 certificate coverage; bits 96/97 remain with the parallel lane",
+   "bigint_independent_audit": "WIN7 certificate independently verified by verify_win7_certificate_bigint_independent.mjs (BigInt 3x3 cofactor expansion, no solver/cache/repo-verifier import): root stones=7, rows sorted unique, all sub-roots passed, union 0/0 (per-extraction assert in the pipeline)",
+   "push_note": "full paged-read push; remote md5 verified byte-exact after landing"
+  },
+  {
+   "band": "class2-lane-cost71b",
+   "child_hex": "00000000000000803202000000400000",
+   "bit": 1,
+   "root_hex": "00000000000000803202000000400002",
+   "verdict": "WIN7",
+   "rows": 42499,
+   "extraction_nodes": 7256121,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (warm rebuild, 2026-11-15); sed -n 2p stdin recipe",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 51,
+    "independent_enumeration_legal": 51,
+    "match": true
+   },
+   "sub_roots_verified": 51,
+   "sub_roots_pass": 51,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "visited_states_across_subroots": 90687,
+   "winner_states": 59021,
+   "loser_states": 18736,
+   "loser_reply_edges": 85380,
+   "terminal_count": 12930,
+   "md5": "0c241e6759fdddd9605bdb4f63e19d3c",
+   "sha256": "01bb8339a722fedf9da026bb4ba965ed927ffa4252fe5b78787db8dab55600d2",
+   "bytes": 1536673,
+   "extraction_ms": 15239,
+   "selection": "warm band hygiene: remaining uncertified WIN7 roots of the my-lane bands (coordinator marginal_in_manifest=4, mim=0: no frontier number changes)",
+   "file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost71b-certificates/bit1-root-00000000000000803202000000400002.cert",
+   "storage": {
+    "layout": "single file"
+   },
+   "root_absence_check": {
+    "method": "GitHub code search over yuubinnkyoku/kyouen-researches for the quoted root hex (2026-11-14 UTC, before the certificate push)",
+    "repo_search_hits": 5,
+    "hit_paths": [
+     "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/scripts/recompute_frontier_cost71b_20261115.py",
+     "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost71b-sweep-20261115.json",
+     "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost61d-inflight-20261114.json",
+     "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost61d-sweep-20261114.json",
+     "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost71b-recompute-20261115.json"
+    ],
+    "prior_certificate_hits": 0,
+    "note": "every hit is a sweep/inflight/audit/recompute record or a log markdown listing the root; no certificate file predating this batch contained the root hex"
+   },
+   "coverage_note": "closes the first item of the parallel-lane cost-71b remaining_win7_bits list [1,14,32,74,94,117]; together with the batch-1 warm multiband bits 14/32 and the parallel-lane bits 109/21/105, cost-71b is 6/9 certified (74/94/117 remain)",
+   "bigint_independent_audit": "WIN7 certificate independently verified by verify_win7_certificate_bigint_independent.mjs (BigInt 3x3 cofactor expansion, no solver/cache/repo-verifier import): root stones=7, rows sorted unique, all sub-roots passed, union 0/0 (per-extraction assert in the pipeline)",
+   "push_note": "full paged-read push; remote md5 verified byte-exact after landing"
+  },
+  {
+   "band": "class2-lane-cost61d",
+   "child_hex": "00000000000000803202000000000002",
+   "bit": 22,
+   "root_hex": "00000000000000803202000000400002",
+   "verdict": "WIN7",
+   "rows": 42499,
+   "extraction_nodes": 7256121,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (warm rebuild, 2026-11-15); sed -n 2p stdin recipe",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 51,
+    "independent_enumeration_legal": 51,
+    "match": true
+   },
+   "sub_roots_verified": 51,
+   "sub_roots_pass": 51,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "visited_states_across_subroots": 90687,
+   "winner_states": 59021,
+   "loser_states": 18736,
+   "loser_reply_edges": 85380,
+   "terminal_count": 12930,
+   "md5": "0c241e6759fdddd9605bdb4f63e19d3c",
+   "sha256": "01bb8339a722fedf9da026bb4ba965ed927ffa4252fe5b78787db8dab55600d2",
+   "bytes": 1536673,
+   "extraction_ms": 15070,
+   "selection": "warm band hygiene: remaining uncertified WIN7 roots of the my-lane bands (coordinator marginal_in_manifest=4, mim=0: no frontier number changes)",
+   "file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost71b-certificates/bit1-root-00000000000000803202000000400002.cert",
+   "storage": {
+    "layout": "single file (canonical push under cost-71b; see the 71b bit-1 entry)"
+   },
+   "canonical_note": "byte-identical independent re-extraction of the same root as the cost-71b bit-1 certificate above (cross-child duplicate listing; md5 0c241e6759fdddd9605bdb4f63e19d3c matches): positive duplicate cross-check between two child-lane listings; the certificate is pushed once under class2-lane-cost71b-certificates/ and serves both listings; cost-61d moves to 5/14 certified (30/74/94 original, 119 batch-1, 22 here)",
+   "bigint_independent_audit": "WIN7 certificate independently verified by verify_win7_certificate_bigint_independent.mjs (BigInt 3x3 cofactor expansion, no solver/cache/repo-verifier import): root stones=7, rows sorted unique, all sub-roots passed, union 0/0 (per-extraction assert in the pipeline)",
+   "push_note": "full paged-read push; remote md5 verified byte-exact after landing"
+  }
+ ],
+ "unknown_status": "11x11 empty board, two-stone root {49,60}, S2 {59,60}, class 2, class 4: UNKNOWN. All WIN7 certificates prove only individual 7-stone roots within depth 10."
+}

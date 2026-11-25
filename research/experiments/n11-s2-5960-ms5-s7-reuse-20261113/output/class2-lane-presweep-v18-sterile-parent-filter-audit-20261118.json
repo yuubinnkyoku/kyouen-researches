@@ -1,0 +1,169 @@
+{
+  "schema": "n11-class2-lane-presweep-v18-sterile-parent-filter-audit-20261118-v1",
+  "date": "2026-11-18",
+  "audited_main": "43f9e07aa3324fb82ab7cafc47ecc7a178c79a31",
+  "source_pins": {
+    "v18": "11306824f2363d5002559d4d1535d91a61509929",
+    "k0865": "9c251da3138c5cb0516e097be5e5d0427dfaf5f0",
+    "k0783": "a6ffe048835b6e43813f462516f70bfa4c10e7b8",
+    "k0863": "c2ae353cab4a7dbcd28ec53b0f57d35ab4f26a5d",
+    "cost81log": "a5d25f595deba5dd59dce531ea2c2619f0272c3c",
+    "claim": "cffeda699c1ed0c0c9333c1b12124776f7297324"
+  },
+  "v18": {
+    "blob_sha": "11306824f2363d5002559d4d1535d91a61509929",
+    "ranking_rows": 9,
+    "ranking_top10_count": 9,
+    "selected_s6": "00000000020000003800000080000800",
+    "runner_up_s6": "00000000020000003800000090000000",
+    "selection_policy": "same policy as v4/v5/v6/v7/v8/v9/v10/v11/v12/v13/v14/v15/v16/v17 (cheapest cost, then fewest open bits after the twenty-one-map overlay, then hex) over the three published families; rows closed by the landed 64h and 76c folds, rows pending the 66i/66j folds, and the twenty-one swept children (64h/76c/66i/66j/69j/64a/71e/72d/73i/73j/73k/73l/74i/75f/78c/79c/79d/79e/80e/80f/81) are excluded; the cheapest remaining row after the selected one is recorded as runner-up"
+  },
+  "k0865": {
+    "blob_sha": "9c251da3138c5cb0516e097be5e5d0427dfaf5f0",
+    "open_s5": 174,
+    "all_remaining_sterile_parents": 3,
+    "partial_sterile_parents": 57,
+    "no_sterile_parents": 114,
+    "sterile_rows": 91
+  },
+  "parent": {
+    "hex": "00000000020000003800000080000000",
+    "d4_canon": "00000000020000003800000080000000",
+    "classification": "all_remaining_sterile",
+    "remaining_s6_orbits": 18,
+    "remaining_edge_cost": 1460,
+    "sterile_refs_count": 18,
+    "sterile_cost": 1460,
+    "all_18_rows_sterile": true
+  },
+  "v18_candidate_pool": [
+    {
+      "parent": "00000000020000003800000080000000",
+      "s6_hex": "00000000020000003800000080000800",
+      "parent_canon": "00000000020000003800000080000000",
+      "s6_canon": "00000000020000003800000080000800",
+      "cost": 82,
+      "open_after_census_v18": 65,
+      "demand": {
+        "c1": 0,
+        "c2": 0,
+        "c4": 2
+      }
+    },
+    {
+      "parent": "00000000020000003800000080000000",
+      "s6_hex": "00000000020000003800000090000000",
+      "parent_canon": "00000000020000003800000080000000",
+      "s6_canon": "00000000020000003800000090000000",
+      "cost": 82,
+      "open_after_census_v18": 65,
+      "demand": {
+        "c1": 0,
+        "c2": 0,
+        "c4": 3
+      }
+    },
+    {
+      "parent": "00000000020000003800000080000000",
+      "s6_hex": "00000000020000003800000080000400",
+      "parent_canon": "00000000020000003800000080000000",
+      "s6_canon": "00000000020000003800000080000400",
+      "cost": 84,
+      "open_after_census_v18": 66,
+      "demand": {
+        "c1": 0,
+        "c2": 0,
+        "c4": 3
+      }
+    },
+    {
+      "parent": "00000000020000003800000080000000",
+      "s6_hex": "00000000020000003800000080000100",
+      "parent_canon": "00000000020000003800000080000000",
+      "s6_canon": "00000000020000003800000080000100",
+      "cost": 86,
+      "open_after_census_v18": 68,
+      "demand": {
+        "c1": 0,
+        "c2": 0,
+        "c4": 3
+      }
+    },
+    {
+      "parent": "00000000020000003800000080000000",
+      "s6_hex": "00000000020000003800000080004000",
+      "parent_canon": "00000000020000003800000080000000",
+      "s6_canon": "00000000020000003800000080004000",
+      "cost": 86,
+      "open_after_census_v18": 68,
+      "demand": {
+        "c1": 0,
+        "c2": 0,
+        "c4": 3
+      }
+    },
+    {
+      "parent": "00000000020000003800000080000000",
+      "s6_hex": "00000000020000003800000280000000",
+      "parent_canon": "00000000020000003800000080000000",
+      "s6_canon": "00000000020000003800000280000000",
+      "cost": 86,
+      "open_after_census_v18": 68,
+      "demand": {
+        "c1": 0,
+        "c2": 0,
+        "c4": 3
+      }
+    },
+    {
+      "parent": "00000000020000003800000080000000",
+      "s6_hex": "00000000020000003800100080000000",
+      "parent_canon": "00000000020000003800000080000000",
+      "s6_canon": "00000000020000003800100080000000",
+      "cost": 86,
+      "open_after_census_v18": 68,
+      "demand": {
+        "c1": 0,
+        "c2": 0,
+        "c4": 3
+      }
+    },
+    {
+      "parent": "00000000020000003800000080000000",
+      "s6_hex": "00000000020000003840000080000000",
+      "parent_canon": "00000000020000003800000080000000",
+      "s6_canon": "00000000020000003840000080000000",
+      "cost": 86,
+      "open_after_census_v18": 70,
+      "demand": {
+        "c1": 0,
+        "c2": 0,
+        "c4": 3
+      }
+    },
+    {
+      "parent": "00000000020000003800000080000000",
+      "s6_hex": "00000000020000003800000080000004",
+      "parent_canon": "00000000020000003800000080000000",
+      "s6_canon": "00000000020000003800000080000004",
+      "cost": 87,
+      "open_after_census_v18": 69,
+      "demand": {
+        "c1": 0,
+        "c2": 0,
+        "c4": 3
+      }
+    }
+  ],
+  "selected_is_unclosable": true,
+  "runner_up_is_unclosable": true,
+  "all_pool_rows_same_unclosable_parent": true,
+  "all_pool_rows_in_sterile_registry": true,
+  "eligible_rows_after_sterile_filter": [],
+  "eligible_count_after_sterile_filter": 0,
+  "selector_policy_missing_sterile_parent_filter": true,
+  "claim_next_action_points_to_runner_up": true,
+  "recommended_action": "Do not launch the v18 runner-up as a D10 receipt-closure target. Rebuild the next-target census from the current head-1473 worklist, applying K0865/K0863 STERILE-parent exclusions before ranking; keep cross-version revalidation of historical STERILE rows as a separate, explicitly labelled objective.",
+  "interpretation_guard": "This is a coordinator-selection audit, not a new game verdict. It shows that all nine remaining v18 candidates are in a parent whose 18 remaining S6 rows are already classified STERILE, so the v18 pool has zero candidates capable of producing a D10 WIN7 receipt for that parent. It does not prove LOSS and does not change the S6 manifest head.",
+  "all_pass": true
+}

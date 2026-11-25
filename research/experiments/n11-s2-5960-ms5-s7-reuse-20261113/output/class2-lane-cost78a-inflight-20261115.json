@@ -1,0 +1,294 @@
+{
+  "schema": "n11-class2-lane-cost78a-inflight-20261115-v1",
+  "title": "n11 class2-lane cost-78a sweep in flight (claimed by a long-term lane execution)",
+  "date": "2026-11-15",
+  "status": "completed",
+  "claimed_by": "long-term class2 lane",
+  "s5": "00000000000000809102000000000000",
+  "s6_child": "00000000000000809102000000400000",
+  "s6_s7_edge_cost": 78,
+  "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+  },
+  "open_parents_at_head_1188": [
+    {
+      "s5_hex": "00000000000000809102000000000000",
+      "classes_bitmask": 2,
+      "remaining_s6_orbits": 4,
+      "remaining_s7_edge_cost": 297,
+      "lift_stones": [
+        22
+      ]
+    },
+    {
+      "s5_hex": "00000000000000801202000100000000",
+      "classes_bitmask": 2,
+      "remaining_s6_orbits": 79,
+      "remaining_s7_edge_cost": 6539,
+      "lift_stones": [
+        56
+      ]
+    }
+  ],
+  "demand_verification": "re-derived and VERIFIED at the canonical chain head (1188/6659/525437/4929/389160, class-frontier-cost72b-receipts-recompute-20261115.json): the child equals the parent S5 00000000000000809102000000000000 with the single stone 1<<22 added (XOR=1, verified); the 6 one-stone deletions of the child were D4-canonicalized with an independent canon() implementation (min over the 8 dihedral transforms; validated against all 13 published cost-72b receipt (root_hex, d4_canonical_hex) pairs and the 6 cost-76a sweep-audit pairs, 19/19, plus the 74d bit91 cross-cover pair) and matched against the 175 open S5 rows of the head-1188 ranking CSV: exactly 2 open parents (the third class-2 target S5 00000000000000809102000000000000 at 4 remaining orbits / 297, and class-2 S5 00000000000000801202000100000000 at 79 / 6539); the same methodology reproduces the documented cost-76a demand verification exactly (2 open parents, target at 4/297 and 00000000000000801202000000000400 at 77/6296, c1=0/c2=2/c4=0); per-class demand c1=0,c2=2,c4=0 (demand sum 2), distinct open parent S5 orbits = 2 (both numbers stated per the cost-69g demand-reconciliation recommendation); legal_candidates.py independent enumeration gives 78 legal candidates, bit-exact with the published manifest edge cost 78; the child is the last remaining unclaimed child of the third target (cost order 69 claimed as cost-69g / 74 claimed as cost-74d completed / 74 claimed as cost-74e in flight / 76 claimed as cost-76a completed (sweep + certificates published; receipt fold pending) / 78 this claim; the four remaining orbits of the target sum 69+74+76+78=297, bit-exact with the ranking CSV remaining_s7_edge_cost); membership re-verified before this claim per the cost-61e correction lesson",
+  "chain_head": "1188/6659/525437/4929/389160 (class-frontier-cost72b-receipts-recompute-20261115.json)",
+  "candidate_count": 78,
+  "legal_candidates": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    17,
+    18,
+    19,
+    20,
+    21,
+    23,
+    24,
+    25,
+    26,
+    29,
+    30,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    41,
+    42,
+    44,
+    46,
+    47,
+    53,
+    54,
+    66,
+    68,
+    69,
+    75,
+    76,
+    78,
+    79,
+    80,
+    81,
+    85,
+    86,
+    89,
+    90,
+    91,
+    92,
+    94,
+    95,
+    96,
+    97,
+    98,
+    100,
+    101,
+    102,
+    103,
+    105,
+    106,
+    107,
+    108,
+    109,
+    110,
+    111,
+    112,
+    113,
+    114,
+    116,
+    117,
+    118,
+    119,
+    120
+  ],
+  "enumeration": "legal_candidates.py independent enumeration (exact Bareiss 4x4 integer determinants): 78 legal candidates, bit-exact with the published manifest edge cost 78; enumeration run in this session before the claim push",
+  "engine": {
+    "script": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/class4_child1_runner_v16.ts",
+    "blob_sha": "0a4a86f6828dc010c89ff17596054336a6b6091f",
+    "depth": 10,
+    "cap": 1000000000,
+    "andclose": 1,
+    "batch_size": 8,
+    "pilot_control": "d6 loss=false nodes=3402 required per batch; local copy byte-exact with the repo blob (git blob sha 0a4a86f6828dc010c89ff17596054336a6b6091f computed locally and equal to the 76a/74d claim record) and control passed at session start"
+  },
+  "plan": "Sweep complete (78/78, 5 WIN7-D10 bits 8/20/29/36/109, 0 capped). Certificates 5/5 published and double-verified. The 5 receipts are folded on the cost-67c canonical head 1219/6628/523173/4898/386896, producing head 1225/6622/522699/4892/386422; the child orbit is closed by bit36 and the third class-2 target S5 now has 2 rows / 143. 11x11 remains UNKNOWN.",
+  "naming_note": "cost-78a disambiguates from any future cost-78 band and from cost-78 children of other class-2 S5 parents (the second open parent 00000000000000801202000100000000 has its own children); no cost-78 band name is in use on main as of this claim (checked against recent output/log naming and the 76a claim cost-order note on 2026-11-15)",
+  "demand_semantics_note": "per-class demand counts each open parent S5 once per set class bit (class2-lane-cost69g-demand-reconciliation-20261115.json); distinct open parents = 2 here; lift_stones are the deleted stone indices of the swept child whose deletions D4-canonicalize to the open parent hexes",
+  "interpretation_guard": "REFUTED-D10 is absence of a winner win within depth 10, not a refutation of the child; loss=true rows are WIN7-within-depth search candidates needing certificate extraction before any frontier claim; solved counts measure manifest coverage, not the game-theoretic value of any position",
+  "unknown_status": "standard 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, class 2, class 4 remain UNKNOWN. A completed sweep proves only WIN7-D10/REFUTED-D10 verdicts for the 7-stone roots of this child.",
+  "sweep_result": {
+    "audit": "class2-lane-cost78a-sweep-audit-20261115.json",
+    "raw_batches": 10,
+    "candidates": 78,
+    "win7_d10": 5,
+    "win7_bits": [
+      8,
+      20,
+      29,
+      36,
+      109
+    ],
+    "refuted_d10": 73,
+    "capped": 0,
+    "candidate_nodes": 184253822,
+    "pilots_3402": 10,
+    "d4_duplicates_vs_published_manifests": 0,
+    "determinism_note": "bits 8/20/96/109 node-exact across a deliberate rerun",
+    "v15_crosscheck": "5/5 WIN7 loss=true, 3/3 refuted anchors loss=false, pilots 5949 x2, local v15 byte-exact with repo",
+    "fold": "folded on the cost-67c head 1219; see the top-level fold block"
+  },
+  "certificates": {
+    "directory": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost78a-certificates/",
+    "win7_bits_certified": [
+      8,
+      20,
+      29,
+      36,
+      109
+    ],
+    "win7_bits_pending": [],
+    "files_on_main_blob_sha_verified": 3,
+    "driver": "scripts/cert_driver78a.ts (published, git blob sha b5819be3beae2517d530b985233de4a6955e79c6, commit 32eb8c78); empty kill table (pref=null), chunk rows-only, repo-verbatim extractor import class4_child1_cert_extractor_exact.ts",
+    "published": [
+      {
+        "bit": 36,
+        "root_hex": "00000000000000809102001000400000",
+        "rows": 50711,
+        "bytes": 1833561,
+        "layout": "single file (under the 1.75 MiB = 1,835,008 B threshold)",
+        "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost78a-certificates/bit36-root-00000000000000809102001000400000.cert",
+        "git_blob_sha": "ea30ad286dd1c3de674ff834da5778b5e0a26ae0",
+        "md5": "118de1bc8019d51f3fd909fda13a0b17",
+        "extraction_nodes": 11691313,
+        "chunks": 3,
+        "fbt_drops": 0,
+        "bigint_verifier": "PASS (sub_roots 59, union missing 0, extra 0, terminal range [13,17])",
+        "ts_verifier": "PASS (--root-check stones=7 loser_mobility=59, all 59 subroots, consumed union == certificate rows 0/0)",
+        "v15_anchor_nodes": 6829497,
+        "v16_sweep_nodes": 1435988,
+        "push_commit": "7fe1a0ee5cf41c07e866b31313c9ede55aabc300"
+      },
+      {
+        "bit": 20,
+        "root_hex": "00000000000000809102000000500000",
+        "rows": 56452,
+        "bytes": 2039074,
+        "layout": "2 parts split at a line boundary (>1.75 MiB repo convention); joined md5 equals whole-file md5",
+        "joined_md5_equals_whole_md5": "348871fd605dedeb34b5a4c4ad6f518c",
+        "parts": [
+          {
+            "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost78a-certificates/bit20-root-00000000000000809102000000500000.cert.part1of2",
+            "bytes": 1020151,
+            "git_blob_sha": "feedb02de70206f8630bfdeae9d7a5eadc068173"
+          },
+          {
+            "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost78a-certificates/bit20-root-00000000000000809102000000500000.cert.part2of2",
+            "bytes": 1018923,
+            "git_blob_sha": "84d59223f7fb4752dd115407f552563989e1a504"
+          }
+        ],
+        "extraction_nodes": 16192007,
+        "chunks": 3,
+        "fbt_drops": 0,
+        "bigint_verifier": "PASS (sub_roots 64, union missing 0, extra 0, terminal range [13,17])",
+        "ts_verifier": "PASS (--root-check stones=7 loser_mobility=64, all 64 subroots, consumed union == certificate rows 0/0)",
+        "v15_anchor_nodes": 9116968,
+        "v16_sweep_nodes": 2523199,
+        "push_commits": [
+          "2e7a8d024642638d52074acccb9ea94b677604f8",
+          "11c098d4fea3c58d821a454ba069bcf0871826eb"
+        ]
+      }
+    ],
+    "pending": [
+      {
+        "bit": 29,
+        "root_hex": "00000000000000809102000020400000",
+        "d4_canonical_hex": "00000000000000809102000020400000",
+        "loser_mobility": 58,
+        "v16_sweep_nodes": 2679165,
+        "v15_anchor_nodes": 12318424,
+        "note": "extraction was started at the previous session end (3 chunks of the 58 loser first moves, 20/20/18); local rows may or may not have survived the sandbox reset - re-run the driver if the chunk files are absent"
+      },
+      {
+        "bit": 8,
+        "root_hex": "00000000000000809102000000400100",
+        "d4_canonical_hex": "00000000000000809102000000400100",
+        "loser_mobility": 62,
+        "v16_sweep_nodes": 6197213,
+        "v15_anchor_nodes": 18043143,
+        "determinism_rerun_nodes_equal": true
+      },
+      {
+        "bit": 109,
+        "root_hex": "00002000000000809102000000400000",
+        "d4_canonical_hex": "00000000010000809102000000200000",
+        "loser_mobility": 68,
+        "v16_sweep_nodes": 7508870,
+        "v15_anchor_nodes": 18434188,
+        "determinism_rerun_nodes_equal": true
+      }
+    ],
+    "double_verification_method": "verify_win7_certificate_bigint_independent.mjs (BigInt 3x3 cofactor expansion, no engine import) and verify_bit7_win7_cert.ts (Number Bareiss independent verifier, --root-check, --subroots all, --consumed-out); per-board conflicting-move duplicates asserted 0 on chunk merge (sort -u union)",
+    "incident_note": "the bit36 push program hit the 16 MiB sandbox memory limit after 30 read_file pages + push_files; the push itself completed and the landing was verified remotely byte-exact (listing blob sha match); no truncated or partial file landed",
+    "progress": "5/5 published and folded",
+    "status": "in-flight"
+  },
+  "unknown_status_note": "the receipts are folded into the canonical chain (head 1225/6622/522699/4892/386422); the fold changes no game-theoretic verdict. Standard 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, class 2 and class 4 remain UNKNOWN.",
+  "fold": {
+    "chain_head_before": "1219/6628/523173/4898/386896",
+    "chain_head_after": "1225/6622/522699/4892/386422",
+    "receipts": 5,
+    "publication_order": [
+      36,
+      20,
+      29,
+      8,
+      109
+    ],
+    "total_marginal": 26,
+    "total_marginal_in_manifest": 6,
+    "zero_marginal_in_manifest": [],
+    "child_orbit_closed_by_bit": 36,
+    "parents_after": {
+      "parent1": "2 rows / 143",
+      "parent2": "73 rows / 6065"
+    },
+    "parents_lost_rows": {
+      "parent1": [
+        "00000000000000809102000000400000"
+      ],
+      "parent2": [
+        "00000000000000801202000100000004",
+        "00000000000000801202000100001000",
+        "00000000000000801202000102000000",
+        "00000000000000801202010100000000",
+        "00000000000000809102000000400000",
+        "00000000010000809002000000200000"
+      ]
+    },
+    "output_blob_shas": {
+      "head_json": "3938bb1668c7dfb80049cdac45f8dee50514c064",
+      "ranking_csv": "5579258e82562e722c5757c0d4c40e7fb724c626",
+      "top_candidates_csv": "f22888a22497ff9df55ef9ab5f13f2b4d442dab3"
+    },
+    "head_json_bytes": 10629,
+    "fold_script": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost78a_receipts_20261115.py",
+    "reproduction": "python research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost78a_receipts_20261115.py",
+    "note": "Rebased on the cost-67c fold (1216 -> 1219) which landed before this fold. The fold reproduces the whole earlier chain by runpy and asserts the 1219 head byte-identically before extending it. Marginal counts are D4-orbit bookkeeping over published receipts, not game-theoretic values."
+  }
+}

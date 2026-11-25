@@ -1,0 +1,35 @@
+{
+ "schema": "n11-class2-lane-cost73k-memo-measurement-cross-lane-agreement-20261117-v1",
+ "date": "2026-11-17",
+ "published_measurement": {
+  "file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-band-memo-extraction-measurement-73k-20261117.json",
+  "git_blob_sha": "ce625db014e0269fad48c573d29389e6f803310b",
+  "pinned_commits": {
+   "artifacts": "a3c27e9f",
+   "log_fix": "c170a4ef"
+  },
+  "fetch_url": "https://raw.githubusercontent.com/yuubinnkyoku/kyouen-researches/a3c27e9f/research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-band-memo-extraction-measurement-73k-20261117.json"
+ },
+ "this_session": {
+  "independence": "separate concurrent session; environment rebuilt from raw CDN pin 1da42ce0 after a reset; independently implemented orchestrator (not the published driver), same pinned engine blobs (extractor 52bcaf50..., manifest 0892aed0..., enumerator 8e97082c...); fresh Node.js process per configuration; ~50 min wall, all gates passed, FAILURES: 0",
+  "duplicate_publication_avoided": "all four planned output paths were already published by the concurrent session; per the no-duplicate-publication policy the second run was converted into this agreement check (precedent 73j)",
+  "runtime_failure_recorded": "first orchestrator pass failed at band_ms22 with ERR_MODULE_NOT_FOUND (ms22 driver variant not yet generated); fixed by generating the variant, band_ms18 preserved by resume; second pass re-verified every gate from the resumed state, FAILURES: 0",
+  "extras_not_in_published_json": {
+   "union_rows": 682861,
+   "union_sum_per_bit_rows": 966535,
+   "union_md5": "2133564406306fd1657af7ac11be6f5d",
+   "union_band_ms18_ms22_ms23_byte_equal": true,
+   "union_fresh_battery_equal": true,
+   "bit95_nodes_all_configurations": 11857737,
+   "anchor_bit39_fresh_ms18": 2597243
+  }
+ },
+ "compared": {
+  "field_checks": 259,
+  "checks_ok": 259,
+  "mismatches": [],
+  "coverage": "published fresh MS=1<<18 baseline total; band-wide single-process runs ms18/22/23/24 (totals, final memo occupancy, byte-identity, 22 per-bit node counts each, vs_published ratios); fresh per-process batteries ms23 and ms24 (status, totals, vs_published ratios, 22 per-bit counts each); ms23 sharing decomposition (band/fresh totals, penalty, per-bit band and fresh nodes); ms24 band-vs-fresh sharing (totals, penalty, occupancy, load, 22 per-bit ratios); bit-117 fresh sensitivity at six capacities (slots and nodes); gates"
+ },
+ "verdict": "AGREEMENT: every field of the published cost73k band memo extraction capacity measurement reproduces exactly from the second session's independent re-run (same pinned engine, independently implemented orchestrator, fresh processes); no field disagrees",
+ "scope_guard": "this is a measurement-reproducibility agreement between two independent executions of the same deterministic engine; it is not a game-theoretic result, closes no manifest row, changes no certificate bytes and adds no verdict; WIN7-D10 proves a first-player win within depth 10 from each individual 7-stone root only; REFUTED-D10 is not a LOSS proof; 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60} and classes 1/2/4 remain UNKNOWN"
+}

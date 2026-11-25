@@ -1,0 +1,126 @@
+{
+ "schema": "n11-class2-lane-cost75c-sweep-20261115-v1",
+ "date": "2026-11-15",
+ "session": "long-term lane execution (2026-11-15 JST), continuing after the cost-75b frontier recompute (solved 1049, class-frontier-cost75b-recompute-20261115.json, commit c6941de2) and the cost-75c inflight claim (commit f7a6d53b, remote md5 verified)",
+ "s5_parent_hex": "00000000000000803202000000000000",
+ "s6_child_hex": "00000000000000803202000000004000",
+ "s6_s7_edge_cost": 75,
+ "demand_classes_at_claim": {
+  "c1": 0,
+  "c2": 2,
+  "c4": 0
+ },
+ "demand_verification": "VERIFIED before the claim from the after-cost-75b frontier (class-frontier-top-candidates-s6-after-cost75b-20261115.csv): the child was one of the two remaining unswept children of the second class-2 target (parent at 2 remaining orbits / cost 147; the other remaining child is the parallel-lane cost-72 child 00000000000000803202000000000200); membership in the remaining-children set and non-empty demand re-derived and verified before the claim per the cost-61e correction lesson",
+ "candidate_enumeration": "legal_candidates.py independent Bareiss 4x4 enumeration: 75 legal candidates, bit-exact with the published edge cost 75; named cost-75c (cost-75b is the completed sibling sweep on 00000000000000803202000000000008)",
+ "engine": "class4_child1_runner_v16.ts (published repo-verbatim v16 runner), depth 10, andclose=1, cap 1e9, pilot d6 control (loss=false at exactly 3,402 nodes) per batch",
+ "engine_gate": "v16 agreement-gated in cost-56a and used for cost-58b/60b/61d/61e/61f/63e/64b/65g/65h/65i/67b/68c/69e/70c/71b/75b",
+ "win7_d10": 12,
+ "win7_bits": [
+  8,
+  12,
+  22,
+  66,
+  84,
+  89,
+  96,
+  97,
+  98,
+  100,
+  108,
+  111
+ ],
+ "win7_roots": [
+  "00000000000000803202000000004100",
+  "00000000000000803202000000005000",
+  "00000000000000803202000000404000",
+  "00000000000000843202000000004000",
+  "00000000001000803202000000004000",
+  "00000000020000803202000000004000",
+  "00000001000000803202000000004000",
+  "00000002000000803202000000004000",
+  "00000004000000803202000000004000",
+  "00000010000000803202000000004000",
+  "00001000000000803202000000004000",
+  "00008000000000803202000000004000"
+ ],
+ "verdict": "WIN7",
+ "refuted_d10": 63,
+ "capped": 0,
+ "total_nodes": 138240690,
+ "total_nodes_note": "v16 engine node count; all 12 WIN7 candidates have v15 loss=true cross-engine anchors and fully verified extracted certificates; the heaviest overall candidate (66, WIN7), the heaviest REFUTED (75) and the lightest WIN7 (111) covered by node-exact determinism rerun",
+ "pilot_d6_controls": "loss=false at exactly 3,402 nodes in all 10 batch invocations (identical control lines)",
+ "terminal_stone_range_all": [
+  [
+   13,
+   17
+  ]
+ ],
+ "heaviest_bits": [
+  {
+   "bit": 66,
+   "nodes": 10845926,
+   "verdict": "WIN7"
+  },
+  {
+   "bit": 75,
+   "nodes": 8628305,
+   "verdict": "REFUTED"
+  },
+  {
+   "bit": 4,
+   "nodes": 8136345,
+   "verdict": "REFUTED"
+  },
+  {
+   "bit": 6,
+   "nodes": 6949289,
+   "verdict": "REFUTED"
+  },
+  {
+   "bit": 22,
+   "nodes": 6943892,
+   "verdict": "WIN7"
+  },
+  {
+   "bit": 97,
+   "nodes": 5426364,
+   "verdict": "WIN7"
+  }
+ ],
+ "determinism_rerun_node_exact": "bits 66 (WIN7/heaviest, 10,845,926), 75 (heaviest REFUTED, 8,628,305) and 111 (lightest WIN7, 1,611,883) re-solved fresh in a separate process after the sweep: node counts identical (class2-lane-cost75c-v16-determinism-rerun-20261115.jsonl)",
+ "cross_engine_check": "v15 runner (class4_child1_runner.ts, pilot 5,949 PASS x3) on the same child: ALL 12 WIN7 bits (8/12/22/66/84/89/96/97/98/100/108/111) loss=true at 8,372,581 / 7,865,566 / 14,083,030 / 21,096,647 / 7,350,763 / 7,039,706 / 4,292,180 / 9,304,101 / 8,165,861 / 7,067,263 / 5,643,984 / 3,568,856 nodes - verdicts identical to v16 (class2-lane-cost75c-v15-crosscheck-20261115.jsonl)",
+ "duplicate_root_check": "all 12 WIN7 root hexes checked against the published records/certificates before pushing: 10 roots 0 hits. Two cross-child duplicates found WITHOUT prior published certificates: the bit-12 root 00000000000000803202000000005000 duplicates the cost-65h bit-14 win7_roots listing (cost-65h certified bits 7/109/24 only) and the bit-22 root 00000000000000803202000000404000 duplicates the cost-71b bit-14 win7_roots listing (cost-71b certified bits 109/21/105 only); both are first certificates for their roots and close the respective warm entries",
+ "raw_batches": "class2-lane-cost75c-raw-batch{1..10}-20261115.jsonl (10 batches 9x8+1x3, commit efba4dbf, remote verified)",
+ "certificate": [
+  "class2-lane-cost75c-certificates/bit100-root-00000010000000803202000000004000.cert.part1of2",
+  "class2-lane-cost75c-certificates/bit100-root-00000010000000803202000000004000.cert.part2of2",
+  "class2-lane-cost75c-certificates/bit108-root-00001000000000803202000000004000.cert.part1of2",
+  "class2-lane-cost75c-certificates/bit108-root-00001000000000803202000000004000.cert.part2of2",
+  "class2-lane-cost75c-certificates/bit111-root-00008000000000803202000000004000.cert.part1of2",
+  "class2-lane-cost75c-certificates/bit111-root-00008000000000803202000000004000.cert.part2of2",
+  "class2-lane-cost75c-certificates/bit12-root-00000000000000803202000000005000.cert.part1of2",
+  "class2-lane-cost75c-certificates/bit12-root-00000000000000803202000000005000.cert.part2of2",
+  "class2-lane-cost75c-certificates/bit22-root-00000000000000803202000000404000.cert.part1of2",
+  "class2-lane-cost75c-certificates/bit22-root-00000000000000803202000000404000.cert.part2of2",
+  "class2-lane-cost75c-certificates/bit66-root-00000000000000843202000000004000.cert.part1of3",
+  "class2-lane-cost75c-certificates/bit66-root-00000000000000843202000000004000.cert.part2of3",
+  "class2-lane-cost75c-certificates/bit66-root-00000000000000843202000000004000.cert.part3of3",
+  "class2-lane-cost75c-certificates/bit8-root-00000000000000803202000000004100.cert.part1of2",
+  "class2-lane-cost75c-certificates/bit8-root-00000000000000803202000000004100.cert.part2of2",
+  "class2-lane-cost75c-certificates/bit84-root-00000000001000803202000000004000.cert.part1of2",
+  "class2-lane-cost75c-certificates/bit84-root-00000000001000803202000000004000.cert.part2of2",
+  "class2-lane-cost75c-certificates/bit89-root-00000000020000803202000000004000.cert.part1of2",
+  "class2-lane-cost75c-certificates/bit89-root-00000000020000803202000000004000.cert.part2of2",
+  "class2-lane-cost75c-certificates/bit96-root-00000001000000803202000000004000.cert.part1of2",
+  "class2-lane-cost75c-certificates/bit96-root-00000001000000803202000000004000.cert.part2of2",
+  "class2-lane-cost75c-certificates/bit97-root-00000002000000803202000000004000.cert.part1of2",
+  "class2-lane-cost75c-certificates/bit97-root-00000002000000803202000000004000.cert.part2of2",
+  "class2-lane-cost75c-certificates/bit98-root-00000004000000803202000000004000.cert.part1of2",
+  "class2-lane-cost75c-certificates/bit98-root-00000004000000803202000000004000.cert.part2of2"
+ ],
+ "certificate_note": "all 12 WIN7-D10 candidates have fully verified extracted certificates (root-check stones=7 + loser mobility vs independent enumeration, all sub-roots PASS, union missing/extra 0/0, rows sorted unique, plus independent BigInt audit): bits 8 (66,236 rows / 13,452,039 extraction nodes / 66 loser moves), 12 (60,023 / 12,936,955 / 57), 22 (78,999 / 22,433,703 / 63), 66 (86,401 / 31,224,950 / 62), 84 (59,056 / 12,031,200 / 59), 89 (60,677 / 11,714,155 / 58), 96 (42,471 / 6,589,016 / 55), 97 (55,851 / 15,206,431 / 55), 98 (68,738 / 13,729,984 / 66), 100 (48,859 / 10,758,610 / 58), 108 (42,639 / 8,310,219 / 57), 111 (43,428 / 6,630,448 / 54); details in class2-lane-cost75c-win7-certificates-20261115.json",
+ "unverified_win7_bits": [],
+ "unverified_win7_bits_note": "none: every WIN7-D10 candidate of this sweep has a published, independently verifiable certificate",
+ "unknown_status": "11x11 empty board: UNKNOWN. All WIN7 certificates prove only individual 7-stone roots within depth 10.",
+ "status": "completed"
+}

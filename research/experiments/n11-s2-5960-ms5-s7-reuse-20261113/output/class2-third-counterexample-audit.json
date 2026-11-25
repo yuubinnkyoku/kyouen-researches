@@ -1,0 +1,46 @@
+{
+  "s5_hex": "00000000000000805202000000000000",
+  "s6_hex": "00000000000000805202000000002000",
+  "s5_second_win_responses": [
+    {
+      "s5_hex": "00000000000000003800000008800000",
+      "moves": [
+        82
+      ]
+    },
+    {
+      "s5_hex": "00000000000000801402000000080000",
+      "moves": [
+        63
+      ]
+    },
+    {
+      "s5_hex": "00000000000000805202000000000000",
+      "moves": [
+        13,
+        101
+      ]
+    }
+  ],
+  "s6_legal_moves": 64,
+  "s6_distinct_s7_orbits": 64,
+  "verified_original_first_loss_s7": 64,
+  "result": "S6 first-player LOSS; three S5 positions second-player WIN",
+  "all_reused_s6_wins": 633,
+  "remaining_s5_orbits": 177,
+  "remaining_required_s6_orbits": 7213,
+  "remaining_required_s7_edge_cost": 565846,
+  "best_remaining_by_class": {
+    "2": {
+      "s5_hex": "00000000000000003802000008000000",
+      "remaining_s6_orbits": 36,
+      "remaining_s7_edge_cost": 2474
+    },
+    "4": {
+      "s5_hex": "00000000020000003800000080000000",
+      "remaining_s6_orbits": 43,
+      "remaining_s7_edge_cost": 3391
+    }
+  },
+  "scope": "terminal certificates reverified independently; no conclusion for the class-2 blocker or root"
+}

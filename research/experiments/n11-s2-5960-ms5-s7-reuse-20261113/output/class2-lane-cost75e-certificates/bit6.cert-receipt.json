@@ -1,0 +1,27 @@
+{
+ "bit": 6,
+ "root_hex": "00000000040000809002000000000042",
+ "verdict": "WIN7",
+ "whole_bytes": 2207870,
+ "whole_md5": "fb4da31600c2c862f5dc2c5d48cd8d90",
+ "whole_sha256": "7965d99b5b4fcd23d40a1b4ed878fe1e29499144f30e848c88e6208075e76199",
+ "parts": [
+  {
+   "name": "bit6-root-00000000040000809002000000000042.cert.part1of2",
+   "git_blob_sha": "406e072b6ee81c57f2bb6be35bc3d72048e3691e",
+   "bytes": 1103943
+  },
+  {
+   "name": "bit6-root-00000000040000809002000000000042.cert.part2of2",
+   "git_blob_sha": "a7dc3c6c38e91a96977529c59aed23ca608d767a",
+   "bytes": 1103927
+  }
+ ],
+ "rows": 60952,
+ "sub_roots": 66,
+ "terminal_range": [
+  13,
+  17
+ ],
+ "note": "the whole 2,207,870-byte cert exceeds the push tooling single-file size limit, so it is published as two line-boundary parts (cost-77e convention): part1of2 ends at a complete row line, part2of2 begins with a row line, and cat part1of2 part2of2 reproduces the whole cert byte-exactly (verified against raw CDN after landing); the whole-file git blob sha of the reconstructed bytes is 403e24916febc9cb3171d8bd9d093febd87269da"
+}

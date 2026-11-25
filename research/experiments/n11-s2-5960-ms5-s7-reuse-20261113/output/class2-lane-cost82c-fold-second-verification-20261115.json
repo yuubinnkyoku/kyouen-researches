@@ -1,0 +1,26 @@
+{
+ "controls_passed": {
+  "certificates_third_system_verified": "5 certificates re-joined from their parts with fresh code (bytes / md5 / sha256 / git blob == extraction receipts, rows sorted-unique) and geometrically re-verified by the published third-system rational verifier (exact Fraction circumcentre / cross-product collinearity, iterative replay): 289,911 rows / 10,488,172 bytes / 311 sub-roots, roots safe, unions 0/0, terminal ranges within [13,17], consumed winner-row sets == published TS consumed sets (5/5)",
+  "chain_head_1305_reproduced": "the fold script's runpy chain reproduces the cost-80d baseline 1305/6542/516793/4812/380516 with the 80d head JSON and both CSVs blob-identical to main (in-script control, re-observed twice here)",
+  "completed_claim_closure": "the completed claim fold record matches this recomputation: head 1305->1306, publication order [16,37,47,71,82], totals 21/1, zero-mim [37,47,71,82], child closed by bit16, parents_after 8 rows / 625 and 59 rows / 4854, lost rows == the child only, three output blob shas re-asserted",
+  "fold_script_two_isolated_runs_byte_identical": "two short-lived subprocess re-runs of the published fold script complete with all in-script controls and regenerate the three outputs byte-identically to each other and to main (4ee6aaab + 8,587 B; cc89c52b + 7,537 B; 6a1a2185 + 7,157 B)",
+  "independent_d4_and_marginal_arithmetic": "an independently coded D4 group (8 explicit affine matrices, min image) reproduces each root's d4_canonical_hex, the deletion-orbit covers, and the per-bit marginals field-by-field against the published head JSON addition records; roots == child|1<<bit with popcount 7; total marginal 21 / in-manifest 1 / zero-mim [37,47,71,82]; child closed exactly once by bit16; set-equality s_1306 == s_1305 UNION covers(5 roots); second target S5 9/707 -> 8 rows / 625 and second open parent 60/4936 -> 59 rows / 4854 (only the child row lost from each)",
+  "inventory_orbit_analysis": "592-root folded inventory (587 previous + 5 new) re-analysed with the independent D4: 581 distinct orbits / 11 twin pairs (576 + 5 new orbits, no new twins); the 5 new roots are disjoint from the previous inventory raw-hex and D4-canonically",
+  "sweep_reaggregated": "fresh-code aggregation of the 11 raw batch JSONLs: 82 candidates exactly once (== claim enumeration), 5 WIN7-D10 [16,37,47,71,82] / 77 REFUTED-D10 / 0 capped, 151,736,232 nodes, terminal ranges within [13,17], pilots 3402 x11, determinism rerun node-exact, v15 cross-engine 5/5 WIN + 3/3 refuted anchors (bits 0/1/2), pilot 5949"
+ },
+ "date": "2026-11-15",
+ "fold_script_blob_sha": {
+  "bytes": 22562,
+  "git_blob_sha": "d43fa6e5267eedca7c4bb81eedadba8a23a14424",
+  "md5": "9f0ea381916809b6ebcd020d526e5983"
+ },
+ "inputs": "published main bytes only: the codeload main tarball mirror (kyouen-researches@main), including the fold script, the completed claim, the 11 raw batches, the determinism rerun, the v15 crosscheck, the 5 published certificates and the tmp-cost82c extraction records; no state from the landing session was reused",
+ "interpretation_guard": "bookkeeping verification of a receipts fold only; solved 1306 measures manifest coverage, not the game-theoretic value of any position; REFUTED-D10 sweeps prove only the absence of a WIN7-D10 certificate; WIN7 certificates prove a first-player win within depth 10 from the individual 7-stone roots only; the standard 11x11 empty board, the two-stone roots {49,60}/{59,60}, S2 {59,60}, class1, class2 and class4 all remain UNKNOWN",
+ "schema": "n11-class2-lane-cost82c-fold-second-verification-20261115-v1",
+ "second_target_s5_after": {
+  "note": "best coverable class-2 target, still unresolved",
+  "remaining_s7_edge_cost": 625,
+  "rows": 8,
+  "s5_hex": "00000000000000801202000000200000"
+ }
+}

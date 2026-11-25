@@ -1,0 +1,54 @@
+{
+  "schema": "n11-class4-batch2-frontier-update-20261114-v1",
+  "date": "2026-11-14",
+  "trigger": "session 18 next item 1 / session-17 next item 2: recompute the class-2/4 frontier with the three batch2 child#2 WIN7 certificates",
+  "method": "repo scripts/audit_class_frontier.py recomputation with output/class4-batch2-certificates-verified.json added to WIN7_VERIFIED (the three verified WIN7 roots of session 18: bit50, bit77, bit91, children of S6 orbit 000000000200000038000000a0000000). All other inputs are the published main files (win7-reuse-hits.csv.gz, the 12 class2 verified JSONs, class4-batch1-certificates-verified.json, the ms5 S6 manifest, s5-remaining-after-reuse.csv.gz, s5-s6-remaining-incidences.csv.gz). The script's snapshot asserts pin the pre-batch1 baseline and are invalidated by design; they were disabled in the local run only (if False: assert) - no repo file changed",
+  "covers_analysis": {
+    "union_s6_orbits_covered_by_the_3_certificates": 16,
+    "marginal_vs_batch1_baseline": 16,
+    "marginal_in_manifest": 8,
+    "per_certificate": {
+      "bit50": {"covers": 7, "marginal": 7, "marginal_in_manifest": 4},
+      "bit77": {"covers": 7, "marginal": 7, "marginal_in_manifest": 4},
+      "bit91": {"covers": 4, "marginal": 4, "marginal_in_manifest": 2}
+    },
+    "newly_solved_manifest_hexes": [
+      "00000000000000003801000002800000",
+      "000000000200000038000000a0000000",
+      "00000000000080801002000000080080",
+      "00000000000080801002020000080000",
+      "00000000000080c01002000000080000",
+      "000000000200000038000000a0000000",
+      "00000000020000003800080080000000",
+      "00000000020000003804000080000000"
+    ]
+  },
+  "frontier_delta": {
+    "solved_s6_in_manifest": {"after_batch1": 657, "after_batch2": 665},
+    "unique_remaining_s6": {"after_batch1": 7189, "after_batch2": 7181},
+    "sum_remaining_cost": {"after_batch1": 564070, "after_batch2": 563509},
+    "s6_needed_by_open_classes": {"after_batch1": 5406, "after_batch2": 5398},
+    "cost_needed_by_open_classes": {"after_batch1": 424077, "after_batch2": 423516},
+    "best_class2_blocker": {
+      "s5_hex": "00000000000000003802000008000000",
+      "remaining_s6_orbits": 32,
+      "remaining_s7_edge_cost": 2206,
+      "change": "orbit count now tied with the class-4 lane target at lower cost (2206 vs 2530)"
+    },
+    "best_class4_blocker": {
+      "s5_hex": "00000000020000003800000080000000",
+      "remaining_s6_orbits": {"after_batch1": 35, "after_batch2": 32},
+      "remaining_s7_edge_cost": {"after_batch1": 2756, "after_batch2": 2530},
+      "note": "this S5 is the current lane target; its cheapest remaining S6 orbit is 00000000020000003802000080000000 (s6_s7_edge_cost 68), the next sweep target; the swept child #2 000000000200000038000000a0000000 (cost 67) is now solved via its certified 7th-stone descendants"
+    }
+  },
+  "outputs": [
+    "output/class-frontier-s5-ranking-after-batch2.csv",
+    "output/class-frontier-top-candidates-s6-after-batch2.csv"
+  ],
+  "interpretation_guard": [
+    "bookkeeping over published receipts; no new search verdict is claimed here",
+    "11x11 empty root, two-stone root {49,60}, S2 {59,60} and class 4 itself remain UNKNOWN",
+    "the bit7 400-node aggregation discrepancy reserve remains open and unrelated"
+  ]
+}

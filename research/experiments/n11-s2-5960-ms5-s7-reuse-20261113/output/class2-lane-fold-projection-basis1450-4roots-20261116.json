@@ -1,0 +1,200 @@
+{
+ "affected_parents": {
+  "00000000000000003800000208000000": {
+   "classes": 2,
+   "edge_cost_after": 5282,
+   "edge_cost_before": 5358,
+   "lost_edge_cost": 76,
+   "lost_rows_hexes": [
+    "00000000040000003800080008000000"
+   ],
+   "rows_after": 64,
+   "rows_before": 65,
+   "s5_hex": "00000000000000003800000208000000"
+  },
+  "00000000000000801202000000040000": {
+   "classes": 2,
+   "edge_cost_after": 5883,
+   "edge_cost_before": 5960,
+   "lost_edge_cost": 77,
+   "lost_rows_hexes": [
+    "00000000040000809002000000004000"
+   ],
+   "rows_after": 71,
+   "rows_before": 72,
+   "s5_hex": "00000000000000801202000000040000"
+  },
+  "00000000000000801202000040000000": {
+   "classes": 2,
+   "edge_cost_after": 211,
+   "edge_cost_before": 364,
+   "lost_edge_cost": 153,
+   "lost_rows_hexes": [
+    "00000000040000003800080008000000",
+    "00000000040000809002000000004000"
+   ],
+   "rows_after": 3,
+   "rows_before": 5,
+   "s5_hex": "00000000000000801202000040000000"
+  }
+ },
+ "basis_distinct_d4_canons": 756,
+ "basis_head": 1450,
+ "basis_head_numbers": [
+  1450,
+  174,
+  6398,
+  506297,
+  4671,
+  370211
+ ],
+ "basis_roots": 771,
+ "basis_summary": {
+  "cost_needed_by_open_classes": 370211,
+  "hist": {
+   "c2=0,c4=1": 526,
+   "c2=0,c4=2": 3011,
+   "c2=0,c4=3": 12,
+   "c2=1,c4=0": 208,
+   "c2=1,c4=1": 54,
+   "c2=1,c4=2": 8,
+   "c2=2,c4=0": 797,
+   "c2=2,c4=1": 5,
+   "c2=2,c4=2": 50
+  },
+  "remaining_s5_orbits": 174,
+  "s6_needed_by_open_classes": 4671,
+  "solved_s6_in_manifest": 1450,
+  "sum_remaining_cost": 506297,
+  "unique_remaining_s6": 6398
+ },
+ "date": "2026-11-16",
+ "demand_histogram_deltas": {
+  "c2=0,c4=1": 0,
+  "c2=0,c4=2": 0,
+  "c2=0,c4=3": 0,
+  "c2=1,c4=0": 0,
+  "c2=1,c4=1": 0,
+  "c2=1,c4=2": 0,
+  "c2=2,c4=0": -2,
+  "c2=2,c4=1": 0,
+  "c2=2,c4=2": 0
+ },
+ "interpretation_guard": "bookkeeping fold projection only; no engine search, no verdicts; solved counts measure manifest coverage, not the game-theoretic value of any position; WIN7 certificates prove a first-player win within depth 10 from individual 7-stone roots only; REFUTED-D10 is not a LOSS proof; 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60} and classes 1/2/4 remain UNKNOWN",
+ "parent_edge_cost_delta": 306,
+ "parent_row_incidences": 4,
+ "projected_head": {
+  "cost_needed_by_open_classes": 370058,
+  "remaining_s5_orbits": 174,
+  "s6_needed_by_open_classes": 4669,
+  "solved_s6_in_manifest": 1452,
+  "sum_remaining_cost": 506144,
+  "unique_remaining_s6": 6396
+ },
+ "receipts": [
+  {
+   "covers": 7,
+   "covers_hexes": [
+    "00000000000000003800000208002000",
+    "00000000020000801202000040000000",
+    "00000000040000001800080008080000",
+    "00000000040000002800080008080000",
+    "00000000040000003000080008080000",
+    "00000000040000003800080000080000",
+    "00000000040000003800080008000000"
+   ],
+   "d4_canonical_hex": "00000000040000003800080008080000",
+   "d4_orbit_distinct_from_all_folded_roots": true,
+   "marginal": 5,
+   "marginal_hexes": [
+    "00000000040000001800080008080000",
+    "00000000040000002800080008080000",
+    "00000000040000003000080008080000",
+    "00000000040000003800080000080000",
+    "00000000040000003800080008000000"
+   ],
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000040000003800080008000000"
+   ],
+   "root_hex": "00000000040000003800080008080000"
+  },
+  {
+   "covers": 7,
+   "covers_hexes": [
+    "00000000000000003802000208000000",
+    "00000000000000801a02000040000000",
+    "00000000000020803800000040000000",
+    "00000000040000001802080008000000",
+    "00000000040000002802080008000000",
+    "00000000040000003002080008000000",
+    "00000000040000003800080008000000"
+   ],
+   "d4_canonical_hex": "00000000040000003802080008000000",
+   "d4_orbit_distinct_from_all_folded_roots": true,
+   "marginal": 4,
+   "marginal_hexes": [
+    "00000000000020803800000040000000",
+    "00000000040000001802080008000000",
+    "00000000040000002802080008000000",
+    "00000000040000003002080008000000"
+   ],
+   "marginal_in_manifest": 0,
+   "marginal_manifest_hexes": [],
+   "root_hex": "00000000040000003802080008000000"
+  },
+  {
+   "covers": 7,
+   "covers_hexes": [
+    "00000000000000003800800440000000",
+    "00000000000000801202008000040000",
+    "00000000000200809002000001000000",
+    "00000000040000009002002000004000",
+    "00000000040000808002002000004000",
+    "00000000040000809000002000004000",
+    "00000000040000809002000000004000"
+   ],
+   "d4_canonical_hex": "00000000040000809002002000004000",
+   "d4_orbit_distinct_from_all_folded_roots": true,
+   "marginal": 6,
+   "marginal_hexes": [
+    "00000000000000003800800440000000",
+    "00000000000000801202008000040000",
+    "00000000040000009002002000004000",
+    "00000000040000808002002000004000",
+    "00000000040000809000002000004000",
+    "00000000040000809002000000004000"
+   ],
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000040000809002000000004000"
+   ],
+   "root_hex": "00000000040000809002002000004000"
+  },
+  {
+   "covers": 7,
+   "covers_hexes": [
+    "00000000000000003800008440000000",
+    "0000000000000080120a000040000000",
+    "00000000000000a09002000000004000",
+    "00000000040000209002000000004000",
+    "00000000040000809002000000004000",
+    "00000000040000a08002000000004000",
+    "00000000040000a09000000000004000"
+   ],
+   "d4_canonical_hex": "00000000040000a09002000000004000",
+   "d4_orbit_distinct_from_all_folded_roots": true,
+   "marginal": 4,
+   "marginal_hexes": [
+    "00000000000000003800008440000000",
+    "00000000040000209002000000004000",
+    "00000000040000a08002000000004000",
+    "00000000040000a09000000000004000"
+   ],
+   "marginal_in_manifest": 0,
+   "marginal_manifest_hexes": [],
+   "root_hex": "00000000040000a09002000000004000"
+  }
+ ],
+ "schema": "n11-class2-lane-fold-projection-tool-head1450-20261116-v1"
+}

@@ -1,0 +1,42 @@
+{
+  "schema": "n11-class2-lane-cost74d-cert-bit118-20261115-v1",
+  "date": "2026-11-15",
+  "s6_child": "00000000000000809102020000000000",
+  "win_bit": 118,
+  "root_hex": "00400000000000809102020000000000",
+  "root_stones": 7,
+  "root_mobility": 50,
+  "sweep_context": "cost-74d raw sweep batch9 (bit118 WIN7-D10, 456245 nodes); v15 crosscheck loss=true (3163638 nodes); sweep audit class2-lane-cost74d-sweep-audit-20261115.json",
+  "extraction": {
+    "script": "class4_child1_cert_extractor_exact.ts (FBS=1<<20, fbt_drops detection)",
+    "subroots": 50,
+    "all_ok_uncapped": true,
+    "total_nodes": 5030722,
+    "strategy_rows": 28719,
+    "fbt_drops": 0,
+    "per_move_terminal_range_global": [
+      13,
+      17
+    ]
+  },
+  "independent_verification": {
+    "verifier": "verify_win7_certificate_bigint_independent.mjs",
+    "verdict": "WIN7 certificate independently verified",
+    "method": "BigInt 3x3 cofactor expansion of the exact lifted determinant [x^2+y^2,x,y,1]; no floating point",
+    "strategy_rows": 28719,
+    "subroots_passed": 50,
+    "consumed_winner_rows": 28719,
+    "union_missing": 0,
+    "union_extra": 0,
+    "terminal_count": 10019,
+    "terminal_range": [
+      13,
+      17
+    ]
+  },
+  "certificate_path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost74d-certificates/bit118-root-00400000000000809102020000000000.cert",
+  "certificate_blob_sha": "b96de16ac906721d9f7cdf82fed45bb032d57c1a",
+  "consequence": "the six-stone child 00000000000000809102020000000000 is a proven WIN for its mover (play bit 118 as the 7th stone); fold into the canonical chain is now unblocked",
+  "interpretation_guard": "this certificate proves only this seven-stone root (WIN for the side that placed bit 118) and hence the S6 child; it does not determine the third-target S5 parent verdict, class 2, or the empty board",
+  "unknown_status": "standard 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, class 2, class 4 remain UNKNOWN"
+}

@@ -1,0 +1,930 @@
+{
+  "basis_head": "head 1452/174/6396/506144/4669/370058 (class2-lane-next-target-presweep-1452-20261116.json, blob 0d9a94a272de9fe45708757f17bfea60239a3c9b); the cost-64h fold pre-registration (projected head 1472) is published; the fold receipt itself had not landed on main at takeover time",
+  "candidate_count": 76,
+  "child_stones_bit_indices": [
+    24,
+    49,
+    60,
+    63,
+    71,
+    88
+  ],
+  "claimed_by": "n11 long-term lane session (takeover; precedent: cost65j claim v1->v2 takeover)",
+  "coordination_note": "latest main fetched immediately before this takeover push; the parallel cost64h lane is mid-fold (prereg + fourth independent verification + cover-multiplicity audit prediction published, fold receipt pending); no other claim, raw batch or audit exists for this child on main Reconciled against the current K0863 full theorem-applicability scan: 15/76 candidates are already REFUTED-D10 transfers (not 5); the 10 omitted bits are now recorded and must be reused, leaving 61 open + 5 cross-agreement reruns = 66 engine bits. No raw batch has been launched. Raw batch audit added 2026-11-17: all 10 batch files cover 76/76 legal bits and yield WIN7-D10 bits 61/99/113, REFUTED-D10 73, capped 0. Actual raw files reran all 15 transferred bits, including the 10 marked reused; actual engine work was 76, not the planned 66. See class2-lane-cost76c-raw-audit-20261117.json and the 2026-11-17 research log.\n2026-11-17 manifest-marginal audit: bits 61/99/113 each individually close only the same open manifest row 00000000010000809002000001000000; combined marginal sequence is 1/0/0. Prioritize bit61 (752696 raw nodes) and keep 99/113 as fallbacks; see candidate-manifest-marginals audit.\n2026-11-17 v17 correction: the fbtOR saturation defect changes the cost76c verdict set from v16's 61/99/113 to v17's 61/99; bit113 is REFUTED-D10 in both v17 orderings and v15 agrees. All ten v17 raw batches were independently reaggregated (76/76 legal bits, 2 WIN, 74 REFUTED, capped 0, 144218750 candidate nodes). The three-candidate marginal projection is superseded by the corrected two-candidate projection ac4f6e22...; bit61 remains primary, bit99 fallback. Do not extract or fold bit113.\n2026-11-17 fail-closed extraction preparation: cert_driver76c.ts and its mock guard test are published. The driver wraps exact_v16 without changing search semantics and refuses all incomplete/fatal/fbt_drops outputs. Six mock cases pass; the actual extractor has not been invoked. Bit61 remains the sole primary extraction target.\n2026-11-17 exact defense guard v2: bit61 raw root 0000000001000080b002000001000000 was independently audited as 55 legal / 59 illegal defenses (35/35 root four-subsets safe); the guard now rejects any non-exact, incomplete, illegal, duplicate or unsorted defense list before extraction. See the bit61 legal-defense audit log and JSON.",
+  "date": "2026-11-16",
+  "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+  },
+  "demand_verification": "re-derived independently of claim v1 at head 1452 by the published second-implementation verification (class2-lane-secondcandidate-cost71-row-sterile-verification-20261116.json): the six one-stone deletion D4 canons of the child contain exactly the two open coverable class-2 parents above; row demand c2=2 at head 1452",
+  "engine": {
+    "andclose": 1,
+    "batches": [
+      {
+        "batch": 1,
+        "bits": [
+          0,
+          1,
+          2,
+          4,
+          6,
+          7,
+          9,
+          10
+        ]
+      },
+      {
+        "batch": 2,
+        "bits": [
+          13,
+          14,
+          15,
+          17,
+          18,
+          19,
+          20,
+          21
+        ]
+      },
+      {
+        "batch": 3,
+        "bits": [
+          26,
+          28,
+          29,
+          30,
+          32,
+          34,
+          36,
+          41
+        ]
+      },
+      {
+        "batch": 4,
+        "bits": [
+          43,
+          45,
+          46,
+          47,
+          48,
+          53,
+          54,
+          56
+        ]
+      },
+      {
+        "batch": 5,
+        "bits": [
+          57,
+          59,
+          61,
+          62,
+          64,
+          65,
+          66,
+          67
+        ]
+      },
+      {
+        "batch": 6,
+        "bits": [
+          68,
+          69,
+          70,
+          75,
+          76,
+          77,
+          78,
+          81
+        ]
+      },
+      {
+        "batch": 7,
+        "bits": [
+          85,
+          86,
+          87,
+          89,
+          91,
+          94,
+          95,
+          96
+        ]
+      },
+      {
+        "batch": 8,
+        "bits": [
+          97,
+          98,
+          99,
+          102,
+          103,
+          105,
+          106,
+          107
+        ]
+      },
+      {
+        "batch": 9,
+        "bits": [
+          108,
+          109,
+          110,
+          111,
+          112,
+          113,
+          114,
+          116
+        ]
+      },
+      {
+        "batch": 10,
+        "bits": [
+          117,
+          118,
+          119,
+          120
+        ]
+      }
+    ],
+    "blob_sha": "c132cc6425eee3feaeef1d697dd74f968cfedb59",
+    "cap": 1000000000,
+    "depth": 10,
+    "parallelism": "4 concurrent node processes (shared-server courtesy)",
+    "pilot": "pilot d6 control per batch: loss=false at exactly 3402 nodes, else abort",
+    "raw_output_pattern": "class2-lane-cost76c-v17-raw-batch{n}-20261117.jsonl",
+    "script": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/class4_child1_runner_v17.ts",
+    "version": "v17",
+    "note": "The v17 runner applies the blocking mask directly when the FBT probe chain is exhausted; all 76 candidates were re-swept."
+  },
+  "engine_candidate_bits": {
+    "expected_verdicts": {
+      "0": "REFUTED-D10",
+      "56": "REFUTED-D10",
+      "59": "REFUTED-D10",
+      "102": "REFUTED-D10",
+      "117": "REFUTED-D10"
+    },
+    "note": "76 legal candidates partition exactly into 61 open bits and 15 transferred REFUTED-D10 bits. Run the 61 open bits plus 5 selected transfer bits (0,56,59,102,117) as independent cross-agreement controls; reuse the other 10 transferred bits without rerunning them. Total engine worklist: 66 bits, not 76.",
+    "open_bits": [
+      1,
+      2,
+      4,
+      6,
+      7,
+      9,
+      14,
+      15,
+      17,
+      18,
+      21,
+      26,
+      28,
+      29,
+      30,
+      32,
+      34,
+      36,
+      41,
+      43,
+      45,
+      46,
+      47,
+      53,
+      54,
+      57,
+      61,
+      62,
+      64,
+      66,
+      67,
+      68,
+      69,
+      75,
+      76,
+      77,
+      78,
+      81,
+      85,
+      86,
+      87,
+      89,
+      91,
+      94,
+      95,
+      97,
+      98,
+      99,
+      103,
+      105,
+      106,
+      107,
+      109,
+      110,
+      112,
+      113,
+      114,
+      116,
+      118,
+      119,
+      120
+    ],
+    "crosscheck_bits": [
+      0,
+      56,
+      59,
+      102,
+      117
+    ],
+    "reused_transferred_bits": [
+      10,
+      13,
+      19,
+      20,
+      48,
+      65,
+      70,
+      96,
+      108,
+      111
+    ]
+  },
+  "legal_candidates": [
+    0,
+    1,
+    2,
+    4,
+    6,
+    7,
+    9,
+    10,
+    13,
+    14,
+    15,
+    17,
+    18,
+    19,
+    20,
+    21,
+    26,
+    28,
+    29,
+    30,
+    32,
+    34,
+    36,
+    41,
+    43,
+    45,
+    46,
+    47,
+    48,
+    53,
+    54,
+    56,
+    57,
+    59,
+    61,
+    62,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    75,
+    76,
+    77,
+    78,
+    81,
+    85,
+    86,
+    87,
+    89,
+    91,
+    94,
+    95,
+    96,
+    97,
+    98,
+    99,
+    102,
+    103,
+    105,
+    106,
+    107,
+    108,
+    109,
+    110,
+    111,
+    112,
+    113,
+    114,
+    116,
+    117,
+    118,
+    119,
+    120
+  ],
+  "motivation_update_since_v1": "the v1 motivation (help fully close the second coverable class-2 candidate S5 00000000000000801202000040000000) is VOID as of today: that S5 is depth-10 unclosable per K0863 because its cost-71 row 00000000000000801202000040000400 is STERILE (71/71 candidates transferred REFUTED-D10; see the verification JSON and log 2026-11-16-n11-class2-lane-secondcandidate-s5-depth10-unclosable.md); the remaining value of this sweep is (a) the 71 open candidate verdicts for the row itself, in particular for its second parent 00000000000000801202000100000000 (69 rows / 5758 edge cost at head 1452, the largest open coverable class-2 parent orbit of this row), and (b) a 5-bit independent cross-agreement re-run of the transferred verdicts",
+  "open_parents_at_1452": [
+    {
+      "classes": 2,
+      "edge_cost": 5758,
+      "rows": 69,
+      "s5_hex": "00000000000000801202000100000000"
+    },
+    {
+      "classes": 2,
+      "edge_cost": 211,
+      "rows": 3,
+      "s5_hex": "00000000000000801202000040000000"
+    }
+  ],
+  "planned_controls": {
+    "determinism_rerun": "v17 order matrix and all ten raw batches reaggregated; bit61/99 verdicts stable, bit113 refuted in both v17 orderings",
+    "v15_crosscheck": "complete for bits 61/99/113; v15 and v17 andclose=1 verdicts agree"
+  },
+  "s5": "00000000000000801202000040000000",
+  "s6_child": "00000000010000809002000001000000",
+  "s6_s7_edge_cost": 76,
+  "schema": "n11-class2-lane-cost76c-sweep-complete-20261117-v7",
+  "stale_claim_history": "claim v1 (this file, schema -v1) was published 2026-11-15 at ~20:54Z (git blob e5bf66f62323f6434d82743c662295618af232a3) with chain head 1403/6445/509589/4715/373312 and never landed raw batches, audit, certificates or fold artifacts; it is stale; this long-term lane session takes it over per the cost65j takeover precedent",
+  "status": "v17-corrected; WIN7-D10 bits 61/99; bit113 REFUTED-D10; cost64h fold complete at head1472; fail-closed driver v2 now verifies the exact raw-root legal defense list; actual certificate extraction remains pending; receipt fold pending",
+  "title": "n11 class2-lane cost76c: two WIN7-D10 candidates; bit61 is the first manifest-closing extraction target",
+  "transfers": {
+    "0": {
+      "attested_by": [
+        "class2-lane-cost71d-inflight-20261116.json"
+      ],
+      "root_canon": "00000000010000809002000001000001",
+      "verdict": "REFUTED-D10",
+      "via": [
+        {
+          "bit": 98,
+          "child": "00000000000000801202000040000400",
+          "kind": "engine"
+        }
+      ]
+    },
+    "10": {
+      "attested_by": [
+        "class2-lane-cost70g-inflight-20261116.json"
+      ],
+      "root_canon": "00000000010000809002000001000400",
+      "verdict": "REFUTED-D10",
+      "via": [
+        {
+          "bit": 98,
+          "child": "00000000000000801202000040000001",
+          "kind": "engine"
+        }
+      ]
+    },
+    "13": {
+      "attested_by": [
+        "class2-lane-cost63h-inflight-20261115.json"
+      ],
+      "root_canon": "00000000010000809002000001002000",
+      "verdict": "REFUTED-D10",
+      "via": [
+        {
+          "bit": 98,
+          "child": "00000000000000801202000040080000",
+          "kind": "engine"
+        }
+      ]
+    },
+    "19": {
+      "attested_by": [
+        "class2-lane-cost67d-inflight-20261116.json"
+      ],
+      "root_canon": "00000000010000809002000001080000",
+      "verdict": "REFUTED-D10",
+      "via": [
+        {
+          "bit": 98,
+          "child": "00000000000000801202000040002000",
+          "kind": "engine"
+        }
+      ]
+    },
+    "20": {
+      "attested_by": [
+        "class2-lane-cost65m-inflight-20261116.json"
+      ],
+      "root_canon": "00000000010000809002000001100000",
+      "verdict": "REFUTED-D10",
+      "via": [
+        {
+          "bit": 98,
+          "child": "00000000000000801202000040001000",
+          "kind": "engine"
+        }
+      ]
+    },
+    "48": {
+      "attested_by": [
+        "class2-lane-cost58c-inflight-20261116.json"
+      ],
+      "root_canon": "00000000010000809003000001000000",
+      "verdict": "REFUTED-D10",
+      "via": [
+        {
+          "bit": 98,
+          "child": "00000000000000801206000040000000",
+          "kind": "engine"
+        }
+      ]
+    },
+    "56": {
+      "attested_by": [
+        "class2-lane-cost62a-inflight-20261114.json",
+        "class2-lane-cost62a-sweep-20261114.json",
+        "class2-lane-cost78a-inflight-20261115.json"
+      ],
+      "root_canon": "00000000010000809102000001000000",
+      "verdict": "REFUTED-D10",
+      "via": [
+        {
+          "bit": 90,
+          "child": "00000000000000809102000000400000",
+          "kind": "engine"
+        },
+        {
+          "bit": 88,
+          "child": "00000000000000809102000001000000",
+          "kind": "engine"
+        }
+      ]
+    },
+    "59": {
+      "attested_by": [
+        "class2-lane-cost61e-inflight-20261114.json",
+        "class2-lane-cost61e-sweep-20261114.json"
+      ],
+      "root_canon": "00000000010000809802000001000000",
+      "verdict": "REFUTED-D10",
+      "via": [
+        {
+          "bit": 98,
+          "child": "00000000000000803202000040000000",
+          "kind": "engine"
+        }
+      ]
+    },
+    "65": {
+      "attested_by": [
+        "class2-lane-cost64a-inflight-20261116.json"
+      ],
+      "root_canon": "00000000010000829002000001000000",
+      "verdict": "REFUTED-D10",
+      "via": [
+        {
+          "bit": 98,
+          "child": "00000000000000801282000040000000",
+          "kind": "engine"
+        }
+      ]
+    },
+    "70": {
+      "attested_by": [
+        "class2-lane-cost63i-inflight-20261116.json"
+      ],
+      "root_canon": "00000000010000c09002000001000000",
+      "verdict": "REFUTED-D10",
+      "via": [
+        {
+          "bit": 88,
+          "child": "00000000000000c09002000001000000",
+          "kind": "engine"
+        }
+      ]
+    },
+    "96": {
+      "attested_by": [
+        "class2-lane-cost63j-inflight-20261116.json"
+      ],
+      "root_canon": "00000000040000809002000040400000",
+      "verdict": "REFUTED-D10",
+      "via": [
+        {
+          "bit": 118,
+          "child": "00000000040000003800000048000000",
+          "kind": "engine"
+        }
+      ]
+    },
+    "102": {
+      "attested_by": [
+        "class2-lane-cost77e-sweep-20261116.json",
+        "cost-77e-raw-batches"
+      ],
+      "root_canon": "00000000040000809002000000404000",
+      "verdict": "REFUTED-D10",
+      "via": [
+        {
+          "bit": 22,
+          "child": "00000000040000809002000000004000",
+          "kind": "engine"
+        }
+      ]
+    },
+    "108": {
+      "attested_by": [
+        "class2-lane-cost62a-inflight-20261116.json"
+      ],
+      "root_canon": "00000000040000809002000000500000",
+      "verdict": "REFUTED-D10",
+      "via": [
+        {
+          "bit": 118,
+          "child": "00000000040000003800000008100000",
+          "kind": "engine"
+        }
+      ]
+    },
+    "111": {
+      "attested_by": [
+        "class2-lane-cost75e-inflight-20261116.json"
+      ],
+      "root_canon": "00000000040000809002000000400002",
+      "verdict": "REFUTED-D10",
+      "via": [
+        {
+          "bit": 22,
+          "child": "00000000040000809002000000000002",
+          "kind": "engine"
+        }
+      ]
+    },
+    "117": {
+      "attested_by": [
+        "cost-76d-raw-batches"
+      ],
+      "root_canon": "00000000040000809002000000400080",
+      "verdict": "REFUTED-D10",
+      "via": [
+        {
+          "bit": 118,
+          "child": "00000000040000003800080008000000",
+          "kind": "engine"
+        }
+      ]
+    }
+  },
+  "unknown_status": "11x11 empty board: UNKNOWN. A completed sweep proves only WIN7-D10/REFUTED-D10 verdicts for the 7-stone roots of this child. The two-stone roots {49,60} and {59,60}, S2 {59,60} and classes 1/2/4 remain UNKNOWN.",
+  "verdict_semantics": "loss=true => WIN7-within-depth-10 candidate (certificate rebuild target); loss=false && !capped => REFUTED-D10, no first-player win within depth 10 (NOT a LOSS proof of the position); capped => proves nothing either way",
+  "cache_reuse_audit": {
+    "source": "research/experiments/n11-class2-lane-sterile-unclosability-20261116/output/theorem-applicability-scan-20261116.json",
+    "target_child": "00000000010000809002000001000000",
+    "legal_count": 76,
+    "transferred_refuted_d10_count": 15,
+    "open_count": 61,
+    "selected_cross_agreement_reruns": [
+      0,
+      56,
+      59,
+      102,
+      117
+    ],
+    "transferred_bits_reused_without_rerun": [
+      10,
+      13,
+      19,
+      20,
+      48,
+      65,
+      70,
+      96,
+      108,
+      111
+    ],
+    "omitted_from_prior_claim": [
+      10,
+      13,
+      19,
+      20,
+      48,
+      65,
+      70,
+      96,
+      108,
+      111
+    ],
+    "conflict_count": 0,
+    "independent_check": "K0863 theorem-applicability scan; its second independent verifier rechecked 46 comparisons and all 115 D4 transfers"
+  },
+  "actual_execution": {
+    "date": "2026-11-17",
+    "basis_head": "1452/174/6396/506144/4669/370058",
+    "audit_json": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost76c-v17-sweep-and-fbt-saturation-audit-20261117.json",
+    "audit_blob_sha": "235f964365a7ab33e33986c915fc7f6861e4d686",
+    "raw_batch_count": 10,
+    "raw_candidate_bits": 76,
+    "unique_bits": 76,
+    "all_15_transferred_bits_refuted": true,
+    "win7_d10_bits": [
+      61,
+      99
+    ],
+    "winner_roots": [
+      {
+        "bit": 61,
+        "root_hex": "0000000001000080b002000001000000",
+        "root_canon": "0000000001000080b002000001000000",
+        "status_at_presweep": "open",
+        "nodes": 752696
+      },
+      {
+        "bit": 99,
+        "root_hex": "00000008010000809002000001000000",
+        "root_canon": "00000000040000809002000000400800",
+        "status_at_presweep": "open",
+        "nodes": 4140409
+      }
+    ],
+    "refuted_d10_count": 74,
+    "refuted_bit113": true,
+    "capped_count": 0,
+    "candidate_nodes": 144218750,
+    "pilot_count": 10,
+    "pilot_nodes_each": 3402,
+    "total_nodes_including_pilots": 144252770,
+    "terminal_stone_range": [
+      13,
+      17
+    ],
+    "andclose": true,
+    "saturation_summary": {
+      "saturated_bits": 28,
+      "verdict_flips": 1,
+      "node_count_changed_same_verdict_bits": 27,
+      "unsaturated_identical_bits": 48
+    },
+    "v15_v17_andclose1_agreement": {
+      "61": "WIN7-D10",
+      "99": "WIN7-D10",
+      "113": "REFUTED-D10"
+    },
+    "note": "All ten v17 raw batches were fetched and independently reaggregated; the 76-bit set matches the pinned legal candidate list and every per-bit verdict/node count matches the published v17 audit."
+  },
+  "certificate_extraction": {
+    "status": "pending; bit61 primary, bit99 fallback; guard v2 independently derives and requires the exact ascending raw-root defense list; 14/14 mock cases pass; actual extraction not run",
+    "win7_d10_bits": [
+      61,
+      99
+    ],
+    "primary_bit": 61,
+    "fallback_bits": [
+      99
+    ],
+    "excluded_bits": [
+      113
+    ],
+    "independent_verification": "pending",
+    "v15_cross_engine_check": {
+      "status": "complete",
+      "engine_blob_sha": "8744fc65b6b7cac6bd561403ce4c749e01c51359",
+      "andclose1_results": {
+        "61": "WIN7-D10",
+        "99": "WIN7-D10",
+        "113": "REFUTED-D10"
+      },
+      "agreement_with_v17": true
+    },
+    "extractor": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/class4_child1_cert_extractor_exact_v16.ts",
+    "extractor_blob_sha": "5518d375fc6b4a7a14c22a1a65586f0c1c5731c0",
+    "required_extractor_guard": "The exact_v16 CLI itself remains unsafe: it writes res.rows even when fatal is set. Use cert_driver76c.ts only. It validates the raw six-stone in-board child and empty selected bit; independently derives every legal defense of the raw seven-stone root with exact Bareiss 4x4 determinants and requires the exact ascending list; requires perMove keys to equal that list; every perMove must be ok and uncapped; rows must be nonempty, well-formed, unique by board key, and agree with nRows; fatal must be unset and fbt_drops exactly 0. Publication uses a same-directory temporary file and no-overwrite hard link.",
+    "guarded_driver": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/cert_driver76c.ts",
+    "guarded_driver_blob_sha": "3aae6b6ce133b2a3fb13796ad303e2a57823f05a",
+    "guard_test": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/test_cert_driver76c_guard.mjs",
+    "guard_test_blob_sha": "10ca0a00ef107480d6021ba3d58459b1b7ca9956",
+    "legal_defense_audit": {
+      "script": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_cost76c_bit61_root_legal_moves_20261117.py",
+      "script_blob_sha": "d3afb601e02e0f0f2b14f8e524ea31009035a35a",
+      "output": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost76c-bit61-root-legal-moves-20261117.json",
+      "output_blob_sha": "d4755c946b898c4b516106ee5a691b8467e83b8e",
+      "output_sha256": "f28d8f4ddf57978fc67787f12f1a956b53f43600d58caf2e051ca62bb8a2fbd1",
+      "base_main": "353cda65aa4550ff159ba760130371fccb9c474a",
+      "bit61_raw_root": "0000000001000080b002000001000000",
+      "bit61_legal_defenses": 55,
+      "bit61_illegal_empty_cells": 59,
+      "root_four_subset_count": 35,
+      "root_zero_determinants": 0,
+      "pinned_legal_candidates_blob_sha": "8e97082c42838c7a4a4b6d2dd235276c8d43ab9a",
+      "independent_checks": [
+        "pivoted Bareiss 4x4 determinant",
+        "translated 3x3 determinant",
+        "pinned legal_candidates.py",
+        "direct candidate test equals triple-union forbidden mask"
+      ],
+      "bit99_mock_guard_test_legal_defenses": 65,
+      "game_verdict_claimed": false
+    },
+    "guard_test_result": {
+      "status": "PASS",
+      "cases": 14,
+      "passed": 14,
+      "valid_roots": {
+        "bit61": {
+          "legal_defenses": 55,
+          "output_created": true
+        },
+        "bit99": {
+          "legal_defenses": 65,
+          "output_created": true
+        }
+      },
+      "rejected_cases": [
+        "missing defense",
+        "illegal defense",
+        "duplicate defense",
+        "unsorted defense",
+        "missing bit99 defense",
+        "fatal",
+        "fbt_drops",
+        "missing rows",
+        "incomplete per-move result",
+        "malformed row",
+        "duplicate board key",
+        "selected bit already occupied"
+      ],
+      "runtime": "Node v22.16.0 with --experimental-strip-types",
+      "actual_extractor_invoked": false
+    }
+  },
+  "receipt_fold": {
+    "status": "pending; cost64h fold has completed at canonical head 1472; bit61 certificate extraction and independent verification remain pending",
+    "note": "The sweep itself was run against historical head 1452. Do not reuse the old marginal projection as a fold receipt: after bit61 passes the guarded extractor and independent verifiers, recompute its marginal against head 1472, recheck WIN/LOSS conflicts, then fold. Bit99 is fallback; bit113 is REFUTED-D10 and excluded."
+  },
+  "claim_input_snapshot": {
+    "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost76c-claim-input-20261117.json",
+    "git_blob_sha1": "8932f2d5e100325549a5f251a1d883558cae0708"
+  },
+  "audit_script": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_cost76c_raw_batches_20261117.py",
+  "previous_version": {
+    "schema": "n11-class2-lane-cost76c-sweep-complete-20261117-v6",
+    "blob_sha": "c58a35a960018ff0d45c44d3efa1383da5c4898f"
+  },
+  "next_action": "Run cert_driver76c.ts for bit61 only using the exact 55 raw-root legal defenses; then run independent BigInt/Bareiss verification and fresh-process byte comparison; recompute the receipt marginal against head1472 and scan WIN/LOSS conflicts before folding. Use bit99 only as fallback; do not extract or fold bit113.",
+  "certificate_priority_audit": {
+    "date": "2026-11-17",
+    "script": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_cost76c_v17_corrected_candidate_marginals_20261117.py",
+    "script_blob_sha": "49e4852757774002118461c6e21da8f958463513",
+    "output": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost76c-v17-corrected-candidate-manifest-marginals-20261117.json",
+    "output_blob_sha": "3469cf3649ae3ab859edb33bf944ff0f13f229b0",
+    "basis_head": "1452/174/6396/506144/4669/370058",
+    "first_bit": 61,
+    "fallback_bits": [
+      99
+    ],
+    "excluded_bits": [
+      113
+    ],
+    "candidate_individual_manifest_marginals": {
+      "61": 1,
+      "99": 1
+    },
+    "combined_manifest_marginals_in_bit_order": [
+      1,
+      0
+    ],
+    "common_open_manifest_row": "00000000010000809002000001000000",
+    "corrected_union": {
+      "distinct_d4_s6_orbits": 15,
+      "manifest_intersection": 7,
+      "already_covered": 6,
+      "open_manifest_rows": 1,
+      "new_orbits": 9,
+      "new_non_manifest_orbits": 8
+    },
+    "projected_head_if_any_one_candidate_is_verified_and_folded": "1453/174/6395/506068/4668/369982",
+    "note": "The v17-corrected two-candidate projection removes bit113's final four non-manifest D4 orbits from the earlier 19-orbit three-candidate union. The D4 geometry is restricted from the pinned prior projection, not recomputed from scratch.",
+    "log": "research/log/2026-11-17-n11-class2-lane-cost76c-v17-two-win-corrected-marginals.md",
+    "log_blob_sha": "bf460117f442f416fbad8dd59180e7d3e502f26e"
+  },
+  "historical_v16_execution": {
+    "date": "2026-11-17",
+    "basis_head": "1452/174/6396/506144/4669/370058",
+    "audit_json": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost76c-raw-audit-20261117.json",
+    "audit_status": "all checks passed",
+    "actual_raw_batches": 10,
+    "actual_raw_candidate_bits": 76,
+    "planned_engine_bits": 66,
+    "planned_reused_transferred_bits": 10,
+    "actual_reused_transferred_bits_rerun": 10,
+    "all_15_transferred_bits_rerun_refuted": true,
+    "win7_d10_bits": [
+      61,
+      99,
+      113
+    ],
+    "winner_roots": [
+      {
+        "bit": 61,
+        "root_canon": "0000000001000080b002000001000000",
+        "status_at_presweep": "open",
+        "nodes": 752696
+      },
+      {
+        "bit": 99,
+        "root_canon": "00000000040000809002000000400800",
+        "status_at_presweep": "open",
+        "nodes": 4168961
+      },
+      {
+        "bit": 113,
+        "root_canon": "00000000040000809002000000400008",
+        "status_at_presweep": "open",
+        "nodes": 8174662
+      }
+    ],
+    "refuted_d10_count": 73,
+    "capped_count": 0,
+    "candidate_nodes": 141221576,
+    "pilot_count": 10,
+    "pilot_nodes_each": 3402,
+    "total_nodes_including_pilots": 141255596,
+    "terminal_stone_range": [
+      13,
+      17
+    ],
+    "andclose": true,
+    "note": "The engine.batches arrays and published raw files cover all 76 legal candidates. The 10 transfer bits marked reused in engine_candidate_bits were also rerun; actual work was 76, not 66."
+  },
+  "extractor_safety_audit": {
+    "script": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/class4_child1_cert_extractor_exact_v16.ts",
+    "blob_sha": "5518d375fc6b4a7a14c22a1a65586f0c1c5731c0",
+    "fbt_table_slots": 1048576,
+    "probe_limit": 96,
+    "on_probe_exhaustion": "increments fbtDrops; extractBatch returns fatal='fbt_saturation'",
+    "cli_write_condition": "writes res.rows whenever res.rows exists; it does not test res.fatal",
+    "safe_use_rule": "do not consume or fold any rows from a run with fatal set or fbt_drops > 0",
+    "guarded_driver": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/cert_driver76c.ts",
+    "guarded_driver_blob_sha": "3aae6b6ce133b2a3fb13796ad303e2a57823f05a",
+    "guard_test": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/test_cert_driver76c_guard.mjs",
+    "guard_test_blob_sha": "10ca0a00ef107480d6021ba3d58459b1b7ca9956",
+    "guard_test_result": {
+      "status": "PASS",
+      "cases": 14,
+      "passed": 14,
+      "valid_roots": {
+        "bit61": {
+          "legal_defenses": 55,
+          "output_created": true
+        },
+        "bit99": {
+          "legal_defenses": 65,
+          "output_created": true
+        }
+      },
+      "rejected_cases": [
+        "missing defense",
+        "illegal defense",
+        "duplicate defense",
+        "unsorted defense",
+        "missing bit99 defense",
+        "fatal",
+        "fbt_drops",
+        "missing rows",
+        "incomplete per-move result",
+        "malformed row",
+        "duplicate board key",
+        "selected bit already occupied"
+      ],
+      "runtime": "Node v22.16.0 with --experimental-strip-types",
+      "actual_extractor_invoked": false
+    },
+    "root_defense_coverage_guard": {
+      "method": "independent exact Bareiss 4x4 determinant over raw child|bit root",
+      "requirement": "supplied move list must equal the complete ascending legal-defense list",
+      "checks": [
+        "selected seven-stone root itself is safe",
+        "no legal defense omitted",
+        "no illegal defense included",
+        "no duplicate or reordered defense",
+        "perMove keys exactly equal the expected defense list",
+        "certificate row syntax and move range",
+        "row uniqueness by board key"
+      ],
+      "bit61_legal_defenses": 55,
+      "bit99_legal_defenses": 65
+    }
+  },
+  "v17_correction_log": {
+    "path": "research/log/2026-11-17-n11-class2-lane-cost76c-v17-two-win-corrected-marginals.md",
+    "blob_sha": "bf460117f442f416fbad8dd59180e7d3e502f26e"
+  },
+  "latest_canonical_head_after_cost64h_fold": [
+    1472,
+    174,
+    6376,
+    504672,
+    4649,
+    368586
+  ],
+  "last_updated": "2026-11-17"
+}

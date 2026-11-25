@@ -1,0 +1,12 @@
+{
+ "schema": "n11-class2-lane-cost75e-bareiss-verify-20261116-v1",
+ "bit_label": "bit6-root-00000000040000809002000000000042",
+ "verifier": "verify_bit7_win7_cert.ts --root-check --subroots (exact integer Bareiss 4x4 determinants; independent of the BigInt verifier)",
+ "root_check": {
+  "stones": 7,
+  "loserMobility": 66
+ },
+ "subroots_verified": 66,
+ "rows": 60952,
+ "all_subroots_pass": true
+}

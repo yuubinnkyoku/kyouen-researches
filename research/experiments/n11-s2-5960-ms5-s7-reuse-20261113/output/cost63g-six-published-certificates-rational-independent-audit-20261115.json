@@ -1,0 +1,221 @@
+{
+  "schema": "n11-cost63g-six-published-rational-independent-audit-v1",
+  "date": "2026-11-15",
+  "scope": "The first six of fourteen published WIN7-D10 certificate roots (bits 64,96,105,58,62,54); the other eight were not yet published at audit time.",
+  "method": "Exact integer rational-circumcenter equation for noncollinear triples and exact cross-product line test for collinear triples; no floating point, no search engine, no verdict cache, no existing verifier imported.",
+  "sweep_audit": "class2-lane-cost63g-sweep-audit-20261115.json",
+  "certificates": [
+    {
+      "bit": 64,
+      "root_hex": "00000000080000811202000000200000",
+      "d4_canonical_hex": "00000000080000811202000000200000",
+      "bytes": 537782,
+      "git_blob_sha": "cdc18ca665d9fe4a06a64a474df4e2eca1548375",
+      "rows": 14896,
+      "root_mobility": 40,
+      "sub_roots": 40,
+      "visited_states_across_subroots": 35677,
+      "winner_states": 23038,
+      "loser_states": 7107,
+      "loser_reply_edges": 32571,
+      "terminal_count": 5532,
+      "terminal_range": [
+        13,
+        17
+      ],
+      "max_plies_from_root": 10,
+      "union_missing": 0,
+      "union_extra": 0
+    },
+    {
+      "bit": 96,
+      "root_hex": "00000001080000801202000000200000",
+      "d4_canonical_hex": "00000000200080003800000001000200",
+      "bytes": 664778,
+      "git_blob_sha": "a1299f9e1817d26d1ed742dcd91513e2210b99c3",
+      "rows": 18463,
+      "root_mobility": 42,
+      "sub_roots": 42,
+      "visited_states_across_subroots": 39263,
+      "winner_states": 25385,
+      "loser_states": 7850,
+      "loser_reply_edges": 35044,
+      "terminal_count": 6028,
+      "terminal_range": [
+        13,
+        17
+      ],
+      "max_plies_from_root": 10,
+      "union_missing": 0,
+      "union_extra": 0
+    },
+    {
+      "bit": 105,
+      "root_hex": "00000200080000801202000000200000",
+      "d4_canonical_hex": "00000000200080003800200000000200",
+      "bytes": 775472,
+      "git_blob_sha": "1cf08f2a488de0a6b0fa5a95aea1dc7679f709f9",
+      "rows": 21430,
+      "root_mobility": 42,
+      "sub_roots": 42,
+      "visited_states_across_subroots": 47020,
+      "winner_states": 30424,
+      "loser_states": 9409,
+      "loser_reply_edges": 42798,
+      "terminal_count": 7187,
+      "terminal_range": [
+        13,
+        17
+      ],
+      "max_plies_from_root": 10,
+      "union_missing": 0,
+      "union_extra": 0
+    },
+    {
+      "bit": 58,
+      "root_hex": "00000000080000801602000000200000",
+      "d4_canonical_hex": "00000000080000801602000000200000",
+      "bytes": 868008,
+      "git_blob_sha": "d2409f6535a964fbea438962f4b50f62d15d1713",
+      "rows": 24030,
+      "root_mobility": 46,
+      "sub_roots": 46,
+      "visited_states_across_subroots": 53818,
+      "winner_states": 34681,
+      "loser_states": 10783,
+      "loser_reply_edges": 48635,
+      "terminal_count": 8354,
+      "terminal_range": [
+        13,
+        17
+      ],
+      "max_plies_from_root": 10,
+      "union_missing": 0,
+      "union_extra": 0
+    },
+    {
+      "bit": 62,
+      "root_hex": "00000000080000805202000000200000",
+      "d4_canonical_hex": "00000000080000805202000000200000",
+      "bytes": 863816,
+      "git_blob_sha": "14fcb303e63b909bee3cf8035690b8564edbc22a",
+      "rows": 23905,
+      "root_mobility": 44,
+      "sub_roots": 44,
+      "visited_states_across_subroots": 53086,
+      "winner_states": 34400,
+      "loser_states": 10305,
+      "loser_reply_edges": 47542,
+      "terminal_count": 8381,
+      "terminal_range": [
+        13,
+        17
+      ],
+      "max_plies_from_root": 10,
+      "union_missing": 0,
+      "union_extra": 0
+    },
+    {
+      "bit": 54,
+      "root_hex": "00000000080000801242000000200000",
+      "d4_canonical_hex": "00000000080000801242000000200000",
+      "bytes": 982624,
+      "git_blob_sha": "26d5ae74296e7f0af722890a663f711af1d4ef9d",
+      "rows": 27156,
+      "root_mobility": 47,
+      "sub_roots": 47,
+      "visited_states_across_subroots": 60500,
+      "winner_states": 39135,
+      "loser_states": 12004,
+      "loser_reply_edges": 54856,
+      "terminal_count": 9361,
+      "terminal_range": [
+        13,
+        17
+      ],
+      "max_plies_from_root": 10,
+      "union_missing": 0,
+      "union_extra": 0
+    }
+  ],
+  "aggregate": {
+    "certificates": 6,
+    "rows": 129880,
+    "sub_roots": 261,
+    "visited_states_across_subroots": 289364,
+    "winner_states": 187063,
+    "loser_states": 57458,
+    "loser_reply_edges": 261446,
+    "terminal_count": 44843
+  },
+  "parent_lifts": {
+    "deletion_edges": 42,
+    "unique_d4_parent_orbits": 37,
+    "shared_child_orbit": "00000000080000801202000000200000",
+    "shared_child_incidences": [
+      {
+        "bit": 64,
+        "removed": 64
+      },
+      {
+        "bit": 96,
+        "removed": 96
+      },
+      {
+        "bit": 105,
+        "removed": 105
+      },
+      {
+        "bit": 58,
+        "removed": 58
+      },
+      {
+        "bit": 62,
+        "removed": 62
+      },
+      {
+        "bit": 54,
+        "removed": 54
+      }
+    ],
+    "repeated_parent_orbits": [
+      {
+        "parent": "00000000080000801202000000200000",
+        "incidences": [
+          {
+            "bit": 64,
+            "removed": 64
+          },
+          {
+            "bit": 96,
+            "removed": 96
+          },
+          {
+            "bit": 105,
+            "removed": 105
+          },
+          {
+            "bit": 58,
+            "removed": 58
+          },
+          {
+            "bit": 62,
+            "removed": 62
+          },
+          {
+            "bit": 54,
+            "removed": 54
+          }
+        ]
+      }
+    ]
+  },
+  "frontier_impact_at_audit": {
+    "contribution": 0,
+    "current_chain_head": "1199/6648/524616/4918/388339",
+    "sweep_claim_base_head": "1195/6652/524884/4922/388607",
+    "receipt_fold_status": "pending",
+    "rebase_required_before_fold": true
+  },
+  "interpretation_guard": "These six certificates prove only the six individual seven-stone roots WIN within ten plies. They do not close the six-stone child or either five-stone parent until receipts are folded on the current 1199 head. The other eight WIN7 certificates were not yet published at audit time. The standard 11x11 empty board, both two-stone roots, S2, class2 and class4 remain UNKNOWN."
+}

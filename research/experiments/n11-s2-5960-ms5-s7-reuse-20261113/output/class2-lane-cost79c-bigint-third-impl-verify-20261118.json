@@ -1,0 +1,68 @@
+{
+ "schema": "n11-class2-lane-cost79c-bigint-third-impl-verify-20261118-v1",
+ "date": "2026-11-18",
+ "tool": "verify_win7_certificate_bigint_independent.mjs (BigInt 3x3 cofactor expansion of the exact lifted determinant [x2+y2,x,y,1]; no floating point; no solver, verdict cache or repo verifier import)",
+ "certificates_checked": {
+  "21": {
+   "root": "00000000000000c09002000200200000",
+   "root_stones": 7,
+   "root_mobility": 66,
+   "subroots_passed": 66,
+   "strategy_rows": 48856,
+   "consumed_winner_rows": 48856,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "verdict": "WIN7 certificate independently verified"
+  },
+  "30": {
+   "root": "00000000000000c09002000240000000",
+   "root_stones": 7,
+   "root_mobility": 52,
+   "subroots_passed": 52,
+   "strategy_rows": 35813,
+   "consumed_winner_rows": 35813,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "verdict": "WIN7 certificate independently verified"
+  },
+  "117": {
+   "root": "00200000000000c09002000200000000",
+   "root_stones": 7,
+   "root_mobility": 68,
+   "subroots_passed": 68,
+   "strategy_rows": 80970,
+   "consumed_winner_rows": 80970,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "verdict": "WIN7 certificate independently verified"
+  },
+  "120": {
+   "root": "01000000000000c09002000200000000",
+   "root_stones": 7,
+   "root_mobility": 68,
+   "subroots_passed": 68,
+   "strategy_rows": 74776,
+   "consumed_winner_rows": 74776,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "verdict": "WIN7 certificate independently verified"
+  }
+ },
+ "note": "sample covers the smallest (30) and largest (117) certificates plus 21 and 120; all four PASS with independent consumed-union accounting 0 missing / 0 extra"
+}

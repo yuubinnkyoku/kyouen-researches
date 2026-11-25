@@ -1,0 +1,81 @@
+{
+  "date": "2026-11-14",
+  "child_s6": "00000000020000003800000080001000",
+  "certificates": [
+    {
+      "bit": 108,
+      "root": "00001000020000003800000080001000",
+      "rows": 16700,
+      "bytes": 602670,
+      "subroots": 42,
+      "subroots_pass": 42,
+      "consumed_union": 16700,
+      "missing": 0,
+      "extra": 0,
+      "extract_nodes": 3698502,
+      "terminal_range": [
+        13,
+        17
+      ],
+      "loser_mobility": 42,
+      "md5": "a47ba09a33ad4b7daa864b3e651cbdd2"
+    },
+    {
+      "bit": 95,
+      "root": "00000000820000003800000080001000",
+      "rows": 24611,
+      "bytes": 887995,
+      "subroots": 49,
+      "subroots_pass": 49,
+      "consumed_union": 24611,
+      "missing": 0,
+      "extra": 0,
+      "extract_nodes": 4890657,
+      "terminal_range": [
+        13,
+        17
+      ],
+      "loser_mobility": 49,
+      "md5": "0ea8d9fb7ec0f08df207a2331f21595b"
+    },
+    {
+      "bit": 99,
+      "root": "00000008020000003800000080001000",
+      "rows": 50090,
+      "bytes": 1807564,
+      "subroots": 56,
+      "subroots_pass": 56,
+      "consumed_union": 50090,
+      "missing": 0,
+      "extra": 0,
+      "extract_nodes": 18891995,
+      "terminal_range": [
+        13,
+        17
+      ],
+      "loser_mobility": 56,
+      "md5": "ce42f1e4325daad9cae850a73e831d0c"
+    },
+    {
+      "bit": 17,
+      "root": "00000000020000003800000080021000",
+      "rows": 46051,
+      "bytes": 1663689,
+      "subroots": 59,
+      "subroots_pass": 59,
+      "consumed_union": 46051,
+      "missing": 0,
+      "extra": 0,
+      "extract_nodes": 15526528,
+      "terminal_range": [
+        13,
+        17
+      ],
+      "loser_mobility": 59,
+      "md5": "15d65d744c13a023ecfe60e773900bb1"
+    }
+  ],
+  "verifier": "verify_five_terminal_loss7.py TS port, exact Bareiss, no engine import; root checks PASS (7 stones, no 4-cocircular subset, loser mobility as listed)",
+  "format": "n11-terminal-strategy-v1 original_first_WIN7 second_to_move_LOSS",
+  "status": "certificates prove only a win within depth 10 from the 7-stone root; class 4 / 11x11 empty root UNKNOWN"
+}

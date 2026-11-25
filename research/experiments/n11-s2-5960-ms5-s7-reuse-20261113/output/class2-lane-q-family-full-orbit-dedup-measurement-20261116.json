@@ -1,0 +1,139 @@
+{
+ "meta": {
+  "date": "2026-11-16",
+  "lane": "class2-lane (11x11 long-term, weak solve)",
+  "title": "Q family (Klein-four S5) full pre-sweep orbit-dedup measurement + superset-orbit structure verification",
+  "implementation": "independent third implementation (TypeScript sandbox): D4 canonical form, superset-orbit enumeration, survival legality via verified det3/4x4 concyclicity determinant",
+  "inputs": {
+   "ranking": "class-frontier-s5-ranking-after-reconciled-canonical1400-cost70g-20261116.csv",
+   "children_csv": "class-frontier-top-candidates-s6-after-cost65j-receipts-20261116.csv"
+  },
+  "related": "class2-lane-frontier-s5-stabilizer-census-20261116.json, class2-lane-next-targets-orbit-dedup-measurement-20261116.json (same session)"
+ },
+ "controls": {
+  "control_65f_child_legal_count": 65,
+  "csv_children_crosscheck": {
+   "class4": {
+    "csv_children": 18,
+    "orbit_matched_by_canonical_form": 18,
+    "legal_cost_matched": 18
+   },
+   "audit_blocked": {
+    "csv_children": 10,
+    "orbit_matched_by_canonical_form": 10,
+    "legal_cost_matched": 10
+   },
+   "note": "every published remaining child in the CSV is exactly one D4-canonical superset orbit of its S5 family, and its published edge cost equals the recomputed legal-candidate count of the canonical representative - strong structural validation of the published worklist"
+  }
+ },
+ "families": [
+  {
+   "label": "q_klein_class1",
+   "s5_hex": "00000000000000821082000000000000",
+   "s5_stabilizer": [
+    "identity",
+    "x_flip",
+    "y_flip",
+    "rot180"
+   ],
+   "engine_task_list": "Q (class-1, remaining 18 children / cost 1238)",
+   "total_superset_orbits": 33,
+   "full_family_naive_candidate_searches": 2299,
+   "full_family_union_candidate_orbits": 1347,
+   "full_family_redundant": 952,
+   "full_family_saved_pct": 41.41,
+   "per_orbit_legal_counts": [
+    66,
+    70,
+    73,
+    74,
+    75,
+    54,
+    68,
+    66,
+    64,
+    74,
+    64,
+    74,
+    71,
+    63,
+    75,
+    74,
+    63,
+    66,
+    74,
+    73,
+    74,
+    76,
+    61,
+    76,
+    79,
+    66,
+    67,
+    67,
+    70,
+    76,
+    68,
+    68,
+    70
+   ]
+  },
+  {
+   "label": "class4",
+   "s5_hex": "00000000020000003800000080000000",
+   "s5_stabilizer": [
+    "identity",
+    "rot180"
+   ],
+   "total_superset_orbits": 58,
+   "full_family_naive_candidate_searches": 4581,
+   "full_family_union_candidate_orbits": 2840,
+   "full_family_redundant": 1741,
+   "full_family_saved_pct": 38,
+   "remaining_subset_reference": {
+    "children": 18,
+    "naive": 1460,
+    "redundant": 290,
+    "saved_pct": 19.86
+   }
+  },
+  {
+   "label": "audit_blocked_class2",
+   "s5_hex": "00000000000000809082000000000000",
+   "s5_stabilizer": [
+    "identity",
+    "y_flip"
+   ],
+   "total_superset_orbits": 62,
+   "full_family_naive_candidate_searches": 4207,
+   "full_family_union_candidate_orbits": 2619,
+   "full_family_redundant": 1588,
+   "full_family_saved_pct": 37.75,
+   "remaining_subset_reference": {
+    "children": 10,
+    "naive": 698,
+    "redundant": 85,
+    "saved_pct": 12.18
+   }
+  }
+ ],
+ "structural_findings": {
+  "superset_orbit_count": "the number of S6 superset orbits of an S5 equals the number of stabilizer(S5)-orbits of the 116 free cells (measured: 33 for Q / 58 for class4 / 62 for audit_blocked), not 116/|stab| - cells on the stabilizer's fixed lines form smaller orbits",
+  "stabilizer_dup_correlation": "full-family candidate-orbit duplication: Q (order-4 stabilizer) 41.41% > class4 (order-2) 38.0% >= audit_blocked (order-2) 37.75%; remaining-subset duplication is lower than full-family because fewer children accumulate overlap (class4: 19.86% for the 18 remaining of 58)",
+  "dup_growth": "within a family the per-child dup count grows with the cumulative union; dup-free children occur when a child's orbit is stabilizer-isolated (several 0-dup orbits appear mid-family in all three families)"
+ },
+ "recommendation": {
+  "q_sweep": "when the Q engine sweep runs (18 remaining children / cost 1238), apply family-level orbit-level verdict transfer at candidate enumeration: Q has the highest measured family-internal duplication (41.41% full-family); the expected saving on the remaining subset is on the order of the class4 remaining measurement (19.86%) or higher",
+  "implementation_hint": "canonicalize each candidate root (child-orbit representative | 7th stone) under D4; family-level seen-orbit table; transfer WIN/REFUTED verdicts across identical canonical forms; per-orbit legal counts for all 33 Q orbits are published in this file for cost estimation"
+ },
+ "interpretation_guard": {
+  "no_verdict_claim": "this measurement contains no win/loss verdicts and changes the status of no root",
+  "full_family_vs_remaining": "full-family dup rates (37-41%) describe the complete 33/58/62-orbit families; the engine only sweeps the remaining subsets (18/18/10) whose dup rates are lower (19.86%/12.18% measured for the two reference families)",
+  "q_remaining_unidentified": "which 18 of Q's 33 orbits remain is known to the engine worklist but was not re-derived here; per-orbit data covers all 33 so the transfer table is applicable to any subset"
+ },
+ "status": {
+  "11x11_empty_board": "UNKNOWN",
+  "s2_root_59_60": "UNKNOWN",
+  "class1_class2_class4_roots": "UNKNOWN"
+ }
+}

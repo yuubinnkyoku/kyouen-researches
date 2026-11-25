@@ -1,0 +1,1909 @@
+{
+ "schema": "n11-class2-lane-cost73l-certificates-bigint-independent-reverification-20261117-v1",
+ "date": "2026-11-17",
+ "pin": {
+  "commit": "a1e1590b43077cacf7cb829aa5f223476c7314ca",
+  "band_commits": "3a442e0f3e7441a690f4df0b3d01acd1875e48f3..a53e768ad1410f0207ecc33076c2e8060abff8e6",
+  "record_files": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost73l-certificates/class2-lane-cost73l-win7-certificates-20261117.json + 32x bitN-rootcheck.json + 32x bitN-subroots.jsonl + 30x README-split-bitN.md (bits 41/61 whole files) + 62 certificate files (30 split pairs + 2 whole) + stats.json + det-reextraction.json + claim v3 class2-lane-cost73l-inflight-20261117.json",
+  "authoritative_blob_sha_table": "the published class2-lane-cost73l-pins-20261117.txt (git blob f36f9a57790a476f552f42c1924ba25b8615a4b3, 159 band-dir file pins name|sha|size, itself blob-pinned and asserted 159/159 against the mirrored bytes) + the claim v3 pin (160th); the eight earlier batch outputs used for disjointness are blob-pinned inline (151 earlier roots)"
+ },
+ "method": {
+  "records": "32 WIN7-D10 certificate records of the published cost-73l band (child 00000000000000c09002000000400000, edge cost 73, claim v3 blob 39cf0f9b31a28ad6358f157e2433477ab0659243; manifest basis names claim v2 blob 814a0ec6c6b3123a25010dcf7d3d054b38352f3a): in-band win7-certificates manifest (rows/extraction_nodes/subroots_pass/loser_mobility/terminal_stone_range/md5/sha256/d4_canon_root/raw_is_canon, union 0/0, fbt_drops 0, no fatal) plus per-bit rootcheck.json (2-line JSONL) and subroots.jsonl (batched, up to 8 loser-first-moves per line) sidecars, README-split-bitN.md recombination docs for the 30 split certificates, stats.json per-bit extraction statistics and det-reextraction.json fresh-process determinism sample [1,9,47,61,64,116]; all 32 records structurally pre-asserted (verdict WIN7, depth 10, subroots==subroots_pass==loser_mobility, terminal range [13,17], root==child|(1<<bit))",
+  "bytes": "each whole certificate or part present in the local mirror fetched from the commit-pinned raw CDN URLs (band pin a53e768ad1410f0207ecc33076c2e8060abff8e6); git blob sha+size asserted against the published 159-file pin table (159/159 band files + claim v3 = 160); the mirrored manifest reproduces git blob 6e0a94aba212ba54bb5329fbea4643c9dcdb1ec4, the sha the claim v3 certificates section and status text state; split part1 asserted to end on a line boundary and to equal the manifest split_cut_byte; certificates reconstructed as exact part1+part2 concatenations; joined md5 AND sha256 asserted against the manifest; 2-line header asserted and data rows == manifest rows; README-split docs cross-checked (whole bytes, split boundary byte, md5, root); stats.json cross-agreed per-bit (root/rows/nodes/md5/sha256/moves) and in totals; det-reextraction.json cross-agreed on its six sample bits (md5/rows)",
+  "verifier": "verify_win7_certificate_bigint_independent.mjs (git blob 62b5d9413daafb172f6e10249976ee6808f7b454, asserted by the script; run with the expected loser mobility as argv[3]): BigInt 3x3 cofactor expansion of the exact lifted determinant [x^2+y^2,x,y,1], no floating point, no solver/verdict-cache import; third implementation beyond the generator's own Bareiss verify_bit7_win7_cert.ts documented in the manifest; per certificate asserted verdict/root_hex/stones 7/root_safe/rows sorted-unique/union 0/0/terminal range within 13..17/strategy_rows/subroots_passed/root_mobility/terminal_range/consumed_winner_rows",
+  "sidecar_cross_agreement": "per-bit subroots.jsonl (Bareiss-verified per-loser-first-move stats, batched 8 per line) sums fully agree with the BigInt verifier output on all 32 certificates: sum(seen)==visited_states_across_subroots, sum(terminals)==terminal_count, sum(opponentEdges)==loser_reply_edges, m-key count==subroots_pass==loser_mobility, every per-move range within [13,17]; rootcheck.json line 1 stones==7 and loserMobility==manifest loser_mobility==verifier root_mobility, line 2 rows==manifest rows"
+ },
+ "entries": [
+  {
+   "bit": 1,
+   "root_hex": "00000000000000c09002000000400002",
+   "d4_canon_root": "00000000000000c09002000000400002",
+   "raw_is_canon": true,
+   "certificate": "class2-lane-cost73l-certificates/n11_s7_00000000000000c09002000000400002.cert",
+   "storage": "split part1of2+part2of2 concatenation",
+   "record_source": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost73l-certificates/class2-lane-cost73l-win7-certificates-20261117.json",
+   "record_kind": "win7-certificates manifest (in-band) + rootcheck.json (2-line JSONL) + subroots.jsonl (batched) + README-split + stats.json + det-reextraction.json",
+   "joined_bytes": 1823372,
+   "joined_md5": "114b255f4bf3b4d1dfcb3f8cfe80795f",
+   "joined_sha256": "73eab137f8d8c7d28656f8b27a095e91ab5c8d16d7b48f4302b824f11213d634",
+   "joined_git_blob_sha": "b0e65e0b043c1bca38600e1580c936be466ab073",
+   "manifest_md5_match": true,
+   "manifest_sha256_match": true,
+   "record_rows": 50377,
+   "record_extraction_nodes": 11911796,
+   "record_sub_roots_pass": 59,
+   "record_loser_mobility": 59,
+   "record_terminal_stone_range": [
+    13,
+    17
+   ],
+   "rootcheck_stones": 7,
+   "rootcheck_loser_mobility": 59,
+   "subroots_sidecar_lines": 8,
+   "subroots_sidecar_keys": 59,
+   "verifier_status": "PASS",
+   "verifier_root_mobility": 59,
+   "verifier_rows": 50377,
+   "verifier_subroots_passed": 59,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_terminal_count": 20235,
+   "verifier_visited_states": 115018,
+   "verifier_loser_reply_edges": 100366,
+   "verifier_winner_states": 73835,
+   "verifier_loser_states": 20948,
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "parts": {
+    "part1": {
+     "pinned_blob_sha": "fa81d0139db9ff8a83bef3abbe5a0b88908e2154",
+     "bytes": 911684
+    },
+    "part2": {
+     "pinned_blob_sha": "f8e3eafe70ec9be732fd610e21dba5a480c4b289",
+     "bytes": 911688
+    }
+   },
+   "readme_split_doc": {
+    "bytes": 1823372,
+    "split_boundary": 911684,
+    "md5": "114b255f4bf3b4d1dfcb3f8cfe80795f"
+   }
+  },
+  {
+   "bit": 2,
+   "root_hex": "00000000000000c09002000000400004",
+   "d4_canon_root": "00000000000000c09002000000400004",
+   "raw_is_canon": true,
+   "certificate": "class2-lane-cost73l-certificates/n11_s7_00000000000000c09002000000400004.cert",
+   "storage": "split part1of2+part2of2 concatenation",
+   "record_source": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost73l-certificates/class2-lane-cost73l-win7-certificates-20261117.json",
+   "record_kind": "win7-certificates manifest (in-band) + rootcheck.json (2-line JSONL) + subroots.jsonl (batched) + README-split + stats.json + det-reextraction.json",
+   "joined_bytes": 1451230,
+   "joined_md5": "39d7def0eb261a4f21392050e2e7d5c2",
+   "joined_sha256": "00da5b4c3d5d9e2ad81c6d90d14e0e9f8f67330f5f284e5294872f9ba0198ec0",
+   "joined_git_blob_sha": "b6a34994492d00f7e20082a0c6fd6144b00aa507",
+   "manifest_md5_match": true,
+   "manifest_sha256_match": true,
+   "record_rows": 40116,
+   "record_extraction_nodes": 10434625,
+   "record_sub_roots_pass": 55,
+   "record_loser_mobility": 55,
+   "record_terminal_stone_range": [
+    13,
+    17
+   ],
+   "rootcheck_stones": 7,
+   "rootcheck_loser_mobility": 55,
+   "subroots_sidecar_lines": 7,
+   "subroots_sidecar_keys": 55,
+   "verifier_status": "PASS",
+   "verifier_root_mobility": 55,
+   "verifier_rows": 40116,
+   "verifier_subroots_passed": 55,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_terminal_count": 14446,
+   "verifier_visited_states": 89134,
+   "verifier_loser_reply_edges": 79734,
+   "verifier_winner_states": 57536,
+   "verifier_loser_states": 17152,
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "parts": {
+    "part1": {
+     "pinned_blob_sha": "deb9f0900c270316fae89b819001c51eb93a3e39",
+     "bytes": 725611
+    },
+    "part2": {
+     "pinned_blob_sha": "cabfe505722e4a6e7d85c1b65029e9181195cece",
+     "bytes": 725619
+    }
+   },
+   "readme_split_doc": {
+    "bytes": 1451230,
+    "split_boundary": 725611,
+    "md5": "39d7def0eb261a4f21392050e2e7d5c2"
+   }
+  },
+  {
+   "bit": 3,
+   "root_hex": "00000000000000c09002000000400008",
+   "d4_canon_root": "00000000000000c09002000000400008",
+   "raw_is_canon": true,
+   "certificate": "class2-lane-cost73l-certificates/n11_s7_00000000000000c09002000000400008.cert",
+   "storage": "split part1of2+part2of2 concatenation",
+   "record_source": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost73l-certificates/class2-lane-cost73l-win7-certificates-20261117.json",
+   "record_kind": "win7-certificates manifest (in-band) + rootcheck.json (2-line JSONL) + subroots.jsonl (batched) + README-split + stats.json + det-reextraction.json",
+   "joined_bytes": 2423139,
+   "joined_md5": "ed71500eb477107754a35c9c2648576a",
+   "joined_sha256": "1644cd327db28c443c8681113042b97996363eea019c59e4d20d74af1072d099",
+   "joined_git_blob_sha": "d409068129fade3f4f72dbfdb85a90c18c28338d",
+   "manifest_md5_match": true,
+   "manifest_sha256_match": true,
+   "record_rows": 67015,
+   "record_extraction_nodes": 16988371,
+   "record_sub_roots_pass": 62,
+   "record_loser_mobility": 62,
+   "record_terminal_stone_range": [
+    13,
+    17
+   ],
+   "rootcheck_stones": 7,
+   "rootcheck_loser_mobility": 62,
+   "subroots_sidecar_lines": 8,
+   "subroots_sidecar_keys": 62,
+   "verifier_status": "PASS",
+   "verifier_root_mobility": 62,
+   "verifier_rows": 67015,
+   "verifier_subroots_passed": 62,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_terminal_count": 23713,
+   "verifier_visited_states": 138386,
+   "verifier_loser_reply_edges": 121713,
+   "verifier_winner_states": 88997,
+   "verifier_loser_states": 25676,
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "parts": {
+    "part1": {
+     "pinned_blob_sha": "667981ebffaa348200582263a8de39c662502591",
+     "bytes": 1211545
+    },
+    "part2": {
+     "pinned_blob_sha": "f6170403a7de909faebb911f00a3d365ce1d294c",
+     "bytes": 1211594
+    }
+   },
+   "readme_split_doc": {
+    "bytes": 2423139,
+    "split_boundary": 1211545,
+    "md5": "ed71500eb477107754a35c9c2648576a"
+   }
+  },
+  {
+   "bit": 4,
+   "root_hex": "00000000000000c09002000000400010",
+   "d4_canon_root": "00000000000000c09002000000400010",
+   "raw_is_canon": true,
+   "certificate": "class2-lane-cost73l-certificates/n11_s7_00000000000000c09002000000400010.cert",
+   "storage": "split part1of2+part2of2 concatenation",
+   "record_source": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost73l-certificates/class2-lane-cost73l-win7-certificates-20261117.json",
+   "record_kind": "win7-certificates manifest (in-band) + rootcheck.json (2-line JSONL) + subroots.jsonl (batched) + README-split + stats.json + det-reextraction.json",
+   "joined_bytes": 2331920,
+   "joined_md5": "b05f67c9827f3a33d28a453430a43c37",
+   "joined_sha256": "d48b0b9eec41c6eee85908a4c19b5efdb6a098cc737334d2c6ffadfaf619fbdf",
+   "joined_git_blob_sha": "3ae1bfc918d18020f9a1b24c2df3db8314427a21",
+   "manifest_md5_match": true,
+   "manifest_sha256_match": true,
+   "record_rows": 64430,
+   "record_extraction_nodes": 14334219,
+   "record_sub_roots_pass": 63,
+   "record_loser_mobility": 63,
+   "record_terminal_stone_range": [
+    13,
+    17
+   ],
+   "rootcheck_stones": 7,
+   "rootcheck_loser_mobility": 63,
+   "subroots_sidecar_lines": 8,
+   "subroots_sidecar_keys": 63,
+   "verifier_status": "PASS",
+   "verifier_root_mobility": 63,
+   "verifier_rows": 64430,
+   "verifier_subroots_passed": 63,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_terminal_count": 22891,
+   "verifier_visited_states": 130132,
+   "verifier_loser_reply_edges": 113626,
+   "verifier_winner_states": 83453,
+   "verifier_loser_states": 23788,
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "parts": {
+    "part1": {
+     "pinned_blob_sha": "9c82c62dcc84f057fe5c7639a4d8ff1ccad64bd6",
+     "bytes": 1165936
+    },
+    "part2": {
+     "pinned_blob_sha": "acd09f64b545e92b12411fc6aa9bf1308c77989d",
+     "bytes": 1165984
+    }
+   },
+   "readme_split_doc": {
+    "bytes": 2331920,
+    "split_boundary": 1165936,
+    "md5": "b05f67c9827f3a33d28a453430a43c37"
+   }
+  },
+  {
+   "bit": 6,
+   "root_hex": "00000000000000c09002000000400040",
+   "d4_canon_root": "00000000000000c09002000000400040",
+   "raw_is_canon": true,
+   "certificate": "class2-lane-cost73l-certificates/n11_s7_00000000000000c09002000000400040.cert",
+   "storage": "split part1of2+part2of2 concatenation",
+   "record_source": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost73l-certificates/class2-lane-cost73l-win7-certificates-20261117.json",
+   "record_kind": "win7-certificates manifest (in-band) + rootcheck.json (2-line JSONL) + subroots.jsonl (batched) + README-split + stats.json + det-reextraction.json",
+   "joined_bytes": 2314652,
+   "joined_md5": "2c003f15cbab235eee87426dd4ca6771",
+   "joined_sha256": "68077f8cc538631e54e8f0315ad70586584aab2304934f20d6167ca52a00e410",
+   "joined_git_blob_sha": "6514f13957392cc79895eab2a6ad29692f9535c3",
+   "manifest_md5_match": true,
+   "manifest_sha256_match": true,
+   "record_rows": 63971,
+   "record_extraction_nodes": 15666095,
+   "record_sub_roots_pass": 63,
+   "record_loser_mobility": 63,
+   "record_terminal_stone_range": [
+    13,
+    17
+   ],
+   "rootcheck_stones": 7,
+   "rootcheck_loser_mobility": 63,
+   "subroots_sidecar_lines": 8,
+   "subroots_sidecar_keys": 63,
+   "verifier_status": "PASS",
+   "verifier_root_mobility": 63,
+   "verifier_rows": 63971,
+   "verifier_subroots_passed": 63,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_terminal_count": 22253,
+   "verifier_visited_states": 130736,
+   "verifier_loser_reply_edges": 115346,
+   "verifier_winner_states": 84048,
+   "verifier_loser_states": 24435,
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "parts": {
+    "part1": {
+     "pinned_blob_sha": "5c5cbd27a3eb9732380ed8171c644f83604391c7",
+     "bytes": 1157317
+    },
+    "part2": {
+     "pinned_blob_sha": "f62d9600244476f933661840a740fdd6f1cca3e9",
+     "bytes": 1157335
+    }
+   },
+   "readme_split_doc": {
+    "bytes": 2314652,
+    "split_boundary": 1157317,
+    "md5": "2c003f15cbab235eee87426dd4ca6771"
+   }
+  },
+  {
+   "bit": 8,
+   "root_hex": "00000000000000c09002000000400100",
+   "d4_canon_root": "00000000000000c09002000000400100",
+   "raw_is_canon": true,
+   "certificate": "class2-lane-cost73l-certificates/n11_s7_00000000000000c09002000000400100.cert",
+   "storage": "split part1of2+part2of2 concatenation",
+   "record_source": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost73l-certificates/class2-lane-cost73l-win7-certificates-20261117.json",
+   "record_kind": "win7-certificates manifest (in-band) + rootcheck.json (2-line JSONL) + subroots.jsonl (batched) + README-split + stats.json + det-reextraction.json",
+   "joined_bytes": 1775404,
+   "joined_md5": "9f245a01d0ce48a7e47782ecf1d4fd71",
+   "joined_sha256": "cdc9eec66d711af8596df59e4ca9bb30d1a633bbfe94d00ec8ac6e80fb673abb",
+   "joined_git_blob_sha": "dadd25032772bb8f3752f70fa85819f5d98655af",
+   "manifest_md5_match": true,
+   "manifest_sha256_match": true,
+   "record_rows": 49052,
+   "record_extraction_nodes": 10638032,
+   "record_sub_roots_pass": 58,
+   "record_loser_mobility": 58,
+   "record_terminal_stone_range": [
+    13,
+    17
+   ],
+   "rootcheck_stones": 7,
+   "rootcheck_loser_mobility": 58,
+   "subroots_sidecar_lines": 8,
+   "subroots_sidecar_keys": 58,
+   "verifier_status": "PASS",
+   "verifier_root_mobility": 58,
+   "verifier_rows": 49052,
+   "verifier_subroots_passed": 58,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_terminal_count": 18850,
+   "verifier_visited_states": 109762,
+   "verifier_loser_reply_edges": 96542,
+   "verifier_winner_states": 70552,
+   "verifier_loser_states": 20360,
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "parts": {
+    "part1": {
+     "pinned_blob_sha": "9e21fdaa6cc787e77fa77412b68e5f226e42ddf1",
+     "bytes": 887667
+    },
+    "part2": {
+     "pinned_blob_sha": "a94df61173bc2e9c59fbf58bb4beb950ef6c3003",
+     "bytes": 887737
+    }
+   },
+   "readme_split_doc": {
+    "bytes": 1775404,
+    "split_boundary": 887667,
+    "md5": "9f245a01d0ce48a7e47782ecf1d4fd71"
+   }
+  },
+  {
+   "bit": 9,
+   "root_hex": "00000000000000c09002000000400200",
+   "d4_canon_root": "00000000000000c09002000000400200",
+   "raw_is_canon": true,
+   "certificate": "class2-lane-cost73l-certificates/n11_s7_00000000000000c09002000000400200.cert",
+   "storage": "split part1of2+part2of2 concatenation",
+   "record_source": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost73l-certificates/class2-lane-cost73l-win7-certificates-20261117.json",
+   "record_kind": "win7-certificates manifest (in-band) + rootcheck.json (2-line JSONL) + subroots.jsonl (batched) + README-split + stats.json + det-reextraction.json",
+   "joined_bytes": 2560559,
+   "joined_md5": "807c0aedd1edfd8c4266354a483f6bfe",
+   "joined_sha256": "ca543a83dcafcc0e8141e1325d658d6f50006a78eb279fdbdc3146cc00a86a5e",
+   "joined_git_blob_sha": "ab279e1eb0829c05821299140c6d67c35f037090",
+   "manifest_md5_match": true,
+   "manifest_sha256_match": true,
+   "record_rows": 70732,
+   "record_extraction_nodes": 16489294,
+   "record_sub_roots_pass": 67,
+   "record_loser_mobility": 67,
+   "record_terminal_stone_range": [
+    13,
+    17
+   ],
+   "rootcheck_stones": 7,
+   "rootcheck_loser_mobility": 67,
+   "subroots_sidecar_lines": 9,
+   "subroots_sidecar_keys": 67,
+   "verifier_status": "PASS",
+   "verifier_root_mobility": 67,
+   "verifier_rows": 70732,
+   "verifier_subroots_passed": 67,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_terminal_count": 24362,
+   "verifier_visited_states": 138846,
+   "verifier_loser_reply_edges": 120747,
+   "verifier_winner_states": 88876,
+   "verifier_loser_states": 25608,
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "parts": {
+    "part1": {
+     "pinned_blob_sha": "b25459f65457ca956ec88b7d477d98b59134bcd1",
+     "bytes": 1280245
+    },
+    "part2": {
+     "pinned_blob_sha": "1d3d4b2ae723eabfc8f00397bdc61118e532ccc7",
+     "bytes": 1280314
+    }
+   },
+   "readme_split_doc": {
+    "bytes": 2560559,
+    "split_boundary": 1280245,
+    "md5": "807c0aedd1edfd8c4266354a483f6bfe"
+   }
+  },
+  {
+   "bit": 18,
+   "root_hex": "00000000000000c09002000000440000",
+   "d4_canon_root": "00000000000000c09002000000440000",
+   "raw_is_canon": true,
+   "certificate": "class2-lane-cost73l-certificates/n11_s7_00000000000000c09002000000440000.cert",
+   "storage": "split part1of2+part2of2 concatenation",
+   "record_source": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost73l-certificates/class2-lane-cost73l-win7-certificates-20261117.json",
+   "record_kind": "win7-certificates manifest (in-band) + rootcheck.json (2-line JSONL) + subroots.jsonl (batched) + README-split + stats.json + det-reextraction.json",
+   "joined_bytes": 2976616,
+   "joined_md5": "e709c32e5d5c0daab4687188f7caf603",
+   "joined_sha256": "139ef8e9403b98943b4f7f9329954464a233fbd197496df6ccb0dafde7a4a7cf",
+   "joined_git_blob_sha": "668bee1d297ceb90001758b73dd637e62ea69ad3",
+   "manifest_md5_match": true,
+   "manifest_sha256_match": true,
+   "record_rows": 82404,
+   "record_extraction_nodes": 20672244,
+   "record_sub_roots_pass": 65,
+   "record_loser_mobility": 65,
+   "record_terminal_stone_range": [
+    13,
+    17
+   ],
+   "rootcheck_stones": 7,
+   "rootcheck_loser_mobility": 65,
+   "subroots_sidecar_lines": 9,
+   "subroots_sidecar_keys": 65,
+   "verifier_status": "PASS",
+   "verifier_root_mobility": 65,
+   "verifier_rows": 82404,
+   "verifier_subroots_passed": 65,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_terminal_count": 31475,
+   "verifier_visited_states": 173444,
+   "verifier_loser_reply_edges": 149950,
+   "verifier_winner_states": 110983,
+   "verifier_loser_states": 30986,
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "parts": {
+    "part1": {
+     "pinned_blob_sha": "0366600a7d28969d0d1d3b315d77e1683c73228e",
+     "bytes": 1488276
+    },
+    "part2": {
+     "pinned_blob_sha": "d99ddd067a9687bacddea05c9da27cc43a9e9ece",
+     "bytes": 1488340
+    }
+   },
+   "readme_split_doc": {
+    "bytes": 2976616,
+    "split_boundary": 1488276,
+    "md5": "e709c32e5d5c0daab4687188f7caf603"
+   }
+  },
+  {
+   "bit": 21,
+   "root_hex": "00000000000000c09002000000600000",
+   "d4_canon_root": "00000000000000c09002000000600000",
+   "raw_is_canon": true,
+   "certificate": "class2-lane-cost73l-certificates/n11_s7_00000000000000c09002000000600000.cert",
+   "storage": "split part1of2+part2of2 concatenation",
+   "record_source": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost73l-certificates/class2-lane-cost73l-win7-certificates-20261117.json",
+   "record_kind": "win7-certificates manifest (in-band) + rootcheck.json (2-line JSONL) + subroots.jsonl (batched) + README-split + stats.json + det-reextraction.json",
+   "joined_bytes": 1704304,
+   "joined_md5": "14b52357ac5b2edfb5e6a4f6115d4e60",
+   "joined_sha256": "b9594f954eb1a51e752f7dedb1cc1812b3a8a26f244e7a5aa25591cea444f96d",
+   "joined_git_blob_sha": "44338e490d222bef46c160797681505718e5f0b0",
+   "manifest_md5_match": true,
+   "manifest_sha256_match": true,
+   "record_rows": 47227,
+   "record_extraction_nodes": 9438456,
+   "record_sub_roots_pass": 62,
+   "record_loser_mobility": 62,
+   "record_terminal_stone_range": [
+    13,
+    17
+   ],
+   "rootcheck_stones": 7,
+   "rootcheck_loser_mobility": 62,
+   "subroots_sidecar_lines": 8,
+   "subroots_sidecar_keys": 62,
+   "verifier_status": "PASS",
+   "verifier_root_mobility": 62,
+   "verifier_rows": 47227,
+   "verifier_subroots_passed": 62,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_terminal_count": 16043,
+   "verifier_visited_states": 96140,
+   "verifier_loser_reply_edges": 84347,
+   "verifier_winner_states": 61750,
+   "verifier_loser_states": 18347,
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "parts": {
+    "part1": {
+     "pinned_blob_sha": "d1cb65c861205796584d08f93ee480789c08a56b",
+     "bytes": 852144
+    },
+    "part2": {
+     "pinned_blob_sha": "311685aa8987de7a3c472142010bac11b44e428e",
+     "bytes": 852160
+    }
+   },
+   "readme_split_doc": {
+    "bytes": 1704304,
+    "split_boundary": 852144,
+    "md5": "14b52357ac5b2edfb5e6a4f6115d4e60"
+   }
+  },
+  {
+   "bit": 23,
+   "root_hex": "00000000000000c09002000000c00000",
+   "d4_canon_root": "00000000000000c09002000000c00000",
+   "raw_is_canon": true,
+   "certificate": "class2-lane-cost73l-certificates/n11_s7_00000000000000c09002000000c00000.cert",
+   "storage": "split part1of2+part2of2 concatenation",
+   "record_source": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost73l-certificates/class2-lane-cost73l-win7-certificates-20261117.json",
+   "record_kind": "win7-certificates manifest (in-band) + rootcheck.json (2-line JSONL) + subroots.jsonl (batched) + README-split + stats.json + det-reextraction.json",
+   "joined_bytes": 1653931,
+   "joined_md5": "97afa10bb0268c1aae9098c61d105204",
+   "joined_sha256": "5608377a5e4b3b7741f7063cfc71aef6749bf3a6a8682a0db993a271020b0214",
+   "joined_git_blob_sha": "9aa57e51e8e4adb06f1b59ad77ecfdb3c0d41c1e",
+   "manifest_md5_match": true,
+   "manifest_sha256_match": true,
+   "record_rows": 45805,
+   "record_extraction_nodes": 12319308,
+   "record_sub_roots_pass": 56,
+   "record_loser_mobility": 56,
+   "record_terminal_stone_range": [
+    13,
+    17
+   ],
+   "rootcheck_stones": 7,
+   "rootcheck_loser_mobility": 56,
+   "subroots_sidecar_lines": 7,
+   "subroots_sidecar_keys": 56,
+   "verifier_status": "PASS",
+   "verifier_root_mobility": 56,
+   "verifier_rows": 45805,
+   "verifier_subroots_passed": 56,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_terminal_count": 17353,
+   "verifier_visited_states": 102516,
+   "verifier_loser_reply_edges": 91021,
+   "verifier_winner_states": 66029,
+   "verifier_loser_states": 19134,
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "parts": {
+    "part1": {
+     "pinned_blob_sha": "29da988904d03f3527226bb2de3f3a65c84571bb",
+     "bytes": 826951
+    },
+    "part2": {
+     "pinned_blob_sha": "058894e4bcaeb4f2634a87ca993aa6140f433044",
+     "bytes": 826980
+    }
+   },
+   "readme_split_doc": {
+    "bytes": 1653931,
+    "split_boundary": 826951,
+    "md5": "97afa10bb0268c1aae9098c61d105204"
+   }
+  },
+  {
+   "bit": 25,
+   "root_hex": "00000000000000c09002000002400000",
+   "d4_canon_root": "00000000000000c09002000002400000",
+   "raw_is_canon": true,
+   "certificate": "class2-lane-cost73l-certificates/n11_s7_00000000000000c09002000002400000.cert",
+   "storage": "split part1of2+part2of2 concatenation",
+   "record_source": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost73l-certificates/class2-lane-cost73l-win7-certificates-20261117.json",
+   "record_kind": "win7-certificates manifest (in-band) + rootcheck.json (2-line JSONL) + subroots.jsonl (batched) + README-split + stats.json + det-reextraction.json",
+   "joined_bytes": 2020488,
+   "joined_md5": "2831eebf1cd44ba4b6a7e11434b89dc0",
+   "joined_sha256": "a8600c378dbc25618abc9f2f49516e0aed68f396944dbbd8851877fb182b5d52",
+   "joined_git_blob_sha": "b4a6109b7c47c9702c8abd52297c260b05bc099e",
+   "manifest_md5_match": true,
+   "manifest_sha256_match": true,
+   "record_rows": 56015,
+   "record_extraction_nodes": 18394863,
+   "record_sub_roots_pass": 56,
+   "record_loser_mobility": 56,
+   "record_terminal_stone_range": [
+    13,
+    17
+   ],
+   "rootcheck_stones": 7,
+   "rootcheck_loser_mobility": 56,
+   "subroots_sidecar_lines": 7,
+   "subroots_sidecar_keys": 56,
+   "verifier_status": "PASS",
+   "verifier_root_mobility": 56,
+   "verifier_rows": 56015,
+   "verifier_subroots_passed": 56,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_terminal_count": 19133,
+   "verifier_visited_states": 116054,
+   "verifier_loser_reply_edges": 104036,
+   "verifier_winner_states": 74926,
+   "verifier_loser_states": 21995,
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "parts": {
+    "part1": {
+     "pinned_blob_sha": "973397f91c91c8db33ff63b67a897a034d5d59b6",
+     "bytes": 1010222
+    },
+    "part2": {
+     "pinned_blob_sha": "6729be3821cae204e0e99c58282078b11ad4efc1",
+     "bytes": 1010266
+    }
+   },
+   "readme_split_doc": {
+    "bytes": 2020488,
+    "split_boundary": 1010222,
+    "md5": "2831eebf1cd44ba4b6a7e11434b89dc0"
+   }
+  },
+  {
+   "bit": 28,
+   "root_hex": "00000000000000c09002000010400000",
+   "d4_canon_root": "00000000000000c09002000010400000",
+   "raw_is_canon": true,
+   "certificate": "class2-lane-cost73l-certificates/n11_s7_00000000000000c09002000010400000.cert",
+   "storage": "split part1of2+part2of2 concatenation",
+   "record_source": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost73l-certificates/class2-lane-cost73l-win7-certificates-20261117.json",
+   "record_kind": "win7-certificates manifest (in-band) + rootcheck.json (2-line JSONL) + subroots.jsonl (batched) + README-split + stats.json + det-reextraction.json",
+   "joined_bytes": 1304664,
+   "joined_md5": "ecd6f74c0373a5d1fdb376ec5bbf4d4f",
+   "joined_sha256": "89750f03ecfb7c93bfded761c727d73ff7bae55d9fc70fb555d692c8d06b858b",
+   "joined_git_blob_sha": "256bc0dd868e7d84bd9a428884236353ef932785",
+   "manifest_md5_match": true,
+   "manifest_sha256_match": true,
+   "record_rows": 36144,
+   "record_extraction_nodes": 6873526,
+   "record_sub_roots_pass": 55,
+   "record_loser_mobility": 55,
+   "record_terminal_stone_range": [
+    13,
+    17
+   ],
+   "rootcheck_stones": 7,
+   "rootcheck_loser_mobility": 55,
+   "subroots_sidecar_lines": 7,
+   "subroots_sidecar_keys": 55,
+   "verifier_status": "PASS",
+   "verifier_root_mobility": 55,
+   "verifier_rows": 36144,
+   "verifier_subroots_passed": 55,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_terminal_count": 14632,
+   "verifier_visited_states": 88077,
+   "verifier_loser_reply_edges": 78660,
+   "verifier_winner_states": 56759,
+   "verifier_loser_states": 16686,
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "parts": {
+    "part1": {
+     "pinned_blob_sha": "93e19351a8236932889199eb71a739c38b2bd78c",
+     "bytes": 652306
+    },
+    "part2": {
+     "pinned_blob_sha": "237526fea0a3b11684b0e2ec5ea25db98e158af9",
+     "bytes": 652358
+    }
+   },
+   "readme_split_doc": {
+    "bytes": 1304664,
+    "split_boundary": 652306,
+    "md5": "ecd6f74c0373a5d1fdb376ec5bbf4d4f"
+   }
+  },
+  {
+   "bit": 29,
+   "root_hex": "00000000000000c09002000020400000",
+   "d4_canon_root": "00000000000000c09002000020400000",
+   "raw_is_canon": true,
+   "certificate": "class2-lane-cost73l-certificates/n11_s7_00000000000000c09002000020400000.cert",
+   "storage": "split part1of2+part2of2 concatenation",
+   "record_source": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost73l-certificates/class2-lane-cost73l-win7-certificates-20261117.json",
+   "record_kind": "win7-certificates manifest (in-band) + rootcheck.json (2-line JSONL) + subroots.jsonl (batched) + README-split + stats.json + det-reextraction.json",
+   "joined_bytes": 1625225,
+   "joined_md5": "dc03787da9e924e80a3498dd31607cb5",
+   "joined_sha256": "61e50e453b1a9d37367a5499b3437201a1ddf29a5ba4fb9b492f0c79674dc676",
+   "joined_git_blob_sha": "f857cd048528e7eefbd21e85b525b6d68a6167df",
+   "manifest_md5_match": true,
+   "manifest_sha256_match": true,
+   "record_rows": 44901,
+   "record_extraction_nodes": 10313436,
+   "record_sub_roots_pass": 56,
+   "record_loser_mobility": 56,
+   "record_terminal_stone_range": [
+    13,
+    17
+   ],
+   "rootcheck_stones": 7,
+   "rootcheck_loser_mobility": 56,
+   "subroots_sidecar_lines": 7,
+   "subroots_sidecar_keys": 56,
+   "verifier_status": "PASS",
+   "verifier_root_mobility": 56,
+   "verifier_rows": 44901,
+   "verifier_subroots_passed": 56,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_terminal_count": 16966,
+   "verifier_visited_states": 99178,
+   "verifier_loser_reply_edges": 87352,
+   "verifier_winner_states": 63858,
+   "verifier_loser_states": 18354,
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "parts": {
+    "part1": {
+     "pinned_blob_sha": "007e17a941b8a5deb7404e8429b7b3bec8a402f0",
+     "bytes": 812600
+    },
+    "part2": {
+     "pinned_blob_sha": "274f5bc43fea03f9ec23f9f0bb9d5d7890926020",
+     "bytes": 812625
+    }
+   },
+   "readme_split_doc": {
+    "bytes": 1625225,
+    "split_boundary": 812600,
+    "md5": "dc03787da9e924e80a3498dd31607cb5"
+   }
+  },
+  {
+   "bit": 32,
+   "root_hex": "00000000000000c09002000100400000",
+   "d4_canon_root": "00000000000000c09002000100400000",
+   "raw_is_canon": true,
+   "certificate": "class2-lane-cost73l-certificates/n11_s7_00000000000000c09002000100400000.cert",
+   "storage": "split part1of2+part2of2 concatenation",
+   "record_source": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost73l-certificates/class2-lane-cost73l-win7-certificates-20261117.json",
+   "record_kind": "win7-certificates manifest (in-band) + rootcheck.json (2-line JSONL) + subroots.jsonl (batched) + README-split + stats.json + det-reextraction.json",
+   "joined_bytes": 2159811,
+   "joined_md5": "bc8fe36e98c88456d8cf52590db8d8df",
+   "joined_sha256": "82f7b17fd70fd2553b0299d905a83aa2cb969d879f9871006052fbc371ad4412",
+   "joined_git_blob_sha": "e7c9666db6035cfe86aa800df308b6474d847ad5",
+   "manifest_md5_match": true,
+   "manifest_sha256_match": true,
+   "record_rows": 59751,
+   "record_extraction_nodes": 12508103,
+   "record_sub_roots_pass": 66,
+   "record_loser_mobility": 66,
+   "record_terminal_stone_range": [
+    13,
+    17
+   ],
+   "rootcheck_stones": 7,
+   "rootcheck_loser_mobility": 66,
+   "subroots_sidecar_lines": 9,
+   "subroots_sidecar_keys": 66,
+   "verifier_status": "PASS",
+   "verifier_root_mobility": 66,
+   "verifier_rows": 59751,
+   "verifier_subroots_passed": 66,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_terminal_count": 20646,
+   "verifier_visited_states": 120216,
+   "verifier_loser_reply_edges": 105556,
+   "verifier_winner_states": 77186,
+   "verifier_loser_states": 22384,
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "parts": {
+    "part1": {
+     "pinned_blob_sha": "7c3777856978ae93c3d8d4fa6d4b6cc351b113df",
+     "bytes": 1079892
+    },
+    "part2": {
+     "pinned_blob_sha": "21a7245803517bdcfb19bb477bb989e0bece5c6f",
+     "bytes": 1079919
+    }
+   },
+   "readme_split_doc": {
+    "bytes": 2159811,
+    "split_boundary": 1079892,
+    "md5": "bc8fe36e98c88456d8cf52590db8d8df"
+   }
+  },
+  {
+   "bit": 34,
+   "root_hex": "00000000000000c09002000400400000",
+   "d4_canon_root": "00000000000000c09002000400400000",
+   "raw_is_canon": true,
+   "certificate": "class2-lane-cost73l-certificates/n11_s7_00000000000000c09002000400400000.cert",
+   "storage": "split part1of2+part2of2 concatenation",
+   "record_source": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost73l-certificates/class2-lane-cost73l-win7-certificates-20261117.json",
+   "record_kind": "win7-certificates manifest (in-band) + rootcheck.json (2-line JSONL) + subroots.jsonl (batched) + README-split + stats.json + det-reextraction.json",
+   "joined_bytes": 1818527,
+   "joined_md5": "7c5a9a17db46f55ede94b966b7d4a251",
+   "joined_sha256": "10e86ccc6d573fe2d0c973f3bca59ded28515968c6ef1174813f0bb43e3a4e83",
+   "joined_git_blob_sha": "534b9a6e72c441dc58170ec894baf84ab39efc65",
+   "manifest_md5_match": true,
+   "manifest_sha256_match": true,
+   "record_rows": 50365,
+   "record_extraction_nodes": 12403562,
+   "record_sub_roots_pass": 56,
+   "record_loser_mobility": 56,
+   "record_terminal_stone_range": [
+    13,
+    17
+   ],
+   "rootcheck_stones": 7,
+   "rootcheck_loser_mobility": 56,
+   "subroots_sidecar_lines": 7,
+   "subroots_sidecar_keys": 56,
+   "verifier_status": "PASS",
+   "verifier_root_mobility": 56,
+   "verifier_rows": 50365,
+   "verifier_subroots_passed": 56,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_terminal_count": 19962,
+   "verifier_visited_states": 112307,
+   "verifier_loser_reply_edges": 99079,
+   "verifier_winner_states": 72013,
+   "verifier_loser_states": 20332,
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "parts": {
+    "part1": {
+     "pinned_blob_sha": "f7e4b1bfd211cd06830d1a9e674513a6656cfe3e",
+     "bytes": 909249
+    },
+    "part2": {
+     "pinned_blob_sha": "c743007bd5b32843eab2f7258e257969a05c4f5e",
+     "bytes": 909278
+    }
+   },
+   "readme_split_doc": {
+    "bytes": 1818527,
+    "split_boundary": 909249,
+    "md5": "7c5a9a17db46f55ede94b966b7d4a251"
+   }
+  },
+  {
+   "bit": 41,
+   "root_hex": "00000000000000c09002020000400000",
+   "d4_canon_root": "00000000000000c09002020000400000",
+   "raw_is_canon": true,
+   "certificate": "class2-lane-cost73l-certificates/n11_s7_00000000000000c09002020000400000.cert",
+   "storage": "whole file",
+   "record_source": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost73l-certificates/class2-lane-cost73l-win7-certificates-20261117.json",
+   "record_kind": "win7-certificates manifest (in-band) + rootcheck.json (2-line JSONL) + subroots.jsonl (batched) + README-split + stats.json + det-reextraction.json",
+   "joined_bytes": 890716,
+   "joined_md5": "2797dcc4bf0526eed375fde7eec1052e",
+   "joined_sha256": "d323519779fc2bfaedb8b77fad8e5d46aff94255ee56abf74fdf9a9f283757c0",
+   "joined_git_blob_sha": "b3acbb65cfa37cc36457791b98eb92c7c8648bce",
+   "manifest_md5_match": true,
+   "manifest_sha256_match": true,
+   "record_rows": 24672,
+   "record_extraction_nodes": 4208674,
+   "record_sub_roots_pass": 52,
+   "record_loser_mobility": 52,
+   "record_terminal_stone_range": [
+    13,
+    17
+   ],
+   "rootcheck_stones": 7,
+   "rootcheck_loser_mobility": 52,
+   "subroots_sidecar_lines": 7,
+   "subroots_sidecar_keys": 52,
+   "verifier_status": "PASS",
+   "verifier_root_mobility": 52,
+   "verifier_rows": 24672,
+   "verifier_subroots_passed": 52,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_terminal_count": 8798,
+   "verifier_visited_states": 56893,
+   "verifier_loser_reply_edges": 52096,
+   "verifier_winner_states": 36700,
+   "verifier_loser_states": 11395,
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0
+  },
+  {
+   "bit": 42,
+   "root_hex": "00000000000000c09002040000400000",
+   "d4_canon_root": "00000000000000c09002040000400000",
+   "raw_is_canon": true,
+   "certificate": "class2-lane-cost73l-certificates/n11_s7_00000000000000c09002040000400000.cert",
+   "storage": "split part1of2+part2of2 concatenation",
+   "record_source": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost73l-certificates/class2-lane-cost73l-win7-certificates-20261117.json",
+   "record_kind": "win7-certificates manifest (in-band) + rootcheck.json (2-line JSONL) + subroots.jsonl (batched) + README-split + stats.json + det-reextraction.json",
+   "joined_bytes": 1940356,
+   "joined_md5": "eecdc2d6f19d1a5246cb909a1d993ea5",
+   "joined_sha256": "56497ff274920f89928b849ee5f468bbe2b6e1e09886068de7dfc7cf759d1db9",
+   "joined_git_blob_sha": "ed48f0195336ab0087dbaae16e61ed9a53ac4514",
+   "manifest_md5_match": true,
+   "manifest_sha256_match": true,
+   "record_rows": 53683,
+   "record_extraction_nodes": 11830318,
+   "record_sub_roots_pass": 62,
+   "record_loser_mobility": 62,
+   "record_terminal_stone_range": [
+    13,
+    17
+   ],
+   "rootcheck_stones": 7,
+   "rootcheck_loser_mobility": 62,
+   "subroots_sidecar_lines": 8,
+   "subroots_sidecar_keys": 62,
+   "verifier_status": "PASS",
+   "verifier_root_mobility": 62,
+   "verifier_rows": 53683,
+   "verifier_subroots_passed": 62,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_terminal_count": 19175,
+   "verifier_visited_states": 110324,
+   "verifier_loser_reply_edges": 96726,
+   "verifier_winner_states": 70792,
+   "verifier_loser_states": 20357,
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "parts": {
+    "part1": {
+     "pinned_blob_sha": "60871a9276eef8a3f83570c622d82144ddca3138",
+     "bytes": 970148
+    },
+    "part2": {
+     "pinned_blob_sha": "7dea870a895ed1073c26ef05a06c3afb0176207f",
+     "bytes": 970208
+    }
+   },
+   "readme_split_doc": {
+    "bytes": 1940356,
+    "split_boundary": 970148,
+    "md5": "eecdc2d6f19d1a5246cb909a1d993ea5"
+   }
+  },
+  {
+   "bit": 44,
+   "root_hex": "00000000000000c09002100000400000",
+   "d4_canon_root": "00000000000000c09002100000400000",
+   "raw_is_canon": true,
+   "certificate": "class2-lane-cost73l-certificates/n11_s7_00000000000000c09002100000400000.cert",
+   "storage": "split part1of2+part2of2 concatenation",
+   "record_source": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost73l-certificates/class2-lane-cost73l-win7-certificates-20261117.json",
+   "record_kind": "win7-certificates manifest (in-band) + rootcheck.json (2-line JSONL) + subroots.jsonl (batched) + README-split + stats.json + det-reextraction.json",
+   "joined_bytes": 1809357,
+   "joined_md5": "f2e8de82b0f298a0d1a91b3677fc8b3f",
+   "joined_sha256": "b5ee973fa8a888b198eace8b9fc57e4de647d00bb494aea13debb21a744cd3de",
+   "joined_git_blob_sha": "fa79285c64bc654065e9b7d9e8122f491b7c7a2c",
+   "manifest_md5_match": true,
+   "manifest_sha256_match": true,
+   "record_rows": 50042,
+   "record_extraction_nodes": 14887701,
+   "record_sub_roots_pass": 58,
+   "record_loser_mobility": 58,
+   "record_terminal_stone_range": [
+    13,
+    17
+   ],
+   "rootcheck_stones": 7,
+   "rootcheck_loser_mobility": 58,
+   "subroots_sidecar_lines": 8,
+   "subroots_sidecar_keys": 58,
+   "verifier_status": "PASS",
+   "verifier_root_mobility": 58,
+   "verifier_rows": 50042,
+   "verifier_subroots_passed": 58,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_terminal_count": 16373,
+   "verifier_visited_states": 102866,
+   "verifier_loser_reply_edges": 92759,
+   "verifier_winner_states": 66515,
+   "verifier_loser_states": 19978,
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "parts": {
+    "part1": {
+     "pinned_blob_sha": "8f3b308c9eef715a04f66ff082fcf59317e7a680",
+     "bytes": 904671
+    },
+    "part2": {
+     "pinned_blob_sha": "c99af3817a8f197aca23f47909645394b83d5901",
+     "bytes": 904686
+    }
+   },
+   "readme_split_doc": {
+    "bytes": 1809357,
+    "split_boundary": 904671,
+    "md5": "f2e8de82b0f298a0d1a91b3677fc8b3f"
+   }
+  },
+  {
+   "bit": 47,
+   "root_hex": "00000000000000c09002800000400000",
+   "d4_canon_root": "00000000000000c09002800000400000",
+   "raw_is_canon": true,
+   "certificate": "class2-lane-cost73l-certificates/n11_s7_00000000000000c09002800000400000.cert",
+   "storage": "split part1of2+part2of2 concatenation",
+   "record_source": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost73l-certificates/class2-lane-cost73l-win7-certificates-20261117.json",
+   "record_kind": "win7-certificates manifest (in-band) + rootcheck.json (2-line JSONL) + subroots.jsonl (batched) + README-split + stats.json + det-reextraction.json",
+   "joined_bytes": 2754504,
+   "joined_md5": "8d5d143c9ec1281bd1d168b17b494fbc",
+   "joined_sha256": "b22d65642006aa3ef5edb56c40341473ca0c90e275f7ae238cad1bb6c104f1a7",
+   "joined_git_blob_sha": "d5bd11d40fe0be7de4be7355cbaa149bd102cd3c",
+   "manifest_md5_match": true,
+   "manifest_sha256_match": true,
+   "record_rows": 76323,
+   "record_extraction_nodes": 22283713,
+   "record_sub_roots_pass": 63,
+   "record_loser_mobility": 63,
+   "record_terminal_stone_range": [
+    13,
+    17
+   ],
+   "rootcheck_stones": 7,
+   "rootcheck_loser_mobility": 63,
+   "subroots_sidecar_lines": 8,
+   "subroots_sidecar_keys": 63,
+   "verifier_status": "PASS",
+   "verifier_root_mobility": 63,
+   "verifier_rows": 76323,
+   "verifier_subroots_passed": 63,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_terminal_count": 28071,
+   "verifier_visited_states": 159626,
+   "verifier_loser_reply_edges": 140423,
+   "verifier_winner_states": 102630,
+   "verifier_loser_states": 28925,
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "parts": {
+    "part1": {
+     "pinned_blob_sha": "14fb968e8935eb2a0033ffd735cd3f8d0fe1ad95",
+     "bytes": 1377250
+    },
+    "part2": {
+     "pinned_blob_sha": "ac3ada106f4611716ab6e976f5badd777e32e702",
+     "bytes": 1377254
+    }
+   },
+   "readme_split_doc": {
+    "bytes": 2754504,
+    "split_boundary": 1377250,
+    "md5": "8d5d143c9ec1281bd1d168b17b494fbc"
+   }
+  },
+  {
+   "bit": 53,
+   "root_hex": "00000000000000c09022000000400000",
+   "d4_canon_root": "00000000000000c09022000000400000",
+   "raw_is_canon": true,
+   "certificate": "class2-lane-cost73l-certificates/n11_s7_00000000000000c09022000000400000.cert",
+   "storage": "split part1of2+part2of2 concatenation",
+   "record_source": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost73l-certificates/class2-lane-cost73l-win7-certificates-20261117.json",
+   "record_kind": "win7-certificates manifest (in-band) + rootcheck.json (2-line JSONL) + subroots.jsonl (batched) + README-split + stats.json + det-reextraction.json",
+   "joined_bytes": 1633711,
+   "joined_md5": "d5dd1ed309c8c4ac73941e71ed85bb6f",
+   "joined_sha256": "79ce1b9b651dca59d383f7172d0627de0faa0c7bd26f49c15f2e9b1d031b0315",
+   "joined_git_blob_sha": "125e42dcac2929e980e403250a7db7ad224b64ae",
+   "manifest_md5_match": true,
+   "manifest_sha256_match": true,
+   "record_rows": 45165,
+   "record_extraction_nodes": 11424479,
+   "record_sub_roots_pass": 58,
+   "record_loser_mobility": 58,
+   "record_terminal_stone_range": [
+    13,
+    17
+   ],
+   "rootcheck_stones": 7,
+   "rootcheck_loser_mobility": 58,
+   "subroots_sidecar_lines": 8,
+   "subroots_sidecar_keys": 58,
+   "verifier_status": "PASS",
+   "verifier_root_mobility": 58,
+   "verifier_rows": 45165,
+   "verifier_subroots_passed": 58,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_terminal_count": 16192,
+   "verifier_visited_states": 97661,
+   "verifier_loser_reply_edges": 87187,
+   "verifier_winner_states": 62849,
+   "verifier_loser_states": 18620,
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "parts": {
+    "part1": {
+     "pinned_blob_sha": "9dcae35ef8126cd1f750f56ac13bd1faa0cf69a3",
+     "bytes": 816826
+    },
+    "part2": {
+     "pinned_blob_sha": "4d02d299583ad3b494e4bf4e52cd3cea14ce3e32",
+     "bytes": 816885
+    }
+   },
+   "readme_split_doc": {
+    "bytes": 1633711,
+    "split_boundary": 816826,
+    "md5": "d5dd1ed309c8c4ac73941e71ed85bb6f"
+   }
+  },
+  {
+   "bit": 54,
+   "root_hex": "00000000000000c09042000000400000",
+   "d4_canon_root": "00000000000000c09042000000400000",
+   "raw_is_canon": true,
+   "certificate": "class2-lane-cost73l-certificates/n11_s7_00000000000000c09042000000400000.cert",
+   "storage": "split part1of2+part2of2 concatenation",
+   "record_source": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost73l-certificates/class2-lane-cost73l-win7-certificates-20261117.json",
+   "record_kind": "win7-certificates manifest (in-band) + rootcheck.json (2-line JSONL) + subroots.jsonl (batched) + README-split + stats.json + det-reextraction.json",
+   "joined_bytes": 1550196,
+   "joined_md5": "0f35153391b68f715d97418ee974d8d6",
+   "joined_sha256": "b6a14ed2a439886e790e350eeb73c6cb4f0b7e7805e23fb679caa40395bcfd74",
+   "joined_git_blob_sha": "e5a25af47be364424891296f46bee3ffae937853",
+   "manifest_md5_match": true,
+   "manifest_sha256_match": true,
+   "record_rows": 42923,
+   "record_extraction_nodes": 9826357,
+   "record_sub_roots_pass": 55,
+   "record_loser_mobility": 55,
+   "record_terminal_stone_range": [
+    13,
+    17
+   ],
+   "rootcheck_stones": 7,
+   "rootcheck_loser_mobility": 55,
+   "subroots_sidecar_lines": 7,
+   "subroots_sidecar_keys": 55,
+   "verifier_status": "PASS",
+   "verifier_root_mobility": 55,
+   "verifier_rows": 42923,
+   "verifier_subroots_passed": 55,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_terminal_count": 14324,
+   "verifier_visited_states": 85388,
+   "verifier_loser_reply_edges": 75536,
+   "verifier_winner_states": 54945,
+   "verifier_loser_states": 16119,
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "parts": {
+    "part1": {
+     "pinned_blob_sha": "3cd15af1919fb69e4cc5f3b237ae731efc5b42aa",
+     "bytes": 775093
+    },
+    "part2": {
+     "pinned_blob_sha": "f9530c8fa768f0682fa8a3ef9dead5a09a413cd1",
+     "bytes": 775103
+    }
+   },
+   "readme_split_doc": {
+    "bytes": 1550196,
+    "split_boundary": 775093,
+    "md5": "0f35153391b68f715d97418ee974d8d6"
+   }
+  },
+  {
+   "bit": 61,
+   "root_hex": "00000000000000c0b002000000400000",
+   "d4_canon_root": "00000000000000c0b002000000400000",
+   "raw_is_canon": true,
+   "certificate": "class2-lane-cost73l-certificates/n11_s7_00000000000000c0b002000000400000.cert",
+   "storage": "whole file",
+   "record_source": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost73l-certificates/class2-lane-cost73l-win7-certificates-20261117.json",
+   "record_kind": "win7-certificates manifest (in-band) + rootcheck.json (2-line JSONL) + subroots.jsonl (batched) + README-split + stats.json + det-reextraction.json",
+   "joined_bytes": 1019711,
+   "joined_md5": "1391b4c4faf8152ab706637280c0014c",
+   "joined_sha256": "8f2658aa3c7b7fba612d1123df818cfc251d1fbbbfb7545b77fdea657e231a98",
+   "joined_git_blob_sha": "e551680a962087c5ec12c09bf9ac178e4c7331f4",
+   "manifest_md5_match": true,
+   "manifest_sha256_match": true,
+   "record_rows": 28229,
+   "record_extraction_nodes": 3775056,
+   "record_sub_roots_pass": 53,
+   "record_loser_mobility": 53,
+   "record_terminal_stone_range": [
+    13,
+    17
+   ],
+   "rootcheck_stones": 7,
+   "rootcheck_loser_mobility": 53,
+   "subroots_sidecar_lines": 7,
+   "subroots_sidecar_keys": 53,
+   "verifier_status": "PASS",
+   "verifier_root_mobility": 53,
+   "verifier_rows": 28229,
+   "verifier_subroots_passed": 53,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_terminal_count": 10606,
+   "verifier_visited_states": 63238,
+   "verifier_loser_reply_edges": 55924,
+   "verifier_winner_states": 40644,
+   "verifier_loser_states": 11988,
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0
+  },
+  {
+   "bit": 62,
+   "root_hex": "00000000000000c0d002000000400000",
+   "d4_canon_root": "00000000000000c0d002000000400000",
+   "raw_is_canon": true,
+   "certificate": "class2-lane-cost73l-certificates/n11_s7_00000000000000c0d002000000400000.cert",
+   "storage": "split part1of2+part2of2 concatenation",
+   "record_source": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost73l-certificates/class2-lane-cost73l-win7-certificates-20261117.json",
+   "record_kind": "win7-certificates manifest (in-band) + rootcheck.json (2-line JSONL) + subroots.jsonl (batched) + README-split + stats.json + det-reextraction.json",
+   "joined_bytes": 1563590,
+   "joined_md5": "0fb3a68b40cb03408e7747ef002b9d9b",
+   "joined_sha256": "0a064ddb847666bafc5b646574704af3b375dd38f299e536fe1f272daebc74c5",
+   "joined_git_blob_sha": "011c456e2f999c2595fbbc29213d023026491bb2",
+   "manifest_md5_match": true,
+   "manifest_sha256_match": true,
+   "record_rows": 43253,
+   "record_extraction_nodes": 9964422,
+   "record_sub_roots_pass": 55,
+   "record_loser_mobility": 55,
+   "record_terminal_stone_range": [
+    13,
+    17
+   ],
+   "rootcheck_stones": 7,
+   "rootcheck_loser_mobility": 55,
+   "subroots_sidecar_lines": 7,
+   "subroots_sidecar_keys": 55,
+   "verifier_status": "PASS",
+   "verifier_root_mobility": 55,
+   "verifier_rows": 43253,
+   "verifier_subroots_passed": 55,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_terminal_count": 15325,
+   "verifier_visited_states": 95298,
+   "verifier_loser_reply_edges": 86233,
+   "verifier_winner_states": 61559,
+   "verifier_loser_states": 18414,
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "parts": {
+    "part1": {
+     "pinned_blob_sha": "80830e61ee32884a526cd08e5ca471b4bf834d38",
+     "bytes": 781789
+    },
+    "part2": {
+     "pinned_blob_sha": "e9c8860f353f92a71ca58e565a93c6d7d5601549",
+     "bytes": 781801
+    }
+   },
+   "readme_split_doc": {
+    "bytes": 1563590,
+    "split_boundary": 781789,
+    "md5": "0fb3a68b40cb03408e7747ef002b9d9b"
+   }
+  },
+  {
+   "bit": 64,
+   "root_hex": "00000000000000c19002000000400000",
+   "d4_canon_root": "00000000000000c19002000000400000",
+   "raw_is_canon": true,
+   "certificate": "class2-lane-cost73l-certificates/n11_s7_00000000000000c19002000000400000.cert",
+   "storage": "split part1of2+part2of2 concatenation",
+   "record_source": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost73l-certificates/class2-lane-cost73l-win7-certificates-20261117.json",
+   "record_kind": "win7-certificates manifest (in-band) + rootcheck.json (2-line JSONL) + subroots.jsonl (batched) + README-split + stats.json + det-reextraction.json",
+   "joined_bytes": 1987093,
+   "joined_md5": "9bf9a00ac7ac6623ecb2399078793710",
+   "joined_sha256": "918a9e28e6276f3225e0a688cf1bb6eb5517f99586e239aa6eccf0bd56013d9f",
+   "joined_git_blob_sha": "62626f67644113a8e331e52d2abd0d021eb98ebb",
+   "manifest_md5_match": true,
+   "manifest_sha256_match": true,
+   "record_rows": 55024,
+   "record_extraction_nodes": 22369552,
+   "record_sub_roots_pass": 59,
+   "record_loser_mobility": 59,
+   "record_terminal_stone_range": [
+    13,
+    17
+   ],
+   "rootcheck_stones": 7,
+   "rootcheck_loser_mobility": 59,
+   "subroots_sidecar_lines": 8,
+   "subroots_sidecar_keys": 59,
+   "verifier_status": "PASS",
+   "verifier_root_mobility": 59,
+   "verifier_rows": 55024,
+   "verifier_subroots_passed": 59,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_terminal_count": 18639,
+   "verifier_visited_states": 119311,
+   "verifier_loser_reply_edges": 108356,
+   "verifier_winner_states": 76907,
+   "verifier_loser_states": 23765,
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "parts": {
+    "part1": {
+     "pinned_blob_sha": "f8960d3c605c96d3eb4cc9b6ba6db8ebf9519dc3",
+     "bytes": 993511
+    },
+    "part2": {
+     "pinned_blob_sha": "11e70e36f753ab6f2e02e4705cd5db6c0e9eee4c",
+     "bytes": 993582
+    }
+   },
+   "readme_split_doc": {
+    "bytes": 1987093,
+    "split_boundary": 993511,
+    "md5": "9bf9a00ac7ac6623ecb2399078793710"
+   }
+  },
+  {
+   "bit": 66,
+   "root_hex": "00000000000000c49002000000400000",
+   "d4_canon_root": "00000000000000c49002000000400000",
+   "raw_is_canon": true,
+   "certificate": "class2-lane-cost73l-certificates/n11_s7_00000000000000c49002000000400000.cert",
+   "storage": "split part1of2+part2of2 concatenation",
+   "record_source": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost73l-certificates/class2-lane-cost73l-win7-certificates-20261117.json",
+   "record_kind": "win7-certificates manifest (in-band) + rootcheck.json (2-line JSONL) + subroots.jsonl (batched) + README-split + stats.json + det-reextraction.json",
+   "joined_bytes": 2068497,
+   "joined_md5": "6807fdc3e6c4c23b669e1521f45aee2e",
+   "joined_sha256": "4cf5e903aa29fcbf3c111ee28bb6df13b2171a0be63d1b53f12a81d58f185909",
+   "joined_git_blob_sha": "5138a757934bd669add5cfda1a35fdf71b981332",
+   "manifest_md5_match": true,
+   "manifest_sha256_match": true,
+   "record_rows": 57251,
+   "record_extraction_nodes": 14037499,
+   "record_sub_roots_pass": 61,
+   "record_loser_mobility": 61,
+   "record_terminal_stone_range": [
+    13,
+    17
+   ],
+   "rootcheck_stones": 7,
+   "rootcheck_loser_mobility": 61,
+   "subroots_sidecar_lines": 8,
+   "subroots_sidecar_keys": 61,
+   "verifier_status": "PASS",
+   "verifier_root_mobility": 61,
+   "verifier_rows": 57251,
+   "verifier_subroots_passed": 61,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_terminal_count": 20929,
+   "verifier_visited_states": 119720,
+   "verifier_loser_reply_edges": 105043,
+   "verifier_winner_states": 77022,
+   "verifier_loser_states": 21769,
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "parts": {
+    "part1": {
+     "pinned_blob_sha": "024b7a142ec38acd6f4fe79c96bb7febb2d9e203",
+     "bytes": 1034233
+    },
+    "part2": {
+     "pinned_blob_sha": "ecb5b723f37458cc02b51f29bfa45a2bc69a76ec",
+     "bytes": 1034264
+    }
+   },
+   "readme_split_doc": {
+    "bytes": 2068497,
+    "split_boundary": 1034233,
+    "md5": "6807fdc3e6c4c23b669e1521f45aee2e"
+   }
+  },
+  {
+   "bit": 80,
+   "root_hex": "00000000000100c09002000000400000",
+   "d4_canon_root": "00000000000100c09002000000400000",
+   "raw_is_canon": true,
+   "certificate": "class2-lane-cost73l-certificates/n11_s7_00000000000100c09002000000400000.cert",
+   "storage": "split part1of2+part2of2 concatenation",
+   "record_source": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost73l-certificates/class2-lane-cost73l-win7-certificates-20261117.json",
+   "record_kind": "win7-certificates manifest (in-band) + rootcheck.json (2-line JSONL) + subroots.jsonl (batched) + README-split + stats.json + det-reextraction.json",
+   "joined_bytes": 1357356,
+   "joined_md5": "29ccacbb30872331c7edf99fdfea87ca",
+   "joined_sha256": "4739a27e54270260b4146ef03b526532adcf19a45de62e89e382ba7f5d0fa020",
+   "joined_git_blob_sha": "63631c8d4078b74b5d41bee31adb87913c3021ae",
+   "manifest_md5_match": true,
+   "manifest_sha256_match": true,
+   "record_rows": 37590,
+   "record_extraction_nodes": 9851145,
+   "record_sub_roots_pass": 54,
+   "record_loser_mobility": 54,
+   "record_terminal_stone_range": [
+    13,
+    17
+   ],
+   "rootcheck_stones": 7,
+   "rootcheck_loser_mobility": 54,
+   "subroots_sidecar_lines": 7,
+   "subroots_sidecar_keys": 54,
+   "verifier_status": "PASS",
+   "verifier_root_mobility": 54,
+   "verifier_rows": 37590,
+   "verifier_subroots_passed": 54,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_terminal_count": 14099,
+   "verifier_visited_states": 86799,
+   "verifier_loser_reply_edges": 77509,
+   "verifier_winner_states": 56011,
+   "verifier_loser_states": 16689,
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "parts": {
+    "part1": {
+     "pinned_blob_sha": "470096ff89eba7b1ef72692dce2cdd27d21a4b72",
+     "bytes": 678676
+    },
+    "part2": {
+     "pinned_blob_sha": "481983da00f49e8343ba783fceb29b3280d4a603",
+     "bytes": 678680
+    }
+   },
+   "readme_split_doc": {
+    "bytes": 1357356,
+    "split_boundary": 678676,
+    "md5": "29ccacbb30872331c7edf99fdfea87ca"
+   }
+  },
+  {
+   "bit": 95,
+   "root_hex": "00000000800000c09002000000400000",
+   "d4_canon_root": "00000000010000809003000020000000",
+   "raw_is_canon": false,
+   "certificate": "class2-lane-cost73l-certificates/n11_s7_00000000800000c09002000000400000.cert",
+   "storage": "split part1of2+part2of2 concatenation",
+   "record_source": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost73l-certificates/class2-lane-cost73l-win7-certificates-20261117.json",
+   "record_kind": "win7-certificates manifest (in-band) + rootcheck.json (2-line JSONL) + subroots.jsonl (batched) + README-split + stats.json + det-reextraction.json",
+   "joined_bytes": 1770387,
+   "joined_md5": "b5eae4f903e4f0d177d95342b2674433",
+   "joined_sha256": "9f6d3e9ea1ce559784ddd805c050bc3c84e6c282b36d1c2cec9e5ef15b234ca0",
+   "joined_git_blob_sha": "b947c3f60aef85f087ba1610fe5e887d6598b1b3",
+   "manifest_md5_match": true,
+   "manifest_sha256_match": true,
+   "record_rows": 49006,
+   "record_extraction_nodes": 11436328,
+   "record_sub_roots_pass": 59,
+   "record_loser_mobility": 59,
+   "record_terminal_stone_range": [
+    13,
+    17
+   ],
+   "rootcheck_stones": 7,
+   "rootcheck_loser_mobility": 59,
+   "subroots_sidecar_lines": 8,
+   "subroots_sidecar_keys": 59,
+   "verifier_status": "PASS",
+   "verifier_root_mobility": 59,
+   "verifier_rows": 49006,
+   "verifier_subroots_passed": 59,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_terminal_count": 18490,
+   "verifier_visited_states": 113413,
+   "verifier_loser_reply_edges": 101010,
+   "verifier_winner_states": 73262,
+   "verifier_loser_states": 21661,
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "parts": {
+    "part1": {
+     "pinned_blob_sha": "c46130f2c00ee51374e596cb64ac88e8a5a0b30a",
+     "bytes": 885184
+    },
+    "part2": {
+     "pinned_blob_sha": "9a5bd7a337daf2d09aaeeb406b99b1bbd41519da",
+     "bytes": 885203
+    }
+   },
+   "readme_split_doc": {
+    "bytes": 1770387,
+    "split_boundary": 885184,
+    "md5": "b5eae4f903e4f0d177d95342b2674433"
+   }
+  },
+  {
+   "bit": 105,
+   "root_hex": "00000200000000c09002000000400000",
+   "d4_canon_root": "00000000010000809003000000020000",
+   "raw_is_canon": false,
+   "certificate": "class2-lane-cost73l-certificates/n11_s7_00000200000000c09002000000400000.cert",
+   "storage": "split part1of2+part2of2 concatenation",
+   "record_source": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost73l-certificates/class2-lane-cost73l-win7-certificates-20261117.json",
+   "record_kind": "win7-certificates manifest (in-band) + rootcheck.json (2-line JSONL) + subroots.jsonl (batched) + README-split + stats.json + det-reextraction.json",
+   "joined_bytes": 2172055,
+   "joined_md5": "b37546e28aed898aea2fdeb2b7def0e4",
+   "joined_sha256": "72c1fcc1f63802265a385941dd3378bd413149a10ea5409e19de65cc6fb7902e",
+   "joined_git_blob_sha": "e38e96dd4d16dc66300cc9d9c5a6a61f813eaaa0",
+   "manifest_md5_match": true,
+   "manifest_sha256_match": true,
+   "record_rows": 60179,
+   "record_extraction_nodes": 16761836,
+   "record_sub_roots_pass": 61,
+   "record_loser_mobility": 61,
+   "record_terminal_stone_range": [
+    13,
+    17
+   ],
+   "rootcheck_stones": 7,
+   "rootcheck_loser_mobility": 61,
+   "subroots_sidecar_lines": 8,
+   "subroots_sidecar_keys": 61,
+   "verifier_status": "PASS",
+   "verifier_root_mobility": 61,
+   "verifier_rows": 60179,
+   "verifier_subroots_passed": 61,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_terminal_count": 23165,
+   "verifier_visited_states": 130669,
+   "verifier_loser_reply_edges": 114811,
+   "verifier_winner_states": 83803,
+   "verifier_loser_states": 23701,
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "parts": {
+    "part1": {
+     "pinned_blob_sha": "4af7d7caf13305bccf19922d8b7a1af1f69e2b85",
+     "bytes": 1085993
+    },
+    "part2": {
+     "pinned_blob_sha": "94815d06b9c0c2110222f232abf34ea010b2c72a",
+     "bytes": 1086062
+    }
+   },
+   "readme_split_doc": {
+    "bytes": 2172055,
+    "split_boundary": 1085993,
+    "md5": "b37546e28aed898aea2fdeb2b7def0e4"
+   }
+  },
+  {
+   "bit": 112,
+   "root_hex": "00010000000000c09002000000400000",
+   "d4_canon_root": "00000000010000809003000000000004",
+   "raw_is_canon": false,
+   "certificate": "class2-lane-cost73l-certificates/n11_s7_00010000000000c09002000000400000.cert",
+   "storage": "split part1of2+part2of2 concatenation",
+   "record_source": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost73l-certificates/class2-lane-cost73l-win7-certificates-20261117.json",
+   "record_kind": "win7-certificates manifest (in-band) + rootcheck.json (2-line JSONL) + subroots.jsonl (batched) + README-split + stats.json + det-reextraction.json",
+   "joined_bytes": 2280207,
+   "joined_md5": "af72c16c0d1f4da66dcd1574138e440b",
+   "joined_sha256": "0050583117f514fe396b645db21244fccf9b60215cb4fd9eea0a5964a52843f8",
+   "joined_git_blob_sha": "6591eb64ebd179fb8aeabae695f390ee0682b0f8",
+   "manifest_md5_match": true,
+   "manifest_sha256_match": true,
+   "record_rows": 63235,
+   "record_extraction_nodes": 19697224,
+   "record_sub_roots_pass": 63,
+   "record_loser_mobility": 63,
+   "record_terminal_stone_range": [
+    13,
+    17
+   ],
+   "rootcheck_stones": 7,
+   "rootcheck_loser_mobility": 63,
+   "subroots_sidecar_lines": 8,
+   "subroots_sidecar_keys": 63,
+   "verifier_status": "PASS",
+   "verifier_root_mobility": 63,
+   "verifier_rows": 63235,
+   "verifier_subroots_passed": 63,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_terminal_count": 21378,
+   "verifier_visited_states": 124679,
+   "verifier_loser_reply_edges": 110258,
+   "verifier_winner_states": 80166,
+   "verifier_loser_states": 23135,
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "parts": {
+    "part1": {
+     "pinned_blob_sha": "5acb764b59a92f3d276641163389e25545fca796",
+     "bytes": 1140102
+    },
+    "part2": {
+     "pinned_blob_sha": "7b87e043d960e75ca9471aac8d7ce097a42e9cef",
+     "bytes": 1140105
+    }
+   },
+   "readme_split_doc": {
+    "bytes": 2280207,
+    "split_boundary": 1140102,
+    "md5": "af72c16c0d1f4da66dcd1574138e440b"
+   }
+  },
+  {
+   "bit": 113,
+   "root_hex": "00020000000000c09002000000400000",
+   "d4_canon_root": "00000000010000809003000000000008",
+   "raw_is_canon": false,
+   "certificate": "class2-lane-cost73l-certificates/n11_s7_00020000000000c09002000000400000.cert",
+   "storage": "split part1of2+part2of2 concatenation",
+   "record_source": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost73l-certificates/class2-lane-cost73l-win7-certificates-20261117.json",
+   "record_kind": "win7-certificates manifest (in-band) + rootcheck.json (2-line JSONL) + subroots.jsonl (batched) + README-split + stats.json + det-reextraction.json",
+   "joined_bytes": 1777348,
+   "joined_md5": "8030a20eeff0493a7ff3293a56732162",
+   "joined_sha256": "a69ca55f620901d3beeb67f3e549e4f26b5f47053c508f2d3d582b87aad691b1",
+   "joined_git_blob_sha": "ef2272019debd5d10bb8c5ea9e781181844125b8",
+   "manifest_md5_match": true,
+   "manifest_sha256_match": true,
+   "record_rows": 49267,
+   "record_extraction_nodes": 8855424,
+   "record_sub_roots_pass": 59,
+   "record_loser_mobility": 59,
+   "record_terminal_stone_range": [
+    13,
+    17
+   ],
+   "rootcheck_stones": 7,
+   "rootcheck_loser_mobility": 59,
+   "subroots_sidecar_lines": 8,
+   "subroots_sidecar_keys": 59,
+   "verifier_status": "PASS",
+   "verifier_root_mobility": 59,
+   "verifier_rows": 49267,
+   "verifier_subroots_passed": 59,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_terminal_count": 19078,
+   "verifier_visited_states": 108188,
+   "verifier_loser_reply_edges": 94210,
+   "verifier_winner_states": 69462,
+   "verifier_loser_states": 19648,
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "parts": {
+    "part1": {
+     "pinned_blob_sha": "329ca8e252bc786a7834566981b278492e8902b0",
+     "bytes": 888645
+    },
+    "part2": {
+     "pinned_blob_sha": "4bd4de94ba291612891a753ceeabd7839ea3a95d",
+     "bytes": 888703
+    }
+   },
+   "readme_split_doc": {
+    "bytes": 1777348,
+    "split_boundary": 888645,
+    "md5": "8030a20eeff0493a7ff3293a56732162"
+   }
+  },
+  {
+   "bit": 116,
+   "root_hex": "00100000000000c09002000000400000",
+   "d4_canon_root": "00000000010000809003000000000040",
+   "raw_is_canon": false,
+   "certificate": "class2-lane-cost73l-certificates/n11_s7_00100000000000c09002000000400000.cert",
+   "storage": "split part1of2+part2of2 concatenation",
+   "record_source": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost73l-certificates/class2-lane-cost73l-win7-certificates-20261117.json",
+   "record_kind": "win7-certificates manifest (in-band) + rootcheck.json (2-line JSONL) + subroots.jsonl (batched) + README-split + stats.json + det-reextraction.json",
+   "joined_bytes": 2638690,
+   "joined_md5": "1dec0c4b094e6a4b64fbb11aecf37164",
+   "joined_sha256": "df54e59281ab3ad8fddee0b7f4941504551c53af89dc9d5aaaaff694708c359a",
+   "joined_git_blob_sha": "85aeece80158410a8ba14d3b8f740575df048243",
+   "manifest_md5_match": true,
+   "manifest_sha256_match": true,
+   "record_rows": 73217,
+   "record_extraction_nodes": 22587921,
+   "record_sub_roots_pass": 67,
+   "record_loser_mobility": 67,
+   "record_terminal_stone_range": [
+    13,
+    17
+   ],
+   "rootcheck_stones": 7,
+   "rootcheck_loser_mobility": 67,
+   "subroots_sidecar_lines": 9,
+   "subroots_sidecar_keys": 67,
+   "verifier_status": "PASS",
+   "verifier_root_mobility": 67,
+   "verifier_rows": 73217,
+   "verifier_subroots_passed": 67,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_terminal_count": 26436,
+   "verifier_visited_states": 153478,
+   "verifier_loser_reply_edges": 134355,
+   "verifier_winner_states": 98485,
+   "verifier_loser_states": 28557,
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "parts": {
+    "part1": {
+     "pinned_blob_sha": "ec798e40ea633a5ad1842f14fbc13ceb8ec8987f",
+     "bytes": 1319333
+    },
+    "part2": {
+     "pinned_blob_sha": "0bc02e99c42c1e2e6b3480d56af2d4e71104ce0c",
+     "bytes": 1319357
+    }
+   },
+   "readme_split_doc": {
+    "bytes": 2638690,
+    "split_boundary": 1319333,
+    "md5": "1dec0c4b094e6a4b64fbb11aecf37164"
+   }
+  },
+  {
+   "bit": 119,
+   "root_hex": "00800000000000c09002000000400000",
+   "d4_canon_root": "00000000010000809003000000000200",
+   "raw_is_canon": false,
+   "certificate": "class2-lane-cost73l-certificates/n11_s7_00800000000000c09002000000400000.cert",
+   "storage": "split part1of2+part2of2 concatenation",
+   "record_source": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost73l-certificates/class2-lane-cost73l-win7-certificates-20261117.json",
+   "record_kind": "win7-certificates manifest (in-band) + rootcheck.json (2-line JSONL) + subroots.jsonl (batched) + README-split + stats.json + det-reextraction.json",
+   "joined_bytes": 2013575,
+   "joined_md5": "0a8b2087ccb0dc0d5f9945504cca5fbe",
+   "joined_sha256": "f7a88e8047207183b59f823e3dea1bb70b3953162f1d36fe6524b27f28bf2df3",
+   "joined_git_blob_sha": "9ea28cb55bd9b6456328ab87ef33461e546809c1",
+   "manifest_md5_match": true,
+   "manifest_sha256_match": true,
+   "record_rows": 55839,
+   "record_extraction_nodes": 11473533,
+   "record_sub_roots_pass": 66,
+   "record_loser_mobility": 66,
+   "record_terminal_stone_range": [
+    13,
+    17
+   ],
+   "rootcheck_stones": 7,
+   "rootcheck_loser_mobility": 66,
+   "subroots_sidecar_lines": 9,
+   "subroots_sidecar_keys": 66,
+   "verifier_status": "PASS",
+   "verifier_root_mobility": 66,
+   "verifier_rows": 55839,
+   "verifier_subroots_passed": 66,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_terminal_count": 19328,
+   "verifier_visited_states": 112335,
+   "verifier_loser_reply_edges": 97519,
+   "verifier_winner_states": 72095,
+   "verifier_loser_states": 20912,
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "parts": {
+    "part1": {
+     "pinned_blob_sha": "ec3a983038cce896b35a1c901b50083477a3ca45",
+     "bytes": 1006779
+    },
+    "part2": {
+     "pinned_blob_sha": "31c77e256241e1e2814a97450ae9528e6cee3f4e",
+     "bytes": 1006796
+    }
+   },
+   "readme_split_doc": {
+    "bytes": 2013575,
+    "split_boundary": 1006779,
+    "md5": "0a8b2087ccb0dc0d5f9945504cca5fbe"
+   }
+  }
+ ],
+ "cross_checks": {
+  "independent_d4_canon_all_32_records": "a tenth, in-script D4 canonicalization implementation (min hex over the eight square symmetries of the 11x11 board) reproduces every record's d4_canon_root for all 32 certificates; raw_is_canon verified as exactly root_hex == d4_canon_root; the 32 D4 canons are mutually distinct",
+  "manifest_totals_agreement": "manifest totals reproduced exactly by the re-verified bytes: certificates 32, rows 1693203, extraction_nodes 424657112 (sum of per-cert values), published_bytes 61171191 (sum of on-repo part/whole file sizes), fbt_drops_total 0, capped_per_move_total 0",
+  "cross_batch_root_disjointness": "all 32 root_hex distinct in-batch and disjoint from the 151 root_hex values of the eight earlier independently re-verified batches (single-file 43 + split-part bands 18 + split-part sweepbands 24 + 66j/69j 15 + 63cd 2 + 72d 11 + 73j 16 + 73k 22), asserted at record load against the blob-pinned published batch outputs; D4-canon disjoint against the computed canons of all 151 earlier roots",
+  "claim_v3_basis_pin": "the mirrored claim v3 file reproduces git blob 39cf0f9b31a28ad6358f157e2433477ab0659243; its schema is n11-class2-lane-cost73l-inflight-20261117-v3, its actual_execution/results/win7_d10_bits equal the 34 sweep WIN bits [1,2,3,4,6,8,9,18,21,23,25,28,29,32,34,41,42,44,47,53,54,61,62,64,66,80,95,105,106,110,112,113,116,119] of which the manifest covers the 32 sweep WIN bits while the 2 confirmation bits [106,110] are certified by the published cost73j bit 118 and cost73k bit 98 certificates; its manifest path and manifest_blob_sha match and its status text states exactly the pinned manifest blob 6e0a94aba212ba54bb5329fbea4643c9dcdb1ec4; its certificates totals equal the manifest totals and its determinism_sample_bits equal [1,9,47,61,64,116]; the manifest basis in turn names claim v2 blob 814a0ec6c6b3123a25010dcf7d3d054b38352f3a",
+  "stats_and_det_reextraction_agreement": "the in-band stats.json (32 per-bit rows: root/rows/nodes/md5/sha256/moves/fbt_drops) agrees with every manifest record and reproduces the manifest totals in both rows and extraction_nodes; det-reextraction.json records all_byte_identical true on bits [1,9,47,61,64,116] whose md5s and row counts equal the manifest values and the re-verified joined bytes",
+  "beyond_publication_lane": "the 73l publication's own verification (verify_bit7_win7_cert.ts, engine-free Bareiss, via verify_cost73l_one.sh 32/32 PASS) and the claim's fresh-process re-extraction determinism checks on bits [1,9,47,61,64,116] plus the cross-environment re-extractions of bits 61/1/9 after a mid-extraction sandbox wipe are documented in the manifest and claim; the parallel publication-geometry audit (git blob 8a32f40f23dacd6a5948e19e12f776edb37e496a script, e544fb1af1c442b6d707d66ace0b8be775adad0d output) re-derived the 32 root geometries, D4 canons, mobilities and transfer coverage from the manifest; this batch adds the third-implementation BigInt verifier per certificate, the 160-file pin re-assertion from the published pin table, and the two sidecar record families' aggregate cross-agreement; the 159 landed certificate output files were verified byte-exact against the local extraction via git blob sha at publication time (160/160 including the verify worker script), and this batch re-derives every file from the commit-pinned CDN mirror instead"
+ },
+ "summary": {
+  "records": 32,
+  "file_pins_asserted": 160,
+  "split_certificates": 30,
+  "whole_certificates": 2,
+  "verifier_pass": 32,
+  "verifier_fail": 0,
+  "manifest_md5_mismatch": 0,
+  "manifest_sha256_mismatch": 0,
+  "pin_blob_sha_mismatch": 0,
+  "sidecar_cross_agreement_fail": 0,
+  "total_rows_independently_verified": 1693203,
+  "total_sub_roots_independently_verified": 1904,
+  "total_extraction_nodes_in_manifest": 424657112,
+  "total_certificate_bytes_rehashed": 61171191,
+  "per_bit_loser_mobility": {
+   "1": 59,
+   "2": 55,
+   "3": 62,
+   "4": 63,
+   "6": 63,
+   "8": 58,
+   "9": 67,
+   "18": 65,
+   "21": 62,
+   "23": 56,
+   "25": 56,
+   "28": 55,
+   "29": 56,
+   "32": 66,
+   "34": 56,
+   "41": 52,
+   "42": 62,
+   "44": 58,
+   "47": 63,
+   "53": 58,
+   "54": 55,
+   "61": 53,
+   "62": 55,
+   "64": 59,
+   "66": 61,
+   "80": 54,
+   "95": 59,
+   "105": 61,
+   "112": 63,
+   "113": 59,
+   "116": 67,
+   "119": 66
+  }
+ },
+ "interpretation_guard": [
+  "this re-verification upgrades the 32 certificates of the published cost-73l band from manifest+sidecar documentation to bytes-level, third-implementation independently re-verified evidence; the bytes-re-verified population of this experiment stands at 349 + 32 = 381 records (counting per the 72d/73k batch bookkeeping); it does not change any frontier number and closes no manifest row",
+  "the cost-73l receipt fold stays pending behind the 66i/66j/69j/71e/72d/73i/73j/73k folds managed by their own lanes; no manifest row is closed by this re-verification",
+  "a WIN7-D10 certificate proves only that its individual 7-stone root is a first-player win within depth 10",
+  "the 39 REFUTED-D10 bits of the cost-73l sweep are NOT LOSS proofs of those roots",
+  "11x11 empty board, two-stone roots {49,60} and {59,60}, S2 {59,60}, class 1, class 2 and class 4 all remain UNKNOWN"
+ ]
+}

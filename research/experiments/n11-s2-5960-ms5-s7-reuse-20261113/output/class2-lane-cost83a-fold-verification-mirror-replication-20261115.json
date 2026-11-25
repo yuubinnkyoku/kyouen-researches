@@ -1,0 +1,25 @@
+{
+ "controls_passed": {
+  "collision_detected_and_resolved": "both lanes independently detected the same reproducibility gap (the cost-83a fold script reads 16 tmp-cost83a files that the landing session could not publish: per-bit cert-receipt / bigint / tsverify / consumed; bit95's .rows also exceeds the single-push limit) and independently wrote same-named repair + verification scripts (reconstruct_tmp_cost83a_20261115.py, verify_cost83a_fold_second_independent_20261115.py) within about ten minutes of each other; the parallel lane's versions landed first (commits 69df8402, 8cf9f5d8, 3370ab2f, 2d90488f) and were left untouched; this session's twin implementations were not published and only their control values are recorded here",
+  "landed_repair_replicated_in_fresh_mirror": "the parallel lane's published reconstruct_tmp_cost83a_20261115.py was fetched from main into a fresh codeload-tarball mirror (built before either verification landed) and re-executed there: all 16 tmp files regenerate from main artifacts alone with the published BigInt and TS-Bareiss verifiers, 4/4 PASS, consumed sets == certificate row sets",
+  "landed_verification_replicated_byte_identically": "the parallel lane's published verify_cost83a_fold_second_independent_20261115.py was fetched from main and executed twice in the fresh mirror: both runs complete with all 8 controls PASS (head 1306 -> 1309, three output blobs 74e35f22 / 70eab6c4 / fad56f79 byte-identical, sweep re-aggregated 83 candidates / 4 WIN7-D10 [12,58,72,95] / 79 REFUTED-D10 / 0 capped / 152,978,839 nodes, 4 certificates 176,791 rows third-system rational-verified, independent D4 marginals 19/3 with zero-mim [58,95], child closed by bit12, 596 roots / 585 orbits / 11 twins, claim closure) and the written JSON class2-lane-cost83a-fold-second-verification-20261115.json is byte-identical to the published blob (md5 88510d8c69e0bee6ecf73f562996d47c, 4,518 bytes)",
+  "twin_independent_implementation_agrees": "this session's own repair + verification scripts, written before the landed versions were seen and executed in the same fresh mirror, pass with identical control values on every substantive check: legal-moves Bareiss cross-check 60/58/57/68, certificates 40,417/41,891/36,293/58,190 rows == 176,791 rows / 6,386,515 bytes / 243 sub-roots with unions 0/0 and terminal ranges within [13,17] (rational verifier 4/4: {13,15,17}), sweep 83/4/79/0 with win sum 10,308,522 and pilots 3402 x11 plus determinism rerun node-exact and v15 anchors 4/4 WIN + 3/3 refuted, per-bit marginals field-by-field equal to the published addition records (19/3, zero-mim [58,95], child closed exactly once by bit12), set-equality s_1309 == s_1306 UNION covers(4 roots), parents_after 7 rows / 542 and 67 rows / 5509, 596-root inventory 585 orbits / 11 twins with the 4 new roots raw-hex and D4-disjoint from the 592-root inventory, and completed-claim closure; the only differences between the twin scripts and the landed scripts are wiring and prose (the twin pin table additionally pins the repair script itself)"
+ },
+ "date": "2026-11-15",
+ "fold_script_blob_sha": {
+  "git_blob_sha": "70fc5d1237aad7d76d41b1d0321a437bb6fd30e5",
+  "bytes": 22504,
+  "md5": "e7f0de8d4d024ce522ac1202b7ab5e22"
+ },
+ "interpretation_guard": "bookkeeping verification of a receipts fold only; solved 1309 measures manifest coverage, not the game-theoretic value of any position; REFUTED-D10 sweeps prove only the absence of a WIN7-D10 certificate; WIN7 certificates prove a first-player win within depth 10 from the individual 7-stone roots only; the standard 11x11 empty board, the two-stone roots {49,60}/{59,60}, S2 {59,60}, class1, class2 and class4 all remain UNKNOWN",
+ "landed_artifacts": {
+  "reconstruction_script_commit": "69df840244ed0001dc081f3f2029e4bf4dda8be8",
+  "regenerated_outputs_commit": "8cf9f5d8985552a50a75ecfc48d9411854deea8a",
+  "consumed_witness_commit": "3370ab2f4497d83952932d1d57a08dae5be47759",
+  "verification_json_and_log_commit": "2d90488f",
+  "verification_json_md5": "88510d8c69e0bee6ecf73f562996d47c",
+  "verification_json_bytes": 4518
+ },
+ "schema": "n11-class2-lane-cost83a-fold-verification-mirror-replication-20261115-v1",
+ "verification_status": "the published cost-83a second independent verification has now been executed from main bytes alone in two unrelated environments (the landing session and this session's fresh mirror) with byte-identical machine output, and a third independently coded twin implementation (unpublished) agrees on every control value; the fold head remains 1309/6538/516477/4808/380200"
+}

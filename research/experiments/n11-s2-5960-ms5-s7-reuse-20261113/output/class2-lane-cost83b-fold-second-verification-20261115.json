@@ -1,0 +1,27 @@
+{
+ "controls_passed": {
+  "certificates_third_system_verified": "5 certificates re-joined from their parts with fresh code (bytes / md5 / sha256 / git blob == extraction receipts and the published head JSON records, rows sorted-unique) and geometrically re-verified by the published third-system rational verifier (exact Fraction circumcentre / cross-product collinearity, iterative replay): 275,648 rows / 9,968,222 bytes / 317 sub-roots, roots safe, unions 0/0, terminal ranges within [13,17], consumed winner-row sets == the published TS consumed sets (5/5)",
+  "chain_head_1309_reproduced": "the fold script's runpy chain reproduces the cost-83a baseline 1309/6538/516477/4808/380200 with the 83a head JSON and both CSVs blob-identical to main (in-script control, re-observed twice here)",
+  "completed_claim_closure": "the completed claim fold record matches this recomputation: head 1309->1312, publication order [9,12,58,64,96], totals 23/3, zero-mim [58,64,96], child closed by bit9, parents_after 6 rows / 459 and 67 rows / 5572, lost rows == the child (parent1) and the child + two in-manifest marginals (parent2), three output blob shas re-asserted",
+  "fold_script_two_isolated_runs_byte_identical": "two short-lived subprocess re-runs of the published fold script complete with all in-script controls and regenerate the three outputs byte-identically to each other and to main (b089bd95 + 8,651 B; c06ab3bb + 7,537 B; 13670c6a + 6,985 B)",
+  "independent_d4_and_marginal_arithmetic": "an independently coded D4 group (8 explicit affine matrices, min image) reproduces each root's d4_canonical_hex, the deletion-orbit covers, and the per-bit marginals field-by-field against the published head JSON addition records; roots == child|1<<bit with popcount 7; total marginal 23 / in-manifest 3 / zero-mim [58,64,96]; child closed exactly once by bit9; set-equality s_1312 == s_1309 UNION covers(5 roots); second target S5 7/542 -> 6 rows / 459 and second open parent 70/5822 -> 67 rows / 5572",
+  "inventory_orbit_analysis": "601-root folded inventory (596 previous + 5 new) re-analysed with the independent D4: 590 distinct orbits / 11 twin pairs (585 + 5 new orbits, no new twins); the 5 new roots are disjoint from the previous inventory raw-hex and D4-canonically",
+  "sweep_reaggregated": "fresh-code aggregation of the 11 raw batch JSONLs: 83 candidates exactly once (== claim enumeration), 5 WIN7-D10 [9,12,58,64,96] / 78 REFUTED-D10 / 0 capped, 147,896,427 nodes (win sum 16,656,056), terminal ranges within [13,17], pilots 3402 x11, determinism rerun node-exact (8 bits), v15 cross-engine 5/5 WIN + 3/3 refuted anchors (bits 0/1/2), pilot 5949",
+  "tmp_checkpoint_inventory_complete": "the tmp-cost83b checkpoint is complete on main (34 files: cert-receipts / bigint / tsverify / consumed / rows / summaries for bits 9,12,58,64,96, split files for 9/58/96 and legal-moves.json); every consumed-set / rows / receipt read below comes from those published main bytes; no reconstruction step is needed"
+ },
+ "date": "2026-11-15",
+ "fold_script_blob_sha": {
+  "bytes": 22552,
+  "git_blob_sha": "4239b5208981036d57d744435c655c664cf90d15",
+  "md5": "1fac910c2b11291c2a126d79c4634929"
+ },
+ "inputs": "published main bytes only: the codeload main tarball mirror (kyouen-researches@main, HEAD e5673851), including the fold script, the completed claim, the 11 raw batches, the determinism rerun, the v15 crosscheck, the 5 published certificates and the complete tmp-cost83b checkpoint (34 files); no state from the landing session was reused",
+ "interpretation_guard": "bookkeeping verification of a receipts fold only; solved 1312 measures manifest coverage, not the game-theoretic value of any position; REFUTED-D10 sweeps prove only the absence of a WIN7-D10 certificate; WIN7 certificates prove a first-player win within depth 10 from the individual 7-stone roots only; the standard 11x11 empty board, the two-stone roots {49,60}/{59,60}, S2 {59,60}, class1, class2 and class4 all remain UNKNOWN",
+ "schema": "n11-class2-lane-cost83b-fold-second-verification-20261115-v1",
+ "second_target_s5_after": {
+  "note": "best coverable class-2 target, still unresolved",
+  "remaining_s7_edge_cost": 459,
+  "rows": 6,
+  "s5_hex": "00000000000000801202000000200000"
+ }
+}
