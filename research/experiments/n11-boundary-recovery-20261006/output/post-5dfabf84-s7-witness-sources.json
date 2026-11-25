@@ -1,0 +1,109 @@
+{
+  "actual_not_dispatched_targets": [],
+  "budget_per_target": 1000000,
+  "created_utc": "2026-10-08T18:18:26+00:00",
+  "main_at_dispatch": "5dfabf8465539ce2d58b7df65751ede4a7b236b3",
+  "nodes": 163352,
+  "preflight": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s7-witness-preflight.json",
+    "sha256": "c4747c3c23f383cf3206cd7f944ea6923ec2c1852e1e83e1eee603c41105fd8d"
+  },
+  "raw_rows": 2,
+  "raw_sources": [
+    {
+      "affected_s6_parents": [
+        [
+          1152930317879803904,
+          34896609280
+        ],
+        [
+          10448351135499550728,
+          274877911040
+        ]
+      ],
+      "artifact_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s7-witness/s7-1152921504743161920-1099515830272.out.csv",
+      "budget": 1000000,
+      "key": [
+        1152921504743161920,
+        1099515830272
+      ],
+      "legal": 78,
+      "local_path": "D:/ghq/github.com/yuubinnkyoku/kyouen-researches/.local/n11/reply27-s7-witness-s6-unknowns-5dfabf84/s7-1152921504743161920-1099515830272.out.csv",
+      "nodes": 66122,
+      "replay_rows": 1,
+      "sha256": "ecda89fe8179c13b46d9d6031cccad05b124ba021c363cb643b33b615b17e9f6",
+      "verdict": 2
+    },
+    {
+      "affected_s6_parents": [
+        [
+          1152925911243358208,
+          34896609280
+        ]
+      ],
+      "artifact_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s7-witness/s7-1152925912317100032-34896609280.out.csv",
+      "budget": 1000000,
+      "key": [
+        1152925912317100032,
+        34896609280
+      ],
+      "legal": 55,
+      "local_path": "D:/ghq/github.com/yuubinnkyoku/kyouen-researches/.local/n11/reply27-s7-witness-s6-unknowns-5dfabf84/s7-1152925912317100032-34896609280.out.csv",
+      "nodes": 97230,
+      "replay_rows": 1,
+      "sha256": "d3fbcbd1ccb38d36d2087f059e96785630650a7b319703f6546c3cb576cbfcfb",
+      "verdict": 2
+    }
+  ],
+  "runner_at_dispatch": {
+    "path": "D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\research\\experiments\\n11-boundary-recovery-20261006\\scripts\\run_s7_witness_probe_local.py",
+    "sha256": "617d9e1ae91fdf4610c1bd48cf9395272dc19dcbd0482031ba41f927fb5305a7"
+  },
+  "runner_current_after_reporting-fix": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/scripts/run_s7_witness_probe_local.py",
+    "sha256": "6a3b39f2f5879e1a49aced85d9759491ad5bc8aaf62e20f4c1df57b7b39e5be9"
+  },
+  "runner_summary": {
+    "claim_reconciliation": "runner field included a just-dispatched target in not_dispatched_after_parent_resolved; raw target count equals all schedule rows, so actual not-dispatched set is empty",
+    "claimed_not_dispatched": [
+      [
+        1152921504743161920,
+        1099515830272
+      ]
+    ],
+    "path": ".local/n11/reply27-s7-witness-s6-unknowns-5dfabf84/summary.json",
+    "reported_s5_outcome": "WIN",
+    "reported_s6_counts": {
+      "LOSS": 0,
+      "UNKNOWN": 0,
+      "WIN": 90
+    },
+    "sha256": "0e9ebc4e58c806120ebbcf67d9c00a25b06163e64164d7ab01ff04e8aef94166"
+  },
+  "s4_class": [
+    10448351135499567104,
+    0
+  ],
+  "s5_parent": [
+    1152925911243358208,
+    536870912
+  ],
+  "s5_s6_boundary_full_gzip": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s6-descent-parent-boundary-full.json.gz",
+    "sha256": "2cb8b39e0404e3e0a525b1fd429c91f05d814c1ab55d70ce320b779161058423"
+  },
+  "schema": "n11-s7-witness-source-manifest-v1",
+  "scope": "exact s7 raw outputs copied byte-for-byte from preserved .local; each exact LOSS is a witness for its affected s6 OR parent",
+  "solver": {
+    "path": ".local/n11/reply27-probe9/dfpn.exe",
+    "sha256": "05fa5a45c0749506ead2036174c7fc9047badd94835a06c7588d0c892bfafbd7"
+  },
+  "targets": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s7-witness-probe.csv",
+    "sha256": "79f95f87e31fc495a0616e208d8e20252e608d4fbc7c90ea2eea1b310d23e812"
+  },
+  "verdict_counts": {
+    "2": 2
+  },
+  "worker_count": 1
+}

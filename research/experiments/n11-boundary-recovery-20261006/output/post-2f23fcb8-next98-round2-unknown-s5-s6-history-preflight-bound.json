@@ -1,0 +1,48 @@
+{
+  "adapter_source": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-2f23fcb8-bind-s6-history-preflight.py",
+    "sha256": "a58ea6f4849618d8e04195249120f48c94c43b5700744f17ccde3ba8a394ee24"
+  },
+  "budget": 15000000,
+  "dispatch_main_commit": "2f23fcb80ae853c93d31ed5d2e0f8d7d25ce757a",
+  "interpretation": "Dispatch preflight only; it assigns no S5/S4 verdict and preserves UNKNOWN.",
+  "parent_targets": {
+    "keys": [
+      [
+        1152921504741069824,
+        68719476736
+      ]
+    ],
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-2f23fcb8-next98-probe-next8-round2-unknown-s5-parent.csv",
+    "sha256": "f927e7144f4bff327d75096679bf635c8ea9ac6a5dba4e0ea4b8c850e7dda34a"
+  },
+  "per_parent_history_audits": [
+    {
+      "boundary_child_count": 90,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-2f23fcb8-next98-round2-unknown-s5-s6-history-preflight.json",
+      "sha256": "560b7d1ac0343f4f30fbf02eb1bab8dea5be0af5422a28e6e1dc5c2e21edfbc5"
+    }
+  ],
+  "s5_cache": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-2f23fcb8-next98-probe-next8-round2-merged-s5.cache",
+    "sha256": "8fa443d7d0c90db400b481e3484e62a301aa71d5c5489dad2f2363ce7b226195"
+  },
+  "saved_full_detail": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-2f23fcb8-next98-probe-next8-round2-saved-s6-full.json.gz",
+    "sha256": "653e7fe42aac473c073f367af297a5b671482340b6594c59360290d9f5f34909"
+  },
+  "saved_source_audit": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-1001d051-reconciliation-20261009-augmented-s6-source-audit.json",
+    "sha256": "7c0760dc892e6da2513189cde5bf9337eee349dda239e9001be15e39413c375e"
+  },
+  "schema": "n11-s6-history-dispatch-preflight-adapter-v1",
+  "union": {
+    "conflicts": 0,
+    "dispatch_ready_unique_keys": 90,
+    "same_or_higher_budget_unknown_keys": 0,
+    "saved_status_counts": {
+      "UNSEEN": 90
+    },
+    "unique_canonical_s6_keys": 90
+  }
+}

@@ -1,0 +1,131 @@
+{
+  "adaptation_claim": "Legacy preflight fields were schema-mapped after SHA-256 checks; no verdicts were added or changed.",
+  "adapted_sources": [
+    {
+      "bytes": 65633,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-0d8f4d3e-active-class-10448351135499550722-0-s6-history-preflight.json",
+      "sha256": "272deac9bf95d26cc4c32aee2a91e5ca27f9ba596c76d8066c1c53186ffa1335"
+    },
+    {
+      "bytes": 6174,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-0d8f4d3e-active-class-10448351135499550722-0-s6-history-targets-manifest.json",
+      "sha256": "783822623acd24c5c5eea7e2ea2f93bed972adcf75b795f159973c31d2270bff"
+    },
+    {
+      "bytes": 778,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-0d8f4d3e-dual-tight-ranking-targets.csv",
+      "sha256": "85969c9228447b4f1ec7c2512075e2c01ee73bc5afc62d2c4174700673e2c708"
+    },
+    {
+      "bytes": 532898,
+      "path": ".local/n11/dual-tight-10448351135499550722-0-s6-after-a29e30e3/summary.json",
+      "sha256": "c7c279cbb86bd4263e48af969b52c111164bc7d885635797d9d79022b2e53544"
+    },
+    {
+      "bytes": 418761,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-1001d051-reconciliation-20261009-augmented-s6-source-audit.json",
+      "sha256": "7c0760dc892e6da2513189cde5bf9337eee349dda239e9001be15e39413c375e"
+    },
+    {
+      "bytes": 40162,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-0d8f4d3e-active-class-10448351135499550722-0-saved-s6-full.json.gz",
+      "sha256": "134bcb9f5e092d0f859809827a99258ce1af5f34633d7745923b9eff0442a890"
+    },
+    {
+      "bytes": 218484,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-0d8f4d3e-active-class-10448351135499550722-0-merged-s5.cache",
+      "sha256": "6163b0336f4ff45170371e59a36ed6fc13123b454302896c79e09d6b41a0169d"
+    }
+  ],
+  "budget": 2000000,
+  "dispatch_main_commit": "a29e30e300f0050f0f7c1fe1de465e258483bdce",
+  "parent_child_incidences": 1041,
+  "parent_count": 11,
+  "parent_outcomes_before_dispatch": {
+    "UNKNOWN": 11
+  },
+  "parent_targets": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-0d8f4d3e-dual-tight-ranking-targets.csv",
+    "sha256": "85969c9228447b4f1ec7c2512075e2c01ee73bc5afc62d2c4174700673e2c708"
+  },
+  "per_parent_history_audits": [
+    {
+      "boundary_child_count": 90,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-0d8f4d3e-active-class-10448351135499550722-0-s6-history-audits/s5-10448351135499550722-67108864.json",
+      "sha256": "866b7c1dde14cbc977712a92096a7be1111189ef943c73f5c6865a17f6d215e3"
+    },
+    {
+      "boundary_child_count": 89,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-0d8f4d3e-active-class-10448351135499550722-0-s6-history-audits/s5-10448351135499550786-0.json",
+      "sha256": "e86f099be6dde0f294c0199fab123a9098076cfb1076a6c60827a349bdd79950"
+    },
+    {
+      "boundary_child_count": 102,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-0d8f4d3e-active-class-10448351135499550722-0-s6-history-audits/s5-10448351135499550850-0.json",
+      "sha256": "d6eb8138e89337bef097295a5dfc9bce42e0db59fdf0afd3c0cf026b86b03f41"
+    },
+    {
+      "boundary_child_count": 95,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-0d8f4d3e-active-class-10448351135499550722-0-s6-history-audits/s5-10448351135499552770-0.json",
+      "sha256": "d2c15043137db2c4e8c9ac7f504540e359d701c9ed9af1597ddb79c4dd396a6c"
+    },
+    {
+      "boundary_child_count": 97,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-0d8f4d3e-active-class-10448351135499550722-0-s6-history-audits/s5-10448351135500599298-0.json",
+      "sha256": "ad6dda23b6f6293ad2eb84e962a67d636ab9878087aa26e831ada8140e640f07"
+    },
+    {
+      "boundary_child_count": 95,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-0d8f4d3e-active-class-10448351135499550722-0-s6-history-audits/s5-10450602935313235970-0.json",
+      "sha256": "d907299c647b5feeb2570704be56637a0167695b70bde89e1cf28415334cc580"
+    },
+    {
+      "boundary_child_count": 85,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-0d8f4d3e-active-class-10448351135499550722-0-s6-history-audits/s5-1152921504607963136-536870912.json",
+      "sha256": "2cc1ff14cc1bc594eb672653a36ffdbb9e2a98c6334e67bbdff5410a5b3f89ca"
+    },
+    {
+      "boundary_child_count": 93,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-0d8f4d3e-active-class-10448351135499550722-0-s6-history-audits/s5-1152921504609009664-536870916.json",
+      "sha256": "718acca7ab44615907b65ae4942c675d43b166780e82d41185c42f8caa5856e8"
+    },
+    {
+      "boundary_child_count": 98,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-0d8f4d3e-active-class-10448351135499550722-0-s6-history-audits/s5-1297036692682703360-16777217.json",
+      "sha256": "dd001685be6ed87b35be256d63661be073835998af109bd59ff938ba54747781"
+    },
+    {
+      "boundary_child_count": 101,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-0d8f4d3e-active-class-10448351135499550722-0-s6-history-audits/s5-1297036692682703360-34359738369.json",
+      "sha256": "ca5672287683f848671a5d6aab4a6bbe62da3f6578a6c1c007c6f39d939f3e99"
+    },
+    {
+      "boundary_child_count": 96,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-0d8f4d3e-active-class-10448351135499550722-0-s6-history-audits/s5-1297036692682703360-68719476737.json",
+      "sha256": "af840239114b7908de5d1a2e84ddbc617ebbfbc863af4d759a62319415fbea65"
+    }
+  ],
+  "s5_cache": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-0d8f4d3e-active-class-10448351135499550722-0-merged-s5.cache",
+    "sha256": "6163b0336f4ff45170371e59a36ed6fc13123b454302896c79e09d6b41a0169d"
+  },
+  "saved_full_detail": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-0d8f4d3e-active-class-10448351135499550722-0-saved-s6-full.json.gz",
+    "sha256": "134bcb9f5e092d0f859809827a99258ce1af5f34633d7745923b9eff0442a890"
+  },
+  "saved_source_audit": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-1001d051-reconciliation-20261009-augmented-s6-source-audit.json",
+    "sha256": "7c0760dc892e6da2513189cde5bf9337eee349dda239e9001be15e39413c375e"
+  },
+  "schema": "n11-reply27-local-s6-history-preflight-adapted-v1",
+  "union": {
+    "conflicts": 0,
+    "dispatch_ready_unique_keys": 980,
+    "same_or_higher_budget_unknown_keys": 0,
+    "saved_status_counts": {
+      "UNSEEN": 980,
+      "WIN": 6
+    },
+    "unique_canonical_s6_keys": 986
+  }
+}

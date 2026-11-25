@@ -1,0 +1,47 @@
+{
+  "artifacts": {
+    "inputs": {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-38613e2-hard-s5-s6-descent-v2-inputs.csv",
+      "sha256": "a09d44eb22775f8cbb67809b834789198a2a1875ea0c69ccb259dd8078890402"
+    },
+    "raw_directory_file_count": 87,
+    "raw_exact": {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-38613e2-hard-s5-s6-descent-v2-raw-exact.csv",
+      "sha256": "dee467c6befb8aeec83b77d3939c9b2d0837e23720c811440d086ee41e7117d5"
+    },
+    "runner_summary": {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-38613e2-hard-s5-s6-descent-v2-runner-summary.json",
+      "sha256": "3459aadc9c8f1de723cc07b6bee51fab6db14837e926ba617bcd65ff539fc9f2"
+    },
+    "s6_exact_cache": {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-38613e2-hard-s5-s6-descent-v2-exact-s6.cache",
+      "sha256": "4f6f060ee23aab12a2a7b80f525d2a21faf9180a414410adc4c211485ead8dc2"
+    },
+    "source_manifest": {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-38613e2-hard-s5-s6-descent-v2-sources.json",
+      "sha256": "0f0a2d30475cb52d3fd3bcc40e9adb130772284d6cf19061e6508139ea0f0ab1"
+    }
+  },
+  "budget_per_target": 2000000,
+  "class_outcome_not_assigned_here": true,
+  "complete_canonical_s6_boundary": 87,
+  "conflicts": 0,
+  "created_utc": "2026-10-08T19:07:07+00:00",
+  "dispatch_main_commit": "38613e2cdf03547aae0fc51d6e9d98d5616f74d0",
+  "exact_s6_verdict_counts": {
+    "LOSS": 0,
+    "UNKNOWN": 0,
+    "WIN": 87
+  },
+  "new_s6_rows": 87,
+  "nodes": 28266655,
+  "parent_s5": [
+    10448351135633768448,
+    16384
+  ],
+  "s5_outcome_from_complete_s6_boundary": "WIN",
+  "schema": "n11-reply27-s6-descent-evidence-summary-v1",
+  "solver_sha256": "05fa5a45c0749506ead2036174c7fc9047badd94835a06c7588d0c892bfafbd7",
+  "unknowns_propagated": false,
+  "workers": 4
+}

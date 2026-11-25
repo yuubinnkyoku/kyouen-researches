@@ -1,0 +1,50 @@
+{
+  "best_target": {
+    "key": [
+      1585267068835463168,
+      0
+    ],
+    "new_vertices": [
+      100,
+      108
+    ],
+    "targets_out": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-67ecfaa9-class-1585267068834414720-0-after-ready83-s6-reverse-ranking-targets.csv",
+    "unknown_s5": 96
+  },
+  "derived_cache_entries": 5580,
+  "loss_classes": 31,
+  "ranking": [
+    {
+      "all_s5": 106,
+      "coverage": [
+        38,
+        100,
+        108
+      ],
+      "key": [
+        1585267068835463168,
+        0
+      ],
+      "known_loss_fraction": 0.09433962264150944,
+      "known_loss_s5": 10,
+      "max_unknown_legal": 105,
+      "min_unknown_legal": 81,
+      "new_vertex_count": 2,
+      "new_vertices": [
+        100,
+        108
+      ],
+      "rank": 1,
+      "unknown_per_new_vertex": 48.0,
+      "unknown_s5": 96
+    }
+  ],
+  "ranking_rule": "unknown_s5/new_vertices, then unknown_s5, then known-loss fraction",
+  "repair_classes": 1,
+  "root": [
+    60,
+    27
+  ],
+  "secured_vertices": 117,
+  "win_forbidden_classes": 253
+}

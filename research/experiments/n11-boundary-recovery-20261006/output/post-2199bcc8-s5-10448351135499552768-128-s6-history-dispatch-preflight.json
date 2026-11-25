@@ -1,0 +1,61 @@
+{
+  "budget": 2000000,
+  "dispatch_main_commit": "2199bcc8faca3dec5b8123d55a9469b9ad9884c3",
+  "interpretation": "Consolidates the hash-validated pre-dispatch local history audit for the completed single-parent S6 dispatch; no UNKNOWN rows were retried or propagated.",
+  "parent_targets": {
+    "parents": [
+      {
+        "key": [
+          10448351135499552768,
+          128
+        ],
+        "path": "research/experiments/n11-boundary-recovery-20261006/output/post-2199bcc8-s5-10448351135499552768-128-parent.csv",
+        "sha256": "a7dde5891ed3b10ac94028a8bd394f2731d2a090986ba83512a2641b18e463cf"
+      }
+    ],
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-2199bcc8-s5-10448351135499552768-128-parent.csv",
+    "sha256": "a7dde5891ed3b10ac94028a8bd394f2731d2a090986ba83512a2641b18e463cf"
+  },
+  "per_parent_history_audits": [
+    {
+      "boundary_child_count": 90,
+      "conflicts": 0,
+      "local_history_rows": 3,
+      "parent": [
+        10448351135499552768,
+        128
+      ],
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-2199bcc8-s5-10448351135499552768-128-s6-local-history-audit.json",
+      "ready_count": 87,
+      "same_or_higher_budget_unknown_count": 0,
+      "saved_verdict_counts": {
+        "UNSEEN": 87,
+        "WIN": 3
+      },
+      "sha256": "19c667c6869704a0addd1cae715b17417b61efcd07f93d4200180997fcf3273f"
+    }
+  ],
+  "s5_cache": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-2199bcc8-dual-tight-10448351135499552768-0-probe8-sequential-completed-merged-s5.cache",
+    "sha256": "69f73ea1fd265ab6e670d15178149dca691cea4911ec6e154e1aa1e3cbe28c67"
+  },
+  "saved_full_detail": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-2199bcc8-dual-tight-10448351135499552768-0-probe8-sequential-next-saved-s6-full.json.gz",
+    "sha256": "aee8d1806b0f568cd18e426719ad8237e192825dfed935e1dff6df6779616ff7"
+  },
+  "saved_source_audit": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-1173099-dual-tight-10448351135499552768-0-probe8-s6-descent-augmented-s6-source-audit.json",
+    "sha256": "8eb5a64aa6fd4b703549da726637ce2fd078a0bd52bcebc34a151f9016ad71cc"
+  },
+  "schema": "n11-reply27-s6-local-history-dispatch-preflight-v1",
+  "union": {
+    "conflicts": 0,
+    "dispatch_ready_unique_keys": 87,
+    "same_or_higher_budget_unknown_keys": 0,
+    "saved_status_counts": {
+      "UNSEEN": 87,
+      "WIN": 3
+    },
+    "unique_canonical_s6_keys": 90
+  }
+}

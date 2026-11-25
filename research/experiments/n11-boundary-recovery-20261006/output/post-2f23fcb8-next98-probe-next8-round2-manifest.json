@@ -1,0 +1,145 @@
+{
+  "schema": "n11-reply27-next-s5-probe-selection-v1",
+  "claim": "scheduling order only; selected keys remain UNKNOWN until exact solver results",
+  "selection_rule": "current raw-history dispatch-ready S5 keys ordered by legal move count ascending, then canonical key",
+  "budget": 15000000,
+  "budget_per_target": 15000000,
+  "count_requested": 8,
+  "probe_count": 8,
+  "dispatch_ready_count": 82,
+  "probe_target_sha256": "b9f0940451d74948b37101523bc93292b7092bb055848f27933917768c8ac6d9",
+  "probe_targets": [
+    [
+      1152921504741069824,
+      68719476736
+    ],
+    [
+      1152921504757842944,
+      68719476736
+    ],
+    [
+      1152921504808174592,
+      68719476736
+    ],
+    [
+      1152921505009501184,
+      68719476736
+    ],
+    [
+      10376293541461623809,
+      68719476736
+    ],
+    [
+      10376293541461623840,
+      68719476736
+    ],
+    [
+      10376293541478401024,
+      68719476736
+    ],
+    [
+      1152921504741065730,
+      68719476736
+    ]
+  ],
+  "selected": [
+    {
+      "rank": 1,
+      "key": [
+        1152921504741069824,
+        68719476736
+      ],
+      "legal_count": 90
+    },
+    {
+      "rank": 2,
+      "key": [
+        1152921504757842944,
+        68719476736
+      ],
+      "legal_count": 90
+    },
+    {
+      "rank": 3,
+      "key": [
+        1152921504808174592,
+        68719476736
+      ],
+      "legal_count": 90
+    },
+    {
+      "rank": 4,
+      "key": [
+        1152921505009501184,
+        68719476736
+      ],
+      "legal_count": 90
+    },
+    {
+      "rank": 5,
+      "key": [
+        10376293541461623809,
+        68719476736
+      ],
+      "legal_count": 90
+    },
+    {
+      "rank": 6,
+      "key": [
+        10376293541461623840,
+        68719476736
+      ],
+      "legal_count": 90
+    },
+    {
+      "rank": 7,
+      "key": [
+        10376293541478401024,
+        68719476736
+      ],
+      "legal_count": 90
+    },
+    {
+      "rank": 8,
+      "key": [
+        1152921504741065730,
+        68719476736
+      ],
+      "legal_count": 91
+    }
+  ],
+  "sources": [
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-2f23fcb8-next98-all-canonical-s5-targets.csv",
+      "sha256": "bb1c470dd3d0809cba73feedca434a8c3fb7a1a0907c6ad043367c4ab9c1c851"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-2f23fcb8-next98-probe-next8-raw-history-audit-full-boundary.json",
+      "sha256": "7cc01f6988d99f6434216fdcf22cb45d125d569222c43afc2ce44c99ca6cbc8b"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-2f23fcb8-next98-probe-next8-merged-s5.cache",
+      "sha256": "094ffbc9884f1504c9356d80500c55a4a85cbaab5b37aed756f5943a227f1419"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-2f23fcb8-select-next8-s5-probes.py",
+      "sha256": "db4b5a7c88854e833bd8d2b31c10d09b6036d452a3daca85a00b1870bb230d46"
+    },
+    {
+      "path": ".local/n11/reply27-probe9/dfpn.exe",
+      "sha256": "05fa5a45c0749506ead2036174c7fc9047badd94835a06c7588d0c892bfafbd7"
+    },
+    {
+      "path": "cpp/solvers/kyouen_dfpn_root.cpp",
+      "sha256": "523f56e61550e1f5b93882229baf8b4cd83489be719ca484d13adef8424c3063"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/scripts/complete_class_local.py",
+      "sha256": "04ca107661447f40d9c43034f7adbc20a65512c3cd5839b0536f257f2a64d4f4"
+    }
+  ],
+  "targets_out": {
+    "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-2f23fcb8-next98-probe-next8-round2.csv",
+    "sha256": "b9f0940451d74948b37101523bc93292b7092bb055848f27933917768c8ac6d9"
+  }
+}

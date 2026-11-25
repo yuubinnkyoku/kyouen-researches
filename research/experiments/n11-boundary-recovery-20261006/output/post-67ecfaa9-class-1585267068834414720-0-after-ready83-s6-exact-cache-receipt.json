@@ -1,0 +1,26 @@
+{
+  "cache": {
+    "LOSS": 172,
+    "UNKNOWN_excluded": 116,
+    "WIN": 4665,
+    "conflicts": 0,
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-67ecfaa9-class-1585267068834414720-0-after-ready83-s6-exact.cache",
+    "rows": 4837,
+    "sha256": "ccf60490dc5841ae176a5035349a0037f1ebd323f0345f67726570a73da25dbe"
+  },
+  "new_s6_rows_in_this_checkpoint": 181,
+  "new_s6_verdicts": {
+    "LOSS": 7,
+    "UNKNOWN": 0,
+    "WIN": 174
+  },
+  "schema": "n11-reply27-s6-exact-cache-receipt-v1",
+  "selection": "For duplicate exact observations, retain the highest-budget row; exact verdicts are unchanged. UNKNOWN-only S6 keys are excluded from the exact cache.",
+  "source_audit": {
+    "geometry_checked": true,
+    "hash_validated": true,
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-67ecfaa9-class-1585267068834414720-0-after-ready83-s6-extended-source-audit.json",
+    "sha256": "19d35c492b2600839ac168935e8fcf8d8fbdd4a9ec842d37059e4ab18e502b5a",
+    "source_files": 4730
+  }
+}

@@ -1,0 +1,231 @@
+{
+  "claim_limit": "This does not prove {60,27} LOSS or solve the 11x11 empty board.",
+  "decision": "Checkpoint exact results and stop before S7 dispatch; the existing dedicated S7 probe workflow does not cover this boundary.",
+  "exact_s5_cache": {
+    "LOSS": 5549,
+    "WIN": 151,
+    "conflicts": 0,
+    "corpus_sources": 339,
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-23b52acf-after-round3-round4-completed-merged-s5.cache",
+    "rows": 5700,
+    "sha256": "634d35b1d84bde95777b60f864199289886faaadbd5f2af31048327222da7592"
+  },
+  "global_saved_evidence_audits": {
+    "s5_cache_corpus": {
+      "LOSS": 5549,
+      "WIN": 151,
+      "conflicts": 0,
+      "extra_vs_current": 0,
+      "missing_from_current": 0,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-23b52acf-after-round4-s6-escalation-s5-cache-corpus-union.cache",
+      "rows": 5700,
+      "sha256": "07fe4450f6da7fefec16998d02a2b1ca0d2be4c6553ddec87679530960b9fa4e"
+    },
+    "s5_raw_replay": {
+      "exact_conflicts": 0,
+      "exact_missing_from_cache": 0,
+      "exact_rows": 5252,
+      "rows": 5494,
+      "same_15m_budget_unknown_observations": 242,
+      "unique_exact_keys": 2548
+    }
+  },
+  "key_evidence": [
+    {
+      "bytes": 1012,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-23b52acf-after-round3-round4-completed-merge-receipt.json",
+      "sha256": "93b638c887ada63472327c0c0daa0c9a43a94f118650213f7c65b50af553fdb2"
+    },
+    {
+      "bytes": 13676,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-23b52acf-after-round3-round4-class-boundary-audit.json",
+      "sha256": "1c53356f582b633266a67c3c341fb91fad261a1d1ecf7daf377e2081a06e9a5d"
+    },
+    {
+      "bytes": 2336,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-23b52acf-after-round4-s6-descent-summary.json",
+      "sha256": "7c68ce2bded4bd7ab80b3a86d61a6b5a43d60012b001216233991a58e48fa5bf"
+    },
+    {
+      "bytes": 3946,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-23b52acf-after-round4-saved-s7-s6-intersection.json",
+      "sha256": "8bf4707d04a31e9b3b74ce8a155d92783c906e938349b90cbe309a2fb9df9490"
+    },
+    {
+      "bytes": 1481,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-23b52acf-after-round4-saved-s7-s6-intersection-sources.json",
+      "sha256": "5a4a2ef72f34a5f7ddde1631be6bbe42e9c3d7609283a774fea6b758e49c6c6a"
+    },
+    {
+      "bytes": 127465,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-23b52acf-after-round4-s6-escalation-s5-cache-corpus-audit.json",
+      "sha256": "df8241e2c0c81238ad1dffe59c7f9f84b0bd8b0d0e288005eebc418d9421a066"
+    },
+    {
+      "bytes": 616547,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-23b52acf-after-round4-s6-escalation-s5-raw-replay-corpus-audit.json",
+      "sha256": "68ce4fbf140927c4cefc943b37c97d2d03249cf97b4119f9443d31d7dac597bf"
+    },
+    {
+      "bytes": 2454,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-23b52acf-after-round4-s6-escalation-cardinality.json",
+      "sha256": "4944fc8a0cde9c9dd4742f46452c9d85d7c247539bedd58c5ab98a2f24278324"
+    },
+    {
+      "bytes": 5167,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-23b52acf-after-round4-s6-escalation-repair.json",
+      "sha256": "bfdf56c89147b48dff054740abbc68c9ec39a9bda88b1c8f0a154f9161e4993d"
+    },
+    {
+      "bytes": 136,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-23b52acf-after-round4-s6-escalation-repair-targets.csv",
+      "sha256": "1edeba1f3b50e16df8f1dbf1058a668fad6e45c455505e4023d77f5bc23e8f2b"
+    },
+    {
+      "bytes": 1311,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-23b52acf-after-round4-s6-escalation-ranking.json",
+      "sha256": "ea4478b459b188682e54571e442f3d266be7e5cb97c5e18243144e781f75b7e9"
+    },
+    {
+      "bytes": 217,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-23b52acf-after-round4-s6-escalation-ranking-targets.csv",
+      "sha256": "0748bd13b0d33fca6ca666e163d6ebeafef67d7b98f765cd48610bbae1cf1c96"
+    },
+    {
+      "bytes": 10257,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-23b52acf-after-round4-s6-escalation-audit.py",
+      "sha256": "ec155d786221be5368fe58b3133c3f96981525abd755c3e4cb5c2a79a9c3d773"
+    }
+  ],
+  "main_commit_at_dispatch": "23b52acfb96c95a258296b4ffda45562db0e74ea",
+  "next_target": {
+    "class_key": [
+      1333065489702715392,
+      0
+    ],
+    "dispatch_status": "hold: six S6 UNKNOWNs have 512 canonical S7 children and no saved exact S7 verdict",
+    "ranked_schedule": {
+      "canonical_s5_children": 106,
+      "coverage": [
+        5,
+        100,
+        108
+      ],
+      "dual_vertex": 100,
+      "dual_weight": "1",
+      "key": [
+        1333065489702715392,
+        0
+      ],
+      "known_loss_s5": 104,
+      "rank": 1,
+      "targets_csv": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-23b52acf-after-round4-s6-escalation-ranking-targets.csv",
+      "unknown_s5": 2,
+      "unknown_s5_legal_count_max": 102,
+      "unknown_s5_legal_count_min": 96
+    },
+    "unknown_s5_count": 2,
+    "unknown_s5_keys": [
+      [
+        10376293541461626880,
+        33554434
+      ],
+      [
+        10376293541461626880,
+        68719476738
+      ]
+    ]
+  },
+  "processed_class": {
+    "canonical_s5_children": 106,
+    "final_child_counts": {
+      "LOSS": 104,
+      "UNKNOWN": 2,
+      "WIN": 0
+    },
+    "key": [
+      1333065489702715392,
+      0
+    ],
+    "new_exact_s5_rows_since_main": 81,
+    "new_exact_s5_verdicts": {
+      "LOSS": 81,
+      "WIN": 0
+    },
+    "round3_nodes": 33987338,
+    "round4_exact_nodes": 381870773,
+    "round4_nodes_all_rows": 411870773,
+    "status": "UNKNOWN",
+    "total_exact_nodes": 415858111,
+    "total_nodes_all_rows": 445858111,
+    "unknown_s5_children": [
+      [
+        10376293541461626880,
+        33554434
+      ],
+      [
+        10376293541461626880,
+        68719476738
+      ]
+    ]
+  },
+  "proof_status": {
+    "n11_empty_board": "UNKNOWN",
+    "reply27": "UNKNOWN"
+  },
+  "root": [
+    60,
+    27
+  ],
+  "s4": {
+    "class_status_counts": {
+      "LOSS": 31,
+      "UNKNOWN": 3091,
+      "WIN": 262
+    },
+    "distinct_unknown_s5_union": 2,
+    "dual_tight": true,
+    "minimum_additional_classes": 1,
+    "rational_dual": "1",
+    "remaining_vertices": 2,
+    "repair_classes": [
+      [
+        1333065489702715392,
+        0
+      ]
+    ],
+    "secured_vertices": 117
+  },
+  "s6_descent": {
+    "complete_canonical_s6_union": 146,
+    "derived_s5_rows": 0,
+    "new_exact_rows": 145,
+    "new_verdict_counts": {
+      "LOSS": 0,
+      "UNKNOWN": 6,
+      "WIN": 139
+    },
+    "nodes": 58453933,
+    "parent_child_incidences": 147,
+    "parent_outcomes": {
+      "LOSS": 0,
+      "UNKNOWN": 2,
+      "WIN": 0
+    },
+    "parents": 2,
+    "reverse_propagated_s5_loss": 0,
+    "total_boundary_verdict_counts": {
+      "LOSS": 0,
+      "UNKNOWN": 6,
+      "WIN": 140
+    }
+  },
+  "saved_s7_intersection": {
+    "canonical_s7_keys": 512,
+    "conflicts": 0,
+    "s6_unknown_parents": 6,
+    "saved_exact_s7_keys": 0,
+    "solver_dispatched": false
+  },
+  "schema": "n11-reply27-s6-escalation-checkpoint-v1"
+}

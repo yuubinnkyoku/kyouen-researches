@@ -1,0 +1,102 @@
+{
+  "budget_per_target": 15000000,
+  "canonical_s5_children": 104,
+  "claim": "Probe order carries no verdict. Prior same-or-higher-budget UNKNOWN keys are excluded, and only exact solver results may update class status.",
+  "class_key": [
+    10448351135499567104,
+    0
+  ],
+  "class_rank": 1,
+  "dispatch_output_dir": ".local/n11/dual-tight-ready-10448351135499567104-0-probe8-5dfabf84",
+  "dispatch_ready_s5": 79,
+  "excluded_same_or_higher_budget_unknown_keys": [],
+  "known_loss_s5": 25,
+  "probe_count": 8,
+  "probe_target_sha256": "17de7158dc905b01110a4707bd7925855fc442d2384457bbca8ea1a7ebeeaae3",
+  "probe_targets": [
+    [
+      1297036692682964992,
+      65537
+    ],
+    [
+      1297036692682964992,
+      134217729
+    ],
+    [
+      1297041090729279488,
+      536870912
+    ],
+    [
+      10448386319871655936,
+      0
+    ],
+    [
+      1152925911243358208,
+      536870912
+    ],
+    [
+      1224983496691351552,
+      536870912
+    ],
+    [
+      1297036692682964992,
+      131073
+    ],
+    [
+      10448351135499567104,
+      64
+    ]
+  ],
+  "same_budget_unknown_observations": [],
+  "schema": "n11-dual-tight-ready-subset-probe-manifest-v1",
+  "selection_rule": "among raw-history dispatch-ready UNKNOWN parents, sort by (legal move count, canonical key), then take the first count",
+  "solver_command": "research/experiments/n11-boundary-recovery-20261006/scripts/complete_class_local.py --solver .local/n11/reply27-probe9/dfpn.exe --targets research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-rank1-10448351135499567104-0-ready-probe8.csv --cache research/experiments/n11-boundary-recovery-20261006/output/post-9dcb11b6-current-exact-s5-v2.cache --out-dir .local/n11/dual-tight-ready-10448351135499567104-0-probe8-5dfabf84 --workers 4 --budget 15000000",
+  "sources": [
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-9dcb11b6-current-ranking-targets.csv",
+      "sha256": "a3ddedddee4362bb169905c099f9572c4be98e0af9b1e60caf841d0f0c0a2823"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-9dcb11b6-current-ranking.json",
+      "sha256": "631b5db9800b9b869ac84ea36cc3e73fb20640db20d4a6d2afd017b44f8d8789"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-9dcb11b6-current-exact-s5-v2.cache",
+      "sha256": "2c27c72f88b1bd928908b9ebe0f6f77fee09ac5d8075701b4937c7c22485172b"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-rank1-10448351135499567104-0-raw-history-audit.json",
+      "sha256": "99b49a84bda836233ba8d55a48adc4a2acc5dd0fe624536ed3babe9fcf0c11c8"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-9dcb11b6-rank1-10448351135499567104-0-raw-history-audit.json",
+      "sha256": "99b49a84bda836233ba8d55a48adc4a2acc5dd0fe624536ed3babe9fcf0c11c8"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/scripts/verify_raw_history_coverage.py",
+      "sha256": "8c050fe79b37ca280623a5ae1f46c7a6eb487780e33f88904932fbb7247679f0"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-9dcb11b6-rank1-10448351135499567104-0-saved-s6-summary.json",
+      "sha256": "2e6b4e8d34c5a693b42b1a5e27c94e6032758975bdaa90ca0033f0eba3ba94d5"
+    },
+    {
+      "path": ".local/n11/reply27-probe9/dfpn.exe",
+      "sha256": "05fa5a45c0749506ead2036174c7fc9047badd94835a06c7588d0c892bfafbd7"
+    },
+    {
+      "path": "cpp/solvers/kyouen_dfpn_root.cpp",
+      "sha256": "523f56e61550e1f5b93882229baf8b4cd83489be719ca484d13adef8424c3063"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/scripts/complete_class_local.py",
+      "sha256": "04ca107661447f40d9c43034f7adbc20a65512c3cd5839b0536f257f2a64d4f4"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/scripts/prepare_dual_tight_ready_subset_probe.py",
+      "sha256": "de650b375c1dfd7fe74460e8da2ed5f2d9c441997b315247078fa54bfb86901b"
+    }
+  ],
+  "unknown_s5_before_probe": 79,
+  "workers": 4
+}

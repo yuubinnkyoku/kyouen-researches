@@ -1,0 +1,115 @@
+{
+  "budget_per_target": 1000000,
+  "created_utc": "2026-10-08T20:54:34+00:00",
+  "elapsed_seconds": 1.389999999999418,
+  "new_sources": [
+    {
+      "affected_s6_parents": [
+        [
+          10448351135499552768,
+          8320
+        ]
+      ],
+      "budget": 1000000,
+      "input_path": "D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\.local\\n11\\reply27-s5-10448351135499552768-128-s7-run-2199bcc8\\s7-10448351135499552768-8324.input.csv",
+      "input_sha256": "6264070191c684060331713377b7f93ed88496e6fa5810fa6663ae85acc04dd0",
+      "key": [
+        10448351135499552768,
+        8324
+      ],
+      "legal": 46,
+      "log_path": "D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\.local\\n11\\reply27-s5-10448351135499552768-128-s7-run-2199bcc8\\s7-10448351135499552768-8324.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "nodes": 99583,
+      "raw_output_path": "D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\.local\\n11\\reply27-s5-10448351135499552768-128-s7-run-2199bcc8\\s7-10448351135499552768-8324.out.csv",
+      "raw_output_sha256": "36ce14b0bafd20786a80729b9b2736d67168824a9b0a5a927e1f2e0404275e3a",
+      "verdict": 2
+    },
+    {
+      "affected_s6_parents": [
+        [
+          10448353334522808320,
+          128
+        ],
+        [
+          10448914085452973056,
+          34359738368
+        ]
+      ],
+      "budget": 1000000,
+      "input_path": "D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\.local\\n11\\reply27-s5-10448351135499552768-128-s7-run-2199bcc8\\s7-10448914085452973056-34361835520.input.csv",
+      "input_sha256": "9af52bf04ec577d6dc9752c40861138d69951c9caff350b2e0078ffeb3e76ed8",
+      "key": [
+        10448914085452973056,
+        34361835520
+      ],
+      "legal": 69,
+      "log_path": "D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\.local\\n11\\reply27-s5-10448351135499552768-128-s7-run-2199bcc8\\s7-10448914085452973056-34361835520.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "nodes": 106853,
+      "raw_output_path": "D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\.local\\n11\\reply27-s5-10448351135499552768-128-s7-run-2199bcc8\\s7-10448914085452973056-34361835520.out.csv",
+      "raw_output_sha256": "30a2974e2a91e61277d5ff4d9739db939be087681db1b0114509b0a8d5db7de2",
+      "verdict": 2
+    }
+  ],
+  "nodes": 206436,
+  "not_dispatched_after_parent_resolved": [],
+  "out_dir": "D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\.local\\n11\\reply27-s5-10448351135499552768-128-s7-run-2199bcc8",
+  "outcome_provenance": "A s7 exact LOSS child proves its safe canonical s6 OR parent WIN; the s5 parent is classified only from all 90 canonical s6 children. UNKNOWN remains UNKNOWN.",
+  "preflight": {
+    "path": "D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\research\\experiments\\n11-boundary-recovery-20261006\\output\\post-2199bcc8-s5-10448351135499552768-128-s7-witness-preflight.json",
+    "sha256": "aaa47c63c7fa68378cb098a8f94b2ff04cff445f637fce5d35f3393cfb6b5198"
+  },
+  "runner": {
+    "path": "D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\research\\experiments\\n11-boundary-recovery-20261006\\scripts\\run_s7_witness_probe_local.py",
+    "sha256": "6a3b39f2f5879e1a49aced85d9759491ad5bc8aaf62e20f4c1df57b7b39e5be9"
+  },
+  "s5_boundary_s6_count": 90,
+  "s5_outcome_from_complete_s6_boundary": "WIN",
+  "s5_parent": [
+    10448351135499552768,
+    128
+  ],
+  "s5_s6_boundary_full_gzip": {
+    "path": "D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\research\\experiments\\n11-boundary-recovery-20261006\\output\\post-2199bcc8-s5-10448351135499552768-128-direct-saved-s6-full.json.gz",
+    "sha256": "a2d12b75db0950033a7b83af91ef8dfbde939542d495b05a104f669a14810f1a"
+  },
+  "s6_child_outcomes": {
+    "LOSS": 0,
+    "UNKNOWN": 0,
+    "WIN": 90
+  },
+  "s6_unknown_parents_after": [],
+  "s6_unknown_parents_before": [
+    [
+      10448351135499552768,
+      8320
+    ],
+    [
+      10448353334522808320,
+      128
+    ],
+    [
+      10448914085452973056,
+      34359738368
+    ]
+  ],
+  "s7_boundary_counts": {
+    "10448351135499552768,8320": 78,
+    "10448353334522808320,128": 75,
+    "10448914085452973056,34359738368": 85
+  },
+  "s7_probe_rows": 2,
+  "s7_probe_verdict_counts": {
+    "2": 2
+  },
+  "schema": "n11-s7-witness-probe-local-run-v1",
+  "solver": {
+    "path": "D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\.local\\n11\\reply27-probe9\\dfpn.exe",
+    "sha256": "05fa5a45c0749506ead2036174c7fc9047badd94835a06c7588d0c892bfafbd7"
+  },
+  "targets": {
+    "path": "D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\research\\experiments\\n11-boundary-recovery-20261006\\output\\post-2199bcc8-s5-10448351135499552768-128-s7-witness-targets.csv",
+    "sha256": "095f703d0ecb9668e896fdc3960846e2c7a4ce3422f36f1826643151973fa284"
+  }
+}

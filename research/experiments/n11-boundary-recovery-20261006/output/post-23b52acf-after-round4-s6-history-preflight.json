@@ -1,0 +1,63 @@
+{
+  "budget": 2000000,
+  "claim": "Complete canonical S6 boundaries for two UNKNOWN S5 parents were geometry-audited and intersected with hash-validated saved S6 and local replay history. No same-or-higher-budget UNKNOWN S6 key is dispatched.",
+  "dispatch_main_commit": "23b52acfb96c95a258296b4ffda45562db0e74ea",
+  "parent_targets": {
+    "keys": [
+      [
+        10376293541461626880,
+        33554434
+      ],
+      [
+        10376293541461626880,
+        68719476738
+      ]
+    ],
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-23b52acf-after-round4-unknown-s5.csv",
+    "sha256": "e294d284ff3bf3a5fcb76b008b37689364e897932acd6a684be3218e629f1923"
+  },
+  "per_parent_history_audits": [
+    {
+      "boundary_child_count": 96,
+      "parent_key": [
+        10376293541461626880,
+        33554434
+      ],
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-23b52acf-after-round4-s6-history-s5-10376293541461626880-33554434.json",
+      "sha256": "6355e425d52767debb07f2146536283a1f54329122feaa8f4876410dba25cc67"
+    },
+    {
+      "boundary_child_count": 51,
+      "parent_key": [
+        10376293541461626880,
+        68719476738
+      ],
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-23b52acf-after-round4-s6-history-s5-10376293541461626880-68719476738.json",
+      "sha256": "9f94ba3c33b0f53a56a62bf595c5f15941ac2b091f9d98c97a7dbfb3ec57e8c8"
+    }
+  ],
+  "s5_cache": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-23b52acf-after-round3-round4-completed-merged-s5.cache",
+    "sha256": "634d35b1d84bde95777b60f864199289886faaadbd5f2af31048327222da7592"
+  },
+  "saved_full_detail": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-23b52acf-after-round4-saved-s6-full.json.gz",
+    "sha256": "27fb4f564087d11503a9ab3bdeebd80ad299544817c1067c6ce0deddc0c97392"
+  },
+  "saved_source_audit": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-67ecfaa9-class-1585267068834414720-0-after-ready83-s6-extended-source-audit.json",
+    "sha256": "19d35c492b2600839ac168935e8fcf8d8fbdd4a9ec842d37059e4ab18e502b5a"
+  },
+  "schema": "n11-reply27-local-s6-batch-history-preflight-v1",
+  "union": {
+    "conflicts": 0,
+    "dispatch_ready_unique_keys": 145,
+    "parent_child_relations": 147,
+    "same_or_higher_budget_unknown_keys": 0,
+    "saved_status_counts": {
+      "UNSEEN": 145,
+      "WIN": 1
+    },
+    "unique_canonical_s6_keys": 146
+  }
+}

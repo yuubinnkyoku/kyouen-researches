@@ -1,0 +1,96 @@
+{
+  "claim": "scheduling order only; UNKNOWN remains UNKNOWN until exact proof",
+  "dual_certificate_matches_integer_optimum": true,
+  "minimum_additional_classes": 3,
+  "next_target": {
+    "canonical_s5_children": 105,
+    "coverage": [
+      3,
+      7,
+      57,
+      63,
+      77,
+      87
+    ],
+    "dual_vertex": 77,
+    "dual_weight": "1",
+    "key": [
+      1297036692816920704,
+      0
+    ],
+    "known_loss_s5": 13,
+    "rank": 1,
+    "targets_csv": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-3bafea55-after-probe8-dual-tight-targets.csv",
+    "unknown_s5": 92,
+    "unknown_s5_legal_count_max": 104,
+    "unknown_s5_legal_count_min": 78
+  },
+  "ranking": [
+    {
+      "canonical_s5_children": 105,
+      "coverage": [
+        3,
+        7,
+        57,
+        63,
+        77,
+        87
+      ],
+      "dual_vertex": 77,
+      "dual_weight": "1",
+      "key": [
+        1297036692816920704,
+        0
+      ],
+      "known_loss_s5": 13,
+      "rank": 1,
+      "unknown_s5": 92,
+      "unknown_s5_legal_count_max": 104,
+      "unknown_s5_legal_count_min": 78
+    },
+    {
+      "canonical_s5_children": 102,
+      "coverage": [
+        14,
+        18,
+        104
+      ],
+      "dual_vertex": 104,
+      "dual_weight": "1",
+      "key": [
+        10448355533546061824,
+        0
+      ],
+      "known_loss_s5": 8,
+      "rank": 2,
+      "unknown_s5": 94,
+      "unknown_s5_legal_count_max": 100,
+      "unknown_s5_legal_count_min": 80
+    },
+    {
+      "canonical_s5_children": 106,
+      "coverage": [
+        38,
+        100,
+        108
+      ],
+      "dual_vertex": 100,
+      "dual_weight": "1",
+      "key": [
+        1585267068835463168,
+        0
+      ],
+      "known_loss_s5": 5,
+      "rank": 3,
+      "unknown_s5": 101,
+      "unknown_s5_legal_count_max": 105,
+      "unknown_s5_legal_count_min": 81
+    }
+  ],
+  "ranking_rule": "selected additive-optimum classes; dual-tight only; unknown s5 count, then max legal count, then canonical key",
+  "rational_dual_total": "3",
+  "root": [
+    60,
+    27
+  ]
+}

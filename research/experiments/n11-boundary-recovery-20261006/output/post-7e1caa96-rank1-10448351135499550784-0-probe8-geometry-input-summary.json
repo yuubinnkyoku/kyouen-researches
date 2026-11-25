@@ -1,0 +1,44 @@
+{
+  "claim": "Collected only completed exact rows; class WIN status is separately geometry-verified.",
+  "class_key": [
+    10448351135499550784,
+    0
+  ],
+  "completed_exact": 6,
+  "exact_nodes": 47436351,
+  "exact_replay_counts": {
+    "LOSS": 2,
+    "UNKNOWN": 0,
+    "WIN": 4
+  },
+  "exact_targets": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-7e1caa96-rank1-10448351135499550784-0-probe8-exact-targets.csv",
+    "rows": 6,
+    "sha256": "c6a30e215ae42ffabb380e95a7ba9f55208530fae909d8cd849dddf53ac5810b"
+  },
+  "new_exact_cache": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-7e1caa96-rank1-10448351135499550784-0-probe8-new-exact-s5.cache",
+    "rows": 6,
+    "sha256": "973086ecfa54197958e7d96509608790c12f2c41b10bbd81fc6f133981e54482"
+  },
+  "not_dispatched": 2,
+  "raw_all": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-7e1caa96-rank1-10448351135499550784-0-probe8-raw-all.csv",
+    "sha256": "6815ec6e35b21bd4ea892cbcc1db18f45d5aec593c919b7922c922b780c19965"
+  },
+  "raw_output": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-7e1caa96-rank1-10448351135499550784-0-probe8-raw-exact.csv",
+    "rows": 6,
+    "sha256": "9383067039f2e3ac53986800de0e52e61f91ea578eacf38d742c4da1210f1c84"
+  },
+  "run_manifest": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-7e1caa96-rank1-10448351135499550784-0-probe8-run-manifest.json",
+    "sha256": "3d0e4150248d8ec91ed133e06ef3a0b38c96758ab728d656e74e77fad13f0c29"
+  },
+  "runner_summary": {
+    "path": ".local/n11/dual-tight-ready-10448351135499550784-0-probe8/summary.json",
+    "sha256": "75a7fe29a7e50f3807a3e6cda14b01f985ba5958f43134dde5a5bce24e4a36d9"
+  },
+  "scheduled": 8,
+  "schema": "n11-dual-tight-probe-exact-subset-summary-v1"
+}

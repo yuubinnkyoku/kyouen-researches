@@ -1,0 +1,31 @@
+{
+  "schema": "n11-reply27-scheduling-only-ranking-adapter-v2",
+  "claim": "Current main post-probe rank materialized into the ready-subset helper schema; schedule order only.",
+  "root": [
+    60,
+    27
+  ],
+  "current_cache": {
+    "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-11452254-next-rank1-1585267068834414720-0-merged-s5.cache",
+    "sha256": "d5ab6c117c8ec7c17b2dcd4f3f11461cace717b87d0b44078239c8895a894220"
+  },
+  "source_ranking": {
+    "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-11452254-after-probe-ranking.json",
+    "sha256": "1d0e51c80c2ea67b221163baaa3814f8ec740d07c02bde4ed89b358f4368e3ee"
+  },
+  "next_target": {
+    "key": [
+      1585267068834414720,
+      0
+    ],
+    "unknown_s5": 92,
+    "canonical_s5_children": 104,
+    "known_loss_s5": 12,
+    "coverage": [
+      38,
+      77,
+      87
+    ],
+    "rank": 1
+  }
+}

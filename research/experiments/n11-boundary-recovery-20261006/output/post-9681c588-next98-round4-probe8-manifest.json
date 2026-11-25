@@ -1,0 +1,166 @@
+{
+  "blocked_same_or_higher_budget_unknown_keys": [
+    [
+      1152921504741069824,
+      68719476736
+    ]
+  ],
+  "budget": 15000000,
+  "budget_per_target": 15000000,
+  "cache_exact_children": 39,
+  "canonical_class_children": 102,
+  "claim": "Scheduling only. The selected S5 positions remain UNKNOWN until an exact solver verdict or valid S6 witness is obtained.",
+  "class_key": [
+    1152921504741065728,
+    68719476736
+  ],
+  "count_requested": 8,
+  "dispatch_main_commit": "9681c58886aa1e680d4cba1116187b2715df6107",
+  "dispatch_ready_count": 63,
+  "probe_count": 8,
+  "probe_target_sha256": "0cd47d696c019f61760375d8aca33b636a054a3f7ec92fd5a24d53126c688f64",
+  "probe_targets": [
+    [
+      10376293541461623808,
+      68736253952
+    ],
+    [
+      10376293541461623810,
+      68719476736
+    ],
+    [
+      10376293541461623824,
+      68719476736
+    ],
+    [
+      10376293541461627904,
+      68719476736
+    ],
+    [
+      1152921504741065728,
+      68753031168
+    ],
+    [
+      1152921504741065732,
+      68719476736
+    ],
+    [
+      1152921504741065736,
+      68719476736
+    ],
+    [
+      1152921504741066240,
+      68719476736
+    ]
+  ],
+  "schema": "n11-reply27-next-s5-probe-selection-v1",
+  "selected": [
+    {
+      "key": [
+        10376293541461623808,
+        68736253952
+      ],
+      "legal_count": 92,
+      "rank": 1
+    },
+    {
+      "key": [
+        10376293541461623810,
+        68719476736
+      ],
+      "legal_count": 92,
+      "rank": 2
+    },
+    {
+      "key": [
+        10376293541461623824,
+        68719476736
+      ],
+      "legal_count": 92,
+      "rank": 3
+    },
+    {
+      "key": [
+        10376293541461627904,
+        68719476736
+      ],
+      "legal_count": 92,
+      "rank": 4
+    },
+    {
+      "key": [
+        1152921504741065728,
+        68753031168
+      ],
+      "legal_count": 93,
+      "rank": 5
+    },
+    {
+      "key": [
+        1152921504741065732,
+        68719476736
+      ],
+      "legal_count": 93,
+      "rank": 6
+    },
+    {
+      "key": [
+        1152921504741065736,
+        68719476736
+      ],
+      "legal_count": 93,
+      "rank": 7
+    },
+    {
+      "key": [
+        1152921504741066240,
+        68719476736
+      ],
+      "legal_count": 93,
+      "rank": 8
+    }
+  ],
+  "selection_rule": "full current raw-history dispatch-ready keys sorted by legal count ascending, then canonical key",
+  "sources": [
+    {
+      "bytes": 7149,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-2f23fcb8-next98-all-canonical-s5-targets.csv",
+      "sha256": "bb1c470dd3d0809cba73feedca434a8c3fb7a1a0907c6ad043367c4ab9c1c851"
+    },
+    {
+      "bytes": 2636335,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-9681c588-next98-after-round3-raw-history-full-boundary.json",
+      "sha256": "156c1e81ae8c069d71b50dcdb513fed67c37f4f0d458b883c7df245e68a7eb09"
+    },
+    {
+      "bytes": 222172,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-9681c588-next98-round3-merged-s5.cache",
+      "sha256": "54b6678fd1aede47c3e5f051dc591cb8c939e7d5cf460bbc86c8489ae503625e"
+    },
+    {
+      "bytes": 6598,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-9681c588-select-next8-s5-probes.py",
+      "sha256": "1f1a234a94334b40ec967d4555ada01734d19e79eb233587ba62d4a224f2452c"
+    },
+    {
+      "bytes": 1339924,
+      "path": ".local/n11/reply27-probe9/dfpn.exe",
+      "sha256": "05fa5a45c0749506ead2036174c7fc9047badd94835a06c7588d0c892bfafbd7"
+    },
+    {
+      "bytes": 187573,
+      "path": "cpp/solvers/kyouen_dfpn_root.cpp",
+      "sha256": "523f56e61550e1f5b93882229baf8b4cd83489be719ca484d13adef8424c3063"
+    },
+    {
+      "bytes": 13986,
+      "path": "research/experiments/n11-boundary-recovery-20261006/scripts/complete_class_local.py",
+      "sha256": "04ca107661447f40d9c43034f7adbc20a65512c3cd5839b0536f257f2a64d4f4"
+    }
+  ],
+  "targets_out": {
+    "bytes": 611,
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-9681c588-next98-round4-probe8.csv",
+    "sha256": "0cd47d696c019f61760375d8aca33b636a054a3f7ec92fd5a24d53126c688f64"
+  }
+}

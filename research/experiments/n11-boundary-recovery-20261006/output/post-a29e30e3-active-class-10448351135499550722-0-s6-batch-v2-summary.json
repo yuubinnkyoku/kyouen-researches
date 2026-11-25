@@ -1,0 +1,100 @@
+{
+  "budget_per_target": 2000000,
+  "complete_canonical_s6_union": 986,
+  "conflicts": 0,
+  "derived_s5_rows": 1,
+  "dispatch_main_commit": "a29e30e300f0050f0f7c1fe1de465e258483bdce",
+  "new_exact_s6_loss_for_reverse_propagation": 0,
+  "new_s6_rows": 653,
+  "new_s6_verdict_counts": {
+    "LOSS": 0,
+    "UNKNOWN": 37,
+    "WIN": 616
+  },
+  "nodes": 303804421,
+  "outputs": {
+    "-derived-s5.cache": "research/experiments/n11-boundary-recovery-20261006/output/post-a29e30e3-active-class-10448351135499550722-0-s6-batch-v2-derived-s5.cache",
+    "-exact-s6.cache": "research/experiments/n11-boundary-recovery-20261006/output/post-a29e30e3-active-class-10448351135499550722-0-s6-batch-v2-exact-s6.cache",
+    "-inputs.csv": "research/experiments/n11-boundary-recovery-20261006/output/post-a29e30e3-active-class-10448351135499550722-0-s6-batch-v2-inputs.csv",
+    "-raw-all.csv": "research/experiments/n11-boundary-recovery-20261006/output/post-a29e30e3-active-class-10448351135499550722-0-s6-batch-v2-raw-all.csv",
+    "-raw-exact.csv": "research/experiments/n11-boundary-recovery-20261006/output/post-a29e30e3-active-class-10448351135499550722-0-s6-batch-v2-raw-exact.csv",
+    "-runner-summary.json": "research/experiments/n11-boundary-recovery-20261006/output/post-a29e30e3-active-class-10448351135499550722-0-s6-batch-v2-runner-summary.json",
+    "-sources.json": "research/experiments/n11-boundary-recovery-20261006/output/post-a29e30e3-active-class-10448351135499550722-0-s6-batch-v2-sources.json",
+    "-summary.json": "research/experiments/n11-boundary-recovery-20261006/output/post-a29e30e3-active-class-10448351135499550722-0-s6-batch-v2-summary.json"
+  },
+  "parent_child_incidences": 1041,
+  "parent_count": 11,
+  "parent_keys": [
+    [
+      1152921504607963136,
+      536870912
+    ],
+    [
+      1152921504609009664,
+      536870916
+    ],
+    [
+      1297036692682703360,
+      16777217
+    ],
+    [
+      1297036692682703360,
+      34359738369
+    ],
+    [
+      1297036692682703360,
+      68719476737
+    ],
+    [
+      10448351135499550722,
+      67108864
+    ],
+    [
+      10448351135499550786,
+      0
+    ],
+    [
+      10448351135499550850,
+      0
+    ],
+    [
+      10448351135499552770,
+      0
+    ],
+    [
+      10448351135500599298,
+      0
+    ],
+    [
+      10450602935313235970,
+      0
+    ]
+  ],
+  "raw_directory": {
+    "files": 653,
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-a29e30e3-active-class-10448351135499550722-0-s6-batch-v2-raw"
+  },
+  "reverse_propagated_s5_loss": 0,
+  "root": [
+    60,
+    27
+  ],
+  "s5_parent_outcomes": {
+    "LOSS": 0,
+    "UNKNOWN": 10,
+    "WIN": 1
+  },
+  "saved_s6_boundary_counts": {
+    "UNSEEN": 980,
+    "WIN": 6
+  },
+  "schema": "n11-reply27-s6-batch-descent-evidence-summary-v1",
+  "source_manifest_sha256": "5a9063c8a6053afe0b3e89494cff3d95cabb826c389814da0e724f630fc2a4b9",
+  "total_boundary_verdict_counts": {
+    "LOSS": 0,
+    "UNKNOWN": 37,
+    "WIN": 622
+  },
+  "unknowns_propagated": false,
+  "workers": 4
+}

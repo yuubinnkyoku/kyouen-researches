@@ -1,0 +1,46 @@
+{
+  "base_cache": {
+    "LOSS": 4808,
+    "WIN": 122,
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s7-witness-merged-s5.cache",
+    "rows": 4930,
+    "sha256": "3b04187af3d7ee7d0c42914d064024fa509726ce3f38d35317666277bb5a4fdb"
+  },
+  "conflicts": 0,
+  "delta_cache": {
+    "LOSS": 2,
+    "WIN": 2,
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s7-witness-next-probe8-adaptive-new-exact-s5.cache",
+    "rows": 4,
+    "sha256": "765d35188e7c6318d9ba6f5b4b7be60678afc6aa43d66eaccf02515ef9f5d8d8"
+  },
+  "dispatched_targets": 4,
+  "duplicate_verdicts": 0,
+  "merged_cache": {
+    "LOSS": 4810,
+    "WIN": 124,
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s7-witness-next-probe8-adaptive-merged-s5.cache",
+    "rows": 4934,
+    "sha256": "bff0360cb3e6a5048e5f372068772c461d81ebab85a4f9ee642169d5bf80c941"
+  },
+  "not_dispatched_after_win": [
+    [
+      1297036692682702864,
+      16777217
+    ],
+    [
+      1297036692682706944,
+      16777217
+    ],
+    [
+      1297036692686897152,
+      65537
+    ],
+    [
+      10448351139795566592,
+      0
+    ]
+  ],
+  "schema": "n11-dual-tight-adaptive-probe-merge-receipt-v1",
+  "unknown_rows_excluded_from_cache": 0
+}

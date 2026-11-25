@@ -1,0 +1,124 @@
+{
+  "blocked_same_or_higher_budget_unknown_keys": [],
+  "budget": 15000000,
+  "budget_binding": "Explicit --budget passed to the raw-history audit command; copied into the validator input in-memory because the raw audit schema omits requested_budget. The raw audit file was not modified.",
+  "claim": "Preflight only; it classifies no game outcomes. Same-budget UNKNOWN remains blocked and every scheduled target remains UNKNOWN until an exact replay or valid s6 witness is found.",
+  "class_key": [
+    10448351135500075008,
+    0
+  ],
+  "exact_cache_sha256": "684e891ac5feb59dc4d23c44dccad5177e10b24507655056880a37dc8baca8c0",
+  "raw_history": {
+    "conflicts": 0,
+    "csv_files_examined": 2151,
+    "prior_exact": 0,
+    "rows_examined": 3418,
+    "same_or_higher_budget_unknown_rows": 0
+  },
+  "ready_keys": [
+    [
+      1152921504606912512,
+      570425345
+    ],
+    [
+      1297036692682711040,
+      65
+    ],
+    [
+      10448351135500075008,
+      64
+    ],
+    [
+      10448351135500075008,
+      67108864
+    ],
+    [
+      10448351135500107776,
+      0
+    ],
+    [
+      10448351135516852224,
+      0
+    ],
+    [
+      10448351685255888896,
+      0
+    ],
+    [
+      10449477035406917632,
+      0
+    ]
+  ],
+  "saved_s6": {
+    "conflicts": 0,
+    "new_exact": 0,
+    "parents": 8,
+    "source_files": 39,
+    "unknown_parents": 8
+  },
+  "schema": "n11-dual-tight-probe-preflight-binding-v1",
+  "sources": [
+    {
+      "bytes": 563,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-c1bf7dc3-rank1-10448351135500075008-0-probe8-next.csv",
+      "sha256": "7abefad7a86f8745a2ae21d99e11a935c8e765be977fa1d0250b072616ecffc1"
+    },
+    {
+      "bytes": 4809,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-c1bf7dc3-rank1-10448351135500075008-0-probe8-next-manifest.json",
+      "sha256": "1a18185336545f5ab4820ecf11c7d389da5c92e40ec5c5e20f44829761ddeb03"
+    },
+    {
+      "bytes": 195555,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-c1bf7dc3-rank1-10448351135500075008-0-probe8-merged-s5.cache",
+      "sha256": "684e891ac5feb59dc4d23c44dccad5177e10b24507655056880a37dc8baca8c0"
+    },
+    {
+      "bytes": 586838,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-c1bf7dc3-rank1-10448351135500075008-0-probe8-next-raw-history-audit.json",
+      "sha256": "6fee1c36c7f9b028da594ad4490d6bcfe972c5ce9310f7303a6d60c93c5b16fb"
+    },
+    {
+      "bytes": 13523,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-c1bf7dc3-rank1-10448351135500075008-0-probe8-next-saved-s6-summary.json",
+      "sha256": "c0461e7a04eb2e38d79fa4865904b59449778a1cb6dc3e85a36371c01f4065bf"
+    },
+    {
+      "bytes": 10628,
+      "path": "research/experiments/n11-boundary-recovery-20261006/scripts/audit_s5_raw_history.py",
+      "sha256": "32a0e48c52763fc9f80da9e5ef7157d2d05d7e2ed51a9bf45bbb47d94e116d03"
+    },
+    {
+      "bytes": 16190,
+      "path": "research/experiments/n11-boundary-recovery-20261006/scripts/audit_saved_s6_targets.py",
+      "sha256": "38cb0596868c57631ddbcb1927420fcd6f9579b8f7a0e4c443727b3ab01781d9"
+    },
+    {
+      "bytes": 4764,
+      "path": "research/experiments/n11-boundary-recovery-20261006/scripts/audit_probe_preflight.py",
+      "sha256": "57d7796861c5a97eeba046b10eb543dec54fd96eee07e90f796b444d2911fe0a"
+    },
+    {
+      "bytes": 7152,
+      "path": "research/experiments/n11-boundary-recovery-20261006/scripts/verify_dual_tight_probe_preflight.py",
+      "sha256": "867235da2dfaf7d4f2c25ea800d683e360faf38934f1f48aca1a528f142bb868"
+    },
+    {
+      "bytes": 6439,
+      "path": "research/experiments/n11-search-methods/scripts/dfpn_edge_classes.py",
+      "sha256": "6cca3cfe161ffc9ffc199c56b595e9d0f72b839ee945e8b7e2c4090dafcf0c0c"
+    }
+  ],
+  "target_count": 8,
+  "target_legal_counts": {
+    "10448351135500075008,64": 88,
+    "10448351135500075008,67108864": 87,
+    "10448351135500107776,0": 88,
+    "10448351135516852224,0": 88,
+    "10448351685255888896,0": 88,
+    "10449477035406917632,0": 87,
+    "1152921504606912512,570425345": 89,
+    "1297036692682711040,65": 88
+  },
+  "target_sha256": "7abefad7a86f8745a2ae21d99e11a935c8e765be977fa1d0250b072616ecffc1"
+}

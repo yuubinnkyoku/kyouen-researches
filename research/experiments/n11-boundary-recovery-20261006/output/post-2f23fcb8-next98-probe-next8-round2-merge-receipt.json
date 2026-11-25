@@ -1,0 +1,35 @@
+{
+  "schema": "n11-exact-s5-cache-merge-receipt-v1",
+  "base": {
+    "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-2f23fcb8-next98-probe-next8-merged-s5.cache",
+    "sha256": "094ffbc9884f1504c9356d80500c55a4a85cbaab5b37aed756f5943a227f1419",
+    "rows": 5435,
+    "WIN": 144,
+    "LOSS": 5291,
+    "conflict": 0
+  },
+  "delta": {
+    "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-2f23fcb8-next98-probe-next8-round2-exact-s5.cache",
+    "sha256": "d8f7517424881c7f24dbc20d843d2b9e61f991f303f48f974886a3b169753e98",
+    "rows": 7,
+    "WIN": 0,
+    "LOSS": 7,
+    "conflict": 0,
+    "raw_path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-2f23fcb8-next98-probe-next8-round2-raw-exact.csv",
+    "raw_sha256": "87161a653181dda1be80b301145f78d03dc4a095fb9de2550b86f872ce543b63",
+    "runner_summary_path": ".local\\n11\\dual-tight-next98-probe-next8-round2-1152921504741065728-68719476736\\summary.json",
+    "runner_summary_sha256": "84db3a7d2dba038d2dd42f73aa2bb3483f64ecb9d83f85fbeaa1707aaa9590ef"
+  },
+  "merged": {
+    "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-2f23fcb8-next98-probe-next8-round2-merged-s5.cache",
+    "sha256": "8fa443d7d0c90db400b481e3484e62a301aa71d5c5489dad2f2363ce7b226195",
+    "rows": 5442,
+    "WIN": 144,
+    "LOSS": 5298,
+    "conflict": 0
+  },
+  "overlap_keys": 0,
+  "verdict_conflicts": 0,
+  "unknown_rows_merged": 0,
+  "not_dispatched_keys": []
+}

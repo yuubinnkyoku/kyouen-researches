@@ -1,0 +1,60 @@
+{
+  "budget_per_target": 2000000,
+  "complete_canonical_s6_union": 90,
+  "conflicts": 0,
+  "derived_s5_rows": 0,
+  "dispatch_main_commit": "2199bcc8faca3dec5b8123d55a9469b9ad9884c3",
+  "new_exact_s6_loss_for_reverse_propagation": 0,
+  "new_s6_rows": 87,
+  "new_s6_verdict_counts": {
+    "LOSS": 0,
+    "UNKNOWN": 3,
+    "WIN": 84
+  },
+  "nodes": 29545900,
+  "outputs": {
+    "-derived-s5.cache": "research/experiments/n11-boundary-recovery-20261006/output/post-2199bcc8-s5-10448351135499552768-128-s6-descent-derived-s5.cache",
+    "-exact-s6.cache": "research/experiments/n11-boundary-recovery-20261006/output/post-2199bcc8-s5-10448351135499552768-128-s6-descent-exact-s6.cache",
+    "-inputs.csv": "research/experiments/n11-boundary-recovery-20261006/output/post-2199bcc8-s5-10448351135499552768-128-s6-descent-inputs.csv",
+    "-raw-all.csv": "research/experiments/n11-boundary-recovery-20261006/output/post-2199bcc8-s5-10448351135499552768-128-s6-descent-raw-all.csv",
+    "-raw-exact.csv": "research/experiments/n11-boundary-recovery-20261006/output/post-2199bcc8-s5-10448351135499552768-128-s6-descent-raw-exact.csv",
+    "-runner-summary.json": "research/experiments/n11-boundary-recovery-20261006/output/post-2199bcc8-s5-10448351135499552768-128-s6-descent-runner-summary.json",
+    "-sources.json": "research/experiments/n11-boundary-recovery-20261006/output/post-2199bcc8-s5-10448351135499552768-128-s6-descent-sources.json",
+    "-summary.json": "research/experiments/n11-boundary-recovery-20261006/output/post-2199bcc8-s5-10448351135499552768-128-s6-descent-summary.json"
+  },
+  "parent_child_incidences": 90,
+  "parent_count": 1,
+  "parent_keys": [
+    [
+      10448351135499552768,
+      128
+    ]
+  ],
+  "raw_directory": {
+    "files": 87,
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-2199bcc8-s5-10448351135499552768-128-s6-descent"
+  },
+  "reverse_propagated_s5_loss": 0,
+  "root": [
+    60,
+    27
+  ],
+  "s5_parent_outcomes": {
+    "LOSS": 0,
+    "UNKNOWN": 1,
+    "WIN": 0
+  },
+  "saved_s6_boundary_counts": {
+    "UNSEEN": 87,
+    "WIN": 3
+  },
+  "schema": "n11-reply27-s6-batch-descent-evidence-summary-v1",
+  "source_manifest_sha256": "64e688e1f8f17ea691d0a152672ac112985bb1693b98ce561fa716ea54bf23a8",
+  "total_boundary_verdict_counts": {
+    "LOSS": 0,
+    "UNKNOWN": 3,
+    "WIN": 87
+  },
+  "unknowns_propagated": false,
+  "workers": 1
+}

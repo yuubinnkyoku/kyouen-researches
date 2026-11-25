@@ -1,0 +1,39 @@
+{
+  "boundary_audit": {
+    "canonical_children": 106,
+    "exact_loss": 31,
+    "exact_win": 0,
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-23b52acf-after-round2-round3-class-boundary-audit.json",
+    "sha256": "c1465bb0a43c6940ee40e19a07afd0f85c3211874be43bf9aeb342778ea4c4ba",
+    "status": "UNKNOWN",
+    "unknown": 75
+  },
+  "claim": "Target extraction only. S5 keys not in the exact cache remain UNKNOWN; status comes from the full geometry audit.",
+  "class_key": [
+    1333065489702715392,
+    0
+  ],
+  "exact_cache": {
+    "conflicts": 0,
+    "loss": 5476,
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-23b52acf-after-round2-round3-completed-merged-s5.cache",
+    "rows": 5627,
+    "sha256": "f9b714d2ec42824f528ddb126977bfce3e2175d7b2fb85b6c0443a57890dda44",
+    "win": 151
+  },
+  "input_unknown_before": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-23b52acf-after-round2-unknown-s5.csv",
+    "rows": 83,
+    "sha256": "c64d23ff88af8c9060f39992893d4dfa35fe3bba876e66aed1f35bfeddb43e0c"
+  },
+  "output": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-23b52acf-after-round3-unknown-s5.csv",
+    "rows": 75,
+    "sha256": "fe2ca95c119e05da7e9c39cf67616754ec4c923391d7bcf4efdc4e15b8088e65"
+  },
+  "root": [
+    60,
+    27
+  ],
+  "schema": "n11-reply27-class-unknown-s5-target-manifest-v1"
+}

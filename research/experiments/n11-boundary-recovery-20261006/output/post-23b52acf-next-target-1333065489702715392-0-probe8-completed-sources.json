@@ -1,0 +1,389 @@
+{
+  "claim": "All scheduled rows completed. Exact WIN/LOSS values are solver outputs; UNKNOWN rows are retained as raw evidence but excluded from caches.",
+  "class_key": [
+    1333065489702715392,
+    0
+  ],
+  "inputs": [
+    {
+      "bytes": 632,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-23b52acf-next-target-1333065489702715392-0-probe8.csv",
+      "sha256": "3946a895435a6d6457733880a947c526c865927d320d16262d6b71c4eaa81119"
+    },
+    {
+      "bytes": 4093,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-23b52acf-next-target-1333065489702715392-0-probe8-manifest.json",
+      "sha256": "b3fc76f4aa90de5e4a8fd021e0ff1530df1c2c12d83a01f55f96e3feb88b6ebb"
+    },
+    {
+      "bytes": 903,
+      "path": ".local/n11/dual-tight-ready-1333065489702715392-0-probe8/summary.json",
+      "sha256": "4fa279b0656f870f5223a2d0d49a653e10dacc5124c16160893774b8483c2118"
+    },
+    {
+      "bytes": 459,
+      "path": ".local/n11/dual-tight-ready-1333065489702715392-0-probe8/cache-out/new-exact-s5.cache",
+      "sha256": "76a26efc979bcbea2181297d7cc46af10907682154d67c35e6c9bdb8b8c60057"
+    },
+    {
+      "bytes": 227735,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-07f822e5-after-probe8-probe8-completed-merged-s5.cache",
+      "sha256": "00d4ef09edd3e4bb7141d3e9e56ee668ec8188de7eeb2e95b815af05539b7db1"
+    },
+    {
+      "bytes": 7078,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-23b52acf-next-target-1333065489702715392-0-unknown-s5.csv",
+      "sha256": "96581dda410bbc38fd57d4441ac49cf0d88a987545b0062109bebb870850aec5"
+    },
+    {
+      "bytes": 1302,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-07f822e5-after-probe8-probe8-ranking.json",
+      "sha256": "80b77080ae9b9e5242ed074da9f81c44ddc1829f5644e9c06a93b79b5f548742"
+    },
+    {
+      "bytes": 1339924,
+      "path": ".local/n11/reply27-probe9/dfpn.exe",
+      "sha256": "05fa5a45c0749506ead2036174c7fc9047badd94835a06c7588d0c892bfafbd7"
+    },
+    {
+      "bytes": 187573,
+      "path": "cpp/solvers/kyouen_dfpn_root.cpp",
+      "sha256": "523f56e61550e1f5b93882229baf8b4cd83489be719ca484d13adef8424c3063"
+    },
+    {
+      "bytes": 13986,
+      "path": "research/experiments/n11-boundary-recovery-20261006/scripts/complete_class_local.py",
+      "sha256": "04ca107661447f40d9c43034f7adbc20a65512c3cd5839b0536f257f2a64d4f4"
+    },
+    {
+      "bytes": 18007,
+      "path": "research/experiments/n11-boundary-recovery-20261006/scripts/collect_dual_tight_completed_probe_v2.py",
+      "sha256": "0ac7d6d656355590b07df0b8f62326cb6953decb20f2bbe398cccc3e3a3ba2ef"
+    }
+  ],
+  "main_at_dispatch": "23b52acfb96c95a258296b4ffda45562db0e74ea",
+  "outputs": [
+    {
+      "bytes": 586,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-23b52acf-next-target-1333065489702715392-0-probe8-completed-raw-all.csv",
+      "sha256": "550bf80da17bce159f5d0e93046feb810fb107ff93a5fccb6d84099d1001ef65"
+    },
+    {
+      "bytes": 558,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-23b52acf-next-target-1333065489702715392-0-probe8-completed-raw-exact.csv",
+      "sha256": "4f041c1dd5649ebfe24a55dd052bf7e6d93b4adc9ae60e6fa21d643f57055072"
+    },
+    {
+      "bytes": 627,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-23b52acf-next-target-1333065489702715392-0-probe8-completed-exact-targets.csv",
+      "sha256": "bddb8624fbc38437a796bb8fa5484c002b5581b401e5a00af8e68965460febec"
+    },
+    {
+      "bytes": 451,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-23b52acf-next-target-1333065489702715392-0-probe8-completed-new-exact-s5.cache",
+      "sha256": "7e4dc1435819ffb543c92973d3663e2bb8d63847f37f2fd567388d3b2553c9d0"
+    },
+    {
+      "bytes": 228116,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-23b52acf-next-target-1333065489702715392-0-probe8-completed-merged-s5.cache",
+      "sha256": "6c35865cb5c183f59dc6e36996ada4ca93215a467656e2947c0e628e83dc363a"
+    },
+    {
+      "bytes": 1415,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-23b52acf-next-target-1333065489702715392-0-probe8-completed-summary.json",
+      "sha256": "dcc8646f33631b266c8b70acf54def80d85e231f2611e5609b4412b769f69dd0"
+    },
+    {
+      "bytes": 872,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-23b52acf-next-target-1333065489702715392-0-probe8-completed-runner-summary.json",
+      "sha256": "42bcd3b8d97b885fbd5ffdb65c304b732e8f08b4227d7c0534a1dc4dd45b28a3"
+    },
+    {
+      "bytes": 1052,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-23b52acf-next-target-1333065489702715392-0-probe8-completed-merge-receipt.json",
+      "sha256": "a754e63ee6db7d660f1b6775cfd942d62d926d719fb67c24b1625ac2b21eaacb"
+    },
+    {
+      "bytes": 286,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-23b52acf-next-target-1333065489702715392-0-probe8-completed-raw/s5-1152921504742113312-68719476736.out.csv",
+      "sha256": "f1879f027bc7fccc98119bee323c0fd419ba5f15e329ef3331e708be5e333439"
+    },
+    {
+      "bytes": 278,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-23b52acf-next-target-1333065489702715392-0-probe8-completed-raw/s5-1333065489702715392-65536.out.csv",
+      "sha256": "493256dbc66284b8cac4c860668cea2ac0150d9c2e042ab84c95285ab7dfe840"
+    },
+    {
+      "bytes": 277,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-23b52acf-next-target-1333065489702715392-0-probe8-completed-raw/s5-1333065489702715392-64.out.csv",
+      "sha256": "39cd9c2886062b02791a17e77b468d66d0f047404f2681ff05b575534c87dea8"
+    },
+    {
+      "bytes": 284,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-23b52acf-next-target-1333065489702715392-0-probe8-completed-raw/s5-1333065489702715392-67108864.out.csv",
+      "sha256": "6390821db099d3f172f6fd9898394070e062eaaed528a74bb4bb080872db8e33"
+    },
+    {
+      "bytes": 274,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-23b52acf-next-target-1333065489702715392-0-probe8-completed-raw/s5-1333206227191070720-0.out.csv",
+      "sha256": "64d0c27fd60bc7719ce70093245b5f7b633f85527d333e69c8da0971296643c2"
+    },
+    {
+      "bytes": 274,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-23b52acf-next-target-1333065489702715392-0-probe8-completed-raw/s5-1333065558422192128-0.out.csv",
+      "sha256": "3f92c8d340ce992d1b6993bb4e69a7e81861b453a42a73b3aa1d7a7fd397b9ef"
+    },
+    {
+      "bytes": 276,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-23b52acf-next-target-1333065489702715392-0-probe8-completed-raw/s5-1333628439656136704-0.out.csv",
+      "sha256": "94febd3792eb50a717206f124b2fb9f1c257663ececac89a3b1849571ddd8e09"
+    },
+    {
+      "bytes": 280,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-23b52acf-next-target-1333065489702715392-0-probe8-completed-raw/s5-10376293541461626880-131074.out.csv",
+      "sha256": "be7c943ac930c94caa64f36a391dae81c0206d91c367d97c69ab135456e73490"
+    }
+  ],
+  "per_target": [
+    {
+      "archived_raw_copy": "research/experiments/n11-boundary-recovery-20261006/output/post-23b52acf-next-target-1333065489702715392-0-probe8-completed-raw/s5-1152921504742113312-68719476736.out.csv",
+      "input": {
+        "bytes": 76,
+        "path": ".local/n11/dual-tight-ready-1333065489702715392-0-probe8/s5-1152921504742113312-68719476736.input.csv",
+        "sha256": "67bff5bf128816ae1f5c03feb543d693b46d9627a57b3fdd115ff5bca8f01c12"
+      },
+      "key": [
+        1152921504742113312,
+        68719476736
+      ],
+      "log": {
+        "bytes": 0,
+        "path": ".local/n11/dual-tight-ready-1333065489702715392-0-probe8/s5-1152921504742113312-68719476736.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "nodes": 7871449,
+      "output": {
+        "bytes": 286,
+        "path": ".local/n11/dual-tight-ready-1333065489702715392-0-probe8/s5-1152921504742113312-68719476736.out.csv",
+        "sha256": "f1879f027bc7fccc98119bee323c0fd419ba5f15e329ef3331e708be5e333439"
+      },
+      "verdict": 2
+    },
+    {
+      "archived_raw_copy": "research/experiments/n11-boundary-recovery-20261006/output/post-23b52acf-next-target-1333065489702715392-0-probe8-completed-raw/s5-1333065489702715392-65536.out.csv",
+      "input": {
+        "bytes": 71,
+        "path": ".local/n11/dual-tight-ready-1333065489702715392-0-probe8/s5-1333065489702715392-65536.input.csv",
+        "sha256": "b7e391f017660dd21330c95401788ba15a505eaaf577c05e6c22d34d0f804461"
+      },
+      "key": [
+        1333065489702715392,
+        65536
+      ],
+      "log": {
+        "bytes": 0,
+        "path": ".local/n11/dual-tight-ready-1333065489702715392-0-probe8/s5-1333065489702715392-65536.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "nodes": 1996802,
+      "output": {
+        "bytes": 278,
+        "path": ".local/n11/dual-tight-ready-1333065489702715392-0-probe8/s5-1333065489702715392-65536.out.csv",
+        "sha256": "493256dbc66284b8cac4c860668cea2ac0150d9c2e042ab84c95285ab7dfe840"
+      },
+      "verdict": 2
+    },
+    {
+      "archived_raw_copy": "research/experiments/n11-boundary-recovery-20261006/output/post-23b52acf-next-target-1333065489702715392-0-probe8-completed-raw/s5-1333065489702715392-64.out.csv",
+      "input": {
+        "bytes": 68,
+        "path": ".local/n11/dual-tight-ready-1333065489702715392-0-probe8/s5-1333065489702715392-64.input.csv",
+        "sha256": "d2394a160179c0aa6875b557cbe03dc7627dbfd6e37fdcd43aa83d08ccca8596"
+      },
+      "key": [
+        1333065489702715392,
+        64
+      ],
+      "log": {
+        "bytes": 0,
+        "path": ".local/n11/dual-tight-ready-1333065489702715392-0-probe8/s5-1333065489702715392-64.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "nodes": 4590399,
+      "output": {
+        "bytes": 277,
+        "path": ".local/n11/dual-tight-ready-1333065489702715392-0-probe8/s5-1333065489702715392-64.out.csv",
+        "sha256": "39cd9c2886062b02791a17e77b468d66d0f047404f2681ff05b575534c87dea8"
+      },
+      "verdict": 2
+    },
+    {
+      "archived_raw_copy": "research/experiments/n11-boundary-recovery-20261006/output/post-23b52acf-next-target-1333065489702715392-0-probe8-completed-raw/s5-1333065489702715392-67108864.out.csv",
+      "input": {
+        "bytes": 74,
+        "path": ".local/n11/dual-tight-ready-1333065489702715392-0-probe8/s5-1333065489702715392-67108864.input.csv",
+        "sha256": "6899846856f2e731b246afd7e34b155d400e7280cfbaa8fed3227f3c2ee47e83"
+      },
+      "key": [
+        1333065489702715392,
+        67108864
+      ],
+      "log": {
+        "bytes": 0,
+        "path": ".local/n11/dual-tight-ready-1333065489702715392-0-probe8/s5-1333065489702715392-67108864.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "nodes": 10237360,
+      "output": {
+        "bytes": 284,
+        "path": ".local/n11/dual-tight-ready-1333065489702715392-0-probe8/s5-1333065489702715392-67108864.out.csv",
+        "sha256": "6390821db099d3f172f6fd9898394070e062eaaed528a74bb4bb080872db8e33"
+      },
+      "verdict": 2
+    },
+    {
+      "archived_raw_copy": "research/experiments/n11-boundary-recovery-20261006/output/post-23b52acf-next-target-1333065489702715392-0-probe8-completed-raw/s5-1333206227191070720-0.out.csv",
+      "input": {
+        "bytes": 67,
+        "path": ".local/n11/dual-tight-ready-1333065489702715392-0-probe8/s5-1333206227191070720-0.input.csv",
+        "sha256": "b4f63258a92724be0c234e20af829c5756180d7ed60f83b97c40a9b38ea0621b"
+      },
+      "key": [
+        1333206227191070720,
+        0
+      ],
+      "log": {
+        "bytes": 0,
+        "path": ".local/n11/dual-tight-ready-1333065489702715392-0-probe8/s5-1333206227191070720-0.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "nodes": 1972299,
+      "output": {
+        "bytes": 274,
+        "path": ".local/n11/dual-tight-ready-1333065489702715392-0-probe8/s5-1333206227191070720-0.out.csv",
+        "sha256": "64d0c27fd60bc7719ce70093245b5f7b633f85527d333e69c8da0971296643c2"
+      },
+      "verdict": 2
+    },
+    {
+      "archived_raw_copy": "research/experiments/n11-boundary-recovery-20261006/output/post-23b52acf-next-target-1333065489702715392-0-probe8-completed-raw/s5-1333065558422192128-0.out.csv",
+      "input": {
+        "bytes": 67,
+        "path": ".local/n11/dual-tight-ready-1333065489702715392-0-probe8/s5-1333065558422192128-0.input.csv",
+        "sha256": "0e2d8901883fd31ce366355eaaca7ff1458e6e77818c90dfd5c7d6fd64737ebb"
+      },
+      "key": [
+        1333065558422192128,
+        0
+      ],
+      "log": {
+        "bytes": 0,
+        "path": ".local/n11/dual-tight-ready-1333065489702715392-0-probe8/s5-1333065558422192128-0.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "nodes": 1972299,
+      "output": {
+        "bytes": 274,
+        "path": ".local/n11/dual-tight-ready-1333065489702715392-0-probe8/s5-1333065558422192128-0.out.csv",
+        "sha256": "3f92c8d340ce992d1b6993bb4e69a7e81861b453a42a73b3aa1d7a7fd397b9ef"
+      },
+      "verdict": 2
+    },
+    {
+      "archived_raw_copy": "research/experiments/n11-boundary-recovery-20261006/output/post-23b52acf-next-target-1333065489702715392-0-probe8-completed-raw/s5-1333628439656136704-0.out.csv",
+      "input": {
+        "bytes": 67,
+        "path": ".local/n11/dual-tight-ready-1333065489702715392-0-probe8/s5-1333628439656136704-0.input.csv",
+        "sha256": "218ec86b8e30312713537558c54acd990f8edc2e4ea4c5e038ac4b884c6ff756"
+      },
+      "key": [
+        1333628439656136704,
+        0
+      ],
+      "log": {
+        "bytes": 0,
+        "path": ".local/n11/dual-tight-ready-1333065489702715392-0-probe8/s5-1333628439656136704-0.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "nodes": 4122134,
+      "output": {
+        "bytes": 276,
+        "path": ".local/n11/dual-tight-ready-1333065489702715392-0-probe8/s5-1333628439656136704-0.out.csv",
+        "sha256": "94febd3792eb50a717206f124b2fb9f1c257663ececac89a3b1849571ddd8e09"
+      },
+      "verdict": 2
+    },
+    {
+      "archived_raw_copy": "research/experiments/n11-boundary-recovery-20261006/output/post-23b52acf-next-target-1333065489702715392-0-probe8-completed-raw/s5-10376293541461626880-131074.out.csv",
+      "input": {
+        "bytes": 73,
+        "path": ".local/n11/dual-tight-ready-1333065489702715392-0-probe8/s5-10376293541461626880-131074.input.csv",
+        "sha256": "22e078e9e6be5c6701b35fa880eb4b6ae0db44ba4d0b766c1895404a96a6ee28"
+      },
+      "key": [
+        10376293541461626880,
+        131074
+      ],
+      "log": {
+        "bytes": 0,
+        "path": ".local/n11/dual-tight-ready-1333065489702715392-0-probe8/s5-10376293541461626880-131074.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "nodes": 1996802,
+      "output": {
+        "bytes": 280,
+        "path": ".local/n11/dual-tight-ready-1333065489702715392-0-probe8/s5-10376293541461626880-131074.out.csv",
+        "sha256": "be7c943ac930c94caa64f36a391dae81c0206d91c367d97c69ab135456e73490"
+      },
+      "verdict": 2
+    }
+  ],
+  "probe_target_sha256": "bddb8624fbc38437a796bb8fa5484c002b5581b401e5a00af8e68965460febec",
+  "schedule_bound_sources": [
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-23b52acf-next-target-1333065489702715392-0-unknown-s5.csv",
+      "sha256": "96581dda410bbc38fd57d4441ac49cf0d88a987545b0062109bebb870850aec5"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-07f822e5-after-probe8-probe8-ranking.json",
+      "sha256": "80b77080ae9b9e5242ed074da9f81c44ddc1829f5644e9c06a93b79b5f548742"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-07f822e5-after-probe8-probe8-completed-merged-s5.cache",
+      "sha256": "00d4ef09edd3e4bb7141d3e9e56ee668ec8188de7eeb2e95b815af05539b7db1"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-23b52acf-next-target-1333065489702715392-0-raw-history-baseline.json",
+      "sha256": "a2363caaa0b7f298790771e982617448e797642ad9cf4aea2296876c80c3e35b"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-23b52acf-next-target-1333065489702715392-0-raw-history-baseline.json",
+      "sha256": "a2363caaa0b7f298790771e982617448e797642ad9cf4aea2296876c80c3e35b"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/scripts/verify_raw_history_coverage.py",
+      "sha256": "8c050fe79b37ca280623a5ae1f46c7a6eb487780e33f88904932fbb7247679f0"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-23b52acf-next-target-1333065489702715392-0-saved-s6-summary.json",
+      "sha256": "8cb2f1975c271c1a90fa3ab20c995d0a21e02a335ed682484963e39d5f3aba76"
+    },
+    {
+      "path": ".local/n11/reply27-probe9/dfpn.exe",
+      "sha256": "05fa5a45c0749506ead2036174c7fc9047badd94835a06c7588d0c892bfafbd7"
+    },
+    {
+      "path": "cpp/solvers/kyouen_dfpn_root.cpp",
+      "sha256": "523f56e61550e1f5b93882229baf8b4cd83489be719ca484d13adef8424c3063"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/scripts/complete_class_local.py",
+      "sha256": "04ca107661447f40d9c43034f7adbc20a65512c3cd5839b0536f257f2a64d4f4"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/scripts/prepare_dual_tight_ready_subset_probe.py",
+      "sha256": "de650b375c1dfd7fe74460e8da2ed5f2d9c441997b315247078fa54bfb86901b"
+    }
+  ],
+  "schema": "n11-dual-tight-completed-probe-sources-v1"
+}
