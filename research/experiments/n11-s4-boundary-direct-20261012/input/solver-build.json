@@ -1,0 +1,19 @@
+{
+  "schema": "n11-s5-loss-cost-driver-child-profile-build-v1",
+  "source_path": "cpp/solvers/kyouen_dfpn_root.cpp",
+  "source_sha256": "48e51bb56288e090f51996eb4d9a208ca0458d11f73ba61bf5f08dade25db446",
+  "compile_command": [
+    "g++",
+    "-O3",
+    "-std=c++20",
+    "-DNDEBUG",
+    "cpp/solvers/kyouen_dfpn_root.cpp",
+    "-o",
+    ".local/n11-s5-loss-cost-drivers-20261012/dfpn-profile-child.exe"
+  ],
+  "compiler_version": "g++.exe (Rev8, Built by MSYS2 project) 15.2.0",
+  "binary_path": ".local/n11-s5-loss-cost-drivers-20261012/dfpn-profile-child.exe",
+  "binary_sha256": "8d0781ce89ad11a7cd8011cf351d627793b5b76351b7639e433875a43f627cb2",
+  "baseline_profile_binary_sha256": "8fbcec9e13cde3ba7b89021fa6d48a4441511ed939ffa4cfdac76184d9982e2d",
+  "profile_regression_receipt": "research/experiments/n11-s5-loss-cost-drivers-20261012/output/profile-regression-v4/receipt.json"
+}

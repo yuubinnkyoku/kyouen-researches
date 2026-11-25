@@ -1,0 +1,74 @@
+{
+  "cold_process_per_root": true,
+  "node_limit": 15000000,
+  "runs": [
+    {
+      "budget": 15000000,
+      "command": [
+        "dfpn-profile-child.exe",
+        "--n=11",
+        "--memo=22",
+        "--only=5",
+        "--exact-order=count",
+        "--exact-replay=D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\research\\experiments\\n11-s4-boundary-direct-20261012\\input\\s5-64.csv",
+        "--exact-replay-budget=15000000",
+        "--csv=D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\research\\experiments\\n11-s4-boundary-direct-20261012\\output\\raw\\s5-64.csv",
+        "--log=D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\research\\experiments\\n11-s4-boundary-direct-20261012\\output\\log\\s5-64.log"
+      ],
+      "elapsed_seconds": 17.845765899997787,
+      "is_or": 0,
+      "key": [
+        1152939096793940992,
+        536870912
+      ],
+      "legal": 100,
+      "log_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\log\\s5-64.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "nodes": 5916458,
+      "raw_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\raw\\s5-64.csv",
+      "raw_sha256": "a65258c0a429d962f9b57abc542abb1336fb11bf98012c61be4d559dd57c313e",
+      "reported_seconds": 17.0,
+      "sequence": 64,
+      "solver_row_sequence": 0,
+      "stones": 5,
+      "verdict": "LOSS",
+      "verdict_code": 2
+    },
+    {
+      "budget": 15000000,
+      "command": [
+        "dfpn-profile-child.exe",
+        "--n=11",
+        "--memo=22",
+        "--only=5",
+        "--exact-order=count",
+        "--exact-replay=D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\research\\experiments\\n11-s4-boundary-direct-20261012\\input\\s5-65.csv",
+        "--exact-replay-budget=15000000",
+        "--csv=D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\research\\experiments\\n11-s4-boundary-direct-20261012\\output\\raw\\s5-65.csv",
+        "--log=D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\research\\experiments\\n11-s4-boundary-direct-20261012\\output\\log\\s5-65.log"
+      ],
+      "elapsed_seconds": 17.4296755999967,
+      "is_or": 0,
+      "key": [
+        1297036692683752448,
+        134217728
+      ],
+      "legal": 103,
+      "log_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\log\\s5-65.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "nodes": 5766864,
+      "raw_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\raw\\s5-65.csv",
+      "raw_sha256": "90c97395b5ede46447ee341c663155587465594f633126354f01c84d4086e319",
+      "reported_seconds": 17.0,
+      "sequence": 65,
+      "solver_row_sequence": 0,
+      "stones": 5,
+      "verdict": "LOSS",
+      "verdict_code": 2
+    }
+  ],
+  "schema": "n11-s4-direct-s5-batch-run-v1",
+  "selection_sha256": "d805d586511d11bb66af9ce68592105436cc3d020e9017d69fb98d5654273b63",
+  "solver_binary_sha256": "8d0781ce89ad11a7cd8011cf351d627793b5b76351b7639e433875a43f627cb2",
+  "stop_reason": "all 2 frozen targets completed without an S5 WIN"
+}

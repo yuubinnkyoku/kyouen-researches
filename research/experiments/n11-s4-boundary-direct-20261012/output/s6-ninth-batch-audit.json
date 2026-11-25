@@ -1,0 +1,199 @@
+{
+  "boundary_exact_counts": {
+    "LOSS": 0,
+    "WIN": 8,
+    "unresolved": 90
+  },
+  "derivation": "S5 is fixed-player AND: one exact S6 LOSS proves S5 LOSS; all 98 exact S6 WIN prove S5 WIN; otherwise UNKNOWN",
+  "derived_parent_s5_outcome": "UNKNOWN",
+  "independently_generated_s6_children": 98,
+  "loss_witnesses": [],
+  "new_s6_counts": {
+    "LOSS": 0,
+    "UNKNOWN": 2,
+    "WIN": 6
+  },
+  "new_s6_elapsed_seconds": 11.655542799991963,
+  "new_s6_nodes": 3989303,
+  "new_s6_results": [
+    {
+      "budget": 1000000,
+      "elapsed_seconds": 0.9787899000002653,
+      "key": [
+        1152921779485806593,
+        536870912
+      ],
+      "legal": 77,
+      "log_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\log\\s6-128.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "nodes": 298905,
+      "raw_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\raw\\s6-128.csv",
+      "raw_sha256": "70ac66bb11c5c1e1c368056a1b07bd47483ac22338aabad35428d1cf809f41f1",
+      "sequence": 128,
+      "verdict": "WIN"
+    },
+    {
+      "budget": 1000000,
+      "elapsed_seconds": 0.8679579000017839,
+      "key": [
+        1152921504607916033,
+        536870912
+      ],
+      "legal": 79,
+      "log_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\log\\s6-129.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "nodes": 258436,
+      "raw_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\raw\\s6-129.csv",
+      "raw_sha256": "5d0c5e70a8cf1fcd4e86e6cfd65120dfe02a04724c14ba8f942b8cb6162b09a7",
+      "sequence": 129,
+      "verdict": "WIN"
+    },
+    {
+      "budget": 1000000,
+      "elapsed_seconds": 2.7473806999987573,
+      "key": [
+        1152921504675008513,
+        536870912
+      ],
+      "legal": 84,
+      "log_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\log\\s6-130.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "nodes": 1000000,
+      "raw_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\raw\\s6-130.csv",
+      "raw_sha256": "4378f9ce4df16a14bc58729f7fadb4c06128ca6a5d84839b297668251495e0db",
+      "sequence": 130,
+      "verdict": "UNKNOWN"
+    },
+    {
+      "budget": 1000000,
+      "elapsed_seconds": 0.420477599996957,
+      "key": [
+        1152921504607899649,
+        536871040
+      ],
+      "legal": 85,
+      "log_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\log\\s6-131.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "nodes": 87554,
+      "raw_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\raw\\s6-131.csv",
+      "raw_sha256": "9dc04de4d6e9203889be7b211acc4610847a51defd45795f9f5035494afbb4dd",
+      "sequence": 131,
+      "verdict": "WIN"
+    },
+    {
+      "budget": 1000000,
+      "elapsed_seconds": 1.0325930000035441,
+      "key": [
+        1152921504607899713,
+        536870912
+      ],
+      "legal": 88,
+      "log_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\log\\s6-132.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "nodes": 335344,
+      "raw_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\raw\\s6-132.csv",
+      "raw_sha256": "9c4f0fe3f1f6df7fe5362d4daeeeba4e58590e6483ce22869bb5cf8a4548b008",
+      "sequence": 132,
+      "verdict": "WIN"
+    },
+    {
+      "budget": 1000000,
+      "elapsed_seconds": 0.8080063999950653,
+      "key": [
+        1297036692683756544,
+        536870912
+      ],
+      "legal": 88,
+      "log_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\log\\s6-133.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "nodes": 250021,
+      "raw_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\raw\\s6-133.csv",
+      "raw_sha256": "93c06998f493a78e571ad3640a32fde7c5bf25f94f736c5c93811ff02255d600",
+      "sequence": 133,
+      "verdict": "WIN"
+    },
+    {
+      "budget": 1000000,
+      "elapsed_seconds": 2.0765136999980314,
+      "key": [
+        10376293541461626881,
+        68719478784
+      ],
+      "legal": 92,
+      "log_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\log\\s6-134.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "nodes": 759043,
+      "raw_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\raw\\s6-134.csv",
+      "raw_sha256": "8c8e6a59da833b68782af901f29a0b87597cc7fcd84a00832c4781ea7a991de7",
+      "sequence": 134,
+      "verdict": "WIN"
+    },
+    {
+      "budget": 1000000,
+      "elapsed_seconds": 2.7238235999975586,
+      "key": [
+        1152921504607900672,
+        671088640
+      ],
+      "legal": 93,
+      "log_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\log\\s6-135.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "nodes": 1000000,
+      "raw_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\raw\\s6-135.csv",
+      "raw_sha256": "52f66f551be663f73dcd70a04da98287fdca2948f8f3295d990dc9df7158e5c7",
+      "sequence": 135,
+      "verdict": "UNKNOWN"
+    }
+  ],
+  "parent_s5": [
+    1152921504607899649,
+    536870912
+  ],
+  "parent_s5_polarity": "AND (is_or=0)",
+  "run_manifest_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\s6-ninth-batch-run.json",
+  "run_manifest_sha256": "5a70bcbcb4e369b76a873cb127113039a4c318f7b784a75298af6d218cb2b300",
+  "saved_s6_exact_counts": {
+    "LOSS": 0,
+    "WIN": 2
+  },
+  "saved_s6_raw_relocation_manifest": "research\\experiments\\n11-s4-boundary-direct-20261012\\input\\saved-s6-raw-relocations.json",
+  "saved_s6_raw_relocation_manifest_sha256": "d8df6237fc92cfb9d17ad221a56cc184ac52dfe21baa1681a04d26fcfb9a88bc",
+  "saved_s6_raw_sources": [
+    {
+      "budget": 10000000,
+      "historical_raw_path": "research/experiments/n11-boundary-recovery-20261006/output/next9-hard-s6-out.csv",
+      "key": [
+        1153202979584611328,
+        536870912
+      ],
+      "legal": 78,
+      "nodes": 1076851,
+      "raw_line": 6,
+      "raw_path": "research/experiments/n11-s4-boundary-direct-20261012/output/raw/s6-saved-exact-win-01.csv",
+      "raw_sha256": "59053de7511c6815edd8c84be22224634e8c406ff6a1cd6abc35e5517c84487c",
+      "verdict": "WIN"
+    },
+    {
+      "budget": 2000000,
+      "historical_raw_path": ".local/n11/reply27-s6-dual-tight-1333065489702715392-0-budget2000000/s6-10376293541461626881-68719476738.out.csv",
+      "key": [
+        10376293541461626881,
+        68719476738
+      ],
+      "legal": 88,
+      "nodes": 541348,
+      "raw_line": 3,
+      "raw_path": "research/experiments/n11-s4-boundary-direct-20261012/output/raw/s6-saved-exact-win-02.csv",
+      "raw_sha256": "59e85752d590fb688ad580b58e61530e23210fe339cefb28e3d4fa2695058669",
+      "verdict": "WIN"
+    }
+  ],
+  "schema": "n11-s4-final-s5-s6-split-audit-v1",
+  "selection_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\input\\s6-ninth-batch-selection.json",
+  "selection_sha256": "b1b38f27c62ef37744880921d161e49de37e78fda20191b0e52874f6ff8c8314",
+  "solver_binary_sha256": "8d0781ce89ad11a7cd8011cf351d627793b5b76351b7639e433875a43f627cb2",
+  "solver_source_sha256": "48e51bb56288e090f51996eb4d9a208ca0458d11f73ba61bf5f08dade25db446",
+  "trust": "fresh and saved S6 outcomes are solver-trusted exact leaves; independent integer geometry validates canonical/legal boundaries and AND propagation; not terminal-only minimax proof",
+  "worker_cache_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\s6-derived-s5-worker.cache",
+  "worker_cache_sha256": "d46d98bd5caf26f31e575002aa9f14de5acc2b86b600fbaf6e63161be7bf5cc7"
+}

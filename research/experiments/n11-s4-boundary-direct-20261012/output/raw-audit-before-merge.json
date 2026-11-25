@@ -1,0 +1,148 @@
+{
+  "independent_geometry_sha256": "146be80b5794462c2444e983fc4c4a6e76d3b464bfd5e86fac14509024100b54",
+  "merge_pending": "Use the tested dfpn_s5_merge.sh to atomically union baseline and exact worker cache into current-exact-s5.cache, then rerun this audit.",
+  "raw_inventory": [
+    {
+      "elapsed_seconds": 42.190693600001396,
+      "key": [
+        1152921504607899649,
+        536870912
+      ],
+      "legal": 98,
+      "live_parent_count": 2,
+      "log_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\log\\s5-00.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "nodes": 15000000,
+      "raw_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\raw\\s5-00.csv",
+      "raw_sha256": "17f34f49988cfb961a1df1c80dfb46f3eec3ba061039a2428a8fccd58ad047e6",
+      "sequence": 0,
+      "sharing": "shared",
+      "verdict": "UNKNOWN"
+    },
+    {
+      "elapsed_seconds": 12.0,
+      "key": [
+        1152921504606851585,
+        536870912
+      ],
+      "legal": 99,
+      "live_parent_count": 2,
+      "log_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\log\\s5-01.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "nodes": 4425857,
+      "raw_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\raw\\s5-01.csv",
+      "raw_sha256": "7179e027b7b05cd2e4a59a89098b4edb37c8ab979cf1bcae1959478f49c7336a",
+      "sequence": 1,
+      "sharing": "shared",
+      "verdict": "LOSS"
+    },
+    {
+      "elapsed_seconds": 20.668142000002263,
+      "key": [
+        1152921504607896576,
+        536879104
+      ],
+      "legal": 101,
+      "live_parent_count": 2,
+      "log_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\log\\s5-02.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "nodes": 7019730,
+      "raw_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\raw\\s5-02.csv",
+      "raw_sha256": "637af16aaf7dd478a4b60175ff3764621dfd66362201f1232120e3c4220dadd3",
+      "sequence": 2,
+      "sharing": "shared",
+      "verdict": "LOSS"
+    },
+    {
+      "elapsed_seconds": 13.56689059999917,
+      "key": [
+        1152921504612090880,
+        536870912
+      ],
+      "legal": 105,
+      "live_parent_count": 2,
+      "log_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\log\\s5-03.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "nodes": 4801030,
+      "raw_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\raw\\s5-03.csv",
+      "raw_sha256": "5b20ea27fa0cd72efb894f840290a7ba709e58d4b1ba5638cda032962293b0fa",
+      "sequence": 3,
+      "sharing": "shared",
+      "verdict": "LOSS"
+    },
+    {
+      "elapsed_seconds": 12.126993499994569,
+      "key": [
+        1297036692683752704,
+        0
+      ],
+      "legal": 96,
+      "live_parent_count": 1,
+      "log_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\log\\s5-04.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "nodes": 4352577,
+      "raw_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\raw\\s5-04.csv",
+      "raw_sha256": "b6bec4a68ef5f17cbb07d3ec2f5bf8da7ce495e85c8678f11a911492d0959968",
+      "sequence": 4,
+      "sharing": "single",
+      "verdict": "LOSS"
+    },
+    {
+      "elapsed_seconds": 29.79888260000007,
+      "key": [
+        1297036692683785216,
+        0
+      ],
+      "legal": 96,
+      "live_parent_count": 1,
+      "log_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\log\\s5-05.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "nodes": 10298632,
+      "raw_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\raw\\s5-05.csv",
+      "raw_sha256": "8b68f4b738856e0a40c892a503a156ba1e4d25c9f37539f048448d0f9f3325e0",
+      "sequence": 5,
+      "sharing": "single",
+      "verdict": "LOSS"
+    },
+    {
+      "elapsed_seconds": 27.43775150000147,
+      "key": [
+        1297036692683752448,
+        8
+      ],
+      "legal": 100,
+      "live_parent_count": 1,
+      "log_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\log\\s5-06.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "nodes": 9843332,
+      "raw_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\raw\\s5-06.csv",
+      "raw_sha256": "460624b2f12c4b291ef20a75541677851ae8176215bf24c74d381cb2b355a9fc",
+      "sequence": 6,
+      "sharing": "single",
+      "verdict": "LOSS"
+    },
+    {
+      "elapsed_seconds": 24.001378200002364,
+      "key": [
+        1152921513197831168,
+        536870912
+      ],
+      "legal": 103,
+      "live_parent_count": 1,
+      "log_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\log\\s5-07.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "nodes": 8699028,
+      "raw_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\raw\\s5-07.csv",
+      "raw_sha256": "3fbd8bdbd722a89308cc3096ba5d89157e1be8ead9ff99b854e7493067107042",
+      "sequence": 7,
+      "sharing": "single",
+      "verdict": "LOSS"
+    }
+  ],
+  "run_manifest_sha256": "ccb1349df6cbba56be876cbb69d9c4a7a4cfbe63a237ab725dd39aafb35194ac",
+  "schema": "n11-s4-direct-s5-frontier-after-batch-v1",
+  "selection_sha256": "45651fb4a133318c8b66b335b4068c664293a9655b21d2aceffd996fdeb66ffc",
+  "solver_binary_sha256": "8d0781ce89ad11a7cd8011cf351d627793b5b76351b7639e433875a43f627cb2",
+  "solver_source_sha256": "48e51bb56288e090f51996eb4d9a208ca0458d11f73ba61bf5f08dade25db446",
+  "source_main_commit": "1bdd30b71adaf8f476a98922f1b454bdd369feb3"
+}

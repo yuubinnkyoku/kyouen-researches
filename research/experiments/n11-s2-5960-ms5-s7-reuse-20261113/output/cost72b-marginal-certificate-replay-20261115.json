@@ -1,0 +1,364 @@
+{
+  "schema": "n11-cost72b-marginal-certificate-replay-20261115-v1",
+  "date": "2026-11-15",
+  "source_main_head": "00a2c4751351fe6e1eff9117ef5c0d3fc1d1730b",
+  "verifier": "verify_win7_certificate_bigint_independent.mjs; exact BigInt geometry; no solver or verdict cache",
+  "certificates_verified": 9,
+  "certificate_bits": [
+    2,
+    30,
+    31,
+    36,
+    47,
+    95,
+    97,
+    100,
+    106
+  ],
+  "certificates": [
+    {
+      "bit": 2,
+      "root_hex": "00000000000000809102000002000004",
+      "rows": 58012,
+      "root_mobility": 62,
+      "bytes": 2098753,
+      "whole_git_blob_sha": "1c9b7bccbd2125173c2178c8a4a8da467dae3c7c",
+      "parts": [
+        {
+          "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost72b-certificates/bit2-root-00000000000000809102000002000004.cert.part1of2",
+          "bytes": 1050314,
+          "git_blob_sha": "b6d906796787fa1bd65e03bbee3f575fc779352b"
+        },
+        {
+          "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost72b-certificates/bit2-root-00000000000000809102000002000004.cert.part2of2",
+          "bytes": 1048439,
+          "git_blob_sha": "6119bd26e7dd361e455570aaf7a924ac536fc70e"
+        }
+      ],
+      "visited_states_across_subroots": 121664,
+      "winner_states": 78236,
+      "loser_states": 22340,
+      "loser_reply_edges": 108177,
+      "terminal_count": 21088,
+      "terminal_range": [
+        13,
+        17
+      ],
+      "rows_sorted_unique": true,
+      "union_missing": 0,
+      "union_extra": 0,
+      "root_safe": true,
+      "marginal_manifest_parent": "00000000000000801202000020000100"
+    },
+    {
+      "bit": 30,
+      "root_hex": "00000000000000809102000042000000",
+      "rows": 40816,
+      "root_mobility": 55,
+      "bytes": 1473717,
+      "whole_git_blob_sha": "ec1859142e250aa88688eba9fd2269830f9150ec",
+      "parts": [
+        {
+          "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost72b-certificates/bit30-root-00000000000000809102000042000000.cert",
+          "bytes": 1473717,
+          "git_blob_sha": "ec1859142e250aa88688eba9fd2269830f9150ec"
+        }
+      ],
+      "visited_states_across_subroots": 91375,
+      "winner_states": 59162,
+      "loser_states": 17610,
+      "loser_reply_edges": 82795,
+      "terminal_count": 14603,
+      "terminal_range": [
+        13,
+        17
+      ],
+      "rows_sorted_unique": true,
+      "union_missing": 0,
+      "union_extra": 0,
+      "root_safe": true,
+      "marginal_manifest_parent": "00000000000000801202000021000000"
+    },
+    {
+      "bit": 31,
+      "root_hex": "00000000000000809102000082000000",
+      "rows": 44299,
+      "root_mobility": 51,
+      "bytes": 1600847,
+      "whole_git_blob_sha": "9b545349f3c73f7474cf43af056bd348654d34c2",
+      "parts": [
+        {
+          "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost72b-certificates/bit31-root-00000000000000809102000082000000.cert",
+          "bytes": 1600847,
+          "git_blob_sha": "9b545349f3c73f7474cf43af056bd348654d34c2"
+        }
+      ],
+      "visited_states_across_subroots": 89523,
+      "winner_states": 58157,
+      "loser_states": 17823,
+      "loser_reply_edges": 82442,
+      "terminal_count": 13543,
+      "terminal_range": [
+        13,
+        17
+      ],
+      "rows_sorted_unique": true,
+      "union_missing": 0,
+      "union_extra": 0,
+      "root_safe": true,
+      "marginal_manifest_parent": "00000000000000801202000020800000"
+    },
+    {
+      "bit": 36,
+      "root_hex": "00000000000000809102001002000000",
+      "rows": 41368,
+      "root_mobility": 51,
+      "bytes": 1495829,
+      "whole_git_blob_sha": "a30ced176f33399e3b6a7db6de0839dcf7d387d3",
+      "parts": [
+        {
+          "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost72b-certificates/bit36-root-00000000000000809102001002000000.cert",
+          "bytes": 1495829,
+          "git_blob_sha": "a30ced176f33399e3b6a7db6de0839dcf7d387d3"
+        }
+      ],
+      "visited_states_across_subroots": 94739,
+      "winner_states": 61214,
+      "loser_states": 18188,
+      "loser_reply_edges": 85480,
+      "terminal_count": 15337,
+      "terminal_range": [
+        13,
+        17
+      ],
+      "rows_sorted_unique": true,
+      "union_missing": 0,
+      "union_extra": 0,
+      "root_safe": true,
+      "marginal_manifest_parent": "00000000000000801202010020000000"
+    },
+    {
+      "bit": 47,
+      "root_hex": "00000000000000809102800002000000",
+      "rows": 48721,
+      "root_mobility": 57,
+      "bytes": 1761391,
+      "whole_git_blob_sha": "de3b00586d983e1146e82413c111dbea4347e6f8",
+      "parts": [
+        {
+          "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost72b-certificates/bit47-root-00000000000000809102800002000000.cert",
+          "bytes": 1761391,
+          "git_blob_sha": "de3b00586d983e1146e82413c111dbea4347e6f8"
+        }
+      ],
+      "visited_states_across_subroots": 109844,
+      "winner_states": 70798,
+      "loser_states": 20630,
+      "loser_reply_edges": 97400,
+      "terminal_count": 18416,
+      "terminal_range": [
+        13,
+        17
+      ],
+      "rows_sorted_unique": true,
+      "union_missing": 0,
+      "union_extra": 0,
+      "root_safe": true,
+      "marginal_manifest_parent": "0000000000000080120a000020000000"
+    },
+    {
+      "bit": 95,
+      "root_hex": "00000000800000809102000002000000",
+      "rows": 57078,
+      "root_mobility": 56,
+      "bytes": 2062055,
+      "whole_git_blob_sha": "3af65173412c0d815eb9e1fe9f2245c813657053",
+      "parts": [
+        {
+          "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost72b-certificates/bit95-root-00000000800000809102000002000000.cert.part1of2",
+          "bytes": 1031838,
+          "git_blob_sha": "a5ec0a2d1640a5bc6d47e033bb887af594e39d19"
+        },
+        {
+          "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost72b-certificates/bit95-root-00000000800000809102000002000000.cert.part2of2",
+          "bytes": 1030217,
+          "git_blob_sha": "16a1c2bf1b73b6025ded0a62a7fda7113ba79d65"
+        }
+      ],
+      "visited_states_across_subroots": 122337,
+      "winner_states": 79011,
+      "loser_states": 23438,
+      "loser_reply_edges": 110746,
+      "terminal_count": 19888,
+      "terminal_range": [
+        13,
+        17
+      ],
+      "rows_sorted_unique": true,
+      "union_missing": 0,
+      "union_extra": 0,
+      "root_safe": true,
+      "marginal_manifest_parent": "00000000000080003800020008000000"
+    },
+    {
+      "bit": 97,
+      "root_hex": "00000002000000809102000002000000",
+      "rows": 31434,
+      "root_mobility": 47,
+      "bytes": 1132979,
+      "whole_git_blob_sha": "0a3ae82c02a7070c5715a468ea5af4ec63b3b176",
+      "parts": [
+        {
+          "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost72b-certificates/bit97-root-00000002000000809102000002000000.cert",
+          "bytes": 1132979,
+          "git_blob_sha": "0a3ae82c02a7070c5715a468ea5af4ec63b3b176"
+        }
+      ],
+      "visited_states_across_subroots": 71564,
+      "winner_states": 46407,
+      "loser_states": 14627,
+      "loser_reply_edges": 67308,
+      "terminal_count": 10530,
+      "terminal_range": [
+        13,
+        17
+      ],
+      "rows_sorted_unique": true,
+      "union_missing": 0,
+      "union_extra": 0,
+      "root_safe": true,
+      "marginal_manifest_parent": "00000000000080003800000008080000"
+    },
+    {
+      "bit": 100,
+      "root_hex": "00000010000000809102000002000000",
+      "rows": 66637,
+      "root_mobility": 60,
+      "bytes": 2404089,
+      "whole_git_blob_sha": "1226899bbd7222229fab401b18bd152bed25c138",
+      "parts": [
+        {
+          "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost72b-certificates/bit100-root-00000010000000809102000002000000.cert.part1of2",
+          "bytes": 1202854,
+          "git_blob_sha": "cb66a3f425dff53e7437be8eb0abbc69b49de675"
+        },
+        {
+          "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost72b-certificates/bit100-root-00000010000000809102000002000000.cert.part2of2",
+          "bytes": 1201235,
+          "git_blob_sha": "d8dedf8485a5c38d47592f9ea801dfca95221cb2"
+        }
+      ],
+      "visited_states_across_subroots": 145104,
+      "winner_states": 93501,
+      "loser_states": 27961,
+      "loser_reply_edges": 130886,
+      "terminal_count": 23642,
+      "terminal_range": [
+        13,
+        17
+      ],
+      "rows_sorted_unique": true,
+      "union_missing": 0,
+      "union_extra": 0,
+      "root_safe": true,
+      "marginal_manifest_parent": "00000000080000809002000000001000"
+    },
+    {
+      "bit": 106,
+      "root_hex": "00000400000000809102000002000000",
+      "rows": 69838,
+      "root_mobility": 64,
+      "bytes": 2519788,
+      "whole_git_blob_sha": "867d0c4a861683921471cc6442ddf0a5424f6fac",
+      "parts": [
+        {
+          "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost72b-certificates/bit106-root-00000400000000809102000002000000.cert.part1of2",
+          "bytes": 1261225,
+          "git_blob_sha": "156e4627ffa588bce672d0323297c6b111c4fb47"
+        },
+        {
+          "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost72b-certificates/bit106-root-00000400000000809102000002000000.cert.part2of2",
+          "bytes": 1258563,
+          "git_blob_sha": "f6afbcc3e68447ce8f61400989a81dd30222c699"
+        }
+      ],
+      "visited_states_across_subroots": 146952,
+      "winner_states": 94618,
+      "loser_states": 28130,
+      "loser_reply_edges": 131108,
+      "terminal_count": 24204,
+      "terminal_range": [
+        13,
+        17
+      ],
+      "rows_sorted_unique": true,
+      "union_missing": 0,
+      "union_extra": 0,
+      "root_safe": true,
+      "marginal_manifest_parent": "00000000000080003800040008000000"
+    }
+  ],
+  "totals": {
+    "strategy_rows_sum": 458203,
+    "visited_states_sum_across_certificates_not_deduplicated": 993102,
+    "terminal_count_sum_across_certificates_not_deduplicated": 161251,
+    "published_parts_verified": 13
+  },
+  "frontier": {
+    "previous_certificate_backed_lower_bound": 1169,
+    "cost72b_new_manifest_orbits": 9,
+    "cost72b_new_orbits_backed_by_independent_certificates": 9,
+    "certificate_backed_lower_bound": 1178,
+    "receipt_frontier_s6": 1188,
+    "receipt_minus_audited_lower_bound": 10,
+    "remaining_s6": 6659,
+    "remaining_s7_edge_cost": 525437,
+    "open_class_s6_demand": 4929,
+    "open_class_s7_edge_cost": 389160,
+    "best_class2_s5": {
+      "s5_hex": "00000000000000809102000000000000",
+      "classes": 2,
+      "remaining_s6_orbits": 4,
+      "remaining_s7_edge_cost": 297
+    },
+    "new_certificate_backed_s6_orbits": [
+      "00000000000000801202000020000100",
+      "00000000000000801202000020800000",
+      "00000000000000801202000021000000",
+      "00000000000000801202010020000000",
+      "0000000000000080120a000020000000",
+      "00000000000080003800000008080000",
+      "00000000000080003800020008000000",
+      "00000000000080003800040008000000",
+      "00000000080000809002000000001000"
+    ],
+    "zero_marginal_receipt_bits": [
+      11,
+      21,
+      66,
+      85
+    ],
+    "all_nine_marginals_backed": true
+  },
+  "current_inflight_claim": {
+    "status": "in-flight",
+    "claimed_by": "long-term class2 lane",
+    "s5_hex": "00000000000000809102000000000000",
+    "s6_child_hex": "00000000000000809142000000000000",
+    "edge_cost": 74,
+    "demand": {
+      "c1": 0,
+      "c2": 2,
+      "c4": 0
+    },
+    "open_parent_count": 2
+  },
+  "unknown_status": {
+    "empty_11x11": "UNKNOWN",
+    "two_stone_roots_49_60_and_59_60": "UNKNOWN",
+    "s2_59_60": "UNKNOWN",
+    "class2": "UNKNOWN",
+    "class4": "UNKNOWN"
+  },
+  "interpretation_guard": "The receipt frontier 1188 is not a count of independently certificate-backed S6 orbits. This audit raises the prior certificate-backed lower bound 1169 to 1178 by verifying all nine positive-marginal cost72b receipts. The remaining gap of ten is not asserted to be unproved; it is outside this audit's certificate set."
+}

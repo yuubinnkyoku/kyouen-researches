@@ -1,0 +1,54 @@
+{
+  "exact_verdict_counts": {
+    "LOSS": 2,
+    "WIN": 0
+  },
+  "independent_geometry_check": "Board(11) canonicality and legal count; fixed S5 AND polarity verified from raw is_or=0",
+  "results": [
+    {
+      "elapsed_seconds": 17.845765899997787,
+      "key": [
+        1152939096793940992,
+        536870912
+      ],
+      "legal": 100,
+      "live_parent_count": 2,
+      "log_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\log\\s5-64.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "nodes": 5916458,
+      "raw_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\raw\\s5-64.csv",
+      "raw_sha256": "a65258c0a429d962f9b57abc542abb1336fb11bf98012c61be4d559dd57c313e",
+      "sequence": 64,
+      "sharing": "shared",
+      "verdict": "LOSS"
+    },
+    {
+      "elapsed_seconds": 17.4296755999967,
+      "key": [
+        1297036692683752448,
+        134217728
+      ],
+      "legal": 103,
+      "live_parent_count": 2,
+      "log_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\log\\s5-65.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "nodes": 5766864,
+      "raw_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\raw\\s5-65.csv",
+      "raw_sha256": "90c97395b5ede46447ee341c663155587465594f633126354f01c84d4086e319",
+      "sequence": 65,
+      "sharing": "shared",
+      "verdict": "LOSS"
+    }
+  ],
+  "run_manifest_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\ninth-batch-run.json",
+  "run_manifest_sha256": "589d55c54cee6602bc6eee33ad5d7161684331f51b1fab8cf06b220e09774058",
+  "schema": "n11-s4-direct-s5-ninth-batch-audit-v1",
+  "selection_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\input\\ninth-batch-selection.json",
+  "selection_sha256": "d805d586511d11bb66af9ce68592105436cc3d020e9017d69fb98d5654273b63",
+  "total_elapsed_seconds": 35.275441499994486,
+  "total_nodes": 11683322,
+  "trust": "solver-trusted exact outcomes, not terminal-only independent proofs",
+  "unknown_count": 0,
+  "worker_cache_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\ninth-batch-exact-s5.cache",
+  "worker_cache_sha256": "4723319c64adee2837650439169910c01d0f5155c7844278074381e51f8355b8"
+}

@@ -1,0 +1,154 @@
+{
+  "exact_verdict_counts": {
+    "LOSS": 8,
+    "WIN": 0
+  },
+  "independent_geometry_check": "Board(11) canonicality and legal count; fixed S5 AND polarity verified from raw is_or=0",
+  "results": [
+    {
+      "elapsed_seconds": 7.9964847000010195,
+      "key": [
+        1297036692683752960,
+        0
+      ],
+      "legal": 98,
+      "live_parent_count": 2,
+      "log_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\log\\s5-08.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "nodes": 2954632,
+      "raw_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\raw\\s5-08.csv",
+      "raw_sha256": "bd094ff8a63446141885ad74d278b1e2ed798ad639ad5ff3ba29dcc351f782aa",
+      "sequence": 8,
+      "sharing": "shared",
+      "verdict": "LOSS"
+    },
+    {
+      "elapsed_seconds": 9.592967599994154,
+      "key": [
+        1297036692683752464,
+        0
+      ],
+      "legal": 100,
+      "live_parent_count": 2,
+      "log_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\log\\s5-09.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "nodes": 3528576,
+      "raw_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\raw\\s5-09.csv",
+      "raw_sha256": "191944448d167e763802a62bbaca8b829c74d6d03b153eb98b6fbf2dc373f25d",
+      "sequence": 9,
+      "sharing": "shared",
+      "verdict": "LOSS"
+    },
+    {
+      "elapsed_seconds": 12.572180999995908,
+      "key": [
+        1152921504607896576,
+        536870920
+      ],
+      "legal": 103,
+      "live_parent_count": 2,
+      "log_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\log\\s5-10.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "nodes": 4581929,
+      "raw_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\raw\\s5-10.csv",
+      "raw_sha256": "b9f5df541a5cbd7b0e4711158cbabf7f97d1b45f2d91cebd550233a9e22bd1e2",
+      "sequence": 10,
+      "sharing": "shared",
+      "verdict": "LOSS"
+    },
+    {
+      "elapsed_seconds": 10.879845299998124,
+      "key": [
+        10376293541461626881,
+        134217728
+      ],
+      "legal": 104,
+      "live_parent_count": 2,
+      "log_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\log\\s5-11.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "nodes": 3972983,
+      "raw_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\raw\\s5-11.csv",
+      "raw_sha256": "0a5acd0f3540f589cf7224e8bca69dc1174286a19b41331ef4480de036a11d24",
+      "sequence": 11,
+      "sharing": "shared",
+      "verdict": "LOSS"
+    },
+    {
+      "elapsed_seconds": 14.499155800003791,
+      "key": [
+        1297036692683756544,
+        0
+      ],
+      "legal": 96,
+      "live_parent_count": 1,
+      "log_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\log\\s5-12.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "nodes": 5221923,
+      "raw_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\raw\\s5-12.csv",
+      "raw_sha256": "f1946d809a8fe024ea11331b2f2096cf47057c08fdef6cb57129d13bafb98487",
+      "sequence": 12,
+      "sharing": "single",
+      "verdict": "LOSS"
+    },
+    {
+      "elapsed_seconds": 14.049448999998276,
+      "key": [
+        1585267068835464192,
+        0
+      ],
+      "legal": 97,
+      "live_parent_count": 1,
+      "log_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\log\\s5-13.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "nodes": 5048845,
+      "raw_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\raw\\s5-13.csv",
+      "raw_sha256": "795f0e0d44308c209671e5d9b83e8a2f68bb41d2885ff0dd1b992f229f00024a",
+      "sequence": 13,
+      "sharing": "single",
+      "verdict": "LOSS"
+    },
+    {
+      "elapsed_seconds": 31.508045700000366,
+      "key": [
+        1152921504607896576,
+        553648128
+      ],
+      "legal": 100,
+      "live_parent_count": 1,
+      "log_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\log\\s5-14.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "nodes": 11267484,
+      "raw_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\raw\\s5-14.csv",
+      "raw_sha256": "ef71d2b9565d0f09dadc173e081cfebf21921c17de58d9818ff33392f7b45616",
+      "sequence": 14,
+      "sharing": "single",
+      "verdict": "LOSS"
+    },
+    {
+      "elapsed_seconds": 19.604012399999192,
+      "key": [
+        1297036692683752448,
+        536870912
+      ],
+      "legal": 102,
+      "live_parent_count": 1,
+      "log_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\log\\s5-15.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "nodes": 7123492,
+      "raw_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\raw\\s5-15.csv",
+      "raw_sha256": "21cef6b1eab42b0e5885402c2895e23adfb30fef9380efe08b6748da47c665f5",
+      "sequence": 15,
+      "sharing": "single",
+      "verdict": "LOSS"
+    }
+  ],
+  "run_manifest_sha256": "000061ced9e74cc17442895fe511a4b19cfde55ddee4cee2c62eaf0e161f3945",
+  "schema": "n11-s4-direct-s5-second-batch-audit-v1",
+  "selection_sha256": "d60df84ba172af5edf82388ab248ed678e4ad298a82cf3dd8ae55a268f3859af",
+  "total_elapsed_seconds": 120.70214149999083,
+  "total_nodes": 43699864,
+  "trust": "solver-trusted exact outcomes, not terminal-only independent proofs",
+  "unknown_count": 0,
+  "worker_cache_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\second-batch-exact-s5.cache",
+  "worker_cache_sha256": "0b6e1aa89d1cbc5e2dcf7600b500dc2e6fac6f1cb7f5b4222499b846025b46df"
+}

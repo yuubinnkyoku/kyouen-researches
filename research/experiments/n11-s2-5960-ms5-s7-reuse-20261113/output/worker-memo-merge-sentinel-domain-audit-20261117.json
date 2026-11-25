@@ -1,0 +1,45 @@
+{
+  "schema": "n11-worker-memo-merge-sentinel-domain-audit-20261117-v1",
+  "date": "2026-11-17",
+  "scope": "K0909 worker memo merge algebra and the bound-retention comparison used by the boundary-preserving 4-worker measurement",
+  "source_main": "23de976b618b3a22f0c41440689e6000558578a8",
+  "test_update_commit": "d305c3d5034e60741b3e49c1a55fd39d9f87523e",
+  "source_blobs": {
+    "worker_memo_merge_py": "fe2c5411393f789757b6e9a85d1f3925d6d260bc",
+    "updated_test_py": "f2102728756f6af3cf1720bcd69ac4ecec9b608a"
+  },
+  "execution": {
+    "environment": "Python 3.13.5 in isolated container",
+    "method": "The two GitHub source files were copied byte-for-byte to /tmp; git hash-object matched both recorded Git blob SHAs before execution. The updated unittest module was then run with PYTHONPATH=/tmp.",
+    "command": "PYTHONPATH=/tmp python3 -m unittest -v /tmp/test_worker_memo_merge_sentinel_20261117.py",
+    "tests_run": 7,
+    "tests_passed": 7,
+    "tests_failed": 0,
+    "elapsed_seconds": 14.99,
+    "max_rss_kib": 96272
+  },
+  "exhaustive_domains": {
+    "memo_byte_values": 256,
+    "finite_bound_values": 255,
+    "max_bound_pair_cases": 65536,
+    "max_bound_triple_associativity_cases": 16777216,
+    "bound_at_least_pair_cases": 65536,
+    "unbound_identity_finite_values": 255
+  },
+  "assertions": [
+    "max_bound is commutative, idempotent, matches the finite-max-with-255-identity reference, and is associative over all 256^3 triples",
+    "255 is the identity for every finite negative bound 0..254",
+    "bound_at_least matches the absence-aware reference over all 256^2 value/required pairs",
+    "cross-worker win/nowin and lose/nolose contradictions remain detectable",
+    "weaker finite negative bounds survive merging without false conflicts",
+    "the published verbatim all-255 negative-bound records retain their prior merged values",
+    "sampled complete-record merge remains associative"
+  ],
+  "interpretation": {
+    "result": "PASS",
+    "verdict_changes": 0,
+    "certificate_bytes_changed": false,
+    "manifest_rows_closed": 0,
+    "note": "This validates the sentinel algebra and comparison helper only. It does not rerun the large 4-worker measurement or the 11x11 game search."
+  }
+}

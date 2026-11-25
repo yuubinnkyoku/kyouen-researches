@@ -1,0 +1,157 @@
+{
+ "bug_a": {
+  "evidence_dump": {
+   "all_dup_keys_window_fit": true,
+   "distinct": 112731,
+   "dup_keys": 16417,
+   "dup_keys_highbit": 16417,
+   "dup_keys_nonhighbit": 0,
+   "highbit_record_ratio": 0.5781,
+   "highbit_records": 125293,
+   "keys_64_span_exactly_63": true,
+   "keys_with_64_copies": 7,
+   "max_copies": 64,
+   "nolose_all_255": true,
+   "nowin_all_255": true,
+   "records": 216719
+  },
+  "extraction_nodes_12moves": 834262,
+  "kind": "memo key sign bug (Uint32Array store vs int32 compare)",
+  "mechanism": "positions on cells 31/63/95 make M0/M1/M2 negative; memoFind never matches; memoEntry re-inserts on every visit, up to 64 copies = the key's whole 64-slot probe window",
+  "soundness_impact": "none (memo is optimization-only)"
+ },
+ "bug_b": {
+  "evidence": "nowin=nolose=255 on all 216719 records",
+  "kind": "dead negative bounds (sentinel 255 compare direction)",
+  "soundness_impact": "none"
+ },
+ "checks": [
+  {
+   "check": "pin_extractor",
+   "detail": "52bcaf509ea12fad4c936501d30d26b5b66c0085",
+   "ok": true
+  },
+  {
+   "check": "pin_legal_candidates",
+   "detail": "8e97082c42838c7a4a4b6d2dd235276c8d43ab9a",
+   "ok": true
+  },
+  {
+   "check": "pin_manifest",
+   "detail": "0892aed07d187ae2fb3b4b90a21c7adbc1002b62",
+   "ok": true
+  },
+  {
+   "check": "src_uint32_memo_keys",
+   "detail": "mK0..mK3 declared as Uint32Array exactly once",
+   "ok": true
+  },
+  {
+   "check": "src_dead_nowin_update",
+   "detail": "verbatim `d>mNoWin[h]` (sentinel-dead) update exactly once",
+   "ok": true
+  },
+  {
+   "check": "src_dead_nolose_update",
+   "detail": "verbatim `e>mNoLose[h]` (sentinel-dead) update exactly once",
+   "ok": true
+  },
+  {
+   "check": "src_cmp_line_twice",
+   "detail": "unsigned-stored vs int32-comparand key compare in memoFind and memoEntry",
+   "ok": true
+  },
+  {
+   "check": "src_cells_31_63_95_map_to_bit31",
+   "detail": "cells 31/63/95 occupy bit31 of words 0/1/2",
+   "ok": true
+  },
+  {
+   "check": "node_uint32_store_compare_mismatch",
+   "detail": "Uint32Array store of int32 -2^31 reads back 2^31 unsigned; === against the int32 value is false: false true 2147483648 -2147483648",
+   "ok": true
+  },
+  {
+   "check": "node_int32_store_compare_exact",
+   "detail": "Int32Array store/compare is exact: false true 2147483648 -2147483648",
+   "ok": true
+  },
+  {
+   "check": "dump_nodes_834262",
+   "detail": "12-move bit0 extraction nodes=834262",
+   "ok": true
+  },
+  {
+   "check": "dump_magic_ms",
+   "detail": "KYOENSLT header ms=8388608 count=216719 records=216719",
+   "ok": true
+  },
+  {
+   "check": "dump_records_216719",
+   "detail": "216719",
+   "ok": true
+  },
+  {
+   "check": "dump_distinct_112731",
+   "detail": "112731",
+   "ok": true
+  },
+  {
+   "check": "dump_dup_keys_16417",
+   "detail": "16417",
+   "ok": true
+  },
+  {
+   "check": "dump_all_dup_keys_highbit",
+   "detail": "duplicated keys high-bit=16417 non-high-bit=0 (bug A signature: only bit31 keys can be re-inserted)",
+   "ok": true
+  },
+  {
+   "check": "dump_max_copies_64",
+   "detail": "64",
+   "ok": true
+  },
+  {
+   "check": "dump_keys_64_copies_7",
+   "detail": "7",
+   "ok": true
+  },
+  {
+   "check": "dump_all_dups_within_64_window",
+   "detail": "every key's copies fit its 64-slot probe window (window fit, not contiguity)",
+   "ok": true
+  },
+  {
+   "check": "dump_64copy_keys_private_window",
+   "detail": "64-copy keys own their complete 64-slot window (span 63)",
+   "ok": true
+  },
+  {
+   "check": "dump_highbit_records_125293",
+   "detail": "125293 (57.8%)",
+   "ok": true
+  },
+  {
+   "check": "dump_nowin_nolose_all_255",
+   "detail": "no-win/no-lose bounds never recorded (bug B: sentinel compare direction dead)",
+   "ok": true
+  },
+  {
+   "check": "dump_deterministic_bytes",
+   "detail": "run2 nodes=834262 bytes_identical=True",
+   "ok": true
+  },
+  {
+   "check": "fixed_battery_json_gates",
+   "detail": "status=complete fixA=75108849 fixB=28290025 byteA=[22, 22] byteB=[22, 22] det=1277392",
+   "ok": true
+  }
+ ],
+ "date": "2026-11-17",
+ "extractor_blob": "52bcaf509ea12fad4c936501d30d26b5b66c0085",
+ "interpretation_guard": "Verification only; no verdict change.  WIN7-D10 proves a win within depth 10 from individual 7-stone roots; REFUTED-D10 is not a LOSS proof.  11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60} and classes 1/2/4 remain UNKNOWN.",
+ "n_checks": 24,
+ "n_pass": 24,
+ "schema": "n11-class2-lane-extractor-memo-sign-bug-verify-73k-20261117-v1",
+ "status": "pass"
+}

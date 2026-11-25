@@ -1,0 +1,58 @@
+#!/usr/bin/env python3
+"""Build the cost-75e IN FLIGHT claim JSON at the merged head 1400."""
+import json
+from pathlib import Path
+
+HERE = Path(__file__).resolve().parents[1]
+OUT = HERE / "output"
+
+CANDS = [3, 4, 6, 7, 8, 9, 10, 11, 14, 15, 17, 18, 19, 20, 21, 22, 23, 25, 28, 29,
+         30, 31, 32, 33, 34, 37, 41, 42, 43, 44, 45, 46, 47, 48, 53, 54, 56, 57, 59,
+         61, 62, 64, 65, 67, 68, 69, 70, 75, 76, 77, 78, 80, 85, 87, 88, 92, 94, 95,
+         96, 98, 101, 102, 103, 105, 106, 107, 108, 109, 110, 112, 114, 116, 117, 119,
+         120]
+assert len(CANDS) == 75 and len(set(CANDS)) == 75
+batch_bits = {}
+for i in range(0, len(CANDS), 8):
+    batch_bits[f"batch{i // 8 + 1}"] = CANDS[i:i + 8]
+assert sum(len(v) for v in batch_bits.values()) == 75
+assert batch_bits["batch10"] == [117, 119, 120]
+
+claim = {
+    "schema": "n11-class2-lane-cost75e-inflight-20261116-v1",
+    "title": "n11 class2-lane cost-75e IN FLIGHT: second coverable class-2 candidate S5 cost-75 child to be swept next",
+    "date": "2026-11-16",
+    "status": "in flight",
+    "claimed_by": "n11 long-term lane session (cost-71d STERILE continuation)",
+    "s5": "00000000000000801202000040000000",
+    "s6_child": "00000000040000809002000000000002",
+    "s6_s7_edge_cost": 75,
+    "demand": {"c1": 0, "c2": 2, "c4": 0},
+    "chain_head_at_claim": "1400/6448/509842/4718/373565 (class-frontier-merged-cost63h-63i-63j-65m-67d-recompute-20261116.json, git blob sha 777474faf6730242b7e0080bfcdad390cca3a0ee)",
+    "child_stones_bit_indices": [1, 49, 60, 63, 71, 90],
+    "demand_verification": "re-derived at head 1400/6448/509842/4718/373565 by prep_claim_cost75e_20261116.py (runpy of the merged fold script, 1400 head rem/dem): exact-integer D4 canonicalization of the six one-stone deletions gives exactly two open parents - del 90 -> class-2 S5 00000000000000801202000000000200 (67 rows / 5473), del 1 -> second coverable class-2 candidate S5 00000000000000801202000040000000 (7 rows / 509); the other four deletions (49/60/63/71) are closed rows absent from class-frontier-s5-ranking-after-merged-cost63h-63i-63j-65m-67d-20261116.csv; per-class demand c1=0,c2=2,c4=0 re-derived from the head dem table; legal_candidates.py independent enumeration gives 75 legal candidates, bit-exact with the manifest edge cost 75",
+    "legal_candidates": CANDS,
+    "candidate_count": 75,
+    "no_prior_sweep_note": "this child 00000000040000809002000000000002 has no prior claim, raw batch, audit, certificate or fold artifact on latest main (commit-message code search for the child hex: 0 hits); the earlier cost-75 lanes (75b/75c/75d) are DIFFERENT children.",
+    "motivation": "the second coverable class-2 candidate S5 has 7 remaining rows (509 cost); cost-64 (64a) and cost-71 (71d) are STERILE, cost-70 is in flight (70g, parallel continuation session), so cost-75 is the cheapest unswept row this lane can reserve; a WIN7-D10 receipt set would close this row (and advance the 67-row class-2 parent), a sterile outcome establishes the no-WIN7-D10 negative fact for this child",
+    "engine": {
+        "script": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/class4_child1_runner_v16.ts",
+        "blob_sha": "0a4a86f6828dc010c89ff17596054336a6b6091f",
+        "depth": 10,
+        "cap": 1000000000,
+        "andclose": 1,
+        "batch_size": 8,
+        "pilot_control": "per-batch d6 pilot loss=false nodes=3402, else abort",
+        "batches_planned": 10,
+        "batch_bits": batch_bits,
+        "raw_batch_naming": "class2-lane-cost75e-raw-batch{N}-20261116.jsonl (JSONL: {bit,loss,nodes,capped,terminalStoneRange,ms} plus the pilot control line)",
+    },
+    "verdict_semantics": "loss=true => WIN7-within-depth-10 candidate (certificate rebuild target); loss=false && !capped => REFUTED-D10, no first-player win within depth 10 (NOT a LOSS proof); capped => proves nothing either way",
+    "unknown_status": "11x11 empty board: UNKNOWN. A completed sweep proves only WIN7-D10/REFUTED-D10 verdicts for the 7-stone roots of this child.",
+    "coordination_note": "latest main fetched immediately before this claim push; the parallel cost-70g claim (class2-lane-cost70g-inflight-20261116.json, same S5, child 00000000000000801202000040000001, baseline 1398' to be rebased to 1400 on landing) is untouched here; the cost-71d STERILE record for this S5 landed earlier this session; this claim reserves the cost-75 row only; if a parallel execution claims this child first, the collision protocol (verify arithmetic, do not overwrite) applies",
+}
+path = OUT / "class2-lane-cost75e-inflight-20261116.json"
+with open(path, "w") as f:
+    json.dump(claim, f, indent=1, ensure_ascii=False)
+    f.write("\n")
+print(path, path.stat().st_size)
