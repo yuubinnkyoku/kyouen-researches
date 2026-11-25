@@ -1,0 +1,1227 @@
+[
+  {
+    "occ": [
+      2,
+      2,
+      3,
+      1,
+      3,
+      3
+    ],
+    "sum": 14,
+    "exact": {
+      "found": false,
+      "nodes": 909,
+      "aborted": false,
+      "first_fail_orbit": [
+        0,
+        2
+      ],
+      "fail_depth": 4,
+      "witness": {
+        "blocked_point": {
+          "pid": 2,
+          "xy": [
+            2,
+            0
+          ],
+          "orbit": [
+            0,
+            2
+          ]
+        },
+        "blocker_triple_pids": [
+          0,
+          1,
+          6
+        ],
+        "blocker_triple_cells": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            6,
+            0
+          ]
+        ],
+        "full_quad_pids": [
+          0,
+          1,
+          2,
+          6
+        ],
+        "full_quad_cells": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            6,
+            0
+          ]
+        ],
+        "full_quad_orbits": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      }
+    },
+    "drop_one": [
+      {
+        "drop_index": 0,
+        "orbit": [
+          0,
+          0
+        ],
+        "new_sum": 13,
+        "found": false,
+        "first_fail_orbit": [
+          1,
+          2
+        ]
+      },
+      {
+        "drop_index": 1,
+        "orbit": [
+          0,
+          1
+        ],
+        "new_sum": 13,
+        "found": false,
+        "first_fail_orbit": [
+          0,
+          2
+        ]
+      },
+      {
+        "drop_index": 2,
+        "orbit": [
+          0,
+          2
+        ],
+        "new_sum": 13,
+        "found": false,
+        "first_fail_orbit": [
+          1,
+          2
+        ]
+      },
+      {
+        "drop_index": 3,
+        "orbit": [
+          1,
+          1
+        ],
+        "new_sum": 13,
+        "found": false,
+        "first_fail_orbit": [
+          1,
+          2
+        ]
+      },
+      {
+        "drop_index": 4,
+        "orbit": [
+          1,
+          2
+        ],
+        "new_sum": 13,
+        "found": false,
+        "first_fail_orbit": [
+          0,
+          2
+        ]
+      },
+      {
+        "drop_index": 5,
+        "orbit": [
+          1,
+          3
+        ],
+        "new_sum": 13,
+        "found": true,
+        "first_fail_orbit": [
+          1,
+          2
+        ]
+      }
+    ]
+  },
+  {
+    "occ": [
+      2,
+      2,
+      3,
+      2,
+      3,
+      2
+    ],
+    "sum": 14,
+    "exact": {
+      "found": false,
+      "nodes": 1021,
+      "aborted": false,
+      "first_fail_orbit": [
+        0,
+        2
+      ],
+      "fail_depth": 4,
+      "witness": {
+        "blocked_point": {
+          "pid": 2,
+          "xy": [
+            2,
+            0
+          ],
+          "orbit": [
+            0,
+            2
+          ]
+        },
+        "blocker_triple_pids": [
+          0,
+          5,
+          6
+        ],
+        "blocker_triple_cells": [
+          [
+            0,
+            0
+          ],
+          [
+            5,
+            0
+          ],
+          [
+            6,
+            0
+          ]
+        ],
+        "full_quad_pids": [
+          0,
+          2,
+          5,
+          6
+        ],
+        "full_quad_cells": [
+          [
+            0,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            5,
+            0
+          ],
+          [
+            6,
+            0
+          ]
+        ],
+        "full_quad_orbits": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      }
+    },
+    "drop_one": [
+      {
+        "drop_index": 0,
+        "orbit": [
+          0,
+          0
+        ],
+        "new_sum": 13,
+        "found": false,
+        "first_fail_orbit": [
+          1,
+          2
+        ]
+      },
+      {
+        "drop_index": 1,
+        "orbit": [
+          0,
+          1
+        ],
+        "new_sum": 13,
+        "found": false,
+        "first_fail_orbit": [
+          1,
+          2
+        ]
+      },
+      {
+        "drop_index": 2,
+        "orbit": [
+          0,
+          2
+        ],
+        "new_sum": 13,
+        "found": false,
+        "first_fail_orbit": [
+          1,
+          2
+        ]
+      },
+      {
+        "drop_index": 3,
+        "orbit": [
+          1,
+          1
+        ],
+        "new_sum": 13,
+        "found": true,
+        "first_fail_orbit": [
+          1,
+          2
+        ]
+      },
+      {
+        "drop_index": 4,
+        "orbit": [
+          1,
+          2
+        ],
+        "new_sum": 13,
+        "found": false,
+        "first_fail_orbit": [
+          0,
+          2
+        ]
+      },
+      {
+        "drop_index": 5,
+        "orbit": [
+          1,
+          3
+        ],
+        "new_sum": 13,
+        "found": false,
+        "first_fail_orbit": [
+          1,
+          2
+        ]
+      }
+    ]
+  },
+  {
+    "occ": [
+      2,
+      3,
+      2,
+      1,
+      3,
+      3
+    ],
+    "sum": 14,
+    "exact": {
+      "found": false,
+      "nodes": 537,
+      "aborted": false,
+      "first_fail_orbit": [
+        1,
+        2
+      ],
+      "fail_depth": 5,
+      "witness": {
+        "blocked_point": {
+          "pid": 9,
+          "xy": [
+            2,
+            1
+          ],
+          "orbit": [
+            1,
+            2
+          ]
+        },
+        "blocker_triple_pids": [
+          0,
+          1,
+          22
+        ],
+        "blocker_triple_cells": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "full_quad_pids": [
+          0,
+          1,
+          9,
+          22
+        ],
+        "full_quad_cells": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "full_quad_orbits": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ]
+      }
+    },
+    "drop_one": [
+      {
+        "drop_index": 0,
+        "orbit": [
+          0,
+          0
+        ],
+        "new_sum": 13,
+        "found": false,
+        "first_fail_orbit": [
+          1,
+          2
+        ]
+      },
+      {
+        "drop_index": 1,
+        "orbit": [
+          0,
+          1
+        ],
+        "new_sum": 13,
+        "found": false,
+        "first_fail_orbit": [
+          1,
+          2
+        ]
+      },
+      {
+        "drop_index": 2,
+        "orbit": [
+          0,
+          2
+        ],
+        "new_sum": 13,
+        "found": false,
+        "first_fail_orbit": [
+          1,
+          2
+        ]
+      },
+      {
+        "drop_index": 3,
+        "orbit": [
+          1,
+          1
+        ],
+        "new_sum": 13,
+        "found": false,
+        "first_fail_orbit": [
+          1,
+          2
+        ]
+      },
+      {
+        "drop_index": 4,
+        "orbit": [
+          1,
+          2
+        ],
+        "new_sum": 13,
+        "found": false,
+        "first_fail_orbit": [
+          0,
+          1
+        ]
+      },
+      {
+        "drop_index": 5,
+        "orbit": [
+          1,
+          3
+        ],
+        "new_sum": 13,
+        "found": true,
+        "first_fail_orbit": [
+          1,
+          2
+        ]
+      }
+    ]
+  },
+  {
+    "occ": [
+      2,
+      3,
+      2,
+      2,
+      3,
+      2
+    ],
+    "sum": 14,
+    "exact": {
+      "found": false,
+      "nodes": 193,
+      "aborted": false,
+      "first_fail_orbit": [
+        0,
+        1
+      ],
+      "fail_depth": 4,
+      "witness": {
+        "blocked_point": {
+          "pid": 1,
+          "xy": [
+            1,
+            0
+          ],
+          "orbit": [
+            0,
+            1
+          ]
+        },
+        "blocker_triple_pids": [
+          6,
+          36,
+          46
+        ],
+        "blocker_triple_cells": [
+          [
+            6,
+            0
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            4,
+            6
+          ]
+        ],
+        "full_quad_pids": [
+          1,
+          6,
+          36,
+          46
+        ],
+        "full_quad_cells": [
+          [
+            1,
+            0
+          ],
+          [
+            6,
+            0
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            4,
+            6
+          ]
+        ],
+        "full_quad_orbits": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            0,
+            2
+          ]
+        ]
+      }
+    },
+    "drop_one": [
+      {
+        "drop_index": 0,
+        "orbit": [
+          0,
+          0
+        ],
+        "new_sum": 13,
+        "found": false,
+        "first_fail_orbit": [
+          1,
+          2
+        ]
+      },
+      {
+        "drop_index": 1,
+        "orbit": [
+          0,
+          1
+        ],
+        "new_sum": 13,
+        "found": false,
+        "first_fail_orbit": [
+          1,
+          2
+        ]
+      },
+      {
+        "drop_index": 2,
+        "orbit": [
+          0,
+          2
+        ],
+        "new_sum": 13,
+        "found": false,
+        "first_fail_orbit": [
+          1,
+          2
+        ]
+      },
+      {
+        "drop_index": 3,
+        "orbit": [
+          1,
+          1
+        ],
+        "new_sum": 13,
+        "found": true,
+        "first_fail_orbit": [
+          1,
+          2
+        ]
+      },
+      {
+        "drop_index": 4,
+        "orbit": [
+          1,
+          2
+        ],
+        "new_sum": 13,
+        "found": false,
+        "first_fail_orbit": [
+          0,
+          1
+        ]
+      },
+      {
+        "drop_index": 5,
+        "orbit": [
+          1,
+          3
+        ],
+        "new_sum": 13,
+        "found": false,
+        "first_fail_orbit": [
+          1,
+          2
+        ]
+      }
+    ]
+  },
+  {
+    "occ": [
+      2,
+      3,
+      3,
+      1,
+      3,
+      2
+    ],
+    "sum": 14,
+    "exact": {
+      "found": false,
+      "nodes": 1421,
+      "aborted": false,
+      "first_fail_orbit": [
+        0,
+        2
+      ],
+      "fail_depth": 4,
+      "witness": {
+        "blocked_point": {
+          "pid": 2,
+          "xy": [
+            2,
+            0
+          ],
+          "orbit": [
+            0,
+            2
+          ]
+        },
+        "blocker_triple_pids": [
+          0,
+          1,
+          6
+        ],
+        "blocker_triple_cells": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            6,
+            0
+          ]
+        ],
+        "full_quad_pids": [
+          0,
+          1,
+          2,
+          6
+        ],
+        "full_quad_cells": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            6,
+            0
+          ]
+        ],
+        "full_quad_orbits": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      }
+    },
+    "drop_one": [
+      {
+        "drop_index": 0,
+        "orbit": [
+          0,
+          0
+        ],
+        "new_sum": 13,
+        "found": false,
+        "first_fail_orbit": [
+          1,
+          2
+        ]
+      },
+      {
+        "drop_index": 1,
+        "orbit": [
+          0,
+          1
+        ],
+        "new_sum": 13,
+        "found": true,
+        "first_fail_orbit": [
+          1,
+          2
+        ]
+      },
+      {
+        "drop_index": 2,
+        "orbit": [
+          0,
+          2
+        ],
+        "new_sum": 13,
+        "found": true,
+        "first_fail_orbit": [
+          1,
+          2
+        ]
+      },
+      {
+        "drop_index": 3,
+        "orbit": [
+          1,
+          1
+        ],
+        "new_sum": 13,
+        "found": false,
+        "first_fail_orbit": [
+          1,
+          2
+        ]
+      },
+      {
+        "drop_index": 4,
+        "orbit": [
+          1,
+          2
+        ],
+        "new_sum": 13,
+        "found": false,
+        "first_fail_orbit": [
+          0,
+          2
+        ]
+      },
+      {
+        "drop_index": 5,
+        "orbit": [
+          1,
+          3
+        ],
+        "new_sum": 13,
+        "found": true,
+        "first_fail_orbit": [
+          1,
+          2
+        ]
+      }
+    ]
+  },
+  {
+    "occ": [
+      3,
+      2,
+      3,
+      1,
+      3,
+      2
+    ],
+    "sum": 14,
+    "exact": {
+      "found": false,
+      "nodes": 917,
+      "aborted": false,
+      "first_fail_orbit": [
+        0,
+        2
+      ],
+      "fail_depth": 4,
+      "witness": {
+        "blocked_point": {
+          "pid": 2,
+          "xy": [
+            2,
+            0
+          ],
+          "orbit": [
+            0,
+            2
+          ]
+        },
+        "blocker_triple_pids": [
+          1,
+          10,
+          22
+        ],
+        "blocker_triple_cells": [
+          [
+            1,
+            0
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "full_quad_pids": [
+          1,
+          2,
+          10,
+          22
+        ],
+        "full_quad_cells": [
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "full_quad_orbits": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            3
+          ]
+        ]
+      }
+    },
+    "drop_one": [
+      {
+        "drop_index": 0,
+        "orbit": [
+          0,
+          0
+        ],
+        "new_sum": 13,
+        "found": true,
+        "first_fail_orbit": [
+          1,
+          2
+        ]
+      },
+      {
+        "drop_index": 1,
+        "orbit": [
+          0,
+          1
+        ],
+        "new_sum": 13,
+        "found": false,
+        "first_fail_orbit": [
+          1,
+          2
+        ]
+      },
+      {
+        "drop_index": 2,
+        "orbit": [
+          0,
+          2
+        ],
+        "new_sum": 13,
+        "found": true,
+        "first_fail_orbit": [
+          1,
+          2
+        ]
+      },
+      {
+        "drop_index": 3,
+        "orbit": [
+          1,
+          1
+        ],
+        "new_sum": 13,
+        "found": false,
+        "first_fail_orbit": [
+          1,
+          2
+        ]
+      },
+      {
+        "drop_index": 4,
+        "orbit": [
+          1,
+          2
+        ],
+        "new_sum": 13,
+        "found": false,
+        "first_fail_orbit": [
+          0,
+          2
+        ]
+      },
+      {
+        "drop_index": 5,
+        "orbit": [
+          1,
+          3
+        ],
+        "new_sum": 13,
+        "found": true,
+        "first_fail_orbit": [
+          1,
+          2
+        ]
+      }
+    ]
+  },
+  {
+    "occ": [
+      3,
+      3,
+      2,
+      1,
+      3,
+      2
+    ],
+    "sum": 14,
+    "exact": {
+      "found": false,
+      "nodes": 533,
+      "aborted": false,
+      "first_fail_orbit": [
+        1,
+        2
+      ],
+      "fail_depth": 5,
+      "witness": {
+        "blocked_point": {
+          "pid": 9,
+          "xy": [
+            2,
+            1
+          ],
+          "orbit": [
+            1,
+            2
+          ]
+        },
+        "blocker_triple_pids": [
+          0,
+          5,
+          10
+        ],
+        "blocker_triple_cells": [
+          [
+            0,
+            0
+          ],
+          [
+            5,
+            0
+          ],
+          [
+            3,
+            1
+          ]
+        ],
+        "full_quad_pids": [
+          0,
+          5,
+          9,
+          10
+        ],
+        "full_quad_cells": [
+          [
+            0,
+            0
+          ],
+          [
+            5,
+            0
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            1
+          ]
+        ],
+        "full_quad_orbits": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ]
+      }
+    },
+    "drop_one": [
+      {
+        "drop_index": 0,
+        "orbit": [
+          0,
+          0
+        ],
+        "new_sum": 13,
+        "found": true,
+        "first_fail_orbit": [
+          1,
+          2
+        ]
+      },
+      {
+        "drop_index": 1,
+        "orbit": [
+          0,
+          1
+        ],
+        "new_sum": 13,
+        "found": true,
+        "first_fail_orbit": [
+          1,
+          2
+        ]
+      },
+      {
+        "drop_index": 2,
+        "orbit": [
+          0,
+          2
+        ],
+        "new_sum": 13,
+        "found": false,
+        "first_fail_orbit": [
+          1,
+          2
+        ]
+      },
+      {
+        "drop_index": 3,
+        "orbit": [
+          1,
+          1
+        ],
+        "new_sum": 13,
+        "found": false,
+        "first_fail_orbit": [
+          1,
+          2
+        ]
+      },
+      {
+        "drop_index": 4,
+        "orbit": [
+          1,
+          2
+        ],
+        "new_sum": 13,
+        "found": false,
+        "first_fail_orbit": [
+          0,
+          1
+        ]
+      },
+      {
+        "drop_index": 5,
+        "orbit": [
+          1,
+          3
+        ],
+        "new_sum": 13,
+        "found": false,
+        "first_fail_orbit": [
+          1,
+          2
+        ]
+      }
+    ]
+  }
+]

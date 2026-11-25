@@ -1,0 +1,59 @@
+> **研究履歴**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
+# Cycle 27 — skeleton cores vs A/B extensions (n=7)
+
+Evidence: COMPLETE 16-set census + TargetSearch witnesses + `is_safe` on named sets.
+Library: `../../../scripts/research/cycle8_lib.py`, `../../experiments/structural-discovery/scripts/cycle8_exists_k.py`.
+
+## Phase cores (explicit)
+
+**A-core** = A0 minus center (13 stones, safe):
+`(0,0),(1,0),(5,0),(1,1),(2,1),(5,2),(6,2),(5,3),(0,4),(3,5),(4,5),(6,5),(0,6)`
+Occupancy A without `(3,3)`: (2,3,2,0,1,3,2,0,0,**0**).
+
+**B-core** = B0 minus B-bundle stones `(3,2),(4,3),(6,3)` (11 stones, safe):
+`(0,0),(5,0),(6,0),(1,1),(2,1),(5,2),(0,4),(3,5),(4,5),(0,6),(4,6)`
+Occupancy B without `(0,3),(2,3)`: (3,1,2,0,1,3,1,0,0,0).
+
+## Extension tests
+
+| test | result |
+|---|---|
+| A-core → size 14 | **found** = A0 (re-adds center only among the named completion) |
+| B-core → size 14 | **found** = B0 (re-adds `(3,2),(4,3),(6,3)`) |
+| A-core ∪ B-bundle (3 stones) | pop 16, **unsafe** |
+| B-core ∪ {center} | pop 12, **unsafe** |
+
+## Lemma
+
+> The two phase cores lie on the mandatory-orbit skeleton but are **not**
+> interchangeable. Each core completes to size 14 only by restoring its own
+> phase bundle (center for A; the full B-bundle for B). Cross-adding the
+> other phase’s exclusive stones creates a forbidden quad immediately.
+>
+> Combined with COMPLETE capacity: max(M)=13, max(M∪center)=14=A,
+> max(M∪B-bundle)=14=B, partial B-bundle max=13.
+
+This is the concrete geometric content of “mutually exclusive phase
+extensions” behind the n=7 +1.
+
+## Independent recompute
+
+`is_safe` on the same masks agrees: A_wo safe pop13; B_wo safe pop11;
+A_wo|B_b unsafe; B_wo|center unsafe; both cores are subsets of their phases.
+
+## Explicit forbidden quads on cross-extensions
+
+| configuration | example completed forbidden quad |
+|---|---|
+| B-core ∪ {center} | **{(3,3),(6,4),(2,6),(6,6)}** |
+| A-core ∪ {(3,2)∈B-bundle} | {(0,0),(1,1),(3,2),(6,2)} (and 4 more) |
+| A-core ∪ {(0,3)} | {(0,0),(1,0),(2,1),(0,3)} (and 6 more) |
+| A-core ∪ {(2,3)} | {(0,0),(2,1),(2,3),(0,4)} (and 3 more) |
+
+So exclusivity is witnessed by **named quads**, not only by max-size counts.
+
+## Related
+- `CYCLE15_CAPACITY_DECOMPOSITION.md`
+- `CYCLE10_OCCUPANCY_SELECTION.md`
+- `../../archive/discovery-summaries/FINAL_SELECTION_THEOREM.md`
