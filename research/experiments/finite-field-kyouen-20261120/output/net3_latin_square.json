@@ -1,0 +1,134 @@
+[
+  {
+    "q": 3,
+    "vertices": 6,
+    "grid_classes": [
+      3,
+      3,
+      3
+    ],
+    "diagonal_empty": true,
+    "offdiagonal_singleton": true,
+    "filled_offdiagonal": 6,
+    "expected_offdiagonal": 6,
+    "grid_is_latin_minus_diagonal": true,
+    "rows_latin": true,
+    "cols_latin": true,
+    "tau_3": 2,
+    "q_minus_1": 2,
+    "tau_equals_q_minus_1": true,
+    "tau_equals_q": false,
+    "nodes": 13,
+    "error": null
+  },
+  {
+    "q": 4,
+    "vertices": 12,
+    "grid_classes": [
+      4,
+      4,
+      4
+    ],
+    "diagonal_empty": true,
+    "offdiagonal_singleton": true,
+    "filled_offdiagonal": 12,
+    "expected_offdiagonal": 12,
+    "grid_is_latin_minus_diagonal": true,
+    "rows_latin": true,
+    "cols_latin": true,
+    "tau_3": 4,
+    "q_minus_1": 3,
+    "tau_equals_q_minus_1": false,
+    "tau_equals_q": true,
+    "nodes": 53,
+    "error": null
+  },
+  {
+    "q": 5,
+    "vertices": 20,
+    "grid_classes": [
+      5,
+      5,
+      5
+    ],
+    "diagonal_empty": true,
+    "offdiagonal_singleton": true,
+    "filled_offdiagonal": 20,
+    "expected_offdiagonal": 20,
+    "grid_is_latin_minus_diagonal": true,
+    "rows_latin": true,
+    "cols_latin": true,
+    "tau_3": 4,
+    "q_minus_1": 4,
+    "tau_equals_q_minus_1": true,
+    "tau_equals_q": false,
+    "nodes": 287,
+    "error": null
+  },
+  {
+    "q": 7,
+    "vertices": 42,
+    "grid_classes": [
+      7,
+      7,
+      7
+    ],
+    "diagonal_empty": true,
+    "offdiagonal_singleton": true,
+    "filled_offdiagonal": 42,
+    "expected_offdiagonal": 42,
+    "grid_is_latin_minus_diagonal": true,
+    "rows_latin": true,
+    "cols_latin": true,
+    "tau_3": 6,
+    "q_minus_1": 6,
+    "tau_equals_q_minus_1": true,
+    "tau_equals_q": false,
+    "nodes": 11365,
+    "error": null
+  },
+  {
+    "q": 8,
+    "vertices": 56,
+    "grid_classes": [
+      8,
+      8,
+      8
+    ],
+    "diagonal_empty": true,
+    "offdiagonal_singleton": true,
+    "filled_offdiagonal": 56,
+    "expected_offdiagonal": 56,
+    "grid_is_latin_minus_diagonal": true,
+    "rows_latin": true,
+    "cols_latin": true,
+    "tau_3": 8,
+    "q_minus_1": 7,
+    "tau_equals_q_minus_1": false,
+    "tau_equals_q": true,
+    "nodes": 85893,
+    "error": null
+  },
+  {
+    "q": 9,
+    "vertices": 72,
+    "grid_classes": [
+      9,
+      9,
+      9
+    ],
+    "diagonal_empty": true,
+    "offdiagonal_singleton": true,
+    "filled_offdiagonal": 72,
+    "expected_offdiagonal": 72,
+    "grid_is_latin_minus_diagonal": true,
+    "rows_latin": true,
+    "cols_latin": true,
+    "tau_3": 8,
+    "q_minus_1": 8,
+    "tau_equals_q_minus_1": true,
+    "tau_equals_q": false,
+    "nodes": 692929,
+    "error": null
+  }
+]

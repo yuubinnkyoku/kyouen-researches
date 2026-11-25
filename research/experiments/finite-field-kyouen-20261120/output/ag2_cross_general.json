@@ -1,0 +1,53 @@
+[
+  {
+    "q": 5,
+    "q_mod_4": 1,
+    "points": 25,
+    "blocks": 155,
+    "block_sizes": {
+      "4": 100,
+      "5": 30,
+      "9": 25
+    },
+    "cross_size": 9,
+    "n_cross": 25,
+    "expected_cross": 25,
+    "cross_count_ok": true,
+    "bound_3q2_over_2q_minus_1": "25/3",
+    "K_upper": 8
+  },
+  {
+    "q": 9,
+    "q_mod_4": 1,
+    "points": 81,
+    "blocks": 819,
+    "block_sizes": {
+      "8": 648,
+      "9": 90,
+      "17": 81
+    },
+    "cross_size": 17,
+    "n_cross": 81,
+    "expected_cross": 81,
+    "cross_count_ok": true,
+    "bound_3q2_over_2q_minus_1": "243/17",
+    "K_upper": 14
+  },
+  {
+    "q": 13,
+    "q_mod_4": 1,
+    "points": 169,
+    "blocks": 2379,
+    "block_sizes": {
+      "12": 2028,
+      "13": 182,
+      "25": 169
+    },
+    "cross_size": 25,
+    "n_cross": 169,
+    "expected_cross": 169,
+    "cross_count_ok": true,
+    "bound_3q2_over_2q_minus_1": "507/25",
+    "K_upper": 20
+  }
+]

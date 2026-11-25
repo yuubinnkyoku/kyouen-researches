@@ -1,0 +1,38 @@
+{
+ "board": "5x21",
+ "q": 6,
+ "censusCurves": 810,
+ "system": "independent all-triples (method-disjoint from surgery.js)",
+ "witnesses": [
+  {
+   "name": "original (K0815, restored (5,1))",
+   "stones": 24,
+   "rows": [4,5,5,5,5],
+   "safe": true,
+   "maxCurveStones": 5,
+   "maximal": true,
+   "unblocked": null,
+   "verdict": "PASS deficient-maximal witness"
+  },
+  {
+   "name": "variant A (swap (10,2)->(11,2))",
+   "stones": 24,
+   "rows": [4,5,5,5,5],
+   "safe": true,
+   "maxCurveStones": 5,
+   "maximal": true,
+   "unblocked": null,
+   "verdict": "PASS deficient-maximal witness"
+  },
+  {
+   "name": "variant B (swap (10,2)->(12,2))",
+   "stones": 24,
+   "rows": [4,5,5,5,5],
+   "safe": true,
+   "maxCurveStones": 5,
+   "maximal": true,
+   "unblocked": null,
+   "verdict": "PASS deficient-maximal witness"
+  }
+ ]
+}

@@ -1,0 +1,36 @@
+{
+ "control": {
+  "board": "5x18 q=7 class [0]",
+  "expectation": "SAT (K0332 29-stone deficient maximal witness exists)",
+  "verdict": "s SATISFIABLE"
+ },
+ "modelVerify": {
+  "w": 5,
+  "m": 18,
+  "q": 7,
+  "defRows": [
+   0
+  ],
+  "stones": 29,
+  "rowCounts": [
+   5,
+   6,
+   6,
+   6,
+   6
+  ],
+  "ok": true,
+  "verify": {
+   "ok": true,
+   "size": 29,
+   "rows": [
+    5,
+    6,
+    6,
+    6,
+    6
+   ],
+   "minRow": 5
+  }
+ }
+}

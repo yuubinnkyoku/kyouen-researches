@@ -1,0 +1,13 @@
+5x23q6-species m21_m21 class t=0 (id@0,H@0,V@5,HV@5): consistent=True nRmLeaves=5095913 nSafe=5095913 nMaximal=0 nWitness=0
+5x27q5-species m25 class t=0 (id@0,H@0,V@7,HV@7): consistent=True nRmLeaves=4920056 nSafe=4920056 nMaximal=0 nWitness=0
+5x23q6-species m21_m21 id@0: 2 runs (1 pre-interrupt + reruns), unlock-invariants identical=True nRmLeaves=5095913
+5x27q5-species m25 id@0: 2 runs (1 pre-interrupt + reruns), unlock-invariants identical=True nRmLeaves=4920056
+5x23q6-species m21_m21: rep offsets [0, 1, 2, 3, 4, 5] complete=True
+5x23q6-species m21_varA: rep offsets [0, 1, 2, 3, 4, 5] complete=True
+5x23q6-species m21_varB: rep offsets [0, 1, 2, 3, 4, 5] complete=True
+5x27q5-species m25: rep offsets [0, 1, 2, 3, 4, 5, 6, 7] complete=True
+total unique-config runs: 32 (q6 21 / q5 11)
+total nRmLeaves over unique configs: 162581176 (q6 108861233 / q5 53719943)
+total nSafe: 162581176  nMaximal: 0  nWitness: 0
+records.jsonl: 34 runs (incl. determinism doubles)
+ALL CHECKS PASS

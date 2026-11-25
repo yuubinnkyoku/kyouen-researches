@@ -1,0 +1,345 @@
+[
+  {
+    "n": 3,
+    "q": 5,
+    "integer_safe_sets": 298,
+    "violations": 0,
+    "first_violation": null
+  },
+  {
+    "n": 3,
+    "q": 7,
+    "integer_safe_sets": 298,
+    "violations": 0,
+    "first_violation": null
+  },
+  {
+    "n": 3,
+    "q": 11,
+    "integer_safe_sets": 298,
+    "violations": 0,
+    "first_violation": null
+  },
+  {
+    "n": 3,
+    "q": 13,
+    "integer_safe_sets": 298,
+    "violations": 0,
+    "first_violation": null
+  },
+  {
+    "n": 4,
+    "q": 5,
+    "integer_safe_sets": 5811,
+    "violations": 2120,
+    "first_violation": {
+      "integer_points": [
+        [
+          3,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "reduced_quad": [
+        [
+          3,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ]
+    }
+  },
+  {
+    "n": 4,
+    "q": 7,
+    "integer_safe_sets": 5811,
+    "violations": 1048,
+    "first_violation": {
+      "integer_points": [
+        [
+          3,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "reduced_quad": [
+        [
+          3,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ]
+    }
+  },
+  {
+    "n": 4,
+    "q": 11,
+    "integer_safe_sets": 5811,
+    "violations": 352,
+    "first_violation": {
+      "integer_points": [
+        [
+          3,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "reduced_quad": [
+        [
+          3,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ]
+    }
+  },
+  {
+    "n": 4,
+    "q": 13,
+    "integer_safe_sets": 5811,
+    "violations": 0,
+    "first_violation": null
+  },
+  {
+    "n": 5,
+    "q": 5,
+    "integer_safe_sets": 151394,
+    "violations": 122168,
+    "first_violation": {
+      "integer_points": [
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "reduced_quad": [
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          2,
+          4
+        ]
+      ]
+    }
+  },
+  {
+    "n": 5,
+    "q": 7,
+    "integer_safe_sets": 151394,
+    "violations": 99064,
+    "first_violation": {
+      "integer_points": [
+        [
+          4,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          0,
+          4
+        ]
+      ],
+      "reduced_quad": [
+        [
+          4,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          0,
+          4
+        ]
+      ]
+    }
+  },
+  {
+    "n": 5,
+    "q": 11,
+    "integer_safe_sets": 151394,
+    "violations": 70248,
+    "first_violation": {
+      "integer_points": [
+        [
+          4,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          4
+        ]
+      ],
+      "reduced_quad": [
+        [
+          4,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          4
+        ]
+      ]
+    }
+  },
+  {
+    "n": 5,
+    "q": 13,
+    "integer_safe_sets": 151394,
+    "violations": 46304,
+    "first_violation": {
+      "integer_points": [
+        [
+          4,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "reduced_quad": [
+        [
+          4,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ]
+      ]
+    }
+  }
+]

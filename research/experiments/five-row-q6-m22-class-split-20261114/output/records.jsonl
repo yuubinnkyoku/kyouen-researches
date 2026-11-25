@@ -1,0 +1,12 @@
+{"run":"control","w":5,"m":21,"q":6,"class":"0","result":"SAT","conflicts":330743,"witness":{"stones":24,"rows":[4,5,5,5,5]},"verify":"census-free verifyConfig PASS; K0815 m=21 witness rediscovered","provenance":"session stdout; raw lost to execution-environment reset","date":"2026-11-14"}
+{"w":5,"m":22,"q":6,"class":"0","result":"INDET","conflicts":3556467,"timeout_s":250,"provenance":"session stdout; raw lost to execution-environment reset","date":"2026-11-14"}
+{"w":5,"m":22,"q":6,"class":"1","result":"INDET","conflicts":2029456,"timeout_s":250,"provenance":"session stdout; raw lost to execution-environment reset","date":"2026-11-14"}
+{"w":5,"m":22,"q":6,"class":"2","result":"INDET","conflicts":2950798,"timeout_s":250,"provenance":"session stdout; raw lost to execution-environment reset","date":"2026-11-14"}
+{"w":5,"m":22,"q":6,"class":"0,1","result":"INDET","conflicts":2144279,"timeout_s":250,"provenance":"session stdout; raw lost to execution-environment reset","date":"2026-11-14"}
+{"w":5,"m":22,"q":6,"class":"0,2","result":"INDET","conflicts":2302649,"timeout_s":250,"provenance":"session stdout; raw lost to execution-environment reset","date":"2026-11-14"}
+{"w":5,"m":22,"q":6,"class":"0,1,2","result":"INDET","conflicts":2195845,"timeout_s":250,"provenance":"session stdout; raw lost to execution-environment reset","date":"2026-11-14"}
+{"w":5,"m":22,"q":6,"class":"0,1,2,3","result":"INDET","conflicts":2231216,"timeout_s":250,"provenance":"session stdout; raw lost to execution-environment reset","date":"2026-11-14"}
+{"w":5,"m":22,"q":6,"class":"0,1,2,3,4","result":"INDET","conflicts":2270925,"timeout_s":250,"provenance":"session stdout; raw lost to execution-environment reset","date":"2026-11-14","note":"rerun after raw loss; first run 1929901 conflicts"}
+{"w":5,"m":22,"q":6,"class":"0","extra":"--krow=0:4","result":"INDET","conflicts":2019686,"timeout_s":250,"provenance":"session stdout; raw lost to execution-environment reset","date":"2026-11-14"}
+{"w":5,"m":22,"q":6,"class":"1","extra":"--krow=1:4","result":"INDET","conflicts":1943003,"timeout_s":250,"provenance":"session stdout; raw lost to execution-environment reset","date":"2026-11-14"}
+{"sa":true,"w":5,"m":22,"q":6,"seed":401,"budget_s":200,"result":"not-found","min_stones":25,"machine":"sa-frontier-extension-20261114/scripts/sa_machine.js verbatim","provenance":"session stdout; raw lost to execution-environment reset","date":"2026-11-14"}

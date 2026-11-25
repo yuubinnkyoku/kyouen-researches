@@ -1,0 +1,32 @@
+[
+  {
+    "q": 7,
+    "K": 6,
+    "results": [
+      {
+        "target": 4,
+        "exists": true,
+        "nodes": 5,
+        "status": "found"
+      },
+      {
+        "target": 5,
+        "exists": true,
+        "nodes": 6,
+        "status": "found"
+      },
+      {
+        "target": 6,
+        "exists": true,
+        "nodes": 7,
+        "status": "found"
+      },
+      {
+        "target": 7,
+        "exists": false,
+        "nodes": 2551236,
+        "status": "exhausted (no set of this size)"
+      }
+    ]
+  }
+]

@@ -1,0 +1,127 @@
+[
+  {
+    "q": 7,
+    "n": 50,
+    "K": 6,
+    "known_K": 6,
+    "histogram": {
+      "0": 1,
+      "1": 50,
+      "2": 1225,
+      "3": 19600,
+      "4": 205800,
+      "5": 1070160,
+      "6": 1254400
+    },
+    "closed_form_checks": [
+      {
+        "k": 0,
+        "exhaustive": 1,
+        "closed": 1,
+        "ok": true
+      },
+      {
+        "k": 1,
+        "exhaustive": 50,
+        "closed": 50,
+        "ok": true
+      },
+      {
+        "k": 2,
+        "exhaustive": 1225,
+        "closed": 1225,
+        "ok": true
+      },
+      {
+        "k": 3,
+        "exhaustive": 19600,
+        "closed": 19600,
+        "ok": true
+      },
+      {
+        "k": 4,
+        "exhaustive": 205800,
+        "closed": 205800,
+        "ok": true
+      },
+      {
+        "k": 5,
+        "exhaustive": 1070160,
+        "closed": 1070160,
+        "ok": true
+      },
+      {
+        "k": 6,
+        "exhaustive": 1254400,
+        "closed": 1254400.0,
+        "ok": true
+      }
+    ],
+    "nodes": 2551236,
+    "capped": false,
+    "seconds": 37.31
+  },
+  {
+    "q": 8,
+    "n": 65,
+    "K": 7,
+    "known_K": 7,
+    "histogram": {
+      "0": 1,
+      "1": 65,
+      "2": 2080,
+      "3": 43680,
+      "4": 611520,
+      "5": 4525248,
+      "6": 9434880,
+      "7": 1048320
+    },
+    "closed_form_checks": [
+      {
+        "k": 0,
+        "exhaustive": 1,
+        "closed": 1,
+        "ok": true
+      },
+      {
+        "k": 1,
+        "exhaustive": 65,
+        "closed": 65,
+        "ok": true
+      },
+      {
+        "k": 2,
+        "exhaustive": 2080,
+        "closed": 2080,
+        "ok": true
+      },
+      {
+        "k": 3,
+        "exhaustive": 43680,
+        "closed": 43680,
+        "ok": true
+      },
+      {
+        "k": 4,
+        "exhaustive": 611520,
+        "closed": 611520,
+        "ok": true
+      },
+      {
+        "k": 5,
+        "exhaustive": 4525248,
+        "closed": 4525248,
+        "ok": true
+      },
+      {
+        "k": 6,
+        "exhaustive": 9434880,
+        "closed": 9434880.0,
+        "ok": true
+      }
+    ],
+    "nodes": 15665794,
+    "capped": false,
+    "seconds": 480.66
+  }
+]

@@ -1,0 +1,51 @@
+{
+  "fits": {
+    "power": {
+      "c": 3.3928216017065047,
+      "alpha": 0.3251347463888547,
+      "sse": 0.013325397729223224
+    },
+    "linear": {
+      "a": 3.7906976744186043,
+      "b": 0.372093023255814,
+      "sse": 0.418604651162791
+    },
+    "log": {
+      "a": 2.7264931724159713,
+      "b": 1.892624263170335,
+      "sse": 0.49388627389046635
+    }
+  },
+  "bounds": [
+    {
+      "q": 3,
+      "observed": 5,
+      "triple_bound": 6,
+      "pair_bound": 10
+    },
+    {
+      "q": 4,
+      "observed": 5,
+      "triple_bound": 8,
+      "pair_bound": 12
+    },
+    {
+      "q": 5,
+      "observed": 6,
+      "triple_bound": 10,
+      "pair_bound": 14
+    },
+    {
+      "q": 7,
+      "observed": 6,
+      "triple_bound": 13,
+      "pair_bound": 19
+    },
+    {
+      "q": 8,
+      "observed": 7,
+      "triple_bound": 15,
+      "pair_bound": 21
+    }
+  ]
+}

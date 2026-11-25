@@ -1,0 +1,16 @@
+{
+ "witness": "K0852 five-row-q6-m22-witness-20261115",
+ "seed": "K0815 seeds_w56_21 (5x21, 24 stones)",
+ "embeddings": [
+  {"iso": "id", "offX": 0, "sd": 28},
+  {"iso": "H", "offX": 0, "sd": 28},
+  {"iso": "V", "offX": 0, "sd": 34},
+  {"iso": "id", "offX": 1, "sd": 38},
+  {"iso": "HV", "offX": 0, "sd": 38},
+  {"iso": "H", "offX": 1, "sd": 40},
+  {"iso": "HV", "offX": 1, "sd": 40},
+  {"iso": "V", "offX": 1, "sd": 42}
+ ],
+ "minSd": 28,
+ "note": "min symmetric difference over all 4 isometries x 2 column offsets; both id@0 and H@0 attain the minimum 28"
+}

@@ -1,0 +1,24 @@
+{
+ "w": 5,
+ "m": 21,
+ "q": 7,
+ "claim": "no row-deficient maximal safe configuration on 5x21 q=7; witness-free width set of (5,7) is {19,20,21}; M_{5,7} in {19,20,21} or >= 23 (upper 158 unchanged)",
+ "direct_classes_unsat": 17,
+ "class0_k_minpos_split_unsat": 16,
+ "class1_k_minpos_split_unsat": 16,
+ "indet": 0,
+ "total_conflicts_21": 28617104,
+ "hardest": [
+  "0 k0:5 mp0: 3295997",
+  "1 k1:5 mp0: 2851122",
+  "0 k0:5 mp1: 1962310",
+  "1 k1:5 mp1: 1627196",
+  "1 k1:4: 1507923"
+ ],
+ "lex_cross_checks": {
+  "2": 488589,
+  "0,1": 639843
+ },
+ "positive_control": "5x18 class {0} SAT 343,134 conflicts / 11.5s; decoded 29 stones rows (5,6,6,6,6), census-free verifyConfig PASS (K0332 witness rediscovered end-to-end)",
+ "decomposition_soundness": "k=0..5 partitions the deficient-row stone count; k=5 instances split by minpos=0..10 (every configuration or its column mirror has minpos <= 10 at m=21: min(x1,20-x5) <= 10); column mirror preserves row occupancy hence the class"
+}

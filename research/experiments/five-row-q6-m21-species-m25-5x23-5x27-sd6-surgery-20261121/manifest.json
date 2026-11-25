@@ -1,0 +1,439 @@
+{
+ "experiment": "five-row-q6-m21-species-m25-5x23-5x27-sd6-surgery-20261121",
+ "date": "2026-11-21",
+ "pinned_upstream": {
+  "surgery4.js": "7dc40fc0f08150692d64241d0c6c4029",
+  "sat.js": "0cc6021a4e523a0d7f4d5ea0f5f5d40c",
+  "census4_check.js": "dadbeae1b02ad2a9650c6ce86021fb9c",
+  "source": "research/experiments/five-row-q6-q5-m23-m27-sd6-surgery-20261121/scripts/ (parent experiment, md5-verified identical)"
+ },
+ "declaration": "research/log/2026-11-21-five-row-q6-m21-species-m25-5x23-5x27-sd6-surgery-single-owner-note.md (commit 5c4cfca9)",
+ "grid_correction": "declaration said 3 classes for 5x23 (span-21); actual m21-species bbox span is 18 -> complete grid is 6 classes per species; the experiment ran the complete 6-class grid (superset)",
+ "totals": {
+  "unique_config_runs": 32,
+  "records_including_doubles": 34,
+  "nRmLeaves": 162581176,
+  "q6_nRmLeaves": 108861233,
+  "q5_nRmLeaves": 53719943,
+  "nWitness": 0,
+  "nMaximal": 0,
+  "cross_class_consistent": "2/2 (m21_m21 t=0, m25 t=0)"
+ },
+ "files": [
+  {
+   "path": "README.md",
+   "bytes": 9100,
+   "md5": "d0d1b33f936696311e8db138583daf88"
+  },
+  {
+   "path": "output/census4_gates.txt",
+   "bytes": 255,
+   "md5": "9938c40f2fe4136a3d2430c35f273874"
+  },
+  {
+   "path": "output/class_consistency.txt",
+   "bytes": 987,
+   "md5": "bbf915459ac156ac181cc9bb3f125dfd"
+  },
+  {
+   "path": "output/provenance.txt",
+   "bytes": 965,
+   "md5": "65f42650f047ac45fb298034388efebc"
+  },
+  {
+   "path": "output/q5camp/m25_HV_t7.jsonl",
+   "bytes": 474,
+   "md5": "d5f729c2519a66e1310b8720b4d3ab1d"
+  },
+  {
+   "path": "output/q5camp/m25_H_t0.jsonl",
+   "bytes": 477,
+   "md5": "9c813b9cbab09b00eca0170e23e43ab3"
+  },
+  {
+   "path": "output/q5camp/m25_V_t7.jsonl",
+   "bytes": 473,
+   "md5": "32358bcccf1332b6bf03557003992176"
+  },
+  {
+   "path": "output/q5camp/m25_id_t0.jsonl",
+   "bytes": 478,
+   "md5": "8f8e701c73b4610d375f34bd713789df"
+  },
+  {
+   "path": "output/q5camp/m25_id_t0_run2.jsonl",
+   "bytes": 478,
+   "md5": "430d0415afe2535707f60eb5e2d0c818"
+  },
+  {
+   "path": "output/q5camp/m25_id_t1.jsonl",
+   "bytes": 471,
+   "md5": "ab56a7045820333854be37a4083015fc"
+  },
+  {
+   "path": "output/q5camp/m25_id_t2.jsonl",
+   "bytes": 464,
+   "md5": "08c85b68449aceab1a473a709f20a374"
+  },
+  {
+   "path": "output/q5camp/m25_id_t3.jsonl",
+   "bytes": 464,
+   "md5": "c01d7fed5821ec62e7966e0f915350ef"
+  },
+  {
+   "path": "output/q5camp/m25_id_t4.jsonl",
+   "bytes": 462,
+   "md5": "afab1816dfa72007e8f9ec53d8cc34e8"
+  },
+  {
+   "path": "output/q5camp/m25_id_t5.jsonl",
+   "bytes": 461,
+   "md5": "2a9117a35dc4ade37e5b586e98cf3f34"
+  },
+  {
+   "path": "output/q5camp/m25_id_t6.jsonl",
+   "bytes": 468,
+   "md5": "c1020b4948305c5675db6e719fa4fda3"
+  },
+  {
+   "path": "output/q5camp/m25_id_t7.jsonl",
+   "bytes": 474,
+   "md5": "8970218a879a6ed6f012a896fcb7e21e"
+  },
+  {
+   "path": "output/q6camp/m21_m21_HV_t5.jsonl",
+   "bytes": 459,
+   "md5": "ebefe8ebebf1e5a0afd45a38bd48606b"
+  },
+  {
+   "path": "output/q6camp/m21_m21_H_t0.jsonl",
+   "bytes": 460,
+   "md5": "3dabcf4615f2bb93aca1f49cecb67a65"
+  },
+  {
+   "path": "output/q6camp/m21_m21_V_t5.jsonl",
+   "bytes": 458,
+   "md5": "4b799fa35eda7b776ede2f964e6d00fd"
+  },
+  {
+   "path": "output/q6camp/m21_m21_id_t0.jsonl",
+   "bytes": 461,
+   "md5": "e8036fb1b766d69b71f3b294ea6e40bf"
+  },
+  {
+   "path": "output/q6camp/m21_m21_id_t0_run2.jsonl",
+   "bytes": 461,
+   "md5": "0e7787b08a4d932cdc7a48c0b8038b9d"
+  },
+  {
+   "path": "output/q6camp/m21_m21_id_t1.jsonl",
+   "bytes": 461,
+   "md5": "142dd0c3b05b0eb717319ac2d37b82cf"
+  },
+  {
+   "path": "output/q6camp/m21_m21_id_t2.jsonl",
+   "bytes": 460,
+   "md5": "3f790188ae7018988f689b14ea5f6ed7"
+  },
+  {
+   "path": "output/q6camp/m21_m21_id_t3.jsonl",
+   "bytes": 466,
+   "md5": "7779889a7e83f49fb212f4bb9aeec29c"
+  },
+  {
+   "path": "output/q6camp/m21_m21_id_t4.jsonl",
+   "bytes": 472,
+   "md5": "8d4f9a1e966dcc138fa1c01605a6a73d"
+  },
+  {
+   "path": "output/q6camp/m21_m21_id_t5.jsonl",
+   "bytes": 477,
+   "md5": "b71c2408b3619b1ddd10f1ff3cc0cfcd"
+  },
+  {
+   "path": "output/q6camp/m21_varA_id_t0.jsonl",
+   "bytes": 462,
+   "md5": "db1f8fb4416289c6b8a161d10e613e39"
+  },
+  {
+   "path": "output/q6camp/m21_varA_id_t1.jsonl",
+   "bytes": 462,
+   "md5": "c21dcb4d019b314cf7b7919328e7731d"
+  },
+  {
+   "path": "output/q6camp/m21_varA_id_t2.jsonl",
+   "bytes": 461,
+   "md5": "07b0a45d2b911a4a4b64a096fdedeb6b"
+  },
+  {
+   "path": "output/q6camp/m21_varA_id_t3.jsonl",
+   "bytes": 467,
+   "md5": "5cef770b68c7a918cc1b02ba80d3b637"
+  },
+  {
+   "path": "output/q6camp/m21_varA_id_t4.jsonl",
+   "bytes": 473,
+   "md5": "0a318487c71def8d37674b164b77de9d"
+  },
+  {
+   "path": "output/q6camp/m21_varA_id_t5.jsonl",
+   "bytes": 478,
+   "md5": "1b876fc9cc14d7277087ac393da41bdb"
+  },
+  {
+   "path": "output/q6camp/m21_varB_id_t0.jsonl",
+   "bytes": 462,
+   "md5": "ec31b669cd8331391b1c4031829af3b0"
+  },
+  {
+   "path": "output/q6camp/m21_varB_id_t1.jsonl",
+   "bytes": 462,
+   "md5": "14e033c7250b1a784ae8c6705daf8289"
+  },
+  {
+   "path": "output/q6camp/m21_varB_id_t2.jsonl",
+   "bytes": 461,
+   "md5": "01607fc63ade87ca8fe83bad12a7ebe1"
+  },
+  {
+   "path": "output/q6camp/m21_varB_id_t3.jsonl",
+   "bytes": 467,
+   "md5": "7a8d3be6ddb689e05f75b36a7b2fc0e5"
+  },
+  {
+   "path": "output/q6camp/m21_varB_id_t4.jsonl",
+   "bytes": 473,
+   "md5": "c7288fd8f67fb52c15205bc5992a2ffd"
+  },
+  {
+   "path": "output/q6camp/m21_varB_id_t5.jsonl",
+   "bytes": 478,
+   "md5": "6f70e32e00f5961a463076096b76dbfb"
+  },
+  {
+   "path": "output/records.jsonl",
+   "bytes": 12800,
+   "md5": "56fbaff8fd98e452cf40b0d298245862"
+  },
+  {
+   "path": "output/seedverify.txt",
+   "bytes": 375,
+   "md5": "899c417cfc8cadfb5a06c6fd74fe0f76"
+  },
+  {
+   "path": "output/selfcomplete.txt",
+   "bytes": 317,
+   "md5": "c4315393f8cf707e9b33bda940a9322e"
+  },
+  {
+   "path": "output/selfcomplete_seed_m21_m21.jsonl",
+   "bytes": 733,
+   "md5": "a34a78c1edfe92e479b0ef61a6621610"
+  },
+  {
+   "path": "output/selfcomplete_seed_m21_varA.jsonl",
+   "bytes": 917,
+   "md5": "9d3725669931acdc463a32c2d574e909"
+  },
+  {
+   "path": "output/selfcomplete_seed_m21_varB.jsonl",
+   "bytes": 923,
+   "md5": "91aef8eba8b357e57a0fa12915c5e1a4"
+  },
+  {
+   "path": "output/selfcomplete_seed_m25.jsonl",
+   "bytes": 790,
+   "md5": "8f9be3b7125aa334b4f21ba65de1a08b"
+  },
+  {
+   "path": "output/symmetry_classes.txt",
+   "bytes": 2362,
+   "md5": "feabe29bcd7aacf003ba18117c882d19"
+  },
+  {
+   "path": "scripts/aggregate.py",
+   "bytes": 5782,
+   "md5": "e16693c6118c7dce3c83f97f45b64b3d"
+  },
+  {
+   "path": "scripts/census4_check.js",
+   "bytes": 1496,
+   "md5": "dadbeae1b02ad2a9650c6ce86021fb9c"
+  },
+  {
+   "path": "scripts/check_symmetry.py",
+   "bytes": 2796,
+   "md5": "fa1010782cbd03d57734b864ce25f000"
+  },
+  {
+   "path": "scripts/gen_images.py",
+   "bytes": 852,
+   "md5": "886a3bc4390c66a4367992b5e2a16c74"
+  },
+  {
+   "path": "scripts/make_manifest.py",
+   "bytes": 2663,
+   "md5": "1d459078c16a6e056efdc9adc7e485d7"
+  },
+  {
+   "path": "scripts/safety_only.js",
+   "bytes": 1316,
+   "md5": "0226bef1bf28aa39d5977c8db59fcfb5"
+  },
+  {
+   "path": "scripts/sat.js",
+   "bytes": 21388,
+   "md5": "0cc6021a4e523a0d7f4d5ea0f5f5d40c"
+  },
+  {
+   "path": "scripts/sat_verify.js",
+   "bytes": 607,
+   "md5": "4ee2886fefbe5ec026c3a14ddba0be31"
+  },
+  {
+   "path": "scripts/surgery4.js",
+   "bytes": 16282,
+   "md5": "7dc40fc0f08150692d64241d0c6c4029"
+  },
+  {
+   "path": "scripts/verify_general.py",
+   "bytes": 4596,
+   "md5": "29e3caca007830d20ba03e521530ac6f"
+  },
+  {
+   "path": "seeds/img_seed_m21_m21_H.json",
+   "bytes": 211,
+   "md5": "c6e07a0db402d8095e301a9ac6c69bfa"
+  },
+  {
+   "path": "seeds/img_seed_m21_m21_HV.json",
+   "bytes": 217,
+   "md5": "e3201c4d6995e52536f2ebd8d758ea69"
+  },
+  {
+   "path": "seeds/img_seed_m21_m21_V.json",
+   "bytes": 217,
+   "md5": "518a3e3cdf7b2834cbc20ad0123f9520"
+  },
+  {
+   "path": "seeds/img_seed_m21_m21_id.json",
+   "bytes": 211,
+   "md5": "a8a21980c2151d3c90ac43c3c4cb95dc"
+  },
+  {
+   "path": "seeds/img_seed_m21_varA_H.json",
+   "bytes": 211,
+   "md5": "a7dc04e83b6cd44082830afc9e3e4847"
+  },
+  {
+   "path": "seeds/img_seed_m21_varA_HV.json",
+   "bytes": 217,
+   "md5": "dde90f6b524621358b62f7254e1b2372"
+  },
+  {
+   "path": "seeds/img_seed_m21_varA_V.json",
+   "bytes": 217,
+   "md5": "a726643c565b5598416c576d149baac5"
+  },
+  {
+   "path": "seeds/img_seed_m21_varA_id.json",
+   "bytes": 211,
+   "md5": "57ea1ef20f25b0de85b46625ce4efb02"
+  },
+  {
+   "path": "seeds/img_seed_m21_varB_H.json",
+   "bytes": 211,
+   "md5": "fb3fe7f83da9d00bb8c0e529cce7c820"
+  },
+  {
+   "path": "seeds/img_seed_m21_varB_HV.json",
+   "bytes": 217,
+   "md5": "6cd7ee83dbf7dd3051f7f8e7bb489ea8"
+  },
+  {
+   "path": "seeds/img_seed_m21_varB_V.json",
+   "bytes": 217,
+   "md5": "4e05e113b8db9d803b75bded2a001298"
+  },
+  {
+   "path": "seeds/img_seed_m21_varB_id.json",
+   "bytes": 211,
+   "md5": "1d9c8fedee4bd63f2420db98907a5580"
+  },
+  {
+   "path": "seeds/img_seed_m25_q5_H.json",
+   "bytes": 174,
+   "md5": "d7b9adaa7f99bd86a7a7037964da85a0"
+  },
+  {
+   "path": "seeds/img_seed_m25_q5_HV.json",
+   "bytes": 173,
+   "md5": "01a2d979296423487aab66a52379a719"
+  },
+  {
+   "path": "seeds/img_seed_m25_q5_V.json",
+   "bytes": 173,
+   "md5": "8764e003eb60b9f25f8ab89209f55421"
+  },
+  {
+   "path": "seeds/img_seed_m25_q5_id.json",
+   "bytes": 174,
+   "md5": "9dcaea6ad87b26d12dfe652f713f1aa8"
+  },
+  {
+   "path": "seeds/seed_m21_m21.json",
+   "bytes": 163,
+   "md5": "2ba8f6cecb13c28994a315f2624c3485"
+  },
+  {
+   "path": "seeds/seed_m21_m21_minus2.json",
+   "bytes": 151,
+   "md5": "4003651ca558866cd01c6e92ae5bb771"
+  },
+  {
+   "path": "seeds/seed_m21_varA.json",
+   "bytes": 163,
+   "md5": "6f497b035bf4c8cb5b381f7ecd9fad51"
+  },
+  {
+   "path": "seeds/seed_m21_varA_minus2.json",
+   "bytes": 151,
+   "md5": "1d7e4a8cc25814ebaa0b15a25e215051"
+  },
+  {
+   "path": "seeds/seed_m21_varB.json",
+   "bytes": 163,
+   "md5": "36588bab953d62494f2b7b629f6c7167"
+  },
+  {
+   "path": "seeds/seed_m21_varB_minus2.json",
+   "bytes": 151,
+   "md5": "507ee5d1a9dbc860fdf948c6f84cc87b"
+  },
+  {
+   "path": "seeds/seed_m25_q5.json",
+   "bytes": 139,
+   "md5": "f4c744d8623397d2039014e13c787fdc"
+  },
+  {
+   "path": "seeds/seed_m25_q5_minus2.json",
+   "bytes": 127,
+   "md5": "98225af02ec9b1e92c7eb6b0d8728193"
+  },
+  {
+   "path": "seeds/seed_w56_21.json",
+   "bytes": 402,
+   "md5": "2963e1b201d034bf02e4cbabf0601390"
+  },
+  {
+   "path": "seeds/verify_variants_5x21.json",
+   "bytes": 822,
+   "md5": "636b6b4612e2e867c1202f1ba46279fd"
+  },
+  {
+   "path": "seeds/w25.json",
+   "bytes": 166,
+   "md5": "46b12a27a1999d4c1e97102ada3fede4"
+  }
+ ]
+}

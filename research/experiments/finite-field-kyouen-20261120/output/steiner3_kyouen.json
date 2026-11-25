@@ -1,0 +1,138 @@
+[
+  {
+    "name": "AG(3,2)=S(3,4,8)",
+    "v": 8,
+    "b": 14,
+    "s": [
+      4
+    ],
+    "t": 3,
+    "lambda_2": 3,
+    "K": 4,
+    "witness": [
+      0,
+      1,
+      2,
+      4
+    ],
+    "nodes": 115,
+    "seconds": 0.0,
+    "design_ok": true,
+    "note": "",
+    "error": null
+  },
+  {
+    "name": "inversive q=3",
+    "v": 10,
+    "b": 30,
+    "s": [
+      4
+    ],
+    "t": 3,
+    "lambda_2": 4,
+    "K": 5,
+    "witness": [
+      0,
+      1,
+      2,
+      3,
+      7
+    ],
+    "nodes": 302,
+    "seconds": 0.0,
+    "design_ok": true,
+    "note": "known K=5",
+    "error": null
+  },
+  {
+    "name": "Witt S(3,6,22)",
+    "v": 22,
+    "b": 77,
+    "s": [
+      6
+    ],
+    "t": 3,
+    "lambda_2": 5,
+    "K": 7,
+    "witness": [
+      0,
+      1,
+      2,
+      6,
+      12,
+      15,
+      21
+    ],
+    "nodes": 14605,
+    "seconds": 0.07,
+    "design_ok": true,
+    "note": "",
+    "error": null
+  },
+  {
+    "name": "inversive q=5",
+    "v": 26,
+    "b": 130,
+    "s": [
+      6
+    ],
+    "t": 3,
+    "lambda_2": 6,
+    "K": 6,
+    "witness": [
+      0,
+      1,
+      2,
+      5,
+      6,
+      15
+    ],
+    "nodes": 43197,
+    "seconds": 0.28,
+    "design_ok": true,
+    "note": "known K=6",
+    "error": null
+  },
+  {
+    "name": "Witt S(4,5,11)",
+    "v": 11,
+    "b": 66,
+    "s": [
+      5
+    ],
+    "t": 4,
+    "lambda_2": null,
+    "K": 3,
+    "witness": [
+      0,
+      1,
+      2
+    ],
+    "nodes": 220,
+    "seconds": 0.0,
+    "design_ok": true,
+    "note": "theorem predicts K=3",
+    "error": null
+  },
+  {
+    "name": "Witt S(5,6,12)",
+    "v": 12,
+    "b": 132,
+    "s": [
+      6
+    ],
+    "t": 5,
+    "lambda_2": null,
+    "K": 3,
+    "witness": [
+      0,
+      1,
+      2
+    ],
+    "nodes": 286,
+    "seconds": 0.0,
+    "design_ok": true,
+    "note": "theorem predicts K=3",
+    "error": null
+  }
+]

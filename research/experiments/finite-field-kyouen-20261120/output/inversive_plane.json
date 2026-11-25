@@ -1,0 +1,76 @@
+[
+  {
+    "q": 3,
+    "field": "F_3[t]/(t^2-2)",
+    "points": 10,
+    "circles": 30,
+    "circle_sizes": {
+      "4": 30
+    },
+    "triples_total": 120,
+    "triples_covered": 120,
+    "triples_missing": 0,
+    "max_triple_multiplicity": 1,
+    "is_3_design": true,
+    "safe_sets": 428,
+    "layer_sizes": {
+      "0": 1,
+      "1": 10,
+      "2": 45,
+      "3": 120,
+      "4": 180,
+      "5": 72
+    },
+    "max_safe_size": 5,
+    "min_maximal_size": 5,
+    "empty_grundy": 1,
+    "empty_outcome": "N(first-player-win)",
+    "grundy_distribution": {
+      "0": 202,
+      "1": 226
+    },
+    "max_grundy": 1,
+    "first_move_grundy_distribution": {
+      "0": 10
+    },
+    "first_moves_winning": 10
+  },
+  {
+    "q": 5,
+    "field": "F_5[t]/(t^2-2)",
+    "points": 26,
+    "circles": 130,
+    "circle_sizes": {
+      "6": 130
+    },
+    "triples_total": 2600,
+    "triples_covered": 2600,
+    "triples_missing": 0,
+    "max_triple_multiplicity": 1,
+    "is_3_design": true,
+    "safe_sets": 47152,
+    "layer_sizes": {
+      "0": 1,
+      "1": 26,
+      "2": 325,
+      "3": 2600,
+      "4": 13000,
+      "5": 26000,
+      "6": 5200
+    },
+    "max_safe_size": 6,
+    "min_maximal_size": 5,
+    "empty_grundy": 1,
+    "empty_outcome": "N(first-player-win)",
+    "grundy_distribution": {
+      "0": 18226,
+      "1": 17226,
+      "2": 11700
+    },
+    "max_grundy": 2,
+    "first_move_grundy_distribution": {
+      "0": 26
+    },
+    "first_moves_winning": 26
+  }
+]

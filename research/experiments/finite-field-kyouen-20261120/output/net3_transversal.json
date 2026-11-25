@@ -1,0 +1,420 @@
+[
+  {
+    "check": "3net",
+    "q": 3,
+    "vertices": 6,
+    "partitions": [
+      {
+        "classes": 3,
+        "sizes": [
+          2,
+          2,
+          2
+        ],
+        "covers_all": true
+      },
+      {
+        "classes": 3,
+        "sizes": [
+          2,
+          2,
+          2
+        ],
+        "covers_all": true
+      },
+      {
+        "classes": 3,
+        "sizes": [
+          2,
+          2,
+          2
+        ],
+        "covers_all": true
+      }
+    ],
+    "is_3net": true
+  },
+  {
+    "check": "3net",
+    "q": 4,
+    "vertices": 12,
+    "partitions": [
+      {
+        "classes": 4,
+        "sizes": [
+          3,
+          3,
+          3,
+          3
+        ],
+        "covers_all": true
+      },
+      {
+        "classes": 4,
+        "sizes": [
+          3,
+          3,
+          3,
+          3
+        ],
+        "covers_all": true
+      },
+      {
+        "classes": 4,
+        "sizes": [
+          3,
+          3,
+          3,
+          3
+        ],
+        "covers_all": true
+      }
+    ],
+    "is_3net": true
+  },
+  {
+    "check": "3net",
+    "q": 5,
+    "vertices": 20,
+    "partitions": [
+      {
+        "classes": 5,
+        "sizes": [
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        "covers_all": true
+      },
+      {
+        "classes": 5,
+        "sizes": [
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        "covers_all": true
+      },
+      {
+        "classes": 5,
+        "sizes": [
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        "covers_all": true
+      }
+    ],
+    "is_3net": true
+  },
+  {
+    "check": "3net",
+    "q": 7,
+    "vertices": 42,
+    "partitions": [
+      {
+        "classes": 7,
+        "sizes": [
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6
+        ],
+        "covers_all": true
+      },
+      {
+        "classes": 7,
+        "sizes": [
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6
+        ],
+        "covers_all": true
+      },
+      {
+        "classes": 7,
+        "sizes": [
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6
+        ],
+        "covers_all": true
+      }
+    ],
+    "is_3net": true
+  },
+  {
+    "check": "3net",
+    "q": 8,
+    "vertices": 56,
+    "partitions": [
+      {
+        "classes": 8,
+        "sizes": [
+          7,
+          7,
+          7,
+          7,
+          7,
+          7,
+          7,
+          7
+        ],
+        "covers_all": true
+      },
+      {
+        "classes": 8,
+        "sizes": [
+          7,
+          7,
+          7,
+          7,
+          7,
+          7,
+          7,
+          7
+        ],
+        "covers_all": true
+      },
+      {
+        "classes": 8,
+        "sizes": [
+          7,
+          7,
+          7,
+          7,
+          7,
+          7,
+          7,
+          7
+        ],
+        "covers_all": true
+      }
+    ],
+    "is_3net": true
+  },
+  {
+    "check": "3net",
+    "q": 9,
+    "vertices": 72,
+    "partitions": [
+      {
+        "classes": 9,
+        "sizes": [
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8
+        ],
+        "covers_all": true
+      },
+      {
+        "classes": 9,
+        "sizes": [
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8
+        ],
+        "covers_all": true
+      },
+      {
+        "classes": 9,
+        "sizes": [
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8
+        ],
+        "covers_all": true
+      }
+    ],
+    "is_3net": true
+  },
+  {
+    "check": "counts",
+    "q": 3,
+    "vertices": 6,
+    "tau_3": 2,
+    "K_from_transversal": 5,
+    "full_independence": 2,
+    "K_predicted": 5,
+    "K_observed": 5,
+    "match": true,
+    "transversal_witness": [
+      0,
+      3
+    ],
+    "full_witness": [
+      0,
+      3
+    ],
+    "seconds": 0.0,
+    "error": null
+  },
+  {
+    "check": "counts",
+    "q": 4,
+    "vertices": 12,
+    "tau_3": 4,
+    "K_from_transversal": 7,
+    "full_independence": 2,
+    "K_predicted": 5,
+    "K_observed": 5,
+    "match": true,
+    "transversal_witness": [
+      0,
+      7,
+      9,
+      11
+    ],
+    "full_witness": [
+      0,
+      2
+    ],
+    "seconds": 0.06,
+    "error": null
+  },
+  {
+    "check": "counts",
+    "q": 5,
+    "vertices": 20,
+    "tau_3": 4,
+    "K_from_transversal": 7,
+    "full_independence": 3,
+    "K_predicted": 6,
+    "K_observed": 6,
+    "match": true,
+    "transversal_witness": [
+      0,
+      4,
+      12,
+      13
+    ],
+    "full_witness": [
+      0,
+      6,
+      10
+    ],
+    "seconds": 0.24,
+    "error": null
+  },
+  {
+    "check": "counts",
+    "q": 7,
+    "vertices": 42,
+    "tau_3": 6,
+    "K_from_transversal": 9,
+    "full_independence": 3,
+    "K_predicted": 6,
+    "K_observed": 6,
+    "match": true,
+    "transversal_witness": [
+      0,
+      7,
+      12,
+      14,
+      16,
+      30
+    ],
+    "full_witness": [
+      0,
+      7,
+      16
+    ],
+    "seconds": 8.54,
+    "error": null
+  },
+  {
+    "check": "counts",
+    "q": 8,
+    "vertices": 56,
+    "tau_3": 8,
+    "K_from_transversal": 11,
+    "full_independence": 4,
+    "K_predicted": 7,
+    "K_observed": 7,
+    "match": true,
+    "transversal_witness": [
+      0,
+      1,
+      2,
+      4,
+      23,
+      29,
+      39,
+      49
+    ],
+    "full_witness": [
+      0,
+      1,
+      16,
+      41
+    ],
+    "seconds": 107.22,
+    "error": null
+  },
+  {
+    "check": "counts",
+    "q": 9,
+    "vertices": 72,
+    "tau_3": 8,
+    "K_from_transversal": 11,
+    "full_independence": 6,
+    "K_predicted": 9,
+    "K_observed": 9,
+    "match": true,
+    "transversal_witness": [
+      0,
+      2,
+      4,
+      9,
+      10,
+      39,
+      46,
+      59
+    ],
+    "full_witness": [
+      0,
+      20,
+      43,
+      44,
+      56,
+      61
+    ],
+    "seconds": 378.82,
+    "error": null
+  }
+]

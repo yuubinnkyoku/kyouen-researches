@@ -1,0 +1,31 @@
+m21_m21: board 5x23, span 18. Classes of the 4x6 placements:
+  class t=0: id@0 == H@0(rowFlip) == V@5(colFlip) == HV@5(colFlip o rowFlip)
+  class t=1: id@1 == H@1(rowFlip) == V@4(colFlip) == HV@4(colFlip o rowFlip)
+  class t=2: id@2 == H@2(rowFlip) == V@3(colFlip) == HV@3(colFlip o rowFlip)
+  class t=3: id@3 == H@3(rowFlip) == V@2(colFlip) == HV@2(colFlip o rowFlip)
+  class t=4: id@4 == H@4(rowFlip) == V@1(colFlip) == HV@1(colFlip o rowFlip)
+  class t=5: id@5 == H@5(rowFlip) == V@0(colFlip) == HV@0(colFlip o rowFlip)
+m21_varA: board 5x23, span 18. Classes of the 4x6 placements:
+  class t=0: id@0 == H@0(rowFlip) == V@5(colFlip) == HV@5(colFlip o rowFlip)
+  class t=1: id@1 == H@1(rowFlip) == V@4(colFlip) == HV@4(colFlip o rowFlip)
+  class t=2: id@2 == H@2(rowFlip) == V@3(colFlip) == HV@3(colFlip o rowFlip)
+  class t=3: id@3 == H@3(rowFlip) == V@2(colFlip) == HV@2(colFlip o rowFlip)
+  class t=4: id@4 == H@4(rowFlip) == V@1(colFlip) == HV@1(colFlip o rowFlip)
+  class t=5: id@5 == H@5(rowFlip) == V@0(colFlip) == HV@0(colFlip o rowFlip)
+m21_varB: board 5x23, span 18. Classes of the 4x6 placements:
+  class t=0: id@0 == H@0(rowFlip) == V@5(colFlip) == HV@5(colFlip o rowFlip)
+  class t=1: id@1 == H@1(rowFlip) == V@4(colFlip) == HV@4(colFlip o rowFlip)
+  class t=2: id@2 == H@2(rowFlip) == V@3(colFlip) == HV@3(colFlip o rowFlip)
+  class t=3: id@3 == H@3(rowFlip) == V@2(colFlip) == HV@2(colFlip o rowFlip)
+  class t=4: id@4 == H@4(rowFlip) == V@1(colFlip) == HV@1(colFlip o rowFlip)
+  class t=5: id@5 == H@5(rowFlip) == V@0(colFlip) == HV@0(colFlip o rowFlip)
+m25: board 5x27, span 20. Classes of the 4x8 placements:
+  class t=0: id@0 == H@0(rowFlip) == V@7(colFlip) == HV@7(colFlip o rowFlip)
+  class t=1: id@1 == H@1(rowFlip) == V@6(colFlip) == HV@6(colFlip o rowFlip)
+  class t=2: id@2 == H@2(rowFlip) == V@5(colFlip) == HV@5(colFlip o rowFlip)
+  class t=3: id@3 == H@3(rowFlip) == V@4(colFlip) == HV@4(colFlip o rowFlip)
+  class t=4: id@4 == H@4(rowFlip) == V@3(colFlip) == HV@3(colFlip o rowFlip)
+  class t=5: id@5 == H@5(rowFlip) == V@2(colFlip) == HV@2(colFlip o rowFlip)
+  class t=6: id@6 == H@6(rowFlip) == V@1(colFlip) == HV@1(colFlip o rowFlip)
+  class t=7: id@7 == H@7(rowFlip) == V@0(colFlip) == HV@0(colFlip o rowFlip)
+ALL SYMMETRY ASSERTIONS PASS: placements collapse to 6 (m21_m21-style span-18) / 8 (m25 span-20) inequivalent classes

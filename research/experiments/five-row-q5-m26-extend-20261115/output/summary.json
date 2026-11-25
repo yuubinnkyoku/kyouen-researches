@@ -1,0 +1,45 @@
+{
+  "experiment": "five-row-q5-m26-extend-20261115",
+  "lane": "fast-lane",
+  "family": "(5,5) fixed-width deficient maximal safe witness band",
+  "date": "2026-11-15",
+  "headline": "(5,5) witness band extended to m=5..26; M_{5,5} in [27,336] (was [26,336])",
+  "bounds_before": {"M_lo": 26, "M_hi": 336},
+  "bounds_after": {"M_lo": 27, "M_hi": 336},
+  "upper_source": "K0318 curve-packing substitution U_{5,5}=336",
+  "m26": {
+    "verdict": "SAT",
+    "encoding": "sat3.js class {0} (vars 41030, clauses 142643, cnf_md5 60e71cfd2f1620cfa9b4070f259c1572)",
+    "solver": "kissat 4.0.4 official linux-amd64 (md5 3a5eba830aa6008a604fcc9bbe99a325)",
+    "conflicts": 1631556,
+    "sec": 199.80,
+    "witness": {"nStones": 19, "rows": [3, 4, 4, 4, 4]},
+    "verification": ["sat3.js decode + sat.js verifyConfig (census-free)", "verify_witness_indep.py (independent Python Fraction, census-free, logic-disjoint)"],
+    "cross_reset_reproduction": "conflicts bit-exact across 3 regenerations incl. 2 environment resets"
+  },
+  "m27": {
+    "verdict": "INDET at all attempted sub-instances (not absence)",
+    "frontier": "m=27 remains the frontier",
+    "sub_instances": {
+      "c0": "INDET 250s (session1 1,777,156; regenerated raw log 1,924,144 at SIGTERM 243.76s)",
+      "c0_deep": "INDET 817.04s >= 5,424,572 (progress-line value; raw log lost to hard reset)",
+      "c0k3": "INDET 240s (session1 1,804,438; regenerated raw log 1,829,756 at SIGTERM 237.22s)",
+      "c0k3p0": "INDET 200s 1,644,162 (raw log on main)"
+    },
+    "remaining_split": "minpos p=1..13 (sound H-split bound floor((m-1)/2)=13) delegated to the class-split lane"
+  },
+  "surgery": {
+    "scope": "local negative, not absence",
+    "seeds": ["m=26 witness (kissat seed@off0)", "H-mirror (seed@off1)"],
+    "analytic_exclusions": ["add-only a<=2", "rm1+add2 (deficiency |S|<=19 forced)"],
+    "complete_enumerations": {"sd<=1": 4446, "rm2/rm2add1/rm2add2": 2321154},
+    "witnesses": 0,
+    "conclusion": "any m=27 witness is >= 3 stone-moves from both seeds (4,651,200 edits enumerated)"
+  },
+  "geometry": {
+    "m26_to_5x27_embedding": "exactly one unblocked cell per offset: offX=0 -> (26,0), offX=1 -> (0,0) ('one stone short', same structure as (5,6) m=23)",
+    "witness_jump": {"sd_vs_m25": 30, "sd_vs_m24": 30}
+  },
+  "calibration": "5x25 class {0} SAT 35,972 conflicts bit-exact with five-row-q5-m24-class-split-20261115",
+  "scope_note": "finite machine verification only; SAT = existence witness; INDET = cap reached, no absence claim; 11x11 empty-board / two-stone root / S2 {59,60} / class1 / class2 / class4 all UNKNOWN"
+}

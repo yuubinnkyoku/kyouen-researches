@@ -1,0 +1,22 @@
+{
+  "claim": "third-system independent (5,m,7) forbidden-curve census matches the genfast3.js meta curves counts bit-exactly for every swept width m=35..49 (13/13)",
+  "method": "circle(P1,P2,Q) horizontal-chord + third-point enumeration (method-disjoint from sat2.js all-triples and genfast3.js chord-pair abstract circles); completeness: >=7-point circle over 5 rows has >=2 double rows and touches >=4 rows",
+  "verifier": "scripts/ts_verify_census5q7.js",
+  "comparisons": [
+    {"m":35,"thirdSystem":244,"genfast3":244},
+    {"m":36,"thirdSystem":253,"genfast3":253},
+    {"m":37,"thirdSystem":262,"genfast3":262},
+    {"m":40,"thirdSystem":289,"genfast3":289},
+    {"m":41,"thirdSystem":298,"genfast3":298},
+    {"m":42,"thirdSystem":307,"genfast3":307},
+    {"m":43,"thirdSystem":316,"genfast3":316},
+    {"m":44,"thirdSystem":325,"genfast3":325},
+    {"m":45,"thirdSystem":334,"genfast3":334},
+    {"m":46,"thirdSystem":343,"genfast3":343},
+    {"m":47,"thirdSystem":352,"genfast3":352},
+    {"m":48,"thirdSystem":365,"genfast3":365},
+    {"m":49,"thirdSystem":378,"genfast3":378}
+  ],
+  "allMatch": true,
+  "date": "2026-11-15"
+}

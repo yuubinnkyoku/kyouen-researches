@@ -1,0 +1,228 @@
+[
+  {
+    "name": "PG(2,2)",
+    "v": 7,
+    "b": 7,
+    "t": 2,
+    "s": [
+      3
+    ],
+    "K": 7,
+    "predicted": null,
+    "match": true,
+    "witness": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "nodes": 29,
+    "seconds": 0.0,
+    "design_ok": true,
+    "note": "(k,3)-arc",
+    "error": null
+  },
+  {
+    "name": "PG(2,3)",
+    "v": 13,
+    "b": 13,
+    "t": 2,
+    "s": [
+      4
+    ],
+    "K": 9,
+    "predicted": null,
+    "match": true,
+    "witness": [
+      0,
+      1,
+      2,
+      4,
+      5,
+      7,
+      9,
+      11,
+      12
+    ],
+    "nodes": 923,
+    "seconds": 0.0,
+    "design_ok": true,
+    "note": "(k,3)-arc",
+    "error": null
+  },
+  {
+    "name": "PG(2,5)",
+    "v": 31,
+    "b": 31,
+    "t": 2,
+    "s": [
+      6
+    ],
+    "K": 11,
+    "predicted": null,
+    "match": true,
+    "witness": [
+      0,
+      1,
+      2,
+      6,
+      7,
+      11,
+      13,
+      20,
+      23,
+      27,
+      30
+    ],
+    "nodes": 4902135,
+    "seconds": 12.46,
+    "design_ok": true,
+    "note": "(k,3)-arc",
+    "error": null
+  },
+  {
+    "name": "AG(3,2)=S(3,4,8)",
+    "v": 8,
+    "b": 14,
+    "t": 3,
+    "s": [
+      4
+    ],
+    "K": 4,
+    "predicted": null,
+    "match": true,
+    "witness": [
+      0,
+      1,
+      2,
+      4
+    ],
+    "nodes": 115,
+    "seconds": 0.0,
+    "design_ok": true,
+    "note": "",
+    "error": null
+  },
+  {
+    "name": "inversive q=3",
+    "v": 10,
+    "b": 30,
+    "t": 3,
+    "s": [
+      4
+    ],
+    "K": 5,
+    "predicted": 5,
+    "match": true,
+    "witness": [
+      0,
+      1,
+      2,
+      3,
+      7
+    ],
+    "nodes": 302,
+    "seconds": 0.0,
+    "design_ok": true,
+    "note": "known K=5",
+    "error": null
+  },
+  {
+    "name": "Witt S(3,6,22)",
+    "v": 22,
+    "b": 77,
+    "t": 3,
+    "s": [
+      6
+    ],
+    "K": 7,
+    "predicted": null,
+    "match": true,
+    "witness": [
+      0,
+      1,
+      2,
+      6,
+      12,
+      15,
+      21
+    ],
+    "nodes": 14605,
+    "seconds": 0.25,
+    "design_ok": true,
+    "note": "",
+    "error": null
+  },
+  {
+    "name": "inversive q=5",
+    "v": 26,
+    "b": 130,
+    "t": 3,
+    "s": [
+      6
+    ],
+    "K": 6,
+    "predicted": 6,
+    "match": true,
+    "witness": [
+      0,
+      1,
+      2,
+      5,
+      6,
+      15
+    ],
+    "nodes": 43197,
+    "seconds": 0.39,
+    "design_ok": true,
+    "note": "known K=6",
+    "error": null
+  },
+  {
+    "name": "Witt S(4,5,11)",
+    "v": 11,
+    "b": 66,
+    "t": 4,
+    "s": [
+      5
+    ],
+    "K": 3,
+    "predicted": 3,
+    "match": true,
+    "witness": [
+      0,
+      1,
+      2
+    ],
+    "nodes": 220,
+    "seconds": 0.0,
+    "design_ok": true,
+    "note": "theorem",
+    "error": null
+  },
+  {
+    "name": "Witt S(5,6,12)",
+    "v": 12,
+    "b": 132,
+    "t": 5,
+    "s": [
+      6
+    ],
+    "K": 3,
+    "predicted": 3,
+    "match": true,
+    "witness": [
+      0,
+      1,
+      2
+    ],
+    "nodes": 286,
+    "seconds": 0.0,
+    "design_ok": true,
+    "note": "theorem",
+    "error": null
+  }
+]

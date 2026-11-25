@@ -1,0 +1,48 @@
+[
+  {
+    "q": 17,
+    "n": 290,
+    "k_star": 6,
+    "target": 6,
+    "found": false,
+    "witness": null,
+    "best_unblocked": 54,
+    "trials": 2000
+  },
+  {
+    "q": 17,
+    "n": 290,
+    "k_star": 6,
+    "target": 7,
+    "found": false,
+    "witness": null,
+    "best_unblocked": 7,
+    "trials": 2000
+  },
+  {
+    "q": 17,
+    "n": 290,
+    "k_star": 6,
+    "target": 8,
+    "found": true,
+    "witness": [
+      288,
+      247,
+      263,
+      207,
+      146,
+      155,
+      236,
+      221
+    ],
+    "best_unblocked": 0,
+    "trials": 1
+  },
+  {
+    "q": 17,
+    "s": 8,
+    "k_star": 6,
+    "gap": 2,
+    "build_seconds": 21.83
+  }
+]

@@ -1,0 +1,92 @@
+c ---- [ banner ] ------------------------------------------------------------
+c
+c Kissat SAT Solver
+c 
+c Copyright (c) 2021-2024 Armin Biere University of Freiburg
+c Copyright (c) 2019-2021 Armin Biere Johannes Kepler University Linz
+c 
+c Version 4.0.4 8af8e56f174b778aef3aa45af9f739b2a5f492c2
+c gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0 -W -Wall -O3 -DNDEBUG
+c Thu Oct 16 19:30:34 CEST 2025 Linux abryzen9 6.8.0-85-generic x86_64
+c
+c ---- [ parsing ] -----------------------------------------------------------
+c
+c opened and reading DIMACS file:
+c
+c   output/c5x26q7_1k0.cnf
+c
+c parsed 'p cnf 6409 22889' header
+c closing input after reading 349211 bytes (341 KB)
+c finished parsing after 0.00 seconds
+c
+c ---- [ solving ] -----------------------------------------------------------
+c
+c seconds switched rate     size/glue tier1  binary        remaining
+c        MB reductions conflicts size  tier2    irredundant
+c         level restarts redundant glue  trail        variables
+c
+c *  0.00  4 0 0 0  0 0   0   0 0.0 0 0 0 0 0% 8643 14076 4606 72%
+c (  0.00  4 0 0 0  0 0   0   0 0.0 0 0 0 0 0% 8643 14076 4606 72%
+c .  0.00  4 0 0 0  0 0   0   0 0.0 0 0 0 0 0% 6972 8434 4606 72%
+c c  0.01  4 0 0 0  0 0   0   0 0.0 0 0 0 0 0% 7520 8164 3934 61%
+c d  0.01  4 0 0 0  0 0   0   0 0.0 0 0 0 0 0% 5704 8164 3934 61%
+c =  0.02  4 0 0 0  0 0   0   0 0.0 0 0 0 0 0% 5636 8156 3930 61%
+c d  0.02  4 0 0 0  0 0   0   0 0.0 0 0 0 0 0% 5624 8156 3930 61%
+c )  0.03  4 0 0 0  0 0   0   0 0.0 0 0 0 0 0% 5624 8156 3930 61%
+c {  0.03  4 0 0 0  0 0   0   0 0.0 0 0 2 6 0% 5624 8156 3930 61%
+c i  0.03  4 5 0 0  0 3   8   5 4.4 5 1 0 0 36% 5625 8156 3910 61%
+c i  0.03  4 10 0 0  0 3  25  19 1.9 6 3 0 0 39% 5627 8156 3892 61%
+c i  0.03  4 8 0 0  0 2  99  70 2.5 8 3 4 7 36% 5635 8156 3605 56%
+c i  0.03  4 8 0 0  0 2 113  76 2.4 7 3 4 7 35% 5640 8156 3594 56%
+c i  0.03  4 8 0 0  0 2 114  76 2.4 7 3 4 7 35% 5640 8156 3567 56%
+c i  0.03  4 8 0 0  0 2 115  76 2.4 7 3 4 7 35% 5640 8156 3549 55%
+c i  0.03  4 7 0 0  0 2 118  76 2.4 7 3 4 7 34% 5642 8156 3548 55%
+c i  0.03  4 7 0 0  0 2 119  76 2.4 7 3 4 7 34% 5642 8156 3514 55%
+c }  0.03  4 7 0 0  0 2 121  76 2.4 7 3 4 7 34% 5642 8156 2418 38%
+c 0  0.03  4 7 0 0  0 2 121  76 2.4 7 3 4 7 34% 5642 8156 2418 38%
+c
+c ---- [ result ] ------------------------------------------------------------
+c
+s UNSATISFIABLE
+c
+c ---- [ profiling ] ---------------------------------------------------------
+c
+c           0.02   71.81 %  preprocess
+c           0.02   70.00 %  probe
+c           0.02   48.42 %  sweep
+c           0.00   11.22 %  search
+c           0.00   11.20 %  focused
+c           0.00    9.94 %  parse
+c           0.00    9.91 %  congruence
+c           0.00    6.65 %  factor
+c           0.00    5.45 %  lucky
+c           0.00    4.45 %  substitute
+c           0.00    0.48 %  backbone
+c           0.00    0.00 %  simplify
+c =============================================
+c           0.03  100.00 %  total
+c
+c ---- [ statistics ] --------------------------------------------------------
+c
+c conflicts:                              121             3687.68 per second
+c congruent:                              672               10 %  variables
+c decisions:                              246                2.03 per conflict
+c iterations:                               9                0 %  variables
+c propagations:                        146835          4475040    per second
+c substituted:                            676               11 %  variables
+c switched:                                 0                0    interval
+c
+c ---- [ glue usage ] --------------------------------------------------------
+c
+c focused glue 3 used 34 clauses 29.06% accumulated 71.79% tier1
+c focused glue 4 used 12 clauses 10.26% accumulated 82.05%
+c focused glue 5 used 13 clauses 11.11% accumulated 93.16% tier2
+c
+c ---- [ resources ] ---------------------------------------------------------
+c
+c maximum-resident-set-size:          4546560 bytes          4 MB
+c process-time:                                              0.03 seconds
+c
+c ---- [ shutting down ] -----------------------------------------------------
+c
+c exit 20

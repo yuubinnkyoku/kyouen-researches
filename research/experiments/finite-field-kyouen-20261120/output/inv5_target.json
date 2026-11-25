@@ -1,0 +1,43 @@
+[
+  {
+    "q": 5,
+    "target_size": 6,
+    "exists": true,
+    "witness": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        3,
+        0
+      ]
+    ],
+    "nodes": 7,
+    "status": "found"
+  },
+  {
+    "q": 5,
+    "target_size": 7,
+    "exists": false,
+    "witness": null,
+    "nodes": 47152,
+    "status": "exhausted (no set of this size)"
+  }
+]

@@ -1,0 +1,59 @@
+[base m37/id] n=14 rows=[2,3,3,3,3] safe=true (ml=3 mc=3) unblockedCells=2 -> [[37,0],[39,0]]
+[base m37/id] single-move candidates=2604 witnesses=0
+[base m37/id] after rem2add1 total=0
+[base m37/id] rem2add2 candidates=1565655 total=0
+[base m37/H] n=14 rows=[2,3,3,3,3] safe=true (ml=3 mc=3) unblockedCells=2 -> [[0,0],[2,0]]
+[base m37/H] single-move candidates=2604 witnesses=0
+[base m37/H] after rem2add1 total=0
+[base m37/H] rem2add2 candidates=1565655 total=0
+[base m37/V] n=14 rows=[3,3,3,3,2] safe=true (ml=3 mc=3) unblockedCells=2 -> [[37,4],[39,4]]
+[base m37/V] single-move candidates=2604 witnesses=0
+[base m37/V] after rem2add1 total=0
+[base m37/V] rem2add2 candidates=1565655 total=0
+[base m37/HV] n=14 rows=[3,3,3,3,2] safe=true (ml=3 mc=3) unblockedCells=2 -> [[0,4],[2,4]]
+[base m37/HV] single-move candidates=2604 witnesses=0
+[base m37/HV] after rem2add1 total=0
+[base m37/HV] rem2add2 candidates=1565655 total=0
+[base m38/id] n=14 rows=[2,3,3,3,3] safe=true (ml=3 mc=3) unblockedCells=1 -> [[39,0]]
+[base m38/id] single-move candidates=2604 witnesses=0
+[base m38/id] after rem2add1 total=0
+[base m38/id] rem2add2 candidates=1565655 total=0
+[base m38/H] n=14 rows=[2,3,3,3,3] safe=true (ml=3 mc=3) unblockedCells=1 -> [[0,0]]
+[base m38/H] single-move candidates=2604 witnesses=0
+[base m38/H] after rem2add1 total=0
+[base m38/H] rem2add2 candidates=1565655 total=0
+[base m38/V] n=14 rows=[3,3,3,3,2] safe=true (ml=3 mc=3) unblockedCells=1 -> [[39,4]]
+[base m38/V] single-move candidates=2604 witnesses=0
+[base m38/V] after rem2add1 total=0
+[base m38/V] rem2add2 candidates=1565655 total=0
+[base m38/HV] n=14 rows=[3,3,3,3,2] safe=true (ml=3 mc=3) unblockedCells=1 -> [[0,4]]
+[base m38/HV] single-move candidates=2604 witnesses=0
+[base m38/HV] after rem2add1 total=0
+[base m38/HV] rem2add2 candidates=1565655 total=0
+[base m39/id] n=14 rows=[3,2,3,3,3] safe=true (ml=3 mc=3) unblockedCells=1 -> [[39,1]]
+[base m39/id] single-move candidates=2604 witnesses=0
+[base m39/id] after rem2add1 total=0
+[base m39/id] rem2add2 candidates=1565655 total=16
+[base m39/H] n=14 rows=[3,2,3,3,3] safe=true (ml=3 mc=3) unblockedCells=1 -> [[0,1]]
+[base m39/H] single-move candidates=2604 witnesses=0
+[base m39/H] after rem2add1 total=0
+[base m39/H] rem2add2 candidates=1565655 total=16
+[base m39/V] n=14 rows=[3,3,3,2,3] safe=true (ml=3 mc=3) unblockedCells=1 -> [[39,3]]
+[base m39/V] single-move candidates=2604 witnesses=0
+[base m39/V] after rem2add1 total=0
+[base m39/V] rem2add2 candidates=1565655 total=16
+[base m39/HV] n=14 rows=[3,3,3,2,3] safe=true (ml=3 mc=3) unblockedCells=1 -> [[0,3]]
+[base m39/HV] single-move candidates=2604 witnesses=0
+[base m39/HV] after rem2add1 total=0
+[base m39/HV] rem2add2 candidates=1565655 total=16
+totalWitnesses=64 written surgery-main-m40.json
+{"base":"m39/id","kind":"rem2add2","stones":[[31,0],[34,0],[31,1],[20,2],[21,2],[22,2],[18,3],[19,3],[20,3],[15,4],[16,4],[17,4],[5,1],[36,0]],"rows":[3,2,3,3,3]}
+{"base":"m39/id","kind":"rem2add2","stones":[[31,0],[34,0],[31,1],[20,2],[21,2],[22,2],[18,3],[19,3],[20,3],[15,4],[16,4],[17,4],[32,1],[37,0]],"rows":[3,2,3,3,3]}
+{"base":"m39/id","kind":"rem2add2","stones":[[29,0],[31,0],[31,1],[20,2],[21,2],[22,2],[18,3],[19,3],[20,3],[15,4],[16,4],[17,4],[4,1],[5,0]],"rows":[3,2,3,3,3]}
+{"base":"m39/id","kind":"rem2add2","stones":[[29,0],[31,0],[31,1],[20,2],[21,2],[22,2],[18,3],[19,3],[20,3],[15,4],[16,4],[17,4],[34,1],[39,0]],"rows":[3,2,3,3,3]}
+{"base":"m39/id","kind":"rem2add2","stones":[[29,0],[31,0],[34,0],[31,1],[20,2],[22,2],[18,3],[19,3],[20,3],[15,4],[16,4],[17,4],[0,2],[28,1]],"rows":[3,2,3,3,3]}
+{"base":"m39/id","kind":"rem2add2","stones":[[29,0],[31,0],[34,0],[31,1],[20,2],[22,2],[18,3],[19,3],[20,3],[15,4],[16,4],[17,4],[2,2],[28,1]],"rows":[3,2,3,3,3]}
+{"base":"m39/id","kind":"rem2add2","stones":[[29,0],[31,0],[34,0],[31,1],[20,2],[22,2],[18,3],[19,3],[20,3],[15,4],[16,4],[17,4],[4,2],[28,1]],"rows":[3,2,3,3,3]}
+{"base":"m39/id","kind":"rem2add2","stones":[[29,0],[31,0],[34,0],[31,1],[20,2],[22,2],[18,3],[19,3],[20,3],[15,4],[16,4],[17,4],[5,2],[28,1]],"rows":[3,2,3,3,3]}
+{"base":"m39/id","kind":"rem2add2","stones":[[29,0],[31,0],[34,0],[31,1],[20,2],[22,2],[18,3],[19,3],[20,3],[15,4],[16,4],[17,4],[6,2],[28,1]],"rows":[3,2,3,3,3]}
+{"base":"m39/id","kind":"rem2add2","stones":[[29,0],[31,0],[34,0],[31,1],[20,2],[22,2],[18,3],[19,3],[20,3],[15,4],[16,4],[17,4],[8,2],[28,1]],"rows":[3,2,3,3,3]}

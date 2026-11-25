@@ -1,0 +1,383 @@
+{
+ "experiment": "five-row-q6-q5-m23-m27-sd6-surgery-20261121",
+ "date": "2026-11-21",
+ "pinned_upstream": {
+  "surgery4.js": "7dc40fc0f08150692d64241d0c6c4029",
+  "sat.js": "0cc6021a4e523a0d7f4d5e0f5f5d40c",
+  "census4_check.js": "dadbeae1b02ad2a9650c6ce86021fb9c",
+  "source": "research/experiments/four-row-q4-m35-surgery-20261115/scripts/"
+ },
+ "totals": {
+  "runs": 44,
+  "nRmLeaves": 174178268,
+  "nWitness": 0,
+  "classes_consistent": "11/11"
+ },
+ "files": [
+  {
+   "path": "README.md",
+   "bytes": 7303,
+   "md5": "b99dee24b188581bac322acd4ac7f091"
+  },
+  {
+   "path": "output/campaign_q5/HV_off0.jsonl",
+   "bytes": 458,
+   "md5": "62c1e93c06e35ea4618a9531905492d6"
+  },
+  {
+   "path": "output/campaign_q5/HV_off1.jsonl",
+   "bytes": 451,
+   "md5": "f77c27540d4642670afc9f465a49419a"
+  },
+  {
+   "path": "output/campaign_q5/HV_off2.jsonl",
+   "bytes": 450,
+   "md5": "6994d7527a1ee754e3d4d8f18b3617bd"
+  },
+  {
+   "path": "output/campaign_q5/HV_off3.jsonl",
+   "bytes": 450,
+   "md5": "bec01e20e2acb294c13ed1d930699cc5"
+  },
+  {
+   "path": "output/campaign_q5/HV_off4.jsonl",
+   "bytes": 457,
+   "md5": "d940e9c3ade782f0a78d89269e8c391e"
+  },
+  {
+   "path": "output/campaign_q5/HV_off5.jsonl",
+   "bytes": 463,
+   "md5": "f80b5de36fe1b49cc35b77f49176fd67"
+  },
+  {
+   "path": "output/campaign_q5/HV_off6.jsonl",
+   "bytes": 468,
+   "md5": "fb7ee6c3196c50fd14b1f481ecd72609"
+  },
+  {
+   "path": "output/campaign_q5/HV_off7.jsonl",
+   "bytes": 474,
+   "md5": "01f2c97080bcf2e4a61e4688467d3e58"
+  },
+  {
+   "path": "output/campaign_q5/H_off0.jsonl",
+   "bytes": 478,
+   "md5": "5c6c8fa7febe48b3bb717fa0d534e8d8"
+  },
+  {
+   "path": "output/campaign_q5/H_off1.jsonl",
+   "bytes": 471,
+   "md5": "bf26ae7147cdb7bfdefd47bbb28b9bde"
+  },
+  {
+   "path": "output/campaign_q5/H_off2.jsonl",
+   "bytes": 464,
+   "md5": "58ad082cf1b794db2cc90805348ffa42"
+  },
+  {
+   "path": "output/campaign_q5/H_off3.jsonl",
+   "bytes": 456,
+   "md5": "f2946c53bb8e3704eb65d464391f4a56"
+  },
+  {
+   "path": "output/campaign_q5/H_off4.jsonl",
+   "bytes": 449,
+   "md5": "a9dbcd06b9e5ab0b066d011c5463f98c"
+  },
+  {
+   "path": "output/campaign_q5/H_off5.jsonl",
+   "bytes": 449,
+   "md5": "a12f6826384afff134d9dfa849fa39ef"
+  },
+  {
+   "path": "output/campaign_q5/H_off6.jsonl",
+   "bytes": 448,
+   "md5": "a1e9244d3810e63def45c6bee0f7bb38"
+  },
+  {
+   "path": "output/campaign_q5/H_off7.jsonl",
+   "bytes": 455,
+   "md5": "8e4f7842f02b1a938e9de04c39fa07cb"
+  },
+  {
+   "path": "output/campaign_q5/V_off0.jsonl",
+   "bytes": 457,
+   "md5": "fe6f9435386d4ed4e258b3407b4e2c9a"
+  },
+  {
+   "path": "output/campaign_q5/V_off1.jsonl",
+   "bytes": 450,
+   "md5": "9eeb1966614a0e4e3fa07df5e8583889"
+  },
+  {
+   "path": "output/campaign_q5/V_off2.jsonl",
+   "bytes": 449,
+   "md5": "fdb2bf07f0897dda942576b17bc51bfd"
+  },
+  {
+   "path": "output/campaign_q5/V_off3.jsonl",
+   "bytes": 449,
+   "md5": "fae4ce61bf9182e501ca830cbf4f36c0"
+  },
+  {
+   "path": "output/campaign_q5/V_off4.jsonl",
+   "bytes": 456,
+   "md5": "db9275433cec5d3ec46e8c70f8175546"
+  },
+  {
+   "path": "output/campaign_q5/V_off5.jsonl",
+   "bytes": 462,
+   "md5": "4e4c0ddc8358ec5532df52e171f6d7ae"
+  },
+  {
+   "path": "output/campaign_q5/V_off6.jsonl",
+   "bytes": 467,
+   "md5": "e2f0fb3e87bf5d5f32183646b7a2aea0"
+  },
+  {
+   "path": "output/campaign_q5/V_off7.jsonl",
+   "bytes": 473,
+   "md5": "ca470bf4d97d53b735acd97a820f9561"
+  },
+  {
+   "path": "output/campaign_q5/id_off0.jsonl",
+   "bytes": 479,
+   "md5": "516082e6f39b0b360136be3084d74b1c"
+  },
+  {
+   "path": "output/campaign_q5/id_off1.jsonl",
+   "bytes": 472,
+   "md5": "43c77cbc139ca285ae6725f0c93d8d44"
+  },
+  {
+   "path": "output/campaign_q5/id_off2.jsonl",
+   "bytes": 465,
+   "md5": "f0664e2f923d6dd449b4f8c25d019a73"
+  },
+  {
+   "path": "output/campaign_q5/id_off3.jsonl",
+   "bytes": 457,
+   "md5": "0ad83ba3852df2555b0c77750d5e12f3"
+  },
+  {
+   "path": "output/campaign_q5/id_off4.jsonl",
+   "bytes": 450,
+   "md5": "a6b5c65c46ac78f2a24588ba73e0291d"
+  },
+  {
+   "path": "output/campaign_q5/id_off5.jsonl",
+   "bytes": 450,
+   "md5": "abd9bb0f42a1e6b1c0b052c5fb1dc5b9"
+  },
+  {
+   "path": "output/campaign_q5/id_off6.jsonl",
+   "bytes": 449,
+   "md5": "d01bf712922d5545185295965dae4d04"
+  },
+  {
+   "path": "output/campaign_q5/id_off7.jsonl",
+   "bytes": 456,
+   "md5": "2d27b2b7925525b60509d7562ee8499d"
+  },
+  {
+   "path": "output/campaign_q6/HV_off0.jsonl",
+   "bytes": 454,
+   "md5": "9d5900d7136b338bc1758f69cf407d17"
+  },
+  {
+   "path": "output/campaign_q6/HV_off1.jsonl",
+   "bytes": 447,
+   "md5": "9890b76c575d5f473c42c6862faf8643"
+  },
+  {
+   "path": "output/campaign_q6/HV_off2.jsonl",
+   "bytes": 446,
+   "md5": "84833a114b6bf9ffcef6d4d931955d0c"
+  },
+  {
+   "path": "output/campaign_q6/H_off0.jsonl",
+   "bytes": 446,
+   "md5": "ee966968ee96eaa2c8e0e9f9f56a6f13"
+  },
+  {
+   "path": "output/campaign_q6/H_off1.jsonl",
+   "bytes": 445,
+   "md5": "a0251997088c675996b4efdb4ab83621"
+  },
+  {
+   "path": "output/campaign_q6/H_off2.jsonl",
+   "bytes": 451,
+   "md5": "1aae4899ab720a59ce122ef18ad89b7b"
+  },
+  {
+   "path": "output/campaign_q6/V_off0.jsonl",
+   "bytes": 453,
+   "md5": "49ce33f582cdc9063249b39188708a9b"
+  },
+  {
+   "path": "output/campaign_q6/V_off1.jsonl",
+   "bytes": 446,
+   "md5": "b72b4d17e7f58d58a6c635e6acf9e054"
+  },
+  {
+   "path": "output/campaign_q6/V_off2.jsonl",
+   "bytes": 445,
+   "md5": "d253ac9b35bdcd942bc13f3649345775"
+  },
+  {
+   "path": "output/campaign_q6/id_off0.jsonl",
+   "bytes": 447,
+   "md5": "aeb3a174cf39ae5c37ca4c40fccab756"
+  },
+  {
+   "path": "output/campaign_q6/id_off1.jsonl",
+   "bytes": 446,
+   "md5": "7e517e9e32cb6572abb23e537b2a4e16"
+  },
+  {
+   "path": "output/campaign_q6/id_off2.jsonl",
+   "bytes": 453,
+   "md5": "a211d9b5921dce7d3370d04d3b3e7a8f"
+  },
+  {
+   "path": "output/census4_gates.txt",
+   "bytes": 483,
+   "md5": "9678825908dd8fea6d3d51c766937fb5"
+  },
+  {
+   "path": "output/class_consistency.txt",
+   "bytes": 1344,
+   "md5": "29982f2fe5e543b5857d311f205a62b8"
+  },
+  {
+   "path": "output/controls.txt",
+   "bytes": 2381,
+   "md5": "cf8ba0793a835e250cdee53423603ba1"
+  },
+  {
+   "path": "output/records.jsonl",
+   "bytes": 11462,
+   "md5": "1d861d19653f4b3b01101a6fff2220e1"
+  },
+  {
+   "path": "output/selfcomplete_q5.jsonl",
+   "bytes": 682,
+   "md5": "5b878aaf375d98861cbab484a55c4bac"
+  },
+  {
+   "path": "output/selfcomplete_q6.jsonl",
+   "bytes": 1234,
+   "md5": "7b798800bb814da43528e234a8be5d6b"
+  },
+  {
+   "path": "output/symmetry_classes.txt",
+   "bytes": 1185,
+   "md5": "18d5b2f1508f37d863fa09410b23c9b9"
+  },
+  {
+   "path": "scripts/census4_check.js",
+   "bytes": 1496,
+   "md5": "dadbeae1b02ad2a9650c6ce86021fb9c"
+  },
+  {
+   "path": "scripts/gen_images.py",
+   "bytes": 802,
+   "md5": "ac4904e39600ce12dc1d02a190ccb222"
+  },
+  {
+   "path": "scripts/safety_only.js",
+   "bytes": 1316,
+   "md5": "0226bef1bf28aa39d5977c8db59fcfb5"
+  },
+  {
+   "path": "scripts/sat.js",
+   "bytes": 21388,
+   "md5": "0cc6021a4e523a0d7f4d5ea0f5f5d40c"
+  },
+  {
+   "path": "scripts/sat_verify.js",
+   "bytes": 607,
+   "md5": "4ee2886fefbe5ec026c3a14ddba0be31"
+  },
+  {
+   "path": "scripts/surgery4.js",
+   "bytes": 16282,
+   "md5": "7dc40fc0f08150692d64241d0c6c4029"
+  },
+  {
+   "path": "scripts/verify_general.py",
+   "bytes": 4596,
+   "md5": "29e3caca007830d20ba03e521530ac6f"
+  },
+  {
+   "path": "seeds/img_q5m26_H.json",
+   "bytes": 138,
+   "md5": "87b033d347a3814f8e12f38e19aed7f3"
+  },
+  {
+   "path": "seeds/img_q5m26_HV.json",
+   "bytes": 133,
+   "md5": "3004a1f4126511c489a02edfca8a0ad7"
+  },
+  {
+   "path": "seeds/img_q5m26_V.json",
+   "bytes": 133,
+   "md5": "da7a816ccc890675b72aa7e4428bea96"
+  },
+  {
+   "path": "seeds/img_q5m26_id.json",
+   "bytes": 138,
+   "md5": "725483dafc6593e5b5e036e004b63c20"
+  },
+  {
+   "path": "seeds/img_q6m22_H.json",
+   "bytes": 169,
+   "md5": "6538516c4d6dee71b02f9134f36852de"
+  },
+  {
+   "path": "seeds/img_q6m22_HV.json",
+   "bytes": 169,
+   "md5": "f2609992553403f921227bbea5412201"
+  },
+  {
+   "path": "seeds/img_q6m22_V.json",
+   "bytes": 169,
+   "md5": "b39431e62eabc69e428bf55e47ab61e5"
+  },
+  {
+   "path": "seeds/img_q6m22_id.json",
+   "bytes": 169,
+   "md5": "5bbffcf14fd731490c6c58cf0d27503e"
+  },
+  {
+   "path": "seeds/seed_5x22_q6.json",
+   "bytes": 169,
+   "md5": "6a297742acd609721eff476bf5b404f1"
+  },
+  {
+   "path": "seeds/seed_5x22_q6_minus2.json",
+   "bytes": 156,
+   "md5": "2c39051c1c3cd8587a9b26c3bb124127"
+  },
+  {
+   "path": "seeds/seed_5x26_q5.json",
+   "bytes": 143,
+   "md5": "8e05fcf87d245057b3433dd56dc7d34d"
+  },
+  {
+   "path": "seeds/seed_5x26_q5_minus2.json",
+   "bytes": 129,
+   "md5": "c8717826043efcabaefaa14481121ed8"
+  },
+  {
+   "path": "seeds/tamper_q5_5circle.json",
+   "bytes": 44,
+   "md5": "898864588562b2455f7a76fb5de87496"
+  },
+  {
+   "path": "seeds/tamper_q6_6circle.json",
+   "bytes": 50,
+   "md5": "f09fb2ecf49c1914606b9ead9e409484"
+  }
+ ]
+}

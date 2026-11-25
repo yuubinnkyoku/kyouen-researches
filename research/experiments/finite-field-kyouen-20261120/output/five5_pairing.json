@@ -1,0 +1,191 @@
+{
+  "n": 5,
+  "orbits": [
+    {
+      "orbit": [
+        [
+          2,
+          2
+        ]
+      ],
+      "size": 1,
+      "representative": [
+        2,
+        2
+      ],
+      "grundy": 0,
+      "kind": "WIN",
+      "quads_per_point": 116,
+      "legal_replies": 24,
+      "pairing_exists": true
+    },
+    {
+      "orbit": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          4,
+          4
+        ]
+      ],
+      "size": 4,
+      "representative": [
+        0,
+        0
+      ],
+      "grundy": 3,
+      "kind": "LOSE",
+      "quads_per_point": 100,
+      "legal_replies": 24,
+      "pairing_exists": true
+    },
+    {
+      "orbit": [
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          4,
+          2
+        ]
+      ],
+      "size": 4,
+      "representative": [
+        0,
+        2
+      ],
+      "grundy": 0,
+      "kind": "WIN",
+      "quads_per_point": 132,
+      "legal_replies": 24,
+      "pairing_exists": true
+    },
+    {
+      "orbit": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "size": 4,
+      "representative": [
+        1,
+        1
+      ],
+      "grundy": 0,
+      "kind": "WIN",
+      "quads_per_point": 156,
+      "legal_replies": 24,
+      "pairing_exists": true
+    },
+    {
+      "orbit": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          2
+        ]
+      ],
+      "size": 4,
+      "representative": [
+        1,
+        2
+      ],
+      "grundy": 3,
+      "kind": "LOSE",
+      "quads_per_point": 135,
+      "legal_replies": 24,
+      "pairing_exists": true
+    },
+    {
+      "orbit": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          3
+        ]
+      ],
+      "size": 8,
+      "representative": [
+        0,
+        1
+      ],
+      "grundy": 3,
+      "kind": "LOSE",
+      "quads_per_point": 137,
+      "legal_replies": 24,
+      "pairing_exists": true
+    }
+  ],
+  "lose_all_paired": true,
+  "win_none_paired": false
+}
