@@ -1,0 +1,84 @@
+---
+id: K0740
+title: "two_deficient_pair_runner: 5×m・q=7 の2行欠損 occupancy クラスを完全列挙する機械"
+kind: method
+status: active
+topics: [rectangles, variants, maximal-safe, verification]
+aliases: []
+relations:
+- type: depends_on
+  target: K0727
+  note: blocker-obligation-fill DFS の2行欠損への一般化（census・伝播・葉fillは同一）
+- type: depends_on
+  target: K0726
+  note: "blocker候補曲線census（5×19: 7点円8本・8点円87本）"
+- type: supports
+  target: K0332
+  note: M_{5,7}=19 の確定に必要な複数行欠損クラスの否定キャンペーンの中核機械
+- type: verifies
+  target: K0302
+  note: 全分岐版が5×18で第3 witnessを発見し独立検証で確認（石分岐の健全性の実証）
+artifacts:
+- path: research/experiments/five-row-q7-m19-20261110/scripts/two_deficient_pair_runner.ts
+  role: source
+  note: 機械本体。M/Y0/Y1/START/NODE_CAP を設定してスライス実行
+- path: research/experiments/five-row-q7-m19-20261110/scripts/two_deficient_pair_runner_flat.ts
+  role: source
+  note: flat配列を用いる高速版
+- path: research/experiments/five-row-q7-m19-20261110/scripts/audit_two_deficient_small.py
+  role: verifier
+  note: 5×8・行0固定の2行欠損で直接全列挙と2実装の出力集合を比較
+- path: research/experiments/five-row-q7-m19-20261110/two-deficient-5x8-audit.json
+  role: data
+  note: 4807488候補・相異なる4542証人の照合結果
+- path: research/experiments/five-row-q7-m19-20261110/scripts/audit_two_deficient_pairs.py
+  role: verifier
+  note: 5×8の2行欠損6代表を直接列挙と元版・flat版で比較
+- path: research/experiments/five-row-q7-m19-20261110/two-deficient-5x8-pairs-audit.json
+  role: data
+  note: 6組合計28844928候補・45840証人の照合結果
+- path: research/experiments/five-row-q7-m19-20261110/scripts/audit_two_deficient_mixed.py
+  role: verifier
+  note: 欠損行0の石数0..5を含む7条件で直接列挙と元版・flat版を照合
+- path: research/experiments/five-row-q7-m19-20261110/two-deficient-5x8-mixed-audit.json
+  role: data
+  note: 7条件計33652416候補の照合結果
+- path: research/log/2026-11-11-five-row-multi-deficient-machine.md
+  role: log
+  note: 開発・制御・第3 witness・5×19 pair {0,1} 初スライスの記録
+---
+
+# two_deficient_pair_runner（2行欠損クラス完全列挙機械）
+
+K0727 の blocker-obligation-fill DFS を、2行が ≤5 石・他行ちょうど6石の
+occupancy クラス（欠損行ペア Y0,Y1）に一般化したハイブリッド機械:
+
+- 外側ケース = 欠損行 Y0 の石列 S0 の鏡映代表（canonical 順。単一行キャンペーンと同一列挙）。
+- 内側 = Y0 の空点への blocker 割当 + 欠損行 Y1 の各点の「石/空+blocker」分岐。
+  葉で非欠損行をちょうど6石に fill する。
+- 欠損行ペアは行鏡映で6代表: {0,1}≡{3,4}, {0,2}≡{2,4}, {1,2}≡{2,3},
+  {0,3}≡{1,4}, {1,3}, {0,4}。
+
+soundness/completeness: 欠損行の空点 p の blocker は p を含む危険曲線上の
+ちょうど6石だが、p の行は ≤5 石で blocker になれず、他の行は p を含まない。
+従って blocker は census 円に限り、blocker 割当の全列挙で完備する。
+石/空の全分岐が欠損行の全点を決定する。行cap（欠損行5・他行6）・
+円石数 ≤6・円飽和伝播・行飽和伝播は K0727 と同一。
+
+検証済みの制御（詳細はlog）:
+- **全分岐版の陽性対照**: 欠損行 Y0 の石も分岐する版（単一行欠損設定）が 5×18 で
+  既知2個と鏡映非同値の**第3 witness（行0 {0,1,5,13,17}・29石・(5,6,6,6,6)）を発見**。
+  全89曲線の独立censusで安全・全61空点blocker付きで極大（独立検証 PASS）。
+- S0 事前決定なしの2行全分岐は爆発（600kノードで葉なし）→ ハイブリッド設計が必要。
+- 5×18・pair {0,1}・S0={5,8,12,14,17}: 17,511ノード完走・witness 0。
+- 5×19・pair {0,1} 初スライス: idx 0..117 全 witness 0、平均 ~5.1kノード/case
+  （最大 28,488）。1ペアクラス ≈ 72スライス（600k）、6代表で計 ~430スライスの見込み。
+- **独立な小盤全数照合**: 5×8、欠損行0・1、行0の石列 `{0,1,2,3,4}` を固定し、行1の0〜5石と他3行の各6石からなる全4807488候補を直接検査。相異なる4542極大安全配置の集合が元版・flat版それぞれの出力集合と一致した。両runnerの `witnesses=116674` はblocker割当による重複を含む。
+- 同じ5×8で欠損行ペアの鏡映代表6組について、各組の最初の欠損行を `{0,1,2,3,4}` に固定して直接全列挙した。6組計28844928候補から得られた45840配置は、元版・flat版のそれぞれと組ごとに一致した。各組の候補数・証人集合hash・探索枝数を保存した。
+- 欠損行ペア `{0,1}` では、最初の欠損行の石数0〜5を含む7条件も直接全列挙した。計33652416候補から得られた10573配置が、両runnerの出力集合と条件ごとに一致した。証人0件の条件も含む。
+
+限界:
+- 5×8の欠損行ペア6組と、うち1組の異なる石数条件では直接全列挙と一致したが、他の固定石列や5×19全ケースの独立検証ではない。
+  陽性対照（第3 witness の発見・独立検証）と S0 既知ケースでの単一完走も PASS。
+- witnesses は blocker 割当の異なる枝で同一配置を重複計上しうる（0件は「不存在」を意味する）。
+- 複数行欠損の全ペアクラス完了前に M_{5,7} の値は確定しない。

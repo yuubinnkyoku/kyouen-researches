@@ -1,0 +1,18 @@
+{
+  "solver": "kissat 4.0.4 (official linux-amd64 release binary)",
+  "encoding": "row_deficient_sat.js encode() + toDimacs (verbatim from row-deficient-sat-witnesses-20261114); enhanced variant adds total<=cap sequential counter + sound symmetry clause (deficient row in top half by horizontal reflection)",
+  "runs": [
+    {"instance":"2x9 q=4 row-deficient","result":"UNSAT","note":"control: M_{2,4}=9 known"},
+    {"instance":"2x8 q=4 row-deficient","result":"SAT","note":"control: 5-stone deficient maximal exists (K0796)"},
+    {"instance":"2x8 q=4 cap=5 (enhanced)","result":"SAT","witness":"5 stones, verified both verifiers"},
+    {"instance":"6x28 q=5 cap=23 (enhanced)","result":"SAT","conflicts":null,"note":"23-stone deficient maximal, rows [4,3,4,4,4,4]; control for enhanced encoding"},
+    {"instance":"6x29 q=5 row-deficient (plain)","result":"timeout","wall_s":270,"conflicts":1019892},
+    {"instance":"6x29 q=5 cap=23 (enhanced)","result":"timeout","wall_s":265,"conflicts":789321,"note":"then settled affirmatively by extension enumeration: 23-stone deficient maximal exists"},
+    {"instance":"6x30 q=5 cap=23 (enhanced)","result":"timeout","wall_s":260,"cpu_s":129,"conflicts":300285,"note":"parallel with 6x23 (halved CPU); undecided, not absence"},
+    {"instance":"6x23 q=6 cap=29 (enhanced)","result":"timeout","wall_s":260,"cpu_s":129,"conflicts":758946,"note":"then found by extension: 29-stone @6x22 witness family"},
+    {"instance":"6x12 q=8 cap=38","result":"SAT","conflicts":0,"wall_s":0.02,"note":"previously timeout x2 with hand CDCL (K0810)"},
+    {"instance":"6x12 q=8 cap=37","result":"SAT","conflicts":994597,"wall_s":38,"note":"witness rows [7,7,7,2,7,7], verified JS+Python"},
+    {"instance":"6x12 q=8 cap=36","result":"timeout","wall_s":255,"conflicts":4921363,"note":"undecided, not absence"}
+  ],
+  "environment": "2 vCPU reported, but two concurrent kissat processes each got ~50% CPU (129s user / 260s wall) - effectively ~1 core; run sequentially"
+}

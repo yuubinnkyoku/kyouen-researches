@@ -1,0 +1,124 @@
+---
+id: K0417
+title: 19残存初手の共同S5計画は第8次更新（層別外3件＋S6未反映2件＋150871 LOSS）で上界31,859・整数下界6,587
+kind: computation
+status: computed
+topics: [square-outcomes, search-methods, certificates, verification, provenance]
+aliases: []
+relations:
+- type: depends_on
+  target: K0415
+  note: 19未確定初手軌道と中央応手f=60の候補root
+- type: depends_on
+  target: K0414
+  note: 既知LOSS基準rootと32個の無料S4 LOSS class
+- type: depends_on
+  target: K0371
+  note: 元先手固定の勝敗伝播規則（S1=AND・S4 LOSS=全S5子LOSS）
+- type: depends_on
+  target: K0372
+  note: 独立Board・exact cache隔離・trusted leafの区別
+artifacts:
+- path: research/experiments/n11-joint-s5-proof-planning-20261012/README.md
+  role: source
+  note: 共同最適化の結果・方法・再現・限界
+- path: research/experiments/n11-joint-s5-proof-planning-20261012/scripts/build_dependency_graph.py
+  role: source
+  note: 20 rootのS3/S4/S5依存グラフ構築（独立Board＋cache照合のみ）
+- path: research/experiments/n11-joint-s5-proof-planning-20261012/scripts/optimize_s5_selection.py
+  role: source
+  note: 群別1選択肢・和集合最小の上界 heuristic と5種の下界
+- path: research/experiments/n11-joint-s5-proof-planning-20261012/scripts/verify_plans.py
+  role: verifier
+  note: 全2,261 third手・全34,948到達S4の独立再計算（失敗0）
+- path: research/experiments/n11-joint-s5-proof-planning-20261012/output/optimization-results.json
+  role: data
+  note: 個別19 rootと共同の上下界・共有削減・寄与統計
+- path: research/experiments/n11-joint-s5-proof-planning-20261012/output/chosen-plans.json
+  role: data
+  note: 個別・共同の選択S4と要求S5集合（楽観的計画）
+- path: research/experiments/n11-joint-s5-proof-planning-20261012/output/plan-verification.json
+  role: certificate
+  note: 独立再検証の通過記録（58.6秒、失敗0件）
+- path: research/experiments/n11-s5-s6-quotient-20261013/scripts/repair_plan.py
+  role: source
+  note: 独立終局二局面の追加後、WIN子S4の排除・選択修復・全選択境界の検算
+- path: research/experiments/n11-s5-s6-quotient-20261013/output/repaired-joint-plan.json
+  role: data
+  note: 現行19-root全2261手の選択応手・要求31636・独立検証結果
+- path: research/experiments/n11-s6-terminal-loss-20261015/s6-loss-optimized.cert
+  role: certificate
+  note: S6 LOSS終局証明（29 S8証人・483終局S10葉・1,028,621状態）
+- path: research/experiments/n11-s6-terminal-loss-20261015/audit_joint_plan.py
+  role: verifier
+  note: 6個のS5親と凍結update6計画の重なり・要求S5和集合31,771の再計算
+- path: research/experiments/n11-night-plan-update7-20261015/output/repaired-joint-plan-update7.json
+  role: data
+  note: 第7次凍結計画（162106 WIN＋S6 LOSS 3件反映・上界31,771・層別17・除外S4 20件）
+- path: research/experiments/n11-night-plan-update8-20261016/output/repaired-joint-plan-update8.json
+  role: data
+  note: 第8次凍結計画（層別外3件＋S6未反映2件＋新規LOSS 150871反映・上界31,859・層別18・除外S4 23件・batch/staged一致）
+- path: research/experiments/n11-night-plan-update8-20261016/output/update8probe10m-manifest.json
+  role: manifest
+  note: 150871 LOSS（SOLVED verdict 2）と144774 NODE_LIMITの10M探索記録
+scope: 旧cacheとK0423の独立終局二局面を反映した、K0415の19未確定初手軌道の中央応手root各119 third手を、既存exact-S5 cache由来の既知LOSS S4または未知S5子集合付きS4で覆う有限選択問題。計画部分はsolver探索なし。二局面追加の終局証明はK0423。
+evidence: パイロット修復は19 root・2,261 third全手・349選択S4の完全S5境界を独立再計算して通過。旧計画要求209644がWINと証明されたため2 S4を排除し5選択を修復、558600 LOSSは費用から除外。パイロット修復の要求31,636、厳密双対91145221/13860から整数下界6,577（K0418）。旧cacheでの履歴として2261 third手は選択肢集合が948種に重複し、有料群は869個。multi-start greedy＋再選択＋縮小の実行可能計画は共同31,546個の未知S5（個別最適化の合計63,118の50.02%削減）。element-only分数双対の下界6,573（grouped双対1,586.75、LP緩和双対728を上回る）。`LB <= UB` 表明と独立検証器の全件再計算が通過。最安の単独軌道は初手49で上界2,055。夜間層別13反映後は要求31,774・下界6,585（K0424）。さらにK0426のS6 LOSS終局証明の独立検証（キャッシュ非依存C++/Python一致）により、選択S4固定のまま要求S5和集合は31,771、下界6,585は不変。第7次計画更新（update7）で162106 WIN（25M新規run）とS6由来LOSS 3件を凍結計画へ反映し、層別17（WIN 7＋LOSS 10）・除外S4 20件・WIN側使用可能証人1,932・未閉鎖1,745の現行値を得た。第8次計画更新（update8）で層別外3件（115540 LOSS・144193 LOSS・144311 WIN）とS6終局証明の未反映親2件（381858・382619 LOSS）を層別し、新規10M探索の150871 LOSSを追加して層別18（WIN 7＋LOSS 11）・上界31,859・除外S4 23件・WIN側1,928の現行値を得た。詳細は本文「第8次計画更新」節。
+---
+
+## 現行計画（独立終局パイロット後）
+
+K0423により、旧31,546要求集合の209644は元先手WIN、558600はLOSSと独立証明された。
+旧選択のまま全要求をLOSS化することは不可能となり、S4クラス5687・5690を排除した。
+初手5のthird59/61/115、初手49のthird55/65の5選択を修復した現行計画は31,636未確定S5。
+全19 root・2,261合法third・349相異なる選択S4の完全S5境界を独立整数幾何と明示cacheで再検査し、既知WINを要求していないことを確認した。
+
+現行の整数下界はK0418の6,577。旧31,546／6,574は旧cacheインスタンスの履歴値として保持し、現在の上下界には用いない。
+残り31,636が全てLOSSとなることは未証明で、計画は依然楽観的。既存cache葉はsolver-trusted、追加二局面だけはtrusted葉0の終局DAG。
+
+## 夜間バッチ反映（2026-10-14・K0424）
+
+夜間適応探索で9局面の新規厳密判定（LOSS 3・WIN 6）をtrusted葉0の終局DAGで獲得し、
+6段階の計画更新を経た現行値は上界31,774・下界6,585・層別13（6W+7L）・除外S4 17件。
+K0423時点の31,636／6,577は本項目の履歴値として保持し、現在の上下界には用いない。
+詳細はK0424と `research/experiments/n11-night-plan-update6-20261014/` を参照。
+
+## S6 LOSS終局証明の反映（2026-10-15・K0426）
+
+六石局面 `00000000040004001004000004010000` のLOSS終局証明がキャッシュ非依存のC++/Python双方で独立検証され（29 S8証人・483終局S10葉・1,028,621状態）、6個のS5 LOSS親を与える。うち3個が凍結update6計画の選択S4クラス16397の8第三手群（初手24に3群・26に2群・48に3群）に現れることを `audit_joint_plan.py` が再計算で確認した。S4選択を固定したまま楽観的要求S5和集合が31,774から31,771へ縮小し、下界6,585・層別13・除外S4 17件・WIN側値は不変。
+
+## 第7次計画更新（2026-10-16・update7）
+
+凍結第6次計画（31,774）に162106 WIN（night-batch5 receipt・trusted葉0・25M新規run）を層別し、S6 LOSS 3件（381840 / 402066 / 550881）をcostから除去した現行凍結計画の値:
+
+- 上界 **31,771**（Δ−3、動因はcertificate-derived LOSSの要素cost削減。162106はblock内4件目で上界寄与なし）
+- 新規除外S4 `[4327, 4328, 5056]`（除外計 **20**）・再選択0件・層別 **17（WIN 7＋LOSS 10）**
+- 下界6,585（dual exactは更新、K0418）・WIN側使用可能証人 **1,932**・未閉鎖 **1,745**（K0420）
+- S6親集合・計画関連3件・共通checker SHAのscript再監査assert、19 root・2,261 third・351選択S4の完全境界再検算、batch/staged全sha一致、ranking行 (geometry_rank 25) 一致を確認。
+
+詳細は `research/experiments/n11-night-plan-update7-20261015/` と `research/log/2026-10-16-n11-plan-update7.md` を参照。
+
+## 第8次計画更新（2026-10-16・update8）
+
+凍結第7次計画（31,771・層別17）に層別外3件（115540 LOSS / 144193 LOSS / 144311 WIN）とS6終局証明の
+未反映親2件（381858 / 382619 LOSS）を層別し、初手49の閉鎖不能応手8軌道を制約なしで再解析したうえで、
+pool未カバー分岐の実測最良候補150871を10M探索して新規LOSSとして追加した現行凍結計画の値:
+
+- 上界 **31,859**（update7の31,771からΔ+88。内訳: 層別外3件＋S6未反映2件で+89、150871 LOSSで−1）
+- 新規除外S4 `[3945, 5596, 14102]`（除外計 **23**）・changed_choice_count **6**（全てWIN 144311の
+  選択クラス5596失効に伴う再選択。new_s4 4111/16866）・free_thirds 122・層別 **18（WIN 7＋LOSS 11）**
+- 下界 **6,587**（dual exact `182572529/27720` ≒ 6,586.3106、150871反映後もceil不変。K0418）
+- WIN側使用可能証人 **1,928**・closable **57/65**・AND幅 **6,585**・未閉鎖 **1,661**（K0420）
+- 一括反映と段階反映の確定ラベル・合法候補・証明義務の一致（batch==staged、和集合31,859）、
+  19 root・全2,261 third・352選択S4の完全境界再検算、S6親6件（indexed 5＋index外1）の独立再構成を確認。
+
+150871（S={12,24,49,59,60}、元先手固定視点LOSS）は共通検査器（checker source `0f890cb4…`）で
+trusted葉0・終局DAG 644,490節点/971,480辺/83,851終局として独立検証し、Python独立再導出も一致した。
+144774（S={5,49,60,67,75}）は同一10MでNODE_LIMIT（UNKNOWN）につき証拠にせず、同条件再探索は禁止。
+
+詳細は `research/experiments/n11-night-plan-update8-20261016/` と `research/log/2026-10-16-n11-plan-update8.md` を参照。
+
+## 旧cacheインスタンスの履歴
+
+19残存初手の中央応手rootをLOSS証明するのに必要な未確定exact-S5数は、root別に最適化した合計63,118に対し、19 root共同では実行可能計画31,546・有効下界6,573まで下がる。削減の主因はthird手群のroot間重複（2261手→948種）であり、重複群の統合は最適値を変えない。79群は既知LOSS S4で無料である。
+
+この数は楽観的証明計画の規模であり、列挙した未知S5が将来すべてLOSSになる仮定に依存する。下界との差は閉じておらず、非中央応手の比較とWIN側証明の費用は未評価である。

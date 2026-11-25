@@ -1,0 +1,245 @@
+---
+id: K0820
+title: "7xm q=9 / q=10 row-deficient witness bands — (7,9) witness-free band 24..612 fully swept (M_{7,9} = 24 exact), (7,10) witness-free band 19..586 fully swept (M_{7,10} = 19 exact)"
+kind: proposition
+status: computed
+topics: [rectangles, maximal-safe]
+aliases: []
+relations:
+- type: depends_on
+  target: K0810
+  note: "census (circleABC integer triples, line pairs) + sequential-counter/maximality core used verbatim (sat.js/sat2.js); the def-mode single clause and lex-leader constraints are the source experiment's sat2.js additions"
+- type: depends_on
+  target: K0796
+  note: "2x8 q=4 5-stone SAT control and 2x9 q=4 UNSAT control (fastsat conflicts bit-exact with the source experiment; kissat agrees) — consistent with M_{2,4}=9"
+- type: depends_on
+  target: K0318
+  note: "upper bounds U_{7,9}=613 and U_{7,10}=587 by curve-packing substitution (w7_upper_bounds.json of the source experiment)"
+artifacts:
+- path: research/experiments/seven-row-q9-q10-bands-20261114/report.md
+  role: proof
+  note: "claims, method (def-mode completeness, lex soundness on the (7,10) band), verification protocol (controls, bit-exact fastsat calibration, dual witness verification, lex cross-encoding, determinism across env resets), results, scope and limits"
+- path: research/experiments/seven-row-q9-q10-bands-20261114/output/q9-witness-search/records.jsonl
+  role: data
+  note: "91 records: SAT m=15..23 (witnesses dual-verified) + UNSAT m=24..100 (kissat def-no-lex, complete encoding; m=34..45 lean1.sh/sat2.js, m=46..100 lean2.sh/genfast.js) + def+lex cross-checks at m=24/33/52/60/100"
+- path: research/experiments/seven-row-q9-q10-bands-20261114/output/q9-witness-search/s7x23q9_none.witness.json
+  role: data
+  note: "largest-width (7,9) witness (55 stones at 7x23, rows 8,8,8,7,8,8,8); all 9 witnesses s7x15..23q9_none.witness.json dual-verified (sat.js verifyConfig + Python Fraction)"
+- path: research/experiments/seven-row-q9-q10-bands-20261114/output/q10-band/records.jsonl
+  role: data
+  note: "85 records m=19..100 all UNSAT: fastsat calibration (bit-exact with seven-row-inband results.jsonl for m=19..40) + kissat 4.0.4 for m=19..51 (band1.sh, both solvers); m=52..100 kissat-only lean extension (lean2.sh/genfast.js) with def+lex cross-checks at 52/60/100"
+- path: research/experiments/seven-row-q9-q10-bands-20261114/output/q10-band/summary.json
+  role: data
+  note: "aggregate: all 44 UNSAT, per-width conflicts of both solvers (m=19..51) and lean extension rows (m=52..60)"
+- path: research/experiments/seven-row-q9-q10-bands-20261114/scripts/genfast.js
+  role: verifier
+  note: "memory-bounded CNF generator (half-integer-center census, monkey-patches S.buildCensus and reuses sat2.js verbatim); byte-identical to sat2.js on 12 validation samples; required for 7xm at m>=52 where the all-triples census OOMs"
+- path: research/experiments/seven-row-q9-q10-bands-20261114/output/controls/records.jsonl
+  role: data
+  note: "2x8/2x9 q=4 controls (fastsat 121/535 conflicts bit-exact; kissat SAT 37 / UNSAT 316)"
+- path: research/experiments/seven-row-inband-families-20261114/output/results.jsonl
+  role: data
+  note: "source experiment (unintegrated): (7,9) witnesses m=9..14 and (7,10) witnesses m=10..18 (dual-verified there) + fastsat def+lex UNSAT band m=19..40 that this K confirms and extends"
+- path: research/experiments/seven-row-inband-families-20261114/output/w7_upper_bounds.json
+  role: data
+  note: "K0318 curve-packing substitution upper bounds U_{7,9}=613, U_{7,10}=587 (7 controls passed)"
+- path: research/experiments/seven-row-q9-q10-band-extension-101-200-20261114/output/q9-band/records.jsonl
+  role: data
+  note: "100 records m=101..200 all UNSAT (m=101..118 genfast.js, m=119..200 genfast2.js; conflicts 6.9k..29.8k, 200s cap, INDET 0): completes the (7,9) witness-free band 24..200; (7,100,10) regen calibration bit-exact"
+- path: research/experiments/seven-row-q9-q10-band-extension-101-200-20261114/output/q10-band/records.jsonl
+  role: data
+  note: "100 records m=101..200 all UNSAT (m=101..110 genfast.js lane-1, m=111..200 genfast2.js continuation lane; conflicts 1.3k..3.3k, INDET 0): completes the (7,10) witness-free band 19..200; lane-2 calibration m=100/110 bit-exact and def+lex cross-checks at m=111/200 UNSAT in output/controls-lane2/"
+- path: research/experiments/seven-row-q9-q10-band-extension-101-200-20261114/scripts/genfast2.js
+  role: verifier
+  note: "integer-keyed fast census variant (canonical (N480,RHO) keys, typed-array open addressing, sat2.js encode reused via the genfast.js monkey-patch); CNF byte-identical to genfast.js on 4 samples incl. w=8 (controls_byteid.json); ~10.7x faster (m=101: 21.4s -> 2.0s), q>=w+1 only"
+- path: research/experiments/seven-row-q10-band-closure-201-586-20261115/output/q10-band/records.jsonl
+  role: data
+  note: "386 records m=201..586 all UNSAT (genfast3 chord-pair census + kissat 4.0.4 def-mode, conflicts 1,324..4,623, INDET 0, 200s cap): completes the (7,10) witness-free band 19..586; per-width raw kissat logs in output/q10-band/raw-logs/"
+- path: research/experiments/seven-row-q10-band-closure-201-586-20261115/output/controls/byteid_genfast3_vs_genfast2_q10.json
+  role: verifier
+  note: "genfast3 (chord-pair census from the q9-closure lane, md5 12c2bd9c) vs genfast2 CNF byte-identity on 4 q10 samples (def 110/150/200, lex=H,V,HV 200); m=200 instance-identity bit-exact (2,941 conflicts); m=300 determinism rerun bit-exact (2,608); def+lex cross-encodings UNSAT at m=201/400/586"
+- path: research/experiments/seven-row-q9-band-extension-201-612-20261114/output/q9-band/records.jsonl
+  role: data
+  note: "412 records m=201..612 ALL UNSAT (genfast3 chord-pair census + kissat 4.0.4 def-mode, conflicts 14,082..36,876, process-time 0.98..5.49s, 200s cap, INDET 0, SAT 0): completes the (7,9) witness-free band 24..612; def+lex=H,V,HV cross-encoding UNSAT at m=300/400/500/612 (lex_records.jsonl, conflicts 15,505..29,839)"
+- path: research/experiments/seven-row-q9-band-extension-201-612-20261114/output/q9-band/kissat_summaries.jsonl
+  role: data
+  note: "per-width kissat summaries for all 412 widths (conflicts, process-time, max-RSS, exit-20 verified, log_md5); representative raw logs (m=201/306/400/505/612 + lex m=612 H,V,HV) in output/q9-band/raw-logs/"
+- path: research/experiments/seven-row-q9-band-extension-201-612-20261114/scripts/genfast3.js
+  role: verifier
+  note: "chord-pair abstract-circle census, q>=w+2 (every q-point circle has >=2 double rows; the double-row chord-length pair (l,l') with l=l' mod 2 determines (v,rho^2) u-independently; O(C(w,2)m^2 w), ~1s at m=612); line census built directly from the w rows (valid q>=w+1); sat2.js encode reused verbatim via monkey-patch; CNF byte-identical to genfast.js/genfast2.js on 13 controls incl. lex and rowfixed (scripts/controls_genfast3.json, md5 12c2bd9c)"
+scope: "finite machine verification: kissat 4.0.4 (all instances) + fastsat calibration/cross-check (the (7,10) band); widths stated per family only; up to census completeness and solver correctness"
+evidence: "complete-encoding UNSAT instances (def mode is exactly 'exists row-deficient maximal safe config' since safety caps every row at q-1) + constructive dual-verified witnesses + bit-exact instance-identity calibration + second-encoding (def+lex) cross-checks at (7,9) 24/33 + determinism across environment resets. See report.md."
+---
+
+# 7×m q=9 / q=10 行欠損witness帯 — (7,9) witness 9..23・不在帯 24..33、(7,10) 不在帯 19..40 をkissatで確認し 51 まで延長
+
+## 主張
+
+1. **(7,9)（7×m・q=9・q点共円/共線禁止）**: 行欠損の極大安全配置が
+   **m=15..23 に存在する**（満容量56石に対し55石・m=15のみ54石・すべて2系統独立検証
+   PASS）。`seven-row-inband-families-20261114` の m=9..14 witness と合わせて
+   witness 幅集合は **{9..23}** を含む。
+2. **(7,9)**: **m=24..100 の各行で行欠損極大配置は存在しない**（def単一節符号化・
+   lexなし = 「ある行が≤7石の極大安全配置が存在」の完全符号化・kissat 4.0.4 が
+   全幅 UNSAT・m=24/33/52/60/100 は def+lex=H,V,HV の別符号化でも UNSAT。
+   m=34..45 は sat2.js (lean1.sh)、m=46..100 は genfast.js (lean2.sh・CNFは
+   sat2.js と12サンプルでバイト一致) で生成）。よって witness-free 帯は
+   **{24..100}** を含み **M_{7,9} = 24 または M_{7,9} ≥ 101**
+   （M ∈ {24} ∪ [101, 613]・上界613はK0318代入）。
+3. **(7,10)**: `seven-row-inband-families-20261114` の fastsat UNSAT 帯 m=19..40
+   （def+lex=H,V,HV）を **kissat 4.0.4 で独立確認**した（再生成CNFの fastsat
+   conflicts が全22幅で bit-exact 一致により同一インスタンス性を保証）上で、
+   **帯を m=100 まで延長**した（41..51 は fastsat・kissat 両UNSAT、52..100 は
+   kissat 単独 (lean2.sh/genfast.js)・52/60/100 は lex 別符号化でも UNSAT）。
+   witness 幅集合 {10..18}（同実験・2系統検証済み）と合わせ
+   **M_{7,10} = 19 または M_{7,10} ≥ 101**（M ∈ {19} ∪ [101, 587]・上界587はK0318代入）。
+4. **genfast.js（censusメモリ壁の解消）**: sat2.js の全三つ組円censusは
+   7×52 (n=364・C(n,3)≈800万) でコンテナメモリ上限を超え OOM (rc 137) する
+   （7×51 は通過・CNF自体は8k vars/29k節と微小）。**q ≥ w+1 のもとで全 q点円の
+   中心x座標が半整数になる**（各行∩円 ≤ 2点ゆえ同一行ペアが存在し、その垂直
+   二等分線が中心を通る）ことを用いた半整数中心censusに差し替え、符号化論理は
+   sat2.js を monkey-patch で完全再利用（エンコードdriftゼロ）。曲線挿入順序を
+   buildCensus と厳密に一致させ（線は最小2点順・円は最小3点順・線が円の前）、
+   **12サンプルで sat2.js とバイト一致検証**（deficient / cap+totalizer / rowfixed・
+   lex有無・w=5,6,7）。7×52 生成は 2.7 秒。m ≥ 52 の7行レーン全般（(7,8)・
+   (7,9)・(7,10)・将来の帯延長）の実装障壁を除去。
+
+## 手法と検証
+
+符号化は `seven-row-inband-families-20261114/scripts/sat2.js`（K0810 census +
+sequential counter + 極大性）を verbatim 使用。def 単一節（∨¬rowGe[y]）は
+「総石数 < w(q−1) ⟺ ある行 ≤ q−2」により行欠損存在の**完全**符号化であり、
+節は H/V/HV 不変なので (7,10) 帯の lex-leader は健全（orbit-min が全制約を満たす）。
+(7,9) witness 探索は lex なし（K0815 第4弾の教訓: lex は SAT 側の探索を悪化させる）。
+制御: 2×8 q=4 SAT / 2×9 q=4 UNSAT（fastsat conflicts が元実験と bit-exact・kissat 同意）。
+全 SAT witness は census 不使用 JS verifyConfig と Python Fraction 別実装の
+2系統で safe+maximal+行欠損 PASS。較正: (7,10) m=19..40 の再生成CNFで fastsat
+conflicts が元実験 results.jsonl と全幅 bit-exact 一致。
+**制限（正直な負記録）**: (7,9) 帯 m=24 の fastsat は 60秒 cap で TIMEOUT
+（210k conflicts）であり、(7,9) 帯は kissat 単独 + 2幅の別符号化交差確認による。
+決定性: 全記録数値は実行環境リセット2回を挟んで bit-exact 再現。
+
+## 範囲と限界
+
+有限機械検証（census 完全性 — m≤45 は sat2.js、m≥46 は12サンプルでバイト一致
+検証済みの genfast.js — とソルバ正確性まで）。数論的証明ではない。
+M_{7,9}=24 の確定には m=101..612 の持続性（または K0342 型 tail 評価）が残り、
+M_{7,10}=19 の確定には m=101..586 が残る。witness 探索前線は **7×101 (q=9)** と
+**7×101 (q=10)** に移動。上界 613/587（K0318 代入）は不変。
+
+## 関連する未統合の源実験
+
+`seven-row-inband-families-20261114`（results.jsonl・witnesses.json・
+w7_upper_bounds.json・classification_q10.json）は本項目の主要な入力であるが、
+K項目化は本項目が初めて（(7,9) witness m=9..14・(7,10) witness m=10..18・
+fastsat UNSAT 帯 m=19..40・U_{7,q}/U_{8,q} 表・10点円2族分類）。
+同実験の (7,10) UNSAT 帯の根拠は本項目の kissat 交叉確認により
+「単一カスタムCDCL」から「2ソルバ一致」に強化された。
+
+## 追記 (2026-11-14 同日 第2ラウンド: 帯延長 24..60 / 19..60 と genfast.js)
+
+当初の本項目（kissat交叉確認 + (7,9) witness 15..23 + 不在帯 24..33 / 19..51・
+3コミット 55750abd→1a2b87db→20a85748）から同日内にさらに:
+(a) **(7,9) 不在帯を 24..60 に延長**（m=34..45 lean1.sh・m=46..60 lean2.sh・
+全幅 kissat UNSAT・52/60 は lex別符号化でも UNSAT）、
+(b) **(7,10) 帯を 19..60 に延長**（52..60 kissat単独・52/60 lex別符号化でも UNSAT）。
+よって **M_{7,9} ∈ {24} ∪ [61,613]**・**M_{7,10} ∈ {19} ∪ [61,587]**。
+(c) **genfast.js 開発**: sat2.js の全三つ組censusが7×52でOOMする壁を、
+q ≥ w+1 なら全 q点円の中心x座標が半整数（同一行ペアの垂直二等分線）なる
+ことに基づく半整数中心censusで解消。sat2.js の符号化論理を monkey-patch で
+完全再利用し、曲線順序を厳密再現（線:最小2点順、円:最小3点順、線が先）して
+**12サンプルで sat2.js と CNFバイト一致**（cmp・deficient/cap+totalizer/rowfixed・
+lex有無・w=5,6,7）。7×52 生成 2.7 秒・メモリ O(n²)。
+限界: q < w+1 では半整数中心保証が崩れるため assert で拒否（sat2.js を使う）。
+m=61..612 / 61..586 の持続性または K0342 型 tail 評価が exact M 決着の残課題。
+
+## 追記2 (2026-11-14 同日 第3ラウンド: 帯延長 24..100 / 19..100)
+
+第2ラウンド (24..60 / 19..60) からさらに **m=100 まで延長**（全幅 kissat UNSAT・
+q9 は13,260〜25,979・q10 は888〜3,727 conflicts・m=100 は両qとも def+lex=H,V,HV
+別符号化でも UNSAT（15,637 / 2,657））。**M_{7,9} ∈ {24} ∪ [101,613]**・
+**M_{7,10} ∈ {19} ∪ [101,587]**。q9 m=61..70 と q10 m=61..90 は実行環境リセット
+（3回目・290秒コマンドタイムアウト）を挟んでおり、**再生成の conflicts が
+リセット前の実行と全幅 bit-exact 一致**（cross-reset決定性の追加証拠・
+q10 83..90 は 2195/2214/2217/2422/2351/2415/2404/2326 が双方で一致）。
+統合コミット: 83553d21 (m=61..90) + 本ラウンド (m=91..100・summary/report/K0820/CSV/README/log)。
+教訓（再確認）: **バッチ実行が終わったら即 push**（リセットで m=61..90 の
+ローカル成果を一度喪失・決定性により復元）。
+
+## 追記3 (2026-11-15 m=101..200 延長: 帯 24..200 / 19..200)
+
+`seven-row-q9-q10-band-extension-101-200-20261114`（本項目の後続レーン）が両帯を m=200 まで延長した。
+
+- **(7,9)**: **m=101..200 全幅 UNSAT**（m=101..118 genfast.js・m=119..200 genfast2.js・
+  conflicts 6.9k..29.8k・200s cap 内完走・INDET 0・較正 (7,100,10) 再生成 2,388 conflicts bit-exact）。
+  **witness-free 帯 {24..200}** を得て **M_{7,9} ∈ {24} ∪ [201,613]**。
+- **(7,10)**: m=101..110（後続レーン第1弾）に続き **m=111..200 を継続レーン（第2弾）が完走**
+  （全 90 幅 UNSAT・conflicts 1.3k..3.3k・INDET 0・較正 m=100=2,388 / m=110=1,468 conflicts が
+  vars/clauses/curves まで bit-exact・def+lex=H,V,HV 別符号化交差確認 m=111 (2,452) / m=200 (7,934)
+  とも UNSAT）。**witness-free 帯 {19..200}** を得て **M_{7,10} ∈ {19} ∪ [201,587]**。
+- **genfast2.js**: genfast.js の (v,ρ) 正規化を gcd なしの正準整数キー
+  (N480,RHO)=(480v,921600ρ²)・typed-array open addressing に置換した高速版
+  （~10.7x・m=101 で 21.4s→2.0s）。**4サンプル（7×25 q8 --rowY=2 / 7×101 q9 /
+  7×110 q10 --lex / 8×26 q9）で genfast.js と CNF バイト一致検証**
+  （`scripts/controls_byteid.json`）。q≥w+1 限定は不変。
+- 帰結: exact M の残課題は (7,9) m=201..612・(7,10) m=201..586 の持続性
+  （または K0342 型 tail 評価）。witness 探索前線は **7×201 (q=9)** と
+  **7×201 (q=10)** に移動。上界 613/587（K0318 代入）は不変。
+
+## 追記4 (2026-11-15 (7,10) 帯閉包 201..586: M_{7,10} = 19 exact)
+
+`seven-row-q10-band-closure-201-586-20261115`（本項目の後続レーン・第3弾）が
+残る (7,10) の全幅 **m=201..586 を完走**し、witness-free 帯を **19..586** に閉じた。
+
+- **掃引**: 386 幅すべて kissat 4.0.4 def 単一節符号化で **UNSAT**・
+  conflicts 1,324..4,623・solve ≤1.0s/幅・200s cap 内完走・**INDET 0・SAT 0**。
+- **生成器**: q9 閉包レーンが commit した `genfast3.js`（弦対抽象円 census・
+  md5 12c2bd9c・q ≥ w+2 で全 q 点円を列挙: 任意の q 点円は鳩の巣で二重行を
+  ≥2 持ち、二重行対の弦長対 (ℓ,ℓ') から中心 (v,ρ²) が u 非依存に決まる）
+  を再利用。**CNF byte-identity を q=10 向けに4サンプルで再検証**
+  （def m=110/150/200・lex=H,V,HV m=200・すべて genfast2.js と cmp 0 diff）。
+- **較正**: leanband3 パイプライン m=200 再実行が band-extension レーンの
+  record と bit-exact（vars 36,315 / clauses 132,264 / curves 393 /
+  UNSAT 2,941 conflicts）。**決定性**: m=300 再生成・再解が batch 記録と
+  bit-exact（2,608 conflicts）。**別符号化交差確認**: def+lex=H,V,HV が
+  m=201 (2,076) / m=400 (9,841) / m=586 (7,652) すべて UNSAT。
+- **決着**: witness 幅集合 {10..18}（K0820）+ witness-free 19..586
+  （K0820 + band-extension + 本閉包）+ **m ≥ 587 での witness 不可能在**
+  （K0318 substitution U=587・status proved）により
+  **M_{7,10} = 19 が exact に決着**（w=7 では初・w≥6 でも初の完全決着）。
+  (7,9) は q9 閉包レーンが m=201..612 を掃引中（IN FLIGHT・52fd92c1）。
+- 運用記録: records.jsonl の初回 push で read_file の 64KB 超トランケーションに
+  より 328/386 行で着地した欠陥を検出・全行再 push で md5 f5e5fa78 の
+  byte-exact 着地を API で検証。生ログ9幅（チャンク末尾）の末尾改行が
+  cat トランスポートで喪失した欠陥も検出・修復（q9 レーンの 5590f225 と
+  同一の輸送アーティファクト）。
+
+## 追記5 (2026-11-15 (7,9) 帯閉包 201..612: M_{7,9} = 24 exact)
+
+`seven-row-q9-band-extension-201-612-20261114`（本項目の後続レーン・第4弾・genfast3 の
+開発元）が残る (7,9) の全幅 **m=201..612 を完走**し、witness-free 帯を **24..612** に閉じた。
+
+- **掃引**: 412 幅すべて kissat 4.0.4 def 単一節符号化で **UNSAT**・
+  conflicts 14,082..36,876・process-time 0.98..5.49 秒/幅・200s cap 内完走・**INDET 0・SAT 0**。
+  m=612: vars=107,928 / clauses=392,741 / curves=1,217（7 行 + 1,210 円・2m−14 構造）。
+- **生成器 genfast3.js（本レーン開発）**: q ≥ w+2 では任意の q 点円が鳩の巪原理で
+  ≥2 つの二重行を持つことを用い、二重行対 (ya,yb) の弦長対 (ℓ,ℓ')（ℓ≡ℓ' mod 2 必然）から
+  円の (v,ρ²) が u 非依存に厳密決まることを全列挙の基礎とする O(C(w,2)·m²·w) census。
+  m=612 生成 ~1 秒（genfast/genfast2 の O(w·m³) では同幅で ~53 秒かつメモリ2GB超）。
+  線 census も q ≥ w+1 では ≥q 点直線が w 本の水平行のみであることから直接構築。
+  **CNF byte-identity を13対照で検証**（7×24/30/45q10/51/60rowY3 vs genfast.js・
+  7×101/110lex=H,V,HV/150/200・8×26 vs genfast2.js・すべて cmp 0 diff・
+  `scripts/controls_genfast3.json`・md5 12c2bd9c）。q=w+1 では単一二重行の q 点円が
+  存在し得るため assert で拒否（q ≥ w+2 限定）。
+- **別符号化交差確認**: def+lex=H,V,HV が m=300/400/500/612 の12件すべて UNSAT
+  （`lex_records.jsonl`・conflicts 15,505..29,839・生ログ m=612 の3本を raw-logs/ に格納）。
+- **証拠輸送の完全性**: records.jsonl・kissat_summaries.jsonl（per-width log_md5 結合）は
+  GitHub blob md5 で byte-exact 着地を検証（q10 閉包レーンが記録した read_file 64KB
+  トランケーション障害は was_truncated/next_offset ループで回避・末尾改行喪失なし）。
+  lex_records.jsonl 初回 push の無効 JSON（sec: 2s）は raw ログ再解析で修復済み。
+- **決着**: witness 幅集合 {9..23}（K0820）+ witness-free 24..200（K0820 + band-extension）+
+  201..612（本閉包）+ **m ≥ 613 での witness 不可能在**（K0318 substitution U=613・proved）により
+  **M_{7,9} = 24 が exact に決着**（M_{7,10}=19（追記4）に次ぐ w=7 で2例目・w≥6 でも2例目）。
+  mwq_stabilization.csv の (7,9) 行は exact-threshold M=24 proved に更新、
+  results/fixed-width/README.md の exact-threshold は10件・bounds は11件に。
+  w=7 の残る open は (7,4)/(7,5)/(7,6)/(7,7)/(7,8)（前線 7×22/32/27/27/25）。

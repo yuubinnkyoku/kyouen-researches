@@ -1,0 +1,28 @@
+---
+id: K0007
+title: 順位付きAND/OR証明書の局所条件と健全性
+kind: method
+status: active
+topics:
+- certificates
+aliases: []
+relations:
+- type: depends_on
+  target: K0001
+  note: ''
+artifacts:
+- path: docs/CERTIFICATE_FORMAT.md
+  role: proof
+  note: 命題・対象範囲・根拠を記した出典
+  commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
+- path: Kyouen/CertificateSoundness.lean
+  role: lean
+  note: winning_sound / losing_sound / certificate_soundによるrank帰納
+  commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
+---
+
+# 順位付きAND/OR証明書の局所条件と健全性
+
+WINノードは合法なLOSS子を一つ、LOSSノードは全合法子をWINとして持つ。各辺で自然数rankが減少する。rankによる帰納により、局所条件が全件成立すれば根ラベルは通常プレイの真の勝敗である。
+
+証明DAGは勝敗維持に必要な部分だけを持つため、全安全局面の分類や最大安全石数を表すとは限らない。KYOENC3のバイナリ仕様とD4正規化は出典にある。

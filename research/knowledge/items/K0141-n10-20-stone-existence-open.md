@@ -1,0 +1,78 @@
+---
+id: K0141
+title: 10×10では20石まで届くか
+kind: question
+status: open
+topics:
+- maximum-safe
+- geometry
+aliases:
+- B082
+relations:
+- type: depends_on
+  target: K0026
+  note: ''
+- type: depends_on
+  target: K0035
+  note: 現行の全域上下界19≤K_10≤23
+- type: depends_on
+  target: K0316
+  note: 完全局所排除は20石存在問題の一部だけを制限する
+artifacts:
+- path: research/experiments/original-claims/reports/round57-nineteen-stone-ten-board-bound.md
+  role: source
+  note: 19石証人と一般上界23
+  commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
+- path: research/experiments/saturation/reports/saturation-20261003-extra.md
+  role: source
+  note: 複数19石極大と20石への局所非存在
+  commit: 49891aaf2d402436b9581296ec91b52769e687d6
+- path: research/experiments/saturation/output/saturation_20261003_extra_exact_results.json
+  role: data
+  note: 約8.42億節点の3完全探索結果
+  commit: 49891aaf2d402436b9581296ec91b52769e687d6
+- path: research/experiments/original-claims/output/round26_original_scope_index.json
+  role: manifest
+  note: B082の原文監査
+  commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
+- path: research/experiments/n10-twenty-stone-sls-20261115/README.md
+  role: source
+  note: stochastic local search 5 run 345,966 moves の有界な負の証拠と F_10 第3系再現
+- path: research/experiments/n10-twenty-stone-sls-20261115/output/sls_runs_20261115.json
+  role: data
+  note: SLS 各 run の seed・units・trace の機械可読記録
+scope: 安全20石の存在（K_10≥20）を問う。旧B082の等号K_10=20にはさらに全域上界20が必要。
+evidence: 19≤K_10≤23。既知19石近傍とほぼ安全20点集合Uの広い近傍に安全20石なし。SLS 345,966 moves (2026-11-15 sandbox) でも証人なし。
+---
+
+# 10×10では20石まで届くか
+
+安全19石は複数系統で存在し、一般上界は23。20石の存在は未決着。
+
+本項の存在問題はK_10≥20である。旧alias B082の等号K_10=20まで確定するには、20石証人に加えて全域上界20も必要である。
+
+ある19石極大Tと10点以上を共有する安全20石は存在せず、ほぼ安全な20点集合Uについても|S∩U|≥10を満たす安全集合の最大サイズは19と完全計算された。20石が存在するならこれらの核から大規模な交換が必要だが、局所排除をK_10≤19へ拡張してはいけない。
+
+## 2026-10-17 bounded advance
+
+New finite evidence: global branch-and-bound for 20-stone safe set on 10x10: ~13.3M nodes across 15 D4 first-stone representatives (20s each) plus 180s run; no 20-stone set found. MILP (HiGHS, 300s) best primal 15, weak dual ~71. Local round57 radius-8 deletion search from verified 19-stone set found no witness.
+
+Scope clarification: negative evidence only; does not prove K_10<=19. Bounds remain 19<=K_10<=23.
+
+Next steps: longer better-pruned exact search or SAT/ILP with stronger cuts; stochastic local search. Status remains open.
+
+## 2026-10-17 bounded advance (round 2)
+
+New finite evidence: longer exact search for maximal safe 20-stone set on 10x10: 29 chunks, ~243,521,681 nodes across 15 D4 first-stone representatives, ~455.7 s measured search time (~10-11 min wall). No 20-stone maximal safe set found; no representative completed (all hit time/node bounds). Extends prior ~13.3M-node bound by roughly an order of magnitude.
+
+Scope clarification: negative evidence only; does not establish K_10 <= 19. Bounds remain 19 <= K_10 <= 23. Search targets size exactly 20 maximal sets, so does not cover maximal sets of size 21-23 or prove absence of 20-stone sets in general.
+
+Next steps: longer better-pruned exact search or SAT/ILP with stronger cuts; stochastic local search. Status remains open.
+
+統合監査（2026-10-20）: 上記2026-10-17の追記はローカル研究時点の報告であり、今回すべての探索・測定を再実行したものではない。再検証の範囲は `research/experiments/local-main-integration-20261020/README.md` に記す。既存の未解決性・量化の限界を維持する。
+
+## 2026-11-15 bounded advance (stochastic local search — sandbox)
+
+New finite evidence: the previously unexecuted "stochastic local search" next step was run in the Vibe TS sandbox during the 16:05Z execution-environment outage ([n10-twenty-stone-sls-20261115](../../experiments/n10-twenty-stone-sls-20261115/)). 5 completed runs, 345,966 moves total (uniform random walk / greedy-sample WalkSAT / annealing+ILS / full-scan greedy / census variants; deterministic mulberry32 PRNG; incremental violation-list + add-cost machinery; exact integer determinant test). No 20-stone witness. The only E=1 (one violated quad) 20-set ever observed is the published U; no new near-miss cut-family candidates were found at this scale. Controls reproduced F_10=54,441 (third independent code path), the K0035 19-stone witness safety, U's unique violated quad {25,59,62,83}, and U's single-swap and bounded 2-swap non-fixability (consistent with the X1/X2 complete enumerations).
+
+Scope clarification: bounded negative evidence only; does not prove K_10<=19. Bounds remain 19<=K_10<=23. The SLS scale (~3.5e5 moves) is far below the prior 243M-node branch-and-bound. Status remains open; the SAT/cut attack (n10-twenty-stone-sat-20261115) remains the primary decision route for this question.
