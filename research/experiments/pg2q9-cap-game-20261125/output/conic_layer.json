@@ -28,7 +28,8 @@
      "grundy": 1,
      "upset_positions": 31681
     }
-   ]
+   ],
+   "note": "120 is the number of 3-subsets of a conic; all 3-caps are conic and form a single PGL(3,9) orbit of 110,565 (each 3-cap lies on 64 conics)."
   },
   "4": {
    "caps": 12383280,
@@ -57,7 +58,8 @@
      "grundy": 0,
      "upset_positions": 1868
     }
-   ]
+   ],
+   "note": "PGL(2,9) classes on a conic: 30 (harmonic, cross-ratio -1) and 180 (generic). The two rows are class sizes, not PGL(3,9) orbits: PGL(3,9) is transitive on all 1,769,040 four-caps. The listed representatives were not resolved to the harmonic class in this artifact (independent verification note)."
   },
   "5": {
    "caps": 14859936,
@@ -82,11 +84,12 @@
       0,
       1,
       10,
-      31,
+      20,
       51
      ],
      "grundy": 1,
-     "upset_positions": 132
+     "upset_positions": 128,
+     "note": "corrected representative (verification): the former {0,1,10,31,51} lies in the 180-class"
     }
    ]
   },
@@ -102,10 +105,11 @@
       10,
       20,
       31,
-      45
+      62
      ],
      "grundy": 0,
-     "upset_positions": 16
+     "upset_positions": 22,
+     "note": "corrected representative (verification)"
     },
     {
      "orbit_size": 1769040,
@@ -116,10 +120,11 @@
       10,
       20,
       31,
-      62
+      45
      ],
      "grundy": 0,
-     "upset_positions": 22
+     "upset_positions": 16,
+     "note": "corrected representative (verification)"
     }
    ]
   },
@@ -186,5 +191,6 @@
     }
    ]
   }
- }
+ },
+ "note": "conic_layer counts for k>=6 are caps contained in a conic (not all k-caps); k=3,4 rows are incidence counts. Grundy values verified for one representative per class (uniform per k in this table)."
 }

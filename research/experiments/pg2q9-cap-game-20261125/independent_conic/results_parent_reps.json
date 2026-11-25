@@ -1,0 +1,163 @@
+{
+ "rows": [
+  {
+   "k": 3,
+   "rep": [
+    0,
+    1,
+    10
+   ],
+   "parent_label": 120,
+   "computed_orbit": 120,
+   "match": true
+  },
+  {
+   "k": 4,
+   "rep": [
+    0,
+    1,
+    10,
+    20
+   ],
+   "parent_label": 30,
+   "computed_orbit": 180,
+   "match": false
+  },
+  {
+   "k": 4,
+   "rep": [
+    0,
+    1,
+    10,
+    31
+   ],
+   "parent_label": 180,
+   "computed_orbit": 180,
+   "match": true
+  },
+  {
+   "k": 5,
+   "rep": [
+    0,
+    1,
+    10,
+    20,
+    31
+   ],
+   "parent_label": 180,
+   "computed_orbit": 180,
+   "match": true
+  },
+  {
+   "k": 5,
+   "rep": [
+    0,
+    1,
+    10,
+    31,
+    51
+   ],
+   "parent_label": 72,
+   "computed_orbit": 180,
+   "match": false
+  },
+  {
+   "k": 6,
+   "rep": [
+    0,
+    1,
+    10,
+    20,
+    31,
+    45
+   ],
+   "parent_label": 180,
+   "computed_orbit": 30,
+   "match": false
+  },
+  {
+   "k": 6,
+   "rep": [
+    0,
+    1,
+    10,
+    20,
+    31,
+    62
+   ],
+   "parent_label": 30,
+   "computed_orbit": 180,
+   "match": false
+  },
+  {
+   "k": 7,
+   "rep": [
+    0,
+    1,
+    10,
+    20,
+    31,
+    45,
+    51
+   ],
+   "parent_label": 120,
+   "computed_orbit": 120,
+   "match": true
+  },
+  {
+   "k": 8,
+   "rep": [
+    0,
+    1,
+    10,
+    20,
+    31,
+    45,
+    51,
+    62
+   ],
+   "parent_label": 45,
+   "computed_orbit": 45,
+   "match": true
+  },
+  {
+   "k": 9,
+   "rep": [
+    0,
+    1,
+    10,
+    20,
+    31,
+    45,
+    51,
+    62,
+    75
+   ],
+   "parent_label": 10,
+   "computed_orbit": 10,
+   "match": true
+  }
+ ],
+ "all_match": false,
+ "note": "parent representatives for k=4 (both), k=5 (second) and k=6 (swapped) are labelled with the wrong orbit size; the orbit-size multisets and Grundy values are unaffected",
+ "k1305_correspondence": {
+  "cap": [
+   0,
+   1,
+   10,
+   20,
+   42
+  ],
+  "unique_nondegenerate_conic": true,
+  "conic_maps_onto_C": true,
+  "image_in_C": [
+   0,
+   1,
+   10,
+   62,
+   88
+  ],
+  "orbit_size_of_image_in_C": 72,
+  "expected_72": true
+ }
+}

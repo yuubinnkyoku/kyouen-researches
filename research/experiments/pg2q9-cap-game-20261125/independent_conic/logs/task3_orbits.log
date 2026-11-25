@@ -1,0 +1,532 @@
+{
+ "pgl2_9": {
+  "order": 720,
+  "expected": 720,
+  "faithful": true,
+  "triples_images_distinct": true,
+  "sharply_3_transitive": true,
+  "explicit_matrix_action_matches": true,
+  "explicit_matrix_count": 720,
+  "explicit_matrix_group_order": 720
+ },
+ "pg19_orbits": {
+  "3": {
+   "sizes": [
+    120
+   ],
+   "total": 120,
+   "expected_total": 120,
+   "representatives": [
+    [
+     0,
+     1,
+     2
+    ]
+   ]
+  },
+  "4": {
+   "sizes": [
+    180,
+    30
+   ],
+   "total": 210,
+   "expected_total": 210,
+   "representatives": [
+    [
+     0,
+     1,
+     2,
+     3
+    ],
+    [
+     0,
+     1,
+     2,
+     9
+    ]
+   ]
+  },
+  "5": {
+   "sizes": [
+    180,
+    72
+   ],
+   "total": 252,
+   "expected_total": 252,
+   "representatives": [
+    [
+     0,
+     1,
+     2,
+     3,
+     4
+    ],
+    [
+     0,
+     1,
+     2,
+     3,
+     7
+    ]
+   ]
+  },
+  "6": {
+   "sizes": [
+    180,
+    30
+   ],
+   "total": 210,
+   "expected_total": 210,
+   "representatives": [
+    [
+     0,
+     1,
+     2,
+     3,
+     4,
+     6
+    ],
+    [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5
+    ]
+   ]
+  },
+  "7": {
+   "sizes": [
+    120
+   ],
+   "total": 120,
+   "expected_total": 120,
+   "representatives": [
+    [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6
+    ]
+   ]
+  },
+  "8": {
+   "sizes": [
+    45
+   ],
+   "total": 45,
+   "expected_total": 45,
+   "representatives": [
+    [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7
+    ]
+   ]
+  },
+  "9": {
+   "sizes": [
+    10
+   ],
+   "total": 10,
+   "expected_total": 10,
+   "representatives": [
+    [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8
+    ]
+   ]
+  }
+ },
+ "stab_C": {
+  "order": 720,
+  "distinct_perms": 720,
+  "perm_group_equals_pgl2_9_up_to_relabelling": true,
+  "psi_is_bijection_onto_C": true
+ },
+ "C_orbits": {
+  "3": {
+   "sizes": [
+    120
+   ],
+   "total": 120,
+   "expected_total": 120,
+   "representatives_board_labels": [
+    [
+     0,
+     1,
+     10
+    ]
+   ],
+   "matches_pg19_abstract": true,
+   "transported_equals_direct": true
+  },
+  "4": {
+   "sizes": [
+    180,
+    30
+   ],
+   "total": 210,
+   "expected_total": 210,
+   "representatives_board_labels": [
+    [
+     0,
+     1,
+     10,
+     20
+    ],
+    [
+     0,
+     1,
+     10,
+     45
+    ]
+   ],
+   "matches_pg19_abstract": true,
+   "transported_equals_direct": true
+  },
+  "5": {
+   "sizes": [
+    180,
+    72
+   ],
+   "total": 252,
+   "expected_total": 252,
+   "representatives_board_labels": [
+    [
+     0,
+     1,
+     10,
+     20,
+     31
+    ],
+    [
+     0,
+     1,
+     10,
+     20,
+     51
+    ]
+   ],
+   "matches_pg19_abstract": true,
+   "transported_equals_direct": true
+  },
+  "6": {
+   "sizes": [
+    180,
+    30
+   ],
+   "total": 210,
+   "expected_total": 210,
+   "representatives_board_labels": [
+    [
+     0,
+     1,
+     10,
+     20,
+     31,
+     51
+    ],
+    [
+     0,
+     1,
+     10,
+     20,
+     31,
+     45
+    ]
+   ],
+   "matches_pg19_abstract": true,
+   "transported_equals_direct": true
+  },
+  "7": {
+   "sizes": [
+    120
+   ],
+   "total": 120,
+   "expected_total": 120,
+   "representatives_board_labels": [
+    [
+     0,
+     1,
+     10,
+     20,
+     31,
+     45,
+     51
+    ]
+   ],
+   "matches_pg19_abstract": true,
+   "transported_equals_direct": true
+  },
+  "8": {
+   "sizes": [
+    45
+   ],
+   "total": 45,
+   "expected_total": 45,
+   "representatives_board_labels": [
+    [
+     0,
+     1,
+     10,
+     20,
+     31,
+     45,
+     51,
+     62
+    ]
+   ],
+   "matches_pg19_abstract": true,
+   "transported_equals_direct": true
+  },
+  "9": {
+   "sizes": [
+    10
+   ],
+   "total": 10,
+   "expected_total": 10,
+   "representatives_board_labels": [
+    [
+     0,
+     1,
+     10,
+     20,
+     31,
+     45,
+     51,
+     62,
+     75
+    ]
+   ],
+   "matches_pg19_abstract": true,
+   "transported_equals_direct": true
+  }
+ },
+ "claim_check": {
+  "ok": true,
+  "detail": {
+   "3": {
+    "computed": [
+     120
+    ],
+    "claimed": [
+     120
+    ],
+    "match": true
+   },
+   "4": {
+    "computed": [
+     180,
+     30
+    ],
+    "claimed": [
+     180,
+     30
+    ],
+    "match": true
+   },
+   "5": {
+    "computed": [
+     180,
+     72
+    ],
+    "claimed": [
+     180,
+     72
+    ],
+    "match": true
+   },
+   "6": {
+    "computed": [
+     180,
+     30
+    ],
+    "claimed": [
+     180,
+     30
+    ],
+    "match": true
+   },
+   "7": {
+    "computed": [
+     120
+    ],
+    "claimed": [
+     120
+    ],
+    "match": true
+   },
+   "8": {
+    "computed": [
+     45
+    ],
+    "claimed": [
+     45
+    ],
+    "match": true
+   },
+   "9": {
+    "computed": [
+     10
+    ],
+    "claimed": [
+     10
+    ],
+    "match": true
+   }
+  }
+ },
+ "extra_checks": {
+  "orbit_stabiliser": {
+   "ok": true,
+   "detail": {
+    "3": [
+     {
+      "orbit": 120,
+      "stab": 6,
+      "product": 720
+     }
+    ],
+    "4": [
+     {
+      "orbit": 180,
+      "stab": 4,
+      "product": 720
+     },
+     {
+      "orbit": 30,
+      "stab": 24,
+      "product": 720
+     }
+    ],
+    "5": [
+     {
+      "orbit": 180,
+      "stab": 4,
+      "product": 720
+     },
+     {
+      "orbit": 72,
+      "stab": 10,
+      "product": 720
+     }
+    ],
+    "6": [
+     {
+      "orbit": 180,
+      "stab": 4,
+      "product": 720
+     },
+     {
+      "orbit": 30,
+      "stab": 24,
+      "product": 720
+     }
+    ],
+    "7": [
+     {
+      "orbit": 120,
+      "stab": 6,
+      "product": 720
+     }
+    ],
+    "8": [
+     {
+      "orbit": 45,
+      "stab": 16,
+      "product": 720
+     }
+    ],
+    "9": [
+     {
+      "orbit": 10,
+      "stab": 72,
+      "product": 720
+     }
+    ]
+   }
+  },
+  "complement_symmetry": {
+   "ok": true,
+   "detail": {
+    "3": {
+     "sizes_k": [
+      120
+     ],
+     "sizes_10-k": [
+      120
+     ],
+     "complements_match": true
+    },
+    "4": {
+     "sizes_k": [
+      30,
+      180
+     ],
+     "sizes_10-k": [
+      30,
+      180
+     ],
+     "complements_match": true
+    },
+    "5": {
+     "sizes_k": [
+      72,
+      180
+     ],
+     "sizes_10-k": [
+      72,
+      180
+     ],
+     "complements_match": true
+    },
+    "6": {
+     "sizes_k": [
+      30,
+      180
+     ],
+     "sizes_10-k": [
+      30,
+      180
+     ],
+     "complements_match": true
+    },
+    "7": {
+     "sizes_k": [
+      120
+     ],
+     "sizes_10-k": [
+      120
+     ],
+     "complements_match": true
+    }
+   }
+  },
+  "cross_ratio_k4": {
+   "harmonic_count": 30,
+   "equals_30_orbit": true,
+   "harmonic_rep_is_{0,1,10,45}": true,
+   "generic_rep_is_{0,1,10,20}": true
+  }
+ },
+ "pass": true
+}
+
+TASK3: PASS
