@@ -41,6 +41,9 @@ artifacts:
 - path: research/log/2026-11-24-noncongruent-window-collapse.md
   role: report
   note: 実行 log（出版 chain 7b992b5f→e6ea44fb→73aa36d6 の記録・公式 4 走・変異電池 13 種の実測表・受入判定・§4.5 の主張区分の再掲・次課題 O-G2/F1）。
+- path: research/experiments/ncw-class-enum-20261124/
+  role: machine
+  note: 記号クラス列挙閉包証明書（手証明 SS2.4/2.5 mex 閉包代数の層に対応・新規定理なし）。実現ラベル組合せ pair 280 クラス + bed 39 クラス（全クラス witness 付き）で claim==mex を記号的にクラス毎機械検証し、閉包を 280+39 有限場合分けとして確定。coverage census default 108,000+3,150・深部 `34 16 44 20` 203,456+5,780 すべて bad 0・eqcheck.py で法則実装を公刊 verify_k1310.py の P/Bm/single_token(q_odd)/cpsfG 転写と 1,031,085 点照合 bad 0。出版 chain: 宣言ノート cb72a442 → kit a33ede53 → tamper 076f7056 → 監査 closeout 8940cc82（tamper t1/t2/t3 出力凍結・公式 enum 4 走 + eqcheck 2 走 byte-identical rc=0・fetch-back byte 一致・detcheck.json OFFICIAL-PASS・MANIFEST-sha256 23 entries）。構築期3バグ（tau wave zone へ label 2 混入・concession flip 欠落・witness gs off-by-one で3クラス欠落）は宣言ノート §4 に honest 記載、tamper 電池 3/3 検出確認。census は有限照合であり法則の全称性は手証明が担う。11×11 verdict 不消費。
 
 ## 概要
 
