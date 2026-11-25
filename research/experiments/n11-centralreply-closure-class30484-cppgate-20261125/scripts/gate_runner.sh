@@ -4,7 +4,7 @@
 #   budget     = exact-replay node budget of the row's published probe condition
 #   expected   = "legal,budget,result,nodes" pinned from the published raw (SSOT)
 # Two fresh-cold passes (one process per pass, like the drive runners).
-# Acceptance: p1 == p2 on (legal,budget,result,nodes); both == expected.
+# Acceptance: p1 == p2 on (legal,budget,result,nodes); both == expected. [repair rev2: field 4 is legal (field 3 is stones); rev1 wrongly compared stones - caught fail-closed by the anchor-at2m first run]
 # Any mismatch or crash: HARD-STOP (exit != 0), status line recorded. FAIL-closed.
 set -u
 key="$1"; budget="$2"; expected="$3"
@@ -24,8 +24,8 @@ for p in p1 p2; do
   fi
   grep -q "# replay_done" "$out" || { echo "$(date -u +%FT%TZ) $key GATE-CRASH $p (no replay_done)" >> "$dir/output/gate-status.log"; echo "GATE-CRASH $key $p"; exit 41; }
 done
-f1=$(grep "^replay," "$dir/output/raw/$key.p1.out" | cut -d, -f3,6,7,8)
-f2=$(grep "^replay," "$dir/output/raw/$key.p2.out" | cut -d, -f3,6,7,8)
+f1=$(grep "^replay," "$dir/output/raw/$key.p1.out" | cut -d, -f4,6,7,8)
+f2=$(grep "^replay," "$dir/output/raw/$key.p2.out" | cut -d, -f4,6,7,8)
 if [ -z "$f1" ] || [ -z "$f2" ]; then echo "$(date -u +%FT%TZ) $key GATE-FAIL missing-replay-row" >> "$dir/output/gate-status.log"; echo "GATE-FAIL $key missing replay row"; exit 46; fi
 if [ "$f1" != "$f2" ]; then
   echo "$(date -u +%FT%TZ) $key MISMATCH p1=$f1 p2=$f2" >> "$dir/output/gate-status.log"
