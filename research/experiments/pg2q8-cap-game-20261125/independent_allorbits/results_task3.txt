@@ -1,0 +1,30 @@
+== start caps ==
+cap7: [12, 16, 18, 22, 54, 66, 69]
+  is_cap(3-collinear-free)=True no_line_has_3=True extendable=True (#extensions=3)
+cap8: [12, 16, 18, 22, 40, 54, 66, 69]
+  is_cap(3-collinear-free)=True no_line_has_3=True extendable=True (#extensions=2)
+cap6_nm: [1, 10, 12, 59, 62, 65]
+  is_cap(3-collinear-free)=True no_line_has_3=True extendable=True (#extensions=4)
+cap6_max: [10, 47, 49, 55, 61, 64]
+  is_cap(3-collinear-free)=True no_line_has_3=True extendable=False (#extensions=0)
+
+== C engine orbit sizes ==
+  C: cap7      size=   2747136 is_cap=1 is_max=0 in_conic=0
+  C: cap8      size=   1177344 is_cap=1 is_max=0 in_conic=0
+  C: cap6_nm   size=   4120704 is_cap=1 is_max=0 in_conic=0
+  C: cap6_max  size=    686784 is_cap=1 is_max=1 in_conic=0
+
+== pure-Python orbit BFS (independent implementation) ==
+  cap7      python=  2747136 C=  2747136 K1327=  2747136 OK  (21.8s)
+  cap8      python=  1177344 C=  1177344 K1327=  1177344 OK  (9.5s)
+  cap6_nm   python=  4120704 C=  4120704 K1327=  4120704 OK  (33.2s)
+  cap6_max  python=   686784 C=   686784 K1327=   686784 OK  (5.2s)
+
+== classification ==
+standard conic (x0^2+x1*x2=0): [0, 1, 18, 30, 39, 48, 51, 60, 69] size=9 is_cap=True
+  cap7      contained_in_standard_conic=False
+  cap8      contained_in_standard_conic=False
+  cap6_nm   contained_in_standard_conic=False
+  cap6_max  contained_in_standard_conic=False
+
+TASK 3: PASS
