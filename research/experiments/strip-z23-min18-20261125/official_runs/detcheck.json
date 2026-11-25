@@ -1,0 +1,110 @@
+{
+  "battery": {
+    "all_gates_bad": 0,
+    "declared_pts": 19532,
+    "gates": {
+      "D1_cells": 1377,
+      "D2_strip": 108,
+      "D3_z22_anchors": 542,
+      "D4_stair_anchors": 527,
+      "D5_self_anchors": 16725,
+      "D6_deviant_witnesses": 23,
+      "D7_extension_anchors": 149,
+      "D8_belowband_anchors": 81
+    },
+    "overall_bad": 0,
+    "pts": 19532,
+    "result": "PASS"
+  },
+  "claims_scope": "The machine re-checks the DECLARED universal claims of the K1344 single-owner note: the 17 floor-18 cell closed forms F23f18..A1123f18 (F23f18 = the FOURTEENTH tail form, odd-z HOLE+TAIL: single point s=22=z-1 DOWN 1v2, conforming hole s=23=z, persistent tail UP 2v0 for s>=24; A23f18 = the A-RANK BREAK REBIRTH at s=18=z-5, odd-z birth 4/4; A1123f18 = the NINTH consecutive in-band base child), the strip theorem T-Z23 (min>=18; base m=18 trivial absorption through the fully collapsing A1123f18), corollaries 1-2 (z*(18)=34 closes the slice; min=18 row z in {0..23}, residual band z in {24..33}, frontier 34). Battery points are finite engine cross-checks; the universal claims are proven on paper in the declaration note section 2 from the published lemmas (K0832, K1138, K1264, K1312, K1268, K1334) and the published z=22 lines (K1339), the latter independently re-anchored here (D3) rather than taken on faith. The drafting machine was named verify_tz23.py and renamed to verify_k1344.py after the declaration push (66ac2775); the rename touches only the machine label and docstring bytes and the battery structure is unchanged (disclosed in the note section 4/section 6).",
+  "declaration_note": "research/log/2026-11-25-strip-z23-min18-single-owner-note.md",
+  "declaration_note_commit": "66ac277530e264e61475c158311423d86f4fa47d",
+  "eleven_by_eleven": "UNKNOWN unchanged; verdict not consumed.",
+  "engine_pin": "bd5f22e415a78368c9b798296bc84948d5637decbf3c21a92404d45fb12e3a92",
+  "machine": "verify_k1344",
+  "machine_path": "research/experiments/strip-z23-min18-20261125/verify_k1344.py",
+  "machine_publication_commit": "b75e373e174faee62811e98fb65d31ab20ecc3af",
+  "machine_sha256": "8c0077a1ea4fd354ffdccfe9bc6c301e9cc0571869e67ffe6cb06897bd8c0b8f",
+  "protocol": "publish-then-execute: official runs executed from the PUBLISHED bytes (fetch-back sha256-verified against the local machine; git blob sha1 019b3970c459ea899e48060471cd4ac64459f366) after machine publication; runs r1/r2 in the publishing workdir (default / PYTHONHASHSEED=random), runs r3/r4 env -i isolated dirs via /usr/local/bin/python3. Tamper battery also re-executed from the published bytes (8/8 FAIL-CLOSED, byte-identical to the renamed-bytes predry tamper outputs). Predry before publication on the renamed bytes: 8 runs byte-identical (default x2, PYTHONHASHSEED=random/1/0 same-cwd, env -i isolated x3), stdout 671 bytes. Drafting bytes (verify_tz23.py, sha256 2b22acec210d9517d43e1a293953666f9bde82c85280c391417cce8522bfe7ed): predry 8 runs byte-identical (stdout 670 bytes), tamper 8/8 fail-closed. Honest run record: the first attempt of r3/r4 copied the published bytes under the wrong filename (fb1344.py) and produced an immediate 'file not found' rc 2 with an EMPTY output; the slip was caught by the empty-file check and redone correctly within the same session before any output was frozen; the published run3.out/run4.out are the corrected runs.",
+  "runs": [
+    {
+      "mode": "default, publishing workdir, same cwd",
+      "rc": 0,
+      "run": "run1.out",
+      "stdout_sha256": "6d920fa11340d69f08cc2144aa4496c42bb423ddc2f3b1bce520fffd5617a2c5"
+    },
+    {
+      "mode": "PYTHONHASHSEED=random, same cwd",
+      "rc": 0,
+      "run": "run2.out",
+      "stdout_sha256": "6d920fa11340d69f08cc2144aa4496c42bb423ddc2f3b1bce520fffd5617a2c5"
+    },
+    {
+      "mode": "env -i isolated dir #1 (/usr/local/bin/python3)",
+      "rc": 0,
+      "run": "run3.out",
+      "stdout_sha256": "6d920fa11340d69f08cc2144aa4496c42bb423ddc2f3b1bce520fffd5617a2c5"
+    },
+    {
+      "mode": "env -i isolated dir #2 (/usr/local/bin/python3)",
+      "rc": 0,
+      "run": "run4.out",
+      "stdout_sha256": "6d920fa11340d69f08cc2144aa4496c42bb423ddc2f3b1bce520fffd5617a2c5"
+    }
+  ],
+  "runs_stdout_bytes": 671,
+  "runs_stdout_sha256": "6d920fa11340d69f08cc2144aa4496c42bb423ddc2f3b1bce520fffd5617a2c5",
+  "tamper_battery": {
+    "all_fail_closed": true,
+    "detail": {
+      "tamper-engine": {
+        "engine_gate": "FAIL",
+        "rc": 2
+      },
+      "tamper=anchor22": {
+        "bad_gates": {
+          "D3_z22_anchors": 1
+        },
+        "rc": 1
+      },
+      "tamper=belowband": {
+        "bad_gates": {
+          "D8_belowband_anchors": 1
+        },
+        "rc": 1
+      },
+      "tamper=cell": {
+        "bad_gates": {
+          "D1_cells": 1
+        },
+        "rc": 1
+      },
+      "tamper=deviant": {
+        "bad_gates": {
+          "D6_deviant_witnesses": 1
+        },
+        "rc": 1
+      },
+      "tamper=ext": {
+        "bad_gates": {
+          "D7_extension_anchors": 1
+        },
+        "rc": 1
+      },
+      "tamper=stair": {
+        "bad_gates": {
+          "D4_stair_anchors": 1
+        },
+        "rc": 1
+      },
+      "tamper=strip": {
+        "bad_gates": {
+          "D2_strip": 1
+        },
+        "rc": 1
+      }
+    },
+    "executed_from": "published bytes",
+    "modes": 8
+  }
+}
