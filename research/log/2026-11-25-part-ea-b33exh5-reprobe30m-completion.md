@@ -1,4 +1,4 @@
-# Part EA 完了log (2026-11-25): batch-33 (closure class 34908) remaining-EXHAUSTED 5行 (af003/af023/af034/af039/af048) higher-budget 30M reprobe — drive完走 5/5・MISMATCH 0・verno不消費・11×11 UNKNOWN担保不変
+# Part EA 完了log (2026-11-25): batch-33 (closure class 34908) remaining-EXHAUSTED 5行 (af003/af023/af034/af039/af048) higher-budget 30M reprobe — drive完走 5/5・MISMATCH 0・verdict不消費・11×11 UNKNOWN担保不変
 
 Part EA 宣言
 `research/log/2026-11-25-part-ea-b33exh5-reprobe30m-declaration.md`
@@ -44,7 +44,7 @@ fresh-cold reprobe (全行 pass pair node-exact・MISMATCH 0・WINDOW-EXCEEDED 0
    maker tamper battery 4/4 fail-closed (T1/T2/T3/T4) を再実行した。
    A1/A2/A3b の他ファイル (scripts 6・input 9・val-gate 8・canonical cache
    `4a30b88d…`) は初回から全pin一致 (無傷)。DU-b「ASCII簡易デコーダ由来
-   mojibake → B1-fix」と同一ska本の事故で、fail-closed pin が publishes-side
+   mojibake → B1-fix」と同型の事故で、fail-closed pin が publishes-side
    崩壊も捕捉した最初の事例。
 3. val-gate fresh 4/4 node-exact (`.ea-host.out`): at2m×2 (budget 2M →
    result 0 nodes 2,000,000・wall 9/9s)・first-15m (budget 15M → result 2
