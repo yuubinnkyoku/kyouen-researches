@@ -1,0 +1,121 @@
+{
+  "totals": {
+    "late": {
+      "20000": {
+        "off": {
+          "unknown": 0,
+          "watchdog_runs": 0,
+          "solve_us": 14171,
+          "process_us": 15464396,
+          "nodes": 4458,
+          "visited": 4458,
+          "expansions": 1805,
+          "exact_nodes": 0,
+          "pn_nodes": 0,
+          "pn_aborts": 0,
+          "residual_calls": 0
+        },
+        "pn128-g6": {
+          "unknown": 0,
+          "watchdog_runs": 0,
+          "solve_us": 6925,
+          "process_us": 15769284,
+          "nodes": 1262,
+          "visited": 1262,
+          "expansions": 243,
+          "exact_nodes": 0,
+          "pn_nodes": 462,
+          "pn_aborts": 0,
+          "residual_calls": 270
+        }
+      },
+      "100000": {
+        "off": {
+          "unknown": 0,
+          "watchdog_runs": 0,
+          "solve_us": 14038,
+          "process_us": 15566906,
+          "nodes": 4458,
+          "visited": 4458,
+          "expansions": 1805,
+          "exact_nodes": 0,
+          "pn_nodes": 0,
+          "pn_aborts": 0,
+          "residual_calls": 0
+        },
+        "pn128-g6": {
+          "unknown": 0,
+          "watchdog_runs": 0,
+          "solve_us": 6718,
+          "process_us": 15476578,
+          "nodes": 1262,
+          "visited": 1262,
+          "expansions": 243,
+          "exact_nodes": 0,
+          "pn_nodes": 462,
+          "pn_aborts": 0,
+          "residual_calls": 270
+        }
+      }
+    },
+    "deep": {
+      "20000": {
+        "off": {
+          "unknown": 3,
+          "watchdog_runs": 0,
+          "solve_us": 664375,
+          "process_us": 2450313,
+          "nodes": 60000,
+          "visited": 60000,
+          "expansions": 29220,
+          "exact_nodes": 0,
+          "pn_nodes": 0,
+          "pn_aborts": 0,
+          "residual_calls": 0
+        },
+        "pn128-g6": {
+          "unknown": 3,
+          "watchdog_runs": 0,
+          "solve_us": 687183,
+          "process_us": 2450103,
+          "nodes": 60000,
+          "visited": 60000,
+          "expansions": 29220,
+          "exact_nodes": 0,
+          "pn_nodes": 0,
+          "pn_aborts": 0,
+          "residual_calls": 0
+        }
+      },
+      "100000": {
+        "off": {
+          "unknown": 3,
+          "watchdog_runs": 0,
+          "solve_us": 2929270,
+          "process_us": 4707226,
+          "nodes": 300000,
+          "visited": 300000,
+          "expansions": 142987,
+          "exact_nodes": 0,
+          "pn_nodes": 0,
+          "pn_aborts": 0,
+          "residual_calls": 0
+        },
+        "pn128-g6": {
+          "unknown": 3,
+          "watchdog_runs": 0,
+          "solve_us": 3095168,
+          "process_us": 4858664,
+          "nodes": 300000,
+          "visited": 300000,
+          "expansions": 142987,
+          "exact_nodes": 0,
+          "pn_nodes": 0,
+          "pn_aborts": 0,
+          "residual_calls": 0
+        }
+      }
+    }
+  },
+  "protocol_sha256": "0522a092e52a46cfbe74c878581a9134bd56dbcd8d146496c21bbe50d8f9bae6"
+}

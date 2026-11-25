@@ -1,0 +1,17 @@
+{
+  "source": "research/experiments/n11-reduction-followup-20261005/output/n11-snapshots.json",
+  "source_sha256": "7518ff3847f003140440be964ed28557a31373d58a58642dd1d056d9af9f8e3a",
+  "fixtures_sha256": "e9b1fe88ceb0c609bad5df32cb611b100efde7a7b07d316284a5a8b63ed0bd79",
+  "input_sha256": "ce1f2d696976f4e8897fa2aa45895c49a50419d70b9ae2a16d132c84fe2026a0",
+  "gates": [
+    0,
+    6,
+    8,
+    10,
+    12
+  ],
+  "repeats": 3,
+  "budget_per_root": 5000,
+  "selection": "first saved state in each legal=6..18 / turn parity stratum for train; last distinct trial for holdout",
+  "selection_rule": "minimum UNKNOWN count, then solve_us on training only"
+}

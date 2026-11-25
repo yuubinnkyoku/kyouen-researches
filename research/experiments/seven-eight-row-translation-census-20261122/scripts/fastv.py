@@ -1,0 +1,177 @@
+#!/usr/bin/env python3
+"""Fast exact screen for 7x66 2R2A surgery states, semantically equal to
+verify_int.verify (same curve universe: all base pair-lines + triple-circles,
+full recount for new curves; same membership equations; same blocked-cell
+definition). Screen verdicts are dual-checked against verify_int.verify by the
+caller on validation samples; only screen-PASSING states are confirmed with
+verify_int.verify authoritatively."""
+import itertools
+from verify_int import circle_thru, line_thru, circle_cells, line_cells
+
+
+class Screen:
+    def __init__(self, base, M, H, Q):
+        self.M, self.H, self.Q = M, H, Q
+        self.base = sorted(base)
+        S = set(self.base)
+        self.emptyBase = [(x, y) for x in range(M) for y in range(H)
+                          if (x, y) not in S]
+        keys = set()
+        n = len(self.base)
+        B = self.base
+        for i in range(n):
+            for j in range(i + 1, n):
+                ln = line_thru(B[i], B[j])
+                if ln:
+                    keys.add(("L", ln))
+        for t in itertools.combinations(range(n), 3):
+            ci = circle_thru(B[t[0]], B[t[1]], B[t[2]])
+            if ci:
+                keys.add(("C", ci))
+        self.baseKeys = keys
+        self.baseCnt = {}
+        self.baseCells = {}
+        cov = {}
+        members3 = {}
+        addIdx = {}
+        for k in keys:
+            kind = "line" if k[0] == "L" else "circle"
+            cs = circle_cells(k[1], M, H) if kind == "circle" else line_cells(k[1], M, H)
+            self.baseCells[k] = cs
+            c = sum(1 for x in cs if x in S)
+            self.baseCnt[k] = c
+            if c == Q - 1:
+                for cell in cs:
+                    cov[cell] = cov.get(cell, 0) + 1
+                for st in cs:
+                    if st in S:
+                        members3.setdefault(st, []).append(k)
+            for cell in cs:
+                addIdx.setdefault(cell, []).append(k)
+        self.cov = cov
+        self.members3 = members3
+        self.addIdx = addIdx
+
+    def screen(self, rpair, a1, a2=None):
+        """rpair: 2 removed base stones; a1, a2: added cells.
+        Returns (safe, maximal, diagnostics) for the final state."""
+        M, H, Q = self.M, self.H, self.Q
+        rpair = list(rpair)
+        newState = set(self.base) - set(rpair) | {a1} | ({a2} if a2 is not None else set())
+        survList = sorted(newState - {a1} - ({a2} if a2 is not None else set()))
+        covDelta = {}
+        # --- base curves affected (through a removed base stone or an add) ---
+        relevant = set()
+        for r in rpair:
+            relevant.update(self.members3.get(r, ()))
+        relevant.update(self.addIdx.get(a1, ()))
+        relevant.update(self.addIdx.get(a2, ()))
+        baseCnt, baseCells = self.baseCnt, self.baseCells
+        rp0 = rpair[0]
+        rp1 = rpair[1] if len(rpair) > 1 else rp0
+        for k in relevant:
+            cs = baseCells[k]
+            rHit = (rp0 in cs) + (rp1 in cs) if len(rpair) == 2 else (rp0 in cs)
+            aHit = (a1 in cs) + (0 if a2 is None else (a2 in cs))
+            fin = baseCnt[k] - rHit + aHit
+            if fin >= Q:
+                return (False, False, "unsafe-base")
+            b3 = baseCnt[k] == Q - 1
+            f3 = fin == Q - 1
+            if b3 != f3:
+                sgn = 1 if f3 else -1
+                for cell in cs:
+                    covDelta[cell] = covDelta.get(cell, 0) + sgn
+        # --- new curves (must contain at least one add; not a base key) ---
+        stList = list(newState)
+        seenNew = set()
+
+        def count_new(k, q):
+            if k in self.baseKeys or k in seenNew:
+                return None
+            seenNew.add(k)
+            n = 0
+            if k[0] == "L":
+                a, b, c = k[1]
+                for (x, y) in stList:
+                    if a * x + b * y + c == 0:
+                        n += 1
+                        if n >= Q:
+                            return Q
+            else:
+                A, D, E, F = k[1]
+                for (x, y) in stList:
+                    if A * (x * x + y * y) + D * x + E * y + F == 0:
+                        n += 1
+                        if n >= Q:
+                            return Q
+            return n
+
+        # lines with one add
+        for u in survList:
+            ln = line_thru(a1, u)
+            if ln:
+                n = count_new(("L", ln), Q)
+                if n is not None:
+                    if n >= Q:
+                        return (False, False, "unsafe-new-line")
+                    if n == Q - 1:
+                        for cell in line_cells(ln, M, H):
+                            covDelta[cell] = covDelta.get(cell, 0) + 1
+            if a2 is not None:
+                ln = line_thru(a2, u)
+                if ln:
+                    n = count_new(("L", ln), Q)
+                    if n is not None:
+                        if n >= Q:
+                            return (False, False, "unsafe-new-line")
+                        if n == Q - 1:
+                            for cell in line_cells(ln, M, H):
+                                covDelta[cell] = covDelta.get(cell, 0) + 1
+        if a2 is not None:
+            ln = line_thru(a1, a2)
+        if ln:
+            n = count_new(("L", ln), Q)
+            if n is not None:
+                if n >= Q:
+                    return (False, False, "unsafe-new-line")
+                if n == Q - 1:
+                    for cell in line_cells(ln, M, H):
+                        covDelta[cell] = covDelta.get(cell, 0) + 1
+        # circles with one add (companions = survivors + the other add)
+        comp1 = survList + ([a2] if a2 is not None else [])
+        for t in itertools.combinations(range(len(comp1)), 2):
+            ci = circle_thru(a1, comp1[t[0]], comp1[t[1]])
+            if ci is None:
+                continue
+            n = count_new(("C", ci), Q)
+            if n is not None:
+                if n >= Q:
+                    return (False, False, "unsafe-new-circle")
+                if n == Q - 1:
+                    for cell in circle_cells(ci, M, H):
+                        covDelta[cell] = covDelta.get(cell, 0) + 1
+        if a2 is not None:
+            for t in itertools.combinations(range(len(survList)), 2):
+                ci = circle_thru(a2, survList[t[0]], survList[t[1]])
+                if ci is None:
+                    continue
+                n = count_new(("C", ci), Q)
+                if n is not None:
+                    if n >= Q:
+                        return (False, False, "unsafe-new-circle")
+                    if n == Q - 1:
+                        for cell in circle_cells(ci, M, H):
+                            covDelta[cell] = covDelta.get(cell, 0) + 1
+        # --- maximality ---
+        cov = self.cov
+        unblocked = []
+        for c in self.emptyBase:
+            if c == a1 or c == a2:
+                continue
+            if cov.get(c, 0) + covDelta.get(c, 0) <= 0:
+                unblocked.append(c)
+        for r in rpair:
+            if cov.get(r, 0) + covDelta.get(r, 0) <= 0:
+                unblocked.append(r)
+        return (True, not unblocked, unblocked[:6])

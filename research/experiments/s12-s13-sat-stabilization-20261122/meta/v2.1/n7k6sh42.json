@@ -1,0 +1,17 @@
+{
+ "n": 7,
+ "k": 6,
+ "N": 49,
+ "F": 6364,
+ "D": 660,
+ "C": 5704,
+ "lines": 44,
+ "circles": 1581,
+ "nVars": 26142,
+ "nClauses": 110913,
+ "encoding": "v2.1: S1 safety; Z full Tseitin z_{q,e}; maximality per cell over z; LX D4 lex-leader 7 transforms (full prefix-equality Tseitin chain, orbit-coverage verified); S4 Sinz one-way at-most-k",
+ "nolex": false,
+ "shuffle": 42,
+ "varLayout": "cells 1..49; z N+1..25505; d 25506..25848; counter 25849..26142",
+ "anchors": "census anchors verified against K0057 published F/D/C/lines/circles values"
+}

@@ -1,0 +1,11 @@
+== kissat ladder in-progress snapshot (frozen at publication of this experiment dir) ==
+driver: v5 queue = n11_k10 --sat, n11_k9fund --sat, n9_k9 --sat, n9_k8, n11_k8fund --sat, n11_k9, n11_k8, n11_k9fund
+binary: kissat 4.0.4 linux-amd64 md5 3a5eba830aa6008a604fcc9bbe99a325
+-- runs/log.txt at freeze --
+=== START n11_k10 opts='--sat' 2026-11-21T08:15:56+00:00
+-- n11_k10 --sat progress tail (no verdict at freeze = INDET, ongoing) --
+c O 479.75 179 97 31 119 1236 1 868010 60938 1.1 104 92 92 97 100% 389954 88774 141919 100%
+c - 481.59 180 97 31 120 1238 1 871729 59148 1.2 106 92 92 97 100% 389954 88774 141919 100%
+c - 486.73 180 97 31 121 1245 1 882685 63816 1.2 106 92 92 97 100% 389959 88774 141919 100%
+c - 491.33 181 97 31 122 1250 1 893688 66893 1.1 106 92 92 97 100% 389962 88774 141919 100%
+-- prior partial: n11_k10 default mode cut at 470s conflicts 8,246 (see research log) --

@@ -1,0 +1,173 @@
+{
+  "all_pass": true,
+  "board_validation_passed": true,
+  "cases": {
+    "AG(2,4)-s2": {
+      "field_pass": {
+        "grundy_distribution": true,
+        "grundy_empty": true,
+        "maximal_by_size": true,
+        "misere_empty": true,
+        "safe_by_size": true,
+        "safe_count": true
+      },
+      "field_values": {
+        "grundy_distribution": {
+          "claimed": {
+            "0": 1009,
+            "1": 784
+          },
+          "computed": {
+            "0": 1009,
+            "1": 784
+          }
+        },
+        "grundy_empty": {
+          "claimed": 0,
+          "computed": 0
+        },
+        "maximal_by_size": {
+          "claimed": {
+            "4": 120,
+            "6": 48
+          },
+          "computed": {
+            "4": 120,
+            "6": 48
+          }
+        },
+        "misere_empty": {
+          "claimed": 1,
+          "computed": 1
+        },
+        "safe_by_size": {
+          "claimed": {
+            "0": 1,
+            "1": 16,
+            "2": 120,
+            "3": 480,
+            "4": 840,
+            "5": 288,
+            "6": 48
+          },
+          "computed": {
+            "0": 1,
+            "1": 16,
+            "2": 120,
+            "3": 480,
+            "4": 840,
+            "5": 288,
+            "6": 48
+          }
+        },
+        "safe_count": {
+          "claimed": 1793,
+          "computed": 1793
+        }
+      },
+      "pass": true
+    },
+    "AG(2,4)-s3": {
+      "field_pass": {
+        "grundy_distribution": true,
+        "grundy_empty": true,
+        "maximal_by_size": true,
+        "misere_empty": true,
+        "safe_count": true
+      },
+      "field_values": {
+        "grundy_distribution": {
+          "claimed": {
+            "0": 12184,
+            "1": 12929,
+            "2": 960
+          },
+          "computed": {
+            "0": 12184,
+            "1": 12929,
+            "2": 960
+          }
+        },
+        "grundy_empty": {
+          "claimed": 1,
+          "computed": 1
+        },
+        "maximal_by_size": {
+          "claimed": {
+            "8": 120,
+            "9": 1120
+          },
+          "computed": {
+            "8": 120,
+            "9": 1120
+          }
+        },
+        "misere_empty": {
+          "claimed": 0,
+          "computed": 0
+        },
+        "safe_count": {
+          "claimed": 26073,
+          "computed": 26073
+        }
+      },
+      "pass": true
+    },
+    "AG(2,5)-s2": {
+      "field_pass": {
+        "grundy_distribution": true,
+        "grundy_empty": true,
+        "maximal_by_size": true,
+        "misere_empty": true,
+        "safe_count": true
+      },
+      "field_values": {
+        "grundy_distribution": {
+          "claimed": {
+            "0": 5401,
+            "1": 8025,
+            "2": 3000
+          },
+          "computed": {
+            "0": 5401,
+            "1": 8025,
+            "2": 3000
+          }
+        },
+        "grundy_empty": {
+          "claimed": 0,
+          "computed": 0
+        },
+        "maximal_by_size": {
+          "claimed": {
+            "5": 600,
+            "6": 1000
+          },
+          "computed": {
+            "5": 600,
+            "6": 1000
+          }
+        },
+        "misere_empty": {
+          "claimed": 1,
+          "computed": 1
+        },
+        "safe_count": {
+          "claimed": 16426,
+          "computed": 16426
+        }
+      },
+      "pass": true
+    }
+  },
+  "claims_source": "task statement (independent-verifier prompt)",
+  "generated_by": "independent/check_claims.py",
+  "statements": {
+    "ag24_s2_grundy_only_0_1": true,
+    "ag24_s2_maximal_sizes_even": true,
+    "ag24_s2_p_is_0": true,
+    "ag24_s2_parity_formula_every_safe_set": true,
+    "ag25_s2_grundy_2_present": true,
+    "ag25_s2_mixed_parity": true
+  }
+}

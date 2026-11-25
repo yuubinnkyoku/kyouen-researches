@@ -1,0 +1,16 @@
+{
+ "n": 10,
+ "k": 10,
+ "N": 100,
+ "F": 54441,
+ "D": 5928,
+ "C": 48513,
+ "lines": 154,
+ "circles": 12170,
+ "nVars": 55541,
+ "nClauses": 383267,
+ "shuffle": null,
+ "varLayout": "cells 1..N; t_q N+1..N+F (quartet order = quartetList); counter N+F+1.. (s_{i,j}=N+F+i*k+(j-1)+1)",
+ "encoding": "S1 safety 4-clauses; S2 t->pairs 6 per quartet; S3 maximality per cell; S4 Sinz at-most-k one-way",
+ "anchors": "census anchors verified against K0057 published F/D/C/lines/circles values"
+}

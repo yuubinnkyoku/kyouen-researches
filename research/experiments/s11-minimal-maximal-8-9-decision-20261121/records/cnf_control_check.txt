@@ -1,0 +1,19 @@
+== cnf_check.py: literal clause-level positive/negative controls (encoding-level, solver-independent) ==
+-- (a) K0320 witness (10 stones [[5,0],[8,0],[1,4],[6,4],[8,4],[0,5],[3,5],[8,5],[4,9],[5,10]], idx 55,88,15,70,92,5,38,93,53,65) vs n11 k=10 --
+n=11 k=10 stones=10 clauses=523640 violated=0
+RESULT: PASS
+-- (b) negative control: 9 of those stones only (safe but NOT maximal; expect cover violations) --
+VIOLATED: 8 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145...
+VIOLATED: 10 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 14...
+VIOLATED: 14 617 618 619 620 621 622 623 624 625 626 627 628 629 630 631 632 633 634 635 636 838 839 840 84...
+VIOLATED: 18 1766 1767 1768 1769 1997 1998 1999 2000 2001 2002 2003 2004 2005 2006 2007 2008 2009 2010 2011...
+VIOLATED: 20 2546 2547 2548 2549 2680 2681 2682 2683 2684 2685 2686 2687 2688 2689 2690 2691 2692 2693 2694...
+n=11 k=10 stones=9 clauses=523640 violated=17
+RESULT: FAIL
+-- (c) K0031 witness (7 stones idx 7,15,10,17,45,20,27) vs n7 k=7 --
+n=7 k=7 stones=7 clauses=40311 violated=0
+RESULT: PASS
+-- (d) same 7 stones vs n7 k=6 (expect exactly the cardinality unit -s[N,7]) --
+VIOLATED: -11192
+n=7 k=6 stones=7 clauses=40118 violated=1
+RESULT: FAIL

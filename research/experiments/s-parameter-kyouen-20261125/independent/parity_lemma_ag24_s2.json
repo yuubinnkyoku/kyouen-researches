@@ -1,0 +1,56 @@
+{
+  "case": "AG(2,4)-s2",
+  "formula_holds_for_every_safe_set": true,
+  "generated_by": "independent/verify.py",
+  "grundy_distribution_equals_size_parity": true,
+  "grundy_values": [
+    0,
+    1
+  ],
+  "maximal_size_counts": {
+    "4": 120,
+    "6": 48
+  },
+  "maximal_sizes": [
+    4,
+    6
+  ],
+  "num_safe_sets_checked": 1793,
+  "other_cases": {
+    "AG(2,4)-s3": {
+      "grundy_distribution": {
+        "0": 12184,
+        "1": 12929,
+        "2": 960
+      },
+      "grundy_two_present": true,
+      "maximal_sizes": [
+        8,
+        9
+      ],
+      "parity_uniform": false
+    },
+    "AG(2,5)-s2": {
+      "grundy_distribution": {
+        "0": 5401,
+        "1": 8025,
+        "2": 3000
+      },
+      "grundy_two_present": true,
+      "maximal_sizes": [
+        5,
+        6
+      ],
+      "parity_uniform": false
+    }
+  },
+  "p": 0,
+  "parity_uniform": true,
+  "size_parity_counts": {
+    "0": 1009,
+    "1": 784
+  },
+  "statement": "all maximal safe sets have the same parity p => Grundy(S) = (p - |S|) mod 2 for every safe S",
+  "violation_examples": [],
+  "violations": 0
+}

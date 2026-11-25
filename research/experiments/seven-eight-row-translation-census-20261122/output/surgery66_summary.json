@@ -1,0 +1,110 @@
+{
+ "board": [
+  7,
+  66
+ ],
+ "q": 4,
+ "base": [
+  [
+   11,
+   2
+  ],
+  [
+   14,
+   4
+  ],
+  [
+   15,
+   6
+  ],
+  [
+   18,
+   1
+  ],
+  [
+   18,
+   3
+  ],
+  [
+   21,
+   4
+  ],
+  [
+   27,
+   3
+  ],
+  [
+   29,
+   2
+  ],
+  [
+   30,
+   5
+  ],
+  [
+   32,
+   3
+  ],
+  [
+   33,
+   0
+  ],
+  [
+   34,
+   0
+  ],
+  [
+   34,
+   1
+  ],
+  [
+   39,
+   4
+  ],
+  [
+   43,
+   2
+  ],
+  [
+   43,
+   6
+  ],
+  [
+   44,
+   1
+  ],
+  [
+   44,
+   5
+  ],
+  [
+   58,
+   0
+  ],
+  [
+   64,
+   5
+  ]
+ ],
+ "T": [
+  0,
+  6
+ ],
+ "tcurves2": 190,
+ "addCells": 93,
+ "stats": {
+  "1R1A": {
+   "checked": 1860,
+   "hits": 0,
+   "sec": 54.501678466796875,
+   "candidateCountComplete": 1860
+  },
+  "2R1A": {
+   "checked": 8170,
+   "hits": 0,
+   "sec": 205.65566754341125,
+   "candidateCountComplete": 17670
+  }
+ },
+ "note": "Class (i) c0=2 targeted surgery on 7x66: T=(0,6), 190 two-stone T-curves, 93 add cells. 1R1A: 1860 candidates complete, 0 hits. 2R1A: 17670 candidates complete (93 add cells x 190 remove pairs, addcells \u2229 base = \u2205 verified; run split across resumes with per-a1 progress log 93/93 complete), 0 hits. Class (ii) 2R2A and class (iii) c0=0 (3Adds) NOT scanned in this session (c0=0 breaks def-mode since rows 0..5 are at q-1 capacity)."
+}

@@ -1,0 +1,817 @@
+{
+  "schema": "safe-child-quotient-exception-audit-v1",
+  "method": "independent integer lifted determinant and raw eight-element D4 maps",
+  "coverage": "every subset with size 0..3",
+  "boards": [
+    {
+      "n": 1,
+      "parents_by_size": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "exceptional_parents_by_size": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "total_extra_merges_by_size": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "exceptional_parent_d4_classes_by_size": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "legal_edges": 1,
+      "classification_mismatches": 0,
+      "examples": []
+    },
+    {
+      "n": 2,
+      "parents_by_size": [
+        1,
+        4,
+        6,
+        4
+      ],
+      "exceptional_parents_by_size": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "total_extra_merges_by_size": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "exceptional_parent_d4_classes_by_size": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "legal_edges": 28,
+      "classification_mismatches": 0,
+      "examples": []
+    },
+    {
+      "n": 3,
+      "parents_by_size": [
+        1,
+        9,
+        36,
+        84
+      ],
+      "exceptional_parents_by_size": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "total_extra_merges_by_size": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "exceptional_parent_d4_classes_by_size": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "legal_edges": 781,
+      "classification_mismatches": 0,
+      "examples": []
+    },
+    {
+      "n": 4,
+      "parents_by_size": [
+        1,
+        16,
+        120,
+        560
+      ],
+      "exceptional_parents_by_size": [
+        0,
+        8,
+        8,
+        0
+      ],
+      "total_extra_merges_by_size": [
+        0,
+        8,
+        8,
+        0
+      ],
+      "exceptional_parent_d4_classes_by_size": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "legal_edges": 8440,
+      "classification_mismatches": 0,
+      "examples": [
+        {
+          "parent": [
+            1
+          ],
+          "merged_moves": [
+            7,
+            8
+          ],
+          "legal": 15,
+          "canonical_children": 14
+        },
+        {
+          "parent": [
+            2
+          ],
+          "merged_moves": [
+            4,
+            11
+          ],
+          "legal": 15,
+          "canonical_children": 14
+        },
+        {
+          "parent": [
+            1,
+            7
+          ],
+          "merged_moves": [
+            8,
+            14
+          ],
+          "legal": 14,
+          "canonical_children": 13
+        },
+        {
+          "parent": [
+            1,
+            8
+          ],
+          "merged_moves": [
+            7,
+            14
+          ],
+          "legal": 14,
+          "canonical_children": 13
+        }
+      ]
+    },
+    {
+      "n": 5,
+      "parents_by_size": [
+        1,
+        25,
+        300,
+        2300
+      ],
+      "exceptional_parents_by_size": [
+        0,
+        8,
+        16,
+        8
+      ],
+      "total_extra_merges_by_size": [
+        0,
+        8,
+        16,
+        8
+      ],
+      "exceptional_parent_d4_classes_by_size": [
+        0,
+        1,
+        2,
+        1
+      ],
+      "legal_edges": 54821,
+      "classification_mismatches": 0,
+      "examples": [
+        {
+          "parent": [
+            1
+          ],
+          "merged_moves": [
+            9,
+            15
+          ],
+          "legal": 24,
+          "canonical_children": 23
+        },
+        {
+          "parent": [
+            3
+          ],
+          "merged_moves": [
+            5,
+            19
+          ],
+          "legal": 24,
+          "canonical_children": 23
+        },
+        {
+          "parent": [
+            1,
+            9
+          ],
+          "merged_moves": [
+            15,
+            23
+          ],
+          "legal": 23,
+          "canonical_children": 22
+        },
+        {
+          "parent": [
+            1,
+            12
+          ],
+          "merged_moves": [
+            9,
+            15
+          ],
+          "legal": 23,
+          "canonical_children": 22
+        },
+        {
+          "parent": [
+            1,
+            9,
+            12
+          ],
+          "merged_moves": [
+            15,
+            23
+          ],
+          "legal": 19,
+          "canonical_children": 18
+        },
+        {
+          "parent": [
+            1,
+            12,
+            15
+          ],
+          "merged_moves": [
+            9,
+            23
+          ],
+          "legal": 19,
+          "canonical_children": 18
+        }
+      ]
+    },
+    {
+      "n": 6,
+      "parents_by_size": [
+        1,
+        36,
+        630,
+        7140
+      ],
+      "exceptional_parents_by_size": [
+        0,
+        24,
+        24,
+        0
+      ],
+      "total_extra_merges_by_size": [
+        0,
+        24,
+        24,
+        0
+      ],
+      "exceptional_parent_d4_classes_by_size": [
+        0,
+        3,
+        3,
+        0
+      ],
+      "legal_edges": 248372,
+      "classification_mismatches": 0,
+      "examples": [
+        {
+          "parent": [
+            1
+          ],
+          "merged_moves": [
+            11,
+            24
+          ],
+          "legal": 35,
+          "canonical_children": 34
+        },
+        {
+          "parent": [
+            2
+          ],
+          "merged_moves": [
+            17,
+            18
+          ],
+          "legal": 35,
+          "canonical_children": 34
+        },
+        {
+          "parent": [
+            1,
+            11
+          ],
+          "merged_moves": [
+            24,
+            34
+          ],
+          "legal": 34,
+          "canonical_children": 33
+        },
+        {
+          "parent": [
+            1,
+            24
+          ],
+          "merged_moves": [
+            11,
+            34
+          ],
+          "legal": 34,
+          "canonical_children": 33
+        }
+      ]
+    },
+    {
+      "n": 7,
+      "parents_by_size": [
+        1,
+        49,
+        1176,
+        18424
+      ],
+      "exceptional_parents_by_size": [
+        0,
+        24,
+        48,
+        24
+      ],
+      "total_extra_merges_by_size": [
+        0,
+        24,
+        48,
+        24
+      ],
+      "exceptional_parent_d4_classes_by_size": [
+        0,
+        3,
+        6,
+        3
+      ],
+      "legal_edges": 879721,
+      "classification_mismatches": 0,
+      "examples": [
+        {
+          "parent": [
+            1
+          ],
+          "merged_moves": [
+            13,
+            35
+          ],
+          "legal": 48,
+          "canonical_children": 47
+        },
+        {
+          "parent": [
+            2
+          ],
+          "merged_moves": [
+            20,
+            28
+          ],
+          "legal": 48,
+          "canonical_children": 47
+        },
+        {
+          "parent": [
+            1,
+            13
+          ],
+          "merged_moves": [
+            35,
+            47
+          ],
+          "legal": 47,
+          "canonical_children": 46
+        },
+        {
+          "parent": [
+            1,
+            24
+          ],
+          "merged_moves": [
+            13,
+            35
+          ],
+          "legal": 47,
+          "canonical_children": 46
+        },
+        {
+          "parent": [
+            1,
+            13,
+            24
+          ],
+          "merged_moves": [
+            35,
+            47
+          ],
+          "legal": 43,
+          "canonical_children": 42
+        },
+        {
+          "parent": [
+            1,
+            24,
+            35
+          ],
+          "merged_moves": [
+            13,
+            47
+          ],
+          "legal": 43,
+          "canonical_children": 42
+        }
+      ]
+    },
+    {
+      "n": 8,
+      "parents_by_size": [
+        1,
+        64,
+        2016,
+        41664
+      ],
+      "exceptional_parents_by_size": [
+        0,
+        48,
+        48,
+        0
+      ],
+      "total_extra_merges_by_size": [
+        0,
+        48,
+        48,
+        0
+      ],
+      "exceptional_parent_d4_classes_by_size": [
+        0,
+        6,
+        6,
+        0
+      ],
+      "legal_edges": 2612336,
+      "classification_mismatches": 0,
+      "examples": [
+        {
+          "parent": [
+            1
+          ],
+          "merged_moves": [
+            15,
+            48
+          ],
+          "legal": 63,
+          "canonical_children": 62
+        },
+        {
+          "parent": [
+            2
+          ],
+          "merged_moves": [
+            23,
+            40
+          ],
+          "legal": 63,
+          "canonical_children": 62
+        },
+        {
+          "parent": [
+            1,
+            15
+          ],
+          "merged_moves": [
+            48,
+            62
+          ],
+          "legal": 62,
+          "canonical_children": 61
+        },
+        {
+          "parent": [
+            1,
+            48
+          ],
+          "merged_moves": [
+            15,
+            62
+          ],
+          "legal": 62,
+          "canonical_children": 61
+        }
+      ]
+    },
+    {
+      "n": 9,
+      "parents_by_size": [
+        1,
+        81,
+        3240,
+        85320
+      ],
+      "exceptional_parents_by_size": [
+        0,
+        48,
+        96,
+        48
+      ],
+      "total_extra_merges_by_size": [
+        0,
+        48,
+        96,
+        48
+      ],
+      "exceptional_parent_d4_classes_by_size": [
+        0,
+        6,
+        12,
+        6
+      ],
+      "legal_edges": 6800873,
+      "classification_mismatches": 0,
+      "examples": [
+        {
+          "parent": [
+            1
+          ],
+          "merged_moves": [
+            17,
+            63
+          ],
+          "legal": 80,
+          "canonical_children": 79
+        },
+        {
+          "parent": [
+            2
+          ],
+          "merged_moves": [
+            26,
+            54
+          ],
+          "legal": 80,
+          "canonical_children": 79
+        },
+        {
+          "parent": [
+            1,
+            17
+          ],
+          "merged_moves": [
+            63,
+            79
+          ],
+          "legal": 79,
+          "canonical_children": 78
+        },
+        {
+          "parent": [
+            1,
+            40
+          ],
+          "merged_moves": [
+            17,
+            63
+          ],
+          "legal": 79,
+          "canonical_children": 78
+        },
+        {
+          "parent": [
+            1,
+            17,
+            40
+          ],
+          "merged_moves": [
+            63,
+            79
+          ],
+          "legal": 73,
+          "canonical_children": 72
+        },
+        {
+          "parent": [
+            1,
+            40,
+            63
+          ],
+          "merged_moves": [
+            17,
+            79
+          ],
+          "legal": 73,
+          "canonical_children": 72
+        }
+      ]
+    },
+    {
+      "n": 10,
+      "parents_by_size": [
+        1,
+        100,
+        4950,
+        161700
+      ],
+      "exceptional_parents_by_size": [
+        0,
+        80,
+        80,
+        0
+      ],
+      "total_extra_merges_by_size": [
+        0,
+        80,
+        80,
+        0
+      ],
+      "exceptional_parent_d4_classes_by_size": [
+        0,
+        10,
+        10,
+        0
+      ],
+      "legal_edges": 15962236,
+      "classification_mismatches": 0,
+      "examples": [
+        {
+          "parent": [
+            1
+          ],
+          "merged_moves": [
+            19,
+            80
+          ],
+          "legal": 99,
+          "canonical_children": 98
+        },
+        {
+          "parent": [
+            2
+          ],
+          "merged_moves": [
+            29,
+            70
+          ],
+          "legal": 99,
+          "canonical_children": 98
+        },
+        {
+          "parent": [
+            1,
+            19
+          ],
+          "merged_moves": [
+            80,
+            98
+          ],
+          "legal": 98,
+          "canonical_children": 97
+        },
+        {
+          "parent": [
+            1,
+            80
+          ],
+          "merged_moves": [
+            19,
+            98
+          ],
+          "legal": 98,
+          "canonical_children": 97
+        }
+      ]
+    },
+    {
+      "n": 11,
+      "parents_by_size": [
+        1,
+        121,
+        7260,
+        287980
+      ],
+      "exceptional_parents_by_size": [
+        0,
+        80,
+        160,
+        80
+      ],
+      "total_extra_merges_by_size": [
+        0,
+        80,
+        160,
+        80
+      ],
+      "exceptional_parent_d4_classes_by_size": [
+        0,
+        10,
+        20,
+        10
+      ],
+      "legal_edges": 34477541,
+      "classification_mismatches": 0,
+      "examples": [
+        {
+          "parent": [
+            1
+          ],
+          "merged_moves": [
+            21,
+            99
+          ],
+          "legal": 120,
+          "canonical_children": 119
+        },
+        {
+          "parent": [
+            2
+          ],
+          "merged_moves": [
+            32,
+            88
+          ],
+          "legal": 120,
+          "canonical_children": 119
+        },
+        {
+          "parent": [
+            1,
+            21
+          ],
+          "merged_moves": [
+            99,
+            119
+          ],
+          "legal": 119,
+          "canonical_children": 118
+        },
+        {
+          "parent": [
+            1,
+            60
+          ],
+          "merged_moves": [
+            21,
+            99
+          ],
+          "legal": 119,
+          "canonical_children": 118
+        },
+        {
+          "parent": [
+            1,
+            21,
+            60
+          ],
+          "merged_moves": [
+            99,
+            119
+          ],
+          "legal": 115,
+          "canonical_children": 114
+        },
+        {
+          "parent": [
+            1,
+            60,
+            99
+          ],
+          "merged_moves": [
+            21,
+            119
+          ],
+          "legal": 115,
+          "canonical_children": 114
+        }
+      ]
+    }
+  ]
+}

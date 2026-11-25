@@ -1,0 +1,68 @@
+{
+  "candidate": {
+    "name": "q128-g6",
+    "gate": 6,
+    "quota": 128
+  },
+  "training_totals": {
+    "off": {
+      "unknown": 0,
+      "nodes": 515,
+      "solve_us": 3781,
+      "setup_us": 14742757,
+      "pn_nodes": 0,
+      "pn_aborts": 0
+    },
+    "q128-g6": {
+      "unknown": 0,
+      "nodes": 65,
+      "solve_us": 2932,
+      "setup_us": 14744144,
+      "pn_nodes": 259,
+      "pn_aborts": 0
+    },
+    "q512-g6": {
+      "unknown": 0,
+      "nodes": 65,
+      "solve_us": 3049,
+      "setup_us": 14914748,
+      "pn_nodes": 259,
+      "pn_aborts": 0
+    },
+    "q2048-g6": {
+      "unknown": 0,
+      "nodes": 65,
+      "solve_us": 3173,
+      "setup_us": 15309792,
+      "pn_nodes": 259,
+      "pn_aborts": 0
+    },
+    "q128-g12": {
+      "unknown": 0,
+      "nodes": 59,
+      "solve_us": 3363,
+      "setup_us": 15055932,
+      "pn_nodes": 533,
+      "pn_aborts": 1
+    },
+    "q512-g12": {
+      "unknown": 0,
+      "nodes": 12,
+      "solve_us": 3299,
+      "setup_us": 14760057,
+      "pn_nodes": 534,
+      "pn_aborts": 0
+    },
+    "q2048-g12": {
+      "unknown": 0,
+      "nodes": 12,
+      "solve_us": 3628,
+      "setup_us": 15063930,
+      "pn_nodes": 534,
+      "pn_aborts": 0
+    }
+  },
+  "rule": "UNKNOWN count, solve_us sum of root medians, quota, gate; PN candidates only",
+  "protocol_sha256": "484ca917db69fff82dddf9c3e971ea5a04145640aca049a23427b06a87746db5",
+  "training_sha256": "9990b5117aef6a4da34dde077f04055093a827bca30dd9392d793d792db40813"
+}

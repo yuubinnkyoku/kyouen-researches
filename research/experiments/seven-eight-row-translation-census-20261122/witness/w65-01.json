@@ -1,0 +1,12 @@
+{
+  "id": "w65-01",
+  "board": [7, 65],
+  "q": 4,
+  "stones": [[10,2],[13,4],[14,6],[17,1],[17,3],[20,4],[26,3],[28,2],[29,5],[31,3],[32,0],[33,0],[33,1],[38,4],[42,2],[42,6],[43,1],[43,5],[57,0],[63,5]],
+  "k": 20,
+  "rowCounts": [3,3,3,3,3,3,2],
+  "origin": "P74y-w60-10-id10-7x65 2R2A surgery: seed pair0/w60-10 id-image shift +10 on 7x65, removed [[21,5],[50,1]], added [[33,1],[63,5]]",
+  "engineFullVerify": { "safe": true, "maximal": true, "def": true, "reason": "ok", "rowCounts": [3,3,3,3,3,3,2] },
+  "tamperCheck": { "drop": [13,4], "full": { "reason": "empty cell (1,4) unblocked", "safe": true, "maximal": false, "def": null }, "tamperRejects": true },
+  "discovered": "2026-11-22 session (post-compaction), stage_y65.json P74y-w60-10-id10-7x65 2R2A hits=1 of N=5434000, engine surgery.mjs (clean-room, post maximalUnder-vacated-cell fix)"
+}

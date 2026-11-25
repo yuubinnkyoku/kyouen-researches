@@ -1,0 +1,64 @@
+board AG(2,2): PASS  n=4 b=6  problems=[]
+board AG(2,3): PASS  n=9 b=12  problems=[]
+board AG(2,4): PASS  n=16 b=20  problems=[]
+board AG(2,5): PASS  n=25 b=30  problems=[]
+
+AG(2,4)-s2: enumerating safe sets (n=16, b=20, s=2) ...
+  increasing order: 1,793 sets (0.01s); decreasing order: 1,793 sets (0.01s); agree=True
+  safe=1,793  maximal={4: 120, 6: 48}  G(empty)=0  misere(empty)=1  Gdist={0: 1009, 1: 784}  (0.06s DP)
+
+AG(2,5)-s2: enumerating safe sets (n=25, b=30, s=2) ...
+  increasing order: 16,426 sets (0.11s); decreasing order: 16,426 sets (0.12s); agree=True
+  safe=16,426  maximal={5: 600, 6: 1000}  G(empty)=0  misere(empty)=1  Gdist={0: 5401, 1: 8025, 2: 3000}  (0.74s DP)
+
+AG(2,4)-s3: enumerating safe sets (n=16, b=20, s=3) ...
+  increasing order: 26,073 sets (0.08s); decreasing order: 26,073 sets (0.08s); agree=True
+  safe=26,073  maximal={8: 120, 9: 1120}  G(empty)=1  misere(empty)=0  Gdist={0: 12184, 1: 12929, 2: 960}  (0.74s DP)
+
+parity lemma AG(2,4)-s2: p=0, checked 1,793 safe sets, violations=0, G-dist==size-parity-counts: True
+
+total elapsed: 3.22s
+wrote board_validation.json, grundy_results.json, parity_lemma_ag24_s2.json
+AG(2,4)-s2: method=powerset ...
+  safe=1,793 maximal={4: 120, 6: 48} Gdist={0: 1009, 1: 784} G(empty)=0 misere=1 | matches verify: True
+  parity p=0 checked=1,793 violations=0
+AG(2,4)-s3: method=powerset ...
+  safe=26,073 maximal={8: 120, 9: 1120} Gdist={0: 12184, 1: 12929, 2: 960} G(empty)=1 misere=0 | matches verify: True
+AG(2,5)-s2: method=combinations ...
+  safe=16,426 maximal={5: 600, 6: 1000} Gdist={0: 5401, 1: 8025, 2: 3000} G(empty)=0 misere=1 | matches verify: True
+
+all match verify: True  (1.99s)
+wrote crosscheck.json
+overall PASS: True
+  AG(2,4)-s2: PASS
+    safe_count: ok
+    safe_by_size: ok
+    maximal_by_size: ok
+    grundy_empty: ok
+    misere_empty: ok
+    grundy_distribution: ok
+  AG(2,5)-s2: PASS
+    safe_count: ok
+    maximal_by_size: ok
+    grundy_empty: ok
+    misere_empty: ok
+    grundy_distribution: ok
+  AG(2,4)-s3: PASS
+    safe_count: ok
+    maximal_by_size: ok
+    grundy_empty: ok
+    misere_empty: ok
+    grundy_distribution: ok
+  statements:
+    ag24_s2_maximal_sizes_even: ok
+    ag24_s2_grundy_only_0_1: ok
+    ag24_s2_parity_formula_every_safe_set: ok
+    ag24_s2_p_is_0: ok
+    ag25_s2_mixed_parity: ok
+    ag25_s2_grundy_2_present: ok
+wrote claims_check.json
+experiment output match: True
+  AG(2,4)-s2 vs AG2(4)_s2: match
+  AG(2,5)-s2 vs AG2(5)_s2: match
+  AG(2,4)-s3 vs AG2(4)_s3: match
+wrote experiment_output_comparison.json

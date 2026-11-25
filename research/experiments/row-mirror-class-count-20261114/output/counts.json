@@ -1,0 +1,94 @@
+{
+ "experiment": "row-mirror-class-count-20261114",
+ "claim": "non-empty subsets of {0..w-1} modulo the row mirror y -> w-1-y have C(w) = 2^(w-1) + 2^(ceil(w/2)-1) - 1 orbits",
+ "method": "brute-force orbit enumeration vs closed form",
+ "w_max": 14,
+ "all_match": true,
+ "provenance": "computed in the TS sandbox during the execution-environment (bash) outage, 2026-11-14; rerun scripts/orbit_count.js to reproduce the rows",
+ "rows": [
+  {
+   "w": 1,
+   "orbits": 1,
+   "formula": 1,
+   "match": true
+  },
+  {
+   "w": 2,
+   "orbits": 2,
+   "formula": 2,
+   "match": true
+  },
+  {
+   "w": 3,
+   "orbits": 5,
+   "formula": 5,
+   "match": true
+  },
+  {
+   "w": 4,
+   "orbits": 9,
+   "formula": 9,
+   "match": true
+  },
+  {
+   "w": 5,
+   "orbits": 19,
+   "formula": 19,
+   "match": true
+  },
+  {
+   "w": 6,
+   "orbits": 35,
+   "formula": 35,
+   "match": true
+  },
+  {
+   "w": 7,
+   "orbits": 71,
+   "formula": 71,
+   "match": true
+  },
+  {
+   "w": 8,
+   "orbits": 135,
+   "formula": 135,
+   "match": true
+  },
+  {
+   "w": 9,
+   "orbits": 271,
+   "formula": 271,
+   "match": true
+  },
+  {
+   "w": 10,
+   "orbits": 527,
+   "formula": 527,
+   "match": true
+  },
+  {
+   "w": 11,
+   "orbits": 1055,
+   "formula": 1055,
+   "match": true
+  },
+  {
+   "w": 12,
+   "orbits": 2079,
+   "formula": 2079,
+   "match": true
+  },
+  {
+   "w": 13,
+   "orbits": 4159,
+   "formula": 4159,
+   "match": true
+  },
+  {
+   "w": 14,
+   "orbits": 8255,
+   "formula": 8255,
+   "match": true
+  }
+ ]
+}

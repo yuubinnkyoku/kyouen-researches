@@ -1,0 +1,159 @@
+{
+  "cases": {
+    "AG(2,4)-s2": {
+      "b": 20,
+      "board_file": "research\\experiments\\s-parameter-kyouen-20261125\\output\\board_ag2q4.txt",
+      "enumeration_orders_agree": true,
+      "enumeration_seconds_decreasing": 0.01,
+      "enumeration_seconds_increasing": 0.009,
+      "grundy_distribution": {
+        "0": 1009,
+        "1": 784
+      },
+      "grundy_dp_seconds": 0.06,
+      "grundy_empty": 0,
+      "grundy_sha256": "16e01adf3d0a1cffbec9cffee4ffc38b3b9bcfd8e5c201e04eef8cd6e585d691",
+      "max_grundy": 1,
+      "maximal_by_size": {
+        "4": 120,
+        "6": 48
+      },
+      "maximal_parities": [
+        0
+      ],
+      "maximal_sizes": [
+        4,
+        6
+      ],
+      "misere_distribution": {
+        "0": 784,
+        "1": 1009
+      },
+      "misere_empty": 1,
+      "misere_sha256": "95173ccb7c46e6d36d2e295283f5ad025236b9b5ddecce8968c3c2bcd3df481a",
+      "n": 16,
+      "num_maximal": 168,
+      "num_options_total": 6784,
+      "q": 4,
+      "s": 2,
+      "safe_by_size": {
+        "0": 1,
+        "1": 16,
+        "2": 120,
+        "3": 480,
+        "4": 840,
+        "5": 288,
+        "6": 48
+      },
+      "safe_count": 1793
+    },
+    "AG(2,4)-s3": {
+      "b": 20,
+      "board_file": "research\\experiments\\s-parameter-kyouen-20261125\\output\\board_ag2q4.txt",
+      "enumeration_orders_agree": true,
+      "enumeration_seconds_decreasing": 0.08,
+      "enumeration_seconds_increasing": 0.078,
+      "grundy_distribution": {
+        "0": 12184,
+        "1": 12929,
+        "2": 960
+      },
+      "grundy_dp_seconds": 0.745,
+      "grundy_empty": 1,
+      "grundy_sha256": "bbbe753f940db81762cc46b0e45ada8b13e2cfa10e7c532472889abf729bb269",
+      "max_grundy": 2,
+      "maximal_by_size": {
+        "8": 120,
+        "9": 1120
+      },
+      "maximal_parities": [
+        0,
+        1
+      ],
+      "maximal_sizes": [
+        8,
+        9
+      ],
+      "misere_distribution": {
+        "0": 12929,
+        "1": 13144
+      },
+      "misere_empty": 0,
+      "misere_sha256": "531ed6cb88dae9fe6b4ccaa45cb57562e98314c13050a1c6f04d1c0744061fc7",
+      "n": 16,
+      "num_maximal": 1240,
+      "num_options_total": 165904,
+      "q": 4,
+      "s": 3,
+      "safe_by_size": {
+        "0": 1,
+        "1": 16,
+        "2": 120,
+        "3": 560,
+        "4": 1800,
+        "5": 4128,
+        "6": 6688,
+        "7": 7200,
+        "8": 4440,
+        "9": 1120
+      },
+      "safe_count": 26073
+    },
+    "AG(2,5)-s2": {
+      "b": 30,
+      "board_file": "research\\experiments\\s-parameter-kyouen-20261125\\output\\board_ag2q5.txt",
+      "enumeration_orders_agree": true,
+      "enumeration_seconds_decreasing": 0.115,
+      "enumeration_seconds_increasing": 0.112,
+      "grundy_distribution": {
+        "0": 5401,
+        "1": 8025,
+        "2": 3000
+      },
+      "grundy_dp_seconds": 0.738,
+      "grundy_empty": 0,
+      "grundy_sha256": "010ab293c13bfb9a30c38a9848c16a22c60b2cd350436b1299df42e595ce25ca",
+      "max_grundy": 2,
+      "maximal_by_size": {
+        "5": 600,
+        "6": 1000
+      },
+      "maximal_parities": [
+        0,
+        1
+      ],
+      "maximal_sizes": [
+        5,
+        6
+      ],
+      "misere_distribution": {
+        "0": 8025,
+        "1": 8401
+      },
+      "misere_empty": 1,
+      "misere_sha256": "2b09d661a3373bac46ae3cceee16217fa626664e6537e7686cde7c16d8e48388",
+      "n": 25,
+      "num_maximal": 1600,
+      "num_options_total": 71625,
+      "q": 5,
+      "s": 2,
+      "safe_by_size": {
+        "0": 1,
+        "1": 25,
+        "2": 300,
+        "3": 2000,
+        "4": 6500,
+        "5": 6600,
+        "6": 1000
+      },
+      "safe_count": 16426
+    }
+  },
+  "conventions": {
+    "grundy_distribution": "number of safe sets per Grundy value over all safe sets",
+    "maximal_safe_set": "no single point can be added while remaining safe",
+    "misere_play": "player with no move wins; misere_win = terminal OR exists option that is a misere loss for the opponent",
+    "normal_play": "player with no move loses; Grundy = mex of option Grundy values"
+  },
+  "generated_by": "independent/verify.py"
+}

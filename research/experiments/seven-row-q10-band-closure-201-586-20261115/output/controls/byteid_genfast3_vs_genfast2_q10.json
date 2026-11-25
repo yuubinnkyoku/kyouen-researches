@@ -1,0 +1,28 @@
+{
+  "check": "genfast3 (chord-pair census) vs genfast2 (integer-key pair census) CNF byte-identity, q=10",
+  "genfast3_md5": "12c2bd9cb3b24887fc3896f7ea9bcadf",
+  "genfast3_source": "research/experiments/seven-row-q9-band-extension-201-612-20261114/scripts/genfast3.js (q9 closure lane, committed d06d8015; API blob verified)",
+  "date": "2026-11-15",
+  "method": "cmp (0 diff) of genfast3.js and genfast2.js outputs under identical CLI options",
+  "samples": [
+    {"instance": "7x110 q10 def",  "cnf_md5": "20e1680ea37f4b8586810cad7459a3cf", "match": true},
+    {"instance": "7x150 q10 def",  "cnf_md5": "2aac2d456ccd62ca5d0c5ec148885d39", "match": true},
+    {"instance": "7x200 q10 def",  "cnf_md5": "7587d8eb03c10a86f5e89726ccfdc1df", "match": true},
+    {"instance": "7x200 q10 --lex=H,V,HV", "cnf_md5": "12b0975697b0d6818a266276be9be98f", "match": true}
+  ],
+  "instance_identity": {
+    "instance": "7x200 q10 def full leanband3 pipeline",
+    "kissat": {"result": "UNSAT", "conflicts": 2941, "sec": 0.4},
+    "matches": "band-extension-101-200 lane q10-band record m=200 (vars 36315 / clauses 132264 / curves 393 / conflicts 2941, bit-exact)"
+  },
+  "determinism_rerun": {
+    "instance": "7x300 q10 def",
+    "kissat": {"result": "UNSAT", "conflicts": 2608, "sec": 0.5},
+    "matches": "batch record m=300 conflicts 2608 (bit-exact rerun)"
+  },
+  "lex_cross_checks": [
+    {"instance": "7x201 q10 --lex=H,V,HV", "result": "UNSAT", "conflicts": 2076},
+    {"instance": "7x400 q10 --lex=H,V,HV", "result": "UNSAT", "conflicts": 9841},
+    {"instance": "7x586 q10 --lex=H,V,HV", "result": "UNSAT", "conflicts": 7652}
+  ]
+}

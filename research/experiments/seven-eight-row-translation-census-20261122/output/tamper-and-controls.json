@@ -1,0 +1,45 @@
+{
+ "witness": "w65-01",
+ "independent": "python3 verify_int.py (integer circles via 3x3 determinant, isqrt quadratic; no floats)",
+ "immunization": {
+  "drop(13,4)": {
+   "maximal": false,
+   "safe": true,
+   "firstUnblocked": [
+    [
+     1,
+     4
+    ],
+    [
+     2,
+     4
+    ],
+    [
+     3,
+     4
+    ]
+   ],
+   "unblockedCount": 23
+  }
+ },
+ "relocate(13,4)->(50,6)": {
+  "safe": false,
+  "maximal": false,
+  "unblockedCount": 18
+ },
+ "main": {
+  "safe": true,
+  "maximal": true,
+  "def": true,
+  "rowCounts": [
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   2
+  ],
+  "maxCurveCount": 3
+ }
+}
