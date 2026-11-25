@@ -7,7 +7,7 @@ K_6 = 9 上界根拠 (binary-cube-gp-census-k6-20261121 の s10 = 0) のため�
 
 ## 第一実装からの独立性
 
-第一実装 census2.js は GF(p) 分数なしフレーム + 2大素数 (83rd primes) で零判定していた。
+第一実装 census2.js は GF(p) 上の分数なしフレーム + 2つの大きな素数で零判定していた。
 本実装は**素数・剰余を一切使わない純整数演算**のみで構成する。
 
 - 小行列式: Bareiss (fraction-free, 行swapの符号を追跡し、det として正確に返す)。
@@ -16,9 +16,11 @@ K_6 = 9 上界根拠 (binary-cube-gp-census-k6-20261121 の s10 = 0) のため�
 - k=d+1 (=m) 層: **行置換座標函数** g_i(x) := det(M_B[row i <- x])。
   children のゲート = g_i(x) != 0 for all i (det([B - b_i, x]) と符号違いのみで同値)。
 - k>=d+2 層: 全ゲートを g 行間の**射影マイナー** (2x2 / 3x3 / 4x4 整数行列式) に還元。
-  導出の骨子: ゲート汎関数 mu は B の省略 index 集合 C 外の行ですべて消えるため
-  span{g_i : i in C} に属し、mu(他プール要素)=0 の解として小行列式 の det が現れる。
-  列ごとの符号 u8126き σ_i は σ🕳 ... [σ_i^2=1 ゆえ零判定不変]。
+  導出の骨子: 子供 x に対するゲートは (S 内の d-subset Y ∋ last) と x の
+  (d+1)点アフィン独立性、すなわち det([Y, x]) != 0。Y が B の行のうち C を省く形のとき、
+  ゲート汎関数 mu は B の C 外の行ですべて消えるため span{g_i : i in C} に属し、
+  mu(Y の pool 側要素)=0 を解くと、行 [g(last), g(他プール), g(x)] の C 列小行列式
+  det が現れる。列ごとにつく符号 σ_i は σ_i^2 = 1 なので零判定に影響しない。
 - float64 内で全中間値が厳密: |det| <= Hadamard(7) = 907, |g| <= 1512,
   4x4 マイナー <= 24 * 1512^4 ≈ 1.26e14 < 2^53 (battery B8 で実測主張)。
 
@@ -54,4 +56,4 @@ node agg3.mjs r3-*.jsonl ../binary-cube-gp-census-k6-20261121/r6-results.jsonl
   完全列挙であり、d=3/4/5 で published anchored table と一致済み。
   d=6 の brute は計算量上実施しない (fast census + gatecheck で代替)。
 - gatecheck は pair (0,1) の先頭 600,000 child-decisions の直接再検査であり、
-  探索全体の全ゲート検査ではない (選択は lexicographic-prefixバイアスあり、として明記)。
+  探索全体の全ゲート検査ではない (選択は lexicographic-prefix バイアスあり、として明記)。
