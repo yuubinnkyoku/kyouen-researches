@@ -60,3 +60,39 @@ and the official runs.
 
 See `research/log/2026-11-25-z15-predecl-exploration.md` for the full primary-source
 timeline, honest disclosure and handoff instructions.
+
+## Verification machine (added by the declaration lane, wave 2)
+
+- `verify_k1320.py` — sha256
+  `081fe719a3274c25719c8149beefdcf724e381b2cc025bc582e9d2e28936c7e4`
+  (added after the single-owner declaration note
+  `research/log/2026-11-25-strip-z15-min10-single-owner-note.md`,
+  commit `671ca6ba`; structure follows the published `verify_k1319.py`
+  `564ac761…`: z 14→15, floor 9→10, 8→9 rungs with small token 9 (A315f10),
+  the transcription anchor set moved to the published z=14 lines F14f9..A214f9
+  plus the T-Z14 C-hand anchors m∈{10..14}, and a NEW gate D8 sweeping the
+  below-band child `H(16;Y;16)` vs `v(s,16,16)` — the lemma-BB supply source
+  of the F15f10 constant tail). Same embedded engine block, startup pin
+  `bd5f22e4…`. Declared battery 9,339 pts, all endpoint fail-closed
+  (count mismatch itself FAILs):
+  D1 cells 1,989 (9 cells x 221 exhaustive floor-10 shapes) /
+  D2 strip 594 (m in 10..14 at the T-Z15 claim position) /
+  D3 z14 anchors 289 (8 published K1319 lines x 33 s-values {0}∪{9..40}
+  = 264, independent of the K1319 official-verification state, + 25 T-Z14
+  C-hand anchors) / D4 stair anchors 279 (9 x 31) /
+  D5 self 5,865 (single-token grid x∈{1..28}, z∈{0..16} incl the below-band
+  plane, 5,712 + 153 empty-position anchors) / D6 witnesses 17 (11 deviant
+  literals incl the s=15 hole and two tail points, plus the
+  G14f9-supply absorption at G s=12, the F-tail absorption at G s=16, and
+  the A2/A3 full-collapse witnesses) / D7 extension 85 (tail spots 41..48 x
+  9 cells vs the DECLARED closed forms, strip spots m in 15..18, m=10 base
+  spot (26;(10,10);15)=1=v(20,15,26)) / D8 belowband 221 (lemma BB sweep).
+  Modes: `--tamper-engine` rc 2; `--tamper=cell|strip|anchor14|stair|deviant|
+  ext|belowband` rc 1 with exactly the declared single gate flagged (8/8
+  fail-closed measured pre-publication). Predry 5 runs (default cwd,
+  PYTHONHASHSEED=random/1 same cwd, 2x env -i isolated dirs) all rc 0,
+  stdout byte-identical, sha256
+  `a4ed7c21fb36d839576be508f1ae39c3e59b63ace2ee1751a4066453f1d41765`.
+- Official runs live in `published/official_runs/run1..run4.out` (all four
+  executed FROM THE PUBLISHED BYTES fetched back and byte-verified first)
+  with `published/detcheck.json` recording the OFFICIAL-PASS verdict.
