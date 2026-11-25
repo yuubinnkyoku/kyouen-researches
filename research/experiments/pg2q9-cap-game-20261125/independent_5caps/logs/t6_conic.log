@@ -1,0 +1,35 @@
+the unique 10-cap (conic) through rep1: [0, 1, 10, 20, 31, 45, 51, 62, 75, 88]
+[PASS] rep1 lies on exactly one 10-cap (conic) and it has 10 points
+
+complete search over the 5040 ordered 4-tuples of C: |Stab_PGL(C)| = 720
+[PASS] |Stab_PGL(conic)| = q(q^2-1) = 720  --  computed 720
+[PASS] #conics * |G| = |PGL|, i.e. #conics = q^5-q^2 = 58,968  --  42,456,960/720 = 58,968
+five-subsets of C: 252
+G-orbits on the 252 five-subsets of C: [180, 72]
+[PASS] G has exactly the two orbits of sizes 180 and 72 on the 252 subsets  --  [180, 72]
+[PASS] orbit sizes sum to 252
+
+PGL orbit sizes = 58968 * G-orbit size:
+  G-orbit 180 -> PGL orbit 10,614,240
+  G-orbit  72 -> PGL orbit 4,245,696
+[PASS] PGL orbit sizes are 10,614,240 and 4,245,696  --  [4245696, 10614240]
+[PASS] they sum to 14,859,936 = total number of 5-caps  --  14,859,936
+[PASS] #conics * 252 = 58,968 * 252 = 14,859,936 (independent total count)
+
+stabilisers inside G and class identification:
+  G-orbit of size 180: |Stab_G(Q)| = 720/180 = 4, sample Q = [0, 1, 10, 20, 31] is PGL-equivalent to rep1
+[PASS] G-orbit 180: PGL class = rep1 and |Stab| = 4
+[PASS] the G-orbit containing rep1 has size 180 and |Stab| = 4
+  G-orbit of size  72: |Stab_G(Q)| = 720/72 = 10, sample Q = [0, 1, 10, 20, 51] is PGL-equivalent to rep2
+[PASS] G-orbit 72: PGL class = rep2 and |Stab| = 10
+[PASS] the G-orbit of class rep2 has size 72 and |Stab| = 10
+[PASS] rep1 is a five-subset of the conic C
+
+PGL(2,9) on PG(1,9) (independent, no projective-plane matrices):
+  |PGL(2,9)| = 720 (theory q(q^2-1) = 720)
+[PASS] |PGL(2,9)| = 720 acting on PG(1,9)
+  PGL(2,9) orbits on the 252 five-subsets of PG(1,9): [180, 72]
+[PASS] PGL(2,9) on 5-subsets of 10 points has exactly two orbits, 180 and 72  --  [180, 72]
+[PASS] => PGL(3,9) orbit sizes 58,968*180 and 58,968*72 (same as the conic computation)
+
+TASK 5 (conic cross-check): PASS
