@@ -138,3 +138,56 @@ proofs. The paper proofs, the slot claim and the verification machine belong to
 the declaration lane. Section (g) is a pure closed-form pre-computation: it uses
 no engine recursion at all and inherits only the published K0832 single-token
 closed form.
+
+
+## Verification machine (added post-declaration, 2026-11-25)
+
+The declaration lane published the slot-claim + single-owner declaration
+note (`research/log/2026-11-25-strip-z19-min14-single-owner-note.md`,
+commit e07d8f3d, sha256
+eb352b257156d98c1504a61af95a94de15702e621a31751d825be2b95708077f)
+with the full paper proof pre-disclosed (publish-then-execute), and this
+verification machine completes the kit:
+
+- `verify_k1330.py` (sha256 pinned in the commit message; structural copy
+  of the published verify_k1328.py z=18 machine with the disclosed
+  z 18 -> 19 textual adaptation disclosed in the machine docstring:
+  13 rungs, floor 14, R budget j+20, D3 anchor set = the z=18 line
+  transcriptions + T-Z18 C-hand anchors, D5 z-grid extended to z=20,
+  battery re-declared). Embedded engine block byte-identical chain,
+  startup pin bd5f22e415a78368c9b798296bc84948d5637decbf3c21a92404d45fb12e3a92
+  (sha gate, rc 2 on mismatch). Slot K1330 (declared in commit e07d8f3d);
+  no competing T-Z19 declaration appeared in the interim.
+
+Battery (fail-closed, declared totals exact or FAIL): D1 cells 1,521 =
+13 cells x 117 exhaustive floor-14 shapes (s in {0} U {14..44}, arity
+0..4); D2 strip 230 (m in {14..18}, cumulative 68/123/167/202/230 -
+identical sweep to kit section (c)); D3 z18 anchors 438 (12 transcribed
+K1328 lines x 34 s-values ({0} U {13..45}) = 408 + 30 T-Z18 C-hand
+anchors m in {13..18}); D4 stair anchors 403 (13 x 31, s in {14..44});
+D5 self anchors 13,419 (x in {1..30} x z in {0..20} x 21 R-points =
+13,230 + 189 empty positions); D6 deviant/collapse witnesses 22;
+D7 extension anchors 117 (tail spots s in {45..52} x 13 = 104 - the
+F19f14 hole+tail form keeps its persistent UP:2 tail at all 8
+window-external F spots, the other 96 rows FLAT - + 12 strip spots
+m in {19..22} + the m=14 base spot 1); D8 belowband anchors 117
+(H(20;Y;20) vs v(s,20,20) over the floor-14 census domain - the
+below-band j=1 B-move supply-source collapse whose absorption identity
+v(s,20,20)=v(s,19,20) holds on {0} U {12..19} and breaks uniformly
+0v1 for all s >= 20, supplying the F19f14 persistent tail; the identity
+final hold point s=19 is the HOLE). Total 16,267 points.
+
+Predry (this lane, pre-publication): 8 runs - default x2,
+PYTHONHASHSEED=random/1/0 (same cwd), env -i isolated x3 (explicit
+/usr/local/bin/python3) - ALL byte-identical, stdout sha256
+a925af7dde945931473dfd3df2c2b775b36bdd8973dd49f7fb968566d04e30e8,
+overall_bad 0, rc 0. Tamper battery 8/8 fail-closed: --tamper-engine
+rc 2; --tamper=cell|strip|anchor18|stair|deviant|ext|belowband each
+rc 1 with bad=1 on exactly the targeted gate.
+
+The universal claims (13 cell lemmas, T-Z19, corollaries) are proven on
+paper in the declaration note section 2; the battery is a finite engine
+cross-check, not a proof. Official runs follow from the published bytes
+(official_runs/run1..run4.out + detcheck.json) per the publish-then-
+execute protocol. 11x11 UNKNOWN unchanged throughout; verdict not
+consumed.
