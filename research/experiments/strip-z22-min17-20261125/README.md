@@ -142,3 +142,32 @@ proofs. The paper proofs, the slot claim and the verification machine belong
 to the declaration lane. Section (g) is a pure closed-form pre-computation: it
 uses no engine recursion at all and inherits only the published K0832
 single-token closed form.
+
+## Verify machine (added by the K1339 declaration lane)
+
+- `verify_k1339.py` — sha256 `566543f76e18fcce67cf6e64cbcd7f42b35a8ceffcdd79f652a1038396dc5e07`
+  (structural copy of the published `verify_k1337.py` machine with the disclosed
+  diff: z 21→22, rung budget 15→16 (16th rung, provisional `A10` label
+  formalized as **A1022f17**), floor 16→17, the declared z=22 closed forms
+  in D1, the published K1337 z=21 cell transcriptions + T-Z21 claim-row anchors
+  re-checked independently in D3, the (ii') below-band supply child
+  H(23;Y;23) vs v(s,23,23) in D8. Provisionally named verify_k1338.py;
+  renumbered to verify_k1339.py at the pre-push refetch after the parallel
+  conic lane claimed K1338 (AG(2,7) size-by-size Grundy decomposition,
+  docs/FINITE_RING_STATUS.md) — 2 label bytes differ, battery structure
+  unchanged; the numbering incident is disclosed in the declaration note).
+  The K1339 single-owner declaration note is
+  `research/log/2026-11-25-strip-z22-min17-single-owner-note.md` (commit
+  `575abe90`, label repair `7b969301`). Declaration battery **18,128 points,
+  fail-closed** (per-gate declared point counts enforced; any deviation or any
+  bad point → FAIL): D1 cells 1,408 / D2 strip 125 / D3 z21 anchors 510 /
+  D4 stair anchors 496 / D5 self anchors 15,336 / D6 deviant/collapse
+  witnesses 24 / D7 extension anchors 141 / D8 below-band anchors 88.
+  Engine pin `bd5f22e4…` startup gate. Predry 8 runs byte-identical
+  (default ×2, PYTHONHASHSEED=random/1/0 same-cwd, env -i isolated ×3):
+  stdout sha256
+  `05be7d667d9b278f1501c137e99b848a30f9257bdc8f807963b6169006158856`.
+  Tamper 8/8 fail-closed (engine rc 2; cell/strip/anchor21/stair/deviant/ext/
+  belowband each rc 1, flagging exactly its target gate with bad=1 and no
+  other). Official runs (publish-then-execute, from these published bytes)
+  follow in `official_runs/`.
