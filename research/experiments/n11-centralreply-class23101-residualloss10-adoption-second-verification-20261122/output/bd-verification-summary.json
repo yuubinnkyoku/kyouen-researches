@@ -1,0 +1,91 @@
+{
+ "declared_in_note_commit": "269e78657eea3628af5d19fe8ab5dee7119b3df0 (note Part BD declaration, observed HEAD-before-push b706b21448041c8d6788fd9803059ae675051595)",
+ "fail_closed_tamper_battery": {
+  "T1_maker_raw_node_tamper": "q043.p1.out nodes +1 -> maker ABORT rc=1 'pass mismatch p2 vs p1' (3-way node-exact gate)",
+  "T2_merger_conflict": "11th increment row flipping q043 to WIN -> merger GATE FAILED rc=1, NO output written (within/across-input WIN/LOSS conflict abort)",
+  "T3a_increment_verdict_flip_single": "q043 verdict 2->1 alone: merger SUCCEEDS (WIN 159 / LOSS 6,023, output sha 855c8aa6...) - documented gate GAP: the merger alone cannot catch a flipped verdict of a BASE-absent key; downstream pins are the capture",
+  "T3b_refresh_cache_pin_captures_tamper": "the T3a tamper-merged cache at the pinned path -> refresh ValueError 'merged cache sha256 drift' rc=1 before any computation",
+  "T4_extractor_manifest_row_counts": "losses 10->9 in a copy -> extractor GATE FAILED rc=1 'manifest row_counts not 10 LOSS / 0 adopted WIN / 0 exhausted of 10 resolved'",
+  "T5_refresh_cache_byte_tamper": "a nodes digit +1 in the scenario cache copy -> refresh ValueError 'merged cache sha256 drift' rc=1",
+  "T6_frozen_policy_input_tamper": "one appended comment byte in s5_evidence_policy.py copy -> refresh ValueError 'evidence policy sha256 drift' rc=1",
+  "scope": "all tampering confined to scratch trees; pristine published bytes never touched; re-verified after the battery"
+ },
+ "interpretation_guard": "verification only; no class closure, no root coverage, no WIN consumption; 17 unconsumed closure WINs untouched (scrutiny owner C++ second-implementation gate pin 9193f5b6... unchanged); standard 11x11 empty board and all 19 central-reply roots stay UNKNOWN; nodes/worklist/greedy numbers are bookkeeping, never verdicts",
+ "joint_greedy_nonmonotonicity_decomposition": {
+  "instrumentation": "exact 7-line diff (MAXTRACE list + per-phase appends + greedy-trace.json dump) against the published refresh scripts; runs re-produced all published output bytes",
+  "mechanism": "greedy_union initial (1-pass) then up to 6 improvement passes; the joint call hits the pass limit without stabilizing in BOTH worlds (improved=True at pass 6), so the published figure is a deterministic 6th-pass snapshot of a non-monotone local search, not a monotone plan quantity",
+  "one_pass": {
+   "BASE": 49361,
+   "SCEN": 49351,
+   "delta": -10,
+   "note": "improve-pass-free union decreases exactly by the 10 adopted LOSS keys; matches the Part BC host's recorded 49,361 -> 49,351"
+  },
+  "six_pass_convergence": {
+   "BASE": 35645,
+   "SCEN": 38978,
+   "delta": 3333,
+   "note": "plus 3,333 at the 6-pass limit; not a regression of any proven quantity, plan estimate only"
+  },
+  "trace_files": [
+   "output/bd-greedy-trace-base.json",
+   "output/bd-greedy-trace-scen.json"
+  ],
+  "trajectories": {
+   "BASE_initial_then_passes": [
+    49361,
+    35697,
+    40555,
+    36770,
+    35167,
+    36270,
+    35645
+   ],
+   "SCEN_initial_then_passes": [
+    49351,
+    35694,
+    40555,
+    36767,
+    35158,
+    36127,
+    38978
+   ]
+  }
+ },
+ "minimal_independent_check": {
+  "checks_total": 43,
+  "confirmed": {
+   "absence_gates": "q042 key (1152921505747697664,1032) not in adopted; s5 745184 not adopted; batch-17 s5-set disjoint; quarantine registry disjoint",
+   "canonical_union": "scenario 6,182 == BASE 6,172 + increment 10 as verdict maps; WIN 158 / LOSS 6,024 / conflict 0 / duplicate 0; nodes follow BASE else increment; comments carried from first input",
+   "class_23101": "graph cost 11 unknown children at BASE = q042 (s5 745184, key 1152921505747697664:1032) + the 10 adopted children; scenario-unknown exactly [745184]; class mask [1152921504892059648, 16] ; q042 stays UNKNOWN (not in scenario knowns)",
+   "closure_table": "808 rows in both worlds; class 22149 left and 23965 entered (churn); rank 1 is class 23101 with unknown_now 1; per-class unknown_now column equals my recomputation for every one of the 808 rows",
+   "holders": "28 holder classes match exactly: 23101 own_membership 10 (unknown 11->1) + 27 classes each own_membership 1 (unknown each -1); all values match the published delta json",
+   "increment_3way": "q043..q052 all result 2 at budget 15M, 2-pass node-exact, p1==p2 on (stones,legal,is_or,budget,result,nodes,lo,hi), status.log PASS rows agree, row-audit re-confirmed, batch-keys legal/(lo,hi) agree, total nodes per pass 23,252,550",
+   "per_root_coverage": "21 lines both worlds; only the individual_greedy_union column changes; free_now/uncovered/thirds per row identical",
+   "update8": "resolved_among_baseline_requirement == 80 in both worlds (invariant), recomputed from update8 required indices against (scenario or base) known verdicts; remaining_now 31,779; groups_free_now 127; union_size 31,859 unchanged",
+   "worklist": "64,888 -> 64,872 rows (-16); the diff is a (key, serving_class) row-multiset churn: removed 123 copies (serving class 22149: 108 left-table rows, class 23101: 10 adopted-key rows, 5 single rows of holder classes), added 107 copies (serving class 23965: 107 entered-table rows dominant); no adopted key remains anywhere in the scenario worklist (15 copies removed from BASE); -16 is best-option bookkeeping, NOT a coverage change",
+   "world_counts": "my independent classification reproduces excluded 390 / excluded_now 23 / free_now 37 / unknown 34,499 and board_verified_free 37 of 37 candidates"
+  },
+  "exit_code": 0,
+  "failures": 0,
+  "method": "self-written checker, no Part BC machinery: raw 3-way re-derivation (p1/p2/status.log/row-audit/batch-keys/input CSV), increment re-render, cache set-arithmetic, graph s4_cost + scenario cache + update8 receipt recomputation, holder subtraction, world classification, closure-table and worklist multiset diffs",
+  "result_file": "output/bd-minimal-check-result.json",
+  "runs": 1
+ },
+ "part": "Part BD (verifier): independent-host re-execution verification of the published Part BC batch-14residual (class 23101) 10-LOSS canonical adoption",
+ "pipeline_rerun": {
+  "extractor_x3": "decomp-deltas 62de8c16... byte-identical across 3 runs and to published, all gates PASS, closing line flips=[] new_free=[] class23101_unknown 11->1 (leftover [745184]) update8_resolved +0 joint_greedy 35645->38978 worklist 64888->64872 closure_churn left=[22149] entered=[23965]",
+  "instrumented_refresh_base_world": "full BASE (Part AV) world refresh re-executed with the instrumented copy: all 4 outputs byte-identical to the Part AV publication (a0043c76/e60c1088/4c7ec5d7/667dc815)",
+  "instrumented_refresh_scen_world": "all 4 outputs byte-identical to the Part BC publication",
+  "maker_x3": "increment c3f201a6... and manifest f7287b7b... byte-identical across 3 runs and to published",
+  "merger_selftest": "5-case SELFTEST PASS rc=0",
+  "merger_x3": "canonical 6,182-row cache 0b594f7e... and merge-audits 6a9a53a3... byte-identical across 3 runs and to published",
+  "missing_input_note": "batch-17 input batch-keys.json (sha256 db762175272206aa53622f30addc1267d534e8a3e576f70c6a084f21392645d2) was mirror-local only; byte-fetched from main at pinned commit 269e7865... and verified byte-identical before use",
+  "refresh_x3": "refresh-summary 5f3a09c6... / closure-classes 52ec3d4b... / per-root-coverage 1f54065a... / probe-worklist fe71be60... byte-identical across 3 runs and to published"
+ },
+ "schema": "n11-centralreply-class23101-batch14residual-second-verification-v1",
+ "unresolved_next": [
+  "the verdict-level WIN/LOSS adoption of the 17 unconsumed closure WINs remains with the scrutiny owner C++ second implementation (gate pin 9193f5b6...) and untouched",
+  "class 23101 still has exactly one unknown cost child (q042 WIN, s5 745184) and is NOT free; 11x11 and all roots UNKNOWN"
+ ],
+ "verdict_consumption": 0
+}

@@ -1,0 +1,31 @@
+# Part BD rerun byte-verification table (independent host B, 2026-11-22)
+# stage | run | artifact | sha256 | matches published
+maker|1|increment-batch14residual-loss10-20261122.cache|c3f201a678bc33462728fe633a38fc68f794da49a965c789acf01407cf850cf8|yes c3f201a6...
+maker|1|increments-manifest.json|f7287b7bdbe12049623440a033fe0131f4d92d1529f392d77eb01f6f45c6a214|yes f7287b7b...
+maker|2|increment-batch14residual-loss10-20261122.cache|c3f201a678bc33462728fe633a38fc68f794da49a965c789acf01407cf850cf8|yes
+maker|2|increments-manifest.json|f7287b7bdbe12049623440a033fe0131f4d92d1529f392d77eb01f6f45c6a214|yes
+maker|3|increment-batch14residual-loss10-20261122.cache|c3f201a678bc33462728fe633a38fc68f794da49a965c789acf01407cf850cf8|yes
+maker|3|increments-manifest.json|f7287b7bdbe12049623440a033fe0131f4d92d1529f392d77eb01f6f45c6a214|yes
+merger|selftest|5-case selftest|PASS rc=0|-
+merger|1|merged-...batch14residualloss10-20261122.cache|0b594f7e14d7eb67263d38a3daa2816e1fd0b73b23403f9b58ca2917225f877a|yes 0b594f7e...
+merger|1|merge-audit-run1.json|6a9a53a394ac33f82fd5b830ada2886d654197d2e7ffcd5a91f3af6958c7bfa6|yes
+merger|2|merged-...batch14residualloss10-20261122.cache|0b594f7e14d7eb67263d38a3daa2816e1fd0b73b23403f9b58ca2917225f877a|yes
+merger|2|merge-audit-run2.json|6a9a53a394ac33f82fd5b830ada2886d654197d2e7ffcd5a91f3af6958c7bfa6|yes
+merger|3|merged-...batch14residualloss10-20261122.cache|0b594f7e14d7eb67263d38a3daa2816e1fd0b73b23403f9b58ca2917225f877a|yes
+merger|3|merge-audit-run3.json|6a9a53a394ac33f82fd5b830ada2886d654197d2e7ffcd5a91f3af6958c7bfa6|yes
+refresh|1|refresh-summary.json|5f3a09c64363a05594b9490cf0ff7088a72d7410b21d57a4860c45a6724b2ff8|yes 5f3a09c6...
+refresh|1|closure-classes.csv|52ec3d4bcce9766b01002d39ba9fc833d09ca310b2dad241287c12222739dd5c|yes
+refresh|1|per-root-coverage.csv|1f54065ac3530ecb31c35ee48e6875e6028e56b158eca9602fa4399424fffbbb|yes
+refresh|1|probe-worklist.csv (unpublished local)|fe71be60e0bd56a9fb46bea519ece1dbf1f3f5b7c0cb2b440a2884ff25e57c20|yes recorded-only
+refresh|2|all 4 outputs|byte-identical to run1|yes
+refresh|3|all 4 outputs|byte-identical to run1|yes
+extractor|1|decomp-deltas-batch14residual-adoption.json|62de8c1692a8a4cf9ee4146fae1f64cf42aafbd8a57d27014260e66fdbd5e593|yes 62de8c16...
+extractor|2|decomp-deltas-batch14residual-adoption.json|62de8c1692a8a4cf9ee4146fae1f64cf42aafbd8a57d27014260e66fdbd5e593|yes
+extractor|3|decomp-deltas-batch14residual-adoption.json|62de8c1692a8a4cf9ee4146fae1f64cf42aafbd8a57d27014260e66fdbd5e593|yes
+instr-refresh|BASE-world full re-execution|refresh-summary.json (AV world)|a0043c76c05ee949a533f31e6f21616d51f67e211c45fec5cc96431fb7d28dc4|yes a0043c76... (Part AV published)
+instr-refresh|BASE-world|closure-classes.csv|e60c1088f99aac0ae527b78eac9d192d7e1d2aa4f1a125fa52bc75c86ae16710|yes (Part AV published)
+instr-refresh|BASE-world|per-root-coverage.csv|4c7ec5d78b7a3496c01fc37a229cc85f27708926511476f516f7f6cedd975e35|yes (Part AV published)
+instr-refresh|BASE-world|probe-worklist.csv (unpublished local)|667dc815e8f2...|yes recorded-only
+instr-refresh|SCEN-world|refresh summary/closure/prc/worklist|5f3a09c6.../52ec3d4b.../1f54065a.../fe71be60...|yes
+minimal-check|1 run (43 checks)|43 PASS 0 FAIL rc=0|see bd-minimal-check-result.json|-
+# tampering was confined to scratch trees (vt-tamper/*); pristine trees re-verified below.

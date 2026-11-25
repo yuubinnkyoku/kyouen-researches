@@ -1,0 +1,21 @@
+2026-11-24T05:15:27Z
+ Part DG local execution start (D1/D2 first)
+D1 rc=0
+D2 at2m-a rc=0 2026-11-24T05:15:50Z
+D2 at2m-b rc=0 2026-11-24T05:16:13Z
+D2 at2m-a rc=0 2026-11-24T05:16:13Z
+D2 first-15m rc=0 2026-11-24T05:16:59Z
+D2 second-15m rc=0 2026-11-24T05:17:07Z
+D5 aa052 rc=1 2026-11-24T05:22:24Z
+D5 aa044 rc=1 2026-11-24T05:22:27Z
+D5 aa041 rc=1 2026-11-24T05:26:19Z
+D5 aa048 rc=1 2026-11-24T05:26:21Z
+D5 aa026 rc=1 2026-11-24T05:30:24Z
+D5 aa039 rc=1 2026-11-24T05:30:27Z
+D5 aa043 rc=1 2026-11-24T05:35:12Z
+D5 aa045 rc=1 2026-11-24T05:35:12Z
+D3 negatives: ng1 GATE_FAIL (legal count mismatch: derived=87 declared=88) rc=1 / ng2 GATE_FAIL (stone count mismatch: bits=5 declared=6) rc=1 — as declared
+D4 anchors: k02a a/b det-pair exact (result 1 WIN, expansions 9,106,337, ttHits 4,991,527 = published pins) / l1a a/b det-pair exact (result 2 LOSS, expansions 7,660,202, ttHits 3,951,175 = published pins)
+D6 third-impl targets 8 keys x a/b: 16/16 det-pair exact (expansions identical per key), verdict agreement 8/8 (WIN=8), inconclusive 0
+D7 audit x3: byte-identical (audit-run1..3), ALL 323 GATES PASS, stdout sha256 d6251ad0... (run1)
+D8 audit tamper battery: 4/4 captured (T1 replica-aa052-det-pair / T2 target-aa052-det-pair / T3 anchor-k02a-a-expansions / T4 replica-aa052-verdict-vs-published), restore clean green rc=0 (audit-tamper-clean.txt), final maker gates PASS byte-identical to pre-declaration clean run

@@ -1,0 +1,217 @@
+{
+ "schema": "n11-centralreply-c5343-b28exh-reprobe20m-input-v1",
+ "class_index": 5343,
+ "batch": 28,
+ "source_condition": {
+  "budget": 15000000,
+  "published_batch_packet_sha256": "af19208fafb61cc20892fa968bc373fe2c4f79da94744dfeed9d2f40ea8481e5",
+  "published_row_audit": {
+   "schema": "n11-centralreply-closure-class5343-batch28-rowaudit-full-v2",
+   "row_audit_json_sha256": "00c323835f9ebc048b6ffea81a8fd556e3e8146adf1c562c34aa89d9d7bb69c0",
+   "exhausted_rows": [
+    "aa004",
+    "aa005",
+    "aa021",
+    "aa028",
+    "aa030",
+    "aa031",
+    "aa032",
+    "aa035",
+    "aa047",
+    "aa050",
+    "aa053"
+   ]
+  }
+ },
+ "reprobe_condition": {
+  "budget": 20000000,
+  "note": "higher-budget NEW-condition reprobe pre-declared by Part CQ; the published 15M condition is not re-run (no-15M-re-search rule for COMPLETED exhaustion rows is untouched); result 0 at 20M remains honest UNKNOWN with no same-condition re-probe"
+ },
+ "base_cache_absence_check": {
+  "path": "research/experiments/n11-centralreply-class5343-loss7-adoption-reaudit-20261123/output/merged-exact-s5-chain-plus-b28loss1-plus-b28loss7-20261123.cache",
+  "sha256": "854800f38349277924bc77c50d92a6d5252f11bdb2b2cdb54a14ca2b4f6b087d",
+  "verdict_rows": 6301,
+  "target_hits": {
+   "aa004": 0,
+   "aa005": 0,
+   "aa021": 0,
+   "aa028": 0,
+   "aa030": 0,
+   "aa031": 0,
+   "aa032": 0,
+   "aa035": 0,
+   "aa047": 0,
+   "aa050": 0,
+   "aa053": 0
+  }
+ },
+ "keys": [
+  {
+   "key_id": "aa004",
+   "s5_index": 118693,
+   "lo": "1171516445255794689",
+   "hi": "0",
+   "legal": 91,
+   "membership_class_count": 4,
+   "input_csv_sha256": "466f713d84104d70cfd377e1b1f6dab1dd1ef5aea210c7adbcacdfa3a012c22e",
+   "published_15m": {
+    "result": 0,
+    "nodes": 15000000
+   }
+  },
+  {
+   "key_id": "aa005",
+   "s5_index": 124331,
+   "lo": "1171516445255794690",
+   "hi": "0",
+   "legal": 89,
+   "membership_class_count": 4,
+   "input_csv_sha256": "404e59ee2088df6b8da7c83a9b9bc903a0aa1f26dffd8ed4754fc38ad7192d05",
+   "published_15m": {
+    "result": 0,
+    "nodes": 15000000
+   }
+  },
+  {
+   "key_id": "aa021",
+   "s5_index": 188751,
+   "lo": "1171516462435663872",
+   "hi": "0",
+   "legal": 90,
+   "membership_class_count": 4,
+   "input_csv_sha256": "de5d3baa15cbd044bf4515313aa7fc344930197b901632528fe0708acd9a1882",
+   "published_15m": {
+    "result": 0,
+    "nodes": 15000000
+   }
+  },
+  {
+   "key_id": "aa028",
+   "s5_index": 199713,
+   "lo": "1152921504606879744",
+   "hi": "4228",
+   "legal": 95,
+   "membership_class_count": 4,
+   "input_csv_sha256": "769a2fde51dbc59abfe94f7dfe3a5d72f9e2fdf94334c9f975dd652ba4d5b6da",
+   "published_15m": {
+    "result": 0,
+    "nodes": 15000000
+   }
+  },
+  {
+   "key_id": "aa030",
+   "s5_index": 199715,
+   "lo": "1243574039293722624",
+   "hi": "0",
+   "legal": 90,
+   "membership_class_count": 4,
+   "input_csv_sha256": "d1b12bc9297f2cb8ae8f7e9375332efe9140efb1ced82fafa67fac739b6f34c1",
+   "published_15m": {
+    "result": 0,
+    "nodes": 15000000
+   }
+  },
+  {
+   "key_id": "aa031",
+   "s5_index": 199716,
+   "lo": "1459746821407506432",
+   "hi": "0",
+   "legal": 92,
+   "membership_class_count": 4,
+   "input_csv_sha256": "adb50b3fd68ff315442d0888e06b50f69cb680f4cc4b69e9d22e056600ebea40",
+   "published_15m": {
+    "result": 0,
+    "nodes": 15000000
+   }
+  },
+  {
+   "key_id": "aa032",
+   "s5_index": 199717,
+   "lo": "1171516445255794688",
+   "hi": "4",
+   "legal": 91,
+   "membership_class_count": 4,
+   "input_csv_sha256": "2aa666fb3b87e4a3b8901f9ce5cae9a24fc3b078d72a693639239a632236f0fe",
+   "published_15m": {
+    "result": 0,
+    "nodes": 15000000
+   }
+  },
+  {
+   "key_id": "aa035",
+   "s5_index": 199720,
+   "lo": "1152921504606846978",
+   "hi": "4228",
+   "legal": 96,
+   "membership_class_count": 4,
+   "input_csv_sha256": "a54715b68985dcb56c9c0439e9ca0c60d9347a89f6257c6043dec23cabca1018",
+   "published_15m": {
+    "result": 0,
+    "nodes": 15000000
+   }
+  },
+  {
+   "key_id": "aa047",
+   "s5_index": 199732,
+   "lo": "1152921504611041280",
+   "hi": "4228",
+   "legal": 92,
+   "membership_class_count": 4,
+   "input_csv_sha256": "1a3bfab07777557d7e0882525f695acbb5debbd57981c596954273f6ed742e0c",
+   "published_15m": {
+    "result": 0,
+    "nodes": 15000000
+   }
+  },
+  {
+   "key_id": "aa050",
+   "s5_index": 199735,
+   "lo": "1152921504640401408",
+   "hi": "4228",
+   "legal": 94,
+   "membership_class_count": 4,
+   "input_csv_sha256": "cc5e405ab3ba311d7c477c8f960f1f7d1dc49ef3b37b027c2acd0c573d302787",
+   "published_15m": {
+    "result": 0,
+    "nodes": 15000000
+   }
+  },
+  {
+   "key_id": "aa053",
+   "s5_index": 199738,
+   "lo": "1152921504606855168",
+   "hi": "4228",
+   "legal": 95,
+   "membership_class_count": 4,
+   "input_csv_sha256": "7fa4605a757dd93436488018a6991e4459151467b33e8fe4ed7542fb4cd5896a",
+   "published_15m": {
+    "result": 0,
+    "nodes": 15000000
+   }
+  }
+ ],
+ "anchors": [
+  {
+   "key_id": "aa036",
+   "lo": "1152921504606912512",
+   "hi": "4228",
+   "legal": 64,
+   "expect_at_20m": {
+    "result": 2,
+    "nodes": 955659
+   },
+   "note": "resolved rows re-run under the higher budget flag as derived-runner val anchors; the deterministic search must reproduce the published node count exactly (budget only caps, so nodes are unchanged)"
+  },
+  {
+   "key_id": "aa046",
+   "lo": "1152921779484753920",
+   "hi": "4228",
+   "legal": 78,
+   "expect_at_20m": {
+    "result": 1,
+    "nodes": 2185149
+   },
+   "note": "resolved rows re-run under the higher budget flag as derived-runner val anchors; the deterministic search must reproduce the published node count exactly (budget only caps, so nodes are unchanged)"
+  }
+ ]
+}

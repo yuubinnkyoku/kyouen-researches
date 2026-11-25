@@ -1,0 +1,251 @@
+{
+ "class_status_counts": {
+  "unknown": 34498,
+  "excluded": 390,
+  "free_now": 35,
+  "excluded_now": 26
+ },
+ "board_verification": {
+  "free_candidates": 35,
+  "board_verified_free": 35,
+  "rejected": {}
+ },
+ "roots": [
+  {
+   "origin_first": 27,
+   "role": "known-loss-baseline",
+   "thirds": 119,
+   "free_thirds_now": 119,
+   "uncovered": 0
+  },
+  {
+   "origin_first": 49,
+   "role": "central",
+   "thirds": 119,
+   "free_thirds_now": 10,
+   "uncovered": 109
+  },
+  {
+   "origin_first": 38,
+   "role": "central",
+   "thirds": 119,
+   "free_thirds_now": 13,
+   "uncovered": 106
+  },
+  {
+   "origin_first": 16,
+   "role": "central",
+   "thirds": 119,
+   "free_thirds_now": 14,
+   "uncovered": 105
+  },
+  {
+   "origin_first": 5,
+   "role": "central",
+   "thirds": 119,
+   "free_thirds_now": 6,
+   "uncovered": 113
+  },
+  {
+   "origin_first": 48,
+   "role": "central",
+   "thirds": 119,
+   "free_thirds_now": 7,
+   "uncovered": 112
+  },
+  {
+   "origin_first": 37,
+   "role": "central",
+   "thirds": 119,
+   "free_thirds_now": 4,
+   "uncovered": 115
+  },
+  {
+   "origin_first": 26,
+   "role": "central",
+   "thirds": 119,
+   "free_thirds_now": 8,
+   "uncovered": 111
+  },
+  {
+   "origin_first": 15,
+   "role": "central",
+   "thirds": 119,
+   "free_thirds_now": 5,
+   "uncovered": 114
+  },
+  {
+   "origin_first": 4,
+   "role": "central",
+   "thirds": 119,
+   "free_thirds_now": 4,
+   "uncovered": 115
+  },
+  {
+   "origin_first": 36,
+   "role": "central",
+   "thirds": 119,
+   "free_thirds_now": 4,
+   "uncovered": 115
+  },
+  {
+   "origin_first": 25,
+   "role": "central",
+   "thirds": 119,
+   "free_thirds_now": 6,
+   "uncovered": 113
+  },
+  {
+   "origin_first": 14,
+   "role": "central",
+   "thirds": 119,
+   "free_thirds_now": 8,
+   "uncovered": 111
+  },
+  {
+   "origin_first": 3,
+   "role": "central",
+   "thirds": 119,
+   "free_thirds_now": 6,
+   "uncovered": 113
+  },
+  {
+   "origin_first": 24,
+   "role": "central",
+   "thirds": 119,
+   "free_thirds_now": 10,
+   "uncovered": 109
+  },
+  {
+   "origin_first": 13,
+   "role": "central",
+   "thirds": 119,
+   "free_thirds_now": 6,
+   "uncovered": 113
+  },
+  {
+   "origin_first": 2,
+   "role": "central",
+   "thirds": 119,
+   "free_thirds_now": 6,
+   "uncovered": 113
+  },
+  {
+   "origin_first": 12,
+   "role": "central",
+   "thirds": 119,
+   "free_thirds_now": 6,
+   "uncovered": 113
+  },
+  {
+   "origin_first": 1,
+   "role": "central",
+   "thirds": 119,
+   "free_thirds_now": 4,
+   "uncovered": 115
+  },
+  {
+   "origin_first": 0,
+   "role": "central",
+   "thirds": 119,
+   "free_thirds_now": 7,
+   "uncovered": 112
+  }
+ ],
+ "per_root_greedy": {
+  "49": 2899,
+  "38": 3123,
+  "16": 2539,
+  "5": 3029,
+  "48": 2822,
+  "37": 4001,
+  "26": 5203,
+  "15": 5991,
+  "4": 5978,
+  "36": 2704,
+  "25": 6215,
+  "14": 4440,
+  "3": 5432,
+  "24": 2826,
+  "13": 6144,
+  "2": 6145,
+  "12": 3031,
+  "1": 6355,
+  "0": 2785
+ },
+ "joint_greedy": {
+  "unique_groups": 2127,
+  "greedy_union_size": 35241
+ },
+ "frozen_update8_refresh": {
+  "union_size_baseline": 31859,
+  "remaining_now": 31726,
+  "groups_free_now": 127,
+  "resolved_count": 76,
+  "win_hit_groups": [
+   {
+    "first": 16,
+    "fourth": 104,
+    "reply": 60,
+    "s4_class_index": 5748,
+    "s4_mask": [
+     1225542048598196224,
+     1
+    ],
+    "third": 59,
+    "unknown_s5_children": 58
+   },
+   {
+    "first": 16,
+    "fourth": 104,
+    "reply": 60,
+    "s4_class_index": 5748,
+    "s4_mask": [
+     1225542048598196224,
+     1
+    ],
+    "third": 61,
+    "unknown_s5_children": 58
+   },
+   {
+    "first": 16,
+    "fourth": 59,
+    "reply": 60,
+    "s4_class_index": 5748,
+    "s4_mask": [
+     1225542048598196224,
+     1
+    ],
+    "third": 104,
+    "unknown_s5_children": 58
+   },
+   {
+    "first": 49,
+    "fourth": 64,
+    "reply": 60,
+    "s4_class_index": 5748,
+    "s4_mask": [
+     1225542048598196224,
+     1
+    ],
+    "third": 56,
+    "unknown_s5_children": 58
+   },
+   {
+    "first": 49,
+    "fourth": 56,
+    "reply": 60,
+    "s4_class_index": 5748,
+    "s4_mask": [
+     1225542048598196224,
+     1
+    ],
+    "third": 64,
+    "unknown_s5_children": 58
+   }
+  ]
+ },
+ "worklist_total": 65152,
+ "group_best_options_nonfree": 2127,
+ "closure_classes_first": []
+}

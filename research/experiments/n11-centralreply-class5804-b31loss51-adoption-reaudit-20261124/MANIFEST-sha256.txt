@@ -1,0 +1,16 @@
+d3e0e07937a77db7773508af5b3c536f540365e08edbaf976ea5a56349c404a1  scripts/make_increments_b31loss51.py
+907119610034fb2aebfde012550a4129dfa3b086c6de11194e856747ac74606a  scripts/s5_union_merge.py
+fab162676dd7452699af68978bcf2cecd75bed440e71d511e114172a62c55b9e  scripts/compare_deltas_b31loss51_adoption.py
+e92fa80e7d8d9ac46f9dd66b90fab6cebab349948fdb14a916f180c2611b81e4  reaudit/scripts/refresh_adoption_b31loss51.py
+e750a0e6ea4333f9705c0898914a289c388143ac78cbf58d337d640a7457c0d5  output/increment-b31loss51-20261124.cache
+ae06f855a34cc186eb1811629f2911958fefc7ed073e220bdceba76388575f27  output/increments-manifest.json
+dc312c0720f81b61bbe3bb70e55736d2773de8714bd782992098c1341b531622  output/merge-audit-run1.json
+dc312c0720f81b61bbe3bb70e55736d2773de8714bd782992098c1341b531622  output/merge-audit-run2.json
+dc312c0720f81b61bbe3bb70e55736d2773de8714bd782992098c1341b531622  output/merge-audit-run3.json
+60222707dd13902103fc8f7ef11c8487ec1be531ad0711e23e50c32154e30b84  output/merged-exact-s5-chain-plus-b28loss1-plus-b28loss7-plus-b29loss16-plus-b29loss37-plus-b31loss51-20261124.cache
+0af301b81fbac18eb1a8a844467eb294a141828203f4585971e736e483109120  output/decomp-deltas-b31loss51-adoption.json
+fea0b0d4473b34447556f3a3e8b9ecc7c57c59221b18c4bb58222e0149b2e4bc  reaudit/output/refresh-summary.json
+50841fa47676be8af145f1f8f751b0d96f75e94417990418cbe1d2a52bd4d389  reaudit/output/closure-classes.csv
+136e308a332c8ab6fe877f3ef3a3b361770931285d91a0d12a59a6dd9707b487  reaudit/output/per-root-coverage.csv
+# README.md is committed in the same commit; its sha256 is pinned in the completion log
+# probe-worklist.csv (006ccd78d061c22838b3ccee7701a91649d35abf3c8d56cecbb05931b604846d5 at generation time) NOT committed (volume); regenerate via reaudit/scripts/refresh_adoption_b31loss51.py (DL side) and Part DB refresh script (BASE side, 4ecb9a0a)

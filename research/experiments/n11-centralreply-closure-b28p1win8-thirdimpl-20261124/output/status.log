@@ -1,0 +1,40 @@
+RUN key=ng1 tag=ng1x kind=negative rc=1 out=output/negative/ng1.ng1x.out third,ng1ng1x,5,88,,GATE_FAIL,"legal count mismatch: derived=87 declared=88"
+RUN key=ng2 tag=ng2x kind=negative rc=1 out=output/negative/ng2.ng2x.out third,ng2ng2x,6,87,,GATE_FAIL,"stone count mismatch: bits=5 declared=6"
+RUN key=k02a tag=a kind=anchor rc=0 out=output/anchors/k02a.a.out third,k02aa,5,87,87,1,9106337,4991527,26.69,1297036692683751424,68157440,clean,quads=95670,ttOverwrites=4912053,memoPower=22
+RUN key=k02a tag=b kind=anchor rc=0 out=output/anchors/k02a.b.out third,k02ab,5,87,87,1,9106337,4991527,26.97,1297036692683751424,68157440,clean,quads=95670,ttOverwrites=4912053,memoPower=22
+RUN key=l1a tag=a kind=anchor rc=0 out=output/anchors/l1a.a.out third,l1aa,5,116,116,2,7660602,3951175,22.57,13019119616,16448,clean,quads=95670,ttOverwrites=3466722,memoPower=22
+RUN key=l1a tag=b kind=anchor rc=0 out=output/anchors/l1a.b.out third,l1ab,5,116,116,2,7660602,3951175,23.67,13019119616,16448,clean,quads=95670,ttOverwrites=3466722,memoPower=22
+REPLICA key=aa046 pass=p1 rc=0 out=output/replica/aa046.p1.out replay,0,5,78,0,15000000,1,2185149,10,1152921779484753920,4228
+REPLICA key=aa046 pass=p2 rc=0 out=output/replica/aa046.p2.out replay,0,5,78,0,15000000,1,2185149,10,1152921779484753920,4228
+REPLICA key=aa016 pass=p1 rc=0 out=output/replica/aa016.p1.out replay,0,5,78,0,15000000,1,2621847,12,1171516445255860224,0
+REPLICA key=aa016 pass=p2 rc=0 out=output/replica/aa016.p2.out replay,0,5,78,0,15000000,1,2621847,12,1171516445255860224,0
+REPLICA key=aa025 pass=p1 rc=0 out=output/replica/aa025.p1.out replay,0,5,80,0,15000000,1,3056950,14,1171516720133701632,0
+REPLICA key=aa025 pass=p2 rc=0 out=output/replica/aa025.p2.out replay,0,5,80,0,15000000,1,3056950,14,1171516720133701632,0
+REPLICA key=aa033 pass=p1 rc=0 out=output/replica/aa033.p1.out replay,0,5,86,0,15000000,1,3347117,16,1171516445255794688,128
+REPLICA key=aa033 pass=p2 rc=0 out=output/replica/aa033.p2.out replay,0,5,86,0,15000000,1,3347117,15,1171516445255794688,128
+REPLICA key=aa027 pass=p1 rc=0 out=output/replica/aa027.p1.out replay,0,5,81,0,15000000,1,4860191,23,1171516445255794688,64
+REPLICA key=aa027 pass=p2 rc=0 out=output/replica/aa027.p2.out replay,0,5,81,0,15000000,1,4860191,23,1171516445255794688,64
+REPLICA key=aa038 pass=p1 rc=0 out=output/replica/aa038.p1.out replay,0,5,82,0,15000000,1,4911996,23,1152921504606849024,4228
+REPLICA key=aa038 pass=p2 rc=0 out=output/replica/aa038.p2.out replay,0,5,82,0,15000000,1,4911996,23,1152921504606849024,4228
+REPLICA key=aa012 pass=p1 rc=0 out=output/replica/aa012.p1.out replay,0,5,81,0,15000000,1,4994213,23,1171516445255798784,0
+REPLICA key=aa012 pass=p2 rc=0 out=output/replica/aa012.p2.out replay,0,5,81,0,15000000,1,4994213,24,1171516445255798784,0
+REPLICA key=aa042 pass=p1 rc=0 out=output/replica/aa042.p1.out replay,0,5,88,0,15000000,1,5800791,28,1152921504606847008,4228
+REPLICA key=aa042 pass=p2 rc=0 out=output/replica/aa042.p2.out replay,0,5,88,0,15000000,1,5800791,29,1152921504606847008,4228
+RUN key=aa046 tag=a kind=target rc=0 out=output/targets/aa046.a.out third,aa046a,5,78,78,1,2503964,1397082,6.85,1152921779484753920,4228,clean,quads=95670,ttOverwrites=7546,memoPower=22
+RUN key=aa046 tag=b kind=target rc=0 out=output/targets/aa046.b.out third,aa046b,5,78,78,1,2503964,1397082,7.47,1152921779484753920,4228,clean,quads=95670,ttOverwrites=7546,memoPower=22
+RUN key=aa016 tag=a kind=target rc=0 out=output/targets/aa016.a.out third,aa016a,5,78,78,1,3029875,1651689,8.88,1171516445255860224,0,clean,quads=95670,ttOverwrites=37077,memoPower=22
+RUN key=aa016 tag=b kind=target rc=0 out=output/targets/aa016.b.out third,aa016b,5,78,78,1,3029875,1651689,8.32,1171516445255860224,0,clean,quads=95670,ttOverwrites=37077,memoPower=22
+RUN key=aa025 tag=a kind=target rc=0 out=output/targets/aa025.a.out third,aa025a,5,80,80,1,3527308,1919018,9.81,1171516720133701632,0,clean,quads=95670,ttOverwrites=128484,memoPower=22
+RUN key=aa025 tag=b kind=target rc=0 out=output/targets/aa025.b.out third,aa025b,5,80,80,1,3527308,1919018,9.79,1171516720133701632,0,clean,quads=95670,ttOverwrites=128484,memoPower=22
+RUN key=aa033 tag=a kind=target rc=0 out=output/targets/aa033.a.out third,aa033a,5,86,86,1,3911275,2027524,10.94,1171516445255794688,128,clean,quads=95670,ttOverwrites=255014,memoPower=22
+RUN key=aa033 tag=b kind=target rc=0 out=output/targets/aa033.b.out third,aa033b,5,86,86,1,3911275,2027524,10.76,1171516445255794688,128,clean,quads=95670,ttOverwrites=255014,memoPower=22
+RUN key=aa027 tag=a kind=target rc=0 out=output/targets/aa027.a.out third,aa027a,5,81,81,1,5653876,3072426,15.78,1171516445255794688,64,clean,quads=95670,ttOverwrites=1500248,memoPower=22
+RUN key=aa027 tag=b kind=target rc=0 out=output/targets/aa027.b.out third,aa027b,5,81,81,1,5653876,3072426,15.76,1171516445255794688,64,clean,quads=95670,ttOverwrites=1500248,memoPower=22
+RUN key=aa038 tag=a kind=target rc=0 out=output/targets/aa038.a.out third,aa038a,5,82,82,1,5727888,3134054,16.09,1152921504606849024,4228,clean,quads=95670,ttOverwrites=1567600,memoPower=22
+RUN key=aa038 tag=b kind=target rc=0 out=output/targets/aa038.b.out third,aa038b,5,82,82,1,5727888,3134054,16.18,1152921504606849024,4228,clean,quads=95670,ttOverwrites=1567600,memoPower=22
+RUN key=aa012 tag=a kind=target rc=0 out=output/targets/aa012.a.out third,aa012a,5,81,81,1,5888866,3147152,16.73,1171516445255798784,0,clean,quads=95670,ttOverwrites=1718525,memoPower=22
+RUN key=aa012 tag=b kind=target rc=0 out=output/targets/aa012.b.out third,aa012b,5,81,81,1,5888866,3147152,16.59,1171516445255798784,0,clean,quads=95670,ttOverwrites=1718525,memoPower=22
+RUN key=aa042 tag=a kind=target rc=0 out=output/targets/aa042.a.out third,aa042a,5,88,88,1,6797666,3614670,19.58,1152921504606847008,4228,clean,quads=95670,ttOverwrites=2607881,memoPower=22
+RUN key=aa042 tag=b kind=target rc=0 out=output/targets/aa042.b.out third,aa042b,5,88,88,1,6797666,3614670,19.75,1152921504606847008,4228,clean,quads=95670,ttOverwrites=2607881,memoPower=22
+RUN key=ng1 tag=a kind=negative rc=1 out=output/negative/ng1.a.out third,ng1a,5,88,,GATE_FAIL,"legal count mismatch: derived=87 declared=88"
+RUN key=ng2 tag=a kind=negative rc=1 out=output/negative/ng2.a.out third,ng2a,6,87,,GATE_FAIL,"stone count mismatch: bits=5 declared=6"

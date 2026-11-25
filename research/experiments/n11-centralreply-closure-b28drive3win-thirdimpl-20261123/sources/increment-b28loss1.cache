@@ -1,0 +1,36 @@
+# n11 central-reply closure batch-28 (class 5343) 1-LOSS
+#   canonical-adoption increment (Part CH, 2026-11-23)
+# published Part CH declaration (note amendment 2026-11-23; single-owner: loss-only
+#   adoption; the in-batch WIN rows aa001/aa002 (Part CC third-implementation
+#   cross-verified) and aa006/aa007 (Part CG lane declared; pending) are honest
+#   labels only and are NOT adopted; the EXHAUSTED rows aa004/aa005 are honest
+#   UNKNOWN bookkeeping, NOT adopted).
+# 2-pass node-exact exact-S5 verdict at budget 15M, fresh cold, pinned jsreplay.js
+#   sha256 845856175d3c793a7eb4306f5902ecda3f1c046a8a53e8f34ed375e51febc3df
+# batch-28 probed 7/54 keys across drive-1 (Part CB: aa001/aa002 WIN-HALT) and
+#   drive-2 (Part CD: aa003 LOSS row, aa004/aa005 EXHAUSTED, aa006/aa007
+#   WIN-HALT pairs published; 47 fileless UNPROBED).  The batch is NOT a complete
+#   enumeration book: only the resolved LOSS row below is adopted.
+#   the remaining keys stay UNKNOWN in canonical and untouched by this Part.
+# gates: kit MANIFEST sha verification (96 files), 2-way (p1/p2) node-exact +
+#   '# replay_done' completeness, status.log each-once agreement (b,r,n) per key,
+#   WIN set == unadopted, exhaustion set == {aa004, aa005} with published
+#   EXHAUSTED records, WIN-HALT 2-line pair pins, truncated-retry row pins +
+#   sidecar evidence-absence gate, row-audit-winhalt schema agreement,
+#   batch-keys legal/(lo,hi) agreement, adopted-row pass node sum (4,070,373),
+#   adopted key distinct, ZERO BASE-cache overlap (structural gate: batch-28 rows
+#   post-date the Part BZ merge; any overlap ABORTs), quarantine 0, WIN rows
+#   two-pass re-verified + presence bookkeeping (asserted NOT adopted),
+#   EXHAUSTED rows two-pass re-verified + asserted NOT emitted.
+# ADOPTED set = {aa003}.  full != loss here (machine-stated): the resolved
+#   packet additionally holds the aa001/aa002/aa006/aa007 WIN rows and the
+#   aa004/aa005 EXHAUSTED rows; the WIN verdicts stay UNCONSUMED (scrutiny
+#   owner C++ second-implementation gate pin 9193f5b6...; batch-14residual q042 /
+#   batch-26 l028 precedents); no WIN verdict is consumed anywhere by this Part;
+#   the unconsumed closure WIN candidates (aa001/aa002/aa006/aa007 among them)
+#   are untouched.
+# The 1 LOSS row IS consumed into the canonical cache by the Part CH merger;
+#   11x11 stays UNKNOWN; nodes are bookkeeping, never verdicts.
+# 1 row: the adopted LOSS verdict of class 5343's probed unknown S5 child
+#   aa003 (batch 28, s5 104943).
+s5verdict,1152921504741064704,4228,5,2,4070373

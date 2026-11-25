@@ -1,0 +1,18 @@
+561dc1cce76da2ebf1e5d4346fb2fc222302f2eb403da6d0fc0d25ad1d6a49ea  scripts/make_increments_b33loss45.py
+907119610034fb2aebfde012550a4129dfa3b086c6de11194e856747ac74606a  scripts/s5_union_merge.py
+70219793880c7e2797eb8f6df3a56870584b3eb4e4f8d5ee1ca8e98d2a74a598  scripts/compare_deltas_b33loss45_adoption.py
+5533b3f908cff069c6d86c5b96f32c6f978fda6b7ec5e8d32a3302a344363dee  reaudit/scripts/refresh_adoption_b33loss45.py
+255d54f5757ea19d00894e1f5483ab030634ca979a9fa6ed66390eda0ad3f155  output/increment-b33loss45-20261124.cache
+4b0a9f0fc08dc88d9ecc7807dad3ee503c59f9cbc9a233a2b3ddb72f5bcd1c70  output/increments-manifest.json
+13c9739517d1f36f112de09c1a52009a4d6f68e37566fd3fe4dd61465711379b  output/merge-audit-run1.json
+13c9739517d1f36f112de09c1a52009a4d6f68e37566fd3fe4dd61465711379b  output/merge-audit-run2.json
+13c9739517d1f36f112de09c1a52009a4d6f68e37566fd3fe4dd61465711379b  output/merge-audit-run3.json
+973bcd19309eae1d73b26c40c3d6839a2f35baa74658e0794f19da6f9412ca5b  output/merged-exact-s5-chain-plus-b28loss1-plus-b28loss7-plus-b29loss16-plus-b29loss37-plus-b31loss51-plus-b30loss43-plus-b32loss54-plus-b33loss45-20261124.cache
+a87c1ebdfdbe2170ea5ed0176f7fcf11b3257554dab202f65aee4a9eea4b331f  output/decomp-deltas-b33loss45-adoption.json
+38fc4e193cf08cf4efb7830a8bad3d2245bc732380f44c4ee2913e05d5644732  reaudit/output/refresh-summary.json
+6cc33dd731c5d2237291552a91c3f7d60947bba875867fcab10394b533f1a68d  reaudit/output/closure-classes.csv
+c5a2721d60c641ead369d10184e477cd5156ba7d02561c31dcd77b7b81b6f504  reaudit/output/per-root-coverage.csv
+# README.md is committed in the same commit; its sha256 is 058ac63752b05f9f78d9bc619f3638c8fc9a2107e1b80d38960f4fdbc8391447
+# probe-worklist.csv NOT committed (volume ~4.4MB); regenerate via reaudit/scripts/refresh_adoption_b33loss45.py (regeneration sha256 5881d7b3b51ef0ce780abaadaf7043c1fbcd3b258b9a261cadd2c539fb35ba61, byte-reproduced in the official quarantine rerun from published bytes)
+# published batch-33 kit (byte-pinned file-by-file inside make_increments_b33loss45.py): kit MANIFEST f2603e3a12d291579f02b81b7c388b5c952b90125df53756c91812368f16dbcb (186 files verified)
+# 11x11 stays UNKNOWN; verdicts consumed = 45 exact LOSS rows only; the 4 probe-level WIN rows (af029/af047/af050/af053) and 5 EXHAUSTED rows (af003/af023/af034/af039/af048) are consumed NOWHERE; class 34908 is NOT freed (9 verdict-pending/unknown children remain); nodes are bookkeeping, never verdicts

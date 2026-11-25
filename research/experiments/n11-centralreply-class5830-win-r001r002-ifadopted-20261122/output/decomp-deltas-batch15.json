@@ -1,0 +1,486 @@
+{
+ "schema": "n11-batch15-ifadopted-decomp-deltas-v1",
+ "interpretation_guard": "read-only what-if IF-ADOPTED planning deltas; verdicts NOT consumed; scheduling quantities only; the 2 WIN rows are HYPOTHETICAL adoptions; 11x11 empty board and all roots stay UNKNOWN",
+ "recompute_gates": "class statuses, free-candidate board verification and all class_status_counts re-executed from graph+update8+cache and asserted equal to the published summaries for BASE and the PWIN2 scenario before any delta was emitted",
+ "single_scenario_note": "batch-15 has zero resolved LOSS rows; r003/r004 are budget-exhaustion rows (result 0, nodes==budget, honest UNKNOWN) excluded by the type gate, so PWIN2 is also the full-packet scenario (full==win machine-asserted from the increments manifest)",
+ "win_keys": {
+  "r001": {
+   "s5_index": 103560,
+   "batch_class": 5830,
+   "graph_cost_child_holder_classes": [
+    2634,
+    5830
+   ],
+   "membership_class_count": 1
+  },
+  "r002": {
+   "s5_index": 103561,
+   "batch_class": 5830,
+   "graph_cost_child_holder_classes": [
+    2634,
+    5830
+   ],
+   "membership_class_count": 1
+  }
+ },
+ "holders_summary": {
+  "holder_union": [
+   2634,
+   5830
+  ],
+  "holder_union_size": 2,
+  "eligible_flip_union": [
+   2634
+  ],
+  "already_excluded_now_at_base": [
+   5830
+  ],
+  "graph_excluded": [],
+  "multi_win_holder_classes": {
+   "2634": 2,
+   "5830": 2
+  },
+  "exclusion_note": "per the published refresh semantics a baseline UNKNOWN class with any WIN cost child becomes excluded_now; holders that are baseline UNKNOWN at the frozen graph and not already excluded_now at BASE form the eligible union",
+  "membership_scope_note": "batch-keys membership_class_count is a closure-scoped count over the closure classes only; the frozen-graph s4_cost holder sets (which drive the refresh and the flip sets) can and here do additionally contain non-closure side classes (e.g. the class-5830 batch keys are also cost children of side class 2634)"
+ },
+ "excluded_now_flips": {
+  "PWIN2": [
+   2634
+  ],
+  "equal_eligible_holder_union": true
+ },
+ "per_batch_class_unknown_now": {
+  "5830": {
+   "base_unknown_now": 52,
+   "PWIN2_unknown_now": 50,
+   "PWIN2_own_delta": 2
+  }
+ },
+ "holder_classes_unknown_now": {
+  "2634": {
+   "base_unknown_now": 51,
+   "base_status": "unknown",
+   "in_batch_classes": false,
+   "PWIN2_unknown_now": 49,
+   "PWIN2_own_membership": 2,
+   "PWIN2_status": "excluded_now"
+  },
+  "5830": {
+   "base_unknown_now": 52,
+   "base_status": "excluded_now",
+   "in_batch_classes": true,
+   "PWIN2_unknown_now": 50,
+   "PWIN2_own_membership": 2,
+   "PWIN2_status": "excluded_now"
+  }
+ },
+ "update8_resolved_delta": {
+  "PWIN2": {
+   "newly_resolved_s5": [
+    103560,
+    103561
+   ],
+   "count": 2,
+   "increment_rows_in_universe": 2
+  }
+ },
+ "metrics": {
+  "excluded_now": {
+   "base": 23,
+   "PWIN2": 24
+  },
+  "free_now": {
+   "base": 35,
+   "PWIN2": 35
+  },
+  "unknown_classes": {
+   "base": 34501,
+   "PWIN2": 34500
+  },
+  "update8_remaining_now": {
+   "base": 31784,
+   "PWIN2": 31734
+  },
+  "update8_resolved_count": {
+   "base": 75,
+   "PWIN2": 77
+  },
+  "update8_win_hit_groups": {
+   "base": 0,
+   "PWIN2": 1
+  },
+  "joint_greedy_union_size": {
+   "base": 35242,
+   "PWIN2": 35240
+  },
+  "probe_worklist_total": {
+   "base": 65154,
+   "PWIN2": 65150
+  },
+  "baseline_root27_free_thirds": {
+   "base": 119,
+   "PWIN2": 119
+  }
+ },
+ "metric_deltas_vs_base": {
+  "excluded_now": {
+   "win_delta": 1
+  },
+  "free_now": {
+   "win_delta": 0
+  },
+  "unknown_classes": {
+   "win_delta": -1
+  },
+  "update8_remaining_now": {
+   "win_delta": -50
+  },
+  "update8_resolved_count": {
+   "win_delta": 2
+  },
+  "update8_win_hit_groups": {
+   "win_delta": 1
+  },
+  "joint_greedy_union_size": {
+   "win_delta": -2
+  },
+  "probe_worklist_total": {
+   "win_delta": -4
+  },
+  "baseline_root27_free_thirds": {
+   "win_delta": 0
+  }
+ },
+ "per_root_free_coverage_gate": {
+  "PWIN2": {
+   "free_coverage_columns_identical_to_base": true,
+   "roots_identical_to_base": true,
+   "root27_119_of_119": true,
+   "individual_greedy_union_moved_roots": {
+    "central|49": {
+     "base": 2890,
+     "scenario": 2888,
+     "delta": -2
+    }
+   }
+  }
+ },
+ "per_root_greedy": {
+  "BASE": {
+   "0": {
+    "free_thirds": 7,
+    "greedy_union_size": 2785,
+    "uncovered_thirds": 112
+   },
+   "1": {
+    "free_thirds": 4,
+    "greedy_union_size": 6355,
+    "uncovered_thirds": 115
+   },
+   "12": {
+    "free_thirds": 6,
+    "greedy_union_size": 3031,
+    "uncovered_thirds": 113
+   },
+   "13": {
+    "free_thirds": 6,
+    "greedy_union_size": 6144,
+    "uncovered_thirds": 113
+   },
+   "14": {
+    "free_thirds": 8,
+    "greedy_union_size": 4440,
+    "uncovered_thirds": 111
+   },
+   "15": {
+    "free_thirds": 5,
+    "greedy_union_size": 5991,
+    "uncovered_thirds": 114
+   },
+   "16": {
+    "free_thirds": 14,
+    "greedy_union_size": 2539,
+    "uncovered_thirds": 105
+   },
+   "2": {
+    "free_thirds": 6,
+    "greedy_union_size": 6145,
+    "uncovered_thirds": 113
+   },
+   "24": {
+    "free_thirds": 10,
+    "greedy_union_size": 2826,
+    "uncovered_thirds": 109
+   },
+   "25": {
+    "free_thirds": 6,
+    "greedy_union_size": 6215,
+    "uncovered_thirds": 113
+   },
+   "26": {
+    "free_thirds": 8,
+    "greedy_union_size": 5203,
+    "uncovered_thirds": 111
+   },
+   "3": {
+    "free_thirds": 6,
+    "greedy_union_size": 5432,
+    "uncovered_thirds": 113
+   },
+   "36": {
+    "free_thirds": 4,
+    "greedy_union_size": 2704,
+    "uncovered_thirds": 115
+   },
+   "37": {
+    "free_thirds": 4,
+    "greedy_union_size": 4001,
+    "uncovered_thirds": 115
+   },
+   "38": {
+    "free_thirds": 13,
+    "greedy_union_size": 3123,
+    "uncovered_thirds": 106
+   },
+   "4": {
+    "free_thirds": 4,
+    "greedy_union_size": 5978,
+    "uncovered_thirds": 115
+   },
+   "48": {
+    "free_thirds": 7,
+    "greedy_union_size": 2822,
+    "uncovered_thirds": 112
+   },
+   "49": {
+    "free_thirds": 10,
+    "greedy_union_size": 2890,
+    "uncovered_thirds": 109
+   },
+   "5": {
+    "free_thirds": 6,
+    "greedy_union_size": 3029,
+    "uncovered_thirds": 113
+   }
+  },
+  "PWIN2": {
+   "0": {
+    "free_thirds": 7,
+    "greedy_union_size": 2785,
+    "uncovered_thirds": 112
+   },
+   "1": {
+    "free_thirds": 4,
+    "greedy_union_size": 6355,
+    "uncovered_thirds": 115
+   },
+   "12": {
+    "free_thirds": 6,
+    "greedy_union_size": 3031,
+    "uncovered_thirds": 113
+   },
+   "13": {
+    "free_thirds": 6,
+    "greedy_union_size": 6144,
+    "uncovered_thirds": 113
+   },
+   "14": {
+    "free_thirds": 8,
+    "greedy_union_size": 4440,
+    "uncovered_thirds": 111
+   },
+   "15": {
+    "free_thirds": 5,
+    "greedy_union_size": 5991,
+    "uncovered_thirds": 114
+   },
+   "16": {
+    "free_thirds": 14,
+    "greedy_union_size": 2539,
+    "uncovered_thirds": 105
+   },
+   "2": {
+    "free_thirds": 6,
+    "greedy_union_size": 6145,
+    "uncovered_thirds": 113
+   },
+   "24": {
+    "free_thirds": 10,
+    "greedy_union_size": 2826,
+    "uncovered_thirds": 109
+   },
+   "25": {
+    "free_thirds": 6,
+    "greedy_union_size": 6215,
+    "uncovered_thirds": 113
+   },
+   "26": {
+    "free_thirds": 8,
+    "greedy_union_size": 5203,
+    "uncovered_thirds": 111
+   },
+   "3": {
+    "free_thirds": 6,
+    "greedy_union_size": 5432,
+    "uncovered_thirds": 113
+   },
+   "36": {
+    "free_thirds": 4,
+    "greedy_union_size": 2704,
+    "uncovered_thirds": 115
+   },
+   "37": {
+    "free_thirds": 4,
+    "greedy_union_size": 4001,
+    "uncovered_thirds": 115
+   },
+   "38": {
+    "free_thirds": 13,
+    "greedy_union_size": 3123,
+    "uncovered_thirds": 106
+   },
+   "4": {
+    "free_thirds": 4,
+    "greedy_union_size": 5978,
+    "uncovered_thirds": 115
+   },
+   "48": {
+    "free_thirds": 7,
+    "greedy_union_size": 2822,
+    "uncovered_thirds": 112
+   },
+   "49": {
+    "free_thirds": 10,
+    "greedy_union_size": 2888,
+    "uncovered_thirds": 109
+   },
+   "5": {
+    "free_thirds": 6,
+    "greedy_union_size": 3029,
+    "uncovered_thirds": 113
+   }
+  }
+ },
+ "group_best_options_nonfree": {
+  "BASE": 2127,
+  "PWIN2": 2127
+ },
+ "win_hit_groups_detail": {
+  "BASE": [],
+  "PWIN2": [
+   {
+    "first": 49,
+    "fourth": 57,
+    "reply": 60,
+    "s4_class_index": 2634,
+    "s4_mask": [
+     4035225266258182144,
+     0
+    ],
+    "third": 71,
+    "unknown_s5_children": 51
+   }
+  ]
+ },
+ "per_root_greedy_scheduling_movers": {
+  "0": {
+   "base": 2785,
+   "PWIN2": 2785,
+   "PWIN2_delta": 0
+  },
+  "1": {
+   "base": 6355,
+   "PWIN2": 6355,
+   "PWIN2_delta": 0
+  },
+  "12": {
+   "base": 3031,
+   "PWIN2": 3031,
+   "PWIN2_delta": 0
+  },
+  "13": {
+   "base": 6144,
+   "PWIN2": 6144,
+   "PWIN2_delta": 0
+  },
+  "14": {
+   "base": 4440,
+   "PWIN2": 4440,
+   "PWIN2_delta": 0
+  },
+  "15": {
+   "base": 5991,
+   "PWIN2": 5991,
+   "PWIN2_delta": 0
+  },
+  "16": {
+   "base": 2539,
+   "PWIN2": 2539,
+   "PWIN2_delta": 0
+  },
+  "2": {
+   "base": 6145,
+   "PWIN2": 6145,
+   "PWIN2_delta": 0
+  },
+  "24": {
+   "base": 2826,
+   "PWIN2": 2826,
+   "PWIN2_delta": 0
+  },
+  "25": {
+   "base": 6215,
+   "PWIN2": 6215,
+   "PWIN2_delta": 0
+  },
+  "26": {
+   "base": 5203,
+   "PWIN2": 5203,
+   "PWIN2_delta": 0
+  },
+  "3": {
+   "base": 5432,
+   "PWIN2": 5432,
+   "PWIN2_delta": 0
+  },
+  "36": {
+   "base": 2704,
+   "PWIN2": 2704,
+   "PWIN2_delta": 0
+  },
+  "37": {
+   "base": 4001,
+   "PWIN2": 4001,
+   "PWIN2_delta": 0
+  },
+  "38": {
+   "base": 3123,
+   "PWIN2": 3123,
+   "PWIN2_delta": 0
+  },
+  "4": {
+   "base": 5978,
+   "PWIN2": 5978,
+   "PWIN2_delta": 0
+  },
+  "48": {
+   "base": 2822,
+   "PWIN2": 2822,
+   "PWIN2_delta": 0
+  },
+  "49": {
+   "base": 2890,
+   "PWIN2": 2888,
+   "PWIN2_delta": -2
+  },
+  "5": {
+   "base": 3029,
+   "PWIN2": 3029,
+   "PWIN2_delta": 0
+  }
+ },
+ "excluded_now_counts": {
+  "BASE": 23,
+  "PWIN2": 24
+ }
+}

@@ -1,0 +1,28 @@
+PASS input-aa052-matches-rows 5,1152921504606851072,4228,93 vs 5,1152921504606851072,4228,93
+PASS input-aa044-matches-rows 5,1152921521786716160,4228,86 vs 5,1152921521786716160,4228,86
+PASS input-aa041-matches-rows 5,1171516445255794688,8,93 vs 5,1171516445255794688,8,93
+PASS input-aa048-matches-rows 5,1152921504615235584,4228,87 vs 5,1152921504615235584,4228,87
+PASS input-aa026-matches-rows 5,1171516445255794688,32,88 vs 5,1171516445255794688,32,88
+PASS input-aa039-matches-rows 5,1152921504606846984,4228,88 vs 5,1152921504606846984,4228,88
+PASS input-aa043-matches-rows 5,1152921513196781568,4228,90 vs 5,1152921513196781568,4228,90
+PASS input-aa045-matches-rows 5,1152921642045800448,4228,84 vs 5,1152921642045800448,4228,84
+PASS input-k02a-matches-rows 5,1297036692683751424,68157440,87 vs 5,1297036692683751424,68157440,87
+PASS input-l1a-matches-rows 5,13019119616,16448,116 vs 5,13019119616,16448,116
+PASS input-ng1-matches-rows 5,1297036692683751424,68157440,88 vs 5,1297036692683751424,68157440,88
+PASS input-ng2-matches-rows 6,1297036692683751424,68157440,87 vs 6,1297036692683751424,68157440,87
+PASS pin-third_impl.js 08ea958ff59c3234ec5ac55c5c40689bd0999a34e101a88ea0546800cc4a1998
+PASS pin-verify_tbl.js c8c52528f70b3a9b438edc3feb4e432fbe705d6be21650383d3955efc6790251
+PASS pin-jsreplay.js 845856175d3c793a7eb4306f5902ecda3f1c046a8a53e8f34ed375e51febc3df
+PASS pin-maker d3fefbcae37de53700f9e58a08f95890c0267760ec0a211d1940ab1f01fcf917
+PASS rows-schema n11-centralreply-closure-b28p3win8-thirdimpl-input-v1
+PASS target-count 8 (8 b28 drive P3-package WIN rows)
+PASS target-verdict-kinds [1, 1, 1, 1, 1, 1, 1, 1]
+PASS rules-gate-quads replica quads 95670 mine quads 95670
+PASS rules-gate-tbl-mismatch0 ['triples checked 195044 mismatches 0']
+PASS replica-aa052-present p1/p2
+PASS replica-aa052-done replay_done p1=True p2=True
+PASS replica-aa052-quads quads-header p1=True p2=True
+PASS replica-aa052-det-pair p1=['93', '0', '15000000', '1', '8976982'] p2=['93', '0', '15000000', '1', '8976982']
+PASS replica-aa052-schema schema ['replay', '0', '5', '93', '0', '15000000']
+PASS replica-aa052-key 1152921504606851072,4228,93 vs 1152921504606851072,4228,93
+GATE FAILED: replica-aa052-verdict-vs-published this-host result=1 nodes=8976982 vs published result=1 nodes=8976983

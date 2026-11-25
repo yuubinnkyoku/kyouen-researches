@@ -1,0 +1,20 @@
+44331adcf00ed9f70d68f48634467c96619a943af739251cbb83926c3473aa55  scripts/make_increments_b32loss54.py
+907119610034fb2aebfde012550a4129dfa3b086c6de11194e856747ac74606a  scripts/s5_union_merge.py
+4c16da6e6e0365ef2bd4c21884875435678d8e101bccef3fa9a1f6399fc52982  scripts/compare_deltas_b32loss54_adoption.py
+41bf706fd0e2d0eb831ecfdf35eb52bf448dece8107b792856fb2d65fe93a366  reaudit/scripts/refresh_adoption_b32loss54.py
+ca4af3e7704f2a72649b8386c83916ea129152bfc85c1363a30f4be54590dadb  output/increment-b32loss54-20261124.cache
+3f906dc81e1eb74a2f0a74113e474e215673755eee7d719e42ce42424e86a2f4  output/increments-manifest.json
+5ebfdbfb4aefefb2cd1d6c020f1bbe946f60c1196ee2bd2b63a998fe0305ae52  output/merge-audit-run1.json
+5ebfdbfb4aefefb2cd1d6c020f1bbe946f60c1196ee2bd2b63a998fe0305ae52  output/merge-audit-run2.json
+5ebfdbfb4aefefb2cd1d6c020f1bbe946f60c1196ee2bd2b63a998fe0305ae52  output/merge-audit-run3.json
+1ded9a083feabc095dd998c92002b47efc05b8666adf030501bcffc2873a9dd6  output/merged-exact-s5-chain-plus-b28loss1-plus-b28loss7-plus-b29loss16-plus-b29loss37-plus-b31loss51-plus-b30loss43-plus-b32loss54-20261124.cache
+7def99020d7cb2787d8c6ca825546e3432f25c32b1174370f8875f8981271be8  output/decomp-deltas-b32loss54-adoption.json
+74f5dd9b6d8752964ca622ebb40388694aac1bd787d615e184a06e25693a5179  reaudit/output/refresh-summary.json
+284bb069d7c0efb7bb04addd7e1947716dfd2db5f0caf47ca3942bfa5cfa493f  reaudit/output/closure-classes.csv
+096a9c37c1e6624ec1d17eaed957ceaf331f4ed7c5787a0c88fd5bdc6075e9c0  reaudit/output/per-root-coverage.csv
+660fcaf65f34a75685d528c307a0cc41f8ac67492db89b68aaba75acc7688592  README.md
+
+# README.md is committed in the same commit; its sha256 is 660fcaf65f34a75685d528c307a0cc41f8ac67492db89b68aaba75acc7688592
+# probe-worklist.csv NOT committed (volume ~3.7MB); regenerate via reaudit/scripts/refresh_adoption_b32loss54.py (regeneration sha256 87c2ebd63015ca399a13e0ef561796bce655003ff69cb01b8f8177818f1bf368, byte-reproduced in the official quarantine rerun from published bytes)
+# published batch-32 kit (byte-pinned file-by-file inside make_increments_b32loss54.py): kit MANIFEST 7c2c159ae24bab8836e23a8e2502615d62650eb4fb555979513ca55f71e7dec8 (193 files verified)
+# 11x11 stays UNKNOWN; verdicts consumed = 54 exact LOSS rows only; class 8730 free_now is Board-derived scheduling bookkeeping, not a root verdict; nodes are bookkeeping, never verdicts

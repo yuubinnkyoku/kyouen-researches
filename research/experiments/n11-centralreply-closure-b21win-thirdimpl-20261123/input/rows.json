@@ -1,0 +1,70 @@
+{
+ "schema": "n11-centralreply-closure-b21win-thirdimpl-input-v1",
+ "sources": {
+  "b21": "sources/raw a003.p1/p2 + sources/status-b21.log + batch-keys-b21.json + published batch-21 (Part BJ) canonical outputs, publication commits 85d0c4d7 (scaffold+inputs) / 0022c8c5 (raws+status+row-audit) / a38153a8 (README+MANIFEST), commit-pinned raw fetch; batch-21 batch-keys sha256 1f9346a7..",
+  "b21_batch_keys_sha256": "1f9346a7027e95b162f27b933bddec05151473d87ab7ed35832619026ae6759d",
+  "anchors": "published Part G/K/O/P/T/W/AA/AD/AG/AL/AR/AX/AZ/BF anchor/negative values, input CSVs byte-equality-checked against the published Part BF experiment (provenance chain AR -> BF -> BK)"
+ },
+ "consumed_into_canonical_cache": false,
+ "targets": [
+  {
+   "key_id": "a003",
+   "stones": 5,
+   "lo": 10412339930666631168,
+   "hi": 4,
+   "legal": 82,
+   "replica_result": 1,
+   "replica_nodes": 5021280,
+   "source": "part-bj-batch21-win",
+   "s5_index": 115192,
+   "membership_class_count": 3,
+   "expect_third": 1
+  }
+ ],
+ "anchors": [
+  {
+   "key_id": "k02a",
+   "stones": 5,
+   "lo": 1297036692683751424,
+   "hi": 68157440,
+   "legal": 87,
+   "expect_third": 1,
+   "anchor_expansions": 9106337,
+   "anchor_ttHits": 4991527,
+   "expect_kind": "win",
+   "replica_result": null,
+   "replica_nodes": null
+  },
+  {
+   "key_id": "l1a",
+   "stones": 5,
+   "lo": 13019119616,
+   "hi": 16448,
+   "legal": 116,
+   "expect_third": 2,
+   "anchor_expansions": 7660602,
+   "anchor_ttHits": 3951175,
+   "expect_kind": "loss",
+   "replica_result": null,
+   "replica_nodes": null
+  }
+ ],
+ "negatives": [
+  {
+   "key_id": "ng1",
+   "lo": 1297036692683751424,
+   "hi": 68157440,
+   "legal": 88,
+   "stones": 5,
+   "why": "legal+1 vs derived 87"
+  },
+  {
+   "key_id": "ng2",
+   "lo": 1297036692683751424,
+   "hi": 68157440,
+   "legal": 87,
+   "stones": 6,
+   "why": "stones 6 vs actual 5"
+  }
+ ]
+}

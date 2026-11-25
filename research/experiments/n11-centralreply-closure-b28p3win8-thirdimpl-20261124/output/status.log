@@ -1,0 +1,38 @@
+RUN key=ng2 tag=a kind=negative rc=1 out=output/negative/ng2.a.out third,ng2a,6,87,,GATE_FAIL,"stone count mismatch: bits=5 declared=6"
+RUN key=ng1 tag=a kind=negative rc=1 out=output/negative/ng1.a.out third,ng1a,5,88,,GATE_FAIL,"legal count mismatch: derived=87 declared=88"
+RUN key=l1a tag=a kind=anchor rc=0 out=output/anchors/l1a.a.out third,l1aa,5,116,116,2,7660602,3951175,47.71,13019119616,16448,clean,quads=95670,ttOverwrites=3466722,memoPower=22
+RUN key=k02a tag=a kind=anchor rc=0 out=output/anchors/k02a.a.out third,k02aa,5,87,87,1,9106337,4991527,51.91,1297036692683751424,68157440,clean,quads=95670,ttOverwrites=4912053,memoPower=22
+RUN key=l1a tag=b kind=anchor rc=0 out=output/anchors/l1a.b.out third,l1ab,5,116,116,2,7660602,3951175,47.82,13019119616,16448,clean,quads=95670,ttOverwrites=3466722,memoPower=22
+RUN key=k02a tag=b kind=anchor rc=0 out=output/anchors/k02a.b.out third,k02ab,5,87,87,1,9106337,4991527,52.32,1297036692683751424,68157440,clean,quads=95670,ttOverwrites=4912053,memoPower=22
+REPLICA key=aa052 pass=p1 rc=0 out=output/replica/aa052.p1.out replay,0,5,93,0,15000000,1,8976982,97,1152921504606851072,4228
+REPLICA key=aa044 pass=p1 rc=0 out=output/replica/aa044.p1.out replay,0,5,86,0,15000000,1,9219778,102,1152921521786716160,4228
+REPLICA key=aa052 pass=p2 rc=0 out=output/replica/aa052.p2.out replay,0,5,93,0,15000000,1,8976982,97,1152921504606851072,4228
+REPLICA key=aa044 pass=p2 rc=0 out=output/replica/aa044.p2.out replay,0,5,86,0,15000000,1,9219778,97,1152921521786716160,4228
+REPLICA key=aa041 pass=p1 rc=0 out=output/replica/aa041.p1.out replay,0,5,93,0,15000000,1,10283599,113,1171516445255794688,8
+REPLICA key=aa048 pass=p1 rc=0 out=output/replica/aa048.p1.out replay,0,5,87,0,15000000,1,10553343,116,1152921504615235584,4228
+REPLICA key=aa041 pass=p2 rc=0 out=output/replica/aa041.p2.out replay,0,5,93,0,15000000,1,10283599,113,1171516445255794688,8
+REPLICA key=aa048 pass=p2 rc=0 out=output/replica/aa048.p2.out replay,0,5,87,0,15000000,1,10553343,113,1152921504615235584,4228
+REPLICA key=aa026 pass=p1 rc=0 out=output/replica/aa026.p1.out replay,0,5,88,0,15000000,1,11019409,116,1171516445255794688,32
+REPLICA key=aa039 pass=p1 rc=0 out=output/replica/aa039.p1.out replay,0,5,88,0,15000000,1,11349776,126,1152921504606846984,4228
+REPLICA key=aa026 pass=p2 rc=0 out=output/replica/aa026.p2.out replay,0,5,88,0,15000000,1,11019409,122,1171516445255794688,32
+REPLICA key=aa039 pass=p2 rc=0 out=output/replica/aa039.p2.out replay,0,5,88,0,15000000,1,11349776,116,1152921504606846984,4228
+REPLICA key=aa043 pass=p1 rc=0 out=output/replica/aa043.p1.out replay,0,5,90,0,15000000,1,12069965,137,1152921513196781568,4228
+REPLICA key=aa045 pass=p1 rc=0 out=output/replica/aa045.p1.out replay,0,5,84,0,15000000,1,12371943,139,1152921642045800448,4228
+REPLICA key=aa043 pass=p2 rc=0 out=output/replica/aa043.p2.out replay,0,5,90,0,15000000,1,12069965,136,1152921513196781568,4228
+REPLICA key=aa045 pass=p2 rc=0 out=output/replica/aa045.p2.out replay,0,5,84,0,15000000,1,12371943,134,1152921642045800448,4228
+RUN key=aa052 tag=b kind=target rc=0 out=output/targets/aa052.b.out third,aa052b,5,93,93,1,10672229,5526054,62.27,1152921504606851072,4228,clean,quads=95670,ttOverwrites=6477925,memoPower=22
+RUN key=aa052 tag=a kind=target rc=0 out=output/targets/aa052.a.out third,aa052a,5,93,93,1,10672229,5526054,62.56,1152921504606851072,4228,clean,quads=95670,ttOverwrites=6477925,memoPower=22
+RUN key=aa044 tag=b kind=target rc=0 out=output/targets/aa044.b.out third,aa044b,5,86,86,1,10904035,5884535,66.01,1152921521786716160,4228,clean,quads=95670,ttOverwrites=6709731,memoPower=22
+RUN key=aa044 tag=a kind=target rc=0 out=output/targets/aa044.a.out third,aa044a,5,86,86,1,10904035,5884535,66.67,1152921521786716160,4228,clean,quads=95670,ttOverwrites=6709731,memoPower=22
+RUN key=aa041 tag=a kind=target rc=0 out=output/targets/aa041.a.out third,aa041a,5,93,93,1,12153804,6295384,71.80,1171516445255794688,8,clean,quads=95670,ttOverwrites=7959500,memoPower=22
+RUN key=aa041 tag=b kind=target rc=0 out=output/targets/aa041.b.out third,aa041b,5,93,93,1,12153804,6295384,72.22,1171516445255794688,8,clean,quads=95670,ttOverwrites=7959500,memoPower=22
+RUN key=aa048 tag=b kind=target rc=0 out=output/targets/aa048.b.out third,aa048b,5,87,87,1,12498855,6532546,74.40,1152921504615235584,4228,clean,quads=95670,ttOverwrites=8304551,memoPower=22
+RUN key=aa048 tag=a kind=target rc=0 out=output/targets/aa048.a.out third,aa048a,5,87,87,1,12498855,6532546,74.67,1152921504615235584,4228,clean,quads=95670,ttOverwrites=8304551,memoPower=22
+RUN key=aa026 tag=a kind=target rc=0 out=output/targets/aa026.a.out third,aa026a,5,88,88,1,13051334,6848757,76.00,1171516445255794688,32,clean,quads=95670,ttOverwrites=8857030,memoPower=22
+RUN key=aa026 tag=b kind=target rc=0 out=output/targets/aa026.b.out third,aa026b,5,88,88,1,13051334,6848757,76.61,1171516445255794688,32,clean,quads=95670,ttOverwrites=8857030,memoPower=22
+RUN key=aa039 tag=b kind=target rc=0 out=output/targets/aa039.b.out third,aa039b,5,88,88,1,13569936,7147683,80.32,1152921504606846984,4228,clean,quads=95670,ttOverwrites=9375632,memoPower=22
+RUN key=aa039 tag=a kind=target rc=0 out=output/targets/aa039.a.out third,aa039a,5,88,88,1,13569936,7147683,80.78,1152921504606846984,4228,clean,quads=95670,ttOverwrites=9375632,memoPower=22
+RUN key=aa043 tag=a kind=target rc=0 out=output/targets/aa043.a.out third,aa043a,5,90,90,1,14412813,7582242,86.30,1152921513196781568,4228,clean,quads=95670,ttOverwrites=10218509,memoPower=22
+RUN key=aa043 tag=b kind=target rc=0 out=output/targets/aa043.b.out third,aa043b,5,90,90,1,14412813,7582242,87.32,1152921513196781568,4228,clean,quads=95670,ttOverwrites=10218509,memoPower=22
+RUN key=aa045 tag=b kind=target rc=0 out=output/targets/aa045.b.out third,aa045b,5,84,84,1,14662004,7859885,88.89,1152921642045800448,4228,clean,quads=95670,ttOverwrites=10467700,memoPower=22
+RUN key=aa045 tag=a kind=target rc=0 out=output/targets/aa045.a.out third,aa045a,5,84,84,1,14662004,7859885,89.63,1152921642045800448,4228,clean,quads=95670,ttOverwrites=10467700,memoPower=22

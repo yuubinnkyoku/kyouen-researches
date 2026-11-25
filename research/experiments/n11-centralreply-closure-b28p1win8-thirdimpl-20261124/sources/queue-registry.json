@@ -1,0 +1,4931 @@
+{
+ "schema": "n11-centralreply-class5343-b28-thirdimpl-queue-registry-v1",
+ "created_utc": "2026-11-24T02:48:57Z",
+ "observed_head_serving_input_fetch": "d2d60645d26b2eae88ffc87fdd5e6160cfcae8e1",
+ "observed_head_before_push": "d2d60645d26b2eae88ffc87fdd5e6160cfcae8e1",
+ "artifact_nature": [
+  "bookkeeping-only registry: no solver execution, no probe, no cache write, no single-owner lane declaration",
+  "verdicts NOT consumed; all labels are honest unconsumed labels (WIN rows = unconsumed closure WIN candidates; LOSS rows = adoption facts into canonical cache, not closure verdicts)",
+  "standard 11x11 empty board, 19 central-reply roots, two-stone roots {49,60}/{59,60}, S2 {59,60}, classes 1/2/4/10968/23964/5343 all remain UNKNOWN",
+  "no closure, coverage, secured, or win/loss claim of any kind is made or implied"
+ ],
+ "scope": {
+  "batch": "batch-28 (n11 central-reply closure class 5343) 54 keys aa001..aa054",
+  "purpose": "machine-derived queue of third-implementation cross-verification candidates for batch-28 WIN rows (46) plus optional LOSS redundancy (7), with provenance and planning-cost estimates"
+ },
+ "input_provenance": {
+  "batch_keys": {
+   "path": "research/experiments/n11-centralreply-closure-b28cqwin5-thirdimpl-20261124/sources/batch-keys-b28.json",
+   "git_blob_sha": "8fa79ae14abca39e39e23d7222074776ec8bd731",
+   "sha256": "af19208fafb61cc20892fa968bc373fe2c4f79da94744dfeed9d2f40ea8481e5",
+   "source_kit_commit": "3185a672"
+  },
+  "status_logs": [
+   {
+    "id": "drive2-15m",
+    "path": "research/experiments/n11-centralreply-closure-class5343-batch28-drive2-20261123/output/status.log",
+    "sha256": "343097c268425cc62263935f1063c26689515bc797c68bbdb82389c713952c98",
+    "git_blob_sha": "5d8081f7fdb4ff8522669a671b4ebd596e66dd56",
+    "observed_serving_head": "d2d60645d26b2eae88ffc87fdd5e6160cfcae8e1",
+    "budget": 15000000
+   },
+   {
+    "id": "drive3-15m",
+    "path": "research/experiments/n11-centralreply-closure-class5343-batch28-drive3-20261123/output/status.log",
+    "sha256": "1a5c08c516dbc34bde466a55a39f7e9acdfef57f09bc1bd7e19d2efb9fd5137c",
+    "git_blob_sha": "1ed4cc9de996ed74af0b2e26e110d30c6c88c7d9",
+    "observed_serving_head": "d2d60645d26b2eae88ffc87fdd5e6160cfcae8e1",
+    "budget": 15000000
+   },
+   {
+    "id": "drive4-15m",
+    "path": "research/experiments/n11-centralreply-closure-class5343-batch28-drive4-20261123/output/status.log",
+    "sha256": "598174447fa878c2e0a6d6db6f892c5c279063174d763746456476e3051633f8",
+    "git_blob_sha": "4f49bf516dd009b0244b75e9cd75359adbcfb634",
+    "observed_serving_head": "d2d60645d26b2eae88ffc87fdd5e6160cfcae8e1",
+    "budget": 15000000
+   },
+   {
+    "id": "drive5-15m",
+    "path": "research/experiments/n11-centralreply-closure-class5343-batch28-drive5-20261123/output/status.log",
+    "sha256": "ca1e98ccd952b29e8295147add50e6b4a3ff3732748bf544b9c3a7018d495df0",
+    "git_blob_sha": "682813591d3b3e02d2e417664cc48bb637b973c1",
+    "observed_serving_head": "d2d60645d26b2eae88ffc87fdd5e6160cfcae8e1",
+    "budget": 15000000
+   },
+   {
+    "id": "cq-20m",
+    "path": "research/experiments/n11-centralreply-class5343-b28exhausted-reprobe-20261123/output/status.log",
+    "sha256": "afc4873482219ec605f62da9a2b543ca8a10f5a2a08d3b3a5ac6de36475704af",
+    "git_blob_sha": "f03eb623c7851ae2a34ef1510e2f429057796eae",
+    "observed_serving_head": "d2d60645d26b2eae88ffc87fdd5e6160cfcae8e1",
+    "budget": 20000000
+   },
+   {
+    "id": "cs-25m",
+    "path": "research/experiments/n11-centralreply-class5343-b28exhausted-reprobe25m-20261123/output/status.log",
+    "sha256": "cea47a0c887b0380ebb9604a11ad1bf7fab78a1c58e5e3a1b8e9c555b394524f",
+    "git_blob_sha": "25da2845f7d5d08bb17ede9757c1fdccf8276768",
+    "observed_serving_head": "d2d60645d26b2eae88ffc87fdd5e6160cfcae8e1",
+    "budget": 25000000
+   },
+   {
+    "id": "ct-30m",
+    "path": "research/experiments/n11-centralreply-class5343-b28aa050-reprobe30m-20261123/output/status.log",
+    "sha256": "efd18b3c21a375864d11e740397d9d2aba833a9911cd287f881aa6df8c7f9865",
+    "git_blob_sha": "13a6f57a1a8b6c1110ac0f3a2f1ca480a7551614",
+    "observed_serving_head": "d2d60645d26b2eae88ffc87fdd5e6160cfcae8e1",
+    "budget": 30000000
+   }
+  ],
+  "thirdimpl_publications": {
+   "CC": {
+    "keys": [
+     "aa001",
+     "aa002"
+    ],
+    "completion": "9eb30494",
+    "kind": "done"
+   },
+   "CG": {
+    "keys": [
+     "aa006",
+     "aa007"
+    ],
+    "completion": "699a13bc",
+    "kind": "done (re-takeover)"
+   },
+   "CM": {
+    "keys": [
+     "aa008",
+     "aa009"
+    ],
+    "completion": "2102800b",
+    "kind": "done"
+   },
+   "CW": {
+    "keys": [
+     "aa004",
+     "aa035"
+    ],
+    "completion": "8f03ed3d",
+    "kind": "done"
+   },
+   "CL": {
+    "keys": [
+     "aa003"
+    ],
+    "completion": "660fe238",
+    "kind": "done (LOSS row)"
+   },
+   "CX": {
+    "keys": [
+     "aa005",
+     "aa030",
+     "aa031",
+     "aa047",
+     "aa053"
+    ],
+    "declaration": "1300c10d",
+    "declared_utc": "2026-11-24T00:49:31Z",
+    "scaffold_a": "3185a672",
+    "kind": "claimed (outputs unpublished at observed HEAD d2d60645d26b2eae88ffc87fdd5e6160cfcae8e1)"
+   }
+  },
+  "loss_adoptions": {
+   "aa003": {
+    "part": "CH",
+    "increment_b": "0c511f40",
+    "canonical_merge_c": "ae766957",
+    "completion": "2c000494"
+   },
+   "aa015": {
+    "part": "CO",
+    "completion": "fb9a6755"
+   },
+   "aa017": {
+    "part": "CO",
+    "completion": "fb9a6755"
+   },
+   "aa018": {
+    "part": "CO",
+    "completion": "fb9a6755"
+   },
+   "aa023": {
+    "part": "CO",
+    "completion": "fb9a6755"
+   },
+   "aa024": {
+    "part": "CO",
+    "completion": "fb9a6755"
+   },
+   "aa029": {
+    "part": "CO",
+    "completion": "fb9a6755"
+   },
+   "aa036": {
+    "part": "CO",
+    "completion": "fb9a6755"
+   }
+  },
+  "known_non_verdict_artifacts": [
+   "drive5 status.log junk line 'P1-FAIL ' (empty-key invocation; Part CN log incident 1; no batch key touched)"
+  ]
+ },
+ "est_cost_model": {
+  "basis": "Part CC published observation: third-impl pass nodes vs pinned pass nodes",
+  "ratios": {
+   "aa001": 1.1891,
+   "aa002": 1.1681
+  },
+  "planning_factor_per_pass": 1.18,
+  "passes": 2,
+  "est_factor_total": 2.36,
+  "caveat": "planning heuristic only (calibration n=2); third-impl node counts are implementation-specific and carry no verdict meaning"
+ },
+ "rows": [
+  {
+   "key_id": "aa001",
+   "s5_index": 28037,
+   "lo": "1315631633331650560",
+   "hi": "0",
+   "legal": 88,
+   "membership_class_count": 4,
+   "pinned_honest_label": "WIN",
+   "decisive": {
+    "ts": "2026-11-23T15:23:55Z",
+    "log": "drive2-15m",
+    "budget": 15000000,
+    "rc": 1,
+    "nodes": 13183855,
+    "line": "2026-11-23T15:23:55Z aa001 PASS 15000000,1,13183855",
+    "containing_log_ids": [
+     "drive2-15m",
+     "drive3-15m",
+     "drive4-15m",
+     "drive5-15m"
+    ]
+   },
+   "observations": [
+    {
+     "ts": "2026-11-23T15:23:55Z",
+     "log": "drive2-15m",
+     "kind": "pass",
+     "line": "2026-11-23T15:23:55Z aa001 PASS 15000000,1,13183855",
+     "containing_log_ids": [
+      "drive2-15m",
+      "drive3-15m",
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 1,
+     "nodes": 13183855
+    },
+    {
+     "ts": "2026-11-23T15:23:55Z",
+     "log": "drive2-15m",
+     "kind": "win-halt",
+     "line": "2026-11-23T15:23:55Z aa001 WIN-HALT",
+     "containing_log_ids": [
+      "drive2-15m",
+      "drive3-15m",
+      "drive4-15m",
+      "drive5-15m"
+     ]
+    },
+    {
+     "ts": "2026-11-23T15:23:55Z",
+     "log": "drive3-15m",
+     "kind": "pass",
+     "line": "2026-11-23T15:23:55Z aa001 PASS 15000000,1,13183855",
+     "containing_log_ids": [
+      "drive2-15m",
+      "drive3-15m",
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 1,
+     "nodes": 13183855
+    },
+    {
+     "ts": "2026-11-23T15:23:55Z",
+     "log": "drive3-15m",
+     "kind": "win-halt",
+     "line": "2026-11-23T15:23:55Z aa001 WIN-HALT",
+     "containing_log_ids": [
+      "drive2-15m",
+      "drive3-15m",
+      "drive4-15m",
+      "drive5-15m"
+     ]
+    },
+    {
+     "ts": "2026-11-23T15:23:55Z",
+     "log": "drive4-15m",
+     "kind": "pass",
+     "line": "2026-11-23T15:23:55Z aa001 PASS 15000000,1,13183855",
+     "containing_log_ids": [
+      "drive2-15m",
+      "drive3-15m",
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 1,
+     "nodes": 13183855
+    },
+    {
+     "ts": "2026-11-23T15:23:55Z",
+     "log": "drive4-15m",
+     "kind": "win-halt",
+     "line": "2026-11-23T15:23:55Z aa001 WIN-HALT",
+     "containing_log_ids": [
+      "drive2-15m",
+      "drive3-15m",
+      "drive4-15m",
+      "drive5-15m"
+     ]
+    },
+    {
+     "ts": "2026-11-23T15:23:55Z",
+     "log": "drive5-15m",
+     "kind": "pass",
+     "line": "2026-11-23T15:23:55Z aa001 PASS 15000000,1,13183855",
+     "containing_log_ids": [
+      "drive2-15m",
+      "drive3-15m",
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 1,
+     "nodes": 13183855
+    },
+    {
+     "ts": "2026-11-23T15:23:55Z",
+     "log": "drive5-15m",
+     "kind": "win-halt",
+     "line": "2026-11-23T15:23:55Z aa001 WIN-HALT",
+     "containing_log_ids": [
+      "drive2-15m",
+      "drive3-15m",
+      "drive4-15m",
+      "drive5-15m"
+     ]
+    }
+   ],
+   "thirdimpl": {
+    "state": "done",
+    "part": "CC",
+    "completion": "9eb30494"
+   },
+   "est_crossimpl_2pass_nodes": null
+  },
+  {
+   "key_id": "aa002",
+   "s5_index": 87306,
+   "lo": "1171516445390012416",
+   "hi": "0",
+   "legal": 86,
+   "membership_class_count": 2,
+   "pinned_honest_label": "WIN",
+   "decisive": {
+    "ts": "2026-11-23T15:22:39Z",
+    "log": "drive2-15m",
+    "budget": 15000000,
+    "rc": 1,
+    "nodes": 6527041,
+    "line": "2026-11-23T15:22:39Z aa002 PASS 15000000,1,6527041",
+    "containing_log_ids": [
+     "drive2-15m",
+     "drive3-15m",
+     "drive4-15m",
+     "drive5-15m"
+    ]
+   },
+   "observations": [
+    {
+     "ts": "2026-11-23T15:22:39Z",
+     "log": "drive2-15m",
+     "kind": "pass",
+     "line": "2026-11-23T15:22:39Z aa002 PASS 15000000,1,6527041",
+     "containing_log_ids": [
+      "drive2-15m",
+      "drive3-15m",
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 1,
+     "nodes": 6527041
+    },
+    {
+     "ts": "2026-11-23T15:22:39Z",
+     "log": "drive2-15m",
+     "kind": "win-halt",
+     "line": "2026-11-23T15:22:39Z aa002 WIN-HALT",
+     "containing_log_ids": [
+      "drive2-15m",
+      "drive3-15m",
+      "drive4-15m",
+      "drive5-15m"
+     ]
+    },
+    {
+     "ts": "2026-11-23T15:22:39Z",
+     "log": "drive3-15m",
+     "kind": "pass",
+     "line": "2026-11-23T15:22:39Z aa002 PASS 15000000,1,6527041",
+     "containing_log_ids": [
+      "drive2-15m",
+      "drive3-15m",
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 1,
+     "nodes": 6527041
+    },
+    {
+     "ts": "2026-11-23T15:22:39Z",
+     "log": "drive3-15m",
+     "kind": "win-halt",
+     "line": "2026-11-23T15:22:39Z aa002 WIN-HALT",
+     "containing_log_ids": [
+      "drive2-15m",
+      "drive3-15m",
+      "drive4-15m",
+      "drive5-15m"
+     ]
+    },
+    {
+     "ts": "2026-11-23T15:22:39Z",
+     "log": "drive4-15m",
+     "kind": "pass",
+     "line": "2026-11-23T15:22:39Z aa002 PASS 15000000,1,6527041",
+     "containing_log_ids": [
+      "drive2-15m",
+      "drive3-15m",
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 1,
+     "nodes": 6527041
+    },
+    {
+     "ts": "2026-11-23T15:22:39Z",
+     "log": "drive4-15m",
+     "kind": "win-halt",
+     "line": "2026-11-23T15:22:39Z aa002 WIN-HALT",
+     "containing_log_ids": [
+      "drive2-15m",
+      "drive3-15m",
+      "drive4-15m",
+      "drive5-15m"
+     ]
+    },
+    {
+     "ts": "2026-11-23T15:22:39Z",
+     "log": "drive5-15m",
+     "kind": "pass",
+     "line": "2026-11-23T15:22:39Z aa002 PASS 15000000,1,6527041",
+     "containing_log_ids": [
+      "drive2-15m",
+      "drive3-15m",
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 1,
+     "nodes": 6527041
+    },
+    {
+     "ts": "2026-11-23T15:22:39Z",
+     "log": "drive5-15m",
+     "kind": "win-halt",
+     "line": "2026-11-23T15:22:39Z aa002 WIN-HALT",
+     "containing_log_ids": [
+      "drive2-15m",
+      "drive3-15m",
+      "drive4-15m",
+      "drive5-15m"
+     ]
+    }
+   ],
+   "thirdimpl": {
+    "state": "done",
+    "part": "CC",
+    "completion": "9eb30494"
+   },
+   "est_crossimpl_2pass_nodes": null
+  },
+  {
+   "key_id": "aa003",
+   "s5_index": 104943,
+   "lo": "1152921504741064704",
+   "hi": "4228",
+   "legal": 86,
+   "membership_class_count": 3,
+   "pinned_honest_label": "LOSS",
+   "decisive": {
+    "ts": "2026-11-23T16:05:28Z",
+    "log": "drive2-15m",
+    "budget": 15000000,
+    "rc": 2,
+    "nodes": 4070373,
+    "line": "2026-11-23T16:05:28Z aa003 PASS 15000000,2,4070373",
+    "containing_log_ids": [
+     "drive2-15m",
+     "drive3-15m",
+     "drive4-15m",
+     "drive5-15m"
+    ]
+   },
+   "observations": [
+    {
+     "ts": "2026-11-23T16:05:28Z",
+     "log": "drive2-15m",
+     "kind": "pass",
+     "line": "2026-11-23T16:05:28Z aa003 PASS 15000000,2,4070373",
+     "containing_log_ids": [
+      "drive2-15m",
+      "drive3-15m",
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 2,
+     "nodes": 4070373
+    },
+    {
+     "ts": "2026-11-23T16:05:28Z",
+     "log": "drive3-15m",
+     "kind": "pass",
+     "line": "2026-11-23T16:05:28Z aa003 PASS 15000000,2,4070373",
+     "containing_log_ids": [
+      "drive2-15m",
+      "drive3-15m",
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 2,
+     "nodes": 4070373
+    },
+    {
+     "ts": "2026-11-23T16:05:28Z",
+     "log": "drive4-15m",
+     "kind": "pass",
+     "line": "2026-11-23T16:05:28Z aa003 PASS 15000000,2,4070373",
+     "containing_log_ids": [
+      "drive2-15m",
+      "drive3-15m",
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 2,
+     "nodes": 4070373
+    },
+    {
+     "ts": "2026-11-23T16:05:28Z",
+     "log": "drive5-15m",
+     "kind": "pass",
+     "line": "2026-11-23T16:05:28Z aa003 PASS 15000000,2,4070373",
+     "containing_log_ids": [
+      "drive2-15m",
+      "drive3-15m",
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 2,
+     "nodes": 4070373
+    }
+   ],
+   "thirdimpl": {
+    "state": "done",
+    "part": "CL",
+    "completion": "660fe238",
+    "note": "LOSS row"
+   },
+   "loss_adoption": {
+    "part": "CH",
+    "increment_b": "0c511f40",
+    "canonical_merge_c": "ae766957",
+    "completion": "2c000494"
+   },
+   "est_crossimpl_2pass_nodes": null
+  },
+  {
+   "key_id": "aa004",
+   "s5_index": 118693,
+   "lo": "1171516445255794689",
+   "hi": "0",
+   "legal": 91,
+   "membership_class_count": 4,
+   "pinned_honest_label": "WIN",
+   "decisive": {
+    "ts": "2026-11-23T22:41:51Z",
+    "log": "cq-20m",
+    "budget": 20000000,
+    "rc": 1,
+    "nodes": 15616012,
+    "line": "2026-11-23T22:41:51Z aa004 PASS 20000000,1,15616012",
+    "containing_log_ids": [
+     "cq-20m"
+    ]
+   },
+   "observations": [
+    {
+     "ts": "2026-11-23T16:08:58Z",
+     "log": "drive2-15m",
+     "kind": "retry",
+     "line": "2026-11-23T16:08:58Z aa004 P2-TRUNCATED-RETRY",
+     "containing_log_ids": [
+      "drive2-15m",
+      "drive3-15m",
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "retry": "P2"
+    },
+    {
+     "ts": "2026-11-23T16:08:58Z",
+     "log": "drive3-15m",
+     "kind": "retry",
+     "line": "2026-11-23T16:08:58Z aa004 P2-TRUNCATED-RETRY",
+     "containing_log_ids": [
+      "drive2-15m",
+      "drive3-15m",
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "retry": "P2"
+    },
+    {
+     "ts": "2026-11-23T16:08:58Z",
+     "log": "drive4-15m",
+     "kind": "retry",
+     "line": "2026-11-23T16:08:58Z aa004 P2-TRUNCATED-RETRY",
+     "containing_log_ids": [
+      "drive2-15m",
+      "drive3-15m",
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "retry": "P2"
+    },
+    {
+     "ts": "2026-11-23T16:08:58Z",
+     "log": "drive5-15m",
+     "kind": "retry",
+     "line": "2026-11-23T16:08:58Z aa004 P2-TRUNCATED-RETRY",
+     "containing_log_ids": [
+      "drive2-15m",
+      "drive3-15m",
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "retry": "P2"
+    },
+    {
+     "ts": "2026-11-23T16:10:42Z",
+     "log": "drive2-15m",
+     "kind": "pass",
+     "line": "2026-11-23T16:10:42Z aa004 PASS 15000000,0,15000000",
+     "containing_log_ids": [
+      "drive2-15m",
+      "drive3-15m",
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 0,
+     "nodes": 15000000
+    },
+    {
+     "ts": "2026-11-23T16:10:42Z",
+     "log": "drive2-15m",
+     "kind": "exhausted",
+     "line": "2026-11-23T16:10:42Z aa004 EXHAUSTED 15000000,0,15000000",
+     "containing_log_ids": [
+      "drive2-15m",
+      "drive3-15m",
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 0,
+     "nodes": 15000000
+    },
+    {
+     "ts": "2026-11-23T16:10:42Z",
+     "log": "drive3-15m",
+     "kind": "pass",
+     "line": "2026-11-23T16:10:42Z aa004 PASS 15000000,0,15000000",
+     "containing_log_ids": [
+      "drive2-15m",
+      "drive3-15m",
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 0,
+     "nodes": 15000000
+    },
+    {
+     "ts": "2026-11-23T16:10:42Z",
+     "log": "drive3-15m",
+     "kind": "exhausted",
+     "line": "2026-11-23T16:10:42Z aa004 EXHAUSTED 15000000,0,15000000",
+     "containing_log_ids": [
+      "drive2-15m",
+      "drive3-15m",
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 0,
+     "nodes": 15000000
+    },
+    {
+     "ts": "2026-11-23T16:10:42Z",
+     "log": "drive4-15m",
+     "kind": "pass",
+     "line": "2026-11-23T16:10:42Z aa004 PASS 15000000,0,15000000",
+     "containing_log_ids": [
+      "drive2-15m",
+      "drive3-15m",
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 0,
+     "nodes": 15000000
+    },
+    {
+     "ts": "2026-11-23T16:10:42Z",
+     "log": "drive4-15m",
+     "kind": "exhausted",
+     "line": "2026-11-23T16:10:42Z aa004 EXHAUSTED 15000000,0,15000000",
+     "containing_log_ids": [
+      "drive2-15m",
+      "drive3-15m",
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 0,
+     "nodes": 15000000
+    },
+    {
+     "ts": "2026-11-23T16:10:42Z",
+     "log": "drive5-15m",
+     "kind": "pass",
+     "line": "2026-11-23T16:10:42Z aa004 PASS 15000000,0,15000000",
+     "containing_log_ids": [
+      "drive2-15m",
+      "drive3-15m",
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 0,
+     "nodes": 15000000
+    },
+    {
+     "ts": "2026-11-23T16:10:42Z",
+     "log": "drive5-15m",
+     "kind": "exhausted",
+     "line": "2026-11-23T16:10:42Z aa004 EXHAUSTED 15000000,0,15000000",
+     "containing_log_ids": [
+      "drive2-15m",
+      "drive3-15m",
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 0,
+     "nodes": 15000000
+    },
+    {
+     "ts": "2026-11-23T22:41:51Z",
+     "log": "cq-20m",
+     "kind": "pass",
+     "line": "2026-11-23T22:41:51Z aa004 PASS 20000000,1,15616012",
+     "containing_log_ids": [
+      "cq-20m"
+     ],
+     "budget": 20000000,
+     "rc": 1,
+     "nodes": 15616012
+    },
+    {
+     "ts": "2026-11-23T22:41:51Z",
+     "log": "cq-20m",
+     "kind": "win-halt",
+     "line": "2026-11-23T22:41:51Z aa004 WIN-HALT",
+     "containing_log_ids": [
+      "cq-20m"
+     ]
+    },
+    {
+     "ts": "2026-11-23T23:31:19Z",
+     "log": "cs-25m",
+     "kind": "pass",
+     "line": "2026-11-23T23:31:19Z aa004 PASS 25000000,1,15616012",
+     "containing_log_ids": [
+      "cs-25m"
+     ],
+     "budget": 25000000,
+     "rc": 1,
+     "nodes": 15616012
+    },
+    {
+     "ts": "2026-11-23T23:31:19Z",
+     "log": "cs-25m",
+     "kind": "win-halt",
+     "line": "2026-11-23T23:31:19Z aa004 WIN-HALT",
+     "containing_log_ids": [
+      "cs-25m"
+     ]
+    },
+    {
+     "ts": "2026-11-24T00:08:05Z",
+     "log": "ct-30m",
+     "kind": "pass",
+     "line": "2026-11-24T00:08:05Z aa004 PASS 30000000,1,15616012",
+     "containing_log_ids": [
+      "ct-30m"
+     ],
+     "budget": 30000000,
+     "rc": 1,
+     "nodes": 15616012
+    },
+    {
+     "ts": "2026-11-24T00:08:05Z",
+     "log": "ct-30m",
+     "kind": "win-halt",
+     "line": "2026-11-24T00:08:05Z aa004 WIN-HALT",
+     "containing_log_ids": [
+      "ct-30m"
+     ]
+    }
+   ],
+   "thirdimpl": {
+    "state": "done",
+    "part": "CW",
+    "completion": "8f03ed3d"
+   },
+   "est_crossimpl_2pass_nodes": null
+  },
+  {
+   "key_id": "aa005",
+   "s5_index": 124331,
+   "lo": "1171516445255794690",
+   "hi": "0",
+   "legal": 89,
+   "membership_class_count": 4,
+   "pinned_honest_label": "WIN",
+   "decisive": {
+    "ts": "2026-11-23T22:44:39Z",
+    "log": "cq-20m",
+    "budget": 20000000,
+    "rc": 1,
+    "nodes": 15957877,
+    "line": "2026-11-23T22:44:39Z aa005 PASS 20000000,1,15957877",
+    "containing_log_ids": [
+     "cq-20m"
+    ]
+   },
+   "observations": [
+    {
+     "ts": "2026-11-23T16:10:58Z",
+     "log": "drive2-15m",
+     "kind": "retry",
+     "line": "2026-11-23T16:10:58Z aa005 P1-TRUNCATED-RETRY",
+     "containing_log_ids": [
+      "drive2-15m",
+      "drive3-15m",
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "retry": "P1"
+    },
+    {
+     "ts": "2026-11-23T16:10:58Z",
+     "log": "drive3-15m",
+     "kind": "retry",
+     "line": "2026-11-23T16:10:58Z aa005 P1-TRUNCATED-RETRY",
+     "containing_log_ids": [
+      "drive2-15m",
+      "drive3-15m",
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "retry": "P1"
+    },
+    {
+     "ts": "2026-11-23T16:10:58Z",
+     "log": "drive4-15m",
+     "kind": "retry",
+     "line": "2026-11-23T16:10:58Z aa005 P1-TRUNCATED-RETRY",
+     "containing_log_ids": [
+      "drive2-15m",
+      "drive3-15m",
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "retry": "P1"
+    },
+    {
+     "ts": "2026-11-23T16:10:58Z",
+     "log": "drive5-15m",
+     "kind": "retry",
+     "line": "2026-11-23T16:10:58Z aa005 P1-TRUNCATED-RETRY",
+     "containing_log_ids": [
+      "drive2-15m",
+      "drive3-15m",
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "retry": "P1"
+    },
+    {
+     "ts": "2026-11-23T16:14:18Z",
+     "log": "drive2-15m",
+     "kind": "pass",
+     "line": "2026-11-23T16:14:18Z aa005 PASS 15000000,0,15000000",
+     "containing_log_ids": [
+      "drive2-15m",
+      "drive3-15m",
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 0,
+     "nodes": 15000000
+    },
+    {
+     "ts": "2026-11-23T16:14:18Z",
+     "log": "drive2-15m",
+     "kind": "exhausted",
+     "line": "2026-11-23T16:14:18Z aa005 EXHAUSTED 15000000,0,15000000",
+     "containing_log_ids": [
+      "drive2-15m",
+      "drive3-15m",
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 0,
+     "nodes": 15000000
+    },
+    {
+     "ts": "2026-11-23T16:14:18Z",
+     "log": "drive3-15m",
+     "kind": "pass",
+     "line": "2026-11-23T16:14:18Z aa005 PASS 15000000,0,15000000",
+     "containing_log_ids": [
+      "drive2-15m",
+      "drive3-15m",
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 0,
+     "nodes": 15000000
+    },
+    {
+     "ts": "2026-11-23T16:14:18Z",
+     "log": "drive3-15m",
+     "kind": "exhausted",
+     "line": "2026-11-23T16:14:18Z aa005 EXHAUSTED 15000000,0,15000000",
+     "containing_log_ids": [
+      "drive2-15m",
+      "drive3-15m",
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 0,
+     "nodes": 15000000
+    },
+    {
+     "ts": "2026-11-23T16:14:18Z",
+     "log": "drive4-15m",
+     "kind": "pass",
+     "line": "2026-11-23T16:14:18Z aa005 PASS 15000000,0,15000000",
+     "containing_log_ids": [
+      "drive2-15m",
+      "drive3-15m",
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 0,
+     "nodes": 15000000
+    },
+    {
+     "ts": "2026-11-23T16:14:18Z",
+     "log": "drive4-15m",
+     "kind": "exhausted",
+     "line": "2026-11-23T16:14:18Z aa005 EXHAUSTED 15000000,0,15000000",
+     "containing_log_ids": [
+      "drive2-15m",
+      "drive3-15m",
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 0,
+     "nodes": 15000000
+    },
+    {
+     "ts": "2026-11-23T16:14:18Z",
+     "log": "drive5-15m",
+     "kind": "pass",
+     "line": "2026-11-23T16:14:18Z aa005 PASS 15000000,0,15000000",
+     "containing_log_ids": [
+      "drive2-15m",
+      "drive3-15m",
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 0,
+     "nodes": 15000000
+    },
+    {
+     "ts": "2026-11-23T16:14:18Z",
+     "log": "drive5-15m",
+     "kind": "exhausted",
+     "line": "2026-11-23T16:14:18Z aa005 EXHAUSTED 15000000,0,15000000",
+     "containing_log_ids": [
+      "drive2-15m",
+      "drive3-15m",
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 0,
+     "nodes": 15000000
+    },
+    {
+     "ts": "2026-11-23T22:44:39Z",
+     "log": "cq-20m",
+     "kind": "pass",
+     "line": "2026-11-23T22:44:39Z aa005 PASS 20000000,1,15957877",
+     "containing_log_ids": [
+      "cq-20m"
+     ],
+     "budget": 20000000,
+     "rc": 1,
+     "nodes": 15957877
+    },
+    {
+     "ts": "2026-11-23T22:44:39Z",
+     "log": "cq-20m",
+     "kind": "win-halt",
+     "line": "2026-11-23T22:44:39Z aa005 WIN-HALT",
+     "containing_log_ids": [
+      "cq-20m"
+     ]
+    }
+   ],
+   "thirdimpl": {
+    "state": "claimed",
+    "part": "CX",
+    "declaration": "1300c10d",
+    "declared_utc": "2026-11-24T00:49:31Z",
+    "scaffold_a": "3185a672"
+   },
+   "est_crossimpl_2pass_nodes": 37660590
+  },
+  {
+   "key_id": "aa006",
+   "s5_index": 129823,
+   "lo": "1171516445255794692",
+   "hi": "0",
+   "legal": 88,
+   "membership_class_count": 4,
+   "pinned_honest_label": "WIN",
+   "decisive": {
+    "ts": "2026-11-23T16:23:05Z",
+    "log": "drive2-15m",
+    "budget": 15000000,
+    "rc": 1,
+    "nodes": 14303810,
+    "line": "2026-11-23T16:23:05Z aa006 PASS 15000000,1,14303810",
+    "containing_log_ids": [
+     "drive2-15m",
+     "drive3-15m",
+     "drive4-15m",
+     "drive5-15m"
+    ]
+   },
+   "observations": [
+    {
+     "ts": "2026-11-23T16:19:49Z",
+     "log": "drive2-15m",
+     "kind": "retry",
+     "line": "2026-11-23T16:19:49Z aa006 P2-TRUNCATED-RETRY",
+     "containing_log_ids": [
+      "drive2-15m",
+      "drive3-15m",
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "retry": "P2"
+    },
+    {
+     "ts": "2026-11-23T16:19:49Z",
+     "log": "drive3-15m",
+     "kind": "retry",
+     "line": "2026-11-23T16:19:49Z aa006 P2-TRUNCATED-RETRY",
+     "containing_log_ids": [
+      "drive2-15m",
+      "drive3-15m",
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "retry": "P2"
+    },
+    {
+     "ts": "2026-11-23T16:19:49Z",
+     "log": "drive4-15m",
+     "kind": "retry",
+     "line": "2026-11-23T16:19:49Z aa006 P2-TRUNCATED-RETRY",
+     "containing_log_ids": [
+      "drive2-15m",
+      "drive3-15m",
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "retry": "P2"
+    },
+    {
+     "ts": "2026-11-23T16:19:49Z",
+     "log": "drive5-15m",
+     "kind": "retry",
+     "line": "2026-11-23T16:19:49Z aa006 P2-TRUNCATED-RETRY",
+     "containing_log_ids": [
+      "drive2-15m",
+      "drive3-15m",
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "retry": "P2"
+    },
+    {
+     "ts": "2026-11-23T16:23:05Z",
+     "log": "drive2-15m",
+     "kind": "pass",
+     "line": "2026-11-23T16:23:05Z aa006 PASS 15000000,1,14303810",
+     "containing_log_ids": [
+      "drive2-15m",
+      "drive3-15m",
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 1,
+     "nodes": 14303810
+    },
+    {
+     "ts": "2026-11-23T16:23:05Z",
+     "log": "drive2-15m",
+     "kind": "win-halt",
+     "line": "2026-11-23T16:23:05Z aa006 WIN-HALT",
+     "containing_log_ids": [
+      "drive2-15m",
+      "drive3-15m",
+      "drive4-15m",
+      "drive5-15m"
+     ]
+    },
+    {
+     "ts": "2026-11-23T16:23:05Z",
+     "log": "drive3-15m",
+     "kind": "pass",
+     "line": "2026-11-23T16:23:05Z aa006 PASS 15000000,1,14303810",
+     "containing_log_ids": [
+      "drive2-15m",
+      "drive3-15m",
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 1,
+     "nodes": 14303810
+    },
+    {
+     "ts": "2026-11-23T16:23:05Z",
+     "log": "drive3-15m",
+     "kind": "win-halt",
+     "line": "2026-11-23T16:23:05Z aa006 WIN-HALT",
+     "containing_log_ids": [
+      "drive2-15m",
+      "drive3-15m",
+      "drive4-15m",
+      "drive5-15m"
+     ]
+    },
+    {
+     "ts": "2026-11-23T16:23:05Z",
+     "log": "drive4-15m",
+     "kind": "pass",
+     "line": "2026-11-23T16:23:05Z aa006 PASS 15000000,1,14303810",
+     "containing_log_ids": [
+      "drive2-15m",
+      "drive3-15m",
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 1,
+     "nodes": 14303810
+    },
+    {
+     "ts": "2026-11-23T16:23:05Z",
+     "log": "drive4-15m",
+     "kind": "win-halt",
+     "line": "2026-11-23T16:23:05Z aa006 WIN-HALT",
+     "containing_log_ids": [
+      "drive2-15m",
+      "drive3-15m",
+      "drive4-15m",
+      "drive5-15m"
+     ]
+    },
+    {
+     "ts": "2026-11-23T16:23:05Z",
+     "log": "drive5-15m",
+     "kind": "pass",
+     "line": "2026-11-23T16:23:05Z aa006 PASS 15000000,1,14303810",
+     "containing_log_ids": [
+      "drive2-15m",
+      "drive3-15m",
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 1,
+     "nodes": 14303810
+    },
+    {
+     "ts": "2026-11-23T16:23:05Z",
+     "log": "drive5-15m",
+     "kind": "win-halt",
+     "line": "2026-11-23T16:23:05Z aa006 WIN-HALT",
+     "containing_log_ids": [
+      "drive2-15m",
+      "drive3-15m",
+      "drive4-15m",
+      "drive5-15m"
+     ]
+    }
+   ],
+   "thirdimpl": {
+    "state": "done",
+    "part": "CG",
+    "completion": "699a13bc",
+    "note": "re-takeover completion"
+   },
+   "est_crossimpl_2pass_nodes": null
+  },
+  {
+   "key_id": "aa007",
+   "s5_index": 135236,
+   "lo": "1171516445255794696",
+   "hi": "0",
+   "legal": 95,
+   "membership_class_count": 4,
+   "pinned_honest_label": "WIN",
+   "decisive": {
+    "ts": "2026-11-23T16:22:56Z",
+    "log": "drive2-15m",
+    "budget": 15000000,
+    "rc": 1,
+    "nodes": 13483540,
+    "line": "2026-11-23T16:22:56Z aa007 PASS 15000000,1,13483540",
+    "containing_log_ids": [
+     "drive2-15m",
+     "drive3-15m",
+     "drive4-15m",
+     "drive5-15m"
+    ]
+   },
+   "observations": [
+    {
+     "ts": "2026-11-23T16:19:49Z",
+     "log": "drive2-15m",
+     "kind": "retry",
+     "line": "2026-11-23T16:19:49Z aa007 P2-TRUNCATED-RETRY",
+     "containing_log_ids": [
+      "drive2-15m",
+      "drive3-15m",
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "retry": "P2"
+    },
+    {
+     "ts": "2026-11-23T16:19:49Z",
+     "log": "drive3-15m",
+     "kind": "retry",
+     "line": "2026-11-23T16:19:49Z aa007 P2-TRUNCATED-RETRY",
+     "containing_log_ids": [
+      "drive2-15m",
+      "drive3-15m",
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "retry": "P2"
+    },
+    {
+     "ts": "2026-11-23T16:19:49Z",
+     "log": "drive4-15m",
+     "kind": "retry",
+     "line": "2026-11-23T16:19:49Z aa007 P2-TRUNCATED-RETRY",
+     "containing_log_ids": [
+      "drive2-15m",
+      "drive3-15m",
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "retry": "P2"
+    },
+    {
+     "ts": "2026-11-23T16:19:49Z",
+     "log": "drive5-15m",
+     "kind": "retry",
+     "line": "2026-11-23T16:19:49Z aa007 P2-TRUNCATED-RETRY",
+     "containing_log_ids": [
+      "drive2-15m",
+      "drive3-15m",
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "retry": "P2"
+    },
+    {
+     "ts": "2026-11-23T16:22:56Z",
+     "log": "drive2-15m",
+     "kind": "pass",
+     "line": "2026-11-23T16:22:56Z aa007 PASS 15000000,1,13483540",
+     "containing_log_ids": [
+      "drive2-15m",
+      "drive3-15m",
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 1,
+     "nodes": 13483540
+    },
+    {
+     "ts": "2026-11-23T16:22:56Z",
+     "log": "drive2-15m",
+     "kind": "win-halt",
+     "line": "2026-11-23T16:22:56Z aa007 WIN-HALT",
+     "containing_log_ids": [
+      "drive2-15m",
+      "drive3-15m",
+      "drive4-15m",
+      "drive5-15m"
+     ]
+    },
+    {
+     "ts": "2026-11-23T16:22:56Z",
+     "log": "drive3-15m",
+     "kind": "pass",
+     "line": "2026-11-23T16:22:56Z aa007 PASS 15000000,1,13483540",
+     "containing_log_ids": [
+      "drive2-15m",
+      "drive3-15m",
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 1,
+     "nodes": 13483540
+    },
+    {
+     "ts": "2026-11-23T16:22:56Z",
+     "log": "drive3-15m",
+     "kind": "win-halt",
+     "line": "2026-11-23T16:22:56Z aa007 WIN-HALT",
+     "containing_log_ids": [
+      "drive2-15m",
+      "drive3-15m",
+      "drive4-15m",
+      "drive5-15m"
+     ]
+    },
+    {
+     "ts": "2026-11-23T16:22:56Z",
+     "log": "drive4-15m",
+     "kind": "pass",
+     "line": "2026-11-23T16:22:56Z aa007 PASS 15000000,1,13483540",
+     "containing_log_ids": [
+      "drive2-15m",
+      "drive3-15m",
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 1,
+     "nodes": 13483540
+    },
+    {
+     "ts": "2026-11-23T16:22:56Z",
+     "log": "drive4-15m",
+     "kind": "win-halt",
+     "line": "2026-11-23T16:22:56Z aa007 WIN-HALT",
+     "containing_log_ids": [
+      "drive2-15m",
+      "drive3-15m",
+      "drive4-15m",
+      "drive5-15m"
+     ]
+    },
+    {
+     "ts": "2026-11-23T16:22:56Z",
+     "log": "drive5-15m",
+     "kind": "pass",
+     "line": "2026-11-23T16:22:56Z aa007 PASS 15000000,1,13483540",
+     "containing_log_ids": [
+      "drive2-15m",
+      "drive3-15m",
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 1,
+     "nodes": 13483540
+    },
+    {
+     "ts": "2026-11-23T16:22:56Z",
+     "log": "drive5-15m",
+     "kind": "win-halt",
+     "line": "2026-11-23T16:22:56Z aa007 WIN-HALT",
+     "containing_log_ids": [
+      "drive2-15m",
+      "drive3-15m",
+      "drive4-15m",
+      "drive5-15m"
+     ]
+    }
+   ],
+   "thirdimpl": {
+    "state": "done",
+    "part": "CG",
+    "completion": "699a13bc",
+    "note": "re-takeover completion"
+   },
+   "est_crossimpl_2pass_nodes": null
+  },
+  {
+   "key_id": "aa008",
+   "s5_index": 140489,
+   "lo": "1171516445255794704",
+   "hi": "0",
+   "legal": 85,
+   "membership_class_count": 4,
+   "pinned_honest_label": "WIN",
+   "decisive": {
+    "ts": "2026-11-23T17:36:00Z",
+    "log": "drive3-15m",
+    "budget": 15000000,
+    "rc": 1,
+    "nodes": 5270340,
+    "line": "2026-11-23T17:36:00Z aa008 PASS 15000000,1,5270340",
+    "containing_log_ids": [
+     "drive3-15m",
+     "drive4-15m",
+     "drive5-15m"
+    ]
+   },
+   "observations": [
+    {
+     "ts": "2026-11-23T17:36:00Z",
+     "log": "drive3-15m",
+     "kind": "pass",
+     "line": "2026-11-23T17:36:00Z aa008 PASS 15000000,1,5270340",
+     "containing_log_ids": [
+      "drive3-15m",
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 1,
+     "nodes": 5270340
+    },
+    {
+     "ts": "2026-11-23T17:36:00Z",
+     "log": "drive3-15m",
+     "kind": "win-halt",
+     "line": "2026-11-23T17:36:00Z aa008 WIN-HALT",
+     "containing_log_ids": [
+      "drive3-15m",
+      "drive4-15m",
+      "drive5-15m"
+     ]
+    },
+    {
+     "ts": "2026-11-23T17:36:00Z",
+     "log": "drive4-15m",
+     "kind": "pass",
+     "line": "2026-11-23T17:36:00Z aa008 PASS 15000000,1,5270340",
+     "containing_log_ids": [
+      "drive3-15m",
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 1,
+     "nodes": 5270340
+    },
+    {
+     "ts": "2026-11-23T17:36:00Z",
+     "log": "drive4-15m",
+     "kind": "win-halt",
+     "line": "2026-11-23T17:36:00Z aa008 WIN-HALT",
+     "containing_log_ids": [
+      "drive3-15m",
+      "drive4-15m",
+      "drive5-15m"
+     ]
+    },
+    {
+     "ts": "2026-11-23T17:36:00Z",
+     "log": "drive5-15m",
+     "kind": "pass",
+     "line": "2026-11-23T17:36:00Z aa008 PASS 15000000,1,5270340",
+     "containing_log_ids": [
+      "drive3-15m",
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 1,
+     "nodes": 5270340
+    },
+    {
+     "ts": "2026-11-23T17:36:00Z",
+     "log": "drive5-15m",
+     "kind": "win-halt",
+     "line": "2026-11-23T17:36:00Z aa008 WIN-HALT",
+     "containing_log_ids": [
+      "drive3-15m",
+      "drive4-15m",
+      "drive5-15m"
+     ]
+    }
+   ],
+   "thirdimpl": {
+    "state": "done",
+    "part": "CM",
+    "completion": "2102800b"
+   },
+   "est_crossimpl_2pass_nodes": null
+  },
+  {
+   "key_id": "aa009",
+   "s5_index": 142299,
+   "lo": "1747977197559218176",
+   "hi": "0",
+   "legal": 91,
+   "membership_class_count": 4,
+   "pinned_honest_label": "WIN",
+   "decisive": {
+    "ts": "2026-11-23T17:36:22Z",
+    "log": "drive3-15m",
+    "budget": 15000000,
+    "rc": 1,
+    "nodes": 7319605,
+    "line": "2026-11-23T17:36:22Z aa009 PASS 15000000,1,7319605",
+    "containing_log_ids": [
+     "drive3-15m",
+     "drive4-15m",
+     "drive5-15m"
+    ]
+   },
+   "observations": [
+    {
+     "ts": "2026-11-23T17:36:22Z",
+     "log": "drive3-15m",
+     "kind": "pass",
+     "line": "2026-11-23T17:36:22Z aa009 PASS 15000000,1,7319605",
+     "containing_log_ids": [
+      "drive3-15m",
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 1,
+     "nodes": 7319605
+    },
+    {
+     "ts": "2026-11-23T17:36:22Z",
+     "log": "drive3-15m",
+     "kind": "win-halt",
+     "line": "2026-11-23T17:36:22Z aa009 WIN-HALT",
+     "containing_log_ids": [
+      "drive3-15m",
+      "drive4-15m",
+      "drive5-15m"
+     ]
+    },
+    {
+     "ts": "2026-11-23T17:36:22Z",
+     "log": "drive4-15m",
+     "kind": "pass",
+     "line": "2026-11-23T17:36:22Z aa009 PASS 15000000,1,7319605",
+     "containing_log_ids": [
+      "drive3-15m",
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 1,
+     "nodes": 7319605
+    },
+    {
+     "ts": "2026-11-23T17:36:22Z",
+     "log": "drive4-15m",
+     "kind": "win-halt",
+     "line": "2026-11-23T17:36:22Z aa009 WIN-HALT",
+     "containing_log_ids": [
+      "drive3-15m",
+      "drive4-15m",
+      "drive5-15m"
+     ]
+    },
+    {
+     "ts": "2026-11-23T17:36:22Z",
+     "log": "drive5-15m",
+     "kind": "pass",
+     "line": "2026-11-23T17:36:22Z aa009 PASS 15000000,1,7319605",
+     "containing_log_ids": [
+      "drive3-15m",
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 1,
+     "nodes": 7319605
+    },
+    {
+     "ts": "2026-11-23T17:36:22Z",
+     "log": "drive5-15m",
+     "kind": "win-halt",
+     "line": "2026-11-23T17:36:22Z aa009 WIN-HALT",
+     "containing_log_ids": [
+      "drive3-15m",
+      "drive4-15m",
+      "drive5-15m"
+     ]
+    }
+   ],
+   "thirdimpl": {
+    "state": "done",
+    "part": "CM",
+    "completion": "2102800b"
+   },
+   "est_crossimpl_2pass_nodes": null
+  },
+  {
+   "key_id": "aa010",
+   "s5_index": 144019,
+   "lo": "1171516445255794720",
+   "hi": "0",
+   "legal": 86,
+   "membership_class_count": 3,
+   "pinned_honest_label": "WIN",
+   "decisive": {
+    "ts": "2026-11-23T17:45:22Z",
+    "log": "drive4-15m",
+    "budget": 15000000,
+    "rc": 1,
+    "nodes": 8882182,
+    "line": "2026-11-23T17:45:22Z aa010 PASS 15000000,1,8882182",
+    "containing_log_ids": [
+     "drive4-15m",
+     "drive5-15m"
+    ]
+   },
+   "observations": [
+    {
+     "ts": "2026-11-23T17:45:22Z",
+     "log": "drive4-15m",
+     "kind": "pass",
+     "line": "2026-11-23T17:45:22Z aa010 PASS 15000000,1,8882182",
+     "containing_log_ids": [
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 1,
+     "nodes": 8882182
+    },
+    {
+     "ts": "2026-11-23T17:45:22Z",
+     "log": "drive4-15m",
+     "kind": "win-halt",
+     "line": "2026-11-23T17:45:22Z aa010 WIN-HALT",
+     "containing_log_ids": [
+      "drive4-15m",
+      "drive5-15m"
+     ]
+    },
+    {
+     "ts": "2026-11-23T17:45:22Z",
+     "log": "drive5-15m",
+     "kind": "pass",
+     "line": "2026-11-23T17:45:22Z aa010 PASS 15000000,1,8882182",
+     "containing_log_ids": [
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 1,
+     "nodes": 8882182
+    },
+    {
+     "ts": "2026-11-23T17:45:22Z",
+     "log": "drive5-15m",
+     "kind": "win-halt",
+     "line": "2026-11-23T17:45:22Z aa010 WIN-HALT",
+     "containing_log_ids": [
+      "drive4-15m",
+      "drive5-15m"
+     ]
+    }
+   ],
+   "thirdimpl": {
+    "state": "open"
+   },
+   "est_crossimpl_2pass_nodes": 20961950
+  },
+  {
+   "key_id": "aa011",
+   "s5_index": 147632,
+   "lo": "1171516445255796736",
+   "hi": "0",
+   "legal": 90,
+   "membership_class_count": 4,
+   "pinned_honest_label": "WIN",
+   "decisive": {
+    "ts": "2026-11-23T17:45:59Z",
+    "log": "drive4-15m",
+    "budget": 15000000,
+    "rc": 1,
+    "nodes": 12424953,
+    "line": "2026-11-23T17:45:59Z aa011 PASS 15000000,1,12424953",
+    "containing_log_ids": [
+     "drive4-15m",
+     "drive5-15m"
+    ]
+   },
+   "observations": [
+    {
+     "ts": "2026-11-23T17:45:59Z",
+     "log": "drive4-15m",
+     "kind": "pass",
+     "line": "2026-11-23T17:45:59Z aa011 PASS 15000000,1,12424953",
+     "containing_log_ids": [
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 1,
+     "nodes": 12424953
+    },
+    {
+     "ts": "2026-11-23T17:45:59Z",
+     "log": "drive4-15m",
+     "kind": "win-halt",
+     "line": "2026-11-23T17:45:59Z aa011 WIN-HALT",
+     "containing_log_ids": [
+      "drive4-15m",
+      "drive5-15m"
+     ]
+    },
+    {
+     "ts": "2026-11-23T17:45:59Z",
+     "log": "drive5-15m",
+     "kind": "pass",
+     "line": "2026-11-23T17:45:59Z aa011 PASS 15000000,1,12424953",
+     "containing_log_ids": [
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 1,
+     "nodes": 12424953
+    },
+    {
+     "ts": "2026-11-23T17:45:59Z",
+     "log": "drive5-15m",
+     "kind": "win-halt",
+     "line": "2026-11-23T17:45:59Z aa011 WIN-HALT",
+     "containing_log_ids": [
+      "drive4-15m",
+      "drive5-15m"
+     ]
+    }
+   ],
+   "thirdimpl": {
+    "state": "open"
+   },
+   "est_crossimpl_2pass_nodes": 29322889
+  },
+  {
+   "key_id": "aa012",
+   "s5_index": 151960,
+   "lo": "1171516445255798784",
+   "hi": "0",
+   "legal": 81,
+   "membership_class_count": 4,
+   "pinned_honest_label": "WIN",
+   "decisive": {
+    "ts": "2026-11-23T17:47:44Z",
+    "log": "drive4-15m",
+    "budget": 15000000,
+    "rc": 1,
+    "nodes": 4994213,
+    "line": "2026-11-23T17:47:44Z aa012 PASS 15000000,1,4994213",
+    "containing_log_ids": [
+     "drive4-15m",
+     "drive5-15m"
+    ]
+   },
+   "observations": [
+    {
+     "ts": "2026-11-23T17:47:44Z",
+     "log": "drive4-15m",
+     "kind": "pass",
+     "line": "2026-11-23T17:47:44Z aa012 PASS 15000000,1,4994213",
+     "containing_log_ids": [
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 1,
+     "nodes": 4994213
+    },
+    {
+     "ts": "2026-11-23T17:47:44Z",
+     "log": "drive4-15m",
+     "kind": "win-halt",
+     "line": "2026-11-23T17:47:44Z aa012 WIN-HALT",
+     "containing_log_ids": [
+      "drive4-15m",
+      "drive5-15m"
+     ]
+    },
+    {
+     "ts": "2026-11-23T17:47:44Z",
+     "log": "drive5-15m",
+     "kind": "pass",
+     "line": "2026-11-23T17:47:44Z aa012 PASS 15000000,1,4994213",
+     "containing_log_ids": [
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 1,
+     "nodes": 4994213
+    },
+    {
+     "ts": "2026-11-23T17:47:44Z",
+     "log": "drive5-15m",
+     "kind": "win-halt",
+     "line": "2026-11-23T17:47:44Z aa012 WIN-HALT",
+     "containing_log_ids": [
+      "drive4-15m",
+      "drive5-15m"
+     ]
+    }
+   ],
+   "thirdimpl": {
+    "state": "open"
+   },
+   "est_crossimpl_2pass_nodes": 11786343
+  },
+  {
+   "key_id": "aa013",
+   "s5_index": 156182,
+   "lo": "1171516445255802880",
+   "hi": "0",
+   "legal": 87,
+   "membership_class_count": 4,
+   "pinned_honest_label": "WIN",
+   "decisive": {
+    "ts": "2026-11-23T17:48:22Z",
+    "log": "drive4-15m",
+    "budget": 15000000,
+    "rc": 1,
+    "nodes": 8317071,
+    "line": "2026-11-23T17:48:22Z aa013 PASS 15000000,1,8317071",
+    "containing_log_ids": [
+     "drive4-15m",
+     "drive5-15m"
+    ]
+   },
+   "observations": [
+    {
+     "ts": "2026-11-23T17:48:22Z",
+     "log": "drive4-15m",
+     "kind": "pass",
+     "line": "2026-11-23T17:48:22Z aa013 PASS 15000000,1,8317071",
+     "containing_log_ids": [
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 1,
+     "nodes": 8317071
+    },
+    {
+     "ts": "2026-11-23T17:48:22Z",
+     "log": "drive4-15m",
+     "kind": "win-halt",
+     "line": "2026-11-23T17:48:22Z aa013 WIN-HALT",
+     "containing_log_ids": [
+      "drive4-15m",
+      "drive5-15m"
+     ]
+    },
+    {
+     "ts": "2026-11-23T17:48:22Z",
+     "log": "drive5-15m",
+     "kind": "pass",
+     "line": "2026-11-23T17:48:22Z aa013 PASS 15000000,1,8317071",
+     "containing_log_ids": [
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 1,
+     "nodes": 8317071
+    },
+    {
+     "ts": "2026-11-23T17:48:22Z",
+     "log": "drive5-15m",
+     "kind": "win-halt",
+     "line": "2026-11-23T17:48:22Z aa013 WIN-HALT",
+     "containing_log_ids": [
+      "drive4-15m",
+      "drive5-15m"
+     ]
+    }
+   ],
+   "thirdimpl": {
+    "state": "open"
+   },
+   "est_crossimpl_2pass_nodes": 19628288
+  },
+  {
+   "key_id": "aa014",
+   "s5_index": 160350,
+   "lo": "1171516445255811072",
+   "hi": "0",
+   "legal": 88,
+   "membership_class_count": 4,
+   "pinned_honest_label": "WIN",
+   "decisive": {
+    "ts": "2026-11-23T17:50:43Z",
+    "log": "drive4-15m",
+    "budget": 15000000,
+    "rc": 1,
+    "nodes": 7263370,
+    "line": "2026-11-23T17:50:43Z aa014 PASS 15000000,1,7263370",
+    "containing_log_ids": [
+     "drive4-15m",
+     "drive5-15m"
+    ]
+   },
+   "observations": [
+    {
+     "ts": "2026-11-23T17:50:43Z",
+     "log": "drive4-15m",
+     "kind": "pass",
+     "line": "2026-11-23T17:50:43Z aa014 PASS 15000000,1,7263370",
+     "containing_log_ids": [
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 1,
+     "nodes": 7263370
+    },
+    {
+     "ts": "2026-11-23T17:50:43Z",
+     "log": "drive4-15m",
+     "kind": "win-halt",
+     "line": "2026-11-23T17:50:43Z aa014 WIN-HALT",
+     "containing_log_ids": [
+      "drive4-15m",
+      "drive5-15m"
+     ]
+    },
+    {
+     "ts": "2026-11-23T17:50:43Z",
+     "log": "drive5-15m",
+     "kind": "pass",
+     "line": "2026-11-23T17:50:43Z aa014 PASS 15000000,1,7263370",
+     "containing_log_ids": [
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 1,
+     "nodes": 7263370
+    },
+    {
+     "ts": "2026-11-23T17:50:43Z",
+     "log": "drive5-15m",
+     "kind": "win-halt",
+     "line": "2026-11-23T17:50:43Z aa014 WIN-HALT",
+     "containing_log_ids": [
+      "drive4-15m",
+      "drive5-15m"
+     ]
+    }
+   ],
+   "thirdimpl": {
+    "state": "open"
+   },
+   "est_crossimpl_2pass_nodes": 17141553
+  },
+  {
+   "key_id": "aa015",
+   "s5_index": 164462,
+   "lo": "1171516445255827456",
+   "hi": "0",
+   "legal": 89,
+   "membership_class_count": 4,
+   "pinned_honest_label": "LOSS",
+   "decisive": {
+    "ts": "2026-11-23T17:50:36Z",
+    "log": "drive4-15m",
+    "budget": 15000000,
+    "rc": 2,
+    "nodes": 6152494,
+    "line": "2026-11-23T17:50:36Z aa015 PASS 15000000,2,6152494",
+    "containing_log_ids": [
+     "drive4-15m",
+     "drive5-15m"
+    ]
+   },
+   "observations": [
+    {
+     "ts": "2026-11-23T17:50:36Z",
+     "log": "drive4-15m",
+     "kind": "pass",
+     "line": "2026-11-23T17:50:36Z aa015 PASS 15000000,2,6152494",
+     "containing_log_ids": [
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 2,
+     "nodes": 6152494
+    },
+    {
+     "ts": "2026-11-23T17:50:36Z",
+     "log": "drive5-15m",
+     "kind": "pass",
+     "line": "2026-11-23T17:50:36Z aa015 PASS 15000000,2,6152494",
+     "containing_log_ids": [
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 2,
+     "nodes": 6152494
+    }
+   ],
+   "thirdimpl": {
+    "state": "open"
+   },
+   "loss_adoption": {
+    "part": "CO",
+    "completion": "fb9a6755"
+   },
+   "est_crossimpl_2pass_nodes": 14519886
+  },
+  {
+   "key_id": "aa016",
+   "s5_index": 167491,
+   "lo": "1171516445255860224",
+   "hi": "0",
+   "legal": 78,
+   "membership_class_count": 3,
+   "pinned_honest_label": "WIN",
+   "decisive": {
+    "ts": "2026-11-23T17:51:36Z",
+    "log": "drive4-15m",
+    "budget": 15000000,
+    "rc": 1,
+    "nodes": 2621847,
+    "line": "2026-11-23T17:51:36Z aa016 PASS 15000000,1,2621847",
+    "containing_log_ids": [
+     "drive4-15m",
+     "drive5-15m"
+    ]
+   },
+   "observations": [
+    {
+     "ts": "2026-11-23T17:51:36Z",
+     "log": "drive4-15m",
+     "kind": "pass",
+     "line": "2026-11-23T17:51:36Z aa016 PASS 15000000,1,2621847",
+     "containing_log_ids": [
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 1,
+     "nodes": 2621847
+    },
+    {
+     "ts": "2026-11-23T17:51:36Z",
+     "log": "drive4-15m",
+     "kind": "win-halt",
+     "line": "2026-11-23T17:51:36Z aa016 WIN-HALT",
+     "containing_log_ids": [
+      "drive4-15m",
+      "drive5-15m"
+     ]
+    },
+    {
+     "ts": "2026-11-23T17:51:36Z",
+     "log": "drive5-15m",
+     "kind": "pass",
+     "line": "2026-11-23T17:51:36Z aa016 PASS 15000000,1,2621847",
+     "containing_log_ids": [
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 1,
+     "nodes": 2621847
+    },
+    {
+     "ts": "2026-11-23T17:51:36Z",
+     "log": "drive5-15m",
+     "kind": "win-halt",
+     "line": "2026-11-23T17:51:36Z aa016 WIN-HALT",
+     "containing_log_ids": [
+      "drive4-15m",
+      "drive5-15m"
+     ]
+    }
+   ],
+   "thirdimpl": {
+    "state": "open"
+   },
+   "est_crossimpl_2pass_nodes": 6187559
+  },
+  {
+   "key_id": "aa017",
+   "s5_index": 170101,
+   "lo": "1171516445259988992",
+   "hi": "0",
+   "legal": 92,
+   "membership_class_count": 4,
+   "pinned_honest_label": "LOSS",
+   "decisive": {
+    "ts": "2026-11-23T17:53:14Z",
+    "log": "drive4-15m",
+    "budget": 15000000,
+    "rc": 2,
+    "nodes": 11446358,
+    "line": "2026-11-23T17:53:14Z aa017 PASS 15000000,2,11446358",
+    "containing_log_ids": [
+     "drive4-15m",
+     "drive5-15m"
+    ]
+   },
+   "observations": [
+    {
+     "ts": "2026-11-23T17:53:14Z",
+     "log": "drive4-15m",
+     "kind": "pass",
+     "line": "2026-11-23T17:53:14Z aa017 PASS 15000000,2,11446358",
+     "containing_log_ids": [
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 2,
+     "nodes": 11446358
+    },
+    {
+     "ts": "2026-11-23T17:53:14Z",
+     "log": "drive5-15m",
+     "kind": "pass",
+     "line": "2026-11-23T17:53:14Z aa017 PASS 15000000,2,11446358",
+     "containing_log_ids": [
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 2,
+     "nodes": 11446358
+    }
+   ],
+   "thirdimpl": {
+    "state": "open"
+   },
+   "loss_adoption": {
+    "part": "CO",
+    "completion": "fb9a6755"
+   },
+   "est_crossimpl_2pass_nodes": 27013405
+  },
+  {
+   "key_id": "aa018",
+   "s5_index": 173654,
+   "lo": "1171516445264183296",
+   "hi": "0",
+   "legal": 91,
+   "membership_class_count": 4,
+   "pinned_honest_label": "LOSS",
+   "decisive": {
+    "ts": "2026-11-23T17:53:21Z",
+    "log": "drive4-15m",
+    "budget": 15000000,
+    "rc": 2,
+    "nodes": 214968,
+    "line": "2026-11-23T17:53:21Z aa018 PASS 15000000,2,214968",
+    "containing_log_ids": [
+     "drive4-15m",
+     "drive5-15m"
+    ]
+   },
+   "observations": [
+    {
+     "ts": "2026-11-23T17:53:21Z",
+     "log": "drive4-15m",
+     "kind": "pass",
+     "line": "2026-11-23T17:53:21Z aa018 PASS 15000000,2,214968",
+     "containing_log_ids": [
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 2,
+     "nodes": 214968
+    },
+    {
+     "ts": "2026-11-23T17:53:21Z",
+     "log": "drive5-15m",
+     "kind": "pass",
+     "line": "2026-11-23T17:53:21Z aa018 PASS 15000000,2,214968",
+     "containing_log_ids": [
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 2,
+     "nodes": 214968
+    }
+   ],
+   "thirdimpl": {
+    "state": "open"
+   },
+   "loss_adoption": {
+    "part": "CO",
+    "completion": "fb9a6755"
+   },
+   "est_crossimpl_2pass_nodes": 507324
+  },
+  {
+   "key_id": "aa019",
+   "s5_index": 183025,
+   "lo": "1171516445322903552",
+   "hi": "0",
+   "legal": 86,
+   "membership_class_count": 4,
+   "pinned_honest_label": "WIN",
+   "decisive": {
+    "ts": "2026-11-23T17:54:40Z",
+    "log": "drive4-15m",
+    "budget": 15000000,
+    "rc": 1,
+    "nodes": 7967030,
+    "line": "2026-11-23T17:54:40Z aa019 PASS 15000000,1,7967030",
+    "containing_log_ids": [
+     "drive4-15m",
+     "drive5-15m"
+    ]
+   },
+   "observations": [
+    {
+     "ts": "2026-11-23T17:54:40Z",
+     "log": "drive4-15m",
+     "kind": "pass",
+     "line": "2026-11-23T17:54:40Z aa019 PASS 15000000,1,7967030",
+     "containing_log_ids": [
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 1,
+     "nodes": 7967030
+    },
+    {
+     "ts": "2026-11-23T17:54:40Z",
+     "log": "drive4-15m",
+     "kind": "win-halt",
+     "line": "2026-11-23T17:54:40Z aa019 WIN-HALT",
+     "containing_log_ids": [
+      "drive4-15m",
+      "drive5-15m"
+     ]
+    },
+    {
+     "ts": "2026-11-23T17:54:40Z",
+     "log": "drive5-15m",
+     "kind": "pass",
+     "line": "2026-11-23T17:54:40Z aa019 PASS 15000000,1,7967030",
+     "containing_log_ids": [
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 1,
+     "nodes": 7967030
+    },
+    {
+     "ts": "2026-11-23T17:54:40Z",
+     "log": "drive5-15m",
+     "kind": "win-halt",
+     "line": "2026-11-23T17:54:40Z aa019 WIN-HALT",
+     "containing_log_ids": [
+      "drive4-15m",
+      "drive5-15m"
+     ]
+    }
+   ],
+   "thirdimpl": {
+    "state": "open"
+   },
+   "est_crossimpl_2pass_nodes": 18802191
+  },
+  {
+   "key_id": "aa020",
+   "s5_index": 185891,
+   "lo": "1171516453845729280",
+   "hi": "0",
+   "legal": 90,
+   "membership_class_count": 4,
+   "pinned_honest_label": "WIN",
+   "decisive": {
+    "ts": "2026-11-23T17:57:42Z",
+    "log": "drive4-15m",
+    "budget": 15000000,
+    "rc": 1,
+    "nodes": 8432253,
+    "line": "2026-11-23T17:57:42Z aa020 PASS 15000000,1,8432253",
+    "containing_log_ids": [
+     "drive4-15m",
+     "drive5-15m"
+    ]
+   },
+   "observations": [
+    {
+     "ts": "2026-11-23T17:57:42Z",
+     "log": "drive4-15m",
+     "kind": "pass",
+     "line": "2026-11-23T17:57:42Z aa020 PASS 15000000,1,8432253",
+     "containing_log_ids": [
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 1,
+     "nodes": 8432253
+    },
+    {
+     "ts": "2026-11-23T17:57:42Z",
+     "log": "drive4-15m",
+     "kind": "win-halt",
+     "line": "2026-11-23T17:57:42Z aa020 WIN-HALT",
+     "containing_log_ids": [
+      "drive4-15m",
+      "drive5-15m"
+     ]
+    },
+    {
+     "ts": "2026-11-23T17:57:42Z",
+     "log": "drive5-15m",
+     "kind": "pass",
+     "line": "2026-11-23T17:57:42Z aa020 PASS 15000000,1,8432253",
+     "containing_log_ids": [
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 1,
+     "nodes": 8432253
+    },
+    {
+     "ts": "2026-11-23T17:57:42Z",
+     "log": "drive5-15m",
+     "kind": "win-halt",
+     "line": "2026-11-23T17:57:42Z aa020 WIN-HALT",
+     "containing_log_ids": [
+      "drive4-15m",
+      "drive5-15m"
+     ]
+    }
+   ],
+   "thirdimpl": {
+    "state": "open"
+   },
+   "est_crossimpl_2pass_nodes": 19900117
+  },
+  {
+   "key_id": "aa021",
+   "s5_index": 188751,
+   "lo": "1171516462435663872",
+   "hi": "0",
+   "legal": 90,
+   "membership_class_count": 4,
+   "pinned_honest_label": "WIN",
+   "decisive": {
+    "ts": "2026-11-23T23:35:29Z",
+    "log": "cs-25m",
+    "budget": 25000000,
+    "rc": 1,
+    "nodes": 22942323,
+    "line": "2026-11-23T23:35:29Z aa021 PASS 25000000,1,22942323",
+    "containing_log_ids": [
+     "cs-25m"
+    ]
+   },
+   "observations": [
+    {
+     "ts": "2026-11-23T17:58:44Z",
+     "log": "drive4-15m",
+     "kind": "pass",
+     "line": "2026-11-23T17:58:44Z aa021 PASS 15000000,0,15000000",
+     "containing_log_ids": [
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 0,
+     "nodes": 15000000
+    },
+    {
+     "ts": "2026-11-23T17:58:44Z",
+     "log": "drive4-15m",
+     "kind": "exhausted",
+     "line": "2026-11-23T17:58:44Z aa021 EXHAUSTED 15000000,0,15000000",
+     "containing_log_ids": [
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 0,
+     "nodes": 15000000
+    },
+    {
+     "ts": "2026-11-23T17:58:44Z",
+     "log": "drive5-15m",
+     "kind": "pass",
+     "line": "2026-11-23T17:58:44Z aa021 PASS 15000000,0,15000000",
+     "containing_log_ids": [
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 0,
+     "nodes": 15000000
+    },
+    {
+     "ts": "2026-11-23T17:58:44Z",
+     "log": "drive5-15m",
+     "kind": "exhausted",
+     "line": "2026-11-23T17:58:44Z aa021 EXHAUSTED 15000000,0,15000000",
+     "containing_log_ids": [
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 0,
+     "nodes": 15000000
+    },
+    {
+     "ts": "2026-11-23T22:48:17Z",
+     "log": "cq-20m",
+     "kind": "pass",
+     "line": "2026-11-23T22:48:17Z aa021 PASS 20000000,0,20000000",
+     "containing_log_ids": [
+      "cq-20m"
+     ],
+     "budget": 20000000,
+     "rc": 0,
+     "nodes": 20000000
+    },
+    {
+     "ts": "2026-11-23T22:48:17Z",
+     "log": "cq-20m",
+     "kind": "exhausted",
+     "line": "2026-11-23T22:48:17Z aa021 EXHAUSTED 20000000,0,20000000",
+     "containing_log_ids": [
+      "cq-20m"
+     ],
+     "budget": 20000000,
+     "rc": 0,
+     "nodes": 20000000
+    },
+    {
+     "ts": "2026-11-23T23:35:29Z",
+     "log": "cs-25m",
+     "kind": "pass",
+     "line": "2026-11-23T23:35:29Z aa021 PASS 25000000,1,22942323",
+     "containing_log_ids": [
+      "cs-25m"
+     ],
+     "budget": 25000000,
+     "rc": 1,
+     "nodes": 22942323
+    },
+    {
+     "ts": "2026-11-23T23:35:29Z",
+     "log": "cs-25m",
+     "kind": "win-halt",
+     "line": "2026-11-23T23:35:29Z aa021 WIN-HALT",
+     "containing_log_ids": [
+      "cs-25m"
+     ]
+    }
+   ],
+   "thirdimpl": {
+    "state": "open"
+   },
+   "est_crossimpl_2pass_nodes": 54143882
+  },
+  {
+   "key_id": "aa022",
+   "s5_index": 191399,
+   "lo": "1171516479615533056",
+   "hi": "0",
+   "legal": 87,
+   "membership_class_count": 4,
+   "pinned_honest_label": "WIN",
+   "decisive": {
+    "ts": "2026-11-23T18:02:11Z",
+    "log": "drive4-15m",
+    "budget": 15000000,
+    "rc": 1,
+    "nodes": 14044375,
+    "line": "2026-11-23T18:02:11Z aa022 PASS 15000000,1,14044375",
+    "containing_log_ids": [
+     "drive4-15m",
+     "drive5-15m"
+    ]
+   },
+   "observations": [
+    {
+     "ts": "2026-11-23T18:02:11Z",
+     "log": "drive4-15m",
+     "kind": "pass",
+     "line": "2026-11-23T18:02:11Z aa022 PASS 15000000,1,14044375",
+     "containing_log_ids": [
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 1,
+     "nodes": 14044375
+    },
+    {
+     "ts": "2026-11-23T18:02:11Z",
+     "log": "drive4-15m",
+     "kind": "win-halt",
+     "line": "2026-11-23T18:02:11Z aa022 WIN-HALT",
+     "containing_log_ids": [
+      "drive4-15m",
+      "drive5-15m"
+     ]
+    },
+    {
+     "ts": "2026-11-23T18:02:11Z",
+     "log": "drive5-15m",
+     "kind": "pass",
+     "line": "2026-11-23T18:02:11Z aa022 PASS 15000000,1,14044375",
+     "containing_log_ids": [
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 1,
+     "nodes": 14044375
+    },
+    {
+     "ts": "2026-11-23T18:02:11Z",
+     "log": "drive5-15m",
+     "kind": "win-halt",
+     "line": "2026-11-23T18:02:11Z aa022 WIN-HALT",
+     "containing_log_ids": [
+      "drive4-15m",
+      "drive5-15m"
+     ]
+    }
+   ],
+   "thirdimpl": {
+    "state": "open"
+   },
+   "est_crossimpl_2pass_nodes": 33144725
+  },
+  {
+   "key_id": "aa023",
+   "s5_index": 193820,
+   "lo": "1171516513975271424",
+   "hi": "0",
+   "legal": 84,
+   "membership_class_count": 4,
+   "pinned_honest_label": "LOSS",
+   "decisive": {
+    "ts": "2026-11-23T18:00:30Z",
+    "log": "drive4-15m",
+    "budget": 15000000,
+    "rc": 2,
+    "nodes": 5000770,
+    "line": "2026-11-23T18:00:30Z aa023 PASS 15000000,2,5000770",
+    "containing_log_ids": [
+     "drive4-15m",
+     "drive5-15m"
+    ]
+   },
+   "observations": [
+    {
+     "ts": "2026-11-23T18:00:30Z",
+     "log": "drive4-15m",
+     "kind": "pass",
+     "line": "2026-11-23T18:00:30Z aa023 PASS 15000000,2,5000770",
+     "containing_log_ids": [
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 2,
+     "nodes": 5000770
+    },
+    {
+     "ts": "2026-11-23T18:00:30Z",
+     "log": "drive5-15m",
+     "kind": "pass",
+     "line": "2026-11-23T18:00:30Z aa023 PASS 15000000,2,5000770",
+     "containing_log_ids": [
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 2,
+     "nodes": 5000770
+    }
+   ],
+   "thirdimpl": {
+    "state": "open"
+   },
+   "loss_adoption": {
+    "part": "CO",
+    "completion": "fb9a6755"
+   },
+   "est_crossimpl_2pass_nodes": 11801817
+  },
+  {
+   "key_id": "aa024",
+   "s5_index": 196053,
+   "lo": "1171516582694748160",
+   "hi": "0",
+   "legal": 88,
+   "membership_class_count": 4,
+   "pinned_honest_label": "LOSS",
+   "decisive": {
+    "ts": "2026-11-23T18:03:32Z",
+    "log": "drive4-15m",
+    "budget": 15000000,
+    "rc": 2,
+    "nodes": 5003631,
+    "line": "2026-11-23T18:03:32Z aa024 PASS 15000000,2,5003631",
+    "containing_log_ids": [
+     "drive4-15m",
+     "drive5-15m"
+    ]
+   },
+   "observations": [
+    {
+     "ts": "2026-11-23T18:03:32Z",
+     "log": "drive4-15m",
+     "kind": "pass",
+     "line": "2026-11-23T18:03:32Z aa024 PASS 15000000,2,5003631",
+     "containing_log_ids": [
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 2,
+     "nodes": 5003631
+    },
+    {
+     "ts": "2026-11-23T18:03:32Z",
+     "log": "drive5-15m",
+     "kind": "pass",
+     "line": "2026-11-23T18:03:32Z aa024 PASS 15000000,2,5003631",
+     "containing_log_ids": [
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 2,
+     "nodes": 5003631
+    }
+   ],
+   "thirdimpl": {
+    "state": "open"
+   },
+   "loss_adoption": {
+    "part": "CO",
+    "completion": "fb9a6755"
+   },
+   "est_crossimpl_2pass_nodes": 11808569
+  },
+  {
+   "key_id": "aa025",
+   "s5_index": 198223,
+   "lo": "1171516720133701632",
+   "hi": "0",
+   "legal": 80,
+   "membership_class_count": 3,
+   "pinned_honest_label": "WIN",
+   "decisive": {
+    "ts": "2026-11-23T18:03:12Z",
+    "log": "drive4-15m",
+    "budget": 15000000,
+    "rc": 1,
+    "nodes": 3056950,
+    "line": "2026-11-23T18:03:12Z aa025 PASS 15000000,1,3056950",
+    "containing_log_ids": [
+     "drive4-15m",
+     "drive5-15m"
+    ]
+   },
+   "observations": [
+    {
+     "ts": "2026-11-23T18:03:12Z",
+     "log": "drive4-15m",
+     "kind": "pass",
+     "line": "2026-11-23T18:03:12Z aa025 PASS 15000000,1,3056950",
+     "containing_log_ids": [
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 1,
+     "nodes": 3056950
+    },
+    {
+     "ts": "2026-11-23T18:03:12Z",
+     "log": "drive4-15m",
+     "kind": "win-halt",
+     "line": "2026-11-23T18:03:12Z aa025 WIN-HALT",
+     "containing_log_ids": [
+      "drive4-15m",
+      "drive5-15m"
+     ]
+    },
+    {
+     "ts": "2026-11-23T18:03:12Z",
+     "log": "drive5-15m",
+     "kind": "pass",
+     "line": "2026-11-23T18:03:12Z aa025 PASS 15000000,1,3056950",
+     "containing_log_ids": [
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 1,
+     "nodes": 3056950
+    },
+    {
+     "ts": "2026-11-23T18:03:12Z",
+     "log": "drive5-15m",
+     "kind": "win-halt",
+     "line": "2026-11-23T18:03:12Z aa025 WIN-HALT",
+     "containing_log_ids": [
+      "drive4-15m",
+      "drive5-15m"
+     ]
+    }
+   ],
+   "thirdimpl": {
+    "state": "open"
+   },
+   "est_crossimpl_2pass_nodes": 7214402
+  },
+  {
+   "key_id": "aa026",
+   "s5_index": 199711,
+   "lo": "1171516445255794688",
+   "hi": "32",
+   "legal": 88,
+   "membership_class_count": 4,
+   "pinned_honest_label": "WIN",
+   "decisive": {
+    "ts": "2026-11-23T18:06:17Z",
+    "log": "drive4-15m",
+    "budget": 15000000,
+    "rc": 1,
+    "nodes": 11019409,
+    "line": "2026-11-23T18:06:17Z aa026 PASS 15000000,1,11019409",
+    "containing_log_ids": [
+     "drive4-15m",
+     "drive5-15m"
+    ]
+   },
+   "observations": [
+    {
+     "ts": "2026-11-23T18:06:17Z",
+     "log": "drive4-15m",
+     "kind": "pass",
+     "line": "2026-11-23T18:06:17Z aa026 PASS 15000000,1,11019409",
+     "containing_log_ids": [
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 1,
+     "nodes": 11019409
+    },
+    {
+     "ts": "2026-11-23T18:06:17Z",
+     "log": "drive4-15m",
+     "kind": "win-halt",
+     "line": "2026-11-23T18:06:17Z aa026 WIN-HALT",
+     "containing_log_ids": [
+      "drive4-15m",
+      "drive5-15m"
+     ]
+    },
+    {
+     "ts": "2026-11-23T18:06:17Z",
+     "log": "drive5-15m",
+     "kind": "pass",
+     "line": "2026-11-23T18:06:17Z aa026 PASS 15000000,1,11019409",
+     "containing_log_ids": [
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 1,
+     "nodes": 11019409
+    },
+    {
+     "ts": "2026-11-23T18:06:17Z",
+     "log": "drive5-15m",
+     "kind": "win-halt",
+     "line": "2026-11-23T18:06:17Z aa026 WIN-HALT",
+     "containing_log_ids": [
+      "drive4-15m",
+      "drive5-15m"
+     ]
+    }
+   ],
+   "thirdimpl": {
+    "state": "open"
+   },
+   "est_crossimpl_2pass_nodes": 26005805
+  },
+  {
+   "key_id": "aa027",
+   "s5_index": 199712,
+   "lo": "1171516445255794688",
+   "hi": "64",
+   "legal": 81,
+   "membership_class_count": 3,
+   "pinned_honest_label": "WIN",
+   "decisive": {
+    "ts": "2026-11-23T18:05:12Z",
+    "log": "drive4-15m",
+    "budget": 15000000,
+    "rc": 1,
+    "nodes": 4860191,
+    "line": "2026-11-23T18:05:12Z aa027 PASS 15000000,1,4860191",
+    "containing_log_ids": [
+     "drive4-15m",
+     "drive5-15m"
+    ]
+   },
+   "observations": [
+    {
+     "ts": "2026-11-23T18:05:12Z",
+     "log": "drive4-15m",
+     "kind": "pass",
+     "line": "2026-11-23T18:05:12Z aa027 PASS 15000000,1,4860191",
+     "containing_log_ids": [
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 1,
+     "nodes": 4860191
+    },
+    {
+     "ts": "2026-11-23T18:05:12Z",
+     "log": "drive4-15m",
+     "kind": "win-halt",
+     "line": "2026-11-23T18:05:12Z aa027 WIN-HALT",
+     "containing_log_ids": [
+      "drive4-15m",
+      "drive5-15m"
+     ]
+    },
+    {
+     "ts": "2026-11-23T18:05:12Z",
+     "log": "drive5-15m",
+     "kind": "pass",
+     "line": "2026-11-23T18:05:12Z aa027 PASS 15000000,1,4860191",
+     "containing_log_ids": [
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 1,
+     "nodes": 4860191
+    },
+    {
+     "ts": "2026-11-23T18:05:12Z",
+     "log": "drive5-15m",
+     "kind": "win-halt",
+     "line": "2026-11-23T18:05:12Z aa027 WIN-HALT",
+     "containing_log_ids": [
+      "drive4-15m",
+      "drive5-15m"
+     ]
+    }
+   ],
+   "thirdimpl": {
+    "state": "open"
+   },
+   "est_crossimpl_2pass_nodes": 11470051
+  },
+  {
+   "key_id": "aa028",
+   "s5_index": 199713,
+   "lo": "1152921504606879744",
+   "hi": "4228",
+   "legal": 95,
+   "membership_class_count": 4,
+   "pinned_honest_label": "WIN",
+   "decisive": {
+    "ts": "2026-11-23T23:39:26Z",
+    "log": "cs-25m",
+    "budget": 25000000,
+    "rc": 1,
+    "nodes": 21563925,
+    "line": "2026-11-23T23:39:26Z aa028 PASS 25000000,1,21563925",
+    "containing_log_ids": [
+     "cs-25m"
+    ]
+   },
+   "observations": [
+    {
+     "ts": "2026-11-23T18:10:46Z",
+     "log": "drive4-15m",
+     "kind": "pass",
+     "line": "2026-11-23T18:10:46Z aa028 PASS 15000000,0,15000000",
+     "containing_log_ids": [
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 0,
+     "nodes": 15000000
+    },
+    {
+     "ts": "2026-11-23T18:10:46Z",
+     "log": "drive4-15m",
+     "kind": "exhausted",
+     "line": "2026-11-23T18:10:46Z aa028 EXHAUSTED 15000000,0,15000000",
+     "containing_log_ids": [
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 0,
+     "nodes": 15000000
+    },
+    {
+     "ts": "2026-11-23T18:10:46Z",
+     "log": "drive5-15m",
+     "kind": "pass",
+     "line": "2026-11-23T18:10:46Z aa028 PASS 15000000,0,15000000",
+     "containing_log_ids": [
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 0,
+     "nodes": 15000000
+    },
+    {
+     "ts": "2026-11-23T18:10:46Z",
+     "log": "drive5-15m",
+     "kind": "exhausted",
+     "line": "2026-11-23T18:10:46Z aa028 EXHAUSTED 15000000,0,15000000",
+     "containing_log_ids": [
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 0,
+     "nodes": 15000000
+    },
+    {
+     "ts": "2026-11-23T22:51:53Z",
+     "log": "cq-20m",
+     "kind": "pass",
+     "line": "2026-11-23T22:51:53Z aa028 PASS 20000000,0,20000000",
+     "containing_log_ids": [
+      "cq-20m"
+     ],
+     "budget": 20000000,
+     "rc": 0,
+     "nodes": 20000000
+    },
+    {
+     "ts": "2026-11-23T22:51:53Z",
+     "log": "cq-20m",
+     "kind": "exhausted",
+     "line": "2026-11-23T22:51:53Z aa028 EXHAUSTED 20000000,0,20000000",
+     "containing_log_ids": [
+      "cq-20m"
+     ],
+     "budget": 20000000,
+     "rc": 0,
+     "nodes": 20000000
+    },
+    {
+     "ts": "2026-11-23T23:39:26Z",
+     "log": "cs-25m",
+     "kind": "pass",
+     "line": "2026-11-23T23:39:26Z aa028 PASS 25000000,1,21563925",
+     "containing_log_ids": [
+      "cs-25m"
+     ],
+     "budget": 25000000,
+     "rc": 1,
+     "nodes": 21563925
+    },
+    {
+     "ts": "2026-11-23T23:39:26Z",
+     "log": "cs-25m",
+     "kind": "win-halt",
+     "line": "2026-11-23T23:39:26Z aa028 WIN-HALT",
+     "containing_log_ids": [
+      "cs-25m"
+     ]
+    }
+   ],
+   "thirdimpl": {
+    "state": "open"
+   },
+   "est_crossimpl_2pass_nodes": 50890863
+  },
+  {
+   "key_id": "aa029",
+   "s5_index": 199714,
+   "lo": "1171516445255794688",
+   "hi": "16",
+   "legal": 90,
+   "membership_class_count": 4,
+   "pinned_honest_label": "LOSS",
+   "decisive": {
+    "ts": "2026-11-23T18:09:57Z",
+    "log": "drive4-15m",
+    "budget": 15000000,
+    "rc": 2,
+    "nodes": 10010789,
+    "line": "2026-11-23T18:09:57Z aa029 PASS 15000000,2,10010789",
+    "containing_log_ids": [
+     "drive4-15m",
+     "drive5-15m"
+    ]
+   },
+   "observations": [
+    {
+     "ts": "2026-11-23T18:09:57Z",
+     "log": "drive4-15m",
+     "kind": "pass",
+     "line": "2026-11-23T18:09:57Z aa029 PASS 15000000,2,10010789",
+     "containing_log_ids": [
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 2,
+     "nodes": 10010789
+    },
+    {
+     "ts": "2026-11-23T18:09:57Z",
+     "log": "drive5-15m",
+     "kind": "pass",
+     "line": "2026-11-23T18:09:57Z aa029 PASS 15000000,2,10010789",
+     "containing_log_ids": [
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 2,
+     "nodes": 10010789
+    }
+   ],
+   "thirdimpl": {
+    "state": "open"
+   },
+   "loss_adoption": {
+    "part": "CO",
+    "completion": "fb9a6755"
+   },
+   "est_crossimpl_2pass_nodes": 23625462
+  },
+  {
+   "key_id": "aa030",
+   "s5_index": 199715,
+   "lo": "1243574039293722624",
+   "hi": "0",
+   "legal": 90,
+   "membership_class_count": 4,
+   "pinned_honest_label": "WIN",
+   "decisive": {
+    "ts": "2026-11-23T22:54:52Z",
+    "log": "cq-20m",
+    "budget": 20000000,
+    "rc": 1,
+    "nodes": 16765560,
+    "line": "2026-11-23T22:54:52Z aa030 PASS 20000000,1,16765560",
+    "containing_log_ids": [
+     "cq-20m"
+    ]
+   },
+   "observations": [
+    {
+     "ts": "2026-11-23T18:15:50Z",
+     "log": "drive4-15m",
+     "kind": "retry",
+     "line": "2026-11-23T18:15:50Z aa030 P2-TRUNCATED-RETRY",
+     "containing_log_ids": [
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "retry": "P2"
+    },
+    {
+     "ts": "2026-11-23T18:15:50Z",
+     "log": "drive5-15m",
+     "kind": "retry",
+     "line": "2026-11-23T18:15:50Z aa030 P2-TRUNCATED-RETRY",
+     "containing_log_ids": [
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "retry": "P2"
+    },
+    {
+     "ts": "2026-11-23T18:18:26Z",
+     "log": "drive4-15m",
+     "kind": "pass",
+     "line": "2026-11-23T18:18:26Z aa030 PASS 15000000,0,15000000",
+     "containing_log_ids": [
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 0,
+     "nodes": 15000000
+    },
+    {
+     "ts": "2026-11-23T18:18:26Z",
+     "log": "drive4-15m",
+     "kind": "exhausted",
+     "line": "2026-11-23T18:18:26Z aa030 EXHAUSTED 15000000,0,15000000",
+     "containing_log_ids": [
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 0,
+     "nodes": 15000000
+    },
+    {
+     "ts": "2026-11-23T18:18:26Z",
+     "log": "drive5-15m",
+     "kind": "pass",
+     "line": "2026-11-23T18:18:26Z aa030 PASS 15000000,0,15000000",
+     "containing_log_ids": [
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 0,
+     "nodes": 15000000
+    },
+    {
+     "ts": "2026-11-23T18:18:26Z",
+     "log": "drive5-15m",
+     "kind": "exhausted",
+     "line": "2026-11-23T18:18:26Z aa030 EXHAUSTED 15000000,0,15000000",
+     "containing_log_ids": [
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 0,
+     "nodes": 15000000
+    },
+    {
+     "ts": "2026-11-23T22:54:52Z",
+     "log": "cq-20m",
+     "kind": "pass",
+     "line": "2026-11-23T22:54:52Z aa030 PASS 20000000,1,16765560",
+     "containing_log_ids": [
+      "cq-20m"
+     ],
+     "budget": 20000000,
+     "rc": 1,
+     "nodes": 16765560
+    },
+    {
+     "ts": "2026-11-23T22:54:52Z",
+     "log": "cq-20m",
+     "kind": "win-halt",
+     "line": "2026-11-23T22:54:52Z aa030 WIN-HALT",
+     "containing_log_ids": [
+      "cq-20m"
+     ]
+    }
+   ],
+   "thirdimpl": {
+    "state": "claimed",
+    "part": "CX",
+    "declaration": "1300c10d",
+    "declared_utc": "2026-11-24T00:49:31Z",
+    "scaffold_a": "3185a672"
+   },
+   "est_crossimpl_2pass_nodes": 39566722
+  },
+  {
+   "key_id": "aa031",
+   "s5_index": 199716,
+   "lo": "1459746821407506432",
+   "hi": "0",
+   "legal": 92,
+   "membership_class_count": 4,
+   "pinned_honest_label": "WIN",
+   "decisive": {
+    "ts": "2026-11-23T22:57:58Z",
+    "log": "cq-20m",
+    "budget": 20000000,
+    "rc": 1,
+    "nodes": 17185014,
+    "line": "2026-11-23T22:57:58Z aa031 PASS 20000000,1,17185014",
+    "containing_log_ids": [
+     "cq-20m"
+    ]
+   },
+   "observations": [
+    {
+     "ts": "2026-11-23T18:15:50Z",
+     "log": "drive4-15m",
+     "kind": "retry",
+     "line": "2026-11-23T18:15:50Z aa031 P2-TRUNCATED-RETRY",
+     "containing_log_ids": [
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "retry": "P2"
+    },
+    {
+     "ts": "2026-11-23T18:15:50Z",
+     "log": "drive5-15m",
+     "kind": "retry",
+     "line": "2026-11-23T18:15:50Z aa031 P2-TRUNCATED-RETRY",
+     "containing_log_ids": [
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "retry": "P2"
+    },
+    {
+     "ts": "2026-11-23T18:18:30Z",
+     "log": "drive4-15m",
+     "kind": "pass",
+     "line": "2026-11-23T18:18:30Z aa031 PASS 15000000,0,15000000",
+     "containing_log_ids": [
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 0,
+     "nodes": 15000000
+    },
+    {
+     "ts": "2026-11-23T18:18:30Z",
+     "log": "drive4-15m",
+     "kind": "exhausted",
+     "line": "2026-11-23T18:18:30Z aa031 EXHAUSTED 15000000,0,15000000",
+     "containing_log_ids": [
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 0,
+     "nodes": 15000000
+    },
+    {
+     "ts": "2026-11-23T18:18:30Z",
+     "log": "drive5-15m",
+     "kind": "pass",
+     "line": "2026-11-23T18:18:30Z aa031 PASS 15000000,0,15000000",
+     "containing_log_ids": [
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 0,
+     "nodes": 15000000
+    },
+    {
+     "ts": "2026-11-23T18:18:30Z",
+     "log": "drive5-15m",
+     "kind": "exhausted",
+     "line": "2026-11-23T18:18:30Z aa031 EXHAUSTED 15000000,0,15000000",
+     "containing_log_ids": [
+      "drive4-15m",
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 0,
+     "nodes": 15000000
+    },
+    {
+     "ts": "2026-11-23T22:57:58Z",
+     "log": "cq-20m",
+     "kind": "pass",
+     "line": "2026-11-23T22:57:58Z aa031 PASS 20000000,1,17185014",
+     "containing_log_ids": [
+      "cq-20m"
+     ],
+     "budget": 20000000,
+     "rc": 1,
+     "nodes": 17185014
+    },
+    {
+     "ts": "2026-11-23T22:57:58Z",
+     "log": "cq-20m",
+     "kind": "win-halt",
+     "line": "2026-11-23T22:57:58Z aa031 WIN-HALT",
+     "containing_log_ids": [
+      "cq-20m"
+     ]
+    }
+   ],
+   "thirdimpl": {
+    "state": "claimed",
+    "part": "CX",
+    "declaration": "1300c10d",
+    "declared_utc": "2026-11-24T00:49:31Z",
+    "scaffold_a": "3185a672"
+   },
+   "est_crossimpl_2pass_nodes": 40556633
+  },
+  {
+   "key_id": "aa032",
+   "s5_index": 199717,
+   "lo": "1171516445255794688",
+   "hi": "4",
+   "legal": 91,
+   "membership_class_count": 4,
+   "pinned_honest_label": "WIN",
+   "decisive": {
+    "ts": "2026-11-23T23:43:10Z",
+    "log": "cs-25m",
+    "budget": 25000000,
+    "rc": 1,
+    "nodes": 20312294,
+    "line": "2026-11-23T23:43:10Z aa032 PASS 25000000,1,20312294",
+    "containing_log_ids": [
+     "cs-25m"
+    ]
+   },
+   "observations": [
+    {
+     "ts": "2026-11-23T18:44:54Z",
+     "log": "drive5-15m",
+     "kind": "pass",
+     "line": "2026-11-23T18:44:54Z aa032 PASS 15000000,0,15000000",
+     "containing_log_ids": [
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 0,
+     "nodes": 15000000
+    },
+    {
+     "ts": "2026-11-23T18:44:54Z",
+     "log": "drive5-15m",
+     "kind": "exhausted",
+     "line": "2026-11-23T18:44:54Z aa032 EXHAUSTED 15000000,0,15000000",
+     "containing_log_ids": [
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 0,
+     "nodes": 15000000
+    },
+    {
+     "ts": "2026-11-23T23:01:37Z",
+     "log": "cq-20m",
+     "kind": "pass",
+     "line": "2026-11-23T23:01:37Z aa032 PASS 20000000,0,20000000",
+     "containing_log_ids": [
+      "cq-20m"
+     ],
+     "budget": 20000000,
+     "rc": 0,
+     "nodes": 20000000
+    },
+    {
+     "ts": "2026-11-23T23:01:37Z",
+     "log": "cq-20m",
+     "kind": "exhausted",
+     "line": "2026-11-23T23:01:37Z aa032 EXHAUSTED 20000000,0,20000000",
+     "containing_log_ids": [
+      "cq-20m"
+     ],
+     "budget": 20000000,
+     "rc": 0,
+     "nodes": 20000000
+    },
+    {
+     "ts": "2026-11-23T23:43:10Z",
+     "log": "cs-25m",
+     "kind": "pass",
+     "line": "2026-11-23T23:43:10Z aa032 PASS 25000000,1,20312294",
+     "containing_log_ids": [
+      "cs-25m"
+     ],
+     "budget": 25000000,
+     "rc": 1,
+     "nodes": 20312294
+    },
+    {
+     "ts": "2026-11-23T23:43:10Z",
+     "log": "cs-25m",
+     "kind": "win-halt",
+     "line": "2026-11-23T23:43:10Z aa032 WIN-HALT",
+     "containing_log_ids": [
+      "cs-25m"
+     ]
+    }
+   ],
+   "thirdimpl": {
+    "state": "open"
+   },
+   "est_crossimpl_2pass_nodes": 47937014
+  },
+  {
+   "key_id": "aa033",
+   "s5_index": 199718,
+   "lo": "1171516445255794688",
+   "hi": "128",
+   "legal": 86,
+   "membership_class_count": 3,
+   "pinned_honest_label": "WIN",
+   "decisive": {
+    "ts": "2026-11-23T18:42:44Z",
+    "log": "drive5-15m",
+    "budget": 15000000,
+    "rc": 1,
+    "nodes": 3347117,
+    "line": "2026-11-23T18:42:44Z aa033 PASS 15000000,1,3347117",
+    "containing_log_ids": [
+     "drive5-15m"
+    ]
+   },
+   "observations": [
+    {
+     "ts": "2026-11-23T18:42:44Z",
+     "log": "drive5-15m",
+     "kind": "pass",
+     "line": "2026-11-23T18:42:44Z aa033 PASS 15000000,1,3347117",
+     "containing_log_ids": [
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 1,
+     "nodes": 3347117
+    },
+    {
+     "ts": "2026-11-23T18:42:44Z",
+     "log": "drive5-15m",
+     "kind": "win-halt",
+     "line": "2026-11-23T18:42:44Z aa033 WIN-HALT",
+     "containing_log_ids": [
+      "drive5-15m"
+     ]
+    }
+   ],
+   "thirdimpl": {
+    "state": "open"
+   },
+   "est_crossimpl_2pass_nodes": 7899196
+  },
+  {
+   "key_id": "aa034",
+   "s5_index": 199719,
+   "lo": "1152921504606846977",
+   "hi": "4228",
+   "legal": 94,
+   "membership_class_count": 4,
+   "pinned_honest_label": "WIN",
+   "decisive": {
+    "ts": "2026-11-23T18:52:04Z",
+    "log": "drive5-15m",
+    "budget": 15000000,
+    "rc": 1,
+    "nodes": 14097048,
+    "line": "2026-11-23T18:52:04Z aa034 PASS 15000000,1,14097048",
+    "containing_log_ids": [
+     "drive5-15m"
+    ]
+   },
+   "observations": [
+    {
+     "ts": "2026-11-23T18:49:33Z",
+     "log": "drive5-15m",
+     "kind": "retry",
+     "line": "2026-11-23T18:49:33Z aa034 P2-TRUNCATED-RETRY",
+     "containing_log_ids": [
+      "drive5-15m"
+     ],
+     "retry": "P2"
+    },
+    {
+     "ts": "2026-11-23T18:52:04Z",
+     "log": "drive5-15m",
+     "kind": "pass",
+     "line": "2026-11-23T18:52:04Z aa034 PASS 15000000,1,14097048",
+     "containing_log_ids": [
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 1,
+     "nodes": 14097048
+    },
+    {
+     "ts": "2026-11-23T18:52:04Z",
+     "log": "drive5-15m",
+     "kind": "win-halt",
+     "line": "2026-11-23T18:52:04Z aa034 WIN-HALT",
+     "containing_log_ids": [
+      "drive5-15m"
+     ]
+    }
+   ],
+   "thirdimpl": {
+    "state": "open"
+   },
+   "est_crossimpl_2pass_nodes": 33269033
+  },
+  {
+   "key_id": "aa035",
+   "s5_index": 199720,
+   "lo": "1152921504606846978",
+   "hi": "4228",
+   "legal": 96,
+   "membership_class_count": 4,
+   "pinned_honest_label": "WIN",
+   "decisive": {
+    "ts": "2026-11-23T23:04:24Z",
+    "log": "cq-20m",
+    "budget": 20000000,
+    "rc": 1,
+    "nodes": 15424243,
+    "line": "2026-11-23T23:04:24Z aa035 PASS 20000000,1,15424243",
+    "containing_log_ids": [
+     "cq-20m"
+    ]
+   },
+   "observations": [
+    {
+     "ts": "2026-11-23T18:49:33Z",
+     "log": "drive5-15m",
+     "kind": "retry",
+     "line": "2026-11-23T18:49:33Z aa035 P2-TRUNCATED-RETRY",
+     "containing_log_ids": [
+      "drive5-15m"
+     ],
+     "retry": "P2"
+    },
+    {
+     "ts": "2026-11-23T18:52:13Z",
+     "log": "drive5-15m",
+     "kind": "pass",
+     "line": "2026-11-23T18:52:13Z aa035 PASS 15000000,0,15000000",
+     "containing_log_ids": [
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 0,
+     "nodes": 15000000
+    },
+    {
+     "ts": "2026-11-23T18:52:13Z",
+     "log": "drive5-15m",
+     "kind": "exhausted",
+     "line": "2026-11-23T18:52:13Z aa035 EXHAUSTED 15000000,0,15000000",
+     "containing_log_ids": [
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 0,
+     "nodes": 15000000
+    },
+    {
+     "ts": "2026-11-23T23:04:24Z",
+     "log": "cq-20m",
+     "kind": "pass",
+     "line": "2026-11-23T23:04:24Z aa035 PASS 20000000,1,15424243",
+     "containing_log_ids": [
+      "cq-20m"
+     ],
+     "budget": 20000000,
+     "rc": 1,
+     "nodes": 15424243
+    },
+    {
+     "ts": "2026-11-23T23:04:24Z",
+     "log": "cq-20m",
+     "kind": "win-halt",
+     "line": "2026-11-23T23:04:24Z aa035 WIN-HALT",
+     "containing_log_ids": [
+      "cq-20m"
+     ]
+    }
+   ],
+   "thirdimpl": {
+    "state": "done",
+    "part": "CW",
+    "completion": "8f03ed3d"
+   },
+   "est_crossimpl_2pass_nodes": null
+  },
+  {
+   "key_id": "aa036",
+   "s5_index": 199721,
+   "lo": "1152921504606912512",
+   "hi": "4228",
+   "legal": 64,
+   "membership_class_count": 3,
+   "pinned_honest_label": "LOSS",
+   "decisive": {
+    "ts": "2026-11-23T18:52:34Z",
+    "log": "drive5-15m",
+    "budget": 15000000,
+    "rc": 2,
+    "nodes": 955659,
+    "line": "2026-11-23T18:52:34Z aa036 PASS 15000000,2,955659",
+    "containing_log_ids": [
+     "drive5-15m"
+    ]
+   },
+   "observations": [
+    {
+     "ts": "2026-11-23T18:52:34Z",
+     "log": "drive5-15m",
+     "kind": "pass",
+     "line": "2026-11-23T18:52:34Z aa036 PASS 15000000,2,955659",
+     "containing_log_ids": [
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 2,
+     "nodes": 955659
+    },
+    {
+     "ts": "2026-11-23T22:38:36Z",
+     "log": "cq-20m",
+     "kind": "pass",
+     "line": "2026-11-23T22:38:36Z aa036 PASS 20000000,2,955659",
+     "containing_log_ids": [
+      "cq-20m"
+     ],
+     "budget": 20000000,
+     "rc": 2,
+     "nodes": 955659
+    },
+    {
+     "ts": "2026-11-23T23:28:32Z",
+     "log": "cs-25m",
+     "kind": "pass",
+     "line": "2026-11-23T23:28:32Z aa036 PASS 25000000,2,955659",
+     "containing_log_ids": [
+      "cs-25m"
+     ],
+     "budget": 25000000,
+     "rc": 2,
+     "nodes": 955659
+    },
+    {
+     "ts": "2026-11-24T00:05:11Z",
+     "log": "ct-30m",
+     "kind": "pass",
+     "line": "2026-11-24T00:05:11Z aa036 PASS 30000000,2,955659",
+     "containing_log_ids": [
+      "ct-30m"
+     ],
+     "budget": 30000000,
+     "rc": 2,
+     "nodes": 955659
+    }
+   ],
+   "thirdimpl": {
+    "state": "open"
+   },
+   "loss_adoption": {
+    "part": "CO",
+    "completion": "fb9a6755"
+   },
+   "est_crossimpl_2pass_nodes": 2255355
+  },
+  {
+   "key_id": "aa037",
+   "s5_index": 199722,
+   "lo": "1152921504606846980",
+   "hi": "4228",
+   "legal": 87,
+   "membership_class_count": 4,
+   "pinned_honest_label": "WIN",
+   "decisive": {
+    "ts": "2026-11-23T18:54:58Z",
+    "log": "drive5-15m",
+    "budget": 15000000,
+    "rc": 1,
+    "nodes": 14239714,
+    "line": "2026-11-23T18:54:58Z aa037 PASS 15000000,1,14239714",
+    "containing_log_ids": [
+     "drive5-15m"
+    ]
+   },
+   "observations": [
+    {
+     "ts": "2026-11-23T18:54:58Z",
+     "log": "drive5-15m",
+     "kind": "pass",
+     "line": "2026-11-23T18:54:58Z aa037 PASS 15000000,1,14239714",
+     "containing_log_ids": [
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 1,
+     "nodes": 14239714
+    },
+    {
+     "ts": "2026-11-23T18:54:58Z",
+     "log": "drive5-15m",
+     "kind": "win-halt",
+     "line": "2026-11-23T18:54:58Z aa037 WIN-HALT",
+     "containing_log_ids": [
+      "drive5-15m"
+     ]
+    }
+   ],
+   "thirdimpl": {
+    "state": "open"
+   },
+   "est_crossimpl_2pass_nodes": 33605725
+  },
+  {
+   "key_id": "aa038",
+   "s5_index": 199723,
+   "lo": "1152921504606849024",
+   "hi": "4228",
+   "legal": 82,
+   "membership_class_count": 4,
+   "pinned_honest_label": "WIN",
+   "decisive": {
+    "ts": "2026-11-23T18:56:36Z",
+    "log": "drive5-15m",
+    "budget": 15000000,
+    "rc": 1,
+    "nodes": 4911996,
+    "line": "2026-11-23T18:56:36Z aa038 PASS 15000000,1,4911996",
+    "containing_log_ids": [
+     "drive5-15m"
+    ]
+   },
+   "observations": [
+    {
+     "ts": "2026-11-23T18:56:36Z",
+     "log": "drive5-15m",
+     "kind": "pass",
+     "line": "2026-11-23T18:56:36Z aa038 PASS 15000000,1,4911996",
+     "containing_log_ids": [
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 1,
+     "nodes": 4911996
+    },
+    {
+     "ts": "2026-11-23T18:56:36Z",
+     "log": "drive5-15m",
+     "kind": "win-halt",
+     "line": "2026-11-23T18:56:36Z aa038 WIN-HALT",
+     "containing_log_ids": [
+      "drive5-15m"
+     ]
+    }
+   ],
+   "thirdimpl": {
+    "state": "open"
+   },
+   "est_crossimpl_2pass_nodes": 11592311
+  },
+  {
+   "key_id": "aa039",
+   "s5_index": 199724,
+   "lo": "1152921504606846984",
+   "hi": "4228",
+   "legal": 88,
+   "membership_class_count": 4,
+   "pinned_honest_label": "WIN",
+   "decisive": {
+    "ts": "2026-11-23T18:57:46Z",
+    "log": "drive5-15m",
+    "budget": 15000000,
+    "rc": 1,
+    "nodes": 11349776,
+    "line": "2026-11-23T18:57:46Z aa039 PASS 15000000,1,11349776",
+    "containing_log_ids": [
+     "drive5-15m"
+    ]
+   },
+   "observations": [
+    {
+     "ts": "2026-11-23T18:57:46Z",
+     "log": "drive5-15m",
+     "kind": "pass",
+     "line": "2026-11-23T18:57:46Z aa039 PASS 15000000,1,11349776",
+     "containing_log_ids": [
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 1,
+     "nodes": 11349776
+    },
+    {
+     "ts": "2026-11-23T18:57:46Z",
+     "log": "drive5-15m",
+     "kind": "win-halt",
+     "line": "2026-11-23T18:57:46Z aa039 WIN-HALT",
+     "containing_log_ids": [
+      "drive5-15m"
+     ]
+    }
+   ],
+   "thirdimpl": {
+    "state": "open"
+   },
+   "est_crossimpl_2pass_nodes": 26785471
+  },
+  {
+   "key_id": "aa040",
+   "s5_index": 199725,
+   "lo": "1152921504606846992",
+   "hi": "4228",
+   "legal": 89,
+   "membership_class_count": 4,
+   "pinned_honest_label": "WIN",
+   "decisive": {
+    "ts": "2026-11-23T19:00:53Z",
+    "log": "drive5-15m",
+    "budget": 15000000,
+    "rc": 1,
+    "nodes": 8916641,
+    "line": "2026-11-23T19:00:53Z aa040 PASS 15000000,1,8916641",
+    "containing_log_ids": [
+     "drive5-15m"
+    ]
+   },
+   "observations": [
+    {
+     "ts": "2026-11-23T19:00:53Z",
+     "log": "drive5-15m",
+     "kind": "pass",
+     "line": "2026-11-23T19:00:53Z aa040 PASS 15000000,1,8916641",
+     "containing_log_ids": [
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 1,
+     "nodes": 8916641
+    },
+    {
+     "ts": "2026-11-23T19:00:53Z",
+     "log": "drive5-15m",
+     "kind": "win-halt",
+     "line": "2026-11-23T19:00:53Z aa040 WIN-HALT",
+     "containing_log_ids": [
+      "drive5-15m"
+     ]
+    }
+   ],
+   "thirdimpl": {
+    "state": "open"
+   },
+   "est_crossimpl_2pass_nodes": 21043273
+  },
+  {
+   "key_id": "aa041",
+   "s5_index": 199726,
+   "lo": "1171516445255794688",
+   "hi": "8",
+   "legal": 93,
+   "membership_class_count": 4,
+   "pinned_honest_label": "WIN",
+   "decisive": {
+    "ts": "2026-11-23T19:01:10Z",
+    "log": "drive5-15m",
+    "budget": 15000000,
+    "rc": 1,
+    "nodes": 10283599,
+    "line": "2026-11-23T19:01:10Z aa041 PASS 15000000,1,10283599",
+    "containing_log_ids": [
+     "drive5-15m"
+    ]
+   },
+   "observations": [
+    {
+     "ts": "2026-11-23T19:01:10Z",
+     "log": "drive5-15m",
+     "kind": "pass",
+     "line": "2026-11-23T19:01:10Z aa041 PASS 15000000,1,10283599",
+     "containing_log_ids": [
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 1,
+     "nodes": 10283599
+    },
+    {
+     "ts": "2026-11-23T19:01:10Z",
+     "log": "drive5-15m",
+     "kind": "win-halt",
+     "line": "2026-11-23T19:01:10Z aa041 WIN-HALT",
+     "containing_log_ids": [
+      "drive5-15m"
+     ]
+    }
+   ],
+   "thirdimpl": {
+    "state": "open"
+   },
+   "est_crossimpl_2pass_nodes": 24269294
+  },
+  {
+   "key_id": "aa042",
+   "s5_index": 199727,
+   "lo": "1152921504606847008",
+   "hi": "4228",
+   "legal": 88,
+   "membership_class_count": 3,
+   "pinned_honest_label": "WIN",
+   "decisive": {
+    "ts": "2026-11-23T19:03:09Z",
+    "log": "drive5-15m",
+    "budget": 15000000,
+    "rc": 1,
+    "nodes": 5800791,
+    "line": "2026-11-23T19:03:09Z aa042 PASS 15000000,1,5800791",
+    "containing_log_ids": [
+     "drive5-15m"
+    ]
+   },
+   "observations": [
+    {
+     "ts": "2026-11-23T19:03:09Z",
+     "log": "drive5-15m",
+     "kind": "pass",
+     "line": "2026-11-23T19:03:09Z aa042 PASS 15000000,1,5800791",
+     "containing_log_ids": [
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 1,
+     "nodes": 5800791
+    },
+    {
+     "ts": "2026-11-23T19:03:09Z",
+     "log": "drive5-15m",
+     "kind": "win-halt",
+     "line": "2026-11-23T19:03:09Z aa042 WIN-HALT",
+     "containing_log_ids": [
+      "drive5-15m"
+     ]
+    }
+   ],
+   "thirdimpl": {
+    "state": "open"
+   },
+   "est_crossimpl_2pass_nodes": 13689867
+  },
+  {
+   "key_id": "aa043",
+   "s5_index": 199728,
+   "lo": "1152921513196781568",
+   "hi": "4228",
+   "legal": 90,
+   "membership_class_count": 4,
+   "pinned_honest_label": "WIN",
+   "decisive": {
+    "ts": "2026-11-23T19:04:21Z",
+    "log": "drive5-15m",
+    "budget": 15000000,
+    "rc": 1,
+    "nodes": 12069965,
+    "line": "2026-11-23T19:04:21Z aa043 PASS 15000000,1,12069965",
+    "containing_log_ids": [
+     "drive5-15m"
+    ]
+   },
+   "observations": [
+    {
+     "ts": "2026-11-23T19:04:21Z",
+     "log": "drive5-15m",
+     "kind": "pass",
+     "line": "2026-11-23T19:04:21Z aa043 PASS 15000000,1,12069965",
+     "containing_log_ids": [
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 1,
+     "nodes": 12069965
+    },
+    {
+     "ts": "2026-11-23T19:04:21Z",
+     "log": "drive5-15m",
+     "kind": "win-halt",
+     "line": "2026-11-23T19:04:21Z aa043 WIN-HALT",
+     "containing_log_ids": [
+      "drive5-15m"
+     ]
+    }
+   ],
+   "thirdimpl": {
+    "state": "open"
+   },
+   "est_crossimpl_2pass_nodes": 28485117
+  },
+  {
+   "key_id": "aa044",
+   "s5_index": 199729,
+   "lo": "1152921521786716160",
+   "hi": "4228",
+   "legal": 86,
+   "membership_class_count": 4,
+   "pinned_honest_label": "WIN",
+   "decisive": {
+    "ts": "2026-11-23T19:07:39Z",
+    "log": "drive5-15m",
+    "budget": 15000000,
+    "rc": 1,
+    "nodes": 9219778,
+    "line": "2026-11-23T19:07:39Z aa044 PASS 15000000,1,9219778",
+    "containing_log_ids": [
+     "drive5-15m"
+    ]
+   },
+   "observations": [
+    {
+     "ts": "2026-11-23T19:07:39Z",
+     "log": "drive5-15m",
+     "kind": "pass",
+     "line": "2026-11-23T19:07:39Z aa044 PASS 15000000,1,9219778",
+     "containing_log_ids": [
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 1,
+     "nodes": 9219778
+    },
+    {
+     "ts": "2026-11-23T19:07:39Z",
+     "log": "drive5-15m",
+     "kind": "win-halt",
+     "line": "2026-11-23T19:07:39Z aa044 WIN-HALT",
+     "containing_log_ids": [
+      "drive5-15m"
+     ]
+    }
+   ],
+   "thirdimpl": {
+    "state": "open"
+   },
+   "est_crossimpl_2pass_nodes": 21758676
+  },
+  {
+   "key_id": "aa045",
+   "s5_index": 199730,
+   "lo": "1152921642045800448",
+   "hi": "4228",
+   "legal": 84,
+   "membership_class_count": 4,
+   "pinned_honest_label": "WIN",
+   "decisive": {
+    "ts": "2026-11-23T19:08:16Z",
+    "log": "drive5-15m",
+    "budget": 15000000,
+    "rc": 1,
+    "nodes": 12371943,
+    "line": "2026-11-23T19:08:16Z aa045 PASS 15000000,1,12371943",
+    "containing_log_ids": [
+     "drive5-15m"
+    ]
+   },
+   "observations": [
+    {
+     "ts": "2026-11-23T19:08:16Z",
+     "log": "drive5-15m",
+     "kind": "pass",
+     "line": "2026-11-23T19:08:16Z aa045 PASS 15000000,1,12371943",
+     "containing_log_ids": [
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 1,
+     "nodes": 12371943
+    },
+    {
+     "ts": "2026-11-23T19:08:16Z",
+     "log": "drive5-15m",
+     "kind": "win-halt",
+     "line": "2026-11-23T19:08:16Z aa045 WIN-HALT",
+     "containing_log_ids": [
+      "drive5-15m"
+     ]
+    }
+   ],
+   "thirdimpl": {
+    "state": "open"
+   },
+   "est_crossimpl_2pass_nodes": 29197785
+  },
+  {
+   "key_id": "aa046",
+   "s5_index": 199731,
+   "lo": "1152921779484753920",
+   "hi": "4228",
+   "legal": 78,
+   "membership_class_count": 3,
+   "pinned_honest_label": "WIN",
+   "decisive": {
+    "ts": "2026-11-23T19:08:58Z",
+    "log": "drive5-15m",
+    "budget": 15000000,
+    "rc": 1,
+    "nodes": 2185149,
+    "line": "2026-11-23T19:08:58Z aa046 PASS 15000000,1,2185149",
+    "containing_log_ids": [
+     "drive5-15m"
+    ]
+   },
+   "observations": [
+    {
+     "ts": "2026-11-23T19:08:58Z",
+     "log": "drive5-15m",
+     "kind": "pass",
+     "line": "2026-11-23T19:08:58Z aa046 PASS 15000000,1,2185149",
+     "containing_log_ids": [
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 1,
+     "nodes": 2185149
+    },
+    {
+     "ts": "2026-11-23T19:08:58Z",
+     "log": "drive5-15m",
+     "kind": "win-halt",
+     "line": "2026-11-23T19:08:58Z aa046 WIN-HALT",
+     "containing_log_ids": [
+      "drive5-15m"
+     ]
+    },
+    {
+     "ts": "2026-11-23T22:38:58Z",
+     "log": "cq-20m",
+     "kind": "pass",
+     "line": "2026-11-23T22:38:58Z aa046 PASS 20000000,1,2185149",
+     "containing_log_ids": [
+      "cq-20m"
+     ],
+     "budget": 20000000,
+     "rc": 1,
+     "nodes": 2185149
+    },
+    {
+     "ts": "2026-11-23T22:38:58Z",
+     "log": "cq-20m",
+     "kind": "win-halt",
+     "line": "2026-11-23T22:38:58Z aa046 WIN-HALT",
+     "containing_log_ids": [
+      "cq-20m"
+     ]
+    }
+   ],
+   "thirdimpl": {
+    "state": "open"
+   },
+   "est_crossimpl_2pass_nodes": 5156952
+  },
+  {
+   "key_id": "aa047",
+   "s5_index": 199732,
+   "lo": "1152921504611041280",
+   "hi": "4228",
+   "legal": 92,
+   "membership_class_count": 4,
+   "pinned_honest_label": "WIN",
+   "decisive": {
+    "ts": "2026-11-23T23:07:24Z",
+    "log": "cq-20m",
+    "budget": 20000000,
+    "rc": 1,
+    "nodes": 16230465,
+    "line": "2026-11-23T23:07:24Z aa047 PASS 20000000,1,16230465",
+    "containing_log_ids": [
+     "cq-20m"
+    ]
+   },
+   "observations": [
+    {
+     "ts": "2026-11-23T19:11:18Z",
+     "log": "drive5-15m",
+     "kind": "pass",
+     "line": "2026-11-23T19:11:18Z aa047 PASS 15000000,0,15000000",
+     "containing_log_ids": [
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 0,
+     "nodes": 15000000
+    },
+    {
+     "ts": "2026-11-23T19:11:18Z",
+     "log": "drive5-15m",
+     "kind": "exhausted",
+     "line": "2026-11-23T19:11:18Z aa047 EXHAUSTED 15000000,0,15000000",
+     "containing_log_ids": [
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 0,
+     "nodes": 15000000
+    },
+    {
+     "ts": "2026-11-23T23:07:24Z",
+     "log": "cq-20m",
+     "kind": "pass",
+     "line": "2026-11-23T23:07:24Z aa047 PASS 20000000,1,16230465",
+     "containing_log_ids": [
+      "cq-20m"
+     ],
+     "budget": 20000000,
+     "rc": 1,
+     "nodes": 16230465
+    },
+    {
+     "ts": "2026-11-23T23:07:24Z",
+     "log": "cq-20m",
+     "kind": "win-halt",
+     "line": "2026-11-23T23:07:24Z aa047 WIN-HALT",
+     "containing_log_ids": [
+      "cq-20m"
+     ]
+    }
+   ],
+   "thirdimpl": {
+    "state": "claimed",
+    "part": "CX",
+    "declaration": "1300c10d",
+    "declared_utc": "2026-11-24T00:49:31Z",
+    "scaffold_a": "3185a672"
+   },
+   "est_crossimpl_2pass_nodes": 38303897
+  },
+  {
+   "key_id": "aa048",
+   "s5_index": 199733,
+   "lo": "1152921504615235584",
+   "hi": "4228",
+   "legal": 87,
+   "membership_class_count": 4,
+   "pinned_honest_label": "WIN",
+   "decisive": {
+    "ts": "2026-11-23T19:14:28Z",
+    "log": "drive5-15m",
+    "budget": 15000000,
+    "rc": 1,
+    "nodes": 10553343,
+    "line": "2026-11-23T19:14:28Z aa048 PASS 15000000,1,10553343",
+    "containing_log_ids": [
+     "drive5-15m"
+    ]
+   },
+   "observations": [
+    {
+     "ts": "2026-11-23T19:14:28Z",
+     "log": "drive5-15m",
+     "kind": "pass",
+     "line": "2026-11-23T19:14:28Z aa048 PASS 15000000,1,10553343",
+     "containing_log_ids": [
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 1,
+     "nodes": 10553343
+    },
+    {
+     "ts": "2026-11-23T19:14:28Z",
+     "log": "drive5-15m",
+     "kind": "win-halt",
+     "line": "2026-11-23T19:14:28Z aa048 WIN-HALT",
+     "containing_log_ids": [
+      "drive5-15m"
+     ]
+    }
+   ],
+   "thirdimpl": {
+    "state": "open"
+   },
+   "est_crossimpl_2pass_nodes": 24905889
+  },
+  {
+   "key_id": "aa049",
+   "s5_index": 199734,
+   "lo": "1152921504623624192",
+   "hi": "4228",
+   "legal": 83,
+   "membership_class_count": 4,
+   "pinned_honest_label": "WIN",
+   "decisive": {
+    "ts": "2026-11-23T19:13:52Z",
+    "log": "drive5-15m",
+    "budget": 15000000,
+    "rc": 1,
+    "nodes": 7272703,
+    "line": "2026-11-23T19:13:52Z aa049 PASS 15000000,1,7272703",
+    "containing_log_ids": [
+     "drive5-15m"
+    ]
+   },
+   "observations": [
+    {
+     "ts": "2026-11-23T19:13:52Z",
+     "log": "drive5-15m",
+     "kind": "pass",
+     "line": "2026-11-23T19:13:52Z aa049 PASS 15000000,1,7272703",
+     "containing_log_ids": [
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 1,
+     "nodes": 7272703
+    },
+    {
+     "ts": "2026-11-23T19:13:52Z",
+     "log": "drive5-15m",
+     "kind": "win-halt",
+     "line": "2026-11-23T19:13:52Z aa049 WIN-HALT",
+     "containing_log_ids": [
+      "drive5-15m"
+     ]
+    }
+   ],
+   "thirdimpl": {
+    "state": "open"
+   },
+   "est_crossimpl_2pass_nodes": 17163579
+  },
+  {
+   "key_id": "aa050",
+   "s5_index": 199735,
+   "lo": "1152921504640401408",
+   "hi": "4228",
+   "legal": 94,
+   "membership_class_count": 4,
+   "pinned_honest_label": "WIN",
+   "decisive": {
+    "ts": "2026-11-24T00:14:52Z",
+    "log": "ct-30m",
+    "budget": 30000000,
+    "rc": 1,
+    "nodes": 25541199,
+    "line": "2026-11-24T00:14:52Z aa050 PASS 30000000,1,25541199",
+    "containing_log_ids": [
+     "ct-30m"
+    ]
+   },
+   "observations": [
+    {
+     "ts": "2026-11-23T19:18:31Z",
+     "log": "drive5-15m",
+     "kind": "pass",
+     "line": "2026-11-23T19:18:31Z aa050 PASS 15000000,0,15000000",
+     "containing_log_ids": [
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 0,
+     "nodes": 15000000
+    },
+    {
+     "ts": "2026-11-23T19:18:31Z",
+     "log": "drive5-15m",
+     "kind": "exhausted",
+     "line": "2026-11-23T19:18:31Z aa050 EXHAUSTED 15000000,0,15000000",
+     "containing_log_ids": [
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 0,
+     "nodes": 15000000
+    },
+    {
+     "ts": "2026-11-23T23:11:00Z",
+     "log": "cq-20m",
+     "kind": "pass",
+     "line": "2026-11-23T23:11:00Z aa050 PASS 20000000,0,20000000",
+     "containing_log_ids": [
+      "cq-20m"
+     ],
+     "budget": 20000000,
+     "rc": 0,
+     "nodes": 20000000
+    },
+    {
+     "ts": "2026-11-23T23:11:00Z",
+     "log": "cq-20m",
+     "kind": "exhausted",
+     "line": "2026-11-23T23:11:00Z aa050 EXHAUSTED 20000000,0,20000000",
+     "containing_log_ids": [
+      "cq-20m"
+     ],
+     "budget": 20000000,
+     "rc": 0,
+     "nodes": 20000000
+    },
+    {
+     "ts": "2026-11-23T23:47:41Z",
+     "log": "cs-25m",
+     "kind": "retry",
+     "line": "2026-11-23T23:47:41Z aa050 P2-TRUNCATED-RETRY",
+     "containing_log_ids": [
+      "cs-25m"
+     ],
+     "retry": "P2"
+    },
+    {
+     "ts": "2026-11-23T23:49:53Z",
+     "log": "cs-25m",
+     "kind": "pass",
+     "line": "2026-11-23T23:49:53Z aa050 PASS 25000000,0,25000000",
+     "containing_log_ids": [
+      "cs-25m"
+     ],
+     "budget": 25000000,
+     "rc": 0,
+     "nodes": 25000000
+    },
+    {
+     "ts": "2026-11-23T23:49:53Z",
+     "log": "cs-25m",
+     "kind": "exhausted",
+     "line": "2026-11-23T23:49:53Z aa050 EXHAUSTED 25000000,0,25000000",
+     "containing_log_ids": [
+      "cs-25m"
+     ],
+     "budget": 25000000,
+     "rc": 0,
+     "nodes": 25000000
+    },
+    {
+     "ts": "2026-11-24T00:12:34Z",
+     "log": "ct-30m",
+     "kind": "retry",
+     "line": "2026-11-24T00:12:34Z aa050 P2-TRUNCATED-RETRY",
+     "containing_log_ids": [
+      "ct-30m"
+     ],
+     "retry": "P2"
+    },
+    {
+     "ts": "2026-11-24T00:14:52Z",
+     "log": "ct-30m",
+     "kind": "pass",
+     "line": "2026-11-24T00:14:52Z aa050 PASS 30000000,1,25541199",
+     "containing_log_ids": [
+      "ct-30m"
+     ],
+     "budget": 30000000,
+     "rc": 1,
+     "nodes": 25541199
+    },
+    {
+     "ts": "2026-11-24T00:14:52Z",
+     "log": "ct-30m",
+     "kind": "win-halt",
+     "line": "2026-11-24T00:14:52Z aa050 WIN-HALT",
+     "containing_log_ids": [
+      "ct-30m"
+     ]
+    }
+   ],
+   "thirdimpl": {
+    "state": "open"
+   },
+   "est_crossimpl_2pass_nodes": 60277230
+  },
+  {
+   "key_id": "aa051",
+   "s5_index": 199736,
+   "lo": "1152921504673955840",
+   "hi": "4228",
+   "legal": 87,
+   "membership_class_count": 4,
+   "pinned_honest_label": "WIN",
+   "decisive": {
+    "ts": "2026-11-23T19:17:09Z",
+    "log": "drive5-15m",
+    "budget": 15000000,
+    "rc": 1,
+    "nodes": 7662388,
+    "line": "2026-11-23T19:17:09Z aa051 PASS 15000000,1,7662388",
+    "containing_log_ids": [
+     "drive5-15m"
+    ]
+   },
+   "observations": [
+    {
+     "ts": "2026-11-23T19:17:09Z",
+     "log": "drive5-15m",
+     "kind": "pass",
+     "line": "2026-11-23T19:17:09Z aa051 PASS 15000000,1,7662388",
+     "containing_log_ids": [
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 1,
+     "nodes": 7662388
+    },
+    {
+     "ts": "2026-11-23T19:17:09Z",
+     "log": "drive5-15m",
+     "kind": "win-halt",
+     "line": "2026-11-23T19:17:09Z aa051 WIN-HALT",
+     "containing_log_ids": [
+      "drive5-15m"
+     ]
+    }
+   ],
+   "thirdimpl": {
+    "state": "open"
+   },
+   "est_crossimpl_2pass_nodes": 18083236
+  },
+  {
+   "key_id": "aa052",
+   "s5_index": 199737,
+   "lo": "1152921504606851072",
+   "hi": "4228",
+   "legal": 93,
+   "membership_class_count": 4,
+   "pinned_honest_label": "WIN",
+   "decisive": {
+    "ts": "2026-11-23T19:21:40Z",
+    "log": "drive5-15m",
+    "budget": 15000000,
+    "rc": 1,
+    "nodes": 8976982,
+    "line": "2026-11-23T19:21:40Z aa052 PASS 15000000,1,8976982",
+    "containing_log_ids": [
+     "drive5-15m"
+    ]
+   },
+   "observations": [
+    {
+     "ts": "2026-11-23T19:21:40Z",
+     "log": "drive5-15m",
+     "kind": "pass",
+     "line": "2026-11-23T19:21:40Z aa052 PASS 15000000,1,8976982",
+     "containing_log_ids": [
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 1,
+     "nodes": 8976982
+    },
+    {
+     "ts": "2026-11-23T19:21:40Z",
+     "log": "drive5-15m",
+     "kind": "win-halt",
+     "line": "2026-11-23T19:21:40Z aa052 WIN-HALT",
+     "containing_log_ids": [
+      "drive5-15m"
+     ]
+    }
+   ],
+   "thirdimpl": {
+    "state": "open"
+   },
+   "est_crossimpl_2pass_nodes": 21185678
+  },
+  {
+   "key_id": "aa053",
+   "s5_index": 199738,
+   "lo": "1152921504606855168",
+   "hi": "4228",
+   "legal": 95,
+   "membership_class_count": 4,
+   "pinned_honest_label": "WIN",
+   "decisive": {
+    "ts": "2026-11-23T23:13:59Z",
+    "log": "cq-20m",
+    "budget": 20000000,
+    "rc": 1,
+    "nodes": 16685872,
+    "line": "2026-11-23T23:13:59Z aa053 PASS 20000000,1,16685872",
+    "containing_log_ids": [
+     "cq-20m"
+    ]
+   },
+   "observations": [
+    {
+     "ts": "2026-11-23T19:22:39Z",
+     "log": "drive5-15m",
+     "kind": "pass",
+     "line": "2026-11-23T19:22:39Z aa053 PASS 15000000,0,15000000",
+     "containing_log_ids": [
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 0,
+     "nodes": 15000000
+    },
+    {
+     "ts": "2026-11-23T19:22:39Z",
+     "log": "drive5-15m",
+     "kind": "exhausted",
+     "line": "2026-11-23T19:22:39Z aa053 EXHAUSTED 15000000,0,15000000",
+     "containing_log_ids": [
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 0,
+     "nodes": 15000000
+    },
+    {
+     "ts": "2026-11-23T23:13:59Z",
+     "log": "cq-20m",
+     "kind": "pass",
+     "line": "2026-11-23T23:13:59Z aa053 PASS 20000000,1,16685872",
+     "containing_log_ids": [
+      "cq-20m"
+     ],
+     "budget": 20000000,
+     "rc": 1,
+     "nodes": 16685872
+    },
+    {
+     "ts": "2026-11-23T23:13:59Z",
+     "log": "cq-20m",
+     "kind": "win-halt",
+     "line": "2026-11-23T23:13:59Z aa053 WIN-HALT",
+     "containing_log_ids": [
+      "cq-20m"
+     ]
+    }
+   ],
+   "thirdimpl": {
+    "state": "claimed",
+    "part": "CX",
+    "declaration": "1300c10d",
+    "declared_utc": "2026-11-24T00:49:31Z",
+    "scaffold_a": "3185a672"
+   },
+   "est_crossimpl_2pass_nodes": 39378658
+  },
+  {
+   "key_id": "aa054",
+   "s5_index": 199739,
+   "lo": "1152921504606863360",
+   "hi": "4228",
+   "legal": 95,
+   "membership_class_count": 4,
+   "pinned_honest_label": "WIN",
+   "decisive": {
+    "ts": "2026-11-23T19:24:56Z",
+    "log": "drive5-15m",
+    "budget": 15000000,
+    "rc": 1,
+    "nodes": 13227570,
+    "line": "2026-11-23T19:24:56Z aa054 PASS 15000000,1,13227570",
+    "containing_log_ids": [
+     "drive5-15m"
+    ]
+   },
+   "observations": [
+    {
+     "ts": "2026-11-23T19:24:56Z",
+     "log": "drive5-15m",
+     "kind": "pass",
+     "line": "2026-11-23T19:24:56Z aa054 PASS 15000000,1,13227570",
+     "containing_log_ids": [
+      "drive5-15m"
+     ],
+     "budget": 15000000,
+     "rc": 1,
+     "nodes": 13227570
+    },
+    {
+     "ts": "2026-11-23T19:24:56Z",
+     "log": "drive5-15m",
+     "kind": "win-halt",
+     "line": "2026-11-23T19:24:56Z aa054 WIN-HALT",
+     "containing_log_ids": [
+      "drive5-15m"
+     ]
+    }
+   ],
+   "thirdimpl": {
+    "state": "open"
+   },
+   "est_crossimpl_2pass_nodes": 31217065
+  }
+ ],
+ "views": {
+  "queue_state_counts": {
+   "win_total": 46,
+   "thirdimpl_done_win": 8,
+   "thirdimpl_claimed_win": 5,
+   "thirdimpl_open_win": 33,
+   "loss_total": 8,
+   "loss_thirdimpl_done": 1,
+   "loss_adoption_done": 8,
+   "loss_thirdimpl_open_optional": 7,
+   "exhausted_final": 0
+  },
+  "open33_by_est_cost": [
+   "aa046",
+   "aa016",
+   "aa025",
+   "aa033",
+   "aa027",
+   "aa038",
+   "aa012",
+   "aa042",
+   "aa014",
+   "aa049",
+   "aa051",
+   "aa019",
+   "aa013",
+   "aa020",
+   "aa010",
+   "aa040",
+   "aa052",
+   "aa044",
+   "aa041",
+   "aa048",
+   "aa026",
+   "aa039",
+   "aa043",
+   "aa045",
+   "aa011",
+   "aa054",
+   "aa022",
+   "aa034",
+   "aa037",
+   "aa032",
+   "aa028",
+   "aa021",
+   "aa050"
+  ],
+  "packages": {
+   "P1": {
+    "keys": [
+     "aa046",
+     "aa016",
+     "aa025",
+     "aa033",
+     "aa027",
+     "aa038",
+     "aa012",
+     "aa042"
+    ],
+    "n_keys": 8,
+    "pinned_nodes_total": 31778254,
+    "est_crossimpl_2pass_total": 74996681
+   },
+   "P2": {
+    "keys": [
+     "aa014",
+     "aa049",
+     "aa051",
+     "aa019",
+     "aa013",
+     "aa020",
+     "aa010",
+     "aa040"
+    ],
+    "n_keys": 8,
+    "pinned_nodes_total": 64713638,
+    "est_crossimpl_2pass_total": 152724187
+   },
+   "P3": {
+    "keys": [
+     "aa052",
+     "aa044",
+     "aa041",
+     "aa048",
+     "aa026",
+     "aa039",
+     "aa043",
+     "aa045"
+    ],
+    "n_keys": 8,
+    "pinned_nodes_total": 85844795,
+    "est_crossimpl_2pass_total": 202593715
+   },
+   "P4": {
+    "keys": [
+     "aa011",
+     "aa054",
+     "aa022",
+     "aa034",
+     "aa037",
+     "aa032",
+     "aa028",
+     "aa021",
+     "aa050"
+    ],
+    "n_keys": 9,
+    "pinned_nodes_total": 158393401,
+    "est_crossimpl_2pass_total": 373808426
+   }
+  },
+  "package_note": "P1..P4 = open-33 WIN rows by estimated crossimpl 2-pass cost ascending; a future event declares its own scope (publish-then-execute); P4 contains the CS/CT-solved 4 rows aa032/aa028/aa021/aa050",
+  "tier_l_loss7_optional": {
+   "keys": [
+    "aa018",
+    "aa036",
+    "aa023",
+    "aa024",
+    "aa015",
+    "aa029",
+    "aa017"
+   ],
+   "est_total": 91531818,
+   "note": "adopted canonical; thirdimpl is optional redundancy only"
+  },
+  "claimed5_do_not_retake_until_takeover_rule": {
+   "keys": [
+    "aa005",
+    "aa030",
+    "aa031",
+    "aa047",
+    "aa053"
+   ],
+   "part": "CX",
+   "declaration": "1300c10d",
+   "declared_utc": "2026-11-24T00:49:31Z",
+   "rule_hours": 3.5,
+   "earliest_takeover_utc": "2026-11-24T04:19:31Z",
+   "note": "as observed at HEAD d2d60645d26b2eae88ffc87fdd5e6160cfcae8e1"
+  }
+ },
+ "accounting": {
+  "keys_total": 54,
+  "pinned_labels": {
+   "WIN": 46,
+   "LOSS": 8,
+   "EXHAUSTED_final": 0
+  },
+  "win_by_resolution_tier": {
+   "15m": 35,
+   "20m": 7,
+   "25m": 3,
+   "30m": 1
+  },
+  "anchor_invariance_checks": [
+   {
+    "key_id": "aa004",
+    "decisive_rc": 1,
+    "decisive_nodes": 15616012,
+    "node_exact_budgets": [
+     20000000,
+     25000000,
+     30000000
+    ]
+   },
+   {
+    "key_id": "aa036",
+    "decisive_rc": 2,
+    "decisive_nodes": 955659,
+    "node_exact_budgets": [
+     15000000,
+     20000000,
+     25000000,
+     30000000
+    ]
+   },
+   {
+    "key_id": "aa046",
+    "decisive_rc": 1,
+    "decisive_nodes": 2185149,
+    "node_exact_budgets": [
+     15000000,
+     20000000
+    ]
+   }
+  ],
+  "junk_lines_ignored": {
+   "count": 1,
+   "line": "P1-FAIL "
+  },
+  "cross_checks_passed": [
+   "54 key_ids of batch-keys == union of status-log key ids (excl. 1 known junk line)",
+   "WIN set == expected 46 (35@15M + 7@20M + 3@25M + 1@30M), decisive rows rc=1",
+   "LOSS set == expected 8, decisive rows rc=2",
+   "aa004/aa036/aa046 nodes identical across re-probe budgets (node-exact anchors)",
+   "all 7 status.log sha256 equal previously recorded pins (re-fetched and re-hashed)"
+  ]
+ },
+ "how_to_verify": "re-fetch the 7 pinned status.logs + batch-keys, verify sha256, parse (PASS b,rc,nodes / WIN-HALT / EXHAUSTED / *-TRUNCATED-RETRY), decisive = first chronological rc=1 (WIN) else rc=2 (LOSS)"
+}

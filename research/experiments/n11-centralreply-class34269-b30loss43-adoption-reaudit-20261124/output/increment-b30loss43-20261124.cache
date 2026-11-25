@@ -1,0 +1,84 @@
+# n11 central-reply closure batch-30 (class 34269) 43-LOSS
+#   canonical-adoption increment (Part DN, 2026-11-24)
+# published batch-30 kit + Part DJ exh6-20M reprobe kit + Part
+#   DK 25M reprobe kit: ALL 54 of 54 keys carry honest two-pass
+#   probe labels.  43 keys resolved LOSS (38 at budget 15M kit
+#   raws, ac032/ac036/ac044/ac047 at the Part DJ 20M reprobe,
+#   ac013 at the Part DK 25M reprobe superseding its pinned 15M
+#   and 20M exhaustion pairs, nodes 21,954,135) and ARE this
+#   increment.  11 keys (ac002/ac003/ac020/ac026/ac027/ac034/
+#   ac041/ac045/ac048/ac054 at 15M and ac006 at the Part DJ
+#   20M reprobe) are probe-level WINs and stay UNCONSUMED: not
+#   adopted, not emitted, not in any canonical cache (WIN-row
+#   scrutiny is the separate C++ owner lane, pin 9193f5b6...;
+#   no completeness claim is made beyond the labels).
+# 2-pass node-exact exact-S5 verdicts, fresh cold, pinned
+#   jsreplay.js sha256
+#   845856175d3c793a7eb4306f5902ecda3f1c046a8a53e8f34ed375e51febc3df
+# gates: three kit MANIFESTs sha-verified file-by-file (199+34+15
+#   files, the KIT2 output/-relative name quirk resolved against
+#   the published tree); 54+6+1 two-pass fresh-cold raw
+#   re-verification with '# replay_done' on both passes;
+#   honest-history status pins (79-line kit1 log: 56 PASS rows
+#   with the pinned ac001/ac002 restart duplicates, 11 pinned
+#   WIN-HALT rows, 6 pinned EXHAUSTED rows, 2 pinned MISMATCH
+#   rows resolved by pinned retries, 4 pinned TRUNCATED-RETRY
+#   markers; 14-line DJ log; 1-line DK log); the three-generation
+#   ac013 supersede chain byte-pinned; the DJ frozen-snapshot
+#   chain tie (base_status_log_sha256 == sha256 of the first
+#   2180 bytes of the 79-line status) and the DK prefix tie;
+#   val-gate node-exact across all published hosts (4 x 5 hosts
+#   at 15M + DJ 20M pair + DK 25M dkt/dkvv pair); adopted keys
+#   distinct, absent from BASE 60222707... (6,405 rows,
+#   WIN 158 / LOSS 6,247) and from the quarantine registry;
+#   the 11 WIN keys likewise absent everywhere (consumed
+#   nowhere); adopted per-pass node total 346729500,
+# ADOPTED set = the 43 decisive-LOSS keys; full != loss because
+#   eleven probe-level WIN rows exist and stay unconsumed.
+# The 43 LOSS rows ARE consumed into the canonical cache by the
+#   fail-closed union merger; 11x11 stays UNKNOWN; nodes are
+#   bookkeeping, never verdicts; class 34269 is NOT freed (its
+#   remaining unknown children are the eleven unconsumed WINs).
+s5verdict,1152921504607895553,73014444032,5,2,5349962
+s5verdict,1152921504607895554,73014444032,5,2,9625374
+s5verdict,1152921504607895556,73014444032,5,2,3095290
+s5verdict,1152921504607903744,73014444032,5,2,8586185
+s5verdict,1152921504624672768,68719476737,5,2,6320372
+s5verdict,1152921504624672768,68719476738,5,2,14494291
+s5verdict,1152921504624672768,68719476992,5,2,3413023
+s5verdict,1152921504624672768,68719477248,5,2,8535077
+s5verdict,1152921504624672768,68719477760,5,2,10672726
+s5verdict,1152921504624672768,68719478784,5,2,9916865
+s5verdict,1152921504624672768,68719480832,5,2,3428856
+s5verdict,1152921504624672768,68721573888,5,2,10125646
+s5verdict,1152921504624672768,68723671040,5,2,8904715
+s5verdict,1152921504624672768,68727865344,5,2,11367923
+s5verdict,1152921504624672768,73014444032,5,2,4251146
+s5verdict,1152921504624672769,68719476736,5,2,3119506
+s5verdict,1152921504624672772,68719476736,5,2,3007885
+s5verdict,1152921504624672776,68719476736,5,2,5018863
+s5verdict,1152921504624672784,68719476736,5,2,9826442
+s5verdict,1152921504624672800,68719476736,5,2,3722379
+s5verdict,1152921504624672832,68719476736,5,2,3441401
+s5verdict,1152921504624672896,68719476736,5,2,16605302
+s5verdict,1152921504624673024,68719476736,5,2,6210354
+s5verdict,1152921504624673280,68719476736,5,2,16323488
+s5verdict,1152921504624803840,68719476736,5,2,6927463
+s5verdict,1152921504624934912,68719476736,5,2,19707272
+s5verdict,1152921504625197056,68719476736,5,2,5216563
+s5verdict,1152921504626769920,68719476736,5,2,17394041
+s5verdict,1152921504658227200,68719476736,5,2,7072780
+s5verdict,1152921504691781632,68719476736,5,2,3000128
+s5verdict,1152921504758890496,68719476736,5,2,5635468
+s5verdict,1152921504893108224,68719476736,5,2,6725969
+s5verdict,1152921505161543680,68719476736,5,2,5087946
+s5verdict,1152921779502579712,68719476736,5,2,5816333
+s5verdict,1152922054380486656,68719476736,5,2,6067761
+s5verdict,1152923703647928320,68719476736,5,2,9204933
+s5verdict,1152925902671183872,68719476736,5,2,5912106
+s5verdict,1152930300717694976,68719476736,5,2,3818788
+s5verdict,1153202979601383424,68719476736,5,2,4730437
+s5verdict,1155173304438358016,68719476736,5,2,21954135
+s5verdict,1161928703879413760,68719476736,5,2,10173232
+s5verdict,1170935903134154752,68719476736,5,2,8979741
+s5verdict,5764607523052060672,68719476736,5,2,7941333

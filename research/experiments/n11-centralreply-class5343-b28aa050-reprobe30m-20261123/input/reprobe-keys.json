@@ -1,0 +1,123 @@
+{
+ "schema": "n11-centralreply-c5343-b28aa050-reprobe30m-input-v1",
+ "class_index": 5343,
+ "batch": 28,
+ "source_condition": {
+  "budget": 15000000,
+  "published_batch_packet_sha256": "af19208fafb61cc20892fa968bc373fe2c4f79da94744dfeed9d2f40ea8481e5",
+  "published_row_audit": {
+   "schema": "n11-centralreply-closure-class5343-batch28-rowaudit-full-v2",
+   "row_audit_json_sha256": "00c323835f9ebc048b6ffea81a8fd556e3e8146adf1c562c34aa89d9d7bb69c0",
+   "exhausted_rows": [
+    "aa004",
+    "aa005",
+    "aa021",
+    "aa028",
+    "aa030",
+    "aa031",
+    "aa032",
+    "aa035",
+    "aa047",
+    "aa050",
+    "aa053"
+   ]
+  },
+  "published_cq20m_reprobe": {
+   "schema": "n11-centralreply-c5343-b28exh-reprobe20m-audit-v1",
+   "audit_json_sha256": "6227eb2cfeb14c31799d94f19436c07233d55c8301d8640ee266b8cc3a366692",
+   "published_commit": "962348f99bcb91f09accd33a76851f733160e5a3",
+   "still_exhausted_rows_at_20m": [
+    "aa021",
+    "aa028",
+    "aa032",
+    "aa050"
+   ],
+   "still_exhausted_at_20m_eligible_for_25m": [
+    "aa021",
+    "aa028",
+    "aa032",
+    "aa050"
+   ],
+   "source_experiment_dir": "research/experiments/n11-centralreply-class5343-b28exhausted-reprobe-20261123/"
+  },
+  "published_cs25m_reprobe": {
+   "schema": "n11-centralreply-c5343-b28exh-reprobe25m-audit-v1",
+   "audit_json_sha256": "c6622d575f8379383856510caad1bffb6bd05bf047ba54a1589f7e01090e3796",
+   "published_commit": "37c52cfb6ca1ee0b1171e91bd7a587366a2e0118",
+   "still_exhausted_rows": [
+    "aa050"
+   ],
+   "resolved_win_rows": [
+    "aa021",
+    "aa028",
+    "aa032"
+   ],
+   "source_experiment_dir": "research/experiments/n11-centralreply-class5343-b28exhausted-reprobe25m-20261123/"
+  }
+ },
+ "reprobe_condition": {
+  "budget": 30000000,
+  "note": "higher-budget NEW-condition reprobe pre-declared by Part CT; the published 15M condition, the published Part CQ 20M condition and the published Part CS 25M condition are not re-run (no-same-condition-re-search rule for COMPLETED exhaustion rows is untouched); result 0 at 30M remains honest UNKNOWN with no same-condition re-probe; expected single-pass wall ~131-165s (published 25M pass wall 131s) so the published cross-invocation p1/p2 file-existence resume guard is exercised as pre-declared (1-3 invocations per key, WINDOW-EXCEEDED backup rule intact)"
+ },
+ "base_cache_absence_check": {
+  "path": "research/experiments/n11-centralreply-class5343-loss7-adoption-reaudit-20261123/output/merged-exact-s5-chain-plus-b28loss1-plus-b28loss7-20261123.cache",
+  "sha256": "854800f38349277924bc77c50d92a6d5252f11bdb2b2cdb54a14ca2b4f6b087d",
+  "verdict_rows": 6301,
+  "target_hits": {
+   "aa050": 0
+  }
+ },
+ "keys": [
+  {
+   "key_id": "aa050",
+   "s5_index": 199735,
+   "lo": "1152921504640401408",
+   "hi": "4228",
+   "legal": 94,
+   "membership_class_count": 4,
+   "input_csv_sha256": "cc5e405ab3ba311d7c477c8f960f1f7d1dc49ef3b37b027c2acd0c573d302787",
+   "published_15m": {
+    "result": 0,
+    "nodes": 15000000,
+    "raw_p1_sha256": "4b9cb07b6dbd59a341ad14c370bec299d30503f3a455da162b9a16c5fcb48e1a",
+    "raw_p2_sha256": "a6e1fde68592a5fe0fbacc2eaa23cd97d9031b89a8d506f8ce57a0c888163c3c"
+   },
+   "published_cq20m": {
+    "result": 0,
+    "nodes": 20000000,
+    "raw_p1_sha256": "8a0cbbfb2dbada37728123c26c7ae00fe36b8dcee1bbb2cb3c75f9d1f6fcf39f",
+    "raw_p2_sha256": "b410dfaa1543f92c6522fb7123e83f46d9397bc0647b01289715ce0efc3ffd60"
+   },
+   "published_cs25m": {
+    "result": 0,
+    "nodes": 25000000,
+    "raw_p1_sha256": "44a9239d14286b005c0aba1307bb447b3680a8422e434fc79ca770ecefe389ef",
+    "raw_p2_sha256": "44a9239d14286b005c0aba1307bb447b3680a8422e434fc79ca770ecefe389ef"
+   }
+  }
+ ],
+ "anchors": [
+  {
+   "key_id": "aa036",
+   "lo": "1152921504606912512",
+   "hi": "4228",
+   "legal": 64,
+   "expect_at_30m": {
+    "result": 2,
+    "nodes": 955659
+   },
+   "note": "resolved rows re-run under the higher budget flag as derived-runner val anchors; the deterministic search must reproduce the published node count exactly (budget only caps, so nodes are unchanged)"
+  },
+  {
+   "key_id": "aa004",
+   "lo": "1171516445255794689",
+   "hi": "0",
+   "legal": 91,
+   "expect_at_30m": {
+    "result": 1,
+    "nodes": 15616012
+   },
+   "note": "resolved rows re-run under the higher budget flag as derived-runner val anchors; the deterministic search must reproduce the published node count exactly (budget only caps, so nodes are unchanged)"
+  }
+ ]
+}

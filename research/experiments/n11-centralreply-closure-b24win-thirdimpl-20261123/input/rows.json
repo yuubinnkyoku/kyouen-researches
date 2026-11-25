@@ -1,0 +1,84 @@
+{
+ "schema": "n11-centralreply-closure-b24win-thirdimpl-input-v1",
+ "sources": {
+  "b24": "sources/raw y001.p1/p2 + y006.p1/p2 + sources/status-b24.log + sources/row-audit-winhalt-b24.json + batch-keys-b24.json + published batch-24 (Part BO) canonical outputs, publication commits 2c91e033 (declaration) / d7ee67c7 (scaffold+inputs) / 18420555 (raws+status+row-audit) / d4c0074e (README+MANIFEST), commit-pinned raw fetch; batch-24 batch-keys sha256 486858d6..",
+  "b24_batch_keys_sha256": "486858d6e2de0662ef38a6ff1fd61c1c0dcf6e9b09012c2c32fdd99153d096cc",
+  "b24_row_audit_winhalt_sha256": "9d073038f99af68f5832e6b49de2f760356dbfddcbd468623b762cce1083c0d5",
+  "anchors": "published Part G/K/O/P/T/W/AA/AD/AG/AL/AR/AX/AZ/BF/BK/BM/BS/BV anchor/negative values, input CSVs byte-equality-checked against the published Part BF experiment (provenance chain AR -> BF -> BK -> BM -> BS -> BV -> BW)"
+ },
+ "consumed_into_canonical_cache": false,
+ "targets": [
+  {
+   "key_id": "y001",
+   "stones": 5,
+   "lo": 10376293541461753856,
+   "hi": 264,
+   "legal": 87,
+   "replica_result": 1,
+   "replica_nodes": 5291064,
+   "source": "part-bo-batch24-win",
+   "s5_index": 91296,
+   "membership_class_count": 2,
+   "expect_third": 1
+  },
+  {
+   "key_id": "y006",
+   "stones": 5,
+   "lo": 1152921504607043584,
+   "hi": 264,
+   "legal": 84,
+   "replica_result": 1,
+   "replica_nodes": 5321639,
+   "source": "part-bo-batch24-win",
+   "s5_index": 368510,
+   "membership_class_count": 2,
+   "expect_third": 1
+  }
+ ],
+ "anchors": [
+  {
+   "key_id": "k02a",
+   "stones": 5,
+   "lo": 1297036692683751424,
+   "hi": 68157440,
+   "legal": 87,
+   "expect_third": 1,
+   "anchor_expansions": 9106337,
+   "anchor_ttHits": 4991527,
+   "expect_kind": "win",
+   "replica_result": null,
+   "replica_nodes": null
+  },
+  {
+   "key_id": "l1a",
+   "stones": 5,
+   "lo": 13019119616,
+   "hi": 16448,
+   "legal": 116,
+   "expect_third": 2,
+   "anchor_expansions": 7660602,
+   "anchor_ttHits": 3951175,
+   "expect_kind": "loss",
+   "replica_result": null,
+   "replica_nodes": null
+  }
+ ],
+ "negatives": [
+  {
+   "key_id": "ng1",
+   "lo": 1297036692683751424,
+   "hi": 68157440,
+   "legal": 88,
+   "stones": 5,
+   "why": "legal+1 vs derived 87"
+  },
+  {
+   "key_id": "ng2",
+   "lo": 1297036692683751424,
+   "hi": 68157440,
+   "legal": 87,
+   "stones": 6,
+   "why": "stones 6 vs actual 5"
+  }
+ ]
+}

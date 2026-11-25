@@ -1,0 +1,64 @@
+{
+ "schema": "n11-centralreply-c5343-b28exh-reprobe20m-audit-v1",
+ "class_index": 5343,
+ "batch": 28,
+ "reprobe_budget": 20000000,
+ "keys_total": 11,
+ "probed": 11,
+ "resolved_win_rows": [
+  "aa004",
+  "aa005",
+  "aa030",
+  "aa031",
+  "aa035",
+  "aa047",
+  "aa053"
+ ],
+ "resolved_loss_rows": [],
+ "loss_rows_are_adoption_candidates_only": true,
+ "still_exhausted_rows": [
+  "aa021",
+  "aa028",
+  "aa032",
+  "aa050"
+ ],
+ "window_exceeded_rows": [],
+ "unprobed_rows": [],
+ "mismatches": 0,
+ "anchors": {
+  "aa036": {
+   "result": 2,
+   "nodes": 955659,
+   "node_exact_vs_published": true
+  },
+  "aa046": {
+   "result": 1,
+   "nodes": 2185149,
+   "node_exact_vs_published": true
+  }
+ },
+ "val_gate_fresh": {
+  "at2m-s5-1152921504606851072-536870946": {
+   "result": 0,
+   "nodes": 2000000,
+   "node_exact": true
+  },
+  "at2m-s5-1188950301626860544-536870912": {
+   "result": 0,
+   "nodes": 2000000,
+   "node_exact": true
+  },
+  "first-15m-s5-1152921504606851072-536870946": {
+   "result": 2,
+   "nodes": 3651923,
+   "node_exact": true
+  },
+  "second-15m-s5-1188950301626860544-536870912": {
+   "result": 2,
+   "nodes": 5040200,
+   "node_exact": true
+  }
+ },
+ "input_sha256": "e8961c7ed02fbf1bfad51e33d2f757a6c0ade0b605371cf030b1a16c153ac466",
+ "note": "all complete pairs two-pass node-exact at budget 20000000; resolved rows are honest labels (verdict NOT consumed; adoption via a separate declared adoption Part with the pinned fail-closed merger only; WIN rows additionally gated by the scrutiny owner C++ second implementation); still-exhausted rows are honest UNKNOWN at the 20M condition (no same-condition re-probe); window-exceeded rows are honest unresolved-in-window; the standard 11x11 empty board and every key stay UNKNOWN at this point"
+}

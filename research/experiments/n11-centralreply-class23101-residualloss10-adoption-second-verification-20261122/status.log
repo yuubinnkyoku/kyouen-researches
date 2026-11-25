@@ -1,0 +1,43 @@
+# Part BD (batch-14residual class 23101 10-LOSS adoption second verification) execution status log
+# host: independent verification host (n11 central-reply closure long-term lane)
+# all times UTC 2026-11-22
+
+2026-11-22T23:3xZ PART-BD DECLARATION pushed (note amendment commit 269e78657eea3628af5d19fe8ab5dee7119b3df0,
+  observed HEAD-before-push b706b21448041c8d6788fd9803059ae675051595, note blob
+  a564e191ef9eb5b369dee4b1d1a7c25e9a47f73a re-fetched immediately before push)
+2026-11-22T23:3xZ BASE published bytes re-verified (Part BC 16-file MANIFEST 16/16 OK on this host;
+  BC inputs incl. batch-17 batch-keys db762175 byte-fetched at pinned commit 269e7865 and verified
+  byte-identical before use)
+2026-11-22T23:3xZ maker x3 PASS (increment c3f201a6 / manifest f7287b7b, 3/3 byte-identical)
+2026-11-22T23:3xZ merger selftest PASS + merge x3 PASS (canonical 0b594f7e 6,182 rows + audits
+  6a9a53a3, 3/3 byte-identical)
+2026-11-22T23:4xZ refresh x3 PASS (5f3a09c6 / 52ec3d4b / 1f54065a / worklist fe71be60, 3/3,
+  ~58s/run on this host)
+2026-11-22T23:4xZ extractor x3 PASS (62de8c16, 3/3, all gates PASS)
+2026-11-22T23:4xZ minimal independent checker run: 43 checks, 0 failures, rc=0
+  (bd-minimal-check-result.json; scripts/check_bd_minimal.py uses no Part BC machinery)
+2026-11-22T23:4xZ instrumented refresh reruns (BASE + SCEN worlds): all published output bytes
+  reproduced on this host (BASE a0043c76/e60c1088/4c7ec5d7/667dc815, SCEN 5f3a09c6/52ec3d4b/
+  1f54065a/fe71be60); greedy traces recorded (joint 1-pass union 49,361 -> 49,351,
+  6-pass-limit snapshot 35,645 -> 38,978; pass limit hit with improved=True in both worlds:
+  deterministic local-search snapshot, plan estimate only, not a coverage claim)
+2026-11-22T23:5xZ fail-closed tamper battery T1-T6 executed against scratch trees only:
+  T1 maker 3-way ABORT / T2 merger conflict no-output / T3a gate-gap documented + T3b refresh
+  cache-sha pin capture / T4 manifest row_counts gate / T5 cache byte pin / T6 policy input pin
+  (log bd-tamper-battery.log)
+2026-11-22T23:5xZ pristine re-verification after battery: Part BC MANIFEST 16/16 OK, all pinned
+  input sha256 unchanged on this host; publication prepared
+PUBLICATION sequence (single-owner Part BD, declared in the note before execution):
+  - scripts x3 (check_bd_minimal.py + two instrumented refresh copies)
+  - output x6 (minimal-check-result, rerun-shas, verification-summary, greedy traces x2,
+    tamper-battery log)
+  - README + status.log + MANIFEST-sha256
+  - every publication commit fetch-back byte-verified via commit-pinned raw
+guards (unchanged at every point of this Part):
+  - standard 11x11 empty board UNKNOWN; all 19 central-reply roots UNKNOWN;
+    class 23101 UNKNOWN (unconsumed q042 WIN child 745184 remains its only
+    scenario-unknown cost child); no class closure or root coverage claimed
+  - verdict consumption ZERO: the 10 residual LOSS rows were already consumed
+    by Part BC; this Part consumes nothing and adopts nothing; 17 unconsumed
+    closure WINs untouched (scrutiny owner C++ second implementation gate pin
+    9193f5b6...)

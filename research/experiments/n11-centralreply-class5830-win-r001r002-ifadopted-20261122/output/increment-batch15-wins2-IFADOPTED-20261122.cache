@@ -1,0 +1,19 @@
+# n11 central-reply closure batch-15 (class 5830) IF-ADOPTED increment (Part AN, 2026-11-22)
+# published Part AN declaration (note amendment 2026-11-22, after Part AI status update;
+#   observed HEAD-before-push recorded in the declaration commit message).
+# 2-pass node-exact exact-S5 verdicts at budget 15M, fresh cold, pinned jsreplay.js
+#   sha256 845856175d3c793a7eb4306f5902ecda3f1c046a8a53e8f34ed375e51febc3df
+# batch-15 was executed by the declaring host only (no takeover pass exists; Part AK).
+# Third-implementation verdict-level cross-verification of both WIN rows is published
+#   (Part AL, audit 51/51 gates). r003/r004 are budget EXHAUSTION rows (result 0,
+#   nodes==budget): honest UNKNOWN, excluded from the increment by the type gate.
+# gates: 3-way (p1/p2/status) node-exact, status.log agreement, batch-keys (sha256 af3e4c46)
+#   legal/(lo,hi) agreement, resolved keys distinct, ZERO BASE-cache overlap (structural gate:
+#   batch-15 post-dates the Part Y merge; any overlap ABORTs), quarantine 0.
+# WIN set = exactly {r001, r002}; zero resolved LOSS rows, so the 'full packet' scenario
+#   is IDENTICAL to this WIN-only scenario (machine-asserted in the manifest).
+# Read-only what-if analysis increment; verdicts are NOT consumed; 11x11 stays UNKNOWN;
+# nodes are bookkeeping, never verdicts.
+# 2 rows: the unconsumed closure WINs r001/r002 (15th-batch WIN pair).
+s5verdict,3603442651849818112,128,5,1,5973924
+s5verdict,4035788216211603456,0,5,1,2521302

@@ -1,0 +1,26 @@
+RUN key=ng1 tag=a kind=negative rc=1 out=output/negative/ng1.a.out third,ng1a,5,88,,GATE_FAIL,"legal count mismatch: derived=87 declared=88"
+RUN key=ng2 tag=a kind=negative rc=1 out=output/negative/ng2.a.out third,ng2a,6,87,,GATE_FAIL,"stone count mismatch: bits=5 declared=6"
+RUN key=k02a tag=a kind=anchor rc=0 out=output/anchors/k02a.a.out third,k02aa,5,87,87,1,9106337,4991527,26.28,1297036692683751424,68157440,clean,quads=95670,ttOverwrites=4912053,memoPower=22
+RUN key=k02a tag=b kind=anchor rc=0 out=output/anchors/k02a.b.out third,k02ab,5,87,87,1,9106337,4991527,26.08,1297036692683751424,68157440,clean,quads=95670,ttOverwrites=4912053,memoPower=22
+RUN key=l1a tag=a kind=anchor rc=0 out=output/anchors/l1a.a.out third,l1aa,5,116,116,2,7660602,3951175,23.50,13019119616,16448,clean,quads=95670,ttOverwrites=3466722,memoPower=22
+RUN key=l1a tag=b kind=anchor rc=0 out=output/anchors/l1a.b.out third,l1ab,5,116,116,2,7660602,3951175,23.98,13019119616,16448,clean,quads=95670,ttOverwrites=3466722,memoPower=22
+REPLICA key=aa005 pass=p1 rc=0 out=output/replica/aa005.p1.out replay,0,5,89,0,20000000,1,15957877,86,1171516445255794690,0
+REPLICA key=aa005 pass=p2 rc=0 out=output/replica/aa005.p2.out replay,0,5,89,0,20000000,1,15957877,81,1171516445255794690,0
+REPLICA key=aa030 pass=p1 rc=0 out=output/replica/aa030.p1.out replay,0,5,90,0,20000000,1,16765560,86,1243574039293722624,0
+REPLICA key=aa030 pass=p2 rc=0 out=output/replica/aa030.p2.out replay,0,5,90,0,20000000,1,16765560,92,1243574039293722624,0
+REPLICA key=aa031 pass=p1 rc=0 out=output/replica/aa031.p1.out replay,0,5,92,0,20000000,1,17185014,93,1459746821407506432,0
+REPLICA key=aa031 pass=p2 rc=0 out=output/replica/aa031.p2.out replay,0,5,92,0,20000000,1,17185014,91,1459746821407506432,0
+REPLICA key=aa047 pass=p1 rc=0 out=output/replica/aa047.p1.out replay,0,5,92,0,20000000,1,16230465,83,1152921504611041280,4228
+REPLICA key=aa047 pass=p2 rc=0 out=output/replica/aa047.p2.out replay,0,5,92,0,20000000,1,16230465,88,1152921504611041280,4228
+REPLICA key=aa053 pass=p1 rc=0 out=output/replica/aa053.p1.out replay,0,5,95,0,20000000,1,16685872,82,1152921504606855168,4228
+REPLICA key=aa053 pass=p2 rc=0 out=output/replica/aa053.p2.out replay,0,5,95,0,20000000,1,16685872,91,1152921504606855168,4228
+RUN key=aa005 tag=a kind=target rc=0 out=output/targets/aa005.a.out third,aa005a,5,89,89,1,19039348,9973293,52.98,1171516445255794690,0,clean,quads=95670,ttOverwrites=14845044,memoPower=22
+RUN key=aa005 tag=b kind=target rc=0 out=output/targets/aa005.b.out third,aa005b,5,89,89,1,19039348,9973293,52.57,1171516445255794690,0,clean,quads=95670,ttOverwrites=14845044,memoPower=22
+RUN key=aa030 tag=a kind=target rc=0 out=output/targets/aa030.a.out third,aa030a,5,90,90,1,20088051,10390281,56.38,1243574039293722624,0,clean,quads=95670,ttOverwrites=15893747,memoPower=22
+RUN key=aa030 tag=b kind=target rc=0 out=output/targets/aa030.b.out third,aa030b,5,90,90,1,20088051,10390281,54.95,1243574039293722624,0,clean,quads=95670,ttOverwrites=15893747,memoPower=22
+RUN key=aa031 tag=a kind=target rc=0 out=output/targets/aa031.a.out third,aa031a,5,92,92,1,20667128,10712737,57.46,1459746821407506432,0,clean,quads=95670,ttOverwrites=16472824,memoPower=22
+RUN key=aa031 tag=b kind=target rc=0 out=output/targets/aa031.b.out third,aa031b,5,92,92,1,20667128,10712737,56.93,1459746821407506432,0,clean,quads=95670,ttOverwrites=16472824,memoPower=22
+RUN key=aa047 tag=a kind=target rc=0 out=output/targets/aa047.a.out third,aa047a,5,92,92,1,19721784,10022029,54.40,1152921504611041280,4228,clean,quads=95670,ttOverwrites=15527480,memoPower=22
+RUN key=aa047 tag=b kind=target rc=0 out=output/targets/aa047.b.out third,aa047b,5,92,92,1,19721784,10022029,54.59,1152921504611041280,4228,clean,quads=95670,ttOverwrites=15527480,memoPower=22
+RUN key=aa053 tag=a kind=target rc=0 out=output/targets/aa053.a.out third,aa053a,5,95,95,1,19952660,9981076,55.00,1152921504606855168,4228,clean,quads=95670,ttOverwrites=15758356,memoPower=22
+RUN key=aa053 tag=b kind=target rc=0 out=output/targets/aa053.b.out third,aa053b,5,95,95,1,19952660,9981076,54.37,1152921504606855168,4228,clean,quads=95670,ttOverwrites=15758356,memoPower=22

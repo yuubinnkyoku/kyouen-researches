@@ -1,0 +1,75 @@
+{
+ "schema": "n11-centralreply-closure-b28drive2loss-thirdimpl-input-v1",
+ "sources": {
+  "b28drive2": "sources/raw aa003.p1/p2 + sources/status-cd.log + sources/row-audit-cd.json + batch-keys-cd.json + published batch-28 drive-2 (Part CD) canonical outputs (experiment n11-centralreply-closure-class5343-batch28-drive2-20261123, MANIFEST 2811b577..), commit-pinned raw fetch; batch-keys sha256 af19208f..",
+  "b28_batch_keys_sha256": "af19208fafb61cc20892fa968bc373fe2c4f79da94744dfeed9d2f40ea8481e5",
+  "b28drive2_row_audit_sha256": "3e86a32b847b5799594be5fbee6624878deadf02990940b2503f931d7af30e91",
+  "b28drive2_status_sha256": "343097c268425cc62263935f1063c26689515bc797c68bbdb82389c713952c98",
+  "adoption": "published Part CH 1-LOSS adoption re-audit (experiment n11-centralreply-class5343-loss1-adoption-reaudit-20261123): merged canonical cache sha256 3124461b.. (6294 rows, BASE 6293 + aa003 only), increment dc857bfd.., increments-manifest 017c7c30.., pinned fail-closed merger 90711961..; the adopted row == the raw aa003 LOSS row byte-for-byte (machine-gated both by this maker and by audit_ck.py G6)",
+  "anchors": "published Part G/K/O/P/T/W/AA/AD/AG/AL/AR/AX/AZ/BF/BK/BM/BS/BV/BW/BX/BY/CC anchor/negative values, input CSVs byte-equality-checked against the published Part BF experiment (provenance chain AR -> BF -> BK -> BM -> BS -> BV -> BW -> BX -> BY -> CC -> CK)"
+ },
+ "consumed_into_canonical_cache": false,
+ "adopted_before_this_experiment_by_part_ch": true,
+ "adopted_canonical_cache_sha256": "3124461b14e4f73a7248cbf5b96c7ff59ebfdcc05258adeb9c81791d86cc461e",
+ "targets": [
+  {
+   "key_id": "aa003",
+   "stones": 5,
+   "lo": 1152921504741064704,
+   "hi": 4228,
+   "legal": 86,
+   "replica_result": 2,
+   "replica_nodes": 4070373,
+   "source": "part-cd-batch28-loss",
+   "s5_index": 104943,
+   "membership_class_count": 3,
+   "expect_third": 2
+  }
+ ],
+ "anchors": [
+  {
+   "key_id": "k02a",
+   "stones": 5,
+   "lo": 1297036692683751424,
+   "hi": 68157440,
+   "legal": 87,
+   "expect_third": 1,
+   "anchor_expansions": 9106337,
+   "anchor_ttHits": 4991527,
+   "expect_kind": "win",
+   "replica_result": null,
+   "replica_nodes": null
+  },
+  {
+   "key_id": "l1a",
+   "stones": 5,
+   "lo": 13019119616,
+   "hi": 16448,
+   "legal": 116,
+   "expect_third": 2,
+   "anchor_expansions": 7660602,
+   "anchor_ttHits": 3951175,
+   "expect_kind": "loss",
+   "replica_result": null,
+   "replica_nodes": null
+  }
+ ],
+ "negatives": [
+  {
+   "key_id": "ng1",
+   "lo": 1297036692683751424,
+   "hi": 68157440,
+   "legal": 88,
+   "stones": 5,
+   "why": "legal+1 vs derived 87"
+  },
+  {
+   "key_id": "ng2",
+   "lo": 1297036692683751424,
+   "hi": 68157440,
+   "legal": 87,
+   "stones": 6,
+   "why": "stones 6 vs actual 5"
+  }
+ ]
+}

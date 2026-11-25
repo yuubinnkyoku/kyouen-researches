@@ -1,0 +1,88 @@
+{
+ "schema": "n11-centralreply-closure-b28drive3win-thirdimpl-input-v1",
+ "sources": {
+  "b28drive3": "sources/raw aa008/aa009 p1+p2 + sources/status-cj.log + sources/row-audit-cj.json + batch-keys-cd.json + published batch-28 drive-3 (Part CJ) canonical outputs (experiment n11-centralreply-closure-class5343-batch28-drive3-20261123, MANIFEST at commit eed9f348), commit-pinned raw fetch; batch-keys sha256 af19208f..",
+  "b28_batch_keys_sha256": "af19208fafb61cc20892fa968bc373fe2c4f79da94744dfeed9d2f40ea8481e5",
+  "b28drive3_row_audit_sha256": "eb1d1e98f967925a92739fca5fcf925c37a8e3f488434926b8625195c0241402",
+  "b28drive3_status_sha256": "1a5c08c516dbc34bde466a55a39f7e9acdfef57f09bc1bd7e19d2efb9fd5137c",
+  "unadopted": "published Part CH 1-LOSS adoption re-audit (experiment n11-centralreply-class5343-loss1-adoption-reaudit-20261123): merged canonical cache sha256 3124461b.. (6294 rows, BASE 6293 + aa003 only) is UNCHANGED and carries NO row for aa008/aa009 (machine-gated both by this maker and by audit_cm.py G6); increment dc857bfd.., increments-manifest 017c7c30.., pinned fail-closed merger 90711961..; the two cross-verified WIN rows are UNADOPTED honest labels pending the scrutiny owner C++ second-implementation gate 9193f5b6 unchanged",
+  "anchors": "published Part G/K/O/P/T/W/AA/AD/AG/AL/AR/AX/AZ/BF/BK/BM/BS/BV/BW/BX/BY/CC/CL anchor/negative values, input CSVs byte-equality-checked against the published Part BF experiment (provenance chain AR -> BF -> BK -> BM -> BS -> BV -> BW -> BX -> BY -> CC -> CL -> CM)"
+ },
+ "consumed_into_canonical_cache": false,
+ "unadopted_win_rows": true,
+ "canonical_cache_sha256_unchanged": "3124461b14e4f73a7248cbf5b96c7ff59ebfdcc05258adeb9c81791d86cc461e",
+ "targets": [
+  {
+   "key_id": "aa008",
+   "stones": 5,
+   "lo": 1171516445255794704,
+   "hi": 0,
+   "legal": 85,
+   "replica_result": 1,
+   "replica_nodes": 5270340,
+   "source": "part-cj-batch28-drive3win",
+   "s5_index": 140489,
+   "membership_class_count": 4,
+   "expect_third": 1
+  },
+  {
+   "key_id": "aa009",
+   "stones": 5,
+   "lo": 1747977197559218176,
+   "hi": 0,
+   "legal": 91,
+   "replica_result": 1,
+   "replica_nodes": 7319605,
+   "source": "part-cj-batch28-drive3win",
+   "s5_index": 142299,
+   "membership_class_count": 4,
+   "expect_third": 1
+  }
+ ],
+ "anchors": [
+  {
+   "key_id": "k02a",
+   "stones": 5,
+   "lo": 1297036692683751424,
+   "hi": 68157440,
+   "legal": 87,
+   "expect_third": 1,
+   "anchor_expansions": 9106337,
+   "anchor_ttHits": 4991527,
+   "expect_kind": "win",
+   "replica_result": null,
+   "replica_nodes": null
+  },
+  {
+   "key_id": "l1a",
+   "stones": 5,
+   "lo": 13019119616,
+   "hi": 16448,
+   "legal": 116,
+   "expect_third": 2,
+   "anchor_expansions": 7660602,
+   "anchor_ttHits": 3951175,
+   "expect_kind": "loss",
+   "replica_result": null,
+   "replica_nodes": null
+  }
+ ],
+ "negatives": [
+  {
+   "key_id": "ng1",
+   "lo": 1297036692683751424,
+   "hi": 68157440,
+   "legal": 88,
+   "stones": 5,
+   "why": "legal+1 vs derived 87"
+  },
+  {
+   "key_id": "ng2",
+   "lo": 1297036692683751424,
+   "hi": 68157440,
+   "legal": 87,
+   "stones": 6,
+   "why": "stones 6 vs actual 5"
+  }
+ ]
+}
