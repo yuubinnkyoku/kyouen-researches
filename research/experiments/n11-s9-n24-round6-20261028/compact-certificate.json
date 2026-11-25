@@ -1,0 +1,48 @@
+{
+  "format": "n11-s9-n24-round6-terminal-v1",
+  "board": 11,
+  "perspective": "original-first-player",
+  "emptyBoard": "UNKNOWN",
+  "plan": {
+    "before": 106,
+    "eligible": 1632,
+    "undominated": 305,
+    "baselineCoverage": 63,
+    "coverage": 63,
+    "baselineChildCost": 888,
+    "childCost": 888,
+    "exchanges": 0
+  },
+  "selected": 32,
+  "potentiallyCoveredS8": 63,
+  "selectionSha256": "067beff4ab75e0a7a859c5806b4ac901bba7fcc2951060ab6448a0bd653f0646",
+  "witnessBase64": "AwEBAgEB/wABAA8LARME/wQCE/8BAQgACAgVABAADgc=",
+  "witnessSha256": "85b8d2764e97658f113c3ab1a009e470405f1326bddb56cb2447c62410f822cb",
+  "win9": 3,
+  "loss9": 29,
+  "win10Edges": 82,
+  "firstLossSearchObligations": 280,
+  "uniqueTerminalLeaves": 280,
+  "terminalStatesPerGeometry": 56403,
+  "derivedWin8": 27,
+  "newProofOnlyWin8": 27,
+  "proofOnlyWin8Before": 5380,
+  "proofOnlyWin8After": 5407,
+  "knownLoss8": 338,
+  "previous": {
+    "total": 548,
+    "secured": 442,
+    "missing": 106,
+    "distinctMissing": 106
+  },
+  "updated": {
+    "total": 548,
+    "secured": 448,
+    "missing": 100,
+    "distinctMissing": 100
+  },
+  "winLossConflicts": 0,
+  "newS7Verdicts": 0,
+  "newS5Verdicts": 0,
+  "twoStoneClosures": 0
+}

@@ -1,0 +1,32 @@
+{
+ "tool": "s5_union_merge.py",
+ "fail_closed_gates": "strict 6-field row schema, depth==5, verdict in {1,2}, WIN/LOSS conflict abort (no output), first-occurrence nodes",
+ "inputs": [
+  {
+   "file": "chain/merged-exact-s5-after-js-probe-13.cache",
+   "sha256": "60e0dc3476920d4e99043dd4f132398ea72e4dfdcd9f3dbb8fc686ba65bc28c6",
+   "rows": 5756,
+   "unique_new": 5756
+  },
+  {
+   "file": "chain/thirdcost-increment-37.cache",
+   "sha256": "17f88f8e0233ba2f8b9eed9a3d401d0d59eed41dfb1e4f6dc789aa877ccedfbc",
+   "rows": 37,
+   "unique_new": 37
+  }
+ ],
+ "unique_rows": 5793,
+ "duplicate_rows_elided": 0,
+ "verdict_counts": {
+  "WIN(1)": 158,
+  "LOSS(2)": 5635
+ },
+ "nodes_field_mismatches_recorded": [],
+ "comments_kept_from_first_input": [
+  "# S5 solver-trusted exact; source manifest in probe-audit.json"
+ ],
+ "output_sha256": "bb4495e0586404876db05856c5b8573c62361dadd826b6f68f6f8cae611190b0",
+ "output_bytes": 235886,
+ "row_format": "s5verdict,<lo>,<hi>,5,<verdict>,<nodes>",
+ "interpretation_guard": "nodes are bookkeeping, never verdicts; merge of solver-trusted cache rows; no new verdict is created; 11x11 root questions remain UNKNOWN"
+}

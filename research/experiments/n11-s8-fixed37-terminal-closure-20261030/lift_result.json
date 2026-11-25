@@ -1,0 +1,131 @@
+{
+  "schema": "n11-fixed14-direct37-s7-lift-v1",
+  "emptyBoard": "UNKNOWN",
+  "sourceFixed37": "n11-fixed14-37-s8-direct-terminal-v1",
+  "historicalWin8": 5859,
+  "newWin8": 8,
+  "newLoss8": 29,
+  "mergedWin8": 5867,
+  "mergedLoss8": 367,
+  "knownLoss8Before": 338,
+  "remainingUnknown8Of37": 0,
+  "win7": 13,
+  "loss7": 1,
+  "unknown7": 0,
+  "rows": [
+    {
+      "s7": "00000000000000821080000001000120",
+      "legal8": 35,
+      "knownLoss8Children": 2,
+      "unproved8Children": 0,
+      "verdict": "WIN",
+      "witness": "00000000000000821080800001000120"
+    },
+    {
+      "s7": "00000000000000821080100000004020",
+      "legal8": 40,
+      "knownLoss8Children": 1,
+      "unproved8Children": 0,
+      "verdict": "WIN",
+      "witness": "00000000000000821090100000004020"
+    },
+    {
+      "s7": "00000000000000821080800000400020",
+      "legal8": 37,
+      "knownLoss8Children": 1,
+      "unproved8Children": 0,
+      "verdict": "WIN",
+      "witness": "00000000000000821088100100000020"
+    },
+    {
+      "s7": "00000000000000821090200000000020",
+      "legal8": 33,
+      "knownLoss8Children": 1,
+      "unproved8Children": 0,
+      "verdict": "WIN",
+      "witness": "00008000000000821090200000000020"
+    },
+    {
+      "s7": "00000000000200821080000000000030",
+      "legal8": 37,
+      "knownLoss8Children": 2,
+      "unproved8Children": 0,
+      "verdict": "WIN",
+      "witness": "000000000002008210800000000000b0"
+    },
+    {
+      "s7": "00000000002040821080000000000020",
+      "legal8": 39,
+      "knownLoss8Children": 2,
+      "unproved8Children": 0,
+      "verdict": "WIN",
+      "witness": "00000000002840821080000000000020"
+    },
+    {
+      "s7": "00000000100000821081000000000020",
+      "legal8": 39,
+      "knownLoss8Children": 4,
+      "unproved8Children": 0,
+      "verdict": "WIN",
+      "witness": "00000000100000821081000000000024"
+    },
+    {
+      "s7": "00000040000000821080000000000028",
+      "legal8": 43,
+      "knownLoss8Children": 1,
+      "unproved8Children": 0,
+      "verdict": "WIN",
+      "witness": "00004040000000821080000000000028"
+    },
+    {
+      "s7": "00000080000000c21080000000000020",
+      "legal8": 38,
+      "knownLoss8Children": 2,
+      "unproved8Children": 0,
+      "verdict": "WIN",
+      "witness": "00000080000000c21080000400000020"
+    },
+    {
+      "s7": "00001008000000821080000000000020",
+      "legal8": 45,
+      "knownLoss8Children": 7,
+      "unproved8Children": 0,
+      "verdict": "WIN",
+      "witness": "00001008000000821080000000100020"
+    },
+    {
+      "s7": "00004000000020821080000000000020",
+      "legal8": 40,
+      "knownLoss8Children": 2,
+      "unproved8Children": 0,
+      "verdict": "WIN",
+      "witness": "00004000100020821080000000000020"
+    },
+    {
+      "s7": "00008000000000821080000400000020",
+      "legal8": 43,
+      "knownLoss8Children": 1,
+      "unproved8Children": 0,
+      "verdict": "WIN",
+      "witness": "00008000000000821080000400000030"
+    },
+    {
+      "s7": "00010000000100821080000000000020",
+      "legal8": 44,
+      "knownLoss8Children": 3,
+      "unproved8Children": 0,
+      "verdict": "WIN",
+      "witness": "00010000000100821080000000004020"
+    },
+    {
+      "s7": "00020000000000821080200000000020",
+      "legal8": 35,
+      "knownLoss8Children": 0,
+      "unproved8Children": 0,
+      "verdict": "LOSS",
+      "witness": null
+    }
+  ],
+  "winLossConflicts": 0,
+  "twoStoneRootClosureChecked": false
+}

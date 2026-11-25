@@ -1,0 +1,106 @@
+{
+  "schema": "n11-s8-loss-perfect-matching-v1",
+  "board": 11,
+  "emptyBoard": "UNKNOWN",
+  "s8": "00012010000000821080000000000020",
+  "s8Verdict": "LOSS",
+  "s9LegalCount": 36,
+  "s10BoundaryDistinct": 480,
+  "s10ParentDegree": 2,
+  "selectedLossLeaves": 18,
+  "selectedTerminalStates": 5240,
+  "s7ParentCount": 8,
+  "s7ParentSha256": "c13dfee9627e3a847c60710c83825ce0bd11042dfbc6d52d384f5e0fb227e0ec",
+  "s10Witnesses": [
+    {
+      "s10": "00012010000000821080000000440020",
+      "terminalStates": 239,
+      "legalMoves": 17
+    },
+    {
+      "s10": "00012010000000821080000040000024",
+      "terminalStates": 113,
+      "legalMoves": 13
+    },
+    {
+      "s10": "00012010000000821080040000004020",
+      "terminalStates": 619,
+      "legalMoves": 21
+    },
+    {
+      "s10": "00012010000000821084000400000020",
+      "terminalStates": 119,
+      "legalMoves": 12
+    },
+    {
+      "s10": "000120100000008210a8000000000020",
+      "terminalStates": 361,
+      "legalMoves": 19
+    },
+    {
+      "s10": "00012010000000c21080000200000020",
+      "terminalStates": 434,
+      "legalMoves": 19
+    },
+    {
+      "s10": "00012010000040821090000000000020",
+      "terminalStates": 145,
+      "legalMoves": 16
+    },
+    {
+      "s10": "00012010000100821080000000000120",
+      "terminalStates": 483,
+      "legalMoves": 19
+    },
+    {
+      "s10": "00012010000800821080080000000020",
+      "terminalStates": 226,
+      "legalMoves": 16
+    },
+    {
+      "s10": "00012010002000821080000000000028",
+      "terminalStates": 385,
+      "legalMoves": 19
+    },
+    {
+      "s10": "000120100040008210c0000000000020",
+      "terminalStates": 107,
+      "legalMoves": 15
+    },
+    {
+      "s10": "00012010009000821080000000000020",
+      "terminalStates": 403,
+      "legalMoves": 17
+    },
+    {
+      "s10": "00012010400200821080000000000020",
+      "terminalStates": 478,
+      "legalMoves": 17
+    },
+    {
+      "s10": "00012050000000821080800000000020",
+      "terminalStates": 146,
+      "legalMoves": 16
+    },
+    {
+      "s10": "00012414000000821080000000000020",
+      "terminalStates": 148,
+      "legalMoves": 16
+    },
+    {
+      "s10": "00052010000000821080000000001020",
+      "terminalStates": 512,
+      "legalMoves": 21
+    },
+    {
+      "s10": "00080000000000021082000000100d08",
+      "terminalStates": 56,
+      "legalMoves": 10
+    },
+    {
+      "s10": "00080000000000021082000800201044",
+      "terminalStates": 266,
+      "legalMoves": 21
+    }
+  ]
+}

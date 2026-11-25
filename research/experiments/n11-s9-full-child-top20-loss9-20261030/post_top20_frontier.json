@@ -1,0 +1,320 @@
+{
+  "schema": "n11-fixed14-post-top20-frontier-v1",
+  "emptyBoard": "UNKNOWN",
+  "sourceSha256": {
+    "incidence": "366c7ce2e7e05f73b2a33d83b34ce5fd5c5a1d3ce6f4fef5fca84461d362c60b",
+    "top20Certificate": "4f34da3c1321ef1ae047db84291db32f6510fb5f4545d2517188439ad67c42c8",
+    "top20Result": "e4a80b3c2cce90207ac82dc71c451aed8314ac8d0d4a24ef245f98f6c6ea6101"
+  },
+  "historicalWin9": 56,
+  "historicalLoss9": 2669,
+  "newLoss9ParentClosure": 192,
+  "newDistinctLoss9": 184,
+  "unprovedS8": 37,
+  "unknown9Before": 799,
+  "unknown9After": 750,
+  "unknownEdgesBefore": 829,
+  "unknownEdgesAfter": 760,
+  "sharedEdgeExcessBefore": 30,
+  "sharedEdgeExcessAfter": 10,
+  "sharedEdgeExcessRemoved": 20,
+  "maximumAdditionalEdgesBeyondDistinctS9Certificates": 10,
+  "remainingS9ParentDegreeHistogram": {
+    "1": 740,
+    "2": 10
+  },
+  "newLoss9EdgesOnS8Rows": 69,
+  "rawNewLoss9EdgesIncludingPreviouslyKnown": 74,
+  "previouslyKnownOverlapEdges": 5,
+  "minUnknownChildrenPerS8": 11,
+  "maxUnknownChildrenPerS8": 29,
+  "bestS8ByFewestUnprovedChildren": {
+    "s8": "00012010000000821080000000000020",
+    "unknownBefore": 11,
+    "newCertifiedLossEdges": 0,
+    "unknownAfter": 11
+  },
+  "targetS9ChildrenBySmallestS10Boundary": [
+    {
+      "s9": "00012010000000821084000000000020",
+      "legal10": 22,
+      "otherUnprovedS8Parents": 0
+    },
+    {
+      "s9": "00012010000000c21080000000000020",
+      "legal10": 22,
+      "otherUnprovedS8Parents": 0
+    },
+    {
+      "s9": "00016010000000821080000000000020",
+      "legal10": 23,
+      "otherUnprovedS8Parents": 1
+    },
+    {
+      "s9": "00012010000040821080000000000020",
+      "legal10": 23,
+      "otherUnprovedS8Parents": 0
+    },
+    {
+      "s9": "00012010001000821080000000000020",
+      "legal10": 23,
+      "otherUnprovedS8Parents": 0
+    },
+    {
+      "s9": "00012010000000821080000040000020",
+      "legal10": 24,
+      "otherUnprovedS8Parents": 1
+    },
+    {
+      "s9": "00012010002000821080000000000020",
+      "legal10": 26,
+      "otherUnprovedS8Parents": 0
+    },
+    {
+      "s9": "00012410000000821080000000000020",
+      "legal10": 26,
+      "otherUnprovedS8Parents": 0
+    },
+    {
+      "s9": "00012010000000821080000000040020",
+      "legal10": 27,
+      "otherUnprovedS8Parents": 0
+    },
+    {
+      "s9": "00012010000080821080000000000020",
+      "legal10": 27,
+      "otherUnprovedS8Parents": 0
+    },
+    {
+      "s9": "00012010000000821080000200000020",
+      "legal10": 31,
+      "otherUnprovedS8Parents": 0
+    }
+  ],
+  "allS8Rows": [
+    {
+      "s8": "00012010000000821080000000000020",
+      "unknownBefore": 11,
+      "newCertifiedLossEdges": 0,
+      "unknownAfter": 11
+    },
+    {
+      "s8": "00001008000000821080000000100020",
+      "unknownBefore": 12,
+      "newCertifiedLossEdges": 0,
+      "unknownAfter": 12
+    },
+    {
+      "s8": "00001008000000821080000001000020",
+      "unknownBefore": 13,
+      "newCertifiedLossEdges": 1,
+      "unknownAfter": 12
+    },
+    {
+      "s8": "00042010000000821080000000000020",
+      "unknownBefore": 12,
+      "newCertifiedLossEdges": 0,
+      "unknownAfter": 12
+    },
+    {
+      "s8": "00000008400000821084000000000020",
+      "unknownBefore": 18,
+      "newCertifiedLossEdges": 2,
+      "unknownAfter": 16
+    },
+    {
+      "s8": "00000000002840821080000000000020",
+      "unknownBefore": 21,
+      "newCertifiedLossEdges": 4,
+      "unknownAfter": 17
+    },
+    {
+      "s8": "00000000102000821081000000000020",
+      "unknownBefore": 24,
+      "newCertifiedLossEdges": 6,
+      "unknownAfter": 18
+    },
+    {
+      "s8": "00004000100020821080000000000020",
+      "unknownBefore": 20,
+      "newCertifiedLossEdges": 2,
+      "unknownAfter": 18
+    },
+    {
+      "s8": "00000000000840821080000000000060",
+      "unknownBefore": 25,
+      "newCertifiedLossEdges": 6,
+      "unknownAfter": 19
+    },
+    {
+      "s8": "00000000100000821081000000000024",
+      "unknownBefore": 22,
+      "newCertifiedLossEdges": 3,
+      "unknownAfter": 19
+    },
+    {
+      "s8": "00000080000000c21080000000000060",
+      "unknownBefore": 21,
+      "newCertifiedLossEdges": 2,
+      "unknownAfter": 19
+    },
+    {
+      "s8": "00000080000000c210c0000000000020",
+      "unknownBefore": 20,
+      "newCertifiedLossEdges": 1,
+      "unknownAfter": 19
+    },
+    {
+      "s8": "00001008000000821080000200000020",
+      "unknownBefore": 21,
+      "newCertifiedLossEdges": 2,
+      "unknownAfter": 19
+    },
+    {
+      "s8": "00018000000100821080000000000020",
+      "unknownBefore": 19,
+      "newCertifiedLossEdges": 0,
+      "unknownAfter": 19
+    },
+    {
+      "s8": "00000080000000c21080000400000020",
+      "unknownBefore": 23,
+      "newCertifiedLossEdges": 3,
+      "unknownAfter": 20
+    },
+    {
+      "s8": "00010000000100821080000000004020",
+      "unknownBefore": 20,
+      "newCertifiedLossEdges": 0,
+      "unknownAfter": 20
+    },
+    {
+      "s8": "000000000002008210800000000000b0",
+      "unknownBefore": 25,
+      "newCertifiedLossEdges": 4,
+      "unknownAfter": 21
+    },
+    {
+      "s8": "00000000000200821080000200000030",
+      "unknownBefore": 23,
+      "newCertifiedLossEdges": 2,
+      "unknownAfter": 21
+    },
+    {
+      "s8": "00000000100000821081000000400020",
+      "unknownBefore": 23,
+      "newCertifiedLossEdges": 2,
+      "unknownAfter": 21
+    },
+    {
+      "s8": "00000000000000821080800001000120",
+      "unknownBefore": 24,
+      "newCertifiedLossEdges": 2,
+      "unknownAfter": 22
+    },
+    {
+      "s8": "00000000000000821088100100000020",
+      "unknownBefore": 22,
+      "newCertifiedLossEdges": 0,
+      "unknownAfter": 22
+    },
+    {
+      "s8": "00000000000000821090100000004020",
+      "unknownBefore": 22,
+      "newCertifiedLossEdges": 0,
+      "unknownAfter": 22
+    },
+    {
+      "s8": "00000000002040821081000000000020",
+      "unknownBefore": 25,
+      "newCertifiedLossEdges": 3,
+      "unknownAfter": 22
+    },
+    {
+      "s8": "00001088000000821080000000000020",
+      "unknownBefore": 24,
+      "newCertifiedLossEdges": 2,
+      "unknownAfter": 22
+    },
+    {
+      "s8": "00004200000020821080000000000020",
+      "unknownBefore": 24,
+      "newCertifiedLossEdges": 2,
+      "unknownAfter": 22
+    },
+    {
+      "s8": "00008000000000821080000400000030",
+      "unknownBefore": 24,
+      "newCertifiedLossEdges": 2,
+      "unknownAfter": 22
+    },
+    {
+      "s8": "00000000000000821081000040000024",
+      "unknownBefore": 27,
+      "newCertifiedLossEdges": 4,
+      "unknownAfter": 23
+    },
+    {
+      "s8": "00000000100000821081100000000020",
+      "unknownBefore": 27,
+      "newCertifiedLossEdges": 4,
+      "unknownAfter": 23
+    },
+    {
+      "s8": "00008000000000821090200000000020",
+      "unknownBefore": 23,
+      "newCertifiedLossEdges": 0,
+      "unknownAfter": 23
+    },
+    {
+      "s8": "00000000000000821080000001040120",
+      "unknownBefore": 26,
+      "newCertifiedLossEdges": 2,
+      "unknownAfter": 24
+    },
+    {
+      "s8": "00000000014080821080000000000020",
+      "unknownBefore": 26,
+      "newCertifiedLossEdges": 2,
+      "unknownAfter": 24
+    },
+    {
+      "s8": "00020000000000821080200400000020",
+      "unknownBefore": 24,
+      "newCertifiedLossEdges": 0,
+      "unknownAfter": 24
+    },
+    {
+      "s8": "00006010000000821080000000000020",
+      "unknownBefore": 29,
+      "newCertifiedLossEdges": 4,
+      "unknownAfter": 25
+    },
+    {
+      "s8": "00010200000100821080000000000020",
+      "unknownBefore": 25,
+      "newCertifiedLossEdges": 0,
+      "unknownAfter": 25
+    },
+    {
+      "s8": "00008000000000821080000400000028",
+      "unknownBefore": 28,
+      "newCertifiedLossEdges": 2,
+      "unknownAfter": 26
+    },
+    {
+      "s8": "00008000004080821080000000000020",
+      "unknownBefore": 27,
+      "newCertifiedLossEdges": 0,
+      "unknownAfter": 27
+    },
+    {
+      "s8": "00004040000000821080000000000028",
+      "unknownBefore": 29,
+      "newCertifiedLossEdges": 0,
+      "unknownAfter": 29
+    }
+  ],
+  "newTwoStoneClosures": 0,
+  "winLossConflicts": 0
+}

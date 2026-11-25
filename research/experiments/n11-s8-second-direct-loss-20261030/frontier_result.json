@@ -1,0 +1,68 @@
+{
+  "schema": "n11-second-loss8-full97-fixed14-frontier-v1",
+  "emptyBoard": "UNKNOWN",
+  "historicalWin9": 56,
+  "priorKnownLoss9": 3362,
+  "newLoss10": 97,
+  "newLoss9ParentClosure": 811,
+  "newLoss9BeyondPriorProofSets": 634,
+  "unknown9Before": 728,
+  "unknown9After": 702,
+  "unknownEdgesBefore": 736,
+  "unknownEdgesAfter": 709,
+  "newlyCertifiedLossEdges": 27,
+  "closedS8Before": [
+    "00012010000000821080000000000020"
+  ],
+  "closedS8After": [
+    "00001008000000821080000001000020",
+    "00012010000000821080000000000020"
+  ],
+  "remainingUnprovedS8Of37": 35,
+  "winLossConflicts": 0,
+  "twoStoneRootClosureChecked": false,
+  "changedRows": [
+    {
+      "s8": "00000000000000821080000001040120",
+      "unknownBefore": 24,
+      "newLoss9Edges": 2,
+      "unknownAfter": 22
+    },
+    {
+      "s8": "00000000000000821080800001000120",
+      "unknownBefore": 22,
+      "newLoss9Edges": 2,
+      "unknownAfter": 20
+    },
+    {
+      "s8": "00001008000000821080000000100020",
+      "unknownBefore": 11,
+      "newLoss9Edges": 2,
+      "unknownAfter": 9
+    },
+    {
+      "s8": "00001008000000821080000001000020",
+      "unknownBefore": 10,
+      "newLoss9Edges": 10,
+      "unknownAfter": 0
+    },
+    {
+      "s8": "00001008000000821080000200000020",
+      "unknownBefore": 16,
+      "newLoss9Edges": 1,
+      "unknownAfter": 15
+    },
+    {
+      "s8": "00001088000000821080000000000020",
+      "unknownBefore": 22,
+      "newLoss9Edges": 7,
+      "unknownAfter": 15
+    },
+    {
+      "s8": "00042010000000821080000000000020",
+      "unknownBefore": 12,
+      "newLoss9Edges": 3,
+      "unknownAfter": 9
+    }
+  ]
+}

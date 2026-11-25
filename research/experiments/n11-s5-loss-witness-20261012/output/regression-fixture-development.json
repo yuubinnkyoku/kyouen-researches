@@ -1,0 +1,47 @@
+{
+  "schema": "n11-stop-on-loss-regression-fixture-development-v1",
+  "scope": "4x4 tests of the optional exact-replay stop condition only; these nodes are not part of the 11x11 A-E method comparison",
+  "attempts": [
+    {
+      "name": "first-unknown-fixture-attempt",
+      "input": "output/stop-on-loss-fixture/unknown-then-loss/input.csv",
+      "raw": "output/stop-on-loss-fixture/unknown-then-loss/raw.csv",
+      "raw_sha256": "17ecb150acbe05445f2f1b84d331865388c66e166b34c17b2752f2fd5ec8d059",
+      "node_budget_per_row": 1,
+      "nodes": 2,
+      "observed": [
+        {"key": "459", "verdict": "WIN", "nodes": 1},
+        {"key": "317", "verdict": "LOSS", "nodes": 1}
+      ],
+      "disposition": "test fixture correction: key 459 was exact WIN in one node, not UNKNOWN; stop behavior itself continued correctly"
+    },
+    {
+      "name": "one-node-s6-fixture-scan",
+      "input": "output/stop-on-loss-fixture-v2/fixture-selection/s6-candidates.csv",
+      "raw": "output/stop-on-loss-fixture-v2/fixture-selection/s6-candidates-raw.csv",
+      "input_sha256": "4e5273ea57f83a576942100c48cdcc7bd3dfa3c02150153168eb139882935a55",
+      "raw_sha256": "1c3aaa4256d162bd639a3efcdbb7e9ebd65de1ee3ef69c09ed705892bf1868b5",
+      "candidate_count": 134,
+      "node_budget_per_candidate": 1,
+      "total_nodes": 134,
+      "outcomes": {"LOSS": 87, "WIN": 47, "UNKNOWN": 0},
+      "disposition": "no unknown S6 fixture was available at one node on this 4x4 sample; replaced by empty 4x4 UNKNOWN followed by terminal S6 LOSS"
+    },
+    {
+      "name": "corrected-regression",
+      "receipt": "output/stop-on-loss-fixture-v3/receipt.json",
+      "receipt_sha256": "a1a6299c2f76577e1a7de9f06bc6c01a0f50a300336d7da10e6051532d85b216",
+      "nodes": 5,
+      "assertions_passed": 3
+    },
+    {
+      "name": "documented-reproduction-run",
+      "receipt": "output/stop-on-loss-reproduction-v1/receipt.json",
+      "receipt_sha256": "90e81d0b1e88e81f40e3c69b04893064f45ee9ed0f46ef0e456427e994725297",
+      "nodes": 5,
+      "assertions_passed": 3
+    }
+  ],
+  "total_test_only_solver_nodes": 149,
+  "not_counted_in_11x11_method_totals": true
+}

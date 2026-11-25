@@ -1,0 +1,2054 @@
+{
+ "schema": "n11-s4bd-freshregen-pass-consistency-table-v1",
+ "generated_by": "resume session (declaration research/log/2026-11-21-n11-sbd-corpus-regen-resume-pass1-single-owner-note.md)",
+ "pass1_provenance": {
+  "k001-k084": "parent lane pinned raws (commits through 93ceaab9c3), fetched at pinned main commit 32d436ae9",
+  "k085-k101": "this session, commit 99becad0f9 (fetch-back 17/17 byte-identical)"
+ },
+ "pass2_provenance": {
+  "execution": "this session, all 100 settled rows, pushes d8575d50a8/67ae97a243/51d4fa7155/378a98f592 (fetch-back all byte-identical)"
+ },
+ "gates": {
+  "determinism_pass1_vs_pass2_settled_rows": "100/100",
+  "mismatches": 0,
+  "fresh_win_rows": 0,
+  "history_disagreements": 0,
+  "result_code_0_rows": 1,
+  "result_code_0_keys": [
+   "k012 (1152921504607899649,536870912) TARGET_S5"
+  ],
+  "s6_witness_pair": {
+   "key": [
+    1152921504675009536,
+    536870912
+   ],
+   "stones": 6,
+   "legal": 87,
+   "result": 2,
+   "nodes": 5859060,
+   "pair_identical": true
+  },
+  "total_pass1_nodes_settled": 546428673,
+  "total_pass2_nodes": 546428673
+ },
+ "status_UNKNOWN_guard": "the standard 11x11 empty board, the two-stone root {60,27}, third moves {100,108} and the S4 class-status/coverage claims remain UNKNOWN/unclaimed by this artifact",
+ "fail_closed": true,
+ "gates_bad": [],
+ "rows": [
+  {
+   "id": "k001",
+   "key": [
+    1152921504606851072,
+    805306370
+   ],
+   "legal": 95,
+   "p1": [
+    2,
+    5925730
+   ],
+   "p2": [
+    2,
+    5925730
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "parent-lane pinned (p1)"
+  },
+  {
+   "id": "k002",
+   "key": [
+    1152921504606851585,
+    536870912
+   ],
+   "legal": 99,
+   "p1": [
+    2,
+    4425857
+   ],
+   "p2": [
+    2,
+    4425857
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "parent-lane pinned (p1)"
+  },
+  {
+   "id": "k003",
+   "key": [
+    1152921504606852097,
+    536870912
+   ],
+   "legal": 97,
+   "p1": [
+    2,
+    4292117
+   ],
+   "p2": [
+    2,
+    4292117
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "parent-lane pinned (p1)"
+  },
+  {
+   "id": "k004",
+   "key": [
+    1152921504607896576,
+    536870916
+   ],
+   "legal": 103,
+   "p1": [
+    2,
+    10011197
+   ],
+   "p2": [
+    2,
+    10011197
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "parent-lane pinned (p1)"
+  },
+  {
+   "id": "k005",
+   "key": [
+    1152921504607896576,
+    536870920
+   ],
+   "legal": 103,
+   "p1": [
+    2,
+    4581929
+   ],
+   "p2": [
+    2,
+    4581929
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "parent-lane pinned (p1)"
+  },
+  {
+   "id": "k006",
+   "key": [
+    1152921504607896576,
+    536879104
+   ],
+   "legal": 101,
+   "p1": [
+    2,
+    7019730
+   ],
+   "p2": [
+    2,
+    7019730
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "parent-lane pinned (p1)"
+  },
+  {
+   "id": "k007",
+   "key": [
+    1152921504607896576,
+    536887296
+   ],
+   "legal": 104,
+   "p1": [
+    2,
+    7564461
+   ],
+   "p2": [
+    2,
+    7564461
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "parent-lane pinned (p1)"
+  },
+  {
+   "id": "k008",
+   "key": [
+    1152921504607896576,
+    553648128
+   ],
+   "legal": 100,
+   "p1": [
+    2,
+    11267484
+   ],
+   "p2": [
+    2,
+    11267484
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "parent-lane pinned (p1)"
+  },
+  {
+   "id": "k009",
+   "key": [
+    1152921504607896576,
+    570425344
+   ],
+   "legal": 102,
+   "p1": [
+    2,
+    5422811
+   ],
+   "p2": [
+    2,
+    5422811
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "parent-lane pinned (p1)"
+  },
+  {
+   "id": "k010",
+   "key": [
+    1152921504607896576,
+    34896609280
+   ],
+   "legal": 104,
+   "p1": [
+    2,
+    6070834
+   ],
+   "p2": [
+    2,
+    6070834
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "parent-lane pinned (p1)"
+  },
+  {
+   "id": "k011",
+   "key": [
+    1152921504607898624,
+    536870912
+   ],
+   "legal": 101,
+   "p1": [
+    2,
+    7959630
+   ],
+   "p2": [
+    2,
+    7959630
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "parent-lane pinned (p1)"
+  },
+  {
+   "id": "k012",
+   "key": [
+    1152921504607899649,
+    536870912
+   ],
+   "legal": 98,
+   "p1": [
+    0,
+    15000000
+   ],
+   "p2": null,
+   "note": "pass1 result 0 at 15M (declared TARGET_S5, honest UNKNOWN; pass2 not required; derived-row route is s6w per acceptance condition 5)",
+   "p1_provenance": "parent-lane pinned (p1)"
+  },
+  {
+   "id": "k013",
+   "key": [
+    1152921504612090880,
+    536870912
+   ],
+   "legal": 105,
+   "p1": [
+    2,
+    4801030
+   ],
+   "p2": [
+    2,
+    4801030
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "parent-lane pinned (p1)"
+  },
+  {
+   "id": "k014",
+   "key": [
+    1152921504616285184,
+    536870912
+   ],
+   "legal": 103,
+   "p1": [
+    2,
+    4035893
+   ],
+   "p2": [
+    2,
+    4035893
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "parent-lane pinned (p1)"
+  },
+  {
+   "id": "k015",
+   "key": [
+    1152921513197831168,
+    536870912
+   ],
+   "legal": 103,
+   "p1": [
+    2,
+    8699028
+   ],
+   "p2": [
+    2,
+    8699028
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "parent-lane pinned (p1)"
+  },
+  {
+   "id": "k016",
+   "key": [
+    1152921521787765760,
+    536870912
+   ],
+   "legal": 99,
+   "p1": [
+    2,
+    5222810
+   ],
+   "p2": [
+    2,
+    5222810
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "parent-lane pinned (p1)"
+  },
+  {
+   "id": "k017",
+   "key": [
+    1152939096793940992,
+    536870912
+   ],
+   "legal": 100,
+   "p1": [
+    2,
+    5916458
+   ],
+   "p2": [
+    2,
+    5916458
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "parent-lane pinned (p1)"
+  },
+  {
+   "id": "k018",
+   "key": [
+    1152956688979985408,
+    536870912
+   ],
+   "legal": 100,
+   "p1": [
+    2,
+    6065498
+   ],
+   "p2": [
+    2,
+    6065498
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "parent-lane pinned (p1)"
+  },
+  {
+   "id": "k019",
+   "key": [
+    1188950301626859520,
+    671088640
+   ],
+   "legal": 96,
+   "p1": [
+    2,
+    4399355
+   ],
+   "p2": [
+    2,
+    4399355
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "parent-lane pinned (p1)"
+  },
+  {
+   "id": "k020",
+   "key": [
+    1224979098645824512,
+    536870912
+   ],
+   "legal": 100,
+   "p1": [
+    2,
+    3451027
+   ],
+   "p2": [
+    2,
+    3451027
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "parent-lane pinned (p1)"
+  },
+  {
+   "id": "k021",
+   "key": [
+    1297036692683752448,
+    4
+   ],
+   "legal": 101,
+   "p1": [
+    2,
+    6235999
+   ],
+   "p2": [
+    2,
+    6235999
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "parent-lane pinned (p1)"
+  },
+  {
+   "id": "k022",
+   "key": [
+    1297036692683752448,
+    8
+   ],
+   "legal": 100,
+   "p1": [
+    2,
+    9843332
+   ],
+   "p2": [
+    2,
+    9843332
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "parent-lane pinned (p1)"
+  },
+  {
+   "id": "k023",
+   "key": [
+    1297036692683752448,
+    16
+   ],
+   "legal": 100,
+   "p1": [
+    2,
+    3980754
+   ],
+   "p2": [
+    2,
+    3980754
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "parent-lane pinned (p1)"
+  },
+  {
+   "id": "k024",
+   "key": [
+    1297036692683752448,
+    32
+   ],
+   "legal": 101,
+   "p1": [
+    2,
+    6441192
+   ],
+   "p2": [
+    2,
+    6441192
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "parent-lane pinned (p1)"
+  },
+  {
+   "id": "k025",
+   "key": [
+    1297036692683752448,
+    128
+   ],
+   "legal": 98,
+   "p1": [
+    2,
+    3641949
+   ],
+   "p2": [
+    2,
+    3641949
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "parent-lane pinned (p1)"
+  },
+  {
+   "id": "k026",
+   "key": [
+    1297036692683752448,
+    8192
+   ],
+   "legal": 103,
+   "p1": [
+    2,
+    9543836
+   ],
+   "p2": [
+    2,
+    9543836
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "parent-lane pinned (p1)"
+  },
+  {
+   "id": "k027",
+   "key": [
+    1297036692683752448,
+    32768
+   ],
+   "legal": 103,
+   "p1": [
+    2,
+    4200271
+   ],
+   "p2": [
+    2,
+    4200271
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "parent-lane pinned (p1)"
+  },
+  {
+   "id": "k028",
+   "key": [
+    1297036692683752448,
+    131072
+   ],
+   "legal": 100,
+   "p1": [
+    2,
+    8492184
+   ],
+   "p2": [
+    2,
+    8492184
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "parent-lane pinned (p1)"
+  },
+  {
+   "id": "k029",
+   "key": [
+    1297036692683752448,
+    262144
+   ],
+   "legal": 101,
+   "p1": [
+    2,
+    6042214
+   ],
+   "p2": [
+    2,
+    6042214
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "parent-lane pinned (p1)"
+  },
+  {
+   "id": "k030",
+   "key": [
+    1297036692683752448,
+    16777216
+   ],
+   "legal": 101,
+   "p1": [
+    2,
+    7806330
+   ],
+   "p2": [
+    2,
+    7806330
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "parent-lane pinned (p1)"
+  },
+  {
+   "id": "k031",
+   "key": [
+    1297036692683752448,
+    33554432
+   ],
+   "legal": 104,
+   "p1": [
+    2,
+    3214367
+   ],
+   "p2": [
+    2,
+    3214367
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "parent-lane pinned (p1)"
+  },
+  {
+   "id": "k032",
+   "key": [
+    1297036692683752448,
+    134217728
+   ],
+   "legal": 103,
+   "p1": [
+    2,
+    5766864
+   ],
+   "p2": [
+    2,
+    5766864
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "parent-lane pinned (p1)"
+  },
+  {
+   "id": "k033",
+   "key": [
+    1297036692683752448,
+    268435456
+   ],
+   "legal": 104,
+   "p1": [
+    2,
+    3589382
+   ],
+   "p2": [
+    2,
+    3589382
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "parent-lane pinned (p1)"
+  },
+  {
+   "id": "k034",
+   "key": [
+    1297036692683752448,
+    536870912
+   ],
+   "legal": 102,
+   "p1": [
+    2,
+    7123492
+   ],
+   "p2": [
+    2,
+    7123492
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "parent-lane pinned (p1)"
+  },
+  {
+   "id": "k035",
+   "key": [
+    1297036692683752448,
+    34359738368
+   ],
+   "legal": 104,
+   "p1": [
+    2,
+    6369598
+   ],
+   "p2": [
+    2,
+    6369598
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "parent-lane pinned (p1)"
+  },
+  {
+   "id": "k036",
+   "key": [
+    1297036692683752449,
+    0
+   ],
+   "legal": 94,
+   "p1": [
+    2,
+    3504651
+   ],
+   "p2": [
+    2,
+    3504651
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "parent-lane pinned (p1)"
+  },
+  {
+   "id": "k037",
+   "key": [
+    1297036692683752450,
+    0
+   ],
+   "legal": 97,
+   "p1": [
+    2,
+    4352577
+   ],
+   "p2": [
+    2,
+    4352577
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "parent-lane pinned (p1)"
+  },
+  {
+   "id": "k038",
+   "key": [
+    1297036692683752452,
+    0
+   ],
+   "legal": 94,
+   "p1": [
+    2,
+    4597825
+   ],
+   "p2": [
+    2,
+    4597825
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "parent-lane pinned (p1)"
+  },
+  {
+   "id": "k039",
+   "key": [
+    1297036692683752456,
+    0
+   ],
+   "legal": 100,
+   "p1": [
+    2,
+    7412429
+   ],
+   "p2": [
+    2,
+    7412429
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "parent-lane pinned (p1)"
+  },
+  {
+   "id": "k040",
+   "key": [
+    1297036692683752464,
+    0
+   ],
+   "legal": 100,
+   "p1": [
+    2,
+    3528576
+   ],
+   "p2": [
+    2,
+    3528576
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "parent-lane pinned (p1)"
+  },
+  {
+   "id": "k041",
+   "key": [
+    1297036692683752480,
+    0
+   ],
+   "legal": 91,
+   "p1": [
+    2,
+    3983104
+   ],
+   "p2": [
+    2,
+    3983104
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "parent-lane pinned (p1)"
+  },
+  {
+   "id": "k042",
+   "key": [
+    1297036692683752512,
+    0
+   ],
+   "legal": 99,
+   "p1": [
+    2,
+    3734569
+   ],
+   "p2": [
+    2,
+    3734569
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "parent-lane pinned (p1)"
+  },
+  {
+   "id": "k043",
+   "key": [
+    1297036692683752576,
+    0
+   ],
+   "legal": 96,
+   "p1": [
+    2,
+    2996288
+   ],
+   "p2": [
+    2,
+    2996288
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "parent-lane pinned (p1)"
+  },
+  {
+   "id": "k044",
+   "key": [
+    1297036692683752704,
+    0
+   ],
+   "legal": 96,
+   "p1": [
+    2,
+    4352577
+   ],
+   "p2": [
+    2,
+    4352577
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "parent-lane pinned (p1)"
+  },
+  {
+   "id": "k045",
+   "key": [
+    1297036692683752960,
+    0
+   ],
+   "legal": 98,
+   "p1": [
+    2,
+    2954632
+   ],
+   "p2": [
+    2,
+    2954632
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "parent-lane pinned (p1)"
+  },
+  {
+   "id": "k046",
+   "key": [
+    1297036692683754496,
+    0
+   ],
+   "legal": 100,
+   "p1": [
+    2,
+    7106367
+   ],
+   "p2": [
+    2,
+    7106367
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "parent-lane pinned (p1)"
+  },
+  {
+   "id": "k047",
+   "key": [
+    1297036692683756544,
+    0
+   ],
+   "legal": 96,
+   "p1": [
+    2,
+    5221923
+   ],
+   "p2": [
+    2,
+    5221923
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "parent-lane pinned (p1)"
+  },
+  {
+   "id": "k048",
+   "key": [
+    1297036692683760640,
+    0
+   ],
+   "legal": 90,
+   "p1": [
+    2,
+    14122712
+   ],
+   "p2": [
+    2,
+    14122712
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "parent-lane pinned (p1)"
+  },
+  {
+   "id": "k049",
+   "key": [
+    1297036692683768832,
+    0
+   ],
+   "legal": 98,
+   "p1": [
+    2,
+    3960110
+   ],
+   "p2": [
+    2,
+    3960110
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "parent-lane pinned (p1)"
+  },
+  {
+   "id": "k050",
+   "key": [
+    1297036692683785216,
+    0
+   ],
+   "legal": 96,
+   "p1": [
+    2,
+    10298632
+   ],
+   "p2": [
+    2,
+    10298632
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "parent-lane pinned (p1)"
+  },
+  {
+   "id": "k051",
+   "key": [
+    1297036692683817984,
+    0
+   ],
+   "legal": 97,
+   "p1": [
+    2,
+    2765972
+   ],
+   "p2": [
+    2,
+    2765972
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "parent-lane pinned (p1)"
+  },
+  {
+   "id": "k052",
+   "key": [
+    1297036692683883520,
+    0
+   ],
+   "legal": 93,
+   "p1": [
+    2,
+    4100570
+   ],
+   "p2": [
+    2,
+    4100570
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "parent-lane pinned (p1)"
+  },
+  {
+   "id": "k053",
+   "key": [
+    1297036692684014592,
+    0
+   ],
+   "legal": 96,
+   "p1": [
+    2,
+    4133815
+   ],
+   "p2": [
+    2,
+    4133815
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "parent-lane pinned (p1)"
+  },
+  {
+   "id": "k054",
+   "key": [
+    1297036692684276736,
+    0
+   ],
+   "legal": 97,
+   "p1": [
+    2,
+    5975893
+   ],
+   "p2": [
+    2,
+    5975893
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "parent-lane pinned (p1)"
+  },
+  {
+   "id": "k055",
+   "key": [
+    1297036692685849600,
+    0
+   ],
+   "legal": 97,
+   "p1": [
+    2,
+    2691082
+   ],
+   "p2": [
+    2,
+    2691082
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "parent-lane pinned (p1)"
+  },
+  {
+   "id": "k056",
+   "key": [
+    1297036692687946752,
+    0
+   ],
+   "legal": 104,
+   "p1": [
+    2,
+    5645288
+   ],
+   "p2": [
+    2,
+    5645288
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "parent-lane pinned (p1)"
+  },
+  {
+   "id": "k057",
+   "key": [
+    1297036692692141056,
+    0
+   ],
+   "legal": 104,
+   "p1": [
+    2,
+    4721061
+   ],
+   "p2": [
+    2,
+    4721061
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "parent-lane pinned (p1)"
+  },
+  {
+   "id": "k058",
+   "key": [
+    1297036692700529664,
+    0
+   ],
+   "legal": 94,
+   "p1": [
+    2,
+    3353183
+   ],
+   "p2": [
+    2,
+    3353183
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "parent-lane pinned (p1)"
+  },
+  {
+   "id": "k059",
+   "key": [
+    1297036692717306880,
+    0
+   ],
+   "legal": 104,
+   "p1": [
+    2,
+    3972735
+   ],
+   "p2": [
+    2,
+    3972735
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "parent-lane pinned (p1)"
+  },
+  {
+   "id": "k060",
+   "key": [
+    1297036692750861312,
+    0
+   ],
+   "legal": 92,
+   "p1": [
+    2,
+    5026776
+   ],
+   "p2": [
+    2,
+    5026776
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "parent-lane pinned (p1)"
+  },
+  {
+   "id": "k061",
+   "key": [
+    1297036692817970176,
+    0
+   ],
+   "legal": 96,
+   "p1": [
+    2,
+    2724895
+   ],
+   "p2": [
+    2,
+    2724895
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "parent-lane pinned (p1)"
+  },
+  {
+   "id": "k062",
+   "key": [
+    1297036693220623360,
+    0
+   ],
+   "legal": 98,
+   "p1": [
+    2,
+    2225177
+   ],
+   "p2": [
+    2,
+    2225177
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "parent-lane pinned (p1)"
+  },
+  {
+   "id": "k063",
+   "key": [
+    1297036694831236096,
+    0
+   ],
+   "legal": 98,
+   "p1": [
+    2,
+    10906288
+   ],
+   "p2": [
+    2,
+    10906288
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "parent-lane pinned (p1)"
+  },
+  {
+   "id": "k064",
+   "key": [
+    1297036696978719744,
+    0
+   ],
+   "legal": 96,
+   "p1": [
+    2,
+    6137538
+   ],
+   "p2": [
+    2,
+    6137538
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "parent-lane pinned (p1)"
+  },
+  {
+   "id": "k065",
+   "key": [
+    1297036701273687040,
+    0
+   ],
+   "legal": 103,
+   "p1": [
+    2,
+    5011558
+   ],
+   "p2": [
+    2,
+    5011558
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "parent-lane pinned (p1)"
+  },
+  {
+   "id": "k066",
+   "key": [
+    1297036709863621632,
+    0
+   ],
+   "legal": 97,
+   "p1": [
+    2,
+    5002748
+   ],
+   "p2": [
+    2,
+    5002748
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "parent-lane pinned (p1)"
+  },
+  {
+   "id": "k067",
+   "key": [
+    1297036727043490816,
+    0
+   ],
+   "legal": 102,
+   "p1": [
+    2,
+    8344175
+   ],
+   "p2": [
+    2,
+    8344175
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "parent-lane pinned (p1)"
+  },
+  {
+   "id": "k068",
+   "key": [
+    1297036761403229184,
+    0
+   ],
+   "legal": 92,
+   "p1": [
+    2,
+    6522725
+   ],
+   "p2": [
+    2,
+    6522725
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "parent-lane pinned (p1)"
+  },
+  {
+   "id": "k069",
+   "key": [
+    1297036830122705920,
+    0
+   ],
+   "legal": 95,
+   "p1": [
+    2,
+    3670909
+   ],
+   "p2": [
+    2,
+    3670909
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "parent-lane pinned (p1)"
+  },
+  {
+   "id": "k070",
+   "key": [
+    1297036967561659392,
+    0
+   ],
+   "legal": 97,
+   "p1": [
+    2,
+    5849898
+   ],
+   "p2": [
+    2,
+    5849898
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "parent-lane pinned (p1)"
+  },
+  {
+   "id": "k071",
+   "key": [
+    1297037242439566336,
+    0
+   ],
+   "legal": 96,
+   "p1": [
+    2,
+    2745800
+   ],
+   "p2": [
+    2,
+    2745800
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "parent-lane pinned (p1)"
+  },
+  {
+   "id": "k072",
+   "key": [
+    1297041090730263552,
+    0
+   ],
+   "legal": 97,
+   "p1": [
+    2,
+    4259034
+   ],
+   "p2": [
+    2,
+    4259034
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "parent-lane pinned (p1)"
+  },
+  {
+   "id": "k073",
+   "key": [
+    1297045488776774656,
+    0
+   ],
+   "legal": 100,
+   "p1": [
+    2,
+    7696380
+   ],
+   "p2": [
+    2,
+    7696380
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "parent-lane pinned (p1)"
+  },
+  {
+   "id": "k074",
+   "key": [
+    1297071877055841280,
+    0
+   ],
+   "legal": 101,
+   "p1": [
+    2,
+    5626717
+   ],
+   "p2": [
+    2,
+    5626717
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "parent-lane pinned (p1)"
+  },
+  {
+   "id": "k075",
+   "key": [
+    1297107061427930112,
+    0
+   ],
+   "legal": 95,
+   "p1": [
+    2,
+    7147572
+   ],
+   "p2": [
+    2,
+    7147572
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "parent-lane pinned (p1)"
+  },
+  {
+   "id": "k076",
+   "key": [
+    1297177430172107776,
+    0
+   ],
+   "legal": 93,
+   "p1": [
+    2,
+    5461211
+   ],
+   "p2": [
+    2,
+    5461211
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "parent-lane pinned (p1)"
+  },
+  {
+   "id": "k077",
+   "key": [
+    1297318167660463104,
+    0
+   ],
+   "legal": 93,
+   "p1": [
+    2,
+    3182164
+   ],
+   "p2": [
+    2,
+    3182164
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "parent-lane pinned (p1)"
+  },
+  {
+   "id": "k078",
+   "key": [
+    1297599642637173760,
+    0
+   ],
+   "legal": 93,
+   "p1": [
+    2,
+    2973580
+   ],
+   "p2": [
+    2,
+    2973580
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "parent-lane pinned (p1)"
+  },
+  {
+   "id": "k079",
+   "key": [
+    1301540292311122944,
+    0
+   ],
+   "legal": 94,
+   "p1": [
+    2,
+    3454253
+   ],
+   "p2": [
+    2,
+    3454253
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "parent-lane pinned (p1)"
+  },
+  {
+   "id": "k080",
+   "key": [
+    1306043891938493440,
+    0
+   ],
+   "legal": 98,
+   "p1": [
+    2,
+    8170286
+   ],
+   "p2": [
+    2,
+    8170286
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "parent-lane pinned (p1)"
+  },
+  {
+   "id": "k081",
+   "key": [
+    1315051091193234432,
+    0
+   ],
+   "legal": 100,
+   "p1": [
+    2,
+    5786536
+   ],
+   "p2": [
+    2,
+    5786536
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "parent-lane pinned (p1)"
+  },
+  {
+   "id": "k082",
+   "key": [
+    1369094286721680384,
+    0
+   ],
+   "legal": 97,
+   "p1": [
+    2,
+    11230988
+   ],
+   "p2": [
+    2,
+    11230988
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "parent-lane pinned (p1)"
+  },
+  {
+   "id": "k083",
+   "key": [
+    1585267068835464192,
+    0
+   ],
+   "legal": 97,
+   "p1": [
+    2,
+    5048845
+   ],
+   "p2": [
+    2,
+    5048845
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "parent-lane pinned (p1)"
+  },
+  {
+   "id": "k084",
+   "key": [
+    1873497444987175936,
+    0
+   ],
+   "legal": 94,
+   "p1": [
+    2,
+    4720547
+   ],
+   "p2": [
+    2,
+    4720547
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "parent-lane pinned (p1)"
+  },
+  {
+   "id": "k085",
+   "key": [
+    3602879701897446400,
+    0
+   ],
+   "legal": 89,
+   "p1": [
+    2,
+    2742740
+   ],
+   "p2": [
+    2,
+    2742740
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "this-session p1 99becad0"
+  },
+  {
+   "id": "k086",
+   "key": [
+    5908722711111140352,
+    0
+   ],
+   "legal": 89,
+   "p1": [
+    2,
+    3182164
+   ],
+   "p2": [
+    2,
+    3182164
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "this-session p1 99becad0"
+  },
+  {
+   "id": "k087",
+   "key": [
+    10376293541461626881,
+    4
+   ],
+   "legal": 98,
+   "p1": [
+    2,
+    6366754
+   ],
+   "p2": [
+    2,
+    6366754
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "this-session p1 99becad0"
+  },
+  {
+   "id": "k088",
+   "key": [
+    10376293541461626881,
+    8
+   ],
+   "legal": 98,
+   "p1": [
+    2,
+    3691111
+   ],
+   "p2": [
+    2,
+    3691111
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "this-session p1 99becad0"
+  },
+  {
+   "id": "k089",
+   "key": [
+    10376293541461626881,
+    16
+   ],
+   "legal": 97,
+   "p1": [
+    2,
+    3638190
+   ],
+   "p2": [
+    2,
+    3638190
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "this-session p1 99becad0"
+  },
+  {
+   "id": "k090",
+   "key": [
+    10376293541461626881,
+    32
+   ],
+   "legal": 95,
+   "p1": [
+    2,
+    3777766
+   ],
+   "p2": [
+    2,
+    3777766
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "this-session p1 99becad0"
+  },
+  {
+   "id": "k091",
+   "key": [
+    10376293541461626881,
+    8192
+   ],
+   "legal": 100,
+   "p1": [
+    2,
+    3637884
+   ],
+   "p2": [
+    2,
+    3637884
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "this-session p1 99becad0"
+  },
+  {
+   "id": "k092",
+   "key": [
+    10376293541461626881,
+    16384
+   ],
+   "legal": 99,
+   "p1": [
+    2,
+    4625967
+   ],
+   "p2": [
+    2,
+    4625967
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "this-session p1 99becad0"
+  },
+  {
+   "id": "k093",
+   "key": [
+    10376293541461626881,
+    32768
+   ],
+   "legal": 102,
+   "p1": [
+    2,
+    3787800
+   ],
+   "p2": [
+    2,
+    3787800
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "this-session p1 99becad0"
+  },
+  {
+   "id": "k094",
+   "key": [
+    10376293541461626881,
+    65536
+   ],
+   "legal": 96,
+   "p1": [
+    2,
+    3074874
+   ],
+   "p2": [
+    2,
+    3074874
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "this-session p1 99becad0"
+  },
+  {
+   "id": "k095",
+   "key": [
+    10376293541461626881,
+    131072
+   ],
+   "legal": 94,
+   "p1": [
+    2,
+    3823653
+   ],
+   "p2": [
+    2,
+    3823653
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "this-session p1 99becad0"
+  },
+  {
+   "id": "k096",
+   "key": [
+    10376293541461626881,
+    16777216
+   ],
+   "legal": 99,
+   "p1": [
+    2,
+    3008670
+   ],
+   "p2": [
+    2,
+    3008670
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "this-session p1 99becad0"
+  },
+  {
+   "id": "k097",
+   "key": [
+    10376293541461626881,
+    33554432
+   ],
+   "legal": 97,
+   "p1": [
+    2,
+    9234009
+   ],
+   "p2": [
+    2,
+    9234009
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "this-session p1 99becad0"
+  },
+  {
+   "id": "k098",
+   "key": [
+    10376293541461626881,
+    67108864
+   ],
+   "legal": 95,
+   "p1": [
+    2,
+    3964389
+   ],
+   "p2": [
+    2,
+    3964389
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "this-session p1 99becad0"
+  },
+  {
+   "id": "k099",
+   "key": [
+    10376293541461626881,
+    134217728
+   ],
+   "legal": 104,
+   "p1": [
+    2,
+    3972983
+   ],
+   "p2": [
+    2,
+    3972983
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "this-session p1 99becad0"
+  },
+  {
+   "id": "k100",
+   "key": [
+    10376293541461626881,
+    268435456
+   ],
+   "legal": 99,
+   "p1": [
+    2,
+    10645568
+   ],
+   "p2": [
+    2,
+    10645568
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "this-session p1 99becad0"
+  },
+  {
+   "id": "k101",
+   "key": [
+    10412322338480590849,
+    0
+   ],
+   "legal": 84,
+   "p1": [
+    2,
+    5416337
+   ],
+   "p2": [
+    2,
+    5416337
+   ],
+   "determinism": true,
+   "historical": 2,
+   "agree_history": true,
+   "p1_provenance": "this-session p1 99becad0"
+  }
+ ]
+}

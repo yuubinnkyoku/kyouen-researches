@@ -1,0 +1,18 @@
+# exact replay: order=1 (0=count-asc 1=count-desc 2=key-asc 3=s5-count-desc 4=s5-target92) share_tt=0
+# exact replay: id,stones,legal,is_or,budget,result,nodes,wall_s,key_lo,key_hi
+# exact-profile row=0 table_hit=13927774 table_miss=34574935 table_new=4192884 evict_open=0 evict_solved=1807109 table_used=4192884 table_capacity=4194304 table_solved=4192884 solved_discoveries=5999993 avg_probe=9.91088
+# exact-profile-rank row=0 s6 calls=1 nodes=1 win=0 loss=0 unknown=1 tt_solved=0 tt_open=0 tt_miss=1
+# exact-profile-rank row=0 s7 calls=67 nodes=12 win=0 loss=11 unknown=56 tt_solved=0 tt_open=0 tt_miss=67
+# exact-profile-rank row=0 s8 calls=73 nodes=13 win=3 loss=9 unknown=61 tt_solved=0 tt_open=0 tt_miss=73
+# exact-profile-rank row=0 s9 calls=706 nodes=663 win=3 loss=659 unknown=44 tt_solved=0 tt_open=0 tt_miss=706
+# exact-profile-rank row=0 s10 calls=3644 nodes=3601 win=3080 loss=520 unknown=44 tt_solved=0 tt_open=0 tt_miss=3644
+# exact-profile-rank row=0 s11 calls=44991 nodes=44981 win=2145 loss=42835 unknown=11 tt_solved=0 tt_open=0 tt_miss=44991
+# exact-profile-rank row=0 s12 calls=241855 nodes=241846 win=215488 loss=26357 unknown=10 tt_solved=0 tt_open=0 tt_miss=241855
+# exact-profile-rank row=0 s13 calls=981719 nodes=981715 win=116728 loss=864987 unknown=4 tt_solved=0 tt_open=0 tt_miss=981719
+# exact-profile-rank row=0 s14 calls=2182083 nodes=2182083 win=1784691 loss=397392 unknown=0 tt_solved=0 tt_open=0 tt_miss=2182083
+# exact-profile-rank row=0 s15 calls=1941181 nodes=1941181 win=483620 loss=1457561 unknown=0 tt_solved=0 tt_open=0 tt_miss=1941181
+# exact-profile-rank row=0 s16 calls=567178 nodes=567178 win=492330 loss=74848 unknown=0 tt_solved=0 tt_open=0 tt_miss=567178
+# exact-profile-rank row=0 s17 calls=36265 nodes=36265 win=1482 loss=34783 unknown=0 tt_solved=0 tt_open=0 tt_miss=36265
+# exact-profile-rank row=0 s18 calls=461 nodes=461 win=461 loss=0 unknown=0 tt_solved=0 tt_open=0 tt_miss=461
+replay,0,6,67,1,6000000,0,6000000,23,1188950301761077248,536936448
+# replay_done rows=1 wall_s=23

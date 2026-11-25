@@ -1,0 +1,75 @@
+{
+ "schema": "n11-s4bd-freshregen-merge-run-manifest-sha256-v1",
+ "scope": "final-commit files of the merge run (declaration 2026-11-22, research/log/2026-11-22-n11-sbd-corpus-regen-merge-run-single-owner-note.md)",
+ "notes": "sha256 over exact bytes; the merged cache, manifest, s6 audit, frontier, root proof and reclassify outputs are machine products of the scripts recorded in the manifest; README/session-log/K0414 updates are published separately and carry their own provenance",
+ "files": [
+  {
+   "path": "output/raw/k012.p2.out",
+   "bytes": 281,
+   "sha256": "7fcfc3ead92536d1e159e423123d285747964ca8df6941001c7f72d1fb0cc7e3"
+  },
+  {
+   "path": "scripts/build_merged_cache.py",
+   "bytes": 12992,
+   "sha256": "114dad4e8bbe6ed62b658b6f3e7c7b9740ea9a245b3df9bba01affa36846df16"
+  },
+  {
+   "path": "scripts/gen_s6_witness_audit.py",
+   "bytes": 6277,
+   "sha256": "034266857dce8d2836d43e5988c9c2ea7e50f0b3c948dd77b202cdcd95511fb1"
+  },
+  {
+   "path": "scripts/reclassify_115_candidates.py",
+   "bytes": 7722,
+   "sha256": "7064efd6054d10b471f503ce939dd434a60b25dc1955a96747aafd4c305cf04c"
+  },
+  {
+   "path": "output/merged-exact-s5-after-js-probe-13-plus-freshregen-20261121.cache",
+   "bytes": 239164,
+   "sha256": "4fee9d5ec78a825b487cc4706bc303b6828ea3be162268c307acb448f6c91e12"
+  },
+  {
+   "path": "output/merge-manifest.json",
+   "bytes": 30725,
+   "sha256": "f8a33e6297b9035e4117ce36af87dbc9a5669ba2198c4dd0fdaf5a53fde1282b"
+  },
+  {
+   "path": "output/s6-witness-fresh-audit.json",
+   "bytes": 2256,
+   "sha256": "e86b5c0ba4cb20477b895f9059d12a6b28f45b6edd8886239664647ef0865ad7"
+  },
+  {
+   "path": "output/frontier-after-fresh-regen.json",
+   "bytes": 2256,
+   "sha256": "50757fec8111c6aff03262ba768a86e51fa5cb33942dbc75f9203da3c78bf125"
+  },
+  {
+   "path": "output/root-60-27-loss-proof-freshregen.json",
+   "bytes": 36498,
+   "sha256": "570f6bdf572ab3232d7f33b9d406cee9de4c97570f3a821c2bb766198cae8c31"
+  },
+  {
+   "path": "output/candidate-classes-after-fresh-regen.csv",
+   "bytes": 10683,
+   "sha256": "f3c7dd34df6496774ecff5374ef0fb3cc58b40a2c10b72be939aacf7f0455d2c"
+  },
+  {
+   "path": "output/candidate-ranking-after-fresh-regen.json",
+   "bytes": 76869,
+   "sha256": "4fdbe1dfb77360f9334197cd6042996bb2b25b025319462401907d41d7736632"
+  },
+  {
+   "path": "output/analyze-two-target-attempt-state-gate.log",
+   "bytes": 1311,
+   "sha256": "c44bed2194843a7b692de59354fc4cbff496d827c12aff320c83a8db90af799e"
+  },
+  {
+   "path": "output/cardinality-attempt-env-block.log",
+   "bytes": 1199,
+   "sha256": "4f4844f0723bbaa419749813711b046bb49fd30ebce58754239ba149de8afbf5"
+  }
+ ],
+ "counts": {
+  "files": 13
+ }
+}

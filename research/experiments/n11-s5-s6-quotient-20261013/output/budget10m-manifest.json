@@ -1,0 +1,35 @@
+{
+  "budget": 10000000,
+  "memo_power": 20,
+  "order": "count-asc",
+  "rows": [
+    {
+      "canonical_children": 17,
+      "input_sha256": "9101ffb35bdae7e4184635081347efa1e1c9407a92792592f45b652ca3c328f6",
+      "legal": 68,
+      "nodes": 1269467,
+      "output_sha256": "ae53a6a51eae0ef5dbadcac3e4ca90ef27ff43977e5c806f76e48fa6f52547d3",
+      "proof_present": true,
+      "result": 2,
+      "s5_index": 558600,
+      "verdict": "first-player-LOSS",
+      "wall_seconds_reported": 8
+    },
+    {
+      "canonical_children": 20,
+      "input_sha256": "d8c718ab714be2f85bb2a595ffa1a7f4da4577740843e0a85baec6c69916fc5c",
+      "legal": 80,
+      "nodes": 1684694,
+      "output_sha256": "cbe088ed66a87c635b8b389ed5da126fb4c63242313e917002f2aa6aeaff7528",
+      "proof_present": true,
+      "result": 1,
+      "s5_index": 209644,
+      "verdict": "first-player-WIN",
+      "wall_seconds_reported": 8
+    }
+  ],
+  "schema": "n11-cold-pilot-probes-v1",
+  "solver_binary_sha256": "5ce15397e5c3e77e70cee19bfb0038e4f050e10cde86e418f915276eaa6867b2",
+  "solver_source_sha256": "48e51bb56288e090f51996eb4d9a208ca0458d11f73ba61bf5f08dade25db446",
+  "trust": "exact solver verdicts only; any completed trace still requires independent terminal-only verification"
+}

@@ -1,0 +1,145 @@
+{
+ "all_pass": true,
+ "claim": "verdict-level agreement only; no verdict consumed; 11x11 empty board / two-stone root {60,27} / third moves {100,108} remain UNKNOWN",
+ "consumed": false,
+ "gates": {
+  "C2_k04_determinism_3runs_identical": {
+   "detail": "[('1', '11020407', '6092599'), ('1', '11020407', '6092599'), ('1', '11020407', '6092599')]",
+   "pass": true
+  },
+  "C2_k04_expansions_differ_from_replica_nodes_allowed": {
+   "detail": "third_expansions=11020407 replica_nodes=9433024 (different implementations; verdict-level agreement is the gate)",
+   "pass": true
+  },
+  "C2_k04_ttoverwrites_pinned": {
+   "detail": "ttOverwrites=6826103",
+   "pass": true
+  },
+  "C2_k04_win_verdict_level_vs_replica": {
+   "detail": "third={'1'} replica={'1'}",
+   "pass": true
+  },
+  "C4_ng1_k04_legal84_gate_fail": {
+   "detail": "third,ng1-k04,5,84,,GATE_FAIL,\"legal count mismatch: derived=83 declared=84\"\nrc=1",
+   "pass": true
+  },
+  "C4_ng2_k04_stones6_gate_fail": {
+   "detail": "third,ng2-k04,6,83,,GATE_FAIL,\"stone count mismatch: bits=5 declared=6\"\nrc=1",
+   "pass": true
+  },
+  "pin_jsreplay_js_sha256": {
+   "detail": "/home/user/knowledge/kyouen-research/_sixthcost-k03-thirdimpl-kit-20261122/inv/jsreplay.js",
+   "pass": true
+  },
+  "pin_third_impl_js_sha256": {
+   "detail": "/home/user/knowledge/kyouen-research/_sixthcost-k03-thirdimpl-kit-20261122/inv/third_impl.js",
+   "pass": true
+  },
+  "pin_verify_tbl_js_sha256": {
+   "detail": "/home/user/knowledge/kyouen-research/_sixthcost-k03-thirdimpl-kit-20261122/inv/verify_tbl.js",
+   "pass": true
+  },
+  "repl_k04_2m_unknown": {
+   "detail": "replay,0,5,83,0,2000000,0,2000000,8,10376293541461626888,65536",
+   "pass": true
+  },
+  "repl_k04_win_3runs_unanimous": {
+   "detail": "[('1', '9433024'), ('1', '9433024'), ('1', '9433024')]",
+   "pass": true
+  },
+  "repl_row_at15m-run1-k04.out.csv": {
+   "detail": "replay | 0 | 5 | 83 | 0 | 15000000 | 1 | 9433024 | 47 | 10376293541461626888 | 65536",
+   "pass": true
+  },
+  "repl_row_at15m-run2-k04.out.csv": {
+   "detail": "replay | 0 | 5 | 83 | 0 | 15000000 | 1 | 9433024 | 48 | 10376293541461626888 | 65536",
+   "pass": true
+  },
+  "repl_row_at15m-run3-verify-k04.out.csv": {
+   "detail": "replay | 0 | 5 | 83 | 0 | 15000000 | 1 | 9433024 | 48 | 10376293541461626888 | 65536",
+   "pass": true
+  },
+  "repl_row_at2m-k04.out.csv": {
+   "detail": "replay | 0 | 5 | 83 | 0 | 2000000 | 0 | 2000000 | 8 | 10376293541461626888 | 65536",
+   "pass": true
+  },
+  "repl_sha_at15m-run1-k04.out.csv": {
+   "detail": "c10896543282f563deeddf31af994465c9f5fac465c734fa22339a47dc81ca61",
+   "pass": true
+  },
+  "repl_sha_at15m-run2-k04.out.csv": {
+   "detail": "7c12138c13d8ff5f256a51d3a311994248e405e05f0780678e86a008daac1e8e",
+   "pass": true
+  },
+  "repl_sha_at15m-run3-verify-k04.out.csv": {
+   "detail": "492f758e4b2a6e1eb1e7a48df697979b39a83f180ecc6d9aa124700c98e1a4ec",
+   "pass": true
+  },
+  "repl_sha_at2m-k04.out.csv": {
+   "detail": "e97fd079a6902287d992c68246b92817694f735f7273ef9f05e89b162b4a497e",
+   "pass": true
+  },
+  "third_clean_k04-cold-a.txt": {
+   "detail": "reason=clean",
+   "pass": true
+  },
+  "third_clean_k04-cold-b.txt": {
+   "detail": "reason=clean",
+   "pass": true
+  },
+  "third_clean_k04-cold-v-legal.txt": {
+   "detail": "reason=clean",
+   "pass": true
+  },
+  "third_derivedlegal_k04-cold-a.txt": {
+   "detail": "in=83 derived=83",
+   "pass": true
+  },
+  "third_derivedlegal_k04-cold-b.txt": {
+   "detail": "in=83 derived=83",
+   "pass": true
+  },
+  "third_derivedlegal_k04-cold-v-legal.txt": {
+   "detail": "in=83 derived=83",
+   "pass": true
+  },
+  "third_key_k04-cold-a.txt": {
+   "detail": "third | k04-a | 5 | 83 | 83 | 1 | 11020407 | 6092599 | 31.05 | 10376293541461626888 | 65536 | clean | quads=95670 | ttOverwrites=6826103 | memoPower=22",
+   "pass": true
+  },
+  "third_key_k04-cold-b.txt": {
+   "detail": "third | k04-b | 5 | 83 | 83 | 1 | 11020407 | 6092599 | 30.82 | 10376293541461626888 | 65536 | clean | quads=95670 | ttOverwrites=6826103 | memoPower=22",
+   "pass": true
+  },
+  "third_key_k04-cold-v-legal.txt": {
+   "detail": "third | k04-v | 5 | 83 | 83 | 1 | 11020407 | 6092599 | 54.92 | 10376293541461626888 | 65536 | clean | quads=95670 | ttOverwrites=6826103 | memoPower=22",
+   "pass": true
+  },
+  "third_quads_k04-cold-a.txt": {
+   "detail": "quads",
+   "pass": true
+  },
+  "third_quads_k04-cold-b.txt": {
+   "detail": "quads",
+   "pass": true
+  },
+  "third_quads_k04-cold-v-legal.txt": {
+   "detail": "quads",
+   "pass": true
+  }
+ },
+ "row_results": {
+  "k04": {
+   "replica_2m_result_unknown": true,
+   "replica_nodes_15m": 9433024,
+   "replica_verdict": 1,
+   "third_impl_determinism_3runs_identical": true,
+   "third_impl_expansions": 11020407,
+   "third_impl_runs": 3,
+   "third_impl_tt_hits": 6092599,
+   "third_impl_verdict": 1,
+   "verdict_level_agreement": true
+  }
+ },
+ "schema": "n11-sixthcost-k04-thirdimpl-audit-v1"
+}

@@ -1,0 +1,346 @@
+{
+  "schema": "n11-fixed14-complete-s8-s9-incidence-v1",
+  "emptyBoard": "UNKNOWN",
+  "sourceReplanSelectionSha256": "f4db4e5ea3e17bf92194aabcd07726b8b4dd87ff4a60329ca2362b5bb0a3a668",
+  "sourceRound27WitnessSha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+  "proofOnlyWin8": 5859,
+  "fixedPlanUnprovedS8": 37,
+  "certifiedWin9": 56,
+  "certifiedLoss9": 2669,
+  "distinctUnknown9": 799,
+  "completeS8ToS9Edges": 1088,
+  "certifiedLoss9Edges": 259,
+  "unknown9Edges": 829,
+  "newProvenLoss8": 0,
+  "provenLoss8Keys": [],
+  "minUnknown9": 11,
+  "maxUnknown9": 29,
+  "topUnknown9ByPotentialWIN8Coverage": [
+    {
+      "h": "00000000000000821081000040004024",
+      "missing8Parents": 2,
+      "legal10": 19
+    },
+    {
+      "h": "00000000000000821084800001000120",
+      "missing8Parents": 2,
+      "legal10": 18
+    },
+    {
+      "h": "000000000002008210800002000000b0",
+      "missing8Parents": 2,
+      "legal10": 20
+    },
+    {
+      "h": "00000000000840821080000000000068",
+      "missing8Parents": 2,
+      "legal10": 19
+    },
+    {
+      "h": "00000000002840821080000000000060",
+      "missing8Parents": 2,
+      "legal10": 15
+    },
+    {
+      "h": "00000000002840821081000000000020",
+      "missing8Parents": 2,
+      "legal10": 12
+    },
+    {
+      "h": "00000000014080821084000000000020",
+      "missing8Parents": 2,
+      "legal10": 19
+    },
+    {
+      "h": "00000000014280821080000000000020",
+      "missing8Parents": 2,
+      "legal10": 15
+    },
+    {
+      "h": "00000000100000821081000040000024",
+      "missing8Parents": 2,
+      "legal10": 16
+    },
+    {
+      "h": "00000000102000821081000000000024",
+      "missing8Parents": 2,
+      "legal10": 23
+    },
+    {
+      "h": "00000000102000821081000000400020",
+      "missing8Parents": 2,
+      "legal10": 18
+    },
+    {
+      "h": "00000000102000821081100000000020",
+      "missing8Parents": 2,
+      "legal10": 22
+    },
+    {
+      "h": "000000084000008210c4000000000020",
+      "missing8Parents": 2,
+      "legal10": 20
+    },
+    {
+      "h": "00000080000000c21080000400000060",
+      "missing8Parents": 2,
+      "legal10": 19
+    },
+    {
+      "h": "00000080000000c210c0000400000020",
+      "missing8Parents": 2,
+      "legal10": 15
+    },
+    {
+      "h": "00001008000000821080000201000020",
+      "missing8Parents": 2,
+      "legal10": 23
+    },
+    {
+      "h": "00004200100020821080000000000020",
+      "missing8Parents": 2,
+      "legal10": 18
+    },
+    {
+      "h": "00006010000000821080080000000020",
+      "missing8Parents": 2,
+      "legal10": 21
+    },
+    {
+      "h": "00006210000000821080000000000020",
+      "missing8Parents": 2,
+      "legal10": 17
+    },
+    {
+      "h": "00008000000000821080000400000038",
+      "missing8Parents": 2,
+      "legal10": 21
+    }
+  ],
+  "s8Rows": [
+    {
+      "h": "00000000000000821080000001040120",
+      "legal9": 26,
+      "certifiedLoss9": 0,
+      "unknown9": 26
+    },
+    {
+      "h": "00000000000000821080800001000120",
+      "legal9": 24,
+      "certifiedLoss9": 0,
+      "unknown9": 24
+    },
+    {
+      "h": "00000000000000821081000040000024",
+      "legal9": 27,
+      "certifiedLoss9": 0,
+      "unknown9": 27
+    },
+    {
+      "h": "00000000000000821088100100000020",
+      "legal9": 24,
+      "certifiedLoss9": 2,
+      "unknown9": 22
+    },
+    {
+      "h": "00000000000000821090100000004020",
+      "legal9": 31,
+      "certifiedLoss9": 9,
+      "unknown9": 22
+    },
+    {
+      "h": "000000000002008210800000000000b0",
+      "legal9": 28,
+      "certifiedLoss9": 3,
+      "unknown9": 25
+    },
+    {
+      "h": "00000000000200821080000200000030",
+      "legal9": 25,
+      "certifiedLoss9": 2,
+      "unknown9": 23
+    },
+    {
+      "h": "00000000000840821080000000000060",
+      "legal9": 27,
+      "certifiedLoss9": 2,
+      "unknown9": 25
+    },
+    {
+      "h": "00000000002040821081000000000020",
+      "legal9": 25,
+      "certifiedLoss9": 0,
+      "unknown9": 25
+    },
+    {
+      "h": "00000000002840821080000000000020",
+      "legal9": 21,
+      "certifiedLoss9": 0,
+      "unknown9": 21
+    },
+    {
+      "h": "00000000014080821080000000000020",
+      "legal9": 30,
+      "certifiedLoss9": 4,
+      "unknown9": 26
+    },
+    {
+      "h": "00000000100000821081000000000024",
+      "legal9": 30,
+      "certifiedLoss9": 8,
+      "unknown9": 22
+    },
+    {
+      "h": "00000000100000821081000000400020",
+      "legal9": 25,
+      "certifiedLoss9": 2,
+      "unknown9": 23
+    },
+    {
+      "h": "00000000100000821081100000000020",
+      "legal9": 29,
+      "certifiedLoss9": 2,
+      "unknown9": 27
+    },
+    {
+      "h": "00000000102000821081000000000020",
+      "legal9": 29,
+      "certifiedLoss9": 5,
+      "unknown9": 24
+    },
+    {
+      "h": "00000008400000821084000000000020",
+      "legal9": 30,
+      "certifiedLoss9": 12,
+      "unknown9": 18
+    },
+    {
+      "h": "00000080000000c21080000000000060",
+      "legal9": 30,
+      "certifiedLoss9": 9,
+      "unknown9": 21
+    },
+    {
+      "h": "00000080000000c21080000400000020",
+      "legal9": 23,
+      "certifiedLoss9": 0,
+      "unknown9": 23
+    },
+    {
+      "h": "00000080000000c210c0000000000020",
+      "legal9": 28,
+      "certifiedLoss9": 8,
+      "unknown9": 20
+    },
+    {
+      "h": "00001008000000821080000000100020",
+      "legal9": 39,
+      "certifiedLoss9": 27,
+      "unknown9": 12
+    },
+    {
+      "h": "00001008000000821080000001000020",
+      "legal9": 35,
+      "certifiedLoss9": 22,
+      "unknown9": 13
+    },
+    {
+      "h": "00001008000000821080000200000020",
+      "legal9": 35,
+      "certifiedLoss9": 14,
+      "unknown9": 21
+    },
+    {
+      "h": "00001088000000821080000000000020",
+      "legal9": 32,
+      "certifiedLoss9": 8,
+      "unknown9": 24
+    },
+    {
+      "h": "00004000100020821080000000000020",
+      "legal9": 31,
+      "certifiedLoss9": 11,
+      "unknown9": 20
+    },
+    {
+      "h": "00004040000000821080000000000028",
+      "legal9": 33,
+      "certifiedLoss9": 4,
+      "unknown9": 29
+    },
+    {
+      "h": "00004200000020821080000000000020",
+      "legal9": 26,
+      "certifiedLoss9": 2,
+      "unknown9": 24
+    },
+    {
+      "h": "00006010000000821080000000000020",
+      "legal9": 31,
+      "certifiedLoss9": 2,
+      "unknown9": 29
+    },
+    {
+      "h": "00008000000000821080000400000028",
+      "legal9": 32,
+      "certifiedLoss9": 4,
+      "unknown9": 28
+    },
+    {
+      "h": "00008000000000821080000400000030",
+      "legal9": 31,
+      "certifiedLoss9": 7,
+      "unknown9": 24
+    },
+    {
+      "h": "00008000000000821090200000000020",
+      "legal9": 23,
+      "certifiedLoss9": 0,
+      "unknown9": 23
+    },
+    {
+      "h": "00008000004080821080000000000020",
+      "legal9": 29,
+      "certifiedLoss9": 2,
+      "unknown9": 27
+    },
+    {
+      "h": "00010000000100821080000000004020",
+      "legal9": 33,
+      "certifiedLoss9": 13,
+      "unknown9": 20
+    },
+    {
+      "h": "00010200000100821080000000000020",
+      "legal9": 31,
+      "certifiedLoss9": 6,
+      "unknown9": 25
+    },
+    {
+      "h": "00012010000000821080000000000020",
+      "legal9": 36,
+      "certifiedLoss9": 25,
+      "unknown9": 11
+    },
+    {
+      "h": "00018000000100821080000000000020",
+      "legal9": 35,
+      "certifiedLoss9": 16,
+      "unknown9": 19
+    },
+    {
+      "h": "00020000000000821080200400000020",
+      "legal9": 24,
+      "certifiedLoss9": 0,
+      "unknown9": 24
+    },
+    {
+      "h": "00042010000000821080000000000020",
+      "legal9": 40,
+      "certifiedLoss9": 28,
+      "unknown9": 12
+    }
+  ],
+  "newTwoStoneClosures": 0,
+  "winLossConflicts": 0
+}

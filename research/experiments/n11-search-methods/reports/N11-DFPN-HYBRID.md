@@ -1,0 +1,224 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
+# 11x11 df-pn + exact endgame DFS handoff
+
+**11x11 の勝敗は UNKNOWN のまま。**
+この文書はアルゴリズム改善の検証記録であり、勝敗証明ではない。
+
+## 実装
+
+基準実装: `cpp/solvers/kyouen_dfpn_root.cpp`
+初期 hybrid commit: `472d538`
+
+df-pn を外側の探索として維持し、合法手数が小さい frontier node に到達したときだけ
+exact DFS を試す。
+
+オプション:
+
+- `--exact-legal=N`: 合法手数 `<= N` で handoff。0 は無効
+- `--exact-budget=N`: handoff 1 回あたりの exact DFS node budget
+- `--exact-retries=N`: 同一 TT residency 中に再試行できる回数
+
+exact DFS は fixed proposition「元の先手が最終的に勝つ」を直接評価する。
+OR/AND は df-pn と同じ parity で、
+
+- even stones: OR
+- odd stones: AND
+
+を使う。
+
+**soundness の要点**:
+
+- exact DFS が完全に解いた局面だけ `pn=0/dn=INF` または
+  `pn=INF/dn=0` として TT に書く
+- node budget を使い切った場合は `UNKNOWN` を返し、未解決 parent を
+  solved として書かない
+- exact DFS は同じ TT の既存 solved entry を再利用する
+- open df-pn bound は exact DFS の真偽判定には使用しない
+- TT slot が別 key に置換されたときは pn/dn/aux counter もリセットし、
+  stale exact-attempt bit を引き継がない
+
+heartbeat / timeout / done には以下を追加:
+
+`exact_calls exact_nodes exact_abort exact_win exact_loss exact_stores`
+
+## 正当性回帰
+
+GitHub Actions:
+`.github/workflows/n11-dfpn-hybrid-regression.yml`
+
+既知空盤勝敗:
+
+| n | expected |
+|---:|---|
+| 4 | LOSS |
+| 5 | WIN |
+| 6 | WIN |
+| 7 | LOSS |
+
+`exact-legal = 0,4,6,8` の全設定で上記と一致。
+
+小盤では handoff が実際に動き、同じ結果のまま df-pn expansions が減った。
+例として n=7:
+
+| exact-legal | df-pn expansions | exact nodes | outcome |
+|---:|---:|---:|---|
+| 0 | 2,123,417 | 0 | LOSS |
+| 4 | 1,080,990 | 327,138 | LOSS |
+| 6 | 978,068 | 557,998 | LOSS |
+| 8 | 661,662 | 556,438 | LOSS |
+
+これは小盤上では hybrid が単なる dead code ではなく、正しい結果を保ったまま
+endgame を exact DFS に移せていることを示す。ただしこの速度差をそのまま
+11x11 に外挿しない。
+
+### 強制 abort 試験
+
+`exact-legal=8, exact-budget=1, exact-retries=2` として、
+ほぼすべての handoff を意図的に `UNKNOWN` にした。
+
+n=7 では:
+
+- exact calls: 847,893
+- exact abort: 801,180
+- final outcome: **LOSS**（baseline と一致）
+- df-pn expansions: 2,123,417（baseline と一致）
+
+n=4..7 全てで最終勝敗は baseline と一致した。
+したがって budget exhaustion が unsound な solved mark を注入していないことを
+回帰で確認した。
+
+## 11x11 60 秒 smoke test
+
+GitHub-hosted runner 上の短時間診断。ユーザーの WSL 計測とはマシンが異なるため、
+絶対速度の比較には使わない。同一 run 内の arm 比較と handoff の発火状況を見る。
+
+条件:
+
+- root: `v=60`
+- budget: 60 s
+- memo: `2^24`
+- exact budget: 200,000 nodes / call
+- retries: 2
+- 各 arm fresh process
+
+最終 baseline-vs-hybrid 同時比較:
+
+| exact-legal | outcome | root pn | root dn | df-pn expansions | exact calls | exact nodes | exact solved stores |
+|---:|---|---:|---:|---:|---:|---:|---:|
+| 0 | TIMEOUT | 18,496 | 6,105 | 921,593 | 0 | 0 | 0 |
+| 20 | TIMEOUT | 18,456 | 6,110 | 915,761 | 19 | 2,963 | 2,963 |
+| 32 | TIMEOUT | 17,200 | 5,974 | 849,725 | 829 | 1,114,569 | 1,114,569 |
+| 44 | TIMEOUT | 8,521 | 5,428 | 444,936 | 493 | 8,122,368 | 8,122,363 |
+
+`exact-legal <= 12` は 60 秒では handoff が一度も発火せず、
+16 で初めて少数発火した。現在の df-pn frontier に endgame DFS を
+実際に当てるには 20 以上が必要。
+
+`exact-legal=44` では約 812 万 exact state を完全に解き、
+df-pn が選んだ frontier node の exact WIN/LOSS が大量に TT へ戻った。
+ただし **root pn が baseline より小さいことを「証明に近い」とは読まない**。
+proof number は残り作業量ではなく、精密化で増減するためである。
+
+今回の意味のある観察は、
+
+1. hybrid handoff が 11x11 の実探索 frontier で大量に発火する
+2. handoff は 200k node cap 内でほぼ完了しており、短時間 smoke では
+   `exact_abort=0`
+3. exact による solved state が df-pn の選択中 frontier へ実際に注入される
+4. それでも 60 秒では root 自体は未解決
+
+という点。
+
+## main TT への exact result publish 方針
+
+publish-all では 5 分 run で main TT がほぼ満杯になったため、
+`--exact-publish=root` を追加した。
+
+root-only mode:
+
+- exact DFS 内部の transposition は handoff ごとの local hash で memoize
+- exact DFS が完全に解けたら **handoff root だけ**を main df-pn TT に publish
+- local memo は handoff ごとに clear するが capacity は再利用
+- incomplete / budget abort は従来どおり UNKNOWN
+
+小盤 n=4..7 は root-only でも既知勝敗と完全一致。
+
+60 秒、11x11 v=60、memo=2^24、L44 の同時比較:
+
+| arm | outcome | root pn | root dn | df-pn expansions | main memo used | main solved | exact nodes | main exact stores | local stores | TT evict |
+|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| baseline | TIMEOUT | 18,310 | 6,096 | 913,317 | 913,317 | 0 | 0 | 0 | 0 | 0 |
+| publish-all | TIMEOUT | 9,133 | 5,466 | 503,172 | 13,798,916 | 13,362,841 | 13,434,880 | 13,434,874 | 0 | open 65,744 / solved 72,549 |
+| root-only | TIMEOUT | 8,477 | 5,425 | 443,451 | 443,451 | 673 | 9,346,773 | 525 | 9,346,773 | 0 |
+
+proof number の大小は「残り距離」として比較しない。
+ここで明確なのは、root-only が main TT をほぼ df-pn frontier 用に保ったまま
+exact handoff を実行でき、60 秒 run では **TT eviction 0** だったこと。
+
+publish-all は同じ 60 秒でも main TT に 1,300 万超の solved state を保持し、
+既に open / solved eviction が発生した。一方 root-only は exact 内部で
+約 934 万 state を local memoize しながら main TT への書き込みを
+handoff root 525 件に限定した。
+
+この結果は root-only の証明速度が優れていること自体を証明しないが、
+**main df-pn bounds を deep exact states から隔離する設計が実際に機能する**
+ことを確認した。
+
+## root-only threshold scan
+
+flat local memo 版の root-only policy で `v=60` を 60 秒ずつ測定した。
+各 arm fresh process、memo=2^24、exact budget=200,000。
+
+| exact-legal | outcome | root pn | root dn | df-pn exp | exact calls | exact nodes | abort | handoff WIN | handoff LOSS |
+|---:|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| 44 | TIMEOUT | 9,582 | 5,505 | 496,746 | 853 | 17,346,560 | 0 | 345 | 507 |
+| 48 | TIMEOUT | 6,441 | 5,306 | 345,640 | 618 | 19,951,616 | 5 | 265 | 347 |
+| 52 | TIMEOUT | 4,797 | 5,143 | 251,612 | 249 | 21,250,048 | 32 | 215 | 1 |
+| 56 | TIMEOUT | 2,777 | 4,104 | 101,042 | 250 | 23,810,048 | 36 | 211 | 2 |
+
+全 arm root は未解決なので、pn/dn の大小を解決距離として比較しない。
+一方で threshold を上げるほど wall time のより多くを exact DFS が引き受け、
+L56 でも 250 calls 中 214 件は budget 内で決着している。
+
+L52/L56 で handoff result がほぼ WIN 側だけになるのは目立つため、
+単なる速度指標として扱わず、発火する深さ/parity が変わった可能性も含めて
+今後の診断対象とする。
+
+この結果を受けて、center 後の20二石 root を L56 でも直接 sweep する。
+
+## persistent separate exact cache
+
+root-only の per-handoff local cache に加え、deep exact solved state を
+**main df-pn TT とは別の固定 cache に保持し、handoff 間で再利用する**
+`--exact-publish=separate` も試した。
+
+60秒の同時比較（L44）:
+
+| policy | outcome | df-pn exp | main TT used | main solved | exact calls | exact nodes | TT eviction |
+|---|---|---:|---:|---:|---:|---:|---:|
+| publish-all | TIMEOUT | 444,385 | 8,271,328 | 7,827,761 | 482 | 7,827,456 | open 17 / solved 8 |
+| root-only | TIMEOUT | 436,486 | 436,486 | 614 | 487 | 8,388,608 | 0 |
+| separate | TIMEOUT | 439,250 | 439,250 | 629 | 494 | 8,089,217 | 0 |
+
+この短時間測定では separate cache に明確な優位は見えない。
+root-only と separate は handoff 完了数・exact work・df-pn work が近く、
+両方とも main TT flooding を防げている。
+
+したがって当面はより単純な **root-only** を主実験に使う。
+separate mode は残すが、cache size や root 間 overlap の専用実験なしに
+優位とは主張しない。
+
+## 現時点の判断
+
+hybrid は **正しさ回帰を通過し、11x11 でも実際に仕事をしている**。
+一方、まだ「11x11 証明時間を短縮した」とは言えない。
+その判定には同じマシン・同じ wall time で baseline と hybrid を比較し、
+最終 WIN/LOSS、critical frontier の solved 化、handoff の abort 率などを
+見る必要がある。
+
+次の本命は WSL 上で `exact-legal=0` と 32〜44 の 5 分 A/B。
+特に `exact-legal=44` は短時間 run で exact work が大きいため、
+memo=26 の容量で eviction / solved eviction を確認しながら測る。
+
+**11x11 は UNKNOWN のまま。**

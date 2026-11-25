@@ -1,0 +1,614 @@
+{
+ "input_pins": {
+  "geometry_sha256": "146be80b5794462c2444e983fc4c4a6e76d3b464bfd5e86fac14509024100b54",
+  "cache_sha256": "60e0dc3476920d4e99043dd4f132398ea72e4dfdcd9f3dbb8fc686ba65bc28c6",
+  "cache": "research/experiments/n11-reply27-s5-jsreplica-probe-10376293541461626880-40960-20261121/output/merged-exact-s5-after-js-probe-13.cache",
+  "main_at_snapshot": "a423c2f01c4e23874a2bf668cfa019bc244d188d",
+  "supply_sha256": "31f0d29b820a69508af0c352c22f09b244bff5b9ae79476679047cdb160ea954",
+  "candidate_ledger_sha256": "2a4c2382d812102f8132339c871b07ee998e933c80da876759e51e84f64fda80"
+ },
+ "gates": "3384 classes; 119 third moves; 115 candidates; 62 UNKNOWN/53 WIN/0 LOSS; secured 117; remaining {100,108}; supply 4562 (deg 1:2688 2:1874); claimable pool 2653; ledger cross-check 62/62; focus-lane 35-key equality; certificate-class 38-key non-overlap",
+ "status_guard": "scheduling measurement only; no verdict; {60,27}, third moves 100/108 and the 11x11 empty board remain UNKNOWN",
+ "queue_static_all_loss": {
+  "scenario": "IF every remaining unknown S5 child of the 62 live classes is decided LOSS; static combinatorial statement, no probability used",
+  "order": "global ascending truncated_cost_proxy_nodes then key",
+  "supply_size": 4562,
+  "first_class_completion": {
+   "class": "1297036692683751424:134217728",
+   "probe_index_queue": 3927,
+   "cumulative_proxy_nodes_to_that_point": 21911941676,
+   "s5_unknown": 100
+  },
+  "next_five_classes": [
+   {
+    "class": "1297036692683751424:268435456",
+    "probe_index_queue": 3965,
+    "cumulative_proxy_to_completion": 22137361923
+   },
+   {
+    "class": "1152921504607895552:536870920",
+    "probe_index_queue": 3997,
+    "cumulative_proxy_to_completion": 22327189499
+   },
+   {
+    "class": "1297036692683751424:262144",
+    "probe_index_queue": 4118,
+    "cumulative_proxy_to_completion": 23044975021
+   },
+   {
+    "class": "1297036692683751424:131072",
+    "probe_index_queue": 4119,
+    "cumulative_proxy_to_completion": 23050907132
+   },
+   {
+    "class": "1297036692683751424:32768",
+    "probe_index_queue": 4120,
+    "cumulative_proxy_to_completion": 23056839244
+   }
+  ],
+  "class_targeted": {
+   "focus_class": {
+    "class": "1188950301626859520:536870912",
+    "probes": 93,
+    "proxy_sum": 530074022,
+    "exclusive_keys_claimed_by_focus_lane": 35
+   },
+   "certificate_class": {
+    "class": "1297036692683752448:0",
+    "probes": 99,
+    "proxy_sum": 546960111,
+    "exclusive_keys": 38,
+    "shared_keys": 61,
+    "note": "the census/reconciliation lane (commit e4aae3b4) identified 99 backward-only published rows exactly covering this class's unknowns (7+99=106 children); fresh re-solving is an alternative to adoption, decision left to evidence owners"
+   }
+  },
+  "interpretation": "under the static all-LOSS scenario a class-targeted completion of the cheapest class needs 93 probes / 530,074,017 proxy nodes, while the global cheapest-first order first completes a class at queue position 3,927 with cumulative 21,911.9M proxy nodes; the ratio is a scheduling fact of the two orders, not a proof-cost bound (truncated proxies are biased, censored, uncalibrated)"
+ },
+ "bin_prior_ranking_top5": [
+  {
+   "class": "1152921504612089856:536870912",
+   "index": 0.972136,
+   "s5_unknown": 99,
+   "proxy_total": 559112936
+  },
+  {
+   "class": "1152921504607895552:34896609280",
+   "index": 0.952709,
+   "s5_unknown": 109,
+   "proxy_total": 625297490
+  },
+  {
+   "class": "1297036692683751424:34359738368",
+   "index": 0.948871,
+   "s5_unknown": 108,
+   "proxy_total": 617805762
+  },
+  {
+   "class": "1152921521787764736:536870912",
+   "index": 0.933671,
+   "s5_unknown": 105,
+   "proxy_total": 598083172
+  },
+  {
+   "class": "1297036692683751424:33554432",
+   "index": 0.929909,
+   "s5_unknown": 104,
+   "proxy_total": 593178770
+  }
+ ],
+ "cost_ranking_top5": [
+  {
+   "class": "1188950301626859520:536870912",
+   "s5_unknown": 93,
+   "proxy_total": 530074022,
+   "bin_prior": 0.882363
+  },
+  {
+   "class": "1297036692683752448:0",
+   "s5_unknown": 99,
+   "proxy_total": 546960111,
+   "bin_prior": 0.642853
+  },
+  {
+   "class": "1297036830122704896:0",
+   "s5_unknown": 100,
+   "proxy_total": 549330115,
+   "bin_prior": 0.476979
+  },
+  {
+   "class": "1297107061427929088:0",
+   "s5_unknown": 100,
+   "proxy_total": 552429279,
+   "bin_prior": 0.422636
+  },
+  {
+   "class": "1152921504612089856:536870912",
+   "s5_unknown": 99,
+   "proxy_total": 559112936,
+   "bin_prior": 0.972136
+  }
+ ],
+ "certificate_class_exclusive_probe_order": [
+  {
+   "order": 1,
+   "key": "3602879701897446400:0",
+   "legal": 89,
+   "truncated_cost_proxy_nodes": 5041585,
+   "bin_win_count": 55,
+   "bin_sample_size": 765
+  },
+  {
+   "order": 2,
+   "key": "5908722711111140352:0",
+   "legal": 89,
+   "truncated_cost_proxy_nodes": 5041585,
+   "bin_win_count": 55,
+   "bin_sample_size": 765
+  },
+  {
+   "order": 3,
+   "key": "10412322338480590849:0",
+   "legal": 84,
+   "truncated_cost_proxy_nodes": 5041585,
+   "bin_win_count": 55,
+   "bin_sample_size": 765
+  },
+  {
+   "order": 4,
+   "key": "1297036692683752448:128",
+   "legal": 98,
+   "truncated_cost_proxy_nodes": 5234938,
+   "bin_win_count": 5,
+   "bin_sample_size": 1241
+  },
+  {
+   "order": 5,
+   "key": "1297036692683752449:0",
+   "legal": 94,
+   "truncated_cost_proxy_nodes": 5234938,
+   "bin_win_count": 5,
+   "bin_sample_size": 1241
+  },
+  {
+   "order": 6,
+   "key": "1297036692683752452:0",
+   "legal": 94,
+   "truncated_cost_proxy_nodes": 5234938,
+   "bin_win_count": 5,
+   "bin_sample_size": 1241
+  },
+  {
+   "order": 7,
+   "key": "1297036692683752480:0",
+   "legal": 91,
+   "truncated_cost_proxy_nodes": 5234938,
+   "bin_win_count": 5,
+   "bin_sample_size": 1241
+  },
+  {
+   "order": 8,
+   "key": "1297036692683752576:0",
+   "legal": 96,
+   "truncated_cost_proxy_nodes": 5234938,
+   "bin_win_count": 5,
+   "bin_sample_size": 1241
+  },
+  {
+   "order": 9,
+   "key": "1297036692683752704:0",
+   "legal": 96,
+   "truncated_cost_proxy_nodes": 5234938,
+   "bin_win_count": 5,
+   "bin_sample_size": 1241
+  },
+  {
+   "order": 10,
+   "key": "1297036692683756544:0",
+   "legal": 96,
+   "truncated_cost_proxy_nodes": 5234938,
+   "bin_win_count": 5,
+   "bin_sample_size": 1241
+  },
+  {
+   "order": 11,
+   "key": "1297036692683760640:0",
+   "legal": 90,
+   "truncated_cost_proxy_nodes": 5234938,
+   "bin_win_count": 5,
+   "bin_sample_size": 1241
+  },
+  {
+   "order": 12,
+   "key": "1297036692683785216:0",
+   "legal": 96,
+   "truncated_cost_proxy_nodes": 5234938,
+   "bin_win_count": 5,
+   "bin_sample_size": 1241
+  },
+  {
+   "order": 13,
+   "key": "1297036692683817984:0",
+   "legal": 97,
+   "truncated_cost_proxy_nodes": 5234938,
+   "bin_win_count": 5,
+   "bin_sample_size": 1241
+  },
+  {
+   "order": 14,
+   "key": "1297036692683883520:0",
+   "legal": 93,
+   "truncated_cost_proxy_nodes": 5234938,
+   "bin_win_count": 5,
+   "bin_sample_size": 1241
+  },
+  {
+   "order": 15,
+   "key": "1297036692700529664:0",
+   "legal": 94,
+   "truncated_cost_proxy_nodes": 5234938,
+   "bin_win_count": 5,
+   "bin_sample_size": 1241
+  },
+  {
+   "order": 16,
+   "key": "1297036692817970176:0",
+   "legal": 96,
+   "truncated_cost_proxy_nodes": 5234938,
+   "bin_win_count": 5,
+   "bin_sample_size": 1241
+  },
+  {
+   "order": 17,
+   "key": "1297036761403229184:0",
+   "legal": 92,
+   "truncated_cost_proxy_nodes": 5234938,
+   "bin_win_count": 5,
+   "bin_sample_size": 1241
+  },
+  {
+   "order": 18,
+   "key": "1297036967561659392:0",
+   "legal": 97,
+   "truncated_cost_proxy_nodes": 5234938,
+   "bin_win_count": 5,
+   "bin_sample_size": 1241
+  },
+  {
+   "order": 19,
+   "key": "1297177430172107776:0",
+   "legal": 93,
+   "truncated_cost_proxy_nodes": 5234938,
+   "bin_win_count": 5,
+   "bin_sample_size": 1241
+  },
+  {
+   "order": 20,
+   "key": "1297318167660463104:0",
+   "legal": 93,
+   "truncated_cost_proxy_nodes": 5234938,
+   "bin_win_count": 5,
+   "bin_sample_size": 1241
+  },
+  {
+   "order": 21,
+   "key": "1297599642637173760:0",
+   "legal": 93,
+   "truncated_cost_proxy_nodes": 5234938,
+   "bin_win_count": 5,
+   "bin_sample_size": 1241
+  },
+  {
+   "order": 22,
+   "key": "1369094286721680384:0",
+   "legal": 97,
+   "truncated_cost_proxy_nodes": 5234938,
+   "bin_win_count": 5,
+   "bin_sample_size": 1241
+  },
+  {
+   "order": 23,
+   "key": "1585267068835464192:0",
+   "legal": 97,
+   "truncated_cost_proxy_nodes": 5234938,
+   "bin_win_count": 5,
+   "bin_sample_size": 1241
+  },
+  {
+   "order": 24,
+   "key": "1873497444987175936:0",
+   "legal": 94,
+   "truncated_cost_proxy_nodes": 5234938,
+   "bin_win_count": 5,
+   "bin_sample_size": 1241
+  },
+  {
+   "order": 25,
+   "key": "10376293541461626881:8",
+   "legal": 98,
+   "truncated_cost_proxy_nodes": 5234938,
+   "bin_win_count": 5,
+   "bin_sample_size": 1241
+  },
+  {
+   "order": 26,
+   "key": "10376293541461626881:131072",
+   "legal": 94,
+   "truncated_cost_proxy_nodes": 5234938,
+   "bin_win_count": 5,
+   "bin_sample_size": 1241
+  },
+  {
+   "order": 27,
+   "key": "10376293541461626881:33554432",
+   "legal": 97,
+   "truncated_cost_proxy_nodes": 5234938,
+   "bin_win_count": 5,
+   "bin_sample_size": 1241
+  },
+  {
+   "order": 28,
+   "key": "10376293541461626881:67108864",
+   "legal": 95,
+   "truncated_cost_proxy_nodes": 5234938,
+   "bin_win_count": 5,
+   "bin_sample_size": 1241
+  },
+  {
+   "order": 29,
+   "key": "10376293541461626881:268435456",
+   "legal": 99,
+   "truncated_cost_proxy_nodes": 5234938,
+   "bin_win_count": 5,
+   "bin_sample_size": 1241
+  },
+  {
+   "order": 30,
+   "key": "1152921504607896576:553648128",
+   "legal": 100,
+   "truncated_cost_proxy_nodes": 5932112,
+   "bin_win_count": 0,
+   "bin_sample_size": 535
+  },
+  {
+   "order": 31,
+   "key": "1152921513197831168:536870912",
+   "legal": 103,
+   "truncated_cost_proxy_nodes": 5932112,
+   "bin_win_count": 0,
+   "bin_sample_size": 535
+  },
+  {
+   "order": 32,
+   "key": "1152956688979985408:536870912",
+   "legal": 100,
+   "truncated_cost_proxy_nodes": 5932112,
+   "bin_win_count": 0,
+   "bin_sample_size": 535
+  },
+  {
+   "order": 33,
+   "key": "1224979098645824512:536870912",
+   "legal": 100,
+   "truncated_cost_proxy_nodes": 5932112,
+   "bin_win_count": 0,
+   "bin_sample_size": 535
+  },
+  {
+   "order": 34,
+   "key": "1297036692683752448:8",
+   "legal": 100,
+   "truncated_cost_proxy_nodes": 5932112,
+   "bin_win_count": 0,
+   "bin_sample_size": 535
+  },
+  {
+   "order": 35,
+   "key": "1297036692683752448:16",
+   "legal": 100,
+   "truncated_cost_proxy_nodes": 5932112,
+   "bin_win_count": 0,
+   "bin_sample_size": 535
+  },
+  {
+   "order": 36,
+   "key": "1297036692683752448:32",
+   "legal": 101,
+   "truncated_cost_proxy_nodes": 5932112,
+   "bin_win_count": 0,
+   "bin_sample_size": 535
+  },
+  {
+   "order": 37,
+   "key": "1297036692683752448:16777216",
+   "legal": 101,
+   "truncated_cost_proxy_nodes": 5932112,
+   "bin_win_count": 0,
+   "bin_sample_size": 535
+  },
+  {
+   "order": 38,
+   "key": "1297036692683752448:536870912",
+   "legal": 102,
+   "truncated_cost_proxy_nodes": 5932112,
+   "bin_win_count": 0,
+   "bin_sample_size": 535
+  }
+ ],
+ "focus_class_exclusive_reference": [
+  {
+   "order": 1,
+   "key": "1152921504606851072:536870922",
+   "truncated_cost_proxy_nodes": 5234938
+  },
+  {
+   "order": 2,
+   "key": "1152921504606851072:536870978",
+   "truncated_cost_proxy_nodes": 5234938
+  },
+  {
+   "order": 3,
+   "key": "1152921504606851072:536936450",
+   "truncated_cost_proxy_nodes": 5234938
+  },
+  {
+   "order": 4,
+   "key": "1152921504606851072:537001986",
+   "truncated_cost_proxy_nodes": 5234938
+  },
+  {
+   "order": 5,
+   "key": "1152921504606851072:570425346",
+   "truncated_cost_proxy_nodes": 5234938
+  },
+  {
+   "order": 6,
+   "key": "1188950301626859520:536870913",
+   "truncated_cost_proxy_nodes": 5234938
+  },
+  {
+   "order": 7,
+   "key": "1188950301626859520:536870976",
+   "truncated_cost_proxy_nodes": 5234938
+  },
+  {
+   "order": 8,
+   "key": "1188950301626859520:537133056",
+   "truncated_cost_proxy_nodes": 5234938
+  },
+  {
+   "order": 9,
+   "key": "1188950301626859520:603979776",
+   "truncated_cost_proxy_nodes": 5234938
+  },
+  {
+   "order": 10,
+   "key": "1188950301626863616:536870912",
+   "truncated_cost_proxy_nodes": 5234938
+  },
+  {
+   "order": 11,
+   "key": "1188950301626892288:536870912",
+   "truncated_cost_proxy_nodes": 5234938
+  },
+  {
+   "order": 12,
+   "key": "1188950301643636736:536870912",
+   "truncated_cost_proxy_nodes": 5234938
+  },
+  {
+   "order": 13,
+   "key": "1188950310216794112:536870912",
+   "truncated_cost_proxy_nodes": 5234938
+  },
+  {
+   "order": 14,
+   "key": "1188950576504766464:536870912",
+   "truncated_cost_proxy_nodes": 5234938
+  },
+  {
+   "order": 15,
+   "key": "1188951401138487296:536870912",
+   "truncated_cost_proxy_nodes": 5234938
+  },
+  {
+   "order": 16,
+   "key": "1189091039115214848:536870912",
+   "truncated_cost_proxy_nodes": 5234938
+  },
+  {
+   "order": 17,
+   "key": "1197957500881600512:536870912",
+   "truncated_cost_proxy_nodes": 5234938
+  },
+  {
+   "order": 18,
+   "key": "1261007895664787456:536870912",
+   "truncated_cost_proxy_nodes": 5234938
+  },
+  {
+   "order": 19,
+   "key": "1765411053930283008:536870912",
+   "truncated_cost_proxy_nodes": 5234938
+  },
+  {
+   "order": 20,
+   "key": "5800636320054247424:536870912",
+   "truncated_cost_proxy_nodes": 5234938
+  },
+  {
+   "order": 21,
+   "key": "10376293541461622816:68719476737",
+   "truncated_cost_proxy_nodes": 5234938
+  },
+  {
+   "order": 22,
+   "key": "10412322338481635328:536870912",
+   "truncated_cost_proxy_nodes": 5234938
+  },
+  {
+   "order": 23,
+   "key": "1152921504606851072:553648130",
+   "truncated_cost_proxy_nodes": 5932112
+  },
+  {
+   "order": 24,
+   "key": "1152921504606851072:603979778",
+   "truncated_cost_proxy_nodes": 5932112
+  },
+  {
+   "order": 25,
+   "key": "1152921504741064705:68719476738",
+   "truncated_cost_proxy_nodes": 5932112
+  },
+  {
+   "order": 26,
+   "key": "1152921504741068800:68719476738",
+   "truncated_cost_proxy_nodes": 5932112
+  },
+  {
+   "order": 27,
+   "key": "1188950301626859520:537001984",
+   "truncated_cost_proxy_nodes": 5932112
+  },
+  {
+   "order": 28,
+   "key": "1188950301626859520:805306368",
+   "truncated_cost_proxy_nodes": 5932112
+  },
+  {
+   "order": 29,
+   "key": "1188950301626867712:536870912",
+   "truncated_cost_proxy_nodes": 5932112
+  },
+  {
+   "order": 30,
+   "key": "1188950302700601344:536870912",
+   "truncated_cost_proxy_nodes": 5932112
+  },
+  {
+   "order": 31,
+   "key": "1188950305921826816:536870912",
+   "truncated_cost_proxy_nodes": 5932112
+  },
+  {
+   "order": 32,
+   "key": "1188959097719881728:536870912",
+   "truncated_cost_proxy_nodes": 5932112
+  },
+  {
+   "order": 33,
+   "key": "1189020670371037184:536870912",
+   "truncated_cost_proxy_nodes": 5932112
+  },
+  {
+   "order": 34,
+   "key": "1193453901254230016:536870912",
+   "truncated_cost_proxy_nodes": 5932112
+  },
+  {
+   "order": 35,
+   "key": "10376293545756590112:68719476736",
+   "truncated_cost_proxy_nodes": 5932112
+  }
+ ]
+}

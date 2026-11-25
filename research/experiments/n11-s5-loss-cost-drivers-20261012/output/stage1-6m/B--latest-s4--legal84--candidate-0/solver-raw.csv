@@ -1,0 +1,18 @@
+# exact replay: order=0 (0=count-asc 1=count-desc 2=key-asc 3=s5-count-desc 4=s5-target92) share_tt=0
+# exact replay: id,stones,legal,is_or,budget,result,nodes,wall_s,key_lo,key_hi
+# exact-profile row=0 table_hit=2044163 table_miss=15326610 table_new=2690210 evict_open=0 evict_solved=871 table_used=2690210 table_capacity=4194304 table_solved=2690210 solved_discoveries=2691081 avg_probe=1.88549
+# exact-profile-rank row=0 s6 calls=1 nodes=1 win=0 loss=1 unknown=0 tt_solved=0 tt_open=0 tt_miss=1
+# exact-profile-rank row=0 s7 calls=66 nodes=66 win=0 loss=66 unknown=0 tt_solved=0 tt_open=0 tt_miss=66
+# exact-profile-rank row=0 s8 calls=266 nodes=266 win=212 loss=54 unknown=0 tt_solved=0 tt_open=0 tt_miss=266
+# exact-profile-rank row=0 s9 calls=3252 nodes=3252 win=149 loss=3103 unknown=0 tt_solved=0 tt_open=0 tt_miss=3252
+# exact-profile-rank row=0 s10 calls=17171 nodes=17171 win=14974 loss=2197 unknown=0 tt_solved=0 tt_open=0 tt_miss=17171
+# exact-profile-rank row=0 s11 calls=87003 nodes=87003 win=9901 loss=77102 unknown=0 tt_solved=0 tt_open=0 tt_miss=87003
+# exact-profile-rank row=0 s12 calls=277756 nodes=277756 win=229528 loss=48228 unknown=0 tt_solved=0 tt_open=0 tt_miss=277756
+# exact-profile-rank row=0 s13 calls=639640 nodes=639640 win=131638 loss=508002 unknown=0 tt_solved=0 tt_open=0 tt_miss=639640
+# exact-profile-rank row=0 s14 calls=835612 nodes=835612 win=596026 loss=239586 unknown=0 tt_solved=0 tt_open=0 tt_miss=835612
+# exact-profile-rank row=0 s15 calls=625777 nodes=625777 win=126702 loss=499075 unknown=0 tt_solved=0 tt_open=0 tt_miss=625777
+# exact-profile-rank row=0 s16 calls=187450 nodes=187450 win=170002 loss=17448 unknown=0 tt_solved=0 tt_open=0 tt_miss=187450
+# exact-profile-rank row=0 s17 calls=16730 nodes=16730 win=586 loss=16144 unknown=0 tt_solved=0 tt_open=0 tt_miss=16730
+# exact-profile-rank row=0 s18 calls=357 nodes=357 win=357 loss=0 unknown=0 tt_solved=0 tt_open=0 tt_miss=357
+replay,0,6,66,1,6000000,2,2691081,8,10412322338480592897,0
+# replay_done rows=1 wall_s=8

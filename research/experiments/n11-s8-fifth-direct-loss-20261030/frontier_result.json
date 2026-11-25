@@ -1,0 +1,42 @@
+{
+  "schema": "n11-fifth-loss8-fixed14-frontier-v1",
+  "emptyBoard": "UNKNOWN",
+  "historicalWin9": 56,
+  "priorKnownLoss9": 4849,
+  "fifthLoss10": 102,
+  "fifthLoss9ParentClosure": 851,
+  "fifthLoss9BeyondPriorProofSets": 524,
+  "unknown9Before": 669,
+  "unknown9After": 659,
+  "unknownEdgesBefore": 674,
+  "unknownEdgesAfter": 664,
+  "newlyCertifiedLossEdges": 10,
+  "closedS8Before": [
+    "00001008000000821080000000100020",
+    "00001008000000821080000001000020",
+    "00012010000000821080000000000020",
+    "00042010000000821080000000000020"
+  ],
+  "closedS8After": [
+    "00001008000000821080000000100020",
+    "00001008000000821080000001000020",
+    "00001008000000821080000200000020",
+    "00012010000000821080000000000020",
+    "00042010000000821080000000000020"
+  ],
+  "remainingUnprovedS8Of37": 32,
+  "winLossConflicts": 0,
+  "twoStoneRootClosureChecked": false,
+  "changedRows": [
+    {
+      "s8": "00001008000000821080000200000020",
+      "before": 9,
+      "after": 0
+    },
+    {
+      "s8": "00006010000000821080000000000020",
+      "before": 13,
+      "after": 12
+    }
+  ]
+}

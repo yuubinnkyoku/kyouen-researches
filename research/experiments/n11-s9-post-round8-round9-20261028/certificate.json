@@ -1,0 +1,45 @@
+{
+  "format": "n11-s9-post-round8-round9-terminal-v1",
+  "board": 11,
+  "perspective": "original-first-player",
+  "emptyBoard": "UNKNOWN",
+  "sourcePlanSha256": "b1cce4963565e850598ed0dce4361077ace6933f74855cfd6b187e9cbb1907db",
+  "selectionSha256": "b1cce4963565e850598ed0dce4361077ace6933f74855cfd6b187e9cbb1907db",
+  "witnessBase64": "FgAB/wUQDA3/BhMJGRwHAAITAQH/Ef8FCBMCAggF/wo=",
+  "witnessSha256": "6935b4aa48021112c1dee808c1aa052607ac535591eae309f9ed445fd7b6357a",
+  "win9": 5,
+  "loss9": 27,
+  "win9Keys": [
+    "00010050000000821080000000000028",
+    "000404000000008210800000000000e0",
+    "00000018000000821080000040000024",
+    "00000040000000821080880000400020",
+    "00000040010000821080000100000028"
+  ],
+  "win10Edges": 128,
+  "firstLossSearchObligations": 417,
+  "uniqueTerminalLeaves": 416,
+  "terminalStatesPerGeometry": 84495,
+  "derivedWin8": 45,
+  "newProofOnlyWin8": 42,
+  "proofOnlyWin8Before": 5407,
+  "proofOnlyWin8After": 5449,
+  "previous": {
+    "total": 548,
+    "secured": 448,
+    "missing": 100,
+    "distinctMissing": 100
+  },
+  "updated": {
+    "total": 548,
+    "secured": 455,
+    "missing": 93,
+    "distinctMissing": 93
+  },
+  "loss9ParentClosure": 270,
+  "loss9ParentSha256": "32aece84d47059593edc52f6e2c9fa061b3d33716b66d7f6ca71ceed32bb6090",
+  "winLossConflicts": 0,
+  "newS7Verdicts": 0,
+  "newS5Verdicts": 0,
+  "twoStoneClosures": 0
+}

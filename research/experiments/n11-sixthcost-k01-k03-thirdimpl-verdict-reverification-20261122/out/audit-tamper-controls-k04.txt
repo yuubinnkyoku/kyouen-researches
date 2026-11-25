@@ -1,0 +1,5 @@
+=== audit negative (tamper) controls: k04 addendum, run on full kit copies ===
+--- tamper 1: k04-cold-a.txt verdict flipped 1->2 ---
+rc=1 (fail-closed), detected: C2_k04_determinism_3runs_identical, C2_k04_win_verdict_level_vs_replica
+--- tamper 2: at15m-run1-k04.out.csv nodes 9433024->9433025 (replica raw edited) ---
+rc=1 (fail-closed), detected: repl_sha_at15m-run1-k04.out.csv, repl_row_at15m-run1-k04.out.csv, repl_k04_win_3runs_unanimous

@@ -1,0 +1,13 @@
+# exact replay: order=0 (0=count-asc 1=count-desc 2=key-asc 3=s5-count-desc 4=s5-target92) share_tt=0
+# exact replay: id,stones,legal,is_or,budget,result,nodes,wall_s,key_lo,key_hi
+# residual_shadow row=0 audit_calls=0 crosscheck_calls=0 exact_calls=0 residual_memo_states=0 module_removed=0 component_splits=0 shared_hits=0 shared_stores=0 canonicalized=0 shared_size=0 exact_layer_hits=0 exact_layer_stores=2 exact_layer_size=2
+replay,0,6,65,1,50000,0,50000,0,1189091039115214848,536936448
+# residual_shadow row=1 audit_calls=0 crosscheck_calls=0 exact_calls=0 residual_memo_states=0 module_removed=0 component_splits=0 shared_hits=0 shared_stores=0 canonicalized=0 shared_size=0 exact_layer_hits=0 exact_layer_stores=1 exact_layer_size=3
+replay,1,6,65,1,50000,0,50000,0,1333065489702715392,536936448
+# residual_shadow row=2 audit_calls=0 crosscheck_calls=0 exact_calls=0 residual_memo_states=0 module_removed=0 component_splits=0 shared_hits=0 shared_stores=0 canonicalized=0 shared_size=0 exact_layer_hits=0 exact_layer_stores=1 exact_layer_size=4
+replay,2,6,66,1,50000,0,50000,0,1197957500881600512,536936448
+# residual_shadow row=3 audit_calls=0 crosscheck_calls=0 exact_calls=0 residual_memo_states=0 module_removed=0 component_splits=0 shared_hits=0 shared_stores=0 canonicalized=0 shared_size=0 exact_layer_hits=0 exact_layer_stores=2 exact_layer_size=6
+replay,3,6,67,1,50000,0,50000,0,1188950301626859552,536936448
+# residual_shadow row=4 audit_calls=0 crosscheck_calls=0 exact_calls=0 residual_memo_states=0 module_removed=0 component_splits=0 shared_hits=0 shared_stores=0 canonicalized=0 shared_size=0 exact_layer_hits=1 exact_layer_stores=1 exact_layer_size=7
+replay,4,6,67,1,50000,0,50000,0,1188950301761077248,536936448
+# replay_done rows=5 wall_s=1

@@ -1,0 +1,116 @@
+{
+  "schema": "n11-sixthcost-valgate-v1",
+  "validation_rows": 4,
+  "all_pass": true,
+  "rows": [
+    {
+      "row": "at2m-s5-1152921504606851072-536870946",
+      "published": {
+        "id": 0,
+        "stones": 5,
+        "legal": 98,
+        "is_or": 0,
+        "budget": 2000000,
+        "result": 0,
+        "nodes": 2000000,
+        "key_lo": 1152921504606851072,
+        "key_hi": 536870946
+      },
+      "replica_this_host": {
+        "id": 0,
+        "stones": 5,
+        "legal": 98,
+        "is_or": 0,
+        "budget": 2000000,
+        "result": 0,
+        "nodes": 2000000,
+        "key_lo": 1152921504606851072,
+        "key_hi": 536870946
+      },
+      "wall_s_this_host": 9.0,
+      "all_fields_equal_except_wall_s": true
+    },
+    {
+      "row": "at2m-s5-1188950301626860544-536870912",
+      "published": {
+        "id": 0,
+        "stones": 5,
+        "legal": 99,
+        "is_or": 0,
+        "budget": 2000000,
+        "result": 0,
+        "nodes": 2000000,
+        "key_lo": 1188950301626860544,
+        "key_hi": 536870912
+      },
+      "replica_this_host": {
+        "id": 0,
+        "stones": 5,
+        "legal": 99,
+        "is_or": 0,
+        "budget": 2000000,
+        "result": 0,
+        "nodes": 2000000,
+        "key_lo": 1188950301626860544,
+        "key_hi": 536870912
+      },
+      "wall_s_this_host": 9.0,
+      "all_fields_equal_except_wall_s": true
+    },
+    {
+      "row": "first-15m-s5-1152921504606851072-536870946",
+      "published": {
+        "id": 0,
+        "stones": 5,
+        "legal": 98,
+        "is_or": 0,
+        "budget": 15000000,
+        "result": 2,
+        "nodes": 3651923,
+        "key_lo": 1152921504606851072,
+        "key_hi": 536870946
+      },
+      "replica_this_host": {
+        "id": 0,
+        "stones": 5,
+        "legal": 98,
+        "is_or": 0,
+        "budget": 15000000,
+        "result": 2,
+        "nodes": 3651923,
+        "key_lo": 1152921504606851072,
+        "key_hi": 536870946
+      },
+      "wall_s_this_host": 17.0,
+      "all_fields_equal_except_wall_s": true
+    },
+    {
+      "row": "second-15m-s5-1188950301626860544-536870912",
+      "published": {
+        "id": 0,
+        "stones": 5,
+        "legal": 99,
+        "is_or": 0,
+        "budget": 15000000,
+        "result": 2,
+        "nodes": 5040200,
+        "key_lo": 1188950301626860544,
+        "key_hi": 536870912
+      },
+      "replica_this_host": {
+        "id": 0,
+        "stones": 5,
+        "legal": 99,
+        "is_or": 0,
+        "budget": 15000000,
+        "result": 2,
+        "nodes": 5040200,
+        "key_lo": 1188950301626860544,
+        "key_hi": 536870912
+      },
+      "wall_s_this_host": 24.0,
+      "all_fields_equal_except_wall_s": true
+    }
+  ],
+  "status_guard": "Validation only; no verdict. 11x11 empty board, root {60,27}, third moves 100/108 remain UNKNOWN."
+}

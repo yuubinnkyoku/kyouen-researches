@@ -1,0 +1,334 @@
+{
+  "schema": "n11-sixthcost-win-finding-ifadopted-k04-v1",
+  "finding": {
+    "kind": "fresh replica WIN on an exclusive child of the sixth-cost candidate class (second resumption batch k04)",
+    "win_child_key": "10376293541461626888:65536",
+    "win_child_class": "10376293541461626880:65536",
+    "win_runs": [
+      {
+        "budget": 2000000,
+        "result": 0,
+        "nodes": 2000000
+      },
+      {
+        "budget": 15000000,
+        "result": 1,
+        "nodes": 9433024
+      },
+      {
+        "budget": 15000000,
+        "result": 1,
+        "nodes": 9433024
+      },
+      {
+        "budget": 15000000,
+        "result": 1,
+        "nodes": 9433024
+      }
+    ],
+    "extra_recheck_run": "at15m-run3-verify-k04.out.csv (voluntary third cold replay, identical result and nodes)",
+    "ladder": "2M unknown -> 15M WIN on all runs; determinism pair + voluntary third cold run identical (result 1, nodes 9,433,024)",
+    "batch_state": "halted after k04 per the pre-registered WIN stopping rule (second resumption session); k05..k43 not started this session; parent batch rows k01/k02 and first-resumption row k03 still unconsumed",
+    "verdict_consumed": false,
+    "adoption_requirement": "second-implementation (C++) verification of the published replica raw rows, per the exclusive-probe WIN-row precedent; no C++ toolchain in this sandbox (re-verified); any later C++ disagreement fails closed in favor of discarding the row. C++ targets (pinned cpp/solvers/kyouen_dfpn_root.cpp sha256 9193f5b6...): k04 target,0,5,10376293541461626888,65536,83,0,0,0,0,0 @15,000,000 (expected result 1, nodes 9,433,024); plus the k01/k02/k03 rows as published (k01 expected 2 / 10,369,650; k02 expected 1 / 7,717,432; k03 expected 1 / 9,255,414)."
+  },
+  "cross_implementation_evidence": {
+    "implementation": "third_impl.js (third implementation, sha256 08ea958f... per the k01/k03 addendum convention)",
+    "published_at": "research/experiments/n11-sixthcost-k01-k03-thirdimpl-verdict-reverification-20261122/ (k04 addendum, commit bcc39add)",
+    "runs": "WIN(1) two full cold runs plus one verify-legal run: result 1, expansions 11,020,407, ttHits 6,092,599 identical across all three (31.05 / 30.82 / 54.92 s wall)",
+    "audit": "audit_k04.py 31/31 fail-closed gates PASS, 2-run output byte-identical, tamper controls fail closed (k04-cold-a verdict 1->2 detected; replica run1 nodes +1 detected)",
+    "standing": "additional evidence only; adoption still requires the delegated pinned C++ row for k04 (expected result 1, nodes 9,433,024 @15M); any C++ disagreement fails closed in favor of discarding the row"
+  },
+  "unconsumed_batch_rows": [
+    {
+      "key": "1297036692683751424:1114112",
+      "verdict": 2,
+      "nodes": 10369650,
+      "source": "parent batch k01"
+    },
+    {
+      "key": "1297036692683751424:68157440",
+      "verdict": 1,
+      "nodes": 7717432,
+      "source": "parent batch k02"
+    },
+    {
+      "key": "10376293541461626880:65792",
+      "verdict": 1,
+      "nodes": 9255414,
+      "source": "first resumption batch k03"
+    },
+    {
+      "key": "10376293541461626888:65536",
+      "verdict": 1,
+      "nodes": 9433024,
+      "source": "second resumption batch k04"
+    }
+  ],
+  "base_pins": {
+    "geometry_sha256": "146be80b5794462c2444e983fc4c4a6e76d3b464bfd5e86fac14509024100b54",
+    "probe13_base_sha256": "60e0dc3476920d4e99043dd4f132398ea72e4dfdcd9f3dbb8fc686ba65bc28c6",
+    "chain_increment_base_sha256": "bb4495e0586404876db05856c5b8573c62361dadd826b6f68f6f8cae611190b0",
+    "class_closure_priority_sha256": "139eb0a0e3453309adcd617e9ca68ddd0615244c5e59f814d8c08bed5d69de87",
+    "base_rows": 5793
+  },
+  "base_snapshot": {
+    "class_census": {
+      "UNKNOWN": 3081,
+      "WIN": 272,
+      "LOSS": 31
+    },
+    "candidate_classes": 115,
+    "live_unknown": 62,
+    "secured_third_moves": 117,
+    "remaining_third_moves": [
+      100,
+      108
+    ],
+    "sixth_class_unknown_children": 101
+  },
+  "if_adopted_k04_only": {
+    "status_changes": [
+      {
+        "class": "10376293541461626880:65536",
+        "coverage": [
+          80,
+          84,
+          100,
+          108
+        ],
+        "before": "UNKNOWN",
+        "after": "WIN",
+        "mechanism": "fresh replica verdict 1 on child 10376293541461626888:65536 (result 1, nodes 9433024, identical cold replays at budget 15,000,000)",
+        "verdict_consumed": false
+      }
+    ],
+    "sixth_class_children_unknown_after": 100,
+    "live_unknown_after": 61,
+    "secured_third_moves_after": 117,
+    "remaining_third_moves_after": [
+      100,
+      108
+    ],
+    "candidate_pool_delta": "-1 (the sixth-cost class is WIN-eliminated as a route; k04's other two member classes 1297036692683751552:0 {77, 87, 100, 108} and 10376293541461622792:65536 {77, 80, 84, 87} are already base-stage WIN, no flip; not a coverage event)"
+  },
+  "if_adopted_all_four_unconsumed_batch_rows": {
+    "status_changes": [
+      {
+        "class": "1297037792211107840:0",
+        "coverage": [
+          24,
+          30,
+          80,
+          84
+        ],
+        "before": "UNKNOWN",
+        "after": "WIN",
+        "mechanism": "fresh replica verdict 1 on child 1297036692683751424:68157440 (result 1, nodes 7717432, identical cold replays at budget 15,000,000)",
+        "verdict_consumed": false
+      },
+      {
+        "class": "1297319267171041280:0",
+        "coverage": [
+          48,
+          50,
+          80,
+          84
+        ],
+        "before": "UNKNOWN",
+        "after": "WIN",
+        "mechanism": "fresh replica verdict 1 on child 10376293541461626880:65792 (result 1, nodes 9255414, identical cold replays at budget 15,000,000)",
+        "verdict_consumed": false
+      },
+      {
+        "class": "10376293541461626880:65536",
+        "coverage": [
+          80,
+          84,
+          100,
+          108
+        ],
+        "before": "UNKNOWN",
+        "after": "WIN",
+        "mechanism": "fresh replica verdict 1 on child 10376293541461626888:65536 (result 1, nodes 9433024, identical cold replays at budget 15,000,000) (with the sibling fresh WINs k02, k03 also in the scenario)",
+        "verdict_consumed": false
+      }
+    ],
+    "sixth_class_children_unknown_after": 97,
+    "live_unknown_after": 61,
+    "secured_third_moves_after": 117,
+    "remaining_third_moves_after": [
+      100,
+      108
+    ],
+    "note": "the sixth-cost class would be WIN with THREE fresh WIN children (k02, k03, k04); both scenarios leave secured third-move coverage unchanged at 117/119 with {100, 108} remaining; neither is a coverage event or a route to the root certificate"
+  },
+  "k04_full_class_membership": [
+    {
+      "class": "1297036692683751552:0",
+      "note": "NON-candidate class, coverage {77, 87, 100, 108}, base stage WIN already (95 unknown children) - no flip"
+    },
+    {
+      "class": "10376293541461622792:65536",
+      "note": "NON-candidate class, coverage {77, 80, 84, 87}, base stage WIN already (95 unknown children) - no flip"
+    },
+    {
+      "class": "10376293541461626880:65536",
+      "note": "the exclusive live-parent candidate class, flips UNKNOWN->WIN"
+    }
+  ],
+  "class_bin_prior_all_loss_index_published": 0.34616,
+  "gates_passed": [
+    "pin_geometry.json.gz",
+    "pin_merged-exact-s5-after-js-probe-13.cache",
+    "pin_merged-exact-s5-after-class-excl-1.cache",
+    "pin_class-closure-priority.csv",
+    "selector_class",
+    "order_k01",
+    "order_k02",
+    "order_k03",
+    "order_k04",
+    "order_43",
+    "proxy_band1_55_10",
+    "proxy_band1_55_83",
+    "proxy_band1_26_21",
+    "proxy_band1_34_32",
+    "stones5_k01_2m",
+    "legal_k01_2m",
+    "isor0_k01_2m",
+    "key_k01_2m",
+    "stones5_k01_a",
+    "legal_k01_a",
+    "isor0_k01_a",
+    "key_k01_a",
+    "stones5_k01_b",
+    "legal_k01_b",
+    "isor0_k01_b",
+    "key_k01_b",
+    "stones5_k02_2m",
+    "legal_k02_2m",
+    "isor0_k02_2m",
+    "key_k02_2m",
+    "stones5_k02_a",
+    "legal_k02_a",
+    "isor0_k02_a",
+    "key_k02_a",
+    "stones5_k02_b",
+    "legal_k02_b",
+    "isor0_k02_b",
+    "key_k02_b",
+    "stones5_k02_c",
+    "legal_k02_c",
+    "isor0_k02_c",
+    "key_k02_c",
+    "stones5_k03_2m",
+    "legal_k03_2m",
+    "isor0_k03_2m",
+    "key_k03_2m",
+    "stones5_k03_a",
+    "legal_k03_a",
+    "isor0_k03_a",
+    "key_k03_a",
+    "stones5_k03_b",
+    "legal_k03_b",
+    "isor0_k03_b",
+    "key_k03_b",
+    "stones5_k03_c",
+    "legal_k03_c",
+    "isor0_k03_c",
+    "key_k03_c",
+    "stones5_k04_2m",
+    "legal_k04_2m",
+    "isor0_k04_2m",
+    "key_k04_2m",
+    "stones5_k04_a",
+    "legal_k04_a",
+    "isor0_k04_a",
+    "key_k04_a",
+    "stones5_k04_b",
+    "legal_k04_b",
+    "isor0_k04_b",
+    "key_k04_b",
+    "stones5_k04_c",
+    "legal_k04_c",
+    "isor0_k04_c",
+    "key_k04_c",
+    "k01_2m_unknown",
+    "k02_2m_unknown",
+    "k03_2m_unknown",
+    "k04_2m_unknown",
+    "k01_15m_pair",
+    "k02_15m_pair",
+    "k02_extra_recheck",
+    "k03_15m_pair",
+    "k03_extra_recheck",
+    "k04_15m_pair",
+    "k04_extra_recheck",
+    "k01_nodes_within_budget",
+    "k02_nodes_within_budget",
+    "k03_nodes_within_budget",
+    "k04_nodes_within_budget",
+    "k01_stones",
+    "k01_d4",
+    "k01_legal",
+    "k02_stones",
+    "k02_d4",
+    "k02_legal",
+    "k03_stones",
+    "k03_d4",
+    "k03_legal",
+    "k04_stones",
+    "k04_d4",
+    "k04_legal",
+    "geometry_size",
+    "base_rows",
+    "base_live_62",
+    "base_secured_117",
+    "base_none_loss_candidate",
+    "base_census_counts",
+    "no_base_conflict_10",
+    "no_base_conflict_83",
+    "no_base_conflict_21",
+    "no_base_conflict_32",
+    "member_class_win_already",
+    "sixth_base_unknown",
+    "sixth_unknown_101",
+    "sixth_member_k01",
+    "sixth_member_k02",
+    "sixth_member_k03",
+    "sixth_member_k04",
+    "membA_base_win",
+    "membA_unknown_95",
+    "membB_base_win",
+    "membB_unknown_95",
+    "win1_exclusive_live_parent",
+    "win2_exclusive_live_parent",
+    "win3_exclusive_live_parent",
+    "A_changes_one",
+    "A_all_to_win",
+    "A_flip_set",
+    "A_sixth_win",
+    "A_sixth_unknown_100",
+    "A_secured_unchanged",
+    "A_remaining_unchanged",
+    "A_live_61",
+    "A_counts",
+    "B_changes_three",
+    "B_all_to_win",
+    "B_flip_set",
+    "B_sixth_win",
+    "B_sixth_unknown_97",
+    "B_secured_unchanged",
+    "B_remaining_unchanged",
+    "B_live_61",
+    "B_counts",
+    "k04_membership_three",
+    "k03_membership_three",
+    "k01_membership_three",
+    "k02_membership_three",
+    "published_rows_62",
+    "pub_row_children_108",
+    "pub_row_unknown_101"
+  ],
+  "status_guard": "If-adopted machine scenarios only; NOT adopted; no verdict consumed. The standard 11x11 empty board, the two-stone root {60,27}, and its remaining third moves 100/108 remain UNKNOWN. Nodes, budgets, expansions and solved counts are never verdicts."
+}
