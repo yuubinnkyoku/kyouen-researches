@@ -18,7 +18,7 @@ artifacts:
 - path: research/experiments/s-parameter-kyouen-20261125/output/stats_pg2q4_s4.txt
   role: data
   note: PG(2,4) s=4 の SIZE/GRUNDY/GSIZE 行
-- path: research/experiments/s-parameter-kyouen-20261125/output/board_pg2q4.txt
+- path: research/experiments/projective-blocking-kyouen-20261125/output/board_pg2q4.txt
   role: data
   note: PG(2,4) 盤（21 点・21 直線）
 scope: PG(2,4)（21 点、21 直線）の s=4 共演ゲーム（各直線と高々 4 点で交わる安全集合）の全 1,234,016 局面の Grundy 値のサイズ別分解。
