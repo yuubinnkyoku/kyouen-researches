@@ -1,0 +1,17 @@
+# n11 central-reply closure 3-LOSS (batch-3) canonical-adoption increment
+#   (Part EB, 2026-11-25) - single pool, loss-only, fresh increment:
+#   batch-3 (class 20421 packet, 2026-11-22, probed 4 keys) d001/d003/d004
+#     LOSS; d002 WIN unconsumed (scrutiny-owner C++ gate 9193f5b6...).
+# 2-pass fresh-cold node-exact exact-S5 verdicts at decisive budget 15M;
+#   packet raws published (8 files) with '# replay_done' on both passes;
+#   batch-36 kit pins (batch3_batch_keys ad05073a... / batch3_status
+#   7877f4a0...) cross-verified against the published packet bytes;
+#   adopted per-pass node total 14962526 (whole probed packet 20322520).
+# Loss-only adoption asserts no root verdict, frees no class,
+#   excludes no class; scheduling effects are derived only by the
+#   reaudit refresh (Board fail-closed child verification) and the
+#   delta extractor.  11x11 stays UNKNOWN; nodes are bookkeeping,
+#   never verdicts.
+s5verdict,1155173304554754048,131072,5,2,879510
+s5verdict,1155173579298443264,131072,5,2,2113678
+s5verdict,5766859322847924224,131072,5,2,11969338
