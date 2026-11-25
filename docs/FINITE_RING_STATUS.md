@@ -190,6 +190,8 @@ K(13)≥10（K1058 訂正）、s(13)=7 はランダム測定値。
   **すべて Grundy 1**（K1305。S4 軌道からの推論は誤りで訂正済み）。
   円錐曲線レイヤー（k=3..9）の orbit × Grundy は K1321:
   k=5 の 180/72 軌道が K1305 の 2 軌道を独立に確認。
+  `PG(2,8)` の円錐曲線レイヤーは各 k で単一 PGL(2,8) 軌道・極大拡大偶数で
+  **Grundy = k mod 2**（K1323）。
 - 実験: [s-parameter-kyouen-20261125](../research/experiments/s-parameter-kyouen-20261125/report.md)・[parity-characterization-20261125](../research/experiments/parity-characterization-20261125/report.md)
 
 ## 0c. 高速な反転平面構成（新）

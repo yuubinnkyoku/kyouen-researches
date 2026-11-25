@@ -1,0 +1,149 @@
+{
+ "conic": [
+  2,
+  3,
+  10,
+  16,
+  18,
+  21,
+  29,
+  47,
+  48
+ ],
+ "conics": 32704,
+ "pgl2_8_order": 504,
+ "k": {
+  "3": {
+   "caps": 2747136,
+   "orbits": [
+    {
+     "count_per_conic": 84,
+     "orbit_size": 2747136,
+     "representative": [
+      3,
+      10,
+      21
+     ],
+     "grundy": 1,
+     "maximal_sizes": [
+      6,
+      10
+     ],
+     "upset": 8450
+    }
+   ]
+  },
+  "4": {
+   "caps": 4120704,
+   "orbits": [
+    {
+     "count_per_conic": 126,
+     "orbit_size": 4120704,
+     "representative": [
+      3,
+      10,
+      21,
+      29
+     ],
+     "grundy": 0,
+     "maximal_sizes": [
+      6,
+      10
+     ],
+     "upset": 646
+    }
+   ]
+  },
+  "5": {
+   "caps": 4120704,
+   "orbits": [
+    {
+     "count_per_conic": 126,
+     "orbit_size": 4120704,
+     "representative": [
+      3,
+      10,
+      21,
+      29,
+      16
+     ],
+     "grundy": 1,
+     "maximal_sizes": [
+      6,
+      10
+     ],
+     "upset": 66
+    }
+   ]
+  },
+  "6": {
+   "caps": 2747136,
+   "orbits": [
+    {
+     "count_per_conic": 84,
+     "orbit_size": 2747136,
+     "representative": [
+      3,
+      10,
+      21,
+      29,
+      16,
+      47
+     ],
+     "grundy": 0,
+     "maximal_sizes": [
+      10
+     ],
+     "upset": 16
+    }
+   ]
+  },
+  "7": {
+   "caps": 1177344,
+   "orbits": [
+    {
+     "count_per_conic": 36,
+     "orbit_size": 1177344,
+     "representative": [
+      3,
+      10,
+      21,
+      29,
+      16,
+      47,
+      48
+     ],
+     "grundy": 1,
+     "maximal_sizes": [
+      10
+     ],
+     "upset": 8
+    }
+   ]
+  },
+  "8": {
+   "caps": 294336,
+   "orbits": [
+    {
+     "count_per_conic": 9,
+     "orbit_size": 294336,
+     "representative": [
+      3,
+      10,
+      21,
+      29,
+      16,
+      47,
+      48,
+      2
+     ],
+     "grundy": 0,
+     "maximal_sizes": [
+      10
+     ],
+     "upset": 4
+    }
+   ]
+  }
+ }
+}
