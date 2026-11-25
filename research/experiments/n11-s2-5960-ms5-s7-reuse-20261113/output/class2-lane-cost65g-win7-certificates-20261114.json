@@ -1,0 +1,98 @@
+{
+ "session": "class2-lane cost-65g WIN7 certificates (long-term lane session 12, 2026-11-14)",
+ "child_hex": "00000000000000803202000000000004",
+ "certificates": [
+  {
+   "bit": 94,
+   "root_hex": "00000000400000803202000000000004",
+   "verdict": "WIN7",
+   "rows": 30777,
+   "extraction_nodes": 3768221,
+   "extraction": "blind extractBatch (empty kill table, FBS=1<<20): fbt_drops=0, all 48 per-move extractions ok and uncapped",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 48,
+    "independent_enumeration_legal": 48,
+    "match": true
+   },
+   "sub_roots_verified": 48,
+   "sub_roots_pass": 48,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "md5": "089406dd9f5828288f132233775c4f70",
+   "sha256": "3e39ac378b3562f2c67bc6d8134d31223ca80eab2a3f116d88e9962de8cadd8f",
+   "file": "class2-lane-cost65g-certificates/bit94-root-00000000400000803202000000000004.cert",
+   "root_not_among_existing": true,
+   "root_absence_check": "GitHub code search over yuubinnkyoku/kyouen-researches for the root hex: 0 hits",
+   "v16_search_nodes": 1178264,
+   "v15_crosscheck_verdict": "loss=true at 2,570,221 nodes (v15 anchor)"
+  },
+  {
+   "bit": 1,
+   "root_hex": "00000000000000803202000000000006",
+   "verdict": "WIN7",
+   "rows": 29005,
+   "extraction_nodes": 4475807,
+   "extraction": "blind extractBatch (empty kill table, FBS=1<<20): fbt_drops=0, all 45 per-move extractions ok and uncapped",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 45,
+    "independent_enumeration_legal": 45,
+    "match": true
+   },
+   "sub_roots_verified": 45,
+   "sub_roots_pass": 45,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "md5": "ad9894f2aaa720cc9990427bad121118",
+   "sha256": "3025ea545b02de35d6ad6e59ff78a84a8898295fa3ca0e3090587ace5cc31450",
+   "file": "class2-lane-cost65g-certificates/bit1-root-00000000000000803202000000000006.cert",
+   "root_not_among_existing": false,
+   "root_absence_check": "GitHub code search over yuubinnkyoku/kyouen-researches for the root hex: 2 hits, both win7_roots array listings in the cost-61d sweep/inflight records (cross-child root duplicate of the cost-61e bit-1 pattern; cost-61d proved the same 7-stone root WIN7-D10 from a different parent edge); NO prior certificate existed — this is the first published certificate for the root",
+   "v16_search_nodes": 1301977,
+   "v15_crosscheck_verdict": null
+  },
+  {
+   "bit": 86,
+   "root_hex": "00000000004000803202000000000004",
+   "verdict": "WIN7",
+   "rows": 39834,
+   "extraction_nodes": 7681155,
+   "extraction": "blind extractBatch (empty kill table, FBS=1<<20): fbt_drops=0, all 57 per-move extractions ok and uncapped",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 57,
+    "independent_enumeration_legal": 57,
+    "match": true
+   },
+   "sub_roots_verified": 57,
+   "sub_roots_pass": 57,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "md5": "74fda987f433870ab19524a4baaf22a0",
+   "sha256": "e887741c8ce9c29d16b5bd4e766f7e258eafaa02579e37c89a72f7e0ac21eb0f",
+   "file": "class2-lane-cost65g-certificates/bit86-root-00000000004000803202000000000004.cert",
+   "root_not_among_existing": true,
+   "root_absence_check": "GitHub code search over yuubinnkyoku/kyouen-researches for the root hex: 0 hits",
+   "v16_search_nodes": 1728521,
+   "v15_crosscheck_verdict": null
+  }
+ ],
+ "verification": "independent engine-free verification with verify_bit7_win7_cert.ts (exact integer Bareiss 4x4): root-check stones=7 and loserMobility equal the independent legal_candidates.py enumeration on every root; every sub-root PASS; the union of consumed winner states over all sub-roots equals the certificate row set exactly (0 missing / 0 extra, both directions) on all three certificates",
+ "unknown_status": "11x11 empty board: UNKNOWN. Each WIN7 certificate proves only that its individual 7-stone root is a winner-side win within depth 10."
+}

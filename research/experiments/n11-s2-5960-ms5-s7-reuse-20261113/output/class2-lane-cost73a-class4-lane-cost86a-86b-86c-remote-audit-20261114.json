@@ -1,0 +1,179 @@
+{
+ "schema": "n11-class2-cost73a-class4-cost86a-86b-86c-remote-accounting-audit-20261114-v1",
+ "date": "2026-11-14",
+ "session": "long-term lane session 11 (2026-11-14)",
+ "audited_at_commit": "203e96fc8795e232a8998512943d870a41654bfc",
+ "files_unchanged_since_audit_commit": "last-touch commits of the audited sweep records and crosscheck (ff417b0f/c6d4aa78 for 73a and its crosscheck, c2f5391b for 86a, 2ac3a5a7 for 86b, 9c62da86 for 86c) all precede 203e96fc; path-filtered commit listing confirms no later commit touches any audited file",
+ "method": "same protocol as the cost-73e/cost-74 remote accounting audit: every raw batch JSONL, determinism rerun, inflight record and sweep record re-fetched from main and strictly JSON-parsed line by line (0 parse failures over all 64 files); candidate bit sets compared bit-exact against the inflight/record candidate lists; per-candidate nodes/verdict/capped/terminal-range compared exactly; node totals recomputed from raw lines only",
+ "sweeps": [
+  {
+   "sweep": "class2-lane cost-73a (S5 00000000000000809082000000000000, S6 child 00000000000000809082000000000010, demand c1=2,c2=2,c4=0)",
+   "record": "class2-lane-cost73a-sweep-20261114.json",
+   "record_shape": "no candidates array; candidate bits from class2-lane-cost73a-inflight-20261114.json candidate_bits",
+   "raw_batch_files": 11,
+   "raw_rows": 73,
+   "candidates": 73,
+   "candidate_set_equal": true,
+   "pilot_d6_controls": "11 control lines in the 11 batch files, all loss=false at exactly 5,949 nodes; the record wording says all 12 batch invocations while the pushed batch2 file carries a single control line (same wording-vs-file class as the cost-74 audit; substance unaffected)",
+   "total_nodes_recomputed": 383290602,
+   "record_total_nodes": 383290602,
+   "total_match": true,
+   "win7_d10_bits": [
+    81
+   ],
+   "record_win7_bits": [
+    81
+   ],
+   "win7_match": true,
+   "refuted_d10": 72,
+   "capped": 0,
+   "terminal_range_all": [
+    13,
+    17
+   ],
+   "andclose_all": true,
+   "determinism_rerun": {
+    "bits": [
+     92,
+     23,
+     48,
+     81
+    ],
+    "node_and_verdict_exact": true
+   },
+   "runner_fbs20_crosscheck": {
+    "source": "class2-lane-cost73a-runner-fbs20-crosscheck-20261114.jsonl (parallel lane)",
+    "bits": [
+     92,
+     23,
+     48,
+     81
+    ],
+    "fbtDrops_all": 0,
+    "node_and_verdict_exact_vs_raw": true,
+    "fbtMaxProbe_max": 6
+   },
+   "session9_cross_restart_control": {
+    "bits_done_64_sum": 324426606,
+    "expected": 324426606,
+    "match": true,
+    "remaining_9_sum": 58863996,
+    "expected2": 58863996,
+    "match2": true
+   },
+   "heaviest_bits_match": true,
+   "result": "PASS"
+  },
+  {
+   "sweep": "class4-lane cost-86a (S6 child 00000000020000003800000080000100, demand c1=0,c2=0,c4=3)",
+   "raw_batch_files": 11,
+   "raw_rows": 86,
+   "record_candidates": 86,
+   "candidate_set_equal": true,
+   "pilot_d6_controls": "11/11 all loss=false at exactly 5,949 nodes",
+   "node_exact_vs_record": true,
+   "verdict_exact_vs_record": true,
+   "capped_exact": true,
+   "terminal_exact": true,
+   "total_nodes_recomputed": 373903515,
+   "record_total_nodes": 373903515,
+   "total_match": true,
+   "win7_d10_bits": [],
+   "capped_bits": [],
+   "determinism_rerun": {
+    "bits": [
+     118,
+     105,
+     34
+    ],
+    "nodes": [
+     12844258,
+     12425752,
+     11540727
+    ],
+    "node_and_verdict_exact": true
+   },
+   "inflight_bits_equal": true,
+   "sterile": "19th observed sterile class4 child",
+   "result": "PASS"
+  },
+  {
+   "sweep": "class4-lane cost-86b (S6 child 00000000020000003800000080004000, demand c1=0,c2=0,c4=3)",
+   "raw_batch_files": 14,
+   "raw_rows": 86,
+   "record_candidates": 86,
+   "candidate_set_equal": true,
+   "pilot_d6_controls": "14/14 all loss=false at exactly 5,949 nodes",
+   "node_exact_vs_record": true,
+   "verdict_exact_vs_record": true,
+   "capped_exact": true,
+   "terminal_exact": true,
+   "total_nodes_recomputed": 344931733,
+   "record_total_nodes": 344931733,
+   "total_match": true,
+   "win7_d10_bits": [],
+   "capped_bits": [],
+   "determinism_rerun": {
+    "bits": [
+     8,
+     86,
+     67
+    ],
+    "nodes": [
+     37033540,
+     13124059,
+     10626392
+    ],
+    "node_and_verdict_exact": true
+   },
+   "inflight_bits_equal": true,
+   "sterile": "20th observed sterile class4 child",
+   "result": "PASS"
+  },
+  {
+   "sweep": "class4-lane cost-86c (S6 child 00000000020000003800000280000000, demand c1=0,c2=0,c4=3)",
+   "raw_batch_files": 15,
+   "raw_rows": 86,
+   "record_candidates": 86,
+   "candidate_set_equal": true,
+   "pilot_d6_controls": "15/15 all loss=false at exactly 5,949 nodes",
+   "node_exact_vs_record": true,
+   "verdict_exact_vs_record": true,
+   "capped_exact": true,
+   "terminal_exact": true,
+   "total_nodes_recomputed": 301085672,
+   "record_total_nodes": 301085672,
+   "total_match": true,
+   "win7_d10_bits": [],
+   "capped_bits": [],
+   "determinism_rerun": {
+    "bits": [
+     112,
+     82,
+     113
+    ],
+    "nodes": [
+     17148495,
+     13985873,
+     11132780
+    ],
+    "node_and_verdict_exact": true
+   },
+   "inflight_bits_equal": true,
+   "sterile": "21st observed sterile class4 child",
+   "result": "PASS"
+  }
+ ],
+ "combined": {
+  "candidates": 331,
+  "total_nodes": 1403211522,
+  "win7_d10": 1,
+  "refuted_d10": 330,
+  "capped": 0,
+  "parse_failures": 0,
+  "result": "PASS"
+ },
+ "fbt_link": "the 73a FBS=1<<20 crosscheck also closes the fbt-saturation-audit follow-up-2 pending items: bits 92/23 are saturated-but-confirmed-surviving; fbt audit README/log/K0783/runs-manifest-followup2 updated pending->confirmed in the same commit",
+ "interpretation_guard": "WIN7-D10 proves only a winner win within depth 10 from the individual 7-stone root; REFUTED-D10 is only the absence of such a win in that subtree; sterile children are not child refutations. This audit recomputes accounting and changes no verdict, frontier number, or certificate.",
+ "unknown_status": "11x11 empty board, two-stone root {49,60}, S2 {59,60}, class 2, class 4: UNKNOWN"
+}

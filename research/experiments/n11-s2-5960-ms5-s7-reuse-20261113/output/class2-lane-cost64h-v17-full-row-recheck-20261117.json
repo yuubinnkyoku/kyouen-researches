@@ -1,0 +1,70 @@
+{
+  "schema": "n11-class2-lane-cost64h-v17-full-row-recheck-20261117-v1",
+  "date": "2026-11-17",
+  "status": "64h full 64-bit row byte-identical under v17; the cost64h sweep was entirely fb-unsaturated; the in-flight cost64h fold basis is unaffected",
+  "role": "Post-defect assurance re-check of the in-flight cost64h fold basis: all 64 candidates (23 certificate-proven WIN7-D10 + 41 REFUTED-D10) re-run with the fbt-repaired v17 engine after the cost76c fbt-saturation defect discovery.",
+  "target": {
+    "s5": "00000000000000403800000008000000",
+    "s6_child": "00000000000000403800000008100000",
+    "legal_candidate_count": 64
+  },
+  "published_raw_blob_pins": {
+    "class2-lane-cost64h-raw-batch1-20261116.jsonl": "47da4e04357b7012c55903aea22160f3ca0767c9",
+    "class2-lane-cost64h-raw-batch2-20261116.jsonl": "04e59e2ed62ba2306c80743e9c0517a6d89e70a2",
+    "class2-lane-cost64h-raw-batch3-20261116.jsonl": "78bb44093ef56191110119009ce788d0cd4f383f",
+    "class2-lane-cost64h-raw-batch4-20261116.jsonl": "7d196917961356c69cfa608930c3a1b7716aaf59",
+    "class2-lane-cost64h-raw-batch5-20261116.jsonl": "ba6a36d4cb93111461aeec86b55e2909cbc0a489",
+    "class2-lane-cost64h-raw-batch6-20261116.jsonl": "a49e2b9cd7d239fd95681afa83793deb075b4ccf",
+    "class2-lane-cost64h-raw-batch7-20261116.jsonl": "6771b7a900191fce3d11feccf3da0e2e05f001e9",
+    "class2-lane-cost64h-raw-batch8-20261116.jsonl": "5e778cae345d2a1d0d50455a3633ea673b6c08be"
+  },
+  "v17_runner_blob": "c132cc6425eee3feaeef1d697dd74f968cfedb59",
+  "v17_chunk_blob_pins": {
+    "class2-lane-cost64h-v17-win-chunk1-20261117.jsonl": "dd0979c83cd307ada83b900a2bcf28a54c092c17",
+    "class2-lane-cost64h-v17-win-chunk2-20261117.jsonl": "e928d94245edd58404cca7b7ab263300f820878f",
+    "class2-lane-cost64h-v17-refuted-chunk1-20261117.jsonl": "02dddfa4bd83f3f37fadc4b410590f148ea8146c",
+    "class2-lane-cost64h-v17-refuted-chunk2-20261117.jsonl": "a79def2941789f1e839532a0862b99b091b74175",
+    "class2-lane-cost64h-v17-refuted-chunk3-20261117.jsonl": "855772019bff44a4a760c78de2a87f198e08da61"
+  },
+  "engine_settings": "v17, depth 10, cap 1e9, andclose 1, pilot_d6 controls 5/5 at 3402",
+  "result": {
+    "bits_checked": 64,
+    "verdict_flips": [],
+    "node_count_changes": [],
+    "identical_bits": 64,
+    "win_bits": [
+      4,
+      6,
+      8,
+      33,
+      38,
+      42,
+      44,
+      49,
+      68,
+      74,
+      76,
+      77,
+      78,
+      79,
+      83,
+      89,
+      91,
+      101,
+      109,
+      113,
+      114,
+      116,
+      120
+    ],
+    "refuted_bits": 41,
+    "v17_total_nodes": 47017565,
+    "v16_published_total_nodes": 47017565,
+    "conclusion": "every cost64h bit search was fb-unsaturated (0 effective drops); the published v16 verdicts for the whole row are exactly reproduced by v17, so the in-flight 64h fold (23 WIN receipts, all dual-verified certificates) and the 41 REFUTED bookkeeping are unaffected by the fbt defect"
+  },
+  "caveats": [
+    "REFUTED-D10 is not a LOSS proof",
+    "WIN7-D10 certificates prove the individual 7-stone roots only (first-player win within depth 10)",
+    "11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, class 1/2/4 all remain UNKNOWN"
+  ]
+}

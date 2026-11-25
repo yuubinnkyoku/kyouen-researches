@@ -1,0 +1,85 @@
+{
+  "schema": "n11-class2-lane-cost66i-bit19-bigint-independent-reverification-20261117-v1",
+  "date": "2026-11-17",
+  "source_main_commit": "41544af1b2126fe7098f86fb399e60214040ef09",
+  "basis_head_after_cost76c": "1473/174/6375/504596/4648/368510",
+  "input_pins": {
+    "manifest": {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost66i-win7-certificates-20261116.json",
+      "git_blob_sha": "8a85ecef573bb6234b2ee1d9f7cb747926bd26ca"
+    },
+    "split_readme": {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost66i-certificates/README-split-bit19.md",
+      "git_blob_sha": "aa6edc6acff4234d18ee3ee6838e7852f05e4c3a"
+    },
+    "part1": {
+      "bytes": 739395,
+      "git_blob_sha": "e8f083cd357ce03aaf177f8ee40c868450e11a37"
+    },
+    "part2": {
+      "bytes": 739348,
+      "git_blob_sha": "53efcd57fbda21c8f5976987a23f55dbd4cad993"
+    },
+    "pinned_bigint_verifier": {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/verify_win7_certificate_bigint_independent.mjs",
+      "git_blob_sha": "62b5d9413daafb172f6e10249976ee6808f7b454"
+    },
+    "reproducible_runner": {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/reverify_cost66i_bit19_bigint_20261117.mjs",
+      "git_blob_sha": "ac429f28062ce97388298d8c638f8f8a10f69fc8"
+    }
+  },
+  "certificate": {
+    "bit": 19,
+    "root": "00000000000000801226000000080000",
+    "d4_canon_root": "00000000000000801226000000080000",
+    "verdict": "WIN7-D10",
+    "depth": 10,
+    "rows": 40935,
+    "extraction_nodes": 11200170,
+    "loser_mobility": 52,
+    "fbt_drops": 0,
+    "fatal": null
+  },
+  "publication": {
+    "joined_bytes": 1478743,
+    "joined_sha256": "f87df551ab38f73fb34d756fc4be287de42f1538735e7daf6006deb05749b0ac",
+    "manifest_sha256": "f87df551ab38f73fb34d756fc4be287de42f1538735e7daf6006deb05749b0ac",
+    "sha256_match": true,
+    "part1_ends_on_line_boundary": true,
+    "split_sizes_match_readme": true
+  },
+  "independent_bigint_reverification": {
+    "execution": "Exact-integer BigInt implementation run against the reconstructed published bytes; separate from the existing Bareiss verifier. The committed Node runner pins and invokes the repository's standalone BigInt verifier for reproducibility.",
+    "root_stones": 7,
+    "root_safe": true,
+    "root_mobility": 52,
+    "strategy_rows": 40935,
+    "rows_sorted_unique": true,
+    "subroots_passed": 52,
+    "consumed_winner_rows": 40935,
+    "union_missing": 0,
+    "union_extra": 0,
+    "visited_states_across_subroots": 89700,
+    "winner_states": 58420,
+    "loser_states": 18401,
+    "loser_reply_edges": 84973,
+    "terminal_count": 12879,
+    "terminal_range": [
+      13,
+      17
+    ],
+    "forbidden_triple_cache_entries": 19085,
+    "legal_state_cache_entries": 61777,
+    "status": "PASS"
+  },
+  "cross_agreement_with_existing_bareiss_record": {
+    "root_mobility": "52 == 52",
+    "strategy_rows": "40935 == 40935",
+    "subroots": "52/52 == 52/52",
+    "terminal_range": "[13,17] == [13,17]",
+    "consumed_union": "0 missing / 0 extra == 0 missing / 0 extra",
+    "status": "AGREEMENT"
+  },
+  "interpretation_guard": "This verifies only the individual seven-stone root. It creates no new engine verdict, applies no receipt fold, and closes no S5 parent. Recompute all cost66i receipt marginals against canonical head 1473 before folding. REFUTED-D10 is not a LOSS proof. The standard 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, and classes 1/2/4 remain UNKNOWN."
+}

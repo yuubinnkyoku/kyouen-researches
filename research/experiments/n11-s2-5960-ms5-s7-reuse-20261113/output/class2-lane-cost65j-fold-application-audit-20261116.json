@@ -1,0 +1,108 @@
+{
+ "schema": "n11-class2-lane-cost65j-fold-application-audit-20261116-v1",
+ "date": "2026-11-16",
+ "audited": "class-frontier-cost65j-receipts-recompute-20261116.json (fold v2: head 1410 -> 1419, 17 WIN7-D10 receipts, 9 unique rows closed)",
+ "implementation": "third implementation, remote-only (no local engine state): TypeScript over the published worklist-1410 CSV (6,438 rows) and the s5-closability CSV (174 parents); hex -> BigInt, bit = y*11 + x, D4 canonical form = min over the 8 board symmetries, parent incidence derived independently by removing each row stone and canonicalizing, all arithmetic integer-exact",
+ "demand_definition_identified": {
+  "s6_needed_by_open_classes": "rows with c1 == 0 and c2 + c4 >= 1, where c1/c2/c4 count the open S5 parents whose classes bitmask has bit 1/2/4 set and which own the row",
+  "evidence": "the cost-60c fold script docstring states the three closed rows 'have c1>0, so s6_needed_by_open_classes ... are invariant'; chain demand records carry c1/c2/c4 (e.g. cost-60c child c1=1,c2=1,c4=0); the histogram buckets are keyed (c2,c4) and only c1==0 rows enter them",
+  "consequence": "the numbers measure rows whose remaining sweep demand is exclusively class-2/class-4; the 187 rows (cost 14,110) that also have a class-1 open parent are excluded, which exactly explains the naive any-open-owner count 4,898/387,133 vs published 4,711/373,023"
+ },
+ "checks": {
+  "C1_baseline_reproduced": {
+   "rows": 6438,
+   "parents": 174,
+   "incidences": 12274,
+   "open_parents_mismatches": 0,
+   "cost_sum": 509109,
+   "open_sum": 505675,
+   "open_parents_all": "6438/6438 match independently derived incidence"
+  },
+  "C2_receipt_roots": {
+   "checked": 17,
+   "pass": 17,
+   "conditions": "root == child | 1<<bit; bit in legalMoves(child) via exact det3 circumcircle test; canon(root) == d4_canonical_hex; covers(root) == the 7-row one-stone-removal D4 orbit; all marginal hexes inside that orbit; marginal sum 61 and in-manifest marginal sum 9 equal the published records; zero-mim root list matches"
+  },
+  "C3_closed_rows": {
+   "closed": 9,
+   "all_in_worklist_1410": true,
+   "all_category_win_receipt_scheduled": true,
+   "owners_match_lost_rows_per_parent": "9/9, owners derived from independent incidence",
+   "cost_sum": 635
+  },
+  "C4_parent_arithmetic": {
+   "parents": 9,
+   "pass": 9,
+   "lost_incidences": 18,
+   "after_equals_before_minus_lost": true
+  },
+  "C5_frontier_totals": {
+   "rows_after": 6429,
+   "cost_after": 508474,
+   "equations": "6429 == 6438 - 9; 508474 == 509109 - 635"
+  },
+  "C6_child_already_closed_premise": {
+   "child_in_worklist": false,
+   "cover_roots_checked": 4,
+   "all_orbits_contain_child": true,
+   "bit25_root_byte_identical_with_published": true
+  },
+  "C7_scheduled_orphans": {
+   "scheduled_rows_in_worklist": 9,
+   "closed_by_fold_v2": 9,
+   "orphans": 0
+  },
+  "C8_next_targets_unaffected": {
+   "best_own_closable_class2": "00000000000000403800000008000000 unchanged 24/1704",
+   "best_own_closable_any_class": "00000000000000821082000000000000 unchanged 18/1238"
+  },
+  "C9_demand_histogram": {
+   "pre": {
+    "rows": 4711,
+    "cost": 373023,
+    "hist": {
+     "c2=0,c4=1": 526,
+     "c2=0,c4=2": 3013,
+     "c2=0,c4=3": 12,
+     "c2=1,c4=0": 214,
+     "c2=1,c4=1": 54,
+     "c2=1,c4=2": 9,
+     "c2=2,c4=0": 826,
+     "c2=2,c4=1": 5,
+     "c2=2,c4=2": 52
+    },
+    "hist_sum": 4711
+   },
+   "post": {
+    "rows": 4702,
+    "cost": 372388,
+    "hist": {
+     "c2=0,c4=1": 526,
+     "c2=0,c4=2": 3013,
+     "c2=0,c4=3": 12,
+     "c2=1,c4=0": 214,
+     "c2=1,c4=1": 54,
+     "c2=1,c4=2": 9,
+     "c2=2,c4=0": 817,
+     "c2=2,c4=1": 5,
+     "c2=2,c4=2": 52
+    },
+    "hist_sum": 4702
+   },
+   "published_pre_matches_exactly": true,
+   "published_post_matches_exactly": true,
+   "closed_rows_bucket": "all 9 closed rows have c1=0, c2=2, c4=0; bucket 826 -> 817",
+   "naive_any_open_owner_count_for_contrast": {
+    "rows": 4898,
+    "cost": 387133,
+    "excluded_by_c1_positive": {
+     "rows": 187,
+     "cost": 14110
+    }
+   }
+  }
+ },
+ "verdict": "the fold v2 application passes every third-implementation check; the previously unexplained demand histogram is now exactly reproduced and its definition documented",
+ "interpretation_guard": "receipt bookkeeping only; solved 1419 measures manifest coverage, not the game-theoretic value of any position; WIN7-D10 certificates prove a first-player win within depth 10 from the individual 7-stone roots only; REFUTED-D10 is not a LOSS proof; STERILE rows are open",
+ "unknown_status": "11x11 empty board, two-stone root {49,60}/{59,60}, S2 {59,60}, class 1, class 2 and class 4 all remain UNKNOWN"
+}

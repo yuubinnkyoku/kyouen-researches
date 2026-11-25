@@ -1,0 +1,981 @@
+{
+ "all_pass": true,
+ "checks": [
+  {
+   "detail": "{\"cost65o\":\"18c49eb010e0f464f5b7874c5ffbfb0ae34b67bb\",\"cost65nFold\":\"7390c540836d5e8440833aec9b4ac014fd96dd44\",\"cost66cClaim\":\"5e89637b748cbc70838723edbbfeda907af78da5\",\"cost66cManifest\":\"463ed0f0aafbf6e21eadc1b7edf1e20051ec7efb\",\"cost66cFold\":\"8783993e5c73cc9697c3ca48aef981725f422be8\",\"cost66cPrereg\":\"809ad05e1bc560b1086c3d30cc34ad78727e430a\",\"cost66cProjection\":\"da8cab2f25f0adc4469d09ae1cabf54bf63d9324\",\"cost66cBatch4\":\"5ff20e15a8d892e930bda28b3198765b9e0d6f57\",\"cost66cRawAudit\":\"0854b2e2c6a4bde39405ce0954b966a31ce7f3e7\"}",
+   "name": "source blobs are the pinned main artifacts",
+   "pass": true
+  },
+  {
+   "detail": "status=IN FLIGHT; 65 legal, 59 open, 6 prior transfers",
+   "name": "cost-65o remains an active reservation",
+   "pass": true
+  },
+  {
+   "detail": "n11-class2-lane-cost66c-fold-complete-20261116-v4 / 1450/174/6398/506297/4671/370211",
+   "name": "cost-66c claim is the corrected fold-complete v4",
+   "pass": true
+  },
+  {
+   "detail": "cost65o=65/65; cost66c=66/66",
+   "name": "candidate D4 orbits are unique within both rows",
+   "pass": true
+  },
+  {
+   "detail": "[{\"canon\":\"00000000000000a09002080080000000\",\"cost66c\":{\"bit\":83,\"root_hex\":\"00000000000800003800000008002008\"},\"cost65o\":{\"bit\":43,\"root_hex\":\"00000000000000a09002080080000000\"}}]",
+   "name": "the only cross-row candidate orbit is 66c bit83 == 65o bit43",
+   "pass": true
+  },
+  {
+   "detail": "{\"bit\":83,\"loss\":false,\"nodes\":269856,\"capped\":false,\"terminalStoneRange\":[13,17],\"ms\":1184,\"andclose\":true}",
+   "name": "cost-66c bit83 raw verdict is uncapped REFUTED-D10",
+   "pass": true
+  },
+  {
+   "detail": "bit43 remains in open_candidates_to_sweep; it is absent from the six existing transfers",
+   "name": "cost-65o bit43 is still open and not transferred",
+   "pass": true
+  },
+  {
+   "detail": "open=58; batches=8/8/7/8/8/8/8/3",
+   "name": "transferring bit43 reduces cost-65o to 58 open candidates",
+   "pass": true
+  },
+  {
+   "detail": "[{\"bit\":90,\"root_hex\":\"00000000040000801202010000800000\",\"canon\":\"00000000000100003800000048002000\"},{\"bit\":117,\"root_hex\":\"00200000000000801202010000800000\",\"canon\":\"00000000001020003800000008080000\"}]",
+   "name": "cost-65n two folded receipt roots are D4-distinct",
+   "pass": true
+  },
+  {
+   "detail": "[{\"bit\":90,\"root_hex\":\"00000000040000801202010000800000\",\"canon\":\"00000000000100003800000048002000\"},{\"bit\":117,\"root_hex\":\"00200000000000801202010000800000\",\"canon\":\"00000000001020003800000008080000\"}]",
+   "name": "cost-65n receipts do not overlap cost-65o candidates",
+   "pass": true
+  },
+  {
+   "detail": "bits=73,75,79,87,96,97,112",
+   "name": "cost-66c certificate manifest contains the seven expected WIN7 roots",
+   "pass": true
+  },
+  {
+   "detail": "00000000000002003800000008002008",
+   "name": "bit73 root is child|1<<bit and 7 stones",
+   "pass": true
+  },
+  {
+   "detail": "00000000000000203800000008080080 == 00000000000000203800000008080080",
+   "name": "bit73 D4 canonical matches certificate manifest",
+   "pass": true
+  },
+  {
+   "detail": "00000000000008003800000008002008",
+   "name": "bit75 root is child|1<<bit and 7 stones",
+   "pass": true
+  },
+  {
+   "detail": "00000000000000083800000008080080 == 00000000000000083800000008080080",
+   "name": "bit75 D4 canonical matches certificate manifest",
+   "pass": true
+  },
+  {
+   "detail": "00000000000080003800000008002008",
+   "name": "bit79 root is child|1<<bit and 7 stones",
+   "pass": true
+  },
+  {
+   "detail": "00000000000000801202000220800000 == 00000000000000801202000220800000",
+   "name": "bit79 D4 canonical matches certificate manifest",
+   "pass": true
+  },
+  {
+   "detail": "00000000008000003800000008002008",
+   "name": "bit87 root is child|1<<bit and 7 stones",
+   "pass": true
+  },
+  {
+   "detail": "00000000000020003800000008080080 == 00000000000020003800000008080080",
+   "name": "bit87 D4 canonical matches certificate manifest",
+   "pass": true
+  },
+  {
+   "detail": "00000001000000003800000008002008",
+   "name": "bit96 root is child|1<<bit and 7 stones",
+   "pass": true
+  },
+  {
+   "detail": "00000000020020801202000040000000 == 00000000020020801202000040000000",
+   "name": "bit96 D4 canonical matches certificate manifest",
+   "pass": true
+  },
+  {
+   "detail": "00000002000000003800000008002008",
+   "name": "bit97 root is child|1<<bit and 7 stones",
+   "pass": true
+  },
+  {
+   "detail": "00000000020000003800000008080080 == 00000000020000003800000008080080",
+   "name": "bit97 D4 canonical matches certificate manifest",
+   "pass": true
+  },
+  {
+   "detail": "00010000000000003800000008002008",
+   "name": "bit112 root is child|1<<bit and 7 stones",
+   "pass": true
+  },
+  {
+   "detail": "00000000000000801202000300800000 == 00000000000000801202000300800000",
+   "name": "bit112 D4 canonical matches certificate manifest",
+   "pass": true
+  },
+  {
+   "detail": "distinct=7",
+   "name": "seven cost-66c WIN receipts are mutually D4-distinct",
+   "pass": true
+  },
+  {
+   "detail": "intersection=0",
+   "name": "cost-66c WIN receipts do not overlap cost-65o candidates",
+   "pass": true
+  },
+  {
+   "detail": "intersection=0",
+   "name": "cost-65n receipts and cost-66c WIN receipts are D4-disjoint",
+   "pass": true
+  },
+  {
+   "detail": "bit83 in refuted_d10_swept_bits",
+   "name": "cost-66c claim classifies bit83 as REFUTED-D10",
+   "pass": true
+  },
+  {
+   "detail": "all seven BigInt unions 0/0 and Bareiss sub-roots pass",
+   "name": "certificate manifest is dual-verified",
+   "pass": true
+  },
+  {
+   "detail": "subroots=348; split=5",
+   "name": "certificate totals are 348 sub-roots and five split certificates",
+   "pass": true
+  },
+  {
+   "detail": "all eight shared projection fields match",
+   "name": "fold pre-registration and published projection agree",
+   "pass": true
+  },
+  {
+   "detail": "cost65n fold head + two receipts reproduce the preregistration basis",
+   "name": "post-cost65n basis is head1444 with 764 roots",
+   "pass": true
+  },
+  {
+   "detail": "00000000000002003800000008002008",
+   "name": "bit73 receipt exists in prereg/projection/fold",
+   "pass": true
+  },
+  {
+   "detail": "covers=7",
+   "name": "bit73 seven D4-deletion covers independently reproduce",
+   "pass": true
+  },
+  {
+   "detail": "marginal=7; manifest=1",
+   "name": "bit73 marginal fields agree across prereg/projection/fold",
+   "pass": true
+  },
+  {
+   "detail": "00000000000000003800000008002008",
+   "name": "marginal 00000000000000003800000008002008 belongs to its cover",
+   "pass": true
+  },
+  {
+   "detail": "00000000000000003800000008002008",
+   "name": "marginal 00000000000000003800000008002008 is unique across receipts",
+   "pass": true
+  },
+  {
+   "detail": "00000000000000201800000008080080",
+   "name": "marginal 00000000000000201800000008080080 belongs to its cover",
+   "pass": true
+  },
+  {
+   "detail": "00000000000000201800000008080080",
+   "name": "marginal 00000000000000201800000008080080 is unique across receipts",
+   "pass": true
+  },
+  {
+   "detail": "00000000000000202800000008080080",
+   "name": "marginal 00000000000000202800000008080080 belongs to its cover",
+   "pass": true
+  },
+  {
+   "detail": "00000000000000202800000008080080",
+   "name": "marginal 00000000000000202800000008080080 is unique across receipts",
+   "pass": true
+  },
+  {
+   "detail": "00000000000000203000000008080080",
+   "name": "marginal 00000000000000203000000008080080 belongs to its cover",
+   "pass": true
+  },
+  {
+   "detail": "00000000000000203000000008080080",
+   "name": "marginal 00000000000000203000000008080080 is unique across receipts",
+   "pass": true
+  },
+  {
+   "detail": "00000000000000203800000000080080",
+   "name": "marginal 00000000000000203800000000080080 belongs to its cover",
+   "pass": true
+  },
+  {
+   "detail": "00000000000000203800000000080080",
+   "name": "marginal 00000000000000203800000000080080 is unique across receipts",
+   "pass": true
+  },
+  {
+   "detail": "00000000000000203800000008000080",
+   "name": "marginal 00000000000000203800000008000080 belongs to its cover",
+   "pass": true
+  },
+  {
+   "detail": "00000000000000203800000008000080",
+   "name": "marginal 00000000000000203800000008000080 is unique across receipts",
+   "pass": true
+  },
+  {
+   "detail": "00000000000000203800000008080000",
+   "name": "marginal 00000000000000203800000008080000 belongs to its cover",
+   "pass": true
+  },
+  {
+   "detail": "00000000000000203800000008080000",
+   "name": "marginal 00000000000000203800000008080000 is unique across receipts",
+   "pass": true
+  },
+  {
+   "detail": "00000000000000003800000008002008",
+   "name": "manifest marginal 00000000000000003800000008002008 belongs to its marginal",
+   "pass": true
+  },
+  {
+   "detail": "00000000000008003800000008002008",
+   "name": "bit75 receipt exists in prereg/projection/fold",
+   "pass": true
+  },
+  {
+   "detail": "covers=7",
+   "name": "bit75 seven D4-deletion covers independently reproduce",
+   "pass": true
+  },
+  {
+   "detail": "marginal=4; manifest=0",
+   "name": "bit75 marginal fields agree across prereg/projection/fold",
+   "pass": true
+  },
+  {
+   "detail": "00000000000000081800000008080080",
+   "name": "marginal 00000000000000081800000008080080 belongs to its cover",
+   "pass": true
+  },
+  {
+   "detail": "00000000000000081800000008080080",
+   "name": "marginal 00000000000000081800000008080080 is unique across receipts",
+   "pass": true
+  },
+  {
+   "detail": "00000000000000082800000008080080",
+   "name": "marginal 00000000000000082800000008080080 belongs to its cover",
+   "pass": true
+  },
+  {
+   "detail": "00000000000000082800000008080080",
+   "name": "marginal 00000000000000082800000008080080 is unique across receipts",
+   "pass": true
+  },
+  {
+   "detail": "00000000000000083000000008080080",
+   "name": "marginal 00000000000000083000000008080080 belongs to its cover",
+   "pass": true
+  },
+  {
+   "detail": "00000000000000083000000008080080",
+   "name": "marginal 00000000000000083000000008080080 is unique across receipts",
+   "pass": true
+  },
+  {
+   "detail": "00000000000000083800000000080080",
+   "name": "marginal 00000000000000083800000000080080 belongs to its cover",
+   "pass": true
+  },
+  {
+   "detail": "00000000000000083800000000080080",
+   "name": "marginal 00000000000000083800000000080080 is unique across receipts",
+   "pass": true
+  },
+  {
+   "detail": "00000000000080003800000008002008",
+   "name": "bit79 receipt exists in prereg/projection/fold",
+   "pass": true
+  },
+  {
+   "detail": "covers=7",
+   "name": "bit79 seven D4-deletion covers independently reproduce",
+   "pass": true
+  },
+  {
+   "detail": "marginal=5; manifest=1",
+   "name": "bit79 marginal fields agree across prereg/projection/fold",
+   "pass": true
+  },
+  {
+   "detail": "00000000000000001202000220800000",
+   "name": "marginal 00000000000000001202000220800000 belongs to its cover",
+   "pass": true
+  },
+  {
+   "detail": "00000000000000001202000220800000",
+   "name": "marginal 00000000000000001202000220800000 is unique across receipts",
+   "pass": true
+  },
+  {
+   "detail": "00000000000000800202000220800000",
+   "name": "marginal 00000000000000800202000220800000 belongs to its cover",
+   "pass": true
+  },
+  {
+   "detail": "00000000000000800202000220800000",
+   "name": "marginal 00000000000000800202000220800000 is unique across receipts",
+   "pass": true
+  },
+  {
+   "detail": "00000000000000801002000220800000",
+   "name": "marginal 00000000000000801002000220800000 belongs to its cover",
+   "pass": true
+  },
+  {
+   "detail": "00000000000000801002000220800000",
+   "name": "marginal 00000000000000801002000220800000 is unique across receipts",
+   "pass": true
+  },
+  {
+   "detail": "00000000000000801200000220800000",
+   "name": "marginal 00000000000000801200000220800000 belongs to its cover",
+   "pass": true
+  },
+  {
+   "detail": "00000000000000801200000220800000",
+   "name": "marginal 00000000000000801200000220800000 is unique across receipts",
+   "pass": true
+  },
+  {
+   "detail": "00000000000000801202000220000000",
+   "name": "marginal 00000000000000801202000220000000 belongs to its cover",
+   "pass": true
+  },
+  {
+   "detail": "00000000000000801202000220000000",
+   "name": "marginal 00000000000000801202000220000000 is unique across receipts",
+   "pass": true
+  },
+  {
+   "detail": "00000000000000801202000220000000",
+   "name": "manifest marginal 00000000000000801202000220000000 belongs to its marginal",
+   "pass": true
+  },
+  {
+   "detail": "00000000008000003800000008002008",
+   "name": "bit87 receipt exists in prereg/projection/fold",
+   "pass": true
+  },
+  {
+   "detail": "covers=7",
+   "name": "bit87 seven D4-deletion covers independently reproduce",
+   "pass": true
+  },
+  {
+   "detail": "marginal=5; manifest=1",
+   "name": "bit87 marginal fields agree across prereg/projection/fold",
+   "pass": true
+  },
+  {
+   "detail": "00000000000020001800000008080080",
+   "name": "marginal 00000000000020001800000008080080 belongs to its cover",
+   "pass": true
+  },
+  {
+   "detail": "00000000000020001800000008080080",
+   "name": "marginal 00000000000020001800000008080080 is unique across receipts",
+   "pass": true
+  },
+  {
+   "detail": "00000000000020002800000008080080",
+   "name": "marginal 00000000000020002800000008080080 belongs to its cover",
+   "pass": true
+  },
+  {
+   "detail": "00000000000020002800000008080080",
+   "name": "marginal 00000000000020002800000008080080 is unique across receipts",
+   "pass": true
+  },
+  {
+   "detail": "00000000000020003000000008080080",
+   "name": "marginal 00000000000020003000000008080080 belongs to its cover",
+   "pass": true
+  },
+  {
+   "detail": "00000000000020003000000008080080",
+   "name": "marginal 00000000000020003000000008080080 is unique across receipts",
+   "pass": true
+  },
+  {
+   "detail": "00000000000020003800000000080080",
+   "name": "marginal 00000000000020003800000000080080 belongs to its cover",
+   "pass": true
+  },
+  {
+   "detail": "00000000000020003800000000080080",
+   "name": "marginal 00000000000020003800000000080080 is unique across receipts",
+   "pass": true
+  },
+  {
+   "detail": "00000000000020003800000008000080",
+   "name": "marginal 00000000000020003800000008000080 belongs to its cover",
+   "pass": true
+  },
+  {
+   "detail": "00000000000020003800000008000080",
+   "name": "marginal 00000000000020003800000008000080 is unique across receipts",
+   "pass": true
+  },
+  {
+   "detail": "00000000000020003800000008000080",
+   "name": "manifest marginal 00000000000020003800000008000080 belongs to its marginal",
+   "pass": true
+  },
+  {
+   "detail": "00000001000000003800000008002008",
+   "name": "bit96 receipt exists in prereg/projection/fold",
+   "pass": true
+  },
+  {
+   "detail": "covers=7",
+   "name": "bit96 seven D4-deletion covers independently reproduce",
+   "pass": true
+  },
+  {
+   "detail": "marginal=4; manifest=0",
+   "name": "bit96 marginal fields agree across prereg/projection/fold",
+   "pass": true
+  },
+  {
+   "detail": "00000000020020001202000040000000",
+   "name": "marginal 00000000020020001202000040000000 belongs to its cover",
+   "pass": true
+  },
+  {
+   "detail": "00000000020020001202000040000000",
+   "name": "marginal 00000000020020001202000040000000 is unique across receipts",
+   "pass": true
+  },
+  {
+   "detail": "00000000020020800202000040000000",
+   "name": "marginal 00000000020020800202000040000000 belongs to its cover",
+   "pass": true
+  },
+  {
+   "detail": "00000000020020800202000040000000",
+   "name": "marginal 00000000020020800202000040000000 is unique across receipts",
+   "pass": true
+  },
+  {
+   "detail": "00000000020020801002000040000000",
+   "name": "marginal 00000000020020801002000040000000 belongs to its cover",
+   "pass": true
+  },
+  {
+   "detail": "00000000020020801002000040000000",
+   "name": "marginal 00000000020020801002000040000000 is unique across receipts",
+   "pass": true
+  },
+  {
+   "detail": "00000000020020801200000040000000",
+   "name": "marginal 00000000020020801200000040000000 belongs to its cover",
+   "pass": true
+  },
+  {
+   "detail": "00000000020020801200000040000000",
+   "name": "marginal 00000000020020801200000040000000 is unique across receipts",
+   "pass": true
+  },
+  {
+   "detail": "00000002000000003800000008002008",
+   "name": "bit97 receipt exists in prereg/projection/fold",
+   "pass": true
+  },
+  {
+   "detail": "covers=7",
+   "name": "bit97 seven D4-deletion covers independently reproduce",
+   "pass": true
+  },
+  {
+   "detail": "marginal=4; manifest=1",
+   "name": "bit97 marginal fields agree across prereg/projection/fold",
+   "pass": true
+  },
+  {
+   "detail": "00000000000020801202000000080000",
+   "name": "marginal 00000000000020801202000000080000 belongs to its cover",
+   "pass": true
+  },
+  {
+   "detail": "00000000000020801202000000080000",
+   "name": "marginal 00000000000020801202000000080000 is unique across receipts",
+   "pass": true
+  },
+  {
+   "detail": "00000000020000001800000008080080",
+   "name": "marginal 00000000020000001800000008080080 belongs to its cover",
+   "pass": true
+  },
+  {
+   "detail": "00000000020000001800000008080080",
+   "name": "marginal 00000000020000001800000008080080 is unique across receipts",
+   "pass": true
+  },
+  {
+   "detail": "00000000020000002800000008080080",
+   "name": "marginal 00000000020000002800000008080080 belongs to its cover",
+   "pass": true
+  },
+  {
+   "detail": "00000000020000002800000008080080",
+   "name": "marginal 00000000020000002800000008080080 is unique across receipts",
+   "pass": true
+  },
+  {
+   "detail": "00000000020000003000000008080080",
+   "name": "marginal 00000000020000003000000008080080 belongs to its cover",
+   "pass": true
+  },
+  {
+   "detail": "00000000020000003000000008080080",
+   "name": "marginal 00000000020000003000000008080080 is unique across receipts",
+   "pass": true
+  },
+  {
+   "detail": "00000000000020801202000000080000",
+   "name": "manifest marginal 00000000000020801202000000080000 belongs to its marginal",
+   "pass": true
+  },
+  {
+   "detail": "00010000000000003800000008002008",
+   "name": "bit112 receipt exists in prereg/projection/fold",
+   "pass": true
+  },
+  {
+   "detail": "covers=7",
+   "name": "bit112 seven D4-deletion covers independently reproduce",
+   "pass": true
+  },
+  {
+   "detail": "marginal=6; manifest=2",
+   "name": "bit112 marginal fields agree across prereg/projection/fold",
+   "pass": true
+  },
+  {
+   "detail": "00000000000000001202000300800000",
+   "name": "marginal 00000000000000001202000300800000 belongs to its cover",
+   "pass": true
+  },
+  {
+   "detail": "00000000000000001202000300800000",
+   "name": "marginal 00000000000000001202000300800000 is unique across receipts",
+   "pass": true
+  },
+  {
+   "detail": "00000000000000800202000300800000",
+   "name": "marginal 00000000000000800202000300800000 belongs to its cover",
+   "pass": true
+  },
+  {
+   "detail": "00000000000000800202000300800000",
+   "name": "marginal 00000000000000800202000300800000 is unique across receipts",
+   "pass": true
+  },
+  {
+   "detail": "00000000000000801002000300800000",
+   "name": "marginal 00000000000000801002000300800000 belongs to its cover",
+   "pass": true
+  },
+  {
+   "detail": "00000000000000801002000300800000",
+   "name": "marginal 00000000000000801002000300800000 is unique across receipts",
+   "pass": true
+  },
+  {
+   "detail": "00000000000000801200000300800000",
+   "name": "marginal 00000000000000801200000300800000 belongs to its cover",
+   "pass": true
+  },
+  {
+   "detail": "00000000000000801200000300800000",
+   "name": "marginal 00000000000000801200000300800000 is unique across receipts",
+   "pass": true
+  },
+  {
+   "detail": "00000000000000801202000100800000",
+   "name": "marginal 00000000000000801202000100800000 belongs to its cover",
+   "pass": true
+  },
+  {
+   "detail": "00000000000000801202000100800000",
+   "name": "marginal 00000000000000801202000100800000 is unique across receipts",
+   "pass": true
+  },
+  {
+   "detail": "00000000000000801202000300000000",
+   "name": "marginal 00000000000000801202000300000000 belongs to its cover",
+   "pass": true
+  },
+  {
+   "detail": "00000000000000801202000300000000",
+   "name": "marginal 00000000000000801202000300000000 is unique across receipts",
+   "pass": true
+  },
+  {
+   "detail": "00000000000000801202000100800000",
+   "name": "manifest marginal 00000000000000801202000100800000 belongs to its marginal",
+   "pass": true
+  },
+  {
+   "detail": "00000000000000801202000300000000",
+   "name": "manifest marginal 00000000000000801202000300000000 belongs to its marginal",
+   "pass": true
+  },
+  {
+   "detail": "marginal=35/35; manifest=6/6",
+   "name": "seven receipts have 35 disjoint marginals, six in the manifest",
+   "pass": true
+  },
+  {
+   "detail": "00000000000000003800000008002008,00000000000000801202000100800000,00000000000000801202000220000000,00000000000000801202000300000000,00000000000020003800000008000080,00000000000020801202000000080000",
+   "name": "six manifest marginal rows equal the fold's six closed rows",
+   "pass": true
+  },
+  {
+   "detail": "child row 00000000000000003800000008002008",
+   "name": "child row is closed exactly once by bit73",
+   "pass": true
+  },
+  {
+   "detail": "69 == 69",
+   "name": "duplicate parent incidence cost agrees for 00000000000000801202000100800000",
+   "pass": true
+  },
+  {
+   "detail": "78 == 78",
+   "name": "duplicate parent incidence cost agrees for 00000000000020801202000000080000",
+   "pass": true
+  },
+  {
+   "detail": "parents=6; incidences=8; cost=596",
+   "name": "parent deltas are six parents / eight incidences / 596 incidence-cost",
+   "pass": true
+  },
+  {
+   "detail": "{\"uniqueRows\":6,\"uniqueCost\":449,\"duplicates\":[{\"hex\":\"00000000000000801202000100800000\",\"cost\":69},{\"hex\":\"00000000000020801202000000080000\",\"cost\":78}]}",
+   "name": "unique six manifest rows carry 449 edge cost; duplicate incidences explain 147",
+   "pass": true
+  },
+  {
+   "detail": "all six parents match",
+   "name": "six affected-parent before/after summaries agree with preregistration",
+   "pass": true
+  },
+  {
+   "detail": "{\"solved_s6_in_manifest\":1450,\"remaining_s5_orbits\":174,\"unique_remaining_s6\":6398,\"sum_remaining_cost\":506297,\"s6_needed_by_open_classes\":4671,\"cost_needed_by_open_classes\":370211,\"demand_histogram_open_only\":{\"c2=0,c4=1\":526,\"c2=0,c4=2\":3011,\"c2=0,c4=3\":12,\"c2=1,c4=0\":208,\"c2=1,c4=1\":54,\"c2=1,c4=2\":8,\"c2=2,c4=0\":797,\"c2=2,c4=1\":5,\"c2=2,c4=2\":50},\"best_class2\":{\"s5_hex\":\"00000000000000801202000000200000\",\"classes\":2,\"remaining_s6_orbits\":3,\"remaining_s7_edge_cost\":209},\"best_class4\":{\"s5_hex\":\"00000000020000003800000080000000\",\"classes\":4,\"remaining_s6_orbits\":18,\"remaining_s7_edge_cost\":1460},\"best_class1\":{\"s5_hex\":\"00000000000000809082000000000000\",\"classes\":3,\"remaining_s6_orbits\":10,\"remaining_s7_edge_cost\":698},\"best_coverable_class2\":{\"s5_hex\":\"00000000000000801202000000200000\",\"classes\":2,\"remaining_s6_orbits\":3,\"remaining_s7_edge_cost\":209},\"second_coverable_class2\":{\"s5_hex\":\"00000000000000801202000040000000\",\"classes\":2,\"remaining_s6_orbits\":5,\"remaining_s7_edge_cost\":364}}",
+   "name": "projected head is 1450/174/6398/506297/4671/370211",
+   "pass": true
+  },
+  {
+   "detail": "cost delta=449; S5=174->174",
+   "name": "global open-class cost falls by 449 while S5 orbit count stays 174",
+   "pass": true
+  },
+  {
+   "detail": "{\"receipt_roots\":764,\"distinct_d4_canons\":749}",
+   "name": "fold conflict census is empty against the 764-root head1444 basis",
+   "pass": true
+  },
+  {
+   "detail": "manifest and preregistration blob pins match",
+   "name": "v4 claim points to the published manifest and pre-registration",
+   "pass": true
+  },
+  {
+   "detail": "corrected results; v3_fields present",
+   "name": "v4 claim corrects stale result status and preserves v3 restoration data",
+   "pass": true
+  }
+ ],
+ "cross_row": {
+  "cost65o": {
+   "batch_sizes_after_transfer": [
+    8,
+    8,
+    7,
+    8,
+    8,
+    8,
+    8,
+    3
+   ],
+   "child_hex": "00000000000000a09002000080000000",
+   "legal_candidates": 65,
+   "new_transfer": {
+    "bit": 43,
+    "d4_canonical_hex": "00000000000000a09002080080000000",
+    "root_hex": "00000000000000a09002080080000000",
+    "source": "cost-66c raw batch4 bit83, REFUTED-D10, 269856 nodes"
+   },
+   "open_after_transfer": 58,
+   "open_before": 59,
+   "open_bits_after_transfer": [
+    0,
+    1,
+    2,
+    4,
+    6,
+    7,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    18,
+    20,
+    21,
+    22,
+    23,
+    25,
+    28,
+    32,
+    33,
+    34,
+    44,
+    45,
+    54,
+    59,
+    62,
+    64,
+    66,
+    67,
+    68,
+    75,
+    77,
+    78,
+    81,
+    85,
+    87,
+    88,
+    89,
+    90,
+    91,
+    92,
+    96,
+    98,
+    101,
+    102,
+    105,
+    106,
+    109,
+    110,
+    112,
+    113,
+    114,
+    116,
+    117,
+    118,
+    119,
+    120
+   ],
+   "planned_batches_after_transfer": {
+    "1": [
+     0,
+     1,
+     2,
+     4,
+     6,
+     7,
+     10,
+     11
+    ],
+    "2": [
+     12,
+     13,
+     14,
+     15,
+     18,
+     20,
+     21,
+     22
+    ],
+    "3": [
+     23,
+     25,
+     28,
+     32,
+     33,
+     34,
+     44
+    ],
+    "4": [
+     45,
+     54,
+     59,
+     62,
+     64,
+     66,
+     67,
+     68
+    ],
+    "5": [
+     75,
+     77,
+     78,
+     81,
+     85,
+     87,
+     88,
+     89
+    ],
+    "6": [
+     90,
+     91,
+     92,
+     96,
+     98,
+     101,
+     102,
+     105
+    ],
+    "7": [
+     106,
+     109,
+     110,
+     112,
+     113,
+     114,
+     116,
+     117
+    ],
+    "8": [
+     118,
+     119,
+     120
+    ]
+   },
+   "prior_transferred_refuted_d10": [
+    41,
+    48,
+    56,
+    65,
+    80,
+    99
+   ]
+  },
+  "cost66c": {
+   "child_hex": "00000000000000003800000008002008",
+   "cross_row_candidate_overlap_count": 1,
+   "legal_candidates": 66,
+   "win7_bits": [
+    73,
+    75,
+    79,
+    87,
+    96,
+    97,
+    112
+   ],
+   "win_receipt_canons": [
+    "00000000000000083800000008080080",
+    "00000000000000203800000008080080",
+    "00000000000000801202000220800000",
+    "00000000000000801202000300800000",
+    "00000000000020003800000008080080",
+    "00000000020000003800000008080080",
+    "00000000020020801202000040000000"
+   ]
+  },
+  "only_cross_row_overlap": {
+   "cost65o_bit": 43,
+   "cost65o_current_status": "OPEN",
+   "cost66c_bit": 83,
+   "cost66c_nodes": 269856,
+   "cost66c_verdict": "REFUTED-D10",
+   "d4_canonical_hex": "00000000000000a09002080080000000"
+  },
+  "required_cost65o_update": "When the active cost-65o owner next updates its claim, add bit43 to transferred_refuted_d10_bits with this D4 canon and remove it from open_candidates_to_sweep. If an already-run or future 65o raw record reports WIN7-D10 for bit43, stop and investigate a WIN/REFUTED conflict.",
+  "win_receipt_conflicts": {
+   "cost65n_vs_cost65o": 0,
+   "cost65n_vs_cost66c": 0,
+   "cost66c_vs_cost65o": 0
+  }
+ },
+ "date": "2026-11-16",
+ "fold": {
+  "affected_parents": 6,
+  "basis_head": "1444/174/6404/506746/4677/370660",
+  "child_closed_by_bit": 73,
+  "cost_needed_by_open_classes": 370211,
+  "duplicate_parent_incidence_cost": 147,
+  "duplicate_rows": [
+   {
+    "cost": 69,
+    "hex": "00000000000000801202000100800000"
+   },
+   {
+    "cost": 78,
+    "hex": "00000000000020801202000000080000"
+   }
+  ],
+  "manifest_rows_closed": [
+   "00000000000000003800000008002008",
+   "00000000000000801202000100800000",
+   "00000000000000801202000220000000",
+   "00000000000000801202000300000000",
+   "00000000000020003800000008000080",
+   "00000000000020801202000000080000"
+  ],
+  "new_head": "1450/174/6398/506297/4671/370211",
+  "parent_incidence_edge_cost_delta": 596,
+  "parent_row_incidences": 8,
+  "receipt_count": 7,
+  "remaining_s5_orbits": 174,
+  "s6_needed_by_open_classes": 4671,
+  "total_marginal": 35,
+  "total_marginal_in_manifest": 6,
+  "total_marginal_outside_manifest": 29,
+  "unique_manifest_row_edge_cost_delta": 449,
+  "unique_remaining_s6": 6398
+ },
+ "interpretation_guard": "REFUTED-D10 is not a LOSS proof. WIN7-D10 certificates apply only to their individual seven-stone roots. Manifest solved counts are coverage bookkeeping, not game-theoretic values. Standard 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, and classes 1/2/4 remain UNKNOWN.",
+ "limitations": [
+  "This audit independently re-derives D4 candidate intersections and the seven receipt cover sets, and checks the published fold/projection artifacts field-by-field.",
+  "It does not rerun the depth-10 engine, reparse the 11.2 MB certificate bodies, or independently reconstruct all 764 basis roots. The fold log records the separate basis reconstruction and seven-certificate re-verification.",
+  "The cost-65o claim remains an active reservation; this audit does not modify it."
+ ],
+ "schema": "n11-class2-lane-cost65n-cost65o-cost66c-crossrow-fold-audit-20261116-v1",
+ "source_blobs": {
+  "cost65nFold": "7390c540836d5e8440833aec9b4ac014fd96dd44",
+  "cost65o": "18c49eb010e0f464f5b7874c5ffbfb0ae34b67bb",
+  "cost66cBatch4": "5ff20e15a8d892e930bda28b3198765b9e0d6f57",
+  "cost66cClaim": "5e89637b748cbc70838723edbbfeda907af78da5",
+  "cost66cFold": "8783993e5c73cc9697c3ca48aef981725f422be8",
+  "cost66cManifest": "463ed0f0aafbf6e21eadc1b7edf1e20051ec7efb",
+  "cost66cPrereg": "809ad05e1bc560b1086c3d30cc34ad78727e430a",
+  "cost66cProjection": "da8cab2f25f0adc4469d09ae1cabf54bf63d9324",
+  "cost66cRawAudit": "0854b2e2c6a4bde39405ce0954b966a31ce7f3e7"
+ },
+ "source_main_commit": "b41027e1cebdb391ecb0a02d0911bb8988f12ddf"
+}

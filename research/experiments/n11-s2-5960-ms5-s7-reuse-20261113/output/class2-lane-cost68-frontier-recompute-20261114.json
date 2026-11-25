@@ -1,0 +1,114 @@
+{
+ "schema": "n11-class2-lane-cost68-frontier-recompute-20261114-v1",
+ "date": "2026-11-14",
+ "method": "full recomputation of the audit_class_frontier.py logic over win7-reuse-hits + 12 baseline verified JSONs + class4 batch1/batch2 + batch3 (bit37, child34 x3, child5 x4, child7 x5) + class2-lane cost-60 (19) + cost-61 (4) + cost-61b (12) + cost-64 (24) + cost-65 (7) + cost-68 (17 WIN7 certificates); every staged control reproduced exactly before the cost-68 addition was measured; the local run wrote the full record (marginal_manifest_hexes etc.) but the execution environment went down before the full file could be pushed — this compact record carries all control and frontier values; the full script + JSON should be re-pushed next run from a regenerated recompute_frontier_cost68.py",
+ "controls": {
+  "baseline": {
+   "solved_in_manifest": 638,
+   "unique_remaining": 7208,
+   "sum_cost": 565500,
+   "reproduced": true
+  },
+  "after_batch1": {
+   "solved_in_manifest": 657,
+   "unique_remaining": 7189,
+   "sum_cost": 564070,
+   "reproduced": true
+  },
+  "after_batch2": {
+   "solved_in_manifest": 665,
+   "unique_remaining": 7181,
+   "sum_cost": 563509,
+   "open_s6": 5398,
+   "open_cost": 423516,
+   "reproduced": true
+  },
+  "bit37_covers_matches_published_frontier_effect": true,
+  "after_batch3": {
+   "solved_in_manifest": 690,
+   "unique_remaining": 7156,
+   "sum_cost": 561764,
+   "open_s6": 5373,
+   "open_cost": 421771,
+   "reproduced": true
+  },
+  "after_cost60": {
+   "solved_in_manifest": 724,
+   "unique_remaining": 7122,
+   "sum_cost": 559294,
+   "open_s6": 5339,
+   "open_cost": 419301,
+   "reproduced": true
+  },
+  "after_cost61": {
+   "solved_in_manifest": 735,
+   "unique_remaining": 7111,
+   "sum_cost": 558480,
+   "open_s6": 5328,
+   "open_cost": 418487,
+   "reproduced": true
+  },
+  "after_cost61b": {
+   "solved_in_manifest": 749,
+   "unique_remaining": 7097,
+   "sum_cost": 557548,
+   "open_s6": 5314,
+   "open_cost": 417555,
+   "reproduced": true
+  },
+  "after_cost64": {
+   "solved_in_manifest": 779,
+   "unique_remaining": 7067,
+   "sum_cost": 555327,
+   "open_s6": 5284,
+   "open_cost": 415334,
+   "reproduced": true
+  },
+  "after_cost65": {
+   "solved_in_manifest": 786,
+   "unique_remaining": 7060,
+   "sum_cost": 554836,
+   "open_s6": 5277,
+   "open_cost": 414843,
+   "reproduced": true
+  }
+ },
+ "cost68_addition": {
+  "roots_count": 17,
+  "covers": 102,
+  "marginal": 86,
+  "marginal_in_manifest": 18
+ },
+ "frontier_after_cost68": {
+  "solved_s6_in_manifest": 804,
+  "unique_remaining_s6": 7042,
+  "sum_remaining_cost": 553474,
+  "s6_needed_by_open_classes": 5259,
+  "cost_needed_by_open_classes": 413481,
+  "demand_histogram_open_only": {
+   "c2=0,c4=1": 528,
+   "c2=0,c4=2": 3043,
+   "c2=0,c4=3": 18,
+   "c2=1,c4=0": 278,
+   "c2=1,c4=1": 65,
+   "c2=1,c4=2": 9,
+   "c2=2,c4=0": 1306,
+   "c2=2,c4=1": 6,
+   "c2=2,c4=2": 61
+  },
+  "class2_blocker_closure": "S5 00000000000000003802000008000000 is ABSENT from the after-cost68 ranking: all of its S6 children are now covered by WIN7 certificates (the last two, cost-68 child 00000000000000801a02000080000000 via its own sweep and cost-75 child 00000000000000801a02040000000000 via cost-68 marginal covers) - the long-standing class-2 blocker S5 orbit is fully closed",
+  "best_class2_next": {
+   "s5_hex": "00000000000000809082000000000000",
+   "classes": 3,
+   "remaining_s6_orbits": 37,
+   "remaining_s7_edge_cost": 2507
+  },
+  "best_class4_unchanged": {
+   "s5_hex": "00000000020000003800000080000000",
+   "classes": 4,
+   "remaining_s6_orbits": 24,
+   "remaining_s7_edge_cost": 1934
+  }
+ },
+ "interpretation_guard": "bookkeeping over published receipts; WIN7 certificates prove a win within depth 10 from the 7-stone roots only; REFUTED-D10 sweeps prove only absence of depth-10 WIN7; 11x11 empty root / {49,60} / S2 {59,60} / class 2 / class 4 remain UNKNOWN"
+}

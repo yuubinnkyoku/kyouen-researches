@@ -1,0 +1,218 @@
+{
+ "schema": "n11-class2-lane-cost73k-cert-row-merge-conflict-analysis-20261117-v1",
+ "date": "2026-11-17",
+ "inputs": {
+  "manifest": "class2-lane-cost73k-win7-certificates-20261117.json",
+  "manifest_git_blob_sha": "0892aed07d187ae2fb3b4b90a21c7adbc1002b62",
+  "pinned_commit": "a3c27e9f",
+  "certificates": "41 files (19 split pairs recombined + 3 whole), every concatenated md5 verified against the manifest (22/22)"
+ },
+ "band": "cost73k WIN7-D10 (child 00000000000000801206000000000400, 22 roots)",
+ "results": {
+  "total_rows": 966535,
+  "distinct_positions": 682861,
+  "merge_hits_revisited_rows": 283674,
+  "conflicts_same_position_different_value": 0,
+  "conflicts_detail": [],
+  "verdict": "SAFE-MERGE: 0 conflicts; every position shared by two or more certificates carries an identical row value in all of them, so the 22 per-root row sets merge losslessly into one position-keyed table (682,861 entries) with immediate conflict detection finding nothing to flag",
+  "sharing_degree_distribution": {
+   "1": 463259,
+   "2": 168739,
+   "3": 39870,
+   "4": 9001,
+   "5": 1782,
+   "6": 197,
+   "7": 12,
+   "8": 1
+  },
+  "max_degree": 8,
+  "pairs_with_shared_positions": 180,
+  "pairs_total": 231,
+  "top_shared_pairs": [
+   {
+    "pair": [
+     15,
+     39
+    ],
+    "shared_positions": 5970
+   },
+   {
+    "pair": [
+     41,
+     73
+    ],
+    "shared_positions": 5907
+   },
+   {
+    "pair": [
+     58,
+     73
+    ],
+    "shared_positions": 5900
+   },
+   {
+    "pair": [
+     0,
+     58
+    ],
+    "shared_positions": 5645
+   },
+   {
+    "pair": [
+     73,
+     94
+    ],
+    "shared_positions": 4769
+   },
+   {
+    "pair": [
+     39,
+     58
+    ],
+    "shared_positions": 4676
+   },
+   {
+    "pair": [
+     73,
+     117
+    ],
+    "shared_positions": 4448
+   },
+   {
+    "pair": [
+     35,
+     73
+    ],
+    "shared_positions": 4188
+   },
+   {
+    "pair": [
+     73,
+     95
+    ],
+    "shared_positions": 4019
+   },
+   {
+    "pair": [
+     39,
+     95
+    ],
+    "shared_positions": 3911
+   }
+  ],
+  "sequential_prior_coverage_band_order": {
+   "0": {
+    "rows": 53456,
+    "prior_overlap": 0,
+    "prior_overlap_pct": 0.0
+   },
+   "7": {
+    "rows": 46131,
+    "prior_overlap": 0,
+    "prior_overlap_pct": 0.0
+   },
+   "11": {
+    "rows": 37697,
+    "prior_overlap": 4295,
+    "prior_overlap_pct": 11.39
+   },
+   "15": {
+    "rows": 59210,
+    "prior_overlap": 4451,
+    "prior_overlap_pct": 7.52
+   },
+   "35": {
+    "rows": 44752,
+    "prior_overlap": 4320,
+    "prior_overlap_pct": 9.65
+   },
+   "39": {
+    "rows": 25704,
+    "prior_overlap": 6294,
+    "prior_overlap_pct": 24.49
+   },
+   "41": {
+    "rows": 27895,
+    "prior_overlap": 7251,
+    "prior_overlap_pct": 25.99
+   },
+   "44": {
+    "rows": 46339,
+    "prior_overlap": 10172,
+    "prior_overlap_pct": 21.95
+   },
+   "58": {
+    "rows": 41038,
+    "prior_overlap": 16862,
+    "prior_overlap_pct": 41.09
+   },
+   "62": {
+    "rows": 22521,
+    "prior_overlap": 6299,
+    "prior_overlap_pct": 27.97
+   },
+   "73": {
+    "rows": 58028,
+    "prior_overlap": 23045,
+    "prior_overlap_pct": 39.71
+   },
+   "76": {
+    "rows": 42482,
+    "prior_overlap": 11704,
+    "prior_overlap_pct": 27.55
+   },
+   "87": {
+    "rows": 52921,
+    "prior_overlap": 13014,
+    "prior_overlap_pct": 24.59
+   },
+   "89": {
+    "rows": 36151,
+    "prior_overlap": 14709,
+    "prior_overlap_pct": 40.69
+   },
+   "94": {
+    "rows": 38458,
+    "prior_overlap": 15154,
+    "prior_overlap_pct": 39.4
+   },
+   "95": {
+    "rows": 48205,
+    "prior_overlap": 22546,
+    "prior_overlap_pct": 46.77
+   },
+   "97": {
+    "rows": 45074,
+    "prior_overlap": 15874,
+    "prior_overlap_pct": 35.22
+   },
+   "98": {
+    "rows": 49525,
+    "prior_overlap": 23196,
+    "prior_overlap_pct": 46.84
+   },
+   "103": {
+    "rows": 48559,
+    "prior_overlap": 20152,
+    "prior_overlap_pct": 41.5
+   },
+   "105": {
+    "rows": 33266,
+    "prior_overlap": 12922,
+    "prior_overlap_pct": 38.84
+   },
+   "112": {
+    "rows": 49536,
+    "prior_overlap": 23556,
+    "prior_overlap_pct": 47.55
+   },
+   "117": {
+    "rows": 59587,
+    "prior_overlap": 27858,
+    "prior_overlap_pct": 46.75
+   }
+  }
+ },
+ "interpretation": "The row value is the deterministic winning-move witness of the position; its root-independence across all 22 certificates (0 conflicts over 283,674 shared rows) is direct evidence that position-keyed per-worker memos of this workload can be merged without WIN/LOSS conflicts, the prerequisite for priority (3) shared-cache design. The sequential coverage numbers quantify the cross-root reuse potential band-wide sharing exploits (late bits like 112/117 have ~47% prior overlap) and explain why late-battery bits accumulated memo pollution in the published ms23/ms24 band runs: their lookups mostly hit positions inserted by earlier roots.",
+ "interpretation_guard": "this is a row-set merge analysis over already-published certificate bytes; no new verdict, no manifest row opened or closed, no certificate byte changed; WIN7-D10 proves a first-player win within depth 10 from each individual 7-stone root only; REFUTED-D10 is not a LOSS proof; 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60} and classes 1/2/4 remain UNKNOWN"
+}

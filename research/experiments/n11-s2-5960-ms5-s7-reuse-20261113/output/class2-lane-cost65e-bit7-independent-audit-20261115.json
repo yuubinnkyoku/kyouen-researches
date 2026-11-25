@@ -1,0 +1,187 @@
+{
+  "schema": "n11-class2-cost65e-bit7-independent-audit-20261115-v1",
+  "date": "2026-11-15",
+  "certificate_added_commit": "c64adccf9fc05b32429fa3e46eecae2e9c506c4e",
+  "audited_main_head": "8690373a66fd5300fb3723e2dd83812ffea61f85",
+  "certificate": {
+    "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65e-certificates/bit7-root-00000000000000809102000000800080.cert",
+    "git_blob_sha1": "080a111667e79af507e001e888159dcaae8f429a",
+    "bytes": 1611767,
+    "nonempty_lines": 44563,
+    "strategy_rows": 44561,
+    "root_hex": "00000000000000809102000000800080",
+    "stones": 7,
+    "safe": true,
+    "opponent_legal_first_moves": 56,
+    "subroots_pass": 56,
+    "total_seen_positions_across_subroots": 96376,
+    "winner_states_across_subroots": 62166,
+    "opponent_reply_edges": 86858,
+    "terminal_positions_across_subroots": 15631,
+    "terminal_stone_range": [
+      13,
+      17
+    ],
+    "max_depth_after_root_reply": 9,
+    "consumed_winner_state_union": 44561,
+    "missing_strategy_rows": 0,
+    "extra_strategy_rows": 0,
+    "geometry": "BigInt exact 3x3 minor after subtracting the first row from the 4x4 cocircular/collinear determinant",
+    "solver_imported": false,
+    "verdict_cache_used": false,
+    "floating_point_used": false
+  },
+  "s6_parent_lifts": [
+    {
+      "removed_bit": 7,
+      "canonical_s6_hex": "00000000000000809102000000800000",
+      "manifest_cost": 65,
+      "manifest_classes": 2,
+      "incremental_status": "already covered by cost65e bit107 certificate"
+    },
+    {
+      "removed_bit": 23,
+      "canonical_s6_hex": "00000000000000809102000000000080",
+      "manifest_cost": 79,
+      "manifest_classes": 2,
+      "incremental_status": "newly closed"
+    },
+    {
+      "removed_bit": 49,
+      "canonical_s6_hex": "00000000000000809100000000800080",
+      "manifest_member": false
+    },
+    {
+      "removed_bit": 56,
+      "raw_parent_hex": "00000000000000809002000000800080",
+      "canonical_s6_hex": "00000000000000801202000080000008",
+      "manifest_cost": 75,
+      "manifest_classes": 2,
+      "incremental_status": "newly closed"
+    },
+    {
+      "removed_bit": 60,
+      "canonical_s6_hex": "00000000000000808102000000800080",
+      "manifest_member": false
+    },
+    {
+      "removed_bit": 63,
+      "canonical_s6_hex": "00000000000000801102000000800080",
+      "manifest_member": false
+    },
+    {
+      "removed_bit": 71,
+      "canonical_s6_hex": "00000000000000009102000000800080",
+      "manifest_member": false
+    }
+  ],
+  "prior_coverage_audit": {
+    "s6_manifest_rows": 7867,
+    "win7_manifest_files_scanned": 66,
+    "legacy_root_schema_files_separately_scanned": 8,
+    "baseline_verified_root_entries": {
+      "s6sweep": 4288,
+      "focus2154_62certs": 62,
+      "frontier2140": 2401,
+      "total": 6751
+    },
+    "k0675_s6_sweep_records": 3868,
+    "class2_loss7_manifest_root_counts": [
+      62,
+      72,
+      64
+    ],
+    "class2_loss7_manifest_roots_total": 198,
+    "central49_terminal_loss7_parent_lift_keys": 274,
+    "new_parent_hits_in_prior_win7_or_loss7_receipts": 0,
+    "new_parent_hits_in_k0675_s6_sweep_cache": 0,
+    "win_loss_conflicts_found": 0,
+    "note": "The two new parent keys were absent from the audited published WIN7 manifests, baseline verified caches, K0675 S6 sweep records, three class2 LOSS7 manifests, and the 274-key central49 LOSS7 parent-lift set. This is a receipt/cache coverage audit, not a bytewise scan of every raw .cert file."
+  },
+  "frontier_before": {
+    "source": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost75b-recompute-20261115.json",
+    "solved_s6_in_manifest": 1049,
+    "remaining_s5_orbits": 176,
+    "unique_remaining_s6": 6798,
+    "sum_remaining_cost": 535812,
+    "s6_needed_by_open_classes": 5068,
+    "cost_needed_by_open_classes": 399535
+  },
+  "frontier_delta": {
+    "newly_closed_s6_orbits": 2,
+    "newly_closed_cost": 154,
+    "open_class_s6_reduction": 2,
+    "open_class_cost_reduction": 154
+  },
+  "frontier_after": {
+    "solved_s6_in_manifest": 1051,
+    "remaining_s5_orbits": 176,
+    "unique_remaining_s6": 6796,
+    "sum_remaining_cost": 535658,
+    "s6_needed_by_open_classes": 5066,
+    "cost_needed_by_open_classes": 399381,
+    "best_class2_unchanged": {
+      "s5_hex": "00000000000000803202000000000000",
+      "remaining_s6_orbits": 2,
+      "remaining_s7_edge_cost": 147
+    },
+    "best_class4_unchanged": {
+      "s5_hex": "00000000020000003800000080000000",
+      "remaining_s6_orbits": 18,
+      "remaining_s7_edge_cost": 1460
+    }
+  },
+  "local_s5_updates": [
+    {
+      "s5_hex": "00000000000000809102000000000000",
+      "before": {
+        "remaining_s6_orbits": 35,
+        "remaining_s7_edge_cost": 2525
+      },
+      "delta": {
+        "s6": 1,
+        "cost": 79
+      },
+      "after": {
+        "remaining_s6_orbits": 34,
+        "remaining_s7_edge_cost": 2446
+      }
+    },
+    {
+      "s5_hex": "00000000000000801202000080000000",
+      "before": {
+        "remaining_s6_orbits": 59,
+        "remaining_s7_edge_cost": 4521
+      },
+      "delta": {
+        "s6": 1,
+        "cost": 75
+      },
+      "after": {
+        "remaining_s6_orbits": 58,
+        "remaining_s7_edge_cost": 4446
+      }
+    },
+    {
+      "s5_hex": "00000000000000003800000208000000",
+      "before": {
+        "remaining_s6_orbits": 74,
+        "remaining_s7_edge_cost": 6059
+      },
+      "delta": {
+        "s6": 2,
+        "cost": 154
+      },
+      "after": {
+        "remaining_s6_orbits": 72,
+        "remaining_s7_edge_cost": 5905
+      }
+    }
+  ],
+  "interpretation_guard": [
+    "The 7-stone root is a WIN7 certificate, not a solution of the 11x11 empty board.",
+    "The original six-stone parent (cost 65) was already covered by cost65e bit107; only the two cross-parent lifts are incremental.",
+    "The cost72 bit111 receipt remains local-only and is not folded into this cost75b-based global frontier.",
+    "No S5 parent is closed by this update; S2 {59,60}, two-stone roots, and the empty board remain UNKNOWN."
+  ]
+}

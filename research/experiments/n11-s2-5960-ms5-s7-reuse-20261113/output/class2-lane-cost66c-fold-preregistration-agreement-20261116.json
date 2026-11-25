@@ -1,0 +1,91 @@
+{
+ "schema": "n11-class2-lane-cost66c-fold-preregistration-agreement-20261116-v1",
+ "preregistration_blob": "809ad05e",
+ "preregistration_commit": "aca9d762",
+ "receipt_source": "output/class-frontier-cost66c-receipts-recompute-20261116.json",
+ "receipt_schema": "n11-class-frontier-cost66c-receipts-20261116-v1",
+ "checks": [
+  {
+   "check": "projected head solved_s6_in_manifest",
+   "pass": true,
+   "detail": "prereg 1450 vs receipt 1450"
+  },
+  {
+   "check": "projected head remaining_s5_orbits",
+   "pass": true,
+   "detail": "prereg 174 vs receipt 174"
+  },
+  {
+   "check": "projected head unique_remaining_s6",
+   "pass": true,
+   "detail": "prereg 6398 vs receipt 6398"
+  },
+  {
+   "check": "projected head sum_remaining_cost",
+   "pass": true,
+   "detail": "prereg 506297 vs receipt 506297"
+  },
+  {
+   "check": "projected head s6_needed_by_open_classes",
+   "pass": true,
+   "detail": "prereg 4671 vs receipt 4671"
+  },
+  {
+   "check": "projected head cost_needed_by_open_classes",
+   "pass": true,
+   "detail": "prereg 370211 vs receipt 370211"
+  },
+  {
+   "check": "demand histogram after fold",
+   "pass": true,
+   "detail": "prereg-projected {'c2=0,c4=1': 526, 'c2=0,c4=2': 3011, 'c2=0,c4=3': 12, 'c2=1,c4=0': 208, 'c2=1,c4=1': 54, 'c2=1,c4=2': 8, 'c2=2,c4=0': 797, 'c2=2,c4=1': 5, 'c2=2,c4=2': 50} vs receipt {'c2=0,c4=1': 526, 'c2=0,c4=2': 3011, 'c2=0,c4=3': 12, 'c2=1,c4=0': 208, 'c2=1,c4=1': 54, 'c2=1,c4=2': 8, 'c2=2,c4=0': 797, 'c2=2,c4=1': 5, 'c2=2,c4=2': 50}"
+  },
+  {
+   "check": "total_marginal",
+   "pass": true,
+   "detail": "prereg 35 vs receipt 35"
+  },
+  {
+   "check": "total_marginal_in_manifest",
+   "pass": true,
+   "detail": "prereg 6 vs receipt 6"
+  },
+  {
+   "check": "rows_closed_hexes",
+   "pass": true,
+   "detail": "prereg ['00000000000000003800000008002008', '00000000000000801202000100800000', '00000000000000801202000220000000', '00000000000000801202000300000000', '00000000000020003800000008000080', '00000000000020801202000000080000'] vs receipt ['00000000000000003800000008002008', '00000000000000801202000100800000', '00000000000000801202000220000000', '00000000000000801202000300000000', '00000000000020003800000008000080', '00000000000020801202000000080000']"
+  },
+  {
+   "check": "child closed",
+   "pass": true,
+   "detail": "child 00000000000000003800000008002008 in receipt rows_closed_hexes"
+  },
+  {
+   "check": "affected parents rows/edge before+after",
+   "pass": true,
+   "detail": "[{\"parent\": \"00000000000000003800000008002000\", \"prereg\": {\"classes\": 2, \"edge_cost_after\": 1748, \"edge_cost_before\": 1883, \"lost_edge_cost\": 135, \"lost_rows_hexes\": [\"00000000000000003800000008002008\", \"00000000000000801202000100800000\"], \"rows_after\": 25, \"rows_before\": 27, \"s5_hex\": \"00000000000000003800000008002000\"}, \"receipt\": {\"s5_hex\": \"00000000000000003800000008002000\", \"classes\": 2, \"row"
+  },
+  {
+   "check": "lost rows per parent",
+   "pass": true,
+   "detail": "[{\"parent\": \"00000000000000003800000008002000\", \"want\": [\"00000000000000003800000008002008\", \"00000000000000801202000100800000\"], \"got\": [\"00000000000000003800000008002008\", \"00000000000000801202000100800000\"]}, {\"parent\": \"00000000000000801202000000000080\", \"want\": [\"00000000000020003800000008000080\"], \"got\": [\"00000000000020003800000008000080\"]}, {\"parent\": \"00000000000000801202000000080000\", \"w"
+  },
+  {
+   "check": "parent_row_incidences",
+   "pass": true,
+   "detail": "prereg 8 vs receipt 8"
+  },
+  {
+   "check": "parent_edge_cost_delta",
+   "pass": true,
+   "detail": "prereg 596 vs receipt 596"
+  },
+  {
+   "check": "per-root marginal/mim",
+   "pass": true,
+   "detail": "[{\"root\": \"00000000000002003800000008002008\", \"ok\": true}, {\"root\": \"00000000000008003800000008002008\", \"ok\": true}, {\"root\": \"00000000000080003800000008002008\", \"ok\": true}, {\"root\": \"00000000008000003800000008002008\", \"ok\": true}, {\"root\": \"00000001000000003800000008002008\", \"ok\": true}, {\"root\": \"00000002000000003800000008002008\", \"ok\": true}, {\"root\": \"00010000000000003800000008002008\", \"ok\": "
+  }
+ ],
+ "all_pass": true,
+ "interpretation_guard": "bookkeeping fold projection agreement only; no game-theoretic verdicts; solved counts are manifest coverage; 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60} and classes 1/2/4 remain UNKNOWN"
+}

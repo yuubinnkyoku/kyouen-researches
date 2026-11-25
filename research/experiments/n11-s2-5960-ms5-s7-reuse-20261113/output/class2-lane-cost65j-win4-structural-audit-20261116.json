@@ -1,0 +1,178 @@
+{
+ "schema": "n11-class2-lane-cost65j-win4-structural-audit-20261116-v1",
+ "date": "2026-11-16",
+ "subject": "structural audit of the four cost-65j WIN7-D10 certificate receipts bits 112/116/118/119 of child 00000000000000809102000080000000 published in the cost-65j fold v2 receipts recompute record (schema n11-class2-lane-cost65j-receipts-recompute-20261116-v2): the three marginal-in-manifest receipts bits 112/116/118 and the zero-marginal receipt bit 119 of the cost-65j fold v2 (head 1419)",
+ "method": "independent third re-implementation (BigInt board, bit = y*11+x, D4 canonicalization over the 8 board transforms, integer-only det3/det4), the same implementation family as the win2 structural audit (commit 6cbb878f) and the win13 structural audit (commit 74076854), with the K0868 survival-move convention; run twice with identical results; inputs are only the published fold-v2 receipts recompute record, the 6,438-row remaining-worklist-1410 CSV, and the published win13 structural audit",
+ "controls": {
+  "child_hex": "00000000000000809102000080000000",
+  "s5_parent_subset_of_child": true,
+  "child_popcount": 6,
+  "child_survival_count_k0868": 65,
+  "child_d4_canonical_hex": "00000000000000809102000080000000",
+  "worklist_1410_rows": 6438,
+  "win_receipt_scheduled_rows": 9
+ },
+ "claim_checks": {
+  "all_4_root_reconstructions_exact": true,
+  "all_4_d4_canonical_hexes_match": true,
+  "all_4_survival_legal_under_k0868": true,
+  "all_4_covers_count_7_with_child": true,
+  "marginal_manifest_hexes_subset_of_covers": true,
+  "marginal_non_manifest_hexes_subset_of_covers": true,
+  "bits_112_116_118_each_cover_exactly_one_scheduled_row": true,
+  "bit_119_covers_no_scheduled_row": true,
+  "bits_112_116_118_worklist_intersection_exactly_the_scheduled_row": true,
+  "union_of_65j_scheduled_hits_equals_rows_left_open_by_65f": true,
+  "nine_scheduled_rows_partitioned_65f_six_plus_65j_three": true,
+  "nontrivial_canonicals": "all four played roots are not D4-canonical; the published canonical forms 00000000020000811202000000000100 / 00000000020000811202000000000010 / 00000000020000811202000000000004 / 00000000020000811202000000000002 all recomputed exactly (the same 8112 family as win13 bits 91/101/109, differing only in the single low-order bit)",
+  "scheduled_rows_closed_by_65j": [
+   "00000000010000003800000008080000 (cost 74, by bit 112)",
+   "00000000000000003800100008080000 (cost 76, by bit 116)",
+   "00000000000000003800000008480000 (cost 71, by bit 118)"
+  ],
+  "fold2_marginal_basis_note": "the fold-v2 record's marginal basis is the corpus-wide open-row census, not worklist-1410: each of bits 112/116/118 lists four marginal_non_manifest hexes that are all in covers but none is a worklist-1410 row (verified: the covers intersect worklist-1410 in exactly the single scheduled row); bit 119's four marginal_non_manifest hexes are likewise outside worklist-1410; consistent with the win13 audit's worklist-intersection measurements"
+ },
+ "result": "all_ok: 4/4 bits pass every check; the union of the 65j scheduled hits equals exactly the three rows the 65f win13 audit left open, so the nine scheduled rows of the child are fully partitioned 6 (65f) + 3 (65j), completing structural verification of all 17 head-1419 WIN receipts of this child by the third implementation",
+ "bit112": {
+  "root_hex": "00010000000000809102000080000000",
+  "root_reconstruction": "child | 1<<112 = published root_hex (exact)",
+  "d4_canonical_hex": "00000000020000811202000000000100 (recomputed, matches published)",
+  "survival_legal_under_k0868": true,
+  "popcount": 7,
+  "covers_7_rows": [
+   "00000000000000809102000000000004",
+   "00000000000000809102000080000000",
+   "00000000010000003800000008080000",
+   "00000000020000011202000000000100",
+   "00000000020000810202000000000100",
+   "00000000020000811002000000000100",
+   "00000000020000811200000000000100"
+  ],
+  "child_in_covers": true,
+  "fold2_marginal_in_manifest": [
+   "00000000010000003800000008080000 (in covers; worklist-1410 win_receipt_scheduled, cost 74)"
+  ],
+  "fold2_marginal_non_manifest_hexes": [
+   "00000000020000011202000000000100",
+   "00000000020000810202000000000100",
+   "00000000020000811002000000000100",
+   "00000000020000811200000000000100"
+  ],
+  "fold2_marginal_non_manifest_all_in_covers": true,
+  "fold2_marginal_non_manifest_none_in_worklist_1410": true,
+  "marginal_rows_in_worklist_1410": [
+   {
+    "hex": "00000000010000003800000008080000",
+    "category": "win_receipt_scheduled",
+    "own_candidates_cost": 74
+   }
+  ],
+  "covers_count_match": 7,
+  "ok": true
+ },
+ "bit116": {
+  "root_hex": "00100000000000809102000080000000",
+  "root_reconstruction": "child | 1<<116 = published root_hex (exact)",
+  "d4_canonical_hex": "00000000020000811202000000000010 (recomputed, matches published)",
+  "survival_legal_under_k0868": true,
+  "popcount": 7,
+  "covers_7_rows": [
+   "00000000000000003800100008080000",
+   "00000000000000809102000000000040",
+   "00000000000000809102000080000000",
+   "00000000020000011202000000000010",
+   "00000000020000810202000000000010",
+   "00000000020000811002000000000010",
+   "00000000020000811200000000000010"
+  ],
+  "child_in_covers": true,
+  "fold2_marginal_in_manifest": [
+   "00000000000000003800100008080000 (in covers; worklist-1410 win_receipt_scheduled, cost 76)"
+  ],
+  "fold2_marginal_non_manifest_hexes": [
+   "00000000020000011202000000000010",
+   "00000000020000810202000000000010",
+   "00000000020000811002000000000010",
+   "00000000020000811200000000000010"
+  ],
+  "fold2_marginal_non_manifest_all_in_covers": true,
+  "fold2_marginal_non_manifest_none_in_worklist_1410": true,
+  "marginal_rows_in_worklist_1410": [
+   {
+    "hex": "00000000000000003800100008080000",
+    "category": "win_receipt_scheduled",
+    "own_candidates_cost": 76
+   }
+  ],
+  "covers_count_match": 7,
+  "ok": true
+ },
+ "bit118": {
+  "root_hex": "00400000000000809102000080000000",
+  "root_reconstruction": "child | 1<<118 = published root_hex (exact)",
+  "d4_canonical_hex": "00000000020000811202000000000004 (recomputed, matches published)",
+  "survival_legal_under_k0868": true,
+  "popcount": 7,
+  "covers_7_rows": [
+   "00000000000000003800000008480000",
+   "00000000000000809102000000000100",
+   "00000000000000809102000080000000",
+   "00000000020000011202000000000004",
+   "00000000020000810202000000000004",
+   "00000000020000811002000000000004",
+   "00000000020000811200000000000004"
+  ],
+  "child_in_covers": true,
+  "fold2_marginal_in_manifest": [
+   "00000000000000003800000008480000 (in covers; worklist-1410 win_receipt_scheduled, cost 71)"
+  ],
+  "fold2_marginal_non_manifest_hexes": [
+   "00000000020000011202000000000004",
+   "00000000020000810202000000000004",
+   "00000000020000811002000000000004",
+   "00000000020000811200000000000004"
+  ],
+  "fold2_marginal_non_manifest_all_in_covers": true,
+  "fold2_marginal_non_manifest_none_in_worklist_1410": true,
+  "marginal_rows_in_worklist_1410": [
+   {
+    "hex": "00000000000000003800000008480000",
+    "category": "win_receipt_scheduled",
+    "own_candidates_cost": 71
+   }
+  ],
+  "covers_count_match": 7,
+  "ok": true
+ },
+ "bit119": {
+  "root_hex": "00800000000000809102000080000000",
+  "root_reconstruction": "child | 1<<119 = published root_hex (exact)",
+  "d4_canonical_hex": "00000000020000811202000000000002 (recomputed, matches published)",
+  "survival_legal_under_k0868": true,
+  "popcount": 7,
+  "covers_7_rows": [
+   "00000000000000003800000008080800",
+   "00000000000000809102000000000200",
+   "00000000000000809102000080000000",
+   "00000000020000011202000000000002",
+   "00000000020000810202000000000002",
+   "00000000020000811002000000000002",
+   "00000000020000811200000000000002"
+  ],
+  "child_in_covers": true,
+  "fold2_marginal_in_manifest": [],
+  "fold2_marginal_non_manifest_hexes": [
+   "00000000020000011202000000000002",
+   "00000000020000810202000000000002",
+   "00000000020000811002000000000002",
+   "00000000020000811200000000000002"
+  ],
+  "fold2_marginal_non_manifest_all_in_covers": true,
+  "fold2_marginal_non_manifest_none_in_worklist_1410": true,
+  "marginal_rows_in_worklist_1410": [],
+  "covers_count_match": 7,
+  "ok": true
+ },
+ "certificates_note": "certificate bodies are the publishing lane's double-verified records where published; this audit verifies structure only (root reconstruction, D4 canon, K0868 legality, covers, worklist cross-classification, fold-v2 receipt attribution) and does not re-run the engine remotely",
+ "interpretation_guard": "bookkeeping over published records; solved counts measure manifest coverage, not game-theoretic values; WIN7-D10 certificates prove a first-player win within depth 10 from the individual 7-stone roots only; REFUTED-D10 sweeps prove only the absence of WIN7-D10; 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, class 1, class 2 and class 4 all remain UNKNOWN"
+}

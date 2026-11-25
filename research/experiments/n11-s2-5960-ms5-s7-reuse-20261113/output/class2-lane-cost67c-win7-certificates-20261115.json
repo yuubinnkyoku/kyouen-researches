@@ -1,0 +1,267 @@
+{
+ "schema": "n11-class2-lane-cost67c-win7-certificates-20261115-v1",
+ "date": "2026-11-15",
+ "s5_target": "00000000000000801202000000200000",
+ "child_hex": "00000000000000801202000000202000",
+ "edge_cost": 67,
+ "lift_parents": {
+  "class2_parent1": {
+   "hex": "00000000000000801202000000200000",
+   "lift_stone": 13
+  },
+  "class4_s5_parent": {
+   "hex": "00000000000000801002000000080800",
+   "lift_stone": 57
+  }
+ },
+ "sweep_source": "class2-lane-cost67c-sweep-audit-20261115.json (67 candidates, 2 WIN7-D10 / 65 REFUTED-D10 / 0 capped, 41,942,979 nodes; v16 runner blob 0a4a86f6828dc010c89ff17596054336a6b6091f, depth 10, cap 1e9, andclose 1, pilot 3402 x9)",
+ "certificates": {
+  "64": {
+   "bit": 64,
+   "child_hex": "00000000000000801202000000202000",
+   "root_hex": "00000000000000811202000000202000",
+   "d4_canonical_hex": "00000000000000809102000000080800",
+   "verdict": "WIN7",
+   "rows": 34583,
+   "bytes": 1249941,
+   "md5": "8e19623951831a7e2ec8b7122468fec9",
+   "sha256": "9df6b7c72b8820c03617e897e59783ec85c8745c489e91ddad5680536118419d",
+   "whole_git_blob_sha": "677f5d8c2afdda382c6655905f74e5085f3bebab",
+   "storage": {
+    "layout": "split 2 parts (whole exceeds the repo single-file push threshold)",
+    "parts": [
+     {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost67c-certificates/bit64-root-00000000000000811202000000202000.cert.part1of2",
+      "bytes": 624995,
+      "md5": "70246f34ad29f5697b45dacdd2f00249",
+      "git_blob_sha": "25cbfe33f742474d46d17e8fcf0ae44d10ae1f37"
+     },
+     {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost67c-certificates/bit64-root-00000000000000811202000000202000.cert.part2of2",
+      "bytes": 624946,
+      "md5": "db08a5b95a30688f62d06df57216a95d",
+      "git_blob_sha": "5ecb43ef0ad72c71ff21f2ad8fc65c890996c628"
+     }
+    ]
+   },
+   "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost67c-certificates/bit64-root-00000000000000811202000000202000.cert",
+   "extraction_nodes": 7018550,
+   "fbt_drops": 0,
+   "rows_sorted_unique": true,
+   "sub_roots_total": 53,
+   "loser_first_moves": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    7,
+    8,
+    10,
+    14,
+    17,
+    18,
+    22,
+    24,
+    25,
+    28,
+    29,
+    30,
+    31,
+    32,
+    40,
+    41,
+    42,
+    44,
+    52,
+    66,
+    67,
+    74,
+    76,
+    78,
+    79,
+    84,
+    86,
+    87,
+    88,
+    91,
+    92,
+    94,
+    95,
+    96,
+    97,
+    100,
+    102,
+    103,
+    105,
+    106,
+    108,
+    110,
+    111,
+    113,
+    114,
+    116,
+    117,
+    118
+   ],
+   "terminal_range": [
+    13,
+    17
+   ],
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 53,
+    "match": true
+   },
+   "v16_sweep_nodes": 1393667,
+   "v15_anchor_crosscheck": {
+    "loss": true,
+    "nodes": 5068403
+   },
+   "d4_parent_orbits": [
+    "00000000000000009102000000080800",
+    "00000000000000801102000000080800",
+    "00000000000000801202000000202000",
+    "00000000000000808102000000080800",
+    "00000000000000809100000000080800",
+    "00000000000000809102000000000800",
+    "00000000000000809102000000080000"
+   ]
+  },
+  "96": {
+   "bit": 96,
+   "child_hex": "00000000000000801202000000202000",
+   "root_hex": "00000001000000801202000000202000",
+   "d4_canonical_hex": "00000000040000809002000000080800",
+   "verdict": "WIN7",
+   "rows": 35897,
+   "bytes": 1296064,
+   "md5": "2d9c6557745006616e613d5e77c2d851",
+   "sha256": "e07e05405542aeae5c294f49c39ed578a82752811e568621877243dc1f4028a7",
+   "whole_git_blob_sha": "bb6b62c63336a50ebc6a825289d9f468e9955ae2",
+   "storage": {
+    "layout": "split 2 parts (whole exceeds the repo single-file push threshold)",
+    "parts": [
+     {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost67c-certificates/bit96-root-00000001000000801202000000202000.cert.part1of2",
+      "bytes": 648052,
+      "md5": "512d3fd05e1d5f61c85c172b4186ffe0",
+      "git_blob_sha": "533ed72f4c8c18ad34f86b0caaa740f421a2e954"
+     },
+     {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost67c-certificates/bit96-root-00000001000000801202000000202000.cert.part2of2",
+      "bytes": 648012,
+      "md5": "b0c5f40d61dd370bcbc91de9e4360ca2",
+      "git_blob_sha": "678f90ab865ec33eaaea8d0ee11b1f216726a3c5"
+     }
+    ]
+   },
+   "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost67c-certificates/bit96-root-00000001000000801202000000202000.cert",
+   "extraction_nodes": 4536424,
+   "fbt_drops": 0,
+   "rows_sorted_unique": true,
+   "sub_roots_total": 53,
+   "loser_first_moves": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    6,
+    7,
+    8,
+    9,
+    10,
+    14,
+    17,
+    18,
+    22,
+    24,
+    25,
+    29,
+    31,
+    32,
+    33,
+    42,
+    44,
+    50,
+    52,
+    54,
+    55,
+    56,
+    58,
+    61,
+    64,
+    66,
+    67,
+    72,
+    74,
+    75,
+    77,
+    79,
+    84,
+    86,
+    88,
+    91,
+    94,
+    100,
+    102,
+    103,
+    105,
+    106,
+    110,
+    111,
+    113,
+    114,
+    116,
+    118
+   ],
+   "terminal_range": [
+    13,
+    17
+   ],
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 53,
+    "match": true
+   },
+   "v16_sweep_nodes": 974530,
+   "v15_anchor_crosscheck": {
+    "loss": true,
+    "nodes": 2436013
+   },
+   "d4_parent_orbits": [
+    "00000000000000801202000000202000",
+    "00000000020000003800000040000002",
+    "00000000040000003800000088000000",
+    "00000000040000009002000000080800",
+    "00000000040000808002000000080800",
+    "00000000040000809000000000080800",
+    "00000000040000809002000000000800"
+   ]
+  }
+ },
+ "totals": {
+  "certificates": 2,
+  "rows": 70480,
+  "bytes": 2546005,
+  "extraction_nodes": 11554974,
+  "sub_roots": 106,
+  "v15_crosscheck_nodes_sum": 7504416,
+  "v16_sweep_win_nodes_sum": 2368197
+ },
+ "verification_method": "every certificate verified by the repo BigInt strategy-tree verifier verify_win7_certificate_bigint_independent.mjs (2/2 PASS: first player wins within depth 10 from the 7-stone root under the certificate strategy; bit64 subroots 53/53, union conflicts 0/0, terminal range [13,17], visited 72383 / winner 46475 / loser 14045 / loser-reply edges 65414 / terminal rows 11863; bit96 subroots 53/53, union 0/0, [13,17], visited 75928 / winner 48819 / loser 14516 / loser-reply edges 67109 / terminal rows 12593) and a second independent implementation (perm-det4 Bareiss exact integer 4x4 determinants; root loser-mobility 53 = sub_roots_total and per-node mobility identical, and the child position is contained in the root's d4 parent orbits for both bits); extraction driver cert_driver63g.ts over the repo-verbatim class4_child1_cert_extractor_exact.ts with empty kill table, fbt_drops 0; v15 cross-engine anchors loss=true 2/2 (bit64 5068403 nodes, bit96 2436013 nodes; pilots 5949 x5), refuted anchors bits 1/32/116 loss=false with raw verdict agreement; v16 determinism rerun batch5 8/8 node-exact; GitHub code search: both root hexes and their D4 canonical forms 0 hits (no prior publication, no duplicates); remote git blob shas of all 4 published part files verified byte-exact against local sha1(blob N\\0+data), and each part join re-verified md5-identical to the local whole certificate",
+ "relation": "receipts for the cost-67c receipt fold; the fold must assert the canonical chain head at fold time and rebase on it (as of this publication the head is 1216/6631/523382/4901/387105 from class-frontier-cost63g-receipts-recompute-20261115.json, but a parallel cost-65l fold may land a newer head first), then fold these 2 receipts in published bit order with per-receipt marginal re-derived from the growing union",
+ "controls": {
+  "remote_blob_shas_verified": true,
+  "root_identity_child_or_bit": true,
+  "sub_roots_equal_bareiss_mobility": true,
+  "per_move_extraction_ok_all": true,
+  "both_bits_parts_join_whole_md5": true,
+  "win_bits_v15_v16_agree": true,
+  "second_independent_check": true,
+  "misplaced_path_cleanup": "the 4 part files were initially pushed to a wrong repo-root path (output/class2-lane-cost67c-certificates/); they were re-pushed to the correct experiment path and the misplaced copies deleted by follow-up commits, so the wrong-path directory no longer exists on main (raw 200 responses immediately after the delete commits were CDN cache)"
+ },
+ "frontier_impact": "certificates alone change no frontier counts; only the receipt fold (separate script, rebased on the latest chain head) updates the chain head",
+ "interpretation_guard": "WIN7 certificates prove a first-player win within depth 10 from the individual 7-stone roots only; REFUTED-D10 sweeps prove only absence of WIN7-D10; solved counts measure manifest coverage, not the game-theoretic value of any position; the standard 11x11 empty board, both two-stone roots {49,60}/{59,60}, S2 {59,60}, class 2 and class 4 all remain UNKNOWN"
+}

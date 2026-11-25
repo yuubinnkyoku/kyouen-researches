@@ -1,0 +1,37 @@
+{
+ "session": "class2-lane cost-69b sweep (long-term lane, 2026-11-14)",
+ "s6_child_hex": "00000000000000809082000000400000",
+ "s5_parent_hex": "00000000000000809082000000000000",
+ "s6_s7_edge_cost": 69,
+ "demand_classes": {
+  "c1": 2,
+  "c2": 2,
+  "c4": 0
+ },
+ "win7_d10": 0,
+ "win7_bits": [],
+ "refuted_d10": 69,
+ "capped": 0,
+ "total_nodes": 305754861,
+ "terminal_stone_range_all": [
+  13,
+  17
+ ],
+ "heaviest_bits": [
+  68,
+  119,
+  41
+ ],
+ "heaviest_fresh_rerun_node_exact": true,
+ "pilot_d6_controls": 5,
+ "pilot_d6_nodes": 5949,
+ "candidate_enumeration": "legal_candidates.py independent enumeration: 69 legal candidates, matches published edge cost 69",
+ "notes": "13th sterile child in the lane (all candidates REFUTED-D10, no WIN7, no capped). batchB contains an accidental duplicate pass (background job from a failed invocation completed and appended; both passes node-exact identical) - deduped copy pushed as raw-batchB. Heaviest bits 68/119/41 fresh rerun node-exact (15,565,883 / 11,048,413 / 10,780,096 nodes). Bit 75 terminal range [15,17], all others [13,17].",
+ "raw_batches": [
+  "class2-lane-cost69b-raw-batchA-20261114.jsonl",
+  "class2-lane-cost69b-raw-batchB-20261114.jsonl",
+  "class2-lane-cost69b-raw-batchC-20261114.jsonl",
+  "class2-lane-cost69b-raw-batchD-20261114.jsonl",
+  "class2-lane-cost69b-determinism-rerun-20261114.jsonl"
+ ]
+}

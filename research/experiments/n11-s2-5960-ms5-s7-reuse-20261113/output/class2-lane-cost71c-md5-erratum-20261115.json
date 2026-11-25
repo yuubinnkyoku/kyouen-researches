@@ -1,0 +1,25 @@
+{
+ "schema": "n11-class2-lane-cost71c-md5-erratum-20261115-v1",
+ "date": "2026-11-15",
+ "subject": "transcription typo in the published whole-file md5 of the bit-112 WIN7 certificate",
+ "correct_md5_bit112_whole": "e38d80cfd89ccc8e48264c36a9e7701a",
+ "published_typo": "e38d80cfd89ccc8e48264c36a9e7701a5 (33 characters: the correct 32-hex md5 with a stray trailing '5'; not a valid md5 output)",
+ "verification": {
+  "method": "the two published parts (git blob shas 494ed0532f688d96e9a678720728bf4ba31039b1 / c84955f6fbc183f92be5df379aa587acbe3442b1, part md5s 8ae38925c2878839dda65ada0ca8831a / 832120f7a84086f6249716556c73f1d6) were concatenated byte-exactly; md5(join) == md5(whole file) == e38d80cfd89ccc8e48264c36a9e7701a (2,179,432 bytes); sha256(whole) == 314c456b12cd57b51886ed96e7f3456fa61b8601e7c80e193b0ec01b8d6e2494; re-derived independently by the cost-71c receipts fold script recompute_frontier_cost71c_receipts_20261115.py (git blob 3ea4824b0e0441eed3546aa9b7b68018d397d05f), which asserts the true md5, detects the published stray-trailing-5 field and records it in the fold head JSON controls"
+ },
+ "affected_published_documents": [
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost71c-win7-certificates-20261115.json (certificates[bit=112].join_md5_equals_whole_md5)",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost71c-inflight-20261115.json (v2: results.win7_certificates.bit112.join_md5_equals_whole_md5; corrected in v3)",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost71c-sweep-audit-20261115.json (certificate_status prose)",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost71c-certificates/README.md (rejoin instruction)",
+  "research/log/2026-11-15-n11-class2-lane-cost71c-sweep-certificates.md",
+  "research/knowledge/items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md (2026-11-15 cost-71c sweep section)"
+ ],
+ "unaffected": {
+  "certificate_bytes": "the bit-24 certificate (md5 9e63e160ba08a7edc827b81dbf9067a5, git blob 8d9b4459f489b3224c64b4f6bbd37b8ff2dd23e3) and both bit-112 parts are byte-exact as published; the join is exact",
+  "part_md5s": "both part md5s in the manifest are correct 32-hex md5s",
+  "verifications": "the BigInt and Bareiss independent verifications (47/56 sub-roots, union 0/0) verified the certificate bytes, not the typo'd string; their PASS verdicts are unaffected",
+  "fold_arithmetic": "the receipts fold uses covers(root) geometry; no md5 enters the frontier arithmetic"
+ },
+ "handling": "published historical documents are left byte-unmodified for provenance; this erratum plus the claim v3 fold record (class2-lane-cost71c-inflight-20261115.json) carry the correction; the fold head JSON class-frontier-cost71c-receipts-recompute-20261115.json records the typo detection in controls.bit112_join_md5_typo_detected"
+}

@@ -1,0 +1,2123 @@
+{
+ "batch_bits": {
+  "1": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   8,
+   14
+  ],
+  "2": [
+   16,
+   18,
+   21,
+   23,
+   25,
+   29,
+   33,
+   34
+  ],
+  "3": [
+   35,
+   38,
+   42,
+   43,
+   44,
+   45,
+   46,
+   49
+  ],
+  "4": [
+   53,
+   54,
+   66,
+   68,
+   69,
+   74,
+   76,
+   77
+  ],
+  "5": [
+   78,
+   79,
+   82,
+   83,
+   85,
+   86,
+   87,
+   88
+  ],
+  "6": [
+   89,
+   91,
+   92,
+   95,
+   96,
+   97,
+   98,
+   99
+  ],
+  "7": [
+   101,
+   102,
+   103,
+   105,
+   106,
+   107,
+   108,
+   109
+  ],
+  "8": [
+   111,
+   112,
+   113,
+   114,
+   115,
+   116,
+   117,
+   120
+  ]
+ },
+ "checks": {
+  "C1_all_64_bits_compared": true,
+  "C2_node_exact_64": true,
+  "C3_all_fields_equal_except_ms_64": true,
+  "C4_pilot_d6_8_of_8": true,
+  "C5_win_bits_match_claim": true,
+  "C6_refuted_41": true,
+  "C7_capped_0": true,
+  "C8_node_sum_matches_claim": true,
+  "C9_child_and_engine_pins": true
+ },
+ "child": "00000000000000403800000008100000",
+ "claim_v2_blob": "68e4878094b78eaf0a465033d0289a6db5d94861",
+ "date": "2026-11-16",
+ "engine": "class4_child1_runner_v16.ts (repo-verbatim, git blob 0a4a86f6828dc010c89ff17596054336a6b6091f)",
+ "engine_invocation": "node --experimental-strip-types class4_child1_runner_v16.ts --child 00000000000000403800000008100000 --bits <batch> --depth 10 --cap 1000000000 --andclose 1 (pilot_d6 control on; CLI default cap 950000 explicitly raised to 1e9)",
+ "interpretation_guard": "independent full re-execution of the published depth-10 capped sweep; node-exact agreement confirms the published records but creates no verdicts beyond them; WIN7-D10 proves a first-player win within depth 10 from the individual 7-stone roots only; REFUTED-D10 is not a LOSS proof; the 11x11 empty board, the two-stone roots {49,60} and {59,60}, S2 {59,60} and classes 1/2/4 all remain UNKNOWN",
+ "per_bit": [
+  {
+   "all_fields_equal_except_ms": true,
+   "batch": 1,
+   "bit": 1,
+   "node_exact": true,
+   "published": {
+    "andclose": true,
+    "bit": 1,
+    "capped": false,
+    "loss": false,
+    "nodes": 108230,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "published_nodes": 108230,
+   "rerun": {
+    "andclose": true,
+    "bit": 1,
+    "capped": false,
+    "loss": false,
+    "nodes": 108230,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "rerun_nodes": 108230,
+   "verdict": "REFUTED-D10"
+  },
+  {
+   "all_fields_equal_except_ms": true,
+   "batch": 1,
+   "bit": 2,
+   "node_exact": true,
+   "published": {
+    "andclose": true,
+    "bit": 2,
+    "capped": false,
+    "loss": false,
+    "nodes": 131493,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "published_nodes": 131493,
+   "rerun": {
+    "andclose": true,
+    "bit": 2,
+    "capped": false,
+    "loss": false,
+    "nodes": 131493,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "rerun_nodes": 131493,
+   "verdict": "REFUTED-D10"
+  },
+  {
+   "all_fields_equal_except_ms": true,
+   "batch": 1,
+   "bit": 3,
+   "node_exact": true,
+   "published": {
+    "andclose": true,
+    "bit": 3,
+    "capped": false,
+    "loss": false,
+    "nodes": 559638,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "published_nodes": 559638,
+   "rerun": {
+    "andclose": true,
+    "bit": 3,
+    "capped": false,
+    "loss": false,
+    "nodes": 559638,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "rerun_nodes": 559638,
+   "verdict": "REFUTED-D10"
+  },
+  {
+   "all_fields_equal_except_ms": true,
+   "batch": 1,
+   "bit": 4,
+   "node_exact": true,
+   "published": {
+    "andclose": true,
+    "bit": 4,
+    "capped": false,
+    "loss": true,
+    "nodes": 1331255,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "published_nodes": 1331255,
+   "rerun": {
+    "andclose": true,
+    "bit": 4,
+    "capped": false,
+    "loss": true,
+    "nodes": 1331255,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "rerun_nodes": 1331255,
+   "verdict": "WIN7-D10"
+  },
+  {
+   "all_fields_equal_except_ms": true,
+   "batch": 1,
+   "bit": 5,
+   "node_exact": true,
+   "published": {
+    "andclose": true,
+    "bit": 5,
+    "capped": false,
+    "loss": false,
+    "nodes": 254303,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "published_nodes": 254303,
+   "rerun": {
+    "andclose": true,
+    "bit": 5,
+    "capped": false,
+    "loss": false,
+    "nodes": 254303,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "rerun_nodes": 254303,
+   "verdict": "REFUTED-D10"
+  },
+  {
+   "all_fields_equal_except_ms": true,
+   "batch": 1,
+   "bit": 6,
+   "node_exact": true,
+   "published": {
+    "andclose": true,
+    "bit": 6,
+    "capped": false,
+    "loss": true,
+    "nodes": 401548,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "published_nodes": 401548,
+   "rerun": {
+    "andclose": true,
+    "bit": 6,
+    "capped": false,
+    "loss": true,
+    "nodes": 401548,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "rerun_nodes": 401548,
+   "verdict": "WIN7-D10"
+  },
+  {
+   "all_fields_equal_except_ms": true,
+   "batch": 1,
+   "bit": 8,
+   "node_exact": true,
+   "published": {
+    "andclose": true,
+    "bit": 8,
+    "capped": false,
+    "loss": true,
+    "nodes": 1188608,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "published_nodes": 1188608,
+   "rerun": {
+    "andclose": true,
+    "bit": 8,
+    "capped": false,
+    "loss": true,
+    "nodes": 1188608,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "rerun_nodes": 1188608,
+   "verdict": "WIN7-D10"
+  },
+  {
+   "all_fields_equal_except_ms": true,
+   "batch": 1,
+   "bit": 14,
+   "node_exact": true,
+   "published": {
+    "andclose": true,
+    "bit": 14,
+    "capped": false,
+    "loss": false,
+    "nodes": 452441,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "published_nodes": 452441,
+   "rerun": {
+    "andclose": true,
+    "bit": 14,
+    "capped": false,
+    "loss": false,
+    "nodes": 452441,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "rerun_nodes": 452441,
+   "verdict": "REFUTED-D10"
+  },
+  {
+   "all_fields_equal_except_ms": true,
+   "batch": 2,
+   "bit": 16,
+   "node_exact": true,
+   "published": {
+    "andclose": true,
+    "bit": 16,
+    "capped": false,
+    "loss": false,
+    "nodes": 1718570,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "published_nodes": 1718570,
+   "rerun": {
+    "andclose": true,
+    "bit": 16,
+    "capped": false,
+    "loss": false,
+    "nodes": 1718570,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "rerun_nodes": 1718570,
+   "verdict": "REFUTED-D10"
+  },
+  {
+   "all_fields_equal_except_ms": true,
+   "batch": 2,
+   "bit": 18,
+   "node_exact": true,
+   "published": {
+    "andclose": true,
+    "bit": 18,
+    "capped": false,
+    "loss": false,
+    "nodes": 752212,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "published_nodes": 752212,
+   "rerun": {
+    "andclose": true,
+    "bit": 18,
+    "capped": false,
+    "loss": false,
+    "nodes": 752212,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "rerun_nodes": 752212,
+   "verdict": "REFUTED-D10"
+  },
+  {
+   "all_fields_equal_except_ms": true,
+   "batch": 2,
+   "bit": 21,
+   "node_exact": true,
+   "published": {
+    "andclose": true,
+    "bit": 21,
+    "capped": false,
+    "loss": false,
+    "nodes": 1151243,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "published_nodes": 1151243,
+   "rerun": {
+    "andclose": true,
+    "bit": 21,
+    "capped": false,
+    "loss": false,
+    "nodes": 1151243,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "rerun_nodes": 1151243,
+   "verdict": "REFUTED-D10"
+  },
+  {
+   "all_fields_equal_except_ms": true,
+   "batch": 2,
+   "bit": 23,
+   "node_exact": true,
+   "published": {
+    "andclose": true,
+    "bit": 23,
+    "capped": false,
+    "loss": false,
+    "nodes": 739871,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "published_nodes": 739871,
+   "rerun": {
+    "andclose": true,
+    "bit": 23,
+    "capped": false,
+    "loss": false,
+    "nodes": 739871,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "rerun_nodes": 739871,
+   "verdict": "REFUTED-D10"
+  },
+  {
+   "all_fields_equal_except_ms": true,
+   "batch": 2,
+   "bit": 25,
+   "node_exact": true,
+   "published": {
+    "andclose": true,
+    "bit": 25,
+    "capped": false,
+    "loss": false,
+    "nodes": 2359293,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "published_nodes": 2359293,
+   "rerun": {
+    "andclose": true,
+    "bit": 25,
+    "capped": false,
+    "loss": false,
+    "nodes": 2359293,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "rerun_nodes": 2359293,
+   "verdict": "REFUTED-D10"
+  },
+  {
+   "all_fields_equal_except_ms": true,
+   "batch": 2,
+   "bit": 29,
+   "node_exact": true,
+   "published": {
+    "andclose": true,
+    "bit": 29,
+    "capped": false,
+    "loss": false,
+    "nodes": 8595,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "published_nodes": 8595,
+   "rerun": {
+    "andclose": true,
+    "bit": 29,
+    "capped": false,
+    "loss": false,
+    "nodes": 8595,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "rerun_nodes": 8595,
+   "verdict": "REFUTED-D10"
+  },
+  {
+   "all_fields_equal_except_ms": true,
+   "batch": 2,
+   "bit": 33,
+   "node_exact": true,
+   "published": {
+    "andclose": true,
+    "bit": 33,
+    "capped": false,
+    "loss": true,
+    "nodes": 2824644,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "published_nodes": 2824644,
+   "rerun": {
+    "andclose": true,
+    "bit": 33,
+    "capped": false,
+    "loss": true,
+    "nodes": 2824644,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "rerun_nodes": 2824644,
+   "verdict": "WIN7-D10"
+  },
+  {
+   "all_fields_equal_except_ms": true,
+   "batch": 2,
+   "bit": 34,
+   "node_exact": true,
+   "published": {
+    "andclose": true,
+    "bit": 34,
+    "capped": false,
+    "loss": false,
+    "nodes": 884272,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "published_nodes": 884272,
+   "rerun": {
+    "andclose": true,
+    "bit": 34,
+    "capped": false,
+    "loss": false,
+    "nodes": 884272,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "rerun_nodes": 884272,
+   "verdict": "REFUTED-D10"
+  },
+  {
+   "all_fields_equal_except_ms": true,
+   "batch": 3,
+   "bit": 35,
+   "node_exact": true,
+   "published": {
+    "andclose": true,
+    "bit": 35,
+    "capped": false,
+    "loss": false,
+    "nodes": 985947,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "published_nodes": 985947,
+   "rerun": {
+    "andclose": true,
+    "bit": 35,
+    "capped": false,
+    "loss": false,
+    "nodes": 985947,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "rerun_nodes": 985947,
+   "verdict": "REFUTED-D10"
+  },
+  {
+   "all_fields_equal_except_ms": true,
+   "batch": 3,
+   "bit": 38,
+   "node_exact": true,
+   "published": {
+    "andclose": true,
+    "bit": 38,
+    "capped": false,
+    "loss": true,
+    "nodes": 372619,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "published_nodes": 372619,
+   "rerun": {
+    "andclose": true,
+    "bit": 38,
+    "capped": false,
+    "loss": true,
+    "nodes": 372619,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "rerun_nodes": 372619,
+   "verdict": "WIN7-D10"
+  },
+  {
+   "all_fields_equal_except_ms": true,
+   "batch": 3,
+   "bit": 42,
+   "node_exact": true,
+   "published": {
+    "andclose": true,
+    "bit": 42,
+    "capped": false,
+    "loss": true,
+    "nodes": 1332831,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "published_nodes": 1332831,
+   "rerun": {
+    "andclose": true,
+    "bit": 42,
+    "capped": false,
+    "loss": true,
+    "nodes": 1332831,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "rerun_nodes": 1332831,
+   "verdict": "WIN7-D10"
+  },
+  {
+   "all_fields_equal_except_ms": true,
+   "batch": 3,
+   "bit": 43,
+   "node_exact": true,
+   "published": {
+    "andclose": true,
+    "bit": 43,
+    "capped": false,
+    "loss": false,
+    "nodes": 28732,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "published_nodes": 28732,
+   "rerun": {
+    "andclose": true,
+    "bit": 43,
+    "capped": false,
+    "loss": false,
+    "nodes": 28732,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "rerun_nodes": 28732,
+   "verdict": "REFUTED-D10"
+  },
+  {
+   "all_fields_equal_except_ms": true,
+   "batch": 3,
+   "bit": 44,
+   "node_exact": true,
+   "published": {
+    "andclose": true,
+    "bit": 44,
+    "capped": false,
+    "loss": true,
+    "nodes": 990832,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "published_nodes": 990832,
+   "rerun": {
+    "andclose": true,
+    "bit": 44,
+    "capped": false,
+    "loss": true,
+    "nodes": 990832,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "rerun_nodes": 990832,
+   "verdict": "WIN7-D10"
+  },
+  {
+   "all_fields_equal_except_ms": true,
+   "batch": 3,
+   "bit": 45,
+   "node_exact": true,
+   "published": {
+    "andclose": true,
+    "bit": 45,
+    "capped": false,
+    "loss": false,
+    "nodes": 125398,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "published_nodes": 125398,
+   "rerun": {
+    "andclose": true,
+    "bit": 45,
+    "capped": false,
+    "loss": false,
+    "nodes": 125398,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "rerun_nodes": 125398,
+   "verdict": "REFUTED-D10"
+  },
+  {
+   "all_fields_equal_except_ms": true,
+   "batch": 3,
+   "bit": 46,
+   "node_exact": true,
+   "published": {
+    "andclose": true,
+    "bit": 46,
+    "capped": false,
+    "loss": false,
+    "nodes": 442634,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "published_nodes": 442634,
+   "rerun": {
+    "andclose": true,
+    "bit": 46,
+    "capped": false,
+    "loss": false,
+    "nodes": 442634,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "rerun_nodes": 442634,
+   "verdict": "REFUTED-D10"
+  },
+  {
+   "all_fields_equal_except_ms": true,
+   "batch": 3,
+   "bit": 49,
+   "node_exact": true,
+   "published": {
+    "andclose": true,
+    "bit": 49,
+    "capped": false,
+    "loss": true,
+    "nodes": 415208,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "published_nodes": 415208,
+   "rerun": {
+    "andclose": true,
+    "bit": 49,
+    "capped": false,
+    "loss": true,
+    "nodes": 415208,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "rerun_nodes": 415208,
+   "verdict": "WIN7-D10"
+  },
+  {
+   "all_fields_equal_except_ms": true,
+   "batch": 4,
+   "bit": 53,
+   "node_exact": true,
+   "published": {
+    "andclose": true,
+    "bit": 53,
+    "capped": false,
+    "loss": false,
+    "nodes": 49418,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "published_nodes": 49418,
+   "rerun": {
+    "andclose": true,
+    "bit": 53,
+    "capped": false,
+    "loss": false,
+    "nodes": 49418,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "rerun_nodes": 49418,
+   "verdict": "REFUTED-D10"
+  },
+  {
+   "all_fields_equal_except_ms": true,
+   "batch": 4,
+   "bit": 54,
+   "node_exact": true,
+   "published": {
+    "andclose": true,
+    "bit": 54,
+    "capped": false,
+    "loss": false,
+    "nodes": 830604,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "published_nodes": 830604,
+   "rerun": {
+    "andclose": true,
+    "bit": 54,
+    "capped": false,
+    "loss": false,
+    "nodes": 830604,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "rerun_nodes": 830604,
+   "verdict": "REFUTED-D10"
+  },
+  {
+   "all_fields_equal_except_ms": true,
+   "batch": 4,
+   "bit": 66,
+   "node_exact": true,
+   "published": {
+    "andclose": true,
+    "bit": 66,
+    "capped": false,
+    "loss": false,
+    "nodes": 3613225,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "published_nodes": 3613225,
+   "rerun": {
+    "andclose": true,
+    "bit": 66,
+    "capped": false,
+    "loss": false,
+    "nodes": 3613225,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "rerun_nodes": 3613225,
+   "verdict": "REFUTED-D10"
+  },
+  {
+   "all_fields_equal_except_ms": true,
+   "batch": 4,
+   "bit": 68,
+   "node_exact": true,
+   "published": {
+    "andclose": true,
+    "bit": 68,
+    "capped": false,
+    "loss": true,
+    "nodes": 1302871,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "published_nodes": 1302871,
+   "rerun": {
+    "andclose": true,
+    "bit": 68,
+    "capped": false,
+    "loss": true,
+    "nodes": 1302871,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "rerun_nodes": 1302871,
+   "verdict": "WIN7-D10"
+  },
+  {
+   "all_fields_equal_except_ms": true,
+   "batch": 4,
+   "bit": 69,
+   "node_exact": true,
+   "published": {
+    "andclose": true,
+    "bit": 69,
+    "capped": false,
+    "loss": false,
+    "nodes": 83011,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "published_nodes": 83011,
+   "rerun": {
+    "andclose": true,
+    "bit": 69,
+    "capped": false,
+    "loss": false,
+    "nodes": 83011,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "rerun_nodes": 83011,
+   "verdict": "REFUTED-D10"
+  },
+  {
+   "all_fields_equal_except_ms": true,
+   "batch": 4,
+   "bit": 74,
+   "node_exact": true,
+   "published": {
+    "andclose": true,
+    "bit": 74,
+    "capped": false,
+    "loss": true,
+    "nodes": 811946,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "published_nodes": 811946,
+   "rerun": {
+    "andclose": true,
+    "bit": 74,
+    "capped": false,
+    "loss": true,
+    "nodes": 811946,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "rerun_nodes": 811946,
+   "verdict": "WIN7-D10"
+  },
+  {
+   "all_fields_equal_except_ms": true,
+   "batch": 4,
+   "bit": 76,
+   "node_exact": true,
+   "published": {
+    "andclose": true,
+    "bit": 76,
+    "capped": false,
+    "loss": true,
+    "nodes": 1021006,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "published_nodes": 1021006,
+   "rerun": {
+    "andclose": true,
+    "bit": 76,
+    "capped": false,
+    "loss": true,
+    "nodes": 1021006,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "rerun_nodes": 1021006,
+   "verdict": "WIN7-D10"
+  },
+  {
+   "all_fields_equal_except_ms": true,
+   "batch": 4,
+   "bit": 77,
+   "node_exact": true,
+   "published": {
+    "andclose": true,
+    "bit": 77,
+    "capped": false,
+    "loss": true,
+    "nodes": 1003325,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "published_nodes": 1003325,
+   "rerun": {
+    "andclose": true,
+    "bit": 77,
+    "capped": false,
+    "loss": true,
+    "nodes": 1003325,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "rerun_nodes": 1003325,
+   "verdict": "WIN7-D10"
+  },
+  {
+   "all_fields_equal_except_ms": true,
+   "batch": 5,
+   "bit": 78,
+   "node_exact": true,
+   "published": {
+    "andclose": true,
+    "bit": 78,
+    "capped": false,
+    "loss": true,
+    "nodes": 919395,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "published_nodes": 919395,
+   "rerun": {
+    "andclose": true,
+    "bit": 78,
+    "capped": false,
+    "loss": true,
+    "nodes": 919395,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "rerun_nodes": 919395,
+   "verdict": "WIN7-D10"
+  },
+  {
+   "all_fields_equal_except_ms": true,
+   "batch": 5,
+   "bit": 79,
+   "node_exact": true,
+   "published": {
+    "andclose": true,
+    "bit": 79,
+    "capped": false,
+    "loss": true,
+    "nodes": 407865,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "published_nodes": 407865,
+   "rerun": {
+    "andclose": true,
+    "bit": 79,
+    "capped": false,
+    "loss": true,
+    "nodes": 407865,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "rerun_nodes": 407865,
+   "verdict": "WIN7-D10"
+  },
+  {
+   "all_fields_equal_except_ms": true,
+   "batch": 5,
+   "bit": 82,
+   "node_exact": true,
+   "published": {
+    "andclose": true,
+    "bit": 82,
+    "capped": false,
+    "loss": false,
+    "nodes": 32660,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "published_nodes": 32660,
+   "rerun": {
+    "andclose": true,
+    "bit": 82,
+    "capped": false,
+    "loss": false,
+    "nodes": 32660,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "rerun_nodes": 32660,
+   "verdict": "REFUTED-D10"
+  },
+  {
+   "all_fields_equal_except_ms": true,
+   "batch": 5,
+   "bit": 83,
+   "node_exact": true,
+   "published": {
+    "andclose": true,
+    "bit": 83,
+    "capped": false,
+    "loss": true,
+    "nodes": 900753,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "published_nodes": 900753,
+   "rerun": {
+    "andclose": true,
+    "bit": 83,
+    "capped": false,
+    "loss": true,
+    "nodes": 900753,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "rerun_nodes": 900753,
+   "verdict": "WIN7-D10"
+  },
+  {
+   "all_fields_equal_except_ms": true,
+   "batch": 5,
+   "bit": 85,
+   "node_exact": true,
+   "published": {
+    "andclose": true,
+    "bit": 85,
+    "capped": false,
+    "loss": false,
+    "nodes": 65585,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "published_nodes": 65585,
+   "rerun": {
+    "andclose": true,
+    "bit": 85,
+    "capped": false,
+    "loss": false,
+    "nodes": 65585,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "rerun_nodes": 65585,
+   "verdict": "REFUTED-D10"
+  },
+  {
+   "all_fields_equal_except_ms": true,
+   "batch": 5,
+   "bit": 86,
+   "node_exact": true,
+   "published": {
+    "andclose": true,
+    "bit": 86,
+    "capped": false,
+    "loss": false,
+    "nodes": 810726,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "published_nodes": 810726,
+   "rerun": {
+    "andclose": true,
+    "bit": 86,
+    "capped": false,
+    "loss": false,
+    "nodes": 810726,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "rerun_nodes": 810726,
+   "verdict": "REFUTED-D10"
+  },
+  {
+   "all_fields_equal_except_ms": true,
+   "batch": 5,
+   "bit": 87,
+   "node_exact": true,
+   "published": {
+    "andclose": true,
+    "bit": 87,
+    "capped": false,
+    "loss": false,
+    "nodes": 522411,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "published_nodes": 522411,
+   "rerun": {
+    "andclose": true,
+    "bit": 87,
+    "capped": false,
+    "loss": false,
+    "nodes": 522411,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "rerun_nodes": 522411,
+   "verdict": "REFUTED-D10"
+  },
+  {
+   "all_fields_equal_except_ms": true,
+   "batch": 5,
+   "bit": 88,
+   "node_exact": true,
+   "published": {
+    "andclose": true,
+    "bit": 88,
+    "capped": false,
+    "loss": false,
+    "nodes": 752771,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "published_nodes": 752771,
+   "rerun": {
+    "andclose": true,
+    "bit": 88,
+    "capped": false,
+    "loss": false,
+    "nodes": 752771,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "rerun_nodes": 752771,
+   "verdict": "REFUTED-D10"
+  },
+  {
+   "all_fields_equal_except_ms": true,
+   "batch": 6,
+   "bit": 89,
+   "node_exact": true,
+   "published": {
+    "andclose": true,
+    "bit": 89,
+    "capped": false,
+    "loss": true,
+    "nodes": 819002,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "published_nodes": 819002,
+   "rerun": {
+    "andclose": true,
+    "bit": 89,
+    "capped": false,
+    "loss": true,
+    "nodes": 819002,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "rerun_nodes": 819002,
+   "verdict": "WIN7-D10"
+  },
+  {
+   "all_fields_equal_except_ms": true,
+   "batch": 6,
+   "bit": 91,
+   "node_exact": true,
+   "published": {
+    "andclose": true,
+    "bit": 91,
+    "capped": false,
+    "loss": true,
+    "nodes": 161086,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "published_nodes": 161086,
+   "rerun": {
+    "andclose": true,
+    "bit": 91,
+    "capped": false,
+    "loss": true,
+    "nodes": 161086,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "rerun_nodes": 161086,
+   "verdict": "WIN7-D10"
+  },
+  {
+   "all_fields_equal_except_ms": true,
+   "batch": 6,
+   "bit": 92,
+   "node_exact": true,
+   "published": {
+    "andclose": true,
+    "bit": 92,
+    "capped": false,
+    "loss": false,
+    "nodes": 391327,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "published_nodes": 391327,
+   "rerun": {
+    "andclose": true,
+    "bit": 92,
+    "capped": false,
+    "loss": false,
+    "nodes": 391327,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "rerun_nodes": 391327,
+   "verdict": "REFUTED-D10"
+  },
+  {
+   "all_fields_equal_except_ms": true,
+   "batch": 6,
+   "bit": 95,
+   "node_exact": true,
+   "published": {
+    "andclose": true,
+    "bit": 95,
+    "capped": false,
+    "loss": false,
+    "nodes": 141708,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "published_nodes": 141708,
+   "rerun": {
+    "andclose": true,
+    "bit": 95,
+    "capped": false,
+    "loss": false,
+    "nodes": 141708,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "rerun_nodes": 141708,
+   "verdict": "REFUTED-D10"
+  },
+  {
+   "all_fields_equal_except_ms": true,
+   "batch": 6,
+   "bit": 96,
+   "node_exact": true,
+   "published": {
+    "andclose": true,
+    "bit": 96,
+    "capped": false,
+    "loss": false,
+    "nodes": 268785,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "published_nodes": 268785,
+   "rerun": {
+    "andclose": true,
+    "bit": 96,
+    "capped": false,
+    "loss": false,
+    "nodes": 268785,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "rerun_nodes": 268785,
+   "verdict": "REFUTED-D10"
+  },
+  {
+   "all_fields_equal_except_ms": true,
+   "batch": 6,
+   "bit": 97,
+   "node_exact": true,
+   "published": {
+    "andclose": true,
+    "bit": 97,
+    "capped": false,
+    "loss": false,
+    "nodes": 104475,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "published_nodes": 104475,
+   "rerun": {
+    "andclose": true,
+    "bit": 97,
+    "capped": false,
+    "loss": false,
+    "nodes": 104475,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "rerun_nodes": 104475,
+   "verdict": "REFUTED-D10"
+  },
+  {
+   "all_fields_equal_except_ms": true,
+   "batch": 6,
+   "bit": 98,
+   "node_exact": true,
+   "published": {
+    "andclose": true,
+    "bit": 98,
+    "capped": false,
+    "loss": false,
+    "nodes": 163689,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "published_nodes": 163689,
+   "rerun": {
+    "andclose": true,
+    "bit": 98,
+    "capped": false,
+    "loss": false,
+    "nodes": 163689,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "rerun_nodes": 163689,
+   "verdict": "REFUTED-D10"
+  },
+  {
+   "all_fields_equal_except_ms": true,
+   "batch": 6,
+   "bit": 99,
+   "node_exact": true,
+   "published": {
+    "andclose": true,
+    "bit": 99,
+    "capped": false,
+    "loss": false,
+    "nodes": 473174,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "published_nodes": 473174,
+   "rerun": {
+    "andclose": true,
+    "bit": 99,
+    "capped": false,
+    "loss": false,
+    "nodes": 473174,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "rerun_nodes": 473174,
+   "verdict": "REFUTED-D10"
+  },
+  {
+   "all_fields_equal_except_ms": true,
+   "batch": 7,
+   "bit": 101,
+   "node_exact": true,
+   "published": {
+    "andclose": true,
+    "bit": 101,
+    "capped": false,
+    "loss": true,
+    "nodes": 1113141,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "published_nodes": 1113141,
+   "rerun": {
+    "andclose": true,
+    "bit": 101,
+    "capped": false,
+    "loss": true,
+    "nodes": 1113141,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "rerun_nodes": 1113141,
+   "verdict": "WIN7-D10"
+  },
+  {
+   "all_fields_equal_except_ms": true,
+   "batch": 7,
+   "bit": 102,
+   "node_exact": true,
+   "published": {
+    "andclose": true,
+    "bit": 102,
+    "capped": false,
+    "loss": false,
+    "nodes": 48403,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "published_nodes": 48403,
+   "rerun": {
+    "andclose": true,
+    "bit": 102,
+    "capped": false,
+    "loss": false,
+    "nodes": 48403,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "rerun_nodes": 48403,
+   "verdict": "REFUTED-D10"
+  },
+  {
+   "all_fields_equal_except_ms": true,
+   "batch": 7,
+   "bit": 103,
+   "node_exact": true,
+   "published": {
+    "andclose": true,
+    "bit": 103,
+    "capped": false,
+    "loss": false,
+    "nodes": 253711,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "published_nodes": 253711,
+   "rerun": {
+    "andclose": true,
+    "bit": 103,
+    "capped": false,
+    "loss": false,
+    "nodes": 253711,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "rerun_nodes": 253711,
+   "verdict": "REFUTED-D10"
+  },
+  {
+   "all_fields_equal_except_ms": true,
+   "batch": 7,
+   "bit": 105,
+   "node_exact": true,
+   "published": {
+    "andclose": true,
+    "bit": 105,
+    "capped": false,
+    "loss": false,
+    "nodes": 263914,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "published_nodes": 263914,
+   "rerun": {
+    "andclose": true,
+    "bit": 105,
+    "capped": false,
+    "loss": false,
+    "nodes": 263914,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "rerun_nodes": 263914,
+   "verdict": "REFUTED-D10"
+  },
+  {
+   "all_fields_equal_except_ms": true,
+   "batch": 7,
+   "bit": 106,
+   "node_exact": true,
+   "published": {
+    "andclose": true,
+    "bit": 106,
+    "capped": false,
+    "loss": false,
+    "nodes": 489604,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "published_nodes": 489604,
+   "rerun": {
+    "andclose": true,
+    "bit": 106,
+    "capped": false,
+    "loss": false,
+    "nodes": 489604,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "rerun_nodes": 489604,
+   "verdict": "REFUTED-D10"
+  },
+  {
+   "all_fields_equal_except_ms": true,
+   "batch": 7,
+   "bit": 107,
+   "node_exact": true,
+   "published": {
+    "andclose": true,
+    "bit": 107,
+    "capped": false,
+    "loss": false,
+    "nodes": 885005,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "published_nodes": 885005,
+   "rerun": {
+    "andclose": true,
+    "bit": 107,
+    "capped": false,
+    "loss": false,
+    "nodes": 885005,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "rerun_nodes": 885005,
+   "verdict": "REFUTED-D10"
+  },
+  {
+   "all_fields_equal_except_ms": true,
+   "batch": 7,
+   "bit": 108,
+   "node_exact": true,
+   "published": {
+    "andclose": true,
+    "bit": 108,
+    "capped": false,
+    "loss": false,
+    "nodes": 527814,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "published_nodes": 527814,
+   "rerun": {
+    "andclose": true,
+    "bit": 108,
+    "capped": false,
+    "loss": false,
+    "nodes": 527814,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "rerun_nodes": 527814,
+   "verdict": "REFUTED-D10"
+  },
+  {
+   "all_fields_equal_except_ms": true,
+   "batch": 7,
+   "bit": 109,
+   "node_exact": true,
+   "published": {
+    "andclose": true,
+    "bit": 109,
+    "capped": false,
+    "loss": true,
+    "nodes": 624995,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "published_nodes": 624995,
+   "rerun": {
+    "andclose": true,
+    "bit": 109,
+    "capped": false,
+    "loss": true,
+    "nodes": 624995,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "rerun_nodes": 624995,
+   "verdict": "WIN7-D10"
+  },
+  {
+   "all_fields_equal_except_ms": true,
+   "batch": 8,
+   "bit": 111,
+   "node_exact": true,
+   "published": {
+    "andclose": true,
+    "bit": 111,
+    "capped": false,
+    "loss": false,
+    "nodes": 519861,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "published_nodes": 519861,
+   "rerun": {
+    "andclose": true,
+    "bit": 111,
+    "capped": false,
+    "loss": false,
+    "nodes": 519861,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "rerun_nodes": 519861,
+   "verdict": "REFUTED-D10"
+  },
+  {
+   "all_fields_equal_except_ms": true,
+   "batch": 8,
+   "bit": 112,
+   "node_exact": true,
+   "published": {
+    "andclose": true,
+    "bit": 112,
+    "capped": false,
+    "loss": false,
+    "nodes": 1026035,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "published_nodes": 1026035,
+   "rerun": {
+    "andclose": true,
+    "bit": 112,
+    "capped": false,
+    "loss": false,
+    "nodes": 1026035,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "rerun_nodes": 1026035,
+   "verdict": "REFUTED-D10"
+  },
+  {
+   "all_fields_equal_except_ms": true,
+   "batch": 8,
+   "bit": 113,
+   "node_exact": true,
+   "published": {
+    "andclose": true,
+    "bit": 113,
+    "capped": false,
+    "loss": true,
+    "nodes": 1439496,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "published_nodes": 1439496,
+   "rerun": {
+    "andclose": true,
+    "bit": 113,
+    "capped": false,
+    "loss": true,
+    "nodes": 1439496,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "rerun_nodes": 1439496,
+   "verdict": "WIN7-D10"
+  },
+  {
+   "all_fields_equal_except_ms": true,
+   "batch": 8,
+   "bit": 114,
+   "node_exact": true,
+   "published": {
+    "andclose": true,
+    "bit": 114,
+    "capped": false,
+    "loss": true,
+    "nodes": 726233,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "published_nodes": 726233,
+   "rerun": {
+    "andclose": true,
+    "bit": 114,
+    "capped": false,
+    "loss": true,
+    "nodes": 726233,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "rerun_nodes": 726233,
+   "verdict": "WIN7-D10"
+  },
+  {
+   "all_fields_equal_except_ms": true,
+   "batch": 8,
+   "bit": 115,
+   "node_exact": true,
+   "published": {
+    "andclose": true,
+    "bit": 115,
+    "capped": false,
+    "loss": false,
+    "nodes": 197564,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "published_nodes": 197564,
+   "rerun": {
+    "andclose": true,
+    "bit": 115,
+    "capped": false,
+    "loss": false,
+    "nodes": 197564,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "rerun_nodes": 197564,
+   "verdict": "REFUTED-D10"
+  },
+  {
+   "all_fields_equal_except_ms": true,
+   "batch": 8,
+   "bit": 116,
+   "node_exact": true,
+   "published": {
+    "andclose": true,
+    "bit": 116,
+    "capped": false,
+    "loss": true,
+    "nodes": 1062269,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "published_nodes": 1062269,
+   "rerun": {
+    "andclose": true,
+    "bit": 116,
+    "capped": false,
+    "loss": true,
+    "nodes": 1062269,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "rerun_nodes": 1062269,
+   "verdict": "WIN7-D10"
+  },
+  {
+   "all_fields_equal_except_ms": true,
+   "batch": 8,
+   "bit": 117,
+   "node_exact": true,
+   "published": {
+    "andclose": true,
+    "bit": 117,
+    "capped": false,
+    "loss": false,
+    "nodes": 358663,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "published_nodes": 358663,
+   "rerun": {
+    "andclose": true,
+    "bit": 117,
+    "capped": false,
+    "loss": false,
+    "nodes": 358663,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "rerun_nodes": 358663,
+   "verdict": "REFUTED-D10"
+  },
+  {
+   "all_fields_equal_except_ms": true,
+   "batch": 8,
+   "bit": 120,
+   "node_exact": true,
+   "published": {
+    "andclose": true,
+    "bit": 120,
+    "capped": false,
+    "loss": true,
+    "nodes": 2269622,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "published_nodes": 2269622,
+   "rerun": {
+    "andclose": true,
+    "bit": 120,
+    "capped": false,
+    "loss": true,
+    "nodes": 2269622,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "rerun_nodes": 2269622,
+   "verdict": "WIN7-D10"
+  }
+ ],
+ "schema": "n11-class2-lane-cost64h-independent-rerun-verification-20261116-v1",
+ "totals": {
+  "bits_compared": 64,
+  "capped_count": 0,
+  "mismatches": 0,
+  "node_exact": 64,
+  "pilots_pass": 8,
+  "published_node_sum": 47017565,
+  "refuted_d10_count": 41,
+  "rerun_node_sum": 47017565,
+  "win7_d10_bits": [
+   4,
+   6,
+   8,
+   33,
+   38,
+   42,
+   44,
+   49,
+   68,
+   74,
+   76,
+   77,
+   78,
+   79,
+   83,
+   89,
+   91,
+   101,
+   109,
+   113,
+   114,
+   116,
+   120
+  ]
+ }
+}

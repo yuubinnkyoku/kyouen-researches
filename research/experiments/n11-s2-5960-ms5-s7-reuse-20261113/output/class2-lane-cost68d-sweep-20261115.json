@@ -1,0 +1,99 @@
+{
+ "schema": "n11-class2-lane-cost68d-sweep-20261115-v1",
+ "date": "2026-11-15",
+ "session": "long-term lane execution (2026-11-15 JST), continuing after the warm multiband frontier recompute (chain head 1109 / 6738 / 531295 / 5008 / 395018, class-frontier-warm-multiband-recompute-20261115.json) and the cost-68d inflight claim (commit 6175d233, remote md5 verified)",
+ "s5_parent_hex": "00000000000000809102000000000000",
+ "s5_parent_note": "third class-2 coverable target (best coverable class-2 S5) at the claim",
+ "s6_child_hex": "00000000000000809122000000000000",
+ "s6_s7_edge_cost": 68,
+ "demand_classes_at_claim": {
+  "c1": 0,
+  "c2": 2,
+  "c4": 0
+ },
+ "demand_verification": "VERIFIED before the claim: the child was the cheapest remaining unswept child of the third class-2 target and its demand (c1=0,c2=2,c4=0) was simulated to survive both the all-greedy-40 and self-29-only post-batch-2 fold scenarios; batch-2 fold does not remove it",
+ "candidate_enumeration": "legal_candidates.py independent Bareiss 4x4 enumeration: 68 legal candidates, bit-exact with the published edge cost 68",
+ "engine": "class4_child1_runner_v16.ts (published repo-verbatim v16 runner), depth 10, andclose=1, cap 1e9, pilot d6 control (loss=false at exactly 3,402 nodes) per batch",
+ "engine_gate": "v16 agreement-gated in cost-56a and used for cost-58b/60b/61d/61e/61f/63e/64b/65g/65h/65i/67b/68c/69e/70c/71b/75b/75c",
+ "win7_d10": 7,
+ "win7_bits": [
+  18,
+  26,
+  29,
+  34,
+  47,
+  103,
+  108
+ ],
+ "win7_root_nodes": {
+  "18": 3259423,
+  "26": 1529206,
+  "29": 872223,
+  "34": 2959839,
+  "47": 636831,
+  "103": 781692,
+  "108": 507261
+ },
+ "win7_roots": [
+  "00000000000000809122000000040000",
+  "00000000000000809122000004000000",
+  "00000000000000809122000020000000",
+  "00000000000000809122000400000000",
+  "00000000000000809122800000000000",
+  "00000080000000809122000000000000",
+  "00001000000000809122000000000000"
+ ],
+ "verdict": "WIN7",
+ "refuted_d10": 61,
+ "capped": 0,
+ "total_nodes": 61325518,
+ "total_nodes_note": "v16 engine node count over the 68 candidates (single run each); all 7 WIN7 candidates have v15 cross-engine anchors and fully verified extracted certificates (class2-lane-cost68d-win7-certificates-20261115.json)",
+ "pilot_d6_controls": "loss=false at exactly 3,402 nodes in all 9 batch invocations (identical control lines); the determinism rerun invocation adds a 10th identical control line",
+ "determinism_rerun": "batch1 8 candidates fully re-run (originally mislabeled batch2, repaired): loss/nodes/capped/terminalStoneRange byte-identical, only wall-clock ms differs (class2-lane-cost68d-v16-determinism-rerun-20261115.jsonl)",
+ "batch_numbering_repair": "the accidental duplicate invocation of the batch1 bits was originally written as raw-batch2; renamed to v16-determinism-rerun and the original raw-batch3..10 renumbered to raw-batch2..9 (no data loss, per-line JSON unchanged)",
+ "terminal_stone_range_all": [
+  [
+   13,
+   17
+  ]
+ ],
+ "heaviest_bits": [
+  {
+   "bit": 13,
+   "nodes": 4926307,
+   "verdict": "REFUTED"
+  },
+  {
+   "bit": 22,
+   "nodes": 4497558,
+   "verdict": "REFUTED"
+  },
+  {
+   "bit": 18,
+   "nodes": 3259423,
+   "verdict": "WIN7"
+  },
+  {
+   "bit": 34,
+   "nodes": 2959839,
+   "verdict": "WIN7"
+  },
+  {
+   "bit": 2,
+   "nodes": 2864325,
+   "verdict": "REFUTED"
+  }
+ ],
+ "raw_batches": [
+  "class2-lane-cost68d-raw-batch1-20261115.jsonl",
+  "class2-lane-cost68d-raw-batch2-20261115.jsonl",
+  "class2-lane-cost68d-raw-batch3-20261115.jsonl",
+  "class2-lane-cost68d-raw-batch4-20261115.jsonl",
+  "class2-lane-cost68d-raw-batch5-20261115.jsonl",
+  "class2-lane-cost68d-raw-batch6-20261115.jsonl",
+  "class2-lane-cost68d-raw-batch7-20261115.jsonl",
+  "class2-lane-cost68d-raw-batch8-20261115.jsonl",
+  "class2-lane-cost68d-raw-batch9-20261115.jsonl",
+  "class2-lane-cost68d-v16-determinism-rerun-20261115.jsonl"
+ ]
+}

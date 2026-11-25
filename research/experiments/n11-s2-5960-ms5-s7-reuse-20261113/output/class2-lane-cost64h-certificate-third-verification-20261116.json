@@ -1,0 +1,159 @@
+{
+  "schema": "n11-class2-lane-cost64h-third-certificate-verification-20261116-v1",
+  "date": "2026-11-16",
+  "method": "Independent direct BigInt 4x4 Bareiss determinant plus full all-reply strategy traversal. No repository verifier was imported. The same algorithm was executed in Code Mode against the six blob-pinned certificate files; the standalone Node.js script is published for local reproduction.",
+  "verifier_script": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/verify_cost64h_certificate_bareiss_independent_20261116.mjs",
+  "summary": {
+    "published_certificate_files_in_target_directory": 6,
+    "independently_verified": 6,
+    "total_win7_candidates_in_sweep": 23,
+    "root_subroots_passed": 271,
+    "strategy_rows": 136261,
+    "visited_states_across_subroots": 319473,
+    "loser_reply_edges": 294724,
+    "terminal_count": 48737,
+    "total_certificate_bytes": 4924081,
+    "union_missing": 0,
+    "union_extra": 0,
+    "terminal_range": [
+      13,
+      17
+    ]
+  },
+  "certificates": [
+    {
+      "bit": 4,
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost64h-certificates/bit4-root-00000000000000403800000008100010.cert",
+      "blob_sha": "c0911621828cc098c240f6b2a38ee407a740d956",
+      "bytes": 1036850,
+      "root_hex": "00000000000000403800000008100010",
+      "root_mobility": 46,
+      "strategy_rows": 28668,
+      "subroots_passed": 46,
+      "consumed_winner_rows": 28668,
+      "union_missing": 0,
+      "union_extra": 0,
+      "visited_states": 64156,
+      "winner_states": 41634,
+      "loser_states": 12946,
+      "loser_reply_edges": 59850,
+      "terminal_count": 9576,
+      "terminal_range": [
+        13,
+        17
+      ]
+    },
+    {
+      "bit": 6,
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost64h-certificates/bit6-root-00000000000000403800000008100040.cert",
+      "blob_sha": "96c5574f04a496a124bdd16ecd8926226fbc9786",
+      "bytes": 906596,
+      "root_hex": "00000000000000403800000008100040",
+      "root_mobility": 45,
+      "strategy_rows": 25015,
+      "subroots_passed": 45,
+      "consumed_winner_rows": 25015,
+      "union_missing": 0,
+      "union_extra": 0,
+      "visited_states": 58725,
+      "winner_states": 37853,
+      "loser_states": 11362,
+      "loser_reply_edges": 53357,
+      "terminal_count": 9510,
+      "terminal_range": [
+        13,
+        17
+      ]
+    },
+    {
+      "bit": 38,
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost64h-certificates/bit38-root-00000000000000403800004008100000.cert",
+      "blob_sha": "65ed7517f216e5c4c159c4481180836f5f89b30d",
+      "bytes": 632825,
+      "root_hex": "00000000000000403800004008100000",
+      "root_mobility": 44,
+      "strategy_rows": 17496,
+      "subroots_passed": 44,
+      "consumed_winner_rows": 17496,
+      "union_missing": 0,
+      "union_extra": 0,
+      "visited_states": 43333,
+      "winner_states": 28185,
+      "loser_states": 9177,
+      "loser_reply_edges": 41022,
+      "terminal_count": 5971,
+      "terminal_range": [
+        13,
+        17
+      ]
+    },
+    {
+      "bit": 49,
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost64h-certificates/bit49-root-00000000000000403802000008100000.cert",
+      "blob_sha": "ba7aef3f186620c89101e7f74564cec591ca4fbd",
+      "bytes": 888984,
+      "root_hex": "00000000000000403802000008100000",
+      "root_mobility": 48,
+      "strategy_rows": 24625,
+      "subroots_passed": 48,
+      "consumed_winner_rows": 24625,
+      "union_missing": 0,
+      "union_extra": 0,
+      "visited_states": 57719,
+      "winner_states": 37218,
+      "loser_states": 11256,
+      "loser_reply_edges": 52301,
+      "terminal_count": 9245,
+      "terminal_range": [
+        13,
+        17
+      ]
+    },
+    {
+      "bit": 74,
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost64h-certificates/bit74-root-00000000000004403800000008100000.cert",
+      "blob_sha": "3f4f5ab294f6e7dd84e9c95fa9d4120add4392cb",
+      "bytes": 860844,
+      "root_hex": "00000000000004403800000008100000",
+      "root_mobility": 44,
+      "strategy_rows": 23867,
+      "subroots_passed": 44,
+      "consumed_winner_rows": 23867,
+      "union_missing": 0,
+      "union_extra": 0,
+      "visited_states": 52948,
+      "winner_states": 34182,
+      "loser_states": 10767,
+      "loser_reply_edges": 48570,
+      "terminal_count": 7999,
+      "terminal_range": [
+        13,
+        17
+      ]
+    },
+    {
+      "bit": 91,
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost64h-certificates/bit91-root-00000000080000403800000008100000.cert",
+      "blob_sha": "bc433641c6caecf440bdeb13842cc9e4bcfe6041",
+      "bytes": 597982,
+      "root_hex": "00000000080000403800000008100000",
+      "root_mobility": 44,
+      "strategy_rows": 16590,
+      "subroots_passed": 44,
+      "consumed_winner_rows": 16590,
+      "union_missing": 0,
+      "union_extra": 0,
+      "visited_states": 42592,
+      "winner_states": 27490,
+      "loser_states": 8666,
+      "loser_reply_edges": 39624,
+      "terminal_count": 6436,
+      "terminal_range": [
+        13,
+        17
+      ]
+    }
+  ],
+  "progress_note": "The latest main commit subject reports cost64h certificate progress 7/23, while the target certificate directory currently lists six files. This audit verifies exactly the six published files listed here; it does not infer or count an unlisted seventh artifact.",
+  "interpretation_guard": "Each verified certificate proves original_first_WIN7 / second_to_move_LOSS for its individual seven-stone root under the certificate's full all-reply strategy tree. This does not close a six-stone manifest row until the receipt fold is recomputed and committed. REFUTED-D10 is not a LOSS proof. The standard 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, and classes 1/2/4 remain UNKNOWN."
+}

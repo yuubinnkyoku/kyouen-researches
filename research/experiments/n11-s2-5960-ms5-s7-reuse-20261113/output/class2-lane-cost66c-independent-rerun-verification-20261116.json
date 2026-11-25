@@ -1,0 +1,813 @@
+{
+ "all_node_exact": true,
+ "bit112_resolution_check": {
+  "andclose": {
+   "agree": true,
+   "mine": true,
+   "parallel": true
+  },
+  "capped": {
+   "agree": true,
+   "mine": false,
+   "parallel": false
+  },
+  "loss": {
+   "agree": true,
+   "mine": true,
+   "parallel": true
+  },
+  "nodes": {
+   "agree": true,
+   "mine": 12574920,
+   "parallel": 12574920
+  },
+  "terminalStoneRange": {
+   "agree": true,
+   "mine": [
+    13,
+    17
+   ],
+   "parallel": [
+    13,
+    17
+   ]
+  }
+ },
+ "capped_bits_in_raw": 1,
+ "checked_bits": 59,
+ "child": "00000000000000003800000008002008",
+ "date": "2026-11-16",
+ "independent_raw_files": [
+  "class2-lane-cost66c-independent-rerun-batch1-20261116.jsonl",
+  "class2-lane-cost66c-independent-rerun-batch2-20261116.jsonl",
+  "class2-lane-cost66c-independent-rerun-batch3-20261116.jsonl",
+  "class2-lane-cost66c-independent-rerun-batch4-20261116.jsonl",
+  "class2-lane-cost66c-independent-rerun-batch5-20261116.jsonl",
+  "class2-lane-cost66c-independent-rerun-batch6-20261116.jsonl",
+  "class2-lane-cost66c-independent-rerun-batch7-20261116.jsonl",
+  "class2-lane-cost66c-independent-rerun-batch8-20261116.jsonl",
+  "class2-lane-cost66c-independent-rerun-bit112-cap80m-20261116.jsonl"
+ ],
+ "interpretation_guard": "bookkeeping verification only; WIN7-D10 proves a first-player win within depth 10 from the individual 7-stone roots only; REFUTED-D10 is not a LOSS proof; NOT-STERILE is not a game resolution; 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60} and classes 1/2/4 remain UNKNOWN",
+ "method": "repo-verbatim v16 runner (class4_child1_runner_v16.ts) re-run in this lane's fresh environment (Node 22, engine state reset per candidate, --andclose 1, depth 10, cap 1e7; bit 112 additionally re-run at cap 80000000), compared field-by-field against the parallel lane's published raw batches 1-8 and the bit-112 cap-raise resolution record",
+ "mismatches": [],
+ "parallel_inputs": {
+  "claim_v1": "class2-lane-cost66c-inflight-20261116.json (commit 64e83dff)",
+  "claim_v2_completed": "commit b17e978e",
+  "raw_batches_1_8_and_resolution": "commit b17e978e"
+ },
+ "per_bit": [
+  {
+   "andclose": true,
+   "batch": 1,
+   "bit": 1,
+   "capped": false,
+   "loss": false,
+   "nodes": 1874269,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 1,
+   "bit": 2,
+   "capped": false,
+   "loss": false,
+   "nodes": 535142,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 1,
+   "bit": 9,
+   "capped": false,
+   "loss": false,
+   "nodes": 254183,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 1,
+   "bit": 10,
+   "capped": false,
+   "loss": false,
+   "nodes": 2175112,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 1,
+   "bit": 12,
+   "capped": false,
+   "loss": false,
+   "nodes": 1356268,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 1,
+   "bit": 17,
+   "capped": false,
+   "loss": false,
+   "nodes": 854039,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 1,
+   "bit": 21,
+   "capped": false,
+   "loss": false,
+   "nodes": 1827396,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 1,
+   "bit": 30,
+   "capped": false,
+   "loss": false,
+   "nodes": 8806920,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 2,
+   "bit": 32,
+   "capped": false,
+   "loss": false,
+   "nodes": 1046121,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 2,
+   "bit": 33,
+   "capped": false,
+   "loss": false,
+   "nodes": 4106530,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 2,
+   "bit": 34,
+   "capped": false,
+   "loss": false,
+   "nodes": 1293322,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 2,
+   "bit": 38,
+   "capped": false,
+   "loss": false,
+   "nodes": 929475,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 2,
+   "bit": 42,
+   "capped": false,
+   "loss": false,
+   "nodes": 1956008,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 2,
+   "bit": 43,
+   "capped": false,
+   "loss": false,
+   "nodes": 1677418,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 2,
+   "bit": 44,
+   "capped": false,
+   "loss": false,
+   "nodes": 434073,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 2,
+   "bit": 53,
+   "capped": false,
+   "loss": false,
+   "nodes": 282625,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 3,
+   "bit": 54,
+   "capped": false,
+   "loss": false,
+   "nodes": 2066005,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 3,
+   "bit": 66,
+   "capped": false,
+   "loss": false,
+   "nodes": 605707,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 3,
+   "bit": 67,
+   "capped": false,
+   "loss": false,
+   "nodes": 999284,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 3,
+   "bit": 69,
+   "capped": false,
+   "loss": false,
+   "nodes": 404014,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 3,
+   "bit": 71,
+   "capped": false,
+   "loss": false,
+   "nodes": 2369015,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 3,
+   "bit": 73,
+   "capped": false,
+   "loss": true,
+   "nodes": 1380970,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 3,
+   "bit": 74,
+   "capped": false,
+   "loss": false,
+   "nodes": 363131,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 3,
+   "bit": 75,
+   "capped": false,
+   "loss": true,
+   "nodes": 2092539,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 4,
+   "bit": 76,
+   "capped": false,
+   "loss": false,
+   "nodes": 1080739,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 4,
+   "bit": 78,
+   "capped": false,
+   "loss": false,
+   "nodes": 1960010,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 4,
+   "bit": 79,
+   "capped": false,
+   "loss": true,
+   "nodes": 1078921,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 4,
+   "bit": 83,
+   "capped": false,
+   "loss": false,
+   "nodes": 269856,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 4,
+   "bit": 85,
+   "capped": false,
+   "loss": false,
+   "nodes": 340603,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 4,
+   "bit": 86,
+   "capped": false,
+   "loss": false,
+   "nodes": 825064,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 4,
+   "bit": 87,
+   "capped": false,
+   "loss": true,
+   "nodes": 2016731,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 4,
+   "bit": 88,
+   "capped": false,
+   "loss": false,
+   "nodes": 667518,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 5,
+   "bit": 89,
+   "capped": false,
+   "loss": false,
+   "nodes": 1297611,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 5,
+   "bit": 92,
+   "capped": false,
+   "loss": false,
+   "nodes": 494079,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 5,
+   "bit": 93,
+   "capped": false,
+   "loss": false,
+   "nodes": 110148,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 5,
+   "bit": 94,
+   "capped": false,
+   "loss": false,
+   "nodes": 300005,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 5,
+   "bit": 95,
+   "capped": false,
+   "loss": false,
+   "nodes": 240655,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 5,
+   "bit": 96,
+   "capped": false,
+   "loss": true,
+   "nodes": 2363101,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 5,
+   "bit": 97,
+   "capped": false,
+   "loss": true,
+   "nodes": 689724,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 5,
+   "bit": 98,
+   "capped": false,
+   "loss": false,
+   "nodes": 988997,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 6,
+   "bit": 99,
+   "capped": false,
+   "loss": false,
+   "nodes": 311473,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 6,
+   "bit": 100,
+   "capped": false,
+   "loss": false,
+   "nodes": 355530,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 6,
+   "bit": 101,
+   "capped": false,
+   "loss": false,
+   "nodes": 1034686,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 6,
+   "bit": 102,
+   "capped": false,
+   "loss": false,
+   "nodes": 1163856,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 6,
+   "bit": 103,
+   "capped": false,
+   "loss": false,
+   "nodes": 720839,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 6,
+   "bit": 105,
+   "capped": false,
+   "loss": false,
+   "nodes": 624610,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 6,
+   "bit": 106,
+   "capped": false,
+   "loss": false,
+   "nodes": 1209956,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 6,
+   "bit": 107,
+   "capped": false,
+   "loss": false,
+   "nodes": 654278,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 7,
+   "bit": 108,
+   "capped": false,
+   "loss": false,
+   "nodes": 321134,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 7,
+   "bit": 109,
+   "capped": false,
+   "loss": false,
+   "nodes": 149214,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 7,
+   "bit": 110,
+   "capped": false,
+   "loss": false,
+   "nodes": 766286,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 7,
+   "bit": 111,
+   "capped": false,
+   "loss": false,
+   "nodes": 2086932,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 7,
+   "bit": 112,
+   "capped": true,
+   "loss": false,
+   "nodes": 10000001,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 7,
+   "bit": 113,
+   "capped": false,
+   "loss": false,
+   "nodes": 229656,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 7,
+   "bit": 114,
+   "capped": false,
+   "loss": false,
+   "nodes": 2264030,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 7,
+   "bit": 116,
+   "capped": false,
+   "loss": false,
+   "nodes": 352146,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 8,
+   "bit": 117,
+   "capped": false,
+   "loss": false,
+   "nodes": 3121390,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 8,
+   "bit": 118,
+   "capped": false,
+   "loss": false,
+   "nodes": 735317,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 8,
+   "bit": 120,
+   "capped": false,
+   "loss": false,
+   "nodes": 1090682,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  }
+ ],
+ "pilots": "8/8 + 1 (resolution run) pilot_d6 = 3402 nodes, loss=false, all identical",
+ "refuted_swept_bits": 52,
+ "schema": "n11-class2-lane-cost66c-independent-rerun-verification-20261116-v1",
+ "total_definitive_nodes_mine": 84180263,
+ "total_definitive_nodes_parallel_claim": 84180263,
+ "total_nodes_mine_raw_as_run": 81605344,
+ "total_nodes_parallel_raw_as_run": 81605344,
+ "win_bits": [
+  {
+   "bit": 73,
+   "nodes": 1380970,
+   "root_hex": "00000000000002003800000008002008"
+  },
+  {
+   "bit": 75,
+   "nodes": 2092539,
+   "root_hex": "00000000000008003800000008002008"
+  },
+  {
+   "bit": 79,
+   "nodes": 1078921,
+   "root_hex": "00000000000080003800000008002008"
+  },
+  {
+   "bit": 87,
+   "nodes": 2016731,
+   "root_hex": "00000000008000003800000008002008"
+  },
+  {
+   "bit": 96,
+   "nodes": 2363101,
+   "root_hex": "00000001000000003800000008002008"
+  },
+  {
+   "bit": 97,
+   "nodes": 689724,
+   "root_hex": "00000000002000003800000008002008"
+  },
+  {
+   "bit": 112,
+   "nodes": 12574920,
+   "root_hex": "00010000000000003800000008002008"
+  }
+ ]
+}

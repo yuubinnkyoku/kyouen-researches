@@ -1,0 +1,33 @@
+{
+ "schema": "n11-class2-lane-cost65d-win7-certificates-20261114-v1",
+ "date": "2026-11-14",
+ "s6_child_hex": "00000000000000809082000010000000",
+ "s5_parent_hex": "00000000000000809082000000000000",
+ "s6_s7_edge_cost": 65,
+ "certificates": [
+  {
+   "bit": 103,
+   "root": "00000080000000809082000010000000",
+   "verdict": "WIN7",
+   "depth": 10,
+   "rows": 36916,
+   "extraction_nodes": 11294025,
+   "fbt_drops": 0,
+   "fatal": null,
+   "subroots": 49,
+   "subroots_pass": 49,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_stone_range": [
+    13,
+    17
+   ],
+   "loser_mobility": 49,
+   "file": "n11_s7_00000080000000809082000010000000.cert",
+   "md5": "c9264b658dbe2fb1d930e5ed5aaf77b5",
+   "sha256": "bd7db3bc2d1e07f7760ed29acc8bc3693f5013ccc792298bf7c6fc0a5aefbdad"
+  }
+ ],
+ "method": "blind extraction with class4_child1_cert_extractor_exact.ts (FBS=1<<20, probe96, empty kill table), fbt_drops=0; independent verification with verify_bit7_win7_cert.ts (Bareiss 4x4, engine-free): root-check, 49/49 sub-roots PASS, union 0/0 both directions",
+ "note": "root is new (not in win7-reuse-hits, no cross-child reuse)"
+}

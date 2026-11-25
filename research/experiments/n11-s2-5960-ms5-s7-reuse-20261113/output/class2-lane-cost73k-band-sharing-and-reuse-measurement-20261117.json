@@ -1,0 +1,997 @@
+{
+ "schema": "n11-class2-lane-cost73k-band-sharing-and-reuse-measurement-20261117-v1",
+ "date": "2026-11-17",
+ "pin_commit": "63f5287e0d0958c9ad6633d625d90af8d49c042a",
+ "extends": [
+  "class2-lane-cert-state-sharing-and-conf-cost-measurement-20261117.json (commit 9f2422d3)",
+  "class2-lane-cert-state-sharing-d4canon-measurement-20261117.json (commit 2700ed3c)"
+ ],
+ "method": "Deterministic set measurement over four published WIN7-D10 certificate bands (73k: 22 certs / 966,535 rows, published by the claim lane; 73j/72d/71e recomputed as a byte-pinned regression gate against the v1/addendum measurements). Exact sharing is 32-hex equality of certificate row states; D4-canonical sharing maps every state to its min over the eight square symmetries of the 11x11 board. The canon function is gated against all 68 published d4_canon_root values of the 73k/73j/72d/71e/69j manifests. The 73k confirmation and WIN-transfer numbers come from the published concurrent-session sweep record (per-bit 73/73 identical to the claim lane's published third independent execution).",
+ "d4_canon_root_gate": {
+  "manifest_assertions": {
+   "73k": 22,
+   "73j": 16,
+   "72d": 11,
+   "71e": 13,
+   "69j": 6
+  },
+  "total": 68
+ },
+ "win_transfer_roots": {
+  "bit_14": {
+   "root_hex": "00000000000000801206000000004400",
+   "d4_canon_hex": "00000000000000801206000000004400",
+   "source": "cost73j bit 110",
+   "source_root_hex": "00004000000000403800000408000000",
+   "source_d4_canon_root": "00000000000000801206000000004400",
+   "source_rows": 45350,
+   "source_extraction_nodes": 12620740,
+   "canon_equality_reproduced": true
+  },
+  "bit_26": {
+   "root_hex": "00000000000000801206000004000400",
+   "d4_canon_hex": "00000000000000801206000004000400",
+   "source": "cost73i bit 110 (sweep verdict published; certificate band not yet on main)",
+   "source_root_hex": "00004000000000403800400008000000",
+   "computed_d4_canon_hex": "00000000000000801206000004000400",
+   "canon_equality_computed": true,
+   "certificate_on_main": false
+  },
+  "bit_55": {
+   "root_hex": "00000000000000801286000000000400",
+   "d4_canon_hex": "00000000000000801286000000000400",
+   "source": "cost69j bit 110",
+   "source_root_hex": "00004000000000403800000008000020",
+   "source_d4_canon_root": "00000000000000801286000000000400",
+   "source_rows": 52110,
+   "source_extraction_nodes": 11167884,
+   "canon_equality_reproduced": true
+  },
+  "bit_53_refuted_transfer_raw_identity": {
+   "root_hex": "00000000000000801226000000000400",
+   "source": "cost66i bit 10 (REFUTED-D10)",
+   "raw_identical": true
+  }
+ },
+ "win_transfer_reuse": {
+  "win_bits_total": 25,
+  "fresh_certificates": 22,
+  "canon_reused_certificate_backed": 2,
+  "pending_source_certificate": 1,
+  "avoided_extraction_rows": 97460,
+  "avoided_extraction_nodes": 23788624,
+  "note": "25 WIN7-D10 bits - 22 fresh certificates = 3 canon-equal roots: bits 14 (73j bit 110) and 55 (69j bit 110) are already covered by published byte-verified certificates; bit 26 (73i bit 110) has only the published sweep verdict so far, its certificate coverage pends the cost73i band extraction. The avoided extraction cost counts only the two certificate-backed reuses."
+ },
+ "bands": {
+  "71e": {
+   "certificates": 13,
+   "rows_total": 534804,
+   "distinct_states": 422313,
+   "states_in_multiple_certs_rowcount": 95101,
+   "states_shared_pct": 22.519,
+   "duplicate_rows": 112491,
+   "duplicate_rows_pct": 21.034,
+   "d4_canon_distinct_states": 422313,
+   "canon_reduction_pct": 0.0,
+   "canon_states_shared_pct": 22.519,
+   "canon_duplicate_rows_pct": 21.034,
+   "states_in_multiple_certs_percert": 95101,
+   "states_shared_percert_pct": 22.519,
+   "duplicate_certs_rows": 112491,
+   "duplicate_certs_rows_pct": 21.034,
+   "canon_states_in_multiple_certs_percert": 95101,
+   "canon_states_shared_percert_pct": 22.519,
+   "canon_duplicate_certs_rows": 112491,
+   "canon_duplicate_certs_rows_pct": 21.034,
+   "cert_count_histogram": {
+    "1": 327212,
+    "2": 79865,
+    "3": 13255,
+    "4": 1821,
+    "5": 147,
+    "6": 13
+   },
+   "canon_cert_count_histogram": {
+    "1": 327212,
+    "2": 79865,
+    "3": 13255,
+    "4": 1821,
+    "5": 147,
+    "6": 13
+   },
+   "roots": [
+    "00000000000000c09002000000002008",
+    "00000000000000c09002000000002010",
+    "00000000000000c09002000000002100",
+    "00000000000000c09042000000002000",
+    "00000000000010c09002000000002000",
+    "00000000400000c09002000000002000",
+    "00000001000000c09002000000002000",
+    "00000010000000c09002000000002000",
+    "00100000000000c09002000000002000",
+    "00800000000000c09002000000002000",
+    "00000000000000c09002020000002000",
+    "00000000000000c09402000000002000",
+    "00000000000080c09002000000002000"
+   ]
+  },
+  "72d": {
+   "certificates": 11,
+   "rows_total": 522517,
+   "distinct_states": 423044,
+   "states_in_multiple_certs_rowcount": 85254,
+   "states_shared_pct": 20.153,
+   "duplicate_rows": 99473,
+   "duplicate_rows_pct": 19.037,
+   "d4_canon_distinct_states": 423044,
+   "canon_reduction_pct": 0.0,
+   "canon_states_shared_pct": 20.153,
+   "canon_duplicate_rows_pct": 19.037,
+   "states_in_multiple_certs_percert": 85254,
+   "states_shared_percert_pct": 20.153,
+   "duplicate_certs_rows": 99473,
+   "duplicate_certs_rows_pct": 19.037,
+   "canon_states_in_multiple_certs_percert": 85254,
+   "canon_states_shared_percert_pct": 20.153,
+   "canon_duplicate_certs_rows": 99473,
+   "canon_duplicate_certs_rows_pct": 19.037,
+   "cert_count_histogram": {
+    "1": 337790,
+    "2": 72638,
+    "3": 11126,
+    "4": 1387,
+    "5": 93,
+    "6": 10
+   },
+   "canon_cert_count_histogram": {
+    "1": 337790,
+    "2": 72638,
+    "3": 11126,
+    "4": 1387,
+    "5": 93,
+    "6": 10
+   },
+   "roots": [
+    "00000000000000403800000008004002",
+    "00000000000000403800000008004040",
+    "00000000000000403800000009004000",
+    "0000000000000040380000000a004000",
+    "00000000000000403800080008004000",
+    "00000000000000403802000008004000",
+    "00000000000100403800000008004000",
+    "00000000000800403800000008004000",
+    "00000004000000403800000008004000",
+    "00040000000000403800000008004000",
+    "00000000000008403800000008004000"
+   ]
+  },
+  "73j": {
+   "certificates": 16,
+   "rows_total": 726778,
+   "distinct_states": 547910,
+   "states_in_multiple_certs_rowcount": 142470,
+   "states_shared_pct": 26.002,
+   "duplicate_rows": 178868,
+   "duplicate_rows_pct": 24.611,
+   "d4_canon_distinct_states": 547910,
+   "canon_reduction_pct": 0.0,
+   "canon_states_shared_pct": 26.002,
+   "canon_duplicate_rows_pct": 24.611,
+   "states_in_multiple_certs_percert": 142470,
+   "states_shared_percert_pct": 26.002,
+   "duplicate_certs_rows": 178868,
+   "duplicate_certs_rows_pct": 24.611,
+   "canon_states_in_multiple_certs_percert": 142470,
+   "canon_states_shared_percert_pct": 26.002,
+   "canon_duplicate_certs_rows": 178868,
+   "canon_duplicate_certs_rows_pct": 24.611,
+   "cert_count_histogram": {
+    "1": 405440,
+    "2": 112647,
+    "3": 24076,
+    "4": 5013,
+    "5": 647,
+    "6": 80,
+    "7": 7
+   },
+   "canon_cert_count_histogram": {
+    "1": 405440,
+    "2": 112647,
+    "3": 24076,
+    "4": 5013,
+    "5": 647,
+    "6": 80,
+    "7": 7
+   },
+   "roots": [
+    "00000000000000403800000408000001",
+    "00000000000000403800000408000002",
+    "00000000000000403800000408000040",
+    "00000000000000403800000428000000",
+    "00000000000000403800100408000000",
+    "00000000000000403802000408000000",
+    "00000000000000403810000408000000",
+    "00000000000004403800000408000000",
+    "00000000008000403800000408000000",
+    "00000000080000403800000408000000",
+    "00000004000000403800000408000000",
+    "00000010000000403800000408000000",
+    "00004000000000403800000408000000",
+    "00400000000000403800000408000000",
+    "00000000000000603800000408000000",
+    "00000000000400403800000408000000"
+   ]
+  },
+  "73k": {
+   "certificates": 22,
+   "rows_total": 966535,
+   "distinct_states": 682861,
+   "states_in_multiple_certs_rowcount": 219602,
+   "states_shared_pct": 32.159,
+   "duplicate_rows": 283674,
+   "duplicate_rows_pct": 29.35,
+   "d4_canon_distinct_states": 682861,
+   "canon_reduction_pct": 0.0,
+   "canon_states_shared_pct": 32.159,
+   "canon_duplicate_rows_pct": 29.35,
+   "states_in_multiple_certs_percert": 219602,
+   "states_shared_percert_pct": 32.159,
+   "duplicate_certs_rows": 283674,
+   "duplicate_certs_rows_pct": 29.35,
+   "canon_states_in_multiple_certs_percert": 219602,
+   "canon_states_shared_percert_pct": 32.159,
+   "canon_duplicate_certs_rows": 283674,
+   "canon_duplicate_certs_rows_pct": 29.35,
+   "cert_count_histogram": {
+    "1": 463259,
+    "2": 168739,
+    "3": 39870,
+    "4": 9001,
+    "5": 1782,
+    "6": 197,
+    "7": 12,
+    "8": 1
+   },
+   "canon_cert_count_histogram": {
+    "1": 463259,
+    "2": 168739,
+    "3": 39870,
+    "4": 9001,
+    "5": 1782,
+    "6": 197,
+    "7": 12,
+    "8": 1
+   },
+   "roots": [
+    "00000000000000801206000000000401",
+    "00000000000000801206000000000480",
+    "00000000000000801206000000000c00",
+    "00000000000000801206000000008400",
+    "00000000000000801206000800000400",
+    "00000000000000801206100000000400",
+    "00000000000000801606000000000400",
+    "00000000000002801206000000000400",
+    "00000000000010801206000000000400",
+    "00000000008000801206000000000400",
+    "00000000020000801206000000000400",
+    "00000000400000801206000000000400",
+    "00000000800000801206000000000400",
+    "00000002000000801206000000000400",
+    "00000004000000801206000000000400",
+    "00000080000000801206000000000400",
+    "00000200000000801206000000000400",
+    "00010000000000801206000000000400",
+    "00200000000000801206000000000400",
+    "00000000000000801206008000000400",
+    "00000000000000801206020000000400",
+    "00000000000000805206000000000400"
+   ]
+  }
+ },
+ "cross_band_pairwise_exact": {
+  "71e_and_72d": {
+   "shared_states": 0,
+   "pct_of_71e": 0.0,
+   "pct_of_72d": 0.0,
+   "shared_state_stone_histogram": {}
+  },
+  "71e_and_73j": {
+   "shared_states": 0,
+   "pct_of_71e": 0.0,
+   "pct_of_73j": 0.0,
+   "shared_state_stone_histogram": {}
+  },
+  "71e_and_73k": {
+   "shared_states": 0,
+   "pct_of_71e": 0.0,
+   "pct_of_73k": 0.0,
+   "shared_state_stone_histogram": {}
+  },
+  "72d_and_73j": {
+   "shared_states": 17939,
+   "pct_of_72d": 4.24,
+   "pct_of_73j": 3.274,
+   "shared_state_stone_histogram": {
+    "8": 3,
+    "10": 262,
+    "12": 3748,
+    "14": 11506,
+    "16": 2420
+   }
+  },
+  "72d_and_73k": {
+   "shared_states": 0,
+   "pct_of_72d": 0.0,
+   "pct_of_73k": 0.0,
+   "shared_state_stone_histogram": {}
+  },
+  "73j_and_73k": {
+   "shared_states": 0,
+   "pct_of_73j": 0.0,
+   "pct_of_73k": 0.0,
+   "shared_state_stone_histogram": {}
+  }
+ },
+ "cross_band_pairwise_d4canon": {
+  "71e_and_72d": {
+   "canon_shared_states": 7315,
+   "pct_of_71e": 1.732,
+   "pct_of_72d": 1.729,
+   "canon_shared_state_stone_histogram": {
+    "8": 2,
+    "10": 84,
+    "12": 1444,
+    "14": 5019,
+    "16": 766
+   }
+  },
+  "71e_and_73j": {
+   "canon_shared_states": 17301,
+   "pct_of_71e": 4.097,
+   "pct_of_73j": 3.158,
+   "canon_shared_state_stone_histogram": {
+    "8": 7,
+    "10": 251,
+    "12": 3562,
+    "14": 11495,
+    "16": 1986
+   }
+  },
+  "71e_and_73k": {
+   "canon_shared_states": 15869,
+   "pct_of_71e": 3.758,
+   "pct_of_73k": 2.324,
+   "canon_shared_state_stone_histogram": {
+    "8": 5,
+    "10": 201,
+    "12": 3045,
+    "14": 11019,
+    "16": 1599
+   }
+  },
+  "72d_and_73j": {
+   "canon_shared_states": 17939,
+   "pct_of_72d": 4.24,
+   "pct_of_73j": 3.274,
+   "canon_shared_state_stone_histogram": {
+    "8": 3,
+    "10": 262,
+    "12": 3748,
+    "14": 11506,
+    "16": 2420
+   }
+  },
+  "72d_and_73k": {
+   "canon_shared_states": 11765,
+   "pct_of_72d": 2.781,
+   "pct_of_73k": 1.723,
+   "canon_shared_state_stone_histogram": {
+    "8": 4,
+    "10": 149,
+    "12": 2369,
+    "14": 8291,
+    "16": 952
+   }
+  },
+  "73j_and_73k": {
+   "canon_shared_states": 27009,
+   "pct_of_73j": 4.929,
+   "pct_of_73k": 3.955,
+   "canon_shared_state_stone_histogram": {
+    "8": 20,
+    "10": 634,
+    "12": 7146,
+    "14": 17417,
+    "16": 1792
+   }
+  }
+ },
+ "cross_band_three_way_d4canon_71e_72d_73j": 258,
+ "cross_band_three_way_d4canon_71e_72d_73k": 135,
+ "cross_band_four_way_exact": 0,
+ "cross_band_four_way_d4canon": 9,
+ "73k_canon_states_covered_by_earlier_band_union": 53165,
+ "73k_canon_states_covered_by_earlier_band_union_pct": 7.786,
+ "confirmation_bit_research_cost_73k": {
+  "confirmation_bits": [
+   14,
+   23,
+   26,
+   34,
+   53,
+   55,
+   107
+  ],
+  "confirmation_nodes": 13619457,
+  "total_candidate_nodes": 128861941,
+  "pct_of_sweep": 10.569,
+  "win_transfer_bits": [
+   14,
+   26,
+   55
+  ],
+  "win_transfer_nodes": 9086455,
+  "win_transfer_pct_of_sweep": 7.051,
+  "refuted_transfer_bits": [
+   23,
+   34,
+   53,
+   107
+  ],
+  "refuted_transfer_nodes": 4533002,
+  "refuted_transfer_pct_of_sweep": 3.518,
+  "per_bit_nodes": {
+   "14": 2316193,
+   "23": 716218,
+   "26": 4563004,
+   "34": 2581038,
+   "53": 39808,
+   "55": 2207258,
+   "107": 1195938
+  },
+  "source": "class2-lane-cost73k-concurrent-session-sweep-record-20261117.json (published; per-bit 73/73 identical to the claim lane's third independent execution)"
+ },
+ "confirmation_bit_research_cost_regression": {
+  "73i": {
+   "confirmation_bits": [
+    5,
+    13,
+    20,
+    103,
+    108
+   ],
+   "confirmation_nodes": 2797233,
+   "total_candidate_nodes": 131402821,
+   "pct_of_sweep": 2.129
+  },
+  "73j": {
+   "confirmation_bits": [
+    5,
+    14,
+    20,
+    46,
+    97,
+    103,
+    108
+   ],
+   "confirmation_nodes": 11739699,
+   "total_candidate_nodes": 168445380,
+   "pct_of_sweep": 6.969
+  }
+ },
+ "input_pins": {
+  "certs71e/class2-lane-cost71e-win7-certificates-20261117.json": {
+   "bytes": 14534,
+   "git_blob_sha": "a9ddec439e1931614679c2575e4adeb5fe770d2b"
+  },
+  "certs71e/n11_s7_00000000000000c09002000000002008.cert.part1of2": {
+   "bytes": 649608,
+   "git_blob_sha": "16b72b4415630ffc3120f2d6b416fa028bc79003"
+  },
+  "certs71e/n11_s7_00000000000000c09002000000002008.cert.part2of2": {
+   "bytes": 649592,
+   "git_blob_sha": "57a1750e285802179580e539428eb30e73e85119"
+  },
+  "certs71e/n11_s7_00000000000000c09002000000002010.cert.part1of2": {
+   "bytes": 919446,
+   "git_blob_sha": "72b00cbebe5299247aca7c29c7bcc0ab2e770059"
+  },
+  "certs71e/n11_s7_00000000000000c09002000000002010.cert.part2of2": {
+   "bytes": 919439,
+   "git_blob_sha": "db25b9c3c2ecc58cc8ec2acfca240a5cffbb0b63"
+  },
+  "certs71e/n11_s7_00000000000000c09002000000002100.cert.part1of2": {
+   "bytes": 744382,
+   "git_blob_sha": "0be4079a6dc1eb6ed4e649b20e857614a112dfe3"
+  },
+  "certs71e/n11_s7_00000000000000c09002000000002100.cert.part2of2": {
+   "bytes": 744349,
+   "git_blob_sha": "08921dbbbd7a177d46d9881e9f512a05a0ad80dc"
+  },
+  "certs71e/n11_s7_00000000000000c09002020000002000.cert": {
+   "bytes": 955669,
+   "git_blob_sha": "7c8c5a0134972b2707ca4fba0e7eb53fb4fc4930"
+  },
+  "certs71e/n11_s7_00000000000000c09042000000002000.cert.part1of2": {
+   "bytes": 853607,
+   "git_blob_sha": "8b77f6061bc252881914e193e47169794e5b6fd9"
+  },
+  "certs71e/n11_s7_00000000000000c09042000000002000.cert.part2of2": {
+   "bytes": 853601,
+   "git_blob_sha": "9f14fca6605197bda43464874e56fd0368afbe22"
+  },
+  "certs71e/n11_s7_00000000000000c09402000000002000.cert": {
+   "bytes": 1178240,
+   "git_blob_sha": "5cef59d206ae4d553212d436ff68fecbebb25cbc"
+  },
+  "certs71e/n11_s7_00000000000010c09002000000002000.cert.part1of2": {
+   "bytes": 766956,
+   "git_blob_sha": "e67ae2417551ea53adc824fab34ea2f0cbf327e9"
+  },
+  "certs71e/n11_s7_00000000000010c09002000000002000.cert.part2of2": {
+   "bytes": 766945,
+   "git_blob_sha": "c225f6107f99cf78a4bcbbaf2607d2a8af6f30e5"
+  },
+  "certs71e/n11_s7_00000000000080c09002000000002000.cert": {
+   "bytes": 936287,
+   "git_blob_sha": "3bf73f56eb9f6408e47683e714ce572bb225ef14"
+  },
+  "certs71e/n11_s7_00000000400000c09002000000002000.cert.part1of2": {
+   "bytes": 814565,
+   "git_blob_sha": "0ff23779c1aec7abf2c1772ce75d8a60d26885f6"
+  },
+  "certs71e/n11_s7_00000000400000c09002000000002000.cert.part2of2": {
+   "bytes": 814537,
+   "git_blob_sha": "52af7185685ee3df2b6d886ded2ff7486b7345b2"
+  },
+  "certs71e/n11_s7_00000001000000c09002000000002000.cert.part1of2": {
+   "bytes": 854599,
+   "git_blob_sha": "8661b207e014c8c09991dd88f0664428b3df25fc"
+  },
+  "certs71e/n11_s7_00000001000000c09002000000002000.cert.part2of2": {
+   "bytes": 854581,
+   "git_blob_sha": "9419ded12565c94f6c5ede2c858094ce4d9acffd"
+  },
+  "certs71e/n11_s7_00000010000000c09002000000002000.cert.part1of2": {
+   "bytes": 610900,
+   "git_blob_sha": "780f37c796f0c5aa4666676609f5857ba143587a"
+  },
+  "certs71e/n11_s7_00000010000000c09002000000002000.cert.part2of2": {
+   "bytes": 610894,
+   "git_blob_sha": "b543eb35042a19a4a111e8aa4e0e4c4cf02ebb80"
+  },
+  "certs71e/n11_s7_00100000000000c09002000000002000.cert.part1of2": {
+   "bytes": 1008085,
+   "git_blob_sha": "bd6d2a54f953ac642e05c8da7a5512b4c15a7b4e"
+  },
+  "certs71e/n11_s7_00100000000000c09002000000002000.cert.part2of2": {
+   "bytes": 1008069,
+   "git_blob_sha": "dafa93aed937599fe50b3ceda27d928feca33ed0"
+  },
+  "certs71e/n11_s7_00800000000000c09002000000002000.cert.part1of2": {
+   "bytes": 892908,
+   "git_blob_sha": "6c90044dba2ef21ce0e13eaf767f0d669fbe9346"
+  },
+  "certs71e/n11_s7_00800000000000c09002000000002000.cert.part2of2": {
+   "bytes": 892846,
+   "git_blob_sha": "43a864871390bb8f5541eaf8b7f0110859031a12"
+  },
+  "certs72d/class2-lane-cost72d-win7-certificates-20261117.json": {
+   "bytes": 13353,
+   "git_blob_sha": "b350b714079efb37a15cee812f4657e3682d1a3c"
+  },
+  "certs72d/n11_s7_00000000000000403800000008004002.cert.part1of2": {
+   "bytes": 809957,
+   "git_blob_sha": "5170ee22eee337a568d3038a30016d635d687bbf"
+  },
+  "certs72d/n11_s7_00000000000000403800000008004002.cert.part2of2": {
+   "bytes": 809986,
+   "git_blob_sha": "7c8418685f56ab0f190ba6578cc412c37cd21cec"
+  },
+  "certs72d/n11_s7_00000000000000403800000008004040.cert.part1of2": {
+   "bytes": 970453,
+   "git_blob_sha": "d1898656000772a77c2cc1e5cc16185c7bfcb120"
+  },
+  "certs72d/n11_s7_00000000000000403800000008004040.cert.part2of2": {
+   "bytes": 970521,
+   "git_blob_sha": "1f419df00bff456d0afe30d16fc3fa1a14fbec46"
+  },
+  "certs72d/n11_s7_00000000000000403800000009004000.cert.part1of2": {
+   "bytes": 977031,
+   "git_blob_sha": "860b6340c55e6f8dedd502f79d1ddbabc3fb3a8d"
+  },
+  "certs72d/n11_s7_00000000000000403800000009004000.cert.part2of2": {
+   "bytes": 977092,
+   "git_blob_sha": "2c8c7610b53e8bd676398c85ecb4a39991b3dc5b"
+  },
+  "certs72d/n11_s7_0000000000000040380000000a004000.cert.part1of2": {
+   "bytes": 741336,
+   "git_blob_sha": "8fff0ab2cf66527da594398886c8950848fadec9"
+  },
+  "certs72d/n11_s7_0000000000000040380000000a004000.cert.part2of2": {
+   "bytes": 741397,
+   "git_blob_sha": "7d936cd45f0f124d0f9ebc301035bad8866f5c3c"
+  },
+  "certs72d/n11_s7_00000000000000403800080008004000.cert.part1of2": {
+   "bytes": 1014224,
+   "git_blob_sha": "649c7d15e543ab8e698f7a73d6c278cdffef10d5"
+  },
+  "certs72d/n11_s7_00000000000000403800080008004000.cert.part2of2": {
+   "bytes": 1014248,
+   "git_blob_sha": "d66b07853137e2fc7bb873589e2732eea3d168c2"
+  },
+  "certs72d/n11_s7_00000000000000403802000008004000.cert.part1of2": {
+   "bytes": 754148,
+   "git_blob_sha": "1efb00ec414137a467cad83353ac62044e09e8cf"
+  },
+  "certs72d/n11_s7_00000000000000403802000008004000.cert.part2of2": {
+   "bytes": 754215,
+   "git_blob_sha": "0b746a3313936037c4afcfe4223522477afb17e9"
+  },
+  "certs72d/n11_s7_00000000000008403800000008004000.cert": {
+   "bytes": 1159922,
+   "git_blob_sha": "ed0281dcd719ab68190cc0f4f8824eab63b3c58c"
+  },
+  "certs72d/n11_s7_00000000000100403800000008004000.cert.part1of2": {
+   "bytes": 685530,
+   "git_blob_sha": "f155a992bb60e15cadc9262b75851eb2e11a9844"
+  },
+  "certs72d/n11_s7_00000000000100403800000008004000.cert.part2of2": {
+   "bytes": 685578,
+   "git_blob_sha": "b3eb2d020872d3a364f35ae550aac9babb3b72ef"
+  },
+  "certs72d/n11_s7_00000000000800403800000008004000.cert.part1of2": {
+   "bytes": 1012546,
+   "git_blob_sha": "ccc904d4c13273836a52b83f737e00ba7fa55c1a"
+  },
+  "certs72d/n11_s7_00000000000800403800000008004000.cert.part2of2": {
+   "bytes": 1012578,
+   "git_blob_sha": "09851c7889bc1b531c4d0a9ec1f2de2593410b73"
+  },
+  "certs72d/n11_s7_00000004000000403800000008004000.cert.part1of2": {
+   "bytes": 822057,
+   "git_blob_sha": "4d1c99a85296f5f2629b839a8a8e68c1fd6f5e4a"
+  },
+  "certs72d/n11_s7_00000004000000403800000008004000.cert.part2of2": {
+   "bytes": 822114,
+   "git_blob_sha": "adb5ee45a0b560781b52cd00b63ee2440c05a81c"
+  },
+  "certs72d/n11_s7_00040000000000403800000008004000.cert.part1of2": {
+   "bytes": 1057595,
+   "git_blob_sha": "f5f522ca15be02a8e2ccc246790fbc8573560e42"
+  },
+  "certs72d/n11_s7_00040000000000403800000008004000.cert.part2of2": {
+   "bytes": 1057640,
+   "git_blob_sha": "4a8bfb838fe982018b956d103b659f6545f4df80"
+  },
+  "certs73j/class2-lane-cost73j-win7-certificates-20261117.json": {
+   "bytes": 18020,
+   "git_blob_sha": "e88710b5a2d4848be77a03ae5104e46aefc1279a"
+  },
+  "certs73j/n11_s7_00000000000000403800000408000001.cert.part1of2": {
+   "bytes": 841418,
+   "git_blob_sha": "864c6030ec51a48b134d559c0d197aac41367962"
+  },
+  "certs73j/n11_s7_00000000000000403800000408000001.cert.part2of2": {
+   "bytes": 841453,
+   "git_blob_sha": "1a908087d7e5dfd4d3d56606006cbf67b11f81ac"
+  },
+  "certs73j/n11_s7_00000000000000403800000408000002.cert.part1of2": {
+   "bytes": 864639,
+   "git_blob_sha": "ee50039cba29f7f880c411b261060238192aeaf3"
+  },
+  "certs73j/n11_s7_00000000000000403800000408000002.cert.part2of2": {
+   "bytes": 864691,
+   "git_blob_sha": "c96aa82d515472e477c7553541196425d014770f"
+  },
+  "certs73j/n11_s7_00000000000000403800000408000040.cert.part1of2": {
+   "bytes": 857811,
+   "git_blob_sha": "f21ce92539edcb917eca1439192a04bb5785c3df"
+  },
+  "certs73j/n11_s7_00000000000000403800000408000040.cert.part2of2": {
+   "bytes": 857830,
+   "git_blob_sha": "2a68aa53e8c00902be67518849480b05c4572533"
+  },
+  "certs73j/n11_s7_00000000000000403800000428000000.cert.part1of2": {
+   "bytes": 979621,
+   "git_blob_sha": "6273910c8cdba81b2292c781dfcc0c58e884223c"
+  },
+  "certs73j/n11_s7_00000000000000403800000428000000.cert.part2of2": {
+   "bytes": 979687,
+   "git_blob_sha": "6041054c8957179aee715cf00924eae448dd1047"
+  },
+  "certs73j/n11_s7_00000000000000403800100408000000.cert.part1of2": {
+   "bytes": 967342,
+   "git_blob_sha": "5115c78965269b9734d3985e4b3c3936f16f3ec5"
+  },
+  "certs73j/n11_s7_00000000000000403800100408000000.cert.part2of2": {
+   "bytes": 967354,
+   "git_blob_sha": "3a59a7ebebc1e06c643c4e90f4594f25341419b8"
+  },
+  "certs73j/n11_s7_00000000000000403802000408000000.cert.part1of2": {
+   "bytes": 602340,
+   "git_blob_sha": "1868e53866c50c206e23d52cb85c346436af0f60"
+  },
+  "certs73j/n11_s7_00000000000000403802000408000000.cert.part2of2": {
+   "bytes": 602351,
+   "git_blob_sha": "bf4e7d08a0d1004b7358a1e8311c96872a2b243a"
+  },
+  "certs73j/n11_s7_00000000000000403810000408000000.cert.part1of2": {
+   "bytes": 973361,
+   "git_blob_sha": "444ec256bc251ead61319d12592cfe3be51f4880"
+  },
+  "certs73j/n11_s7_00000000000000403810000408000000.cert.part2of2": {
+   "bytes": 973364,
+   "git_blob_sha": "ee3b43dded780f5d8bdec6a3ce4806ec12acaeba"
+  },
+  "certs73j/n11_s7_00000000000000603800000408000000.cert": {
+   "bytes": 1105284,
+   "git_blob_sha": "3b838b0380157ca0cf4ba5b82ad622f4d8b93c0b"
+  },
+  "certs73j/n11_s7_00000000000004403800000408000000.cert.part1of2": {
+   "bytes": 813229,
+   "git_blob_sha": "2490106baa5629ec1fbe7fa4c853b78a5e9afe13"
+  },
+  "certs73j/n11_s7_00000000000004403800000408000000.cert.part2of2": {
+   "bytes": 813243,
+   "git_blob_sha": "45657b71fe6bb040c146b78a861ae35a4e496713"
+  },
+  "certs73j/n11_s7_00000000000400403800000408000000.cert": {
+   "bytes": 968835,
+   "git_blob_sha": "0f99cc936ea008abc11787a586c6395a7a0ccf74"
+  },
+  "certs73j/n11_s7_00000000008000403800000408000000.cert.part1of2": {
+   "bytes": 1040916,
+   "git_blob_sha": "58d605a55929bfb605bd134f6a9546c1ca848660"
+  },
+  "certs73j/n11_s7_00000000008000403800000408000000.cert.part2of2": {
+   "bytes": 1040974,
+   "git_blob_sha": "e9b8b872ac08869957683ceb7458be2709ede0f8"
+  },
+  "certs73j/n11_s7_00000000080000403800000408000000.cert.part1of2": {
+   "bytes": 625660,
+   "git_blob_sha": "ddf35cef03ec282c3025cc570c17160ea9e72578"
+  },
+  "certs73j/n11_s7_00000000080000403800000408000000.cert.part2of2": {
+   "bytes": 625671,
+   "git_blob_sha": "c37e2d803e9797ce1d04b97dfcb7dd229aa755f4"
+  },
+  "certs73j/n11_s7_00000004000000403800000408000000.cert.part1of2": {
+   "bytes": 1162311,
+   "git_blob_sha": "4d63a90bd9cd04f2f8441ec99f7701a2e4b1e90c"
+  },
+  "certs73j/n11_s7_00000004000000403800000408000000.cert.part2of2": {
+   "bytes": 1162360,
+   "git_blob_sha": "d9a42abed17b3c4950f79a08de197027c98ffaff"
+  },
+  "certs73j/n11_s7_00000010000000403800000408000000.cert.part1of2": {
+   "bytes": 739486,
+   "git_blob_sha": "ffc39b8c7992ea91c9fb29f1faec0e4d969421cc"
+  },
+  "certs73j/n11_s7_00000010000000403800000408000000.cert.part2of2": {
+   "bytes": 739526,
+   "git_blob_sha": "ec29e2b49413f8a5bd24437b359e0fcfc8c59809"
+  },
+  "certs73j/n11_s7_00004000000000403800000408000000.cert.part1of2": {
+   "bytes": 816511,
+   "git_blob_sha": "6d6de50d00a0df7061963639037e764a4ee31728"
+  },
+  "certs73j/n11_s7_00004000000000403800000408000000.cert.part2of2": {
+   "bytes": 816540,
+   "git_blob_sha": "ed870ea4c7c4dfd07c40ead2d6eec5f2c20ee7d4"
+  },
+  "certs73j/n11_s7_00400000000000403800000408000000.cert.part1of2": {
+   "bytes": 796516,
+   "git_blob_sha": "b969ea3840f194da504e75e5133d955e6bbc4ba3"
+  },
+  "certs73j/n11_s7_00400000000000403800000408000000.cert.part2of2": {
+   "bytes": 796527,
+   "git_blob_sha": "00ea57a146aad1214ab559f3250faebb2f0a79a0"
+  },
+  "certs73k/class2-lane-cost73k-win7-certificates-20261117.json": {
+   "bytes": 24580,
+   "git_blob_sha": "0892aed07d187ae2fb3b4b90a21c7adbc1002b62"
+  },
+  "certs73k/n11_s7_00000000000000801206000000000401.cert.part1of2": {
+   "bytes": 968092,
+   "git_blob_sha": "23d91c7546651af714ccce0086caff27ccd277ba"
+  },
+  "certs73k/n11_s7_00000000000000801206000000000401.cert.part2of2": {
+   "bytes": 968148,
+   "git_blob_sha": "4b15c217dcfca1ae9c36342371fe3f0727f43704"
+  },
+  "certs73k/n11_s7_00000000000000801206000000000480.cert.part1of2": {
+   "bytes": 835060,
+   "git_blob_sha": "da26d7cd3bdabdf196f4d698e36b11961ef29aa7"
+  },
+  "certs73k/n11_s7_00000000000000801206000000000480.cert.part2of2": {
+   "bytes": 835067,
+   "git_blob_sha": "8f60ae00af6e3a0f42b3abe2ac8bc5ff9e05fef6"
+  },
+  "certs73k/n11_s7_00000000000000801206000000000c00.cert.part1of2": {
+   "bytes": 681391,
+   "git_blob_sha": "ef09f840f7d80c4201fe7d5073853af2f4ed7d22"
+  },
+  "certs73k/n11_s7_00000000000000801206000000000c00.cert.part2of2": {
+   "bytes": 681393,
+   "git_blob_sha": "08197d099592295ccc06892d948333dab53398a0"
+  },
+  "certs73k/n11_s7_00000000000000801206000000008400.cert.part1of2": {
+   "bytes": 1069033,
+   "git_blob_sha": "ff8acdcaf938aa643f5c2c71fbb7a2037c7d0ad2"
+  },
+  "certs73k/n11_s7_00000000000000801206000000008400.cert.part2of2": {
+   "bytes": 1069095,
+   "git_blob_sha": "0a44c13b76aeb7f760408808996d75da0c3701ed"
+  },
+  "certs73k/n11_s7_00000000000000801206000800000400.cert.part1of2": {
+   "bytes": 809584,
+   "git_blob_sha": "7f49d279b3f6074f1cfccb399ef007e9287e4b7b"
+  },
+  "certs73k/n11_s7_00000000000000801206000800000400.cert.part2of2": {
+   "bytes": 809639,
+   "git_blob_sha": "3b56fa203bfdfdcbe5f3c1c0bca31a06fdbf9d18"
+  },
+  "certs73k/n11_s7_00000000000000801206008000000400.cert": {
+   "bytes": 929706,
+   "git_blob_sha": "15ba24c98c998bdf03662c4b46376eba5d7362f5"
+  },
+  "certs73k/n11_s7_00000000000000801206020000000400.cert": {
+   "bytes": 1007281,
+   "git_blob_sha": "ec09e602819b10fa62a0a0307107f5029b0061df"
+  },
+  "certs73k/n11_s7_00000000000000801206100000000400.cert.part1of2": {
+   "bytes": 838778,
+   "git_blob_sha": "a219da49bca287a96c5d7ed1c95e5c87e2e65e8a"
+  },
+  "certs73k/n11_s7_00000000000000801206100000000400.cert.part2of2": {
+   "bytes": 838829,
+   "git_blob_sha": "0850a2d3f9f10f2416e1202433f326336f183059"
+  },
+  "certs73k/n11_s7_00000000000000801606000000000400.cert.part1of2": {
+   "bytes": 741293,
+   "git_blob_sha": "94a5ae4da0f32c8790a1ed3946970a1f32b44332"
+  },
+  "certs73k/n11_s7_00000000000000801606000000000400.cert.part2of2": {
+   "bytes": 741307,
+   "git_blob_sha": "7325be5c227b3f985bb0de58d0f95833ae8cb19d"
+  },
+  "certs73k/n11_s7_00000000000000805206000000000400.cert": {
+   "bytes": 813180,
+   "git_blob_sha": "28c99b8234bc55745198c5597c998db3a48ced6a"
+  },
+  "certs73k/n11_s7_00000000000002801206000000000400.cert.part1of2": {
+   "bytes": 1048155,
+   "git_blob_sha": "31b92c908d93e0047a339a06edc81c36bd8bd871"
+  },
+  "certs73k/n11_s7_00000000000002801206000000000400.cert.part2of2": {
+   "bytes": 1048218,
+   "git_blob_sha": "4c861374e03d4cce99b951b495724027d4d4975b"
+  },
+  "certs73k/n11_s7_00000000000010801206000000000400.cert.part1of2": {
+   "bytes": 768596,
+   "git_blob_sha": "dfdacdd470d53feb3bc22b25e6950b15489d1e59"
+  },
+  "certs73k/n11_s7_00000000000010801206000000000400.cert.part2of2": {
+   "bytes": 768611,
+   "git_blob_sha": "8d16964d6f46bb7b04769b1c2230a63fd28eb327"
+  },
+  "certs73k/n11_s7_00000000008000801206000000000400.cert.part1of2": {
+   "bytes": 956569,
+   "git_blob_sha": "8122521fee9b25bb04a59f6ba8ce494729972980"
+  },
+  "certs73k/n11_s7_00000000008000801206000000000400.cert.part2of2": {
+   "bytes": 956637,
+   "git_blob_sha": "d90d9a0dc3aa7614509e3d7e582648df692915c1"
+  },
+  "certs73k/n11_s7_00000000020000801206000000000400.cert.part1of2": {
+   "bytes": 652586,
+   "git_blob_sha": "7302b7581e2754cab9ff6f18f268b86530d4002a"
+  },
+  "certs73k/n11_s7_00000000020000801206000000000400.cert.part2of2": {
+   "bytes": 652656,
+   "git_blob_sha": "ff8809f9f3139f2f2f7001084802949a5d93a1f4"
+  },
+  "certs73k/n11_s7_00000000400000801206000000000400.cert.part1of2": {
+   "bytes": 694970,
+   "git_blob_sha": "9e44df2740ee3edc40f80def9ec948f65118ce39"
+  },
+  "certs73k/n11_s7_00000000400000801206000000000400.cert.part2of2": {
+   "bytes": 695012,
+   "git_blob_sha": "2d25d0506b631c9c45cb6f6457a261e28964128d"
+  },
+  "certs73k/n11_s7_00000000800000801206000000000400.cert.part1of2": {
+   "bytes": 870993,
+   "git_blob_sha": "348723c40b838123dc4a0e709a74854de6040525"
+  },
+  "certs73k/n11_s7_00000000800000801206000000000400.cert.part2of2": {
+   "bytes": 871036,
+   "git_blob_sha": "d7d9af0056d00be87874105409eb95f7f84f1727"
+  },
+  "certs73k/n11_s7_00000002000000801206000000000400.cert.part1of2": {
+   "bytes": 814507,
+   "git_blob_sha": "d6c396fbaee9b6793cf7177796b42310311df463"
+  },
+  "certs73k/n11_s7_00000002000000801206000000000400.cert.part2of2": {
+   "bytes": 814519,
+   "git_blob_sha": "9cd04688892ac0a574da0673c715bd57da952de7"
+  },
+  "certs73k/n11_s7_00000004000000801206000000000400.cert.part1of2": {
+   "bytes": 894917,
+   "git_blob_sha": "d35a050e4332ed12280b667f01bbbccde27bb1ca"
+  },
+  "certs73k/n11_s7_00000004000000801206000000000400.cert.part2of2": {
+   "bytes": 894941,
+   "git_blob_sha": "77de4244b73024a4184f9abab6cd0f9751f91c58"
+  },
+  "certs73k/n11_s7_00000080000000801206000000000400.cert.part1of2": {
+   "bytes": 875607,
+   "git_blob_sha": "8bcc492b38ce869eec61d20f3126f7baa2cac311"
+  },
+  "certs73k/n11_s7_00000080000000801206000000000400.cert.part2of2": {
+   "bytes": 875657,
+   "git_blob_sha": "52b244c476e21a12a8db1c169ad3b126464f624b"
+  },
+  "certs73k/n11_s7_00000200000000801206000000000400.cert.part1of2": {
+   "bytes": 601691,
+   "git_blob_sha": "ea7b502cbbab85d91eac0a35683fc067eeaa55b3"
+  },
+  "certs73k/n11_s7_00000200000000801206000000000400.cert.part2of2": {
+   "bytes": 601691,
+   "git_blob_sha": "f5389d6284efe24da4dd737ec73873be9a3625e8"
+  },
+  "certs73k/n11_s7_00010000000000801206000000000400.cert.part1of2": {
+   "bytes": 894166,
+   "git_blob_sha": "7021ef26bfe9d04e8c21e05e674dc98478f006d1"
+  },
+  "certs73k/n11_s7_00010000000000801206000000000400.cert.part2of2": {
+   "bytes": 894193,
+   "git_blob_sha": "67d6b6a767d59bd46e3b57edc7d46c4581c25a51"
+  },
+  "certs73k/n11_s7_00200000000000801206000000000400.cert.part1of2": {
+   "bytes": 1075354,
+   "git_blob_sha": "45310614f6dbc28ed23c4c5521fa2eaa4b9a94a1"
+  },
+  "certs73k/n11_s7_00200000000000801206000000000400.cert.part2of2": {
+   "bytes": 1075380,
+   "git_blob_sha": "8f4e5e0bd16d4e252f7f303e0d703271095696c7"
+  },
+  "inflight73i.json": {
+   "bytes": 7983,
+   "git_blob_sha": "4a6a17e66fc1a1bfe8efb7dc6fb2400b9af6aa1d"
+  },
+  "manifest66i.json": {
+   "bytes": 10858,
+   "git_blob_sha": "8a85ecef573bb6234b2ee1d9f7cb747926bd26ca"
+  },
+  "manifest69j.json": {
+   "bytes": 7445,
+   "git_blob_sha": "5e8e72faa1175ffa364849d8d90b73813406fa61"
+  },
+  "meas_d4.json": {
+   "bytes": 2785,
+   "git_blob_sha": "cb97fb5f845e191e9180584f4c399a80b3c0acca"
+  },
+  "meas_v1.json": {
+   "bytes": 18430,
+   "git_blob_sha": "2d2a47233195f21bbe74af798211838622decd48"
+  },
+  "rerun73ij.json": {
+   "bytes": 49399,
+   "git_blob_sha": "4bfad6e156161770ce106cbc75dc2d1cafed11f9"
+  },
+  "sweep73k-audit.json": {
+   "bytes": 7465,
+   "git_blob_sha": "85f4f73fa061c02612f5d24320d668e12468ca4e"
+  },
+  "sweep73k-record.json": {
+   "bytes": 13398,
+   "git_blob_sha": "0cba988e2a65e9195b0a0e6a3168a518e27079fb"
+  },
+  "sweep73k-xlane.json": {
+   "bytes": 5212,
+   "git_blob_sha": "e41143eb0eb79e7d7412596dbb54f1a524f9463c"
+  }
+ },
+ "interpretation_guard": "Efficiency and bookkeeping measurement only, on published certificate bytes and published sweep records. WIN7-D10 certificates prove a first-player win within depth 10 from the individual 7-stone roots only; REFUTED-D10 is not a LOSS proof. No manifest row and no S5 parent is closed by this measurement. The 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60} and classes 1/2/4 all remain UNKNOWN."
+}

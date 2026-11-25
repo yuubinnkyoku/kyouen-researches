@@ -1,0 +1,24 @@
+{
+ "session": "class2-lane cost-70b WIN7 certificates (long-term lane, 2026-11-14)",
+ "child_hex": "00000000000000809082080000000000",
+ "certificates": [
+  {
+   "bit": 37,
+   "root_hex": "00000000000000809082082000000000",
+   "rows": 30551,
+   "extraction_nodes": 11569428,
+   "extraction": "blind extractBatch (empty kill table, FBS=1<<20, probe96): fbt_drops=0, fatal=null, all 50 per-move extractions ok and uncapped",
+   "rows_sorted_unique": true,
+   "root_check": { "stones": 7, "loser_mobility": 50, "independent_enumeration_legal": 50, "match": true },
+   "sub_roots_verified": 50,
+   "sub_roots_pass": 50,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [13, 17],
+   "md5": "739d89938dfb5d01ab8ad9acc682cec5",
+   "sha256": "7e42e08e398c3a425aa7d7515a1dc69149076ecd8a8cc7dd14d8d869395cdf52",
+   "file": "class2-lane-cost70b-certificates/n11_s7_00000000000000809082082000000000.cert",
+   "root_not_among_existing": true
+  }
+ ]
+}

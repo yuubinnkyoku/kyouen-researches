@@ -1,0 +1,445 @@
+{
+  "schema": "n11-cost73i-certificates-bigint-general-circle-audit-20261118-v1",
+  "date": "2026-11-18",
+  "base_main_before_audit": "feef6bf38cb2e4c89401ad920d9894b561c1207b",
+  "method": "BigInt一般化円方程式（3x3 Cramer係数）で各3石が定める円または退化直線を構成し、121セルを整数評価。探索器・verdict cache・4x4 Bareiss証明書検査器を呼ばず、各rootの全合法な敗者初手からAND/OR木を独立再走査。",
+  "certificates": [
+    {
+      "bit": 1,
+      "root": "00000000000000403800400008000002",
+      "rows": 59184,
+      "rootMobility": 59,
+      "rootCanon": "00000000000000403800400008000002",
+      "parts": [
+        {
+          "git_blob_sha": "ae30232f7df463a4cc592a019cbe553d454582ea",
+          "bytes": 1069431
+        },
+        {
+          "git_blob_sha": "3d1471576adb95813e2f8ae68e73a363b8120606",
+          "bytes": 1069388
+        }
+      ],
+      "certificate_bytes": 2138819,
+      "subroot_count": 59,
+      "subrootSeen": 128484,
+      "winnerStates": 82873,
+      "loserStates": 24615,
+      "opponentEdges": 116512,
+      "terminals": 20996,
+      "terminal_range": [
+        13,
+        17
+      ],
+      "union": {
+        "consumed": 59184,
+        "missing": 0,
+        "extra": 0
+      }
+    },
+    {
+      "bit": 9,
+      "root": "00000000000000403800400008000200",
+      "rows": 57174,
+      "rootMobility": 61,
+      "rootCanon": "00000000000000403800400008000200",
+      "parts": [
+        {
+          "git_blob_sha": "360c81d25471ff303b613fd6cfed441c66dae376",
+          "bytes": 1034193
+        },
+        {
+          "git_blob_sha": "a0845ff4672bfb76c9e806fa2acb004fa4748844",
+          "bytes": 1034155
+        }
+      ],
+      "certificate_bytes": 2068348,
+      "subroot_count": 61,
+      "subrootSeen": 122438,
+      "winnerStates": 78657,
+      "loserStates": 21917,
+      "opponentEdges": 106126,
+      "terminals": 21864,
+      "terminal_range": [
+        13,
+        17
+      ],
+      "union": {
+        "consumed": 57174,
+        "missing": 0,
+        "extra": 0
+      }
+    },
+    {
+      "bit": 11,
+      "root": "00000000000000403800400008000800",
+      "rows": 67172,
+      "rootMobility": 61,
+      "rootCanon": "00000000000000403800400008000800",
+      "parts": [
+        {
+          "git_blob_sha": "0a514f9775323801fc769e7a507a99e40527c8bd",
+          "bytes": 810241
+        },
+        {
+          "git_blob_sha": "3003ae7d9f451c211828afc91edf5ce00b8c3faf",
+          "bytes": 810258
+        },
+        {
+          "git_blob_sha": "5645fff8cf9289b3b4381aefabedbb6064d2e2f8",
+          "bytes": 810178
+        }
+      ],
+      "certificate_bytes": 2430677,
+      "subroot_count": 61,
+      "subrootSeen": 151582,
+      "winnerStates": 98219,
+      "loserStates": 29352,
+      "opponentEdges": 137931,
+      "terminals": 24011,
+      "terminal_range": [
+        13,
+        17
+      ],
+      "union": {
+        "consumed": 67172,
+        "missing": 0,
+        "extra": 0
+      }
+    },
+    {
+      "bit": 18,
+      "root": "00000000000000403800400008040000",
+      "rows": 59794,
+      "rootMobility": 60,
+      "rootCanon": "00000000000000403800400008040000",
+      "parts": [
+        {
+          "git_blob_sha": "8d3d27ad4ab3fb3419638111d7e6d9a92cd491f4",
+          "bytes": 1080778
+        },
+        {
+          "git_blob_sha": "734475ffde7e49c7ad408c7b4869b6f19f7f6342",
+          "bytes": 1080725
+        }
+      ],
+      "certificate_bytes": 2161503,
+      "subroot_count": 60,
+      "subrootSeen": 126201,
+      "winnerStates": 81365,
+      "loserStates": 24348,
+      "opponentEdges": 113115,
+      "terminals": 20488,
+      "terminal_range": [
+        13,
+        17
+      ],
+      "union": {
+        "consumed": 59794,
+        "missing": 0,
+        "extra": 0
+      }
+    },
+    {
+      "bit": 29,
+      "root": "00000000000000403800400028000000",
+      "rows": 45839,
+      "rootMobility": 56,
+      "rootCanon": "00000000000000403800400028000000",
+      "parts": [
+        {
+          "git_blob_sha": "4781f177079ad3a51d94b673d7ec95f5e8c108e9",
+          "bytes": 828163
+        },
+        {
+          "git_blob_sha": "2a6bff83000094940de6a90bb6f95a58a403a300",
+          "bytes": 828097
+        }
+      ],
+      "certificate_bytes": 1656260,
+      "subroot_count": 56,
+      "subrootSeen": 103033,
+      "winnerStates": 66626,
+      "loserStates": 19540,
+      "opponentEdges": 92467,
+      "terminals": 16867,
+      "terminal_range": [
+        13,
+        17
+      ],
+      "union": {
+        "consumed": 45839,
+        "missing": 0,
+        "extra": 0
+      }
+    },
+    {
+      "bit": 38,
+      "root": "00000000000000403800404008000000",
+      "rows": 49142,
+      "rootMobility": 54,
+      "rootCanon": "00000000000000403800404008000000",
+      "parts": [
+        {
+          "git_blob_sha": "8c8f872b41028e2000ffd55815589ce8d4032a7a",
+          "bytes": 888476
+        },
+        {
+          "git_blob_sha": "b58c3cf3377657eed63a167ad8616315f2432f4b",
+          "bytes": 888436
+        }
+      ],
+      "certificate_bytes": 1776912,
+      "subroot_count": 54,
+      "subrootSeen": 108022,
+      "winnerStates": 70105,
+      "loserStates": 21127,
+      "opponentEdges": 99415,
+      "terminals": 16790,
+      "terminal_range": [
+        13,
+        17
+      ],
+      "union": {
+        "consumed": 49142,
+        "missing": 0,
+        "extra": 0
+      }
+    },
+    {
+      "bit": 54,
+      "root": "00000000000000403840400008000000",
+      "rows": 70562,
+      "rootMobility": 63,
+      "rootCanon": "00000000000000403840400008000000",
+      "parts": [
+        {
+          "git_blob_sha": "8b24087bd3412b5a51cc831909da249bb50019c9",
+          "bytes": 849697
+        },
+        {
+          "git_blob_sha": "b117ef9a63155ec4d5710929ca7b3ed8d3636087",
+          "bytes": 849707
+        },
+        {
+          "git_blob_sha": "2a82980fbbae751c908c332b3516830d279a2560",
+          "bytes": 849650
+        }
+      ],
+      "certificate_bytes": 2549054,
+      "subroot_count": 63,
+      "subrootSeen": 146564,
+      "winnerStates": 94356,
+      "loserStates": 27769,
+      "opponentEdges": 130834,
+      "terminals": 24439,
+      "terminal_range": [
+        13,
+        17
+      ],
+      "union": {
+        "consumed": 70562,
+        "missing": 0,
+        "extra": 0
+      }
+    },
+    {
+      "bit": 82,
+      "root": "00000000000400403800400008000000",
+      "rows": 26067,
+      "rootMobility": 47,
+      "rootCanon": "00000000000000805206000004000000",
+      "parts": [
+        {
+          "git_blob_sha": "f0a57ca0b61fbb87db684d325286b76ce1532752",
+          "bytes": 941950
+        }
+      ],
+      "certificate_bytes": 941950,
+      "subroot_count": 47,
+      "subrootSeen": 62007,
+      "winnerStates": 40459,
+      "loserStates": 12691,
+      "opponentEdges": 58601,
+      "terminals": 8857,
+      "terminal_range": [
+        13,
+        17
+      ],
+      "union": {
+        "consumed": 26067,
+        "missing": 0,
+        "extra": 0
+      }
+    },
+    {
+      "bit": 97,
+      "root": "00000002000000403800400008000000",
+      "rows": 47929,
+      "rootMobility": 57,
+      "rootCanon": "00000000020001003810000008000000",
+      "parts": [
+        {
+          "git_blob_sha": "4f5081e4c8f78683d6c1c1a0474e17e00f16703b",
+          "bytes": 864405
+        },
+        {
+          "git_blob_sha": "c70fb39f4cafc57833d2459c636c70b99b9e0c47",
+          "bytes": 864397
+        }
+      ],
+      "certificate_bytes": 1728802,
+      "subroot_count": 57,
+      "subrootSeen": 101722,
+      "winnerStates": 65847,
+      "loserStates": 20356,
+      "opponentEdges": 94495,
+      "terminals": 15519,
+      "terminal_range": [
+        13,
+        17
+      ],
+      "union": {
+        "consumed": 47929,
+        "missing": 0,
+        "extra": 0
+      }
+    },
+    {
+      "bit": 100,
+      "root": "00000010000000403800400008000000",
+      "rows": 47899,
+      "rootMobility": 53,
+      "rootCanon": "00000000000000801206000004100000",
+      "parts": [
+        {
+          "git_blob_sha": "783d8192eaae0dff912c6a5720d5eb140964e9e4",
+          "bytes": 863464
+        },
+        {
+          "git_blob_sha": "ab05546c3ab59ba311ff35d3e81d9b9fea350a60",
+          "bytes": 863427
+        }
+      ],
+      "certificate_bytes": 1726891,
+      "subroot_count": 53,
+      "subrootSeen": 102374,
+      "winnerStates": 66398,
+      "loserStates": 21116,
+      "opponentEdges": 95574,
+      "terminals": 14860,
+      "terminal_range": [
+        13,
+        17
+      ],
+      "union": {
+        "consumed": 47899,
+        "missing": 0,
+        "extra": 0
+      }
+    },
+    {
+      "bit": 110,
+      "root": "00004000000000403800400008000000",
+      "rows": 58241,
+      "rootMobility": 58,
+      "rootCanon": "00000000000000801206000004000400",
+      "parts": [
+        {
+          "git_blob_sha": "24e11db3bcd1655dd398cde89091c6c57dac82ae",
+          "bytes": 1049317
+        },
+        {
+          "git_blob_sha": "a7ea7250c28ee8c2839c487e6828a7e329d0a614",
+          "bytes": 1049265
+        }
+      ],
+      "certificate_bytes": 2098582,
+      "subroot_count": 58,
+      "subrootSeen": 118139,
+      "winnerStates": 76428,
+      "loserStates": 23039,
+      "opponentEdges": 107267,
+      "terminals": 18672,
+      "terminal_range": [
+        13,
+        17
+      ],
+      "union": {
+        "consumed": 58241,
+        "missing": 0,
+        "extra": 0
+      }
+    },
+    {
+      "bit": 111,
+      "root": "00008000000000403800400008000000",
+      "rows": 60337,
+      "rootMobility": 60,
+      "rootCanon": "00000000000000801206000004200000",
+      "parts": [
+        {
+          "git_blob_sha": "f60a055e226df9e43e2372c316fae36fc31e4af5",
+          "bytes": 1086785
+        },
+        {
+          "git_blob_sha": "e0a9ba3fa1b6d65f6ba1877fa006483c71ed527f",
+          "bytes": 1086764
+        }
+      ],
+      "certificate_bytes": 2173549,
+      "subroot_count": 60,
+      "subrootSeen": 125001,
+      "winnerStates": 80271,
+      "loserStates": 22863,
+      "opponentEdges": 108788,
+      "terminals": 21867,
+      "terminal_range": [
+        13,
+        17
+      ],
+      "union": {
+        "consumed": 60337,
+        "missing": 0,
+        "extra": 0
+      }
+    }
+  ],
+  "totals": {
+    "certificates": 12,
+    "rows": 649340,
+    "root_replies": 689,
+    "subroot_seen": 1395567,
+    "winner_states": 901604,
+    "loser_states": 268733,
+    "opponent_edges": 1261125,
+    "terminals": 225230
+  },
+  "bit1_crosscheck": {
+    "rootcheck": {
+      "stones": 7,
+      "loserMobility": 59
+    },
+    "subroots_published": 59,
+    "subroots_recomputed": 59,
+    "all_59_equal": true
+  },
+  "root_canon_agrees_with_python_census_side_canon": "12/12",
+  "metadata_pins": {
+    "bit1_subroots_git_blob_sha": "958965fc5f1fd151496f371d803d31b52e3411af",
+    "bit1_rootcheck_git_blob_sha": "e252780689b03679ad3efa3941926a6b6131a75b"
+  },
+  "parser_checks": {
+    "header_and_root": true,
+    "strictly_sorted_unique_rows": true,
+    "all_moves_in_range": true,
+    "part_boundary_checked": true
+  },
+  "all_pass": true,
+  "runtime_ms": 66919,
+  "geometry_cache": {
+    "triple_masks": 47414,
+    "legal_positions": 806838
+  },
+  "interpretation_guard": "Twelve individual seven-stone WIN7 roots of the cost-73i sweep row only. REFUTED-D10 is not a LOSS proof; no receipt fold was performed. Standard 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, and classes 1/2/4 remain UNKNOWN."
+}

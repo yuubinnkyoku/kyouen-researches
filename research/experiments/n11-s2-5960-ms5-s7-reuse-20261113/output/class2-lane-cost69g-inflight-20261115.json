@@ -1,0 +1,14 @@
+{
+ "title": "n11 class2-lane cost-69g sweep in flight (claimed by a long-term lane execution)",
+ "date": "2026-11-15",
+ "s5": "00000000000000809102000000000000",
+ "s6_child": "00000000000000809102000000002000",
+ "s6_s7_edge_cost": 69,
+ "demand_classes": "c1=0,c2=2,c4=2 (after-cost70c-warm3 canonical chain head 1163/6684/527280/4954/391003, re-derived and VERIFIED from the chain state: this child is the cheapest remaining unswept child of the third class-2 target S5 00000000000000809102000000000000 - the best coverable class-2 S5 at 7 remaining orbits / 519 at the canonical head; the cost-69 sibling 00000000000000809102000000000008 was swept as cost-69f (9 WIN7-D10 receipts folded, child orbit closed) and the cost-65 sibling 00000000000000809102000080000000 is claimed as cost-65j by another execution at the after-75c state (already covered at the canonical head); membership in the remaining-children set re-verified before this claim per the cost-61e correction lesson)",
+ "legal_candidates_total": 69,
+ "legal_candidates_source": "legal_candidates.py independent enumeration (Bareiss 4x4): 69 legal candidates, bit-exact with the published edge cost 69; repo-verbatim copy verified by git blob sha (8e97082c) before use",
+ "candidate_bits": [0,1,2,3,4,6,7,8,9,10,14,17,19,20,21,22,24,25,29,30,31,32,33,34,35,36,37,41,42,44,46,47,53,54,66,69,75,76,77,78,79,80,85,86,88,91,92,94,95,96,97,98,100,102,103,105,106,107,108,109,110,111,113,114,116,117,118,119,120],
+ "motivation": "second sweep toward closing the third class-2 target S5 00000000000000809102000000000000: after the cost-69f fold (canonical head 1163) the third target has 7 remaining S6 orbits / 519 and this child is the cheapest remaining unswept child (cost 69, c1=0,c2=2,c4=2); no published sweep record or claim exists for this child (checked on latest main by code search for the child hex and the name cost-69g); a completed sweep with certificates here reduces the third target's remaining orbits and its receipts fold into the canonical chain",
+ "engine": "class4_child1_runner_v16.ts (published repo-verbatim v16 runner, git blob sha 0a4a86f6 verified against main before use), depth 10, andclose=1, cap 1e9, pilot d6 control (loss=false at exactly 3,402 nodes) per batch",
+ "unknown_status": "11x11 empty board: UNKNOWN. A completed sweep proves only WIN7-D10/REFUTED-D10 verdicts for the 7-stone roots of this child."
+}

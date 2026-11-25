@@ -1,0 +1,88 @@
+{
+ "schema": "n11-class2-lane-cost64g-win1-certificates-20261116-v1",
+ "date": "2026-11-16",
+ "target": {
+  "s6_child_hex": "00000000000100003800000008080000",
+  "s5_parent": "00000000000000003800000008002000",
+  "protocol_anchor_s5_parent": "00000000000000403800000008000000",
+  "s5_parent_role": "protocol parent containing the selected S6 row; full direct-parent set is listed separately",
+  "direct_s5_parents": [
+   {
+    "s5_hex": "00000000000000003800000008002000",
+    "classes_mask": 2,
+    "remaining_s6_orbits_head1438": 30,
+    "remaining_s7_edge_cost_head1438": 2081
+   },
+   {
+    "s5_hex": "00000000000000801202010000000000",
+    "classes_mask": 2,
+    "remaining_s6_orbits_head1438": 50,
+    "remaining_s7_edge_cost_head1438": 3631
+   }
+  ],
+  "s6_s7_edge_cost": 64,
+  "win7_d10_bits_certified_64g": [
+   89
+  ],
+  "note": "the single cost-64g v16 WIN7-D10 receipt (bit 89 of the 59-bit sweep published in class2-lane-cost64g-raw-batch1..8-20261116.jsonl; bit 89 additionally crosschecked by the v15 engine at 1,760,287 nodes loss=true) now has a published certificate; the 58 REFUTED-D10 candidates and the 5 pre-sweep REFUTED-D10 transfers have no certificate here (REFUTED is not a LOSS proof). The row is NOT sterile; the fold of this receipt on the head-1438 chain follows the chain-reproduction protocol. The root has a distinct D4 canonical form from every folded root (conflict census in the fold session)"
+ },
+ "extraction": {
+  "engine": "repo-verbatim class4_child1_cert_extractor_exact_v16.ts driven by scripts/cert_driver65j.ts (published generic single-root blind extraction driver), empty kill table (blind extraction), single chunk part1of1 per bit",
+  "chunking": "rows sorted-unique (exact byte order); header and root lines prepended; whole certs over the 1,200,000-byte publication split threshold are split at a line boundary into part1of2/part2of2 with a receipt"
+ },
+ "certificates": [
+  {
+   "bit": 89,
+   "child_hex": "00000000000100003800000008080000",
+   "root_hex": "00000000020100003800000008080000",
+   "d4_canonical_hex": "00000000020000801202010000080000",
+   "verdict": "WIN7",
+   "sub_roots": 45,
+   "root_mobility_matches_legal_candidates_py": true,
+   "rows": 30373,
+   "extraction_nodes": 1278418,
+   "fbt_drops": 0,
+   "fatal": null,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "terminal_count": 9172,
+   "winner_states": 44932,
+   "loser_states": 14916,
+   "published_cert": {
+    "note": "single whole cert (under the 1.75 MiB repo per-file limit)",
+    "bytes": 1096891,
+    "md5": "8845801d6b5ad57df9de0a29cd0066f1",
+    "sha256": "6492766599e3f5de7747b7e99451ac7b8c44720d98ec7e769ac21ce4706488b0",
+    "git_blob_sha": "1d2cc167b2212c2df6cb85c99f91d244cba4be55",
+    "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost64g-certificates/bit89-root-00000000020100003800000008080000.cert"
+   },
+   "bigint_verify": {
+    "union_missing": 0,
+    "union_extra": 0,
+    "subroots_passed": 45,
+    "winner_states": 44932,
+    "loser_states": 14916,
+    "terminal_count": 9172
+   },
+   "bareiss_verify": {
+    "subroots_verified": 45,
+    "all_subroots_pass": true,
+    "winner_states_seen_across_subroots": 69020,
+    "terminal_count": 9172
+   }
+  }
+ ],
+ "totals": {
+  "published_certificates": 1,
+  "rows": 30373,
+  "extraction_nodes": 1278418,
+  "sub_roots": 45,
+  "winner_states": 44932,
+  "loser_states": 14916,
+  "terminal_count": 9172,
+  "cert_bytes": 1096891
+ },
+ "interpretation_guard": "WIN7 certificates prove a first-player win within depth 10 from the individual 7-stone roots only; 11x11 empty board / two-stone roots {49,60} and {59,60} / S2 {59,60} / class 1 / class 2 / class 4 remain UNKNOWN"
+}

@@ -1,0 +1,195 @@
+{
+ "session": "class2-lane cost-65g warm certificate rebuild (long-term lane session 12, 2026-11-14)",
+ "child_hex": "00000000000000803202000000000004",
+ "note": "warm rebuild of the 6 cost-65g WIN7-D10 candidates that stayed unverified in the original cost-65g sweep (bits 0, 15, 44, 52, 75, 105 listed in class2-lane-cost65g-sweep-20261114.json unverified_win7_bits); the original 3 certificates (bits 94/1/86) and their records (class2-lane-cost65g-win7-certificates-20261114.json) are untouched - this record adds the 6 new receipts without modifying any published record (the published recompute chain keeps asserting the original 3-cert records); after this rebuild ALL 9 cost-65g WIN7-D10 candidates carry fully verified certificates",
+ "certificates": [
+  {
+   "bit": 0,
+   "root_hex": "00000000000000803202000000000005",
+   "verdict": "WIN7",
+   "rows": 42091,
+   "extraction_nodes": 13545545,
+   "extraction": "blind extractBatch (empty kill table, FBS=1<<20): fbt_drops=0, all 54 per-move extractions ok and uncapped; sed -n 2p stdin recipe",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 54,
+    "independent_enumeration_legal": 54,
+    "match": true
+   },
+   "sub_roots_verified": 54,
+   "sub_roots_pass": 54,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "md5": "967a92756178a3673f7211dce750f961",
+   "sha256": "4575a136b9d866f5ea6c43e47c64f92ac5eef015c2c141a8c726072bf2b23270",
+   "file": "class2-lane-cost65g-certificates/bit0-root-00000000000000803202000000000005.cert",
+   "root_not_among_existing": true,
+   "root_absence_check": "GitHub code search over yuubinnkyoku/kyouen-researches for the root hex: 1 hit, the cost-65g sweep record win7_roots listing only - no certificate existed, first publication",
+   "v16_search_nodes": 3695463,
+   "v15_crosscheck_verdict": "WIN7",
+   "v15_crosscheck_nodes": 9114880
+  },
+  {
+   "bit": 15,
+   "root_hex": "00000000000000803202000000008004",
+   "verdict": "WIN7",
+   "rows": 41226,
+   "extraction_nodes": 7209440,
+   "extraction": "blind extractBatch (empty kill table, FBS=1<<20): fbt_drops=0, all 52 per-move extractions ok and uncapped; sed -n 2p stdin recipe",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 52,
+    "independent_enumeration_legal": 52,
+    "match": true
+   },
+   "sub_roots_verified": 52,
+   "sub_roots_pass": 52,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "md5": "0cd7de222ce0422746b7840d03f49383",
+   "sha256": "66476fb187c814065a6ce9e6ff41985b41324a6e8434a12971244f7ee7170847",
+   "file": "class2-lane-cost65g-certificates/bit15-root-00000000000000803202000000008004.cert",
+   "root_not_among_existing": true,
+   "root_absence_check": "GitHub code search over yuubinnkyoku/kyouen-researches for the root hex: 1 hit, the cost-65g sweep record win7_roots listing only - no certificate existed, first publication",
+   "v16_search_nodes": 1999371,
+   "v15_crosscheck_verdict": null,
+   "v15_crosscheck_nodes": null
+  },
+  {
+   "bit": 44,
+   "root_hex": "00000000000000803202100000000004",
+   "verdict": "WIN7",
+   "rows": 40807,
+   "extraction_nodes": 11705049,
+   "extraction": "blind extractBatch (empty kill table, FBS=1<<20): fbt_drops=0, all 52 per-move extractions ok and uncapped; sed -n 2p stdin recipe",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 52,
+    "independent_enumeration_legal": 52,
+    "match": true
+   },
+   "sub_roots_verified": 52,
+   "sub_roots_pass": 52,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "md5": "c09c08543264c725995d28d45926a347",
+   "sha256": "44e519f2cf88c3414d15ea9b381dea3af29b226cbba85e7aa7f75df5b82f612f",
+   "file": "class2-lane-cost65g-certificates/bit44-root-00000000000000803202100000000004.cert",
+   "root_not_among_existing": true,
+   "root_absence_check": "GitHub code search over yuubinnkyoku/kyouen-researches for the root hex: 1 hit, the cost-65g sweep record win7_roots listing only - no certificate existed, first publication",
+   "v16_search_nodes": 3056671,
+   "v15_crosscheck_verdict": "WIN7",
+   "v15_crosscheck_nodes": 7286939
+  },
+  {
+   "bit": 52,
+   "root_hex": "00000000000000803212000000000004",
+   "verdict": "WIN7",
+   "rows": 37706,
+   "extraction_nodes": 9427271,
+   "extraction": "blind extractBatch (empty kill table, FBS=1<<20): fbt_drops=0, all 51 per-move extractions ok and uncapped; sed -n 2p stdin recipe",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 51,
+    "independent_enumeration_legal": 51,
+    "match": true
+   },
+   "sub_roots_verified": 51,
+   "sub_roots_pass": 51,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "md5": "9f2e448dfdfde96c4ce22f42e3a53efd",
+   "sha256": "f7686c391b0f787dac91cf2cfbf7134731853b60a3140cf9b897ed15118d7daa",
+   "file": "class2-lane-cost65g-certificates/bit52-root-00000000000000803212000000000004.cert",
+   "root_not_among_existing": true,
+   "root_absence_check": "GitHub code search over yuubinnkyoku/kyouen-researches for the root hex: 1 hit, the cost-65g sweep record win7_roots listing only - no certificate existed, first publication",
+   "v16_search_nodes": 1895834,
+   "v15_crosscheck_verdict": null,
+   "v15_crosscheck_nodes": null
+  },
+  {
+   "bit": 75,
+   "root_hex": "00000000000008803202000000000004",
+   "verdict": "WIN7",
+   "rows": 39625,
+   "extraction_nodes": 7380455,
+   "extraction": "blind extractBatch (empty kill table, FBS=1<<20): fbt_drops=0, all 52 per-move extractions ok and uncapped; sed -n 2p stdin recipe",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 52,
+    "independent_enumeration_legal": 52,
+    "match": true
+   },
+   "sub_roots_verified": 52,
+   "sub_roots_pass": 52,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "md5": "d270c5df836514613bbcdc9647eadf7d",
+   "sha256": "675d450bdc95603bf91f344b7d6afa0ca944022e8749db1da60f3f89816fd8c5",
+   "file": "class2-lane-cost65g-certificates/bit75-root-00000000000008803202000000000004.cert",
+   "root_not_among_existing": true,
+   "root_absence_check": "GitHub code search over yuubinnkyoku/kyouen-researches for the root hex: 1 hit, the cost-65g sweep record win7_roots listing only - no certificate existed, first publication",
+   "v16_search_nodes": 2190505,
+   "v15_crosscheck_verdict": null,
+   "v15_crosscheck_nodes": null
+  },
+  {
+   "bit": 105,
+   "root_hex": "00000200000000803202000000000004",
+   "verdict": "WIN7",
+   "rows": 43743,
+   "extraction_nodes": 10918655,
+   "extraction": "blind extractBatch (empty kill table, FBS=1<<20): fbt_drops=0, all 52 per-move extractions ok and uncapped; sed -n 2p stdin recipe",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 52,
+    "independent_enumeration_legal": 52,
+    "match": true
+   },
+   "sub_roots_verified": 52,
+   "sub_roots_pass": 52,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "md5": "97d3c67bfe16bf00a9bc37061b74a91a",
+   "sha256": "e7254958b0ccdc090834db9c847619362a8414b2a6a2114288c210ad80121722",
+   "file": "class2-lane-cost65g-certificates/bit105-root-00000200000000803202000000000004.cert",
+   "root_not_among_existing": true,
+   "root_absence_check": "GitHub code search over yuubinnkyoku/kyouen-researches for the root hex: 1 hit, the cost-65g sweep record win7_roots listing only - no certificate existed, first publication",
+   "v16_search_nodes": 3132696,
+   "v15_crosscheck_verdict": "WIN7",
+   "v15_crosscheck_nodes": 7366826
+  }
+ ],
+ "verification": "independent engine-free verification with verify_bit7_win7_cert.ts (exact integer Bareiss 4x4): root-check stones=7 and loserMobility equal the independent legal_candidates.py enumeration on every root; every sub-root PASS; the union of consumed winner states over all sub-roots equals the certificate row set exactly (0 missing / 0 extra, both directions) on all six certificates; v15 cross-engine anchors from the original sweep records carried over (bits 0/44/105 loss=true at 9,114,880 / 7,286,939 / 7,366,826 nodes)",
+ "unknown_status": "11x11 empty board: UNKNOWN. Each WIN7 certificate proves only that its individual 7-stone root is a winner-side win within depth 10."
+}

@@ -1,0 +1,351 @@
+{
+ "all_byte_identical": true,
+ "all_fold_receipt_md5_agree": true,
+ "all_verifier_records_agree": true,
+ "date": "2026-11-16",
+ "independent_extraction_summaries": [
+  "class2-lane-cost66c-independent-extraction-bit73-summary-20261116.json",
+  "class2-lane-cost66c-independent-extraction-bit75-summary-20261116.json",
+  "class2-lane-cost66c-independent-extraction-bit79-summary-20261116.json",
+  "class2-lane-cost66c-independent-extraction-bit87-summary-20261116.json",
+  "class2-lane-cost66c-independent-extraction-bit96-summary-20261116.json",
+  "class2-lane-cost66c-independent-extraction-bit97-summary-20261116.json",
+  "class2-lane-cost66c-independent-extraction-bit112-summary-20261116.json"
+ ],
+ "interpretation_guard": "bookkeeping verification only; WIN7 certificates prove a first-player win within depth 10 from the individual 7-stone roots only; REFUTED-D10 is not a LOSS proof; NOT-STERILE is not a game resolution; the 11x11 empty board, the two-stone roots {49,60}/{59,60}, S2 {59,60} and classes 1/2/4 remain UNKNOWN",
+ "method": "blind re-extraction of all 7 cost-66c WIN7-D10 certificate roots in a fresh environment: moves re-enumerated with the published legal_candidates.py (no hand transcription), extraction with the published generic driver cert_driver65j.ts + repo-verbatim class4_child1_cert_extractor_exact_v16.ts (empty kill table = blind), assembly = sorted(set(rows)) + n11-terminal-strategy-v1 header + root line; compared byte-for-byte against the published certificates (whole certs for bits 79/97, joined parts for bits 73/75/87/96 and the 3-part split for bit 112); both published verifiers re-run on the independently assembled certs; md5s cross-checked against the landed fold receipt certificate entries",
+ "per_bit": [
+  {
+   "assembly": {
+    "byte_identical_to_published": true,
+    "bytes": 1260573,
+    "md5": "04e12a78a3d56bfbc9bbd5952384c645",
+    "published_form": "joined parts",
+    "rows": 34822,
+    "sha256": "fd8e9797b934856fc419a8cf6221c4e026299f5a6b2ee634a8394f0e0b865910"
+   },
+   "bareiss_verify": {
+    "record_agrees_with_published": true,
+    "subroots_verified": 44,
+    "terminal_range": [
+     13,
+     17
+    ]
+   },
+   "bigint_verify": {
+    "record_agrees_with_published": true,
+    "subroots_passed": 44,
+    "union_extra": 0,
+    "union_missing": 0
+   },
+   "bit": 73,
+   "extraction": {
+    "agree_with_published_summary": true,
+    "fbt_drops": 0,
+    "ms": 6698,
+    "n_rows": 34822,
+    "per_move_nodes_agree": true,
+    "sum_nodes": 2379811
+   },
+   "fold_receipt_cross_check": {
+    "extraction_nodes_agree": true,
+    "md5_agree": true,
+    "receipt_certificate_md5": "04e12a78a3d56bfbc9bbd5952384c645",
+    "receipt_extraction_nodes": 2379811,
+    "receipt_sub_roots": 44,
+    "sub_roots_agree": true
+   },
+   "moves_blind_reenumeration": {
+    "agree_with_published_driver_moves": true,
+    "method": "legal_candidates.py (published independent enumerator), fresh enumeration, no hand transcription",
+    "n_moves": 44
+   },
+   "root_hex": "00000000000002003800000008002008"
+  },
+  {
+   "assembly": {
+    "byte_identical_to_published": true,
+    "bytes": 1457491,
+    "md5": "f8d9a8f004fd306c8275ca50f20e12cd",
+    "published_form": "joined parts",
+    "rows": 40267,
+    "sha256": "614487eb904e01abbc5f388374a26585dad9181400388c3b55ccd907802dfd6a"
+   },
+   "bareiss_verify": {
+    "record_agrees_with_published": true,
+    "subroots_verified": 53,
+    "terminal_range": [
+     13,
+     17
+    ]
+   },
+   "bigint_verify": {
+    "record_agrees_with_published": true,
+    "subroots_passed": 53,
+    "union_extra": 0,
+    "union_missing": 0
+   },
+   "bit": 75,
+   "extraction": {
+    "agree_with_published_summary": true,
+    "fbt_drops": 0,
+    "ms": 9150,
+    "n_rows": 40267,
+    "per_move_nodes_agree": true,
+    "sum_nodes": 3619378
+   },
+   "fold_receipt_cross_check": {
+    "extraction_nodes_agree": true,
+    "md5_agree": true,
+    "receipt_certificate_md5": "f8d9a8f004fd306c8275ca50f20e12cd",
+    "receipt_extraction_nodes": 3619378,
+    "receipt_sub_roots": 53,
+    "sub_roots_agree": true
+   },
+   "moves_blind_reenumeration": {
+    "agree_with_published_driver_moves": true,
+    "method": "legal_candidates.py (published independent enumerator), fresh enumeration, no hand transcription",
+    "n_moves": 53
+   },
+   "root_hex": "00000000000008003800000008002008"
+  },
+  {
+   "assembly": {
+    "byte_identical_to_published": true,
+    "bytes": 1107891,
+    "md5": "0538206741c808fb50a6bc319f111fad",
+    "published_form": "whole",
+    "rows": 30590,
+    "sha256": "c00048f65f78479832bd76037af3594c6c6af0e9232babc6523a528d17dcb26e"
+   },
+   "bareiss_verify": {
+    "record_agrees_with_published": true,
+    "subroots_verified": 47,
+    "terminal_range": [
+     13,
+     17
+    ]
+   },
+   "bigint_verify": {
+    "record_agrees_with_published": true,
+    "subroots_passed": 47,
+    "union_extra": 0,
+    "union_missing": 0
+   },
+   "bit": 79,
+   "extraction": {
+    "agree_with_published_summary": true,
+    "fbt_drops": 0,
+    "ms": 6406,
+    "n_rows": 30590,
+    "per_move_nodes_agree": true,
+    "sum_nodes": 2372373
+   },
+   "fold_receipt_cross_check": {
+    "extraction_nodes_agree": true,
+    "md5_agree": true,
+    "receipt_certificate_md5": "0538206741c808fb50a6bc319f111fad",
+    "receipt_extraction_nodes": 2372373,
+    "receipt_sub_roots": 47,
+    "sub_roots_agree": true
+   },
+   "moves_blind_reenumeration": {
+    "agree_with_published_driver_moves": true,
+    "method": "legal_candidates.py (published independent enumerator), fresh enumeration, no hand transcription",
+    "n_moves": 47
+   },
+   "root_hex": "00000000000080003800000008002008"
+  },
+  {
+   "assembly": {
+    "byte_identical_to_published": true,
+    "bytes": 1514876,
+    "md5": "dce667df0596800698d31b14d61e1706",
+    "published_form": "joined parts",
+    "rows": 41870,
+    "sha256": "42516448ad30a79e616d7caa5ddf6dd146beaf9bd4e9cf4bda0a479f02223c66"
+   },
+   "bareiss_verify": {
+    "record_agrees_with_published": true,
+    "subroots_verified": 50,
+    "terminal_range": [
+     13,
+     17
+    ]
+   },
+   "bigint_verify": {
+    "record_agrees_with_published": true,
+    "subroots_passed": 50,
+    "union_extra": 0,
+    "union_missing": 0
+   },
+   "bit": 87,
+   "extraction": {
+    "agree_with_published_summary": true,
+    "fbt_drops": 0,
+    "ms": 8114,
+    "n_rows": 41870,
+    "per_move_nodes_agree": true,
+    "sum_nodes": 3421353
+   },
+   "fold_receipt_cross_check": {
+    "extraction_nodes_agree": true,
+    "md5_agree": true,
+    "receipt_certificate_md5": "dce667df0596800698d31b14d61e1706",
+    "receipt_extraction_nodes": 3421353,
+    "receipt_sub_roots": 50,
+    "sub_roots_agree": true
+   },
+   "moves_blind_reenumeration": {
+    "agree_with_published_driver_moves": true,
+    "method": "legal_candidates.py (published independent enumerator), fresh enumeration, no hand transcription",
+    "n_moves": 50
+   },
+   "root_hex": "00000000008000003800000008002008"
+  },
+  {
+   "assembly": {
+    "byte_identical_to_published": true,
+    "bytes": 1973437,
+    "md5": "f750f2a90e55d8766c3627e2bbdfa342",
+    "published_form": "joined parts",
+    "rows": 54558,
+    "sha256": "398bae31b20c6f6810c7ce297ae8fc866ae4a8a82f2575f5da506a79e4988ca5"
+   },
+   "bareiss_verify": {
+    "record_agrees_with_published": true,
+    "subroots_verified": 51,
+    "terminal_range": [
+     13,
+     17
+    ]
+   },
+   "bigint_verify": {
+    "record_agrees_with_published": true,
+    "subroots_passed": 51,
+    "union_extra": 0,
+    "union_missing": 0
+   },
+   "bit": 96,
+   "extraction": {
+    "agree_with_published_summary": true,
+    "fbt_drops": 0,
+    "ms": 14240,
+    "n_rows": 54558,
+    "per_move_nodes_agree": true,
+    "sum_nodes": 6009719
+   },
+   "fold_receipt_cross_check": {
+    "extraction_nodes_agree": true,
+    "md5_agree": true,
+    "receipt_certificate_md5": "f750f2a90e55d8766c3627e2bbdfa342",
+    "receipt_extraction_nodes": 6009719,
+    "receipt_sub_roots": 51,
+    "sub_roots_agree": true
+   },
+   "moves_blind_reenumeration": {
+    "agree_with_published_driver_moves": true,
+    "method": "legal_candidates.py (published independent enumerator), fresh enumeration, no hand transcription",
+    "n_moves": 51
+   },
+   "root_hex": "00000001000000003800000008002008"
+  },
+  {
+   "assembly": {
+    "byte_identical_to_published": true,
+    "bytes": 1130350,
+    "md5": "86826729a9bbdf4c9c1c40d5720ace80",
+    "published_form": "whole",
+    "rows": 31205,
+    "sha256": "b7d3420ceb80354016fd315173a28cba3e1ae1fe5ab19908e8c144ac7415451a"
+   },
+   "bareiss_verify": {
+    "record_agrees_with_published": true,
+    "subroots_verified": 45,
+    "terminal_range": [
+     13,
+     17
+    ]
+   },
+   "bigint_verify": {
+    "record_agrees_with_published": true,
+    "subroots_passed": 45,
+    "union_extra": 0,
+    "union_missing": 0
+   },
+   "bit": 97,
+   "extraction": {
+    "agree_with_published_summary": true,
+    "fbt_drops": 0,
+    "ms": 5666,
+    "n_rows": 31205,
+    "per_move_nodes_agree": true,
+    "sum_nodes": 1364577
+   },
+   "fold_receipt_cross_check": {
+    "extraction_nodes_agree": true,
+    "md5_agree": true,
+    "receipt_certificate_md5": "86826729a9bbdf4c9c1c40d5720ace80",
+    "receipt_extraction_nodes": 1364577,
+    "receipt_sub_roots": 45,
+    "sub_roots_agree": true
+   },
+   "moves_blind_reenumeration": {
+    "agree_with_published_driver_moves": true,
+    "method": "legal_candidates.py (published independent enumerator), fresh enumeration, no hand transcription",
+    "n_moves": 45
+   },
+   "root_hex": "00000002000000003800000008002008"
+  },
+  {
+   "assembly": {
+    "byte_identical_to_published": true,
+    "bytes": 2774034,
+    "md5": "128fcc2a8f7f3837ebe5348cb04e0b47",
+    "published_form": "joined parts",
+    "rows": 76817,
+    "sha256": "9e016d0407bee4438e11190ee8ef54f5e4f8190d73306dfa62ae4bb19c410747"
+   },
+   "bareiss_verify": {
+    "record_agrees_with_published": true,
+    "subroots_verified": 58,
+    "terminal_range": [
+     13,
+     17
+    ]
+   },
+   "bigint_verify": {
+    "record_agrees_with_published": true,
+    "subroots_passed": 58,
+    "union_extra": 0,
+    "union_missing": 0
+   },
+   "bit": 112,
+   "extraction": {
+    "agree_with_published_summary": true,
+    "fbt_drops": 0,
+    "ms": 42010,
+    "n_rows": 76817,
+    "per_move_nodes_agree": true,
+    "sum_nodes": 23612707
+   },
+   "fold_receipt_cross_check": {
+    "extraction_nodes_agree": true,
+    "md5_agree": true,
+    "receipt_certificate_md5": "128fcc2a8f7f3837ebe5348cb04e0b47",
+    "receipt_extraction_nodes": 23612707,
+    "receipt_sub_roots": 58,
+    "sub_roots_agree": true
+   },
+   "moves_blind_reenumeration": {
+    "agree_with_published_driver_moves": true,
+    "method": "legal_candidates.py (published independent enumerator), fresh enumeration, no hand transcription",
+    "n_moves": 58
+   },
+   "root_hex": "00010000000000003800000008002008"
+  }
+ ],
+ "schema": "n11-class2-lane-cost66c-win7-certificates-independent-verification-20261116-v1",
+ "total_cert_bytes": 11218652,
+ "total_extraction_nodes": 42779918
+}

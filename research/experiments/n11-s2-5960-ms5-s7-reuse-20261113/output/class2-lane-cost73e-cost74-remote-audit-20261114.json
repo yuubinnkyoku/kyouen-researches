@@ -1,0 +1,310 @@
+{
+ "schema": "n11-class2-lane-cost73e-cost74-remote-audit-20261114-v2",
+ "date": "2026-11-14",
+ "session": "long-term lane session 11 (regenerated audit; original session-10 local audit was lost to an environment reset before push)",
+ "method": "all raw batch JSONL files re-fetched from raw.githubusercontent.com at commit 6ebceabb190a7f9043e45d78cefc623f578cf84b and strictly parsed line by line",
+ "audited_at_commit": "6ebceabb190a7f9043e45d78cefc623f578cf84b",
+ "cost73e": {
+  "ok": true,
+  "files": [
+   {
+    "file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost73e-raw-batch0-20261114.jsonl",
+    "md5": "afe498bc93c0837f1a8d5f7a936908b9",
+    "lines": 2
+   },
+   {
+    "file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost73e-raw-batch1-20261114.jsonl",
+    "md5": "85acdec372514f8f43badd8e8bd6ee44",
+    "lines": 7
+   },
+   {
+    "file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost73e-raw-batch2-20261114.jsonl",
+    "md5": "2eddb4edc08b998d53a2cdefe6b2d812",
+    "lines": 7
+   },
+   {
+    "file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost73e-raw-batch3-20261114.jsonl",
+    "md5": "ab6f2ee46a2a82940038eeaa430da6ff",
+    "lines": 7
+   },
+   {
+    "file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost73e-raw-batch4-20261114.jsonl",
+    "md5": "2c4be10571695f7d6f2cc41c353127ab",
+    "lines": 7
+   },
+   {
+    "file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost73e-raw-batch5-20261114.jsonl",
+    "md5": "1970dfdbb0a9aad052a6cbd750360dad",
+    "lines": 7
+   },
+   {
+    "file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost73e-raw-batch6-20261114.jsonl",
+    "md5": "440bf8dadbb2af8988a9adeed5d8c159",
+    "lines": 7
+   },
+   {
+    "file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost73e-raw-batch7-20261114.jsonl",
+    "md5": "64a03c133df71ba9dba8aecd20a82534",
+    "lines": 7
+   },
+   {
+    "file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost73e-raw-batch8-20261114.jsonl",
+    "md5": "69d7c8e118bdbce2751e106986ceb4b5",
+    "lines": 7
+   },
+   {
+    "file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost73e-raw-batch9-20261114.jsonl",
+    "md5": "0fc99738c03a8ee694fe26d2bc97e02a",
+    "lines": 7
+   },
+   {
+    "file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost73e-raw-batch10-20261114.jsonl",
+    "md5": "5c62624c6dfee16126f3f26bfbcc717c",
+    "lines": 7
+   },
+   {
+    "file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost73e-raw-batch11-20261114.jsonl",
+    "md5": "e7c07c164f13d2be1db9ecf5af4f5de4",
+    "lines": 7
+   },
+   {
+    "file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost73e-raw-batch12-20261114.jsonl",
+    "md5": "94fd7aaaa6587805bb691d5cc41f2e89",
+    "lines": 7
+   }
+  ],
+  "file_count": 13,
+  "candidate_rows": 73,
+  "controls_5949": 13,
+  "parse_failures": 0,
+  "total_nodes_recomputed": 355978631,
+  "checks": {
+   "candidate_count": {
+    "recomputed": 73,
+    "record": 73
+   },
+   "win7_bits": {
+    "recomputed": [],
+    "record": []
+   },
+   "capped": {
+    "recomputed": 0,
+    "record": 0
+   },
+   "total_nodes": {
+    "recomputed": 355978631,
+    "record": 355978631
+   },
+   "heaviest_bits": {
+    "recomputed": [
+     [
+      48,
+      16383315
+     ],
+     [
+      26,
+      12671058
+     ],
+     [
+      30,
+      12485345
+     ],
+     [
+      53,
+      12226656
+     ],
+     [
+      23,
+      9954345
+     ],
+     [
+      113,
+      9396208
+     ]
+    ],
+    "record": [
+     [
+      48,
+      16383315
+     ],
+     [
+      26,
+      12671058
+     ],
+     [
+      30,
+      12485345
+     ],
+     [
+      53,
+      12226656
+     ],
+     [
+      23,
+      9954345
+     ],
+     [
+      113,
+      9396208
+     ]
+    ]
+   }
+  },
+  "determinism_rerun_node_exact": true
+ },
+ "cost74": {
+  "ok": true,
+  "files": [
+   {
+    "file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost74-raw-batch1-20261114.jsonl",
+    "md5": "dd4391ae0a220be3cb4f835e4b9839c1",
+    "lines": 7
+   },
+   {
+    "file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost74-raw-batch2-20261114.jsonl",
+    "md5": "09adc8a8ff3e1f6ee60c54984b4b55e5",
+    "lines": 7
+   },
+   {
+    "file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost74-raw-batch3-20261114.jsonl",
+    "md5": "9431c7e27e965d804851410425a76903",
+    "lines": 7
+   },
+   {
+    "file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost74-raw-batch4-20261114.jsonl",
+    "md5": "ff744d3160ce4bfd027eac3737af80c0",
+    "lines": 7
+   },
+   {
+    "file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost74-raw-batch5-20261114.jsonl",
+    "md5": "a8daf7c24dac97846f5d38fbcfd8e223",
+    "lines": 7
+   },
+   {
+    "file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost74-raw-batch6-20261114.jsonl",
+    "md5": "9ed8cb3710b623b9c3b205c226200c2a",
+    "lines": 7
+   },
+   {
+    "file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost74-raw-batch7-20261114.jsonl",
+    "md5": "2301fdf2a452dac9a256e008ac477010",
+    "lines": 7
+   },
+   {
+    "file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost74-raw-batch8-20261114.jsonl",
+    "md5": "89aca1b5f5bfa3b92015fbbc75fc2891",
+    "lines": 7
+   },
+   {
+    "file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost74-raw-batch9-20261114.jsonl",
+    "md5": "7c8517828de13e579530c7db82ad9b01",
+    "lines": 7
+   },
+   {
+    "file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost74-raw-batch10-20261114.jsonl",
+    "md5": "c8afbde840e01b37eb31c192ac893a63",
+    "lines": 7
+   },
+   {
+    "file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost74-raw-batch11-20261114.jsonl",
+    "md5": "e288124d46d6986d6750321686be9003",
+    "lines": 7
+   },
+   {
+    "file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost74-raw-batch12-20261114.jsonl",
+    "md5": "dfbb5acbd71a2a938ebfdf9f0a23976e",
+    "lines": 7
+   },
+   {
+    "file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost74-raw-batch13-20261114.jsonl",
+    "md5": "0bf8595d57c024c1c65331a5a25b07d5",
+    "lines": 3
+   }
+  ],
+  "file_count": 13,
+  "candidate_rows": 74,
+  "controls_5949": 13,
+  "parse_failures": 0,
+  "total_nodes_recomputed": 490965731,
+  "checks": {
+   "candidate_count": {
+    "recomputed": 74,
+    "record": 74
+   },
+   "win7_bits": {
+    "recomputed": [],
+    "record": []
+   },
+   "capped": {
+    "recomputed": 0,
+    "record": 0
+   },
+   "total_nodes": {
+    "recomputed": 490965731,
+    "record": 490965731
+   },
+   "heaviest_bits": {
+    "recomputed": [
+     [
+      15,
+      27452305
+     ],
+     [
+      70,
+      19146135
+     ],
+     [
+      20,
+      18131025
+     ],
+     [
+      12,
+      15359133
+     ],
+     [
+      23,
+      13783873
+     ],
+     [
+      9,
+      13772045
+     ]
+    ],
+    "record": [
+     [
+      15,
+      27452305
+     ],
+     [
+      70,
+      19146135
+     ],
+     [
+      20,
+      18131025
+     ],
+     [
+      12,
+      15359133
+     ],
+     [
+      23,
+      13783873
+     ],
+     [
+      9,
+      13772045
+     ]
+    ]
+   }
+  },
+  "determinism_rerun_node_exact": true
+ },
+ "verdict": "PASS",
+ "interpretation_guard": "Accounting audit only: raw batch integrity of the cost-73e and cost-74 sterile sweeps. REFUTED-D10 is not a child refutation; no game-theoretic claim is made or changed.",
+ "unknown_status": "11x11 empty board, two-stone root {49,60}, S2 {59,60}, class 2, class 4: UNKNOWN",
+ "observations": [
+  "cost-73e sweep record claims 13 pilot-d6 batch invocations; its 13 raw batch files contain exactly 13 control lines (one per file) \u2014 consistent.",
+  "cost-74 sweep record claims 14 pilot-d6 batch invocations; its 13 raw batch files contain 13 control lines (one per file). The 14th invocation is accounted for by the separate determinism-rerun file (3 controls for bits 15/70/20); the record wording overcounts raw batches by one. Substance unaffected: every control passed at exactly 5,949 nodes, and the determinism rerun is itself a 3-invocation file."
+ ]
+}

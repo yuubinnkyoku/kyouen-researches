@@ -1,0 +1,316 @@
+{
+ "schema": "n11-class2-lane-cost73j-raw-sweep-audit-20261117-v1",
+ "date": "2026-11-17",
+ "status": "all checks passed; 16 WIN7-D10 + 57 REFUTED-D10, 0 capped; 7/7 confirmation transfers REFUTED-D10 as predicted by the census v6 nine-map overlay (4 raw-identical + 3 canon-equal sources, all source pins verified); 16/16 v15 WIN agreement; 9/9 pilot controls exact; 11x11 UNKNOWN",
+ "target": {
+  "s5": "00000000000000403800000008000000",
+  "s6_child": "00000000000000403800000408000000",
+  "legal_candidate_count": 73,
+  "canonical_head_at_sweep": "1472/174/6376/504672/4649/368586",
+  "selection": "head-1472 presweep census v6 rank-1 (class2-lane-next-target-presweep-1472-v6-20261117.json, git blob c45fc0d118b7222f1e0c5d79227adc3f7ab9d1cb; script git blob 91c89fa459733c6520ed97031e889aa7ec1a3326; claim v1 git blob d52005e662d39779d34ee5b1ae59f25a57f545a9, commit 460fbfc0)",
+  "engine": "class4_child1_runner_v17.ts, git blob c132cc6425eee3feaeef1d697dd74f968cfedb59, depth 10, cap 1e9, andclose 1"
+ },
+ "pilot_checks": {
+  "batches": 9,
+  "pilot_nodes_each": 3402,
+  "all_exact": true
+ },
+ "verdicts": {
+  "win7_d10_bits": [
+   0,
+   1,
+   6,
+   29,
+   44,
+   49,
+   52,
+   69,
+   74,
+   82,
+   87,
+   91,
+   98,
+   100,
+   110,
+   118
+  ],
+  "win7_d10_nodes": {
+   "0": 2017323,
+   "1": 3423188,
+   "6": 2120524,
+   "29": 4630877,
+   "44": 2543589,
+   "49": 886240,
+   "52": 3844019,
+   "69": 1070978,
+   "74": 2555074,
+   "82": 588415,
+   "87": 3696441,
+   "91": 1693102,
+   "98": 8801472,
+   "100": 1919973,
+   "110": 3283518,
+   "118": 1564528
+  },
+  "refuted_d10_bits": [
+   2,
+   3,
+   4,
+   5,
+   8,
+   9,
+   10,
+   11,
+   14,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   23,
+   25,
+   30,
+   31,
+   32,
+   33,
+   46,
+   53,
+   54,
+   66,
+   75,
+   76,
+   77,
+   78,
+   79,
+   80,
+   83,
+   85,
+   86,
+   88,
+   92,
+   95,
+   96,
+   97,
+   99,
+   101,
+   102,
+   103,
+   105,
+   106,
+   107,
+   108,
+   109,
+   111,
+   112,
+   113,
+   114,
+   115,
+   116,
+   117,
+   119,
+   120
+  ],
+  "refuted_d10_bits_count": 57,
+  "capped_count": 0,
+  "candidate_nodes_total": 168445380,
+  "total_nodes_including_pilots": 168475998,
+  "terminal_stone_range": [
+   13,
+   17
+  ]
+ },
+ "confirmation_bits": {
+  "bits": [
+   5,
+   14,
+   20,
+   46,
+   97,
+   103,
+   108
+  ],
+  "verdicts": {
+   "5": "REFUTED-D10",
+   "14": "REFUTED-D10",
+   "20": "REFUTED-D10",
+   "46": "REFUTED-D10",
+   "97": "REFUTED-D10",
+   "103": "REFUTED-D10",
+   "108": "REFUTED-D10"
+  },
+  "predicted_by_census_v6_overlay": true,
+  "outcome": {
+   "5": {
+    "predicted": "REFUTED-D10",
+    "actual": "REFUTED-D10",
+    "match": true
+   },
+   "14": {
+    "predicted": "REFUTED-D10",
+    "actual": "REFUTED-D10",
+    "match": true
+   },
+   "20": {
+    "predicted": "REFUTED-D10",
+    "actual": "REFUTED-D10",
+    "match": true
+   },
+   "46": {
+    "predicted": "REFUTED-D10",
+    "actual": "REFUTED-D10",
+    "match": true
+   },
+   "97": {
+    "predicted": "REFUTED-D10",
+    "actual": "REFUTED-D10",
+    "match": true
+   },
+   "103": {
+    "predicted": "REFUTED-D10",
+    "actual": "REFUTED-D10",
+    "match": true
+   },
+   "108": {
+    "predicted": "REFUTED-D10",
+    "actual": "REFUTED-D10",
+    "match": true
+   }
+  }
+ },
+ "determinism_rerun": {
+  "batches": [
+   1,
+   6
+  ],
+  "batch1_note": "contains WIN bits 0, 1 and 6 and the heaviest search of the sweep (bit 3, 11,476,946 nodes)",
+  "batch6_note": "contains the heaviest WIN bit 98 (8,801,472 nodes) and WIN bit 100",
+  "field_identical_non_ms": true,
+  "result": {
+   "batch1": "field-identical on every non-ms field",
+   "batch6": "field-identical on every non-ms field"
+  }
+ },
+ "v15_cross_engine_check": {
+  "engine": "v15 (blob 8744fc65b6b7cac6bd561403ce4c749e01c51359)",
+  "pilot_nodes_each": 5949,
+  "win_bit_agreement": "16/16",
+  "capped": 0,
+  "v15_win_nodes": {
+   "0": 4308961,
+   "1": 6611776,
+   "6": 4599030,
+   "29": 9413071,
+   "44": 4984187,
+   "49": 2289874,
+   "52": 7362928,
+   "69": 3156402,
+   "74": 5053974,
+   "82": 1812716,
+   "87": 7181549,
+   "91": 3471869,
+   "98": 15513423,
+   "100": 4849370,
+   "110": 6077091,
+   "118": 3841583
+  }
+ },
+ "canon_checks": {
+  "child_stones_bit_indices": [
+   27,
+   34,
+   59,
+   60,
+   61,
+   70
+  ],
+  "child_stones_bit_indices_expected": [
+   27,
+   34,
+   59,
+   60,
+   61,
+   70
+  ],
+  "transfer_canons_match_claim": "7/7",
+  "internal_canon_collisions": {},
+  "no_win_refuted_canon_overlap": true,
+  "v1_bit_table": "this child has no v1 head-1452 census bit table (not one of the 16 bit-table children; the pre-sweep knowledge came from the census v6 rebuilt harvest + nine-map overlay; the v1 census row was open 73 with 0 harvested)"
+ },
+ "cross_source_conflict_scan": {
+  "sources": [
+   "class2-lane-cost69j-raw-batch2-20261117.jsonl bit 34 (canon-equal to 73j bit 5; raw-identical; source pin verified via cost69j raw audit batch2 pin)",
+   "class2-lane-cost72d-raw-batch3-20261117.jsonl bit 34 (canon-equal to 73j bit 14; raw-identical; source pin verified via cost72d raw sweep audit batch3 pin)",
+   "class2-lane-cost64h-raw-batch2-20261116.jsonl bit 34 (canon-equal to 73j bit 20; raw-identical; source pin verified via census v4 script PIN64H[1])",
+   "class2-lane-cost73i-raw-batch3-20261117.jsonl bit 34 (canon-equal to 73j bit 46; raw-identical; source pin verified via cost73i raw sweep audit batch3 pin)",
+   "class2-lane-cost71e-raw-batch7-20261117.jsonl bit 106 (canon-equal to 73j bit 97; canon-equal only; source pin verified via cost71e raw sweep audit batch7 pin)",
+   "class2-lane-cost66i-raw-batch2-20261116.jsonl bit 14 (canon-equal to 73j bit 103; canon-equal only; source pin verified via census v4 script PIN66I[1])",
+   "class2-lane-cost66j-raw-batch7-20261117.jsonl bit 106 (canon-equal to 73j bit 108; canon-equal only; source pin verified via cost66j raw audit batch7 pin)"
+  ],
+  "conflicts": 0,
+  "agreements": {
+   "73j bit 5 = cost69j bit 34": {
+    "verdict": "REFUTED-D10 both",
+    "raw_identical": true,
+    "nodes_source": 776542,
+    "nodes_73j": 776542,
+    "nodes_equal": true
+   },
+   "73j bit 14 = cost72d bit 34": {
+    "verdict": "REFUTED-D10 both",
+    "raw_identical": true,
+    "nodes_source": 2843241,
+    "nodes_73j": 2843241,
+    "nodes_equal": true
+   },
+   "73j bit 20 = cost64h bit 34": {
+    "verdict": "REFUTED-D10 both",
+    "raw_identical": true,
+    "nodes_source": 884272,
+    "nodes_73j": 884272,
+    "nodes_equal": true
+   },
+   "73j bit 46 = cost73i bit 34": {
+    "verdict": "REFUTED-D10 both",
+    "raw_identical": true,
+    "nodes_source": 5307830,
+    "nodes_73j": 5307830,
+    "nodes_equal": true
+   },
+   "73j bit 97 = cost71e bit 106": {
+    "verdict": "REFUTED-D10 both",
+    "raw_identical": false,
+    "nodes_source": 421079,
+    "nodes_73j": 815744,
+    "nodes_equal": false
+   },
+   "73j bit 103 = cost66i bit 14": {
+    "verdict": "REFUTED-D10 both",
+    "raw_identical": false,
+    "nodes_source": 517401,
+    "nodes_73j": 508452,
+    "nodes_equal": false
+   },
+   "73j bit 108 = cost66j bit 106": {
+    "verdict": "REFUTED-D10 both",
+    "raw_identical": false,
+    "nodes_source": 426177,
+    "nodes_73j": 603618,
+    "nodes_equal": false
+   }
+  },
+  "source_audit_json_pins_verified": 6
+ },
+ "raw_batch_pins": {
+  "batch1": "2bf14d1244f42672be1cf0c88d60c4a6bb03cb93",
+  "batch2": "b7eb52fb4a1a7fbabfa55c6aa59c95eb51578825",
+  "batch3": "d4d3518fb150dec73a8fc737d45b012e863e0dd1",
+  "batch4": "38e26fe4deff9d7fe735796004fb58f956031707",
+  "batch5": "c77d3d1cb45632ff99f5d9f6d70d8e3a61af287f",
+  "batch6": "2d0a31050c582479b3c25ef4b405ac2ecdb129c8",
+  "batch7": "f5255e171547a404dd26dd6dc09785fecf9e0822",
+  "batch8": "522b0e567e143afc77d1fef66a6cc84a5e73e449",
+  "batch9": "7733b53d968203eabb7f379f9b01ac8ca918c74b"
+ },
+ "interpretation_guard": "engine bookkeeping audit only; WIN7-D10 proves a first-player win within depth 10 from the individual 7-stone root only; REFUTED-D10 is not a LOSS proof; no manifest row is closed by this audit; the receipt fold stays pending behind the 76c/66i/66j/69j/71e/72d/73i folds; the 11x11 empty board, the two-stone roots {49,60} and {59,60}, S2 {59,60} and classes 1/2/4 remain UNKNOWN"
+}

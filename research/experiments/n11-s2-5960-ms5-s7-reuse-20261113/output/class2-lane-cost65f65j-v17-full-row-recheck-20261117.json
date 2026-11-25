@@ -1,0 +1,824 @@
+{
+ "all_checks_pass": true,
+ "checked_bits": 64,
+ "checks": [
+  {
+   "check": "engine_blob_sha1_matches_pinned_c132cc64",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "raw_batch1_blob_sha1_matches_main",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "batch1_bit_set_identity",
+   "detail": "pub=[0, 1, 2, 4, 6, 7, 9, 10] v17=[0, 1, 2, 4, 6, 7, 9, 10]",
+   "pass": true
+  },
+  {
+   "check": "raw_batch2_blob_sha1_matches_main",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "batch2_bit_set_identity",
+   "detail": "pub=[11, 12, 13, 14, 15, 18, 20, 21] v17=[11, 12, 13, 14, 15, 18, 20, 21]",
+   "pass": true
+  },
+  {
+   "check": "raw_batch3_blob_sha1_matches_main",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "batch3_bit_set_identity",
+   "detail": "pub=[23, 25, 28, 32, 33, 34, 36, 37] v17=[23, 25, 28, 32, 33, 34, 36, 37]",
+   "pass": true
+  },
+  {
+   "check": "raw_batch4_blob_sha1_matches_main",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "batch4_bit_set_identity",
+   "detail": "pub=[41, 44, 46, 47, 54, 66, 68, 69] v17=[41, 44, 46, 47, 54, 66, 68, 69]",
+   "pass": true
+  },
+  {
+   "check": "raw_batch5_blob_sha1_matches_main",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "batch5_bit_set_identity",
+   "detail": "pub=[75, 76, 77, 78, 79, 80, 81, 85] v17=[75, 76, 77, 78, 79, 80, 81, 85]",
+   "pass": true
+  },
+  {
+   "check": "raw_batch6_blob_sha1_matches_main",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "batch6_bit_set_identity",
+   "detail": "pub=[88, 89, 90, 91, 92, 96, 98, 99] v17=[88, 89, 90, 91, 92, 96, 98, 99]",
+   "pass": true
+  },
+  {
+   "check": "raw_batch7_blob_sha1_matches_main",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "batch7_bit_set_identity",
+   "detail": "pub=[100, 101, 102, 103, 105, 106, 109, 110] v17=[100, 101, 102, 103, 105, 106, 109, 110]",
+   "pass": true
+  },
+  {
+   "check": "raw_batch8_blob_sha1_matches_main",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "batch8_bit_set_identity",
+   "detail": "pub=[111, 112, 114, 116, 117, 118, 119] v17=[111, 112, 114, 116, 117, 118, 119]",
+   "pass": true
+  },
+  {
+   "check": "raw_batch9_blob_sha1_matches_main",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "batch9_bit_set_identity",
+   "detail": "pub=[120] v17=[120]",
+   "pass": true
+  },
+  {
+   "check": "all_9_v17_pilots_identity_3402",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "no_unexpected_non_node_mismatch",
+   "detail": "nonconform=[]",
+   "pass": true
+  },
+  {
+   "check": "win_bits_unchanged_17_certificate_backed",
+   "detail": "v17=[4, 15, 18, 20, 21, 23, 25, 28, 66, 79, 91, 101, 109, 112, 116, 118, 119] published=[4, 15, 18, 20, 21, 23, 25, 28, 66, 79, 91, 101, 109, 112, 116, 118, 119]",
+   "pass": true
+  },
+  {
+   "check": "verdict_flips_zero",
+   "detail": "flips=[]",
+   "pass": true
+  },
+  {
+   "check": "determinism_second_run_identical",
+   "detail": "",
+   "pass": true
+  }
+ ],
+ "child": "00000000000000809102000080000000",
+ "date": "2026-11-17",
+ "determinism_rerun": {
+  "detail": "two full independent executions agree on every bit and pilot (ms excluded)",
+  "status": "pass"
+ },
+ "engine_blob_sha1": "c132cc6425eee3feaeef1d697dd74f968cfedb59",
+ "interpretation_guard": "bookkeeping verification only; WIN7-D10 proves a first-player win within depth 10 from the individual 7-stone roots only; REFUTED-D10 is not a LOSS proof; the v15 part of this re-check is verdict-only and node totals across engines are not comparable; 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60} and classes 1/2/4 remain UNKNOWN",
+ "method": "fbt-repaired v17 engine (class4_child1_runner_v17.ts, blob c132cc64) re-executed all 64 swept bits of the row from scratch with the published batch partition (65f raw batches 1-7 v15 engine 2026-11-14 + 65j raw batches 8-9 v16 engine 2026-11-16), depth 10, cap 1e9, --andclose 1, fresh engine state per candidate, pilot_d6 control per batch; v16-era bits compared field-by-field (node-exact unless fb saturation), v15-era bits compared verdict-only because v15 and v17 node counting differs (v15 pilot 5949 vs v17 pilot 3402)",
+ "per_bit": [
+  {
+   "batch": 1,
+   "bit": 0,
+   "era": "v15",
+   "pub_loss": false,
+   "pub_nodes": 6471250,
+   "v17_loss": false,
+   "v17_nodes": 1469534
+  },
+  {
+   "batch": 1,
+   "bit": 1,
+   "era": "v15",
+   "pub_loss": false,
+   "pub_nodes": 7715780,
+   "v17_loss": false,
+   "v17_nodes": 1572174
+  },
+  {
+   "batch": 1,
+   "bit": 2,
+   "era": "v15",
+   "pub_loss": false,
+   "pub_nodes": 12048883,
+   "v17_loss": false,
+   "v17_nodes": 3681870
+  },
+  {
+   "batch": 1,
+   "bit": 4,
+   "era": "v15",
+   "pub_loss": true,
+   "pub_nodes": 11889707,
+   "v17_loss": true,
+   "v17_nodes": 2961375
+  },
+  {
+   "batch": 1,
+   "bit": 6,
+   "era": "v15",
+   "pub_loss": false,
+   "pub_nodes": 3016217,
+   "v17_loss": false,
+   "v17_nodes": 496498
+  },
+  {
+   "batch": 1,
+   "bit": 7,
+   "era": "v15",
+   "pub_loss": false,
+   "pub_nodes": 3234858,
+   "v17_loss": false,
+   "v17_nodes": 419607
+  },
+  {
+   "batch": 1,
+   "bit": 9,
+   "era": "v15",
+   "pub_loss": false,
+   "pub_nodes": 4148622,
+   "v17_loss": false,
+   "v17_nodes": 670802
+  },
+  {
+   "batch": 1,
+   "bit": 10,
+   "era": "v15",
+   "pub_loss": false,
+   "pub_nodes": 22253537,
+   "v17_loss": false,
+   "v17_nodes": 6022254
+  },
+  {
+   "batch": 2,
+   "bit": 11,
+   "era": "v15",
+   "pub_loss": false,
+   "pub_nodes": 8730624,
+   "v17_loss": false,
+   "v17_nodes": 1523705
+  },
+  {
+   "batch": 2,
+   "bit": 12,
+   "era": "v15",
+   "pub_loss": false,
+   "pub_nodes": 1133863,
+   "v17_loss": false,
+   "v17_nodes": 190571
+  },
+  {
+   "batch": 2,
+   "bit": 13,
+   "era": "v15",
+   "pub_loss": false,
+   "pub_nodes": 11461074,
+   "v17_loss": false,
+   "v17_nodes": 1268453
+  },
+  {
+   "batch": 2,
+   "bit": 14,
+   "era": "v15",
+   "pub_loss": false,
+   "pub_nodes": 1343451,
+   "v17_loss": false,
+   "v17_nodes": 179861
+  },
+  {
+   "batch": 2,
+   "bit": 15,
+   "era": "v15",
+   "pub_loss": true,
+   "pub_nodes": 10209459,
+   "v17_loss": true,
+   "v17_nodes": 1919431
+  },
+  {
+   "batch": 2,
+   "bit": 18,
+   "era": "v15",
+   "pub_loss": true,
+   "pub_nodes": 19029129,
+   "v17_loss": true,
+   "v17_nodes": 5622889
+  },
+  {
+   "batch": 2,
+   "bit": 20,
+   "era": "v15",
+   "pub_loss": true,
+   "pub_nodes": 12621100,
+   "v17_loss": true,
+   "v17_nodes": 1537634
+  },
+  {
+   "batch": 2,
+   "bit": 21,
+   "era": "v15",
+   "pub_loss": true,
+   "pub_nodes": 12104576,
+   "v17_loss": true,
+   "v17_nodes": 1908908
+  },
+  {
+   "batch": 3,
+   "bit": 23,
+   "era": "v15",
+   "pub_loss": true,
+   "pub_nodes": 7276886,
+   "v17_loss": true,
+   "v17_nodes": 770879
+  },
+  {
+   "batch": 3,
+   "bit": 25,
+   "era": "v15",
+   "pub_loss": true,
+   "pub_nodes": 13884751,
+   "v17_loss": true,
+   "v17_nodes": 2481547
+  },
+  {
+   "batch": 3,
+   "bit": 28,
+   "era": "v15",
+   "pub_loss": true,
+   "pub_nodes": 9817151,
+   "v17_loss": true,
+   "v17_nodes": 2010263
+  },
+  {
+   "batch": 3,
+   "bit": 32,
+   "era": "v15",
+   "pub_loss": false,
+   "pub_nodes": 2958303,
+   "v17_loss": false,
+   "v17_nodes": 426836
+  },
+  {
+   "batch": 3,
+   "bit": 33,
+   "era": "v15",
+   "pub_loss": false,
+   "pub_nodes": 1457701,
+   "v17_loss": false,
+   "v17_nodes": 235330
+  },
+  {
+   "batch": 3,
+   "bit": 34,
+   "era": "v15",
+   "pub_loss": false,
+   "pub_nodes": 15186078,
+   "v17_loss": false,
+   "v17_nodes": 4528961
+  },
+  {
+   "batch": 3,
+   "bit": 36,
+   "era": "v15",
+   "pub_loss": false,
+   "pub_nodes": 4899976,
+   "v17_loss": false,
+   "v17_nodes": 546943
+  },
+  {
+   "batch": 3,
+   "bit": 37,
+   "era": "v15",
+   "pub_loss": false,
+   "pub_nodes": 15238040,
+   "v17_loss": false,
+   "v17_nodes": 3370888
+  },
+  {
+   "batch": 4,
+   "bit": 41,
+   "era": "v15",
+   "pub_loss": false,
+   "pub_nodes": 2205754,
+   "v17_loss": false,
+   "v17_nodes": 333573
+  },
+  {
+   "batch": 4,
+   "bit": 44,
+   "era": "v15",
+   "pub_loss": false,
+   "pub_nodes": 4054510,
+   "v17_loss": false,
+   "v17_nodes": 593915
+  },
+  {
+   "batch": 4,
+   "bit": 46,
+   "era": "v15",
+   "pub_loss": false,
+   "pub_nodes": 4760619,
+   "v17_loss": false,
+   "v17_nodes": 624920
+  },
+  {
+   "batch": 4,
+   "bit": 47,
+   "era": "v15",
+   "pub_loss": false,
+   "pub_nodes": 3187450,
+   "v17_loss": false,
+   "v17_nodes": 354524
+  },
+  {
+   "batch": 4,
+   "bit": 54,
+   "era": "v15",
+   "pub_loss": false,
+   "pub_nodes": 1323465,
+   "v17_loss": false,
+   "v17_nodes": 196724
+  },
+  {
+   "batch": 4,
+   "bit": 66,
+   "era": "v15",
+   "pub_loss": true,
+   "pub_nodes": 12201952,
+   "v17_loss": true,
+   "v17_nodes": 2253984
+  },
+  {
+   "batch": 4,
+   "bit": 68,
+   "era": "v15",
+   "pub_loss": false,
+   "pub_nodes": 7627074,
+   "v17_loss": false,
+   "v17_nodes": 1118970
+  },
+  {
+   "batch": 4,
+   "bit": 69,
+   "era": "v15",
+   "pub_loss": false,
+   "pub_nodes": 1634623,
+   "v17_loss": false,
+   "v17_nodes": 249189
+  },
+  {
+   "batch": 5,
+   "bit": 75,
+   "era": "v15",
+   "pub_loss": false,
+   "pub_nodes": 87460,
+   "v17_loss": false,
+   "v17_nodes": 21571
+  },
+  {
+   "batch": 5,
+   "bit": 76,
+   "era": "v15",
+   "pub_loss": false,
+   "pub_nodes": 3476148,
+   "v17_loss": false,
+   "v17_nodes": 563582
+  },
+  {
+   "batch": 5,
+   "bit": 77,
+   "era": "v15",
+   "pub_loss": false,
+   "pub_nodes": 5257358,
+   "v17_loss": false,
+   "v17_nodes": 1034489
+  },
+  {
+   "batch": 5,
+   "bit": 78,
+   "era": "v15",
+   "pub_loss": false,
+   "pub_nodes": 8642489,
+   "v17_loss": false,
+   "v17_nodes": 1647578
+  },
+  {
+   "batch": 5,
+   "bit": 79,
+   "era": "v15",
+   "pub_loss": true,
+   "pub_nodes": 11264515,
+   "v17_loss": true,
+   "v17_nodes": 1624400
+  },
+  {
+   "batch": 5,
+   "bit": 80,
+   "era": "v15",
+   "pub_loss": false,
+   "pub_nodes": 3441814,
+   "v17_loss": false,
+   "v17_nodes": 471113
+  },
+  {
+   "batch": 5,
+   "bit": 81,
+   "era": "v15",
+   "pub_loss": false,
+   "pub_nodes": 2652196,
+   "v17_loss": false,
+   "v17_nodes": 303402
+  },
+  {
+   "batch": 5,
+   "bit": 85,
+   "era": "v15",
+   "pub_loss": false,
+   "pub_nodes": 10831737,
+   "v17_loss": false,
+   "v17_nodes": 2122971
+  },
+  {
+   "batch": 6,
+   "bit": 88,
+   "era": "v15",
+   "pub_loss": false,
+   "pub_nodes": 5035333,
+   "v17_loss": false,
+   "v17_nodes": 982996
+  },
+  {
+   "batch": 6,
+   "bit": 89,
+   "era": "v15",
+   "pub_loss": false,
+   "pub_nodes": 601590,
+   "v17_loss": false,
+   "v17_nodes": 109719
+  },
+  {
+   "batch": 6,
+   "bit": 90,
+   "era": "v15",
+   "pub_loss": false,
+   "pub_nodes": 413610,
+   "v17_loss": false,
+   "v17_nodes": 76136
+  },
+  {
+   "batch": 6,
+   "bit": 91,
+   "era": "v15",
+   "pub_loss": true,
+   "pub_nodes": 6369617,
+   "v17_loss": true,
+   "v17_nodes": 876840
+  },
+  {
+   "batch": 6,
+   "bit": 92,
+   "era": "v15",
+   "pub_loss": false,
+   "pub_nodes": 1228321,
+   "v17_loss": false,
+   "v17_nodes": 182905
+  },
+  {
+   "batch": 6,
+   "bit": 96,
+   "era": "v15",
+   "pub_loss": false,
+   "pub_nodes": 17486305,
+   "v17_loss": false,
+   "v17_nodes": 3880039
+  },
+  {
+   "batch": 6,
+   "bit": 98,
+   "era": "v15",
+   "pub_loss": false,
+   "pub_nodes": 1285315,
+   "v17_loss": false,
+   "v17_nodes": 227173
+  },
+  {
+   "batch": 6,
+   "bit": 99,
+   "era": "v15",
+   "pub_loss": false,
+   "pub_nodes": 4477357,
+   "v17_loss": false,
+   "v17_nodes": 789804
+  },
+  {
+   "batch": 7,
+   "bit": 100,
+   "era": "v15",
+   "pub_loss": false,
+   "pub_nodes": 3288718,
+   "v17_loss": false,
+   "v17_nodes": 541222
+  },
+  {
+   "batch": 7,
+   "bit": 101,
+   "era": "v15",
+   "pub_loss": true,
+   "pub_nodes": 4524831,
+   "v17_loss": true,
+   "v17_nodes": 632222
+  },
+  {
+   "batch": 7,
+   "bit": 102,
+   "era": "v15",
+   "pub_loss": false,
+   "pub_nodes": 4096371,
+   "v17_loss": false,
+   "v17_nodes": 688277
+  },
+  {
+   "batch": 7,
+   "bit": 103,
+   "era": "v15",
+   "pub_loss": false,
+   "pub_nodes": 1886827,
+   "v17_loss": false,
+   "v17_nodes": 248435
+  },
+  {
+   "batch": 7,
+   "bit": 105,
+   "era": "v15",
+   "pub_loss": false,
+   "pub_nodes": 14289397,
+   "v17_loss": false,
+   "v17_nodes": 4312009
+  },
+  {
+   "batch": 7,
+   "bit": 106,
+   "era": "v15",
+   "pub_loss": false,
+   "pub_nodes": 1307470,
+   "v17_loss": false,
+   "v17_nodes": 240981
+  },
+  {
+   "batch": 7,
+   "bit": 109,
+   "era": "v15",
+   "pub_loss": true,
+   "pub_nodes": 12595103,
+   "v17_loss": true,
+   "v17_nodes": 3313221
+  },
+  {
+   "batch": 7,
+   "bit": 110,
+   "era": "v15",
+   "pub_loss": false,
+   "pub_nodes": 5213346,
+   "v17_loss": false,
+   "v17_nodes": 1012130
+  },
+  {
+   "batch": 8,
+   "bit": 111,
+   "era": "v16",
+   "pub_loss": false,
+   "pub_nodes": 22542,
+   "v17_loss": false,
+   "v17_nodes": 22542
+  },
+  {
+   "batch": 8,
+   "bit": 112,
+   "era": "v16",
+   "pub_loss": true,
+   "pub_nodes": 3673038,
+   "v17_loss": true,
+   "v17_nodes": 3673038
+  },
+  {
+   "batch": 8,
+   "bit": 114,
+   "era": "v16",
+   "pub_loss": false,
+   "pub_nodes": 651409,
+   "v17_loss": false,
+   "v17_nodes": 651409
+  },
+  {
+   "batch": 8,
+   "bit": 116,
+   "era": "v16",
+   "pub_loss": true,
+   "pub_nodes": 1235013,
+   "v17_loss": true,
+   "v17_nodes": 1235013
+  },
+  {
+   "batch": 8,
+   "bit": 117,
+   "era": "v16",
+   "pub_loss": false,
+   "pub_nodes": 436186,
+   "v17_loss": false,
+   "v17_nodes": 436186
+  },
+  {
+   "batch": 8,
+   "bit": 118,
+   "era": "v16",
+   "pub_loss": true,
+   "pub_nodes": 7987181,
+   "v17_loss": true,
+   "v17_nodes": 7987181
+  },
+  {
+   "batch": 8,
+   "bit": 119,
+   "era": "v16",
+   "pub_loss": true,
+   "pub_nodes": 1788624,
+   "v17_loss": true,
+   "v17_nodes": 1788624
+  },
+  {
+   "batch": 9,
+   "bit": 120,
+   "era": "v16",
+   "pub_loss": false,
+   "pub_nodes": 1929932,
+   "v17_loss": false,
+   "v17_nodes": 1929932
+  }
+ ],
+ "published_win_bits": [
+  4,
+  15,
+  18,
+  20,
+  21,
+  23,
+  25,
+  28,
+  66,
+  79,
+  91,
+  101,
+  109,
+  112,
+  116,
+  118,
+  119
+ ],
+ "schema": "n11-class2-lane-cost65f65j-v17-full-row-recheck-20261117-v1",
+ "total_nodes_pub": 402603616,
+ "total_nodes_v17": 95170152,
+ "v15_era_bits": [
+  0,
+  1,
+  2,
+  4,
+  6,
+  7,
+  9,
+  10,
+  11,
+  12,
+  13,
+  14,
+  15,
+  18,
+  20,
+  21,
+  23,
+  25,
+  28,
+  32,
+  33,
+  34,
+  36,
+  37,
+  41,
+  44,
+  46,
+  47,
+  54,
+  66,
+  68,
+  69,
+  75,
+  76,
+  77,
+  78,
+  79,
+  80,
+  81,
+  85,
+  88,
+  89,
+  90,
+  91,
+  92,
+  96,
+  98,
+  99,
+  100,
+  101,
+  102,
+  103,
+  105,
+  106,
+  109,
+  110
+ ],
+ "v16_era_bits": [
+  111,
+  112,
+  114,
+  116,
+  117,
+  118,
+  119,
+  120
+ ],
+ "v16_node_corrections": [],
+ "verdict_flips": [],
+ "win_bits_v17": [
+  4,
+  15,
+  18,
+  20,
+  21,
+  23,
+  25,
+  28,
+  66,
+  79,
+  91,
+  101,
+  109,
+  112,
+  116,
+  118,
+  119
+ ]
+}

@@ -1,0 +1,709 @@
+{
+ "checks": {
+  "C1_refuted_41_present_once": true,
+  "C2_v15_all_41_loss_false_uncapped": true,
+  "C3_v16_published_all_41_loss_false_uncapped": true,
+  "C4_bit_set_equality_v15_vs_v16": true,
+  "C5_pilot_d6_5_of_5": true,
+  "C6_win_controls_node_exact_vs_published_v15": true,
+  "C7_v15_refuted_node_sum": true,
+  "C8_engine_pins": true
+ },
+ "child": "00000000000000403800000008100000",
+ "claim_v2_blob": "68e4878094b78eaf0a465033d0289a6db5d94861",
+ "date": "2026-11-16",
+ "engines": {
+  "v15": "class4_child1_runner.ts (git blob 8744fc65b6b7cac6bd561403ce4c749e01c51359)",
+  "v16": "class4_child1_runner_v16.ts (git blob 0a4a86f6828dc010c89ff17596054336a6b6091f)"
+ },
+ "interpretation_guard": "cross-engine (v15 vs v16) verdict-level agreement on all 41 REFUTED-D10 bits plus node-exact same-engine agreement on 2 win controls; this strengthens the published depth-10 capped sweep records but creates no verdicts beyond them; REFUTED-D10 is not a LOSS proof; WIN7-D10 proves a first-player win within depth 10 from the individual 7-stone roots only; the 11x11 empty board, the two-stone roots {49,60} and {59,60}, S2 {59,60} and classes 1/2/4 all remain UNKNOWN",
+ "per_bit": [
+  {
+   "bit": 1,
+   "note": "verdict-level agreement; node counts differ across engines by design",
+   "v15": {
+    "capped": false,
+    "loss": false,
+    "nodes": 278768
+   },
+   "v16_published": {
+    "capped": false,
+    "loss": false,
+    "nodes": 108230
+   },
+   "verdict_agreement": true
+  },
+  {
+   "bit": 2,
+   "note": "verdict-level agreement; node counts differ across engines by design",
+   "v15": {
+    "capped": false,
+    "loss": false,
+    "nodes": 314224
+   },
+   "v16_published": {
+    "capped": false,
+    "loss": false,
+    "nodes": 131493
+   },
+   "verdict_agreement": true
+  },
+  {
+   "bit": 3,
+   "note": "verdict-level agreement; node counts differ across engines by design",
+   "v15": {
+    "capped": false,
+    "loss": false,
+    "nodes": 1158285
+   },
+   "v16_published": {
+    "capped": false,
+    "loss": false,
+    "nodes": 559638
+   },
+   "verdict_agreement": true
+  },
+  {
+   "bit": 5,
+   "note": "verdict-level agreement; node counts differ across engines by design",
+   "v15": {
+    "capped": false,
+    "loss": false,
+    "nodes": 660146
+   },
+   "v16_published": {
+    "capped": false,
+    "loss": false,
+    "nodes": 254303
+   },
+   "verdict_agreement": true
+  },
+  {
+   "bit": 14,
+   "note": "verdict-level agreement; node counts differ across engines by design",
+   "v15": {
+    "capped": false,
+    "loss": false,
+    "nodes": 1457263
+   },
+   "v16_published": {
+    "capped": false,
+    "loss": false,
+    "nodes": 452441
+   },
+   "verdict_agreement": true
+  },
+  {
+   "bit": 16,
+   "note": "verdict-level agreement; node counts differ across engines by design",
+   "v15": {
+    "capped": false,
+    "loss": false,
+    "nodes": 4330733
+   },
+   "v16_published": {
+    "capped": false,
+    "loss": false,
+    "nodes": 1718570
+   },
+   "verdict_agreement": true
+  },
+  {
+   "bit": 18,
+   "note": "verdict-level agreement; node counts differ across engines by design",
+   "v15": {
+    "capped": false,
+    "loss": false,
+    "nodes": 1749155
+   },
+   "v16_published": {
+    "capped": false,
+    "loss": false,
+    "nodes": 752212
+   },
+   "verdict_agreement": true
+  },
+  {
+   "bit": 21,
+   "note": "verdict-level agreement; node counts differ across engines by design",
+   "v15": {
+    "capped": false,
+    "loss": false,
+    "nodes": 2726593
+   },
+   "v16_published": {
+    "capped": false,
+    "loss": false,
+    "nodes": 1151243
+   },
+   "verdict_agreement": true
+  },
+  {
+   "bit": 23,
+   "note": "verdict-level agreement; node counts differ across engines by design",
+   "v15": {
+    "capped": false,
+    "loss": false,
+    "nodes": 1598342
+   },
+   "v16_published": {
+    "capped": false,
+    "loss": false,
+    "nodes": 739871
+   },
+   "verdict_agreement": true
+  },
+  {
+   "bit": 25,
+   "note": "verdict-level agreement; node counts differ across engines by design",
+   "v15": {
+    "capped": false,
+    "loss": false,
+    "nodes": 5743943
+   },
+   "v16_published": {
+    "capped": false,
+    "loss": false,
+    "nodes": 2359293
+   },
+   "verdict_agreement": true
+  },
+  {
+   "bit": 29,
+   "note": "verdict-level agreement; node counts differ across engines by design",
+   "v15": {
+    "capped": false,
+    "loss": false,
+    "nodes": 16237
+   },
+   "v16_published": {
+    "capped": false,
+    "loss": false,
+    "nodes": 8595
+   },
+   "verdict_agreement": true
+  },
+  {
+   "bit": 34,
+   "note": "verdict-level agreement; node counts differ across engines by design",
+   "v15": {
+    "capped": false,
+    "loss": false,
+    "nodes": 1875708
+   },
+   "v16_published": {
+    "capped": false,
+    "loss": false,
+    "nodes": 884272
+   },
+   "verdict_agreement": true
+  },
+  {
+   "bit": 35,
+   "note": "verdict-level agreement; node counts differ across engines by design",
+   "v15": {
+    "capped": false,
+    "loss": false,
+    "nodes": 2510901
+   },
+   "v16_published": {
+    "capped": false,
+    "loss": false,
+    "nodes": 985947
+   },
+   "verdict_agreement": true
+  },
+  {
+   "bit": 43,
+   "note": "verdict-level agreement; node counts differ across engines by design",
+   "v15": {
+    "capped": false,
+    "loss": false,
+    "nodes": 62431
+   },
+   "v16_published": {
+    "capped": false,
+    "loss": false,
+    "nodes": 28732
+   },
+   "verdict_agreement": true
+  },
+  {
+   "bit": 45,
+   "note": "verdict-level agreement; node counts differ across engines by design",
+   "v15": {
+    "capped": false,
+    "loss": false,
+    "nodes": 275530
+   },
+   "v16_published": {
+    "capped": false,
+    "loss": false,
+    "nodes": 125398
+   },
+   "verdict_agreement": true
+  },
+  {
+   "bit": 46,
+   "note": "verdict-level agreement; node counts differ across engines by design",
+   "v15": {
+    "capped": false,
+    "loss": false,
+    "nodes": 1373075
+   },
+   "v16_published": {
+    "capped": false,
+    "loss": false,
+    "nodes": 442634
+   },
+   "verdict_agreement": true
+  },
+  {
+   "bit": 53,
+   "note": "verdict-level agreement; node counts differ across engines by design",
+   "v15": {
+    "capped": false,
+    "loss": false,
+    "nodes": 118820
+   },
+   "v16_published": {
+    "capped": false,
+    "loss": false,
+    "nodes": 49418
+   },
+   "verdict_agreement": true
+  },
+  {
+   "bit": 54,
+   "note": "verdict-level agreement; node counts differ across engines by design",
+   "v15": {
+    "capped": false,
+    "loss": false,
+    "nodes": 2366201
+   },
+   "v16_published": {
+    "capped": false,
+    "loss": false,
+    "nodes": 830604
+   },
+   "verdict_agreement": true
+  },
+  {
+   "bit": 66,
+   "note": "verdict-level agreement; node counts differ across engines by design",
+   "v15": {
+    "capped": false,
+    "loss": false,
+    "nodes": 7251979
+   },
+   "v16_published": {
+    "capped": false,
+    "loss": false,
+    "nodes": 3613225
+   },
+   "verdict_agreement": true
+  },
+  {
+   "bit": 69,
+   "note": "verdict-level agreement; node counts differ across engines by design",
+   "v15": {
+    "capped": false,
+    "loss": false,
+    "nodes": 186345
+   },
+   "v16_published": {
+    "capped": false,
+    "loss": false,
+    "nodes": 83011
+   },
+   "verdict_agreement": true
+  },
+  {
+   "bit": 82,
+   "note": "verdict-level agreement; node counts differ across engines by design",
+   "v15": {
+    "capped": false,
+    "loss": false,
+    "nodes": 67015
+   },
+   "v16_published": {
+    "capped": false,
+    "loss": false,
+    "nodes": 32660
+   },
+   "verdict_agreement": true
+  },
+  {
+   "bit": 85,
+   "note": "verdict-level agreement; node counts differ across engines by design",
+   "v15": {
+    "capped": false,
+    "loss": false,
+    "nodes": 161843
+   },
+   "v16_published": {
+    "capped": false,
+    "loss": false,
+    "nodes": 65585
+   },
+   "verdict_agreement": true
+  },
+  {
+   "bit": 86,
+   "note": "verdict-level agreement; node counts differ across engines by design",
+   "v15": {
+    "capped": false,
+    "loss": false,
+    "nodes": 2367034
+   },
+   "v16_published": {
+    "capped": false,
+    "loss": false,
+    "nodes": 810726
+   },
+   "verdict_agreement": true
+  },
+  {
+   "bit": 87,
+   "note": "verdict-level agreement; node counts differ across engines by design",
+   "v15": {
+    "capped": false,
+    "loss": false,
+    "nodes": 1218024
+   },
+   "v16_published": {
+    "capped": false,
+    "loss": false,
+    "nodes": 522411
+   },
+   "verdict_agreement": true
+  },
+  {
+   "bit": 88,
+   "note": "verdict-level agreement; node counts differ across engines by design",
+   "v15": {
+    "capped": false,
+    "loss": false,
+    "nodes": 1711017
+   },
+   "v16_published": {
+    "capped": false,
+    "loss": false,
+    "nodes": 752771
+   },
+   "verdict_agreement": true
+  },
+  {
+   "bit": 92,
+   "note": "verdict-level agreement; node counts differ across engines by design",
+   "v15": {
+    "capped": false,
+    "loss": false,
+    "nodes": 893113
+   },
+   "v16_published": {
+    "capped": false,
+    "loss": false,
+    "nodes": 391327
+   },
+   "verdict_agreement": true
+  },
+  {
+   "bit": 95,
+   "note": "verdict-level agreement; node counts differ across engines by design",
+   "v15": {
+    "capped": false,
+    "loss": false,
+    "nodes": 754432
+   },
+   "v16_published": {
+    "capped": false,
+    "loss": false,
+    "nodes": 141708
+   },
+   "verdict_agreement": true
+  },
+  {
+   "bit": 96,
+   "note": "verdict-level agreement; node counts differ across engines by design",
+   "v15": {
+    "capped": false,
+    "loss": false,
+    "nodes": 720816
+   },
+   "v16_published": {
+    "capped": false,
+    "loss": false,
+    "nodes": 268785
+   },
+   "verdict_agreement": true
+  },
+  {
+   "bit": 97,
+   "note": "verdict-level agreement; node counts differ across engines by design",
+   "v15": {
+    "capped": false,
+    "loss": false,
+    "nodes": 319954
+   },
+   "v16_published": {
+    "capped": false,
+    "loss": false,
+    "nodes": 104475
+   },
+   "verdict_agreement": true
+  },
+  {
+   "bit": 98,
+   "note": "verdict-level agreement; node counts differ across engines by design",
+   "v15": {
+    "capped": false,
+    "loss": false,
+    "nodes": 540660
+   },
+   "v16_published": {
+    "capped": false,
+    "loss": false,
+    "nodes": 163689
+   },
+   "verdict_agreement": true
+  },
+  {
+   "bit": 99,
+   "note": "verdict-level agreement; node counts differ across engines by design",
+   "v15": {
+    "capped": false,
+    "loss": false,
+    "nodes": 1046349
+   },
+   "v16_published": {
+    "capped": false,
+    "loss": false,
+    "nodes": 473174
+   },
+   "verdict_agreement": true
+  },
+  {
+   "bit": 102,
+   "note": "verdict-level agreement; node counts differ across engines by design",
+   "v15": {
+    "capped": false,
+    "loss": false,
+    "nodes": 101469
+   },
+   "v16_published": {
+    "capped": false,
+    "loss": false,
+    "nodes": 48403
+   },
+   "verdict_agreement": true
+  },
+  {
+   "bit": 103,
+   "note": "verdict-level agreement; node counts differ across engines by design",
+   "v15": {
+    "capped": false,
+    "loss": false,
+    "nodes": 585538
+   },
+   "v16_published": {
+    "capped": false,
+    "loss": false,
+    "nodes": 253711
+   },
+   "verdict_agreement": true
+  },
+  {
+   "bit": 105,
+   "note": "verdict-level agreement; node counts differ across engines by design",
+   "v15": {
+    "capped": false,
+    "loss": false,
+    "nodes": 623462
+   },
+   "v16_published": {
+    "capped": false,
+    "loss": false,
+    "nodes": 263914
+   },
+   "verdict_agreement": true
+  },
+  {
+   "bit": 106,
+   "note": "verdict-level agreement; node counts differ across engines by design",
+   "v15": {
+    "capped": false,
+    "loss": false,
+    "nodes": 1380195
+   },
+   "v16_published": {
+    "capped": false,
+    "loss": false,
+    "nodes": 489604
+   },
+   "verdict_agreement": true
+  },
+  {
+   "bit": 107,
+   "note": "verdict-level agreement; node counts differ across engines by design",
+   "v15": {
+    "capped": false,
+    "loss": false,
+    "nodes": 2508854
+   },
+   "v16_published": {
+    "capped": false,
+    "loss": false,
+    "nodes": 885005
+   },
+   "verdict_agreement": true
+  },
+  {
+   "bit": 108,
+   "note": "verdict-level agreement; node counts differ across engines by design",
+   "v15": {
+    "capped": false,
+    "loss": false,
+    "nodes": 1267746
+   },
+   "v16_published": {
+    "capped": false,
+    "loss": false,
+    "nodes": 527814
+   },
+   "verdict_agreement": true
+  },
+  {
+   "bit": 111,
+   "note": "verdict-level agreement; node counts differ across engines by design",
+   "v15": {
+    "capped": false,
+    "loss": false,
+    "nodes": 1383423
+   },
+   "v16_published": {
+    "capped": false,
+    "loss": false,
+    "nodes": 519861
+   },
+   "verdict_agreement": true
+  },
+  {
+   "bit": 112,
+   "note": "verdict-level agreement; node counts differ across engines by design",
+   "v15": {
+    "capped": false,
+    "loss": false,
+    "nodes": 2477158
+   },
+   "v16_published": {
+    "capped": false,
+    "loss": false,
+    "nodes": 1026035
+   },
+   "verdict_agreement": true
+  },
+  {
+   "bit": 115,
+   "note": "verdict-level agreement; node counts differ across engines by design",
+   "v15": {
+    "capped": false,
+    "loss": false,
+    "nodes": 507660
+   },
+   "v16_published": {
+    "capped": false,
+    "loss": false,
+    "nodes": 197564
+   },
+   "verdict_agreement": true
+  },
+  {
+   "bit": 117,
+   "note": "verdict-level agreement; node counts differ across engines by design",
+   "v15": {
+    "capped": false,
+    "loss": false,
+    "nodes": 1077190
+   },
+   "v16_published": {
+    "capped": false,
+    "loss": false,
+    "nodes": 358663
+   },
+   "verdict_agreement": true
+  }
+ ],
+ "refuted_bits": [
+  1,
+  2,
+  3,
+  5,
+  14,
+  16,
+  18,
+  21,
+  23,
+  25,
+  29,
+  34,
+  35,
+  43,
+  45,
+  46,
+  53,
+  54,
+  66,
+  69,
+  82,
+  85,
+  86,
+  87,
+  88,
+  92,
+  95,
+  96,
+  97,
+  98,
+  99,
+  102,
+  103,
+  105,
+  106,
+  107,
+  108,
+  111,
+  112,
+  115,
+  117
+ ],
+ "v15_file_blobs": {
+  "class2-lane-cost64h-v15-refuted-crosscheck-a-20261116.jsonl": "311ba6c95750e4b589464725b59bd75181342b43",
+  "class2-lane-cost64h-v15-refuted-crosscheck-b-20261116.jsonl": "2b54730ecd78c48d63f00768babeae77682a2dd6",
+  "class2-lane-cost64h-v15-refuted-crosscheck-c-20261116.jsonl": "e1a48b96de4a0db79780e1172617e6e57bdc313b",
+  "class2-lane-cost64h-v15-refuted-crosscheck-d-20261116.jsonl": "b06433e3bb61df65ed773ca60356c81d042d2381",
+  "class2-lane-cost64h-v15-refuted-crosscheck-e-20261116.jsonl": "de33012ee9bd96eabaa8662d5c9fd7cadb393093"
+ },
+ "v15_invocation": "node --experimental-strip-types class4_child1_runner.ts --child 00000000000000403800000008100000 --bits <worker batch> --depth 10 --cap 1000000000 --andclose 1 (pilot_d6 control on; 5 workers a-e, 41 refuted bits split across a-d, win controls 4/120 on e)",
+ "v15_refuted_node_sum": 57767631,
+ "win_control_bits": [
+  4,
+  120
+ ],
+ "win_control_detail": {
+  "4": {
+   "capped": false,
+   "loss": true,
+   "node_exact_vs_published_v15": true,
+   "published_nodes": 3555878,
+   "rerun_nodes": 3555878
+  },
+  "120": {
+   "capped": false,
+   "loss": true,
+   "node_exact_vs_published_v15": true,
+   "published_nodes": 4836378,
+   "rerun_nodes": 4836378
+  }
+ }
+}

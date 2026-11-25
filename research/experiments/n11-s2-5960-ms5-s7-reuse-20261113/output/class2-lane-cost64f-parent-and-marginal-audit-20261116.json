@@ -1,0 +1,367 @@
+{
+ "schema": "n11-class2-lane-cost64f-parent-marginal-audit-20261116-v1",
+ "date": "2026-11-16",
+ "main_head_before": "e2df2c3583286cb568614c4c145931eef971629e",
+ "canonical_head_before_fold": "1435/174/6413/507337/4686/371251",
+ "fold_applied": false,
+ "execution_note": "The independent D4/BigInt calculation was executed in this run's JavaScript tool runtime. A Python standard-library reproduction script is committed alongside this result; it was not executed in a local repository checkout during this run.",
+ "parent_mapping_correction": {
+  "old_presweep_blob_sha": "e2d12b5bc3701aa11afa297bb50e6df771fb91cf",
+  "old_claim_blob_sha": "48d2de0c0cac1656533a99b8b729297ad95a4307",
+  "old_manifest_blob_sha": "33a444b97a55f6fb1b19ec9399c04bb9e7e55c18",
+  "previous_s5_target": "00000000000000403800000008000000",
+  "corrected_s5_target": "00000000000000003800000008002000",
+  "protocol_anchor_s5_parent": "00000000000000403800000008000000",
+  "direct_s5_parents": [
+   "00000000000000003800000008002000",
+   "0000000000000080120a000000000000"
+  ],
+  "finding": "The selected child is in the shared protocol parent and in 0000000000000080120a000000000000; it is not a direct child of the PARENT protocol anchor.",
+  "fix": "Preserve (parent,row) pairs in cheapest_open_rows_ranking and correct claim/certificate-manifest parent metadata."
+ },
+ "target_row": "0000000000000080120a000000800000",
+ "target_parent_membership": [
+  {
+   "s5_hex": "00000000000000003800000008002000",
+   "classes_mask": 2,
+   "remaining_s6_orbits_head1435": 31,
+   "remaining_s7_edge_cost_head1435": 2145
+  },
+  {
+   "s5_hex": "0000000000000080120a000000000000",
+   "classes_mask": 2,
+   "remaining_s6_orbits_head1435": 43,
+   "remaining_s7_edge_cost_head1435": 3167
+  }
+ ],
+ "prior_receipt_and_verdict_census": {
+  "prior_receipt_roots": {
+   "count": 757,
+   "distinct_canons": 743
+  },
+  "harvested_verdict_canons": 4182,
+  "harvest_conflicts": 0,
+  "new_roots_open_in_presweep": [
+   39,
+   72,
+   107
+  ],
+  "note": "All three root canons were open in the head-1435 pre-sweep bit table, hence absent from the 743 prior receipt canons and 4,182 harvested verdict canons."
+ },
+ "prior_fold_marginals": {
+  "cost65j_rows": 9,
+  "cost64d_rows": 16,
+  "union_rows": 25,
+  "disjoint": true
+ },
+ "receipt_marginals_in_order": [
+  {
+   "bit": 39,
+   "root_hex": "0000000000000080120a008000800000",
+   "root_d4_canonical_hex": "0000000000000080120a008000800000",
+   "prior_corpus_status": "open",
+   "covered_head1410_worklist_rows": [
+    "0000000000000080120a000000800000"
+   ],
+   "marginal_rows_in_receipt_order": [
+    "0000000000000080120a000000800000"
+   ],
+   "marginal_count": 1
+  },
+  {
+   "bit": 72,
+   "root_hex": "0000000000000180120a000000800000",
+   "root_d4_canonical_hex": "00000000000000c09002800080000000",
+   "prior_corpus_status": "open",
+   "covered_head1410_worklist_rows": [
+    "0000000000000080120a000000800000"
+   ],
+   "marginal_rows_in_receipt_order": [],
+   "marginal_count": 0
+  },
+  {
+   "bit": 107,
+   "root_hex": "0000080000000080120a000000800000",
+   "root_d4_canonical_hex": "00000000020002801202000000080000",
+   "prior_corpus_status": "open",
+   "covered_head1410_worklist_rows": [
+    "0000000000000080120a000000800000",
+    "00000000000000a09002000000002000",
+    "00000000020002801002000000080000"
+   ],
+   "marginal_rows_in_receipt_order": [
+    "00000000000000a09002000000002000",
+    "00000000020002801002000000080000"
+   ],
+   "marginal_count": 2
+  }
+ ],
+ "new_marginal_rows": [
+  {
+   "s6_hex": "0000000000000080120a000000800000",
+   "own_candidates_edge_cost": 64,
+   "open_s5_parent_incidences": 2,
+   "c1": 0,
+   "c2": 2,
+   "c4": 0,
+   "direct_s5_parents": [
+    {
+     "s5_hex": "00000000000000003800000008002000",
+     "classes_mask": 2,
+     "remaining_s6_orbits_head1435": 31,
+     "remaining_s7_edge_cost_head1435": 2145
+    },
+    {
+     "s5_hex": "0000000000000080120a000000000000",
+     "classes_mask": 2,
+     "remaining_s6_orbits_head1435": 43,
+     "remaining_s7_edge_cost_head1435": 3167
+    }
+   ],
+   "receipt_bits": [
+    39,
+    72,
+    107
+   ]
+  },
+  {
+   "s6_hex": "00000000000000a09002000000002000",
+   "own_candidates_edge_cost": 67,
+   "open_s5_parent_incidences": 3,
+   "c1": 0,
+   "c2": 2,
+   "c4": 2,
+   "direct_s5_parents": [
+    {
+     "s5_hex": "00000000000000003800002080000000",
+     "classes_mask": 4,
+     "remaining_s6_orbits_head1435": 78,
+     "remaining_s7_edge_cost_head1435": 5837
+    },
+    {
+     "s5_hex": "00000000000000801202000000080000",
+     "classes_mask": 6,
+     "remaining_s6_orbits_head1435": 68,
+     "remaining_s7_edge_cost_head1435": 5202
+    },
+    {
+     "s5_hex": "0000000000000080120a000000000000",
+     "classes_mask": 2,
+     "remaining_s6_orbits_head1435": 43,
+     "remaining_s7_edge_cost_head1435": 3167
+    }
+   ],
+   "receipt_bits": [
+    107
+   ]
+  },
+  {
+   "s6_hex": "00000000020002801002000000080000",
+   "own_candidates_edge_cost": 63,
+   "open_s5_parent_incidences": 2,
+   "c1": 0,
+   "c2": 0,
+   "c4": 2,
+   "direct_s5_parents": [
+    {
+     "s5_hex": "00000000000000003800002080000000",
+     "classes_mask": 4,
+     "remaining_s6_orbits_head1435": 78,
+     "remaining_s7_edge_cost_head1435": 5837
+    },
+    {
+     "s5_hex": "00000000020000003800000000080000",
+     "classes_mask": 4,
+     "remaining_s6_orbits_head1435": 61,
+     "remaining_s7_edge_cost_head1435": 4351
+    }
+   ],
+   "receipt_bits": [
+    107
+   ]
+  }
+ ],
+ "new_marginal_row_count": 3,
+ "unique_row_cost_delta": 194,
+ "parent_row_incidences": 7,
+ "parent_edge_cost_delta": 455,
+ "affected_parent_count": 5,
+ "affected_parent_deltas": [
+  {
+   "s5_hex": "00000000000000003800000008002000",
+   "classes_mask": 2,
+   "before_rows": 31,
+   "before_parent_edge_cost": 2145,
+   "lost_rows": 1,
+   "lost_parent_edge_cost": 64,
+   "after_rows": 30,
+   "after_parent_edge_cost": 2081
+  },
+  {
+   "s5_hex": "00000000000000003800002080000000",
+   "classes_mask": 4,
+   "before_rows": 78,
+   "before_parent_edge_cost": 5837,
+   "lost_rows": 2,
+   "lost_parent_edge_cost": 130,
+   "after_rows": 76,
+   "after_parent_edge_cost": 5707
+  },
+  {
+   "s5_hex": "00000000000000801202000000080000",
+   "classes_mask": 6,
+   "before_rows": 68,
+   "before_parent_edge_cost": 5202,
+   "lost_rows": 1,
+   "lost_parent_edge_cost": 67,
+   "after_rows": 67,
+   "after_parent_edge_cost": 5135
+  },
+  {
+   "s5_hex": "0000000000000080120a000000000000",
+   "classes_mask": 2,
+   "before_rows": 43,
+   "before_parent_edge_cost": 3167,
+   "lost_rows": 2,
+   "lost_parent_edge_cost": 131,
+   "after_rows": 41,
+   "after_parent_edge_cost": 3036
+  },
+  {
+   "s5_hex": "00000000020000003800000000080000",
+   "classes_mask": 4,
+   "before_rows": 61,
+   "before_parent_edge_cost": 4351,
+   "lost_rows": 1,
+   "lost_parent_edge_cost": 63,
+   "after_rows": 60,
+   "after_parent_edge_cost": 4288
+  }
+ ],
+ "reconstructed_heads": {
+  "head1410": {
+   "unique_remaining_s6": 6438,
+   "sum_remaining_cost": 509109,
+   "s6_needed_by_open_classes": 4711,
+   "cost_needed_by_open_classes": 373023
+  },
+  "head1419": {
+   "unique_remaining_s6": 6429,
+   "sum_remaining_cost": 508474,
+   "s6_needed_by_open_classes": 4702,
+   "cost_needed_by_open_classes": 372388,
+   "demand_histogram_open_only": {
+    "c2=0,c4=1": 526,
+    "c2=0,c4=2": 3013,
+    "c2=0,c4=3": 12,
+    "c2=1,c4=0": 214,
+    "c2=1,c4=1": 54,
+    "c2=1,c4=2": 9,
+    "c2=2,c4=0": 817,
+    "c2=2,c4=1": 5,
+    "c2=2,c4=2": 52
+   },
+   "solved_s6_in_manifest": 1419,
+   "remaining_s5_orbits": 174
+  },
+  "head1435": {
+   "unique_remaining_s6": 6413,
+   "sum_remaining_cost": 507337,
+   "s6_needed_by_open_classes": 4686,
+   "cost_needed_by_open_classes": 371251,
+   "demand_histogram_open_only": {
+    "c2=0,c4=1": 526,
+    "c2=0,c4=2": 3013,
+    "c2=0,c4=3": 12,
+    "c2=1,c4=0": 212,
+    "c2=1,c4=1": 54,
+    "c2=1,c4=2": 9,
+    "c2=2,c4=0": 803,
+    "c2=2,c4=1": 5,
+    "c2=2,c4=2": 52
+   },
+   "solved_s6_in_manifest": 1435,
+   "remaining_s5_orbits": 174
+  }
+ },
+ "projected_head_after_cost64f_fold": {
+  "solved_s6_in_manifest": 1438,
+  "remaining_s5_orbits": 174,
+  "unique_remaining_s6": 6410,
+  "sum_remaining_cost": 507143,
+  "s6_needed_by_open_classes": 4683,
+  "cost_needed_by_open_classes": 371057,
+  "demand_histogram_open_only": {
+   "c2=0,c4=1": 526,
+   "c2=0,c4=2": 3012,
+   "c2=0,c4=3": 12,
+   "c2=1,c4=0": 212,
+   "c2=1,c4=1": 54,
+   "c2=1,c4=2": 9,
+   "c2=2,c4=0": 802,
+   "c2=2,c4=1": 5,
+   "c2=2,c4=2": 51
+  }
+ },
+ "source_pins": {
+  "worklist_1410": {
+   "path": "research/experiments/n11-class2-lane-closability-ranking-20261116/output/class-frontier-remaining-s6-worklist-1410-20261116.csv",
+   "git_blob_sha": "2fee1d0718547a62e346d35f5858d7913e37c097"
+  },
+  "ranking_1410": {
+   "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-s5-ranking-after-cost60c-receipts-20261116.csv",
+   "git_blob_sha": "a01cfd5340fa89c0eaf834dcb96000f9b04d20ae"
+  },
+  "fold_65j": {
+   "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost65j-receipts-recompute-20261116.json",
+   "git_blob_sha": "e8c835840f2fad8ffd9a9a8e6f1a9f5944470524"
+  },
+  "fold_64d": {
+   "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost64d-receipts-recompute-20261116.json",
+   "git_blob_sha": "082aa7f25596fe52e89ae4b158adba64a7f0d4c9"
+  },
+  "ranking_1435": {
+   "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-s5-ranking-after-cost64d-receipts-20261116.csv",
+   "git_blob_sha": "130cc5ee24dad54e71f8319935ccaad4d43ab1cb"
+  },
+  "presweep_v2_script": {
+   "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/next_target_presweep_head1435_v2_20261116.py",
+   "git_blob_sha": "05dfc0d86f818c6f92ce99dbe093f4ffa36b254e"
+  },
+  "presweep_v2_json": {
+   "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-next-target-presweep-1435-v2-20261116.json",
+   "git_blob_sha": "59d42a6b1d8db4dbc498872576283e0130a0c390"
+  },
+  "assembler_script": {
+   "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/assemble_cost64f_certificates_20261116.py",
+   "git_blob_sha": "d058aa5ca30ae4f309142dbcdd29c620004a092a"
+  },
+  "claim64f_v3": {
+   "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost64f-inflight-20261116.json",
+   "git_blob_sha": "5159e0ac0ba9591e95ee6a9ab7a01aeb9e899f6e"
+  },
+  "cert64f_manifest_v2": {
+   "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost64f-win3-certificates-20261116.json",
+   "git_blob_sha": "29aedffcfe7e4f7d110671c26177d9ff9cbb085d"
+  },
+  "audit_script": {
+   "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_cost64f_parent_and_marginals_third_20261116.py",
+   "git_blob_sha": "d7e5d51eaba1bb9d984dff7681ff72fa96cb52f9"
+  }
+ },
+ "checks": {
+  "all_6438_worklist_rows_d4_canonical_and_unique": true,
+  "all_6438_parent_incidence_counts_match": true,
+  "head1410_frontier_reconstructed": true,
+  "head1419_frontier_matches_published_fold": true,
+  "head1435_frontier_matches_published_fold": true,
+  "all_174_head1435_parent_counts_and_costs_match": true,
+  "three_new_roots_open_against_prior_census": true,
+  "three_new_receipts_cover_three_new_manifest_rows": true,
+  "per_receipt_marginals_are_1_0_2": true,
+  "no_affected_parent_is_closed": true,
+  "parent_ranking_metadata_corrected": true
+ },
+ "interpretation_guard": "WIN7-D10 proves only a first-player win within depth 10 from each individual 7-stone root. REFUTED-D10 is not a LOSS proof. The projected head is manifest-coverage bookkeeping, not a game-theoretic result. The canonical head remains 1435 until the full fold script reproduces the chain and performs its complete conflict census.",
+ "unknown_status": "11x11 empty board, two-stone roots {49,60} and {59,60}, S2 {59,60}, and classes 1/2/4 remain UNKNOWN"
+}

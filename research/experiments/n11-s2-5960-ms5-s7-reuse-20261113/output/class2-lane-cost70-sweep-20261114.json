@@ -1,0 +1,42 @@
+{
+ "session": "class2-lane cost-70 sweep (long-term lane, 2026-11-14)",
+ "s6_child_hex": "00000000000000809082000000000001",
+ "s5_parent_hex": "00000000000000809082000000000000",
+ "s6_s7_edge_cost": 70,
+ "demand_classes": {
+  "c1": 2,
+  "c2": 2,
+  "c4": 0
+ },
+ "win7_d10": 0,
+ "win7_bits": [],
+ "refuted_d10": 70,
+ "capped": 0,
+ "total_nodes": 380930330,
+ "terminal_stone_range_all": [
+  13,
+  17
+ ],
+ "heaviest_bits": [
+  112,
+  86,
+  94
+ ],
+ "heaviest_fresh_rerun_node_exact": true,
+ "pilot_d6_controls": 9,
+ "pilot_d6_nodes": 5949,
+ "candidate_enumeration": "legal_candidates.py independent enumeration: 70 legal candidates, matches published edge cost 70",
+ "notes": "14th sterile child in the lane (all candidates REFUTED-D10, no WIN7, no capped). Heaviest bits 112/86/94 fresh rerun node-exact (24,933,747 / 20,457,811 / 14,411,457 nodes). All terminal ranges [13,17]. First cost-70-band child of the best class-2 target; claimed in batches 1-5 commit to avoid collision with the hourly parallel lane (which declared cost-69c next). No frontier effect (sterile child).",
+ "raw_batches": [
+  "class2-lane-cost70-raw-batch1-20261114.jsonl",
+  "class2-lane-cost70-raw-batch2-20261114.jsonl",
+  "class2-lane-cost70-raw-batch3-20261114.jsonl",
+  "class2-lane-cost70-raw-batch4-20261114.jsonl",
+  "class2-lane-cost70-raw-batch5-20261114.jsonl",
+  "class2-lane-cost70-raw-batch6-20261114.jsonl",
+  "class2-lane-cost70-raw-batch7-20261114.jsonl",
+  "class2-lane-cost70-raw-batch8-20261114.jsonl",
+  "class2-lane-cost70-raw-batch9-20261114.jsonl",
+  "class2-lane-cost70-determinism-rerun-20261114.jsonl"
+ ]
+}

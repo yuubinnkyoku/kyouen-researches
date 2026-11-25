@@ -1,0 +1,301 @@
+{
+ "schema": "n11-class2-lane-cost71c-inflight-20261115-v3",
+ "title": "n11 class2-lane cost-71c sweep in flight: cheapest unswept cost-71 child of the second coverable class-2 target S5 at head 1233 (both parents class 2, c1=0,c2=2,c4=0)",
+ "date": "2026-11-15",
+ "status": "completed (sweep + WIN7 certificates + independent audit + receipts fold)",
+ "claimed_by": "long-term class2 lane (11x11 weak-solve long-term lane session)",
+ "s5": "00000000000000801202000000200000",
+ "s6_child": "00000000000000801202000080200000",
+ "s6_s7_edge_cost": 71,
+ "demand": {
+  "c1": 0,
+  "c2": 2,
+  "c4": 0
+ },
+ "chain_head_at_claim": "1233/6614/522131/4884/385854 (class-frontier-cost70e-receipts-recompute-20261115.json, git blob sha a0171d4bb839aeb813d231c7d879d6a89452359f; re-asserted on latest main immediately before this push)",
+ "child_stones_bit_indices": [
+  21,
+  31,
+  49,
+  57,
+  60,
+  71
+ ],
+ "demand_verification": "re-derived and VERIFIED at the canonical chain head 1233/6614/522131/4884/385854 before this claim push: exact-integer D4 canonicalization (8-element dihedral group, minimum bit-pattern) of all six one-stone deletions of the child (stones [21,31,49,57,60,71]): exactly two open parents - stone 31 deletion reproduces the second coverable class-2 target S5 00000000000000801202000000200000 bit-exact (28 rows / 2119 at head 1233) and stone 21 deletion canonicalizes to class-2 S5 00000000000000801202000080000000 (43 rows / 3268 at head 1233); the remaining four deletions (stones 49/57/60/71) are closed rows absent from the head-1233 ranking CSV (class-frontier-s5-ranking-after-cost70e-receipts-20261115.csv); per-class demand c1=0,c2=2,c4=0 matches the published head-1233 top-candidates CSV row (class-frontier-top-candidates-s6-after-cost70e-receipts-20261115.csv); legal_candidates.py independent enumeration (exact Bareiss 4x4 integer determinants; script blob sha 8e97082c42838c7a4a4b6d2dd235276c8d43ab9a) gives 71 legal candidates, bit-exact with the published manifest edge cost 71; the v16 runner blob sha 0a4a86f6828dc010c89ff17596054336a6b6091f verified against main before use",
+ "legal_candidates": [
+  0,
+  1,
+  2,
+  3,
+  4,
+  6,
+  7,
+  8,
+  9,
+  10,
+  12,
+  13,
+  14,
+  15,
+  17,
+  18,
+  22,
+  23,
+  24,
+  25,
+  26,
+  28,
+  32,
+  33,
+  34,
+  35,
+  40,
+  42,
+  43,
+  44,
+  50,
+  52,
+  54,
+  56,
+  58,
+  59,
+  62,
+  64,
+  65,
+  66,
+  67,
+  72,
+  73,
+  74,
+  75,
+  76,
+  77,
+  78,
+  79,
+  83,
+  84,
+  85,
+  87,
+  88,
+  89,
+  90,
+  92,
+  96,
+  99,
+  100,
+  102,
+  103,
+  105,
+  106,
+  110,
+  112,
+  113,
+  114,
+  116,
+  117,
+  118
+ ],
+ "candidate_count": 71,
+ "no_prior_sweep_note": "no published claim, sweep, or certificate record exists for this child on latest main: repo code search for the child hex returns only the milestone manifest and the top-candidates CSVs (no inflight/claim/win7/sweep-audit/raw-batch artifacts; search re-run immediately before this push, 18 hits all manifest/top-candidates); the cost-71 series names 71/71b for other children; the in-flight claims at head 1233 cover the cost-70f child 00000000000000801202000002200000 and the cost-70g child 00000000000100809002000000000800 - both distinct from this child; the 65k/65l/70d/70e siblings of this S5 are swept or in flight and untouched here; named cost-71c as the next free name in the cost-71 series",
+ "motivation": "after the cost-70e fold (head 1233) and the in-flight cost-70f/70g claims, this is the cheapest remaining unswept row of the second coverable class-2 target S5 00000000000000801202000000200000 (28 rows / 2119): cost 71, c1=0,c2=2,c4=0, with a second open class-2 parent 00000000000000801202000080000000 (43 rows / 3268), so a WIN7-D10 receipt set would advance two class-2 frontiers at once; a sterile outcome establishes the no-WIN7-D10 negative fact for this child",
+ "engine": {
+  "script": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/class4_child1_runner_v16.ts",
+  "blob_sha": "0a4a86f6828dc010c89ff17596054336a6b6091f",
+  "depth": 10,
+  "cap": 1000000000,
+  "andclose": 1,
+  "batch_size": 8,
+  "pilot_control": "per-batch d6 pilot on the fixed control board, require loss=false nodes=3402, else abort",
+  "batches_planned": 9,
+  "batch_bits": {
+   "batch1": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    6,
+    7,
+    8
+   ],
+   "batch2": [
+    9,
+    10,
+    12,
+    13,
+    14,
+    15,
+    17,
+    18
+   ],
+   "batch3": [
+    22,
+    23,
+    24,
+    25,
+    26,
+    28,
+    32,
+    33
+   ],
+   "batch4": [
+    34,
+    35,
+    40,
+    42,
+    43,
+    44,
+    50,
+    52
+   ],
+   "batch5": [
+    54,
+    56,
+    58,
+    59,
+    62,
+    64,
+    65,
+    66
+   ],
+   "batch6": [
+    67,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78
+   ],
+   "batch7": [
+    79,
+    83,
+    84,
+    85,
+    87,
+    88,
+    89,
+    90
+   ],
+   "batch8": [
+    92,
+    96,
+    99,
+    100,
+    102,
+    103,
+    105,
+    106
+   ],
+   "batch9": [
+    110,
+    112,
+    113,
+    114,
+    116,
+    117,
+    118
+   ]
+  },
+  "raw_batch_naming": "class2-lane-cost71c-raw-batch{N}-20261115.jsonl (JSONL: {bit,loss,nodes,capped,terminalStoneRange,ms} plus the pilot control line)"
+ },
+ "verdict_semantics": "loss=true => WIN7-within-depth-10 candidate (certificate rebuild target); loss=false && !capped => REFUTED-D10, no first-player win within depth 10 (NOT a LOSS proof); capped => proves nothing either way",
+ "unknown_note": "The standard 11x11 empty board, both two-stone roots {49,60}/{59,60}, S2 {59,60}, class 1, class 2 and class 4 all remain UNKNOWN.",
+ "unknown_status": "11x11 empty board: UNKNOWN. A completed sweep proves only WIN7-D10/REFUTED-D10 verdicts for the 7-stone roots of this child.",
+ "coordination_note": "latest main fetched immediately before this claim push (HEAD 2c5e2ff0); the canonical chain head is 1233/6614/522131/4884/385854; the parallel cost-70f/70g sweeps and the cost-65l certificate extraction/fold are in flight on other sessions and untouched here; when any of them lands, any cost-71c fold must re-fetch latest main, re-assert the canonical head and rebase (cost-78a+69h merge precedent); this claim reserves the cost-71c sweep only; if a parallel execution claims this child first, the collision protocol (cost-72b/cost-76a/cost-63f fold precedents) applies: verify the arithmetic, do not overwrite",
+ "results": {
+  "sweep": {
+   "win7_d10_bits": [
+    24,
+    112
+   ],
+   "win7_d10_nodes": {
+    "24": 457250,
+    "112": 3985676
+   },
+   "refuted_d10": 69,
+   "capped": 0,
+   "candidate_nodes": 94128613,
+   "batches_completed": 9,
+   "pilots_3402": 9,
+   "determinism_rerun_batch5_node_exact": true,
+   "v15_crosscheck": {
+    "win_bits_loss_true": {
+     "24": 2695796,
+     "112": 14334967
+    },
+    "refuted_anchors_loss_false": {
+     "75": 2127796,
+     "113": 12082176,
+     "116": 20048518
+    },
+    "pilots_5949": 1
+   },
+   "raw_artifacts": [
+    "class2-lane-cost71c-raw-batch1-20261115.jsonl .. batch9 (9 files, pushed during the sweep)",
+    "class2-lane-cost71c-v16-determinism-rerun-20261115.jsonl",
+    "class2-lane-cost71c-v15-crosscheck-20261115.jsonl"
+   ]
+  },
+  "win7_certificates": {
+   "bit24": {
+    "root_hex": "00000000000000801202000081200000",
+    "repo_path": "class2-lane-cost71c-certificates/bit24-root-00000000000000801202000081200000.cert",
+    "repo_blob_sha": "8d9b4459f489b3224c64b4f6bbd37b8ff2dd23e3",
+    "strategy_rows": 22196,
+    "loser_first_moves": 47
+   },
+   "bit112": {
+    "root_hex": "00010000000000801202000080200000",
+    "repo_paths": [
+     "class2-lane-cost71c-certificates/bit112-root-00010000000000801202000080200000.cert.part1of2",
+     "class2-lane-cost71c-certificates/bit112-root-00010000000000801202000080200000.cert.part2of2"
+    ],
+    "join_md5_equals_whole_md5": "e38d80cfd89ccc8e48264c36a9e7701a",
+    "strategy_rows": 60406,
+    "loser_first_moves": 56,
+    "v2_join_md5_typo_corrected": "v2 recorded e38d80cfd89ccc8e48264c36a9e7701a5 (stray trailing 5, 33 chars); corrected here; see class2-lane-cost71c-md5-erratum-20261115.json"
+   }
+  },
+  "independent_verification": "verify_win7_certificate_bigint_independent.mjs 2/2 PASS (subroots 47/56, union 0/0, terminal [13,17]) and verify_cost71c_win7_bareiss_independent.py 2/2 PASS (full loser-reply expansion, strategy-union closure, union 0/0)",
+  "sweep_audit": "class2-lane-cost71c-sweep-audit-20261115.json (independent re-derivation: 71 candidates bit-exact, aggregate, batch plan, det rerun, v15, D4 duplicate scan 126 published roots, head-1233 CSV cross-checks)",
+  "certificate_manifest": "class2-lane-cost71c-win7-certificates-20261115.json"
+ },
+ "fold": {
+  "status": "completed",
+  "schema": "n11-class2-lane-cost71c-fold-20261115-v1",
+  "chain_head_before": "1233/6614/522131/4884/385854",
+  "chain_head_after": "1235/6612/521988/4882/385711",
+  "fold_base": "canonical head 1233 (class-frontier-cost70e-receipts-recompute-20261115.json, blob a0171d4bb839aeb813d231c7d879d6a89452359f; no fork: no parallel lane had landed a newer head at fold time; latest main re-fetched immediately before the fold push)",
+  "publication_order": [
+   24,
+   112
+  ],
+  "receipts_folded": 2,
+  "receipts_refuted_kept": 69,
+  "total_marginal": 10,
+  "total_marginal_in_manifest": 2,
+  "child_orbit_closed_by_bit": 24,
+  "remaining_rows": {
+   "class2_parent1": "00000000000000801202000000200000: 26 rows / 1976 (was 28/2119); lost the child row (cost 71) and 00000000210000003800000000000200 (cost 72)",
+   "class2_parent2": "00000000000000801202000080000000: 42 rows / 3197 (was 43/3268); lost the child row"
+  },
+  "fold_head_json": "class-frontier-cost71c-receipts-recompute-20261115.json (git blob sha 61af2eb311f938f5ee5bf2bb20d8c1a76787dc87)",
+  "fold_head_csvs": "class-frontier-s5-ranking-after-cost71c-receipts-20261115.csv (blob 3f38a72fb412cd45f7127a58bfd0dde438eee17e), class-frontier-top-candidates-s6-after-cost71c-receipts-20261115.csv (blob 2c396f8f2668304fcd74dbd41253b1d81a80a7c6)",
+  "fold_script": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost71c_receipts_20261115.py (git blob sha 3ea4824b0e0441eed3546aa9b7b68018d397d05f; pure-geometry baseline reconstruction of 1227 from 52 blob-verified head JSONs, cost-70e fold re-derivation to 1233 with byte-identical 70e head CSV regeneration, 122 published inputs byte-exact vs main, sweep/v15/determinism re-derivation from raw JSONLs, both certificates asserted, root disjointness vs 497 folded roots raw and D4, per-record marginals re-derived from the growing union, child-orbit closure, set-equality and reverse-order replay controls)",
+  "demand_histogram_open_only_after": {
+   "c2=0,c4=1": 527,
+   "c2=0,c4=2": 3020,
+   "c2=0,c4=3": 12,
+   "c2=1,c4=0": 238,
+   "c2=1,c4=1": 58,
+   "c2=1,c4=2": 9,
+   "c2=2,c4=0": 957,
+   "c2=2,c4=1": 6,
+   "c2=2,c4=2": 55
+  },
+  "md5_correction": "the bit-112 whole-certificate md5 published in v2 (and in the manifest/audit/README with a stray trailing 5) is corrected to e38d80cfd89ccc8e48264c36a9e7701a; see class2-lane-cost71c-md5-erratum-20261115.json",
+  "interpretation_guard": "solved counts measure manifest coverage, not the game-theoretic value of any position; REFUTED-D10 is not a LOSS proof; the two WIN7 certificates prove a win within depth 10 from the individual 7-stone roots only; closing the child orbit removes the child from both open class-2 parents but does not solve either S5 parent and does not decide class 2 or class 4"
+ }
+}

@@ -1,0 +1,50 @@
+{
+ "session": "class2-lane cost-69c sweep (long-term lane, 2026-11-14)",
+ "s6_child_hex": "00000000000000809082040000000000",
+ "s5_parent_hex": "00000000000000809082000000000000",
+ "s6_s7_edge_cost": 69,
+ "demand_classes": {
+  "c1": 2,
+  "c2": 1,
+  "c4": 0
+ },
+ "win7_d10": 1,
+ "win7_bits": [
+  103
+ ],
+ "refuted_d10": 68,
+ "capped": 0,
+ "total_nodes": 440238688,
+ "terminal_stone_range_all": [
+  13,
+  17
+ ],
+ "heaviest_bits": [
+  110,
+  68,
+  29
+ ],
+ "heaviest_nodes": [
+  23731323,
+  22139194,
+  14367154
+ ],
+ "heaviest_fresh_rerun_node_exact": true,
+ "win7_bit103_fresh_rerun_node_exact": true,
+ "pilot_d6_controls": 9,
+ "pilot_d6_nodes": 5949,
+ "candidate_enumeration": "legal_candidates.py independent enumeration: 69 legal candidates, matches published edge cost 69",
+ "notes": "First non-sterile child since 69a: 1 WIN7-D10 (bit 103, 13,442,759 nodes) + 68 REFUTED, 0 capped. Heaviest bits 110/68/29 and WIN7 bit 103 fresh rerun all node-exact vs primary batches. WIN7 certificate for bit 103 fully extracted and independently verified (see research/experiments/n11/output/class2-lane-cost69c-certificates/). Root 00000080000000809082040000000000 is a new 7-stone root not previously present in the repo.",
+ "raw_batches": [
+  "class2-lane-cost69c-raw-batchA-20261114.jsonl",
+  "class2-lane-cost69c-raw-batchB-20261114.jsonl",
+  "class2-lane-cost69c-raw-batchC-20261114.jsonl",
+  "class2-lane-cost69c-raw-batchD-20261114.jsonl",
+  "class2-lane-cost69c-raw-batchE-20261114.jsonl",
+  "class2-lane-cost69c-raw-batchF-20261114.jsonl",
+  "class2-lane-cost69c-raw-batchG-20261114.jsonl",
+  "class2-lane-cost69c-raw-batchH-20261114.jsonl",
+  "class2-lane-cost69c-raw-batchI-20261114.jsonl",
+  "class2-lane-cost69c-determinism-rerun-20261114.jsonl"
+ ]
+}

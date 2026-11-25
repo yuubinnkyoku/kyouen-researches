@@ -1,0 +1,163 @@
+{
+ "schema": "n11-class2-lane-cost65-win7-certificates-20261114-v1",
+ "date": "2026-11-14",
+ "s6_child": "00000000000000003802000008000010",
+ "child_cost": 65,
+ "engine": "v15 verbatim (repo class4_child1_runner.ts, close-first AND d>=8, cap 50M, depth 10)",
+ "certificates": [
+  {
+   "bit": 0,
+   "root": "00000000000000003802000008000011",
+   "verdict": "WIN7",
+   "certificate": {
+    "rows": 44056,
+    "bytes": 1597198,
+    "md5": "87f918c16fa62091f52445c59a296278",
+    "certificate_path": "output/class2-lane-cost65-certificates/n11_s7_00000000000000003802000008000011.cert"
+   },
+   "extraction_nodes": 5747745,
+   "verification": {
+    "subroot_count": 55,
+    "union_diff": "0/0",
+    "root_check": "stones=7",
+    "terminal_range": [
+     13,
+     17
+    ]
+   }
+  },
+  {
+   "bit": 12,
+   "root": "00000000000000003802000008001010",
+   "verdict": "WIN7",
+   "certificate": {
+    "rows": 50844,
+    "bytes": 1839195,
+    "md5": "e1bb8f40becc03f6a2cdd0e9aa8a3ca5",
+    "certificate_path": "output/class2-lane-cost65-certificates/n11_s7_00000000000000003802000008001010.cert"
+   },
+   "extraction_nodes": 9460096,
+   "verification": {
+    "subroot_count": 55,
+    "union_diff": "0/0",
+    "root_check": "stones=7",
+    "terminal_range": [
+     13,
+     17
+    ]
+   }
+  },
+  {
+   "bit": 52,
+   "root": "00000000000000003812000008000010",
+   "verdict": "WIN7",
+   "certificate": {
+    "rows": 35478,
+    "bytes": 1284364,
+    "md5": "eaf802f32784da20bd04d88987662cd9",
+    "certificate_path": "output/class2-lane-cost65-certificates/n11_s7_00000000000000003812000008000010.cert"
+   },
+   "extraction_nodes": 7550058,
+   "verification": {
+    "subroot_count": 50,
+    "union_diff": "0/0",
+    "root_check": "stones=7",
+    "terminal_range": [
+     13,
+     17
+    ]
+   }
+  },
+  {
+   "bit": 72,
+   "root": "00000000000001003802000008000010",
+   "verdict": "WIN7",
+   "certificate": {
+    "rows": 26459,
+    "bytes": 957863,
+    "md5": "dee7ab0823ab39e368731aca04daa8c7",
+    "certificate_path": "output/class2-lane-cost65-certificates/n11_s7_00000000000001003802000008000010.cert"
+   },
+   "extraction_nodes": 3956234,
+   "verification": {
+    "subroot_count": 49,
+    "union_diff": "0/0",
+    "root_check": "stones=7",
+    "terminal_range": [
+     13,
+     17
+    ]
+   }
+  },
+  {
+   "bit": 73,
+   "root": "00000000000002003802000008000010",
+   "verdict": "WIN7",
+   "certificate": {
+    "rows": 18855,
+    "bytes": 682246,
+    "md5": "2bb00c4f38c1494dce0e5a59f5eb6fd7",
+    "certificate_path": "output/class2-lane-cost65-certificates/n11_s7_00000000000002003802000008000010.cert"
+   },
+   "extraction_nodes": 1413231,
+   "verification": {
+    "subroot_count": 41,
+    "union_diff": "0/0",
+    "root_check": "stones=7",
+    "terminal_range": [
+     13,
+     17
+    ]
+   }
+  },
+  {
+   "bit": 84,
+   "root": "00000000001000003802000008000010",
+   "verdict": "WIN7",
+   "certificate": {
+    "rows": 38648,
+    "bytes": 1398389,
+    "md5": "b6031fb3f835d126266e1a2a5fa5de54",
+    "certificate_path": "output/class2-lane-cost65-certificates/n11_s7_00000000001000003802000008000010.cert"
+   },
+   "extraction_nodes": 4330922,
+   "verification": {
+    "subroot_count": 50,
+    "union_diff": "0/0",
+    "root_check": "stones=7",
+    "terminal_range": [
+     13,
+     17
+    ]
+   }
+  },
+  {
+   "bit": 90,
+   "root": "00000000040000003802000008000010",
+   "verdict": "WIN7",
+   "certificate": {
+    "rows": 32737,
+    "bytes": 1185737,
+    "md5": "6c0832331b14fdf6c4f3454c4c54ba7f",
+    "certificate_path": "output/class2-lane-cost65-certificates/n11_s7_00000000040000003802000008000010.cert"
+   },
+   "extraction_nodes": 4759828,
+   "verification": {
+    "subroot_count": 48,
+    "union_diff": "0/0",
+    "root_check": "stones=7",
+    "terminal_range": [
+     13,
+     17
+    ]
+   }
+  }
+ ],
+ "summary": {
+  "win7_certificates": 7,
+  "total_rows": 247077,
+  "total_extraction_nodes": 37218114,
+  "all_verified": true
+ },
+ "interpretation_guard": "WIN7 certificates prove a win within depth 10 from the 7-stone root only; REFUTED-D10 sweeps prove only absence of WIN7-D10; 11x11 empty root / two-stone root {49,60} / S2 {59,60} / class 2 / class 4 remain UNKNOWN"
+}

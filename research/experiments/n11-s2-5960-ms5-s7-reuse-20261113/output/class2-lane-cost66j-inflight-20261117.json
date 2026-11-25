@@ -1,0 +1,467 @@
+{
+  "schema": "n11-class2-lane-cost66j-certificates-complete-20261117-v3",
+  "title": "n11 class2-lane cost66j: planned fresh 66-bit depth-10 sweep of the cheapest remaining unswept/unclaimed row of the primary pure class-2 target family (head-1472 presweep census v3 selection)",
+  "date": "2026-11-17",
+  "status": "sweep complete and certificates complete: 9 WIN7-D10 + 57 REFUTED-D10, 0 capped; raw batches, determinism reruns (batches 5/8) and the v15 crosscheck published and audited (0 conflicts vs the 64h/76c/66i maps); ALL NINE WIN7 certificates extracted, independently verified (sub-roots PASS, union 0/0 both directions, stones=7 + loser-mobility root checks) and published; this row's receipt fold must wait behind the pending cost-76c and cost-66i folds",
+  "claimed_by": "n11 long-term lane session (head-1472 presweep census v3 selector)",
+  "s5": "00000000000000403800000008000000",
+  "s6_child": "00000000000000c09002000000001000",
+  "child_stones_bit_indices": [
+    12,
+    49,
+    60,
+    63,
+    70,
+    71
+  ],
+  "s6_s7_edge_cost": 66,
+  "legal_candidates": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    6,
+    7,
+    8,
+    9,
+    10,
+    14,
+    17,
+    18,
+    20,
+    21,
+    23,
+    25,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    41,
+    42,
+    44,
+    45,
+    53,
+    58,
+    61,
+    62,
+    64,
+    65,
+    66,
+    68,
+    76,
+    77,
+    78,
+    79,
+    80,
+    85,
+    86,
+    87,
+    88,
+    91,
+    92,
+    94,
+    95,
+    96,
+    97,
+    98,
+    99,
+    101,
+    102,
+    105,
+    106,
+    107,
+    109,
+    112,
+    113,
+    114,
+    116,
+    117,
+    119,
+    120
+  ],
+  "candidate_count": 66,
+  "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+  },
+  "demand_verification": "row demand c2=2 carried over from the published head-1452 v1 census bit/row tables through the head-1472 presweep census v3 (class2-lane-next-target-presweep-1472-20261117.json, git blob 3ee5703c8cabf738eaecefb17a759c78c4a34e61), unchanged by the 64h/76c/66i overlay",
+  "basis_head": "1472/174/6376/504672/4649/368586 (canonical head after the LANDED cost-64h receipt fold; the cost-76c and cost-66i folds are still pending and are excluded by the v3 overlay, not assumed)",
+  "basis": {
+    "census_v3_json": "class2-lane-next-target-presweep-1472-20261117.json (git blob 3ee5703c8cabf738eaecefb17a759c78c4a34e61)",
+    "census_v3_script": "next_target_presweep_head1472_v3_20261117.py (git blob a0c37cc46a664d0dde57e50767c0668c5e92ab0b)",
+    "selection": "cheapest remaining unswept/unclaimed/unexcluded row of the primary pure class-2 target family 00000000000000403800000008000000 at head 1472 after the landed cost-64h fold closure, excluding the three swept children (64h/76c/66i) and every row pending the 76c/66i folds; runner-up 00000000000000801282000040000000 (cost 64, 55 open, STERILE-family caveat) is recorded in the census v3 ranking but not claimed"
+  },
+  "engine": {
+    "script": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/class4_child1_runner_v17.ts",
+    "blob_sha": "c132cc6425eee3feaeef1d697dd74f968cfedb59",
+    "note": "v17 = the fbt-saturation-repaired engine used for the cost-76c resweep and the cost-66i sweep; fresh sweeps must use v17, not v16",
+    "depth": 10,
+    "cap": 1000000000,
+    "andclose": 1,
+    "pilot": "pilot d6 control per batch: loss=false at exactly 3402 nodes, else abort",
+    "parallelism": "4 concurrent node processes (shared-server courtesy)",
+    "raw_output_pattern": "class2-lane-cost66j-raw-batch{n}-20261117.jsonl",
+    "batches": [
+      {
+        "batch": 1,
+        "bits": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          6,
+          7,
+          8
+        ]
+      },
+      {
+        "batch": 2,
+        "bits": [
+          9,
+          10,
+          14,
+          17,
+          18,
+          21,
+          23,
+          25
+        ]
+      },
+      {
+        "batch": 3,
+        "bits": [
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          41
+        ]
+      },
+      {
+        "batch": 4,
+        "bits": [
+          42,
+          44,
+          45,
+          53,
+          58,
+          61,
+          62,
+          64
+        ]
+      },
+      {
+        "batch": 5,
+        "bits": [
+          65,
+          66,
+          68,
+          76,
+          77,
+          78,
+          79,
+          80
+        ]
+      },
+      {
+        "batch": 6,
+        "bits": [
+          85,
+          86,
+          87,
+          88,
+          91,
+          92,
+          94,
+          95
+        ]
+      },
+      {
+        "batch": 7,
+        "bits": [
+          96,
+          98,
+          99,
+          101,
+          102,
+          105,
+          106,
+          107
+        ]
+      },
+      {
+        "batch": 8,
+        "bits": [
+          109,
+          112,
+          113,
+          114,
+          116,
+          117,
+          119,
+          120
+        ]
+      },
+      {
+        "batch": 9,
+        "bits": [
+          20,
+          97
+        ]
+      }
+    ]
+  },
+  "engine_candidate_bits": {
+    "open_bits": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      6,
+      7,
+      8,
+      9,
+      10,
+      14,
+      17,
+      18,
+      21,
+      23,
+      25,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      41,
+      42,
+      44,
+      45,
+      53,
+      58,
+      61,
+      62,
+      64,
+      65,
+      66,
+      68,
+      76,
+      77,
+      78,
+      79,
+      80,
+      85,
+      86,
+      87,
+      88,
+      91,
+      92,
+      94,
+      95,
+      96,
+      98,
+      99,
+      101,
+      102,
+      105,
+      106,
+      107,
+      109,
+      112,
+      113,
+      114,
+      116,
+      117,
+      119,
+      120
+    ],
+    "confirmation_bits": [
+      20,
+      97
+    ],
+    "expected_verdicts": {
+      "20": "REFUTED-D10",
+      "97": "REFUTED-D10"
+    },
+    "note": "64 fresh open bits plus 2 known-verdict bits re-run fresh for cross-agreement (bit 20 = cost-64h orbit transfer as 64h bit 108; bit 97 = v1 harvest transfer); total fresh engine work 66 bits = the complete legal row"
+  },
+  "transfers": {
+    "20": {
+      "root_canon": "00000000000000c09002000000101000",
+      "verdict": "REFUTED-D10",
+      "kind": "cost-64h orbit transfer (64h bit 108, 527814 nodes, v16 raw batch map)"
+    },
+    "97": {
+      "root_canon": "00000000020001801202000000100000",
+      "verdict": "REFUTED-D10",
+      "kind": "v1 harvest transfer (head-1452 census bit table status harvested_refuted)"
+    }
+  },
+  "planned_controls": {
+    "determinism_rerun": "one batch re-run byte-compare on nodes (ms-only differences allowed): the heaviest batch and, if any WIN bit appears, a batch containing a WIN bit",
+    "v15_crosscheck": "independent v15 engine (blob 8744fc65b6b7...) re-check of all WIN bits plus anchor bits (pilot 5949), verdict agreement required",
+    "independent_audit": "stdlib-only re-audit of all raw batch lines (pilot exactness, cap, stone counts, canon recomputation from the child) before any verdict is treated as established"
+  },
+  "verdict_semantics": "loss=true => WIN7-within-depth-10 candidate (certificate rebuild target); loss=false && !capped => REFUTED-D10, no first-player win within depth 10 (NOT a LOSS proof of the position); capped => proves nothing either way",
+  "unknown_status": "11x11 empty board: UNKNOWN. A completed sweep proves only WIN7-D10/REFUTED-D10 verdicts for the 7-stone roots of this child. The two-stone roots {49,60} and {59,60}, S2 {59,60} and classes 1/2/4 remain UNKNOWN.",
+  "coordination_note": "latest main fetched immediately before this push (HEAD ea2b53a0, the census v3 commit); no claim, raw batch or audit exists for this child on main (searched: child hex, cost66j); the parallel lane holds the pending cost-76c fold (bit 61 certificate in flight) and the cost-66i receipt fold behind it; this claim does not touch either fold",
+  "next_action": "run the 9 planned v17 batches (8x8 sweep bits + 1 confirmation pair), publish the raw JSONL batches, then the stdlib-only raw audit with the cross-sweep conflict scan against the 64h/76c/66i verdict maps; on WIN bits extract certificates, verify independently, then wait behind the 76c/66i folds before any receipt fold of this row",
+  "last_updated": "2026-11-17",
+  "actual_execution": {
+    "date": "2026-11-17",
+    "basis_head": "1472/174/6376/504672/4649/368586",
+    "engine": "v17 (blob c132cc6425eee3feaeef1d697dd74f968cfedb59), fresh environment",
+    "actual_raw_batches": 9,
+    "actual_raw_candidate_bits": 66,
+    "planned_engine_bits": 66,
+    "win7_d10_bits": [
+      7,
+      9,
+      30,
+      66,
+      78,
+      79,
+      92,
+      96,
+      114
+    ],
+    "winner_roots": [],
+    "refuted_d10_count": 57,
+    "capped_count": 0,
+    "candidate_nodes": 65981633,
+    "pilot_count": 9,
+    "pilot_nodes_each": 3402,
+    "total_nodes_including_pilots": 65982115,
+    "terminal_stone_range": [
+      13,
+      17
+    ],
+    "andclose": true,
+    "confirmation_bits_agreement": {
+      "bits": [
+        20,
+        97
+      ],
+      "result": "2/2 REFUTED-D10 as expected (bit 20 = cost-64h orbit transfer as 64h bit 108, cross-engine canon agreement; bit 97 = v1 harvest transfer confirmed fresh)"
+    },
+    "parallelism_note": "two background streams (2 concurrent node processes, nproc=2, cgroup quota 1 CPU); batch wall times 3-40s each, total ~2 minutes; the standalone bit-20 pre-batch test (518,569 nodes) matches the batch-9 line exactly",
+    "determinism_rerun": "batches 5 (heaviest, WIN bits 66/78/79) and 8 (WIN bit 114) re-run field-identical on all non-ms fields (class2-lane-cost66j-det-batch{5,8}-20261117.jsonl)",
+    "v15_crosscheck": "independent v15 engine (blob 8744fc65...) re-checked all 9 WIN bits: 9/9 loss=true, pilot exactly 5949 (class2-lane-cost66j-v15-crosscheck-20261117.jsonl)",
+    "independent_audit": "class2-lane-cost66j-raw-audit-20261117.json (audit_cost66j_raw_batches_20261117.py): all checks passed, cross-source conflict scan vs the 64h/76c/66i verdict maps found 0 conflicts, internal canon collisions 0, v1 bit-table canon agreement 66/66",
+    "audit_json": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost66j-raw-audit-20261117.json"
+  },
+  "certificate_extraction": {
+    "status": "complete: all nine WIN7 certificates extracted, verified and published [7, 9, 30, 66, 78, 79, 92, 96, 114]; extraction order [79, 78, 114, 92, 9, 7, 66, 96, 30] (heaviest-first scheduling)",
+    "win7_d10_bits": [
+      7,
+      9,
+      30,
+      66,
+      78,
+      79,
+      92,
+      96,
+      114
+    ],
+    "total_rows": 372824,
+    "total_extraction_nodes": 96961144,
+    "fbt_drops_total": 0,
+    "independent_verification": "verify_bit7_win7_cert.ts (engine-free, Bareiss 4x4) per root: root-check stones=7 and loserMobility equals the independent legal_candidates.py enumeration (53/60/46/56/53/51/56/50/59); all sub-roots PASS; consumed union equals the certificate row set exactly (0 missing / 0 extra both directions, every root); fresh-process re-extraction byte-identical (md5) on all nine",
+    "record_json": "class2-lane-cost66j-win7-certificates-20261117.json (v1 schema, nine entries)",
+    "coordinate_convention": "loser defenses and the certificate root use the RAW child|bit position; the D4 canonical root is recorded as d4_canon_root. For bits 7/9/30/66/78/79/92 raw==canon; for bits 96 and 114 the raw root is a non-canonical D4 image and the defense list MUST be enumerated on the raw root (the 66i bit103/bit99 lesson is carried over; the verifier root-header check guards this)"
+  },
+  "receipt_fold": {
+    "status": "pending behind the cost-76c and cost-66i folds",
+    "note": "the 9 WIN7-D10 certificates, once verified, fold only after the cost-76c fold (parallel lane, bit 61 certificate in flight) and the cost-66i receipt fold land; no manifest row is closed by the sweep itself"
+  },
+  "previous_version": {
+    "schema": "n11-class2-lane-cost66j-sweep-complete-20261117-v2",
+    "blob_sha": "see git history (commit 020603f8)"
+  },
+  "winner_roots": [
+    {
+      "bit": 7,
+      "root": "00000000000000c09002000000001080",
+      "d4_canon_root": "00000000000000c09002000000001080",
+      "rows": 32244,
+      "extraction_nodes": 7056394,
+      "md5": "49c508376204255d24efc87f4d2c6d11"
+    },
+    {
+      "bit": 9,
+      "root": "00000000000000c09002000000001200",
+      "d4_canon_root": "00000000000000c09002000000001200",
+      "rows": 41044,
+      "extraction_nodes": 7918168,
+      "md5": "3b188baa01a8b8062c6c844e15263441"
+    },
+    {
+      "bit": 30,
+      "root": "00000000000000c09002000040001000",
+      "d4_canon_root": "00000000000000c09002000040001000",
+      "rows": 30377,
+      "extraction_nodes": 7927973,
+      "md5": "263213590646a64baff575b26e236be3"
+    },
+    {
+      "bit": 66,
+      "root": "00000000000000c49002000000001000",
+      "d4_canon_root": "00000000000000c49002000000001000",
+      "rows": 36340,
+      "extraction_nodes": 6544859,
+      "md5": "9697537f51a2b61777f8ab2114d1ec90"
+    },
+    {
+      "bit": 78,
+      "root": "00000000000040c09002000000001000",
+      "d4_canon_root": "00000000000040c09002000000001000",
+      "rows": 46797,
+      "extraction_nodes": 18021058,
+      "md5": "5a578e3b7d48296734022b1f338dfc77"
+    },
+    {
+      "bit": 79,
+      "root": "00000000000080c09002000000001000",
+      "d4_canon_root": "00000000000080c09002000000001000",
+      "rows": 48677,
+      "extraction_nodes": 15866092,
+      "md5": "894c2111b494f7a9f646c23bf1018ada"
+    },
+    {
+      "bit": 92,
+      "root": "00000000100000c09002000000001000",
+      "d4_canon_root": "00000000100000c09002000000001000",
+      "rows": 55684,
+      "extraction_nodes": 15625233,
+      "md5": "762e2fc392fc0a62657ed2b725aaf829"
+    },
+    {
+      "bit": 96,
+      "root": "00000001000000c09002000000001000",
+      "d4_canon_root": "00000000040001801202000000100000",
+      "rows": 30790,
+      "extraction_nodes": 6025153,
+      "md5": "8296c333728511fd470e2ac201671876"
+    },
+    {
+      "bit": 114,
+      "root": "00040000000000c09002000000001000",
+      "d4_canon_root": "00000000200000003801100000100000",
+      "rows": 50871,
+      "extraction_nodes": 11976214,
+      "md5": "70eaf137461c20b9dc54104269b0d6cd"
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+ "schema": "n11-class2-lane-cost65n-fold-preregistration-agreement-20261116-v1",
+ "preregistration_blob": "da2b2292",
+ "preregistration_commit": "0c237017",
+ "receipt_source": "output/class-frontier-cost65n-receipts-recompute-20261116.json",
+ "receipt_schema": "n11-class-frontier-cost65n-receipts-20261116-v1",
+ "checks": [
+  {
+   "check": "projected head solved_s6_in_manifest",
+   "pass": true,
+   "detail": "prereg 1444 vs receipt 1444"
+  },
+  {
+   "check": "projected head remaining_s5_orbits",
+   "pass": true,
+   "detail": "prereg 174 vs receipt 174"
+  },
+  {
+   "check": "projected head unique_remaining_s6",
+   "pass": true,
+   "detail": "prereg 6404 vs receipt 6404"
+  },
+  {
+   "check": "projected head sum_remaining_cost",
+   "pass": true,
+   "detail": "prereg 506746 vs receipt 506746"
+  },
+  {
+   "check": "projected head s6_needed_by_open_classes",
+   "pass": true,
+   "detail": "prereg 4677 vs receipt 4677"
+  },
+  {
+   "check": "projected head cost_needed_by_open_classes",
+   "pass": true,
+   "detail": "prereg 370660 vs receipt 370660"
+  },
+  {
+   "check": "demand histogram after fold",
+   "pass": true,
+   "detail": "prereg-projected {'c2=0,c4=1': 526, 'c2=0,c4=2': 3011, 'c2=0,c4=3': 12, 'c2=1,c4=0': 212, 'c2=1,c4=1': 54, 'c2=1,c4=2': 9, 'c2=2,c4=0': 798, 'c2=2,c4=1': 5, 'c2=2,c4=2': 50} vs receipt {'c2=0,c4=1': 526, 'c2=0,c4=2': 3011, 'c2=0,c4=3': 12, 'c2=1,c4=0': 212, 'c2=1,c4=1': 54, 'c2=1,c4=2': 9, 'c2=2,c4=0': 798, 'c2=2,c4=1': 5, 'c2=2,c4=2': 50}"
+  },
+  {
+   "check": "total_marginal",
+   "pass": true,
+   "detail": "prereg 11 vs receipt 11"
+  },
+  {
+   "check": "total_marginal_in_manifest",
+   "pass": true,
+   "detail": "prereg 3 vs receipt 3"
+  },
+  {
+   "check": "rows_closed_hexes",
+   "pass": true,
+   "detail": "prereg ['00000000000000801202010000800000', '00000000000020003800000008080000', '00000000000100809002000000000008'] vs receipt ['00000000000000801202010000800000', '00000000000020003800000008080000', '00000000000100809002000000000008']"
+  },
+  {
+   "check": "child closed",
+   "pass": true,
+   "detail": "child 00000000000000801202010000800000 in receipt rows_closed_hexes"
+  },
+  {
+   "check": "affected parents rows/edge before+after",
+   "pass": true,
+   "detail": "[{\"parent\": \"00000000000000003800000008002000\", \"prereg\": {\"classes\": 2, \"edge_cost_after\": 1883, \"edge_cost_before\": 2017, \"lost_edge_cost\": 134, \"lost_rows_hexes\": [\"00000000000000801202010000800000\", \"00000000000020003800000008080000\"], \"rows_after\": 27, \"rows_before\": 29, \"s5_hex\": \"00000000000000003800000008002000\"}, \"receipt\": {\"s5_hex\": \"00000000000000003800000008002000\", \"classes\": 2, \"row"
+  },
+  {
+   "check": "lost rows per parent",
+   "pass": true,
+   "detail": "[{\"parent\": \"00000000000000003800000008002000\", \"want\": [\"00000000000000801202010000800000\", \"00000000000020003800000008080000\"], \"got\": [\"00000000000000801202010000800000\", \"00000000000020003800000008080000\"]}, {\"parent\": \"00000000000000801202000000000080\", \"want\": [\"00000000000020003800000008080000\", \"00000000000100809002000000000008\"], \"got\": [\"00000000000020003800000008080000\", \"00000000000100"
+  },
+  {
+   "check": "parent_row_incidences",
+   "pass": true,
+   "detail": "prereg 6 vs receipt 6"
+  },
+  {
+   "check": "parent_edge_cost_delta",
+   "pass": true,
+   "detail": "prereg 398 vs receipt 398"
+  },
+  {
+   "check": "per-root marginal/mim",
+   "pass": true,
+   "detail": "[{\"root\": \"00000000040000801202010000800000\", \"ok\": true}, {\"root\": \"00200000000000801202010000800000\", \"ok\": true}]"
+  }
+ ],
+ "all_pass": true,
+ "interpretation_guard": "bookkeeping fold projection agreement only; no game-theoretic verdicts; solved counts are manifest coverage; 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60} and classes 1/2/4 remain UNKNOWN"
+}

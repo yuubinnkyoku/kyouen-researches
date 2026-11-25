@@ -1,0 +1,281 @@
+{
+  "schema": "n11-class2-cost70c-independent-raw-sweep-audit-v1",
+  "source_main_head": "7cec3e7e8960e2099d53d306a4ca0eafd6f284e4",
+  "independent_methods": [
+    "V8 BigInt cofactor expansion for exact geometry and opponent mobility",
+    "Python Bareiss exact determinant independently reproduced candidate set and all 13 mobility counts"
+  ],
+  "claim": {
+    "s5_parent": "00000000000000803202000000000000",
+    "s6_child": "00000000000000803242000000000000",
+    "s6_s7_edge_cost": 70,
+    "demand_classes": {
+      "c1": 0,
+      "c2": 2,
+      "c4": 0
+    }
+  },
+  "geometry": {
+    "child_stones": 6,
+    "child_safe": true,
+    "independent_legal_candidate_count": 70,
+    "candidate_bits_exact_match": true
+  },
+  "batches": [
+    {
+      "batch": 1,
+      "candidates": 8,
+      "pilot_count": 1,
+      "pilot_nodes": 3402,
+      "pilot_loss": false,
+      "pilot_capped": false
+    },
+    {
+      "batch": 2,
+      "candidates": 8,
+      "pilot_count": 1,
+      "pilot_nodes": 3402,
+      "pilot_loss": false,
+      "pilot_capped": false
+    },
+    {
+      "batch": 3,
+      "candidates": 8,
+      "pilot_count": 1,
+      "pilot_nodes": 3402,
+      "pilot_loss": false,
+      "pilot_capped": false
+    },
+    {
+      "batch": 4,
+      "candidates": 8,
+      "pilot_count": 1,
+      "pilot_nodes": 3402,
+      "pilot_loss": false,
+      "pilot_capped": false
+    },
+    {
+      "batch": 5,
+      "candidates": 8,
+      "pilot_count": 1,
+      "pilot_nodes": 3402,
+      "pilot_loss": false,
+      "pilot_capped": false
+    },
+    {
+      "batch": 6,
+      "candidates": 8,
+      "pilot_count": 1,
+      "pilot_nodes": 3402,
+      "pilot_loss": false,
+      "pilot_capped": false
+    },
+    {
+      "batch": 7,
+      "candidates": 8,
+      "pilot_count": 1,
+      "pilot_nodes": 3402,
+      "pilot_loss": false,
+      "pilot_capped": false
+    },
+    {
+      "batch": 8,
+      "candidates": 8,
+      "pilot_count": 1,
+      "pilot_nodes": 3402,
+      "pilot_loss": false,
+      "pilot_capped": false
+    },
+    {
+      "batch": 9,
+      "candidates": 6,
+      "pilot_count": 1,
+      "pilot_nodes": 3402,
+      "pilot_loss": false,
+      "pilot_capped": false
+    }
+  ],
+  "raw_sweep": {
+    "candidate_rows": 70,
+    "unique_candidate_bits": 70,
+    "win7_d10_candidates": 13,
+    "win7_bits": [
+      3,
+      8,
+      11,
+      20,
+      23,
+      24,
+      40,
+      42,
+      86,
+      92,
+      94,
+      103,
+      105
+    ],
+    "refuted_d10_candidates": 57,
+    "capped_candidates": 0,
+    "total_search_nodes": 100935666,
+    "all_terminal_ranges_13_17": true,
+    "all_andclose": true
+  },
+  "win7_roots_by_opponent_mobility": [
+    {
+      "bit": 94,
+      "root_hex": "00000000400000803242000000000000",
+      "search_nodes": 383763,
+      "root_safe": true,
+      "opponent_legal_replies": 46
+    },
+    {
+      "bit": 105,
+      "root_hex": "00000000004000803242000000000000",
+      "search_nodes": 1046878,
+      "root_safe": true,
+      "opponent_legal_replies": 51
+    },
+    {
+      "bit": 20,
+      "root_hex": "00000000000000803242000000100000",
+      "search_nodes": 691819,
+      "root_safe": true,
+      "opponent_legal_replies": 52
+    },
+    {
+      "bit": 40,
+      "root_hex": "00000000000000803242010000000000",
+      "search_nodes": 827164,
+      "root_safe": true,
+      "opponent_legal_replies": 53
+    },
+    {
+      "bit": 23,
+      "root_hex": "00000000000000803242000000800000",
+      "search_nodes": 733180,
+      "root_safe": true,
+      "opponent_legal_replies": 54
+    },
+    {
+      "bit": 11,
+      "root_hex": "00000000000000803242000000000800",
+      "search_nodes": 931235,
+      "root_safe": true,
+      "opponent_legal_replies": 54
+    },
+    {
+      "bit": 24,
+      "root_hex": "00000000000000803242000001000000",
+      "search_nodes": 1424587,
+      "root_safe": true,
+      "opponent_legal_replies": 55
+    },
+    {
+      "bit": 103,
+      "root_hex": "00000200000000803242000000000000",
+      "search_nodes": 2665028,
+      "root_safe": true,
+      "opponent_legal_replies": 57
+    },
+    {
+      "bit": 92,
+      "root_hex": "00000000100000803242000000000000",
+      "search_nodes": 2516259,
+      "root_safe": true,
+      "opponent_legal_replies": 58
+    },
+    {
+      "bit": 8,
+      "root_hex": "00000000000000803242000000000100",
+      "search_nodes": 3207724,
+      "root_safe": true,
+      "opponent_legal_replies": 60
+    },
+    {
+      "bit": 42,
+      "root_hex": "00000000000000803242040000000000",
+      "search_nodes": 3012907,
+      "root_safe": true,
+      "opponent_legal_replies": 61
+    },
+    {
+      "bit": 3,
+      "root_hex": "00000000000000803242000000000008",
+      "search_nodes": 3904141,
+      "root_safe": true,
+      "opponent_legal_replies": 63
+    },
+    {
+      "bit": 86,
+      "root_hex": "00000080000000803242000000000000",
+      "search_nodes": 6414891,
+      "root_safe": true,
+      "opponent_legal_replies": 64
+    }
+  ],
+  "certificate_manifest_scan": {
+    "manifest_count": 40,
+    "candidate_root_matches": {
+      "all_13": []
+    },
+    "all_13_roots_uncertified_in_scanned_manifests": true
+  },
+  "prior_sweep_scan": {
+    "candidate_root_matches": {
+      "bit20": [
+        {
+          "file": "class2-lane-cost64b-sweep-20261114.json",
+          "bit": 54
+        }
+      ]
+    },
+    "warm_rebuild_candidate": {
+      "bit": 20,
+      "root_hex": "00000000000000803242000000100000",
+      "prior_file": "class2-lane-cost64b-sweep-20261114.json",
+      "prior_bit": 54,
+      "prior_verdict": "WIN7-D10, not a certificate"
+    }
+  },
+  "frontier_after_cost69e": {
+    "s6_solved_in_manifest": 1019,
+    "s6_unique_remaining": 6828,
+    "s6_sum_remaining_s7_edge_cost": 538143,
+    "s6_needed_by_open_classes": 5098,
+    "sum_remaining_s7_edge_cost_needed_by_open_classes": 401866,
+    "best_coverable_class2": {
+      "s5_hex": "00000000000000803202000000000000",
+      "classes": 2,
+      "remaining_s6_orbits": 6,
+      "remaining_s7_edge_cost": 443
+    }
+  },
+  "midflight_closure": {
+    "cost70c_child_closed_by_cost69e_bit76": true,
+    "cost70c_child_is_still_open": false,
+    "frontier_change_from_cost70c_raw_sweep": "none; raw WIN7-D10 rows are not certificates"
+  },
+  "current_top_candidates": {
+    "parent_unique_remaining_children": 6,
+    "parent_remaining_cost": 443,
+    "next_child": {
+      "s6_hex": "00000000000000803202000000400000",
+      "cost": 71,
+      "demand": "c1=0,c2=2,c4=0"
+    },
+    "cost70c_child_absent": true
+  },
+  "pending": {
+    "v15_crosscheck": true,
+    "certificate_extraction": true,
+    "overall_lane_status": "raw v16 sweep complete; lane remains in-flight"
+  },
+  "interpretation": {
+    "win7_d10_is_not_a_certificate": true,
+    "refuted_d10_is_not_a_loss_proof": true,
+    "standard_11x11_empty_board": "UNKNOWN",
+    "two_stone_roots_49_60_and_59_60": "UNKNOWN",
+    "s2_59_60": "UNKNOWN"
+  },
+  "execution_note": "The audit results were independently computed in V8 and Python during this run. The committed Python CLI is the reusable source; it was not run from a local repository checkout."
+}

@@ -1,0 +1,20 @@
+{
+ "schema": "n11-class2-lane-cost65o-claim-verification-20261116-v1",
+ "title": "n11 class2-lane cost-65o IN FLIGHT claim v1 independent structural verification (pre-sweep, 8/8 checks PASS)",
+ "date": "2026-11-16",
+ "verified_claim": "class2-lane-cost65o-inflight-20261116.json v1 (s6 child 00000000000000a09002000080000000 of the shared class-2 parent 00000000000000003800000008002000, cost 65), landed at commit ba71a4cc6e2dec17ff64dbfa09afdfa5aa982708",
+ "method": "independent re-derivation in a separate execution environment from the claim-building session: candidate legality re-derived from scratch with a lifted-quadratic-form 4x4 determinant implementation (a placement is legal iff it is unoccupied and off every generalized circle through any 3 of the 6 child stones), NOT reusing the census enumeration code; cross-validated bit-exact against the published cost-65n claim v1 candidate list and child_stones_bit_indices before being applied to the cost-65o claim",
+ "checks": [
+  {"id": "V1", "description": "cost-65o child hex decodes to exactly 6 stones (indices [31,49,60,63,69,71])", "result": "PASS"},
+  {"id": "V2", "description": "independent legality enumeration of the cost-65o child reproduces the claim legal_candidates bit-exact (65 candidates, identical bit list)", "result": "PASS"},
+  {"id": "V3", "description": "the same independent implementation reproduces the published cost-65n claim v1 legal_candidates bit-exact (65/65, child stones [23,40,49,57,60,71]) - implementation cross-validation", "result": "PASS"},
+  {"id": "V4", "description": "candidate partition: open_candidates_to_sweep (59) + transferred_refuted_d10_bits (6) = legal_candidates (65), disjoint, bit-exact as multisets", "result": "PASS"},
+  {"id": "V5", "description": "planned_batch_bit_lists cover all 59 open bits exactly once, batch sizes 8,8,8,8,8,8,8,3 (7x8+3=59)", "result": "PASS"},
+  {"id": "V6", "description": "the 6 transferred REFUTED-D10 root canons are verbatim copies of the head-1441 census bit table (class2-lane-next-target-presweep-1441-20261116.json, git blob 3dcb7cb64d38d27a86043b4349faa85bc0e344ea) for bits 41,48,56,65,80,99", "result": "PASS"},
+  {"id": "V7", "description": "no prior class2-lane claim, raw batch, sweep, certificate or fold receipt exists for this child at verification time (raw fetch of candidate prior-claim filenames 404; child hex appears in published artifacts only as a census-ranked row; the claim itself documents this and the verification was run against the published tree)", "result": "PASS"},
+  {"id": "V8", "description": "ranking position confirmed: this row is ranked 2nd of the cheapest_open_rows_ranking in the head-1441 census (cost 65, 59 open after 6 transfers), immediately after the cost-65n target", "result": "PASS"}
+ ],
+ "summary": "8/8 PASS; the claim v1 is internally consistent and consistent with every published artifact it references; this is claim bookkeeping verification only, no sweep verdict of any kind is asserted here",
+ "interpretation_guard": "WIN7-D10 candidates prove a first-player win within depth 10 from the individual 7-stone roots only; REFUTED-D10 is NOT a LOSS proof and any STERILE determination is NOT a game-theoretic value for the row; transferred verdicts are D4-canonical identities of published depth-10 engine results; solved head 1441 is manifest-coverage bookkeeping",
+ "unknown_status": "11x11 empty board, two-stone roots {49,60} and {59,60}, S2 {59,60}, and classes 1/2/4 all remain UNKNOWN"
+}

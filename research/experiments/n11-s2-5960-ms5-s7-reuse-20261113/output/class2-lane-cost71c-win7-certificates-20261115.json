@@ -1,0 +1,113 @@
+{
+ "schema": "n11-class2-lane-cost71c-win7-certificates-20261115-v1",
+ "date": "2026-11-15",
+ "s5_parent_hex": "00000000000000801202000000200000",
+ "s6_child_hex": "00000000000000801202000080200000",
+ "win7_bits": [
+  24,
+  112
+ ],
+ "extraction": "repo-verbatim class4_child1_cert_extractor_exact.ts (git blob 52bcaf509ea12fad4c936501d30d26b5b66c0085, local copy byte-exact by git blob sha) via cert_driver71c.ts (git blob 93a3ef7c8bfb67ecf45bcc7f27c95afe1ccaac3f; cert_driver70e.ts with the import/cost-name lines adapted); blind (empty kill table, pref=null), FBS 1<<20, fbt_drops 0 on both roots; rows assembled as header + root + sort -u of the raw rows; bit112 pushed as two line-boundary parts (join md5 equals the whole-file md5)",
+ "independent_verification": {
+  "bigint": "verify_win7_certificate_bigint_independent.mjs (git blob 62b5d9413daafb172f6e10249976ee6808f7b454, byte-exact local copy): BigInt 3x3 cofactor expansion of the exact lifted determinant [x^2+y^2,x,y,1], no floating point, no solver/verdict-cache import; root stones=7 + safe check, loser mobility vs independent enumeration, per-subroot winner strategy walk, union missing/extra 0/0, rows sorted unique, terminal range within 13..17",
+  "bareiss": "verify_cost71c_win7_bareiss_independent.py (this session, published with this manifest): Python stdlib only, exact-integer Bareiss 4x4 determinants, full loser-reply expansion with incremental exact forbidden masks, winner-strategy legality walk from every loser first move, strategy-union closure (consumed rows == full strategy row set), terminal stone range"
+ },
+ "certificates": [
+  {
+   "bit": 24,
+   "root_hex": "00000000000000801202000081200000",
+   "repo_path": "class2-lane-cost71c-certificates/bit24-root-00000000000000801202000081200000.cert",
+   "repo_blob_sha": "8d9b4459f489b3224c64b4f6bbd37b8ff2dd23e3",
+   "md5": "9e63e160ba08a7edc827b81dbf9067a5",
+   "bytes": 804827,
+   "strategy_rows": 22196,
+   "extraction_nodes": 4163765,
+   "extraction_ms": 7209,
+   "sweep_win7_d10_nodes": 457250,
+   "loser_first_moves": 47,
+   "verify": {
+    "bigint": {
+     "root_stones": 7,
+     "root_safe": true,
+     "root_mobility": 47,
+     "subroots_passed": 47,
+     "union_missing": 0,
+     "union_extra": 0,
+     "rows_sorted_unique": true,
+     "terminal_range": [13, 17],
+     "visited_states_across_subroots": 47807,
+     "loser_reply_edges": 42214,
+     "terminal_count": 7594
+    },
+    "bareiss": {
+     "root_loser_mobility": 47,
+     "subroots_passed": 47,
+     "consumed_rows": 22196,
+     "union_missing": 0,
+     "union_extra": 0,
+     "terminal_stone_range": [13, 15, 17],
+     "visited_winner_states": 71252
+    }
+   }
+  },
+  {
+   "bit": 112,
+   "root_hex": "00010000000000801202000080200000",
+   "repo_paths": [
+    "class2-lane-cost71c-certificates/bit112-root-00010000000000801202000080200000.cert.part1of2",
+    "class2-lane-cost71c-certificates/bit112-root-00010000000000801202000080200000.cert.part2of2"
+   ],
+   "repo_blob_shas": [
+    "494ed0532f688d96e9a678720728bf4ba31039b1",
+    "c84955f6fbc183f92be5df379aa587acbe3442b1"
+   ],
+   "part_md5s": [
+    "8ae38925c2878839dda65ada0ca8831a",
+    "832120f7a84086f6249716556c73f1d6"
+   ],
+   "join_md5_equals_whole_md5": "e38d80cfd89ccc8e48264c36a9e7701a5",
+   "part_line_counts": [30194, 30214],
+   "bytes": 2179432,
+   "strategy_rows": 60406,
+   "extraction_nodes": 20475566,
+   "extraction_ms": 34538,
+   "sweep_win7_d10_nodes": 3985676,
+   "loser_first_moves": 56,
+   "verify": {
+    "bigint": {
+     "root_stones": 7,
+     "root_safe": true,
+     "root_mobility": 56,
+     "subroots_passed": 56,
+     "union_missing": 0,
+     "union_extra": 0,
+     "rows_sorted_unique": true,
+     "terminal_range": [13, 17],
+     "visited_states_across_subroots": 124956,
+     "loser_reply_edges": 111686,
+     "terminal_count": 20758
+    },
+    "bareiss": {
+     "root_loser_mobility": 56,
+     "subroots_passed": 56,
+     "consumed_rows": 60406,
+     "union_missing": 0,
+     "union_extra": 0,
+     "terminal_stone_range": [13, 15, 17],
+     "visited_winner_states": 194567
+    }
+   }
+  }
+ ],
+ "determinism_control": "the certificates were re-extracted from scratch after a full execution-environment reset and reproduced byte-identical md5s (9e63e160ba08a7edc827b81dbf9067a5 / e38d80cfd89ccc8e48264c36a9e7701a5); the raw v16 sweep batch5 determinism rerun is node-exact and the v15 cross-engine agrees on both WIN bits and all REFUTED anchors",
+ "totals": {
+  "strategy_rows": 82602,
+  "extraction_nodes": 24639331,
+  "roots": 2
+ },
+ "all_verify_pass": true,
+ "sweep_audit": "class2-lane-cost71c-sweep-audit-20261115.json (independent Python re-derivation of the 71-candidate sweep aggregate: 2 WIN7-D10 / 69 REFUTED / 0 capped, nodes 94,128,613, batch bits vs claim plan, determinism rerun, v15 cross-engine, one-stone-deletion D4 lift, head-1233 CSV cross-checks, D4 duplicate scan 126 published roots)",
+ "fold_status": "PENDING: receipts fold must re-fetch latest main, re-assert the canonical chain head 1233/6614/522131/4884/385854 and rebase if the parallel cost-65l / cost-70f / cost-70g folds land first",
+ "unknown_status": "11x11 empty board: UNKNOWN. Both certificates prove only individual 7-stone roots within depth 10. REFUTED-D10 is not a LOSS proof.",
+ "status": "completed"
+}

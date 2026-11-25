@@ -1,0 +1,299 @@
+{
+ "schema": "n11-class2-lane-cost64g-raw-sweep-audit-20261116-v1",
+ "date": "2026-11-16",
+ "child": "00000000000100003800000008080000",
+ "child_stones": [
+  19,
+  27,
+  59,
+  60,
+  61,
+  80
+ ],
+ "claim_schema_crosscheck": "n11-class2-lane-cost64g-completed-20261116-v2",
+ "independent_enumeration": {
+  "method": "exact integer Bareiss 4x4 from scratch (stdlib only)",
+  "legal_candidates": [
+   1,
+   2,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   11,
+   15,
+   16,
+   20,
+   21,
+   22,
+   24,
+   25,
+   29,
+   33,
+   34,
+   38,
+   42,
+   43,
+   44,
+   45,
+   52,
+   54,
+   66,
+   67,
+   68,
+   70,
+   71,
+   73,
+   75,
+   76,
+   78,
+   79,
+   81,
+   86,
+   88,
+   89,
+   90,
+   94,
+   97,
+   98,
+   99,
+   100,
+   101,
+   102,
+   103,
+   104,
+   105,
+   106,
+   107,
+   108,
+   109,
+   110,
+   111,
+   112,
+   113,
+   114,
+   117,
+   118,
+   119,
+   120
+  ],
+  "matches_claim": true
+ },
+ "sweep_aggregate": {
+  "batches": [
+   {
+    "batch": 1,
+    "file": "class2-lane-cost64g-raw-batch1-20261116.jsonl",
+    "candidate_bits": [
+     1,
+     2,
+     4,
+     6,
+     7,
+     8,
+     9,
+     11
+    ],
+    "pilot_nodes": 3402,
+    "nodes": 4758676
+   },
+   {
+    "batch": 2,
+    "file": "class2-lane-cost64g-raw-batch2-20261116.jsonl",
+    "candidate_bits": [
+     15,
+     16,
+     20,
+     21,
+     22,
+     24,
+     25,
+     33
+    ],
+    "pilot_nodes": 3402,
+    "nodes": 3001760
+   },
+   {
+    "batch": 3,
+    "file": "class2-lane-cost64g-raw-batch3-20261116.jsonl",
+    "candidate_bits": [
+     34,
+     38,
+     42,
+     43,
+     44,
+     45,
+     52,
+     54
+    ],
+    "pilot_nodes": 3402,
+    "nodes": 6204647
+   },
+   {
+    "batch": 4,
+    "file": "class2-lane-cost64g-raw-batch4-20261116.jsonl",
+    "candidate_bits": [
+     66,
+     67,
+     68,
+     70,
+     71,
+     73,
+     75,
+     76
+    ],
+    "pilot_nodes": 3402,
+    "nodes": 4726402
+   },
+   {
+    "batch": 5,
+    "file": "class2-lane-cost64g-raw-batch5-20261116.jsonl",
+    "candidate_bits": [
+     78,
+     79,
+     81,
+     86,
+     88,
+     89,
+     90,
+     94
+    ],
+    "pilot_nodes": 3402,
+    "nodes": 4746773
+   },
+   {
+    "batch": 6,
+    "file": "class2-lane-cost64g-raw-batch6-20261116.jsonl",
+    "candidate_bits": [
+     97,
+     98,
+     99,
+     100,
+     101,
+     102,
+     103,
+     105
+    ],
+    "pilot_nodes": 3402,
+    "nodes": 2188267
+   },
+   {
+    "batch": 7,
+    "file": "class2-lane-cost64g-raw-batch7-20261116.jsonl",
+    "candidate_bits": [
+     106,
+     107,
+     108,
+     109,
+     110,
+     112,
+     113,
+     114
+    ],
+    "pilot_nodes": 3402,
+    "nodes": 6542871
+   },
+   {
+    "batch": 8,
+    "file": "class2-lane-cost64g-raw-batch8-20261116.jsonl",
+    "candidate_bits": [
+     117,
+     118,
+     120
+    ],
+    "pilot_nodes": 3402,
+    "nodes": 1336469
+   }
+  ],
+  "pilots_3402": 8,
+  "swept_candidates": 59,
+  "win7_d10_bits": [
+   89
+  ],
+  "win7_d10_count": 1,
+  "refuted_d10_swept": 58,
+  "refuted_d10_transferred": 5,
+  "capped": 0,
+  "total_candidate_nodes": 33505865,
+  "heaviest_bits_nodes": {
+   "43": 3672017,
+   "75": 1707450,
+   "114": 1631330,
+   "109": 1429950,
+   "2": 1391740,
+   "107": 1319132
+  }
+ },
+ "determinism_reruns": "batch3 (heaviest bit 43) and batch5 (WIN bit 89) node-exact vs raw, ms-only diff",
+ "v15_crosscheck": {
+  "pilot_nodes": 5949,
+  "anchors": [
+   1,
+   43,
+   89,
+   118
+  ],
+  "two_directional_agreement": true,
+  "win_bit_89_v15_nodes": 1760287
+ },
+ "transfers": {
+  "5": {
+   "root": "00000000000100003800000008080020",
+   "d4_canon": "00000000000100003800000008080020"
+  },
+  "29": {
+   "root": "00000000000100003800000028080000",
+   "d4_canon": "00000000000100003800000028080000"
+  },
+  "104": {
+   "root": "00000100000100003800000008080000",
+   "d4_canon": "00000000000100809102000080000000"
+  },
+  "111": {
+   "root": "00008000000100003800000008080000",
+   "d4_canon": "00000000020000801202010000200000"
+  },
+  "119": {
+   "root": "00800000000100003800000008080000",
+   "d4_canon": "00000000000100809002000080000800"
+  }
+ },
+ "d4_orbit_collision_scan": {
+  "candidate_canons_distinct": 64,
+  "win_canon": "00000000020000801202010000080000",
+  "intra_sweep_collisions": 0
+ },
+ "lift_parents": {
+  "all_six_one_stone_deletion_canons": [
+   "00000000000000801202010000000000",
+   "00000000000100003800000000080000",
+   "00000000000100003000000008080000",
+   "00000000000100002800000008080000",
+   "00000000000100001800000008080000",
+   "00000000000000003800000008002000"
+  ],
+  "shared_parent": {
+   "hex": "00000000000000003800000008002000",
+   "d4_canon": "00000000000000003800000008002000",
+   "rows_at_head_1438": 30,
+   "edge_cost_at_head_1438": 2081,
+   "matches_census_family": true
+  },
+  "second_parent": {
+   "hex": "00000000000000801202010000000000",
+   "d4_canon": "00000000000000801202010000000000",
+   "rows_at_head_1438": 50,
+   "edge_cost_at_head_1438": 3631
+  },
+  "note": "both open class-2 parents of the row are one-stone deletion lifts of the child; the remaining four lifts are closed rows at head 1438 (verified by the fold session when the receipt is folded)"
+ },
+ "census_crosscheck": {
+  "census_schema": "n11-class2-lane-next-target-presweep-1438-20261116-v1",
+  "census_bit_table_open_59": true,
+  "census_transferred_5": true,
+  "family_shared_30_2081": true
+ },
+ "interpretation_guard": "REFUTED-D10 is not a LOSS proof; WIN7-D10 proves a first-player win within depth 10 from the single 7-stone root only; the row is NOT sterile; head 1438 unchanged until the fold; 11x11 empty board and classes 1/2/4 remain UNKNOWN"
+}

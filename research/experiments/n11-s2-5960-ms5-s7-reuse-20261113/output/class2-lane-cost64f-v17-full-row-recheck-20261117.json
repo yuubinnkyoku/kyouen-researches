@@ -1,0 +1,561 @@
+{
+ "all_checks_pass": true,
+ "checked_bits": 59,
+ "checks": [
+  {
+   "check": "engine_blob_sha1_matches_pinned_c132cc64",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "raw_batch1_blob_sha1_matches_main",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "batch1_bit_set_identity",
+   "detail": "v16=[0, 1, 4, 6, 8, 9, 10, 11] v17=[0, 1, 4, 6, 8, 9, 10, 11]",
+   "pass": true
+  },
+  {
+   "check": "raw_batch2_blob_sha1_matches_main",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "batch2_bit_set_identity",
+   "detail": "v16=[14, 18, 22, 26, 31, 32, 33, 39] v17=[14, 18, 22, 26, 31, 32, 33, 39]",
+   "pass": true
+  },
+  {
+   "check": "raw_batch3_blob_sha1_matches_main",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "batch3_bit_set_identity",
+   "detail": "v16=[40, 42, 43, 52, 53, 54, 56, 58] v17=[40, 42, 43, 52, 53, 54, 56, 58]",
+   "pass": true
+  },
+  {
+   "check": "raw_batch4_blob_sha1_matches_main",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "batch4_bit_set_identity",
+   "detail": "v16=[61, 66, 67, 72, 75, 76, 77, 79] v17=[61, 66, 67, 72, 75, 76, 77, 79]",
+   "pass": true
+  },
+  {
+   "check": "raw_batch5_blob_sha1_matches_main",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "batch5_bit_set_identity",
+   "detail": "v16=[85, 86, 87, 88, 90, 94, 95, 96] v17=[85, 86, 87, 88, 90, 94, 95, 96]",
+   "pass": true
+  },
+  {
+   "check": "raw_batch6_blob_sha1_matches_main",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "batch6_bit_set_identity",
+   "detail": "v16=[97, 98, 99, 102, 103, 105, 106, 107] v17=[97, 98, 99, 102, 103, 105, 106, 107]",
+   "pass": true
+  },
+  {
+   "check": "raw_batch7_blob_sha1_matches_main",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "batch7_bit_set_identity",
+   "detail": "v16=[108, 110, 111, 112, 113, 114, 116, 117] v17=[108, 110, 111, 112, 113, 114, 116, 117]",
+   "pass": true
+  },
+  {
+   "check": "raw_batch8_blob_sha1_matches_main",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "batch8_bit_set_identity",
+   "detail": "v16=[118, 119, 120] v17=[118, 119, 120]",
+   "pass": true
+  },
+  {
+   "check": "all_8_pilots_identity_3402",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "all_bits_field_identical",
+   "detail": "mismatches=[]",
+   "pass": true
+  },
+  {
+   "check": "nodes_total_identity",
+   "detail": "v16=54905391 v17=54905391 published=54905391",
+   "pass": true
+  },
+  {
+   "check": "win_bits_unchanged",
+   "detail": "v17=[39, 72, 107] published=[39, 72, 107]",
+   "pass": true
+  },
+  {
+   "check": "verdict_flips_zero",
+   "detail": "flips=[]",
+   "pass": true
+  },
+  {
+   "check": "determinism_second_run_identical",
+   "detail": "",
+   "pass": true
+  }
+ ],
+ "child": "0000000000000080120a000000800000",
+ "date": "2026-11-17",
+ "determinism_rerun": {
+  "detail": "two full independent executions agree on every bit and pilot (ms excluded)",
+  "status": "pass"
+ },
+ "engine_blob_sha1": "c132cc6425eee3feaeef1d697dd74f968cfedb59",
+ "interpretation_guard": "bookkeeping verification only; WIN7-D10 proves a first-player win within depth 10 from the individual 7-stone roots only; REFUTED-D10 is not a LOSS proof; row identity is engine-consistency evidence, not a game resolution; 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60} and classes 1/2/4 remain UNKNOWN",
+ "method": "fbt-repaired v17 engine (class4_child1_runner_v17.ts, blob c132cc64) re-executed all 59 swept bits of the row from scratch with the published batch partition (8 batches), depth 10, cap 1e9 (published row is 0-capped with max per-bit 2,994,208 nodes so the cap never binds), --andclose 1, fresh engine state per candidate, pilot_d6 control per batch; compared field-by-field against the published v16 raw batches 1-8; second independent full execution anchors two-run determinism",
+ "mismatches": [],
+ "per_bit": [
+  {
+   "batch": 1,
+   "bit": 0,
+   "v16_nodes": 903105,
+   "v17_loss": false,
+   "v17_nodes": 903105
+  },
+  {
+   "batch": 1,
+   "bit": 1,
+   "v16_nodes": 305249,
+   "v17_loss": false,
+   "v17_nodes": 305249
+  },
+  {
+   "batch": 1,
+   "bit": 4,
+   "v16_nodes": 1472527,
+   "v17_loss": false,
+   "v17_nodes": 1472527
+  },
+  {
+   "batch": 1,
+   "bit": 6,
+   "v16_nodes": 457412,
+   "v17_loss": false,
+   "v17_nodes": 457412
+  },
+  {
+   "batch": 1,
+   "bit": 8,
+   "v16_nodes": 219365,
+   "v17_loss": false,
+   "v17_nodes": 219365
+  },
+  {
+   "batch": 1,
+   "bit": 9,
+   "v16_nodes": 1790020,
+   "v17_loss": false,
+   "v17_nodes": 1790020
+  },
+  {
+   "batch": 1,
+   "bit": 10,
+   "v16_nodes": 2303721,
+   "v17_loss": false,
+   "v17_nodes": 2303721
+  },
+  {
+   "batch": 1,
+   "bit": 11,
+   "v16_nodes": 876872,
+   "v17_loss": false,
+   "v17_nodes": 876872
+  },
+  {
+   "batch": 2,
+   "bit": 14,
+   "v16_nodes": 608194,
+   "v17_loss": false,
+   "v17_nodes": 608194
+  },
+  {
+   "batch": 2,
+   "bit": 18,
+   "v16_nodes": 1222949,
+   "v17_loss": false,
+   "v17_nodes": 1222949
+  },
+  {
+   "batch": 2,
+   "bit": 22,
+   "v16_nodes": 1752110,
+   "v17_loss": false,
+   "v17_nodes": 1752110
+  },
+  {
+   "batch": 2,
+   "bit": 26,
+   "v16_nodes": 626102,
+   "v17_loss": false,
+   "v17_nodes": 626102
+  },
+  {
+   "batch": 2,
+   "bit": 31,
+   "v16_nodes": 672990,
+   "v17_loss": false,
+   "v17_nodes": 672990
+  },
+  {
+   "batch": 2,
+   "bit": 32,
+   "v16_nodes": 1012774,
+   "v17_loss": false,
+   "v17_nodes": 1012774
+  },
+  {
+   "batch": 2,
+   "bit": 33,
+   "v16_nodes": 1633252,
+   "v17_loss": false,
+   "v17_nodes": 1633252
+  },
+  {
+   "batch": 2,
+   "bit": 39,
+   "v16_nodes": 1484481,
+   "v17_loss": true,
+   "v17_nodes": 1484481
+  },
+  {
+   "batch": 3,
+   "bit": 40,
+   "v16_nodes": 2994208,
+   "v17_loss": false,
+   "v17_nodes": 2994208
+  },
+  {
+   "batch": 3,
+   "bit": 42,
+   "v16_nodes": 1608870,
+   "v17_loss": false,
+   "v17_nodes": 1608870
+  },
+  {
+   "batch": 3,
+   "bit": 43,
+   "v16_nodes": 151665,
+   "v17_loss": false,
+   "v17_nodes": 151665
+  },
+  {
+   "batch": 3,
+   "bit": 52,
+   "v16_nodes": 972010,
+   "v17_loss": false,
+   "v17_nodes": 972010
+  },
+  {
+   "batch": 3,
+   "bit": 53,
+   "v16_nodes": 366107,
+   "v17_loss": false,
+   "v17_nodes": 366107
+  },
+  {
+   "batch": 3,
+   "bit": 54,
+   "v16_nodes": 485024,
+   "v17_loss": false,
+   "v17_nodes": 485024
+  },
+  {
+   "batch": 3,
+   "bit": 56,
+   "v16_nodes": 1583423,
+   "v17_loss": false,
+   "v17_nodes": 1583423
+  },
+  {
+   "batch": 3,
+   "bit": 58,
+   "v16_nodes": 675245,
+   "v17_loss": false,
+   "v17_nodes": 675245
+  },
+  {
+   "batch": 4,
+   "bit": 61,
+   "v16_nodes": 621104,
+   "v17_loss": false,
+   "v17_nodes": 621104
+  },
+  {
+   "batch": 4,
+   "bit": 66,
+   "v16_nodes": 679508,
+   "v17_loss": false,
+   "v17_nodes": 679508
+  },
+  {
+   "batch": 4,
+   "bit": 67,
+   "v16_nodes": 521806,
+   "v17_loss": false,
+   "v17_nodes": 521806
+  },
+  {
+   "batch": 4,
+   "bit": 72,
+   "v16_nodes": 2913001,
+   "v17_loss": true,
+   "v17_nodes": 2913001
+  },
+  {
+   "batch": 4,
+   "bit": 75,
+   "v16_nodes": 709086,
+   "v17_loss": false,
+   "v17_nodes": 709086
+  },
+  {
+   "batch": 4,
+   "bit": 76,
+   "v16_nodes": 75458,
+   "v17_loss": false,
+   "v17_nodes": 75458
+  },
+  {
+   "batch": 4,
+   "bit": 77,
+   "v16_nodes": 326940,
+   "v17_loss": false,
+   "v17_nodes": 326940
+  },
+  {
+   "batch": 4,
+   "bit": 79,
+   "v16_nodes": 986097,
+   "v17_loss": false,
+   "v17_nodes": 986097
+  },
+  {
+   "batch": 5,
+   "bit": 85,
+   "v16_nodes": 163439,
+   "v17_loss": false,
+   "v17_nodes": 163439
+  },
+  {
+   "batch": 5,
+   "bit": 86,
+   "v16_nodes": 235930,
+   "v17_loss": false,
+   "v17_nodes": 235930
+  },
+  {
+   "batch": 5,
+   "bit": 87,
+   "v16_nodes": 1619668,
+   "v17_loss": false,
+   "v17_nodes": 1619668
+  },
+  {
+   "batch": 5,
+   "bit": 88,
+   "v16_nodes": 1289657,
+   "v17_loss": false,
+   "v17_nodes": 1289657
+  },
+  {
+   "batch": 5,
+   "bit": 90,
+   "v16_nodes": 69867,
+   "v17_loss": false,
+   "v17_nodes": 69867
+  },
+  {
+   "batch": 5,
+   "bit": 94,
+   "v16_nodes": 636718,
+   "v17_loss": false,
+   "v17_nodes": 636718
+  },
+  {
+   "batch": 5,
+   "bit": 95,
+   "v16_nodes": 234281,
+   "v17_loss": false,
+   "v17_nodes": 234281
+  },
+  {
+   "batch": 5,
+   "bit": 96,
+   "v16_nodes": 268816,
+   "v17_loss": false,
+   "v17_nodes": 268816
+  },
+  {
+   "batch": 6,
+   "bit": 97,
+   "v16_nodes": 73664,
+   "v17_loss": false,
+   "v17_nodes": 73664
+  },
+  {
+   "batch": 6,
+   "bit": 98,
+   "v16_nodes": 891700,
+   "v17_loss": false,
+   "v17_nodes": 891700
+  },
+  {
+   "batch": 6,
+   "bit": 99,
+   "v16_nodes": 1410542,
+   "v17_loss": false,
+   "v17_nodes": 1410542
+  },
+  {
+   "batch": 6,
+   "bit": 102,
+   "v16_nodes": 943712,
+   "v17_loss": false,
+   "v17_nodes": 943712
+  },
+  {
+   "batch": 6,
+   "bit": 103,
+   "v16_nodes": 529868,
+   "v17_loss": false,
+   "v17_nodes": 529868
+  },
+  {
+   "batch": 6,
+   "bit": 105,
+   "v16_nodes": 328157,
+   "v17_loss": false,
+   "v17_nodes": 328157
+  },
+  {
+   "batch": 6,
+   "bit": 106,
+   "v16_nodes": 2655747,
+   "v17_loss": false,
+   "v17_nodes": 2655747
+  },
+  {
+   "batch": 6,
+   "bit": 107,
+   "v16_nodes": 866393,
+   "v17_loss": true,
+   "v17_nodes": 866393
+  },
+  {
+   "batch": 7,
+   "bit": 108,
+   "v16_nodes": 594484,
+   "v17_loss": false,
+   "v17_nodes": 594484
+  },
+  {
+   "batch": 7,
+   "bit": 110,
+   "v16_nodes": 384988,
+   "v17_loss": false,
+   "v17_nodes": 384988
+  },
+  {
+   "batch": 7,
+   "bit": 111,
+   "v16_nodes": 1372572,
+   "v17_loss": false,
+   "v17_nodes": 1372572
+  },
+  {
+   "batch": 7,
+   "bit": 112,
+   "v16_nodes": 2300486,
+   "v17_loss": false,
+   "v17_nodes": 2300486
+  },
+  {
+   "batch": 7,
+   "bit": 113,
+   "v16_nodes": 834505,
+   "v17_loss": false,
+   "v17_nodes": 834505
+  },
+  {
+   "batch": 7,
+   "bit": 114,
+   "v16_nodes": 91475,
+   "v17_loss": false,
+   "v17_nodes": 91475
+  },
+  {
+   "batch": 7,
+   "bit": 116,
+   "v16_nodes": 128237,
+   "v17_loss": false,
+   "v17_nodes": 128237
+  },
+  {
+   "batch": 7,
+   "bit": 117,
+   "v16_nodes": 1772719,
+   "v17_loss": false,
+   "v17_nodes": 1772719
+  },
+  {
+   "batch": 8,
+   "bit": 118,
+   "v16_nodes": 988557,
+   "v17_loss": false,
+   "v17_nodes": 988557
+  },
+  {
+   "batch": 8,
+   "bit": 119,
+   "v16_nodes": 194646,
+   "v17_loss": false,
+   "v17_nodes": 194646
+  },
+  {
+   "batch": 8,
+   "bit": 120,
+   "v16_nodes": 1013888,
+   "v17_loss": false,
+   "v17_nodes": 1013888
+  }
+ ],
+ "published_total_nodes": 54905391,
+ "published_win_bits": [
+  39,
+  72,
+  107
+ ],
+ "schema": "n11-class2-lane-cost64f-v17-full-row-recheck-20261117-v1",
+ "total_nodes_v16": 54905391,
+ "total_nodes_v17": 54905391,
+ "verdict_flips": [],
+ "win_bits_v17": [
+  39,
+  72,
+  107
+ ]
+}

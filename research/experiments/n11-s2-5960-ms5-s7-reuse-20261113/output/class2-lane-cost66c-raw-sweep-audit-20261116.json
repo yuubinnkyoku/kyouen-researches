@@ -1,0 +1,145 @@
+{
+ "schema": "n11-class2-lane-cost66c-raw-sweep-audit-20261116-v1",
+ "date": "2026-11-16",
+ "child": "00000000000000003800000008002008",
+ "s5_target": "00000000000000003800000008002000",
+ "verdict_summary": {
+  "candidates": 66,
+  "open_swept": 59,
+  "win7_d10_bits": [
+   73,
+   75,
+   79,
+   87,
+   96,
+   97,
+   112
+  ],
+  "refuted_d10_swept": 52,
+  "refuted_d10_transferred": 7,
+  "capped": 0,
+  "total_definitive_swept_nodes": 84180263,
+  "raw_batches_as_run_nodes": 81605344,
+  "row_result": "NOT-STERILE (7 WIN7-D10 receipts available for the fold)"
+ },
+ "cap_event": {
+  "bit": 112,
+  "protocol_cap": 10000000,
+  "capped_attempt_nodes": 10000001,
+  "resolution_cap": 80000000,
+  "resolution_nodes": 12574920,
+  "resolution_verdict": "WIN7-D10",
+  "determinism_rerun_nodes": 12574920
+ },
+ "checks": [
+  {
+   "check": "child occupied stones",
+   "pass": true,
+   "detail": "stones=[3, 13, 27, 59, 60, 61]"
+  },
+  {
+   "check": "independent legal enumeration count",
+   "pass": true,
+   "detail": "legal=66"
+  },
+  {
+   "check": "census bit list == independent legal list",
+   "pass": true,
+   "detail": "66 bits identical"
+  },
+  {
+   "check": "census root_canon reproduction (independent D4)",
+   "pass": true,
+   "detail": "mismatches=[]"
+  },
+  {
+   "check": "open/transferred partition",
+   "pass": true,
+   "detail": "open=59 transferred=[5, 25, 70, 81, 84, 115, 119]"
+  },
+  {
+   "check": "8 raw batches cover the 59 open bits exactly once",
+   "pass": true,
+   "detail": "bits=59"
+  },
+  {
+   "check": "pilot_d6 control 3402 nodes in all 8 batch invocations",
+   "pass": true,
+   "detail": "pilots=8"
+  },
+  {
+   "check": "single cap event recorded (bit 112 at the 10000000 protocol cap)",
+   "pass": true,
+   "detail": "cap_events=[{'bit': 112, 'nodes': 10000001, 'batch': 7}]"
+  },
+  {
+   "check": "bit 112 resolved at raised cap 80000000: WIN7-D10 12574920 nodes",
+   "pass": true,
+   "detail": "record={'bit': 112, 'loss': True, 'nodes': 12574920, 'capped': False, 'terminalStoneRange': [13, 17], 'ms': 22226, 'andclose': True}"
+  },
+  {
+   "check": "bit 112 determinism rerun node-exact",
+   "pass": true,
+   "detail": "rerun_nodes=12574920"
+  },
+  {
+   "check": "determinism rerun batch 5 (8 bits incl WINs 96/97) node-exact",
+   "pass": true,
+   "detail": "bits=[89, 92, 93, 94, 95, 96, 97, 98] all node-exact"
+  },
+  {
+   "check": "v15 crosscheck: pilot 5949 + 4 anchors (73/96 WIN, 30/83 REFUTED) agree",
+   "pass": true,
+   "detail": "anchors=[(73, True, 3128502), (96, True, 5027518), (30, False, 16840620), (83, False, 653399)]"
+  },
+  {
+   "check": "verdict aggregate: 7 WIN7-D10 + 52 REFUTED-D10 + 0 capped",
+   "pass": true,
+   "detail": "wins=[73, 75, 79, 87, 96, 97, 112] refuted=52 capped=[]"
+  },
+  {
+   "check": "total definitive swept nodes",
+   "pass": true,
+   "detail": "nodes=84180263"
+  },
+  {
+   "check": "raw batches as run (incl capped attempt) nodes",
+   "pass": true,
+   "detail": "nodes=81605344"
+  },
+  {
+   "check": "all records terminalStoneRange [13,17] and andclose true",
+   "pass": true,
+   "detail": "59/59"
+  },
+  {
+   "check": "66 candidate roots occupy 66 distinct D4 orbits",
+   "pass": true,
+   "detail": "distinct=66"
+  },
+  {
+   "check": "D4 conflict census vs published cost-65n swept corpus: overlap 0",
+   "pass": true,
+   "detail": "overlap=[]"
+  },
+  {
+   "check": "cross-row overlap vs in-flight cost-65o candidates: exactly bit 83 == 65o bit 43",
+   "pass": true,
+   "detail": "overlap=['00000000000000a09002080080000000']: 66c bit 83 REFUTED-D10 (269856 v16 / 653399 v15 nodes) == 65o bit 43 (open, in flight); verdict-agreement watch item for the 65o claim update"
+  },
+  {
+   "check": "six one-stone-deletion parents re-derived; exactly one equals the shared class-2 parent",
+   "pass": true,
+   "detail": "parents={3: '00000000000000003800000008002000', 13: '00000000000000003800000008000008', 27: '00000000000000003800000000002008', 59: '00000000000000001800000008080080', 60: '00000000000000002800000008002008', 61: '00000000000000001202000200800000'}"
+  },
+  {
+   "check": "66c child row canon not among the 13 cost-65n receipt-covered S6 row orbits",
+   "pass": true,
+   "detail": "child_canon=00000000000000003800000008002008 covered=13 orbits"
+  }
+ ],
+ "all_pass": true,
+ "method": "independent stdlib re-derivation: inline Bareiss legality, independent D4 canonicalization, independent one-stone-deletion parent analysis; engine not re-run except the published determinism/v15 artifacts re-parsed here",
+ "interpretation_guard": "WIN7-D10 proves a first-player win within depth 10 from the individual 7-stone roots only; REFUTED-D10 is NOT a LOSS proof; NOT-STERILE is not a game value for the row; transferred verdicts are D4-canonical identities of published depth-10 engine results",
+ "unknown_status": "11x11 empty board, two-stone roots {49,60} and {59,60}, S2 {59,60}, and classes 1/2/4 all remain UNKNOWN"
+}

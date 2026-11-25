@@ -1,0 +1,616 @@
+{
+  "schema": "n11-class2-lane-cost64h-k0863-out-of-sample-audit-20261116-v1",
+  "date": "2026-11-16",
+  "target": {
+    "s6_child_hex": "00000000000000403800000008100000",
+    "stones": [
+      20,
+      27,
+      59,
+      60,
+      61,
+      70
+    ],
+    "edge_cost": 64,
+    "legal_candidate_count": 64
+  },
+  "source_blob_pins": {
+    "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost64h-inflight-20261116.json": "68e4878094b78eaf0a465033d0289a6db5d94861",
+    "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost64h-raw-batch1-20261116.jsonl": "47da4e04357b7012c55903aea22160f3ca0767c9",
+    "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost64h-raw-batch2-20261116.jsonl": "04e59e2ed62ba2306c80743e9c0517a6d89e70a2",
+    "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost64h-raw-batch3-20261116.jsonl": "78bb44093ef56191110119009ce788d0cd4f383f",
+    "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost64h-raw-batch4-20261116.jsonl": "7d196917961356c69cfa608930c3a1b7716aaf59",
+    "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost64h-raw-batch5-20261116.jsonl": "ba6a36d4cb93111461aeec86b55e2909cbc0a489",
+    "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost64h-raw-batch6-20261116.jsonl": "a49e2b9cd7d239fd95681afa83793deb075b4ccf",
+    "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost64h-raw-batch7-20261116.jsonl": "6771b7a900191fce3d11feccf3da0e2e05f001e9",
+    "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost64h-raw-batch8-20261116.jsonl": "5e778cae345d2a1d0d50455a3633ea673b6c08be",
+    "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost64h-v15-crosscheck-20261116.jsonl": "0d32c2a0f5411d455f5b1503bc37c95c58f0b155",
+    "research/experiments/n11-class2-lane-sterile-unclosability-20261116/output/theorem-applicability-scan-20261116.json": "24f214e6a9dd721ef95ac97d6b84cf34af33b14b"
+  },
+  "method": "Independent JavaScript re-derivation: exact BigInt Bareiss 4x4 determinants for safety/legal moves; fresh D4 canonicalization; raw v16 batches rejoined against claim batch partitions; v15 cross-engine comparison; K0863 STERILE rows independently re-enumerated and checked against every cost64h WIN root.",
+  "checks": [
+    {
+      "name": "child safety and exact legal candidate set",
+      "pass": true
+    },
+    {
+      "name": "8 v16 batches cover all 64 legal bits exactly once",
+      "pass": true
+    },
+    {
+      "name": "v16 verdict totals 23 WIN7-D10 / 41 REFUTED-D10 / 0 capped",
+      "pass": true
+    },
+    {
+      "name": "v16 node sum and terminal-range invariants",
+      "pass": true
+    },
+    {
+      "name": "8 pilot controls",
+      "pass": true
+    },
+    {
+      "name": "independent v15 confirms all 23 WIN bits",
+      "pass": true
+    },
+    {
+      "name": "64 distinct D4 candidate-root classes; no WIN/REFUTED collision",
+      "pass": true
+    },
+    {
+      "name": "23 WIN roots are pairwise D4-distinct",
+      "pass": true
+    },
+    {
+      "name": "35 K0863 STERILE rows re-derived with 2,628 legal candidates",
+      "pass": true
+    },
+    {
+      "name": "no cost64h WIN root covers any K0863 STERILE row",
+      "pass": true
+    }
+  ],
+  "v16": {
+    "candidate_count": 64,
+    "win7_d10_bits": [
+      4,
+      6,
+      8,
+      33,
+      38,
+      42,
+      44,
+      49,
+      68,
+      74,
+      76,
+      77,
+      78,
+      79,
+      83,
+      89,
+      91,
+      101,
+      109,
+      113,
+      114,
+      116,
+      120
+    ],
+    "refuted_d10_count": 41,
+    "capped_count": 0,
+    "node_sum": 47017565,
+    "terminal_stone_range": [
+      13,
+      17
+    ],
+    "andclose_all": true,
+    "batches": [
+      {
+        "batch": 1,
+        "bits": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          8,
+          14
+        ],
+        "nodes": 4427516,
+        "win7_d10": 3,
+        "refuted_d10": 5
+      },
+      {
+        "batch": 2,
+        "bits": [
+          16,
+          18,
+          21,
+          23,
+          25,
+          29,
+          33,
+          34
+        ],
+        "nodes": 10438700,
+        "win7_d10": 1,
+        "refuted_d10": 7
+      },
+      {
+        "batch": 3,
+        "bits": [
+          35,
+          38,
+          42,
+          43,
+          44,
+          45,
+          46,
+          49
+        ],
+        "nodes": 4694201,
+        "win7_d10": 4,
+        "refuted_d10": 4
+      },
+      {
+        "batch": 4,
+        "bits": [
+          53,
+          54,
+          66,
+          68,
+          69,
+          74,
+          76,
+          77
+        ],
+        "nodes": 8715406,
+        "win7_d10": 4,
+        "refuted_d10": 4
+      },
+      {
+        "batch": 5,
+        "bits": [
+          78,
+          79,
+          82,
+          83,
+          85,
+          86,
+          87,
+          88
+        ],
+        "nodes": 4412166,
+        "win7_d10": 3,
+        "refuted_d10": 5
+      },
+      {
+        "batch": 6,
+        "bits": [
+          89,
+          91,
+          92,
+          95,
+          96,
+          97,
+          98,
+          99
+        ],
+        "nodes": 2523246,
+        "win7_d10": 2,
+        "refuted_d10": 6
+      },
+      {
+        "batch": 7,
+        "bits": [
+          101,
+          102,
+          103,
+          105,
+          106,
+          107,
+          108,
+          109
+        ],
+        "nodes": 4206587,
+        "win7_d10": 2,
+        "refuted_d10": 6
+      },
+      {
+        "batch": 8,
+        "bits": [
+          111,
+          112,
+          113,
+          114,
+          115,
+          116,
+          117,
+          120
+        ],
+        "nodes": 7599743,
+        "win7_d10": 4,
+        "refuted_d10": 4
+      }
+    ],
+    "pilots": 8
+  },
+  "v15": {
+    "crosschecked_win7_d10_bits": [
+      4,
+      6,
+      8,
+      33,
+      38,
+      42,
+      44,
+      49,
+      68,
+      74,
+      76,
+      77,
+      78,
+      79,
+      83,
+      89,
+      91,
+      101,
+      109,
+      113,
+      114,
+      116,
+      120
+    ],
+    "candidate_count": 23,
+    "node_sum": 55171821,
+    "terminal_stone_range": [
+      13,
+      17
+    ],
+    "all_uncapped": true
+  },
+  "d4": {
+    "candidate_root_classes": 64,
+    "verdict_conflicts": 0,
+    "win_root_classes": 23,
+    "win_root_duplicates": 0,
+    "win_roots": [
+      {
+        "bit": 4,
+        "root_hex": "00000000000000403800000008100010",
+        "d4_canonical_hex": "00000000000000403800000008100010"
+      },
+      {
+        "bit": 6,
+        "root_hex": "00000000000000403800000008100040",
+        "d4_canonical_hex": "00000000000000403800000008100040"
+      },
+      {
+        "bit": 8,
+        "root_hex": "00000000000000403800000008100100",
+        "d4_canonical_hex": "00000000000000403800000008100100"
+      },
+      {
+        "bit": 33,
+        "root_hex": "00000000000000403800000208100000",
+        "d4_canonical_hex": "00000000000000403800000208100000"
+      },
+      {
+        "bit": 38,
+        "root_hex": "00000000000000403800004008100000",
+        "d4_canonical_hex": "00000000000000403800004008100000"
+      },
+      {
+        "bit": 42,
+        "root_hex": "00000000000000403800040008100000",
+        "d4_canonical_hex": "00000000000000403800040008100000"
+      },
+      {
+        "bit": 44,
+        "root_hex": "00000000000000403800100008100000",
+        "d4_canonical_hex": "00000000000000403800100008100000"
+      },
+      {
+        "bit": 49,
+        "root_hex": "00000000000000403802000008100000",
+        "d4_canonical_hex": "00000000000000403802000008100000"
+      },
+      {
+        "bit": 68,
+        "root_hex": "00000000000000503800000008100000",
+        "d4_canonical_hex": "00000000000000503800000008100000"
+      },
+      {
+        "bit": 74,
+        "root_hex": "00000000000004403800000008100000",
+        "d4_canonical_hex": "00000000000000c09002000004100000"
+      },
+      {
+        "bit": 76,
+        "root_hex": "00000000000010403800000008100000",
+        "d4_canonical_hex": "00000000000000c09002000000100010"
+      },
+      {
+        "bit": 77,
+        "root_hex": "00000000000020403800000008100000",
+        "d4_canonical_hex": "00000000000020403800000008100000"
+      },
+      {
+        "bit": 78,
+        "root_hex": "00000000000040403800000008100000",
+        "d4_canonical_hex": "00000000000040403800000008100000"
+      },
+      {
+        "bit": 79,
+        "root_hex": "00000000000080403800000008100000",
+        "d4_canonical_hex": "00000000000080403800000008100000"
+      },
+      {
+        "bit": 83,
+        "root_hex": "00000000000800403800000008100000",
+        "d4_canonical_hex": "00000000000000c09002800000100000"
+      },
+      {
+        "bit": 89,
+        "root_hex": "00000000020000403800000008100000",
+        "d4_canonical_hex": "00000000020000403800000008100000"
+      },
+      {
+        "bit": 91,
+        "root_hex": "00000000080000403800000008100000",
+        "d4_canonical_hex": "00000000000080c09002000000100000"
+      },
+      {
+        "bit": 101,
+        "root_hex": "00000020000000403800000008100000",
+        "d4_canonical_hex": "00000000020000c09002000000100000"
+      },
+      {
+        "bit": 109,
+        "root_hex": "00002000000000403800000008100000",
+        "d4_canonical_hex": "00000000000000c09002000000100002"
+      },
+      {
+        "bit": 113,
+        "root_hex": "00020000000000403800000008100000",
+        "d4_canonical_hex": "00000000000020c09002000000100000"
+      },
+      {
+        "bit": 114,
+        "root_hex": "00040000000000403800000008100000",
+        "d4_canonical_hex": "00000000000000c49002000000100000"
+      },
+      {
+        "bit": 116,
+        "root_hex": "00100000000000403800000008100000",
+        "d4_canonical_hex": "00000000000000c09002100000100000"
+      },
+      {
+        "bit": 120,
+        "root_hex": "01000000000000403800000008100000",
+        "d4_canonical_hex": "00000000000000c09002000000100001"
+      }
+    ]
+  },
+  "k0863_out_of_sample": {
+    "sterile_rows": 35,
+    "legal_candidate_count_sum": 2628,
+    "count_mismatches": 0,
+    "win_root_overlap_rows": 0,
+    "rows": [
+      {
+        "child": "00000000000000003800000008002020",
+        "legal_candidates": 64,
+        "candidate_d4_orbits": 64,
+        "win64h_overlap_bits": []
+      },
+      {
+        "child": "00000000000000801202000040000400",
+        "legal_candidates": 71,
+        "candidate_d4_orbits": 71,
+        "win64h_overlap_bits": []
+      },
+      {
+        "child": "00000000000000801282000000200000",
+        "legal_candidates": 70,
+        "candidate_d4_orbits": 70,
+        "win64h_overlap_bits": []
+      },
+      {
+        "child": "00000000000000801282000040000000",
+        "legal_candidates": 64,
+        "candidate_d4_orbits": 64,
+        "win64h_overlap_bits": []
+      },
+      {
+        "child": "00000000000000801282020000000000",
+        "legal_candidates": 62,
+        "candidate_d4_orbits": 62,
+        "win64h_overlap_bits": []
+      },
+      {
+        "child": "00000000000000809082000000000001",
+        "legal_candidates": 70,
+        "candidate_d4_orbits": 70,
+        "win64h_overlap_bits": []
+      },
+      {
+        "child": "00000000000000809082000000000040",
+        "legal_candidates": 73,
+        "candidate_d4_orbits": 73,
+        "win64h_overlap_bits": []
+      },
+      {
+        "child": "00000000000000809082000000000080",
+        "legal_candidates": 73,
+        "candidate_d4_orbits": 73,
+        "win64h_overlap_bits": []
+      },
+      {
+        "child": "00000000000000809082000000020000",
+        "legal_candidates": 65,
+        "candidate_d4_orbits": 65,
+        "win64h_overlap_bits": []
+      },
+      {
+        "child": "00000000000000809082000000400000",
+        "legal_candidates": 69,
+        "candidate_d4_orbits": 69,
+        "win64h_overlap_bits": []
+      },
+      {
+        "child": "00000000000000809082000004000000",
+        "legal_candidates": 66,
+        "candidate_d4_orbits": 66,
+        "win64h_overlap_bits": []
+      },
+      {
+        "child": "00000000000000809082000020000000",
+        "legal_candidates": 66,
+        "candidate_d4_orbits": 66,
+        "win64h_overlap_bits": []
+      },
+      {
+        "child": "00000000000000809082000100000000",
+        "legal_candidates": 74,
+        "candidate_d4_orbits": 74,
+        "win64h_overlap_bits": []
+      },
+      {
+        "child": "00000000000000809082000200000000",
+        "legal_candidates": 73,
+        "candidate_d4_orbits": 73,
+        "win64h_overlap_bits": []
+      },
+      {
+        "child": "000000000000008090c2000000000000",
+        "legal_candidates": 69,
+        "candidate_d4_orbits": 69,
+        "win64h_overlap_bits": []
+      },
+      {
+        "child": "00000000000000889002000000000800",
+        "legal_candidates": 74,
+        "candidate_d4_orbits": 74,
+        "win64h_overlap_bits": []
+      },
+      {
+        "child": "00000000020000003800000080000004",
+        "legal_candidates": 87,
+        "candidate_d4_orbits": 87,
+        "win64h_overlap_bits": []
+      },
+      {
+        "child": "00000000020000003800000080000020",
+        "legal_candidates": 74,
+        "candidate_d4_orbits": 74,
+        "win64h_overlap_bits": []
+      },
+      {
+        "child": "00000000020000003800000080000100",
+        "legal_candidates": 86,
+        "candidate_d4_orbits": 86,
+        "win64h_overlap_bits": []
+      },
+      {
+        "child": "00000000020000003800000080000400",
+        "legal_candidates": 84,
+        "candidate_d4_orbits": 84,
+        "win64h_overlap_bits": []
+      },
+      {
+        "child": "00000000020000003800000080000800",
+        "legal_candidates": 82,
+        "candidate_d4_orbits": 82,
+        "win64h_overlap_bits": []
+      },
+      {
+        "child": "00000000020000003800000080004000",
+        "legal_candidates": 86,
+        "candidate_d4_orbits": 86,
+        "win64h_overlap_bits": []
+      },
+      {
+        "child": "00000000020000003800000080008000",
+        "legal_candidates": 81,
+        "candidate_d4_orbits": 81,
+        "win64h_overlap_bits": []
+      },
+      {
+        "child": "00000000020000003800000088000000",
+        "legal_candidates": 74,
+        "candidate_d4_orbits": 74,
+        "win64h_overlap_bits": []
+      },
+      {
+        "child": "00000000020000003800000090000000",
+        "legal_candidates": 82,
+        "candidate_d4_orbits": 82,
+        "win64h_overlap_bits": []
+      },
+      {
+        "child": "000000000200000038000000c0000000",
+        "legal_candidates": 73,
+        "candidate_d4_orbits": 73,
+        "win64h_overlap_bits": []
+      },
+      {
+        "child": "00000000020000003800000180000000",
+        "legal_candidates": 80,
+        "candidate_d4_orbits": 80,
+        "win64h_overlap_bits": []
+      },
+      {
+        "child": "00000000020000003800000280000000",
+        "legal_candidates": 86,
+        "candidate_d4_orbits": 86,
+        "win64h_overlap_bits": []
+      },
+      {
+        "child": "00000000020000003800000880000000",
+        "legal_candidates": 79,
+        "candidate_d4_orbits": 79,
+        "win64h_overlap_bits": []
+      },
+      {
+        "child": "00000000020000003800020080000000",
+        "legal_candidates": 75,
+        "candidate_d4_orbits": 75,
+        "win64h_overlap_bits": []
+      },
+      {
+        "child": "00000000020000003800100080000000",
+        "legal_candidates": 86,
+        "candidate_d4_orbits": 86,
+        "win64h_overlap_bits": []
+      },
+      {
+        "child": "00000000020000003800200080000000",
+        "legal_candidates": 80,
+        "candidate_d4_orbits": 80,
+        "win64h_overlap_bits": []
+      },
+      {
+        "child": "00000000020000003800400080000000",
+        "legal_candidates": 79,
+        "candidate_d4_orbits": 79,
+        "win64h_overlap_bits": []
+      },
+      {
+        "child": "00000000020000003840000080000000",
+        "legal_candidates": 86,
+        "candidate_d4_orbits": 86,
+        "win64h_overlap_bits": []
+      },
+      {
+        "child": "00000000020000801202000000200000",
+        "legal_candidates": 65,
+        "candidate_d4_orbits": 65,
+        "win64h_overlap_bits": []
+      }
+    ]
+  },
+  "interpretation_guard": "This is an independent finite consistency audit, not a new game-theoretic result. WIN7-D10 proves only a first-player win within depth 10 from an individual 7-stone root; REFUTED-D10 is not a LOSS proof. K0863 concerns receipt-cover impossibility for STERILE rows, not their game-theoretic value. The 64h certificates have not yet been extracted or folded. Standard 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, and classes 1/2/4 remain UNKNOWN."
+}

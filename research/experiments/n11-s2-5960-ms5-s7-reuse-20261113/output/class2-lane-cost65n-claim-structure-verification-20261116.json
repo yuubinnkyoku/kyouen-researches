@@ -1,0 +1,57 @@
+{
+ "all_pass": true,
+ "checks": {
+  "candidate_count_65": true,
+  "census_v4_first_open_row_is_child": true,
+  "census_v4_head_1441": true,
+  "child_in_manifest_cost_65": true,
+  "child_is_own_d4_canon": true,
+  "child_open_at_1441": true,
+  "child_stones_6": true,
+  "child_stones_bit_indices": true,
+  "child_stones_match_claim": true,
+  "claim_head_pin": true,
+  "demand_c1_0_c2_2_c4_0": true,
+  "legal_candidates_bit_exact": true,
+  "open_candidate_count_59": true,
+  "open_candidates_bit_exact": true,
+  "planned_batches_8": true,
+  "planned_batches_disjoint": true,
+  "planned_batches_partition_open": true,
+  "shared_parent_holds_child": true,
+  "transferred_bits_6": true,
+  "transferred_bits_subset_of_legal": true,
+  "transferred_root_canon_identity": true
+ },
+ "child": {
+  "child_stones_bit_indices": [
+   23,
+   40,
+   49,
+   57,
+   60,
+   71
+  ],
+  "holder_classes": [
+   2
+  ],
+  "holder_s5_parents": [
+   "00000000000000003800000008002000",
+   "00000000000000801202010000000000"
+  ],
+  "manifest_classes": 2,
+  "manifest_cost": 65,
+  "open_at_head_1441": true,
+  "open_parent_demand": {
+   "c1": 0,
+   "c2": 2,
+   "c4": 0
+  },
+  "s6_hex": "00000000000000801202010000800000"
+ },
+ "claim_verified": "output/class2-lane-cost65n-inflight-20261116.json (commit 7dcd9767, IN FLIGHT)",
+ "date": "2026-11-16",
+ "interpretation_guard": "claim bookkeeping verification only; the cost-65n sweep is IN FLIGHT and owned by the parallel lane; REFUTED-D10 is not a LOSS proof; WIN7-D10 certificates prove a first-player win within depth 10 from individual 7-stone roots only; 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60} and classes 1/2/4 remain UNKNOWN",
+ "method": "independent reconstruction of head 1441 (761 receipt roots + bit-89 fold receipt + 498 winners, verbatim-ported frontier semantics) plus legal_candidates.py Bareiss re-enumeration; no engine search, no verdicts created, sweep owned by the parallel lane",
+ "schema": "n11-class2-lane-cost65n-claim-structure-verification-20261116-v1"
+}

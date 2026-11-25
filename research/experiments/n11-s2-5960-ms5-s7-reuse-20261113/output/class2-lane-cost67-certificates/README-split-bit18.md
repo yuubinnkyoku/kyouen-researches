@@ -1,0 +1,16 @@
+# certificate split for n11_s7_00000000000000809082020000040000.cert
+
+The bit-18 WIN7 certificate (2,135,683 bytes) exceeds the single-run push
+transport limit, so it is stored as two parts:
+
+- `n11_s7_00000000000000809082020000040000.cert.part1of2` (1,068,412 bytes, md5 cb7241b26299cd5a45d21964d907185a)
+- `n11_s7_00000000000000809082020000040000.cert.part2of2` (1,067,271 bytes, md5 8165166a13c4062b74e678c3e5849c85)
+
+Recombine (line-boundary split, no bytes added or removed):
+
+    cat n11_s7_00000000000000809082020000040000.cert.part1of2 \
+        n11_s7_00000000000000809082020000040000.cert.part2of2 \
+        > n11_s7_00000000000000809082020000040000.cert
+
+Concatenation md5: f14be4a4ddda33502b56556bb249af81
+Concatenation sha256: 02cd2703a1511e52765536d7d22c50217a96601377c1937d8ca2768a93d5364d

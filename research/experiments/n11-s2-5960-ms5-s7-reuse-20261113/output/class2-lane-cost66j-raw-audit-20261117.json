@@ -1,0 +1,194 @@
+{
+ "schema": "n11-class2-lane-cost66j-raw-sweep-audit-20261117-v1",
+ "date": "2026-11-17",
+ "status": "all checks passed; 9 WIN7-D10 + 57 REFUTED-D10, 0 capped; 11x11 UNKNOWN",
+ "target": {
+  "s5": "00000000000000403800000008000000",
+  "s6_child": "00000000000000c09002000000001000",
+  "legal_candidate_count": 66,
+  "canonical_head_at_sweep": "1472/174/6376/504672/4649/368586",
+  "selection": "head-1472 presweep census v3 selected target (cheapest unswept row of the primary family)"
+ },
+ "pilot_checks": {
+  "batches": 9,
+  "pilot_nodes_each": 3402,
+  "all_exact": true
+ },
+ "verdicts": {
+  "win7_d10_bits": [
+   7,
+   9,
+   30,
+   66,
+   78,
+   79,
+   92,
+   96,
+   114
+  ],
+  "refuted_d10_bits": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   6,
+   8,
+   10,
+   14,
+   17,
+   18,
+   20,
+   21,
+   23,
+   25,
+   28,
+   29,
+   31,
+   32,
+   33,
+   34,
+   41,
+   42,
+   44,
+   45,
+   53,
+   58,
+   61,
+   62,
+   64,
+   65,
+   68,
+   76,
+   77,
+   80,
+   85,
+   86,
+   87,
+   88,
+   91,
+   94,
+   95,
+   97,
+   98,
+   99,
+   101,
+   102,
+   105,
+   106,
+   107,
+   109,
+   112,
+   113,
+   116,
+   117,
+   119,
+   120
+  ],
+  "capped_count": 0,
+  "candidate_nodes": 65981633,
+  "total_nodes_including_pilots": 66012251,
+  "terminal_stone_range": [
+   13,
+   17
+  ],
+  "heaviest_bits": [
+   [
+    6457723,
+    77
+   ],
+   [
+    3166914,
+    88
+   ],
+   [
+    3125008,
+    79
+   ],
+   [
+    3023058,
+    92
+   ],
+   [
+    2960944,
+    78
+   ]
+  ]
+ },
+ "confirmation_bits": {
+  "bits": [
+   20,
+   97
+  ],
+  "verdicts": {
+   "20": "REFUTED-D10",
+   "97": "REFUTED-D10"
+  },
+  "claim_expected_agreement": "2/2",
+  "sources": {
+   "20": "cost-64h orbit transfer (64h bit 108, 527814 nodes, v16 raw batch map)",
+   "97": "v1 harvest transfer (head-1452 census bit table status harvested_refuted)"
+  },
+  "note": "bit 20's root canon matches the cost-64h REFUTED-D10 verdict (64h bit 108): cross-engine agreement; bit 97 confirms the v1 harvest transfer fresh"
+ },
+ "determinism_rerun": {
+  "batches": [
+   5,
+   8
+  ],
+  "batch5_note": "heaviest batch, contains WIN bits 66/78/79",
+  "batch8_note": "contains WIN bit 114",
+  "field_identical_non_ms": true
+ },
+ "v15_cross_engine_check": {
+  "engine": "v15 (blob 8744fc65b6b7cac6bd561403ce4c749e01c51359)",
+  "pilot_nodes_each": 5949,
+  "win_bit_agreement": "9/9",
+  "capped": 0
+ },
+ "canon_checks": {
+  "child_stones_bit_indices": [
+   12,
+   49,
+   60,
+   63,
+   70,
+   71
+  ],
+  "transfer_canons_match_claim": "2/2",
+  "v1_bit_table_canons_match": "66/66",
+  "internal_canon_collisions": {}
+ },
+ "cross_source_conflict_scan": {
+  "sources": [
+   "cost64h raw batches 1-8",
+   "cost76c v17 raw batches 1-10",
+   "cost66i raw batches 1-9",
+   "cost64h fold prereg receipts"
+  ],
+  "conflicts": 0,
+  "win_refuted_agreements": {
+   "refuted_bits_also_refuted_in_cost64h": [
+    20
+   ],
+   "win_bits_also_win_in_cost64h": [],
+   "refuted_bits_also_refuted_in_cost76c": [],
+   "win_bits_also_win_in_cost76c": [],
+   "refuted_bits_also_refuted_in_cost66i": [],
+   "win_bits_also_win_in_cost66i": []
+  },
+  "note": "no 66j canon carries contradictory verdicts across the 64h/76c/66i maps; no 66j WIN canon is already folded in the landed 64h receipts"
+ },
+ "raw_batch_pins": {
+  "batch1": "565e010b46c84e0bc9e51509dc67005634c1d294",
+  "batch2": "470b65d238a2ab06766d551ff903e15346569381",
+  "batch3": "0211836ab9bc3e565e51cd9aaf30383702d3c174",
+  "batch4": "034a565bb3f8abddb8e679ab656bb0e39530ac74",
+  "batch5": "47cb5f8c3aa446d8993369b71e33b45f17038072",
+  "batch6": "b210cae667030ce4e9f59699fcab5d6a233da574",
+  "batch7": "6fd435c94cb700dd0ee14dabb63160cfa523732d",
+  "batch8": "c7b19d015d4ae3d3b0f3b40ec37aa02d62fe4ee3",
+  "batch9": "bdccf073eebaee4fc5ac09d1e59106676c3f140f"
+ },
+ "interpretation_guard": "engine bookkeeping audit only; WIN7-D10 proves a first-player win within depth 10 from the individual 7-stone root only; REFUTED-D10 is not a LOSS proof; no manifest row is closed by this audit; the 11x11 empty board, two-stone roots {49,60} and {59,60}, S2 {59,60}, and classes 1/2/4 all remain UNKNOWN"
+}

@@ -1,0 +1,237 @@
+{
+ "schema": "n11-class2-lane-cost70g-win7-certificates-20261115-v1",
+ "date": "2026-11-15",
+ "s5_parent_hex": "00000000000000801202000000200000",
+ "s6_child_hex": "00000000000100809002000000000800",
+ "win7_bits": [
+  9,
+  20,
+  29,
+  34,
+  62,
+  70,
+  76,
+  119
+ ],
+ "extraction": "repo-verbatim class4_child1_cert_extractor_exact_v16.ts (git blob 5518d375fc6b4a7a14c22a1a65586f0c1c5731c0, local copy byte-exact by git blob sha) via cert_driver70g.ts (cert_driver70e.ts with the import pointed at the _v16 extractor, byte-diff of 3 comment/import lines); blind (empty kill table, pref=null), FBS 1<<20, fbt_drops 0 on all 8 roots; rows assembled as header + root + sort -u of the raw rows",
+ "independent_verification": "verify_win7_certificate_bigint_independent.mjs (git blob 62b5d9413daafb172f6e10249976ee6808f7b454, byte-exact local copy): BigInt 3x3 cofactor expansion of the exact lifted determinant [x^2+y^2,x,y,1], no floating point, no solver/verdict-cache import; root stones=7 + safe check, loser mobility vs independent enumeration, per-subroot winner strategy legality walk, union missing/extra 0/0, rows sorted unique, terminal range within 13..17",
+ "certificates": [
+  {
+   "bit": 9,
+   "root_hex": "00000000000100809002000000000a00",
+   "repo_path": "class2-lane-cost70g-certificates/bit9-root-00000000000100809002000000000a00.cert",
+   "repo_blob_sha": "1877c1c6d07a458b6daa53e56338cffc941c2a5a",
+   "strategy_rows": 51456,
+   "extraction_nodes": 7016206,
+   "extraction_ms": 49776,
+   "loser_first_moves": 60,
+   "verify": {
+    "root_stones": 7,
+    "root_safe": true,
+    "root_mobility": 60,
+    "subroots_passed": 60,
+    "union_missing": 0,
+    "union_extra": 0,
+    "rows_sorted_unique": true,
+    "terminal_range": [
+     13,
+     17
+    ],
+    "visited_states_across_subroots": 102474,
+    "loser_reply_edges": 92383,
+    "terminal_count": 15885
+   }
+  },
+  {
+   "bit": 20,
+   "root_hex": "00000000000100809002000000100800",
+   "repo_path": "class2-lane-cost70g-certificates/bit20-root-00000000000100809002000000100800.cert",
+   "repo_blob_sha": "b2a83239066c35944c281823b9b3ebb77f94815e",
+   "strategy_rows": 16902,
+   "extraction_nodes": 512110,
+   "extraction_ms": 8982,
+   "loser_first_moves": 46,
+   "verify": {
+    "root_stones": 7,
+    "root_safe": true,
+    "root_mobility": 46,
+    "subroots_passed": 46,
+    "union_missing": 0,
+    "union_extra": 0,
+    "rows_sorted_unique": true,
+    "terminal_range": [
+     13,
+     17
+    ],
+    "visited_states_across_subroots": 38438,
+    "loser_reply_edges": 35277,
+    "terminal_count": 5695
+   }
+  },
+  {
+   "bit": 29,
+   "root_hex": "00000000000100809002000020000800",
+   "repo_path": "class2-lane-cost70g-certificates/bit29-root-00000000000100809002000020000800.cert",
+   "repo_blob_sha": "bab4338b0a17ca93425f4e846d3e0995efa71f99",
+   "strategy_rows": 44195,
+   "extraction_nodes": 6152408,
+   "extraction_ms": 53379,
+   "loser_first_moves": 54,
+   "verify": {
+    "root_stones": 7,
+    "root_safe": true,
+    "root_mobility": 54,
+    "subroots_passed": 54,
+    "union_missing": 0,
+    "union_extra": 0,
+    "rows_sorted_unique": true,
+    "terminal_range": [
+     13,
+     17
+    ],
+    "visited_states_across_subroots": 99654,
+    "loser_reply_edges": 91511,
+    "terminal_count": 14967
+   }
+  },
+  {
+   "bit": 34,
+   "root_hex": "00000000000100809002000400000800",
+   "repo_path": "class2-lane-cost70g-certificates/bit34-root-00000000000100809002000400000800.cert",
+   "repo_blob_sha": "e95fcaf5becc9dadacd9c382c57b1faaf395d8b6",
+   "strategy_rows": 56345,
+   "extraction_nodes": 7359406,
+   "extraction_ms": 55069,
+   "loser_first_moves": 63,
+   "verify": {
+    "root_stones": 7,
+    "root_safe": true,
+    "root_mobility": 63,
+    "subroots_passed": 63,
+    "union_missing": 0,
+    "union_extra": 0,
+    "rows_sorted_unique": true,
+    "terminal_range": [
+     13,
+     17
+    ],
+    "visited_states_across_subroots": 115931,
+    "loser_reply_edges": 104901,
+    "terminal_count": 17849
+   }
+  },
+  {
+   "bit": 62,
+   "root_hex": "0000000000010080d002000000000800",
+   "repo_path": "class2-lane-cost70g-certificates/bit62-root-0000000000010080d002000000000800.cert",
+   "repo_blob_sha": "1c023a37bebd87ca3a5a86dc39663e743d1d66fa",
+   "strategy_rows": 26591,
+   "extraction_nodes": 1155484,
+   "extraction_ms": 13100,
+   "loser_first_moves": 51,
+   "verify": {
+    "root_stones": 7,
+    "root_safe": true,
+    "root_mobility": 51,
+    "subroots_passed": 51,
+    "union_missing": 0,
+    "union_extra": 0,
+    "rows_sorted_unique": true,
+    "terminal_range": [
+     13,
+     17
+    ],
+    "visited_states_across_subroots": 56806,
+    "loser_reply_edges": 52248,
+    "terminal_count": 8166
+   }
+  },
+  {
+   "bit": 70,
+   "root_hex": "00000000000100c09002000000000800",
+   "repo_path": "class2-lane-cost70g-certificates/bit70-root-00000000000100c09002000000000800.cert",
+   "repo_blob_sha": "d522d9ebcddd30483eaa2ee60f24a1cee8e1273e",
+   "strategy_rows": 19456,
+   "extraction_nodes": 476835,
+   "extraction_ms": 10302,
+   "loser_first_moves": 49,
+   "verify": {
+    "root_stones": 7,
+    "root_safe": true,
+    "root_mobility": 49,
+    "subroots_passed": 49,
+    "union_missing": 0,
+    "union_extra": 0,
+    "rows_sorted_unique": true,
+    "terminal_range": [
+     13,
+     17
+    ],
+    "visited_states_across_subroots": 45395,
+    "loser_reply_edges": 41826,
+    "terminal_count": 6618
+   }
+  },
+  {
+   "bit": 76,
+   "root_hex": "00000000000110809002000000000800",
+   "repo_path": "class2-lane-cost70g-certificates/bit76-root-00000000000110809002000000000800.cert",
+   "repo_blob_sha": "63a6c8b4667ae8a96086d986607891716a021477",
+   "strategy_rows": 45917,
+   "extraction_nodes": 4205108,
+   "extraction_ms": 19350,
+   "loser_first_moves": 55,
+   "verify": {
+    "root_stones": 7,
+    "root_safe": true,
+    "root_mobility": 55,
+    "subroots_passed": 55,
+    "union_missing": 0,
+    "union_extra": 0,
+    "rows_sorted_unique": true,
+    "terminal_range": [
+     13,
+     17
+    ],
+    "visited_states_across_subroots": 97634,
+    "loser_reply_edges": 90276,
+    "terminal_count": 14094
+   }
+  },
+  {
+   "bit": 119,
+   "root_hex": "00800000000100809002000000000800",
+   "repo_path": "class2-lane-cost70g-certificates/bit119-root-00800000000100809002000000000800.cert",
+   "repo_blob_sha": "b5a4297977595a6f11ef21995135f4b2cbe31b78",
+   "strategy_rows": 41408,
+   "extraction_nodes": 4934675,
+   "extraction_ms": 41197,
+   "loser_first_moves": 56,
+   "verify": {
+    "root_stones": 7,
+    "root_safe": true,
+    "root_mobility": 56,
+    "subroots_passed": 56,
+    "union_missing": 0,
+    "union_extra": 0,
+    "rows_sorted_unique": true,
+    "terminal_range": [
+     13,
+     17
+    ],
+    "visited_states_across_subroots": 89094,
+    "loser_reply_edges": 79274,
+    "terminal_count": 14119
+   }
+  }
+ ],
+ "totals": {
+  "strategy_rows": 302270,
+  "extraction_nodes": 31812232,
+  "roots": 8
+ },
+ "all_verify_pass": true,
+ "fold_status": "PENDING (see class2-lane-cost70g-sweep-20261115.json): receipts fold waits on the parallel cost-70f sweep and the head-1227-based cost-65l fold reconciliation",
+ "unknown_status": "11x11 empty board: UNKNOWN. All 8 certificates prove only individual 7-stone roots within depth 10.",
+ "status": "completed"
+}

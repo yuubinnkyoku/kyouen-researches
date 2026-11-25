@@ -1,0 +1,235 @@
+{
+ "schema": "n11-class2-lane-cost69j-raw-sweep-audit-20261117-v1",
+ "date": "2026-11-17",
+ "status": "all checks passed; 6 WIN7-D10 + 63 REFUTED-D10, 0 capped; 11x11 UNKNOWN",
+ "target": {
+  "s5": "00000000000000403800000008000000",
+  "s6_child": "00000000000000403800000008000020",
+  "legal_candidate_count": 69,
+  "canonical_head_at_sweep": "1472/174/6376/504672/4649/368586",
+  "selection": "head-1472 presweep census v4 selected target (cheapest unswept/unclaimed row of the primary family, dual-use c1=1/c2=1 demand)"
+ },
+ "pilot_checks": {
+  "batches": 10,
+  "pilot_nodes_each": 3402,
+  "all_exact": true
+ },
+ "verdicts": {
+  "win7_d10_bits": [
+   1,
+   52,
+   75,
+   109,
+   110,
+   114
+  ],
+  "refuted_d10_bits": [
+   0,
+   2,
+   3,
+   8,
+   9,
+   10,
+   11,
+   13,
+   14,
+   17,
+   18,
+   19,
+   20,
+   21,
+   23,
+   31,
+   32,
+   33,
+   34,
+   42,
+   43,
+   44,
+   45,
+   46,
+   53,
+   54,
+   66,
+   68,
+   69,
+   74,
+   76,
+   77,
+   78,
+   79,
+   80,
+   83,
+   85,
+   86,
+   87,
+   88,
+   90,
+   91,
+   92,
+   95,
+   96,
+   98,
+   99,
+   100,
+   101,
+   102,
+   103,
+   105,
+   106,
+   107,
+   108,
+   111,
+   112,
+   113,
+   116,
+   117,
+   118,
+   119,
+   120
+  ],
+  "capped_count": 0,
+  "candidate_nodes": 69489347,
+  "total_nodes_including_pilots": 69523367,
+  "terminal_stone_range": [
+   13,
+   17
+  ],
+  "heaviest_bits": [
+   [
+    4814694,
+    8
+   ],
+   [
+    4540327,
+    1
+   ],
+   [
+    4432592,
+    109
+   ],
+   [
+    3362944,
+    0
+   ],
+   [
+    3337412,
+    114
+   ]
+  ]
+ },
+ "confirmation_bits": {
+  "bits": [
+   13,
+   17,
+   19,
+   20,
+   91,
+   95,
+   103,
+   108,
+   111,
+   119
+  ],
+  "verdicts": {
+   "13": "REFUTED-D10",
+   "17": "REFUTED-D10",
+   "19": "REFUTED-D10",
+   "20": "REFUTED-D10",
+   "91": "REFUTED-D10",
+   "95": "REFUTED-D10",
+   "103": "REFUTED-D10",
+   "108": "REFUTED-D10",
+   "111": "REFUTED-D10",
+   "119": "REFUTED-D10"
+  },
+  "claim_expected_agreement": "10/10",
+  "sources": {
+   "13": "v1 harvest transfer (head-1452 census bit table status harvested_refuted)",
+   "17": "v1 harvest transfer (head-1452 census bit table status harvested_refuted)",
+   "19": "v1 harvest transfer (head-1452 census bit table status harvested_refuted)",
+   "20": "cost-64h orbit transfer (64h bit 5, 254303 nodes, v16 raw batch map)",
+   "91": "v1 harvest transfer (head-1452 census bit table status harvested_refuted)",
+   "95": "v1 harvest transfer (head-1452 census bit table status harvested_refuted)",
+   "103": "cost-66i orbit transfer (66i bit 55, 386992 nodes, v17 raw batch map)",
+   "108": "cost-66j orbit transfer (66j bit 65, 139240 nodes, v17 raw batch map)",
+   "111": "v1 harvest transfer (head-1452 census bit table status harvested_refuted)",
+   "119": "v1 harvest transfer (head-1452 census bit table status harvested_refuted)"
+  },
+  "orbit_transfer_map_checks": {
+   "bit20_canon_in_64h_map": "REFUTED-D10",
+   "bit103_canon_in_66i_map": "REFUTED-D10",
+   "bit108_canon_in_66j_map": "REFUTED-D10"
+  },
+  "v1_harvest_status_agreement": "7/7 harvested_refuted in the head-1452 census v1 bit table",
+  "note": "bit 20's root canon carries REFUTED-D10 in the rebuilt cost-64h map (64h bit 5, 254303 nodes here = exact node count match); bit 103 in the 66i map (66i bit 55); bit 108 in the 66j map (66j bit 65); all re-run fresh and agreeing"
+ },
+ "determinism_rerun": {
+  "batches": [
+   1,
+   7
+  ],
+  "batch1_note": "contains WIN bit 1",
+  "batch7_note": "contains WIN bits 109/110",
+  "field_identical_non_ms": true
+ },
+ "v15_cross_engine_check": {
+  "engine": "v15 (blob 8744fc65b6b7cac6bd561403ce4c749e01c51359)",
+  "pilot_nodes_each": 5949,
+  "win_bit_agreement": "6/6",
+  "capped": 0
+ },
+ "canon_checks": {
+  "child_stones_bit_indices": [
+   5,
+   27,
+   59,
+   60,
+   61,
+   70
+  ],
+  "transfer_canons_match_claim": "10/10",
+  "v1_bit_table_canons_match": "69/69",
+  "internal_canon_collisions": {}
+ },
+ "cross_source_conflict_scan": {
+  "sources": [
+   "cost64h raw batches 1-8",
+   "cost76c v17 raw batches 1-10",
+   "cost66i raw batches 1-9",
+   "cost66j raw batches 1-9",
+   "cost64h fold prereg receipts"
+  ],
+  "conflicts": 0,
+  "win_refuted_agreements": {
+   "refuted_bits_also_refuted_in_cost64h": [
+    20
+   ],
+   "win_bits_also_win_in_cost64h": [],
+   "refuted_bits_also_refuted_in_cost76c": [],
+   "win_bits_also_win_in_cost76c": [],
+   "refuted_bits_also_refuted_in_cost66i": [
+    103
+   ],
+   "win_bits_also_win_in_cost66i": [],
+   "refuted_bits_also_refuted_in_cost66j": [
+    108
+   ],
+   "win_bits_also_win_in_cost66j": []
+  },
+  "note": "no 69j canon carries contradictory verdicts across the 64h/76c/66i/66j maps; no 69j WIN canon is already folded in the landed 64h receipts"
+ },
+ "raw_batch_pins": {
+  "batch1": "1cc2ee6080dee5c9242132c38a8bc7148ff4f3e2",
+  "batch2": "1b789fe3e13e5dc07cece634a7e020b09704267e",
+  "batch3": "53958049988f2af965613330a447e889f2334a71",
+  "batch4": "8eb7f519114506fa0f03e35b6458ca52f8dd7b6b",
+  "batch5": "fa941b4a9a53fc1fe0e37ef4a85fd3fc1d19a4c7",
+  "batch6": "d95c87903c4c19b7d6d84c42ff57e6826622db1b",
+  "batch7": "c0a574a1beee4522e2b10d12de9cca6c142d9da1",
+  "batch8": "feaa2d78ac5a11f772a649b7f13865abe2aa743c",
+  "batch9": "a0e1a8ee462502bc71f0b9fc680bf3bec66d0259",
+  "batch10": "3071af1077afda5a32fe0f01907a9f0b00faa1d1"
+ },
+ "interpretation_guard": "engine bookkeeping audit only; WIN7-D10 proves a first-player win within depth 10 from the individual 7-stone root only; REFUTED-D10 is not a LOSS proof; no manifest row is closed by this audit; the receipt fold of this row stays behind the pending 76c/66i/66j folds; the 11x11 empty board, two-stone roots {49,60} and {59,60}, S2 {59,60}, and classes 1/2/4 all remain UNKNOWN"
+}

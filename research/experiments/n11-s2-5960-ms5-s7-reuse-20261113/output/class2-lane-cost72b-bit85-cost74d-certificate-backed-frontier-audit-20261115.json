@@ -1,0 +1,58 @@
+{
+  "schema": "n11-class2-cost72b-bit85-cost74d-certificate-backed-frontier-audit-20261115-v1",
+  "date": "2026-11-15",
+  "source_main_before_audit": "392197b77610865199e48db68d050a3b61f004ad",
+  "frontier_receipts": {
+    "before": {
+      "solved_s6_in_manifest": 1163,
+      "remaining_s5_orbits": 175,
+      "unique_remaining_s6": 6684,
+      "sum_remaining_cost": 527280,
+      "s6_needed_by_open_classes": 4954,
+      "cost_needed_by_open_classes": 391003
+    },
+    "after": {
+      "solved_s6_in_manifest": 1179,
+      "remaining_s5_orbits": 175,
+      "unique_remaining_s6": 6668,
+      "sum_remaining_cost": 526075,
+      "s6_needed_by_open_classes": 4938,
+      "cost_needed_by_open_classes": 389798
+    },
+    "new_s6_manifest_orbits": 16,
+    "receipt_count": 15,
+    "marginal_s6_total": 76
+  },
+  "cost72b_bit85_certificate": {
+    "root_hex": "00000000002000809102000002000000",
+    "rows": 40352,
+    "sub_roots_pass": 55,
+    "git_blob_sha": "c99ef87964f4770e7dab365ea42ad070b8c6495d"
+  },
+  "cost74d_bit91_candidate": {
+    "root_hex": "00000000080000809102020000000000",
+    "v15_loss": true,
+    "v15_nodes": 5415122
+  },
+  "d4": {
+    "transform_index": 5,
+    "coordinate_map": "(x,y)->(x,10-y)",
+    "canonical_root_hex": "00000000000080811202000020000000",
+    "same_parent_orbits": true
+  },
+  "certificate_backed_new_s6_manifest_orbits": [
+    "00000000000000809102000002000000",
+    "00000000000000809102020000000000",
+    "00000000000080003800000028000000"
+  ],
+  "certificate_backed_delta": 3,
+  "certificate_backed_lower_bound": 1166,
+  "receipt_frontier": 1179,
+  "bit118_local_certificate": {
+    "independently_verified": true,
+    "marginal_in_manifest": 0,
+    "rows": 28719,
+    "sub_roots": 50
+  },
+  "interpretation_guard": "Receipt frontier 1179 is not a count of independently certified S6 positions. Cost72b bit85 backs three of the 16 new S6 manifest orbits, giving a certificate-backed lower bound of 1166 from the 1163 baseline. The other new receipt orbits are not classified by this audit. Fold all 13 cost72b certificates on head 1179 with D4 deduplication. Empty 11x11, two-stone roots, S2, class2 and class4 remain UNKNOWN."
+}

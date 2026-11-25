@@ -1,0 +1,62 @@
+{
+ "schema": "n11-class2-lane-cost66j-published-bytes-verification-20261117-v1",
+ "date": "2026-11-17",
+ "status": "all nine cost66j certificates re-downloaded from the raw CDN after publication and md5-verified against the record: 9/9 match; split parts recombined with cat before hashing",
+ "checks": [
+  {
+   "bit": 7,
+   "root": "00000000000000c09002000000001080",
+   "md5": "49c508376204255d24efc87f4d2c6d11",
+   "match": true
+  },
+  {
+   "bit": 9,
+   "root": "00000000000000c09002000000001200",
+   "md5": "3b188baa01a8b8062c6c844e15263441",
+   "match": true
+  },
+  {
+   "bit": 30,
+   "root": "00000000000000c09002000040001000",
+   "md5": "263213590646a64baff575b26e236be3",
+   "match": true
+  },
+  {
+   "bit": 66,
+   "root": "00000000000000c49002000000001000",
+   "md5": "9697537f51a2b61777f8ab2114d1ec90",
+   "match": true
+  },
+  {
+   "bit": 78,
+   "root": "00000000000040c09002000000001000",
+   "md5": "5a578e3b7d48296734022b1f338dfc77",
+   "match": true
+  },
+  {
+   "bit": 79,
+   "root": "00000000000080c09002000000001000",
+   "md5": "894c2111b494f7a9f646c23bf1018ada",
+   "match": true
+  },
+  {
+   "bit": 92,
+   "root": "00000000100000c09002000000001000",
+   "md5": "762e2fc392fc0a62657ed2b725aaf829",
+   "match": true
+  },
+  {
+   "bit": 96,
+   "root": "00000001000000c09002000000001000",
+   "md5": "8296c333728511fd470e2ac201671876",
+   "match": true
+  },
+  {
+   "bit": 114,
+   "root": "00040000000000c09002000000001000",
+   "md5": "70eaf137461c20b9dc54104269b0d6cd",
+   "match": true
+  }
+ ],
+ "interpretation_guard": "byte-identity bookkeeping only; no verdict, no manifest row and no frontier number is changed by this check; the 11x11 empty board, the two-stone roots {49,60} and {59,60}, S2 {59,60} and classes 1/2/4 all remain UNKNOWN"
+}

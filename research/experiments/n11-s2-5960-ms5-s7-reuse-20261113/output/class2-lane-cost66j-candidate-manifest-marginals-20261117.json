@@ -1,0 +1,788 @@
+{
+  "basis": {
+    "baseline_receipt_roots": [
+      "00000000040000003800080008080000",
+      "00000000040000003802080008000000",
+      "00000000040000809002002000004000",
+      "00000000040000a09002000000004000"
+    ],
+    "head_at_projection": [
+      1472,
+      174,
+      6376,
+      504672,
+      4649,
+      368586
+    ],
+    "head_source": "head-1450 basis (771 roots, published tool) + the four baseline receipt roots + the 23 landed cost64h receipt roots; the tool reproduces the landed fold receipt's published frontier_after_cost64h numbers exactly (1472/174/6376/504672/4649/368586)",
+    "landed_cost64h_receipt_roots": [
+      "00000000000000403800000008100010",
+      "00000000000000403800000008100040",
+      "00000000000000403800000008100100",
+      "00000000000000403800000208100000",
+      "00000000000000403800004008100000",
+      "00000000000000403800040008100000",
+      "00000000000000403800100008100000",
+      "00000000000000403802000008100000",
+      "00000000000000503800000008100000",
+      "00000000000004403800000008100000",
+      "00000000000010403800000008100000",
+      "00000000000020403800000008100000",
+      "00000000000040403800000008100000",
+      "00000000000080403800000008100000",
+      "00000000000800403800000008100000",
+      "00000000020000403800000008100000",
+      "00000000080000403800000008100000",
+      "00000020000000403800000008100000",
+      "00002000000000403800000008100000",
+      "00020000000000403800000008100000",
+      "00040000000000403800000008100000",
+      "00100000000000403800000008100000",
+      "01000000000000403800000008100000"
+    ],
+    "manifest_rows": 7867,
+    "pending_folds_note": "the cost64h fold has LANDED (20 rows closed, head 1472). The cost-76c fold (row 00000000010000809002000001000000, parallel lane, bit 61 certificate in flight) and the cost-66i receipt fold (9 candidates) had NOT landed on main at audit time; projections are made at the head-1472 baseline and the overlaps are accounted separately per candidate"
+  },
+  "candidate_cover_union": {
+    "candidate_count": 9,
+    "child_orbit_covered_by_all_nine": true,
+    "child_orbit_in_manifest": true,
+    "distinct_d4_s6_orbits": 55,
+    "manifest_intersection": 19,
+    "new_manifest_orbits_if_all_nine_are_folded": 7,
+    "new_non_manifest_orbits_if_all_nine_are_folded": 36,
+    "new_orbits_if_all_nine_are_folded": 43,
+    "outside_manifest_orbits": 36,
+    "pairwise_shared_orbits_beyond_child": [
+      {
+        "bits": [
+          7,
+          9
+        ],
+        "shared_orbits": [
+          "00000000000000c09002000000001000"
+        ]
+      },
+      {
+        "bits": [
+          7,
+          30
+        ],
+        "shared_orbits": [
+          "00000000000000c09002000000001000"
+        ]
+      },
+      {
+        "bits": [
+          7,
+          66
+        ],
+        "shared_orbits": [
+          "00000000000000c09002000000001000"
+        ]
+      },
+      {
+        "bits": [
+          7,
+          78
+        ],
+        "shared_orbits": [
+          "00000000000000c09002000000001000"
+        ]
+      },
+      {
+        "bits": [
+          7,
+          79
+        ],
+        "shared_orbits": [
+          "00000000000000c09002000000001000"
+        ]
+      },
+      {
+        "bits": [
+          7,
+          92
+        ],
+        "shared_orbits": [
+          "00000000000000c09002000000001000"
+        ]
+      },
+      {
+        "bits": [
+          7,
+          96
+        ],
+        "shared_orbits": [
+          "00000000000000c09002000000001000"
+        ]
+      },
+      {
+        "bits": [
+          7,
+          114
+        ],
+        "shared_orbits": [
+          "00000000000000c09002000000001000"
+        ]
+      },
+      {
+        "bits": [
+          9,
+          30
+        ],
+        "shared_orbits": [
+          "00000000000000c09002000000001000"
+        ]
+      },
+      {
+        "bits": [
+          9,
+          66
+        ],
+        "shared_orbits": [
+          "00000000000000c09002000000001000"
+        ]
+      },
+      {
+        "bits": [
+          9,
+          78
+        ],
+        "shared_orbits": [
+          "00000000000000c09002000000001000"
+        ]
+      },
+      {
+        "bits": [
+          9,
+          79
+        ],
+        "shared_orbits": [
+          "00000000000000c09002000000001000"
+        ]
+      },
+      {
+        "bits": [
+          9,
+          92
+        ],
+        "shared_orbits": [
+          "00000000000000c09002000000001000"
+        ]
+      },
+      {
+        "bits": [
+          9,
+          96
+        ],
+        "shared_orbits": [
+          "00000000000000c09002000000001000"
+        ]
+      },
+      {
+        "bits": [
+          9,
+          114
+        ],
+        "shared_orbits": [
+          "00000000000000c09002000000001000"
+        ]
+      },
+      {
+        "bits": [
+          30,
+          66
+        ],
+        "shared_orbits": [
+          "00000000000000c09002000000001000"
+        ]
+      },
+      {
+        "bits": [
+          30,
+          78
+        ],
+        "shared_orbits": [
+          "00000000000000c09002000000001000"
+        ]
+      },
+      {
+        "bits": [
+          30,
+          79
+        ],
+        "shared_orbits": [
+          "00000000000000c09002000000001000"
+        ]
+      },
+      {
+        "bits": [
+          30,
+          92
+        ],
+        "shared_orbits": [
+          "00000000000000c09002000000001000"
+        ]
+      },
+      {
+        "bits": [
+          30,
+          96
+        ],
+        "shared_orbits": [
+          "00000000000000c09002000000001000"
+        ]
+      },
+      {
+        "bits": [
+          30,
+          114
+        ],
+        "shared_orbits": [
+          "00000000000000c09002000000001000"
+        ]
+      },
+      {
+        "bits": [
+          66,
+          78
+        ],
+        "shared_orbits": [
+          "00000000000000c09002000000001000"
+        ]
+      },
+      {
+        "bits": [
+          66,
+          79
+        ],
+        "shared_orbits": [
+          "00000000000000c09002000000001000"
+        ]
+      },
+      {
+        "bits": [
+          66,
+          92
+        ],
+        "shared_orbits": [
+          "00000000000000c09002000000001000"
+        ]
+      },
+      {
+        "bits": [
+          66,
+          96
+        ],
+        "shared_orbits": [
+          "00000000000000c09002000000001000"
+        ]
+      },
+      {
+        "bits": [
+          66,
+          114
+        ],
+        "shared_orbits": [
+          "00000000000000c09002000000001000"
+        ]
+      },
+      {
+        "bits": [
+          78,
+          79
+        ],
+        "shared_orbits": [
+          "00000000000000c09002000000001000"
+        ]
+      },
+      {
+        "bits": [
+          78,
+          92
+        ],
+        "shared_orbits": [
+          "00000000000000c09002000000001000"
+        ]
+      },
+      {
+        "bits": [
+          78,
+          96
+        ],
+        "shared_orbits": [
+          "00000000000000c09002000000001000"
+        ]
+      },
+      {
+        "bits": [
+          78,
+          114
+        ],
+        "shared_orbits": [
+          "00000000000000c09002000000001000"
+        ]
+      },
+      {
+        "bits": [
+          79,
+          92
+        ],
+        "shared_orbits": [
+          "00000000000000c09002000000001000"
+        ]
+      },
+      {
+        "bits": [
+          79,
+          96
+        ],
+        "shared_orbits": [
+          "00000000000000c09002000000001000"
+        ]
+      },
+      {
+        "bits": [
+          79,
+          114
+        ],
+        "shared_orbits": [
+          "00000000000000c09002000000001000"
+        ]
+      },
+      {
+        "bits": [
+          92,
+          96
+        ],
+        "shared_orbits": [
+          "00000000000000c09002000000001000"
+        ]
+      },
+      {
+        "bits": [
+          92,
+          114
+        ],
+        "shared_orbits": [
+          "00000000000000c09002000000001000"
+        ]
+      },
+      {
+        "bits": [
+          96,
+          114
+        ],
+        "shared_orbits": [
+          "00000000000000c09002000000001000"
+        ]
+      }
+    ]
+  },
+  "combined_projection": {
+    "fold_order_bits": [
+      7,
+      9,
+      30,
+      66,
+      78,
+      79,
+      92,
+      96,
+      114
+    ],
+    "per_candidate_marginal": [
+      {
+        "bit": 7,
+        "marginal_d4_s6_orbits": 6,
+        "marginal_manifest_hexes": [
+          "00000000000000801202000000100008",
+          "00000000000000c09002000000001000"
+        ],
+        "marginal_manifest_rows": 2
+      },
+      {
+        "bit": 9,
+        "marginal_d4_s6_orbits": 6,
+        "marginal_manifest_hexes": [
+          "00000000000000403800000008200000",
+          "00000000000000801202000000100002"
+        ],
+        "marginal_manifest_rows": 2
+      },
+      {
+        "bit": 30,
+        "marginal_d4_s6_orbits": 5,
+        "marginal_manifest_hexes": [
+          "00000000000000801202000001100000"
+        ],
+        "marginal_manifest_rows": 1
+      },
+      {
+        "bit": 66,
+        "marginal_d4_s6_orbits": 5,
+        "marginal_manifest_hexes": [
+          "00000000000000849002000000001000"
+        ],
+        "marginal_manifest_rows": 1
+      },
+      {
+        "bit": 78,
+        "marginal_d4_s6_orbits": 4,
+        "marginal_manifest_hexes": [],
+        "marginal_manifest_rows": 0
+      },
+      {
+        "bit": 79,
+        "marginal_d4_s6_orbits": 4,
+        "marginal_manifest_hexes": [],
+        "marginal_manifest_rows": 0
+      },
+      {
+        "bit": 92,
+        "marginal_d4_s6_orbits": 4,
+        "marginal_manifest_hexes": [],
+        "marginal_manifest_rows": 0
+      },
+      {
+        "bit": 96,
+        "marginal_d4_s6_orbits": 5,
+        "marginal_manifest_hexes": [
+          "00000000040000801202000000100000"
+        ],
+        "marginal_manifest_rows": 1
+      },
+      {
+        "bit": 114,
+        "marginal_d4_s6_orbits": 4,
+        "marginal_manifest_hexes": [],
+        "marginal_manifest_rows": 0
+      }
+    ],
+    "projected_head": {
+      "cost_needed_by_open_classes": 368066,
+      "remaining_s5_orbits": 174,
+      "s6_needed_by_open_classes": 4642,
+      "solved_s6_in_manifest": 1479,
+      "sum_remaining_cost": 504152,
+      "unique_remaining_s6": 6369
+    }
+  },
+  "date": "2026-11-17",
+  "interpretation_guard": "This is a manifest-coverage projection over published receipt roots, the landed cost64h fold receipt and the published cost66j WIN7-D10 certificates only. No new certificate was extracted here, no new verdict was created, and no receipt fold was applied. REFUTED-D10 is not a LOSS proof. The standard 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, and classes 1/2/4 remain UNKNOWN.",
+  "pending_fold_accounting": {
+    "landed_cost64h_closed_rows": 20,
+    "pending_66i_row_count": 7,
+    "pending_66i_rows": [
+      "00000000000000003801000000808000",
+      "00000000000000801222000000080000",
+      "00000000000000801222000010000000",
+      "00000000000000801226000000000000",
+      "00000000000000889002000000020000",
+      "00000000000000889002000000200000",
+      "00000000000000889002000100000000"
+    ],
+    "pending_76c_row": "00000000010000809002000001000000",
+    "pending_76c_row_inside_66i_union": false
+  },
+  "recommendation": {
+    "caveat": "Extraction-node count is historical cost, not fold cost; the fold itself is pure bookkeeping. All nine candidates are WIN7-D10 with published, independently verified certificates, not LOSS proofs. The marginals are computed at the head-1472 baseline; after the pending cost-76c and cost-66i folds land, the shared rows drop out and the projection must be re-derived against the then-current canonical head before any 66j fold.",
+    "first_fold_priority_bit": 9,
+    "fold_priority_order": [
+      9,
+      96,
+      66,
+      7,
+      30,
+      114,
+      92,
+      79,
+      78
+    ],
+    "node_ratios_vs_cheapest": {
+      "114": 1.987703,
+      "30": 1.315813,
+      "66": 1.086256,
+      "7": 1.171156,
+      "78": 2.990971,
+      "79": 2.633309,
+      "9": 1.314185,
+      "92": 2.593334,
+      "96": 1.0
+    },
+    "role": "receipt-fold entry order only; certificate extraction is complete for all nine bits"
+  },
+  "schema": "n11-class2-lane-cost66j-candidate-manifest-marginals-20261117-v1",
+  "single_candidate_projections": [
+    {
+      "bit": 7,
+      "covers_d4_s6_orbits": 7,
+      "extraction_nodes": 7056394,
+      "extraction_nodes_relative_to_cheapest": 1.171156,
+      "marginal_d4_s6_orbits": 6,
+      "marginal_manifest_hexes": [
+        "00000000000000801202000000100008",
+        "00000000000000c09002000000001000"
+      ],
+      "marginal_manifest_rows": 2,
+      "marginal_manifest_rows_net_of_pending_folds": 2,
+      "md5": "49c508376204255d24efc87f4d2c6d11",
+      "new_non_manifest_marginal": 4,
+      "overlap_with_pending_66i_fold_rows": [],
+      "overlap_with_pending_76c_fold_rows": [],
+      "projected_head": {
+        "cost_needed_by_open_classes": 368439,
+        "remaining_s5_orbits": 174,
+        "s6_needed_by_open_classes": 4647,
+        "solved_s6_in_manifest": 1474,
+        "sum_remaining_cost": 504525,
+        "unique_remaining_s6": 6374
+      },
+      "raw_equals_canon": true,
+      "root_canon": "00000000000000c09002000000001080",
+      "root_hex": "00000000000000c09002000000001080",
+      "rows": 32244
+    },
+    {
+      "bit": 9,
+      "covers_d4_s6_orbits": 7,
+      "extraction_nodes": 7918168,
+      "extraction_nodes_relative_to_cheapest": 1.314185,
+      "marginal_d4_s6_orbits": 7,
+      "marginal_manifest_hexes": [
+        "00000000000000403800000008200000",
+        "00000000000000801202000000100002",
+        "00000000000000c09002000000001000"
+      ],
+      "marginal_manifest_rows": 3,
+      "marginal_manifest_rows_net_of_pending_folds": 3,
+      "md5": "3b188baa01a8b8062c6c844e15263441",
+      "new_non_manifest_marginal": 4,
+      "overlap_with_pending_66i_fold_rows": [],
+      "overlap_with_pending_76c_fold_rows": [],
+      "projected_head": {
+        "cost_needed_by_open_classes": 368363,
+        "remaining_s5_orbits": 174,
+        "s6_needed_by_open_classes": 4646,
+        "solved_s6_in_manifest": 1475,
+        "sum_remaining_cost": 504449,
+        "unique_remaining_s6": 6373
+      },
+      "raw_equals_canon": true,
+      "root_canon": "00000000000000c09002000000001200",
+      "root_hex": "00000000000000c09002000000001200",
+      "rows": 41044
+    },
+    {
+      "bit": 30,
+      "covers_d4_s6_orbits": 7,
+      "extraction_nodes": 7927973,
+      "extraction_nodes_relative_to_cheapest": 1.315813,
+      "marginal_d4_s6_orbits": 6,
+      "marginal_manifest_hexes": [
+        "00000000000000801202000001100000",
+        "00000000000000c09002000000001000"
+      ],
+      "marginal_manifest_rows": 2,
+      "marginal_manifest_rows_net_of_pending_folds": 2,
+      "md5": "263213590646a64baff575b26e236be3",
+      "new_non_manifest_marginal": 4,
+      "overlap_with_pending_66i_fold_rows": [],
+      "overlap_with_pending_76c_fold_rows": [],
+      "projected_head": {
+        "cost_needed_by_open_classes": 368449,
+        "remaining_s5_orbits": 174,
+        "s6_needed_by_open_classes": 4647,
+        "solved_s6_in_manifest": 1474,
+        "sum_remaining_cost": 504535,
+        "unique_remaining_s6": 6374
+      },
+      "raw_equals_canon": true,
+      "root_canon": "00000000000000c09002000040001000",
+      "root_hex": "00000000000000c09002000040001000",
+      "rows": 30377
+    },
+    {
+      "bit": 66,
+      "covers_d4_s6_orbits": 7,
+      "extraction_nodes": 6544859,
+      "extraction_nodes_relative_to_cheapest": 1.086256,
+      "marginal_d4_s6_orbits": 6,
+      "marginal_manifest_hexes": [
+        "00000000000000849002000000001000",
+        "00000000000000c09002000000001000"
+      ],
+      "marginal_manifest_rows": 2,
+      "marginal_manifest_rows_net_of_pending_folds": 2,
+      "md5": "9697537f51a2b61777f8ab2114d1ec90",
+      "new_non_manifest_marginal": 4,
+      "overlap_with_pending_66i_fold_rows": [],
+      "overlap_with_pending_76c_fold_rows": [],
+      "projected_head": {
+        "cost_needed_by_open_classes": 368443,
+        "remaining_s5_orbits": 174,
+        "s6_needed_by_open_classes": 4647,
+        "solved_s6_in_manifest": 1474,
+        "sum_remaining_cost": 504529,
+        "unique_remaining_s6": 6374
+      },
+      "raw_equals_canon": true,
+      "root_canon": "00000000000000c49002000000001000",
+      "root_hex": "00000000000000c49002000000001000",
+      "rows": 36340
+    },
+    {
+      "bit": 78,
+      "covers_d4_s6_orbits": 7,
+      "extraction_nodes": 18021058,
+      "extraction_nodes_relative_to_cheapest": 2.990971,
+      "marginal_d4_s6_orbits": 5,
+      "marginal_manifest_hexes": [
+        "00000000000000c09002000000001000"
+      ],
+      "marginal_manifest_rows": 1,
+      "marginal_manifest_rows_net_of_pending_folds": 1,
+      "md5": "5a578e3b7d48296734022b1f338dfc77",
+      "new_non_manifest_marginal": 4,
+      "overlap_with_pending_66i_fold_rows": [],
+      "overlap_with_pending_76c_fold_rows": [],
+      "projected_head": {
+        "cost_needed_by_open_classes": 368520,
+        "remaining_s5_orbits": 174,
+        "s6_needed_by_open_classes": 4648,
+        "solved_s6_in_manifest": 1473,
+        "sum_remaining_cost": 504606,
+        "unique_remaining_s6": 6375
+      },
+      "raw_equals_canon": true,
+      "root_canon": "00000000000040c09002000000001000",
+      "root_hex": "00000000000040c09002000000001000",
+      "rows": 46797
+    },
+    {
+      "bit": 79,
+      "covers_d4_s6_orbits": 7,
+      "extraction_nodes": 15866092,
+      "extraction_nodes_relative_to_cheapest": 2.633309,
+      "marginal_d4_s6_orbits": 5,
+      "marginal_manifest_hexes": [
+        "00000000000000c09002000000001000"
+      ],
+      "marginal_manifest_rows": 1,
+      "marginal_manifest_rows_net_of_pending_folds": 1,
+      "md5": "894c2111b494f7a9f646c23bf1018ada",
+      "new_non_manifest_marginal": 4,
+      "overlap_with_pending_66i_fold_rows": [],
+      "overlap_with_pending_76c_fold_rows": [],
+      "projected_head": {
+        "cost_needed_by_open_classes": 368520,
+        "remaining_s5_orbits": 174,
+        "s6_needed_by_open_classes": 4648,
+        "solved_s6_in_manifest": 1473,
+        "sum_remaining_cost": 504606,
+        "unique_remaining_s6": 6375
+      },
+      "raw_equals_canon": true,
+      "root_canon": "00000000000080c09002000000001000",
+      "root_hex": "00000000000080c09002000000001000",
+      "rows": 48677
+    },
+    {
+      "bit": 92,
+      "covers_d4_s6_orbits": 7,
+      "extraction_nodes": 15625233,
+      "extraction_nodes_relative_to_cheapest": 2.593334,
+      "marginal_d4_s6_orbits": 5,
+      "marginal_manifest_hexes": [
+        "00000000000000c09002000000001000"
+      ],
+      "marginal_manifest_rows": 1,
+      "marginal_manifest_rows_net_of_pending_folds": 1,
+      "md5": "762e2fc392fc0a62657ed2b725aaf829",
+      "new_non_manifest_marginal": 4,
+      "overlap_with_pending_66i_fold_rows": [],
+      "overlap_with_pending_76c_fold_rows": [],
+      "projected_head": {
+        "cost_needed_by_open_classes": 368520,
+        "remaining_s5_orbits": 174,
+        "s6_needed_by_open_classes": 4648,
+        "solved_s6_in_manifest": 1473,
+        "sum_remaining_cost": 504606,
+        "unique_remaining_s6": 6375
+      },
+      "raw_equals_canon": true,
+      "root_canon": "00000000100000c09002000000001000",
+      "root_hex": "00000000100000c09002000000001000",
+      "rows": 55684
+    },
+    {
+      "bit": 96,
+      "covers_d4_s6_orbits": 7,
+      "extraction_nodes": 6025153,
+      "extraction_nodes_relative_to_cheapest": 1.0,
+      "marginal_d4_s6_orbits": 6,
+      "marginal_manifest_hexes": [
+        "00000000000000c09002000000001000",
+        "00000000040000801202000000100000"
+      ],
+      "marginal_manifest_rows": 2,
+      "marginal_manifest_rows_net_of_pending_folds": 2,
+      "md5": "8296c333728511fd470e2ac201671876",
+      "new_non_manifest_marginal": 4,
+      "overlap_with_pending_66i_fold_rows": [],
+      "overlap_with_pending_76c_fold_rows": [],
+      "projected_head": {
+        "cost_needed_by_open_classes": 368452,
+        "remaining_s5_orbits": 174,
+        "s6_needed_by_open_classes": 4647,
+        "solved_s6_in_manifest": 1474,
+        "sum_remaining_cost": 504538,
+        "unique_remaining_s6": 6374
+      },
+      "raw_equals_canon": false,
+      "root_canon": "00000000040001801202000000100000",
+      "root_hex": "00000001000000c09002000000001000",
+      "rows": 30790
+    },
+    {
+      "bit": 114,
+      "covers_d4_s6_orbits": 7,
+      "extraction_nodes": 11976214,
+      "extraction_nodes_relative_to_cheapest": 1.987703,
+      "marginal_d4_s6_orbits": 5,
+      "marginal_manifest_hexes": [
+        "00000000000000c09002000000001000"
+      ],
+      "marginal_manifest_rows": 1,
+      "marginal_manifest_rows_net_of_pending_folds": 1,
+      "md5": "70eaf137461c20b9dc54104269b0d6cd",
+      "new_non_manifest_marginal": 4,
+      "overlap_with_pending_66i_fold_rows": [],
+      "overlap_with_pending_76c_fold_rows": [],
+      "projected_head": {
+        "cost_needed_by_open_classes": 368520,
+        "remaining_s5_orbits": 174,
+        "s6_needed_by_open_classes": 4648,
+        "solved_s6_in_manifest": 1473,
+        "sum_remaining_cost": 504606,
+        "unique_remaining_s6": 6375
+      },
+      "raw_equals_canon": false,
+      "root_canon": "00000000200000003801100000100000",
+      "root_hex": "00040000000000c09002000000001000",
+      "rows": 50871
+    }
+  ],
+  "source_blob_pins": {
+    "cost64h_fold_prereg": "5074a8a0cbb75fcc91b5b999a3135fac06d42400",
+    "cost64h_fold_receipt_landed": "1633be292f6f1862c895009eac29d398d0be7738",
+    "cost66i_candidate_marginals": "3343325ae7820d3531fd7b877accb86e39da28a3",
+    "cost66j_claim_v3": "eb08a2db780f2b23c09f07ef96d02c5e0ff772a5",
+    "cost66j_raw_audit": "6862eb2db71e087d7c17fec3a157eafc17bf46d3",
+    "fold_projection_head1450_tool": "49fcd8ae6706c075b39eea5b115b2a045c2950cf",
+    "head1472_postfold_audit": "1d77d809198f53ccac234d27b9a64ab08fb55ef3",
+    "head1472_presweep_v3": "3ee5703c8cabf738eaecefb17a759c78c4a34e61"
+  },
+  "status": "projection-audited; all nine certificates already extracted, independently verified and published; receipt fold pending behind the 76c/66i folds; no-fold"
+}

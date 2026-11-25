@@ -1,0 +1,49 @@
+{
+ "schema": "n11-class2-lane-cost68b-win7-certificates-20261114-v1",
+ "date": "2026-11-14",
+ "s6_child_hex": "00000000000000809082000040000000",
+ "s5_parent_hex": "00000000000000809082000000000000",
+ "s6_s7_edge_cost": 68,
+ "certificates": [
+  {
+   "bit": 23,
+   "root": "00000000000000809082000040800000",
+   "verdict": "WIN7",
+   "depth": 10,
+   "rows": 30623,
+   "extraction_nodes": 8447296,
+   "fbt_drops": 0,
+   "fatal": null,
+   "subroots": 49,
+   "subroots_pass": 49,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_stone_range": [13, 17],
+   "loser_mobility": 49,
+   "file": "n11_s7_00000000000000809082000040800000.cert",
+   "md5": "8abe922a2f07eb3dd464227985028811",
+   "sha256": "d74115ce9d0a9834080350d6d8a4b981fa884235ea6f129a7cf5a6ebcde8829e"
+  },
+  {
+   "bit": 118,
+   "root": "00400000000000809082000040000000",
+   "verdict": "WIN7",
+   "depth": 10,
+   "rows": 33285,
+   "extraction_nodes": 11292258,
+   "fbt_drops": 0,
+   "fatal": null,
+   "subroots": 52,
+   "subroots_pass": 52,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_stone_range": [13, 17],
+   "loser_mobility": 52,
+   "file": "n11_s7_00400000000000809082000040000000.cert",
+   "md5": "9400ac2d9ac6750fa86ea2eb5f5d8c74",
+   "sha256": "435f05da3dae14247161c4925d84149ac05966a549c81e9df4fc6f357cd9bc0e"
+  }
+ ],
+ "method": "blind extraction with class4_child1_cert_extractor_exact.ts (FBS=1<<20, probe96, empty kill table via cert_driver67.ts import), rows sorted -u before write, fbt_drops=0 on both; independent verification with verify_bit7_win7_cert.ts (Bareiss 4x4, engine-free): root-check loser mobility equals independent legal_candidates.py enumeration (49/52), all sub-roots PASS, union 0/0 both directions",
+ "note": "both roots are new (absent from all 149 roots in published WIN7 records on main; no cross-child reuse)"
+}

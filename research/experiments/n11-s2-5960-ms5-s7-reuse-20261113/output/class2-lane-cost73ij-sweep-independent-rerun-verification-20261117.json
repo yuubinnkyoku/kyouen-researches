@@ -1,0 +1,2702 @@
+{
+ "schema": "n11-class2-lane-cost73ij-sweep-independent-rerun-20261117-v1",
+ "date": "2026-11-17",
+ "status": "all checks passed; 73i 73/73 and 73j 73/73 candidate bits re-run node-exact against the published raw batches (18/18 batch pilots at 3402 nodes); win/refuted/capped lists and node totals identical to the published raw sweep audits; certificates for both children remain unpublished; 11x11 UNKNOWN",
+ "engine": {
+  "script": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/class4_child1_runner_v17.ts",
+  "git_blob_sha": "c132cc6425eee3feaeef1d697dd74f968cfedb59",
+  "verified_local_sha": "c132cc6425eee3feaeef1d697dd74f968cfedb59",
+  "depth": 10,
+  "cap": 1000000000,
+  "andclose": 1,
+  "node_binary": "node"
+ },
+ "targets": [
+  {
+   "target": "73i",
+   "child": "00000000000000403800400008000000",
+   "candidate_bits": 73,
+   "win7_d10_bits": [
+    1,
+    9,
+    11,
+    18,
+    29,
+    38,
+    54,
+    82,
+    97,
+    100,
+    110,
+    111
+   ],
+   "refuted_d10_bits_count": 61,
+   "capped_count": 0,
+   "candidate_nodes_total": 131402821,
+   "pilot_nodes_total": 30618,
+   "batches": 9,
+   "aggregates_vs_published_audit": {
+    "win7_d10_bits": {
+     "published": [
+      1,
+      9,
+      11,
+      18,
+      29,
+      38,
+      54,
+      82,
+      97,
+      100,
+      110,
+      111
+     ],
+     "rerun": [
+      1,
+      9,
+      11,
+      18,
+      29,
+      38,
+      54,
+      82,
+      97,
+      100,
+      110,
+      111
+     ],
+     "match": true
+    },
+    "refuted_d10_bits_count": {
+     "published": 61,
+     "rerun": 61,
+     "match": true
+    },
+    "capped_count": {
+     "published": 0,
+     "rerun": 0,
+     "match": true
+    },
+    "candidate_nodes_total": {
+     "published": 131402821,
+     "rerun": 131402821,
+     "match": true
+    },
+    "total_nodes_including_pilots": {
+     "published": 131433439,
+     "rerun": 131433439,
+     "match": true
+    },
+    "terminal_stone_range": {
+     "published": [
+      13,
+      17
+     ],
+     "rerun": [
+      13,
+      17
+     ],
+     "match": true
+    }
+   },
+   "per_bit": [
+    {
+     "batch": 1,
+     "bit": 0,
+     "loss": false,
+     "nodes": 659035,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 4430,
+     "matches_published": true
+    },
+    {
+     "batch": 1,
+     "bit": 1,
+     "loss": true,
+     "nodes": 2382530,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 19789,
+     "matches_published": true
+    },
+    {
+     "batch": 1,
+     "bit": 2,
+     "loss": false,
+     "nodes": 2770284,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 24906,
+     "matches_published": true
+    },
+    {
+     "batch": 1,
+     "bit": 3,
+     "loss": false,
+     "nodes": 2439983,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 22265,
+     "matches_published": true
+    },
+    {
+     "batch": 1,
+     "bit": 4,
+     "loss": false,
+     "nodes": 1396625,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 13316,
+     "matches_published": true
+    },
+    {
+     "batch": 1,
+     "bit": 6,
+     "loss": false,
+     "nodes": 545888,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 4511,
+     "matches_published": true
+    },
+    {
+     "batch": 1,
+     "bit": 8,
+     "loss": false,
+     "nodes": 963270,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 8877,
+     "matches_published": true
+    },
+    {
+     "batch": 1,
+     "bit": 9,
+     "loss": true,
+     "nodes": 2695330,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 23727,
+     "matches_published": true
+    },
+    {
+     "batch": 1,
+     "bit": 10,
+     "loss": false,
+     "nodes": 717801,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 6286,
+     "matches_published": true
+    },
+    {
+     "batch": 2,
+     "bit": 11,
+     "loss": true,
+     "nodes": 4117827,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 35405,
+     "matches_published": true
+    },
+    {
+     "batch": 2,
+     "bit": 14,
+     "loss": false,
+     "nodes": 1978668,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 16872,
+     "matches_published": true
+    },
+    {
+     "batch": 2,
+     "bit": 16,
+     "loss": false,
+     "nodes": 5678925,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 50120,
+     "matches_published": true
+    },
+    {
+     "batch": 2,
+     "bit": 17,
+     "loss": false,
+     "nodes": 390221,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 3893,
+     "matches_published": true
+    },
+    {
+     "batch": 2,
+     "bit": 18,
+     "loss": true,
+     "nodes": 2743068,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 25488,
+     "matches_published": true
+    },
+    {
+     "batch": 2,
+     "bit": 21,
+     "loss": false,
+     "nodes": 1487190,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 15525,
+     "matches_published": true
+    },
+    {
+     "batch": 2,
+     "bit": 24,
+     "loss": false,
+     "nodes": 2814535,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 27904,
+     "matches_published": true
+    },
+    {
+     "batch": 2,
+     "bit": 29,
+     "loss": true,
+     "nodes": 2554091,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 22686,
+     "matches_published": true
+    },
+    {
+     "batch": 2,
+     "bit": 31,
+     "loss": false,
+     "nodes": 5106804,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 47929,
+     "matches_published": true
+    },
+    {
+     "batch": 3,
+     "bit": 32,
+     "loss": false,
+     "nodes": 590303,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 5713,
+     "matches_published": true
+    },
+    {
+     "batch": 3,
+     "bit": 33,
+     "loss": false,
+     "nodes": 1022407,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 8970,
+     "matches_published": true
+    },
+    {
+     "batch": 3,
+     "bit": 34,
+     "loss": false,
+     "nodes": 5307830,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 42311,
+     "matches_published": true
+    },
+    {
+     "batch": 3,
+     "bit": 38,
+     "loss": true,
+     "nodes": 4611673,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 40707,
+     "matches_published": true
+    },
+    {
+     "batch": 3,
+     "bit": 41,
+     "loss": false,
+     "nodes": 2294072,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 22308,
+     "matches_published": true
+    },
+    {
+     "batch": 3,
+     "bit": 42,
+     "loss": false,
+     "nodes": 807792,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 7487,
+     "matches_published": true
+    },
+    {
+     "batch": 3,
+     "bit": 43,
+     "loss": false,
+     "nodes": 1327744,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 13209,
+     "matches_published": true
+    },
+    {
+     "batch": 3,
+     "bit": 44,
+     "loss": false,
+     "nodes": 2776606,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 27792,
+     "matches_published": true
+    },
+    {
+     "batch": 3,
+     "bit": 45,
+     "loss": false,
+     "nodes": 2213031,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 21809,
+     "matches_published": true
+    },
+    {
+     "batch": 4,
+     "bit": 54,
+     "loss": true,
+     "nodes": 6165892,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 53911,
+     "matches_published": true
+    },
+    {
+     "batch": 4,
+     "bit": 66,
+     "loss": false,
+     "nodes": 819294,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 7133,
+     "matches_published": true
+    },
+    {
+     "batch": 4,
+     "bit": 68,
+     "loss": false,
+     "nodes": 2262809,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 21360,
+     "matches_published": true
+    },
+    {
+     "batch": 4,
+     "bit": 74,
+     "loss": false,
+     "nodes": 1277619,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 11330,
+     "matches_published": true
+    },
+    {
+     "batch": 4,
+     "bit": 75,
+     "loss": false,
+     "nodes": 589414,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 4878,
+     "matches_published": true
+    },
+    {
+     "batch": 4,
+     "bit": 76,
+     "loss": false,
+     "nodes": 833290,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 8602,
+     "matches_published": true
+    },
+    {
+     "batch": 4,
+     "bit": 77,
+     "loss": false,
+     "nodes": 1548127,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 13298,
+     "matches_published": true
+    },
+    {
+     "batch": 4,
+     "bit": 78,
+     "loss": false,
+     "nodes": 6791073,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 62897,
+     "matches_published": true
+    },
+    {
+     "batch": 4,
+     "bit": 82,
+     "loss": true,
+     "nodes": 451877,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 3892,
+     "matches_published": true
+    },
+    {
+     "batch": 5,
+     "bit": 83,
+     "loss": false,
+     "nodes": 2711446,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 27013,
+     "matches_published": true
+    },
+    {
+     "batch": 5,
+     "bit": 85,
+     "loss": false,
+     "nodes": 2229955,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 22966,
+     "matches_published": true
+    },
+    {
+     "batch": 5,
+     "bit": 86,
+     "loss": false,
+     "nodes": 763495,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 8112,
+     "matches_published": true
+    },
+    {
+     "batch": 5,
+     "bit": 87,
+     "loss": false,
+     "nodes": 312968,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 2799,
+     "matches_published": true
+    },
+    {
+     "batch": 5,
+     "bit": 88,
+     "loss": false,
+     "nodes": 1522753,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 16218,
+     "matches_published": true
+    },
+    {
+     "batch": 5,
+     "bit": 89,
+     "loss": false,
+     "nodes": 273259,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 2593,
+     "matches_published": true
+    },
+    {
+     "batch": 5,
+     "bit": 90,
+     "loss": false,
+     "nodes": 334159,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 2068,
+     "matches_published": true
+    },
+    {
+     "batch": 5,
+     "bit": 91,
+     "loss": false,
+     "nodes": 421639,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 3615,
+     "matches_published": true
+    },
+    {
+     "batch": 5,
+     "bit": 92,
+     "loss": false,
+     "nodes": 810408,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 8080,
+     "matches_published": true
+    },
+    {
+     "batch": 6,
+     "bit": 95,
+     "loss": false,
+     "nodes": 1209569,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 11885,
+     "matches_published": true
+    },
+    {
+     "batch": 6,
+     "bit": 96,
+     "loss": false,
+     "nodes": 773965,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 7776,
+     "matches_published": true
+    },
+    {
+     "batch": 6,
+     "bit": 97,
+     "loss": true,
+     "nodes": 2126477,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 19502,
+     "matches_published": true
+    },
+    {
+     "batch": 6,
+     "bit": 98,
+     "loss": false,
+     "nodes": 2159490,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 17717,
+     "matches_published": true
+    },
+    {
+     "batch": 6,
+     "bit": 99,
+     "loss": false,
+     "nodes": 626622,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 5295,
+     "matches_published": true
+    },
+    {
+     "batch": 6,
+     "bit": 100,
+     "loss": true,
+     "nodes": 1912418,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 16281,
+     "matches_published": true
+    },
+    {
+     "batch": 6,
+     "bit": 101,
+     "loss": false,
+     "nodes": 184771,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 1426,
+     "matches_published": true
+    },
+    {
+     "batch": 6,
+     "bit": 102,
+     "loss": false,
+     "nodes": 1641466,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 13970,
+     "matches_published": true
+    },
+    {
+     "batch": 6,
+     "bit": 105,
+     "loss": false,
+     "nodes": 2359254,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 20697,
+     "matches_published": true
+    },
+    {
+     "batch": 7,
+     "bit": 106,
+     "loss": false,
+     "nodes": 1708873,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 18921,
+     "matches_published": true
+    },
+    {
+     "batch": 7,
+     "bit": 107,
+     "loss": false,
+     "nodes": 317021,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 2590,
+     "matches_published": true
+    },
+    {
+     "batch": 7,
+     "bit": 109,
+     "loss": false,
+     "nodes": 359012,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 3186,
+     "matches_published": true
+    },
+    {
+     "batch": 7,
+     "bit": 110,
+     "loss": true,
+     "nodes": 3000226,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 25903,
+     "matches_published": true
+    },
+    {
+     "batch": 7,
+     "bit": 111,
+     "loss": true,
+     "nodes": 2565283,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 22296,
+     "matches_published": true
+    },
+    {
+     "batch": 7,
+     "bit": 112,
+     "loss": false,
+     "nodes": 403462,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 3285,
+     "matches_published": true
+    },
+    {
+     "batch": 7,
+     "bit": 113,
+     "loss": false,
+     "nodes": 3034302,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 29218,
+     "matches_published": true
+    },
+    {
+     "batch": 7,
+     "bit": 114,
+     "loss": false,
+     "nodes": 741747,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 6475,
+     "matches_published": true
+    },
+    {
+     "batch": 7,
+     "bit": 115,
+     "loss": false,
+     "nodes": 454623,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 4036,
+     "matches_published": true
+    },
+    {
+     "batch": 8,
+     "bit": 116,
+     "loss": false,
+     "nodes": 1624740,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 14595,
+     "matches_published": true
+    },
+    {
+     "batch": 8,
+     "bit": 117,
+     "loss": false,
+     "nodes": 2129146,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 19684,
+     "matches_published": true
+    },
+    {
+     "batch": 8,
+     "bit": 118,
+     "loss": false,
+     "nodes": 485956,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 4193,
+     "matches_published": true
+    },
+    {
+     "batch": 8,
+     "bit": 119,
+     "loss": false,
+     "nodes": 845557,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 7115,
+     "matches_published": true
+    },
+    {
+     "batch": 8,
+     "bit": 120,
+     "loss": false,
+     "nodes": 5428598,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 49312,
+     "matches_published": true
+    },
+    {
+     "batch": 9,
+     "bit": 5,
+     "loss": false,
+     "nodes": 407704,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 3501,
+     "matches_published": true
+    },
+    {
+     "batch": 9,
+     "bit": 13,
+     "loss": false,
+     "nodes": 490691,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 4004,
+     "matches_published": true
+    },
+    {
+     "batch": 9,
+     "bit": 20,
+     "loss": false,
+     "nodes": 442634,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 3979,
+     "matches_published": true
+    },
+    {
+     "batch": 9,
+     "bit": 103,
+     "loss": false,
+     "nodes": 788659,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 6710,
+     "matches_published": true
+    },
+    {
+     "batch": 9,
+     "bit": 108,
+     "loss": false,
+     "nodes": 667545,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 5420,
+     "matches_published": true
+    }
+   ]
+  },
+  {
+   "target": "73j",
+   "child": "00000000000000403800000408000000",
+   "candidate_bits": 73,
+   "win7_d10_bits": [
+    0,
+    1,
+    6,
+    29,
+    44,
+    49,
+    52,
+    69,
+    74,
+    82,
+    87,
+    91,
+    98,
+    100,
+    110,
+    118
+   ],
+   "refuted_d10_bits_count": 57,
+   "capped_count": 0,
+   "candidate_nodes_total": 168445380,
+   "pilot_nodes_total": 30618,
+   "batches": 9,
+   "aggregates_vs_published_audit": {
+    "win7_d10_bits": {
+     "published": [
+      0,
+      1,
+      6,
+      29,
+      44,
+      49,
+      52,
+      69,
+      74,
+      82,
+      87,
+      91,
+      98,
+      100,
+      110,
+      118
+     ],
+     "rerun": [
+      0,
+      1,
+      6,
+      29,
+      44,
+      49,
+      52,
+      69,
+      74,
+      82,
+      87,
+      91,
+      98,
+      100,
+      110,
+      118
+     ],
+     "match": true
+    },
+    "refuted_d10_bits_count": {
+     "published": 57,
+     "rerun": 57,
+     "match": true
+    },
+    "capped_count": {
+     "published": 0,
+     "rerun": 0,
+     "match": true
+    },
+    "candidate_nodes_total": {
+     "published": 168445380,
+     "rerun": 168445380,
+     "match": true
+    },
+    "total_nodes_including_pilots": {
+     "published": 168475998,
+     "rerun": 168475998,
+     "match": true
+    },
+    "terminal_stone_range": {
+     "published": [
+      13,
+      17
+     ],
+     "rerun": [
+      13,
+      17
+     ],
+     "match": true
+    }
+   },
+   "per_bit": [
+    {
+     "batch": 1,
+     "bit": 0,
+     "loss": true,
+     "nodes": 2017323,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 17183,
+     "matches_published": true
+    },
+    {
+     "batch": 1,
+     "bit": 1,
+     "loss": true,
+     "nodes": 3423188,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 30408,
+     "matches_published": true
+    },
+    {
+     "batch": 1,
+     "bit": 2,
+     "loss": false,
+     "nodes": 6625640,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 63998,
+     "matches_published": true
+    },
+    {
+     "batch": 1,
+     "bit": 3,
+     "loss": false,
+     "nodes": 11476946,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 103250,
+     "matches_published": true
+    },
+    {
+     "batch": 1,
+     "bit": 4,
+     "loss": false,
+     "nodes": 614809,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 4919,
+     "matches_published": true
+    },
+    {
+     "batch": 1,
+     "bit": 6,
+     "loss": true,
+     "nodes": 2120524,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 16387,
+     "matches_published": true
+    },
+    {
+     "batch": 1,
+     "bit": 8,
+     "loss": false,
+     "nodes": 10423806,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 92999,
+     "matches_published": true
+    },
+    {
+     "batch": 1,
+     "bit": 9,
+     "loss": false,
+     "nodes": 1283716,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 4980,
+     "matches_published": true
+    },
+    {
+     "batch": 1,
+     "bit": 10,
+     "loss": false,
+     "nodes": 2189409,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 10744,
+     "matches_published": true
+    },
+    {
+     "batch": 2,
+     "bit": 11,
+     "loss": false,
+     "nodes": 3349735,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 28634,
+     "matches_published": true
+    },
+    {
+     "batch": 2,
+     "bit": 16,
+     "loss": false,
+     "nodes": 5703539,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 56085,
+     "matches_published": true
+    },
+    {
+     "batch": 2,
+     "bit": 17,
+     "loss": false,
+     "nodes": 404019,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 3775,
+     "matches_published": true
+    },
+    {
+     "batch": 2,
+     "bit": 18,
+     "loss": false,
+     "nodes": 2329222,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 21018,
+     "matches_published": true
+    },
+    {
+     "batch": 2,
+     "bit": 19,
+     "loss": false,
+     "nodes": 912082,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 8203,
+     "matches_published": true
+    },
+    {
+     "batch": 2,
+     "bit": 21,
+     "loss": false,
+     "nodes": 1185658,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 10775,
+     "matches_published": true
+    },
+    {
+     "batch": 2,
+     "bit": 23,
+     "loss": false,
+     "nodes": 2961481,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 24548,
+     "matches_published": true
+    },
+    {
+     "batch": 2,
+     "bit": 25,
+     "loss": false,
+     "nodes": 4058975,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 34817,
+     "matches_published": true
+    },
+    {
+     "batch": 2,
+     "bit": 29,
+     "loss": true,
+     "nodes": 4630877,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 39003,
+     "matches_published": true
+    },
+    {
+     "batch": 3,
+     "bit": 30,
+     "loss": false,
+     "nodes": 435251,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 3719,
+     "matches_published": true
+    },
+    {
+     "batch": 3,
+     "bit": 31,
+     "loss": false,
+     "nodes": 482272,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 3976,
+     "matches_published": true
+    },
+    {
+     "batch": 3,
+     "bit": 32,
+     "loss": false,
+     "nodes": 453318,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 3732,
+     "matches_published": true
+    },
+    {
+     "batch": 3,
+     "bit": 33,
+     "loss": false,
+     "nodes": 3172771,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 30878,
+     "matches_published": true
+    },
+    {
+     "batch": 3,
+     "bit": 44,
+     "loss": true,
+     "nodes": 2543589,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 22224,
+     "matches_published": true
+    },
+    {
+     "batch": 3,
+     "bit": 49,
+     "loss": true,
+     "nodes": 886240,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 6074,
+     "matches_published": true
+    },
+    {
+     "batch": 3,
+     "bit": 52,
+     "loss": true,
+     "nodes": 3844019,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 33929,
+     "matches_published": true
+    },
+    {
+     "batch": 3,
+     "bit": 53,
+     "loss": false,
+     "nodes": 1659483,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 15294,
+     "matches_published": true
+    },
+    {
+     "batch": 3,
+     "bit": 54,
+     "loss": false,
+     "nodes": 4686792,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 45886,
+     "matches_published": true
+    },
+    {
+     "batch": 4,
+     "bit": 66,
+     "loss": false,
+     "nodes": 2978038,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 27371,
+     "matches_published": true
+    },
+    {
+     "batch": 4,
+     "bit": 69,
+     "loss": true,
+     "nodes": 1070978,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 8811,
+     "matches_published": true
+    },
+    {
+     "batch": 4,
+     "bit": 74,
+     "loss": true,
+     "nodes": 2555074,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 21282,
+     "matches_published": true
+    },
+    {
+     "batch": 4,
+     "bit": 75,
+     "loss": false,
+     "nodes": 380217,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 3301,
+     "matches_published": true
+    },
+    {
+     "batch": 4,
+     "bit": 76,
+     "loss": false,
+     "nodes": 603251,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 6201,
+     "matches_published": true
+    },
+    {
+     "batch": 4,
+     "bit": 77,
+     "loss": false,
+     "nodes": 3845581,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 35926,
+     "matches_published": true
+    },
+    {
+     "batch": 4,
+     "bit": 78,
+     "loss": false,
+     "nodes": 2236607,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 21484,
+     "matches_published": true
+    },
+    {
+     "batch": 4,
+     "bit": 79,
+     "loss": false,
+     "nodes": 439389,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 3792,
+     "matches_published": true
+    },
+    {
+     "batch": 4,
+     "bit": 80,
+     "loss": false,
+     "nodes": 1389525,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 10401,
+     "matches_published": true
+    },
+    {
+     "batch": 5,
+     "bit": 82,
+     "loss": true,
+     "nodes": 588415,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 4594,
+     "matches_published": true
+    },
+    {
+     "batch": 5,
+     "bit": 83,
+     "loss": false,
+     "nodes": 2437592,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 21017,
+     "matches_published": true
+    },
+    {
+     "batch": 5,
+     "bit": 85,
+     "loss": false,
+     "nodes": 2991018,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 23467,
+     "matches_published": true
+    },
+    {
+     "batch": 5,
+     "bit": 86,
+     "loss": false,
+     "nodes": 489900,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 4230,
+     "matches_published": true
+    },
+    {
+     "batch": 5,
+     "bit": 87,
+     "loss": true,
+     "nodes": 3696441,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 29004,
+     "matches_published": true
+    },
+    {
+     "batch": 5,
+     "bit": 88,
+     "loss": false,
+     "nodes": 3268985,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 29195,
+     "matches_published": true
+    },
+    {
+     "batch": 5,
+     "bit": 91,
+     "loss": true,
+     "nodes": 1693102,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 13274,
+     "matches_published": true
+    },
+    {
+     "batch": 5,
+     "bit": 92,
+     "loss": false,
+     "nodes": 996043,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 8206,
+     "matches_published": true
+    },
+    {
+     "batch": 5,
+     "bit": 95,
+     "loss": false,
+     "nodes": 2808525,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 22402,
+     "matches_published": true
+    },
+    {
+     "batch": 6,
+     "bit": 96,
+     "loss": false,
+     "nodes": 630597,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 5489,
+     "matches_published": true
+    },
+    {
+     "batch": 6,
+     "bit": 98,
+     "loss": true,
+     "nodes": 8801472,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 75312,
+     "matches_published": true
+    },
+    {
+     "batch": 6,
+     "bit": 99,
+     "loss": false,
+     "nodes": 517477,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 4279,
+     "matches_published": true
+    },
+    {
+     "batch": 6,
+     "bit": 100,
+     "loss": true,
+     "nodes": 1919973,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 14783,
+     "matches_published": true
+    },
+    {
+     "batch": 6,
+     "bit": 101,
+     "loss": false,
+     "nodes": 2703685,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 23089,
+     "matches_published": true
+    },
+    {
+     "batch": 6,
+     "bit": 102,
+     "loss": false,
+     "nodes": 781376,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 6133,
+     "matches_published": true
+    },
+    {
+     "batch": 6,
+     "bit": 105,
+     "loss": false,
+     "nodes": 2411247,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 20309,
+     "matches_published": true
+    },
+    {
+     "batch": 6,
+     "bit": 106,
+     "loss": false,
+     "nodes": 958434,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 7978,
+     "matches_published": true
+    },
+    {
+     "batch": 6,
+     "bit": 107,
+     "loss": false,
+     "nodes": 314689,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 2616,
+     "matches_published": true
+    },
+    {
+     "batch": 7,
+     "bit": 109,
+     "loss": false,
+     "nodes": 238240,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 2080,
+     "matches_published": true
+    },
+    {
+     "batch": 7,
+     "bit": 110,
+     "loss": true,
+     "nodes": 3283518,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 27602,
+     "matches_published": true
+    },
+    {
+     "batch": 7,
+     "bit": 111,
+     "loss": false,
+     "nodes": 980460,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 8028,
+     "matches_published": true
+    },
+    {
+     "batch": 7,
+     "bit": 112,
+     "loss": false,
+     "nodes": 469694,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 4096,
+     "matches_published": true
+    },
+    {
+     "batch": 7,
+     "bit": 113,
+     "loss": false,
+     "nodes": 4723602,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 43008,
+     "matches_published": true
+    },
+    {
+     "batch": 7,
+     "bit": 114,
+     "loss": false,
+     "nodes": 2250611,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 18684,
+     "matches_published": true
+    },
+    {
+     "batch": 7,
+     "bit": 115,
+     "loss": false,
+     "nodes": 1821411,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 14090,
+     "matches_published": true
+    },
+    {
+     "batch": 7,
+     "bit": 116,
+     "loss": false,
+     "nodes": 790202,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 3220,
+     "matches_published": true
+    },
+    {
+     "batch": 7,
+     "bit": 117,
+     "loss": false,
+     "nodes": 2250169,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 9371,
+     "matches_published": true
+    },
+    {
+     "batch": 8,
+     "bit": 118,
+     "loss": true,
+     "nodes": 1564528,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 13205,
+     "matches_published": true
+    },
+    {
+     "batch": 8,
+     "bit": 119,
+     "loss": false,
+     "nodes": 784307,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 7215,
+     "matches_published": true
+    },
+    {
+     "batch": 8,
+     "bit": 120,
+     "loss": false,
+     "nodes": 166624,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 1474,
+     "matches_published": true
+    },
+    {
+     "batch": 9,
+     "bit": 5,
+     "loss": false,
+     "nodes": 776542,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 6824,
+     "matches_published": true
+    },
+    {
+     "batch": 9,
+     "bit": 14,
+     "loss": false,
+     "nodes": 2843241,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 20090,
+     "matches_published": true
+    },
+    {
+     "batch": 9,
+     "bit": 20,
+     "loss": false,
+     "nodes": 884272,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 3599,
+     "matches_published": true
+    },
+    {
+     "batch": 9,
+     "bit": 46,
+     "loss": false,
+     "nodes": 5307830,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 14899,
+     "matches_published": true
+    },
+    {
+     "batch": 9,
+     "bit": 97,
+     "loss": false,
+     "nodes": 815744,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 1641,
+     "matches_published": true
+    },
+    {
+     "batch": 9,
+     "bit": 103,
+     "loss": false,
+     "nodes": 508452,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 968,
+     "matches_published": true
+    },
+    {
+     "batch": 9,
+     "bit": 108,
+     "loss": false,
+     "nodes": 603618,
+     "capped": false,
+     "terminalStoneRange": [
+      13,
+      17
+     ],
+     "andclose": true,
+     "ms": 1169,
+     "matches_published": true
+    }
+   ]
+  }
+ ],
+ "reused_in_session_rerun_batches": [
+  {
+   "target": "73i",
+   "batch": 1,
+   "file": "class2-lane-cost73i-independent-rerun-batch1-20261117.jsonl"
+  },
+  {
+   "target": "73i",
+   "batch": 2,
+   "file": "class2-lane-cost73i-independent-rerun-batch2-20261117.jsonl"
+  },
+  {
+   "target": "73i",
+   "batch": 3,
+   "file": "class2-lane-cost73i-independent-rerun-batch3-20261117.jsonl"
+  },
+  {
+   "target": "73i",
+   "batch": 4,
+   "file": "class2-lane-cost73i-independent-rerun-batch4-20261117.jsonl"
+  },
+  {
+   "target": "73i",
+   "batch": 5,
+   "file": "class2-lane-cost73i-independent-rerun-batch5-20261117.jsonl"
+  },
+  {
+   "target": "73i",
+   "batch": 6,
+   "file": "class2-lane-cost73i-independent-rerun-batch6-20261117.jsonl"
+  },
+  {
+   "target": "73i",
+   "batch": 7,
+   "file": "class2-lane-cost73i-independent-rerun-batch7-20261117.jsonl"
+  },
+  {
+   "target": "73i",
+   "batch": 8,
+   "file": "class2-lane-cost73i-independent-rerun-batch8-20261117.jsonl"
+  },
+  {
+   "target": "73i",
+   "batch": 9,
+   "file": "class2-lane-cost73i-independent-rerun-batch9-20261117.jsonl"
+  }
+ ],
+ "published_file_blob_checks": [
+  {
+   "target": "73i",
+   "batch": 1,
+   "file": "class2-lane-cost73i-raw-batch1-20261117.jsonl",
+   "blob_sha_expected": "44bdbf5848539e4bf4ac09d148a9246d109b9be9",
+   "blob_sha_actual": "44bdbf5848539e4bf4ac09d148a9246d109b9be9",
+   "match": true
+  },
+  {
+   "target": "73i",
+   "batch": 2,
+   "file": "class2-lane-cost73i-raw-batch2-20261117.jsonl",
+   "blob_sha_expected": "1420a56fc5759c8c413553a4e0da6a5d4f02755f",
+   "blob_sha_actual": "1420a56fc5759c8c413553a4e0da6a5d4f02755f",
+   "match": true
+  },
+  {
+   "target": "73i",
+   "batch": 3,
+   "file": "class2-lane-cost73i-raw-batch3-20261117.jsonl",
+   "blob_sha_expected": "ceebe8bc1f5e30ac823b5b531054405d2ee74546",
+   "blob_sha_actual": "ceebe8bc1f5e30ac823b5b531054405d2ee74546",
+   "match": true
+  },
+  {
+   "target": "73i",
+   "batch": 4,
+   "file": "class2-lane-cost73i-raw-batch4-20261117.jsonl",
+   "blob_sha_expected": "72b632916c1d67a9406c6f917c1dc9e99b9563bc",
+   "blob_sha_actual": "72b632916c1d67a9406c6f917c1dc9e99b9563bc",
+   "match": true
+  },
+  {
+   "target": "73i",
+   "batch": 5,
+   "file": "class2-lane-cost73i-raw-batch5-20261117.jsonl",
+   "blob_sha_expected": "92ebd917961a9b09388ae52733f5992ed535818a",
+   "blob_sha_actual": "92ebd917961a9b09388ae52733f5992ed535818a",
+   "match": true
+  },
+  {
+   "target": "73i",
+   "batch": 6,
+   "file": "class2-lane-cost73i-raw-batch6-20261117.jsonl",
+   "blob_sha_expected": "0f51f927354717c4167c1fa29c0628e90174d7d7",
+   "blob_sha_actual": "0f51f927354717c4167c1fa29c0628e90174d7d7",
+   "match": true
+  },
+  {
+   "target": "73i",
+   "batch": 7,
+   "file": "class2-lane-cost73i-raw-batch7-20261117.jsonl",
+   "blob_sha_expected": "a064fca19a249cdc966ffc5a8862fbc1e9103b4f",
+   "blob_sha_actual": "a064fca19a249cdc966ffc5a8862fbc1e9103b4f",
+   "match": true
+  },
+  {
+   "target": "73i",
+   "batch": 8,
+   "file": "class2-lane-cost73i-raw-batch8-20261117.jsonl",
+   "blob_sha_expected": "74af3374758a7561bc3c0d9a7a826a8473421903",
+   "blob_sha_actual": "74af3374758a7561bc3c0d9a7a826a8473421903",
+   "match": true
+  },
+  {
+   "target": "73i",
+   "batch": 9,
+   "file": "class2-lane-cost73i-raw-batch9-confirmation-20261117.jsonl",
+   "blob_sha_expected": "b485b8e3dc181a2817a2c98cf18fb1269699beaf",
+   "blob_sha_actual": "b485b8e3dc181a2817a2c98cf18fb1269699beaf",
+   "match": true
+  },
+  {
+   "target": "73i",
+   "batch": null,
+   "file": "class2-lane-cost73i-raw-sweep-audit-20261117.json",
+   "blob_sha_expected": "33c8c6bb2b81301354e8b796f5a4751fb52aba3b",
+   "blob_sha_actual": "33c8c6bb2b81301354e8b796f5a4751fb52aba3b",
+   "match": true
+  },
+  {
+   "target": "73j",
+   "batch": 1,
+   "file": "class2-lane-cost73j-raw-batch1-20261117.jsonl",
+   "blob_sha_expected": "2bf14d1244f42672be1cf0c88d60c4a6bb03cb93",
+   "blob_sha_actual": "2bf14d1244f42672be1cf0c88d60c4a6bb03cb93",
+   "match": true
+  },
+  {
+   "target": "73j",
+   "batch": 2,
+   "file": "class2-lane-cost73j-raw-batch2-20261117.jsonl",
+   "blob_sha_expected": "b7eb52fb4a1a7fbabfa55c6aa59c95eb51578825",
+   "blob_sha_actual": "b7eb52fb4a1a7fbabfa55c6aa59c95eb51578825",
+   "match": true
+  },
+  {
+   "target": "73j",
+   "batch": 3,
+   "file": "class2-lane-cost73j-raw-batch3-20261117.jsonl",
+   "blob_sha_expected": "d4d3518fb150dec73a8fc737d45b012e863e0dd1",
+   "blob_sha_actual": "d4d3518fb150dec73a8fc737d45b012e863e0dd1",
+   "match": true
+  },
+  {
+   "target": "73j",
+   "batch": 4,
+   "file": "class2-lane-cost73j-raw-batch4-20261117.jsonl",
+   "blob_sha_expected": "38e26fe4deff9d7fe735796004fb58f956031707",
+   "blob_sha_actual": "38e26fe4deff9d7fe735796004fb58f956031707",
+   "match": true
+  },
+  {
+   "target": "73j",
+   "batch": 5,
+   "file": "class2-lane-cost73j-raw-batch5-20261117.jsonl",
+   "blob_sha_expected": "c77d3d1cb45632ff99f5d9f6d70d8e3a61af287f",
+   "blob_sha_actual": "c77d3d1cb45632ff99f5d9f6d70d8e3a61af287f",
+   "match": true
+  },
+  {
+   "target": "73j",
+   "batch": 6,
+   "file": "class2-lane-cost73j-raw-batch6-20261117.jsonl",
+   "blob_sha_expected": "2d0a31050c582479b3c25ef4b405ac2ecdb129c8",
+   "blob_sha_actual": "2d0a31050c582479b3c25ef4b405ac2ecdb129c8",
+   "match": true
+  },
+  {
+   "target": "73j",
+   "batch": 7,
+   "file": "class2-lane-cost73j-raw-batch7-20261117.jsonl",
+   "blob_sha_expected": "f5255e171547a404dd26dd6dc09785fecf9e0822",
+   "blob_sha_actual": "f5255e171547a404dd26dd6dc09785fecf9e0822",
+   "match": true
+  },
+  {
+   "target": "73j",
+   "batch": 8,
+   "file": "class2-lane-cost73j-raw-batch8-20261117.jsonl",
+   "blob_sha_expected": "522b0e567e143afc77d1fef66a6cc84a5e73e449",
+   "blob_sha_actual": "522b0e567e143afc77d1fef66a6cc84a5e73e449",
+   "match": true
+  },
+  {
+   "target": "73j",
+   "batch": 9,
+   "file": "class2-lane-cost73j-raw-batch9-confirmation-20261117.jsonl",
+   "blob_sha_expected": "7733b53d968203eabb7f379f9b01ac8ca918c74b",
+   "blob_sha_actual": "7733b53d968203eabb7f379f9b01ac8ca918c74b",
+   "match": true
+  },
+  {
+   "target": "73j",
+   "batch": null,
+   "file": "class2-lane-cost73j-raw-sweep-audit-20261117.json",
+   "blob_sha_expected": "4c13cbb2008c6439a95bd0818af0d09ee465484e",
+   "blob_sha_actual": "4c13cbb2008c6439a95bd0818af0d09ee465484e",
+   "match": true
+  }
+ ],
+ "mismatch_count": 0,
+ "mismatches": [],
+ "checks": [
+  "engine_blob_pin",
+  "raw_blob_pin_b1",
+  "bit_order_b1",
+  "pilot_b1",
+  "bit_0",
+  "bit_1",
+  "bit_2",
+  "bit_3",
+  "bit_4",
+  "bit_6",
+  "bit_8",
+  "bit_9",
+  "bit_10",
+  "raw_blob_pin_b2",
+  "bit_order_b2",
+  "pilot_b2",
+  "bit_11",
+  "bit_14",
+  "bit_16",
+  "bit_17",
+  "bit_18",
+  "bit_21",
+  "bit_24",
+  "bit_29",
+  "bit_31",
+  "raw_blob_pin_b3",
+  "bit_order_b3",
+  "pilot_b3",
+  "bit_32",
+  "bit_33",
+  "bit_34",
+  "bit_38",
+  "bit_41",
+  "bit_42",
+  "bit_43",
+  "bit_44",
+  "bit_45",
+  "raw_blob_pin_b4",
+  "bit_order_b4",
+  "pilot_b4",
+  "bit_54",
+  "bit_66",
+  "bit_68",
+  "bit_74",
+  "bit_75",
+  "bit_76",
+  "bit_77",
+  "bit_78",
+  "bit_82",
+  "raw_blob_pin_b5",
+  "bit_order_b5",
+  "pilot_b5",
+  "bit_83",
+  "bit_85",
+  "bit_86",
+  "bit_87",
+  "bit_88",
+  "bit_89",
+  "bit_90",
+  "bit_91",
+  "bit_92",
+  "raw_blob_pin_b6",
+  "bit_order_b6",
+  "pilot_b6",
+  "bit_95",
+  "bit_96",
+  "bit_97",
+  "bit_98",
+  "bit_99",
+  "bit_100",
+  "bit_101",
+  "bit_102",
+  "bit_105",
+  "raw_blob_pin_b7",
+  "bit_order_b7",
+  "pilot_b7",
+  "bit_106",
+  "bit_107",
+  "bit_109",
+  "bit_110",
+  "bit_111",
+  "bit_112",
+  "bit_113",
+  "bit_114",
+  "bit_115",
+  "raw_blob_pin_b8",
+  "bit_order_b8",
+  "pilot_b8",
+  "bit_116",
+  "bit_117",
+  "bit_118",
+  "bit_119",
+  "bit_120",
+  "raw_blob_pin_b9",
+  "bit_order_b9",
+  "pilot_b9",
+  "bit_5",
+  "bit_13",
+  "bit_20",
+  "bit_103",
+  "bit_108",
+  "audit_blob_pin",
+  "expected_win7_d10_bits",
+  "expected_refuted_d10_bits_count",
+  "expected_capped_count",
+  "expected_candidate_nodes_total",
+  "expected_total_nodes_including_pilots",
+  "expected_terminal_stone_range",
+  "raw_blob_pin_b1",
+  "bit_order_b1",
+  "pilot_b1",
+  "bit_0",
+  "bit_1",
+  "bit_2",
+  "bit_3",
+  "bit_4",
+  "bit_6",
+  "bit_8",
+  "bit_9",
+  "bit_10",
+  "raw_blob_pin_b2",
+  "bit_order_b2",
+  "pilot_b2",
+  "bit_11",
+  "bit_16",
+  "bit_17",
+  "bit_18",
+  "bit_19",
+  "bit_21",
+  "bit_23",
+  "bit_25",
+  "bit_29",
+  "raw_blob_pin_b3",
+  "bit_order_b3",
+  "pilot_b3",
+  "bit_30",
+  "bit_31",
+  "bit_32",
+  "bit_33",
+  "bit_44",
+  "bit_49",
+  "bit_52",
+  "bit_53",
+  "bit_54",
+  "raw_blob_pin_b4",
+  "bit_order_b4",
+  "pilot_b4",
+  "bit_66",
+  "bit_69",
+  "bit_74",
+  "bit_75",
+  "bit_76",
+  "bit_77",
+  "bit_78",
+  "bit_79",
+  "bit_80",
+  "raw_blob_pin_b5",
+  "bit_order_b5",
+  "pilot_b5",
+  "bit_82",
+  "bit_83",
+  "bit_85",
+  "bit_86",
+  "bit_87",
+  "bit_88",
+  "bit_91",
+  "bit_92",
+  "bit_95",
+  "raw_blob_pin_b6",
+  "bit_order_b6",
+  "pilot_b6",
+  "bit_96",
+  "bit_98",
+  "bit_99",
+  "bit_100",
+  "bit_101",
+  "bit_102",
+  "bit_105",
+  "bit_106",
+  "bit_107",
+  "raw_blob_pin_b7",
+  "bit_order_b7",
+  "pilot_b7",
+  "bit_109",
+  "bit_110",
+  "bit_111",
+  "bit_112",
+  "bit_113",
+  "bit_114",
+  "bit_115",
+  "bit_116",
+  "bit_117",
+  "raw_blob_pin_b8",
+  "bit_order_b8",
+  "pilot_b8",
+  "bit_118",
+  "bit_119",
+  "bit_120",
+  "raw_blob_pin_b9",
+  "bit_order_b9",
+  "pilot_b9",
+  "bit_5",
+  "bit_14",
+  "bit_20",
+  "bit_46",
+  "bit_97",
+  "bit_103",
+  "bit_108",
+  "audit_blob_pin",
+  "expected_win7_d10_bits",
+  "expected_refuted_d10_bits_count",
+  "expected_capped_count",
+  "expected_candidate_nodes_total",
+  "expected_total_nodes_including_pilots",
+  "expected_terminal_stone_range"
+ ],
+ "checks_count": 215,
+ "interpretation_guard": "Bookkeeping/determinism verification only. WIN7-D10 proves a first-player win within depth 10 from the individual 7-stone roots only; REFUTED-D10 is not a LOSS proof; solved/head counts are manifest-coverage bookkeeping. The 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60} and classes 1/2/4 all remain UNKNOWN.",
+ "published_rerun_files": [
+  "class2-lane-cost73i-independent-rerun-batch1-20261117.jsonl",
+  "class2-lane-cost73i-independent-rerun-batch2-20261117.jsonl",
+  "class2-lane-cost73i-independent-rerun-batch3-20261117.jsonl",
+  "class2-lane-cost73i-independent-rerun-batch4-20261117.jsonl",
+  "class2-lane-cost73i-independent-rerun-batch5-20261117.jsonl",
+  "class2-lane-cost73i-independent-rerun-batch6-20261117.jsonl",
+  "class2-lane-cost73i-independent-rerun-batch7-20261117.jsonl",
+  "class2-lane-cost73i-independent-rerun-batch8-20261117.jsonl",
+  "class2-lane-cost73i-independent-rerun-batch9-20261117.jsonl",
+  "class2-lane-cost73j-independent-rerun-batch1-20261117.jsonl",
+  "class2-lane-cost73j-independent-rerun-batch2-20261117.jsonl",
+  "class2-lane-cost73j-independent-rerun-batch3-20261117.jsonl",
+  "class2-lane-cost73j-independent-rerun-batch4-20261117.jsonl",
+  "class2-lane-cost73j-independent-rerun-batch5-20261117.jsonl",
+  "class2-lane-cost73j-independent-rerun-batch6-20261117.jsonl",
+  "class2-lane-cost73j-independent-rerun-batch7-20261117.jsonl",
+  "class2-lane-cost73j-independent-rerun-batch8-20261117.jsonl",
+  "class2-lane-cost73j-independent-rerun-batch9-20261117.jsonl"
+ ]
+}

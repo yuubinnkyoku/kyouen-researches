@@ -1,0 +1,34 @@
+{
+ "schema": "n11-class2-lane-cost65j-fold-independent-check-20261116-v1",
+ "date": "2026-11-16",
+ "target": "the landed cost-65j receipts fold v2 (commit 96e0d14dd3, head 1410 -> 1419/174/6429/508474/4702/372388); receipts file class-frontier-cost65j-receipts-recompute-20261116.json read at commit 538a486627",
+ "method": "remote-only independent re-verification with no local execution environment (the session workspace was unavailable for the whole run): all inputs fetched from main via the GitHub connector; second implementation in TypeScript with BigInt bit arithmetic; D4 canonicalization re-implemented from scratch (8 transforms over the 11x11 grid, bit = y*11+x) and calibrated on the 17 published (root_hex, root_d4_canon) pairs of the cover map and on the published candidate-reuse-audit transform (x,y)->(x,10-y); no engine, no float, no local file",
+ "data_pins": {
+  "win_marginals_cover_map": "class2-lane-cost65j-win-marginals-20261116.json (git blob d6d20e52c6b5af8f268222bfc9c87d6ac77c655d, fetched at commit 96e0d14dd3)",
+  "claim_v4": "class2-lane-cost65j-inflight-20261115.json v4 (git blob 4245cbf02e94f42ba98fe34715ae618b533af4aa, fetched at commit ca68bc6d98)",
+  "reuse_audit": "class2-lane-cost65j-candidate-reuse-audit-20261115.json (git blob 1999d82b0f78dd9f69b6c81fbbe6bf3937d31a44)",
+  "raw_batches": "9 batch JSONLs (7 x cost-65f v15 20261114, cost-65j batch8/batch9 20261116), fetched at commit 96e0d14dd3",
+  "ranking_head1410": "class-frontier-s5-ranking-after-cost60c-receipts-20261116.csv (git blob a01cfd5340fa89c0eaf834dcb96000f9b04d20ae; 174 S5 parents, per-parent counts carry dual-membership multiplicity)",
+  "fold_receipts": "class-frontier-cost65j-receipts-recompute-20261116.json (schema v2, read at commit 538a486627)"
+ },
+ "checks": {
+  "sweep_tally_from_raw": "PASS - 64 raw bit records over the 9 batches; WIN bits exactly [4,15,18,20,21,23,25,28,66,79,91,101,109,112,116,118,119]; 47 REFUTED raw (+ bit 113 by published canonical transfer = 48); 0 capped; the only candidate bit absent from the batches is 113; node sums 65f 384879691 / batch8 15793993 / batch9 1929932 / grand 402603616, equal to the receipts' 402652063 incl. pilots (7x5949 + 2x3402 = 48447); all 17 WIN per-bit node counts byte-equal to the receipts' sweep_nodes",
+  "d4_canon_calibration": "PASS - 17/17 root == child | 1<<bit, popcount 7, and the fresh canon implementation reproduces the published root_d4_canon; child 00000000000000809102000080000000 is self-canonical; in_manifest_deletions are a subset of the 7 one-stone-removal D4-canonical covers for 17/17 roots",
+  "child_already_solved": "PASS (independent path) - canon(child) is among the covers of the published cost-63a bit-97 certificate root 00000002000000809102000800000000, confirming the v2 premise correction (child already closed at 1410) from the certificate itself rather than from the blob-pinned fold records",
+  "bit79_reuse_transform": "PASS - the audit transform (x,y)->(x,10-y) maps the source root to 00000000000080809102000080000000 exactly (bit 35 -> bit 79 under bit = y*11+x)",
+  "fold_structure": "PASS - the 13 new-orbit roots are pairwise distinct raw-hex and D4-canonically; the 4 census-overlap roots (bits 25,79,91,101) have canons outside the 13 and pairwise distinct; union covers = 78 over the 13 new-orbit roots (arithmetically consistent with marginal 61 + 17 already-solved covers) and 101 over all 17",
+  "nine_closing_rows": "PASS - the 9 marginal_in_manifest rows are each present in the 34-row cover union with matching cost (sum 635), classes 2, and at least one of the 13 new-orbit coverers (attribution per bit identical to the cover map); the other 8 cover-union rows are covered only by census bits 25/79/91/101 and correctly stay open",
+  "per_parent_bookkeeping": "PASS - each closing row has exactly 2 parents among the 174 remaining S5 orbits (dual class-2 membership); the 9 affected parents, their before/after (rows, edge_cost) and the lost-row assignments reproduce the receipts' parents_after and lost_rows_per_parent byte-for-byte; 18 loss slots; multiplicity cost 1270 = 2 x 635; the shared parent 00000000000000003800000008002000 loses all 9 rows",
+  "head_and_hist": "PASS - 1419/174/6429/508474/4702/372388 with the demand histogram differing from head 1410 only in c2=2,c4=0: 826 -> 817 (sum 4702); every affected parent keeps rows, so remaining_s5_orbits stays 174",
+  "marginal_table_consistency": "PASS - per-bit marginal sums to 61 with marginal_in_manifest sum 9; zero-marginal-in-manifest receipts exactly [15,23,25,66,79,91,101,119]"
+ },
+ "agreement": "every remotely-checkable field of the landed v2 fold agrees with this second implementation; the landed head also equals the dry-run prediction computed in this session before the fold was observed to land (dryrun_pred65j, 3 deterministic runs at head 1410; not pushed as a separate pre-registration record)",
+ "not_reverified_here": [
+  "s_1410 membership of the 17 already-solved covered rows (relies on the fold's runpy chain)",
+  "raw and D4-canonical disjointness of the 13 new-orbit roots against the 718 folded roots (the fold's conflict census; bit 79 confirmed here via the published audit and certificate)",
+  "internal BigInt/Bareiss verification of the 4 published v16 certificates (bits 112/116/118/119)",
+  "the 13 cost-65f WIN roots carry no published certificates (folded on blob-pinned raw records; the fold marks their certificate extraction as optional follow-up)"
+ ],
+ "session_handoff": "the local execution environment was unavailable for the whole run, so the session's locally extracted 13 cost-65f-family WIN7 certificates (bits 4,15,18,20,21,23,28,66,109,112,116,118,119; 679154 rows / 24518049 bytes / 710 sub-roots total; BigInt union 0/0 and TS Number-Bareiss consumed==rows verification all PASS locally on 2026-11-16; deterministically regenerable via gen_legal_moves_cost65j -> cert_driver65j.ts blind extraction -> assemble_verify) could not be published this run; for the 4 bits the fold published (112/116/118/119) the local row counts are byte-equal (64020/49082/70510/48814); a next session may publish the remaining 9 cost-65f certificates (bits 4,15,18,20,21,23,28,66,109; rows 56237/42135/68379/43119/50284/32606/51248/45193/57527) as the optional follow-up, re-running the deterministic extraction locally and asserting md5s against these row counts first",
+ "unknown_guard": "bookkeeping verification only; solved counts measure manifest coverage, not the game-theoretic value of any position; WIN7 certificates prove a first-player win within depth 10 from the individual 7-stone roots only; REFUTED-D10 proves only absence of WIN7-D10; the 11x11 empty board, the two-stone roots {49,60}/{59,60}, S2 {59,60}, class 1, class 2 and class 4 all remain UNKNOWN"
+}

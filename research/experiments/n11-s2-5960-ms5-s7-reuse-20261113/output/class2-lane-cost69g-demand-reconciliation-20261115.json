@@ -1,0 +1,399 @@
+{
+ "schema": "n11-class2-lane-cost69g-demand-reconciliation-20261115-v1",
+ "date": "2026-11-15",
+ "trigger": "class2-lane-next-fold-prediction-independent-audit-20261115.json flagged for the cost-69g child 00000000000000809102000000002000: \"measured 3 distinct open S5 parents among the 175-row ranking\" vs the claim/chain demand c1=0,c2=2,c4=2 (read as 4 servers)",
+ "state": "canonical chain head 1163/6684/527280/4954/391003 (class-frontier-after-cost70c-warm3-recompute-20261115.json, gain-0 extension of the cost-69f receipts head; open-S5 set unchanged since the 1148 state, both 175 rows)",
+ "method": "independent of the chain execution: complete 7,867-row manifest (ms5_s6_manifest_part1..6.csv) + 175-row open-S5 ranking at the head (class-frontier-s5-ranking-after-cost70c-warm3-20261115.csv); parent orbits re-derived geometrically as canon(h ^ 1<<s) over the 6 stones of h with an exact D4 canonicalization (8 transforms, bit index 11*y+x, validated against published canonical hexes and the 69f child->parent pair); demand semantics re-derived from the published chain source recompute_frontier_full.py: the S5 classes field is a bitmask (bit 0 = class 1, bit 1 = class 2, bit 2 = class 4) and per-child demand counts each serving open S5 once per set class bit",
+ "finding": {
+  "resolution": "NO bookkeeping error on either side. The cost-69g child has exactly 3 distinct open parent S5 orbits at the 1,163 head; one of them (00000000000000801202000000080000) is a dual-class S5 with classes bitmask 6 (serves BOTH the class-2 and the class-4 demand), so the per-class demand is c1=0, c2=2, c4=2 whose SUM is 4. The third-method audit counted distinct open parents (3, correct); the claim records the per-class demand (c1=0,c2=2,c4=2, correct); reading c1+c2+c4 as a distinct-server count created the apparent discrepancy",
+  "open_parents_of_the_69g_child": [
+   {
+    "s5_hex": "00000000000000003800000000810000",
+    "classes_bitmask": 4,
+    "classes_served": [
+     4
+    ],
+    "remaining_s6_orbits": 84,
+    "remaining_s7_edge_cost": 6815,
+    "lift_stone": 63
+   },
+   {
+    "s5_hex": "00000000000000801202000000080000",
+    "classes_bitmask": 6,
+    "classes_served": [
+     2,
+     4
+    ],
+    "remaining_s6_orbits": 72,
+    "remaining_s7_edge_cost": 5477,
+    "lift_stone": 56
+   },
+   {
+    "s5_hex": "00000000000000809102000000000000",
+    "classes_bitmask": 2,
+    "classes_served": [
+     2
+    ],
+    "remaining_s6_orbits": 7,
+    "remaining_s7_edge_cost": 519,
+    "lift_stone": 13
+   }
+  ],
+  "demand_semantics_confirmed": "per-class counts, not distinct-server counts; a classes=6 S5 contributes to both c2 and c4 (chain source recompute_frontier_full.py: if bits&2: c2+=1; if bits&4: c4+=1)",
+  "recommendation": "claims and audits should state BOTH numbers (distinct open parents = 3, per-class demand c1=0,c2=2,c4=2) to prevent the same misreading; the audit-blocked S5 00000000000000809082000000000000 has classes bitmask 3 (class-1 AND class-2 demand) - its children all carry c1>=1 and are therefore excluded from the open_classes (c1==0) frontier accounting, which is the structural reason it is receipt-unclosable within this ledger"
+ },
+ "controls": [
+  {
+   "label": "cost-69g child (claimed in flight by the parallel lane)",
+   "s6_hex": "00000000000000809102000000002000",
+   "manifest_cost": 69,
+   "manifest_classes_bitmask": 6,
+   "distinct_parent_s5_orbits": 6,
+   "distinct_open_parent_s5_orbits": 3,
+   "per_class_demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 2
+   },
+   "demand_sum_c1c2c4": 4,
+   "matches_chain_published_demand": true,
+   "parents": [
+    {
+     "s5_hex": "00000000000000003800000000810000",
+     "lift_stones": [
+      63
+     ],
+     "open_at_head": true,
+     "classes_bitmask": 4,
+     "classes_served": [
+      4
+     ],
+     "remaining_s6_orbits": 84,
+     "remaining_s7_edge_cost": 6815
+    },
+    {
+     "s5_hex": "00000000000000009102000000002000",
+     "lift_stones": [
+      71
+     ],
+     "open_at_head": false,
+     "classes_bitmask": null,
+     "classes_served": [],
+     "remaining_s6_orbits": null,
+     "remaining_s7_edge_cost": null
+    },
+    {
+     "s5_hex": "00000000000000801202000000080000",
+     "lift_stones": [
+      56
+     ],
+     "open_at_head": true,
+     "classes_bitmask": 6,
+     "classes_served": [
+      2,
+      4
+     ],
+     "remaining_s6_orbits": 72,
+     "remaining_s7_edge_cost": 5477
+    },
+    {
+     "s5_hex": "00000000000000808102000000002000",
+     "lift_stones": [
+      60
+     ],
+     "open_at_head": false,
+     "classes_bitmask": null,
+     "classes_served": [],
+     "remaining_s6_orbits": null,
+     "remaining_s7_edge_cost": null
+    },
+    {
+     "s5_hex": "00000000000000809100000000002000",
+     "lift_stones": [
+      49
+     ],
+     "open_at_head": false,
+     "classes_bitmask": null,
+     "classes_served": [],
+     "remaining_s6_orbits": null,
+     "remaining_s7_edge_cost": null
+    },
+    {
+     "s5_hex": "00000000000000809102000000000000",
+     "lift_stones": [
+      13
+     ],
+     "open_at_head": true,
+     "classes_bitmask": 2,
+     "classes_served": [
+      2
+     ],
+     "remaining_s6_orbits": 7,
+     "remaining_s7_edge_cost": 519
+    }
+   ]
+  },
+  {
+   "label": "cost-72 child of the third target (next unswept after 69g)",
+   "s6_hex": "00000000000000809102000002000000",
+   "manifest_cost": 72,
+   "manifest_classes_bitmask": 2,
+   "distinct_parent_s5_orbits": 6,
+   "distinct_open_parent_s5_orbits": 2,
+   "per_class_demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "demand_sum_c1c2c4": 2,
+   "matches_chain_published_demand": true,
+   "parents": [
+    {
+     "s5_hex": "00000000000000003800000800010000",
+     "lift_stones": [
+      63
+     ],
+     "open_at_head": false,
+     "classes_bitmask": null,
+     "classes_served": [],
+     "remaining_s6_orbits": null,
+     "remaining_s7_edge_cost": null
+    },
+    {
+     "s5_hex": "00000000000000009102000002000000",
+     "lift_stones": [
+      71
+     ],
+     "open_at_head": false,
+     "classes_bitmask": null,
+     "classes_served": [],
+     "remaining_s6_orbits": null,
+     "remaining_s7_edge_cost": null
+    },
+    {
+     "s5_hex": "00000000000000801202000020000000",
+     "lift_stones": [
+      56
+     ],
+     "open_at_head": true,
+     "classes_bitmask": 2,
+     "classes_served": [
+      2
+     ],
+     "remaining_s6_orbits": 58,
+     "remaining_s7_edge_cost": 4339
+    },
+    {
+     "s5_hex": "00000000000000808102000002000000",
+     "lift_stones": [
+      60
+     ],
+     "open_at_head": false,
+     "classes_bitmask": null,
+     "classes_served": [],
+     "remaining_s6_orbits": null,
+     "remaining_s7_edge_cost": null
+    },
+    {
+     "s5_hex": "00000000000000809100000002000000",
+     "lift_stones": [
+      49
+     ],
+     "open_at_head": false,
+     "classes_bitmask": null,
+     "classes_served": [],
+     "remaining_s6_orbits": null,
+     "remaining_s7_edge_cost": null
+    },
+    {
+     "s5_hex": "00000000000000809102000000000000",
+     "lift_stones": [
+      25
+     ],
+     "open_at_head": true,
+     "classes_bitmask": 2,
+     "classes_served": [
+      2
+     ],
+     "remaining_s6_orbits": 7,
+     "remaining_s7_edge_cost": 519
+    }
+   ]
+  },
+  {
+   "label": "cost-69f child (solved at head 1163, control)",
+   "s6_hex": "00000000000000809102000000000008",
+   "manifest_cost": 69,
+   "manifest_classes_bitmask": 2,
+   "distinct_parent_s5_orbits": 6,
+   "distinct_open_parent_s5_orbits": 2,
+   "per_class_demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "demand_sum_c1c2c4": 2,
+   "matches_chain_published_demand": null,
+   "parents": [
+    {
+     "s5_hex": "00000000000000003800000200010000",
+     "lift_stones": [
+      63
+     ],
+     "open_at_head": false,
+     "classes_bitmask": null,
+     "classes_served": [],
+     "remaining_s6_orbits": null,
+     "remaining_s7_edge_cost": null
+    },
+    {
+     "s5_hex": "00000000000000009102000000000008",
+     "lift_stones": [
+      71
+     ],
+     "open_at_head": false,
+     "classes_bitmask": null,
+     "classes_served": [],
+     "remaining_s6_orbits": null,
+     "remaining_s7_edge_cost": null
+    },
+    {
+     "s5_hex": "00000000000000801202000000000080",
+     "lift_stones": [
+      56
+     ],
+     "open_at_head": true,
+     "classes_bitmask": 2,
+     "classes_served": [
+      2
+     ],
+     "remaining_s6_orbits": 59,
+     "remaining_s7_edge_cost": 4424
+    },
+    {
+     "s5_hex": "00000000000000808102000000000008",
+     "lift_stones": [
+      60
+     ],
+     "open_at_head": false,
+     "classes_bitmask": null,
+     "classes_served": [],
+     "remaining_s6_orbits": null,
+     "remaining_s7_edge_cost": null
+    },
+    {
+     "s5_hex": "00000000000000809100000000000008",
+     "lift_stones": [
+      49
+     ],
+     "open_at_head": false,
+     "classes_bitmask": null,
+     "classes_served": [],
+     "remaining_s6_orbits": null,
+     "remaining_s7_edge_cost": null
+    },
+    {
+     "s5_hex": "00000000000000809102000000000000",
+     "lift_stones": [
+      3
+     ],
+     "open_at_head": true,
+     "classes_bitmask": 2,
+     "classes_served": [
+      2
+     ],
+     "remaining_s6_orbits": 7,
+     "remaining_s7_edge_cost": 519
+    }
+   ]
+  },
+  {
+   "label": "cost-65j child (claimed in flight, pre-covered at head, control)",
+   "s6_hex": "00000000000000809102000080000000",
+   "manifest_cost": 65,
+   "manifest_classes_bitmask": 2,
+   "distinct_parent_s5_orbits": 6,
+   "distinct_open_parent_s5_orbits": 2,
+   "per_class_demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "demand_sum_c1c2c4": 2,
+   "matches_chain_published_demand": null,
+   "parents": [
+    {
+     "s5_hex": "00000000000000003800000008002000",
+     "lift_stones": [
+      56
+     ],
+     "open_at_head": true,
+     "classes_bitmask": 2,
+     "classes_served": [
+      2
+     ],
+     "remaining_s6_orbits": 55,
+     "remaining_s7_edge_cost": 3822
+    },
+    {
+     "s5_hex": "00000000000000009102000080000000",
+     "lift_stones": [
+      71
+     ],
+     "open_at_head": false,
+     "classes_bitmask": null,
+     "classes_served": [],
+     "remaining_s6_orbits": null,
+     "remaining_s7_edge_cost": null
+    },
+    {
+     "s5_hex": "00000000000000801102000080000000",
+     "lift_stones": [
+      63
+     ],
+     "open_at_head": false,
+     "classes_bitmask": null,
+     "classes_served": [],
+     "remaining_s6_orbits": null,
+     "remaining_s7_edge_cost": null
+    },
+    {
+     "s5_hex": "00000000000000808102000080000000",
+     "lift_stones": [
+      60
+     ],
+     "open_at_head": false,
+     "classes_bitmask": null,
+     "classes_served": [],
+     "remaining_s6_orbits": null,
+     "remaining_s7_edge_cost": null
+    },
+    {
+     "s5_hex": "00000000000000809100000080000000",
+     "lift_stones": [
+      49
+     ],
+     "open_at_head": false,
+     "classes_bitmask": null,
+     "classes_served": [],
+     "remaining_s6_orbits": null,
+     "remaining_s7_edge_cost": null
+    },
+    {
+     "s5_hex": "00000000000000809102000000000000",
+     "lift_stones": [
+      31
+     ],
+     "open_at_head": true,
+     "classes_bitmask": 2,
+     "classes_served": [
+      2
+     ],
+     "remaining_s6_orbits": 7,
+     "remaining_s7_edge_cost": 519
+    }
+   ]
+  }
+ ],
+ "interpretation_guard": "bookkeeping over published receipts and the static manifest; demand counts measure how many open S5 orbits per class a remaining S6 orbit serves, not the game-theoretic value of any position; REFUTED-D10 sweeps prove only absence of WIN7-D10; 11x11 empty board / two-stone root {49,60} / S2 {59,60} / class 2 / class 4 remain UNKNOWN"
+}

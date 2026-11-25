@@ -1,0 +1,61 @@
+{
+  "schema": "n11-class2-lane-cost73b-sweep-20261114-v1",
+  "date": "2026-11-14",
+  "session": "long-term lane session 9 (2026-11-14)",
+  "s5_parent_hex": "00000000000000809082000000000000",
+  "s6_child_hex": "00000000000000809082000000000040",
+  "s6_s7_edge_cost": 73,
+  "demand_classes": {
+    "c1": 2,
+    "c2": 2,
+    "c4": 0
+  },
+  "candidate_enumeration": "legal_candidates.py independent Bareiss 4x4 enumeration: 73 legal candidates, bit-exact with the published edge cost 73; candidate list recorded in class2-lane-cost73b-inflight-20261114.json",
+  "win7_d10": 0,
+  "win7_bits": [],
+  "refuted_d10": 73,
+  "capped": 0,
+  "total_nodes": 376649033,
+  "pilot_d6_controls": "loss=false at exactly 5,949 nodes in all 11 batch invocations (default control on every runner call)",
+  "terminal_stone_range_all": [
+    [
+      13,
+      17
+    ],
+    [
+      15,
+      17
+    ]
+  ],
+  "heaviest_bits": [
+    {
+      "bit": 53,
+      "nodes": 20428367
+    },
+    {
+      "bit": 18,
+      "nodes": 19812446
+    },
+    {
+      "bit": 26,
+      "nodes": 13365966
+    },
+    {
+      "bit": 120,
+      "nodes": 13300796
+    },
+    {
+      "bit": 12,
+      "nodes": 12332047
+    },
+    {
+      "bit": 118,
+      "nodes": 11771848
+    }
+  ],
+  "heaviest_fresh_rerun_node_exact": "bits 53 (20,428,367), 18 (19,812,446), 12 (12,332,047) re-solved fresh in a separate process after the sweep: node counts identical",
+  "raw_batches": "class2-lane-cost73b-raw-batch1..11-20261114.jsonl (73 candidate lines + pilot control per batch)",
+  "notes": "15th sterile child overall; first sterile child in the cost-73 band. All 73 REFUTED-D10 with cap 1e9, so no capped candidate weakens the result. batch1-5 were pushed once as a reconstruction missing ms/andclose (batch3 bit19 terminal range wrongly normalized to [13,17]); batches 2-5 were re-pushed verbatim in the next commit and batch1 was verbatim from the start.",
+  "interpretation_guard": "REFUTED-D10 is the absence of a winner-win-within-depth-10 in each 7-stone subtree; it is NOT a refutation of the child, and this record is not a claim about the 11x11 empty root / {49,60} / S2 {59,60} / class 2 / class 4 which remain UNKNOWN",
+  "unknown_status": "11x11 empty board, two-stone root {49,60}, S2 {59,60}, class 2, class 4: UNKNOWN"
+}
