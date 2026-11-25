@@ -36,7 +36,9 @@
 //   node census3.js pair d v2 ...   // per-pair fast runs (one JSON line per pair)
 //   node census3.js gatecheck d v2 N // pair run with first N child-decisions fully re-verified
 //
-// Processes are deterministic; all output is integer JSON; no timing in results lines.
+// Processes are deterministic: all decision-relevant output is integer JSON. Timing
+// (ms) is attached for operational information only and is excluded from determinism
+// comparisons (compare counts payloads).
 
 "use strict";
 const { performance } = require("perf_hooks");
