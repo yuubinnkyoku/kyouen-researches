@@ -1,0 +1,12 @@
+== example ==
+  evaluation matrix rank: 6 kernel dim: 0 => only zero form vanishes: True
+== quadratic forms ==
+  projective forms: 37449
+  zero-set size histogram: {'1': 2044, '9': 32777, '17': 2628}
+  9-point zero sets that are caps (forms): 32704
+  distinct conics: 32704 expected 8^5-8^2 = 32704 ok: True
+  each conic is a 9-cap: True
+  nonzero-form multiplicity per conic: [1]
+  forms with 9-point non-cap zero sets: 73 all lines: True
+
+PASS task2: True
