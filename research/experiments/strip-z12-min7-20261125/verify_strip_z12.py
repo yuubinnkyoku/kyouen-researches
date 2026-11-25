@@ -1525,3 +1525,40 @@ def main():
                 bad += 1
                 print('SEG COUNT MISMATCH: declared', declared,
                       'observed', (pts, comps))
+        with open('output/checkpoint_seg%s.json' % seg, 'w') as f:
+            f.write(json.dumps(ckpt, indent=1, sort_keys=True,
+                               ensure_ascii=True) + '\n')
+        print('SEGMENT', seg, 'points:',
+              ckpt.get('seg_points'), 'comparisons:',
+              ckpt.get('seg_comparisons'), 'bad:', bad)
+        sys.exit(1 if bad else 0)
+    if mode == 'assemble':
+        res = {}
+        for seg, names, declared in SEGMENTS:
+            path = 'output/checkpoint_seg%s.json' % seg
+            if not os.path.exists(path):
+                print('MISSING CHECKPOINT', path); sys.exit(1)
+            with open(path) as f:
+                ck = json.load(f)
+            if ck.get('segment') != seg:
+                print('CHECKPOINT SEGMENT MISMATCH', path); sys.exit(1)
+            for nm in names:
+                res[nm] = ck['checks'][nm]
+            if declared is not None:
+                obs = (ck['seg_points'], ck['seg_comparisons'])
+                if obs != declared or ck['seg_bad'] != 0:
+                    print('SEG DECLARED MISMATCH', seg, obs,
+                          'declared', declared); sys.exit(1)
+        res, bad, pts, comps = assemble(res)
+        with open('output/audit.json', 'w') as f:
+            f.write(json.dumps(res, indent=1, sort_keys=True,
+                               ensure_ascii=True) + '\n')
+        print('TOTAL points:', pts, 'comparisons:', comps, 'bad:', bad)
+        print('D6c census:', res['summary']['census'])
+        if bad:
+            print('AUDIT FAIL: bad =', bad); sys.exit(1)
+        print('AUDIT PASS'); sys.exit(0)
+    print('unknown mode', mode); sys.exit(2)
+
+if __name__ == '__main__':
+    main()
