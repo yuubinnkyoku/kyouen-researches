@@ -1,0 +1,57 @@
+{
+  "all_pass": true,
+  "canonical_cache": {
+    "currsize": 358239,
+    "hits": 605790,
+    "maxsize": null,
+    "misses": 358239
+  },
+  "classification": "universal proof by x-induction and complete A/B/C signature bands",
+  "counts": {
+    "A_B_C_signature_coverage_identity_and_mex": 4549446,
+    "B_C_child_anchor_direct_checks": 12782,
+    "Theorem_T_formula_grid": 4579416,
+    "Theorem_T_parity_bound": 4549446,
+    "fixed_seed_ABC_scatter": 25000,
+    "general_tail": 39988,
+    "general_tail_signature": 39988,
+    "height_only_reduction_R_le_12": 12961,
+    "ordered_and_canonical_direct_vs_formula": 12782
+  },
+  "failure_count": 0,
+  "finite_audit_role": "independent recurrence, transcription, band, mex, low-R, tail, and scatter checks only",
+  "first_failures": [],
+  "ordered_cache": {
+    "currsize": 365681,
+    "hits": 633295,
+    "maxsize": null,
+    "misses": 365681
+  },
+  "repeat_byte_identical": true,
+  "repeat_runs": 2,
+  "scope": {
+    "direct_R": "0..x+40",
+    "direct_x": [
+      4,
+      80
+    ],
+    "low_R": "0..12",
+    "scatter_points": 25000,
+    "scatter_seed": 20261119,
+    "signature_R": "1..x+16",
+    "signature_x": [
+      4,
+      3000
+    ],
+    "tail_R": "x+16..x+19",
+    "tail_x": [
+      4,
+      10000
+    ],
+    "target": "H(R;(x,4);11), x>=4, R>=0"
+  },
+  "sha256_without_hash_field": "5278080582b5e6c027d4c7ca4ff156d094858bbc2ce02aefdf75bca5e7f39ebd",
+  "theorem": "K1015 z=11 y=4 two-token residual Grundy slice",
+  "total_checks": 13821809,
+  "verifier_sha256": "395ac8dadf9cfc8404a6a9bdc98cbcbf6f034f1f1df62357c86c8cdc11f50775"
+}

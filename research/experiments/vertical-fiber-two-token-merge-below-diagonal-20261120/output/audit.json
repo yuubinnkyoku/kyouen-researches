@@ -1,0 +1,62 @@
+{
+ "checks": {
+  "C1_raw_anchors_dual_recursion_and_closed_forms": {
+   "detail": [],
+   "pass": true,
+   "points": 48777
+  },
+  "C2_y1_closed_identity_grid": {
+   "detail": [],
+   "pass": true,
+   "points": 5915123
+  },
+  "C3_y2_closed_identity_grid": {
+   "detail": [],
+   "pass": true,
+   "points": 5851250
+  },
+  "C4_seeded_deep_probes_and_far_tails": {
+   "detail": [],
+   "pass": true,
+   "points": 198567
+  },
+  "C5_general_2token_census_witness": {
+   "detail": [],
+   "pass": true,
+   "points": 348270
+  },
+  "C6_three_token_census_witness": {
+   "detail": [],
+   "pass": true,
+   "points": 156754
+  },
+  "C7_four_five_token_census_witness": {
+   "detail": [],
+   "pass": true,
+   "points": 8740
+  },
+  "C8_sharpness_S_eq_z_counterexample": {
+   "detail": {
+    "S_eq_z_divergences_within_band": 828,
+    "canonical": [
+     3,
+     2,
+     1,
+     5,
+     1,
+     2
+    ]
+   },
+   "pass": true,
+   "points": 7757
+  },
+  "C9_single_token_z_independence_below_diagonal": {
+   "detail": [],
+   "pass": true,
+   "points": 546000
+  }
+ },
+ "pass": true,
+ "theorem": "For y in {1,2}: all z>=1, all x>=y with S=x+y<z, all R>=0: H(R;(x,y);z) = H(R;{S};z) = single_token(S,z,R) (proved symbolically from published K1023/K1099/K0832 closed forms; C1-C4 machine-confirm, C5-C7 are census witnesses only, C8 fixes merge failure at S=z, C9 confirms z-independence below diagonal).",
+ "total_points": 13081238
+}

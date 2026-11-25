@@ -1,0 +1,34 @@
+{
+  "all_ok": true,
+  "audit_schema": "kyouen-z6-independent-uniform-audit-v1",
+  "checks": {
+    "H6_vs_K0974": 180574,
+    "base26_vs_K0938": 780756,
+    "boxes_d10_even": 974,
+    "boxes_d9_odd": 994,
+    "direct_vs_H6_y26_100": 44401,
+    "direct_vs_K0974_y4_25": 8676,
+    "h5_low_reduction": 144048,
+    "low_window_d_constancy": 1824,
+    "slice35_vs_K0972": 780027,
+    "slice36_vs_K0973": 779941,
+    "step_class": 2344,
+    "step_low_window": 5472,
+    "step_transient": 675,
+    "tail_parity": 2952,
+    "theorem_T_bounds": 1584,
+    "total_examples": 2735576,
+    "twos_census_y4_40": 333,
+    "y3_boundary": 1
+  },
+  "failure_count": 0,
+  "failures": [],
+  "provenance": {
+    "H6_uniform_claim": "normalized independently from published slices K0938/K0972/K0973",
+    "closed_form_anchors": "K0938 y=26, K0972 y=35, K0973 y=36",
+    "h5": "K0873 verbatim",
+    "k974_formula": "transcribed from K0974 report (verification object)",
+    "universal_step": "(d,t,u) atom-grid induction, base y=26 (K0938), covers all y>=27, all d, 13<=r<x+y+7"
+  },
+  "verifier_sha256": "4da6ff318c9866e6fa4c3cf29a2d5b7e2fba2717f681de4ed0ecd20f3b684be9"
+}

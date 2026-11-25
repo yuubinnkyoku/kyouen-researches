@@ -1,0 +1,88 @@
+{
+  "checks": {
+    "C1": {
+      "bad": 0,
+      "desc": "raw both engines vs cand8 z=0..14 x=8..28 R<=x+z+46",
+      "points": 22680
+    },
+    "C11": {
+      "bad": 0,
+      "desc": "raw census anchor z=0..79 x=8..70 R<=x+z+12, both engines",
+      "points": 922320
+    },
+    "C12": {
+      "bad": 0,
+      "desc": "deep closed grid z=0..120 x=8..120 R<=x+z+16",
+      "points": 1914220
+    },
+    "C1b": {
+      "bad": 0,
+      "desc": "single_token/y=7-child/x=8 merger raw anchors",
+      "points": 44886
+    },
+    "C1d": {
+      "anchor_bad": 0,
+      "bad": 0,
+      "desc": "published z=15/16/17 y>=6 slices (y=8) vs cand8, x=8..159 R<=x+61; + low-R single-token reduction R<=z+6",
+      "lowR_bad": 0,
+      "points": 75924
+    },
+    "C2": {
+      "bad": 0,
+      "desc": "closed identity grid z=0..48 x=8..56 R<=x+z+40 (+merge,tail)",
+      "points": 230496
+    },
+    "C2b": {
+      "bad": 0,
+      "desc": "deep tail identity rows z in {60..400}",
+      "points": 9282
+    },
+    "C3": {
+      "bad": 0,
+      "desc": "option decomposition vs raw child enumeration",
+      "points": 1224
+    },
+    "C4": {
+      "bad": 0,
+      "confluence_bad": 0,
+      "desc": "type machine box +/-60, clip 18/sentinel 19, confluence",
+      "identity_bad": 0,
+      "points": 635394,
+      "types": 73529
+    },
+    "C7": {
+      "bad": 0,
+      "desc": "seeded far probes 200k, seed 20261123, z,x<=3000",
+      "points": 200000
+    },
+    "C8": {
+      "bad": 0,
+      "desc": "boundary manifolds z<=3000, dx in [-19,11], tail window",
+      "points": 643475
+    },
+    "C9": {
+      "bad": 0,
+      "desc": "v-space shell sweeps [61,64],[89,92],[117,120]",
+      "points": 925254
+    }
+  },
+  "corollaries": {
+    "merge_below_diagonal": {
+      "bad": 0,
+      "claim": "x<=z-9 => H == single_token(x+8,z,R)",
+      "points": 1558050
+    },
+    "tail": {
+      "bad": 0,
+      "claim": "R>=x+z+9 => H == (x+8)%2",
+      "points": 330477
+    }
+  },
+  "experiment": "vertical-fiber-two-token-y8-parametric-allz-proof-20261120",
+  "family": "H(R;(x,8);z), z>=0, x>=8, R>=0",
+  "overall": "PASS",
+  "total_bad": 0,
+  "total_points": 5625155,
+  "type_count": 73685,
+  "verifier_sha256": "bcad4148bf8de8bd3dacab9fc1442ad01102c159127d511914d4abd46ffcbf98"
+}

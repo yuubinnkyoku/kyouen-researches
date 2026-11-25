@@ -1,0 +1,100 @@
+{
+ "generated": "2026-11-14",
+ "status": "complete",
+ "resume_from": 3300,
+ "machine": "research/experiments/width68-level-classification-20261113/scripts/width68_level_classify.ts（REST6=[19,23,7,29,43,47] 2フェーズ機・cap 2.4M nodes/chunk・lastDone 冪等再開）",
+ "machineNote": "K0801 の w=67 完走機と同一構造（verbatim 移植・W=68・窓マスク 68 ビット・ワード数 ceil(w/32) 自動）。健全性: survivors(REST6) ⊇ survivors(REST16)（width65-pruning-audit・w26 L12 制御 S* 1生残）。REST6 生残0の mask は REST16 でも生残0確定。完走セッション（chunks 25-40）はネイティブ Node.js（v22）実行・アルゴリズムは repo script と同一（境界規約どおり from=直前 lastDone verbatim）。",
+ "resumeConvention": "lastDone = (完了した最大 mask index)+1・resume_from = lastDone。次 chunk の from は直前 chunk の lastDone を verbatim で使う（+1 はしない・境界 off-by-one 再発防止）。",
+ "uniqueMasks": 3300,
+ "totalMaximal": 3300,
+ "harnessControl": {
+  "w64_L17": { "unique": 3288, "maximal": 3288, "note": "既往値と完全一致" },
+  "w65_L17": { "unique": 3296, "maximal": 3296, "note": "K0798 と一致" },
+  "w66_L17": { "unique": 3300, "maximal": 3300, "note": "K0799 と一致" },
+  "w67_L17": { "unique": 3300, "maximal": 3300, "note": "K0801 と一致" }
+ },
+ "chunks": [
+  { "chunk": 1, "from": 0, "lastDone": 104, "nodes": 2400000, "wordOps": 245724873, "leaves": 0, "aborted": true, "survivors": 0, "note": "104 mask/2.4M = ~23k/mask（前置帯は w=67 chunk1 の ~10.8k/mask の約2.2倍 — w=68 は軽い帯から重い）" },
+  { "chunk": 2, "from": 104, "lastDone": 297, "nodes": 2400000, "wordOps": 255867318, "leaves": 0, "aborted": true, "survivors": 0, "note": "193 mask/2.4M = ~12.4k/mask（軽い帯・減衰）" },
+  { "chunk": 3, "from": 297, "lastDone": 502, "nodes": 2400000, "wordOps": 258146326, "leaves": 0, "aborted": true, "survivors": 0, "note": "205 mask/2.4M = ~11.7k/mask（軽い帯）" },
+  { "chunk": 4, "from": 502, "lastDone": 724, "nodes": 2400000, "wordOps": 257509173, "leaves": 0, "aborted": true, "survivors": 0, "note": "222 mask/2.4M = ~10.8k/mask（軽い帯・w=67 と同水準に減衰）" },
+  { "chunk": 5, "from": 724, "lastDone": 776, "nodes": 2400000, "wordOps": 229646635, "leaves": 0, "aborted": true, "survivors": 0, "note": "52 mask/2.4M = ~46k/mask（heavy band 入り口 ~770 — 窓位相不变則どおり）" },
+  { "chunk": 6, "from": 776, "lastDone": 788, "nodes": 2400000, "wordOps": 225606695, "leaves": 0, "aborted": true, "survivors": 0, "note": "12 mask/2.4M = ~200k/mask（第一 heavy band 本格化）" },
+  { "chunk": 7, "from": 789, "lastDone": 807, "nodes": 2400000, "wordOps": 227339453, "leaves": 0, "aborted": true, "survivors": 0, "note": "18 mask/2.4M = ~133k/mask（heavy band・非単調）〔from=789 は境界 off-by-one → mask 788 は gapCertifications で個別証明〕" },
+  { "chunk": 8, "from": 808, "lastDone": 822, "nodes": 2400000, "wordOps": 226643213, "leaves": 0, "aborted": true, "survivors": 0, "note": "14 mask/2.4M = ~171k/mask（heavy band）〔from=808 は境界 off-by-one → mask 807 は gapCertifications で個別証明〕" },
+  { "chunk": 9, "from": 822, "lastDone": 840, "nodes": 2400000, "wordOps": 230319356, "leaves": 0, "aborted": true, "survivors": 0, "note": "18 mask/2.4M = ~133k/mask（heavy band）" },
+  { "chunk": 10, "from": 840, "lastDone": 861, "nodes": 2400000, "wordOps": 232668079, "leaves": 0, "aborted": true, "survivors": 0, "note": "21 mask/2.4M = ~114k/mask（heavy band）" },
+  { "chunk": 11, "from": 861, "lastDone": 880, "nodes": 2400000, "wordOps": 229561779, "leaves": 0, "aborted": true, "survivors": 0, "note": "19 mask/2.4M = ~126k/mask（heavy band）" },
+  { "chunk": 12, "from": 880, "lastDone": 885, "nodes": 2400000, "wordOps": 218394024, "leaves": 0, "aborted": true, "survivors": 0, "note": "5 mask/2.4M = ~480k/mask（第一 heavy band 最重要部・これまでの最高加重）" },
+  { "chunk": 13, "from": 885, "lastDone": 890, "nodes": 2400000, "wordOps": 220820479, "leaves": 0, "aborted": true, "survivors": 0, "note": "5 mask/2.4M = ~480k/mask（同上・最重要部持続）" },
+  { "chunk": 14, "from": 890, "lastDone": 900, "nodes": 2400000, "wordOps": 225224534, "leaves": 0, "aborted": true, "survivors": 0, "note": "10 mask/2.4M = ~240k/mask（heavy band・480kの最重要部通過後にやや軽減）" },
+  { "chunk": 15, "from": 900, "lastDone": 915, "nodes": 2400000, "wordOps": 224231841, "leaves": 0, "aborted": true, "survivors": 0, "note": "15 mask/2.4M = ~160k/mask（heavy band・非単調）" },
+  { "chunk": 16, "from": 915, "lastDone": 926, "nodes": 2400000, "wordOps": 225771584, "leaves": 0, "aborted": true, "survivors": 0, "note": "11 mask/2.4M = ~218k/mask（heavy band）" },
+  { "chunk": 17, "from": 926, "lastDone": 933, "nodes": 2400000, "wordOps": 215931836, "leaves": 0, "aborted": true, "survivors": 0, "note": "7 mask/2.4M = ~343k/mask（heavy band・局所ピーク）" },
+  { "chunk": 18, "from": 933, "lastDone": 944, "nodes": 2400000, "wordOps": 222482707, "leaves": 0, "aborted": true, "survivors": 0, "note": "11 mask/2.4M = ~218k/mask（heavy band）" },
+  { "chunk": 19, "from": 944, "lastDone": 960, "nodes": 2400000, "wordOps": 229504440, "leaves": 0, "aborted": true, "survivors": 0, "note": "16 mask/2.4M = ~150k/mask（heavy band・減衰開始）" },
+  { "chunk": 20, "from": 960, "lastDone": 972, "nodes": 2400000, "wordOps": 226327747, "leaves": 0, "aborted": true, "survivors": 0, "note": "12 mask/2.4M = ~200k/mask（heavy band・非単調）" },
+  { "chunk": 21, "from": 972, "lastDone": 985, "nodes": 2400000, "wordOps": 223655995, "leaves": 0, "aborted": true, "survivors": 0, "note": "13 mask/2.4M = ~185k/mask（heavy band）" },
+  { "chunk": 22, "from": 985, "lastDone": 1127, "nodes": 2400000, "wordOps": 247312013, "leaves": 0, "aborted": true, "survivors": 0, "note": "142 mask/2.4M = ~17k/mask（~1000 で沈み込み — w=65..67 と同一の窓位相・dip帯へ）" },
+  { "chunk": 23, "from": 1127, "lastDone": 1213, "nodes": 2400000, "wordOps": 243136970, "leaves": 0, "aborted": true, "survivors": 0, "note": "86 mask/2.4M = ~28k/mask（dip帯〜漸増・第二 heavy band 入り口接近）" },
+  { "chunk": 24, "from": 1213, "lastDone": 1223, "nodes": 2400000, "wordOps": 227389409, "leaves": 0, "aborted": true, "survivors": 0, "note": "10 mask/2.4M = ~240k/mask（第二 heavy band ~1190 再出現 — w=65..67 と同一位相）" },
+  { "chunk": 25, "from": 1223, "lastDone": 1241, "nodes": 2400000, "wordOps": 225821240, "leaves": 0, "aborted": true, "survivors": 0, "env": "node", "note": "18 mask/2.4M = ~133k/mask（第二 heavy band）" },
+  { "chunk": 26, "from": 1241, "lastDone": 1258, "nodes": 2400000, "wordOps": 230405966, "leaves": 0, "aborted": true, "survivors": 0, "env": "node", "note": "17 mask/2.4M = ~141k/mask（第二 heavy band）" },
+  { "chunk": 27, "from": 1258, "lastDone": 1275, "nodes": 2400000, "wordOps": 229820156, "leaves": 0, "aborted": true, "survivors": 0, "env": "node", "note": "17 mask/2.4M = ~141k/mask（第二 heavy band）" },
+  { "chunk": 28, "from": 1275, "lastDone": 1293, "nodes": 2400000, "wordOps": 227072223, "leaves": 0, "aborted": true, "survivors": 0, "env": "node", "note": "18 mask/2.4M = ~133k/mask（第二 heavy band）" },
+  { "chunk": 29, "from": 1293, "lastDone": 1308, "nodes": 2400000, "wordOps": 229948475, "leaves": 0, "aborted": true, "survivors": 0, "env": "node", "note": "15 mask/2.4M = ~160k/mask（第二 heavy band の終息）" },
+  { "chunk": 30, "from": 1308, "lastDone": 1385, "nodes": 2400000, "wordOps": 238784762, "leaves": 0, "aborted": true, "survivors": 0, "env": "node", "note": "77 mask/2.4M = ~31k/mask（第二 heavy band は ~1308 で終了 — w=67 の 1320 を下回り右肩上がり則 1302→1313→1320 は w=68 で反例。以降は中軽量帯）" },
+  { "chunk": 31, "from": 1385, "lastDone": 1647, "nodes": 2400000, "wordOps": 257456823, "leaves": 0, "aborted": true, "survivors": 0, "env": "node", "note": "262 mask/2.4M = ~9.2k/mask（軽い帯）" },
+  { "chunk": 32, "from": 1647, "lastDone": 1820, "nodes": 2400000, "wordOps": 255608553, "leaves": 0, "aborted": true, "survivors": 0, "env": "node", "note": "173 mask/2.4M = ~13.9k/mask（軽い帯）" },
+  { "chunk": 33, "from": 1820, "lastDone": 2011, "nodes": 2400000, "wordOps": 254730717, "leaves": 0, "aborted": true, "survivors": 0, "env": "node", "note": "191 mask/2.4M = ~12.6k/mask（軽い帯）" },
+  { "chunk": 34, "from": 2011, "lastDone": 2142, "nodes": 2400000, "wordOps": 248314224, "leaves": 0, "aborted": true, "survivors": 0, "env": "node", "note": "131 mask/2.4M = ~18.3k/mask（軽い帯・小バンプ）" },
+  { "chunk": 35, "from": 2142, "lastDone": 2381, "nodes": 2400000, "wordOps": 256052096, "leaves": 0, "aborted": true, "survivors": 0, "env": "node", "note": "239 mask/2.4M = ~10.0k/mask（軽い帯）" },
+  { "chunk": 36, "from": 2381, "lastDone": 2570, "nodes": 2400000, "wordOps": 255509447, "leaves": 0, "aborted": true, "survivors": 0, "env": "node", "note": "189 mask/2.4M = ~12.7k/mask（軽い帯）" },
+  { "chunk": 37, "from": 2570, "lastDone": 2817, "nodes": 2400000, "wordOps": 256145909, "leaves": 0, "aborted": true, "survivors": 0, "env": "node", "note": "247 mask/2.4M = ~9.7k/mask（軽い帯）" },
+  { "chunk": 38, "from": 2817, "lastDone": 3025, "nodes": 2400000, "wordOps": 258017112, "leaves": 0, "aborted": true, "survivors": 0, "env": "node", "note": "208 mask/2.4M = ~11.5k/mask（軽い帯）" },
+  { "chunk": 39, "from": 3025, "lastDone": 3203, "nodes": 2400000, "wordOps": 254805119, "leaves": 0, "aborted": true, "survivors": 0, "env": "node", "note": "178 mask/2.4M = ~13.5k/mask（軽い帯）" },
+  { "chunk": 40, "from": 3203, "lastDone": 3300, "nodes": 1019331, "wordOps": 109069097, "leaves": 0, "aborted": false, "survivors": 0, "env": "node", "note": "97 mask/1,019,331 nodes = ~10.5k/mask・capped なし完走（leaves=0・生残0）→ 全 3,300 maximal mask 走査終了" }
+ ],
+ "gapCertifications": [
+  { "mask": 788, "nodes": 314127, "leaves": 0, "survivors": 0, "note": "chunk6→7 境界の off-by-one（lastDone=788 に対し chunk7 を from=789 で実行）を classifyOne 単一mask完走機で個別証明。native Node での再計算も 314,127 nodes に完全一致（nativeControls）" },
+  { "mask": 807, "nodes": 273404, "leaves": 0, "survivors": 0, "note": "chunk7→8 境界の off-by-one（lastDone=807 に対し chunk8 を from=808 で実行）を classifyOne で個別証明。native Node での再計算も 273,404 nodes に完全一致（nativeControls）" }
+ ],
+ "nativeControls": {
+  "env": "Node.js v22（ネイティブ実行・repo script と同一アルゴリズム・依存なし）",
+  "crossEnvDeterminism": "フル再実行（from=0・42チャンク）の chunks 1-6 は境界位置と wordOps（245,724,873 / 255,867,318 / 258,146,326 / 257,509,173 / 229,646,635 / 225,603,695）が sandbox 実行の chunks 1-6 と完全一致",
+  "classifyOne": [
+   { "mask": 788, "nodes": 314127, "expected": 314127, "leaves": 0, "survivors": 0, "pass": true },
+   { "mask": 807, "nodes": 273404, "expected": 273404, "leaves": 0, "survivors": 0, "pass": true }
+  ],
+  "w26_L12": { "unique": 90, "maximal": 86, "nodes": 1270, "leaves": 1, "survivors": ["0,1,3,4,7,10,15,18,21,22,24,25"], "pass": true, "note": "S* ちょうど1生残（誤殺なし制御・width65-pruning-audit と同一結果）" },
+  "harness": {
+   "w64_L17": { "unique": 3288, "maximal": 3288, "pass": true },
+   "w65_L17": { "unique": 3296, "maximal": 3296, "pass": true },
+   "w66_L17": { "unique": 3300, "maximal": 3300, "pass": true },
+   "w67_L17": { "unique": 3300, "maximal": 3300, "pass": true }
+  }
+ },
+ "independentFullRerun": {
+  "note": "完走後の独立全幅再実行（from=0・単一連続実行・gap なし・ネイティブ Node）",
+  "chunks": 42,
+  "nodes": 96626896,
+  "wordOps": 9542047934,
+  "leaves": 0,
+  "survivors": 0,
+  "phase2Masks": 0,
+  "elapsedSeconds": 28.6,
+  "boundaryDivergenceNote": "chunks 1-6 は sandbox 記録と完全一致。chunk7 以降の境界は repo 記録の off-by-one シード（from=789/808）分のみずれ・mask 788/807 は本再実行では in-flow に走査。全 3,300 mask を単一連続実行で隣接漏れなし完走。",
+  "output": "research/experiments/width68-level-classification-20261113/output/width68_native_completion.json"
+ },
+ "totals": {
+  "masksDone": 3300,
+  "nodes": 92219331,
+  "gapCertNodes": 587531,
+  "nodesIncludingGap": 92806862,
+  "leaves": 0,
+  "survivors": 0,
+  "phase2Masks": 0
+ },
+ "estimate": "（完走済み・廃止）第二 heavy band は ~1190..1308（~31..240k/mask）で終了し以降は ~9..18k/mask の軽い帯。chunks 25-40（37,019,331 nodes）で全 3,300 maximal mask 完走。",
+ "semantics": "level 17 全滅（leaves=0・生残0・phase2 必要 mask 0件）+ K0797 会計（w ≤ 84 で有効）+ 2210 円下界 32 点（v-span 94 ≤ 134）⟹ **P(68) = 32（等号付き・全称）確定**。K0802 に昇格・results/fixed-width/ 追従済み。P(w) は全幅 w=6..68 で決定済み（32 プラトー 49..68）・level 17 復活点は (68,83]。"
+}

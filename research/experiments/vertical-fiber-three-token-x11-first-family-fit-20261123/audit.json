@@ -1,0 +1,421 @@
+{
+ "cand_sha256": "368494dc45636723a6abbb1e8c4fe28ad4d3861734cc79d4a150b255e8b23fbf",
+ "checks": {
+  "c1": {
+   "bad": 0,
+   "first": [],
+   "points": 129890,
+   "rows": 1705
+  },
+  "c2s0": {
+   "bad": 0,
+   "first": [],
+   "points": 10178,
+   "rows": 105,
+   "slice": 0
+  },
+  "c2s1": {
+   "bad": 0,
+   "first": [],
+   "points": 13252,
+   "rows": 120,
+   "slice": 1
+  },
+  "c2s2": {
+   "bad": 0,
+   "first": [],
+   "points": 2156,
+   "rows": 15,
+   "slice": 2
+  },
+  "c2s3": {
+   "bad": 0,
+   "first": [],
+   "points": 2808,
+   "rows": 15,
+   "slice": 3
+  },
+  "c3": {
+   "bad": 0,
+   "first": [],
+   "points": 1089
+  },
+  "c4s0": {
+   "bad": 0,
+   "first": [],
+   "points": 3666,
+   "rows": 78,
+   "slice": 0
+  },
+  "c4s1": {
+   "bad": 0,
+   "first": [],
+   "points": 19770,
+   "rows": 300,
+   "slice": 1
+  },
+  "c4s2": {
+   "bad": 0,
+   "first": [],
+   "points": 46095,
+   "rows": 525,
+   "slice": 2
+  },
+  "c5": {
+   "bad": 0,
+   "first": [],
+   "points": 6096
+  },
+  "c6fit": {
+   "bad": 0,
+   "first": [],
+   "points": 163860
+  },
+  "c6raw0": {
+   "bad": 0,
+   "first": [],
+   "points": 5580,
+   "slice": 0
+  },
+  "c6raw1": {
+   "bad": 0,
+   "first": [],
+   "points": 20880,
+   "slice": 1
+  },
+  "c7": {
+   "bad": 0,
+   "first": [],
+   "rows": 2736
+  },
+  "c7b": {
+   "bad": 0,
+   "columns": 3,
+   "first": [],
+   "points": 132
+  },
+  "c8s0": {
+   "bad": 0,
+   "canonical_engine_points": 1154,
+   "draws_high": 15000,
+   "draws_low": 0,
+   "first": [],
+   "points": 15000,
+   "slice": 0,
+   "slice_first3": [
+    [
+     75,
+     1,
+     5
+    ],
+    [
+     129,
+     7,
+     42
+    ],
+    [
+     16,
+     72,
+     15
+    ]
+   ],
+   "slice_last3": [
+    [
+     131,
+     183,
+     130
+    ],
+    [
+     197,
+     159,
+     71
+    ],
+    [
+     163,
+     194,
+     143
+    ]
+   ]
+  },
+  "c8s1": {
+   "bad": 0,
+   "canonical_engine_points": 1154,
+   "draws_high": 30000,
+   "draws_low": 15000,
+   "first": [],
+   "points": 15000,
+   "slice": 1,
+   "slice_first3": [
+    [
+     79,
+     16,
+     76
+    ],
+    [
+     161,
+     208,
+     87
+    ],
+    [
+     9,
+     53,
+     73
+    ]
+   ],
+   "slice_last3": [
+    [
+     165,
+     113,
+     74
+    ],
+    [
+     195,
+     42,
+     17
+    ],
+    [
+     107,
+     76,
+     67
+    ]
+   ]
+  },
+  "c8s2": {
+   "bad": 0,
+   "canonical_engine_points": 1154,
+   "draws_high": 45000,
+   "draws_low": 30000,
+   "first": [],
+   "points": 15000,
+   "slice": 2,
+   "slice_first3": [
+    [
+     185,
+     39,
+     86
+    ],
+    [
+     112,
+     15,
+     29
+    ],
+    [
+     123,
+     95,
+     102
+    ]
+   ],
+   "slice_last3": [
+    [
+     75,
+     18,
+     31
+    ],
+    [
+     74,
+     114,
+     7
+    ],
+    [
+     170,
+     33,
+     59
+    ]
+   ]
+  },
+  "c8s3": {
+   "bad": 0,
+   "canonical_engine_points": 1154,
+   "draws_high": 60000,
+   "draws_low": 45000,
+   "first": [],
+   "points": 15000,
+   "slice": 3,
+   "slice_first3": [
+    [
+     200,
+     178,
+     14
+    ],
+    [
+     17,
+     18,
+     41
+    ],
+    [
+     29,
+     71,
+     24
+    ]
+   ],
+   "slice_last3": [
+    [
+     182,
+     39,
+     108
+    ],
+    [
+     149,
+     37,
+     62
+    ],
+    [
+     146,
+     121,
+     106
+    ]
+   ]
+  },
+  "c9": {
+   "bad": 0,
+   "first": [],
+   "lemma_points": 6391
+  },
+  "c9b": {
+   "bad": 0,
+   "exc04_double_booked_equal": true,
+   "first": [],
+   "rows": 5890
+  },
+  "t0": {
+   "cand_sha256": "368494dc45636723a6abbb1e8c4fe28ad4d3861734cc79d4a150b255e8b23fbf",
+   "cand_transcription_byte_equal": true,
+   "markers": "1x1",
+   "single_token_spot_bad": 0,
+   "single_token_spot_bad_first": [],
+   "single_token_spot_points": 66520
+  }
+ },
+ "declared_note_commit": "df870814d1e2caba878ac63d3affb0f6d013741b",
+ "declared_note_path": "research/log/2026-11-23-three-token-x11-first-family-skeleton-single-owner-note.md",
+ "expected": {
+  "C1": {
+   "points": 129890,
+   "rows": 1705
+  },
+  "C2S": [
+   [
+    105,
+    10178
+   ],
+   [
+    120,
+    13252
+   ],
+   [
+    15,
+    2156
+   ],
+   [
+    15,
+    2808
+   ]
+  ],
+  "C2_TOTAL_ROWS_POINTS": [
+   255,
+   28394
+  ],
+  "C3": {
+   "points": 1089
+  },
+  "C4S": [
+   [
+    78,
+    3666
+   ],
+   [
+    300,
+    19770
+   ],
+   [
+    525,
+    46095
+   ]
+  ],
+  "C5": {
+   "points": 6096
+  },
+  "C6": {
+   "fit_points": 163860,
+   "raw_points": 26460
+  },
+  "C6RAW": [
+   5580,
+   20880
+  ],
+  "C7": {
+   "rows": 2736
+  },
+  "C7b": {
+   "columns": 3,
+   "points": 132
+  },
+  "C8": {
+   "first3": [
+    [
+     75,
+     1,
+     5
+    ],
+    [
+     129,
+     7,
+     42
+    ],
+    [
+     16,
+     72,
+     15
+    ]
+   ],
+   "last3": [
+    [
+     182,
+     39,
+     108
+    ],
+    [
+     149,
+     37,
+     62
+    ],
+    [
+     146,
+     121,
+     106
+    ]
+   ],
+   "points": 60000
+  },
+  "C9": {
+   "lemma_points": 6391
+  },
+  "C9b": {
+   "rows": 5890
+  },
+  "total": 494579
+ },
+ "family": "three-token-first-family-X=(x,1,1)",
+ "kind": "master-verifier-audit",
+ "per_check_points": {
+  "C1": 129890,
+  "C2": 28394,
+  "C3": 1089,
+  "C4": 69531,
+  "C5": 6096,
+  "C6": 190320,
+  "C7": 2736,
+  "C7b": 132,
+  "C8": 60000,
+  "C9": 6391
+ },
+ "provenance": {
+  "all_ones_U": "verify_induction_proof.py (vertical-fiber-all-ones-induction-proof-20261116), refetched byte-compared at declaration HEAD df870814",
+  "cand": "sibling cand_x11.py, sha256 below, byte-pinned by T0",
+  "engines_and_y1": "verify_merge.py (K1101 machine), whole-file blob SHA-1 5c09857abf56258325d8879430eff028b4c4b4fb, refetched byte-compared at declaration HEAD df870814"
+ },
+ "stage": "fit",
+ "status": "PASS",
+ "total_bad": 0,
+ "total_points": 494579
+}

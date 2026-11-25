@@ -1,0 +1,126 @@
+{
+ "battery": {
+  "declared_pts": 8631,
+  "gates": {
+   "D1_cells": {
+    "bad": 0,
+    "declared_pts": 3220,
+    "pts": 3220
+   },
+   "D2_strip": {
+    "bad": 0,
+    "declared_pts": 1069,
+    "pts": 1069
+   },
+   "D3_z12_anchors": {
+    "bad": 0,
+    "declared_pts": 263,
+    "pts": 263
+   },
+   "D4_stair_anchors": {
+    "bad": 0,
+    "declared_pts": 231,
+    "pts": 231
+   },
+   "D5_self_anchors": {
+    "bad": 0,
+    "declared_pts": 3766,
+    "pts": 3766
+   },
+   "D6_deviant_witnesses": {
+    "bad": 0,
+    "declared_pts": 13,
+    "pts": 13
+   },
+   "D7_extension_anchors": {
+    "bad": 0,
+    "declared_pts": 69,
+    "pts": 69
+   }
+  },
+  "overall_bad": 0,
+  "pts": 8631
+ },
+ "byte_identical_4_runs": true,
+ "declaration": "research/log/2026-11-25-strip-z13-min8-single-owner-note.md",
+ "declaration_commit": "cd47356ea1c56c1840b3f5a86de78e2f251400af",
+ "engine_block_file_sha256": "582c93c17bcd4fa618bfb74c733c3d679e197e8749ec4bbcc8821d3a6610d5c0",
+ "engine_pin": "bd5f22e415a78368c9b798296bc84948d5637decbf3c21a92404d45fb12e3a92",
+ "kit": "research/experiments/strip-z13-min8-20261125/",
+ "kit_verify_commit": "d90f94a67f1b0be8d42527be10f235973190d94f",
+ "machine": "verify_k1317",
+ "official_runs_source": "published bytes fetched back at kit_verify_commit (raw fetch byte-verified against local kit before the runs)",
+ "predry_stdout_sha256": "92cfd293bb7f063a576a96d2df5328973206ebf9fccd2bc88d65a1a32cf96269",
+ "result": "OFFICIAL-PASS",
+ "runs": [
+  {
+   "cmd": "PYTHONHASHSEED=random python3 verify_k1317.py (published bytes, same cwd)",
+   "rc": 0,
+   "run": 1,
+   "stdout_sha256": "92cfd293bb7f063a576a96d2df5328973206ebf9fccd2bc88d65a1a32cf96269"
+  },
+  {
+   "cmd": "PYTHONHASHSEED=1 python3 verify_k1317.py (published bytes, same cwd)",
+   "rc": 0,
+   "run": 2,
+   "stdout_sha256": "92cfd293bb7f063a576a96d2df5328973206ebf9fccd2bc88d65a1a32cf96269"
+  },
+  {
+   "cmd": "env -i python3 verify_k1317.py (published bytes, isolated env)",
+   "rc": 0,
+   "run": 3,
+   "stdout_sha256": "92cfd293bb7f063a576a96d2df5328973206ebf9fccd2bc88d65a1a32cf96269"
+  },
+  {
+   "cmd": "env -i PYTHONDONTWRITEBYTECODE=1 python3 verify_k1317.py (published bytes, isolated env)",
+   "rc": 0,
+   "run": 4,
+   "stdout_sha256": "92cfd293bb7f063a576a96d2df5328973206ebf9fccd2bc88d65a1a32cf96269"
+  }
+ ],
+ "tamper_battery": [
+  {
+   "actual_rc": 2,
+   "expected_rc": 2,
+   "mode": "--tamper-engine"
+  },
+  {
+   "actual_rc": 1,
+   "expected_rc": 1,
+   "flagged_gate": "D1_cells",
+   "mode": "--tamper=cell"
+  },
+  {
+   "actual_rc": 1,
+   "expected_rc": 1,
+   "flagged_gate": "D2_strip",
+   "mode": "--tamper=strip"
+  },
+  {
+   "actual_rc": 1,
+   "expected_rc": 1,
+   "flagged_gate": "D3_z12_anchors",
+   "mode": "--tamper=anchor12"
+  },
+  {
+   "actual_rc": 1,
+   "expected_rc": 1,
+   "flagged_gate": "D4_stair_anchors",
+   "mode": "--tamper=stair"
+  },
+  {
+   "actual_rc": 1,
+   "expected_rc": 1,
+   "flagged_gate": "D6_deviant_witnesses",
+   "mode": "--tamper=deviant"
+  },
+  {
+   "actual_rc": 1,
+   "expected_rc": 1,
+   "flagged_gate": "D7_extension_anchors",
+   "mode": "--tamper=ext"
+  }
+ ],
+ "tamper_battery_all_fail_closed": true,
+ "verify_k1317_sha256": "b2394c87abb0a0e07c43c433409f4a0c9098e75443245948d439b961b647d728"
+}

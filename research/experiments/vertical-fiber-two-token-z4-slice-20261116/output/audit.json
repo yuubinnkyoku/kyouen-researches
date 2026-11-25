@@ -1,0 +1,26 @@
+{
+  "all_zero_mismatch": true,
+  "checks": {
+    "grid_bad_first": [],
+    "grid_mismatches": 0,
+    "grid_states": 10200,
+    "induction_bad_first": [],
+    "induction_mismatches": 0,
+    "induction_steps_checked": 9900,
+    "parity_checked": 10200,
+    "parity_violations": 0,
+    "scatter_bad_first": [],
+    "scatter_checked": 200,
+    "scatter_mismatches": 0,
+    "single_anchor_checked": 4608,
+    "single_anchor_mismatches": 0,
+    "tail_checked": 1200,
+    "tail_violations": 0,
+    "z3_anchor_checked": 10200,
+    "z3_anchor_mismatches": 0
+  },
+  "extra_R_after_S": 8,
+  "max_x": 24,
+  "status": "conjecture-finite-audit",
+  "target": "two-token residual z=4 slice closed form (CONJECTURE)"
+}

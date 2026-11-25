@@ -1,0 +1,21 @@
+{
+  "checks": {
+    "K1027_B_anchor": 693,
+    "K1043_C_anchor": 663,
+    "fixed_seed_scatter": 1000,
+    "height_only_formula": 74940,
+    "root_two_engines_vs_closed_form": 913,
+    "signature_coverage_and_mex": 518418,
+    "tail_formula": 19984
+  },
+  "mismatches": 0,
+  "scope": {
+    "R_min": 0,
+    "R_unbounded": true,
+    "x_min": 5
+  },
+  "seed": 20261124,
+  "theorem": "H(R;(x,5);13) candidate classification",
+  "total_comparisons": 616611,
+  "universal_basis": "outer induction on x plus complete symbolic A/B/C signature bands; finite checks are audits only"
+}

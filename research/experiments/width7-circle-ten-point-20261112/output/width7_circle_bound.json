@@ -1,0 +1,127 @@
+{
+  "witness": {
+    "equation": "(2x-7)^2+(2y-7)^2=50",
+    "count": 10,
+    "rows": [
+      [
+        3,
+        4
+      ],
+      [
+        1,
+        6
+      ],
+      [],
+      [
+        0,
+        7
+      ],
+      [
+        0,
+        7
+      ],
+      [],
+      [
+        1,
+        6
+      ]
+    ],
+    "fitsM": 8
+  },
+  "tangent_f1": {
+    "range": 1000000,
+    "maxDoubleTs": 3,
+    "examples": [
+      {
+        "g": -10,
+        "ts": [
+          -5,
+          -2,
+          -1
+        ]
+      },
+      {
+        "g": 10,
+        "ts": [
+          1,
+          2,
+          5
+        ]
+      }
+    ],
+    "t3_coexists_with_other": 8,
+    "t5_t6_coexists": 0,
+    "note": "t3 coexists only as {3,6}/{-3,-6} (Pell w^2-2z^2=1: g=30,870,29406,997890 and mirrors) — 4+4 = 8 exactly"
+  },
+  "tangent_f2": {
+    "range": 1000000,
+    "maxDoubleTs": 2,
+    "worstH": -39208
+  },
+  "two_tangent": {
+    "g=5": {
+      "count": 2,
+      "ts": [
+        1,
+        4
+      ]
+    },
+    "g=6": {
+      "count": 1,
+      "ts": [
+        3
+      ]
+    },
+    "g=-5": {
+      "count": 2,
+      "ts": [
+        -1,
+        -4
+      ]
+    },
+    "g=-6": {
+      "count": 1,
+      "ts": [
+        -3
+      ]
+    }
+  },
+  "mod9_7rows": {
+    "worstDoubleRowsAmong7": 5,
+    "worstCase": {
+      "M": 0,
+      "D": 1,
+      "k": 4
+    },
+    "cases": 729
+  },
+  "census": {
+    "7x13": {
+      "total": 201,
+      "bySize": {
+        "7": 28,
+        "8": 161,
+        "10": 12
+      },
+      "max": 10
+    },
+    "7x16": {
+      "total": 321,
+      "bySize": {
+        "7": 48,
+        "8": 255,
+        "10": 18
+      },
+      "max": 10
+    },
+    "7x19": {
+      "total": 457,
+      "bySize": {
+        "7": 76,
+        "8": 357,
+        "10": 24
+      },
+      "max": 10
+    }
+  }
+}

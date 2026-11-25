@@ -1,0 +1,251 @@
+{
+ "date": "2026-11-14",
+ "lane": "fast",
+ "w": 85,
+ "L": 17,
+ "machine": "repo verbatim width_sweep.mjs (K0804) / Node.js v22.20.0 / 2.4M cap protocol / idempotent resume",
+ "full_sweep": {
+  "done": true,
+  "totalMasks": 3300,
+  "uniqueMasks": 3476,
+  "chunks": 693,
+  "totalNodes": 3476385481,
+  "leaves": 6,
+  "survivors": 6,
+  "capEscalations": 92,
+  "elapsedMs": 188442,
+  "reproduction": "2 full runs: 3,476,385,481 and 3,478,785,481 nodes (chunk-boundary-dependent difference 2,400,000; verdict/survivors/patterns invariant), second run with survivor-pattern collection"
+ },
+ "pre_registered_prediction": {
+  "source": "research/log/2026-11-14-width84-positive-control.md item 8 (mechanical window census)",
+  "prediction": "leaves>=6, all realizable, phantom 0",
+  "verdict": "CONFIRMED exactly: leaves=6, survivors=6, all realized, phantom 0"
+ },
+ "survivor_attribution_probe": {
+  "script": "width83_survivor_probe.mjs (repo verbatim, K0807)",
+  "survivors": [
+   {
+    "mask": 456,
+    "windowA": 23,
+    "pattern": [
+     0,
+     5,
+     7,
+     19,
+     27,
+     32,
+     40,
+     52,
+     54,
+     59,
+     63,
+     70,
+     73,
+     76,
+     77,
+     81,
+     82
+    ]
+   },
+   {
+    "mask": 1909,
+    "windowA": 22,
+    "pattern": [
+     1,
+     6,
+     8,
+     20,
+     28,
+     33,
+     41,
+     53,
+     55,
+     60,
+     64,
+     71,
+     74,
+     77,
+     78,
+     82,
+     83
+    ]
+   },
+   {
+    "mask": 2612,
+    "windowA": -1,
+    "pattern": [
+     1,
+     2,
+     6,
+     7,
+     10,
+     13,
+     20,
+     24,
+     29,
+     31,
+     43,
+     51,
+     56,
+     64,
+     76,
+     78,
+     83
+    ]
+   },
+   {
+    "mask": 2696,
+    "windowA": -2,
+    "pattern": [
+     2,
+     3,
+     7,
+     8,
+     11,
+     14,
+     21,
+     25,
+     30,
+     32,
+     44,
+     52,
+     57,
+     65,
+     77,
+     79,
+     84
+    ]
+   },
+   {
+    "mask": 3052,
+    "windowA": 21,
+    "pattern": [
+     2,
+     7,
+     9,
+     21,
+     29,
+     34,
+     42,
+     54,
+     56,
+     61,
+     65,
+     72,
+     75,
+     78,
+     79,
+     83,
+     84
+    ]
+   },
+   {
+    "mask": 3119,
+    "windowA": 0,
+    "pattern": [
+     0,
+     1,
+     5,
+     6,
+     9,
+     12,
+     19,
+     23,
+     28,
+     30,
+     42,
+     50,
+     55,
+     63,
+     75,
+     77,
+     82
+    ]
+   }
+  ],
+  "all_other_masks": "leaves=0",
+  "probe_range_nodes": {
+   "456": 2385146,
+   "1909": 2290071,
+   "2612": 2392519,
+   "2696": 2165039,
+   "3052": 2078327,
+   "3119": 2347554
+  }
+ },
+ "rest16": {
+  "p456": true,
+  "p2696": true,
+  "p3052": true,
+  "p1909": true,
+  "p2612": true,
+  "p3119": true
+ },
+ "witness_11050": {
+  "p456": {
+   "points": 34,
+   "nRows": 17,
+   "equalsPattern": true
+  },
+  "p1909": {
+   "points": 34,
+   "nRows": 17,
+   "equalsPattern": true
+  },
+  "p2696": {
+   "points": 34,
+   "nRows": 17,
+   "equalsPattern": true
+  },
+  "p3052": {
+   "points": 34,
+   "nRows": 17,
+   "equalsPattern": true
+  },
+  "p2612": {
+   "points": 34,
+   "nRows": 17,
+   "equalsPattern": true
+  },
+  "p3119": {
+   "points": 34,
+   "nRows": 17,
+   "equalsPattern": true
+  }
+ },
+ "realizability_scan_1e6": {
+  "circles_processed": 1964,
+  "hits": [
+   {
+    "R": 5525,
+    "tag": "control-11050",
+    "form": "oo",
+    "hit": {
+     "L": -105,
+     "pat": "p3119",
+     "rows": 17,
+     "pts": 34
+    }
+   },
+   {
+    "R": 5525,
+    "tag": "control-11050",
+    "form": "oo",
+    "hit": {
+     "L": -59,
+     "pat": "p456",
+     "rows": 17,
+     "pts": 34
+    }
+   }
+  ],
+  "conclusion": "row-set realizers among R'<=1e6: R'=5525 only; the 6 survivors are the 2 circle row sets (w83 P1/P2) under 6 window alignments (a=-2,-1,0,21,22,23)"
+ },
+ "conclusions": [
+  "w=85 level 17 REST6 survivor census is exactly 6, all realized by the 11050 circle -> certificate-phantom 0 at w=85 (3rd consecutive positive control pass)",
+  "the corrected (machine-census-based) pre-registration protocol produced an exact prediction for the first time (leaves>=6 -> exactly 6)",
+  "structural accounting: 6 survivors = 2 circle row sets x 3 window alignments",
+  "P(85)>=34 unchanged (K0791); P(85) upper bound open",
+  "next pre-registered prediction (from the w86 mechanical census): w=86 sweep leaves>=10, all realizable, phantom 0 expected"
+ ]
+}

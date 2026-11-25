@@ -1,0 +1,55 @@
+{
+  "schema": "z7-yge4-two-token-census-v1",
+  "scope": {
+    "z": 7,
+    "y": [
+      4,
+      80
+    ],
+    "d_x_minus_y": [
+      0,
+      50
+    ],
+    "R": "0..x+y+7 inclusive",
+    "tail_points": [
+      "x+y+8",
+      "x+y+9",
+      "x+y+20"
+    ]
+  },
+  "engines": [
+    {
+      "engine": "sorted-multiset",
+      "states": 459459,
+      "tail_checks": 11781,
+      "boundary_checks": 1,
+      "mismatches": [],
+      "value_counts": {
+        "0": 226919,
+        "1": 213059,
+        "2": 19481
+      },
+      "cache_states": 7290810,
+      "boundary_actual_H_7_33": 0
+    },
+    {
+      "engine": "ordered-labels",
+      "states": 459459,
+      "tail_checks": 11781,
+      "boundary_checks": 1,
+      "mismatches": [],
+      "value_counts": {
+        "0": 226919,
+        "1": 213059,
+        "2": 19481
+      },
+      "cache_states": 9528090,
+      "boundary_actual_H_7_33": 0
+    }
+  ],
+  "total_finite_states": 918918,
+  "total_tail_checks": 23562,
+  "total_boundary_checks": 2,
+  "result": "PASS",
+  "interpretation": "Finite exact recursion census only; it supports but does not prove the unbounded conjectured formula."
+}

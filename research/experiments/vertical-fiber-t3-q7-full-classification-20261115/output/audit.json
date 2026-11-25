@@ -1,0 +1,67 @@
+{
+  "scope": {
+    "rule": "pure fiber game; t=3; q=7; no base-trace constraints",
+    "safety": "sum_b min(c_b,3) <= 6",
+    "classification": "w=1 chain parity; w>=2 m odd: x XOR min(R,3e0+2e1+e2) mod 2; m=2: min(6-|S|,2w-|S|) mod 2; m even >=4: x XOR E-table"
+  },
+  "e_table_audit": {
+    "saturated_table_states": 64,
+    "closed_box_states_checked": 230,
+    "closed_box_e0_range": [
+      0,
+      9
+    ],
+    "mex_fixed_point_on_closed_box": "PASS",
+    "independent_recursion_matches_table": "PASS",
+    "e0_saturation_spot_check_e0_le_20": "PASS",
+    "table_value_set": [
+      0,
+      1,
+      2
+    ],
+    "issues": 0
+  },
+  "canonical_multiset_audit": {
+    "w_range": [
+      1,
+      12
+    ],
+    "m_range": [
+      2,
+      20
+    ],
+    "parameter_pairs": 228,
+    "states_checked": 26334,
+    "mismatches": 0,
+    "grundy_histogram": {
+      "0": 13389,
+      "1": 11622,
+      "2": 873,
+      "3": 450
+    }
+  },
+  "labeled_vector_audit": {
+    "w_range": [
+      1,
+      8
+    ],
+    "m_range": [
+      2,
+      12
+    ],
+    "parameter_pairs": 88,
+    "states_checked": 179740,
+    "mismatches": 0,
+    "grundy_histogram": {
+      "0": 91819,
+      "1": 76926,
+      "2": 8505,
+      "3": 2490
+    },
+    "matches_published_maxvalue_audit_histogram": true
+  },
+  "per_pair_maxima_match_published_theorem": true,
+  "verifier_sha256": "618d0548e1fb192f644275ca56216255c10f08f74cd0a4cd2b11ee0b05cfe2a3",
+  "formulas_sha256": "e4afc515668aacff351c3544dd7e2e75b738632d83ba7c86dfb63a7bc27e4a80",
+  "audit_note": "Finite recursive-mex audits support the closed forms; the universal statements are proved in report.md. Abstract fiber polynomial game; no claim about any standard 2D board."
+}

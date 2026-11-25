@@ -1,0 +1,94 @@
+{
+  "all_ok": true,
+  "checks": {
+    "V10_theorem_T_parity_bound": {
+      "bad": 0,
+      "example": null,
+      "ok": true,
+      "points": 4594468
+    },
+    "V11_K1012_child_anchor": {
+      "bad": 0,
+      "example": null,
+      "ok": true,
+      "points": 7000
+    },
+    "V12_K1004_child_anchor": {
+      "bad": 0,
+      "example": null,
+      "ok": true,
+      "points": 6952
+    },
+    "V13_height_only_reduction_low_R": {
+      "bad": 0,
+      "claim": "R<=12: H((x,2);11) = v_single(x+2,11,R)",
+      "example": null,
+      "ok": true,
+      "points": 1027
+    },
+    "V14_fixed_seed_scatter": {
+      "bad": 0,
+      "example": null,
+      "ok": true,
+      "points": 20000,
+      "seed": 20261119
+    },
+    "V1_ordered_direct_vs_formula": {
+      "bad": 0,
+      "example": null,
+      "ok": true,
+      "points": 6952
+    },
+    "V2_canonical_direct_vs_formula": {
+      "bad": 0,
+      "example": null,
+      "ok": true,
+      "points": 6952
+    },
+    "V3_two_direct_engines_agree": {
+      "bad": 0,
+      "example": null,
+      "ok": true,
+      "points": 6952
+    },
+    "V4_ABC_anchor_mex_matches_formula": {
+      "bad": 0,
+      "example": null,
+      "ok": true,
+      "points": 4594468
+    },
+    "V5_signature_band_coverage": {
+      "bad": 0,
+      "example": null,
+      "ok": true,
+      "points": 4594468
+    },
+    "V6_signature_band_matches_ABC": {
+      "bad": 0,
+      "example": null,
+      "ok": true,
+      "points": 4594468
+    },
+    "V7_signature_mex_matches_ABC": {
+      "bad": 0,
+      "example": null,
+      "ok": true,
+      "points": 4594468
+    },
+    "V8_signature_mex_matches_formula": {
+      "bad": 0,
+      "example": null,
+      "ok": true,
+      "points": 4594468
+    },
+    "V9_general_tail": {
+      "bad": 0,
+      "claim": "R >= x+14 => H=(x+2) mod 2",
+      "example": null,
+      "ok": true,
+      "points": 49995
+    }
+  },
+  "fail": [],
+  "n_points": 27672638
+}

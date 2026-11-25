@@ -1,0 +1,64 @@
+{
+  "commands": [
+    "python3 probe_y9.py",
+    "python3 cand9.py",
+    "python3 spot9.py"
+  ],
+  "declaration": "research/log/2026-11-20-two-token-y9-parametric-allz-single-owner-note.md (2026-11-20T08:41:00Z)",
+  "engine": "raw order-preserving double recursion with lcm memo (lru_cache), sorted-desc canonical multiset",
+  "experiment": "vertical-fiber-two-token-y9-parametric-allz-fit-20261120",
+  "family": "two-token residual game H(R;(x,9);z)",
+  "files_sha256": {
+    "cand9.py": "912e4a942d697c2d4c39d1558cc5d13bfa369475328d23b7b7a3e3ab76a6f2ae",
+    "probe_rows.txt": {
+      "note": "local fitting input; regenerable deterministically via probe_y9.py (z=0..30, x=9..z+27, R<=x+z+26)",
+      "published": false
+    },
+    "probe_y9.py": "aecd1251bd0a8769cca34eae10238e80a3a97790f1c873c81f8d5a8c25281d89",
+    "report.md": "6e840acb160bab31a5a040dfc47a453cce47cde273f6c0686b9ce27aecfa28f6",
+    "spot9.py": "176c8628c3e06c4dfd0c2b6801aec231a620b50d63774e9c44fa4e3147a2af3d"
+  },
+  "generated_utc": "2026-11-20T08:58:50Z",
+  "probe_box": {
+    "R_cap": "x+z+26",
+    "merge_points": 5070,
+    "merge_rows": 78,
+    "points": 73811,
+    "rows": 1054,
+    "tail_points": 17918,
+    "x_hi": "z+27",
+    "x_lo": 9,
+    "z0": 0,
+    "z1": 30
+  },
+  "spot": {
+    "bigd": "z in {5,12,19,26,33,40} x d in {30,41,52}, R<=x+z+30",
+    "bigz": "z=31..40 x 14 representative d, R<=x+z+30",
+    "deep_R_cap": 130,
+    "deep_rows": 7,
+    "points": 25376,
+    "rows": "see spot9.py",
+    "x_eq_y": "z=9..40, R<=z+130"
+  },
+  "stage": "fit-and-spot (finite; universal proof pending)",
+  "verification": {
+    "cand9_full_match": {
+      "mismatch": 0,
+      "points": 73811,
+      "tp_overlap": 0
+    },
+    "merge_assert": {
+      "bad": 0,
+      "points": 5070
+    },
+    "spot_check": {
+      "bad": 0,
+      "points": 25376
+    },
+    "tail_assert": {
+      "bad": 0,
+      "points": 17918
+    },
+    "total_checked": 99187
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "all_pass": true,
+  "audit_scope": {
+    "direct_r": "0 <= R < x+51",
+    "direct_x": [
+      21,
+      71
+    ],
+    "far_tail_samples": 2000,
+    "far_tail_seed": 20261117,
+    "signature_r": "1 <= R <= x+27",
+    "signature_x": [
+      21,
+      2000
+    ],
+    "tail_offsets": [
+      0,
+      64
+    ],
+    "tail_x": [
+      21,
+      2000
+    ]
+  },
+  "classification": "universal proof by signature table, Theorem T, general tail, and strong induction on R",
+  "counts": {
+    "choice_signatures": 2054250,
+    "direct_ordered_canonical_anchor": 14841,
+    "even_parent_upper_bound": 1026630,
+    "fixed_seed_far_tail": 2000,
+    "mex_identities": 2054250,
+    "odd_parent_upper_bound": 1027620,
+    "tail": 128700,
+    "three_family_specialization": 1980,
+    "value2_locus": 1980
+  },
+  "failures": [],
+  "sha256_without_hash_field": "8936649273231de493ddfa40bd4d35c9dbc77f76cf3a8ba50b5fe95c7772d3c9",
+  "target": "H(R;(x,21);6), x>=21, R>=0",
+  "total_checks": 6312251
+}

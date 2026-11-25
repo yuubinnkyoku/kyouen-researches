@@ -1,0 +1,24 @@
+{
+  "positive_blocker_regression": {
+    "board": "3x8",
+    "target_occupied": 4,
+    "blocked_target_sites": 4,
+    "pair_matching_bound": 12
+  },
+  "five_point_subsets_tested": 252,
+  "five_point_energy_histogram": {
+    "10": 40,
+    "12": 132,
+    "14": 72,
+    "16": 8
+  },
+  "maximum_energy": 16,
+  "ordered_pair_of_five_sets_tested": 63504,
+  "maximum_matching_pair_count": 16,
+  "independent_determinant_geometry_cases": 36,
+  "independent_safe_state_blocker_checks": 324,
+  "largest_blocker_count_in_samples": 0,
+  "largest_matching_pair_count_in_samples": 5,
+  "universal_threshold_per_line": 21,
+  "proof_scope": "any three distinct parallel lines, arbitrary finite site sets of at least 21 points each; q=6 complete-call normal play"
+}

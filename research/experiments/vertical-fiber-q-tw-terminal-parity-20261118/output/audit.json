@@ -1,0 +1,65 @@
+{
+  "labeled_grundy_histogram": {
+    "0": 1014963,
+    "1": 1014868
+  },
+  "per_degree_cap": {
+    "1": {
+      "canonical_multiset_states": 1281,
+      "cross_engine_mismatches": 0,
+      "formula_mismatches": 0,
+      "labeled_states": 37443,
+      "parameter_pairs": 35
+    },
+    "2": {
+      "canonical_multiset_states": 88828,
+      "cross_engine_mismatches": 0,
+      "formula_mismatches": 0,
+      "labeled_states": 1784074,
+      "parameter_pairs": 58
+    },
+    "3": {
+      "canonical_multiset_states": 2533,
+      "cross_engine_mismatches": 0,
+      "formula_mismatches": 0,
+      "labeled_states": 66380,
+      "parameter_pairs": 35
+    },
+    "4": {
+      "canonical_multiset_states": 2784,
+      "cross_engine_mismatches": 0,
+      "formula_mismatches": 0,
+      "labeled_states": 70285,
+      "parameter_pairs": 35
+    },
+    "5": {
+      "canonical_multiset_states": 2909,
+      "cross_engine_mismatches": 0,
+      "formula_mismatches": 0,
+      "labeled_states": 71649,
+      "parameter_pairs": 35
+    }
+  },
+  "schema": "vertical-fiber-q-tw-terminal-parity-audit-v1",
+  "scope": {
+    "additional_t2_width4_heights_8_to_30": true,
+    "all_t_1_to_5_width_1_to_5_height_1_to_7": true,
+    "finite_audit_only": true,
+    "parameter_pairs": 198
+  },
+  "t2_width4_q8": {
+    "canonical_multiset_states": 87295,
+    "cross_engine_mismatches": 0,
+    "formula_mismatches": 0,
+    "height_range": "1..30",
+    "labeled_states": 1733520,
+    "parameter_pairs": 30
+  },
+  "theorem_checked": "For t>=1, q=t*w, width w>=1 and height m>=1, every safe pure-fiber state c has G(c)=(N-sum(c)) mod 2, where N=w*m if m<t and N=(w-1)*m+t-1 if m>=t.",
+  "totals": {
+    "canonical_multiset_states": 98335,
+    "cross_engine_mismatches": 0,
+    "formula_mismatches": 0,
+    "labeled_states": 2029831
+  }
+}

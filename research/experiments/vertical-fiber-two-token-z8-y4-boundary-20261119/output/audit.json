@@ -1,0 +1,45 @@
+{
+  "all_pass": true,
+  "counts": {
+    "Theorem_T_grid": 2050919,
+    "direct_formula_two_engines": 8322,
+    "even_parent_bound": 1011980,
+    "height_only_collapse": 4970,
+    "independent_z8y3_z7y4_anchor_direct": 8366,
+    "mex_identity": 2024958,
+    "odd_parent_bound": 1012978,
+    "signature_coverage_identity": 2024958,
+    "tail_formula": 19988,
+    "tail_signature": 7988
+  },
+  "failures": {
+    "Theorem_T": 0,
+    "anchors": 0,
+    "coverage": 0,
+    "direct": 0,
+    "height_only": 0,
+    "mex": 0,
+    "signature": 0,
+    "tail": 0,
+    "tail_signature": 0
+  },
+  "repeat_byte_identical": true,
+  "repeat_runs": 2,
+  "scope": {
+    "Theorem_T": "4<=x<=2000, 0<=R<=x+24",
+    "anchor_direct": "z=8,y=3 for 3<=x<=60 and z=7,y=4 for 4<=x<=60, 0<=R<=x+40",
+    "direct_target": "4<=x<=60, 0<=R<=x+40; ordered and canonical engines",
+    "height_only": "4<=x<=500, 0<=R<=9",
+    "signature": "4<=x<=2000, 1<=R<=x+12",
+    "tail": "4<=x<=5000, R=x+13..x+16",
+    "tail_signature": "4<=x<=2000, R=x+13..x+16"
+  },
+  "sha256_without_hash_field": "01d01573c1c1f99a68b93f1bfc55aa0576fb3a0ae5a55d18f019083f6024ead9",
+  "state_counts": {
+    "canonical_target": 178660,
+    "ordered_anchor": 179133,
+    "ordered_target": 180712
+  },
+  "target": "H(R;(x,4);8), x>=4, R>=0",
+  "total_checks": 8175427
+}

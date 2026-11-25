@@ -1,0 +1,28 @@
+{
+  "canonical_engine_cache": {
+    "hits": 257944,
+    "misses": 157449
+  },
+  "claim": "H(R;(x,4);6) is given by the z6_y4 formula for all x>=4,R>=0",
+  "classification": "finite-independent-audit-not-proof",
+  "counts": {
+    "direct_formula_states": 4431,
+    "direct_ordered_canonical_states": 4431,
+    "mex_identity_states": 2020964,
+    "option_signature_states": 2020964,
+    "random_anchor_signature_states": 2000,
+    "tail_states": 19988,
+    "theorem_t_checks": 4431,
+    "z5_y4_anchor_states": 5757,
+    "z6_y3_anchor_states": 5757
+  },
+  "failures": [],
+  "ordered_engine_cache": {
+    "hits": 368894,
+    "misses": 218820
+  },
+  "pass": true,
+  "schema": "two-token-z6-y4-audit-v1",
+  "seed": 20261117,
+  "total_checks": 4088723
+}

@@ -1,0 +1,135 @@
+#!/usr/bin/env python3
+"""build_engine_from_published.py -- provenance gate for the engine block
+embedded in verify_strip_z7.py.
+
+The engine + closed-form block (mex / H_ordered / H_canonical / vC / vO /
+q_odd / single_token, 2,508 bytes) is machine-compared (zero hand
+transcription) against SIX published verifiers:
+  src1: research/experiments/generalx-min-token-lowr-staircase-20261123/
+        verify_min_token_staircase.py          (published K1264 verifier)
+  src2: research/experiments/generalx-unified-window-sharpness-20261123/
+        verify_unified_window_sharpness.py    (published K1268 machine)
+  src3: research/experiments/ones-row-windowedge-frontier-20261123/
+        verify_ones_row_frontier.py           (published K1271 machine)
+  src4: research/experiments/min3-banded-strip-z2z4-20261123/
+        verify_min3_banded_strip.py           (published K1272 machine)
+  src5: research/experiments/strip-z5-min4-20261123/
+        verify_strip_z5.py                    (published K1273 machine)
+  src6: research/experiments/strip-z6-min5-20261123/
+        verify_strip_z6.py                    (published K1274 machine)
+Cuts: src1 between the lines 'def mex(values):' and the first line starting
+with 'SELF_SHA = hashlib' (trailing blank lines stripped); src2..src6 and
+this machine between their '# === ENGINE BLOCK' and
+'# === END ENGINE BLOCK' markers (trailing blank lines stripped).
+Exit 0 iff the six source sha256 pins match, all seven blocks are
+byte-identical, and the common block matches the published engine pin
+bd5f22e4... (i.e., this machine's engine is byte-exact). Fail-closed:
+PROVENANCE PASS is printed only on success; rc=1 otherwise.
+"""
+import hashlib, os, sys
+
+SRC1_REL = os.path.join('..', 'generalx-min-token-lowr-staircase-20261123',
+                        'verify_min_token_staircase.py')
+SRC1_PIN = '108fdd65a96588b32cfd64503cf2a22f999d6e4eefded775bb6fda32568e69fa'
+SRC2_REL = os.path.join('..', 'generalx-unified-window-sharpness-20261123',
+                        'verify_unified_window_sharpness.py')
+SRC2_PIN = '0ab66665dc9990f5399a661ccb2f9c3ba75f5a010c7e915f6a44e3d4fe6d3103'
+SRC3_REL = os.path.join('..', 'ones-row-windowedge-frontier-20261123',
+                        'verify_ones_row_frontier.py')
+SRC3_PIN = '1ce7df23f15165180773fcfd45c9b789e0f22981a148fdc07e6708cbb5e43173'
+SRC4_REL = os.path.join('..', 'min3-banded-strip-z2z4-20261123',
+                        'verify_min3_banded_strip.py')
+SRC4_PIN = '009184eff1accbaa82cdea9eea5e81253252e6d3681e893b1fd30506d6acad9c'
+SRC5_REL = os.path.join('..', 'strip-z5-min4-20261123', 'verify_strip_z5.py')
+SRC5_PIN = ('314e176b4229486ff60672b63095397daa786fb1e4affe90ac20b5c060b72'
+            '4f4')
+SRC6_REL = os.path.join('..', 'strip-z6-min5-20261123', 'verify_strip_z6.py')
+SRC6_PIN = ('61cb0b60b9012320e2146f4b49566a3b6fc5cee4cfb42c8911db9dc5321'
+            'cb134')
+ENGINE_PIN = ('bd5f22e415a78368c9b798296bc84948d5637decbf3c21a92404d45fb12'
+              'e3a92')
+SELF_REL = 'verify_strip_z7.py'
+
+
+def cut_k1264(text):
+    lines = text.split('\n')
+    s = None
+    for i, ln in enumerate(lines):
+        if ln == 'def mex(values):':
+            s = i
+            break
+    if s is None:
+        raise SystemExit('start marker not found in K1264 verifier')
+    e = None
+    for j in range(s, len(lines)):
+        if lines[j].startswith('SELF_SHA = hashlib'):
+            e = j
+            break
+    if e is None:
+        raise SystemExit('end marker not found in K1264 verifier')
+    block = lines[s:e]
+    while block and block[-1].strip() == '':
+        block.pop()
+    return '\n'.join(block) + '\n'
+
+
+def cut_markers(text):
+    lines = text.split('\n')
+    s = e = None
+    for i, ln in enumerate(lines):
+        if ln.startswith('# === ENGINE BLOCK'):
+            s = i + 1
+            break
+    if s is None:
+        raise SystemExit('engine block markers not found')
+    for j in range(s, len(lines)):
+        if lines[j].startswith('# === END ENGINE BLOCK'):
+            e = j
+            break
+    if e is None or e <= s:
+        raise SystemExit('engine block markers not found')
+    block = lines[s:e]
+    while block and block[-1].strip() == '':
+        block.pop()
+    return '\n'.join(block) + '\n'
+
+
+def load_pinned(rel, pin):
+    path = os.path.join(os.path.dirname(os.path.abspath(__file__)), rel)
+    data = open(path, 'rb').read()
+    sha = hashlib.sha256(data).hexdigest()
+    if sha != pin:
+        print('sha mismatch for', rel, ':', sha)
+        sys.exit(1)
+    print('pin OK:', os.path.basename(path), sha)
+    return data.decode('utf-8')
+
+
+def main():
+    src1 = load_pinned(SRC1_REL, SRC1_PIN)
+    src2 = load_pinned(SRC2_REL, SRC2_PIN)
+    src3 = load_pinned(SRC3_REL, SRC3_PIN)
+    src4 = load_pinned(SRC4_REL, SRC4_PIN)
+    src5 = load_pinned(SRC5_REL, SRC5_PIN)
+    src6 = load_pinned(SRC6_REL, SRC6_PIN)
+    self_path = os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                             SELF_REL)
+    self_text = open(self_path, 'rb').read().decode('utf-8')
+    blocks = [cut_k1264(src1), cut_markers(src2), cut_markers(src3),
+              cut_markers(src4), cut_markers(src5), cut_markers(src6),
+              cut_markers(self_text)]
+    shas = [hashlib.sha256(b.encode('utf-8')).hexdigest() for b in blocks]
+    if len(set(shas)) != 1:
+        print('blocks differ:', shas)
+        sys.exit(1)
+    if shas[0] != ENGINE_PIN:
+        print('engine pin mismatch:', shas[0])
+        sys.exit(1)
+    print('six published sources + this machine: seven-way byte-identical')
+    print('engine block sha256:', shas[0])
+    print('engine block bytes:', len(blocks[0].encode('utf-8')))
+    print('PROVENANCE PASS')
+
+
+if __name__ == '__main__':
+    main()

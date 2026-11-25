@@ -1,0 +1,107 @@
+{
+  "all_pass": true,
+  "cache": {
+    "canonical": {
+      "currsize": 225071,
+      "hits": 325969,
+      "maxsize": null,
+      "misses": 225071
+    },
+    "ordered": {
+      "currsize": 368034,
+      "hits": 520570,
+      "maxsize": null,
+      "misses": 368034
+    }
+  },
+  "checks": {
+    "V10_theorem_T_parity": {
+      "bad": 0,
+      "example": null,
+      "ok": true,
+      "points": 530500
+    },
+    "V11_single_token_z17": {
+      "bad": 0,
+      "example": null,
+      "ok": true,
+      "points": 6480
+    },
+    "V12_K1020_child_anchor": {
+      "bad": 0,
+      "example": null,
+      "ok": true,
+      "points": 6920
+    },
+    "V13_fixed_seed_large_x_spots": {
+      "bad": 0,
+      "example": null,
+      "ok": true,
+      "points": 20000,
+      "seed": 20261119,
+      "x_max": 100000
+    },
+    "V14_height_only_R_le_17": {
+      "bad": 0,
+      "example": null,
+      "ok": true,
+      "points": 9000
+    },
+    "V1_ordered_direct_vs_formula": {
+      "bad": 0,
+      "example": null,
+      "ok": true,
+      "points": 6920
+    },
+    "V2_canonical_direct_vs_formula": {
+      "bad": 0,
+      "example": null,
+      "ok": true,
+      "points": 6920
+    },
+    "V3_direct_engines_agree": {
+      "bad": 0,
+      "example": null,
+      "ok": true,
+      "points": 6920
+    },
+    "V4_ABC_mex_vs_formula": {
+      "bad": 0,
+      "example": null,
+      "ok": true,
+      "points": 530500
+    },
+    "V5_signature_coverage": {
+      "bad": 0,
+      "example": null,
+      "ok": true,
+      "points": 530500
+    },
+    "V6_signature_vs_child_values": {
+      "bad": 0,
+      "example": null,
+      "ok": true,
+      "points": 530500
+    },
+    "V7_signature_mex_vs_ABC_mex": {
+      "bad": 0,
+      "example": null,
+      "ok": true,
+      "points": 530500
+    },
+    "V8_signature_mex_vs_formula": {
+      "bad": 0,
+      "example": null,
+      "ok": true,
+      "points": 530500
+    },
+    "V9_tail_R_ge_x_plus_18": {
+      "bad": 0,
+      "example": null,
+      "ok": true,
+      "points": 50000
+    }
+  },
+  "fail": [],
+  "n_points": 3296160
+}

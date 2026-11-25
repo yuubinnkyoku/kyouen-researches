@@ -1,0 +1,106 @@
+{
+  "controls": {
+    "d5_spotcheck": {
+      "bound": 600,
+      "five_double_rows": 0,
+      "bestCount": 4,
+      "bestExample": {
+        "M": -400,
+        "D": -150
+      }
+    }
+  },
+  "mod9_double_row_classification": {
+    "modulus": 9,
+    "qr": [
+      0,
+      1,
+      4,
+      7
+    ],
+    "worstDoubleRowsAmong6": 4,
+    "worstCase": {
+      "M": 0,
+      "D": 1,
+      "k": 4
+    },
+    "cases": 729
+  },
+  "tangent_lemma": {
+    "f1_g_range": 1000000,
+    "f1_max_double_ts": 3,
+    "f1_examples": [
+      {
+        "g": -10,
+        "ts": [
+          -5,
+          -2,
+          -1
+        ]
+      },
+      {
+        "g": -5,
+        "ts": [
+          -5,
+          -4,
+          -1
+        ]
+      },
+      {
+        "g": 5,
+        "ts": [
+          1,
+          4,
+          5
+        ]
+      },
+      {
+        "g": 10,
+        "ts": [
+          1,
+          2,
+          5
+        ]
+      }
+    ],
+    "t3_never_coexists_count": 0,
+    "f2_both_positive_squares_count": 0
+  },
+  "example_radius5": {
+    "points": [
+      -5,
+      0,
+      5,
+      0,
+      -4,
+      3,
+      4,
+      3,
+      -3,
+      4,
+      3,
+      4,
+      0,
+      5
+    ],
+    "count": 7
+  },
+  "census_reproduction": {
+    "6x13": {
+      "total": 116,
+      "bySize": {
+        "7": 14,
+        "8": 102
+      },
+      "max": 8
+    },
+    "6x16": {
+      "total": 176,
+      "bySize": {
+        "7": 24,
+        "8": 152
+      },
+      "max": 8
+    }
+  }
+}

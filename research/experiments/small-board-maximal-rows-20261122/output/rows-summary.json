@@ -1,0 +1,1490 @@
+{
+ "boards": {
+  "4": [
+   {
+    "determinism_found_equal": true,
+    "determinism_nodes_bit_equal": true,
+    "found": 0,
+    "k": 1,
+    "k0030_match": "oos-zero",
+    "k0030_published": null,
+    "k0030_range": false,
+    "n": 4,
+    "nodes_run1": 16,
+    "nodes_run2": 16
+   },
+   {
+    "determinism_found_equal": true,
+    "determinism_nodes_bit_equal": true,
+    "found": 0,
+    "k": 2,
+    "k0030_match": "oos-zero",
+    "k0030_published": null,
+    "k0030_range": false,
+    "n": 4,
+    "nodes_run1": 136,
+    "nodes_run2": 136
+   },
+   {
+    "determinism_found_equal": true,
+    "determinism_nodes_bit_equal": true,
+    "found": 0,
+    "k": 3,
+    "k0030_match": "oos-zero",
+    "k0030_published": null,
+    "k0030_range": false,
+    "n": 4,
+    "nodes_run1": 681,
+    "nodes_run2": 681
+   },
+   {
+    "determinism_found_equal": true,
+    "determinism_nodes_bit_equal": true,
+    "found": 0,
+    "k": 4,
+    "k0030_match": "oos-zero",
+    "k0030_published": null,
+    "k0030_range": false,
+    "n": 4,
+    "nodes_run1": 2188,
+    "nodes_run2": 2188
+   },
+   {
+    "all_have_three_collinear": false,
+    "determinism_found_equal": true,
+    "determinism_nodes_bit_equal": true,
+    "dirs_histogram": {
+     "0": 56,
+     "1": 88,
+     "2": 32
+    },
+    "ecc_histogram": {
+     "4": 40,
+     "5": 80,
+     "6": 24,
+     "7": 24,
+     "8": 8
+    },
+    "found": 176,
+    "k": 5,
+    "k0030_match": true,
+    "k0030_published": 176,
+    "k0030_range": true,
+    "n": 4,
+    "nodes_run1": 4027,
+    "nodes_run2": 4027,
+    "one_direction_configs": 88,
+    "one_triple_configs": 88,
+    "orbits": 22,
+    "orbits_cls_eq_ver": true,
+    "remov_histogram": null,
+    "stabilizer_histogram": {
+     "1": 22
+    },
+    "total_cfg_sha256": "5882209fd340ea09df4d03fbd77666362cce07c78264da0a66cebd92686a9513",
+    "trips3_histogram": {
+     "0": 56,
+     "1": 88,
+     "2": 32
+    },
+    "verify_maximal_all": true,
+    "verify_safe_all": true,
+    "zero_triple_configs": 56
+   },
+   {
+    "all_have_three_collinear": false,
+    "determinism_found_equal": true,
+    "determinism_nodes_bit_equal": true,
+    "dirs_histogram": {
+     "0": 40,
+     "1": 368,
+     "2": 240,
+     "3": 40
+    },
+    "ecc_histogram": {
+     "0": 40,
+     "1": 48,
+     "2": 200,
+     "3": 168,
+     "4": 152,
+     "5": 64,
+     "6": 16
+    },
+    "found": 688,
+    "k": 6,
+    "k0030_match": true,
+    "k0030_published": 688,
+    "k0030_range": true,
+    "n": 4,
+    "nodes_run1": 3893,
+    "nodes_run2": 3893,
+    "one_direction_configs": 368,
+    "one_triple_configs": 368,
+    "orbits": 87,
+    "orbits_cls_eq_ver": true,
+    "remov_histogram": {
+     "0": 688
+    },
+    "stabilizer_histogram": {
+     "1": 85,
+     "2": 2
+    },
+    "total_cfg_sha256": "873f5c85c3cfaf886298792b50d256b9e47187462480ea667b1d20b134277bba",
+    "trips3_histogram": {
+     "0": 40,
+     "1": 368,
+     "2": 240,
+     "3": 40
+    },
+    "verify_maximal_all": true,
+    "verify_safe_all": true,
+    "zero_triple_configs": 40
+   },
+   {
+    "all_have_three_collinear": true,
+    "determinism_found_equal": true,
+    "determinism_nodes_bit_equal": true,
+    "dirs_histogram": {
+     "1": 16,
+     "2": 32,
+     "3": 16
+    },
+    "ecc_histogram": {
+     "0": 64
+    },
+    "found": 64,
+    "k": 7,
+    "k0030_match": true,
+    "k0030_published": 64,
+    "k0030_range": true,
+    "n": 4,
+    "nodes_run1": 2691,
+    "nodes_run2": 2691,
+    "one_direction_configs": 16,
+    "one_triple_configs": 16,
+    "orbits": 8,
+    "orbits_cls_eq_ver": true,
+    "remov_histogram": {
+     "0": 64
+    },
+    "stabilizer_histogram": {
+     "1": 8
+    },
+    "total_cfg_sha256": "e7ffcd1c197d8ef18c08c4f4a3d118077759413cab98ab8b6db71b51bd43a9ea",
+    "trips3_histogram": {
+     "1": 16,
+     "2": 32,
+     "3": 16
+    },
+    "verify_maximal_all": true,
+    "verify_safe_all": true,
+    "zero_triple_configs": 0
+   },
+   {
+    "determinism_found_equal": true,
+    "determinism_nodes_bit_equal": true,
+    "found": 0,
+    "k": 8,
+    "k0030_match": true,
+    "k0030_published": 0,
+    "k0030_range": true,
+    "n": 4,
+    "nodes_run1": 1786,
+    "nodes_run2": 1786
+   },
+   {
+    "determinism_found_equal": true,
+    "determinism_nodes_bit_equal": true,
+    "found": 0,
+    "k": 9,
+    "k0030_match": true,
+    "k0030_published": 0,
+    "k0030_range": true,
+    "n": 4,
+    "nodes_run1": 1086,
+    "nodes_run2": 1086
+   },
+   {
+    "determinism_found_equal": true,
+    "determinism_nodes_bit_equal": true,
+    "found": 0,
+    "k": 10,
+    "k0030_match": true,
+    "k0030_published": 0,
+    "k0030_range": true,
+    "n": 4,
+    "nodes_run1": 617,
+    "nodes_run2": 617
+   },
+   {
+    "determinism_found_equal": true,
+    "determinism_nodes_bit_equal": true,
+    "found": 0,
+    "k": 11,
+    "k0030_match": true,
+    "k0030_published": 0,
+    "k0030_range": true,
+    "n": 4,
+    "nodes_run1": 365,
+    "nodes_run2": 365
+   },
+   {
+    "determinism_found_equal": true,
+    "determinism_nodes_bit_equal": true,
+    "found": 0,
+    "k": 12,
+    "k0030_match": "oos-zero",
+    "k0030_published": null,
+    "k0030_range": false,
+    "n": 4,
+    "nodes_run1": 204,
+    "nodes_run2": 204
+   },
+   {
+    "determinism_found_equal": true,
+    "determinism_nodes_bit_equal": true,
+    "found": 0,
+    "k": 13,
+    "k0030_match": "oos-zero",
+    "k0030_published": null,
+    "k0030_range": false,
+    "n": 4,
+    "nodes_run1": 100,
+    "nodes_run2": 100
+   },
+   {
+    "determinism_found_equal": true,
+    "determinism_nodes_bit_equal": true,
+    "found": 0,
+    "k": 14,
+    "k0030_match": "oos-zero",
+    "k0030_published": null,
+    "k0030_range": false,
+    "n": 4,
+    "nodes_run1": 51,
+    "nodes_run2": 51
+   },
+   {
+    "determinism_found_equal": true,
+    "determinism_nodes_bit_equal": true,
+    "found": 0,
+    "k": 15,
+    "k0030_match": "oos-zero",
+    "k0030_published": null,
+    "k0030_range": false,
+    "n": 4,
+    "nodes_run1": 29,
+    "nodes_run2": 29
+   },
+   {
+    "determinism_found_equal": true,
+    "determinism_nodes_bit_equal": true,
+    "found": 0,
+    "k": 16,
+    "k0030_match": "oos-zero",
+    "k0030_published": null,
+    "k0030_range": false,
+    "n": 4,
+    "nodes_run1": 18,
+    "nodes_run2": 18
+   }
+  ],
+  "5": [
+   {
+    "determinism_found_equal": true,
+    "determinism_nodes_bit_equal": true,
+    "found": 0,
+    "k": 1,
+    "k0030_match": "oos-zero",
+    "k0030_published": null,
+    "k0030_range": false,
+    "n": 5,
+    "nodes_run1": 25,
+    "nodes_run2": 25
+   },
+   {
+    "determinism_found_equal": true,
+    "determinism_nodes_bit_equal": true,
+    "found": 0,
+    "k": 2,
+    "k0030_match": "oos-zero",
+    "k0030_published": null,
+    "k0030_range": false,
+    "n": 5,
+    "nodes_run1": 325,
+    "nodes_run2": 325
+   },
+   {
+    "determinism_found_equal": true,
+    "determinism_nodes_bit_equal": true,
+    "found": 0,
+    "k": 3,
+    "k0030_match": "oos-zero",
+    "k0030_published": null,
+    "k0030_range": false,
+    "n": 5,
+    "nodes_run1": 2601,
+    "nodes_run2": 2601
+   },
+   {
+    "determinism_found_equal": true,
+    "determinism_nodes_bit_equal": true,
+    "found": 0,
+    "k": 4,
+    "k0030_match": "oos-zero",
+    "k0030_published": null,
+    "k0030_range": false,
+    "n": 5,
+    "nodes_run1": 14126,
+    "nodes_run2": 14126
+   },
+   {
+    "all_have_three_collinear": true,
+    "determinism_found_equal": true,
+    "determinism_nodes_bit_equal": true,
+    "dirs_histogram": {
+     "2": 4
+    },
+    "ecc_histogram": {
+     "8": 4
+    },
+    "found": 4,
+    "k": 5,
+    "k0030_match": true,
+    "k0030_published": 4,
+    "k0030_range": true,
+    "n": 5,
+    "nodes_run1": 49199,
+    "nodes_run2": 49199,
+    "one_direction_configs": 0,
+    "one_triple_configs": 0,
+    "orbits": 1,
+    "orbits_cls_eq_ver": true,
+    "remov_histogram": null,
+    "stabilizer_histogram": {
+     "2": 1
+    },
+    "total_cfg_sha256": "8af19ebe38452897c2c2380457b71b9b668595f9edd8baad4c829f17786732a4",
+    "trips3_histogram": {
+     "2": 4
+    },
+    "verify_maximal_all": true,
+    "verify_safe_all": true,
+    "zero_triple_configs": 0
+   },
+   {
+    "all_have_three_collinear": false,
+    "determinism_found_equal": true,
+    "determinism_nodes_bit_equal": true,
+    "dirs_histogram": {
+     "0": 116,
+     "1": 524,
+     "2": 392,
+     "3": 104
+    },
+    "ecc_histogram": {
+     "10": 108,
+     "11": 24,
+     "12": 8,
+     "4": 8,
+     "5": 88,
+     "6": 160,
+     "7": 280,
+     "8": 260,
+     "9": 200
+    },
+    "found": 1136,
+    "k": 6,
+    "k0030_match": true,
+    "k0030_published": 1136,
+    "k0030_range": true,
+    "n": 5,
+    "nodes_run1": 98581,
+    "nodes_run2": 98581,
+    "one_direction_configs": 524,
+    "one_triple_configs": 520,
+    "orbits": 143,
+    "orbits_cls_eq_ver": true,
+    "remov_histogram": {
+     "0": 1136
+    },
+    "stabilizer_histogram": {
+     "1": 141,
+     "2": 2
+    },
+    "total_cfg_sha256": "4ef0fe22e6c55077828136cdecc70eba31352e6052e08ef9cec2defbc2312008",
+    "trips3_histogram": {
+     "0": 116,
+     "1": 520,
+     "2": 396,
+     "3": 104
+    },
+    "verify_maximal_all": true,
+    "verify_safe_all": true,
+    "zero_triple_configs": 116
+   },
+   {
+    "all_have_three_collinear": false,
+    "determinism_found_equal": true,
+    "determinism_nodes_bit_equal": true,
+    "dirs_histogram": {
+     "0": 472,
+     "1": 2816,
+     "2": 4936,
+     "3": 2692,
+     "4": 356,
+     "5": 8
+    },
+    "ecc_histogram": {
+     "0": 16,
+     "1": 160,
+     "10": 56,
+     "13": 8,
+     "2": 736,
+     "3": 1888,
+     "4": 2356,
+     "5": 2456,
+     "6": 1708,
+     "7": 1080,
+     "8": 560,
+     "9": 256
+    },
+    "found": 11280,
+    "k": 7,
+    "k0030_match": true,
+    "k0030_published": 11280,
+    "k0030_range": true,
+    "n": 5,
+    "nodes_run1": 109940,
+    "nodes_run2": 109940,
+    "one_direction_configs": 2816,
+    "one_triple_configs": 2720,
+    "orbits": 1413,
+    "orbits_cls_eq_ver": true,
+    "remov_histogram": {
+     "0": 11280
+    },
+    "stabilizer_histogram": {
+     "1": 1407,
+     "2": 6
+    },
+    "total_cfg_sha256": "70bc76ebd6657cbca0d6d68a6a32cc73b5f857f293ad5ae56517f74721f0b645",
+    "trips3_histogram": {
+     "0": 472,
+     "1": 2720,
+     "2": 4960,
+     "3": 2740,
+     "4": 376,
+     "5": 12
+    },
+    "verify_maximal_all": true,
+    "verify_safe_all": true,
+    "zero_triple_configs": 472
+   },
+   {
+    "all_have_three_collinear": false,
+    "determinism_found_equal": true,
+    "determinism_nodes_bit_equal": true,
+    "dirs_histogram": {
+     "0": 112,
+     "1": 652,
+     "2": 1760,
+     "3": 1368,
+     "4": 440,
+     "5": 8
+    },
+    "ecc_histogram": {
+     "0": 840,
+     "1": 1544,
+     "2": 1212,
+     "3": 504,
+     "4": 184,
+     "5": 40,
+     "6": 16
+    },
+    "found": 4340,
+    "k": 8,
+    "k0030_match": true,
+    "k0030_published": 4340,
+    "k0030_range": true,
+    "n": 5,
+    "nodes_run1": 85746,
+    "nodes_run2": 85746,
+    "one_direction_configs": 652,
+    "one_triple_configs": 624,
+    "orbits": 543,
+    "orbits_cls_eq_ver": true,
+    "remov_histogram": {
+     "0": 4340
+    },
+    "stabilizer_histogram": {
+     "1": 542,
+     "2": 1
+    },
+    "total_cfg_sha256": "350b6bcdf2f4a3790fb4df2342e7078bf377c74cc33045f6dab95bd47c2d3b30",
+    "trips3_histogram": {
+     "0": 112,
+     "1": 624,
+     "2": 1684,
+     "3": 1400,
+     "4": 488,
+     "5": 24,
+     "6": 8
+    },
+    "verify_maximal_all": true,
+    "verify_safe_all": true,
+    "zero_triple_configs": 112
+   },
+   {
+    "all_have_three_collinear": true,
+    "determinism_found_equal": true,
+    "determinism_nodes_bit_equal": true,
+    "dirs_histogram": {
+     "2": 32,
+     "3": 24,
+     "4": 40,
+     "5": 4
+    },
+    "ecc_histogram": {
+     "0": 84,
+     "1": 16
+    },
+    "found": 100,
+    "k": 9,
+    "k0030_match": true,
+    "k0030_published": 100,
+    "k0030_range": true,
+    "n": 5,
+    "nodes_run1": 62072,
+    "nodes_run2": 62072,
+    "one_direction_configs": 0,
+    "one_triple_configs": 0,
+    "orbits": 13,
+    "orbits_cls_eq_ver": true,
+    "remov_histogram": {
+     "0": 100
+    },
+    "stabilizer_histogram": {
+     "1": 12,
+     "2": 1
+    },
+    "total_cfg_sha256": "4fe782cfbf64065154c086c3514fd22bd913845453c725dde495dcf48c86f9f4",
+    "trips3_histogram": {
+     "2": 16,
+     "3": 32,
+     "4": 48,
+     "6": 4
+    },
+    "verify_maximal_all": true,
+    "verify_safe_all": true,
+    "zero_triple_configs": 0
+   },
+   {
+    "determinism_found_equal": true,
+    "determinism_nodes_bit_equal": true,
+    "found": 0,
+    "k": 10,
+    "k0030_match": true,
+    "k0030_published": 0,
+    "k0030_range": true,
+    "n": 5,
+    "nodes_run1": 43129,
+    "nodes_run2": 43129
+   },
+   {
+    "determinism_found_equal": true,
+    "determinism_nodes_bit_equal": true,
+    "found": 0,
+    "k": 11,
+    "k0030_match": true,
+    "k0030_published": 0,
+    "k0030_range": true,
+    "n": 5,
+    "nodes_run1": 28060,
+    "nodes_run2": 28060
+   },
+   {
+    "determinism_found_equal": true,
+    "determinism_nodes_bit_equal": true,
+    "found": 0,
+    "k": 12,
+    "k0030_match": "oos-zero",
+    "k0030_published": null,
+    "k0030_range": false,
+    "n": 5,
+    "nodes_run1": 17969,
+    "nodes_run2": 17969
+   },
+   {
+    "determinism_found_equal": true,
+    "determinism_nodes_bit_equal": true,
+    "found": 0,
+    "k": 13,
+    "k0030_match": "oos-zero",
+    "k0030_published": null,
+    "k0030_range": false,
+    "n": 5,
+    "nodes_run1": 12489,
+    "nodes_run2": 12489
+   },
+   {
+    "determinism_found_equal": true,
+    "determinism_nodes_bit_equal": true,
+    "found": 0,
+    "k": 14,
+    "k0030_match": "oos-zero",
+    "k0030_published": null,
+    "k0030_range": false,
+    "n": 5,
+    "nodes_run1": 8810,
+    "nodes_run2": 8810
+   },
+   {
+    "determinism_found_equal": true,
+    "determinism_nodes_bit_equal": true,
+    "found": 0,
+    "k": 15,
+    "k0030_match": "oos-zero",
+    "k0030_published": null,
+    "k0030_range": false,
+    "n": 5,
+    "nodes_run1": 5830,
+    "nodes_run2": 5830
+   },
+   {
+    "determinism_found_equal": true,
+    "determinism_nodes_bit_equal": true,
+    "found": 0,
+    "k": 16,
+    "k0030_match": "oos-zero",
+    "k0030_published": null,
+    "k0030_range": false,
+    "n": 5,
+    "nodes_run1": 3488,
+    "nodes_run2": 3488
+   },
+   {
+    "determinism_found_equal": true,
+    "determinism_nodes_bit_equal": true,
+    "found": 0,
+    "k": 17,
+    "k0030_match": "oos-zero",
+    "k0030_published": null,
+    "k0030_range": false,
+    "n": 5,
+    "nodes_run1": 2047,
+    "nodes_run2": 2047
+   },
+   {
+    "determinism_found_equal": true,
+    "determinism_nodes_bit_equal": true,
+    "found": 0,
+    "k": 18,
+    "k0030_match": "oos-zero",
+    "k0030_published": null,
+    "k0030_range": false,
+    "n": 5,
+    "nodes_run1": 1321,
+    "nodes_run2": 1321
+   },
+   {
+    "determinism_found_equal": true,
+    "determinism_nodes_bit_equal": true,
+    "found": 0,
+    "k": 19,
+    "k0030_match": "oos-zero",
+    "k0030_published": null,
+    "k0030_range": false,
+    "n": 5,
+    "nodes_run1": 793,
+    "nodes_run2": 793
+   },
+   {
+    "determinism_found_equal": true,
+    "determinism_nodes_bit_equal": true,
+    "found": 0,
+    "k": 20,
+    "k0030_match": "oos-zero",
+    "k0030_published": null,
+    "k0030_range": false,
+    "n": 5,
+    "nodes_run1": 407,
+    "nodes_run2": 407
+   },
+   {
+    "determinism_found_equal": true,
+    "determinism_nodes_bit_equal": true,
+    "found": 0,
+    "k": 21,
+    "k0030_match": "oos-zero",
+    "k0030_published": null,
+    "k0030_range": false,
+    "n": 5,
+    "nodes_run1": 195,
+    "nodes_run2": 195
+   },
+   {
+    "determinism_found_equal": true,
+    "determinism_nodes_bit_equal": true,
+    "found": 0,
+    "k": 22,
+    "k0030_match": "oos-zero",
+    "k0030_published": null,
+    "k0030_range": false,
+    "n": 5,
+    "nodes_run1": 111,
+    "nodes_run2": 111
+   },
+   {
+    "determinism_found_equal": true,
+    "determinism_nodes_bit_equal": true,
+    "found": 0,
+    "k": 23,
+    "k0030_match": "oos-zero",
+    "k0030_published": null,
+    "k0030_range": false,
+    "n": 5,
+    "nodes_run1": 60,
+    "nodes_run2": 60
+   },
+   {
+    "determinism_found_equal": true,
+    "determinism_nodes_bit_equal": true,
+    "found": 0,
+    "k": 24,
+    "k0030_match": "oos-zero",
+    "k0030_published": null,
+    "k0030_range": false,
+    "n": 5,
+    "nodes_run1": 32,
+    "nodes_run2": 32
+   },
+   {
+    "determinism_found_equal": true,
+    "determinism_nodes_bit_equal": true,
+    "found": 0,
+    "k": 25,
+    "k0030_match": "oos-zero",
+    "k0030_published": null,
+    "k0030_range": false,
+    "n": 5,
+    "nodes_run1": 27,
+    "nodes_run2": 27
+   }
+  ],
+  "6": [
+   {
+    "determinism_found_equal": true,
+    "determinism_nodes_bit_equal": true,
+    "found": 0,
+    "k": 1,
+    "k0030_match": "oos-zero",
+    "k0030_published": null,
+    "k0030_range": false,
+    "n": 6,
+    "nodes_run1": 36,
+    "nodes_run2": 36
+   },
+   {
+    "determinism_found_equal": true,
+    "determinism_nodes_bit_equal": true,
+    "found": 0,
+    "k": 2,
+    "k0030_match": "oos-zero",
+    "k0030_published": null,
+    "k0030_range": false,
+    "n": 6,
+    "nodes_run1": 666,
+    "nodes_run2": 666
+   },
+   {
+    "determinism_found_equal": true,
+    "determinism_nodes_bit_equal": true,
+    "found": 0,
+    "k": 3,
+    "k0030_match": "oos-zero",
+    "k0030_published": null,
+    "k0030_range": false,
+    "n": 6,
+    "nodes_run1": 7771,
+    "nodes_run2": 7771
+   },
+   {
+    "determinism_found_equal": true,
+    "determinism_nodes_bit_equal": true,
+    "found": 0,
+    "k": 4,
+    "k0030_match": "oos-zero",
+    "k0030_published": null,
+    "k0030_range": false,
+    "n": 6,
+    "nodes_run1": 63556,
+    "nodes_run2": 63556
+   },
+   {
+    "determinism_found_equal": true,
+    "determinism_nodes_bit_equal": true,
+    "found": 0,
+    "k": 5,
+    "k0030_match": true,
+    "k0030_published": 0,
+    "k0030_range": true,
+    "n": 6,
+    "nodes_run1": 358560,
+    "nodes_run2": 358560
+   },
+   {
+    "all_have_three_collinear": true,
+    "determinism_found_equal": true,
+    "determinism_nodes_bit_equal": true,
+    "dirs_histogram": {
+     "2": 8
+    },
+    "ecc_histogram": {
+     "11": 8
+    },
+    "found": 8,
+    "k": 6,
+    "k0030_match": true,
+    "k0030_published": 8,
+    "k0030_range": true,
+    "n": 6,
+    "nodes_run1": 1305866,
+    "nodes_run2": 1305866,
+    "one_direction_configs": 0,
+    "one_triple_configs": 0,
+    "orbits": 1,
+    "orbits_cls_eq_ver": true,
+    "remov_histogram": null,
+    "stabilizer_histogram": {
+     "1": 1
+    },
+    "total_cfg_sha256": "a779ebb532b8a87ce52a08d60ff1a020878b044eae04dc44f1424010783fc727",
+    "trips3_histogram": {
+     "2": 8
+    },
+    "verify_maximal_all": true,
+    "verify_safe_all": true,
+    "zero_triple_configs": 0
+   },
+   {
+    "all_have_three_collinear": false,
+    "determinism_found_equal": true,
+    "determinism_nodes_bit_equal": true,
+    "dirs_histogram": {
+     "0": 64,
+     "1": 896,
+     "2": 1848,
+     "3": 1048,
+     "4": 80,
+     "5": 16
+    },
+    "ecc_histogram": {
+     "10": 704,
+     "11": 776,
+     "12": 560,
+     "13": 432,
+     "14": 192,
+     "15": 104,
+     "16": 56,
+     "17": 8,
+     "5": 16,
+     "6": 56,
+     "7": 152,
+     "8": 352,
+     "9": 544
+    },
+    "found": 3952,
+    "k": 7,
+    "k0030_match": true,
+    "k0030_published": 3952,
+    "k0030_range": true,
+    "n": 6,
+    "nodes_run1": 2859096,
+    "nodes_run2": 2859096,
+    "one_direction_configs": 896,
+    "one_triple_configs": 872,
+    "orbits": 494,
+    "orbits_cls_eq_ver": true,
+    "remov_histogram": {
+     "0": 3952
+    },
+    "stabilizer_histogram": {
+     "1": 494
+    },
+    "total_cfg_sha256": "190d4c25fb951476e8ee71028e9b12ccdf28f4cc74fa4adad6455d38ae9b7d0d",
+    "trips3_histogram": {
+     "0": 64,
+     "1": 872,
+     "2": 1840,
+     "3": 1080,
+     "4": 80,
+     "5": 16
+    },
+    "verify_maximal_all": true,
+    "verify_safe_all": true,
+    "zero_triple_configs": 64
+   },
+   {
+    "all_have_three_collinear": false,
+    "determinism_found_equal": true,
+    "determinism_nodes_bit_equal": true,
+    "dirs_histogram": {
+     "0": 3308,
+     "1": 22904,
+     "2": 47332,
+     "3": 33968,
+     "4": 7536,
+     "5": 448
+    },
+    "ecc_histogram": {
+     "0": 40,
+     "1": 144,
+     "10": 10948,
+     "11": 5288,
+     "12": 2760,
+     "13": 1008,
+     "14": 372,
+     "15": 136,
+     "16": 8,
+     "2": 724,
+     "3": 3016,
+     "4": 6632,
+     "5": 12680,
+     "6": 16836,
+     "7": 20672,
+     "8": 19208,
+     "9": 15024
+    },
+    "found": 115496,
+    "k": 8,
+    "k0030_match": true,
+    "k0030_published": 115496,
+    "k0030_range": true,
+    "n": 6,
+    "nodes_run1": 3714301,
+    "nodes_run2": 3714301,
+    "one_direction_configs": 22904,
+    "one_triple_configs": 21424,
+    "orbits": 14441,
+    "orbits_cls_eq_ver": true,
+    "remov_histogram": {
+     "0": 115496
+    },
+    "stabilizer_histogram": {
+     "1": 14433,
+     "2": 8
+    },
+    "total_cfg_sha256": "80706386dda39066df3e78b39e50666f152b3da496cf5998e42bfecaf66d4fbe",
+    "trips3_histogram": {
+     "0": 3308,
+     "1": 21424,
+     "2": 44896,
+     "3": 35816,
+     "4": 9292,
+     "5": 752,
+     "6": 8
+    },
+    "verify_maximal_all": true,
+    "verify_safe_all": true,
+    "zero_triple_configs": 3308
+   },
+   {
+    "all_have_three_collinear": false,
+    "determinism_found_equal": true,
+    "determinism_nodes_bit_equal": true,
+    "dirs_histogram": {
+     "0": 3568,
+     "1": 30048,
+     "2": 75872,
+     "3": 68000,
+     "4": 20008,
+     "5": 1600,
+     "6": 88
+    },
+    "ecc_histogram": {
+     "0": 3152,
+     "1": 13928,
+     "10": 904,
+     "11": 312,
+     "12": 96,
+     "13": 32,
+     "2": 28904,
+     "3": 40632,
+     "4": 40720,
+     "5": 31536,
+     "6": 20448,
+     "7": 10992,
+     "8": 5144,
+     "9": 2384
+    },
+    "found": 199184,
+    "k": 9,
+    "k0030_match": true,
+    "k0030_published": 199184,
+    "k0030_range": true,
+    "n": 6,
+    "nodes_run1": 3281078,
+    "nodes_run2": 3281078,
+    "one_direction_configs": 30048,
+    "one_triple_configs": 26376,
+    "orbits": 24898,
+    "orbits_cls_eq_ver": true,
+    "remov_histogram": {
+     "0": 199184
+    },
+    "stabilizer_histogram": {
+     "1": 24898
+    },
+    "total_cfg_sha256": "4fa7b407e0de5fdace462524d9d8e8bb0cc2bab74101d914e411e2a348e7d5a5",
+    "trips3_histogram": {
+     "0": 3568,
+     "1": 26376,
+     "2": 67048,
+     "3": 68608,
+     "4": 28168,
+     "5": 5008,
+     "6": 368,
+     "7": 40
+    },
+    "verify_maximal_all": true,
+    "verify_safe_all": true,
+    "zero_triple_configs": 3568
+   },
+   {
+    "all_have_three_collinear": false,
+    "determinism_found_equal": true,
+    "determinism_nodes_bit_equal": true,
+    "dirs_histogram": {
+     "0": 276,
+     "1": 2336,
+     "2": 9208,
+     "3": 12688,
+     "4": 5432,
+     "5": 536,
+     "6": 16
+    },
+    "ecc_histogram": {
+     "0": 8736,
+     "1": 11280,
+     "2": 6600,
+     "3": 2864,
+     "4": 772,
+     "5": 208,
+     "6": 32
+    },
+    "found": 30492,
+    "k": 10,
+    "k0030_match": true,
+    "k0030_published": 30492,
+    "k0030_range": true,
+    "n": 6,
+    "nodes_run1": 2529963,
+    "nodes_run2": 2529963,
+    "one_direction_configs": 2336,
+    "one_triple_configs": 1952,
+    "orbits": 3814,
+    "orbits_cls_eq_ver": true,
+    "remov_histogram": {
+     "0": 30492
+    },
+    "stabilizer_histogram": {
+     "1": 3809,
+     "2": 5
+    },
+    "total_cfg_sha256": "7b61eef0c1edef48916bf7f6e06bd192b97468defa621331867d36ba2bfe8fc1",
+    "trips3_histogram": {
+     "0": 276,
+     "1": 1952,
+     "2": 7008,
+     "3": 11000,
+     "4": 7944,
+     "5": 2136,
+     "6": 160,
+     "7": 16
+    },
+    "verify_maximal_all": true,
+    "verify_safe_all": true,
+    "zero_triple_configs": 276
+   },
+   {
+    "all_have_three_collinear": true,
+    "determinism_found_equal": true,
+    "determinism_nodes_bit_equal": true,
+    "dirs_histogram": {
+     "1": 8,
+     "2": 40,
+     "3": 176,
+     "4": 176,
+     "5": 56,
+     "6": 8
+    },
+    "ecc_histogram": {
+     "0": 400,
+     "1": 64
+    },
+    "found": 464,
+    "k": 11,
+    "k0030_match": true,
+    "k0030_published": 464,
+    "k0030_range": true,
+    "n": 6,
+    "nodes_run1": 1904379,
+    "nodes_run2": 1904379,
+    "one_direction_configs": 8,
+    "one_triple_configs": 8,
+    "orbits": 58,
+    "orbits_cls_eq_ver": true,
+    "remov_histogram": {
+     "0": 464
+    },
+    "stabilizer_histogram": {
+     "1": 58
+    },
+    "total_cfg_sha256": "153935db01c31ff13fa50ea32a681ffbcd2178307b67e12d486dc9c631153383",
+    "trips3_histogram": {
+     "1": 8,
+     "2": 24,
+     "3": 64,
+     "4": 176,
+     "5": 160,
+     "6": 24,
+     "7": 8
+    },
+    "verify_maximal_all": true,
+    "verify_safe_all": true,
+    "zero_triple_configs": 0
+   },
+   {
+    "determinism_found_equal": true,
+    "determinism_nodes_bit_equal": true,
+    "found": 0,
+    "k": 12,
+    "k0030_match": "oos-zero",
+    "k0030_published": null,
+    "k0030_range": false,
+    "n": 6,
+    "nodes_run1": 1373918,
+    "nodes_run2": 1373918
+   },
+   {
+    "determinism_found_equal": true,
+    "determinism_nodes_bit_equal": true,
+    "found": 0,
+    "k": 13,
+    "k0030_match": "oos-zero",
+    "k0030_published": null,
+    "k0030_range": false,
+    "n": 6,
+    "nodes_run1": 934239,
+    "nodes_run2": 934239
+   },
+   {
+    "determinism_found_equal": true,
+    "determinism_nodes_bit_equal": true,
+    "found": 0,
+    "k": 14,
+    "k0030_match": "oos-zero",
+    "k0030_published": null,
+    "k0030_range": false,
+    "n": 6,
+    "nodes_run1": 623540,
+    "nodes_run2": 623540
+   },
+   {
+    "determinism_found_equal": true,
+    "determinism_nodes_bit_equal": true,
+    "found": 0,
+    "k": 15,
+    "k0030_match": "oos-zero",
+    "k0030_published": null,
+    "k0030_range": false,
+    "n": 6,
+    "nodes_run1": 448304,
+    "nodes_run2": 448304
+   },
+   {
+    "determinism_found_equal": true,
+    "determinism_nodes_bit_equal": true,
+    "found": 0,
+    "k": 16,
+    "k0030_match": "oos-zero",
+    "k0030_published": null,
+    "k0030_range": false,
+    "n": 6,
+    "nodes_run1": 340081,
+    "nodes_run2": 340081
+   },
+   {
+    "determinism_found_equal": true,
+    "determinism_nodes_bit_equal": true,
+    "found": 0,
+    "k": 17,
+    "k0030_match": "oos-zero",
+    "k0030_published": null,
+    "k0030_range": false,
+    "n": 6,
+    "nodes_run1": 252275,
+    "nodes_run2": 252275
+   },
+   {
+    "determinism_found_equal": true,
+    "determinism_nodes_bit_equal": true,
+    "found": 0,
+    "k": 18,
+    "k0030_match": "oos-zero",
+    "k0030_published": null,
+    "k0030_range": false,
+    "n": 6,
+    "nodes_run1": 176275,
+    "nodes_run2": 176275
+   },
+   {
+    "determinism_found_equal": true,
+    "determinism_nodes_bit_equal": true,
+    "found": 0,
+    "k": 19,
+    "k0030_match": "oos-zero",
+    "k0030_published": null,
+    "k0030_range": false,
+    "n": 6,
+    "nodes_run1": 115130,
+    "nodes_run2": 115130
+   },
+   {
+    "determinism_found_equal": true,
+    "determinism_nodes_bit_equal": true,
+    "found": 0,
+    "k": 20,
+    "k0030_match": "oos-zero",
+    "k0030_published": null,
+    "k0030_range": false,
+    "n": 6,
+    "nodes_run1": 76110,
+    "nodes_run2": 76110
+   },
+   {
+    "determinism_found_equal": true,
+    "determinism_nodes_bit_equal": true,
+    "found": 0,
+    "k": 21,
+    "k0030_match": "oos-zero",
+    "k0030_published": null,
+    "k0030_range": false,
+    "n": 6,
+    "nodes_run1": 54946,
+    "nodes_run2": 54946
+   },
+   {
+    "determinism_found_equal": true,
+    "determinism_nodes_bit_equal": true,
+    "found": 0,
+    "k": 22,
+    "k0030_match": "oos-zero",
+    "k0030_published": null,
+    "k0030_range": false,
+    "n": 6,
+    "nodes_run1": 40599,
+    "nodes_run2": 40599
+   },
+   {
+    "determinism_found_equal": true,
+    "determinism_nodes_bit_equal": true,
+    "found": 0,
+    "k": 23,
+    "k0030_match": "oos-zero",
+    "k0030_published": null,
+    "k0030_range": false,
+    "n": 6,
+    "nodes_run1": 28417,
+    "nodes_run2": 28417
+   },
+   {
+    "determinism_found_equal": true,
+    "determinism_nodes_bit_equal": true,
+    "found": 0,
+    "k": 24,
+    "k0030_match": "oos-zero",
+    "k0030_published": null,
+    "k0030_range": false,
+    "n": 6,
+    "nodes_run1": 17944,
+    "nodes_run2": 17944
+   },
+   {
+    "determinism_found_equal": true,
+    "determinism_nodes_bit_equal": true,
+    "found": 0,
+    "k": 25,
+    "k0030_match": "oos-zero",
+    "k0030_published": null,
+    "k0030_range": false,
+    "n": 6,
+    "nodes_run1": 10435,
+    "nodes_run2": 10435
+   },
+   {
+    "determinism_found_equal": true,
+    "determinism_nodes_bit_equal": true,
+    "found": 0,
+    "k": 26,
+    "k0030_match": "oos-zero",
+    "k0030_published": null,
+    "k0030_range": false,
+    "n": 6,
+    "nodes_run1": 6530,
+    "nodes_run2": 6530
+   },
+   {
+    "determinism_found_equal": true,
+    "determinism_nodes_bit_equal": true,
+    "found": 0,
+    "k": 27,
+    "k0030_match": "oos-zero",
+    "k0030_published": null,
+    "k0030_range": false,
+    "n": 6,
+    "nodes_run1": 4376,
+    "nodes_run2": 4376
+   },
+   {
+    "determinism_found_equal": true,
+    "determinism_nodes_bit_equal": true,
+    "found": 0,
+    "k": 28,
+    "k0030_match": "oos-zero",
+    "k0030_published": null,
+    "k0030_range": false,
+    "n": 6,
+    "nodes_run1": 2726,
+    "nodes_run2": 2726
+   },
+   {
+    "determinism_found_equal": true,
+    "determinism_nodes_bit_equal": true,
+    "found": 0,
+    "k": 29,
+    "k0030_match": "oos-zero",
+    "k0030_published": null,
+    "k0030_range": false,
+    "n": 6,
+    "nodes_run1": 1425,
+    "nodes_run2": 1425
+   },
+   {
+    "determinism_found_equal": true,
+    "determinism_nodes_bit_equal": true,
+    "found": 0,
+    "k": 30,
+    "k0030_match": "oos-zero",
+    "k0030_published": null,
+    "k0030_range": false,
+    "n": 6,
+    "nodes_run1": 654,
+    "nodes_run2": 654
+   },
+   {
+    "determinism_found_equal": true,
+    "determinism_nodes_bit_equal": true,
+    "found": 0,
+    "k": 31,
+    "k0030_match": "oos-zero",
+    "k0030_published": null,
+    "k0030_range": false,
+    "n": 6,
+    "nodes_run1": 365,
+    "nodes_run2": 365
+   },
+   {
+    "determinism_found_equal": true,
+    "determinism_nodes_bit_equal": true,
+    "found": 0,
+    "k": 32,
+    "k0030_match": "oos-zero",
+    "k0030_published": null,
+    "k0030_range": false,
+    "n": 6,
+    "nodes_run1": 214,
+    "nodes_run2": 214
+   },
+   {
+    "determinism_found_equal": true,
+    "determinism_nodes_bit_equal": true,
+    "found": 0,
+    "k": 33,
+    "k0030_match": "oos-zero",
+    "k0030_published": null,
+    "k0030_range": false,
+    "n": 6,
+    "nodes_run1": 110,
+    "nodes_run2": 110
+   },
+   {
+    "determinism_found_equal": true,
+    "determinism_nodes_bit_equal": true,
+    "found": 0,
+    "k": 34,
+    "k0030_match": "oos-zero",
+    "k0030_published": null,
+    "k0030_range": false,
+    "n": 6,
+    "nodes_run1": 52,
+    "nodes_run2": 52
+   },
+   {
+    "determinism_found_equal": true,
+    "determinism_nodes_bit_equal": true,
+    "found": 0,
+    "k": 35,
+    "k0030_match": "oos-zero",
+    "k0030_published": null,
+    "k0030_range": false,
+    "n": 6,
+    "nodes_run1": 43,
+    "nodes_run2": 43
+   },
+   {
+    "determinism_found_equal": true,
+    "determinism_nodes_bit_equal": true,
+    "found": 0,
+    "k": 36,
+    "k0030_match": "oos-zero",
+    "k0030_published": null,
+    "k0030_range": false,
+    "n": 6,
+    "nodes_run1": 38,
+    "nodes_run2": 38
+   }
+  ]
+ },
+ "brute_scan": {
+  "4": {
+   "counts_by_k": {
+    "5": 176,
+    "6": 688,
+    "7": 64
+   },
+   "zero_rows_k": [
+    1,
+    2,
+    3,
+    4,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16
+   ]
+  }
+ },
+ "brute_scan_set_equal": {
+  "n4k5": true,
+  "n4k6": true,
+  "n4k7": true
+ },
+ "problems": []
+}

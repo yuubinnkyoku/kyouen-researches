@@ -1,0 +1,26 @@
+{
+  "theorem": "two-token-z18-y4-full-grundy",
+  "status": "pass",
+  "scope": "finite audit only; universal proof is x-induction plus complete symbolic A/B/C bands",
+  "verifier_sha256": "2bb449422c6dcdcc70337b2bdf161e3ff7b0308906561c69c21f7766b77ac45b",
+  "counts": {
+    "B_child_raw_checks": 2375,
+    "C_child_raw_checks": 2331,
+    "parent_raw_checks": 2961,
+    "signature_band_checks": 24428,
+    "signature_band_gaps": 0,
+    "signature_band_mismatches": 0,
+    "bottom_up_checks": 18081,
+    "induction_closure_checks": 1158678,
+    "deep_sample_checks": 61835,
+    "tail_checks": 2994,
+    "low_R_reduction_checks": 134629,
+    "low_R_boundary_checks": 4987,
+    "small_total_full_reduction_checks": 2010
+  },
+  "bad": [],
+  "raw_cache": {
+    "hits": 423934,
+    "misses": 246360
+  }
+}

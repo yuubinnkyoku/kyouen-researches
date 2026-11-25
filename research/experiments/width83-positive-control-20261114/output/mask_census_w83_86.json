@@ -1,0 +1,17 @@
+{
+ "generated": "2026-11-14",
+ "purpose": "mask census の直接測定の拡張（w=83..86・K0805 閉形式の新規制御点・w84..86 掃引の前哨値）。",
+ "method": "verbatim harness アルゴリズム（mod 9×11 (a,u) 全列挙窓マスク・L=17・seen dedup・pairwise maximal 判定）。",
+ "census": {
+  "83": {"unique": 3456, "maximal": 3300},
+  "84": {"unique": 3465, "maximal": 3300},
+  "85": {"unique": 3476, "maximal": 3300},
+  "86": {"unique": 3487, "maximal": 3300}
+ },
+ "controls": {
+  "w83_unique_3456": "width_sweep.mjs 83 完走の unique=3456 と完全一致（state_w83.json・K0807）",
+  "maximal_3300_plateau": "K0805（maximal(w)=3300 は全 w>=66 で厳密）と整合",
+  "k0804_context": "unique は w=82 の 3447 から +9/+9/+11/+11 で単調増加（K0804 の w69..82 の増分 +13..+19 から減速・big パターンの s17 裾野の末端に入りつある事と整合）"
+ },
+ "note": "L=17 限定。K0805 の閉形式 unique(w)=#{P: k|P|+|P∩[0,rem)|>=17} による予測値との照合は mask-census-closed-form 検証器側の次回制御点として利用可能。"
+}

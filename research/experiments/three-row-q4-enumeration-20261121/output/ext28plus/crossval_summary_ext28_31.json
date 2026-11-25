@@ -1,0 +1,94 @@
+{
+ "family_sweep": {
+  "rows": 12,
+  "per_row": {
+   "28_Y0": [
+    0,
+    0,
+    0
+   ],
+   "28_Y1": [
+    0,
+    0,
+    0
+   ],
+   "28_Y2": [
+    0,
+    0,
+    0
+   ],
+   "29_Y0": [
+    0,
+    0,
+    0
+   ],
+   "29_Y1": [
+    0,
+    0,
+    0
+   ],
+   "29_Y2": [
+    0,
+    0,
+    0
+   ],
+   "30_Y0": [
+    0,
+    0,
+    0
+   ],
+   "30_Y1": [
+    0,
+    0,
+    0
+   ],
+   "30_Y2": [
+    0,
+    0,
+    0
+   ],
+   "31_Y0": [
+    0,
+    0,
+    0
+   ],
+   "31_Y1": [
+    0,
+    0,
+    0
+   ],
+   "31_Y2": [
+    0,
+    0,
+    0
+   ]
+  },
+  "partition_completeness": true,
+  "all_zero": true,
+  "widths_family": [
+   28,
+   29,
+   30,
+   31
+  ]
+ },
+ "fast_sweep": {
+  "rows": 52,
+  "all_zero": true,
+  "widths_fast": [
+   28,
+   29,
+   30,
+   31
+  ]
+ },
+ "closure_ledger": true,
+ "m23_control_recognition": true,
+ "swept_widths": [
+  28,
+  29,
+  30,
+  31
+ ],
+ "verdict": "WITNESS-FREE for all swept widths (family 0 witnesses in all (m,Y) chunk-complete enumerations; fast 13 profiles x swept widths all zero; lemma 41 killed per width; m=23 positive control rediscovered => pinned tools calibrated in this environment). No claim about m>=32."
+}

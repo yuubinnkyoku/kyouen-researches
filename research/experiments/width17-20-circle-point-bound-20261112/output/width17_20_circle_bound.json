@@ -1,0 +1,67 @@
+{
+  "generated": "2026-11-12",
+  "parts": {
+    "w17_k9": { "subsets": 24310, "survivors": 0, "perMod": { "7": 4, "9": 23845, "11": 413, "19": 25, "23": 22, "43": 1 }, "survivorSamples": [] },
+    "w18_k9": { "subsets": 48620, "survivors": 0, "perMod": { "7": 10, "9": 47690, "11": 820, "19": 62, "23": 36, "43": 2 }, "survivorSamples": [] },
+    "w19_k9": {
+      "subsets": 92378, "survivors": 2,
+      "perMod": { "7": 16, "9": 89807, "11": 2266, "19": 227, "23": 56, "31": 1, "43": 3 },
+      "survivorSamples": [[0, 1, 4, 6, 7, 12, 13, 15, 18], [0, 3, 5, 6, 11, 12, 14, 17, 18]],
+      "survivorsPassPrimesUpTo": 349
+    },
+    "w20_k9": {
+      "subsets": 167960, "survivors": 8,
+      "perMod": { "7": 26, "9": 162164, "11": 5214, "19": 444, "23": 92, "31": 8, "43": 4 },
+      "survivorSamples": [
+        [0, 1, 3, 4, 7, 12, 15, 18, 19], [0, 1, 4, 6, 7, 12, 13, 15, 18], [0, 1, 4, 6, 7, 12, 13, 18, 19],
+        [0, 1, 4, 7, 12, 15, 16, 18, 19], [0, 1, 6, 7, 12, 13, 15, 18, 19], [0, 3, 5, 6, 11, 12, 14, 17, 18],
+        [1, 2, 5, 7, 8, 13, 14, 16, 19], [1, 4, 6, 7, 12, 13, 15, 18, 19]
+      ]
+    },
+    "w19_k11": { "subsets": 75582, "survivors": 0, "perMod": { "9": 75399, "11": 183 }, "survivorSamples": [] },
+    "w20_k11": { "subsets": 167960, "survivors": 0, "perMod": { "9": 167340, "11": 620 }, "survivorSamples": [] },
+    "control_w15_k9": { "subsets": 5005, "survivors": 0, "perMod": { "9": 4963, "11": 35, "19": 3, "23": 4 } },
+    "control_w16_k9": { "subsets": 11440, "survivors": 0, "perMod": { "7": 2, "9": 11264, "11": 148, "19": 14, "23": 12 } },
+    "control_w17_k10": { "subsets": 19448, "survivors": 0, "perMod": { "9": 19348, "11": 98, "23": 2 } },
+    "control_w18_k10": { "subsets": 43758, "survivors": 0, "perMod": { "9": 43533, "11": 219, "19": 3, "23": 3 } },
+    "witnessCertPass": {
+      "5": { "wit1": true, "wit2": true }, "7": { "wit1": true, "wit2": true }, "8": { "wit1": true, "wit2": true },
+      "9": { "wit1": true, "wit2": true }, "11": { "wit1": true, "wit2": true }, "13": { "wit1": true, "wit2": true },
+      "16": { "wit1": true, "wit2": true }, "17": { "wit1": true, "wit2": true }, "19": { "wit1": true, "wit2": true },
+      "23": { "wit1": true, "wit2": true }, "25": { "wit1": true, "wit2": true }, "27": { "wit1": true, "wit2": true },
+      "29": { "wit1": true, "wit2": true }, "31": { "wit1": true, "wit2": true }, "37": { "wit1": true, "wit2": true },
+      "41": { "wit1": true, "wit2": true }, "43": { "wit1": true, "wit2": true }, "47": { "wit1": true, "wit2": true }
+    },
+    "witnessGeometry": {
+      "c130_w17": { "pts": 16, "rows": [0, 1, 2, 4, 7, 9, 10, 11], "verified": true },
+      "c50_w17": { "pts": 12, "rows": [0, 1, 3, 4, 6, 7], "verified": true }
+    },
+    "control_W17": 12,
+    "parityClassMaxima": {
+      "17": { "evens": 9, "evensG2max": 6, "evensC4max": 6, "odds": 8, "oddsG2max": 6, "oddsC4max": 6 },
+      "18": { "evens": 9, "evensG2max": 6, "evensC4max": 6, "odds": 9, "oddsG2max": 6, "oddsC4max": 6 },
+      "19": { "evens": 10, "evensG2max": 7, "evensC4max": 7, "odds": 9, "oddsG2max": 6, "oddsC4max": 6 },
+      "20": { "evens": 10, "evensG2max": 7, "evensC4max": 7, "odds": 10, "oddsG2max": 7, "oddsC4max": 7 },
+      "25": { "evens": 13, "evensG2max": 9, "evensC4max": 9, "odds": 12, "oddsG2max": 8, "oddsC4max": 8 }
+    },
+    "feasible10": { "w19": [], "w20": [] },
+    "periodicMax_21_26": {
+      "21": { "halfUp": 11, "maxRows": 11 }, "22": { "halfUp": 11, "maxRows": 11 },
+      "23": { "halfUp": 12, "maxRows": 12 }, "24": { "halfUp": 12, "maxRows": 12 },
+      "25": { "halfUp": 13, "maxRows": 13 }, "26": { "halfUp": 13, "maxRows": 14 }
+    },
+    "w26_mod19": { "combos14": 891, "killed19": 891 },
+    "lemma713_qr0": { "maxPeriodOnes": 221, "violations": 0, "maxOnesL26": 14, "maxOnesL27": 14 },
+    "witnessSearchS1": {
+      "rlimit": 2000000, "hitsDoubleRow0": 0, "hitsTangentRow0": 0,
+      "extended": { "rlimit": 20000000, "hitsDoubleRow0": 0, "hitsTangentRow0": 0 }
+    },
+    "Pw": {
+      "17": { "value": 16, "status": "proved" },
+      "18": { "value": 16, "status": "proved" },
+      "19": { "upper": 18, "lower": 16, "status": "upper-bound-only", "candidateSets": 2 },
+      "20": { "upper": 18, "lower": 16, "status": "upper-bound-only", "candidateSets": 8 }
+    },
+    "PwGeneral": "P(w) <= 2*ceil(w/2) for all w >= 19 (proved; even w>=20: P(w)<=w, odd w>=19: P(w)<=w+1)"
+  }
+}

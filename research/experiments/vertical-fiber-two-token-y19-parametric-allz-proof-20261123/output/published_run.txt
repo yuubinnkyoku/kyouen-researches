@@ -1,0 +1,188 @@
+=== y19 universal published run (single-edition 14-check machine: transcription check + preflight + census + 12-check battery + full 14-check battery) ===
+host: Linux x86_64, python Python 3.12, ~1.0 GiB cgroup class (same class
+as the y=15..y=18 census hosts)
+cwd: this experiment dir. The machine was built locally from the published
+y=18 part2 machine (commit d29acbd8, SHA-256 8ddd0c2f...; engine block and
+B-child cand18 block carried verbatim modulo the documented Y->Y18 rename,
+claim block carried verbatim from the published cand19.py of the K1243 fit
+experiment) with count-asserted replacements only, and was executed in the
+pre-declared staged order. Single-owner declaration note:
+research/log/2026-11-23-y19-universal-verifier-single-owner-note.md
+(commit da6c1f5f, observed HEAD-before-push 6f5419b5, published BEFORE the
+machine ran; staged-run procedure registered there in advance: transcriptions
+-> preflight -> census -> 12-check battery -> full 14-check battery; the
+declaration's machine-computed predictions for every check point count, the
+preflight boxes (12,069+9,306), the census geometry (4,160 rows / 436,800
+per engine / 102,459 merge / 4,160 tail per engine), the 12-check subtotal
+6,364,747, the 14-check total 6,941,913, the C4t violation prediction
+(> 0, first (60,102,102)) and the C11r tail-flip probe count 4,160 were all
+matched exactly by the runs below. No competing declaration was published
+between da6c1f5f and this publication.)
+
+$ python3 scripts/check_transcriptions_y19.py
+{"cand18": {"bytes": 3307, "equal_fit_verbatim_renamed": true,
+ "equal_machine_verbatim_renamed": true, "sources_agree": true},
+ "cand19": {"bytes": 3411, "equal_fit_verbatim": true},
+ "engine": {"bytes": 1957, "equal": true}, "overall": "PASS"}
+rc=0, wall 0.06 s; output/transcriptions-check-y19.json
+(engine block == published y=18 machine engine block byte for byte;
+ the B-child cand18 block equals BOTH the published y=18 machine's cand18
+ block and the published cand18.py fit tables, each modulo the block-local
+ word-boundary rename Y -> Y18 (two-source agreement); the claim cand19
+ block equals the published cand19.py table block verbatim. Run again on
+ the isolated side during the determinism stage: identical JSON.)
+
+$ python3 scripts/preflight_c1d_y19.py
+{"anchor_bad": 0, "anchor_points": 12069, "lowR_bad": 0,
+ "lowR_points": 9306, "per_z": {"8": 1890, "9": 1917, "10": 1944,
+ "15": 2079, "16": 2106, "17": 2133} (all bad 0), "overall": "PASS"}
+rc=0, wall 3.1 s; output/preflight-c1d-y19.json
+(4-way anchor x H_ordered x H_canonical x cand19 all clean at the y=19
+ rows, x=19..45, R<=x+z0+30; published low-R single-token reduction
+ R<=z+6 on the y=19 rows (z0=15/16/17, x=19..159) all clean 9,306 pts;
+ the declaration note's predicted boxes were 12,069 + 9,306, matched
+ exactly. Preliminary preflight script provenance: byte-verbatim anchor
+ block from the published y=18 preflight, itself the y=10/y=12 chain.)
+
+$ python3 census_rows.py
+rows=4160 points=440960 zero_points=219556
+states(misses): 9806027 currsize: 1600000 maxsize: 1600000 hits: 19210434
+wall 20.8 s, rc=0; census.txt 809,842 bytes (4,160 rows + 80 blank
+separators; byte-identical regeneration on the isolated side;
+SHA-256 07213ab1...)
+(the LRU is explicitly capped at 1,600,000, the memory-capped-host
+ adaptation mirroring the published y=12..y=18 editions; tail assertion
+ R>=x+z+20 => (x+19)%2 held on every row; XMIN=19, XMAX=70, RBUF=21)
+
+$ python3 verify_y19_universal.py C11ordered / C11canonical
+census[ordered]:   points=436800 bad=0 merge={'points': 102459, 'bad': 0} tail={'points': 4160, 'bad': 0}
+census[canonical]: points=436800 bad=0 merge={'points': 102459, 'bad': 0} tail={'points': 4160, 'bad': 0}
+rc=0 each; walls 18.5 s / 21.6 s; output/census-ordered.json / census-canonical.json
+(bounded-memoization twins of the verbatim raw engines, separate commands,
+ same design as y=12..y=18; the C11-in-full-battery mode validates both
+ parts fail-closed: engine field, box string 'z=0..79, x=19..70,
+ R=0..x+z+20', cache cap 1600000, recomputed expected counts
+ 436,800 / 102,459 / 4,160)
+
+$ python3 verify_y19_universal.py            # staged 12-check battery
+  C1: pts=24510 bad=0        C1b: pts=44027 bad=0
+  C1d: pts=136206 bad=0      C2: pts=229663 bad=0
+  C2b: pts=19580 bad=0       C3: pts=1335 bad=0
+  C4: pts=579657 bad=0       C4t: pts=579657 (probe; not in bad total)
+  C7: pts=200000 bad=0       C8: pts=1057317 bad=0
+  C9: pts=897930 bad=0       C12: pts=1857471 bad=0
+overall: PASS total_points: 5627353 types: 590877  total_bad 0
+  merge corollary (this stage): 857,191 pts, bad 0
+  tail corollary (this stage):  184,200 pts, bad 0
+  C4t: 770 violations at clip 39, first: (60, 102, 102)
+wall 37.4 s, rc=0; output/audit.json kept as output/audit-part1-12checks.json
+(every per-check point count matches the declaration note's machine-computed
+ predictions; the C4t prediction (>0 violations, first violation (60,102,102)
+ walking with the band bottom R-z=2y+2=40) matched exactly: 770 violations
+ at clip 39 => the clip window 2y+2=40 is tight, the 15th consecutive
+ family (y=5..19: 12/14/16/18/20/22/24/26/28/30/32/34/36/38/40), 7th
+ observation of the walking-first-violation series
+ (60,90,90)->(60,92,92)->(60,94,94)->(60,96,96)->(60,98,98)->(60,100,100)
+ ->(60,102,102))
+
+$ python3 verify_y19_universal.py C1 C1b C1d C2 C2b C3 C4 C4t C7 C8 C9 C11 C11r C12
+  C1: pts=24510 bad=0        C1b: pts=44027 bad=0
+  C1d: pts=136206 bad=0      C2: pts=229663 bad=0
+  C2b: pts=19580 bad=0       C3: pts=1335 bad=0
+  C4: pts=579657 bad=0       C4t: pts=579657 (probe; not in bad total)
+  C7: pts=200000 bad=0       C8: pts=1057317 bad=0
+  C9: pts=897930 bad=0       C11: pts=873600 bad=0
+  C11r: pts=440960 bad=0     C12: pts=1857471 bad=0
+overall: PASS total_points: 6941913 types: 590877 total_bad 0
+  merge corollary: 1,062,109 pts, bad 0
+  tail corollary: 192,520 pts, bad 0
+  C4t: 770 violations at clip 39, first: (60, 102, 102)
+wall 37.1 s (run 1) / 37.1 s (run 2, same cwd), rc=0
+(12-check subtotal without C11: 5,491,147 + C11 873,600 = 6,364,747 as
+ declared; full 14-check total points 6,941,913 = 6,364,747 + C1d 136,206
+ + C11r 440,960 as declared, all bad 0. verifier SHA-256
+ 76525717875ceb6d7bc1f4e628cc95066a3591a134120ee4d1bf3743babd7294,
+ 52,631 bytes.)
+
+=== run2/run3 (full battery) ===
+run2: same-cwd rerun (fresh process, census parts already regenerated in
+ this session) -> byte-identical audit.json
+run3: isolated tree/cwd/HOME + env -i (PATH pinned to
+ /usr/local/bin:/usr/bin:/bin) + PYTHONHASHSEED=random; the FULL pipeline
+ was regenerated on the isolated side (transcription check, preflight,
+ census_rows.py, both census parts, and the full 14-check command):
+ transcriptions-check-y19.json / preflight-c1d-y19.json / census.txt /
+ census-ordered.json / census-canonical.json / audit.json ALL
+ byte-identical to the canonical tree
+(4 byte-identical full audits in total: 2 same-cwd + 2 isolated, one of
+ which is the full isolated regeneration)
+SHA-256 audit.json 59b6fded9fa3d0a153ba0949d5f770304c5a255e3cb0f43516050653ae7acd6a
+ census.txt 07213ab195c..., census-ordered df767357477f8461...,
+ census-canonical afdf9e607ea22154..., preflight 1cfabdcf8d44269f...,
+ transcriptions-check 8a68ecb46f9f35c6297a57ec81407fcd8404f1231432a2a4ae91aadc62de707a
+
+=== fail-closed probes (pre-publication, scratch tree only; 12 probes, all caught) ===
+(1) census.txt missing: FAIL-CLOSED "census.txt is missing; run
+    census_rows.py first", rc=1
+(2) census.txt data-row deleted: FAIL-CLOSED "census rows 4159 != 4160",
+    rc=1
+(3) duplicate census-row injection: FAIL-CLOSED "duplicate census row
+    (0,19)", rc=1
+(4) census.txt P-set one-digit tamper: C11r pts=440960 bad=1, overall
+    FAIL, rc=1
+(5) census.txt T-set tamper (bogus member): C11r pts=440960 bad=1,
+    overall FAIL, rc=1
+(6) C11r tail flip (x+19)->(x+20) on a tampered verifier copy:
+    C11r pts=440960 bad=4160 (every row), overall FAIL, rc=1 (the
+    declaration note predicted exactly the row count 4,160)
+(7) anchor mis-binding (16, A16u) -> (16, A10u) on a tampered verifier
+    copy: C1d bad=1743, overall FAIL, rc=1
+(8) low-R reference shift R -> R+1 on a tampered verifier copy:
+    C1d bad=9306 (every low-R point independently mismatches, the exact
+    low-R box size), overall FAIL, rc=1
+(9) corollary merge boundary tamper x<=z-20 -> x<=z-19 on a tampered
+    verifier copy: merge corollary bad > 0, overall FAIL, rc=1
+(10) type-machine clip window tamper CLIP, SENT = 40,41 -> 38,39:
+    C4 bad=2520 (confluence violations), overall FAIL, rc=1
+(11) in_P19 tail parity flip (x even -> x odd) on a tampered verifier
+    copy: C1 bad=2449, C2 bad=23478, tail corollary bad=11466, overall
+    FAIL, rc=1
+(12) in_P19 band_base parity tamper on a tampered verifier copy:
+    C1 bad=935, C2 bad=23211, overall FAIL, rc=1
+baseline restored after each probe (each probe ran on a fresh scratch copy
+of the canonical tree; the canonical tree's outputs were byte-verified
+against the isolated regeneration afterwards; no tampered byte was
+published)
+
+=== notes ===
+- C1d sweep: 6 anchors x x=19..159 x R<=x+61 = 126,900 pts + low-R
+  single-token reduction 9,306 pts = 136,206 pts, bad 0. Preflight box
+  (anchor x both raw engines x cand19, x=19..45, R<=x+z0+30) 12,069 pts
+  bad 0 was the fail-closed gate before the anchors entered the machine.
+- C11r: 4,160 rows == 80*52 (x=19..70), 440,960 pts, bad 0; every
+  census.txt row re-derived from cand19 across R=0..x+z+21 (T set, P set,
+  Thue-Morse index, tail); rows==80*52 asserted FAIL-CLOSED.
+- merge/tail corollaries: merge x<=z-20 => H == single_token(x+19,z,R)
+  1,062,109 pts bad 0; tail R>=x+z+20 => (x+19)%2 192,520 pts bad 0.
+- C4t: clip 39 (2y+1) has 770 confluence violations, first (60,102,102):
+  the clip window 2y+2=40 is tight (15-family streak y=5..19), the
+  first-violation-walks-with-band-bottom series is 7 observations long,
+  and the declaration's pre-registered prediction for both facts matched.
+- The full 14-check total is 6,941,913 comparison points (5,491,147
+  twelve-check subtotal + C11 873,600 + C1d 136,206 + C11r 440,960),
+  all bad 0. The B-child of the y=19 family is the verbatim cand18
+  (K1242, proved), extending the proved-B-child usage to cand19's
+  y=19-proof and the B-child verbatim chain to cand9..cand18.
+- On overall PASS with byte-identical audit runs (2 same-cwd + isolated
+  full-pipeline regeneration), K1243 (H(R;(x,19);z) == cand19, all
+  z>=0, x>=19, R>=0) is promoted observed -> proved (AGENTS.md: same
+  K item, no new numbering; the K1141/K1152/K1231/K1233/K1235/K1237/
+  K1240/K1242 procedure). The machine item is recorded as K1245.
+  The merge proposition is now universal through y=1..19 and the tail
+  value R>=x+z+20 => (x+19)%2 is fixed as a universal corollary.
+- Standard 11x11 empty board / two-stone roots {49,60}/{59,60} / S2
+  {59,60} / class 1/2/4 stay UNKNOWN. Three-or-more-token rows, y>=20
+  families, fixed-width and q-point stabilization lengths are out of
+  scope. Trust boundary unchanged: option-decomposition soundness, the
+  mex identity and finite-type conflation are the y=8..y=18 machine
+  class carried in this same file.

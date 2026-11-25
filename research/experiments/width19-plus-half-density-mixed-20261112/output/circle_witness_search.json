@@ -1,0 +1,31 @@
+{
+  "date": "2026-11-12",
+  "mode": "primitive sum-of-two-squares family witness search (bounded negative observation)",
+  "searchSpace": {
+    "families": "R = 2^a * prod(p^e), p ≡ 1 mod 4, p <= 149 (16 primes), total exponent sum <= 8, R <= 1e11, primitive",
+    "circleFamilies": "R ≡ 2 mod 4: (D,C)=(1,1); R odd: (D,C)=(1,0) and (0,1); rows from 2y+D = ±coord of reps, points 2 per row per nonzero paired coord, tangent rows 1 point (C even)",
+    "windows": [12, 17, 18, 19, 20, 21, 22]
+  },
+  "candidates": 619574,
+  "controls": {
+    "R130": { "L12": 16, "note": "K0767 witness circle (2x-11)^2+(2y-11)^2=130 reproduced: 16 points in a 12-row window" },
+    "R50_L12": 16,
+    "note": "R=50 gives 12 points in an 8-row window (K0765/K0767 w=8/9/10 witness), below the tracked maxima"
+  },
+  "globalBest": {
+    "L12": { "pts": 16, "R": 130, "D": 1, "C": 1, "y0": -6 },
+    "L17": { "pts": 16, "R": 130, "D": 1, "C": 1, "y0": -6 },
+    "L18": { "pts": 16, "R": 130, "D": 1, "C": 1, "y0": -6 },
+    "L19": { "pts": 16, "R": 130, "D": 1, "C": 1, "y0": -6 },
+    "L20": { "pts": 16, "R": 130, "D": 1, "C": 1, "y0": -6 },
+    "L21": { "pts": 16, "R": 130, "D": 1, "C": 1, "y0": -6 },
+    "L22": { "pts": 16, "R": 130, "D": 1, "C": 1, "y0": -6 }
+  },
+  "preliminaryRun": { "Rmax": 1e10, "primes": 14, "candidates": 206773, "profilesEvaluatedWithTotalAtLeast17": 67169, "result": "same: nothing exceeds 16" },
+  "conclusion": "no circle in the searched families attains 17 or more points in any 17..22-row window; the maximum is 16 (R=130). In particular a 20-point witness for w=19/20 (P(19)=P(20)=20) or an 18-point witness for w=17/18 (P(17)=P(18)=18) does not exist in this family for R <= 1e11 with <= 8 prime factors of primes <= 149.",
+  "notSearched": [
+    "non-primitive R (coordinates scale by gcd; clustering strictly worsens)",
+    "quarter-integer D centers (rows at stride 8 in the 2y+D coordinate; much sparser; e.g. D=1/2 centers provably have no lattice points by 2-adic parity, D=u/4 with u odd is the remaining stride-8 family)",
+    "R > 1e11 or more than 8 prime factors or primes > 149"
+  ]
+}

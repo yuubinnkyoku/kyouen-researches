@@ -1,0 +1,279 @@
+{
+ "N": 36,
+ "n": 6,
+ "problems": [],
+ "quartet_file_sha256": "6996d7720d01a46e2bf27cca8cc918069c57b3a1db8b596a96349c33804ca853",
+ "quartets": 2491,
+ "rows": [
+  {
+   "all_have_three_collinear": true,
+   "configs_containing_prev_row_member": null,
+   "control_nonmax_tamper": {
+    "applicable": false
+   },
+   "control_unsafe_tamper": {
+    "added": 0,
+    "rejected": true
+   },
+   "dirs_histogram": {
+    "2": 8
+   },
+   "edges_to_prev_row": null,
+   "found": 8,
+   "k": 6,
+   "k3_prefixes": 20,
+   "maximal_all": true,
+   "nodes": 1305866,
+   "orbit_sum": 8,
+   "orbits_python": 1,
+   "parents_covered": 0,
+   "parents_total": 8,
+   "remov_histogram": null,
+   "safe_all": true,
+   "stabilizer_histogram": {
+    "1": 1
+   },
+   "supersets_in_next_row_histogram": {},
+   "trips3_histogram": {
+    "2": 8
+   }
+  },
+  {
+   "all_have_three_collinear": false,
+   "configs_containing_prev_row_member": 0,
+   "control_nonmax_tamper": {
+    "rejected": true,
+    "removed": 0
+   },
+   "control_unsafe_tamper": {
+    "added": 3,
+    "rejected": true
+   },
+   "dirs_histogram": {
+    "0": 64,
+    "1": 896,
+    "2": 1848,
+    "3": 1048,
+    "4": 80,
+    "5": 16
+   },
+   "edges_to_prev_row": 0,
+   "found": 3952,
+   "k": 7,
+   "k3_prefixes": 35,
+   "maximal_all": true,
+   "nodes": 2859096,
+   "orbit_sum": 3952,
+   "orbits_python": 494,
+   "parents_covered": 0,
+   "parents_total": 3952,
+   "remov_histogram": {
+    "0": 3952
+   },
+   "safe_all": true,
+   "stabilizer_histogram": {
+    "1": 494
+   },
+   "supersets_in_next_row_histogram": {},
+   "trips3_histogram": {
+    "0": 64,
+    "1": 872,
+    "2": 1840,
+    "3": 1080,
+    "4": 80,
+    "5": 16
+   }
+  },
+  {
+   "all_have_three_collinear": false,
+   "configs_containing_prev_row_member": 0,
+   "control_nonmax_tamper": {
+    "rejected": true,
+    "removed": 0
+   },
+   "control_unsafe_tamper": {
+    "added": 3,
+    "rejected": true
+   },
+   "dirs_histogram": {
+    "0": 3308,
+    "1": 22904,
+    "2": 47332,
+    "3": 33968,
+    "4": 7536,
+    "5": 448
+   },
+   "edges_to_prev_row": 0,
+   "found": 115496,
+   "k": 8,
+   "k3_prefixes": 56,
+   "maximal_all": true,
+   "nodes": 3714301,
+   "orbit_sum": 115496,
+   "orbits_python": 14441,
+   "parents_covered": 0,
+   "parents_total": 115496,
+   "remov_histogram": {
+    "0": 115496
+   },
+   "safe_all": true,
+   "stabilizer_histogram": {
+    "1": 14433,
+    "2": 8
+   },
+   "supersets_in_next_row_histogram": {},
+   "trips3_histogram": {
+    "0": 3308,
+    "1": 21424,
+    "2": 44896,
+    "3": 35816,
+    "4": 9292,
+    "5": 752,
+    "6": 8
+   }
+  },
+  {
+   "all_have_three_collinear": false,
+   "configs_containing_prev_row_member": 0,
+   "control_nonmax_tamper": {
+    "rejected": true,
+    "removed": 0
+   },
+   "control_unsafe_tamper": {
+    "added": 3,
+    "rejected": true
+   },
+   "dirs_histogram": {
+    "0": 3568,
+    "1": 30048,
+    "2": 75872,
+    "3": 68000,
+    "4": 20008,
+    "5": 1600,
+    "6": 88
+   },
+   "edges_to_prev_row": 0,
+   "found": 199184,
+   "k": 9,
+   "k3_prefixes": 84,
+   "maximal_all": true,
+   "nodes": 3281078,
+   "orbit_sum": 199184,
+   "orbits_python": 24898,
+   "parents_covered": 0,
+   "parents_total": 199184,
+   "remov_histogram": {
+    "0": 199184
+   },
+   "safe_all": true,
+   "stabilizer_histogram": {
+    "1": 24898
+   },
+   "supersets_in_next_row_histogram": {},
+   "trips3_histogram": {
+    "0": 3568,
+    "1": 26376,
+    "2": 67048,
+    "3": 68608,
+    "4": 28168,
+    "5": 5008,
+    "6": 368,
+    "7": 40
+   }
+  },
+  {
+   "all_have_three_collinear": false,
+   "configs_containing_prev_row_member": 0,
+   "control_nonmax_tamper": {
+    "rejected": true,
+    "removed": 0
+   },
+   "control_unsafe_tamper": {
+    "added": 3,
+    "rejected": true
+   },
+   "dirs_histogram": {
+    "0": 276,
+    "1": 2336,
+    "2": 9208,
+    "3": 12688,
+    "4": 5432,
+    "5": 536,
+    "6": 16
+   },
+   "edges_to_prev_row": 0,
+   "found": 30492,
+   "k": 10,
+   "k3_prefixes": 120,
+   "maximal_all": true,
+   "nodes": 2529963,
+   "orbit_sum": 30492,
+   "orbits_python": 3814,
+   "parents_covered": 0,
+   "parents_total": 30492,
+   "remov_histogram": {
+    "0": 30492
+   },
+   "safe_all": true,
+   "stabilizer_histogram": {
+    "1": 3809,
+    "2": 5
+   },
+   "supersets_in_next_row_histogram": {},
+   "trips3_histogram": {
+    "0": 276,
+    "1": 1952,
+    "2": 7008,
+    "3": 11000,
+    "4": 7944,
+    "5": 2136,
+    "6": 160,
+    "7": 16
+   }
+  },
+  {
+   "all_have_three_collinear": true,
+   "configs_containing_prev_row_member": 0,
+   "control_nonmax_tamper": {
+    "rejected": true,
+    "removed": 0
+   },
+   "control_unsafe_tamper": {
+    "added": 3,
+    "rejected": true
+   },
+   "dirs_histogram": {
+    "1": 8,
+    "2": 40,
+    "3": 176,
+    "4": 176,
+    "5": 56,
+    "6": 8
+   },
+   "edges_to_prev_row": 0,
+   "found": 464,
+   "k": 11,
+   "k3_prefixes": 165,
+   "maximal_all": true,
+   "nodes": 1904379,
+   "orbit_sum": 464,
+   "orbits_python": 58,
+   "remov_histogram": {
+    "0": 464
+   },
+   "safe_all": true,
+   "stabilizer_histogram": {
+    "1": 58
+   },
+   "trips3_histogram": {
+    "1": 8,
+    "2": 24,
+    "3": 64,
+    "4": 176,
+    "5": 160,
+    "6": 24,
+    "7": 8
+   }
+  }
+ ]
+}

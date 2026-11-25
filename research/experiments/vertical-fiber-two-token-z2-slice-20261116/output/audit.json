@@ -1,0 +1,45 @@
+{
+  "audit": {
+    "H2_position_mismatches": 0,
+    "canonical_cache": {
+      "currsize": 1033638,
+      "hits": 2009101,
+      "maxsize": null,
+      "misses": 1033638
+    },
+    "canonical_vs_formula_mismatches": 0,
+    "canonical_vs_labeled_mismatches": 0,
+    "even_R_gt_1": 0,
+    "even_R_parity_checks": 146620,
+    "extra_R_after_S": 8,
+    "first_grid_mismatch": null,
+    "grid_states": 291600,
+    "labeled_cache": {
+      "currsize": 3700432,
+      "hits": 6362535,
+      "maxsize": null,
+      "misses": 3700432
+    },
+    "labeled_vs_formula_mismatches": 0,
+    "max_x": 80,
+    "odd_R_H2_position_checks": 144980,
+    "option_flag_table_checks": 288360,
+    "option_flag_table_mismatches": 0,
+    "random_cases": 200,
+    "random_first_mismatch": null,
+    "random_mismatches": 0,
+    "tail_checks_R_ge_S_plus_3": 19440,
+    "tail_mismatches": 0,
+    "value_range_checks": 291600,
+    "value_range_mismatches": 0
+  },
+  "date": "2026-11-16",
+  "engines": [
+    "sorted multiset recursion with proved cap_{R+1} lemma",
+    "ordered labeled-token recursion without capping or sorting"
+  ],
+  "formula": "R=0,2:0; R=1:2. For odd R>=3, H=2 at T={1} plus {S+1 if d=0; S,S+2 if d=3; 2y+3 if d>=4}; H=1 at d=0:R<=S-1; d=1:all; d=2:R<=S-1; d=3:R<=S-2 or R>=S+4; d>=4:R<=2y+1 or (d odd and R>=S+4); otherwise 0. For even R>=4, H=1 iff (d in {1,3} and R>=S+1) or (d>=5 odd and R>=2y+4) or (d>=4 even and 2y+4<=R<=S+2); otherwise 0. Here S=x+y,d=x-y,x>=y>=1.",
+  "second_run_identical": true,
+  "status": "theorem by strong induction; finite audits are independent corroboration",
+  "subject": "two-token residual game, z=2 full Grundy slice"
+}

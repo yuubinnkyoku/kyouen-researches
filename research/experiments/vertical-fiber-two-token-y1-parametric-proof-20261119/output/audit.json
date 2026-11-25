@@ -1,0 +1,1002 @@
+{
+ "V0_single_token_vs_raw": {
+  "grid": "x=1..24, z=0..33, R=0..72, both raw engines",
+  "points": 59568,
+  "status": "PASS"
+ },
+ "V1_census_raw": {
+  "finite_only": true,
+  "grid": "z=1..30, x<=max(3z+40,70), R<=x+z+8, both raw engines",
+  "points": 203910,
+  "status": "PASS"
+ },
+ "V2_published_agreement": {
+  "grid": "z=6..15, x<=400, R<=x+11, verbatim ast extraction",
+  "points": 850000,
+  "status": "PASS"
+ },
+ "V3_closure_sweep": {
+  "finite_only": true,
+  "grid": "z=7..120, x<=4z+240, R<=x+z+10",
+  "points": 19615182,
+  "status": "PASS"
+ },
+ "V4_joint": {
+  "finite_only": true,
+  "grid": "z=7..16, x<=3z+40, R<=x+z+8, raw==closure==cand, both engines",
+  "points": 44015,
+  "status": "PASS"
+ },
+ "V5_symbolic_audit": {
+  "classes": [
+   {
+    "class_num_forms": 4,
+    "const_pairs": 6,
+    "cross_reps": 16,
+    "groups": {
+     "main": 5
+    },
+    "kind": "z",
+    "max_unstable_threshold": 6,
+    "name": "E1",
+    "nonconst_pairs": 0,
+    "samples": [
+     [
+      8,
+      0
+     ],
+     [
+      14,
+      0
+     ],
+     [
+      22,
+      0
+     ],
+     [
+      160,
+      0
+     ],
+     [
+      300,
+      0
+     ]
+    ],
+    "skmid": 6,
+    "slope_check": "PASS",
+    "symeval_R_values": 80,
+    "xmax": -1,
+    "zmid": 6
+   },
+   {
+    "class_num_forms": 7,
+    "const_pairs": 9,
+    "cross_reps": 32,
+    "groups": {
+     "main": 5
+    },
+    "kind": "z",
+    "max_unstable_threshold": 6,
+    "name": "EG0",
+    "nonconst_pairs": 12,
+    "samples": [
+     [
+      8,
+      0
+     ],
+     [
+      14,
+      0
+     ],
+     [
+      22,
+      0
+     ],
+     [
+      160,
+      0
+     ],
+     [
+      300,
+      0
+     ]
+    ],
+    "skmid": 6,
+    "slope_check": "PASS",
+    "symeval_R_values": 559,
+    "xmax": -1,
+    "zmid": 6
+   },
+   {
+    "class_num_forms": 9,
+    "const_pairs": 10,
+    "cross_reps": 44,
+    "groups": {
+     "main": 5
+    },
+    "kind": "z",
+    "max_unstable_threshold": 6,
+    "name": "EG1",
+    "nonconst_pairs": 26,
+    "samples": [
+     [
+      8,
+      0
+     ],
+     [
+      14,
+      0
+     ],
+     [
+      22,
+      0
+     ],
+     [
+      160,
+      0
+     ],
+     [
+      300,
+      0
+     ]
+    ],
+    "skmid": 6,
+    "slope_check": "PASS",
+    "symeval_R_values": 1068,
+    "xmax": -1,
+    "zmid": 6
+   },
+   {
+    "class_num_forms": 5,
+    "const_pairs": 4,
+    "cross_reps": 24,
+    "groups": {
+     "main": 5
+    },
+    "kind": "z",
+    "max_unstable_threshold": 6,
+    "name": "EH",
+    "nonconst_pairs": 6,
+    "samples": [
+     [
+      8,
+      0
+     ],
+     [
+      14,
+      0
+     ],
+     [
+      22,
+      0
+     ],
+     [
+      160,
+      0
+     ],
+     [
+      300,
+      0
+     ]
+    ],
+    "skmid": 6,
+    "slope_check": "PASS",
+    "symeval_R_values": 554,
+    "xmax": -1,
+    "zmid": 6
+   },
+   {
+    "class_num_forms": 6,
+    "const_pairs": 6,
+    "cross_reps": 55,
+    "groups": {
+     "2": 2,
+     "deep": 8
+    },
+    "kind": "m",
+    "max_unstable_threshold": 8,
+    "name": "EL",
+    "nonconst_pairs": 9,
+    "samples": [
+     [
+      42,
+      40
+     ],
+     [
+      100,
+      98
+     ],
+     [
+      44,
+      40
+     ],
+     [
+      102,
+      98
+     ],
+     [
+      32,
+      2
+     ],
+     [
+      70,
+      40
+     ],
+     [
+      128,
+      98
+     ],
+     [
+      46,
+      2
+     ],
+     [
+      84,
+      40
+     ],
+     [
+      142,
+      98
+     ]
+    ],
+    "skmid": 8,
+    "slope_check": "PASS",
+    "symeval_R_values": 352,
+    "xmax": 2,
+    "zmid": 6
+   },
+   {
+    "class_num_forms": 5,
+    "const_pairs": 4,
+    "cross_reps": 18,
+    "groups": {
+     "3": 2,
+     "deep": 3
+    },
+    "kind": "m",
+    "max_unstable_threshold": 9,
+    "name": "EO",
+    "nonconst_pairs": 6,
+    "samples": [
+     [
+      44,
+      41
+     ],
+     [
+      102,
+      99
+     ],
+     [
+      8,
+      3
+     ],
+     [
+      46,
+      41
+     ],
+     [
+      104,
+      99
+     ]
+    ],
+    "skmid": 9,
+    "slope_check": "PASS",
+    "symeval_R_values": 80,
+    "xmax": 2,
+    "zmid": 6
+   },
+   {
+    "class_num_forms": 10,
+    "const_pairs": 14,
+    "cross_reps": 48,
+    "groups": {
+     "main": 5
+    },
+    "kind": "z",
+    "max_unstable_threshold": 6,
+    "name": "ES",
+    "nonconst_pairs": 31,
+    "samples": [
+     [
+      8,
+      0
+     ],
+     [
+      14,
+      0
+     ],
+     [
+      22,
+      0
+     ],
+     [
+      160,
+      0
+     ],
+     [
+      300,
+      0
+     ]
+    ],
+    "skmid": 6,
+    "slope_check": "PASS",
+    "symeval_R_values": 1068,
+    "xmax": -1,
+    "zmid": 6
+   },
+   {
+    "class_num_forms": 11,
+    "const_pairs": 19,
+    "cross_reps": 143,
+    "groups": {
+     "main": 12
+    },
+    "kind": "k",
+    "max_unstable_threshold": 10,
+    "name": "ESe",
+    "nonconst_pairs": 36,
+    "samples": [
+     [
+      8,
+      4
+     ],
+     [
+      60,
+      4
+     ],
+     [
+      140,
+      4
+     ],
+     [
+      290,
+      4
+     ],
+     [
+      8,
+      14
+     ],
+     [
+      60,
+      14
+     ],
+     [
+      140,
+      14
+     ],
+     [
+      290,
+      14
+     ],
+     [
+      8,
+      60
+     ],
+     [
+      60,
+      60
+     ],
+     [
+      140,
+      60
+     ],
+     [
+      290,
+      60
+     ]
+    ],
+    "skmid": 10,
+    "slope_check": "PASS",
+    "symeval_R_values": 3420,
+    "xmax": -1,
+    "zmid": 6
+   },
+   {
+    "class_num_forms": 11,
+    "const_pairs": 19,
+    "cross_reps": 52,
+    "groups": {
+     "main": 5
+    },
+    "kind": "z",
+    "max_unstable_threshold": 6,
+    "name": "ESo3",
+    "nonconst_pairs": 36,
+    "samples": [
+     [
+      8,
+      0
+     ],
+     [
+      14,
+      0
+     ],
+     [
+      22,
+      0
+     ],
+     [
+      160,
+      0
+     ],
+     [
+      300,
+      0
+     ]
+    ],
+    "skmid": 6,
+    "slope_check": "PASS",
+    "symeval_R_values": 1073,
+    "xmax": -1,
+    "zmid": 6
+   },
+   {
+    "class_num_forms": 11,
+    "const_pairs": 19,
+    "cross_reps": 91,
+    "groups": {
+     "main": 8
+    },
+    "kind": "k",
+    "max_unstable_threshold": 11,
+    "name": "ESoD",
+    "nonconst_pairs": 36,
+    "samples": [
+     [
+      8,
+      5
+     ],
+     [
+      60,
+      5
+     ],
+     [
+      140,
+      5
+     ],
+     [
+      290,
+      5
+     ],
+     [
+      8,
+      15
+     ],
+     [
+      60,
+      15
+     ],
+     [
+      140,
+      15
+     ],
+     [
+      290,
+      15
+     ]
+    ],
+    "skmid": 11,
+    "slope_check": "PASS",
+    "symeval_R_values": 2152,
+    "xmax": -1,
+    "zmid": 6
+   },
+   {
+    "class_num_forms": 4,
+    "const_pairs": 6,
+    "cross_reps": 16,
+    "groups": {
+     "main": 5
+    },
+    "kind": "z",
+    "max_unstable_threshold": 5,
+    "name": "O1",
+    "nonconst_pairs": 0,
+    "samples": [
+     [
+      7,
+      0
+     ],
+     [
+      13,
+      0
+     ],
+     [
+      21,
+      0
+     ],
+     [
+      161,
+      0
+     ],
+     [
+      301,
+      0
+     ]
+    ],
+    "skmid": 5,
+    "slope_check": "PASS",
+    "symeval_R_values": 80,
+    "xmax": -1,
+    "zmid": 5
+   },
+   {
+    "class_num_forms": 6,
+    "const_pairs": 6,
+    "cross_reps": 28,
+    "groups": {
+     "main": 5
+    },
+    "kind": "z",
+    "max_unstable_threshold": 5,
+    "name": "OG0",
+    "nonconst_pairs": 9,
+    "samples": [
+     [
+      7,
+      0
+     ],
+     [
+      13,
+      0
+     ],
+     [
+      21,
+      0
+     ],
+     [
+      161,
+      0
+     ],
+     [
+      301,
+      0
+     ]
+    ],
+    "skmid": 5,
+    "slope_check": "PASS",
+    "symeval_R_values": 553,
+    "xmax": -1,
+    "zmid": 5
+   },
+   {
+    "class_num_forms": 10,
+    "const_pairs": 14,
+    "cross_reps": 48,
+    "groups": {
+     "main": 5
+    },
+    "kind": "z",
+    "max_unstable_threshold": 5,
+    "name": "OG1",
+    "nonconst_pairs": 31,
+    "samples": [
+     [
+      7,
+      0
+     ],
+     [
+      13,
+      0
+     ],
+     [
+      21,
+      0
+     ],
+     [
+      161,
+      0
+     ],
+     [
+      301,
+      0
+     ]
+    ],
+    "skmid": 5,
+    "slope_check": "PASS",
+    "symeval_R_values": 1061,
+    "xmax": -1,
+    "zmid": 5
+   },
+   {
+    "class_num_forms": 6,
+    "const_pairs": 6,
+    "cross_reps": 62,
+    "groups": {
+     "2": 2,
+     "deep": 9
+    },
+    "kind": "m",
+    "max_unstable_threshold": 8,
+    "name": "OL",
+    "nonconst_pairs": 9,
+    "samples": [
+     [
+      43,
+      41
+     ],
+     [
+      101,
+      99
+     ],
+     [
+      7,
+      3
+     ],
+     [
+      45,
+      41
+     ],
+     [
+      103,
+      99
+     ],
+     [
+      33,
+      3
+     ],
+     [
+      71,
+      41
+     ],
+     [
+      129,
+      99
+     ],
+     [
+      47,
+      3
+     ],
+     [
+      85,
+      41
+     ],
+     [
+      143,
+      99
+     ]
+    ],
+    "skmid": 8,
+    "slope_check": "PASS",
+    "symeval_R_values": 368,
+    "xmax": 2,
+    "zmid": 5
+   },
+   {
+    "class_num_forms": 5,
+    "const_pairs": 4,
+    "cross_reps": 24,
+    "groups": {
+     "main": 5
+    },
+    "kind": "z",
+    "max_unstable_threshold": 5,
+    "name": "OLm1",
+    "nonconst_pairs": 6,
+    "samples": [
+     [
+      7,
+      0
+     ],
+     [
+      13,
+      0
+     ],
+     [
+      21,
+      0
+     ],
+     [
+      161,
+      0
+     ],
+     [
+      301,
+      0
+     ]
+    ],
+    "skmid": 5,
+    "slope_check": "PASS",
+    "symeval_R_values": 548,
+    "xmax": -1,
+    "zmid": 5
+   },
+   {
+    "class_num_forms": 5,
+    "const_pairs": 4,
+    "cross_reps": 24,
+    "groups": {
+     "3": 3,
+     "deep": 3
+    },
+    "kind": "m",
+    "max_unstable_threshold": 9,
+    "name": "OO",
+    "nonconst_pairs": 6,
+    "samples": [
+     [
+      7,
+      4
+     ],
+     [
+      45,
+      42
+     ],
+     [
+      103,
+      100
+     ],
+     [
+      9,
+      4
+     ],
+     [
+      47,
+      42
+     ],
+     [
+      105,
+      100
+     ]
+    ],
+    "skmid": 9,
+    "slope_check": "PASS",
+    "symeval_R_values": 96,
+    "xmax": 2,
+    "zmid": 5
+   },
+   {
+    "class_num_forms": 6,
+    "const_pairs": 6,
+    "cross_reps": 32,
+    "groups": {
+     "main": 5
+    },
+    "kind": "z",
+    "max_unstable_threshold": 5,
+    "name": "OO2",
+    "nonconst_pairs": 9,
+    "samples": [
+     [
+      7,
+      0
+     ],
+     [
+      13,
+      0
+     ],
+     [
+      21,
+      0
+     ],
+     [
+      161,
+      0
+     ],
+     [
+      301,
+      0
+     ]
+    ],
+    "skmid": 5,
+    "slope_check": "PASS",
+    "symeval_R_values": 553,
+    "xmax": -1,
+    "zmid": 5
+   },
+   {
+    "class_num_forms": 9,
+    "const_pairs": 13,
+    "cross_reps": 44,
+    "groups": {
+     "main": 5
+    },
+    "kind": "z",
+    "max_unstable_threshold": 5,
+    "name": "OS",
+    "nonconst_pairs": 23,
+    "samples": [
+     [
+      7,
+      0
+     ],
+     [
+      13,
+      0
+     ],
+     [
+      21,
+      0
+     ],
+     [
+      161,
+      0
+     ],
+     [
+      301,
+      0
+     ]
+    ],
+    "skmid": 5,
+    "slope_check": "PASS",
+    "symeval_R_values": 1066,
+    "xmax": -1,
+    "zmid": 5
+   },
+   {
+    "class_num_forms": 10,
+    "const_pairs": 14,
+    "cross_reps": 48,
+    "groups": {
+     "main": 5
+    },
+    "kind": "z",
+    "max_unstable_threshold": 5,
+    "name": "OSe3",
+    "nonconst_pairs": 31,
+    "samples": [
+     [
+      7,
+      0
+     ],
+     [
+      13,
+      0
+     ],
+     [
+      21,
+      0
+     ],
+     [
+      161,
+      0
+     ],
+     [
+      301,
+      0
+     ]
+    ],
+    "skmid": 5,
+    "slope_check": "PASS",
+    "symeval_R_values": 1071,
+    "xmax": -1,
+    "zmid": 5
+   },
+   {
+    "class_num_forms": 11,
+    "const_pairs": 19,
+    "cross_reps": 91,
+    "groups": {
+     "main": 8
+    },
+    "kind": "k",
+    "max_unstable_threshold": 10,
+    "name": "OSeD",
+    "nonconst_pairs": 36,
+    "samples": [
+     [
+      7,
+      5
+     ],
+     [
+      61,
+      5
+     ],
+     [
+      141,
+      5
+     ],
+     [
+      291,
+      5
+     ],
+     [
+      7,
+      15
+     ],
+     [
+      61,
+      15
+     ],
+     [
+      141,
+      15
+     ],
+     [
+      291,
+      15
+     ]
+    ],
+    "skmid": 10,
+    "slope_check": "PASS",
+    "symeval_R_values": 2160,
+    "xmax": -1,
+    "zmid": 5
+   },
+   {
+    "class_num_forms": 10,
+    "const_pairs": 18,
+    "cross_reps": 132,
+    "groups": {
+     "main": 12
+    },
+    "kind": "k",
+    "max_unstable_threshold": 9,
+    "name": "OSo",
+    "nonconst_pairs": 27,
+    "samples": [
+     [
+      7,
+      4
+     ],
+     [
+      61,
+      4
+     ],
+     [
+      141,
+      4
+     ],
+     [
+      291,
+      4
+     ],
+     [
+      7,
+      14
+     ],
+     [
+      61,
+      14
+     ],
+     [
+      141,
+      14
+     ],
+     [
+      291,
+      14
+     ],
+     [
+      7,
+      60
+     ],
+     [
+      61,
+      60
+     ],
+     [
+      141,
+      60
+     ],
+     [
+      291,
+      60
+     ]
+    ],
+    "skmid": 9,
+    "slope_check": "PASS",
+    "symeval_R_values": 3432,
+    "xmax": -1,
+    "zmid": 5
+   }
+  ],
+  "partition": {
+   "status": "PASS",
+   "xmax": 260,
+   "zmax": 80
+  },
+  "status": "PASS"
+ },
+ "V6_height_only_finite": {
+  "finite_only": true,
+  "grid": "z=6..80, x<=3z+120, R<=z+1",
+  "points": 945825,
+  "status": "PASS"
+ },
+ "claim": "H(R; (x,1); z) == cand(z,x,R) for all z >= 6, x >= 1, R >= 0",
+ "determinism": "audit.json re-serialization byte-identical (V7)",
+ "universal_scope": "z >= 6, all x >= 1, all R >= 0",
+ "verdict": "PASS",
+ "z_1_5_note": "z in 1..5 verified finitely only (V1 grid); the universal claim starts at the induction base z = 6"
+}

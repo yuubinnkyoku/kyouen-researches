@@ -1,0 +1,20 @@
+{
+  "bad": 0,
+  "box": "z=0..79, x=12..70, R=0..x+z+13",
+  "cache_maxsize": 1600000,
+  "cache_type": "bounded-memoization twin of the verbatim raw engine (published code object, LRU-capped cache)",
+  "corollaries": {
+    "merge": {
+      "bad": 0,
+      "claim": "x<=z-13 => H == single_token(x+12,z,R)",
+      "points": 161700
+    },
+    "tail": {
+      "bad": 0,
+      "claim": "R>=x+z+13 => H == (x+12)%2",
+      "points": 4720
+    }
+  },
+  "engine": "ordered",
+  "points": 446040
+}

@@ -1,0 +1,92 @@
+{
+  "scope": {
+    "rule": "pure fiber game; t=2; q=6; no base-trace constraints",
+    "capacity_condition": "sum_b min(c_b,2) <= 5",
+    "canonical_w_range": [
+      2,
+      12
+    ],
+    "canonical_m_range": [
+      2,
+      20
+    ],
+    "canonical_parameter_pairs": 209,
+    "labeled_w_range": [
+      2,
+      8
+    ],
+    "labeled_m_range": [
+      2,
+      9
+    ],
+    "labeled_parameter_pairs": 56
+  },
+  "canonical_multiset_audit": {
+    "representation": "sorted positive occupancy multisets; independently generated",
+    "states_checked": 36860,
+    "state_count_formula": "1 + m + C(m+1,2) + [w>=3]*(m+C(m,2)) + [w>=4]*m + [w>=5]",
+    "mismatches": 0,
+    "grundy_histogram": {
+      "0": 18070,
+      "1": 17899,
+      "2": 486,
+      "3": 405
+    },
+    "maximum_grundy": 3
+  },
+  "labeled_vector_audit": {
+    "representation": "full labeled width-w occupancy vectors; independently generated",
+    "states_checked": 137004,
+    "state_count_formula": "1 + w*m + C(w,2)*m^2 + C(w,3)*(1+3*(m-1)+3*(m-1)^2) + C(w,4)*(1+4*(m-1)) + C(w,5)",
+    "mismatches": 0,
+    "grundy_histogram": {
+      "0": 65962,
+      "1": 63018,
+      "2": 4274,
+      "3": 3750
+    },
+    "maximum_grundy": 3
+  },
+  "minimal_grundy_3_witness": {
+    "w": 4,
+    "m": 3,
+    "occupancy": [
+      2,
+      1,
+      1,
+      0
+    ],
+    "grundy": 3,
+    "children": [
+      {
+        "occupancy": [
+          3,
+          1,
+          1,
+          0
+        ],
+        "grundy": 2
+      },
+      {
+        "occupancy": [
+          2,
+          2,
+          1,
+          0
+        ],
+        "grundy": 0
+      },
+      {
+        "occupancy": [
+          2,
+          1,
+          1,
+          1
+        ],
+        "grundy": 1
+      }
+    ]
+  },
+  "verifier_sha256": "eadadeeb9a01bdcf8a62f1060c0e8024e5fe9b30591789fd0928262ca7df26a1",
+  "audit_note": "Finite recursive-mex audits support the formulas; the unbounded theorem is proved in report.md."
+}

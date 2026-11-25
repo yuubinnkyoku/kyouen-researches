@@ -1,0 +1,186 @@
+{
+  "all_ok": true,
+  "checks": {
+    "C10_engine_deep_anchor_z7_12": {
+      "bad": 0,
+      "example": null,
+      "ok": true,
+      "points": 1944
+    },
+    "C11_vspace_shell_sweep_zge2": {
+      "bad": 0,
+      "example": null,
+      "new_types_beyond_box": 0,
+      "ok": true,
+      "points": 33710,
+      "shell_range": [
+        61,
+        120
+      ]
+    },
+    "C12_ring_sweep_z0_z1": {
+      "bad": 0,
+      "example": null,
+      "new_types_beyond_box": 0,
+      "ok": true,
+      "points": 600000,
+      "ring": "x in [1,300], R in [1,1000] vs boxes x<=140, R<=321"
+    },
+    "C1_raw_engine_vs_closed_form_z0_6": {
+      "bad": 0,
+      "example": null,
+      "ok": true,
+      "points": 4424
+    },
+    "C1b_canonical_engine_vs_closed_form_z0_6": {
+      "bad": 0,
+      "example": null,
+      "ok": true,
+      "points": 4424
+    },
+    "C1c_single_token_engine_anchor": {
+      "bad": 0,
+      "example": null,
+      "ok": true,
+      "points": 3720
+    },
+    "C1d_published_slice_agreement_z14_z15": {
+      "bad": 0,
+      "example": null,
+      "ok": true,
+      "points": 11460
+    },
+    "C2_identity_grid_z1_40": {
+      "bad": 0,
+      "example": null,
+      "ok": true,
+      "points": 129600
+    },
+    "C2b_identity_grid_z0": {
+      "bad": 0,
+      "example": null,
+      "ok": true,
+      "points": 12000
+    },
+    "C2c_R0_trivial": {
+      "bad": 0,
+      "ok": true,
+      "points": 841
+    },
+    "C3_option_decomposition_engine_anchor": {
+      "bad": 0,
+      "example": null,
+      "ok": true,
+      "points": 1350
+    },
+    "C4_zge2_type_identity": {
+      "bad": 0,
+      "box_bound": 60,
+      "box_points": 653310,
+      "example": null,
+      "max_abs_form_at_witness": 50,
+      "ok": true,
+      "realized_types": 10750,
+      "window": 8
+    },
+    "C4b_zge2_witness_pair_confluence": {
+      "bad": 0,
+      "example": null,
+      "ok": true,
+      "pairs_compared": 5486
+    },
+    "C5_z1_type_identity": {
+      "bad": 0,
+      "box_points": 44800,
+      "example": null,
+      "ok": true,
+      "realized_types": 5458,
+      "windows": {
+        "R": [
+          0,
+          80
+        ],
+        "R_minus_2x": 16,
+        "R_minus_x": 24,
+        "x": [
+          1,
+          24
+        ]
+      }
+    },
+    "C5b_z1_witness_pair_confluence": {
+      "bad": 0,
+      "example": null,
+      "ok": true,
+      "pairs_compared": 420
+    },
+    "C6_z0_type_identity": {
+      "bad": 0,
+      "box_points": 42000,
+      "example": null,
+      "ok": true,
+      "realized_types": 4994
+    },
+    "C6b_z0_witness_pair_confluence": {
+      "bad": 0,
+      "example": null,
+      "ok": true,
+      "pairs_compared": 369
+    },
+    "C7_seeded_far_probes_identity": {
+      "bad": 0,
+      "example": null,
+      "ok": true,
+      "points": 200000,
+      "ranges": "z,x in [1,3000], R in [0,9000], seed 20261119"
+    },
+    "C7b_seeded_far_probes_type_membership_confluence": {
+      "bad": 0,
+      "example": null,
+      "ok": true,
+      "points": 200000
+    },
+    "C8_boundary_manifold_probes": {
+      "bad": 0,
+      "example": null,
+      "ok": true,
+      "points": 11686,
+      "z_values": [
+        2,
+        3,
+        97,
+        98,
+        997,
+        998,
+        2999,
+        3000
+      ]
+    },
+    "C8b_boundary_manifold_type_coverage": {
+      "bad": 0,
+      "example": null,
+      "ok": true,
+      "points": 11686
+    },
+    "C9_z0_z1_far_probes": {
+      "bad": 0,
+      "example": null,
+      "ok": true,
+      "points": 120000,
+      "ranges": "x in [1,5000], R in [1,15000]"
+    },
+    "C9b_z0_z1_type_coverage_confluence": {
+      "bad": 0,
+      "example": null,
+      "ok": true,
+      "points": 120000
+    }
+  },
+  "fail": [],
+  "n_points": 1875269,
+  "summary": {
+    "z0_realized_types": 4994,
+    "z1_realized_types": 5458,
+    "zge2_realized_types": 10750
+  }
+}

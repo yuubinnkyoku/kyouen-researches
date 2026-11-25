@@ -1,0 +1,64 @@
+{
+ "generated": "2026-11-13",
+ "machine": "bitset certificate DFS over maximal window masks (streaming; no candidate Set; staged per (w,L) due to sandbox deadline)",
+ "semantics": "K0784 strip semantics: width w = number of rows 0..w-1, columns unbounded; level L dead => d+s <= L-1 => P(w) <= 2(L-1)",
+ "controls": {
+  "w26_L12": {"uniqueMasks": 90, "maximalMasks": 86, "nodes": 1265, "leaves": 1, "uniqueSurvivors": 1, "survivors": [[0,1,3,4,7,10,15,18,21,22,24,25]], "note": "exactly S* (circle 650, K0782/K0784) reproduced"},
+  "w27_L13": {"uniqueMasks": 24, "maximalMasks": 24, "nodes": 282, "leaves": 0, "uniqueSurvivors": 0, "note": "matches K0784 (63 dedup candidates, all dead)"},
+  "w35_L13": {"uniqueMasks": 1010, "maximalMasks": 1010, "nodes": 53405, "leaves": 0, "uniqueSurvivors": 0, "note": "matches K0784 (36920 dedup candidates, all dead)"},
+  "samplingCrossCheck": {"w36": {"tested": 400, "aliveByReferenceSubsetOK": 0}, "w42": {"tested": 400, "aliveByReferenceSubsetOK": 0}, "note": "independent reference implementation (K0784 subsetOK) on random 13-subsets of random window masks"}
+ },
+ "levelClassification": {
+  "w36_L13": {"uniqueMasks": 1309, "maximalMasks": 1309, "nodes": 84304, "leaves": 0, "uniqueSurvivors": 0},
+  "w37_L13": {"uniqueMasks": 1567, "maximalMasks": 1567, "nodes": 147083, "leaves": 0, "uniqueSurvivors": 0},
+  "w38_L13": {"uniqueMasks": 1786, "maximalMasks": 1786, "nodes": 231559, "leaves": 0, "uniqueSurvivors": 0},
+  "w39_L13": {"uniqueMasks": 2037, "maximalMasks": 2037, "nodes": 345607, "leaves": 0, "uniqueSurvivors": 0},
+  "w40_L13": {"uniqueMasks": 2231, "maximalMasks": 2231, "nodes": 531184, "leaves": 0, "uniqueSurvivors": 0},
+  "w41_L13": {"uniqueMasks": 2405, "maximalMasks": 2405, "nodes": 786918, "leaves": 0, "uniqueSurvivors": 0},
+  "w42_L13": {"uniqueMasks": 2600, "maximalMasks": 2600, "nodes": 1103492, "leaves": 0, "uniqueSurvivors": 0},
+  "w43_L14": {"uniqueMasks": 2191, "maximalMasks": 2191, "nodes": 623657, "leaves": 0, "uniqueSurvivors": 0},
+  "w44_L15": {"uniqueMasks": 1816, "maximalMasks": 1816, "nodes": 331981, "leaves": 0, "uniqueSurvivors": 0},
+  "w45_L15": {"uniqueMasks": 1993, "maximalMasks": 1993, "nodes": 488333, "leaves": 0, "uniqueSurvivors": 0},
+  "w46_L16": {"uniqueMasks": 1617, "maximalMasks": 1617, "nodes": 286513, "leaves": 0, "uniqueSurvivors": 0},
+  "w47_L16": {"uniqueMasks": 1805, "maximalMasks": 1805, "nodes": 434311, "leaves": 0, "uniqueSurvivors": 0},
+  "w48_L17": {"uniqueMasks": 1379, "maximalMasks": 1379, "nodes": 238340, "leaves": 0, "uniqueSurvivors": 0}
+ },
+ "g0Accounting_conventionB": {
+  "note": "proven certificate for non-standard forms: e=q/g0 forces all point rows y = g0*t + r; certificate is coef 4*g0^2 in the CLASS VARIABLE t (convention B). g0=2 additionally forces all rows EVEN (odd classes cannot be g0=2) and u=q odd for even moduli (u-odd strengthening). Convention A (coef 16*y^2 on row values, used in K0767-K0784 class computations) is not derivable; all committed conclusions survive under B (verified numerically).",
+  "committedTheoremChecks": {
+   "mod9_periodMax_convB": 6,
+   "k0778_w17_18_classMax_convB": 6,
+   "k0778_w19_20_classMax_convB": 7,
+   "all_below_L9": true,
+   "note": "K0778 P(17)=P(18)=16 and K0784 universal same-parity bound survive unchanged"
+  },
+  "perW": {
+   "w36": {"L": 13, "classSize_g2": 18, "classMax_g2_B_free": 11, "classMax_g2_B_uodd": 6, "classMax_g3_B": 8, "trivial_g4plus": true},
+   "w37": {"L": 13, "classSize_g2": 19, "classMax_g2_B_free": 11, "classMax_g2_B_uodd": 6, "classMax_g3_B": 9, "trivial_g4plus": true},
+   "w38": {"L": 13, "classSize_g2": 19, "classMax_g2_B_free": 11, "classMax_g2_B_uodd": 6, "classMax_g3_B": 9, "trivial_g4plus": true},
+   "w39": {"L": 13, "classSize_g2": 20, "classMax_g2_B_free": 12, "classMax_g2_B_uodd": 6, "classMax_g3_B": 9, "trivial_g4plus": true},
+   "w40": {"L": 13, "classSize_g2": 20, "classMax_g2_B_free": 12, "classMax_g2_B_uodd": 6, "classMax_g3_B": 10, "trivial_g4plus": true},
+   "w41": {"L": 13, "classSize_g2": 21, "classMax_g2_B_free": 13, "classMax_g2_B_uodd": 7, "classMax_g3_B": 10, "trivial_g4plus": true, "note": "free>=L here; u-odd (binding modulus 16, max 7) closes it"},
+   "w42": {"L": 13, "classSize_g2": 21, "classMax_g2_B_free": 13, "classMax_g2_B_uodd": 7, "classMax_g3_B": 10, "trivial_g4plus": true, "note": "free>=L here; u-odd (binding modulus 16, max 7) closes it"},
+   "w43": {"L": 14, "classSize_g2": 22, "classMax_g2_B_free": 13, "classMax_g2_B_uodd": 7, "classMax_g3_B": 11, "trivial_g4plus": true},
+   "w44": {"L": 15, "classSize_g2": 22, "classMax_g2_B_free": 13, "classMax_g2_B_uodd": 7, "classMax_g3_B": 11, "trivial_g4plus": true},
+   "w45": {"L": 15, "classSize_g2": 23, "classMax_g2_B_free": 13, "classMax_g2_B_uodd": 7, "classMax_g3_B": 11, "trivial_g4plus": true},
+   "w46": {"L": 16, "classSize_g2": 23, "classMax_g2_B_free": 13, "classMax_g2_B_uodd": 7, "classMax_g3_B": 11, "trivial_g4plus": true},
+   "w47": {"L": 16, "classSize_g2": 24, "classMax_g2_B_free": 14, "classMax_g2_B_uodd": 7, "classMax_g3_B": 11, "trivial_g4plus": true},
+   "w48": {"L": 17, "classSize_g2": 24, "classMax_g2_B_free": 14, "classMax_g2_B_uodd": 7, "classMax_g3_B": 11, "trivial_g4plus": true}
+  },
+  "bindingModulusExample": {"w41_g2_uodd_perMod": {"5": 21, "7": 15, "8": 9, "9": 14, "11": 14, "13": 21, "16": 7, "17": 21, "19": 13, "23": 13, "25": 21, "27": 14, "29": 21, "31": 16, "37": 21, "41": 21, "43": 16, "47": 17}, "min": 7}
+ },
+ "witnesses": {
+  "lower650": {"circle": "(2x-25)^2+(2y-25)^2=650", "points26x26": 24, "distinct": 24, "rowsFit_w36to42": true, "gives": "P(36..42) >= 24"},
+  "lower2210": {"circle": "(2x-A)^2+(2y-B)^2=2210", "constrainedAxisStrip": {"43": 26, "44": 28, "45": 28, "46": 30, "47": 30, "48": 32}, "totalPoints": 32, "gives": "P(43)>=26, P(44)=P(45)>=28, P(46)=P(47)>=30, P(48)>=32 (K0786 semantics, axis-symmetric to row strips)"}
+ },
+ "claims": {
+  "exactValues": {"P36_to_P42": 24, "P43": 26, "P44": 28, "P45": 28, "P46": 30, "P47": 30, "P48": 32},
+  "plateau24": "w = 26..42 (extends K0784's 26..35)",
+  "universal": true,
+  "proof": "level L(w) completely dead at each target (window DFS zero survivors + g0>=2 accounting under convention B) => P <= 2(L-1); witness truncations give equality",
+  "levels": {"36..42": 13, "43": 14, "44": 15, "45": 15, "46": 16, "47": 16, "48": 17}
+ },
+ "openAfterThis": {"P(21)": "in {16,17,18}", "P(49)+": "open; 2210-family suggests next jump structure via larger r2", "P(19),P(20)": "conjectured 16 (K0778), realizability still open"}
+}

@@ -1,0 +1,370 @@
+{
+  "generated": "2026-11-12",
+  "note": "Recorded session output. classify/brute21/a0-algebraic parts are re-run verbatim by the committed script (STAGE all/classify/brute21/a0). The a0 d<=2e6 scans and the 8 per-set standard-form searches were executed as separate sandbox runs (time budget); their values are recorded here.",
+  "classify": {
+    "w21": {
+      "k": 11,
+      "maxT": 11,
+      "histTop": {
+        "10": 396,
+        "11": 43
+      },
+      "candidates": 11,
+      "survivorsCoef4": 0,
+      "survivorsG2Only": 0,
+      "killedSameParityBothForms": 0,
+      "perKill": {
+        "19": 11
+      }
+    },
+    "w22": {
+      "k": 11,
+      "maxT": 11,
+      "histTop": {
+        "10": 600,
+        "11": 146
+      },
+      "candidates": 34,
+      "survivorsCoef4": 0,
+      "survivorsG2Only": 0,
+      "killedSameParityBothForms": 0,
+      "perKill": {
+        "19": 34
+      }
+    },
+    "w23": {
+      "k": 12,
+      "maxT": 12,
+      "histTop": {
+        "11": 308,
+        "12": 33
+      },
+      "candidates": 9,
+      "survivorsCoef4": 0,
+      "survivorsG2Only": 0,
+      "killedSameParityBothForms": 0,
+      "perKill": {
+        "19": 9
+      }
+    },
+    "w24": {
+      "k": 12,
+      "maxT": 12,
+      "histTop": {
+        "11": 466,
+        "12": 102
+      },
+      "candidates": 22,
+      "survivorsCoef4": 0,
+      "survivorsG2Only": 0,
+      "killedSameParityBothForms": 0,
+      "perKill": {
+        "19": 22
+      }
+    },
+    "w25": {
+      "k": 13,
+      "maxT": 13,
+      "histTop": {
+        "12": 194,
+        "13": 39
+      },
+      "candidates": 7,
+      "survivorsCoef4": 0,
+      "survivorsG2Only": 0,
+      "killedSameParityBothForms": 0,
+      "perKill": {
+        "19": 7
+      }
+    },
+    "w26": {
+      "k": 13,
+      "maxT": 14,
+      "histTop": {
+        "12": 347,
+        "13": 78,
+        "14": 9
+      },
+      "candidates": 28,
+      "survivorsCoef4": 0,
+      "survivorsG2Only": 0,
+      "killedSameParityBothForms": 0,
+      "perKill": {
+        "19": 28
+      }
+    },
+    "kPlus1Level": {
+      "w21": {
+        "candidates": 0
+      },
+      "w22": {
+        "candidates": 0
+      },
+      "w23": {
+        "candidates": 0
+      },
+      "w24": {
+        "candidates": 0
+      },
+      "w25": {
+        "candidates": 0
+      },
+      "w26_k14": {
+        "candidates": 1,
+        "killedAtMod": 19
+      }
+    },
+    "controls_k9": {
+      "w17": {
+        "maxT": 10,
+        "candidates": 52,
+        "survivors": 0
+      },
+      "w18": {
+        "maxT": 10,
+        "candidates": 110,
+        "survivors": 0
+      },
+      "w19": {
+        "maxT": 10,
+        "candidates": 305,
+        "survivors": 2,
+        "survivorSets": [
+          [
+            0,
+            1,
+            4,
+            6,
+            7,
+            12,
+            13,
+            15,
+            18
+          ],
+          [
+            0,
+            3,
+            5,
+            6,
+            11,
+            12,
+            14,
+            17,
+            18
+          ]
+        ]
+      },
+      "w20": {
+        "maxT": 10,
+        "candidates": 582,
+        "survivors": 8
+      }
+    },
+    "parityClassC16Maxima": {
+      "21": {
+        "evens": 11,
+        "evensC16max": 7,
+        "odds": 10,
+        "oddsC16max": 7
+      },
+      "22": {
+        "evens": 11,
+        "evensC16max": 7,
+        "odds": 11,
+        "oddsC16max": 7
+      },
+      "23": {
+        "evens": 12,
+        "evensC16max": 8,
+        "odds": 11,
+        "oddsC16max": 7
+      },
+      "24": {
+        "evens": 12,
+        "evensC16max": 8,
+        "odds": 12,
+        "oddsC16max": 8
+      },
+      "25": {
+        "evens": 13,
+        "evensC16max": 9,
+        "odds": 12,
+        "oddsC16max": 8
+      },
+      "26": {
+        "evens": 13,
+        "evensC16max": 9,
+        "odds": 13,
+        "oddsC16max": 9
+      }
+    }
+  },
+  "brute21_k11": {
+    "total": 352716,
+    "survivors": 0
+  },
+  "a0_exclusion": {
+    "s19_S1": {
+      "pair": [
+        1,
+        4
+      ],
+      "dCandidates": [
+        20
+      ],
+      "provedByFiniteFactorization": true,
+      "scanSolutions_d_le_2e6": 0
+    },
+    "s1": {
+      "pair": [
+        3,
+        12
+      ],
+      "dCandidates": [
+        60
+      ],
+      "provedByFiniteFactorization": true,
+      "scanSolutions_d_le_2e6": 0
+    },
+    "s3": {
+      "pair": [
+        1,
+        4
+      ],
+      "dCandidates": [
+        20
+      ],
+      "provedByFiniteFactorization": true,
+      "scanSolutions_d_le_2e6": 0
+    },
+    "s4": {
+      "pair": [
+        1,
+        4
+      ],
+      "dCandidates": [
+        20
+      ],
+      "provedByFiniteFactorization": true,
+      "scanSolutions_d_le_2e6": 0
+    },
+    "s5": {
+      "pair": [
+        1,
+        4
+      ],
+      "dCandidates": [
+        20
+      ],
+      "provedByFiniteFactorization": true,
+      "scanSolutions_d_le_2e6": 0
+    },
+    "s6": {
+      "provedByMod3": true,
+      "argument": "rows 1,6: s6^2 = 6(d-24) -> 6|s6 -> d = 24+6m^2; s1^2 = d-4 = 6m^2+20 = 2 mod 3 (not a square)",
+      "scanSolutions_d_le_2e6": 0
+    },
+    "s7": {
+      "pair": [
+        1,
+        4
+      ],
+      "dCandidates": [
+        20
+      ],
+      "provedByFiniteFactorization": true,
+      "scanSolutions_d_le_2e6": 0
+    },
+    "s8": {
+      "pair": [
+        1,
+        16
+      ],
+      "dCandidates": [
+        68,
+        260
+      ],
+      "provedByFiniteFactorization": true,
+      "scanSolutions_d_le_2e6": 0
+    }
+  },
+  "searches_standardForm": {
+    "region": "R' = A + e^2/16 <= 2e7, e in Z (e even forced by mixed parity), complete coverage; A=0 excluded rigorously",
+    "s19_S1": {
+      "pairsTested": 20003256,
+      "passFilters": 2592849,
+      "hits": 0
+    },
+    "s1": {
+      "pairsTested": 20003256,
+      "passFilters": 2592849,
+      "hits": 0
+    },
+    "s3": {
+      "pairsTested": 20003256,
+      "passFilters": 1025077,
+      "hits": 0
+    },
+    "s4": {
+      "pairsTested": 20003256,
+      "passFilters": 1025077,
+      "hits": 0
+    },
+    "s5": {
+      "pairsTested": 20003256,
+      "passFilters": 1025077,
+      "hits": 0
+    },
+    "s6": {
+      "pairsTested": 20003256,
+      "passFilters": 1025077,
+      "hits": 0
+    },
+    "s7": {
+      "pairsTested": 21169201,
+      "passFilters": 1729871,
+      "hits": 0
+    },
+    "s8": {
+      "pairsTested": 21169201,
+      "passFilters": 1729871,
+      "hits": 0
+    }
+  },
+  "witnessControlA9eMinus44": {
+    "ok": true,
+    "s": [
+      3,
+      7,
+      9,
+      11,
+      11,
+      9,
+      7,
+      3
+    ]
+  },
+  "claims": {
+    "Pw": {
+      "21": "<=20",
+      "22": "<=20",
+      "23": "<=22",
+      "24": "<=22",
+      "25": "<=24",
+      "26": "<=24"
+    },
+    "general": "P(w) <= 2*ceil(w/2) - 2 for w = 21..26 (proved; sharpens K0776/K0778 P(w) <= 2*ceil(w/2))",
+    "corollaryNewQ": {
+      "21": [
+        22
+      ],
+      "23": [
+        24
+      ],
+      "25": [
+        26
+      ]
+    },
+    "realizability": "all 8 distinct candidate row sets (w=19,20): A=0 impossible (rigorous); standard-form realizations excluded for R' <= 2e7 with e in Z complete (K0778 covered e = 0 mod 4 only)"
+  }
+}

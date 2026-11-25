@@ -1,0 +1,63 @@
+{
+  "all_pass": true,
+  "counts": {
+    "full_board_states_two_direct_engines_vs_formula": 51756,
+    "residual_even_mex_vs_formula": 35933,
+    "residual_odd_mex_vs_formula": 35933
+  },
+  "failures": [],
+  "full_board_nimber_histogram": {
+    "0": 23600,
+    "1": 23514,
+    "2": 2416,
+    "3": 2226
+  },
+  "full_board_parameters": [
+    {"m":1,"nimber_histogram":{"0":1},"safe_states":1,"w":1},
+    {"m":2,"nimber_histogram":{"0":1},"safe_states":1,"w":1},
+    {"m":3,"nimber_histogram":{"0":1},"safe_states":1,"w":1},
+    {"m":4,"nimber_histogram":{"0":1},"safe_states":1,"w":1},
+    {"m":5,"nimber_histogram":{"0":1},"safe_states":1,"w":1},
+    {"m":6,"nimber_histogram":{"0":1},"safe_states":1,"w":1},
+    {"m":7,"nimber_histogram":{"0":1},"safe_states":1,"w":1},
+    {"m":1,"nimber_histogram":{"0":2,"1":2},"safe_states":4,"w":2},
+    {"m":2,"nimber_histogram":{"0":4,"1":4},"safe_states":8,"w":2},
+    {"m":3,"nimber_histogram":{"0":6,"1":4},"safe_states":10,"w":2},
+    {"m":4,"nimber_histogram":{"0":6,"1":4,"2":2},"safe_states":12,"w":2},
+    {"m":5,"nimber_histogram":{"0":8,"1":6},"safe_states":14,"w":2},
+    {"m":6,"nimber_histogram":{"0":8,"1":6,"2":2},"safe_states":16,"w":2},
+    {"m":7,"nimber_histogram":{"0":10,"1":8},"safe_states":18,"w":2},
+    {"m":1,"nimber_histogram":{"0":4,"1":4},"safe_states":8,"w":3},
+    {"m":2,"nimber_histogram":{"0":14,"1":13},"safe_states":27,"w":3},
+    {"m":3,"nimber_histogram":{"0":29,"1":25},"safe_states":54,"w":3},
+    {"m":4,"nimber_histogram":{"0":32,"1":34,"2":15,"3":6},"safe_states":87,"w":3},
+    {"m":5,"nimber_histogram":{"0":65,"1":61},"safe_states":126,"w":3},
+    {"m":6,"nimber_histogram":{"0":68,"1":70,"2":21,"3":12},"safe_states":171,"w":3},
+    {"m":7,"nimber_histogram":{"0":113,"1":109},"safe_states":222,"w":3},
+    {"m":1,"nimber_histogram":{"0":8,"1":8},"safe_states":16,"w":4},
+    {"m":2,"nimber_histogram":{"0":41,"1":40},"safe_states":81,"w":4},
+    {"m":3,"nimber_histogram":{"0":124,"1":117},"safe_states":241,"w":4},
+    {"m":4,"nimber_histogram":{"0":189,"1":188,"2":84,"3":60},"safe_states":521,"w":4},
+    {"m":5,"nimber_histogram":{"0":476,"1":469},"safe_states":945,"w":4},
+    {"m":6,"nimber_histogram":{"0":589,"1":588,"2":192,"3":168},"safe_states":1537,"w":4},
+    {"m":7,"nimber_histogram":{"0":1164,"1":1157},"safe_states":2321,"w":4},
+    {"m":1,"nimber_histogram":{"0":16,"1":16},"safe_states":32,"w":5},
+    {"m":2,"nimber_histogram":{"0":122,"1":121},"safe_states":243,"w":5},
+    {"m":3,"nimber_histogram":{"0":507,"1":496},"safe_states":1003,"w":5},
+    {"m":4,"nimber_histogram":{"0":1017,"1":1016,"2":440,"3":380},"safe_states":2853,"w":5},
+    {"m":5,"nimber_histogram":{"0":3232,"1":3221},"safe_states":6453,"w":5},
+    {"m":6,"nimber_histogram":{"0":4662,"1":4661,"2":1660,"3":1600},"safe_states":12583,"w":5},
+    {"m":7,"nimber_histogram":{"0":11077,"1":11066},"safe_states":22143,"w":5}
+  ],
+  "repeat_byte_identical": true,
+  "repeat_runs": 2,
+  "residual_box": {"e0":[0,32],"e1":[0,32],"e2":[0,32]},
+  "sha256_without_hash_field": "d0fdb8de909ce6f6901bd98c789389a5e7d69d078102d9681cb72d7847a77656",
+  "sharp_maximum_witnesses": {
+    "w1_m4_empty": {"grundy":0,"m":4,"occupancies":[0]},
+    "w2_m4": {"grundy":2,"m":4,"occupancies":[0,2]},
+    "w3_m4": {"grundy":3,"m":4,"occupancies":[0,2,3]},
+    "w3_m5_empty": {"grundy":0,"m":5,"occupancies":[0,0,0]}
+  },
+  "target": "pure fiber game t=3, q=3w-2"
+}

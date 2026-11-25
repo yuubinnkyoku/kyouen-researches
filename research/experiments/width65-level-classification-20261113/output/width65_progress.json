@@ -1,0 +1,327 @@
+{
+ "generated": "2026-11-13",
+ "status": "completed",
+ "resume_from": 3296,
+ "machine": "research/experiments/width65-level-classification-20261113/scripts/width65_level_classify.ts（chunks 1-18: REST16）+ width65-pruning-audit-20261113 の REST6 2フェーズ方式（chunks 19-）",
+ "machineNote": "chunks 19以降は REST6=[19,23,7,29,43,47]・cap 2.4M nodes/chunk（word-ops 観点で旧1.2Mチャンクと同等）。健全性: survivors(REST6) ⊇ survivors(REST16)（pruning-audit 実験・w26 L12 制御 S* 1生残で確認）。REST6 生残0の mask は REST16 でも生残0確定。フェーズ2（REST16 再走査）必要 mask は 0 件。",
+ "uniqueMasks": 3296,
+ "totalMaximal": 3296,
+ "control": {
+  "w26_L12_REST16": {
+   "survivors": 1,
+   "survivor": "S* = [0,1,3,4,7,10,15,18,21,22,24,25]",
+   "note": "K0782..K0794 と一致"
+  },
+  "w26_L12_REST6": {
+   "survivors": 1,
+   "survivor": "S*（同一）",
+   "note": "REST6 でも誤殺なし"
+  }
+ },
+ "chunks": [
+  {
+   "chunk": 1,
+   "from": 0,
+   "lastDone": 172,
+   "nodes": 1200000,
+   "leaves": 0,
+   "aborted": true,
+   "survivors": 0,
+   "rest": "16"
+  },
+  {
+   "chunk": 2,
+   "from": 172,
+   "lastDone": 376,
+   "nodes": 1200000,
+   "leaves": 0,
+   "aborted": true,
+   "survivors": 0,
+   "rest": "16"
+  },
+  {
+   "chunk": 3,
+   "from": 376,
+   "lastDone": 568,
+   "nodes": 1200000,
+   "leaves": 0,
+   "aborted": true,
+   "survivors": 0,
+   "rest": "16"
+  },
+  {
+   "chunk": 4,
+   "from": 568,
+   "lastDone": 772,
+   "nodes": 1200000,
+   "leaves": 0,
+   "aborted": true,
+   "survivors": 0,
+   "rest": "16"
+  },
+  {
+   "chunk": 5,
+   "from": 772,
+   "lastDone": 782,
+   "nodes": 1200000,
+   "leaves": 0,
+   "aborted": true,
+   "survivors": 0,
+   "rest": "16"
+  },
+  {
+   "chunk": 6,
+   "from": 782,
+   "lastDone": 800,
+   "nodes": 1200000,
+   "leaves": 0,
+   "aborted": true,
+   "survivors": 0,
+   "rest": "16"
+  },
+  {
+   "chunk": 7,
+   "from": 800,
+   "lastDone": 818,
+   "nodes": 1200000,
+   "leaves": 0,
+   "aborted": true,
+   "survivors": 0,
+   "rest": "16"
+  },
+  {
+   "chunk": 8,
+   "from": 818,
+   "lastDone": 841,
+   "nodes": 1200000,
+   "leaves": 0,
+   "aborted": true,
+   "survivors": 0,
+   "rest": "16"
+  },
+  {
+   "chunk": 9,
+   "from": 841,
+   "lastDone": 858,
+   "nodes": 1200000,
+   "leaves": 0,
+   "aborted": true,
+   "survivors": 0,
+   "rest": "16"
+  },
+  {
+   "chunk": 10,
+   "from": 858,
+   "lastDone": 877,
+   "nodes": 1200000,
+   "leaves": 0,
+   "aborted": true,
+   "survivors": 0,
+   "rest": "16"
+  },
+  {
+   "chunk": 11,
+   "from": 877,
+   "lastDone": 886,
+   "nodes": 1200000,
+   "leaves": 0,
+   "aborted": true,
+   "survivors": 0,
+   "rest": "16"
+  },
+  {
+   "chunk": 12,
+   "from": 886,
+   "lastDone": 893,
+   "nodes": 1200000,
+   "leaves": 0,
+   "aborted": true,
+   "survivors": 0,
+   "rest": "16"
+  },
+  {
+   "chunk": 13,
+   "from": 893,
+   "lastDone": 909,
+   "nodes": 1200000,
+   "leaves": 0,
+   "aborted": true,
+   "survivors": 0,
+   "rest": "16"
+  },
+  {
+   "chunk": 14,
+   "from": 909,
+   "lastDone": 921,
+   "nodes": 1200000,
+   "leaves": 0,
+   "aborted": true,
+   "survivors": 0,
+   "rest": "16"
+  },
+  {
+   "chunk": 15,
+   "from": 921,
+   "lastDone": 933,
+   "nodes": 1200000,
+   "leaves": 0,
+   "aborted": true,
+   "survivors": 0,
+   "rest": "16"
+  },
+  {
+   "chunk": 16,
+   "from": 933,
+   "lastDone": 950,
+   "nodes": 1200000,
+   "leaves": 0,
+   "aborted": true,
+   "survivors": 0,
+   "rest": "16"
+  },
+  {
+   "chunk": 17,
+   "from": 950,
+   "lastDone": 962,
+   "nodes": 1200000,
+   "leaves": 0,
+   "aborted": true,
+   "survivors": 0,
+   "rest": "16"
+  },
+  {
+   "chunk": 18,
+   "from": 962,
+   "lastDone": 975,
+   "nodes": 1200000,
+   "leaves": 0,
+   "aborted": true,
+   "survivors": 0,
+   "rest": "16"
+  },
+  {
+   "chunk": 19,
+   "from": 975,
+   "lastDone": 1190,
+   "nodes": 2400000,
+   "wordOps": 250829444,
+   "leaves": 0,
+   "aborted": true,
+   "survivors": 0,
+   "rest": "6",
+   "note": "215 mask/2.4M = ~11k/mask（heavy band が ~1000 で沈んだ）"
+  },
+  {
+   "chunk": 20,
+   "from": 1190,
+   "lastDone": 1232,
+   "nodes": 2400000,
+   "wordOps": 236656110,
+   "leaves": 0,
+   "aborted": true,
+   "survivors": 0,
+   "rest": "6",
+   "note": "42 mask/2.4M = ~57k/mask（heavy band 再出現・非単調）"
+  },
+  {
+   "chunk": 21,
+   "from": 1232,
+   "lastDone": 1265,
+   "nodes": 2400000,
+   "wordOps": 235045865,
+   "leaves": 0,
+   "aborted": true,
+   "survivors": 0,
+   "rest": "6",
+   "note": "33 mask/2.4M = ~73k/mask"
+  },
+  {
+   "chunk": 22,
+   "from": 1265,
+   "lastDone": 1302,
+   "nodes": 2400000,
+   "wordOps": 237199259,
+   "leaves": 0,
+   "aborted": true,
+   "survivors": 0,
+   "rest": "6",
+   "note": "37 mask/2.4M = ~65k/mask"
+  },
+  {
+   "chunk": 23,
+   "from": 1302,
+   "lastDone": 1640,
+   "nodes": 2400000,
+   "wordOps": 253813147,
+   "leaves": 0,
+   "aborted": true,
+   "survivors": 0,
+   "rest": "6",
+   "note": "338 mask/2.4M = ~7.1k/mask（heavy band 再出現せず沈下・REST6）"
+  },
+  {
+   "chunk": 24,
+   "from": 1640,
+   "lastDone": 2040,
+   "nodes": 2400000,
+   "wordOps": 264087805,
+   "leaves": 0,
+   "aborted": true,
+   "survivors": 0,
+   "rest": "6",
+   "note": "400 mask/2.4M = ~6k/mask"
+  },
+  {
+   "chunk": 25,
+   "from": 2040,
+   "lastDone": 2469,
+   "nodes": 2400000,
+   "wordOps": 264722124,
+   "leaves": 0,
+   "aborted": true,
+   "survivors": 0,
+   "rest": "6",
+   "note": "429 mask/2.4M = ~5.6k/mask"
+  },
+  {
+   "chunk": 26,
+   "from": 2469,
+   "lastDone": 2990,
+   "nodes": 2400000,
+   "wordOps": 265574414,
+   "leaves": 0,
+   "aborted": true,
+   "survivors": 0,
+   "rest": "6",
+   "note": "521 mask/2.4M = ~4.6k/mask"
+  },
+  {
+   "chunk": 27,
+   "from": 2990,
+   "lastDone": 3296,
+   "nodes": 1831099,
+   "wordOps": 201603328,
+   "leaves": 0,
+   "aborted": false,
+   "survivors": 0,
+   "rest": "6",
+   "note": "最終306 mask完走・cappedなし・leaves=0・生残0"
+  }
+ ],
+ "totals": {
+  "masksDone": 3296,
+  "nodes": 42631099,
+  "leaves": 0,
+  "survivors": 0,
+  "phase2Masks": 0
+ },
+ "costCurve": {
+  "mask_0_772": "~6.2k nodes/mask（軽い帯・REST16）",
+  "mask_772_975": "71k..150k nodes/mask（heavy band 中核・REST16）",
+  "mask_975_1190": "~11k nodes/mask（REST6・heavy band が一旦沈む）",
+  "mask_1190_1302": "~65k/mask（REST6・heavy band 再出現）",
+  "note": "heavy band は非単調（~1000 で一旦沈み ~1190 で再出現・1302 以降は沈下して完走）。総ノード実績 42.6M（残留推定 ~130M nodes..260M ops を大きく下回る — heavy band の局在性による）。",
+  "mask_1302_3296": "~4.6k..7.1k nodes/mask（REST6・heavy band は mask 1190..1302 で終了し残り約2/3は軽い帯）"
+ },
+ "semantics": "level 17 全滅確認（全 3,296 maximal mask・leaves=0・生残0・REST6 2フェーズ・phase2 必要 mask 0件）+ K0797 会計（g2=8・g3=12・g4=5 全形 classMax < 17）+ 2210 円下界 32 点 ⟹ P(65) = 32（等号付き・全称）。K0798 に昇格・32 プラトーは w=49..65。"
+}

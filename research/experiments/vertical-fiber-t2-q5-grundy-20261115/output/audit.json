@@ -1,0 +1,44 @@
+{
+  "canonical_multiset_audit": {
+    "mismatches": 0,
+    "parameter_pairs": 150,
+    "representation": "sorted positive occupancy multisets; independently generated",
+    "states_checked": 11135
+  },
+  "labeled_vector_audit": {
+    "grundy_histogram": {
+      "0": 359610,
+      "1": 326748,
+      "2": 21462,
+      "3": 15960
+    },
+    "maximum_grundy": {
+      "even_m": 1,
+      "odd_m": 3
+    },
+    "mismatches": 0,
+    "state_count_formula": "1 + w*m + C(w,2)*m^2 + C(w,3)*(1+3*(m-1)) + C(w,4)",
+    "states_checked": 723780
+  },
+  "minimal_grundy_3_witness": {
+    "children": [
+      {"grundy": 2, "occupancy": [3, 1, 0]},
+      {"grundy": 0, "occupancy": [2, 2, 0]},
+      {"grundy": 1, "occupancy": [2, 1, 1]}
+    ],
+    "grundy": 3,
+    "m": 3,
+    "occupancy": [2, 1, 0],
+    "w": 3
+  },
+  "scope": {
+    "m_range": [2, 16],
+    "parameter_pairs": 150,
+    "rule": "pure fiber game; t=2; q=5; no base-trace constraints",
+    "w_range": [3, 12]
+  },
+  "verifier_sha256": {
+    "canonical": "ff323172b1f0cec17bd206ebeb71e91885c29bf74674660a200d06dd9d197ba6",
+    "labeled": "19f4589f7de252993822efdc4a6148aa09eddd40abf6646fc1d87b90000bde6e"
+  }
+}

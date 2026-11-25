@@ -1,0 +1,159 @@
+{
+ "account": {
+  "by_class": {
+   "[0, 2, 3]": {
+    "caps": 24,
+    "checked": 36,
+    "max_demand": 10,
+    "max_relevant": 11
+   },
+   "[0, 3, 3]": {
+    "caps": 36,
+    "checked": 50,
+    "max_demand": 8,
+    "max_relevant": 10
+   },
+   "[1, 1, 3]": {
+    "caps": 24,
+    "checked": 93,
+    "max_demand": 14,
+    "max_relevant": 14
+   },
+   "[1, 2, 2]": {
+    "caps": 30,
+    "checked": 46,
+    "max_demand": 10,
+    "max_relevant": 12
+   },
+   "[1, 2, 3]": {
+    "caps": 46,
+    "checked": 1364,
+    "max_demand": 13,
+    "max_relevant": 19
+   },
+   "[1, 3, 3]": {
+    "caps": 51,
+    "checked": 3296,
+    "max_demand": 7,
+    "max_relevant": 15
+   },
+   "[2, 2, 2]": {
+    "caps": 60,
+    "checked": 138,
+    "max_demand": 15,
+    "max_relevant": 17
+   },
+   "[2, 2, 3]": {
+    "caps": 76,
+    "checked": 4498,
+    "max_demand": 12,
+    "max_relevant": 26
+   },
+   "[2, 3, 3]": {
+    "caps": 66,
+    "checked": 9208,
+    "max_demand": 6,
+    "max_relevant": 18
+   }
+  },
+  "witnesses_checked": 18729
+ },
+ "board": "rows y in {0,1,2}, cells x in {0..m-1}; win = 4 points on a common circle or line",
+ "class_bounds": {
+  "[0, 0, 0]": 0,
+  "[0, 0, 1]": 0,
+  "[0, 0, 2]": 0,
+  "[0, 0, 3]": 0,
+  "[0, 1, 1]": 0,
+  "[0, 1, 2]": 2,
+  "[0, 1, 3]": 5,
+  "[0, 2, 2]": 5,
+  "[0, 2, 3]": 13,
+  "[0, 3, 3]": 36,
+  "[1, 1, 1]": 2,
+  "[1, 1, 2]": 5,
+  "[1, 1, 3]": 13,
+  "[1, 2, 2]": 11,
+  "[1, 2, 3]": 24,
+  "[1, 3, 3]": 52,
+  "[2, 2, 2]": 22,
+  "[2, 2, 3]": 40,
+  "[2, 3, 3]": 68
+ },
+ "class_max": 68,
+ "corollary": "any def-mode maximal safe config on 3xm has m <= 68; to decide P(m) for 32 <= m <= 68 only classes {0,3,3}<=36, {1,3,3}<=52, {2,3,3}<=68 and {2,2,3}<=40 can host witnesses",
+ "enum": {
+  "4": {
+   "curves": 29,
+   "def_total": 182,
+   "maximal_profiles": 17,
+   "maximality_scans": 900,
+   "safe_sets_visited": 1198
+  },
+  "5": {
+   "curves": 50,
+   "def_total": 674,
+   "maximal_profiles": 23,
+   "maximality_scans": 4096,
+   "safe_sets_visited": 4671
+  },
+  "6": {
+   "curves": 86,
+   "def_total": 1724,
+   "maximal_profiles": 19,
+   "maximality_scans": 13156,
+   "safe_sets_visited": 16991
+  },
+  "7": {
+   "curves": 141,
+   "def_total": 4607,
+   "maximal_profiles": 21,
+   "maximality_scans": 48772,
+   "safe_sets_visited": 55963
+  },
+  "8": {
+   "curves": 221,
+   "def_total": 11542,
+   "maximal_profiles": 19,
+   "maximality_scans": 154672,
+   "safe_sets_visited": 167054
+  }
+ },
+ "gates": [
+  {
+   "detail": "7 pinned records sha-verified",
+   "name": "pin"
+  },
+  {
+   "detail": "19 classes; CAPS x-checked closed-form/literal; max bound 68; impossible: [[0, 0, 0], [0, 0, 1], [0, 0, 2], [0, 0, 3], [0, 1, 1]]",
+   "name": "table"
+  },
+  {
+   "detail": "m=4..8 curve counts 29/50/86/141/221 match published",
+   "name": "curves"
+  },
+  {
+   "detail": "m=4..8: deficient totals 182/674/1724/4607/11542 = 18729 match published; profiles and P(m) match",
+   "name": "enum"
+  },
+  {
+   "detail": "18729 def witnesses (m=4..8) pass exact cap accounting; 9 classes exercised",
+   "name": "account"
+  },
+  {
+   "detail": "5 published m=23 witnesses: safety, plain-board maximality, coverage, 21 <= relevant <= 66, m=23 <= 68",
+   "name": "witness23"
+  }
+ ],
+ "n_gates": 6,
+ "pins": {
+  "brute_3x4_4.json": "914069e135b4b40f23caa6f2095633948769af80b837378f6b25bbe60801e7bb",
+  "brute_3x5_4.json": "5618bb61ce0fb878cb9f349660c238165e57cdabbec71334270e6a7d6808bdfd",
+  "brute_3x6_4.json": "847afbed5ad61541de458c34b39c9c1b70e7cfff12d52114c4b3c9292b63ede1",
+  "brute_3x7_4.json": "38ce7156a38a22508533b3d3a12dc735804159bc6d0228297d5790bcbf153c71",
+  "brute_3x8_4.json": "70fa1727c045ace08261a454c81aa8b88d979b1672ff27c9ed5e0f4c5ad6773b",
+  "frontier_records_m23_copy.jsonl": "5d908d40a6e5bf235f6cacc220f487ca1f8c7cd39517b989faa1774076662b90",
+  "m23_Y0_witnesses_copy.jsonl": "4448d0d85de01333391f95b40920153a0dffc8ae75fbe188c111ca0743c90731"
+ },
+ "theorem": "3xm q=4 blocking-counting class bounds (self-contained)"
+}

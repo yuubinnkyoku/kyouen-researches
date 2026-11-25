@@ -1,0 +1,117 @@
+{
+  "K1092_C_anchor": 2214,
+  "K1100_B_anchor": 2247,
+  "canonical_states": 228873,
+  "claim": "H(R;(x,5);19), all x>=5 and R>=0",
+  "deep_affine_band_and_tail_samples": 779324,
+  "finite_audit_scope": {
+    "B": "4<=x<=45, 0<=R<=x+28, raw z=19 y=4 vs K1100",
+    "C": "5<=x<=45, 0<=R<=x+28, raw z=18 y=5 vs K1092",
+    "bands": "5<=x<=100, complete 1<=R<=x+24",
+    "closure": "6<=x<=500, complete 1<=R<=x+24 plus x=5 base",
+    "deep": "27<=x<=30000, band endpoints/midpoints and tail",
+    "low_R": "x<=13 full window; x=14..23 exact prefixes; 24<=x<=SET_X R<=28",
+    "parent": "5<=x<=40, 0<=R<=x+30, ordered/canonical/formula",
+    "scatter_seed": 20261123,
+    "sets": "5<=x<=200, 0<=R<=x+80",
+    "tail": "5<=x<=45, x+25<=R<=x+31"
+  },
+  "fixed_seed_scatter": 3000,
+  "height_only_initial_intervals": 6214,
+  "height_only_row_max": {
+    "14": 24,
+    "15": 25,
+    "16": 24,
+    "17": 25,
+    "18": 26,
+    "19": 27,
+    "20": 26,
+    "21": 27,
+    "22": 28,
+    "23": 29,
+    "24+ or 26+": 28,
+    "5..13": "all R"
+  },
+  "height_only_sharpness_witnesses": 14,
+  "induction_closure_sweep": 137144,
+  "ordered_states": 233573,
+  "parent_two_raw_engines_vs_formula": 1926,
+  "proof_status": "proved_by_x_outer_induction_and_complete_symbolic_signature_bands",
+  "set_vs_predicate": 35966,
+  "sharpness_first_mismatch": {
+    "14": [
+      25,
+      1,
+      2
+    ],
+    "15": [
+      26,
+      0,
+      1
+    ],
+    "16": [
+      25,
+      2,
+      0
+    ],
+    "17": [
+      26,
+      0,
+      1
+    ],
+    "18": [
+      27,
+      1,
+      0
+    ],
+    "19": [
+      28,
+      0,
+      1
+    ],
+    "20": [
+      27,
+      2,
+      0
+    ],
+    "200": [
+      29,
+      2,
+      0
+    ],
+    "21": [
+      28,
+      0,
+      1
+    ],
+    "22": [
+      29,
+      1,
+      0
+    ],
+    "23": [
+      30,
+      0,
+      1
+    ],
+    "24": [
+      29,
+      2,
+      0
+    ],
+    "26": [
+      29,
+      2,
+      0
+    ],
+    "50": [
+      29,
+      2,
+      0
+    ]
+  },
+  "signature_band_coverage_identity_mex": 7344,
+  "tail_direct": 287,
+  "total_checks": 975680,
+  "verifier_sha256": "b825b0baa4c744b806f84883a70c3b9e8aa63a492f210fcc68cb2161f905dfef"
+}

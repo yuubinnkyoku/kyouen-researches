@@ -1,0 +1,35 @@
+{
+  "K1051_B_anchor": 6083,
+  "K1067_C_anchor": 6045,
+  "canonical_states": 459046,
+  "claim": "H(R;(x,3);18), all x>=3 and R>=0",
+  "deep_affine_samples": 4799448,
+  "finite_audit_scope": {
+    "K1051_B_anchor": "2<=x<=80, 0<=R<=x+35",
+    "K1067_C_anchor": "3<=x<=80, 0<=R<=x+35",
+    "deep_affine": "24<=x<=200000, all band endpoints/midpoints and four tail points",
+    "induction_closure": "4<=x<=2000, 1<=R<=x+21 plus x=3 base R=1..24",
+    "low_R": "3<=x<=300, 0<=R<=21",
+    "parent_direct": "3<=x<=50, 0<=R<=x+45",
+    "scatter_seed": 20261120,
+    "signature_bands": "3<=x<=100, complete 1<=R<=x+21",
+    "tail_direct": "3<=x<=100, x+22<=R<=x+31"
+  },
+  "fixed_seed_scatter": 5000,
+  "induction_closure_sweep": 2042955,
+  "low_R_sharpness_witness": 1,
+  "low_R_single_token": 6556,
+  "ordered_states": 459768,
+  "parent_ordered_canonical_formula": 3480,
+  "proof_status": "proved_by_R_strong_induction_and_complete_symbolic_signature_bands",
+  "signature_band_cover_identity_mex": 7105,
+  "single_token_sharpness": {
+    "R": 22,
+    "single_token": 0,
+    "two_token": 1,
+    "x": 16
+  },
+  "tail_direct": 980,
+  "total_comparisons": 6877653,
+  "verifier_sha256": "b7d146609c7b3023d7724b149cf6fd08d0b9adca38fc8401c71e2b0d44a04a39"
+}

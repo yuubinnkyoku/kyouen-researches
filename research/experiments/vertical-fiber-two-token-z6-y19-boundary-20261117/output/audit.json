@@ -1,0 +1,33 @@
+{
+  "cache": {
+    "canonical": {
+      "currsize": 841669,
+      "hits": 1513413,
+      "maxsize": null,
+      "misses": 841669
+    },
+    "ordered": {
+      "currsize": 901501,
+      "hits": 1621620,
+      "maxsize": null,
+      "misses": 901501
+    }
+  },
+  "claim": "H(R;(x,19);6) is given by the complete formula for all x>=19,R>=0",
+  "classification": "universal proof by option-signature cases, Theorem T, tail theorem, and strong induction on R; finite checks are independent audits only",
+  "counts": {
+    "direct_ordered_canonical_formula_anchors": 18693,
+    "even_parent_bounds": 1024694,
+    "fixed_seed_far_tail": 2000,
+    "mex_identity": 2050379,
+    "odd_parent_bounds": 1025685,
+    "option_signatures": 2050379,
+    "tail": 128830,
+    "three_family_specialization": 1982
+  },
+  "first_failures": [],
+  "mismatches": 0,
+  "schema": "two-token-z6-y19-audit-v1",
+  "sha256_without_hash_field": "8201e1b7e47dafc4775694be1843ae95cc70879f2de498bc2d6330b23b6f3797",
+  "total_checks": 6302642
+}

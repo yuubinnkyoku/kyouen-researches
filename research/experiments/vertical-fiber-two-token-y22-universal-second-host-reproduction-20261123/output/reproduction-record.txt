@@ -1,0 +1,119 @@
+y=22 two-token universal verifier - SECOND-HOST INDEPENDENT REPRODUCTION machine record
+date: 2026-11-23 (sibling hourly fast-lane run)
+host: Linux x86_64, memory-capped sandbox, python3, PYTHONDONTWRITEBYTECODE=1,
+__pycache__ purge before every determinism-affecting run.
+target: research/experiments/vertical-fiber-two-token-y22-universal-proof-20261123/
+(published commit A 6360bb32; machine item K1257; proof item K1256; declaration e1e60cd4)
+
+[A] PUBLISHED CORPUS FETCH-PIN VERIFICATION (main, commit-pinned raw fetch)
+  verify_y22_universal.py        SHA-256 96d9787fae441a39c1cf0475e446b9dfef9bcc8297818afc1bd82a9f3c19ec6b  53422 B
+  census_rows.py                 SHA-256 36ff30566025713e509a42a46f715cad1280ee4e2dac7319a61b216430347a24
+  scripts/check_transcriptions_y22.py SHA-256 08b02ddce2a3013778f1a9ee2afb706915febed992695934ca69272b14556668
+  scripts/preflight_c1d_y22.py   SHA-256 765cd4caed813e5619ab13d8419fa26d7110304958411966153fe2481b74cabd
+  transcription-source pins (byte-identical at fetch, verified by check_transcriptions_y22.py PASS):
+    verify_y21_universal.py (published y=21 machine, K1255)  git blob ca5e8284, 53269 B, SHA-256 0ab841d9...
+    cand21.py (published K1248 fit corpus)                   git blob 38613e92, 10398 B, SHA-256 10d8e495...
+    cand22.py (published K1256 fit corpus)                   git blob fd50358e, 13162 B, SHA-256 7a62577b...
+
+[B] STAGED RE-EXECUTION OF THE PUBLISHED MACHINE BYTES ON THIS (SECOND) HOST
+  every stage re-run from the fetched published bytes; ALL SEVEN published
+  outputs byte-reproduced (SHA-256 of the fetched published output below ==
+  SHA-256 of the second-host re-execution output):
+    output/transcriptions-check-y22.json 7767d14cdded3bc7bc34e2ebe701b18a40408c999778844d2a1997199e9b2a470
+    output/preflight-c1d-y22.json       a65b967d13bbaa62f623a9a789285a76a2ed4f15939552740052f0ea5973dcea
+    output/census.txt (not shipped; generator+pin form) 3275cc742e23f41a19a376a3057cfebf5073d9d84f8ef72ac029c05eaa541c53  791080 B
+    output/census-ordered.json           246506b2e4d11478376e9f0cb80a4fd8a59286ef9395c1a931f5c231c68da9dc
+    output/census-canonical.json        da0c20fcc8e3e791d219cb86cf4671a45b5b45f1bd89a66110753c45ba068434
+    output/audit-part1-12checks.json    1d434dbd21e1c9b9ce5e00f3b4913c8240b1d9ef6d9df94cdc81932970999bab  (5,664,680 pts PASS)
+    output/audit.json                   41813df3ebfb80d812bb0cd61d3a74c86a3d2868d35c890240c7f0abacb9ac7a  (full 14-check, 6,956,320 pts)
+  stage values re-observed on this host exactly as published: preflight
+  12,012 + 9,108 pts bad 0 (per-z 1,885/1,911/1,937/2,067/2,093/2,119);
+  census 3,920 rows / 433,160 pts / zero_points 216,626; full battery total
+  6,956,320 pts bad 0, type count 797,559, merge 887,200 / tail 191,158
+  corollary pts bad 0, C4t 280 violations at clip 45, first (60,108,108).
+  FRESH census regeneration this session on a scratch copy of the published
+  corpus (all outputs purged first):
+    $ python3 census_rows.py
+    rows=3920 points=433160 zero_points=216626
+    states(misses): 11469227 currsize: 1600000 maxsize: 1600000 hits: 22466349
+    output/census.txt SHA-256 == 3275cc74... (the published pin), wall 23.7 s.
+    Engine cache states MISS exactly the published host's run log values
+    (misses 11,469,227 / hits 22,466,349).
+
+[C] INDEPENDENT OWN BUILD FROM THE DECLARATION RECIPE (no copy of the published
+    y=22 machine; built from the published y=21 machine + published cand corpus)
+  builder build_y22_own.py (fail-closed: rename table + constant/context
+  replacement table, every replacement count-asserted; aborts on any miss)
+  SHA-256 055dc72e5420342358186bac9ae1be8fe49717e40989da3930c5f6abbab79673  15545 B
+  built machine: verify_y22_universal.py (own build)
+  SHA-256 88ce3ed17baf162bb7efebbceb63d028dbe605be0eedcf6117b51cb3fcea60e4  46170 B
+  deterministic rebuild verified twice this session (fresh tree, identical bytes).
+  AST comparison (ast_compare.py, docstrings stripped, comments parser-ignored):
+    OWN BUILD vs PUBLISHED MACHINE: AST-IDENTICAL, rc=0
+  (byte differences are confined to module docstring / comments / and the
+  shorter provenance docstring; syntax trees equal.)
+  own-build staged pipeline outputs:
+    transcriptions PASS 7767d14c...  (byte-equal to published)
+    preflight PASS      a65b967d...  (byte-equal to published)
+    census.txt          3275cc74...  (byte-equal to the published pin / published machine output)
+    census-ordered.json 246506b2...  (byte-equal to published)
+    census-canonical.json da0c20fc... (byte-equal to published)
+    12-check audit  57b6c185c0e082c20839ccf7236e5f2398b7d2713ee8863ac9a16377b03da22f1e (run 4) / 1d434dbd... published
+    full 14-check audit d053ebddb6bc81185d2b3bb23cd2418b7dade600362a648c5052668c0af6989e (own) / 41813df3... published
+    -> flat-key JSON diff of own vs published audits: ['.verifier_sha256'] ONLY
+       (the machine-embedded self-hash: 88ce3ed1... own vs 96d9787f... published;
+       every value field, point count and bad count identical).
+
+[D] DETERMINISM OF THE OWN BUILD (byte-identical across runs)
+  4 runs all byte-identical: runs 1-3 same working tree (scratch) + run 4 in an
+  isolated tree with env -i (HOME=/isolated, PYTHONHASHSEED=random) performing
+  FULL-PIPELINE zero-regeneration including census_rows.py (engine states
+  misses 11,469,227 / hits 22,466,349 identical), transcription check, preflight,
+  census both parts, 12-check and full 14-check batteries.
+  isolated-tree output digests == scratch-tree digests == [B]/[C] values.
+
+[E] FAIL-CLOSED TAMPER BATTERY ON THE OWN BUILD (scratch copies only)
+  harness battery.py (12 probes, each on a fresh throwaway copy; after EVERY
+  probe the canonical bytes were re-hashed and scratch outputs cmp'd against
+  the frozen baseline; integrity verified OK after all 12+1 probes).
+  12/12 valid probes caught with rc=1; observed bad counts IDENTICAL to the
+  published battery values (battery.py output/battery-results-ALL.json):
+    P01 census.txt missing            -> FAIL-CLOSED: census.txt is missing; rc=1
+    P02 census row deleted            -> FAIL-CLOSED: census rows 3919 != 3920; rc=1
+    P03 duplicate row injected        -> FAIL-CLOSED: duplicate census row (0,22); rc=1
+    P04 P-set tamper (drop 43)        -> C11r bad=1; rc=1
+    P05 T-set bogus member (add 5)    -> C11r bad=1; rc=1
+    P06 C11r tail flip (x+22)->(x+23) -> C11r bad=3920; rc=1
+    P07 anchor mis-bind (17,A17u)->(17,A10u) -> C1d bad=14869; rc=1
+    P08 low-R reference shift R->R+1 -> C1d bad=9108; rc=1
+    P09 merge boundary z-23->z-22 (corollary) -> merge corollary bad=59; rc=1
+    P10 clip window 46,47->44,45     -> C4 bad=945; rc=1
+    P11 in_P22 tail parity flip      -> C1 bad=4898, C2 bad=24024; rc=1
+    P12 in_P22 band parity tamper    -> C1 bad=1763, C2 bad=24451; rc=1
+  harness incident (honest record): the first P04 mutation searched ', 43'
+  (comma+space) but census set syntax has no space after commas; the mutation
+  appended a stray brace instead of dropping the element. The machine still
+  failed closed on the malformed row (int ValueError, rc=1), but the mutation
+  itself was invalid; recorded as a harness-side flaw and immediately re-probed
+  with the valid mutation (P04b, caught, bad=1). Mirrors the published
+  battery's own honest no-op incident on the merge-boundary probe.
+
+[F] INTERPRETATION (no new universal claims are made by this reproduction)
+  The reproduction raises the independent evidence base of the published
+  K1256 promotion (declaration e1e60cd4, staged conditions) from one host to
+  two: published-machine byte re-execution, an AST-identical independent
+  build with byte-equal outputs, 2x4-run byte determinism, and two
+  independent fail-closed batteries with matching detection counts.
+  Nothing here changes any status of any item: standard 11x11 empty board,
+  two-stone roots {49,60}/{59,60}, S2 {59,60}, class 1/2/4 remain UNKNOWN;
+  3-or-more-token families, y>=23 families, fixed-width and q-point
+  stabilization lengths remain out of scope for this lane. Node/expansion
+  counts are not wins/losses.
+
+[G] FILES IN THIS EXPERIMENT
+  build_y22_own.py                 independent builder (fail-closed)
+  ast_compare.py                   AST identity comparator (rc=0 iff identical)
+  battery.py                       12-probe fail-closed harness (scratch-only)
+  output/battery-results-ALL.json  consolidated battery record (12+1 probe entries)
+  output/reproduction-record.txt   this file
+  README.md                        human report

@@ -1,0 +1,109 @@
+{
+  "K1083_C_anchor": 2033,
+  "K1098_B_anchor": 2067,
+  "canonical_states": 172947,
+  "claim": "H(R;(x,4);19), all x>=4 and R>=0",
+  "deep_affine_band_and_tail_samples": 749375,
+  "finite_audit_scope": {
+    "B": "3<=x<=41, 0<=R<=x+30",
+    "C": "4<=x<=41, 0<=R<=x+30",
+    "bands": "4<=x<=100, complete 1<=R<=x+23",
+    "closure": "5<=x<=500, complete 1<=R<=x+23",
+    "deep": "26<=x<=30000, band endpoints/midpoints and tail samples",
+    "low_R": "x<=14 full rows to R<=x+90; x=15..22 exact prefixes; x>=23 R<=26",
+    "parent": "4<=x<=41, 0<=R<=x+32, ordered/canonical/formula",
+    "parent_scope_x0": "x=4 is the multiset-collapse base row (A=B=K1098 x=4)",
+    "scatter_seed": 20261122,
+    "sets": "4<=x<=200, 0<=R<=x+85",
+    "tail": "4<=x<=40, x+24<=R<=x+30"
+  },
+  "fixed_seed_scatter": 3000,
+  "height_only": {
+    "row_max": {
+      "15": 24,
+      "16": 23,
+      "17": 24,
+      "18": 25,
+      "19": 24,
+      "20": 25,
+      "21": 26,
+      "22": 27
+    },
+    "sharpness": "pin R=27=2y+z gives F=2 vs single=0 for every x>=23",
+    "x<=14": "all R (window R<=x+90, constant tail identity)",
+    "x>=23": 26
+  },
+  "height_only_initial_intervals": 6112,
+  "height_only_sharpness_witnesses": 12,
+  "induction_closure_sweep": 136648,
+  "ordered_states": 175887,
+  "parent_two_raw_engines_vs_formula": 2109,
+  "proof_status": "proved_by_x_outer_induction_and_complete_symbolic_signature_bands",
+  "set_vs_predicate": 37036,
+  "sharpness_first_mismatch": {
+    "15": [
+      25,
+      1,
+      2
+    ],
+    "16": [
+      24,
+      0,
+      1
+    ],
+    "17": [
+      25,
+      1,
+      0
+    ],
+    "18": [
+      26,
+      0,
+      1
+    ],
+    "19": [
+      25,
+      2,
+      0
+    ],
+    "20": [
+      26,
+      0,
+      1
+    ],
+    "200": [
+      27,
+      2,
+      0
+    ],
+    "21": [
+      27,
+      1,
+      0
+    ],
+    "22": [
+      28,
+      0,
+      1
+    ],
+    "23": [
+      27,
+      2,
+      0
+    ],
+    "25": [
+      27,
+      2,
+      0
+    ],
+    "50": [
+      27,
+      2,
+      0
+    ]
+  },
+  "signature_band_coverage_identity_mex": 7275,
+  "tail_direct": 259,
+  "total_checks": 945926,
+  "verifier_sha256": "09cc65208d4696a73354455ac348e2f4054fca34e74ecacbb9eaa5b434d56b3f"
+}

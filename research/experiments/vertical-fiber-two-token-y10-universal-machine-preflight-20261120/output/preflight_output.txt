@@ -1,0 +1,18 @@
+y=10 universal-machine pre-flight (y10-universal-machine-preflight-20261120)
+C2a: points=171503 bad=0 overlap=0 sentinel=0
+    identity grid z=0..40 x=10..56 R<=x+z+36 (+merge,tail)
+C2b: points=22720 bad=0 overlap=0 sentinel=0
+    deep-z windows z in {60,..,400} x=10..80 R=[x+z+1,x+z+40]
+C2c: points=9840 bad=0 overlap=0 sentinel=0
+    deep-x windows x in {70,..,400} z=0..40 R=[x+z+1,x+z+40]
+C2d: points=4270 bad=0 overlap=0 sentinel=0
+    x=10 edge z=0..60 R=[x+z+1,x+z+70] (+merge,tail)
+C3: points=5070 bad=0 sentinel=0
+    closed child set vs raw child enumeration z=0..12 x=10..22 R<=30
+C1b: points=1705 bad=0 sentinel=0
+    raw (9,10)==(10,9)==canonical vs cand9(z,10,R) z=0..30 R<=55
+C1c: points=308484 bad=0 overlap_both=0
+    cand9 fit-copy vs verifier-copy tables z=0..40 x=9..80 R<=x+z+40
+corollary merge (x<=z-11): points=41300 bad=0
+corollary tail (R>=x+z+11): points=78182 bad=0
+overall: PASS total_bad = 0

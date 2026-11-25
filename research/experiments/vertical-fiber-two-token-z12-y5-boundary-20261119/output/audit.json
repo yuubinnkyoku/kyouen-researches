@@ -1,0 +1,28 @@
+{
+  "all_pass": true,
+  "classification": "universal theorem: x-induction over the slice rows plus complete A/B/C signature band table",
+  "counts": {
+    "B_child_anchor_vs_K1024_transcription": 2706,
+    "C_child_anchor_vs_K1037_transcription": 2706,
+    "abc_canonical_engine_agreement": 4598,
+    "band_coverage_mex_and_parity_bound_grid": 515736,
+    "band_signature_vs_abc_engine": 14314,
+    "band_signature_vs_closed_form_children_grid": 257868,
+    "fixed_seed_scatter": 600,
+    "general_tail": 17988,
+    "general_tail_vs_engine": 1120,
+    "height_only_reduction_R_le_13": 20944,
+    "ordered_and_canonical_direct_vs_formula": 19038,
+    "signature_table_vs_formula_grid": 4555418,
+    "single_token_vs_engine": 784
+  },
+  "failure_count": 0,
+  "failures": [],
+  "finite_audit_role": "transcription/implementation audit of the published z=12 y=5 slice closed form, band table, and B/C child anchors from K1024 and K1037; children evaluated by two direct mex recurrences (ordered and multiset canonical), not by child closed forms; universality rests on the x-induction and band-table proof, not on this finite audit",
+  "seeds": {
+    "scatter": 20261123
+  },
+  "slice": "two-token residual game z=12 y=5, all x>=5, all R>=0",
+  "total_checks": 5413820,
+  "verifier_sha256": "6ac7ab8e87ef86f40e527764714117b2efbbffcf3134bd11a4830a32ddc8dded"
+}

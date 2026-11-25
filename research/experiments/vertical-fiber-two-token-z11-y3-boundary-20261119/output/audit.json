@@ -1,0 +1,25 @@
+{
+  "cache": {
+    "canonical_states": 2341927,
+    "ordered_states": 2342341
+  },
+  "checks": {
+    "A_B_C_signature_bands": 49617,
+    "Theorem_T_parity": 49617,
+    "extra_canonical_spot_checks": 16738,
+    "general_tail": 298,
+    "height_only_reduction_R_le_12": 3874,
+    "ordered_vs_canonical_vs_formula": 49915,
+    "signature_mex_vs_closed_form": 49617
+  },
+  "classification": "proved by x-induction and complete A/B/C signature bands",
+  "finite_audit_only_supports_transcription_and_independent_recurrence_checks": true,
+  "mismatches": 0,
+  "r_range_per_x": "0..x+15 inclusive",
+  "theorem": "K1014 z=11 y=3 two-token full Grundy slice",
+  "verifier_sha256": "a68bc68d0e1050b16b8cb5c455d40b4fce216cbf99a343940787dd840f7043f3",
+  "x_range": [
+    3,
+    300
+  ]
+}

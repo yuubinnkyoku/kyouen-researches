@@ -1,0 +1,51 @@
+{
+ "generated": "2026-11-14",
+ "purpose": "w=83 REST6 level 17 掃引の正制御（K0807）。width_sweep.mjs（K0804機・repo掲載）の生存検出感度の実証と、生残パターンの完全特定・実在性判定。",
+ "sweep_run": {
+  "command": "node width_sweep.mjs 83 5000000000 285 (冪等再開)",
+  "w": 83, "L": 17,
+  "done": true, "from": 3300, "totalMasks": 3300, "unique": 3456,
+  "chunks": 505, "totalNodes": 2420302072, "leaves": 2, "survivors": 2,
+  "capEscalations": 72,
+  "note": "2.4M capチャンクプロトコル（中止チャンクの部分mask再探索を含む計上）。完走判定: from=3300=totalMasks・最終チャンクabortedなし。K0804の69..82全滅掃引と同一機械・同一プロトコルで、初めて生残が出た幅。"
+ },
+ "survivor_identification": {
+  "method": "width83_survivor_probe.mjs（生存mask・生残17行集合の帰属ログ付き・width_sweep.mjsと同一アルゴリズム）",
+  "survivor_chunks_in_state": [
+   {"from": 454, "lastDone": 467, "leaves": 1, "survivors": 1},
+   {"from": 3114, "lastDone": 3120, "leaves": 1, "survivors": 1}
+  ],
+  "survivors": [
+   {"mask": 456, "maskRows": [0,4,5,7,10,16,18,19,22,27,32,37,40,41,43,49,52,54,55,59,63,70,73,76,77,81,82],
+    "survivorPattern": [0,5,7,19,27,32,40,52,54,59,63,70,73,76,77,81,82],
+    "probeNodes": 101881, "leaves": 1},
+   {"mask": 3119, "maskRows": [0,1,5,6,9,12,19,23,27,28,30,33,39,41,42,45,50,55,60,63,64,66,72,75,77,78,82],
+    "survivorPattern": [0,1,5,6,9,12,19,23,28,30,42,50,55,63,75,77,82],
+    "probeNodes": 156184, "leaves": 1}
+  ],
+  "note": "他の全maximal mask（3,298件）はleaves=0・生残0。生残17行パターンは全球でちょうど2件。"
+ },
+ "rest16_recheck": {
+  "rest16": [19,23,7,5,27,43,47,13,17,8,16,25,29,31,37,41],
+  "pat456_allPass": true, "pat456_failingModuli": [],
+  "pat3119_allPass": true, "pat3119_failingModuli": [],
+  "note": "両パターンとも16法全てで共通証明書が空でない（phase 2でも死なない）。"
+ },
+ "realizability": {
+  "pat3119": {"realized": true, "circle": "(2x-105)^2+(2y-105)^2=11050", "window": "x in [0,82]", "points": 34, "nRows": 17, "rowsEqualPattern": true},
+  "pat456": {"realized": true, "circle": "(2x-105)^2+(2y-105)^2=11050", "window": "x in [23,105]", "points": 34, "nRows": 17, "rowsEqualPattern": true},
+  "note": "両パターンとも同一の11050円（48点・K0785 witness）が2つの（中心对称な）83幅窓で実現。certificate-phantom は 0 件（REST6==REST16==実現可能 が w=83・level 17 で成立）。",
+  "scan": {"bound": "R'<=1e6, 1mod4-smooth, prod(e+1)>=9, 3実現形", "processed": 1964,
+   "realizersOfM456orM3119": [{"R": 5525, "form": "oo", "mask": 456, "windowL": -59}, {"R": 5525, "form": "oo", "mask": 3119, "windowL": -105}],
+   "note": "制御込みでこの2 mask を実現する円は R'=5525 のみ（スキャン範囲内）。"}
+ },
+ "conclusion": {
+  "positive_control": "PASS - 期待どおり34点witnessの行パターンが生残し、機械の生存検出感度が実証された（誤殺なしが裏付けられた）",
+  "revival_point": "level 17 の復活点は実測でちょうど w=83（w<=82 全滅 K0804 + w=83 生残2件・実現可能）",
+  "p83": "P(83) >= 34（11050円・2窓とも34点）。P(83) の上界（35点以上の可能性）は open。"
+ },
+ "controls": {
+  "regression_w82": "state_w82.json は leaves=0・生残0（K0804）で w=83 のみが生残 - 掃引の幅依存挙動が witness 予測と整合",
+  "witness_row_direct": "11050円の x in [0,82] 34点・17行 と x in [23,105] 34点・17行 を独立直接列挙で確認（行集合は probe の生残パターンと完全一致）"
+ }
+}

@@ -1,0 +1,148 @@
+{
+  "battery_declared_pts": 15173,
+  "battery_pts": 15173,
+  "date": "2026-11-25",
+  "engine_startup_pin": "bd5f22e415a78368c9b798296bc84948d5637decbf3c21a92404d45fb12e3a92",
+  "fetch_back_byte_verification": {
+    "declaration_note": "cmp byte-identical to the pre-publication working copy (commit de7b3065, sha256 ea500eb5...)",
+    "kit_README": "published bytes = pre-extension bytes + the appended machine section (pure append, prefix verified; commit 5a3c17f4)",
+    "verify_k1325.py": "cmp byte-identical to the pre-publication working copy (sha256 17efe500..., commit 5a3c17f4)"
+  },
+  "gates": {
+    "D1_cells": {
+      "bad": 0,
+      "declared_pts": 1705,
+      "pts": 1705
+    },
+    "D2_strip": {
+      "bad": 0,
+      "declared_pts": 358,
+      "pts": 358
+    },
+    "D3_z16_anchors": {
+      "bad": 0,
+      "declared_pts": 350,
+      "pts": 350
+    },
+    "D4_stair_anchors": {
+      "bad": 0,
+      "declared_pts": 341,
+      "pts": 341
+    },
+    "D5_self_anchors": {
+      "bad": 0,
+      "declared_pts": 12141,
+      "pts": 12141
+    },
+    "D6_deviant_witnesses": {
+      "bad": 0,
+      "declared_pts": 22,
+      "pts": 22
+    },
+    "D7_extension_anchors": {
+      "bad": 0,
+      "declared_pts": 101,
+      "pts": 101
+    },
+    "D8_belowband_anchors": {
+      "bad": 0,
+      "declared_pts": 155,
+      "pts": 155
+    }
+  },
+  "honest_notes": [
+    "All official runs executed from the fetched-back published bytes (cmp-verified before execution).",
+    "The official protocol followed the declaration note sec.6 protocol: PYTHONHASHSEED=random and =1 in the same working directory, plus 2x env -i isolated-directory runs (the interpreter path was given explicitly; the env -i runs succeeded on the first attempt, as at predry).",
+    "Minor local transcription slips during drafting were sed-corrected before any publication (disclosed in the declaration note sec.6); no incident occurred during the official runs.",
+    "The K1325 lane used hand-calculation-first phase ordering (closed-form candidates derived on paper before any machine cross-check; the drafting-support script check_k1325_cases.py was run after the paper derivation for extension sweeps and case-table transcription only, disclosed in the declaration note sec.6).",
+    "Battery coverage is a finite engine cross-check of the universally proven statements in the declaration note sec.2; it is not a substitute for the paper proofs.",
+    "11x11 standard board, two-stone roots, S2, class 1/2/4: all UNKNOWN, no verdict consumed."
+  ],
+  "machine": "verify_k1325",
+  "machine_sha256": "17efe50098a4bd4d491978380d9118de6218365252f0f5ebd29488f29a6b4953",
+  "official_runs": {
+    "run1": {
+      "cmd": "PYTHONHASHSEED=random python3 fb_v.py (same cwd)",
+      "rc": 0,
+      "stdout_sha256": "571403b128cf7e391f6b5151bda819d40c2f5d5b0ef9839f4fc6f17e42f7219f"
+    },
+    "run2": {
+      "cmd": "PYTHONHASHSEED=1 python3 fb_v.py (same cwd)",
+      "rc": 0,
+      "stdout_sha256": "571403b128cf7e391f6b5151bda819d40c2f5d5b0ef9839f4fc6f17e42f7219f"
+    },
+    "run3": {
+      "cmd": "env -i /usr/local/bin/python3 verify_k1325.py (isolated dir fb_run1)",
+      "rc": 0,
+      "stdout_sha256": "571403b128cf7e391f6b5151bda819d40c2f5d5b0ef9839f4fc6f17e42f7219f"
+    },
+    "run4": {
+      "cmd": "env -i /usr/local/bin/python3 verify_k1325.py (isolated dir fb_run2)",
+      "rc": 0,
+      "stdout_sha256": "571403b128cf7e391f6b5151bda819d40c2f5d5b0ef9839f4fc6f17e42f7219f"
+    }
+  },
+  "official_runs_all_byte_identical_to_predry": true,
+  "overall_bad": 0,
+  "predry_declared_stdout_sha256": "571403b128cf7e391f6b5151bda819d40c2f5d5b0ef9839f4fc6f17e42f7219f",
+  "predry_runs": "7 runs (default; PYTHONHASHSEED=random/1/0 same cwd; 3x env -i isolated) all rc 0 byte-identical",
+  "publish_chain": {
+    "declaration_note_commit": "de7b3065",
+    "machine_path": "research/experiments/strip-z17-min12-20261125/verify_k1325.py",
+    "note_path": "research/log/2026-11-25-strip-z17-min12-single-owner-note.md",
+    "predecl_kit_commit": "2c74f1c6",
+    "verify_machine_commit": "5a3c17f4"
+  },
+  "slice": "z=17 min>=12 (floor-12)",
+  "tamper_battery": {
+    "all_fail_closed": true,
+    "anchor16": {
+      "bad_gate": "D3_z16_anchors",
+      "overall_bad": 1,
+      "rc": 1,
+      "stdout_sha256": "c6656051b1bd46b78180284a348ef36d81f759867c0ca77b11b19d2519857e48"
+    },
+    "belowband": {
+      "bad_gate": "D8_belowband_anchors",
+      "overall_bad": 1,
+      "rc": 1,
+      "stdout_sha256": "51f872e4dcfdbf5efbb425fa0a587f1d489184f58eb93379324d28e531d1247f"
+    },
+    "cell": {
+      "bad_gate": "D1_cells",
+      "overall_bad": 1,
+      "rc": 1,
+      "stdout_sha256": "e4dc91dd8ffce197772fbbf39ecd4a5872fe79b8f7bb2df13c2355ccac710779"
+    },
+    "deviant": {
+      "bad_gate": "D6_deviant_witnesses",
+      "overall_bad": 1,
+      "rc": 1,
+      "stdout_sha256": "fd83eccd54a6dc585dd68c4d1722caa6c4c75b70c862235359f6c03d85e0af03"
+    },
+    "engine": {
+      "engine_gate": "FAIL",
+      "rc": 2,
+      "stdout_sha256": "bab622d42c1e14db16e2c2c8b2acd36d7e2ab5c3da45f4b7a31be8dc0116c8ad"
+    },
+    "ext": {
+      "bad_gate": "D7_extension_anchors",
+      "overall_bad": 1,
+      "rc": 1,
+      "stdout_sha256": "5e7d186875de8362145d4d5c664fb4ed8f4c79446d621a92b77a4486609eda17"
+    },
+    "stair": {
+      "bad_gate": "D4_stair_anchors",
+      "overall_bad": 1,
+      "rc": 1,
+      "stdout_sha256": "8c351edf1625764d08d64985c36d1a5f0e5b69b892e6ecbf62403d8a954f4fa8"
+    },
+    "strip": {
+      "bad_gate": "D2_strip",
+      "overall_bad": 1,
+      "rc": 1,
+      "stdout_sha256": "fae50537da7c97f3ece59762c5d429053c7cea6df9a7ebd691eec387c7ed0434"
+    }
+  },
+  "verdict": "OFFICIAL-PASS"
+}

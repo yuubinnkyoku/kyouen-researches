@@ -1,0 +1,107 @@
+{
+  "checks": {
+    "c12_deep_grid_sweep": {
+      "grid": "z=0..120, x=2..120, R<=x+z+16",
+      "mismatches": [],
+      "points": 1972663
+    },
+    "c1_engine_vs_cand2": {
+      "grid": "z=0..14, x=2..26, R<=x+z+45",
+      "mismatches": [],
+      "points": 25125
+    },
+    "c1b_child_anchors": {
+      "single_token_mismatches": 0,
+      "single_token_points": 53010,
+      "x2_coincidence_mismatches": 0,
+      "x2_coincidence_points": 1100,
+      "y1_child_mismatches": 0,
+      "y1_child_points": 54839
+    },
+    "c1d_published_z16_z17": {
+      "z16": {
+        "mismatches_total_prefix": [],
+        "points": 5292
+      },
+      "z17": {
+        "mismatches_total_prefix": [],
+        "points": 5292
+      }
+    },
+    "c2_identity_grid": {
+      "grid": "z=0..48, x=2..56, R<=x+z+40",
+      "mismatches": [],
+      "points": 250635
+    },
+    "c2b_deep_tail": {
+      "mismatches": [],
+      "points": 10294,
+      "z_values": [
+        60,
+        72,
+        84,
+        96,
+        108,
+        120,
+        240,
+        400
+      ]
+    },
+    "c3_option_decomposition_anchor": {
+      "mismatches": [],
+      "points": 1827
+    },
+    "c4_type_machine_box": {
+      "box_bound": 60,
+      "clip": 8,
+      "confluence_mismatches": [],
+      "realized_types": 11090,
+      "sentinel": 9,
+      "type_fields": "x==2, z==0, z%2, x%2, R%2, clipped w0..w5",
+      "valid_points": 660509,
+      "witness_identity_mismatches": []
+    },
+    "c7_seeded_far_probes": {
+      "R_max": 9000,
+      "confluence_mismatches": [],
+      "identity_mismatches": [],
+      "n": 200000,
+      "new_types": [],
+      "points": 200000,
+      "seed": 20261120,
+      "x_max": 3000,
+      "z_max": 3000
+    },
+    "c8_boundary_manifolds": {
+      "confluence_mismatches": [],
+      "identity_mismatches": [],
+      "new_types": [],
+      "points": 394085,
+      "tail_value_mismatches": []
+    },
+    "c9_shell_sweep": {
+      "bands": [
+        [
+          61,
+          64
+        ],
+        [
+          89,
+          92
+        ],
+        [
+          117,
+          120
+        ]
+      ],
+      "confluence_mismatches": [],
+      "identity_mismatches": [],
+      "new_types": [],
+      "points": 938934
+    }
+  },
+  "claim": "for all z>=0, x>=2, R>=0: H(R,(x,2),z) == cand2(z,x,R)",
+  "family": "two-token y=2 residual, parametric in z (all z >= 0)",
+  "overall": "PASS",
+  "verifier": "verify_p2_universal"
+}

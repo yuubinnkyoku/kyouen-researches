@@ -1,0 +1,28 @@
+{
+  "all_checks_pass": true,
+  "checks": {
+    "candidate_mismatches": 0,
+    "canonical_cached_states": 41398,
+    "direct_engine_mismatches": 0,
+    "direct_grid_states": 21900,
+    "induction_step_checks": 509490,
+    "induction_step_mismatches": 0,
+    "option_signature_checks": 509490,
+    "option_signature_mismatches": 0,
+    "ordered_cached_states": 1402501,
+    "parity_violations": 0,
+    "scatter_checks": 200,
+    "scatter_mismatches": 0,
+    "tail_violations": 0
+  },
+  "domain": {
+    "direct_grid": "1<=x<=200, 0<=R<=x+8",
+    "induction_signature_grid": "2<=x<=1000, 1<=R<=x+9",
+    "scatter": "200 samples, 1<=x<=2000, 0<=R<=x+8",
+    "scatter_seed": 20261116,
+    "theorem": "all x>=1, R>=0, fixed y=1, z=5"
+  },
+  "first_mismatches": [],
+  "status": "proved-by-R-induction; finite-audit-is-independent-check",
+  "target": "two-token z=5, y=1 full Grundy slice"
+}

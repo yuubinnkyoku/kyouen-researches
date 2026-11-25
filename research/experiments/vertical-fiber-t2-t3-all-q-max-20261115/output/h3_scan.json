@@ -1,0 +1,14 @@
+{
+ "box": "1<=e_i<=10 (all three move types forced), 1<=R<=min(80,L+30)",
+ "states_checked": 61811,
+ "max_H": 2,
+ "argmax": [
+  [
+   1,
+   1,
+   1
+  ],
+  1
+ ],
+ "note": "H=3 never observed; sup H = 2 on this box. Finite scan, not a proof."
+}

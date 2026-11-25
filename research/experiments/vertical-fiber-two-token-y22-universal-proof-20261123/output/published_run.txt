@@ -1,0 +1,212 @@
+=== y22 universal published run (single-edition 14-check machine: transcription check + preflight + census + 12-check battery + full 14-check battery) ===
+
+Host: Linux x86_64, memory-capped sandbox (~1.0 GiB cgroup class), python3,
+PYTHONDONTWRITEBYTECODE=1 throughout (bytecode-cache hygiene: __pycache__
+purged before every determinism run).
+Working tree: research/experiments/vertical-fiber-two-token-y22-universal-
+proof-20261123 (single publication; the machine is built in full form and
+executed in stages: transcription check -> preflight -> census -> 12-check
+battery -> full 14-check battery -> determinism reruns -> fail-closed probes).
+Declaration note (published BEFORE any run): research/log/2026-11-23-y22-
+universal-verifier-single-owner-note.md, commit e1e60cd4, observed
+HEAD-before-push db195667; no competing y=22 universal declaration existed
+(shown in the note itself). Machine registered under the declaration as
+K1257 (provisional there, confirmed free right before this push). Verified
+at run time: experiment dir, run-log path and K1257 item absent on main;
+the y22 fit source tree (K1256, commit 3b69574e) and the y21 machine corpora
+present exactly as expected. y=22 is the first family outside the proved
+universal range y=1..21, and the B-child (cand21, K1248 proved) is the
+series-first proved-universal B-child.
+
+$ python3 scripts/check_transcriptions_y22.py
+{"cand21": {"bytes": 3502, "equal_fit_verbatim_renamed": true,
+            "equal_machine_verbatim_renamed": true, "sources_agree": true},
+ "cand22": {"bytes": 3212, "equal_fit_verbatim": true},
+ "engine": {"bytes": 1957, "equal": true},
+ "overall": "PASS"}
+rc=0, wall 0.06 s; output/transcriptions-check-y22.json
+(engine block byte-equal to the published y=21 machine's engine block; the
+cand21 block equals BOTH the published verify_y21_universal.py cand21 block
+and the published cand21.py of the K1248 fit experiment, each modulo the
+block-local Y->Y21 word-boundary rename, with the two published sources
+byte-agreeing (two-source transcription contract); the cand22 block equals
+the published cand22.py of the K1256 fit experiment, fit driver omitted.)
+
+$ python3 scripts/preflight_c1d_y22.py
+{"anchor_bad": 0, "anchor_points": 12012,
+ "box": "z0 in {8,9,10,15,16,17}; x=22..47; R=1..x+z0+30",
+ "lowR_bad": 0, "lowR_box": "z0 in {15,16,17}; x=22..159; R=1..z0+6",
+ "lowR_points": 9108, "overall": "PASS",
+ "per_z": {"8": {"bad": 0, "points": 1885}, "9": {"bad": 0, "points": 1911},
+           "10": {"bad": 0, "points": 1937},
+           "15": {"bad": 0, "points": 2067}, "16": {"bad": 0, "points": 2093},
+           "17": {"bad": 0, "points": 2119}}}
+rc=0, wall ~5 s; output/preflight-c1d-y22.json
+(the published fixed-z slice anchors A8u..A17u, anchor block byte-verbatim
+from the published y=21 preflight, validated 4-way at the y=22 rows before
+incorporation: anchor x H_ordered x H_canonical x cand22. 12,012 + 9,108 =
+21,120 points, exactly the declaration's pre-computed geometry. Fail-closed
+gate for the C1d anchors: any mismatch would have aborted before any run.)
+
+$ python3 census_rows.py
+rows=3920 points=433160 zero_points=216626
+states(misses): 11469227 currsize: 1600000 maxsize: 1600000 hits: 22466349
+wall ~65 s, rc=0; census.txt 791,080 bytes (3,920 rows + 80 blank
+separators), SHA-256 3275cc742e23f41a19a376a3057cfebf5073d9d84f8ef72ac029c05eaa541c53
+(census third implementation y=22 edition: XMIN=22 / XMAX=70 / ZHI=80 /
+RBUF=24, tokens (x,22), tail (x+22)%2, LRU cap 1,600,000; the tail assertion
+R>=x+z+23 => (x+22)%2 held on every row; census.txt is NOT part of the
+published edition -- regenerate it with census_rows.py and check the SHA
+pin; y=21 edition convention)
+
+$ python3 verify_y22_universal.py C11ordered
+census[ordered]:   points=429240 bad=0 merge={'points': 78750, 'bad': 0} tail={'points': 3920, 'bad': 0}
+$ python3 verify_y22_universal.py C11canonical
+census[canonical]: points=429240 bad=0 merge={'points': 78750, 'bad': 0} tail={'points': 3920, 'bad': 0}
+rc=0 each; walls 22.6 s / 24.9 s; output/census-ordered.json / census-canonical.json
+(bounded-memoization twins of the verbatim raw engines, separate commands,
+same design as y=12..y=21; the C11-in-full-battery mode validates both
+parts fail-closed: engine field, box string 'z=0..79, x=22..70,
+R=0..x+z+23', cache cap 1600000, recomputed expected counts
+429,240 / 78,750 / 3,920. merge rows first non-empty at z=45 within
+x=22..70 / z=0..79 (x<=z-23 needs z>=45).)
+
+$ python3 verify_y22_universal.py            # staged 12-check battery
+  C1: pts=26220 bad=0         C1b: pts=46220 bad=0
+  C1d: pts=134550 bad=0        C2: pts=242305 bad=0
+  C2b: pts=19844 bad=0         C3: pts=1425 bad=0
+  C4: pts=562559 bad=0         C4t: pts=562559 (probe; not in bad total)
+  C7: pts=200000 bad=0         C8: pts=1122279 bad=0
+  C9: pts=889974 bad=0         C12: pts=1856745 bad=0
+overall: PASS total_points: 5664680 types: 797559 total_bad 0
+  merge corollary (this stage): 729,700 pts, bad 0
+  tail corollary (this stage):   183,318 pts, bad 0
+  C4t: 280 violations at clip 45, first: (60, 108, 108)
+wall 42.0 s, rc=0; output/audit.json kept as output/audit-part1-12checks.json
+(every per-check point count matches the declaration note's machine-computed
+predictions exactly; the C4t prediction (>0 violations, first violation
+(60,108,108) walking with the band bottom R-z=2y+2=46) matched exactly:
+280 violations at clip 45 => the clip window 2y+2=46 is tight, the 18th
+consecutive family (y=5..22: 12/14/16/18/20/22/24/26/28/30/32/34/36/38/40/
+42/44/46), 10th observation of the walking-first-violation series
+(60,90,90)->(60,92,92)->(60,94,94)->(60,96,96)->(60,98,98)->(60,100,100)
+->(60,102,102)->(60,104,104)->(60,106,106)->(60,108,108))
+
+$ python3 verify_y22_universal.py C1 C1b C1d C2 C2b C3 C4 C4t C7 C8 C9 C11 C11r C12
+  C1: pts=26220 bad=0         C1b: pts=46220 bad=0
+  C1d: pts=134550 bad=0       C2: pts=242305 bad=0
+  C2b: pts=19844 bad=0        C3: pts=1425 bad=0
+  C4: pts=562559 bad=0        C4t: pts=562559 (probe; not in bad total)
+  C7: pts=200000 bad=0        C8: pts=1122279 bad=0
+  C9: pts=889974 bad=0        C11: pts=858480 bad=0
+  C11r: pts=433160 bad=0      C12: pts=1856745 bad=0
+overall: PASS total_points: 6956320 types: 797559 total_bad 0
+  merge corollary: 887,200 pts, bad 0
+  tail corollary: 191,158 pts, bad 0
+  C4t: 280 violations at clip 45, first: (60, 108, 108)
+wall ~41.5 s per full-battery run, rc=0
+
+determinism: audit.json (SHA-256
+41813df3ebfb80d812bb0cd61d3a74c86a3d2868d35c890240c7f0abacb9ac7a) written
+byte-identically in all three full-battery runs (runs 1-3: canonical cwd,
+fresh processes; bytecode-cache hygiene applied), plus a 4th run in an
+isolated tree/cwd/HOME under env -i, PATH pinned, PYTHONHASHSEED=random with
+the FULL pipeline regenerated on the isolated side (transcription check,
+preflight, census_rows.py, both census parts, 12-check battery, full
+14-check command; census engine states reproduced exactly: misses
+11,469,227 / hits 22,466,349). census.txt, census-ordered.json,
+census-canonical.json, preflight-c1d-y22.json, transcriptions-check-y22.json,
+audit-part1-12checks.json and audit.json all byte-identical to the canonical
+tree (the isolated regeneration reproduces every published byte from
+scratch).
+
+output SHA-256 pins (canonical tree):
+ census.txt 3275cc742e23f41a19a376a3057cfebf5073d9d84f8ef72ac029c05eaa541c53
+ (not published; regenerate via census_rows.py),
+ census-ordered 246506b2e4d11478376e9f0cb80a4fd8a59286ef9395c1a931f5c231c68da9dc,
+ census-canonical da0c20fcc8e3e791d219cb86cf4671a4565b45f1bd89a66110753c45ba068434,
+ preflight-c1d-y22 a65b967d13bbaa62f623a9a789285a76a2ed4f15939552740052f0ea5973dcea,
+ transcriptions-check-y22 7767d14cdded3bc7bc34e2ebe701b18a40408c999778844d2a199719e9b2a470,
+ audit-part1-12checks 1d434dbd21e1c9b9ce5e00f3b4913c8240b1d9ef6d9df94cdc81932970999bab
+
+=== fail-closed probes (pre-publication, scratch tree only; 12 probes, all caught) ===
+(1) census.txt missing: FAIL-CLOSED "FAIL-CLOSED: census.txt is missing; run
+    census_rows.py first", rc=1
+(2) census.txt data-row deleted: FAIL-CLOSED "census rows 3919 != 3920",
+    rc=1
+(3) duplicate census-row injection: FAIL-CLOSED "duplicate census row
+    (0,22)", rc=1
+(4) census.txt P-set member tamper (first row): C11r pts=433160 bad=1,
+    overall FAIL, rc=1
+(5) census.txt T-set bogus-member injection (first row T={} -> T={5}):
+    C11r pts=433160 bad=1, overall FAIL, rc=1
+(6) C11r tail flip (x+22)->(x+23) on a tampered verifier copy:
+    C11r bad=3920 (every row), overall FAIL, rc=1 (the declaration
+    note predicted exactly the row count 3,920)
+(7) anchor mis-binding (17, A17u) -> (17, A10u) on a tampered verifier
+    copy: C1d bad=14869, overall FAIL, rc=1
+(8) low-R reference shift R -> R+1 on a tampered verifier copy:
+    C1d bad=9108 (every low-R point independently mismatches, the exact
+    low-R box size), overall FAIL, rc=1
+(9) corollary merge boundary tamper x<=z-23 -> x<=z-22 on a tampered
+    verifier copy: merge corollary bad=59, overall FAIL, rc=1
+    honest record: the first probe issue was a no-op of the probe harness
+    itself (the boundary edit did not take effect; the untouched copy ran
+    PASS), re-issued with an effective tamper and caught immediately
+(10) type-machine clip window tamper CLIP, SENT = 46, 47 -> 44, 45:
+     C4 confluence violations, bad=945, overall FAIL, rc=1
+(11) in_P22 tail parity flip (x%2==1 -> x%2==0; even-y type, x-odd tail)
+     on a tampered verifier copy: C1 bad=4898, C2 bad=24024, overall FAIL,
+     rc=1
+(12) in_P22 band parity tamper (off%2==0 -> off%2==1) on a tampered
+     verifier copy: C1 bad=1763, C2 bad=24451, overall FAIL, rc=1
+baseline restored after each probe (each probe ran on a fresh scratch copy
+of the canonical tree; the canonical tree's published-file hashes were
+re-verified after the whole battery; no tampered byte was published)
+
+=== notes ===
+- C1d sweep: 6 anchors x x=22..159 x R<=x+61 = 125,442 pts + low-R
+  single-token reduction 9,108 pts = 134,550 pts, bad 0 (the pre-declared
+  arithmetic of the declaration note, matched exactly).
+- merge corollary census geometry: merge rows first non-empty at z=45
+  (x<=z-23 needs z>=45 within x=22..70 / z=0..79), 78,750 pts per engine
+  over the census box; the full-battery merge corollary total 887,200 pts
+  (staged-battery call sites 729,700 + both census engines 2 x 78,750) and
+  tail corollary total 191,158 pts (183,318 + 2 x 3,920), both exactly as
+  declared.
+- type counts: top-level type_count 797,559 (series: y=17 457,645 ->
+  y=18 523,398 -> y=19 590,877 -> y=20 658,978 -> y=21 727,229 ->
+  y=22 797,559); C4 in-box registered types at clip 46 / sentinel 47:
+  448,494 (the record succeeding the y=21 machine's 429,397 at clip 44; the
+  declaration made no advance numerical prediction here).
+- the machine consumed the published cand21 (K1248 proved by the y=21 run,
+  series-first proved-universal B-child) as the B-child on x>=22 rows and
+  the x=22 merger child cand21(z,22,R-1) (multiset (21,22)==(22,21)), both
+  inside cand21's proved domain x>=21; the deep-tail window check used the
+  proved cand21 tail claim R>=x+z+22 => (x+21)%2 at x>=21 with window
+  (x+z+23, x+z+24, x+z+25); C8 keeps the x=21 rows as closed-form
+  extension-consistency rows only (no raw claim below x=22), exactly as
+  the x=20 rows did in the published y=21 machine.
+- every declaration pre-registration matched the machine measurements
+  exactly; no amendment was issued at any stage (the declaration note's
+  numbers were machine-transcribed from predict_y22_counts.py stdout, which
+  had itself been cross-validated against the published y=19, y=20 and y=21
+  audits -- all 14 check counts and corollary counts of each reproduced
+  exactly, totals 6,941,913 / 6,947,960 / 6,952,761).
+
+=== promotion ===
+overall PASS (6,956,320 comparison points, bad 0), fail-closed pre-verified
+C1d anchors, independent third-implementation census ledger consumed by
+C11r, 4 byte-identical audit runs (3 same-cwd + 1 isolated full-pipeline
+regeneration), fail-closed battery 12/12 caught => K1256 observed -> proved
+(same K item, per the declaration's pre-registered promotion condition and
+the K1141/K1152/K1231/K1233/K1236/K1239/K1241/K1242/K1243/K1245/K1246/K1249/
+K1255 precedent). Machine item: K1257. Merge proposition now universal
+through y=1..22; tail R>=x+z+23 => (x+22)%2; clip 2y+2=46 tight (18-family
+streak, first violation (60,108,108), 10th walking-series observation);
+B-child verbatim chain extended to cand9..cand21 (proved B-child usage
+cand10/cand12..cand21). The two-token universal series is complete through
+y=22 -- the first family beyond the previously proved range y=1..21.
+Honest limitation: single-host publication; a sibling-lane independent
+reproduction (independent build + second-host byte reproduction) is the
+natural corroboration task for the next execution.

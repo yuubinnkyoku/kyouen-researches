@@ -1,0 +1,884 @@
+{
+ "D1": {
+  "bad": 0,
+  "comparisons": 10971,
+  "details_mismatch": [],
+  "points": 3657
+ },
+ "D2": {
+  "bad": 0,
+  "comparisons": 991,
+  "details_mismatch": [],
+  "deviants_arithmetic": [
+   [
+    3,
+    3
+   ],
+   [
+    3,
+    5
+   ],
+   [
+    4,
+    4
+   ],
+   [
+    6
+   ],
+   [
+    8
+   ]
+  ],
+  "points": 330
+ },
+ "D3": {
+  "bad": 0,
+  "comparisons": 991,
+  "details_mismatch": [],
+  "deviants_arithmetic": [
+   [
+    3,
+    3
+   ],
+   [
+    6
+   ]
+  ],
+  "points": 330
+ },
+ "D4": {
+  "bad": 0,
+  "comparisons": 4950,
+  "details_mismatch": [],
+  "points": 1650
+ },
+ "D4b": {
+  "bad": 0,
+  "comparisons": 3234,
+  "details_mismatch": [],
+  "points": 1078
+ },
+ "D4c": {
+  "bad": 0,
+  "comparisons": 3234,
+  "details_mismatch": [],
+  "points": 1078
+ },
+ "D5": {
+  "bad": 0,
+  "comparisons": 3996,
+  "details_mismatch": [],
+  "points": 1332
+ },
+ "D6": {
+  "bad": 0,
+  "comparisons": 270,
+  "details_mismatch": [],
+  "points": 90
+ },
+ "D6c_census": {
+  "bad": 0,
+  "census": {
+   "m4_z8_negative": {
+    "separations": [
+     [
+      [
+       4,
+       4
+      ],
+      0,
+      2
+     ],
+     [
+      [
+       4,
+       6
+      ],
+      2,
+      1
+     ]
+    ],
+    "total": 222
+   },
+   "m5_z9_out_of_band": {
+    "separations": [
+     [
+      [
+       5,
+       6
+      ],
+      2,
+      0
+     ]
+    ],
+    "total": 222
+   },
+   "z9_cells": {
+    "B9": {
+     "R": 16,
+     "decomp_dependent_s": [],
+     "deviant_count": 0,
+     "deviants_vs_collapse": [],
+     "family": 35,
+     "floor": 7,
+     "table_s20": {
+      "0": [
+       0
+      ],
+      "14": [
+       1
+      ],
+      "15": [
+       1
+      ],
+      "16": [
+       1
+      ],
+      "17": [
+       1
+      ],
+      "18": [
+       1
+      ],
+      "7": [
+       1
+      ],
+      "8": [
+       1
+      ],
+      "9": [
+       1
+      ]
+     }
+    },
+    "C9": {
+     "R": 15,
+     "decomp_dependent_s": [],
+     "deviant_count": 1,
+     "deviants_vs_collapse": [
+      [
+       6
+      ]
+     ],
+     "family": 70,
+     "floor": 6,
+     "table_s20": {
+      "0": [
+       1
+      ],
+      "12": [
+       0
+      ],
+      "13": [
+       0
+      ],
+      "14": [
+       0
+      ],
+      "15": [
+       0
+      ],
+      "16": [
+       0
+      ],
+      "17": [
+       0
+      ],
+      "18": [
+       0
+      ],
+      "19": [
+       0
+      ],
+      "20": [
+       0
+      ],
+      "6": [
+       2
+      ],
+      "7": [
+       0
+      ],
+      "8": [
+       0
+      ],
+      "9": [
+       0
+      ]
+     }
+    },
+    "D9": {
+     "R": 14,
+     "decomp_dependent_s": [],
+     "deviant_count": 1,
+     "deviants_vs_collapse": [
+      [
+       6
+      ]
+     ],
+     "family": 126,
+     "floor": 5,
+     "table_s20": {
+      "0": [
+       0
+      ],
+      "10": [
+       1
+      ],
+      "11": [
+       1
+      ],
+      "12": [
+       1
+      ],
+      "13": [
+       1
+      ],
+      "14": [
+       1
+      ],
+      "15": [
+       1
+      ],
+      "16": [
+       1
+      ],
+      "17": [
+       1
+      ],
+      "18": [
+       1
+      ],
+      "19": [
+       1
+      ],
+      "20": [
+       1
+      ],
+      "5": [
+       1
+      ],
+      "6": [
+       0
+      ],
+      "7": [
+       1
+      ],
+      "8": [
+       1
+      ],
+      "9": [
+       1
+      ]
+     }
+    },
+    "D9_loose": {
+     "R": 14,
+     "decomp_dependent_s": [
+      8
+     ],
+     "deviant_count": 3,
+     "deviants_vs_collapse": [
+      [
+       6
+      ],
+      [
+       3,
+       3
+      ],
+      [
+       3,
+       5
+      ]
+     ],
+     "family": 330,
+     "floor": 3,
+     "table_s20": {
+      "0": [
+       0
+      ],
+      "10": [
+       1
+      ],
+      "11": [
+       1
+      ],
+      "12": [
+       1
+      ],
+      "13": [
+       1
+      ],
+      "14": [
+       1
+      ],
+      "15": [
+       1
+      ],
+      "16": [
+       1
+      ],
+      "17": [
+       1
+      ],
+      "18": [
+       1
+      ],
+      "19": [
+       1
+      ],
+      "20": [
+       1
+      ],
+      "3": [
+       1
+      ],
+      "4": [
+       0
+      ],
+      "5": [
+       1
+      ],
+      "6": [
+       0
+      ],
+      "7": [
+       1
+      ],
+      "8": [
+       0,
+       1
+      ],
+      "9": [
+       1
+      ]
+     }
+    },
+    "E9": {
+     "R": 13,
+     "decomp_dependent_s": [],
+     "deviant_count": 5,
+     "deviants_vs_collapse": [
+      [
+       6
+      ],
+      [
+       8
+      ],
+      [
+       3,
+       3
+      ],
+      [
+       3,
+       5
+      ],
+      [
+       4,
+       4
+      ]
+     ],
+     "family": 330,
+     "floor": 3,
+     "table_s20": {
+      "0": [
+       1
+      ],
+      "10": [
+       0
+      ],
+      "11": [
+       0
+      ],
+      "12": [
+       0
+      ],
+      "13": [
+       0
+      ],
+      "14": [
+       0
+      ],
+      "15": [
+       0
+      ],
+      "16": [
+       0
+      ],
+      "17": [
+       0
+      ],
+      "18": [
+       0
+      ],
+      "19": [
+       0
+      ],
+      "20": [
+       0
+      ],
+      "3": [
+       0
+      ],
+      "4": [
+       1
+      ],
+      "5": [
+       0
+      ],
+      "6": [
+       1
+      ],
+      "7": [
+       0
+      ],
+      "8": [
+       2
+      ],
+      "9": [
+       0
+      ]
+     }
+    },
+    "F9": {
+     "R": 11,
+     "decomp_dependent_s": [],
+     "deviant_count": 318,
+     "deviants_vs_collapse": [
+      [
+       8
+      ],
+      [
+       3,
+       5
+      ],
+      [
+       3,
+       7
+      ],
+      [
+       3,
+       8
+      ],
+      [
+       3,
+       9
+      ],
+      [
+       4,
+       4
+      ],
+      [
+       4,
+       6
+      ],
+      [
+       4,
+       7
+      ],
+      [
+       4,
+       8
+      ],
+      [
+       4,
+       9
+      ],
+      [
+       5,
+       5
+      ],
+      [
+       5,
+       6
+      ],
+      [
+       5,
+       7
+      ],
+      [
+       5,
+       8
+      ],
+      [
+       5,
+       9
+      ],
+      [
+       6,
+       6
+      ],
+      [
+       6,
+       7
+      ],
+      [
+       6,
+       8
+      ],
+      [
+       6,
+       9
+      ],
+      [
+       7,
+       7
+      ],
+      [
+       7,
+       8
+      ],
+      [
+       7,
+       9
+      ],
+      [
+       8,
+       8
+      ],
+      [
+       8,
+       9
+      ],
+      [
+       9,
+       9
+      ],
+      [
+       3,
+       3,
+       4
+      ],
+      [
+       3,
+       3,
+       5
+      ],
+      [
+       3,
+       3,
+       6
+      ],
+      [
+       3,
+       3,
+       7
+      ],
+      [
+       3,
+       3,
+       8
+      ],
+      [
+       3,
+       3,
+       9
+      ],
+      [
+       3,
+       4,
+       4
+      ],
+      [
+       3,
+       4,
+       5
+      ],
+      [
+       3,
+       4,
+       6
+      ],
+      [
+       3,
+       4,
+       7
+      ],
+      [
+       3,
+       4,
+       8
+      ],
+      [
+       3,
+       4,
+       9
+      ],
+      [
+       3,
+       5,
+       5
+      ],
+      [
+       3,
+       5,
+       6
+      ],
+      [
+       3,
+       5,
+       7
+      ]
+     ],
+     "family": 330,
+     "floor": 3,
+     "table_s20": {
+      "0": [
+       1
+      ],
+      "10": [
+       2
+      ],
+      "11": [
+       2
+      ],
+      "12": [
+       2
+      ],
+      "13": [
+       2
+      ],
+      "14": [
+       2
+      ],
+      "15": [
+       2
+      ],
+      "16": [
+       2
+      ],
+      "17": [
+       2
+      ],
+      "18": [
+       2
+      ],
+      "19": [
+       2
+      ],
+      "20": [
+       2
+      ],
+      "3": [
+       0
+      ],
+      "4": [
+       1
+      ],
+      "5": [
+       0
+      ],
+      "6": [
+       1
+      ],
+      "7": [
+       0
+      ],
+      "8": [
+       1
+      ],
+      "9": [
+       0
+      ]
+     }
+    },
+    "G9": {
+     "R": 12,
+     "decomp_dependent_s": [],
+     "deviant_count": 3,
+     "deviants_vs_collapse": [
+      [
+       8
+      ],
+      [
+       3,
+       5
+      ],
+      [
+       4,
+       4
+      ]
+     ],
+     "family": 330,
+     "floor": 3,
+     "table_s20": {
+      "0": [
+       0
+      ],
+      "10": [
+       1
+      ],
+      "11": [
+       1
+      ],
+      "12": [
+       1
+      ],
+      "13": [
+       1
+      ],
+      "14": [
+       1
+      ],
+      "15": [
+       1
+      ],
+      "16": [
+       1
+      ],
+      "17": [
+       1
+      ],
+      "18": [
+       1
+      ],
+      "19": [
+       1
+      ],
+      "20": [
+       1
+      ],
+      "3": [
+       1
+      ],
+      "4": [
+       0
+      ],
+      "5": [
+       1
+      ],
+      "6": [
+       0
+      ],
+      "7": [
+       1
+      ],
+      "8": [
+       0
+      ],
+      "9": [
+       1
+      ]
+     }
+    }
+   },
+   "z9_strip": {
+    "5": {
+     "collapse": 95,
+     "separations": [
+      [
+       [
+        5,
+        6
+       ],
+       2,
+       0
+      ]
+     ],
+     "total": 96
+    },
+    "6": {
+     "collapse": 96,
+     "separations": [],
+     "total": 96
+    },
+    "7": {
+     "collapse": 96,
+     "separations": [],
+     "total": 96
+    },
+    "8": {
+     "collapse": 96,
+     "separations": [],
+     "total": 96
+    },
+    "9": {
+     "collapse": 96,
+     "separations": [],
+     "total": 96
+    },
+    "10": {
+     "collapse": 96,
+     "separations": [],
+     "total": 96
+    }
+   }
+  },
+  "comparisons": 5142,
+  "note": "census observation only; z=9 strip for m>=6 and the F9/G9/E9/D9/C9/B9 closed forms are NOT claimed (registered open); m=5 z=9 is out of band (z*(5)=9)",
+  "points": 2571
+ },
+ "D7a": {
+  "bad": 0,
+  "comparisons": 85,
+  "details_mismatch": [],
+  "points": 17
+ },
+ "D7b": {
+  "bad": 0,
+  "comparisons": 141,
+  "details_mismatch": [],
+  "points": 47
+ },
+ "D8": {
+  "bad": 0,
+  "comparisons": 14777,
+  "details_mismatch": [],
+  "points": 14777
+ },
+ "D9": {
+  "bad": 0,
+  "comparisons": 495,
+  "details_mismatch": [],
+  "points": 165
+ },
+ "comparisons_totals": {
+  "D1": 10971,
+  "D2": 991,
+  "D3": 991,
+  "D4": 4950,
+  "D4b": 3234,
+  "D4c": 3234,
+  "D5": 3996,
+  "D6": 270,
+  "D7a": 85,
+  "D7b": 141,
+  "D8": 14777,
+  "D9": 495
+ },
+ "points_totals": {
+  "D1": 3657,
+  "D2": 330,
+  "D3": 330,
+  "D4": 1650,
+  "D4b": 1078,
+  "D4c": 1078,
+  "D5": 1332,
+  "D6": 90,
+  "D7a": 17,
+  "D7b": 47,
+  "D8": 14777,
+  "D9": 165
+ },
+ "summary": {
+  "census": {
+   "bad_engine": 0,
+   "comparisons": 5142,
+   "points": 2571
+  },
+  "declared_totals": {
+   "comparisons": 44135,
+   "points": 24551
+  },
+  "meta": {
+   "verifier_sha256": "cdc472198c905233215b2c717986b77c5194b0588cdfa2f50e37376f3e5ed3ad"
+  },
+  "n_bad": 0,
+  "observed_totals": {
+   "comparisons": 44135,
+   "points": 24551
+  },
+  "theorem": "Lemma F8/G8/E8/D8 (floored, first NON-collapsing rung with the single s=6 upward deviant)/C7/C8 (full collapses) + Theorem T-Z8: min>=5 critical-strip z=8 slice; the m=5 row of K1268 Conjecture C1 fully resolved incl. its last band cell z=8 (z*(5)=9) via the conditional-E8 z=8 ladder + the C7/C8 full-collapse cells contributed by this note + mex base m=5 (D8 s=6 deviant absorbed) + option-set identity induction. Universal claims proved on paper in the declaration note; this finite audit corroborates.",
+  "unknown_statement": "standard 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, classes 1/2/4, classes 10968/23964/2251/5343: UNKNOWN at all times"
+ }
+}
