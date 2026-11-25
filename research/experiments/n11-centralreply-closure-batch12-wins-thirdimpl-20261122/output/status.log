@@ -1,0 +1,22 @@
+RUN key=n005 tag=b kind=target rc=0 out=output/targets/n005.b.out third,n005b,5,82,82,1,15280890,8220782,43.39,1153489144664555520,0,clean,quads=95670,ttOverwrites=11086586,memoPower=22
+RUN key=n005 tag=a kind=target rc=0 out=output/targets/n005.a.out third,n005a,5,82,82,1,15280890,8220782,42.60,1153489144664555520,0,clean,quads=95670,ttOverwrites=11086586,memoPower=22
+RUN key=n006 tag=a kind=target rc=0 out=output/targets/n006.a.out third,n006a,5,78,78,1,4233764,2394370,11.91,1152926194711134208,128,clean,quads=95670,ttOverwrites=415708,memoPower=22
+RUN key=n006 tag=b kind=target rc=0 out=output/targets/n006.b.out third,n006b,5,78,78,1,4233764,2394370,11.96,1152926194711134208,128,clean,quads=95670,ttOverwrites=415708,memoPower=22
+RUN key=n001 tag=a kind=target rc=0 out=output/targets/n001.a.out third,n001a,5,90,90,2,7693366,4108116,21.85,1297041382786990080,0,clean,quads=95670,ttOverwrites=3499702,memoPower=22
+RUN key=n001 tag=b kind=target rc=0 out=output/targets/n001.b.out third,n001b,5,90,90,2,7693366,4108116,21.90,1297041382786990080,0,clean,quads=95670,ttOverwrites=3499702,memoPower=22
+RUN key=n002 tag=a kind=target rc=0 out=output/targets/n002.a.out third,n002a,5,82,82,2,3554378,1980011,10.59,1152926194845351936,0,clean,quads=95670,ttOverwrites=154717,memoPower=22
+RUN key=n002 tag=b kind=target rc=0 out=output/targets/n002.b.out third,n002b,5,82,82,2,3554378,1980011,10.59,1152926194845351936,0,clean,quads=95670,ttOverwrites=154717,memoPower=22
+RUN key=n003 tag=a kind=target rc=0 out=output/targets/n003.a.out third,n003a,5,82,82,2,5243307,3022331,15.79,1152921504741064704,4472832,clean,quads=95670,ttOverwrites=1142519,memoPower=22
+RUN key=n003 tag=b kind=target rc=0 out=output/targets/n003.b.out third,n003b,5,82,82,2,5243307,3022331,15.98,1152921504741064704,4472832,clean,quads=95670,ttOverwrites=1142519,memoPower=22
+RUN key=n004 tag=a kind=target rc=0 out=output/targets/n004.a.out third,n004a,5,91,91,2,4271858,2406756,12.54,1729386947014557696,0,clean,quads=95670,ttOverwrites=444367,memoPower=22
+RUN key=n004 tag=b kind=target rc=0 out=output/targets/n004.b.out third,n004b,5,91,91,2,4271858,2406756,12.74,1729386947014557696,0,clean,quads=95670,ttOverwrites=444367,memoPower=22
+RUN key=n007 tag=a kind=target rc=0 out=output/targets/n007.a.out third,n007a,5,90,90,2,3359814,1856397,9.77,1152926194711134210,0,clean,quads=95670,ttOverwrites=99405,memoPower=22
+RUN key=n007 tag=b kind=target rc=0 out=output/targets/n007.b.out third,n007b,5,90,90,2,3359814,1856397,9.70,1152926194711134210,0,clean,quads=95670,ttOverwrites=99405,memoPower=22
+RUN key=n008 tag=a kind=target rc=0 out=output/targets/n008.a.out third,n008a,5,87,87,2,3976246,2188728,11.62,1152926194711134212,0,clean,quads=95670,ttOverwrites=286186,memoPower=22
+RUN key=n008 tag=b kind=target rc=0 out=output/targets/n008.b.out third,n008b,5,87,87,2,3976246,2188728,11.60,1152926194711134212,0,clean,quads=95670,ttOverwrites=286186,memoPower=22
+RUN key=k02a tag=a kind=anchor rc=0 out=output/anchors/k02a.a.out third,k02aa,5,87,87,1,9106337,4991527,25.36,1297036692683751424,68157440,clean,quads=95670,ttOverwrites=4912053,memoPower=22
+RUN key=k02a tag=b kind=anchor rc=0 out=output/anchors/k02a.b.out third,k02ab,5,87,87,1,9106337,4991527,25.83,1297036692683751424,68157440,clean,quads=95670,ttOverwrites=4912053,memoPower=22
+RUN key=l1a tag=a kind=anchor rc=0 out=output/anchors/l1a.a.out third,l1aa,5,116,116,2,7660602,3951175,21.77,13019119616,16448,clean,quads=95670,ttOverwrites=3466722,memoPower=22
+RUN key=l1a tag=b kind=anchor rc=0 out=output/anchors/l1a.b.out third,l1ab,5,116,116,2,7660602,3951175,21.95,13019119616,16448,clean,quads=95670,ttOverwrites=3466722,memoPower=22
+RUN key=ng1 tag=a kind=negative rc=1 out=output/negative/ng1.a.out third,ng1a,5,88,,GATE_FAIL,"legal count mismatch: derived=87 declared=88"
+RUN key=ng2 tag=a kind=negative rc=1 out=output/negative/ng2.a.out third,ng2a,6,87,,GATE_FAIL,"stone count mismatch: bits=5 declared=6"

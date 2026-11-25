@@ -1,0 +1,14 @@
+{
+ "schema": "n11-centralreply-closure-class12457-batch20-rowaudit-v1",
+ "class_index": 12457,
+ "batch": 20,
+ "keys_total": 53,
+ "probed": 53,
+ "pass_rows": 53,
+ "win_rows": [],
+ "exhausted_rows": [],
+ "mismatches": 0,
+ "input_sha256": "efb40b1bb7a43595bb8d014a31af2b878c404be86b8f9d5abc717eb176d1ed51",
+ "raws_dir_sha256": null,
+ "note": "all rows two-pass node-exact; LOSS rows are adoption candidates only (consumption via a separate declared adoption Part with the pinned fail-closed merger); WIN rows are honest labels (never adopted in this batch, scrutiny owner waits); exhausted rows are honest UNKNOWN (no same-condition re-probe); the standard 11x11 empty board and every key stay UNKNOWN at this point"
+}

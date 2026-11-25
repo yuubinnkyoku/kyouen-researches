@@ -1,0 +1,31 @@
+{
+ "schema": "n11-centralreply-closure-class12643-batch21-rowaudit-winhalt-v1",
+ "class_index": 12643,
+ "batch": 21,
+ "keys_total": 53,
+ "probed": 4,
+ "pass_rows": 3,
+ "loss_rows": [
+  "a001",
+  "a002",
+  "a004"
+ ],
+ "win_rows": [
+  "a003"
+ ],
+ "exhausted_rows": [],
+ "mismatches": 0,
+ "fragment_key": {
+  "key_id": "a006",
+  "p1_complete_single_pass": true,
+  "p1_result_bookkeeping": 2,
+  "p1_nodes_bookkeeping": 8008743,
+  "p2_truncated_no_replay_done": true,
+  "evidence": false,
+  "probed": false
+ },
+ "unprobed_count": 49,
+ "stop_rule": "pre-registered WIN-HALT rc=45 at a003 (replay result 1, two-pass node-exact); verdict not consumed; batch halted",
+ "input_sha256": "1f9346a7027e95b162f27b933bddec05151473d87ab7ed35832619026ae6759d",
+ "note": "two-pass node-exact rows only; the WIN row is an honest label (never adopted in this batch, scrutiny owner C++ second-implementation gate 9193f5b6 unchanged); LOSS rows are adoption candidates only (consumption via a separate declared adoption Part with the pinned fail-closed merger); the fragment key a006 is UNPROBED (its complete p1 is a bookkeeping single pass, not evidence; its truncated p2 carries no # replay_done and is re-run fresh-cold by the published completeness guard in any future continuation); the remaining 49 keys are UNPROBED; the standard 11x11 empty board and every key stay UNKNOWN at this point"
+}

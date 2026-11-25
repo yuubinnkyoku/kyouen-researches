@@ -1,0 +1,93 @@
+{
+ "schema": "n11-centralreply-closure-b34win-thirdimpl-input-v1",
+ "sources": {
+  "b34_outputs": "published batch-34 outputs (experiment n11-centralreply-closure-smallpockets-batch34-20261124, outputs commit 1039a95d), raw+status sha-pinned in this maker",
+  "batch_keys": "sources/batch-keys-b34.json sha 47754a70c793a850dc4d7e13590fe5d134f0b850280a984aeddd4debcf4925ac (published batch-34 kit)",
+  "anchors_negatives": "published CZ kit inputs, byte-identical (sha-pinned); provenance chain AR -> BF -> BK -> BM -> BS -> BV -> BW -> BX -> BY -> CC -> CL -> CM -> CR -> CW -> CZ -> DU-b",
+  "unadopted": "both targets are UNADOPTED honest WIN labels pending the scrutiny owner C++ second-implementation gate (kyouen_dfpn_root.cpp pin 9193f5b6065e0fbcad2ef7c65f386187701cafa1f5b718cc35a5cbb0d138f92e); canonical cache 973bcd19309eae1d73b26c40c3d6839a2f35baa74658e0794f19da6f9412ca5b unchanged (6,547 rows), carries no row for either exact (lo,hi) pair (ag001 same-lo context 8 rows all hi != 1032, ag002 lo absent)"
+ },
+ "consumed_into_canonical_cache": false,
+ "unadopted_win_rows": true,
+ "unadopted_loss_rows": false,
+ "canonical_cache_sha256_unchanged": "973bcd19309eae1d73b26c40c3d6839a2f35baa74658e0794f19da6f9412ca5b",
+ "targets": [
+  {
+   "key_id": "ag001",
+   "stones": 5,
+   "lo": 1152921505747697664,
+   "hi": 1032,
+   "legal": 85,
+   "s5_index": 745184,
+   "serving_class": 23101,
+   "membership_class_count": 4,
+   "canonical_cache_same_lo_rows_context": 8,
+   "replica_result": 1,
+   "replica_nodes": 9149084,
+   "source": "part-du-batch34",
+   "expect_third": 1
+  },
+  {
+   "key_id": "ag002",
+   "stones": 5,
+   "lo": 1153485622925590528,
+   "hi": 0,
+   "legal": 88,
+   "s5_index": 81011,
+   "serving_class": 1849,
+   "membership_class_count": 3,
+   "canonical_cache_same_lo_rows_context": 0,
+   "replica_result": 1,
+   "replica_nodes": 4893014,
+   "source": "part-du-batch34",
+   "expect_third": 1
+  }
+ ],
+ "anchors": [
+  {
+   "key_id": "k02a",
+   "stones": 5,
+   "lo": 1297036692683751424,
+   "hi": 68157440,
+   "legal": 87,
+   "expect_third": 1,
+   "expect_kind": "win",
+   "anchor_expansions": 9106337,
+   "anchor_ttHits": 4991527,
+   "replica_result": null,
+   "replica_nodes": null
+  },
+  {
+   "key_id": "l1a",
+   "stones": 5,
+   "lo": 13019119616,
+   "hi": 16448,
+   "legal": 116,
+   "expect_third": 2,
+   "expect_kind": "loss",
+   "anchor_expansions": 7660602,
+   "anchor_ttHits": 3951175,
+   "replica_result": null,
+   "replica_nodes": null
+  }
+ ],
+ "negatives": [
+  {
+   "key_id": "ng1",
+   "lo": 1297036692683751424,
+   "hi": 68157440,
+   "legal": 88,
+   "stones": 5,
+   "why": "legal+1 vs derived 87",
+   "expect_gate_fail_line": "third,ng1a,5,88,,GATE_FAIL,\"legal count mismatch: derived=87 declared=88\""
+  },
+  {
+   "key_id": "ng2",
+   "lo": 1297036692683751424,
+   "hi": 68157440,
+   "legal": 87,
+   "stones": 6,
+   "why": "stones 6 vs actual 5",
+   "expect_gate_fail_line": "third,ng2a,6,87,,GATE_FAIL,\"stone count mismatch: bits=5 declared=6\""
+  }
+ ]
+}

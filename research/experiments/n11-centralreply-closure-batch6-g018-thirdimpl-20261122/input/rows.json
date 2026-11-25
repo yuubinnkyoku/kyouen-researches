@@ -1,0 +1,92 @@
+{
+ "schema": "n11-centralreply-closure-batch6-thirdimpl-input-v1",
+ "source": "batch6 raws (publish-pending rows derived fail-closed from the pinned batch6 experiment; g018 WIN + stratified LOSS spots g001/g011/g016)",
+ "targets": [
+  {
+   "key_id": "g018",
+   "stones": 5,
+   "lo": 1734519175235239936,
+   "hi": 0,
+   "legal": 78,
+   "replica_result": 1,
+   "replica_nodes": 5936863,
+   "expect_third": 1
+  },
+  {
+   "key_id": "g001",
+   "stones": 5,
+   "lo": 1158058423066034176,
+   "hi": 0,
+   "legal": 82,
+   "replica_result": 2,
+   "replica_nodes": 3618287,
+   "expect_third": 2
+  },
+  {
+   "key_id": "g011",
+   "stones": 5,
+   "lo": 1158058422931849216,
+   "hi": 0,
+   "legal": 89,
+   "replica_result": 2,
+   "replica_nodes": 8417028,
+   "expect_third": 2
+  },
+  {
+   "key_id": "g016",
+   "stones": 5,
+   "lo": 1158058422965370880,
+   "hi": 0,
+   "legal": 83,
+   "replica_result": 2,
+   "replica_nodes": 1513384,
+   "expect_third": 2
+  }
+ ],
+ "anchors": [
+  {
+   "key_id": "k02a",
+   "stones": 5,
+   "lo": 1297036692683751424,
+   "hi": 68157440,
+   "legal": 87,
+   "expect_third": 1,
+   "anchor_expansions": 9106337,
+   "anchor_ttHits": 4991527,
+   "expect_kind": "win",
+   "replica_result": null,
+   "replica_nodes": null
+  },
+  {
+   "key_id": "l1a",
+   "stones": 5,
+   "lo": 13019119616,
+   "hi": 16448,
+   "legal": 116,
+   "expect_third": 2,
+   "anchor_expansions": 7660602,
+   "anchor_ttHits": 3951175,
+   "expect_kind": "loss",
+   "replica_result": null,
+   "replica_nodes": null
+  }
+ ],
+ "negatives": [
+  {
+   "key_id": "ng1",
+   "lo": 1297036692683751424,
+   "hi": 68157440,
+   "legal": 88,
+   "stones": 5,
+   "why": "legal+1 vs derived 87"
+  },
+  {
+   "key_id": "ng2",
+   "lo": 1297036692683751424,
+   "hi": 68157440,
+   "legal": 87,
+   "stones": 6,
+   "why": "stones 6 vs actual 5"
+  }
+ ]
+}

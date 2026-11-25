@@ -1,0 +1,97 @@
+{
+ "schema": "n11-centralreply-closure-batch9-j033-thirdimpl-input-v1",
+ "sources": {
+  "batch_keys_sha256": "8f2035d17b3c987c8e5c848b23b6849ad5f3508a51d64002c1fef0e8c5ed7e9e",
+  "raws": "sources/raw (published batch-9 raws 8 files @ commit a321bfb2, byte-identical to the lane kit mirror)",
+  "status_log": "sources/status.log (published batch-9 runner log @ commit a321bfb2, byte-identical)"
+ },
+ "consumed_into_canonical_cache": false,
+ "targets": [
+  {
+   "key_id": "j033",
+   "stones": 5,
+   "lo": 1153484455030030336,
+   "hi": 0,
+   "legal": 80,
+   "replica_result": 1,
+   "replica_nodes": 4718280,
+   "expect_third": 1
+  },
+  {
+   "key_id": "j001",
+   "stones": 5,
+   "lo": 1152921505076609025,
+   "hi": 0,
+   "legal": 85,
+   "replica_result": 2,
+   "replica_nodes": 7908824,
+   "expect_third": 2
+  },
+  {
+   "key_id": "j016",
+   "stones": 5,
+   "lo": 1152921779954515968,
+   "hi": 0,
+   "legal": 82,
+   "replica_result": 2,
+   "replica_nodes": 9112205,
+   "expect_third": 2
+  },
+  {
+   "key_id": "j027",
+   "stones": 5,
+   "lo": 1297109260450136064,
+   "hi": 16,
+   "legal": 84,
+   "replica_result": 2,
+   "replica_nodes": 1255316,
+   "expect_third": 2
+  }
+ ],
+ "anchors": [
+  {
+   "key_id": "k02a",
+   "stones": 5,
+   "lo": 1297036692683751424,
+   "hi": 68157440,
+   "legal": 87,
+   "expect_third": 1,
+   "anchor_expansions": 9106337,
+   "anchor_ttHits": 4991527,
+   "expect_kind": "win",
+   "replica_result": null,
+   "replica_nodes": null
+  },
+  {
+   "key_id": "l1a",
+   "stones": 5,
+   "lo": 13019119616,
+   "hi": 16448,
+   "legal": 116,
+   "expect_third": 2,
+   "anchor_expansions": 7660602,
+   "anchor_ttHits": 3951175,
+   "expect_kind": "loss",
+   "replica_result": null,
+   "replica_nodes": null
+  }
+ ],
+ "negatives": [
+  {
+   "key_id": "ng1",
+   "lo": 1297036692683751424,
+   "hi": 68157440,
+   "legal": 88,
+   "stones": 5,
+   "why": "legal+1 vs derived 87"
+  },
+  {
+   "key_id": "ng2",
+   "lo": 1297036692683751424,
+   "hi": 68157440,
+   "legal": 87,
+   "stones": 6,
+   "why": "stones 6 vs actual 5"
+  }
+ ]
+}

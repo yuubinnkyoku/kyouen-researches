@@ -1,0 +1,185 @@
+# Part AU run status (single-owner lane host, 2026-11-22)
+# Batch-17 scaffold (closure class 10661, Part AS reaudit closure rank 14,
+# first candidate row without refutation evidence). This file records the
+# DECLARATION-TIME state: the note Part AU amendment is pushed first, then
+# this scaffold (batch-keys + input CSVs + maker + README + MANIFEST) is
+# published as a single commit. No solver search has been run by this Part;
+# NO verdict is consumed here (canonical cache stays 6,120 rows be9cb24e...).
+# The standard 11x11 empty board, the 19 central-reply roots, class 10661
+# (unknown 52 cost children) and all 52 keys stay UNKNOWN; probe/legal/node
+# numbers are bookkeeping, never verdicts.
+
+[inputs pinned]
+graph sha256 54f9c3643eeba139ea5e8d3babb1db9744d19f00f3cf024bbf192ec0d408c00b;
+update8 sha256 b658290aa941c105035aa3b9b13741cd95b5032b9b7fb7d61b2aed0d0cea6719;
+Board (independent.py) sha256 954d3a104c1723ebb15b8c9bae63a4494f07f9eb73446a6d067c4fd6a4ba189f;
+s5_evidence_policy.py sha256 78655e94480920de48a6fe8792e02e611513ddee7f685b422bbb2b08af5c95e2;
+quarantine registry sha256 81d231604d3a095c115135e05ca393d6be83e1aadde4f614d3b5a9cc67d17fe9;
+canonical BASE cache sha256 be9cb24e899fbe93db51e415320c50fa733e378748bb7a41fe13fd7b22f06685 (6,120 rows, Part AS);
+Part AS reaudit probe-worklist.csv sha256 1c96df0533d69a57ec16943670e307480aba3511774460e8329f1a7198618c5a;
+Part AS reaudit closure-classes.csv sha256 3ee1dbb6db7a5fc8858f5bbdd5cae7ca754589f376ebb99727535806f917bc9e;
+batches 1..16 batch-keys.json fetched from repo raw main, sha256-pinned
+(16 files: 2aaccc94 / 3b37c923 / ad05073a / 70b8a4c8 / 57da4702 /
+c16d36e0 / 91d0f492 / 5c42a950 / 8f2035d1 / a1401ee2 / 8ef22069 /
+de55df83 / c6c56a1a / dfde0e90 / af3e4c46 / 465cf447, total 813 keys).
+
+[maker runs 1..3]
+scripts/make_batch17_keys.py (fail-closed scaffold maker, all gates
+inlined): 3 runs, byte-identical outputs.
+run 1: OK 52 keys class 10661 rank 14 groups [(24,30),(24,90)]
+probe_order 600..651 legal 72..97 canonical_hits 0 quarantine_hits 0
+overlap 0 prior_batches 16/813
+runs 2, 3: batch-keys.json byte-identical (sha256
+db762175272206aa53622f30addc1267d534e8a3e576f70c6a084f21392645d2);
+the 52-file input-CSV set is byte-identical across runs (set sha256
+sum db162c24d3247cc0367ebe53100c049432b9dabbd11396e3d012242506d64221).
+
+[gates (machine, fail-closed)]
+class: graph mask == [1152921505697431552, 0] == published closure row;
+graph status unknown(1); cost size 53 = 52 unknown + 1 known.
+closure table: published rank-14 row IS class 10661 (unknown_now 52,
+groups_served_count 2, first group (24,30)); re-derived group-best view
+(809 candidate rows matching the published table size) ranks 10661 at
+14 with exactly the groups {(24,30),(24,90)}.
+worklist: exactly 52 serving rows, class_unknown_now 52 on every row,
+probe_order 600..651 strictly increasing contiguous.
+keys: canonical BASE 0/52 hits; quarantine 0/52; canonical-safe 52/52;
+mask_to_index == s5_index 52/52; every s5_index is a graph cost child of
+10661; the unconsumed WIN child s5 745184 is NOT a key; no intra-batch
+duplicates; overlap with batches 1..16 == 0; Board(11) legal recount
+equals the published worklist legal 52/52 (range 72..97).
+
+[execution protocol (pre-registered; the executing session must re-verify
+the latest main for counter-declarations first)]
+pinned replica jsreplay.js sha256 84585617... (byte-copy from the
+published batch-14 scripts); 2-pass fresh cold; budget 15,000,000;
+1 solver / 1 row / 1 process; publish=ALL; workers max 2; val-gate
+(two-target-design 4 anchors) reproduced on host before the first probe.
+stop rules: determinism mismatch -> HARD-STOP rc=42; WIN -> HALT rc=45
+(WIN honest-labeled, NOT adopted by this lane, verdict NOT consumed);
+budget exhaustion -> honest UNKNOWN (no same-condition re-probe).
+consumption: only 2-pass LOSS rows may later enter an increment via the
+sha-pinned fail-closed union merger 90711961..., in a separately
+declared adoption Part; this batch alone makes no closure / coverage /
+secured claim (that is the later refresh re-run + independent audit).
+
+# Interpretation guard: this scaffold publishes the declaration record and
+# the machine-verified 52-key packet ONLY. No probe has run, no verdict is
+# consumed, the canonical cache is untouched, and class 10661 stays an
+# unknown class with 52 unknown cost children. Ranks 1-13 hold in-flight
+# or unconsumed-WIN-refuted classes (route statements), so rank 14 is the
+# first candidate without refutation evidence; that is a scheduling fact,
+# not a verdict or a closure claim. The standard 11x11 empty board, the 19
+# central-reply roots, class 10661 and every key remain UNKNOWN. Nodes,
+# legal counts and probe orders are bookkeeping, never verdicts.
+2026-11-22T18:28:38Z WAVE-START u001 u002
+2026-11-22T18:29:18Z u001 PASS 15000000,2,1807922
+2026-11-22T18:29:54Z u002 PASS 15000000,2,5217624
+2026-11-22T18:29:56Z WAVE-START u003 u004
+2026-11-22T18:30:36Z u004 PASS 15000000,2,1816952
+2026-11-22T18:30:38Z u003 PASS 15000000,2,2135947
+2026-11-22T18:30:41Z WAVE-START u005 u006
+2026-11-22T18:31:34Z u006 PASS 15000000,2,2467460
+2026-11-22T18:31:35Z u005 PASS 15000000,2,2550176
+2026-11-22T18:31:35Z WAVE-START u007 u008
+2026-11-22T18:32:49Z u008 PASS 15000000,2,3370343
+2026-11-22T18:33:06Z u007 PASS 15000000,2,5123893
+2026-11-22T18:33:06Z WAVE-START u009 u010
+2026-11-22T18:33:49Z u010 PASS 15000000,2,2000183
+2026-11-22T18:34:18Z u009 PASS 15000000,2,4732751
+2026-11-22T18:34:28Z WAVE-START u011 u012
+2026-11-22T18:35:13Z u011 PASS 15000000,2,2122547
+2026-11-22T18:35:22Z u012 PASS 15000000,2,2918993
+2026-11-22T18:35:22Z WAVE-START u013 u014
+2026-11-22T18:36:12Z u014 PASS 15000000,2,2393498
+2026-11-22T18:36:38Z u013 PASS 15000000,2,4665558
+2026-11-22T18:36:38Z WAVE-START u015 u016
+2026-11-22T18:37:38Z u016 PASS 15000000,2,2902039
+2026-11-22T18:37:43Z u015 PASS 15000000,2,3340659
+2026-11-22T18:37:43Z WAVE-START u017 u018
+2026-11-22T18:39:54Z WAVE-START u017 u018
+2026-11-22T18:39:54Z u018 P2-TRUNCATED-RETRY
+2026-11-22T18:39:55Z u017 P2-TRUNCATED-RETRY
+2026-11-22T18:40:51Z u018 PASS 15000000,2,5154154
+2026-11-22T18:40:55Z u017 PASS 15000000,2,6009881
+2026-11-22T18:40:55Z WAVE-START u019 u020
+2026-11-22T18:41:40Z u020 PASS 15000000,2,2204673
+2026-11-22T18:42:11Z u019 PASS 15000000,2,5160719
+2026-11-22T18:42:11Z WAVE-START u021 u022
+2026-11-22T18:43:25Z u022 PASS 15000000,2,3486492
+2026-11-22T18:43:36Z u021 PASS 15000000,2,4736680
+2026-11-22T18:43:40Z WAVE-START u023 u024
+2026-11-22T18:44:29Z u023 PASS 15000000,2,2149761
+2026-11-22T18:44:54Z u024 PASS 15000000,2,4897960
+2026-11-22T18:44:55Z WAVE-START u025 u026
+2026-11-22T18:46:19Z u026 PASS 15000000,2,4081732
+2026-11-22T18:46:21Z u025 PASS 15000000,2,4223548
+2026-11-22T18:46:21Z WAVE-START u027 u028
+2026-11-22T18:47:49Z u028 PASS 15000000,2,4246954
+2026-11-22T18:48:39Z WAVE-START u027 u029
+2026-11-22T18:48:40Z u027 P2-TRUNCATED-RETRY
+2026-11-22T18:49:58Z u027 PASS 15000000,2,6404564
+2026-11-22T18:50:01Z u029 PASS 15000000,2,3670208
+2026-11-22T18:50:02Z WAVE-START u030 u031
+2026-11-22T18:51:11Z u030 PASS 15000000,2,3544067
+2026-11-22T18:53:05Z WAVE-START u031 u032
+2026-11-22T18:53:06Z u031 P2-TRUNCATED-RETRY
+2026-11-22T18:53:52Z u032 PASS 15000000,2,2276223
+2026-11-22T18:54:52Z u031 PASS 15000000,2,14967263
+2026-11-22T18:54:52Z WAVE-START u033 u034
+2026-11-22T18:55:27Z u034 PASS 15000000,2,1651860
+2026-11-22T18:57:00Z WAVE-START u033 u035
+2026-11-22T18:57:01Z u033 P2-TRUNCATED-RETRY
+2026-11-22T18:57:41Z u035 PASS 15000000,2,1904250
+2026-11-22T18:58:04Z u033 PASS 15000000,2,7806486
+2026-11-22T18:58:06Z WAVE-START u036 u037
+2026-11-22T18:58:42Z u036 PASS 15000000,2,1673242
+2026-11-22T18:58:48Z u037 PASS 15000000,2,2340296
+2026-11-22T18:58:51Z WAVE-START u038 u039
+2026-11-22T18:59:28Z u039 PASS 15000000,2,1780787
+2026-11-22T19:00:22Z u038 PASS 15000000,2,6589964
+2026-11-22T19:00:22Z WAVE-START u040 u041
+2026-11-22T19:01:19Z u041 PASS 15000000,2,2679969
+2026-11-22T19:01:20Z u040 PASS 15000000,2,2824739
+2026-11-22T19:01:22Z WAVE-START u042 u043
+2026-11-22T19:02:10Z u042 PASS 15000000,2,2033033
+2026-11-22T19:02:21Z u043 PASS 15000000,2,3565076
+2026-11-22T19:02:21Z WAVE-START u044 u045
+2026-11-22T19:03:10Z u044 PASS 15000000,2,2429281
+2026-11-22T19:03:38Z u045 PASS 15000000,2,5116404
+2026-11-22T19:03:42Z WAVE-START u046 u047
+2026-11-22T19:05:07Z u047 PASS 15000000,2,4128023
+2026-11-22T19:05:27Z u046 PASS 15000000,2,5930201
+2026-11-22T19:05:27Z WAVE-START u048 u049
+2026-11-22T19:06:56Z u048 PASS 15000000,2,4211028
+2026-11-22T19:07:12Z u049 PASS 15000000,2,4809998
+2026-11-22T19:07:14Z WAVE-START u050 u051
+2026-11-22T19:08:14Z u051 PASS 15000000,2,2779870
+2026-11-22T19:08:14Z u050 PASS 15000000,2,3027580
+2026-11-22T19:08:15Z WAVE-START u052
+2026-11-22T19:08:41Z u052 PASS 15000000,2,2472941
+
+[execution record (Part AU executing session, 2026-11-22)]
+Execution performed by a later session under the declared protocol, after
+re-verifying latest main (no counter-declaration; declaration adc4358a +
+scaffold 62b60a07 are the authority for this batch).
+2026-11-22T18:24:36Z EXECUTION-START (execution host = a new 2-core
+session host; workers max 2; wave size 2)
+2026-11-22T18:22:23Z host val-gate BEFORE first probe: 4/4 node-exact
+(at2m-1 0/2,000,000; at2m-2 0/2,000,000; 15m-1 result 2 at 3,651,923;
+15m-2 result 2 at 5,040,200; forbidden quadruples 95,670) - see
+output/val-gate/*.this-host.out
+2026-11-22T18:28:38Z .. 2026-11-22T19:08:48Z waves u001..u052 run under
+the exactly-registered stop rules; no rc=42 mismatch, no rc=45 WIN-HALT,
+no budget exhaustion
+2026-11-22T19:08:48Z EXECUTION-COMPLETE: 52/52 probed = 52 LOSS,
+2-pass fresh-cold node-exact, 0 WIN, 0 exhaustion, 0 mismatch,
+total 196,536,452 nodes per pass
+HOST-EVENT (honest record): the sandbox host was recycled 4 times during
+the run (bash timeouts); each recycle killed in-flight pass files mid-write
+and the completeness guard (missing "# replay_done") moved 5 incomplete
+fragments to output/raw-truncated-hostevent/ and re-ran those passes fresh
+cold (u017.p2, u018.p2, u027.p2, u031.p2, u033.p2). No truncated pass ever
+produced a verdict line and no completed row was ever re-searched; the
+5 affected keys PASSed 2-pass node-exact afterwards. Environment resets
+are the recorded cause (same event class as batch-16 2026-11-22).

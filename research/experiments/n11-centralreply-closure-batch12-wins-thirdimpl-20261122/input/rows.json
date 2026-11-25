@@ -1,0 +1,137 @@
+{
+ "schema": "n11-centralreply-closure-batch12-wins-thirdimpl-input-v1",
+ "sources": {
+  "batch_keys_sha256": "de55df83483663e31b1c1db0fb8a1239079e7152bddef9bd893439b7b2fdbdc2",
+  "raws": "sources/raw (published batch-12 raws 16 files: declaring-host 8 keys x 2-pass, chunk commits eca35f3c/ace92d84, fetched from the repo raw CDN, commit-pinned)",
+  "status_log": "sources/status.log (published batch-12 declaring-host runner log, commit ace92d84)"
+ },
+ "consumed_into_canonical_cache": false,
+ "targets": [
+  {
+   "key_id": "n005",
+   "stones": 5,
+   "lo": 1153489144664555520,
+   "hi": 0,
+   "legal": 82,
+   "replica_result": 1,
+   "replica_nodes": 12863268,
+   "expect_third": 1
+  },
+  {
+   "key_id": "n006",
+   "stones": 5,
+   "lo": 1152926194711134208,
+   "hi": 128,
+   "legal": 78,
+   "replica_result": 1,
+   "replica_nodes": 3695373,
+   "expect_third": 1
+  },
+  {
+   "key_id": "n001",
+   "stones": 5,
+   "lo": 1297041382786990080,
+   "hi": 0,
+   "legal": 90,
+   "replica_result": 2,
+   "replica_nodes": 6471615,
+   "expect_third": 2
+  },
+  {
+   "key_id": "n002",
+   "stones": 5,
+   "lo": 1152926194845351936,
+   "hi": 0,
+   "legal": 82,
+   "replica_result": 2,
+   "replica_nodes": 3083301,
+   "expect_third": 2
+  },
+  {
+   "key_id": "n003",
+   "stones": 5,
+   "lo": 1152921504741064704,
+   "hi": 4472832,
+   "legal": 82,
+   "replica_result": 2,
+   "replica_nodes": 4560719,
+   "expect_third": 2
+  },
+  {
+   "key_id": "n004",
+   "stones": 5,
+   "lo": 1729386947014557696,
+   "hi": 0,
+   "legal": 91,
+   "replica_result": 2,
+   "replica_nodes": 3710926,
+   "expect_third": 2
+  },
+  {
+   "key_id": "n007",
+   "stones": 5,
+   "lo": 1152926194711134210,
+   "hi": 0,
+   "legal": 90,
+   "replica_result": 2,
+   "replica_nodes": 2905330,
+   "expect_third": 2
+  },
+  {
+   "key_id": "n008",
+   "stones": 5,
+   "lo": 1152926194711134212,
+   "hi": 0,
+   "legal": 87,
+   "replica_result": 2,
+   "replica_nodes": 3442689,
+   "expect_third": 2
+  }
+ ],
+ "anchors": [
+  {
+   "key_id": "k02a",
+   "stones": 5,
+   "lo": 1297036692683751424,
+   "hi": 68157440,
+   "legal": 87,
+   "expect_third": 1,
+   "anchor_expansions": 9106337,
+   "anchor_ttHits": 4991527,
+   "expect_kind": "win",
+   "replica_result": null,
+   "replica_nodes": null
+  },
+  {
+   "key_id": "l1a",
+   "stones": 5,
+   "lo": 13019119616,
+   "hi": 16448,
+   "legal": 116,
+   "expect_third": 2,
+   "anchor_expansions": 7660602,
+   "anchor_ttHits": 3951175,
+   "expect_kind": "loss",
+   "replica_result": null,
+   "replica_nodes": null
+  }
+ ],
+ "negatives": [
+  {
+   "key_id": "ng1",
+   "lo": 1297036692683751424,
+   "hi": 68157440,
+   "legal": 88,
+   "stones": 5,
+   "why": "legal+1 vs derived 87"
+  },
+  {
+   "key_id": "ng2",
+   "lo": 1297036692683751424,
+   "hi": 68157440,
+   "legal": 87,
+   "stones": 6,
+   "why": "stones 6 vs actual 5"
+  }
+ ]
+}

@@ -1,0 +1,13 @@
+2026-11-22T14:51:54Z PARTAL-RUNNER-START host=135c7b39-6dfa-4499-9038-092e9efeed37 cores=2
+2026-11-22T14:51:56Z RULES-GATE-DONE
+RUN key=ng1 tag=a kind=negative rc=1 out=output/negative/ng1.a.out third,ng1a,5,88,,GATE_FAIL,"legal count mismatch: derived=87 declared=88"
+RUN key=k02a tag=b kind=anchor rc=0 out=output/anchors/k02a.b.out third,k02ab,5,87,87,1,9106337,4991527,52.91,1297036692683751424,68157440,clean,quads=95670,ttOverwrites=4912053,memoPower=22
+RUN key=k02a tag=a kind=anchor rc=0 out=output/anchors/k02a.a.out third,k02aa,5,87,87,1,9106337,4991527,53.03,1297036692683751424,68157440,clean,quads=95670,ttOverwrites=4912053,memoPower=22
+RUN key=l1a tag=b kind=anchor rc=0 out=output/anchors/l1a.b.out third,l1ab,5,116,116,2,7660602,3951175,47.07,13019119616,16448,clean,quads=95670,ttOverwrites=3466722,memoPower=22
+RUN key=l1a tag=a kind=anchor rc=0 out=output/anchors/l1a.a.out third,l1aa,5,116,116,2,7660602,3951175,47.58,13019119616,16448,clean,quads=95670,ttOverwrites=3466722,memoPower=22
+RUN key=r001 tag=a kind=target rc=0 out=output/targets/r001.a.out third,r001a,5,82,82,1,2856756,1684754,17.34,4035788216211603456,0,clean,quads=95670,ttOverwrites=24138,memoPower=22
+RUN key=r001 tag=b kind=target rc=0 out=output/targets/r001.b.out third,r001b,5,82,82,1,2856756,1684754,17.47,4035788216211603456,0,clean,quads=95670,ttOverwrites=24138,memoPower=22
+RUN key=r002 tag=a kind=target rc=0 out=output/targets/r002.a.out third,r002a,5,82,82,1,6817094,4153893,42.37,3603442651849818112,128,clean,quads=95670,ttOverwrites=2626959,memoPower=22
+RUN key=r002 tag=b kind=target rc=0 out=output/targets/r002.b.out third,r002b,5,82,82,1,6817094,4153893,42.85,3603442651849818112,128,clean,quads=95670,ttOverwrites=2626959,memoPower=22
+2026-11-22T14:54:39Z PARTAL-RUNNER-EXIT
+RUN key=ng2 tag=a kind=negative rc=1 out=output/negative/ng2.a.out third,ng2a,6,87,,GATE_FAIL,"stone count mismatch: bits=5 declared=6"

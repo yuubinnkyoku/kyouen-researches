@@ -1,0 +1,97 @@
+{
+ "schema": "n11-centralreply-closure-batch8-h045-thirdimpl-input-v1",
+ "sources": {
+  "batch_keys_sha256": "5c42a950c687bbd1b8a9e25b1fdd5cffb4b7a19565a3d4372173a2001fcccc02",
+  "raws": "sources/raw (published batch-8 raws 8 files @ commit 1f127fb8, fetched from the repo raw CDN, commit-pinned)",
+  "status_log": "sources/status.log (published batch-8 runner log @ commit 1f127fb8, fetched from the repo raw CDN, commit-pinned)"
+ },
+ "consumed_into_canonical_cache": false,
+ "targets": [
+  {
+   "key_id": "h045",
+   "stones": 5,
+   "lo": 4035225266258182144,
+   "hi": 64,
+   "legal": 85,
+   "replica_result": 1,
+   "replica_nodes": 6366900,
+   "expect_third": 1
+  },
+  {
+   "key_id": "h018",
+   "stones": 5,
+   "lo": 4035225300617920512,
+   "hi": 0,
+   "legal": 86,
+   "replica_result": 2,
+   "replica_nodes": 1556298,
+   "expect_third": 2
+  },
+  {
+   "key_id": "h025",
+   "stones": 5,
+   "lo": 1297599642636124672,
+   "hi": 128,
+   "legal": 94,
+   "replica_result": 2,
+   "replica_nodes": 11192861,
+   "expect_third": 2
+  },
+  {
+   "key_id": "h026",
+   "stones": 5,
+   "lo": 1297599642636125184,
+   "hi": 128,
+   "legal": 94,
+   "replica_result": 2,
+   "replica_nodes": 4284312,
+   "expect_third": 2
+  }
+ ],
+ "anchors": [
+  {
+   "key_id": "k02a",
+   "stones": 5,
+   "lo": 1297036692683751424,
+   "hi": 68157440,
+   "legal": 87,
+   "expect_third": 1,
+   "anchor_expansions": 9106337,
+   "anchor_ttHits": 4991527,
+   "expect_kind": "win",
+   "replica_result": null,
+   "replica_nodes": null
+  },
+  {
+   "key_id": "l1a",
+   "stones": 5,
+   "lo": 13019119616,
+   "hi": 16448,
+   "legal": 116,
+   "expect_third": 2,
+   "anchor_expansions": 7660602,
+   "anchor_ttHits": 3951175,
+   "expect_kind": "loss",
+   "replica_result": null,
+   "replica_nodes": null
+  }
+ ],
+ "negatives": [
+  {
+   "key_id": "ng1",
+   "lo": 1297036692683751424,
+   "hi": 68157440,
+   "legal": 88,
+   "stones": 5,
+   "why": "legal+1 vs derived 87"
+  },
+  {
+   "key_id": "ng2",
+   "lo": 1297036692683751424,
+   "hi": 68157440,
+   "legal": 87,
+   "stones": 6,
+   "why": "stones 6 vs actual 5"
+  }
+ ]
+}
