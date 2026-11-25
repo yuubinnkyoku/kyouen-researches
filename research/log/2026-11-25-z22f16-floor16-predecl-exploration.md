@@ -27,17 +27,28 @@ run's local draft notes was a mis-sum; draft notes unpublished).
 The published K1339 completion log §5 and declaration note §5 register
 TWO open lanes for the z=22 territory: the z=23 slice census (T-Z23,
 floor-18, 本命 — the natural next lane) and the FLOOR-NECESSITY
-question "z=22 is settled at floor 17 = z−5; the z−6 floor is
-UNSWEPT in every slice". This kit takes the SECOND lane
+question (their phrasing: "z=22 is settled at floor 17 = z−5; the
+z−6 floor is unexplored" — correctly scoped: unswept for the z=22
+slice). This kit takes the SECOND lane
 (floor-16 = z−6 at z=22) to avoid a head-on collision with the hourly
-parallel run's registered z=23 target. Nothing in the published record
-censuses ANY sub-critical (z−6) lattice: every published kit of the
-strip series (T-Z13..T-Z22) swept exactly the critical floor z−5.
+parallel run's registered z=23 target. REPAIR (same-day): the
+originally published revision of this paragraph claimed that nothing
+in the published record censused ANY sub-critical (z−6) lattice and
+that every strip-series kit swept exactly the critical floor; that
+was WRONG — the floor-(z−6) SERIES had five published editions at
+kit-build time (z=15 K1321, the z=16 min>=10 kit `059c531e`, the
+z=17 min>=11 kit `82f98ef4`, the z=18 min>=12 kit `0bb7e440` — whose
+predecl (m4) revival cascade confirmed the {B,A,A2} trio value-exact
+2/2 with z=16 — and the z=19 min>=13 kit `5b2275bc`). This kit's
+census is the SIXTH edition of that series and its first z>=20
+edition; the z=22 floor-16 slot itself was genuinely unclaimed
+(path probe below).
 
 No counter-publication of a z=22 floor-16 census existed at kit-build
 time (checked: no `research/experiments/strip-z22-floor16*` /
-`strip-z22-min16*` directory; the published kits cover the critical
-floors only; the s=16 row of the z=22 floor-16 cell ladder, the m=16
+`strip-z22-min16*` directory; the floor-(z−6) series' published
+editions stop at z=19, so the z=22 floor-16 lattice was untouched;
+the s=16 row of the z=22 floor-16 cell ladder, the m=16
 base spot, the sub-critical below-band datum and the sixteenth-tail
 pre-computation were all unmeasured at this session's start).
 
@@ -61,7 +72,7 @@ pre-computation were all unmeasured at this session's start).
   S∈{16..55}; m∈{17..21} = the PROVED T-Z22 claim positions, compliance
   recheck); the m=16/15/14/13-row records as cross-artifact rechecks of
   the published f17 entries; the NEW m=16 base spot; the below-band
-  child census at the FIRST SUB-CRITICAL floor; the identity rechecks
+  child census (z'=23, floor 16 = z'−7); the identity rechecks
   extended over {0}∪{12..60}; the NEW SIXTEENTH-tail engine-free
   pre-computation with BOTH components predeclared.
 - THE HAND DERIVATION (disclosed in the file docstring, written BEFORE
@@ -135,14 +146,27 @@ classes are the published f17 classes lattice-identical:
     unswept" open item is answered for z=22 at cell level: the floor
     does NOT drop.
   - The even-z A-break extinction is a CRITICAL-FLOOR phenomenon:
-    A22f16 is the FIRST even-z A-rank deviant ever observed (UP 1v0
-    at s=16=z−6, not the odd-z s=z−5 UP 2v0 form). The A-rank parity
-    law (3/3 odd birth, 5/5 even extinction at floor z−5) does not
-    extend below the critical floor.
+    A22f16 is the THIRD even-z sub-critical A-rank deviant,
+    value-exact with the published A16f10 (s=10) and A18f12 (s=12) —
+    all UP 1v0 at s=z−6, never the odd-z s=z−5 UP 2v0 birth form.
+    The A-rank parity law (3/3 odd birth, 5/5 even extinction at
+    floor z−5) does not extend below the critical floor; at the
+    z−6 floor the even A-rank revives with the uniform value 1 (3/3).
   - The s=16 relapse station carries the even station value trio
-    {DOWN 0v2, UP 1v0, UP 2v1} at heads {B, A, A2} — the FIRST
-    sub-critical-floor station (head shift relative to the critical
-    stations {D,C,B}@18).
+    {DOWN 0v2, UP 1v0, UP 2v1} at heads {B, A, A2} — the THIRD even
+    floor-(z−6) station (after the published z=16 s=10 and z=18 s=12
+    stations; head shift relative to the critical stations
+    {D,C,B}@18). ACCEPTANCE COMPARISON (added by the same-day
+    repair, against the published z16-f10/z18-f12 frozen outputs):
+    the FULL 11-entry deviant lattice is cellwise VALUE-EXACT across
+    z=16/z=18/z=22 with the s-positions the arithmetic set
+    {z−6, z−4, z−2, z} — heads {B,A,A2}@z−6 plus the ladder
+    B/C/D@(z−4), D/E/G@(z−2), F/G@z, 11/11 entries per kit. The
+    registered +2-revival candidate (head-trio scope, value-exact
+    2/2 at the z18 kit's publication) is CONFIRMED at z=22 and
+    UPGRADED to full-lattice scope, value-exact 3/3. z=20 floor-14
+    is the one remaining unswept even floor-(z−6) edition below
+    z=24.
 - **s∈{17..31} (lattice identity with f17)**: F {22: UP 1v0},
   G {20: DOWN 0v2, 22: UP 2v1}, E {20: UP 1v0},
   D {18: DOWN 0v2, 20: UP 2v1}, C {18: UP 1v0}, B {18: UP 2v1};
@@ -152,8 +176,15 @@ classes are the published f17 classes lattice-identical:
   s-only survives its first sub-critical-floor test.
 
 **The measurement hit the complete predeclared profile EXACTLY — the
-SECOND fully-closed pre→measure cycle of the series (after f17), and
-the first at a sub-critical floor: zero undisclosed classes.**
+SECOND fully-closed pre→measure cycle of the series (after f17):
+zero undisclosed classes.** (The floor-(z−6) series' z16/z18/z19
+kits also published pre-declaration cycles, the z18 kit's (m4)
+engine-free cascade of narrower scope — revival cascade plus
+boundary children, not the complete cell-ladder profile; the
+originally published "first at a sub-critical floor" phrasing of
+this sentence is withdrawn by the same-day repair. This kit's own
+closure scope: the complete predeclared cell-ladder profile at a
+sub-critical floor.)
 
 ### 3.2 Strip and row records
 
@@ -175,12 +206,15 @@ the first at a sub-critical floor: zero undisclosed classes.**
   base-spot z-sequence: z=21: 1 (published), z=22: 1 (here) — two data
   points, no alternation yet.
 
-### 3.3 Below-band (FIRST SUB-CRITICAL datum)
+### 3.3 Below-band (z'−7 datum)
 
 `H(23;Y;23)` vs `v(s,23,23)`, min(Y)>=16 (child slice z'=23, floor
 16 = z'−7, two below the critical z'−5 pattern): **105 shapes,
 0 deviants, 0 multivalue** — full collapse of the below-band supply
-child at the first sub-critical floor ever swept. The published K1264
+child at floor z'−7; the FOURTH recorded z'−7 empty datum (the
+published z16-f10/z18-f12/z19-f13 kits' below-band child sections
+are empty at z'=17/19/20; here z'=23), extending the empty pattern
+to 4/4. The published K1264
 stair applicability R=23 <= 23+min(Y) suggests this collapse is a
 stair consequence at ANY floor; recorded as observation only.
 
@@ -228,6 +262,17 @@ stair consequence at ANY floor; recorded as observation only.
   sections' run before the fix — no frozen data was touched by either
   incident; the frozen artifact was never re-run or edited).
 - No wall-clock, no randomness, no hash-order dependence.
+- REPAIR DISCLOSURE (same-day repair commit, README + log prose
+  only): the originally published revision of this log and the kit
+  README overstated the kit's historical novelty on three points
+  (the "nothing censuses ANY sub-critical lattice / critical floors
+  only" claim, the "FIRST even-z A-rank deviant ever observed"
+  claim, and the "FIRST sub-critical below-band datum" claim),
+  corrected after the acceptance comparison against the published
+  floor-(z−6) series' frozen outputs (z16-f10/z18-f12/z19-f13). The
+  frozen artifacts were never edited (their sha256 pins hold); the
+  repair adds the 3/3 full-lattice and 4/4 below-band acceptance
+  results and the §5 z=20 floor-14 registered prediction.
 - Push protocol: latest main re-fetched immediately before the push
   (hourly parallel-run hazard); the z22-floor16 census slot confirmed
   unclaimed; kit + this log pushed in one commit; fetch-back byte
@@ -244,15 +289,32 @@ stair consequence at ANY floor; recorded as observation only.
   above), while the ROW direction (the m=16 row at z=22: strip 44/0 +
   row 40+39/0 + base spot 1/0 here) still collapses everywhere swept.
   A formal necessity item would state the refuted universal form and
-  the witness set, and register the cross-slice generalization OPEN:
-  no sub-critical (z−6) census exists for ANY other slice; the
-  candidate regularities to test on the next slices are (i) the
-  s=z−6 row always deviant with the {B,A,A2} value trio
-  {DOWN 0v2, UP 1v0, UP 2v1}, (ii) s-only surviving below the
-  critical floor, (iii) the below-band child fully collapsing at any
-  floor (stair-consequence candidate), (iv) the A-rank parity law
-  being critical-floor-scoped (an even-z A-deviant exists at every
-  z−6 floor?).
+  the witness set, and register the cross-slice generalization with
+  the floor-(z−6) series' data now behind it: even editions swept
+  z=16/z=18 (published) + z=22 (here), odd editions swept
+  z=15/z=17/z=19 (published; empty at s=z−6), so the candidate
+  regularities are data-backed, not first tests: (i) the s=z−6 row
+  deviant with the {B,A,A2} value trio {DOWN 0v2, UP 1v0, UP 2v1} at
+  every EVEN floor-(z−6) edition — 3/3 value-exact at FULL-LATTICE
+  scope (see §3.1 acceptance comparison) — and empty at every ODD
+  edition (z=19 head empty, per its published kit), (ii) s-only
+  surviving below the critical floor, (iii) the below-band child
+  fully collapsing at any floor (4/4 empty z'−7 data;
+  stair-consequence candidate), (iv) the A-rank parity law being
+  critical-floor-scoped, with the sub-critical even A-revival
+  uniformly UP 1v0 (3/3).
+  The natural NEXT edition of the floor-(z−6) series is z=20
+  floor-14 — the last unswept even floor below z=24 and the parallel
+  hourly lane's registered next datum. With the full-lattice
+  uniformity now 3/3, the prediction is registered here BEFORE the
+  fact (same-day repair): head trio {B 0v2, A 1v0, A2 2v1} at s=14
+  and the ladder B {16 UP 2v1}, C {16 UP 1v0}, D {16 DOWN 0v2,
+  18 UP 2v1}, E {18 UP 1v0}, F {20 UP 1v0}, G {18 DOWN 0v2,
+  20 UP 2v1} — 11 entries total, the same cellwise constants, all
+  cells s-only, 0 multivalue rows; each row single-shape, matching
+  the arithmetic set {z−6, z−4, z−2, z} at z=20. If the z=20 edition
+  hits this profile exactly, the full-lattice uniformity reaches 4/4
+  across ALL consecutive even z 16..22.
 - The paper-side status of the m=16 ROW claim at z=22, as disclosed by
   this census: the B-children are stair-equal (K1264, PROVED), the
   C-hand children are the PROVED T-Z21 m=16 row at z=21; the only

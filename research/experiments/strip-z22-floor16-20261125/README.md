@@ -4,7 +4,14 @@ This directory is the publish-then-execute PRIMARY RECORD for the
 pre-declaration census of the z=22 FLOOR-16 (z-6, SUB-CRITICAL floor)
 lattice — the floor-NECESSITY exploration of the z=22 slice (the
 "z-6 floor unswept" open item registered by the published K1339
-completion log section 5 / K1339 declaration note section 5). NO K slot
+completion log section 5 / K1339 declaration note section 5).
+This kit is the SIXTH edition of the published floor-(z-6)
+sub-critical series (after z=15 K1321, the z=16 min>=10 kit
+`059c531e`, the z=17 min>=11 kit `82f98ef4`, the z=18 min>=12 kit
+`0bb7e440` and the z=19 min>=13 kit `5b2275bc`) and its first
+edition in the z >= 20 range; the z=22 floor-16 census itself was
+unclaimed at kit-build time (path probe, no counter-publication).
+NO K slot
 is claimed by this kit and no universal statement is made here:
 everything below is machine observation plus disclosed paper
 derivations written BEFORE the first run. The declaration lane (a later
@@ -26,8 +33,7 @@ and the official runs.
   m∈{16..21} (m=16 NEW open-row sweep; m∈{17..21} proved T-Z22
   compliance recheck), the m=16/15/14/13 row records as cross-artifact
   rechecks, the NEW m=16 base spot with the paper-derived candidate
-  disclosed in the docstring BEFORE the first run, the below-band child
-  census at the FIRST SUB-CRITICAL floor (z'=23, floor 16 = z'−7), the
+  disclosed in the docstring BEFORE the first run, the below-band child census at z'-7 (z'=23, floor 16 = z'-7), the
   identity rechecks extended to {0}∪{12..60}, plus the NEW SIXTEENTH-tail
   engine-free pre-computation with BOTH components predeclared).
 - `explore_z22f16.out` — sha256
@@ -50,7 +56,12 @@ from the published f17 census; (iii) s-only beyond s=31; (iv) no
 multivalue rows. **The measurement hit the predeclared profile
 EXACTLY — every class, every value, zero undisclosed classes** — the
 SECOND fully-closed pre→measure cycle of the series (after the
-f17 census), and the first one at a sub-critical floor.
+f17 census). (The floor-(z−6) series' z16/z18/z19 kits also
+published pre-declaration cycles — the z18 kit's (m4) engine-free
+revival cascade is the closest precedent, of narrower scope — so the
+originally published "first at a sub-critical floor" phrasing is
+withdrawn by the same-day repair; what is this kit's own is the
+complete cell-ladder profile closure at a sub-critical floor.)
 
 ### Floor necessity (the open item answered at cell level)
 
@@ -70,14 +81,26 @@ f17 census), and the first one at a sub-critical floor.
   from the j=6..8 deviant values stays mex-irrelevant from j=9 on.
 - **The even-z A-break extinction fails BELOW the critical floor**:
   A22f16 breaks at an EVEN z, at s=16=z−6 (not the odd-z s=z−5), UP
-  1v0 (not UP 2v0) — the FIRST even-z A-rank deviant ever observed;
-  the A-rank parity law (birth iff z odd, s=z−5, UP 2v0; 3/3 odd,
+  1v0 (not UP 2v0) — the THIRD even-z sub-critical A-rank deviant,
+  value-exact with the published A16f10 (s=10, UP 1v0) and A18f12
+  (s=12, UP 1v0); never the birth form (UP 2v0). The A-rank parity
+  law (birth iff z odd, s=z−5, UP 2v0; 3/3 odd,
   5/5 extinct at floor z−5) is a CRITICAL-FLOOR phenomenon and does
-  not extend to the z−6 lattice.
+  not extend to the z−6 lattice, where the even A-rank revives with
+  the uniform value 1 (3/3).
 - The s=16 relapse station value trio {DOWN 0v2, UP 1v0, UP 2v1} at
   heads {B, A, A2} carries the even station value trio of the
-  published f17 stations {18,20,22} at NEW heads — the FIRST
-  sub-critical-floor station.
+  published f17 stations {18,20,22} at NEW heads — the THIRD even
+  floor-(z−6) station (after the published z=16 s=10 and z=18 s=12
+  stations). ACCEPTANCE COMPARISON (same-day, against the published
+  z16-f10/z18-f12 kits' frozen outputs): the FULL 11-entry deviant
+  lattice is cellwise VALUE-EXACT across z=16/z=18/z=22 with
+  s-positions the arithmetic set {z−6, z−4, z−2, z} (11/11 entries
+  per kit; C/D/E/F/G ladder included). The registered +2-revival
+  candidate (head-trio scope, value-exact 2/2 at the z18 kit's
+  publication) is hereby confirmed at z=22 and upgraded to
+  FULL-LATTICE scope, value-exact 3/3; z=20 floor-14 is the one
+  remaining unswept even floor-(z−6) edition below z=24.
 - The {18,20,22} classes are the published f17 classes LATTICE-IDENTICAL
   (s∈{17..31} are single 2-token shapes (j,s), identical points in the
   f17 census): F {22: UP 1v0}, G {20: DOWN 0v2, 22: UP 2v1},
@@ -113,12 +136,15 @@ f17 census), and the first one at a sub-critical floor.
   z=21: 1 (published), z=22: 1 (here) — two data points, no
   alternation yet.
 
-### Below-band (first sub-critical datum)
+### Below-band (z'−7 datum)
 
 - `H(23;Y;23)` vs `v(s,23,23)` with min(Y)>=16 (the j=1 cell's B-move
   child; child slice z'=23 with floor 16 = z'−7, TWO below the critical
-  z'−5 pattern): **105 shapes, 0 deviants, 0 multivalue** — the first
-  sub-critical below-band datum, full collapse (the published K1264
+  z'−5 pattern): **105 shapes, 0 deviants, 0 multivalue** — full
+  collapse of the below-band supply child; the FOURTH recorded
+  below-band z'−7 empty datum (the z16-f10/z18-f12/z19-f13 kits'
+  below-band child sections are empty at z'=17/19/20; here z'=23),
+  extending the empty pattern to 4/4 (the published K1264
   stair applicability R=23 <= 23+min(Y) suggests a stair consequence
   at any floor; recorded as observation only).
 
@@ -157,6 +183,42 @@ exactly. rc 0, ~39 s. Per-record `H.cache_clear()` retained.
 See `research/log/2026-11-25-z22f16-floor16-predecl-exploration.md`
 for the primary-source timeline, the hand-derivation disclosure record
 and handoff instructions.
+
+## Same-day repair record (2026-11-25)
+
+An acceptance comparison against the published floor-(z−6) series
+kits (frozen outputs of the z16-f10/z18-f12/z19-f13 editions) led to
+this repair commit, which changes this README and the companion log
+ONLY; the frozen `explore_z22f16.py` / `explore_z22f16.out` /
+`engine_block.py` are byte-unchanged and every sha256 pin above still
+holds. The originally published revision overstated the kit's
+historical novelty on three points, now corrected above:
+
+1. "every published kit of the strip series swept exactly the
+   critical floor z−5 / nothing in the published record censuses ANY
+   sub-critical (z−6) lattice" — WRONG: the floor-(z−6) series had
+   five published editions at kit-build time (z=15 K1321, z=16
+   `059c531e`, z=17 `82f98ef4`, z=18 `0bb7e440`, z=19 `5b2275bc`)
+   and the even revival head trio was already registered value-exact
+   2/2 (z16/z18). This kit is the z=22 edition of that series,
+   extending it to 3/3 — and the acceptance comparison adds the new
+   full-lattice 11/11 cellwise value-exact finding recorded above.
+2. "the FIRST even-z A-rank deviant ever observed" — WRONG:
+   A16f10 (s=10) and A18f12 (s=12), both UP 1v0, are published
+   precedents; A22f16 is the third (value-exact) instance.
+3. "the first sub-critical below-band datum" — WRONG: three z'−7
+   below-band child sections were already published empty
+   (z'=17/19/20); this kit's z'=23 instance extends it to 4/4.
+
+The docstring of the frozen `explore_z22f16.py` contains the
+corresponding historical sentences and is left byte-frozen
+(declaration discipline); this section supersedes them. Everything
+else — the measurement itself, the s=16 hand derivation, the
+deviant witness values, the strip/row/spot/tail records, the
+determinism and xcheck results — is unchanged. What remains
+genuinely first in this kit: the z=22 floor-16 census itself, the
+m=16 strip column 44/0, the m=16 base spot, the sixteenth-tail
+identity, and the z'=23 below-band instance.
 
 ## Standard caveats
 
