@@ -151,3 +151,40 @@ proofs. The paper proofs, the slot claim and the verification machine belong
 to the declaration lane. Section (g) is a pure closed-form pre-computation: it
 uses no engine recursion at all and inherits only the published K0832
 single-token closed form.
+
+## Verify machine (added by the K1344 declaration lane)
+
+- `verify_k1344.py` — sha256
+  `8c0077a1ea4fd354ffdccfe9bc6c301e9cc0571869e67ffe6cb06897bd8c0b8f`
+  (25,084 bytes; structural copy of the published `verify_k1339.py` machine with
+  the disclosed diff: z 22→23, rung budget 16→17 (17th rung, provisional `A11`
+  label formalized as **A1123f18**), floor 17→18, cell budget j+23→j+24, the
+  declared z=23 closed forms in D1, the published K1339 z=22 cell transcriptions
+  + T-Z22 claim-row anchors re-checked independently in D3, the D5 z-grid
+  extended to z=24 (the below-band identity pair needs z=24) with one extra
+  fixed R-point 31 disclosed, and the (ii') below-band supply child
+  H(24;Y;24) vs v(s,24,24) in D8. Drafted as `verify_tz23.py` — unpublished,
+  local only, sha256
+  `2b22acec210d9517d43e1a293953666f9bde82c85280c391417cce8522bfe7ed` — and
+  renamed to verify_k1344.py after the declaration-note push; the rename
+  touches only the machine label and the docstring (rename disclosure),
+  battery structure unchanged, and predry/tamper were re-measured on the
+  renamed bytes.)
+  The K1344 single-owner declaration note is
+  `research/log/2026-11-25-strip-z23-min18-single-owner-note.md` (commit
+  `66ac2775`). Declaration battery **19,532 points, fail-closed** (per-gate
+  declared point counts enforced; any deviation or any bad point → FAIL):
+  D1 cells 1,377 / D2 strip 108 / D3 z22 anchors 542 / D4 stair anchors 527 /
+  D5 self anchors 16,725 / D6 deviant/collapse witnesses 23 / D7 extension
+  anchors 149 / D8 below-band anchors 81. Engine pin `bd5f22e4…` startup
+  gate. Predry 8 runs byte-identical on the renamed bytes (default ×2,
+  PYTHONHASHSEED=random/1/0 same-cwd, env -i isolated ×3 via
+  /usr/local/bin/python3): stdout 671 bytes, sha256
+  `6d920fa11340d69f08cc2144aa4496c42bb423ddc2f3b1bce520fffd5617a2c5`
+  (drafting bytes measured the same battery numbers with stdout 670 bytes,
+  sha256
+  `f0edce65e1460ee8308bf339f549b7d5e17feac7d0948a0df827819d04a4e7d3`).
+  Tamper 8/8 fail-closed on the renamed bytes (engine rc 2; cell/strip/
+  anchor22/stair/deviant/ext/belowband each rc 1, flagging exactly its target
+  gate with bad=1 and no other). Official runs (publish-then-execute, from
+  these published bytes) follow in `official_runs/`.
