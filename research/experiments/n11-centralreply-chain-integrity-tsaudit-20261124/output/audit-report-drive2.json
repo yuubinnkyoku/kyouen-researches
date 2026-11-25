@@ -1,0 +1,144 @@
+{
+ "schema": "n11-s5-chain-integrity-tsaudit-drive2-v1",
+ "generated": "2026-11-24T02:46:38.767Z",
+ "executor_note": "Part DD drive-2: extends the drive-1 independent TS chain audit (CH->CO->CU, commit 048b69c5) by one waypoint, CU -> DB, after the Part DB batch-29 37-LOSS adoption landed (2026-11-24). Read-only; no Python, no native host, no solver reruns, no verdict consumed. 11x11 stays UNKNOWN.",
+ "head_observed": "c2572cb5",
+ "files": [
+  {
+   "path": "research/experiments/n11-centralreply-class2251-loss16-adoption-reaudit-20261123/output/merged-exact-s5-chain-plus-b28loss1-plus-b28loss7-plus-b29loss16-20261123.cache",
+   "len": 260590,
+   "gitBlobReported": "836c79fd0616e0012b712e13fc5d099d159f2e88",
+   "blobChannelMatch": true,
+   "asciiOnly": true,
+   "sha256": "30ddad9dc0add7e21698e864b5c202b8e6ebd3e396c4eb6156a85ff2d34005c4"
+  },
+  {
+   "path": "research/experiments/n11-centralreply-class2251-loss37-adoption-reaudit-20261124/output/merged-exact-s5-chain-plus-b28loss1-plus-b28loss7-plus-b29loss16-plus-b29loss37-20261124.cache",
+   "len": 262326,
+   "gitBlobReported": "2ff8603a7faf335ca43b3c325acf7c35442f5739",
+   "blobChannelMatch": true,
+   "asciiOnly": true,
+   "sha256": "04b0a23987a97518e276ea5ff966496facab22f93628cd5fbc682a04c3650556"
+  },
+  {
+   "path": "research/experiments/n11-centralreply-class2251-loss37-adoption-reaudit-20261124/output/increment-b29loss37-20261124.cache",
+   "len": 3937,
+   "gitBlobReported": "f14f3108d9728679322732b6efd08e9a6d7c6575",
+   "blobChannelMatch": true,
+   "asciiOnly": true,
+   "sha256": "85bd44693edfd862a7cf74fc10414978fcf248dcef684a821b487f9757b443cc"
+  },
+  {
+   "path": "research/experiments/n11-centralreply-class2251-loss37-adoption-reaudit-20261124/output/increments-manifest.json",
+   "len": 7210,
+   "gitBlobReported": "fd0a1988c5a0df029ed23c4a19eb64708b07f43f",
+   "blobChannelMatch": true,
+   "asciiOnly": true,
+   "sha256": "1b51f30dabed6f4df435a3a034e1b5b9c2f405c75ebdcd918c0e256f2812d25a"
+  },
+  {
+   "path": "research/experiments/n11-centralreply-class2251-loss37-adoption-reaudit-20261124/MANIFEST-sha256.txt",
+   "len": 1774,
+   "gitBlobReported": "779b2c2950e2cb71bad70f0c4a21d56f2bc48b12",
+   "blobChannelMatch": true,
+   "asciiOnly": true,
+   "sha256": "23bff81e22998513710288db8b16cb48094b00398fbd30efba968b2255a54f26"
+  },
+  {
+   "path": "results/n11-s5-evidence-quarantine.json",
+   "len": 927,
+   "gitBlobReported": "6a320237545874ddd841c90be095cccccc46249d",
+   "blobChannelMatch": true,
+   "asciiOnly": true,
+   "sha256": "81d231604d3a095c115135e05ca393d6be83e1aadde4f614d3b5a9cc67d17fe9"
+  }
+ ],
+ "pins": {
+  "cuCache_30ddad9d_equalToDrive1": true,
+  "dbCache_vs_dbManifest": true,
+  "dbCache_prefix_04b0a239_fromKnowledge": true,
+  "dbManifest_vs_dbIncMan_base_cu30ddad9d": true,
+  "dbInc_sha_paths": true,
+  "merger_pin_90711961": true
+ },
+ "counts": {
+  "CU": {
+   "rows": 6317,
+   "verdicts": {
+    "1": 158,
+    "2": 6159
+   },
+   "conflicts": 0,
+   "badRows": 0
+  },
+  "DB": {
+   "rows": 6354,
+   "distinct": 6354,
+   "verdicts": {
+    "1": 158,
+    "2": 6196
+   },
+   "conflicts": 0,
+   "badRows": 0
+  },
+  "increment37": {
+   "rows": 37,
+   "verdicts": {
+    "1": 0,
+    "2": 37
+   }
+  }
+ },
+ "counts_vs_published": {
+  "DB": {
+   "observedWin": 158,
+   "observedLoss": 6196,
+   "expected": {
+    "win": 158,
+    "loss": 6196,
+    "rows": 6354
+   }
+  }
+ },
+ "chain": {
+  "cuToDb": {
+   "from": "CU_6317",
+   "to": "DB_6354",
+   "fromRows": 6317,
+   "toRows": 6354,
+   "rowDelta": 37,
+   "subsetBad": 0,
+   "keysMissingInTo": 0,
+   "deltaKeyCount": 37,
+   "incrementKeyCount": 37,
+   "deltaEqualsIncrementKeys": true,
+   "incrementKeysAlreadyInBase": 0,
+   "incrementRowMismatchInTo": 0,
+   "incrementNodesSum": "159325566",
+   "deltaAllLoss": true,
+   "sampleDeltaKeys": [
+    "1155314042043105280:4",
+    "1155314042043105280:8",
+    "1155314042043105280:16"
+   ]
+  }
+ },
+ "quarantine": {
+  "activeKeys": [
+   "1152925911243358200:536870912",
+   "10448351135499553000:128"
+  ],
+  "hitsInDb": []
+ },
+ "nodesChecks": {
+  "b29loss37_sum": "159325566",
+  "manifest_total_nodes": "159325566",
+  "batch_desc": 29
+ },
+ "blob_channel": {
+  "allMatch": true,
+  "asciiOnlyAll": true
+ },
+ "errors_during_fetch": [],
+ "ALL_GATES": "PASS"
+}

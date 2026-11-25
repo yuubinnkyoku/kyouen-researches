@@ -1,0 +1,54 @@
+{
+ "schema": "batch14residual-loss10-increments-manifest-v1",
+ "batch": "14r",
+ "class_index": 23101,
+ "loss_ids": [
+  "q043",
+  "q044",
+  "q045",
+  "q046",
+  "q047",
+  "q048",
+  "q049",
+  "q050",
+  "q051",
+  "q052"
+ ],
+ "resolved_ids": [
+  "q043",
+  "q044",
+  "q045",
+  "q046",
+  "q047",
+  "q048",
+  "q049",
+  "q050",
+  "q051",
+  "q052"
+ ],
+ "win_ids": [],
+ "unadopted_win_ids": [],
+ "exhausted_excluded_ids": [],
+ "row_counts": {
+  "resolved_rows": 10,
+  "wins": 0,
+  "losses": 10,
+  "exhausted_excluded": 0,
+  "probed_total": 10,
+  "probed_resolved": 10
+ },
+ "sha256": {
+  "loss": "c3f201a678bc33462728fe633a38fc68f794da49a965c789acf01407cf850cf8"
+ },
+ "full_packet_eq_loss_only": true,
+ "full_packet_eq_loss_only_rationale": "the residual batch resolved all 10 probed keys as LOSS; the packet contains zero WIN rows and zero exhaustion rows, so the adopted packet is identical to the full resolved residual packet",
+ "win_scenario_exists": false,
+ "win_scenario_note": "class 23101's unconsumed q042 WIN (s5 745184, Part AQ WIN-HALT row, Part AR third-implementation cross-verified) is OUTSIDE this packet and stays unconsumed; the scrutiny owner C++ gate (pin 9193f5b6...) is unchanged - a 10-LOSS adoption can never free class 23101 and this Part must not claim any class closure or root coverage",
+ "base_cache_absent_hits": 0,
+ "base_cache_rows": 6172,
+ "quarantine_hits": 0,
+ "row_audit_sha256": "6b40b131c54302b61ad9c767f948b7fc4e9c1f6a67e42915faca9d457f709003",
+ "batch17_s5_disjoint": true,
+ "q042_s5_excluded": 745184,
+ "interpretation_guard": "canonical adoption increment prep: the 10 LOSS rows are consumed into the canonical cache via the fail-closed union merger once declared (execution-before-declaration discipline); 11x11 stays UNKNOWN; nodes are bookkeeping, never verdicts"
+}

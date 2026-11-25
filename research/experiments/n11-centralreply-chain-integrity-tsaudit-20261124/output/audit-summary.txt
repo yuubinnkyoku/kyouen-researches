@@ -1,0 +1,18 @@
+n11 central-reply canonical S5 chain integrity - independent TS audit (Part DD, 2026-11-24)
+executor: sandboxed TypeScript, GitHub contents API channel only; no Python, no native host, no solver reruns
+ALL_GATES: PASS
+
+waypoint rows/verdicts (observed == published):
+  CH 6294 rows (WIN 158 / LOSS 6136), conflicts 0, badRows 0
+  CO 6301 rows (WIN 158 / LOSS 6143) = 854800f3..., sha verified
+  CU 6317 rows (WIN 158 / LOSS 6159) = 30ddad9d..., sha verified
+chain: CH subset CO (subsetBad 0, delta 7 keys == increment-b28loss7 keys exactly, rows match, none already in base)
+chain: CO subset CU (subsetBad 0, delta 16 keys == increment-b29loss16 keys exactly, rows match, none already in base)
+b28loss1 increment (aa003) present in CH with verdict/nodes agreement: true
+nodes sums: b28loss7 38784669 == manifest 38784669; b29loss16 57463971 == manifest 57463971
+quarantine: 2 active keys, present in CH/CO/CU: none
+git-blob channel: recomputed == reported for every fetched file; ASCII-only confirmed
+pin sources cross-checked (all true): 11 pin gates
+
+NOT verified here: game-search reruns, canonical-geometry checks, class statuses/coverage, verdict consumption.
+The standard 11x11 empty board and all 19 central-reply roots stay UNKNOWN.

@@ -1,0 +1,31 @@
+{
+  "schema": "n11-central49-conditional46-distinct-s7-two-for-two-2386-v1",
+  "source_certificate": "conditional_s6_cover_46_distinct_s7_2417.json",
+  "priority_s4_key": "00000000000000003800800000000000",
+  "removed_s6_classes": [
+    "00000000000000801002002000102000",
+    "00000000000200203800000080000000"
+  ],
+  "added_s6_classes": [
+    "00000000000000203808000080000000",
+    "00000000000000801002802000100000"
+  ],
+  "s5_covered": 94,
+  "s6_witnesses": 46,
+  "previous_raw_s7_edges": 2919,
+  "previous_distinct_s7_classes": 2417,
+  "final_raw_s7_edges": 2929,
+  "final_distinct_s7_classes": 2386,
+  "distinct_s7_saved": 31,
+  "shared_s7_reuses": 543,
+  "historical_original_first_loss7_hits": 7,
+  "known_win7_hits": 0,
+  "evidence_level": "GEOMETRY_ONLY_CONDITIONAL_PROOF_PLAN_NOT_VERDICTS",
+  "outcomes": {
+    "s4": "UNKNOWN",
+    "s6": "UNKNOWN",
+    "two_stone_root": "UNKNOWN",
+    "empty_board": "UNKNOWN"
+  },
+  "caveat": "Constructive two-for-two substitution only, not a global optimum or a game verdict. Historical S7 labels are comparison evidence, not independent terminal proofs. No selected S6 LOSS has been proved."
+}

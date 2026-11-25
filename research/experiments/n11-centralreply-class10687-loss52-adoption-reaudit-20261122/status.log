@@ -1,0 +1,98 @@
+# Part AP run status (single-owner lane host, 2026-11-22)
+# Canonical adoption reaudit of the batch-16 (class 10687) 52 LOSS rows.
+# Declaration: note commit 815391db (observed HEAD-before-push a71bef64,
+# note blob sha1 7b14c2ac... re-verified at push time). No solver search was
+# run; the only verdict consumption is the batch-16 52 LOSS rows themselves,
+# adopted into the canonical cache through the sha-pinned fail-closed union
+# merger. WIN-row adoption remains gated on the scrutiny owner's C++ second
+# implementation (pin 9193f5b6...); this batch contains zero WIN rows and
+# zero exhausted rows (published increments manifest machine-asserts it).
+
+[maker re-derivation]
+byte-copy of the published Part AO increments maker (sha256 e35b545de23c0feffe04eb712cbb03612373b6cf2f00925ad15c3fab8c5d3774)
+re-executed once in this experiment dir from the published batch-16 raws;
+increment-batch16-loss52-IFADOPTED-20261122.cache: 52 rows, sha256 95345a5b1484614940e133e042b005ccc5963df15ecb7e5651f092761aa8a7f0
+== published Part AO increment bytes (byte-compare PASS);
+increments-manifest.json sha256 28c90ba78d00541dc492fe17331c94ee315ffc4fe3654e41e0fc4f0124ac38ee == published (byte-compare PASS);
+log line: OK 52 probed rows -> 52 resolved LOSS (t001..t052), zero WIN, zero exhaustion, zero BASE overlap, quarantine 0, full==loss, all gates PASS
+(the re-derived increment and manifest are NOT republished; the published Part AO bytes are the authority, this is a re-derivation gate only)
+
+[union merge run 1]
+sha-pinned s5_union_merge.py (sha256 907119610034fb2aebfde012550a4129dfa3b086c6de11194e856747ac74606a, selftest PASS);
+inputs: pre-adoption canonical BASE cache 6,027 rows (sha256 95e868d6762925b9a27ad963a825a9ad4fd5131a864eb82fac0db77d7acdb326,
+path research/experiments/n11-central-reply-8784-closure-reaudit-20261122/output/merged-exact-s5-chain-plus-closure-increment-plus-batch10-20261122.cache)
++ 52-row increment; WIN/LOSS conflicts 0, duplicates elided 0, nodes mismatches recorded [];
+canonical cache 6,079 rows (WIN 158 / LOSS 5,921), 249,622 bytes,
+sha256 342e86838e0c2bef915798059cb397f7c91e59c65426bf74db19530ecdd7979e;
+merge-audit run1 sha256 b69ea95336f082038d700dc13dc8e3b71655f40ca4c568e81c9833addb461e37
+
+[union merge run 2]
+same arguments, byte-identical output and audit (canonical cache cmp PASS,
+merge-audit-run1.json == merge-audit-run2.json byte-compare PASS);
+canonical cache is byte-identical to the published Part AO scenario cache
+(cmp PASS): the adoption adds exactly the 52 LOSS rows to the pre-adoption
+canonical cache and nothing else.
+
+[adoption refresh run 1]
+adapted refresh script (from the pinned Part Y refresh script 88671526... via
+the Part AO adapt fb84677614ef92583a3f1292e5875980cb60601fb9aec1d3a6eb0507dc4c6068;
+2-hunk adapt: docstring framing + canonical cache path; cache sha expectation
+342e86838e0c2bef915798059cb397f7c91e59c65426bf74db19530ecdd7979e unchanged);
+single process, serial (~60 s);
+refresh-summary.json sha256 b278f822627560d7c3945ee0c0aded7de415b6141a69f0f8722e670432fc48da
+closure-classes.csv sha256 7405699e183acea509e71e58dfc7c15904c675dff0b04518201484e72185041b
+per-root-coverage.csv sha256 ec52a56d6b6e7af6401698d59ec9f07e0628e02059240ff63f84913df09caa37
+probe-worklist.csv sha256 3b28ba59b60f41b82ee9a83bf111164ac87219cec44e4207e15a0fd6c1a72098 (NOT published, 3.7 MB, Part AH/AO precedent)
+
+[adoption refresh run 2]
+same script, single process, serial; all four outputs byte-identical to run 1 (cmp PASS each).
+
+[cross-run vs Part AO what-if outputs (determinism gate)]
+closure-classes.csv == Part AO loss52/output (7405699e...) byte-identical;
+per-root-coverage.csv == Part AO loss52/output (ec52a56d...) byte-identical;
+probe-worklist.csv == Part AO loss52/output (3b28ba59...) byte-identical;
+refresh-summary.json differs from Part AO loss52/output (7fd15927...) in
+exactly one line: pins.merged_cache.path now points at the canonical cache
+path of this experiment (machine diff: 1 line pair, all other bytes equal).
+
+[delta extractor runs 1..3]
+scripts/compare_deltas_batch16_adoption.py (11-fragment adapt of the published
+Part AO extractor ca2a14f746bb849f68c70ebb66f7e40b70074d2c6ada2d509677e4f72f6f989c:
+docstring/guard/schema framing, SCEN cache path, SCEN summary path+sha, output
+filename; every recompute gate unchanged) re-executes the published refresh
+class pass from graph + update8 + canonical cache (including Board
+fail-closed child verification of every free candidate) and asserts
+class_status_counts, known-universe counts and per-root coverage equality
+with the published BASE (25987add...) and the reaudit outputs before any
+delta is emitted.
+run 1: OK decomp-deltas-batch16-adoption.json: flips=[] new_free=[10687] free_now 35->36 update8_resolved +1 joint_greedy 35242->38522 worklist 65154->65097 changed_rows=['central|16']
+run 2: byte-identical logs and output (sha256 70c1b31e783b43e69397a692aea807a460c89f4827b33664a95eeceb31dc6acb)
+run 3: byte-identical logs and output (same sha256)
+diff vs published Part AO decomp-deltas-batch16.json (dd6a01ef...): exactly
+three framing fields differ (interpretation_guard, scenario, schema) plus
+pins.scenario_summary_sha256 (7fd15927... -> b278f822...); every delta VALUE
+is byte-identical.
+
+[measured canonical state after adoption (gated by extractor + refresh)]
+class_status_counts: excluded 390 / excluded_now 23 / free_now 36 / unknown 34500
+(BASE: 35 / 34501); board_verification free_candidates 36, board_verified_free
+36, rejected {}: class 10687's free_now status IS Board-verified against the
+adopted canonical cache, not a projection. closure candidate table 810 rows
+(811 at BASE), class 10687 absent (grep 0 rows). per-root changed row:
+central|16 free_now 14->16, uncovered 105->103 (free+uncovered==119 invariant),
+all other 18 roots byte-identical to BASE; root 27 baseline 119/119 unchanged.
+newly free thirds: {(16,56),(16,64)}, machine-matched to the published batch-16
+groups_served_full; root 16 secures its 2 groups. update8: resolved 75->76
+(s5 376421 newly resolved), remaining 31784->31783, win_hit_groups [] unchanged.
+scheduling quantities (recorded, not verdicts): joint greedy 35242->38522
+(re-selection after free group removal, not a coverage regression),
+probe worklist 65154->65097 (-57).
+
+# Interpretation guard: class 10687's closure qualification is established
+# by this reaudit under the Part AP declaration (Board-verified free_now, the
+# 36th free class, batch-2 23963 / batch-10 8784 / 10324 precedent). This is a
+# canonical-cache classification statement only: no 19-root win/loss claim, no
+# standard 11x11 empty-board claim. 14 unconsumed closure WIN rows remain
+# gated on the scrutiny owner's C++ second implementation (pin 9193f5b6...).
+# The standard 11x11 empty board, the 19 central-reply roots and every class
+# not established above remain UNKNOWN. Nodes are bookkeeping, never verdicts.

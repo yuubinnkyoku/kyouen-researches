@@ -1,0 +1,586 @@
+{
+ "changed_per_root_coverage_rows": {},
+ "class_16131": {
+  "base_status": "unknown",
+  "base_unknown_children": 53,
+  "base_unknown_equals_batch_keys": true,
+  "scenario_status": "excluded_now",
+  "scenario_unknown_children": 51,
+  "scenario_unknown_indices": [
+   259131,
+   309691,
+   356499,
+   401999,
+   482963,
+   497687,
+   497757,
+   500954,
+   501999,
+   505002,
+   506464,
+   508811,
+   510565,
+   512474,
+   514362,
+   515931,
+   518307,
+   521369,
+   522241,
+   524564,
+   525298,
+   527455,
+   528708,
+   529234,
+   529721,
+   531915,
+   532784,
+   535548,
+   538077,
+   538916,
+   540644,
+   540864,
+   542705,
+   542998,
+   543058,
+   543113,
+   543166,
+   543219,
+   543382,
+   543480,
+   543528,
+   543572,
+   543762,
+   543796,
+   544054,
+   544130,
+   544554,
+   544555,
+   544556,
+   544557,
+   544558
+  ]
+ },
+ "closure_candidate_rows": {
+  "base_class_16131_rank": 15,
+  "base_class_16131_unknown_now": 53,
+  "entered_table_classes": [],
+  "flipped_classes_in_table": [
+   16131
+  ],
+  "left_table_classes": [],
+  "note": "the closure-candidate table is a probing-worklist view keyed to unknown cost children; the win-flip of class 16131 and the other holders is recorded by class_status_counts and the transitions ledger, not by this table",
+  "scenario_class_16131_groups_served_count": 5,
+  "scenario_class_16131_rank": 7,
+  "scenario_class_16131_unknown_now": 51
+ },
+ "flips_excluded_now": [
+  4139,
+  5611,
+  6073,
+  16131
+ ],
+ "flips_gate": "flips == the machine-computed BASE-unknown graph holder classes of s5 153671 or 207534 (computed from the pinned graph cost sets, not hardcoded); each transitions unknown -> excluded_now; no regression; a WIN adoption can never free a class or move per-root coverage (all gated)",
+ "interpretation_guard": "if-adopted projection deltas only: the WIN verdicts are NOT consumed, the canonical cache is byte-pinned untouched, the holder classes of s5 153671 / 207534 flip to excluded_now (one-way: their all-LOSS closure routes are permanently refuted by the verified WIN children); no coverage change; this Part neither recommends nor rejects adoption; 11x11 empty board and all 19 roots stay UNKNOWN; nodes are bookkeeping",
+ "metrics": {
+  "closure_classes_count": {
+   "base": 809,
+   "delta": 0,
+   "scenario": 809
+  },
+  "excluded_now_classes": {
+   "base": 23,
+   "delta": 4,
+   "scenario": 27
+  },
+  "free_now_classes": {
+   "base": 36,
+   "delta": 0,
+   "scenario": 36
+  },
+  "group_best_options_nonfree": {
+   "base": 2125,
+   "delta": 0,
+   "scenario": 2125
+  },
+  "joint_greedy_union_size": {
+   "base": 36726,
+   "delta": -2,
+   "scenario": 36724
+  },
+  "joint_greedy_unique_groups": {
+   "base": 2125,
+   "delta": 0,
+   "scenario": 2125
+  },
+  "probe_worklist_total": {
+   "base": 64941,
+   "delta": -2,
+   "scenario": 64939
+  },
+  "unknown_classes": {
+   "base": 34500,
+   "delta": -4,
+   "scenario": 34496
+  },
+  "update8_groups_free_now": {
+   "base": 127,
+   "delta": 0,
+   "scenario": 127
+  },
+  "update8_remaining_now": {
+   "base": 31780,
+   "delta": -51,
+   "scenario": 31729
+  },
+  "update8_resolved_count": {
+   "base": 79,
+   "delta": 2,
+   "scenario": 81
+  },
+  "update8_win_hit_groups": {
+   "base": 0,
+   "delta": 5,
+   "scenario": 5
+  }
+ },
+ "newly_free_now_classes": [],
+ "newly_free_thirds": [],
+ "per_root_greedy": {
+  "0": {
+   "base_greedy_union_size": 2785,
+   "delta": 0,
+   "free_thirds": [
+    7,
+    7
+   ],
+   "scenario_greedy_union_size": 2785,
+   "uncovered_thirds": [
+    112,
+    112
+   ]
+  },
+  "1": {
+   "base_greedy_union_size": 6355,
+   "delta": 0,
+   "free_thirds": [
+    4,
+    4
+   ],
+   "scenario_greedy_union_size": 6355,
+   "uncovered_thirds": [
+    115,
+    115
+   ]
+  },
+  "12": {
+   "base_greedy_union_size": 3030,
+   "delta": -2,
+   "free_thirds": [
+    6,
+    6
+   ],
+   "scenario_greedy_union_size": 3028,
+   "uncovered_thirds": [
+    113,
+    113
+   ]
+  },
+  "13": {
+   "base_greedy_union_size": 6176,
+   "delta": 0,
+   "free_thirds": [
+    6,
+    6
+   ],
+   "scenario_greedy_union_size": 6176,
+   "uncovered_thirds": [
+    113,
+    113
+   ]
+  },
+  "14": {
+   "base_greedy_union_size": 4440,
+   "delta": 0,
+   "free_thirds": [
+    8,
+    8
+   ],
+   "scenario_greedy_union_size": 4440,
+   "uncovered_thirds": [
+    111,
+    111
+   ]
+  },
+  "15": {
+   "base_greedy_union_size": 5991,
+   "delta": 0,
+   "free_thirds": [
+    5,
+    5
+   ],
+   "scenario_greedy_union_size": 5991,
+   "uncovered_thirds": [
+    114,
+    114
+   ]
+  },
+  "16": {
+   "base_greedy_union_size": 3037,
+   "delta": 0,
+   "free_thirds": [
+    16,
+    16
+   ],
+   "scenario_greedy_union_size": 3037,
+   "uncovered_thirds": [
+    103,
+    103
+   ]
+  },
+  "2": {
+   "base_greedy_union_size": 5918,
+   "delta": 0,
+   "free_thirds": [
+    6,
+    6
+   ],
+   "scenario_greedy_union_size": 5918,
+   "uncovered_thirds": [
+    113,
+    113
+   ]
+  },
+  "24": {
+   "base_greedy_union_size": 2785,
+   "delta": 0,
+   "free_thirds": [
+    10,
+    10
+   ],
+   "scenario_greedy_union_size": 2785,
+   "uncovered_thirds": [
+    109,
+    109
+   ]
+  },
+  "25": {
+   "base_greedy_union_size": 5921,
+   "delta": 0,
+   "free_thirds": [
+    6,
+    6
+   ],
+   "scenario_greedy_union_size": 5921,
+   "uncovered_thirds": [
+    113,
+    113
+   ]
+  },
+  "26": {
+   "base_greedy_union_size": 5128,
+   "delta": 0,
+   "free_thirds": [
+    8,
+    8
+   ],
+   "scenario_greedy_union_size": 5128,
+   "uncovered_thirds": [
+    111,
+    111
+   ]
+  },
+  "3": {
+   "base_greedy_union_size": 5432,
+   "delta": 0,
+   "free_thirds": [
+    6,
+    6
+   ],
+   "scenario_greedy_union_size": 5432,
+   "uncovered_thirds": [
+    113,
+    113
+   ]
+  },
+  "36": {
+   "base_greedy_union_size": 2702,
+   "delta": 0,
+   "free_thirds": [
+    4,
+    4
+   ],
+   "scenario_greedy_union_size": 2702,
+   "uncovered_thirds": [
+    115,
+    115
+   ]
+  },
+  "37": {
+   "base_greedy_union_size": 4001,
+   "delta": 0,
+   "free_thirds": [
+    4,
+    4
+   ],
+   "scenario_greedy_union_size": 4001,
+   "uncovered_thirds": [
+    115,
+    115
+   ]
+  },
+  "38": {
+   "base_greedy_union_size": 3123,
+   "delta": 0,
+   "free_thirds": [
+    13,
+    13
+   ],
+   "scenario_greedy_union_size": 3123,
+   "uncovered_thirds": [
+    106,
+    106
+   ]
+  },
+  "4": {
+   "base_greedy_union_size": 5978,
+   "delta": 0,
+   "free_thirds": [
+    4,
+    4
+   ],
+   "scenario_greedy_union_size": 5978,
+   "uncovered_thirds": [
+    115,
+    115
+   ]
+  },
+  "48": {
+   "base_greedy_union_size": 2879,
+   "delta": -2,
+   "free_thirds": [
+    7,
+    7
+   ],
+   "scenario_greedy_union_size": 2877,
+   "uncovered_thirds": [
+    112,
+    112
+   ]
+  },
+  "49": {
+   "base_greedy_union_size": 2890,
+   "delta": 0,
+   "free_thirds": [
+    10,
+    10
+   ],
+   "scenario_greedy_union_size": 2890,
+   "uncovered_thirds": [
+    109,
+    109
+   ]
+  },
+  "5": {
+   "base_greedy_union_size": 3029,
+   "delta": 0,
+   "free_thirds": [
+    6,
+    6
+   ],
+   "scenario_greedy_union_size": 3029,
+   "uncovered_thirds": [
+    113,
+    113
+   ]
+  }
+ },
+ "pins": {
+  "base_closure_classes_sha256": "3ee1dbb6db7a5fc8858f5bbdd5cae7ca754589f376ebb99727535806f917bc9e",
+  "base_per_root_coverage_sha256": "527c7e9a3f6350f638b5e2e2a70c3115e50533eeca651e38e32329a04ab225d4",
+  "base_summary_sha256": "f2008e70b31f23724d9bd8d605f7ab6f1de20f1802e65bd5b955420a2f50a744",
+  "batch_keys_sha256": "1bb3ed41b26af92491ed579a7c05471f271ed1394d8b5f817b5110794d926667",
+  "canonical_base_cache_sha256": "be9cb24e899fbe93db51e415320c50fa733e378748bb7a41fe13fd7b22f06685",
+  "ifadopted_cache_sha256": "6bfa9faa1dec17cfb827a50668e84f289ffcc7dcb115591fc3280293b1f0f0b6",
+  "ifadopted_summary_sha256": "af95270b5cc3c9c6245314a1eb80399aa9db2b7f424816d942f32a517676e2d4",
+  "increment_sha256": "4f8fc29bfd00492aa9a983f20a121737d395b8f80d53e2b04c271fec068bc1ee",
+  "manifest_sha256": "13736030ea484a0496da7f929b9c6892a2e9ebf6522f96d1c87d2c21000945f1"
+ },
+ "recompute_gates": "class statuses with Board free-candidate child verification, known-universe counts and per-root free coverage were recomputed from graph + update8 + cache and asserted equal to the published BASE (Part AS reaudit) and if-adopted outputs before any delta was emitted; the class-16131 BASE-unknown boundary was asserted equal to the 53 batch-18 key s5 indices",
+ "scenario": "IF-ADOPTED = canonical 6,120 rows (be9cb24e..., Part AS) + the two batch-18 WIN rows (v001 s5 153671 5,656,151 nodes / v002 s5 207534 7,898,204 nodes, both 2-pass re-verified here); a scrutiny-owner precomputation projection, NOT the canonical chain",
+ "schema": "n11-b18win-v001v002-ifadopted-decomp-deltas-v1",
+ "status_transitions": {
+  "excluded->excluded": 390,
+  "excluded_now->excluded_now": 23,
+  "free_now->free_now": 36,
+  "unknown->excluded_now": 4,
+  "unknown->unknown": 34496
+ },
+ "update8": {
+  "groups_free_now": [
+   127,
+   127
+  ],
+  "lost_resolved": [],
+  "newly_resolved_s5": [
+   153671,
+   207534
+  ],
+  "win_hit_groups_base": [],
+  "win_hit_groups_scenario": [
+   {
+    "first": 12,
+    "fourth": 70,
+    "reply": 60,
+    "s4_class_index": 16131,
+    "s4_mask": [
+     1154047404513693696,
+     64
+    ],
+    "third": 50,
+    "unknown_s5_children": 53
+   },
+   {
+    "first": 12,
+    "fourth": 50,
+    "reply": 60,
+    "s4_class_index": 16131,
+    "s4_mask": [
+     1154047404513693696,
+     64
+    ],
+    "third": 70,
+    "unknown_s5_children": 53
+   },
+   {
+    "first": 48,
+    "fourth": 72,
+    "reply": 60,
+    "s4_class_index": 16131,
+    "s4_mask": [
+     1154047404513693696,
+     64
+    ],
+    "third": 20,
+    "unknown_s5_children": 53
+   },
+   {
+    "first": 48,
+    "fourth": 20,
+    "reply": 60,
+    "s4_class_index": 16131,
+    "s4_mask": [
+     1154047404513693696,
+     64
+    ],
+    "third": 72,
+    "unknown_s5_children": 53
+   },
+   {
+    "first": 48,
+    "fourth": 72,
+    "reply": 60,
+    "s4_class_index": 16131,
+    "s4_mask": [
+     1154047404513693696,
+     64
+    ],
+    "third": 100,
+    "unknown_s5_children": 53
+   }
+  ]
+ },
+ "win_holders": {
+  "double_holders": [
+   16131
+  ],
+  "holder_union": [
+   4139,
+   5611,
+   6073,
+   16131
+  ],
+  "rows": {
+   "16131": {
+    "base_status": "unknown",
+    "base_unknown_now": 53,
+    "double_holder": true,
+    "holds_v001": true,
+    "holds_v002": true,
+    "scenario_status": "excluded_now",
+    "scenario_unknown_now": 51
+   },
+   "4139": {
+    "base_status": "unknown",
+    "base_unknown_now": 100,
+    "double_holder": false,
+    "holds_v001": true,
+    "holds_v002": false,
+    "scenario_status": "excluded_now",
+    "scenario_unknown_now": 99
+   },
+   "5611": {
+    "base_status": "unknown",
+    "base_unknown_now": 107,
+    "double_holder": false,
+    "holds_v001": false,
+    "holds_v002": true,
+    "scenario_status": "excluded_now",
+    "scenario_unknown_now": 106
+   },
+   "6073": {
+    "base_status": "unknown",
+    "base_unknown_now": 104,
+    "double_holder": false,
+    "holds_v001": false,
+    "holds_v002": true,
+    "scenario_status": "excluded_now",
+    "scenario_unknown_now": 103
+   }
+  },
+  "v001_s5_153671": [
+   4139,
+   16131
+  ],
+  "v002_s5_207534": [
+   5611,
+   6073,
+   16131
+  ]
+ },
+ "win_rows": [
+  {
+   "key": [
+    1154610354467115008,
+    64
+   ],
+   "key_id": "v001",
+   "nodes": 5656151,
+   "raw_2pass": {
+    "budget": 15000000,
+    "legal": 83,
+    "nodes": 5656151,
+    "result": 1,
+    "stones": 5
+   },
+   "result": 1,
+   "s5_index": 153671
+  },
+  {
+   "key": [
+    3459890413727387648,
+    64
+   ],
+   "key_id": "v002",
+   "nodes": 7898204,
+   "raw_2pass": {
+    "budget": 15000000,
+    "legal": 84,
+    "nodes": 7898204,
+    "result": 1,
+    "stones": 5
+   },
+   "result": 1,
+   "s5_index": 207534
+  }
+ ]
+}

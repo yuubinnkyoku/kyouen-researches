@@ -1,0 +1,50 @@
+# Part AO run status (single-owner lane host, 2026-11-22)
+# Read-only what-if decomposition; no solver search; verdicts NOT consumed.
+# Every doubled step below is a full independent re-execution on this host
+# from pinned published inputs, compared byte-for-byte.
+
+[maker run 1]
+increment-batch16-loss52-IFADOPTED-20261122.cache: 52 rows, sha256 95345a5b1484614940e133e042b005ccc5963df15ecb7e5651f092761aa8a7f0
+OK 52 probed rows -> 52 resolved LOSS (t001..t052), zero WIN, zero exhaustion, zero BASE overlap, quarantine 0, full==loss, all gates PASS
+
+[maker run 2]
+log byte-identical to run 1 (run1-maker.log == run2-maker.log, sha256 ee94a9ee1aff5f607cf7fbfb442bc90533e24449d84cd8035d99680972a1f17f);
+increment cache byte-identical (sha256 95345a5b1484614940e133e042b005ccc5963df15ecb7e5651f092761aa8a7f0)
+
+[union merge run 1]
+sha-pinned s5_union_merge.py (sha256 907119610034fb2aebfde012550a4129dfa3b086c6de11194e856747ac74606a, selftest PASS);
+BASE cache 6,027 rows (sha256 95e868d6762925b9a27ad963a825a9ad4fd5131a864eb82fac0db77d7acdb326) + increment 52 rows;
+WIN/LOSS conflicts 0; scenario cache 6,079 rows (WIN 158 / LOSS 5,921), sha256 342e86838e0c2bef915798059cb397f7c91e59c65426bf74db19530ecdd7979e;
+merge audit sha256 57bbddfcf57d66e91e67f07bf39e5ba813c1a57c2e29205e1cdce598b40c6b36
+
+[union merge run 2]
+audit and scenario cache byte-identical to run 1 (sha256 57bbddfc... / 342e8683... full values above)
+
+[scenario refresh run 1]
+adapted refresh script (sha256 fb84677614ef92583a3f1292e5875980cb60601fb9aec1d3a6eb0507dc4c6068; 5-hunk adapt of the
+pinned Part Y refresh script sha256 88671526...: docstring, scenario cache path, cache sha expectation, EXP/ROOT
+parents depth for the loss52/scripts placement); single process, serial (~60 s);
+refresh-summary.json sha256 7fd15927ab9bfd887fb450c8947eef2b64f53aab46610ea74ec9f8b92218e298
+closure-classes.csv sha256 7405699e183acea509e71e58dfc7c15904c675dff0b04518201484e72185041b
+per-root-coverage.csv sha256 ec52a56d6b6e7af6401698d59ec9f07e0628e02059240ff63f84913df09caa37
+probe-worklist.csv sha256 3b28ba59b60f41b82ee9a83bf111164ac87219cec44e4207e15a0fd6c1a72098 (NOT published, 3.7 MB, Part AH precedent)
+
+[scenario refresh run 2]
+same script, single process, serial; all four outputs byte-identical to run 1
+
+[delta extractor runs 1..3]
+scripts/compare_deltas_batch16.py re-executes the published refresh class pass from
+graph + update8 + scenario cache (including Board fail-closed child verification of
+every free candidate) and asserts class_status_counts, known-universe counts and
+per-root coverage equality with the published BASE (25987add...) and PLOSS52
+(7fd15927...) outputs before emitting any delta.
+run 1: OK decomp-deltas-batch16.json: flips=[] new_free=[10687] free_now 35->36 update8_resolved +1 joint_greedy 35242->38522 worklist 65154->65097 changed_rows=['central|16']
+run 2: byte-identical output (sha256 dd6a01eff4332d3744fa8d3e37cd352595325e8c154a2d0ca3a7ca34f7d76c50)
+run 3: byte-identical output (same sha256)
+
+# Interpretation guard: the PLOSS52 adoption is a what-if projection. The 52 LOSS
+# verdicts are NOT consumed (they are published Part AM evidence outside the
+# canonical cache). Class 10687 is NOT closed by this experiment; closure needs a
+# separate refresh re-run + independent audit under a new declaration. The standard
+# 11x11 empty board, the 19 central-reply roots and every class remain UNKNOWN.
+# Nodes are bookkeeping, never verdicts.

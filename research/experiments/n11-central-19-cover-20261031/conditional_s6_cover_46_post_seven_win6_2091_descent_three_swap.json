@@ -1,0 +1,37 @@
+{
+  "schema": "n11-central49-2097-to-2091-three-swap-v1",
+  "source_certificate": "conditional_s6_cover_46_post_seven_win6_2097_three_swap.json",
+  "source_selected_s6_sha256": "afb0f5458ff0dc8331edebe593b1073ff53de1d8b0d0b12c266e6057760395fe",
+  "steps": [
+    {
+      "removed": [
+        "00000000000000203800100008000000",
+        "00000000000000203801000002000000",
+        "00000000000002083800000000020000"
+      ],
+      "added": [
+        "00000000000000203800100002000000",
+        "00000000000000203801000000008000",
+        "00000000000002083800000008000000"
+      ],
+      "raw_s7_edges": 2984,
+      "distinct_s7_classes": 2091,
+      "secured_loss7_classes": 6
+    }
+  ],
+  "selected_s6_count": 46,
+  "s5_covered": 94,
+  "raw_s7_edges": 2984,
+  "distinct_s7_classes": 2091,
+  "saved_s7_classes": 6,
+  "terminal_backed_loss7_hits_from_k0644": 6,
+  "known_win6_conflicts": 0,
+  "known_win7_conflicts": 0,
+  "evidence_level": "GEOMETRY_ONLY_CONDITIONAL_COVER_WITH_TERMINAL_REPLAYED_S7_HITS",
+  "outcomes": {
+    "s6": "UNKNOWN",
+    "s4": "UNKNOWN",
+    "two_stone_root": "UNKNOWN",
+    "empty_board": "UNKNOWN"
+  }
+}

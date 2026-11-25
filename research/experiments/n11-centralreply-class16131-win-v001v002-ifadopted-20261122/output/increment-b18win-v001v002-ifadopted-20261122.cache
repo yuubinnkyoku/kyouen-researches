@@ -1,0 +1,11 @@
+# n11 central-reply batch-18 dual-WIN (v001/v002) if-adopted increment (Part BA, 2026-11-22)
+# published Part BA declaration (note amendment 2026-11-22, commit 607c876a;
+#   observed HEAD-before-push f8cc6c9d recorded in the declaration commit message).
+# IF-ADOPTED PROJECTION ONLY - the WIN rows are NOT consumed by this Part; the
+#   canonical cache (be9cb24e..., 6,120 rows) is untouched; adoption of v001/v002
+#   stays the scrutiny owner's call (C++ second-implementation gate 9193f5b6...).
+# gates: per-key 2-pass (p1/p2) node-exact, status.log WIN-HALT / WIN-ROW-DETAIL /
+#   EXECUTION-HALTED stop-row agreement, batch-keys (sha256 1bb3ed41) legal/(lo,hi)/
+#   s5_index agreement, ZERO BASE-cache overlap, quarantine 0, canonical-safe keys.
+s5verdict,1154610354467115008,64,5,1,5656151
+s5verdict,3459890413727387648,64,5,1,7898204

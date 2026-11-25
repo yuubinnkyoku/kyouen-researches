@@ -1,0 +1,154 @@
+{
+ "constraint_note": "the closure-classes ranking is a scheduling quantity and does NOT carry class status; in every packet scenario the ranked top-5 are the refuted quartet (16757/12264/20421/16371) plus 30345, and the first clean closure candidate is rank 6 (class 5473, unknown 51)",
+ "deltas_vs_base": {
+  "baseline_root27_free_thirds": {
+   "P17": 0,
+   "P21": 0,
+   "P24": 0,
+   "P25": 0,
+   "P4": 0
+  },
+  "excluded_now": {
+   "P17": 0,
+   "P21": 0,
+   "P24": 11,
+   "P25": 14,
+   "P4": 14
+  },
+  "free_now": {
+   "P17": 0,
+   "P21": 0,
+   "P24": 0,
+   "P25": 0,
+   "P4": 0
+  },
+  "joint_greedy_union_size": {
+   "P17": 1372,
+   "P21": 1368,
+   "P24": 1367,
+   "P25": 1367,
+   "P4": -1
+  },
+  "probe_worklist_total": {
+   "P17": -21,
+   "P21": -25,
+   "P24": -29,
+   "P25": -30,
+   "P4": -5
+  },
+  "unknown_classes": {
+   "P17": 0,
+   "P21": 0,
+   "P24": -11,
+   "P25": -14,
+   "P4": -14
+  },
+  "update8_remaining_now": {
+   "P17": -17,
+   "P21": -20,
+   "P24": -95,
+   "P25": -129,
+   "P4": -129
+  },
+  "update8_resolved_count": {
+   "P17": 17,
+   "P21": 20,
+   "P24": 22,
+   "P25": 23,
+   "P4": 3
+  },
+  "update8_win_hit_groups": {
+   "P17": 0,
+   "P21": 0,
+   "P24": 9,
+   "P25": 15,
+   "P4": 15
+  }
+ },
+ "erratum_note": "this decomposition RETRACTS the Part H mechanism attribution: the +1367 joint greedy increase is NOT dominated by f017's adoption; it is driven entirely by the 17 batch12264 LOSS rows (P17 alone +1372), while adopting all four WINs is plan-cost neutral (P4 -1). Per-root free coverage never changed in any scenario.",
+ "gates": {
+  "additivity_P4_plus_P21": "additive for 8 of 9 metrics; update8_remaining_now is the measured exception (overlap 20)",
+  "greedy_split": "joint +1367 == P17(+1372, the 17 batch12264 f-LOSS rows) + P4(-1, the four WINs are plan-cost neutral) + non-f-LOSS rows(-4); P24 == P25",
+  "loss_only_class_status_unchanged": "P17/P21 leave excluded/free/unknown at baseline (machine-verified)",
+  "per_root_free_coverage": "identical to baseline in all five scenarios (machine-verified)",
+  "rem8_overlap_measured": "delta(P4)+delta(P21)-delta(P25) == 20 (WIN-side resolutions subsume the LOSS-side remaining reduction)",
+  "win_driven_equality_P4_P25": "excluded_now/unknown/win-hit-groups/update8-remaining equal in P4 and P25 (WIN-driven)",
+  "win_hit_class_multisets": "as pinned (P4=P25 {12264:6,16757:5,20421:4}; P17=P21 {}; P24 {16757:5,20421:4})"
+ },
+ "interpretation_guard": "IF-ADOPTED what-if analysis only; no verdict consumed; no class/root/closure claim; 11x11 UNKNOWN",
+ "metric_table": {
+  "baseline_root27_free_thirds": {
+   "P17": 119,
+   "P21": 119,
+   "P24": 119,
+   "P25": 119,
+   "P4": 119,
+   "base": 119
+  },
+  "excluded_now": {
+   "P17": 23,
+   "P21": 23,
+   "P24": 34,
+   "P25": 37,
+   "P4": 37,
+   "base": 23
+  },
+  "free_now": {
+   "P17": 33,
+   "P21": 33,
+   "P24": 33,
+   "P25": 33,
+   "P4": 33,
+   "base": 33
+  },
+  "joint_greedy_union_size": {
+   "P17": 36989,
+   "P21": 36985,
+   "P24": 36984,
+   "P25": 36984,
+   "P4": 35616,
+   "base": 35617
+  },
+  "probe_worklist_total": {
+   "P17": 65192,
+   "P21": 65188,
+   "P24": 65184,
+   "P25": 65183,
+   "P4": 65208,
+   "base": 65213
+  },
+  "unknown_classes": {
+   "P17": 34503,
+   "P21": 34503,
+   "P24": 34492,
+   "P25": 34489,
+   "P4": 34489,
+   "base": 34503
+  },
+  "update8_remaining_now": {
+   "P17": 31821,
+   "P21": 31818,
+   "P24": 31743,
+   "P25": 31709,
+   "P4": 31709,
+   "base": 31838
+  },
+  "update8_resolved_count": {
+   "P17": 38,
+   "P21": 41,
+   "P24": 43,
+   "P25": 44,
+   "P4": 24,
+   "base": 21
+  },
+  "update8_win_hit_groups": {
+   "P17": 0,
+   "P21": 0,
+   "P24": 9,
+   "P25": 15,
+   "P4": 15,
+   "base": 0
+  }
+ },
+ "schema": "n11-central-reply-packet-win-vs-loss-decomposition-ifadopted-v1"
+}

@@ -1,0 +1,69 @@
+# n11 central-reply closure batch-36 (class 20421) 40-LOSS
+#   canonical-adoption increment (Part DZ, 2026-11-25).
+# The published batch-36 kit (Part DX probe drive) probed
+#   ALL 45 of 45 clean keys honest two-pass fresh-cold at budget
+#   15M: 40 LOSS (adopted here), 5 probe-level WIN
+#   {d008,d009,d021,d026,d029}, pre-registered WIN-HALT
+#   markers, consumed NOWHERE by this Part (scrutiny-owner C++
+#   gate 9193f5b6...), 0 EXHAUSTED, MISMATCH 0.  The batch-3
+#   (2026-11-22) honest-labeled unconsumed rows d001/d003 (LOSS)
+#   and d002 (WIN) of class 20421 stay unconsumed: their kit
+#   publishes no two-pass raws (adoption candidate for a later
+#   Part).  ONLY the 40 fresh LOSS rows are consumed into the
+#   canonical cache by this increment.
+# gates: kit MANIFEST sha-verified file-by-file (160 files);
+#   45 two-pass fresh-cold raw re-verification with
+#   '# replay_done' on both passes; (budget,result,nodes)
+#   agreement with the 50-line honest-history status pins;
+#   raw/batch-keys agreement on (legal,lo,hi) and
+#   (s5_index, membership_class_count); raw inventory == 90
+#   primaries and nothing else; val-gate node-exact across the
+#   published-baseline and dx-host outputs per molecule;
+#   adopted keys distinct, absent from BASE 23d40e36... (6,573
+#   rows, WIN 158 / LOSS 6,415) and from the quarantine
+#   registry; adopted per-pass node total 159499387 (all-45
+#   total 183921575).
+# Loss-only adoption asserts no root verdict; any class-20421
+#   scheduling effect is derived only by the reaudit refresh
+#   (Board fail-closed child verification).  11x11 stays
+#   UNKNOWN; nodes are bookkeeping, never verdicts.
+s5verdict,1153062242096250880,532480,5,2,3825579
+s5verdict,1153062242096250880,557056,5,2,2780990
+s5verdict,1153062242096250880,589824,5,2,968369
+s5verdict,1153062242096250880,17301504,5,2,1966996
+s5verdict,1153062242096250880,34078720,5,2,3664311
+s5verdict,1153062242096250880,67633152,5,2,2430527
+s5verdict,1153062242096250880,34360262656,5,2,4747380
+s5verdict,1155173304420536320,131073,5,2,2448235
+s5verdict,1155173304420536320,131584,5,2,2879174
+s5verdict,1155173304420536320,132096,5,2,3604850
+s5verdict,1155173304420536320,133120,5,2,3676924
+s5verdict,1155173304420536320,135168,5,2,4654637
+s5verdict,1155173304420536321,131072,5,2,2953291
+s5verdict,1155173304420536322,131072,5,2,2289816
+s5verdict,1155173304420536324,131072,5,2,7013481
+s5verdict,1155173304420536352,131072,5,2,2835651
+s5verdict,1155173304420536384,131072,5,2,3483061
+s5verdict,1155173304420536448,131072,5,2,6414338
+s5verdict,1155173304420536576,131072,5,2,4904993
+s5verdict,1155173304420536832,131072,5,2,5262509
+s5verdict,1155173304420537344,131072,5,2,4464813
+s5verdict,1155173304420552704,131072,5,2,1536412
+s5verdict,1155173304420569088,131072,5,2,5099461
+s5verdict,1155173304420601856,131072,5,2,2497042
+s5verdict,1155173304420798464,131072,5,2,6935869
+s5verdict,1155173304421584896,131072,5,2,2907985
+s5verdict,1155173304422633472,131072,5,2,9671556
+s5verdict,1155173304437313536,131072,5,2,4633293
+s5verdict,1155173304454090752,131072,5,2,2213835
+s5verdict,1155173304688971776,131072,5,2,4830084
+s5verdict,1155173304957407232,131072,5,2,4395429
+s5verdict,1155173306568019968,131072,5,2,6359951
+s5verdict,1155173308715503616,131072,5,2,3794414
+s5verdict,1155173373140013056,131072,5,2,2928981
+s5verdict,1155173854176350208,131072,5,2,1533976
+s5verdict,1155175503443791872,131072,5,2,4682372
+s5verdict,1155177702467047424,131072,5,2,3080674
+s5verdict,1155182100513558528,131072,5,2,5818726
+s5verdict,1164180503675277312,131072,5,2,5763753
+s5verdict,1173187702930018304,131072,5,2,3545649

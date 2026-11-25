@@ -1,0 +1,126 @@
+{
+  "schema": "n11-central49-conditional46-low-remote-balanced-s7-ownership-v1",
+  "source_plan": "conditional_s6_cover_46_balanced_s7_ownership_2309.json",
+  "source_certificate": "conditional_s6_cover_46_distinct_s7_2309.json",
+  "worker_index_by_sorted_s6": [
+    3,
+    3,
+    0,
+    3,
+    1,
+    3,
+    1,
+    0,
+    3,
+    2,
+    2,
+    2,
+    2,
+    1,
+    0,
+    0,
+    2,
+    0,
+    3,
+    0,
+    0,
+    1,
+    0,
+    2,
+    2,
+    2,
+    2,
+    3,
+    0,
+    3,
+    0,
+    2,
+    1,
+    0,
+    1,
+    3,
+    2,
+    1,
+    1,
+    3,
+    3,
+    1,
+    0,
+    1,
+    1,
+    1
+  ],
+  "owner_policy": "canonical_s7_sorted_per_worker_pair__frozen_quota_to_lower_worker_then_higher_worker",
+  "shared_s7_pair_quotas": {
+    "0-1": [
+      57,
+      0
+    ],
+    "0-2": [
+      62,
+      112
+    ],
+    "0-3": [
+      50,
+      2
+    ],
+    "1-2": [
+      0,
+      75
+    ],
+    "1-3": [
+      24,
+      0
+    ],
+    "2-3": [
+      64,
+      0
+    ]
+  },
+  "baseline_balanced": {
+    "worker_owned_s7": [
+      578,
+      577,
+      577,
+      577
+    ],
+    "cross_worker_s7_dependencies": 482
+  },
+  "low_remote_balanced": {
+    "worker_s6_counts": [
+      12,
+      12,
+      11,
+      11
+    ],
+    "worker_raw_loads": [
+      758,
+      722,
+      743,
+      721
+    ],
+    "worker_exclusive_s7": [
+      409,
+      553,
+      326,
+      575
+    ],
+    "worker_owned_s7": [
+      578,
+      577,
+      577,
+      577
+    ],
+    "cross_worker_s7_dependencies": 446,
+    "within_worker_shared_s7": 189,
+    "distinct_s7": 2309
+  },
+  "evidence_level": "GEOMETRY_ONLY_CONDITIONAL_PROOF_SCHEDULING_NOT_VERDICTS",
+  "outcomes": {
+    "s6": "UNKNOWN",
+    "s4": "UNKNOWN",
+    "two_stone_root": "UNKNOWN",
+    "empty_board": "UNKNOWN"
+  },
+  "caveat": "Feasible constructive four-worker partition and deterministic ownership routing. 36 fewer cross-worker S7 dependencies at the same exact 578 max owner load; no claim of globally minimal communication, solver speedup, or S6 game verdict."
+}

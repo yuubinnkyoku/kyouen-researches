@@ -1,0 +1,28 @@
+{
+ "schema": "batch13-ifadopted-increments-manifest-v1",
+ "batch": 13,
+ "class_index": 16930,
+ "win_ids": [
+  "p002",
+  "p003"
+ ],
+ "resolved_ids": [
+  "p001",
+  "p002",
+  "p003",
+  "p004"
+ ],
+ "row_counts": {
+  "rows": 4,
+  "wins": 2,
+  "losses": 2
+ },
+ "sha256": {
+  "win": "bb238f67dbfcc3b9a05ac5542f783107366777f17149f7a5a5af64d4864b0f7c",
+  "loss": "50c09a06bd247a72333bb3b9283b2ca53805842a59e5afd970e927531a852844",
+  "all": "3a8bcb11453467af7e0ee8b2bf162f321048dfe96c564697a5e34666dddbf60e"
+ },
+ "base_cache_absent_hits": 0,
+ "quarantine_hits": 0,
+ "interpretation_guard": "read-only what-if IF-ADOPTED analysis inputs; verdicts NOT consumed; 11x11 stays UNKNOWN; nodes are bookkeeping, never verdicts"
+}

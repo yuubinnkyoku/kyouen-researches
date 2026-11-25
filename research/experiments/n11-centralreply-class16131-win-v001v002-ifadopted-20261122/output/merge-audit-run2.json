@@ -1,0 +1,32 @@
+{
+ "tool": "s5_union_merge.py",
+ "fail_closed_gates": "strict 6-field row schema, depth==5, verdict in {1,2}, WIN/LOSS conflict abort (no output), first-occurrence nodes",
+ "inputs": [
+  {
+   "file": "/home/user/work/ba/repo/research/experiments/n11-centralreply-class23101-loss41-adoption-reaudit-20261122/output/merged-exact-s5-chain-plus-closure-increment-plus-batch10-plus-batch16loss52-plus-batch14loss41-20261122.cache",
+   "sha256": "be9cb24e899fbe93db51e415320c50fa733e378748bb7a41fe13fd7b22f06685",
+   "rows": 6120,
+   "unique_new": 6120
+  },
+  {
+   "file": "output/increment-b18win-v001v002-ifadopted-20261122.cache",
+   "sha256": "4f8fc29bfd00492aa9a983f20a121737d395b8f80d53e2b04c271fec068bc1ee",
+   "rows": 2,
+   "unique_new": 2
+  }
+ ],
+ "unique_rows": 6122,
+ "duplicate_rows_elided": 0,
+ "verdict_counts": {
+  "WIN(1)": 160,
+  "LOSS(2)": 5962
+ },
+ "nodes_field_mismatches_recorded": [],
+ "comments_kept_from_first_input": [
+  "# S5 solver-trusted exact; base=merged-exact-s5-after-js-probe-13.cache (sha256 60e0dc3476920d4e...); increment=101 fresh rows (99 canonical S5 children of S4 1297036692683752448:0 absent from the chain, 2 unclaimed backward-only rows, 1 S6-witness-derived TARGET_S5 row nodes=0); see merge-manifest.json"
+ ],
+ "output_sha256": "6bfa9faa1dec17cfb827a50668e84f289ffcc7dcb115591fc3280293b1f0f0b6",
+ "output_bytes": 251556,
+ "row_format": "s5verdict,<lo>,<hi>,5,<verdict>,<nodes>",
+ "interpretation_guard": "nodes are bookkeeping, never verdicts; merge of solver-trusted cache rows; no new verdict is created; 11x11 root questions remain UNKNOWN"
+}

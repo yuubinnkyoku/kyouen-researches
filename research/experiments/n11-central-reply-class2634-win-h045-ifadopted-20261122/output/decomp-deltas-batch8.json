@@ -1,0 +1,388 @@
+{
+ "schema": "n11-class2634-batch8-decomp-deltas-v1",
+ "interpretation_guard": "read-only what-if IF-ADOPTED planning deltas; verdicts NOT consumed; scheduling quantities only; 11x11 empty board and all roots stay UNKNOWN",
+ "recompute_gates": "class statuses, free-candidate board verification and all class_status_counts re-executed from graph+update8+cache and asserted equal to the published summaries for BASE and all three scenarios before any delta was emitted",
+ "h045": {
+  "s5_index": 103558,
+  "increment_row": "s5verdict,4035225266258182144,64,5,1,6366900",
+  "graph_cost_child_holder_classes": [
+   2634,
+   5632
+  ],
+  "holder_graph_statuses": {
+   "2634": 1,
+   "5632": 1
+  },
+  "holder_base_remaining_unknown_sizes": {
+   "2634": 51,
+   "5632": 102
+  },
+  "peer_holder_remaining_s5": {
+   "5632": [
+    103558,
+    119138,
+    119203,
+    120400,
+    120632,
+    124797,
+    124895,
+    126284,
+    126286,
+    130337,
+    130410,
+    131699,
+    131928,
+    135758,
+    135816,
+    137126,
+    137338,
+    140954,
+    141029,
+    142367,
+    142547,
+    148114,
+    148183,
+    149415,
+    149646,
+    152419,
+    153645,
+    153856,
+    153862,
+    156645,
+    156700,
+    157896,
+    158089,
+    160829,
+    160889,
+    162176,
+    162387,
+    164927,
+    164999,
+    166245,
+    166434,
+    170555,
+    170611,
+    171852,
+    172069,
+    174192,
+    174255,
+    175438,
+    175664,
+    177402,
+    177461,
+    178555,
+    178788,
+    180504,
+    180534,
+    181698,
+    181905,
+    183492,
+    183569,
+    184889,
+    184896,
+    186379,
+    186449,
+    187655,
+    187882,
+    189205,
+    189258,
+    190462,
+    190688,
+    191864,
+    191901,
+    193093,
+    193315,
+    194218,
+    194254,
+    195621,
+    196464,
+    196515,
+    197886,
+    199436,
+    199489,
+    200753,
+    200980,
+    201396,
+    201448,
+    202755,
+    202991,
+    203387,
+    203395,
+    204795,
+    205145,
+    206335,
+    206551,
+    206843,
+    206876,
+    206962,
+    207012,
+    207042,
+    207138,
+    208173,
+    208174,
+    208175
+   ]
+  },
+  "exclusion_note": "per the published refresh semantics a baseline UNKNOWN class with any WIN cost child becomes excluded_now regardless of remaining unknown children; the WIN-only flips therefore include class 2634 itself (51 -> 50 unknown) and its single peer holder",
+  "membership_class_count": 2,
+  "batch8_win_row": "h045 (probe_order 325, 2-pass node-exact, nodes 6366900, WIN-HALT pre-registered rule)"
+ },
+ "h002_note": "budget-exhaustion UNKNOWN row (s5 11390, 15M, result 0) is excluded from every increment; not a verdict; not re-searched here",
+ "excluded_now_flips": {
+  "PW045": [
+   2634,
+   5632
+  ],
+  "PLOSS43": [],
+  "PFULL44": [
+   2634,
+   5632
+  ],
+  "win_only_pf44_minus_ploss43": [
+   2634,
+   5632
+  ],
+  "all_equal_membership_count_2": true
+ },
+ "class2634_unknown_now": {
+  "base": 51,
+  "PW045": 50,
+  "PLOSS43": 8,
+  "PFULL44": 7,
+  "full_equals_win_plus_loss": true
+ },
+ "update8_resolved_delta": {
+  "PW045": {
+   "newly_resolved_s5": [
+    103558
+   ],
+   "count": 1
+  },
+  "PLOSS43": {
+   "newly_resolved_s5": [
+    5299,
+    17131,
+    22726,
+    28026,
+    30697,
+    35113,
+    39323,
+    44195,
+    48403,
+    52487,
+    54877,
+    57818,
+    61535,
+    68710,
+    74525,
+    77496,
+    80293,
+    88503,
+    90823,
+    93116,
+    102681,
+    102752,
+    102798,
+    102834,
+    102879,
+    102927,
+    102966,
+    103007,
+    103067,
+    103100,
+    103140,
+    103189,
+    103225,
+    103284,
+    103300,
+    103332,
+    103364,
+    103400,
+    103430,
+    103466,
+    103497,
+    103531,
+    103557
+   ],
+   "count": 43
+  },
+  "PFULL44": {
+   "newly_resolved_s5": [
+    5299,
+    17131,
+    22726,
+    28026,
+    30697,
+    35113,
+    39323,
+    44195,
+    48403,
+    52487,
+    54877,
+    57818,
+    61535,
+    68710,
+    74525,
+    77496,
+    80293,
+    88503,
+    90823,
+    93116,
+    102681,
+    102752,
+    102798,
+    102834,
+    102879,
+    102927,
+    102966,
+    103007,
+    103067,
+    103100,
+    103140,
+    103189,
+    103225,
+    103284,
+    103300,
+    103332,
+    103364,
+    103400,
+    103430,
+    103466,
+    103497,
+    103531,
+    103557,
+    103558
+   ],
+   "count": 44
+  }
+ },
+ "metrics": {
+  "excluded_now": {
+   "base": 23,
+   "PW045": 25,
+   "PLOSS43": 23,
+   "PFULL44": 25
+  },
+  "free_now": {
+   "base": 34,
+   "PW045": 34,
+   "PLOSS43": 34,
+   "PFULL44": 34
+  },
+  "unknown_classes": {
+   "base": 34502,
+   "PW045": 34500,
+   "PLOSS43": 34502,
+   "PFULL44": 34500
+  },
+  "update8_remaining_now": {
+   "base": 31836,
+   "PW045": 31786,
+   "PLOSS43": 31793,
+   "PFULL44": 31785
+  },
+  "update8_resolved_count": {
+   "base": 23,
+   "PW045": 24,
+   "PLOSS43": 66,
+   "PFULL44": 67
+  },
+  "update8_win_hit_groups": {
+   "base": 0,
+   "PW045": 1,
+   "PLOSS43": 0,
+   "PFULL44": 1
+  },
+  "joint_greedy_union_size": {
+   "base": 35857,
+   "PW045": 35856,
+   "PLOSS43": 34906,
+   "PFULL44": 34906
+  },
+  "probe_worklist_total": {
+   "base": 65155,
+   "PW045": 65154,
+   "PLOSS43": 65110,
+   "PFULL44": 65109
+  },
+  "baseline_root27_free_thirds": {
+   "base": 119,
+   "PW045": 119,
+   "PLOSS43": 119,
+   "PFULL44": 119
+  }
+ },
+ "additivity_measured": {
+  "excluded_now": {
+   "win_delta": 2,
+   "loss_delta": 0,
+   "full_delta": 2,
+   "full_eq_win_plus_loss": true
+  },
+  "free_now": {
+   "win_delta": 0,
+   "loss_delta": 0,
+   "full_delta": 0,
+   "full_eq_win_plus_loss": true
+  },
+  "unknown_classes": {
+   "win_delta": -2,
+   "loss_delta": 0,
+   "full_delta": -2,
+   "full_eq_win_plus_loss": true
+  },
+  "update8_remaining_now": {
+   "win_delta": -50,
+   "loss_delta": -43,
+   "full_delta": -51,
+   "full_eq_win_plus_loss": false
+  },
+  "update8_resolved_count": {
+   "win_delta": 1,
+   "loss_delta": 43,
+   "full_delta": 44,
+   "full_eq_win_plus_loss": true
+  },
+  "update8_win_hit_groups": {
+   "win_delta": 1,
+   "loss_delta": 0,
+   "full_delta": 1,
+   "full_eq_win_plus_loss": true
+  },
+  "joint_greedy_union_size": {
+   "win_delta": -1,
+   "loss_delta": -951,
+   "full_delta": -951,
+   "full_eq_win_plus_loss": false
+  },
+  "probe_worklist_total": {
+   "win_delta": -1,
+   "loss_delta": -45,
+   "full_delta": -46,
+   "full_eq_win_plus_loss": true
+  },
+  "baseline_root27_free_thirds": {
+   "win_delta": 0,
+   "loss_delta": 0,
+   "full_delta": 0,
+   "full_eq_win_plus_loss": true
+  }
+ },
+ "per_root_free_coverage_gate": {
+  "PW045": {
+   "identical_to_base": true
+  },
+  "PLOSS43": {
+   "identical_to_base": true
+  },
+  "PFULL44": {
+   "identical_to_base": true
+  }
+ },
+ "excluded_now_counts": {
+  "BASE": 23,
+  "PW045": 25,
+  "PLOSS43": 23,
+  "PFULL44": 25
+ }
+}

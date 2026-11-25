@@ -1,0 +1,15 @@
+{
+  "schema": "n11-central49-priority-s4-exact-s6-edge-balance-v1",
+  "root_stones": [49, 60],
+  "focus_s4": "00000000000000003800800000000000",
+  "root_outcome": "UNKNOWN",
+  "empty_board_outcome": "UNKNOWN",
+  "assignment_by_sorted_s5": "2023112033312032322223121102311200001223331120021120323322033113003102100310203011201311300031",
+  "worker_s5_counts": [24, 24, 23, 23],
+  "old_worker_s6_edges": [2021, 1998, 1909, 1962],
+  "balanced_worker_s6_edges": [1973, 1972, 1972, 1973],
+  "total_s6_edges": 7890,
+  "max_load_lower_bound": 1973,
+  "objective": "Minimize maximum sum of legal raw sixth moves across four workers; no solver-runtime claim",
+  "evidence_level": "SCHEDULING_ONLY_NOT_A_CERTIFICATE"
+}

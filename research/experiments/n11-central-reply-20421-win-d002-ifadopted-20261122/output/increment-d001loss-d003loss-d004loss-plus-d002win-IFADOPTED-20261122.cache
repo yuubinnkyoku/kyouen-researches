@@ -1,0 +1,11 @@
+# n11 central-reply closure batch 3 (class 20421) IF-ADOPTED increment (2026-11-22)
+# 4 rows: 2-pass node-exact exact-S5 verdicts at budget 15M, fresh cold, pinned jsreplay.js
+#   sha256 845856175d3c793a7eb4306f5902ecda3f1c046a8a53e8f34ed375e51febc3df
+#   d001 LOSS 879,510 nodes; d003 LOSS 2,113,678 nodes; d004 LOSS 11,969,338 nodes
+#   d002 result 1 (WIN) 5,359,994 nodes - WIN is NOT consumed by the lane (scrutiny owner
+#   pending); this increment exists ONLY for the if-adopted what-if analysis.
+# experiment: research/experiments/n11-centralreply-closure-class20421-batch-20261122/
+s5verdict,1155173304554754048,131072,5,2,879510
+s5verdict,1155173579298443264,131072,5,2,2113678
+s5verdict,5766859322847924224,131072,5,2,11969338
+s5verdict,3461016313634230272,131072,5,1,5359994

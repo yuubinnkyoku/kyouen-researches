@@ -1,0 +1,17 @@
+n11 central-reply canonical S5 chain integrity - independent TS audit drive-2 (Part DD, 2026-11-24)
+extension waypoint: CU (6,317 rows, 30ddad9d...) -> DB (6,354 rows, 04b0a239...) [batch-29 37-LOSS adoption]
+executor: sandboxed TypeScript, GitHub contents API channel only; no Python, no native host, no solver reruns
+ALL_GATES: PASS
+
+chain: CU subset DB (subsetBad 0, 0 keys lost), delta 37 keys == increment-b29loss37-20261124 exactly
+delta verdicts: all 37 rows LOSS (WIN count unchanged at 158 -> probe-level WIN ab028 stays unconsumed/absent)
+increment rows match DB on every key (verdict AND nodes); no increment key already in base
+nodes sum: 159325566 == manifest total_nodes_pass_one 159325566
+DB rows 6354 (WIN 158 / LOSS 6196) == published figures; 0 conflicts, 0 bad rows
+quarantine: 2 active keys, present in DB: none
+pins: DB cache == DB MANIFEST register (04b0a239...), DB manifest base_cache_sha256 == CU pin (30ddad9d...),
+       DB increment sha == manifest field, merger pin 90711961... confirmed, CU cache re-pinned == drive-1 value
+git-blob channel: recomputed == reported for every fetched file; ASCII-only confirmed
+
+NOT verified here: game-search reruns, canonical-geometry checks, class statuses/coverage, verdict consumption.
+The standard 11x11 empty board and all 19 central-reply roots stay UNKNOWN.

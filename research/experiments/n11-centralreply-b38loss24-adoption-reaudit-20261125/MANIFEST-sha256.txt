@@ -1,0 +1,17 @@
+# MANIFEST-sha256: research/experiments/n11-centralreply-b38loss24-adoption-reaudit-20261125 (b38loss24 loss-only canonical adoption + reaudit, Part EM) 2026-11-25
+# README.md self-excluded per convention; MANIFEST self-excluded; every other published file in this experiment dir is byte-pinned below (sha256 over the exact published bytes); all 14 pins re-verified against raw-CDN fetch-back at main HEAD 2c03af4e before authoring this MANIFEST; publication chain: wave A declaration log (4e3185b7) / wave B kit (98b4bfb7) / wave C1 merged chain head (ff2a3836) / wave C2 increment + manifest + merge-audits (3c174ef2) / wave D refresh script (c56cb936) + reaudit outputs (c7b24ce4) / wave E extractor + decomp (2c03af4e)
+# reaudit/output/probe-worklist.csv is NOT published (3,719,664 B, size policy): regen pin sha256 b4d16b7f21b0f0bc92e6a1022211327f6d3e153f015630f40e9e1f9315cee488 (regenerable by anyone from the published refresh fork reaudit/scripts/refresh_adoption_em.py against cache pin b5be64e6...; refresh 3x + extractor 2x reruns regenerated it byte-identical)
+c787472af13275ec31c73b58c9daeeeb181c4576f9d003c85ebce4456e6d2b34  research/experiments/n11-centralreply-b38loss24-adoption-reaudit-20261125/scripts/make_increments_em_adoption.py
+907119610034fb2aebfde012550a4129dfa3b086c6de11194e856747ac74606a  research/experiments/n11-centralreply-b38loss24-adoption-reaudit-20261125/scripts/s5_union_merge.py
+3c6326618944b4c18d37e1fe6cad470b53e712592fe7a19d7190f44f5a26bed4  research/experiments/n11-centralreply-b38loss24-adoption-reaudit-20261125/output/increment-b38loss24-20261125.cache
+ac5649f809eeaf373a0b064f9f2bf8ad025e4b8e5bd9a89a49d3c7c095abf394  research/experiments/n11-centralreply-b38loss24-adoption-reaudit-20261125/output/increments-manifest.json
+4a877e17881e0aac0ca46a6aa4124b428ee69e45016320e2762c41adcb3c4ad8  research/experiments/n11-centralreply-b38loss24-adoption-reaudit-20261125/output/merge-audit-run1.json
+4a877e17881e0aac0ca46a6aa4124b428ee69e45016320e2762c41adcb3c4ad8  research/experiments/n11-centralreply-b38loss24-adoption-reaudit-20261125/output/merge-audit-run2.json
+4a877e17881e0aac0ca46a6aa4124b428ee69e45016320e2762c41adcb3c4ad8  research/experiments/n11-centralreply-b38loss24-adoption-reaudit-20261125/output/merge-audit-run3.json
+b5be64e6b96af435ab589caced29273bab765085ba13c3033e897de13fab636c  research/experiments/n11-centralreply-b38loss24-adoption-reaudit-20261125/output/merged-exact-s5-chain-plus-b38loss24-20261125.cache
+2d6ae570ddc64b1873e8ffe2b9b7e9821a660dd9ff73bb4697bda3076eba48c5  research/experiments/n11-centralreply-b38loss24-adoption-reaudit-20261125/scripts/compare_deltas_em_adoption.py
+cd8bbf898772ad5711c058dc3e515e88507f645d6c2e18f05c0c486d98c523df  research/experiments/n11-centralreply-b38loss24-adoption-reaudit-20261125/output/decomp-deltas-b38loss24-adoption.json
+baf9cbde6aa49949eb5a9668134dd3d6cfad7aee057ad61ea0a631b686a0ef78  research/experiments/n11-centralreply-b38loss24-adoption-reaudit-20261125/reaudit/scripts/refresh_adoption_em.py
+bacf6a6848aa7cd857ed708f8bd908942d68f6d1b9068e6996cfd3cf41838f29  research/experiments/n11-centralreply-b38loss24-adoption-reaudit-20261125/reaudit/output/refresh-summary.json
+93a6889772544bb26d2c1542e1c1487787c1d05934ca9d3a18f1c969f24241f1  research/experiments/n11-centralreply-b38loss24-adoption-reaudit-20261125/reaudit/output/closure-classes.csv
+bce9f8f1ac2a3c2caa3e7534041f6825263626fa03822f991521c6000e06838d  research/experiments/n11-centralreply-b38loss24-adoption-reaudit-20261125/reaudit/output/per-root-coverage.csv

@@ -1,0 +1,94 @@
+{
+ "schema": "n11-joint-5win-adoption-decomp-deltas-v1",
+ "interpretation_guard": "read-only what-if IF-ADOPTED planning deltas of the 5 unconsumed closure WINs (b018/d002/e002/f017/g018) and their batch LOSS rows; verdicts NOT consumed; scheduling quantities only; 11x11 stays UNKNOWN",
+ "inputs": {
+  "P25_merged_cache_sha256": "88ef4388d727bf1b1da8a9a1be350479ab481870ff2dae2d34f6f70c6d892a9a",
+  "packet25_increment_sha256": "d49e28245dbaab43cdc815fa96d14714ff8e71d629483ddc095a3b7f5b7577db",
+  "p4_wins_only_increment_sha256": "0ff6ec7f3cdcd0b1b34215e12757cf5beb7b38eb0722194e118d7455eeef5f65",
+  "batch6_18row_increment_sha256": "39adfc2dcfb358075bb8ccebbedd3be9bc6ce5c1a31cf74d477d17e91b97cee0",
+  "batch6_win_g018_increment_sha256": "9579a522301fa30353bc788478a5e30469f9f71999de52eda198bcaa876dbbfb",
+  "canonical_cache_sha256": "8a721a1875e140fa1a5d179857e9fbc562111fbda821cf31d20cff2ca928b419"
+ },
+ "scenarios": {
+  "PJ5WIN": {
+   "schema": "n11-joint5win-ifadopted-metrics-v1",
+   "source": "pj5win/output/refresh-summary.json",
+   "excluded_now": 41,
+   "free_now": 33,
+   "unknown": 34485,
+   "u8_remaining": 31658,
+   "u8_resolved": 25,
+   "u8_winhit": 19,
+   "winhit_classes": {
+    "12264": 6,
+    "20421": 4,
+    "5473": 4,
+    "16757": 5
+   },
+   "greedy": 35616,
+   "worklist": 65207,
+   "root27_119": 119,
+   "per_root_remaining": {
+    "0": 11522,
+    "1": 12465,
+    "12": 10859,
+    "13": 12010,
+    "14": 12001,
+    "15": 12228,
+    "16": 11250,
+    "2": 12112,
+    "24": 11197,
+    "25": 11927,
+    "26": 11587,
+    "3": 12179,
+    "36": 11169,
+    "37": 11866,
+    "38": 10776,
+    "4": 12164,
+    "48": 10905,
+    "49": 10816,
+    "5": 10597
+   }
+  },
+  "PJ5FULL": {
+   "schema": "n11-joint5win-ifadopted-metrics-v1",
+   "source": "pj5full/output/refresh-summary.json",
+   "excluded_now": 41,
+   "free_now": 33,
+   "unknown": 34485,
+   "u8_remaining": 31658,
+   "u8_resolved": 62,
+   "u8_winhit": 19,
+   "winhit_classes": {
+    "12264": 6,
+    "20421": 4,
+    "5473": 4,
+    "16757": 5
+   },
+   "greedy": 36984,
+   "worklist": 65163,
+   "root27_119": 119,
+   "per_root_remaining": {
+    "0": 11522,
+    "1": 12465,
+    "12": 10859,
+    "13": 12010,
+    "14": 12001,
+    "15": 12228,
+    "16": 11250,
+    "2": 12112,
+    "24": 11197,
+    "25": 11927,
+    "26": 11587,
+    "3": 12179,
+    "36": 11169,
+    "37": 11866,
+    "38": 10776,
+    "4": 12164,
+    "48": 10905,
+    "49": 10816,
+    "5": 10597
+   }
+  }
+ }
+}

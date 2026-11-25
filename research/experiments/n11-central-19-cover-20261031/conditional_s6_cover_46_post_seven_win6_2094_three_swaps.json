@@ -1,0 +1,52 @@
+{
+  "schema": "n11-central49-2154-to-2094-two-three-swaps-v1",
+  "source_certificate": "conditional_s6_cover_46_post_seven_win6_2154_swaps.json",
+  "source_selected_s6_sha256": "49a95ddc351d761a4b6906c84c1a97daa9c7eb65a610e67d1b70c946889c42f4",
+  "steps": [
+    {
+      "removed": [
+        "00000000000000203801000000008000",
+        "00000000000000203820000002000000",
+        "00000000000000283800000008000000"
+      ],
+      "added": [
+        "00000000000000203800000008008000",
+        "00000000000000203801000002000000",
+        "00000000000000203828000000000000"
+      ],
+      "raw_s7_edges": 2991,
+      "distinct_s7_classes": 2098,
+      "secured_loss7_classes": 6
+    },
+    {
+      "removed": [
+        "00000000000000203800000008008000",
+        "00000000000000603800000040000000",
+        "00000000000002083800000002000000"
+      ],
+      "added": [
+        "00000000000000203800000060000000",
+        "00000000000000603800000000008000",
+        "00000000000002083800000008000000"
+      ],
+      "raw_s7_edges": 2987,
+      "distinct_s7_classes": 2094,
+      "secured_loss7_classes": 6
+    }
+  ],
+  "selected_s6_count": 46,
+  "s5_covered": 94,
+  "raw_s7_edges": 2987,
+  "distinct_s7_classes": 2094,
+  "saved_s7_classes": 60,
+  "terminal_backed_loss7_hits_from_k0644": 6,
+  "known_win6_conflicts": 0,
+  "known_win7_conflicts": 0,
+  "evidence_level": "GEOMETRY_ONLY_CONDITIONAL_COVER_WITH_TERMINAL_REPLAYED_S7_HITS",
+  "outcomes": {
+    "s6": "UNKNOWN",
+    "s4": "UNKNOWN",
+    "two_stone_root": "UNKNOWN",
+    "empty_board": "UNKNOWN"
+  }
+}

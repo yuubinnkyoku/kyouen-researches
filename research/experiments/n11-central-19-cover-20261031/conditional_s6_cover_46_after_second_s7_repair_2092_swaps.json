@@ -1,0 +1,70 @@
+{
+  "schema": "n11-central49-post-second-terminal-four-two-swap-v1",
+  "source": "conditional_s6_cover_46_after_second_s7_repair_2207.json",
+  "source_selected_s6_sha256": "0392c0eeeb827f9cde0bc000f65b544d19e002ca77d500a1cc712468466f44f3",
+  "final_selected_s6_sha256": "afb2a19dc297e87b4d803526277b08f0f9be8c69f533bd02d318865a9533b8f8",
+  "steps": [
+    {
+      "removed": [
+        "00000000000000203820000000080000",
+        "00000000000000283800000008000000"
+      ],
+      "added": [
+        "00000000000000203800000008080000",
+        "00000000000000203828000000000000"
+      ],
+      "raw_s7_edges": 2995,
+      "distinct_s7": 2152
+    },
+    {
+      "removed": [
+        "00000000000000203800400001000000",
+        "00000000000880801002000040000000"
+      ],
+      "added": [
+        "00000000000000203800400002000000",
+        "00000000000000203808000001000000"
+      ],
+      "raw_s7_edges": 3002,
+      "distinct_s7": 2104
+    },
+    {
+      "removed": [
+        "00000000000000203800400002000000",
+        "00000000020000801002002080000000"
+      ],
+      "added": [
+        "00000000000000203800400000002000",
+        "00000000000880801002000080000000"
+      ],
+      "raw_s7_edges": 2992,
+      "distinct_s7": 2094
+    },
+    {
+      "removed": [
+        "0000000000000000380c200000000000",
+        "00000000000000203800010040000000"
+      ],
+      "added": [
+        "00000000000000603800000040000000",
+        "00000000000002083800001000000000"
+      ],
+      "raw_s7_edges": 2989,
+      "distinct_s7": 2092
+    }
+  ],
+  "selected_s6": 46,
+  "s5_covered": 94,
+  "raw_s7_edges": 2989,
+  "distinct_s7": 2092,
+  "distinct_s7_saved": 115,
+  "known_win6_conflicts": 0,
+  "known_win7_conflicts": 0,
+  "evidence_level": "GEOMETRY_ONLY_CONDITIONAL_S6_LOSS_WITNESS_COVER_NOT_VERDICTS",
+  "outcomes": {
+    "selected_s6": "UNKNOWN",
+    "s4": "UNKNOWN",
+    "two_stone_root": "UNKNOWN",
+    "empty_board": "UNKNOWN"
+  }
+}

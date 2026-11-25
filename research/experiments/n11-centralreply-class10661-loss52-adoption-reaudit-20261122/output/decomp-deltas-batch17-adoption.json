@@ -1,0 +1,1540 @@
+{
+ "batch_keys": {
+  "adopted_loss": 52,
+  "batch_class": 10661,
+  "batch_groups_served": [
+   [
+    24,
+    30
+   ],
+   [
+    24,
+    90
+   ]
+  ],
+  "class_mask": [
+   1152921505697431552,
+   0
+  ],
+  "cost_children_total": 53,
+  "count": 52,
+  "unadopted_win": 0
+ },
+ "changed_per_root_coverage_rows": {
+  "central|24": {
+   "base": {
+    "free_now": 10,
+    "uncovered": 109
+   },
+   "free_delta": 2,
+   "individual_greedy_union": {
+    "base": 2785,
+    "scenario": 2778
+   },
+   "scenario": {
+    "free_now": 12,
+    "uncovered": 107
+   },
+   "uncovered_delta": -2
+  }
+ },
+ "class_10661": {
+  "adopted_by_increment": 52,
+  "base_unknown_children": 52,
+  "scenario_status": "free_now",
+  "scenario_unknown_children": 0
+ },
+ "closure_candidate_rows": {
+  "base_class_10661_rank": 14,
+  "base_class_10661_row": {
+   "class_hi": "0",
+   "class_index": "10661",
+   "class_lo": "1152921505697431552",
+   "class_rank": "14",
+   "first_group_first": "24",
+   "first_group_third": "30",
+   "groups_served_count": "2",
+   "unknown_now": "52"
+  },
+  "base_class_23101_row": {
+   "class_hi": "16",
+   "class_index": "23101",
+   "class_lo": "1152921504892059648",
+   "class_rank": "1",
+   "first_group_first": "24",
+   "first_group_third": "28",
+   "groups_served_count": "3",
+   "unknown_now": "11"
+  },
+  "entered_table_classes": [
+   6372,
+   7577,
+   9317,
+   9330,
+   10008
+  ],
+  "left_table_classes": [
+   5844,
+   7581,
+   8826,
+   9039,
+   10010,
+   10661
+  ],
+  "scenario_class_10661_row": null,
+  "scenario_class_23101_row": {
+   "class_hi": "16",
+   "class_index": "23101",
+   "class_lo": "1152921504892059648",
+   "class_rank": "1",
+   "first_group_first": "24",
+   "first_group_third": "28",
+   "groups_served_count": "3",
+   "unknown_now": "11"
+  },
+  "scenario_first_row": {
+   "class_hi": "16",
+   "class_index": "23101",
+   "class_lo": "1152921504892059648",
+   "class_rank": "1",
+   "first_group_first": "24",
+   "first_group_third": "28",
+   "groups_served_count": "3",
+   "unknown_now": "11"
+  }
+ },
+ "excluded_now_flips": [],
+ "holder_classes": {
+  "10008": {
+   "base_status": "unknown",
+   "base_unknown_now": 97,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 96
+  },
+  "10061": {
+   "base_status": "unknown",
+   "base_unknown_now": 106,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 105
+  },
+  "10062": {
+   "base_status": "unknown",
+   "base_unknown_now": 109,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 108
+  },
+  "10153": {
+   "base_status": "unknown",
+   "base_unknown_now": 103,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 102
+  },
+  "10242": {
+   "base_status": "unknown",
+   "base_unknown_now": 97,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 96
+  },
+  "10243": {
+   "base_status": "unknown",
+   "base_unknown_now": 108,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 107
+  },
+  "10412": {
+   "base_status": "unknown",
+   "base_unknown_now": 101,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 100
+  },
+  "10413": {
+   "base_status": "unknown",
+   "base_unknown_now": 107,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 106
+  },
+  "10495": {
+   "base_status": "unknown",
+   "base_unknown_now": 106,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 105
+  },
+  "10500": {
+   "base_status": "unknown",
+   "base_unknown_now": 105,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 104
+  },
+  "10577": {
+   "base_status": "unknown",
+   "base_unknown_now": 103,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 102
+  },
+  "10582": {
+   "base_status": "unknown",
+   "base_unknown_now": 102,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 101
+  },
+  "10658": {
+   "base_status": "unknown",
+   "base_unknown_now": 102,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 101
+  },
+  "10660": {
+   "base_status": "unknown",
+   "base_unknown_now": 97,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 96
+  },
+  "10661": {
+   "base_status": "unknown",
+   "base_unknown_now": 52,
+   "own_membership_in_increment": 52,
+   "scenario_status": "free_now",
+   "scenario_unknown_now": 0
+  },
+  "10662": {
+   "base_status": "unknown",
+   "base_unknown_now": 108,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 107
+  },
+  "10663": {
+   "base_status": "unknown",
+   "base_unknown_now": 110,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 109
+  },
+  "10666": {
+   "base_status": "unknown",
+   "base_unknown_now": 104,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 103
+  },
+  "10667": {
+   "base_status": "unknown",
+   "base_unknown_now": 110,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 109
+  },
+  "10668": {
+   "base_status": "unknown",
+   "base_unknown_now": 96,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 95
+  },
+  "10669": {
+   "base_status": "unknown",
+   "base_unknown_now": 103,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 102
+  },
+  "10671": {
+   "base_status": "unknown",
+   "base_unknown_now": 106,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 105
+  },
+  "10672": {
+   "base_status": "unknown",
+   "base_unknown_now": 102,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 101
+  },
+  "10673": {
+   "base_status": "unknown",
+   "base_unknown_now": 109,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 108
+  },
+  "10674": {
+   "base_status": "unknown",
+   "base_unknown_now": 101,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 100
+  },
+  "10675": {
+   "base_status": "unknown",
+   "base_unknown_now": 109,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 108
+  },
+  "10677": {
+   "base_status": "unknown",
+   "base_unknown_now": 104,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 103
+  },
+  "10678": {
+   "base_status": "unknown",
+   "base_unknown_now": 108,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 107
+  },
+  "10680": {
+   "base_status": "unknown",
+   "base_unknown_now": 103,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 102
+  },
+  "10681": {
+   "base_status": "unknown",
+   "base_unknown_now": 109,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 108
+  },
+  "10683": {
+   "base_status": "unknown",
+   "base_unknown_now": 110,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 109
+  },
+  "10684": {
+   "base_status": "unknown",
+   "base_unknown_now": 109,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 108
+  },
+  "10685": {
+   "base_status": "unknown",
+   "base_unknown_now": 110,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 109
+  },
+  "10686": {
+   "base_status": "unknown",
+   "base_unknown_now": 107,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 106
+  },
+  "10688": {
+   "base_status": "unknown",
+   "base_unknown_now": 108,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 107
+  },
+  "10689": {
+   "base_status": "unknown",
+   "base_unknown_now": 108,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 107
+  },
+  "10690": {
+   "base_status": "unknown",
+   "base_unknown_now": 109,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 108
+  },
+  "10692": {
+   "base_status": "unknown",
+   "base_unknown_now": 110,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 109
+  },
+  "10693": {
+   "base_status": "unknown",
+   "base_unknown_now": 104,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 103
+  },
+  "10694": {
+   "base_status": "unknown",
+   "base_unknown_now": 97,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 96
+  },
+  "10696": {
+   "base_status": "unknown",
+   "base_unknown_now": 109,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 108
+  },
+  "10697": {
+   "base_status": "unknown",
+   "base_unknown_now": 104,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 103
+  },
+  "10699": {
+   "base_status": "unknown",
+   "base_unknown_now": 108,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 107
+  },
+  "10700": {
+   "base_status": "unknown",
+   "base_unknown_now": 105,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 104
+  },
+  "10701": {
+   "base_status": "unknown",
+   "base_unknown_now": 110,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 109
+  },
+  "10702": {
+   "base_status": "unknown",
+   "base_unknown_now": 108,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 107
+  },
+  "10703": {
+   "base_status": "unknown",
+   "base_unknown_now": 109,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 108
+  },
+  "10704": {
+   "base_status": "unknown",
+   "base_unknown_now": 102,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 101
+  },
+  "10705": {
+   "base_status": "unknown",
+   "base_unknown_now": 109,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 108
+  },
+  "10706": {
+   "base_status": "unknown",
+   "base_unknown_now": 98,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 97
+  },
+  "10707": {
+   "base_status": "unknown",
+   "base_unknown_now": 109,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 108
+  },
+  "10708": {
+   "base_status": "unknown",
+   "base_unknown_now": 110,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 109
+  },
+  "10709": {
+   "base_status": "unknown",
+   "base_unknown_now": 101,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 100
+  },
+  "10710": {
+   "base_status": "unknown",
+   "base_unknown_now": 101,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 100
+  },
+  "10712": {
+   "base_status": "unknown",
+   "base_unknown_now": 109,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 108
+  },
+  "10713": {
+   "base_status": "unknown",
+   "base_unknown_now": 108,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 107
+  },
+  "10714": {
+   "base_status": "unknown",
+   "base_unknown_now": 110,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 109
+  },
+  "10715": {
+   "base_status": "unknown",
+   "base_unknown_now": 108,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 107
+  },
+  "10716": {
+   "base_status": "unknown",
+   "base_unknown_now": 108,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 107
+  },
+  "10717": {
+   "base_status": "unknown",
+   "base_unknown_now": 108,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 107
+  },
+  "10718": {
+   "base_status": "unknown",
+   "base_unknown_now": 109,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 108
+  },
+  "10719": {
+   "base_status": "unknown",
+   "base_unknown_now": 97,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 96
+  },
+  "10720": {
+   "base_status": "unknown",
+   "base_unknown_now": 110,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 109
+  },
+  "10721": {
+   "base_status": "unknown",
+   "base_unknown_now": 110,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 109
+  },
+  "10722": {
+   "base_status": "unknown",
+   "base_unknown_now": 109,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 108
+  },
+  "10723": {
+   "base_status": "unknown",
+   "base_unknown_now": 109,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 108
+  },
+  "10724": {
+   "base_status": "unknown",
+   "base_unknown_now": 108,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 107
+  },
+  "10725": {
+   "base_status": "unknown",
+   "base_unknown_now": 110,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 109
+  },
+  "10726": {
+   "base_status": "unknown",
+   "base_unknown_now": 95,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 94
+  },
+  "10727": {
+   "base_status": "unknown",
+   "base_unknown_now": 110,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 109
+  },
+  "10729": {
+   "base_status": "unknown",
+   "base_unknown_now": 108,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 107
+  },
+  "10730": {
+   "base_status": "unknown",
+   "base_unknown_now": 109,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 108
+  },
+  "10731": {
+   "base_status": "unknown",
+   "base_unknown_now": 100,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 99
+  },
+  "10732": {
+   "base_status": "unknown",
+   "base_unknown_now": 110,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 109
+  },
+  "10733": {
+   "base_status": "unknown",
+   "base_unknown_now": 102,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 101
+  },
+  "10735": {
+   "base_status": "unknown",
+   "base_unknown_now": 110,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 109
+  },
+  "12100": {
+   "base_status": "unknown",
+   "base_unknown_now": 63,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 62
+  },
+  "13323": {
+   "base_status": "unknown",
+   "base_unknown_now": 58,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 57
+  },
+  "13356": {
+   "base_status": "unknown",
+   "base_unknown_now": 111,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 110
+  },
+  "14649": {
+   "base_status": "unknown",
+   "base_unknown_now": 63,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 62
+  },
+  "16490": {
+   "base_status": "unknown",
+   "base_unknown_now": 99,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 98
+  },
+  "18927": {
+   "base_status": "unknown",
+   "base_unknown_now": 110,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 109
+  },
+  "18956": {
+   "base_status": "unknown",
+   "base_unknown_now": 110,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 109
+  },
+  "19295": {
+   "base_status": "unknown",
+   "base_unknown_now": 114,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 113
+  },
+  "20888": {
+   "base_status": "unknown",
+   "base_unknown_now": 114,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 113
+  },
+  "23103": {
+   "base_status": "unknown",
+   "base_unknown_now": 105,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 104
+  },
+  "24361": {
+   "base_status": "unknown",
+   "base_unknown_now": 109,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 108
+  },
+  "26044": {
+   "base_status": "unknown",
+   "base_unknown_now": 111,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 110
+  },
+  "26068": {
+   "base_status": "unknown",
+   "base_unknown_now": 115,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 114
+  },
+  "26233": {
+   "base_status": "unknown",
+   "base_unknown_now": 116,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 115
+  },
+  "27222": {
+   "base_status": "unknown",
+   "base_unknown_now": 116,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 115
+  },
+  "28597": {
+   "base_status": "unknown",
+   "base_unknown_now": 106,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 105
+  },
+  "28616": {
+   "base_status": "unknown",
+   "base_unknown_now": 109,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 108
+  },
+  "29512": {
+   "base_status": "unknown",
+   "base_unknown_now": 111,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 110
+  },
+  "30393": {
+   "base_status": "unknown",
+   "base_unknown_now": 103,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 102
+  },
+  "30480": {
+   "base_status": "unknown",
+   "base_unknown_now": 99,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 98
+  },
+  "31527": {
+   "base_status": "unknown",
+   "base_unknown_now": 99,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 98
+  },
+  "31543": {
+   "base_status": "unknown",
+   "base_unknown_now": 111,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 110
+  },
+  "31601": {
+   "base_status": "unknown",
+   "base_unknown_now": 111,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 110
+  },
+  "31995": {
+   "base_status": "unknown",
+   "base_unknown_now": 116,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 115
+  },
+  "32897": {
+   "base_status": "unknown",
+   "base_unknown_now": 115,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 114
+  },
+  "33140": {
+   "base_status": "unknown",
+   "base_unknown_now": 116,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 115
+  },
+  "33778": {
+   "base_status": "unknown",
+   "base_unknown_now": 115,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 114
+  },
+  "33788": {
+   "base_status": "unknown",
+   "base_unknown_now": 115,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 114
+  },
+  "33814": {
+   "base_status": "unknown",
+   "base_unknown_now": 116,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 115
+  },
+  "33939": {
+   "base_status": "unknown",
+   "base_unknown_now": 116,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 115
+  },
+  "34062": {
+   "base_status": "unknown",
+   "base_unknown_now": 105,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 104
+  },
+  "34088": {
+   "base_status": "unknown",
+   "base_unknown_now": 115,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 114
+  },
+  "34089": {
+   "base_status": "unknown",
+   "base_unknown_now": 115,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 114
+  },
+  "34115": {
+   "base_status": "unknown",
+   "base_unknown_now": 111,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 110
+  },
+  "34116": {
+   "base_status": "unknown",
+   "base_unknown_now": 103,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 102
+  },
+  "34145": {
+   "base_status": "unknown",
+   "base_unknown_now": 116,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 115
+  },
+  "34172": {
+   "base_status": "unknown",
+   "base_unknown_now": 116,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 115
+  },
+  "34196": {
+   "base_status": "unknown",
+   "base_unknown_now": 103,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 102
+  },
+  "34211": {
+   "base_status": "unknown",
+   "base_unknown_now": 102,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 101
+  },
+  "34222": {
+   "base_status": "unknown",
+   "base_unknown_now": 110,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 109
+  },
+  "34223": {
+   "base_status": "unknown",
+   "base_unknown_now": 99,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 98
+  },
+  "34244": {
+   "base_status": "unknown",
+   "base_unknown_now": 116,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 115
+  },
+  "34278": {
+   "base_status": "unknown",
+   "base_unknown_now": 116,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 115
+  },
+  "34284": {
+   "base_status": "unknown",
+   "base_unknown_now": 58,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 57
+  },
+  "34285": {
+   "base_status": "unknown",
+   "base_unknown_now": 107,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 106
+  },
+  "4458": {
+   "base_status": "unknown",
+   "base_unknown_now": 96,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 95
+  },
+  "4681": {
+   "base_status": "unknown",
+   "base_unknown_now": 58,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 57
+  },
+  "4703": {
+   "base_status": "unknown",
+   "base_unknown_now": 104,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 103
+  },
+  "4718": {
+   "base_status": "unknown",
+   "base_unknown_now": 106,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 105
+  },
+  "5729": {
+   "base_status": "unknown",
+   "base_unknown_now": 103,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 102
+  },
+  "6359": {
+   "base_status": "unknown",
+   "base_unknown_now": 96,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 95
+  },
+  "6372": {
+   "base_status": "unknown",
+   "base_unknown_now": 58,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 57
+  },
+  "7577": {
+   "base_status": "unknown",
+   "base_unknown_now": 97,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 96
+  },
+  "7791": {
+   "base_status": "unknown",
+   "base_unknown_now": 57,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 56
+  },
+  "9317": {
+   "base_status": "unknown",
+   "base_unknown_now": 97,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 96
+  },
+  "9330": {
+   "base_status": "unknown",
+   "base_unknown_now": 60,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 59
+  },
+  "9522": {
+   "base_status": "unknown",
+   "base_unknown_now": 98,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 97
+  },
+  "9523": {
+   "base_status": "unknown",
+   "base_unknown_now": 103,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 102
+  },
+  "9624": {
+   "base_status": "unknown",
+   "base_unknown_now": 107,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 106
+  },
+  "9625": {
+   "base_status": "unknown",
+   "base_unknown_now": 108,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 107
+  },
+  "9725": {
+   "base_status": "unknown",
+   "base_unknown_now": 106,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 105
+  },
+  "9726": {
+   "base_status": "unknown",
+   "base_unknown_now": 108,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 107
+  },
+  "9824": {
+   "base_status": "unknown",
+   "base_unknown_now": 102,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 101
+  },
+  "9825": {
+   "base_status": "unknown",
+   "base_unknown_now": 109,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 108
+  },
+  "9921": {
+   "base_status": "unknown",
+   "base_unknown_now": 97,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 96
+  },
+  "9922": {
+   "base_status": "unknown",
+   "base_unknown_now": 106,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 105
+  }
+ },
+ "holder_union_size": 142,
+ "interpretation_guard": "canonical adoption deltas: the 52 LOSS rows of batch-17 are consumed into the canonical cache via the fail-closed union merger; scheduling quantities are bookkeeping; class 10661 becomes the 37th Board-verified free class and leaves the unknown population; every other claim stays UNKNOWN; 11x11 empty board and all 19 roots stay UNKNOWN; nodes are bookkeeping",
+ "member_loss_counts": {
+  "10008": 1,
+  "10061": 1,
+  "10062": 1,
+  "10153": 1,
+  "10242": 1,
+  "10243": 1,
+  "10412": 1,
+  "10413": 1,
+  "10495": 1,
+  "10500": 1,
+  "10577": 1,
+  "10582": 1,
+  "10658": 1,
+  "10660": 1,
+  "10661": 52,
+  "10662": 1,
+  "10663": 1,
+  "10666": 1,
+  "10667": 1,
+  "10668": 1,
+  "10669": 1,
+  "10671": 1,
+  "10672": 1,
+  "10673": 1,
+  "10674": 1,
+  "10675": 1,
+  "10677": 1,
+  "10678": 1,
+  "10680": 1,
+  "10681": 1,
+  "10683": 1,
+  "10684": 1,
+  "10685": 1,
+  "10686": 1,
+  "10688": 1,
+  "10689": 1,
+  "10690": 1,
+  "10692": 1,
+  "10693": 1,
+  "10694": 1,
+  "10696": 1,
+  "10697": 1,
+  "10699": 1,
+  "10700": 1,
+  "10701": 1,
+  "10702": 1,
+  "10703": 1,
+  "10704": 1,
+  "10705": 1,
+  "10706": 1,
+  "10707": 1,
+  "10708": 1,
+  "10709": 1,
+  "10710": 1,
+  "10712": 1,
+  "10713": 1,
+  "10714": 1,
+  "10715": 1,
+  "10716": 1,
+  "10717": 1,
+  "10718": 1,
+  "10719": 1,
+  "10720": 1,
+  "10721": 1,
+  "10722": 1,
+  "10723": 1,
+  "10724": 1,
+  "10725": 1,
+  "10726": 1,
+  "10727": 1,
+  "10729": 1,
+  "10730": 1,
+  "10731": 1,
+  "10732": 1,
+  "10733": 1,
+  "10735": 1,
+  "12100": 1,
+  "13323": 1,
+  "13356": 1,
+  "14649": 1,
+  "16490": 1,
+  "18927": 1,
+  "18956": 1,
+  "19295": 1,
+  "20888": 1,
+  "23103": 1,
+  "24361": 1,
+  "26044": 1,
+  "26068": 1,
+  "26233": 1,
+  "27222": 1,
+  "28597": 1,
+  "28616": 1,
+  "29512": 1,
+  "30393": 1,
+  "30480": 1,
+  "31527": 1,
+  "31543": 1,
+  "31601": 1,
+  "31995": 1,
+  "32897": 1,
+  "33140": 1,
+  "33778": 1,
+  "33788": 1,
+  "33814": 1,
+  "33939": 1,
+  "34062": 1,
+  "34088": 1,
+  "34089": 1,
+  "34115": 1,
+  "34116": 1,
+  "34145": 1,
+  "34172": 1,
+  "34196": 1,
+  "34211": 1,
+  "34222": 1,
+  "34223": 1,
+  "34244": 1,
+  "34278": 1,
+  "34284": 1,
+  "34285": 1,
+  "4458": 1,
+  "4681": 1,
+  "4703": 1,
+  "4718": 1,
+  "5729": 1,
+  "6359": 1,
+  "6372": 1,
+  "7577": 1,
+  "7791": 1,
+  "9317": 1,
+  "9330": 1,
+  "9522": 1,
+  "9523": 1,
+  "9624": 1,
+  "9625": 1,
+  "9725": 1,
+  "9726": 1,
+  "9824": 1,
+  "9825": 1,
+  "9921": 1,
+  "9922": 1
+ },
+ "metrics": {
+  "closure_classes_count": {
+   "base": 809,
+   "delta": -1,
+   "scenario": 808
+  },
+  "excluded_now_classes": {
+   "base": 23,
+   "delta": 0,
+   "scenario": 23
+  },
+  "free_now_classes": {
+   "base": 36,
+   "delta": 1,
+   "scenario": 37
+  },
+  "group_best_options_nonfree": {
+   "base": 2125,
+   "delta": -2,
+   "scenario": 2123
+  },
+  "joint_greedy_union_size": {
+   "base": 36726,
+   "delta": -1081,
+   "scenario": 35645
+  },
+  "joint_greedy_unique_groups": {
+   "base": 2125,
+   "delta": -2,
+   "scenario": 2123
+  },
+  "probe_worklist_total": {
+   "base": 64941,
+   "delta": -53,
+   "scenario": 64888
+  },
+  "unknown_classes": {
+   "base": 34500,
+   "delta": -1,
+   "scenario": 34499
+  },
+  "update8_groups_free_now": {
+   "base": 127,
+   "delta": 0,
+   "scenario": 127
+  },
+  "update8_remaining_now": {
+   "base": 31780,
+   "delta": -1,
+   "scenario": 31779
+  },
+  "update8_resolved_count": {
+   "base": 79,
+   "delta": 1,
+   "scenario": 80
+  },
+  "update8_win_hit_groups": {
+   "base": 0,
+   "delta": 0,
+   "scenario": 0
+  }
+ },
+ "newly_free_now_classes": [
+  10661
+ ],
+ "newly_free_now_gate": "each newly free class was BASE-unknown and every BASE-unknown cost child is resolved by the increment (clean all-LOSS); a zero-WIN full packet can only free, never flip; class 10661 IS the newly freed class",
+ "newly_free_thirds": [
+  {
+   "first": 24,
+   "third": 30
+  },
+  {
+   "first": 24,
+   "third": 90
+  }
+ ],
+ "per_root_greedy": {
+  "0": {
+   "base_free_thirds": 7,
+   "base_greedy_union_size": 2785,
+   "base_uncovered_thirds": 112,
+   "delta": 0,
+   "scenario_free_thirds": 7,
+   "scenario_greedy_union_size": 2785,
+   "scenario_uncovered_thirds": 112
+  },
+  "1": {
+   "base_free_thirds": 4,
+   "base_greedy_union_size": 6355,
+   "base_uncovered_thirds": 115,
+   "delta": 0,
+   "scenario_free_thirds": 4,
+   "scenario_greedy_union_size": 6355,
+   "scenario_uncovered_thirds": 115
+  },
+  "12": {
+   "base_free_thirds": 6,
+   "base_greedy_union_size": 3030,
+   "base_uncovered_thirds": 113,
+   "delta": 0,
+   "scenario_free_thirds": 6,
+   "scenario_greedy_union_size": 3030,
+   "scenario_uncovered_thirds": 113
+  },
+  "13": {
+   "base_free_thirds": 6,
+   "base_greedy_union_size": 6176,
+   "base_uncovered_thirds": 113,
+   "delta": 0,
+   "scenario_free_thirds": 6,
+   "scenario_greedy_union_size": 6176,
+   "scenario_uncovered_thirds": 113
+  },
+  "14": {
+   "base_free_thirds": 8,
+   "base_greedy_union_size": 4440,
+   "base_uncovered_thirds": 111,
+   "delta": 0,
+   "scenario_free_thirds": 8,
+   "scenario_greedy_union_size": 4440,
+   "scenario_uncovered_thirds": 111
+  },
+  "15": {
+   "base_free_thirds": 5,
+   "base_greedy_union_size": 5991,
+   "base_uncovered_thirds": 114,
+   "delta": 0,
+   "scenario_free_thirds": 5,
+   "scenario_greedy_union_size": 5991,
+   "scenario_uncovered_thirds": 114
+  },
+  "16": {
+   "base_free_thirds": 16,
+   "base_greedy_union_size": 3037,
+   "base_uncovered_thirds": 103,
+   "delta": -157,
+   "scenario_free_thirds": 16,
+   "scenario_greedy_union_size": 2880,
+   "scenario_uncovered_thirds": 103
+  },
+  "2": {
+   "base_free_thirds": 6,
+   "base_greedy_union_size": 5918,
+   "base_uncovered_thirds": 113,
+   "delta": 0,
+   "scenario_free_thirds": 6,
+   "scenario_greedy_union_size": 5918,
+   "scenario_uncovered_thirds": 113
+  },
+  "24": {
+   "base_free_thirds": 10,
+   "base_greedy_union_size": 2785,
+   "base_uncovered_thirds": 109,
+   "delta": -7,
+   "scenario_free_thirds": 12,
+   "scenario_greedy_union_size": 2778,
+   "scenario_uncovered_thirds": 107
+  },
+  "25": {
+   "base_free_thirds": 6,
+   "base_greedy_union_size": 5921,
+   "base_uncovered_thirds": 113,
+   "delta": -1,
+   "scenario_free_thirds": 6,
+   "scenario_greedy_union_size": 5920,
+   "scenario_uncovered_thirds": 113
+  },
+  "26": {
+   "base_free_thirds": 8,
+   "base_greedy_union_size": 5128,
+   "base_uncovered_thirds": 111,
+   "delta": 0,
+   "scenario_free_thirds": 8,
+   "scenario_greedy_union_size": 5128,
+   "scenario_uncovered_thirds": 111
+  },
+  "3": {
+   "base_free_thirds": 6,
+   "base_greedy_union_size": 5432,
+   "base_uncovered_thirds": 113,
+   "delta": 0,
+   "scenario_free_thirds": 6,
+   "scenario_greedy_union_size": 5432,
+   "scenario_uncovered_thirds": 113
+  },
+  "36": {
+   "base_free_thirds": 4,
+   "base_greedy_union_size": 2702,
+   "base_uncovered_thirds": 115,
+   "delta": 0,
+   "scenario_free_thirds": 4,
+   "scenario_greedy_union_size": 2702,
+   "scenario_uncovered_thirds": 115
+  },
+  "37": {
+   "base_free_thirds": 4,
+   "base_greedy_union_size": 4001,
+   "base_uncovered_thirds": 115,
+   "delta": 0,
+   "scenario_free_thirds": 4,
+   "scenario_greedy_union_size": 4001,
+   "scenario_uncovered_thirds": 115
+  },
+  "38": {
+   "base_free_thirds": 13,
+   "base_greedy_union_size": 3123,
+   "base_uncovered_thirds": 106,
+   "delta": -1,
+   "scenario_free_thirds": 13,
+   "scenario_greedy_union_size": 3122,
+   "scenario_uncovered_thirds": 106
+  },
+  "4": {
+   "base_free_thirds": 4,
+   "base_greedy_union_size": 5978,
+   "base_uncovered_thirds": 115,
+   "delta": 0,
+   "scenario_free_thirds": 4,
+   "scenario_greedy_union_size": 5978,
+   "scenario_uncovered_thirds": 115
+  },
+  "48": {
+   "base_free_thirds": 7,
+   "base_greedy_union_size": 2879,
+   "base_uncovered_thirds": 112,
+   "delta": 0,
+   "scenario_free_thirds": 7,
+   "scenario_greedy_union_size": 2879,
+   "scenario_uncovered_thirds": 112
+  },
+  "49": {
+   "base_free_thirds": 10,
+   "base_greedy_union_size": 2890,
+   "base_uncovered_thirds": 109,
+   "delta": 0,
+   "scenario_free_thirds": 10,
+   "scenario_greedy_union_size": 2890,
+   "scenario_uncovered_thirds": 109
+  },
+  "5": {
+   "base_free_thirds": 6,
+   "base_greedy_union_size": 3029,
+   "base_uncovered_thirds": 113,
+   "delta": 43,
+   "scenario_free_thirds": 6,
+   "scenario_greedy_union_size": 3072,
+   "scenario_uncovered_thirds": 113
+  }
+ },
+ "pins": {
+  "base_cache_sha256": "be9cb24e899fbe93db51e415320c50fa733e378748bb7a41fe13fd7b22f06685",
+  "base_closure_classes_sha256": "3ee1dbb6db7a5fc8858f5bbdd5cae7ca754589f376ebb99727535806f917bc9e",
+  "base_per_root_coverage_sha256": "527c7e9a3f6350f638b5e2e2a70c3115e50533eeca651e38e32329a04ab225d4",
+  "base_summary_sha256": "f2008e70b31f23724d9bd8d605f7ab6f1de20f1802e65bd5b955420a2f50a744",
+  "batch_keys_sha256": "db762175272206aa53622f30addc1267d534e8a3e576f70c6a084f21392645d2",
+  "increment_sha256": "afcdad5b9fa864d076e6998c12dc4ff1fdf69c110a2cf1495af2b3a96c3c4d52",
+  "row_audit_sha256": "c19e768f1ce4223de6736713a679028990ef5a884c9886affd62c951e307d5f9",
+  "scenario_cache_sha256": "a554081156e2c2f940ecf2cc3c7af082dde6b760d6019e0a5113c4ddd5e12a3a",
+  "scenario_closure_classes_sha256": "e60c1088f99aac0ae527b78eac9d192d7e1d2aa4f1a125fa52bc75c86ae16710",
+  "scenario_per_root_coverage_sha256": "4c7ec5d78b7a3496c01fc37a229cc85f27708926511476f516f7f6cedd975e35",
+  "scenario_summary_sha256": "a0043c76c05ee949a533f31e6f21616d51f67e211c45fec5cc96431fb7d28dc4"
+ },
+ "recompute_gates": "class statuses with Board free-candidate child verification, known-universe counts and per-root free coverage were recomputed from graph + update8 + cache and asserted equal to the published BASE (Part AS reaudit) and scenario outputs before any delta was emitted",
+ "roots_summary_moved": {
+  "24": {
+   "base": [
+    10,
+    109
+   ],
+   "scenario": [
+    12,
+    107
+   ]
+  }
+ },
+ "scenario": "ADOPTED-CANONICAL = pre-adoption BASE (canonical 6,120 rows, Part AS reaudit state) + the 52 LOSS rows of batch-17 (class 10661); full==loss: batch-17 contains no WIN row (absence gate) and no exhaustion row, so the adopted packet IS the full resolved packet",
+ "schema": "n11-batch17-adoption-decomp-deltas-v1",
+ "status_transitions": {
+  "excluded->excluded": 390,
+  "excluded_now->excluded_now": 23,
+  "free_now->free_now": 36,
+  "unknown->free_now": 1,
+  "unknown->unknown": 34499
+ },
+ "update8": {
+  "lost_resolved": [],
+  "newly_resolved_count": 1,
+  "newly_resolved_s5": [
+   272756
+  ]
+ }
+}

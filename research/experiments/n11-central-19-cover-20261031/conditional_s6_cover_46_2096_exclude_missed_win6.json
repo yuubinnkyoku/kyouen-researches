@@ -1,0 +1,28 @@
+{
+  "schema": "n11-central49-2090-to-2096-exclude-certified-win6-v1",
+  "source_certificate": "conditional_s6_cover_46_post_seven_win6_2090_two_swap.json",
+  "refuted_certified_win6": "00000000000000603800000000008000",
+  "removed": [
+    "00000000000000603800000000008000",
+    "00000000000002083800000008000000"
+  ],
+  "added": [
+    "0000000000000000380c200000000000",
+    "00000000000000203800000008008000"
+  ],
+  "selected_s6_count": 46,
+  "s5_covered": 94,
+  "raw_s7_edges": 2989,
+  "distinct_s7_classes": 2096,
+  "terminal_backed_loss7_hits": 6,
+  "known_win6_exclusions": 146,
+  "known_win6_conflicts": 0,
+  "known_win7_conflicts": 0,
+  "evidence_level": "GEOMETRY_ONLY_CONDITIONAL_COVER_WITH_TERMINAL_WIN6_EXCLUDED",
+  "outcomes": {
+    "s6": "UNKNOWN",
+    "s4": "UNKNOWN",
+    "two_stone_root": "UNKNOWN",
+    "empty_board": "UNKNOWN"
+  }
+}

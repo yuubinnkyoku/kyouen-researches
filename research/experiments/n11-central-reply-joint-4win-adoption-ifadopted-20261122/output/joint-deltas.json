@@ -1,0 +1,180 @@
+{
+ "additivity_audit": {
+  "baseline_root27_free_thirds": {
+   "additive": true,
+   "base": 119,
+   "joint": 119,
+   "joint_delta": 0,
+   "single_deltas_sum": 0
+  },
+  "closure_classes_count": {
+   "additive": true,
+   "base": 812,
+   "joint": 812,
+   "joint_delta": 0,
+   "single_deltas_sum": 0
+  },
+  "closure_classes_first_unknown<=12": {
+   "additive": true,
+   "base": 0,
+   "joint": 0,
+   "joint_delta": 0,
+   "single_deltas_sum": 0
+  },
+  "excluded_now": {
+   "additive": true,
+   "base": 23,
+   "joint": 37,
+   "joint_delta": 14,
+   "single_deltas_sum": 14
+  },
+  "free_now": {
+   "additive": true,
+   "base": 33,
+   "joint": 33,
+   "joint_delta": 0,
+   "single_deltas_sum": 0
+  },
+  "joint_greedy_union_size": {
+   "additive": true,
+   "base": 35617,
+   "joint": 36984,
+   "joint_delta": 1367,
+   "single_deltas_sum": 1367
+  },
+  "probe_worklist_total": {
+   "additive": true,
+   "base": 65213,
+   "joint": 65183,
+   "joint_delta": -30,
+   "single_deltas_sum": -30
+  },
+  "unknown_classes": {
+   "additive": true,
+   "base": 34503,
+   "joint": 34489,
+   "joint_delta": -14,
+   "single_deltas_sum": -14
+  },
+  "update8_remaining_now": {
+   "additive": true,
+   "base": 31838,
+   "joint": 31709,
+   "joint_delta": -129,
+   "single_deltas_sum": -129
+  },
+  "update8_resolved_count": {
+   "additive": true,
+   "base": 21,
+   "joint": 44,
+   "joint_delta": 23,
+   "single_deltas_sum": 23
+  },
+  "update8_win_hit_groups": {
+   "additive": true,
+   "base": 0,
+   "joint": 15,
+   "joint_delta": 15,
+   "single_deltas_sum": 15
+  }
+ },
+ "constraint_note": "the closure-classes ranking is a scheduling quantity; it does NOT carry the class status. Under joint adoption the ranked top carries excluded_now classes (16757/12264/20421/16371 + 30345 holding b018's cost child); a probe batch must first filter them (operator rule: skip candidates with refutation evidence; the first clean candidate under joint adoption is rank 6 (class 5473)).",
+ "interpretation_guard": "IF-ADOPTED what-if analysis only; no verdict consumed; 11x11 UNKNOWN",
+ "metric_table": {
+  "baseline_root27_free_thirds": {
+   "b018": 119,
+   "base": 119,
+   "d002": 119,
+   "e002": 119,
+   "f017": 119,
+   "joint": 119
+  },
+  "closure_classes_count": {
+   "b018": 812,
+   "base": 812,
+   "d002": 812,
+   "e002": 812,
+   "f017": 812,
+   "joint": 812
+  },
+  "closure_classes_first_unknown<=12": {
+   "b018": 0,
+   "base": 0,
+   "d002": 0,
+   "e002": 0,
+   "f017": 0,
+   "joint": 0
+  },
+  "excluded_now": {
+   "b018": 26,
+   "base": 23,
+   "d002": 27,
+   "e002": 27,
+   "f017": 26,
+   "joint": 37
+  },
+  "free_now": {
+   "b018": 33,
+   "base": 33,
+   "d002": 33,
+   "e002": 33,
+   "f017": 33,
+   "joint": 33
+  },
+  "joint_greedy_union_size": {
+   "b018": 35617,
+   "base": 35617,
+   "d002": 35613,
+   "e002": 35616,
+   "f017": 36989,
+   "joint": 36984
+  },
+  "probe_worklist_total": {
+   "b018": 65211,
+   "base": 65213,
+   "d002": 65209,
+   "e002": 65211,
+   "f017": 65191,
+   "joint": 65183
+  },
+  "unknown_classes": {
+   "b018": 34500,
+   "base": 34503,
+   "d002": 34499,
+   "e002": 34499,
+   "f017": 34500,
+   "joint": 34489
+  },
+  "update8_remaining_now": {
+   "b018": 31809,
+   "base": 31838,
+   "d002": 31789,
+   "e002": 31838,
+   "f017": 31787,
+   "joint": 31709
+  },
+  "update8_resolved_count": {
+   "b018": 22,
+   "base": 21,
+   "d002": 25,
+   "e002": 21,
+   "f017": 39,
+   "joint": 44
+  },
+  "update8_win_hit_groups": {
+   "b018": 5,
+   "base": 0,
+   "d002": 4,
+   "e002": 0,
+   "f017": 6,
+   "joint": 15
+  }
+ },
+ "per_root_free_coverage": "identical to baseline in all five adoption scenarios (machine-verified)",
+ "schema": "n11-central-reply-joint-4win-adoption-ifadopted-v1",
+ "win_hit_class_union": [
+  12264,
+  16757,
+  20421
+ ]
+}

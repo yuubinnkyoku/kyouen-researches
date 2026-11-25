@@ -1,0 +1,46 @@
+{
+  "schema": "n11-central49-conditional46-distinct-s7-two-step-improvement-v1",
+  "source_certificate": "conditional_s6_cover_46_shared_s7_optimal.json",
+  "priority_s4_key": "00000000000000003800800000000000",
+  "swaps": [
+    {
+      "removed_s6_classes": [
+        "00000000000000805082002000000000",
+        "00000000000000805082008000000000"
+      ],
+      "added_s6_classes": [
+        "00000000000000203808000000000020",
+        "00000000000000203808004000000000"
+      ],
+      "raw_s7_edges": 2903,
+      "distinct_s7_classes": 2610
+    },
+    {
+      "removed_s6_classes": [
+        "00000000000000203800800000400000",
+        "00000000000000203800800100000000"
+      ],
+      "added_s6_classes": [
+        "00000000000000203808000000400000",
+        "00000000000000203808000100000000"
+      ],
+      "raw_s7_edges": 2905,
+      "distinct_s7_classes": 2553
+    }
+  ],
+  "s5_covered": 94,
+  "s6_witnesses": 46,
+  "previous_raw_s7_edges": 2897,
+  "previous_distinct_s7_classes": 2662,
+  "final_raw_s7_edges": 2905,
+  "final_distinct_s7_classes": 2553,
+  "known_win7_hits": 0,
+  "evidence_level": "GEOMETRY_ONLY_CONDITIONAL_PROOF_PLAN_NOT_VERDICTS",
+  "outcomes": {
+    "s4": "UNKNOWN",
+    "s6": "UNKNOWN",
+    "two_stone_root": "UNKNOWN",
+    "empty_board": "UNKNOWN"
+  },
+  "caveat": "A feasible 46-S6 cover with 2553 distinct S7 obligations, not a global optimum. The raw S7 edge count increases by 8; no S6 LOSS is proved."
+}

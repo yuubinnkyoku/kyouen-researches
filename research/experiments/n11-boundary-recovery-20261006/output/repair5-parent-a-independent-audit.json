@@ -1,0 +1,97 @@
+{
+  "schema": "n11-parent-a-focused-geometry-audit-v1",
+  "outcome_provenance": "Source solver values are trusted, not independently re-proved; root separately regenerates the full safe canonical boundary and checks raw rows, incidence, legal counts, and hashes.",
+  "parent_key": [
+    1152921506758524928,
+    536871040
+  ],
+  "complete_s6_boundary": 97,
+  "focused_unknown_targets": 14,
+  "new_rows": 9,
+  "counts": {
+    "1": 6,
+    "2": 3
+  },
+  "nodes": 38956566,
+  "parent_outcome_from_loss_witness": "LOSS",
+  "unsubmitted_targets": 5,
+  "raw_sources": [
+    {
+      "path": ".local\\n11\\repair5-parent-a-focused15m\\s6-1152921506758524928-570425472.out.csv",
+      "sha256": "6b3ac6238e141088d6cf6f5d9bef3c5ce2567aabc9dba6992af4941e92ff32cb",
+      "key": [
+        1152921506758524928,
+        570425472
+      ]
+    },
+    {
+      "path": ".local\\n11\\repair5-parent-a-focused15m\\s6-1152921506758525440-536871040.out.csv",
+      "sha256": "8e9c50a31a00291da0541c0cca8f001e7dec3de6de2b31a3562735ecdcd0a1e8",
+      "key": [
+        1152921506758525440,
+        536871040
+      ]
+    },
+    {
+      "path": ".local\\n11\\repair5-parent-a-focused15m\\s6-1152921506760622080-536871040.out.csv",
+      "sha256": "3a91e4f6f68c2d9b3b85939995bb22ca06bcfc97f6125ede54bd1a9b93c634ad",
+      "key": [
+        1152921506760622080,
+        536871040
+      ]
+    },
+    {
+      "path": ".local\\n11\\repair5-parent-a-focused15m\\s6-1152921508910202880-536871048.out.csv",
+      "sha256": "796cc3efc9da14f9c25139eb02bff3e2f3580a98c9767f75193a63139f62b877",
+      "key": [
+        1152921508910202880,
+        536871048
+      ]
+    },
+    {
+      "path": ".local\\n11\\repair5-parent-a-focused15m\\s6-1152921508910202880-671088768.out.csv",
+      "sha256": "86795573d04ce1a892871bb8e183d9313fcef873f666886a7ac5bc1e1043da4f",
+      "key": [
+        1152921508910202880,
+        671088768
+      ]
+    },
+    {
+      "path": ".local\\n11\\repair5-parent-a-focused15m\\s6-1152921526090072064-536871040.out.csv",
+      "sha256": "81c2f2c65f829578a380950cfb6c9d1119e1e1c1779e65f3d22c5812697a8aa5",
+      "key": [
+        1152921526090072064,
+        536871040
+      ]
+    },
+    {
+      "path": ".local\\n11\\repair5-parent-a-focused15m\\s6-1152921543269941248-536871040.out.csv",
+      "sha256": "6dd16cc4ace7bcf0a31aed1c62ea249dbc08e606dcbb742ea02dddc16b379bc4",
+      "key": [
+        1152921543269941248,
+        536871040
+      ]
+    },
+    {
+      "path": ".local\\n11\\repair5-parent-a-focused15m\\s6-1153484454694486272-8606711808.out.csv",
+      "sha256": "d46950a4aa2b09891287a133524b023bd8e3f3a0c870432fd284be5184086ece",
+      "key": [
+        1153484454694486272,
+        8606711808
+      ]
+    },
+    {
+      "path": ".local\\n11\\repair5-parent-a-focused15m\\s6-1153484454694502400-8606711808.out.csv",
+      "sha256": "9613d1b0e532c1242bf063c7ac17e43533fd79bcc8312233a003c6b88228592c",
+      "key": [
+        1153484454694502400,
+        8606711808
+      ]
+    }
+  ],
+  "durable_combined_replay": {
+    "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\raw\\repair5-parent-a-focused15m-out.csv",
+    "sha256": "678a40de6589849b1bbd805688e4b7b497984f528c18aa86654ee5a051b1a3ec",
+    "rows": 9
+  }
+}

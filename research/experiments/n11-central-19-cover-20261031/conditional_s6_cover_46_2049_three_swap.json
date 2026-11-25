@@ -1,0 +1,34 @@
+{
+  "schema": "n11-central49-2049-three-swap-independent-4x4-audit-v1",
+  "source_selected_s6_sha256": "afb2a19dc297e87b4d803526277b08f0f9be8c69f533bd02d318865a9533b8f8",
+  "final_selected_s6_sha256": "78e3ab27ffd9278b6172f935615b6a74ecd7abe85222fe4ab3eb71079ee54a3b",
+  "removed": [
+    "00000000000000203800800000000200",
+    "00000000000000801002002000204000",
+    "00000000000000821082002000000000"
+  ],
+  "added": [
+    "00000000000000203800800000000020",
+    "00000000000000203808000000000002",
+    "00000000000040203800000000000200"
+  ],
+  "selected_s6": 46,
+  "covered_s5": 94,
+  "source_raw_s7_edges": 2989,
+  "source_distinct_s7": 2092,
+  "final_raw_s7_edges": 3002,
+  "final_distinct_s7": 2049,
+  "distinct_s7_saved": 43,
+  "source_s7_only": 179,
+  "new_s7_only": 136,
+  "known_win6_conflicts": 0,
+  "known_win7_conflicts": 0,
+  "final_s7_parent_multiplicity": {
+    "1": 1096,
+    "2": 953
+  },
+  "selected_s6_verdict": "UNKNOWN",
+  "two_stone_root": "UNKNOWN",
+  "empty_board": "UNKNOWN",
+  "scope": "Independent geometry audit of a conditional S6 cover; no S6 LOSS or root verdict."
+}
