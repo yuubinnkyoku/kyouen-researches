@@ -1,0 +1,119 @@
+{
+ "schema": "n11-centralreply-closure-class20421-batch36-audit-v1",
+ "class_index": 20421,
+ "batch": "batch-36",
+ "probed_keys": 45,
+ "labels": {
+  "loss": 40,
+  "win_unconsumed": 5,
+  "exhausted_honest_unknown": 0,
+  "mismatch": 0,
+  "truncated_retry": 0
+ },
+ "loss_keys": [
+  "d005",
+  "d006",
+  "d007",
+  "d010",
+  "d011",
+  "d012",
+  "d013",
+  "d014",
+  "d015",
+  "d016",
+  "d017",
+  "d018",
+  "d019",
+  "d020",
+  "d022",
+  "d023",
+  "d024",
+  "d025",
+  "d027",
+  "d028",
+  "d030",
+  "d031",
+  "d032",
+  "d033",
+  "d034",
+  "d035",
+  "d036",
+  "d037",
+  "d038",
+  "d039",
+  "d040",
+  "d041",
+  "d042",
+  "d043",
+  "d044",
+  "d045",
+  "d046",
+  "d047",
+  "d048",
+  "d049"
+ ],
+ "win_keys": [
+  {
+   "key_id": "d008",
+   "budget_result_nodes": "15000000,1,5273778",
+   "consumed": false,
+   "note": "scrutiny-owner C++ gate 9193f5b6 pending; verdict NOT consumed"
+  },
+  {
+   "key_id": "d009",
+   "budget_result_nodes": "15000000,1,4997146",
+   "consumed": false,
+   "note": "scrutiny-owner C++ gate 9193f5b6 pending; verdict NOT consumed"
+  },
+  {
+   "key_id": "d021",
+   "budget_result_nodes": "15000000,1,5266012",
+   "consumed": false,
+   "note": "scrutiny-owner C++ gate 9193f5b6 pending; verdict NOT consumed"
+  },
+  {
+   "key_id": "d026",
+   "budget_result_nodes": "15000000,1,6877739",
+   "consumed": false,
+   "note": "scrutiny-owner C++ gate 9193f5b6 pending; verdict NOT consumed"
+  },
+  {
+   "key_id": "d029",
+   "budget_result_nodes": "15000000,1,2007513",
+   "consumed": false,
+   "note": "scrutiny-owner C++ gate 9193f5b6 pending; verdict NOT consumed"
+  }
+ ],
+ "batch3_same_class_unconsumed": {
+  "loss_2pass": [
+   {
+    "key_id": "d001",
+    "budget_result_nodes": "15000000,2,879510"
+   },
+   {
+    "key_id": "d003",
+    "budget_result_nodes": "15000000,2,2113678"
+   },
+   {
+    "key_id": "d004",
+    "budget_result_nodes": "15000000,2,11969338"
+   }
+  ],
+  "win_unconsumed": [
+   {
+    "key_id": "d002",
+    "budget_result_nodes": "15000000,1,5359994"
+   }
+  ],
+  "note": "batch-3 (2026-11-22) published packet raws; NOT part of batch-36 keys; candidates for a separate adoption increment"
+ },
+ "nodes_per_pass": {
+  "all_45": 183921575,
+  "loss_40": 159499387
+ },
+ "two_pass": "fresh-cold both passes, node-exact per key (runner HARD-STOP rc42 on mismatch; none triggered)",
+ "val_gate": "4/4 node-exact vs published batch-35 baselines on this host (dx-host outs published)",
+ "verdicts_consumed": 0,
+ "unknown_claim": false,
+ "note": "11x11 EMPTY BOARD REMAINS UNKNOWN; nodes are bookkeeping, not win/loss/distance"
+}
