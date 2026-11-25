@@ -72,11 +72,83 @@ unresolvedとして監査に記録 (silent dropなし)。
 
 ## 実行記録 (2026-11-25 UTC・protocol順)
 
-- (本初期版では執行前。実行後に追記される。)
+- ① 宣言 push `a280180d` (observed HEAD `04c132fd`) → scaffold A1–A3b
+  (59588a30 / 369b8d18 / bd6616c5 / 04c132fd・kit 40ファイル)。
+- ② **B1-fix (honest deviation・DU-b先例)**: scaffold fetch-back で
+  **commit `bd6616c5` (A3a) の sources/ 15ファイル
+  (b33-status.log + exh15m 10 raw + anchor-15m 4 raw) が push 時に
+  mojibake 化していたことを検出** (b33-status.log 実測 sha256 `1b5d96a9`
+  ≠ pin `1f663fc8`、exh15m/anchor raws 全て pin 不一致)。published
+  batch-33 正本 (commit `72877473` 出版物) から 15ファイルを再取得し
+  **全て pin と一致 (`1f663fc8` / G4 pins / `6adb122c`×2 /
+  `6bd7a2ac` / `b6abaa63`)** を確認のうえ kit 修復 commit `f9420860`
+  として B1-fix 出版 (content直渡しpush・fetch-back は API git blob sha1
+  15/15 厳密一致で検証)。修復後 kit 上で maker G1–G7 全 PASS・
+  reprobe-keys.json 再生成 `3744b522` byte-identical・maker tamper
+  battery 4/4 fail-closed (T1 status改変 / T2 verdict改変 / T3
+  base-cache切詰 / T4 input CSV改変) を再実行。A1/A2/A3b commit
+  (scripts 6・input 9・val-gate 8・canonical cache) は初回から全 pin 一致
+  (無傷)。
+- ③ val-gate fresh 4/4 node-exact (`.ea-host.out`):
+  at2m×2 budget 2,000,000 → result 0 nodes 2,000,000 (wall 9/9s)・
+  first-15m budget 15,000,000 → result 2 nodes 3,651,923 (17s)・
+  second-15m budget 15,000,000 → result 2 nodes 5,040,200 (25s)。
+  published baselines と (budget,result,nodes) 完全一致。
+- ④ anchors (derived 30M runner・30M budget flagで再実行):
+  af001 → result 2 (LOSS) nodes 2,952,432 (**published値と node-exact**・
+  2-pass一致・wall 13/13s)・af029 → result 1 (WIN) nodes 4,862,485
+  (**published値と node-exact**・PASS + WIN-HALT (runner rc=45 予定通り)・
+  wall 23/23s)。30M derived runner end-to-end 妥当性 gate PASS。
+- ⑤ targets 5/5 (`ea_local_step.sh` cross-invocation resume・2-pass
+  fresh-cold @30M node-exact・MISMATCH 0・WINDOW-EXCEEDED 0):
+  af003 (s5 153030) → **result 2 (LOSS) nodes 23,126,072** (126/129s)・
+  af023 (s5 810351) → **result 1 (WIN) nodes 28,933,179** (155/157s・
+  p1完了後 p2 が260s窓で切れ sidecar `af023.p2.truncated.024331.out`
+  + P2-TRUNCATED-RETRY 1回 → 次invocationで完走・resume設計実働)・
+  af034 (s5 514726) → **result 0 (EXHAUSTED @30M) nodes 30,000,000**
+  (163/165s・p2同様にsidecar `af034.p2.truncated.025034.out` + retry 1回
+  → 完走)・af039 (s5 2621520) → **result 2 (LOSS) nodes 19,234,232**
+  (105/105s)・af048 (s5 265799) → **result 1 (WIN) nodes 17,816,616**
+  (97/89s)。targets 合計 nodes 119,110,099/pass。主要wallの実測から
+  当hostの処理速度は ~222k nodes/s (2M val-gate 9s)。
+- ⑥ audit (`audit_ea.py`) ×3 byte-identical 全PASS
+  (audit.json sha256 `5b83d166e0fb7842a0cad949404c572ba666b71a4cd87dd9e704ce97e543cff3`):
+  probed 5/5・win 2・loss 2・exhausted @30M 1・window-exceeded 0・
+  unprobed 0・anchors 2・val-gate 4・mismatches 0。audit tamper
+  電池 (scratch copy上・本番output非破壊): TA raw nodes改変 (af003
+  23,126,072→…073) → GATE FAILED (p1/p2 row mismatch)・TB af023
+  WIN-HALT行除去 → GATE FAILED・TD val-gate fresh行改変 → GATE
+  FAILED・control 2回 PASS (本番output byte不変 `5b83d166`)。観察記録:
+  status.log片側only改変 (raw SSOT無傷) は audit の設計上 raw行が
+  SSOTでstatus行は副次的 (corroboration) のため gate対象外。
+- ⑦ B outputs push commit `b63569ab` (status.log `db7c7017` 13行 + raw 14 +
+  truncated sidecar 2 + `.ea-host.out` 4 + audit.json `5b83d166`)・
+  fetch-back API git blob sha1 全22ファイル厳密一致。
+- ⑧ 完了log出版 (Part DI完了logと同形式)。
 
 ## 結果 (honest label・verdict不消費)
 
-- (執行後に追記される。)
+- batch-33 EXHAUSTED 5行 (15M条件) の 30M再probe結果
+  (2-pass fresh-cold node-exact・MISMATCH 0・WIN-CONTINUE設計どおり
+  WIN観測でも全drive継続):
+  - **af003 = LOSS @30M** (nodes 23,126,072) — honest label。adoptionは
+    別adoption Part (pinned merger `90711961…`) のみ。
+  - **af023 = WIN @30M** (nodes 28,933,179) — honest label・verdict不消費。
+    scrutiny owner C++第二実装 gate `9193f5b6…` 待ち。
+  - **af034 = EXHAUSTED @30M** (nodes 30,000,000) — 30M条件でも
+    honest UNKNOWN (同一条件再probeはしない・さらなる高budgetは別Part)。
+  - **af039 = LOSS @30M** (nodes 19,234,232) — honest label。adoptionは
+    別adoption Partのみ。
+  - **af048 = WIN @30M** (nodes 17,816,616) — honest label・verdict不消費。
+    scrutiny owner C++第二実装 gate `9193f5b6…` 待ち。
+- anchors: af001 LOSS nodes 2,952,432 / af029 WIN nodes 4,862,485 —
+  ともに published 15M値と node-exact (30M budget flagで再実行・search
+  determinism確認)。
+- batch-33 (class 34908) 54キーの15M-era集計 (LOSS 45・WIN 4・EXH 5) に対する
+  本30M再probeの変化: EXH 5行のうち**2行がLOSS honest label・2行がWIN
+  honest label・1行 (af034) が30M条件でもEXHAUSTED (honest UNKNOWN)**。
+  ただしこの集計はbookkeepingであり閉鎖・被覆・secured coverageの主張では
+  ない (class 34908 は UNKNOWNのまま・採用は未実施)。
 
 ## 結果の解釈 (interpretation guard)
 
