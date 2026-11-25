@@ -4,16 +4,16 @@ Part EE (2026-11-25): Part ED af034 60M re-probe packet
 (class 34908 の batch-33 EXHAUSTED 最後残キー af034; 予算条件 ladder
 15M (b33) EXHAUSTED → 30M (Part EA) EXHAUSTED → 60M (Part ED)
 resolved exact LOSS) の **fresh LOSS行 1行のみ (af034)** を canonical
-exact-S5 chain cache に採用 (loss-only adoption) した接続coreの
-出版物である。**probe-level WIN行は本 Part では 1行も対象外**
-(class 34908 の 6不消費WIN子 {af029, af047, af050, af053, af023,
-af048} は引き続き scrutiny owner C++ 第二実装 gate pin
+exact-S5 chain cache に採用 (loss-only adoption) した接続coreと、
+その reaudit (wave F) の出版物である。**probe-level WIN行は本
+Part では 1行も対象外** (class 34908 の 6不消費WIN子 {af029, af047,
+af050, af053, af023, af048} は引き続き scrutiny owner C++ 第二実装 gate pin
 `9193f5b6…` 専権・全て不消費のまま)。
 
 **11x11 空盤は UNKNOWN。19 central-reply root も全て UNKNOWN。
 本dirのどの行も root verdict を主張しない。nodes は bookkeeping。**
 
-## 構成 (接続core・wave B/C まで出版済み)
+## 構成 (接続core: waves A〜E 出版済み・reaudit: wave F 出版済み)
 
 - `scripts/make_increments_ee_adoption.py` maker (sha
   `772c3c45e5d306089aa83fe05dea59571609ebb380ae56b7af20587acd156c5f`)
@@ -53,19 +53,71 @@ merger `.tmp` 書き出しが filesystem 255B 制限に抵触するため・実�
 Errno 36)。完全な BASE (EC) cache名 (243B) とsha `cecc1a0f…` は
 maker・merge-audit・宣言が保持する。検証性は sha照合で完全に保たれる。
 
-## reaudit (wave F・事前登録・未実行)
+## reaudit (wave F・実行・出版済み・2026-11-25)
 
-接続coreの出版に先立ち、reaudit (refresh fork
-`reaudit/scripts/refresh_adoption_ee.py` = EC `73186e63…` の fork・
-CACHE pin `fc3e4ac9…` のみ変更 + delta extractor
-`scripts/compare_deltas_ee_adoption.py` = EC extractor `548068c6…`
-の fork) と reaudit outputs (refresh-summary / closure-classes /
-per-root-coverage / worklist regen pin検証 / decomp-deltas) は
-** Part EE 宣言 (2026-11-25) の wave F として事前登録済みで、本
-commit 時点では未実行・未出版** である。よって本 README の時点では
-class 34908 の unknown 子数変化 (予想 7→6)・closure表・coverage の
-機械導出はまだ行われておらず、このdirの出版物は verdict 1行の
-canonical化までを主張する。
+Part EE 宣言 (wave A) で事前登録された wave F を実行・出版した。
+clean-room 検証: reaudit outputs を全削除 → refresh fork 再実行 →
+byte同一 → extractor 再実行 → decomp byte同一。BASE (EC) 側は EC
+refresh fork `73186e63…` を scratch 再実行で再検証 (EC summary
+`936373e6…`・closure `0ae9749c…`・prc `06cd6561…`・worklist regen
+`36bc6c6c…`・BASE cache `cecc1a0f…` 6,665行・byte同一)。
+
+- `reaudit/scripts/refresh_adoption_ee.py` (sha256 `01937f23…`): EC
+  refresh fork からの fork。変更は docstring + CACHE pin
+  (`fc3e4ac9…` 6,666行へ) のみ
+- `scripts/compare_deltas_ee_adoption.py` (sha256 `7660b441…`): EC
+  extractor `548068c6…` の fork。af034loss1 manifest schema
+  (row_counts.prior_adopted_loss_rows_base・batch
+  whole_packet_nodes 32,012,059・origin_budget_15m 15,000,000・
+  source_budget_30m 30,000,000・kit_integrity EA 61 + ED 36 file
+  pins) に全面適応・fail-closed gate 全維持
+- `reaudit/output/refresh-summary.json` (sha256 `6af660a1…`)
+- `reaudit/output/closure-classes.csv` (sha256 `27e00b0d…`・807行)
+- `reaudit/output/per-root-coverage.csv` (sha256 `6974299b…`)
+- `reaudit/output/probe-worklist.csv` は**出版しない** (3,724,115B・
+  size policy)。regen pin sha256 `b4933810…` を MANIFEST ヘッダに
+  記載する (published refresh fork + cache pin `fc3e4ac9…` から
+  誰でも再生成して sha256 照合できる・本 wave の clean-room 再実行で
+  byte同一を確認済み)
+- `output/decomp-deltas-af034loss1-adoption.json` (sha256
+  `614bbda0…`・schema af034loss1-adoption-decomp-deltas-v1)
+
+### wave F 機器導出の確定値 (wave E の予想を実証・全て extractor が fail-closed 検証)
+
+- **class 34908**: unknown 7→6・rank 8→7・groups_served 5 static・
+  base_known_loss_children 49→50 (adopted_own 1)・**NOT freed・NOT
+  excluded**。残 6子は全て不消費 probe-level WIN {af029 (s5
+  900646), af047 (961976), af050 (962386), af053 (962470), af023
+  (810351), af048 (962172)}。scrutiny owner C++ 第二実装 gate pin
+  `9193f5b6…` 専権のまま
+- class 16371: 全面 byte-static (rank 4・unknown 2・groups 3・不消費
+  WIN子 {e042, e002} 残存)
+- class 20421: churn は class_rank のみ (7→8)。unknown 6・groups 4
+  static・EE 採用 key は同class境界外 (frontier-cost bookkeeping)
+- closure表: 807行全面 static。left/entered 空・unknown 変化 class
+  は 34908 以外ゼロ・rank churn は 20421 のみ (fully_stable 805。
+  extractor は 34908 を専権セクションで検証)
+- frozen update8: 完全 byte-static (採用 s5 930660 は凍結 baseline
+  要求の外側・resolved 259 / remaining 31,600 / groups_free_now
+  131・newly_resolved []・win_hit_groups [])
+- metrics (bookkeeping・決して verdict ではない): joint greedy union
+  36,509→36,508・worklist 64,415→64,414・known_universe 844→845・
+  cache_in_universe 821→822・root0 greedy 3004→3003・root12 greedy
+  2891→2890 (free/uncovered は全 root 同一)・root27 119/119
+- class_status: excluded 390 / excluded_now 23 / free_now 39 /
+  unknown 34,497 (before/after 同一・static)・board 検証 free
+  候補 39/39・reject 0
+
+### 次 probe 候補 (検討用・次 Part の宣言が最終選定)
+
+worklist regen (`b4933810…`) の機器抽出: closure表 rank 上位で残
+unknown の小さい **class 5804 (rank 6・unknown 4)** を筆頭に
+**class 34269 (rank 9・unknown 11)**・**class 5343 (rank 10・
+unknown 46)**。class 34908 の残 6子 (rank 7) は全て scrutiny
+gate 専権のため本 lane の次 probe 対象外。rank 1-5 の class
+(23101/1849/2251: unknown 1・16371: unknown 2・16757: unknown 3)
+の残子を含む最終選定は次 Part の宣言が pool 状態と突き合わせて
+行う (本 dir は候補の機器抽出結果のみを出版)。
 
 ## 解釈ガード
 
@@ -77,7 +129,10 @@ canonical化までを主張する。
   af023 / af048 / af029 / af047 / af050 / af053) も引き続き全て
   不消費
 - loss-only adoption は class を free化も excluded化もしない
-  (class 34908 は 6不消費WIN子が残るため unknown のまま)
+  (class 34908 は 6不消費WIN子が残るため unknown のまま・reaudit
+  の機器導出で確定)
 - nodes は bookkeeping・pn/dn ではない・solved数は勝敗ではない
-- 11×11 は UNKNOWN のまま。root verdict・coverage claim は本dirの
-  どこにも無い
+- closure表・worklist・greedy union・候補 class の列挙はいずれも
+  bookkeeping であり、verdict・coverage 主張ではない
+- **11×11 は UNKNOWN のまま。root verdict・coverage claim は本dirの
+  どこにも無い**
