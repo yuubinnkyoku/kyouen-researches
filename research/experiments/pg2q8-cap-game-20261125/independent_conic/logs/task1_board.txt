@@ -1,0 +1,45 @@
+==============================================================================
+TASK 1 - board is PG(2,8) and ordering is the sorted-canonical model
+==============================================================================
+board file: C:\Users\yuubi\ghq\github.com\yuubinnkyoku\kyouen-researches\research\experiments\pg2q8-cap-game-20261125\output\board_pg2q8.txt
+
+-- GF(8) = GF(2)[x]/(x^3+x+1) -------------------------------
+  commutative_mul            : True
+  associative_mul            : True
+  distributive               : True
+  inverse                    : True
+  identity_1                 : True
+  zero                       : True
+  x_primitive_order_7        : True
+  x3_equals_x_plus_1         : True
+  frobenius_bijective        : True
+
+-- structural checks ----------------------------------------
+  header                       : [73, 73]
+  n_points_declared_73         : True
+  n_lines                      : 73
+  all_lines_size_9             : True
+  all_points_in_range          : True
+  all_lines_distinct           : True
+  lines_have_distinct_points   : True
+  n_pairs_covered              : 2628
+  all_pairs_once               : True
+  point_degrees                : [9]
+  all_degrees_9                : True
+  model_n_lines                : 73
+  model_equals_board_as_sets   : True
+  model_equals_board_in_order  : True
+  point_ordering_matches       : True
+
+-- model spot checks (index -> canonical vector) ------------
+  point  0 = (0, 0, 1)
+  point  1 = (0, 1, 0)
+  point  9 = (1, 0, 0)
+  point 10 = (1, 0, 1)
+  point 16 = (1, 0, 7)
+  point 29 = (1, 2, 4)
+  point 47 = (1, 4, 6)
+  point 48 = (1, 4, 7)
+  point 72 = (1, 7, 7)
+
+TASK 1: PASS

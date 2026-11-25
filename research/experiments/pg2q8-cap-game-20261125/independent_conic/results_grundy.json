@@ -1,0 +1,178 @@
+{
+ "conic": [
+  2,
+  3,
+  10,
+  16,
+  18,
+  21,
+  29,
+  47,
+  48
+ ],
+ "results": {
+  "3": {
+   "base": [
+    2,
+    3,
+    10
+   ],
+   "grundy": 1,
+   "upset_size": 8450,
+   "upset_profile": {
+    "3": 1,
+    "4": 49,
+    "5": 735,
+    "6": 3185,
+    "7": 2450,
+    "8": 1470,
+    "9": 490,
+    "10": 70
+   },
+   "maximal_sizes": [
+    6,
+    10
+   ],
+   "maximal_counts": {
+    "6": 735,
+    "10": 70
+   },
+   "all_maximal_even": true
+  },
+  "4": {
+   "base": [
+    2,
+    3,
+    10,
+    16
+   ],
+   "grundy": 0,
+   "upset_size": 646,
+   "upset_profile": {
+    "4": 1,
+    "5": 30,
+    "6": 195,
+    "7": 200,
+    "8": 150,
+    "9": 60,
+    "10": 10
+   },
+   "maximal_sizes": [
+    6,
+    10
+   ],
+   "maximal_counts": {
+    "6": 45,
+    "10": 10
+   },
+   "all_maximal_even": true
+  },
+  "5": {
+   "base": [
+    2,
+    3,
+    10,
+    16,
+    18
+   ],
+   "grundy": 1,
+   "upset_size": 66,
+   "upset_profile": {
+    "5": 1,
+    "6": 13,
+    "7": 20,
+    "8": 20,
+    "9": 10,
+    "10": 2
+   },
+   "maximal_sizes": [
+    6,
+    10
+   ],
+   "maximal_counts": {
+    "6": 3,
+    "10": 2
+   },
+   "all_maximal_even": true
+  },
+  "6": {
+   "base": [
+    2,
+    3,
+    10,
+    16,
+    18,
+    21
+   ],
+   "grundy": 0,
+   "upset_size": 16,
+   "upset_profile": {
+    "6": 1,
+    "7": 4,
+    "8": 6,
+    "9": 4,
+    "10": 1
+   },
+   "maximal_sizes": [
+    10
+   ],
+   "maximal_counts": {
+    "10": 1
+   },
+   "all_maximal_even": true
+  },
+  "7": {
+   "base": [
+    2,
+    3,
+    10,
+    16,
+    18,
+    21,
+    29
+   ],
+   "grundy": 1,
+   "upset_size": 8,
+   "upset_profile": {
+    "7": 1,
+    "8": 3,
+    "9": 3,
+    "10": 1
+   },
+   "maximal_sizes": [
+    10
+   ],
+   "maximal_counts": {
+    "10": 1
+   },
+   "all_maximal_even": true
+  },
+  "8": {
+   "base": [
+    2,
+    3,
+    10,
+    16,
+    18,
+    21,
+    29,
+    47
+   ],
+   "grundy": 0,
+   "upset_size": 4,
+   "upset_profile": {
+    "8": 1,
+    "9": 2,
+    "10": 1
+   },
+   "maximal_sizes": [
+    10
+   ],
+   "maximal_counts": {
+    "10": 1
+   },
+   "all_maximal_even": true
+  }
+ },
+ "memo_positions": 34102
+}

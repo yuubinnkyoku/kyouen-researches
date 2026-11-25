@@ -1,0 +1,30 @@
+==============================================================================
+TASK 5 - parity-theorem consequence
+==============================================================================
+
+-- (a) consequence check on the six representatives --------------
+   k                        base  terminal sizes  all even  Grundy  k mod 2  (10-k) mod 2  verdict
+   3                  [2, 3, 10]         [6, 10]      True       1        1             1  OK
+   4              [2, 3, 10, 16]         [6, 10]      True       0        0             0  OK
+   5          [2, 3, 10, 16, 18]         [6, 10]      True       1        1             1  OK
+   6      [2, 3, 10, 16, 18, 21]            [10]      True       0        0             0  OK
+   7  [2, 3, 10, 16, 18, 21, 29]            [10]      True       1        1             1  OK
+   8  [2, 3, 10, 16, 18, 21, 29, 47]            [10]      True       0        0             0  OK
+
+-- (b) parity theorem verified on every position of the task-4 DP -
+  positions in the DP memo                 : 8450
+  positions with a single maximal parity p : 8450
+  positions with both parities (p mixed)   : 0
+  parity-theorem violations among uniform  : 0
+
+-- Grundy by position size (over the whole DP memo) --------------
+  size  3: G=1:1
+  size  4: G=0:49
+  size  5: G=1:735
+  size  6: G=0:3185
+  size  7: G=1:2450
+  size  8: G=0:1470
+  size  9: G=1:490
+  size 10: G=0:70
+
+TASK 5: PASS 

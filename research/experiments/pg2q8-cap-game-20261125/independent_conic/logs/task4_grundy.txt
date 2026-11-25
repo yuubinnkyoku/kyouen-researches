@@ -1,0 +1,78 @@
+==============================================================================
+TASK 4 - Grundy values of the conic k-caps in the s=2 cap game
+==============================================================================
+conic C: [2, 3, 10, 16, 18, 21, 29, 47, 48]
+
+---- k = 3: base = [2, 3, 10]  (conic k-cap) -------------------
+  Grundy(base)                 : 1
+  |upset| (caps containing base): 8450
+  upset profile (size: count)  : {3: 1, 4: 49, 5: 735, 6: 3185, 7: 2450, 8: 1470, 9: 490, 10: 70}
+  maximal extension sizes      : [6, 10]
+  #maximal extensions by size  : {6: 735, 10: 70}
+  all maximal sizes even       : True
+  k mod 2                      : 1   (10-k) mod 2: 1
+
+---- k = 4: base = [2, 3, 10, 16]  (conic k-cap) -------------------
+  Grundy(base)                 : 0
+  |upset| (caps containing base): 646
+  upset profile (size: count)  : {4: 1, 5: 30, 6: 195, 7: 200, 8: 150, 9: 60, 10: 10}
+  maximal extension sizes      : [6, 10]
+  #maximal extensions by size  : {6: 45, 10: 10}
+  all maximal sizes even       : True
+  k mod 2                      : 0   (10-k) mod 2: 0
+
+---- k = 5: base = [2, 3, 10, 16, 18]  (conic k-cap) -------------------
+  Grundy(base)                 : 1
+  |upset| (caps containing base): 66
+  upset profile (size: count)  : {5: 1, 6: 13, 7: 20, 8: 20, 9: 10, 10: 2}
+  maximal extension sizes      : [6, 10]
+  #maximal extensions by size  : {6: 3, 10: 2}
+  all maximal sizes even       : True
+  k mod 2                      : 1   (10-k) mod 2: 1
+
+---- k = 6: base = [2, 3, 10, 16, 18, 21]  (conic k-cap) -------------------
+  Grundy(base)                 : 0
+  |upset| (caps containing base): 16
+  upset profile (size: count)  : {6: 1, 7: 4, 8: 6, 9: 4, 10: 1}
+  maximal extension sizes      : [10]
+  #maximal extensions by size  : {10: 1}
+  all maximal sizes even       : True
+  k mod 2                      : 0   (10-k) mod 2: 0
+
+---- k = 7: base = [2, 3, 10, 16, 18, 21, 29]  (conic k-cap) -------------------
+  Grundy(base)                 : 1
+  |upset| (caps containing base): 8
+  upset profile (size: count)  : {7: 1, 8: 3, 9: 3, 10: 1}
+  maximal extension sizes      : [10]
+  #maximal extensions by size  : {10: 1}
+  all maximal sizes even       : True
+  k mod 2                      : 1   (10-k) mod 2: 1
+
+---- k = 8: base = [2, 3, 10, 16, 18, 21, 29, 47]  (conic k-cap) -------------------
+  Grundy(base)                 : 0
+  |upset| (caps containing base): 4
+  upset profile (size: count)  : {8: 1, 9: 2, 10: 1}
+  maximal extension sizes      : [10]
+  #maximal extensions by size  : {10: 1}
+  all maximal sizes even       : True
+  k mod 2                      : 0   (10-k) mod 2: 0
+
+-- cross-check: naive move generator vs bitmask generator -----
+  sampled 300 memoised positions (size 3..10): mismatches = 0
+
+-- independent naive Grundy recomputation (frozenset game tree) --
+  k=8: naive Grundy = 0; bitmask DP = 0; positions explored = 4
+  k=7: naive Grundy = 1; bitmask DP = 1; positions explored = 8
+
+-- extra representatives (orbit-invariance spot check) --------
+  k=3: Grundy on [[2, 3, 10], [2, 18, 48], [2, 29, 47], [2, 10, 18]] -> [1, 1, 1, 1] OK
+  k=4: Grundy on [[2, 3, 10, 16], [10, 16, 21, 29], [3, 18, 29, 47], [2, 21, 29, 48]] -> [0, 0, 0, 0] OK
+  k=5: Grundy on [[2, 3, 10, 16, 18], [2, 10, 16, 18, 21], [2, 10, 18, 47, 48], [3, 10, 18, 21, 47]] -> [1, 1, 1, 1] OK
+  k=6: Grundy on [[2, 3, 10, 16, 18, 21], [2, 16, 18, 21, 29, 47], [3, 10, 16, 18, 21, 29], [2, 10, 18, 21, 29, 48]] -> [0, 0, 0, 0] OK
+  k=7: Grundy on [[2, 3, 10, 16, 18, 21, 29], [3, 10, 16, 18, 21, 47, 48], [2, 10, 16, 18, 21, 29, 47], [2, 3, 16, 18, 21, 29, 47]] -> [1, 1, 1, 1] OK
+  k=8: Grundy on [[2, 3, 10, 16, 18, 21, 29, 47], [2, 3, 16, 18, 21, 29, 47, 48], [2, 3, 10, 16, 21, 29, 47, 48], [2, 3, 10, 16, 18, 21, 29, 47]] -> [0, 0, 0, 0] OK
+
+  DP memo size (all bases): 34102; grundy() calls: 127764; elapsed 0.4s
+  wrote results_grundy.json
+
+TASK 4: PASS

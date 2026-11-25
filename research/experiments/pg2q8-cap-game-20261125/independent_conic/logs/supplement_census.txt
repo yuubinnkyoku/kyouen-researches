@@ -1,0 +1,52 @@
+==============================================================================
+SUPPLEMENT S1 - PG(2,8) cap census and hyperoval count
+==============================================================================
+
+-- brute force counts -----------------------------------------
+  n_3 = C(73,3) - 73*C(9,3) = 62196 - 6132 = 56064
+  n_4 by enumerating all C(73,4) = 1088430 4-subsets : 686784
+  #extensions of 300 random 4-caps (expect {30})          : {30}
+  n_5 = n_4*30/5                                          : 4120704
+
+-- n_j from the k=3,4,5 upsets (three independent estimates) -
+  n_6  = 8928192  8928192  8928192   consistent
+  n_7  = 3924480  3924480  3924480   consistent
+  n_8  = 1471680  1471680  1471680   consistent
+  n_9  = 327040  327040  327040   consistent
+  n_10 = 32704  32704  32704   consistent
+
+  (bases k=6,7,8 are NOT used: PGL(3,8) is not transitive on
+   6-caps, so n_j = a_j*n_6/C(j,6) does not hold for them; the raw
+   rescaling from the k=6 base is off by the constant factor 13/10.)
+
+-- maximal caps of PG(2,8) -----------------------------------
+  maximal 6-caps  (bases 3,4,5): 2060352  2060352  2060352
+  maximal 10-caps (bases 3,4,5): 32704  32704  32704
+
+-- independent hyperoval count (conic + its nucleus) ----------
+  conics                                            : 32704
+  nucleus on its conic (must be 0)                   : 0
+  distinct hyperovals  conic + nucleus               : 32704
+  each conic lies in exactly one hyperoval           : True
+  every conic is 1 of the C(9,6)=84 conic 6-subsets of its hyperoval
+  => #conic-6-subsets = 32704*84 = 2747136
+
+-- total number of caps of PG(2,8) (all sizes 0..10) ---------
+  1 (empty) + 73 (1-caps) + 2628 (2-caps) + sum_(3..10) n_j
+  = 19550350
+  parent README census (PG(2,8))     : 19,550,350   -> True
+  parent README maximal 6-caps       : 2,060,352    -> True
+  parent README maximal 10-caps      : 32,704       -> True
+
+-- PG(2,8) caps by size --------------------------------------
+  n_3  = 56,064
+  n_4  = 686,784
+  n_5  = 4,120,704
+  n_6  = 8,928,192
+  n_7  = 3,924,480
+  n_8  = 1,471,680
+  n_9  = 327,040
+  n_10 = 32,704
+  (n_1 = 73, n_2 = 2,628, n_0 = 1; total 19,550,350)
+
+SUPPLEMENT S1: PASS

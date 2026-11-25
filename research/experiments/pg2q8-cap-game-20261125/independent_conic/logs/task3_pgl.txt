@@ -1,0 +1,59 @@
+==============================================================================
+TASK 3 - PGL(2,8), parameterisation of C, orbits of k-subsets
+==============================================================================
+conic C (board indices): [2, 3, 10, 16, 18, 21, 29, 47, 48]
+           (vectors)    : [(0, 1, 1), (0, 1, 2), (1, 0, 1), (1, 0, 7), (1, 1, 1), (1, 1, 4), (1, 2, 4), (1, 4, 6), (1, 4, 7)]
+
+-- PGL(2,8) from 2x2 matrices over GF(8) ---------------------
+  |GL(2,8)| = (8^2-1)(8^2-8) = 3528
+  |PGL(2,8)| = |GL|/(8-1)    = 504
+  distinct matrices mod scalars: 504
+  closed under multiplication: True
+  identity present           : True
+  every element invertible   : True
+  distinct permutations of PG(1,8): 504
+  action is a homomorphism (checked on all 504^2 pairs): True
+  2-transitive? |orbit of 0| = 9 ; |orbit of (0,1)| = 72
+  sharply 3-transitive: #distinct images of (0,1,2) = 504 = 9*8*7 = 504
+
+-- parameterisation of C by PG(1,8) --------------------------
+  P0 = 2 (0, 1, 1);  L = line 1 = [0, 9, 10, 11, 12, 13, 14, 15, 16] (P0 not on L)
+  #lines through P0: 9
+  Q in L |-> line(P0,Q) is a bijection L -> pencil at P0: True
+  coordinates on L used for PG(1,8) (basis u,v = (0, 0, 1) (1, 0, 0) )
+  coordinate map L -> PG(1,8) bijective: True
+  lines through P0 meeting C in 2 points: 8 ; tangent direction Q = 13
+  phi: L -> C bijective: True and image = C: True
+  parameter table  [t] in PG(1,8) -> P in C:
+      t=0  (s,t)=(1, 0)  Q= 0  ->  P= 3 (0, 1, 2)
+      t=1  (s,t)=(0, 1)  Q= 9  ->  P=18 (1, 1, 1)
+      t=2  (s,t)=(1, 1)  Q=10  ->  P=10 (1, 0, 1)
+      t=3  (s,t)=(2, 1)  Q=11  ->  P=47 (1, 4, 6)
+      t=4  (s,t)=(3, 1)  Q=12  ->  P=48 (1, 4, 7)
+      t=5  (s,t)=(4, 1)  Q=13  ->  P= 2 (0, 1, 1)
+      t=6  (s,t)=(5, 1)  Q=14  ->  P=21 (1, 1, 4)
+      t=7  (s,t)=(6, 1)  Q=15  ->  P=29 (1, 2, 4)
+      t=8  (s,t)=(7, 1)  Q=16  ->  P=16 (1, 0, 7)
+  tangent at P0 = line through P0 and nucleus(31)? True
+
+-- induced action of PGL(2,8) on the 9 points of C ------------
+  distinct permutations of C: 504
+  faithful & transitive     : True
+  induced perms realised by a projectivity of PG(2,8) fixing C: 504 / 504 
+
+-- orbits of k-subsets of C under PGL(2,8) -------------------
+  k=3: #orbits=1  sizes=[84]  C(9,3)=84  OK
+  k=4: #orbits=1  sizes=[126]  C(9,4)=126  OK
+  k=5: #orbits=1  sizes=[126]  C(9,5)=126  OK
+  k=6: #orbits=1  sizes=[84]  C(9,6)=84  OK
+  k=7: #orbits=1  sizes=[36]  C(9,7)=36  OK
+  k=8: #orbits=1  sizes=[9]  C(9,8)=9  OK
+
+-- [supplement] orbit of C under PGL(3,8) --------------------
+  |orbit of C under <6 elementary transvections>| = 32704
+  total non-degenerate conics (task 2 census)     = 32704
+  every image is a 9-point cap (a conic)          : True
+  |PGL(3,8)| = (8^3-1)(8^3-8)(8^3-8^2)/(8-1)     = 16482816
+  |PGL(3,8)|/32704 (=> stabiliser order)          = 504
+
+TASK 3: PASS
