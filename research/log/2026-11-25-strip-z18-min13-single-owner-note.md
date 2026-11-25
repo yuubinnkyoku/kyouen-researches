@@ -526,7 +526,7 @@ check 機体 (F 節) で再現。
 
 ## 4. 機体と宣言 battery (fail-closed)
 
-専用検証機体 `verify_k1326.py` (verify_k1325.py の構造写し・差分全開示・
+専用検証機体 `verify_k1328.py` (verify_k1325.py の構造写し・差分全開示・
 engine pin `bd5f22e4…` startup ゲート) を kit dir に置く。宣言 battery
 **15,680 点** (fail-closed: 各 gate の点数が宣言値と 1 点でも違えば
 その時点で FAIL・overall_bad > 0 で rc 1・出力は JSON・stdout が凍結対象):
