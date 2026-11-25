@@ -1,0 +1,120 @@
+{
+ "date": "2026-11-14",
+ "encoding": "def-mode single-deficiency (genfast3 CNF, kissat 4.0.4)",
+ "note": "60-90s cap difficulty profile of the (8,10) band m=26..939; hard core concentrated in m=[26,59]; m>=60 all resolve in <=54s; witness SAT trend at m=23/24/25: 16,474 / 393,853 / 1,221,994 conflicts (eight-row-bands-20261114)",
+ "probes": [
+  {
+   "m": 26,
+   "cap": 230,
+   "result": "INDET",
+   "conflicts": 5476444,
+   "sec": 230.0,
+   "source": "eight-row-bands-20261114 (four-encoding frontier negative: def / rowY=3 / rowY=3+lexH / rowY=4)"
+  },
+  {
+   "m": 27,
+   "cap": 60,
+   "result": "INDET",
+   "conflicts": 1759641,
+   "sec": 60
+  },
+  {
+   "m": 28,
+   "cap": 60,
+   "result": "INDET",
+   "conflicts": 1783841,
+   "sec": 60
+  },
+  {
+   "m": 29,
+   "cap": 60,
+   "result": "INDET",
+   "conflicts": 1759231,
+   "sec": 60
+  },
+  {
+   "m": 30,
+   "cap": 60,
+   "result": "INDET",
+   "conflicts": 1776991,
+   "sec": 60
+  },
+  {
+   "m": 40,
+   "cap": 60,
+   "result": "INDET",
+   "conflicts": 1682817,
+   "sec": 60
+  },
+  {
+   "m": 50,
+   "cap": 60,
+   "result": "INDET",
+   "conflicts": 1695196,
+   "sec": 60
+  },
+  {
+   "m": 60,
+   "cap": 60,
+   "result": "UNSAT",
+   "conflicts": 1529015,
+   "sec": 54
+  },
+  {
+   "m": 80,
+   "cap": 60,
+   "result": "UNSAT",
+   "conflicts": 604025,
+   "sec": 26
+  },
+  {
+   "m": 100,
+   "cap": 60,
+   "result": "UNSAT",
+   "conflicts": 363092,
+   "sec": 17
+  },
+  {
+   "m": 150,
+   "cap": 60,
+   "result": "UNSAT",
+   "conflicts": 222475,
+   "sec": 14
+  },
+  {
+   "m": 200,
+   "cap": 60,
+   "result": "UNSAT",
+   "conflicts": 211972,
+   "sec": 17
+  },
+  {
+   "m": 300,
+   "cap": 60,
+   "result": "UNSAT",
+   "conflicts": 141619,
+   "sec": 15
+  },
+  {
+   "m": 500,
+   "cap": 90,
+   "result": "UNSAT",
+   "conflicts": 130934,
+   "sec": 23
+  },
+  {
+   "m": 700,
+   "cap": 90,
+   "result": "UNSAT",
+   "conflicts": 126366,
+   "sec": 31
+  },
+  {
+   "m": 939,
+   "cap": 90,
+   "result": "UNSAT",
+   "conflicts": 116323,
+   "sec": 42
+  }
+ ]
+}

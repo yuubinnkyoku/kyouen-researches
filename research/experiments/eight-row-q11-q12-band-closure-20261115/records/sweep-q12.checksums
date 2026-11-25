@@ -1,0 +1,10 @@
+# q12 takeover sweep 2026-11-22 — canonical file sweep-q12.jsonl was transported as 3 shards
+# (byte-split of the canonical file by line ranges; shards hold the same JSONL lines in m order).
+# canonical file = cat shard1 shard2 shard3 (in this order), sha256:
+8e29576d0fe3fe037fbf9a08eaa293f19d7f78576255614a4cdc39bed2d195c2  sweep-q12.jsonl
+# lines: 866 (m=17..882 exactly, one decided record per width, 0 overlaps/gaps)
+# shard md5s:
+2ffc285045d40230cb72e5e86db2c0f4  sweep-q12-shard1-m17-316.jsonl
+898b981feafbadaef4bcdbb5695c1a48  sweep-q12-shard2-m317-616.jsonl
+6e86b860cd39603da89a64bbdb0436a2  sweep-q12-shard3-m617-882.jsonl
+# shard line counts: 300 / 300 / 266

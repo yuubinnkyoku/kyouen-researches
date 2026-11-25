@@ -1,0 +1,348 @@
+{
+  "baseline_commit": "a7bdd689f5e0e88bd361202e1b04c2c908ebf9c3",
+  "source_sha256": {
+    "old": "48326e7d5a924c172aac5280b9df206a5926c2b916c8b5496ce1e80523c11fae",
+    "fixed": "34249932790a9e9d924e9403b75563a2ff051277923301e34ace33e2a5a3650b",
+    "naive": "fd33684370517a36b2e4f5eed3e92063e2d2e340fbd408f02cfdc00583eb45cb"
+  },
+  "cases": [
+    {
+      "name": "sat-delete-1-False",
+      "expected_accept": false,
+      "cnf_sha256": "872c0538d1f690f059bc0a0c4740a028f88e4f7d065f72ce98341022943953a4",
+      "proof_sha256": "8c00f5cb5de430e2c3e5fc9ec51f77afed631fa71eafb0ff1d6b8522244496d2",
+      "results": {
+        "old": {
+          "rc": 0,
+          "accepted": true,
+          "stdout": "steps=3 rup=1 rat=2 rat_checks=0 deletions=1 empty=1 ok=1\nVERIFIED",
+          "stderr": ""
+        },
+        "fixed": {
+          "rc": 1,
+          "accepted": false,
+          "stdout": "steps=3 rup=0 rat=2 rat_checks=0 deletions=1 empty=0 ok=0",
+          "stderr": "empty clause is not RUP"
+        },
+        "naive": {
+          "rc": 1,
+          "accepted": false,
+          "stdout": "steps=3 rup=0 rat=2 rat_checks=0 deletions=1 empty=0 ok=0",
+          "stderr": "empty clause is not RUP"
+        }
+      }
+    },
+    {
+      "name": "sat-delete-1-True",
+      "expected_accept": false,
+      "cnf_sha256": "fbc125dda1b69d48777f6251902e8284454662ee5a1eee31fbb497ec095787f5",
+      "proof_sha256": "8c00f5cb5de430e2c3e5fc9ec51f77afed631fa71eafb0ff1d6b8522244496d2",
+      "results": {
+        "old": {
+          "rc": 0,
+          "accepted": true,
+          "stdout": "steps=3 rup=1 rat=2 rat_checks=0 deletions=1 empty=1 ok=1\nVERIFIED",
+          "stderr": ""
+        },
+        "fixed": {
+          "rc": 1,
+          "accepted": false,
+          "stdout": "steps=3 rup=0 rat=2 rat_checks=0 deletions=1 empty=0 ok=0",
+          "stderr": "empty clause is not RUP"
+        },
+        "naive": {
+          "rc": 1,
+          "accepted": false,
+          "stdout": "steps=3 rup=0 rat=2 rat_checks=0 deletions=1 empty=0 ok=0",
+          "stderr": "empty clause is not RUP"
+        }
+      }
+    },
+    {
+      "name": "sat-delete--1-False",
+      "expected_accept": false,
+      "cnf_sha256": "17e06fd91f6595142da73e98f1e3213f084a3b8de48c8c31054025f5ae5612b0",
+      "proof_sha256": "52b7291dd8450ecddb7404e03364da34ee57ee453be1c0a9f137ed81034c07d5",
+      "results": {
+        "old": {
+          "rc": 0,
+          "accepted": true,
+          "stdout": "steps=3 rup=1 rat=2 rat_checks=0 deletions=1 empty=1 ok=1\nVERIFIED",
+          "stderr": ""
+        },
+        "fixed": {
+          "rc": 1,
+          "accepted": false,
+          "stdout": "steps=3 rup=0 rat=2 rat_checks=0 deletions=1 empty=0 ok=0",
+          "stderr": "empty clause is not RUP"
+        },
+        "naive": {
+          "rc": 1,
+          "accepted": false,
+          "stdout": "steps=3 rup=0 rat=2 rat_checks=0 deletions=1 empty=0 ok=0",
+          "stderr": "empty clause is not RUP"
+        }
+      }
+    },
+    {
+      "name": "sat-delete--1-True",
+      "expected_accept": false,
+      "cnf_sha256": "64b46a91824a3eb0f75136c28a0c9b9afd3bf113723e18feab090da987850abb",
+      "proof_sha256": "52b7291dd8450ecddb7404e03364da34ee57ee453be1c0a9f137ed81034c07d5",
+      "results": {
+        "old": {
+          "rc": 0,
+          "accepted": true,
+          "stdout": "steps=3 rup=1 rat=2 rat_checks=0 deletions=1 empty=1 ok=1\nVERIFIED",
+          "stderr": ""
+        },
+        "fixed": {
+          "rc": 1,
+          "accepted": false,
+          "stdout": "steps=3 rup=0 rat=2 rat_checks=0 deletions=1 empty=0 ok=0",
+          "stderr": "empty clause is not RUP"
+        },
+        "naive": {
+          "rc": 1,
+          "accepted": false,
+          "stdout": "steps=3 rup=0 rat=2 rat_checks=0 deletions=1 empty=0 ok=0",
+          "stderr": "empty clause is not RUP"
+        }
+      }
+    },
+    {
+      "name": "unsat-positive",
+      "expected_accept": true,
+      "cnf_sha256": "b93519a8b0ec98c0d3c6252b9598818764ed2955c00f09ea974ca6bcf8856822",
+      "proof_sha256": "9413d72ff38ec71e6368c3060299a9a3ccc7d9a9db07c38cbe03f7882c3f1d0f",
+      "results": {
+        "old": {
+          "rc": 0,
+          "accepted": true,
+          "stdout": "steps=1 rup=1 rat=0 rat_checks=0 deletions=1 empty=1 ok=1\nVERIFIED",
+          "stderr": ""
+        },
+        "fixed": {
+          "rc": 0,
+          "accepted": true,
+          "stdout": "steps=1 rup=1 rat=0 rat_checks=0 deletions=1 empty=1 ok=1\nVERIFIED",
+          "stderr": ""
+        },
+        "naive": {
+          "rc": 0,
+          "accepted": true,
+          "stdout": "steps=1 rup=1 rat=0 rat_checks=0 deletions=1 empty=1 ok=1\nVERIFIED",
+          "stderr": ""
+        }
+      }
+    },
+    {
+      "name": "sat-no-proof",
+      "expected_accept": false,
+      "cnf_sha256": "38a43c8ebb088ecc46bd5bc1dea87dcfd96bd5369afe2cdb7e85a4a989d2131e",
+      "proof_sha256": "6b41156b05c37763a38475f3438bc3aa533e1d406948c4b1f18a733c2bc6f618",
+      "results": {
+        "old": {
+          "rc": 1,
+          "accepted": false,
+          "stdout": "steps=1 rup=0 rat=1 rat_checks=0 deletions=0 empty=0 ok=1",
+          "stderr": "no empty clause derived"
+        },
+        "fixed": {
+          "rc": 1,
+          "accepted": false,
+          "stdout": "steps=1 rup=0 rat=1 rat_checks=0 deletions=0 empty=0 ok=1",
+          "stderr": "no empty clause derived"
+        },
+        "naive": {
+          "rc": 1,
+          "accepted": false,
+          "stdout": "steps=1 rup=0 rat=1 rat_checks=0 deletions=0 empty=0 ok=1",
+          "stderr": "no empty clause derived"
+        }
+      }
+    },
+    {
+      "name": "sat-forged-unit",
+      "expected_accept": false,
+      "cnf_sha256": "38a43c8ebb088ecc46bd5bc1dea87dcfd96bd5369afe2cdb7e85a4a989d2131e",
+      "proof_sha256": "0b645091048d5a5d3392ea6a1b2a2d42a87f4ef39717dcff844d5eac7b9e3e08",
+      "results": {
+        "old": {
+          "rc": 1,
+          "accepted": false,
+          "stdout": "steps=1 rup=0 rat=0 rat_checks=1 deletions=0 empty=0 ok=0",
+          "stderr": "step 1 failed (len 1)"
+        },
+        "fixed": {
+          "rc": 1,
+          "accepted": false,
+          "stdout": "steps=1 rup=0 rat=0 rat_checks=1 deletions=0 empty=0 ok=0",
+          "stderr": "step 1 failed (len 1)"
+        },
+        "naive": {
+          "rc": 1,
+          "accepted": false,
+          "stdout": "steps=1 rup=0 rat=0 rat_checks=1 deletions=0 empty=0 ok=0",
+          "stderr": "step 1 failed (len 1)"
+        }
+      }
+    },
+    {
+      "name": "p2531-d2",
+      "expected_accept": true,
+      "cnf_sha256": "8dd642e3668cd9cb516f2961c2a79ccc435e1733eb4e792254afe4d6428364bf",
+      "proof_sha256": "183ce57c08bd2bddb5735d2781563bb1c01cdc404e7cafd2ea70d6f0c81f0b7f",
+      "results": {
+        "old": {
+          "rc": 0,
+          "accepted": true,
+          "stdout": "steps=13 rup=13 rat=0 rat_checks=0 deletions=0 empty=1 ok=1\nVERIFIED",
+          "stderr": ""
+        },
+        "fixed": {
+          "rc": 0,
+          "accepted": true,
+          "stdout": "steps=13 rup=13 rat=0 rat_checks=0 deletions=0 empty=1 ok=1\nVERIFIED",
+          "stderr": ""
+        },
+        "naive": {
+          "rc": 0,
+          "accepted": true,
+          "stdout": "steps=13 rup=13 rat=0 rat_checks=0 deletions=0 empty=1 ok=1\nVERIFIED",
+          "stderr": ""
+        }
+      }
+    },
+    {
+      "name": "p2531-d180",
+      "expected_accept": true,
+      "cnf_sha256": "f7178f7525c40b440c3f59bd0f35a958936d94cb87f9ad6941fe3e41d36d1d8f",
+      "proof_sha256": "c4af318cfd3771a5ba65a965db2773818edca89e4b2e199fadafc14b43317e41",
+      "results": {
+        "old": {
+          "rc": 0,
+          "accepted": true,
+          "stdout": "steps=14 rup=14 rat=0 rat_checks=0 deletions=0 empty=1 ok=1\nVERIFIED",
+          "stderr": ""
+        },
+        "fixed": {
+          "rc": 0,
+          "accepted": true,
+          "stdout": "steps=14 rup=14 rat=0 rat_checks=0 deletions=0 empty=1 ok=1\nVERIFIED",
+          "stderr": ""
+        },
+        "naive": {
+          "rc": 0,
+          "accepted": true,
+          "stdout": "steps=14 rup=14 rat=0 rat_checks=0 deletions=0 empty=1 ok=1\nVERIFIED",
+          "stderr": ""
+        }
+      }
+    },
+    {
+      "name": "p2531-d253",
+      "expected_accept": true,
+      "cnf_sha256": "cc78a9beb6d9bf00afa668302a483f1e208559182d5a057b5e1aca115dc30fd0",
+      "proof_sha256": "cc0bb3196eab57c53927be9dee8df890b57c4f76c1463bcc2b034ce0d4cb100b",
+      "results": {
+        "old": {
+          "rc": 0,
+          "accepted": true,
+          "stdout": "steps=10 rup=10 rat=0 rat_checks=0 deletions=0 empty=1 ok=1\nVERIFIED",
+          "stderr": ""
+        },
+        "fixed": {
+          "rc": 0,
+          "accepted": true,
+          "stdout": "steps=10 rup=10 rat=0 rat_checks=0 deletions=0 empty=1 ok=1\nVERIFIED",
+          "stderr": ""
+        },
+        "naive": {
+          "rc": 0,
+          "accepted": true,
+          "stdout": "steps=10 rup=10 rat=0 rat_checks=0 deletions=0 empty=1 ok=1\nVERIFIED",
+          "stderr": ""
+        }
+      }
+    },
+    {
+      "name": "p2531-d268",
+      "expected_accept": true,
+      "cnf_sha256": "baa6e9fb2c8b4a9c6fd1a92a88b9669c4e205dd709ad1202f64f607e0d4c3629",
+      "proof_sha256": "00358d3feee60e66bc2d3d7035e97d8868386e334a0cee60735b356648b8be58",
+      "results": {
+        "old": {
+          "rc": 0,
+          "accepted": true,
+          "stdout": "steps=11 rup=11 rat=0 rat_checks=0 deletions=0 empty=1 ok=1\nVERIFIED",
+          "stderr": ""
+        },
+        "fixed": {
+          "rc": 0,
+          "accepted": true,
+          "stdout": "steps=11 rup=11 rat=0 rat_checks=0 deletions=0 empty=1 ok=1\nVERIFIED",
+          "stderr": ""
+        },
+        "naive": {
+          "rc": 0,
+          "accepted": true,
+          "stdout": "steps=11 rup=11 rat=0 rat_checks=0 deletions=0 empty=1 ok=1\nVERIFIED",
+          "stderr": ""
+        }
+      }
+    },
+    {
+      "name": "p2531-d391",
+      "expected_accept": true,
+      "cnf_sha256": "fb02f3222058e80379b471e24880764b1422421b805d3641897ba19aa4dd6129",
+      "proof_sha256": "044625fd4f29410a25ad40e126828dfbe41c3908eed05555f859a9d85d7e6801",
+      "results": {
+        "old": {
+          "rc": 0,
+          "accepted": true,
+          "stdout": "steps=13 rup=13 rat=0 rat_checks=0 deletions=0 empty=1 ok=1\nVERIFIED",
+          "stderr": ""
+        },
+        "fixed": {
+          "rc": 0,
+          "accepted": true,
+          "stdout": "steps=13 rup=13 rat=0 rat_checks=0 deletions=0 empty=1 ok=1\nVERIFIED",
+          "stderr": ""
+        },
+        "naive": {
+          "rc": 0,
+          "accepted": true,
+          "stdout": "steps=13 rup=13 rat=0 rat_checks=0 deletions=0 empty=1 ok=1\nVERIFIED",
+          "stderr": ""
+        }
+      }
+    },
+    {
+      "name": "p2531-d700",
+      "expected_accept": true,
+      "cnf_sha256": "7c10f6b0de5fcdb216ed70e197ea3970b0ba0076b5cf59ba6cb78cde31684ef1",
+      "proof_sha256": "6535616dca9367003983700881252a26636faac979ed658299f84b862dc4893c",
+      "results": {
+        "old": {
+          "rc": 0,
+          "accepted": true,
+          "stdout": "steps=11 rup=11 rat=0 rat_checks=0 deletions=0 empty=1 ok=1\nVERIFIED",
+          "stderr": ""
+        },
+        "fixed": {
+          "rc": 0,
+          "accepted": true,
+          "stdout": "steps=11 rup=11 rat=0 rat_checks=0 deletions=0 empty=1 ok=1\nVERIFIED",
+          "stderr": ""
+        },
+        "naive": {
+          "rc": 0,
+          "accepted": true,
+          "stdout": "steps=11 rup=11 rat=0 rat_checks=0 deletions=0 empty=1 ok=1\nVERIFIED",
+          "stderr": ""
+        }
+      }
+    }
+  ]
+}

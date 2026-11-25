@@ -1,0 +1,445 @@
+{
+ "meta": {
+  "kind": "w8 q9 forbidden-curve census (>=9-point curves), independent complete enumeration",
+  "implementation": "independent TS: chord pair of row y0 + third point in row y2, rational center b=P/Q, per-row integer discriminant perfect-square test; circle equation (2x-u)^2+(2y-2b)^2=R; exactly-9 circles captured via third-point loop (1-double-row+7-single-row type included)",
+  "experiment": "eight-row-q10-band-closure-20261115",
+  "generated": "2026-11-15",
+  "units": "curves9 = 8 horizontal rows + circles with >=9 grid points",
+  "recordsSource": "research/experiments/eight-row-bands-20261114/output/w8q9-witness-search/records.jsonl (genfast.js all-triples)"
+ },
+ "law": {
+  "formula": "9m-97",
+  "validFromM": 23,
+  "machineVerifiedRange": [
+   9,
+   40
+  ],
+  "m22": 99,
+  "mAtMost21": "equals q10 census curves (no exactly-9 circles)",
+  "decompositionMGe23": "8 rows + (9m-113) ten q10 families + 8 exactly-9 edge members"
+ },
+ "ninePointCircles": {
+  "counts": {
+   "m=9..21": 0,
+   "m=22": 4,
+   "m=23..40": 8
+  },
+  "families": [
+   {
+    "b": "25/2",
+    "R": 650,
+    "rows": [
+     0,
+     1,
+     3,
+     4,
+     7
+    ],
+    "uValuesMGe23": [
+     19,
+     21,
+     "2m-23",
+     "2m-21"
+    ],
+    "uValuesM22": [
+     19,
+     23
+    ],
+    "doubleRows": 4,
+    "singleRows": 1
+   },
+   {
+    "b": "-11/2",
+    "R": 650,
+    "rows": [
+     0,
+     3,
+     4,
+     6,
+     7
+    ],
+    "uValuesMGe23": [
+     19,
+     21,
+     "2m-23",
+     "2m-21"
+    ],
+    "uValuesM22": [
+     19,
+     23
+    ],
+    "doubleRows": 4,
+    "singleRows": 1
+   }
+  ],
+  "geometry": "edge-truncated members of q10 families F8/F9: u=19 loses the left point of row 7 (x=-2), u=21 loses x=-1; right members are mirror images; u in [23,2m-25] are the regular 10-point F8/F9 members",
+  "otherTypes": "no 1-double-row + 7-single-row 9-point circle exists for any m in [9,40]"
+ },
+ "chordPairCompleteness": {
+  "machineVerifiedRange": [
+   9,
+   40
+  ],
+  "claim": "every >=9-point circle for m in [9,40] has >=2 double rows (in fact >=4), hence chord-pair census representation is complete for q=9 up to m=40; unproven for m>40"
+ },
+ "sweep": [
+  {
+   "m": 9,
+   "curves9": 16,
+   "exactly9": 0,
+   "recordsBitExact": true
+  },
+  {
+   "m": 10,
+   "curves9": 19,
+   "exactly9": 0,
+   "recordsBitExact": true
+  },
+  {
+   "m": 11,
+   "curves9": 22,
+   "exactly9": 0,
+   "recordsBitExact": true
+  },
+  {
+   "m": 12,
+   "curves9": 27,
+   "exactly9": 0,
+   "recordsBitExact": true
+  },
+  {
+   "m": 13,
+   "curves9": 32,
+   "exactly9": 0,
+   "recordsBitExact": true
+  },
+  {
+   "m": 14,
+   "curves9": 39,
+   "exactly9": 0,
+   "recordsBitExact": true
+  },
+  {
+   "m": 15,
+   "curves9": 46,
+   "exactly9": 0,
+   "recordsBitExact": true
+  },
+  {
+   "m": 16,
+   "curves9": 53,
+   "exactly9": 0,
+   "recordsBitExact": true
+  },
+  {
+   "m": 17,
+   "curves9": 60,
+   "exactly9": 0,
+   "recordsBitExact": true
+  },
+  {
+   "m": 18,
+   "curves9": 67,
+   "exactly9": 0,
+   "recordsBitExact": true
+  },
+  {
+   "m": 19,
+   "curves9": 74,
+   "exactly9": 0,
+   "recordsBitExact": true
+  },
+  {
+   "m": 20,
+   "curves9": 81,
+   "exactly9": 0,
+   "recordsBitExact": true
+  },
+  {
+   "m": 21,
+   "curves9": 88,
+   "exactly9": 0,
+   "recordsBitExact": true
+  },
+  {
+   "m": 22,
+   "curves9": 99,
+   "exactly9": 4,
+   "recordsBitExact": true
+  },
+  {
+   "m": 23,
+   "curves9": 110,
+   "exactly9": 8,
+   "recordsBitExact": true,
+   "formula": "9m-97",
+   "matchesFormula": true
+  },
+  {
+   "m": 24,
+   "curves9": 119,
+   "exactly9": 8,
+   "recordsBitExact": true,
+   "formula": "9m-97",
+   "matchesFormula": true
+  },
+  {
+   "m": 25,
+   "curves9": 128,
+   "exactly9": 8,
+   "recordsBitExact": true,
+   "formula": "9m-97",
+   "matchesFormula": true
+  },
+  {
+   "m": 26,
+   "curves9": 137,
+   "exactly9": 8,
+   "recordsBitExact": true,
+   "formula": "9m-97",
+   "matchesFormula": true
+  },
+  {
+   "m": 27,
+   "curves9": 146,
+   "exactly9": 8,
+   "recordsBitExact": true,
+   "formula": "9m-97",
+   "matchesFormula": true
+  },
+  {
+   "m": 28,
+   "curves9": 155,
+   "exactly9": 8,
+   "recordsBitExact": false,
+   "formula": "9m-97",
+   "matchesFormula": true,
+   "perRow": [
+    126,
+    100,
+    59,
+    94,
+    94,
+    59,
+    100,
+    126
+   ]
+  },
+  {
+   "m": 29,
+   "curves9": 164,
+   "exactly9": 8,
+   "recordsBitExact": false,
+   "formula": "9m-97",
+   "matchesFormula": true,
+   "perRow": [
+    134,
+    106,
+    62,
+    100,
+    100,
+    62,
+    106,
+    134
+   ]
+  },
+  {
+   "m": 30,
+   "curves9": 173,
+   "exactly9": 8,
+   "recordsBitExact": false,
+   "formula": "9m-97",
+   "matchesFormula": true,
+   "perRow": [
+    142,
+    112,
+    65,
+    106,
+    106,
+    65,
+    112,
+    142
+   ]
+  },
+  {
+   "m": 31,
+   "curves9": 182,
+   "exactly9": 8,
+   "recordsBitExact": false,
+   "formula": "9m-97",
+   "matchesFormula": true,
+   "perRow": [
+    150,
+    118,
+    68,
+    112,
+    112,
+    68,
+    118,
+    150
+   ]
+  },
+  {
+   "m": 32,
+   "curves9": 191,
+   "exactly9": 8,
+   "recordsBitExact": false,
+   "formula": "9m-97",
+   "matchesFormula": true,
+   "perRow": [
+    158,
+    124,
+    71,
+    118,
+    118,
+    71,
+    124,
+    158
+   ]
+  },
+  {
+   "m": 33,
+   "curves9": 200,
+   "exactly9": 8,
+   "recordsBitExact": false,
+   "formula": "9m-97",
+   "matchesFormula": true,
+   "perRow": [
+    166,
+    130,
+    74,
+    124,
+    124,
+    74,
+    130,
+    166
+   ]
+  },
+  {
+   "m": 34,
+   "curves9": 209,
+   "exactly9": 8,
+   "recordsBitExact": false,
+   "formula": "9m-97",
+   "matchesFormula": true,
+   "perRow": [
+    174,
+    136,
+    77,
+    130,
+    130,
+    77,
+    136,
+    174
+   ]
+  },
+  {
+   "m": 35,
+   "curves9": 218,
+   "exactly9": 8,
+   "recordsBitExact": false,
+   "formula": "9m-97",
+   "matchesFormula": true,
+   "perRow": [
+    182,
+    142,
+    80,
+    136,
+    136,
+    80,
+    142,
+    182
+   ]
+  },
+  {
+   "m": 36,
+   "curves9": 227,
+   "exactly9": 8,
+   "recordsBitExact": false,
+   "formula": "9m-97",
+   "matchesFormula": true,
+   "perRow": [
+    190,
+    148,
+    83,
+    142,
+    142,
+    83,
+    148,
+    190
+   ]
+  },
+  {
+   "m": 37,
+   "curves9": 236,
+   "exactly9": 8,
+   "recordsBitExact": false,
+   "formula": "9m-97",
+   "matchesFormula": true,
+   "perRow": [
+    198,
+    154,
+    86,
+    148,
+    148,
+    86,
+    154,
+    198
+   ]
+  },
+  {
+   "m": 38,
+   "curves9": 245,
+   "exactly9": 8,
+   "recordsBitExact": false,
+   "formula": "9m-97",
+   "matchesFormula": true,
+   "perRow": [
+    206,
+    160,
+    89,
+    154,
+    154,
+    89,
+    160,
+    206
+   ]
+  },
+  {
+   "m": 39,
+   "curves9": 254,
+   "exactly9": 8,
+   "recordsBitExact": false,
+   "formula": "9m-97",
+   "matchesFormula": true,
+   "perRow": [
+    214,
+    166,
+    92,
+    160,
+    160,
+    92,
+    166,
+    214
+   ]
+  },
+  {
+   "m": 40,
+   "curves9": 263,
+   "exactly9": 8,
+   "recordsBitExact": false,
+   "formula": "9m-97",
+   "matchesFormula": true,
+   "perRow": [
+    222,
+    172,
+    95,
+    166,
+    166,
+    95,
+    172,
+    222
+   ]
+  }
+ ]
+}

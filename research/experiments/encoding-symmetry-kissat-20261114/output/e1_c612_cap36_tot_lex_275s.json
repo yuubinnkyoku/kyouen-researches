@@ -1,0 +1,13 @@
+{
+ "w": 6,
+ "m": 12,
+ "q": 8,
+ "encArgs": "--cap=36 --counter=tot --lex=H,V,HV",
+ "vars": 4285,
+ "clauses": 18851,
+ "result": "TIMEOUT",
+ "conflicts": 6957999,
+ "seconds": 275,
+ "note": "single-shot 275s budget; fell at the old 4.92M-conflict wall but pushed to 6.96M with tot+lex (19->25k conflicts/s)",
+ "date": "2026-11-14T09:55:00Z"
+}

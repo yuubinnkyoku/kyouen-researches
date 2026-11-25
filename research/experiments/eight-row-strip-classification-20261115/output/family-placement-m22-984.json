@@ -1,0 +1,381 @@
+{
+  "experiment": "eight-row-family-placement",
+  "date": "2026-11-15",
+  "description": "In-board point counts n(u,m) for the nine census family geometries — by Theorem A (stripsearch-w8-umax2100.json) the complete list of >=10-strip-point circle configs for m <= 984 — and band-wide verification of the census counting formulas.",
+  "model": {
+    "formula": "n(u,m) = sum over rows y of ([c_y <= u <= 2m-2+c_y] + [-c_y <= u <= 2m-2-c_y]), u odd",
+    "note": "c_y = doubled half-chord at row y; x = (u +- c_y)/2 must lie in [0, m-1]; curves10(m) = 8 horizontal lines + #{(family,u): n >= 10}; curves9(m) = curves10(m) + #{n == 9}",
+    "horizontalLines": 8
+  },
+  "families": [
+    {
+      "family": "F1",
+      "R": 50,
+      "v0": 7,
+      "profile": "0:1,1:5,3:7,4:7,6:5,7:1",
+      "doubleRows": 6
+    },
+    {
+      "family": "F2",
+      "R": 50,
+      "v0": 5,
+      "profile": "0:5,2:7,3:7,5:5,6:1",
+      "doubleRows": 5
+    },
+    {
+      "family": "F3",
+      "R": 50,
+      "v0": 9,
+      "profile": "1:1,2:5,4:7,5:7,7:5",
+      "doubleRows": 5
+    },
+    {
+      "family": "F4",
+      "R": 130,
+      "v0": 11,
+      "profile": "0:3,1:7,2:9,4:11,7:11",
+      "doubleRows": 5
+    },
+    {
+      "family": "F5",
+      "R": 130,
+      "v0": 3,
+      "profile": "0:11,3:11,5:9,6:7,7:3",
+      "doubleRows": 5
+    },
+    {
+      "family": "F6",
+      "R": 170,
+      "v0": 1,
+      "profile": "0:13,1:13,4:11,6:7,7:1",
+      "doubleRows": 5
+    },
+    {
+      "family": "F7",
+      "R": 170,
+      "v0": 13,
+      "profile": "0:1,1:7,3:11,6:13,7:13",
+      "doubleRows": 5
+    },
+    {
+      "family": "F8",
+      "R": 650,
+      "v0": 25,
+      "profile": "0:5,1:11,3:17,4:19,7:23",
+      "doubleRows": 5
+    },
+    {
+      "family": "F9",
+      "R": 650,
+      "v0": -11,
+      "profile": "0:23,3:19,4:17,6:11,7:5",
+      "doubleRows": 5
+    }
+  ],
+  "fullBandCheck": {
+    "widthsTested": "all m in [9,984] (976 widths), 0 failures",
+    "curves9_equals_9m_minus_97_for_all_m_23_984": true,
+    "curves10_equals_9m_minus_105_for_all_m_23_940": true,
+    "curves10_model_also_holds_941_984": true,
+    "exactly9_always_8_for_m_ge_23": true,
+    "exactly9_structure": "F8/F9 edge members u in {19,21,2m-23,2m-21} exactly, verified as sets for every width",
+    "exactly9_at_m22": 4,
+    "exactly9_for_m_le_21": 0,
+    "ge11_is_F1_only_count_m_minus_7_for_all_m_23_984": true,
+    "smallBoards_m9_21_match_q9_census": [
+      16,
+      19,
+      22,
+      27,
+      32,
+      39,
+      46,
+      53,
+      60,
+      67,
+      74,
+      81,
+      88
+    ],
+    "m22": {
+      "curves9": 99,
+      "curves10": 95,
+      "exactly9": 4
+    },
+    "chordArithmeticAllFamilies": "R = c_y^2 + (2y - v0)^2 verified exact for every row of all 9 families",
+    "failures": 0
+  },
+  "sampleCheck": [
+    {
+      "m": 22,
+      "ge10": 87,
+      "exactly9": 4,
+      "curves10": 95,
+      "curves9": 99,
+      "exactly9Set": [
+        "F8@19",
+        "F8@23",
+        "F9@19",
+        "F9@23"
+      ]
+    },
+    {
+      "m": 23,
+      "ge10": 94,
+      "exactly9": 8,
+      "curves10": 102,
+      "curves9": 110,
+      "exactly9Set": [
+        "F8@19",
+        "F8@21",
+        "F8@23",
+        "F8@25",
+        "F9@19",
+        "F9@21",
+        "F9@23",
+        "F9@25"
+      ]
+    },
+    {
+      "m": 27,
+      "ge10": 130,
+      "exactly9": 8,
+      "curves10": 138,
+      "curves9": 146,
+      "exactly9Set": [
+        "F8@19",
+        "F8@21",
+        "F8@31",
+        "F8@33",
+        "F9@19",
+        "F9@21",
+        "F9@31",
+        "F9@33"
+      ]
+    },
+    {
+      "m": 40,
+      "ge10": 247,
+      "exactly9": 8,
+      "curves10": 255,
+      "curves9": 263,
+      "exactly9Set": [
+        "F8@19",
+        "F8@21",
+        "F8@57",
+        "F8@59",
+        "F9@19",
+        "F9@21",
+        "F9@57",
+        "F9@59"
+      ]
+    },
+    {
+      "m": 41,
+      "ge10": 256,
+      "exactly9": 8,
+      "curves10": 264,
+      "curves9": 272,
+      "exactly9Set": [
+        "F8@19",
+        "F8@21",
+        "F8@59",
+        "F8@61",
+        "F9@19",
+        "F9@21",
+        "F9@59",
+        "F9@61"
+      ]
+    },
+    {
+      "m": 42,
+      "ge10": 265,
+      "exactly9": 8,
+      "curves10": 273,
+      "curves9": 281,
+      "exactly9Set": [
+        "F8@19",
+        "F8@21",
+        "F8@61",
+        "F8@63",
+        "F9@19",
+        "F9@21",
+        "F9@61",
+        "F9@63"
+      ]
+    },
+    {
+      "m": 43,
+      "ge10": 274,
+      "exactly9": 8,
+      "curves10": 282,
+      "curves9": 290,
+      "exactly9Set": [
+        "F8@19",
+        "F8@21",
+        "F8@63",
+        "F8@65",
+        "F9@19",
+        "F9@21",
+        "F9@63",
+        "F9@65"
+      ]
+    },
+    {
+      "m": 44,
+      "ge10": 283,
+      "exactly9": 8,
+      "curves10": 291,
+      "curves9": 299,
+      "exactly9Set": [
+        "F8@19",
+        "F8@21",
+        "F8@65",
+        "F8@67",
+        "F9@19",
+        "F9@21",
+        "F9@65",
+        "F9@67"
+      ]
+    },
+    {
+      "m": 45,
+      "ge10": 292,
+      "exactly9": 8,
+      "curves10": 300,
+      "curves9": 308,
+      "exactly9Set": [
+        "F8@19",
+        "F8@21",
+        "F8@67",
+        "F8@69",
+        "F9@19",
+        "F9@21",
+        "F9@67",
+        "F9@69"
+      ]
+    },
+    {
+      "m": 60,
+      "ge10": 427,
+      "exactly9": 8,
+      "curves10": 435,
+      "curves9": 443,
+      "exactly9Set": [
+        "F8@19",
+        "F8@21",
+        "F8@97",
+        "F8@99",
+        "F9@19",
+        "F9@21",
+        "F9@97",
+        "F9@99"
+      ]
+    },
+    {
+      "m": 100,
+      "ge10": 787,
+      "exactly9": 8,
+      "curves10": 795,
+      "curves9": 803,
+      "exactly9Set": [
+        "F8@19",
+        "F8@21",
+        "F8@177",
+        "F8@179",
+        "F9@19",
+        "F9@21",
+        "F9@177",
+        "F9@179"
+      ]
+    },
+    {
+      "m": 500,
+      "ge10": 4387,
+      "exactly9": 8,
+      "curves10": 4395,
+      "curves9": 4403,
+      "exactly9Set": [
+        "F8@19",
+        "F8@21",
+        "F8@977",
+        "F8@979",
+        "F9@19",
+        "F9@21",
+        "F9@977",
+        "F9@979"
+      ]
+    },
+    {
+      "m": 700,
+      "ge10": 6187,
+      "exactly9": 8,
+      "curves10": 6195,
+      "curves9": 6203,
+      "exactly9Set": [
+        "F8@19",
+        "F8@21",
+        "F8@1377",
+        "F8@1379",
+        "F9@19",
+        "F9@21",
+        "F9@1377",
+        "F9@1379"
+      ]
+    },
+    {
+      "m": 939,
+      "ge10": 8338,
+      "exactly9": 8,
+      "curves10": 8346,
+      "curves9": 8354,
+      "exactly9Set": [
+        "F8@19",
+        "F8@21",
+        "F8@1855",
+        "F8@1857",
+        "F9@19",
+        "F9@21",
+        "F9@1855",
+        "F9@1857"
+      ]
+    },
+    {
+      "m": 940,
+      "ge10": 8347,
+      "exactly9": 8,
+      "curves10": 8355,
+      "curves9": 8363,
+      "exactly9Set": [
+        "F8@19",
+        "F8@21",
+        "F8@1857",
+        "F8@1859",
+        "F9@19",
+        "F9@21",
+        "F9@1857",
+        "F9@1859"
+      ]
+    },
+    {
+      "m": 984,
+      "ge10": 8743,
+      "exactly9": 8,
+      "curves10": 8751,
+      "curves9": 8759,
+      "exactly9Set": [
+        "F8@19",
+        "F8@21",
+        "F8@1945",
+        "F8@1947",
+        "F9@19",
+        "F9@21",
+        "F9@1945",
+        "F9@1947"
+      ]
+    }
+  ],
+  "leftEdgeSymbolic": "for m >= 44 the left-edge zone is m-independent: the only >=10-point edge member is F1@u=5 (10 pts, = census F10); the only exactly-9 members are F8/F9@{19,21}; interior members are full-row (both points on every occupied row) giving 9m-113 total; the right edge is the mirror image",
+  "coverage": "combined with Theorem A (all >=9-in-board circles for m <= 984 are F1-F9 placement members), these counts are the complete q=9/q=10 census values band-wide",
+  "combinedWithStripClassification": "see ../output/stripsearch-w8-umax2100.json and README.md (corollaries 1-4)"
+}

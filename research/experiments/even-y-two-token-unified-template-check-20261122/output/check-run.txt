@@ -1,0 +1,23 @@
+GRID  ('y10', 'fit') pts=  80600 bad=0 first=None
+GRID  ('y10', 'proved') pts= 143664 bad=0 first=None
+GRID  ('y12', 'fit') pts=  76539 bad=0 first=None
+GRID  ('y12', 'proved') pts=  41184 bad=0 first=None
+GRID  ('y14', 'proved') pts=  29877 bad=0 first=None
+GRID  ('y16', 'fit') pts=  30150 bad=0 first=None
+ROW   ('y10', 'fit', 'P')    rows=44 diff=0 
+ROW   ('y10', 'proved', 'P') rows=44 diff=0 
+ROW   ('y10', 'fit', 'T')    rows=44 diff=0 
+ROW   ('y10', 'proved', 'T') rows=44 diff=0 
+ROW   ('y12', 'fit', 'P')    rows=52 diff=0 
+ROW   ('y12', 'proved', 'P') rows=52 diff=0 
+ROW   ('y12', 'fit', 'T')    rows=52 diff=0 
+ROW   ('y12', 'proved', 'T') rows=52 diff=0 
+ROW   ('y14', 'proved', 'P') rows=60 diff=0 
+ROW   ('y14', 'proved', 'T') rows=60 diff=0 
+ROW   ('y16', 'fit', 'P')    rows=68 diff=0 
+ROW   ('y16', 'fit', 'T')    rows=68 diff=0 
+Y10REP rep_identical=26 alias_L1=15 other=2
+Y12FORM formula-identity=True
+ODD   y=13 T-diff rows=2 P-diff rows=54 box pts=4345 mismatch=2649 first=(2, 13, 28, 0, 1)
+ODD   y=15 T-diff rows=2 P-diff rows=62 box pts=2916 mismatch=1660 first=(4, 15, 32, 0, 1)
+VERDICT PASS (elapsed 0.5s) failures=[]
