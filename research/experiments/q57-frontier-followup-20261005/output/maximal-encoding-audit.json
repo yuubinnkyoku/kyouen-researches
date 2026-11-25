@@ -1,0 +1,48 @@
+{
+  "board": [
+    5,
+    4
+  ],
+  "circle_union": 14,
+  "forced_outside_points": 6,
+  "brute_force_subsets": 16384,
+  "maximal_states": 298,
+  "maximal_size_distribution": {
+    "16": 225,
+    "17": 72,
+    "18": 1
+  },
+  "sat_model_projection_matches_for_all_targets": [
+    {
+      "target": 0,
+      "physical_models": 298,
+      "variables": 26,
+      "clauses": 152
+    },
+    {
+      "target": 1,
+      "physical_models": 298,
+      "variables": 26,
+      "clauses": 152
+    },
+    {
+      "target": 2,
+      "physical_models": 298,
+      "variables": 26,
+      "clauses": 152
+    },
+    {
+      "target": 3,
+      "physical_models": 298,
+      "variables": 26,
+      "clauses": 152
+    },
+    {
+      "target": 4,
+      "physical_models": 298,
+      "variables": 26,
+      "clauses": 152
+    }
+  ],
+  "scope": "complete maximal census for 5x4 q7; not a stabilization proof"
+}

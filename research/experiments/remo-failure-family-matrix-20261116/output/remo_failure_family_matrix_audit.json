@@ -1,0 +1,8407 @@
+{
+ "burnside_cap10": {
+  "fix_cyc": 125,
+  "fix_id": 84494,
+  "fix_trans": 3478,
+  "orbits": 15863
+ },
+ "compact_sha256": "6a82e75a6fdbca460f6f42292d0554a819824933a8cd83a99cd5c554c437833d",
+ "families": {
+  "f410_8": [
+   "4,4,10|0",
+   "4,4,10|1",
+   "4,4,10|2",
+   "4,4,10|3",
+   "4,10,10|0",
+   "4,10,10|1",
+   "4,10,10|2",
+   "4,10,10|3"
+  ],
+  "f48_6": [
+   "4,4,8|0",
+   "4,4,8|1",
+   "4,4,8|2",
+   "4,8,8|0",
+   "4,8,8|1",
+   "4,8,8|2"
+  ],
+  "f49_6": [
+   "4,4,9|0",
+   "4,4,9|1",
+   "4,4,9|2",
+   "4,9,9|0",
+   "4,9,9|1",
+   "4,9,9|2"
+  ],
+  "f68_10": [
+   "6,6,8|0",
+   "6,6,8|1",
+   "6,6,8|2",
+   "6,6,8|3",
+   "6,6,8|4",
+   "6,8,8|0",
+   "6,8,8|1",
+   "6,8,8|2",
+   "6,8,8|3",
+   "6,8,8|4"
+  ],
+  "f89_12": [
+   "8,8,9|0",
+   "8,8,9|1",
+   "8,8,9|2",
+   "8,8,9|3",
+   "8,8,9|4",
+   "8,8,9|5",
+   "8,9,9|0",
+   "8,9,9|1",
+   "8,9,9|2",
+   "8,9,9|3",
+   "8,9,9|4",
+   "8,9,9|5"
+  ],
+  "small_branch_10": [
+   "2,3,8|0",
+   "2,3,8|1",
+   "2,8,9|0",
+   "2,8,9|1",
+   "3,3,8|0",
+   "3,3,8|1",
+   "3,8,8|0",
+   "3,8,8|1",
+   "3,8,9|0",
+   "3,8,9|1"
+  ]
+ },
+ "machine_checks": [
+  {
+   "data": {
+    "fix": [
+     84494,
+     3478,
+     125,
+     15863
+    ],
+    "matrix_profiles": 1392
+   },
+   "name": "MX1: Burnside (84494,3478,125)->15863 orbits; 15863 canonical profiles; 715 keys; 52 matrix keys; 1392 matrix profiles",
+   "ok": true
+  },
+  {
+   "data": {
+    "mixed": [
+     "2,3,8|0",
+     "2,3,8|1",
+     "2,8,9|0",
+     "2,8,9|1",
+     "3,3,8|0",
+     "3,3,8|1",
+     "3,8,8|0",
+     "3,8,8|1",
+     "3,8,9|0",
+     "3,8,9|1",
+     "8,8,9|0",
+     "8,8,9|1",
+     "8,8,9|2",
+     "8,8,9|3",
+     "8,8,9|4",
+     "8,8,9|5",
+     "8,9,9|0",
+     "8,9,9|1",
+     "8,9,9|2",
+     "8,9,9|3",
+     "8,9,9|4",
+     "8,9,9|5"
+    ],
+    "witness_checks": 44
+   },
+   "name": "MX2: r=3 mixed keys are exactly the published 22 (K0862); determined side uniform P_1; published per-multiset ndet sets; chain determined with survivor P_1; 22x2 witnesses reproduce",
+   "ok": true
+  },
+  {
+   "data": {
+    "mixed_r4": [
+     "8,8,9|0",
+     "8,8,9|1",
+     "8,8,9|2",
+     "8,8,9|3",
+     "8,8,9|4",
+     "8,8,9|5",
+     "8,9,9|0",
+     "8,9,9|1",
+     "8,9,9|2",
+     "8,9,9|3",
+     "8,9,9|4",
+     "8,9,9|5"
+    ],
+    "mixed_r5": [
+     "8,8,9|0",
+     "8,8,9|1",
+     "8,8,9|2",
+     "8,8,9|3",
+     "8,8,9|4",
+     "8,8,9|5",
+     "8,9,9|0",
+     "8,9,9|1",
+     "8,9,9|2",
+     "8,9,9|3",
+     "8,9,9|4",
+     "8,9,9|5"
+    ],
+    "pi_set_keys": 12
+   },
+   "name": "MX3: r=4 and r=5 mixed keys are exactly the published 12 (K0864); partitions match (92,62,40,22,10,3 / 102,72,46,28,13,4); determined side uniform P_2; ndet sets within published; determined profile SETS identical for r=3,4,5 (PI at set level)",
+   "ok": true
+  },
+  {
+   "data": {
+    "mixed_r6": [
+     "4,4,8|0",
+     "4,4,8|1",
+     "4,4,8|2",
+     "4,8,8|0",
+     "4,8,8|1",
+     "4,8,8|2"
+    ]
+   },
+   "name": "MX4: r=6 mixed keys are exactly the published 6 (K0864) with partitions (16/20,7/10,2/4) and (34/39,19/24,6/11); determined side uniform P_3; ndet sets {{2,3}}; small-branch/8-9/4-9 families uniformly ndet (K0864 PI / K0866 PE)",
+   "ok": true
+  },
+  {
+   "data": {
+    "mixed_r7": [
+     "4,4,9|0",
+     "4,4,9|1",
+     "4,4,9|2",
+     "4,9,9|0",
+     "4,9,9|1",
+     "4,9,9|2"
+    ]
+   },
+   "name": "MX5: r=7 mixed keys are exactly the published 6 (K0866) with partitions (16/20,7/10,2/4) and (39/45,22/28,7/13); determined side uniform P_3; ndet sets {{1,2,3}}; r=7 witnesses and the 4/8 & 8/9 FATE chain values reproduce; NEW: the 10 small-branch keys are uniformly ndet at r=7 but NOT structurally uniform: (2,3,8)/(3,3,8)/(3,8,8) sets {{1,2,4},{1,4}} chain {1,4}, (2,8,9) sets {{1,2,3,4,5},{1,3,4}} chain {1,3,4}, (3,8,9) sets {{1,2,3,4},{1,2,3,4,5},{1,3,4}} chain {1,3,4}",
+   "ok": true
+  },
+  {
+   "data": {
+    "fate_keys": 34,
+    "mixed_r8": [
+     "6,6,8|0",
+     "6,6,8|1",
+     "6,6,8|2",
+     "6,6,8|3",
+     "6,6,8|4",
+     "6,8,8|0",
+     "6,8,8|1",
+     "6,8,8|2",
+     "6,8,8|3",
+     "6,8,8|4"
+    ]
+   },
+   "name": "MX6: r=8 mixed keys are exactly the published 10 (K0869) with partitions (48/51,30/33,16/19,7/10,2/4) and (63/66,42/45,24/27,13/16,4/7); determined side uniform P_5; ndet sets {{3,4,5}}; the 34 keys mixed at some r<=7 are uniformly ndet at r=8 with ndet chains (FATE); 4/10 family reproduces K0867 (counts, 0 det, sets {3,7}, chain {3,7})",
+   "ok": true
+  },
+  {
+   "data": {
+    "det24": [
+     "4,4,8|0",
+     "4,4,8|1",
+     "4,4,8|2",
+     "4,8,8|0",
+     "4,8,8|1",
+     "4,8,8|2",
+     "6,6,8|0",
+     "6,6,8|1",
+     "6,6,8|2",
+     "6,6,8|3",
+     "6,6,8|4",
+     "6,8,8|0",
+     "6,8,8|1",
+     "6,8,8|2",
+     "6,8,8|3",
+     "6,8,8|4",
+     "4,4,10|0",
+     "4,4,10|1",
+     "4,4,10|2",
+     "4,4,10|3",
+     "4,10,10|0",
+     "4,10,10|1",
+     "4,10,10|2",
+     "4,10,10|3"
+    ],
+    "ndet28": [
+     "2,3,8|0",
+     "2,3,8|1",
+     "2,8,9|0",
+     "2,8,9|1",
+     "3,3,8|0",
+     "3,3,8|1",
+     "3,8,8|0",
+     "3,8,8|1",
+     "3,8,9|0",
+     "3,8,9|1",
+     "8,8,9|0",
+     "8,8,9|1",
+     "8,8,9|2",
+     "8,8,9|3",
+     "8,8,9|4",
+     "8,8,9|5",
+     "8,9,9|0",
+     "8,9,9|1",
+     "8,9,9|2",
+     "8,9,9|3",
+     "8,9,9|4",
+     "8,9,9|5",
+     "4,4,9|0",
+     "4,4,9|1",
+     "4,4,9|2",
+     "4,9,9|0",
+     "4,9,9|1",
+     "4,9,9|2"
+    ]
+   },
+   "name": "MX7: at r=2 every one of the 52 keys collapses completely to its chain value (determinacy, order determinacy, survivor, order, possible-survivor set); 24 keys (4/8, 6/8 and 4/10 families; the 16 4/8 and 6/8 keys are K0864 I2) are uniformly DETERMINED with survivor P_1; the other 28 keys are uniformly ndet with set {0,1} = chain",
+   "ok": true
+  },
+  {
+   "data": {},
+   "name": "MX8: 4/10 family phase structure - uniformly DETERMINED at r=2,3,4 (survivors P_1,P_2,P_3 = chain) and uniformly ndet at r=5..8 with possible-survivor set exactly {3,r-1} for every profile and the chain; never mixed anywhere in r=2..8",
+   "ok": true
+  },
+  {
+   "data": {},
+   "name": "MX9: 6/8 family uniformly determined with survivor = chain at r=2 and uniformly ndet (chain ndet) at r=3..7 (K0869 ECHO); 4/9 family uniformly ndet (chain ndet) at r=2..6 (K0866 PE)",
+   "ok": true
+  },
+  {
+   "data": {
+    "cells": 364,
+    "violations": 0
+   },
+   "name": "MX10: Lemma FL anchor - possible first losers == {C_i mod r} over all 364 cells (1392 profiles x 7 r-values plus chains), 0 violations",
+   "ok": true
+  },
+  {
+   "data": {
+    "windows": {
+     "4/10": [],
+     "4/8": [
+      6
+     ],
+     "4/9": [
+      7
+     ],
+     "6/8": [
+      8
+     ],
+     "8/9": [
+      3,
+      4,
+      5
+     ],
+     "small_branch": [
+      3
+     ]
+    }
+   },
+   "name": "MX11: mixed-state activity windows over r=2..8: small-branch {3}; 8/9 {3,4,5}; 4/8 {6}; 4/9 {7}; 6/8 {8}; 4/10 empty",
+   "ok": true
+  }
+ ],
+ "matrix": {
+  "2,3,8|0|r2": {
+   "chain_determined": false,
+   "chain_survivors": [
+    0,
+    1
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 8,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     0,
+     1
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "2,3,8|0|r3": {
+   "chain_determined": true,
+   "chain_survivors": [
+    1
+   ],
+   "det_survivors": [
+    [
+     1
+    ]
+   ],
+   "fl_ok": true,
+   "n": 8,
+   "n_det": 6,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "mixed"
+  },
+  "2,3,8|0|r4": {
+   "chain_determined": false,
+   "chain_survivors": [
+    1,
+    2
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 8,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "2,3,8|0|r5": {
+   "chain_determined": false,
+   "chain_survivors": [
+    1,
+    2
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 8,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "2,3,8|0|r6": {
+   "chain_determined": false,
+   "chain_survivors": [
+    1,
+    3
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 8,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     3
+    ],
+    [
+     1,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "2,3,8|0|r7": {
+   "chain_determined": false,
+   "chain_survivors": [
+    1,
+    4
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 8,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     4
+    ],
+    [
+     1,
+     4
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "2,3,8|0|r8": {
+   "chain_determined": false,
+   "chain_survivors": [
+    1,
+    5
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 8,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     5
+    ],
+    [
+     1,
+     5
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "2,3,8|1|r2": {
+   "chain_determined": false,
+   "chain_survivors": [
+    0,
+    1
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 2,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     0,
+     1
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "2,3,8|1|r3": {
+   "chain_determined": true,
+   "chain_survivors": [
+    1
+   ],
+   "det_survivors": [
+    [
+     1
+    ]
+   ],
+   "fl_ok": true,
+   "n": 2,
+   "n_det": 1,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "mixed"
+  },
+  "2,3,8|1|r4": {
+   "chain_determined": false,
+   "chain_survivors": [
+    1,
+    2
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 2,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "2,3,8|1|r5": {
+   "chain_determined": false,
+   "chain_survivors": [
+    1,
+    2
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 2,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "2,3,8|1|r6": {
+   "chain_determined": false,
+   "chain_survivors": [
+    1,
+    3
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 2,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     3
+    ],
+    [
+     1,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "2,3,8|1|r7": {
+   "chain_determined": false,
+   "chain_survivors": [
+    1,
+    4
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 2,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     4
+    ],
+    [
+     1,
+     4
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "2,3,8|1|r8": {
+   "chain_determined": false,
+   "chain_survivors": [
+    1,
+    5
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 2,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     5
+    ],
+    [
+     1,
+     5
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "2,8,9|0|r2": {
+   "chain_determined": false,
+   "chain_survivors": [
+    0,
+    1
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 23,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     0,
+     1
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "2,8,9|0|r3": {
+   "chain_determined": true,
+   "chain_survivors": [
+    1
+   ],
+   "det_survivors": [
+    [
+     1
+    ]
+   ],
+   "fl_ok": true,
+   "n": 23,
+   "n_det": 18,
+   "ndet_survivor_sets": [
+    [
+     0,
+     1,
+     2
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "mixed"
+  },
+  "2,8,9|0|r4": {
+   "chain_determined": false,
+   "chain_survivors": [
+    1,
+    2
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 23,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2
+    ],
+    [
+     1,
+     2,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "2,8,9|0|r5": {
+   "chain_determined": false,
+   "chain_survivors": [
+    1,
+    2
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 23,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2
+    ],
+    [
+     1,
+     2,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "2,8,9|0|r6": {
+   "chain_determined": false,
+   "chain_survivors": [
+    1,
+    2,
+    3
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 23,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     3
+    ],
+    [
+     1,
+     2,
+     3,
+     4
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "2,8,9|0|r7": {
+   "chain_determined": false,
+   "chain_survivors": [
+    1,
+    3,
+    4
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 23,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     3,
+     4,
+     5
+    ],
+    [
+     1,
+     3,
+     4
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "2,8,9|0|r8": {
+   "chain_determined": false,
+   "chain_survivors": [
+    1,
+    4,
+    5
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 23,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     3,
+     4,
+     5,
+     6
+    ],
+    [
+     1,
+     4,
+     5
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "2,8,9|1|r2": {
+   "chain_determined": false,
+   "chain_survivors": [
+    0,
+    1
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 7,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     0,
+     1
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "2,8,9|1|r3": {
+   "chain_determined": true,
+   "chain_survivors": [
+    1
+   ],
+   "det_survivors": [
+    [
+     1
+    ]
+   ],
+   "fl_ok": true,
+   "n": 7,
+   "n_det": 5,
+   "ndet_survivor_sets": [
+    [
+     0,
+     1,
+     2
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "mixed"
+  },
+  "2,8,9|1|r4": {
+   "chain_determined": false,
+   "chain_survivors": [
+    1,
+    2
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 7,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2
+    ],
+    [
+     1,
+     2,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "2,8,9|1|r5": {
+   "chain_determined": false,
+   "chain_survivors": [
+    1,
+    2
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 7,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2
+    ],
+    [
+     1,
+     2,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "2,8,9|1|r6": {
+   "chain_determined": false,
+   "chain_survivors": [
+    1,
+    2,
+    3
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 7,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     3
+    ],
+    [
+     1,
+     2,
+     3,
+     4
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "2,8,9|1|r7": {
+   "chain_determined": false,
+   "chain_survivors": [
+    1,
+    3,
+    4
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 7,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     3,
+     4,
+     5
+    ],
+    [
+     1,
+     3,
+     4
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "2,8,9|1|r8": {
+   "chain_determined": false,
+   "chain_survivors": [
+    1,
+    4,
+    5
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 7,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     3,
+     4,
+     5,
+     6
+    ],
+    [
+     1,
+     4,
+     5
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "3,3,8|0|r2": {
+   "chain_determined": false,
+   "chain_survivors": [
+    0,
+    1
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 10,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     0,
+     1
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "3,3,8|0|r3": {
+   "chain_determined": true,
+   "chain_survivors": [
+    1
+   ],
+   "det_survivors": [
+    [
+     1
+    ]
+   ],
+   "fl_ok": true,
+   "n": 10,
+   "n_det": 7,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "mixed"
+  },
+  "3,3,8|0|r4": {
+   "chain_determined": false,
+   "chain_survivors": [
+    1,
+    2
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 10,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "3,3,8|0|r5": {
+   "chain_determined": false,
+   "chain_survivors": [
+    1,
+    2
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 10,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "3,3,8|0|r6": {
+   "chain_determined": false,
+   "chain_survivors": [
+    1,
+    3
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 10,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     3
+    ],
+    [
+     1,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "3,3,8|0|r7": {
+   "chain_determined": false,
+   "chain_survivors": [
+    1,
+    4
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 10,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     4
+    ],
+    [
+     1,
+     4
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "3,3,8|0|r8": {
+   "chain_determined": false,
+   "chain_survivors": [
+    1,
+    5
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 10,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     5
+    ],
+    [
+     1,
+     5
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "3,3,8|1|r2": {
+   "chain_determined": false,
+   "chain_survivors": [
+    0,
+    1
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 4,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     0,
+     1
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "3,3,8|1|r3": {
+   "chain_determined": true,
+   "chain_survivors": [
+    1
+   ],
+   "det_survivors": [
+    [
+     1
+    ]
+   ],
+   "fl_ok": true,
+   "n": 4,
+   "n_det": 2,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "mixed"
+  },
+  "3,3,8|1|r4": {
+   "chain_determined": false,
+   "chain_survivors": [
+    1,
+    2
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 4,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "3,3,8|1|r5": {
+   "chain_determined": false,
+   "chain_survivors": [
+    1,
+    2
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 4,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "3,3,8|1|r6": {
+   "chain_determined": false,
+   "chain_survivors": [
+    1,
+    3
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 4,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     3
+    ],
+    [
+     1,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "3,3,8|1|r7": {
+   "chain_determined": false,
+   "chain_survivors": [
+    1,
+    4
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 4,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     4
+    ],
+    [
+     1,
+     4
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "3,3,8|1|r8": {
+   "chain_determined": false,
+   "chain_survivors": [
+    1,
+    5
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 4,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     5
+    ],
+    [
+     1,
+     5
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "3,8,8|0|r2": {
+   "chain_determined": false,
+   "chain_survivors": [
+    0,
+    1
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 28,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     0,
+     1
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "3,8,8|0|r3": {
+   "chain_determined": true,
+   "chain_survivors": [
+    1
+   ],
+   "det_survivors": [
+    [
+     1
+    ]
+   ],
+   "fl_ok": true,
+   "n": 28,
+   "n_det": 22,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "mixed"
+  },
+  "3,8,8|0|r4": {
+   "chain_determined": false,
+   "chain_survivors": [
+    1,
+    2
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 28,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "3,8,8|0|r5": {
+   "chain_determined": false,
+   "chain_survivors": [
+    1,
+    2
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 28,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "3,8,8|0|r6": {
+   "chain_determined": false,
+   "chain_survivors": [
+    1,
+    3
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 28,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     3
+    ],
+    [
+     1,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "3,8,8|0|r7": {
+   "chain_determined": false,
+   "chain_survivors": [
+    1,
+    4
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 28,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     4
+    ],
+    [
+     1,
+     4
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "3,8,8|0|r8": {
+   "chain_determined": false,
+   "chain_survivors": [
+    1,
+    5
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 28,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     5
+    ],
+    [
+     1,
+     5
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "3,8,8|1|r2": {
+   "chain_determined": false,
+   "chain_survivors": [
+    0,
+    1
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 13,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     0,
+     1
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "3,8,8|1|r3": {
+   "chain_determined": true,
+   "chain_survivors": [
+    1
+   ],
+   "det_survivors": [
+    [
+     1
+    ]
+   ],
+   "fl_ok": true,
+   "n": 13,
+   "n_det": 7,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "mixed"
+  },
+  "3,8,8|1|r4": {
+   "chain_determined": false,
+   "chain_survivors": [
+    1,
+    2
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 13,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "3,8,8|1|r5": {
+   "chain_determined": false,
+   "chain_survivors": [
+    1,
+    2
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 13,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "3,8,8|1|r6": {
+   "chain_determined": false,
+   "chain_survivors": [
+    1,
+    3
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 13,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     3
+    ],
+    [
+     1,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "3,8,8|1|r7": {
+   "chain_determined": false,
+   "chain_survivors": [
+    1,
+    4
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 13,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     4
+    ],
+    [
+     1,
+     4
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "3,8,8|1|r8": {
+   "chain_determined": false,
+   "chain_survivors": [
+    1,
+    5
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 13,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     5
+    ],
+    [
+     1,
+     5
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "3,8,9|0|r2": {
+   "chain_determined": false,
+   "chain_survivors": [
+    0,
+    1
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 43,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     0,
+     1
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "3,8,9|0|r3": {
+   "chain_determined": true,
+   "chain_survivors": [
+    1
+   ],
+   "det_survivors": [
+    [
+     1
+    ]
+   ],
+   "fl_ok": true,
+   "n": 43,
+   "n_det": 30,
+   "ndet_survivor_sets": [
+    [
+     0,
+     1,
+     2
+    ],
+    [
+     1,
+     2
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "mixed"
+  },
+  "3,8,9|0|r4": {
+   "chain_determined": false,
+   "chain_survivors": [
+    1,
+    2
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 43,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2
+    ],
+    [
+     1,
+     2,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "3,8,9|0|r5": {
+   "chain_determined": false,
+   "chain_survivors": [
+    1,
+    2
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 43,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2
+    ],
+    [
+     1,
+     2,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "3,8,9|0|r6": {
+   "chain_determined": false,
+   "chain_survivors": [
+    1,
+    2,
+    3
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 43,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     3
+    ],
+    [
+     1,
+     2,
+     3,
+     4
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "3,8,9|0|r7": {
+   "chain_determined": false,
+   "chain_survivors": [
+    1,
+    3,
+    4
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 43,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     3,
+     4
+    ],
+    [
+     1,
+     2,
+     3,
+     4,
+     5
+    ],
+    [
+     1,
+     3,
+     4
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "3,8,9|0|r8": {
+   "chain_determined": false,
+   "chain_survivors": [
+    1,
+    4,
+    5
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 43,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     4,
+     5
+    ],
+    [
+     1,
+     3,
+     4,
+     5,
+     6
+    ],
+    [
+     1,
+     4,
+     5
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "3,8,9|1|r2": {
+   "chain_determined": false,
+   "chain_survivors": [
+    0,
+    1
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 20,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     0,
+     1
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "3,8,9|1|r3": {
+   "chain_determined": true,
+   "chain_survivors": [
+    1
+   ],
+   "det_survivors": [
+    [
+     1
+    ]
+   ],
+   "fl_ok": true,
+   "n": 20,
+   "n_det": 10,
+   "ndet_survivor_sets": [
+    [
+     0,
+     1,
+     2
+    ],
+    [
+     1,
+     2
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "mixed"
+  },
+  "3,8,9|1|r4": {
+   "chain_determined": false,
+   "chain_survivors": [
+    1,
+    2
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 20,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2
+    ],
+    [
+     1,
+     2,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "3,8,9|1|r5": {
+   "chain_determined": false,
+   "chain_survivors": [
+    1,
+    2
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 20,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2
+    ],
+    [
+     1,
+     2,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "3,8,9|1|r6": {
+   "chain_determined": false,
+   "chain_survivors": [
+    1,
+    2,
+    3
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 20,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     3
+    ],
+    [
+     1,
+     2,
+     3,
+     4
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "3,8,9|1|r7": {
+   "chain_determined": false,
+   "chain_survivors": [
+    1,
+    3,
+    4
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 20,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     3,
+     4
+    ],
+    [
+     1,
+     2,
+     3,
+     4,
+     5
+    ],
+    [
+     1,
+     3,
+     4
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "3,8,9|1|r8": {
+   "chain_determined": false,
+   "chain_survivors": [
+    1,
+    4,
+    5
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 20,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6
+    ],
+    [
+     1,
+     2,
+     4,
+     5
+    ],
+    [
+     1,
+     3,
+     4,
+     5,
+     6
+    ],
+    [
+     1,
+     4,
+     5
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "4,10,10|0|r2": {
+   "chain_determined": true,
+   "chain_survivors": [
+    1
+   ],
+   "det_survivors": [
+    [
+     1
+    ]
+   ],
+   "fl_ok": true,
+   "n": 51,
+   "n_det": 51,
+   "ndet_survivor_sets": [],
+   "order_det_uniform": true,
+   "state": "uniform_det"
+  },
+  "4,10,10|0|r3": {
+   "chain_determined": true,
+   "chain_survivors": [
+    2
+   ],
+   "det_survivors": [
+    [
+     2
+    ]
+   ],
+   "fl_ok": true,
+   "n": 51,
+   "n_det": 51,
+   "ndet_survivor_sets": [],
+   "order_det_uniform": true,
+   "state": "uniform_det"
+  },
+  "4,10,10|0|r4": {
+   "chain_determined": true,
+   "chain_survivors": [
+    3
+   ],
+   "det_survivors": [
+    [
+     3
+    ]
+   ],
+   "fl_ok": true,
+   "n": 51,
+   "n_det": 51,
+   "ndet_survivor_sets": [],
+   "order_det_uniform": true,
+   "state": "uniform_det"
+  },
+  "4,10,10|0|r5": {
+   "chain_determined": false,
+   "chain_survivors": [
+    3,
+    4
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 51,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     3,
+     4
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "4,10,10|0|r6": {
+   "chain_determined": false,
+   "chain_survivors": [
+    3,
+    5
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 51,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     3,
+     5
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "4,10,10|0|r7": {
+   "chain_determined": false,
+   "chain_survivors": [
+    3,
+    6
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 51,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     3,
+     6
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "4,10,10|0|r8": {
+   "chain_determined": false,
+   "chain_survivors": [
+    3,
+    7
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 51,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     3,
+     7
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "4,10,10|1|r2": {
+   "chain_determined": true,
+   "chain_survivors": [
+    1
+   ],
+   "det_survivors": [
+    [
+     1
+    ]
+   ],
+   "fl_ok": true,
+   "n": 32,
+   "n_det": 32,
+   "ndet_survivor_sets": [],
+   "order_det_uniform": true,
+   "state": "uniform_det"
+  },
+  "4,10,10|1|r3": {
+   "chain_determined": true,
+   "chain_survivors": [
+    2
+   ],
+   "det_survivors": [
+    [
+     2
+    ]
+   ],
+   "fl_ok": true,
+   "n": 32,
+   "n_det": 32,
+   "ndet_survivor_sets": [],
+   "order_det_uniform": true,
+   "state": "uniform_det"
+  },
+  "4,10,10|1|r4": {
+   "chain_determined": true,
+   "chain_survivors": [
+    3
+   ],
+   "det_survivors": [
+    [
+     3
+    ]
+   ],
+   "fl_ok": true,
+   "n": 32,
+   "n_det": 32,
+   "ndet_survivor_sets": [],
+   "order_det_uniform": true,
+   "state": "uniform_det"
+  },
+  "4,10,10|1|r5": {
+   "chain_determined": false,
+   "chain_survivors": [
+    3,
+    4
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 32,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     3,
+     4
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "4,10,10|1|r6": {
+   "chain_determined": false,
+   "chain_survivors": [
+    3,
+    5
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 32,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     3,
+     5
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "4,10,10|1|r7": {
+   "chain_determined": false,
+   "chain_survivors": [
+    3,
+    6
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 32,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     3,
+     6
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "4,10,10|1|r8": {
+   "chain_determined": false,
+   "chain_survivors": [
+    3,
+    7
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 32,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     3,
+     7
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "4,10,10|2|r2": {
+   "chain_determined": true,
+   "chain_survivors": [
+    1
+   ],
+   "det_survivors": [
+    [
+     1
+    ]
+   ],
+   "fl_ok": true,
+   "n": 15,
+   "n_det": 15,
+   "ndet_survivor_sets": [],
+   "order_det_uniform": true,
+   "state": "uniform_det"
+  },
+  "4,10,10|2|r3": {
+   "chain_determined": true,
+   "chain_survivors": [
+    2
+   ],
+   "det_survivors": [
+    [
+     2
+    ]
+   ],
+   "fl_ok": true,
+   "n": 15,
+   "n_det": 15,
+   "ndet_survivor_sets": [],
+   "order_det_uniform": true,
+   "state": "uniform_det"
+  },
+  "4,10,10|2|r4": {
+   "chain_determined": true,
+   "chain_survivors": [
+    3
+   ],
+   "det_survivors": [
+    [
+     3
+    ]
+   ],
+   "fl_ok": true,
+   "n": 15,
+   "n_det": 15,
+   "ndet_survivor_sets": [],
+   "order_det_uniform": true,
+   "state": "uniform_det"
+  },
+  "4,10,10|2|r5": {
+   "chain_determined": false,
+   "chain_survivors": [
+    3,
+    4
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 15,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     3,
+     4
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "4,10,10|2|r6": {
+   "chain_determined": false,
+   "chain_survivors": [
+    3,
+    5
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 15,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     3,
+     5
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "4,10,10|2|r7": {
+   "chain_determined": false,
+   "chain_survivors": [
+    3,
+    6
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 15,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     3,
+     6
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "4,10,10|2|r8": {
+   "chain_determined": false,
+   "chain_survivors": [
+    3,
+    7
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 15,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     3,
+     7
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "4,10,10|3|r2": {
+   "chain_determined": true,
+   "chain_survivors": [
+    1
+   ],
+   "det_survivors": [
+    [
+     1
+    ]
+   ],
+   "fl_ok": true,
+   "n": 7,
+   "n_det": 7,
+   "ndet_survivor_sets": [],
+   "order_det_uniform": true,
+   "state": "uniform_det"
+  },
+  "4,10,10|3|r3": {
+   "chain_determined": true,
+   "chain_survivors": [
+    2
+   ],
+   "det_survivors": [
+    [
+     2
+    ]
+   ],
+   "fl_ok": true,
+   "n": 7,
+   "n_det": 7,
+   "ndet_survivor_sets": [],
+   "order_det_uniform": true,
+   "state": "uniform_det"
+  },
+  "4,10,10|3|r4": {
+   "chain_determined": true,
+   "chain_survivors": [
+    3
+   ],
+   "det_survivors": [
+    [
+     3
+    ]
+   ],
+   "fl_ok": true,
+   "n": 7,
+   "n_det": 7,
+   "ndet_survivor_sets": [],
+   "order_det_uniform": true,
+   "state": "uniform_det"
+  },
+  "4,10,10|3|r5": {
+   "chain_determined": false,
+   "chain_survivors": [
+    3,
+    4
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 7,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     3,
+     4
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "4,10,10|3|r6": {
+   "chain_determined": false,
+   "chain_survivors": [
+    3,
+    5
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 7,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     3,
+     5
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "4,10,10|3|r7": {
+   "chain_determined": false,
+   "chain_survivors": [
+    3,
+    6
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 7,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     3,
+     6
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "4,10,10|3|r8": {
+   "chain_determined": false,
+   "chain_survivors": [
+    3,
+    7
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 7,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     3,
+     7
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "4,4,10|0|r2": {
+   "chain_determined": true,
+   "chain_survivors": [
+    1
+   ],
+   "det_survivors": [
+    [
+     1
+    ]
+   ],
+   "fl_ok": true,
+   "n": 20,
+   "n_det": 20,
+   "ndet_survivor_sets": [],
+   "order_det_uniform": true,
+   "state": "uniform_det"
+  },
+  "4,4,10|0|r3": {
+   "chain_determined": true,
+   "chain_survivors": [
+    2
+   ],
+   "det_survivors": [
+    [
+     2
+    ]
+   ],
+   "fl_ok": true,
+   "n": 20,
+   "n_det": 20,
+   "ndet_survivor_sets": [],
+   "order_det_uniform": true,
+   "state": "uniform_det"
+  },
+  "4,4,10|0|r4": {
+   "chain_determined": true,
+   "chain_survivors": [
+    3
+   ],
+   "det_survivors": [
+    [
+     3
+    ]
+   ],
+   "fl_ok": true,
+   "n": 20,
+   "n_det": 20,
+   "ndet_survivor_sets": [],
+   "order_det_uniform": true,
+   "state": "uniform_det"
+  },
+  "4,4,10|0|r5": {
+   "chain_determined": false,
+   "chain_survivors": [
+    3,
+    4
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 20,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     3,
+     4
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "4,4,10|0|r6": {
+   "chain_determined": false,
+   "chain_survivors": [
+    3,
+    5
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 20,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     3,
+     5
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "4,4,10|0|r7": {
+   "chain_determined": false,
+   "chain_survivors": [
+    3,
+    6
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 20,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     3,
+     6
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "4,4,10|0|r8": {
+   "chain_determined": false,
+   "chain_survivors": [
+    3,
+    7
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 20,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     3,
+     7
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "4,4,10|1|r2": {
+   "chain_determined": true,
+   "chain_survivors": [
+    1
+   ],
+   "det_survivors": [
+    [
+     1
+    ]
+   ],
+   "fl_ok": true,
+   "n": 10,
+   "n_det": 10,
+   "ndet_survivor_sets": [],
+   "order_det_uniform": true,
+   "state": "uniform_det"
+  },
+  "4,4,10|1|r3": {
+   "chain_determined": true,
+   "chain_survivors": [
+    2
+   ],
+   "det_survivors": [
+    [
+     2
+    ]
+   ],
+   "fl_ok": true,
+   "n": 10,
+   "n_det": 10,
+   "ndet_survivor_sets": [],
+   "order_det_uniform": true,
+   "state": "uniform_det"
+  },
+  "4,4,10|1|r4": {
+   "chain_determined": true,
+   "chain_survivors": [
+    3
+   ],
+   "det_survivors": [
+    [
+     3
+    ]
+   ],
+   "fl_ok": true,
+   "n": 10,
+   "n_det": 10,
+   "ndet_survivor_sets": [],
+   "order_det_uniform": true,
+   "state": "uniform_det"
+  },
+  "4,4,10|1|r5": {
+   "chain_determined": false,
+   "chain_survivors": [
+    3,
+    4
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 10,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     3,
+     4
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "4,4,10|1|r6": {
+   "chain_determined": false,
+   "chain_survivors": [
+    3,
+    5
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 10,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     3,
+     5
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "4,4,10|1|r7": {
+   "chain_determined": false,
+   "chain_survivors": [
+    3,
+    6
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 10,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     3,
+     6
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "4,4,10|1|r8": {
+   "chain_determined": false,
+   "chain_survivors": [
+    3,
+    7
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 10,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     3,
+     7
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "4,4,10|2|r2": {
+   "chain_determined": true,
+   "chain_survivors": [
+    1
+   ],
+   "det_survivors": [
+    [
+     1
+    ]
+   ],
+   "fl_ok": true,
+   "n": 4,
+   "n_det": 4,
+   "ndet_survivor_sets": [],
+   "order_det_uniform": true,
+   "state": "uniform_det"
+  },
+  "4,4,10|2|r3": {
+   "chain_determined": true,
+   "chain_survivors": [
+    2
+   ],
+   "det_survivors": [
+    [
+     2
+    ]
+   ],
+   "fl_ok": true,
+   "n": 4,
+   "n_det": 4,
+   "ndet_survivor_sets": [],
+   "order_det_uniform": true,
+   "state": "uniform_det"
+  },
+  "4,4,10|2|r4": {
+   "chain_determined": true,
+   "chain_survivors": [
+    3
+   ],
+   "det_survivors": [
+    [
+     3
+    ]
+   ],
+   "fl_ok": true,
+   "n": 4,
+   "n_det": 4,
+   "ndet_survivor_sets": [],
+   "order_det_uniform": true,
+   "state": "uniform_det"
+  },
+  "4,4,10|2|r5": {
+   "chain_determined": false,
+   "chain_survivors": [
+    3,
+    4
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 4,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     3,
+     4
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "4,4,10|2|r6": {
+   "chain_determined": false,
+   "chain_survivors": [
+    3,
+    5
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 4,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     3,
+     5
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "4,4,10|2|r7": {
+   "chain_determined": false,
+   "chain_survivors": [
+    3,
+    6
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 4,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     3,
+     6
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "4,4,10|2|r8": {
+   "chain_determined": false,
+   "chain_survivors": [
+    3,
+    7
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 4,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     3,
+     7
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "4,4,10|3|r2": {
+   "chain_determined": true,
+   "chain_survivors": [
+    1
+   ],
+   "det_survivors": [
+    [
+     1
+    ]
+   ],
+   "fl_ok": true,
+   "n": 1,
+   "n_det": 1,
+   "ndet_survivor_sets": [],
+   "order_det_uniform": true,
+   "state": "uniform_det"
+  },
+  "4,4,10|3|r3": {
+   "chain_determined": true,
+   "chain_survivors": [
+    2
+   ],
+   "det_survivors": [
+    [
+     2
+    ]
+   ],
+   "fl_ok": true,
+   "n": 1,
+   "n_det": 1,
+   "ndet_survivor_sets": [],
+   "order_det_uniform": true,
+   "state": "uniform_det"
+  },
+  "4,4,10|3|r4": {
+   "chain_determined": true,
+   "chain_survivors": [
+    3
+   ],
+   "det_survivors": [
+    [
+     3
+    ]
+   ],
+   "fl_ok": true,
+   "n": 1,
+   "n_det": 1,
+   "ndet_survivor_sets": [],
+   "order_det_uniform": true,
+   "state": "uniform_det"
+  },
+  "4,4,10|3|r5": {
+   "chain_determined": false,
+   "chain_survivors": [
+    3,
+    4
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 1,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     3,
+     4
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "4,4,10|3|r6": {
+   "chain_determined": false,
+   "chain_survivors": [
+    3,
+    5
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 1,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     3,
+     5
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "4,4,10|3|r7": {
+   "chain_determined": false,
+   "chain_survivors": [
+    3,
+    6
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 1,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     3,
+     6
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "4,4,10|3|r8": {
+   "chain_determined": false,
+   "chain_survivors": [
+    3,
+    7
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 1,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     3,
+     7
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "4,4,8|0|r2": {
+   "chain_determined": true,
+   "chain_survivors": [
+    1
+   ],
+   "det_survivors": [
+    [
+     1
+    ]
+   ],
+   "fl_ok": true,
+   "n": 20,
+   "n_det": 20,
+   "ndet_survivor_sets": [],
+   "order_det_uniform": true,
+   "state": "uniform_det"
+  },
+  "4,4,8|0|r3": {
+   "chain_determined": false,
+   "chain_survivors": [
+    1,
+    2
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 20,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "4,4,8|0|r4": {
+   "chain_determined": false,
+   "chain_survivors": [
+    2,
+    3
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 20,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     2,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "4,4,8|0|r5": {
+   "chain_determined": false,
+   "chain_survivors": [
+    2,
+    3
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 20,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     2,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "4,4,8|0|r6": {
+   "chain_determined": true,
+   "chain_survivors": [
+    3
+   ],
+   "det_survivors": [
+    [
+     3
+    ]
+   ],
+   "fl_ok": true,
+   "n": 20,
+   "n_det": 16,
+   "ndet_survivor_sets": [
+    [
+     2,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "mixed"
+  },
+  "4,4,8|0|r7": {
+   "chain_determined": false,
+   "chain_survivors": [
+    3,
+    4
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 20,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     2,
+     3,
+     4
+    ],
+    [
+     3,
+     4
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "4,4,8|0|r8": {
+   "chain_determined": false,
+   "chain_survivors": [
+    3,
+    5
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 20,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     2,
+     3,
+     5
+    ],
+    [
+     3,
+     5
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "4,4,8|1|r2": {
+   "chain_determined": true,
+   "chain_survivors": [
+    1
+   ],
+   "det_survivors": [
+    [
+     1
+    ]
+   ],
+   "fl_ok": true,
+   "n": 10,
+   "n_det": 10,
+   "ndet_survivor_sets": [],
+   "order_det_uniform": true,
+   "state": "uniform_det"
+  },
+  "4,4,8|1|r3": {
+   "chain_determined": false,
+   "chain_survivors": [
+    1,
+    2
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 10,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "4,4,8|1|r4": {
+   "chain_determined": false,
+   "chain_survivors": [
+    2,
+    3
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 10,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     2,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "4,4,8|1|r5": {
+   "chain_determined": false,
+   "chain_survivors": [
+    2,
+    3
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 10,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     2,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "4,4,8|1|r6": {
+   "chain_determined": true,
+   "chain_survivors": [
+    3
+   ],
+   "det_survivors": [
+    [
+     3
+    ]
+   ],
+   "fl_ok": true,
+   "n": 10,
+   "n_det": 7,
+   "ndet_survivor_sets": [
+    [
+     2,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "mixed"
+  },
+  "4,4,8|1|r7": {
+   "chain_determined": false,
+   "chain_survivors": [
+    3,
+    4
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 10,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     2,
+     3,
+     4
+    ],
+    [
+     3,
+     4
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "4,4,8|1|r8": {
+   "chain_determined": false,
+   "chain_survivors": [
+    3,
+    5
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 10,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     2,
+     3,
+     5
+    ],
+    [
+     3,
+     5
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "4,4,8|2|r2": {
+   "chain_determined": true,
+   "chain_survivors": [
+    1
+   ],
+   "det_survivors": [
+    [
+     1
+    ]
+   ],
+   "fl_ok": true,
+   "n": 4,
+   "n_det": 4,
+   "ndet_survivor_sets": [],
+   "order_det_uniform": true,
+   "state": "uniform_det"
+  },
+  "4,4,8|2|r3": {
+   "chain_determined": false,
+   "chain_survivors": [
+    1,
+    2
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 4,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "4,4,8|2|r4": {
+   "chain_determined": false,
+   "chain_survivors": [
+    2,
+    3
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 4,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     2,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "4,4,8|2|r5": {
+   "chain_determined": false,
+   "chain_survivors": [
+    2,
+    3
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 4,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     2,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "4,4,8|2|r6": {
+   "chain_determined": true,
+   "chain_survivors": [
+    3
+   ],
+   "det_survivors": [
+    [
+     3
+    ]
+   ],
+   "fl_ok": true,
+   "n": 4,
+   "n_det": 2,
+   "ndet_survivor_sets": [
+    [
+     2,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "mixed"
+  },
+  "4,4,8|2|r7": {
+   "chain_determined": false,
+   "chain_survivors": [
+    3,
+    4
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 4,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     2,
+     3,
+     4
+    ],
+    [
+     3,
+     4
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "4,4,8|2|r8": {
+   "chain_determined": false,
+   "chain_survivors": [
+    3,
+    5
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 4,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     2,
+     3,
+     5
+    ],
+    [
+     3,
+     5
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "4,4,9|0|r2": {
+   "chain_determined": false,
+   "chain_survivors": [
+    0,
+    1
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 20,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     0,
+     1
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "4,4,9|0|r3": {
+   "chain_determined": false,
+   "chain_survivors": [
+    1,
+    2
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 20,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     0,
+     1,
+     2
+    ],
+    [
+     1,
+     2
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "4,4,9|0|r4": {
+   "chain_determined": false,
+   "chain_survivors": [
+    2,
+    3
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 20,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     3
+    ],
+    [
+     2,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "4,4,9|0|r5": {
+   "chain_determined": false,
+   "chain_survivors": [
+    2,
+    3
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 20,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     3
+    ],
+    [
+     2,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "4,4,9|0|r6": {
+   "chain_determined": false,
+   "chain_survivors": [
+    2,
+    3
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 20,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     3
+    ],
+    [
+     2,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "4,4,9|0|r7": {
+   "chain_determined": true,
+   "chain_survivors": [
+    3
+   ],
+   "det_survivors": [
+    [
+     3
+    ]
+   ],
+   "fl_ok": true,
+   "n": 20,
+   "n_det": 16,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "mixed"
+  },
+  "4,4,9|0|r8": {
+   "chain_determined": false,
+   "chain_survivors": [
+    3,
+    4
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 20,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     3,
+     4
+    ],
+    [
+     3,
+     4
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "4,4,9|1|r2": {
+   "chain_determined": false,
+   "chain_survivors": [
+    0,
+    1
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 10,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     0,
+     1
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "4,4,9|1|r3": {
+   "chain_determined": false,
+   "chain_survivors": [
+    1,
+    2
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 10,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     0,
+     1,
+     2
+    ],
+    [
+     1,
+     2
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "4,4,9|1|r4": {
+   "chain_determined": false,
+   "chain_survivors": [
+    2,
+    3
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 10,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     3
+    ],
+    [
+     2,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "4,4,9|1|r5": {
+   "chain_determined": false,
+   "chain_survivors": [
+    2,
+    3
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 10,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     3
+    ],
+    [
+     2,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "4,4,9|1|r6": {
+   "chain_determined": false,
+   "chain_survivors": [
+    2,
+    3
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 10,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     3
+    ],
+    [
+     2,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "4,4,9|1|r7": {
+   "chain_determined": true,
+   "chain_survivors": [
+    3
+   ],
+   "det_survivors": [
+    [
+     3
+    ]
+   ],
+   "fl_ok": true,
+   "n": 10,
+   "n_det": 7,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "mixed"
+  },
+  "4,4,9|1|r8": {
+   "chain_determined": false,
+   "chain_survivors": [
+    3,
+    4
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 10,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     3,
+     4
+    ],
+    [
+     3,
+     4
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "4,4,9|2|r2": {
+   "chain_determined": false,
+   "chain_survivors": [
+    0,
+    1
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 4,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     0,
+     1
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "4,4,9|2|r3": {
+   "chain_determined": false,
+   "chain_survivors": [
+    1,
+    2
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 4,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     0,
+     1,
+     2
+    ],
+    [
+     1,
+     2
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "4,4,9|2|r4": {
+   "chain_determined": false,
+   "chain_survivors": [
+    2,
+    3
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 4,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     3
+    ],
+    [
+     2,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "4,4,9|2|r5": {
+   "chain_determined": false,
+   "chain_survivors": [
+    2,
+    3
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 4,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     3
+    ],
+    [
+     2,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "4,4,9|2|r6": {
+   "chain_determined": false,
+   "chain_survivors": [
+    2,
+    3
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 4,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     3
+    ],
+    [
+     2,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "4,4,9|2|r7": {
+   "chain_determined": true,
+   "chain_survivors": [
+    3
+   ],
+   "det_survivors": [
+    [
+     3
+    ]
+   ],
+   "fl_ok": true,
+   "n": 4,
+   "n_det": 2,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "mixed"
+  },
+  "4,4,9|2|r8": {
+   "chain_determined": false,
+   "chain_survivors": [
+    3,
+    4
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 4,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     3,
+     4
+    ],
+    [
+     3,
+     4
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "4,8,8|0|r2": {
+   "chain_determined": true,
+   "chain_survivors": [
+    1
+   ],
+   "det_survivors": [
+    [
+     1
+    ]
+   ],
+   "fl_ok": true,
+   "n": 39,
+   "n_det": 39,
+   "ndet_survivor_sets": [],
+   "order_det_uniform": true,
+   "state": "uniform_det"
+  },
+  "4,8,8|0|r3": {
+   "chain_determined": false,
+   "chain_survivors": [
+    1,
+    2
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 39,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "4,8,8|0|r4": {
+   "chain_determined": false,
+   "chain_survivors": [
+    2,
+    3
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 39,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     2,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "4,8,8|0|r5": {
+   "chain_determined": false,
+   "chain_survivors": [
+    2,
+    3
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 39,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     2,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "4,8,8|0|r6": {
+   "chain_determined": true,
+   "chain_survivors": [
+    3
+   ],
+   "det_survivors": [
+    [
+     3
+    ]
+   ],
+   "fl_ok": true,
+   "n": 39,
+   "n_det": 34,
+   "ndet_survivor_sets": [
+    [
+     2,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "mixed"
+  },
+  "4,8,8|0|r7": {
+   "chain_determined": false,
+   "chain_survivors": [
+    3,
+    4
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 39,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     2,
+     3,
+     4
+    ],
+    [
+     3,
+     4
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "4,8,8|0|r8": {
+   "chain_determined": false,
+   "chain_survivors": [
+    3,
+    5
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 39,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     2,
+     3,
+     5
+    ],
+    [
+     3,
+     5
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "4,8,8|1|r2": {
+   "chain_determined": true,
+   "chain_survivors": [
+    1
+   ],
+   "det_survivors": [
+    [
+     1
+    ]
+   ],
+   "fl_ok": true,
+   "n": 24,
+   "n_det": 24,
+   "ndet_survivor_sets": [],
+   "order_det_uniform": true,
+   "state": "uniform_det"
+  },
+  "4,8,8|1|r3": {
+   "chain_determined": false,
+   "chain_survivors": [
+    1,
+    2
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 24,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "4,8,8|1|r4": {
+   "chain_determined": false,
+   "chain_survivors": [
+    2,
+    3
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 24,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     2,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "4,8,8|1|r5": {
+   "chain_determined": false,
+   "chain_survivors": [
+    2,
+    3
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 24,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     2,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "4,8,8|1|r6": {
+   "chain_determined": true,
+   "chain_survivors": [
+    3
+   ],
+   "det_survivors": [
+    [
+     3
+    ]
+   ],
+   "fl_ok": true,
+   "n": 24,
+   "n_det": 19,
+   "ndet_survivor_sets": [
+    [
+     2,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "mixed"
+  },
+  "4,8,8|1|r7": {
+   "chain_determined": false,
+   "chain_survivors": [
+    3,
+    4
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 24,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     2,
+     3,
+     4
+    ],
+    [
+     3,
+     4
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "4,8,8|1|r8": {
+   "chain_determined": false,
+   "chain_survivors": [
+    3,
+    5
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 24,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     2,
+     3,
+     5
+    ],
+    [
+     3,
+     5
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "4,8,8|2|r2": {
+   "chain_determined": true,
+   "chain_survivors": [
+    1
+   ],
+   "det_survivors": [
+    [
+     1
+    ]
+   ],
+   "fl_ok": true,
+   "n": 11,
+   "n_det": 11,
+   "ndet_survivor_sets": [],
+   "order_det_uniform": true,
+   "state": "uniform_det"
+  },
+  "4,8,8|2|r3": {
+   "chain_determined": false,
+   "chain_survivors": [
+    1,
+    2
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 11,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "4,8,8|2|r4": {
+   "chain_determined": false,
+   "chain_survivors": [
+    2,
+    3
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 11,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     2,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "4,8,8|2|r5": {
+   "chain_determined": false,
+   "chain_survivors": [
+    2,
+    3
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 11,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     2,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "4,8,8|2|r6": {
+   "chain_determined": true,
+   "chain_survivors": [
+    3
+   ],
+   "det_survivors": [
+    [
+     3
+    ]
+   ],
+   "fl_ok": true,
+   "n": 11,
+   "n_det": 6,
+   "ndet_survivor_sets": [
+    [
+     2,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "mixed"
+  },
+  "4,8,8|2|r7": {
+   "chain_determined": false,
+   "chain_survivors": [
+    3,
+    4
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 11,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     2,
+     3,
+     4
+    ],
+    [
+     3,
+     4
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "4,8,8|2|r8": {
+   "chain_determined": false,
+   "chain_survivors": [
+    3,
+    5
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 11,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     2,
+     3,
+     5
+    ],
+    [
+     3,
+     5
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "4,9,9|0|r2": {
+   "chain_determined": false,
+   "chain_survivors": [
+    0,
+    1
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 45,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     0,
+     1
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "4,9,9|0|r3": {
+   "chain_determined": false,
+   "chain_survivors": [
+    1,
+    2
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 45,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     0,
+     1,
+     2
+    ],
+    [
+     1,
+     2
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "4,9,9|0|r4": {
+   "chain_determined": false,
+   "chain_survivors": [
+    2,
+    3
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 45,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     3
+    ],
+    [
+     2,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "4,9,9|0|r5": {
+   "chain_determined": false,
+   "chain_survivors": [
+    2,
+    3
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 45,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     3
+    ],
+    [
+     2,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "4,9,9|0|r6": {
+   "chain_determined": false,
+   "chain_survivors": [
+    2,
+    3
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 45,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     3
+    ],
+    [
+     2,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "4,9,9|0|r7": {
+   "chain_determined": true,
+   "chain_survivors": [
+    3
+   ],
+   "det_survivors": [
+    [
+     3
+    ]
+   ],
+   "fl_ok": true,
+   "n": 45,
+   "n_det": 39,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "mixed"
+  },
+  "4,9,9|0|r8": {
+   "chain_determined": false,
+   "chain_survivors": [
+    3,
+    4
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 45,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     3,
+     4
+    ],
+    [
+     3,
+     4
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "4,9,9|1|r2": {
+   "chain_determined": false,
+   "chain_survivors": [
+    0,
+    1
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 28,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     0,
+     1
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "4,9,9|1|r3": {
+   "chain_determined": false,
+   "chain_survivors": [
+    1,
+    2
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 28,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     0,
+     1,
+     2
+    ],
+    [
+     1,
+     2
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "4,9,9|1|r4": {
+   "chain_determined": false,
+   "chain_survivors": [
+    2,
+    3
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 28,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     3
+    ],
+    [
+     2,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "4,9,9|1|r5": {
+   "chain_determined": false,
+   "chain_survivors": [
+    2,
+    3
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 28,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     3
+    ],
+    [
+     2,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "4,9,9|1|r6": {
+   "chain_determined": false,
+   "chain_survivors": [
+    2,
+    3
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 28,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     3
+    ],
+    [
+     2,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "4,9,9|1|r7": {
+   "chain_determined": true,
+   "chain_survivors": [
+    3
+   ],
+   "det_survivors": [
+    [
+     3
+    ]
+   ],
+   "fl_ok": true,
+   "n": 28,
+   "n_det": 22,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "mixed"
+  },
+  "4,9,9|1|r8": {
+   "chain_determined": false,
+   "chain_survivors": [
+    3,
+    4
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 28,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     3,
+     4
+    ],
+    [
+     3,
+     4
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "4,9,9|2|r2": {
+   "chain_determined": false,
+   "chain_survivors": [
+    0,
+    1
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 13,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     0,
+     1
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "4,9,9|2|r3": {
+   "chain_determined": false,
+   "chain_survivors": [
+    1,
+    2
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 13,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     0,
+     1,
+     2
+    ],
+    [
+     1,
+     2
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "4,9,9|2|r4": {
+   "chain_determined": false,
+   "chain_survivors": [
+    2,
+    3
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 13,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     3
+    ],
+    [
+     2,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "4,9,9|2|r5": {
+   "chain_determined": false,
+   "chain_survivors": [
+    2,
+    3
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 13,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     3
+    ],
+    [
+     2,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "4,9,9|2|r6": {
+   "chain_determined": false,
+   "chain_survivors": [
+    2,
+    3
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 13,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     3
+    ],
+    [
+     2,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "4,9,9|2|r7": {
+   "chain_determined": true,
+   "chain_survivors": [
+    3
+   ],
+   "det_survivors": [
+    [
+     3
+    ]
+   ],
+   "fl_ok": true,
+   "n": 13,
+   "n_det": 7,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "mixed"
+  },
+  "4,9,9|2|r8": {
+   "chain_determined": false,
+   "chain_survivors": [
+    3,
+    4
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 13,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     3,
+     4
+    ],
+    [
+     3,
+     4
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "6,6,8|0|r2": {
+   "chain_determined": true,
+   "chain_survivors": [
+    1
+   ],
+   "det_survivors": [
+    [
+     1
+    ]
+   ],
+   "fl_ok": true,
+   "n": 51,
+   "n_det": 51,
+   "ndet_survivor_sets": [],
+   "order_det_uniform": true,
+   "state": "uniform_det"
+  },
+  "6,6,8|0|r3": {
+   "chain_determined": false,
+   "chain_survivors": [
+    1,
+    2
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 51,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "6,6,8|0|r4": {
+   "chain_determined": false,
+   "chain_survivors": [
+    2,
+    3
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 51,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     3
+    ],
+    [
+     2,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "6,6,8|0|r5": {
+   "chain_determined": false,
+   "chain_survivors": [
+    2,
+    4
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 51,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     2,
+     3,
+     4
+    ],
+    [
+     2,
+     4
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "6,6,8|0|r6": {
+   "chain_determined": false,
+   "chain_survivors": [
+    3,
+    5
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 51,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     3,
+     4,
+     5
+    ],
+    [
+     3,
+     5
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "6,6,8|0|r7": {
+   "chain_determined": false,
+   "chain_survivors": [
+    4,
+    5
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 51,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     3,
+     4,
+     5
+    ],
+    [
+     4,
+     5
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "6,6,8|0|r8": {
+   "chain_determined": true,
+   "chain_survivors": [
+    5
+   ],
+   "det_survivors": [
+    [
+     5
+    ]
+   ],
+   "fl_ok": true,
+   "n": 51,
+   "n_det": 48,
+   "ndet_survivor_sets": [
+    [
+     3,
+     4,
+     5
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "mixed"
+  },
+  "6,6,8|1|r2": {
+   "chain_determined": true,
+   "chain_survivors": [
+    1
+   ],
+   "det_survivors": [
+    [
+     1
+    ]
+   ],
+   "fl_ok": true,
+   "n": 33,
+   "n_det": 33,
+   "ndet_survivor_sets": [],
+   "order_det_uniform": true,
+   "state": "uniform_det"
+  },
+  "6,6,8|1|r3": {
+   "chain_determined": false,
+   "chain_survivors": [
+    1,
+    2
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 33,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "6,6,8|1|r4": {
+   "chain_determined": false,
+   "chain_survivors": [
+    2,
+    3
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 33,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     3
+    ],
+    [
+     2,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "6,6,8|1|r5": {
+   "chain_determined": false,
+   "chain_survivors": [
+    2,
+    4
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 33,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     2,
+     3,
+     4
+    ],
+    [
+     2,
+     4
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "6,6,8|1|r6": {
+   "chain_determined": false,
+   "chain_survivors": [
+    3,
+    5
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 33,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     3,
+     4,
+     5
+    ],
+    [
+     3,
+     5
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "6,6,8|1|r7": {
+   "chain_determined": false,
+   "chain_survivors": [
+    4,
+    5
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 33,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     3,
+     4,
+     5
+    ],
+    [
+     4,
+     5
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "6,6,8|1|r8": {
+   "chain_determined": true,
+   "chain_survivors": [
+    5
+   ],
+   "det_survivors": [
+    [
+     5
+    ]
+   ],
+   "fl_ok": true,
+   "n": 33,
+   "n_det": 30,
+   "ndet_survivor_sets": [
+    [
+     3,
+     4,
+     5
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "mixed"
+  },
+  "6,6,8|2|r2": {
+   "chain_determined": true,
+   "chain_survivors": [
+    1
+   ],
+   "det_survivors": [
+    [
+     1
+    ]
+   ],
+   "fl_ok": true,
+   "n": 19,
+   "n_det": 19,
+   "ndet_survivor_sets": [],
+   "order_det_uniform": true,
+   "state": "uniform_det"
+  },
+  "6,6,8|2|r3": {
+   "chain_determined": false,
+   "chain_survivors": [
+    1,
+    2
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 19,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "6,6,8|2|r4": {
+   "chain_determined": false,
+   "chain_survivors": [
+    2,
+    3
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 19,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     3
+    ],
+    [
+     2,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "6,6,8|2|r5": {
+   "chain_determined": false,
+   "chain_survivors": [
+    2,
+    4
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 19,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     2,
+     3,
+     4
+    ],
+    [
+     2,
+     4
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "6,6,8|2|r6": {
+   "chain_determined": false,
+   "chain_survivors": [
+    3,
+    5
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 19,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     3,
+     4,
+     5
+    ],
+    [
+     3,
+     5
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "6,6,8|2|r7": {
+   "chain_determined": false,
+   "chain_survivors": [
+    4,
+    5
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 19,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     3,
+     4,
+     5
+    ],
+    [
+     4,
+     5
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "6,6,8|2|r8": {
+   "chain_determined": true,
+   "chain_survivors": [
+    5
+   ],
+   "det_survivors": [
+    [
+     5
+    ]
+   ],
+   "fl_ok": true,
+   "n": 19,
+   "n_det": 16,
+   "ndet_survivor_sets": [
+    [
+     3,
+     4,
+     5
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "mixed"
+  },
+  "6,6,8|3|r2": {
+   "chain_determined": true,
+   "chain_survivors": [
+    1
+   ],
+   "det_survivors": [
+    [
+     1
+    ]
+   ],
+   "fl_ok": true,
+   "n": 10,
+   "n_det": 10,
+   "ndet_survivor_sets": [],
+   "order_det_uniform": true,
+   "state": "uniform_det"
+  },
+  "6,6,8|3|r3": {
+   "chain_determined": false,
+   "chain_survivors": [
+    1,
+    2
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 10,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "6,6,8|3|r4": {
+   "chain_determined": false,
+   "chain_survivors": [
+    2,
+    3
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 10,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     3
+    ],
+    [
+     2,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "6,6,8|3|r5": {
+   "chain_determined": false,
+   "chain_survivors": [
+    2,
+    4
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 10,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     2,
+     3,
+     4
+    ],
+    [
+     2,
+     4
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "6,6,8|3|r6": {
+   "chain_determined": false,
+   "chain_survivors": [
+    3,
+    5
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 10,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     3,
+     4,
+     5
+    ],
+    [
+     3,
+     5
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "6,6,8|3|r7": {
+   "chain_determined": false,
+   "chain_survivors": [
+    4,
+    5
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 10,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     3,
+     4,
+     5
+    ],
+    [
+     4,
+     5
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "6,6,8|3|r8": {
+   "chain_determined": true,
+   "chain_survivors": [
+    5
+   ],
+   "det_survivors": [
+    [
+     5
+    ]
+   ],
+   "fl_ok": true,
+   "n": 10,
+   "n_det": 7,
+   "ndet_survivor_sets": [
+    [
+     3,
+     4,
+     5
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "mixed"
+  },
+  "6,6,8|4|r2": {
+   "chain_determined": true,
+   "chain_survivors": [
+    1
+   ],
+   "det_survivors": [
+    [
+     1
+    ]
+   ],
+   "fl_ok": true,
+   "n": 4,
+   "n_det": 4,
+   "ndet_survivor_sets": [],
+   "order_det_uniform": true,
+   "state": "uniform_det"
+  },
+  "6,6,8|4|r3": {
+   "chain_determined": false,
+   "chain_survivors": [
+    1,
+    2
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 4,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "6,6,8|4|r4": {
+   "chain_determined": false,
+   "chain_survivors": [
+    2,
+    3
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 4,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     3
+    ],
+    [
+     2,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "6,6,8|4|r5": {
+   "chain_determined": false,
+   "chain_survivors": [
+    2,
+    4
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 4,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     2,
+     3,
+     4
+    ],
+    [
+     2,
+     4
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "6,6,8|4|r6": {
+   "chain_determined": false,
+   "chain_survivors": [
+    3,
+    5
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 4,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     3,
+     4,
+     5
+    ],
+    [
+     3,
+     5
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "6,6,8|4|r7": {
+   "chain_determined": false,
+   "chain_survivors": [
+    4,
+    5
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 4,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     3,
+     4,
+     5
+    ],
+    [
+     4,
+     5
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "6,6,8|4|r8": {
+   "chain_determined": true,
+   "chain_survivors": [
+    5
+   ],
+   "det_survivors": [
+    [
+     5
+    ]
+   ],
+   "fl_ok": true,
+   "n": 4,
+   "n_det": 2,
+   "ndet_survivor_sets": [
+    [
+     3,
+     4,
+     5
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "mixed"
+  },
+  "6,8,8|0|r2": {
+   "chain_determined": true,
+   "chain_survivors": [
+    1
+   ],
+   "det_survivors": [
+    [
+     1
+    ]
+   ],
+   "fl_ok": true,
+   "n": 66,
+   "n_det": 66,
+   "ndet_survivor_sets": [],
+   "order_det_uniform": true,
+   "state": "uniform_det"
+  },
+  "6,8,8|0|r3": {
+   "chain_determined": false,
+   "chain_survivors": [
+    1,
+    2
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 66,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "6,8,8|0|r4": {
+   "chain_determined": false,
+   "chain_survivors": [
+    2,
+    3
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 66,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     3
+    ],
+    [
+     2,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "6,8,8|0|r5": {
+   "chain_determined": false,
+   "chain_survivors": [
+    2,
+    4
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 66,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     2,
+     3,
+     4
+    ],
+    [
+     2,
+     4
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "6,8,8|0|r6": {
+   "chain_determined": false,
+   "chain_survivors": [
+    3,
+    5
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 66,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     3,
+     4,
+     5
+    ],
+    [
+     3,
+     5
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "6,8,8|0|r7": {
+   "chain_determined": false,
+   "chain_survivors": [
+    4,
+    5
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 66,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     3,
+     4,
+     5
+    ],
+    [
+     4,
+     5
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "6,8,8|0|r8": {
+   "chain_determined": true,
+   "chain_survivors": [
+    5
+   ],
+   "det_survivors": [
+    [
+     5
+    ]
+   ],
+   "fl_ok": true,
+   "n": 66,
+   "n_det": 63,
+   "ndet_survivor_sets": [
+    [
+     3,
+     4,
+     5
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "mixed"
+  },
+  "6,8,8|1|r2": {
+   "chain_determined": true,
+   "chain_survivors": [
+    1
+   ],
+   "det_survivors": [
+    [
+     1
+    ]
+   ],
+   "fl_ok": true,
+   "n": 45,
+   "n_det": 45,
+   "ndet_survivor_sets": [],
+   "order_det_uniform": true,
+   "state": "uniform_det"
+  },
+  "6,8,8|1|r3": {
+   "chain_determined": false,
+   "chain_survivors": [
+    1,
+    2
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 45,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "6,8,8|1|r4": {
+   "chain_determined": false,
+   "chain_survivors": [
+    2,
+    3
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 45,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     3
+    ],
+    [
+     2,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "6,8,8|1|r5": {
+   "chain_determined": false,
+   "chain_survivors": [
+    2,
+    4
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 45,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     2,
+     3,
+     4
+    ],
+    [
+     2,
+     4
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "6,8,8|1|r6": {
+   "chain_determined": false,
+   "chain_survivors": [
+    3,
+    5
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 45,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     3,
+     4,
+     5
+    ],
+    [
+     3,
+     5
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "6,8,8|1|r7": {
+   "chain_determined": false,
+   "chain_survivors": [
+    4,
+    5
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 45,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     3,
+     4,
+     5
+    ],
+    [
+     4,
+     5
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "6,8,8|1|r8": {
+   "chain_determined": true,
+   "chain_survivors": [
+    5
+   ],
+   "det_survivors": [
+    [
+     5
+    ]
+   ],
+   "fl_ok": true,
+   "n": 45,
+   "n_det": 42,
+   "ndet_survivor_sets": [
+    [
+     3,
+     4,
+     5
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "mixed"
+  },
+  "6,8,8|2|r2": {
+   "chain_determined": true,
+   "chain_survivors": [
+    1
+   ],
+   "det_survivors": [
+    [
+     1
+    ]
+   ],
+   "fl_ok": true,
+   "n": 27,
+   "n_det": 27,
+   "ndet_survivor_sets": [],
+   "order_det_uniform": true,
+   "state": "uniform_det"
+  },
+  "6,8,8|2|r3": {
+   "chain_determined": false,
+   "chain_survivors": [
+    1,
+    2
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 27,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "6,8,8|2|r4": {
+   "chain_determined": false,
+   "chain_survivors": [
+    2,
+    3
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 27,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     3
+    ],
+    [
+     2,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "6,8,8|2|r5": {
+   "chain_determined": false,
+   "chain_survivors": [
+    2,
+    4
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 27,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     2,
+     3,
+     4
+    ],
+    [
+     2,
+     4
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "6,8,8|2|r6": {
+   "chain_determined": false,
+   "chain_survivors": [
+    3,
+    5
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 27,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     3,
+     4,
+     5
+    ],
+    [
+     3,
+     5
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "6,8,8|2|r7": {
+   "chain_determined": false,
+   "chain_survivors": [
+    4,
+    5
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 27,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     3,
+     4,
+     5
+    ],
+    [
+     4,
+     5
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "6,8,8|2|r8": {
+   "chain_determined": true,
+   "chain_survivors": [
+    5
+   ],
+   "det_survivors": [
+    [
+     5
+    ]
+   ],
+   "fl_ok": true,
+   "n": 27,
+   "n_det": 24,
+   "ndet_survivor_sets": [
+    [
+     3,
+     4,
+     5
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "mixed"
+  },
+  "6,8,8|3|r2": {
+   "chain_determined": true,
+   "chain_survivors": [
+    1
+   ],
+   "det_survivors": [
+    [
+     1
+    ]
+   ],
+   "fl_ok": true,
+   "n": 16,
+   "n_det": 16,
+   "ndet_survivor_sets": [],
+   "order_det_uniform": true,
+   "state": "uniform_det"
+  },
+  "6,8,8|3|r3": {
+   "chain_determined": false,
+   "chain_survivors": [
+    1,
+    2
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 16,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "6,8,8|3|r4": {
+   "chain_determined": false,
+   "chain_survivors": [
+    2,
+    3
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 16,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     3
+    ],
+    [
+     2,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "6,8,8|3|r5": {
+   "chain_determined": false,
+   "chain_survivors": [
+    2,
+    4
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 16,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     2,
+     3,
+     4
+    ],
+    [
+     2,
+     4
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "6,8,8|3|r6": {
+   "chain_determined": false,
+   "chain_survivors": [
+    3,
+    5
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 16,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     3,
+     4,
+     5
+    ],
+    [
+     3,
+     5
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "6,8,8|3|r7": {
+   "chain_determined": false,
+   "chain_survivors": [
+    4,
+    5
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 16,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     3,
+     4,
+     5
+    ],
+    [
+     4,
+     5
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "6,8,8|3|r8": {
+   "chain_determined": true,
+   "chain_survivors": [
+    5
+   ],
+   "det_survivors": [
+    [
+     5
+    ]
+   ],
+   "fl_ok": true,
+   "n": 16,
+   "n_det": 13,
+   "ndet_survivor_sets": [
+    [
+     3,
+     4,
+     5
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "mixed"
+  },
+  "6,8,8|4|r2": {
+   "chain_determined": true,
+   "chain_survivors": [
+    1
+   ],
+   "det_survivors": [
+    [
+     1
+    ]
+   ],
+   "fl_ok": true,
+   "n": 7,
+   "n_det": 7,
+   "ndet_survivor_sets": [],
+   "order_det_uniform": true,
+   "state": "uniform_det"
+  },
+  "6,8,8|4|r3": {
+   "chain_determined": false,
+   "chain_survivors": [
+    1,
+    2
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 7,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "6,8,8|4|r4": {
+   "chain_determined": false,
+   "chain_survivors": [
+    2,
+    3
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 7,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     3
+    ],
+    [
+     2,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "6,8,8|4|r5": {
+   "chain_determined": false,
+   "chain_survivors": [
+    2,
+    4
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 7,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     2,
+     3,
+     4
+    ],
+    [
+     2,
+     4
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "6,8,8|4|r6": {
+   "chain_determined": false,
+   "chain_survivors": [
+    3,
+    5
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 7,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     3,
+     4,
+     5
+    ],
+    [
+     3,
+     5
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "6,8,8|4|r7": {
+   "chain_determined": false,
+   "chain_survivors": [
+    4,
+    5
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 7,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     3,
+     4,
+     5
+    ],
+    [
+     4,
+     5
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "6,8,8|4|r8": {
+   "chain_determined": true,
+   "chain_survivors": [
+    5
+   ],
+   "det_survivors": [
+    [
+     5
+    ]
+   ],
+   "fl_ok": true,
+   "n": 7,
+   "n_det": 4,
+   "ndet_survivor_sets": [
+    [
+     3,
+     4,
+     5
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "mixed"
+  },
+  "8,8,9|0|r2": {
+   "chain_determined": false,
+   "chain_survivors": [
+    0,
+    1
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 100,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     0,
+     1
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "8,8,9|0|r3": {
+   "chain_determined": true,
+   "chain_survivors": [
+    1
+   ],
+   "det_survivors": [
+    [
+     1
+    ]
+   ],
+   "fl_ok": true,
+   "n": 100,
+   "n_det": 92,
+   "ndet_survivor_sets": [
+    [
+     0,
+     1,
+     2
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "mixed"
+  },
+  "8,8,9|0|r4": {
+   "chain_determined": true,
+   "chain_survivors": [
+    2
+   ],
+   "det_survivors": [
+    [
+     2
+    ]
+   ],
+   "fl_ok": true,
+   "n": 100,
+   "n_det": 92,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "mixed"
+  },
+  "8,8,9|0|r5": {
+   "chain_determined": true,
+   "chain_survivors": [
+    2
+   ],
+   "det_survivors": [
+    [
+     2
+    ]
+   ],
+   "fl_ok": true,
+   "n": 100,
+   "n_det": 92,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "mixed"
+  },
+  "8,8,9|0|r6": {
+   "chain_determined": false,
+   "chain_survivors": [
+    2,
+    3
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 100,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     3,
+     4
+    ],
+    [
+     2,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "8,8,9|0|r7": {
+   "chain_determined": false,
+   "chain_survivors": [
+    3,
+    4
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 100,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     2,
+     3,
+     4,
+     5
+    ],
+    [
+     3,
+     4
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "8,8,9|0|r8": {
+   "chain_determined": false,
+   "chain_survivors": [
+    4,
+    5
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 100,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     3,
+     4,
+     5,
+     6
+    ],
+    [
+     4,
+     5
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "8,8,9|1|r2": {
+   "chain_determined": false,
+   "chain_survivors": [
+    0,
+    1
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 70,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     0,
+     1
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "8,8,9|1|r3": {
+   "chain_determined": true,
+   "chain_survivors": [
+    1
+   ],
+   "det_survivors": [
+    [
+     1
+    ]
+   ],
+   "fl_ok": true,
+   "n": 70,
+   "n_det": 62,
+   "ndet_survivor_sets": [
+    [
+     0,
+     1,
+     2
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "mixed"
+  },
+  "8,8,9|1|r4": {
+   "chain_determined": true,
+   "chain_survivors": [
+    2
+   ],
+   "det_survivors": [
+    [
+     2
+    ]
+   ],
+   "fl_ok": true,
+   "n": 70,
+   "n_det": 62,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "mixed"
+  },
+  "8,8,9|1|r5": {
+   "chain_determined": true,
+   "chain_survivors": [
+    2
+   ],
+   "det_survivors": [
+    [
+     2
+    ]
+   ],
+   "fl_ok": true,
+   "n": 70,
+   "n_det": 62,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "mixed"
+  },
+  "8,8,9|1|r6": {
+   "chain_determined": false,
+   "chain_survivors": [
+    2,
+    3
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 70,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     3,
+     4
+    ],
+    [
+     2,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "8,8,9|1|r7": {
+   "chain_determined": false,
+   "chain_survivors": [
+    3,
+    4
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 70,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     2,
+     3,
+     4,
+     5
+    ],
+    [
+     3,
+     4
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "8,8,9|1|r8": {
+   "chain_determined": false,
+   "chain_survivors": [
+    4,
+    5
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 70,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     3,
+     4,
+     5,
+     6
+    ],
+    [
+     4,
+     5
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "8,8,9|2|r2": {
+   "chain_determined": false,
+   "chain_survivors": [
+    0,
+    1
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 48,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     0,
+     1
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "8,8,9|2|r3": {
+   "chain_determined": true,
+   "chain_survivors": [
+    1
+   ],
+   "det_survivors": [
+    [
+     1
+    ]
+   ],
+   "fl_ok": true,
+   "n": 48,
+   "n_det": 40,
+   "ndet_survivor_sets": [
+    [
+     0,
+     1,
+     2
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "mixed"
+  },
+  "8,8,9|2|r4": {
+   "chain_determined": true,
+   "chain_survivors": [
+    2
+   ],
+   "det_survivors": [
+    [
+     2
+    ]
+   ],
+   "fl_ok": true,
+   "n": 48,
+   "n_det": 40,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "mixed"
+  },
+  "8,8,9|2|r5": {
+   "chain_determined": true,
+   "chain_survivors": [
+    2
+   ],
+   "det_survivors": [
+    [
+     2
+    ]
+   ],
+   "fl_ok": true,
+   "n": 48,
+   "n_det": 40,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "mixed"
+  },
+  "8,8,9|2|r6": {
+   "chain_determined": false,
+   "chain_survivors": [
+    2,
+    3
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 48,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     3,
+     4
+    ],
+    [
+     2,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "8,8,9|2|r7": {
+   "chain_determined": false,
+   "chain_survivors": [
+    3,
+    4
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 48,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     2,
+     3,
+     4,
+     5
+    ],
+    [
+     3,
+     4
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "8,8,9|2|r8": {
+   "chain_determined": false,
+   "chain_survivors": [
+    4,
+    5
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 48,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     3,
+     4,
+     5,
+     6
+    ],
+    [
+     4,
+     5
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "8,8,9|3|r2": {
+   "chain_determined": false,
+   "chain_survivors": [
+    0,
+    1
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 30,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     0,
+     1
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "8,8,9|3|r3": {
+   "chain_determined": true,
+   "chain_survivors": [
+    1
+   ],
+   "det_survivors": [
+    [
+     1
+    ]
+   ],
+   "fl_ok": true,
+   "n": 30,
+   "n_det": 22,
+   "ndet_survivor_sets": [
+    [
+     0,
+     1,
+     2
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "mixed"
+  },
+  "8,8,9|3|r4": {
+   "chain_determined": true,
+   "chain_survivors": [
+    2
+   ],
+   "det_survivors": [
+    [
+     2
+    ]
+   ],
+   "fl_ok": true,
+   "n": 30,
+   "n_det": 22,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "mixed"
+  },
+  "8,8,9|3|r5": {
+   "chain_determined": true,
+   "chain_survivors": [
+    2
+   ],
+   "det_survivors": [
+    [
+     2
+    ]
+   ],
+   "fl_ok": true,
+   "n": 30,
+   "n_det": 22,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "mixed"
+  },
+  "8,8,9|3|r6": {
+   "chain_determined": false,
+   "chain_survivors": [
+    2,
+    3
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 30,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     3,
+     4
+    ],
+    [
+     2,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "8,8,9|3|r7": {
+   "chain_determined": false,
+   "chain_survivors": [
+    3,
+    4
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 30,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     2,
+     3,
+     4,
+     5
+    ],
+    [
+     3,
+     4
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "8,8,9|3|r8": {
+   "chain_determined": false,
+   "chain_survivors": [
+    4,
+    5
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 30,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     3,
+     4,
+     5,
+     6
+    ],
+    [
+     4,
+     5
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "8,8,9|4|r2": {
+   "chain_determined": false,
+   "chain_survivors": [
+    0,
+    1
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 18,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     0,
+     1
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "8,8,9|4|r3": {
+   "chain_determined": true,
+   "chain_survivors": [
+    1
+   ],
+   "det_survivors": [
+    [
+     1
+    ]
+   ],
+   "fl_ok": true,
+   "n": 18,
+   "n_det": 10,
+   "ndet_survivor_sets": [
+    [
+     0,
+     1,
+     2
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "mixed"
+  },
+  "8,8,9|4|r4": {
+   "chain_determined": true,
+   "chain_survivors": [
+    2
+   ],
+   "det_survivors": [
+    [
+     2
+    ]
+   ],
+   "fl_ok": true,
+   "n": 18,
+   "n_det": 10,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "mixed"
+  },
+  "8,8,9|4|r5": {
+   "chain_determined": true,
+   "chain_survivors": [
+    2
+   ],
+   "det_survivors": [
+    [
+     2
+    ]
+   ],
+   "fl_ok": true,
+   "n": 18,
+   "n_det": 10,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     3
+    ],
+    [
+     1,
+     2,
+     3,
+     4
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "mixed"
+  },
+  "8,8,9|4|r6": {
+   "chain_determined": false,
+   "chain_survivors": [
+    2,
+    3
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 18,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     3,
+     4
+    ],
+    [
+     1,
+     2,
+     3,
+     4,
+     5
+    ],
+    [
+     2,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "8,8,9|4|r7": {
+   "chain_determined": false,
+   "chain_survivors": [
+    3,
+    4
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 18,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     2,
+     3,
+     4,
+     5
+    ],
+    [
+     2,
+     3,
+     4,
+     5,
+     6
+    ],
+    [
+     3,
+     4
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "8,8,9|4|r8": {
+   "chain_determined": false,
+   "chain_survivors": [
+    4,
+    5
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 18,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     3,
+     4,
+     5,
+     6
+    ],
+    [
+     3,
+     4,
+     5,
+     6,
+     7
+    ],
+    [
+     4,
+     5
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "8,8,9|5|r2": {
+   "chain_determined": false,
+   "chain_survivors": [
+    0,
+    1
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 9,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     0,
+     1
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "8,8,9|5|r3": {
+   "chain_determined": true,
+   "chain_survivors": [
+    1
+   ],
+   "det_survivors": [
+    [
+     1
+    ]
+   ],
+   "fl_ok": true,
+   "n": 9,
+   "n_det": 3,
+   "ndet_survivor_sets": [
+    [
+     0,
+     1,
+     2
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "mixed"
+  },
+  "8,8,9|5|r4": {
+   "chain_determined": true,
+   "chain_survivors": [
+    2
+   ],
+   "det_survivors": [
+    [
+     2
+    ]
+   ],
+   "fl_ok": true,
+   "n": 9,
+   "n_det": 3,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "mixed"
+  },
+  "8,8,9|5|r5": {
+   "chain_determined": true,
+   "chain_survivors": [
+    2
+   ],
+   "det_survivors": [
+    [
+     2
+    ]
+   ],
+   "fl_ok": true,
+   "n": 9,
+   "n_det": 3,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     3
+    ],
+    [
+     1,
+     2,
+     3,
+     4
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "mixed"
+  },
+  "8,8,9|5|r6": {
+   "chain_determined": false,
+   "chain_survivors": [
+    2,
+    3
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 9,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     3,
+     4
+    ],
+    [
+     1,
+     2,
+     3,
+     4,
+     5
+    ],
+    [
+     2,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "8,8,9|5|r7": {
+   "chain_determined": false,
+   "chain_survivors": [
+    3,
+    4
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 9,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     2,
+     3,
+     4,
+     5
+    ],
+    [
+     2,
+     3,
+     4,
+     5,
+     6
+    ],
+    [
+     3,
+     4
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "8,8,9|5|r8": {
+   "chain_determined": false,
+   "chain_survivors": [
+    4,
+    5
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 9,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     3,
+     4,
+     5,
+     6
+    ],
+    [
+     3,
+     4,
+     5,
+     6,
+     7
+    ],
+    [
+     4,
+     5
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "8,9,9|0|r2": {
+   "chain_determined": false,
+   "chain_survivors": [
+    0,
+    1
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 110,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     0,
+     1
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "8,9,9|0|r3": {
+   "chain_determined": true,
+   "chain_survivors": [
+    1
+   ],
+   "det_survivors": [
+    [
+     1
+    ]
+   ],
+   "fl_ok": true,
+   "n": 110,
+   "n_det": 102,
+   "ndet_survivor_sets": [
+    [
+     0,
+     1,
+     2
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "mixed"
+  },
+  "8,9,9|0|r4": {
+   "chain_determined": true,
+   "chain_survivors": [
+    2
+   ],
+   "det_survivors": [
+    [
+     2
+    ]
+   ],
+   "fl_ok": true,
+   "n": 110,
+   "n_det": 102,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "mixed"
+  },
+  "8,9,9|0|r5": {
+   "chain_determined": true,
+   "chain_survivors": [
+    2
+   ],
+   "det_survivors": [
+    [
+     2
+    ]
+   ],
+   "fl_ok": true,
+   "n": 110,
+   "n_det": 102,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "mixed"
+  },
+  "8,9,9|0|r6": {
+   "chain_determined": false,
+   "chain_survivors": [
+    2,
+    3
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 110,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     3,
+     4
+    ],
+    [
+     2,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "8,9,9|0|r7": {
+   "chain_determined": false,
+   "chain_survivors": [
+    3,
+    4
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 110,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     2,
+     3,
+     4,
+     5
+    ],
+    [
+     3,
+     4
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "8,9,9|0|r8": {
+   "chain_determined": false,
+   "chain_survivors": [
+    4,
+    5
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 110,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     3,
+     4,
+     5,
+     6
+    ],
+    [
+     4,
+     5
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "8,9,9|1|r2": {
+   "chain_determined": false,
+   "chain_survivors": [
+    0,
+    1
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 80,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     0,
+     1
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "8,9,9|1|r3": {
+   "chain_determined": true,
+   "chain_survivors": [
+    1
+   ],
+   "det_survivors": [
+    [
+     1
+    ]
+   ],
+   "fl_ok": true,
+   "n": 80,
+   "n_det": 72,
+   "ndet_survivor_sets": [
+    [
+     0,
+     1,
+     2
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "mixed"
+  },
+  "8,9,9|1|r4": {
+   "chain_determined": true,
+   "chain_survivors": [
+    2
+   ],
+   "det_survivors": [
+    [
+     2
+    ]
+   ],
+   "fl_ok": true,
+   "n": 80,
+   "n_det": 72,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "mixed"
+  },
+  "8,9,9|1|r5": {
+   "chain_determined": true,
+   "chain_survivors": [
+    2
+   ],
+   "det_survivors": [
+    [
+     2
+    ]
+   ],
+   "fl_ok": true,
+   "n": 80,
+   "n_det": 72,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "mixed"
+  },
+  "8,9,9|1|r6": {
+   "chain_determined": false,
+   "chain_survivors": [
+    2,
+    3
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 80,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     3,
+     4
+    ],
+    [
+     2,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "8,9,9|1|r7": {
+   "chain_determined": false,
+   "chain_survivors": [
+    3,
+    4
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 80,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     2,
+     3,
+     4,
+     5
+    ],
+    [
+     3,
+     4
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "8,9,9|1|r8": {
+   "chain_determined": false,
+   "chain_survivors": [
+    4,
+    5
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 80,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     3,
+     4,
+     5,
+     6
+    ],
+    [
+     4,
+     5
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "8,9,9|2|r2": {
+   "chain_determined": false,
+   "chain_survivors": [
+    0,
+    1
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 54,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     0,
+     1
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "8,9,9|2|r3": {
+   "chain_determined": true,
+   "chain_survivors": [
+    1
+   ],
+   "det_survivors": [
+    [
+     1
+    ]
+   ],
+   "fl_ok": true,
+   "n": 54,
+   "n_det": 46,
+   "ndet_survivor_sets": [
+    [
+     0,
+     1,
+     2
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "mixed"
+  },
+  "8,9,9|2|r4": {
+   "chain_determined": true,
+   "chain_survivors": [
+    2
+   ],
+   "det_survivors": [
+    [
+     2
+    ]
+   ],
+   "fl_ok": true,
+   "n": 54,
+   "n_det": 46,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "mixed"
+  },
+  "8,9,9|2|r5": {
+   "chain_determined": true,
+   "chain_survivors": [
+    2
+   ],
+   "det_survivors": [
+    [
+     2
+    ]
+   ],
+   "fl_ok": true,
+   "n": 54,
+   "n_det": 46,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "mixed"
+  },
+  "8,9,9|2|r6": {
+   "chain_determined": false,
+   "chain_survivors": [
+    2,
+    3
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 54,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     3,
+     4
+    ],
+    [
+     2,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "8,9,9|2|r7": {
+   "chain_determined": false,
+   "chain_survivors": [
+    3,
+    4
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 54,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     2,
+     3,
+     4,
+     5
+    ],
+    [
+     3,
+     4
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "8,9,9|2|r8": {
+   "chain_determined": false,
+   "chain_survivors": [
+    4,
+    5
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 54,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     3,
+     4,
+     5,
+     6
+    ],
+    [
+     4,
+     5
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "8,9,9|3|r2": {
+   "chain_determined": false,
+   "chain_survivors": [
+    0,
+    1
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 36,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     0,
+     1
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "8,9,9|3|r3": {
+   "chain_determined": true,
+   "chain_survivors": [
+    1
+   ],
+   "det_survivors": [
+    [
+     1
+    ]
+   ],
+   "fl_ok": true,
+   "n": 36,
+   "n_det": 28,
+   "ndet_survivor_sets": [
+    [
+     0,
+     1,
+     2
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "mixed"
+  },
+  "8,9,9|3|r4": {
+   "chain_determined": true,
+   "chain_survivors": [
+    2
+   ],
+   "det_survivors": [
+    [
+     2
+    ]
+   ],
+   "fl_ok": true,
+   "n": 36,
+   "n_det": 28,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "mixed"
+  },
+  "8,9,9|3|r5": {
+   "chain_determined": true,
+   "chain_survivors": [
+    2
+   ],
+   "det_survivors": [
+    [
+     2
+    ]
+   ],
+   "fl_ok": true,
+   "n": 36,
+   "n_det": 28,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "mixed"
+  },
+  "8,9,9|3|r6": {
+   "chain_determined": false,
+   "chain_survivors": [
+    2,
+    3
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 36,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     3,
+     4
+    ],
+    [
+     2,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "8,9,9|3|r7": {
+   "chain_determined": false,
+   "chain_survivors": [
+    3,
+    4
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 36,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     2,
+     3,
+     4,
+     5
+    ],
+    [
+     3,
+     4
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "8,9,9|3|r8": {
+   "chain_determined": false,
+   "chain_survivors": [
+    4,
+    5
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 36,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     3,
+     4,
+     5,
+     6
+    ],
+    [
+     4,
+     5
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "8,9,9|4|r2": {
+   "chain_determined": false,
+   "chain_survivors": [
+    0,
+    1
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 21,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     0,
+     1
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "8,9,9|4|r3": {
+   "chain_determined": true,
+   "chain_survivors": [
+    1
+   ],
+   "det_survivors": [
+    [
+     1
+    ]
+   ],
+   "fl_ok": true,
+   "n": 21,
+   "n_det": 13,
+   "ndet_survivor_sets": [
+    [
+     0,
+     1,
+     2
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "mixed"
+  },
+  "8,9,9|4|r4": {
+   "chain_determined": true,
+   "chain_survivors": [
+    2
+   ],
+   "det_survivors": [
+    [
+     2
+    ]
+   ],
+   "fl_ok": true,
+   "n": 21,
+   "n_det": 13,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "mixed"
+  },
+  "8,9,9|4|r5": {
+   "chain_determined": true,
+   "chain_survivors": [
+    2
+   ],
+   "det_survivors": [
+    [
+     2
+    ]
+   ],
+   "fl_ok": true,
+   "n": 21,
+   "n_det": 13,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "mixed"
+  },
+  "8,9,9|4|r6": {
+   "chain_determined": false,
+   "chain_survivors": [
+    2,
+    3
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 21,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     3,
+     4
+    ],
+    [
+     2,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "8,9,9|4|r7": {
+   "chain_determined": false,
+   "chain_survivors": [
+    3,
+    4
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 21,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     2,
+     3,
+     4,
+     5
+    ],
+    [
+     3,
+     4
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "8,9,9|4|r8": {
+   "chain_determined": false,
+   "chain_survivors": [
+    4,
+    5
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 21,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     3,
+     4,
+     5,
+     6
+    ],
+    [
+     4,
+     5
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "8,9,9|5|r2": {
+   "chain_determined": false,
+   "chain_survivors": [
+    0,
+    1
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 12,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     0,
+     1
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "8,9,9|5|r3": {
+   "chain_determined": true,
+   "chain_survivors": [
+    1
+   ],
+   "det_survivors": [
+    [
+     1
+    ]
+   ],
+   "fl_ok": true,
+   "n": 12,
+   "n_det": 4,
+   "ndet_survivor_sets": [
+    [
+     0,
+     1,
+     2
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "mixed"
+  },
+  "8,9,9|5|r4": {
+   "chain_determined": true,
+   "chain_survivors": [
+    2
+   ],
+   "det_survivors": [
+    [
+     2
+    ]
+   ],
+   "fl_ok": true,
+   "n": 12,
+   "n_det": 4,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "mixed"
+  },
+  "8,9,9|5|r5": {
+   "chain_determined": true,
+   "chain_survivors": [
+    2
+   ],
+   "det_survivors": [
+    [
+     2
+    ]
+   ],
+   "fl_ok": true,
+   "n": 12,
+   "n_det": 4,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "mixed"
+  },
+  "8,9,9|5|r6": {
+   "chain_determined": false,
+   "chain_survivors": [
+    2,
+    3
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 12,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     1,
+     2,
+     3,
+     4
+    ],
+    [
+     2,
+     3
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "8,9,9|5|r7": {
+   "chain_determined": false,
+   "chain_survivors": [
+    3,
+    4
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 12,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     2,
+     3,
+     4,
+     5
+    ],
+    [
+     3,
+     4
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  },
+  "8,9,9|5|r8": {
+   "chain_determined": false,
+   "chain_survivors": [
+    4,
+    5
+   ],
+   "det_survivors": [],
+   "fl_ok": true,
+   "n": 12,
+   "n_det": 0,
+   "ndet_survivor_sets": [
+    [
+     3,
+     4,
+     5,
+     6
+    ],
+    [
+     4,
+     5
+    ]
+   ],
+   "order_det_uniform": true,
+   "state": "uniform_ndet"
+  }
+ },
+ "meta": {
+  "date": "2026-11-16",
+  "engine_provenance": "verbatim from research/experiments/remo-k-branch-r-boundary-20261116/verify_remo_k_branch_r_boundary.py (K0864, commit 3138e0e3, sha256 43adec69c0a6c5da0a43f6db6405c11376fda6c7eec8e7055f17b274c35a1edf)",
+  "full_715_boundary_provenance": "inherited from K0862/K0864/K0866/K0869 (not recomputed here)",
+  "item": "K0874",
+  "r_values": [
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8
+  ],
+  "title": "3-branch REMO failure-family state matrix (52 keys x r=2..8)"
+ },
+ "summary": {
+  "all_ok": true,
+  "checks_total": 11
+ },
+ "windows": {
+  "4/10": [],
+  "4/8": [
+   6
+  ],
+  "4/9": [
+   7
+  ],
+  "6/8": [
+   8
+  ],
+  "8/9": [
+   3,
+   4,
+   5
+  ],
+  "small_branch": [
+   3
+  ]
+ }
+}

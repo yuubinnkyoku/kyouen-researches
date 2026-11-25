@@ -1,0 +1,48 @@
+
+rep1 {0,1,10,20,31}: points [0, 1, 10, 20, 31]
+  legal moves from the 5-cap: 21
+  upper set: 132 caps -- by size {5: 1, 6: 21, 7: 74, 8: 30, 9: 5, 10: 1}
+  #caps strictly containing it: 131
+  terminal positions reachable, by size: {7: 4, 8: 20, 10: 1} (total 25)
+  Grundy values of its children (6-caps): {0: 13, 2: 8}
+  Grundy value g(rep) = 1   (local mex certificate: True)
+[PASS] rep1 {0,1,10,20,31} has Grundy value 1  --  computed g = 1
+[PASS] rep1 {0,1,10,20,31}: local mex certificate holds on the whole upper set
+[PASS] rep1 {0,1,10,20,31}: upper set is nonempty and finite
+
+rep2 {0,1,10,20,42}: points [0, 1, 10, 20, 42]
+  legal moves from the 5-cap: 21
+  upper set: 128 caps -- by size {5: 1, 6: 21, 7: 70, 8: 30, 9: 5, 10: 1}
+  #caps strictly containing it: 127
+  terminal positions reachable, by size: {6: 1, 8: 20, 10: 1} (total 22)
+  Grundy values of its children (6-caps): {0: 21}
+  Grundy value g(rep) = 1   (local mex certificate: True)
+[PASS] rep2 {0,1,10,20,42} has Grundy value 1  --  computed g = 1
+[PASS] rep2 {0,1,10,20,42}: local mex certificate holds on the whole upper set
+[PASS] rep2 {0,1,10,20,42}: upper set is nonempty and finite
+
+rep3 {0,1,10,20,41}: points [0, 1, 10, 20, 41]
+  legal moves from the 5-cap: 21
+  upper set: 132 caps -- by size {5: 1, 6: 21, 7: 74, 8: 30, 9: 5, 10: 1}
+  #caps strictly containing it: 131
+  terminal positions reachable, by size: {7: 4, 8: 20, 10: 1} (total 25)
+  Grundy values of its children (6-caps): {0: 13, 2: 8}
+  Grundy value g(rep) = 1   (local mex certificate: True)
+[PASS] rep3 {0,1,10,20,41} has Grundy value 1  --  computed g = 1
+[PASS] rep3 {0,1,10,20,41}: local mex certificate holds on the whole upper set
+[PASS] rep3 {0,1,10,20,41}: upper set is nonempty and finite
+
+frame [0,1,10,20] (4-cap): g = 0, upper set 1868 caps, by size {4: 1, 5: 42, 6: 441, 7: 1020, 8: 315, 9: 42, 10: 7}, terminals {6: 6, 7: 40, 8: 210, 10: 7}
+  children (5-caps) Grundy distribution: {1: 42}
+[PASS] frame (4-cap) has Grundy value 0 (mex{1})
+
+Grundy values of all 42 five-caps through the frame: {1: 42}
+[PASS] all 42 five-caps through the frame have Grundy value 1
+
+PGL invariance: applied all 24 frame-fixing projectivities to each representative (72 images)
+[PASS] g is invariant under the 24 frame-fixing projectivities
+
+random 5-caps tested: 400 -> Grundy values {1: 400}
+[PASS] 400 random 5-caps all have Grundy value 1  --  400 caps, values {1: 400}
+
+TASK 4: PASS

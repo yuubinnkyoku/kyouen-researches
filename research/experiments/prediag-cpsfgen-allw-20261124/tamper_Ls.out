@@ -1,0 +1,660 @@
+{
+ "bad": [
+  6880,
+  250,
+  2144,
+  8631,
+  270,
+  0,
+  1765,
+  705,
+  0,
+  0,
+  457
+ ],
+ "counts": [
+  137700,
+  3808,
+  34901,
+  43008,
+  19499,
+  1440,
+  35175,
+  17952,
+  521,
+  3954,
+  36372
+ ],
+ "engine_gate": "PASS",
+ "engine_sha": "bd5f22e415a78368c9b798296bc84948d5637decbf3c21a92404d45fb12e3a92",
+ "examples": [
+  [
+   [
+    1,
+    0,
+    1,
+    1,
+    -2,
+    1,
+    2
+   ],
+   [
+    1,
+    0,
+    1,
+    2,
+    -3,
+    1,
+    2
+   ],
+   [
+    1,
+    0,
+    1,
+    3,
+    -4,
+    1,
+    2
+   ],
+   [
+    1,
+    0,
+    1,
+    4,
+    -5,
+    1,
+    2
+   ],
+   [
+    1,
+    0,
+    1,
+    5,
+    -6,
+    1,
+    2
+   ],
+   [
+    1,
+    0,
+    1,
+    6,
+    -7,
+    1,
+    2
+   ]
+  ],
+  [
+   [
+    2,
+    0,
+    1,
+    -1,
+    1,
+    2
+   ],
+   [
+    2,
+    0,
+    2,
+    -3,
+    1,
+    2
+   ],
+   [
+    2,
+    0,
+    3,
+    -5,
+    1,
+    2
+   ],
+   [
+    2,
+    0,
+    4,
+    -7,
+    1,
+    2
+   ],
+   [
+    2,
+    0,
+    5,
+    -9,
+    1,
+    2
+   ],
+   [
+    2,
+    0,
+    6,
+    -11,
+    1,
+    2
+   ]
+  ],
+  [
+   [
+    3,
+    0,
+    1,
+    1,
+    -2,
+    2,
+    1,
+    1
+   ],
+   [
+    3,
+    0,
+    1,
+    2,
+    -3,
+    2,
+    1,
+    1
+   ],
+   [
+    3,
+    0,
+    1,
+    3,
+    -4,
+    2,
+    1,
+    1
+   ],
+   [
+    3,
+    0,
+    1,
+    4,
+    -5,
+    2,
+    1,
+    1
+   ],
+   [
+    3,
+    0,
+    1,
+    5,
+    -6,
+    2,
+    1,
+    1
+   ],
+   [
+    3,
+    0,
+    1,
+    6,
+    -7,
+    2,
+    1,
+    1
+   ]
+  ],
+  [
+   [
+    4,
+    0,
+    1,
+    1,
+    -1,
+    1,
+    2
+   ],
+   [
+    4,
+    0,
+    1,
+    2,
+    -3,
+    1,
+    2
+   ],
+   [
+    4,
+    0,
+    1,
+    3,
+    -5,
+    1,
+    2
+   ],
+   [
+    4,
+    0,
+    1,
+    4,
+    -7,
+    1,
+    2
+   ],
+   [
+    4,
+    0,
+    1,
+    5,
+    -9,
+    1,
+    2
+   ],
+   [
+    4,
+    0,
+    1,
+    6,
+    -11,
+    1,
+    2
+   ]
+  ],
+  [
+   [
+    5,
+    1,
+    3,
+    3,
+    1,
+    2,
+    1
+   ],
+   [
+    5,
+    1,
+    4,
+    3,
+    1,
+    2,
+    1
+   ],
+   [
+    5,
+    1,
+    5,
+    3,
+    1,
+    2,
+    1
+   ],
+   [
+    5,
+    1,
+    6,
+    3,
+    1,
+    2,
+    1
+   ],
+   [
+    5,
+    1,
+    7,
+    3,
+    1,
+    2,
+    1
+   ],
+   [
+    5,
+    1,
+    8,
+    3,
+    1,
+    2,
+    1
+   ]
+  ],
+  [],
+  [
+   [
+    7,
+    0,
+    1,
+    1,
+    -2,
+    1,
+    2,
+    1
+   ],
+   [
+    7,
+    0,
+    1,
+    2,
+    -3,
+    1,
+    2,
+    1
+   ],
+   [
+    7,
+    0,
+    1,
+    3,
+    -4,
+    1,
+    2,
+    1
+   ],
+   [
+    7,
+    0,
+    1,
+    4,
+    -5,
+    1,
+    2,
+    1
+   ],
+   [
+    7,
+    0,
+    1,
+    5,
+    -6,
+    1,
+    2,
+    1
+   ],
+   [
+    7,
+    0,
+    1,
+    6,
+    -7,
+    1,
+    2,
+    1
+   ]
+  ],
+  [
+   [
+    8,
+    17,
+    1,
+    16,
+    0,
+    1,
+    0
+   ],
+   [
+    8,
+    17,
+    2,
+    14,
+    0,
+    1,
+    0
+   ],
+   [
+    8,
+    17,
+    2,
+    15,
+    -1,
+    1,
+    0
+   ],
+   [
+    8,
+    17,
+    2,
+    15,
+    0,
+    0,
+    2
+   ],
+   [
+    8,
+    17,
+    2,
+    16,
+    -2,
+    1,
+    0
+   ],
+   [
+    8,
+    17,
+    2,
+    16,
+    -1,
+    0,
+    2
+   ]
+  ],
+  [],
+  [],
+  [
+   [
+    11,
+    "farm",
+    9,
+    13,
+    1,
+    -17,
+    1,
+    0
+   ],
+   [
+    11,
+    "farm",
+    9,
+    13,
+    1,
+    -16,
+    0,
+    2
+   ],
+   [
+    11,
+    "farm",
+    9,
+    13,
+    2,
+    -18,
+    1,
+    0
+   ],
+   [
+    11,
+    "farm",
+    9,
+    13,
+    2,
+    -17,
+    0,
+    2
+   ],
+   [
+    11,
+    "farm",
+    9,
+    13,
+    3,
+    -19,
+    1,
+    0
+   ],
+   [
+    11,
+    "farm",
+    9,
+    13,
+    3,
+    -18,
+    0,
+    2
+   ]
+  ]
+ ],
+ "hists": {},
+ "kit": "verify_k1303",
+ "obs": {
+  "far_m_rows": {
+   "claim": "census stress beyond the D-boxes.",
+   "m": "13..32",
+   "planes": [
+    3,
+    9,
+    13,
+    16
+   ],
+   "points": 23520
+  },
+  "w17_newplane": {
+   "claim": "census of the PROVED general law on a plane never observed pre-K1303.",
+   "points": 4488
+  },
+  "w18_newplane": {
+   "claim": "census of the PROVED general law on a plane never observed pre-K1303.",
+   "points": 4488
+  },
+  "w19_newplane": {
+   "claim": "census of the PROVED general law on a plane never observed pre-K1303.",
+   "points": 4488
+  },
+  "w20_newplane": {
+   "claim": "census of the PROVED general law on a plane never observed pre-K1303.",
+   "points": 4488
+  },
+  "w2124_spot": {
+   "claim": "census of the PROVED general law.",
+   "points": 6132,
+   "w": "21..24"
+  },
+  "z00_dedup": {
+   "cells": 320,
+   "claim": "census of the PROVED general law; not a new claim.",
+   "cpsf_bad": 10,
+   "mixed": 0
+  },
+  "z01_dedup": {
+   "cells": 320,
+   "claim": "census of the PROVED general law; not a new claim.",
+   "cpsf_bad": 19,
+   "mixed": 0
+  },
+  "z02_dedup": {
+   "cells": 320,
+   "claim": "census of the PROVED general law; not a new claim.",
+   "cpsf_bad": 10,
+   "mixed": 0
+  },
+  "z03_dedup": {
+   "cells": 320,
+   "claim": "census of the PROVED general law; not a new claim.",
+   "cpsf_bad": 19,
+   "mixed": 0
+  },
+  "z04_dedup": {
+   "cells": 320,
+   "claim": "census of the PROVED general law; not a new claim.",
+   "cpsf_bad": 10,
+   "mixed": 0
+  },
+  "z05_dedup": {
+   "cells": 320,
+   "claim": "census of the PROVED general law; not a new claim.",
+   "cpsf_bad": 19,
+   "mixed": 0
+  },
+  "z06_dedup": {
+   "cells": 320,
+   "claim": "census of the PROVED general law; not a new claim.",
+   "cpsf_bad": 10,
+   "mixed": 0
+  },
+  "z07_dedup": {
+   "cells": 320,
+   "claim": "census of the PROVED general law; not a new claim.",
+   "cpsf_bad": 19,
+   "mixed": 0
+  },
+  "z08_dedup": {
+   "cells": 320,
+   "claim": "census of the PROVED general law; not a new claim.",
+   "cpsf_bad": 10,
+   "mixed": 0
+  },
+  "z09_dedup": {
+   "cells": 320,
+   "claim": "census of the PROVED general law; not a new claim.",
+   "cpsf_bad": 19,
+   "mixed": 0
+  },
+  "z10_dedup": {
+   "cells": 320,
+   "claim": "census of the PROVED general law; not a new claim.",
+   "cpsf_bad": 10,
+   "mixed": 0
+  },
+  "z11_dedup": {
+   "cells": 320,
+   "claim": "census of the PROVED general law; not a new claim.",
+   "cpsf_bad": 19,
+   "mixed": 0
+  },
+  "z12_dedup": {
+   "cells": 320,
+   "claim": "census of the PROVED general law; not a new claim.",
+   "cpsf_bad": 10,
+   "mixed": 0
+  },
+  "z13_dedup": {
+   "cells": 320,
+   "claim": "census of the PROVED general law; not a new claim.",
+   "cpsf_bad": 19,
+   "mixed": 0
+  },
+  "z14_dedup": {
+   "cells": 320,
+   "claim": "census of the PROVED general law; not a new claim.",
+   "cpsf_bad": 10,
+   "mixed": 0
+  },
+  "z15_dedup": {
+   "cells": 320,
+   "claim": "census of the PROVED general law; not a new claim.",
+   "cpsf_bad": 19,
+   "mixed": 0
+  },
+  "z16_dedup": {
+   "cells": 320,
+   "claim": "census of the PROVED general law; not a new claim.",
+   "cpsf_bad": 10,
+   "mixed": 0
+  },
+  "z17_dedup": {
+   "cells": 320,
+   "claim": "census of the PROVED general law; not a new claim.",
+   "cpsf_bad": 19,
+   "mixed": 0
+  },
+  "z18_dedup": {
+   "cells": 320,
+   "claim": "census of the PROVED general law; not a new claim.",
+   "cpsf_bad": 10,
+   "mixed": 0
+  },
+  "z19_dedup": {
+   "cells": 320,
+   "claim": "census of the PROVED general law; not a new claim.",
+   "cpsf_bad": 19,
+   "mixed": 0
+  },
+  "z20_dedup": {
+   "cells": 320,
+   "claim": "census of the PROVED general law; not a new claim.",
+   "cpsf_bad": 10,
+   "mixed": 0
+  }
+ },
+ "overall_bad": 21102,
+ "tamper": "Ls",
+ "total_comparisons": 334330
+}

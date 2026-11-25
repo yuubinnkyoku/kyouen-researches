@@ -1,0 +1,53 @@
+{
+ "all_byte_identical": true,
+ "counts": [
+  8928,
+  360,
+  8928,
+  360,
+  1939,
+  114,
+  1939,
+  114,
+  5720,
+  1318,
+  720
+ ],
+ "declared_expected_stdout_sha256": "6d19ef62ecb6cd4b6342569758f5f29e1ed16c9614e0061fe557659906f54d04",
+ "engine_gate": "PASS",
+ "engine_pin": "bd5f22e415a78368c9b798296bc84948d5637decbf3c21a92404d45fb12e3a92",
+ "kit": "verify_k1288",
+ "official_runs": {
+  "run1": "6d19ef62ecb6cd4b6342569758f5f29e1ed16c9614e0061fe557659906f54d04",
+  "run2": "6d19ef62ecb6cd4b6342569758f5f29e1ed16c9614e0061fe557659906f54d04",
+  "run3": "6d19ef62ecb6cd4b6342569758f5f29e1ed16c9614e0061fe557659906f54d04",
+  "run4": "6d19ef62ecb6cd4b6342569758f5f29e1ed16c9614e0061fe557659906f54d04"
+ },
+ "overall_bad": 0,
+ "provenance": "official 4 runs (same cwd PYTHONHASHSEED=random/1 + isolated trees env -i PYTHONHASHSEED=99/7) and 5-mode tamper battery executed from fetch-back byte-verified kit files (kit commit 3321c63a, fetch-back sha256 15/15 full match); declaration note 787f635c.",
+ "tamper_battery": {
+  "engine": {
+   "rc": 2,
+   "sha_note": "mutated sha 0ea47a80761d2b20bf414cd52b1535fba56829c3a4c232d1b2f5da3f81441882 != pin bd5f22e415a78368c9b798296bc84948d5637decbf3c21a92404d45fb12e3a92"
+  },
+  "z1b": {
+   "bad": 360,
+   "rc": 1
+  },
+  "z1s": {
+   "bad": 8928,
+   "rc": 1
+  },
+  "z2b": {
+   "bad": 360,
+   "rc": 1
+  },
+  "z2s": {
+   "bad": 8928,
+   "rc": 1
+  }
+ },
+ "total_comparisons": 30440,
+ "verdict": "OFFICIAL-PASS",
+ "verify_sha256": "25c6bdc7f0207b48de0c90e9d67a14b9001f0a09c1c79c710e86b0fb734f2fb5"
+}

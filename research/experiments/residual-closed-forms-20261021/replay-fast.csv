@@ -1,0 +1,9 @@
+# exact replay: order=0 (0=count-asc 1=count-desc 2=key-asc 3=s5-count-desc 4=s5-target92) share_tt=0
+# exact replay: id,stones,legal,is_or,budget,result,nodes,wall_s,key_lo,key_hi
+# residual_shadow row=0 audit_calls=0 crosscheck_calls=306969 exact_calls=306969 residual_memo_states=122956 module_removed=88992 component_splits=20646 shared_hits=0 shared_stores=0 canonicalized=0 shared_size=0 exact_layer_hits=0 exact_layer_stores=0 exact_layer_size=0 closed_free=324830 closed_two_edges=323811 closed_sunflower=9055 closed_paths=88895
+replay,0,5,0,0,200000,0,200000,77,1152921504606849031,0
+# residual_shadow row=1 audit_calls=0 crosscheck_calls=300271 exact_calls=300271 residual_memo_states=135468 module_removed=93890 component_splits=19237 shared_hits=0 shared_stores=0 canonicalized=0 shared_size=0 exact_layer_hits=0 exact_layer_stores=0 exact_layer_size=0 closed_free=340931 closed_two_edges=337190 closed_sunflower=8839 closed_paths=92645
+replay,1,5,0,0,200000,0,200000,71,1152921504606851079,0
+# residual_shadow row=2 audit_calls=0 crosscheck_calls=301238 exact_calls=301238 residual_memo_states=130390 module_removed=93147 component_splits=18217 shared_hits=0 shared_stores=0 canonicalized=0 shared_size=0 exact_layer_hits=0 exact_layer_stores=0 exact_layer_size=0 closed_free=338441 closed_two_edges=325309 closed_sunflower=8674 closed_paths=87653
+replay,2,5,0,0,200000,0,200000,86,1152921504606855175,0
+# replay_done rows=3 wall_s=236

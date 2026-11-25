@@ -1,0 +1,803 @@
+{
+ "all_ok": true,
+ "columns": {
+  "cap10_profiles": 15863,
+  "cap10_sources": [
+   9,
+   10,
+   11,
+   12,
+   13
+  ],
+  "cap12_sources": [
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8
+  ],
+  "keys": 715,
+  "r_range": [
+   2,
+   13
+  ]
+ },
+ "experiment": "remo-k-branch-cap10-r2-13-matrix-20261117",
+ "kind": "K0904 cap<=10 three-branch REMO determinacy state matrix r=2..13",
+ "machine_checks": [
+  {
+   "detail": {
+    "r10": {
+     "index_complete": true,
+     "records": 15863,
+     "sha256_ok": true,
+     "states_positive": true,
+     "view_records": 15863
+    },
+    "r11": {
+     "index_complete": true,
+     "records": 15863,
+     "sha256_ok": true,
+     "states_positive": true,
+     "view_records": 15863
+    },
+    "r12": {
+     "index_complete": true,
+     "records": 15863,
+     "sha256_ok": true,
+     "states_positive": true,
+     "view_records": 15863
+    },
+    "r13": {
+     "index_complete": true,
+     "records": 15863,
+     "sha256_ok": true,
+     "states_positive": true,
+     "view_records": 15863
+    },
+    "r2": {
+     "index_complete": true,
+     "records": 47595,
+     "sha256_ok": true,
+     "states_positive": true,
+     "view_records": 15863
+    },
+    "r3": {
+     "index_complete": true,
+     "records": 47595,
+     "sha256_ok": true,
+     "states_positive": true,
+     "view_records": 15863
+    },
+    "r4": {
+     "index_complete": true,
+     "records": 47595,
+     "sha256_ok": true,
+     "states_positive": true,
+     "view_records": 15863
+    },
+    "r5": {
+     "index_complete": true,
+     "records": 47595,
+     "sha256_ok": true,
+     "states_positive": true,
+     "view_records": 15863
+    },
+    "r6": {
+     "index_complete": true,
+     "records": 47595,
+     "sha256_ok": true,
+     "states_positive": true,
+     "view_records": 15863
+    },
+    "r7": {
+     "index_complete": true,
+     "records": 47595,
+     "sha256_ok": true,
+     "states_positive": true,
+     "view_records": 15863
+    },
+    "r8": {
+     "index_complete": true,
+     "records": 47595,
+     "sha256_ok": true,
+     "states_positive": true,
+     "view_records": 15863
+    },
+    "r9": {
+     "index_complete": true,
+     "records": 15863,
+     "sha256_ok": true,
+     "states_positive": true,
+     "view_records": 15863
+    }
+   },
+   "name": "C1 input integrity: 13 committed packed columns sha256-pinned, index-complete, states>0 (cap12 columns 47,595 records restricted to the 15,863 cap<=10 profiles; cap10 columns 15,863 records)",
+   "ok": true
+  },
+  {
+   "detail": {
+    "r2": {
+     "bijective_on_cap10_profiles": true,
+     "view_records": 15863
+    },
+    "r3": {
+     "bijective_on_cap10_profiles": true,
+     "view_records": 15863
+    },
+    "r4": {
+     "bijective_on_cap10_profiles": true,
+     "view_records": 15863
+    },
+    "r5": {
+     "bijective_on_cap10_profiles": true,
+     "view_records": 15863
+    },
+    "r6": {
+     "bijective_on_cap10_profiles": true,
+     "view_records": 15863
+    },
+    "r7": {
+     "bijective_on_cap10_profiles": true,
+     "view_records": 15863
+    },
+    "r8": {
+     "bijective_on_cap10_profiles": true,
+     "view_records": 15863
+    }
+   },
+   "name": "C2 cap12->cap10 view mapping: each r=2..8 cap<=12 column restricted to max branch size <= 10 covers every canonical cap<=10 profile exactly once (atoms equality by canonical orbit representative)",
+   "ok": true
+  },
+  {
+   "detail": {
+    "keys": 715,
+    "mixed_union_r2_13": 56,
+    "mixed_union_r2_8": 44,
+    "r10": {
+     "boundary_ok": true,
+     "max_states": 514830,
+     "mixed": 34,
+     "mixed_det_survivor_pin_ok": true,
+     "mixed_det_survivors": [
+      5
+     ],
+     "mixed_ndet_sets": [
+      [
+       3,
+       4,
+       5
+      ],
+      [
+       3,
+       4,
+       5,
+       6,
+       7
+      ],
+      [
+       3,
+       4,
+       5,
+       7
+      ],
+      [
+       3,
+       5
+      ],
+      [
+       3,
+       5,
+       7
+      ]
+     ],
+     "udet_survivors": [
+      0,
+      1,
+      3,
+      5,
+      9
+     ],
+     "unif_det_pin_ok": true,
+     "uniformly_determined": 98,
+     "uniformly_ndet": 583
+    },
+    "r11": {
+     "boundary_ok": true,
+     "max_states": 590430,
+     "mixed": 34,
+     "mixed_det_survivor_pin_ok": true,
+     "mixed_det_survivors": [
+      5
+     ],
+     "mixed_ndet_sets": [
+      [
+       3,
+       4,
+       5
+      ],
+      [
+       3,
+       4,
+       5,
+       6,
+       7
+      ],
+      [
+       3,
+       4,
+       5,
+       7
+      ],
+      [
+       3,
+       5
+      ],
+      [
+       3,
+       5,
+       7
+      ]
+     ],
+     "udet_survivors": [
+      0,
+      1,
+      3,
+      5,
+      9
+     ],
+     "unif_det_pin_ok": true,
+     "uniformly_determined": 98,
+     "uniformly_ndet": 583
+    },
+    "r12": {
+     "boundary_ok": true,
+     "max_states": 666030,
+     "max_states_pin_ok": true,
+     "mixed": 34,
+     "mixed_det_survivor_pin_ok": true,
+     "mixed_det_survivors": [
+      5
+     ],
+     "mixed_ndet_sets": [
+      [
+       3,
+       4,
+       5
+      ],
+      [
+       3,
+       4,
+       5,
+       6,
+       7
+      ],
+      [
+       3,
+       4,
+       5,
+       7
+      ],
+      [
+       3,
+       5
+      ],
+      [
+       3,
+       5,
+       7
+      ]
+     ],
+     "udet_survivors": [
+      0,
+      1,
+      3,
+      5,
+      9
+     ],
+     "unif_det_pin_ok": true,
+     "uniformly_determined": 98,
+     "uniformly_ndet": 583
+    },
+    "r13": {
+     "boundary_ok": true,
+     "max_states": 741630,
+     "max_states_pin_ok": true,
+     "mixed": 34,
+     "mixed_det_survivor_pin_ok": true,
+     "mixed_det_survivors": [
+      5
+     ],
+     "mixed_ndet_sets": [
+      [
+       3,
+       4,
+       5
+      ],
+      [
+       3,
+       4,
+       5,
+       6,
+       7
+      ],
+      [
+       3,
+       4,
+       5,
+       7
+      ],
+      [
+       3,
+       5
+      ],
+      [
+       3,
+       5,
+       7
+      ]
+     ],
+     "udet_survivors": [
+      0,
+      1,
+      3,
+      5,
+      9
+     ],
+     "unif_det_pin_ok": true,
+     "uniformly_determined": 98,
+     "uniformly_ndet": 583
+    },
+    "r2": {
+     "boundary_ok": true,
+     "max_states": 2625,
+     "mixed": 0,
+     "mixed_det_survivors": [],
+     "mixed_ndet_sets": [],
+     "udet_survivors": [
+      0,
+      1
+     ],
+     "unif_det_pin_ok": true,
+     "uniformly_determined": 245,
+     "uniformly_ndet": 470
+    },
+    "r3": {
+     "boundary_ok": true,
+     "max_states": 10029,
+     "mixed": 22,
+     "mixed_det_survivors": [
+      1
+     ],
+     "mixed_ndet_sets": [
+      [
+       0,
+       1,
+       2
+      ],
+      [
+       1,
+       2
+      ]
+     ],
+     "udet_survivors": [
+      0,
+      1,
+      2
+     ],
+     "uniformly_determined": 122,
+     "uniformly_ndet": 571
+    },
+    "r4": {
+     "boundary_ok": true,
+     "max_states": 25662,
+     "mixed": 12,
+     "mixed_det_survivor_pin_ok": true,
+     "mixed_det_survivors": [
+      2
+     ],
+     "mixed_ndet_bound_ok": true,
+     "mixed_ndet_sets": [
+      [
+       1,
+       2,
+       3
+      ]
+     ],
+     "udet_survivors": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "unif_det_pin_ok": true,
+     "uniformly_determined": 106,
+     "uniformly_ndet": 597
+    },
+    "r5": {
+     "boundary_ok": true,
+     "max_states": 55086,
+     "mixed": 12,
+     "mixed_det_survivor_pin_ok": true,
+     "mixed_det_survivors": [
+      2
+     ],
+     "mixed_ndet_bound_ok": true,
+     "mixed_ndet_sets": [
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       2,
+       3,
+       4
+      ]
+     ],
+     "udet_survivors": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ],
+     "unif_det_pin_ok": true,
+     "uniformly_determined": 85,
+     "uniformly_ndet": 618
+    },
+    "r6": {
+     "boundary_ok": true,
+     "max_states": 93870,
+     "mixed": 6,
+     "mixed_det_survivor_pin_ok": true,
+     "mixed_det_survivors": [
+      3
+     ],
+     "mixed_ndet_bound_ok": true,
+     "mixed_ndet_sets": [
+      [
+       2,
+       3
+      ]
+     ],
+     "udet_survivors": [
+      0,
+      1,
+      2,
+      3,
+      5
+     ],
+     "unif_det_pin_ok": true,
+     "uniformly_determined": 85,
+     "uniformly_ndet": 624
+    },
+    "r7": {
+     "boundary_ok": true,
+     "max_states": 154470,
+     "mixed": 6,
+     "mixed_det_survivor_pin_ok": true,
+     "mixed_det_survivors": [
+      3
+     ],
+     "mixed_ndet_bound_ok": true,
+     "mixed_ndet_sets": [
+      [
+       1,
+       2,
+       3
+      ]
+     ],
+     "udet_survivors": [
+      0,
+      1,
+      3,
+      4,
+      5,
+      6
+     ],
+     "unif_det_pin_ok": true,
+     "uniformly_determined": 98,
+     "uniformly_ndet": 611
+    },
+    "r8": {
+     "boundary_ok": true,
+     "max_states": 243510,
+     "mixed": 10,
+     "mixed_det_survivor_pin_ok": true,
+     "mixed_det_survivors": [
+      5
+     ],
+     "mixed_ndet_bound_ok": true,
+     "mixed_ndet_sets": [
+      [
+       3,
+       4,
+       5
+      ]
+     ],
+     "udet_survivors": [
+      0,
+      1,
+      3,
+      4,
+      5,
+      7
+     ],
+     "unif_det_pin_ok": true,
+     "uniformly_determined": 98,
+     "uniformly_ndet": 607
+    },
+    "r9": {
+     "boundary_ok": true,
+     "max_states": 363630,
+     "mixed": 34,
+     "mixed_det_survivor_pin_ok": true,
+     "mixed_det_survivors": [
+      5
+     ],
+     "mixed_ndet_sets": [
+      [
+       3,
+       4,
+       5
+      ],
+      [
+       3,
+       4,
+       5,
+       6,
+       7
+      ],
+      [
+       3,
+       4,
+       5,
+       7
+      ],
+      [
+       3,
+       5
+      ],
+      [
+       3,
+       5,
+       7
+      ]
+     ],
+     "udet_survivors": [
+      0,
+      1,
+      3,
+      5,
+      8
+     ],
+     "unif_det_pin_ok": true,
+     "uniformly_determined": 98,
+     "uniformly_ndet": 583
+    }
+   },
+   "name": "C3 published boundary re-derivation: per-r mixed (non-collapse) key sets equal the published boundaries (r2 none/245 det, r3 22 keys, r4/r5 12, r6 6, r7 6, r8 10, r9..r13 34 with census 98/583/34, max_states r12 666,030 / r13 741,630); the mixed keys' det-side survivor matches the published pins (r4/r5 P_2, r6/r7 P_3, r8..r13 P_5) and their non-determined possible-survivor sets match the published r=4..8 bounds; 44 distinct mixed keys in r=2..8 (K0874) and 56 in r=2..13",
+   "ok": true
+  },
+  {
+   "detail": {
+    "examples": [],
+    "keys": 715,
+    "violations": 0
+   },
+   "name": "C4 Theorem J (i) key-level: for every key the classification is constant over all r in [M, 13] (M = max C_i); 715 keys, expected 0 violations",
+   "ok": true
+  },
+  {
+   "detail": {
+    "examples": [],
+    "profiles": 15863,
+    "violations": 0
+   },
+   "name": "C5 Theorem J (i) per-profile (stronger): for every one of the 15,863 profiles the survivor mask is constant over all r in [M, 13] (implies the determined-flag constancy; extends the published r=11..13 full-label fixpoint down to the per-key threshold r = M)",
+   "ok": true
+  },
+  {
+   "detail": {
+    "examples": [],
+    "k0872_pairs": {
+     "r3": {
+      "pairs": [
+       [
+        0,
+        2
+       ]
+      ],
+      "published": [
+       0,
+       2
+      ]
+     },
+     "r4": {
+      "pairs": [
+       [
+        0,
+        1
+       ]
+      ],
+      "published": [
+       0,
+       1
+      ]
+     },
+     "r5": {
+      "pairs": [
+       [
+        3,
+        4
+       ]
+      ],
+      "published": [
+       3,
+       4
+      ]
+     },
+     "r6": {
+      "pairs": [
+       [
+        2,
+        4
+       ]
+      ],
+      "published": [
+       2,
+       4
+      ]
+     },
+     "r7": {
+      "pairs": [
+       [
+        2,
+        4
+       ]
+      ],
+      "published": [
+       2,
+       4
+      ]
+     },
+     "r8": {
+      "pairs": [
+       [
+        0,
+        6
+       ]
+      ],
+      "published": [
+       0,
+       6
+      ]
+     }
+    },
+    "violations": 0
+   },
+   "name": "C6 Lemma FL inclusion: every record's first-loser mask lies in {C_i mod r} (0 violations over 13 columns); the mixed keys' first-loser residue unions match the published K0872 pairs at r=3..8",
+   "ok": true
+  },
+  {
+   "detail": {
+    "mixed_at_13_with_sigma_eq_M_minus_1": 34,
+    "noncontiguous_band_keys": [
+     [
+      [
+       8,
+       8,
+       9
+      ],
+      0
+     ],
+     [
+      [
+       8,
+       8,
+       9
+      ],
+      1
+     ],
+     [
+      [
+       8,
+       8,
+       9
+      ],
+      2
+     ],
+     [
+      [
+       8,
+       8,
+       9
+      ],
+      3
+     ],
+     [
+      [
+       8,
+       8,
+       9
+      ],
+      4
+     ],
+     [
+      [
+       8,
+       8,
+       9
+      ],
+      5
+     ],
+     [
+      [
+       8,
+       9,
+       9
+      ],
+      0
+     ],
+     [
+      [
+       8,
+       9,
+       9
+      ],
+      1
+     ],
+     [
+      [
+       8,
+       9,
+       9
+      ],
+      2
+     ],
+     [
+      [
+       8,
+       9,
+       9
+      ],
+      3
+     ],
+     [
+      [
+       8,
+       9,
+       9
+      ],
+      4
+     ],
+     [
+      [
+       8,
+       9,
+       9
+      ],
+      5
+     ]
+    ],
+    "onset_at_M": true,
+    "sigma_le_M_minus_1": true
+   },
+   "name": "C7 stabilization time: sigma(key) <= M-1 for every key (restates C4 in transition form); the 34 keys mixed at r=13 have their final mixed regime starting exactly at r = M; the 12 keys (8,8,9),(8,9,9) x gamma=0..5 are exactly the keys with two separate mixed bands (mixed [3,5] -> uniform [6,8] -> mixed [9,13], the K0893 revival in per-key form)",
+   "ok": true
+  },
+  {
+   "detail": {
+    "records": 715,
+    "sha256": "8b2f759e356d3d6bc9371c1d2db0e32a43feaae7b55f0ad6bd1b5222441e4175"
+   },
+   "name": "C8 matrix artifact: output/matrix_r2_13.jsonl holds 715 sorted key records (classification row r=2..13, sigma, mixed bands, final survivor aggregates); audit assembled twice with byte-identical output",
+   "ok": true
+  }
+ ],
+ "matrix_sha256": "8b2f759e356d3d6bc9371c1d2db0e32a43feaae7b55f0ad6bd1b5222441e4175"
+}

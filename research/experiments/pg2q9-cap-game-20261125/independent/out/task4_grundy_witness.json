@@ -1,0 +1,57 @@
+{
+ "mixed": {
+  "start_cap": [
+   0,
+   1,
+   10,
+   20
+  ],
+  "positions_in_residue": 1868,
+  "maximal_extension_sizes": [
+   6,
+   7,
+   8,
+   10
+  ],
+  "parities": [
+   0,
+   1
+  ],
+  "grundy_distribution": {
+   "0": 684,
+   "1": 1064,
+   "2": 120
+  },
+  "grundy_max": 2,
+  "witness_positions": [
+   [
+    0,
+    1,
+    10,
+    20,
+    32,
+    39
+   ],
+   [
+    0,
+    1,
+    10,
+    20,
+    36,
+    39
+   ],
+   [
+    0,
+    1,
+    10,
+    20,
+    35,
+    41
+   ]
+  ],
+  "k1298_formula_uniform_positions_checked": 1717,
+  "k1298_formula_violations": 0,
+  "positions_with_mixed_completion_parity": 151
+ },
+ "uniform_control": null
+}

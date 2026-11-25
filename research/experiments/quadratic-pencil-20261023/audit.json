@@ -1,0 +1,24 @@
+{
+  "determinant": "24-term 4x4 permutation expansion",
+  "game": "top-down recursion with per-point forbidden-edge lists",
+  "boards": [
+    {
+      "n": 2,
+      "parameter_types": 1,
+      "all_safe_state_comparisons": 15,
+      "passed": true
+    },
+    {
+      "n": 3,
+      "parameter_types": 8,
+      "all_safe_state_comparisons": 2307,
+      "passed": true
+    },
+    {
+      "n": 4,
+      "parameter_types": 42,
+      "all_safe_state_comparisons": 417628,
+      "passed": true
+    }
+  ]
+}

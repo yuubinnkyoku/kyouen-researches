@@ -1,0 +1,128 @@
+{
+ "bad": [
+  0,
+  0,
+  8928,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0
+ ],
+ "counts": [
+  8928,
+  360,
+  8928,
+  360,
+  1939,
+  114,
+  1939,
+  114,
+  5720,
+  1318,
+  720
+ ],
+ "engine_gate": "PASS",
+ "engine_sha": "bd5f22e415a78368c9b798296bc84948d5637decbf3c21a92404d45fb12e3a92",
+ "examples": [
+  [],
+  [],
+  [
+   [
+    3,
+    1,
+    1,
+    -3,
+    0,
+    1
+   ],
+   [
+    3,
+    1,
+    1,
+    -2,
+    2,
+    1
+   ],
+   [
+    3,
+    1,
+    1,
+    -1,
+    0,
+    1
+   ],
+   [
+    3,
+    1,
+    1,
+    0,
+    1,
+    0
+   ],
+   [
+    3,
+    1,
+    2,
+    -4,
+    0,
+    1
+   ],
+   [
+    3,
+    1,
+    2,
+    -3,
+    2,
+    1
+   ]
+  ],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  []
+ ],
+ "hists": {
+  "D1_class": {
+   "R0": 206,
+   "R1": 218,
+   "dl-1": 3954,
+   "hi": 4550
+  }
+ },
+ "kit": "verify_k1288",
+ "obs": {
+  "z3_lowR_hist": {
+   "R": "0..3",
+   "claim": "finite observation of the z3 exception layer only (expectation h in {0,1,2})",
+   "hist": {
+    "0": 144,
+    "2": 144
+   }
+  },
+  "z3far": {
+   "claim": "finite far-row observation only; NOT universal. Exception layer of plane 3 unresolved; typed proof is a later target",
+   "g": "1..18",
+   "k": "-12..-1",
+   "m": "12",
+   "points": 216
+  },
+  "z4far": {
+   "claim": "finite far-row observation only; NOT universal. Exception layer of plane 4 unresolved; typed proof is a later target",
+   "g": "1..18",
+   "k": "-12..-1",
+   "m": "12",
+   "points": 216
+  }
+ },
+ "overall_bad": 8928,
+ "tamper": "z2s",
+ "total_comparisons": 30440
+}

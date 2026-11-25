@@ -1,0 +1,80 @@
+{
+ "cap6A": {
+  "cap": [
+   0,
+   1,
+   10,
+   20,
+   32,
+   39
+  ],
+  "is_cap": true,
+  "size": 6,
+  "n_extensions": 7,
+  "maximal": false,
+  "extensions": [
+   52,
+   53,
+   61,
+   67,
+   71,
+   76,
+   78
+  ],
+  "grundy": 2,
+  "upset_sizes": {
+   "6": 1,
+   "7": 7,
+   "8": 3
+  },
+  "claim_grundy_2": true
+ },
+ "cap6B": {
+  "cap": [
+   4,
+   9,
+   20,
+   32,
+   69,
+   84
+  ],
+  "is_cap": true,
+  "size": 6,
+  "n_extensions": 0,
+  "maximal": true,
+  "extensions": [],
+  "grundy": 0,
+  "claim_grundy_0": true,
+  "claim_maximal": true
+ },
+ "five_caps_containing_4cap": {
+  "count": 42,
+  "grundy_distribution": {
+   "1": 42
+  },
+  "random_sample_of_5": {
+   "(0, 1, 10, 20, 31)": 1,
+   "(0, 1, 10, 20, 59)": 1,
+   "(0, 1, 10, 20, 71)": 1,
+   "(0, 1, 10, 20, 81)": 1,
+   "(0, 1, 10, 20, 52)": 1
+  },
+  "all_grundy_1": true,
+  "seconds": 0.1
+ },
+ "random_caps": {
+  "random_3caps": {
+   "(19, 41, 50)": 1,
+   "(6, 9, 83)": 1,
+   "(12, 46, 68)": 1
+  },
+  "random_4caps": {
+   "(4, 11, 53, 55)": 0,
+   "(8, 11, 30, 70)": 0,
+   "(7, 28, 74, 80)": 0
+  },
+  "all_3caps_grundy_1": true,
+  "all_4caps_grundy_0": true,
+  "seconds": 1.3
+ }
+}

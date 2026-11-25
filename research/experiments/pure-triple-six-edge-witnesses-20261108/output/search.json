@@ -1,0 +1,40 @@
+{
+  "scope": "one-edge extensions of all five-edge core types with g>=4; not all six-edge families",
+  "cases": 831,
+  "cpp_safe_states": 332043,
+  "maximum_found": 6,
+  "value_histogram": {
+    "0": 329,
+    "1": 277,
+    "2": 76,
+    "3": 48,
+    "4": 55,
+    "5": 39,
+    "6": 7
+  },
+  "witnesses": [
+    {
+      "n": 9,
+      "edges": [
+        49,
+        37,
+        262,
+        56,
+        448,
+        52
+      ],
+      "grundy": 6,
+      "child_grundy": [
+        1,
+        5,
+        0,
+        2,
+        4,
+        3,
+        5,
+        5,
+        1
+      ]
+    }
+  ]
+}

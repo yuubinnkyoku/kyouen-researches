@@ -1,0 +1,1126 @@
+{
+ "orbit_sizes_source": "own BFS (results/task3_orbits.json)",
+ "orbit_sizes": {
+  "6": 707616,
+  "7": 2021760,
+  "8": 5307120,
+  "10": 58968
+ },
+ "pgl_order": 42456960,
+ "caps": {
+  "6": {
+   "start_cap_board": [
+    4,
+    9,
+    20,
+    32,
+    69,
+    84
+   ],
+   "start_cap_model": [
+    2,
+    9,
+    20,
+    35,
+    45,
+    57
+   ],
+   "stabilizer_order": 60,
+   "claimed_stabilizer_order": 60,
+   "matches_claim": true,
+   "orbit_size": 707616,
+   "pgl_div_orbit": 60,
+   "pgl_div_stab": 707616,
+   "orbit_stabilizer_product": 42456960,
+   "orbit_stabilizer_equals_pgl": true,
+   "enumeration_seconds": 0.2,
+   "order": 60,
+   "n_distinct_permutations": 60,
+   "element_order_histogram": {
+    "1": 1,
+    "2": 15,
+    "3": 20,
+    "5": 24
+   },
+   "n_involutions": 15,
+   "max_element_order": 5,
+   "abelian": false,
+   "cyclic": false,
+   "generating_set_size": 3,
+   "generated_group_order_check": 60,
+   "derived_subgroup_order": 60,
+   "perfect": true,
+   "action": {
+    "cap_size": 6,
+    "distinct_images_of_ordered_1-tuple": 6,
+    "possible_ordered_1-tuples": 6,
+    "distinct_images_of_ordered_2-tuple": 30,
+    "possible_ordered_2-tuples": 30,
+    "distinct_images_of_ordered_3-tuple": 60,
+    "possible_ordered_3-tuples": 120,
+    "point_stabilizer_order": 10,
+    "point_stabilizer_orbit_sizes": [
+     1,
+     5
+    ],
+    "is_transitive": true,
+    "is_2_transitive": true,
+    "is_3_transitive": false,
+    "sharply_3_transitive": false,
+    "fixed_point_counts": {
+     "0": 20,
+     "1": 24,
+     "2": 15,
+     "6": 1
+    }
+   },
+   "examples": [
+    {
+     "matrix": [
+      [
+       1,
+       0,
+       0
+      ],
+      [
+       0,
+       1,
+       0
+      ],
+      [
+       0,
+       0,
+       1
+      ]
+     ],
+     "det": 1,
+     "order": 1,
+     "cycle_type_on_cap": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+     ],
+     "cycle_type_on_plane_moved": []
+    },
+    {
+     "matrix": [
+      [
+       1,
+       0,
+       0
+      ],
+      [
+       4,
+       2,
+       0
+      ],
+      [
+       6,
+       0,
+       2
+      ]
+     ],
+     "det": 1,
+     "order": 2,
+     "cycle_type_on_cap": [
+      2,
+      2,
+      1,
+      1
+     ],
+     "cycle_type_on_plane_moved": [
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+     ]
+    },
+    {
+     "matrix": [
+      [
+       0,
+       5,
+       7
+      ],
+      [
+       3,
+       7,
+       1
+      ],
+      [
+       8,
+       7,
+       1
+      ]
+     ],
+     "det": 7,
+     "order": 2,
+     "cycle_type_on_cap": [
+      2,
+      2,
+      1,
+      1
+     ],
+     "cycle_type_on_plane_moved": [
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+     ]
+    },
+    {
+     "matrix": [
+      [
+       8,
+       3,
+       6
+      ],
+      [
+       5,
+       6,
+       5
+      ],
+      [
+       2,
+       6,
+       5
+      ]
+     ],
+     "det": 2,
+     "order": 5,
+     "cycle_type_on_cap": [
+      5,
+      1
+     ],
+     "cycle_type_on_plane_moved": [
+      5,
+      5,
+      5,
+      5,
+      5,
+      5
+     ]
+    },
+    {
+     "matrix": [
+      [
+       6,
+       8,
+       4
+      ],
+      [
+       0,
+       3,
+       3
+      ],
+      [
+       0,
+       0,
+       6
+      ]
+     ],
+     "det": 6,
+     "order": 2,
+     "cycle_type_on_cap": [
+      2,
+      2,
+      1,
+      1
+     ],
+     "cycle_type_on_plane_moved": [
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+     ]
+    },
+    {
+     "matrix": [
+      [
+       6,
+       1,
+       2
+      ],
+      [
+       8,
+       4,
+       4
+      ],
+      [
+       7,
+       0,
+       8
+      ]
+     ],
+     "det": 5,
+     "order": 5,
+     "cycle_type_on_cap": [
+      5,
+      1
+     ],
+     "cycle_type_on_plane_moved": [
+      5,
+      5,
+      5,
+      5,
+      5,
+      5
+     ]
+    }
+   ]
+  },
+  "7": {
+   "start_cap_board": [
+    16,
+    47,
+    51,
+    56,
+    60,
+    80,
+    82
+   ],
+   "start_cap_model": [
+    13,
+    50,
+    55,
+    74,
+    81,
+    83,
+    90
+   ],
+   "stabilizer_order": 21,
+   "claimed_stabilizer_order": 21,
+   "matches_claim": true,
+   "orbit_size": 2021760,
+   "pgl_div_orbit": 21,
+   "pgl_div_stab": 2021760,
+   "orbit_stabilizer_product": 42456960,
+   "orbit_stabilizer_equals_pgl": true,
+   "enumeration_seconds": 0.4,
+   "order": 21,
+   "n_distinct_permutations": 21,
+   "element_order_histogram": {
+    "1": 1,
+    "3": 14,
+    "7": 6
+   },
+   "n_involutions": 0,
+   "max_element_order": 7,
+   "abelian": false,
+   "cyclic": false,
+   "generating_set_size": 2,
+   "generated_group_order_check": 21,
+   "derived_subgroup_order": 7,
+   "perfect": false,
+   "action": {
+    "cap_size": 7,
+    "distinct_images_of_ordered_1-tuple": 7,
+    "possible_ordered_1-tuples": 7,
+    "distinct_images_of_ordered_2-tuple": 21,
+    "possible_ordered_2-tuples": 42,
+    "distinct_images_of_ordered_3-tuple": 21,
+    "possible_ordered_3-tuples": 210,
+    "point_stabilizer_order": 3,
+    "point_stabilizer_orbit_sizes": [
+     1,
+     3
+    ],
+    "is_transitive": true,
+    "is_2_transitive": false,
+    "is_3_transitive": false,
+    "sharply_3_transitive": false,
+    "fixed_point_counts": {
+     "0": 6,
+     "1": 14,
+     "7": 1
+    }
+   },
+   "examples": [
+    {
+     "matrix": [
+      [
+       1,
+       0,
+       0
+      ],
+      [
+       0,
+       1,
+       0
+      ],
+      [
+       0,
+       0,
+       1
+      ]
+     ],
+     "det": 1,
+     "order": 1,
+     "cycle_type_on_cap": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+     ],
+     "cycle_type_on_plane_moved": []
+    },
+    {
+     "matrix": [
+      [
+       2,
+       8,
+       1
+      ],
+      [
+       1,
+       7,
+       3
+      ],
+      [
+       6,
+       6,
+       3
+      ]
+     ],
+     "det": 8,
+     "order": 3,
+     "cycle_type_on_cap": [
+      3,
+      3,
+      1
+     ],
+     "cycle_type_on_plane_moved": [
+      3,
+      3,
+      3,
+      3,
+      3,
+      3
+     ]
+    },
+    {
+     "matrix": [
+      [
+       4,
+       5,
+       0
+      ],
+      [
+       3,
+       0,
+       2
+      ],
+      [
+       7,
+       5,
+       8
+      ]
+     ],
+     "det": 7,
+     "order": 3,
+     "cycle_type_on_cap": [
+      3,
+      3,
+      1
+     ],
+     "cycle_type_on_plane_moved": [
+      3,
+      3,
+      3,
+      3,
+      3,
+      3
+     ]
+    },
+    {
+     "matrix": [
+      [
+       2,
+       0,
+       2
+      ],
+      [
+       5,
+       8,
+       6
+      ],
+      [
+       7,
+       7,
+       5
+      ]
+     ],
+     "det": 1,
+     "order": 3,
+     "cycle_type_on_cap": [
+      3,
+      3,
+      1
+     ],
+     "cycle_type_on_plane_moved": [
+      3,
+      3,
+      3,
+      3,
+      3,
+      3
+     ]
+    },
+    {
+     "matrix": [
+      [
+       2,
+       7,
+       8
+      ],
+      [
+       8,
+       5,
+       3
+      ],
+      [
+       0,
+       0,
+       8
+      ]
+     ],
+     "det": 5,
+     "order": 3,
+     "cycle_type_on_cap": [
+      3,
+      3,
+      1
+     ],
+     "cycle_type_on_plane_moved": [
+      3,
+      3,
+      3,
+      3,
+      3,
+      3
+     ]
+    },
+    {
+     "matrix": [
+      [
+       7,
+       8,
+       5
+      ],
+      [
+       4,
+       3,
+       6
+      ],
+      [
+       7,
+       5,
+       8
+      ]
+     ],
+     "det": 7,
+     "order": 7,
+     "cycle_type_on_cap": [
+      7
+     ],
+     "cycle_type_on_plane_moved": [
+      7,
+      7,
+      7,
+      7,
+      7,
+      7
+     ]
+    }
+   ]
+  },
+  "8": {
+   "start_cap_board": [
+    32,
+    39,
+    42,
+    47,
+    56,
+    59,
+    84,
+    87
+   ],
+   "start_cap_model": [
+    35,
+    57,
+    63,
+    66,
+    72,
+    74,
+    83,
+    89
+   ],
+   "stabilizer_order": 8,
+   "claimed_stabilizer_order": 8,
+   "matches_claim": true,
+   "orbit_size": 5307120,
+   "pgl_div_orbit": 8,
+   "pgl_div_stab": 5307120,
+   "orbit_stabilizer_product": 42456960,
+   "orbit_stabilizer_equals_pgl": true,
+   "enumeration_seconds": 0.8,
+   "order": 8,
+   "n_distinct_permutations": 8,
+   "element_order_histogram": {
+    "1": 1,
+    "2": 5,
+    "4": 2
+   },
+   "n_involutions": 5,
+   "max_element_order": 4,
+   "abelian": false,
+   "cyclic": false,
+   "generating_set_size": 2,
+   "generated_group_order_check": 8,
+   "derived_subgroup_order": 2,
+   "perfect": false,
+   "action": {
+    "cap_size": 8,
+    "distinct_images_of_ordered_1-tuple": 4,
+    "possible_ordered_1-tuples": 8,
+    "distinct_images_of_ordered_2-tuple": 8,
+    "possible_ordered_2-tuples": 56,
+    "distinct_images_of_ordered_3-tuple": 8,
+    "possible_ordered_3-tuples": 336,
+    "point_stabilizer_order": 2,
+    "point_stabilizer_orbit_sizes": [
+     1,
+     2
+    ],
+    "is_transitive": false,
+    "is_2_transitive": false,
+    "is_3_transitive": false,
+    "sharply_3_transitive": false,
+    "fixed_point_counts": {
+     "0": 3,
+     "2": 4,
+     "8": 1
+    }
+   },
+   "examples": [
+    {
+     "matrix": [
+      [
+       1,
+       0,
+       0
+      ],
+      [
+       0,
+       1,
+       0
+      ],
+      [
+       0,
+       0,
+       1
+      ]
+     ],
+     "det": 1,
+     "order": 1,
+     "cycle_type_on_cap": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+     ],
+     "cycle_type_on_plane_moved": []
+    },
+    {
+     "matrix": [
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       8,
+       6,
+       1
+      ],
+      [
+       2,
+       8,
+       8
+      ]
+     ],
+     "det": 3,
+     "order": 2,
+     "cycle_type_on_cap": [
+      2,
+      2,
+      2,
+      1,
+      1
+     ],
+     "cycle_type_on_plane_moved": [
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+     ]
+    },
+    {
+     "matrix": [
+      [
+       7,
+       7,
+       5
+      ],
+      [
+       1,
+       4,
+       1
+      ],
+      [
+       1,
+       2,
+       3
+      ]
+     ],
+     "det": 4,
+     "order": 2,
+     "cycle_type_on_cap": [
+      2,
+      2,
+      2,
+      1,
+      1
+     ],
+     "cycle_type_on_plane_moved": [
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+     ]
+    },
+    {
+     "matrix": [
+      [
+       5,
+       0,
+       4
+      ],
+      [
+       5,
+       1,
+       5
+      ],
+      [
+       8,
+       0,
+       0
+      ]
+     ],
+     "det": 6,
+     "order": 4,
+     "cycle_type_on_cap": [
+      4,
+      4
+     ],
+     "cycle_type_on_plane_moved": [
+      4,
+      4,
+      4,
+      4,
+      4,
+      4
+     ]
+    },
+    {
+     "matrix": [
+      [
+       3,
+       8,
+       7
+      ],
+      [
+       0,
+       7,
+       0
+      ],
+      [
+       3,
+       3,
+       6
+      ]
+     ],
+     "det": 8,
+     "order": 2,
+     "cycle_type_on_cap": [
+      2,
+      2,
+      2,
+      1,
+      1
+     ],
+     "cycle_type_on_plane_moved": [
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+     ]
+    },
+    {
+     "matrix": [
+      [
+       8,
+       0,
+       7
+      ],
+      [
+       3,
+       7,
+       4
+      ],
+      [
+       5,
+       0,
+       4
+      ]
+     ],
+     "det": 8,
+     "order": 2,
+     "cycle_type_on_cap": [
+      2,
+      2,
+      2,
+      2
+     ],
+     "cycle_type_on_plane_moved": [
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+     ]
+    }
+   ]
+  },
+  "10": {
+   "start_cap_board": [
+    6,
+    9,
+    27,
+    32,
+    34,
+    37,
+    45,
+    75,
+    77,
+    82
+   ],
+   "start_cap_model": [
+    8,
+    9,
+    24,
+    31,
+    35,
+    48,
+    53,
+    55,
+    64,
+    69
+   ],
+   "stabilizer_order": 720,
+   "claimed_stabilizer_order": 720,
+   "matches_claim": true,
+   "orbit_size": 58968,
+   "pgl_div_orbit": 720,
+   "pgl_div_stab": 58968,
+   "orbit_stabilizer_product": 42456960,
+   "orbit_stabilizer_equals_pgl": true,
+   "enumeration_seconds": 2.5,
+   "order": 720,
+   "n_distinct_permutations": 720,
+   "element_order_histogram": {
+    "1": 1,
+    "2": 81,
+    "3": 80,
+    "4": 90,
+    "5": 144,
+    "8": 180,
+    "10": 144
+   },
+   "n_involutions": 81,
+   "max_element_order": 10,
+   "abelian": false,
+   "cyclic": false,
+   "generating_set_size": 3,
+   "generated_group_order_check": 720,
+   "derived_subgroup_order": 360,
+   "perfect": false,
+   "action": {
+    "cap_size": 10,
+    "distinct_images_of_ordered_1-tuple": 10,
+    "possible_ordered_1-tuples": 10,
+    "distinct_images_of_ordered_2-tuple": 90,
+    "possible_ordered_2-tuples": 90,
+    "distinct_images_of_ordered_3-tuple": 720,
+    "possible_ordered_3-tuples": 720,
+    "point_stabilizer_order": 72,
+    "point_stabilizer_orbit_sizes": [
+     1,
+     9
+    ],
+    "is_transitive": true,
+    "is_2_transitive": true,
+    "is_3_transitive": true,
+    "sharply_3_transitive": true,
+    "fixed_point_counts": {
+     "0": 324,
+     "1": 80,
+     "2": 315,
+     "10": 1
+    }
+   },
+   "examples": [
+    {
+     "matrix": [
+      [
+       1,
+       0,
+       0
+      ],
+      [
+       0,
+       1,
+       0
+      ],
+      [
+       0,
+       0,
+       1
+      ]
+     ],
+     "det": 1,
+     "order": 1,
+     "cycle_type_on_cap": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+     ],
+     "cycle_type_on_plane_moved": []
+    },
+    {
+     "matrix": [
+      [
+       1,
+       0,
+       0
+      ],
+      [
+       0,
+       6,
+       1
+      ],
+      [
+       4,
+       2,
+       0
+      ]
+     ],
+     "det": 1,
+     "order": 8,
+     "cycle_type_on_cap": [
+      8,
+      1,
+      1
+     ],
+     "cycle_type_on_plane_moved": [
+      8,
+      8,
+      8,
+      8,
+      8,
+      8
+     ]
+    },
+    {
+     "matrix": [
+      [
+       1,
+       0,
+       0
+      ],
+      [
+       4,
+       0,
+       2
+      ],
+      [
+       5,
+       1,
+       6
+      ]
+     ],
+     "det": 1,
+     "order": 8,
+     "cycle_type_on_cap": [
+      8,
+      1,
+      1
+     ],
+     "cycle_type_on_plane_moved": [
+      8,
+      8,
+      8,
+      8,
+      8,
+      8
+     ]
+    },
+    {
+     "matrix": [
+      [
+       1,
+       0,
+       0
+      ],
+      [
+       3,
+       3,
+       2
+      ],
+      [
+       1,
+       1,
+       0
+      ]
+     ],
+     "det": 1,
+     "order": 8,
+     "cycle_type_on_cap": [
+      8,
+      1,
+      1
+     ],
+     "cycle_type_on_plane_moved": [
+      8,
+      8,
+      8,
+      8,
+      8,
+      8
+     ]
+    },
+    {
+     "matrix": [
+      [
+       1,
+       0,
+       0
+      ],
+      [
+       2,
+       0,
+       1
+      ],
+      [
+       0,
+       2,
+       3
+      ]
+     ],
+     "det": 1,
+     "order": 8,
+     "cycle_type_on_cap": [
+      8,
+      1,
+      1
+     ],
+     "cycle_type_on_plane_moved": [
+      8,
+      8,
+      8,
+      8,
+      8,
+      8
+     ]
+    },
+    {
+     "matrix": [
+      [
+       1,
+       0,
+       0
+      ],
+      [
+       3,
+       2,
+       0
+      ],
+      [
+       5,
+       0,
+       2
+      ]
+     ],
+     "det": 1,
+     "order": 2,
+     "cycle_type_on_cap": [
+      2,
+      2,
+      2,
+      2,
+      1,
+      1
+     ],
+     "cycle_type_on_plane_moved": [
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+     ]
+    }
+   ]
+  }
+ },
+ "identification": {
+  "k=6": "A5 = PSL(2,5) (the simple group of order 60). Element orders {1: 1, 2: 15, 3: 20, 5: 24} = 1,15,20,24; perfect = True; action on the 6 cap points transitive = True, 2-transitive = True (so the 6 points are P^1(5) with A5 acting as PSL(2,5)).",
+  "k=7": "Non-abelian group of order 21 = Frobenius group C7 : C3. Element orders {1: 1, 3: 14, 7: 6}: 6 elements of order 7 (a normal Sylow 7-subgroup) and 14 elements of order 3; abelian = False, cyclic = False, derived subgroup order 7.",
+  "k=8": "order 8, element orders {1: 1, 2: 5, 4: 2}, abelian = False, cyclic = False -> D4 (dihedral of order 8)",
+  "k=10": "PGL(2,9), order 720, acting on the 10 points of the conic sharply 3-transitively (True). Element orders {1: 1, 2: 81, 3: 80, 4: 90, 5: 144, 8: 180, 10: 144}; derived subgroup order 360 (an index-2 subgroup, so not perfect).  NB: this group is NOT S6 even though |S6| = 720: S6 has no elements of order 8 or 10, while this group has 180 of order 8 and 144 of order 10.  The distribution coincides with a direct computation from 2x2 matrices over GF(9) (extra_checks.py) and with the classical PGL(2,9) = M10."
+ },
+ "all_match_claim": true,
+ "all_orbit_stabilizer": true,
+ "PASS": true,
+ "elapsed_s": 3.9
+}

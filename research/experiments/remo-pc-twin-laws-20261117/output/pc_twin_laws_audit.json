@@ -1,0 +1,146 @@
+{
+ "all_ok": true,
+ "checks": [
+  {
+   "data": {
+    "P40": [
+     0,
+     1,
+     1,
+     3,
+     1,
+     5,
+     1,
+     5,
+     5,
+     9,
+     1,
+     11,
+     1,
+     5,
+     7,
+     15,
+     1,
+     17,
+     1,
+     15,
+     17,
+     21,
+     1,
+     21,
+     11,
+     15,
+     7,
+     27,
+     1,
+     29,
+     1,
+     27,
+     17,
+     21,
+     11,
+     35,
+     1,
+     5,
+     7,
+     39
+    ]
+   },
+   "name": "PIN: recomputed P(1..40) equals the K0919 published pin",
+   "ok": true
+  },
+  {
+   "data": {
+    "N": 300
+   },
+   "name": "REF: python survivor_fast recomputes the committed P table prefix C<=300 exactly",
+   "ok": true
+  },
+  {
+   "data": {
+    "pairs": 149,
+    "violations": 0
+   },
+   "name": "TWIN: verbatim per-stone recursion == closed-form twin (elim order + survivor), C=2..150",
+   "ok": true
+  },
+  {
+   "data": {
+    "checked": 59,
+    "violations": 0
+   },
+   "name": "STRE: Lemma E (first stretch, even C): eliminations P_0,P_2,..,P_{C-2},P_1 with holdings (1..1,2), reduced state odds>=3 all 2, pot 2, ptr P_3; C=4..120 even",
+   "ok": true
+  },
+  {
+   "data": {
+    "checked": 60,
+    "violations": 0
+   },
+   "name": "STRO: Lemma O (first stretch, odd C): eliminations P_0,P_2,..,P_{C-1} all holding 1, reduced state odds all 2, pot 1, ptr P_1; C=3..121 odd",
+   "ok": true
+  },
+  {
+   "data": {
+    "M": 150,
+    "badU": [],
+    "badV": [],
+    "recon_violations": 0
+   },
+   "name": "RED: python reduced-game reimplementation matches committed U/V tables m<=150, and P(2m+2)=3+2U, P(2m+1)=1+2V holds on the committed tables m<=150",
+   "ok": true
+  },
+  {
+   "data": {
+    "even_pairs": 3999,
+    "odd_pairs": 3999,
+    "violations": 0
+   },
+   "name": "RECON: committed P table C<=8000 is exactly reconstructed from the committed U/V tables via Theorem RED (both parities, all m)",
+   "ok": true
+  },
+  {
+   "data": {
+    "N": 8000,
+    "count_P_is_1": 1007,
+    "count_P_is_C_minus_1": 1006,
+    "law1_violations": 0,
+    "law2_violations": 0,
+    "parity_violations": 0
+   },
+   "name": "LAWS: on the committed direct table C<=8000: LAW1 P(C)=1 <=> C prime; LAW2 P(C)=C-1 <=> C+1 prime; PARITY P(C) odd for C>=2 (anchor of the proved Theorem PAR)",
+   "ok": true
+  },
+  {
+   "data": {
+    "M": 8000,
+    "count_U_max": 1861,
+    "count_V_zero": 1862,
+    "ulaw_violations": 0,
+    "vlaw_violations": 0
+   },
+   "name": "REDLAWS: on the committed reduced tables m<=8000: V-law V(m)=0 <=> 2m+1 prime; U-law U(m)=m-1 <=> 2m+3 prime (covers C<=16001 via the proved Theorem RED)",
+   "ok": true
+  },
+  {
+   "data": {
+    "violations": 0
+   },
+   "name": "COR: proved corollary anchors on the committed table: P(2m+2)>=3 odd (no even C>=4 has P=1) and no odd C>=3 has P=C-1",
+   "ok": true
+  }
+ ],
+ "date": "2026-11-17",
+ "follows": "K0859 (theorem D counting recursion, the object), K0919 (P(C) pin C=1..40), K0922 (P(C)=1<=>prime observed C<=300 and the 61-value P(C)=C-1 list which LAW2 identifies as exactly the C with C+1 prime), K0926 (E6U: P(C)=S(C,r) for r>=C, survivor_fast reference logic)",
+ "items": [
+  "K0928",
+  "K0929"
+ ],
+ "pins": {
+  "data/pc_p8000.json": "58a414bc31fb6266cc2d0e10000436e50f396135847bab5a32163cffff0b975e",
+  "data/pc_uv8000.json": "8a3b318bd26b8197c66fd55d79007654d2926a18af165132af8c194bc76d8ae2",
+  "pc_fast.js": "563d9601d782ab0ebda7b44741260ef12dd8d0273f6fab088c7c5f20d3bba8b8",
+  "pc_reduced.js": "3e9730eeca273a6634ae5b432ed3c1d2df4ed58942b83bf83ae1cb513dcd7e41"
+ },
+ "title": "P(C) twin prime laws and the parity/reduction theorems for the K0859 counting recursion: proved Lemma E/O (first-stretch sieve), Theorem PAR (P(C) odd for C>=2), Theorem RED (P(2m+2)=3+2U(m), P(2m+1)=1+2V(m)); conjectured LAW1/LAW2 (P(C)=1 <=> C prime, P(C)=C-1 <=> C+1 prime) machine-verified C<=8000 direct and C<=16001 via RED"
+}

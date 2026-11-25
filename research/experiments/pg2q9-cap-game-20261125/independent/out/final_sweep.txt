@@ -1,0 +1,145 @@
+=== FINAL SWEEP 2026-11-25T05:00:21.6072808+09:00 ===
+----- task1 -----
+board axioms: {"n": 91, "nlines": 91, "line_sizes": [10], "k": 10, "q": 9, "point_degree_set": [10], "npairs": 4095, "bad_pairs": 0, "bad_line_meets": 0, "pair_lambda": 1}
+model axioms: {"n": 91, "nlines": 91, "line_sizes": [10], "k": 10, "q": 9, "point_degree_set": [10], "npairs": 4095, "bad_pairs": 0, "bad_line_meets": 0, "pair_lambda": 1}
+  guess on point 4 (6 candidates), depth 13
+  nodes: 2 failed_at: None
+isomorphism found after 2 search nodes; 91 lines mapped 1-1
+PASS: board == PG(2,9) up to relabeling
+----- refs -----
+PG(2,3): total 560 (expect 560) -> ok; maximal counts {4: 234}
+   k= 0:            1 (expect            1) ok
+   k= 1:           13 (expect           13) ok
+   k= 2:           78 (expect           78) ok
+   k= 3:          234 (expect          234) ok
+   k= 4:          234 (expect          234) ok
+PG(2,8): total 19,550,350 (expect 19,550,350) -> ok; maximal counts {6: 2060352, 10: 32704}
+   k= 0:            1 (expect            1) ok
+   k= 1:           73 (expect           73) ok
+   k= 2:        2,628 (expect        2,628) ok
+   k= 3:       56,064 (expect       56,064) ok
+   k= 4:      686,784 (expect      686,784) ok
+   k= 5:    4,120,704 (expect    4,120,704) ok
+   k= 6:    8,928,192 (expect    8,928,192) ok
+   k= 7:    3,924,480 (expect    3,924,480) ok
+   k= 8:    1,471,680 (expect    1,471,680) ok
+   k= 9:      327,040 (expect      327,040) ok
+   k=10:       32,704 (expect       32,704) ok
+PG(2,5) [extra]: total 41,572 (expect 41,572) -> ok; maximal counts {6: 3100}
+   k= 0:            1 (expect            1) ok
+   k= 1:           31 (expect           31) ok
+   k= 2:          465 (expect          465) ok
+   k= 3:        3,875 (expect        3,875) ok
+   k= 4:       15,500 (expect       15,500) ok
+   k= 5:       18,600 (expect       18,600) ok
+   k= 6:        3,100 (expect        3,100) ok
+PG(2,7) [extra]: total 2,446,460 (expect 2,446,460) -> ok; maximal counts {6: 625632, 8: 16758}
+   k= 0:            1 (expect            1) ok
+   k= 1:           57 (expect           57) ok
+   k= 2:        1,596 (expect        1,596) ok
+   k= 3:       26,068 (expect       26,068) ok
+   k= 4:      234,612 (expect      234,612) ok
+   k= 5:      938,448 (expect      938,448) ok
+   k= 6:    1,094,856 (expect    1,094,856) ok
+   k= 7:      134,064 (expect      134,064) ok
+   k= 8:       16,758 (expect       16,758) ok
+PASS
+----- summarize -----
+ k         caps        claim       maximal      claim   
+ 0            1            1 ok          0          0 ok
+ 1           91           91 ok          0          0 ok
+ 2        4,095        4,095 ok          0          0 ok
+ 3      110,565      110,565 ok          0          0 ok
+ 4    1,769,040    1,769,040 ok          0          0 ok
+ 5   14,859,936   14,859,936 ok          0          0 ok
+ 6   52,009,776   52,009,776 ok    707,616    707,616 ok
+ 7   51,554,880   51,554,880 ok  2,021,760  2,021,760 ok
+ 8    7,960,680    7,960,680 ok  5,307,120  5,307,120 ok
+ 9      589,680      589,680 ok          0          0 ok
+10       58,968       58,968 ok     58,968     58,968 ok
+total: 128,917,712 (claim 128,917,712) -> ok
+maximal total: 8,095,464 (claim 8,095,464) -> ok
+test1 == test2 on every cap: True
+non-maximal 8-caps: 2,653,560 (claim 58,968*45 = 2,653,560)
+extension identity  ext[k] == (k+1)*cnt[k+1]:
+  k= 0: ext=            91  (k+1)*cnt[k+1]=            91  ok
+  k= 1: ext=         8,190  (k+1)*cnt[k+1]=         8,190  ok
+  k= 2: ext=       331,695  (k+1)*cnt[k+1]=       331,695  ok
+  k= 3: ext=     7,076,160  (k+1)*cnt[k+1]=     7,076,160  ok
+  k= 4: ext=    74,299,680  (k+1)*cnt[k+1]=    74,299,680  ok
+  k= 5: ext=   312,058,656  (k+1)*cnt[k+1]=   312,058,656  ok
+  k= 6: ext=   360,884,160  (k+1)*cnt[k+1]=   360,884,160  ok
+  k= 7: ext=    63,685,440  (k+1)*cnt[k+1]=    63,685,440  ok
+  k= 8: ext=     5,307,120  (k+1)*cnt[k+1]=     5,307,120  ok
+  k= 9: ext=       589,680  (k+1)*cnt[k+1]=       589,680  ok
+  k=10: ext=             0  (k+1)*cnt[k+1]=             0  ok
+PASS
+----- conics -----
+canonical form classes: 66430 (expect (9^6-1)/8 = 66430)
+nondegenerate classes:  58968 (expect 9^5-9^2 = 58968)
+degenerate classes:     7462
+distinct conic point sets: 58968
+nondegenerate forms with != q+1 zeros: 0
+conics that are 10-caps: 58968; per-conic line structure {'tangent': 10.0, 'secant': 45.0, 'external': 36.0}
+conics whose secants cover every outside point (=> maximal): 58968
+mapped conics that are 10-caps in board labels: 58968
+{
+ "q": 9,
+ "classes": 66430,
+ "expected_classes": 66430,
+ "nondegenerate": 58968,
+ "expected_nondegenerate": 58968,
+ "degenerate": 7462,
+ "distinct_conic_point_sets": 58968,
+ "conics_are_10caps": 58968,
+ "conics_maximal_secant_cover": 58968,
+ "per_conic_line_structure": {
+  "tangent": 10.0,
+  "secant": 45.0,
+  "external": 36.0
+ },
+ "conic10_masks": 58968,
+ "conic9_masks": 589680,
+ "conic8_masks": 2653560,
+ "expected_9": 589680,
+ "expected_8": 2653560,
+ "bad9_caps": 0,
+ "bad8_caps": 0
+}
+----- setcmp10 -----
+rawA 58968 distinctA 58968
+rawB 58968 distinctB 58968
+onlyA 0 onlyB 0
+equal_sets YES
+----- setcmp9 -----
+rawA 589680 distinctA 589680
+rawB 589680 distinctB 589680
+onlyA 0 onlyB 0
+equal_sets YES
+----- setcmp8 -----
+rawA 2653560 distinctA 2653560
+rawB 2653560 distinctB 2653560
+onlyA 0 onlyB 0
+equal_sets YES
+----- grundy -----
+[mixed] start [0, 1, 10, 20]: 1868 positions, maximal sizes [6, 7, 8, 10], parities [0, 1]
+    Grundy distribution {'0': 684, '1': 1064, '2': 120}, max 2
+    witness position [0, 1, 10, 20, 32, 39] -> Grundy 2
+    K1298 formula G(T)=(p-|T|)%2: checked 1717 uniform positions, violations 0; mixed-completion positions 151
+PASS
+----- samples -----
+board: 91 points, 91 lines; census 10-caps loaded: 58968
+caps9: 50/50 verified, problems 0
+max6: 50/50 verified, problems 0
+max7: 50/50 verified, problems 0
+max8: 50/50 verified, problems 0
+nonmax8: 50/50 verified, problems 0
+PASS
+----- arcscan -----
+frames 42456960
+frames_over_24 1769040
+sum_addable_over_24 74299680
+addable_hist 42 42456960
+caps4 1769040
+caps5 14859936
+mean_addable 42

@@ -1,0 +1,47 @@
+frame vectors (encoded field elements): [(0, 0, 3), (0, 3, 0), (3, 0, 0), (3, 1, 1)]
+det of [F0 F1 F2] = 2 (nonzero = basis)
+raw solutions: 24 distinct projectivities (expected 24)
+[PASS] brute force over (sigma, scalars) yields exactly 24 projectivities
+[PASS] all 24 matrices are invertible
+[PASS] brute-force set equals the frame-formula set (lambda_i = d_i/c_i)
+[PASS] every element maps the frame set onto itself
+
+products: closed
+[PASS] closed under multiplication (24x24 products)
+[PASS] contains the identity
+[PASS] closed under inverses
+[PASS] 24 distinct projective classes (mod scalar)
+[PASS] action on the 4 frame points is faithful and hits all 24 permutations (the group is S4)
+[PASS] each of the 24 projectivities permutes the 42 extension points
+
+S4 orbits on the 42 five-caps through the frame: sizes [24, 12, 6]
+  orbit of size 24: [31, 32, 33, 34, 35, 36, 39, 43, 45, 48, 53, 54, 57, 61, 62, 66, 67, 69, 75, 77, 78, 84, 85, 86]
+  orbit of size 12: [42, 44, 51, 52, 58, 59, 68, 72, 76, 81, 88, 89]
+  orbit of size  6: [41, 49, 63, 71, 79, 87]
+[PASS] S4 orbits on the 42 points have sizes 24, 12, 6
+[PASS] orbit sizes sum to 42
+
+representative extra points of the three S4 orbits: [31, 42, 41]
+  F+{31} -> F+{42}: inequivalent
+  F+{31} -> F+{41}: EQUIVALENT   witness M = (8, 0, 4, 5, 0, 4, 5, 5, 2), M(F) = [0, 10, 20, 41]
+  F+{42} -> F+{41}: inequivalent
+[CLAIM REFUTED] distinct S4-orbits lie in distinct PGL orbits (needed for 'PGL orbit size = 1,769,040*s/5')  --  fused: [(31, 41, 24, 6)]
+[PASS] the fusion test itself is complete (120 ordered 4-tuples = every projectivity out of the frame)
+
+|GL(3,9)| = 339,655,680, |PGL(3,9)| = 42,456,960; 24 * #4-caps = 42,456,960 (= |PGL|: True)
+
+claim's table: s -> 1,769,040*s/5 -> 42,456,960/orbit
+  s=24: 1,769,040*24/5 = 8,491,392   42,456,960/8,491,392 = 5  (=120/s = 5)
+  s=12: 1,769,040*12/5 = 4,245,696   42,456,960/4,245,696 = 10  (=120/s = 10)
+  s= 6: 1,769,040* 6/5 = 2,122,848   42,456,960/2,122,848 = 20  (=120/s = 20)
+  sum = 14,859,936 (= total #5-caps: True)
+NOTE: this table is only arithmetic.  The identifications 'S4-orbit <-> PGL orbit' and
+      'stabiliser = 120/s' are refuted above and in t5/t6.
+claim rep {0,1,10,20,31}: extra point 31, S4 orbit size s = 24 (claim s = 24: True)
+claim rep {0,1,10,20,42}: extra point 42, S4 orbit size s = 12 (claim s = 12: True)
+claim rep {0,1,10,20,41}: extra point 41, S4 orbit size s = 6 (claim s = 6: True)
+[PASS] the S4 orbit sizes of the three claim representatives are 24, 12, 6
+
+TASK 3 S4 computations: PASS
+TASK 3 inference to PGL orbits: 1 REFUTED
+  REFUTED: distinct S4-orbits lie in distinct PGL orbits (needed for 'PGL orbit size = 1,769,040*s/5')  (fused: [(31, 41, 24, 6)])

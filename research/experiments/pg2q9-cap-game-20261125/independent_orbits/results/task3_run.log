@@ -1,0 +1,34 @@
+== generators ==
+14 generators: ['E_01(1)', 'E_01(3)', 'E_02(1)', 'E_02(3)', 'E_10(1)', 'E_10(3)', 'E_12(1)', 'E_12(3)', 'E_20(1)', 'E_20(3)', 'E_21(1)', 'E_21(3)', 'diag(i,1,1)', 'cycle(012)']
+chunk tables built in 0.18s
+
+== (a) BFS orbits of the start caps ==
+    ... 697,640 masks (12.8s)
+  k= 6: orbit size =    707,616   claim =    707,616   match = True   (24.7s; 100 sampled members all maximal 6-caps: True)
+    ... 560,133 masks (3.6s)
+    ... 1,754,163 masks (20.3s)
+  k= 7: orbit size =  2,021,760   claim =  2,021,760   match = True   (75.7s; 100 sampled members all maximal 7-caps: True)
+    ... 611,145 masks (3.4s)
+    ... 2,816,709 masks (24.6s)
+    ... 5,229,840 masks (111.1s)
+  k= 8: orbit size =  5,307,120   claim =  5,307,120   match = True   (207.2s; 100 sampled members all maximal 8-caps: True)
+  k=10: orbit size =     58,968   claim =     58,968   match = True   (2.0s; 100 sampled members all maximal 10-caps: True)
+
+== (b) independent census via one projective frame ==
+frame = (0, 1, 10, 20) (no three collinear)
+    k    T_k    all k-caps        parent   m_k  maximal k-caps     parent
+    4      1     1,769,040     1,769,040     0               0          0   ok
+    5     42    14,859,936    14,859,936     0               0          0   ok
+    6    441    52,009,776    52,009,776     6         707,616    707,616   ok
+    7   1020    51,554,880    51,554,880    40       2,021,760  2,021,760   ok
+    8    315     7,960,680     7,960,680   210       5,307,120  5,307,120   ok
+    9     42       589,680       589,680     0               0          0   ok
+   10      7        58,968        58,968     7          58,968     58,968   ok
+  census matches the claimed counts: True
+  maximal 9-caps: 0   maximal 5-caps: 0
+
+== (c) 10-caps = conics ==
+  symmetric 3x3 forms over GF(9): 531440 nonzero, 471744 nondegenerate -> 58968 conics mod scalars  (q^5-q^2 = 58968)   [2.4s]
+  forms through the start 10-cap: 1-dimensional; nonsingular = True; zero set equals the cap = True
+
+TASK 3: PASS   (312.8 s)

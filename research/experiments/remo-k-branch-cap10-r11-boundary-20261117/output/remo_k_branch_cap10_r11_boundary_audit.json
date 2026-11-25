@@ -1,0 +1,1739 @@
+{
+ "burnside": {
+  "10": {
+   "fix_cyc": 125,
+   "fix_id": 84494,
+   "fix_trans": 3478,
+   "orbits": 15863
+  }
+ },
+ "machine_checks": [
+  {
+   "data": {
+    "enum_count": 15863,
+    "fix_cyc": 125,
+    "fix_id": 84494,
+    "fix_trans": 3478,
+    "orbits": 15863
+   },
+   "name": "cap=10: Burnside orbit count == direct canonical enumeration (15863 profiles, fix counts 84494/3478/125)",
+   "ok": true
+  },
+  {
+   "data": {
+    "format": "full",
+    "records": 15863,
+    "sha256": "4d824a87690b721a1a98e0856b04054dbc58b3be4914168f0a9be45db64c2b52",
+    "sha256_packed": "08324c19e8837041d8128423f26d88100b1ba7963fea1b86e3f90052b10664f0"
+   },
+   "name": "r=11 committed sweep records: 15863 records, index-complete, atoms == enumeration, no budget skips",
+   "ok": true
+  },
+  {
+   "data": {
+    "mixed_keys": 34,
+    "uniformly_determined_keys": 98,
+    "uniformly_ndet_keys": 583
+   },
+   "name": "r=11 key census: 715 keys, 98 uniformly determined, 583 uniformly non-determined, 34 mixed",
+   "ok": true
+  },
+  {
+   "data": {
+    "delta0_mismatches": 0,
+    "failing": 34,
+    "fl_violations": 0
+   },
+   "name": "Theorem I11 (cap<=10, r=11): non-collapse keys are exactly the 34 pinned keys (6,6,8) x gamma=0..4; (6,6,9) x gamma=0..3; (6,8,8) x gamma=0..4; (6,8,9) x gamma=0..3; (6,9,9) x gamma=0..3; (8,8,9) x gamma=0..5; (8,9,9) x gamma=0..5 - IDENTICAL to the r=9 AND r=10 boundary sets (K0893/K0895), no new family and no collapse for the third consecutive column; FL violations 0; Delta=0 728 profiles all Theorem D at r=11 (verbatim recursion); det-side survivors [[5]]; ndet possible-survivor sets within [[3, 4, 5], [3, 4, 5, 6, 7], [3, 4, 5, 7], [3, 5], [3, 5, 7]]; residue pairs [[6, 8], [6, 8, 9], [6, 9], [8, 9]] (the three-residue mixed family (6,8,9) x gamma=0..3 persists at r=11); max_states 590430",
+   "ok": true
+  },
+  {
+   "data": {
+    "keys": 34
+   },
+   "name": "r=11 failing-key partition counts match the pinned table (34 keys)",
+   "ok": true
+  },
+  {
+   "data": {
+    "witness_keys": 34
+   },
+   "name": "r=11 failing-key witnesses (det/ndet atoms + chain survivors) are valid inside the committed records (34 keys)",
+   "ok": true
+  },
+  {
+   "data": {
+    "residue_class_census": {
+     "1": 55,
+     "2": 330,
+     "3": 330
+    },
+    "singleton_mixed": []
+   },
+   "name": "r=11 residue arithmetic census (new column, arithmetic only): 715 keys split into 55/330/330 single/two/three-residue keys, IDENTICAL to the r=10 split; since r=11 exceeds every branch size (<= 10) there is no modular wraparound, so the 55 single-residue keys are exactly the equal triples; mixed keys are NOT all two-residue at r=11 either: family (6,8,9) x gamma=0..3 stays three-residue and mixed (K0893/K0895 counterexample persists)",
+   "ok": true
+  },
+  {
+   "data": {
+    "mismatches": 0,
+    "uniformly_determined_keys": 98
+   },
+   "name": "r=11 Theorem G' survivor level: every uniformly determined key's survivor equals the chain survivor (98 keys, 0 mismatches)",
+   "ok": true
+  },
+  {
+   "data": {
+    "keys": 56,
+    "still_mixed_at_r11": 34,
+    "uniformly_ndet_at_r11": 22
+   },
+   "name": "FATE rows: the 56 published r=3..10 failing keys' r=11 fates match the pinned data (22 uniformly non-determined, 34 STILL MIXED at r=11: every r=9/r=10 mixed key - all 10 of the 6/8 family, all 12 of the 8/9 family, all 12 of the 6/9 family - remains mixed for the THIRD consecutive column; no collapse, no revival, no uniform determination; the 22 collapsed keys keep the same chain verdicts and chain survivor labels as at r=10): recorded as DATA (finite observation)",
+   "ok": true
+  },
+  {
+   "data": {
+    "entries": 84,
+    "mismatches": 0
+   },
+   "name": "Theorem D recursion == K0859 published (C,r) table (84 entries, r=2..8; the r=11 column used above is computed by the same verbatim recursion)",
+   "ok": true
+  },
+  {
+   "data": {
+    "det_flag_differences_vs_r10": 0,
+    "det_flag_differences_vs_r9": 0,
+    "first_loser_mask_differences": 7328,
+    "partitions_identical": true,
+    "profiles": 15863,
+    "survivor_mask_differences": 0
+   },
+   "name": "STASIS: the committed K0895 r=10 records and the committed r=11 records agree on the determined flag of EVERY ONE of the 15863 profiles (0 differences) AND on the full survivor mask of every profile (0 survivor-mask differences: a full-column label fixpoint, strictly stronger than the r=9 -> r=10 det-flag-only fixpoint); the committed K0893 r=9 records also agree on every determined flag: THREE consecutive columns (r=9,10,11) with an identical determinacy classification of the whole cap<=10 domain; the 34-key failing set, the per-key partition table, det-side survivor and ndet possible-survivor sets are field-identical to the K0895 published values (7328 first-loser masks differ between r=10 and r=11; finite observation)",
+   "ok": true
+  }
+ ],
+ "meta": {
+  "date": "2026-11-17",
+  "engine_provenance": "verbatim region game / enumeration / Burnside / Theorem D from the K0862 verifier via K0875, K0876, K0881, K0893 and K0895; full-domain records produced by the committed JavaScript mask engine (mask_engine_fast_r11.js: byte-identical copy of the K0893 committed fixed engine with the pack encoding shift generalized to r); Python mask twin cross-validated live in every run",
+  "item": "K0897",
+  "r_swept": [
+   11
+  ],
+  "title": "3-branch REMO determinacy r=11 boundary (branch sizes <= 10): the third r >= 9 column; identical mixed-key boundary as r=9 and r=10 (STASIS over three columns, survivor-mask fixpoint vs r=10)"
+ },
+ "summary": {
+  "all_ok": true,
+  "checks_total": 11
+ },
+ "sweep": {
+  "delta0_mismatches": 0,
+  "delta0_profiles": 728,
+  "failing_det_survivors": [
+   [
+    5
+   ]
+  ],
+  "failing_keys": [
+   [
+    [
+     6,
+     6,
+     8
+    ],
+    0
+   ],
+   [
+    [
+     6,
+     6,
+     8
+    ],
+    1
+   ],
+   [
+    [
+     6,
+     6,
+     8
+    ],
+    2
+   ],
+   [
+    [
+     6,
+     6,
+     8
+    ],
+    3
+   ],
+   [
+    [
+     6,
+     6,
+     8
+    ],
+    4
+   ],
+   [
+    [
+     6,
+     6,
+     9
+    ],
+    0
+   ],
+   [
+    [
+     6,
+     6,
+     9
+    ],
+    1
+   ],
+   [
+    [
+     6,
+     6,
+     9
+    ],
+    2
+   ],
+   [
+    [
+     6,
+     6,
+     9
+    ],
+    3
+   ],
+   [
+    [
+     6,
+     8,
+     8
+    ],
+    0
+   ],
+   [
+    [
+     6,
+     8,
+     8
+    ],
+    1
+   ],
+   [
+    [
+     6,
+     8,
+     8
+    ],
+    2
+   ],
+   [
+    [
+     6,
+     8,
+     8
+    ],
+    3
+   ],
+   [
+    [
+     6,
+     8,
+     8
+    ],
+    4
+   ],
+   [
+    [
+     6,
+     8,
+     9
+    ],
+    0
+   ],
+   [
+    [
+     6,
+     8,
+     9
+    ],
+    1
+   ],
+   [
+    [
+     6,
+     8,
+     9
+    ],
+    2
+   ],
+   [
+    [
+     6,
+     8,
+     9
+    ],
+    3
+   ],
+   [
+    [
+     6,
+     9,
+     9
+    ],
+    0
+   ],
+   [
+    [
+     6,
+     9,
+     9
+    ],
+    1
+   ],
+   [
+    [
+     6,
+     9,
+     9
+    ],
+    2
+   ],
+   [
+    [
+     6,
+     9,
+     9
+    ],
+    3
+   ],
+   [
+    [
+     8,
+     8,
+     9
+    ],
+    0
+   ],
+   [
+    [
+     8,
+     8,
+     9
+    ],
+    1
+   ],
+   [
+    [
+     8,
+     8,
+     9
+    ],
+    2
+   ],
+   [
+    [
+     8,
+     8,
+     9
+    ],
+    3
+   ],
+   [
+    [
+     8,
+     8,
+     9
+    ],
+    4
+   ],
+   [
+    [
+     8,
+     8,
+     9
+    ],
+    5
+   ],
+   [
+    [
+     8,
+     9,
+     9
+    ],
+    0
+   ],
+   [
+    [
+     8,
+     9,
+     9
+    ],
+    1
+   ],
+   [
+    [
+     8,
+     9,
+     9
+    ],
+    2
+   ],
+   [
+    [
+     8,
+     9,
+     9
+    ],
+    3
+   ],
+   [
+    [
+     8,
+     9,
+     9
+    ],
+    4
+   ],
+   [
+    [
+     8,
+     9,
+     9
+    ],
+    5
+   ]
+  ],
+  "failing_keys_two_residue": false,
+  "failing_ndet_sets": [
+   [
+    3,
+    4,
+    5
+   ],
+   [
+    3,
+    4,
+    5,
+    6,
+    7
+   ],
+   [
+    3,
+    4,
+    5,
+    7
+   ],
+   [
+    3,
+    5
+   ],
+   [
+    3,
+    5,
+    7
+   ]
+  ],
+  "failing_ndet_sets_by_key": {
+   "6,6,8|0": [
+    [
+     3,
+     4,
+     5
+    ]
+   ],
+   "6,6,8|1": [
+    [
+     3,
+     4,
+     5
+    ]
+   ],
+   "6,6,8|2": [
+    [
+     3,
+     4,
+     5
+    ]
+   ],
+   "6,6,8|3": [
+    [
+     3,
+     4,
+     5
+    ]
+   ],
+   "6,6,8|4": [
+    [
+     3,
+     4,
+     5
+    ]
+   ],
+   "6,6,9|0": [
+    [
+     3,
+     4,
+     5
+    ],
+    [
+     3,
+     5
+    ]
+   ],
+   "6,6,9|1": [
+    [
+     3,
+     4,
+     5
+    ],
+    [
+     3,
+     5
+    ]
+   ],
+   "6,6,9|2": [
+    [
+     3,
+     4,
+     5
+    ],
+    [
+     3,
+     5
+    ]
+   ],
+   "6,6,9|3": [
+    [
+     3,
+     4,
+     5
+    ],
+    [
+     3,
+     5
+    ]
+   ],
+   "6,8,8|0": [
+    [
+     3,
+     4,
+     5
+    ]
+   ],
+   "6,8,8|1": [
+    [
+     3,
+     4,
+     5
+    ]
+   ],
+   "6,8,8|2": [
+    [
+     3,
+     4,
+     5
+    ]
+   ],
+   "6,8,8|3": [
+    [
+     3,
+     4,
+     5
+    ]
+   ],
+   "6,8,8|4": [
+    [
+     3,
+     4,
+     5
+    ]
+   ],
+   "6,8,9|0": [
+    [
+     3,
+     4,
+     5
+    ],
+    [
+     3,
+     4,
+     5,
+     7
+    ],
+    [
+     3,
+     5
+    ],
+    [
+     3,
+     5,
+     7
+    ]
+   ],
+   "6,8,9|1": [
+    [
+     3,
+     4,
+     5
+    ],
+    [
+     3,
+     4,
+     5,
+     7
+    ],
+    [
+     3,
+     5
+    ],
+    [
+     3,
+     5,
+     7
+    ]
+   ],
+   "6,8,9|2": [
+    [
+     3,
+     4,
+     5
+    ],
+    [
+     3,
+     4,
+     5,
+     7
+    ],
+    [
+     3,
+     5
+    ],
+    [
+     3,
+     5,
+     7
+    ]
+   ],
+   "6,8,9|3": [
+    [
+     3,
+     4,
+     5
+    ],
+    [
+     3,
+     4,
+     5,
+     7
+    ],
+    [
+     3,
+     5
+    ],
+    [
+     3,
+     5,
+     7
+    ]
+   ],
+   "6,9,9|0": [
+    [
+     3,
+     4,
+     5
+    ],
+    [
+     3,
+     5
+    ]
+   ],
+   "6,9,9|1": [
+    [
+     3,
+     4,
+     5
+    ],
+    [
+     3,
+     5
+    ]
+   ],
+   "6,9,9|2": [
+    [
+     3,
+     4,
+     5
+    ],
+    [
+     3,
+     5
+    ]
+   ],
+   "6,9,9|3": [
+    [
+     3,
+     4,
+     5
+    ],
+    [
+     3,
+     5
+    ]
+   ],
+   "8,8,9|0": [
+    [
+     3,
+     4,
+     5,
+     7
+    ],
+    [
+     3,
+     5,
+     7
+    ]
+   ],
+   "8,8,9|1": [
+    [
+     3,
+     4,
+     5,
+     7
+    ],
+    [
+     3,
+     5,
+     7
+    ]
+   ],
+   "8,8,9|2": [
+    [
+     3,
+     4,
+     5,
+     7
+    ],
+    [
+     3,
+     5,
+     7
+    ]
+   ],
+   "8,8,9|3": [
+    [
+     3,
+     4,
+     5,
+     7
+    ],
+    [
+     3,
+     5,
+     7
+    ]
+   ],
+   "8,8,9|4": [
+    [
+     3,
+     4,
+     5,
+     7
+    ],
+    [
+     3,
+     5,
+     7
+    ]
+   ],
+   "8,8,9|5": [
+    [
+     3,
+     4,
+     5,
+     6,
+     7
+    ],
+    [
+     3,
+     4,
+     5,
+     7
+    ],
+    [
+     3,
+     5,
+     7
+    ]
+   ],
+   "8,9,9|0": [
+    [
+     3,
+     4,
+     5,
+     7
+    ],
+    [
+     3,
+     5,
+     7
+    ]
+   ],
+   "8,9,9|1": [
+    [
+     3,
+     4,
+     5,
+     7
+    ],
+    [
+     3,
+     5,
+     7
+    ]
+   ],
+   "8,9,9|2": [
+    [
+     3,
+     4,
+     5,
+     7
+    ],
+    [
+     3,
+     5,
+     7
+    ]
+   ],
+   "8,9,9|3": [
+    [
+     3,
+     4,
+     5,
+     7
+    ],
+    [
+     3,
+     5,
+     7
+    ]
+   ],
+   "8,9,9|4": [
+    [
+     3,
+     4,
+     5,
+     7
+    ],
+    [
+     3,
+     5,
+     7
+    ]
+   ],
+   "8,9,9|5": [
+    [
+     3,
+     4,
+     5,
+     7
+    ],
+    [
+     3,
+     5,
+     7
+    ]
+   ]
+  },
+  "failing_partitions": {
+   "6,6,8|0": {
+    "n_det": 48,
+    "n_ndet": 3,
+    "profiles": 51
+   },
+   "6,6,8|1": {
+    "n_det": 30,
+    "n_ndet": 3,
+    "profiles": 33
+   },
+   "6,6,8|2": {
+    "n_det": 16,
+    "n_ndet": 3,
+    "profiles": 19
+   },
+   "6,6,8|3": {
+    "n_det": 7,
+    "n_ndet": 3,
+    "profiles": 10
+   },
+   "6,6,8|4": {
+    "n_det": 2,
+    "n_ndet": 2,
+    "profiles": 4
+   },
+   "6,6,9|0": {
+    "n_det": 40,
+    "n_ndet": 14,
+    "profiles": 54
+   },
+   "6,6,9|1": {
+    "n_det": 22,
+    "n_ndet": 12,
+    "profiles": 34
+   },
+   "6,6,9|2": {
+    "n_det": 10,
+    "n_ndet": 10,
+    "profiles": 20
+   },
+   "6,6,9|3": {
+    "n_det": 3,
+    "n_ndet": 7,
+    "profiles": 10
+   },
+   "6,8,8|0": {
+    "n_det": 63,
+    "n_ndet": 3,
+    "profiles": 66
+   },
+   "6,8,8|1": {
+    "n_det": 42,
+    "n_ndet": 3,
+    "profiles": 45
+   },
+   "6,8,8|2": {
+    "n_det": 24,
+    "n_ndet": 3,
+    "profiles": 27
+   },
+   "6,8,8|3": {
+    "n_det": 13,
+    "n_ndet": 3,
+    "profiles": 16
+   },
+   "6,8,8|4": {
+    "n_det": 4,
+    "n_ndet": 3,
+    "profiles": 7
+   },
+   "6,8,9|0": {
+    "n_det": 95,
+    "n_ndet": 25,
+    "profiles": 120
+   },
+   "6,8,9|1": {
+    "n_det": 53,
+    "n_ndet": 25,
+    "profiles": 78
+   },
+   "6,8,9|2": {
+    "n_det": 24,
+    "n_ndet": 23,
+    "profiles": 47
+   },
+   "6,8,9|3": {
+    "n_det": 6,
+    "n_ndet": 19,
+    "profiles": 25
+   },
+   "6,9,9|0": {
+    "n_det": 64,
+    "n_ndet": 14,
+    "profiles": 78
+   },
+   "6,9,9|1": {
+    "n_det": 40,
+    "n_ndet": 14,
+    "profiles": 54
+   },
+   "6,9,9|2": {
+    "n_det": 19,
+    "n_ndet": 14,
+    "profiles": 33
+   },
+   "6,9,9|3": {
+    "n_det": 6,
+    "n_ndet": 14,
+    "profiles": 20
+   },
+   "8,8,9|0": {
+    "n_det": 92,
+    "n_ndet": 8,
+    "profiles": 100
+   },
+   "8,8,9|1": {
+    "n_det": 62,
+    "n_ndet": 8,
+    "profiles": 70
+   },
+   "8,8,9|2": {
+    "n_det": 40,
+    "n_ndet": 8,
+    "profiles": 48
+   },
+   "8,8,9|3": {
+    "n_det": 22,
+    "n_ndet": 8,
+    "profiles": 30
+   },
+   "8,8,9|4": {
+    "n_det": 10,
+    "n_ndet": 8,
+    "profiles": 18
+   },
+   "8,8,9|5": {
+    "n_det": 3,
+    "n_ndet": 6,
+    "profiles": 9
+   },
+   "8,9,9|0": {
+    "n_det": 102,
+    "n_ndet": 8,
+    "profiles": 110
+   },
+   "8,9,9|1": {
+    "n_det": 72,
+    "n_ndet": 8,
+    "profiles": 80
+   },
+   "8,9,9|2": {
+    "n_det": 46,
+    "n_ndet": 8,
+    "profiles": 54
+   },
+   "8,9,9|3": {
+    "n_det": 28,
+    "n_ndet": 8,
+    "profiles": 36
+   },
+   "8,9,9|4": {
+    "n_det": 13,
+    "n_ndet": 8,
+    "profiles": 21
+   },
+   "8,9,9|5": {
+    "n_det": 4,
+    "n_ndet": 8,
+    "profiles": 12
+   }
+  },
+  "failing_residue_pairs": [
+   [
+    6,
+    8
+   ],
+   [
+    6,
+    8,
+    9
+   ],
+   [
+    6,
+    9
+   ],
+   [
+    8,
+    9
+   ]
+  ],
+  "failing_three_residue_keys": [
+   [
+    [
+     6,
+     8,
+     9
+    ],
+    0
+   ],
+   [
+    [
+     6,
+     8,
+     9
+    ],
+    1
+   ],
+   [
+    [
+     6,
+     8,
+     9
+    ],
+    2
+   ],
+   [
+    [
+     6,
+     8,
+     9
+    ],
+    3
+   ]
+  ],
+  "fate_pub56": {
+   "2,3,8|0": {
+    "chain_determined": false,
+    "chain_survivors": [
+     1,
+     5
+    ],
+    "mixed": false,
+    "n_det": 0,
+    "profiles": 8,
+    "uniform_det": false,
+    "uniform_ndet": true
+   },
+   "2,3,8|1": {
+    "chain_determined": false,
+    "chain_survivors": [
+     1,
+     5
+    ],
+    "mixed": false,
+    "n_det": 0,
+    "profiles": 2,
+    "uniform_det": false,
+    "uniform_ndet": true
+   },
+   "2,8,9|0": {
+    "chain_determined": false,
+    "chain_survivors": [
+     1,
+     5
+    ],
+    "mixed": false,
+    "n_det": 0,
+    "profiles": 23,
+    "uniform_det": false,
+    "uniform_ndet": true
+   },
+   "2,8,9|1": {
+    "chain_determined": false,
+    "chain_survivors": [
+     1,
+     5
+    ],
+    "mixed": false,
+    "n_det": 0,
+    "profiles": 7,
+    "uniform_det": false,
+    "uniform_ndet": true
+   },
+   "3,3,8|0": {
+    "chain_determined": false,
+    "chain_survivors": [
+     1,
+     5
+    ],
+    "mixed": false,
+    "n_det": 0,
+    "profiles": 10,
+    "uniform_det": false,
+    "uniform_ndet": true
+   },
+   "3,3,8|1": {
+    "chain_determined": false,
+    "chain_survivors": [
+     1,
+     5
+    ],
+    "mixed": false,
+    "n_det": 0,
+    "profiles": 4,
+    "uniform_det": false,
+    "uniform_ndet": true
+   },
+   "3,8,8|0": {
+    "chain_determined": false,
+    "chain_survivors": [
+     1,
+     5
+    ],
+    "mixed": false,
+    "n_det": 0,
+    "profiles": 28,
+    "uniform_det": false,
+    "uniform_ndet": true
+   },
+   "3,8,8|1": {
+    "chain_determined": false,
+    "chain_survivors": [
+     1,
+     5
+    ],
+    "mixed": false,
+    "n_det": 0,
+    "profiles": 13,
+    "uniform_det": false,
+    "uniform_ndet": true
+   },
+   "3,8,9|0": {
+    "chain_determined": false,
+    "chain_survivors": [
+     1,
+     5
+    ],
+    "mixed": false,
+    "n_det": 0,
+    "profiles": 43,
+    "uniform_det": false,
+    "uniform_ndet": true
+   },
+   "3,8,9|1": {
+    "chain_determined": false,
+    "chain_survivors": [
+     1,
+     5
+    ],
+    "mixed": false,
+    "n_det": 0,
+    "profiles": 20,
+    "uniform_det": false,
+    "uniform_ndet": true
+   },
+   "4,4,8|0": {
+    "chain_determined": false,
+    "chain_survivors": [
+     3,
+     5
+    ],
+    "mixed": false,
+    "n_det": 0,
+    "profiles": 20,
+    "uniform_det": false,
+    "uniform_ndet": true
+   },
+   "4,4,8|1": {
+    "chain_determined": false,
+    "chain_survivors": [
+     3,
+     5
+    ],
+    "mixed": false,
+    "n_det": 0,
+    "profiles": 10,
+    "uniform_det": false,
+    "uniform_ndet": true
+   },
+   "4,4,8|2": {
+    "chain_determined": false,
+    "chain_survivors": [
+     3,
+     5
+    ],
+    "mixed": false,
+    "n_det": 0,
+    "profiles": 4,
+    "uniform_det": false,
+    "uniform_ndet": true
+   },
+   "4,4,9|0": {
+    "chain_determined": false,
+    "chain_survivors": [
+     3,
+     5
+    ],
+    "mixed": false,
+    "n_det": 0,
+    "profiles": 20,
+    "uniform_det": false,
+    "uniform_ndet": true
+   },
+   "4,4,9|1": {
+    "chain_determined": false,
+    "chain_survivors": [
+     3,
+     5
+    ],
+    "mixed": false,
+    "n_det": 0,
+    "profiles": 10,
+    "uniform_det": false,
+    "uniform_ndet": true
+   },
+   "4,4,9|2": {
+    "chain_determined": false,
+    "chain_survivors": [
+     3,
+     5
+    ],
+    "mixed": false,
+    "n_det": 0,
+    "profiles": 4,
+    "uniform_det": false,
+    "uniform_ndet": true
+   },
+   "4,8,8|0": {
+    "chain_determined": false,
+    "chain_survivors": [
+     3,
+     5
+    ],
+    "mixed": false,
+    "n_det": 0,
+    "profiles": 39,
+    "uniform_det": false,
+    "uniform_ndet": true
+   },
+   "4,8,8|1": {
+    "chain_determined": false,
+    "chain_survivors": [
+     3,
+     5
+    ],
+    "mixed": false,
+    "n_det": 0,
+    "profiles": 24,
+    "uniform_det": false,
+    "uniform_ndet": true
+   },
+   "4,8,8|2": {
+    "chain_determined": false,
+    "chain_survivors": [
+     3,
+     5
+    ],
+    "mixed": false,
+    "n_det": 0,
+    "profiles": 11,
+    "uniform_det": false,
+    "uniform_ndet": true
+   },
+   "4,9,9|0": {
+    "chain_determined": false,
+    "chain_survivors": [
+     3,
+     5
+    ],
+    "mixed": false,
+    "n_det": 0,
+    "profiles": 45,
+    "uniform_det": false,
+    "uniform_ndet": true
+   },
+   "4,9,9|1": {
+    "chain_determined": false,
+    "chain_survivors": [
+     3,
+     5
+    ],
+    "mixed": false,
+    "n_det": 0,
+    "profiles": 28,
+    "uniform_det": false,
+    "uniform_ndet": true
+   },
+   "4,9,9|2": {
+    "chain_determined": false,
+    "chain_survivors": [
+     3,
+     5
+    ],
+    "mixed": false,
+    "n_det": 0,
+    "profiles": 13,
+    "uniform_det": false,
+    "uniform_ndet": true
+   },
+   "6,6,8|0": {
+    "chain_determined": true,
+    "chain_survivors": [
+     5
+    ],
+    "mixed": true,
+    "n_det": 48,
+    "profiles": 51,
+    "uniform_det": false,
+    "uniform_ndet": false
+   },
+   "6,6,8|1": {
+    "chain_determined": true,
+    "chain_survivors": [
+     5
+    ],
+    "mixed": true,
+    "n_det": 30,
+    "profiles": 33,
+    "uniform_det": false,
+    "uniform_ndet": false
+   },
+   "6,6,8|2": {
+    "chain_determined": true,
+    "chain_survivors": [
+     5
+    ],
+    "mixed": true,
+    "n_det": 16,
+    "profiles": 19,
+    "uniform_det": false,
+    "uniform_ndet": false
+   },
+   "6,6,8|3": {
+    "chain_determined": true,
+    "chain_survivors": [
+     5
+    ],
+    "mixed": true,
+    "n_det": 7,
+    "profiles": 10,
+    "uniform_det": false,
+    "uniform_ndet": false
+   },
+   "6,6,8|4": {
+    "chain_determined": true,
+    "chain_survivors": [
+     5
+    ],
+    "mixed": true,
+    "n_det": 2,
+    "profiles": 4,
+    "uniform_det": false,
+    "uniform_ndet": false
+   },
+   "6,6,9|0": {
+    "chain_determined": true,
+    "chain_survivors": [
+     5
+    ],
+    "mixed": true,
+    "n_det": 40,
+    "profiles": 54,
+    "uniform_det": false,
+    "uniform_ndet": false
+   },
+   "6,6,9|1": {
+    "chain_determined": true,
+    "chain_survivors": [
+     5
+    ],
+    "mixed": true,
+    "n_det": 22,
+    "profiles": 34,
+    "uniform_det": false,
+    "uniform_ndet": false
+   },
+   "6,6,9|2": {
+    "chain_determined": true,
+    "chain_survivors": [
+     5
+    ],
+    "mixed": true,
+    "n_det": 10,
+    "profiles": 20,
+    "uniform_det": false,
+    "uniform_ndet": false
+   },
+   "6,6,9|3": {
+    "chain_determined": true,
+    "chain_survivors": [
+     5
+    ],
+    "mixed": true,
+    "n_det": 3,
+    "profiles": 10,
+    "uniform_det": false,
+    "uniform_ndet": false
+   },
+   "6,8,8|0": {
+    "chain_determined": true,
+    "chain_survivors": [
+     5
+    ],
+    "mixed": true,
+    "n_det": 63,
+    "profiles": 66,
+    "uniform_det": false,
+    "uniform_ndet": false
+   },
+   "6,8,8|1": {
+    "chain_determined": true,
+    "chain_survivors": [
+     5
+    ],
+    "mixed": true,
+    "n_det": 42,
+    "profiles": 45,
+    "uniform_det": false,
+    "uniform_ndet": false
+   },
+   "6,8,8|2": {
+    "chain_determined": true,
+    "chain_survivors": [
+     5
+    ],
+    "mixed": true,
+    "n_det": 24,
+    "profiles": 27,
+    "uniform_det": false,
+    "uniform_ndet": false
+   },
+   "6,8,8|3": {
+    "chain_determined": true,
+    "chain_survivors": [
+     5
+    ],
+    "mixed": true,
+    "n_det": 13,
+    "profiles": 16,
+    "uniform_det": false,
+    "uniform_ndet": false
+   },
+   "6,8,8|4": {
+    "chain_determined": true,
+    "chain_survivors": [
+     5
+    ],
+    "mixed": true,
+    "n_det": 4,
+    "profiles": 7,
+    "uniform_det": false,
+    "uniform_ndet": false
+   },
+   "6,8,9|0": {
+    "chain_determined": true,
+    "chain_survivors": [
+     5
+    ],
+    "mixed": true,
+    "n_det": 95,
+    "profiles": 120,
+    "uniform_det": false,
+    "uniform_ndet": false
+   },
+   "6,8,9|1": {
+    "chain_determined": true,
+    "chain_survivors": [
+     5
+    ],
+    "mixed": true,
+    "n_det": 53,
+    "profiles": 78,
+    "uniform_det": false,
+    "uniform_ndet": false
+   },
+   "6,8,9|2": {
+    "chain_determined": true,
+    "chain_survivors": [
+     5
+    ],
+    "mixed": true,
+    "n_det": 24,
+    "profiles": 47,
+    "uniform_det": false,
+    "uniform_ndet": false
+   },
+   "6,8,9|3": {
+    "chain_determined": true,
+    "chain_survivors": [
+     5
+    ],
+    "mixed": true,
+    "n_det": 6,
+    "profiles": 25,
+    "uniform_det": false,
+    "uniform_ndet": false
+   },
+   "6,9,9|0": {
+    "chain_determined": true,
+    "chain_survivors": [
+     5
+    ],
+    "mixed": true,
+    "n_det": 64,
+    "profiles": 78,
+    "uniform_det": false,
+    "uniform_ndet": false
+   },
+   "6,9,9|1": {
+    "chain_determined": true,
+    "chain_survivors": [
+     5
+    ],
+    "mixed": true,
+    "n_det": 40,
+    "profiles": 54,
+    "uniform_det": false,
+    "uniform_ndet": false
+   },
+   "6,9,9|2": {
+    "chain_determined": true,
+    "chain_survivors": [
+     5
+    ],
+    "mixed": true,
+    "n_det": 19,
+    "profiles": 33,
+    "uniform_det": false,
+    "uniform_ndet": false
+   },
+   "6,9,9|3": {
+    "chain_determined": true,
+    "chain_survivors": [
+     5
+    ],
+    "mixed": true,
+    "n_det": 6,
+    "profiles": 20,
+    "uniform_det": false,
+    "uniform_ndet": false
+   },
+   "8,8,9|0": {
+    "chain_determined": true,
+    "chain_survivors": [
+     5
+    ],
+    "mixed": true,
+    "n_det": 92,
+    "profiles": 100,
+    "uniform_det": false,
+    "uniform_ndet": false
+   },
+   "8,8,9|1": {
+    "chain_determined": true,
+    "chain_survivors": [
+     5
+    ],
+    "mixed": true,
+    "n_det": 62,
+    "profiles": 70,
+    "uniform_det": false,
+    "uniform_ndet": false
+   },
+   "8,8,9|2": {
+    "chain_determined": true,
+    "chain_survivors": [
+     5
+    ],
+    "mixed": true,
+    "n_det": 40,
+    "profiles": 48,
+    "uniform_det": false,
+    "uniform_ndet": false
+   },
+   "8,8,9|3": {
+    "chain_determined": true,
+    "chain_survivors": [
+     5
+    ],
+    "mixed": true,
+    "n_det": 22,
+    "profiles": 30,
+    "uniform_det": false,
+    "uniform_ndet": false
+   },
+   "8,8,9|4": {
+    "chain_determined": true,
+    "chain_survivors": [
+     5
+    ],
+    "mixed": true,
+    "n_det": 10,
+    "profiles": 18,
+    "uniform_det": false,
+    "uniform_ndet": false
+   },
+   "8,8,9|5": {
+    "chain_determined": true,
+    "chain_survivors": [
+     5
+    ],
+    "mixed": true,
+    "n_det": 3,
+    "profiles": 9,
+    "uniform_det": false,
+    "uniform_ndet": false
+   },
+   "8,9,9|0": {
+    "chain_determined": true,
+    "chain_survivors": [
+     5
+    ],
+    "mixed": true,
+    "n_det": 102,
+    "profiles": 110,
+    "uniform_det": false,
+    "uniform_ndet": false
+   },
+   "8,9,9|1": {
+    "chain_determined": true,
+    "chain_survivors": [
+     5
+    ],
+    "mixed": true,
+    "n_det": 72,
+    "profiles": 80,
+    "uniform_det": false,
+    "uniform_ndet": false
+   },
+   "8,9,9|2": {
+    "chain_determined": true,
+    "chain_survivors": [
+     5
+    ],
+    "mixed": true,
+    "n_det": 46,
+    "profiles": 54,
+    "uniform_det": false,
+    "uniform_ndet": false
+   },
+   "8,9,9|3": {
+    "chain_determined": true,
+    "chain_survivors": [
+     5
+    ],
+    "mixed": true,
+    "n_det": 28,
+    "profiles": 36,
+    "uniform_det": false,
+    "uniform_ndet": false
+   },
+   "8,9,9|4": {
+    "chain_determined": true,
+    "chain_survivors": [
+     5
+    ],
+    "mixed": true,
+    "n_det": 13,
+    "profiles": 21,
+    "uniform_det": false,
+    "uniform_ndet": false
+   },
+   "8,9,9|5": {
+    "chain_determined": true,
+    "chain_survivors": [
+     5
+    ],
+    "mixed": true,
+    "n_det": 4,
+    "profiles": 12,
+    "uniform_det": false,
+    "uniform_ndet": false
+   }
+  },
+  "first_loser_violations": 0,
+  "gprime_survivor_mismatches": 0,
+  "keys": 715,
+  "max_states": 590430,
+  "mixed_keys": 34,
+  "residue_class_census": {
+   "1": 55,
+   "2": 330,
+   "3": 330
+  },
+  "two_residue_keys": 330,
+  "uniformly_determined_keys": 98,
+  "uniformly_ndet_keys": 583
+ },
+ "sweep_inputs": {
+  "r11": {
+   "format": "full",
+   "max_states": 590430,
+   "records": 15863,
+   "sha256_packed": "08324c19e8837041d8128423f26d88100b1ba7963fea1b86e3f90052b10664f0",
+   "sha256_uncompressed": "4d824a87690b721a1a98e0856b04054dbc58b3be4914168f0a9be45db64c2b52",
+   "skipped": 0
+  }
+ }
+}

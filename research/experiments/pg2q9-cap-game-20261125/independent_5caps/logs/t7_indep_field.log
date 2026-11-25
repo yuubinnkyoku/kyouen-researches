@@ -1,0 +1,22 @@
+GF(9) pair arithmetic: i^2 = -1, inverses, distributivity verified
+points built from the coordinate map: 91 distinct
+[PASS] independent rebuild: 91 distinct points
+independent rebuild: 91 distinct lines
+[PASS] independent rebuild: 91 lines, all of size 10
+[PASS] independent rebuild: computed lines == board lines
+[PASS] independent rebuild: frame {0,1,10,20} is a 4-cap
+independent rebuild: |secant cover| = 49, extensions = 42
+[PASS] independent rebuild: exactly 42 extensions of the frame
+[PASS] independent rebuild: all three representatives are 5-caps
+
+witness M = (8,0,4,5,0,4,5,5,2): det = (1, 0), det != 0: True
+  images of [0, 1, 10, 20, 31]: [0, 1, 10, 20, 41]
+[PASS] independent field: the witness maps {0,1,10,20,31} onto {0,1,10,20,41}
+[PASS] independent field: witness does not preserve the frame (it maps it to {0,10,20,41})
+
+independent field: complete search -> |Stab([0, 1, 10, 20, 31])| = 4
+[PASS] independent field: |Stab{0,1,10,20,31}| = 4
+[PASS] independent field: {0,1,10,20,31} -> {0,1,10,20,41} is EQUIVALENT
+[PASS] independent field: {0,1,10,20,31} -> {0,1,10,20,42} is INEQUIVALENT
+
+CROSS-CHECK: PASS

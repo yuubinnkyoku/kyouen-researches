@@ -1,0 +1,192 @@
+{
+  "checker_source_sha256": "34249932790a9e9d924e9403b75563a2ff051277923301e34ace33e2a5a3650b",
+  "common_proof_ascii": "0\n",
+  "proof_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+  "cases": [
+    {
+      "m": 1,
+      "k": 1,
+      "variables": 1,
+      "clauses": 2,
+      "clause_deletion_distance": 1,
+      "proof_lines": 1,
+      "cnf_sha256": "ac42a371b5a124286c410ed5dfa2e3be7ee7d5b1feac6f08e7e1715f0c3669a8",
+      "checker_rc": 0,
+      "checker_stdout": "steps=1 rup=1 rat=0 rat_checks=0 deletions=0 empty=1 ok=1\nVERIFIED"
+    },
+    {
+      "m": 2,
+      "k": 1,
+      "variables": 2,
+      "clauses": 4,
+      "clause_deletion_distance": 1,
+      "proof_lines": 1,
+      "cnf_sha256": "f558efbfb194509b8552172f05e3bad7676c2163903a86997d1cd4668faf5ffb",
+      "checker_rc": 0,
+      "checker_stdout": "steps=1 rup=1 rat=0 rat_checks=0 deletions=0 empty=1 ok=1\nVERIFIED"
+    },
+    {
+      "m": 2,
+      "k": 2,
+      "variables": 2,
+      "clauses": 4,
+      "clause_deletion_distance": 2,
+      "proof_lines": 1,
+      "cnf_sha256": "a275cd479d606fd4824c8012d9a4c38b711b787561d9f293a44f4e39db4a92dd",
+      "checker_rc": 0,
+      "checker_stdout": "steps=1 rup=1 rat=0 rat_checks=0 deletions=0 empty=1 ok=1\nVERIFIED"
+    },
+    {
+      "m": 3,
+      "k": 1,
+      "variables": 3,
+      "clauses": 6,
+      "clause_deletion_distance": 1,
+      "proof_lines": 1,
+      "cnf_sha256": "00d89886f22762af4a42755c8093f035a93cabf8fa30630e24a7b9b03932126e",
+      "checker_rc": 0,
+      "checker_stdout": "steps=1 rup=1 rat=0 rat_checks=0 deletions=0 empty=1 ok=1\nVERIFIED"
+    },
+    {
+      "m": 3,
+      "k": 2,
+      "variables": 3,
+      "clauses": 6,
+      "clause_deletion_distance": 2,
+      "proof_lines": 1,
+      "cnf_sha256": "a5773dc9c0dfb25c591ffd2369f9f308a8689e9e542f89128963c598105864f6",
+      "checker_rc": 0,
+      "checker_stdout": "steps=1 rup=1 rat=0 rat_checks=0 deletions=0 empty=1 ok=1\nVERIFIED"
+    },
+    {
+      "m": 3,
+      "k": 3,
+      "variables": 3,
+      "clauses": 6,
+      "clause_deletion_distance": 3,
+      "proof_lines": 1,
+      "cnf_sha256": "9eca97e49ec5819ceae6c8840c24b2632552d884339e31a7cbb041db909a2ec5",
+      "checker_rc": 0,
+      "checker_stdout": "steps=1 rup=1 rat=0 rat_checks=0 deletions=0 empty=1 ok=1\nVERIFIED"
+    },
+    {
+      "m": 4,
+      "k": 1,
+      "variables": 4,
+      "clauses": 8,
+      "clause_deletion_distance": 1,
+      "proof_lines": 1,
+      "cnf_sha256": "e2c7012fe611cbab00bb1b297e565fc2c9bd7d9998e5459385fd60f7a9dadd03",
+      "checker_rc": 0,
+      "checker_stdout": "steps=1 rup=1 rat=0 rat_checks=0 deletions=0 empty=1 ok=1\nVERIFIED"
+    },
+    {
+      "m": 4,
+      "k": 2,
+      "variables": 4,
+      "clauses": 8,
+      "clause_deletion_distance": 2,
+      "proof_lines": 1,
+      "cnf_sha256": "e96391693231ecb92209c52b595ac2fce4203ae5bd61eac9f564fc0dfbeb0fd7",
+      "checker_rc": 0,
+      "checker_stdout": "steps=1 rup=1 rat=0 rat_checks=0 deletions=0 empty=1 ok=1\nVERIFIED"
+    },
+    {
+      "m": 4,
+      "k": 3,
+      "variables": 4,
+      "clauses": 8,
+      "clause_deletion_distance": 3,
+      "proof_lines": 1,
+      "cnf_sha256": "9eb064b083c2eb584a10e5a15c0e6f3b6279a2f007e62ede65a2f66613395fbe",
+      "checker_rc": 0,
+      "checker_stdout": "steps=1 rup=1 rat=0 rat_checks=0 deletions=0 empty=1 ok=1\nVERIFIED"
+    },
+    {
+      "m": 4,
+      "k": 4,
+      "variables": 4,
+      "clauses": 8,
+      "clause_deletion_distance": 4,
+      "proof_lines": 1,
+      "cnf_sha256": "5827da656adf703458cc000d426d4686bead486987d3d8242f3ad603bcf41a11",
+      "checker_rc": 0,
+      "checker_stdout": "steps=1 rup=1 rat=0 rat_checks=0 deletions=0 empty=1 ok=1\nVERIFIED"
+    },
+    {
+      "m": 5,
+      "k": 1,
+      "variables": 5,
+      "clauses": 10,
+      "clause_deletion_distance": 1,
+      "proof_lines": 1,
+      "cnf_sha256": "03160217e21ddf1b197d996492996da84d33bfd6b1193ceff817aeba1ad46bd6",
+      "checker_rc": 0,
+      "checker_stdout": "steps=1 rup=1 rat=0 rat_checks=0 deletions=0 empty=1 ok=1\nVERIFIED"
+    },
+    {
+      "m": 5,
+      "k": 2,
+      "variables": 5,
+      "clauses": 10,
+      "clause_deletion_distance": 2,
+      "proof_lines": 1,
+      "cnf_sha256": "7639b9d934c239647e81679d4a31d7098d7082a310bdcba65cf051cfaca9e033",
+      "checker_rc": 0,
+      "checker_stdout": "steps=1 rup=1 rat=0 rat_checks=0 deletions=0 empty=1 ok=1\nVERIFIED"
+    },
+    {
+      "m": 5,
+      "k": 3,
+      "variables": 5,
+      "clauses": 10,
+      "clause_deletion_distance": 3,
+      "proof_lines": 1,
+      "cnf_sha256": "663e15efe05b85d7b68788368f08c2891f0528902de0b9834753bd64f8ec6682",
+      "checker_rc": 0,
+      "checker_stdout": "steps=1 rup=1 rat=0 rat_checks=0 deletions=0 empty=1 ok=1\nVERIFIED"
+    },
+    {
+      "m": 5,
+      "k": 4,
+      "variables": 5,
+      "clauses": 10,
+      "clause_deletion_distance": 4,
+      "proof_lines": 1,
+      "cnf_sha256": "1f965c5328ac52d68a39b02d441f8763b2676135d763988f433722b4e74104a4",
+      "checker_rc": 0,
+      "checker_stdout": "steps=1 rup=1 rat=0 rat_checks=0 deletions=0 empty=1 ok=1\nVERIFIED"
+    },
+    {
+      "m": 5,
+      "k": 5,
+      "variables": 5,
+      "clauses": 10,
+      "clause_deletion_distance": 5,
+      "proof_lines": 1,
+      "cnf_sha256": "b37382af3afa6001bd4d5a14d9d71f571d562dda8bd5760c41342acb4d0bb4f2",
+      "checker_rc": 0,
+      "checker_stdout": "steps=1 rup=1 rat=0 rat_checks=0 deletions=0 empty=1 ok=1\nVERIFIED"
+    }
+  ],
+  "checked_cases": 15,
+  "padded_proof_controls": [
+    {
+      "m": 5,
+      "k": 1,
+      "clause_deletion_distance": 1,
+      "proof_lines": 8,
+      "checker_rc": 0,
+      "proof_sha256": "61a0593384b9b1f654b30eb2198deaf418807e7adcdc5e7e6bce3977a021ebf5"
+    },
+    {
+      "m": 5,
+      "k": 5,
+      "clause_deletion_distance": 5,
+      "proof_lines": 8,
+      "checker_rc": 0,
+      "proof_sha256": "61a0593384b9b1f654b30eb2198deaf418807e7adcdc5e7e6bce3977a021ebf5"
+    }
+  ],
+  "scope": "m=1..5 finite checks; the all-m theorem has a separate elementary proof."
+}

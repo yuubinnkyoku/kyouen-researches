@@ -1,0 +1,144 @@
+{
+  "audit": "PASS",
+  "maximum_normal_core": 6,
+  "maximum_six_kernel_types": 10,
+  "by_points": {
+    "8": 3,
+    "9": 6,
+    "10": 1
+  },
+  "records": [
+    {
+      "n": 8,
+      "edges": [
+        193,
+        50,
+        76,
+        22,
+        152,
+        224
+      ],
+      "misere_without_free": 6,
+      "misere_one_free": 7
+    },
+    {
+      "n": 9,
+      "edges": [
+        321,
+        262,
+        56,
+        140,
+        304,
+        448
+      ],
+      "misere_without_free": 6,
+      "misere_one_free": 7
+    },
+    {
+      "n": 8,
+      "edges": [
+        133,
+        146,
+        100,
+        88,
+        152,
+        224
+      ],
+      "misere_without_free": 6,
+      "misere_one_free": 7
+    },
+    {
+      "n": 8,
+      "edges": [
+        69,
+        146,
+        164,
+        88,
+        152,
+        224
+      ],
+      "misere_without_free": 6,
+      "misere_one_free": 7
+    },
+    {
+      "n": 9,
+      "edges": [
+        73,
+        274,
+        388,
+        168,
+        304,
+        448
+      ],
+      "misere_without_free": 6,
+      "misere_one_free": 7
+    },
+    {
+      "n": 9,
+      "edges": [
+        193,
+        274,
+        164,
+        392,
+        304,
+        448
+      ],
+      "misere_without_free": 6,
+      "misere_one_free": 7
+    },
+    {
+      "n": 9,
+      "edges": [
+        69,
+        22,
+        392,
+        304,
+        416,
+        448
+      ],
+      "misere_without_free": 1,
+      "misere_one_free": 0
+    },
+    {
+      "n": 9,
+      "edges": [
+        67,
+        292,
+        200,
+        336,
+        416,
+        448
+      ],
+      "misere_without_free": 6,
+      "misere_one_free": 7
+    },
+    {
+      "n": 9,
+      "edges": [
+        11,
+        140,
+        336,
+        352,
+        416,
+        448
+      ],
+      "misere_without_free": 1,
+      "misere_one_free": 0
+    },
+    {
+      "n": 10,
+      "edges": [
+        11,
+        268,
+        656,
+        672,
+        832,
+        896
+      ],
+      "misere_without_free": 0,
+      "misere_one_free": 1
+    }
+  ],
+  "normal_six_condition": "one of these kernels plus an even number of isolated legal points",
+  "normal_seven_condition": "one of these kernels plus an odd number of isolated legal points"
+}

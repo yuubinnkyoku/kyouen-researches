@@ -1,0 +1,96 @@
+{
+ "total_5caps": 14859936,
+ "conics": 58968,
+ "pgl2_9_order": 720,
+ "pgl2_9_orbits_on_5subsets": [
+  180,
+  72
+ ],
+ "orbits": [
+  {
+   "count_of_five_subsets": 180,
+   "orbit_size": 10614240,
+   "stabilizer_order": 4
+  },
+  {
+   "count_of_five_subsets": 72,
+   "orbit_size": 4245696,
+   "stabilizer_order": 10
+  }
+ ],
+ "witness_two_s4_orbits_fuse": {
+  "matrix": [
+   [
+    [
+     2,
+     2
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   [
+    [
+     1,
+     2
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   [
+    [
+     1,
+     2
+    ],
+    [
+     1,
+     2
+    ],
+    [
+     0,
+     2
+    ]
+   ]
+  ],
+  "det": [
+   1,
+   0
+  ],
+  "image_of_cap": [
+   0,
+   1,
+   10,
+   20,
+   41
+  ],
+  "image_of_frame": [
+   0,
+   10,
+   20,
+   41
+  ],
+  "maps_31_to_41": true,
+  "frame_fixed": false
+ },
+ "grundy": {
+  "0,1,10,20,31": {
+   "grundy": 1,
+   "upset_positions": 132
+  },
+  "0,1,10,20,42": {
+   "grundy": 1,
+   "upset_positions": 128
+  }
+ }
+}

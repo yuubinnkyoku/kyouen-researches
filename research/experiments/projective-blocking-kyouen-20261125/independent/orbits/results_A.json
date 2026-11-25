@@ -1,0 +1,186 @@
+{
+  "claim": "A",
+  "verdict": "PASS",
+  "checks": {
+    "board_satisfies_PG_2_3_axioms": {
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    "board_isomorphic_to_F3_cubed_construction": {
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    "PGL_3_3_order_computed": {
+      "actual": 5616,
+      "expected": 5616,
+      "pass": true
+    },
+    "maximal_safe_7_set_count": {
+      "actual": 234,
+      "expected": 234,
+      "pass": true
+    },
+    "complement_six_sets_distinct": {
+      "actual": 234,
+      "expected": 234,
+      "pass": true
+    },
+    "three_point_line_count_histogram": {
+      "actual": {
+        "4": 234
+      },
+      "expected": {
+        "4": 234
+      },
+      "pass": true
+    },
+    "every_six_set_has_exactly_four_three_point_lines": {
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    "those_four_lines_are_in_general_position": {
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    "six_set_equals_the_six_pairwise_intersections": {
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    "general_position_line_quadruple_count": {
+      "actual": 234,
+      "expected": 234,
+      "pass": true
+    },
+    "distinct_quadrilateral_vertex_sets": {
+      "actual": 234,
+      "expected": 234,
+      "pass": true
+    },
+    "complements_equal_quadrilateral_vertex_sets": {
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    "formula_C13_4_minus_13C43_9_minus_13": {
+      "actual": 234,
+      "expected": 234,
+      "pass": true
+    },
+    "all_complements_are_blocking": {
+      "actual": 234,
+      "expected": 234,
+      "pass": true
+    },
+    "all_complements_are_minimal_blocking": {
+      "actual": 234,
+      "expected": 234,
+      "pass": true
+    },
+    "direct_minimal_blocking_six_set_count": {
+      "actual": 234,
+      "expected": 234,
+      "pass": true
+    },
+    "direct_minimal_blocking_sets_equal_complements": {
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    "orbit_count_under_PGL_3_3": {
+      "actual": 1,
+      "expected": 1,
+      "pass": true
+    },
+    "single_orbit_size": {
+      "actual": 234,
+      "expected": 234,
+      "pass": true
+    }
+  },
+  "data": {
+    "board": "PG(2,3)",
+    "n_points": 13,
+    "n_lines": 13,
+    "pgl_order_computed": 5616,
+    "pgl_order_expected": 5616,
+    "generator_count": 13,
+    "generator_descriptions": [
+      "x0_new = x0 + 1*x1",
+      "x0_new = x0 + 2*x1",
+      "x0_new = x0 + 1*x2",
+      "x0_new = x0 + 2*x2",
+      "x1_new = x1 + 1*x0",
+      "x1_new = x1 + 2*x0",
+      "x1_new = x1 + 1*x2",
+      "x1_new = x1 + 2*x2",
+      "x2_new = x2 + 1*x0",
+      "x2_new = x2 + 2*x0",
+      "x2_new = x2 + 1*x1",
+      "x2_new = x2 + 2*x1",
+      "diag(g,1,1), g a generator of F_q^*"
+    ],
+    "safe_7_sets": 702,
+    "maximal_safe_7_sets": 234,
+    "complement_six_sets": 234,
+    "three_point_line_count_histogram": {
+      "4": 234
+    },
+    "general_position_line_quadruples": 234,
+    "distinct_quadrilateral_vertex_sets": 234,
+    "blocking_six_sets": 234,
+    "minimal_blocking_six_sets": 234,
+    "direct_minimal_blocking_six_sets": 234,
+    "direct_minimal_blocking_equals_complements": true,
+    "quadrilateral_count_formula": {
+      "C(13,4)": 715,
+      "subtract_triples_concurrent": 468,
+      "subtract_all_four_concurrent": 13,
+      "value": 234
+    },
+    "orbit_sizes": [
+      234
+    ],
+    "representative": {
+      "mask": 187,
+      "points": [
+        0,
+        1,
+        3,
+        4,
+        5,
+        7
+      ],
+      "three_point_lines_as_point_sets": [
+        [
+          0,
+          1,
+          2,
+          3
+        ],
+        [
+          0,
+          4,
+          5,
+          6
+        ],
+        [
+          1,
+          4,
+          7,
+          10
+        ],
+        [
+          3,
+          5,
+          7,
+          12
+        ]
+      ]
+    }
+  }
+}

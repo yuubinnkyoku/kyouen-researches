@@ -1,0 +1,231 @@
+{
+ "bad": [
+  0,
+  0,
+  0,
+  360,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0
+ ],
+ "counts": [
+  8928,
+  360,
+  8928,
+  360,
+  1939,
+  114,
+  1939,
+  114,
+  30051,
+  1516,
+  15304
+ ],
+ "engine_gate": "PASS",
+ "engine_sha": "bd5f22e415a78368c9b798296bc84948d5637decbf3c21a92404d45fb12e3a92",
+ "examples": [
+  [],
+  [],
+  [],
+  [
+   [
+    4,
+    1,
+    -2,
+    0,
+    1
+   ],
+   [
+    4,
+    1,
+    -1,
+    2,
+    1
+   ],
+   [
+    4,
+    1,
+    0,
+    0,
+    1
+   ],
+   [
+    4,
+    2,
+    -4,
+    0,
+    1
+   ],
+   [
+    4,
+    2,
+    -3,
+    2,
+    1
+   ],
+   [
+    4,
+    2,
+    -2,
+    0,
+    1
+   ]
+  ],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  []
+ ],
+ "hists": {
+  "D1_class": {
+   "R0": 206,
+   "R1": 218,
+   "R2": 229,
+   "R3": 240,
+   "R4": 249,
+   "R5": 258,
+   "core": 294,
+   "dl": 4294,
+   "hi": 2940
+  }
+ },
+ "kit": "verify_k1290",
+ "obs": {
+  "lbu7g": {
+   "claim": "finite observation only; NOT universal.",
+   "law": "plane-7 law on token plane 8",
+   "points": 493
+  },
+  "lbu8g": {
+   "claim": "finite observation only; NOT universal.",
+   "law": "plane-8 law on token plane 9",
+   "points": 493
+  },
+  "z00_dedup": {
+   "cells": 320,
+   "claim": "finite observation only.",
+   "cpsf_bad": 0,
+   "mixed": 0
+  },
+  "z01_dedup": {
+   "cells": 320,
+   "claim": "finite observation only.",
+   "cpsf_bad": 0,
+   "mixed": 0
+  },
+  "z02_dedup": {
+   "cells": 320,
+   "claim": "finite observation only.",
+   "cpsf_bad": 0,
+   "mixed": 0
+  },
+  "z03_dedup": {
+   "cells": 320,
+   "claim": "finite observation only.",
+   "cpsf_bad": 0,
+   "mixed": 0
+  },
+  "z04_dedup": {
+   "cells": 320,
+   "claim": "finite observation only.",
+   "cpsf_bad": 0,
+   "mixed": 0
+  },
+  "z05_dedup": {
+   "cells": 320,
+   "claim": "finite observation only.",
+   "cpsf_bad": 0,
+   "mixed": 0
+  },
+  "z06_dedup": {
+   "cells": 320,
+   "claim": "finite observation only.",
+   "cpsf_bad": 0,
+   "mixed": 0
+  },
+  "z07_dedup": {
+   "cells": 320,
+   "claim": "finite observation only.",
+   "cpsf_bad": 0,
+   "mixed": 0
+  },
+  "z08_dedup": {
+   "cells": 320,
+   "claim": "finite observation only.",
+   "cpsf_bad": 0,
+   "mixed": 0
+  },
+  "z09_dedup": {
+   "cells": 320,
+   "claim": "finite observation only.",
+   "cpsf_bad": 0,
+   "mixed": 0
+  },
+  "z10_dedup": {
+   "cells": 320,
+   "claim": "finite observation only.",
+   "cpsf_bad": 0,
+   "mixed": 0
+  },
+  "z7_lowR_hist": {
+   "R": "0..7",
+   "claim": "finite observation only",
+   "hist": {
+    "0": 283,
+    "2": 280
+   }
+  },
+  "z7band": {
+   "box": "m<=10, g<=20, k in [max(-50,-2m-g),0]",
+   "claim": "finite observation only; NOT universal.",
+   "points": 4500
+  },
+  "z7bed": {
+   "box": "m<=10, j in [-24..0]",
+   "claim": "finite observation only; NOT universal.",
+   "points": 120
+  },
+  "z7far": {
+   "claim": "finite far-row observation only; NOT universal.",
+   "g": "1..18",
+   "k": "-12..-1",
+   "m": "12",
+   "points": 216
+  },
+  "z8_lowR_hist": {
+   "R": "0..7",
+   "claim": "finite observation only",
+   "hist": {
+    "0": 283,
+    "2": 280
+   }
+  },
+  "z8band": {
+   "box": "m<=10, g<=20, k in [max(-50,-2m-g),0]",
+   "claim": "finite observation only; NOT universal.",
+   "points": 4500
+  },
+  "z8bed": {
+   "box": "m<=10, j in [-24..0]",
+   "claim": "finite observation only; NOT universal.",
+   "points": 120
+  },
+  "z8far": {
+   "claim": "finite far-row observation only; NOT universal.",
+   "g": "1..18",
+   "k": "-12..-1",
+   "m": "12",
+   "points": 216
+  }
+ },
+ "overall_bad": 360,
+ "tamper": "z6b",
+ "total_comparisons": 69553
+}

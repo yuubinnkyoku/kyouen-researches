@@ -1,0 +1,35 @@
+# exact replay: order=0 (0=count-asc 1=count-desc 2=key-asc 3=s5-count-desc 4=s5-target92) share_tt=0
+# exact replay: id,stones,legal,is_or,budget,result,nodes,wall_s,key_lo,key_hi
+# residual_shadow row=0 audit_calls=0 crosscheck_calls=1 exact_calls=1 residual_memo_states=8 module_removed=7 component_splits=2 shared_hits=2 shared_stores=4 canonicalized=6 shared_size=4 exact_layer_hits=0 exact_layer_stores=0 exact_layer_size=0 closed_free=16 closed_two_edges=11 closed_sunflower=1 closed_paths=1
+replay,0,12,9,1,20000,1,0,1,9232379240416018432,140875196006420
+# residual_shadow row=1 audit_calls=0 crosscheck_calls=1 exact_calls=1 residual_memo_states=0 module_removed=1 component_splits=1 shared_hits=0 shared_stores=0 canonicalized=0 shared_size=4 exact_layer_hits=0 exact_layer_stores=0 exact_layer_size=0 closed_free=1 closed_two_edges=1 closed_sunflower=0 closed_paths=0
+replay,1,13,5,0,20000,2,0,1,9232379240416018432,140876269748244
+# residual_shadow row=2 audit_calls=0 crosscheck_calls=1 exact_calls=1 residual_memo_states=1 module_removed=1 component_splits=0 shared_hits=1 shared_stores=0 canonicalized=1 shared_size=4 exact_layer_hits=0 exact_layer_stores=0 exact_layer_size=0 closed_free=0 closed_two_edges=0 closed_sunflower=0 closed_paths=0
+replay,2,14,4,1,20000,1,0,2,9232942190369439744,140876269748244
+# residual_shadow row=3 audit_calls=0 crosscheck_calls=1 exact_calls=1 residual_memo_states=1 module_removed=0 component_splits=0 shared_hits=0 shared_stores=1 canonicalized=1 shared_size=5 exact_layer_hits=0 exact_layer_stores=0 exact_layer_size=0 closed_free=3 closed_two_edges=2 closed_sunflower=0 closed_paths=0
+replay,3,14,5,1,20000,1,0,1,144682536075853825,40532396807823426
+# residual_shadow row=4 audit_calls=0 crosscheck_calls=1 exact_calls=1 residual_memo_states=0 module_removed=0 component_splits=0 shared_hits=0 shared_stores=0 canonicalized=0 shared_size=5 exact_layer_hits=0 exact_layer_stores=0 exact_layer_size=0 closed_free=0 closed_two_edges=1 closed_sunflower=0 closed_paths=0
+replay,4,15,3,0,20000,2,0,1,144682536075857921,40532396807823426
+# residual_shadow row=5 audit_calls=0 crosscheck_calls=1 exact_calls=1 residual_memo_states=3 module_removed=2 component_splits=0 shared_hits=2 shared_stores=0 canonicalized=2 shared_size=5 exact_layer_hits=0 exact_layer_stores=0 exact_layer_size=0 closed_free=0 closed_two_edges=3 closed_sunflower=0 closed_paths=2
+replay,5,13,7,0,20000,2,0,1,9259752677606424576,274945019938
+# residual_shadow row=6 audit_calls=0 crosscheck_calls=1 exact_calls=1 residual_memo_states=1 module_removed=1 component_splits=0 shared_hits=0 shared_stores=1 canonicalized=1 shared_size=6 exact_layer_hits=0 exact_layer_stores=0 exact_layer_size=0 closed_free=2 closed_two_edges=3 closed_sunflower=0 closed_paths=0
+replay,6,13,6,0,20000,2,0,1,650770181055856640,36028806682646532
+# residual_shadow row=7 audit_calls=0 crosscheck_calls=1 exact_calls=1 residual_memo_states=0 module_removed=0 component_splits=0 shared_hits=0 shared_stores=0 canonicalized=0 shared_size=6 exact_layer_hits=0 exact_layer_stores=0 exact_layer_size=0 closed_free=0 closed_two_edges=1 closed_sunflower=0 closed_paths=0
+replay,7,14,3,1,20000,2,0,1,650770181055856640,36028944121600004
+# residual_shadow row=8 audit_calls=0 crosscheck_calls=1 exact_calls=1 residual_memo_states=2 module_removed=1 component_splits=0 shared_hits=1 shared_stores=0 canonicalized=1 shared_size=6 exact_layer_hits=0 exact_layer_stores=0 exact_layer_size=0 closed_free=3 closed_two_edges=2 closed_sunflower=0 closed_paths=1
+replay,8,14,7,1,20000,1,0,1,9224498077421945346,1099880726544
+# residual_shadow row=9 audit_calls=0 crosscheck_calls=1 exact_calls=1 residual_memo_states=11 module_removed=6 component_splits=0 shared_hits=5 shared_stores=3 canonicalized=8 shared_size=9 exact_layer_hits=0 exact_layer_stores=0 exact_layer_size=0 closed_free=12 closed_two_edges=13 closed_sunflower=0 closed_paths=3
+replay,9,13,10,0,20000,2,0,1,720585019940143104,175923112444928
+# residual_shadow row=10 audit_calls=0 crosscheck_calls=1 exact_calls=1 residual_memo_states=0 module_removed=0 component_splits=0 shared_hits=0 shared_stores=0 canonicalized=0 shared_size=9 exact_layer_hits=0 exact_layer_stores=0 exact_layer_size=0 closed_free=0 closed_two_edges=1 closed_sunflower=0 closed_paths=0
+replay,10,13,4,0,20000,2,0,1,4611862493264872768,34362949632
+# residual_shadow row=11 audit_calls=0 crosscheck_calls=1 exact_calls=1 residual_memo_states=6 module_removed=1 component_splits=0 shared_hits=3 shared_stores=2 canonicalized=5 shared_size=11 exact_layer_hits=0 exact_layer_stores=0 exact_layer_size=0 closed_free=6 closed_two_edges=5 closed_sunflower=0 closed_paths=2
+replay,11,13,8,0,20000,2,0,1,324823222786719776,563229134688512
+# residual_shadow row=12 audit_calls=0 crosscheck_calls=1 exact_calls=1 residual_memo_states=5 module_removed=8 component_splits=2 shared_hits=2 shared_stores=1 canonicalized=3 shared_size=12 exact_layer_hits=0 exact_layer_stores=0 exact_layer_size=0 closed_free=6 closed_two_edges=6 closed_sunflower=4 closed_paths=2
+replay,12,12,10,1,20000,1,0,1,290624287843303440,72057765836627970
+# residual_shadow row=13 audit_calls=0 crosscheck_calls=1 exact_calls=1 residual_memo_states=6 module_removed=2 component_splits=1 shared_hits=2 shared_stores=2 canonicalized=4 shared_size=14 exact_layer_hits=0 exact_layer_stores=0 exact_layer_size=0 closed_free=3 closed_two_edges=17 closed_sunflower=0 closed_paths=3
+replay,13,13,9,0,20000,2,0,1,2394736396632584,4503874538836224
+# residual_shadow row=14 audit_calls=0 crosscheck_calls=1 exact_calls=1 residual_memo_states=3 module_removed=1 component_splits=0 shared_hits=2 shared_stores=0 canonicalized=2 shared_size=14 exact_layer_hits=0 exact_layer_stores=0 exact_layer_size=0 closed_free=2 closed_two_edges=3 closed_sunflower=0 closed_paths=0
+replay,14,14,8,1,20000,1,0,1,3458764514391490819,634006966140928
+# residual_shadow row=15 audit_calls=0 crosscheck_calls=1 exact_calls=1 residual_memo_states=4 module_removed=1 component_splits=0 shared_hits=3 shared_stores=1 canonicalized=4 shared_size=15 exact_layer_hits=0 exact_layer_stores=0 exact_layer_size=0 closed_free=1 closed_two_edges=1 closed_sunflower=0 closed_paths=1
+replay,15,14,6,1,20000,1,0,1,146402253867106305,140737521910288
+# replay_done rows=16 wall_s=26

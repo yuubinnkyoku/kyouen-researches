@@ -1,0 +1,110 @@
+{
+ "mmax": 10000,
+ "n_primes": 926,
+ "band": "t in [4, T5(M)] with T5 = max(t52, t27), a=1 worst; prime-Y candidates + Y=M^2 check",
+ "n_cand_primeY": 26574669,
+ "n_smooth": 5038337,
+ "n_hits_window_empty": 133726,
+ "n_blocked_window_nonempty": 4897491,
+ "kodd_hist": {
+  "3": 110060,
+  "4": 23260,
+  "5": 406,
+  ">=6": 0
+ },
+ "tmax": {
+  "3": {
+   "t": 92,
+   "M": 9949,
+   "kap": 4722
+  },
+  "4": {
+   "t": 91,
+   "M": 9887,
+   "kap": 988
+  },
+  "5": {
+   "t": 19,
+   "M": 8693,
+   "kap": 1744
+  }
+ },
+ "k4_conj_i_violations_in_band": 0,
+ "k5_t_hist": {
+  "5": 74,
+  "6": 70,
+  "4": 111,
+  "8": 18,
+  "7": 34,
+  "9": 30,
+  "11": 11,
+  "10": 13,
+  "14": 4,
+  "15": 7,
+  "18": 5,
+  "13": 8,
+  "16": 6,
+  "17": 2,
+  "12": 11,
+  "19": 2
+ },
+ "k5_config_hist": {
+  "B4-3": 369,
+  "A": 18,
+  "B6-2535": 3,
+  "B6-max": 14,
+  "B1": 2
+ },
+ "k5_route_hist": {
+  "cap27": 369,
+  "cap52": 35,
+  "cap73": 2
+ },
+ "k5_min_M_per_t": {
+  "4": 3761,
+  "5": 2467,
+  "6": 3389,
+  "7": 4457,
+  "8": 4259,
+  "9": 4733,
+  "10": 6491,
+  "11": 5623,
+  "12": 8059,
+  "13": 7283,
+  "14": 6569,
+  "15": 6967,
+  "16": 7459,
+  "17": 7703,
+  "18": 7043,
+  "19": 8693
+ },
+ "k5_first_row": {
+  "M": 2467,
+  "kap": 2456,
+  "t": 5,
+  "Y": 14797,
+  "N": 36504198,
+  "a": 1,
+  "k0": 14790,
+  "odd": [
+   3,
+   3,
+   113,
+   131,
+   137
+  ],
+  "config": "B4-3",
+  "route": "cap27",
+  "cap_holds": true,
+  "Y_prime": true,
+  "t2_60": 5
+ },
+ "k5_all_Y_prime": true,
+ "k5_a_hist": {
+  "1": 404,
+  "2": 2
+ },
+ "k5_B43_with_p1p2_eq9": 341,
+ "n_smooth_kap_invalid": 7120,
+ "accounting_note": "n_smooth = n_hits + n_blocked + n_smooth_kap_invalid (prime-Y smooth candidates with kappa in {M-1, M} are outside the main regime)"
+}

@@ -1,0 +1,2028 @@
+{
+  "rule": "det[x^2+lambda*y^2,x,y,1]=0; all degeneracies included",
+  "parameter_domain": "all real numbers",
+  "boards": [
+    {
+      "n": 2,
+      "point_order": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "universal_edges": 1,
+      "exception_count": 0,
+      "generic": {
+        "edges": 1,
+        "safe_states": 15,
+        "root_grundy": 1,
+        "first_move_grundy": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "maximum_safe_size": 3,
+        "terminal_size_histogram": {
+          "3": 4
+        },
+        "grundy_histogram": {
+          "0": 8,
+          "1": 7
+        }
+      },
+      "exceptions": []
+    },
+    {
+      "n": 3,
+      "point_order": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "universal_edges": 9,
+      "exception_count": 7,
+      "generic": {
+        "edges": 9,
+        "safe_states": 334,
+        "root_grundy": 1,
+        "first_move_grundy": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "maximum_safe_size": 6,
+        "terminal_size_histogram": {
+          "5": 45,
+          "6": 6
+        },
+        "grundy_histogram": {
+          "0": 144,
+          "1": 109,
+          "2": 81
+        }
+      },
+      "exceptions": [
+        {
+          "lambda": "-2",
+          "added_edges": 2,
+          "edges": 11,
+          "safe_states": 318,
+          "root_grundy": 1,
+          "first_move_grundy": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "maximum_safe_size": 6,
+          "terminal_size_histogram": {
+            "5": 59,
+            "6": 2
+          },
+          "grundy_histogram": {
+            "0": 154,
+            "1": 135,
+            "2": 29
+          }
+        },
+        {
+          "lambda": "-1",
+          "added_edges": 20,
+          "edges": 29,
+          "safe_states": 252,
+          "root_grundy": 1,
+          "first_move_grundy": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "maximum_safe_size": 5,
+          "terminal_size_histogram": {
+            "3": 2,
+            "4": 20,
+            "5": 25
+          },
+          "grundy_histogram": {
+            "0": 82,
+            "1": 114,
+            "2": 56
+          }
+        },
+        {
+          "lambda": "-1/2",
+          "added_edges": 2,
+          "edges": 11,
+          "safe_states": 318,
+          "root_grundy": 1,
+          "first_move_grundy": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "maximum_safe_size": 6,
+          "terminal_size_histogram": {
+            "5": 59,
+            "6": 2
+          },
+          "grundy_histogram": {
+            "0": 154,
+            "1": 135,
+            "2": 29
+          }
+        },
+        {
+          "lambda": "0",
+          "added_edges": 36,
+          "edges": 45,
+          "safe_states": 211,
+          "root_grundy": 0,
+          "first_move_grundy": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "maximum_safe_size": 4,
+          "terminal_size_histogram": {
+            "3": 3,
+            "4": 81
+          },
+          "grundy_histogram": {
+            "0": 112,
+            "1": 90,
+            "2": 9
+          }
+        },
+        {
+          "lambda": "1/2",
+          "added_edges": 8,
+          "edges": 17,
+          "safe_states": 288,
+          "root_grundy": 1,
+          "first_move_grundy": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "maximum_safe_size": 5,
+          "terminal_size_histogram": {
+            "4": 4,
+            "5": 49
+          },
+          "grundy_histogram": {
+            "0": 132,
+            "1": 142,
+            "2": 14
+          }
+        },
+        {
+          "lambda": "1",
+          "added_edges": 5,
+          "edges": 14,
+          "safe_states": 298,
+          "root_grundy": 1,
+          "first_move_grundy": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "maximum_safe_size": 5,
+          "terminal_size_histogram": {
+            "5": 56
+          },
+          "grundy_histogram": {
+            "0": 149,
+            "1": 149
+          }
+        },
+        {
+          "lambda": "2",
+          "added_edges": 8,
+          "edges": 17,
+          "safe_states": 288,
+          "root_grundy": 1,
+          "first_move_grundy": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "maximum_safe_size": 5,
+          "terminal_size_histogram": {
+            "4": 4,
+            "5": 49
+          },
+          "grundy_histogram": {
+            "0": 132,
+            "1": 142,
+            "2": 14
+          }
+        }
+      ]
+    },
+    {
+      "n": 4,
+      "point_order": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "universal_edges": 70,
+      "exception_count": 41,
+      "generic": {
+        "edges": 70,
+        "safe_states": 11907,
+        "root_grundy": 1,
+        "first_move_grundy": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "maximum_safe_size": 8,
+        "terminal_size_histogram": {
+          "6": 16,
+          "7": 800,
+          "8": 172
+        },
+        "grundy_histogram": {
+          "0": 3236,
+          "1": 3969,
+          "2": 2350,
+          "3": 2312,
+          "4": 40
+        }
+      },
+      "exceptions": [
+        {
+          "lambda": "-6",
+          "added_edges": 8,
+          "edges": 78,
+          "safe_states": 10785,
+          "root_grundy": 1,
+          "first_move_grundy": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "maximum_safe_size": 8,
+          "terminal_size_histogram": {
+            "6": 96,
+            "7": 936,
+            "8": 56
+          },
+          "grundy_histogram": {
+            "0": 3868,
+            "1": 4271,
+            "2": 1494,
+            "3": 1076,
+            "4": 76
+          }
+        },
+        {
+          "lambda": "-4",
+          "added_edges": 12,
+          "edges": 82,
+          "safe_states": 10365,
+          "root_grundy": 1,
+          "first_move_grundy": [
+            2,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            2
+          ],
+          "maximum_safe_size": 8,
+          "terminal_size_histogram": {
+            "6": 160,
+            "7": 728,
+            "8": 66
+          },
+          "grundy_histogram": {
+            "0": 3310,
+            "1": 3919,
+            "2": 1528,
+            "3": 1344,
+            "4": 232,
+            "5": 32
+          }
+        },
+        {
+          "lambda": "-3",
+          "added_edges": 44,
+          "edges": 114,
+          "safe_states": 8571,
+          "root_grundy": 1,
+          "first_move_grundy": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "maximum_safe_size": 8,
+          "terminal_size_histogram": {
+            "5": 4,
+            "6": 388,
+            "7": 512,
+            "8": 12
+          },
+          "grundy_histogram": {
+            "0": 2752,
+            "1": 3111,
+            "2": 1488,
+            "3": 1024,
+            "4": 196
+          }
+        },
+        {
+          "lambda": "-5/2",
+          "added_edges": 8,
+          "edges": 78,
+          "safe_states": 10863,
+          "root_grundy": 1,
+          "first_move_grundy": [
+            2,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            2
+          ],
+          "maximum_safe_size": 8,
+          "terminal_size_histogram": {
+            "6": 100,
+            "7": 792,
+            "8": 90
+          },
+          "grundy_histogram": {
+            "0": 3324,
+            "1": 3949,
+            "2": 1770,
+            "3": 1668,
+            "4": 116,
+            "5": 36
+          }
+        },
+        {
+          "lambda": "-7/3",
+          "added_edges": 4,
+          "edges": 74,
+          "safe_states": 11361,
+          "root_grundy": 1,
+          "first_move_grundy": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "maximum_safe_size": 8,
+          "terminal_size_histogram": {
+            "6": 48,
+            "7": 884,
+            "8": 114
+          },
+          "grundy_histogram": {
+            "0": 3578,
+            "1": 4011,
+            "2": 1964,
+            "3": 1712,
+            "4": 80,
+            "5": 16
+          }
+        },
+        {
+          "lambda": "-2",
+          "added_edges": 44,
+          "edges": 114,
+          "safe_states": 8595,
+          "root_grundy": 1,
+          "first_move_grundy": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "maximum_safe_size": 8,
+          "terminal_size_histogram": {
+            "5": 12,
+            "6": 346,
+            "7": 504,
+            "8": 16
+          },
+          "grundy_histogram": {
+            "0": 2704,
+            "1": 3065,
+            "2": 1396,
+            "3": 1130,
+            "4": 236,
+            "5": 60,
+            "6": 4
+          }
+        },
+        {
+          "lambda": "-5/3",
+          "added_edges": 4,
+          "edges": 74,
+          "safe_states": 11419,
+          "root_grundy": 1,
+          "first_move_grundy": [
+            2,
+            0,
+            0,
+            2,
+            0,
+            2,
+            2,
+            0,
+            0,
+            2,
+            2,
+            0,
+            2,
+            0,
+            0,
+            2
+          ],
+          "maximum_safe_size": 8,
+          "terminal_size_histogram": {
+            "6": 48,
+            "7": 764,
+            "8": 144
+          },
+          "grundy_histogram": {
+            "0": 3282,
+            "1": 3943,
+            "2": 1986,
+            "3": 2124,
+            "4": 84
+          }
+        },
+        {
+          "lambda": "-3/2",
+          "added_edges": 44,
+          "edges": 114,
+          "safe_states": 8523,
+          "root_grundy": 1,
+          "first_move_grundy": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "maximum_safe_size": 8,
+          "terminal_size_histogram": {
+            "5": 12,
+            "6": 362,
+            "7": 556,
+            "8": 4
+          },
+          "grundy_histogram": {
+            "0": 2958,
+            "1": 3255,
+            "2": 1342,
+            "3": 868,
+            "4": 96,
+            "5": 4
+          }
+        },
+        {
+          "lambda": "-6/5",
+          "added_edges": 4,
+          "edges": 74,
+          "safe_states": 11419,
+          "root_grundy": 1,
+          "first_move_grundy": [
+            2,
+            0,
+            0,
+            2,
+            0,
+            2,
+            2,
+            0,
+            0,
+            2,
+            2,
+            0,
+            2,
+            0,
+            0,
+            2
+          ],
+          "maximum_safe_size": 8,
+          "terminal_size_histogram": {
+            "6": 48,
+            "7": 764,
+            "8": 144
+          },
+          "grundy_histogram": {
+            "0": 3282,
+            "1": 3943,
+            "2": 1986,
+            "3": 2124,
+            "4": 84
+          }
+        },
+        {
+          "lambda": "-1",
+          "added_edges": 226,
+          "edges": 296,
+          "safe_states": 5149,
+          "root_grundy": 2,
+          "first_move_grundy": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            0,
+            0,
+            1,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "maximum_safe_size": 7,
+          "terminal_size_histogram": {
+            "3": 12,
+            "5": 248,
+            "6": 448,
+            "7": 60
+          },
+          "grundy_histogram": {
+            "0": 1422,
+            "1": 1704,
+            "2": 1075,
+            "3": 824,
+            "4": 124
+          }
+        },
+        {
+          "lambda": "-5/6",
+          "added_edges": 4,
+          "edges": 74,
+          "safe_states": 11419,
+          "root_grundy": 1,
+          "first_move_grundy": [
+            2,
+            0,
+            0,
+            2,
+            0,
+            2,
+            2,
+            0,
+            0,
+            2,
+            2,
+            0,
+            2,
+            0,
+            0,
+            2
+          ],
+          "maximum_safe_size": 8,
+          "terminal_size_histogram": {
+            "6": 48,
+            "7": 764,
+            "8": 144
+          },
+          "grundy_histogram": {
+            "0": 3282,
+            "1": 3943,
+            "2": 1986,
+            "3": 2124,
+            "4": 84
+          }
+        },
+        {
+          "lambda": "-2/3",
+          "added_edges": 44,
+          "edges": 114,
+          "safe_states": 8523,
+          "root_grundy": 1,
+          "first_move_grundy": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "maximum_safe_size": 8,
+          "terminal_size_histogram": {
+            "5": 12,
+            "6": 362,
+            "7": 556,
+            "8": 4
+          },
+          "grundy_histogram": {
+            "0": 2958,
+            "1": 3255,
+            "2": 1342,
+            "3": 868,
+            "4": 96,
+            "5": 4
+          }
+        },
+        {
+          "lambda": "-3/5",
+          "added_edges": 4,
+          "edges": 74,
+          "safe_states": 11419,
+          "root_grundy": 1,
+          "first_move_grundy": [
+            2,
+            0,
+            0,
+            2,
+            0,
+            2,
+            2,
+            0,
+            0,
+            2,
+            2,
+            0,
+            2,
+            0,
+            0,
+            2
+          ],
+          "maximum_safe_size": 8,
+          "terminal_size_histogram": {
+            "6": 48,
+            "7": 764,
+            "8": 144
+          },
+          "grundy_histogram": {
+            "0": 3282,
+            "1": 3943,
+            "2": 1986,
+            "3": 2124,
+            "4": 84
+          }
+        },
+        {
+          "lambda": "-1/2",
+          "added_edges": 44,
+          "edges": 114,
+          "safe_states": 8595,
+          "root_grundy": 1,
+          "first_move_grundy": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "maximum_safe_size": 8,
+          "terminal_size_histogram": {
+            "5": 12,
+            "6": 346,
+            "7": 504,
+            "8": 16
+          },
+          "grundy_histogram": {
+            "0": 2704,
+            "1": 3065,
+            "2": 1396,
+            "3": 1130,
+            "4": 236,
+            "5": 60,
+            "6": 4
+          }
+        },
+        {
+          "lambda": "-3/7",
+          "added_edges": 4,
+          "edges": 74,
+          "safe_states": 11361,
+          "root_grundy": 1,
+          "first_move_grundy": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "maximum_safe_size": 8,
+          "terminal_size_histogram": {
+            "6": 48,
+            "7": 884,
+            "8": 114
+          },
+          "grundy_histogram": {
+            "0": 3578,
+            "1": 4011,
+            "2": 1964,
+            "3": 1712,
+            "4": 80,
+            "5": 16
+          }
+        },
+        {
+          "lambda": "-2/5",
+          "added_edges": 8,
+          "edges": 78,
+          "safe_states": 10863,
+          "root_grundy": 1,
+          "first_move_grundy": [
+            2,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            2
+          ],
+          "maximum_safe_size": 8,
+          "terminal_size_histogram": {
+            "6": 100,
+            "7": 792,
+            "8": 90
+          },
+          "grundy_histogram": {
+            "0": 3324,
+            "1": 3949,
+            "2": 1770,
+            "3": 1668,
+            "4": 116,
+            "5": 36
+          }
+        },
+        {
+          "lambda": "-1/3",
+          "added_edges": 44,
+          "edges": 114,
+          "safe_states": 8571,
+          "root_grundy": 1,
+          "first_move_grundy": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "maximum_safe_size": 8,
+          "terminal_size_histogram": {
+            "5": 4,
+            "6": 388,
+            "7": 512,
+            "8": 12
+          },
+          "grundy_histogram": {
+            "0": 2752,
+            "1": 3111,
+            "2": 1488,
+            "3": 1024,
+            "4": 196
+          }
+        },
+        {
+          "lambda": "-1/4",
+          "added_edges": 12,
+          "edges": 82,
+          "safe_states": 10365,
+          "root_grundy": 1,
+          "first_move_grundy": [
+            2,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            2
+          ],
+          "maximum_safe_size": 8,
+          "terminal_size_histogram": {
+            "6": 160,
+            "7": 728,
+            "8": 66
+          },
+          "grundy_histogram": {
+            "0": 3310,
+            "1": 3919,
+            "2": 1528,
+            "3": 1344,
+            "4": 232,
+            "5": 32
+          }
+        },
+        {
+          "lambda": "-1/6",
+          "added_edges": 8,
+          "edges": 78,
+          "safe_states": 10785,
+          "root_grundy": 1,
+          "first_move_grundy": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "maximum_safe_size": 8,
+          "terminal_size_histogram": {
+            "6": 96,
+            "7": 936,
+            "8": 56
+          },
+          "grundy_histogram": {
+            "0": 3868,
+            "1": 4271,
+            "2": 1494,
+            "3": 1076,
+            "4": 76
+          }
+        },
+        {
+          "lambda": "0",
+          "added_edges": 364,
+          "edges": 434,
+          "safe_states": 3355,
+          "root_grundy": 1,
+          "first_move_grundy": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "maximum_safe_size": 5,
+          "terminal_size_histogram": {
+            "3": 16,
+            "5": 1272
+          },
+          "grundy_histogram": {
+            "0": 1848,
+            "1": 1507
+          }
+        },
+        {
+          "lambda": "1/6",
+          "added_edges": 16,
+          "edges": 86,
+          "safe_states": 10235,
+          "root_grundy": 1,
+          "first_move_grundy": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "maximum_safe_size": 8,
+          "terminal_size_histogram": {
+            "5": 4,
+            "6": 188,
+            "7": 804,
+            "8": 50
+          },
+          "grundy_histogram": {
+            "0": 3556,
+            "1": 4017,
+            "2": 1354,
+            "3": 1016,
+            "4": 256,
+            "5": 32,
+            "6": 4
+          }
+        },
+        {
+          "lambda": "1/5",
+          "added_edges": 8,
+          "edges": 78,
+          "safe_states": 10835,
+          "root_grundy": 1,
+          "first_move_grundy": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "maximum_safe_size": 8,
+          "terminal_size_histogram": {
+            "6": 120,
+            "7": 828,
+            "8": 82
+          },
+          "grundy_histogram": {
+            "0": 3426,
+            "1": 4037,
+            "2": 1684,
+            "3": 1524,
+            "4": 140,
+            "5": 24
+          }
+        },
+        {
+          "lambda": "2/7",
+          "added_edges": 8,
+          "edges": 78,
+          "safe_states": 10799,
+          "root_grundy": 1,
+          "first_move_grundy": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "maximum_safe_size": 8,
+          "terminal_size_histogram": {
+            "6": 112,
+            "7": 888,
+            "8": 70
+          },
+          "grundy_histogram": {
+            "0": 3712,
+            "1": 4237,
+            "2": 1466,
+            "3": 1260,
+            "4": 104,
+            "5": 20
+          }
+        },
+        {
+          "lambda": "1/3",
+          "added_edges": 44,
+          "edges": 114,
+          "safe_states": 8507,
+          "root_grundy": 1,
+          "first_move_grundy": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "maximum_safe_size": 8,
+          "terminal_size_histogram": {
+            "5": 12,
+            "6": 406,
+            "7": 508,
+            "8": 8
+          },
+          "grundy_histogram": {
+            "0": 2838,
+            "1": 3123,
+            "2": 1402,
+            "3": 952,
+            "4": 180,
+            "5": 12
+          }
+        },
+        {
+          "lambda": "3/8",
+          "added_edges": 4,
+          "edges": 74,
+          "safe_states": 11333,
+          "root_grundy": 1,
+          "first_move_grundy": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "maximum_safe_size": 8,
+          "terminal_size_histogram": {
+            "6": 76,
+            "7": 796,
+            "8": 128
+          },
+          "grundy_histogram": {
+            "0": 3450,
+            "1": 4007,
+            "2": 1876,
+            "3": 1844,
+            "4": 140,
+            "5": 16
+          }
+        },
+        {
+          "lambda": "3/7",
+          "added_edges": 4,
+          "edges": 74,
+          "safe_states": 11311,
+          "root_grundy": 1,
+          "first_move_grundy": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "maximum_safe_size": 8,
+          "terminal_size_histogram": {
+            "6": 84,
+            "7": 856,
+            "8": 110
+          },
+          "grundy_histogram": {
+            "0": 3416,
+            "1": 3917,
+            "2": 1974,
+            "3": 1836,
+            "4": 152,
+            "5": 16
+          }
+        },
+        {
+          "lambda": "1/2",
+          "added_edges": 44,
+          "edges": 114,
+          "safe_states": 8531,
+          "root_grundy": 1,
+          "first_move_grundy": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "maximum_safe_size": 8,
+          "terminal_size_histogram": {
+            "5": 4,
+            "6": 388,
+            "7": 504,
+            "8": 12
+          },
+          "grundy_histogram": {
+            "0": 2680,
+            "1": 3095,
+            "2": 1532,
+            "3": 1036,
+            "4": 168,
+            "5": 20
+          }
+        },
+        {
+          "lambda": "6/11",
+          "added_edges": 4,
+          "edges": 74,
+          "safe_states": 11333,
+          "root_grundy": 1,
+          "first_move_grundy": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "maximum_safe_size": 8,
+          "terminal_size_histogram": {
+            "6": 76,
+            "7": 796,
+            "8": 128
+          },
+          "grundy_histogram": {
+            "0": 3450,
+            "1": 4007,
+            "2": 1876,
+            "3": 1844,
+            "4": 140,
+            "5": 16
+          }
+        },
+        {
+          "lambda": "3/5",
+          "added_edges": 4,
+          "edges": 74,
+          "safe_states": 11311,
+          "root_grundy": 1,
+          "first_move_grundy": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "maximum_safe_size": 8,
+          "terminal_size_histogram": {
+            "6": 84,
+            "7": 856,
+            "8": 110
+          },
+          "grundy_histogram": {
+            "0": 3416,
+            "1": 3917,
+            "2": 1974,
+            "3": 1836,
+            "4": 152,
+            "5": 16
+          }
+        },
+        {
+          "lambda": "2/3",
+          "added_edges": 28,
+          "edges": 98,
+          "safe_states": 9607,
+          "root_grundy": 1,
+          "first_move_grundy": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "maximum_safe_size": 8,
+          "terminal_size_histogram": {
+            "5": 4,
+            "6": 202,
+            "7": 696,
+            "8": 34
+          },
+          "grundy_histogram": {
+            "0": 3266,
+            "1": 3779,
+            "2": 1302,
+            "3": 1084,
+            "4": 144,
+            "5": 32
+          }
+        },
+        {
+          "lambda": "1",
+          "added_edges": 124,
+          "edges": 194,
+          "safe_states": 5811,
+          "root_grundy": 0,
+          "first_move_grundy": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "maximum_safe_size": 7,
+          "terminal_size_histogram": {
+            "5": 176,
+            "6": 688,
+            "7": 64
+          },
+          "grundy_histogram": {
+            "0": 1825,
+            "1": 2192,
+            "2": 1124,
+            "3": 574,
+            "4": 88,
+            "5": 8
+          }
+        },
+        {
+          "lambda": "3/2",
+          "added_edges": 28,
+          "edges": 98,
+          "safe_states": 9607,
+          "root_grundy": 1,
+          "first_move_grundy": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "maximum_safe_size": 8,
+          "terminal_size_histogram": {
+            "5": 4,
+            "6": 202,
+            "7": 696,
+            "8": 34
+          },
+          "grundy_histogram": {
+            "0": 3266,
+            "1": 3779,
+            "2": 1302,
+            "3": 1084,
+            "4": 144,
+            "5": 32
+          }
+        },
+        {
+          "lambda": "5/3",
+          "added_edges": 4,
+          "edges": 74,
+          "safe_states": 11311,
+          "root_grundy": 1,
+          "first_move_grundy": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "maximum_safe_size": 8,
+          "terminal_size_histogram": {
+            "6": 84,
+            "7": 856,
+            "8": 110
+          },
+          "grundy_histogram": {
+            "0": 3416,
+            "1": 3917,
+            "2": 1974,
+            "3": 1836,
+            "4": 152,
+            "5": 16
+          }
+        },
+        {
+          "lambda": "11/6",
+          "added_edges": 4,
+          "edges": 74,
+          "safe_states": 11333,
+          "root_grundy": 1,
+          "first_move_grundy": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "maximum_safe_size": 8,
+          "terminal_size_histogram": {
+            "6": 76,
+            "7": 796,
+            "8": 128
+          },
+          "grundy_histogram": {
+            "0": 3450,
+            "1": 4007,
+            "2": 1876,
+            "3": 1844,
+            "4": 140,
+            "5": 16
+          }
+        },
+        {
+          "lambda": "2",
+          "added_edges": 44,
+          "edges": 114,
+          "safe_states": 8531,
+          "root_grundy": 1,
+          "first_move_grundy": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "maximum_safe_size": 8,
+          "terminal_size_histogram": {
+            "5": 4,
+            "6": 388,
+            "7": 504,
+            "8": 12
+          },
+          "grundy_histogram": {
+            "0": 2680,
+            "1": 3095,
+            "2": 1532,
+            "3": 1036,
+            "4": 168,
+            "5": 20
+          }
+        },
+        {
+          "lambda": "7/3",
+          "added_edges": 4,
+          "edges": 74,
+          "safe_states": 11311,
+          "root_grundy": 1,
+          "first_move_grundy": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "maximum_safe_size": 8,
+          "terminal_size_histogram": {
+            "6": 84,
+            "7": 856,
+            "8": 110
+          },
+          "grundy_histogram": {
+            "0": 3416,
+            "1": 3917,
+            "2": 1974,
+            "3": 1836,
+            "4": 152,
+            "5": 16
+          }
+        },
+        {
+          "lambda": "8/3",
+          "added_edges": 4,
+          "edges": 74,
+          "safe_states": 11333,
+          "root_grundy": 1,
+          "first_move_grundy": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "maximum_safe_size": 8,
+          "terminal_size_histogram": {
+            "6": 76,
+            "7": 796,
+            "8": 128
+          },
+          "grundy_histogram": {
+            "0": 3450,
+            "1": 4007,
+            "2": 1876,
+            "3": 1844,
+            "4": 140,
+            "5": 16
+          }
+        },
+        {
+          "lambda": "3",
+          "added_edges": 44,
+          "edges": 114,
+          "safe_states": 8507,
+          "root_grundy": 1,
+          "first_move_grundy": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "maximum_safe_size": 8,
+          "terminal_size_histogram": {
+            "5": 12,
+            "6": 406,
+            "7": 508,
+            "8": 8
+          },
+          "grundy_histogram": {
+            "0": 2838,
+            "1": 3123,
+            "2": 1402,
+            "3": 952,
+            "4": 180,
+            "5": 12
+          }
+        },
+        {
+          "lambda": "7/2",
+          "added_edges": 8,
+          "edges": 78,
+          "safe_states": 10799,
+          "root_grundy": 1,
+          "first_move_grundy": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "maximum_safe_size": 8,
+          "terminal_size_histogram": {
+            "6": 112,
+            "7": 888,
+            "8": 70
+          },
+          "grundy_histogram": {
+            "0": 3712,
+            "1": 4237,
+            "2": 1466,
+            "3": 1260,
+            "4": 104,
+            "5": 20
+          }
+        },
+        {
+          "lambda": "5",
+          "added_edges": 8,
+          "edges": 78,
+          "safe_states": 10835,
+          "root_grundy": 1,
+          "first_move_grundy": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "maximum_safe_size": 8,
+          "terminal_size_histogram": {
+            "6": 120,
+            "7": 828,
+            "8": 82
+          },
+          "grundy_histogram": {
+            "0": 3426,
+            "1": 4037,
+            "2": 1684,
+            "3": 1524,
+            "4": 140,
+            "5": 24
+          }
+        },
+        {
+          "lambda": "6",
+          "added_edges": 16,
+          "edges": 86,
+          "safe_states": 10235,
+          "root_grundy": 1,
+          "first_move_grundy": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "maximum_safe_size": 8,
+          "terminal_size_histogram": {
+            "5": 4,
+            "6": 188,
+            "7": 804,
+            "8": 50
+          },
+          "grundy_histogram": {
+            "0": 3556,
+            "1": 4017,
+            "2": 1354,
+            "3": 1016,
+            "4": 256,
+            "5": 32,
+            "6": 4
+          }
+        }
+      ]
+    }
+  ]
+}

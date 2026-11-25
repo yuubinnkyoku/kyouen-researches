@@ -1,0 +1,91 @@
+{
+  "baseline": {
+    "rows": 16,
+    "nodes": 0,
+    "counters": {
+      "audit_calls": 0,
+      "crosscheck_calls": 16,
+      "exact_calls": 16,
+      "residual_memo_states": 167,
+      "module_removed": 227,
+      "component_splits": 10,
+      "shared_hits": 0,
+      "shared_stores": 0,
+      "canonicalized": 0,
+      "shared_size": 0,
+      "exact_layer_hits": 0,
+      "exact_layer_stores": 0,
+      "exact_layer_size": 0
+    }
+  },
+  "fast": {
+    "rows": 16,
+    "nodes": 0,
+    "counters": {
+      "audit_calls": 0,
+      "crosscheck_calls": 16,
+      "exact_calls": 16,
+      "residual_memo_states": 51,
+      "module_removed": 32,
+      "component_splits": 6,
+      "shared_hits": 0,
+      "shared_stores": 0,
+      "canonicalized": 0,
+      "shared_size": 0,
+      "exact_layer_hits": 0,
+      "exact_layer_stores": 0,
+      "exact_layer_size": 0,
+      "closed_free": 124,
+      "closed_two_edges": 91,
+      "closed_sunflower": 5,
+      "closed_paths": 15
+    }
+  },
+  "shared": {
+    "rows": 16,
+    "nodes": 0,
+    "counters": {
+      "audit_calls": 0,
+      "crosscheck_calls": 16,
+      "exact_calls": 16,
+      "residual_memo_states": 51,
+      "module_removed": 32,
+      "component_splits": 6,
+      "shared_hits": 23,
+      "shared_stores": 15,
+      "canonicalized": 38,
+      "shared_size": 129,
+      "exact_layer_hits": 0,
+      "exact_layer_stores": 0,
+      "exact_layer_size": 0,
+      "closed_free": 55,
+      "closed_two_edges": 70,
+      "closed_sunflower": 5,
+      "closed_paths": 15
+    }
+  },
+  "shadow": {
+    "rows": 16,
+    "nodes": 90,
+    "counters": {
+      "audit_calls": 90,
+      "crosscheck_calls": 90,
+      "exact_calls": 0,
+      "residual_memo_states": 52,
+      "module_removed": 33,
+      "component_splits": 6,
+      "shared_hits": 0,
+      "shared_stores": 0,
+      "canonicalized": 0,
+      "shared_size": 0,
+      "exact_layer_hits": 0,
+      "exact_layer_stores": 0,
+      "exact_layer_size": 0,
+      "closed_free": 176,
+      "closed_two_edges": 112,
+      "closed_sunflower": 5,
+      "closed_paths": 18
+    }
+  },
+  "proof_capture_guard": "rejected residual shortcuts"
+}

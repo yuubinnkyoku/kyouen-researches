@@ -1,0 +1,89 @@
+{
+ "all_ok": true,
+ "checks": {
+  "canon": {
+   "fail_count": 0,
+   "ok": true,
+   "stretch_entries_checked": 86615
+  },
+  "deathfast": {
+   "count": 5115,
+   "fail_count": 0,
+   "ok": true
+  },
+  "freshpin": {
+   "count": 5200,
+   "mismatches": 0,
+   "ok": true
+  },
+  "invgen": {
+   "died": 332283,
+   "endgame_exits": 67717,
+   "fail_count": 0,
+   "games": 400000,
+   "inv_steps": 36818347,
+   "max_death_stretch": 630,
+   "max_spf": 631,
+   "ok": true
+  },
+  "pin": {
+   "ok": true,
+   "p_sha256_8": "58a414bc",
+   "uv_sha256_8": "8a3b318b"
+  },
+  "redrecon": {
+   "count": 7998,
+   "mismatches": 0,
+   "ok": true
+  },
+  "sieveobsgen": {
+   "composite_games": 3819,
+   "fail_count": 0,
+   "games": 5200,
+   "ok": true
+  },
+  "sv7reg": {
+   "count": 684,
+   "fail_count": 0,
+   "ok": true
+  },
+  "t1map": {
+   "collapse_grids": 75,
+   "fail_count": 0,
+   "inv_relevant_grids": 1075,
+   "noninv_t1_map_deviations": 270,
+   "ok": true,
+   "window_grids": 6075
+  },
+  "t2reg": {
+   "count": 3258,
+   "fail_count": 0,
+   "ok": true
+  },
+  "trk": {
+   "fail_count": 0,
+   "games_checked": 5200,
+   "ok": true
+  },
+  "twincomp": {
+   "count": 5986,
+   "law1_composites": 2993,
+   "law1_violations": 0,
+   "law2_composites": 2993,
+   "law2_violations": 0,
+   "ok": true,
+   "prime_obs_law1": 1006,
+   "prime_obs_law2": 1006
+  }
+ },
+ "first_fails": {},
+ "region": {
+  "deathfast_w_hi": 7,
+  "fresh_hi": 2600,
+  "n_bound_fresh": 5203,
+  "n_bound_tracker": 400003,
+  "t1_grid_w_hi": 11,
+  "tracker_hi": 200000
+ },
+ "runs_identical": true
+}

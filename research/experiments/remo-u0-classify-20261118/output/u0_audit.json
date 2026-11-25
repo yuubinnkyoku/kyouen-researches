@@ -1,0 +1,59 @@
+{
+ "all_ok": true,
+ "checks": {
+  "FIRST": {
+   "ok": true,
+   "states": 21830,
+   "violations": 0
+  },
+  "P1": {
+   "ok": true,
+   "zeros": [
+    1,
+    2,
+    4,
+    6,
+    10,
+    12,
+    16,
+    18,
+    22,
+    28,
+    30,
+    36,
+    40,
+    42,
+    46,
+    52,
+    58,
+    60
+   ]
+  },
+  "PIN": {
+   "composite_sha": "3990d67ff3a89f48",
+   "ok": true,
+   "sievegen_sha": "a69f916c86ed02d5"
+  },
+  "SIEVE": {
+   "mismatches": 0,
+   "ok": true
+  },
+  "U0": {
+   "mismatches": 0,
+   "ok": true,
+   "states": 24060,
+   "zeros": 292
+  },
+  "U0N": {
+   "ok": true,
+   "states": 3481,
+   "violations": 0
+  },
+  "ZSET": {
+   "mismatches": 0,
+   "ok": true,
+   "primes_P": 59
+  }
+ },
+ "experiment": "remo-u0-classify-20261118"
+}

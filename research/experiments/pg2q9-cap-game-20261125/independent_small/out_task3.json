@@ -1,0 +1,91 @@
+{
+ "n_ordered_bases_GL39": 339655680,
+ "pgl_order_formula": 42456960,
+ "pgl_order_expected": 42456960,
+ "pgl_order_ok": true,
+ "generators": [
+  "I+1*e12",
+  "I+i*e12",
+  "I+1*e13",
+  "I+i*e13",
+  "I+1*e21",
+  "I+i*e21",
+  "I+1*e23",
+  "I+i*e23",
+  "I+1*e31",
+  "I+i*e31",
+  "I+1*e32",
+  "I+i*e32",
+  "diag(1+i,1,1)",
+  "3-cycle(1 2 3)"
+ ],
+ "all_generators_are_collineations": true,
+ "schreier_chain": [
+  {
+   "base": 0,
+   "orbit": 91,
+   "n_stab_gens": 620
+  },
+  {
+   "base": 1,
+   "orbit": 90,
+   "n_stab_gens": 5182
+  },
+  {
+   "base": 2,
+   "orbit": 8,
+   "n_stab_gens": 647
+  },
+  {
+   "base": 10,
+   "orbit": 81,
+   "n_stab_gens": 7
+  },
+  {
+   "base": 11,
+   "orbit": 8,
+   "n_stab_gens": 0
+  }
+ ],
+ "schreier_chain_product": 42456960,
+ "schreier_chain_reaches_pgl_order": true,
+ "seconds_chain": 2.8,
+ "cap3": {
+  "cap": [
+   0,
+   1,
+   10
+  ],
+  "orbit_size": 110565,
+  "orbit_is_all_3caps": true,
+  "seconds": 2.7
+ },
+ "cap4": {
+  "cap": [
+   0,
+   1,
+   10,
+   20
+  ],
+  "orbit_size": 1769040,
+  "orbit_is_all_4caps": true,
+  "seconds": 62.1
+ },
+ "orbit3_sizes_ok": true,
+ "orbit4_sizes_ok": true,
+ "orbit3_all_caps": true,
+ "orbit4_all_caps": true,
+ "orbit3_equals_enumerated_3caps": true,
+ "orbit4_equals_enumerated_4caps": true,
+ "orbit3_symmetric_difference": 0,
+ "orbit4_symmetric_difference": 0,
+ "stab_order_cap3": 384,
+ "stab3_expected_384": true,
+ "stab_order_cap4": 24,
+ "stab4_expected_24": true,
+ "orbit_x_stab_cap3": 42456960,
+ "orbit_x_stab_cap4": 42456960,
+ "orbit_stab_identity_3": true,
+ "orbit_stab_identity_4": true,
+ "seconds_stab": 0.2
+}

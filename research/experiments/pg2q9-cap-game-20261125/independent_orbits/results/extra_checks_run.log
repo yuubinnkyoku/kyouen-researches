@@ -1,0 +1,34 @@
+== 1. census for a second frame ==
+  frame1 = (0, 1, 10, 20): caps/frame [1, 42, 441, 1020, 315, 42, 7]
+  frame2 = (0, 1, 10, 21): caps/frame [1, 42, 441, 1020, 315, 42, 7]
+  identical per-frame counts: True
+
+== 2. every maximal k-cap through the frame is in the start orbit ==
+  k= 6: 6/6 other maximal 6-caps through the frame are projectively equivalent to the start cap [0.0s]
+  k= 7: 40/40 other maximal 7-caps through the frame are projectively equivalent to the start cap [0.5s]
+  k= 8: 5/5 other maximal 8-caps through the frame are projectively equivalent to the start cap [0.5s]
+  k=10: 7/7 other maximal 10-caps through the frame are projectively equivalent to the start cap [0.0s]
+
+== 3. structural identities ==
+  caps10_eq_conics: True
+  caps9_eq_10x_conics: True
+  nonmax8_eq_45x_conics: True
+  total8_eq_max8_plus_45conics: True
+  maximal caps total = 8,095,464 (parent analysis.json: 8,095,464)
+  all caps total = 128,917,712 (parent analysis.json: 128,917,712)
+
+== 4. 9-caps and non-maximal 8-caps live in conics ==
+  42 9-caps through the frame, all inside one of the 7 conics through the frame: True
+  105 non-maximal 8-caps through the frame, all inside such a conic: True
+
+== 5. group-order arguments ==
+  |GL(3,9)| = 339,655,680; |SL(3,9)| = 42,456,960; |PGL| = 24*#frames = 42,456,960
+  cubing on GF(9)^* is a bijection: True ([1, 2, 3, 4, 5, 6, 7, 8])
+  gcd(60,21,8,720) = 1
+
+== 6. the 720-element stabilizer is PGL(2,9), not S6 ==
+  |PGL(2,9)| = 720 from 5760 2x2 matrices; element orders {1: 1, 2: 81, 3: 80, 4: 90, 5: 144, 8: 180, 10: 144}
+  720-element cap stabilizer element orders: {1: 1, 2: 81, 3: 80, 4: 90, 5: 144, 8: 180, 10: 144}; agree = True
+  S6 would have orders {1: 1, 2: 75, 3: 80, 4: 180, 5: 144, 6: 240}; the stabilizer is NOT S6: True
+
+EXTRA CHECKS: PASS   (1.1 s)
