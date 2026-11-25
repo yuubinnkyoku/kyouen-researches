@@ -1,0 +1,37 @@
+{
+  "artifacts": {
+    "frontier-results.md": "ab8c01e3e2ac0283cfc3caa22d88a5a8351ba0bf3b8b15333ba63163adc957ca",
+    "four-one.txt": "a1f0ea0d38692b5fa9d470a495c7be9774efe1bb318341936e47770b565bae3a",
+    "four-targets.txt": "abecff0a0f8bdb2e3d4e8a54cd9d7e6c4905bee2314251ceaddefebbff806bb0",
+    "four-retro-2m.jsonl": "aed4bb9d80e982a97d96c0d1580392cfaf749b86026440c0bd68644cd3b847a2",
+    "four-retro-2m.log": "d4467e4512f107d544d2886ab19cd34e41946c48faafc3d69420cb3c3725d946",
+    "four-retro-extra5m.jsonl": "4db7ad4775b336c3e1fcb4bf00eab65f4121698ebc3b7fdd0736636c2bd9550b",
+    "four-retro-extra5m.log": "215f804bf781b5d0610f21b5f6a5ae391d31a5241e13b746ddc46fd2c8c2872a",
+    "frontier-final.json": "24a888470d718b1c32fe22f5f1397494adf01d206b60b0fcdc4c6a603e9f405b",
+    "legacy-full-status.json": "3300d1cdc6879ba30e7730d707f9a9091dcbe26149ce964fc0d51e64c0abc8cd"
+  },
+  "local_private_checkpoints": {
+    "base4.memo": {
+      "workspace_path": "scratch/cube-q5-seven-balanced-20261023/base4.memo",
+      "sha256": "1d2e50c17b75562576233db6bdb2377558cc96d20133152b8107bc31e0221e7d",
+      "bytes": 2917519624,
+      "side": 7,
+      "candidate_rows": 28053073,
+      "cumulative_lineage_expansions": 27090000,
+      "independently_verified_all_rows": false,
+      "unknown_tree_saved": false
+    },
+    "balanced-final.memo": {
+      "workspace_path": "scratch/cube-q5-seven-balanced-20261023/balanced-final.memo",
+      "sha256": "0da70f5e6460481d8289204c60ad27c5105d210691202adeae8b5dc0ef37855f",
+      "bytes": 3682895664,
+      "side": 7,
+      "candidate_rows": 35412458,
+      "cumulative_lineage_expansions": 36288126,
+      "independently_verified_all_rows": false,
+      "unknown_tree_saved": false
+    }
+  },
+  "outcome": "five-stone N and six-stone P independently verified in K0517; both four-stone roots and empty board unknown",
+  "all_own_searches_and_verifiers_stopped": true
+}

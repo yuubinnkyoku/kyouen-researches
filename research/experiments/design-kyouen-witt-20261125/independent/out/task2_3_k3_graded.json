@@ -1,0 +1,575 @@
+{
+ "boards": [
+  {
+   "tag": "ag32",
+   "v": 8,
+   "b": 14,
+   "k": 4,
+   "num_safe": 149,
+   "size_counts": [
+    1,
+    8,
+    28,
+    56,
+    56
+   ],
+   "K3_exhaustive": 4,
+   "maximal_by_size": {
+    "4": 56
+   },
+   "num_maximal": 56,
+   "all_maximal_size_K": true,
+   "all_safe_extend_to_K": true,
+   "num_not_extendable": 0,
+   "K3_claimed": 4,
+   "K3_match": true,
+   "top_sets": [
+    [
+     0,
+     1,
+     2,
+     4
+    ],
+    [
+     0,
+     1,
+     2,
+     5
+    ],
+    [
+     0,
+     1,
+     2,
+     6
+    ],
+    [
+     0,
+     1,
+     2,
+     7
+    ],
+    [
+     0,
+     1,
+     3,
+     4
+    ]
+   ],
+   "moment_K3_plus_1_s": 5,
+   "moment_K3_plus_1_status": "infeasible",
+   "moment_K3_plus_1_solutions": [],
+   "report_size_counts": [
+    1,
+    8,
+    28,
+    56,
+    56
+   ],
+   "report_size_counts_match": true,
+   "report_safe_match": true,
+   "report_maximal_match": true,
+   "ks_ilp_K3": 4,
+   "ks_ilp_K3_match": true
+  },
+  {
+   "tag": "ag42",
+   "v": 16,
+   "b": 140,
+   "k": 4,
+   "num_safe": 5513,
+   "size_counts": [
+    1,
+    16,
+    120,
+    560,
+    1680,
+    2688,
+    448
+   ],
+   "K3_exhaustive": 6,
+   "maximal_by_size": {
+    "6": 448
+   },
+   "num_maximal": 448,
+   "all_maximal_size_K": true,
+   "all_safe_extend_to_K": true,
+   "num_not_extendable": 0,
+   "K3_claimed": 6,
+   "K3_match": true,
+   "top_sets": [
+    [
+     0,
+     1,
+     2,
+     4,
+     8,
+     15
+    ],
+    [
+     0,
+     1,
+     2,
+     4,
+     9,
+     14
+    ],
+    [
+     0,
+     1,
+     2,
+     4,
+     10,
+     13
+    ],
+    [
+     0,
+     1,
+     2,
+     4,
+     11,
+     12
+    ],
+    [
+     0,
+     1,
+     2,
+     5,
+     8,
+     14
+    ]
+   ],
+   "moment_K3_plus_1_s": 7,
+   "moment_K3_plus_1_status": "feasible",
+   "moment_K3_plus_1_solutions": [
+    [
+     7,
+     56,
+     42,
+     35
+    ]
+   ],
+   "report_size_counts": [
+    1,
+    16,
+    120,
+    560,
+    1680,
+    2688,
+    448
+   ],
+   "report_size_counts_match": true,
+   "report_safe_match": true,
+   "report_maximal_match": true,
+   "ks_ilp_K3": 6,
+   "ks_ilp_K3_match": true
+  },
+  {
+   "tag": "w11",
+   "v": 11,
+   "b": 66,
+   "k": 5,
+   "num_safe": 232,
+   "size_counts": [
+    1,
+    11,
+    55,
+    165
+   ],
+   "K3_exhaustive": 3,
+   "maximal_by_size": {
+    "3": 165
+   },
+   "num_maximal": 165,
+   "all_maximal_size_K": true,
+   "all_safe_extend_to_K": true,
+   "num_not_extendable": 0,
+   "K3_claimed": 3,
+   "K3_match": true,
+   "top_sets": [
+    [
+     0,
+     1,
+     2
+    ],
+    [
+     0,
+     1,
+     3
+    ],
+    [
+     0,
+     1,
+     4
+    ],
+    [
+     0,
+     1,
+     5
+    ],
+    [
+     0,
+     1,
+     6
+    ]
+   ],
+   "moment_K3_plus_1_s": 4,
+   "moment_K3_plus_1_status": "infeasible",
+   "moment_K3_plus_1_solutions": [],
+   "report_size_counts": [
+    1,
+    11,
+    55,
+    165
+   ],
+   "report_size_counts_match": true,
+   "report_safe_match": true,
+   "report_maximal_match": true,
+   "ks_ilp_K3": 3,
+   "ks_ilp_K3_match": true
+  },
+  {
+   "tag": "w12",
+   "v": 12,
+   "b": 132,
+   "k": 6,
+   "num_safe": 299,
+   "size_counts": [
+    1,
+    12,
+    66,
+    220
+   ],
+   "K3_exhaustive": 3,
+   "maximal_by_size": {
+    "3": 220
+   },
+   "num_maximal": 220,
+   "all_maximal_size_K": true,
+   "all_safe_extend_to_K": true,
+   "num_not_extendable": 0,
+   "K3_claimed": 3,
+   "K3_match": true,
+   "top_sets": [
+    [
+     0,
+     1,
+     2
+    ],
+    [
+     0,
+     1,
+     3
+    ],
+    [
+     0,
+     1,
+     4
+    ],
+    [
+     0,
+     1,
+     5
+    ],
+    [
+     0,
+     1,
+     6
+    ]
+   ],
+   "moment_K3_plus_1_s": 4,
+   "moment_K3_plus_1_status": "infeasible",
+   "moment_K3_plus_1_solutions": [],
+   "report_size_counts": [
+    1,
+    12,
+    66,
+    220
+   ],
+   "report_size_counts_match": true,
+   "report_safe_match": true,
+   "report_maximal_match": true,
+   "ks_ilp_K3": 3,
+   "ks_ilp_K3_match": true
+  },
+  {
+   "tag": "w22",
+   "v": 22,
+   "b": 77,
+   "k": 6,
+   "num_safe": 18162,
+   "size_counts": [
+    1,
+    22,
+    231,
+    1540,
+    6160,
+    7392,
+    2464,
+    352
+   ],
+   "K3_exhaustive": 7,
+   "maximal_by_size": {
+    "7": 352
+   },
+   "num_maximal": 352,
+   "all_maximal_size_K": true,
+   "all_safe_extend_to_K": true,
+   "num_not_extendable": 0,
+   "K3_claimed": 7,
+   "K3_match": true,
+   "top_sets": [
+    [
+     0,
+     1,
+     2,
+     3,
+     9,
+     12,
+     21
+    ],
+    [
+     0,
+     1,
+     2,
+     3,
+     14,
+     16,
+     19
+    ],
+    [
+     0,
+     1,
+     2,
+     4,
+     5,
+     7,
+     12
+    ],
+    [
+     0,
+     1,
+     2,
+     4,
+     6,
+     18,
+     19
+    ],
+    [
+     0,
+     1,
+     2,
+     5,
+     10,
+     15,
+     16
+    ]
+   ],
+   "moment_K3_plus_1_s": 8,
+   "moment_K3_plus_1_status": "infeasible",
+   "moment_K3_plus_1_solutions": [],
+   "report_size_counts": [
+    1,
+    22,
+    231,
+    1540,
+    6160,
+    7392,
+    2464,
+    352
+   ],
+   "report_size_counts_match": true,
+   "report_safe_match": true,
+   "report_maximal_match": true,
+   "ks_ilp_K3": 7,
+   "ks_ilp_K3_match": true
+  },
+  {
+   "tag": "w23",
+   "v": 23,
+   "b": 253,
+   "k": 7,
+   "num_safe": 2048,
+   "size_counts": [
+    1,
+    23,
+    253,
+    1771
+   ],
+   "K3_exhaustive": 3,
+   "maximal_by_size": {
+    "3": 1771
+   },
+   "num_maximal": 1771,
+   "all_maximal_size_K": true,
+   "all_safe_extend_to_K": true,
+   "num_not_extendable": 0,
+   "K3_claimed": 3,
+   "K3_match": true,
+   "top_sets": [
+    [
+     0,
+     1,
+     2
+    ],
+    [
+     0,
+     1,
+     3
+    ],
+    [
+     0,
+     1,
+     4
+    ],
+    [
+     0,
+     1,
+     5
+    ],
+    [
+     0,
+     1,
+     6
+    ]
+   ],
+   "moment_K3_plus_1_s": 4,
+   "moment_K3_plus_1_status": "infeasible",
+   "moment_K3_plus_1_solutions": [],
+   "report_size_counts": [
+    1,
+    23,
+    253,
+    1771
+   ],
+   "report_size_counts_match": true,
+   "report_safe_match": true,
+   "report_maximal_match": true,
+   "ks_ilp_K3": 3,
+   "ks_ilp_K3_match": true
+  },
+  {
+   "tag": "w24",
+   "v": 24,
+   "b": 759,
+   "k": 8,
+   "num_safe": 2325,
+   "size_counts": [
+    1,
+    24,
+    276,
+    2024
+   ],
+   "K3_exhaustive": 3,
+   "maximal_by_size": {
+    "3": 2024
+   },
+   "num_maximal": 2024,
+   "all_maximal_size_K": true,
+   "all_safe_extend_to_K": true,
+   "num_not_extendable": 0,
+   "K3_claimed": 3,
+   "K3_match": true,
+   "top_sets": [
+    [
+     0,
+     1,
+     2
+    ],
+    [
+     0,
+     1,
+     3
+    ],
+    [
+     0,
+     1,
+     4
+    ],
+    [
+     0,
+     1,
+     5
+    ],
+    [
+     0,
+     1,
+     6
+    ]
+   ],
+   "moment_K3_plus_1_s": 4,
+   "moment_K3_plus_1_status": "infeasible",
+   "moment_K3_plus_1_solutions": [],
+   "report_size_counts": [
+    1,
+    24,
+    276,
+    2024
+   ],
+   "report_size_counts_match": true,
+   "report_safe_match": true,
+   "report_maximal_match": true,
+   "ks_ilp_K3": 3,
+   "ks_ilp_K3_match": true
+  }
+ ],
+ "w22_no8_proof": {
+  "b": 77,
+  "r": 21,
+  "lambda2": 5,
+  "lambda3": 1,
+  "moment_status_for_s8": "infeasible",
+  "moment_solutions": [],
+  "explicit_x3": 56,
+  "explicit_pair_incidences": 140,
+  "explicit_x2": -28,
+  "contradiction": true,
+  "argument": "every triple of the 8-set lies in exactly one block, so exactly C(8,3)*lambda3=56 blocks meet S in 3 points; those blocks already contribute 3*56=168 pair-block incidences, but the 8-set has only C(8,2)*lambda2=28*5=140 pair-block incidences; 168>140."
+ },
+ "w22_witness": {
+  "points": [
+   0,
+   1,
+   2,
+   3,
+   9,
+   12,
+   21
+  ],
+  "num_size7_safe_sets": 352,
+  "max_block_intersection": 3,
+  "block_intersection_distribution": {
+   "1": 42,
+   "3": 35
+  },
+  "all_blocks_at_most_3": true,
+  "other_size7_witnesses": [
+   [
+    0,
+    1,
+    2,
+    3,
+    14,
+    16,
+    19
+   ],
+   [
+    0,
+    1,
+    2,
+    4,
+    5,
+    7,
+    12
+   ],
+   [
+    0,
+    1,
+    2,
+    4,
+    6,
+    18,
+    19
+   ]
+  ]
+ }
+}

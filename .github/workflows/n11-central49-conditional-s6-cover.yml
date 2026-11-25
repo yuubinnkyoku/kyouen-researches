@@ -1,0 +1,18 @@
+name: N11 conditional 46-S6 cover geometry audit
+
+on:
+  push:
+    paths:
+      - 'research/experiments/n11-central-19-cover-20261031/conditional_s6_cover_46.json'
+      - 'research/experiments/n11-central-19-cover-20261031/verify_conditional_s6_cover_46.py'
+      - '.github/workflows/n11-central49-conditional-s6-cover.yml'
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Independently reconstruct incidence and verify both integer duals
+        run: python3 research/experiments/n11-central-19-cover-20261031/verify_conditional_s6_cover_46.py --self-test

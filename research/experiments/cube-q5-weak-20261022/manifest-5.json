@@ -1,0 +1,34 @@
+{
+  "format": "Q5CUBE1",
+  "side": 5,
+  "coordinates": "(x*5+y)*5+z, zero based",
+  "artifacts": {
+    "solve.cpp": "f70ca3d344b00a4c87f70fbff78ada17b5a9bf9f7cfc8d917428f70e46374bee",
+    "verify_certificate.cpp": "f4ee38293ba3bc711f945db0a0ad07a1d06f99c35dccf5599e0e8f7b313e903e",
+    "four_move_census.cpp": "4d7aad29df26affa11f1a1059e800c381dccaca5b97eb32e5c53251ce915218f",
+    "pairs-5.txt": "5d1b2c8cca0857e2a4e44c190a28166a121678a9143c51096daa2ac2dc41dcc3",
+    "search-5.jsonl": "d342413d7029f2f77df975730d04912522e48fbfbcf48a1ab47b17f0b2b7641a",
+    "search-5.log": "a2359fc4ab6663cb3ec419eafd248bf71288dbb24d09ec5edd887a12c854f4b8",
+    "merge-5.json": "db0d26a2eeb577ceb36a1e0a1dec84b0e4f4f1398f7a8d50c6037912d24a28c9",
+    "four-move-3.json": "26b3b9b7d11368309dcbe2bece911c4513f30bac9384440748d8e2ef5c8e8b16",
+    "four-move-5.json": "751cb1b7f4879a981b805f0921334066bfa21bf2e7b86fae51c884e338e88259",
+    "regression.py": "e0835bb19f537bcd83ed931bcde8d9c004b8bceb4635899e73e575d65d9439ed",
+    "regression.json": "251cd6332123af1bc4384a3279e9980010640a43a6b0f7d82f99ea7dd98d3f9e",
+    "play.py": "d8844bfa2ca4b0252df9b63ac9a617c68cbf5d561ddbe77d2ac3956019468fcc",
+    "verified-5.json": "9f5fcf4fb1a149858254405f2e0f9d8392df6592419964a220c2be2f9c273a27",
+    "check_artifacts.py": "df55679b14bd866eb4783ba5508ac9295c45d3060e8b2c293470fbf6ce6fef4f",
+    "README.md": "7ed2532d44bcb74d0acf900771b8531acf30248a6f8a2c620188b4a35a15e341"
+  },
+  "certificate": {
+    "path": "empty-5.cert.gz",
+    "sha256": "8e46985691d6de7dd3b77209fb51f7ddb8e48093533679920e0d4ac97333216e",
+    "bytes": 16457302,
+    "uncompressed_sha256": "c25ea0592219b6069dcdbde64eb53680b80032b5bcd93629ca46cff0acba29c1",
+    "uncompressed_bytes": 65005629,
+    "states": 1368687
+  },
+  "search_binary_sha256": "47b1c68c1013aa42ca4c8498c7c89e241fd62cbc422754edc431977b1dab9ee6",
+  "merge_binary_sha256": "372a936357ba3f9cf2f8aef78cd74f0d6e879478743685246d7166fa13bae5ec",
+  "verifier_binary_sha256": "e7ab630ddb5daa48bfbad6bc646efff02e041272247186d00ac9e2f98480a537",
+  "search_build_note": "Search binary predates the additive --merge CLI mode in final solve.cpp; search and batch algorithms are unchanged. Merge uses the final source."
+}

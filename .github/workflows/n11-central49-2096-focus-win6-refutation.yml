@@ -1,0 +1,20 @@
+name: N11 central49 repaired-2096 focus terminal WIN6 refutation
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'research/experiments/n11-central-19-cover-20261031/verify_2096_focus_terminal_win6_refutation.py'
+      - 'research/experiments/n11-central-19-cover-20261031/generate_five_terminal_loss7.cpp'
+      - 'research/experiments/n11-central-19-cover-20261031/verify_five_terminal_loss7.py'
+      - 'research/experiments/n11-central-19-cover-20261031/focus_s7_worker_2096.py'
+      - '.github/workflows/n11-central49-2096-focus-win6-refutation.yml'
+
+jobs:
+  independent-terminal-proof:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Reproduce exact complete strategy and audit all opponent replies
+        run: python3 research/experiments/n11-central-19-cover-20261031/verify_2096_focus_terminal_win6_refutation.py --negative

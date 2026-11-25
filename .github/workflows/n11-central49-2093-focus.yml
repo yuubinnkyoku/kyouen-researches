@@ -1,0 +1,32 @@
+name: N11 central49 2093 terminal-gated focused worker audit
+
+on:
+  push:
+    paths:
+      - 'research/experiments/n11-central-19-cover-20261031/focus_s7_worker_2093.py'
+      - '.github/workflows/n11-central49-2093-focus.yml'
+  workflow_dispatch:
+
+jobs:
+  focus-2093:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - name: Replay terminal proofs and audit 2093 focused worker ownership and safe merge
+        run: |
+          set -euo pipefail
+          python3 research/experiments/n11-central-19-cover-20261031/focus_s7_worker_2093.py --self-test > "$RUNNER_TEMP/n11-2093-focus.txt"
+          python3 - "$RUNNER_TEMP/n11-2093-focus.txt" <<'PY'
+          import json, sys
+          raw = open(sys.argv[1], encoding='utf-8').read()
+          d = json.loads(raw.splitlines()[-1])
+          assert d['self_test'] == 'PASS'
+          assert d['focus_s6'] == '00000000000000203808000000000040'
+          assert (d['total_distinct_s7'], d['total_children'],
+                  d['certified_loss7'], d['unverified_s7']) == (2093, 64, 2, 62)
+          assert d['worker_loads'] == [16, 16, 15, 15]
+          assert (d['tampered_plan_rejected'], d['bad_receipts_rejected']) == (4, 2)
+          assert set(d['outcomes'].values()) == {'UNKNOWN'}
+          print(json.dumps(d, ensure_ascii=False, indent=2))
+          PY

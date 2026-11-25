@@ -1,0 +1,32 @@
+name: N11 central49 2154 certified focused S7 dispatch audit
+
+on:
+  push:
+    paths:
+      - 'research/experiments/n11-central-19-cover-20261031/focus_s7_worker_2154.py'
+      - '.github/workflows/n11-central49-2154-focus.yml'
+  workflow_dispatch:
+
+jobs:
+  focus-independent-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - name: Replay five complete terminal proofs and audit 2154 worklist ownership
+        run: |
+          python3 research/experiments/n11-central-19-cover-20261031/focus_s7_worker_2154.py --self-test > "$RUNNER_TEMP/focus.json"
+          python3 - "$RUNNER_TEMP/focus.json" <<'PY'
+          import json, sys
+          lines = open(sys.argv[1], encoding='utf-8').read().splitlines()
+          d = json.loads(lines[-1])
+          assert d['self_test'] == 'PASS'
+          assert d['certified_loss7'] >= 1
+          assert d['total_children'] == d['certified_loss7'] + d['unverified_s7']
+          assert sum(d['worker_loads']) == d['unverified_s7']
+          assert max(d['worker_loads']) - min(d['worker_loads']) <= 1
+          assert d['tampered_plan_rejected'] == 4
+          assert d['bad_receipts_rejected'] == 2
+          assert set(d['outcomes'].values()) == {'UNKNOWN'}
+          print(json.dumps(d, ensure_ascii=False, indent=2))
+          PY

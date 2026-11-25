@@ -1,0 +1,20 @@
+{
+  "experiment": "binary-cube-gp-census-k6-second-impl-20261125",
+  "purpose": "independent second full-sweep implementation cross-check of the K_6 <= 9 upper-bound census (K0568)",
+  "implementation": "census3.js: pure exact integer arithmetic (Bareiss dets + row-replacement coordinate functionals g_i(x) + projective 2x2/3x3/4x4 minor gates; no primes, no modular arithmetic)",
+  "firstImplReference": "../binary-cube-gp-census-k6-20261121/r6-results.jsonl",
+  "pairs": 63,
+  "perPairMismatches": 0,
+  "sum": [0, 63, 63, 1953, 39410, 571340, 6029142, 40050850, 53334038, 408240, 0],
+  "sumMatchesPublishedSTable": true,
+  "anchored": {"s9": 408240, "s10": 0},
+  "batteries": {
+    "selftest": "PASS (B1 det-vs-BigInt 400, B2 rank 200, B3 gate fuzz 410, B4 witnesses 3+XOR image, B8 magnitude, B6 d3/d4 census)",
+    "brutecensus": {"d3": [0,1,7,21,29,5,0,0,0,0,0], "d4": [0,1,15,105,430,940,408,0,0,0,0], "d5": [0,1,31,465,4405,27990,104286,67606,0,0,0], "d5note": "full brute at d=5 completes and confirms s8=0 exhaustively, deeper than the first impl's brute (sizes <= 6)"},
+    "gatecheckPair01": {"budget": 600000, "checked": 600000, "mismatches": 0},
+    "fullGateLightPairs": {"v2_58": "28/28 decisions verified", "v2_55": "201/201", "v2_45": "19904/19904", "v2_40": "75718/75718", "mismatchesTotal": 0},
+    "heavyPairPrefix": {"v2_7": "300000 verified", "v2_13": "300000", "v2_32": "300000", "mismatchesTotal": 0},
+    "determinism": "pairs (0,45),(0,46),(0,47) run twice: integer payload identical (timing ms excluded)"
+  },
+  "conclusion": "The K_6 <= 9 upper-bound census (s10 = 0; s9 = 408240 GP 9-sets anchored at vertex 0) is reproduced line-by-line by an independent second implementation with a disjoint arithmetic core. Corroboration for items/K0568; no new mathematical claim beyond the first implementation's finite computation is made."
+}

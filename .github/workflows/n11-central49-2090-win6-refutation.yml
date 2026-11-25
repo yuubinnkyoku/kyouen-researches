@@ -1,0 +1,38 @@
+name: N11 central49 2090 certified WIN6 refutation audit
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'research/experiments/n11-central-19-cover-20261031/audit_2090_known_win6_refutation.py'
+      - '.github/workflows/n11-central49-2090-win6-refutation.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  refutation:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - name: Replay complete 1984 terminal strategy against 2090 witness inventory
+        run: |
+          set -euo pipefail
+          python3 research/experiments/n11-central-19-cover-20261031/audit_2090_known_win6_refutation.py > "$RUNNER_TEMP/refutation.txt"
+          python3 - "$RUNNER_TEMP/refutation.txt" <<'PY'
+          import json, sys
+          d = json.loads(open(sys.argv[1], encoding="utf-8").read().splitlines()[-1])
+          assert d["schema"] == "n11-central49-2090-certified-win6-refutation-v1"
+          assert d["selected_s6"] == 46 and d["distinct_s7_geometric_obligations"] == 2090
+          assert d["refuting_s6"] == "00000000000000603800000000008000"
+          assert d["refuting_s6_original_first_outcome"] == "WIN"
+          assert d["winning_first_move"] == 20
+          assert d["terminal_visited_states"] == 8949
+          assert d["terminal_winning_leaves"] == 951
+          assert d["refutation_gate_rejected"] is True
+          assert d["conditional_2090_loss_cover_valid"] is False
+          assert d["s4_outcome"] == d["two_stone_root_outcome"] == d["empty_board_outcome"] == "UNKNOWN"
+          print(json.dumps(d, ensure_ascii=False, indent=2))
+          PY

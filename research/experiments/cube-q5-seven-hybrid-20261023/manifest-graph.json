@@ -1,0 +1,33 @@
+{
+  "artifacts": {
+    "graph.cpp": "406e2e8f7dc9ecb6901b63b546f3bbfd250c793d24a8c062a720950cefad8a95",
+    "layers.hpp": "d3de6462c1cb48f5d34aebdc68ef303437c175e382e7d8802b7385e5ab84d4fc",
+    "graph.md": "d91dc4ae7b9c072692f221938f4117b0e7d579613abc5d954e3cb3b8da7e0f38",
+    "storage.md": "2ff377e39dd7ef8fdd5d52075fa216b286abdf29f0806370e70ad64c0bf3fba6",
+    "samples.cpp": "be2e69e710ad0880ba489939993f1cac69e46cfbbe2607fe3f7ad0b70e1b7a84",
+    "endgames.txt": "47685c81fc36421fd9f3a5251003e3fd1daebeb94a2436dc45adf39639b8f072",
+    "endgames-hybrid.jsonl": "0577119ea0fe7223c390a15d416e6086d9fd5abe94ce9a4666807969cde0feea",
+    "endgames-legacy.jsonl": "f258c95a3bd28af53566a03eed3b528360b95c171ca0227bb72303f7261ec464",
+    "endgames-verified.json": "9961f2c0a8d856e6626b3019a0f5cd1e4295160a3a0e002a4fd238d397edc293",
+    "endgames-current.jsonl": "d4d94548680d96c459f19929920fb99fe9b7b0440ee78443a8a06a8b1bea3494",
+    "endgames-current-verified.json": "9961f2c0a8d856e6626b3019a0f5cd1e4295160a3a0e002a4fd238d397edc293",
+    "check_endgames.py": "14a410a6768f27a7945686e9eebf102179ecf82e4170dbe3cb850e27623ae95f",
+    "regression-graph.json": "70bb1aa1a64e41d85e97437845e3be7a14cc2e312794cd4202489c836bb58aeb",
+    "regression_layers.py": "2444f59fc72549b9cd7d4ee1cd9d6e0042341cb2a0c844fae331ce9e473e3148",
+    "regression-layers.json": "90169dd3da75fa92323bf42f467733d37810b8b3469b40dd0323d220c7610211",
+    "inspect_hybrid.py": "23299ca6d9231f7a82858099289a5fa9ee46f1138180e8314d54e81f4803c8eb",
+    "audit_index.cpp": "d5fe26e59e56ee2a16165dcf527ba02a7a59ddf0a9d6bba3f4ef694d2e425382",
+    "overlay-index-audit.json": "9b88004e4453f27d388a35c4dc6dbf0fe53efbed148a89ddc0ee497bc6313a75",
+    "base-index-audit.json": "9a5683fbf39f2322c8549aca05425ccc8cc9ba9d86e22bfea6b5420cfa5cfbe2",
+    "archive_private.py": "e27044c951e28d4203f3aeeb35670859e195fa7ab6694b10764efe602fb9a8cd",
+    "private-archives.json": "12a8faa5fc7ec00abc7c270593041d9851ada9b6d0c9d49c2ec8002ef660bac2",
+    "legacy-checkpoint-resume.jsonl": "42c2569279414f94d44c9536e6539a8c6f1f680aafed39d654de8e5f2fd5c6a5",
+    "legacy-checkpoint-verified.json": "d9ab4e712609cbfc057f416f0b750c0a453f6a20b253f71a556209c4dd1a421c",
+    "run_campaign-v1.py": "394d7458cf202af86508d66c386ad7360d5d18aeb88fb33a83c39f05a7c05c55",
+    "run_campaign.py": "7e6f1206dfe47178932124f19bf1ba004c4ef03eba22cc34b74b7e2dee65673d",
+    "central-four.txt": "c72a286fea1394c791e647c982135c65410a8af93444a009fcdddab64c41ef2e"
+  },
+  "executed_graph_binary_sha256": "73fdca1d9695a2b9c9deb687c916ec9129dd57ca0d5051c5cb7ba64de7451eff",
+  "provenance": "v10: triangle-free endgames, Q5HYB1/2 restore, Q5HYB2 save, layered exact candidates and inherited unknown work, Q5IDX3 Bloom negatives, temporary exact base misses during tree replacement",
+  "claim": "universal triangle-free compatibility lemma; known 3-cube roots and all 24 endgames independently verified; no seven-cube empty-board verdict"
+}

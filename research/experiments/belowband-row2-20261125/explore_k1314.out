@@ -1,0 +1,96 @@
+{
+ "ALL_WAVES_OK": true,
+ "WA": {
+  "allones_values": {
+   "-1,-2": {
+    "1": 2
+   },
+   "-1,-3": {
+    "0": 0
+   }
+  },
+  "cells": 345,
+  "collapse_OK": true,
+  "exception_cells_expected": {
+   "-1,-2": [
+    1,
+    2
+   ],
+   "-1,-3": [
+    0,
+    1
+   ]
+  },
+  "generic_values_at_exception_cells": {
+   "-1,-2": [
+    1
+   ],
+   "-1,-3": [
+    1
+   ]
+  },
+  "multivalue_cells": {
+   "-1,-2": [
+    1,
+    2
+   ],
+   "-1,-3": [
+    0,
+    1
+   ]
+  }
+ },
+ "WB": {
+  "bad": 0,
+  "cells": 27467,
+  "per_n": {
+   "n3": 0,
+   "n4": 0,
+   "n5": 0,
+   "n6": 0,
+   "n7": 0
+  }
+ },
+ "WC": {
+  "L0": {
+   "bad": 0,
+   "cells": 64
+  },
+  "L2": {
+   "bad": 0,
+   "cells": 2338
+  },
+  "LBR2": {
+   "bad": 0,
+   "cells": 577,
+   "published_K0832_slice_also": 577
+  },
+  "PB2": {
+   "bad": 0,
+   "cells": 120
+  }
+ },
+ "WD": {
+  "bad": 0,
+  "cells": 5007,
+  "examples": []
+ },
+ "WE": {
+  "bad": 0,
+  "cells": 3116,
+  "per": {
+   "dominant_family_linehits": 24
+  }
+ },
+ "WF": {
+  "all_ok": true,
+  "cells": 1524,
+  "j0_bad": 0,
+  "j0_two_cells": 176,
+  "other_bad": 0
+ },
+ "WG": {
+  "bad": 0,
+  "cells": 400
+ }
+}

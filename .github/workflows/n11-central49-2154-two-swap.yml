@@ -1,0 +1,38 @@
+name: N11 central49 2154 conditional frontier independent audit
+
+on:
+  push:
+    paths:
+      - 'research/experiments/n11-central-19-cover-20261031/conditional_s6_cover_46_post_seven_win6_2154_swaps.json'
+      - 'research/experiments/n11-central-19-cover-20261031/verify_central49_2154_two_swap_descent.py'
+      - '.github/workflows/n11-central49-2154-two-swap.yml'
+  workflow_dispatch:
+
+jobs:
+  independent-geometry:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - name: Reconstruct current cover and audit all ten two-swaps and complete local neighborhood
+        run: |
+          python3 research/experiments/n11-central-19-cover-20261031/verify_central49_2154_two_swap_descent.py --negative > "$RUNNER_TEMP/audit.json"
+          python3 - "$RUNNER_TEMP/audit.json" <<'PY'
+          import json, sys
+          d = json.load(open(sys.argv[1], encoding='utf-8'))
+          assert (d['source_s7_classes'], d['final_s7_classes'],
+                  d['saved_s7_classes'], d['raw_s7_edges']) == (2301, 2154, 147, 2990)
+          assert (d['selected_s6'], d['covered_s5']) == (46, 94)
+          assert (d['known_win6_excluded'], d['known_win7_excluded']) == (145, 23)
+          assert (d['secured_loss7_from_k0644'], d['unsecured_by_k0644']) == (6, 2148)
+          assert (d['two_swap_candidate_combinations'],
+                  d['geometrically_feasible_nontrivial_combinations'],
+                  d['valid_nontrivial_combinations'],
+                  d['excluded_win6_combinations'],
+                  d['excluded_win7_combinations'],
+                  d['improving_valid_two_swaps']) == (4915, 3736, 3728, 8, 0, 0)
+          assert d['two_swap_local_minimum'] == 2154
+          assert d['negative_tests'] == 5 and d['conditional_only']
+          assert d['s6_outcome'] == d['s4_outcome'] == d['two_stone_root'] == d['empty_board'] == 'UNKNOWN'
+          print(json.dumps(d, ensure_ascii=False, indent=2))
+          PY

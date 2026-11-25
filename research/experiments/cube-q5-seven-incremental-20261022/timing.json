@@ -1,0 +1,75 @@
+{
+  "incremental": {
+    "bash_time": "\nreal\t0m7.210s\nuser\t0m6.135s\nsys\t0m0.909s\n",
+    "record": {
+      "root": [
+        0,
+        2,
+        5,
+        26,
+        69
+      ],
+      "outcome": "UNKNOWN",
+      "reason": "node-limit",
+      "nodes": 20000,
+      "cumulative_nodes": 10590000,
+      "memo": 11588199,
+      "quadruples": 1089599,
+      "advances": 20005,
+      "incremental_quads": 3991037,
+      "early_empty": 4408,
+      "full_legal_calls": 2,
+      "max_tree": 13,
+      "restore_seconds": 4.56452,
+      "search_seconds": 1.71839,
+      "save_seconds": 0.369399
+    }
+  },
+  "original": {
+    "bash_time": "\nreal\t0m24.071s\nuser\t0m22.852s\nsys\t0m1.170s\n",
+    "record": {
+      "root": [
+        0,
+        2,
+        5,
+        26,
+        69
+      ],
+      "outcome": "UNKNOWN",
+      "reason": "node-limit",
+      "nodes": 20000,
+      "cumulative_nodes": 10590000,
+      "memo": 11588199,
+      "quadruples": 1098070
+    }
+  },
+  "direct": {
+    "bash_time": "\nreal\t0m18.314s\nuser\t0m4.922s\nsys\t0m7.286s\n",
+    "record": {
+      "root": [
+        0,
+        2,
+        5,
+        26,
+        69
+      ],
+      "algorithm": "weighted-dfpn",
+      "outcome": "UNKNOWN",
+      "reason": "node-limit",
+      "nodes": 20000,
+      "cumulative_nodes": 10590000,
+      "memo": 11588199,
+      "quadruples": 5,
+      "advances": 20005,
+      "incremental_quads": 3991037,
+      "early_empty": 4408,
+      "full_legal_calls": 2,
+      "max_tree": 13,
+      "direct": true,
+      "dot_candidates": 21866579,
+      "restore_seconds": 16.5076,
+      "search_seconds": 0.565399,
+      "save_seconds": 0.810633
+    }
+  }
+}

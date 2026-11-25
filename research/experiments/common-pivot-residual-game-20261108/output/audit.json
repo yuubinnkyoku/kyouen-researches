@@ -1,0 +1,117 @@
+{
+  "audit": "PASS",
+  "rank_three_summaries": [
+    {
+      "outside_points": 0,
+      "cases": 1,
+      "histogram": {
+        "1": 1
+      }
+    },
+    {
+      "outside_points": 1,
+      "cases": 2,
+      "histogram": {
+        "0": 1,
+        "1": 1
+      }
+    },
+    {
+      "outside_points": 2,
+      "cases": 5,
+      "histogram": {
+        "0": 3,
+        "1": 1,
+        "2": 1
+      }
+    },
+    {
+      "outside_points": 3,
+      "cases": 18,
+      "histogram": {
+        "0": 2,
+        "1": 10,
+        "3": 6
+      }
+    },
+    {
+      "outside_points": 4,
+      "cases": 113,
+      "histogram": {
+        "0": 71,
+        "1": 23,
+        "2": 19
+      }
+    },
+    {
+      "outside_points": 5,
+      "cases": 1450,
+      "histogram": {
+        "0": 142,
+        "1": 1218,
+        "3": 90
+      }
+    },
+    {
+      "outside_points": 6,
+      "cases": 40069,
+      "histogram": {
+        "0": 31349,
+        "1": 5167,
+        "2": 3553
+      }
+    }
+  ],
+  "rank_three_cases": 41658,
+  "all_case_rows_sha256": "2e48ad1509d256e7454f03a21be20dea46444f15e17b75d1a3a370bd33b44bd1",
+  "cpp_safe_states": 3279792,
+  "cpp_roots_compared": 41662,
+  "sharp_mixed": {
+    "n": 4,
+    "edges": [
+      3,
+      13
+    ],
+    "grundy": 3
+  },
+  "pure_triple_examples": [
+    {
+      "n": 7,
+      "edges": [
+        7,
+        13,
+        49,
+        97
+      ],
+      "grundy": 2
+    },
+    {
+      "n": 8,
+      "edges": [
+        7,
+        13,
+        49,
+        97
+      ],
+      "grundy": 3
+    }
+  ],
+  "rank_four_counterexample": {
+    "n": 7,
+    "edges": [
+      75,
+      83,
+      101,
+      43,
+      105,
+      51
+    ],
+    "grundy": 4,
+    "geometry_obstruction": {
+      "shared_triple": 67,
+      "forced_five_points": 91,
+      "missing_quad": 27
+    },
+    "limitation": "abstract clutter only; exact q4 realization impossible by shared-triple closure"
+  }
+}

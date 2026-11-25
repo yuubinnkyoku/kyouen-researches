@@ -1,0 +1,130 @@
+name: N11 reply27 tight shared probes
+
+on:
+  push:
+    paths:
+      - ".github/workflows/n11-reply27-tight-shared-probes.yml"
+      - "research/experiments/n11-frontier-selection-20261005/scripts/materialize_reply27_tight_shared_probes.py"
+  workflow_dispatch:
+
+jobs:
+  materialize:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install optimizer dependency
+        run: python -m pip install --quiet scipy
+      - name: Download current reply27 cache state
+        uses: actions/download-artifact@v4
+        with:
+          name: reply27-current-cache-optimization
+          path: /tmp/current
+          github-token: ${{ github.token }}
+          repository: ${{ github.repository }}
+          run-id: 37314311197
+      - name: Materialize maximum-sharing probes
+        run: |
+          python research/experiments/n11-frontier-selection-20261005/scripts/materialize_reply27_tight_shared_probes.py             --s5-cache /tmp/current/reply27-current-s5.cache             --cardinality /tmp/current/current-cardinality.json             --csv-out /tmp/tight-shared.csv             --json-out /tmp/tight-shared.json | tee /tmp/tight-shared.log
+          grep 'REPLY27_TIGHT_SHARED_PROBES_OK' /tmp/tight-shared.log
+          python - <<'PY'
+          import json
+          d=json.load(open("/tmp/tight-shared.json"))
+          print("TIGHT_SHARED_CLASSES",d["dual_tight_unknown_classes"])
+          print("TIGHT_SHARED_UNIQUE_S5",d["unique_unknown_s5_across_tight_classes"])
+          print("TIGHT_SHARED_MAX_FREQ",d["maximum_sharing_frequency"])
+          print("TIGHT_SHARED_PROBES",d["emitted_probes"])
+          print("TIGHT_SHARED_HIST",d["sharing_frequency_histogram"])
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: reply27-tight-shared-materialized
+          path: |
+            /tmp/tight-shared.csv
+            /tmp/tight-shared.json
+
+  solve:
+    needs: materialize
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [0, 1, 2, 3]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: reply27-tight-shared-materialized
+          path: /tmp/probes
+      - name: Build exact solver
+        run: |
+          c++ -std=c++20 -O3 -DNDEBUG -Icpp/solvers             cpp/solvers/kyouen_dfpn_root.cpp -o /tmp/dfpn
+      - name: Materialize shard
+        run: |
+          awk -F, -v s=${{ matrix.shard }} '((NR-1)%4)==s {print}'             /tmp/probes/tight-shared.csv > /tmp/targets.csv
+          test -s /tmp/targets.csv
+      - name: Cold exact replay
+        run: |
+          /usr/bin/time -f 'wall_s=%e' -o /tmp/time             /tmp/dfpn --n=11 --memo=22 --exact-replay=/tmp/targets.csv --only=5               --exact-replay-budget=15000000 --exact-order=count --csv=/tmp/out.csv
+          cat /tmp/time
+          ! grep -q '^replay_error,' /tmp/out.csv
+      - uses: actions/upload-artifact@v4
+        with:
+          name: reply27-tight-shared-${{ matrix.shard }}
+          path: |
+            /tmp/targets.csv
+            /tmp/out.csv
+            /tmp/time
+
+  verify:
+    needs: solve
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: reply27-tight-shared-materialized
+          path: /tmp/probes
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: reply27-tight-shared-[0-9]*
+          path: /tmp/proof
+          merge-multiple: false
+      - name: Verify exact probe set
+        run: |
+          python - <<'PY'
+          import csv,glob,json
+          expect=set()
+          with open("/tmp/probes/tight-shared.csv",newline="") as f:
+              for r in csv.reader(f):
+                  if r: expect.add((int(r[3]),int(r[4])))
+          got={}; hist={0:0,1:0,2:0}; nodes=0; unknown=[]
+          for p in glob.glob("/tmp/proof/*/out.csv"):
+              with open(p,newline="") as f:
+                  for r in csv.reader(f):
+                      if not r or r[0]!="replay": continue
+                      k=(int(r[9]),int(r[10])); v=int(r[6]); n=int(r[7])
+                      assert k in expect,k
+                      old=got.get(k); assert old in (None,v),(k,old,v)
+                      got[k]=v; hist[v]+=1; nodes+=n
+                      if v==0: unknown.append(k)
+          assert set(got)==expect,(len(got),len(expect))
+          print("TIGHT_SHARED_COUNTS",hist)
+          print("TIGHT_SHARED_TOTAL_NODES",nodes)
+          print("TIGHT_SHARED_UNKNOWN",unknown)
+          with open("/tmp/tight-shared.cache","w") as f:
+              f.write("# s5 verdict cache: n=11 schema=1 (reply27 max-sharing dual-tight probes; UNKNOWN omitted)\n")
+              for (lo,hi),v in sorted(got.items()):
+                  if v in (1,2):
+                      f.write(f"s5verdict,{lo},{hi},5,{v},0\n")
+          json.dump({"counts":hist,"nodes":nodes,"unknown":[list(k) for k in unknown]},
+                    open("/tmp/result.json","w"),indent=2)
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: reply27-tight-shared-proof
+          path: |
+            /tmp/tight-shared.cache
+            /tmp/result.json

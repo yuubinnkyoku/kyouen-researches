@@ -1,0 +1,33 @@
+name: N11 central49 2094 exact two-swap local optimum
+
+on:
+  push:
+    paths:
+      - 'research/experiments/n11-central-19-cover-20261031/verify_central49_2094_two_swap_local_optimum.py'
+      - '.github/workflows/n11-central49-2094-two-swap-optimum.yml'
+  workflow_dispatch:
+
+jobs:
+  audit-two-swap:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - name: Independently replay terminal proofs and enumerate all 2094 two-swap alternatives
+        run: |
+          set -euo pipefail
+          python3 research/experiments/n11-central-19-cover-20261031/verify_central49_2094_two_swap_local_optimum.py > "$RUNNER_TEMP/n11-2094-two-swap.txt"
+          python3 - "$RUNNER_TEMP/n11-2094-two-swap.txt" <<'PY'
+          import json, sys
+          raw = open(sys.argv[1], encoding='utf-8').read()
+          d = json.loads(raw[raw.index('{'):])  # pinned terminal generator may print progress
+          assert (d['selected_s6'], d['covered_s5'], d['raw_s7_edges'],
+                  d['distinct_s7_classes'], d['secured_terminal_loss7']) == (46, 94, 2987, 2094, 6)
+          assert (d['checked_two_swap_combinations'],
+                  d['geometrically_feasible_nontrivial'],
+                  d['excluded_certified_win6'], d['excluded_known_win7'],
+                  d['valid_nontrivial'], d['improving_valid_two_swaps'],
+                  d['two_swap_local_minimum']) == (4988, 3808, 9, 0, 3799, 0, 2094)
+          assert d['conditional_only'] and set(d['outcomes'].values()) == {'UNKNOWN'}
+          print(json.dumps(d, indent=2, ensure_ascii=False))
+          PY

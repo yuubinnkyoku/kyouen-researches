@@ -1,0 +1,36 @@
+name: N11 central49 2096 certified-WIN6 repaired cover independent audit
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'research/experiments/n11-central-19-cover-20261031/verify_2096_win6_repair.py'
+      - 'research/experiments/n11-central-19-cover-20261031/conditional_s6_cover_46_2096_exclude_missed_win6.json'
+      - '.github/workflows/n11-central49-2096-repair.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - name: Replay terminal WIN6, enumerate repairs and independently verify 2096 frontier
+        run: |
+          set -euo pipefail
+          python3 research/experiments/n11-central-19-cover-20261031/verify_2096_win6_repair.py --negative > "$RUNNER_TEMP/repair2096.txt"
+          python3 - "$RUNNER_TEMP/repair2096.txt" <<'PY'
+          import json, sys
+          d = json.loads(open(sys.argv[1], encoding="utf-8").read().splitlines()[-1])
+          assert d["schema"] == "n11-central49-2096-independent-repair-verification-v1"
+          assert (d["selected_s6"], d["s5_covered"], d["raw_s7_edges"],
+                  d["distinct_s7"], d["terminal_proved_loss7"],
+                  d["not_proved_s7"], d["excluded_known_win6"]) == (46, 94, 2989, 2096, 6, 2090, 146)
+          assert d["known_win6_conflicts"] == d["known_win7_conflicts"] == 0
+          assert d["negative_tests"] == 8
+          assert d["s6_outcome"] == d["two_stone_root_outcome"] == d["empty_board_outcome"] == "UNKNOWN"
+          print(json.dumps(d, ensure_ascii=False, indent=2))
+          PY

@@ -1,0 +1,27 @@
+name: N11 round13 proof-only WIN8 conditional lift
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'research/experiments/n11-s9-post-round12-round13-20261029/lift.js'
+      - 'research/experiments/n11-s9-post-round12-round13-20261029/lift.json'
+      - '.github/workflows/n11-s9-post-round12-round13-lift.yml'
+  workflow_dispatch:
+jobs:
+  lift:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Independently verify terminal witnesses and lift only certified WIN9
+        run: node research/experiments/n11-s9-post-round12-round13-20261029/lift.js > round13-lift.json
+      - name: Show exact proof-only coverage
+        run: cat round13-lift.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: n11-round13-proof-only-win8-lift
+          path: round13-lift.json
+          retention-days: 14

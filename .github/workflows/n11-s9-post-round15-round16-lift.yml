@@ -1,0 +1,26 @@
+name: N11 round16 proof-only WIN8 lift
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'research/experiments/n11-s9-post-round15-round16-20261029/lift.js'
+      - 'research/experiments/n11-s9-post-round15-round16-20261029/lift.json'
+      - '.github/workflows/n11-s9-post-round15-round16-lift.yml'
+  workflow_dispatch:
+jobs:
+  lift:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Independently verify terminal witnesses then lift only certified WIN8
+        run: node research/experiments/n11-s9-post-round15-round16-20261029/lift.js > round16-lift.json
+      - uses: actions/upload-artifact@v4
+        if: success()
+        with:
+          name: n11-round16-lift
+          path: round16-lift.json
+          retention-days: 14

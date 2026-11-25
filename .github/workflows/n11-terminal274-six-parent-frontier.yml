@@ -1,0 +1,31 @@
+name: N11 terminal LOSS7 274 six-parent frontier audit
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'research/experiments/n11-central-19-cover-20261031/audit_274_loss7_six_parent_frontier.py'
+      - 'research/experiments/n11-central-19-cover-20261031/terminal_loss7_parent_lift_274_manifest.json'
+      - '.github/workflows/n11-terminal274-six-parent-frontier.yml'
+
+jobs:
+  independent-frontier-geometry:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check 274-key inventory and six-parent legal frontiers using 4x4 integers
+        run: |
+          python3 research/experiments/n11-central-19-cover-20261031/audit_274_loss7_six_parent_frontier.py --negative > "$RUNNER_TEMP/frontier.json"
+          python3 - "$RUNNER_TEMP/frontier.json" <<'PY'
+          import json, sys
+          d = json.load(open(sys.argv[1], encoding="utf-8"))
+          assert d["source_certified_loss7"] == 274
+          assert d["distinct_six_parents_touched"] == 866
+          assert d["six_parents_fully_covered"] == 0
+          assert d["known_refuted_win6_focus"]["unsecured"] == 6
+          assert d["best_other_parent"]["unsecured"] == 42
+          assert d["negative_tests_rejected"] == 4
+          assert d["two_stone_root"] == d["empty_board"] == "UNKNOWN"
+          print(json.dumps(d, indent=2, ensure_ascii=False))
+          PY

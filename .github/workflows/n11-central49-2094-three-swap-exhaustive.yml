@@ -1,0 +1,31 @@
+name: N11 central49 2094 exhaustive three-swap neighborhood
+
+on:
+  push:
+    paths:
+      - 'research/experiments/n11-central-19-cover-20261031/audit_central49_2094_three_swap_neighborhood.py'
+      - '.github/workflows/n11-central49-2094-three-swap-exhaustive.yml'
+  workflow_dispatch:
+
+jobs:
+  exhaustive-three-swap:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Exact 3x3 exhaustive three-swap audit and independent 4x4 terminal-gated best-candidate replay
+        run: |
+          set -euo pipefail
+          python3 research/experiments/n11-central-19-cover-20261031/audit_central49_2094_three_swap_neighborhood.py > "$RUNNER_TEMP/n11-2094-three-swap.txt"
+          python3 - "$RUNNER_TEMP/n11-2094-three-swap.txt" <<'PY'
+          import json, sys
+          raw = open(sys.argv[1], encoding='utf-8').read()
+          d = json.loads(raw[raw.index('{'):])
+          assert (d['removed_triples'], d['six_vertex_matchings'],
+                  d['candidate_combinations'], d['geometrically_feasible_nontrivial']) == (15180, 227700, 313629, 283361)
+          assert (d['excluded_certified_win6'], d['excluded_known_win7'],
+                  d['valid_nontrivial'], d['improving_valid_three_swaps'],
+                  d['best_distinct_s7']) == (1455, 0, 281906, 1, 2093)
+          assert d['conditional_only'] and set(d['outcomes'].values()) == {'UNKNOWN'}
+          print(json.dumps(d, ensure_ascii=False, indent=2))
+          PY

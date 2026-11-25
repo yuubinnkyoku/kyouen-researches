@@ -1,0 +1,15 @@
+# Independent Python / C++ complete-enumeration agreement, 2026-10-24
+# m safe K s g(empty) h(empty) terminal_3 terminal_4
+1 15 3 3 1 0 4 0
+2 159 5 4 0 0 0 24
+3 857 5 3 1 0 4 0
+4 3069 5 3 1 0 16 0
+5 8531 5 3 1 0 40 0
+6 19995 5 3 1 0 80 0
+7 41469 5 3 1 0 140 0
+8 78457 5 3 1 0 224 0
+9 138199 5 3 1 0 336 0
+10 229911 5 3 1 0 480 0
+11 365025 5 3 1 0 660 0
+12 557429 5 3 1 0 880 0
+# Both implementations checked all safe states and each layer; C++ also asserted g/h parity for m>=3.

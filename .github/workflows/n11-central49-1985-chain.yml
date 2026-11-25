@@ -1,0 +1,22 @@
+name: N11 central49 1985 three-swap chain independent audit
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'research/experiments/n11-central-19-cover-20261031/verify_central49_three_swap_chain.py'
+      - 'research/experiments/n11-central-19-cover-20261031/conditional_s6_cover_46_three_swap_chain.json'
+      - '.github/workflows/n11-central49-1985-chain.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  independent-chain:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Independently recompute all three swaps and S7 frontiers using 4x4 Bareiss
+        run: python3 research/experiments/n11-central-19-cover-20261031/verify_central49_three_swap_chain.py

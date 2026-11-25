@@ -1,0 +1,5 @@
+h=2; configs=396; labeled_states=384943; max_g=3; example=((1, 1, 1, 2, 2, 3), 4, (0, 1, 1, 1, 1, 2))
+h=3; configs=624; labeled_states=724538; max_g=3; example=((1, 1, 2, 2, 2, 3), 6, (0, 1, 1, 1, 2, 2))
+h=4; configs=816; labeled_states=1122558; max_g=3; example=((1, 2, 2, 2, 2, 3), 8, (0, 1, 1, 2, 2, 2))
+h=5; configs=972; labeled_states=1544253; max_g=3; example=((2, 2, 2, 2, 2, 3), 10, (0, 1, 2, 2, 2, 2))
+VERIFIED: no six-column state with g>=6 for capacities<= 4

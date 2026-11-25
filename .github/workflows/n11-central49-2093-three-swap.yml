@@ -1,0 +1,33 @@
+name: N11 central49 2093 three-swap independent terminal-gated audit
+
+on:
+  push:
+    paths:
+      - 'research/experiments/n11-central-19-cover-20261031/verify_central49_2093_three_swap.py'
+      - 'research/experiments/n11-central-19-cover-20261031/conditional_s6_cover_46_post_seven_win6_2093_three_swap.json'
+      - '.github/workflows/n11-central49-2093-three-swap.yml'
+  workflow_dispatch:
+
+jobs:
+  verify-2093:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - name: Replay five terminal strategies and independently audit 2093 witness exchange
+        run: |
+          set -euo pipefail
+          python3 research/experiments/n11-central-19-cover-20261031/verify_central49_2093_three_swap.py --negative > "$RUNNER_TEMP/n11-2093-audit.txt"
+          python3 - "$RUNNER_TEMP/n11-2093-audit.txt" <<'PY'
+          import json, sys
+          raw = open(sys.argv[1], encoding='utf-8').read()
+          d = json.loads(raw[raw.index('{'):])  # generator progress precedes JSON
+          assert (d['source_distinct_s7'], d['final_distinct_s7'],
+                  d['saved_distinct_s7'], d['raw_s7_edges']) == (2094, 2093, 1, 2986)
+          assert (d['selected_s6'], d['covered_s5'], d['terminal_certified_loss7'],
+                  d['unsecured_by_k0644']) == (46, 94, 6, 2087)
+          assert d['known_win6_conflicts'] == d['known_win7_conflicts'] == 0
+          assert d['negative_tests'] == 6 and d['conditional_only']
+          assert set(d['outcomes'].values()) == {'UNKNOWN'}
+          print(json.dumps(d, ensure_ascii=False, indent=2))
+          PY

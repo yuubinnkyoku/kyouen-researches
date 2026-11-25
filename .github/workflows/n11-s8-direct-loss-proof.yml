@@ -1,0 +1,38 @@
+name: N11 independent S8 LOSS perfect-matching proof
+on:
+  push:
+    paths:
+      - 'research/experiments/n11-s8-direct-loss-perfect-matching-20261030/**'
+      - '.github/workflows/n11-s8-direct-loss-proof.yml'
+  workflow_dispatch:
+jobs:
+  independent-terminal-proof:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Independently verify 36 S9 obligations and 18 LOSS10 leaves (Node, two geometries)
+        shell: bash
+        run: |
+          set -euo pipefail
+          node research/experiments/n11-s8-direct-loss-perfect-matching-20261030/verify.js --negative
+      - name: Independently verify matching and terminal recursion (Python)
+        shell: bash
+        run: |
+          set -euo pipefail
+          python research/experiments/n11-s8-direct-loss-perfect-matching-20261030/verify.py --negative
+      - name: Independently replay all 480 S10 leaves (Node, 3x3 and 4x4 geometries)
+        shell: bash
+        run: |
+          set -euo pipefail
+          node research/experiments/n11-s8-direct-loss-perfect-matching-20261030/scan_boundary_independent.js --emit-closure
+      - name: Independently audit all 81 LOSS10 leaves, 684 parents and fixed14 frontier (Python)
+        shell: bash
+        run: |
+          set -euo pipefail
+          python research/experiments/n11-s8-direct-loss-perfect-matching-20261030/audit_full_loss_closure.py --negative
+      - name: Reproduce full 480-leaf S10 scan and frozen verdict totals
+        shell: bash
+        run: |
+          set -euo pipefail
+          python research/experiments/n11-s8-direct-loss-perfect-matching-20261030/scan_boundary.py

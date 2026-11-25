@@ -1,0 +1,98 @@
+name: N11 hard9 s6 boundary sharded proof
+
+on:
+  push:
+    paths:
+      - ".github/workflows/n11-hard9-s6-boundary-sharded.yml"
+  workflow_dispatch:
+
+jobs:
+  solve:
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [0, 1, 2, 3]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build solver
+        run: |
+          c++ -std=c++20 -O3 -DNDEBUG -Icpp/solvers cpp/solvers/kyouen_dfpn_root.cpp -o /tmp/dfpn
+      - name: Materialize shard
+        run: |
+          python research/experiments/n11-frontier-selection-20261005/scripts/materialize_reply27_hard9_s6.py             --shards 4 --shard ${{ matrix.shard }}             --out /tmp/hard9-s6-${{ matrix.shard }}.csv             --meta-out /tmp/hard9-s6-${{ matrix.shard }}.meta.json
+      - name: Exact solve shard
+        run: |
+          /usr/bin/time -f 'wall_s=%e' -o /tmp/time             /tmp/dfpn --n=11 --memo=22               --exact-replay=/tmp/hard9-s6-${{ matrix.shard }}.csv --only=6               --exact-replay-budget=10000000               --csv=/tmp/hard9-s6-${{ matrix.shard }}.out
+          cat /tmp/time
+          ! grep -q '^replay_error,' /tmp/hard9-s6-${{ matrix.shard }}.out
+          grep '^# replay_done' /tmp/hard9-s6-${{ matrix.shard }}.out
+      - uses: actions/upload-artifact@v4
+        with:
+          name: hard9-s6-${{ matrix.shard }}
+          path: |
+            /tmp/hard9-s6-${{ matrix.shard }}.csv
+            /tmp/hard9-s6-${{ matrix.shard }}.out
+            /tmp/hard9-s6-${{ matrix.shard }}.meta.json
+
+  verify:
+    needs: solve
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: hard9-s6-*
+          path: /tmp/proof
+          merge-multiple: true
+      - name: Verify merged boundary and classify hard s5
+        run: |
+          python - <<'PY'
+          import csv,glob,json
+          meta=json.load(open("/tmp/proof/hard9-s6-0.meta.json"))
+          parents={tuple(map(int,k.split(":"))):v for k,v in meta["parents"].items()}
+          result={}; node_total=0; hist={0:0,1:0,2:0}
+          for path in sorted(glob.glob("/tmp/proof/hard9-s6-*.out")):
+              with open(path) as f:
+                  for row in csv.reader(f):
+                      if not row or row[0]!="replay": continue
+                      key=(int(row[9]),int(row[10]))
+                      r=int(row[6]); n=int(row[7])
+                      old=result.get(key)
+                      if old is not None and old!=r:
+                          raise SystemExit(f"CONFLICT {key} {old} {r}")
+                      result[key]=r
+                      hist[r]+=1; node_total+=n
+          assert len(result)==816, len(result)
+          pchildren=[[] for _ in meta["hard_s5"]]
+          for key,ps in parents.items():
+              for p in ps: pchildren[p].append(key)
+          status=[]
+          for i,kids in enumerate(pchildren):
+              vals=[result[k] for k in kids]
+              if 2 in vals:
+                  s="LOSS"; witness=kids[vals.index(2)]
+              elif all(v==1 for v in vals):
+                  s="WIN"; witness=None
+              else:
+                  s="UNKNOWN"; witness=None
+              status.append(s)
+              print("HARD_S5_STATUS",i,s,
+                    "children",len(kids),
+                    "win",sum(v==1 for v in vals),
+                    "loss",sum(v==2 for v in vals),
+                    "unknown",sum(v==0 for v in vals),
+                    "loss_witness",witness)
+          print("HARD9_S6_RESULT_COUNTS",hist)
+          print("HARD9_S6_TOTAL_NODES",node_total)
+          print("HARD9_S5_STATUS_COUNTS",
+                {s:status.count(s) for s in ("WIN","LOSS","UNKNOWN")})
+          open("/tmp/proof/VERIFIED.txt","w").write(
+              json.dumps({"s6_results":hist,"s5_status":status,
+                          "total_nodes":node_total},sort_keys=True)+"\n"
+          )
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: hard9-s6-boundary-proof
+          path: /tmp/proof/

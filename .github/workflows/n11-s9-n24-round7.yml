@@ -1,0 +1,38 @@
+name: N11 S9 round-seven bounded terminal proof
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/n11-s9-n24-round7.yml'
+      - 'research/experiments/n11-s9-n24-round7-20261028/**'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  terminal:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check frozen upstream proofs and evaluate only selected S9 candidates
+        shell: bash
+        run: |
+          set -euo pipefail
+          DIR=research/experiments/n11-s9-n24-round7-20261028
+          if test -f "$DIR/compact-certificate.json"; then
+            node "$DIR/prove.js" --minimal --negative > /tmp/n11-round7-minimal.json
+            node "$DIR/prove.js" > /tmp/n11-round7-full.json
+            cat /tmp/n11-round7-minimal.json
+          else
+            node "$DIR/prove.js" --propose | tee /tmp/n11-round7-proposed.json
+          fi
+      - name: Preserve result for later independent audit
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: n11-s9-round7-result
+          path: /tmp/n11-round7-*.json
+          if-no-files-found: ignore

@@ -1,0 +1,115 @@
+name: N11 reply27 next32 shared s6 probes
+
+on:
+  push:
+    paths:
+      - ".github/workflows/n11-reply27-shared-s6-next32.yml"
+  workflow_dispatch:
+
+jobs:
+  materialize:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: reply27-current-cache-optimization
+          path: /tmp/current
+          github-token: ${{ github.token }}
+          repository: ${{ github.repository }}
+          run-id: 37338193154
+      - name: Select next 32 shared s6 probes
+        run: |
+          python research/experiments/n11-frontier-selection-20261005/scripts/materialize_shared_s6_probes.py \
+            --targets /tmp/current/current-repair-targets.csv \
+            --count 32 --min-parents 2 \
+            --exclude-s6 research/experiments/n11-frontier-selection-20261005/output/reply27-current-shared16-s6.csv \
+            --csv-out /tmp/next32.csv --meta-out /tmp/next32.json
+          test "$(wc -l < /tmp/next32.csv)" -eq 32
+          python - <<'PY'
+          import json
+          d=json.load(open("/tmp/next32.json"))
+          print("NEXT32_SHARED_S6",d["selected_probes"],"covered",d["covered_s5_parents"],
+                "frontier",d["s5_frontier"])
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: reply27-next32-shared-s6-input
+          path: |
+            /tmp/next32.csv
+            /tmp/next32.json
+
+  solve:
+    needs: materialize
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [0, 1, 2, 3]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: reply27-next32-shared-s6-input
+          path: /tmp/input
+      - name: Build solver
+        run: |
+          c++ -std=c++20 -O3 -DNDEBUG -Icpp/solvers cpp/solvers/kyouen_dfpn_root.cpp -o /tmp/dfpn
+      - name: Materialize shard
+        run: |
+          awk -F, -v s=${{ matrix.shard }} '((NR-1)%4)==s {print}' /tmp/input/next32.csv > /tmp/targets.csv
+          test "$(wc -l < /tmp/targets.csv)" -eq 8
+      - name: Exact replay
+        run: |
+          /usr/bin/time -f 'wall_s=%e' -o /tmp/time \
+            /tmp/dfpn --n=11 --memo=22 --exact-replay=/tmp/targets.csv --only=6 \
+              --exact-replay-budget=10000000 --exact-order=count --csv=/tmp/out.csv
+          cat /tmp/time
+          ! grep -q '^replay_error,' /tmp/out.csv
+      - uses: actions/upload-artifact@v4
+        with:
+          name: reply27-next32-shared-s6-${{ matrix.shard }}
+          path: |
+            /tmp/out.csv
+            /tmp/targets.csv
+            /tmp/time
+
+  verify:
+    needs: solve
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: reply27-next32-shared-s6-input
+          path: /tmp/input
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: reply27-next32-shared-s6-[0-9]*
+          path: /tmp/proof
+          merge-multiple: false
+      - name: Derive exact parent s5 LOSS cache
+        run: |
+          python research/experiments/n11-frontier-selection-20261005/scripts/derive_shared_s6_witness_cache.py \
+            --meta /tmp/input/next32.json \
+            --replay '/tmp/proof/*/out.csv' \
+            --cache-out /tmp/next32-s5.cache | tee /tmp/derive.log
+          grep 'SHARED_S6_WITNESS_CACHE_OK' /tmp/derive.log
+          python - <<'PY'
+          import csv,glob
+          hist={0:0,1:0,2:0}; nodes=0
+          for p in glob.glob("/tmp/proof/*/out.csv"):
+              for r in csv.reader(open(p)):
+                  if r and r[0]=="replay":
+                      hist[int(r[6])]+=1; nodes+=int(r[7])
+          n=sum(1 for r in csv.reader(open("/tmp/next32-s5.cache")) if r and r[0]=="s5verdict")
+          print("NEXT32_S6_COUNTS",hist,"nodes",nodes,"derived_s5_loss",n)
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: reply27-next32-shared-s6-proof
+          path: |
+            /tmp/next32-s5.cache
+            /tmp/derive.log
+            /tmp/input/next32.json

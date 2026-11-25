@@ -1,0 +1,11 @@
+{
+  "status": "FAILED_CANDIDATE",
+  "candidate": "Ternary normal-nimber doubling might preserve low auxiliary values and double restriction t.",
+  "base_graph": "K1 join (P3 + P3 + two isolated points)",
+  "observations": [
+    {"iteration": 0, "n": 9, "normal": 4, "auxiliary_zero_free": 0, "auxiliary_one_free": 1, "t_zero_free": 2, "t_one_free": 3},
+    {"iteration": 1, "n": 27, "normal": 8, "auxiliary_zero_free": 6, "auxiliary_one_free": 7, "t_zero_free": null, "t_one_free": null}
+  ],
+  "termination": "The 81-point next iteration was stopped after the candidate had already failed; no claim is made for that unfinished case.",
+  "replacement": "Mutual join recursion on both low auxiliary values, proved in proof.md."
+}

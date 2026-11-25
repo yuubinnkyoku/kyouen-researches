@@ -1,0 +1,57 @@
+name: N11 repair s5 ordering benchmark
+
+on:
+  push:
+    paths:
+      - ".github/workflows/n11-repair-order-bench.yml"
+  workflow_dispatch:
+
+jobs:
+  bench:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install optimizer dependency
+        run: python -m pip install --quiet scipy
+      - name: Build solver
+        run: |
+          c++ -std=c++20 -O3 -DNDEBUG -Icpp/solvers cpp/solvers/kyouen_dfpn_root.cpp -o /tmp/dfpn
+      - name: Materialize one low-legal s5 per initial repair class
+        run: |
+          python research/experiments/n11-frontier-selection-20261005/scripts/reply27_selected31_repair.py \
+            --sample-out /tmp/repair17.csv --sample-per-class 1 \
+            --out /tmp/repair.json > /tmp/repair.log
+          grep 'REPLY27_SELECTED31_REPAIR_OK' /tmp/repair.log
+          test "$(wc -l < /tmp/repair17.csv)" -eq 17
+      - name: Baseline count
+        run: |
+          /usr/bin/time -f 'baseline_wall_s=%e' -o /tmp/base.time \
+            /tmp/dfpn --n=11 --memo=22 --exact-replay=/tmp/repair17.csv --only=5 \
+              --exact-replay-budget=15000000 --exact-order=count --csv=/tmp/base.out
+          cat /tmp/base.time
+      - name: Cost-aware target92
+        run: |
+          /usr/bin/time -f 'target92_wall_s=%e' -o /tmp/t92.time \
+            /tmp/dfpn --n=11 --memo=22 --exact-replay=/tmp/repair17.csv --only=5 \
+              --exact-replay-budget=15000000 --exact-order=s5-target92 --csv=/tmp/t92.out
+          cat /tmp/t92.time
+          python - <<'PY'
+          import csv
+          def load(p):
+              out=[]
+              with open(p) as f:
+                  for r in csv.reader(f):
+                      if r and r[0]=="replay":
+                          out.append((int(r[6]),int(r[7]),int(r[3])))
+              return out
+          a=load("/tmp/base.out"); b=load("/tmp/t92.out")
+          assert len(a)==len(b)==17
+          assert [x[0] for x in a]==[x[0] for x in b], (a,b)
+          na=sum(x[1] for x in a); nb=sum(x[1] for x in b)
+          print("REPAIR17_VERDICT_MATCH",[x[0] for x in a])
+          print("REPAIR17_COUNTS",
+                {v:sum(x[0]==v for x in a) for v in (0,1,2)})
+          print("REPAIR17_NODES baseline",na,"target92",nb,
+                "ratio",round(nb/na,6))
+          PY

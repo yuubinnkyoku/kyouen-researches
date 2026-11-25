@@ -1,0 +1,33 @@
+name: N11 round18 independent compact terminal proof
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'research/experiments/n11-s9-post-round17-round18-20261029/certificate.json'
+      - 'research/experiments/n11-s9-post-round17-round18-20261029/verify_compact.js'
+      - '.github/workflows/n11-s9-post-round17-round18-verify.yml'
+  workflow_dispatch:
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            research/experiments/n11-gap6-terminal-20261019
+            research/experiments/n11-s9-shared-plan14-eleven-win-20261027
+            research/experiments/n11-s9-post-round16-round17-20261029
+            research/experiments/n11-s9-post-round17-replan-20261029
+            research/experiments/n11-s9-post-round17-round18-20261029
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Independently replay 14 S9 verdicts and reject forged witnesses
+        run: node research/experiments/n11-s9-post-round17-round18-20261029/verify_compact.js --negative > round18-verified.json
+      - uses: actions/upload-artifact@v4
+        if: success()
+        with:
+          name: n11-round18-independent-verification
+          path: round18-verified.json
+          retention-days: 14

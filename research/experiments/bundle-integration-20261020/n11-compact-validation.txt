@@ -1,0 +1,54 @@
+./README.md: OK
+./audit_pruning.py: OK
+./check_cpp.py: OK
+./component0_essential115.json: OK
+./component6_essential100.json: OK
+./core_gap.py: OK
+./core_positive78.txt: OK
+./core_zero24.txt: OK
+./dual_components.json: OK
+./exact_cover_fast.cpp: OK
+./gen_exact.py: OK
+./loss_roots35.txt: OK
+./mutation_tests.py: OK
+./removed24.txt: OK
+./removed30.txt: OK
+./reproduce.sh: OK
+./selected385.txt: OK
+./terminal1946_cpp.tsv: OK
+./verify_compact385.py: OK
+./verify_core.py: OK
+./verify_essential100.py: OK
+./verify_essential115.py: OK
+./verify_s10_direct.cpp: OK
+./win_witnesses1561.tsv: OK
+./win_witnesses1585.tsv: OK
+./win_witnesses1591.tsv: OK
+PASS 245 optional exclusions partition into 215 individually essential and 30 jointly removable
+PASS all 1346 high-dual-weight exclusions retained; no WIN/LOSS verdicts changed
+roots=1946 WIN=1561 LOSS=385 states=128899
+PASS C++ independent 1946 terminal results; 385 LOSS cost=34709 states
+P=78 Z=24 C=396 calls=2473277 branches=2473276 memo=1406808 seconds=6.60539
+UNSAT (exhaustive independent gap proof)
+P=74 Z=13 C=394 calls=6755 branches=6754 memo=3913 seconds=0.0234949
+UNSAT (exhaustive independent gap proof)
+P=1 Z=0 C=1 calls=2 branches=1 memo=0 seconds=0.0133325
+P=1 Z=1 C=2 calls=3 branches=2 memo=0 seconds=0.0128962
+PASS 1561 independently checked S11 losing-child witnesses; 1346 high-weight exclusions
+PASS 385 independently checked terminal S10 LOSS leaves; 782 obligations covered; 34709 states
+PASS independently exhaustive Python UNSAT P=78 Z=24 C=396 calls=2473277 branches=2473276 memo=1406808
+PASS integrality gap 0 {'positive': 78, 'zero': 24, 'columns': 396, 'type': 'independent sufficient UNSAT submatrix'}
+PASS integrality gap 6 {'positive': 74, 'zero': 13, 'tight_columns': 394, 'calls': 6755, 'branches': 6754}
+PASS exact global minimum 385 over ALL legal S10 responses, no full verdict table
+Terminal proof obligations: 1561 WIN witnesses + 385 LOSS leaves = 1946 / 6446
+PASS 115/115 independently verified 128-leaf component covers
+PASS 115/115 counterfactual 384-leaf global covers (256 unchanged + 128)
+PASS 115/115 excluded S10 states independently WIN, each with an S11 LOSS child
+PASS each of 115 optional exclusions individually necessary for the CURRENT other exclusions
+NOTE: 30 other optional exclusions are not classified by this proof
+NOTE: counterfactual covers are NOT valid game certificates
+PASS 100/100 independently verified 41-leaf component covers
+PASS 100/100 counterfactual 384-leaf global covers (343 unchanged + 41)
+PASS 100/100 excluded S10 states independently WIN, each with an S11 LOSS child
+PASS all 100 baseline optional exclusions are individually necessary to rule out these covers
+IMPORTANT: this does NOT prove minimum number of exclusions under alternative choices

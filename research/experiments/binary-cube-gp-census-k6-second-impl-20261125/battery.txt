@@ -1,0 +1,18 @@
+== battery :: census3.js second implementation (all runs local, deterministic) ==
+Wed Nov 25 05:52:20 UTC 2026
+== B: selftest (B1 det vs BigInt Laplace, B2 rank, B3 gate fuzz, B4 witnesses, B8 magnitude, B6 d3/d4 census) ==
+PASS B1_det_vs_bigint trials=400 bad=0 maxabs=5
+PASS B2_rank_sanity trials=200 bad=0
+PASS B3_fast_vs_direct trials=410 bad=0
+PASS B4_witnesses_gp witnesses=4 bad=0
+PASS B8_det_magnitude_bound maxabs=9
+PASS B6_fast_census_d3_d4 bad=0
+SELFTEST PASS fails=0 ms=488
+== B: brutecensus (independent direct-determinant full enumeration) ==
+{"d":3,"counts":[0,1,7,21,29,5,0,0,0,0,0],"ms":1}
+{"d":4,"counts":[0,1,15,105,430,940,408,0,0,0,0],"ms":77}
+{"d":5,"counts":[0,1,31,465,4405,27990,104286,67606,0,0,0],"ms":10544}
+== B: fast census d=3,4,5 (published anchored tables) ==
+{"d":3,"counts":[0,1,7,21,29,5,0,0,0,0,0],"ms":1}
+{"d":4,"counts":[0,1,15,105,430,940,408,0,0,0,0],"ms":27}
+{"d":5,"counts":[0,1,31,465,4405,27990,104286,67606,0,0,0],"ms":804}

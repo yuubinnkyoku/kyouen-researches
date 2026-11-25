@@ -1,0 +1,796 @@
+{
+  "scope": "bounded sums and joins with free,P3,C6; no exhaustive cograph claim",
+  "history": [
+    {
+      "depth": 1,
+      "root_forms": 12,
+      "internal_forms": 12,
+      "frontier": 8,
+      "highest_poison_transform": 3
+    },
+    {
+      "depth": 2,
+      "root_forms": 41,
+      "internal_forms": 41,
+      "frontier": 29,
+      "highest_poison_transform": 3
+    },
+    {
+      "depth": 3,
+      "root_forms": 157,
+      "internal_forms": 157,
+      "frontier": 116,
+      "highest_poison_transform": 4
+    },
+    {
+      "depth": 4,
+      "root_forms": 631,
+      "internal_forms": 631,
+      "frontier": 287,
+      "highest_poison_transform": 5
+    },
+    {
+      "depth": 5,
+      "root_forms": 1855,
+      "internal_forms": 1872,
+      "frontier": 498,
+      "highest_poison_transform": 5
+    },
+    {
+      "depth": 6,
+      "root_forms": 4036,
+      "internal_forms": 4103,
+      "frontier": 782,
+      "highest_poison_transform": 5
+    },
+    {
+      "depth": 7,
+      "root_forms": 7526,
+      "internal_forms": 7773,
+      "frontier": 1124,
+      "highest_poison_transform": 5
+    },
+    {
+      "depth": 8,
+      "root_forms": 12623,
+      "internal_forms": 13195,
+      "frontier": 1513,
+      "highest_poison_transform": 5
+    },
+    {
+      "depth": 9,
+      "root_forms": 19587,
+      "internal_forms": 20679,
+      "frontier": 1886,
+      "highest_poison_transform": 5
+    }
+  ],
+  "internal_form_limit": 300000,
+  "form_limit_reached": false,
+  "leaders": [
+    {
+      "vertices": 10,
+      "expression": [
+        "sum",
+        [
+          "join",
+          [
+            "sum",
+            [
+              "sum",
+              "free",
+              "free"
+            ],
+            "C6"
+          ],
+          "free"
+        ],
+        "free"
+      ],
+      "normal": 2,
+      "misere_aux": 1,
+      "restricted": 3,
+      "poison_even": 5,
+      "poison_odd": 0
+    },
+    {
+      "vertices": 10,
+      "expression": [
+        "sum",
+        [
+          "join",
+          [
+            "sum",
+            [
+              "sum",
+              [
+                "sum",
+                "free",
+                "free"
+              ],
+              "P3"
+            ],
+            "P3"
+          ],
+          "free"
+        ],
+        "free"
+      ],
+      "normal": 5,
+      "misere_aux": 1,
+      "restricted": 3,
+      "poison_even": 5,
+      "poison_odd": 0
+    },
+    {
+      "vertices": 11,
+      "expression": [
+        "sum",
+        [
+          "join",
+          [
+            "sum",
+            [
+              "sum",
+              [
+                "join",
+                [
+                  "sum",
+                  "free",
+                  "P3"
+                ],
+                "free"
+              ],
+              "free"
+            ],
+            "P3"
+          ],
+          "free"
+        ],
+        "free"
+      ],
+      "normal": 5,
+      "misere_aux": 1,
+      "restricted": 3,
+      "poison_even": 5,
+      "poison_odd": 0
+    },
+    {
+      "vertices": 11,
+      "expression": [
+        "sum",
+        [
+          "join",
+          [
+            "sum",
+            [
+              "join",
+              [
+                "sum",
+                [
+                  "sum",
+                  "free",
+                  "free"
+                ],
+                "P3"
+              ],
+              "free"
+            ],
+            "P3"
+          ],
+          "free"
+        ],
+        "free"
+      ],
+      "normal": 5,
+      "misere_aux": 1,
+      "restricted": 3,
+      "poison_even": 5,
+      "poison_odd": 0
+    },
+    {
+      "vertices": 12,
+      "expression": [
+        "sum",
+        [
+          "join",
+          [
+            "sum",
+            [
+              "sum",
+              [
+                "sum",
+                [
+                  "sum",
+                  "free",
+                  "free"
+                ],
+                "free"
+              ],
+              "free"
+            ],
+            "C6"
+          ],
+          "free"
+        ],
+        "free"
+      ],
+      "normal": 2,
+      "misere_aux": 1,
+      "restricted": 3,
+      "poison_even": 5,
+      "poison_odd": 0
+    },
+    {
+      "vertices": 12,
+      "expression": [
+        "sum",
+        [
+          "sum",
+          [
+            "sum",
+            [
+              "join",
+              [
+                "sum",
+                [
+                  "sum",
+                  "free",
+                  "free"
+                ],
+                "C6"
+              ],
+              "free"
+            ],
+            "free"
+          ],
+          "free"
+        ],
+        "free"
+      ],
+      "normal": 2,
+      "misere_aux": 1,
+      "restricted": 3,
+      "poison_even": 5,
+      "poison_odd": 0
+    },
+    {
+      "vertices": 12,
+      "expression": [
+        "sum",
+        [
+          "join",
+          [
+            "sum",
+            [
+              "sum",
+              [
+                "sum",
+                [
+                  "sum",
+                  [
+                    "sum",
+                    "free",
+                    "free"
+                  ],
+                  "free"
+                ],
+                "free"
+              ],
+              "P3"
+            ],
+            "P3"
+          ],
+          "free"
+        ],
+        "free"
+      ],
+      "normal": 5,
+      "misere_aux": 1,
+      "restricted": 3,
+      "poison_even": 5,
+      "poison_odd": 0
+    },
+    {
+      "vertices": 12,
+      "expression": [
+        "sum",
+        [
+          "join",
+          [
+            "sum",
+            [
+              "join",
+              [
+                "sum",
+                [
+                  "join",
+                  [
+                    "sum",
+                    "free",
+                    "P3"
+                  ],
+                  "free"
+                ],
+                "free"
+              ],
+              "free"
+            ],
+            "P3"
+          ],
+          "free"
+        ],
+        "free"
+      ],
+      "normal": 5,
+      "misere_aux": 1,
+      "restricted": 3,
+      "poison_even": 5,
+      "poison_odd": 0
+    },
+    {
+      "vertices": 12,
+      "expression": [
+        "sum",
+        [
+          "sum",
+          [
+            "sum",
+            [
+              "join",
+              [
+                "sum",
+                [
+                  "sum",
+                  [
+                    "sum",
+                    "free",
+                    "free"
+                  ],
+                  "P3"
+                ],
+                "P3"
+              ],
+              "free"
+            ],
+            "free"
+          ],
+          "free"
+        ],
+        "free"
+      ],
+      "normal": 5,
+      "misere_aux": 1,
+      "restricted": 3,
+      "poison_even": 5,
+      "poison_odd": 0
+    },
+    {
+      "vertices": 12,
+      "expression": [
+        "sum",
+        [
+          "join",
+          [
+            "sum",
+            [
+              "sum",
+              [
+                "sum",
+                [
+                  "join",
+                  [
+                    "sum",
+                    [
+                      "sum",
+                      [
+                        "sum",
+                        "free",
+                        "free"
+                      ],
+                      "free"
+                    ],
+                    "free"
+                  ],
+                  "free"
+                ],
+                "free"
+              ],
+              "free"
+            ],
+            "P3"
+          ],
+          "free"
+        ],
+        "free"
+      ],
+      "normal": 5,
+      "misere_aux": 1,
+      "restricted": 3,
+      "poison_even": 5,
+      "poison_odd": 0
+    },
+    {
+      "vertices": 13,
+      "expression": [
+        "sum",
+        [
+          "join",
+          [
+            "sum",
+            [
+              "join",
+              [
+                "sum",
+                "free",
+                "C6"
+              ],
+              "free"
+            ],
+            "P3"
+          ],
+          "free"
+        ],
+        "free"
+      ],
+      "normal": 2,
+      "misere_aux": 1,
+      "restricted": 3,
+      "poison_even": 5,
+      "poison_odd": 0
+    },
+    {
+      "vertices": 13,
+      "expression": [
+        "sum",
+        [
+          "join",
+          [
+            "sum",
+            [
+              "join",
+              [
+                "sum",
+                [
+                  "sum",
+                  "free",
+                  "free"
+                ],
+                "P3"
+              ],
+              "P3"
+            ],
+            "P3"
+          ],
+          "free"
+        ],
+        "free"
+      ],
+      "normal": 5,
+      "misere_aux": 1,
+      "restricted": 3,
+      "poison_even": 5,
+      "poison_odd": 0
+    },
+    {
+      "vertices": 13,
+      "expression": [
+        "sum",
+        [
+          "join",
+          [
+            "sum",
+            [
+              "sum",
+              [
+                "join",
+                [
+                  "sum",
+                  [
+                    "sum",
+                    "free",
+                    "free"
+                  ],
+                  "free"
+                ],
+                "free"
+              ],
+              "free"
+            ],
+            "C6"
+          ],
+          "free"
+        ],
+        "free"
+      ],
+      "normal": 2,
+      "misere_aux": 1,
+      "restricted": 3,
+      "poison_even": 5,
+      "poison_odd": 0
+    },
+    {
+      "vertices": 13,
+      "expression": [
+        "sum",
+        [
+          "join",
+          [
+            "sum",
+            [
+              "sum",
+              [
+                "join",
+                [
+                  "sum",
+                  [
+                    "sum",
+                    "free",
+                    "free"
+                  ],
+                  "C6"
+                ],
+                "free"
+              ],
+              "free"
+            ],
+            "free"
+          ],
+          "free"
+        ],
+        "free"
+      ],
+      "normal": 2,
+      "misere_aux": 1,
+      "restricted": 3,
+      "poison_even": 5,
+      "poison_odd": 0
+    },
+    {
+      "vertices": 13,
+      "expression": [
+        "sum",
+        [
+          "join",
+          [
+            "sum",
+            [
+              "sum",
+              [
+                "sum",
+                [
+                  "sum",
+                  [
+                    "join",
+                    [
+                      "sum",
+                      "free",
+                      "P3"
+                    ],
+                    "free"
+                  ],
+                  "free"
+                ],
+                "free"
+              ],
+              "free"
+            ],
+            "P3"
+          ],
+          "free"
+        ],
+        "free"
+      ],
+      "normal": 5,
+      "misere_aux": 1,
+      "restricted": 3,
+      "poison_even": 5,
+      "poison_odd": 0
+    },
+    {
+      "vertices": 13,
+      "expression": [
+        "sum",
+        [
+          "join",
+          [
+            "sum",
+            [
+              "sum",
+              [
+                "sum",
+                [
+                  "join",
+                  [
+                    "sum",
+                    [
+                      "sum",
+                      "free",
+                      "free"
+                    ],
+                    "free"
+                  ],
+                  "P3"
+                ],
+                "free"
+              ],
+              "free"
+            ],
+            "P3"
+          ],
+          "free"
+        ],
+        "free"
+      ],
+      "normal": 5,
+      "misere_aux": 1,
+      "restricted": 3,
+      "poison_even": 5,
+      "poison_odd": 0
+    },
+    {
+      "vertices": 13,
+      "expression": [
+        "sum",
+        [
+          "join",
+          [
+            "sum",
+            [
+              "sum",
+              [
+                "sum",
+                [
+                  "join",
+                  [
+                    "sum",
+                    [
+                      "sum",
+                      "free",
+                      "free"
+                    ],
+                    "P3"
+                  ],
+                  "free"
+                ],
+                "free"
+              ],
+              "free"
+            ],
+            "P3"
+          ],
+          "free"
+        ],
+        "free"
+      ],
+      "normal": 5,
+      "misere_aux": 1,
+      "restricted": 3,
+      "poison_even": 5,
+      "poison_odd": 0
+    },
+    {
+      "vertices": 13,
+      "expression": [
+        "sum",
+        [
+          "join",
+          [
+            "sum",
+            [
+              "join",
+              [
+                "sum",
+                [
+                  "sum",
+                  [
+                    "sum",
+                    [
+                      "sum",
+                      "free",
+                      "free"
+                    ],
+                    "free"
+                  ],
+                  "free"
+                ],
+                "P3"
+              ],
+              "free"
+            ],
+            "P3"
+          ],
+          "free"
+        ],
+        "free"
+      ],
+      "normal": 5,
+      "misere_aux": 1,
+      "restricted": 3,
+      "poison_even": 5,
+      "poison_odd": 0
+    },
+    {
+      "vertices": 13,
+      "expression": [
+        "sum",
+        [
+          "join",
+          [
+            "sum",
+            [
+              "sum",
+              [
+                "sum",
+                [
+                  "join",
+                  [
+                    "sum",
+                    [
+                      "sum",
+                      "free",
+                      "free"
+                    ],
+                    "free"
+                  ],
+                  "free"
+                ],
+                "free"
+              ],
+              "P3"
+            ],
+            "P3"
+          ],
+          "free"
+        ],
+        "free"
+      ],
+      "normal": 5,
+      "misere_aux": 1,
+      "restricted": 3,
+      "poison_even": 5,
+      "poison_odd": 0
+    },
+    {
+      "vertices": 13,
+      "expression": [
+        "sum",
+        [
+          "join",
+          [
+            "sum",
+            [
+              "sum",
+              [
+                "join",
+                [
+                  "sum",
+                  [
+                    "sum",
+                    [
+                      "sum",
+                      "free",
+                      "free"
+                    ],
+                    "free"
+                  ],
+                  "P3"
+                ],
+                "free"
+              ],
+              "free"
+            ],
+            "P3"
+          ],
+          "free"
+        ],
+        "free"
+      ],
+      "normal": 5,
+      "misere_aux": 1,
+      "restricted": 3,
+      "poison_even": 5,
+      "poison_odd": 0
+    }
+  ]
+}

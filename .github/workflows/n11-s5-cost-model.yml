@@ -1,0 +1,75 @@
+name: N11 s5 exact-cost model
+
+on:
+  push:
+    paths:
+      - ".github/workflows/n11-s5-cost-model.yml"
+      - "research/experiments/n11-literature-transfer-20261005/scripts/evaluate_s5_cost_model.py"
+  workflow_dispatch:
+
+jobs:
+  evaluate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download full reply27 replay shards
+        uses: actions/download-artifact@v4
+        with:
+          pattern: reply27-full-*
+          path: /tmp/full
+          merge-multiple: false
+          github-token: ${{ github.token }}
+          repository: ${{ github.repository }}
+          run-id: 37275321333
+
+      - name: Build exact feature cache from resolved replay rows
+        run: |
+          python - <<'PY'
+          import csv,glob
+          exact={}
+          for p in glob.glob("/tmp/full/**/*.out",recursive=True):
+              with open(p,newline="") as f:
+                  for r in csv.reader(f):
+                      if not r or r[0]!="replay": continue
+                      v=int(r[6]); k=(int(r[9]),int(r[10]))
+                      if v not in (1,2): continue
+                      old=exact.get(k)
+                      assert old in (None,v),(k,old,v)
+                      exact[k]=v
+          with open("/tmp/exact.cache","w") as f:
+              f.write("# exact resolved reply27 s5 roots for cost-model features\n")
+              for (lo,hi),v in sorted(exact.items()):
+                  f.write(f"s5verdict,{lo},{hi},5,{v},0\n")
+          print("COST_MODEL_EXACT_ROOTS",len(exact))
+          PY
+
+      - name: Build structural feature extractor
+        run: |
+          c++ -std=c++20 -O3 -DNDEBUG             research/experiments/n11-literature-transfer-20261005/scripts/extract_s5_features.cpp             -o /tmp/extract-s5-features
+
+      - name: Extract structural features
+        run: |
+          /tmp/extract-s5-features /tmp/exact.cache > /tmp/features.csv
+
+      - name: Fit and evaluate exact-cost model
+        run: |
+          python -m pip install --quiet numpy
+          python research/experiments/n11-literature-transfer-20261005/scripts/evaluate_s5_cost_model.py             --features /tmp/features.csv             --replay-dir /tmp/full             --out /tmp/s5-cost-model.json | tee /tmp/s5-cost-model.log
+          python - <<'PY'
+          import json
+          d=json.load(open("/tmp/s5-cost-model.json"))
+          print("COST_SPLIT",d["split"])
+          print("COST_LEGAL",d["legal_only"]["holdout"])
+          print("COST_STRUCT",d["structural_ridge"]["holdout"])
+          print("COST_TOP_COEFF",d["structural_ridge"]["coefficients"][:6])
+          PY
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: n11-s5-cost-model
+          path: |
+            /tmp/features.csv
+            /tmp/s5-cost-model.json
+            /tmp/s5-cost-model.log

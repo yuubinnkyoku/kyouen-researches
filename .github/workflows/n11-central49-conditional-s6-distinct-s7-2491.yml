@@ -1,0 +1,25 @@
+name: N11 conditional 46-S6 2491 distinct-S7 proof-plan audit
+
+on:
+  push:
+    paths:
+      - 'research/experiments/n11-central-19-cover-20261031/conditional_s6_cover_46_distinct_s7_2491.json'
+      - 'research/experiments/n11-central-19-cover-20261031/verify_conditional_s6_distinct_s7_2491.py'
+      - 'research/experiments/n11-central-19-cover-20261031/conditional_s6_cover_46_distinct_s7_2553.json'
+      - 'research/experiments/n11-central-19-cover-20261031/verify_conditional_s6_distinct_s7_2553.py'
+      - 'research/experiments/n11-central-19-cover-20261031/conditional_s6_cover_46_shared_s7_optimal.json'
+      - 'research/experiments/n11-central-19-cover-20261031/verify_conditional_s6_shared_s7_optimal.py'
+      - 'research/experiments/n11-central-19-cover-20261031/conditional_s6_cover_46.json'
+      - 'research/experiments/n11-central-19-cover-20261031/verify_conditional_s6_cover_46.py'
+      - 'research/experiments/n11-central-19-cover-20261031/verify_s7_shared_frontier_46.py'
+      - '.github/workflows/n11-central49-conditional-s6-distinct-s7-2491.yml'
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Reconstruct 46 S6 witnesses, audit all S7 edges and reject altered evidence
+        run: python3 research/experiments/n11-central-19-cover-20261031/verify_conditional_s6_distinct_s7_2491.py --negative

@@ -1,0 +1,31 @@
+name: N11 central49 all 53 focused terminal certificates
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'research/experiments/n11-central-19-cover-20261031/verify_2096_focus_53_terminal_classes.py'
+      - '.github/workflows/n11-central49-2096-focus-53-terminal.yml'
+
+jobs:
+  all-53-independent-terminal-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - name: Reproduce 53 complete strategies and check every reply by 4x4 integers
+        run: |
+          python3 research/experiments/n11-central-19-cover-20261031/verify_2096_focus_53_terminal_classes.py --negative > "$RUNNER_TEMP/terminal53.txt"
+          python3 - "$RUNNER_TEMP/terminal53.txt" <<'PY'
+          import json, sys
+          d = json.loads(open(sys.argv[1], encoding="utf-8").read().splitlines()[-1])
+          assert d["focused_s7"] == 53
+          assert d["terminal_certified_original_first_loss7"] == 47
+          assert d["terminal_certified_original_first_win7"] == 6
+          assert d["negative_tests_rejected"] == 4
+          assert d["reachable_states"] == 313388
+          assert d["terminal_states"] == 42058
+          assert d["conditional_2096_loss_witness_plan_valid"] is False
+          assert d["two_stone_root"] == d["empty_board"] == "UNKNOWN"
+          print(json.dumps(d, indent=2))
+          PY

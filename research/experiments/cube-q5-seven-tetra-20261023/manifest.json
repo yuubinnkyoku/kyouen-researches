@@ -1,0 +1,104 @@
+{
+  "artifacts": {
+    "README.md": "c9cb0bf0bb76b31dfadc35432926f9a075a933ae12e96b663bc2aa0da56f064e",
+    "derive_parent.py": "19bdac62b16541119fff3f1189a3ed78f79da4590fd347811971976d9319a4bd",
+    "roots.txt": "17eca9e18b259d225bc955b57f0721c119a0ff596ca96b06d0bdd2c3d7b33ace",
+    "focus-initial.json": "d0ace6e64029a895ad22d564c1ae7598ae1e938dd4d7f9ce1d756882c59efabc",
+    "stage-2.jsonl": "44cc63b4cada2788202942c11b53cea9638069df4b6a8a01cb61a12d98a9d879",
+    "stage-2.cert.gz": "bfa6febb63c5871b1e29be4917354e04d8ca94acf2a8ebc912366cf49f0b7d18",
+    "stage-2-verified.json": "401c3c1a8cfd4aff2703e895e58a10dfccd776a0f39387feabb3a7da7ad107b0",
+    "boundary-first.json": "fd1ddac3023de42789439147b80fb4330d72421cb837e0089b8f6d881e6428ac",
+    "parent-three.txt": "0dc7283893153a453d2dc5266a6abd02fca4dbc828de5cc42f5100b2a583466e",
+    "parent-boundary.json": "c9bec132671a696382b63e1f83a5b3bc66518c2b1afd56e01234d0d30052c5ea",
+    "parent-three-verified.json": "b247518a9a364af32fc7fae626eaa21969d1e24124c83fafcf7641965da6c30e",
+    "survey-four.jsonl": "16d8b02a18838644e25ae6972db91e483e4533492e5dfe6acf093941a89099af",
+    "probe-five.jsonl": "beb1529f67a4f81c46bd26b2b726d1b0872a5d69cf40897881ff230123a8e62e",
+    "five-centre-verified.json": "fa900d09becf4c9cf0173c1801bb72745548e0ff12c012667e0ad782e20181d8",
+    "five-centre.cert.gz": "137b65979d1e11ee8716943fea7a8ee4874511b799e85c34b341aa095382a645",
+    "five-roots.txt": "8033309e657005c07267721478c9bd25d8057bc89f66eb015989f690ea7104bb",
+    "four-roots.txt": "c2ba42dca2762c71fdf2d093861d69514c651871d283b38880ab030386478bbe"
+  },
+  "source": "research/experiments/cube-q5-seven-hybrid-20261023/lazy.cpp",
+  "binary_sha256": "b69dd26e187d35e2b865d3a4ee64c23be0911a80523da38b569fc28aceab2642",
+  "p4_raw_sha256": "c64273501968c62d0c6e0d7a0ec8d7c795c45c8c653440810ff3255c9a6f143b",
+  "derived_n3_raw_sha256": "e19b5bdfe227e0c6a59f12b5d5af2f038ccb7ea41985d87770cf3ec79f4dc0e6",
+  "p4_independent_verification": {
+    "verified": true,
+    "side": 7,
+    "root_words": [
+      144115188075855872,
+      33554432,
+      0,
+      0,
+      33554434,
+      0
+    ],
+    "outcome": "P",
+    "states": 337060,
+    "edges": 419826,
+    "terminals": 103556,
+    "determinant_checks": 175627813,
+    "layers": {
+      "4": 1,
+      "5": 28,
+      "6": 24,
+      "7": 1523,
+      "8": 1220,
+      "9": 43085,
+      "10": 30249,
+      "11": 154049,
+      "12": 103196,
+      "13": 2666,
+      "14": 1019
+    }
+  },
+  "n3_independent_verification": {
+    "verified": true,
+    "side": 7,
+    "root_words": [
+      2305843009213693952,
+      2097152,
+      0,
+      2305843009213693952,
+      0,
+      0
+    ],
+    "outcome": "N",
+    "states": 337061,
+    "edges": 419827,
+    "terminals": 103556,
+    "determinant_checks": 175627813,
+    "layers": {
+      "3": 1,
+      "4": 1,
+      "5": 28,
+      "6": 24,
+      "7": 1523,
+      "8": 1220,
+      "9": 43085,
+      "10": 30249,
+      "11": 154049,
+      "12": 103196,
+      "13": 2666,
+      "14": 1019
+    }
+  },
+  "private_checkpoint": {
+    "path": "scratch/cube-q5-seven-tetra-20261023/layer-2.hyb",
+    "bytes": 331308096,
+    "sha256": "dfcdb1a68091fc76412ad9d93c2490144213dab081ed8decb0a867ff8da04a9d",
+    "header": [
+      7,
+      15943322775662834065,
+      113795593,
+      101741469,
+      4,
+      9,
+      103430940,
+      2432397,
+      576020
+    ],
+    "candidate_labels_not_independently_checked_as_a_whole": true
+  },
+  "scope": "one nonterminal P4 orbit and its N3 parent orbit; no empty-board verdict"
+}

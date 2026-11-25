@@ -1,0 +1,27 @@
+name: N11 round16 independent S9 boundary preflight
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'research/experiments/n11-s9-post-round15-replan-20261029/next-plan.json'
+      - 'research/experiments/n11-s9-post-round15-replan-20261029/preflight.js'
+      - 'research/experiments/n11-s9-post-round15-replan-20261029/preflight.json'
+      - '.github/workflows/n11-s9-post-round15-preflight.yml'
+  workflow_dispatch:
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            research/experiments/n11-gap6-terminal-20261019
+            research/experiments/n11-s9-shared-plan14-eleven-win-20261027
+            research/experiments/n11-s9-post-round14-round15-20261029
+            research/experiments/n11-s9-post-round15-replan-20261029
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify 28 selected S9 roots and every S10 legal child in two exact geometries
+        run: node research/experiments/n11-s9-post-round15-replan-20261029/preflight.js

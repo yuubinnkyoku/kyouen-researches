@@ -1,0 +1,21 @@
+name: N11 round21 independent boundary preflight
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'research/experiments/n11-s9-post-round20-replan-20261029/next-plan.json'
+      - 'research/experiments/n11-s9-post-round20-replan-20261029/preflight.json'
+      - 'research/experiments/n11-s9-post-round20-replan-20261029/preflight_independent.py'
+      - '.github/workflows/n11-s9-post-round20-preflight.yml'
+  workflow_dispatch:
+jobs:
+  geometry:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify selected roots and every legal child with independent integer geometry
+        run: python research/experiments/n11-s9-post-round20-replan-20261029/preflight_independent.py

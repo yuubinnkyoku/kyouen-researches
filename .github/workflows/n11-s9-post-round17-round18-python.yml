@@ -1,0 +1,23 @@
+name: N11 round18 standalone Python terminal proof
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'research/experiments/n11-s9-post-round17-round18-20261029/verify_python.py'
+      - '.github/workflows/n11-s9-post-round17-round18-python.yml'
+  workflow_dispatch:
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            research/experiments/n11-s9-post-round17-replan-20261029
+            research/experiments/n11-s9-post-round17-round18-20261029
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Recompute all 14 witnesses and 42 terminal leaves independently in Python
+        run: python research/experiments/n11-s9-post-round17-round18-20261029/verify_python.py

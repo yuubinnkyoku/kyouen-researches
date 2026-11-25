@@ -1,0 +1,32 @@
+{
+  "claim": "K_6 = 9 for the hyperplane game on {0,1}^6 (forbid 7 points on a common real affine hyperplane, degenerate included); no GP (general position) subset of size 10 exists",
+  "date": "2026-11-21",
+  "method": "vertex-0-anchored exact census over 63 pairs (0,v2), fast fraction-free frame gates with dual-prime zero tests (PA=67108859, PB=67108837, Hadamard bound 907 < p)",
+  "anchored_counts": {
+    "d3": {"s2": 7, "s3": 21, "s4": 29, "s5": 5, "s6": 0},
+    "d4": {"s2": 15, "s3": 105, "s4": 430, "s5": 940, "s6": 408, "s7": 0},
+    "d5": {"s2": 31, "s3": 465, "s4": 4405, "s5": 27990, "s6": 104286, "s7": 67606, "s8": 0},
+    "d6": {"s2": 63, "s3": 1953, "s4": 39410, "s5": 571340, "s6": 6029142, "s7": 40050850, "s8": 53334038, "s9": 408240, "s10": 0}
+  },
+  "totals_k_equals_anchored_times_64_over_k": {
+    "d6_gp7": 366179200,
+    "d6_gp8": 426672304,
+    "d6_gp9": 2903360,
+    "d6_gp10": 0,
+    "d5_gp7": 309056,
+    "d4_gp6": 1088,
+    "d3_gp5": 8
+  },
+  "k_values": {"K_3": 5, "K_4": 6, "K_5": 7, "K_6": 9},
+  "nine_point_witness": [11, 22, 28, 37, 42, 49, 57, 58, 63],
+  "cross_checks": [
+    "d6 s4/s5/s6/s7 match audit-derived (C(64,k)-dep_k)*k/64 with dep 4816/311360/10663520 and independent heptads 366179200",
+    "d5 gp7 total 309056 equals K0591/K0546 full-position DP seven-stone safe count",
+    "d3/d4 all sizes and d5 sizes<=6: census vs independent brute enumeration full agreement (battery B6)",
+    "battery 20/20 PASS incl. Laplace/BigInt function-family ground truth, witness GP re-verification, in-tree gate brute re-verification, v3-slicing consistency",
+    "63-pair census completes in ~13 min CPU on 2 cores, per-pair raw counts in r6-results.jsonl reproducible via task63"
+  ],
+  "not_claimed": ["d=6 full-position Grundy values or game outcome", "d>=7 upper bounds", "misere variants"],
+  "census2_sha256": "7ac34b88207fc2ce309c73fc9fb5dea7e151d96a4aa556244971d044ae2a8b96",
+  "evidence_level": "single-implementation finite complete enumeration with multi-angle cross-verification"
+}

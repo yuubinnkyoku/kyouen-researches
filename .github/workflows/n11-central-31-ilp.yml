@@ -1,0 +1,23 @@
+name: N11 central 31-class bounded ILP
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/n11-central-31-ilp.yml'
+      - 'research/experiments/n11-central-19-cover-20261031/solve_31_ilp.py'
+  workflow_dispatch:
+
+jobs:
+  bounded-search:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install SciPy for bounded integer programming
+        run: python -m pip install 'scipy>=1.14,<2'
+      - name: Search four unrepaired 31-class constrained covers
+        run: python -u research/experiments/n11-central-19-cover-20261031/solve_31_ilp.py --seconds 50

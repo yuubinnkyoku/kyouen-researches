@@ -1,0 +1,508 @@
+{
+  "direct": true,
+  "audits": {
+    "3": {
+      "histories": 30,
+      "incremental_full_comparisons": 945,
+      "early_empty": 121
+    },
+    "7": {
+      "histories": 12,
+      "incremental_full_comparisons": 839,
+      "early_empty": 29
+    }
+  },
+  "known_three_cube_orbits": 20,
+  "all_proofs_independently_verified": true,
+  "bidirectional_checkpoint_compatibility": true,
+  "geometry_eviction_exact": true,
+  "wide_terminal_verified": true,
+  "mobility_dfs_independent_three_cube_proofs": 20,
+  "zero_budget_unknown": true,
+  "proofs": [
+    {
+      "verified": true,
+      "side": 3,
+      "root_words": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "outcome": "P",
+      "states": 67,
+      "edges": 116,
+      "terminals": 23,
+      "determinant_checks": 5014,
+      "layers": {
+        "2": 1,
+        "3": 16,
+        "4": 10,
+        "5": 24,
+        "6": 16
+      }
+    },
+    {
+      "verified": true,
+      "side": 3,
+      "root_words": [
+        5,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "outcome": "P",
+      "states": 102,
+      "edges": 182,
+      "terminals": 39,
+      "determinant_checks": 10281,
+      "layers": {
+        "2": 1,
+        "3": 11,
+        "4": 9,
+        "5": 46,
+        "6": 35
+      }
+    },
+    {
+      "verified": true,
+      "side": 3,
+      "root_words": [
+        17,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "outcome": "P",
+      "states": 187,
+      "edges": 316,
+      "terminals": 62,
+      "determinant_checks": 21528,
+      "layers": {
+        "2": 1,
+        "3": 16,
+        "4": 13,
+        "5": 91,
+        "6": 58,
+        "7": 6,
+        "8": 2
+      }
+    },
+    {
+      "verified": true,
+      "side": 3,
+      "root_words": [
+        12,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "outcome": "P",
+      "states": 254,
+      "edges": 423,
+      "terminals": 88,
+      "determinant_checks": 21643,
+      "layers": {
+        "2": 1,
+        "3": 24,
+        "4": 18,
+        "5": 128,
+        "6": 83
+      }
+    },
+    {
+      "verified": true,
+      "side": 3,
+      "root_words": [
+        68,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "outcome": "P",
+      "states": 66,
+      "edges": 134,
+      "terminals": 25,
+      "determinant_checks": 5865,
+      "layers": {
+        "2": 1,
+        "3": 11,
+        "4": 10,
+        "5": 25,
+        "6": 19
+      }
+    },
+    {
+      "verified": true,
+      "side": 3,
+      "root_words": [
+        8193,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "outcome": "P",
+      "states": 79,
+      "edges": 146,
+      "terminals": 29,
+      "determinant_checks": 7889,
+      "layers": {
+        "2": 1,
+        "3": 8,
+        "4": 5,
+        "5": 37,
+        "6": 28
+      }
+    },
+    {
+      "verified": true,
+      "side": 3,
+      "root_words": [
+        1088,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "outcome": "P",
+      "states": 127,
+      "edges": 188,
+      "terminals": 47,
+      "determinant_checks": 11224,
+      "layers": {
+        "2": 1,
+        "3": 16,
+        "4": 9,
+        "5": 58,
+        "6": 43
+      }
+    },
+    {
+      "verified": true,
+      "side": 3,
+      "root_words": [
+        768,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "outcome": "P",
+      "states": 154,
+      "edges": 266,
+      "terminals": 50,
+      "determinant_checks": 12558,
+      "layers": {
+        "2": 1,
+        "3": 16,
+        "4": 13,
+        "5": 78,
+        "6": 46
+      }
+    },
+    {
+      "verified": true,
+      "side": 3,
+      "root_words": [
+        262400,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "outcome": "P",
+      "states": 59,
+      "edges": 134,
+      "terminals": 21,
+      "determinant_checks": 6026,
+      "layers": {
+        "2": 1,
+        "3": 5,
+        "4": 4,
+        "5": 28,
+        "6": 21
+      }
+    },
+    {
+      "verified": true,
+      "side": 3,
+      "root_words": [
+        10,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "outcome": "P",
+      "states": 154,
+      "edges": 236,
+      "terminals": 56,
+      "determinant_checks": 14582,
+      "layers": {
+        "2": 1,
+        "3": 17,
+        "4": 15,
+        "5": 73,
+        "6": 48
+      }
+    },
+    {
+      "verified": true,
+      "side": 3,
+      "root_words": [
+        18,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "outcome": "P",
+      "states": 130,
+      "edges": 183,
+      "terminals": 47,
+      "determinant_checks": 11845,
+      "layers": {
+        "2": 1,
+        "3": 16,
+        "4": 11,
+        "5": 61,
+        "6": 41
+      }
+    },
+    {
+      "verified": true,
+      "side": 3,
+      "root_words": [
+        40,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "outcome": "P",
+      "states": 75,
+      "edges": 137,
+      "terminals": 27,
+      "determinant_checks": 6486,
+      "layers": {
+        "2": 1,
+        "3": 11,
+        "4": 9,
+        "5": 32,
+        "6": 22
+      }
+    },
+    {
+      "verified": true,
+      "side": 3,
+      "root_words": [
+        528,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "outcome": "P",
+      "states": 105,
+      "edges": 206,
+      "terminals": 33,
+      "determinant_checks": 7498,
+      "layers": {
+        "2": 1,
+        "3": 16,
+        "4": 11,
+        "5": 48,
+        "6": 29
+      }
+    },
+    {
+      "verified": true,
+      "side": 3,
+      "root_words": [
+        8194,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "outcome": "P",
+      "states": 83,
+      "edges": 170,
+      "terminals": 28,
+      "determinant_checks": 7843,
+      "layers": {
+        "2": 1,
+        "3": 10,
+        "4": 7,
+        "5": 39,
+        "6": 26
+      }
+    },
+    {
+      "verified": true,
+      "side": 3,
+      "root_words": [
+        544,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "outcome": "P",
+      "states": 171,
+      "edges": 255,
+      "terminals": 62,
+      "determinant_checks": 16330,
+      "layers": {
+        "2": 1,
+        "3": 14,
+        "4": 11,
+        "5": 86,
+        "6": 59
+      }
+    },
+    {
+      "verified": true,
+      "side": 3,
+      "root_words": [
+        1152,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "outcome": "P",
+      "states": 176,
+      "edges": 265,
+      "terminals": 64,
+      "determinant_checks": 16468,
+      "layers": {
+        "2": 1,
+        "3": 16,
+        "4": 12,
+        "5": 87,
+        "6": 60
+      }
+    },
+    {
+      "verified": true,
+      "side": 3,
+      "root_words": [
+        34816,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "outcome": "P",
+      "states": 107,
+      "edges": 174,
+      "terminals": 37,
+      "determinant_checks": 10097,
+      "layers": {
+        "2": 1,
+        "3": 7,
+        "4": 6,
+        "5": 57,
+        "6": 36
+      }
+    },
+    {
+      "verified": true,
+      "side": 3,
+      "root_words": [
+        1040,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "outcome": "P",
+      "states": 88,
+      "edges": 169,
+      "terminals": 32,
+      "determinant_checks": 12765,
+      "layers": {
+        "2": 1,
+        "3": 11,
+        "4": 10,
+        "5": 32,
+        "6": 26,
+        "7": 6,
+        "8": 2
+      }
+    },
+    {
+      "verified": true,
+      "side": 3,
+      "root_words": [
+        8208,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "outcome": "P",
+      "states": 52,
+      "edges": 110,
+      "terminals": 17,
+      "determinant_checks": 4646,
+      "layers": {
+        "2": 1,
+        "3": 7,
+        "4": 5,
+        "5": 24,
+        "6": 15
+      }
+    },
+    {
+      "verified": true,
+      "side": 3,
+      "root_words": [
+        20480,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "outcome": "P",
+      "states": 27,
+      "edges": 76,
+      "terminals": 9,
+      "determinant_checks": 2093,
+      "layers": {
+        "2": 1,
+        "3": 5,
+        "4": 5,
+        "5": 10,
+        "6": 6
+      }
+    }
+  ]
+}

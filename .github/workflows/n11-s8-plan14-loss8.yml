@@ -1,0 +1,21 @@
+name: N11 plan14 S8 LOSS dual certificate and replan
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/n11-s8-plan14-loss8.yml'
+      - 'research/experiments/n11-s8-plan14-loss8-20261026/**'
+      - 'research/experiments/n11-s9-neighbor23-terminal-20261026/verify.py'
+      - 'research/experiments/n11-s9-terminal-neighbor-20261025/verify.py'
+      - 'research/experiments/n11-batch-s9-terminal-20261025/verify.py'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify independent S8 LOSS, exact dual lower bound, and corrected S7 plan
+        run: python3 research/experiments/n11-s8-plan14-loss8-20261026/verify.py --negative

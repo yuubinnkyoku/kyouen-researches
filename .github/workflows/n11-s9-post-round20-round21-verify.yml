@@ -1,0 +1,31 @@
+name: N11 round21 independent terminal certificate verification
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'research/experiments/n11-s9-post-round20-round21-20261029/certificate.json'
+      - 'research/experiments/n11-s9-post-round20-round21-20261029/verify_compact.js'
+      - 'research/experiments/n11-s9-post-round20-round21-20261029/verify_python.py'
+      - '.github/workflows/n11-s9-post-round20-round21-verify.yml'
+  workflow_dispatch:
+jobs:
+  node:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Independent Node terminal replay and forged-witness rejection
+        run: node research/experiments/n11-s9-post-round20-round21-20261029/verify_compact.js --negative
+  python:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Independent Python integer geometry and terminal recursion
+        run: python research/experiments/n11-s9-post-round20-round21-20261029/verify_python.py

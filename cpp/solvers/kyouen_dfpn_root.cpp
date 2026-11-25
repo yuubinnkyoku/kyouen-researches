@@ -1,0 +1,4686 @@
+// kyouen_dfpn_root.cpp -- df-pn proof-search solver for the Kyouen circle game.
+//
+// WHY: plain DFS + transposition table hits the same wall on all four 11x11
+// first moves (2.5-2.8e8 visited / 15 min, unsolved, exploding at d13-d16;
+// see research/experiments/n11-search-methods/reports/N11-PROBE-4WAY.md). df-pn concentrates resources
+// on branches that look provable instead of sweeping every layer uniformly.
+// This file is 11x11-first but templated on N; the DFS solver stays as the
+// comparison baseline.
+//
+// PROPOSITION (fixed for the whole search): "the player who moved FIRST on
+// this line eventually wins". Stone count grows by exactly one per move, so
+// the side to move is a function of the position itself:
+//   even stones -> first player to move -> OR node (one winning child suffices)
+//   odd stones  -> second player to move -> AND node (every reply must stay
+//                  winning for the first player).
+// The same canonical position always has the same stone count, so its OR/AND
+// role never changes.
+//
+// Terminal (no legal moves): side to move loses.
+//   OR node  -> proposition false: (pn, dn) = (INF, 0)
+//   AND node -> proposition true:  (pn, dn) = (0, INF)
+//
+// Aggregation (saturating at INF):
+//   OR:  pn = min pn(c),  dn = sum dn(c)
+//   AND: pn = sum pn(c),  dn = min dn(c)
+//
+// Child thresholds (standard df-pn):
+//   OR:  tp_c = min(tp, pn2+1);  td_c = td - sum_{c'!=c} dn(c')
+//   AND: td_c = min(td, dn2+1);  tp_c = tp - sum_{c'!=c} pn(c')
+// (64-bit math, clamped to [1, INF]; INF propagates.)
+//
+// The TT stores open (pn, dn) bounds AND solved marks, so unsolved-position
+// knowledge is shared across the search -- the main advantage over the
+// WIN/LOSS-only DFS table. Eviction drops open entries first and never the
+// active root; soundness never depends on the table (worst case: recompute).
+//
+// REGRESSION (solve --empty): n=4 LOSS, n=5 WIN, n=6 WIN, n=7 LOSS.
+// First success criterion is NOT solving 11x11: it is pushing root pn/dn
+// one-sidedly with clearly fewer expansions than DFS in the same 15 min.
+#include <algorithm>
+#include <array>
+#include <bit>
+#include <chrono>
+#include <cstdint>
+#include <filesystem>
+#include <fstream>
+#include <iostream>
+#include <map>
+#include <memory>
+#include <optional>
+#include <set>
+#include <sstream>
+#include <stdexcept>
+#include <string>
+#include <tuple>
+#include <unordered_map>
+#include <vector>
+#include "kyouen_residual_micro.hpp"
+#include "n11_s5_quarantine.hpp"
+
+// Thrown when the quantified search's wall allowance expires deep inside
+// the exact DFS. Returning UNKNOWN there was wrong: the caller treats
+// UNKNOWN as "this branch is inconclusive" and keeps scanning the
+// remaining siblings, so an expired deadline did not stop the search,
+// it only degraded every later branch. Throwing unwinds to s5_oracle,
+// which returns the out-of-time sentinel and ends quant_solve at once.
+// Positions the exact DFS already completed and published stay in the
+// table; only the unfinished ancestor is abandoned, and an unfinished
+// ancestor was never publishable anyway.
+struct QuantTimeout : std::runtime_error {
+    QuantTimeout() : std::runtime_error("QUANT_TIMEOUT") {}
+};
+
+struct Bits {
+    std::uint64_t lo = 0, hi = 0;
+};
+// Explicit residual controls shared by the normal df-pn CLI entry points.
+struct ResidualOptions {
+    int audit_legal=0,crosscheck_legal=0,exact_legal=0,share_gate=0,builder=2;
+    bool profile=false,outcome=false;
+    std::uint64_t outcome_budget=100000;
+    std::uint64_t attempt_budget=0; // 0 preserves the whole-root-quota handoff
+};
+struct FrameChildrenOptions { bool cache=false,audit=false,expand_reuse=false; };
+static inline bool operator==(Bits a, Bits b){ return a.lo==b.lo && a.hi==b.hi; }
+static inline bool operator<(Bits a, Bits b){ return a.hi<b.hi || (a.hi==b.hi && a.lo<b.lo); }
+static inline Bits operator|(Bits a, Bits b){ return {a.lo|b.lo,a.hi|b.hi}; }
+static inline Bits operator&(Bits a, Bits b){ return {a.lo&b.lo,a.hi&b.hi}; }
+static inline Bits operator~(Bits a){ return {~a.lo,~a.hi}; }
+static inline bool any(Bits a){ return a.lo || a.hi; }
+static inline int popcount(Bits a){ return std::popcount(a.lo)+std::popcount(a.hi); }
+static inline Bits bitof(int p){ return p<64 ? Bits{1ULL<<p,0} : Bits{0,1ULL<<(p-64)}; }
+static inline bool has(Bits a,int p){ return p<64 ? ((a.lo>>p)&1) : ((a.hi>>(p-64))&1); }
+static inline void setbit(Bits& a,int p){ if(p<64)a.lo|=1ULL<<p;else a.hi|=1ULL<<(p-64); }
+static inline int take_lsb(Bits& a){
+    if(a.lo){int p=std::countr_zero(a.lo);a.lo&=a.lo-1;return p;}
+    int p=std::countr_zero(a.hi);a.hi&=a.hi-1;return p+64;
+}
+
+class PnTT {
+public:
+    enum : std::uint8_t { FREE=0, OPEN=1, WIN=2, LOSS=3 };
+    static constexpr int PROBE = 32;
+    explicit PnTT(unsigned power=26){
+        n_ = std::size_t{1}<<power;
+        if(n_==0 || (n_ & (n_-1))) throw std::runtime_error("bad memo power");
+        mask_=n_-1;
+        lo_.assign(n_,0); hi_.assign(n_,0);
+        pn_.assign(n_,0); dn_.assign(n_,0);
+        vis_.assign(n_,0); st_.assign(n_,0);
+    }
+    void set_root(std::uint64_t lo,std::uint64_t hi){ rlo_=lo; rhi_=hi; }
+    int find(std::uint64_t klo,std::uint64_t khi) {
+        std::size_t i=mix(klo,khi)&mask_;
+        for(int j=0;j<PROBE;++j){
+            if(!st_[i]){ ++misses_; probe_sum_+=std::uint64_t(j+1); ++probe_n_; return -1; }
+            if(lo_[i]==klo && hi_[i]==khi){ ++hits_; probe_sum_+=std::uint64_t(j+1); ++probe_n_; return (int)i; }
+            i=(i+1)&mask_;
+        }
+        ++misses_; probe_sum_+=PROBE; ++probe_n_; return -1;
+    }
+    int acquire(std::uint64_t klo,std::uint64_t khi){
+        std::size_t h=mix(klo,khi)&mask_;
+        std::size_t i=h;
+        int first_open=-1;
+        for(int j=0;j<PROBE;++j){
+            if(!st_[i]){
+                lo_[i]=klo;hi_[i]=khi;pn_[i]=dn_[i]=vis_[i]=0;st_[i]=OPEN;++used_;++puts_new_;return (int)i;
+            }
+            if(lo_[i]==klo && hi_[i]==khi) return (int)i;
+            if(first_open<0 && st_[i]==OPEN && !(lo_[i]==rlo_ && hi_[i]==rhi_))
+                first_open=(int)i;
+            i=(i+1)&mask_;
+        }
+        if(first_open>=0){
+            i=(std::size_t)first_open;
+            lo_[i]=klo;hi_[i]=khi;pn_[i]=dn_[i]=vis_[i]=0;st_[i]=OPEN;++evictions_;return first_open;
+        }
+        if(lo_[h]==rlo_ && hi_[h]==rhi_){
+            for(int j=0;j<PROBE;++j){
+                i=(h+(std::size_t)j)&mask_;
+                if(!(lo_[i]==rlo_ && hi_[i]==rhi_)){
+                    std::uint8_t old=st_[i];
+                    lo_[i]=klo;hi_[i]=khi;pn_[i]=dn_[i]=vis_[i]=0;st_[i]=OPEN;
+                    if(old>=WIN){ ++evict_solved_; --solved_; }
+                    else ++evictions_;
+                    return (int)i;
+                }
+            }
+            return -1;
+        }
+        std::uint8_t oldh=st_[h];
+        lo_[h]=klo;hi_[h]=khi;pn_[h]=dn_[h]=vis_[h]=0;st_[h]=OPEN;
+        if(oldh>=WIN){ ++evict_solved_; --solved_; }
+        else ++evictions_;
+        return (int)h;
+    }
+    std::size_t used()const{return used_;}
+    std::size_t capacity()const{return n_;}
+    // Three SEPARATE counters:
+    //   solved_now()           = solved entries CURRENTLY in the TT
+    //   solved_discoveries()   = total times an entry was marked solved
+    //                            (never decremented; re-marking an
+    //                            already-solved slot does not count)
+    //   evicted_solved()       = solved entries evicted so far
+    // Previously solved_ was an effective cumulative count: evicting a
+    // solved entry bumped evict_solved_ but not solved_, so
+    // used_-solved_ (open) drifted once evict_solved_>0. Splitting
+    // the three keeps open exact for every eviction.
+    std::uint64_t solved_now()const{return solved_;}
+    std::uint64_t solved_discoveries()const{return solved_disc_;}
+    std::uint64_t evicted_solved()const{return evict_solved_;}
+    void mark_solved(int s,std::uint8_t v){
+        if(st_[(std::size_t)s]<WIN){ ++solved_; ++solved_disc_; }
+        st_[(std::size_t)s]=v;
+    }
+    void counters(std::uint64_t& hits,std::uint64_t& misses,
+                  std::uint64_t& puts_new,std::uint64_t& puts_update,
+                  std::uint64_t& ev,std::uint64_t& evs,double& ap) const {
+        hits=hits_; misses=misses_; puts_new=puts_new_; puts_update=0;
+        ev=evictions_; evs=evict_solved_; ap=avg_probe();
+    }
+    double avg_probe() const {
+        return probe_n_ ? (double)probe_sum_/(double)probe_n_ : 0.0;
+    }
+    std::vector<std::uint64_t> lo_,hi_;
+    std::vector<std::uint32_t> pn_,dn_,vis_;
+    std::vector<std::uint8_t> st_;
+    std::uint64_t used_=0;
+    std::uint64_t hits_=0, misses_=0, puts_new_=0, evictions_=0, evict_solved_=0, solved_=0, solved_disc_=0;
+    std::uint64_t probe_sum_=0, probe_n_=0;
+private:
+    std::size_t n_,mask_;
+    std::uint64_t rlo_=~0ULL, rhi_=~0ULL;
+    static inline std::uint64_t mix64(std::uint64_t x){
+        x^=x>>30;x*=0xbf58476d1ce4e5b9ULL;
+        x^=x>>27;x*=0x94d049bb133111ebULL;
+        return x^(x>>31);
+    }
+    static inline std::uint64_t mix(std::uint64_t a,std::uint64_t b){
+        return mix64(a ^ (b*0x9e3779b97f4a7c15ULL));
+    }
+};
+
+template<int N>
+class DfPn {
+public:
+    static constexpr int V = N*N;
+    static constexpr std::uint64_t HI_MASK =
+        (V>64) ? (((V-64)>=64) ? ~0ULL : ((1ULL<<(V-64))-1ULL)) : 0ULL;
+    static constexpr std::uint32_t INF = 1000000000u;
+    using Clock=std::chrono::steady_clock;
+    struct TState { std::array<Bits,8> t{}; };
+    struct GChild {
+        typename DfPn<N>::TState ts; Bits legal,key; int count=0;
+        std::uint32_t pn=1,dn=1; std::uint8_t st=0;
+        std::uint8_t move=255;     // concrete parent move; fits the 0..120 board
+        std::uint64_t work=0;      // cumulative expansions under this child
+        std::uint32_t last_pn=1,last_dn=1; // for delta tracking
+    };
+    struct ProofEdge { std::uint8_t move=255; Bits child{}; };
+    struct ProofNode {
+        std::uint8_t verdict=0;    // 1=original first player WIN, 2=LOSS
+        bool terminal=false;
+        std::uint8_t legal_count=0;
+        std::vector<ProofEdge> edges;
+    };
+    struct Gen { std::array<GChild,V> ch; int n=0; };
+    // sizeof(Gen) sanity per N: GChild=176 B (8x16 B TState + 48 B).
+    // n=6: 36*176+4 = 6,340. n=11: 121*176+4 = 21,300. If Gen ever grows
+    // past ~64 KB the frame-heap buffers need auditing (not the stack --
+    // frames are already heap/box-allocated -- but TT-adjacent RSS).
+    static_assert(sizeof(Gen) < 65536,
+        "Gen unexpectedly large; audit GChild/TState layout");
+    struct Result {
+        int outcome=0;
+        std::uint64_t expansions=0;
+        std::uint32_t root_pn=INF, root_dn=INF;
+        double seconds=0;
+    };
+    struct ExactReplayProfile {
+        struct RootChild {
+            Bits key{};
+            int legal=0;
+            std::uint64_t nodes=0;
+            std::uint8_t verdict=0; // 0=UNKNOWN, 1=WIN, 2=LOSS
+        };
+        std::array<std::uint64_t,64> calls{}, nodes{}, wins{}, losses{}, unknowns{};
+        std::array<std::uint64_t,64> tt_solved_hits{}, tt_open_hits{}, tt_misses{};
+        std::uint64_t table_hits=0, table_misses=0, table_new_entries=0;
+        std::uint64_t table_open_evictions=0, table_solved_evictions=0;
+        std::uint64_t table_used=0, table_solved=0, table_solved_discoveries=0;
+        std::size_t table_capacity=0;
+        double average_probe=0;
+        std::vector<RootChild> root_children;
+    };
+
+    explicit DfPn(unsigned memo_power=26)
+      : completion_(std::size_t(V)*V*V), tt_(memo_power) {
+        build_maps(); build_forbidden_quadruples();
+    }
+
+    Result solve_empty(){
+        typename DfPn<N>::TState state{};
+        Bits occupied{};
+        // Empty board: every point is legal. Build the mask directly instead
+        // of (~0ULL, HI_MASK): for V<=64 (n<=8) HI_MASK is 0 and hi would be
+        // ~0 & 0 = 0 (fine), but writing it via bitof loop is unambiguous
+        // for every N and immune to mask typos (the n=4 "bad move index":
+        // legal.hi ended up nonzero -> take_lsb on hi=garbage -> v>=V).
+        Bits legal{};
+        for(int p=0;p<V;++p) setbit(legal,p);
+        return solve_common(state, occupied, legal, 0);
+    }
+
+    Result solve_root(const std::vector<int>& stones){
+        validate_root(stones);
+        typename DfPn<N>::TState state{};
+        Bits occupied{};
+        for(int v:stones){ state=add(state,v); setbit(occupied,v); }
+        Bits legal=legal_for(occupied);
+        return solve_common(state, occupied, legal, (int)stones.size());
+    }
+
+    // ---- STANDALONE EXACT REPLAY (--exact-replay=P) ---------------
+    // Re-solve a recorded handoff root with the exact solver alone, free
+    // of df-pn, so its true cost can be measured. This is the
+    // benchmark that move-ordering work is graded against: unlike a
+    // proof number, "nodes to solve this exact position" is a direct,
+    // comparable quantity.
+    //
+    // The position is rebuilt from the CANONICAL occupancy carried in a
+    // --exact-record row. Crucially, TState is rebuilt by REPLAYING the
+    // occupied points through add() in the canonical orientation, and
+    // the legal mask is RE-DERIVED by legal_for() from that same
+    // occupancy. It is never inherited from a parent frame and never
+    // assumed to match the canonical key's bit pattern. The game is D4
+    // invariant, so a canonical-orientation reconstruction is a valid
+    // representative of the orbit; using the key as if it were the
+    // orientation actually reached by play was a previous bug.
+    //
+    // Returns: 0 UNKNOWN (budget exhausted), 1 WIN, 2 LOSS.
+    // `out_nodes` receives the exact nodes consumed by this call.
+    int exact_replay(const Bits& occupied,int stones,std::uint64_t budget,
+                    std::uint64_t& out_nodes) {
+        if(occupied.hi & ~HI_MASK) throw std::runtime_error("exact_replay: out of board");
+        if constexpr(V<64)
+            if(occupied.lo >> V) throw std::runtime_error("exact_replay: out of board");
+        int verts[V],k=0;
+        Bits s=occupied;
+        while(any(s)){ if(k>=V) throw std::runtime_error("exact_replay: bad occupancy"); verts[k++]=take_lsb(s); }
+        if(k!=stones) throw std::runtime_error("exact_replay: stones mismatch");
+        validate_root(std::vector<int>(verts,verts+k));
+        typename DfPn<N>::TState state{};
+        for(int i=0;i<k;++i) state=add(state,verts[i]);
+        // Re-derive legality from the reconstructed occupancy.
+        Bits legal=legal_for(occupied);
+        reset_residual_outcome_budget();
+        // Reset the exact-local memo before every replayed position. The
+        // replay driver reuses ONE solver for all rows, and exact_prop
+        // consults exact_local_ when the publish mode is not ALL, so
+        // without this a position solved by an earlier row would be
+        // answered instantly from the cache (observed: one root reported
+        // "LOSS" in 1 node at budget 500k after taking 8588 nodes at
+        // 200k). That silently contaminates the per-root node counts this
+        // benchmark exists to measure.
+        exact_local_.reset();
+        std::uint64_t b=budget;
+        std::uint64_t before=exact_nodes_;
+        ExactResult r=exact_prop(state,stones,legal,b);
+        out_nodes=exact_nodes_-before;
+        return (r==ExactResult::WIN)?1:((r==ExactResult::LOSS)?2:0);
+    }
+    // Deterministic regression entry point: unsafe occupancy is skipped;
+    // safe roots are compared as labelled edge families, without solving.
+    bool audit_residual_builders(Bits occupied,bool transitions=false) const {
+        if(occupied.hi & ~HI_MASK) throw std::runtime_error("audit: out of board");
+        if constexpr(V<64) if(occupied.lo>>V) throw std::runtime_error("audit: out of board");
+        for(const auto& q:forbidden_quads_)
+            if(has(occupied,q[0]) && has(occupied,q[1]) && has(occupied,q[2]) && has(occupied,q[3])) return false;
+        auto legal=legal_for(occupied);
+        verify_residual_builders(occupied,legal);
+        if(transitions) verify_residual_transition(occupied,legal);
+        return true;
+    }
+    void reset_exact_counters(){ exact_nodes_=0; }
+    std::uint64_t exact_total_nodes() const { return exact_nodes_; }
+
+    // ---- s5 ORACLE with a persistent canonical-key cache ----------
+    // The quantified search below leans on this hard, so the oracle is
+    // a first-class object with its own memo keyed by the canonical
+    // occupancy. Every quantifier level revisits the same s5 positions
+    // (different r3 choices can reach the same D4 orbit, and all 20
+    // two-stone roots share the same reply set), so a shared cache
+    // turns 20 * 121 * 117 * 116 queries into a far smaller number of
+    // distinct exact searches.
+    //
+    // Only WIN/LOSS are cached. UNKNOWN means the node budget ran out
+    // and must never be remembered as a result, or a later, better
+    // funded query would inherit the earlier failure.
+    struct Oracle {
+        std::map<Bits,std::uint8_t> memo;  // 0 absent, 1 WIN, 2 LOSS
+        std::uint64_t queries=0, hits=0, wins=0, losses=0, unknowns=0;
+        std::uint64_t nodes=0;
+        std::uint64_t wall=0;   // milliseconds spent inside exact_prop
+        // Deep-TT reuse, sampled around each query. With publish=ALL
+        // the exact DFS publishes its interior solved states into the
+        // main PnTT, so these can be large even when the oracle root
+        // cache never hits.
+        std::uint64_t tt_hits=0, tt_misses=0, tt_growth=0;
+        std::uint64_t aborted_by_time=0;
+        std::uint64_t timeouts=0;
+        std::uint64_t loaded=0;   // verdicts read from the persistent cache
+        std::uint64_t rejected=0; // rows ignored as foreign
+        std::uint64_t saved=0;    // new verdicts appended this run
+        // Keys this run actually SOLVED, as opposed to loaded from
+        // disk. oracle_save appends only these, so repeated runs with an
+        // unchanged cache do not grow the file without bound.
+        std::set<Bits> touched;
+        // Eviction and probe-length growth. A saturated table shows
+        // up here as rising evict_open/evict_solved and avgprobe, which
+        // is how a full table can be told apart from a hard position.
+        std::uint64_t evict_open=0, evict_solved=0;
+        double probe_sum=0; std::uint64_t probe_n=0;
+    };
+    Oracle oracle;
+    // The first move of the root, needed by quant_solve to rebuild the
+    // two-stone position. Set by quant_root().
+    int root_first_move_=-1;
+    // Emit a per-third-move progress line in quant_solve. The loop can
+    // run for many minutes with no other output, which is
+    // indistinguishable from a hang.
+    bool quant_progress_=true;
+    // Wall-clock guard for the whole quantified search. --quant-timeout
+    // used to be checked only after a reply finished, so a single stuck
+    // oracle query could never be interrupted; the driver set the
+    // solver deadline to 0 as well, which disabled the check inside
+    // exact_prop too. quant_wall_stop_ is set by the driver and
+    // consulted by the oracle before every query, so a runaway query
+    // costs at most one budget rather than the whole time allowance.
+    std::chrono::steady_clock::time_point quant_deadline_{};
+    bool quant_has_deadline_=false;
+
+    // Branch telemetry, reset per reply by quant_solve.
+    // Three-valued per level: SAT (a WIN fifth move was found),
+    // REFUTED (every fifth move proven LOSS), UNKNOWN (no WIN but at
+    // least one fifth move inconclusive).
+    std::uint64_t q_m3_tried_=0, q_m3_refuted_=0, q_m3_unknown_=0;
+    std::uint64_t q_m4_sat_=0, q_m4_refuted_=0, q_m4_unknown_=0;
+    std::uint64_t q_m4_sat_total_=0;   // every SAT m4 of a proved m3
+    std::uint64_t q_queries_at_refute_=0;
+
+    // True once the wall allowance is used up. Queried by the oracle
+    // before each query and by quant_solve between third moves.
+    bool quant_out_of_time() const {
+        if(!quant_has_deadline_) return false;
+        return Clock::now()>=quant_deadline_;
+    }
+    void set_quant_deadline(double seconds){
+        quant_has_deadline_=(seconds>0);
+        quant_deadline_=Clock::now()+
+            std::chrono::duration_cast<Clock::duration>(
+                std::chrono::duration<double>(seconds));
+    }
+
+    // Solve one 5-stone position exactly, consulting and filling the
+    // oracle. Returns 1 WIN, 2 LOSS, 0 UNKNOWN (budget exhausted).
+    //
+    // `budget` is PER QUERY, not a shared pool: exact_prop receives a
+    // fresh copy each call. An earlier note in this file said the
+    // opposite, which made the measured run look budget-starved; the
+    // per-query reading is the one that matches the code.
+    //
+    // Per-query tracing is emitted around the exact call so the cost of
+    // an individual s5 position is directly observable, and so a stuck
+    // query is attributable to a specific canonical key rather than
+    // looking like a hang.
+    int s5_oracle(const TState& state,Bits occupied,std::uint64_t budget){
+        if(quant_out_of_time()) return -1;   // caller treats <0 as "stop"
+        Bits key=canonical(state);
+        auto it=oracle.memo.find(key);
+        if(it!=oracle.memo.end()){
+            ++oracle.hits; ++oracle.queries;
+            return it->second;
+        }
+        ++oracle.queries;
+        Bits legal=legal_for(occupied);
+        std::uint64_t b=budget;
+        std::uint64_t before=exact_nodes_;
+        // Deep-TT reuse is measured separately from the oracle's own
+        // root cache. run_quant() uses publish=ALL, so exact_prop writes
+        // its interior solved states into the main PnTT; a later query
+        // that overlaps an earlier one can therefore be much cheaper
+        // even when the oracle root cache never hits. Tracking the PnTT
+        // counters around each call separates "the cache did not help"
+        // from "the table did".
+        std::uint64_t tth0=0, ttm0=0, ttused0=tt_.used(), ttopen0=tt_open();
+        std::uint64_t eo0=0, es0=0; double ap0=0;
+        {
+            std::uint64_t h,m,pn,d,eo,es; double ap;
+            tt_.counters(h,m,pn,d,eo,es,ap);
+            tth0=h; ttm0=m; eo0=eo; es0=es; ap0=ap;
+        }
+        if(quant_progress_){
+            *log_<<"[q-start] q="<<oracle.queries
+                <<" key="<<key.lo<<","<<key.hi
+                <<" legal="<<popcount(legal)
+                <<" budget="<<budget<<std::endl;
+            log_->flush();
+        }
+        double t0=std::chrono::duration<double>(
+            Clock::now().time_since_epoch()).count();
+        ExactResult r=ExactResult::UNKNOWN;
+        bool timed_out=false;
+        try{
+            r=exact_prop(state,5,legal,b);
+        }catch(const QuantTimeout&){
+            // Wall allowance expired inside the exact DFS. Report the
+            // sentinel so quant_solve stops immediately; whatever the
+            // exact DFS had already published stays in the table.
+            //
+            // Fall THROUGH to the accounting below rather than
+            // returning early: the nodes, time, table growth, evictions
+            // and probe length this query consumed are real cost, and
+            // dropping them made the final query of every run vanish
+            // from the totals.
+            timed_out=true;
+        }
+        double t1=std::chrono::duration<double>(
+            Clock::now().time_since_epoch()).count();
+        std::uint64_t tth1=0, ttm1=0, ttused1=tt_.used();
+        double ap1=0; std::uint64_t eo1=0, es1=0;
+        {
+            std::uint64_t h,m,pn,d,eo,es; double ap;
+            tt_.counters(h,m,pn,d,eo,es,ap);
+            tth1=h; ttm1=m; ap1=ap; eo1=eo; es1=es;
+        }
+        oracle.nodes+=exact_nodes_-before;
+        oracle.wall+=std::uint64_t((t1-t0)*1000.0);
+        oracle.tt_hits+=(tth1-tth0);
+        oracle.tt_misses+=(ttm1-ttm0);
+        oracle.tt_growth+=(ttused1-ttused0);
+        oracle.evict_open+=(eo1-eo0);
+        oracle.evict_solved+=(es1-es0);
+        oracle.probe_sum+=ap1;
+        oracle.probe_n++;
+        if(quant_progress_){
+            *log_<<(timed_out?"[q-timeout]":"[q-done]  ")<<" q="<<oracle.queries
+                <<" key="<<key.lo<<","<<key.hi
+                <<" result="<<(timed_out?-1:(r==ExactResult::WIN?1:(r==ExactResult::LOSS?2:0)))
+                <<" nodes="<<(exact_nodes_-before)
+                <<" ms="<<(long long)((t1-t0)*1000.0)
+                <<" tth="<<(tth1-tth0)<<" ttm="<<ttm1-ttm0
+                <<" ttused="<<ttused1<<"/"<<tt_.capacity()
+                <<" eo="<<(eo1-eo0)<<" es="<<(es1-es0)
+                <<" ap="<<ap1<<std::endl;
+            log_->flush();
+        }
+        // A timed-out query has no verdict. It must NOT be cached as
+        // UNKNOWN, and it must not be counted as one, or the next reply
+        // would inherit the failure. Report the out-of-time sentinel
+        // after the cost has been recorded.
+        if(timed_out){ ++oracle.timeouts; return -1; }
+        if(r==ExactResult::WIN){
+            oracle.memo[key]=1; oracle.touched.insert(key);
+            ++oracle.wins; return 1;
+        }
+        if(r==ExactResult::LOSS){
+            oracle.memo[key]=2; oracle.touched.insert(key);
+            ++oracle.losses; return 2;
+        }
+        ++oracle.unknowns;
+        return 0;
+    }
+    void oracle_clear(){ oracle=Oracle(); }
+
+    // ---- persistent s5 verdict cache -------------------------------
+    // Maps a canonical 5-stone key to WIN or LOSS, on disk, so a proof
+    // survives process restarts and does not need the 67M-entry PnTT to
+    // stay resident. Only decided verdicts are stored: an UNKNOWN means
+    // the node budget ran out, and persisting that would make a later,
+    // better funded query inherit an earlier failure.
+    //
+    // This replaces the warm-table dependence. A cold replay of the 103
+    // fifth moves of s4={60,0,1,2} closed every one of them as LOSS
+    // within 20M nodes, and those are exactly the facts a restartable
+    // refutation search needs: with the cache loaded, m4=2 resolves to
+    // REFUTED from 103 hits and m3=1 to REFUTED, with no search at all.
+    void oracle_load(const std::string& path){
+        if(path.empty()) return;
+        std::ifstream in(path);
+        if(!in) throw std::runtime_error("cannot open s5 cache");
+        std::string line;
+        bool header_ok=false;
+        int conflicts=0, foreign=0;
+        while(std::getline(in,line)){
+            if(line.empty()) continue;
+            if(line[0]=='#'){
+                // Header line. It must state the board size and the
+                // schema version: the cache has become proof material,
+                // so a file written by a different board size or a
+                // different rule set must not be loaded silently.
+                if(line.find("n=11")!=std::string::npos &&
+                   line.find("schema=1")!=std::string::npos)
+                    header_ok=true;
+                else
+                    foreign++;
+                continue;
+            }
+            std::vector<std::string> f;
+            std::stringstream ss(line); std::string t;
+            while(std::getline(ss,t,',')) f.push_back(t);
+            // s5verdict,key_lo,key_hi,stones,result,nodes
+            if(f.size()!=6) throw std::runtime_error("malformed s5 cache row");
+            if(!f[5].empty() && f[5].back()=='\r') f[5].pop_back();
+            auto number=[](const std::string& value){
+                if(value.empty() || !std::all_of(value.begin(),value.end(),
+                        [](char c){return c>='0' && c<='9';}))
+                    throw std::runtime_error("invalid unsigned integer in s5 cache");
+                return std::stoull(value);
+            };
+            if(f[0]!="s5verdict" || number(f[3])!=5)
+                throw std::runtime_error("foreign s5 cache row");
+            auto code=number(f[4]);
+            if(code!=1 && code!=2) throw std::runtime_error("non-exact s5 cache verdict");
+            int r=static_cast<int>(code);
+            number(f[5]);
+            Bits k; k.lo=number(f[1]); k.hi=number(f[2]);
+            if constexpr(N!=11) throw std::runtime_error("n=11 s5 cache on another board");
+            if((k.hi & ~HI_MASK) || popcount(k)!=5)
+                throw std::runtime_error("s5 cache occupancy outside board or wrong stone count");
+            std::vector<int> pts;
+            Bits remaining=k;
+            TState state{};
+            while(any(remaining)){
+                int p=take_lsb(remaining);
+                pts.push_back(p); state=add(state,p);
+            }
+            validate_root(pts);
+            if(!(canonical(state)==k)) throw std::runtime_error("noncanonical s5 cache key");
+            bool quarantined=false;
+            for(const auto& q:n11_s5_quarantined_keys)
+                if(k.lo==q.first && k.hi==q.second) quarantined=true;
+            if(quarantined){ foreign++; continue; }
+            auto it=oracle.memo.find(k);
+            if(it!=oracle.memo.end()){
+                // Same key with two different verdicts means the cache
+                // is corrupt or the rules changed. This is proof
+                // material, so refuse rather than last-wins.
+                if(it->second!=(std::uint8_t)r) conflicts++;
+                continue;
+            }
+            oracle.memo[k]=(std::uint8_t)r;
+            oracle.touched.erase(k);
+            ++oracle.loaded;
+        }
+        if(!header_ok){
+            throw std::runtime_error(
+                "s5 cache missing or foreign header (need n=11, schema=1)");
+        }
+        if(conflicts){
+            throw std::runtime_error(
+                "s5 cache has " + std::to_string(conflicts) +
+                " key(s) with conflicting WIN/LOSS verdicts");
+        }
+        if(foreign){
+            oracle.rejected=(std::uint64_t)foreign;
+        }
+    }
+    // Append only the verdicts proved since the load, so repeated runs
+    // do not re-append the same rows forever. `touched` records the
+    // keys this run actually solved; everything loaded from disk was
+    // erased from it at load time.
+    void oracle_save(const std::string& path){
+        if(path.empty()) return;
+        bool exists=false;
+        { std::ifstream probe(path); exists=probe.good(); }
+        std::ofstream out(path, std::ios::out | std::ios::app);
+        if(!out) return;
+        if(!exists){
+            // The header is what lets a later load refuse a file written
+            // for another board size or rule set.
+            out<<"# s5 verdict cache: n=11 schema=1 "
+               <<"(canonical key -> WIN/LOSS, UNKNOWN never stored)\n";
+        }
+        std::uint64_t w=0;
+        for(const auto& kv:oracle.memo){
+            if(kv.second!=1 && kv.second!=2) continue;
+            if(!oracle.touched.count(kv.first)) continue;  // not new
+            out<<"s5verdict,"<<kv.first.lo<<","<<kv.first.hi<<",5,"
+               <<(int)kv.second<<",0\n";
+            ++w;
+        }
+        out.flush();
+        oracle.saved=w;
+    }
+    std::uint64_t oracle_cache_size() const { return (std::uint64_t)oracle.memo.size(); }
+
+    // ---- persistent s4 verdict cache, with a certificate manifest ---
+    // A bare s4 -> LOSS label cannot be checked by anyone else. What
+    // makes it verifiable is the manifest it carries:
+    //   LOSS  every legal s5 child's canonical key (the reader can
+    //         re-check that each is LOSS, and that the list is complete)
+    //   WIN   the single s5 WIN witness (one child is enough)
+    //
+    // One entry describes one CANONICAL s4 CLASS: the class is a set of raw
+    // edges naming D4-equivalent four-stone positions, and all its edges
+    // share the same verdict because they share the same key. So the
+    // manifest lists the union of the s5 children of the class's edges,
+    // which is what a verifier must re-check.
+    //
+    // Written as
+    //   s4verdict,first,r2,key_lo,key_hi,result,n_child,cov_size,child_lo,child_hi,...
+    // `first` and `r2` are recorded because the canonical s4 key alone does
+    // not say WHICH edge class this is: the cover is built for a fixed
+    // two-stone root {first,r2}, and a verifier needs the endpoints to
+    // recompute the coverage set and to re-derive every legal fifth move.
+    // `cov_size` is the number of distinct third moves the class refutes,
+    // so the reader can check the coverage it recomputes is the one claimed.
+    struct S4Entry {
+        std::uint8_t result=0;              // 1 WIN, 2 LOSS
+        int first=-1, r2=-1;                // the two-stone root
+        std::vector<std::pair<int,int>> edges;   // raw edges (a,b) in the class
+        std::size_t cov_size=0;             // distinct third moves refuted
+        std::vector<std::pair<std::uint64_t,std::uint64_t>> children;
+    };
+    std::map<std::pair<std::uint64_t,std::uint64_t>,S4Entry> s4_cache;
+
+    // Record one decided class. `edges` are the raw edges it covers and
+    // `children` the s5 keys a verifier must re-check: EVERY legal fifth
+    // move for a LOSS class, or the single WIN witness for a WIN class.
+    // The caller is responsible for having actually proved those verdicts.
+    void s4_cache_record(const std::pair<std::uint64_t,std::uint64_t>& key,
+                         int first,int r2,std::uint8_t result,
+                         const std::vector<std::pair<int,int>>& edges,
+                         std::size_t cov_size,
+                         const std::vector<std::pair<std::uint64_t,std::uint64_t>>& children){
+        if(result!=1 && result!=2) return;
+        S4Entry e;
+        e.result=result; e.first=first; e.r2=r2;
+        e.edges=edges; e.cov_size=cov_size; e.children=children;
+        s4_cache[key]=e;
+    }
+
+    // Write the manifest. `std::ios::app` plus a header-if-absent matches
+    // the s5 writer: a worker owns its own file, and the coordinator merges.
+    void s4_cache_save(const std::string& path) const {
+        if(path.empty()) return;
+        bool exists=false;
+        { std::ifstream probe(path); exists=probe.good(); }
+        std::ofstream out(path, std::ios::out | std::ios::app);
+        if(!out) return;
+        if(!exists)
+            out<<"# s4 verdict cache: n=11 schema=1 "
+               <<"(canonical s4 key -> WIN/LOSS + certificate manifest)\n";
+        for(const auto& kv:s4_cache){
+            const auto& e=kv.second;
+            if(e.result!=1 && e.result!=2) continue;
+            out<<"s4verdict,"<<e.first<<","<<e.r2<<","
+               <<kv.first.first<<","<<kv.first.second<<","
+               <<(int)e.result<<","<<e.children.size()<<","<<e.cov_size;
+            for(const auto& c:e.children) out<<","<<c.first<<","<<c.second;
+            out<<"\n";
+        }
+        out.flush();
+    }
+    std::uint64_t s4_cache_size() const { return (std::uint64_t)s4_cache.size(); }
+
+    // ---- s4 EDGE classification over the persistent cache -----------
+    // For a fixed two-stone root {first,r2}, the legal third moves are
+    // vertices and each unordered pair {a,b} of distinct legal moves is
+    // an EDGE: the pair names the same four-stone position
+    // {first,r2,a,b} regardless of which was played as m3 and which as
+    // m4. The edge's value is
+    //     WIN  if some legal fifth move reaches a WIN s5
+    //     LOSS if every legal fifth move reaches a LOSS s5
+    // and a third move a is refuted as soon as ANY incident edge is LOSS.
+    // Refuting the whole reply therefore reduces to covering all
+    // vertices with LOSS-proved edges, which is a set-cover shaped
+    // problem rather than a nested loop over 119 * 117 * 116 queries.
+    //
+    // The payoff is structural, not just speed: one proved LOSS edge on
+    // {a,b} refutes BOTH third moves a and b at once. The single s4
+    // proof {60,0,1,2} already covers m3=1 and m3=2.
+    //
+    // This classifies one edge using ONLY the cache: if any child is a
+    // cached WIN the edge is WIN, if all children are cached LOSS the
+    // edge is LOSS, and otherwise the verdict is UNKNOWN (the caller
+    // then decides whether to spend exact nodes).
+    enum class EdgeVerdict : std::uint8_t { UNKNOWN=0, WIN=1, LOSS=2 };
+    struct EdgeInfo {
+        EdgeVerdict verdict=EdgeVerdict::UNKNOWN;
+        int unknown_children=0;   // children with no cached verdict
+        int cached_children=0;   // children answered from the cache
+        int win_children=0;
+        int loss_children=0;
+        std::vector<int> win_m5; // witnesses, for a WIN certificate
+        std::vector<int> loss_m5;
+    };
+    EdgeInfo classify_edge(int r2,int a,int b) const {
+        if(root_first_move_==a||root_first_move_==b||r2==a||r2==b||a==b)
+            throw std::runtime_error("edge repeats a stone");
+        TState s2{}; s2=add(s2,root_first_move_); s2=add(s2,r2);
+        TState s3=add(s2,a);
+        TState s4=add(s3,b);
+        Bits occ{}; setbit(occ,root_first_move_); setbit(occ,r2);
+        setbit(occ,a); setbit(occ,b);
+        EdgeInfo e;
+        Bits legal5=legal_for(occ);
+        Bits mm=legal5;
+        while(any(mm)){
+            int z=take_lsb(mm);
+            if(z<0) break;
+            TState s5=add(s4,z);
+            Bits o5=occ; setbit(o5,z);
+            Bits k=canonical(s5);
+            auto it=oracle.memo.find(k);
+            if(it==oracle.memo.end()){ ++e.unknown_children; continue; }
+            ++e.cached_children;
+            if(it->second==1){ ++e.win_children; e.win_m5.push_back(z); }
+            else { ++e.loss_children; e.loss_m5.push_back(z); }
+        }
+        // Verdict. Note the EMPTY child set: an s4 with no legal fifth
+        // move is an OR terminal and therefore LOSS. That is why the
+        // test must NOT require loss_children>0, which would leave such
+        // an edge permanently UNKNOWN.
+        if(e.win_children>0) e.verdict=EdgeVerdict::WIN;
+        else if(e.unknown_children>0) e.verdict=EdgeVerdict::UNKNOWN;
+        else e.verdict=EdgeVerdict::LOSS;
+        return e;
+    }
+
+    // Canonical key of the four-stone position an edge names. Two edges
+    // with the same key are the SAME position under D4, so a single proof
+    // covers both. This is why the cover is counted in canonical s4
+    // classes rather than in raw edges.
+    Bits edge_class_key(int r2,int a,int b) const {
+        TState s2{}; s2=add(s2,root_first_move_); s2=add(s2,r2);
+        TState s3=add(s2,a);
+        TState s4=add(s3,b);
+        return canonical(s4);
+    }
+
+    // Legal moves after the given occupied points. Used to enumerate
+    // SAFE edges: an edge {a,b} is only meaningful when b is a legal
+    // fourth reply to a, which is stricter than "four distinct stones"
+    // because the resulting four-stone set must contain no FORBIDDEN
+    // quadruple, where "forbidden" is the game's concyclic rule (the
+    // 4x4 determinant over [x*x+y*y, x, y, 1]) -- not mere collinearity.
+    std::vector<int> legal_moves_from(Bits occ) const {
+        std::vector<int> out;
+        Bits legal=legal_for(occ);
+        Bits mm=legal;
+        while(any(mm)){
+            int z=take_lsb(mm);
+            if(z<0) break;
+            out.push_back(z);
+        }
+        return out;
+    }
+
+    // ---- ADAPTIVE COORDINATOR for one two-stone reply ---------------
+    // The refutation of reply r2 is a set cover over canonical s4
+    // classes: a third move a is refuted as soon as ANY incident class is
+    // proved LOSS, so refuting the whole reply means covering all vertices
+    // with LOSS-proved classes. The all-available structural instance has
+    // OPT=31 (certified offline by ILP). After individual classes become WIN,
+    // this in-process coordinator uses a deterministic GREEDY cover; its
+    // "min_additional" field is therefore a scheduling estimate, not an
+    // exact optimum.
+    //
+    // The coordinator re-solves the optimistic cover after every verdict:
+    //     LOSS class    -> usable, cost 0 (already paid for)
+    //     UNKNOWN class -> usable, cost 1 (still to be proved)
+    //     WIN class     -> FORBIDDEN (can never refute anything)
+    // and hands the UNKNOWN members of that cover to workers. Concentrating
+    // on the current cover means effort goes only to classes that can
+    // still appear in a certificate, rather than to all 3395 remaining.
+    // Greedy largest-coverage-first cover over the usable classes, cost 0
+    // for a decided LOSS class and 1 for an UNKNOWN one. Cheap and
+    // deterministic; the ILP gives the exact optimum offline, and this
+    // is only used to decide what to work on next.
+    //
+    // It reports TWO cover counts. `covered` is the optimistic cover,
+    // which counts UNKNOWN classes as usable and therefore reaches all
+    // 119 immediately. `secured` counts only vertices covered by PROVED
+    // LOSS classes. Victory requires secured == 119; treating the
+    // optimistic count as a refutation would be a soundness bug.
+    struct CovMemo { std::vector<int> verts; };
+    struct CoordStats {
+        std::uint64_t cover_size=0;       // UNKNOWN classes in greedy suffix
+        std::uint64_t covered=0;          // secured union + optimistic suffix
+        std::uint64_t secured=0;          // union of ALL proved LOSS classes
+        std::uint64_t min_additional=0;   // greedy UNKNOWN count, not exact ILP
+        std::uint64_t forbidden=0;        // classes WIN has ruled out
+        std::vector<int> members;         // slots selected by the greedy cover
+    };
+
+    CoordStats coordinate(const std::vector<CovMemo>& cov_memo,
+                          const std::vector<EdgeVerdict>& verdicts,
+                          const std::vector<int>* preferred=nullptr) const {
+        const int M=(int)cov_memo.size();
+        std::vector<char> covered((std::size_t)V,0);
+        CoordStats st;
+
+        // Every proved LOSS class is unconditional proof material, whether or
+        // not a later greedy skeleton would happen to select it. Seed the
+        // frontier with the UNION of all such classes. This makes secured a
+        // true monotone progress measure and lets a completed certificate
+        // terminate immediately even if scheduling would choose a different
+        // redundant skeleton.
+        std::size_t secured_n=0;
+        for(int i=0;i<M;++i){
+            if(verdicts[(std::size_t)i]!=EdgeVerdict::LOSS) continue;
+            for(int v:cov_memo[(std::size_t)i].verts){
+                if(!covered[(std::size_t)v]){
+                    covered[(std::size_t)v]=1;
+                    ++secured_n;
+                }
+            }
+        }
+        st.secured=secured_n;
+        std::size_t covered_n=secured_n;
+
+        // If an independently verified frontier is supplied, use its still
+        // viable UNKNOWN members first.  This preserves an offline-optimized
+        // proof skeleton (e.g. the 31-class direct-union frontier) without
+        // making it brittle: any member later proved WIN is skipped and the
+        // ordinary greedy suffix below repairs whatever coverage is missing.
+        std::vector<char> used((std::size_t)M,0);
+        if(preferred){
+            for(int i:*preferred){
+                if(i<0 || i>=M) throw std::runtime_error("preferred frontier slot out of range");
+                if(used[(std::size_t)i]) continue;
+                used[(std::size_t)i]=1;
+                if(verdicts[(std::size_t)i]!=EdgeVerdict::UNKNOWN) continue;
+                std::size_t fresh=0;
+                for(int v:cov_memo[(std::size_t)i].verts)
+                    if(!covered[(std::size_t)v]) ++fresh;
+                if(!fresh) continue;
+                for(int v:cov_memo[(std::size_t)i].verts){
+                    if(!covered[(std::size_t)v]){
+                        covered[(std::size_t)v]=1;
+                        ++covered_n;
+                    }
+                }
+                st.members.push_back(i);
+                ++st.cover_size;
+                ++st.min_additional;
+            }
+        }
+
+        // Cover only still-unsecured vertices with UNKNOWN classes. WIN
+        // classes are impossible certificate members. The suffix makes a
+        // preferred frontier adaptive rather than mandatory.
+        for(int round=0; round<M && covered_n<(std::size_t)V; ++round){
+            int best=-1;
+            std::size_t best_fresh=0;
+            for(int i=0;i<M;++i){
+                if(used[(std::size_t)i]) continue;
+                if(verdicts[(std::size_t)i]!=EdgeVerdict::UNKNOWN) continue;
+                std::size_t fresh=0;
+                for(int v:cov_memo[(std::size_t)i].verts)
+                    if(!covered[(std::size_t)v]) ++fresh;
+                if(fresh>best_fresh){
+                    best=i;
+                    best_fresh=fresh;
+                }
+            }
+            if(best<0 || best_fresh==0) break;
+            used[(std::size_t)best]=1;
+            for(int v:cov_memo[(std::size_t)best].verts){
+                if(!covered[(std::size_t)v]){
+                    covered[(std::size_t)v]=1;
+                    ++covered_n;
+                }
+            }
+            st.members.push_back(best);
+            ++st.cover_size;
+            ++st.min_additional;
+        }
+        st.covered=covered_n;
+        for(int i=0;i<M;++i)
+            if(verdicts[(std::size_t)i]==EdgeVerdict::WIN) ++st.forbidden;
+        return st;
+    }
+
+    // Certificate for one winning two-stone reply. Filled only when the
+    // quantified search returns WIN:
+    //   reply r2, one winning third move r3, and for EVERY legal fourth
+    //   reply r4 a winning fifth move r5 with that s5's canonical key.
+    struct Cert5 {
+        int r2=-1, r3=-1;
+        struct Q4 { int r4=-1, r5=-1; Bits key{}; };
+        std::vector<Q4> q4;
+    };
+
+    // Run the quantified search for one two-stone root {first,r2}.
+    // Exposed so the driver can loop over replies while KEEPING the
+    // oracle cache across them: all 20 replies share most of their s5
+    // positions, so a per-reply oracle would redo the exact work.
+    int quant_root(int first,int r2,std::uint64_t budget,Cert5* cert){
+        root_first_move_=first;
+        return quant_solve(r2,budget,cert);
+    }
+    // Enumerate the fifth moves of a 4-stone position WITHOUT solving
+    // any of them, reporting per fifth move: index, canonical s5 key,
+//    legal count, and whether the main PnTT already holds a verdict.
+    //
+    // This is what makes the s4-direct A/B interpretable. The direct
+    // exact DFS picks children by count-ASC (decisive ones first), the
+    // quant solver picks them in board index order, so if their first
+    // choices differ then the two arms were never digging the same s5
+    // and a node-for-node comparison means nothing.
+    struct M5Info { int m5=-1, legal=0, tt_state=0; Bits key{}; };
+    std::vector<M5Info> enum_m5_unresolved(int r2,int m3,int m4){
+        // A repeated stone is not a position. The earlier A/B spec used
+        // m4=0 while r2 was also 0, which built a four-stone "position"
+        // with one stone doubled (popcount 4); every number measured on
+        // it described an illegal board. Reject such a spec loudly
+        // rather than silently analysing nonsense.
+        if(root_first_move_==r2||root_first_move_==m3||root_first_move_==m4||
+           r2==m3||r2==m4||m3==m4)
+            throw std::runtime_error("s4 spec repeats a stone");
+        TState s2{}; s2=add(s2,root_first_move_); s2=add(s2,r2);
+        TState s3=add(s2,m3);
+        TState s4=add(s3,m4);
+        Bits occ{}; setbit(occ,root_first_move_); setbit(occ,r2);
+        setbit(occ,m3); setbit(occ,m4);
+        Bits legal5=legal_for(occ);
+        std::vector<M5Info> out;
+        Bits mm=legal5;
+        while(any(mm)){
+            int z=take_lsb(mm);
+            if(z<0) break;
+            TState s5=add(s4,z);
+            Bits o5=occ; setbit(o5,z);
+            M5Info info; info.m5=z;
+            info.key=canonical(s5);
+            info.legal=popcount(legal_for(o5));
+            int slot=tt_.find(info.key.lo,info.key.hi);
+            info.tt_state=(slot>=0)?(int)tt_.st_[(std::size_t)slot]:0;
+            out.push_back(info);
+        }
+        return out;
+    }
+
+    const Oracle& oracle_stats() const { return oracle; }
+    int oracle_cached_pub(Bits key) const {
+        auto it=oracle.memo.find(key);
+        return it==oracle.memo.end()?0:(int)it->second;
+    }
+    Bits edge_class_key_pub(int r2,int a,int b) const { return edge_class_key(r2,a,b); }
+    EdgeInfo classify_edge_pub(int r2,int a,int b) const { return classify_edge(r2,a,b); }
+    Bits canonical_pub(const TState& s) const { return canonical(s); }
+
+    // Board helpers exposed for the s4 A/B driver, which has to rebuild
+    // the same 4-stone position the quant solver would have reached.
+    void set_first_move(int v){ root_first_move_=v; }
+    TState add_pub(TState s,int v) const { return add(s,v); }
+    void setbit_pub(Bits& b,int v) const { setbit(b,v); }
+    Bits legal_for_pub(Bits occ) const { return legal_for(occ); }
+    static int popcount_pub(Bits b){
+        int n=0; while(any(b)){ if(take_lsb(b)<0) break; ++n; } return n;
+    }
+    static int take_lsb_pub(Bits& b){ return take_lsb(b); }
+    static bool any_pub(Bits b){ return any(b); }
+
+    // Solve one 4-stone position exactly. This is EQUIVALENT to the
+    // quant solver's inner "exists m5 : WIN(s5)" step, because an s4
+    // position is an OR node and the exact DFS returns on the first
+    // child it proves WIN. So it is a drop-in A/B against enumerating
+    // the fifth moves one at a time:
+    //   - the exact DFS already has the count-ASC ordering, so a WIN
+    //     fifth move is found early rather than in index order;
+    //   - transpositions between the s5 children are shared inside one
+    //     search instead of across separate oracle calls.
+    // Returns 1 WIN, 2 LOSS, 0 UNKNOWN (budget exhausted).
+    int exact4_oracle(const TState& state,Bits occupied,std::uint64_t budget){
+        Bits key=canonical(state);
+        auto it=oracle.memo.find(key);
+        if(it!=oracle.memo.end()){
+            ++oracle.hits; ++oracle.queries;
+            return it->second;
+        }
+        ++oracle.queries;
+        Bits legal=legal_for(occupied);
+        std::uint64_t b=budget;
+        std::uint64_t before=exact_nodes_;
+        double t0=std::chrono::duration<double>(
+            Clock::now().time_since_epoch()).count();
+        if(quant_progress_){
+            *log_<<"[s4-start] q="<<oracle.queries<<" key="<<key.lo<<","<<key.hi
+                <<" legal="<<popcount(legal)<<" budget="<<budget<<std::endl;
+            log_->flush();
+        }
+        ExactResult r=exact_prop(state,4,legal,b);
+        double t1=std::chrono::duration<double>(
+            Clock::now().time_since_epoch()).count();
+        oracle.nodes+=exact_nodes_-before;
+        oracle.wall+=std::uint64_t((t1-t0)*1000.0);
+        if(quant_progress_){
+            *log_<<"[s4-done]  q="<<oracle.queries<<" key="<<key.lo<<","<<key.hi
+                <<" result="<<(r==ExactResult::WIN?1:(r==ExactResult::LOSS?2:0))
+                <<" nodes="<<(exact_nodes_-before)
+                <<" ms="<<(long long)((t1-t0)*1000.0)<<std::endl;
+            log_->flush();
+        }
+        if(r==ExactResult::WIN){ oracle.memo[key]=1; ++oracle.wins; return 1; }
+        if(r==ExactResult::LOSS){ oracle.memo[key]=2; ++oracle.losses; return 2; }
+        ++oracle.unknowns;
+        return 0;
+    }
+
+    // Reconstruct the 4-stone position reached by first move, second
+    // reply, third move and fourth reply, and solve it exactly.
+    // Returns the exact verdict (1 WIN, 2 LOSS, 0 UNKNOWN) plus the
+    // winning fifth move when there is one.
+    int s4_direct(int r2,int m3,int m4,std::uint64_t budget,int* winning_m5){
+        if(root_first_move_==r2||root_first_move_==m3||root_first_move_==m4||
+           r2==m3||r2==m4||m3==m4)
+            throw std::runtime_error("s4 spec repeats a stone");
+        typename DfPn<N>::TState s2{}; s2=add(s2,root_first_move_); s2=add(s2,r2);
+        typename DfPn<N>::TState s3=add(s2,m3);
+        typename DfPn<N>::TState s4=add(s3,m4);
+        Bits occ{}; setbit(occ,root_first_move_); setbit(occ,r2);
+        setbit(occ,m3); setbit(occ,m4);
+        int res=exact4_oracle(s4,occ,budget);
+        if(winning_m5) *winning_m5=-1;
+        if(res==1){
+            // Recover a concrete winning fifth move from the stored
+            // table so the certificate stays checkable.
+            Bits legal5=legal_for(occ);
+            Bits m=legal5;
+            while(any(m)){
+                int z=take_lsb(m);
+                if(z<0) break;
+                typename DfPn<N>::TState s5=add(s4,z);
+                int slot=tt_.find(canonical(s5).lo,canonical(s5).hi);
+                if(slot>=0 && tt_.st_[(std::size_t)slot]==PnTT::WIN){
+                    if(winning_m5) *winning_m5=z;
+                    break;
+                }
+            }
+        }
+        return res;
+    }
+
+    // ---- QUANTIFIED s5 SEARCH  (exists m3 forall m4 exists m5) ----
+    // A two-stone root {m2,r2} is an OR node: to show the ORIGINAL
+    // FIRST PLAYER wins it, ONE winning third move suffices. A
+    // three-stone position is an AND node: every legal fourth reply
+    // must be held. A four-stone position is an OR node again: one
+    // winning fifth move per fourth reply.
+    //
+    //   two-stone r2  =  exists m3 : forall m4 : exists m5 : s5 WIN
+    //
+    // Solving it directly with a generic exact DFS would throw away
+    // the structure we already paid for: the s5 layer is solved by an
+    // exact oracle, so the search only has to decide three levels.
+    // Nothing here touches proof numbers or thresholds; each step is a
+    // direct evaluation of the quantifier formula.
+    //
+    // Returns 1 WIN, 2 LOSS, 0 UNKNOWN (a budget ran out somewhere).
+    // `cert` is filled only on a WIN.
+    int quant_solve(int r2,std::uint64_t budget,Cert5* cert){
+        typename DfPn<N>::TState s2{}; s2=add(s2,root_first_move_); s2=add(s2,r2);
+        Bits occ2{}; setbit(occ2,root_first_move_); setbit(occ2,r2);
+        Bits legal3=legal_for(occ2);
+        int n3=popcount(legal3);
+        // A third move is refuted as soon as ONE fourth reply is
+        // refuted (exists m4, forall m5 LOSS); it is proved only when
+        // every fourth reply is SAT (forall m4, exists m5 WIN). If some
+        // fourth reply is UNKNOWN the third move is neither proved nor
+        // refuted, and the reply as a whole must stay UNKNOWN.
+        //
+        // Unknowns are tracked by q_m3_unknown_, NOT by a reply-wide
+        // flag. The previous code kept a local saw_unknown that nothing
+        // ever set, so the final "saw_unknown ? 0 : 2" always chose 2
+        // and reported a LOSS even when a third move had been left
+        // inconclusive. That is an unsound refutation, and the per-m3
+        // counter is what the verdict must consult.
+        //
+        // Branch-level telemetry. The whole feasibility question turns
+        // on how quickly each level short-circuits, so record it rather
+        // than inferring it from total query counts.
+        q_m3_tried_=0; q_m4_sat_=0; q_m4_refuted_=0; q_m4_unknown_=0;
+        q_m3_refuted_=0; q_m3_unknown_=0; q_m4_sat_total_=0;
+        q_queries_at_refute_=0;
+        for(int i=0;i<n3;++i){
+            int v=take_lsb(legal3);
+            if(v<0) break;
+            if(quant_out_of_time()) return 0;
+            ++q_m3_tried_;
+            std::uint64_t q_at_m3=oracle.queries;
+            typename DfPn<N>::TState s3=add(s2,v);
+            Bits occ3=occ2; setbit(occ3,v);
+            Bits legal4=legal_for(occ3);
+            int n4=popcount(legal4);
+            bool all=true;
+            std::vector<typename Cert5::Q4> rows;
+            rows.reserve((std::size_t)n4);
+            // Progress heartbeat. The exists-m3 loop can run for a very
+            // long time, and a run that produces NO output until it
+            // finishes is indistinguishable from a hang, so report the
+            // oracle counters as they move.
+            if(quant_progress_){
+                const auto& oc=oracle;
+                *log_<<"[quant] r2="<<r2<<" m3="<<v<<" ("<<(i+1)<<"/"<<n3
+                    <<") queries="<<oc.queries<<" hits="<<oc.hits
+                    <<" nodes="<<oc.nodes<<std::endl;
+                log_->flush();
+            }
+            // Per fourth reply, the verdict is three-valued and computed from
+            // THAT reply alone:
+            //   SAT      some fifth move came back WIN
+            //   REFUTED  no WIN, and every legal fifth move a proven LOSS
+            //   UNKNOWN  no WIN, but at least one fifth move inconclusive
+            // Mixing a reply-wide flag into this was wrong: one
+            // inconclusive query bumps oracle.queries, so the previous
+            // form counted an UNKNOWN m4 as REFUTED, and an UNKNOWN seen
+            // under an earlier m3 leaked into the classification of later
+            // ones.
+            enum class M4Verdict : std::uint8_t { SAT=0, REFUTED=1, UNKNOWN=2 };
+            int m4_sat=0, m4_refuted=0, m4_unknown=0;
+            bool m3_refuted=false, m3_unknown=false;
+            for(int j=0;j<n4;++j){
+                int w=take_lsb(legal4);
+                if(w<0) break;
+                typename DfPn<N>::TState s4=add(s3,w);
+                Bits occ4=occ3; setbit(occ4,w);
+                Bits legal5=legal_for(occ4);
+                int n5=popcount(legal5);
+                bool found=false;
+                bool m4_unk=false;
+                for(int k=0;k<n5;++k){
+                    int z=take_lsb(legal5);
+                    if(z<0) break;
+                    typename DfPn<N>::TState s5=add(s4,z);
+                    Bits occ5=occ4; setbit(occ5,z);
+                    int r=s5_oracle(s5,occ5,budget);
+                    if(r<0) return 0;             // wall allowance exhausted
+                    if(r==1){ typename Cert5::Q4 row; row.r4=w; row.r5=z; row.key=canonical(s5);
+                              rows.push_back(row); found=true; break; }
+                    // r==2 (this fifth move loses) -> try another
+                    if(r==0){ m4_unk=true; break; }
+                }
+                if(found){ ++m4_sat; ++q_m4_sat_; continue; }
+                if(m4_unk){
+                    ++m4_unknown; m3_unknown=true;
+                    ++q_m4_unknown_;
+                    // An m4 that is UNKNOWN cannot be a proof and cannot
+                    // refute the m3 either, so keep scanning: a later m4
+                    // may still be REFUTED, which is the stronger outcome.
+                    continue;
+                }
+                ++m4_refuted;
+                ++q_m4_refuted_;
+                m3_refuted=true;
+                if(q_queries_at_refute_==0)
+                    q_queries_at_refute_=oracle.queries-q_at_m3;
+                break;   // exists m4 with forall m5 LOSS: m3 is dead
+            }
+            if(m3_refuted){ ++q_m3_refuted_; continue; }
+            if((int)rows.size()!=n4||m3_unknown){
+                // Reaching here with rows.size()==n4 and no unknown
+                // would mean the m4 loop ended without either a
+                // refutation or a full set of SAT rows, which the loop
+                // structure does not allow. If it ever did happen the
+                // safe reading is UNKNOWN, so treat it as such rather
+                // than as a proof.
+                ++q_m3_unknown_;
+                if(!m3_unknown) ++q_m4_unknown_;
+                continue;                       // not a proof
+            }
+            // Every fourth reply was SAT: this third move is proved.
+            q_m4_sat_total_+=m4_sat;
+            if(cert){
+                cert->r2=r2; cert->r3=v; cert->q4=rows;
+            }
+            return 1; // exists m3 satisfied
+        }
+        // Every third move was examined and none was proved. The reply
+        // is REFUTED only if each one was refuted outright, i.e. by a
+        // single fourth reply whose every fifth move was a proven LOSS.
+        // If any third move was left UNKNOWN the reply is merely
+        // unproven. This must consult q_m3_unknown_, which is the only
+        // counter that records that; the reply-wide flag this used to
+        // use was never set, so it always answered LOSS.
+        if(q_m3_unknown_>0) return 0;
+        return 2;
+    }
+
+    // Branch telemetry accessors, for the driver to report.
+    std::uint64_t q_m3_tried() const { return q_m3_tried_; }
+    std::uint64_t q_m3_refuted() const { return q_m3_refuted_; }
+    std::uint64_t q_m4_sat() const { return q_m4_sat_; }
+    std::uint64_t q_m4_refuted() const { return q_m4_refuted_; }
+    std::uint64_t q_m4_unknown() const { return q_m4_unknown_; }
+    std::uint64_t q_queries_at_refute() const { return q_queries_at_refute_; }
+    std::uint64_t q_m3_unknown() const { return q_m3_unknown_; }
+    std::uint64_t q_m4_sat_total() const { return q_m4_sat_total_; }
+
+    std::uint64_t forbidden_count() const { return forbidden_count_; }
+    std::uint64_t visited() const { return visited_; }
+    std::uint64_t expansions() const { return expanded_; }
+
+private:
+    std::array<std::array<Bits,V>,8> tbit_{};
+    PnTT tt_;
+    bool collect_proof_dag_=false;
+    std::map<Bits,ProofNode> proof_nodes_;
+    std::vector<Bits> completion_;
+    std::vector<std::array<int,4>> forbidden_quads_;
+    std::uint64_t forbidden_count_=0,visited_=0,expanded_=0;
+    bool solving_dfpn_=false,search_node_budget_set_=false;
+    bool frame_children_cache_=false,frame_children_audit_=false,frame_expand_reuse_=false;
+    std::uint64_t frame_expand_uses_=0;
+    std::uint64_t child_geometry_builds_=0,child_geometry_moves_=0,child_bound_refreshes_=0,frame_children_audits_=0;
+    std::uint64_t search_node_budget_=0,search_nodes_used_=0;
+    void consume_search_node(){
+        if(!solving_dfpn_) return; // standalone exact replay keeps its own budget
+        if(search_node_budget_set_ && search_nodes_used_>=search_node_budget_)
+            throw std::runtime_error("NODE_BUDGET");
+        ++search_nodes_used_;
+    }
+    void reset_residual_outcome_budget(){
+        residual_outcome_remaining_=residual_outcome_limit_;
+        residual_outcome_nodes_=residual_outcome_cutoffs_=residual_outcome_aborts_=0;
+        residual_attempted_.clear();
+        residual_attempt_skips_=0;
+        residual_attempt_max_nodes_=0;
+    }
+    bool admit_residual_attempt(Bits key){
+        if(!residual_outcome_ || residual_attempt_budget_==0) return true;
+        // An UNKNOWN attempt changes no game fact. Suppress only repeated
+        // work on this canonical board during this root, never publish it.
+        if(residual_attempted_.insert(key).second) return true;
+        ++residual_attempt_skips_;
+        return false;
+    }
+    std::uint64_t exp_hist_[64]={};
+    int max_depth_=0;
+    double deadline_s_=0;
+    Clock::time_point t0_;
+    // Heartbeat rate state (per-solver, reset per root in solve_common).
+    std::uint64_t hb_last_vis_=0;
+    double hb_last_t_=0;
+    double hb_prev_t_=0;
+    std::uint64_t hb_prev_exp_=0;
+    Bits root_key_{};
+    int root_stones_=0;
+    // Partial-progress fallback: written by the catch in solve_common when
+    // mid() throws (TIME_BUDGET), read by the run_one() handler.
+    std::uint32_t r_exp_fallback_pn=INF, r_exp_fallback_dn=INF;
+    std::uint64_t r_exp_fallback_exp=0, r_exp_fallback_vis=0;
+
+    // CHILD WORK: per direct child of the ROOT, keyed by the
+    // child's canonical Bits (NOT a hash -- lo*const+hi collides
+    // and produced 970 phantom "children" for a 20-child root).
+    // work = number of times the search DESCENDED into this child
+    // from the root (b1==this child at a root re-aggregation);
+    // pn/dn/st = the child's CURRENT stored bounds; legal/count =
+    // its legal-move count. Only populated when track_children_
+    // is set (the diagnostic mode), because the per-child
+    // bookkeeping would slow the main runs.
+    struct ChildStat {
+        std::uint64_t work=0;
+        std::uint32_t pn=INF, dn=INF;
+        std::uint8_t st=0;
+        int count=0;
+        int move=-1;
+    };
+    std::map<Bits,ChildStat> child_stat_;
+    std::uint64_t child_stat_updates_=0;
+    bool track_children_=false;
+
+    // Create-or-update one child observation for the root-child
+    // diagnostic. Called from gen_into when track_children_ is
+    // set AND the parent is the root (is_root passed explicitly).
+    // work is NOT touched here (it is accumulated at descent
+    // time by add_child_work); pn/dn/st/count/move are refreshed.
+    void note_child(const Bits& key,int move,int count,
+                    std::uint32_t pn,std::uint32_t dn,std::uint8_t st){
+        if(!track_children_) return;
+        auto it=child_stat_.find(key);
+        if(it==child_stat_.end()){
+            ChildStat cs; cs.pn=pn; cs.dn=dn; cs.st=st;
+            cs.count=count; cs.move=move;
+            child_stat_[key]=cs;
+        }else{
+            it->second.pn=pn; it->second.dn=dn; it->second.st=st;
+            it->second.count=count;
+            if(move>=0) it->second.move=move;
+        }
+        ++child_stat_updates_;
+    }
+
+    // Accumulate one descent into the child with the given key.
+    // Called from mid_iter when the search pushes a child frame
+    // whose parent is the root.
+    void add_child_work(const Bits& key){
+        if(!track_children_) return;
+        auto it=child_stat_.find(key);
+        if(it!=child_stat_.end()) it->second.work += 1;
+    }
+
+    // Print the root-child diagnostic: one line per direct child of
+    // the root, ranked by work descending. Fields: move, pn, dn,
+    // solved status, cumulative work, legal count. The ranking
+    // answers "which of the 20 replies dominates the proof search"
+    // without waiting for the root to solve. The v=11 one-stone root
+    // has 20 D4-distinct children; a larger n child count means the
+    // map accumulated children of deeper frames too (should not
+    // happen -- the guard is stones_==root_stones_ in note_child).
+    void dump_children(){
+        if(child_stat_.empty()){ *log_<<"[children] n=0\n"; return; }
+        std::vector<std::pair<Bits,ChildStat>> v;
+        v.reserve(child_stat_.size());
+        for(auto& kv:child_stat_) v.push_back({kv.first,kv.second});
+        std::sort(v.begin(),v.end(),
+            [](const std::pair<Bits,ChildStat>& a,
+               const std::pair<Bits,ChildStat>& b){
+                if(a.second.work!=b.second.work)
+                    return a.second.work>b.second.work;
+                return a.second.pn<b.second.pn;
+            });
+        *log_ << "[children] t=" << (long long)std::chrono::duration<double>(
+            Clock::now()-t0_).count() << "s n=" << v.size()
+              << " updates=" << child_stat_updates_ << "\n";
+        for(auto& kv:v){
+            const ChildStat& cs=kv.second;
+            *log_ << "  move=" << cs.move
+                  << " pn=" << cs.pn << " dn=" << cs.dn
+                  << " st=" << (int)cs.st
+                  << " work=" << cs.work
+                  << " legal=" << cs.count << "\n";
+        }
+        log_->flush();
+    }
+
+    // TIE-BREAK between children with EQUAL proof number, applied only
+    // when the numbers are equal (so it can never change correctness --
+    // b1 is only ever a choice of which equally-bounded child to dig
+    // first). Ties are extremely common early in a search, which is
+    // why the tie-break has outsized influence on the order in which
+    // subproofs are visited.
+    //
+    // Modes (--tiebreak=):
+    //   asc  (0, default) legal count ASC,  then canonical key ASC
+    //   desc (1)         legal count DESC, then canonical key DESC
+    //   key  (2)         canonical key ASC only (no count term)
+    //
+    // The `desc` rule is the one that helped the DFS solver in the
+    // preregistered depth-5 experiment
+    // (cpp/solvers/kyouen_solver_10_depth5_max_first.cpp).
+    //
+    // NOTE from the v=60 child diagnostic (N11-DFPN-CHILDREN.md): all 20
+    // root children have legal=119, so at the root the count term is
+    // inert for every mode and selection falls through to the key term.
+    // The rule still differs at deeper nodes, where counts do vary.
+    bool tie_better(const Gen& g,int i,int b) const {
+        const GChild& ci=g.ch[(std::size_t)i];
+        const GChild& cb=g.ch[(std::size_t)b];
+        if(ci.count!=cb.count)
+            return tiebreak_desc_ ? ci.count>cb.count : ci.count<cb.count;
+        return tiebreak_desc_ ? (cb.key<ci.key) : (ci.key<cb.key);
+    }
+    bool tiebreak_desc_=false;
+
+    // Optional exact endgame handoff. df-pn remains the outer search, but
+    // when a node has few legal moves we can try to solve that subgame by
+    // exact DFS. Only COMPLETED exact results are written back as WIN/LOSS;
+    // a node-budget exhaustion returns UNKNOWN and leaves the df-pn bounds
+    // sound. The exact DFS reuses solved entries in the same TT, so work
+    // learned by one root/sweep can help later roots too.
+    enum class ExactResult : std::uint8_t { UNKNOWN=0, WIN=1, LOSS=2 };
+    int exact_legal_=0;                    // 0 disables the hybrid
+    int residual_audit_legal_=0;            // shadow-only board<->residual audit
+    std::uint64_t residual_audit_calls_=0;
+    int residual_crosscheck_legal_=0;        // shadow-only outcome crosscheck
+    std::uint64_t residual_crosscheck_calls_=0;
+    int residual_exact_legal_=0;             // experimental exact handoff
+    std::uint64_t residual_exact_calls_=0;
+    std::uint64_t residual_exact_memo_states_=0;
+    std::uint64_t residual_exact_module_removed_=0;
+    std::uint64_t residual_exact_component_splits_=0;
+    int residual_share_gate_=0;               // exact relabel cache gate
+    int exact_share_layer_=0;                  // share completed exact verdicts only at this stone count
+    std::uint64_t exact_share_hits_=0,exact_share_stores_=0;
+    inline static std::map<Bits,std::uint8_t> exact_layer_cache_{};
+    std::uint64_t residual_shared_hits_=0,residual_shared_stores_=0;
+    std::uint64_t residual_shared_canonicalized_=0;
+    kyouen_residual::Stats residual_closed_stats_{};
+    int residual_builder_=2; // 0 scan, 1 indexed, 2 estimated-work selection
+    bool residual_outcome_=false;
+    std::uint64_t residual_outcome_limit_=100000,residual_outcome_remaining_=100000;
+    std::uint64_t residual_outcome_nodes_=0,residual_outcome_cutoffs_=0,residual_outcome_aborts_=0;
+    std::uint64_t residual_attempt_budget_=0,residual_attempt_skips_=0,residual_attempt_max_nodes_=0;
+    std::set<Bits> residual_attempted_;
+    bool residual_profile_=false;
+    // Cumulative visits to unresolved stage-0 frames, including revisits.
+    std::array<std::uint64_t,V+1> residual_gate_frames_{};
+    std::uint64_t residual_build_ns_=0,residual_structure_ns_=0,residual_grundy_ns_=0;
+    inline static std::map<kyouen_residual::Key,int> residual_component_cache_{};
+    std::uint64_t exact_budget_=100000;    // nodes per handoff attempt
+    // Per-stone-count budget overrides. The s5 frontier measured in
+    // N11-DFPN-S5-BENCH.md needs 130k..5.7M nodes to close while s6
+    // closes inside 200k, so a single global budget either wastes a lot
+    // on s6 or leaves s5 aborting. Lookup is by stone count; anything
+    // not listed falls back to exact_budget_.
+    std::array<std::uint64_t,64> exact_budget_by_stones_{};
+    bool exact_budget_by_stones_set_[64]={};
+    std::uint64_t budget_for_stones(int stones) const {
+        int s=(stones>=0&&stones<64)?stones:63;
+        if(exact_budget_by_stones_set_[s]) return exact_budget_by_stones_[s];
+        return exact_budget_;
+    }
+    int exact_retries_=1;                  // attempts per TT residency
+    // Per-stone-count THRESHOLD overrides, mirroring the per-stone
+    // budget above. Needed because the legal-move gate cannot separate
+    // layers on its own: a k-stone position has at most 121-k legal
+    // moves, so a single --exact-legal that admits s7 (>=114) also
+    // admits every shallower layer, and raising it makes the shallower
+    // layers fail the gate more often rather than less. See
+    // research/experiments/n11-search-methods/reports/N11-DFPN-FRONTIER-LAYERS.md.
+    // Lookup is by stone count; anything not listed falls back to
+    // exact_legal_.
+    std::array<int,64> exact_legal_by_stones_{};
+    bool exact_legal_by_stones_set_[64]={};
+    bool handoff_allowed(int stones,int legal) const {
+        int s=(stones>=0&&stones<64)?stones:63;
+        int lim=exact_legal_by_stones_set_[s]?exact_legal_by_stones_[s]:exact_legal_;
+        return lim>0 && legal<=lim;
+    }
+    // Exact-DFS child ordering, A/B-able. Ordering cannot change a
+    // result, only the work needed to reach it, so this is safe to vary
+    // and is graded on total nodes over a fixed benchmark set.
+    enum class ExactOrder : std::uint8_t { COUNT=0, COUNTD=1, KEY=2, S5_COUNTD=3, S5_TARGET92=4 };
+    ExactOrder exact_order_=ExactOrder::COUNT;
+    bool exact_order_desc_=false;          // true when exact_order_==COUNTD
+    enum class ExactPublishMode : std::uint8_t { ALL=0, ROOT=1, SEPARATE=2 };
+    ExactPublishMode exact_publish_mode_=ExactPublishMode::ALL;
+
+    // Fixed-capacity generation-stamped memo for ONE exact handoff.
+    // exact_budget defaults to 200k in the experiments; 2^19 slots keeps
+    // load comfortably below 50% without any per-node heap allocation.
+    // Replacement can only lose cache hits, never affect correctness.
+    class ExactLocalMemo {
+    public:
+        static constexpr int PROBE=32;
+        explicit ExactLocalMemo(unsigned power=19)
+          : n_(std::size_t{1}<<power),mask_(n_-1),
+            lo_(n_,0),hi_(n_,0),gen_(n_,0),st_(n_,0) {}
+        void reset(){
+            ++cur_;
+            if(cur_==0){
+                std::fill(gen_.begin(),gen_.end(),0);
+                cur_=1;
+            }
+        }
+        std::uint8_t get(Bits k) const {
+            std::size_t i=mix(k.lo,k.hi)&mask_;
+            for(int j=0;j<PROBE;++j){
+                if(gen_[i]!=cur_) return 0;
+                if(lo_[i]==k.lo && hi_[i]==k.hi) return st_[i];
+                i=(i+1)&mask_;
+            }
+            return 0;
+        }
+        bool put(Bits k,std::uint8_t v){
+            std::size_t h=mix(k.lo,k.hi)&mask_;
+            std::size_t i=h;
+            for(int j=0;j<PROBE;++j){
+                if(gen_[i]!=cur_){
+                    lo_[i]=k.lo;hi_[i]=k.hi;st_[i]=v;gen_[i]=cur_;
+                    return true;
+                }
+                if(lo_[i]==k.lo && hi_[i]==k.hi){
+                    st_[i]=v;
+                    return false;
+                }
+                i=(i+1)&mask_;
+            }
+            lo_[h]=k.lo;hi_[h]=k.hi;st_[h]=v;gen_[h]=cur_;
+            return true;
+        }
+    private:
+        std::size_t n_,mask_;
+        std::vector<std::uint64_t> lo_,hi_;
+        std::vector<std::uint32_t> gen_;
+        std::vector<std::uint8_t> st_;
+        std::uint32_t cur_=1;
+        static std::uint64_t mix64(std::uint64_t x){
+            x^=x>>30;x*=0xbf58476d1ce4e5b9ULL;
+            x^=x>>27;x*=0x94d049bb133111ebULL;
+            return x^(x>>31);
+        }
+        static std::uint64_t mix(std::uint64_t a,std::uint64_t b){
+            return mix64(a ^ (b*0x9e3779b97f4a7c15ULL));
+        }
+    };
+    ExactLocalMemo exact_local_;
+    std::uint64_t exact_calls_=0, exact_nodes_=0, exact_aborts_=0;
+    std::uint64_t exact_trigger_win_=0, exact_trigger_loss_=0, exact_stores_=0;
+    std::uint64_t exact_local_stores_=0;
+    std::uint64_t exact_call_hist_[64]={};
+    std::uint64_t exact_win_hist_[64]={}, exact_loss_hist_[64]={}, exact_abort_hist_[64]={};
+    bool exact_replay_profile_=false;
+    std::uint64_t exact_profile_calls_[64]={}, exact_profile_nodes_[64]={};
+    std::uint64_t exact_profile_wins_[64]={}, exact_profile_losses_[64]={};
+    std::uint64_t exact_profile_unknowns_[64]={};
+    std::uint64_t exact_profile_tt_solved_hits_[64]={};
+    std::uint64_t exact_profile_tt_open_hits_[64]={}, exact_profile_tt_misses_[64]={};
+    unsigned exact_profile_recursion_depth_=0;
+    std::vector<typename ExactReplayProfile::RootChild> exact_profile_root_children_;
+
+    // ---- HANDOFF RECORD DIAGNOSTIC (--exact-record) ----------------
+    // One record per exact-handoff ATTEMPT, emitted as it happens, so
+    // that aborted handoffs can be counted, deduplicated by canonical
+    // key, and replayed standalone. Without this, an aborted s5 root is
+    // invisible: exact_abort_hist_ only says "N calls aborted", not
+    // which positions, how many were repeats, or how deep they were.
+    //
+    // The position is recorded as its canonical Bits key plus the stone
+    // count and legal count. A standalone replay RE-DERIVES occupied and
+    // legal from the canonical occupancy rather than trusting an
+    // inherited mask: canonical() returns the minimum over the 8 D4
+    // images, so the key is generally a rotated image and does not
+    // correspond to the orientation actually reached by play. The game
+    // is D4 invariant, so recomputing legal from the canonical occupancy
+    // is correct. This is the same mistake the old root-child code made
+    // (rebuilding TState from the key and mixing it with the parent's
+    // inherited legal mask), so it is called out explicitly here.
+    struct HandoffRec {
+        Bits key{};              // canonical occupancy mask
+        int stones=0;
+        int legal=0;            // popcount(legal) at handoff time
+        int depth_from_root=0;  // frame depth - root stone count
+        bool is_or=false;       // is_or(stones): OR node for side to move
+        int retries=0;          // handoff attempt index for this key (0-based)
+        std::uint64_t nodes=0;  // exact nodes consumed by THIS attempt
+        std::uint8_t result=0;  // 0=UNKNOWN 1=WIN 2=LOSS
+        std::uint64_t seq=0;    // global attempt counter
+    };
+    std::vector<HandoffRec> exact_recs_;
+    bool track_exact_=false;
+    int exact_record_limit_=0;   // 0 = unlimited
+    std::uint64_t exact_rec_seq_=0;
+
+    // Reset the per-root handoff record list. Called from solve_common
+    // so each root's records are its own; the exact_* counters and the
+    // stone histogram stay cumulative for the whole process.
+    void exact_record_begin(){
+        exact_recs_.clear();
+        exact_rec_seq_=0;
+    }
+    void exact_record_add(const Bits& key,int stones,int legal_cnt,
+                          int depth_from_root,unsigned retries,
+                          std::uint64_t nodes,ExactResult r){
+        if(exact_record_limit_>0 && (int)exact_recs_.size()>=exact_record_limit_) return;
+        HandoffRec h;
+        h.key=key; h.stones=stones; h.legal=legal_cnt;
+        h.depth_from_root=depth_from_root; h.is_or=is_or(stones);
+        h.retries=(int)retries; h.nodes=nodes;
+        h.result=(r==ExactResult::WIN)?1:((r==ExactResult::LOSS)?2:0);
+        h.seq=exact_rec_seq_++;
+        exact_recs_.push_back(h);
+    }
+    const std::vector<HandoffRec>& exact_records() const { return exact_recs_; }
+
+    static std::uint32_t sadd(std::uint32_t a,std::uint32_t b){
+        std::uint64_t s=(std::uint64_t)a+b;
+        return s>=INF?INF:(std::uint32_t)s;
+    }
+    static bool is_or(int stones){ return (stones%2)==0; }
+
+    static long long det3(long long a00,long long a01,long long a02,long long a10,long long a11,long long a12,long long a20,long long a21,long long a22){
+        return a00*(a11*a22-a12*a21)-a01*(a10*a22-a12*a20)+a02*(a10*a21-a11*a20);
+    }
+    static bool forbidden(int a,int b,int c,int d){
+        int ids[4]={a,b,c,d};long long m[4][4]{};
+        for(int r=0;r<4;++r){long long x=ids[r]%N,y=ids[r]/N;m[r][0]=x*x+y*y;m[r][1]=x;m[r][2]=y;m[r][3]=1;}
+        long long determinant=0;
+        for(int col=0;col<4;++col){long long z[3][3]{};for(int r=1;r<4;++r){int q=0;for(int c2=0;c2<4;++c2)if(c2!=col)z[r-1][q++]=m[r][c2];}
+            long long md=det3(z[0][0],z[0][1],z[0][2],z[1][0],z[1][1],z[1][2],z[2][0],z[2][1],z[2][2]);
+            determinant+=(col%2==0?1:-1)*m[0][col]*md;
+        }return determinant==0;
+    }
+    static constexpr std::size_t idx(int a,int b,int c){return(std::size_t(a)*V+b)*V+c;}
+    static inline void sort3(int&a,int&b,int&c){if(a>b)std::swap(a,b);if(b>c)std::swap(b,c);if(a>b)std::swap(a,b);}
+    void build_maps(){
+        for(int p=0;p<V;++p){int x=p%N,y=p/N;int nx[8]={x,N-1-x,x,N-1-x,y,N-1-y,y,N-1-y};int ny[8]={y,y,N-1-y,N-1-y,x,x,N-1-x,N-1-x};
+            for(int k=0;k<8;++k)tbit_[k][p]=bitof(ny[k]*N+nx[k]);
+        }
+    }
+    void build_forbidden_quadruples(){
+        for(int a=0;a<V;++a)for(int b=a+1;b<V;++b)for(int c=b+1;c<V;++c)for(int d=c+1;d<V;++d){
+            if(!forbidden(a,b,c,d))continue;++forbidden_count_;
+            forbidden_quads_.push_back({a,b,c,d}); int q[4]={a,b,c,d};
+            for(int omit=0;omit<4;++omit){int t[3],p=0;for(int j=0;j<4;++j)if(j!=omit)t[p++]=q[j];completion_[idx(t[0],t[1],t[2])]=completion_[idx(t[0],t[1],t[2])]|bitof(q[omit]);}
+        }
+    }
+    inline TState add(const TState&s,int v)const{TState r=s;for(int k=0;k<8;++k)r.t[k]=r.t[k]|tbit_[k][v];return r;}
+    static inline Bits canonical(const TState&s){Bits r=s.t[0];for(int k=1;k<8;++k)if(s.t[k]<r)r=s.t[k];return r;}
+    int canonical_transform(const TState& s,const Bits& key) const {
+        for(int t=0;t<8;++t) if(s.t[t]==key) return t;
+        throw std::runtime_error("canonical transform not found");
+    }
+    int move_to_canonical(int transform,int move) const {
+        if(transform<0||transform>=8||move<0||move>=V)
+            throw std::runtime_error("invalid proof move transform");
+        Bits b=tbit_[(std::size_t)transform][(std::size_t)move];
+        return b.lo ? std::countr_zero(b.lo) : 64+std::countr_zero(b.hi);
+    }
+    bool has_proof(const Bits& key) const { return proof_nodes_.find(key)!=proof_nodes_.end(); }
+    void remember_proof(const Bits& key,ExactResult r,bool terminal,int legal_count,
+                        std::vector<ProofEdge> edges){
+        if(!collect_proof_dag_||r==ExactResult::UNKNOWN) return;
+        ProofNode node;
+        node.verdict=(r==ExactResult::WIN)?1:2;
+        node.terminal=terminal;
+        if(legal_count<0 || legal_count>V)
+            throw std::runtime_error("invalid proof legal-move count");
+        node.legal_count=static_cast<std::uint8_t>(legal_count);
+        node.edges=std::move(edges);
+        auto it=proof_nodes_.find(key);
+        if(it!=proof_nodes_.end()){
+            if(it->second.verdict!=node.verdict)
+                throw std::runtime_error("proof DAG verdict conflict");
+            return; // An earlier complete proof for this canonical position remains valid.
+        }
+        proof_nodes_.emplace(key,std::move(node));
+    }
+    inline Bits added_bans(Bits state,int v)const{
+        int verts[V],k=0;Bits s=state;while(any(s))verts[k++]=take_lsb(s);
+        Bits out{};for(int i=0;i<k;++i)for(int j=i+1;j<k;++j){int a=verts[i],b=verts[j],c=v;sort3(a,b,c);out=out|completion_[idx(a,b,c)];}return out;
+    }
+    Bits legal_for(Bits occupied) const {
+        int verts[V],k=0;Bits s=occupied;while(any(s))verts[k++]=take_lsb(s);
+        Bits danger{};
+        for(int i=0;i<k;++i)for(int j=i+1;j<k;++j)for(int l=j+1;l<k;++l){
+            int a=verts[i],b=verts[j],c=verts[l];
+            danger= danger | completion_[idx(a,b,c)];
+        }
+        Bits legal{~0ULL,HI_MASK};
+        if constexpr(V<64) legal.lo &= ((1ULL<<V)-1ULL);
+        legal=legal & ~occupied & ~danger;
+        legal.hi&=HI_MASK;
+        return legal;
+    }
+    // Build the exact inclusion-minimal residual clutter on the CURRENT
+    // legal vertices.  This is the audited residual() semantics used by the
+    // K0336/K0344 experiments, relabelled densely to <=64 micro vertices.
+    kyouen_residual::State residual_for_scan(Bits occupied,Bits legal,
+                                        std::vector<int>* labels=nullptr) const {
+        std::vector<int> id;
+        Bits z=legal; while(any(z)) id.push_back(take_lsb(z));
+        if(id.size()>64) throw std::runtime_error("residual_for: >64 live vertices");
+        int inv[V]; std::fill(inv,inv+V,-1);
+        for(std::size_t i=0;i<id.size();++i) inv[id[i]]=(int)i;
+        kyouen_residual::State r;
+        r.vertices=id.empty()?0:((id.size()==64)?~0ULL:((1ULL<<id.size())-1ULL));
+        for(const auto& q:forbidden_quads_){
+            std::uint64_t e=0; bool ok=true; int cnt=0;
+            for(int p:q){
+                if(has(occupied,p)) continue;
+                int j=inv[p];
+                if(j<0){ ok=false; break; } // remainder is not wholly legal
+                e|=1ULL<<j; ++cnt;
+            }
+            // cnt==1 would mean that legal point is already illegal, so it
+            // cannot occur for a consistent legal mask.  Residual constraints
+            // begin at rank 2.
+            if(ok && cnt>=2) r.edges.push_back(e);
+        }
+        r.edges=kyouen_residual::minimal(std::move(r.edges));
+        if(labels) *labels=std::move(id);
+        return r;
+    }
+
+    // Every residual edge has 2, 3 or 4 legal points. The remaining points
+    // of its forbidden quadruple are occupied. completion_[triple] lists all
+    // possible fourth points, so these three cases exhaust the scan builder.
+    kyouen_residual::State residual_for_indexed(Bits occupied,Bits legal,
+                                               std::vector<int>* labels=nullptr) const {
+        std::vector<int> id,old;
+        Bits z=legal; while(any(z)) id.push_back(take_lsb(z));
+        z=occupied; while(any(z)) old.push_back(take_lsb(z));
+        if(id.size()>64) throw std::runtime_error("residual_for: >64 live vertices");
+        const int n=(int)id.size();
+        kyouen_residual::State r;
+        r.vertices=n==64?~0ULL:((1ULL<<n)-1ULL);
+        // Ranks arrive in increasing order. Only earlier, smaller edges can
+        // subsume a candidate; each labelled subset is generated once.
+        auto append=[&](std::uint64_t e){
+            for(auto f:r.edges) if((f&e)==f) return;
+            r.edges.push_back(e);
+        };
+        for(int i=0;i<n;++i) for(int j=i+1;j<n;++j){
+            for(int x:old){
+                int a=id[i],b=id[j],c=x; sort3(a,b,c);
+                if(any(completion_[idx(a,b,c)]&occupied)){
+                    append((1ULL<<i)|(1ULL<<j)); break;
+                }
+            }
+        }
+        for(int i=0;i<n;++i) for(int j=i+1;j<n;++j) for(int k=j+1;k<n;++k)
+            if(any(completion_[idx(id[i],id[j],id[k])]&occupied))
+                append((1ULL<<i)|(1ULL<<j)|(1ULL<<k));
+        for(int i=0;i<n;++i) for(int j=i+1;j<n;++j) for(int k=j+1;k<n;++k){
+            const Bits fourth=completion_[idx(id[i],id[j],id[k])];
+            for(int l=k+1;l<n;++l) if(has(fourth,id[l]))
+                append((1ULL<<i)|(1ULL<<j)|(1ULL<<k)|(1ULL<<l));
+        }
+        std::sort(r.edges.begin(),r.edges.end());
+        if(labels) *labels=std::move(id);
+        return r;
+    }
+    kyouen_residual::State residual_for(Bits occupied,Bits legal,
+                                        std::vector<int>* labels=nullptr) const {
+        const std::uint64_t n=popcount(legal),o=popcount(occupied);
+        const auto pairs=n<2?0:n*(n-1)/2;
+        const auto triples=n<3?0:n*(n-1)*(n-2)/6;
+        const auto quads=n<4?0:n*(n-1)*(n-2)*(n-3)/24;
+        const bool indexed=residual_builder_==1 || (residual_builder_==2 &&
+            pairs*o+triples+quads<forbidden_quads_.size());
+        return indexed?residual_for_indexed(occupied,legal,labels)
+                      :residual_for_scan(occupied,legal,labels);
+    }
+    void verify_residual_builders(Bits occupied,Bits legal) const {
+        auto scan=residual_for_scan(occupied,legal);
+        auto indexed=residual_for_indexed(occupied,legal);
+        if(scan.vertices!=indexed.vertices || scan.edges!=indexed.edges)
+            throw std::runtime_error("residual builder mismatch");
+        auto selected=residual_for(occupied,legal);
+        if(scan.vertices!=selected.vertices || scan.edges!=selected.edges)
+            throw std::runtime_error("selected residual builder mismatch");
+    }
+
+    // Strong transition regression for the trust boundary.  For every legal
+    // move, the residual-clutter child must expose exactly the same remaining
+    // legal labels as the board transition legal & ~v & ~added_bans().
+    void verify_residual_transition(Bits occupied,Bits legal) const {
+        std::vector<int> labels;
+        verify_residual_builders(occupied,legal);
+        auto r=residual_for(occupied,legal,&labels);
+        for(std::size_t j=0;j<labels.size();++j){
+            int p=labels[j];
+            Bits board_next=(legal&~bitof(p))&~added_bans(occupied,p);
+            board_next.hi&=HI_MASK;
+            auto child=kyouen_residual::play(r,(int)j);
+            Bits residual_next{};
+            for(std::size_t k=0;k<labels.size();++k)
+                if((child.vertices>>k)&1ULL) setbit(residual_next,labels[k]);
+            if(!(residual_next==board_next))
+                throw std::runtime_error("residual transition vertex mismatch");
+
+            Bits occupied_next=occupied|bitof(p);
+            std::vector<int> direct_labels;
+            verify_residual_builders(occupied_next,board_next);
+            auto direct=residual_for(occupied_next,board_next,&direct_labels);
+            std::vector<Bits> child_edges,direct_edges;
+            for(auto e:child.edges){
+                Bits q{};
+                for(std::size_t k=0;k<labels.size();++k)
+                    if((e>>k)&1ULL) setbit(q,labels[k]);
+                child_edges.push_back(q);
+            }
+            for(auto e:direct.edges){
+                Bits q{};
+                for(std::size_t k=0;k<direct_labels.size();++k)
+                    if((e>>k)&1ULL) setbit(q,direct_labels[k]);
+                direct_edges.push_back(q);
+            }
+            auto less_bits=[](const Bits& a,const Bits& b){
+                return a.hi!=b.hi ? a.hi<b.hi : a.lo<b.lo;
+            };
+            std::sort(child_edges.begin(),child_edges.end(),less_bits);
+            std::sort(direct_edges.begin(),direct_edges.end(),less_bits);
+            if(child_edges!=direct_edges)
+                throw std::runtime_error("residual transition edge mismatch");
+        }
+    }
+
+    ExactResult residual_verdict(Bits occupied,Bits legal,int stones,bool outcome_only=false) {
+        auto begin=residual_profile_?Clock::now():Clock::time_point{};
+        auto r=residual_for(occupied,legal,nullptr);
+        auto built=residual_profile_?Clock::now():Clock::time_point{};
+        std::map<kyouen_residual::Key,int> memo;
+        kyouen_residual::Stats st;
+        st.profile=residual_profile_;
+        int g;
+        if(outcome_only){
+            auto available=residual_attempt_budget_>0
+                ? std::min(residual_attempt_budget_,residual_outcome_remaining_)
+                : residual_outcome_remaining_;
+            const auto before=available;
+            g=kyouen_residual::outcome(std::move(r),memo,available,&st);
+            residual_outcome_remaining_-=before-available;
+            residual_attempt_max_nodes_=std::max(residual_attempt_max_nodes_,before-available);
+            residual_outcome_nodes_+=st.calls;
+            residual_outcome_cutoffs_+=st.outcome_cutoffs;
+            if(g<0) ++residual_outcome_aborts_;
+        }else{
+            g=(residual_share_gate_>0)
+                ? kyouen_residual::grundy_shared(
+                      std::move(r),memo,residual_component_cache_,residual_share_gate_,&st)
+                : kyouen_residual::grundy(std::move(r),memo,&st);
+        }
+        if(residual_profile_){
+            auto elapsed=static_cast<std::uint64_t>(std::chrono::duration_cast<
+                std::chrono::nanoseconds>(Clock::now()-built).count());
+            residual_build_ns_+=static_cast<std::uint64_t>(std::chrono::duration_cast<
+                std::chrono::nanoseconds>(built-begin).count());
+            residual_structure_ns_+=st.structure_ns;
+            if(st.structure_ns>elapsed) throw std::runtime_error("overlapping residual profile intervals");
+            residual_grundy_ns_+=elapsed-st.structure_ns;
+        }
+        residual_exact_memo_states_ += memo.size();
+        residual_exact_module_removed_ += st.module_removed;
+        residual_exact_component_splits_ += st.component_splits;
+        residual_shared_hits_ += st.shared_hits;
+        residual_shared_stores_ += st.shared_stores;
+        residual_shared_canonicalized_ += st.canonicalized;
+        residual_closed_stats_.closed_free += st.closed_free;
+        residual_closed_stats_.closed_two_edges += st.closed_two_edges;
+        residual_closed_stats_.closed_sunflower += st.closed_sunflower;
+        residual_closed_stats_.closed_paths += st.closed_paths;
+        ++residual_crosscheck_calls_;
+        if(g<0) return ExactResult::UNKNOWN;
+        return kyouen_residual::first_player_verdict_from_grundy(g,stones)==1
+            ? ExactResult::WIN : ExactResult::LOSS;
+    }
+
+    void validate_root(const std::vector<int>& stones) const {
+        Bits seen{};
+        for(int v:stones){
+            if(v<0||v>=V) throw std::runtime_error("root point out of range");
+            if(has(seen,v)) throw std::runtime_error("duplicate root point");
+            setbit(seen,v);
+        }
+        for(std::size_t i=0;i<stones.size();++i)
+        for(std::size_t j=i+1;j<stones.size();++j)
+        for(std::size_t k=j+1;k<stones.size();++k)
+        for(std::size_t l=k+1;l<stones.size();++l)
+            if(forbidden(stones[i],stones[j],stones[k],stones[l]))
+                throw std::runtime_error("unsafe root contains forbidden quadruple");
+    }
+
+    void child_bound(const Bits& nk,int child_stones,int* n_out,std::uint32_t* pnp,std::uint32_t* dnp,std::uint8_t* stp){
+        int s=tt_.find(nk.lo,nk.hi);
+        if(s>=0){ *pnp=tt_.pn_[(std::size_t)s]; *dnp=tt_.dn_[(std::size_t)s]; *stp=tt_.st_[(std::size_t)s]; return; }
+        *pnp=1; *dnp=1; *stp=PnTT::OPEN;
+        (void)n_out; (void)child_stones;
+    }
+
+    // Child-list buffers: ONE Gen PER mid() FRAME, allocated on the HEAP via
+    // std::unique_ptr (never on the stack, never returned by value). One Gen
+    // holds up to V GChild, each with 8x16 B TState (~18 KB at n=11, smaller
+    // for small n). Returning it by value while several frames stayed live
+    // blew the 8 MB stack (the original n=5 segfault); a vector<Gen> pool
+    // indexed by depth then threw bad_alloc because resize() default-builds
+    // every Gen up to that depth including ~18 KB each. unique_ptr<Gen>
+    // allocates exactly one buffer per frame, lazily, on the heap.
+    void read_child_bounds(GChild& c,int child_stones){
+        int s=tt_.find(c.key.lo,c.key.hi);
+        if(s>=0){
+            c.pn=tt_.pn_[(std::size_t)s]; c.dn=tt_.dn_[(std::size_t)s]; c.st=tt_.st_[(std::size_t)s];
+        }else if(!any(c.legal)){
+            if(is_or(child_stones)){ c.pn=INF; c.dn=0; c.st=PnTT::LOSS; }
+            else{ c.pn=0; c.dn=INF; c.st=PnTT::WIN; }
+        }else{ c.pn=1; c.dn=1; c.st=PnTT::OPEN; }
+    }
+    void gen_into(const TState& state,int stones,Bits legal,Gen& g,bool is_root=false){
+        ++child_geometry_builds_;
+        g.n=0;
+        Bits moves=legal;
+        // Mask hygiene: legal must never carry bits >= V. take_lsb on a
+        // stray hi bit returns v>=V -> bitof(v) shifts UB -> the move loop
+        // walks off into garbage children (the roots-csv overflow: 36-move
+        // roots grew >36 "children"). Mask once here so every caller is safe
+        // even if its legal mask came from a different path.
+        if(V<64){ if(V==0){moves.lo=0;} else moves.lo &= ((1ULL<<V)-1ULL); moves.hi = 0; }
+        else if(V==64){ moves.hi = 0; }
+        else { moves.hi &= HI_MASK; }
+        while(any(moves)){
+            int v=take_lsb(moves);
+            ++child_geometry_moves_;
+            if(v<0||v>=V) throw std::runtime_error("gen_into: move index out of range");
+            Bits bit=bitof(v);
+            typename DfPn<N>::TState ns=add(state,v);
+            Bits nl=(legal&~bit)&~added_bans(state.t[0],v);
+            nl.hi&=HI_MASK;
+            Bits nk=canonical(ns);
+            bool dup=false;
+            int nn=g.n;
+            for(int i=0;i<nn;++i)if(g.ch[(std::size_t)i].key==nk){dup=true;break;}
+            if(dup)continue;
+            // BOUNDS CHECK (ASan found this): a Gen holds exactly V GChild.
+            // children <= legal moves <= V, so g.n>=V means the move loop
+            // produced a duplicate-free child beyond the array -- a logic bug
+            // (stale Gen reuse, corrupted legal mask, ...). Fail loud.
+            if(g.n<0 || g.n>=V) throw std::runtime_error("gen_into: child index out of range");
+            GChild& c=g.ch[(std::size_t)g.n];
+            c.ts=ns; c.legal=nl; c.key=nk; c.count=popcount(nl);
+            c.move=static_cast<std::uint8_t>(v);
+            c.work=0; c.last_pn=1; c.last_dn=1;
+            read_child_bounds(c,stones+1);
+            if(track_children_ && is_root) note_child(nk,v,c.count,c.pn,c.dn,c.st);
+            ++g.n;
+        }
+    }
+    void refresh_child_bounds(int stones,Gen& g,bool is_root){
+        ++child_bound_refreshes_;
+        for(int i=0;i<g.n;++i){
+            auto& c=g.ch[(std::size_t)i];
+            // Geometry is immutable for this frame; bounds may change or
+            // disappear through TT eviction. Never retain a TT slot index.
+            c.work=0; c.last_pn=c.last_dn=1;
+            read_child_bounds(c,stones+1);
+            if(track_children_ && is_root) note_child(c.key,c.move,c.count,c.pn,c.dn,c.st);
+        }
+    }
+    void audit_frame_children(const TState& state,int stones,Bits legal,const Gen& cached){
+        auto fresh=std::make_unique<Gen>();
+        gen_into(state,stones,legal,*fresh,false);
+        if(cached.n!=fresh->n) throw std::runtime_error("frame child count mismatch");
+        for(int i=0;i<cached.n;++i){
+            const auto& a=cached.ch[(std::size_t)i];const auto& b=fresh->ch[(std::size_t)i];
+            if(a.ts.t!=b.ts.t || !(a.legal==b.legal) || !(a.key==b.key)
+               || a.count!=b.count || a.move!=b.move || a.pn!=b.pn || a.dn!=b.dn || a.st!=b.st
+               || a.work!=b.work || a.last_pn!=b.last_pn || a.last_dn!=b.last_dn)
+                throw std::runtime_error("frame child geometry/bounds mismatch");
+        }
+        ++frame_children_audits_;
+    }
+
+    void aggregate(int stones,const Gen& g,std::uint32_t* pnp,std::uint32_t* dnp){
+        if(is_or(stones)){
+            std::uint32_t pn=INF,dn=0;
+            for(int i=0;i<g.n;++i){
+                if(g.ch[(std::size_t)i].pn<pn)pn=g.ch[(std::size_t)i].pn;
+                dn=sadd(dn,g.ch[(std::size_t)i].dn);
+            }
+            *pnp=pn; *dnp=dn;
+        }else{
+            std::uint32_t pn=0,dn=INF;
+            for(int i=0;i<g.n;++i){
+                pn=sadd(pn,g.ch[(std::size_t)i].pn);
+                if(g.ch[(std::size_t)i].dn<dn)dn=g.ch[(std::size_t)i].dn;
+            }
+            *pnp=pn; *dnp=dn;
+        }
+    }
+
+    void exact_store(const Bits& key,ExactResult r){
+        if(r==ExactResult::UNKNOWN) return;
+        int s=tt_.find(key.lo,key.hi);
+        if(s>=0 && tt_.st_[(std::size_t)s]>=PnTT::WIN){
+            const bool old_win=tt_.st_[(std::size_t)s]==PnTT::WIN;
+            const bool new_win=r==ExactResult::WIN;
+            if(old_win!=new_win) throw std::runtime_error("exact solver contradicts solved TT entry");
+            return;
+        }
+        if(s<0){
+            s=tt_.acquire(key.lo,key.hi);
+            if(s<0) throw std::runtime_error("TT full at exact_store");
+        }
+        tt_.pn_[(std::size_t)s]=(r==ExactResult::WIN)?0:INF;
+        tt_.dn_[(std::size_t)s]=(r==ExactResult::WIN)?INF:0;
+        tt_.mark_solved(s,(r==ExactResult::WIN)?PnTT::WIN:PnTT::LOSS);
+        ++exact_stores_;
+    }
+
+    void exact_record(const Bits& key,ExactResult r){
+        if(r==ExactResult::UNKNOWN) return;
+        if(exact_publish_mode_==ExactPublishMode::ALL){
+            exact_store(key,r);
+        }else{
+            // ROOT: per-handoff cache (generation reset before every call).
+            // SEPARATE: the same fixed cache persists across handoffs and
+            // roots, giving cross-call exact reuse without occupying PnTT.
+            if(exact_local_.put(
+                    key,(r==ExactResult::WIN)?std::uint8_t(1):std::uint8_t(2)))
+                ++exact_local_stores_;
+        }
+    }
+
+    ExactResult exact_prop(const TState& state,int stones,Bits legal,
+                           std::uint64_t& budget){
+        struct ProfileDepthGuard {
+            unsigned& depth;
+            bool active;
+            ProfileDepthGuard(unsigned& value,bool enabled):depth(value),active(enabled){
+                if(active) ++depth;
+            }
+            ~ProfileDepthGuard(){ if(active) --depth; }
+        } profile_depth_guard(exact_profile_recursion_depth_,exact_replay_profile_);
+        Bits key=canonical(state);
+        const int profile_rank=std::clamp(stones,0,63);
+        if(exact_replay_profile_) ++exact_profile_calls_[profile_rank];
+        auto profile_return = [&](ExactResult r){
+            if(exact_replay_profile_){
+                if(r==ExactResult::WIN) ++exact_profile_wins_[profile_rank];
+                else if(r==ExactResult::LOSS) ++exact_profile_losses_[profile_rank];
+                else ++exact_profile_unknowns_[profile_rank];
+            }
+            return r;
+        };
+        const bool do_residual_crosscheck =
+            residual_crosscheck_legal_>0 && popcount(legal)<=residual_crosscheck_legal_;
+        auto checked_return = [&](ExactResult r){
+            if(!collect_proof_dag_ && r!=ExactResult::UNKNOWN && exact_share_layer_>0 && stones==exact_share_layer_){
+                std::uint8_t v=(r==ExactResult::WIN)?std::uint8_t(1):std::uint8_t(2);
+                auto ins=exact_layer_cache_.emplace(key,v);
+                if(ins.second) ++exact_share_stores_;
+                else if(ins.first->second!=v) throw std::runtime_error("exact shared-layer verdict conflict");
+            }
+            if(do_residual_crosscheck && r!=ExactResult::UNKNOWN){
+                ExactResult rr=residual_verdict(state.t[0],legal,stones);
+                if(rr!=r) throw std::runtime_error("residual outcome mismatch");
+            }
+            return profile_return(r);
+        };
+        if(!collect_proof_dag_ && exact_share_layer_>0 && stones==exact_share_layer_){
+            auto si=exact_layer_cache_.find(key);
+            if(si!=exact_layer_cache_.end()){
+                ++exact_share_hits_;
+                return checked_return(si->second==1 ? ExactResult::WIN : ExactResult::LOSS);
+            }
+        }
+        int s=tt_.find(key.lo,key.hi);
+        if(s>=0 && tt_.st_[(std::size_t)s]>=PnTT::WIN){
+            if(exact_replay_profile_) ++exact_profile_tt_solved_hits_[profile_rank];
+            ExactResult cached=tt_.st_[(std::size_t)s]==PnTT::WIN ? ExactResult::WIN : ExactResult::LOSS;
+            if(collect_proof_dag_ && !has_proof(key))
+                throw std::runtime_error("solved TT leaf has no proof dependency record");
+            return checked_return(cached);
+        }
+        if(exact_replay_profile_){
+            if(s>=0) ++exact_profile_tt_open_hits_[profile_rank];
+            else ++exact_profile_tt_misses_[profile_rank];
+        }
+        if(exact_publish_mode_!=ExactPublishMode::ALL){
+            std::uint8_t lv=exact_local_.get(key);
+            if(lv){
+                if(collect_proof_dag_ && !has_proof(key))
+                    throw std::runtime_error("exact local-cache leaf has no proof dependency record");
+                return checked_return(lv==1 ? ExactResult::WIN : ExactResult::LOSS);
+            }
+        }
+
+        if(residual_exact_legal_>0 && popcount(legal)<=residual_exact_legal_ && !collect_proof_dag_
+           && (!residual_outcome_ || residual_outcome_remaining_>0) && admit_residual_attempt(key)){
+            ++residual_exact_calls_;
+            ExactResult rr=residual_verdict(state.t[0],legal,stones,residual_outcome_);
+            if(rr!=ExactResult::UNKNOWN){
+                exact_record(key,rr);
+                return checked_return(rr);
+            }
+            // Only completed P/N outcomes are publishable. Exhaustion uses
+            // the native board search below and the original board budget.
+        }
+
+        if(budget==0) return profile_return(ExactResult::UNKNOWN);
+        consume_search_node();
+        --budget;
+        ++exact_nodes_;
+        if(exact_replay_profile_) ++exact_profile_nodes_[profile_rank];
+        if((exact_nodes_ & 4095ULL)==0 && deadline_s_>0){
+            double el=std::chrono::duration<double>(Clock::now()-t0_).count();
+            if(el>=deadline_s_) throw std::runtime_error("TIME_BUDGET");
+        }
+        // Query-level watchdog for the quantified search, checked on the same
+        // 4096-node cadence as the global deadline. It throws rather than
+        // returning UNKNOWN: the caller reads UNKNOWN as "this branch is
+        // inconclusive" and would go on scanning siblings, so an expired
+        // deadline would degrade every later branch instead of stopping.
+        // Throwing unwinds to s5_oracle, which converts it to the
+        // out-of-time sentinel and ends the reply.
+        if((exact_nodes_ & 4095ULL)==0 && quant_out_of_time()){
+            ++oracle.aborted_by_time;
+            throw QuantTimeout();
+        }
+
+        if(residual_audit_legal_>0 && popcount(legal)<=residual_audit_legal_){
+            verify_residual_transition(state.t[0],legal);
+            ++residual_audit_calls_;
+        }
+
+        if(!any(legal)){
+            // Side to move loses. The fixed proposition is "the original
+            // first player wins", so a terminal is true exactly when the
+            // second player is to move (odd number of stones).
+            ExactResult r=is_or(stones)?ExactResult::LOSS:ExactResult::WIN;
+            exact_record(key,r);
+            remember_proof(key,r,true,0,{});
+            return checked_return(r);
+        }
+
+        auto gb=std::make_unique<Gen>();
+        Gen& g=*gb;
+        gen_into(state,stones,legal,g,false);
+        const bool isor=is_or(stones);
+        const int proof_transform=collect_proof_dag_?canonical_transform(state,key):0;
+        std::vector<ProofEdge> proof_edges;
+
+        // DFS ordering only affects speed, never the result, so it is safe to
+        // A/B. The decisive-child rule comes first because it is the only
+        // part that can terminate the loop early: if an OR node's child
+        // is already known WIN (or an AND node's already LOSS) we return
+        // on the first such child regardless of the rest of the order.
+        // Within each priority class we then choose by a named rule so
+        // that a single rule can be changed at a time:
+        //
+        //   count : fewer legal moves first        (baseline)
+        //   countd: more legal moves first         (the rule that won the
+        //          preregistered depth-5 DFS experiment, see
+        //          cpp/solvers/kyouen_solver_10_depth5_max_first.cpp)
+        //   key   : canonical key ascending, count ignored
+        //   s5-countd: more legal moves first only at the five-stone AND
+        //              node; deeper recursion keeps the baseline count order
+        //   s5-target92: at s5, prioritize s6 children closest to 92 legal
+        //                moves; ties prefer the larger count. Experimental
+        //                n=11 cost-aware ordering from the hard9 boundary.
+        //
+        // --exact-order selects this; it is recorded in the run header
+        // and in every replay row so a benchmark can never be attributed
+        // to the wrong rule.
+        const bool local_desc=(exact_order_==ExactOrder::COUNTD) ||
+                              (exact_order_==ExactOrder::S5_COUNTD && stones==5);
+        const bool target92=(exact_order_==ExactOrder::S5_TARGET92 && stones==5);
+        const bool asc=!local_desc;
+        const bool by_key=(exact_order_==ExactOrder::KEY);
+        std::sort(g.ch.begin(),g.ch.begin()+g.n,[&](const GChild& a,const GChild& b){
+            auto pri=[&](const GChild& x){
+                auto st=x.st;
+                if(exact_share_layer_==stones+1){
+                    auto si=exact_layer_cache_.find(x.key);
+                    if(si!=exact_layer_cache_.end())
+                        st=(si->second==1)?PnTT::WIN:PnTT::LOSS;
+                }
+                if(isor){
+                    if(st==PnTT::WIN) return 0;
+                    if(st==PnTT::OPEN) return 1;
+                    return 2;
+                }else{
+                    if(st==PnTT::LOSS) return 0;
+                    if(st==PnTT::OPEN) return 1;
+                    return 2;
+                }
+            };
+            int pa=pri(a),pb=pri(b);
+            if(pa!=pb) return pa<pb;
+            if(target92 && a.count!=b.count){
+                auto dist=[](int x){ return x>=92 ? x-92 : 92-x; };
+                int da=dist(a.count),db=dist(b.count);
+                if(da!=db) return da<db;
+                return a.count>b.count;
+            }
+            if(!by_key && a.count!=b.count)
+                return asc ? (a.count<b.count) : (a.count>b.count);
+            if(by_key) return a.key<b.key;
+            // count ties: keep the key order deterministic in both modes
+            // so the only variable is the count comparison.
+            return a.key<b.key;
+        });
+
+        bool unknown=false;
+        for(int i=0;i<g.n;++i){
+            ExactResult cr;
+            const GChild& ch=g.ch[(std::size_t)i];
+            const bool profile_root_child=exact_replay_profile_ && exact_profile_recursion_depth_==1;
+            const std::uint64_t nodes_before=exact_nodes_;
+            if(ch.st==PnTT::WIN) cr=ExactResult::WIN;
+            else if(ch.st==PnTT::LOSS) cr=ExactResult::LOSS;
+            else cr=exact_prop(ch.ts,stones+1,ch.legal,budget);
+            if(profile_root_child)
+                exact_profile_root_children_.push_back({ch.key,ch.count,exact_nodes_-nodes_before,
+                    static_cast<std::uint8_t>(cr)});
+
+            if(collect_proof_dag_ && cr!=ExactResult::UNKNOWN && !has_proof(ch.key)){
+                if(any(ch.legal))
+                    throw std::runtime_error("solved child TT entry has no proof dependency record");
+                ExactResult terminal=is_or(stones+1)?ExactResult::LOSS:ExactResult::WIN;
+                if(cr!=terminal) throw std::runtime_error("terminal child verdict mismatch");
+                remember_proof(ch.key,terminal,true,0,{});
+            }
+
+            if(isor && cr==ExactResult::WIN){
+                exact_record(key,ExactResult::WIN);
+                if(collect_proof_dag_){
+                    proof_edges.push_back({static_cast<std::uint8_t>(move_to_canonical(proof_transform,ch.move)),ch.key});
+                    remember_proof(key,ExactResult::WIN,false,popcount(legal),std::move(proof_edges));
+                }
+                return checked_return(ExactResult::WIN);
+            }
+            if(!isor && cr==ExactResult::LOSS){
+                exact_record(key,ExactResult::LOSS);
+                if(collect_proof_dag_){
+                    proof_edges.push_back({static_cast<std::uint8_t>(move_to_canonical(proof_transform,ch.move)),ch.key});
+                    remember_proof(key,ExactResult::LOSS,false,popcount(legal),std::move(proof_edges));
+                }
+                return checked_return(ExactResult::LOSS);
+            }
+            if(cr==ExactResult::UNKNOWN) unknown=true;
+        }
+
+        if(unknown) return profile_return(ExactResult::UNKNOWN);
+        ExactResult r=isor?ExactResult::LOSS:ExactResult::WIN;
+        exact_record(key,r);
+        if(collect_proof_dag_){
+            // Gen deduplicates children by D4 orbit for search. A universal
+            // proof must still list every concrete legal move; each move is
+            // mapped to its canonical child dependency here.
+            Bits moves=legal;
+            if constexpr(V<64) moves.lo &= ((1ULL<<V)-1ULL);
+            else if constexpr(V==64) moves.hi=0;
+            else moves.hi &= HI_MASK;
+            while(any(moves)){
+                int move=take_lsb(moves);
+                TState child_state=add(state,move);
+                Bits child_key=canonical(child_state);
+                if(!has_proof(child_key)){
+                    Bits child_legal=(legal&~bitof(move))&~added_bans(state.t[0],move);
+                    if constexpr(V<64) child_legal.lo &= ((1ULL<<V)-1ULL);
+                    else if constexpr(V==64) child_legal.hi=0;
+                    child_legal.hi&=HI_MASK;
+                    if(any(child_legal))
+                        throw std::runtime_error(
+                            "universal proof is missing a nonterminal child dependency: parent="+
+                            std::to_string(key.lo)+":"+std::to_string(key.hi)+" child="+
+                            std::to_string(child_key.lo)+":"+std::to_string(child_key.hi)+
+                            " move="+std::to_string(move)+" legal="+
+                            std::to_string(popcount(child_legal)));
+                    ExactResult terminal=is_or(stones+1)?ExactResult::LOSS:ExactResult::WIN;
+                    remember_proof(child_key,terminal,true,0,{});
+                }
+                proof_edges.push_back({static_cast<std::uint8_t>(move_to_canonical(proof_transform,move)),child_key});
+            }
+            remember_proof(key,r,false,popcount(legal),std::move(proof_edges));
+        }
+        return checked_return(r);
+    }
+
+    std::unique_ptr<Gen> expand(const Bits& key,const TState& state,int stones,Bits legal,int depth){
+        auto gb=std::make_unique<Gen>();
+        Gen& g=*gb;
+        gen_into(state,stones,legal,g);
+        std::uint32_t pn,dn;
+        aggregate(stones,g,&pn,&dn);
+        int s=tt_.acquire(key.lo,key.hi);
+        if(s<0) throw std::runtime_error("TT full at expand");
+        tt_.pn_[(std::size_t)s]=pn; tt_.dn_[(std::size_t)s]=dn;
+        tt_.vis_[(std::size_t)s]|=1u;
+        if(pn==0) tt_.mark_solved(s,PnTT::WIN);
+        else if(dn==0) tt_.mark_solved(s,PnTT::LOSS);
+        else tt_.st_[(std::size_t)s]=PnTT::OPEN;
+        ++expanded_;
+        ++exp_hist_[depth<64?depth:63];
+        if(depth>max_depth_)max_depth_=depth;
+        return gb; // exclusive ownership; caller may retain this geometry
+    }
+
+    void heartbeat(){
+        if(deadline_s_<=0) return;
+        double el=std::chrono::duration<double>(Clock::now()-t0_).count();
+        // NOTE: no early throw here. The gate below means the throw only
+        // fires after real work; the entry check in mid() covers
+        // already-expired budgets. Throwing here before the gate would kill
+        // roots that never reach the first gate (the "expansions=1" ghost).
+        //
+        // The hb line doubles as the ROOT PN/DN TIME SERIES: root bounds are
+        // re-read from the TT on every heartbeat, so the log shows whether
+        // the proof is moving one-sidedly long before it completes.
+        //
+        // TIME-BASED gating: fire at the next 10 s mark after at least
+        // 2^16 iterations since the last beat. Iteration-count gating alone
+        // starves the log on slow phases; pure wall-clock polling every
+        // iteration costs a clock read each node. 2^16 amortizes the clock
+        // to ~1/65536 nodes while guaranteeing a beat within ~10 s.
+        // Elapsed t=0 is solver construction end (set_deadline time).
+        if(visited_ - hb_last_vis_ < (std::uint64_t(1)<<16)) return;
+        if(el - hb_last_t_ < 10.0) return;
+        hb_last_vis_ = visited_;
+        hb_last_t_ = el;
+        int rs=tt_.find(root_key_.lo,root_key_.hi);
+        std::uint32_t rpn=INF,rdn=INF;
+        if(rs>=0){ rpn=tt_.pn_[(std::size_t)rs]; rdn=tt_.dn_[(std::size_t)rs]; }
+        std::uint64_t open = tt_open();
+        double pndn = (rpn>0 && rdn<INF) ? (double)rpn/(double)rdn : -1.0;
+        std::uint64_t hits,misses,pn_put,pu_put,ev,evs; double ap;
+        tt_.counters(hits,misses,pn_put,pu_put,ev,evs,ap);
+        double dt = el - hb_prev_t_;
+        std::uint64_t dexp = expanded_ - hb_prev_exp_;
+        double exprate = dt>0 ? (double)dexp/dt : 0.0;
+        hb_prev_t_ = el; hb_prev_exp_ = expanded_;
+        *log_ << "[hb] t=" << (long long)el << "s"
+              << " visited=" << visited_ << " expanded=" << expanded_
+              << " exprate=" << (long long)exprate << "/s"
+              << " root_pn=" << rpn << " root_dn=" << rdn
+              << " pndn=" << pndn
+              << " memo=" << tt_.used() << "/" << tt_.capacity()
+              << " open=" << open
+              << " solved=" << tt_.solved_now()
+              << " solved_disc=" << tt_.solved_discoveries()
+              << " evict_open=" << tt_.evictions_
+              << " evict_solved=" << tt_.evicted_solved()
+              << " maxdepth=" << max_depth_
+              << " tthit=" << hits << " ttmiss=" << misses
+              << " avgprobe=" << ap
+              << " exact_calls=" << exact_calls_
+              << " exact_nodes=" << exact_nodes_
+              << " exact_abort=" << exact_aborts_
+              << " exact_win=" << exact_trigger_win_
+              << " exact_loss=" << exact_trigger_loss_
+              << " exact_stores=" << exact_stores_
+              << " exact_local=" << exact_local_stores_
+              << std::endl;
+        log_->flush();
+        if(el>=deadline_s_) throw std::runtime_error("TIME_BUDGET");
+    }
+
+    void mid(const Bits& key,const TState& state,int stones,Bits legal,int depth,
+             std::uint32_t tp,std::uint32_t td){
+        if(deadline_s_>0){
+            double el=std::chrono::duration<double>(Clock::now()-t0_).count();
+            if(el>=deadline_s_) throw std::runtime_error("TIME_BUDGET");
+        }
+        std::vector<std::unique_ptr<Gen>> scratch;
+        mid_iter(key,state,stones,legal,depth,tp,td,scratch);
+    }
+
+    // Child-list buffers: ONE Gen PER mid() FRAME, heap-allocated on FIRST
+    // use and NEVER reallocated. vector<Frame> may RELOCATE on push_back
+    // (move-constructing every Frame); unique_ptr<Gen> moves the POINTER, so
+    // the buffer address is stable. But gen() must NEVER be called twice on
+    // the same frame expecting a fresh buffer... it isn't: gen_into resets
+    // g.n=0 each call, and the frame's buffer is only read while the frame
+    // is live. expand() allocates its OWN Gen; optional exclusive transfer
+    // is only to that same frame, so a child's expand cannot clobber the parent's
+    // in-progress child list. (The roots-csv crash: expand() wrote into the
+    // frame buffer via a shared path; fixed by keeping expand heap-local.)
+    struct Frame {
+        Bits key; TState state; Bits legal;
+        int stones=0, depth=0;
+        std::uint32_t tp=INF, td=INF;
+        int slot=-1;
+        int stage=0;
+        bool children_ready=false,expanded_children_pending=false;
+        std::unique_ptr<Gen> gb;
+        Gen& gen(){
+            if(!gb) gb=std::make_unique<Gen>();
+            return *gb;
+        }
+    };
+
+    // Stack dump for loop diagnosis: prints each live frame's stones/tp/td
+    // and stored pn/dn so a threshold cycle shows as repeated rows.
+    // Declared AFTER Frame (must precede use in signature).
+    void dump_stack(const std::vector<Frame>& st){
+        *log_ << "[stack] depth=" << st.size() << std::endl;
+        for(std::size_t i=0;i<st.size();++i){
+            const Frame& f=st[i];
+            int s=tt_.find(f.key.lo,f.key.hi);
+            std::uint32_t pn=0xffffffffu,dn=0xffffffffu;
+            int sv=-9;
+            if(s>=0){ pn=tt_.pn_[(std::size_t)s]; dn=tt_.dn_[(std::size_t)s]; sv=(int)tt_.st_[(std::size_t)s]; }
+            *log_ << "  [" << i << "] stones=" << f.stones
+                  << " tp=" << f.tp << " td=" << f.td
+                  << " slot=" << f.slot << " tt=" << s
+                  << " pn=" << pn << " dn=" << dn << " st=" << sv
+                  << " stage=" << f.stage << std::endl;
+        }
+        log_->flush();
+    }
+
+    void mid_iter(const Bits& rkey,const TState& rstate,int rstones,Bits rlegal,
+                  int rdepth,std::uint32_t rtp,std::uint32_t rtd,
+                  std::vector<std::unique_ptr<Gen>>& scratch){
+        std::vector<Frame> st;
+        st.reserve(256);
+        {
+            Frame f;
+            f.key=rkey; f.state=rstate; f.legal=rlegal;
+            f.stones=rstones; f.depth=rdepth; f.tp=rtp; f.td=rtd;
+            st.push_back(std::move(f));
+        }
+        while(!st.empty()){
+            // NOTE: no Frame& may survive a push_back (vector may relocate).
+            // All access goes through st.back() after each potential growth.
+            consume_search_node();
+            ++visited_;
+            // Deadline check on EVERY iteration, not just every 2^20: the
+            // explicit stack can sit thousands deep doing re-aggregation
+            // passes with visited_ barely moving (threshold returns), so the
+            // 2^20 gate may never fire. Check is one clock read; demonstrated
+            // ~zero cost on the DFS solver's 340k/s rate.
+            if(deadline_s_>0){
+                double el=std::chrono::duration<double>(Clock::now()-t0_).count();
+                if(el>=deadline_s_) throw std::runtime_error("TIME_BUDGET");
+            }
+            if((visited_ & ((std::uint64_t(1)<<20)-1))==0) heartbeat();
+            // Depth guard: a legal game never exceeds V stones. Past V+8 is a
+            // BUG (threshold cycle or phantom descent), not proof progress.
+            // Throw loud instead of silently popping: silent pops hide cycles
+            // as slow progress. (V is the template board's point count, so
+            // this is exact for every N, not just 11.)
+            if(st.back().depth>V+8){ throw std::runtime_error("depth guard: legality exceeded"); }
+            if(st.back().stage==0){
+                Bits fk=st.back().key;
+                int s=tt_.find(fk.lo,fk.hi);
+                if(s>=0 && tt_.st_[(std::size_t)s]>=PnTT::WIN){ st.pop_back(); continue; }
+                if(residual_profile_) ++residual_gate_frames_[popcount(st.back().legal)];
+                // Direct residual handoff: independent of --exact-legal.
+                // One quota is shared across all df-pn frames in this root.
+                if(residual_exact_legal_>0 && !collect_proof_dag_
+                   && (!residual_outcome_ || residual_outcome_remaining_>0)
+                   && popcount(st.back().legal)<=residual_exact_legal_
+                   && admit_residual_attempt(fk)){
+                    if(residual_audit_legal_>0 && popcount(st.back().legal)<=residual_audit_legal_){
+                        verify_residual_transition(st.back().state.t[0],st.back().legal);
+                        ++residual_audit_calls_;
+                    }
+                    ++residual_exact_calls_;
+                    ExactResult rr=residual_verdict(st.back().state.t[0],st.back().legal,
+                                                    st.back().stones,residual_outcome_);
+                    if(rr!=ExactResult::UNKNOWN){
+                        if(residual_crosscheck_legal_>0 && popcount(st.back().legal)<=residual_crosscheck_legal_){
+                            auto check=residual_verdict(st.back().state.t[0],st.back().legal,st.back().stones);
+                            if(check!=rr) throw std::runtime_error("df-pn residual outcome mismatch");
+                        }
+                        // This frame is a df-pn proof node: publish its
+                        // completed fixed-first-player verdict into PnTT.
+                        exact_store(st.back().key,rr);
+                        st.pop_back();
+                        continue;
+                    }
+                    // UNKNOWN creates no solved entry; normal expansion follows.
+                }
+                if(s<0){
+                    if(deadline_s_>0){
+                        double el=std::chrono::duration<double>(Clock::now()-t0_).count();
+                        if(el>=deadline_s_) throw std::runtime_error("TIME_BUDGET");
+                    }
+                    auto expanded=expand(st.back().key,st.back().state,st.back().stones,st.back().legal,st.back().depth);
+                    if(frame_expand_reuse_){
+                        // Move only this expansion's private buffer into its own
+                        // frame. No parent/child alias or shared scratch pool.
+                        st.back().gb=std::move(expanded);
+                        st.back().children_ready=true;
+                        st.back().expanded_children_pending=true;
+                    }
+                    // DO NOT POP: the frame must now descend into its best
+                    // child (stage 1 below). Popping here was the
+                    // "expansions=1" bug: mid() returned after expanding the
+                    // root instead of continuing the proof search.
+                    s=tt_.find(st.back().key.lo,st.back().key.hi);
+                    st.back().slot=s;
+                    st.back().stage=1;
+                } else {
+                    if(tt_.st_[(std::size_t)s]>=PnTT::WIN){ st.pop_back(); continue; }
+                    st.back().slot=s;
+                    st.back().stage=1;
+                }
+            }
+            // Handoff gate. The per-stone-count threshold overrides the
+            // global --exact-legal when set, which is the only way to
+            // target a specific layer (see N11-DFPN-FRONTIER-LAYERS.md).
+            if(handoff_allowed(st.back().stones,popcount(st.back().legal))){
+                int es=tt_.find(st.back().key.lo,st.back().key.hi);
+                if(es>=0 && tt_.st_[(std::size_t)es]==PnTT::OPEN){
+                    unsigned attempts=(tt_.vis_[(std::size_t)es]>>1)&0xffu;
+                    if(attempts<(unsigned)exact_retries_){
+                        tt_.vis_[(std::size_t)es]=(tt_.vis_[(std::size_t)es]&1u)
+                            | ((std::uint32_t(attempts+1)&0xffu)<<1);
+                        ++exact_calls_;
+                        int eh=st.back().stones<64?st.back().stones:63;
+                        ++exact_call_hist_[eh];
+                        if(exact_publish_mode_==ExactPublishMode::ROOT)
+                            exact_local_.reset();
+                        std::uint64_t b=budget_for_stones(st.back().stones);
+                        // Snapshot the GLOBAL exact-node counter so the
+                        // nodes consumed by THIS attempt can be isolated.
+                        std::uint64_t nodes_before=exact_nodes_;
+                        int legal_cnt=popcount(st.back().legal);
+                        int depth_from_root=st.back().depth-root_stones_;
+                        ExactResult er=exact_prop(st.back().state,st.back().stones,
+                                                  st.back().legal,b);
+                        if(track_exact_)
+                            exact_record_add(st.back().key,st.back().stones,legal_cnt,
+                                             depth_from_root,attempts,
+                                             exact_nodes_-nodes_before,er);
+                        if(er==ExactResult::WIN){
+                            if(exact_publish_mode_!=ExactPublishMode::ALL)
+                                exact_store(st.back().key,er);
+                            ++exact_trigger_win_;
+                            ++exact_win_hist_[eh];
+                            st.pop_back();
+                            continue;
+                        }
+                        if(er==ExactResult::LOSS){
+                            if(exact_publish_mode_!=ExactPublishMode::ALL)
+                                exact_store(st.back().key,er);
+                            ++exact_trigger_loss_;
+                            ++exact_loss_hist_[eh];
+                            st.pop_back();
+                            continue;
+                        }
+                        ++exact_aborts_;
+                        ++exact_abort_hist_[eh];
+                    }
+                }
+            }
+
+            int frd=st.back().depth, frs=st.back().stones;
+            std::uint32_t frtp=st.back().tp, frtd=st.back().td;
+            // Only the ROOT frame contributes to the child diagnostic.
+            // Passing it explicitly (rather than inferring from a
+            // shared stones_ field) is what keeps the child count at
+            // exactly the root's fan-out: expand()'s throwaway Gen and
+            // every deeper frame pass false.
+            bool is_root=(frs==root_stones_);
+            Gen& g=st.back().gen();
+            if(frame_children_cache_ && st.back().children_ready){
+                if(st.back().expanded_children_pending){
+                    ++frame_expand_uses_;
+                    st.back().expanded_children_pending=false;
+                }
+                // expand() may have evicted a child TT entry, or a native
+                // exact attempt may have changed it. Refresh even on first use.
+                refresh_child_bounds(frs,g,is_root);
+                if(frame_children_audit_) audit_frame_children(st.back().state,frs,st.back().legal,g);
+            }else{
+                gen_into(st.back().state,frs,st.back().legal,g,is_root);
+                st.back().children_ready=true;
+            }
+            std::uint32_t pn,dn;
+            aggregate(frs,g,&pn,&dn);
+            int s=st.back().slot;
+            int s2=tt_.find(st.back().key.lo,st.back().key.hi);
+            if(s2>=0) s=s2;
+            else {
+                // Slot lost to eviction between stage-0 and now: re-acquire.
+                // Without this the write below goes to a stale index, which
+                // corrupts a DIFFERENT position's (pn,dn) -- silent wrong
+                // bounds that can loop forever (n=4: root_pn=1/root_dn=3
+                // frozen while visited ran to 2.5e8).
+                s=tt_.acquire(st.back().key.lo,st.back().key.hi);
+                if(s<0) throw std::runtime_error("TT full at re-aggregate");
+                st.back().slot=s;
+            }
+            tt_.pn_[(std::size_t)s]=pn; tt_.dn_[(std::size_t)s]=dn;
+            if(pn==0){ tt_.mark_solved(s,PnTT::WIN); st.pop_back(); continue; }
+            if(dn==0){ tt_.mark_solved(s,PnTT::LOSS); st.pop_back(); continue; }
+            if(pn>=frtp || dn>=frtd){ st.pop_back(); continue; }
+            int b1=-1,b2=-1;
+            bool isor=is_or(frs);
+            // b1 = best child (pn/dn, tie-broken by count then key).
+            // b2 = TRUE second minimum INCLUDING ties: the minimum over all
+            // children except b1 itself. If every child ties b1, b2 points at
+            // another tied child and pn2/dn2 equal b1's value -- NOT INF.
+            // Standard df-pn needs this: with children (1,1,1,...) the chosen
+            // child gets threshold min(parent, 1+1) = 2, i.e. "come back to
+            // the parent as soon as this child's number rises to 2, because
+            // it is no longer uniquely best". The old code left b2=-1 on ties
+            // (-> INF threshold), which dug one child almost to solution
+            // before returning -- near-DFS behaviour. It also made b2 depend
+            // on generation order (only set when a tie later stole b1), so
+            // identical number-multisets gave 1 or INF by accident.
+            for(int i=0;i<g.n;++i){
+                bool better=false;
+                if(b1<0) better=true;
+                else if(isor){
+                    if(g.ch[(std::size_t)i].pn<g.ch[(std::size_t)b1].pn) better=true;
+                    else if(g.ch[(std::size_t)i].pn==g.ch[(std::size_t)b1].pn &&
+                        tie_better(g,i,b1)) better=true;
+                }else{
+                    if(g.ch[(std::size_t)i].dn<g.ch[(std::size_t)b1].dn) better=true;
+                    else if(g.ch[(std::size_t)i].dn==g.ch[(std::size_t)b1].dn &&
+                        tie_better(g,i,b1)) better=true;
+                }
+                if(better){ b2=b1; b1=i; }
+                else{
+                    // Runner-up by number ONLY (no count/key tie-break): any
+                    // non-best child qualifies, tied or not.
+                    if(isor){
+                        if(b2<0 || g.ch[(std::size_t)i].pn<g.ch[(std::size_t)b2].pn) b2=i;
+                    }else{
+                        if(b2<0 || g.ch[(std::size_t)i].dn<g.ch[(std::size_t)b2].dn) b2=i;
+                    }
+                }
+            }
+            std::uint32_t tp_c,td_c;
+            if(isor){
+                std::uint32_t pn2 = b2>=0 ? g.ch[(std::size_t)b2].pn : INF;
+                tp_c = std::min(frtp, sadd(pn2,1));
+                std::uint64_t rest=0;
+                for(int i=0;i<g.n;++i)if(i!=b1){
+                    rest+=(std::uint64_t)g.ch[(std::size_t)i].dn;
+                    if(rest>=(std::uint64_t)INF)break;
+                }
+                if(frtd>=INF) td_c=INF;
+                else if(rest>=(std::uint64_t)frtd) td_c=sadd(g.ch[(std::size_t)b1].dn,1);
+                else td_c=(std::uint32_t)((std::uint64_t)frtd-rest);
+                if(td_c<1)td_c=1;
+            }else{
+                std::uint32_t dn2 = b2>=0 ? g.ch[(std::size_t)b2].dn : INF;
+                td_c = std::min(frtd, sadd(dn2,1));
+                std::uint64_t rest=0;
+                for(int i=0;i<g.n;++i)if(i!=b1){
+                    rest+=(std::uint64_t)g.ch[(std::size_t)i].pn;
+                    if(rest>=(std::uint64_t)INF)break;
+                }
+                if(frtp>=INF) tp_c=INF;
+                else if(rest>=(std::uint64_t)frtp) tp_c=sadd(g.ch[(std::size_t)b1].pn,1);
+                else tp_c=(std::uint32_t)((std::uint64_t)frtp-rest);
+                if(tp_c<1)tp_c=1;
+            }
+            Bits ck=g.ch[(std::size_t)b1].key;
+            Bits cl=g.ch[(std::size_t)b1].legal;
+            int cs=frs+1, cd=frd+1;
+            // CHILD WORK: attribute this descent to b1 so the
+            // root-child diagnostic can rank children by the
+            // expansions their subproof consumed. last_pn/last_dn
+            // are refreshed on every re-aggregation below so the
+            // diagnostic sees the freshest bounds, not the stale
+            // values from the initial gen_into.
+            g.ch[(std::size_t)b1].work += 1;
+            // Reuse the child's TState DIRECTLY from the parent's Gen buffer.
+            // Rebuilding it from the key (old code) is both slower AND wrong:
+            // canonical(ns) is the MINIMUM over 8 D4 images, so the key's bit
+            // pattern is generally a ROTATED image, not the position reached
+            // by playing the move. added_bans(state.t[0], v) computed from a
+            // rotated occupancy is inconsistent with cl (computed in the
+            // parent's frame), so the child explored a phantom position whose
+            // bounds never matched its TT entry -- the infinite loop (n=4:
+            // visited=2.5e8, expanded=108 frozen, root_pn=1/root_dn=3).
+            // Lifetime: COPIED into the child frame (not referenced), because
+            // the parent's Gen buffer is reused on revisit while the child
+            // frame is still alive.
+            typename DfPn<N>::TState ct=g.ch[(std::size_t)b1].ts;
+            Frame nf;
+            nf.key=ck; nf.state=ct; nf.legal=cl;
+            nf.stones=cs; nf.depth=cd;
+            nf.tp=tp_c; nf.td=td_c;
+            // CHILD WORK: attribute this descent to b1 so the
+            // root-child diagnostic can rank children by the
+            // expansions their subproof consumed.
+            if(track_children_ && frs==root_stones_) add_child_work(ck);
+            st.push_back(std::move(nf));
+        }
+    }
+
+    // DEAD CODE (kept for the comment): scratch Gens keyed by stack slot
+    // aliased parent/child buffers and caused the n=4 crash at gen_into+305.
+    // Frames own their Gen buffers; expand() creates a distinct heap-local
+    // buffer which can be moved exclusively into that expansion's frame.
+    // gen_scratch is no longer called; left in place so the history is clear.
+    Gen& gen_scratch(int slot,std::vector<std::unique_ptr<Gen>>& scratch){
+        if((int)scratch.size()<=slot) scratch.resize((std::size_t)slot+1);
+        if(!scratch[(std::size_t)slot]) scratch[(std::size_t)slot]=std::make_unique<Gen>();
+        return *scratch[(std::size_t)slot];
+    }
+
+    Result solve_common(const TState& state,const Bits& occupied,Bits legal,int stones){
+        (void)occupied;
+        struct SearchScope {
+            bool& active;
+            explicit SearchScope(bool& value):active(value){ active=true; }
+            ~SearchScope(){ active=false; }
+        } scope(solving_dfpn_);
+        search_nodes_used_=0;
+        child_geometry_builds_=child_geometry_moves_=child_bound_refreshes_=frame_children_audits_=0;
+        frame_expand_uses_=0;
+        reset_residual_outcome_budget();
+        Bits key=canonical(state);
+        root_key_=key; root_stones_=stones;
+        tt_.set_root(key.lo,key.hi);
+        t0_=Clock::now();
+        const auto start=t0_;
+        const auto before_exp=expanded_;
+        const auto before_vis=visited_;
+        // Reset per-root heartbeat rate state (TT is shared across roots).
+        hb_last_vis_=visited_; hb_last_t_=0.0;
+        hb_prev_t_=0.0; hb_prev_exp_=before_exp;
+        // Reset per-root child diagnostics.
+        child_stat_.clear(); child_stat_updates_=0;
+        exact_record_begin();
+        // Emit the t=0 series point immediately: roots that finish or die
+        // before the first 10 s gate would otherwise leave no series at all
+        // (the missing-hb bug: only [timeout]/[done] survived).
+        {
+            int rs=tt_.find(key.lo,key.hi);
+            std::uint32_t rpn=INF,rdn=INF;
+            if(rs>=0){ rpn=tt_.pn_[(std::size_t)rs]; rdn=tt_.dn_[(std::size_t)rs]; }
+            *log_ << "[hb] t=0s"
+                  << " visited=" << visited_ << " expanded=" << expanded_
+                  << " exprate=0/s"
+                  << " root_pn=" << rpn << " root_dn=" << rdn
+                  << " pndn=-1"
+                  << " memo=" << tt_.used() << "/" << tt_.capacity()
+                  << " open=" << tt_open()
+                  << " solved=" << tt_.solved_now()
+                  << " solved_disc=" << tt_.solved_discoveries()
+                  << " evict_open=" << tt_.evictions_
+                  << " evict_solved=" << tt_.evicted_solved()
+                  << " maxdepth=" << max_depth_
+                  << " tthit=0 ttmiss=0 avgprobe=0" << std::endl;
+            log_->flush();
+        }
+        // Emit the t=0 child diagnostic header (empty for now).
+        *log_ << "[children] t=0s n=0\n";
+        log_->flush();
+        // Reset the partial-progress fallback BEFORE running: the TT is
+        // shared across roots, so a stale fallback from a previous root
+        // would otherwise masquerade as this root's progress
+        // (the "root_pn=20 wall_s=0" ghost).
+        r_exp_fallback_pn=INF; r_exp_fallback_dn=INF;
+        r_exp_fallback_exp=0; r_exp_fallback_vis=0;
+        try {
+            mid(key,state,stones,legal,stones,INF,INF);
+        } catch(...){
+            // Record partial progress even on TIME_BUDGET: root bounds may
+            // already have moved one-sidedly, which is the success signal.
+            int sp=tt_.find(key.lo,key.hi);
+            if(sp>=0){
+                r_exp_fallback_pn=tt_.pn_[(std::size_t)sp];
+                r_exp_fallback_dn=tt_.dn_[(std::size_t)sp];
+            }
+            r_exp_fallback_exp=expanded_-before_exp;
+            r_exp_fallback_vis=visited_-before_vis;
+            if(track_children_) dump_children();
+            throw;
+        }
+        double sec=std::chrono::duration<double>(Clock::now()-start).count();
+        Result r;
+        r.expansions=expanded_-before_exp;
+        r.seconds=sec;
+        int s=tt_.find(key.lo,key.hi);
+        if(s>=0){
+            r.root_pn=tt_.pn_[(std::size_t)s];
+            r.root_dn=tt_.dn_[(std::size_t)s];
+            if(tt_.st_[(std::size_t)s]==PnTT::WIN) r.outcome=1;
+            else if(tt_.st_[(std::size_t)s]==PnTT::LOSS) r.outcome=-1;
+        }
+        dump_children();
+        return r;
+    }
+
+public:
+    void set_frame_children_cache(bool enabled,bool audit=false,bool expand_reuse=false){
+        frame_children_cache_=enabled || audit || expand_reuse;frame_children_audit_=audit;
+        frame_expand_reuse_=expand_reuse;
+    }
+    std::uint64_t frame_expand_uses() const { return frame_expand_uses_; }
+    void frame_children_stats(std::uint64_t& builds,std::uint64_t& moves,std::uint64_t& refreshes,std::uint64_t& audits) const {
+        builds=child_geometry_builds_; moves=child_geometry_moves_;
+        refreshes=child_bound_refreshes_; audits=frame_children_audits_;
+    }
+    void set_search_node_budget(std::uint64_t limit){ search_node_budget_set_=true; search_node_budget_=limit; }
+    void clear_search_node_budget(){ search_node_budget_set_=false; }
+    std::uint64_t search_nodes_used() const { return search_nodes_used_; }
+    const auto& residual_gate_frames() const { return residual_gate_frames_; }
+    void configure_residual(const ResidualOptions& options){
+        set_residual_audit_legal(options.audit_legal);
+        set_residual_crosscheck_legal(options.crosscheck_legal);
+        set_residual_exact_legal(options.exact_legal);
+        set_residual_share_gate(options.share_gate);
+        set_residual_builder(options.builder);
+        set_residual_profile(options.profile);
+        set_residual_outcome(options.outcome,options.outcome_budget);
+        set_residual_attempt_budget(options.attempt_budget);
+    }
+    void set_deadline(double s){
+        deadline_s_=s;
+        t0_=Clock::now();
+    }
+    // Attach caller-owned streams. The solver never owns these; main() keeps
+    // the ofstreams alive for the whole run. After attach, ALL solver output
+    // (heartbeat, timeout, completion, depth lines) goes to the same sink.
+    void attach_log(std::ostream& os){ log_=&os; }
+    void attach_csv(std::ostream& os){ csv_=&os; }
+    void set_log(const std::string& path){
+        if(path.empty()) return;
+        log_file_.open(path, std::ios::out | std::ios::app);
+        if(!log_file_) throw std::runtime_error("cannot open log file");
+        log_= &log_file_;
+    }
+    void set_csv(const std::string& path){
+        if(path.empty()) return;
+        csv_file_.open(path, std::ios::out | std::ios::app);
+        if(!csv_file_) throw std::runtime_error("cannot open csv file");
+        csv_= &csv_file_;
+    }
+    std::ostream& log() { return *log_; }
+    std::ostream& csv() { return *csv_; }
+    void log_flush() { log_->flush(); }
+    void csv_flush() { csv_->flush(); }
+    std::uint64_t tt_open() const {
+        return tt_.used_ >= tt_.solved_ ? tt_.used_ - tt_.solved_ : 0;
+    }
+    std::uint64_t memo_used() const { return tt_.used(); }
+    std::uint64_t memo_solved() const { return tt_.solved_now(); }
+    std::uint64_t memo_solved_disc() const { return tt_.solved_discoveries(); }
+    std::size_t memo_capacity() const { return tt_.capacity(); }
+    void memo_evictions(std::uint64_t& open_ev,std::uint64_t& solved_ev) const {
+        open_ev=tt_.evictions_;
+        solved_ev=tt_.evicted_solved();
+    }
+    void partial_progress(std::uint32_t& pn,std::uint32_t& dn,
+                          std::uint64_t& exp,std::uint64_t& vis) const {
+        pn=r_exp_fallback_pn; dn=r_exp_fallback_dn;
+        exp=r_exp_fallback_exp; vis=r_exp_fallback_vis;
+    }
+    void exp_hist(std::uint64_t* out,int n) const {
+        for(int i=0;i<n;++i) out[i]=exp_hist_[i<64?i:63];
+    }
+    int max_depth() const { return max_depth_; }
+    // Enable the root-child diagnostic. When set, each direct child
+    // of the root gets its cumulative work (descents), current
+    // pn/dn, solved status and legal count logged on completion.
+    void set_track_children(bool b){ track_children_=b; }
+    bool tracking_children() const { return track_children_; }
+    // Handoff recording for the exact-frontier diagnostic. When set, one
+    // record per exact-handoff attempt is kept for the current root and
+    // dumped as CSV by run() on completion or timeout.
+    void set_track_exact(bool b){ track_exact_=b; }
+    void set_exact_record_limit(int n){ exact_record_limit_=n<0?0:n; }
+    // Tie-break mode: false = count ASC then key ASC (baseline),
+    // true = count DESC then key DESC (the DFS depth-5 winner).
+    void set_tiebreak_desc(bool b){ tiebreak_desc_=b; }
+    void set_residual_audit_legal(int legal){ residual_audit_legal_=std::max(0,legal); }
+    std::uint64_t residual_audit_calls() const { return residual_audit_calls_; }
+    void set_residual_crosscheck_legal(int legal){ residual_crosscheck_legal_=std::max(0,legal); }
+    std::uint64_t residual_crosscheck_calls() const { return residual_crosscheck_calls_; }
+    void set_residual_exact_legal(int legal){ residual_exact_legal_=std::max(0,legal); }
+    std::uint64_t residual_exact_calls() const { return residual_exact_calls_; }
+    void set_residual_share_gate(int legal){ residual_share_gate_=std::max(0,legal); }
+    void set_residual_builder(int mode){
+        if(mode<0 || mode>2) throw std::runtime_error("invalid residual builder");
+        residual_builder_=mode;
+    }
+    void set_residual_outcome(bool enabled,std::uint64_t quota){
+        if(enabled && residual_share_gate_>0)
+            throw std::runtime_error("outcome evaluator cannot share SG component cache");
+        residual_outcome_=enabled;
+        residual_outcome_limit_=residual_outcome_remaining_=quota;
+    }
+    void residual_outcome_stats(std::uint64_t& nodes,std::uint64_t& cutoffs,
+                                std::uint64_t& aborts,std::uint64_t& remaining) const {
+        nodes=residual_outcome_nodes_; cutoffs=residual_outcome_cutoffs_;
+        aborts=residual_outcome_aborts_; remaining=residual_outcome_remaining_;
+    }
+    void set_residual_profile(bool enabled){ residual_profile_=enabled; }
+    void set_residual_attempt_budget(std::uint64_t quota){ residual_attempt_budget_=quota; }
+    std::uint64_t residual_attempt_skips() const { return residual_attempt_skips_; }
+    std::uint64_t residual_attempted() const { return residual_attempted_.size(); }
+    std::uint64_t residual_attempt_max_nodes() const { return residual_attempt_max_nodes_; }
+    void residual_profile_stats(std::uint64_t& build,std::uint64_t& structure,std::uint64_t& grundy) const {
+        build=residual_build_ns_; structure=residual_structure_ns_; grundy=residual_grundy_ns_;
+    }
+    kyouen_residual::Stats residual_closed_stats() const { return residual_closed_stats_; }
+    void set_exact_share_layer(int stones){ exact_share_layer_=std::max(0,stones); }
+    static void clear_exact_layer_cache(){ exact_layer_cache_.clear(); }
+    void exact_share_stats(std::uint64_t& hits,std::uint64_t& stores,std::uint64_t& size) const {
+        hits=exact_share_hits_; stores=exact_share_stores_; size=(std::uint64_t)exact_layer_cache_.size();
+    }
+    static void clear_residual_component_cache(){ residual_component_cache_.clear(); }
+    void residual_share_stats(std::uint64_t& hits,std::uint64_t& stores,
+                              std::uint64_t& canonicalized,std::uint64_t& size) const {
+        hits=residual_shared_hits_; stores=residual_shared_stores_;
+        canonicalized=residual_shared_canonicalized_;
+        size=(std::uint64_t)residual_component_cache_.size();
+    }
+    void residual_exact_stats(std::uint64_t& memo_states,std::uint64_t& removed,
+                              std::uint64_t& splits) const {
+        memo_states=residual_exact_memo_states_;
+        removed=residual_exact_module_removed_;
+        splits=residual_exact_component_splits_;
+    }
+    void set_exact_handoff(int legal,std::uint64_t budget,int retries,int publish_mode){
+        exact_legal_=std::max(0,legal);
+        exact_budget_=std::max<std::uint64_t>(1,budget);
+        exact_retries_=std::clamp(retries,1,255);
+        exact_publish_mode_=(publish_mode==0?ExactPublishMode::ALL:
+                            (publish_mode==1?ExactPublishMode::ROOT:
+                                             ExactPublishMode::SEPARATE));
+    }
+    // Per-stone-count budget override, e.g. 5 -> 5000000.
+    void set_exact_budget_for_stones(int stones,std::uint64_t budget){
+        int s=(stones>=0&&stones<64)?stones:63;
+        exact_budget_by_stones_[s]=std::max<std::uint64_t>(1,budget);
+        exact_budget_by_stones_set_[s]=true;
+    }
+    // Per-stone-count threshold override, e.g. 7 -> 114. A value of 0
+    // disables handoff for that stone count entirely.
+    void set_exact_legal_for_stones(int stones,int legal){
+        int s=(stones>=0&&stones<64)?stones:63;
+        exact_legal_by_stones_[s]=std::max(0,legal);
+        exact_legal_by_stones_set_[s]=true;
+    }
+    // Child ordering for the exact DFS. 0=count asc (baseline),
+    // 1=count desc globally, 2=key asc, 3=count desc only at s5.
+    // Ordering affects speed only, never the result.
+    void set_exact_order(int mode){
+        exact_order_=(mode==1)?ExactOrder::COUNTD:
+                     ((mode==2)?ExactOrder::KEY:
+                      ((mode==3)?ExactOrder::S5_COUNTD:
+                       ((mode==4)?ExactOrder::S5_TARGET92:ExactOrder::COUNT)));
+        exact_order_desc_=(mode==1);
+    }
+    int exact_order_name() const {
+        if(exact_order_==ExactOrder::COUNTD) return 1;
+        if(exact_order_==ExactOrder::KEY) return 2;
+        if(exact_order_==ExactOrder::S5_COUNTD) return 3;
+        if(exact_order_==ExactOrder::S5_TARGET92) return 4;
+        return 0;
+    }
+    void exact_counters(std::uint64_t& calls,std::uint64_t& nodes,
+                        std::uint64_t& aborts,std::uint64_t& wins,
+                        std::uint64_t& losses,std::uint64_t& stores,
+                        std::uint64_t& local_stores) const {
+        calls=exact_calls_; nodes=exact_nodes_; aborts=exact_aborts_;
+        wins=exact_trigger_win_; losses=exact_trigger_loss_;
+        stores=exact_stores_; local_stores=exact_local_stores_;
+    }
+    void set_exact_replay_profile(bool enabled){ exact_replay_profile_=enabled; }
+    void clear_exact_replay_profile_root_children(){ exact_profile_root_children_.clear(); }
+    void exact_replay_profile(ExactReplayProfile& out) const {
+        for(int s=0;s<64;++s){
+            const auto i=static_cast<std::size_t>(s);
+            out.calls[i]=exact_profile_calls_[s];
+            out.nodes[i]=exact_profile_nodes_[s];
+            out.wins[i]=exact_profile_wins_[s];
+            out.losses[i]=exact_profile_losses_[s];
+            out.unknowns[i]=exact_profile_unknowns_[s];
+            out.tt_solved_hits[i]=exact_profile_tt_solved_hits_[s];
+            out.tt_open_hits[i]=exact_profile_tt_open_hits_[s];
+            out.tt_misses[i]=exact_profile_tt_misses_[s];
+        }
+        double average_probe=0;
+        std::uint64_t table_put_updates=0;
+        tt_.counters(out.table_hits,out.table_misses,out.table_new_entries,
+                     table_put_updates,out.table_open_evictions,
+                     out.table_solved_evictions,average_probe);
+        out.average_probe=average_probe;
+        out.table_used=tt_.used();
+        out.table_capacity=tt_.capacity();
+        out.table_solved=tt_.solved_now();
+        out.table_solved_discoveries=tt_.solved_discoveries();
+        out.root_children=exact_profile_root_children_;
+    }
+    void dump_exact_hist(std::ostream& os) const {
+        os<<"[exact-depth]";
+        bool anyv=false;
+        for(int s=0;s<64;++s){
+            if(!exact_call_hist_[s]) continue;
+            anyv=true;
+            os<<" s"<<s<<"="<<exact_call_hist_[s]
+              <<"/"<<exact_win_hist_[s]
+              <<"/"<<exact_loss_hist_[s]
+              <<"/"<<exact_abort_hist_[s];
+        }
+        if(!anyv) os<<" none";
+        os<<" (call/win/loss/abort)\n";
+        os.flush();
+    }
+
+    // Dump every recorded handoff attempt as one CSV row. The header is
+    // emitted once per process (guarded by a static) so the file is
+    // directly loadable. Columns are chosen so a standalone replay can
+    // rebuild the position from (key_lo, key_hi, stones) and re-derive
+    // the legal mask from the canonical occupancy:
+    //   seq,stones,key_lo,key_hi,legal,depth_from_root,is_or,retries,nodes,result
+    // result is 0=UNKNOWN 1=WIN 2=LOSS. is_or is 1 for an OR node (the
+    // side to move maximizes), 0 for AND.
+    void dump_exact_records(std::ostream& os,const std::string& tag) const {
+        static bool header_written=false;
+        if(!header_written){
+            os<<"# exact-handoff records: tag,seq,stones,key_lo,key_hi,legal,"
+                 "depth_from_root,is_or,retries,nodes,result\n";
+            header_written=true;
+        }
+        for(const auto& h:exact_recs_){
+            os<<tag<<","<<h.seq<<","<<h.stones<<","
+              <<h.key.lo<<","<<h.key.hi<<","<<h.legal<<","
+              <<h.depth_from_root<<","<<(h.is_or?1:0)<<","
+              <<h.retries<<","<<h.nodes<<","<<(int)h.result<<"\n";
+        }
+        os.flush();
+    }
+
+    // Optional proof dependency capture for a cold --exact-replay query.
+    // It records solved exact nodes and their AND/OR dependencies while the
+    // search runs; a separate geometry checker must still validate the trace.
+    void set_proof_dag_collection(bool enabled){
+        if(enabled && !collect_proof_dag_) proof_nodes_.clear();
+        if(!enabled) proof_nodes_.clear();
+        collect_proof_dag_=enabled;
+    }
+    std::size_t proof_dag_nodes() const { return proof_nodes_.size(); }
+    void dump_proof_trace(std::ostream& os,Bits root,int verdict) const {
+        if(!collect_proof_dag_) throw std::runtime_error("proof collection is disabled");
+        auto it=proof_nodes_.find(root);
+        if(it==proof_nodes_.end() || it->second.verdict!=verdict)
+            throw std::runtime_error("proof trace has no matching solved root");
+        os<<"# kyouen-proof-trace-v1,n="<<N<<",root_lo="<<root.lo
+          <<",root_hi="<<root.hi<<",verdict="<<verdict<<"\n";
+        for(const auto& kv:proof_nodes_){
+            const Bits& key=kv.first;
+            const ProofNode& node=kv.second;
+            os<<"N,"<<key.lo<<","<<key.hi<<","<<(int)node.verdict
+              <<","<<(node.terminal?1:0)<<"\n";
+            for(const ProofEdge& edge:node.edges)
+                os<<"E,"<<key.lo<<","<<key.hi<<","<<(int)edge.move
+                  <<","<<edge.child.lo<<","<<edge.child.hi<<"\n";
+        }
+        os.flush();
+        if(!os) throw std::runtime_error("failed to write proof trace");
+    }
+    // Write only the dependency closure of one root. A multi-root replay can
+    // accumulate a large shared proof store, but each portable trace should
+    // contain exactly the nodes needed by its own root.
+    void dump_proof_trace_closure(std::ostream& os,Bits root,int verdict) const {
+        if(!collect_proof_dag_) throw std::runtime_error("proof collection is disabled");
+        auto ri=proof_nodes_.find(root);
+        if(ri==proof_nodes_.end() || ri->second.verdict!=verdict)
+            throw std::runtime_error("proof trace has no matching solved root");
+        std::set<Bits> reachable;
+        std::vector<Bits> pending{root};
+        while(!pending.empty()){
+            Bits key=pending.back(); pending.pop_back();
+            if(!reachable.insert(key).second) continue;
+            auto it=proof_nodes_.find(key);
+            if(it==proof_nodes_.end())
+                throw std::runtime_error("proof closure references a missing dependency");
+            for(const ProofEdge& edge:it->second.edges) pending.push_back(edge.child);
+        }
+        os<<"# kyouen-proof-trace-v1,n="<<N<<",root_lo="<<root.lo
+          <<",root_hi="<<root.hi<<",verdict="<<verdict<<"\n";
+        for(const Bits& key:reachable){
+            const ProofNode& node=proof_nodes_.at(key);
+            os<<"N,"<<key.lo<<","<<key.hi<<","<<(int)node.verdict
+              <<","<<(node.terminal?1:0)<<"\n";
+            for(const ProofEdge& edge:node.edges)
+                os<<"E,"<<key.lo<<","<<key.hi<<","<<(int)edge.move
+                  <<","<<edge.child.lo<<","<<edge.child.hi<<"\n";
+        }
+        os.flush();
+        if(!os) throw std::runtime_error("failed to write closed proof trace");
+    }
+    void dump_proof_trace_bundle(std::ostream& os,
+                                 const std::vector<std::tuple<int,Bits,int>>& roots) const {
+        if(!collect_proof_dag_) throw std::runtime_error("proof collection is disabled");
+        if(roots.empty()) throw std::runtime_error("proof bundle has no solved roots");
+        std::set<Bits> reachable;
+        std::vector<Bits> pending;
+        for(const auto& root:roots){
+            const Bits& key=std::get<1>(root);
+            int verdict=std::get<2>(root);
+            auto it=proof_nodes_.find(key);
+            if(it==proof_nodes_.end() || it->second.verdict!=verdict)
+                throw std::runtime_error("proof bundle root has no matching dependency record");
+            pending.push_back(key);
+        }
+        while(!pending.empty()){
+            Bits key=pending.back(); pending.pop_back();
+            if(!reachable.insert(key).second) continue;
+            auto it=proof_nodes_.find(key);
+            if(it==proof_nodes_.end())
+                throw std::runtime_error("proof bundle references a missing dependency");
+            for(const ProofEdge& edge:it->second.edges) pending.push_back(edge.child);
+        }
+        os<<"# kyouen-proof-trace-bundle-v1,n="<<N<<"\n";
+        for(const auto& root:roots){
+            const Bits& key=std::get<1>(root);
+            os<<"R,"<<std::get<0>(root)<<","<<key.lo<<","<<key.hi
+              <<","<<std::get<2>(root)<<"\n";
+        }
+        for(const Bits& key:reachable){
+            const ProofNode& node=proof_nodes_.at(key);
+            os<<"N,"<<key.lo<<","<<key.hi<<","<<(int)node.verdict
+              <<","<<(node.terminal?1:0)<<","<<(int)node.legal_count<<"\n";
+            for(const ProofEdge& edge:node.edges)
+                os<<"E,"<<key.lo<<","<<key.hi<<","<<(int)edge.move
+                  <<","<<edge.child.lo<<","<<edge.child.hi<<"\n";
+        }
+        os.flush();
+        if(!os) throw std::runtime_error("failed to write proof trace bundle");
+    }
+
+private:
+    std::ostream* log_=&std::cerr;
+    std::ofstream log_file_;
+    std::ostream* csv_=&std::cout;
+    std::ofstream csv_file_;
+};
+
+template<int N>
+static std::vector<int> first_move_reps(){
+    std::vector<int> reps;
+    int c=(N/2)*N+(N/2);
+    reps.push_back(c);
+    reps.push_back(0);
+    for(int x=0;x<=N/2;++x)for(int y=0;y<=x;++y){
+        int v=y*N+x;
+        if(v==c||v==0)continue;
+        reps.push_back(v);
+    }
+    return reps;
+}
+
+static std::string outcome_str(int o){ return o>0?"WIN":(o<0?"LOSS":"TIMEOUT"); }
+
+template<int N>
+static int run(const std::string& only,double budget_s,unsigned memo_power,
+               bool do_empty,bool do_reps,bool do_children,bool tiebreak_desc,
+               int exact_legal,std::uint64_t exact_budget,int exact_retries,
+               int exact_publish_mode,bool do_exact_record,
+               int exact_record_limit,
+               const std::vector<std::pair<int,std::uint64_t>>& budget_by_stones,
+               const std::vector<std::pair<int,int>>& legal_by_stones,
+               int exact_order,const ResidualOptions& residual_options,
+               const FrameChildrenOptions& frame_options,
+               std::optional<std::uint64_t> search_node_budget,
+               std::ostream& L,std::ostream& C,
+               std::uint64_t* total_exp,
+               const std::string& csv_roots_path=""){
+    DfPn<N> solver(memo_power);
+    // SINGLE-STREAM wiring: the solver writes heartbeat/timeout/completion
+    // through the SAME L/C objects run() uses. Previously the solver held
+    // its own log_/csv_ (default cerr/cout, or --log/--csv files) while
+    // run() wrote to L/C -- so heartbeat went wherever log_ pointed and the
+    // --log file only ever saw [timeout]/[done]. Now everything converges.
+    solver.attach_log(L);
+    solver.attach_csv(C);
+    solver.set_track_children(do_children);
+    solver.set_track_exact(do_exact_record);
+    solver.set_exact_record_limit(exact_record_limit);
+    solver.set_tiebreak_desc(tiebreak_desc);
+    solver.set_exact_handoff(exact_legal,exact_budget,exact_retries,exact_publish_mode);
+    for(const auto& kv:budget_by_stones)
+        solver.set_exact_budget_for_stones(kv.first,kv.second);
+    for(const auto& kv:legal_by_stones)
+        solver.set_exact_legal_for_stones(kv.first,kv.second);
+    solver.set_exact_order(exact_order);
+    solver.configure_residual(residual_options);
+    solver.set_frame_children_cache(frame_options.cache,frame_options.audit,frame_options.expand_reuse);
+    if(search_node_budget) solver.set_search_node_budget(*search_node_budget);
+    if(residual_options.share_gate>0) DfPn<N>::clear_residual_component_cache();
+    L<<"n="<<N<<" built forbidden="<<solver.forbidden_count()
+     <<" tiebreak="<<(tiebreak_desc?"desc":"asc")
+     <<" exact_legal="<<exact_legal
+     <<" exact_order="<<exact_order
+     <<" exact_budget="<<exact_budget
+     <<" exact_retries="<<exact_retries
+     <<" residual_gate="<<residual_options.exact_legal
+     <<" residual_outcome="<<residual_options.outcome
+     <<" residual_quota="<<residual_options.outcome_budget
+     <<" node_limited="<<bool(search_node_budget)
+     <<" node_budget="<<search_node_budget.value_or(0)
+     <<" exact_publish="<<(exact_publish_mode==0?"all":
+                            (exact_publish_mode==1?"root":"separate"))<<std::endl;
+    L.flush();
+    // Deadline counts from the first root actually started, not from solver
+    // construction (which builds the ~8M-entry forbidden table). Setting it
+    // here keeps per-probe budgets comparable across --only selections.
+    solver.set_deadline(budget_s);
+    int n_done=0,n_timeout=0;
+    std::uint64_t root_seq=0;
+    auto wall0=std::chrono::steady_clock::now();
+    auto run_one=[&](const std::string& tag,const std::vector<int>& stones){
+        const std::uint64_t seq=++root_seq;
+        const auto root_start=std::chrono::steady_clock::now();
+        const auto before_vis=solver.visited();
+        const auto before_exp=solver.expansions();
+        Bits input_occupied{};
+        for(int point:stones) if(point>=0 && point<N*N) input_occupied=input_occupied|bitof(point);
+        const auto before_exact=solver.exact_total_nodes();
+        const auto before_residual=solver.residual_exact_calls();
+        const auto gate_before=solver.residual_gate_frames();
+        std::uint64_t phase_before[3]{};
+        solver.residual_profile_stats(phase_before[0],phase_before[1],phase_before[2]);
+        std::uint64_t root_solve_us=0;
+        auto emit_root=[&](int result,const std::string& reason){
+            std::uint64_t nodes=0,cutoffs=0,aborts=0,remaining=0;
+            solver.residual_outcome_stats(nodes,cutoffs,aborts,remaining);
+            std::uint64_t phase[3]{};
+            solver.residual_profile_stats(phase[0],phase[1],phase[2]);
+            std::uint64_t builds,moves,refreshes,audits;
+            solver.frame_children_stats(builds,moves,refreshes,audits);
+            C<<"# dfpn_root seq="<<seq<<" result="<<result<<" reason="<<reason
+             <<" stones="<<stones.size()<<" occupied_lo="<<input_occupied.lo<<" occupied_hi="<<input_occupied.hi
+             <<" expansions="<<(solver.expansions()-before_exp)
+             <<" nodes="<<solver.search_nodes_used()<<" node_limited="<<bool(search_node_budget)
+             <<" node_budget="<<search_node_budget.value_or(0)
+             <<" visited="<<(solver.visited()-before_vis)
+             <<" exact_nodes="<<(solver.exact_total_nodes()-before_exact)
+             <<" residual_gate="<<residual_options.exact_legal
+             <<" residual_calls="<<(solver.residual_exact_calls()-before_residual)
+             <<" pn_enabled="<<residual_options.outcome<<" pn_budget="<<residual_options.outcome_budget
+             <<" pn_nodes="<<nodes<<" pn_aborts="<<aborts<<" pn_remaining="<<remaining
+             <<" pn_attempt_budget="<<residual_options.attempt_budget
+             <<" pn_attempted="<<solver.residual_attempted()
+             <<" pn_attempt_max="<<solver.residual_attempt_max_nodes()
+             <<" pn_attempt_skips="<<solver.residual_attempt_skips()
+             <<" frame_cache="<<frame_options.cache<<" frame_audit="<<frame_options.audit
+             <<" frame_expand_reuse="<<frame_options.expand_reuse<<" frame_expand_uses="<<solver.frame_expand_uses()
+             <<" geometry_builds="<<builds<<" geometry_moves="<<moves
+             <<" child_refreshes="<<refreshes<<" child_audits="<<audits
+             <<" solve_us="<<root_solve_us
+             <<" build_ns="<<(phase[0]-phase_before[0])
+             <<" structure_ns="<<(phase[1]-phase_before[1])
+             <<" grundy_ns="<<(phase[2]-phase_before[2])<<"\n";
+            if(residual_options.profile){
+                const auto& frames=solver.residual_gate_frames();
+                for(int legal=0;legal<=N*N;++legal){
+                    const auto count=frames[legal]-gate_before[legal];
+                    if(count) C<<"# residual_gate_profile seq="<<seq<<" legal="<<legal<<" frames="<<count<<"\n";
+                }
+            }
+            C.flush();
+        };
+        typename DfPn<N>::Result r;
+        bool done=false;
+        try{
+            if(stones.empty()) r=solver.solve_empty();
+            else r=solver.solve_root(stones);
+            done=true;
+            root_solve_us=static_cast<std::uint64_t>(std::chrono::duration_cast<std::chrono::microseconds>(
+                std::chrono::steady_clock::now()-root_start).count());
+        }catch(const std::exception& e){
+            root_solve_us=static_cast<std::uint64_t>(std::chrono::duration_cast<std::chrono::microseconds>(
+                std::chrono::steady_clock::now()-root_start).count());
+            emit_root(0,e.what());
+            double wall=std::chrono::duration<double>(
+                std::chrono::steady_clock::now()-wall0).count();
+            std::uint32_t fpn,fdn; std::uint64_t fexp,fvis;
+            solver.partial_progress(fpn,fdn,fexp,fvis);
+            C<<"# ["<<tag<<"] TIMEOUT reason="<<e.what()
+             <<" expansions="<<fexp
+             <<" visited="<<fvis
+             <<" root_pn="<<fpn<<" root_dn="<<fdn
+             <<" memo="<<solver.memo_used()<<"/"<<solver.memo_capacity()
+             <<" solved="<<solver.memo_solved()
+             <<" solved_disc="<<solver.memo_solved_disc();
+            {
+                std::uint64_t eo,es;
+                solver.memo_evictions(eo,es);
+                C<<" evict_open="<<eo<<" evict_solved="<<es;
+            }
+            {
+                std::uint64_t ec,en,ea,ew,el,es,els;
+                solver.exact_counters(ec,en,ea,ew,el,es,els);
+                C<<" exact_calls="<<ec<<" exact_nodes="<<en
+                 <<" exact_abort="<<ea<<" exact_win="<<ew
+                 <<" exact_loss="<<el<<" exact_stores="<<es
+                 <<" exact_local="<<els;
+            }
+            C<<" seq="<<seq<<" wall_s="<<(long long)wall<<"\n";
+            solver.csv_flush();
+            solver.dump_exact_hist(L);
+            if(do_exact_record) solver.dump_exact_records(C,tag);
+            {
+                std::uint64_t dh[64]; solver.exp_hist(dh,64);
+                std::uint64_t p=0;
+                for(int d=0;d<48;++d)p+=dh[d];
+                L<<"[depth-exp] total="<<p;
+                for(int d=0;d<48;++d){
+                    if(!dh[d])continue;
+                    L<<" d"<<d<<"="<<dh[d];
+                }
+                L<<"\n";
+                L.flush();
+            }
+            ++n_timeout;
+            return;
+        }
+        double wall=std::chrono::duration<double>(
+            std::chrono::steady_clock::now()-wall0).count();
+        solver.dump_exact_hist(L);
+        if(do_exact_record) solver.dump_exact_records(C,tag);
+        L<<"[done] ["<<tag<<"] "<<outcome_str(r.outcome)
+         <<" expansions="<<r.expansions
+         <<" root_pn="<<r.root_pn<<" root_dn="<<r.root_dn
+         <<" memo="<<solver.memo_used()<<"/"<<solver.memo_capacity();
+        {
+            std::uint64_t eo,es;
+            solver.memo_evictions(eo,es);
+            L<<" evict_open="<<eo<<" evict_solved="<<es;
+        }
+        {
+            std::uint64_t ec,en,ea,ew,el,es,els;
+            solver.exact_counters(ec,en,ea,ew,el,es,els);
+            L<<" exact_calls="<<ec<<" exact_nodes="<<en
+             <<" exact_abort="<<ea<<" exact_win="<<ew
+             <<" exact_loss="<<el<<" exact_stores="<<es
+             <<" exact_local="<<els;
+        }
+        L<<" seq="<<seq<<" wall_s="<<(long long)wall<<std::endl;
+        L.flush();
+        emit_root(r.outcome==1?1:(r.outcome==-1?2:0),"DONE");
+        *total_exp+=r.expansions;
+        ++n_done;
+    };
+    if(do_empty) run_one("empty",{});
+    // Arbitrary multi-stone roots from a CSV file (cross-check vs DFS).
+    // Format: header "canonical_parent,move" then rows "a,b,c",m meaning the
+    // root {a,b,c,m}. Unsafe rows (forbidden quadruple inside) are reported
+    // as UNSAFE and skipped -- they are not legal positions.
+    if(!csv_roots_path.empty()){
+        std::ifstream f(csv_roots_path);
+        if(!f){ L<<"cannot open --roots-csv\n"; L.flush(); return 1; }
+        std::string header;
+        if(!std::getline(f,header)){ L<<"empty --roots-csv\n"; L.flush(); return 1; }
+        std::string line;
+        while(std::getline(f,line)){
+            if(line.empty()) continue;
+            if(line[0]!='"'){ L<<"bad roots row (want quoted parent): "<<line<<"\n"; L.flush(); continue; }
+            auto q=line.find('"',1);
+            if(q==std::string::npos){ L<<"bad roots row: "<<line<<"\n"; L.flush(); continue; }
+            std::string ptext=line.substr(1,q-1);
+            std::vector<int> stones;
+            {
+                std::stringstream ss(ptext); std::string tok;
+                while(std::getline(ss,tok,',')) if(!tok.empty()) stones.push_back(std::stoi(tok));
+            }
+            if(q+1>=line.size()||line[q+1]!=','){ L<<"bad roots row: "<<line<<"\n"; L.flush(); continue; }
+            stones.push_back(std::stoi(line.substr(q+2)));
+            std::stringstream tag;
+            tag<<"roots{";
+            for(std::size_t i=0;i<stones.size();++i){ if(i)tag<<","; tag<<stones[i]; }
+            tag<<"}";
+            try{
+                run_one(tag.str(),stones);
+            }catch(const std::exception& e){
+                L<<"[roots] "<<tag.str()<<" UNSAFE ("<<e.what()<<")\n"; L.flush();
+            }
+        }
+    }
+    if(do_reps){
+        for(int v: first_move_reps<N>()){
+            if(!only.empty()){
+                bool want=false;
+                std::stringstream ss(only); std::string tok;
+                while(std::getline(ss,tok,',')){
+                    if(!tok.empty()&&std::stoi(tok)==v){want=true;break;}
+                }
+                if(!want)continue;
+            }
+            run_one("v="+std::to_string(v),{v});
+        }
+    }
+    L<<"# done="<<n_done<<" timeout="<<n_timeout<<std::endl;
+    L.flush();
+    return 0;
+}
+
+// ---- standalone exact replay of recorded handoff roots ------------
+// Reads an --exact-record CSV and re-solves each recorded position with
+// the exact solver ALONE, no df-pn and no transposition table shared
+// between positions, so each root's true cost is measured in isolation.
+// One solver instance is reused for all rows: building the forbidden
+// table per row would dominate the runtime (the 11x11 table has ~95k
+// entries) and has nothing to do with what is being measured.
+//
+// `--only=` here filters by STONE COUNT, so `--only=5` benchmarks just
+// the s5 frontier.
+template<int N>
+    static int run_exact_replay(const std::string& path,std::uint64_t budget,
+                            unsigned memo_power,const std::string& only,
+                            int exact_order,int residual_audit_legal,int residual_crosscheck_legal,
+                            int residual_exact_legal,int residual_share_gate,bool residual_profile,int residual_builder,bool residual_outcome,std::uint64_t residual_outcome_budget,bool exact_replay_share_tt,int exact_share_layer,
+                            bool exact_replay_stop_on_loss,bool exact_replay_profile,
+                            const std::string& proof_dag_path,const std::string& proof_dag_dir,
+                            std::ostream& O){
+    std::ifstream in(path);
+    if(!in){ std::cerr<<"cannot open --exact-replay\n"; return 1; }
+    if(!proof_dag_path.empty() && !proof_dag_dir.empty())
+        throw std::runtime_error("choose either --proof-dag or --proof-dag-dir");
+    if(!proof_dag_path.empty() || !proof_dag_dir.empty()){
+        if(residual_exact_legal>0 || residual_share_gate>0 || exact_share_layer>0)
+            throw std::runtime_error("proof capture forbids residual shortcuts and external layer caches");
+        if(!proof_dag_path.empty() && exact_replay_share_tt)
+            throw std::runtime_error("single --proof-dag requires a cold, unshared replay");
+        if(!proof_dag_dir.empty() && !exact_replay_share_tt)
+            throw std::runtime_error("--proof-dag-dir requires --exact-replay-share-tt");
+        const std::string& output_path=proof_dag_path.empty()?proof_dag_dir:proof_dag_path;
+        if(std::filesystem::exists(output_path))
+            throw std::runtime_error("refusing to overwrite proof output");
+        int selected_rows=0;
+        std::string scan;
+        while(std::getline(in,scan)){
+            if(scan.empty()||scan[0]=='#') continue;
+            std::vector<std::string> f;
+            std::stringstream ss(scan); std::string tok;
+            while(std::getline(ss,tok,',')) f.push_back(tok);
+            if(f.size()<11) continue;
+            int row_stones=std::stoi(f[2]);
+            if(!only.empty()){
+                std::stringstream t(only); std::string w; bool want=false;
+                while(std::getline(t,w,','))
+                    if(!w.empty()&&std::stoi(w)==row_stones){want=true;break;}
+                if(!want) continue;
+            }
+            if(++selected_rows>1)
+                if(!proof_dag_path.empty())
+                    throw std::runtime_error("--proof-dag requires exactly one selected replay row");
+        }
+        if(selected_rows==0 || (!proof_dag_path.empty() && selected_rows!=1))
+            throw std::runtime_error("--proof-dag requires exactly one selected replay row");
+        if(!proof_dag_dir.empty() && !std::filesystem::create_directories(proof_dag_dir))
+            throw std::runtime_error("cannot create proof output directory");
+        in.clear();
+        in.seekg(0);
+    }
+    O<<"# exact replay: order="<<exact_order<<" (0=count-asc 1=count-desc 2=key-asc 3=s5-count-desc 4=s5-target92)"<<" share_tt="<<(exact_replay_share_tt?1:0)<<std::endl;
+    O<<"# exact replay: id,stones,legal,is_or,budget,result,nodes,wall_s,key_lo,key_hi\n";
+    O.flush();
+    // Memo size for the per-row solver. The main table default is 2^26,
+    // whose assign() touches ~1 GB and would dominate a benchmark whose
+    // whole point is a few million nodes. 2^22 (4M entries, ~100 MB)
+    // comfortably holds a single exact search and is reset per row.
+    unsigned row_memo = std::min<unsigned>(memo_power,22);
+    if(residual_share_gate>0) DfPn<N>::clear_residual_component_cache();
+    if(exact_share_layer>0) DfPn<N>::clear_exact_layer_cache();
+    std::unique_ptr<DfPn<N>> shared_solver;
+    if(exact_replay_share_tt) shared_solver=std::make_unique<DfPn<N>>(row_memo);
+    std::vector<std::tuple<int,Bits,int>> proof_roots;
+    std::string line; int id=0;
+    double w0=std::chrono::duration<double>(
+        std::chrono::steady_clock::now().time_since_epoch()).count();
+    while(std::getline(in,line)){
+        if(line.empty()||line[0]=='#') continue;
+        std::vector<std::string> f;
+        std::stringstream ss(line); std::string tok;
+        while(std::getline(ss,tok,',')) f.push_back(tok);
+        // record rows: tag,seq,stones,lo,hi,legal,depth,is_or,retries,nodes,result
+        if(f.size()<11) continue;
+        int stones=std::stoi(f[2]);
+        if(!only.empty()){
+            std::stringstream t(only); std::string w; bool want=false;
+            while(std::getline(t,w,','))
+                if(!w.empty()&&std::stoi(w)==stones){want=true;break;}
+            if(!want) continue;
+        }
+        Bits occ; occ.lo=std::stoull(f[3]); occ.hi=std::stoull(f[4]);
+        int legal=std::stoi(f[5]);
+        double t0=std::chrono::duration<double>(
+            std::chrono::steady_clock::now().time_since_epoch()).count();
+        std::uint64_t nodes=0,setup_us=0,solve_us=0; int res=-1;
+        try{
+            // A FRESH solver per row. Reusing one instance leaks state
+            // between positions: exact_prop consults the main PnTT first,
+            // and publish=ALL writes solved entries into it, so a position
+            // overlapping an earlier row would be answered from that
+            // table and report a tiny node count. That is exactly what a
+            // per-root benchmark must not measure.
+            std::unique_ptr<DfPn<N>> fresh_solver;
+            if(!shared_solver) fresh_solver=std::make_unique<DfPn<N>>(row_memo);
+            DfPn<N>& row_solver=shared_solver ? *shared_solver : *fresh_solver;
+            typename DfPn<N>::ExactReplayProfile profile_before{},profile_after{};
+            if(exact_replay_profile){
+                row_solver.set_exact_replay_profile(true);
+                row_solver.clear_exact_replay_profile_root_children();
+                row_solver.exact_replay_profile(profile_before);
+            }
+            row_solver.set_deadline(0);
+            row_solver.set_exact_handoff(0,1,1,0); // publish=ALL
+            row_solver.set_exact_order(exact_order);
+            row_solver.set_residual_audit_legal(residual_audit_legal);
+            row_solver.set_residual_crosscheck_legal(residual_crosscheck_legal);
+            row_solver.set_residual_exact_legal(residual_exact_legal);
+            row_solver.set_residual_share_gate(residual_share_gate);
+            row_solver.set_residual_profile(residual_profile);
+            row_solver.set_residual_builder(residual_builder);
+            row_solver.set_residual_outcome(residual_outcome,residual_outcome_budget);
+            row_solver.set_exact_share_layer(exact_share_layer);
+            if(!proof_dag_path.empty() || !proof_dag_dir.empty())
+                row_solver.set_proof_dag_collection(true);
+            const double solve_start=std::chrono::duration<double>(
+                std::chrono::steady_clock::now().time_since_epoch()).count();
+            setup_us=static_cast<std::uint64_t>((solve_start-t0)*1000000.0);
+            res=row_solver.exact_replay(occ,stones,budget,nodes);
+            solve_us=static_cast<std::uint64_t>(std::chrono::duration<double>(
+                std::chrono::steady_clock::now().time_since_epoch()).count()*1000000.0
+                -solve_start*1000000.0);
+            if(exact_replay_profile){
+                row_solver.exact_replay_profile(profile_after);
+                O<<"# exact-profile row="<<id
+                 <<" table_hit="<<profile_after.table_hits-profile_before.table_hits
+                 <<" table_miss="<<profile_after.table_misses-profile_before.table_misses
+                 <<" table_new="<<profile_after.table_new_entries-profile_before.table_new_entries
+                 <<" evict_open="<<profile_after.table_open_evictions-profile_before.table_open_evictions
+                 <<" evict_solved="<<profile_after.table_solved_evictions-profile_before.table_solved_evictions
+                 <<" table_used="<<profile_after.table_used
+                 <<" table_capacity="<<profile_after.table_capacity
+                 <<" table_solved="<<profile_after.table_solved
+                 <<" solved_discoveries="<<profile_after.table_solved_discoveries
+                 <<" avg_probe="<<profile_after.average_probe<<"\n";
+                for(int rank=0;rank<64;++rank){
+                    const auto i=static_cast<std::size_t>(rank);
+                    const auto calls=profile_after.calls[i]-profile_before.calls[i];
+                    const auto rank_nodes=profile_after.nodes[i]-profile_before.nodes[i];
+                    const auto wins=profile_after.wins[i]-profile_before.wins[i];
+                    const auto losses=profile_after.losses[i]-profile_before.losses[i];
+                    const auto unknowns=profile_after.unknowns[i]-profile_before.unknowns[i];
+                    const auto tt_solved=profile_after.tt_solved_hits[i]-profile_before.tt_solved_hits[i];
+                    const auto tt_open=profile_after.tt_open_hits[i]-profile_before.tt_open_hits[i];
+                    const auto tt_misses=profile_after.tt_misses[i]-profile_before.tt_misses[i];
+                    if(calls||rank_nodes||wins||losses||unknowns||tt_solved||tt_open||tt_misses)
+                        O<<"# exact-profile-rank row="<<id<<" s"<<rank
+                         <<" calls="<<calls<<" nodes="<<rank_nodes
+                         <<" win="<<wins<<" loss="<<losses<<" unknown="<<unknowns
+                         <<" tt_solved="<<tt_solved<<" tt_open="<<tt_open
+                         <<" tt_miss="<<tt_misses<<"\n";
+                }
+                for(const auto& child:profile_after.root_children)
+                    O<<"# exact-profile-child row="<<id
+                     <<" lo="<<child.key.lo<<" hi="<<child.key.hi
+                     <<" legal="<<child.legal<<" nodes="<<child.nodes
+                     <<" verdict="<<(child.verdict==1?"WIN":
+                                      child.verdict==2?"LOSS":"UNKNOWN")<<"\n";
+                O.flush();
+            }
+            if(!proof_dag_path.empty() && (res==1||res==2)){
+                std::ofstream pf(proof_dag_path,std::ios::out|std::ios::trunc);
+                if(!pf) throw std::runtime_error("cannot open proof trace output");
+                row_solver.dump_proof_trace(pf,occ,res);
+            }
+            if(!proof_dag_dir.empty() && (res==1||res==2)){
+                proof_roots.emplace_back(id,occ,res);
+            }
+            if(residual_audit_legal>0 || residual_crosscheck_legal>0 ||
+               residual_exact_legal>0 || residual_share_gate>0 || exact_share_layer>0){
+                std::uint64_t rms=0, rrm=0, rcs=0;
+                std::uint64_t rsh=0, rss=0, rsc=0, rsz=0;
+                row_solver.residual_exact_stats(rms,rrm,rcs);
+                row_solver.residual_share_stats(rsh,rss,rsc,rsz);
+                std::uint64_t esh=0, ess=0, esz=0;
+                row_solver.exact_share_stats(esh,ess,esz);
+                auto closed=row_solver.residual_closed_stats();
+                if(residual_outcome){
+                    std::uint64_t nodes=0,cutoffs=0,aborts=0,remaining=0;
+                    row_solver.residual_outcome_stats(nodes,cutoffs,aborts,remaining);
+                    O<<"# residual_outcome row="<<id<<" nodes="<<nodes<<" cutoffs="<<cutoffs
+                     <<" aborts="<<aborts<<" remaining="<<remaining<<"\n";
+                }
+                if(residual_profile){
+                    std::uint64_t build=0,structure=0,grundy=0;
+                    row_solver.residual_profile_stats(build,structure,grundy);
+                    O<<"# residual_profile row="<<id<<" build_ns="<<build
+                     <<" structure_ns="<<structure<<" grundy_ns="<<grundy<<"\n";
+                }
+                O<<"# residual_shadow row="<<id
+                 <<" audit_calls="<<row_solver.residual_audit_calls()
+                 <<" crosscheck_calls="<<row_solver.residual_crosscheck_calls()
+                 <<" exact_calls="<<row_solver.residual_exact_calls()
+                 <<" residual_memo_states="<<rms
+                 <<" module_removed="<<rrm
+                 <<" component_splits="<<rcs
+                 <<" shared_hits="<<rsh
+                 <<" shared_stores="<<rss
+                 <<" canonicalized="<<rsc
+                 <<" shared_size="<<rsz
+                 <<" exact_layer_hits="<<esh
+                 <<" exact_layer_stores="<<ess
+                 <<" exact_layer_size="<<esz
+                 <<" closed_free="<<closed.closed_free
+                 <<" closed_two_edges="<<closed.closed_two_edges
+                 <<" closed_sunflower="<<closed.closed_sunflower
+                 <<" closed_paths="<<closed.closed_paths<<"\n";
+            }
+        }catch(const std::exception& e){
+            O<<"replay_error,"<<id<<","<<stones<<",0,\""<<e.what()<<"\"\n"; O.flush(); ++id; continue;
+        }
+        double t1=std::chrono::duration<double>(
+            std::chrono::steady_clock::now().time_since_epoch()).count();
+        // Keep the replay CSV columns stable. Add precise timings as a
+        // comment so setup/table construction cannot hide handoff costs.
+        O<<"# replay_timing row="<<id
+         <<" setup_us="<<setup_us<<" solve_us="<<solve_us
+         <<" total_us="<<static_cast<std::uint64_t>((t1-t0)*1000000.0)
+         <<" residual_gate="<<residual_exact_legal<<"\n";
+        O<<"replay,"<<id<<","<<stones<<","<<legal<<","
+         <<(stones%2==0?1:0)<<","<<budget<<","<<res<<","
+         <<nodes<<","<<(long long)(t1-t0)<<","<<occ.lo<<","<<occ.hi<<"\n";
+        O.flush();
+        ++id;
+        if(exact_replay_stop_on_loss && res==2) break;
+    }
+    if(!proof_dag_dir.empty() && !proof_roots.empty()){
+        if(!shared_solver)
+            throw std::runtime_error("shared proof bundle lost its solver state");
+        std::filesystem::path trace_path=std::filesystem::path(proof_dag_dir)/"proof-bundle.csv";
+        std::ofstream pf(trace_path,std::ios::out|std::ios::binary|std::ios::trunc);
+        if(!pf) throw std::runtime_error("cannot open proof trace bundle output");
+        shared_solver->dump_proof_trace_bundle(pf,proof_roots);
+    }
+    double w1=std::chrono::duration<double>(
+        std::chrono::steady_clock::now().time_since_epoch()).count();
+    O<<"# replay_done rows="<<id<<" wall_s="<<(long long)(w1-w0)<<"\n";
+    O.flush();
+    return 0;
+}
+
+// ---- quantified s5 search driver ----------------------------------
+// For a two-stone root {m2,r2}, decide
+//     exists m3 : forall m4 : exists m5 : s5 WIN
+// against a shared s5 exact oracle. The oracle cache persists across
+// all replies in one process, because different replies and different
+// third moves reach many of the same D4 orbits of 5-stone positions.
+//
+// Certificate output on a WIN:
+//   reply r2
+//     winning third move r3
+//       for every legal fourth reply r4
+//         a winning fifth move r5 and the canonical key of that s5
+template<int N>
+static int run_quant(int first,const std::string& replies,
+                     std::uint64_t budget,double timeout_s,
+                     unsigned memo_power,
+                     const std::string& s5_cache,
+                     const std::string& s5_cache_out,
+                     std::ostream& O){
+    DfPn<N> solver(memo_power);
+    // The exact DFS inside the oracle must not be gated by any hybrid
+    // threshold. It IS gated by the quant wall allowance, which is
+    // checked before every query, because the old code set the deadline
+    // to 0 and then only checked --quant-timeout after a whole reply
+    // finished -- so a single stuck query could never be stopped.
+    solver.set_deadline(0);
+    solver.set_exact_handoff(0,1,1,0); // publish=ALL (oracle is its own memo)
+    solver.oracle_clear();
+    if(!s5_cache.empty()) solver.oracle_load(s5_cache);
+    if(timeout_s>0) solver.set_quant_deadline(timeout_s);
+
+    std::vector<int> rs;
+    {
+        std::stringstream ss(replies); std::string tok;
+        while(std::getline(ss,tok,',')) {
+            if(tok.empty()) continue;
+            try { rs.push_back(std::stoi(tok)); }
+            catch(const std::exception&){ /* skip malformed token */ }
+        }
+    }
+    if(rs.empty()){ O<<"# no valid replies parsed from: "<<replies<<"\n"; return 2; }
+    O<<"# quantified s5 search: first="<<first
+     <<" replies="<<rs.size()<<" node_budget="<<budget
+     <<" timeout_s="<<timeout_s<<"\n";
+    O<<"# reply,outcome,r3,n_r4,oracle_queries,oracle_hits,oracle_nodes,wall_s"
+     <<",m3_tried,m3_refuted,m3_unknown,m4_sat,m4_sat_total,m4_refuted,m4_unknown"
+     <<",q_at_refute,tt_hits,tt_misses,tt_growth,evict_open,evict_solved"
+     <<",avgprobe,timeouts,aborted_by_time\n";
+    O.flush();
+
+    int nwin=0, nloss=0, nunk=0;
+    double t_all=std::chrono::duration<double>(
+        std::chrono::steady_clock::now().time_since_epoch()).count();
+    for(int r2:rs){
+        double t0=std::chrono::duration<double>(
+            std::chrono::steady_clock::now().time_since_epoch()).count();
+        typename DfPn<N>::Cert5 cert;
+        int res=0;
+        bool timed_out=false;
+        try{
+            res=solver.quant_root(first,r2,budget,&cert);
+        }catch(const std::exception& e){
+            O<<"quant_error,"<<r2<<",EXCEPTION,\""<<e.what()<<"\"\n"; O.flush();
+            ++nunk; continue;
+        }
+        double t1=std::chrono::duration<double>(
+            std::chrono::steady_clock::now().time_since_epoch()).count();
+        const auto& oc=solver.oracle_stats();
+        O<<"quant,"<<r2<<","
+         <<(res==1?"WIN":(res==2?"LOSS":"UNKNOWN"))<<","
+         <<(cert.r3>=0?cert.r3:-1)<<","<<cert.q4.size()<<","
+         <<oc.queries<<","<<oc.hits<<","<<oc.nodes<<","<<(long long)(t1-t0)<<","
+         <<solver.q_m3_tried()<<","<<solver.q_m3_refuted()<<","
+         <<solver.q_m3_unknown()<<","
+         <<solver.q_m4_sat()<<","<<solver.q_m4_sat_total()<<","
+         <<solver.q_m4_refuted()<<","<<solver.q_m4_unknown()<<","
+         <<solver.q_queries_at_refute()<<","
+         <<oc.tt_hits<<","<<oc.tt_misses<<","<<oc.tt_growth<<","
+         <<oc.evict_open<<","<<oc.evict_solved<<","
+         <<(oc.probe_n?oc.probe_sum/(double)oc.probe_n:0.0)<<","
+         <<oc.timeouts<<","<<oc.aborted_by_time<<"\n";
+        if(res==1){
+            ++nwin;
+            O<<"# certificate reply="<<r2<<" r3="<<cert.r3
+             <<" n_r4="<<cert.q4.size()<<"\n";
+            for(const auto& row:cert.q4){
+                O<<"#   r4="<<row.r4<<" r5="<<row.r5
+                 <<" s5key="<<row.key.lo<<","<<row.key.hi<<"\n";
+            }
+        }else if(res==2) ++nloss; else ++nunk;
+        O.flush();
+        if(timeout_s>0 && (t1-t_all)>=timeout_s){ timed_out=true; }
+        if(timed_out) break;
+    }
+    double t_end=std::chrono::duration<double>(
+        std::chrono::steady_clock::now().time_since_epoch()).count();
+    const auto& oc=solver.oracle_stats();
+    O<<"# SUMMARY WIN="<<nwin<<" LOSS="<<nloss<<" UNKNOWN="<<nunk
+     <<" oracle_queries="<<oc.queries<<" oracle_hits="<<oc.hits
+     <<" oracle_wins="<<oc.wins<<" oracle_losses="<<oc.losses
+     <<" oracle_unknowns="<<oc.unknowns<<" oracle_nodes="<<oc.nodes
+     <<" oracle_wall_ms="<<oc.wall
+     <<" cache_loaded="<<oc.loaded
+     <<" cache_size="<<solver.oracle_cache_size()
+     <<" wall_s="<<(long long)(t_end-t_all)<<"\n";
+    O.flush();
+    if(!s5_cache_out.empty()) solver.oracle_save(s5_cache_out);
+    return 0;
+}
+
+// ---- s4-direct vs m5-enumeration A/B, on one fixed fourth position --
+// The quant solver's inner step is "exists m5 : WIN(s5)". Since an s4
+// position is an OR node, solving that position exactly answers the
+// same question, while getting the exact DFS child ordering and sharing
+// transpositions across the fifth moves inside a single search.
+//
+// BUDGET IS A TOTAL NODE CAP, NOT A PER-QUERY ONE. The earlier version
+// gave `budget` to the single direct solve AND to each individual s5
+// oracle call, so the enum arm could have spent n times the direct
+// arm. Both arms now share one pool and the enum arm is charged against
+// it as it goes.
+//
+// The third arm is a cheap enumeration that solves nothing: it lists
+// every fifth move with its canonical s5 key, legal count and whether
+// the PnTT already holds a verdict. Without it the comparison is
+// uninterpretable, because the two arms pick their first child by
+// different rules (count-ASC versus board index) and may simply be
+// digging different s5 positions.
+//
+// Output: arm,result,nodes,ms,queries,winning_m5  (plus m5,<idx>,key,legal,tt)
+template<int N>
+static int run_s4_ab(const std::string& spec,int first,
+                     std::uint64_t budget,unsigned memo_power,
+                     std::ostream& O){
+    int r2=0,m3=0,m4=0;
+    {
+        std::vector<std::string> f;
+        std::stringstream ss(spec); std::string t;
+        while(std::getline(ss,t,',')) if(!t.empty()) f.push_back(t);
+        if(f.size()!=3){
+            std::cerr<<"--s4-ab wants r2,m3,m4\n"; return 2;
+        }
+        r2=std::stoi(f[0]); m3=std::stoi(f[1]); m4=std::stoi(f[2]);
+    }
+    O<<"# s4 A/B: first="<<first<<" r2="<<r2<<" m3="<<m3<<" m4="<<m4
+     <<" TOTAL_node_cap="<<budget<<" memo=2^"<<memo_power<<"\n";
+    O<<"# arm,result,nodes,ms,queries,winning_m5\n";
+    O.flush();
+
+    // Arm 0: enumerate the fifth moves, solving none of them.
+    {
+        DfPn<N> e(memo_power);
+        e.set_deadline(0);
+        e.set_exact_handoff(0,1,1,0);
+        e.oracle_clear();
+        e.set_first_move(first);
+        auto v=e.enum_m5_unresolved(r2,m3,m4);
+        O<<"# m5_count,"<<v.size()<<"\n";
+        for(const auto& info:v){
+            O<<"m5,"<<info.m5<<","<<info.key.lo<<","<<info.key.hi
+             <<","<<info.legal<<","<<info.tt_state<<"\n";
+        }
+        O.flush();
+    }
+
+    // Arm 1: direct exact solve of the 4-stone position, one cap.
+    {
+        DfPn<N> a(memo_power);
+        a.set_deadline(0);
+        a.set_exact_handoff(0,1,1,0);
+        a.oracle_clear();
+        a.set_first_move(first);
+        int w5=-1;
+        double t0=std::chrono::duration<double>(
+            std::chrono::steady_clock::now().time_since_epoch()).count();
+        int res=a.s4_direct(r2,m3,m4,budget,&w5);
+        double t1=std::chrono::duration<double>(
+            std::chrono::steady_clock::now().time_since_epoch()).count();
+        const auto& oc=a.oracle_stats();
+        O<<"direct,"<<res<<","<<oc.nodes<<","<<(long long)((t1-t0)*1000.0)
+         <<","<<oc.queries<<","<<w5<<"\n";
+        O.flush();
+    }
+
+    // Arm 2: enumerate the fifth moves, solving each from the SAME
+    // total pool. Each query is charged min(per_query_cap, remaining),
+    // and the arm stops as soon as the pool is empty.
+    {
+        DfPn<N> b(memo_power);
+        b.set_deadline(0);
+        b.set_exact_handoff(0,1,1,0);
+        b.oracle_clear();
+        b.set_first_move(first);
+        std::uint64_t per_query=budget;
+        std::uint64_t spent=0;
+        int queries=0, res=0, w5=-1;
+        double t0=std::chrono::duration<double>(
+            std::chrono::steady_clock::now().time_since_epoch()).count();
+        auto v=b.enum_m5_unresolved(r2,m3,m4);
+        for(const auto& info:v){
+            std::uint64_t remaining = (spent>=budget)?0:(budget-spent);
+            if(remaining==0){ res=0; break; }
+            std::uint64_t allow=std::min<std::uint64_t>(remaining,per_query);
+            typename DfPn<N>::TState s2{};
+            s2=b.add_pub(s2,first); s2=b.add_pub(s2,r2);
+            typename DfPn<N>::TState s3=b.add_pub(s2,m3);
+            typename DfPn<N>::TState s4=b.add_pub(s3,m4);
+            Bits o5{}; b.setbit_pub(o5,first); b.setbit_pub(o5,r2);
+            b.setbit_pub(o5,m3); b.setbit_pub(o5,m4); b.setbit_pub(o5,info.m5);
+            std::uint64_t before=b.exact_total_nodes();
+            int r=b.s5_oracle(s4,o5,allow);
+            spent += b.exact_total_nodes()-before;
+            ++queries;
+            if(r==1){ res=1; w5=info.m5; break; }
+            if(r==2) continue;
+            res=0; break;               // inconclusive
+        }
+        double t1=std::chrono::duration<double>(
+            std::chrono::steady_clock::now().time_since_epoch()).count();
+        const auto& oc=b.oracle_stats();
+        O<<"enum_m5,"<<res<<","<<oc.nodes<<","<<(long long)((t1-t0)*1000.0)
+         <<","<<queries<<","<<w5<<"\n";
+        O.flush();
+    }
+    return 0;
+}
+
+// ---- LOSS-edge cover for one two-stone reply ----------------------
+// Vertices are the legal third moves. Edges are UNORDERED PAIRS of legal
+// third moves, but only pairs that are actually reachable: for each m3=a
+// the fourth reply b must be a LEGAL reply to a. Generating them that way
+// rather than taking all C(V,2) pairs matters, because "four distinct
+// stones" is weaker than "legal position": {0,60,12,24} is four
+// collinear points, so 12 and 24 can never be consecutive moves. The old
+// version used all pairs and so admitted illegal edges, which would let a
+// later cache entry turn a nonexistent position into a "proved" LOSS.
+//
+// Edges are then reduced to CANONICAL s4 CLASSES: two edges whose
+// four-stone sets are D4 images of each other name the same position, so
+// one proof covers both. A class's coverage is the union of its edges'
+// endpoints, which is how many third moves one proof can refute.
+template<int N>
+static int run_cover(int first,int r2,const std::string& s5_cache,
+                     std::ostream& O){
+    DfPn<N> s(24);
+    s.set_deadline(0);
+    s.set_exact_handoff(0,1,1,0);
+    s.oracle_clear();
+    s.set_first_move(first);
+    if(!s5_cache.empty()) s.oracle_load(s5_cache);
+
+    Bits base{}; s.setbit_pub(base,first); s.setbit_pub(base,r2);
+    std::vector<int> verts=s.legal_moves_from(base);
+    const int V=(int)verts.size();
+
+    // Safe edges, generated from the game's own legal-move generator.
+    std::vector<std::pair<int,int>> edges;
+    for(int a:verts){
+        Bits occ=base; s.setbit_pub(occ,a);
+        for(int b:s.legal_moves_from(occ)){
+            if(b==a) continue;
+            edges.push_back({std::min(a,b),std::max(a,b)});
+        }
+    }
+    std::sort(edges.begin(),edges.end());
+    edges.erase(std::unique(edges.begin(),edges.end()),edges.end());
+
+    // Reduce to canonical s4 classes.
+    std::map<std::pair<std::uint64_t,std::uint64_t>,
+             std::vector<std::pair<int,int>>> classes;
+    for(const auto& e:edges){
+        Bits k=s.edge_class_key_pub(r2,e.first,e.second);
+        classes[{k.lo,k.hi}].push_back(e);
+    }
+
+    // Canonical s4 classes are grouped by a key the solver computed,
+    // so two edges in one class are D4 images of the same position and
+    // MUST agree. If a class ever contains both a decided WIN and a
+    // decided LOSS, the cache or the canonicalisation is wrong, and
+    // taking the numeric maximum would silently let LOSS win. That is
+    // exactly the shape of bug that would forge a refutation, so it is
+    // refused instead.
+    for(const auto& kv:classes){
+        int have=-1;
+        for(const auto& e:kv.second){
+            typename DfPn<N>::EdgeInfo ei=s.classify_edge_pub(r2,e.first,e.second);
+            int v=(int)ei.verdict;
+            if(v==0) continue;                 // UNKNOWN says nothing
+            if(have<0){ have=v; continue; }
+            if(have!=v)
+                throw std::runtime_error(
+                    "canonical s4 class has conflicting WIN/LOSS edges");
+        }
+    }
+
+    O<<"# LOSS-edge cover: first="<<first<<" r2="<<r2
+     <<" vertices="<<V<<" safe_edges="<<edges.size()
+     <<" classes="<<classes.size()
+     <<" cache_loaded="<<s.oracle_stats().loaded<<"\n";
+    O.flush();
+
+    // Classify every class from the cache only, and record its coverage.
+    struct Cls {
+        int verdict=0;            // 0 unknown, 1 WIN, 2 LOSS
+        std::vector<int> covered; // third moves this class's edges span
+        int unknown_children=0;
+        int nedges=0;
+    };
+    std::map<std::pair<std::uint64_t,std::uint64_t>,Cls> info;
+    for(const auto& kv:classes){
+        Cls c; c.nedges=(int)kv.second.size();
+        std::vector<int> cov;
+        int v=0, unk=0;
+        for(const auto& e:kv.second){
+            typename DfPn<N>::EdgeInfo ei=s.classify_edge_pub(r2,e.first,e.second);
+            if((int)ei.verdict>v) v=(int)ei.verdict;
+            if(ei.unknown_children>0) unk=1;
+            cov.push_back(e.first); cov.push_back(e.second);
+        }
+        std::sort(cov.begin(),cov.end());
+        cov.erase(std::unique(cov.begin(),cov.end()),cov.end());
+        c.verdict=v; c.unknown_children=unk; c.covered=cov;
+        info[kv.first]=c;
+    }
+
+    int n_loss=0,n_win=0,n_unk=0,all_pairs=0;
+    for(int a:verts) for(int b:verts) if(a<b) ++all_pairs;
+    for(const auto& kv:info){
+        if(kv.second.verdict==2) ++n_loss;
+        else if(kv.second.verdict==1) ++n_win;
+        else ++n_unk;
+    }
+    O<<"# all_pairs="<<all_pairs<<" safe_edges="<<edges.size()
+     <<" classes_loss="<<n_loss<<" classes_win="<<n_win
+     <<" classes_unknown="<<n_unk<<"\n";
+    {   // coverage histogram over ALL classes, so it can be diffed
+        // against the independent Python checker
+        std::map<int,int> h;
+        int mx=0;
+        for(const auto& kv:info){
+            int c=(int)kv.second.covered.size();
+            ++h[c]; if(c>mx) mx=c;
+        }
+        O<<"# coverage";
+        for(const auto& kv:h) O<<" cov"<<kv.first<<"="<<kv.second;
+        O<<" max="<<mx<<" lower_bound="<<((mx>0)?((V+mx-1)/mx):V)<<"\n";
+    }
+    O.flush();
+
+    // Greedy cover over LOSS classes, biggest coverage first.
+    // Coverage is indexed by board point IDs, not by compact vertex slots.
+    // verts omits the two occupied points, but may still contain N*N-1.
+    std::vector<char> covered((std::size_t)DfPn<N>::V,0);
+    int covered_n=0;
+    std::vector<std::pair<std::uint64_t,std::uint64_t>> used;
+    while(true){
+        std::pair<std::uint64_t,std::uint64_t> best_key{0,0};
+        std::vector<int> best_cov; int best=-1;
+        for(const auto& kv:info){
+            if(kv.second.verdict!=2) continue;
+            bool used_already=false;
+            for(const auto& u:used) if(u==kv.first) used_already=true;
+            if(used_already) continue;
+            std::vector<int> fresh;
+            for(int v:kv.second.covered) if(!covered[(std::size_t)v]) fresh.push_back(v);
+            if((int)fresh.size()>best){ best=(int)fresh.size(); best_key=kv.first; best_cov=fresh; }
+        }
+        if(best<=0) break;
+        for(int v:best_cov) covered[(std::size_t)v]=1;
+        covered_n+=best;
+        used.push_back(best_key);
+        std::vector<int> rep;
+        for(const auto& e:classes[best_key]){ rep.push_back(e.first); rep.push_back(e.second); }
+        std::sort(rep.begin(),rep.end());
+        rep.erase(std::unique(rep.begin(),rep.end()),rep.end());
+        // raw_edges is the number of unordered pairs in this class;
+        // covered is how many third-move vertices it spans. These
+        // differ (the {1,2}/{11,22} class has 2 edges but covers 4
+        // vertices), and conflating them misreported the earlier run.
+        O<<"cover_class,"<<best_key.first<<","<<best_key.second
+         <<",covers="<<best<<",raw_edges="<<classes[best_key].size();
+        for(int v:best_cov) O<<","<<v;
+        O<<"\n";
+        O.flush();
+    }
+    O<<"# COVER covered="<<covered_n<<"/"<<V
+     <<" classes_used="<<used.size()<<"\n";
+    if(covered_n<V){
+        O<<"# uncovered vertices:";
+        for(int v:verts) if(!covered[(std::size_t)v]) O<<" "<<v;
+        O<<"\n";
+    }else{
+        O<<"# ALL VERTICES COVERED by cache-proved LOSS classes\n";
+    }
+    O.flush();
+    return 0;
+}
+
+// ---- adaptive coordinator for one two-stone reply ------------------
+// The refutation of reply r2 is a set cover over canonical s4 classes:
+// a third move a is refuted as soon as ANY incident class is proved
+// LOSS, so refuting the whole reply means covering all 119 vertices with
+// LOSS-proved classes. OPT is 31, certified by ILP, so at most 31 class
+// proofs are ever needed and "minimum additional classes" is exact.
+//
+// After every verdict the optimistic cover is re-solved:
+//     LOSS class    -> usable, cost 0 (already paid for)
+//     UNKNOWN class -> usable, cost 1 (still to be proved)
+//     WIN class     -> FORBIDDEN (can never refute a third move)
+// and only the UNKNOWN members of that cover are worked on, so effort
+// goes to classes that can still appear in a certificate rather than to
+// all 3395 remaining.
+template<int N>
+static int run_coord(int first,int r2,const std::string& s5_cache,
+                    double budget_s,int max_classes,
+                    const std::string& s5_cache_out,
+                    const std::string& s4_cache_out,
+                    const std::string& frontier_path,
+                    std::ostream& O){
+    DfPn<N> s(24);
+    s.set_deadline(0);
+    s.set_exact_handoff(0,1,1,0);
+    s.oracle_clear();
+    s.set_first_move(first);
+    if(!s5_cache.empty()) s.oracle_load(s5_cache);
+
+    Bits base{}; s.setbit_pub(base,first); s.setbit_pub(base,r2);
+    std::vector<int> verts=s.legal_moves_from(base);
+
+    std::vector<std::pair<int,int>> edges;
+    for(int a:verts){
+        Bits occ=base; s.setbit_pub(occ,a);
+        for(int b:s.legal_moves_from(occ)){
+            if(b==a) continue;
+            edges.push_back({std::min(a,b),std::max(a,b)});
+        }
+    }
+    std::sort(edges.begin(),edges.end());
+    edges.erase(std::unique(edges.begin(),edges.end()),edges.end());
+
+    std::map<std::pair<std::uint64_t,std::uint64_t>,std::vector<std::pair<int,int>>> groups;
+    for(const auto& e:edges){
+        Bits k=s.edge_class_key_pub(r2,e.first,e.second);
+        groups[{k.lo,k.hi}].push_back(e);
+    }
+
+    std::vector<std::size_t> order;
+    std::vector<typename DfPn<N>::CovMemo> cov;
+    std::vector<typename DfPn<N>::EdgeVerdict> verd;
+    std::vector<int> unk_cnt;
+    std::vector<const std::vector<std::pair<int,int>>*> gvec;
+    for(const auto& kv:groups){
+        std::vector<int> vs;
+        for(const auto& e:kv.second){ vs.push_back(e.first); vs.push_back(e.second); }
+        std::sort(vs.begin(),vs.end());
+        vs.erase(std::unique(vs.begin(),vs.end()),vs.end());
+        typename DfPn<N>::CovMemo cm; cm.verts=vs;
+        // All raw edges in one canonical s4 class are D4-equivalent
+        // four-stone positions. Legality is D4 invariant and s5 children
+        // are canonicalized again, hence every raw edge has the SAME set
+        // of canonical s5 child keys. Classify one representative only.
+        const auto& rep=kv.second.front();
+        auto rei=s.classify_edge_pub(r2,rep.first,rep.second);
+        int unk=rei.unknown_children;
+        typename DfPn<N>::EdgeVerdict v=rei.verdict;
+        order.push_back(cov.size());
+        cov.push_back(cm);
+        verd.push_back(v);
+        unk_cnt.push_back(unk);
+        gvec.push_back(&kv.second);
+    }
+
+    std::vector<int> preferred_slots;
+    if(!frontier_path.empty()){
+        std::ifstream ff(frontier_path);
+        if(!ff) throw std::runtime_error("cannot open --coord-frontier");
+        std::map<std::pair<std::uint64_t,std::uint64_t>,int> slot_of;
+        int slot=0;
+        for(const auto& kv:groups) slot_of[kv.first]=slot++;
+        std::string line;
+        std::set<int> seen;
+        while(std::getline(ff,line)){
+            if(line.empty() || line[0]=='#') continue;
+            std::stringstream ls(line);
+            std::string a,b;
+            if(!std::getline(ls,a,',') || !std::getline(ls,b,','))
+                throw std::runtime_error("bad --coord-frontier row");
+            auto key=std::make_pair(std::stoull(a),std::stoull(b));
+            auto it=slot_of.find(key);
+            if(it==slot_of.end())
+                throw std::runtime_error("--coord-frontier key not present in this reply");
+            if(seen.insert(it->second).second) preferred_slots.push_back(it->second);
+        }
+        if(preferred_slots.empty())
+            throw std::runtime_error("--coord-frontier contains no usable class keys");
+    }
+
+    O<<"# coordinator: first="<<first<<" r2="<<r2
+     <<" vertices="<<verts.size()<<" classes="<<groups.size()
+     <<" cache_loaded="<<s.oracle_stats().loaded
+     <<" frontier_seed="<<preferred_slots.size()<<"\n";
+    O<<"# class_index,cov_size,unknown_s5,verdict,nodes,wall_ms\n";
+    O.flush();
+
+    // Dump the whole class table, not just the decided classes. This costs
+    // nothing (the search is the expensive part) and it is what lets an
+    // independent checker recompute every class key, its coverage and its
+    // legal fifth moves from the board alone. Without it a manifest can only
+    // be checked for the classes this run happened to decide, and the
+    // canonical-key convention cannot be cross-checked at all.
+    O<<"# s4table,"<<first<<","<<r2<<","
+     <<verts.size()<<","<<groups.size()<<"\n";
+    for(int slot=0;slot<(int)order.size();++slot){
+        const auto& vs=cov[(std::size_t)slot].verts;
+        const auto& eg=*gvec[(std::size_t)slot];
+        Bits k=s.edge_class_key_pub(r2,eg.front().first,eg.front().second);
+        O<<"s4table,"<<slot<<","<<k.lo<<","<<k.hi<<","
+         <<vs.size()<<","<<unk_cnt[(std::size_t)slot]<<","
+         <<(verd[(std::size_t)slot]==DfPn<N>::EdgeVerdict::LOSS?"LOSS":
+            (verd[(std::size_t)slot]==DfPn<N>::EdgeVerdict::WIN?"WIN":"UNKNOWN"))
+         <<",";
+        for(std::size_t j=0;j<vs.size();++j) O<<(j?",":"")<<vs[j];
+        O<<",";
+        for(std::size_t j=0;j<eg.size();++j)
+            O<<(j?",":"")<<eg[j].first<<":"<<eg[j].second;
+        O<<"\n";
+    }
+    O.flush();
+
+    double t_start=std::chrono::duration<double>(
+        std::chrono::steady_clock::now().time_since_epoch()).count();
+    int touched=0;
+
+    for(;;){
+        auto st=s.coordinate(cov,verd,preferred_slots.empty()?nullptr:&preferred_slots);
+        O<<"# COVER optimistic="<<st.cover_size<<" in_cover="<<st.covered
+         <<" secured="<<st.secured<<"/"<<verts.size()
+         <<" min_additional="<<st.min_additional
+         <<" forbidden="<<st.forbidden<<" worked="<<touched<<"\n";
+        O.flush();
+        // Victory requires every vertex SECURED by a proved LOSS class.
+        if(st.covered==(std::uint64_t)verts.size() &&
+           st.secured==(std::uint64_t)verts.size()){
+            O<<"# ALL VERTICES SECURED: reply r2="<<r2<<" REFUTED\n";
+            break;
+        }
+        if(touched>=max_classes){ O<<"# stop: class budget\n"; break; }
+        if(budget_s>0){
+            double el=std::chrono::duration<double>(
+                std::chrono::steady_clock::now().time_since_epoch()).count()-t_start;
+            if(el>=budget_s){ O<<"# stop: wall budget\n"; break; }
+        }
+
+        // Work ONLY on UNKNOWN members of the greedy optimistic cover
+        // returned above.  The previous implementation recomputed a
+        // "reachable" mask over every non-WIN class, which is almost the
+        // whole vertex set, and then accidentally picked from ALL UNKNOWN
+        // classes; that defeated the whole frontier-selection idea.
+        //
+        // Within the current skeleton, prefer the class that would secure
+        // the most vertices not already covered by a proved LOSS class,
+        // then the one with fewer unresolved s5 children.
+        std::vector<char> secured_now((std::size_t)DfPn<N>::V,0);
+        for(int slot=0;slot<(int)order.size();++slot){
+            if(verd[(std::size_t)slot]!=DfPn<N>::EdgeVerdict::LOSS) continue;
+            for(int v:cov[(std::size_t)slot].verts)
+                secured_now[(std::size_t)v]=1;
+        }
+        int pick=-1; std::size_t pfresh=0; int punk=1<<30;
+        for(int slot:st.members){
+            if(verd[(std::size_t)slot]!=DfPn<N>::EdgeVerdict::UNKNOWN) continue;
+            std::size_t fresh=0;
+            for(int v:cov[(std::size_t)slot].verts)
+                if(!secured_now[(std::size_t)v]) ++fresh;
+            if(fresh==0) continue;
+            int u=unk_cnt[(std::size_t)slot];
+            if(fresh>pfresh || (fresh==pfresh && u<punk)){
+                pick=slot; pfresh=fresh; punk=u;
+            }
+        }
+        if(pick<0){ O<<"# no reachable UNKNOWN class\n"; break; }
+
+        double t0=std::chrono::duration<double>(
+            std::chrono::steady_clock::now().time_since_epoch()).count();
+        std::uint64_t before=s.exact_total_nodes();
+        int dw=0, dl=0, du=0;
+        bool class_win_witness=false;
+        std::pair<std::uint64_t,std::uint64_t> class_win_key{0,0};
+        const auto& rep=gvec[(std::size_t)pick]->front();
+        typename DfPn<N>::TState s4{};
+        s4=s.add_pub(s4,first); s4=s.add_pub(s4,r2);
+        s4=s.add_pub(s4,rep.first); s4=s.add_pub(s4,rep.second);
+        Bits occ4{}; s.setbit_pub(occ4,first); s.setbit_pub(occ4,r2);
+        s.setbit_pub(occ4,rep.first); s.setbit_pub(occ4,rep.second);
+
+        struct PendingS5 { int z=0, legal=0; Bits key{}; };
+        std::vector<PendingS5> pending;
+        for(int z:s.legal_moves_from(occ4)){
+            typename DfPn<N>::TState s5{};
+            s5=s.add_pub(s5,first); s5=s.add_pub(s5,r2);
+            s5=s.add_pub(s5,rep.first); s5=s.add_pub(s5,rep.second);
+            s5=s.add_pub(s5,z);
+            Bits k=s.canonical_pub(s5);
+            int cached=s.oracle_cached_pub(k);
+            if(cached==1){
+                ++dw;
+                class_win_key={k.lo,k.hi};
+                class_win_witness=true;
+                break;
+            }
+            if(cached==2){
+                ++dl;
+                continue; // already proved; no oracle query is needed
+            }
+            Bits o5=occ4; s.setbit_pub(o5,z);
+            PendingS5 p; p.z=z; p.key=k;
+            p.legal=DfPn<N>::popcount_pub(s.legal_for_pub(o5));
+            pending.push_back(p);
+        }
+
+        // Existing cold measurements on 103 s5 children give
+        // corr(legal, log(nodes)) ~= +0.53.  Try lower-legal unknown roots
+        // first, matching the exact solver's decisive-child ordering.
+        std::sort(pending.begin(),pending.end(),[](const PendingS5& a,const PendingS5& b){
+            if(a.legal!=b.legal) return a.legal<b.legal;
+            if(a.key.hi!=b.key.hi) return a.key.hi<b.key.hi;
+            if(a.key.lo!=b.key.lo) return a.key.lo<b.key.lo;
+            return a.z<b.z;
+        });
+        if(!class_win_witness){
+            for(const auto& p:pending){
+                typename DfPn<N>::TState s5{};
+                s5=s.add_pub(s5,first); s5=s.add_pub(s5,r2);
+                s5=s.add_pub(s5,rep.first); s5=s.add_pub(s5,rep.second);
+                s5=s.add_pub(s5,p.z);
+                Bits o5=occ4; s.setbit_pub(o5,p.z);
+                int r=s.s5_oracle(s5,o5,20000000);
+                if(r==1){
+                    ++dw;
+                    class_win_key={p.key.lo,p.key.hi};
+                    class_win_witness=true;
+                    break;  // existential WIN certificate: one s5 is enough
+                }else if(r==2) ++dl;
+                else ++du;
+            }
+        }
+        double t1=std::chrono::duration<double>(
+            std::chrono::steady_clock::now().time_since_epoch()).count();
+        std::uint64_t used=s.exact_total_nodes()-before;
+
+        auto ei=s.classify_edge_pub(r2,rep.first,rep.second);
+        typename DfPn<N>::EdgeVerdict nv=ei.verdict;
+        int unk2=ei.unknown_children;
+        verd[(std::size_t)pick]=nv;
+        unk_cnt[(std::size_t)pick]=unk2;
+        ++touched;
+
+        // Record the certificate manifest for a decided class. LOSS is
+        // universal and therefore keeps the COMPLETE canonical s5 child
+        // set. WIN is existential and stores only the single proved WIN
+        // witness that caused the short-circuit above.
+        if(nv!=DfPn<N>::EdgeVerdict::UNKNOWN){
+            std::vector<std::pair<std::uint64_t,std::uint64_t>> man;
+            std::vector<std::pair<int,int>> raw=*gvec[(std::size_t)pick];
+            if(nv==DfPn<N>::EdgeVerdict::WIN){
+                if(!class_win_witness)
+                    throw std::runtime_error("WIN class without captured s5 witness");
+                man.push_back(class_win_key);
+            }else{
+                // Representative child set equals the union over the whole
+                // canonical class by D4 equivariance.
+                for(int z:s.legal_moves_from(occ4)){
+                    typename DfPn<N>::TState s5{};
+                    s5=s.add_pub(s5,first); s5=s.add_pub(s5,r2);
+                    s5=s.add_pub(s5,rep.first); s5=s.add_pub(s5,rep.second);
+                    s5=s.add_pub(s5,z);
+                    Bits k=s.canonical_pub(s5);
+                    man.push_back({k.lo,k.hi});
+                }
+                std::sort(man.begin(),man.end());
+                man.erase(std::unique(man.begin(),man.end()),man.end());
+            }
+            Bits kk=s.edge_class_key_pub(r2,gvec[(std::size_t)pick]->front().first,
+                                        gvec[(std::size_t)pick]->front().second);
+            s.s4_cache_record({kk.lo,kk.hi},first,r2,(std::uint8_t)nv,raw,
+                              cov[(std::size_t)pick].verts.size(),man);
+            O<<"# s4 certificate: class="<<order[(std::size_t)pick]
+             <<" result="<<(nv==DfPn<N>::EdgeVerdict::LOSS?2:1)
+             <<" n_child="<<man.size()
+             <<" edges="<<(*gvec[(std::size_t)pick]).size()<<"\n";
+            O.flush();
+        }
+
+        O<<"coord,"<<order[(std::size_t)pick]<<","
+         <<cov[(std::size_t)pick].verts.size()<<","<<punk<<","
+         <<(nv==DfPn<N>::EdgeVerdict::LOSS?"LOSS":
+            (nv==DfPn<N>::EdgeVerdict::WIN?"WIN":"UNKNOWN"))<<","
+         <<used<<","<<(long long)((t1-t0)*1000.0)
+         <<",win="<<dw<<" loss="<<dl<<" unk="<<du<<"\n";
+        O.flush();
+    }
+    double t_end=std::chrono::duration<double>(
+        std::chrono::steady_clock::now().time_since_epoch()).count();
+
+    // Persist BEFORE reporting, so a crash or a kill between the two does
+    // not lose proof material. This is the gap that cost the 2026-10-03
+    // pilot its 158 decided verdicts: it printed the verdicts in the log
+    // but had no way to write them out.
+    //
+    // Both writers append only what THIS run decided (the s5 oracle's
+    // `touched` set), so re-running with an unchanged cache writes nothing
+    // and the file does not grow without bound. Each run writes its OWN
+    // file: workers must not append to a shared cache, because the merge
+    // has to be deterministic per canonical key and has to be able to stop
+    // on a WIN/LOSS conflict.
+    s.oracle_save(s5_cache_out);
+    s.s4_cache_save(s4_cache_out);
+    {
+        const auto& oc=s.oracle_stats();
+        O<<"# cache_loaded="<<oc.loaded<<" cache_size="<<s.oracle_cache_size()
+         <<" cache_saved="<<oc.saved<<" cache_rejected="<<oc.rejected
+         <<" cache_hits="<<oc.hits<<" queries="<<oc.queries<<"\n";
+        O<<"# s4_classes_decided="<<s.s4_cache_size()
+         <<" s4_out="<<(s4_cache_out.empty()?"(none)":s4_cache_out)<<"\n";
+    }
+    O<<"# done classes_worked="<<touched
+     <<" wall_s="<<(long long)(t_end-t_start)<<"\n";
+    O.flush();
+    return 0;
+}
+
+#ifndef KYOUEN_DFPN_NO_MAIN
+int main(int argc,char**argv){
+    try{
+        int n=11;
+        unsigned pow=26;
+        bool reps=false, empty=false, children=false, tiebreak_desc=false;
+        bool exact_record=false;
+        int exact_record_limit=0;
+        std::string exact_replay_path="";
+        std::string proof_dag_path="";
+        std::uint64_t exact_replay_budget=1000000;
+        bool exact_replay_share_tt=false;
+        bool exact_replay_stop_on_loss=false;
+        bool exact_replay_profile=false;
+        int exact_share_layer=0;
+        std::string exact_budget_by_stones_spec="";
+        std::string exact_legal_by_stones_spec="";
+        int quant_first=60;
+        std::string quant_replies="";
+        std::uint64_t quant_budget=20000000;
+        double quant_timeout=0;
+        std::string s4_ab="";          // "r2,m3,m4"
+        std::string s5_cache="";       // persistent s5 verdict cache to load
+        std::string s5_cache_out="";   // same file to append decided verdicts
+        int cover_first=60, cover_r2=0;  // LOSS-edge cover over one reply
+        bool cover_run=false;
+        int coord_r2=0, coord_max=8;       // adaptive coordinator
+        double coord_wall=0;
+        bool coord_run=false;
+        std::string s4_cache_out="";      // s4 certificate manifest to write
+        std::string coord_frontier="";     // optional verified s4 class skeleton
+        unsigned s4_ab_memo=24;
+        std::uint64_t s4_ab_budget=20000000;
+        int exact_order=0;
+        std::string proof_dag_dir_path="";
+        int residual_audit_legal=0;
+        int residual_crosscheck_legal=0; // shadow-only residual outcome check
+        int residual_exact_legal=0;      // experimental residual exact handoff
+        int residual_share_gate=0;       // Sprouts-style exact component sharing
+        bool residual_profile=false;
+        int residual_builder=2;
+        bool residual_outcome=false;
+        std::uint64_t residual_outcome_budget=100000;
+        std::uint64_t residual_attempt_budget=0;
+        std::string only="";
+        double budget_s=0;
+        FrameChildrenOptions frame_options;
+        std::optional<std::uint64_t> search_node_budget;
+        int exact_legal=0, exact_retries=1;
+        std::uint64_t exact_budget=100000;
+        int exact_publish_mode=0; // 0=all, 1=root-only, 2=separate persistent exact cache
+        std::string log_path="", csv_path="", roots_path="";
+        for(int i=1;i<argc;++i){
+            std::string a=argv[i];
+            if(a=="--reps")reps=true;
+            else if(a=="--empty")empty=true;
+            else if(a=="--frame-children-cache") frame_options.cache=true;
+            else if(a=="--frame-children-expand-reuse") frame_options.cache=frame_options.expand_reuse=true;
+            else if(a=="--frame-children-audit") frame_options.cache=frame_options.audit=true;
+            else if(a.rfind("--n=",0)==0)n=std::stoi(a.substr(4));
+            else if(a.rfind("--node-budget=",0)==0){
+                const auto value=a.substr(14);
+                if(value.empty() || value.find_first_not_of("0123456789")!=std::string::npos)
+                    throw std::runtime_error("invalid --node-budget");
+                search_node_budget=std::stoull(value);
+            }
+            else if(a.rfind("--memo=",0)==0)pow=unsigned(std::stoul(a.substr(7)));
+            else if(a.rfind("--only=",0)==0)only=a.substr(7);
+            else if(a.rfind("--budget=",0)==0)budget_s=std::stod(a.substr(9));
+            else if(a.rfind("--log=",0)==0)log_path=a.substr(6);
+            else if(a.rfind("--csv=",0)==0)csv_path=a.substr(6);
+            else if(a.rfind("--roots-csv=",0)==0)roots_path=a.substr(12);
+            else if(a=="--children")children=true;
+            else if(a=="--tiebreak=asc")tiebreak_desc=false;
+            else if(a=="--tiebreak=desc")tiebreak_desc=true;
+            else if(a.rfind("--exact-legal=",0)==0)exact_legal=std::stoi(a.substr(14));
+            else if(a.rfind("--exact-budget=",0)==0)exact_budget=std::stoull(a.substr(15));
+            else if(a.rfind("--exact-retries=",0)==0)exact_retries=std::stoi(a.substr(16));
+            else if(a=="--exact-publish=all")exact_publish_mode=0;
+            else if(a=="--exact-publish=root")exact_publish_mode=1;
+            else if(a=="--exact-publish=separate")exact_publish_mode=2;
+            else if(a=="--exact-record")exact_record=true;
+            else if(a.rfind("--exact-record-limit=",0)==0)exact_record_limit=std::stoi(a.substr(21));
+            else if(a.rfind("--exact-replay=",0)==0)exact_replay_path=a.substr(15);
+            else if(a.rfind("--exact-replay-budget=",0)==0)exact_replay_budget=std::stoull(a.substr(22));
+            else if(a.rfind("--proof-dag=",0)==0)proof_dag_path=a.substr(12);
+            else if(a.rfind("--proof-dag-dir=",0)==0)proof_dag_dir_path=a.substr(16);
+            else if(a.rfind("--quant-first=",0)==0)quant_first=std::stoi(a.substr(14));
+            else if(a.rfind("--quant-replies=",0)==0)quant_replies=a.substr(16);
+            else if(a.rfind("--quant-budget=",0)==0)quant_budget=std::stoull(a.substr(15));
+            else if(a.rfind("--quant-timeout=",0)==0)quant_timeout=std::stod(a.substr(16));
+            else if(a.rfind("--s4-ab=",0)==0)s4_ab=a.substr(8);
+            else if(a.rfind("--s4-ab-memo=",0)==0)s4_ab_memo=std::stoul(a.substr(13));
+            else if(a.rfind("--s4-ab-budget=",0)==0)s4_ab_budget=std::stoull(a.substr(15));
+            else if(a.rfind("--s5-cache=",0)==0)s5_cache=a.substr(11);
+            else if(a.rfind("--s5-cache-out=",0)==0)s5_cache_out=a.substr(15);
+            else if(a.rfind("--cover-first=",0)==0)cover_first=std::stoi(a.substr(14));
+            else if(a.rfind("--cover-r2=",0)==0)cover_r2=std::stoi(a.substr(11));
+            else if(a=="--cover")cover_run=true;
+            else if(a.rfind("--coord-r2=",0)==0)coord_r2=std::stoi(a.substr(11));
+            else if(a.rfind("--coord-max=",0)==0)coord_max=std::stoi(a.substr(12));
+            else if(a.rfind("--coord-wall=",0)==0)coord_wall=std::stod(a.substr(13));
+            else if(a.rfind("--s4-cache-out=",0)==0)s4_cache_out=a.substr(15);
+            else if(a.rfind("--coord-frontier=",0)==0)coord_frontier=a.substr(17);
+            else if(a=="--coord")coord_run=true;
+            else if(a.rfind("--residual-audit-legal=",0)==0)residual_audit_legal=std::stoi(a.substr(23));
+            else if(a.rfind("--residual-crosscheck-legal=",0)==0)residual_crosscheck_legal=std::stoi(a.substr(28));
+            else if(a.rfind("--residual-exact-legal=",0)==0)residual_exact_legal=std::stoi(a.substr(23));
+            else if(a.rfind("--residual-share-gate=",0)==0)residual_share_gate=std::stoi(a.substr(22));
+            else if(a=="--residual-profile")residual_profile=true;
+            else if(a.rfind("--residual-evaluator=",0)==0){
+                const auto mode=a.substr(21);
+                if(mode=="outcome") residual_outcome=true;
+                else if(mode=="grundy") residual_outcome=false;
+                else throw std::runtime_error("invalid --residual-evaluator");
+            }
+            else if(a.rfind("--residual-outcome-budget=",0)==0){
+                const auto value=a.substr(26);
+                if(value.empty() || value.find_first_not_of("0123456789")!=std::string::npos)
+                    throw std::runtime_error("invalid --residual-outcome-budget");
+                residual_outcome_budget=std::stoull(value);
+            }
+            else if(a.rfind("--residual-attempt-budget=",0)==0){
+                const auto value=a.substr(std::string("--residual-attempt-budget=").size());
+                if(value.empty() || value.find_first_not_of("0123456789")!=std::string::npos)
+                    throw std::runtime_error("invalid --residual-attempt-budget");
+                residual_attempt_budget=std::stoull(value);
+                if(residual_attempt_budget==0) throw std::runtime_error("--residual-attempt-budget must be positive");
+            }
+            else if(a.rfind("--residual-builder=",0)==0){
+                const auto mode=a.substr(19);
+                if(mode=="scan") residual_builder=0;
+                else if(mode=="indexed") residual_builder=1;
+                else if(mode=="auto") residual_builder=2;
+                else throw std::runtime_error("invalid --residual-builder");
+            }
+            else if(a=="--exact-replay-share-tt")exact_replay_share_tt=true;
+            else if(a=="--exact-replay-stop-on-loss")exact_replay_stop_on_loss=true;
+            else if(a=="--exact-replay-profile")exact_replay_profile=true;
+            else if(a.rfind("--exact-share-layer=",0)==0)exact_share_layer=std::stoi(a.substr(20));
+            else if(a=="--exact-order=count")exact_order=0;
+            else if(a=="--exact-order=countd")exact_order=1;
+            else if(a=="--exact-order=key")exact_order=2;
+            else if(a=="--exact-order=s5-countd")exact_order=3;
+            else if(a=="--exact-order=s5-target92")exact_order=4;
+            else if(a.rfind("--exact-budget-by-stones=",0)==0){
+                // Format: 5:5000000,6:500000,7:200000
+                exact_budget_by_stones_spec=a.substr(25);
+            }
+            else if(a.rfind("--exact-legal-by-stones=",0)==0){
+                // Format: 5:80,6:72,7:114. A value of 0 disables the
+                // handoff for that stone count.
+                exact_legal_by_stones_spec=a.substr(24);
+            }
+            else{
+                std::cerr<<"usage: "<<argv[0]<<" [--n=N] [--node-budget=N] [--frame-children-cache] [--frame-children-expand-reuse] [--frame-children-audit] [--empty] [--reps] [--memo=P] [--only=v,..] [--budget=S] [--log=P] [--csv=P] [--roots-csv=P] [--children] [--tiebreak=asc|desc] [--exact-legal=N] [--exact-budget=N] [--exact-retries=N] [--exact-publish=all|root|separate] [--exact-record] [--exact-record-limit=N] [--exact-replay=P] [--exact-replay-budget=N] [--exact-replay-stop-on-loss] [--exact-replay-profile] [--proof-dag=PATH] [--proof-dag-dir=DIR] [--exact-order=count|countd|key|s5-countd|s5-target92] [--exact-budget-by-stones=5:N,6:N] [--exact-legal-by-stones=5:N,6:N] [--coord-r2=N] [--coord-max=N] [--coord-wall=S] [--coord-frontier=P] [--s4-cache-out=P] [--s5-cache=P] [--s5-cache-out=P] [--residual-exact-legal=N] [--residual-share-gate=N] [--residual-profile] [--residual-evaluator=grundy|outcome] [--residual-outcome-budget=N] [--residual-attempt-budget=N] [--residual-builder=scan|indexed|auto] [--exact-replay-share-tt] [--exact-share-layer=N]\n";
+                return 2;
+            }
+        }
+        if(!reps && !empty && roots_path.empty() && exact_replay_path.empty()
+           && quant_replies.empty() && s4_ab.empty() && s5_cache.empty()
+           && !cover_run && !coord_run){
+            std::cerr<<"nothing to do without --empty/--reps/--roots-csv/--exact-replay/--quant-replies\n";
+            return 2;
+        }
+        if((!proof_dag_path.empty() || !proof_dag_dir_path.empty()) && exact_replay_path.empty()){
+            std::cerr<<"proof capture requires --exact-replay\n";
+            return 2;
+        }
+        std::ostream* lp=&std::cerr;
+        std::ofstream lf;
+        if(!log_path.empty()){
+            lf.open(log_path, std::ios::out | std::ios::app);
+            if(!lf){ std::cerr<<"cannot open log\n"; return 1; }
+            lp=&lf;
+        }
+        std::ostream* cp=&std::cout;
+        std::ofstream cf;
+        if(!csv_path.empty()){
+            cf.open(csv_path, std::ios::out | std::ios::app);
+            if(!cf){ std::cerr<<"cannot open csv\n"; return 1; }
+            cp=&cf;
+        }
+        // Parse --exact-budget-by-stones into a vector of (stones,budget).
+        // Format: 5:5000000,6:500000,7:200000
+        std::vector<std::pair<int,std::uint64_t>> budget_by_stones;
+        if(!exact_budget_by_stones_spec.empty()){
+            std::stringstream bs(exact_budget_by_stones_spec); std::string part;
+            while(std::getline(bs,part,',')){
+                if(part.empty()) continue;
+                std::size_t c=part.find(':');
+                if(c==std::string::npos){
+                    std::cerr<<"bad --exact-budget-by-stones entry: "<<part<<"\n";
+                    return 2;
+                }
+                int st=std::stoi(part.substr(0,c));
+                std::uint64_t bv=std::stoull(part.substr(c+1));
+                budget_by_stones.push_back({st,bv});
+            }
+        }
+        // Parse --exact-legal-by-stones the same way. Format: 5:80,6:72,7:114
+        std::vector<std::pair<int,int>> legal_by_stones;
+        if(!exact_legal_by_stones_spec.empty()){
+            std::stringstream ls(exact_legal_by_stones_spec); std::string part;
+            while(std::getline(ls,part,',')){
+                if(part.empty()) continue;
+                std::size_t c=part.find(':');
+                if(c==std::string::npos){
+                    std::cerr<<"bad --exact-legal-by-stones entry: "<<part<<"\n";
+                    return 2;
+                }
+                int st=std::stoi(part.substr(0,c));
+                int lv=std::stoi(part.substr(c+1));
+                legal_by_stones.push_back({st,lv});
+            }
+        }
+        if(search_node_budget && (!exact_replay_path.empty() || !quant_replies.empty()
+            || !s4_ab.empty() || !s5_cache.empty() || cover_run || coord_run))
+            throw std::runtime_error("--node-budget requires normal df-pn search");
+        if(residual_attempt_budget>0 && (!residual_outcome || residual_exact_legal<=0
+            || !exact_replay_path.empty() || !quant_replies.empty() || !s4_ab.empty()
+            || !s5_cache.empty() || cover_run || coord_run))
+            throw std::runtime_error("--residual-attempt-budget requires normal df-pn with outcome evaluator and positive residual gate");
+        if(frame_options.cache && (!exact_replay_path.empty() || !quant_replies.empty()
+            || !s4_ab.empty() || !s5_cache.empty() || cover_run || coord_run))
+            throw std::runtime_error("frame children cache requires normal df-pn search");
+        ResidualOptions residual_options{residual_audit_legal,residual_crosscheck_legal,
+            residual_exact_legal,residual_share_gate,residual_builder,residual_profile,
+            residual_outcome,residual_outcome_budget,residual_attempt_budget};
+        std::uint64_t total_exp=0;
+        if(residual_outcome && residual_share_gate>0)
+            throw std::runtime_error("outcome evaluator cannot share SG component cache");
+        int rc=0;
+        switch(n){
+            case 4:
+                if(!exact_replay_path.empty()) return run_exact_replay<4>(exact_replay_path,exact_replay_budget,pow,only,exact_order,residual_audit_legal,residual_crosscheck_legal,residual_exact_legal,residual_share_gate,residual_profile,residual_builder,residual_outcome,residual_outcome_budget,exact_replay_share_tt,exact_share_layer,exact_replay_stop_on_loss,exact_replay_profile,proof_dag_path,proof_dag_dir_path,*cp);
+                if(cover_run) return run_cover<4>(cover_first,cover_r2,s5_cache,*cp);
+
+                if(coord_run) return run_coord<4>(cover_first,coord_r2,s5_cache,coord_wall,coord_max,s5_cache_out,s4_cache_out,coord_frontier,*cp);
+
+                if(!s4_ab.empty()) return run_s4_ab<4>(s4_ab,quant_first,s4_ab_budget,s4_ab_memo,*cp);
+                if(!quant_replies.empty()) return run_quant<4>(quant_first,quant_replies,quant_budget,quant_timeout,pow,s5_cache,s5_cache_out,*cp);
+                rc=run<4>(only,budget_s,pow,empty,reps,children,tiebreak_desc,exact_legal,exact_budget,exact_retries,exact_publish_mode,exact_record,exact_record_limit,budget_by_stones,legal_by_stones,exact_order,residual_options,frame_options,search_node_budget,*lp,*cp,&total_exp,roots_path); break;
+            case 5:
+                if(!exact_replay_path.empty()) return run_exact_replay<5>(exact_replay_path,exact_replay_budget,pow,only,exact_order,residual_audit_legal,residual_crosscheck_legal,residual_exact_legal,residual_share_gate,residual_profile,residual_builder,residual_outcome,residual_outcome_budget,exact_replay_share_tt,exact_share_layer,exact_replay_stop_on_loss,exact_replay_profile,proof_dag_path,proof_dag_dir_path,*cp);
+                if(cover_run) return run_cover<5>(cover_first,cover_r2,s5_cache,*cp);
+
+                if(coord_run) return run_coord<5>(cover_first,coord_r2,s5_cache,coord_wall,coord_max,s5_cache_out,s4_cache_out,coord_frontier,*cp);
+
+                if(!s4_ab.empty()) return run_s4_ab<5>(s4_ab,quant_first,s4_ab_budget,s4_ab_memo,*cp);
+                if(!quant_replies.empty()) return run_quant<5>(quant_first,quant_replies,quant_budget,quant_timeout,pow,s5_cache,s5_cache_out,*cp);
+                rc=run<5>(only,budget_s,pow,empty,reps,children,tiebreak_desc,exact_legal,exact_budget,exact_retries,exact_publish_mode,exact_record,exact_record_limit,budget_by_stones,legal_by_stones,exact_order,residual_options,frame_options,search_node_budget,*lp,*cp,&total_exp,roots_path); break;
+            case 6:
+                if(!exact_replay_path.empty()) return run_exact_replay<6>(exact_replay_path,exact_replay_budget,pow,only,exact_order,residual_audit_legal,residual_crosscheck_legal,residual_exact_legal,residual_share_gate,residual_profile,residual_builder,residual_outcome,residual_outcome_budget,exact_replay_share_tt,exact_share_layer,exact_replay_stop_on_loss,exact_replay_profile,proof_dag_path,proof_dag_dir_path,*cp);
+                if(cover_run) return run_cover<6>(cover_first,cover_r2,s5_cache,*cp);
+
+                if(coord_run) return run_coord<6>(cover_first,coord_r2,s5_cache,coord_wall,coord_max,s5_cache_out,s4_cache_out,coord_frontier,*cp);
+
+                if(!s4_ab.empty()) return run_s4_ab<6>(s4_ab,quant_first,s4_ab_budget,s4_ab_memo,*cp);
+                if(!quant_replies.empty()) return run_quant<6>(quant_first,quant_replies,quant_budget,quant_timeout,pow,s5_cache,s5_cache_out,*cp);
+                rc=run<6>(only,budget_s,pow,empty,reps,children,tiebreak_desc,exact_legal,exact_budget,exact_retries,exact_publish_mode,exact_record,exact_record_limit,budget_by_stones,legal_by_stones,exact_order,residual_options,frame_options,search_node_budget,*lp,*cp,&total_exp,roots_path); break;
+            case 7:
+                if(!exact_replay_path.empty()) return run_exact_replay<7>(exact_replay_path,exact_replay_budget,pow,only,exact_order,residual_audit_legal,residual_crosscheck_legal,residual_exact_legal,residual_share_gate,residual_profile,residual_builder,residual_outcome,residual_outcome_budget,exact_replay_share_tt,exact_share_layer,exact_replay_stop_on_loss,exact_replay_profile,proof_dag_path,proof_dag_dir_path,*cp);
+                if(cover_run) return run_cover<7>(cover_first,cover_r2,s5_cache,*cp);
+
+                if(coord_run) return run_coord<7>(cover_first,coord_r2,s5_cache,coord_wall,coord_max,s5_cache_out,s4_cache_out,coord_frontier,*cp);
+
+                if(!s4_ab.empty()) return run_s4_ab<7>(s4_ab,quant_first,s4_ab_budget,s4_ab_memo,*cp);
+                if(!quant_replies.empty()) return run_quant<7>(quant_first,quant_replies,quant_budget,quant_timeout,pow,s5_cache,s5_cache_out,*cp);
+                rc=run<7>(only,budget_s,pow,empty,reps,children,tiebreak_desc,exact_legal,exact_budget,exact_retries,exact_publish_mode,exact_record,exact_record_limit,budget_by_stones,legal_by_stones,exact_order,residual_options,frame_options,search_node_budget,*lp,*cp,&total_exp,roots_path); break;
+            case 11:
+                if(!exact_replay_path.empty()) return run_exact_replay<11>(exact_replay_path,exact_replay_budget,pow,only,exact_order,residual_audit_legal,residual_crosscheck_legal,residual_exact_legal,residual_share_gate,residual_profile,residual_builder,residual_outcome,residual_outcome_budget,exact_replay_share_tt,exact_share_layer,exact_replay_stop_on_loss,exact_replay_profile,proof_dag_path,proof_dag_dir_path,*cp);
+                if(cover_run) return run_cover<11>(cover_first,cover_r2,s5_cache,*cp);
+
+                if(coord_run) return run_coord<11>(cover_first,coord_r2,s5_cache,coord_wall,coord_max,s5_cache_out,s4_cache_out,coord_frontier,*cp);
+
+                if(!s4_ab.empty()) return run_s4_ab<11>(s4_ab,quant_first,s4_ab_budget,s4_ab_memo,*cp);
+                if(!quant_replies.empty()) return run_quant<11>(quant_first,quant_replies,quant_budget,quant_timeout,pow,s5_cache,s5_cache_out,*cp);
+                rc=run<11>(only,budget_s,pow,empty,reps,children,tiebreak_desc,exact_legal,exact_budget,exact_retries,exact_publish_mode,exact_record,exact_record_limit,budget_by_stones,legal_by_stones,exact_order,residual_options,frame_options,search_node_budget,*lp,*cp,&total_exp,roots_path); break;
+            default: std::cerr<<"unsupported n\n"; return 2;
+        }
+        return rc;
+    }catch(const std::exception&e){
+        std::cerr<<"error: "<<e.what()<<"\n";return 1;
+    }
+}
+#endif

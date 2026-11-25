@@ -1,0 +1,17 @@
+# Exact integer results (upper endpoint excluded; p>32).
+# Columns: n, count of primes with n|I_p, smallest such prime (0 if none).
+# Direct congruence census, 37<=p<100000000: 5761444 primes.
+# Independent common-order census: 3960872 candidates with 3|p-1 or 5|p-1 or 7|p-1.
+# Both programs agree in every row.
+n count first
+3 35089 5113
+5 2251 67651
+7 364 865957
+9 120 960643
+15 14 7992421
+21 3 27251659
+35 0 0
+45 0 0
+63 0 0
+105 0 0
+# For p<10000000: 664568 primes; 15:1 (7992421), 21:0.

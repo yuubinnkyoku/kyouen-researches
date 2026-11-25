@@ -1,0 +1,1340 @@
+> **歴史的資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
+# 共円仮説検証 — このチャットの継続記録
+
+更新: 2026-09-30（round45追記）。チャット: `01a0e161-14c5-78f0-95c6-a684535bf209`。
+自動再開: heartbeat `automation-2`、1時間ごと、有効。
+
+## 最新の判定を優先する
+
+- B071/B072/B075成立、B073反証を原文採用: `../../experiments/original-claims/reports/round45-cover-gap-and-sharp-overlap.md`。
+  全k≥4でδ≥3、b≤floor(k(k−1)/6)−1。六石の整数反転証人でδ3を達成。
+  共通補完空点2個の下界・達成に必要な最小石数6を、7×7の六石二円証人で閉じた。
+  床等号は必ずしもSteinerではないが、Melchiorの下界で両方不可能。
+
+- B062 REFUTED: `../../experiments/original-claims/reports/round44-three-stone-cliques-and-tree-minima.md`。
+  三石のまま任意大のクリークK4Mを標準整数盤で実現、彩色数は無界。
+  4×4 S=[0,1,2]はK6と六色彩色で厳密χ6、最小反例盤4。
+- B064 SUPPORTED、勝敗反転の最小合法点数5・最小盤3（同round44）。
+  3×3 P5+一三点辺でg0対3。4合法点K1,3+葉三点辺はg2対1なので勝敗は保存。
+  B344は最小接続型K1,3を証明、大木の一般偶奇分類は未完了でPARTIAL。
+
+- B350 SUPPORTED、最小合法点数5・最小盤4: `../../experiments/original-claims/reports/round43-b350-value-preserving-move-switch.md`。
+  5×5五合法点でg1を保ち、勝ち手が{6}から全5点へ変わる。
+  m≤4全極小族の二方式全列挙で合法点数下界、n≤3全域比較と旧4×4再検算で盤下界。
+  原文存在は旧round2で得られており、今回は新しい最小性と証明書。
+
+- B446 SUPPORTEDに訂正: `../../experiments/original-claims/reports/round42-exact-residual-family-audit.md`。
+  4×4のS=[5,8,11,14]・T=[7,13,14,15]、同じL=[0,3,9,10]・R=パス。
+  完全族は二集合のみで二石交換でも分裂、一石解除数の最大値が8対7。
+  B057/B441/B443反証・B444成立も同じ完全族で監査採用。
+  B449は3合法点・一辺+孤立点の厳密抽象族40集合が4成分に分裂。
+  B448は全盤の四石配置対に三石層を通る橋を証明、原文全体はPARTIAL。
+
+- B065 SUPPORTED、最小盤8×8: `../../experiments/original-claims/reports/round41-b065-pair-empty-grundy-five.md`。
+  9石S=[0,1,5,10,17,37,48,50,59]、合法7点、極小二点辺0・三点辺8・四点辺1、g=5。
+  全128拡張の安全性を四方式、全67安全拡張のmexを三方式検算。
+  round39のn≤7全域除外と合わせ盤最小性まで確定。旧PARTIALは今回更新。
+
+- 全600原文の証拠索引: `../../experiments/original-claims/reports/round26-original-scope-index.md`、`../../experiments/original-claims/output/round26_original_scope_index.json`。
+  600原文行と節の前提を欠落なく保存。148件は原文照合した根拠を採用、452件は未監査。
+  未監査452は未解決452を意味しない。旧ラベルを自動昇格せず、確定残数はまだ出さない。
+- B349 SUPPORTED: `../../experiments/original-claims/reports/round40-b349-minimum-four-edge-classification.md`。
+  二点競合がある場合、四点辺が効く最小合法点数5・全9抽象型を一般証明。
+  全255ラベル付き族を独立分類し、6×6・7×7で9型全てを実現・全32拡張検算。
+  二点競合なしの単独高階辺を含める読みでは最小4・1型。両解釈を明記。
+  旧最小7等は二点・三点を削除する逆の近似だったため採用しない。
+- B345 REFUTED: `../../experiments/original-claims/reports/round38-b345-sole-triple-clique-counterexample.md`。
+  5×5で二点競合K2+K1+K1、唯一の極小三点辺がg=1→3を起こす。四点辺なし。
+  全16拡張を四方式検算。非退化の反例に必要な最小合法点数4も証明。
+- B524 SUPPORTED、B523 REFUTED: `../../experiments/original-claims/reports/round35-empty-intersection-minimum.md`。
+  4×4の三組[3,78,97]で共通点が空、全三組だけg=2。全8部分族の全安全mexを二方式検算。
+  既存全単独・全ペア除外により包含極小だけでなく基数最小。B521も同じ全ペア証拠で採用。
+- B067 REFUTED: `../../experiments/original-claims/reports/round34-b067-induced-seven-cycle.md`。4×4のS=[0,6,7,9]でh=3かつ誘導C7。
+  全256拡張によりK(S)=7を確定し、旧探索の過小評価問題を解消。
+- B068 SUPPORTED: `../../experiments/original-claims/reports/round34-b068-cospectral-opposite-games.md`。6×6の8頂点グラフ対が
+  次数列・厳密特性多項式とも一致し、二点残余だけでg=3/0。旧次数列だけの証拠を補完。
+- B343 SUPPORTED（単独三点辺の強い原文）: `../../experiments/original-claims/reports/round33-b343-single-triple-switch.md`。
+  6×6でRの三点辺はちょうど一つ、四点辺0。これだけの解除でg=1→3、勝ち手{14}→{15,19}。
+  全256部分集合の安全性を三方式で検算し、両版の全mex・子一覧を保存。最小盤とは主張しない。
+- B317 SUPPORTED、最小盤4×4: `../../experiments/original-claims/reports/round27-fixed-response-audit.md`。
+  J4の全112,212完全マッチングを検査。109,704は4手目、2,508は6手目で固定応答が破れる。
+  全件に安全ペア済みprefix・相手の合法手・違法な固定応答を付けた証明書を保存し、
+  独立4×4行列式・密配列mex・逆頂点順のマッチング全列挙で一対一の完全被覆を確認。
+- B031・B333 REFUTED、B334 SUPPORTED（最小盤は三件とも6×6）: `../../experiments/original-claims/reports/round25-forced-length-holes.md`。
+  6石SでT*=WFT={7,11}、中間9が欠ける。3石N局面AでT*={6,8,10}、WFT=∅。
+  全5,081,289状態を計算し、独立曲線占有DPと実プレイヤーの固定長AND/OR再帰でも検算。
+  n≤5全状態の別検算では両条件0。空盤のB331/B335へ中盤反例を流用しない。
+  B031の旧n=5反例T*={6,7,9}は偶奇混在で不可能。真の6×6反例に根拠を訂正した。
+- B356 SUPPORTED、B357 REFUTED（整数格子の無限族）: `../../experiments/original-claims/reports/round24-circular-cubic-multiple-cover.md`。
+  安全なk=12m石に対し、異なるm空点が全てb≥k²/144。四点共円をパラメータ積1へ帰着する。
+  共通分母で整数盤へ移し、反転後の安全性も保持。極大性を仮定しない原文を直接処理した。
+  原文索引の照合でround5/7の既存一般証明も確認。round24は別証明で、追加二件とは数えない。
+- B256 REFUTED（全nの一般証明）: `../../experiments/original-claims/reports/round23-b256-symmetric-minimum.md`。
+  一四点組だけの禁止は自由盤の勝者を必ず反転、互いに素な二組は禁止前の勝者を保存。
+  外側四隅と中央の四点組はD4不変で、最小の非空族サイズ1または2を必ず達成する。
+  B258も全n≥4で最小族に共通する必須D4型はない。原文の小盤量化は未指定なので全体判定は保留。
+- B251 PARTIAL、n=7全単独解除を除外: `../../experiments/original-claims/reports/round32-b251-seven-board-exclusion.md`。
+  全6,364組・935D4代表を補完マスクと曲線占有数の二方式で厳密に解き、反転0・UNKNOWN0。
+  共有した標準P/N表も全179,810,350局面で証明条件を再検査。既存n≤6除外と合わせて証人はn≥8。
+  全nの不存在とは扱わない。
+- B228 SUPPORTED（原文の円単位・点数降順追加）: `../../experiments/original-claims/reports/round22-b228-circle-thresholds.md`。
+  5×5で全直線の禁止を保ち、円なし→8点円5本→6点以上の17本で空盤g=2→0→2。
+  5・4点円まで含む五閾値を独立全状態mexで検査。同点数の円の追加順によらず二回以上反転する。
+- B252 SUPPORTED（同数解除の具体的比較）: `../../experiments/original-claims/reports/round22-b252-one-circle-versus-scattered.md`。
+  4×4中央8点円の全70組を解除するとg=0→1。互いに素な散在70組解除ではg=0を維持。
+  散在解除は41曲線、高々10組/曲線。三ゲームの独立全状態検算済み。
+- B063 SUPPORTED: `../../experiments/original-claims/reports/round19-b063-stone-hierarchy.md`。
+  誘導K_(1,4)は三石で全盤不可能、四石で4×4上に実現。三石の同じ一局面に
+  四頂点全11型が現れるため、三石と四石を分ける型の最小頂点数は5。
+  全kでK_(1,binom(k−1,2)+1)がk石で初めて可能。星に必要な最小石数も厳密公式化。
+- B253/B522 SUPPORTED、δ_quad(4×4)=3: `../../experiments/original-claims/reports/round19-rule-removal-audit.md`。
+  B253の既存三組解除証人はB522の原文も満たす。全8部分族を独立再検証し、
+  全194単独解除・18,721二組解除（D4で39+2,554軌道）も完全計算して反転なし。
+  三組全体では真のgが0→2。既存出力のg0=1は勝敗フラグだった。
+- B224 SUPPORTED（原文の存在主張）: `../../experiments/original-claims/reports/round21-b224-ten-curves.md`。
+  5×5の233本から四円・六直線の10本だけを残し、非空の勝ち初手9点を完全保存。
+  1,491,650合法局面の独立全状態mex検算済み。10本の最小性や全nの結果は主張しない。
+- B255 SUPPORTED、最小盤5×5: `../../experiments/original-claims/reports/round20-b255-maximum-preserving-flip.md`。
+  禁止四点19組を解除しても最大サイズ9・全100最大配置が完全一致し、空盤gは1→0。
+  round21で独立検算を再実行し正常終了。最大配置を極大配置で代用していない。
+  n≤4の全域除外は`../../experiments/original-claims/reports/round19-rule-removal-audit.md`の証明を使用。
+- B070 SUPPORTED: `../../experiments/original-claims/reports/round18-competition-stars.md`。
+  k石のP(S)はbinom(k,2)個のクリーク分割グラフの辺の和。
+  誘導K_(1,binom(k,2)+1)は禁止、全kで一葉少ない星は整数格子盤に実現でき、上限は鋭い。
+- B261/B266 SUPPORTED: `../../experiments/original-claims/reports/round18-pair-synergy.md`。
+  両方置いて初めて禁止される点はSの一石sとp,qの一般化円へ一意に分解。
+  総本数k以下、直線は高々一本。単独利得0・共同利得n−3の直線族と、
+  円だけで共同利得8m+1、盤辺長2·5^m+1となる無限族を証明。
+- B227 REFUTED（両者各一回の未使用パス権で開始）: `../../experiments/original-claims/reports/round18-equal-passes.md`。
+  同数の有限パス権では元の勝者が相手のパスに直後のパスで対応でき、通常勝者は変わらない。
+  不均等な残り権利の履歴状態やSG値全体の保存へ拡大解釈しない。
+- B089 REFUTED（一般証明）: `../../experiments/original-claims/reports/round17-b089-bounded-degree.md`。
+  Pilaの係数に一様な格子点数上界により、固定本数の次数3以下の曲線上の安全集合はo(n)。
+  可約曲線の直線成分には高々3石、非絶対既約な二次成分の実点は高々1点。
+  一方、素数pでは(t,t² mod p)、1≤t≤floor((p−1)/4)が安全でK_p≥p/4−5/4。
+  よってK_nとの差o(n)は不可能。曲線の係数をnごとに変えても同じ反証が成り立つ。
+- **全600件の原命題は未完了**: `../../experiments/original-claims/reports/round17-original-scope-audit.md`。
+  round5-FINAL-SUMMARYの600/600は弱化版の有限決着を含む。原文の一般証明とは区別する。
+  個票自体にB122 INCONCLUSIVE、B184 PARTIALなどが残るのでautomation-2を停止しない。
+  C_n=Θ(n^5)をn^6予想へ戻さない。B153総次数はΣd=4(C_n+D_n)で、共線だけの正規化は不足。
+- B458 PARTIAL（要約量による四点初出の決定性はREFUTED）: `../../experiments/original-claims/reports/round16-first-appearance.md`。
+  完全点数6、同じ幅差/高さ差17、B=q=3の二円でも、四点初出は12と15。
+  7^e倍では完全点集合が正確に拡大し、同一要約量を保ったまま初出差3·7^eが無界。
+  Bはqの関数なので、原始二次係数だけをqへ追加しても情報は増えない。
+  原文の「短く分類」「初出」の意味が未指定であり、原文全体を勝手にREFUTEDにはしない。
+- 外部半径の拡大定理: `../../experiments/original-claims/reports/round16-dilation-exterior.md`。
+  任意の有限非空安全Sで、十分大きい全ての3 mod4素数pに対しr(pS)=1。
+  三石円の整数点は正確にp倍、外側一層のℓ+1候補を三石直線ℓ本では塞げない。
+  最大性・最小極大性・一石移動は保存を主張しないため、B384/B385/B390は未解決のまま。
+- B477 SUPPORTED: `../../experiments/original-claims/reports/round15-standard-chord.md`。辞書順最初の二点を標準弦として、
+  原始方向u、整数長g、第三点wから既約分数A/B=(|w|²−gu·w)/det(u,w)を作る。
+  同分数の点数をNとすると全C_n=Σbinom(N,2)、各四点組を正確に一度計数。
+  Bは原始二次係数、qはBまたは2B。指数Bのアフィン格子への包含とq≤2(n−1)²を証明。
+- 分母の新一般結果: `../../experiments/original-claims/reports/round15-trapezoid-denominators.md`。
+  等脚台形はq≤4(n−1)/H。q=4n−10の無限族で係数4は漸近的に鋭い。
+  公刊の非等脚台形計数と合わせ、四点重みでq>4(n−1)の確率はO_ε(n^(-11/29+ε))。
+  それでも四点以上の円の最大分母はΘ(n²)。n=6t+8、t≡10 mod30でq=6t²+4t−6を実現。
+  最初の68×68証人は(33,1),(0,36),(43,0),(7,67)、q=634。
+- B480 SUPPORTED（閾値同時極限まで）: `../../experiments/original-claims/reports/round14-safety-correction.md`。
+  固定k=Θ(n^(3/4))でlog P(安全)=−E Z+[4ζ(3)/(45ζ(4))]k^5/n^4+O(n^(-3/8))。
+  B478のPoisson誤差はΘ(n^(-1/4))で最適。稀な五点直線束の確率・条件付き典型形も
+  `../../experiments/original-claims/reports/round14-rare-bundles.md` で証明済み。
+- B475/B478 SUPPORTED、B476/B479 REFUTED: round13の一般証明を優先。
+  公刊定理C_n=Θ(n^5)と非等脚台形計数を使用。有限nの平均増加・束の存在は漸近反証にならない。
+- B454 REFUTED: `../../experiments/original-claims/reports/round12-b454-counterexample.md`。最初の完全点数反例はm=11。
+  q=11でスパン161を実現するが、2の冪分母の全円をスパン161まで調べると11点なし。
+  q=11の点数公式は `../../experiments/original-claims/reports/round12-q11-counts.md`。従前の未解決メモを更新済み。
+- B456 SUPPORTED（全固定qの一般証明）: `../../experiments/original-claims/reports/round11-circle-records.md`。
+  ノルム上限Xの完全点数最大F_qについてlog F_q(X)~(log2)log X/log log X。
+  平方自由部分を有限集合Sに制限した最大Gは、許容型を含めばlog G~(log3/2)log X/log log X。
+  従って各平方類の記録更新は有限回だけで、新しい平方類の記録円が無限に必要になる。
+  それらは過去の記録更新円と半径比が有理数ですらない。整数拡大での新規格子点も考慮済み。
+  「既存最良円」は過去の記録更新半径の円。任意の非最良円からの拡大を排除したとは言わない。
+- B455 REFUTED（一般証明）: `../../experiments/original-claims/reports/round11-residue-orbits.md`。
+  q≥3の原始剰余類は90度回転で同点数の四個組になり、一つだけ厳密最大は不可能。
+  全剰余類間の一様性は必要なく、M=25,q=6では1点クラス四個・2点クラス四個。
+  回転で同一視した軌道間の一意な最大や、非対称な窓切断の主張とは区別する。
+- B376 REFUTED、B377/B379 SUPPORTED: `../../experiments/original-claims/reports/round10-small-saturation.md`。
+  8×8の8石極大408配置は正しくはD4で51軌道（旧309はスレッド集計の重複）。
+  全配置で被覆の必須曲線≥13本、厳密な最小被覆数は19〜29本。12本以下の被覆は不可能。
+  安全7石に合法点が一つなら8石極大の一石削除になるという縮約から、合法点≥2を証明。
+  8石極大を9×9へ埋込み、除去0個・追加1個で9石極大になる証人も構成した。
+- B453 SUPPORTED（一般証明）: `../../experiments/original-claims/reports/round10-circle-denominator.md`。
+  M=q²ρ²、D_q(M)=∏_{p≡1 mod4, p∤q}(v_p(M)+1) に対し完全点数m≤U(q,a,b)D_q(M)。
+  q≥3ではU=1。q=3,4では非空ならm=∏_{p≡1 mod4}(v_p(M)+1)という等号も証明。
+  各分母の中で中心を自由に選ぶ最小半径は、全点数閾値mについてR₄(m)=3R₃(m)/4。
+  四点以上の最小半径二乗は65/9と65/16。固定分母だけの有限点数上限は存在しない。
+  B454の収容盤比較・B456の記録算術型まで証明したとは扱わない。
+- B382 SUPPORTED: `../../experiments/original-claims/reports/round9-n7-outer-patterns.md`。7×7最大16配置の最初の合法外点を完全分類。
+  A代表は(7,8)の一つ、B代表は(8,−2),(8,6)の二つ。配置と同じD4変換で全例を生成できる。
+  距離1は全て禁止、距離2が初めて合法。全1,152外点を二方式で照合。B381も再確認。
+- B386 REFUTED、B387 SUPPORTED（K₈=15の既知値を利用）: `../../experiments/original-claims/reports/round9-n7-n8-overlap.md`。
+  7×7最大から安全15石への最小除去数は、埋込みを選べばA型1、B型2。
+  全16最大×4埋込み×14一石除去を完走。A型16条件で一石除去成功、B型0条件。
+  B型の二石除去証人も保存。単一の固定15石証人への距離だけで最適距離を判断しない。
+- B388 SUPPORTED（一般証明）: `../../experiments/original-claims/reports/round9-external-rays.md`。
+  二乗直径Qから、距離floor(sqrt(Q³))+1以遠では禁止理由が三石直線だけになる。
+  円を列挙しない合法外点アルゴリズム、r(S)≤C(k,3)+1、遠方禁止点数の一次準多項式を証明。
+- B357 REFUTED: `../../experiments/original-claims/reports/round7-parabola-cover.md`。安全なk=6m石に対し、高被覆空点がm個ある明示整数格子無限族。
+  全mでb≥k²/36、m≥3ならb≥k²/10。任意の固定0<ε<1/8でもΩ_ε(k)個を実現する。
+  盤幅n=81m²=9k²/4。古い小盤の有限観測によるSUPPORTEDを全称判定に使わない。極大性は要求しない。
+  先に保存した楕円構成の指数的な盤幅は、放物線P_t=(t,t²)によって二次幅へ改善済み。
+- B351/B354/B355 SUPPORTED、B353 REFUTED: `../../experiments/original-claims/reports/round6-rational-orchard.md`。
+  反転後の通常直線数δとGreen–Taoの定理、Mazurの有理捩れ点定理から一般証明。
+  有限部分群の剰余類の有理点は高々16点（特異三次も別途処理）。
+  有理・格子配置ではδ/k→∞、実数最適δは十分大きいkでk−1−2·1_{3|k}。
+- B352はPARTIAL: δ>k(log log k)^ηまでは証明。固定ε>0のk^(1+ε)下界とは区別する。
+- B557 REFUTED: 五行各三石の最小幅は12。AP限定なら14。
+  `../../experiments/original-claims/reports/round5-row-thresholds.md`。古い幅10の誤った証人や、幅11を予想したラベルを再採用しない。
+- B074 REFUTED、B356 SUPPORTED: 三次曲線の反転から二次重複被覆を持つ整数格子無限族。
+  `../../experiments/original-claims/reports/round5-quadratic-cover.md`。
+- B360 SUPPORTED: 同石数、双方の最大bがΘ(k²)でも、盤拡大で禁止点総数比が無限大。
+  `../../experiments/original-claims/reports/round5-cover-union.md`。
+- B558 SUPPORTED: `../../experiments/original-claims/reports/round8-ap-quadratic-prime.md`。各行に(2r²+jp,r)、j=0,1,2を置く一般構成。
+  16(w−1)²+1<p≤32(w−1)²+2の素数pを公差に選ぶと、幅≤66(w−1)²+5で全wの安全性を証明。
+  三行型は行列式をpで整数除算した後の合同式が核心。四行型も法pの放物線で排除する。
+  古い公差1候補の全w安全性はなお未証明だが、B558そのものの完了条件ではなくなった。
+- 以下の過去成果欄は履歴を含む。B542の旧PARTIALは後述のSUPPORTEDに更新済み。
+
+## ユーザーの依頼
+
+B001〜B600の検証へ参加する。既存の別担当者が検証中のため、記録を読み重複・上書きを避ける。
+5時間利用枠などで中断された場合も、利用可能になったら自動的に続きを行う。
+リセットクレジット・有料枠は使用しない。
+
+## 完了した担当（初回）
+
+固定幅長方形盤の理論検証と、二行盤 B541〜B550 の独立照合。
+書込先は新規 `../../experiments/original-claims/reports/round4-fixed-width.md`、`../../experiments/original-claims/scripts/round4_fixed_width.py`、
+`../../experiments/original-claims/output/round4_fixed_width.json`。他の担当者の既存個票・総括は変更しない。
+
+## 確定した今回の成果
+
+詳細と完全な証明: [round4-fixed-width.md](../../experiments/original-claims/reports/round4-fixed-width.md)。
+
+- `T_w=3+2*(C(3w−2,3)−(w−1))` とすれば、m≥T_wで全極大集合が3w石。
+  各未充足行を塞ぐ点数を、三点で定まる円・直線との交点数から数える証明。
+  全安全局面のgは `(3w−|S|) mod 2`。空盤はwの偶奇で決まる。
+  w=2ならT=9、w=3ならT=69。これらは十分条件で、一般の最小開始長は未確定。
+- B211/B212/B215/B216/B220/B541/B546/B550: SUPPORTED。
+- B213/B219/B544/B555/B556: REFUTED。B555は部分勝ちの無限列が存在しない
+  という意味で原文の非空虚な漸近主張を否定。詳細の量化の注意を引き継ぐ。
+- B542: PARTIAL。m≥9の全手番戦略は任意の合法手で完成。
+  m=6..8の原文で指定された順序型だけによる戦略表現は未構成。
+- B546: 2×30でA={0,4,8}, B={4,16,28}、Aをずらすと盤内許容区間が10個。
+  10は最大可能数。第3回の存在量化の誤読を訂正する明示的証人。
+- ペア和DPと整数行列式DPをm=1..8の全10,188局面で照合し一致。
+  全3,612四点組の禁止判定も一致。m=9の全11,130局面は定理の偶奇式と一致。
+  再現コマンド: `python research/experiments/original-claims/scripts/round4_fixed_width.py`。
+- `git diff --check` 通過。上記3成果ファイルと本チェックポイントの計4ファイルを新規作成。
+  既存個票・総括・他者のコードは変更していない。コミット・pushはしていない。
+
+## 自動再開1回目の成果（2026-09-27 23時台開始）
+
+詳細: [round4-collinear-asymptotic.md](../../experiments/original-claims/reports/round4-collinear-asymptotic.md)。
+再現: `python research/experiments/original-claims/scripts/round4_collinear_asymptotic.py`。
+データ: [round4_collinear_asymptotic.json](../../experiments/original-claims/output/round4_collinear_asymptotic.json)。
+
+- 共線四点組数の二項漸近を証明した:
+  `D_n = 7*zeta(2)/(60*zeta(3))*n^5 - 3/(4*zeta(2))*n^4*log(n) + O(n^4)`。
+  B141は真。batch-08.mdのREFUTEDとn^5 log nという主項は誤り。
+  旧個票は他担当との競合を避けて上書きせず、新しい個票で訂正根拠を示した。
+- B145/B471/B472/B473も方向別の厳密式から証明。
+  方向高さH、方向比率rの主項係数は `(5−3r)/(120H^3)`。
+  整数h≥1の尾部は `2n^5/h` 以下。
+- B150も証明。固定rテンプレートの任意の相似像はO(r*n^4)、
+  全禁止四点族は水平・垂直だけでΩ(n^5)なので被覆割合は0へ。
+- 計6件SUPPORTED（証明）。有限数列の外挿ではない。
+- n=1..20で両端公式・最大線分列挙・トーシェントべき和の3方式が一致。
+  n≤7は全四点組の直接共線判定とも一致。最大n=100000の整数値を保存。
+- 作成した新規ファイルは上記md/py/jsonの3個。本チェックポイント以外の既存ファイルは未編集。
+- 後続の主項計算を再実行・拡張する必要はない。主目的の6件は完了。
+
+## 完全格子円の窓切断の成果（2026-09-28 03時台に保存）
+
+詳細: [round4-circle-windows.md](../../experiments/original-claims/reports/round4-circle-windows.md)。
+再現: `python research/experiments/original-claims/scripts/round4_circle_windows.py`。
+データ: [round4_circle_windows.json](../../experiments/original-claims/output/round4_circle_windows.json)。
+
+- 完全格子円Pの可変サイズ・整数位置の軸平行窓について、全スペクトルを証明した。
+  中心が半整数格子にあり中心軸上点がない場合、m=|P|は4の倍数で、
+  `A={0,...,m/2} ∪ {0,2,...,m}`。他の場合は `A={0,...,m}`。
+  正方形と長方形は常に一致する。任意の円の部分集合や固定サイズ窓に拡張しない。
+- B464 REFUTED、B461/B463/B465/B467 SUPPORTED（一般証明）。
+  B463には一般有限集合の一点削除条件と最小窓サイズ式も記載。
+- B462/B470 SUPPORTED（全候補の縮約を証明した上で有限整数全走査）。
+  n×nでnより多い格子点を持つ円は中心が半整数で盤の厳密な内部にある。
+  二倍中心を1..2n−3で走査するO(n^4)方式でn≤12の三石後スペクトルを確定。
+  n≤10に11点円なし、11×11には中心(6,5)・半径5の11点円。
+- B457 PARTIAL。全サイズの和集合ではq≥3は常にm+1種類、q≤2はm+1またはm+1−m/4。
+  さらにq≥3では任意の固定nで0..M_nの間に穴なし（一列移動の差が高々1）。
+  全ての円は固定nで欠落が二つ連続しない（一列移動の差が高々2）。
+  nが最小収容幅D以上なら全サイズのスペクトルと一致。
+  厳密に種類数が多いとは限らない。小さい固定窓での両群のM_nの比較は未解決。
+- B468 PARTIAL。同じm=12・最小収容幅21で、中心(0,0)・r²=100は対称群位数8・穴なし、
+  中心(1/2,0)・r²=425/4は位数4・穴{7,9,11}。普遍的な単調性は否定。
+  原文の統計的傾向には母集団の指定が必要。穴数の条件付き平均を式(9)で記述した。
+- 全13例の円で順位ブロック・直接窓走査・定理式を照合。一般集合255例も照合。
+  13例のn=1..D+2（156条件）で固定サイズ定理も照合。
+  n=2..6の全10,088三点組で独立に円・直線を作り、縮約走査の結果と一致。
+  実行は正常終了、全assert通過。JSONに各実現点数の窓と高点数円の証人を保存。
+- この計算の長時間プロセスは残っていない。既存のgeocirc大規模走査は別担当のまま。
+- 使用量照会は当初無応答だったが03時台に回復。取得時点で5時間枠17%使用、週枠33%使用、
+  ordinaryUsageAllowed=true。これは取得時点の値。制限回避・有料枠の使用はしていない。
+
+## 実行中プロセス
+
+このチャットが起動した長時間プロセスはなし。
+自動再開開始時に別担当の8×8極大列挙、n=7計算、round4複数バッチ等が実行中だった。
+停止・再実行・変更はしていない。各回の開始時に改めて状況を読むこと。
+04:03 JSTの確認でも別担当のPython PID 23732（geocirc）、33072（r3b591_dump）、
+44580（cover）が実行中。今回の新スクリプト群はすべて終了済み。
+
+## B542の有限残件を完了（2026-09-28）
+
+詳細: [round4-two-row-order-strategy.md](../../experiments/original-claims/reports/round4-two-row-order-strategy.md)。
+再現: `python research/experiments/original-claims/scripts/round4_two_row_order_strategy.py`。
+証明書: [round4_two_row_order_strategy.json](../../experiments/original-claims/output/round4_two_row_order_strategy.json)。
+
+- B542をPARTIALからSUPPORTEDへ。m=6,7,8の表とm≥9の任意合法手定理を合わせた。
+- 一石・三石N局面1170個を、盤端・既存点・反射点・禁止位置のラベル付き弱順序で分類。
+  長さごとに表を分け、1098型すべてに共通の勝ち行動を構成。
+  キーに座標値・間隔長を含めない。行動は境界／開区間最左／開区間中央の代表点を指定。
+- 五石なら任意の合法手で勝ち。初期空盤から先手の全合法応答を分岐し、戦略を独立に再生して確認。
+  全assert通過。表は大きく、人間向けの短い規則や最小表とは主張しない。
+- 今回のスクリプトは正常終了。自身の長時間プロセスはなし。
+
+## 次の作業
+
+## 再開後の確定成果: B557の反証
+
+[round5-row-thresholds.md](../../experiments/original-claims/reports/round5-row-thresholds.md) と
+[round5_row_thresholds.json](../../experiments/original-claims/output/round5_row_thresholds.json) を追加。
+再現: `python research/experiments/original-claims/scripts/round5_row_thresholds.py`。
+
+- B557 REFUTED: 五行各三石の最小幅は12で、予想の11では不可能。
+- AP限定の五行各三石の最小幅は14。B558の全w二次上界は引き続き未解決。
+- 独立な行三点組DFSと、Python全四点行列式から生成した禁止集合による一石DFSが一致。
+  5×11の不存在は両方式で安全行プレフィックス218,022個、AP5×13は9,229個を尽くした。
+  肯定証人は全1,365四点組を独立再検査。全計算complete=trueで正常終了。
+- ソースは `../../experiments/original-claims/scripts/round5_row_triples.cpp` と `../../experiments/original-claims/scripts/round5_row_hypergraph.cpp`。
+  禁止集合データは `../../experiments/original-claims/output/data/round5_forbidden_w5_m11.txt`、m12、m13。
+  自分の長時間プロセスは残っていない。
+- 一般下界 `m≥ceil((3w+3)/2)` と、w≡3 mod4時の一段強い下界も証明した。
+
+## 確定成果: B074の反証、B356の証明
+
+[round5-quadratic-cover.md](../../experiments/original-claims/reports/round5-quadratic-cover.md) に完全証明を保存。
+再現: `python research/experiments/original-claims/scripts/round5_quadratic_cover.py`。
+データ: [round5_quadratic_cover.json](../../experiments/original-claims/output/round5_quadratic_cover.json)。
+
+- T_N={(t,2t³):t=±1,...,±N}は安全。整数根のモニック四次多項式で円方程式を割ると、
+  余りのt²係数が1 mod4となり、四点共円は不可能。四点共線も三次式の根数から不可能。
+- 三点共線条件はt1+t2+t3=0。原点反転と分母払いで格子上の安全S_N（2N石）を作り、
+  b_{S_N}(0)=2 floor((N−1)²/4)〜k²/8。B074 REFUTED。
+- 平行移動(T,T²)による安全な有限配置の合併補題を証明した。
+  混合2+2行列式の斉次二次項はA(X²−Y²)+2BXY、A²+B²=|u|²|v|²>0。
+  Tの非零多項式になり、禁止Tが有限個なのでコピーを安全に合併できる。
+- 二コピーでk=4N、N≥4、二つの空点のbが双方k²/64以上。B356 SUPPORTED。
+- N≤12の単一コピー、N=4,6,8の二コピーで全四点組・三点被覆を整数検算し一致。
+  盤への平行移動済みの全座標をJSONに保存。一般定理は有限結果の外挿ではない。
+- B352/B353は未決着（今回の族の欠損δはΘ(k²)）。固定εのB357も反証していない。
+- 08時台の使用量取得で5時間枠5%使用・週枠47%使用、通常利用可。リセットクレジット未使用。
+  新スクリプトは正常終了。このチャットの長時間プロセスはなし。
+
+## 確定成果: B360の証明
+
+[round5-cover-union.md](../../experiments/original-claims/reports/round5-cover-union.md) に一般証明を保存。
+再現: `python research/experiments/original-claims/scripts/round5_cover_union.py`。
+データ: [round5_cover_union.json](../../experiments/original-claims/output/round5_cover_union.json)。
+
+- S_Nには三点共線もない（反転前の曲線にt=0を追加しても安全なため）。
+- S_Nに一般位置の三角形を加えたA_Nと、一般位置の水平三点を加えたB_Nを構成。
+  双方同じk=2N+3石で安全。A_Nは三点共線なし。元の二次被覆を維持する。
+- 双方の最大bはk²/32以上、k²/6未満で、定数倍以内。
+  A_Nの禁止点は有限個の真円の和集合なので全格子でも有限。
+  B_Nは水平行のn−3空点を禁止する。固定配置を入れた盤を拡大すると禁止点総数比は無限大。
+- N=4,5,6で全四点・三点検査を通過。円半径の整数上界から、比>10を保証する共通盤幅も保存。
+  巨大盤の全走査は不要。極大集合を主張せず、原文の安全集合の範囲で証明。
+- 自分の全スクリプトは終了済み。次はB352/B353/B357の量化、または他の未解決群へ。
+  今回のδはΘ(k²)であり、B353の線形欠損には届かないことを維持する。
+
+## 以前のAP成果と以後の候補
+
+直近の追加成果: [round4-ap-construction.md](../../experiments/original-claims/reports/round4-ap-construction.md)。
+各行に公差1の連続三点を置く一般構成を証明。
+`M_w=3+6*C(3w−2,3)−15*(w−1)=O(w³)` で全wに対して安全な3w石を達成。
+B558の要求するO(w²)は未解決のためPARTIAL。
+再現 `python research/experiments/original-claims/scripts/round4_ap_greedy.py`、データ `../../experiments/original-claims/output/round4_ap_greedy.json`。
+20×139に60点、全487,635四点組が安全。根公式の行列式照合15,755件も一致。
+
+重要な証拠訂正: `round4_b543_rect.cpp` section5は新行と各旧行を二行ずつしか検査せず、
+三行・四行横断の禁止組を落としている。既存 `../../experiments/original-claims/output/round4_b543_rect_v.json` のAP完全証人12個中6個が不正。
+特にw=4,5の提示配置は共線四点を含み、B557のw=5,m=10の反例には使えない。
+`../../experiments/original-claims/scripts/round4_ap_witness_audit.py` と `../../experiments/original-claims/output/round4_ap_witness_audit.json` に監査を保存。
+入力ファイルはJSON構文も不正。既存コード・データ・個票は変更していない。
+同報告に三つの有効な旧第2回の証人を全四点組で再照合して保存した。
+この二つの新スクリプトは正常終了。自身が起動した長時間プロセスは残っていない。
+
+1. 最新の他担当記録・実行中プロセスを確認する。既存のround3集計には量化の誤読や
+   原文IDとの食い違いがあるため、集計のラベルだけで判断せず原文と証拠を読む。
+   round4の担当票にも有限フィットから漸近を断定した箇所がある。
+   とくにB141の旧ラベルを再採用せず、今回の証明を参照すること。
+2. 三行盤の「全極大集合が9石」の最小開始長を詰めるか、未解決の別群へ進む。
+   T=69は上界。空盤g=1の最終開始長、全初手勝ちの最終開始長とは別の量。
+   一つの長さでの確認だけで、それ以後の全長さで成立としない。
+3. B542の有限残件は上記の順序型表で完了。より短い表は任意の改良で、元仮説の未解決点ではない。
+4. B558の二次長構成は未解決。上記の公差1・三次長構成や、任意三点の固定幅定理と混同しない。
+5. 有意義な一区切りごとに本記録を更新する。単一成果だけで自動継続を停止しない。
+6. B467は上記全分類で完了。B457の固定サイズ版またはB468の統計の量化を明確にして進められる。
+   完全円の全サイズスペクトルで穴があるかは、中心軸上点のない半整数中心かどうかで完全決定。
+7. B142〜B147の非共線共円側の漸近判定は、短い数列への当てはめに依存している。
+   今回の共線側の証明から共円側まで決まるわけではない。独立した議論が必要。
+
+## 2026-09-28 09時台: 有理配置の線形欠損を否定
+
+[round6-rational-orchard.md](../../experiments/original-claims/reports/round6-rational-orchard.md) に一般証明と外部定理の一次資料を保存。
+再現: `python research/experiments/original-claims/scripts/round6_rational_orchard.py`。
+結果: [round6_rational_orchard.json](../../experiments/original-claims/output/round6_rational_orchard.json)。
+
+- B351/B354/B355 SUPPORTED、B353 REFUTED。原文と最新のround4個票を照合済み。
+- δは反転後の二点直線数。三点直線数はbであり、「通常直線=三点直線」という旧記述を採用しない。
+- 共線四点がなければA_s(x,y)=(x+sy,s²y)で全共線関係を保った安全化が可能。
+  各四点組の禁止sは高々4個。1≤s≤4*C(k,4)+1の中に必ず成功値がある。
+- 三次曲線の有限群剰余類に十点以上の有理点があればBézoutと有理線形代数で曲線がQ上に降りる。
+  非特異なら点差がJacobianの有理捩れ点となりMazurで高々16点。
+  節点なら二次体の冪根となり高々6点。尖点は非自明有限群なし。
+- Green–Taoの構造定理・系1.6から、一様にδ/k→∞およびδ>k(log log k)^η。
+  B352の固定冪下界は未解決。実数配置では十分大きいkでδ最小=k−1−2*1_{3|k}。
+- 21条件の反転恒等式、504条件の安全化行列式、楕円曲線位数6・16部分群の全加法を有理数で確認。
+  安全化・反転後の格子証人はk=6,b=4,δ=3およびk=16,b=35,δ=15。
+  16石証人は全1820四点組を確認。小さいkの存在と漸近不存在を混同しない。
+- 閾値の具体値は未算出。k=17から差が生じるとは主張しない。
+- 09時台の使用量取得時は5時間枠40%・週枠53%使用、通常利用可能。有料枠・リセットは不使用。
+- 自身の計算は正常終了。別担当PID23732 geocirc、44580 coverはそのまま。
+- 次の作業: B558のO(w²)幅AP構成を検討。特にx=a*r²+j（j=0,1,2）のような
+  三本の放物線を使う候補の厳密な共円条件を調べる。未検証候補であり、まだ一般安全性は主張しない。
+
+## 2026-09-28 10時台: B558の明示二次幅候補
+
+[round6-ap-parabola.md](../../experiments/original-claims/reports/round6-ap-parabola.md) に部分証明を保存。
+候補はr=0,…,w−1の各行に x=2(r+w)²−2w²+j, j=0,1,2。
+幅6w²−8w+5。B558はPARTIALを維持する。
+
+- より一般の(a*t²+j,t), a≥2整数、t≥0、j=0,1,2について四点共線の不存在を証明。
+- 共円も「三点同一行」「二行二点ずつ」「全j共通」「三点のj共通、一点だけ異なる」を一般に排除。
+  最後は円代入四次式の三つの整数根から第四根も整数となり、a²|d（0<|d|≤2）の矛盾。
+- 残件はj多重度2+2、2+1+1の三行・四行横断。
+  固定行オフセットに対し共通整数シフトhの共円条件は二次以下の整数多項式。
+- `scripts/round6_ap_parabola.py --span 39 --coefficient 2` 正常終了。
+  `../../experiments/original-claims/output/round6_ap_parabola_a2_span39.json` に645,710パターンの完了記録。
+  非負整数hの根なし。hは有限走査ではなく判別式・整数割切りで全根を厳密に解いた。
+  独立行列式照合1,944条件一致。三行・四行の組も含む。
+- 従ってw≤40は安全。また任意wでも行間隔39以下の四点組は安全。
+  行間隔が無制限の場合を証明しておらず、一般二次上界を達成したとは言わない。
+- 次の具体作業: 残るj多重度二種類に対し、二次式の整数根h≥行間隔+1を排除するか反例を出す。
+  全てh≥0で排除できれば、三本の放物線の非負整数部分全体が安全という強い結果になる。
+- 予備探索3本と保存スクリプトは全て正常終了。自分の実行中プロセスはなし。
+
+## 2026-09-28 13〜14時台: B558の三行一般証明と有限範囲拡張
+
+[round7-ap-three-rows.md](../../experiments/original-claims/reports/round7-ap-three-rows.md) に一般証明を保存。
+候補は前回と同じ幅6w²−8w+5の公差1構成。B558の判定はPARTIALを維持する。
+
+- 三行四点では同一行の二点が円中心の横座標を固定する。
+  他の各行から得られる中心縦座標の区間が厳密に増加することを証明し、全wで共円を排除。
+  一般の係数a≥2にも成立。残るのは四行、ラベル多重度2+2と2+1+1だけ。
+- `../../experiments/original-claims/scripts/round7_ap_parabola.cpp` と `../../experiments/original-claims/scripts/round7_ap_parabola_driver.py` を追加。
+  既存のWSL g++を用いた。符号付き128ビットの安全なパラメータ範囲を数式で制限する。
+  二次式の全整数根を判別式と整数平方根で解き、非負シフトの根がないことを確認。
+- span39: 645,710パターン、負根3,025。前回のPython任意精度実装の全集計と一致。
+  span128: 22,752,064パターン。span200: 86,746,900パターン、負根348,390。
+  全て非負整数根は0。データは `round7_ap_parabola_a2_span{39,128,200}.json`。
+- 従ってw≤201の安全性は確定。任意wでも行間隔200以下の四点組は安全。
+  この有限範囲を全wの証明として扱わない。保存済みの走査を目的なく再実行しない。
+- 中心縦座標の不等式は30,618条件を有理演算でも補助照合した。全assert通過。
+  本チャットの新計算はすべて正常終了。
+
+## 2026-09-28 14時台: B357の反例無限族
+
+[round7-ellipse-cover.md](../../experiments/original-claims/reports/round7-ellipse-cover.md) に完全証明を保存。
+再現: `python research/experiments/original-claims/scripts/round7_ellipse_cover.py`。
+全整数座標と被覆プロファイル: [round7_ellipse_cover.json](../../experiments/original-claims/output/round7_ellipse_cover.json)。
+
+- z=(3+4i)/5、P_t=(2 Re(z^t), Im(z^t))と置く。zの無限位数は法5の整数計算で証明。
+  楕円上の相異なる四点が共円 ⇔ 四指数の和が0。直線には高々二点。
+- S_m={P_1,...,P_(6m)}は安全。q=8m+1,...,9mに対するm個の空点P_(-q)は互いに異なる。
+  u=m+1,...,2m、v=2m+1,...,3m、t=q−u−vにより各点を覆うm²個の相異なる三点組。
+  固定ε=1/36でk/6個の空点があり、B357の定数上界を否定する。
+- 被覆数は1≤u<v<t≤k、u+v+t=qの解数。包除原理による閉じた式も証明。
+  m≥3で同じm個の空点はb≥k²/10を満たす。
+  q/k=α∈[1,2]でb={1/8−(α−3/2)²/6}k²+O(k)。従って任意の固定0<ε<1/8でΩ_ε(k)個。
+- 共通相似拡大L=5^(9m)と平行移動により、有限整数正方形盤に全点を同時に置ける。
+  指数的な盤幅を許す構成であり、多項式幅版や極大配置の故障耐性は主張しない。
+- m=1,2,3,4,6,8の安全性267,681四点組、被覆判定192,212四点組を整数演算で照合。
+  全qの直接組合せ計数と閉じた式も一致。全計算は正常終了。
+  高被覆点のbは順に3、14〜15、34〜36、63〜66、146〜153、264〜276。
+- 原文は安全Sを対象にする。`../../experiments/original-claims/reports/round4-batch-b291-b360.md` の極大小盤データからのSUPPORTEDは
+  全称証明ではなく、k=18の本例だけでも旧観測値C(1/10)=2を超える。他担当個票は上書きしていない。
+- 次の具体作業: B558の残る四行パターンの一般排除、またはB352の固定冪欠損下界を検討。
+  B357自体は反証完了。多項式盤幅でも線形個の高被覆点が作れるかは別の発展問題。
+
+## 2026-09-28 14時台の追加: B357を二次幅へ改善
+
+[round7-parabola-cover.md](../../experiments/original-claims/reports/round7-parabola-cover.md)、
+[round7_parabola_cover.json](../../experiments/original-claims/output/round7_parabola_cover.json) を追加。
+再現: `python research/experiments/original-claims/scripts/round7_parabola_cover.py`。
+
+- P_t=(t,t²)を使えば、相異なる四点の共円条件は同じく四指数の和が0。
+  円方程式へ代入したモニック四次式のt³係数から、必要十分条件を直ちに証明できる。
+- S_m={P_t:1≤t≤6m}、p_q=P_(-q)、q=8m+1,…,9mという同じ組合せを使える。
+  平行移動(9m,−1)だけでn=81m²=9k²/4の盤に収まる。整数分母払いは不要。
+  したがって「多項式盤幅でB357を反証できるか」という直前の残件も完了。
+- m≥3では指定したm空点の各々を合法化するのに必要な最小石除去数はk/5より大きい。
+  一石が含まれる被覆三点組数≤floor((k−1)/2)から得る局所下界。
+  全空点の最小値ρや、極大集合に関するB363の証明と混同しない。
+- m=1,2,3,4,6,8,12で安全四点組1,296,471件、被覆判定907,892件を全検査。
+  全行列式をVandermonde×四指数和の恒等式とも照合し、一致。全座標を保存。
+
+## 2026-09-28 14時台の追加: B558の二次幅一般構成を完成
+
+[round8-ap-quadratic-prime.md](../../experiments/original-claims/reports/round8-ap-quadratic-prime.md) に全証明を保存。
+再現: `python research/experiments/original-claims/scripts/round8_ap_prime.py`。
+データ: [round8_ap_prime.json](../../experiments/original-claims/output/round8_ap_prime.json)。**B558をPARTIALからSUPPORTEDへ更新。**
+
+- M=w−1、N=16M²+1とし、Bertrandの定理から素数N<p≤2Nを選ぶ。
+  P_(r,j)=(2r²+jp,r)、r=0,…,M、j=0,1,2。幅は2M²+2p+1≤66M²+5。
+  w=1は幅3の三点。全ての行は同じ公差のAP。3wは各行上限から最大でもある。
+- 四行では、法pで円行列式が−8*(Σr_i)*Vandermondeとなり非零。
+  共線も有限体放物線の三点行列式が非零で排除する。
+- 二行二点ずつなら弦中点の一致から4(r−s)(r+s)≡0 mod pとなり矛盾。
+  同一行三点が円に載らないことは自明。
+- 核心の三行2+1+1型は、重複行の二点差(v−u)pをDから整数として取り出してから法pで見る。
+  商は(s−r)(t−r)(t−s)*F、F=4(s²+st+t²+r(s+t)−r²)+1。
+  F≡1 mod4だから整数として非零、|F|≤N<pだから法pでも非零。全パターンを一般に排除した。
+- w=1,…,20の全2,153,004四点組を整数検算し、全て安全。
+  8,505条件の除算後合同式、四行の全合同式、既存判定との部分照合も一致。
+  w=20の実例はp=5779、幅12281、60石。最小幅・最良定数を主張しない。
+- 素数存在には標準のBertrandの定理を使用し、Mathlibの一次資料リンクを個票に記載。
+  この幾何証明をLeanで形式化したという意味ではない。
+- 次の具体作業: B558の元仮説は完了したため、旧公差1候補の範囲拡張を反復しない。
+  最新の他担当記録を確認し、B352の固定冪欠損、または盤外飽和半径など別の未解決原文を選ぶ。
+  全600件の検証が終わったとは扱わず、自動継続は有効のままにする。
+
+## 利用枠と実行プロセスの今回の確認
+
+- 10:40頃の使用量応答は5時間枠100%、週枠62%、リセット予定13:41:41 JSTを示した。
+  これはその時点の記録であり、現在値ではない。13:44以後の再照会は応答せず打ち切った。
+  利用可能な通常実行で作業を再開し、リセットクレジット・有料枠・制限回避は使っていない。
+- 別担当の最新記録（round4のB228、round5メモリ実験など）を読み、対象重複を避けた。
+  別担当のPython PID23732（geocirc）、44580（cover）は稼働中。停止・変更していない。
+- 本チャットのround7・round8計算は全て終了済み。長時間の自前計算は残していない。
+
+## 2026-09-28 14〜19時台: B386の反証、B387の最適距離差
+
+[round9-n7-n8-overlap.md](../../experiments/original-claims/reports/round9-n7-n8-overlap.md) に具体的証人と有限縮約の証明を保存。
+`../../experiments/original-claims/scripts/round9_n7_n8_overlap.py` と `../../experiments/original-claims/scripts/round9_n7_n8_phase.py`、対応する同名JSONを追加。
+
+- 既存の7×7最大16配置（128バイト、SHA256 450af314fcf3e024aff8530a4d4cadd4adc507ed836e1aa2b5fb8ff239107ae3）を使用。
+  64埋込みで追加零除去は全て不可能、896一石除去を全検査。候補単点44,800条件を独立照合。
+- 一石除去で15石へ移れる条件は16個、全て中心ありのA型。全8 A配置に各2埋込みで成功。
+  代表では(6,5)を除き、(7,2),(4,7)を加える。B386の明示反例。
+- B型は全配置全埋込みで一石以下の除去では不可能。二石除去・三石追加の証人を構成。
+  B代表から(2,3),(6,6)を除き、(7,4),(0,6),(5,7)を加える。全1,365四点組が安全。
+  D4軌道が全B型8配置に一致することも確認した。埋込み選択込みでAは1、Bは2。
+- B387の「最大」への読み替えには既知のK₈=15を使用。
+  docs/RELATED_WORK.mdと、2018年のけんちょん氏の記事の原文 k(8)=15 を確認し個票へリンク。
+  今回のコードはK₈≤15を再証明していない。直接の計算結果は安全15石への最適距離。
+- 過去個票の一つの固定目標との比較によるREFUTEDを訂正するが、旧個票自体は変更しない。
+
+## 2026-09-28 19時台: B388の遠方領域を一般に記述
+
+[round9-external-rays.md](../../experiments/original-claims/reports/round9-external-rays.md)、`../../experiments/original-claims/scripts/round9_external_rays.py`、
+[round9_external_rays.json](../../experiments/original-claims/output/round9_external_rays.json) を追加。共通補助は `../../experiments/original-claims/scripts/round9_geometry.py`。
+
+- 整数三角形の面積≥1/2、外接円直径abc/(2Δ)≤Q^(3/2)から明示的な円消滅距離を得る。
+- 三石直線を点対の原始方向グループから作り、非水平直線数+1個の外側水平点を調べれば必ず合法点。
+  これは円方程式の全生成を要しない。別途、拡大矩形外周との交点数からr≤C(k,3)+1も証明。
+- 方向高さh_Lごとに、[-N,N]²の禁止空点数 F_S(N)=2N Σ_L(1/h_L)+O_S(1)。
+  十分大きいNでは周期T=lcm(h_L)に対し F(N+T)−F(N)=2T Σ_L(1/h_L)。
+  円の有限寄与・直線交点・占有点補正を明確に扱った。
+- 水平・斜め三点、非共線三点、放物線六点、7×7 A/B代表の6例で全整数検算が通過。
+  A代表は三石直線9本、傾き47/3、周期上界6。B代表は6本、傾き29/3、周期上界6。
+  両方のrは2。これはB384の一様定数を証明するものではない。
+- 19:15時点で共円研究のPython計算プロセスはなく、別アプリのblender-mcp二件だけを確認。
+  過去のgeocirc/cover PIDは今回の一覧には存在しない。こちらから停止操作はしていない。
+  今回の自前スクリプトは全て正常終了。有料枠・リセットクレジットは不使用。
+- 次の具体作業: B382の全16配置の最初の外点をD4の二つの固定テンプレートとして閉じる。
+  B384/B385/B390の全nの問題は未解決。有限支持や上記k依存上界で決着としない。
+
+## 2026-09-28 19時台: B382のD4テンプレートを完了
+
+[round9-n7-outer-patterns.md](../../experiments/original-claims/reports/round9-n7-outer-patterns.md)、
+`../../experiments/original-claims/scripts/round9_n7_outer_patterns.py`、`../../experiments/original-claims/output/round9_n7_outer_patterns.json` を追加。
+
+- 7×7最大配置の全16例と、距離1の32点・距離2の40点を漏れなく検査。
+  計1,152外点の可否で、三点の整数係数法と独立な四点行列式法が一致した。
+- A代表では最初の外点は(7,8)のみ。B代表では(8,−2),(8,6)の二点。
+  各配置は対応する代表の一意なD4像であり、外点も同じ変換で表される。
+  中心からの絶対相対座標はAが(4,5)、Bが(5,5)と(3,5)。全16例で各点軌道の出現は8回ずつ。
+- B382をSUPPORTEDへ。n=7の有限命題として完了。一般nの一様半径B384は未解決のまま。
+- 今回のround9全スクリプトは正常終了し、実行中の研究計算は残していない。
+- 次の具体作業: B384/B385/B390は原文の最大性・最小極大性・任意大の量化を保持して検討する。
+  B382/B386/B387/B388は再実行を優先せず、別の未解決対象か一般半径の強化へ進む。
+
+## 2026-09-28 19時台: B376/B377/B379の決着と列挙集計の訂正
+
+`../../experiments/original-claims/reports/round10-small-saturation.md`、`../../experiments/original-claims/scripts/round10_small_saturation.py`、
+`../../experiments/original-claims/output/round10_small_saturation.json` を追加。全assert通過。
+
+- 入力 `../../experiments/original-claims/output/round4_b371.bin` は先頭8バイトに408、その後408マスク。
+  SHA256 `f91c81d4eab5a0cf09e613fde697e1584eabf146210263f64499150fac03d0e1`。
+  元の全昇順追加探索を読み、今回408配置の安全性とD4閉性、51代表の全空点被覆を再確認。
+  全28,560四点組と、159,936の曲線係数・直接行列式の照合が通過した。
+- D4軌道は51、全て軌道サイズ8・安定化群位数1。
+  旧JSONの309はスレッド内軌道数の単純加算による重複。旧位数0は非恒等安定化元数。
+  他担当の元ファイルは変更せず、新個票で訂正理由と独立証明書を示した。
+- B376: 私有空点を持つ必須曲線が全配置で13本以上。従って12本以下の被覆はない。
+  メモ化した厳密被覆DPでは最適本数19〜29本。全51代表の必須曲線・最適被覆を保存。
+- B377: 既存 `../../experiments/original-claims/output/data/s8_exact.json` の七石極大不存在を依存関係として使用する。
+  SHA256 `53a980a0aa2bc699b8a107dfd17cb6f5ecedd8b86d0657e263c18de7975f1cf6`。
+  全408×8=3,264の一石削除後は合法点≥3。唯一合法点を追加すれば8石極大になる縮約で、
+  任意の安全7石に合法点≥2を証明。一般に≥3までは主張しない。
+- B379: S={(0,1),(4,1),(5,1),(4,2),(1,3),(2,3),(6,3),(1,5)} を(0,1)平行移動し、
+  (8,0)を追加する。得た9石は全126四点組が安全、全72空点が禁止。全空点の証明書を保存。
+  9×9で9石が最小極大サイズという判定は含まない。
+
+## 2026-09-28 19時台: B453の一般上界とq=3対4の全閾値比較
+
+`../../experiments/original-claims/reports/round10-circle-denominator.md`、`../../experiments/original-claims/scripts/round10_circle_denominator.py`、
+`../../experiments/original-claims/output/round10_circle_denominator.json` を追加。全assert通過。
+
+- 原始中心(a/q,b/q)の格子点をz=(qx−a)+i(qy−b)、|z|²=Mに変換。
+  qに含まれる1 mod 4素数はガウス素因子の向きが固定されるので配分数から除外。
+  qに含まれる3 mod 4素数はMを割れない。偶数qではv₂(M)=0または1を座標偶奇が決定。
+  q≥3の一つの単数軌道からは高々一点だけ採用できる。この三条件から一般積上界を証明。
+- q=3では法3、q=4では法8の平方和条件を満たす原始剰余対がちょうど一つの四単数軌道。
+  従ってどちらも非空なら完全点数m=D(M)。M=325では双方6点で、旧q=3最大5は窓切断との混同。
+- 少なくともm点を達成する最小ノルムN_mは、両分母とも
+  min{∏_{p≡1 mod4}p^e : ∏(e+1)≥m} に一致。従って全m≥1でR₄(m)=3R₃(m)/4。
+  中心は各閾値で自由に選ぶ。完全点数と盤内切断点数、半径と収容幅を混同しない。
+- M≤3000、q≤16の73,895非空原始剰余類で上界を確認。q≤2の1,967条件は等号。
+  q=3,4の全60,000原始剰余類（零点含む）で完全点数式を確認、非空等号条件は5,684。
+  閾値1〜8のN_mは1,5,25,65,325,325,1105,1105で一致した。
+- 任意の固定有理中心にも、α(1+di)^j(1−di)^(n−j)、d≡0 mod q、d≥2によるn+1点構成がある。
+  固定分母だけの有限上限は否定される。この非有界性は既知で、個票に2018年記事を引用した。
+  新しい一般上界・全閾値比較と区別して記録する。構成72条件も整数検算済み。
+- 次の具体作業: B456の「記録更新に必要な算術型」を原文どおり検討する。
+  q=3,4はN_mの制約付き約数個数記録へ還元できるが、非有界点数や素因数種類の増加だけでは、
+  既存円の整数拡大を排除できない。平方因子を掛ける可能性を扱う必要がある。
+  B454の最小収容幅、B384/B385/B390の盤外半径の全n問題も未解決として残す。
+- 19:47時点で研究用Python計算はなく、別アプリblender-mcp二件だけが動いていた。
+  今回の自前計算は全て正常終了し、実行中プロセスは残していない。課金・リセット操作なし。
+  全600件完了ではないので、自動継続を有効のままにする。
+
+## 2026-09-28 20時台: 全進捗のmain統合
+
+ユーザーの依頼で第3〜10回のローカル成果、途中記録、補助コードをmainに統合する保存区切りを作成。
+リモートmainの982391dまで、およびn6-tstar-wft-exactブランチの13aae65を取り込んだ。
+詳細は [統合記録](../../log/claim-audit/PROGRESS-INTEGRATION-2026-09-28.md) と同名の日付を持つ監査JSONを参照。
+未完JSON16件・Python構文エラー2件は古い試行のまま明記して保存した。
+全600件の完了宣言ではなく、次の研究対象は直前のB456等の項目を引き継ぐ。
+
+## 2026-09-29 00時台: B455の一般反証とB456の全固定分母での証明
+
+新規 `../../experiments/original-claims/reports/round11-circle-records.md`、`../../experiments/original-claims/reports/round11-residue-orbits.md`、
+`../../experiments/original-claims/scripts/round11_circle_records.py`、`../../experiments/original-claims/output/round11_circle_records.json` を保存。
+
+- B456では完全円の点数を使い、同じ半径内の中心順序による見かけの増加を記録更新に数えない。
+  外部入力は二平方和表現数公式と、法4の算術級数素数定理。Vaughanの一次講義資料を確認し個票に引用。
+- 上界はY=log X/(log log X)^3で素数を分割。小さい素数はo(log X/log log X)。
+  大きい素数にe+1≤2^eを使うと係数log2。
+  固定平方類では大素数の指数が偶数なのでe+1≤3^(e/2)を使い係数log3/2になる。
+- 下界はqを割らない1 mod4素数の積P_t。4·2^t表現をq²以下の剰余類へ分ければ、
+  正確な分母qで少なくとも4·2^t/q²点を得る。固定平方類dはdP_t²で4·2^ω₁(d)3^t表現。
+  qの素因数のノルム指数を0または1にすれば全表現の原始性を保証できる。
+- G_{q,S}(X)/F_q(X)→0なので、有限Sに属する記録更新ノルムは有界。
+  Fは非有界だから新しい平方類が無限に必要。整数拡大でM→k²Mとなる不変量を用いた。
+  さらに半径上限Rの最大点数の対数~2log2·log R/log log R、
+  m点以上の最小半径の対数~(log m)(log log m)/(2log2)も得た。qは固定。
+- B455は(a,b)→(−b,a)の原始剰余類への自由作用。固定点があるとq|2になり矛盾。
+  各点数を持つ原始剰余類数も4の倍数。旧個票の「全剰余類が等分」は一般には誤り。
+- M≤50000の全二平方和表現数を公式と照合。12分母で673,982非空原始剰余類を検査。
+  q≥3の646,468類は161,617個のサイズ4の回転軌道となり、全て点数一致。
+  素因子構成384条件も確認。有限走査は一般証明の補助で、無限回性の根拠ではない。
+- 次の具体作業: B456/B455は一般命題として完了したため記録列の単なる範囲拡張は不要。
+  B454の同じ完全点数での最小軸平行収容幅の比較、またはB384/B385/B390の外側半径問題を原文から選ぶ。
+  半径の比較と窓幅の比較、可変窓サイズと固定サイズ平行移動を同一視しない。
+- 他担当のround5-batch-*とHANDOVERを確認。B401–B600担当は主に確率・禁止解除を進めており、
+  こちらのB455/B456一般証明は新規個票へ分離した。既存個票・総括・プロセスは変更していない。
+  開始時にWSLのn=8列挙、n=7ストリーム列挙、n=6削除探索、b251計算を確認。
+  00:21時点の別担当Python PID2116はround5_b301_b376.py。こちらのround11計算は全て正常終了。
+  自前の実行中プロセスなし。今回の4新規ファイルとチェックポイントは保存済み、まだコミットしていない。
+  前回の全進捗統合はeeef31cとしてmainへpush済み。今回、他担当の増分はまとめてstageしない。
+
+## 2026-09-29 07時台: B454の最初の反例と剰余類公式（round12）
+
+新規 `../../experiments/original-claims/reports/round12-b454-counterexample.md`、`../../experiments/original-claims/reports/round12-q11-counts.md` と、
+`../../experiments/original-claims/scripts/round12_circle_bbox.cpp`、3本のPython、6件のJSONへ保存。
+
+- **B454 REFUTED**。円 `(11x−881)²+(11y−865)²=801125` の完全整数点は11点、
+  スパン161（162×162盤）。分母11。原始方程式は `11(x²+y²)−1762x−1730y+65751=0`。
+- 分母が2の冪の円についてスパン161まで全数列挙。全ての半径と分母を含む。
+  最左最下点を原点へ移し、残り二点の全組から円を生成するため分母打切りはない。
+  原始円 `A(x²+y²)=Dx+Ey` はq=2A/gcd(2A,D,E)。qが2の冪 iff Aが2の冪。
+  1,020,232,004組を調べ、11,992,442キー、完全収容円475,014個。完全点数11は不在。
+  よって奇分母の最小スパンO_11≤161<P_11、さらに162≤P_11≤366。
+  O_11=161/P_11=366という等号は未証明なので主張しない。
+- スパン64までの両族全列挙と、奇分母7点・スパン65の証人を合わせると、
+  m=4〜10の最小スパン（2の冪,奇分母）は
+  (1,5),(12,16),(5,12),(60,65),(3,22),(32,42),(25,60)。
+  m=1〜3は自明な下界を2の冪で達成。従ってm=11が最初の反例。
+- 独立な全3点組方式で2×2〜7×7盤の全件数・最小幅を照合。全6盤一致。
+  保存最小円49件と、7点/11点の全ノルム解をPython多倍長整数で検算。
+  大盤全走査自体を別実装で二重に走らせたわけではないことも明記した。
+- 分母11、M_e=5^e·13·17·29の12剰余類は四単数で3軌道。
+  各軌道の各剰余類点数はe=3hで(8h+3,8h+3,8h+2)、
+  3h+1で(8h+5,8h+6,8h+5)、3h+2で全て8h+8。
+  `(1+T+…+T^e)(1+T²)(1+T)² mod(T³−1)` から全eを証明。
+  31指数条件と、うち5条件の直接整数ノルム走査を照合済み。
+
+## 2026-09-29 07時台: B475〜B480の一般証明・旧漸近判定の訂正（round13）
+
+新規 `../../experiments/original-claims/reports/round13-poisson-limit.md`、`../../experiments/original-claims/reports/round13-four-point-circles.md`、
+`../../experiments/original-claims/scripts/round13_asymptotic_checks.py`、`../../experiments/original-claims/output/round13_asymptotic_checks.json` を保存。
+
+- 公刊一次資料を確認: Ghosal–Goenka–Keevash (2026),
+  https://link.springer.com/article/10.1007/s00454-026-00853-7 。
+  Theorem 1.3はC_n=Θ(n^5)、Lemma 4.1は等脚台形でない共円四点数
+  A_n=O_ε(n^(4+18/29+ε))。四点数F_nもΘ(n^5)。
+  これらを既知定理として明記し、自分たちの新規定理とは扱わない。
+- **B478 SUPPORTED、B479 REFUTED**。一様k点でE Z_n→λ∈(0,∞)なら
+  k=Θ(n^(3/4))、d_TV(Z_n,Poisson(E Z_n))=O(n^(−1/4))。
+  共次数はΔ1=O(n^3)、Δ2=O_ε(n^(2+ε))、Δ3=O(n)。
+  Δ1は原点移動と[3n]²へのn²個の平行移動、最大4重の計数から導く。
+  Δ2は三点円の整数係数がO(n^3)、二平方和ノルムO(n^6)、約数上界から導く。
+  Bernoulli占有の依存近傍でb1=O(n^−2)、b2=O(n^−1/4)、b3=0。
+  Arratia–Goldstein–Gordon (1989) Theorem 1の一次PDFも確認し引用。
+  ランダム順序とBin(N,k/N)を組にした結合で、固定kへO(k^−1/2)で移行。
+  禁止辺が頂点を共有する確率、同じ一般化円上の5点束が現れる確率はO(n^−1/4)→0。
+  旧round2/round4の「n=4,5の束でPoisson極限を反証」は誤り。有限表はそのまま保持する。
+- **B480の低密度構造を一般化**。G5=共円/共線五点集合数、A3=3点共有の禁止辺対数とすると
+  A3=10G5。固定nで `log Pr(安全)=−F p^4+(2/5)A3 p^5+O_n(p^6)`。
+  ペア10個だけを数えると係数を誤る。5辺全体の包含排除で10−10+5−1=4。
+  固定kでも下降階乗包含確率の最初の2係数は−F,4G5。nとの同時極限の一様次項は未証明。
+- **B475 SUPPORTED（m0=4、割合1）、B476 REFUTED**。
+  新しい初等補題: 有理円上の相異なる5有理点には必ず非等脚台形の四点組がある。
+  円をQ(i)のノルム1群へ正規化。全四点組が等脚台形なら、各ガウス素数の指数の
+  どの4つも二組の和が等しい。整列した5実数の補題から指数は全て等しく、
+  全正規化点が4単数に限られて5相異点と矛盾。
+  五点部分集合を数えるとm≥5円の四点寄与≤5×その非等脚台形四点数。
+  よってPr(M_n≥5)=O_ε(n^(−11/29+ε))、さらに全固定次数のE[(M_n−4)^r]も同じ形で0へ。
+  小盤の重み付き平均8.81等の増加は、平均の発散を意味しない。平均は4へ戻る。
+- 関連判定の一般根拠も保存: B142 REFUTED、B143 SUPPORTED、B144 REFUTED、
+  B146 REFUTED、B147 SUPPORTED。長方形はO(n^4 log n)で共円四点数のo(1)割合。
+  他担当のB142文書の「Θ(n^5)不成立、n^6有力」は有限外挿であり公刊定理に反する。
+  旧個票は上書きせず、今回の一般証明を優先する。
+- 検算: 全3^5=243係数系のrank 4を整数行列式で確認。
+  n=3,4,5の禁止辺・共次数・A3=10G5・五点安全集合数恒等式が一致。
+  n=4〜12の全m≥5円について、四点寄与≤5×非等脚台形数を全四点組で確認。
+- 次の具体作業: (1) 今回の一般証明を原文と照合して独立再読、集計担当へ参照可能にする。
+  (2) 閾値尺度のlog安全確率の次項を、五点共線束の明示係数まで求める。
+  和集合6点以上の連結禁止族の寄与の一様評価が必要。固定nのp展開をそのまま流用しない。
+  (3) 外側半径B384/B385/B390は依然未解決。B454〜B456の単なる範囲拡張は不要。
+- 自前のC++/Python計算は全て正常終了、実行中の自前プロセスなし。
+  07:36時点の他担当プロセスはn11_run121.sh、round5_b101a_defs.py、
+  round5_b177_b200b.py、/tmpの参照実装・n11_pipe検査等。終了させず変更していない。
+  新規round12/13とチェックポイントは保存済み、まだコミットしていない。
+  前回main統合pushはeeef31cで完了。今回も他担当の増分をstageしない。
+  利用枠の購入・リセットは行わず、全600件未完了なのでautomation-2を継続する。
+- 07:52の最終点検で、新規16ファイルのJSON読込・Python構文・末尾空白、
+  B454証明書の入力SHA-256、git diff --checkが全て通過。上記の自前実行は全て終了済み。
+
+## 2026-09-29 12時台: B480の同時極限と鋭いPoisson誤差率（round14）
+
+新規 `../../experiments/original-claims/reports/round14-safety-correction.md`、`../../experiments/original-claims/scripts/round14_safety_correction.py`、
+`../../experiments/original-claims/output/round14_safety_correction.json` を保存。
+
+- **B480 SUPPORTED、閾値尺度で一様剰余まで証明**。
+  独立占有p=Θ(n^(-5/4))で
+  `log P(安全)=−F_n p^4+4G_5 p^5+O_ε(n^(-1/2+ε))`。
+  固定k=Θ(n^(3/4))では
+  `log P(安全)=−E Z+[4ζ(3)/(45ζ(4))]k^5/n^4+O(n^(-3/8))`。
+  三点共有の禁止辺対数A_3=10G_5なので補正係数は(2/5)A_3。
+- 同じ一般化円上の違反を「4点以上選ばれた曲線」の指示変数I_Cへまとめる。
+  異なる曲線は高々2点共有。条件付き二項占有による単調結合とStein方程式により
+  `d_TV(W,Poisson(E W))≤Σq_C²+Σ_(C≠D)Cov(I_C,I_D)`。
+  共有1/2点の共分散を厳密展開し、共次数でO_ε(n^(-1/2+ε))へ抑えた。
+  平均の二項裾展開の一様剰余は20G_6 p^6=O(n^(-1/2))。
+  全禁止部分族の形式的な包含排除打切りに依存しない。
+- Ghosal–Goenka–KeevashのProposition A.3を再確認。
+  共線五点数はc_5 n^6+O(n^5 log n)、c_5=ζ(3)/(45ζ(4))。
+  円の五点数はO_ε(n^(5+ε))で、最初の補正の主要部は五点直線束。
+  AGG (1989) Lemma 1のStein差分上界も一次PDFで確認。既知結果として明記。
+- **B478の誤差率はΘ(n^(-1/4))で最適**。安全確率とexp(−E Z)の差が正で
+  この大きさを持つため、全変動距離の下界となる。上界はround13で証明済み。
+  曲線数Wの近似率と、四点違反数Zの近似率を区別する。
+- Fraction検算: 共分散恒等式2601条件、上界879条件、二項裾恒等式171条件、
+  剰余61条件。n=3,4,5の全曲線と全禁止辺を別の整数行列式で照合。
+  n=3,4の全66048占有集合で安全性を照合。各2密度でWの分散を
+  全集合列挙と全曲線対共分散の二経路で照合。全て正常終了。
+- 12:18の他担当最新記録・実行を確認。Python PID42760はround5_b482b500_followup.py、
+  PID35748はround5_b120_b160_followup.py。既存計算・記録を変更していない。
+  こちらのPython検算は約3秒で終了、自前の常駐・実行中プロセスなし。
+  新規3ファイルは未コミット。前回のmain統合pushはeeef31cで完了済み。
+- 同区切りで `../../experiments/original-claims/reports/round14-rare-bundles.md` も追加、スクリプト・JSONを拡張。
+  **B479の束確率を定量化**。両モデルで
+  `P(五点束あり)=c_5 n^6 p^5+O(n^(-1/2))`、c_5=ζ(3)/(45ζ(4))。
+  五点ハイパーグラフの共次数D_j=O(n^(5-j))、j=1〜4を証明し、
+  二次BonferroniでE binom(Y,2)=O(n^(-1/2))を使用。固定kにも直接成立する。
+  禁止四点が交わることを条件とすると、確率1−O_ε(n^(-1/4+ε))で
+  唯一の五点直線束（5辺）と、相互に頂点を共有しない他の違反辺に限られる。
+  円由来の五点束は主要部には寄与しない。
+- 拡張検算でn=3,4,5の全五点辺対を交点数分類し、n=3,4の全配置から得る
+  第一・第二階乗モーメントを独立占有2密度と全固定kで照合。全て一致。
+  新規4ファイルのPython構文、JSON、実行コードSHA-256、末尾空白も点検済み。
+  git diff --checkは通過（他担当n8データの改行警告のみ）。自前の計算は全て終了。
+- 次の具体作業: B384/B385/B390の原文と最新個票は再読済み。
+  B385のround5-batch-b301-b400-followup.mdの「REFUTED（弱化版）」は、
+  n≤8で半径3が無いという有限結果のみ。原文の無界存在を反証していないので未解決を維持。
+  B384でも8石極大は15石最大の全数ではない。B390の−1例は逆移動で+1となるが、
+  無界ジャンプにはならない。最大/極大、全n/有限nの量化を保った一般構成・上界が必要。
+  B382は自身の既証D4分類を参照（他担当の「16配置=16軌道」は採用しない）。
+  12時台の最終確認時の別担当Python PID15228はround5_b278_mixing.py、変更していない。
+  全600件は未完了、automation-2を維持。利用枠購入・リセットなし。
+
+## 2026-09-29 13時台: B477の原始弦恒等式、典型分母と最大分母（round15）
+
+新規 `../../experiments/original-claims/reports/round15-standard-chord.md`、`../../experiments/original-claims/reports/round15-trapezoid-denominators.md`、
+`../../experiments/original-claims/scripts/round15_standard_chord.py`、`../../experiments/original-claims/output/round15_standard_chord.json` を保存。
+
+- **B477 SUPPORTED（一般証明）**。標準弦a<b（辞書順最初の二点）と残る二点z,z'>bに分ける。
+  b−a=gu、u原始、w=z−aとしてτ=(|w|²−gu·w)/det(u,w)を既約分数A/Bへ。
+  τが同じ点を群分けし、群サイズNのbinom(N,2)を足すと全共円四点を正確に一度数える。
+  各弦に多数の円があることと、四点組が重複計数されることは違う。
+  三点訪問はbinom(n²,3)。ハッシュ群分けで期待O(n^6)処理、逐次記憶O(n²)。
+- B(x²+y²)−Dx−Ey=0、D=Bgu_x−Au_y、E=Bgu_y+Au_xは原始。
+  よってq=B（B奇、D/E偶）または2B。ノルムD²+E²=|u|²[(Bg)²+A²]。
+  合同条件X≡−D,Y≡−E mod2Bと窓条件で、二平方和表現から群サイズNを得る。
+  全円整数点はdet(u,w)≡0 modBの指数B部分格子内。
+  三角形面積よりgB≤(n−1)²、一般にq≤2(n−1)²。
+- **等脚台形の分母はq≤4(n−1)/H**。平行辺の中点差をtJu/2とするとt∈Z、
+  原始二次係数B|t。中点の座標差から|t|H≤2(n−1)。
+  (n−2,0),(n−1,1),(0,n−3),(2,n−1)はn≥5,n≢1 mod3でq=4n−10。
+  先頭係数4はこの無限族で漸近的に鋭い。
+- Ghosal–Goenka–Keevash Theorem 1.3 / Lemma 4.1を一次資料で再確認し引用。
+  四点組を一様に取るとP(q>4(n−1))=O_ε(n^(-11/29+ε))→0。
+  これは平均分母の評価や、全円の最大分母についての一次上界ではない。
+- **最大分母はΘ(n²)**。t≡10 mod30、n=6t+8で
+  (3t+3,1),(0,3t+6),(4t+3,0),(t−3,6t+7)を構成。
+  原始二次係数3t²+2t−3、中心分母q=6t²+4t−6。
+  原始化除数は60の約数で、この合同類では1。全て非等脚台形。
+  n=68でq=634。nが公差180で増えるので、任意の大きいnでも最大q/n²のliminf≥1/6。
+- 検算: n=2〜8の全920754四点組を独立整数行列式で照合、四点集合族そのものが一致。
+  n=2〜12のC_nを計算し、既存独立センサスn=4〜12の全9盤と一致。
+  81円で全ノルム解と円方程式整数解、完全円の全513弦でB/q一致を確認。
+  全9754等脚台形の12084底辺条件、一次分母族998条件、二次分母族101条件も全assert通過。
+- 13:16時点の他担当実行はb251_n6_bg、b401_fu_bundle、b276_order。
+  13:33にはPython PID23648 round5_b001_push3.py、PID41612 round5_b401_fu_bundle.py。
+  他者の処理・個票・集計は変更していない。こちらの計算は全て正常終了、実行中の自前プロセスなし。
+  新規4ファイルは未コミット。前回main統合pushはeeef31cで完了済み。
+- 次の具体作業: B477は一般恒等式で完了、単なる円数の範囲拡張は不要。
+  B458の原文が要求する「短い初出型分類」を、この係数・格子制約で厳密に定式化できるか検討。
+  またはB384/B385/B390の一般構成・上界へ戻る。今回その無界問題は解決していない。
+  全600件未完了なのでautomation-2を維持。利用枠購入・リセットなし。
+
+## 2026-09-29 14〜18時台: B458の情報量の限界と外部半径の拡大定理（round16）
+
+新規 `../../experiments/original-claims/reports/round16-first-appearance.md`、`../../experiments/original-claims/reports/round16-dilation-exterior.md`、
+`../../experiments/original-claims/scripts/round16_first_appearance.py`、`../../experiments/original-claims/output/round16_first_appearance.json` を保存。
+
+- 原文と他担当最新記録を照合。B458の「同qで初出が違えば原始二次係数が必要」という
+  予定判定には論理的飛躍がある。B=q（q奇）、q/2（q偶）なのでBはqの関数。
+  全係数と二次係数だけは区別する。完全円の初出n_fullは外接幅で既に決まる。
+- 四点初出ν_4を、平行移動する整数正方形に少なくとも四点入る最小辺点数と定義。
+  **同じ(m,bbox幅,bbox高さ,B,q)からν_4を決める命題を反証**。
+  C:(3x+1)²+(3y+2)²=725、D:(3x+1)²+(3y+1)²=845。
+  完全点数はともに6、幅差/高さ差17、B=q=3。それでもν_4は12/15。
+  全15四点部分集合のスパンヒストグラムはC={11:1,16:3,17:11}、D={14:1,16:3,17:11}。
+  最小窓は正確に四点を含むため、「ちょうど四点」に変えても反例になる。
+- 素数p≡3 mod4、p∤qなら、整数点を持つ任意の有理中心円で(pC)∩Z²=p(C∩Z²)を証明。
+  ノルム方程式をmod pで見れば二座標ともpの倍数に限られる。
+  中心分母と原始二次係数も保存。全jの初出はν_j(pC)=p(ν_j(C)−1)+1。
+  C,Dを7^e倍すると同じ要約量で初出差3·7^e→∞。一様な有限加法誤差の予測も不可能。
+  原文B458全体は「短い分類」の定義不足のためPARTIALを維持し、強い具体化だけを反証。
+- **任意の有限安全Sで、任意に大きい整数拡大倍率pに対しr(pS)=1を実現**。
+  Sの全三石円の分母と互いに素な3 mod4素数を取ると、円由来の禁止点は正確にp倍。
+  拡大外接矩形の右側x=px_max+1は円に塞がれず、三石直線各々は高々一点だけ塞ぐ。
+  外辺上に直線本数ℓより多い候補を取れば合法点がある。
+  M=max(bbox幅差,bbox高さ差)≥1ならp>max(2M²,binom(k,3))が円全列挙不要の十分条件。
+  最大性・最小極大性や一石移動を保存しないので、B384/B385/B390を決着させたとは扱わない。
+- 検算は14:27までに正常終了。完全二円の全整数点を二方式で照合し、全j初出とe=0〜4を確認。
+  条件外の倍率3は両円24点、倍率5はCが10点/Dが12点へ増えることも確認。
+  7×7の既知14石証人は外側距離1の32点が全禁止、距離2で(7,8)だけ合法。
+  三石直線9/円355、分母最大62。79倍は(475,1)、367倍は(2203,1)が距離1で合法。
+  各候補を全364三つ組で直接判定。元・拡大二配置の全1001四点組ずつも安全。
+- 14時台の他担当実行はround5_b401_fu_delta_k.pyとround5_b001_push3_wave2.py。
+  18:17の再確認ではWin32_Processにkyouen/roundのPython/WSL実行は見つからなかった。
+  自前プロセスは全て終了。新規4ファイルは保存済み、JSON・構文・SHA-256・末尾空白・
+  git diff --checkも通過。他担当の個票・集計は編集していない。
+  既存の全進捗main統合push依頼はeeef31cで完了済み、今回新たな一括stageはしていない。
+- 次の具体作業: 係数B単独の初出を無定義で全列挙し直さない。
+  B384/B385/B390で大きいrを作るなら、整数拡大以外の構成が必要。
+  原文の残る存在命題、または有限盤の完全な反例証明を別担当最新のFINAL-SUMMARYと照合して選ぶ。
+  全600件未完了なのでautomation-2を維持。利用枠購入・リセットなし。
+
+## 2026-09-29 18時台: B089の一般反証と原命題の集計監査（round17）
+
+新規 `../../experiments/original-claims/reports/round17-b089-bounded-degree.md`、`../../experiments/original-claims/reports/round17-original-scope-audit.md`、
+`../../experiments/original-claims/scripts/round17_b089_curves.py`、`../../experiments/original-claims/output/round17_b089_curves.json` を保存。
+
+- **B089 REFUTED**。Pilaの著者公開PDF `https://people.maths.ox.ac.uk/pila/alcurves.pdf` を確認。
+  絶対既約な実曲線次数d≥2、辺長N≥2の盤で、整数点数は
+  (3d)^(4d+8)N^(1/d)(log N)^(2d+3)以下。係数に依存しないのでnごとの曲線変更にも使える。
+  次数3以下の可約曲線は実既約因子へ分解し、直線各々は安全性から高々3点、
+  非絶対既約な実二次曲線は共役複素二直線の交点高々1点として処理。
+  固定本数の二次・三次曲線の和に含まれる安全集合はo(n)。
+- 素数p、m=floor((p−1)/4)でS_p={(t,t² mod p):1≤t≤m}を構成。
+  共円行列式はmod pで(Σt_i)Π(t_j−t_i)となり、0<Σt_i<pなので非零。
+  三点共線もVandermonde積が非零。従ってK_p≥m≥p/4−5/4。
+  K_pとの差は少なくともp/4−o(p)であり、原文のo(n)要求を一般に反証した。
+  K_n≈2nという別の未証明仮説は用いない。有限体上の放物線と実代数曲線を区別。
+  線形個の安全点を二次・三次曲線で覆う本数もΩ(√p/(log p)^7)必要。
+- 検算は正常終了。5〜127の全素数と251の計30盤、全65,128三点組・705,541四点組で
+  整数行列式と合同式が一致。未剰余化放物線の全1,365四点組で恒等式も一致。
+  p=251の62石座標を保存。構文・JSON・コードSHA-256・ローカルリンク・末尾空白・
+  git diff --checkも通過。無限族の根拠は有限試験ではなく一般の代数証明。
+- round16拡大補題に「整数点集合が非空」を明記。M=q²ρ²∈Zの根拠として必要。
+  空集合では中心0/半径1/pの円が反例となる。使用した二円と全三石円は条件を満たし、
+  round16の反例族・外部半径定理の結論は変わらない。
+- **600/600決着の集計は原文の一般証明600件を意味しない**。
+  round5-FINAL-SUMMARYは弱化版の有限決着を含めると明記し、個票にはB122 INCONCLUSIVE、
+  B184 PARTIAL等が残る。弱化を保存する価値と、原仮説の決着件数を分ける。
+  C_nをΘ(n^6)へ戻さず、公刊定理Θ(n^5)とround13の帰結を優先する。
+  B153の総次数はΣd=4(C_n+D_n)。4D_n/n²だけを総平均とする既存必要条件は不適切。
+  n³で正規化しても円由来の寄与は消えない。B153の収束自体は未解決。
+- 最新gitはmain、origin/mainと同期したb037e63。別担当の6b22d38がround16まで統合済み。
+  今回のround16後続追記、チェックポイント追記、round17は未コミット。
+  cpp/solvers/kyouen_solver_11_root.cppに別担当変更があり、触れていない。
+  18:31のWin32_Process確認ではround/kyouenのPython/WSL実行なし。自前プロセスもなし。
+- 次の具体作業: B153/B154を原文どおり総次数で検討。共線部分の巨視的分布と円部分を
+  別々に導き、4(C_n+D_n)の全体積と整合させる。必要ならB384/B385/B390の一般構成へ戻る。
+  全600件は未完了、automation-2を維持。利用枠購入・リセットなし。
+
+## 2026-09-29 mainへの統合
+
+- ユーザーの「一度mainに統合してpushして」に対応。
+  origin/mainの2241090までの5コミットをfast-forwardで取り込み、
+  round16の二個票への追記、round17の証明・監査・再現スクリプト・データ、
+  このチェックポイントの計7ファイルを今回のコミットに収録する。
+- round16/17のJSONと実行コードSHA-256、Python構文、git diff --checkは通過。
+  直前の検算結果は上記記録の通り。数学的な判定の範囲は変更しない。
+- 別担当の11×11ソルバの未コミット変更は一時退避してから復元。
+  復元前後のGit blobはc00cf8d3ed71ee7c66b393da4596b10fcdb5f940で一致した。
+  この作業途中のソルバ変更は今回の研究成果コミットに含めない。
+  他のローカルブランチにはmainへ未統合のコミットはなかった。
+- origin/mainの53d3bfcには「600/600は弱化版を含む」という注意書きが追加済み。
+  round17監査もこの訂正を記録した。原命題の未解決部分への自動検証は継続する。
+
+## 2026-09-30 00:50: 原命題を優先した一般証明とルール監査（round18/19）
+
+ユーザーの201件候補と「続けて」に対応。全600件・201件全てを再集計したわけではない。
+原文の量化に合う新結果と、既存証人の未反映を区別した。
+
+### round18の確定記録
+
+- B070は近傍のbinom(k,2)クリーク被覆から誘導星の禁止を一般証明。
+  放物線S={(i,i²)}、中心p=(0,0)と各二石の円上に葉を順次選ぶ有理構成で鋭さも証明。
+  有限の例を全kに外挿したものではない。
+- B261は一石Sと二手p,qで、単独禁止数0・共同禁止数n−3となる全nの直線族を構成。
+  非共線でもガウス整数因数分解により盤辺長2·5^m+1・共同禁止数8m+1の無限族がある。
+- B266はS+p+qが安全という条件で、純相乗集合TがSの各石の一般化円へ一意に分かれる。
+  全新規禁止Jには単独効果も加わるため、JそのものとTを区別する。
+  k=|S|、直線数ℓ≤1、円の最大点数M_nとして|T|≤ℓ(n−3)+(k−ℓ)(M_n−3)。
+  固定kの円だけの相乗作用は全ε>0でO_ε(k n^ε)。
+- B227は同数rの個人別パス権の開始条件で勝者が変わらない対応戦略を一般証明。
+  既存round5の占有石数の偶奇だけから手番を復元するパス実装は使っていない。
+  新DPでは着手後もパス後も手番側・相手側の残り権利を交換する。
+- `round18_local_geometry.py` の全検算は正常終了。
+  n=1,…,4の6,126安全状態、28,162競合近傍、53,998共同合法対、82,260純相乗点、
+  36,756同数パス比較を確認。k=2,…,8の誘導星達成証人と二つの無限族の整数検算も通過。
+  三個票の検算記述を実績に更新した。
+
+### round19の追加成果
+
+- B063はH=K_(1,4)で原文を満たす。4×4証人:
+  S={(2,0),(3,0),(0,1),(2,1)}, 中心(2,3), 葉(1,1),(2,2),(0,3),(1,3)。
+  三石では全盤不可能。さらにS₀={(0,0),(1,0),(2,0)}の4×4上の競合グラフに
+  四頂点単純グラフ全11型が誘導され、型の最小頂点数5まで確定。
+  3×3の全112安全四石集合も検査し、このHの四石での最小盤は4×4。
+  `round19_b063_hierarchy.py/json` に全座標・全辺を保存。
+- B253の既存証人qidx=127,138,171を新発見扱いせず再検証し、原文B522にも反映。
+  全8部分族で三組全体だけが先手勝ち。真のmex値は0→2（旧g0=1はbool）。
+  全194単独・18,721二組解除もD4で全2,593代表を厳密に解き、反転0。
+  δ_quad(4×4)=3であり、単に一段削れないという意味の包含極小に留まらない。
+- B255旧個票の極大928/900比較を、原文の最大64/86比較へ訂正して記録。
+  元の三組証人は最大族も保存しない。
+  全7点集合の単独禁止証人で152組を保持必須とし、残り42組の任意の解除に対する
+  共通後手戦略を6,925状態の有限DAGで構成。到達1,333状態を直接包含判定で独立検査。
+  全2^42解除族を一括して保証するため、4×4のB255はこれで完全に除外できる。
+  n=3でも全14組に5点の単独禁止証人があり解除不可、n=1,2も自明に除外できる。
+  一般のB255はPARTIALを維持し、探索対象をn≥5へ絞る。
+- 再現コード/データ: `round19_rule_certificates.py/json` と `round19_rule_pair_lower.py/json`。
+  全検算は正常終了。round18/19四組のPython構文・JSON・ソース/依存SHA-256、
+  更新個票のローカルリンク・末尾空白、git diff --checkも通過。
+  初期に試した42組からの951ランダム候補では反転なしだったが、
+  これは最終判定の根拠に使わず、共通戦略の完全証明で置き換えた。
+  「二組まで任意解除」に同じ共通戦略を機械的に適用する試みは成立せず、
+  二組までの下界は全D4軌道の個別厳密解によって証明した。
+
+### 保存状態・次の作業
+
+- 以前のmain統合push依頼はb722a62で完了済み。
+  round18の新規ファイルは共有作業中にe4f4042へ取り込まれていた。
+  今回のround18文面更新、round19、チェックポイントはローカル保存。新たな一括stage/pushはしていない。
+- 00:49:58の確認では、他担当の `dfpn_probe4.sh` がWSL PID 46040,10404で実行中。
+  `cpp/solvers/kyouen_dfpn_root.cpp` に他担当の未コミット変更があり、触れていない。
+  この担当のround18/19計算は全て正常終了し、実行中プロセスはない。
+- 次の具体作業: B255の5×5で、禁止四点qから開始し、他の禁止を避けて9石まで拡張できるかを調べる。
+  見つかればqが全最大配置保存のため保持必須となる。残った禁止組について共通戦略を試す。
+  9点全組合せや全解除族を最初から総当たりする必要はない。
+  また201件候補にはB253/B522のような既存原文証人の反映漏れがあるため、原文と後続証拠を照合する。
+  全600件未完了としてautomation-2を維持。利用枠購入・リセットなし。
+
+## 2026-09-30: B224の四円・六直線証人と記録同期（round21）
+
+- B224の5×5証人を97本から10本へ圧縮。四円は中心座標の各成分が3/2または5/2、
+  半径平方5/2。六直線はx=1,3、y=1,3、x=y、x+y=4。
+  曲線丸ごとの削除で、233本中223本を削除。保持禁止四点組は310/826。
+- 新しい検算コードは探索・共通幾何をimportせず、整数行列式で全幾何を再生成し、
+  曲線占有数で全安全集合を列挙した。標準151,394状態、10本版1,491,650状態。
+  全25点の一石局面を真のmexで評価し、W₅={2,6,8,10,12,14,16,18,22}の完全一致を確認。
+  空盤gは両方1。最大サイズは9→15、負け初手nimberは一部変わる。
+- 原文は「小盤n≥4」の存在主張であり、この非空W₅を持つ四円・六直線の証人でSUPPORTED。
+  「少数」の数値閾値は原文にないので、達成した本数10を明記した。最小性は未証明。
+- B255の独立検算も再実行して正常終了。原文の三条件（最大サイズ・全最大配置・勝者反転）
+  を確認し、冒頭の古いPARTIAL判定をSUPPORTEDへ同期した。
+- round18〜20は既に8168cbfまでにmainへ収録されていた。
+  作業開始時のローカルmainとorigin/mainは14e1f4bで一致（今回はfetchしていない）。
+  このround21はローカル保存。別担当の`cpp/solvers/kyouen_dfpn_root.cpp`は触れていない。
+- 全600件の原文監査は未完了。201候補からの単純な減算を確定残件数として公表しない。
+  次の作業は原文・最新個票・一般定理を対応させた600件の監査表を作り、
+  存在証人、反例、一般証明、有限支持、弱化版の決着を区別すること。
+
+## 2026-09-30: pushとB228/B252の原文決着（round22）
+
+- ユーザーの「pushなどして、未解決の問いに取り組んで」に対応。
+  round21のB224成果とB255判定同期をb87c8c0へcommitし、origin/mainへのpush成功を確認。
+  別担当のソルバ変更は含めていない。
+- B228の旧「12回反転」は浮動小数の円点数誤同定と四点組単位の追加が残っていた。
+  今回は整数幾何で円を丸ごと追加し、5×5の閾値t=9,8,6,5,4でg=2,0,2,2,1を確認。
+  安全局面数は4,872,798、742,226、348,428、294,616、151,394。
+  全状態検算を通過し、原文の二回以上反転という存在主張を確定した。
+- B252はn=5の大きな円だけの解除で反転せず、n=6全622円（D4で122代表）でも反転なし。
+  n=7の8点円11代表は各100万状態でUNKNOWN。未判定を反証扱いしていない。
+  その後n=4の全円解除を検査し、中央8点円の70組解除で先手勝ちに変わることを発見。
+  同数の散在解除の比較証人も得たので、原文の存在主張はn=4でSUPPORTED。
+- B252独立検算は四点包含判定で標準5,811、一円解除8,714、散在解除10,282安全局面を全列挙。
+  真のg=0,1,0。解除二族は互いに素、散在族は41曲線に分布する。
+- 全600件の原文監査と確定残件数は引き続き未完了。
+  B228/B252に古いSUPPORTEDラベルがあっても、そのラベルだけで二重に件数を減らさない。
+  次の作業候補はB251の一四点組解除、または無限量化を残すB231〜B239の幾何実現。
+
+## 2026-09-30: 利用枠までの継続と最小禁止族の一般定理（round23）
+
+- ユーザーの「利用量がゼロになるまで取り組み続けて」に対応し、このチャットの継続goalを開始。
+  開始時は5時間枠16%使用、週間枠65%使用。残りの利用可能枠で研究を継続する。
+- B256は全nで反証。互いに素なr禁止四点組だけのゲームは全対局がv−r手で終わり、
+  g_E(S)=(v−r−|S|) mod2。D4不変な外側四隅と中央四点組で、必要な最小族を必ず作れる。
+  標準勝者が未確定のnでも、その勝者が自由盤と同じ場合・違う場合の両方を覆う。
+- B258のn≥4の必須D4型不存在も同じ最小サイズ定理から確定。
+  n=2の唯一の四点組を存在証人とする読みは自明に成立するため、曖昧な原文全体を勝手に反証しない。
+- B251の6×6全単独解除2,491組を389D4代表で完全計算し、反転0。
+  三点補完リスト方式と、補完マスクの増分合法手更新・逆順探索の二方式で全結果が一致した。
+  探索上限超過は全389代表で0。整数4×4行列式の別生成でも幾何・全軌道を照合した。
+  この結果は有限の除外であり、原命題はPARTIALを維持する。
+- 次の一般構成候補として、有理パラメータの円三次曲線上で四点共円がパラメータ積1に対応する
+  族を導出中。正の指数の石と負の指数の空点を使い、B356/B357の二次被覆を直接構成する。
+  この候補はまだ原命題の判定へ反映せず、整数化と全四点条件を検算してから採用する。
+
+## 2026-09-30: 二次被覆空点の無限族（round24）
+
+- round23を19e4e8eへcommitしてorigin/mainへpush済み。
+- 円三次曲線P(u)=(2u/(u²+1),2u(u−1)/((u+1)(u²+1)))を使用。
+  四点共円の必要十分条件はパラメータ積1、四点共線は不可能と係数比較で証明。
+  P(2^i)、1≤i≤12mを石とし、P(2^(−c))、11m<c≤12mを空点とすると、
+  被覆三石組はi+j+ell=cの解に正確に対応する。各空点に少なくともm²組を明示した。
+- 共通分母を払い、平行移動と相似拡大で全点を同じ整数正方形盤内へ移す。
+  kと盤サイズの関係を原文は制限しないため、巨大な盤でも原命題の無限族として有効。
+- B356は二点同時の固定c>0下界を満たす。B357はε=1/144で空点数m→∞となり反証。
+  以前の小盤・極大集合に限った統計を全安全集合の上界と混同しない。
+- m=1,2,3で全四石組と全対象空点の全三石組を整数行列式で照合。
+  m≤2の反転後全四石組、正負指数を混ぜた12点の全495組も別途直接検査した。
+  δ=O(k)、極大性、最大性は主張しておらず、B352/B353の未決着へ流用しない。
+- 全600件の原文監査はまだ完了していない。継続goalは有効で、利用枠内の研究を続ける。
+
+## 2026-09-30: 強制終局長の原文決着（round25）
+
+- round24のB356/B357をacac225へcommitし、origin/mainへpush済み。
+- B334は旧n=6空盤・初手だけでは閉じなかったため、全中盤を含む5,081,289状態を計算。
+  |T*|≥3かつWFT=∅は2,672状態、うちN168・P2,504。最小石数はこの盤内では3。
+  A={(0,1),(5,1),(0,2)}、g=5、T*={6,8,10}、WFT=∅を独立に確定した。
+  勝ち手は(4,1),(3,5)の二つで、その両P子でもWFT=∅。原文の存在証人としてSUPPORTED。
+- B333は6石の一D4軌道8局面でT*=WFT={7,11}を発見。9を強制できず、REFUTED。
+  n=1は自明に該当せず、n=2..5の全局面を二方式で解いて不在。両命題の最小盤は6×6。
+- 独立Pythonは整数行列式で四点族と全644曲線を再生成し、37,187状態を逆順・集合再帰で照合。
+  さらに実手番側と勝つ側を分けた固定長のAND/OR評価で、Grundyによる手の制限なしに照合。
+- 全600件の原文証拠索引は引き続き必要。未監査件数を未解決の確定数と混同しない。
+  利用枠内の継続goalは有効。
+
+## 2026-09-30: 全600原文索引と旧反例の訂正（round26）
+
+- round25のB333/B334をe35d4cbへcommitし、origin/mainへpush済み。
+- 二つのバンクからB001〜B600を重複・欠落なく機械抽出。原文行と節の前提、旧個票の見出し・
+  ラベル原文・行番号を保存。81件は明示的に原文と根拠を照合し、採用理由と証拠種別を記載。
+  残り519はNOT_AUDITEDであり、原命題未解決と確定した件数ではない。
+- B356はround5、B357はround7で既に一般構成を保存していた。round24は別証明として扱い、
+  解決件数を二重に減算しない。二次幅に収まる既存放物線構成を索引の優先証拠にした。
+- B031の旧round4反例「5石P、T*={6,7,9}」は不可能。
+  勝敗維持終局総石数はt≡|S|+1_(g>0) mod2なので、T*に偶奇混在はない。
+  round25の正しい6石反例T*={7,11}でB031を反証し、n≤5全T*の穴0も独立確認した。
+  原文のREFUTEDは維持するが、最小盤は5ではなく6へ訂正。
+- 次の照合は固定盤の有限グラフ命題と、J4の全完全マッチングに対する固定応答の破れ。
+  旧「最も強いラベル」を選ぶ集計では、存在証人・無限族・弱化版・誤った反例を区別できない。
+  利用枠内で原文監査と未解決命題の研究を継続する。
+
+## 2026-09-30: 全固定応答の破れと有限グラフ命題の監査（round27）
+
+- round26索引とB031の訂正をcc8954bへcommitし、origin/mainへpush済み。
+- B317は4×4で原文の存在証人を確定。初手二石P応答を与える全112,212完全マッチングが、
+  どれも固定応答としては継続不能。全て4手目または6手目で相手が合法に破れる。
+  1,346,556バイトの全件証明書（12バイト/件と12バイトヘッダ）を保存。
+- 独立C++は元座標4×4行列式で全194禁止組、密配列mexで全5,811安全集合とJ4を再生成。
+  全証明書の合法性・ペア閉性・重複なしを照合し、最大頂点から全完全マッチングを列挙して
+  証明書集合を消去。全112,212件が一対一に一致し、残余・不足0。
+- J5の固定盤命題16件も原文へ照合。旧記録の決着なので新規16解決とは数えない。
+  B306の旧「無制限でも交替不能」は誤り。二つの完全マッチングの対称差は単一16サイクル。
+  原文の長さ10以下では移れないためREFUTEDは正しいが、根拠を訂正した。
+- 原文索引は98件まで照合済み、残り502は未監査。未解決の確定数ではない。
+  B313/B314/B315/B319等の全盤量化はこの固定二盤の結果では解決していない。
+  利用枠内で継続goalを進める。
+
+## 2026-09-30: 7×7完全再計算で五原命題を決着（round28）
+
+- round27の全証明書と索引修復まで5e1a78aへcommit・push済み。
+- 7×7の全179,810,350安全集合・1,499,354,401合法遷移を再計算。
+  層別mexと、別生成した整数行列式の四点組・逆順の再帰による方式で、
+  全層Grundy分布と0〜3石の全g/T*/WFTが一致。全記録状態を空盤から訪問して欠落・余分を除外。
+- B022はσ7=4でSUPPORTED。石数0〜14の最大gは0,1,5,7,10,9,8,7,6,5,4,3,2,1,0。
+- B040はREFUTED。空盤P、T*={8,10,12,14}、WFT空。最初の反例は7×7。
+  初手(1,0)後もg=1、WFT空で、後手は勝てるが固定終局長を選べない。
+- J7は49頂点552辺で連結だが、四隅はすべて中央24だけに隣接する次数1頂点。
+  B313は最大マッチング23辺（要求24辺は不可）でREFUTED。
+  B314は四本の橋でREFUTED。B315は中央が唯一の関節点なのでSUPPORTED。
+- B006/B016/B021/B319/B321/B322/B331/B335はこの有限盤を加えても一般命題PARTIAL。
+  B040の反例を、空集合を許すB331や条件付きB335の反例と混同しない。
+
+## 2026-09-30: 飽和の不要石・故障耐性証人の再監査（round29）
+
+- B362/B367/B368/B369は旧決着の独立証人監査で、新規四解決とは数えない。
+- 3×3全512部分集合の安全は298、極大56、全極大5石。
+  S=[0,1,2,3,7]の石2を除いても元の四空点は全部禁止。
+  B368の反例かつB369の最大配置不要石の証人として採用。
+- B367は4×4のS=[0,1,2,5,10,14]、min b≥2、石2除去で4/10空点解除。
+- B362は5×5のS=[0,1,4,6,7,10,17,19,23]で全一石解除0、二石[0,4]で点12解除、ρ=2。
+- 旧B369の5×5「K=9」例は10石で五禁止組を含む無効例。
+  「6×6最大464個が全部ρ=2」も元JSONのρ1=296・ρ2=168と矛盾するため採用しない。
+  B369原命題は正しい3×3証人だけで成立する。
+- 利用枠内の継続goalは有効。600原文の索引を更新し、未監査を未解決確定数と混同しない。
+
+## 2026-09-30: 天井軌道の有限監査と固定ペア命題の反例（round30〜31）
+
+- round28〜29を3a31691としてmainへcommit・push済み。
+- B325/B326は7×7の全安全層でgと残り最大手数hを新計算。
+  g=h≥3は58,123,224局面、安定化群位数4以上は0。B326はこの盤では全件成立するが
+  無界全称はPARTIAL。B325の最小余裕|L|−hはh=0..10で0,0,1,1,2,2,4,5,9,17,28。
+  これも固定余裕の無限族の存在・不存在を決めない。4×4では全曲線Pythonでhと軌道を照合。
+- B047は原文REFUTED。5×5のS=[0,1,6,13,15,23]、L=[2,14,17,20,24]。
+  包含極小残余辺は周期2−17−24−14−20−2のC5だけで、全32継続を三幾何判定で確認。
+  グラフは頂点推移的、全初手子g=1なので元g=0。全対局は二手・総8石で終わる。
+  しかし全五合法点に応答する固定点なしの対合は奇数台集合に存在しない。
+  現在違法な点も追加後に合法へ戻らないため、盤外・違法点を相手へ割り当てても応答にならない。
+  盤サイズ・石数の最小性は未主張。
+- 原文索引を118件まで照合。残り482は未監査で、研究全体の未解決確定数ではない。
+  利用枠までの継続goalは有効。
+
+## 自動処理
+
+`automation-2` はこのチャットを対象にACTIVE、毎時実行。
+別チャット用の既存 `automation`（PAUSED）は変更していない。
+利用制限の解除後、アプリのスケジューラが実行可能な次の機会に再開する。
+制限を回避する機能ではない。状態が変わらない場合の報告は不要。
+
+## round32: B251の単独解除を7×7でも全域除外
+
+- 全6,364禁止四点組を935D4軌道で完全被覆。二方式の解除ゲーム探索は全件P、UNKNOWN0。
+- 共有標準P/N表は全179,810,350局面を曲線占有数による局所証明条件で再検算。
+- `../../experiments/original-claims/reports/round32-b251-seven-board-exclusion.md`に帰着補題・再現手順・バイナリの層別ハッシュを保存。
+- B251はPARTIALを維持。存在証人があるならn≥8。原文の追加決着数は0、監査採用件数118は据え置き。
+
+## round33: B343を一つだけの三点制約で決着
+
+- 6×6、S=[0,2,3,10,18,24]、L=[8,11,14,15,19,31,34,35]。Rは二点9辺と三点1辺。
+- 唯一の三点辺[11,34,35]を外すとg=1→3、勝ち手[14]と[15,19]が完全に互いに素。
+- 全8頂点の二点競合グラフは連結。孤立点だけの例ではない。
+- round4の全三点除去という弱い証拠を、原文の単独除去かつ三点辺総数1の独立証明書に置き換えた。
+- 原文SUPPORTEDを一件追加採用。索引は119件、481件未監査。未監査を未解決と数えない。
+
+## round34: B067の正しい高さとB068のスペクトルまで確定
+
+- B067旧候補S=[0,6,7,9]を全合法点から拡張し、h=3、K(S)=7を証明。誘導C7の弦は0。
+- B068の6×6証人対は次数列(4,4,4,5,5,5,5,6)、特性多項式も完全一致し、g=3と0。
+  高階制約なしを全256拡張ずつで四方式検査。原文に不足していたスペクトル条件を閉じた。
+- 原文照合の採用121件、479件未監査。未監査数は未解決確定数ではない。
+
+## round35: B524の共通点なしの族を基数最小3で確定
+
+- 解除mask=[4163,16770,2196]、全三組の共通部分は空。全三組だけg0=2、七真部分族は全て0。
+- 全8版で全安全局面のmexを署名DP・直接四点組再帰で一致確認。
+- round19の全18915単独/ペア除外を合わせて基数最小。B524の旧包含極小size7より強い原文証人。
+- B523 REFUTED、B521 SUPPORTEDも既存証拠を原文照合して採用。索引124件・未監査476件。
+
+## round36: ランダム勝率三証人の原文監査
+
+- B501/B506 REFUTED、B502 SUPPORTEDの既存有理数証人を整数幾何・全継続Fraction再帰で再検算。
+- 5×5子勝率の平均の分母と6×6の旧座標メタデータを今回の証明書で訂正。maskの値は旧結果と一致。
+- 全盤の最大値センサスの再実行ではなく、原文に必要な一証人ずつの採用。新規三件と数えない。
+- 索引127件採用、473件未監査。SUPPORTED72、REFUTED36、PARTIAL16、SCOPE_UNCLEAR3。
+
+## round37: B342・B346の残余辺操作の監査
+
+- B342 REFUTED。4×4の五辺マッチングで一つの三点残余除去がg=5→0。
+- B346 SUPPORTED。3×3で二辺を単独除去してもg0、同時除去だけg3。
+- 既存二証人の独立幾何・全安全mex一致。新規二件とは数えず原文索引へ採用。
+- 原文監査129件、471件未監査。SUPPORTED73、REFUTED37、PARTIAL16、SCOPE_UNCLEAR3。
+
+## 同じ全円証人によるB525の採用
+
+- B525 REFUTED。round22の4×4中央八点真円・全70組解除でg=0→1という独立検算済みの証人が、
+  原文「一つの真円を全部解除しても勝者は変わらない」にそのまま反例。新規証人とは数えない。
+- 原文採用130件、未監査470件。SUPPORTED73、REFUTED38、PARTIAL16、SCOPE_UNCLEAR3。
+- 次の候補はB065の二点競合なしの高nimber、またはB345のクリーク直和と単一三点辺。
+  B345の旧S=[0,1,2,7,8]は全三点解除ならg3→1だが、一辺だけ除くとg3のまま。
+  その旧結果を単独除去の原文決着に流用しない。
+
+## round38: B345を唯一の三点辺の反例で決着
+
+- ユーザーの「続けて」を受け、原文の単独三点辺を追撃。
+- 5×5のS=[0,1,3,6,12,17]、L=[10,19,22,23]。Rは二点[19,23]と三点[10,19,22]だけ。
+- 三点辺追加でg=1→3、二点競合はクリーク三成分。孤立点だけの例ではない。
+- 全16拡張の安全性と両全mexを独立検算。合法点数4の最小性は包含極小性から一般証明。
+- 原文採用131件、469件未監査。SUPPORTED73、REFUTED39、PARTIAL16、SCOPE_UNCLEAR3。
+- 前段の候補B345はここで解消。次はB065の二点競合なしの高nimber、またはB341の単独三点辺差の無界族。
+
+## round39: B065の全域除外を7×7まで拡張
+
+- B065 PARTIAL。n≤7では二点競合なしのg≥4は存在しない。存在証人があるならn≥8。
+- n7全179810350安全集合から|S|≥2、|L|≥4の候補137292を抽出し、二方式の全g分布が一致。
+- n6候補2476は最大g1、n7は最大g3。最大Lはそれぞれ6と7、cap16の打切り0。
+- 0/1石層と|L|≤3も閉じ、閾値4に達する局面が除外範囲へ漏れないことを確認。
+- 原文採用132件、468件未監査。SUPPORTED73、REFUTED39、PARTIAL17、SCOPE_UNCLEAR3。
+- 次はB349の非退化・極小四点制約の最小合法点数。抽象的には4点以下は不可能、5点候補は9型に限定可能。
+
+## 2026-10-01: round40〜47の原文監査と継続探索
+
+- round40〜45はmainへpush済み、最後の自担当コミット280145d。B349の二点競合あり最小5・全9型、
+  B065の8×8二点競合なしg5・最小盤8、B446の旧反証訂正、B350の最小合法5・最小盤4を保存。
+  三石で任意大K4Mを実現して彩色数無界、木の三点辺による勝敗反転最小合法5も確定。
+  被覆欠損δ≥3から全k≥4で床付き二次上限−1、六石等号と二空点交差の最小石数6を証明。
+- round46はB091 SUPPORTED、s8=8。k≤4の幾何上界に加えk5/6/7を個別に全域除外。
+  B092はSUPPORTED、9×9でk≤7除外と九石証人に加え、八石の軌道代表探索を完了してs9=9。
+  全408八盤八石極大の全1632埋め込みは合法外点を少なくとも二つ持つ。
+  九盤八石候補は少なくとも一方向で全幅を使うので、D4で最初の添字0..4へ帰着。
+  `round46_kmin_symmetry.cpp`は19.5億節点・1024秒でcomplete=true/found=false。
+  以前の未完了探索やSATのUNKNOWNを今回の完了結果に読み替えてはいない。
+- round47はB077/B080の存在証人を原文採用し、全盤最小石数6/5・最小盤4を証明。
+  n2..8の全最小極大はmin b1、従ってρ1。n≥9の一般全称は未証明。
+  n1は全占有で空点がなく、B078の存在節とB361のρ定義に端点の問題があるため両読みを分記。
+- 索引は154件照合、SUPPORTED87・REFUTED44・PARTIAL18・SCOPE_UNCLEAR5・未監査446。
+  未監査446を研究全体の未解決数とは呼ばない。
+- ユーザーの「利用量がゼロになるまで」および「続けて」に従い、意味のある研究を継続。
+  利用枠の購入・リセットはしていない。共有mainには他チャットのN11作業が進んでいるので、
+  自担当の明示的なパスだけcommit・pushする。
+
+## round48〜51: 十盤の極大最小値を[8,10]へ
+
+- round46のs9=9の完了結果をfad0ee1としてmainへpush済み。
+- B079 PARTIAL。十盤安全六石の重複被覆総数最大85を完全最大化し、等号証人
+  [13,22,32,53,62,63]を全空点で独立検算。必要94未満なので六石極大はない。
+  上界85は組合せ最適化に依存し、原文の短い非列挙証明の決着には使わない。
+- B094 REFUTED。健全な十盤十石極大S=[21,27,31,35,36,46,65,81,29,48]。
+  全210四点組と全90空点の安全・禁止を独立幾何で検算した。
+- B093 PARTIAL、s10は[8,10]。s9=9を使い、十盤七石候補を全幅・初点0..4へ帰着。
+  別実行が5.9億節点でcomplete=true/found=false。従来600秒の未完了とは分ける。
+- 十盤八石は初点0..4の五つに分割した`round53_n10_eight_roots.cpp`で探索中。
+  個々のrootの完了を保存し、全五つが完了するまで八石全域除外とは言わない。
+- 九盤の最小極大私有点は、八盤408カタログからの全1632埋め込み＋12320合法追加を調べ、
+  九石極大16配置を得た。全16でmin b1・ρ1。九盤の全九石極大カタログではないので
+  B078/B361の有限支持範囲をn9全件へ拡張しない。
+- 原文索引は157件照合、SUPPORTED87・REFUTED45・PARTIAL20・SCOPE_UNCLEAR5・未監査443。
+  利用枠が残る間は原文の残件に取り組み、まとまった証明・検算を随時pushする。
+
+## round50・52〜54: 私有点の限定族と一般指数下界
+
+- a82e052としてB094反証・s10∈[8,10]をpush済み。
+- round50は九盤の限定族16配置を別Pythonで完全に再抽出、全空点でmin b1・ρ1を独立検算。
+  九盤の全最小極大カタログではないので、一般予想の採用状態を変えない。
+- round52の新一般定理: 全ε>0で十分大きいnにs_n>n^(2/3−ε)。
+  原始方向を低・高に分け、直線被覆O(n k^(3/2))。
+  三点真円の整数係数からN≤224(n−1)^6の二平方和へ単射し、格子点数n^o(1)。
+  B096の下界側は証明、上界側とB095のs_n=o(n)は未解決。
+- B098は原文にn≥4指定なし。s2=3→s3=5の差2を全16/512集合で再検算して採用。
+  小盤値の新発見とは数えない。B097単調性は完全確認済みn1..9の範囲のみPARTIAL。
+- round53八石の初点0..4探索は全て1200秒でcomplete=false、計約61.7億節点。
+  どのrootも八石不在の全域証明にはなっていない。完了した接頭部の利用と再開用スナップショットを準備。
+- B081は外部2018年の18石既知値が原文17と矛盾する。座標付き独立SAT証人を取得中。
+- 索引は161件照合、SUPPORTED88・REFUTED45・PARTIAL23・SCOPE_UNCLEAR5・未監査439。
+  未監査数は未解決確定数ではない。
+
+## round55: 原文K9=17を公開18石構成の独立監査で反証
+
+- f0267c6として一般指数下界・限定私有点族・小盤の差2をpush済み。
+- B081 REFUTED。モナカ氏の2026-08-20公開図を座標化し、全3060四点組、
+  九盤全禁止族、全816三点の整数曲線から再検算して安全18石を確認。
+  独立に示したのはK9≥18。上界18や全最大配置の一軌道性はこの監査では未証明。
+- 先行する300秒SATはUNKNOWN。反証はこの未完了探索に依存しない。
+- 原文索引は162件照合、SUPPORTED88・REFUTED46・PARTIAL23・SCOPE_UNCLEAR5・未監査438。
+- 十盤八石の完了接頭部を再利用する再開探索を準備中。s10は引き続き[8,10]。
+
+## round56〜58: 十盤八石全域除外、十九石下界、外周拡張障害
+
+- round53の初石0..4打切りは単独ではUNKNOWN。二石目の完了接頭部を厳密に特定し、
+  round56で残り五枝を全て完了。全八石極大を除外し、s10∈[9,10]へ改善。
+  九石極大の有無が残件。B093はPARTIAL、B097単調性は有限n1..10まで支持。
+- 再開DFSは4×4の全176五石極大と39中断区間を独立照合、漏れ・重複なし。
+  保存frontier・親JSON・ソースのハッシュを検査し、全五接続を監査した。
+- round57はモナカ氏の九盤18石公開構成を(0,1)に移して(9,0)を追加、K10≥19。
+  全3876四点・全81空点を独立検算。行内点対和の計数からK10≤23。
+  特定19石から除去1..8全169765集合の交換は20石なし。
+  この局所不在を20石全体の上界に流用しない。B082はPARTIAL。
+- round58はB087を原文採用。全n7最大16配置の全64埋込みを二方式で全3200空点禁止と確認。
+  独立安全15石があるので、どの埋込みもn8最大に拡張不能。K8の上界を必要としない。
+- 原文索引は164件照合、SUPPORTED89・REFUTED46・PARTIAL24・SCOPE_UNCLEAR5・未監査436。
+  利用量が尽きるまで九石極大・二十石安全などの残件へ進む。
+
+## round59〜61・ユーザー指定で一旦終了
+
+- 58e3c78を共有mainの別更新bc62390と通常mergeし、9ad3845としてpush済み。
+- round59の九石極大SATは600.782秒でUNKNOWN、s10は[9,10]のまま。
+- round60は特定19石から除去九石全92378条件の20石不在を完了。
+  除去十石の22086条件目で600秒打切り、一般20石は未決。
+  安全20石があれば特定19石との共通点は高々9、少なくとも十石入替が必要。
+- round61はp≡1 mod4全素数のp石構成を自足証明。既知下界の独立再構成であり、新発見とは数えない。
+  5..101全12素数の全572326三点・12086667四点で整数行列式・合同式が一致。
+  B088はPARTIAL、2n−O(1)の原文は未達。
+- 原文索引は165件、SUPPORTED89・REFUTED46・PARTIAL25・SCOPE_UNCLEAR5・未監査435。
+  未監査435を未解決確定数とは呼ばない。
+- ユーザーが「現在の仕事が終わったら一旦終了、わかっている範囲をメモ」と指定。
+  実行中の計算はすべて終え、新規探索は開始せず終了する。自動再開も設定しない。
+  詳細はHANDOFF-2026-10-01-round61.md（成果・証人・未決・再開・Git・注意事項）へ保存。

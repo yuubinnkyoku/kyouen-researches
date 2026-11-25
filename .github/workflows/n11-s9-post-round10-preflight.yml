@@ -1,0 +1,32 @@
+name: N11 round11 independent candidate preflight
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'research/experiments/n11-s9-post-round10-replan-20261028/audit_next_batch.js'
+      - 'research/experiments/n11-s9-post-round10-replan-20261028/next-plan.json'
+      - 'research/experiments/n11-s9-post-round10-replan-20261028/preflight.json'
+      - '.github/workflows/n11-s9-post-round10-preflight.yml'
+  workflow_dispatch:
+jobs:
+  preflight:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Audit all selected S9 legal boundaries under two independent integer geometries
+        run: node research/experiments/n11-s9-post-round10-replan-20261028/audit_next_batch.js > round11-preflight.json
+      - name: Show measured cross-root sharing
+        run: cat round11-preflight.json
+      - name: Compare fixed preflight when present
+        run: |
+          if [ -f research/experiments/n11-s9-post-round10-replan-20261028/preflight.json ]; then
+            cmp round11-preflight.json research/experiments/n11-s9-post-round10-replan-20261028/preflight.json
+          fi
+      - uses: actions/upload-artifact@v4
+        with:
+          name: n11-round11-independent-preflight
+          path: round11-preflight.json

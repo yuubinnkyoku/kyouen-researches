@@ -1,0 +1,700 @@
+name: Knowledge integrity
+on:
+  push:
+    branches: [main, 'codex/**']
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+jobs:
+  knowledge:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+      - run: uv sync --locked
+      - run: python research/experiments/graph-star-second-terminal-degree-20261103/verify.py
+      - run: uv run --locked python research/experiments/path-run-coefficients-20261103/verify.py
+      - run: uv run --locked python research/experiments/path-terminal-real-roots-20261103/verify.py
+      - name: Audit K0568 circuit reduction boundaries
+        run: |
+          uv run --locked python research/experiments/binary-cube-hyperplane-k6-exact-20261025/verify_small_dimension_circuits.py
+          c++ -std=c++17 -O2 -Wall -Wextra research/experiments/binary-cube-hyperplane-k6-exact-20261025/build_k6_circuits.cpp -o /tmp/build_k6_circuits
+          if /tmp/build_k6_circuits --cnf 6 /tmp/k6-invalid.cnf; then
+            echo "circuit CNF must reject K<7" >&2
+            exit 1
+          fi
+          test ! -e /tmp/k6-invalid.cnf
+      - name: Audit all-t minimum-width G=3 witnesses
+        run: uv run --locked python research/experiments/vertical-fiber-all-t-minwidth-witness-20261116/verify_minwidth_witness.py
+      - name: Audit K0832 two-token z=0 residual slice
+        run: uv run --locked python research/experiments/vertical-fiber-two-token-z0-slice-20261116/verify_z0_slice.py
+      - name: Audit K0832 two-token z=1 residual slice
+        run: uv run --locked python research/experiments/vertical-fiber-two-token-z1-slice-20261116/verify_z1_slice.py
+      - name: Audit K0832 two-token z=2 residual slice
+        run: uv run --locked python research/experiments/vertical-fiber-two-token-z2-slice-20261116/verify_z2_slice.py
+      - name: Audit K0832 two-token z=3 residual slice
+        run: uv run --locked python research/experiments/vertical-fiber-two-token-z3-slice-20261116/verify_z3_slice.py
+      - name: Audit K0832 two-token z=4 residual slice conjecture
+        run: uv run --locked python research/experiments/vertical-fiber-two-token-z4-slice-20261116/verify_z4_conjecture.py
+      - name: Audit K0832 two-token z=4 full Grundy theorem
+        run: uv run --locked python research/experiments/vertical-fiber-two-token-z4-proof-20261116/verify_z4_proof.py
+      - name: Audit K0832 two-token z=5 Grundy-2 locus conjecture
+        run: uv run --locked python research/experiments/vertical-fiber-two-token-z5-value2-locus-20261116/verify_z5_value2.py
+      - name: Audit K0873 two-token z=5 Grundy-1 locus conjecture
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z5-value1-locus-20261116/verify_z5_value1.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z5-value1-locus-20261116/output/audit.json
+      - name: Audit K0873 two-token z=5 y=1 proved boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z5-y1-boundary-20261116/verify_z5_y1.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z5-y1-boundary-20261116/output/audit.json
+      - name: Audit K0873 full z=5 two-token Grundy theorem
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z5-full-grundy-20261117/verify_z5_full.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z5-full-grundy-20261117/output/audit.json
+      - name: Audit K0877 two-token z=6 y=1 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z6-y1-boundary-20261117/verify_z6_y1.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z6-y1-boundary-20261117/output/audit.json
+      - name: Audit K0878 two-token z=6 y=2 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z6-y2-boundary-20261117/verify_z6_y2.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z6-y2-boundary-20261117/output/audit.json
+      - name: Audit K0879 two-token z=6 y=3 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z6-y3-boundary-20261117/verify_z6_y3.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z6-y3-boundary-20261117/output/audit.json
+      - name: Audit K0880 two-token z=6 y=4 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z6-y4-boundary-20261117/verify_z6_y4.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z6-y4-boundary-20261117/output/audit.json
+      - name: Audit K0884 two-token z=6 y=5 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z6-y5-boundary-20261117/verify_z6_y5.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z6-y5-boundary-20261117/output/audit.json
+      - name: Audit K0885 two-token z=6 y=6 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z6-y6-boundary-20261117/verify_z6_y6.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z6-y6-boundary-20261117/output/audit.json
+      - name: Audit K0887 two-token z=6 y=7 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z6-y7-boundary-20261117/verify_z6_y7.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z6-y7-boundary-20261117/output/audit.json
+      - name: Audit K0888 two-token z=6 y=8 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z6-y8-boundary-20261117/verify_z6_y8.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z6-y8-boundary-20261117/output/audit.json
+      - name: Audit K0890 two-token z=6 y=9 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z6-y9-boundary-20261117/verify_z6_y9.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z6-y9-boundary-20261117/output/audit.json
+      - name: Audit K0892 two-token z=6 y=10 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z6-y10-boundary-20261117/verify_z6_y10.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z6-y10-boundary-20261117/output/audit.json
+      - name: Audit K0894 two-token z=6 y=11 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z6-y11-boundary-20261117/verify_z6_y11.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z6-y11-boundary-20261117/output/audit.json
+      - name: Audit K0896 two-token z=6 y=12 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z6-y12-boundary-20261117/verify_z6_y12.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z6-y12-boundary-20261117/output/audit.json
+      - name: Audit K0899 two-token z=6 y=13 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z6-y13-boundary-20261117/verify_z6_y13.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z6-y13-boundary-20261117/output/audit.json
+      - name: Audit K0901 two-token z=6 y=14 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z6-y14-boundary-20261117/verify_z6_y14.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z6-y14-boundary-20261117/output/audit.json
+      - name: Audit K0903 two-token z=6 y=15 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z6-y15-boundary-20261117/verify_z6_y15.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z6-y15-boundary-20261117/output/audit.json
+      - name: Audit K0905 two-token z=6 y=16 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z6-y16-boundary-20261117/verify_z6_y16.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z6-y16-boundary-20261117/output/audit.json
+      - name: Audit K0908 two-token z=6 y=17 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z6-y17-boundary-20261117/verify_z6_y17.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z6-y17-boundary-20261117/output/audit.json
+      - name: Audit K0910 two-token z=6 y=18 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z6-y18-boundary-20261117/verify_z6_y18.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z6-y18-boundary-20261117/output/audit.json
+      - name: Audit K0911 two-token z=6 y=19 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z6-y19-boundary-20261117/verify_z6_y19.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z6-y19-boundary-20261117/output/audit.json
+      - name: Audit K0913 two-token z=6 y=20 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z6-y20-boundary-20261117/verify_z6_y20.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z6-y20-boundary-20261117/output/audit.json
+      - name: Audit K0914 two-token z=6 y=21 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z6-y21-boundary-20261117/verify_z6_y21.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z6-y21-boundary-20261117/output/audit.json
+      - name: Audit K0915 two-token z=6 y=22 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z6-y22-boundary-20261117/verify_z6_y22.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z6-y22-boundary-20261117/output/audit.json
+      - name: Audit K0917 two-token z=6 y=23 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z6-y23-boundary-20261117/verify_z6_y23.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z6-y23-boundary-20261117/output/audit.json
+      - name: Audit K0918 two-token z=6 y=24 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z6-y24-boundary-20261117/verify_z6_y24.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z6-y24-boundary-20261117/output/audit.json
+      - name: Audit K0936 two-token z=6 y=25 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z6-y25-boundary-20261118/verify_z6_y25.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z6-y25-boundary-20261118/output/audit.json
+      - name: Audit K0938 two-token z=6 y=26 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z6-y26-boundary-20261118/verify_z6_y26.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z6-y26-boundary-20261118/output/audit.json
+      - name: Audit K0940 two-token z=6 y=27 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z6-y27-boundary-20261118/verify_z6_y27.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z6-y27-boundary-20261118/output/audit.json
+      - name: Audit K0942 two-token z=6 y=28 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z6-y28-boundary-20261118/verify_z6_y28.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z6-y28-boundary-20261118/output/audit.json
+      - name: Audit K0944 two-token z=6 y=29 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z6-y29-boundary-20261118/verify_z6_y29.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z6-y29-boundary-20261118/output/audit.json
+      - name: Audit K0947 two-token z=6 y=30 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z6-y30-boundary-20261118/verify_z6_y30.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z6-y30-boundary-20261118/output/audit.json
+      - name: Audit K0953 two-token z=6 y=31 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z6-y31-boundary-20261118/verify_z6_y31.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z6-y31-boundary-20261118/output/audit.json
+      - name: Audit K0955 two-token z=6 y=32 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z6-y32-boundary-20261118/verify_z6_y32.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z6-y32-boundary-20261118/output/audit.json
+      - name: Audit K0967 two-token z=6 y=33 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z6-y33-boundary-20261118/verify_z6_y33.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z6-y33-boundary-20261118/output/audit.json
+      - name: Audit K0970 two-token z=6 y=34 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z6-y34-boundary-20261118/verify_z6_y34.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z6-y34-boundary-20261118/output/audit.json
+      - name: Audit K0972 two-token z=6 y=35 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z6-y35-boundary-20261118/verify_z6_y35.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z6-y35-boundary-20261118/output/audit.json
+      - name: Audit K0973 two-token z=6 y=36 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z6-y36-boundary-20261119/verify_z6_y36.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z6-y36-boundary-20261119/output/audit.json
+      - name: Audit K0975 z=6 uniform two-token formula independent verification
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z6-independent-uniform-20261119/verify_z6_uniform_independent.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z6-independent-uniform-20261119/output/audit.json
+      - name: Audit K0976 z=7 y>=4 two-token finite conjecture census
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z7-y-ge4-census-20261119/verify_z7_y_ge4.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z7-y-ge4-census-20261119/output/audit.json
+      - name: Audit K0977 two-token z=7 y=1 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z7-y1-boundary-20261119/verify_z7_y1.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z7-y1-boundary-20261119/output/audit.json
+      - name: Audit K0978 two-token z=7 y=2 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z7-y2-boundary-20261119/verify_z7_y2.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z7-y2-boundary-20261119/output/audit.json
+      - name: Audit K0979 two-token z=7 y=3 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z7-y3-boundary-20261118/verify_z7_y3.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z7-y3-boundary-20261118/output/audit.json
+      - name: Audit K0976 z=7 y>=4 full two-token Grundy theorem
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z7-y-ge4-proof-20261119/verify_z7_y_ge4_proof.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z7-y-ge4-proof-20261119/output/audit.json
+      - name: Audit K0983 two-token z=8 y=1 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z8-y1-boundary-20261119/verify_z8_y1.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z8-y1-boundary-20261119/output/audit.json
+      - name: Audit K0984 two-token z=8 y=2 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z8-y2-boundary-20261119/verify_z8_y2.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z8-y2-boundary-20261119/output/audit.json
+      - name: Audit K0985 two-token z=9 y=1 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z9-y1-boundary-20261119/verify_z9_y1.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z9-y1-boundary-20261119/output/audit.json
+      - name: Audit K0957 t=2 q=8 pure-fiber all-Grundy theorem
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-t2-q8-grundy-20261118/verify_t2_q8.py
+          git diff --exit-code -- research/experiments/vertical-fiber-t2-q8-grundy-20261118/output/audit.json
+      - name: Audit K0962 t=2 q=9 pure-fiber all-Grundy theorem
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-t2-q9-grundy-20261118/verify_t2_q9.py
+          git diff --exit-code -- research/experiments/vertical-fiber-t2-q9-grundy-20261118/output/audit.json
+      - name: Audit K0964 t=2 q=10 pure-fiber all-Grundy theorem
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-t2-q10-grundy-20261118/verify_t2_q10.py
+          git diff --exit-code -- research/experiments/vertical-fiber-t2-q10-grundy-20261118/output/audit.json
+      - name: Audit K0969 t=2 q=11 pure-fiber all-Grundy theorem
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-t2-q11-grundy-20261118/verify_t2_q11.py
+          git diff --exit-code -- research/experiments/vertical-fiber-t2-q11-grundy-20261118/output/audit.json
+      - name: Audit K0971 t=2 q=12 pure-fiber all-Grundy theorem
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-t2-q12-grundy-20261118/verify_t2_q12.py
+          git diff --exit-code -- research/experiments/vertical-fiber-t2-q12-grundy-20261118/output/audit.json
+      - name: Audit K0832 t=2, q=2w-1 all-safe Grundy classification
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-t2-q2w-minus1-grundy-20261118/verify_t2_q2w_minus1.py
+          git diff --exit-code -- research/experiments/vertical-fiber-t2-q2w-minus1-grundy-20261118/output/audit.json
+      - name: Audit K0832 ceiling-token stable 2-position classification
+        run: uv run --locked python research/experiments/vertical-fiber-ceiling-stable-2positions-20261116/verify_ceiling.py
+      - name: Audit K0832 three-token transient band 2-position conjectures
+        run: uv run --locked python research/experiments/vertical-fiber-three-token-transient-band-20261116/verify_transient.py
+      - name: Audit K0832 transient band extension (k=1..8, m=9/m=10, even-m unified form)
+        run: uv run --locked python research/experiments/vertical-fiber-transient-band-extension-20261116/verify_extension.py
+      - name: Audit K0832 diagonal m=11..16 extrapolation (odd family, even mod-4 unified form, all-ones profile)
+        run: uv run --locked python research/experiments/vertical-fiber-diagonal-m11-m16-20261116/verify_diag_m11_m16.py
+      - name: Audit Q-family remaining D4 orbit worklist
+        run: python research/experiments/n11-frontier-q-family-orbit-dedup-20261116/verify.py
+      - name: Audit N11 five-parent 49-root cache exclusion and exact mobility
+        run: |
+          node research/experiments/n11-head1410-residual-cover-after-receipt-fold-20261119/scripts/audit_49_root_cache_exclusion_and_mobility_20261119.mjs
+          git diff --exit-code -- research/experiments/n11-head1410-residual-cover-after-receipt-fold-20261119/output/49-root-cache-exclusion-mobility-20261119.json
+      - name: Audit K0872 three-branch REMO first-loser residue signature
+        run: |
+          uv run --locked python research/experiments/remo-first-loser-residue-signature-20261116/verify_first_loser_residue_signature.py
+          git diff --exit-code -- research/experiments/remo-first-loser-residue-signature-20261116/output/audit.json
+      - name: Audit K0952 REMO M-smooth finite prime-pair tail
+        run: |
+          uv run --locked python research/experiments/remo-smooth-factor-pair-20261118/verify_smooth_pair.py
+          git diff --exit-code -- research/experiments/remo-smooth-factor-pair-20261118/output/smooth_pair_audit.json
+      - name: Audit K0986 two-token z=8 y=3 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z8-y3-boundary-20261119/verify_z8_y3.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z8-y3-boundary-20261119/output/audit.json
+      - name: Audit K0987 two-token z=8 y=4 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z8-y4-boundary-20261119/verify_z8_y4.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z8-y4-boundary-20261119/output/audit.json
+      - name: Audit K0988 two-token z=9 y=2 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z9-y2-boundary-20261119/verify_z9_y2.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z9-y2-boundary-20261119/output/audit.json
+      - name: Audit K0989 two-token z=9 y=3 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z9-y3-boundary-20261119/verify_z9_y3.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z9-y3-boundary-20261119/output/audit.json
+      - name: Audit K0990 two-token z=9 y=4 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z9-y4-boundary-20261119/verify_z9_y4.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z9-y4-boundary-20261119/output/audit.json
+      - name: Audit K0991 two-token z=8 y=5 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z8-y5-boundary-20261119/verify_z8_y5.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z8-y5-boundary-20261119/output/audit.json
+      - name: Audit K0992 two-token z=9 y=5 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z9-y5-boundary-20261119/verify_z9_y5.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z9-y5-boundary-20261119/output/audit.json
+      - name: Audit K0993 two-token z=8 y=6 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z8-y6-boundary-20261119/verify_z8_y6.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z8-y6-boundary-20261119/output/audit.json
+      - name: Audit K0994 two-token z=9 y=6 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z9-y6-boundary-20261119/verify_z9_y6.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z9-y6-boundary-20261119/output/audit.json
+      - name: Audit K0995 two-token z=8 y=7 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z8-y7-boundary-20261119/verify_z8_y7.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z8-y7-boundary-20261119/output/audit.json
+      - name: Audit K0996 two-token z=8 y=8 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z8-y8-boundary-20261119/verify_z8_y8.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z8-y8-boundary-20261119/output/audit.json
+      - name: Audit K0997 two-token z=9 y=7 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z9-y7-boundary-20261119/verify_z9_y7.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z9-y7-boundary-20261119/output/audit.json
+      - name: Audit K0998 two-token z=9 y=8 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z9-y8-boundary-20261119/verify_z9_y8.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z9-y8-boundary-20261119/output/audit.json
+      - name: Audit K0999 two-token z=8 y=9 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z8-y9-boundary-20261119/verify_z8_y9.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z8-y9-boundary-20261119/output/audit.json
+      - name: Audit K1000 uniform z=8 y>=9 two-token full Grundy theorem
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z8-y-ge9-proof-20261119/verify_z8_y_ge9_proof.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z8-y-ge9-proof-20261119/output/audit.json
+      - name: Audit K1001 uniform z=9 y>=9 two-token full Grundy theorem
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z9-y-ge9-proof-20261119/verify_z9_y_ge9_proof.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z9-y-ge9-proof-20261119/output/audit.json
+      - name: Audit K1003 two-token z=10 y=1 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z10-y1-boundary-20261119/verify_z10_y1.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z10-y1-boundary-20261119/output/audit.json
+      - name: Audit K1004 two-token z=10 y=2 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z10-y2-boundary-20261119/verify_z10_y2.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z10-y2-boundary-20261119/output/audit.json
+      - name: Audit K1005 two-token z=10 y=3 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z10-y3-boundary-20261119/verify_z10_y3.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z10-y3-boundary-20261119/output/audit.json
+      - name: Audit K1006 two-token z=10 y=4 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z10-y4-boundary-20261119/verify_z10_y4.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z10-y4-boundary-20261119/output/audit.json
+      - name: Audit K1007 two-token z=10 y=5 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z10-y5-boundary-20261119/verify_z10_y5.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z10-y5-boundary-20261119/output/audit.json
+          uv run --locked python research/experiments/vertical-fiber-two-token-z10-y5-boundary-20261119/agree_k1002_y5.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z10-y5-boundary-20261119/output/agree_audit.json
+      - name: Audit K1008 two-token z=10 y=6 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z10-y6-boundary-20261119/verify_z10_y6.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z10-y6-boundary-20261119/output/audit.json
+          uv run --locked python research/experiments/vertical-fiber-two-token-z10-y6-boundary-20261119/agree_k1002_y6.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z10-y6-boundary-20261119/output/agree_audit.json
+      - name: Audit K1009 two-token z=10 y=7 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z10-y7-boundary-20261119/verify_z10_y7.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z10-y7-boundary-20261119/output/audit.json
+          uv run --locked python research/experiments/vertical-fiber-two-token-z10-y7-boundary-20261119/agree_k1002_y7.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z10-y7-boundary-20261119/output/agree_audit.json
+      - name: Audit K1010 two-token z=10 y=8 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z10-y8-boundary-20261119/verify_z10_y8.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z10-y8-boundary-20261119/output/audit.json
+      - name: Audit K1011 uniform z=10 y>=9 two-token full Grundy theorem
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z10-y-ge9-proof-20261119/verify_z10_y_ge9_proof.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z10-y-ge9-proof-20261119/output/audit.json
+      - name: Audit K1012 two-token z=11 y=1 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z11-y1-boundary-20261119/verify_z11_y1.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z11-y1-boundary-20261119/output/audit.json
+      - name: Audit K1013 two-token z=11 y=2 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z11-y2-boundary-20261119/verify_z11_y2.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z11-y2-boundary-20261119/output/audit.json
+      - name: Audit K1014 two-token z=11 y=3 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z11-y3-boundary-20261119/verify_z11_y3.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z11-y3-boundary-20261119/output/audit.json
+      - name: Audit K1015 two-token z=11 y=4 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z11-y4-boundary-20261119/verify_z11_y4.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z11-y4-boundary-20261119/output/audit.json
+      - name: Audit K1016 two-token z=12 y=1 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z12-y1-boundary-20261119/verify_z12_y1.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z12-y1-boundary-20261119/output/audit.json
+      - name: Audit K1017 two-token z=13 y=1 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z13-y1-boundary-20261119/verify_z13_y1.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z13-y1-boundary-20261119/output/audit.json
+      - name: Audit K1018 two-token z=14 y=1 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z14-y1-boundary-20261119/verify_z14_y1.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z14-y1-boundary-20261119/output/audit.json
+      - name: Audit K1019 two-token z=12 y=2 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z12-y2-boundary-20261119/verify_z12_y2.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z12-y2-boundary-20261119/output/audit.json
+      - name: Audit K1020 two-token z=15 y=1 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z15-y1-boundary-20261119/verify_z15_y1.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z15-y1-boundary-20261119/output/audit.json
+      - name: Audit K1021 two-token z=12 y=3 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z12-y3-boundary-20261119/verify_z12_y3.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z12-y3-boundary-20261119/output/audit.json
+      - name: Audit z=16 y=1 two-token residual slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z16-y1-boundary-20261119/verify_z16_y1.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z16-y1-boundary-20261119/output/audit.json
+      - name: Audit K1022 y=1 two-token parametric closed form universal proof
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-y1-parametric-proof-20261119/verify_y1_parametric_proof.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-y1-parametric-proof-20261119/output/audit.json
+      - name: Audit K1023 y=1 two-token parametric all-z universal proof
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-y1-parametric-allz-proof-20261119/verify_p1_universal.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-y1-parametric-allz-proof-20261119/output/audit.json
+          uv run --locked python research/experiments/vertical-fiber-two-token-y1-parametric-allz-proof-20261119/cross_check_k1022.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-y1-parametric-allz-proof-20261119/output/cross_check_k1022.json
+      - name: Audit K1024 two-token z=12 y=4 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z12-y4-boundary-20261119/verify_z12_y4.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z12-y4-boundary-20261119/output/audit.json
+      - name: Audit K1025 two-token z=13 y=2 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z13-y2-boundary-20261119/verify_z13_y2.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z13-y2-boundary-20261119/output/audit.json
+      - name: Audit K1026 two-token z=13 y=3 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z13-y3-boundary-20261119/verify_z13_y3.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z13-y3-boundary-20261119/output/audit.json
+      - name: Audit K1027 two-token z=13 y=4 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z13-y4-boundary-20261119/verify_z13_y4.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z13-y4-boundary-20261119/output/audit.json
+      - name: Audit K1028 two-token z=14 y=2 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z14-y2-boundary-20261119/verify_z14_y2.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z14-y2-boundary-20261119/output/audit.json
+      - name: Audit K1030 two-token z=14 y=3 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z14-y3-boundary-20261119/verify_z14_y3.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z14-y3-boundary-20261119/output/audit.json
+      - name: Audit K1031 two-token z=14 y=4 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z14-y4-boundary-20261119/verify_z14_y4.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z14-y4-boundary-20261119/output/audit.json
+      - name: Audit K1032 two-token z=15 y=2 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z15-y2-boundary-20261119/verify_z15_y2.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z15-y2-boundary-20261119/output/audit.json
+      - name: Audit K1034 two-token z=15 y=3 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z15-y3-boundary-20261119/verify_z15_y3.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z15-y3-boundary-20261119/output/audit.json
+      - name: Audit K1037 two-token z=11 y=5 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z11-y5-boundary-20261119/verify_z11_y5.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z11-y5-boundary-20261119/output/audit.json
+      - name: Audit K1043 two-token z=12 y=5 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z12-y5-boundary-20261119/verify_z12_y5.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z12-y5-boundary-20261119/output/audit.json
+      - name: Audit K1045 two-token z=13 y=5 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z13-y5-boundary-20261119/verify_z13_y5.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z13-y5-boundary-20261119/output/audit.json
+      - name: Audit K1047 two-token z=14 y=5 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z14-y5-boundary-20261119/verify_z14_y5.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z14-y5-boundary-20261119/output/audit.json
+      - name: Audit K1048 two-token z=15 y=4 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z15-y4-boundary-20261120/verify_z15_y4.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z15-y4-boundary-20261120/output/audit.json
+      - name: Audit K1049 two-token z=15 y=5 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z15-y5-boundary-20261120/verify_z15_y5.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z15-y5-boundary-20261120/output/audit.json
+      - name: Audit K1050 two-token z=16 y=3 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z16-y3-boundary-20261120/verify_z16_y3.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z16-y3-boundary-20261120/output/audit.json
+      - name: Audit K1064 two-token z=16 y=4 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z16-y4-boundary-20261120/verify_z16_y4.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z16-y4-boundary-20261120/output/audit.json
+          uv run --locked python research/experiments/vertical-fiber-two-token-z16-y4-boundary-20261120/census_z16_y4.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z16-y4-boundary-20261120/output/census.txt
+      - name: Audit K1067 two-token z=17 y=3 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z17-y3-boundary-20261120/verify_z17_y3.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z17-y3-boundary-20261120/output/audit.json
+          uv run --locked python research/experiments/vertical-fiber-two-token-z17-y3-boundary-20261120/census_z17_y3.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z17-y3-boundary-20261120/output/census.txt
+      - name: Audit K1065 two-token z=15 y>=6 uniform full-Grundy theorem
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z15-y-ge6-proof-20261120/verify_z15_y_ge6.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z15-y-ge6-proof-20261120/output/audit.json
+      - name: Audit K1051 two-token z=18 y=2 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z18-y2-boundary-20261120/verify_z18_y2.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z18-y2-boundary-20261120/output/audit.json
+      - name: Audit K1052 two-token z=19 y=2 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z19-y2-boundary-20261120/verify_z19_y2.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z19-y2-boundary-20261120/output/audit.json
+      - name: Audit K1053 two-token z=20 y=2 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z20-y2-boundary-20261120/verify_z20_y2.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z20-y2-boundary-20261120/output/audit.json
+      - name: Audit K1054 two-token z=21 y=2 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z21-y2-boundary-20261120/verify_z21_y2.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z21-y2-boundary-20261120/output/audit.json
+      - name: Audit K1055 two-token z=11 y>=6 uniform full-Grundy theorem
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z11-y-ge6-proof-20261119/verify_z11_y_ge6_proof.py > /tmp/k1055-audit.json
+          uv run --locked python -c "import json; d=json.load(open('/tmp/k1055-audit.json')); assert not d['bad']"
+      - name: Audit K1056 two-token z=12 y>=6 uniform full-Grundy theorem
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z12-y-ge6-proof-20261120/verify_z12_y_ge6_proof.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z12-y-ge6-proof-20261120/output/audit.json
+      - name: Audit K1061 two-token z=13 y>=6 uniform full-Grundy theorem
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z13-y-ge6-proof-20261120/verify_z13_y_ge6_proof.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z13-y-ge6-proof-20261120/output/audit.json
+      - name: Audit K1062 two-token z=14 y>=6 uniform full-Grundy theorem
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z14-y-ge6-proof-20261120/verify_z14_y_ge6.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z14-y-ge6-proof-20261120/output/audit.json
+      - name: Audit K1074 two-token z=16 y=5 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z16-y5-boundary-20261120/verify_z16_y5.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z16-y5-boundary-20261120/output/audit.json
+          uv run --locked python research/experiments/vertical-fiber-two-token-z16-y5-boundary-20261120/census_z16_y5.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z16-y5-boundary-20261120/output/census.txt
+      - name: Audit K1076 two-token z=17 y=4 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z17-y4-boundary-20261120/verify_z17_y4.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z17-y4-boundary-20261120/output/audit.json
+      - name: Audit K1077 two-token z=16 y>=6 uniform full-Grundy theorem
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z16-y-ge6-proof-20261120/verify_z16_y_ge6.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z16-y-ge6-proof-20261120/output/audit.json
+      - name: Audit K1078 two-token z=18 y=3 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z18-y3-boundary-20261120/verify_z18_y3.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z18-y3-boundary-20261120/output/audit.json
+      - name: Audit K1079 second verification of K1076 two-token z=17 y=4 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z17-y4-second-verification-20261120/verify_z17_y4_second.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z17-y4-second-verification-20261120/output/audit.json
+          uv run --locked python research/experiments/vertical-fiber-two-token-z17-y4-second-verification-20261120/census_z17_y4_second.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z17-y4-second-verification-20261120/output/census.txt
+      - name: Audit K1080 two-token z=17 y=5 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z17-y5-boundary-20261120/verify_z17_y5.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z17-y5-boundary-20261120/output/audit.json
+          uv run --locked python research/experiments/vertical-fiber-two-token-z17-y5-boundary-20261120/census_z17_y5.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z17-y5-boundary-20261120/output/census.txt
+      - name: Audit K1083 two-token z=18 y=4 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z18-y4-boundary-20261120/verify_z18_y4.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z18-y4-boundary-20261120/output/audit.json
+      - name: Audit K1092 two-token z=18 y=5 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z18-y5-boundary-20261120/verify_z18_y5.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z18-y5-boundary-20261120/output/audit.json
+      - name: Audit K1093 N11 residual72 replace16 independent second verification
+        run: |
+          uv run --locked python research/experiments/n11-residual72-replace16-independent-second-verification-20261120/verify_replace16_second_20261120.py
+          git diff --exit-code -- research/experiments/n11-residual72-replace16-independent-second-verification-20261120/output/audit.json
+      - name: Audit K1087 two-token z=17 y>=6 uniform full-Grundy theorem
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z17-y-ge6-proof-20261120/verify_z17_y_ge6.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z17-y-ge6-proof-20261120/output/audit.json
+      - name: Audit K1098 two-token z=19 y=3 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z19-y3-boundary-20261120/verify_z19_y3.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z19-y3-boundary-20261120/output/audit.json
+      - name: Audit K1099 y=2 two-token parametric all-z universal proof
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-y2-parametric-allz-proof-20261120/verify_p2_universal.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-y2-parametric-allz-proof-20261120/output/audit.json
+      - name: Audit K1099 y=2 two-token parametric all-z census
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-y2-parametric-allz-proof-20261120/census_rows.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-y2-parametric-allz-proof-20261120/output/census.txt
+      - name: Audit K1100 two-token z=19 y=4 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z19-y4-boundary-20261120/verify_z19_y4.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z19-y4-boundary-20261120/output/audit.json
+      - name: Audit K1101 two-token merge below diagonal
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-merge-below-diagonal-20261120/verify_merge.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-merge-below-diagonal-20261120/output/audit.json
+      - name: Audit K1104 two-token y=3 parametric all-z universal proof
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-y3-parametric-allz-proof-20261120/verify_y3_universal.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-y3-parametric-allz-proof-20261120/output/audit.json
+      - name: Audit K1104 two-token y=3 parametric all-z census
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-y3-parametric-allz-proof-20261120/census_rows.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-y3-parametric-allz-proof-20261120/output/census.txt
+      - name: Audit K1112 two-token y=4 parametric all-z universal proof
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-y4-parametric-allz-proof-20261120/verify_y4_universal.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-y4-parametric-allz-proof-20261120/output/audit.json
+      - name: Audit K1112 two-token y=4 parametric all-z census
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-y4-parametric-allz-proof-20261120/census_rows.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-y4-parametric-allz-proof-20261120/output/census.txt
+      - name: Audit K1126 two-token y=5 parametric all-z universal proof
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-y5-parametric-allz-proof-20261120/verify_y5_universal.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-y5-parametric-allz-proof-20261120/output/audit.json
+      - name: Audit K1126 two-token y=5 parametric all-z census
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-y5-parametric-allz-proof-20261120/census_rows.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-y5-parametric-allz-proof-20261120/output/census.txt
+      - name: Audit K1127 two-token y=6 parametric all-z universal proof
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-y6-parametric-allz-proof-20261120/verify_y6_universal.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-y6-parametric-allz-proof-20261120/output/audit.json
+      - name: Audit K1127 two-token y=6 parametric all-z census
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-y6-parametric-allz-proof-20261120/census_rows.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-y6-parametric-allz-proof-20261120/output/census.txt
+      - name: Audit K1131 two-token y=7 parametric all-z universal proof
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-y7-parametric-allz-proof-20261120/verify_y7_universal.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-y7-parametric-allz-proof-20261120/output/audit.json
+      - name: Audit K1131 two-token y=7 parametric all-z census
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-y7-parametric-allz-proof-20261120/census_rows.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-y7-parametric-allz-proof-20261120/output/census.txt
+      - name: Audit K1135 two-token y=8 parametric all-z universal proof
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-y8-parametric-allz-proof-20261120/verify_y8_universal.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-y8-parametric-allz-proof-20261120/output/audit.json
+      - name: Audit K1135 two-token y=8 parametric all-z census
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-y8-parametric-allz-proof-20261120/census_rows.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-y8-parametric-allz-proof-20261120/output/census.txt
+      - name: Audit K1138 two-token y=9 parametric all-z universal proof
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-y9-parametric-allz-proof-20261120/verify_y9_universal.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-y9-parametric-allz-proof-20261120/output/audit.json
+      - name: Audit K1138 two-token y=9 parametric all-z census
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-y9-parametric-allz-proof-20261120/census_rows.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-y9-parametric-allz-proof-20261120/output/census.txt
+      - name: Audit K1141 two-token y=10 parametric all-z universal proof
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-y10-parametric-allz-proof-20261120/verify_y10_universal.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-y10-parametric-allz-proof-20261120/output/audit.json
+      - name: Audit K1141 two-token y=10 parametric all-z census
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-y10-parametric-allz-proof-20261120/census_rows.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-y10-parametric-allz-proof-20261120/output/census.txt
+      - name: Audit K1145 remo survivor minimal period r33to48
+        run: |
+          uv run --locked python research/experiments/remo-survivor-minimal-period-r33plus-20261120/survivor_witness_r33plus.py
+          git diff --exit-code -- research/experiments/remo-survivor-minimal-period-r33plus-20261120/output/audit.json
+      - name: Audit K1154 REMO full-record period characterization
+        run: |
+          uv run --locked python research/experiments/remo-uniform-period-characterization-20261120/verify_period_necessity.py
+          git diff --exit-code -- research/experiments/remo-uniform-period-characterization-20261120/output/audit.json
+      - run: uv run --locked python tools/knowledge/check.py
+      - run: uv run --locked python -m unittest discover -s tools/knowledge/tests
+      - run: uv run --locked python research/experiments/graph-star-fixed-q-count-complexity-20261102/verify.py
+      - run: uv run --locked python research/experiments/graph-star-q-spectrum-20261102/verify.py
+      - run: uv run --locked python research/experiments/graph-star-vertex-cover-terminal-gap-20261103/verify.py
+      - run: uv run --locked python research/experiments/graph-star-leaf-core-spectrum-20261103/verify.py
+      - run: uv run --locked python research/experiments/graph-star-connected-kernel-20261103/verify.py
+      - run: uv run --locked python research/experiments/graph-star-fixed-defect-bit-fpt-20261103/verify.py
+      - run: uv run --locked python tools/knowledge/build.py
+      - run: git diff --exit-code -- README.md research/knowledge/generated

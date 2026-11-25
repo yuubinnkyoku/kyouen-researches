@@ -1,0 +1,24 @@
+name: n11 central49 terminal strategy backward WIN closure
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'research/experiments/n11-central-19-cover-20261031/verify_terminal_s6_60_closure.cpp'
+      - 'research/experiments/n11-central-19-cover-20261031/verify_terminal_s6_60_closure.py'
+      - 'research/experiments/n11-central-19-cover-20261031/terminal_s6_60_strategy.b64'
+      - '.github/workflows/n11-central49-terminal-s6-closure.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  backward-closure:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Replay complete-call strategy and verify finite WIN closure
+        run: |
+          python3 research/experiments/n11-central-19-cover-20261031/verify_terminal_s6_60_closure.py

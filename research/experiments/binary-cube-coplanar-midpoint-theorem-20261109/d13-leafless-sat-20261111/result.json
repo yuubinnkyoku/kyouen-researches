@@ -1,0 +1,18 @@
+{
+  "n": 13,
+  "edges": 16,
+  "variables": 10902,
+  "clauses": 32348,
+  "budget": 500000,
+  "cnf_sha256": "f2c511d1eee822474b5bc7b4b4de13f218f7cc4ce861832dad9df624f01c2988",
+  "worker_sha256": "3191f7d4ea88de026a8c40074395f708cbb138869e2ffd466a08848588772d23",
+  "encoder_sha256": "fcdec876c8b21ee2f4ff3519290c73800d7c6abc00a81d49245bcac72a6b1b48",
+  "status": "UNKNOWN",
+  "statistics": {
+    "restarts": 12007,
+    "conflicts": 500001,
+    "decisions": 953748,
+    "propagations": 292666935
+  },
+  "scope": "fixed edge and min-degree 2; UNSAT requires independent proof checking"
+}

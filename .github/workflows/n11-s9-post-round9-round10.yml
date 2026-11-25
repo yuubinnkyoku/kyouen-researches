@@ -1,0 +1,32 @@
+name: N11 post-round9 round10 bounded S9 terminal discovery
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'research/experiments/n11-s9-post-round9-round10-20261028/prove.js'
+      - '.github/workflows/n11-s9-post-round9-round10.yml'
+  workflow_dispatch:
+jobs:
+  terminal:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            research/experiments/n11-gap6-terminal-20261019
+            research/experiments/n11-s9-shared-plan14-eleven-win-20261027
+            research/experiments/n11-s9-post-round8-round9-20261028
+            research/experiments/n11-s9-post-round9-replan-20261028
+            research/experiments/n11-s9-post-round9-round10-20261028
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Solve selected 32 S9 positions to terminal with two geometries
+        run: node research/experiments/n11-s9-post-round9-round10-20261028/prove.js > n11-round10-certificate.json
+      - name: Show terminal discovery
+        run: cat n11-round10-certificate.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: n11-round10-terminal-certificate
+          path: n11-round10-certificate.json

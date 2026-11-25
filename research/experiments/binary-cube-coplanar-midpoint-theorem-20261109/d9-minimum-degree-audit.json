@@ -1,0 +1,20 @@
+{
+  "vertices": 9,
+  "edges": 11,
+  "fixed_edge": [0, 1],
+  "candidate_graphs": 183579396,
+  "c4_free": 12431265,
+  "saturated_fixed_edge": 83160,
+  "saturated_all_labelled": 272160,
+  "adjacency_verifier_sha256": "e9de4aeb77ce903caadce6b73cebbf2c01b695bff6c85e16eda7ef4fa6e15f38",
+  "mask_verifier_sha256": "72c173ae4b449a7db1bc4e56a7874d9989a4f834070bdc3920a4e6a62472ddcf",
+  "degree_sequences": [
+    {"degrees": [1,1,2,2,2,2,2,3,7], "fixed_edge_count": 13860, "all_labelled_count": 45360},
+    {"degrees": [1,1,2,2,2,2,2,5,5], "fixed_edge_count": 13860, "all_labelled_count": 45360},
+    {"degrees": [1,1,2,2,2,2,3,3,6], "fixed_edge_count": 6930, "all_labelled_count": 22680},
+    {"degrees": [1,1,2,2,2,2,3,4,5], "fixed_edge_count": 27720, "all_labelled_count": 90720},
+    {"degrees": [2,2,2,2,2,2,2,2,6], "fixed_edge_count": 6930, "all_labelled_count": 22680},
+    {"degrees": [2,2,2,2,2,2,2,4,4], "fixed_edge_count": 13860, "all_labelled_count": 45360}
+  ],
+  "scope": "two independent fixed-edge enumerators; degree sequence is not an isomorphism classification"
+}

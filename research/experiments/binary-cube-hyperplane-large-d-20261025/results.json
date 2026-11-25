@@ -1,0 +1,57 @@
+{
+  "game": "binary d-cube, forbidding d+1 points on a common real affine hyperplane (degenerate cases included)",
+  "vertex_encoding": "low d bits of the integer vertex id",
+  "date": "2026-10-25",
+  "frontier": [
+    {"d": 6, "m": 9, "excess": 3},
+    {"d": 7, "m": 10, "excess": 3},
+    {"d": 8, "m": 11, "excess": 3},
+    {"d": 9, "m": 13, "excess": 4},
+    {"d": 10, "m": 14, "excess": 4},
+    {"d": 11, "m": 15, "excess": 4},
+    {"d": 12, "m": 16, "excess": 4},
+    {"d": 13, "m": 18, "excess": 5},
+    {"d": 14, "m": 19, "excess": 5},
+    {"d": 15, "m": 20, "excess": 5},
+    {"d": 16, "m": 21, "excess": 5},
+    {"d": 17, "m": 22, "excess": 5},
+    {"d": 18, "m": 24, "excess": 6},
+    {"d": 19, "m": 25, "excess": 6},
+    {"d": 20, "m": 26, "excess": 6},
+    {"d": 21, "m": 27, "excess": 6},
+    {"d": 22, "m": 28, "excess": 6},
+    {"d": 23, "m": 29, "excess": 6},
+    {"d": 24, "m": 31, "excess": 7}
+  ],
+  "uniform_lower_bounds": [
+    {"bound": "K_d >= d+3", "d_range": [6, 24]},
+    {"bound": "K_d >= d+4", "d_range": [9, 24]},
+    {"bound": "K_d >= d+5", "d_range": [13, 24]},
+    {"bound": "K_d >= d+6", "d_range": [18, 24]},
+    {"bound": "K_24 >= 31 = d+7", "d_range": [24, 24]}
+  ],
+  "robust_greedy_failures": [
+    {"d": 6, "m": 10, "retries": 20000},
+    {"d": 7, "m": 11, "retries": 20000},
+    {"d": 8, "m": 12, "retries": 20000},
+    {"d": 9, "m": 14, "retries": 20000},
+    {"d": 10, "m": 15, "retries": 20000},
+    {"d": 11, "m": 16, "retries": 20000},
+    {"d": 12, "m": 17, "retries": 20000},
+    {"d": 15, "m": 21, "retries": 6000},
+    {"d": 16, "m": 22, "retries": 6000},
+    {"d": 17, "m": 23, "retries": 600},
+    {"d": 21, "m": 28, "retries": 1300},
+    {"d": 22, "m": 29, "retries": 1300}
+  ],
+  "greedy_failure_caveat": "failures are not upper bounds; budget-limited random-order greedy only",
+  "not_attempted": [
+    {"d": 23, "m": 30, "reason": "single pass costs C(29,22)=C(29,7) hyperplane constructions"},
+    {"d": 24, "m": 32, "reason": "single pass costs C(31,24)~2.6M hyperplanes, hours per pass"}
+  ],
+  "verification": {
+    "all_records": "verify_mod.cpp: every C(m,d+1) subset nonsingular mod p=2^61-1; Hadamard bound (d+1)^((d+1)/2) <= 25^12.5 < p for d<=24 makes this equivalent to integer nonsingularity",
+    "frontier_records": "verify_exact.py: every C(m,d+1) augmented determinant nonzero by exact integer Bareiss elimination, plus all t x t column minors of an integer left-null basis nonzero (t=m-d-1, matroid duality)",
+    "controls": "K0552 witnesses for d=6..10 reverified by both verifiers, min/max |det| match the published results.md"
+  }
+}

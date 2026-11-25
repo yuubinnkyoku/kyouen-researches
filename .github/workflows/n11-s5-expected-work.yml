@@ -1,0 +1,78 @@
+name: N11 s5 Expected Work evaluation
+
+on:
+  push:
+    paths:
+      - ".github/workflows/n11-s5-expected-work.yml"
+      - "research/experiments/n11-literature-transfer-20261005/scripts/evaluate_s5_expected_work.py"
+  workflow_dispatch:
+
+jobs:
+  evaluate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download full reply27 replay shards
+        uses: actions/download-artifact@v4
+        with:
+          pattern: reply27-full-*
+          path: /tmp/full
+          merge-multiple: false
+          github-token: ${{ github.token }}
+          repository: ${{ github.repository }}
+          run-id: 37275321333
+
+      - name: Build exact resolved cache
+        run: |
+          python - <<'PY'
+          import csv,glob
+          exact={}
+          for p in glob.glob("/tmp/full/**/*.out",recursive=True):
+              with open(p,newline="") as f:
+                  for r in csv.reader(f):
+                      if not r or r[0]!="replay": continue
+                      v=int(r[6]); k=(int(r[9]),int(r[10]))
+                      if v not in (1,2): continue
+                      old=exact.get(k); assert old in (None,v),(k,old,v)
+                      exact[k]=v
+          with open("/tmp/exact.cache","w") as f:
+              f.write("# original resolved reply27 exact roots\n")
+              for (lo,hi),v in sorted(exact.items()):
+                  f.write(f"s5verdict,{lo},{hi},5,{v},0\n")
+          print("EXPECTED_WORK_EXACT_ROOTS",len(exact))
+          PY
+
+      - name: Build feature extractor
+        run: |
+          c++ -std=c++20 -O3 -DNDEBUG             research/experiments/n11-literature-transfer-20261005/scripts/extract_s5_features.cpp             -o /tmp/extract-s5-features
+
+      - name: Extract features
+        run: |
+          /tmp/extract-s5-features /tmp/exact.cache > /tmp/features.csv
+
+      - name: Evaluate chronological Expected Work
+        run: |
+          python -m pip install --quiet numpy scipy
+          python research/experiments/n11-literature-transfer-20261005/scripts/evaluate_s5_expected_work.py             --features /tmp/features.csv --replay-dir /tmp/full             --out /tmp/expected-work.json | tee /tmp/expected-work.log
+          grep 'S5_EXPECTED_WORK_EVAL_OK' /tmp/expected-work.log
+          python - <<'PY'
+          import json
+          d=json.load(open("/tmp/expected-work.json"))
+          print("EW_SPLIT",d["split"])
+          print("EW_RANKING",d["ranking_quality"])
+          for name,p in d["policies"].items():
+              print("EW_POLICY",name,
+                    "first",p["first_win"],
+                    "top20",p["top_prefix"].get("20"),
+                    "top40",p["top_prefix"].get("40"))
+          PY
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: n11-s5-expected-work
+          path: |
+            /tmp/features.csv
+            /tmp/expected-work.json
+            /tmp/expected-work.log

@@ -1,0 +1,110 @@
+{
+  "audit": "PASS",
+  "link_graph": {
+    "total_legal_points": 15,
+    "link_vertices": 12,
+    "poison_points": 2,
+    "original_vertices": [
+      0,
+      1,
+      2,
+      4,
+      5,
+      6,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "link_edges": [
+      3,
+      65,
+      6,
+      66,
+      130,
+      68,
+      132,
+      24,
+      40,
+      528,
+      96,
+      160,
+      2080,
+      320,
+      2112,
+      640,
+      1152,
+      2176
+    ],
+    "link_normal": 6,
+    "link_misere": 1,
+    "restricted": 4
+  },
+  "cases_compared": 2,
+  "cpp_safe_states": 50007,
+  "records": [
+    {
+      "n": 15,
+      "edges": [
+        8193,
+        16385,
+        7,
+        131,
+        13,
+        133,
+        261,
+        137,
+        265,
+        49,
+        81,
+        1057,
+        193,
+        321,
+        4161,
+        641,
+        4225,
+        1281,
+        2305,
+        4353
+      ],
+      "normal": 0,
+      "misere_aux": 6
+    },
+    {
+      "n": 16,
+      "edges": [
+        8193,
+        16385,
+        7,
+        131,
+        13,
+        133,
+        261,
+        137,
+        265,
+        49,
+        81,
+        1057,
+        193,
+        321,
+        4161,
+        641,
+        4225,
+        1281,
+        2305,
+        4353
+      ],
+      "normal": 1,
+      "misere_aux": 7
+    }
+  ],
+  "geometry_board_points": [
+    37,
+    38
+  ],
+  "occupied_anchors": 22,
+  "geometry_status": "constructively realizable by K0683; no separate coordinate census here",
+  "minimum_status": "no global minimality claim"
+}

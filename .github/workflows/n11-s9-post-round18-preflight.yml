@@ -1,0 +1,18 @@
+name: N11 round19 independent boundary preflight
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'research/experiments/n11-s9-post-round18-replan-20261029/next-plan.json'
+      - 'research/experiments/n11-s9-post-round18-replan-20261029/preflight.json'
+      - 'research/experiments/n11-s9-post-round18-replan-20261029/preflight_independent.py'
+      - '.github/workflows/n11-s9-post-round18-preflight.yml'
+  workflow_dispatch:
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check frozen round19 roots with two independent integer determinants
+        run: python3 research/experiments/n11-s9-post-round18-replan-20261029/preflight_independent.py

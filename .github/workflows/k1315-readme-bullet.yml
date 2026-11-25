@@ -1,0 +1,76 @@
+name: K1315 README bullet append
+
+# Appends the K1315 bullet (below-band row-3 observation packet, K item 10336390)
+# to research/knowledge/README.md. Append-only, fail-closed design:
+#   1. bullet embedded as base64; decoded and sha256-gated (baa079b0...)
+#   2. marker gate: no-op if K1315-belowband-row3-collapse already present
+#   3. README pre-append sha256 gate 28d4fe82... (aborts if changed concurrently)
+#   4. appended tail must equal bullet sha256 exactly, then commit
+#   5. rebase onto origin/main before push (race-safe with hourly lanes)
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/k1315-readme-bullet.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  append-bullet:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      K1315_BULLET_B64: "LSAqKjIwMjYtMTEtMjUg6auY6YCf44Os44O844Oz77yISzEzMTUg5o6h55Wq44OB44Kn44OD44Kv44GL44KJ552A5omL44O7Y29tcGFjdGlvbiDjgpLmjJ/jgoDplbcgY2hhaW7jg7twdWJsaXNoLXRoZW4tZXhlY3V0ZSDlrozntZDvvIlLMTMxNSDlh7rniYjlrozntZA6IEItQkIg5LiL5biv56ysM+ihjCBrPXorbuKIkjUg6Kaz5ris44OR44Kx44OD44OIIOKAlCBPQlMtQkJMMyDjgq/jg6njgrnlsaTljJbltKnlo4ogY2Vuc3Vz44CUKGEpIOeUnyAoRSx6KSDlsaTjga/ltJrlgKTlh7rml6XlnKbjg7soYikg5q2j44GX44GE5bGk5YyW44Gv44Kv44Op44K5IChuLGopIOOBpyAoNiwwKSwoNiwxKSwoNywxKS4uKDcsNykg44Gv5o6D5byV5Z+f5YaF44Gn5a6M5YWo5bSp5aOK44O75q6L5L2ZICg3LDApIDMzIOOCu+ODq+OBryBtMj0y4oaSQT3iiJIxNSAvIG0y4omlM+KGkkE94oiSMTcg44GuIDIt5peP6KGd56qB5bivIHfiiIhb4oiSMTcs4oiSMTVd44O7KGMpIOaXj+OCouODs+OCq+ODvCAzIOODlOODvOOCueWJhyAoMiBvbiB3PUEgLyBbRSBldmVuXSDlt6YgLyBbRSBvZGRdIOWPsykg44GMIG49NC4uOCDlhaggNSw3Nzkg5Y2Y5LiAIDIg6KGM44Gn5rOV5YmH5a6f6YGV5Y+NIDDjgJRvZmYtbGV2ZWwg5aSW44KM5YCkIG49NCA46KGMDTog6YCs6auj6KGM44O7bj01IDLooYzjga/lrqPoqIDmuIjjgb/jg6rjgrnjg4jjgJXjg7soZCkg44Ki44Oz44Kr44O86KGoIM63KG4pPTEsMCziiJI1LOKIkjEwLOKIkjE1L+KIkjE3IOOBpyBBX3tuLGp9IHNoYXBlIOOBryDOtysyauKIkjLCt1tq4omlbuKIkjNd77yIZmxhdCBzcG90IGo9buKIkjMg44KSIDEg5YCL5ZCr44KA77yJ44O7bj04IGo9MCDjga8gNCDml4/jg6njg4Djg7wgKGMy4omlMuKGkuKIkjIwIC8gYzI9MeKGkuKIkjIyIC8gbTI9M+KGkuKIkjI0IC8gbTLiiaU04oaS4oiSMjYp44CV44O7KGUpIOaKkeWItuODu+WjgeaXj++8iHoqOj1B4oiSReKJpDAg44Gu6KGM44GvIDIg44KS5oyB44Gf44Ga5Y+z6auY5Y6f5YyW44O75Y+N5L6LIDAg6KGM44CUbuKJpTTjgJXjg7tuPTMg5aOB5b6X5aSx54K55pePIDM2IOihjOODuygyXjQsMSwxKSDlnovlsbHmtojlpLEgdnMgdG9w4omlMyDlnosgeio9MCDjg6njgqTjg7Plh7rnj77jgpIgVl9MQVcg5a6a5pWw44Gr5Zu65a6a44CV44KS5ZCr44KAIE9CUy1CQkwzIChhKeKAkyhlKSmjg7tMLUJSM++8iOWFrOWIiiBLMDgzMiDplonlvaLlvI/jga7ooYzjgqrjg5Xjgrvjg4Pjg4gg4oiSNCDjgrnjg6njgqTjgrnou6Llhpnjg7vmoLzlrZAgeOKJpDMwLHriiaQzMCDlhaggOTI0IOOCu+ODq+OBpyBncmlkLXZlcmlmaWVk44O75paw6KaP5pWw5a2m5YaF5a6544Gq44GX77yJ44O7Q09OSi1CQkwz77yI5YWo44Kk44Oz44K544K/44Oz44K544O75YWoIG7iiaUzIOOBp+aXj+OCouODs+OCq+ODvCAzIOODlOODvOOCueWJh+OBq+W+k+OBhuOBqOOBhOOBhuWFqOensOani+mAoOS6iOaDs+ODu+acquiovOaYjuODu+aYjuekuuWFjeiyrOS7mOOBje+8ieKAlCAqKuims+a4rOODkeOCseODg+ODiOOBp+WumueQhuOBquOBl+ODu08tQkJMMyDjga8gb3BlbiDjga7jgb7jgb4qKuODu+WFrOW8j+ebo+afuyAxLDMwNyDngrkgYmFkIDDjg7tleHBsb3JlIOWHuuWKm+OBjCBzYW5kYm94IDIg6LWwICsgQWN0aW9ucyBydW5uZXIgMSDotbDjga4gMyDnkrDlooPjgacgYnl0ZS1pZGVudGljYWwgYDU1OGVkMjAy4oCmYCoqOgogIOKRoCoq5oiQ5p6cKio6IEsxMzE0IOOBjCBvcGVuIOeZu+mMsuOBl+OBnyBPLUJCTDMg44Gu5YWl5Y+j44Go44GX44Gm56ysM+ihjCBrPXorbuKIkjUg44Gu5qeL6YCg44KS6Kaz5ris44OR44Kx44OD44OI44Go44GX44Gm56K65a6a44O75Ye654mI77yI44Oe44O844K45bqn5qiZIHc6PUUreuOAlD1LMTMxNCDjga4gdzIg44GL44KJ5a6a5pWwIG7iiJI1IOW3ruODu+WQjOS4gOihjOWGheOBp+WQjOWApOOAleODu+ijnOWKqemHjyBqOj0jMS1oZWFwc+ODu20y44O7YzLvvInjgILnrKwy6KGMIFQtQkIyIOOBp+imi+OCieOCjOOBn+eUn+WxpOWNmOS4gOW6p+aomeW0qeWjiuOBjOesrDPooYzjgafjga8qKui1t+OBk+OCieOBquOBhOOBk+OBqOOCkuWun+a4rCoq77yIbmVnYXRpdmUgb2JzZXJ2YXRpb27vvInjgZfjgIHlgKTjga7lsaTljJbjgYzjgIzjgq/jg6njgrkgKG4saikgw5cg5peP44Ki44Oz44Kr44O8IEHjgI3jga4gMiDmrrXmp4vpgKDjgafjgYLjgovjgZPjgajjgpLlh43ntZDmoLzlrZDkuIrjgafnibnlrprjgIJuPTcgKDcsMCkg44GuIDIt5peP44GvIGhlYXAg5LiK6ZmQ44Kt44Oj44OD44OX5aKD55WM44Gn44Gv44Gq44GPIG0yIOOBq+OCiOOCi+WujOWFqOWIhumbou+8iGhpPTgg6L+95Yqg5o6D5byV44GnIDYzOSs2MzYg56Wo44O7Y2FwIOS4jeWkie+8ieOAgW49OCBqPTAg44GuIDQg55u444Op44OA44O844O7aj0xIOOBriAyIOaXj+ODu2o9MiDjga4gMSDml4/jgIHmipHliLbvvIjlj7Ppq5jljp/ljJbvvInjgajlo4Hml4/vvIhuPTMg5aOB5b6X5aSx54K544O7KDJeNCwxLDEpIOWei+OBruWxsea2iOWksSB2cyAoMywzLDIsMiwxLDEpLyg0LDQsMSwxLDEsMSkg44GuIHoqPTAg44Op44Kk44Oz5Ye654++77yJ44G+44Gn44KSIC5vdXQg44Gr5YWo5a6j6KiA44CCSzA4MzIg57Wx5LiA5LqI5oOzIFXvvIhr4omlMSDjgrnjg6njgqTjgrnvvInjga/jgaHjgofjgYbjganjgZPjga7lsaTjga7mp4vpgKDkuojmg7PjgajjgZfjgaYgb3BlbiDntpnntprjgIIKICDikaEqKuWuo+iogCoqOiDljZjkuIDjgqrjg7zjg4rjg7zlrqPoqIDjg47jg7zjg4jvvIjnnYDmiYvmmYIgSEVBRCBgNTA4NWQxOWZg44O7SzEzMTUg56m644GN44KSIGNvbW1pdCDmpJzntKLjgJR0b3RhbCAw44CV44O755u05LqkIFBhcnQgRUQg6YCy6KGM5Lit44KCIGtub3dsZWRnZSDlpInmm7TjgarjgZfvvInjgacgTC1CUjMgLyBPQlMtQkJMMyAoYSnigJMoZSkgLyBDT05KLUJCTDPjg7vmjoPlvJXmoLzlrZDvvIhuPTMgKGhpLHptYXgpPSgxMiwxNinjg7tuPTQgKDEwLDE1KeODu249NSAoOSwxMynjg7tuPTYgKDcsMTIp44O7bj03ICg2LDEyKeOAlGhpPTgg6L+95Yqg5o6D5byV44GC44KK44CV44O7bj04IGo9MC8xLzIg44GvIGhlYXDiiIhbMiw2XeOAleODu+apn+S9kyA1IOmbu+axoCAxLDMwNyDngrnjg7vlpInnlbDooaggNiDnqK7jg7twcmVkcnkgc3Rkb3V0IHNoYSBgNTk5MGRiNzXigKZgIOOCkuS6i+WJjeWuo+iogOOAggogIOKRoioq5qmf5L2T44O75YWs5byP55uj5p+7Kio6IHZlcmlmeV9rMTMxNS5weSBzaGEyNTYgYGRlNTgwZDQ24oCmYO+8iGVuZ2luZSBwaW4gYGJkNWYyMmU34oCmYCBzdGFydHVwIOOCsuODvOODiOWGheiUteODu2VuZ2luZV9ibG9jay5weSBgNTgyYzkzYzHigKZgIOOBryBLMTI4Mi4uSzEzMTQgY2hhaW4g44Go5ZCM5LiAIGJ5dGVz77yJ44CC6Zu75rGgIEQxIEwtQlIzIOagvOWtkCA5MjQgLyBEMiBWX0xBVyAyNCDooYzlh43ntZDnhaflkIggMjg5IC8gRDMgVl9DRUxMUyDjgq/jg6njgrnlhoXkuIDmp5ggd2l0bmVzcyAxMCAvIEQ0IFZfWEVOIOS6pOWPieOCqOODs+OCuOODsyAxMCAvIEQ1IOWHjee1kOaIkOaenOeJqSBzaGEgKyDjg5jjg4Pjg4njg6njgqTjg7PmlbAgNzQgPSAqKue3jyAxLDMwNyDngrnjg7tvdmVyYWxsX2JhZCAwKirjg7tlbmdpbmVfZ2F0ZSBQQVNT44CC5YWs5byP5a6f57i+OiBPMSBleHBsb3JlIGN3ZCBQWVRIT05IQVNIU0VFRD0x77yIMTQ0Ljlz77yJ44GoIE8yIOmalOmboiBlbnYgUFlUSE9OSEFTSFNFRUQ9MTMzN++8iDE0Ni41c++8ieOBjOWHuueJiCAub3V0IOOBqCBieXRlIOS4gOiHtOODu08zIHZlcmlmeSByYzDjg7tzdGRvdXQgc2hhMjU2IGA1OTkwZGI3NeKApmAg44GM5a6j6KiAIMKnNCBwcmVkcnkgc2hhIOOBqCoq5a6M5YWo5LiA6Ie0KirvvIhwcmVkcnkgMiDotbDjgoIgYnl0ZS1pZGVudGljYWzjg7tzdGRvdXQg44GvIHNlZWQg6Z2e5L6d5a2Y44CUMC8xLzcvMTIzNDUvMTMzNyDlhajlkIzkuIDjgJXvvInjgILlpInnlbAgNi82IGZhaWwtY2xvc2Vk77yILS10YW1wZXItZW5naW5lIHJjMuOAlGVuZ2luZSBzaGEg4omgIHBpbuOAleODuy0tdGFtcGVyPWxhd3xjZWxsc3x4ZW58YW5jaG9yc3xjZW5zdXMg5YWoIHJjMeODu+Wuo+iogOOBqeOBiuOCiuOBruWNmOS4gOmbu+axoOaxmuafk++8ieOAggogIOKRoyoq5Ye654mIIGNoYWluIChwdWJsaXNoLXRoZW4tZXhlY3V0ZSkqKjogKirlrqPoqIAgYGRhM2Y2NTM4YCoq77yIbm90ZSBzaGEyNTYgYDZjNmIwNTZm4oCmYO+8ieKGkiBraXQgYDkxOWI1MWJmYO+8iHZlcmlmeStlbmdpbmVfYmxvY2vvvIkvYDEyYzQwMmEyYO+8iGtpdCBSRUFETUUgKyDlh43ntZAgZXhwbG9yZV9rMTMxNS5weSBgMjlmNzA4MGHigKZg77yJ4oaSIOWGheWuueS/ruatoyBgM2I4MzNlM2ZgK2A5YWU3ZDEwNmDvvIh2ZXJpZnkgVl9MQVcg6Lui5YaZ56C05pCN44Gu5b6p5YWD44O7QVBJIGNvbnRlbnRzIOeFp+WQiOOBpyA0IOODleOCoeOCpOODq+WFqCBzaGEg5LiA6Ie044KS56K66KqN77yJ4oaSICoq5YeN57WQIC5vdXQgYDU1OGVkMjAy4oCmYCDjga7lh7rniYjjga8gR2l0SHViIEFjdGlvbnMgd29ya2Zsb3cg44Gn5a6f5pa9KirvvIhgOGJlZjVlNjFgIOKGkiDnq7blkIjkv67mraMgYDY3Yjg3ZDI2YOODu3J1bm5lciDjgYwga2l0IOOBi+OCieWGjeeUn+aIkOOBlyBzaGEg44Ky44O844OI6YCa6YGO5pmC44Gu44G/IGNvbW1pdOOAlOesrCAzIOeSsOWig+OBp+OBruWGjeePvuaAp+Wun+iovOOAleODu+WIneWbniBydW4g44Gv5pyA57WCIHB1c2gg44GM5ZCM5pmC5Yi744GuIFBhcnQgRUQgY29tbWl0IGBhMDk0ZjI5ZmA44Go56u25ZCI44GX5aSx5pWXIOKGkiByZWJhc2Utc2FmZSDkv67mraPniYjjgYzmiJDlip8g4oaSIGJvdCBjb21taXQgYDc5NTRhZTg0YO+8ieKGkiDlhazlvI/lrp/ooYwgTzEvTzIvTzPvvIhraXQgZmV0Y2gtYmFjayA0IOODleOCoeOCpOODqyBzaGEg5LiA6Ie044GL44KJ6ZaL5aeL77yJ4oaSIOWkieeVsCA2IOeoriDihpIgKipkZXRjaGVjay5qc29uIGBiNTIyYzAwZWAqKu+8iE9GRklDSUFMLVBBU1Pjg7twcmVkcnkvTzEvTzIvTzMvdGFtcGVyL2tpdC1mZXRjaC1iYWNrL291dC1wdWJsaWNhdGlvbiDjga7lhajlrp/muKzjg7tob25lc3Rfbm90ZXMgMyDmnaHjgJQub3V0IOacqumFjee9ruOBp+OBryBENSDjgYwgc2tpcCDjgZXjgowgc3Rkb3V0IHNoYSDjgYwgYDNmNjA1Mjgw4oCmYCDjgavjgarjgovmp4vmiJDlt67jga7oqJjpjLLjgpLlkKvjgoDjgJXjg7tmZXRjaC1iYWNrIHNoYSBgY2VkYTQwZDfigKZg77yJ4oaSICoqSyBpdGVtL3J1biBsb2cgYDEwMzM2MzkwYCoqIOKGkiDmnKwgUkVBRE1FIGJ1bGxldO+8iEFjdGlvbnMgYXBwZW5k77yJ44CCKipob25lc3QqKjog5aSn44OV44Kh44Kk44OrIC5vdXQg44Gu55u05o6l44Kk44Oz44Op44Kk44Oz6Lui5YaZ44Gv56C05pCN44Oq44K544Kv44GM6auY44GPIDMg5Zue5aSx5pWX77yI44GE44Ga44KM44KCIHNoYSDmpJzoqLzliY3jgaflrp/lrrPjgarjgZfvvInjgZfjgZ/jgZ/jgoEgQWN0aW9ucyBzaGEg44Ky44O844OI5Ye654mI44Gr5YiH5pu/77yI56C05pCN5Ye654mI44GM5qeL6YCg55qE44Gr5LiN5Y+v6IO977yJ44CCCiAg4pGkKirjg6zjgrjjg6Xjg7zjg6AgKOedgOaJi+WJjeOBq+W/heOBmuacgOaWsCBtYWluIOWGjeWPluW+l+ODu2hvdXJseSDkuKbotbDms6jmhI8pKio6IOasoeWbnuacgOWEquWFiDogKGEpICoqSzEzMTYg5o6h55Wq44OB44Kn44OD44Kv44GM5YWIKirvvIjnm7TmjqUgcGF0aCBwcm9iZeODu+mHjeikh+mYsuatou+8ieOAgiAoYikg5pys6aCFIG9wZW46ICoqQ09OSi1CQkwzIOOBruiovOaYjioq77yI5pys5ZG944O7dHlwZWQtY2hpbGRyZW4g44Oc44OI44Og44Ki44OD44OXOiDnrKwz6KGM44K744Or44Gu5a2Q44GvIEsxMzE0IEIg5om/57aZIHR5cGluZ+OAlG7iiJIxPTHihpJMLUJSMiwgMuKGkkwtMiwg4omlM+KGklQtQkIy44CV44Gn56ysIDIg6KGMIHBsYW5lIHorMSDjga7ml6Lnn6XlgKTjgavnnYDlnLDjgZnjgovjga7jgafljZjkuIAgUiDlvLfluLDntI3jgYzntYTjgoHjgovjga/jgZrjg7tmbGF0IHNwb3Qgaj1u4oiSM+ODuyg3LDApIDIt5peP44O7bj04IDQt5peP44Op44OA44O844Gu6KqY5bCO44GM6Y2144O7Ty1CQkwzIOOBryBvcGVuIOOBruOBvuOBvu+8ieOAgiAoYykgKirjg6njg4Djg7zlub7kvZXjga7kuIDoiKzljJYqKjogzrcobikg44GuIOKIkjUg5Yi744G/44O7bj03IOOBriBtMiDliIblspDjg7tuPTgg44GuIGMyPTEvYzLiiaUyIOWIhumbouOAlG49NyDjgafjga/mtojjgYjjgovjgJXjga7mp4vmiJDnmoToqqzmmI7jgIIgKGQpICoq57Wx5LiA5LqI5oOzIFXvvIhLMDgzMiBr4omlMSDjgrnjg6njgqTjgrnvvIkqKuOBriBPLUJCTDMg5qeL6YCg5LqI5oOz44Go44GX44Gm44Gu5qSc6Ki844CCIChlKSAqKnBsYW5lIOaRuuOCiuWQiOOCj+OBm+ims+a4rCoqOiBQQjIvTC0yIOWei+eVjOmdouOBjOS4i+W4r+a3seWxpOOBp+WGjeWHuuePvuOBmeOCi+OBi++8iOaKkeatouODu+WjgeaXj+OBqOOBrumWouS/gu+8ieOAgiAoZikg5byV44GN57aZ44GOIG9wZW46IE8tRzIg5YaF6Z2iIGviiaUxIChtdWx0aS1jIHdlYinjg7tGMiBnaWFudCDmjqXntprvvIjmnp3liIjjgorjgbjjga7mjqHnlKjliKTmlq3jga8gZ2lhbnQg44Os44O844Oz44Kq44O844OK44O877yJ44CCSyBpdGVtOiBbSzEzMTVdKGl0ZW1zL0sxMzE1LWJlbG93YmFuZC1yb3czLWNvbGxhcHNlLm1kKeODu+Wuo+iogOODjuODvOODiDogW3NpbmdsZS1vd25lciBub3RlXSguLi9sb2cvMjAyNi0xMS0yNS1iZWxvd2JhbmQtcm93My1zaW5nbGUtb3duZXItbm90ZS5tZCnjg7vlrp/pqJM6IFtraXRdKC4uL2V4cGVyaW1lbnRzL2JlbG93YmFuZC1yb3czLTIwMjYxMTI1L1JFQURNRS5tZCnjg7tsb2c6IFtydW4gbG9nXSguLi9sb2cvMjAyNi0xMS0yNS1iZWxvd2JhbmQtcm93My1jb2xsYXBzZS5tZCnjgIIqKuaomea6ljExw5cxMeepuuebpOODu+S6jOefs3Jvb3QgezQ5LDYwfS97NTksNjB944O7UzIgezU5LDYwfeODu2NsYXNzIDEvMi80IOOBr+WFqOOBplVOS05PV07jga7jgb7jgb7jg7t2ZXJkaWN05LiN5raI6LK744O75pys6aCF44Gv6Kaz5ris44OR44Kx44OD44OI44Gn5a6a55CG44Gq44GX44O7MSwzMDcg54K544Gv5qmf5qKw5pW05ZCI5qSc5p+744Gn44GC44Gj44Gm6Ki85piO44Gn44KC5rOV5YmH44Gu5YWo56ew5Li75by144Gn44KC44Gq44GE44CCKioK"
+      K1315_BULLET_SHA256: "baa079b0afe116ee1639e7cc3382b8fc0434c53c1a281c96b898a0008f7b2fed"
+      K1315_BULLET_BYTES: "7197"
+      K1315_README_PRE_SHA256: "28d4fe827c78204b175e0131a6e0f0eaaf65a22b6e206163f5a32d68c8e473e4"
+    steps:
+      - uses: actions/checkout@v4
+      - name: Decode bullet and sha256 gate (fail-closed)
+        run: |
+          printf '%s' "$K1315_BULLET_B64" | base64 -d > /tmp/bullet.md
+          wc -c /tmp/bullet.md
+          echo "$K1315_BULLET_SHA256  /tmp/bullet.md" | sha256sum -c -
+      - name: Marker idempotency gate
+        id: gate
+        run: |
+          if grep -q "K1315-belowband-row3-collapse" research/knowledge/README.md; then
+            echo "K1315 marker already present in README; no-op"
+            echo "append=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "append=true" >> "$GITHUB_OUTPUT"
+          fi
+      - name: README pre-append sha256 gate (fail-closed on concurrent edit)
+        if: steps.gate.outputs.append == 'true'
+        run: |
+          sha256sum research/knowledge/README.md
+          echo "$K1315_README_PRE_SHA256  research/knowledge/README.md" | sha256sum -c -
+      - name: Append bullet (tail-verified)
+        if: steps.gate.outputs.append == 'true'
+        run: |
+          if [ -n "$(tail -c 1 research/knowledge/README.md)" ]; then
+            printf '\n' >> research/knowledge/README.md
+            echo "added missing trailing newline"
+          fi
+          cat /tmp/bullet.md >> research/knowledge/README.md
+          tail -c "$K1315_BULLET_BYTES" research/knowledge/README.md > /tmp/tail.md
+          echo "$K1315_BULLET_SHA256  /tmp/tail.md" | sha256sum -c -
+          echo "post-append README sha256:"
+          sha256sum research/knowledge/README.md
+      - name: Commit and push (race-safe)
+        if: steps.gate.outputs.append == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research/knowledge/README.md
+          if git diff --cached --quiet; then
+            echo "no changes to commit"
+            exit 0
+          fi
+          git commit -m "K1315 README bullet: below-band row-3 observation packet (append-only, sha-gated, marker-idempotent; K item 10336390)"
+          git fetch --unshallow origin main || git fetch origin main
+          git rebase origin/main
+          git push origin HEAD:main

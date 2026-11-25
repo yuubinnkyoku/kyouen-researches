@@ -1,0 +1,23 @@
+name: N11 conditional 46-S6 minimum shared-S7 proof-plan audit
+
+on:
+  push:
+    paths:
+      - 'research/experiments/n11-central-19-cover-20261031/conditional_s6_cover_46_shared_s7_optimal.json'
+      - 'research/experiments/n11-central-19-cover-20261031/verify_conditional_s6_shared_s7_optimal.py'
+      - 'research/experiments/n11-central-19-cover-20261031/conditional_s6_cover_46.json'
+      - 'research/experiments/n11-central-19-cover-20261031/verify_conditional_s6_cover_46.py'
+      - 'research/experiments/n11-central-19-cover-20261031/verify_s7_shared_frontier_46.py'
+      - '.github/workflows/n11-central49-conditional-s6-shared-s7-optimal.yml'
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify original conditional 46-S6 lower bounds
+        run: python3 research/experiments/n11-central-19-cover-20261031/verify_conditional_s6_cover_46.py --self-test
+      - name: Enumerate all 46-S6 raw-optimal covers and independently verify S7 union minimum
+        run: python3 research/experiments/n11-central-19-cover-20261031/verify_conditional_s6_shared_s7_optimal.py --negative

@@ -1,0 +1,21 @@
+name: N11 short46 S9 independent terminal proof
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/n11-s9-short46-terminal.yml'
+      - 'research/experiments/n11-s9-short46-terminal-20261027/**'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Independently verify 46 S9 terminal WIN proofs and reject tampering
+        run: node research/experiments/n11-s9-short46-terminal-20261027/verify.js --negative

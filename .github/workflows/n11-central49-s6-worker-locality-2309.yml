@@ -1,0 +1,20 @@
+name: N11 conditional 46-S6 worker locality audit
+
+on:
+  push:
+    paths:
+      - 'research/experiments/n11-central-19-cover-20261031/conditional_s6_cover_46_s7_locality_workers_2309.json'
+      - 'research/experiments/n11-central-19-cover-20261031/verify_s6_worker_partition_2309.py'
+      - 'research/experiments/n11-central-19-cover-20261031/conditional_s6_cover_46_distinct_s7_2309.json'
+      - 'research/experiments/n11-central-19-cover-20261031/verify_conditional_s6_distinct_s7_2309.py'
+      - '.github/workflows/n11-central49-s6-worker-locality-2309.yml'
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Recheck certificate chain and worker-local S7 sharing
+        run: python3 research/experiments/n11-central-19-cover-20261031/verify_s6_worker_partition_2309.py --negative

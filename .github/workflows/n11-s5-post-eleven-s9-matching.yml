@@ -1,0 +1,21 @@
+name: N11 post eleven S9 conditional exact matching
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/n11-s5-post-eleven-s9-matching.yml'
+      - 'research/experiments/n11-s5-post-eleven-s9-matching-20261027/**'
+      - 'research/experiments/n11-s9-shared-plan14-eleven-win-20261027/**'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install exact weighted matching solver
+        run: python3 -m pip install 'networkx==3.4.2'
+      - name: Independent terminal proof, proof-only coverage and exact matching
+        run: python3 research/experiments/n11-s5-post-eleven-s9-matching-20261027/verify.py --negative

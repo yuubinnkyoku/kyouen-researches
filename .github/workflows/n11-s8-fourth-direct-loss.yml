@@ -1,0 +1,28 @@
+name: N11 fourth S8 LOSS terminal certificate
+on:
+  push:
+    paths:
+      - 'research/experiments/n11-s8-fourth-direct-loss-20261030/**'
+      - '.github/workflows/n11-s8-fourth-direct-loss.yml'
+  workflow_dispatch:
+jobs:
+  independent-terminal-proof:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Node independent 3x3 and 4x4 integer geometries, 573 full boundary
+        shell: bash
+        run: |
+          set -euo pipefail
+          node research/experiments/n11-s8-fourth-direct-loss-20261030/verify.js --full --negative
+      - name: Python independent recursion, 78 LOSS10 and 664 LOSS9 closure
+        shell: bash
+        run: |
+          set -euo pipefail
+          python research/experiments/n11-s8-fourth-direct-loss-20261030/verify.py --full --negative
+      - name: Rebuild sealed historical fixed14 frontier and check new LOSS9 edges
+        shell: bash
+        run: |
+          set -euo pipefail
+          python research/experiments/n11-s8-fourth-direct-loss-20261030/lift.py

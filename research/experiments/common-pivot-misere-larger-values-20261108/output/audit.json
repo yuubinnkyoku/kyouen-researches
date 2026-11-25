@@ -1,0 +1,118 @@
+{
+  "audit": "PASS",
+  "link_checks": [
+    {
+      "n": 14,
+      "normal": 7,
+      "misere_aux": 0,
+      "restricted": 5,
+      "one_free_misere": 1,
+      "one_free_restricted": 4
+    },
+    {
+      "n": 16,
+      "normal": 8,
+      "misere_aux": 1,
+      "restricted": 6,
+      "one_free_misere": 0,
+      "one_free_restricted": 7
+    },
+    {
+      "n": 18,
+      "normal": 8,
+      "misere_aux": 1,
+      "restricted": 6,
+      "one_free_misere": 0,
+      "one_free_restricted": 7
+    }
+  ],
+  "cases_compared": 2,
+  "cpp_safe_states": 790944,
+  "records": [
+    {
+      "n": 19,
+      "edges": [
+        131073,
+        262145,
+        515,
+        13,
+        21,
+        517,
+        1029,
+        32773,
+        521,
+        1033,
+        65545,
+        49,
+        81,
+        529,
+        2065,
+        4113,
+        16401,
+        32785,
+        97,
+        16417,
+        577,
+        4161,
+        1153,
+        16513,
+        1281,
+        65793,
+        1537,
+        2561,
+        4609,
+        5121,
+        9217,
+        17409
+      ],
+      "normal": 0,
+      "misere_aux": 8
+    },
+    {
+      "n": 20,
+      "edges": [
+        131073,
+        262145,
+        515,
+        13,
+        21,
+        517,
+        1029,
+        32773,
+        521,
+        1033,
+        65545,
+        49,
+        81,
+        529,
+        2065,
+        4113,
+        16401,
+        32785,
+        97,
+        16417,
+        577,
+        4161,
+        1153,
+        16513,
+        1281,
+        65793,
+        1537,
+        2561,
+        4609,
+        5121,
+        9217,
+        17409
+      ],
+      "normal": 1,
+      "misere_aux": 9
+    }
+  ],
+  "geometry_occupied_anchors": 34,
+  "geometry_board_points": [
+    53,
+    54
+  ],
+  "geometry_status": "constructive K0683 realization; no separate coordinate census",
+  "minimum_status": "no global minimum claim"
+}

@@ -1,0 +1,27 @@
+name: N11 round14 proof-only replan
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'research/experiments/n11-s9-post-round14-replan-20261029/replan.js'
+      - 'research/experiments/n11-s9-post-round14-replan-20261029/next-plan.json'
+      - 'research/experiments/n11-s9-post-round13-round14-20261029/lift.json'
+      - '.github/workflows/n11-s9-post-round14-replan.yml'
+  workflow_dispatch:
+jobs:
+  replan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify prior certificates and select only the bounded next S9 roots
+        run: node research/experiments/n11-s9-post-round14-replan-20261029/replan.js > round14-replan.json
+      - uses: actions/upload-artifact@v4
+        if: success()
+        with:
+          name: n11-round14-replan
+          path: round14-replan.json
+          retention-days: 14

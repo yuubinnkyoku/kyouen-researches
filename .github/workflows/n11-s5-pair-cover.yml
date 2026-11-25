@@ -1,0 +1,23 @@
+name: N11 S5 conditional S7 pair-cover audit
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/n11-s5-pair-cover.yml'
+      - 'research/experiments/n11-s5-pair-cover-20261026/**'
+      - 'research/experiments/n11-gap6-terminal-20261019/verify_js.js'
+      - 'research/experiments/n11-targeted-terminal-lift-20261015/data/all_s7_win_17.txt'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+      - name: Independently audit all S5 to S6 and selected S6 to S7 to S8 boundaries
+        run: node research/experiments/n11-s5-pair-cover-20261026/audit.js --negative

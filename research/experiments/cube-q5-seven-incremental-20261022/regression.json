@@ -1,0 +1,530 @@
+{
+  "direct": false,
+  "audits": {
+    "3": {
+      "histories": 30,
+      "incremental_full_comparisons": 945,
+      "early_empty": 121
+    },
+    "7": {
+      "histories": 12,
+      "incremental_full_comparisons": 839,
+      "early_empty": 29
+    }
+  },
+  "known_three_cube_orbits": 20,
+  "all_proofs_independently_verified": true,
+  "bidirectional_checkpoint_compatibility": true,
+  "geometry_eviction_exact": true,
+  "wide_terminal_verified": true,
+  "mobility_dfs_independent_three_cube_proofs": 20,
+  "zero_budget_unknown": true,
+  "proofs": [
+    {
+      "verified": true,
+      "side": 3,
+      "root_words": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "outcome": "P",
+      "states": 263,
+      "edges": 382,
+      "terminals": 88,
+      "determinant_checks": 23414,
+      "layers": {
+        "2": 1,
+        "3": 16,
+        "4": 13,
+        "5": 145,
+        "6": 86,
+        "7": 1,
+        "8": 1
+      }
+    },
+    {
+      "verified": true,
+      "side": 3,
+      "root_words": [
+        5,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "outcome": "P",
+      "states": 201,
+      "edges": 291,
+      "terminals": 73,
+      "determinant_checks": 17940,
+      "layers": {
+        "2": 1,
+        "3": 11,
+        "4": 9,
+        "5": 108,
+        "6": 72
+      }
+    },
+    {
+      "verified": true,
+      "side": 3,
+      "root_words": [
+        17,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "outcome": "P",
+      "states": 322,
+      "edges": 488,
+      "terminals": 111,
+      "determinant_checks": 29279,
+      "layers": {
+        "2": 1,
+        "3": 16,
+        "4": 15,
+        "5": 175,
+        "6": 109,
+        "7": 4,
+        "8": 2
+      }
+    },
+    {
+      "verified": true,
+      "side": 3,
+      "root_words": [
+        12,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "outcome": "P",
+      "states": 539,
+      "edges": 761,
+      "terminals": 185,
+      "determinant_checks": 41814,
+      "layers": {
+        "2": 1,
+        "3": 24,
+        "4": 22,
+        "5": 299,
+        "6": 184,
+        "7": 6,
+        "8": 3
+      }
+    },
+    {
+      "verified": true,
+      "side": 3,
+      "root_words": [
+        68,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "outcome": "P",
+      "states": 213,
+      "edges": 319,
+      "terminals": 74,
+      "determinant_checks": 20309,
+      "layers": {
+        "2": 1,
+        "3": 11,
+        "4": 11,
+        "5": 115,
+        "6": 72,
+        "7": 2,
+        "8": 1
+      }
+    },
+    {
+      "verified": true,
+      "side": 3,
+      "root_words": [
+        8193,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "outcome": "P",
+      "states": 110,
+      "edges": 172,
+      "terminals": 37,
+      "determinant_checks": 12558,
+      "layers": {
+        "2": 1,
+        "3": 8,
+        "4": 5,
+        "5": 57,
+        "6": 36,
+        "7": 2,
+        "8": 1
+      }
+    },
+    {
+      "verified": true,
+      "side": 3,
+      "root_words": [
+        1088,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "outcome": "P",
+      "states": 347,
+      "edges": 480,
+      "terminals": 126,
+      "determinant_checks": 32177,
+      "layers": {
+        "2": 1,
+        "3": 16,
+        "4": 13,
+        "5": 184,
+        "6": 126,
+        "7": 5,
+        "8": 2
+      }
+    },
+    {
+      "verified": true,
+      "side": 3,
+      "root_words": [
+        768,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "outcome": "P",
+      "states": 369,
+      "edges": 474,
+      "terminals": 138,
+      "determinant_checks": 30866,
+      "layers": {
+        "2": 1,
+        "3": 16,
+        "4": 13,
+        "5": 201,
+        "6": 138
+      }
+    },
+    {
+      "verified": true,
+      "side": 3,
+      "root_words": [
+        262400,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "outcome": "P",
+      "states": 105,
+      "edges": 164,
+      "terminals": 38,
+      "determinant_checks": 9660,
+      "layers": {
+        "2": 1,
+        "3": 5,
+        "4": 4,
+        "5": 57,
+        "6": 38
+      }
+    },
+    {
+      "verified": true,
+      "side": 3,
+      "root_words": [
+        10,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "outcome": "P",
+      "states": 352,
+      "edges": 516,
+      "terminals": 122,
+      "determinant_checks": 27761,
+      "layers": {
+        "2": 1,
+        "3": 17,
+        "4": 15,
+        "5": 197,
+        "6": 122
+      }
+    },
+    {
+      "verified": true,
+      "side": 3,
+      "root_words": [
+        18,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "outcome": "P",
+      "states": 368,
+      "edges": 518,
+      "terminals": 127,
+      "determinant_checks": 29854,
+      "layers": {
+        "2": 1,
+        "3": 16,
+        "4": 14,
+        "5": 204,
+        "6": 129,
+        "7": 3,
+        "8": 1
+      }
+    },
+    {
+      "verified": true,
+      "side": 3,
+      "root_words": [
+        40,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "outcome": "P",
+      "states": 254,
+      "edges": 363,
+      "terminals": 93,
+      "determinant_checks": 22126,
+      "layers": {
+        "2": 1,
+        "3": 11,
+        "4": 10,
+        "5": 139,
+        "6": 93
+      }
+    },
+    {
+      "verified": true,
+      "side": 3,
+      "root_words": [
+        528,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "outcome": "P",
+      "states": 306,
+      "edges": 455,
+      "terminals": 108,
+      "determinant_checks": 26427,
+      "layers": {
+        "2": 1,
+        "3": 16,
+        "4": 14,
+        "5": 162,
+        "6": 109,
+        "7": 3,
+        "8": 1
+      }
+    },
+    {
+      "verified": true,
+      "side": 3,
+      "root_words": [
+        8194,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "outcome": "P",
+      "states": 127,
+      "edges": 204,
+      "terminals": 44,
+      "determinant_checks": 14674,
+      "layers": {
+        "2": 1,
+        "3": 10,
+        "4": 6,
+        "5": 64,
+        "6": 43,
+        "7": 2,
+        "8": 1
+      }
+    },
+    {
+      "verified": true,
+      "side": 3,
+      "root_words": [
+        544,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "outcome": "P",
+      "states": 305,
+      "edges": 433,
+      "terminals": 110,
+      "determinant_checks": 26795,
+      "layers": {
+        "2": 1,
+        "3": 14,
+        "4": 12,
+        "5": 164,
+        "6": 111,
+        "7": 2,
+        "8": 1
+      }
+    },
+    {
+      "verified": true,
+      "side": 3,
+      "root_words": [
+        1152,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "outcome": "P",
+      "states": 461,
+      "edges": 614,
+      "terminals": 167,
+      "determinant_checks": 39675,
+      "layers": {
+        "2": 1,
+        "3": 16,
+        "4": 15,
+        "5": 255,
+        "6": 167,
+        "7": 5,
+        "8": 2
+      }
+    },
+    {
+      "verified": true,
+      "side": 3,
+      "root_words": [
+        34816,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "outcome": "P",
+      "states": 143,
+      "edges": 216,
+      "terminals": 52,
+      "determinant_checks": 12213,
+      "layers": {
+        "2": 1,
+        "3": 7,
+        "4": 6,
+        "5": 77,
+        "6": 52
+      }
+    },
+    {
+      "verified": true,
+      "side": 3,
+      "root_words": [
+        1040,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "outcome": "P",
+      "states": 244,
+      "edges": 390,
+      "terminals": 78,
+      "determinant_checks": 25967,
+      "layers": {
+        "2": 1,
+        "3": 11,
+        "4": 10,
+        "5": 130,
+        "6": 80,
+        "7": 9,
+        "8": 3
+      }
+    },
+    {
+      "verified": true,
+      "side": 3,
+      "root_words": [
+        8208,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "outcome": "P",
+      "states": 116,
+      "edges": 201,
+      "terminals": 38,
+      "determinant_checks": 14168,
+      "layers": {
+        "2": 1,
+        "3": 7,
+        "4": 6,
+        "5": 59,
+        "6": 38,
+        "7": 4,
+        "8": 1
+      }
+    },
+    {
+      "verified": true,
+      "side": 3,
+      "root_words": [
+        20480,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "outcome": "P",
+      "states": 84,
+      "edges": 149,
+      "terminals": 29,
+      "determinant_checks": 7843,
+      "layers": {
+        "2": 1,
+        "3": 5,
+        "4": 4,
+        "5": 45,
+        "6": 29
+      }
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+name: N11 round10 proof-only 83-edge replan
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'research/experiments/n11-s9-post-round10-replan-20261028/replan.js'
+      - 'research/experiments/n11-s9-post-round10-replan-20261028/next-plan.json'
+      - '.github/workflows/n11-s9-post-round10-replan.yml'
+  workflow_dispatch:
+jobs:
+  replan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Independently verify round9 and round10 terminal evidence and select only 83-edge candidates
+        run: node research/experiments/n11-s9-post-round10-replan-20261028/replan.js > round10-next-plan.json
+      - name: Show exact proof-only candidate counts
+        run: cat round10-next-plan.json
+      - name: Compare frozen next-plan when present
+        run: |
+          if [ -f research/experiments/n11-s9-post-round10-replan-20261028/next-plan.json ]; then
+            cmp round10-next-plan.json research/experiments/n11-s9-post-round10-replan-20261028/next-plan.json
+          fi
+      - uses: actions/upload-artifact@v4
+        with:
+          name: n11-round10-proof-only-next-plan
+          path: round10-next-plan.json

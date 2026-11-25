@@ -1,0 +1,21 @@
+name: N11 central49 2049 exact three-swap successor audit
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'research/experiments/n11-central-19-cover-20261031/audit_central49_2049_three_swap.py'
+      - '.github/workflows/n11-central49-2049-three-swap.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  exact-three-swap:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - name: Enumerate all 3-for-3 exchanges from the 2049-class matching
+        run: python3 research/experiments/n11-central-19-cover-20261031/audit_central49_2049_three_swap.py

@@ -1,0 +1,19 @@
+name: N11 shared S8 WIN16 independent terminal proof
+on:
+  push:
+    paths:
+      - 'research/experiments/n11-shared8-win16-20261026/**'
+      - '.github/workflows/n11-shared8-win16.yml'
+  workflow_dispatch:
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: 3x3 terminal verification and mutation rejections
+        run: node research/experiments/n11-shared8-win16-20261026/verify.js --negative
+      - name: Independent 4x4 Bareiss terminal verification and mutation rejections
+        run: python3 research/experiments/n11-shared8-win16-20261026/verify.py --negative
+      - name: Proof-only S8 coverage union audit
+        run: node research/experiments/n11-shared8-win16-20261026/audit_coverage.js

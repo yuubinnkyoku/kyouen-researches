@@ -1,0 +1,32 @@
+{
+  "artifacts": {
+    "README.md": "fa9b38b308f714ba3eb848aec864c53f0fbb999a3307b5371af0ee3f6402eca9",
+    "engine.cpp": "3fd24a1af00c2ee00841920c7085763448e643152e0e998355db9c758ac8226f",
+    "regression.py": "ed0f8df21fca7f2817b51ee8391c49e4e706fc999260018f4a7bc256fe293840",
+    "regression.json": "041853ae8904518946e4a4a456937d23839adc76eec35a54f8dba1aff02631e8",
+    "regression-direct.json": "7bbd6366801fc97b020013097569168e8deac8ef67bb1a720ebc034e5e8312e2",
+    "audit-seven.json": "2d73d9862442696ceb60a58b0d41e21258a94b42ba07f444339c824f8a3fff50",
+    "audit-three.json": "d26efcd8d54ace786b1f088280f557eeeeecc8515cc570c1a949f0e3888bc104",
+    "audit-seven-direct.json": "2d73d9862442696ceb60a58b0d41e21258a94b42ba07f444339c824f8a3fff50",
+    "audit-three-direct.json": "d26efcd8d54ace786b1f088280f557eeeeecc8515cc570c1a949f0e3888bc104",
+    "benchmark-incremental.jsonl": "a723db4b4cdf11a423832353faeac0509c2fa4b3bacd684aba9958ea4c6c95dd",
+    "benchmark-original.jsonl": "e6f8f599d37c89cab0656a0d98ef8aac4e7c366a29052b1eafd7202e283b13d7",
+    "benchmark-direct.jsonl": "2c63d65ad6daa7a344169ad9d4f2ac727b46b5db7a51e237f10a99c9b799867e",
+    "timing.json": "426ad95e13ea69ab1a079ac60707f7b30a59331b45f1da1880f66250419ae987",
+    "target.txt": "4d15bb57ccadc8b9ad77b7333d34cbda1a2a7e3c801c272ed490d94da896bc01",
+    "regression-three.jsonl": "61625a28451332b8a6b1976ec9b8d5f8be91fb4e501e0451ff384d86c749ed0b"
+  },
+  "binaries": {
+    "first_incremental": "c737f24d9d81d1c4cff6b9faa0befd7e9685ba514f9211cd13ac2d428eab798b",
+    "mobility_dfs": "fcbc3fe9f4b5d670bb58f77135c7786f57cd2098db2bebde2404e040d670c899",
+    "final_direct": "8024a008d13540acedff189beec5d0aa471477d68d4fccd0ec6a405a40651ffd",
+    "legacy": "b3a99dfa7d05e629064efa7209ca3b0a58d21a48d88f7c5f0c6b0a8496a4003f",
+    "verifier": "52facef1ccbf0466047de7e0de317533e0274db89c3d176281913b744c81e55f"
+  },
+  "seed": {
+    "workspace_path": "scratch/cube-q5-seven-frontier-20261022/descent-1m.memo",
+    "sha256": "ce14d946835bbbdbd693d1ce2e4bacb41caab583e3abe78dbb2840e847e69c4c",
+    "independently_verified_all_rows": false
+  },
+  "status": "engine regression and bounded benchmarks; no seven-cube root verdict"
+}

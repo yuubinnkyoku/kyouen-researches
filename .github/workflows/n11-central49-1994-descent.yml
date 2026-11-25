@@ -1,0 +1,21 @@
+name: N11 central49 bounded 1994 three-swap descent
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'research/experiments/n11-central-19-cover-20261031/search_central49_1994_three_swap_descent.py'
+      - '.github/workflows/n11-central49-1994-descent.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  bounded-descent:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - name: Perform at most six exhaustive three-swap descent rounds
+        run: python3 research/experiments/n11-central-19-cover-20261031/search_central49_1994_three_swap_descent.py

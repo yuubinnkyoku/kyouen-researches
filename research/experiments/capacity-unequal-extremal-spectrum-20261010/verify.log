@@ -1,0 +1,9 @@
+PASS: independent brute force
+parameter sets (w,h,r,M): 575
+capacity instances: 22246
+number of distinct terminal-size observations summed: 24634
+uniform capacity attains each bound, no capacity vector exceeds it
+example w=5 h=2 r=5 M=5: sizes=[5, 8, 11], stats=(6, 4, 3)
+example w=6 h=3 r=10 M=4: sizes=[16, 19], stats=(3, 2, 2)
+example w=5 h=2 r=5 M=3: sizes=[11], stats=(0, 0, 1)
+example w=4 h=3 r=7 M=2: sizes=[8], stats=(0, 0, 1)

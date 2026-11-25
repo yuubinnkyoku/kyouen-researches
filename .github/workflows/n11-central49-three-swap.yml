@@ -1,0 +1,147 @@
+name: N11 central49 exact three-swap and 2277 worker audit
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'research/experiments/n11-central-19-cover-20261031/**'
+      - '.github/workflows/n11-central49-three-swap.yml'
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Exhaustively verify dual-tight three-swap optimality and 2277-class certificate
+        run: node research/experiments/n11-central-19-cover-20261031/verify_central49_three_swap_2277.js > /tmp/central49-2277-verifier.json
+      - name: Independently reconstruct all S5 children, geometric cover, WIN4 exclusions and worklists
+        run: |
+          python3 research/experiments/n11-central-19-cover-20261031/audit_central49_three_swap_worker_results_2277.py --self-test
+          python3 research/experiments/n11-central-19-cover-20261031/audit_central49_three_swap_worker_results_2277.py > /tmp/central49-2277-workers.json
+          python3 -c 'import json; x=json.load(open("/tmp/central49-2277-workers.json")); assert x["pending_s5_classes"]==2277 and x["unreported_s5"]==2277 and x["worker_loads"]==[570,569,569,569] and x["priority_unknown_s5"]==94 and x["root_outcome"]=="UNKNOWN"'
+          for worker in 0 1 2 3; do
+            python3 research/experiments/n11-central-19-cover-20261031/audit_central49_three_swap_worker_results_2277.py --worklist "$worker" > "/tmp/2277-worker-$worker.txt"
+          done
+          python3 -c 'from pathlib import Path; a=[Path(f"/tmp/2277-worker-{i}.txt").read_text().splitlines() for i in range(4)]; assert list(map(len,a))==[570,569,569,569]; assert len(set(sum(a,[])))==2277'
+      - name: Audit automatic minimal-remaining S4 focus against live 2277-class frontier
+        run: |
+          python3 - <<'PY'
+          import sys
+          from pathlib import Path
+          sys.path.insert(0, 'research/experiments/n11-central-19-cover-20261031')
+          import audit_central49_three_swap_worker_results_2277 as m
+          _, owners, witnesses, assignment, shards, _, priority = m.build()
+          target = m.choose_priority_focus(owners, witnesses, {})
+          assert target == witnesses[priority]['s4']
+          focus = m.focus_children(owners, witnesses, target)
+          assert len(focus) == 94
+          worklists = [m.remaining_worklist(shards, assignment, None, i, focus) for i in range(4)]
+          flat = sum(worklists, [])
+          assert len(flat) == len(set(flat)) == 94
+          assert set(flat) == focus
+          assert all(assignment[key] == i for i, part in enumerate(worklists) for key in part)
+          Path('/tmp/central49-focused-0-expected.txt').write_text(
+              ''.join(key + '\n' for key in worklists[0]))
+          PY
+          python3 research/experiments/n11-central-19-cover-20261031/audit_central49_three_swap_worker_results_2277.py --worklist 0 --focus-priority > /tmp/central49-focused-0-cli.txt
+          cmp /tmp/central49-focused-0-expected.txt /tmp/central49-focused-0-cli.txt
+          priority_s4=$(python3 -c 'import json; print(json.load(open("/tmp/central49-2277-workers.json"))["priority_s4"])')
+          python3 research/experiments/n11-central-19-cover-20261031/audit_central49_three_swap_worker_results_2277.py --worklist 0 --focus-s4 "$priority_s4" > /tmp/central49-focused-0-explicit.txt
+          cmp /tmp/central49-focused-0-expected.txt /tmp/central49-focused-0-explicit.txt
+
+      - name: Independently check frozen coordinator dispatch and resume snapshot
+        run: |
+          python3 research/experiments/n11-central-19-cover-20261031/audit_central49_three_swap_worker_results_2277.py --focus-plan > /tmp/central49-focus-plan.json
+          python3 - <<'PY'
+          import hashlib
+          import json
+          import subprocess
+          import sys
+          import tempfile
+          from pathlib import Path
+
+          script = 'research/experiments/n11-central-19-cover-20261031/audit_central49_three_swap_worker_results_2277.py'
+          plan = json.loads(Path('/tmp/central49-focus-plan.json').read_text())
+          assert plan['schema'] == 'n11-central49-2277-focused-snapshot-v1'
+          assert plan['evidence_level'] == 'SCHEDULING_ONLY_NOT_A_CERTIFICATE'
+          assert plan['root_outcome'] == plan['empty_board_outcome'] == 'UNKNOWN'
+          assert plan['selected_unknown_s5'] == plan['remaining_s5'] == 94
+          assert plan['worker_loads'] == [24, 24, 23, 23]
+          assert plan['existing_report_sha256'] is None
+          all_keys = sum(plan['worklists'], [])
+          assert len(all_keys) == len(set(all_keys)) == 94
+          for i in range(4):
+              actual = subprocess.check_output([
+                  sys.executable, script, '--worklist', str(i),
+                  '--focus-s4', plan['selected_s4']
+              ], text=True).splitlines()
+              assert actual == plan['worklists'][i]
+              digest = hashlib.sha256(('\n'.join(actual) + '\n').encode()).hexdigest()
+              assert digest == plan['worker_sha256'][i]
+          with tempfile.TemporaryDirectory() as directory:
+              existing = Path(directory) / 'existing.csv'
+              key = int(plan['worklists'][0][0], 16)
+              existing.write_text(
+                  f's5verdict,{key & ((1<<64)-1)},{key >> 64},5,2,1\n')
+              resumed = json.loads(subprocess.check_output([
+                  sys.executable, script, '--focus-plan',
+                  '--focus-s4', plan['selected_s4'], '--existing', str(existing)
+              ], text=True))
+              assert resumed['existing_report_sha256'] == hashlib.sha256(existing.read_bytes()).hexdigest()
+              assert resumed['selected_s4'] == plan['selected_s4']
+              assert resumed['remaining_s5'] == 93
+              assert plan['worklists'][0][0] not in sum(resumed['worklists'], [])
+          PY
+
+      - name: Audit frozen worker receipts and atomic merge
+        run: |
+          python3 research/experiments/n11-central-19-cover-20261031/audit_central49_three_swap_worker_results_2277.py --self-test
+          python3 research/experiments/n11-central-19-cover-20261031/audit_central49_three_swap_worker_results_2277.py --audit-focus-plan /tmp/central49-focus-plan.json > /tmp/frozen-empty-audit.json
+          python3 - <<'PY'
+          import json
+          import subprocess
+          import sys
+          from pathlib import Path
+
+          script = 'research/experiments/n11-central-19-cover-20261031/audit_central49_three_swap_worker_results_2277.py'
+          plan_path = Path('/tmp/central49-focus-plan.json')
+          plan = json.loads(plan_path.read_text())
+          key = plan['worklists'][0][0]
+          def row(key, verdict):
+              bits = int(key, 16)
+              return f's5verdict,{bits & ((1 << 64)-1)},{bits >> 64},5,{verdict},1\n'
+          receipt = Path('/tmp/frozen-focus-w0.csv')
+          receipt.write_text(row(key, 2))
+          merged = Path('/tmp/frozen-focus-merged.csv')
+          cmd = [sys.executable, script, '--audit-focus-plan', str(plan_path),
+                 '--worker', '0', str(receipt)]
+          result = json.loads(subprocess.check_output(
+              cmd + ['--merged-out', str(merged)], text=True))
+          assert result['new_reported_verdicts'] == 1
+          assert result['remaining_focused_s5'] == 93
+          assert result['root_outcome'] == 'UNKNOWN'
+          assert merged.read_text() == row(key, 2).replace(',1\n', ',0\n')
+          def refused(args):
+              proc = subprocess.run(args, capture_output=True, text=True)
+              assert proc.returncode != 0, (args, proc.stdout, proc.stderr)
+          refused(cmd + ['--merged-out', str(merged)])  # never overwrite
+          refused([sys.executable, script, '--audit-focus-plan', str(plan_path),
+                   '--worker', '1', str(receipt)])  # wrong worker
+          receipt.write_text(row(key, 1))
+          refused(cmd)  # WIN5 requires replan
+          receipt.write_text(row(key, 2))
+          other = Path('/tmp/frozen-focus-conflict.csv')
+          other.write_text(row(key, 1))
+          refused(cmd + ['--worker', '0', str(other)])  # conflict
+          old = json.loads(plan_path.read_text())
+          old['worker_sha256'][0] = '0' * 64
+          tampered = Path('/tmp/frozen-focus-tampered.json')
+          tampered.write_text(json.dumps(old))
+          refused([sys.executable, script, '--audit-focus-plan', str(tampered)])
+          full = Path('/tmp/2277-worker-0.txt').read_text().splitlines()
+          outside = next(k for k in full if k not in set(sum(plan['worklists'], [])))
+          receipt.write_text(row(outside, 2))
+          refused(cmd)  # on 2277 frontier but outside frozen focus
+          PY

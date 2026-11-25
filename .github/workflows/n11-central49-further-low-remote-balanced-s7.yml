@@ -1,0 +1,18 @@
+name: N11 conditional 46-S6 further-low-remote balanced S7 audit
+
+on:
+  push:
+    paths:
+      - 'research/experiments/n11-central-19-cover-20261031/conditional_s6_cover_46_further_low_remote_balanced_s7_ownership_2309.json'
+      - 'research/experiments/n11-central-19-cover-20261031/verify_s7_further_low_remote_balanced_2309.py'
+      - '.github/workflows/n11-central49-further-low-remote-balanced-s7.yml'
+  workflow_dispatch:
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Independent geometry, exact routing and tamper rejection
+        run: python3 research/experiments/n11-central-19-cover-20261031/verify_s7_further_low_remote_balanced_2309.py --negative

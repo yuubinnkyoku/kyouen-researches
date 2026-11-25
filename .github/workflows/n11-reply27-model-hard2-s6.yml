@@ -1,0 +1,130 @@
+name: N11 reply27 model-hard2 s6 boundary
+
+on:
+  push:
+    paths:
+      - ".github/workflows/n11-reply27-model-hard2-s6.yml"
+  workflow_dispatch:
+
+jobs:
+  materialize:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Materialize complete s6 boundaries
+        run: |
+          python research/experiments/n11-frontier-selection-20261005/scripts/materialize_reply27_hard2_s6.py \
+            --hard 1154082588886827008:536870912 \
+            --hard 1874623344894017536:0 \
+            --out /tmp/hard2-s6.csv --meta-out /tmp/hard2-meta.json | tee /tmp/materialize.log
+          grep 'REPLY27_HARD2_S6_MATERIALIZED' /tmp/materialize.log
+          cat /tmp/hard2-meta.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: reply27-model-hard2-materialized
+          path: |
+            /tmp/hard2-s6.csv
+            /tmp/hard2-meta.json
+
+  solve:
+    needs: materialize
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [0, 1, 2, 3]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: reply27-model-hard2-materialized
+          path: /tmp/input
+      - name: Build exact solver
+        run: |
+          c++ -std=c++20 -O3 -DNDEBUG -Icpp/solvers \
+            cpp/solvers/kyouen_dfpn_root.cpp -o /tmp/dfpn
+      - name: Materialize shard
+        run: |
+          awk -F, -v s=${{ matrix.shard }} '((NR-1)%4)==s {print}' \
+            /tmp/input/hard2-s6.csv > /tmp/targets.csv
+          test -s /tmp/targets.csv
+      - name: Cold exact replay
+        run: |
+          /usr/bin/time -f 'wall_s=%e' -o /tmp/time \
+            /tmp/dfpn --n=11 --memo=22 --exact-replay=/tmp/targets.csv --only=6 \
+              --exact-replay-budget=10000000 --exact-order=count --csv=/tmp/out.csv
+          cat /tmp/time
+          ! grep -q '^replay_error,' /tmp/out.csv
+      - uses: actions/upload-artifact@v4
+        with:
+          name: reply27-model-hard2-s6-${{ matrix.shard }}
+          path: |
+            /tmp/targets.csv
+            /tmp/out.csv
+            /tmp/time
+
+  derive:
+    needs: solve
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: reply27-model-hard2-materialized
+          path: /tmp/input
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: reply27-model-hard2-s6-[0-9]*
+          path: /tmp/proof
+          merge-multiple: false
+      - name: Derive exact parent s5 verdicts
+        run: |
+          python - <<'PY'
+          import csv,glob,json
+          meta=json.load(open("/tmp/input/hard2-meta.json"))
+          hard=[tuple(x) for x in meta["hard_s5"]]
+          parents={tuple(map(int,k.split(":"))):v for k,v in meta["parents"].items()}
+          got={}; nodes=0
+          for p in glob.glob("/tmp/proof/*/out.csv"):
+              with open(p,newline="") as f:
+                  for r in csv.reader(f):
+                      if not r or r[0]!="replay": continue
+                      k=(int(r[9]),int(r[10])); v=int(r[6]); n=int(r[7])
+                      if k not in parents: raise SystemExit(f"unexpected {k}")
+                      old=got.get(k)
+                      if old is not None and old!=v: raise SystemExit(f"conflict {k}")
+                      got[k]=v; nodes+=n
+          if set(got)!=set(parents):
+              raise SystemExit(f"missing s6: {len(set(parents)-set(got))}")
+          child=[[] for _ in hard]
+          for k,ps in parents.items():
+              for i in ps: child[i].append(k)
+          exact=[]; summary=[]
+          for i,k in enumerate(hard):
+              vals=[got[ch] for ch in child[i]]
+              if 2 in vals: verdict=2; label="LOSS"
+              elif vals and all(v==1 for v in vals): verdict=1; label="WIN"
+              else: verdict=0; label="UNKNOWN"
+              rec={"key":list(k),"label":label,"children":len(vals),
+                   "win":sum(v==1 for v in vals),"loss":sum(v==2 for v in vals),
+                   "unknown":sum(v==0 for v in vals)}
+              summary.append(rec)
+              if verdict: exact.append((k,verdict))
+              print("MODEL_HARD2_PARENT",rec)
+          print("MODEL_HARD2_S6_COUNTS",{v:sum(x==v for x in got.values()) for v in (0,1,2)})
+          print("MODEL_HARD2_TOTAL_NODES",nodes)
+          with open("/tmp/model-hard2-s5.cache","w") as f:
+              f.write("# s5 verdict cache: n=11 schema=1 (model-hard2 s6-boundary derived; UNKNOWN omitted)\n")
+              for (lo,hi),v in sorted(exact):
+                  f.write(f"s5verdict,{lo},{hi},5,{v},0\n")
+          json.dump({"parents":summary,"s6_nodes":nodes},open("/tmp/result.json","w"),indent=2)
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: reply27-model-hard2-s6-proof
+          path: |
+            /tmp/model-hard2-s5.cache
+            /tmp/result.json

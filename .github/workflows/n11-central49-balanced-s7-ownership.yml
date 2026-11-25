@@ -1,0 +1,21 @@
+name: N11 conditional 46-S6 balanced unique-S7 ownership audit
+
+on:
+  push:
+    paths:
+      - 'research/experiments/n11-central-19-cover-20261031/conditional_s6_cover_46_balanced_s7_ownership_2309.json'
+      - 'research/experiments/n11-central-19-cover-20261031/verify_s7_balanced_ownership_2309.py'
+      - 'research/experiments/n11-central-19-cover-20261031/verify_s6_worker_partition_2309.py'
+      - 'research/experiments/n11-central-19-cover-20261031/conditional_s6_cover_46_s7_locality_workers_2309.json'
+      - 'research/experiments/n11-central-19-cover-20261031/conditional_s6_cover_46_distinct_s7_2309.json'
+      - '.github/workflows/n11-central49-balanced-s7-ownership.yml'
+  workflow_dispatch:
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Audit exact S7 ownership, load balancing, and tamper rejection
+        run: python3 research/experiments/n11-central-19-cover-20261031/verify_s7_balanced_ownership_2309.py --negative
