@@ -17,7 +17,7 @@ items の K1338/K1339/K1340 が空きであることを実パス probe・commit 
 「docs: add the AG(2,7) size-by-size Grundy decomposition (K1338)」
 (docs/FINITE_RING_STATUS.md) が K1338 を登録済みであることを発見し・
 K1337 のときと同じ手順で **K1339 に再採番した** (K1339/K1340 は commit
-検索・code 検索とも空きを再確認済み)。機体名も verify_k1339.py から
+検索・code 検索とも空きを再確認済み)。機体名も仮採番機体 `verify_k1338.py` から
 **verify_k1339.py** に改名した (改名は docstring・機体名ラベルのみで
 battery コードは byte 同一・predry・tamper を改名後 bytes で再実測した・§4)。
 対抗 z22 宣言ノートは存在しないことを log 実パス probe
@@ -625,7 +625,7 @@ engine pin `bd5f22e4…` startup ゲート・先行 drafting 機体 `verify_tz22
 'machine' ラベル 1 か所と claim 宣言部 docstring) を kit dir
 (`research/experiments/strip-z22-min17-20261125/`) に置く。機体 sha256
 `566543f76e18fcce67cf6e64cbcd7f42b35a8ceffcdd79f652a1038396dc5e07`
-(24,068 bytes・改名前仮採番機体 `verify_k1339.py` sha256
+(24,068 bytes・改名前仮採番機体 `verify_k1338.py` sha256
 `0e83593dc97cbb1a96db9066788213ecf125c840d70ef972c05cced66c1a64b6` との
 差分はラベル内 '8'→'9' の 2 bytes のみ・`cmp -l` で確認)。
 宣言 battery **18,128 点** (fail-closed: 各 gate の点数が
