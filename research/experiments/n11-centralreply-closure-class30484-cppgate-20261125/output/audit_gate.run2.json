@@ -1,0 +1,213 @@
+{
+ "gates": {
+  "G1:ai048:p1": {
+   "detail": "replay_rows=1 done=True header=True",
+   "status": "PASS"
+  },
+  "G1:ai048:p2": {
+   "detail": "replay_rows=1 done=True header=True",
+   "status": "PASS"
+  },
+  "G1:aj030:p1": {
+   "detail": "replay_rows=1 done=True header=True",
+   "status": "PASS"
+  },
+  "G1:aj030:p2": {
+   "detail": "replay_rows=1 done=True header=True",
+   "status": "PASS"
+  },
+  "G1:aj049:p1": {
+   "detail": "replay_rows=1 done=True header=True",
+   "status": "PASS"
+  },
+  "G1:aj049:p2": {
+   "detail": "replay_rows=1 done=True header=True",
+   "status": "PASS"
+  },
+  "G1:aj050:p1": {
+   "detail": "replay_rows=1 done=True header=True",
+   "status": "PASS"
+  },
+  "G1:aj050:p2": {
+   "detail": "replay_rows=1 done=True header=True",
+   "status": "PASS"
+  },
+  "G1:anchor-af039:p1": {
+   "detail": "replay_rows=1 done=True header=True",
+   "status": "PASS"
+  },
+  "G1:anchor-af039:p2": {
+   "detail": "replay_rows=1 done=True header=True",
+   "status": "PASS"
+  },
+  "G1:anchor-aj001:p1": {
+   "detail": "replay_rows=1 done=True header=True",
+   "status": "PASS"
+  },
+  "G1:anchor-aj001:p2": {
+   "detail": "replay_rows=1 done=True header=True",
+   "status": "PASS"
+  },
+  "G1:anchor-at2m:p1": {
+   "detail": "replay_rows=1 done=True header=True",
+   "status": "PASS"
+  },
+  "G1:anchor-at2m:p2": {
+   "detail": "replay_rows=1 done=True header=True",
+   "status": "PASS"
+  },
+  "G1:k04:p1": {
+   "detail": "replay_rows=1 done=True header=True",
+   "status": "PASS"
+  },
+  "G1:k04:p2": {
+   "detail": "replay_rows=1 done=True header=True",
+   "status": "PASS"
+  },
+  "G2:ai048": {
+   "detail": "p1=0,5,68,0,15000000,1,2232854,4,1152921573327372288,68157440 p2=0,5,68,0,15000000,1,2232854,4,1152921573327372288,68157440",
+   "status": "PASS"
+  },
+  "G2:aj030": {
+   "detail": "p1=0,5,83,0,30000000,1,15284699,35,1152922604135251976,65536 p2=0,5,83,0,30000000,1,15284699,32,1152922604135251976,65536",
+   "status": "PASS"
+  },
+  "G2:aj049": {
+   "detail": "p1=0,5,80,0,30000000,1,4998452,10,1152921574400065536,1114112 p2=0,5,80,0,30000000,1,4998452,10,1152921574400065536,1114112",
+   "status": "PASS"
+  },
+  "G2:aj050": {
+   "detail": "p1=0,5,80,0,15000000,1,1871594,3,1152921574400065536,68157440 p2=0,5,80,0,15000000,1,1871594,3,1152921574400065536,68157440",
+   "status": "PASS"
+  },
+  "G2:anchor-af039": {
+   "detail": "p1=0,5,89,0,30000000,2,19234232,43,1152921504607895681,68719476736 p2=0,5,89,0,30000000,2,19234232,42,1152921504607895681,68719476736",
+   "status": "PASS"
+  },
+  "G2:anchor-aj001": {
+   "detail": "p1=0,5,84,0,30000000,2,5156075,11,1152922604269469696,65536 p2=0,5,84,0,30000000,2,5156075,11,1152922604269469696,65536",
+   "status": "PASS"
+  },
+  "G2:anchor-at2m": {
+   "detail": "p1=0,5,98,0,2000000,0,2000000,3,1152921504606851072,536870946 p2=0,5,98,0,2000000,0,2000000,3,1152921504606851072,536870946",
+   "status": "PASS"
+  },
+  "G2:k04": {
+   "detail": "p1=0,5,83,0,15000000,1,9433024,19,10376293541461626888,65536 p2=0,5,83,0,15000000,1,9433024,19,10376293541461626888,65536",
+   "status": "PASS"
+  },
+  "G3:ai048": {
+   "detail": "observed 68,15000000,1,2232854 expected 68,15000000,1,2232854 (b38 kit output/raw/ai048.p1.out (15000000,1,2232854))",
+   "status": "PASS"
+  },
+  "G3:aj030": {
+   "detail": "observed 83,30000000,1,15284699 expected 83,30000000,1,15284699 (EK kit output/raw/aj030.p1.out (replay...,30000000,1,15284699,...))",
+   "status": "PASS"
+  },
+  "G3:aj049": {
+   "detail": "observed 80,30000000,1,4998452 expected 80,30000000,1,4998452 (EK kit output/raw/aj049.p1.out (30000000,1,4998452); b39 raw is (15000000,1,4998452))",
+   "status": "PASS"
+  },
+  "G3:aj050": {
+   "detail": "observed 80,15000000,1,1871594 expected 80,15000000,1,1871594 (b39 kit output/raw/aj050.p1.out (15000000,1,1871594))",
+   "status": "PASS"
+  },
+  "G3:anchor-af039": {
+   "detail": "observed 89,30000000,2,19234232 expected 89,30000000,2,19234232 (EK kit output/raw/af039.p1.out (30000000,2,19234232); canonical cache row)",
+   "status": "PASS"
+  },
+  "G3:anchor-aj001": {
+   "detail": "observed 84,30000000,2,5156075 expected 84,30000000,2,5156075 (EK kit output/raw/aj001.p1.out (30000000,2,5156075))",
+   "status": "PASS"
+  },
+  "G3:anchor-at2m": {
+   "detail": "observed 98,2000000,0,2000000 expected 98,2000000,0,2000000 (EK kit val-gate at2m published-baseline (2000000,0,2000000))",
+   "status": "PASS"
+  },
+  "G3:k04": {
+   "detail": "observed 83,15000000,1,9433024 expected 83,15000000,1,9433024 (sixthcost k01-k03 kit out/k04-replica-raws/at15m-run1-k04.out.csv (15000000,1,9433024))",
+   "status": "PASS"
+  },
+  "G4": {
+   "detail": "passes=8/8 bad=0",
+   "status": "PASS"
+  },
+  "G5:ai048": {
+   "detail": "sha256 e1d2101d2e9daf5a8ef0376e0808412ef17e85f811fae0fa931e38b9bae94710 ==",
+   "status": "PASS"
+  },
+  "G5:aj030": {
+   "detail": "sha256 520ee52abefaec80b800245dd1913489cd511923732e14d3315f4806aec83595 ==",
+   "status": "PASS"
+  },
+  "G5:aj049": {
+   "detail": "sha256 46349391b3aa212cf7ffffbeae94d01b5202f25ca24a6c5294b75ced6184951a ==",
+   "status": "PASS"
+  },
+  "G5:aj050": {
+   "detail": "sha256 6c6af79250fce81a25be4d076b75844fc80f6f78bc0b28f17102aae2e3fe8d2e ==",
+   "status": "PASS"
+  },
+  "G5:anchor-af039": {
+   "detail": "sha256 e51a3c9de08c62a54d80547c520876af4245394d05e37bbebf01d74204f64691 ==",
+   "status": "PASS"
+  },
+  "G5:anchor-aj001": {
+   "detail": "sha256 2f6daea5ca3b3fe6b7713c8d450af3f3c9f203acacb8a1340255d8e8f656496c ==",
+   "status": "PASS"
+  },
+  "G5:anchor-at2m": {
+   "detail": "sha256 ecc0299b8142abde201fcc40ea9666dac7368d0888d0600abc717af66ddfe348 ==",
+   "status": "PASS"
+  },
+  "G5:k04": {
+   "detail": "sha256 110776a29b4a9ce4fa0b61c47fc2a586e3475bdd94328db77b506ae8456a80a4 ==",
+   "status": "PASS"
+  }
+ },
+ "overall": "PASS",
+ "part": "EN",
+ "rows": {
+  "ai048": {
+   "budget": "15000000",
+   "expected": "68,15000000,1,2232854",
+   "observed_p1": "68,15000000,1,2232854"
+  },
+  "aj030": {
+   "budget": "30000000",
+   "expected": "83,30000000,1,15284699",
+   "observed_p1": "83,30000000,1,15284699"
+  },
+  "aj049": {
+   "budget": "30000000",
+   "expected": "80,30000000,1,4998452",
+   "observed_p1": "80,30000000,1,4998452"
+  },
+  "aj050": {
+   "budget": "15000000",
+   "expected": "80,15000000,1,1871594",
+   "observed_p1": "80,15000000,1,1871594"
+  },
+  "anchor-af039": {
+   "budget": "30000000",
+   "expected": "89,30000000,2,19234232",
+   "observed_p1": "89,30000000,2,19234232"
+  },
+  "anchor-aj001": {
+   "budget": "30000000",
+   "expected": "84,30000000,2,5156075",
+   "observed_p1": "84,30000000,2,5156075"
+  },
+  "anchor-at2m": {
+   "budget": "2000000",
+   "expected": "98,2000000,0,2000000",
+   "observed_p1": "98,2000000,0,2000000"
+  },
+  "k04": {
+   "budget": "15000000",
+   "expected": "83,15000000,1,9433024",
+   "observed_p1": "83,15000000,1,9433024"
+  }
+ },
+ "schema": "n11-centralreply-cppgate-30484win4-audit-v1"
+}
