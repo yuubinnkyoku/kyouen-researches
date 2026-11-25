@@ -1,0 +1,68 @@
+{
+  "schema": "n11-next12-target-preparation-v1",
+  "solver_invoked": false,
+  "target_class": [
+    1152921513197830144,
+    536870912
+  ],
+  "stones": 4,
+  "full_canonical_s5_children": 111,
+  "known_loss": 3,
+  "known_win": 0,
+  "unknown": 108,
+  "raw_edges": [
+    [
+      77,
+      108
+    ],
+    [
+      87,
+      100
+    ]
+  ],
+  "coverage_vertices": [
+    77,
+    87,
+    100,
+    108
+  ],
+  "all_children_canonical_safe": true,
+  "legal_counts_checked_by_direct_geometry": true,
+  "cache": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-parent-b-expanded-s5.cache",
+    "sha256": "b365d54f08b7305bdfb4e02a6e589ee092a7cb9b0b768e92c0215e135203a6fc",
+    "entries": 4243
+  },
+  "boundary_csv": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/next12-boundary.csv",
+    "bytes": 4825,
+    "sha256": "7a8821547061a3be27eeebcd5686a305a5d1f245e7e25baeb1ed4fe4305f2079",
+    "line_endings": "LF"
+  },
+  "unknown_targets_csv": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/next12-targets.csv",
+    "bytes": 7248,
+    "sha256": "16b1aa33486295f15a92b6e01455afc223606711d73efd33be4322c3de1f5b90",
+    "line_endings": "LF"
+  },
+  "training_cache": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/next2-model-training-s5.cache",
+    "sha256": "d8a093c0aca8a6fe58def23a527a9bfb1d6a615f83c0341e4c6bb9190df0118b",
+    "overlap": 0
+  },
+  "saved_s6_source_audit": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/repair5-parent-b-final34-s6-audit.json",
+    "sha256": "1d0c6104b3de3c5f1c8fa2197ef0b661f066ee865fb68863fe7fca6720e5955e",
+    "schema": "n11-s6-reverse-loss-parents-v1",
+    "s6_sources": 34,
+    "unique_canonical_s6_keys": 1849,
+    "unique_s6_win": 1678,
+    "unique_s6_loss": 125,
+    "unknown_only": 46,
+    "conflicts": 0
+  },
+  "s5_boundary_connective": "AND",
+  "all_known_children_are_loss": true,
+  "unknown_targets_disjoint_from_exact_cache": true,
+  "target_disjoint_from_latest_exact_cache": true
+}

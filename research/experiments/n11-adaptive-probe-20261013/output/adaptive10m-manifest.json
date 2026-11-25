@@ -1,0 +1,58 @@
+{
+  "budget": 10000000,
+  "capture": true,
+  "completed_candidates": 2,
+  "counts": {
+    "LOSS": 2,
+    "UNKNOWN": 0,
+    "WIN": 0
+  },
+  "memo_power": 20,
+  "order": "count",
+  "residual_header_sha256": "5976935dcfccb9b5a26fa68f8de20868ce45363dd8c372dcd67d9b841167e7f5",
+  "rows": [
+    {
+      "canonical_children": 46,
+      "input_sha256": "bc26baf08b830dafe144bd88962babb1c25e43642c4682890d5a9f6a486a6c75",
+      "legal": 92,
+      "mask": [
+        1153484454560268834,
+        0
+      ],
+      "nodes": 4687601,
+      "output_sha256": "83b367b5e8d6d537a0365b0d3b8ccb43be7246c81a63dfcd4bb751548d8c3c60",
+      "peak_rss_kib": 767240,
+      "s5_index": 121263,
+      "status": "SOLVED",
+      "trace_path": "research\\experiments\\n11-adaptive-probe-20261013\\dag\\adaptive10m-121263-proof.csv",
+      "trace_sha256": "1e7ceace930bd6ccfe9e830f47b8100a02c08cceffa8aac050a540916cd1e2d5",
+      "verdict": 2,
+      "wall_seconds": 69.337
+    },
+    {
+      "canonical_children": 46,
+      "input_sha256": "c7ed2e3247faa1fa5d0295994ddaa3f5a7a1ba892792fb6271106eea4aceefd1",
+      "legal": 92,
+      "mask": [
+        3458764513828929536,
+        33554434
+      ],
+      "nodes": 4202236,
+      "output_sha256": "3f063d27a762b17e78824a3cf1c7bdd3aa422f35dd3387af76b1ff4ffac6e9df",
+      "peak_rss_kib": 698524,
+      "s5_index": 145001,
+      "status": "SOLVED",
+      "trace_path": "research\\experiments\\n11-adaptive-probe-20261013\\dag\\adaptive10m-145001-proof.csv",
+      "trace_sha256": "d4291aa4e6fb207b6d337ea4beffcebfeb5149adae96f9f99aa61d11d2b682b7",
+      "verdict": 2,
+      "wall_seconds": 60.969
+    }
+  ],
+  "schema": "n11-adaptive-probe-v1",
+  "solver_binary_sha256": "b8fa7468d84ea4351913ef12065015ec34f8ef777cac5166a08092cb5b03a717",
+  "solver_source_sha256": "48e51bb56288e090f51996eb4d9a208ca0458d11f73ba61bf5f08dade25db446",
+  "source": "research\\experiments\\n11-s5-s6-quotient-20261013\\output\\pilots.json",
+  "source_sha256": "771df57ea88bcd7311c20752db706c0d6b00cba3391fd1a1b9d53ddce5e88f70",
+  "trust": "completed labels solver-trusted until independent terminal-only verification; UNKNOWN is not evidence",
+  "workers": 2
+}

@@ -1,0 +1,78 @@
+==============================================================================
+INDEPENDENT EXACT VERIFICATION  K_s(q)
+experiment: research/experiments/inversive-spectrum-20261124
+cases: (q=4,s=4), (q=5,s=5), (q=7,s=4)
+==============================================================================
+compiled from scratch: exhaust.exe, q7_bb.exe (gcc -O2)
+
+--- q=7 board model and Mobius symmetry (supporting scripts) ---
+[field_model.py, 0.164s]
+board blocks: 350
+--- trying alpha^2 = 3 ---
+  primitive lambda = (1, 1) label 8
+  orbit size 350
+  equals board block set: False
+--- trying alpha^2 = 5 ---
+  primitive lambda = (1, 1) label 8
+  orbit size 350
+  equals board block set: False
+--- trying alpha^2 = 6 ---
+  primitive lambda = (1, 2) label 9
+  orbit size 350
+  equals board block set: True
+  MATCH.  alpha^2 = 6  primitive lambda = (1, 2)
+[verify_symmetry.py, 0.258s]
+generator 0: automorphism = True
+generator 1: automorphism = True
+generator 2: automorphism = True
+ordered triples reached: 117600 of 117600
+3-transitivity verified; the fixed triple (0,7,49) is WLOG.
+
+==============================================================================
+=== q=4, s=4  (published claim: 9) ===
+==============================================================================
+board: v=17 b=68 k=5; degree=20; pair_lambda=5; triples=680 each on 1 circle (0.000s)
+moment identities on 200 random S: max|diff2|=0, max|diff3|=0, failures=0 (0.007s)
+witness search: nodes=17453 c_time=0.0009s
+witness (size 9): [0, 1, 2, 3, 4, 5, 6, 9, 10]
+direct verification against board JSON: every one of the 68 circles meets it in at most 4; worst intersection=4 -> PASS
+upper bound: complete enumeration of every subset of the relevant size (exhaust.c)
+  target size 10: num_valid=0, nodes=9318, c_time=0.0005s -> UNSAT (no such set)
+  count of valid 9-sets = 2040; count of valid 10-sets = 0
+EXACT VALUE: K_4(4) = 9  [CONFIRMED]
+
+==============================================================================
+=== q=5, s=5  (published claim: 16) ===
+==============================================================================
+board: v=26 b=130 k=6; degree=30; pair_lambda=6; triples=2600 each on 1 circle (0.001s)
+moment identities on 200 random S: max|diff2|=0, max|diff3|=0, failures=0 (0.013s)
+witness search: nodes=1446839 c_time=0.1010s
+witness (size 16): [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 15, 17, 20, 22]
+direct verification against board JSON: every one of the 130 circles meets it in at most 5; worst intersection=5 -> PASS
+upper bound: complete enumeration of every subset of the relevant size (exhaust.c)
+  target size 17: num_valid=0, nodes=646444, c_time=0.0433s -> UNSAT (no such set)
+  count of valid 16-sets = 3900; count of valid 17-sets = 0
+EXACT VALUE: K_5(5) = 16  [CONFIRMED]
+
+==============================================================================
+=== q=7, s=4  (published claim: 13) ===
+==============================================================================
+board: v=50 b=350 k=8; degree=56; pair_lambda=8; triples=19600 each on 1 circle (0.009s)
+moment identities on 200 random S: max|diff2|=0, max|diff3|=0, failures=0 (0.051s)
+witness search: nodes=3105 c_time=0.0024s
+witness (size 13): [0, 1, 2, 7, 9, 14, 20, 30, 36, 43, 45, 47, 49]
+direct verification against board JSON: every one of the 350 circles meets it in at most 4; worst intersection=4 -> PASS
+upper bound: branch-and-bound over all sets containing the fixed triple (0,7,49), which is WLOG by the verified 3-transitive Mobius symmetry (q7_bb.c); moment-identity upper bound at every node
+  target size 14: num_valid=0, nodes=2088623, c_time=1.7279s -> UNSAT (no such set)
+  fixed-triple search: 13-set nodes=3105; 14-set nodes=2088623; second fixed triple (0,8,49): 14-set nodes=2082143
+EXACT VALUE: K_4(7) = 13  [CONFIRMED]
+
+==============================================================================
+SUMMARY
+==============================================================================
+  q= 4  s= 4  published= 9  independent= 9  witness_size= 9  CONFIRMED
+  q= 5  s= 5  published=16  independent=16  witness_size=16  CONFIRMED
+  q= 7  s= 4  published=13  independent=13  witness_size=13  CONFIRMED
+discrepancies: 0
+total case wall time: 4.035s; process wall time: 5.497s
+results written to C:\Users\yuubi\ghq\github.com\yuubinnkyoku\kyouen-researches\research\experiments\inversive-spectrum-20261124\independent\results.json

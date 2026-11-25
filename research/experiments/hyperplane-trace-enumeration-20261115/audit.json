@@ -1,0 +1,35 @@
+{
+  "method": "Fraction Gaussian elimination vs bounded integer-normal enumeration",
+  "finite_only": true,
+  "dimensions": [
+    {
+      "ambient_dimension": 1,
+      "base_sets_checked": 8,
+      "distinct_trace_count_sum": 20,
+      "maximum_trace_count": 4,
+      "maximum_trace_bound_at_that_base": 4,
+      "normal_search_bound": 2,
+      "result": "PASS"
+    },
+    {
+      "ambient_dimension": 2,
+      "base_sets_checked": 512,
+      "distinct_trace_count_sum": 6400,
+      "maximum_trace_count": 30,
+      "maximum_trace_bound_at_that_base": 46,
+      "normal_search_bound": 4,
+      "result": "PASS"
+    },
+    {
+      "ambient_dimension": 3,
+      "base_sets_checked": 256,
+      "distinct_trace_count_sum": 4288,
+      "maximum_trace_count": 57,
+      "maximum_trace_bound_at_that_base": 93,
+      "normal_search_bound": 4,
+      "result": "PASS"
+    }
+  ],
+  "total_base_sets": 776,
+  "total_distinct_trace_count_sum": 10708
+}

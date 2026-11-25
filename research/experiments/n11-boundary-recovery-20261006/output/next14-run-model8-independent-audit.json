@@ -1,0 +1,78 @@
+{
+  "schema": "n11-next14-independent-geometry-audit-v1",
+  "outcome_provenance": "Saved exact solver values are trusted; source bytes, legal counts, canonical safety, AND polarity, complete class boundary and cache delta independently checked. Not an independent reproof of solver values.",
+  "class_key": [
+    10376293541595840512,
+    64
+  ],
+  "complete_s5_children": 57,
+  "baseline_known_loss": 6,
+  "baseline_unknown": 51,
+  "probes": 8,
+  "completed_exact": 7,
+  "WIN": 2,
+  "LOSS": 5,
+  "UNKNOWN": 0,
+  "nodes": 44039611,
+  "baseline_overlap": 0,
+  "conflicts": 0,
+  "class_status": "WIN",
+  "witness_keys": [
+    [
+      10377419441502683136,
+      64
+    ],
+    [
+      10448351135633768448,
+      64
+    ]
+  ],
+  "not_dispatched": [
+    [
+      10376293679034793984,
+      64
+    ]
+  ],
+  "source_receipt": {
+    "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\next14-run-model8-sources.json",
+    "sha256": "f605cee1f2736effefabf8d68e8d8749cd82df92e59106cc1450d83d9fbef6a3"
+  },
+  "checked_sources": [
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-next13-expanded-s5.cache",
+      "sha256": "03b93d52c8e5756d61dea8ca848cf2a08d7b01650d8c122363bc6754ca865235"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/next14-model8.json",
+      "sha256": "92aa8e0dffd9fce89f30e750e31f7911455c6968ac31e5718f9b0c9005c036c9"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/next14-run-model8-new-exact-s5.cache",
+      "sha256": "fa88a17fd1bbfe666c72834e0486e39dfc5c8cf7fbf118859a0d5883789f2c16"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/next14-run-model8-out.csv",
+      "sha256": "161f66041656ebdea0640f04ab8cb7f586bc08d1c3ef855d3c12b14a9f676968"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/next12-hard5-adaptive15m-expanded-s6-audit.json",
+      "sha256": "f10cb5b3f3538c63c0b37a46692676844a28247fdca1c20c6aee3d08ace1bf14"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/next14-saved-s6-summary.json",
+      "sha256": "bfeeb38a3392b552d632b049fda495466ffe431921d66eb6f6c505047f4840f3"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/next14-run-model8-summary.json",
+      "sha256": "4b909f22fccfdf18dd0dcf5e75e96b818348ca74b73f19c2bd71ccb6d88cca6f"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/next14-model8.csv",
+      "sha256": "1d5675276c02c11bf35fba9ab91a3a6fc2fa0e5545a3d599fad746e4ce0ee6a3"
+    },
+    {
+      "path": "build/n11/dfpn.exe",
+      "sha256": "d9a13f26f7ada3b2030e93370b6412588193624348874d463b7d60bad13ca0bf"
+    }
+  ]
+}

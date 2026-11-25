@@ -1,0 +1,282 @@
+{
+  "claim": "Only completed solver rows carry verdicts; failed, interrupted, undispatched, and UNKNOWN states remain unresolved.",
+  "outputs": [
+    {
+      "bytes": 390,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-046db787-rank1-10448386319871639552-0-probe8-raw-all.csv",
+      "sha256": "d07af9e20771b471d4c3b18506e80271d5772ab6dedf57e51c0194e2a10e02c4"
+    },
+    {
+      "bytes": 380,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-046db787-rank1-10448386319871639552-0-probe8-raw-exact.csv",
+      "sha256": "bae9a53a03241189e69742c5c6278dd40d964b8d682abfba2cf9e7ce86242504"
+    },
+    {
+      "bytes": 379,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-046db787-rank1-10448386319871639552-0-probe8-exact-targets.csv",
+      "sha256": "339d1b4ec12373dc3fa7263773063a77c1dbf73dcdff1cd33ae1afc1e7b89ef8"
+    },
+    {
+      "bytes": 295,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-046db787-rank1-10448386319871639552-0-probe8-new-exact-s5.cache",
+      "sha256": "2978121f545a63e1e2f1491f5a050b76d1e82ca6924ede0b42da561256ccbba8"
+    },
+    {
+      "bytes": 6303,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-046db787-rank1-10448386319871639552-0-probe8-summary.json",
+      "sha256": "e736b88905dcdfb701cb668683d778ba9f20e5c271ca83a4f6aa6e19d03345d2"
+    }
+  ],
+  "schedule_manifest": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-046db787-rank1-10448386319871639552-0-probe8-manifest.json",
+    "sha256": "4e91280de72f8017c371fa4dcc9d255556269c9ee1d432faa7a9f17cd35d57f6"
+  },
+  "schema": "n11-dual-tight-completion-run-manifest-v1",
+  "source_inputs": [
+    {
+      "bytes": 549,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-046db787-rank1-10448386319871639552-0-probe8.csv",
+      "sha256": "6db3ee85e85f776b8b2017bb674a04b0fd58e89ea1977b93a0363ce40874fcd8"
+    },
+    {
+      "bytes": 3676,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-046db787-rank1-10448386319871639552-0-probe8-manifest.json",
+      "sha256": "4e91280de72f8017c371fa4dcc9d255556269c9ee1d432faa7a9f17cd35d57f6"
+    },
+    {
+      "bytes": 1339924,
+      "path": ".local/n11/reply27-probe9/dfpn.exe",
+      "sha256": "05fa5a45c0749506ead2036174c7fc9047badd94835a06c7588d0c892bfafbd7"
+    },
+    {
+      "bytes": 187573,
+      "path": "cpp/solvers/kyouen_dfpn_root.cpp",
+      "sha256": "523f56e61550e1f5b93882229baf8b4cd83489be719ca484d13adef8424c3063"
+    },
+    {
+      "bytes": 13986,
+      "path": "research/experiments/n11-boundary-recovery-20261006/scripts/complete_class_local.py",
+      "sha256": "04ca107661447f40d9c43034f7adbc20a65512c3cd5839b0536f257f2a64d4f4"
+    },
+    {
+      "bytes": 12324,
+      "path": "research/experiments/n11-boundary-recovery-20261006/scripts/collect_dual_tight_completion_run.py",
+      "sha256": "da6306fbdd05c4c26e225beaefd6c25559ec196a8dc033f8c48f4c4402305a03"
+    }
+  ],
+  "summary": {
+    "class_key": [
+      10448386319871639552,
+      0
+    ],
+    "completed_rows": 5,
+    "exact_rows": 5,
+    "exact_win_witnesses": [
+      [
+        10448386319871639552,
+        8
+      ],
+      [
+        10449512219778482176,
+        0
+      ]
+    ],
+    "failed_no_result_keys": [],
+    "interrupted_partial_keys": [],
+    "nodes_all_completed_rows": 27772825,
+    "nodes_exact": 27772825,
+    "not_dispatched_keys": [
+      [
+        10448386319880028160,
+        0
+      ],
+      [
+        10448667794848350208,
+        0
+      ],
+      [
+        10448351135516327936,
+        8
+      ]
+    ],
+    "runner_summary": {
+      "path": ".local/n11/dual-tight-ready-10448386319871639552-0-probe8/summary.json",
+      "sha256": "11ffd47e815fcde6c73b3624591749f1d87de035a42a9ed772defe53f2e9f507"
+    },
+    "scheduled": 8,
+    "schema": "n11-dual-tight-completion-run-collection-v1",
+    "started": 5,
+    "status_counts": {
+      "exact_LOSS": 3,
+      "exact_WIN": 2,
+      "not_dispatched": 3
+    },
+    "target_statuses": [
+      {
+        "input": {
+          "bytes": 60,
+          "path": ".local/n11/dual-tight-ready-10448386319871639552-0-probe8/s5-10448351135499583488-8.input.csv",
+          "sha256": "89552e25eb6fcbdb7e98eadf8922d0de601c4fdf05634f057f80a28a1c14224f"
+        },
+        "key": [
+          10448351135499583488,
+          8
+        ],
+        "log": {
+          "bytes": 0,
+          "path": ".local/n11/dual-tight-ready-10448386319871639552-0-probe8/s5-10448351135499583488-8.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "output": {
+          "bytes": 277,
+          "nodes": 2966757,
+          "path": ".local/n11/dual-tight-ready-10448386319871639552-0-probe8/s5-10448351135499583488-8.out.csv",
+          "sha256": "b387b8129c51c6d45e14780a8674622a98300869b453be1f29026132fd0a6aff",
+          "verdict": 2
+        },
+        "started": true,
+        "status": "exact_LOSS"
+      },
+      {
+        "input": {
+          "bytes": 60,
+          "path": ".local/n11/dual-tight-ready-10448386319871639552-0-probe8/s5-10449512219778482176-0.input.csv",
+          "sha256": "b7851fd3f44716df42076df2fc9938f2f0e3b779ff01446d2e404ec560ea6bed"
+        },
+        "key": [
+          10449512219778482176,
+          0
+        ],
+        "log": {
+          "bytes": 0,
+          "path": ".local/n11/dual-tight-ready-10448386319871639552-0-probe8/s5-10449512219778482176-0.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "output": {
+          "bytes": 277,
+          "nodes": 4616367,
+          "path": ".local/n11/dual-tight-ready-10448386319871639552-0-probe8/s5-10449512219778482176-0.out.csv",
+          "sha256": "36b0958e77e08d4b18708a44fbb600c9cd1460ea60afd80051a65e3ad44f1d46",
+          "verdict": 1
+        },
+        "started": true,
+        "status": "exact_WIN"
+      },
+      {
+        "input": {
+          "bytes": 60,
+          "path": ".local/n11/dual-tight-ready-10448386319871639552-0-probe8/s5-10448351135499616256-8.input.csv",
+          "sha256": "05ff34cf0fd49123492187086cdbc55e7eb4c2eb82851d9b8d7aad1a326b8101"
+        },
+        "key": [
+          10448351135499616256,
+          8
+        ],
+        "log": {
+          "bytes": 0,
+          "path": ".local/n11/dual-tight-ready-10448386319871639552-0-probe8/s5-10448351135499616256-8.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "output": {
+          "bytes": 277,
+          "nodes": 5699147,
+          "path": ".local/n11/dual-tight-ready-10448386319871639552-0-probe8/s5-10448351135499616256-8.out.csv",
+          "sha256": "8067714b2056293ac0bd89a8c74ab9b42261f77260acb934a164076efe7fc5c6",
+          "verdict": 2
+        },
+        "started": true,
+        "status": "exact_LOSS"
+      },
+      {
+        "input": {
+          "bytes": 60,
+          "path": ".local/n11/dual-tight-ready-10448386319871639552-0-probe8/s5-10448386319871639552-8.input.csv",
+          "sha256": "41c625c0910a0c145c6dfa0c25b319d73dd13844283a75c1b11fc82dc6690212"
+        },
+        "key": [
+          10448386319871639552,
+          8
+        ],
+        "log": {
+          "bytes": 0,
+          "path": ".local/n11/dual-tight-ready-10448386319871639552-0-probe8/s5-10448386319871639552-8.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "output": {
+          "bytes": 277,
+          "nodes": 3154408,
+          "path": ".local/n11/dual-tight-ready-10448386319871639552-0-probe8/s5-10448386319871639552-8.out.csv",
+          "sha256": "5cd7d5aeec27364edc550494caf6e56e303a6517e399f83691cc47219d618e8a",
+          "verdict": 1
+        },
+        "started": true,
+        "status": "exact_WIN"
+      },
+      {
+        "input": {
+          "bytes": 60,
+          "path": ".local/n11/dual-tight-ready-10448386319871639552-0-probe8/s5-10448351135507939328-8.input.csv",
+          "sha256": "dc7549d819c9bc2dec59325855feb00bb0b1e1f4dd4464f398d307576841065a"
+        },
+        "key": [
+          10448351135507939328,
+          8
+        ],
+        "log": {
+          "bytes": 0,
+          "path": ".local/n11/dual-tight-ready-10448386319871639552-0-probe8/s5-10448351135507939328-8.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "output": {
+          "bytes": 278,
+          "nodes": 11336146,
+          "path": ".local/n11/dual-tight-ready-10448386319871639552-0-probe8/s5-10448351135507939328-8.out.csv",
+          "sha256": "569eb19ec57cf6e50c788a56795d66d89819c898d5e0e03cdb505c3f7c7f9b9c",
+          "verdict": 2
+        },
+        "started": true,
+        "status": "exact_LOSS"
+      },
+      {
+        "input": null,
+        "key": [
+          10448386319880028160,
+          0
+        ],
+        "log": null,
+        "started": false,
+        "status": "not_dispatched"
+      },
+      {
+        "input": null,
+        "key": [
+          10448667794848350208,
+          0
+        ],
+        "log": null,
+        "started": false,
+        "status": "not_dispatched"
+      },
+      {
+        "input": null,
+        "key": [
+          10448351135516327936,
+          8
+        ],
+        "log": null,
+        "started": false,
+        "status": "not_dispatched"
+      }
+    ],
+    "targets": {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-046db787-rank1-10448386319871639552-0-probe8.csv",
+      "sha256": "6db3ee85e85f776b8b2017bb674a04b0fd58e89ea1977b93a0363ce40874fcd8"
+    },
+    "unknown_keys": [],
+    "verdict_counts": {
+      "LOSS": 3,
+      "UNKNOWN": 0,
+      "WIN": 2
+    }
+  }
+}

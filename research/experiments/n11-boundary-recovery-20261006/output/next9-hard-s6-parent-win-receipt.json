@@ -1,0 +1,21 @@
+{
+  "boundary_sha256": "87562b93b37e144c645ab9e0383aca6c61ba55fdfe96f07e7a3bd2381d263ac7",
+  "cache_sha256": "3b9aba14ee0acc1b9c263999f941a6d914767ea0eec0f3acbe37e949801e5d8f",
+  "canonical_boundary_children": 91,
+  "derivation": "s5 AND parent is WIN iff all legal canonical s6 children are first-player WIN; complete boundary and each replay row checked against direct legal_after geometry.",
+  "is_or": 0,
+  "legal_s6_children": 91,
+  "parent": [
+    1153202979584610304,
+    536870912
+  ],
+  "replay_counts": {
+    "LOSS": 0,
+    "UNKNOWN": 0,
+    "WIN": 91
+  },
+  "replay_rows": 91,
+  "replay_sha256": "59053de7511c6815edd8c84be22224634e8c406ff6a1cd6abc35e5517c84487c",
+  "schema": "s5-win-from-complete-s6-boundary-v1",
+  "stones": 5
+}

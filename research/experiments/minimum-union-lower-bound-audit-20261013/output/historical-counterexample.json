@@ -1,0 +1,25 @@
+{
+  "schema": "minimum-union-historical-packing-counterexample-v1",
+  "source": "research/experiments/n11-joint-s5-proof-planning-20261012/scripts/optimize_s5_selection.py",
+  "source_sha256": "10dbd25657a5c71f1a68aa60b0edfa812957b32f1c94392ad2d082ce5fdb802e",
+  "groups": [
+    [
+      0,
+      1
+    ]
+  ],
+  "cost": [
+    [
+      0
+    ],
+    [
+      1
+    ]
+  ],
+  "exact_optimum": 1,
+  "old_helper_value": 2.0,
+  "feasible_union": [
+    0
+  ],
+  "invalid_constraint": "The unchosen option {1} need not intersect feasible union {0}."
+}

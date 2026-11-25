@@ -1,0 +1,311 @@
+{
+  "bounds": {
+    "interval_from_initial": [
+      [
+        6577,
+        31636
+      ],
+      [
+        6582,
+        31728
+      ]
+    ],
+    "interval_from_previous": [
+      [
+        6583,
+        31730
+      ],
+      [
+        6582,
+        31728
+      ]
+    ],
+    "lower": {
+      "from_initial": {
+        "after": 6582,
+        "before": 6577,
+        "delta": 5,
+        "exact_after": [
+          36490451,
+          5544
+        ],
+        "exact_before": [
+          91145221,
+          13860
+        ]
+      },
+      "from_previous": {
+        "after": 6582,
+        "before": 6583,
+        "delta": -1,
+        "exact_after": [
+          36490451,
+          5544
+        ],
+        "exact_before": [
+          36495203,
+          5544
+        ]
+      },
+      "source": "exact element-only fractional dual, ceil by integrality"
+    },
+    "upper": {
+      "from_initial": {
+        "after": 31728,
+        "before": 31636,
+        "delta": 92
+      },
+      "from_previous": {
+        "after": 31728,
+        "before": 31730,
+        "delta": -2
+      },
+      "source": "union of unknown-S5 children of selected LOSS responses"
+    }
+  },
+  "loss_side": {
+    "changed_choices": 0,
+    "complete_s5_boundaries_rechecked": 350,
+    "excluded_s4_classes_total": [
+      3942,
+      5408,
+      5687,
+      5690,
+      13938
+    ],
+    "free_thirds_from_initial": [
+      122,
+      122
+    ],
+    "free_thirds_from_previous": [
+      122,
+      122
+    ],
+    "known_loss_removed_from_cost": [
+      121263,
+      145001
+    ],
+    "known_win_requirements_asserted": 0,
+    "newly_excluded_s4_classes": [],
+    "required_s5_from_initial": [
+      31636,
+      31728
+    ],
+    "required_s5_from_previous": [
+      31730,
+      31728
+    ],
+    "roots_rechecked": 19,
+    "third_moves_rechecked": 2261
+  },
+  "new_facts": {
+    "cumulative_adaptive_line": {
+      "attempts": 4,
+      "indices": [
+        126899,
+        144095,
+        121263,
+        145001
+      ],
+      "note": "first-update line (126899, 144095) plus this round",
+      "successes": 4
+    },
+    "cumulative_with_k0423_pilot_receipts": {
+      "attempts": 6,
+      "indices": [
+        558600,
+        209644,
+        126899,
+        144095,
+        121263,
+        145001
+      ],
+      "successes": 6
+    },
+    "independent_verifications": {
+      "121263": {
+        "certificate_bytes": 27111761,
+        "certificate_sha256": "50988fb0a508da70d91e02e9b73d0b3812f775518bed3674dc235ea1d1fe0ea1",
+        "manifest_trace_sha256_match": true,
+        "probe_search_nodes": 4687601,
+        "pruned_roundtrip_verified": true,
+        "trusted_leaves": 0,
+        "verdict": 2
+      },
+      "145001": {
+        "certificate_bytes": 19300606,
+        "certificate_sha256": "434ebdd52cd24ed43708b44722a4133cc0c9501c55784ab8641686ab60e87ae1",
+        "manifest_trace_sha256_match": true,
+        "probe_search_nodes": 4202236,
+        "pruned_roundtrip_verified": true,
+        "trusted_leaves": 0,
+        "verdict": 2
+      }
+    },
+    "s5_index": {
+      "121263": 2,
+      "145001": 2
+    },
+    "verification_attempts": 2,
+    "verification_successes": 2
+  },
+  "newly_closed": {
+    "from_initial": {
+      "replies": [],
+      "reply_orbits": 0,
+      "third_moves": 0
+    },
+    "from_previous": {
+      "replies": [],
+      "reply_orbits": 0,
+      "third_moves": 0
+    },
+    "note": "a reply counts as newly closed when its chosen third needs zero WIN witnesses from the saved pool; both criteria are reported",
+    "regressed_vs_previous": []
+  },
+  "schema": "n11-adaptive-plan-update2-effects-v1",
+  "source_sha256": {
+    "research\\experiments\\n11-adaptive-plan-update-20261013\\output\\repaired-joint-plan-update.json": "39278565487a497057d4515ac4b9e5b7614764262eae56d28bd3c6380142f7c4",
+    "research\\experiments\\n11-adaptive-plan-update-20261013\\output\\updated-element-dual-update.json": "01ee4fb41c38a6b16863f254a58bf02baafb3bc2939a67ee437eec729f243283",
+    "research\\experiments\\n11-adaptive-plan-update-20261013\\output\\win-side-reanalysis.json": "25cb3199a68e0d1dfd3c00e9084c2817a7afac555fc304e7809494f8a0bb2dc2",
+    "research\\experiments\\n11-adaptive-plan-update2-20261013\\output\\repaired-joint-plan-update2.json": "06072128cc5e41e1f3026a8e7f16cc394eb4620335aebbef24e051646abfd665",
+    "research\\experiments\\n11-adaptive-plan-update2-20261013\\output\\updated-element-dual-update2.json": "0faba4d88015ff7fc3faa175fcd9980c971b77ac61768be211e6314ab5bfb817",
+    "research\\experiments\\n11-adaptive-plan-update2-20261013\\output\\win-side-reanalysis2.json": "f6db82159d8dd67dcae5d1ac533f307ee69cb13978eb290d59c7d9ee8276ca60",
+    "research\\experiments\\n11-adaptive-probe-20261013\\output\\adaptive10m-manifest.json": "180d712e00972262c38a031bdac02de0505e6ea8df5a5f31d6f1a6dba5821056",
+    "research\\experiments\\n11-conflict-ranking-20261013\\output\\ranking.json": "690bd26a4b21dd61cd146da7d37b6e989fcc0227a987754587297f046cf969e3",
+    "research\\experiments\\n11-s5-s6-quotient-20261013\\output\\repaired-joint-plan.json": "2a468a5aff518a4be5cada77e58ce49cd5597bf779105e58ed4a662898bf4f5f",
+    "research\\experiments\\n11-s5-s6-quotient-20261013\\output\\updated-element-dual.json": "992698c29005f9af38ee87b78f77d291d6034966961cf439db210f8b1d5fe811"
+  },
+  "verdict_census": {
+    "conflict_candidates_total": 28,
+    "empty_board": "UNKNOWN (11x11); no whole-board leap performed",
+    "loss": [
+      121263,
+      126899,
+      145001,
+      558600
+    ],
+    "loss_count": 4,
+    "unknown_candidates": [
+      115540,
+      120370,
+      126017,
+      131631,
+      137043,
+      137694,
+      142283,
+      143240,
+      143718,
+      144019,
+      144193,
+      144311,
+      144692,
+      157861,
+      162106,
+      166171,
+      181624,
+      193768,
+      196002,
+      197665,
+      206386,
+      211133,
+      220231,
+      221294
+    ],
+    "unknown_count_among_candidates": 24,
+    "unknown_unchanged": {
+      "144019": true,
+      "144692": true
+    },
+    "win": [
+      144095,
+      209644
+    ],
+    "win_count": 2
+  },
+  "win_side": {
+    "allowed_pool": [
+      1942,
+      1940
+    ],
+    "and_width": {
+      "after": 7165,
+      "from_initial": 7519,
+      "from_previous": 7401
+    },
+    "closable_replies": {
+      "after": 62,
+      "from_initial": 65,
+      "from_previous": 64
+    },
+    "dead_branches_before_reopt": 0,
+    "delta_from_initial": -98,
+    "delta_from_previous": -64,
+    "new_witnesses_invented": 0,
+    "removed_witnesses": [
+      {
+        "mask": [
+          1153484454560268580,
+          0
+        ],
+        "reason": "resolved-LOSS"
+      },
+      {
+        "mask": [
+          1153484454560268834,
+          0
+        ],
+        "reason": "resolved-LOSS"
+      },
+      {
+        "mask": [
+          1162526838187098144,
+          0
+        ],
+        "reason": "resolved-WIN"
+      },
+      {
+        "mask": [
+          1189513251579232256,
+          130
+        ],
+        "reason": "resolved-WIN"
+      },
+      {
+        "mask": [
+          3458764513828929536,
+          33554434
+        ],
+        "reason": "resolved-LOSS"
+      }
+    ],
+    "replies_affected_before_reopt": [
+      1,
+      2,
+      101
+    ],
+    "stored_pool": 1945,
+    "unclosable_reply_orbits": {
+      "after": [
+        1,
+        2,
+        101
+      ],
+      "from_initial": [],
+      "from_previous": [
+        2
+      ],
+      "r2_impossibility": "continues and expands"
+    },
+    "uncovered_branches_before_reopt": 4,
+    "uncovered_s4_classes_before_reopt": 4,
+    "unresolved_witnesses_from_initial": [
+      1944,
+      1846
+    ],
+    "unresolved_witnesses_from_previous": [
+      1910,
+      1846
+    ]
+  }
+}

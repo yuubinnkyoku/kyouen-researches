@@ -1,0 +1,60 @@
+{
+  "budget": 15000000,
+  "parent_child_counts": [
+    90,
+    91
+  ],
+  "parents": [
+    [
+      1441151885191938048,
+      0
+    ],
+    [
+      5800636324482383872,
+      0
+    ]
+  ],
+  "replay": {
+    "nodes": 11521978,
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/next6-focused15m-out.csv",
+    "rows": 2,
+    "sha256": "533e535ca4cd84c59e2f05ec91090e5687d6d264e9326d3a0c52e42177ea38e3",
+    "verdict_counts": {
+      "2": 2
+    }
+  },
+  "scope": "only two previously UNKNOWN s6 children at larger budget",
+  "solver_command_template": "build/n11/dfpn.exe --n=11 --memo=22 --exact-replay=<input> --only=6 --exact-order=count --exact-replay-budget=<budget> --csv=<output>",
+  "solver_sha256": "d9a13f26f7ada3b2030e93370b6412588193624348874d463b7d60bad13ca0bf",
+  "source_files": [
+    {
+      "key": [
+        1441151880758559232,
+        17733517312
+      ],
+      "nodes": 6689407,
+      "path": ".local/n11/next6-focused15m/s6-1441151880758559232-17733517312.out.csv",
+      "sha256": "3dbf88c1bd5612245fbe90ef65e521fd32eeae4ec3ed2f0c36085f7fa9bee2b8",
+      "verdict": 2
+    },
+    {
+      "key": [
+        1441151880896970752,
+        65538
+      ],
+      "nodes": 4832571,
+      "path": ".local/n11/next6-focused15m/s6-1441151880896970752-65538.out.csv",
+      "sha256": "ddc10e4e3fbca8dd607eca62b7567455964b882f8a43dd9ada4632ee0884f4d8",
+      "verdict": 2
+    }
+  ],
+  "summary": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/next6-focused15m-summary.json",
+    "sha256": "77582e1554d9502070ea87995c67943ad13429df134b2fa3326085f79d9d1d40"
+  },
+  "summary_original": {
+    "path": ".local/n11/next6-focused15m/focused-summary.json",
+    "sha256": "d1a431fecdc6a87c3a4b2188535cb29e3025c712d28a5a9d036597e0350126c5"
+  },
+  "workers": 2
+}

@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "finite_audits": [
+    {
+      "H": 80,
+      "Q": 8,
+      "primitive_candidates": 653,
+      "survivors_mod_primes_at_most_Q": 327,
+      "G_Q": "7/3",
+      "max_sieve_ratio": 0.55555556
+    },
+    {
+      "H": 160,
+      "Q": 12,
+      "primitive_candidates": 2603,
+      "survivors_mod_primes_at_most_Q": 859,
+      "G_Q": "61/21",
+      "max_sieve_ratio": 0.52725564
+    },
+    {
+      "H": 320,
+      "Q": 17,
+      "primitive_candidates": 10407,
+      "survivors_mod_primes_at_most_Q": 3456,
+      "G_Q": "61/21",
+      "max_sieve_ratio": 0.52638987
+    },
+    {
+      "H": 640,
+      "Q": 25,
+      "primitive_candidates": 41513,
+      "survivors_mod_primes_at_most_Q": 9294,
+      "G_Q": "2249/665",
+      "max_sieve_ratio": 0.48811594
+    }
+  ],
+  "scope": "finite checks only; analytic large sieve and asymptotic require proofs"
+}

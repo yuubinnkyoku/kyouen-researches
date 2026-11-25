@@ -1,0 +1,54 @@
+{
+  "budget": 2000000,
+  "claim": "Dispatch preflight assembled from the independently rebuilt single-parent S6 history audit. Only the 84 unseen, geometry-checked children are eligible; one exact saved WIN and no UNKNOWN/conflict are reused. Scheduling carries no verdict.",
+  "dispatch_main_commit": "11452254b02958ad0cc40925805362d60815f20f",
+  "parent_targets": {
+    "count": 1,
+    "keys": [
+      [
+        1585267068834414720,
+        64
+      ]
+    ],
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-11452254-next-rank1-1585267068834414720-0-s6-parent.csv",
+    "sha256": "152e0db11234fa3249343ba246e9ca73e1494e9ee73e2ebcaeb76c02906bdd63"
+  },
+  "per_parent_history_audits": [
+    {
+      "boundary_child_count": 85,
+      "parent_key": [
+        1585267068834414720,
+        64
+      ],
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-11452254-next-rank1-1585267068834414720-0-s6-history-preflight.json",
+      "sha256": "cb0edee1f15cdc3db323ae1bf74709806d8a3b8ac3346ec9ff66051cbe3b8031"
+    }
+  ],
+  "s5_cache": {
+    "exact_rows": 5474,
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-11452254-next-rank1-1585267068834414720-0-merged-s5.cache",
+    "sha256": "d5ab6c117c8ec7c17b2dcd4f3f11461cace717b87d0b44078239c8895a894220"
+  },
+  "saved_full_detail": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-11452254-next-rank1-1585267068834414720-0-s6-saved-intersection-full.json.gz",
+    "sha256": "fe8e5659dd68edf9475e11c7e929e76acffbed8d3e63dd08f743e3400e136d25"
+  },
+  "saved_source_audit": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-11452254-next-rank1-1585267068834414720-0-saved-s6-source-union-v3-conflict-adapter.json",
+    "sha256": "f297f7ac5f101099efefa91fd3a5c4cc2b3df3361de0474f3a0ff062538ddeda",
+    "source_count": 4465
+  },
+  "schema": "n11-reply27-s6-batch-history-preflight-v1",
+  "union": {
+    "conflicts": 0,
+    "dispatch_ready_unique_keys": 84,
+    "parent_child_incidences": 85,
+    "same_or_higher_budget_unknown_key_list": [],
+    "same_or_higher_budget_unknown_keys": 0,
+    "saved_status_counts": {
+      "UNSEEN": 84,
+      "WIN": 1
+    },
+    "unique_canonical_s6_keys": 85
+  }
+}

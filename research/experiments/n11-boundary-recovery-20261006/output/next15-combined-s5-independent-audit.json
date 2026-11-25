@@ -1,0 +1,45 @@
+{
+  "schema": "n11-next15-combined-s5-independent-audit-v1",
+  "scope": "Saved solver outcomes trusted; independently check source bytes, all 104 supplied children, complete 108-child geometry, legal counts, AND polarity and exact cache delta. Not a reproof of solver outcomes.",
+  "class_key": [
+    1297036692682702984,
+    0
+  ],
+  "full_children": 108,
+  "base_known_loss": 4,
+  "new_exact_loss": 101,
+  "full_known_loss": 105,
+  "UNKNOWN": 3,
+  "class_status": "UNKNOWN",
+  "nodes_including_UNKNOWN": 665051356,
+  "nodes_UNKNOWN": 45000000,
+  "candidate_merged_entries": 4371,
+  "candidate_merged_WIN": 94,
+  "candidate_merged_LOSS": 4277,
+  "conflicts": 0,
+  "hard_parent_keys": [
+    [
+      1152921513330999296,
+      4202496
+    ],
+    [
+      1152921517625966592,
+      8192
+    ],
+    [
+      1298162592589545608,
+      0
+    ]
+  ],
+  "checked_source_bindings": 119,
+  "raw_sources": [
+    {
+      "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\next15-run-model8-sources.json",
+      "sha256": "b407553eb48374df0bf7aced2c7c6d81028d3b7c1c5b1999d95f447e91254a62"
+    },
+    {
+      "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\next15-completion96-sources.json",
+      "sha256": "1740aaee47a48057f673b0ac78ca0524256179f4680f40252ca8ad0a5d44b7a2"
+    }
+  ]
+}

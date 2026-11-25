@@ -1,0 +1,164 @@
+{
+  "artifact_inventory": "research/experiments/n11-boundary-recovery-20261006/output/post-034a26a4-reply27-checkpoint-artifact-hashes.json",
+  "checkpoint_base_main": "034a26a4c4402cd944568c484a723c34be7795d6",
+  "claim": "This checkpoint establishes the selected s4 class as WIN from exact s5 evidence. It does not classify the reply27 root or the empty board.",
+  "created_on": "2026-10-09T06:50:41+00:00",
+  "dual_tight": true,
+  "exact_s5_cache": {
+    "LOSS": 5275,
+    "WIN": 144,
+    "conflict": 0,
+    "entries": 5419,
+    "new_exact_rows": 5,
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-034a26a4-next-class-10376293541461626880-67108864-probe8-early-win-merged-s5.cache",
+    "sha256": "dbcf47de9b2233cbbe74025a16e67e2b44b261c9e566828bb8a8d15b5618a7e2"
+  },
+  "minimum_additional_classes": 2,
+  "next_target": {
+    "canonical_s5_children": 102,
+    "coverage": [
+      0,
+      10,
+      100,
+      108
+    ],
+    "dual_vertex": 100,
+    "dual_weight": "1",
+    "key": [
+      1152921504741065728,
+      68719476736
+    ],
+    "known_loss_s5": 4,
+    "rank": 1,
+    "targets_csv": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-034a26a4-after-class-win-ranking-targets.csv",
+    "unknown_s5": 98,
+    "unknown_s5_legal_count_max": 101,
+    "unknown_s5_legal_count_min": 85
+  },
+  "processed_class": {
+    "boundary_status_counts": {
+      "LOSS": 10,
+      "UNKNOWN": 92,
+      "WIN": 4
+    },
+    "canonical_s5_children": 106,
+    "coverage_vertices": [
+      90,
+      96,
+      100,
+      108
+    ],
+    "exact_win_witnesses": [
+      [
+        1152921504624672768,
+        603979776
+      ],
+      [
+        10376293541461626880,
+        67109120
+      ],
+      [
+        10376293541462675456,
+        67108864
+      ],
+      [
+        10952754293765050368,
+        67108864
+      ]
+    ],
+    "geometry_audit_passed": true,
+    "key": [
+      10376293541461626880,
+      67108864
+    ],
+    "status": "WIN",
+    "unexplored_after_early_win": 92
+  },
+  "proof_status": {
+    "empty_11x11": "UNKNOWN",
+    "reply27_root": "UNKNOWN"
+  },
+  "rational_dual": "2",
+  "remaining_third_moves": 5,
+  "repair": {
+    "classes": 2,
+    "distinct_unknown_s5": 197,
+    "selected": [
+      {
+        "coverage": [
+          0,
+          10,
+          100,
+          108
+        ],
+        "key": [
+          1152921504741065728,
+          68719476736
+        ],
+        "uncached_s5": 98
+      },
+      {
+        "coverage": [
+          38,
+          77,
+          87
+        ],
+        "key": [
+          1585267068834414720,
+          0
+        ],
+        "uncached_s5": 99
+      }
+    ]
+  },
+  "reverse_propagated_s5_loss": 0,
+  "root": [
+    60,
+    27
+  ],
+  "s4_classes": {
+    "LOSS": 30,
+    "UNKNOWN": 3103,
+    "WIN": 251
+  },
+  "s5_probe": {
+    "budget_per_target": 15000000,
+    "completed_exact": 5,
+    "nodes": 44498734,
+    "not_dispatched": [
+      [
+        10376293541479448576,
+        68719476736
+      ],
+      [
+        10376293541461626880,
+        67109888
+      ],
+      [
+        10376293541461626880,
+        67125248
+      ]
+    ],
+    "scheduled": 8,
+    "started": 5,
+    "stop_reason": "An exact s5 WIN row appeared; no further target was dispatched, active work was drained, and three targets remained undispatched.",
+    "verdicts": {
+      "LOSS": 1,
+      "UNKNOWN": 0,
+      "WIN": 4
+    },
+    "workers": 4
+  },
+  "s6_descent": 0,
+  "saved_history_audit": {
+    "exact_boundary_keys": 14,
+    "exact_evidence_records": 604,
+    "files_scanned": 9228,
+    "rows_scanned": 717656,
+    "same_budget_unknown_keys": 0,
+    "verdict_conflicts": 0
+  },
+  "schema": "n11-reply27-finite-checkpoint-v1",
+  "secured_third_moves": 114,
+  "source_manifest": "research/experiments/n11-boundary-recovery-20261006/output/post-034a26a4-reply27-checkpoint-source-manifest.json"
+}

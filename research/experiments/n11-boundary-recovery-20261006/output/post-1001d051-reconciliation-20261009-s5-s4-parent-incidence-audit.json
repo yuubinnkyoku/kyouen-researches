@@ -1,0 +1,130 @@
+{
+  "cache": {
+    "conflicts": 0,
+    "exact_entries": 4964,
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-1001d051-reconciliation-20261009-exact-s5.cache",
+    "sha256": "098656495eea24d34f22b85ebd70e704f88aa191249aee9d0c4b43e5a1d9b001"
+  },
+  "claim": "Every listed parent is a legal canonical reply27 s4 parent of the exact s5 WIN. Its complete canonical s5 boundary was regenerated and independently compared with the saved class audit; every listed class is WIN by an exact s5 child.",
+  "parent_incidence_count": 3,
+  "reply27_s4_class_count": 3384,
+  "reply27_s4_parents": [
+    {
+      "canonical_s5_children": 109,
+      "coverage_vertices": [
+        48,
+        50,
+        111,
+        119
+      ],
+      "deleted_s5_points": [
+        56
+      ],
+      "full_boundary_audit": {
+        "path": "research/experiments/n11-boundary-recovery-20261006/output/post-1001d051-reconciliation-20261009-s4-1297318167661510656-0-boundary-audit.json",
+        "sha256": "dd57c505d1f1e0ca5cb7068b1731ddb47cd1bd124a5959a2662b56fd0be728e5"
+      },
+      "key": [
+        1297318167661510656,
+        0
+      ],
+      "status": "WIN",
+      "status_counts": {
+        "LOSS": 3,
+        "UNKNOWN": 105,
+        "WIN": 1
+      },
+      "target_child_present": true
+    },
+    {
+      "canonical_s5_children": 105,
+      "coverage_vertices": [
+        104,
+        111,
+        119
+      ],
+      "deleted_s5_points": [
+        50
+      ],
+      "full_boundary_audit": {
+        "path": "research/experiments/n11-boundary-recovery-20261006/output/post-1001d051-reconciliation-20261009-s4-10448351135499552768-0-boundary-audit.json",
+        "sha256": "667a1d23d1692e5d407c7af6e81c1633f1219b625346058d05b5da66c9dc036c"
+      },
+      "key": [
+        10448351135499552768,
+        0
+      ],
+      "status": "WIN",
+      "status_counts": {
+        "LOSS": 20,
+        "UNKNOWN": 82,
+        "WIN": 3
+      },
+      "target_child_present": true
+    },
+    {
+      "canonical_s5_children": 97,
+      "coverage_vertices": [
+        48,
+        50,
+        104
+      ],
+      "deleted_s5_points": [
+        11
+      ],
+      "full_boundary_audit": {
+        "path": "research/experiments/n11-boundary-recovery-20261006/output/post-1001d051-reconciliation-20261009-s4-10449477035406393344-0-boundary-audit.json",
+        "sha256": "33c38d123aca2e6d7d75bf3a91b26403ed8dcd60242eaefbd58724764ff3ac22"
+      },
+      "key": [
+        10449477035406393344,
+        0
+      ],
+      "status": "WIN",
+      "status_counts": {
+        "LOSS": 15,
+        "UNKNOWN": 76,
+        "WIN": 6
+      },
+      "target_child_present": true
+    }
+  ],
+  "root": [
+    60,
+    27
+  ],
+  "schema": "n11-reply27-s5-win-s4-parent-incidence-audit-v1",
+  "sources": [
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-1001d051-reconciliation-20261009-exact-s5.cache",
+      "sha256": "098656495eea24d34f22b85ebd70e704f88aa191249aee9d0c4b43e5a1d9b001"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-1001d051-reconciliation-20261009-s5-10449477035406395392-0-s6-boundary-audit-summary.json",
+      "sha256": "02a74c39c5a4a40f2d730807563c98be08af6655cfb6e031fa6a0af2656dac6a"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/scripts/audit_reconciled_s5_s4_parent_incidence.py",
+      "sha256": "f2e6513cac08f2cb3964a9934e5ee91b8b51e03779fa21ed7f51d6e6867cf3f3"
+    },
+    {
+      "path": "research/experiments/n11-search-methods/scripts/dfpn_edge_classes.py",
+      "sha256": "6cca3cfe161ffc9ffc199c56b595e9d0f72b839ee945e8b7e2c4090dafcf0c0c"
+    }
+  ],
+  "target_s5": {
+    "key": [
+      10449477035406395392,
+      0
+    ],
+    "source_boundary_audit": {
+      "canonical_s6_children": 89,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-1001d051-reconciliation-20261009-s5-10449477035406395392-0-s6-boundary-audit-summary.json",
+      "sha256": "02a74c39c5a4a40f2d730807563c98be08af6655cfb6e031fa6a0af2656dac6a",
+      "status_counts": {
+        "WIN": 89
+      }
+    },
+    "verdict": "WIN"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "fresh_completion": {
+    "path": "C:/Users/yuubi/.codex/worktrees/n11-proof-boundary/kyouen-researches/research/experiments/n11-boundary-recovery-20261006/output/next17-completion93.csv",
+    "prior_hard_excluded": true,
+    "rows": 93,
+    "sha256": "182b9039ab24aee40decbbc7d72507fe9dda80e30aaad2a9c57a452c2dd333c7"
+  },
+  "model8": {
+    "path": "C:/Users/yuubi/.codex/worktrees/n11-proof-boundary/kyouen-researches/research/experiments/n11-boundary-recovery-20261006/output/next17-model8.csv",
+    "rows": 8,
+    "sha256": "a82e5c17d870ec47e0e0cff6f59b7d2ddc5c450be5e2f9edc79ec6df787ceb45"
+  },
+  "partition": {
+    "fresh_completion": 93,
+    "fresh_completion_preserves_source_order": true,
+    "original": 102,
+    "pairwise_disjoint": true,
+    "prior_hard": 1,
+    "probe8": 8,
+    "probe_order_preserves_model_rank": true,
+    "union_equals_original": true
+  },
+  "prior_hard": {
+    "key": [
+      1586392968741257224,
+      0
+    ],
+    "path": "C:/Users/yuubi/.codex/worktrees/n11-proof-boundary/kyouen-researches/research/experiments/n11-boundary-recovery-20261006/output/next17-prior-hard-s5.csv",
+    "prior_budget": 15000000,
+    "prior_nodes": 15000000,
+    "retry_same_budget": false,
+    "rows": 1,
+    "sha256": "fd65850a377d945a1a85e019c2a6fc8b618416c76844fb513f34eedc8b0b98f2"
+  },
+  "prior_unknown_audit": {
+    "files_examined": 184,
+    "path": "C:/Users/yuubi/.codex/worktrees/n11-proof-boundary/kyouen-researches/research/experiments/n11-boundary-recovery-20261006/output/next17-prior-s5-unknown-audit.json",
+    "prior_unknown_matches": [
+      {
+        "budget": 15000000,
+        "key": [
+          1586392968741257224,
+          0
+        ],
+        "nodes": 15000000,
+        "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/repair5-batch-out.csv",
+        "probe8": false,
+        "row": 336,
+        "sha256": "ab84563413acee5f0214d98599632bd6205bbfdf135922823857af85e9512b11"
+      },
+      {
+        "budget": 15000000,
+        "key": [
+          1586392968741257224,
+          0
+        ],
+        "nodes": 15000000,
+        "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/repair5-batch-shard11-out.csv",
+        "probe8": false,
+        "row": 9,
+        "sha256": "7427a4dae9b862a526ec77f5aea5c8a43b5a7f6e1a8a7dbf4f797573764abd3f"
+      }
+    ],
+    "sha256": "489ecc91a8ece84784a2e4ef99d23e5c440394f3c776d01f32a75a40caa48fa7"
+  },
+  "schema": "n11-next17-completion-partition-v1",
+  "scope": "Partition of the frozen 102-key target set only. The prior-hard key is excluded from fresh s5 solving because archived exact replay rows show UNKNOWN at the same 15M budget; route it to the saved-s6 boundary.",
+  "source_targets": {
+    "path": "C:/Users/yuubi/.codex/worktrees/n11-proof-boundary/kyouen-researches/research/experiments/n11-boundary-recovery-20261006/output/post-next16-best-class.csv",
+    "rows": 102,
+    "sha256": "511dbcd679079f665e5755fca31eeb345fa4a571eb9a18d7d5ae443cc01442ff"
+  }
+}

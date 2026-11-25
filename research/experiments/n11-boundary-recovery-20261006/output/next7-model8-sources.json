@@ -1,0 +1,118 @@
+{
+  "baseline_cache": {
+    "loss": 3353,
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-next6-s5.cache",
+    "rows": 3418,
+    "sha256": "c2d8c22314435267129b50b669f86b32e2eb9a9cf4e69cc4882c3d3dbecba182",
+    "win": 65
+  },
+  "boundary_scope": "supplied model8 targets only",
+  "budget": 15000000,
+  "cache": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/next7-model8-s5.cache",
+    "rows": 8,
+    "sha256": "19c4181f2527a70359d6c547b8ee33ddf6f8ccd9f2b04aa11de7f5835284a803"
+  },
+  "claim": "solver outputs are exact results for eight supplied roots; this subset alone is not the whole class boundary",
+  "model_targets_path": "research/experiments/n11-boundary-recovery-20261006/output/next7-model8.csv",
+  "model_targets_sha256": "d98fd0f54b86de805b31303a3c0b29d8f30469b2b42bddabbf43f938fc06429f",
+  "raw_combined": {
+    "line_endings": "LF",
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/next7-model8-out.csv",
+    "sha256": "2e3b1315ee0fde90ec42cad3d296178dcd9e4cdf8e76e5118b4edda59244a680",
+    "source_count": 8
+  },
+  "run_dir": ".local/n11/next7-model8-run",
+  "solver": "build/n11/dfpn.exe",
+  "solver_command_template": "build/n11/dfpn.exe --n=11 --memo=22 --exact-replay=<per-root-input.csv> --only=5 --exact-order=count --exact-replay-budget=15000000 --csv=<per-root-output.csv>",
+  "solver_sha256": "d9a13f26f7ada3b2030e93370b6412588193624348874d463b7d60bad13ca0bf",
+  "source_files": [
+    {
+      "file": ".local/n11/next7-model8-run/s5-1301540292310335488-262144.out.csv",
+      "key": [
+        1301540292310335488,
+        262144
+      ],
+      "original_bytes": 281,
+      "original_line_endings": "CRLF",
+      "original_sha256": "9d95f415707775977e26e3603fb992411789fba32427a750af025d3d1f592868"
+    },
+    {
+      "file": ".local/n11/next7-model8-run/s5-3607383301524029440-0.out.csv",
+      "key": [
+        3607383301524029440,
+        0
+      ],
+      "original_bytes": 276,
+      "original_line_endings": "CRLF",
+      "original_sha256": "c4344a66c07c8c281c8d90553e86fef6b2005b69a789ed4b4fa3eca84bc87e1e"
+    },
+    {
+      "file": ".local/n11/next7-model8-run/s5-1301575476682424320-0.out.csv",
+      "key": [
+        1301575476682424320,
+        0
+      ],
+      "original_bytes": 277,
+      "original_line_endings": "CRLF",
+      "original_sha256": "ddc278b924e58dd10ec863b3ec11cfaa601aa52649428bffab5bc10dc57b6304"
+    },
+    {
+      "file": ".local/n11/next7-model8-run/s5-1302103242263756800-0.out.csv",
+      "key": [
+        1302103242263756800,
+        0
+      ],
+      "original_bytes": 276,
+      "original_line_endings": "CRLF",
+      "original_sha256": "e8f9a08902dc6008024d4f5e2310ef5b394766a46ab4f15e26e623b3c41df92b"
+    },
+    {
+      "file": ".local/n11/next7-model8-run/s5-10376363910205816832-65536.out.csv",
+      "key": [
+        10376363910205816832,
+        65536
+      ],
+      "original_bytes": 281,
+      "original_line_endings": "CRLF",
+      "original_sha256": "3b9e6a42dbeb329e6a6f421672507db46865e8921e85304cb190d7e9cf42ed1f"
+    },
+    {
+      "file": ".local/n11/next7-model8-run/s5-1301610661054513152-0.out.csv",
+      "key": [
+        1301610661054513152,
+        0
+      ],
+      "original_bytes": 276,
+      "original_line_endings": "CRLF",
+      "original_sha256": "42174174ef1b4e006f9aac713a18fbb9674318220fa47f1199b6e1975cbe3d17"
+    },
+    {
+      "file": ".local/n11/next7-model8-run/s5-1301541391821963264-0.out.csv",
+      "key": [
+        1301541391821963264,
+        0
+      ],
+      "original_bytes": 276,
+      "original_line_endings": "CRLF",
+      "original_sha256": "ac89592bffe9b79db3661112a8ab5cfbc77e196bb7ed5e2debbf1220043ccb33"
+    },
+    {
+      "file": ".local/n11/next7-model8-run/s5-1301540292310343680-0.out.csv",
+      "key": [
+        1301540292310343680,
+        0
+      ],
+      "original_bytes": 276,
+      "original_line_endings": "CRLF",
+      "original_sha256": "e14d4d92b7888114f1df703533fc12b26bc61c106cb59164e7e24050249fa417"
+    }
+  ],
+  "summary": {
+    "durable_lf_sha256": "2dd12b333bd6b0a541efb2dcc2bc1188e094f372e6c28d29bff2089aa0672f5d",
+    "original_bytes": 826,
+    "original_bytes_sha256": "8e38443b242f97c9b8e415960cf7db94de5eb8f7d6e60fea34805f0726f6b224",
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/next7-model8-summary.json"
+  },
+  "workers": 4
+}

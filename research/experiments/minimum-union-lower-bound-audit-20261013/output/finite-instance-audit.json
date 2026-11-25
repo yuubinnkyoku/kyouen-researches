@@ -1,0 +1,82 @@
+{
+  "checks": [
+    "Every reported valid lower bound <= independently enumerated exact optimum",
+    "All new group-pool capacities checked with exact integer arithmetic",
+    "Group-pool objective checked with Fraction",
+    "Empty cost options, repeated groups, and duplicated option costs included"
+  ],
+  "counterexample": {
+    "bounds": {
+      "best_valid_lower_bound": 1,
+      "element_only_fractional_dual": 1.0,
+      "grouped_fractional_dual_alternating_packing": 1.0,
+      "lp_relaxation_dual_fractional_packing": 1.0,
+      "per_group_min_max": 1,
+      "per_group_min_sum_no_sharing_reference": 1,
+      "threshold_cover_max_of_min_option": 1
+    },
+    "feasible_union": [
+      0
+    ],
+    "historical_invalid_bound": 2.0,
+    "maximum_capacity_numerator": 1,
+    "optimum": 1,
+    "pool_bound_exact": [
+      1,
+      1
+    ],
+    "pool_denominator": 1,
+    "pool_weights_numerator": {
+      "0": 1
+    }
+  },
+  "exhaustive": [
+    {
+      "distinct_nonempty_option_families": 255,
+      "group_multisets_checked": 32640,
+      "groups": 2,
+      "universe_elements": 3
+    },
+    {
+      "distinct_nonempty_option_families": 15,
+      "group_multisets_checked": 680,
+      "groups": 3,
+      "universe_elements": 2
+    }
+  ],
+  "fractional_triangle": {
+    "bounds": {
+      "best_valid_lower_bound": 1.5,
+      "element_only_fractional_dual": 1.5,
+      "grouped_fractional_dual_alternating_packing": 1.0,
+      "lp_relaxation_dual_fractional_packing": 1.5,
+      "per_group_min_max": 1,
+      "per_group_min_sum_no_sharing_reference": 3,
+      "threshold_cover_max_of_min_option": 1
+    },
+    "feasible_union": [
+      0,
+      1
+    ],
+    "maximum_capacity_numerator": 2,
+    "optimum": 2,
+    "pool_bound_exact": [
+      3,
+      2
+    ],
+    "pool_denominator": 2,
+    "pool_weights_numerator": {
+      "0": 1,
+      "1": 1,
+      "2": 1
+    }
+  },
+  "passed": true,
+  "random_seed": 20261013,
+  "schema": "minimum-union-lower-bound-audit-v1",
+  "seconds": 4.86,
+  "seeded_random_instances": 1000,
+  "source": "research/experiments/n11-joint-s5-proof-planning-20261012/scripts/optimize_s5_selection.py",
+  "source_sha256": "6672b3a458a0a34717917aff51f6d0fca10e1d7acd8cdd9a1499d1ee784b47f0",
+  "total_finite_instances_checked": 34322
+}

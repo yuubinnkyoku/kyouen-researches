@@ -1,0 +1,52 @@
+{
+  "boundary_scope": "supplied targets only",
+  "budget": 15000000,
+  "cache_sources": [
+    {
+      "loss": 2591,
+      "nodes": 0,
+      "path": ".local\\n11\\next-current-s5.cache",
+      "rows": 2654,
+      "sha256": "d3018c1fc2e59f8123d8ed38f1331fe29f3412560172dc14d853bad966a34749",
+      "win": 63
+    }
+  ],
+  "class_status": "UNKNOWN",
+  "existing_cache_exact": 0,
+  "existing_exact": 0,
+  "existing_output_exact": 0,
+  "new_exact": 76,
+  "new_exact_cache": ".local\\n11\\completion81\\cache-out\\new-exact-s5.cache",
+  "new_loss": 76,
+  "new_win": 0,
+  "nodes_existing": 0,
+  "nodes_new": 526111188,
+  "nodes_total": 526111188,
+  "not_dispatched": [],
+  "scheduled": 81,
+  "targets": 81,
+  "unknown": 5,
+  "unresolved": [
+    [
+      1153202979584610304,
+      536870912
+    ],
+    [
+      1153202979585658880,
+      536870912
+    ],
+    [
+      1298162592590594304,
+      0
+    ],
+    [
+      1298162592590602240,
+      0
+    ],
+    [
+      1298162592590626816,
+      0
+    ]
+  ],
+  "workers": 6
+}

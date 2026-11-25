@@ -1,0 +1,33 @@
+{
+  "claim": "Derived from collector output; only completed exact rows enter the geometry verification.",
+  "exact_replay_counts": {
+    "LOSS": 3,
+    "UNKNOWN": 0,
+    "WIN": 2
+  },
+  "exact_targets": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-046db787-rank1-10448386319871639552-0-probe8-exact-targets.csv",
+    "rows": 5,
+    "sha256": "339d1b4ec12373dc3fa7263773063a77c1dbf73dcdff1cd33ae1afc1e7b89ef8"
+  },
+  "new_exact_cache": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-046db787-rank1-10448386319871639552-0-probe8-new-exact-s5.cache",
+    "rows": 5,
+    "sha256": "2978121f545a63e1e2f1491f5a050b76d1e82ca6924ede0b42da561256ccbba8"
+  },
+  "raw_all": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-046db787-rank1-10448386319871639552-0-probe8-raw-all.csv",
+    "rows": 5,
+    "sha256": "d07af9e20771b471d4c3b18506e80271d5772ab6dedf57e51c0194e2a10e02c4"
+  },
+  "raw_output": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-046db787-rank1-10448386319871639552-0-probe8-raw-exact.csv",
+    "rows": 5,
+    "sha256": "bae9a53a03241189e69742c5c6278dd40d964b8d682abfba2cf9e7ce86242504"
+  },
+  "run_manifest": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-046db787-rank1-10448386319871639552-0-probe8-run-manifest.json",
+    "sha256": "ff7dfd88679b8ea4f4d9ae953f98f8b562a8b9ce52d832328e9c501a834e2f34"
+  },
+  "schema": "n11-dual-tight-probe-exact-subset-summary-v1"
+}

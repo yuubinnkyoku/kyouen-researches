@@ -1,0 +1,75 @@
+{
+  "conflicts": 0,
+  "loss": 4388,
+  "merge_output": {
+    "bytes": 181710,
+    "line_endings": "LF",
+    "loss": 4388,
+    "path": "C:/Users/yuubi/.codex/worktrees/n11-proof-boundary/kyouen-researches/research/experiments/n11-boundary-recovery-20261006/output/next17-run-post-completion-s5.cache",
+    "sha256": "6f121d3629be67b1c0eee650e6c2467b6e480c6128f2d83fc02f396d0b9812b6",
+    "unique_exact_s5": 4485,
+    "win": 97
+  },
+  "next17_completion": {
+    "completed_exact": 89,
+    "new_exact_cache_sha256": "c19003cb2115fc489947223fc218e68100753912f9c8004e9cd173e2f37c0517",
+    "nodes": 656185414,
+    "prior_hard_excluded": true,
+    "raw_sha256": "2d012aa42ff1ad34f8801d82a26cd4380e4bae092cbb352fad485e70e145796c",
+    "sources_path": "C:/Users/yuubi/.codex/worktrees/n11-proof-boundary/kyouen-researches/research/experiments/n11-boundary-recovery-20261006/output/next17-completion93-sources.json",
+    "sources_sha256": "8f042a9853c171b4641e93c9dbc2ad7f818e4badd5154b80f6fcf44aa37f6802",
+    "summary_sha256": "4bb8e7e2e8759ccf3b95cd03e674ded7ea21e5aaac328ff306a1e667fb9bcf9e",
+    "unknown": 4,
+    "unknown_keys": [
+      [
+        1152921517625966592,
+        64
+      ],
+      [
+        1153202979583558144,
+        536879104
+      ],
+      [
+        1298444067566256136,
+        0
+      ],
+      [
+        1298725542542966792,
+        0
+      ]
+    ]
+  },
+  "sources": [
+    {
+      "counts": {
+        "1": 97,
+        "2": 4291
+      },
+      "nodes": 0,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-next16-expanded-s5.cache",
+      "rows": 4388,
+      "sha256": "ddc997e18480ed9ceb669148dcc46166eae1bb6ae9ec08d07e4954d6aa91c081"
+    },
+    {
+      "counts": {
+        "0": 4,
+        "2": 89
+      },
+      "nodes": 656185414,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/next17-completion93-out.csv",
+      "rows": 93,
+      "sha256": "2d012aa42ff1ad34f8801d82a26cd4380e4bae092cbb352fad485e70e145796c"
+    },
+    {
+      "counts": {
+        "2": 8
+      },
+      "nodes": 54975108,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/next17-run-model8-out.csv",
+      "rows": 8,
+      "sha256": "c9cc8c66131cece6353eeab1902b50a1bc6b8da81e1b359d1a837e2ee0f0b835"
+    }
+  ],
+  "unique_exact_s5": 4485,
+  "win": 97
+}

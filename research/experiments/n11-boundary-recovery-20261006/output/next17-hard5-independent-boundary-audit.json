@@ -1,0 +1,63 @@
+{
+  "schema": "n11-next17-hard5-independent-boundary-audit-v1",
+  "scope": "Independent direct complete canonical safe s6 boundary geometry and partial exact s5 cache/delta audit only. No new solver outcomes.",
+  "input_target_sha256": "f46706f57af3f7579b9c68ac2fd157c7ce3cd9eeb2870025edbfdbad0c664309",
+  "partial_cache_sha256": "6f121d3629be67b1c0eee650e6c2467b6e480c6128f2d83fc02f396d0b9812b6",
+  "partial_cache_entries": 4485,
+  "parents": [
+    {
+      "key": [
+        1586392968741257224,
+        0
+      ],
+      "child_count": 91,
+      "children_sha256": "a5761720d65ec83e500fff1b66da9f1c68312261042467d37dcbdef1e83a18b5"
+    },
+    {
+      "key": [
+        1298725542542966792,
+        0
+      ],
+      "child_count": 99,
+      "children_sha256": "0dc88e6343cedfaa604b28660964429fd4e1dc3e7b41b44bef61156d7d0949d0"
+    },
+    {
+      "key": [
+        1298444067566256136,
+        0
+      ],
+      "child_count": 100,
+      "children_sha256": "ccb363c56ca0846ca892bf7e9275aecd645b0b2430225c62cd0f463ece0c3a4a"
+    },
+    {
+      "key": [
+        1152921517625966592,
+        64
+      ],
+      "child_count": 104,
+      "children_sha256": "58e5ce81e60452a0709c7a58388af9512d6eb813f6215bc9f4737e2ddd015428"
+    },
+    {
+      "key": [
+        1153202979583558144,
+        536879104
+      ],
+      "child_count": 109,
+      "children_sha256": "58b5a9416c9fe609eae5776b9cc2e447f636ecb94f9ec6f2174c617a056fc746"
+    }
+  ],
+  "union_s6_children": 493,
+  "parent_child_relations": 503,
+  "union_sha256": "e7b1ca66e5ea7ac553189c983c918d8af167dbb0339ef77fbc0a653407bf22ee",
+  "solver_invoked": false,
+  "materialized_meta_sha256": "33a8790f8b9ddbabc6430b8c085571870e9601a45c3d823daae0c069118a1f7d",
+  "materialized_boundary_sha256": "58dafb3055d4dcc81b7cd5b2a7964ce591e605919cc36d856071f5b67c735c8d",
+  "materialized_legal_counts_checked": 493,
+  "source_hash_bindings_checked": 45,
+  "prior_saved_s6_boundary_counts": {
+    "WIN": 3,
+    "LOSS": 0,
+    "UNKNOWN_only": 0,
+    "UNSEEN": 490
+  }
+}

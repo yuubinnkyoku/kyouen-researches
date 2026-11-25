@@ -1,0 +1,179 @@
+{
+ "schema": "n11-five-parent-seventh-win7-receipt-fold-20261119-v1",
+ "date": "2026-11-19",
+ "status": "fold-complete",
+ "implementation_note": "chains on fold_fourth_fifth_sixth.py (re-executed with all gates; its own record is the 4/5/6 fold) and folds the seventh receipt root discovered by the 29-candidate sweep35 of this run.",
+ "environment_note": "composed in the Vibe sandbox 2026-11-19; this run had no GitHub push transport, so the record is held in the lane Knowledge with exact values for publication by a later run.",
+ "receipt_count": 1,
+ "receipts": [
+  {
+   "root": "00000000040080801202000000100000",
+   "receipt": "seventh",
+   "published_item": "this run (sweep35 WIN; certificate publication pending)",
+   "added_bit": 90,
+   "child_hex": "00000000000080801202000000100000",
+   "legal_next_moves": 51,
+   "covered_s6_rows": [
+    "0000000000000000380000000b000000"
+   ],
+   "covered_five_parent_target_rows": [
+    "0000000000000000380000000b000000"
+   ],
+   "extra_s6_rows_not_in_target": [],
+   "unique_strategy_rows": 21829,
+   "total_nodes": 552457,
+   "closed_edge_cost": 68,
+   "affected_parents": 2,
+   "parent_deltas": [
+    {
+     "parent_hex": "00000000000000003800000009000000",
+     "classes": 2,
+     "rows_before": 21,
+     "rows_closed": 1,
+     "rows_after": 20
+    },
+    {
+     "parent_hex": "0000000000000000380000000a000000",
+     "classes": 2,
+     "rows_before": 46,
+     "rows_closed": 1,
+     "rows_after": 45
+    }
+   ],
+   "evidence": {
+    "root": "00000000040080801202000000100000",
+    "name": "seventh",
+    "published_item": "this run (sweep35 WIN; certificate publication pending)",
+    "added_bit": 90,
+    "child": "00000000000080801202000000100000",
+    "legal_next_moves": 51,
+    "total_nodes": 552457,
+    "unique_strategy_rows": 21829,
+    "fbt_drops": 0,
+    "terminal_stone_range": [
+     13,
+     17
+    ],
+    "certificate": {
+     "sha256": "7049f7cb54163ce49d640e86d079fb47ad0a3adf9aa3d2a8e40bbe4b7a85ecb3",
+     "bytes": 784937
+    },
+    "independent_verification": {
+     "bigint": {
+      "subroots_passed": 51,
+      "union_missing": 0,
+      "union_extra": 0,
+      "visited_states": 49378,
+      "terminal_count": 7302,
+      "loser_reply_edges": 44902,
+      "terminal_range": [
+       13,
+       17
+      ]
+     },
+     "bareiss": {
+      "subroots": 51,
+      "rows": 21829,
+      "consumed_unique": 21829,
+      "seen": 49378,
+      "terminals": 7302,
+      "opponent_edges": 44902
+     }
+    },
+    "win_probe_runs": {
+     "source": "sweep35 (this run)",
+     "orderings": [
+      {
+       "ordering": "andclose1",
+       "nodes": 300753,
+       "loss": true,
+       "capped": false,
+       "pilot_nodes": 3402
+      },
+      {
+       "ordering": "andclose0",
+       "nodes": 422156,
+       "loss": true,
+       "capped": false,
+       "pilot_nodes": 3402
+      }
+     ],
+     "note": "both AND orderings uncapped loss=true; this run also holds the round-1 quarantined records"
+    },
+    "legal_rederivation_matches": true
+   }
+  }
+ ],
+ "frontier_before": {
+  "unique_remaining_s6": 6224,
+  "sum_remaining_cost": 492830,
+  "solved_s6_in_manifest": 1624,
+  "source": "fourth-fifth-sixth-win7-receipt-fold-20261119.json (this run, epoch-1 crosschecked)"
+ },
+ "new_receipt_coverage": {
+  "unique_s6_rows": 1,
+  "closed_edge_cost": 68,
+  "rows": [
+   {
+    "row_hex": "0000000000000000380000000b000000",
+    "cost": 68,
+    "category": "unswept",
+    "demand": {
+     "c1": 0,
+     "c2": 2,
+     "c4": 0
+    },
+    "parents": [
+     "00000000000000003800000009000000",
+     "0000000000000000380000000a000000"
+    ],
+    "receipt": {
+     "root": "00000000040080801202000000100000",
+     "verdict": "WIN7-D10"
+    }
+   }
+  ]
+ },
+ "parent_closure": {
+  "fully_closed_parent_count": 0,
+  "affected_unique_parents": 2
+ },
+ "frontier_after": {
+  "solved_s6_in_manifest": 1625,
+  "remaining_s5_orbits": 173,
+  "unique_remaining_s6": 6223,
+  "sum_remaining_cost": 492762,
+  "s6_needed_by_open_classes": 4518,
+  "cost_needed_by_open_classes": 358263,
+  "parent_row_incidence": 11850
+ },
+ "five_parent_residual_cover_after": {
+  "rows": 86,
+  "closed_target_rows_total": 26,
+  "seventh_target_rows": [
+   "0000000000000000380000000b000000"
+  ],
+  "remaining_book": "post-sweep35 re-solve recorded separately (resolve3): all 28 other covering candidates are REFUTED-D10, so the residual 86 rows are stranded within the 117-root pool at depth 10."
+ },
+ "controls": {
+  "base_state_reexecuted_all_gates_pass": true,
+  "receipt_rows_rederived_from_all_8_d4_images": true,
+  "receipt_target_rows_match_resolve2_witness_join": true,
+  "receipt_rows_were_open_before_fold": true,
+  "receipts_disjoint_from_first_six": true,
+  "certificates_sha256_verified": true,
+  "dual_independent_verification_gates_pass": true,
+  "win_probe_both_orderings_uncapped": true,
+  "legal_move_list_independently_rederived": true,
+  "win_loss_conflicts": 0,
+  "frontier_after_6223_rows": true,
+  "solved_s6_1625": true,
+  "target_26_of_112": true
+ },
+ "interpretation_guard": [
+  "WIN7-D10 proves a first-player win within depth 10 only from the individual seven-stone root of this receipt.",
+  "This fold closes S6 rows in the frontier; it does not prove a win from the empty board or any two-stone root.",
+  "REFUTED-D10 is NOT a LOSS proof.",
+  "The standard 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, and classes 1/2/4 remain UNKNOWN."
+ ]
+}

@@ -1,0 +1,29 @@
+{
+  "archived_source_commit": "1001d051ab23e0c5130c42260bb4249fbd73a15d",
+  "dispatch_main_commit": "d0ed156ca6a7c6c596d08da518d5c32b911ae8ba",
+  "raw_sources": [
+    {
+      "artifact_path": "research/experiments/n11-boundary-recovery-20261006/output/post-2199bcc-s6-10449477035406395392-16777216-probe15m-raw.csv",
+      "key": [
+        10449477035406395392,
+        16777216
+      ],
+      "nodes": 2607291,
+      "replay_rows": 1,
+      "sha256": "3a37a2a55ce2988c005457af4c9a3edcd4ee591026a2e77547ba0c89dcdeb87d",
+      "verdict": 1
+    }
+  ],
+  "schema": "n11-dual-tight-s6-descent-source-manifest-v1",
+  "source_audit": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-2199bcc-s6-10449477035406395392-16777216-probe15m-audit.json",
+    "sha256": "2e0fc30d89229e42a7790b0dc49ed2822d79da40750e12753119cebcc90d1684"
+  },
+  "source_replay_rows": 1,
+  "target_artifact": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-2199bcc-s6-10449477035406395392-16777216-probe15m-target.csv",
+    "rows": 1,
+    "sha256": "406ba01137ce6417d113acdfa67e105c4392b43f19034987e96787d522e6fbf6"
+  },
+  "unknowns_propagated": false
+}

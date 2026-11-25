@@ -1,0 +1,799 @@
+{
+  "n4": {
+    "n": 4,
+    "base": {
+      "g0": 0,
+      "winner": "Second",
+      "pos": 5811
+    },
+    "B251_flips": [],
+    "B251_g0_hist": {
+      "0": 194
+    },
+    "B253_pair_flips": [],
+    "B253_pairs_tested": 960,
+    "B259_nested": {
+      "circles_then_collinear": [
+        {
+          "after": 1,
+          "from": "Second",
+          "to": "First",
+          "g0": 1
+        },
+        {
+          "after": 10,
+          "from": "First",
+          "to": "Second",
+          "g0": 0
+        },
+        {
+          "after": 11,
+          "from": "Second",
+          "to": "First",
+          "g0": 1
+        },
+        {
+          "after": 24,
+          "from": "First",
+          "to": "Second",
+          "g0": 0
+        },
+        {
+          "after": 26,
+          "from": "Second",
+          "to": "First",
+          "g0": 1
+        },
+        {
+          "after": 36,
+          "from": "First",
+          "to": "Second",
+          "g0": 0
+        },
+        {
+          "after": 54,
+          "from": "Second",
+          "to": "First",
+          "g0": 5
+        },
+        {
+          "after": 55,
+          "from": "First",
+          "to": "Second",
+          "g0": 0
+        },
+        {
+          "after": 56,
+          "from": "Second",
+          "to": "First",
+          "g0": 6
+        },
+        {
+          "after": 57,
+          "from": "First",
+          "to": "Second",
+          "g0": 0
+        },
+        {
+          "after": 75,
+          "from": "Second",
+          "to": "First",
+          "g0": 2
+        },
+        {
+          "after": 76,
+          "from": "First",
+          "to": "Second",
+          "g0": 0
+        },
+        {
+          "after": 77,
+          "from": "Second",
+          "to": "First",
+          "g0": 2
+        },
+        {
+          "after": 80,
+          "from": "First",
+          "to": "Second",
+          "g0": 0
+        },
+        {
+          "after": 84,
+          "from": "Second",
+          "to": "First",
+          "g0": 3
+        },
+        {
+          "after": 93,
+          "from": "First",
+          "to": "Second",
+          "g0": 0
+        },
+        {
+          "after": 98,
+          "from": "Second",
+          "to": "First",
+          "g0": 3
+        },
+        {
+          "after": 119,
+          "from": "First",
+          "to": "Second",
+          "g0": 0
+        },
+        {
+          "after": 123,
+          "from": "Second",
+          "to": "First",
+          "g0": 3
+        },
+        {
+          "after": 125,
+          "from": "First",
+          "to": "Second",
+          "g0": 0
+        },
+        {
+          "after": 131,
+          "from": "Second",
+          "to": "First",
+          "g0": 3
+        },
+        {
+          "after": 149,
+          "from": "First",
+          "to": "Second",
+          "g0": 0
+        },
+        {
+          "after": 156,
+          "from": "Second",
+          "to": "First",
+          "g0": 3
+        },
+        {
+          "after": 157,
+          "from": "First",
+          "to": "Second",
+          "g0": 0
+        },
+        {
+          "after": 164,
+          "from": "Second",
+          "to": "First",
+          "g0": 3
+        },
+        {
+          "after": 175,
+          "from": "First",
+          "to": "Second",
+          "g0": 0
+        }
+      ],
+      "collinear_then_circles": [
+        {
+          "after": 1,
+          "from": "Second",
+          "to": "First",
+          "g0": 1
+        },
+        {
+          "after": 2,
+          "from": "First",
+          "to": "Second",
+          "g0": 0
+        },
+        {
+          "after": 3,
+          "from": "Second",
+          "to": "First",
+          "g0": 1
+        },
+        {
+          "after": 7,
+          "from": "First",
+          "to": "Second",
+          "g0": 0
+        },
+        {
+          "after": 12,
+          "from": "Second",
+          "to": "First",
+          "g0": 2
+        },
+        {
+          "after": 53,
+          "from": "First",
+          "to": "Second",
+          "g0": 0
+        },
+        {
+          "after": 56,
+          "from": "Second",
+          "to": "First",
+          "g0": 4
+        },
+        {
+          "after": 61,
+          "from": "First",
+          "to": "Second",
+          "g0": 0
+        },
+        {
+          "after": 62,
+          "from": "Second",
+          "to": "First",
+          "g0": 4
+        },
+        {
+          "after": 64,
+          "from": "First",
+          "to": "Second",
+          "g0": 0
+        },
+        {
+          "after": 73,
+          "from": "Second",
+          "to": "First",
+          "g0": 1
+        },
+        {
+          "after": 77,
+          "from": "First",
+          "to": "Second",
+          "g0": 0
+        },
+        {
+          "after": 79,
+          "from": "Second",
+          "to": "First",
+          "g0": 1
+        },
+        {
+          "after": 88,
+          "from": "First",
+          "to": "Second",
+          "g0": 0
+        },
+        {
+          "after": 89,
+          "from": "Second",
+          "to": "First",
+          "g0": 3
+        },
+        {
+          "after": 90,
+          "from": "First",
+          "to": "Second",
+          "g0": 0
+        },
+        {
+          "after": 94,
+          "from": "Second",
+          "to": "First",
+          "g0": 2
+        },
+        {
+          "after": 97,
+          "from": "First",
+          "to": "Second",
+          "g0": 0
+        },
+        {
+          "after": 114,
+          "from": "Second",
+          "to": "First",
+          "g0": 7
+        },
+        {
+          "after": 117,
+          "from": "First",
+          "to": "Second",
+          "g0": 0
+        },
+        {
+          "after": 121,
+          "from": "Second",
+          "to": "First",
+          "g0": 2
+        },
+        {
+          "after": 158,
+          "from": "First",
+          "to": "Second",
+          "g0": 0
+        },
+        {
+          "after": 168,
+          "from": "Second",
+          "to": "First",
+          "g0": 2
+        },
+        {
+          "after": 186,
+          "from": "First",
+          "to": "Second",
+          "g0": 0
+        }
+      ],
+      "random": [
+        {
+          "after": 1,
+          "from": "Second",
+          "to": "First",
+          "g0": 1
+        },
+        {
+          "after": 3,
+          "from": "First",
+          "to": "Second",
+          "g0": 0
+        },
+        {
+          "after": 5,
+          "from": "Second",
+          "to": "First",
+          "g0": 2
+        },
+        {
+          "after": 8,
+          "from": "First",
+          "to": "Second",
+          "g0": 0
+        },
+        {
+          "after": 10,
+          "from": "Second",
+          "to": "First",
+          "g0": 2
+        },
+        {
+          "after": 16,
+          "from": "First",
+          "to": "Second",
+          "g0": 0
+        },
+        {
+          "after": 17,
+          "from": "Second",
+          "to": "First",
+          "g0": 5
+        },
+        {
+          "after": 27,
+          "from": "First",
+          "to": "Second",
+          "g0": 0
+        },
+        {
+          "after": 28,
+          "from": "Second",
+          "to": "First",
+          "g0": 6
+        },
+        {
+          "after": 29,
+          "from": "First",
+          "to": "Second",
+          "g0": 0
+        },
+        {
+          "after": 31,
+          "from": "Second",
+          "to": "First",
+          "g0": 2
+        },
+        {
+          "after": 65,
+          "from": "First",
+          "to": "Second",
+          "g0": 0
+        },
+        {
+          "after": 67,
+          "from": "Second",
+          "to": "First",
+          "g0": 3
+        },
+        {
+          "after": 80,
+          "from": "First",
+          "to": "Second",
+          "g0": 0
+        },
+        {
+          "after": 86,
+          "from": "Second",
+          "to": "First",
+          "g0": 2
+        },
+        {
+          "after": 92,
+          "from": "First",
+          "to": "Second",
+          "g0": 0
+        },
+        {
+          "after": 93,
+          "from": "Second",
+          "to": "First",
+          "g0": 2
+        },
+        {
+          "after": 172,
+          "from": "First",
+          "to": "Second",
+          "g0": 0
+        }
+      ],
+      "wide_first": [
+        {
+          "after": 1,
+          "from": "Second",
+          "to": "First",
+          "g0": 1
+        },
+        {
+          "after": 2,
+          "from": "First",
+          "to": "Second",
+          "g0": 0
+        },
+        {
+          "after": 3,
+          "from": "Second",
+          "to": "First",
+          "g0": 3
+        },
+        {
+          "after": 4,
+          "from": "First",
+          "to": "Second",
+          "g0": 0
+        },
+        {
+          "after": 6,
+          "from": "Second",
+          "to": "First",
+          "g0": 2
+        },
+        {
+          "after": 8,
+          "from": "First",
+          "to": "Second",
+          "g0": 0
+        },
+        {
+          "after": 11,
+          "from": "Second",
+          "to": "First",
+          "g0": 3
+        },
+        {
+          "after": 13,
+          "from": "First",
+          "to": "Second",
+          "g0": 0
+        },
+        {
+          "after": 16,
+          "from": "Second",
+          "to": "First",
+          "g0": 2
+        },
+        {
+          "after": 19,
+          "from": "First",
+          "to": "Second",
+          "g0": 0
+        },
+        {
+          "after": 31,
+          "from": "Second",
+          "to": "First",
+          "g0": 1
+        },
+        {
+          "after": 86,
+          "from": "First",
+          "to": "Second",
+          "g0": 0
+        },
+        {
+          "after": 89,
+          "from": "Second",
+          "to": "First",
+          "g0": 6
+        },
+        {
+          "after": 92,
+          "from": "First",
+          "to": "Second",
+          "g0": 0
+        },
+        {
+          "after": 125,
+          "from": "Second",
+          "to": "First",
+          "g0": 2
+        },
+        {
+          "after": 162,
+          "from": "First",
+          "to": "Second",
+          "g0": 0
+        },
+        {
+          "after": 163,
+          "from": "Second",
+          "to": "First",
+          "g0": 3
+        },
+        {
+          "after": 187,
+          "from": "First",
+          "to": "Second",
+          "g0": 0
+        }
+      ],
+      "narrow_first": [
+        {
+          "after": 1,
+          "from": "Second",
+          "to": "First",
+          "g0": 1
+        },
+        {
+          "after": 3,
+          "from": "First",
+          "to": "Second",
+          "g0": 0
+        },
+        {
+          "after": 4,
+          "from": "Second",
+          "to": "First",
+          "g0": 4
+        },
+        {
+          "after": 5,
+          "from": "First",
+          "to": "Second",
+          "g0": 0
+        },
+        {
+          "after": 7,
+          "from": "Second",
+          "to": "First",
+          "g0": 5
+        },
+        {
+          "after": 8,
+          "from": "First",
+          "to": "Second",
+          "g0": 0
+        },
+        {
+          "after": 10,
+          "from": "Second",
+          "to": "First",
+          "g0": 2
+        },
+        {
+          "after": 23,
+          "from": "First",
+          "to": "Second",
+          "g0": 0
+        },
+        {
+          "after": 33,
+          "from": "Second",
+          "to": "First",
+          "g0": 1
+        },
+        {
+          "after": 56,
+          "from": "First",
+          "to": "Second",
+          "g0": 0
+        },
+        {
+          "after": 62,
+          "from": "Second",
+          "to": "First",
+          "g0": 5
+        },
+        {
+          "after": 153,
+          "from": "First",
+          "to": "Second",
+          "g0": 0
+        }
+      ]
+    }
+  },
+  "n5_sample": {
+    "n": 5,
+    "base": {
+      "g0": 1,
+      "winner": "First",
+      "pos": 151394
+    },
+    "B251_targeted": [
+      {
+        "removed": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "result": {
+          "g0": 1,
+          "winner": "First",
+          "pos": 151644
+        }
+      },
+      {
+        "removed": [
+          0,
+          1,
+          2,
+          4
+        ],
+        "result": {
+          "g0": 1,
+          "winner": "First",
+          "pos": 151716
+        }
+      },
+      {
+        "removed": [
+          4,
+          9,
+          19,
+          24
+        ],
+        "result": {
+          "g0": 1,
+          "winner": "First",
+          "pos": 151728
+        }
+      },
+      {
+        "removed": [
+          4,
+          12,
+          16,
+          20
+        ],
+        "result": {
+          "g0": 1,
+          "winner": "First",
+          "pos": 151763
+        }
+      },
+      {
+        "removed": [
+          0,
+          1,
+          5,
+          6
+        ],
+        "result": {
+          "g0": 1,
+          "winner": "First",
+          "pos": 151750
+        }
+      },
+      {
+        "removed": [
+          0,
+          1,
+          7,
+          12
+        ],
+        "result": {
+          "g0": 1,
+          "winner": "First",
+          "pos": 151893
+        }
+      },
+      {
+        "removed": [
+          17,
+          19,
+          22,
+          24
+        ],
+        "result": {
+          "g0": 1,
+          "winner": "First",
+          "pos": 151977
+        }
+      },
+      {
+        "removed": [
+          18,
+          19,
+          23,
+          24
+        ],
+        "result": {
+          "g0": 1,
+          "winner": "First",
+          "pos": 151750
+        }
+      }
+    ],
+    "B252_clustered4": {
+      "removed": [
+        [
+          0,
+          1,
+          2,
+          3
+        ],
+        [
+          0,
+          1,
+          2,
+          4
+        ],
+        [
+          0,
+          1,
+          3,
+          4
+        ],
+        [
+          0,
+          2,
+          3,
+          4
+        ]
+      ],
+      "result": {
+        "g0": 1,
+        "winner": "First",
+        "pos": 152622
+      }
+    },
+    "B252_scattered4": {
+      "removed": [
+        [
+          3,
+          9,
+          15,
+          19
+        ],
+        [
+          0,
+          8,
+          20,
+          22
+        ],
+        [
+          1,
+          10,
+          16,
+          17
+        ],
+        [
+          5,
+          6,
+          13,
+          24
+        ]
+      ],
+      "result": {
+        "g0": 1,
+        "winner": "First",
+        "pos": 152750
+      }
+    },
+    "circles_only_base": {
+      "note": "see batch10_variants.json"
+    }
+  }
+}

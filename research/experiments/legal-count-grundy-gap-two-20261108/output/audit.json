@@ -1,0 +1,106 @@
+{
+  "audit": "PASS",
+  "rank_unrestricted_base": [
+    {
+      "legal_points": 1,
+      "clutters": 1,
+      "histogram": {
+        "1": 1
+      },
+      "maximum": 1
+    },
+    {
+      "legal_points": 2,
+      "clutters": 2,
+      "histogram": {
+        "0": 1,
+        "1": 1
+      },
+      "maximum": 1
+    },
+    {
+      "legal_points": 3,
+      "clutters": 9,
+      "histogram": {
+        "0": 4,
+        "1": 2,
+        "2": 3
+      },
+      "maximum": 2
+    },
+    {
+      "legal_points": 4,
+      "clutters": 114,
+      "histogram": {
+        "0": 46,
+        "1": 22,
+        "2": 22,
+        "3": 24
+      },
+      "maximum": 3
+    },
+    {
+      "legal_points": 5,
+      "clutters": 6894,
+      "histogram": {
+        "0": 1814,
+        "1": 2850,
+        "2": 390,
+        "3": 1840
+      },
+      "maximum": 3
+    }
+  ],
+  "independent_generators_match": true,
+  "clutters_compared": 7020,
+  "cpp_safe_states": 116416,
+  "universal_theorem": "for every finite forbidden-set placement game, legal_count >=5 implies g<=legal_count-2",
+  "sharp_at_six_and_seven": {
+    "six_value_four": [
+      [
+        0,
+        1,
+        5
+      ],
+      [
+        0,
+        2,
+        5
+      ],
+      [
+        0,
+        3,
+        4
+      ],
+      [
+        0,
+        3,
+        5
+      ],
+      [
+        0,
+        4,
+        5
+      ],
+      [
+        1,
+        2,
+        3
+      ],
+      [
+        1,
+        2,
+        4
+      ]
+    ],
+    "seven_value_five": [
+      35,
+      37,
+      25,
+      41,
+      49,
+      14,
+      22
+    ]
+  }
+}

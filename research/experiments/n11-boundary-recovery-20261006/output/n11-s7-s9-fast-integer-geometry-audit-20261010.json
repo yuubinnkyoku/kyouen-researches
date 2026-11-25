@@ -1,0 +1,26 @@
+{
+  "schema": "n11-s7-s9-fast-integer-geometry-audit-v1",
+  "source_main": "ad4d02827c7e6de4c9a7e1667e274159e61ebe86",
+  "source_sha256": "8bf4707d04a31e9b3b74ce8a155d92783c906e938349b90cbe309a2fb9df9490",
+  "geometry": "integer 3x3 cofactors cached as 121-bit forbidden masks; no floating point",
+  "cross_checks": {
+    "s6_parents": 6,
+    "s7_candidates_all": 512,
+    "s8_candidates_sampled": 200,
+    "s7_mismatches": 0,
+    "s8_mismatches": 0
+  },
+  "verification": {
+    "bounded_s7_schedules": 9,
+    "alternative_duals_checked": 8,
+    "case_3_s9_candidates": 6076,
+    "case_3_certified_s10_lower_bound": 3735
+  },
+  "timings_seconds": {
+    "reference_one_case_3": 23.86,
+    "fast_one_case_3": 3.67,
+    "fast_all_eight_cases": 8.42,
+    "standalone_full_with_exhaustive_s7_crosscheck": 26.76
+  },
+  "scope": "conditional scheduling only; 11x11 two-stone root and empty board UNKNOWN"
+}

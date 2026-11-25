@@ -1,0 +1,69 @@
+{
+  "boundary_scope": "supplied targets only",
+  "budget": 15000000,
+  "cache_sources": [
+    {
+      "loss": 4290,
+      "nodes": 0,
+      "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-next15-expanded-s5.cache",
+      "rows": 4385,
+      "sha256": "8a199081c83868ef931f6ef2e9a8b3d02ce2988b86893984abc6d5d3843f4b59",
+      "win": 95
+    }
+  ],
+  "class_status": "WIN",
+  "existing_cache_exact": 0,
+  "existing_exact": 0,
+  "existing_output_exact": 0,
+  "new_exact": 3,
+  "new_exact_cache": ".local\\n11\\next16-model8-run\\cache-out\\new-exact-s5.cache",
+  "new_loss": 1,
+  "new_win": 2,
+  "nodes_existing": 0,
+  "nodes_new": 43173440,
+  "nodes_total": 43173440,
+  "not_dispatched": [
+    [
+      1152922879130599424,
+      64
+    ],
+    [
+      3458764788832665600,
+      64
+    ],
+    [
+      14987979559956119552,
+      64
+    ],
+    [
+      1586393243619164160,
+      0
+    ]
+  ],
+  "scheduled": 4,
+  "targets": 8,
+  "unknown": 1,
+  "unresolved": [
+    [
+      1152922879130599424,
+      64
+    ],
+    [
+      1586393243619164160,
+      0
+    ],
+    [
+      1586533706229612544,
+      0
+    ],
+    [
+      3458764788832665600,
+      64
+    ],
+    [
+      14987979559956119552,
+      64
+    ]
+  ],
+  "workers": 4
+}

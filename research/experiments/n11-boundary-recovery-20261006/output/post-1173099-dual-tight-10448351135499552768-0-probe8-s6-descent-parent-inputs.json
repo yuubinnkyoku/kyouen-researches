@@ -1,0 +1,66 @@
+{
+  "class_key": [
+    10448351135499552768,
+    0
+  ],
+  "current_exact_cache": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-1173099-dual-tight-10448351135499552768-0-probe8-merged-s5.cache",
+    "sha256": "4f92a870817736d8237476d9eff769afcdc6a2f2984dca40011218ebbf83160b"
+  },
+  "interpretation": "Only the four exact solver UNKNOWN outcomes from this completed probe are sent to S6 boundary audit. Exact LOSS rows are already merged into cache; no verdict is inferred from UNKNOWN.",
+  "probe_summary": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-1173099-dual-tight-10448351135499552768-0-probe8-summary.json",
+    "sha256": "fa9920f828bee90237bd8c165fa35b96086b57b97a467be0aaf74152edab5a1b"
+  },
+  "schema": "n11-reply27-probe8-unknown-s6-parent-inputs-v1",
+  "source_class_boundary": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-1173099-dual-tight-10448351135499552768-0-probe8-class-boundary-audit.json",
+    "sha256": "0dbe8180aae88305b70a0f6ac5555bbbad61cfc1480d18f90d4dcc84695f8e1c"
+  },
+  "source_probe_raw": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-1173099-dual-tight-10448351135499552768-0-probe8-raw-all.csv",
+    "sha256": "30647440975a030770ed9919061f98f854e26a78d32efe46efef1c2daf0a9748"
+  },
+  "source_unknown_targets": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-1173099-dual-tight-10448351135499552768-0-probe8-unknown-s5-targets.csv",
+    "sha256": "af18698a7218bf363f1811e65a00f71e052e3e93aaddee782c37d2f830c00bf6"
+  },
+  "unknown_parents": [
+    {
+      "bytes": 162,
+      "key": [
+        1152956688979001856,
+        536870912
+      ],
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-1173099-dual-tight-10448351135499552768-0-probe8-unknown-parent-1152956688979001856-536870912.csv",
+      "sha256": "80cee1519f33b2370f4d8a968d9c40d93887932d66d6fa7fbc6367b409a07ece"
+    },
+    {
+      "bytes": 155,
+      "key": [
+        10448351135499585536,
+        0
+      ],
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-1173099-dual-tight-10448351135499552768-0-probe8-unknown-parent-10448351135499585536-0.csv",
+      "sha256": "d2cec112362de0925e04ee170a0e74b374667768eafeb64fa7ac767cdae4bdf4"
+    },
+    {
+      "bytes": 155,
+      "key": [
+        10448351135633770496,
+        0
+      ],
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-1173099-dual-tight-10448351135499552768-0-probe8-unknown-parent-10448351135633770496-0.csv",
+      "sha256": "ab6fe27d89cd3805d918d7b2364cff9551cac3658ce5b009101852357d93cd18"
+    },
+    {
+      "bytes": 155,
+      "key": [
+        10449477035406395392,
+        0
+      ],
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-1173099-dual-tight-10448351135499552768-0-probe8-unknown-parent-10449477035406395392-0.csv",
+      "sha256": "e10c9cc1bb6d4435295518de334251e8e3187c2aacf115c04084af28e587bb47"
+    }
+  ]
+}

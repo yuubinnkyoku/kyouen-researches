@@ -1,0 +1,106 @@
+{
+  "generated": "2026-11-13",
+  "claim": {
+    "jointAccountingValidWMax": 114,
+    "singleLawValidWMax": 84,
+    "lawReduction": "p-chain: LAWS(33) redundant to MODS(34 coprime maximal prime powers); single-law classMax min identical (control cm49 == cm343 = 16,16,17 at g3 s=27..29)",
+    "g3WallResolution": "K0797 wall (class size 29, w=85..87) is an artifact of single-law analysis: joint {19,23} certificate kills it (independent brute-force max=16); sizes 29..38 (w=85..114) all extinct jointly",
+    "g3OpenSizes": [39, 40, 41, 42, 43, 44],
+    "g3OpenWidths": [115, 132],
+    "openNote": "g3 sizes 39..44 open within DFS budgets (s39,40: 120M nodes; s41..44: 25M nodes; maxDepth 6 reached). All other g0 forms single-law valid through w=132.",
+    "semantics": "This extends the convention-B non-standard-form premise of the level-17-extinction => P(w)<=32 argument only. It does NOT determine any P(w). Moreover K0785 (P(83)>=34) makes level-17 extinction false for w>=83, so the practical P(w) relevance ends at w=82; the value of this result is methodological (frontier of congruence certificates, law-list redundancy, correction of K0797's non-congruence-methods-needed claim).",
+    "provenance": "output assembled from per-form sandbox runs of scripts/joint_g0_accounting.ts (CFG.forms per run, 16MiB sandbox limit; chunked-campaign convention)"
+  },
+  "controls": {
+    "cm49_s272829": [16, 16, 17],
+    "cm343_s272829": [16, 16, 17],
+    "witness31_01_s29": 17,
+    "k0797_repro": "g3 single-law min: s27=16, s28=16, s29=17@31 (K0797 values reproduced over MODS; best modulus for s27/28 is 343 == 49 by p-chain)",
+    "bruteForce_s29_19_23": {
+      "pairs": 190969,
+      "method": "all (a,u) mod 19*23=437, direct per-row QR evaluation, no bitmasks",
+      "maxJoint": 16,
+      "at": [0, 77],
+      "conclusion": "no (a,u) has >=17 rows of 0..28 passing both 19 and 23 => certificate {19,23} for g3 size 29"
+    },
+    "bfs_cross_check": "s=30..38 all extinct under BFS (different traversal, cap 250k) with extinction occurring right after modulus 31, matching DFS certificate {19,23,29,31}"
+  },
+  "singleLawOverMods": {
+    "g3": {
+      "s27": { "singleMin": 16, "minM": 343 },
+      "s28": { "singleMin": 16, "minM": 343 },
+      "s29": { "singleMin": 17, "minM": 31 },
+      "s30": { "singleMin": 17, "minM": 31 },
+      "s31": { "singleMin": 17, "minM": 31 },
+      "s32": { "singleMin": 18, "minM": 31 },
+      "s33": { "singleMin": 18, "minM": 121 },
+      "s34": { "singleMin": 19, "minM": 121 },
+      "s35": { "singleMin": 20, "minM": 121 },
+      "s36": { "singleMin": 21, "minM": 121 },
+      "s37": { "singleMin": 22, "minM": 19 },
+      "s38": { "singleMin": 22, "minM": 19 },
+      "s39": { "singleMin": 23, "minM": 19 },
+      "s40": { "singleMin": 23, "minM": 43 },
+      "s41": { "singleMin": 23, "minM": 43 },
+      "s42": { "singleMin": 23, "minM": 43 },
+      "s43": { "singleMin": 23, "minM": 43 },
+      "s44": { "singleMin": 24, "minM": 43 }
+    },
+    "g2": {
+      "note": "sizes 43..66 all single-law valid via modulus 128 (u odd); classMax 10 (s43..48), 11 (s49..56), 12 (s57..64), 13 (s65), 14 (s66)"
+    },
+    "g4": {
+      "note": "sizes 22..33 all single-law valid via modulus 128 (u odd); classMax 6..8"
+    },
+    "g5": {
+      "note": "sizes 17..27 all single-law valid; classMax 11..16 (minM 19/121/23/343)"
+    },
+    "g6": {
+      "note": "sizes 17..22 all single-law valid via modulus 128 (u odd); classMax 5..6"
+    },
+    "g7": {
+      "note": "sizes 17..19 all single-law valid via modulus 19; classMax 11"
+    },
+    "g8": {
+      "note": "size 17 single-law valid via modulus 128 (u odd); classMax 5"
+    }
+  },
+  "joint": {
+    "g3": {
+      "s29": { "extinct": true, "nodes": 17550, "maxDepth": 1, "certificate": [19, 23], "widths": [85, 87] },
+      "s30": { "extinct": true, "nodes": 65776, "maxDepth": 3, "certificate": [19, 23, 29, 31], "widths": [88, 90] },
+      "s31": { "extinct": true, "nodes": 209275, "maxDepth": 3, "certificate": [19, 23, 29, 31], "widths": [91, 93] },
+      "s32": { "extinct": true, "nodes": 432794, "maxDepth": 3, "certificate": [19, 23, 29, 31], "widths": [94, 96] },
+      "s33": { "extinct": true, "nodes": 886980, "maxDepth": 3, "certificate": [19, 23, 29, 31], "widths": [97, 99] },
+      "s34": { "extinct": true, "nodes": 1435150, "maxDepth": 3, "certificate": [19, 23, 29, 31], "widths": [100, 102] },
+      "s35": { "extinct": true, "nodes": 2409908, "maxDepth": 3, "certificate": [19, 23, 29, 31], "widths": [103, 105] },
+      "s36": { "extinct": true, "nodes": 4064750, "maxDepth": 3, "certificate": [19, 23, 29, 31], "widths": [106, 108] },
+      "s37": { "extinct": true, "nodes": 6357468, "maxDepth": 3, "certificate": [19, 23, 29, 31], "widths": [109, 111] },
+      "s38": { "extinct": true, "nodes": 10031034, "maxDepth": 3, "certificate": [19, 23, 29, 31], "widths": [112, 114] },
+      "s39": { "extinct": null, "budgetHit": true, "budget": 120000000, "nodes": 120000007, "maxDepth": 6, "status": "open-within-budget", "widths": [115, 117] },
+      "s40": { "extinct": null, "budgetHit": true, "budget": 120000000, "nodes": 120000007, "maxDepth": 6, "status": "open-within-budget", "widths": [118, 120] },
+      "s41": { "extinct": null, "budgetHit": true, "budget": 25000000, "nodes": 25000007, "maxDepth": 6, "status": "open-within-budget", "widths": [121, 123] },
+      "s42": { "extinct": null, "budgetHit": true, "budget": 25000000, "nodes": 25000007, "maxDepth": 6, "status": "open-within-budget", "widths": [124, 126] },
+      "s43": { "extinct": null, "budgetHit": true, "budget": 25000000, "nodes": 25000007, "maxDepth": 6, "status": "open-within-budget", "widths": [127, 129] },
+      "s44": { "extinct": null, "budgetHit": true, "budget": 25000000, "nodes": 25000007, "maxDepth": 6, "status": "open-within-budget", "widths": [130, 132] }
+    }
+  },
+  "bfsCrossCheck": {
+    "s30": { "extinct": true, "capped": false, "survivors": 0, "lastM": 31 },
+    "s31": { "extinct": true, "capped": false, "survivors": 0, "lastM": 31 },
+    "s32": { "extinct": true, "capped": false, "survivors": 0, "lastM": 31 },
+    "s33": { "extinct": true, "capped": false, "survivors": 0, "lastM": 31 },
+    "s34": { "extinct": true, "capped": false, "survivors": 0, "lastM": 31 },
+    "s35": { "extinct": true, "capped": false, "survivors": 0, "lastM": 31 },
+    "s36": { "extinct": true, "capped": false, "survivors": 0, "lastM": 31 },
+    "s37": { "extinct": true, "capped": false, "survivors": 0, "lastM": 31 },
+    "s38": { "extinct": true, "capped": false, "survivors": 0, "lastM": 31 }
+  },
+  "modsList": [19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101, 103, 107, 109, 113, 127, 131, 137, 139, 121, 125, 128, 169, 243, 289, 343],
+  "notes": [
+    "joint semantics: a 17-row non-standard-form candidate requires the SAME rows t to pass ALL moduli under one fixed integer (a,u); the correct quantity is |intersect_m Pass_m(a,u)|, not min_m count_m (per-law pass sets differ). Single-law classMax < 17 (K0797) is the special case of a one-modulus certificate.",
+    "p-chain lemma: v in QR(p^k) implies v in QR(p^j) for j<k, so the 33-law list reduces losslessly to 34 coprime maximal prime powers; K0797's laws 5,7,8,9,11,13,16,17,25,27,32,49,64,81 are redundant given 125,343,128,243,121,169,289.",
+    "(a,u)=(0,0) passes all rows of every 1-mod-4 prime modulus (since -36 = -(6t)^2/t^2 pattern and -1 in QR); joint extinction is therefore driven by the 3-mod-4 moduli {19,23,29,31,...} and 7,3,11,13,17,2-power composites.",
+    "false-kill guard: K0797's own failure witness (a,u)=(0,1) mod 31 with 17 surviving rows at s=29 was reproduced (17), confirming the single-law analysis was measuring real survival, and the joint certificate kills it under law 23."
+  ]
+}

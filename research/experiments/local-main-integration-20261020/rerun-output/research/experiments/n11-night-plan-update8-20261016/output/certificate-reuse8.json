@@ -1,0 +1,94 @@
+{
+  "additional_s5_verdicts": {
+    "loss": 1,
+    "rows": [
+      {
+        "graph_index": null,
+        "in_known_registry": false,
+        "in_plan_union": false,
+        "mask": "00000000040004000004000004010000"
+      }
+    ],
+    "win": 0
+  },
+  "certificate_sha256": {
+    "s6": "cb2e73c277c6fd526689db64b1d8c07ebd1ca1bd8c2a966e0757d22c4471ebf6",
+    "s7": "2e085d68edd02a68233bc226ea9b8aae4dd389695086aa17586dbe0d4d1e5df5",
+    "s8_loss_three": "395a9e94b1813a9e6e38a508fc2ba427eeb3da18816439494a20037f9cc43838",
+    "s8_win_16": "1f2e5ce2416fa50559d7d97f34455542c8a11385c3f7184a9d3eea3eb7b49b7c",
+    "s8_win_171": "e4df1151dc591753855145e9b9909e53ee618a5086d9adb8c88ac8c624e54171"
+  },
+  "derived": {
+    "new_s7_loss_from_three": [
+      "00000000000000141101040010000000",
+      "00000000000020001000044480010000",
+      "00000000000041011050000001000000",
+      "00000000000100001000044480010000",
+      "000000000001000150000000000c4000",
+      "00000000001040000000044400810000",
+      "00000000001040001000040400810000",
+      "00000000001040001000044000810000",
+      "00000000001040001000044400800000",
+      "00000000004020000000044480010000",
+      "00000000004020001000004480010000",
+      "00000000004020001000040480010000",
+      "00000000004020001000044080010000",
+      "00000000004020001000044400010000",
+      "00000000004020001000044480000000",
+      "00000000040010011004000404000000",
+      "00000000040014001004000404000000",
+      "00000000040014010004000404000000",
+      "00000000040014011000000404000000"
+    ],
+    "new_s7_loss_from_three_count": 19,
+    "rounds": 1,
+    "s5_loss_parents_of_s6_root": [
+      "00000000000000101001000010010000",
+      "00000000000000401100400040000000",
+      "00000000040000011004000004000000",
+      "00000000040004000004000004010000",
+      "00000000040004001000000004010000",
+      "00000000040004001004000004000000"
+    ],
+    "s5_loss_total": 6,
+    "s5_win_total": 0,
+    "s6_loss_total": 1,
+    "s6_win_parents_of_s7_root": 7,
+    "s6_win_total": 103,
+    "s7_win_total": 17
+  },
+  "facts": {
+    "registry_sizes": {
+      "s7_loss": 2232,
+      "s7_win": 17,
+      "s8_loss": 294,
+      "s8_win": 13501,
+      "s9_win": 1611
+    },
+    "s6_cert_s7_loss_children": 223,
+    "s6_cert_s8_loss_witnesses": 29,
+    "s6_root": "00000000040004001004000004010000",
+    "s7_cert_s8_win_children": 35,
+    "s7_root": "00000000000400001000401108400000",
+    "s8_loss_three": [
+      "00000000001040001000044400810000",
+      "00000000004020001000044480010000",
+      "00000000040014011004000404000000"
+    ],
+    "s8_win_new_roots": 187
+  },
+  "method": "certificate structure parsed and re-checked for legality, D4 canonicity and boundary coverage; terminal recomputation remains with the original certificate verifiers (SHAs recorded); the propagation follows K0371 with explicit all-child completion tests, so no S5 WIN is inferred from a single S6 WIN",
+  "plan_effect": {
+    "new_s5_in_known_registry": 0,
+    "new_s5_in_plan_union": 0,
+    "note": "certificate-derived S5 verdicts already layered by the eighth update are in the known registry; the reverse closure adds only what is genuinely new"
+  },
+  "schema": "n11-night-certificate-reuse-update8-v1",
+  "seconds": 197.4,
+  "verification": {
+    "passed": true,
+    "s5_completion_all_children_checked": true,
+    "s6_boundary_covered": true,
+    "s7_edges_complete": true
+  }
+}

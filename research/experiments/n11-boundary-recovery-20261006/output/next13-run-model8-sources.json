@@ -1,0 +1,122 @@
+{
+  "baseline_cache_path": "research/experiments/n11-boundary-recovery-20261006/output/post-next12-expanded-s5.cache",
+  "baseline_cache_rows": 4257,
+  "baseline_cache_sha256": "a10c99e04b92da1778dab73767cd512eabc45aaeed9dafc9005aed30dc4f361a",
+  "boundary_scope": "supplied targets only",
+  "budget": 15000000,
+  "claim": "One supplied s5 target is WIN, so its enclosing s4 class is WIN. Model scores and the other results are not a full-class proof; no remaining targets were dispatched after the solver reported WIN.",
+  "class_status": "WIN",
+  "command": "uv run --locked python research/experiments/n11-boundary-recovery-20261006/scripts/complete_class_local.py --solver build/n11/dfpn.exe --targets research/experiments/n11-boundary-recovery-20261006/output/next13-model8.csv --cache research/experiments/n11-boundary-recovery-20261006/output/post-next12-expanded-s5.cache --out-dir .local/n11/next13-model8-run --workers 4 --budget 15000000",
+  "existing_cache_exact": 0,
+  "existing_exact": 0,
+  "model_metadata_path": "research/experiments/n11-boundary-recovery-20261006/output/next13-model8.json",
+  "model_metadata_sha256": "9939d2ba9011c99d4995dfa937d151ef0301b8965bc92d88e9c9a4082ecb2520",
+  "new_exact": 6,
+  "new_exact_cache_path": "research/experiments/n11-boundary-recovery-20261006/output/next13-run-model8-new-exact-s5.cache",
+  "new_exact_cache_sha256": "285c6a896e0d57c510e60b031792e8c5661d50f450b19a1a0cae6e8108933e50",
+  "new_exact_rows": [
+    {
+      "key": [
+        10376575016438333448,
+        65536
+      ],
+      "nodes": 14865477,
+      "path": "C:\\Users\\yuubi\\.codex\\worktrees\\n11-proof-boundary\\kyouen-researches\\.local\\n11\\next13-model8-run\\s5-10376575016438333448-65536.out.csv",
+      "sha256": "2963ad4d7a4ec5d637fb0a506854281ebbeb8d3c54667f5b678fecebb9aaecb9",
+      "verdict": 1
+    },
+    {
+      "key": [
+        10448632610476261384,
+        0
+      ],
+      "nodes": 4813936,
+      "path": "C:\\Users\\yuubi\\.codex\\worktrees\\n11-proof-boundary\\kyouen-researches\\.local\\n11\\next13-model8-run\\s5-10448632610476261384-0.out.csv",
+      "sha256": "29331f393c69c57ce42ed9dc5bd2f9c38bc752b7902008be6d4be685192d0901",
+      "verdict": 2
+    },
+    {
+      "key": [
+        1152921504741064704,
+        10304
+      ],
+      "nodes": 7325967,
+      "path": "C:\\Users\\yuubi\\.codex\\worktrees\\n11-proof-boundary\\kyouen-researches\\.local\\n11\\next13-model8-run\\s5-1152921504741064704-10304.out.csv",
+      "sha256": "6784a8ea552bea6cba7f723c1b745e6d4200637231fdc73e5563af4f46213c4d",
+      "verdict": 2
+    },
+    {
+      "key": [
+        1298162592589545600,
+        64
+      ],
+      "nodes": 10499933,
+      "path": "C:\\Users\\yuubi\\.codex\\worktrees\\n11-proof-boundary\\kyouen-researches\\.local\\n11\\next13-model8-run\\s5-1298162592589545600-64.out.csv",
+      "sha256": "32980afb68ec67a63f07d2de999bcb669a954133833a67357226c3c84611de2d",
+      "verdict": 1
+    },
+    {
+      "key": [
+        1298303330077900928,
+        0
+      ],
+      "nodes": 13964288,
+      "path": "C:\\Users\\yuubi\\.codex\\worktrees\\n11-proof-boundary\\kyouen-researches\\.local\\n11\\next13-model8-run\\s5-1298303330077900928-0.out.csv",
+      "sha256": "1a11f5445a3673eb52bde3780d74ae0a10aad5706c05e2c11f87c1f2a5e4322f",
+      "verdict": 1
+    },
+    {
+      "key": [
+        5909848611016933504,
+        0
+      ],
+      "nodes": 5612106,
+      "path": "C:\\Users\\yuubi\\.codex\\worktrees\\n11-proof-boundary\\kyouen-researches\\.local\\n11\\next13-model8-run\\s5-5909848611016933504-0.out.csv",
+      "sha256": "10a5a0a5ec5edb06211480de09a7cd848bb595310f8fcfaa745c241445960440",
+      "verdict": 2
+    }
+  ],
+  "new_loss": 3,
+  "new_win": 3,
+  "nodes_existing": 0,
+  "nodes_new": 57081707,
+  "nodes_total": 57081707,
+  "not_dispatched": [
+    [
+      3604005601803239552,
+      0
+    ],
+    [
+      1298162592589545600,
+      128
+    ]
+  ],
+  "raw_out_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/next13-run-model8-out.csv",
+  "raw_out_sha256": "4d770d726a06e974af810941a0ca43884cdf61c98109639c3ca87dfb3d9aa6c5",
+  "saved_s6_audit_path": "research/experiments/n11-boundary-recovery-20261006/output/next12-hard5-adaptive15m-expanded-s6-audit.json",
+  "saved_s6_audit_sha256": "f10cb5b3f3538c63c0b37a46692676844a28247fdca1c20c6aee3d08ace1bf14",
+  "saved_s6_target_audit_path": "research/experiments/n11-boundary-recovery-20261006/output/next13-saved-s6-summary.json",
+  "saved_s6_target_audit_sha256": "9dccfd1c17b92e00b83fd8d32b0558b6d314d5e26a1914ac29d3e7072be3c515",
+  "scheduled": 6,
+  "schema": "n11-next13-model8-execution-archive-v1",
+  "solver_path": "build/n11/dfpn.exe",
+  "solver_sha256": "d9a13f26f7ada3b2030e93370b6412588193624348874d463b7d60bad13ca0bf",
+  "summary_local_original_sha256": "12d8fda3da0ac9397ec40f94299d11cf7bf81a3c294e02325eeac706f9922856",
+  "summary_path": "research/experiments/n11-boundary-recovery-20261006/output/next13-run-model8-summary.json",
+  "summary_sha256": "b2df48ca1042e2f1637f5a6dd8c819c258aa74df878d2fb903779fb6bac8fb33",
+  "targets": 8,
+  "targets_path": "research/experiments/n11-boundary-recovery-20261006/output/next13-model8.csv",
+  "targets_sha256": "286569ab428117233b6c936578aed425022bb10a3e8ca0f91923a553f198627b",
+  "unknown": 0,
+  "unresolved": [
+    [
+      1298162592589545600,
+      128
+    ],
+    [
+      3604005601803239552,
+      0
+    ]
+  ],
+  "workers": 4
+}

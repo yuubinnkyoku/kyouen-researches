@@ -1,0 +1,44 @@
+{
+ "experiment": "independent verification of moment certificates",
+ "symbolic_P_coefficients": true,
+ "symbolic_P_coefficients_vector": [
+  "6*x^(1,) + -5*x^(2,) + 1*x^(3,)",
+  "-12*x^(0,) + 13*x^(1,) + -3*x^(2,)",
+  "-16*x^(0,) + 6*x^(1,)",
+  "-6*x^(0,)"
+ ],
+ "symbolic_Q_coefficients": true,
+ "symbolic_Q_coefficients_vector": [
+  "-12",
+  "12",
+  "-10",
+  "6"
+ ],
+ "coefficient_expansions_checked": 196,
+ "identity_A_symbolic": true,
+ "identity_B_symbolic": true,
+ "identity_C_symbolic": true,
+ "P_nonneg_point_checks": 20090,
+ "P_negative_outside_checks": 19502,
+ "P_s_max_s": 199,
+ "Q_nonneg_point_checks": 20256,
+ "Q_at_zero": -12,
+ "theorem_A_checks": 195,
+ "theorem_A_range": [
+  6,
+  200
+ ],
+ "theorem_B_checks": 19104,
+ "theorem_B_W_checks": 19104,
+ "theorem_B_n_le_v": 19104,
+ "theorem_B_range": "9<=q<=200, 5<=s<=q-1",
+ "theorem_C_checks": 192,
+ "theorem_C_range": [
+  9,
+  200
+ ],
+ "design_parameter_checks": 199,
+ "design_parameters_ok": true,
+ "status": "PASS",
+ "failures": []
+}

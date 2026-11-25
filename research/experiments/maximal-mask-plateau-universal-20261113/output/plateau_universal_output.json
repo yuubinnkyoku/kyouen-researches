@@ -1,0 +1,37 @@
+{
+ "generated": "2026-11-13",
+ "theoremScope": "maximal=3,300: ALL w >= 99 (universal). unique=3,630: 99 <= w < 198. L=17, 標準形掃引 harness と同一の窓マスク生成",
+ "checks": {
+  "periodicity99": true,
+  "crtAbs": true,
+  "crtMismatches": 0,
+  "c9Popcounts": [[0,18],[3,9],[5,27],[6,27]],
+  "c11Popcounts": [[1,11],[6,55],[7,55]],
+  "distinctPatterns": 3994,
+  "patternPopcountHistogram": [[0,1],[3,33],[5,297],[6,33],[18,165],[21,165],[30,1485],[35,1485],[36,165],[42,165]],
+  "gap7to17Empty": true
+ },
+ "sampledWidths": [
+  { "w": 99, "unique": 3630, "maximal": 3300 },
+  { "w": 133, "unique": 3630, "maximal": 3300 },
+  { "w": 140, "unique": 3630, "maximal": 3300 },
+  { "w": 150, "unique": 3630, "maximal": 3300 },
+  { "w": 160, "unique": 3630, "maximal": 3300 },
+  { "w": 170, "unique": 3630, "maximal": 3300 },
+  { "w": 180, "unique": 3630, "maximal": 3300 },
+  { "w": 190, "unique": 3630, "maximal": 3300 },
+  { "w": 197, "unique": 3630, "maximal": 3300 }
+ ],
+ "boundaryProbe_w296_smallPatternEnters": true,
+ "dominationCheck": {
+  "allSmallPatternsDominatedByBig": true,
+  "undominatedCount": 0,
+  "note": "非空の小パターン（|P|<=6・c9>=1）全てが点順序上位の big パターン（|P|>=18）に支配される（完全判定・例外 0）。よって k>=2 周期で小パターンがフィルタ参入しても非maximal のまま → maximal=3,300 は全 w>=99 で成立"
+ },
+ "wideWidthProbes": [
+  { "w": 296, "unique": 3663, "maximal": 3300 },
+  { "w": 396, "unique": 3960, "maximal": 3300 }
+ ],
+ "interpretation": "定理（全称）: (1) maximal=3,300 は全 w>=99（周期性+順序同型+支配補題の紙証明・機機械検査は script (a)-(d)+(g)）。(2) unique=3,630 は 99<=w<198 限定（(e) フィルタ同値）で、w>=198 では小パターン参入で増加（w=296: 3,663・w=396: 3,960）。w=396 の unique 3,960 = 3,994（相違パターン総数）- 1（空）- 33（|P|=3・4周期で |T|=12<17 不通過）と理論値が完全一致（強い相互検証）。境界プローブ（w=296 で |P|=6 の |T|=18>=17 参入）は unique 増加の実証で、maximal 不変の実証と合わせて拡張定理の両面を確認。",
+ "note": "histogram 合計 3,994 は相違パターン総数（フィルタ前）。|P|>=18 は 3,630 = unique(w∈[99,198)) と一致。"
+}

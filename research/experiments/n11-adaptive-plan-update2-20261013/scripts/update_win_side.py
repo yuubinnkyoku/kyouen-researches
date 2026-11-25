@@ -1,0 +1,327 @@
+"""WIN-side re-analysis for first move 49 after 121263 LOSS / 145001 LOSS.
+
+Flow follows n11-adaptive-plan-update-20261013/scripts/update_win_side.py (itself
+n11-proof-cost-comparison-20261012/scripts/win_side.py + win_witness_masks.py),
+but with the exact-S5 cache augmented by the six terminal-verified receipts
+(558600 LOSS, 209644 WIN, 126899 LOSS, 144095 WIN, 121263 LOSS, 145001 LOSS)
+and with the hard constraint that witness candidates stay inside the stored
+1,945-mask pool.  Cache-known keys leave that pool; no new witness may be
+invented.
+
+Two measurements are produced.
+
+Pre-optimisation damage: for every stored chosen third, each concrete fourth
+branch is reclassified with the updated cache; a branch that is still open and
+whose cache-unknown children no longer intersect the reply's stored cover
+(after removals) has lost its last stored witness.
+
+Re-optimisation: for every reply orbit all 119 thirds are re-enumerated from
+independent geometry; a third is viable iff no fourth is dead and every open
+fourth has at least one remaining stored witness; the viable third with the
+fewest stored witnesses is chosen (first-found wins ties, as in win_side.py).
+The final verification loop re-checks the chosen covers like
+win_witness_masks.py.  No solver search is involved.
+"""
+from __future__ import annotations
+
+import gzip
+import hashlib
+import json
+import sys
+import time
+from collections import Counter
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[4]
+EXP = Path(__file__).resolve().parents[1]
+COST_CMP = ROOT / "research/experiments/n11-proof-cost-comparison-20261012"
+GRAPH = ROOT / "research/experiments/n11-joint-s5-proof-planning-20261012/output/dependency-graph.json.gz"
+PREV = ROOT / "research/experiments/n11-adaptive-plan-update-20261013/output"
+
+sys.path.insert(0, str(COST_CMP / "scripts"))
+sys.path.insert(0, str(ROOT / "research/experiments/n11-independent-exact-audit-20261010/scripts"))
+sys.path.insert(0, str(ROOT / "research/experiments/n11-central-reply-frontier-20261012/scripts"))
+from independent import Board  # noqa: E402
+from analyze_central_reply_frontier import load_exact_s5_cache, sha  # noqa: E402
+from s4_win_polarity import classify_s4, verdict_of, FREE, OPEN, DEAD  # noqa: E402
+from win_side import greedy_witness_cover  # noqa: E402
+
+K0423 = ROOT / "research/experiments/n11-s5-s6-quotient-20261013/output"
+ADAPTIVE = ROOT / "research/experiments/n11-adaptive-verify-20261013/output"
+PROBE = ROOT / "research/experiments/n11-adaptive-probe-20261013/output"
+
+RECEIPTS = {
+    558600: (K0423, "pilot-558600-terminal-verification.json", "pilot-558600-terminal-dag.json.gz"),
+    209644: (K0423, "pilot-209644-terminal-verification.json", "pilot-209644-terminal-dag.json.gz"),
+    126899: (ADAPTIVE, "pilot-126899-receipt.json", "pilot-126899-terminal-dag.json.gz"),
+    144095: (ADAPTIVE, "pilot-144095-receipt.json", "pilot-144095-terminal-dag.json.gz"),
+    121263: (PROBE, "adaptive-121263-receipt.json", "adaptive-121263-terminal-dag.json.gz"),
+    145001: (PROBE, "adaptive-145001-receipt.json", "adaptive-145001-terminal-dag.json.gz"),
+}
+EXPECTED = {558600: 2, 209644: 1, 126899: 2, 144095: 1, 121263: 2, 145001: 2}
+ROUNDTRIP = (126899, 144095, 121263, 145001)
+FIRST = 49
+
+
+def key_of(mask: int) -> tuple[int, int]:
+    return mask & ((1 << 64) - 1), mask >> 64
+
+
+def main() -> None:
+    started = time.time()
+    analysis_path = COST_CMP / "output/win-side-analysis.json"
+    masks_path = COST_CMP / "output/win-witness-masks.json"
+    analysis = json.loads(analysis_path.read_text(encoding="utf-8"))
+    assert analysis["schema"] == "n11-win-side-analysis-v2"
+    stored_file = json.loads(masks_path.read_text(encoding="utf-8"))
+    assert stored_file["passed"] and not stored_file["failures"]
+    first_row = next(a for a in analysis["firsts"] if a["first"] == FIRST)
+    prev_path = PREV / "win-side-reanalysis.json"
+    prev = json.loads(prev_path.read_text(encoding="utf-8"))
+    assert prev["verification"]["passed"]
+
+    with gzip.open(GRAPH, "rt", encoding="utf-8") as stream:
+        central = json.load(stream)
+    board = Board(11)
+    cache = load_exact_s5_cache(board)
+    s5_masks: dict[int, int] = {}
+    sources = {
+        str(analysis_path.relative_to(ROOT)): sha(analysis_path),
+        str(masks_path.relative_to(ROOT)): sha(masks_path),
+        str(GRAPH.relative_to(ROOT)): sha(GRAPH),
+        str(prev_path.relative_to(ROOT)): sha(prev_path),
+    }
+    for index, (directory, receipt_name, cert_name) in RECEIPTS.items():
+        receipt_path = directory / receipt_name
+        cert_path = directory / cert_name
+        receipt = json.loads(receipt_path.read_text())
+        assert receipt["trusted_leaves"] == 0, index
+        if index in ROUNDTRIP:
+            assert receipt["pruned_roundtrip_verified"], index
+        assert sha(cert_path) == receipt["certificate_sha256"], index
+        mask = central["s5_masks"][index][0] | central["s5_masks"][index][1] << 64
+        assert str(mask) == receipt["root_mask"], index
+        assert receipt["verdict"] == EXPECTED[index], index
+        cache[key_of(mask)] = {"verdict": receipt["verdict"]}
+        s5_masks[index] = mask
+        sources.update({str(p.relative_to(ROOT)): sha(p)
+                        for p in (receipt_path, cert_path)})
+    assert {i: cache[key_of(m)]["verdict"] for i, m in s5_masks.items()} == EXPECTED
+
+    stored_masks = {lo | (hi << 64) for lo, hi in stored_file["witness_masks"]}
+    assert len(stored_masks) == first_row["optimistic_witness_s5"] == 1945
+    removed = {m: ("resolved-WIN" if cache[key_of(m)]["verdict"] == 1 else "resolved-LOSS")
+               for m in stored_masks if key_of(m) in cache}
+    assert set(removed) == {s5_masks[i] for i in RECEIPTS if i != 558600}, removed
+    assert len(removed) == 5, len(removed)
+    allowed = stored_masks - set(removed)
+    assert len(allowed) == 1940
+
+    memo: dict[int, tuple[str, frozenset[int]]] = {}
+
+    def classify(index_mask: int):
+        hit = memo.get(index_mask)
+        if hit is None:
+            children = board.children(index_mask)
+            verdicts = [verdict_of(cache, key_of(c)) for c in children]
+            kind = classify_s4(verdicts)
+            unknown = frozenset(c for c, v in zip(children, verdicts) if v == 0)
+            hit = (kind, unknown)
+            memo[index_mask] = hit
+        return hit
+
+    # Pre-optimisation damage on the stored chosen thirds.
+    uncovered_branches = 0
+    uncovered_classes: set[int] = set()
+    replies_affected: list[int] = []
+    dead_thirds_stored = 0
+    for rep in first_row["replies"]:
+        if not rep["closable"]:
+            continue
+        pair = (1 << FIRST) | (1 << rep["reply"])
+        s3 = pair | (1 << rep["chosen_third"])
+        fourths = board.points(board.legal(s3))
+        damaged = 0
+        for u in fourths:
+            m = board.canonical(s3 | (1 << u))
+            kind, unknown = classify(m)
+            if kind == DEAD:
+                dead_thirds_stored += 1
+            elif kind == OPEN and not (unknown & allowed):
+                damaged += 1
+                uncovered_branches += 1
+                uncovered_classes.add(m)
+        if damaged:
+            replies_affected.append(rep["reply"])
+
+    # Re-optimisation restricted to the stored witness pool.
+    stab = [m for m in board.maps if m[FIRST] == (1 << FIRST)]
+    seen: set[tuple] = set()
+    orbit_reps: list[int] = []
+    for r in range(121):
+        if r == FIRST:
+            continue
+        orb = tuple(sorted(m[r] for m in stab))
+        if orb in seen:
+            continue
+        seen.add(orb)
+        orbit_reps.append(r)
+    assert len(orbit_reps) == first_row["reply_orbits"] == 65
+
+    reply_rows = []
+    witness_union: set[int] = set()
+    and_width = 0
+    for pos, r in enumerate(orbit_reps):
+        pair = (1 << FIRST) | (1 << r)
+        thirds = board.points(board.legal(pair))
+        assert len(thirds) == 119
+        best = None
+        n_viable = 0
+        n_all_free = 0
+        for t in thirds:
+            s3 = pair | (1 << t)
+            fourths = board.points(board.legal(s3))
+            needs = []
+            for u in fourths:
+                m = board.canonical(s3 | (1 << u))
+                kind, unknown = classify(m)
+                if kind == OPEN:
+                    need = unknown & allowed
+                    if not need:
+                        break
+                    needs.append(need)
+            else:
+                n_viable += 1
+                if not needs:
+                    n_all_free += 1
+                    cand = {"third": t, "fourths": len(fourths), "witnesses": []}
+                else:
+                    cand = {"third": t, "fourths": len(fourths),
+                            "witnesses": sorted(greedy_witness_cover(needs))}
+                if best is None or len(cand["witnesses"]) < len(best["witnesses"]):
+                    best = cand
+        if best is None:
+            reply_rows.append({"reply": r, "closable": False})
+        else:
+            witness_union |= set(best["witnesses"])
+            and_width += best["fourths"]
+            reply_rows.append({"reply": r, "closable": True,
+                               "all_free": n_all_free > 0,
+                               "viable_thirds": n_viable,
+                               "chosen_third": best["third"],
+                               "chosen_fourths": best["fourths"],
+                               "witness_count": len(best["witnesses"]),
+                               "witness_masks": sorted(
+                                   [m & ((1 << 64) - 1), m >> 64]
+                                   for m in best["witnesses"])})
+        print(f"  first {FIRST}: reply {pos + 1}/{len(orbit_reps)} (r={r}) "
+              f"closable={best is not None} s4_touched={len(memo)}", flush=True)
+
+    n_close = sum(1 for x in reply_rows if x["closable"])
+    n_free = sum(1 for x in reply_rows if x.get("all_free"))
+    baseline_free = {rep["reply"] for rep in first_row["replies"]
+                     if rep["closable"] and rep.get("all_free")}
+    prev_free = {row["reply"] for row in prev["replies"]
+                 if row["closable"] and row.get("all_free")}
+    newly_free_vs_prev = [x["reply"] for x in reply_rows
+                          if x.get("all_free") and x["reply"] not in prev_free]
+    newly_free_vs_initial = [x["reply"] for x in reply_rows
+                             if x.get("all_free") and x["reply"] not in baseline_free]
+    regressed_vs_prev = sorted(prev_free - {x["reply"] for x in reply_rows
+                                            if x.get("all_free")})
+
+    # Final verification of the re-optimised covers (win_witness_masks flow).
+    failures: list[str] = []
+    for row in reply_rows:
+        if not row["closable"]:
+            continue
+        stored = {lo | (hi << 64) for lo, hi in row["witness_masks"]}
+        for m in stored:
+            if board.canonical(m) != m:
+                failures.append(f"reply {row['reply']}: non-canonical witness")
+            if key_of(m) in cache:
+                failures.append(f"reply {row['reply']}: cached witness")
+            if m not in allowed:
+                failures.append(f"reply {row['reply']}: witness outside stored pool")
+        pair = (1 << FIRST) | (1 << row["reply"])
+        s3 = pair | (1 << row["chosen_third"])
+        fourths = board.points(board.legal(s3))
+        if len(fourths) != row["chosen_fourths"]:
+            failures.append(f"reply {row['reply']}: fourth count drift")
+            continue
+        for u in fourths:
+            m = board.canonical(s3 | (1 << u))
+            kind, unknown = classify(m)
+            if kind == DEAD:
+                failures.append(f"reply {row['reply']}: dead S4 in chosen third")
+            elif kind == OPEN and not (unknown & stored):
+                failures.append(f"reply {row['reply']}: open S4 unwitnessed")
+            elif kind != FREE and kind != OPEN:
+                failures.append(f"reply {row['reply']}: unknown kind {kind}")
+
+    result = {
+        "schema": "n11-adaptive-win-side-reanalysis-update2-v1",
+        "first": FIRST,
+        "source_sha256": sources,
+        "cache_sha256": sha(ROOT / "research/experiments/n11-s4-boundary-direct-20261012/output/current-exact-s5.cache"),
+        "polarity_module_sha256": sha(ROOT / "research/experiments/n11-proof-cost-comparison-20261012/scripts/s4_win_polarity.py"),
+        "baseline": {k: first_row[k] for k in
+                     ("reply_orbits", "closable_replies", "free_closable_replies",
+                      "witness_replies", "and_width_fourths",
+                      "optimistic_witness_s5", "unclosable_replies")},
+        "previous_after": prev["after"],
+        "stored_witness_pool": len(stored_masks),
+        "removed_witnesses": [{"mask": [m & ((1 << 64) - 1), m >> 64], "reason": why}
+                              for m, why in sorted(removed.items())],
+        "allowed_witness_pool": len(allowed),
+        "pre_optimisation": {
+            "uncovered_branches": uncovered_branches,
+            "uncovered_s4_classes": len(uncovered_classes),
+            "replies_affected": sorted(replies_affected),
+            "dead_branches_in_stored_thirds": dead_thirds_stored,
+        },
+        "after": {
+            "closable_replies": n_close,
+            "unclosable_replies": [x["reply"] for x in reply_rows if not x["closable"]],
+            "free_closable_replies": n_free,
+            "witness_replies": n_close - n_free,
+            "and_width_fourths": and_width,
+            "optimistic_witness_s5": len(witness_union),
+            "unresolved_witness_s5": len(witness_union),
+            "newly_free_replies_vs_previous": sorted(newly_free_vs_prev),
+            "newly_free_replies_vs_initial": sorted(newly_free_vs_initial),
+            "regressed_free_replies_vs_previous": regressed_vs_prev,
+            "newly_closed_third_moves_vs_previous": len(newly_free_vs_prev),
+            "newly_closed_reply_orbits_vs_previous": len(newly_free_vs_prev),
+            "newly_closed_third_moves_vs_initial": len(newly_free_vs_initial),
+            "newly_closed_reply_orbits_vs_initial": len(newly_free_vs_initial),
+        },
+        "s4_classes_touched": len(memo),
+        "s4_kind_counts": dict(Counter(kind for kind, _ in memo.values())),
+        "replies": reply_rows,
+        "witness_masks": sorted([[m & ((1 << 64) - 1), m >> 64]
+                                 for m in witness_union]),
+        "verification": {"passed": not failures, "failures": failures,
+                         "covers_checked": n_close},
+        "note": ("witnesses are optimistic frontiers restricted to the stored "
+                 "1,945-mask pool minus the five now-resolved keys (209644 WIN, "
+                 "144095 WIN, 126899 LOSS, 121263 LOSS, 145001 LOSS); every "
+                 "remaining witness S5 still needs its own all-sixths WIN "
+                 "closure, which is NOT proven here. Dead S4s remain reusable "
+                 "LOSS-side assets."),
+        "seconds": round(time.time() - started, 1),
+    }
+    target = EXP / "output/win-side-reanalysis2.json"
+    target.parent.mkdir(parents=True, exist_ok=True)
+    target.write_text(json.dumps(result, ensure_ascii=False, sort_keys=True,
+                                 separators=(",", ":")) + "\n")
+    print(json.dumps({k: result[k] for k in
+                      ("stored_witness_pool", "allowed_witness_pool",
+                       "pre_optimisation", "after", "verification", "seconds")},
+                     ensure_ascii=False, indent=2))
+    if failures:
+        raise SystemExit(1)
+
+
+if __name__ == "__main__":
+    main()

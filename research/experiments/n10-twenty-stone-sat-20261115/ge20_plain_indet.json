@@ -1,0 +1,12 @@
+{
+  "note": "reconstructed after execution-environment reset at 2026-11-15T12:40Z (original json lost); facts from pre-reset session log",
+  "cnf": "n10_ge20.cnf",
+  "cnf_md5": "d9d060d3292664f879dac2baadd24f94",
+  "vars": 2100,
+  "clauses": 62284,
+  "solver": "kissat 4.0.4 (md5 3a5eba830aa6008a604fcc9bbe99a325)",
+  "result": "INDET",
+  "wall": "killed at ~45 min without decision",
+  "interpretation": "plain >=20-safe-set existence on 10x10 unresolved by plain encoding; superseded by cut-augmented run (n10_ge20_cuts.cnf)",
+  "date": "2026-11-15T12:28:00Z"
+}

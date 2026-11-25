@@ -1,0 +1,71 @@
+{
+  "schema": "n11-next15-s6-propagation-independent-audit-v1",
+  "scope": "Independent geometry, source SHA, replay bindings, AND parent and reverse LOSS propagation of supplied solver verdicts. Solver outcomes themselves are not re-proved.",
+  "source_hash_bindings": 230,
+  "saved_source_count": 36,
+  "canonical_s6": 2434,
+  "s6_counts": {
+    "2": 133,
+    "1": 2255,
+    "0": 46
+  },
+  "new_s6_exact": 162,
+  "new_nodes": 89196422,
+  "prior_saved_boundary_keys": 0,
+  "saved_unknown_retried": 0,
+  "undispatched_unresolved_boundary_keys": 134,
+  "parents": [
+    {
+      "key": [
+        1298162592589545608,
+        0
+      ],
+      "child_count": 99,
+      "counts": {
+        "0": 64,
+        "1": 33,
+        "2": 2
+      },
+      "outcome": "LOSS"
+    },
+    {
+      "key": [
+        1152921517625966592,
+        8192
+      ],
+      "child_count": 99,
+      "counts": {
+        "0": 0,
+        "1": 99,
+        "2": 0
+      },
+      "outcome": "WIN"
+    },
+    {
+      "key": [
+        1152921513330999296,
+        4202496
+      ],
+      "child_count": 101,
+      "counts": {
+        "0": 71,
+        "1": 27,
+        "2": 3
+      },
+      "outcome": "LOSS"
+    }
+  ],
+  "reverse_loss_parents": 696,
+  "new_reverse_loss_parents": 13,
+  "merged_s5": 4385,
+  "merged_counts": {
+    "2": 4290,
+    "1": 95
+  },
+  "merged_sha256": "8a199081c83868ef931f6ef2e9a8b3d02ce2988b86893984abc6d5d3843f4b59",
+  "class_key": [
+    1297036692682702984,
+    0
+  ],
+  "class_outcome": "WIN"
+}

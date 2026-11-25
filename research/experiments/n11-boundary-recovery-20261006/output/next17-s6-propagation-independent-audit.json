@@ -1,0 +1,98 @@
+{
+  "schema": "n11-next17-s6-propagation-independent-audit-v1",
+  "scope": "Independent geometry, source SHA, replay bindings, AND parent and reverse LOSS propagation of supplied solver verdicts. Solver outcomes themselves are not re-proved.",
+  "source_hash_bindings": 304,
+  "saved_source_count": 37,
+  "canonical_s6": 2648,
+  "s6_counts": {
+    "2": 147,
+    "1": 2455,
+    "0": 46
+  },
+  "new_s6_exact": 214,
+  "new_nodes": 190725964,
+  "prior_saved_boundary_keys": 3,
+  "saved_unknown_retried": 0,
+  "undispatched_unresolved_boundary_keys": 276,
+  "parents": [
+    {
+      "key": [
+        1586392968741257224,
+        0
+      ],
+      "child_count": 91,
+      "counts": {
+        "0": 36,
+        "1": 52,
+        "2": 3
+      },
+      "outcome": "LOSS"
+    },
+    {
+      "key": [
+        1298725542542966792,
+        0
+      ],
+      "child_count": 99,
+      "counts": {
+        "0": 25,
+        "1": 71,
+        "2": 3
+      },
+      "outcome": "LOSS"
+    },
+    {
+      "key": [
+        1298444067566256136,
+        0
+      ],
+      "child_count": 100,
+      "counts": {
+        "0": 58,
+        "1": 41,
+        "2": 1
+      },
+      "outcome": "LOSS"
+    },
+    {
+      "key": [
+        1152921517625966592,
+        64
+      ],
+      "child_count": 104,
+      "counts": {
+        "0": 82,
+        "1": 21,
+        "2": 1
+      },
+      "outcome": "LOSS"
+    },
+    {
+      "key": [
+        1153202979583558144,
+        536879104
+      ],
+      "child_count": 109,
+      "counts": {
+        "0": 77,
+        "1": 26,
+        "2": 6
+      },
+      "outcome": "LOSS"
+    }
+  ],
+  "reverse_loss_parents": 769,
+  "new_reverse_loss_parents": 30,
+  "merged_s5": 4515,
+  "merged_counts": {
+    "2": 4418,
+    "1": 97
+  },
+  "merged_sha256": "2fa27a15625af7449ca8f3fa21e683ba2e13a5d4deb99f8919d02ea61b59c82c",
+  "class_key": [
+    1298162592589545480,
+    0
+  ],
+  "class_outcome": "LOSS",
+  "full_class_children": 110
+}

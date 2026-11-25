@@ -1,0 +1,66 @@
+{
+  "archived_raw": {
+    "bytes": 12922,
+    "line_endings": "LF",
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/next17-hard5-adaptive15m-out.csv",
+    "rows": 214,
+    "sha256": "03fa913d6cb0ff9e7ef3e35a7e797af1da1f81d79f018dad1b40895d8837b469"
+  },
+  "archived_summary": {
+    "bytes": 114546,
+    "line_endings": "LF",
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/next17-hard5-adaptive15m-summary.json",
+    "sha256": "1979d67fd15550911cb111163f5680ec1f23749c3ef40f196baf1d02bcf0ac43"
+  },
+  "boundary_scope": "five supplied hard s5 parents only; all five are LOSS; the full 110-child s4 class is resolved only when the independent full-class verifier succeeds.",
+  "command": "uv run --locked python research/experiments/n11-boundary-recovery-20261006/scripts/complete_s5_via_s6_local.py --parents research/experiments/n11-boundary-recovery-20261006/output/next17-hard5-s5.csv --saved-audit research/experiments/n11-boundary-recovery-20261006/output/next15-expanded-s6-audit.json --solver build/n11/dfpn.exe --out-dir .local/n11/next17-hard5-adaptive15m --workers 6 --budget 15000000",
+  "derived_s5_cache": {
+    "bytes": 267,
+    "original_bytes_preserved": true,
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/next17-hard5-adaptive15m-derived-s5.cache",
+    "rows": 5,
+    "sha256": "4032c8a1b35509ebaad1aca7ce299e5f199cb1d57d9bd02667d2eb55db989f23",
+    "source_path": ".local/n11/next17-hard5-adaptive15m/derived-s5.cache",
+    "source_sha256": "4032c8a1b35509ebaad1aca7ce299e5f199cb1d57d9bd02667d2eb55db989f23"
+  },
+  "execution": {
+    "boundary_canonical_s6_count": 493,
+    "budget": 15000000,
+    "new_solver_exact": 214,
+    "new_solver_rows": 214,
+    "new_solver_unknown": 0,
+    "nodes_new": 190725964,
+    "parent_child_relations": 503,
+    "parent_count": 5,
+    "parent_status_counts": {
+      "LOSS": 5,
+      "UNKNOWN": 0,
+      "WIN": 0
+    },
+    "retry_saved_unknown": false,
+    "saved_unknown_boundary_count": 0,
+    "saved_unknown_rows_eligible_for_retry": 0,
+    "unresolved_boundary_count": 276,
+    "workers": 6
+  },
+  "inputs": {
+    "current_s5_cache": {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/next17-run-post-completion-s5.cache",
+      "sha256": "6f121d3629be67b1c0eee650e6c2467b6e480c6128f2d83fc02f396d0b9812b6"
+    },
+    "parents": {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/next17-hard5-s5.csv",
+      "sha256": "f46706f57af3f7579b9c68ac2fd157c7ce3cd9eeb2870025edbfdbad0c664309"
+    },
+    "saved_audit": {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/next15-expanded-s6-audit.json",
+      "sha256": "b132b6902678fab8af30986f78407059a1e833665a397afdc63a35d13a886e38"
+    }
+  },
+  "original_summary": {
+    "bytes": 114546,
+    "path": ".local/n11/next17-hard5-adaptive15m/summary.json",
+    "sha256": "1979d67fd15550911cb111163f5680ec1f23749c3ef40f196baf1d02bcf0ac43"
+  },
+  "schema": "n11-saved-s6-adaptive-run-archive-v1"
+}

@@ -1,0 +1,943 @@
+{
+  "scope": "supplied 76 remaining targets only; does not assert the full 100-child class status",
+  "run_dir": ".local/n11/next4-completion76",
+  "targets_path": "research/experiments/n11-boundary-recovery-20261006/output/next4-remaining76.csv",
+  "targets_rows": 76,
+  "prior_model8_targets": "research/experiments/n11-boundary-recovery-20261006/output/next4-model8.csv",
+  "prior_model8_rows": 8,
+  "target_disjoint_from_model8": true,
+  "source_files": [
+    {
+      "file": ".local/n11/next4-completion76/s5-1152921504766230529-0.out.csv",
+      "key": [
+        1152921504766230529,
+        0
+      ],
+      "bytes": 276,
+      "sha256": "5d4151e0e8ea883049e00360babd642205e7287e428d20ff81416226f6677c2b",
+      "line_endings": "CRLF",
+      "verdict": 2,
+      "nodes": 2327897
+    },
+    {
+      "file": ".local/n11/next4-completion76/s5-1152921645401243648-0.out.csv",
+      "key": [
+        1152921645401243648,
+        0
+      ],
+      "bytes": 276,
+      "sha256": "1711ea051f6c26e801e286d452ec957d42856814ab9cf914052d20e161d0b7b1",
+      "line_endings": "CRLF",
+      "verdict": 2,
+      "nodes": 4687913
+    },
+    {
+      "file": ".local/n11/next4-completion76/s5-1152921504766230560-0.out.csv",
+      "key": [
+        1152921504766230560,
+        0
+      ],
+      "bytes": 276,
+      "sha256": "1fad1c4e7dd791e084491ce08aa002011a48b5f2e525d2ea8c7550ce14674bb4",
+      "line_endings": "CRLF",
+      "verdict": 2,
+      "nodes": 2528932
+    },
+    {
+      "file": ".local/n11/next4-completion76/s5-1152921513356165120-0.out.csv",
+      "key": [
+        1152921513356165120,
+        0
+      ],
+      "bytes": 274,
+      "sha256": "40d3782bf2b2eaf9b773281da39d0f534bd067dcbc25878b8cb061eceda740b2",
+      "line_endings": "CRLF",
+      "verdict": 2,
+      "nodes": 1683031
+    },
+    {
+      "file": ".local/n11/next4-completion76/s5-1152921504766263296-0.out.csv",
+      "key": [
+        1152921504766263296,
+        0
+      ],
+      "bytes": 276,
+      "sha256": "a9834ca25917fb2a1e286a7280f84b8b2687d42e270068855de580f5c54f8f6f",
+      "line_endings": "CRLF",
+      "verdict": 2,
+      "nodes": 3405480
+    },
+    {
+      "file": ".local/n11/next4-completion76/s5-1152921539125968896-0.out.csv",
+      "key": [
+        1152921539125968896,
+        0
+      ],
+      "bytes": 276,
+      "sha256": "4ff5d28b027fae854bc76bffeb8411f834b5f0cd4e216d05a287fe8581953741",
+      "line_endings": "CRLF",
+      "verdict": 2,
+      "nodes": 3440645
+    },
+    {
+      "file": ".local/n11/next4-completion76/s5-1152939096952274944-0.out.csv",
+      "key": [
+        1152939096952274944,
+        0
+      ],
+      "bytes": 276,
+      "sha256": "643151aafa6054ef5cea3da0402faa6c1595833834475ee127c2ee158c5fe57c",
+      "line_endings": "CRLF",
+      "verdict": 2,
+      "nodes": 4106563
+    },
+    {
+      "file": ".local/n11/next4-completion76/s5-1297036692699488384-0.out.csv",
+      "key": [
+        1297036692699488384,
+        0
+      ],
+      "bytes": 276,
+      "sha256": "df11f921546c8749a7905ef46982da9c6665bc0e55bcdfd3430051dbdf7c4cf0",
+      "line_endings": "CRLF",
+      "verdict": 2,
+      "nodes": 2456814
+    },
+    {
+      "file": ".local/n11/next4-completion76/s5-10376293542535888896-32.out.csv",
+      "key": [
+        10376293542535888896,
+        32
+      ],
+      "bytes": 278,
+      "sha256": "602dfee0f9972d748db0aa931912957faa2b8d5fccffe3ecb549c03de0bce38a",
+      "line_endings": "CRLF",
+      "verdict": 2,
+      "nodes": 2427878
+    },
+    {
+      "file": ".local/n11/next4-completion76/s5-1152921504766230536-0.out.csv",
+      "key": [
+        1152921504766230536,
+        0
+      ],
+      "bytes": 276,
+      "sha256": "2b6f3695c8b7898b676c5e693064a818a7d1174a7f5afc7c0d51695056a32519",
+      "line_endings": "CRLF",
+      "verdict": 2,
+      "nodes": 2492506
+    },
+    {
+      "file": ".local/n11/next4-completion76/s5-1152921504766230544-0.out.csv",
+      "key": [
+        1152921504766230544,
+        0
+      ],
+      "bytes": 276,
+      "sha256": "eff853e35031d7f753b51f754690bae2911a7641c12a0a2c970dba3dc1da617c",
+      "line_endings": "CRLF",
+      "verdict": 2,
+      "nodes": 4867806
+    },
+    {
+      "file": ".local/n11/next4-completion76/s5-1152921521946099712-0.out.csv",
+      "key": [
+        1152921521946099712,
+        0
+      ],
+      "bytes": 276,
+      "sha256": "65cbaeee3c65ebee2ac8e411cb733beea69d4f3976ff12322844fc7d7cb0ae6e",
+      "line_endings": "CRLF",
+      "verdict": 2,
+      "nodes": 3368660
+    },
+    {
+      "file": ".local/n11/next4-completion76/s5-1152921576681766912-0.out.csv",
+      "key": [
+        1152921576681766912,
+        0
+      ],
+      "bytes": 276,
+      "sha256": "3524a1ca6354375de822eee503de38bced534c08be80c902bf979710a3afaf99",
+      "line_endings": "CRLF",
+      "verdict": 2,
+      "nodes": 2987517
+    },
+    {
+      "file": ".local/n11/next4-completion76/s5-1152991873510408192-0.out.csv",
+      "key": [
+        1152991873510408192,
+        0
+      ],
+      "bytes": 276,
+      "sha256": "f7c69ccded31f9b52ef983af3f89d46349ac3eca99c7d26c9a3c25ba05ed1cc3",
+      "line_endings": "CRLF",
+      "verdict": 2,
+      "nodes": 2160084
+    },
+    {
+      "file": ".local/n11/next4-completion76/s5-1153202982939000832-0.out.csv",
+      "key": [
+        1153202982939000832,
+        0
+      ],
+      "bytes": 276,
+      "sha256": "03e4ae53f9b4b161d4c776adeb5f72ba4e0050e04f95577ec1783bcb138c462d",
+      "line_endings": "CRLF",
+      "verdict": 2,
+      "nodes": 2325993
+    },
+    {
+      "file": ".local/n11/next4-completion76/s5-1188950301785194496-0.out.csv",
+      "key": [
+        1188950301785194496,
+        0
+      ],
+      "bytes": 276,
+      "sha256": "572e61a6c9bc8715adcb28662f5f6a5790405ef503d8fbc59412dfa572e38332",
+      "line_endings": "CRLF",
+      "verdict": 2,
+      "nodes": 4530186
+    },
+    {
+      "file": ".local/n11/next4-completion76/s5-10412322339554852864-0.out.csv",
+      "key": [
+        10412322339554852864,
+        0
+      ],
+      "bytes": 277,
+      "sha256": "bf516c0eb371d037ef2ece83c94cc76f179d4a54291ed65be9d0915f714214f1",
+      "line_endings": "CRLF",
+      "verdict": 2,
+      "nodes": 2058118
+    },
+    {
+      "file": ".local/n11/next4-completion76/s5-1152921504606848000-637534208.out.csv",
+      "key": [
+        1152921504606848000,
+        637534208
+      ],
+      "bytes": 284,
+      "sha256": "a2f00f446204cac14cc555882419257664766be84c4a2ce2bedac84fc7100259",
+      "line_endings": "CRLF",
+      "verdict": 2,
+      "nodes": 2610356
+    },
+    {
+      "file": ".local/n11/next4-completion76/s5-1152956689138319360-0.out.csv",
+      "key": [
+        1152956689138319360,
+        0
+      ],
+      "bytes": 276,
+      "sha256": "39a9ad8cef32512d2b402fc5734fb22c70b5d11b12d2662c394799796baba3fd",
+      "line_endings": "CRLF",
+      "verdict": 2,
+      "nodes": 3385673
+    },
+    {
+      "file": ".local/n11/next4-completion76/s5-1152991876706467840-0.out.csv",
+      "key": [
+        1152991876706467840,
+        0
+      ],
+      "bytes": 276,
+      "sha256": "d4eea47707d807d1d6c0c9fba9d6add2c6f93ed46dd2c9dc61fb89b58462b8b4",
+      "line_endings": "CRLF",
+      "verdict": 2,
+      "nodes": 4805984
+    },
+    {
+      "file": ".local/n11/next4-completion76/s5-1297036692701585408-0.out.csv",
+      "key": [
+        1297036692701585408,
+        0
+      ],
+      "bytes": 276,
+      "sha256": "1226a6e6b1f22517004781fadd706fbea90b22682945dbbb90b3201fa8312853",
+      "line_endings": "CRLF",
+      "verdict": 2,
+      "nodes": 2124080
+    },
+    {
+      "file": ".local/n11/next4-completion76/s5-1297037792211116032-0.out.csv",
+      "key": [
+        1297037792211116032,
+        0
+      ],
+      "bytes": 276,
+      "sha256": "751e23582e4fa2e1fa28a4078b36f614b1eb307416b7170de0d737ead95fb8ee",
+      "line_endings": "CRLF",
+      "verdict": 2,
+      "nodes": 3791760
+    },
+    {
+      "file": ".local/n11/next4-completion76/s5-10376293542535888896-32768.out.csv",
+      "key": [
+        10376293542535888896,
+        32768
+      ],
+      "bytes": 281,
+      "sha256": "482d349bb029e0a9bedd0bd50f49fbc02f304ac979f09bc373a9b7ea25333eca",
+      "line_endings": "CRLF",
+      "verdict": 2,
+      "nodes": 1962708
+    },
+    {
+      "file": ".local/n11/next4-completion76/s5-1152921504767279104-0.out.csv",
+      "key": [
+        1152921504767279104,
+        0
+      ],
+      "bytes": 276,
+      "sha256": "62dc6ad53ce4b2121941a57bb0b2c52541dc795fd4ea2142147c219d4d915b00",
+      "line_endings": "CRLF",
+      "verdict": 2,
+      "nodes": 2711605
+    },
+    {
+      "file": ".local/n11/next4-completion76/s5-1297036692699750400-0.out.csv",
+      "key": [
+        1297036692699750400,
+        0
+      ],
+      "bytes": 276,
+      "sha256": "9463919219aa7adff788758589c1e646840a21d8baf29904038a3f4d9502392f",
+      "line_endings": "CRLF",
+      "verdict": 2,
+      "nodes": 2836705
+    },
+    {
+      "file": ".local/n11/next4-completion76/s5-1441151884114001920-0.out.csv",
+      "key": [
+        1441151884114001920,
+        0
+      ],
+      "bytes": 276,
+      "sha256": "f9386a8867dd1eb1eb8ba387dfe156650fac98d729b14f4f793501a2ea3677df",
+      "line_endings": "CRLF",
+      "verdict": 2,
+      "nodes": 3643144
+    },
+    {
+      "file": ".local/n11/next4-completion76/s5-1729382260265713664-0.out.csv",
+      "key": [
+        1729382260265713664,
+        0
+      ],
+      "bytes": 276,
+      "sha256": "86c5f5157cbbd2e7b0b36cb695557bc84d3454c210d026af70628cdea867578a",
+      "line_endings": "CRLF",
+      "verdict": 2,
+      "nodes": 3103604
+    },
+    {
+      "file": ".local/n11/next4-completion76/s5-1152921504766232576-0.out.csv",
+      "key": [
+        1152921504766232576,
+        0
+      ],
+      "bytes": 276,
+      "sha256": "50631336bed7cbe438860c83e7697dfa53c79eac6fdacf1a329ebbbecfcf8fdb",
+      "line_endings": "CRLF",
+      "verdict": 2,
+      "nodes": 6288442
+    },
+    {
+      "file": ".local/n11/next4-completion76/s5-1188950304981254144-0.out.csv",
+      "key": [
+        1188950304981254144,
+        0
+      ],
+      "bytes": 276,
+      "sha256": "3d8646e9e3748772de9c5bf57cdac7fe20da4ea04e54d63115edd9c11696735d",
+      "line_endings": "CRLF",
+      "verdict": 2,
+      "nodes": 3057331
+    },
+    {
+      "file": ".local/n11/next4-completion76/s5-1297036692700012544-0.out.csv",
+      "key": [
+        1297036692700012544,
+        0
+      ],
+      "bytes": 276,
+      "sha256": "7bbd88e5d15c2eaacdea212e3dc8d206bb8a62142ef929070cd40285989217f9",
+      "line_endings": "CRLF",
+      "verdict": 2,
+      "nodes": 2112636
+    },
+    {
+      "file": ".local/n11/next4-completion76/s5-1297036692967923712-0.out.csv",
+      "key": [
+        1297036692967923712,
+        0
+      ],
+      "bytes": 276,
+      "sha256": "9943c39e5ac70980bea1d81b19b3498be956e254d420b9582b72a14ed2f3a34d",
+      "line_endings": "CRLF",
+      "verdict": 2,
+      "nodes": 2076446
+    },
+    {
+      "file": ".local/n11/next4-completion76/s5-1297036696994455552-0.out.csv",
+      "key": [
+        1297036696994455552,
+        0
+      ],
+      "bytes": 276,
+      "sha256": "1ce1329a62f4e592949330d0545679b1689b591a3f09c0265a73ef843ecc7273",
+      "line_endings": "CRLF",
+      "verdict": 2,
+      "nodes": 4354469
+    },
+    {
+      "file": ".local/n11/next4-completion76/s5-1298162592606330880-0.out.csv",
+      "key": [
+        1298162592606330880,
+        0
+      ],
+      "bytes": 276,
+      "sha256": "b3b35b87c55d7b20129515ce794c54bf66b8d6bc59a149a4dba71a6ae4ed3947",
+      "line_endings": "CRLF",
+      "verdict": 2,
+      "nodes": 3614278
+    },
+    {
+      "file": ".local/n11/next4-completion76/s5-1152921504766230530-0.out.csv",
+      "key": [
+        1152921504766230530,
+        0
+      ],
+      "bytes": 276,
+      "sha256": "a93bc52c4f0062024611412424cb5e6da2474a03ae503385c12f05391d52b8f0",
+      "line_endings": "CRLF",
+      "verdict": 2,
+      "nodes": 3648751
+    },
+    {
+      "file": ".local/n11/next4-completion76/s5-1152921504766230532-0.out.csv",
+      "key": [
+        1152921504766230532,
+        0
+      ],
+      "bytes": 276,
+      "sha256": "85240637968447fab2a3e42c9c3fb1e2a420f610f12d17bea1ea9e6fdea29fee",
+      "line_endings": "CRLF",
+      "verdict": 2,
+      "nodes": 3500689
+    },
+    {
+      "file": ".local/n11/next4-completion76/s5-1152921504766230592-0.out.csv",
+      "key": [
+        1152921504766230592,
+        0
+      ],
+      "bytes": 276,
+      "sha256": "b0990e2095d03841f4400ffb60f1acf98920a9abdf42c5fed94bbb5120ec9482",
+      "line_endings": "CRLF",
+      "verdict": 2,
+      "nodes": 2669263
+    },
+    {
+      "file": ".local/n11/next4-completion76/s5-1152921504766361600-0.out.csv",
+      "key": [
+        1152921504766361600,
+        0
+      ],
+      "bytes": 276,
+      "sha256": "6f7e2ca688347eae3933e80938d7e563779521db91b888e81cd23bace26fde3b",
+      "line_endings": "CRLF",
+      "verdict": 2,
+      "nodes": 2703903
+    },
+    {
+      "file": ".local/n11/next4-completion76/s5-1152921507962290176-32.out.csv",
+      "key": [
+        1152921507962290176,
+        32
+      ],
+      "bytes": 277,
+      "sha256": "caf33daf4dcf3dd9eaa8774465e0fc6d268e68017e1c767ff4724448e4c9365f",
+      "line_endings": "CRLF",
+      "verdict": 2,
+      "nodes": 2764328
+    },
+    {
+      "file": ".local/n11/next4-completion76/s5-1152921504766231552-0.out.csv",
+      "key": [
+        1152921504766231552,
+        0
+      ],
+      "bytes": 276,
+      "sha256": "18d89077797736fe19cbbc273395659254748ecc068daa82f30a1df7818bdcaa",
+      "line_endings": "CRLF",
+      "verdict": 2,
+      "nodes": 4562655
+    },
+    {
+      "file": ".local/n11/next4-completion76/s5-1152921504766492672-0.out.csv",
+      "key": [
+        1152921504766492672,
+        0
+      ],
+      "bytes": 276,
+      "sha256": "93972371f818b3b39cf1304441af24d1368a341b0cd718028e165ed7bf7daf1a",
+      "line_endings": "CRLF",
+      "verdict": 2,
+      "nodes": 3853953
+    },
+    {
+      "file": ".local/n11/next4-completion76/s5-1152921504766754816-0.out.csv",
+      "key": [
+        1152921504766754816,
+        0
+      ],
+      "bytes": 276,
+      "sha256": "cd3528ee44e93ae9dee7361484ec7edb1c3ba2ae4a109e69efcd9da49e54af74",
+      "line_endings": "CRLF",
+      "verdict": 2,
+      "nodes": 3280975
+    },
+    {
+      "file": ".local/n11/next4-completion76/s5-1297036692699489280-0.out.csv",
+      "key": [
+        1297036692699489280,
+        0
+      ],
+      "bytes": 276,
+      "sha256": "42b20d14425c9fd6b528030ab601db2126e7166aa0f4b7bbba5dcf5a75004c3b",
+      "line_endings": "CRLF",
+      "verdict": 2,
+      "nodes": 3249727
+    },
+    {
+      "file": ".local/n11/next4-completion76/s5-1297036967577395200-0.out.csv",
+      "key": [
+        1297036967577395200,
+        0
+      ],
+      "bytes": 276,
+      "sha256": "809b3cc68fdf436f3ba147ff1ccc40518fb62e254ec92434aca4977e731c1d25",
+      "line_endings": "CRLF",
+      "verdict": 2,
+      "nodes": 3802966
+    },
+    {
+      "file": ".local/n11/next4-completion76/s5-1299288492513173504-0.out.csv",
+      "key": [
+        1299288492513173504,
+        0
+      ],
+      "bytes": 276,
+      "sha256": "0191098291b23915f9f7a053f94c280dfcf9c5bd453fcbb9166b766c4ec5e610",
+      "line_endings": "CRLF",
+      "verdict": 2,
+      "nodes": 2998843
+    },
+    {
+      "file": ".local/n11/next4-completion76/s5-1152921507962290176-16.out.csv",
+      "key": [
+        1152921507962290176,
+        16
+      ],
+      "bytes": 277,
+      "sha256": "b45caf4266fa7bddfeee0bb30fa27a66743f1e1f63a81e4a0fbd136c2402a77e",
+      "line_endings": "CRLF",
+      "verdict": 2,
+      "nodes": 2367791
+    },
+    {
+      "file": ".local/n11/next4-completion76/s5-1152921504766230656-0.out.csv",
+      "key": [
+        1152921504766230656,
+        0
+      ],
+      "bytes": 276,
+      "sha256": "3f37561ed921cb992f1f04e876d75042f9f7a2bc40df7f5b3a544af0bbe8a539",
+      "line_endings": "CRLF",
+      "verdict": 2,
+      "nodes": 4025125
+    },
+    {
+      "file": ".local/n11/next4-completion76/s5-1297036692699488320-0.out.csv",
+      "key": [
+        1297036692699488320,
+        0
+      ],
+      "bytes": 276,
+      "sha256": "7dc8ef83d4b265269ca01aa19a1c78dde9e68c46ca6da3f7b011d7345c725f10",
+      "line_endings": "CRLF",
+      "verdict": 2,
+      "nodes": 3603630
+    },
+    {
+      "file": ".local/n11/next4-completion76/s5-10376293542535888896-4.out.csv",
+      "key": [
+        10376293542535888896,
+        4
+      ],
+      "bytes": 277,
+      "sha256": "fc336e9b040d259fbfb99e6b288d234c9e780b11f47f605eeaf53ea2eae2de81",
+      "line_endings": "CRLF",
+      "verdict": 2,
+      "nodes": 5141716
+    },
+    {
+      "file": ".local/n11/next4-completion76/s5-1152921507962290176-8192.out.csv",
+      "key": [
+        1152921507962290176,
+        8192
+      ],
+      "bytes": 279,
+      "sha256": "4222a8301a23d097320248f46a0079a9ef88941bb1ee1e29bcb1ecf61eccfc6d",
+      "line_endings": "CRLF",
+      "verdict": 2,
+      "nodes": 3113123
+    },
+    {
+      "file": ".local/n11/next4-completion76/s5-10376293542535888896-33554432.out.csv",
+      "key": [
+        10376293542535888896,
+        33554432
+      ],
+      "bytes": 285,
+      "sha256": "47f6bc0d4a7e7ab2cecc016c035ae9b73b6884c174124d0664e5345a3ba03ad8",
+      "line_endings": "CRLF",
+      "verdict": 2,
+      "nodes": 10437244
+    },
+    {
+      "file": ".local/n11/next4-completion76/s5-1152921504766230784-0.out.csv",
+      "key": [
+        1152921504766230784,
+        0
+      ],
+      "bytes": 276,
+      "sha256": "b0ac8a6da274b713a5b5d4cb289b84c9a178a0888457ba80ecd46026707fea4b",
+      "line_endings": "CRLF",
+      "verdict": 2,
+      "nodes": 8496989
+    },
+    {
+      "file": ".local/n11/next4-completion76/s5-1297036692699488512-0.out.csv",
+      "key": [
+        1297036692699488512,
+        0
+      ],
+      "bytes": 276,
+      "sha256": "2638167e09351a0f3bf01ee65b4ba5022c105cee2097c14e7ff7352f46f27bff",
+      "line_endings": "CRLF",
+      "verdict": 2,
+      "nodes": 3556458
+    },
+    {
+      "file": ".local/n11/next4-completion76/s5-1297036692699488768-0.out.csv",
+      "key": [
+        1297036692699488768,
+        0
+      ],
+      "bytes": 276,
+      "sha256": "e93596af29c1b3126901c12de626523a2bab1b69598b4c56bca5e62cd2b7c139",
+      "line_endings": "CRLF",
+      "verdict": 2,
+      "nodes": 4498361
+    },
+    {
+      "file": ".local/n11/next4-completion76/s5-1297038891722743808-0.out.csv",
+      "key": [
+        1297038891722743808,
+        0
+      ],
+      "bytes": 276,
+      "sha256": "62865fd0f913d92f21ffb761e2d95bf92205803bfde82ab45de5a413720f181f",
+      "line_endings": "CRLF",
+      "verdict": 2,
+      "nodes": 2865369
+    },
+    {
+      "file": ".local/n11/next4-completion76/s5-10376293542535888896-16.out.csv",
+      "key": [
+        10376293542535888896,
+        16
+      ],
+      "bytes": 278,
+      "sha256": "2af01405028599a71f2783dcf3efdf3ce5df3dab23798514783c227dd1095100",
+      "line_endings": "CRLF",
+      "verdict": 2,
+      "nodes": 2678381
+    },
+    {
+      "file": ".local/n11/next4-completion76/s5-1152921504606847488-637534208.out.csv",
+      "key": [
+        1152921504606847488,
+        637534208
+      ],
+      "bytes": 284,
+      "sha256": "d7e1c8ce72b0c4945ee9e82bac9bf4915b916df98ea368b54739ff7ef00ba836",
+      "line_endings": "CRLF",
+      "verdict": 2,
+      "nodes": 2091483
+    },
+    {
+      "file": ".local/n11/next4-completion76/s5-1152956692334379008-0.out.csv",
+      "key": [
+        1152956692334379008,
+        0
+      ],
+      "bytes": 276,
+      "sha256": "766c32f7eea94c4849f79a94c679e70dc94bcedc975053adea2434c8748505f5",
+      "line_endings": "CRLF",
+      "verdict": 2,
+      "nodes": 4981841
+    },
+    {
+      "file": ".local/n11/next4-completion76/s5-1297036693773230080-0.out.csv",
+      "key": [
+        1297036693773230080,
+        0
+      ],
+      "bytes": 276,
+      "sha256": "3baf08e521d691f4d6b35b839ecbb46e79d5559e971fd02a0e7379f1a369afcf",
+      "line_endings": "CRLF",
+      "verdict": 2,
+      "nodes": 4597927
+    },
+    {
+      "file": ".local/n11/next4-completion76/s5-1297041090745999360-0.out.csv",
+      "key": [
+        1297041090745999360,
+        0
+      ],
+      "bytes": 276,
+      "sha256": "055b3508aa3bd4ea917e29b258faaea616c70332084917654c2a2f626c046af4",
+      "line_endings": "CRLF",
+      "verdict": 2,
+      "nodes": 2508197
+    },
+    {
+      "file": ".local/n11/next4-completion76/s5-1297045488792510464-0.out.csv",
+      "key": [
+        1297045488792510464,
+        0
+      ],
+      "bytes": 276,
+      "sha256": "6f2dfcfc7b764246919ef15a6dab056f26135d8b639659324f631a532fd33ac8",
+      "line_endings": "CRLF",
+      "verdict": 2,
+      "nodes": 5611460
+    },
+    {
+      "file": ".local/n11/next4-completion76/s5-1315051091208970240-0.out.csv",
+      "key": [
+        1315051091208970240,
+        0
+      ],
+      "bytes": 276,
+      "sha256": "582f2bd142fb7a2bebe1b1aa087250ff81b254e714607b5a34d4bdbbff42349f",
+      "line_endings": "CRLF",
+      "verdict": 2,
+      "nodes": 4072899
+    },
+    {
+      "file": ".local/n11/next4-completion76/s5-1152921507962290176-4.out.csv",
+      "key": [
+        1152921507962290176,
+        4
+      ],
+      "bytes": 276,
+      "sha256": "539acc6c73d93788966c975077c7ff235134a288567b9ace40e96d4727f8085f",
+      "line_endings": "CRLF",
+      "verdict": 2,
+      "nodes": 3538178
+    },
+    {
+      "file": ".local/n11/next4-completion76/s5-10376293542535888896-8192.out.csv",
+      "key": [
+        10376293542535888896,
+        8192
+      ],
+      "bytes": 280,
+      "sha256": "ded5a55e9727287ff8b2057add32c8e20e585e8401412ef6d58d1bd9ca629803",
+      "line_endings": "CRLF",
+      "verdict": 2,
+      "nodes": 4920776
+    },
+    {
+      "file": ".local/n11/next4-completion76/s5-1152921504766231040-0.out.csv",
+      "key": [
+        1152921504766231040,
+        0
+      ],
+      "bytes": 276,
+      "sha256": "e19b1d695ddd2c474b276adf5b08909dc9a8e2e98d0b25b959fa402c0b9ba440",
+      "line_endings": "CRLF",
+      "verdict": 2,
+      "nodes": 3286217
+    },
+    {
+      "file": ".local/n11/next4-completion76/s5-1152921504768327680-0.out.csv",
+      "key": [
+        1152921504768327680,
+        0
+      ],
+      "bytes": 276,
+      "sha256": "da12d95be04d231baaea84d78a844a15372d6d3b2bf6aeb4c6c68f4ad5e43cd6",
+      "line_endings": "CRLF",
+      "verdict": 2,
+      "nodes": 5092147
+    },
+    {
+      "file": ".local/n11/next4-completion76/s5-1152921516552224768-0.out.csv",
+      "key": [
+        1152921516552224768,
+        0
+      ],
+      "bytes": 276,
+      "sha256": "a4729b02f8b447ebc24f5b0085c1e27d2263a3115cf1a347f37be0746207b6b4",
+      "line_endings": "CRLF",
+      "verdict": 2,
+      "nodes": 6971586
+    },
+    {
+      "file": ".local/n11/next4-completion76/s5-1152921542322028544-0.out.csv",
+      "key": [
+        1152921542322028544,
+        0
+      ],
+      "bytes": 276,
+      "sha256": "1eb291472404f9908fe12fffaa7cafd4a2432b2f94d3ffef4e679c282b75922e",
+      "line_endings": "CRLF",
+      "verdict": 2,
+      "nodes": 3073701
+    },
+    {
+      "file": ".local/n11/next4-completion76/s5-1152939100148334592-0.out.csv",
+      "key": [
+        1152939100148334592,
+        0
+      ],
+      "bytes": 276,
+      "sha256": "27ca9d7f07282365937df3aee603dff5d169b1718bbff282cea17e4ef5208452",
+      "line_endings": "CRLF",
+      "verdict": 2,
+      "nodes": 5656372
+    },
+    {
+      "file": ".local/n11/next4-completion76/s5-10376293542535888896-8.out.csv",
+      "key": [
+        10376293542535888896,
+        8
+      ],
+      "bytes": 277,
+      "sha256": "27091d3b1a6227d80f195f63523b4e6e2764d4dd9d3315b63dc02c0cecb77a20",
+      "line_endings": "CRLF",
+      "verdict": 2,
+      "nodes": 4129518
+    },
+    {
+      "file": ".local/n11/next4-completion76/s5-1152921507962290176-16384.out.csv",
+      "key": [
+        1152921507962290176,
+        16384
+      ],
+      "bytes": 280,
+      "sha256": "15877c58d3a3244144fe82ee6de787860d8e771e02a3236f8864c905818f75bc",
+      "line_endings": "CRLF",
+      "verdict": 2,
+      "nodes": 3313663
+    },
+    {
+      "file": ".local/n11/next4-completion76/s5-10376293542535888896-16384.out.csv",
+      "key": [
+        10376293542535888896,
+        16384
+      ],
+      "bytes": 281,
+      "sha256": "ca3fe71d3997166b86fc4bf8bfd3728613d6e379e49400f8e2e9d44ad532c651",
+      "line_endings": "CRLF",
+      "verdict": 2,
+      "nodes": 3427272
+    },
+    {
+      "file": ".local/n11/next4-completion76/s5-1152921507962290176-32768.out.csv",
+      "key": [
+        1152921507962290176,
+        32768
+      ],
+      "bytes": 280,
+      "sha256": "1946ac24957ebd6b6878b7d533defaf0efdcb006ce88d5f9253c44f1cfbcfc07",
+      "line_endings": "CRLF",
+      "verdict": 2,
+      "nodes": 3969233
+    },
+    {
+      "file": ".local/n11/next4-completion76/s5-1152921507962290176-16777216.out.csv",
+      "key": [
+        1152921507962290176,
+        16777216
+      ],
+      "bytes": 283,
+      "sha256": "bbedff4eea66b339a37efe549aab50571925e503adae3259bfe46d1f58cb7e5c",
+      "line_endings": "CRLF",
+      "verdict": 2,
+      "nodes": 4421802
+    },
+    {
+      "file": ".local/n11/next4-completion76/s5-10376293542535888896-16777216.out.csv",
+      "key": [
+        10376293542535888896,
+        16777216
+      ],
+      "bytes": 284,
+      "sha256": "c2e9d9f1f7d16f4c2a601f360e1d06f6e95d9d1494a8a26f367bae4c287413f4",
+      "line_endings": "CRLF",
+      "verdict": 2,
+      "nodes": 5952054
+    },
+    {
+      "file": ".local/n11/next4-completion76/s5-1152921507962290176-33554432.out.csv",
+      "key": [
+        1152921507962290176,
+        33554432
+      ],
+      "bytes": 283,
+      "sha256": "a0ee5a20604692bf904fd35b3c7f7aa8d2bb2dc4b71bb552da1ef7a4eca64380",
+      "line_endings": "CRLF",
+      "verdict": 2,
+      "nodes": 5044548
+    },
+    {
+      "file": ".local/n11/next4-completion76/s5-1152921504608944128-637534208.out.csv",
+      "key": [
+        1152921504608944128,
+        637534208
+      ],
+      "bytes": 284,
+      "sha256": "731fb9bc637b9b23f707a8b4d61133c3f1c15ecc92ee3254b7e1cc0e25c44447",
+      "line_endings": "CRLF",
+      "verdict": 2,
+      "nodes": 4845495
+    }
+  ],
+  "combined_output": "research/experiments/n11-boundary-recovery-20261006/output/raw/next4-completion76-out.csv",
+  "combined_sha256": "46262aee45f8bc9335f74d0b62d2b1331ea95424f976c87a16fec8c705a3b00a",
+  "combined_bytes": 20835,
+  "combined_line_endings": "LF; source CRLF normalized only in combined copy, one LF separator added between source files; individual source hashes refer to original bytes",
+  "summary_sha256": "0b3527e04f0f64093c140f7a2336a511b88f6b807aafbbcbab8d965dcd6220bc",
+  "cache_original": ".local/n11/next4-completion76/cache-out/new-exact-s5.cache",
+  "cache_copy": "research/experiments/n11-boundary-recovery-20261006/output/next4-completion76-s5.cache",
+  "cache_sha256": "cf958d11dd4a4869299ec81147244e0745cc533615f68fe0d329037082330d0f",
+  "cache_bytes": 3579,
+  "validation": {
+    "targets": 76,
+    "completed_outputs": 76,
+    "output_cache_key_verdict_node_consistency": true,
+    "all_verdicts_loss": true,
+    "nodes_total": 283661853,
+    "unknown": 0,
+    "not_dispatched": [],
+    "runner_validation": "complete_class_local.read_targets and parse_saved_output",
+    "solver_rerun": false
+  }
+}
