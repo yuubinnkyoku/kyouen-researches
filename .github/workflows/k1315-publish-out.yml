@@ -1,0 +1,47 @@
+name: K1315 publish explore_k1315.out
+
+# Regenerates research/experiments/belowband-row3-20261125/explore_k1315.out
+# from the published frozen kit (explore_k1315.py sha256 29f7080a...,
+# engine_block.py sha256 582c93c1...) and publishes it only if the output
+# is byte-identical to the locally frozen observation packet
+# (sha256 558ed202ebdd0d80b6159856a836842dd10e73807d37c6eb392437f1175032eb).
+# Fires once when this workflow file itself lands on main.
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/k1315-publish-out.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  regenerate-and-publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Regenerate from published kit
+        working-directory: research/experiments/belowband-row3-20261125
+        env:
+          PYTHONHASHSEED: "1"
+        run: python3 explore_k1315.py > explore_k1315.out
+      - name: Gate on sha256 (frozen observation packet)
+        run: |
+          echo "558ed202ebdd0d80b6159856a836842dd10e73807d37c6eb392437f1175032eb  research/experiments/belowband-row3-20261125/explore_k1315.out" | sha256sum -c -
+      - name: Commit and push only on gate pass
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research/experiments/belowband-row3-20261125/explore_k1315.out
+          if git diff --cached --quiet; then
+            echo "explore_k1315.out already published; nothing to commit"
+          else
+            git commit -m "K1315: publish explore_k1315.out (byte-verified regeneration from published kit; sha256 558ed202...)"
+            git push
+          fi
