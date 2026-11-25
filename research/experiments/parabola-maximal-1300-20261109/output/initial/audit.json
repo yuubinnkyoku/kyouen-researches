@@ -1,0 +1,46 @@
+{
+  "p": 2647,
+  "size": 1300,
+  "outside_points": 1347,
+  "explicit_blockers": 1347,
+  "candidate_input_sha256": "4ef5b03ed0679a9c47bfebb3ea6581d85af5ea50b46151e219581721c5fde7ad",
+  "certificate_sha256": "1cacce2a24c35187abc6d294e67717016c18b00e81350c7a9ad9c335cdce2a76",
+  "base_geometry_receipt_sha256": "158df3bca612dd26646fb6fdd644c4ccb787807c39a9c4f4f57c925ae25b8009",
+  "checker_source_sha256": "f29e87171bd176032fe5ff42bfa390b8b7adf94f6641eac3d94bef539bc237db",
+  "included_geometry_sha256": "c817e7808e5d853a6ca0b897e5a0f454944f38069c8c32b5a10ef7f97b32261c",
+  "checker_binary_sha256": "3ff79f2bb0d47e00056c045e79609088bf318a20744457c8e9c323973d5ee398",
+  "returncode": 0,
+  "stdout": "VERIFIED_BLOCKERS 2647 1300 1347\n",
+  "rejected_controls": [
+    {
+      "name": "missing-row",
+      "returncode": 2
+    },
+    {
+      "name": "trailing-data",
+      "returncode": 2
+    },
+    {
+      "name": "wrong-prime",
+      "returncode": 2
+    },
+    {
+      "name": "duplicate-added",
+      "returncode": 3
+    },
+    {
+      "name": "selected-added",
+      "returncode": 3
+    },
+    {
+      "name": "unsorted-quad",
+      "returncode": 3
+    },
+    {
+      "name": "nonedge",
+      "returncode": 4
+    }
+  ],
+  "inclusion_maximal": true,
+  "scope": "Specific saved 1300-point safe set is inclusion-maximal, not a maximum-size claim. Checker reads no CNF."
+}

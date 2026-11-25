@@ -1,0 +1,13 @@
+{
+  "returncode": 0,
+  "stdout": "\nc parsing input formula with 7720 variables and 50616 clauses\n\nc finished parsing\n\nc detected empty clause; start verification via backward checking\n\nc 17166 of 50616 clauses in core                            \n\nc 118860 of 237786 lemmas in core using 13370355 resolution steps\n\nc 0 RAT lemmas in core; 0 redundant literals in core lemmas\n\ns VERIFIED\n\nc verification time: 32.083 seconds\n",
+  "stderr": "",
+  "elapsed_seconds": 32.22008629999982,
+  "timed_out": false,
+  "input_sha256": "b408d22039c90ffbf4c862ec510118c410c05566473339cc22054bf3c3ea6cd9",
+  "original_drat_sha256": "f0ce140db899e4c9009fced1bc38aa753315d71bd8eb9f1498db0c74ad77a7ea",
+  "checker_source_sha256": "78026871882de3f2fee66034e549e9c1a0a9a5291abd817d06f611f9ba0f355d",
+  "checker_binary_sha256": "72cc6c1d9cb77dadb9e919b879d562c59d7c8ee9a4730f49987c8042fb807f3e",
+  "method": "Pinned DRAT-trim -U; RUP-only backward check",
+  "verified": true
+}

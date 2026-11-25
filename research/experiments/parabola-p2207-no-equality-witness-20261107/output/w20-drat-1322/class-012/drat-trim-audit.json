@@ -1,0 +1,30 @@
+{
+  "checker": "drat-trim",
+  "checker_source": "https://github.com/marijnheule/drat-trim",
+  "checker_source_commit": "2e3b2dc0ecf938addbd779d42877b6ed69d9a985",
+  "checker_build": "gcc drat-trim.c -std=c99 -O2 -o drat-trim (Makefile default)",
+  "checker_binary_sha256": "92f0aa9575ed519d66a99b8b1b3dde6ece4618ae4c202a3a4b200265dda0aa7a",
+  "checked": "2026-11-12",
+  "p": 2647,
+  "target_size": 1322,
+  "note": "Independent second checker for W20; cross-check of the incremental-checker audits (001/102) and the primary audit for 012, whose incremental-checker audit exceeded the VM restart window.",
+  "shape_class": [
+    0,
+    1,
+    2
+  ],
+  "input_sha256": "22e8b0fdbb448f5ef1a7b4eef25283123be55c9861f71226aad45207120d7e65",
+  "proof_sha256": "0cb03ac31bb558bcbb60a448cb4effd4f509478ecf0c48d51192cebe27e6248d",
+  "variables": 14544,
+  "clauses": 85615,
+  "clauses_in_core": 35902,
+  "lemmas_in_core": 582768,
+  "total_lemmas": 1072076,
+  "resolution_steps": 353040071,
+  "rat_lemmas_in_core": 0,
+  "redundant_literals_in_core": 1910715,
+  "verification_seconds": 249.726,
+  "exit_code": 0,
+  "verdict": "VERIFIED",
+  "log": "~/workspace/kyouen-omp/tasks/w20-012-minimal/drat-trim.log"
+}

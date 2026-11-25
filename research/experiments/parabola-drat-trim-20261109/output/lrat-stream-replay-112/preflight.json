@@ -1,0 +1,25 @@
+{
+  "p": 2647,
+  "excluded_size": 1323,
+  "shape": "112",
+  "started_utc": "2026-11-09T09:51:15.178208+00:00",
+  "method": "LRAT hints; empty clause requires RUP conflict (K0714 local fix)",
+  "input_sha256": "d9cd7a0ff18a234b8d747aad0c302c12d130e42d45a07e6b996bf3e260592246",
+  "proof_raw_sha256": "3f2789475cea38cb8edd7ea43e5042cac4a6702a4c1ab04e367987155dad7ca1",
+  "proof_raw_bytes": 2711546166,
+  "proof_lines": 943588,
+  "source_path": "C:\\Users\\yuubi\\AppData\\Local\\Temp\\shape-upstream-drat-mkxsxyn9\\core.lrat",
+  "source_compressed": false,
+  "checker_source_sha256": "ca64680b89dde26ff2ea96b05c0fb926972eb307b74ffa18453e89a5da2988c8",
+  "checker_binary_sha256": "056fa7ad472ce13a2e1e062f6235af9e26fa1d9cafb763092821f143eb516cf8",
+  "driver_source_sha256": "cbd285e67715a196bb594b19ec80507ed4a96404f740422f7684689fc3c872b2",
+  "build_flags": [
+    "-std=c99",
+    "-O2",
+    "-DLONGTYPE",
+    "-Dgetc_unlocked=getc"
+  ],
+  "timeout_seconds": 600.0,
+  "schema_receipt_sha256": "898edff993edda60327f85549f8592e810c3b812fce043e52ea8a3a2726a1c15",
+  "proof_availability": "Local evidence; not assumed to exist in another checkout."
+}

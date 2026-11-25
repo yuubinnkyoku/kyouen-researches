@@ -1,0 +1,30 @@
+{
+  "p": 2647,
+  "h": 1323,
+  "target_size": 1322,
+  "class": [
+    0,
+    1,
+    2
+  ],
+  "variables": 14544,
+  "clauses": 85615,
+  "kept_edges": 53882,
+  "encoded_edges": 53886,
+  "input_sha256": "22e8b0fdbb448f5ef1a7b4eef25283123be55c9861f71226aad45207120d7e65",
+  "edge_input_sha256": "4e17fe105f191f781192466d0775a59d3c341b16b267ebe372ba279911f67a72",
+  "builder": "search_shape_class.build",
+  "builder_source_sha256": "989d291988992cc265a8caf77e6adf79248f4484783ec91252d5b72b31d2a611",
+  "generator_source_sha256": "a0a0d5f03879c65f53c40a0fcc4a6a0da34aee9efcef77a0b263aa2980250eba",
+  "solve_seconds": 1211.1709459519998,
+  "conflict_budget": 200000000,
+  "statistics": {
+    "restarts": 31562,
+    "conflicts": 992331,
+    "decisions": 2018110,
+    "propagations": 934316849
+  },
+  "solver_status": "SOLVER_UNSAT",
+  "proof_sha256": "0cb03ac31bb558bcbb60a448cb4effd4f509478ecf0c48d51192cebe27e6248d",
+  "proof_lines": 2143709
+}

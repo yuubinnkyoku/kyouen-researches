@@ -1,0 +1,57 @@
+{
+  "small_semantics": [
+    {
+      "p": 5,
+      "state_assignments": 16,
+      "accepted_classes": 4
+    },
+    {
+      "p": 7,
+      "state_assignments": 64,
+      "accepted_classes": 12
+    },
+    {
+      "p": 11,
+      "state_assignments": 1024,
+      "accepted_classes": 80
+    }
+  ],
+  "rejected_schema_mutants": [
+    "missing-one-hot",
+    "stray-positive-unit",
+    "bad-selector-geometry",
+    "duplicate-point-geometry",
+    "truncated-clause-count",
+    "point-selector-alias"
+  ],
+  "geometry_controls": [
+    {
+      "name": "real-edge",
+      "edge": [
+        0,
+        46,
+        1080,
+        1081
+      ],
+      "returncode": 0,
+      "stdout": "VERIFIED_EDGES 2207 1\n",
+      "stderr": ""
+    },
+    {
+      "name": "nonedge",
+      "edge": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "returncode": 4,
+      "stdout": "",
+      "stderr": "NONEDGE 0\n"
+    }
+  ],
+  "input_sha256": "b408d22039c90ffbf4c862ec510118c410c05566473339cc22054bf3c3ea6cd9",
+  "schema_source_sha256": "7021cb8b23fae7e3935e439df43679158c94fdc0d204f884fdc8c577670699d2",
+  "source_sha256": "6a8abef95ae4b4c65b732cabe49eb9413133a889b028cd8b6942f398895b4f7a",
+  "scope": "Small exhaustive state/auxiliary projection and six schema corruptions; a syntactically accepted nonedge must fail independent geometry. Not a general formal soundness theorem."
+}

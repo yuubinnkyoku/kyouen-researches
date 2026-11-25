@@ -1,0 +1,141 @@
+{
+ "bad": [
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0
+ ],
+ "counts": [
+  1296,
+  864,
+  864,
+  768,
+  180,
+  400,
+  130,
+  4200,
+  560,
+  532
+ ],
+ "engine_gate": "PASS",
+ "engine_sha": "bd5f22e415a78368c9b798296bc84948d5637decbf3c21a92404d45fb12e3a92",
+ "examples": [
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  []
+ ],
+ "hists": {
+  "D1_z0_k1": {
+   "0": 216,
+   "1": 216
+  },
+  "D1_z0_k2": {
+   "0": 216,
+   "1": 216
+  },
+  "D1_z0_k3": {
+   "0": 216,
+   "1": 216
+  },
+  "D2_z1_k2": {
+   "0": 216,
+   "1": 216
+  },
+  "D2_z1_k3": {
+   "0": 216,
+   "1": 216
+  },
+  "D3_z2_k3": {
+   "0": 216,
+   "1": 216
+  },
+  "D3_z2_k4": {
+   "0": 216,
+   "1": 216
+  }
+ },
+ "kit": "verify_k1285",
+ "ladder_hist": {
+  "0": 384,
+  "1": 384
+ },
+ "obs": {
+  "F1c_z1d4": {
+   "c": "2..4",
+   "claim": "finite observation only (open C-PC1z1-d4 c>=2 half)",
+   "m": "2..8",
+   "matches": 21,
+   "mismatches": 0
+  },
+  "G1c_z0d3": {
+   "c": "2..4",
+   "claim": "finite observation only (pure-count ladder open)",
+   "m": "2..8",
+   "matches": 21,
+   "mismatches": 0
+  },
+  "aladder_m1": {
+   "claim": "finite observation only",
+   "vals": [
+    1,
+    0,
+    1,
+    0,
+    2,
+    2,
+    2
+   ]
+  },
+  "aladder_z1d3": {
+   "a": "2..6",
+   "claim": "finite observation only",
+   "m": "2..8",
+   "matches": 35,
+   "mismatches": 0
+  },
+  "z0k0": {
+   "claim": "finite observation only (no universal claim)",
+   "g": "1..14",
+   "m": "1..8",
+   "matches": 112,
+   "mismatches": 0
+  },
+  "z1k1": {
+   "claim": "finite observation only (no universal claim)",
+   "g": "1..14",
+   "m": "1..8",
+   "matches": 112,
+   "mismatches": 0
+  },
+  "z2k1-clean-obs": {
+   "claim": "finite observation only (no universal claim)",
+   "g": "1..14",
+   "m": "1..8",
+   "matches": 112,
+   "mismatches": 0
+  },
+  "z2k2": {
+   "claim": "finite observation only (no universal claim)",
+   "g": "1..14",
+   "m": "1..8",
+   "matches": 112,
+   "mismatches": 0
+  }
+ },
+ "overall_bad": 0,
+ "tamper": null,
+ "total_comparisons": 9794
+}

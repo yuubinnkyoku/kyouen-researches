@@ -1,0 +1,48 @@
+{
+  "p": 2531,
+  "h": 1265,
+  "size": 1265,
+  "classes": [
+    {
+      "class": [
+        0,
+        0,
+        0
+      ],
+      "solver": "pysat Cadical195 budget 2e6",
+      "result": "UNSAT",
+      "seconds": 5.4
+    },
+    {
+      "class": [
+        0,
+        1,
+        1
+      ],
+      "solver": "cadical 1.7.3 WSL default -t 40000",
+      "result": "UNSAT",
+      "seconds_approx": 10800
+    },
+    {
+      "class": [
+        1,
+        0,
+        1
+      ],
+      "solver": "cadical 1.7.3 WSL default -t 20000",
+      "result": "UNSAT",
+      "seconds_approx": 7000
+    },
+    {
+      "class": [
+        1,
+        1,
+        2
+      ],
+      "solver": "cadical 1.7.3 WSL default -t 40000 + 2 seeded --sat runs",
+      "result": "running",
+      "started": "2026-11-14T00:36"
+    }
+  ],
+  "note": "3 of 4 classes UNSAT; if (1,1,2) is also UNSAT then A(2531) <= 1264, contradicting the audited lower bound 1261 only by 3"
+}

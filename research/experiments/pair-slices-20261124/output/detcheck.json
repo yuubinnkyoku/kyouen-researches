@@ -1,0 +1,86 @@
+{
+ "kit": "verify_k1285",
+ "verdict": "OFFICIAL-PASS",
+ "declared_stdout_sha256": "41762e1b986d08494f4afd0ab4d8f1eb5a406e3608bc8696991b2019df735730",
+ "verify_sha256": "a4165f68b48d2a6c95e9a3a6d728b9503bab226f93f48dfb28d568147b6e7edd",
+ "engine_pin": "bd5f22e415a78368c9b798296bc84948d5637decbf3c21a92404d45fb12e3a92",
+ "counts": [
+  1296,
+  864,
+  864,
+  768,
+  180,
+  400,
+  130,
+  4200,
+  560,
+  532
+ ],
+ "total": 9794,
+ "bad": 0,
+ "runs": {
+  "audit_run1": {
+   "sha256": "41762e1b986d08494f4afd0ab4d8f1eb5a406e3608bc8696991b2019df735730",
+   "identical": true,
+   "rc": 0
+  },
+  "audit_run2": {
+   "sha256": "41762e1b986d08494f4afd0ab4d8f1eb5a406e3608bc8696991b2019df735730",
+   "identical": true,
+   "rc": 0
+  },
+  "audit_run3": {
+   "sha256": "41762e1b986d08494f4afd0ab4d8f1eb5a406e3608bc8696991b2019df735730",
+   "identical": true,
+   "rc": 0
+  },
+  "audit_run4": {
+   "sha256": "41762e1b986d08494f4afd0ab4d8f1eb5a406e3608bc8696991b2019df735730",
+   "identical": true,
+   "rc": 0
+  }
+ },
+ "timestamp_utc": "2026-11-24T07:42:34.587408+00:00",
+ "tamper_battery": {
+  "engine": {
+   "rc": 2,
+   "declared_rc": 2
+  },
+  "zz0": {
+   "bad": 1296,
+   "declared_bad": 1296,
+   "rc": 1
+  },
+  "zz1": {
+   "bad": 864,
+   "declared_bad": 864,
+   "rc": 1
+  },
+  "zz2": {
+   "bad": 864,
+   "declared_bad": 864,
+   "rc": 1
+  },
+  "lad": {
+   "bad": 768,
+   "declared_bad": 768,
+   "rc": 1
+  },
+  "alm": {
+   "bad": 180,
+   "declared_bad": 180,
+   "rc": 1
+  },
+  "fl": {
+   "bad": 5,
+   "declared_bad": 5,
+   "rc": 1
+  },
+  "pb": {
+   "bad": 130,
+   "declared_bad": 130,
+   "rc": 1
+  }
+ },
+ "all_runs_byte_identical": true
+}

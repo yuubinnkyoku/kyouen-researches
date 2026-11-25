@@ -1,0 +1,57 @@
+{
+  "verifier_source_sha256": "c817e7808e5d853a6ca0b897e5a0f454944f38069c8c32b5a10ef7f97b32261c",
+  "binary_sha256": "73c4a15b3fb63770b8a8879f59d9f408369787d8da671f3040f7bb7312815028",
+  "cases": [
+    {
+      "name": "safe-three",
+      "input": "5 3\n0 1 2\n",
+      "expected_returncode": 0,
+      "returncode": 0,
+      "stdout": "5 3 0 0\r\n",
+      "stderr": "",
+      "elapsed_seconds": 0.10243360000004031,
+      "timed_out": false
+    },
+    {
+      "name": "unsafe-two-pairs",
+      "input": "5 4\n1 2 3 4\n",
+      "expected_returncode": 4,
+      "returncode": 4,
+      "stdout": "",
+      "stderr": "",
+      "elapsed_seconds": 0.03945629999998346,
+      "timed_out": false
+    },
+    {
+      "name": "duplicate",
+      "input": "5 3\n0 1 1\n",
+      "expected_returncode": 3,
+      "returncode": 3,
+      "stdout": "",
+      "stderr": "",
+      "elapsed_seconds": 0.04119059999993624,
+      "timed_out": false
+    },
+    {
+      "name": "truncated",
+      "input": "5 3\n0 1\n",
+      "expected_returncode": 2,
+      "returncode": 2,
+      "stdout": "",
+      "stderr": "",
+      "elapsed_seconds": 0.04832669999996142,
+      "timed_out": false
+    },
+    {
+      "name": "composite",
+      "input": "9 2\n0 1\n",
+      "expected_returncode": 2,
+      "returncode": 2,
+      "stdout": "",
+      "stderr": "",
+      "elapsed_seconds": 0.04461200000014287,
+      "timed_out": false
+    }
+  ],
+  "scope": "Finite parser and geometry controls, not general verifier soundness."
+}

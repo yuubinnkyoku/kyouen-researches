@@ -1,0 +1,54 @@
+{
+  "all_three_verified": true,
+  "p": 2647,
+  "excluded_size": 1324,
+  "implied_upper_bound": 1323,
+  "receipts": [
+    {
+      "returncode": 0,
+      "stdout": "steps=6099 rup=6099 rat=0 rat_checks=0 deletions=2655 empty=1 ok=1\nVERIFIED\n",
+      "stderr": "",
+      "seconds": 3.848329300000046,
+      "timed_out": false,
+      "shape": "a",
+      "p": 2647,
+      "target_size": 1324,
+      "input_sha256": "60db4f0320acc6820e321d272a35bec826a9e43724c94e3d97264dd9ae0c6e09",
+      "proof_sha256": "8af5699542431acedebcfdf77f2d463c2b2efc4d8d68ceee620a47999174b2a1",
+      "checker_source_sha256": "34249932790a9e9d924e9403b75563a2ff051277923301e34ace33e2a5a3650b",
+      "checker_binary_sha256": "77e2a18d2c39778d95969b7430dd7829a70156a75c69d1dc04599766aa038bd8",
+      "verified": true
+    },
+    {
+      "returncode": 0,
+      "stdout": "steps=7256 rup=7256 rat=0 rat_checks=0 deletions=6952 empty=1 ok=1\nVERIFIED\n",
+      "stderr": "",
+      "seconds": 28.09562910000011,
+      "timed_out": false,
+      "shape": "b",
+      "p": 2647,
+      "target_size": 1324,
+      "input_sha256": "585ae5b29f698a0caf565f1791f7548bc3569affdae35f063d17674facfae15e",
+      "proof_sha256": "ab22bfc955f89cf99176154f8e96ecd7cf5f0fad28c7f4df5fc57eb6d94a676a",
+      "checker_source_sha256": "34249932790a9e9d924e9403b75563a2ff051277923301e34ace33e2a5a3650b",
+      "checker_binary_sha256": "77e2a18d2c39778d95969b7430dd7829a70156a75c69d1dc04599766aa038bd8",
+      "verified": true
+    },
+    {
+      "returncode": 0,
+      "stdout": "steps=53064 rup=53064 rat=0 rat_checks=0 deletions=13273 empty=1 ok=1\nVERIFIED\n",
+      "stderr": "",
+      "seconds": 47.497347500000046,
+      "timed_out": false,
+      "shape": "c",
+      "p": 2647,
+      "target_size": 1324,
+      "input_sha256": "58b751368a3ae1fd7e61734acad983ff873e152c240f7bdb1aa9a1fe4001055e",
+      "proof_sha256": "c4263bca8cd3493ed2959368ed34af8540345a38a0a3ef2ec1e8094ed0f35913",
+      "checker_source_sha256": "34249932790a9e9d924e9403b75563a2ff051277923301e34ace33e2a5a3650b",
+      "checker_binary_sha256": "77e2a18d2c39778d95969b7430dd7829a70156a75c69d1dc04599766aa038bd8",
+      "verified": true
+    }
+  ],
+  "scope": "Actual DRAT replay only. Use the class-coverage proof and separately checked edge soundness to infer the geometric upper bound."
+}

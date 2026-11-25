@@ -1,0 +1,52 @@
+{
+  "walk_source_sha256": "3afb75b6c21034dc4446652ed812b33f2409c3cb71f76c3b22369b4ea390faaf",
+  "verifier_source_sha256": "c817e7808e5d853a6ca0b897e5a0f454944f38069c8c32b5a10ef7f97b32261c",
+  "toy_walks": [
+    {
+      "variables": 1,
+      "clauses": 1,
+      "actual_cost": 0,
+      "exact_optimum_by_enumeration": 0,
+      "completed_steps": 1
+    },
+    {
+      "variables": 1,
+      "clauses": 2,
+      "actual_cost": 1,
+      "exact_optimum_by_enumeration": 1,
+      "completed_steps": 50000
+    },
+    {
+      "variables": 2,
+      "clauses": 4,
+      "actual_cost": 2,
+      "exact_optimum_by_enumeration": 2,
+      "completed_steps": 50000
+    },
+    {
+      "variables": 5,
+      "clauses": 32,
+      "actual_cost": 1,
+      "exact_optimum_by_enumeration": 1,
+      "completed_steps": 50000
+    }
+  ],
+  "geometry_subsets": 96,
+  "unsafe_subsets": 27,
+  "geometry_modes": [
+    "unfiltered",
+    "modular-filter"
+  ],
+  "rejected_controls": [
+    "duplicate",
+    "out-of-range",
+    "composite",
+    "truncated-parameters",
+    "oversized",
+    "truncated-header",
+    "missing-case"
+  ],
+  "saved_original_cnf_violations": 41,
+  "saved_receipt_and_source_binding": "PASS",
+  "scope": "Small exhaustive toy objectives and sampled integer geometry; not a general soundness proof."
+}

@@ -1,0 +1,59 @@
+{
+  "p": 3251,
+  "h": 1625,
+  "size": 1625,
+  "records": [
+    {
+      "p": 3251,
+      "size": 1625,
+      "class": [
+        0,
+        0,
+        0
+      ],
+      "solver": "pysat Cadical195, budget 2e6",
+      "sat": false,
+      "seconds": 5.5
+    },
+    {
+      "p": 3251,
+      "size": 1625,
+      "class": [
+        1,
+        0,
+        1
+      ],
+      "solver": "cadical 1.7.3 WSL default",
+      "sat": false,
+      "started": "2026-11-13T04:53:18+09:00",
+      "finished": "2026-11-13T05:27:03+09:00",
+      "seconds_approx": 2025
+    },
+    {
+      "p": 3251,
+      "size": 1625,
+      "class": [
+        0,
+        1,
+        1
+      ],
+      "solver": "cadical 1.7.3 WSL default",
+      "sat": false,
+      "started": "2026-11-13T04:52:xx+09:00",
+      "finished": "2026-11-13T05:41:21+09:00",
+      "seconds_approx": 2940
+    },
+    {
+      "p": 3251,
+      "size": 1625,
+      "class": [
+        1,
+        1,
+        2
+      ],
+      "solver": "cadical 1.7.3 WSL default",
+      "sat": null,
+      "note": "still running at 2026-11-13T06:15"
+    }
+  ]
+}

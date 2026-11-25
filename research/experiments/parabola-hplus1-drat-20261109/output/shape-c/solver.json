@@ -1,0 +1,33 @@
+{
+  "p": 2647,
+  "h": 1323,
+  "target_size": 1324,
+  "shape": "c",
+  "origin_both_none": [
+    1,
+    1,
+    1
+  ],
+  "variables": 10582,
+  "clauses": 79017,
+  "point_base": 7936,
+  "provided_edges": 53886,
+  "used_edges": 53886,
+  "conflict_budget": 5000000,
+  "input_sha256": "58b751368a3ae1fd7e61734acad983ff873e152c240f7bdb1aa9a1fe4001055e",
+  "edge_input_sha256": "4e17fe105f191f781192466d0775a59d3c341b16b267ebe372ba279911f67a72",
+  "encoding_source_sha256": "f92bac87dcdb7c1bc4c59ebe0fe9fcc3da57e606922ee7cc809d7d2fb1e7670d",
+  "generator_source_sha256": "2bf732cde4562cd0172c3c891bc9846fb6db65381719cbe5ffd1e8e6fec3a984",
+  "python_sat": "1.9.dev21",
+  "solver": "Cadical195",
+  "solve_seconds": 11.974447599990526,
+  "statistics": {
+    "restarts": 523,
+    "conflicts": 26501,
+    "decisions": 50540,
+    "propagations": 17897831
+  },
+  "solver_status": "SOLVER_UNSAT",
+  "proof_sha256": "c4263bca8cd3493ed2959368ed34af8540345a38a0a3ef2ec1e8094ed0f35913",
+  "proof_lines": 126556
+}

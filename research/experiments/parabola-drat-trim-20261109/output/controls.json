@@ -1,0 +1,40 @@
+{
+  "cases": [
+    {
+      "name": "K0707-1-False",
+      "returncode": 1,
+      "stdout": "\nc parsing input formula with 3 variables and 1 clauses\n\nc WARNING: backward mode ignores deletion of (pseudo) unit clause [-1879036416] 1 0\n\nc finished parsing\n\nc conflict claimed, but not detected\n\ns NOT VERIFIED\n\nc verification time: 0.167 seconds\n",
+      "stderr": "",
+      "accepted": false
+    },
+    {
+      "name": "K0707-1-True",
+      "returncode": 1,
+      "stdout": "\nc parsing input formula with 3 variables and 2 clauses\n\nc WARNING: backward mode ignores deletion of (pseudo) unit clause [-1879047054] 1 0\n\nc finished parsing\n\nc conflict claimed, but not detected\n\ns NOT VERIFIED\n\nc verification time: 0.152 seconds\n",
+      "stderr": "",
+      "accepted": false
+    },
+    {
+      "name": "K0707--1-False",
+      "returncode": 1,
+      "stdout": "\nc parsing input formula with 3 variables and 1 clauses\n\nc WARNING: backward mode ignores deletion of (pseudo) unit clause [-1879042816] -1 0\n\nc finished parsing\n\nc conflict claimed, but not detected\n\ns NOT VERIFIED\n\nc verification time: 0.169 seconds\n",
+      "stderr": "",
+      "accepted": false
+    },
+    {
+      "name": "K0707--1-True",
+      "returncode": 1,
+      "stdout": "\nc parsing input formula with 3 variables and 2 clauses\n\nc WARNING: backward mode ignores deletion of (pseudo) unit clause [-1879040512] -1 0\n\nc finished parsing\n\nc conflict claimed, but not detected\n\ns NOT VERIFIED\n\nc verification time: 0.181 seconds\n",
+      "stderr": "",
+      "accepted": false
+    },
+    {
+      "name": "resolution-unsat",
+      "returncode": 0,
+      "stdout": "\nc parsing input formula with 2 variables and 4 clauses\n\nc finished parsing\n\nc detected empty clause; start verification via backward checking\n\nc 4 of 4 clauses in core                            \n\nc 2 of 3 lemmas in core using 5 resolution steps\n\nc 0 RAT lemmas in core; 0 redundant literals in core lemmas\n\ns VERIFIED\n\nc verification time: 0.183 seconds\n",
+      "stderr": "",
+      "accepted": true
+    }
+  ],
+  "binary_sha256": "4bff6189e532a0e0db2a229d5790eef856fe4585bbaa6979b7f573a7c275b8e7"
+}

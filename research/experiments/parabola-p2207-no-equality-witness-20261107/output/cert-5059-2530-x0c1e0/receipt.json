@@ -1,0 +1,26 @@
+{
+  "p": 5059,
+  "h": 2529,
+  "size": 2530,
+  "class": [
+    0,
+    1,
+    0
+  ],
+  "vars": 17702,
+  "clauses": 146540,
+  "kept_edges": 103550,
+  "sat": false,
+  "unknown": false,
+  "cnf_sha256": "d47c3461791c5908b5d73a657f756231011e7d8d9a579493584c723073760164",
+  "proof_sha256": "e62cff76a4609723c8a10b6d9c267b4f50c8b1205a811d68743ddac464a38105",
+  "proof_bytes": 56168077,
+  "checker": "drat_check_fast.cpp (K0780)",
+  "checker_rc": 0,
+  "checker_stats": "steps=293830 rup=293830 rat=0 rat_checks=0 deletions=389803 delete_misses=0 empty=1 ok=1",
+  "checker_last_line": "VERIFIED",
+  "verified": true,
+  "check_seconds": 327.4,
+  "note": "re-verified on disk after a concurrent-run race corrupted the first receipt",
+  "conclusion": "A(5059) <= 2529"
+}

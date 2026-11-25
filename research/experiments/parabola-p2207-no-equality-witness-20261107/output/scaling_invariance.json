@@ -1,0 +1,82 @@
+{
+  "p": 2207,
+  "candidate": "research\\experiments\\parabola-p2207-1104-witness-20261110\\output\\candidate.txt",
+  "candidate_sha256": "ce97d4a9447fd32cd67e3cfad59151774fa45cf90c8985287abb1a45480e2347",
+  "edges": 639621,
+  "scaling": 1560,
+  "scaling_inverse_of": 307,
+  "raw": {
+    "label": "raw witness",
+    "size": 1104,
+    "class": {
+      "contains_origin": true,
+      "complete": [
+        307
+      ],
+      "empty": [
+        1078
+      ],
+      "size": 1104,
+      "x": 1,
+      "c": 1,
+      "e": 1
+    },
+    "edges_inside": 0,
+    "edges_inside_concyclic": 0,
+    "first_edges": []
+  },
+  "scaled": {
+    "label": "scaled by 307^-1",
+    "size": 1104,
+    "class": {
+      "contains_origin": true,
+      "complete": [
+        1
+      ],
+      "empty": [
+        54
+      ],
+      "size": 1104,
+      "x": 1,
+      "c": 1,
+      "e": 1
+    },
+    "edges_inside": 1957,
+    "edges_inside_concyclic": 1957,
+    "first_edges": [
+      [
+        0,
+        46,
+        1080,
+        1081
+      ],
+      [
+        0,
+        339,
+        765,
+        1103
+      ],
+      [
+        1,
+        421,
+        1891,
+        2101
+      ],
+      [
+        1,
+        526,
+        1891,
+        1996
+      ],
+      [
+        1,
+        841,
+        1471,
+        2101
+      ]
+    ]
+  },
+  "sum_check": {
+    "note": "mod-p four-sums are plentiful and do not imply integer concyclicity; the audit of this witness already recorded 27941252 mod-p filtered candidates with nonzero determinant"
+  }
+}

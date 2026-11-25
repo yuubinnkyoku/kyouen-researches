@@ -1,0 +1,172 @@
+{
+  "small_cases": [
+    {
+      "p": 3,
+      "shape": "a",
+      "valid_assignments": 2,
+      "geometrically_unsafe": 0,
+      "provided_edges": 0
+    },
+    {
+      "p": 3,
+      "shape": "b",
+      "valid_assignments": 1,
+      "geometrically_unsafe": 0,
+      "provided_edges": 0
+    },
+    {
+      "p": 3,
+      "shape": "c",
+      "valid_assignments": 0,
+      "geometrically_unsafe": 0,
+      "provided_edges": 0
+    },
+    {
+      "p": 5,
+      "shape": "a",
+      "valid_assignments": 4,
+      "geometrically_unsafe": 0,
+      "provided_edges": 0
+    },
+    {
+      "p": 5,
+      "shape": "b",
+      "valid_assignments": 4,
+      "geometrically_unsafe": 0,
+      "provided_edges": 0
+    },
+    {
+      "p": 5,
+      "shape": "c",
+      "valid_assignments": 2,
+      "geometrically_unsafe": 0,
+      "provided_edges": 0
+    },
+    {
+      "p": 7,
+      "shape": "a",
+      "valid_assignments": 8,
+      "geometrically_unsafe": 0,
+      "provided_edges": 0
+    },
+    {
+      "p": 7,
+      "shape": "b",
+      "valid_assignments": 12,
+      "geometrically_unsafe": 0,
+      "provided_edges": 0
+    },
+    {
+      "p": 7,
+      "shape": "c",
+      "valid_assignments": 12,
+      "geometrically_unsafe": 0,
+      "provided_edges": 0
+    },
+    {
+      "p": 11,
+      "shape": "a",
+      "valid_assignments": 32,
+      "geometrically_unsafe": 0,
+      "provided_edges": 0
+    },
+    {
+      "p": 11,
+      "shape": "b",
+      "valid_assignments": 80,
+      "geometrically_unsafe": 0,
+      "provided_edges": 0
+    },
+    {
+      "p": 11,
+      "shape": "c",
+      "valid_assignments": 160,
+      "geometrically_unsafe": 0,
+      "provided_edges": 0
+    },
+    {
+      "p": 13,
+      "shape": "a",
+      "valid_assignments": 64,
+      "geometrically_unsafe": 0,
+      "provided_edges": 0
+    },
+    {
+      "p": 13,
+      "shape": "b",
+      "valid_assignments": 192,
+      "geometrically_unsafe": 0,
+      "provided_edges": 0
+    },
+    {
+      "p": 13,
+      "shape": "c",
+      "valid_assignments": 480,
+      "geometrically_unsafe": 0,
+      "provided_edges": 0
+    },
+    {
+      "p": 17,
+      "shape": "a",
+      "valid_assignments": 256,
+      "geometrically_unsafe": 32,
+      "provided_edges": 2
+    },
+    {
+      "p": 17,
+      "shape": "b",
+      "valid_assignments": 1024,
+      "geometrically_unsafe": 192,
+      "provided_edges": 2
+    },
+    {
+      "p": 17,
+      "shape": "c",
+      "valid_assignments": 3584,
+      "geometrically_unsafe": 352,
+      "provided_edges": 2
+    }
+  ],
+  "valid_assignments": 5917,
+  "edge_controls": [
+    "actual-edge",
+    "nonedge",
+    "duplicate-point",
+    "out-of-range",
+    "missing-point",
+    "extra-data"
+  ],
+  "provided_edges_rechecked": 53886,
+  "edge_input_sha256": "4e17fe105f191f781192466d0775a59d3c341b16b267ebe372ba279911f67a72",
+  "audits": [
+    {
+      "shape": "a",
+      "variables": 7938,
+      "clauses": 73731,
+      "proof_lines": 19525,
+      "verified": true,
+      "input_sha256": "60db4f0320acc6820e321d272a35bec826a9e43724c94e3d97264dd9ae0c6e09",
+      "proof_sha256": "8af5699542431acedebcfdf77f2d463c2b2efc4d8d68ceee620a47999174b2a1"
+    },
+    {
+      "shape": "b",
+      "variables": 9260,
+      "clauses": 76370,
+      "proof_lines": 56616,
+      "verified": true,
+      "input_sha256": "585ae5b29f698a0caf565f1791f7548bc3569affdae35f063d17674facfae15e",
+      "proof_sha256": "ab22bfc955f89cf99176154f8e96ecd7cf5f0fad28c7f4df5fc57eb6d94a676a"
+    },
+    {
+      "shape": "c",
+      "variables": 10582,
+      "clauses": 79017,
+      "proof_lines": 126556,
+      "verified": true,
+      "input_sha256": "58b751368a3ae1fd7e61734acad983ff873e152c240f7bdb1aa9a1fe4001055e",
+      "proof_sha256": "c4263bca8cd3493ed2959368ed34af8540345a38a0a3ef2ec1e8094ed0f35913"
+    }
+  ],
+  "independent_full_clause_schemas_and_prefix_counters": "PASS for all three 2647 inputs",
+  "scope": "Small class/geometry equivalence, replay of supplied-edge geometry, and exact reconstruction/hash binding of existing DRAT audits. DRAT proofs themselves were not replayed in this regression."
+}

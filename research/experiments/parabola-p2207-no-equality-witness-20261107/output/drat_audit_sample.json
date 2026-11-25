@@ -1,0 +1,33 @@
+{
+  "p": 2207,
+  "records": [
+    {
+      "d": 1,
+      "clauses": 31868,
+      "proof_lines": 22,
+      "proof_bytes": 252,
+      "solver_said": "UNSAT",
+      "checker_rc": 0,
+      "checker_out": "VERIFIED"
+    },
+    {
+      "d": 1050,
+      "clauses": 31868,
+      "proof_lines": 159,
+      "proof_bytes": 3975,
+      "solver_said": "UNSAT",
+      "checker_rc": 0,
+      "checker_out": "VERIFIED"
+    },
+    {
+      "d": 1103,
+      "clauses": 31868,
+      "proof_lines": 111,
+      "proof_bytes": 2525,
+      "solver_said": "UNSAT",
+      "checker_rc": 0,
+      "checker_out": "VERIFIED"
+    }
+  ],
+  "note": "verified proofs are certificates that the CNF is UNSAT"
+}

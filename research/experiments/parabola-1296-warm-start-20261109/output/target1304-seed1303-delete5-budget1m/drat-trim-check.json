@@ -1,0 +1,17 @@
+{
+  "cnf_sha256": "571bc5eb0b184afddaddae900edc7101d6d1225fccb72777f0e961905b8edfac",
+  "proof_sha256": "0d2cbdd4df161de4c1bd8843b0283bfee6d5ef81f752bb2506c2bfd8173c4ecb",
+  "checker_source": "https://github.com/marijnheule/drat-trim",
+  "checker_commit": "2e3b2dc0ecf938addbd779d42877b6ed69d9a985",
+  "checker_source_sha256": "d834b649f437e091597f5347f259b9f681087f89ca0844d0cee250a1a1a0c2ee",
+  "build_command": "gcc -D_GNU_SOURCE -O2 -std=c99 drat-trim.c -o drat-trim",
+  "checker_returncode": 0,
+  "checker_result": "VERIFIED",
+  "truncated_first_100_lines_returncode": 1,
+  "truncated_result": "NOT VERIFIED",
+  "core_clauses": 30395,
+  "core_lemmas": 256645,
+  "rat_lemmas_in_core": 0,
+  "verification_seconds_reported": 121.040,
+  "scope": "fixed-pair bounded-deletion CNF; not a global upper bound"
+}

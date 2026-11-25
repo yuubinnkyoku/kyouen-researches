@@ -1,0 +1,34 @@
+{
+  "p": 2647,
+  "size": 1301,
+  "removed": [
+    1300,
+    2262
+  ],
+  "added": [
+    385,
+    610,
+    1723
+  ],
+  "candidate_input_sha256": "1e02ea20ab61516d267887a7a31fa1b2aefd4aa9c305da403c60468da9bfc27b",
+  "input_cnf_sha256": "68ce0d6ace7d4a7ba59eebcd0ad63ab9dc35470fd12aae81e166f237b0139cf7",
+  "variables": 35121,
+  "clauses": 122752,
+  "all_model_clauses_satisfied": true,
+  "decoded_points_match": true,
+  "independent_geometry_verified": true,
+  "geometry_receipt_sha256": "beef37914fe547ccf3f90d89cf9def1098ea54937f48b69928ee9d9d6328b144",
+  "fully_fixed_point_assumptions": 3966,
+  "statistics": {
+    "restarts": 0,
+    "conflicts": 0,
+    "decisions": 3,
+    "propagations": 35121
+  },
+  "completion_seconds": 0.360754100000122,
+  "python_sat": "1.9.dev21",
+  "source_sha256": "9d5e58c02838d82daf5e3267e30953594e99982c0133dec579ad87aa7099776d",
+  "next_search_status": "NO_PROJECTED_IMPROVEMENT_FOUND",
+  "next_search_nonexistence_claim": false,
+  "scope": "Point-fixed model completion and independent geometry receipt binding. No unrestricted SAT rerun or global upper bound."
+}

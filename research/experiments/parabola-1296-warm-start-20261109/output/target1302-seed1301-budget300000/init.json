@@ -1,0 +1,18 @@
+{
+  "p": 2647,
+  "d": 1323,
+  "target": 1302,
+  "empty_bound": 23,
+  "conflict_budget": 300000,
+  "variables": 33846,
+  "clauses": 120204,
+  "base_cnf_sha256": "0f09fc6efce1ba1b3df795eef24e4bb014fcfad836f31d4e6ba7e99b242ff0b3",
+  "encoded_cnf_sha256": "99e3aa48bfe648eef07efbc0f654c773c62855a1711149579016a2d991c1ce20",
+  "warm_input_sha256": "c03cca021b9b27b4c6e797dca80418eaa3a98186cecdaf67f1b4da2e944c8c1f",
+  "worker_sha256": "8183586fe73a0c26e70b54ec4f576c59ae2ac1be35a4b92e8c23918b47261d85",
+  "warm_source": "research/experiments/parabola-1296-warm-start-20261109/output/target1301-seed1300-budget300000/candidate.txt",
+  "encoder_sha256": "9b96e84cc63ceaa31b317e5db1eec86552cf8b9ed8e9f01b62fc7332fe9f3681",
+  "python_sat": "1.9.dev21",
+  "solver": "Cadical195",
+  "scope": "0 and pair d fixed; all other pairs low/high/empty; UNSAT is unaudited and applies only to this d"
+}

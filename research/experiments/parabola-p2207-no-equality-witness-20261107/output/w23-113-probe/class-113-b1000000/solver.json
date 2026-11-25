@@ -1,0 +1,29 @@
+{
+  "p": 2647,
+  "h": 1323,
+  "target_size": 1322,
+  "class": [
+    1,
+    1,
+    3
+  ],
+  "variables": 17180,
+  "clauses": 90891,
+  "kept_edges": 53886,
+  "encoded_edges": 53886,
+  "input_sha256": "eb5ff4d01f5792cad1f638edd83be0faecab2349050ed14c27dab4aa012d8361",
+  "edge_input_sha256": "4e17fe105f191f781192466d0775a59d3c341b16b267ebe372ba279911f67a72",
+  "builder": "search_shape_class.build",
+  "builder_source_sha256": "989d291988992cc265a8caf77e6adf79248f4484783ec91252d5b72b31d2a611",
+  "generator_source_sha256": "baedd1440010b1dd2ff6c4039663037135eb8071ca4339585ed848a0cfe534ae",
+  "solve_seconds": 326.8281872530006,
+  "conflict_budget": 1000000,
+  "statistics": {
+    "restarts": 29997,
+    "conflicts": 1000000,
+    "decisions": 2347631,
+    "propagations": 909246608
+  },
+  "solver_status": "UNKNOWN",
+  "timed_out": false
+}
