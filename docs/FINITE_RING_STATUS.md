@@ -204,6 +204,9 @@ K(13)≥10（K1058 訂正）、s(13)=7 はランダム測定値。
   `AG(2,7)` s=2 の G=2 は極大 7-キャップの 5-部分集合 49,392 個（K1335）、
   `AG(2,5)` s=2 の G=2 は極大 5-キャップの 4-部分集合 3,000 個（K1336）。
   G=2 の機構は「子に G=0（極大）と G=1（非極大）が混在」（K1336 で証明済み）。
+  `AG(2,7)` s=2 の Grundy はサイズ別に完全分解できる（K1338）: 6-キャップは
+  極大 271,656 / only8 172,872（G=0）/ only7 16,464（G=1）で混在 0、
+  5-キャップは G=2 が 49,392・G=1 が 395,136。
 - 実験: [s-parameter-kyouen-20261125](../research/experiments/s-parameter-kyouen-20261125/report.md)・[parity-characterization-20261125](../research/experiments/parity-characterization-20261125/report.md)
 
 ## 0c. 高速な反転平面構成（新）
