@@ -155,6 +155,15 @@ for ALL z >= 11; only the absorption side needs the slice proofs.
   definition-domain exclusion, even-z station identity, F single-point
   at s=22, base-spot candidate 0, fifteenth-tail pre-computation)
   remains the publishing lane's handoff item and was NOT touched here.
+- **Fetch-back verification (same session, post-push):** immediately
+  after commit `1ccc8587` landed, all 12 published files of this kit
+  were re-fetched at that sha via get_file_contents and compared
+  byte-for-byte against the local push payloads: **12/12
+  byte-identical PASS** (K1332 item, this log, kit README,
+  engine_block.py, verify_z21_indep.py/.out, compare_z21.py/.out,
+  compare_z20.py/.out, z20_crossrun/explore_z20f15.py,
+  z20_crossrun/z20_run1.out). Head at refetch time: `cead357b`
+  (parallel PG(2,9) lane; no interaction with this kit).
 
 ## 5. Handoff
 
