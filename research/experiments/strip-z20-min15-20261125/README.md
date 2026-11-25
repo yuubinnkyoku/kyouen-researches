@@ -140,3 +140,37 @@ proofs. The paper proofs, the slot claim and the verification machine belong to
 the declaration lane. Section (g) is a pure closed-form pre-computation: it uses
 no engine recursion at all and inherits only the published K0832 single-token
 closed form.
+
+## Verification machine (added by the K1335 declaration lane)
+
+- `verify_k1335.py` — sha256
+  `5ee843cd33543c98f2759c293824c8c9673ba5418c3d9dfab36b2c19f6f72770`
+  (the K1335 declaration-lane verification machine; structural copy of the
+  published `verify_k1330.py` by the disclosed textual diff: z 19→20, cell
+  rungs 13→14 (the provisional census label A8 is hereby formalised as
+  A820f15, the T-Z20 base cell), floor 14→15, T-Z20 claim position R = m+21,
+  the published z=19 13-line cell transcriptions plus the T-Z19 m>=14
+  C-hand anchor, the z-grid extension to z ∈ {0..21} (the (ii') below-band
+  supply child now lands at z'=21, one plane above the z=20 slice), and the
+  D6 witness literals of the z=20 claims. Startup pin `bd5f22e4…` asserted
+  before any battery point; engine block byte-identical to the
+  K1282..K1330 chain.)
+- Declaration battery (fail-closed, **16,859 points**): D1 cells 1,470 /
+  D2 strip 185 / D3 z19-line anchors 459 / D4 stair anchors 434 / D5 self
+  anchors 14,058 / D6 witness literals 23 / D7 extension anchors 125 /
+  D8 below-band 105. Any single point off fails exactly its gate (rc 1,
+  overall_bad flagged); an engine-pin mismatch stops at rc 2 before any
+  sweep.
+- Deterministic: predry EIGHT runs (default ×2, PYTHONHASHSEED=random/1/0
+  same cwd, env -i isolated dirs ×3 via `/usr/local/bin/python3`)
+  byte-identical; stdout sha256 `759bcd5f…` (~21.9 s per run).
+- Tamper battery: 8 modes, all fail-closed BEFORE publication
+  (`--tamper-engine` → rc 2; per-gate modes → rc 1 with exactly the
+  targeted gate flagged bad).
+- The machine executes the DECLARED claims of the single-owner note
+  `research/log/2026-11-25-strip-z20-min15-single-owner-note.md`
+  (commit `acb18271`): the 14-cell closed forms F20f15..A820f15, the strip
+  theorem T-Z20 (min>=15, base m=15 trivial absorption through A820f15)
+  and their corollaries. Official runs (publish-then-execute: executed
+  from THESE published bytes, pushed as `official_runs/run1..run4.out`
+  and `detcheck.json`) follow this publication.
