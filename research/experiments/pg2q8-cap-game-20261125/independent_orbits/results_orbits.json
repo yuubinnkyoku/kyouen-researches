@@ -1,0 +1,551 @@
+{
+ "results": [
+  {
+   "task": 0,
+   "check": "board header 73 73",
+   "ok": true,
+   "detail": "n=73 b=73"
+  },
+  {
+   "task": 0,
+   "check": "73 lines of 9 points",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "task": 0,
+   "check": "every point pair on exactly one line",
+   "ok": true,
+   "detail": "pairs=2628"
+  },
+  {
+   "task": 0,
+   "check": "board line set == construction from GF(8)",
+   "ok": true,
+   "detail": "|lines|=73"
+  },
+  {
+   "task": 1,
+   "check": "hyperoval (10 pts) is a cap (no 3 collinear)",
+   "ok": true,
+   "detail": "|S|=10"
+  },
+  {
+   "task": 1,
+   "check": "hyperoval (10 pts) is maximal (no addable point)",
+   "ok": true,
+   "detail": "addable=0 blocked=73/73"
+  },
+  {
+   "task": 1,
+   "check": "hyperoval (10 pts) covers all points by pair-lines",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "task": 1,
+   "check": "hyperoval (10 pts) all C(n,3) triples non-collinear",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "task": 1,
+   "check": "6-cap (6 pts) is a cap (no 3 collinear)",
+   "ok": true,
+   "detail": "|S|=6"
+  },
+  {
+   "task": 1,
+   "check": "6-cap (6 pts) is maximal (no addable point)",
+   "ok": true,
+   "detail": "addable=0 blocked=73/73"
+  },
+  {
+   "task": 1,
+   "check": "6-cap (6 pts) covers all points by pair-lines",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "task": 1,
+   "check": "6-cap (6 pts) all C(n,3) triples non-collinear",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "task": 2,
+   "check": "GF(8) axioms + irreducibility of x^3+x+1",
+   "ok": true,
+   "detail": "0 violations"
+  },
+  {
+   "task": 2,
+   "check": "14 generators built from 3x3 matrices over GF(8)",
+   "ok": true,
+   "detail": "E_01(1), E_01(2), E_02(1), E_02(2), E_10(1), E_10(2), E_12(1), E_12(2), E_20(1), E_20(2), E_21(1), E_21(2), diag(w,1,1), swap(0,1)"
+  },
+  {
+   "task": 2,
+   "check": "each generator is a permutation of the 73 points",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "task": 2,
+   "check": "each generator has nonzero determinant",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "task": 2,
+   "check": "ALL 14 generators map all 73 lines onto lines (collineations)",
+   "ok": true,
+   "detail": "14 x 73 = 1022 line images checked"
+  },
+  {
+   "task": 2,
+   "check": "generators E_01(1) and diag(w,1,1) induce permutations of the 73 lines",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "task": 2,
+   "check": "|<generators>| computed by Schreier-Sims",
+   "ok": true,
+   "detail": "order=16482816 verify_failures=0 base=[1, 0, 9, 2, 10] orbits=[73, 72, 64, 7, 7]"
+  },
+  {
+   "task": 2,
+   "check": "|PGL(3,8)| = 511*504*448/7 = 16482816",
+   "ok": true,
+   "detail": "511*504*448 = 115379712, /7 = 16482816"
+  },
+  {
+   "task": 2,
+   "check": "Schreier-Sims order equals |PGL(3,8)| => <gens> = PGL(3,8)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "task": 2,
+   "check": "base sizes 73*72*64*49 = 16482816",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "task": 2,
+   "check": "transitive on the 73 points",
+   "ok": true,
+   "detail": "orbit size 73"
+  },
+  {
+   "task": 2,
+   "check": "transitive on ordered pairs of distinct points",
+   "ok": true,
+   "detail": "5256 = 73*72"
+  },
+  {
+   "task": 2,
+   "check": "transitive on ordered frames (non-collinear triples)",
+   "ok": true,
+   "detail": "336384 = 73*72*64"
+  },
+  {
+   "task": 3,
+   "check": "start mask has popcount 10",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "task": 3,
+   "check": "orbit size",
+   "ok": true,
+   "detail": "32704 (expected 32704)"
+  },
+  {
+   "task": 3,
+   "check": "every orbit member is a 10-point set",
+   "ok": true,
+   "detail": "sizes: {10: 32704}"
+  },
+  {
+   "task": 3,
+   "check": "every orbit member is a cap",
+   "ok": true,
+   "detail": "0 failures"
+  },
+  {
+   "task": 3,
+   "check": "every orbit member is maximal",
+   "ok": true,
+   "detail": "0 failures"
+  },
+  {
+   "task": 3,
+   "check": "orbit size == census total number of 10-caps",
+   "ok": true,
+   "detail": "census 10-caps=32704, orbit=32704"
+  },
+  {
+   "task": 3,
+   "check": "all 14 generators preserve cap-maximality (addable set maps)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "task": 4,
+   "check": "orbit size of start 6-cap",
+   "ok": true,
+   "detail": "686784 (expected 686784)"
+  },
+  {
+   "task": 4,
+   "check": "every orbit member is a 6-point set",
+   "ok": true,
+   "detail": "sizes: {6: 686784}"
+  },
+  {
+   "task": 4,
+   "check": "sample of 500 orbit members: all caps",
+   "ok": true,
+   "detail": "0 failures"
+  },
+  {
+   "task": 4,
+   "check": "sample of 500 orbit members: all maximal",
+   "ok": true,
+   "detail": "0 failures"
+  },
+  {
+   "task": 4,
+   "check": "all 14 generators preserve cap-maximality (addable set maps)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "task": 4,
+   "check": "12 independently sampled maximal 6-caps verified cap+maximal",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "task": 4,
+   "check": "some sampled caps lie in the start orbit",
+   "ok": true,
+   "detail": "7/12"
+  },
+  {
+   "task": 4,
+   "check": "some sampled caps do NOT lie in the start orbit",
+   "ok": true,
+   "detail": "5/12 outside"
+  },
+  {
+   "task": 4,
+   "check": ">=3 distinct maximal-6-cap orbits found",
+   "ok": true,
+   "detail": "3 orbits"
+  },
+  {
+   "task": 4,
+   "check": "every computed maximal-6-cap orbit has size 686784",
+   "ok": true,
+   "detail": "sizes=[686784, 686784, 686784]"
+  },
+  {
+   "task": 4,
+   "check": "the computed orbits are pairwise disjoint",
+   "ok": true,
+   "detail": "|union|=2060352"
+  },
+  {
+   "task": 4,
+   "check": "union size == 3*686784",
+   "ok": true,
+   "detail": "2060352"
+  },
+  {
+   "task": 4,
+   "check": "census total of maximal 6-caps == 3*686784",
+   "ok": true,
+   "detail": "census=2060352, 3*686784=2060352"
+  },
+  {
+   "task": 4,
+   "check": "computed orbits exhaust all maximal 6-caps (union == census total)",
+   "ok": true,
+   "detail": "union=2060352 census=2060352"
+  },
+  {
+   "task": 4,
+   "check": "hyperoval orbit is disjoint from the 6-cap orbits",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "task": 5,
+   "check": "|PGL(3,8)| = 16482816",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "task": 5,
+   "check": "|GL(3,8)| = 511*504*448 = 7*|PGL|",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "task": 5,
+   "check": "orbit*stabilizer = |PGL| for hyperoval",
+   "ok": true,
+   "detail": "16482816 = 32704 * 504 (remainder 0)"
+  },
+  {
+   "task": 5,
+   "check": "orbit*stabilizer = |PGL| for 6-cap",
+   "ok": true,
+   "detail": "16482816 = 686784 * 24 (remainder 0)"
+  },
+  {
+   "task": 5,
+   "check": "hyperoval stabilizer = 16482816/32704 = 504",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "task": 5,
+   "check": "maximal-6-cap stabilizer = 16482816/686784 = 24",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "task": 5,
+   "check": "504 = |PGL(2,8)| = 8*(8^2-1)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "task": 5,
+   "check": "24 = |S4|",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "task": 5,
+   "check": "BSGS order equals |PGL| (independent computation)",
+   "ok": true,
+   "detail": "16482816"
+  }
+ ],
+ "generators": [
+  "E_01(1)",
+  "E_01(2)",
+  "E_02(1)",
+  "E_02(2)",
+  "E_10(1)",
+  "E_10(2)",
+  "E_12(1)",
+  "E_12(2)",
+  "E_20(1)",
+  "E_20(2)",
+  "E_21(1)",
+  "E_21(2)",
+  "diag(w,1,1)",
+  "swap(0,1)"
+ ],
+ "pgl_order": 16482816,
+ "bsgs": {
+  "base": [
+   1,
+   0,
+   9,
+   2,
+   10
+  ],
+  "orbit_sizes": [
+   73,
+   72,
+   64,
+   7,
+   7
+  ],
+  "num_level_gens": [
+   14,
+   7,
+   5,
+   2,
+   1
+  ],
+  "order": 16482816,
+  "verify_failures": 0
+ },
+ "hyperoval_orbit": 32704,
+ "cap6_orbit": 686784,
+ "cap6_orbit_sizes": [
+  686784,
+  686784,
+  686784
+ ],
+ "cap6_orbit_reps": [
+  [
+   10,
+   47,
+   49,
+   55,
+   61,
+   64
+  ],
+  [
+   7,
+   10,
+   41,
+   43,
+   59,
+   61
+  ],
+  [
+   0,
+   1,
+   18,
+   31,
+   33,
+   43
+  ]
+ ],
+ "census_10caps": 32704,
+ "census_maximal_6caps": 2060352,
+ "sampled_6caps": [
+  {
+   "cap": [
+    14,
+    22,
+    27,
+    32,
+    69,
+    71
+   ],
+   "in_start_orbit": true
+  },
+  {
+   "cap": [
+    9,
+    42,
+    50,
+    51,
+    57,
+    60
+   ],
+   "in_start_orbit": true
+  },
+  {
+   "cap": [
+    7,
+    10,
+    41,
+    43,
+    59,
+    61
+   ],
+   "in_start_orbit": false
+  },
+  {
+   "cap": [
+    0,
+    12,
+    20,
+    40,
+    47,
+    65
+   ],
+   "in_start_orbit": true
+  },
+  {
+   "cap": [
+    7,
+    9,
+    37,
+    40,
+    50,
+    58
+   ],
+   "in_start_orbit": true
+  },
+  {
+   "cap": [
+    3,
+    8,
+    11,
+    14,
+    57,
+    64
+   ],
+   "in_start_orbit": false
+  },
+  {
+   "cap": [
+    10,
+    15,
+    22,
+    28,
+    41,
+    66
+   ],
+   "in_start_orbit": false
+  },
+  {
+   "cap": [
+    0,
+    1,
+    18,
+    31,
+    33,
+    43
+   ],
+   "in_start_orbit": false
+  },
+  {
+   "cap": [
+    3,
+    7,
+    15,
+    32,
+    42,
+    57
+   ],
+   "in_start_orbit": false
+  },
+  {
+   "cap": [
+    20,
+    26,
+    44,
+    48,
+    65,
+    70
+   ],
+   "in_start_orbit": true
+  },
+  {
+   "cap": [
+    10,
+    28,
+    44,
+    57,
+    65,
+    66
+   ],
+   "in_start_orbit": true
+  },
+  {
+   "cap": [
+    2,
+    7,
+    19,
+    59,
+    66,
+    72
+   ],
+   "in_start_orbit": true
+  }
+ ]
+}

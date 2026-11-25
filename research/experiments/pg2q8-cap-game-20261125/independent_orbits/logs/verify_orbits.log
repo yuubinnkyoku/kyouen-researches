@@ -1,0 +1,109 @@
+
+TASK 0. Board + geometry
+------------------------
+  [PASS] board header 73 73                                         n=73 b=73
+  [PASS] 73 lines of 9 points                                       
+  [PASS] every point pair on exactly one line                       pairs=2628
+  [PASS] board line set == construction from GF(8)                  |lines|=73
+
+TASK 1. Start sets are caps and maximal
+---------------------------------------
+  [PASS] hyperoval (10 pts) is a cap (no 3 collinear)               |S|=10
+  [PASS] hyperoval (10 pts) is maximal (no addable point)           addable=0 blocked=73/73
+  [PASS] hyperoval (10 pts) covers all points by pair-lines         
+  [PASS] hyperoval (10 pts) all C(n,3) triples non-collinear        
+  [PASS] 6-cap (6 pts) is a cap (no 3 collinear)                    |S|=6
+  [PASS] 6-cap (6 pts) is maximal (no addable point)                addable=0 blocked=73/73
+  [PASS] 6-cap (6 pts) covers all points by pair-lines              
+  [PASS] 6-cap (6 pts) all C(n,3) triples non-collinear             
+  hyperoval addable set: []
+  6-cap addable set: []
+
+TASK 2. Build PGL(3,8) from GF(8): generators, collineations, order
+-------------------------------------------------------------------
+  [PASS] GF(8) axioms + irreducibility of x^3+x+1                   0 violations
+  [PASS] 14 generators built from 3x3 matrices over GF(8)           E_01(1), E_01(2), E_02(1), E_02(2), E_10(1), E_10(2), E_12(1), E_12(2), E_20(1), E_20(2), E_21(1), E_21(2), diag(w,1,1), swap(0,1)
+  [PASS] each generator is a permutation of the 73 points           
+  [PASS] each generator has nonzero determinant                     
+  generator orders: [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 7, 2]
+  [PASS] ALL 14 generators map all 73 lines onto lines (collineations) 14 x 73 = 1022 line images checked
+  [PASS] generators E_01(1) and diag(w,1,1) induce permutations of the 73 lines 
+  BSGS: {'base': [1, 0, 9, 2, 10], 'orbit_sizes': [73, 72, 64, 7, 7], 'num_level_gens': [14, 7, 5, 2, 1], 'order': 16482816, 'verify_failures': 0}
+  [PASS] |<generators>| computed by Schreier-Sims                   order=16482816 verify_failures=0 base=[1, 0, 9, 2, 10] orbits=[73, 72, 64, 7, 7]
+  [PASS] |PGL(3,8)| = 511*504*448/7 = 16482816                      511*504*448 = 115379712, /7 = 16482816
+  [PASS] Schreier-Sims order equals |PGL(3,8)| => <gens> = PGL(3,8) 
+  [PASS] base sizes 73*72*64*49 = 16482816                          
+  [PASS] transitive on the 73 points                                orbit size 73
+  [PASS] transitive on ordered pairs of distinct points             5256 = 73*72
+  [PASS] transitive on ordered frames (non-collinear triples)       336384 = 73*72*64
+  4.4s
+
+TASK 3. Orbit of the hyperoval (10-cap)
+---------------------------------------
+  [PASS] start mask has popcount 10                                 
+  [PASS] orbit size                                                 32704 (expected 32704)
+  [PASS] every orbit member is a 10-point set                       sizes: {10: 32704}
+  [PASS] every orbit member is a cap                                0 failures
+  [PASS] every orbit member is maximal                              0 failures
+  [PASS] orbit size == census total number of 10-caps               census 10-caps=32704, orbit=32704
+  [PASS] all 14 generators preserve cap-maximality (addable set maps) 
+  7.6s
+
+TASK 4. Orbit of the maximal 6-cap and other maximal 6-caps
+-----------------------------------------------------------
+  [PASS] orbit size of start 6-cap                                  686784 (expected 686784)
+  [PASS] every orbit member is a 6-point set                        sizes: {6: 686784}
+  [PASS] sample of 500 orbit members: all caps                      0 failures
+  [PASS] sample of 500 orbit members: all maximal                   0 failures
+  [PASS] all 14 generators preserve cap-maximality (addable set maps) 
+  28.5s
+  sampled 12 distinct maximal 6-caps (12 rejection trials)
+   cap [14, 22, 27, 32, 69, 71]     cap=True maximal=True in_start_orbit=True
+   cap [9, 42, 50, 51, 57, 60]      cap=True maximal=True in_start_orbit=True
+   cap [7, 10, 41, 43, 59, 61]      cap=True maximal=True in_start_orbit=False
+   cap [0, 12, 20, 40, 47, 65]      cap=True maximal=True in_start_orbit=True
+   cap [7, 9, 37, 40, 50, 58]       cap=True maximal=True in_start_orbit=True
+   cap [3, 8, 11, 14, 57, 64]       cap=True maximal=True in_start_orbit=False
+   cap [10, 15, 22, 28, 41, 66]     cap=True maximal=True in_start_orbit=False
+   cap [0, 1, 18, 31, 33, 43]       cap=True maximal=True in_start_orbit=False
+   cap [3, 7, 15, 32, 42, 57]       cap=True maximal=True in_start_orbit=False
+   cap [20, 26, 44, 48, 65, 70]     cap=True maximal=True in_start_orbit=True
+   cap [10, 28, 44, 57, 65, 66]     cap=True maximal=True in_start_orbit=True
+   cap [2, 7, 19, 59, 66, 72]       cap=True maximal=True in_start_orbit=True
+  [PASS] 12 independently sampled maximal 6-caps verified cap+maximal 
+  [PASS] some sampled caps lie in the start orbit                   7/12
+  [PASS] some sampled caps do NOT lie in the start orbit            5/12 outside
+  orbit of [7, 10, 41, 43, 59, 61] has size 686784
+  orbit of [0, 1, 18, 31, 33, 43] has size 686784
+  [PASS] >=3 distinct maximal-6-cap orbits found                    3 orbits
+  [PASS] every computed maximal-6-cap orbit has size 686784         sizes=[686784, 686784, 686784]
+  [PASS] the computed orbits are pairwise disjoint                  |union|=2060352
+  [PASS] union size == 3*686784                                     2060352
+  [PASS] census total of maximal 6-caps == 3*686784                 census=2060352, 3*686784=2060352
+  [PASS] computed orbits exhaust all maximal 6-caps (union == census total) union=2060352 census=2060352
+  [PASS] hyperoval orbit is disjoint from the 6-cap orbits          
+  61.7s
+
+TASK 5. Group and stabilizer orders
+-----------------------------------
+  [PASS] |PGL(3,8)| = 16482816                                      
+  [PASS] |GL(3,8)| = 511*504*448 = 7*|PGL|                          
+  [PASS] orbit*stabilizer = |PGL| for hyperoval                     16482816 = 32704 * 504 (remainder 0)
+  [PASS] orbit*stabilizer = |PGL| for 6-cap                         16482816 = 686784 * 24 (remainder 0)
+  [PASS] hyperoval stabilizer = 16482816/32704 = 504                
+  [PASS] maximal-6-cap stabilizer = 16482816/686784 = 24            
+  [PASS] 504 = |PGL(2,8)| = 8*(8^2-1)                               
+  [PASS] 24 = |S4|                                                  
+  [PASS] BSGS order equals |PGL| (independent computation)          16482816
+
+SUMMARY
+-------
+  TASK 0: 4 checks, 0 failed -> PASS
+  TASK 1: 8 checks, 0 failed -> PASS
+  TASK 2: 13 checks, 0 failed -> PASS
+  TASK 3: 7 checks, 0 failed -> PASS
+  TASK 4: 15 checks, 0 failed -> PASS
+  TASK 5: 9 checks, 0 failed -> PASS
+  total checks 56, failures 0
+  elapsed 104.8s
+  wrote results_orbits.json
