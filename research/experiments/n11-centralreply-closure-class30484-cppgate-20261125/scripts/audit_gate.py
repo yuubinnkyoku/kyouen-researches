@@ -3,8 +3,12 @@
 
 Gates (all must PASS; any failure -> rc=1 and a FAIL entry in the JSON):
   G1  every raw has a `replay,` row and a terminal `# replay_done rows=1` line,
-      and the C++ header set (# exact replay: order=0 ... / # forbidden
-      quadruples: 95670) is present.
+      and the driver header set (# exact replay: order=0 ... and the
+      id,stones,... header line) is present. [rev3: the jsreplay replica also
+      prints a "# forbidden quadruples: 95670" telemetry line; the pinned C++
+      standalone driver at 154f3b7a67 does NOT, so G1 must not require it -
+      the difference is output-format-only, the replay row fields are what
+      matter.]
   G2  per-row determinism: p1 == p2 on all replay fields EXCEPT wall_s.
   G3  per-row published-raw pins: (legal, budget, result, nodes) equal the
       pinned expected values transcribed from the published kit raws (SSOT).
@@ -91,7 +95,7 @@ def main():
             text = open(rpath).read()
             m = [REPLAY.match(l) for l in text.splitlines() if l.startswith("replay,")]
             done = "# replay_done rows=1" in text
-            hdr = "# exact replay: order=0 " in text and "# forbidden quadruples: 95670" in text
+            hdr = "# exact replay: order=0 " in text and "# exact replay: id,stones,legal,is_or,budget,result,nodes,wall_s,key_lo,key_hi" in text
             ok &= g("G1:" + key + ":" + p, bool(len(m) == 1 and done and hdr),
                     "replay_rows=%d done=%s header=%s" % (len(m), done, hdr))
             rows[p] = list(m[0].groups()) if len(m) == 1 and m[0] else None
