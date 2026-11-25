@@ -1,0 +1,110 @@
+{
+ "adopted_table": [
+  {
+   "hi": 68719476736,
+   "legal": 95,
+   "lo": 1152921504607911937,
+   "nodes": 32012059,
+   "result": 2
+  }
+ ],
+ "adopted_table_digest_sha256": "aab6262a8cba4ecba4d82ccb197bb08c8a50dddb72931044a17b65f2f0ecf8dc",
+ "base_cache_absent_hits_for_emitted": 0,
+ "base_cache_prior_adoption_confirmed": 0,
+ "base_cache_rows": 6665,
+ "base_cache_sha256": "cecc1a0fae126d98d8e5f23e041657b86e4d7128f80cc1182f4f9830ed1e8626",
+ "batches": [
+  {
+   "adopted_loss_ids": [
+    "af034"
+   ],
+   "adopted_nodes_per_pool": 32012059,
+   "anchor_ids": [
+    "af001",
+    "af029",
+    "af039"
+   ],
+   "anchor_input_sha256": {
+    "af001": "b2ef3588267694aff51b5ec7aa9940064c5199db2b5f00644a9ed27fca2a127b",
+    "af029": "b5500b8d98cd3cbef56f6177245d8e3c21c31081f2252c6454f1aee73ce30c10",
+    "af039": "e51a3c9de08c62a54d80547c520876af4245394d05e37bbebf01d74204f64691"
+   },
+   "exhausted_excluded_ids": [],
+   "kit_integrity": {
+    "b33_status_sha256": "1f663fc802c03b27c2e39d6130cf6c1392d62dd99b5847d6af477cd823a94b52",
+    "ea_status_sha256": "db7c7017d7bfeef2d0c17c646b22f77b8bfd52a66796433b86e88444741c0438",
+    "exh30m_source_sha256_pins": {
+     "af034.p1.out": "9ecfdc770c0b8a6eab027c097051ae2731ee15f1ede0babbc619e38acf2fca74",
+     "af034.p2.out": "3978990d5821850476e7b38d1de98fbe7a56738cfd48a8b03cf8ed3350d1b290"
+    },
+    "kit_files_verified": 36,
+    "kit_manifest_sha256": "1dfe02cae61e9f410e24bbafe7386a0958da4deddd92456faad12b8f755546ac",
+    "note": "the Part ED af034 60M kit is PUBLISHED (36 files, byte-pinned above; fetch-verified against the kit MANIFEST rev2 1dfe02ca...); the adopted key is fresh at BASE (EXHAUSTED honest-UNKNOWN at 15M and 30M in the declared budget-condition ladder, resolved exact LOSS only at the pre-declared 60M condition)",
+    "raw_file_sha256_pins": {
+     "af001.p1.out": "9124225f73963f40ace05e20b47ec1c5e6156fc82a7f677a2f4afded9f0c52e0",
+     "af001.p2.out": "9124225f73963f40ace05e20b47ec1c5e6156fc82a7f677a2f4afded9f0c52e0",
+     "af029.p1.out": "971a9b29888f0a86e48c4fde21f9a06255116d8917e5cb5e40bebbfcdee5472d",
+     "af029.p2.out": "21c7b21853b67c99e5369434f4baf40831f32b590083cf09d70897a16739d457",
+     "af034.p1.out": "63860f94341477e77429624891c7e9d39a5c122487aa85c1b6dbb59fa547a7ab",
+     "af034.p2.out": "eb64725fa72a2ca66af1da74fcbf6a531fd279b90f151e76be08a94b7a6a9fdd",
+     "af039.p1.out": "da227971f7fee97128920784cb12f24b343557b9cec762e68a602d187e9fff43",
+     "af039.p2.out": "15abe72fafa95af72e56bfcbe090b423398cdcee87f829a10c5d82b6b16b94b9"
+    }
+   },
+   "origin_budget_15m": 15000000,
+   "pool": "af034loss1",
+   "probed_ids": [
+    "af034"
+   ],
+   "reprobe_budget": 60000000,
+   "source_budget_30m": 30000000,
+   "status_log_exhausted_lines": [],
+   "status_log_final_line": "2026-11-25T05:18:47Z af034 PASS 60000000,2,32012059",
+   "status_log_first_line": "2026-11-25T05:07:10Z af001 PASS 60000000,2,2952432",
+   "status_log_lines": 5,
+   "status_log_retry_lines": [],
+   "status_log_sha256": "26a97e0297c9db720c8c051db1498508bd24c038b1b3c37e69ac28fe65be226c",
+   "status_log_win_halt_lines": [
+    "2026-11-25T05:07:58Z af029 WIN-HALT"
+   ],
+   "target_input_sha256": "a4bff56606cbb11107b77dac677b1e1151f59686174bddcf7e08c0558f590326",
+   "unadopted_win_ids": [],
+   "whole_packet_nodes": 32012059
+  }
+ ],
+ "exhausted_excluded_ids": [],
+ "exhausted_rows": [],
+ "full_packet_eq_loss_only": true,
+ "full_packet_eq_loss_only_rationale": "the re-probed Part ED packet is probe-complete at the pre-declared 60M condition and IS loss-only: the single fresh exact-LOSS row af034 is simultaneously the adopted row and the whole packet; no WIN row and no EXHAUSTED row stays unconsumed or excluded; the key was never adopted before (fresh-increment gate against BASE cecc1a0f...)",
+ "interpretation_guard": "canonical 1-LOSS adoption increment: only the fresh af034 exact-LOSS row (budget-condition ladder 15M -> 30M -> 60M, each rung its own declared Part) is consumed into the canonical cache via the fail-closed union merger; nodes are bookkeeping, never verdicts; the standard 11x11 empty board stays UNKNOWN; no class is freed or excluded by this Part",
+ "loss_ids": [
+  "af034"
+ ],
+ "merger_sha256": "907119610034fb2aebfde012550a4129dfa3b086c6de11194e856747ac74606a",
+ "provenance": {
+  "b33_status_lines": 66,
+  "ea_status_lines": 13,
+  "ed_kit_files": 36,
+  "ed_status_lines": 5,
+  "raws_published": true
+ },
+ "quarantine_hits": 0,
+ "resolved_ids": [
+  "af034"
+ ],
+ "row_counts": {
+  "adopted_loss_rows": 1,
+  "exhausted_excluded": 0,
+  "prior_adopted_loss_rows_base": 2,
+  "wins_unconsumed": 0
+ },
+ "schema": "af034loss1-increments-manifest-v1",
+ "sha256": {
+  "loss_increment": "cc9c474627ec8f6fc98c0ebeb7600707021e8cd598b3be6799d39c104289e162"
+ },
+ "unadopted_win_ids": [],
+ "unadopted_win_rows": [],
+ "win_ids": [],
+ "win_scenario_exists": false,
+ "win_scenario_note": "the Part ED packet is exactly the single af034 key, resolved exact LOSS at 60M: no probe-level WIN row and no still-EXHAUSTED row exists in this Part; the 6 previously-unconsumed probe-level WIN children of class 34908 ({af029 s5 900646, af047 961976, af050 962386, af053 962470, af023 810351, af048 962172}) remain globally unconsumed and untouched by this Part (scrutiny-owner C++ second-implementation gate pin 9193f5b6...)"
+}
