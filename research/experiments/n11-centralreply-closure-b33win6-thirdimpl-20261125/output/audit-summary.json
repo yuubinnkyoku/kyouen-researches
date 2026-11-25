@@ -1,0 +1,1143 @@
+{
+ "schema": "n11-centralreply-closure-b33win6-thirdimpl-audit-v1",
+ "experiment": "n11-centralreply-closure-b33win6-thirdimpl-20261125",
+ "all_pass": true,
+ "gate_count": 213,
+ "targets_pass_one_total_third_expansions": 88595002,
+ "verdict_agreements": [
+  {
+   "key_id": "af029",
+   "source": "batch33-class34908-drive-15m",
+   "budget": 15000000,
+   "replica_result": 1,
+   "replica_nodes": 4862485,
+   "third_result": 1,
+   "third_expansion": 5672478,
+   "third_ttHits": 3079849,
+   "agree": true
+  },
+  {
+   "key_id": "af047",
+   "source": "batch33-class34908-drive-15m",
+   "budget": 15000000,
+   "replica_result": 1,
+   "replica_nodes": 9841975,
+   "third_result": 1,
+   "third_expansion": 11706195,
+   "third_ttHits": 6307523,
+   "agree": true
+  },
+  {
+   "key_id": "af050",
+   "source": "batch33-class34908-drive-15m",
+   "budget": 15000000,
+   "replica_result": 1,
+   "replica_nodes": 7311834,
+   "third_result": 1,
+   "third_expansion": 8719439,
+   "third_ttHits": 4661490,
+   "agree": true
+  },
+  {
+   "key_id": "af053",
+   "source": "batch33-class34908-drive-15m",
+   "budget": 15000000,
+   "replica_result": 1,
+   "replica_nodes": 5182129,
+   "third_result": 1,
+   "third_expansion": 6071614,
+   "third_ttHits": 3175645,
+   "agree": true
+  },
+  {
+   "key_id": "af023",
+   "source": "part-ea-b33exh5-reprobe30m",
+   "budget": 30000000,
+   "replica_result": 1,
+   "replica_nodes": 28933179,
+   "third_result": 1,
+   "third_expansion": 34912368,
+   "third_ttHits": 17698726,
+   "agree": true
+  },
+  {
+   "key_id": "af048",
+   "source": "part-ea-b33exh5-reprobe30m",
+   "budget": 30000000,
+   "replica_result": 1,
+   "replica_nodes": 17816616,
+   "third_result": 1,
+   "third_expansion": 21512908,
+   "third_ttHits": 11133246,
+   "agree": true
+  }
+ ],
+ "wall_inconclusive": [],
+ "gates": [
+  {
+   "gate": "rows-json-pin",
+   "pass": true,
+   "detail": "799d9faf191c5a7c1bfc164f4a2df46df91b4a01f02ce0e458718b7d2782c19b"
+  },
+  {
+   "gate": "input-af029-matches-rows",
+   "pass": true,
+   "detail": "5,1152921504607895553,68720525312,86 vs 5,1152921504607895553,68720525312,86"
+  },
+  {
+   "gate": "input-af047-matches-rows",
+   "pass": true,
+   "detail": "5,1152921504607895809,68719476736,84 vs 5,1152921504607895809,68719476736,84"
+  },
+  {
+   "gate": "input-af050-matches-rows",
+   "pass": true,
+   "detail": "5,1152921504607899649,68719476736,94 vs 5,1152921504607899649,68719476736,94"
+  },
+  {
+   "gate": "input-af053-matches-rows",
+   "pass": true,
+   "detail": "5,1152921504606852096,17660905521152,90 vs 5,1152921504606852096,17660905521152,90"
+  },
+  {
+   "gate": "input-af023-matches-rows",
+   "pass": true,
+   "detail": "5,1152921504607895553,68719478784,94 vs 5,1152921504607895553,68719478784,94"
+  },
+  {
+   "gate": "input-af048-matches-rows",
+   "pass": true,
+   "detail": "5,1152921508902862849,68719476736,87 vs 5,1152921508902862849,68719476736,87"
+  },
+  {
+   "gate": "input-k02a-matches-rows",
+   "pass": true,
+   "detail": "5,1297036692683751424,68157440,87 vs 5,1297036692683751424,68157440,87"
+  },
+  {
+   "gate": "input-l1a-matches-rows",
+   "pass": true,
+   "detail": "5,13019119616,16448,116 vs 5,13019119616,16448,116"
+  },
+  {
+   "gate": "input-ng1-matches-rows",
+   "pass": true,
+   "detail": "5,1297036692683751424,68157440,88 vs 5,1297036692683751424,68157440,88"
+  },
+  {
+   "gate": "input-ng2-matches-rows",
+   "pass": true,
+   "detail": "6,1297036692683751424,68157440,87 vs 6,1297036692683751424,68157440,87"
+  },
+  {
+   "gate": "pin-third_impl.js",
+   "pass": true,
+   "detail": "08ea958ff59c3234ec5ac55c5c40689bd0999a34e101a88ea0546800cc4a1998"
+  },
+  {
+   "gate": "pin-jsreplay.js",
+   "pass": true,
+   "detail": "845856175d3c793a7eb4306f5902ecda3f1c046a8a53e8f34ed375e51febc3df"
+  },
+  {
+   "gate": "rows-schema",
+   "pass": true,
+   "detail": "n11-centralreply-closure-b33win6-thirdimpl-input-v1"
+  },
+  {
+   "gate": "target-count",
+   "pass": true,
+   "detail": "6 (6 class-34908 unconsumed WIN rows: af029/af047/af050/af053 @15M, af023/af048 @30M)"
+  },
+  {
+   "gate": "target-verdict-kinds",
+   "pass": true,
+   "detail": "[1, 1, 1, 1, 1, 1]"
+  },
+  {
+   "gate": "target-budget-map",
+   "pass": true,
+   "detail": "[('af029', 15000000), ('af047', 15000000), ('af050', 15000000), ('af053', 15000000), ('af023', 30000000), ('af048', 30000000)]"
+  },
+  {
+   "gate": "rules-gate-quads",
+   "pass": true,
+   "detail": "replica quads 95670 mine quads 95670"
+  },
+  {
+   "gate": "rules-gate-tbl-mismatch0",
+   "pass": true,
+   "detail": "['triples checked 195044 mismatches 0']"
+  },
+  {
+   "gate": "replica-af029-present",
+   "pass": true,
+   "detail": "p1/p2"
+  },
+  {
+   "gate": "replica-af029-done",
+   "pass": true,
+   "detail": "replay_done p1=True p2=True"
+  },
+  {
+   "gate": "replica-af029-quads",
+   "pass": true,
+   "detail": "quads-header p1=True p2=True"
+  },
+  {
+   "gate": "replica-af029-det-pair",
+   "pass": true,
+   "detail": "p1=['86', '0', '15000000', '1', '4862485'] p2=['86', '0', '15000000', '1', '4862485']"
+  },
+  {
+   "gate": "replica-af029-schema",
+   "pass": true,
+   "detail": "schema ['replay', '0', '5', '86', '0', '15000000'] (budget 15000000)"
+  },
+  {
+   "gate": "replica-af029-key",
+   "pass": true,
+   "detail": "1152921504607895553,68720525312,86 vs 1152921504607895553,68720525312,86"
+  },
+  {
+   "gate": "replica-af029-verdict-vs-published",
+   "pass": true,
+   "detail": "this-host result=1 nodes=4862485 vs published result=1 nodes=4862485"
+  },
+  {
+   "gate": "replica-af047-present",
+   "pass": true,
+   "detail": "p1/p2"
+  },
+  {
+   "gate": "replica-af047-done",
+   "pass": true,
+   "detail": "replay_done p1=True p2=True"
+  },
+  {
+   "gate": "replica-af047-quads",
+   "pass": true,
+   "detail": "quads-header p1=True p2=True"
+  },
+  {
+   "gate": "replica-af047-det-pair",
+   "pass": true,
+   "detail": "p1=['84', '0', '15000000', '1', '9841975'] p2=['84', '0', '15000000', '1', '9841975']"
+  },
+  {
+   "gate": "replica-af047-schema",
+   "pass": true,
+   "detail": "schema ['replay', '0', '5', '84', '0', '15000000'] (budget 15000000)"
+  },
+  {
+   "gate": "replica-af047-key",
+   "pass": true,
+   "detail": "1152921504607895809,68719476736,84 vs 1152921504607895809,68719476736,84"
+  },
+  {
+   "gate": "replica-af047-verdict-vs-published",
+   "pass": true,
+   "detail": "this-host result=1 nodes=9841975 vs published result=1 nodes=9841975"
+  },
+  {
+   "gate": "replica-af050-present",
+   "pass": true,
+   "detail": "p1/p2"
+  },
+  {
+   "gate": "replica-af050-done",
+   "pass": true,
+   "detail": "replay_done p1=True p2=True"
+  },
+  {
+   "gate": "replica-af050-quads",
+   "pass": true,
+   "detail": "quads-header p1=True p2=True"
+  },
+  {
+   "gate": "replica-af050-det-pair",
+   "pass": true,
+   "detail": "p1=['94', '0', '15000000', '1', '7311834'] p2=['94', '0', '15000000', '1', '7311834']"
+  },
+  {
+   "gate": "replica-af050-schema",
+   "pass": true,
+   "detail": "schema ['replay', '0', '5', '94', '0', '15000000'] (budget 15000000)"
+  },
+  {
+   "gate": "replica-af050-key",
+   "pass": true,
+   "detail": "1152921504607899649,68719476736,94 vs 1152921504607899649,68719476736,94"
+  },
+  {
+   "gate": "replica-af050-verdict-vs-published",
+   "pass": true,
+   "detail": "this-host result=1 nodes=7311834 vs published result=1 nodes=7311834"
+  },
+  {
+   "gate": "replica-af053-present",
+   "pass": true,
+   "detail": "p1/p2"
+  },
+  {
+   "gate": "replica-af053-done",
+   "pass": true,
+   "detail": "replay_done p1=True p2=True"
+  },
+  {
+   "gate": "replica-af053-quads",
+   "pass": true,
+   "detail": "quads-header p1=True p2=True"
+  },
+  {
+   "gate": "replica-af053-det-pair",
+   "pass": true,
+   "detail": "p1=['90', '0', '15000000', '1', '5182129'] p2=['90', '0', '15000000', '1', '5182129']"
+  },
+  {
+   "gate": "replica-af053-schema",
+   "pass": true,
+   "detail": "schema ['replay', '0', '5', '90', '0', '15000000'] (budget 15000000)"
+  },
+  {
+   "gate": "replica-af053-key",
+   "pass": true,
+   "detail": "1152921504606852096,17660905521152,90 vs 1152921504606852096,17660905521152,90"
+  },
+  {
+   "gate": "replica-af053-verdict-vs-published",
+   "pass": true,
+   "detail": "this-host result=1 nodes=5182129 vs published result=1 nodes=5182129"
+  },
+  {
+   "gate": "replica-af023-present",
+   "pass": true,
+   "detail": "p1/p2"
+  },
+  {
+   "gate": "replica-af023-done",
+   "pass": true,
+   "detail": "replay_done p1=True p2=True"
+  },
+  {
+   "gate": "replica-af023-quads",
+   "pass": true,
+   "detail": "quads-header p1=True p2=True"
+  },
+  {
+   "gate": "replica-af023-det-pair",
+   "pass": true,
+   "detail": "p1=['94', '0', '30000000', '1', '28933179'] p2=['94', '0', '30000000', '1', '28933179']"
+  },
+  {
+   "gate": "replica-af023-schema",
+   "pass": true,
+   "detail": "schema ['replay', '0', '5', '94', '0', '30000000'] (budget 30000000)"
+  },
+  {
+   "gate": "replica-af023-key",
+   "pass": true,
+   "detail": "1152921504607895553,68719478784,94 vs 1152921504607895553,68719478784,94"
+  },
+  {
+   "gate": "replica-af023-verdict-vs-published",
+   "pass": true,
+   "detail": "this-host result=1 nodes=28933179 vs published result=1 nodes=28933179"
+  },
+  {
+   "gate": "replica-af048-present",
+   "pass": true,
+   "detail": "p1/p2"
+  },
+  {
+   "gate": "replica-af048-done",
+   "pass": true,
+   "detail": "replay_done p1=True p2=True"
+  },
+  {
+   "gate": "replica-af048-quads",
+   "pass": true,
+   "detail": "quads-header p1=True p2=True"
+  },
+  {
+   "gate": "replica-af048-det-pair",
+   "pass": true,
+   "detail": "p1=['87', '0', '30000000', '1', '17816616'] p2=['87', '0', '30000000', '1', '17816616']"
+  },
+  {
+   "gate": "replica-af048-schema",
+   "pass": true,
+   "detail": "schema ['replay', '0', '5', '87', '0', '30000000'] (budget 30000000)"
+  },
+  {
+   "gate": "replica-af048-key",
+   "pass": true,
+   "detail": "1152921508902862849,68719476736,87 vs 1152921508902862849,68719476736,87"
+  },
+  {
+   "gate": "replica-af048-verdict-vs-published",
+   "pass": true,
+   "detail": "this-host result=1 nodes=17816616 vs published result=1 nodes=17816616"
+  },
+  {
+   "gate": "replica-af029-30m-present",
+   "pass": true,
+   "detail": "p1/p2"
+  },
+  {
+   "gate": "replica-af029-30m-done",
+   "pass": true,
+   "detail": "replay_done p1=True p2=True"
+  },
+  {
+   "gate": "replica-af029-30m-det-pair",
+   "pass": true,
+   "detail": "p1=['86', '0', '30000000', '1', '4862485'] p2=['86', '0', '30000000', '1', '4862485']"
+  },
+  {
+   "gate": "replica-af029-30m-schema",
+   "pass": true,
+   "detail": "schema ['replay', '0', '5', '86', '0', '30000000']"
+  },
+  {
+   "gate": "replica-af029-30m-verdict-vs-published",
+   "pass": true,
+   "detail": "this-host 30M result=1 nodes=4862485 vs published 30M anchor result=1 nodes=4862485"
+  },
+  {
+   "gate": "anchor-k02a-present",
+   "pass": true,
+   "detail": "a/b"
+  },
+  {
+   "gate": "anchor-k02a-a-clean",
+   "pass": true,
+   "detail": "result=1 reason=clean"
+  },
+  {
+   "gate": "anchor-k02a-a-expansions",
+   "pass": true,
+   "detail": "exp=9106337 vs 9106337, ttH=4991527 vs 4991527"
+  },
+  {
+   "gate": "anchor-k02a-a-legal",
+   "pass": true,
+   "detail": "87 vs 87"
+  },
+  {
+   "gate": "anchor-k02a-a-key",
+   "pass": true,
+   "detail": "1297036692683751424:68157440"
+  },
+  {
+   "gate": "anchor-k02a-b-clean",
+   "pass": true,
+   "detail": "result=1 reason=clean"
+  },
+  {
+   "gate": "anchor-k02a-b-expansions",
+   "pass": true,
+   "detail": "exp=9106337 vs 9106337, ttH=4991527 vs 4991527"
+  },
+  {
+   "gate": "anchor-k02a-b-legal",
+   "pass": true,
+   "detail": "87 vs 87"
+  },
+  {
+   "gate": "anchor-k02a-b-key",
+   "pass": true,
+   "detail": "1297036692683751424:68157440"
+  },
+  {
+   "gate": "anchor-k02a-det-pair",
+   "pass": true,
+   "detail": "9106337 vs 9106337"
+  },
+  {
+   "gate": "anchor-l1a-present",
+   "pass": true,
+   "detail": "a/b"
+  },
+  {
+   "gate": "anchor-l1a-a-clean",
+   "pass": true,
+   "detail": "result=2 reason=clean"
+  },
+  {
+   "gate": "anchor-l1a-a-expansions",
+   "pass": true,
+   "detail": "exp=7660602 vs 7660602, ttH=3951175 vs 3951175"
+  },
+  {
+   "gate": "anchor-l1a-a-legal",
+   "pass": true,
+   "detail": "116 vs 116"
+  },
+  {
+   "gate": "anchor-l1a-a-key",
+   "pass": true,
+   "detail": "13019119616:16448"
+  },
+  {
+   "gate": "anchor-l1a-b-clean",
+   "pass": true,
+   "detail": "result=2 reason=clean"
+  },
+  {
+   "gate": "anchor-l1a-b-expansions",
+   "pass": true,
+   "detail": "exp=7660602 vs 7660602, ttH=3951175 vs 3951175"
+  },
+  {
+   "gate": "anchor-l1a-b-legal",
+   "pass": true,
+   "detail": "116 vs 116"
+  },
+  {
+   "gate": "anchor-l1a-b-key",
+   "pass": true,
+   "detail": "13019119616:16448"
+  },
+  {
+   "gate": "anchor-l1a-det-pair",
+   "pass": true,
+   "detail": "7660602 vs 7660602"
+  },
+  {
+   "gate": "neg-ng1-failclosed",
+   "pass": true,
+   "detail": "{'raw': 'third,ng1a,5,88,,GATE_FAIL,\"legal count mismatch: derived=87 declared=88\"', 'stub': 'third', 'gate_fail': 'GATE_FAIL,\"legal count mismatch: derived=87 declared=88'}"
+  },
+  {
+   "gate": "neg-ng2-failclosed",
+   "pass": true,
+   "detail": "{'raw': 'third,ng2a,6,87,,GATE_FAIL,\"stone count mismatch: bits=5 declared=6\"', 'stub': 'third', 'gate_fail': 'GATE_FAIL,\"stone count mismatch: bits=5 declared=6'}"
+  },
+  {
+   "gate": "target-af029-present",
+   "pass": true,
+   "detail": "a/b"
+  },
+  {
+   "gate": "target-af029-a-key",
+   "pass": true,
+   "detail": "1152921504607895553:68720525312"
+  },
+  {
+   "gate": "target-af029-a-legal",
+   "pass": true,
+   "detail": "86 vs 86"
+  },
+  {
+   "gate": "target-af029-a-quads",
+   "pass": true,
+   "detail": "95670"
+  },
+  {
+   "gate": "target-af029-b-key",
+   "pass": true,
+   "detail": "1152921504607895553:68720525312"
+  },
+  {
+   "gate": "target-af029-b-legal",
+   "pass": true,
+   "detail": "86 vs 86"
+  },
+  {
+   "gate": "target-af029-b-quads",
+   "pass": true,
+   "detail": "95670"
+  },
+  {
+   "gate": "target-af029-det-pair",
+   "pass": true,
+   "detail": "a=(1,5672478,clean) b=(1,5672478,clean)"
+  },
+  {
+   "gate": "target-af029-verdict-agree",
+   "pass": true,
+   "detail": "third=1 replica=1"
+  },
+  {
+   "gate": "target-af047-present",
+   "pass": true,
+   "detail": "a/b"
+  },
+  {
+   "gate": "target-af047-a-key",
+   "pass": true,
+   "detail": "1152921504607895809:68719476736"
+  },
+  {
+   "gate": "target-af047-a-legal",
+   "pass": true,
+   "detail": "84 vs 84"
+  },
+  {
+   "gate": "target-af047-a-quads",
+   "pass": true,
+   "detail": "95670"
+  },
+  {
+   "gate": "target-af047-b-key",
+   "pass": true,
+   "detail": "1152921504607895809:68719476736"
+  },
+  {
+   "gate": "target-af047-b-legal",
+   "pass": true,
+   "detail": "84 vs 84"
+  },
+  {
+   "gate": "target-af047-b-quads",
+   "pass": true,
+   "detail": "95670"
+  },
+  {
+   "gate": "target-af047-det-pair",
+   "pass": true,
+   "detail": "a=(1,11706195,clean) b=(1,11706195,clean)"
+  },
+  {
+   "gate": "target-af047-verdict-agree",
+   "pass": true,
+   "detail": "third=1 replica=1"
+  },
+  {
+   "gate": "target-af050-present",
+   "pass": true,
+   "detail": "a/b"
+  },
+  {
+   "gate": "target-af050-a-key",
+   "pass": true,
+   "detail": "1152921504607899649:68719476736"
+  },
+  {
+   "gate": "target-af050-a-legal",
+   "pass": true,
+   "detail": "94 vs 94"
+  },
+  {
+   "gate": "target-af050-a-quads",
+   "pass": true,
+   "detail": "95670"
+  },
+  {
+   "gate": "target-af050-b-key",
+   "pass": true,
+   "detail": "1152921504607899649:68719476736"
+  },
+  {
+   "gate": "target-af050-b-legal",
+   "pass": true,
+   "detail": "94 vs 94"
+  },
+  {
+   "gate": "target-af050-b-quads",
+   "pass": true,
+   "detail": "95670"
+  },
+  {
+   "gate": "target-af050-det-pair",
+   "pass": true,
+   "detail": "a=(1,8719439,clean) b=(1,8719439,clean)"
+  },
+  {
+   "gate": "target-af050-verdict-agree",
+   "pass": true,
+   "detail": "third=1 replica=1"
+  },
+  {
+   "gate": "target-af053-present",
+   "pass": true,
+   "detail": "a/b"
+  },
+  {
+   "gate": "target-af053-a-key",
+   "pass": true,
+   "detail": "1152921504606852096:17660905521152"
+  },
+  {
+   "gate": "target-af053-a-legal",
+   "pass": true,
+   "detail": "90 vs 90"
+  },
+  {
+   "gate": "target-af053-a-quads",
+   "pass": true,
+   "detail": "95670"
+  },
+  {
+   "gate": "target-af053-b-key",
+   "pass": true,
+   "detail": "1152921504606852096:17660905521152"
+  },
+  {
+   "gate": "target-af053-b-legal",
+   "pass": true,
+   "detail": "90 vs 90"
+  },
+  {
+   "gate": "target-af053-b-quads",
+   "pass": true,
+   "detail": "95670"
+  },
+  {
+   "gate": "target-af053-det-pair",
+   "pass": true,
+   "detail": "a=(1,6071614,clean) b=(1,6071614,clean)"
+  },
+  {
+   "gate": "target-af053-verdict-agree",
+   "pass": true,
+   "detail": "third=1 replica=1"
+  },
+  {
+   "gate": "target-af023-present",
+   "pass": true,
+   "detail": "a/b"
+  },
+  {
+   "gate": "target-af023-a-key",
+   "pass": true,
+   "detail": "1152921504607895553:68719478784"
+  },
+  {
+   "gate": "target-af023-a-legal",
+   "pass": true,
+   "detail": "94 vs 94"
+  },
+  {
+   "gate": "target-af023-a-quads",
+   "pass": true,
+   "detail": "95670"
+  },
+  {
+   "gate": "target-af023-b-key",
+   "pass": true,
+   "detail": "1152921504607895553:68719478784"
+  },
+  {
+   "gate": "target-af023-b-legal",
+   "pass": true,
+   "detail": "94 vs 94"
+  },
+  {
+   "gate": "target-af023-b-quads",
+   "pass": true,
+   "detail": "95670"
+  },
+  {
+   "gate": "target-af023-det-pair",
+   "pass": true,
+   "detail": "a=(1,34912368,clean) b=(1,34912368,clean)"
+  },
+  {
+   "gate": "target-af023-verdict-agree",
+   "pass": true,
+   "detail": "third=1 replica=1"
+  },
+  {
+   "gate": "target-af048-present",
+   "pass": true,
+   "detail": "a/b"
+  },
+  {
+   "gate": "target-af048-a-key",
+   "pass": true,
+   "detail": "1152921508902862849:68719476736"
+  },
+  {
+   "gate": "target-af048-a-legal",
+   "pass": true,
+   "detail": "87 vs 87"
+  },
+  {
+   "gate": "target-af048-a-quads",
+   "pass": true,
+   "detail": "95670"
+  },
+  {
+   "gate": "target-af048-b-key",
+   "pass": true,
+   "detail": "1152921508902862849:68719476736"
+  },
+  {
+   "gate": "target-af048-b-legal",
+   "pass": true,
+   "detail": "87 vs 87"
+  },
+  {
+   "gate": "target-af048-b-quads",
+   "pass": true,
+   "detail": "95670"
+  },
+  {
+   "gate": "target-af048-det-pair",
+   "pass": true,
+   "detail": "a=(1,21512908,clean) b=(1,21512908,clean)"
+  },
+  {
+   "gate": "target-af048-verdict-agree",
+   "pass": true,
+   "detail": "third=1 replica=1"
+  },
+  {
+   "gate": "unadopted-pin-raw-af029-p1",
+   "pass": true,
+   "detail": "6bd7a2ac37cccd8a387d6b505112c1a93b712e8d41b43467fa0844ce64ec0036"
+  },
+  {
+   "gate": "unadopted-pin-raw-af029-p2",
+   "pass": true,
+   "detail": "b6abaa6384ee93c890cadd350f2f844889f3ee42110935a366af7893a2030e0b"
+  },
+  {
+   "gate": "unadopted-pin-merged-cache-af029",
+   "pass": true,
+   "detail": "fc3e4ac9052447158202f09d5efe05468dba32fe95ec90beaaa0a0de9d2c020f"
+  },
+  {
+   "gate": "unadopted-merged-cache-rowcount-af029",
+   "pass": true,
+   "detail": "6666 s5verdict rows"
+  },
+  {
+   "gate": "unadopted-merged-cache-row-absent-af029",
+   "pass": true,
+   "detail": "s5verdict,1152921504607895553,68720525312,5,1,4862485 occurs 0 times (expect 0: the WIN row was never adopted)"
+  },
+  {
+   "gate": "unadopted-merged-cache-no-key-row-af029",
+   "pass": true,
+   "detail": "[]"
+  },
+  {
+   "gate": "unadopted-pin-raw-af047-p1",
+   "pass": true,
+   "detail": "8fd62fdd27d10235b4ba67c6f43cfeb4fe5f494559544119d4f0339223a7b8c6"
+  },
+  {
+   "gate": "unadopted-pin-raw-af047-p2",
+   "pass": true,
+   "detail": "ae4719e8c8a0a7abd72cec6f4e013c1e576c7627100de95b55ba34c364b694a4"
+  },
+  {
+   "gate": "unadopted-pin-merged-cache-af047",
+   "pass": true,
+   "detail": "fc3e4ac9052447158202f09d5efe05468dba32fe95ec90beaaa0a0de9d2c020f"
+  },
+  {
+   "gate": "unadopted-merged-cache-rowcount-af047",
+   "pass": true,
+   "detail": "6666 s5verdict rows"
+  },
+  {
+   "gate": "unadopted-merged-cache-row-absent-af047",
+   "pass": true,
+   "detail": "s5verdict,1152921504607895809,68719476736,5,1,9841975 occurs 0 times (expect 0: the WIN row was never adopted)"
+  },
+  {
+   "gate": "unadopted-merged-cache-no-key-row-af047",
+   "pass": true,
+   "detail": "[]"
+  },
+  {
+   "gate": "unadopted-pin-raw-af050-p1",
+   "pass": true,
+   "detail": "3ea4f644ca19186f0a56ae25f79ef0ccc8b608b5ef64045bc052a488cae9b1d7"
+  },
+  {
+   "gate": "unadopted-pin-raw-af050-p2",
+   "pass": true,
+   "detail": "43a5b71ca57d2a2601f82b7ec35980b0761dc315e8093f3c9ae603cd8d4ca5a6"
+  },
+  {
+   "gate": "unadopted-pin-merged-cache-af050",
+   "pass": true,
+   "detail": "fc3e4ac9052447158202f09d5efe05468dba32fe95ec90beaaa0a0de9d2c020f"
+  },
+  {
+   "gate": "unadopted-merged-cache-rowcount-af050",
+   "pass": true,
+   "detail": "6666 s5verdict rows"
+  },
+  {
+   "gate": "unadopted-merged-cache-row-absent-af050",
+   "pass": true,
+   "detail": "s5verdict,1152921504607899649,68719476736,5,1,7311834 occurs 0 times (expect 0: the WIN row was never adopted)"
+  },
+  {
+   "gate": "unadopted-merged-cache-no-key-row-af050",
+   "pass": true,
+   "detail": "[]"
+  },
+  {
+   "gate": "unadopted-pin-raw-af053-p1",
+   "pass": true,
+   "detail": "fce95ca8921357641f477a01483fbd4c35e6f183a25c8d741657dec645f78533"
+  },
+  {
+   "gate": "unadopted-pin-raw-af053-p2",
+   "pass": true,
+   "detail": "920b1029500e93532238d03d07e89fdf091ffecd2481cab56f7dd032b5f645b7"
+  },
+  {
+   "gate": "unadopted-pin-merged-cache-af053",
+   "pass": true,
+   "detail": "fc3e4ac9052447158202f09d5efe05468dba32fe95ec90beaaa0a0de9d2c020f"
+  },
+  {
+   "gate": "unadopted-merged-cache-rowcount-af053",
+   "pass": true,
+   "detail": "6666 s5verdict rows"
+  },
+  {
+   "gate": "unadopted-merged-cache-row-absent-af053",
+   "pass": true,
+   "detail": "s5verdict,1152921504606852096,17660905521152,5,1,5182129 occurs 0 times (expect 0: the WIN row was never adopted)"
+  },
+  {
+   "gate": "unadopted-merged-cache-no-key-row-af053",
+   "pass": true,
+   "detail": "[]"
+  },
+  {
+   "gate": "unadopted-pin-raw-af023-p1",
+   "pass": true,
+   "detail": "fe118851a927944328a62387d0410a596713c87f1360dda662c97f87913c1dbe"
+  },
+  {
+   "gate": "unadopted-pin-raw-af023-p2",
+   "pass": true,
+   "detail": "af02e38b07a7f1da9af28c0af7985eaa0cdd97ec2884298ede3a831b19c9198b"
+  },
+  {
+   "gate": "unadopted-pin-merged-cache-af023",
+   "pass": true,
+   "detail": "fc3e4ac9052447158202f09d5efe05468dba32fe95ec90beaaa0a0de9d2c020f"
+  },
+  {
+   "gate": "unadopted-merged-cache-rowcount-af023",
+   "pass": true,
+   "detail": "6666 s5verdict rows"
+  },
+  {
+   "gate": "unadopted-merged-cache-row-absent-af023",
+   "pass": true,
+   "detail": "s5verdict,1152921504607895553,68719478784,5,1,28933179 occurs 0 times (expect 0: the WIN row was never adopted)"
+  },
+  {
+   "gate": "unadopted-merged-cache-no-key-row-af023",
+   "pass": true,
+   "detail": "[]"
+  },
+  {
+   "gate": "unadopted-pin-raw-af048-p1",
+   "pass": true,
+   "detail": "ae8df6ad6f922669f285f1c2a20d7fa09453c2ef38f64f1b4b878c3034e9d07a"
+  },
+  {
+   "gate": "unadopted-pin-raw-af048-p2",
+   "pass": true,
+   "detail": "e2056ca26533124e20d3538eebc5e6c4b752be21b92e9e3780c5a0040f0bb620"
+  },
+  {
+   "gate": "unadopted-pin-merged-cache-af048",
+   "pass": true,
+   "detail": "fc3e4ac9052447158202f09d5efe05468dba32fe95ec90beaaa0a0de9d2c020f"
+  },
+  {
+   "gate": "unadopted-merged-cache-rowcount-af048",
+   "pass": true,
+   "detail": "6666 s5verdict rows"
+  },
+  {
+   "gate": "unadopted-merged-cache-row-absent-af048",
+   "pass": true,
+   "detail": "s5verdict,1152921508902862849,68719476736,5,1,17816616 occurs 0 times (expect 0: the WIN row was never adopted)"
+  },
+  {
+   "gate": "unadopted-merged-cache-no-key-row-af048",
+   "pass": true,
+   "detail": "[]"
+  },
+  {
+   "gate": "extra-pin-raw-af029-30m-p1",
+   "pass": true,
+   "detail": "1726ecb6d8199d612130d3c2cae12b176102fef0468263cbc1397f525eb0aa66"
+  },
+  {
+   "gate": "extra-pin-raw-af029-30m-p2",
+   "pass": true,
+   "detail": "c937f8964385b2e4c74c1f1d417cdb113b2548dca33c3e0604facea7d9c905a6"
+  },
+  {
+   "gate": "extra-pin-raw-af001-p1",
+   "pass": true,
+   "detail": "c2bc73f6a5d88720e33fc3fb498ab16f2d541d7cad62248ef8d04b5f9351381d"
+  },
+  {
+   "gate": "extra-pin-raw-af001-p2",
+   "pass": true,
+   "detail": "e4614f6bd7d4f20cfdd7dba3362e6db52328827a120b9d379fdd2accbdbf1681"
+  },
+  {
+   "gate": "unadopted-pin-merged-cache-shared",
+   "pass": true,
+   "detail": "fc3e4ac9052447158202f09d5efe05468dba32fe95ec90beaaa0a0de9d2c020f"
+  },
+  {
+   "gate": "unadopted-pin-increment-shared",
+   "pass": true,
+   "detail": "cc9c474627ec8f6fc98c0ebeb7600707021e8cd598b3be6799d39c104289e162"
+  },
+  {
+   "gate": "unadopted-merged-cache-counts",
+   "pass": true,
+   "detail": "rows=6666 WIN=158 LOSS=6508"
+  },
+  {
+   "gate": "unadopted-merged-cache-af034-positive-control",
+   "pass": true,
+   "detail": "the adopted af034 60M LOSS row must occur exactly once (absence gates cannot pass vacuously)"
+  },
+  {
+   "gate": "unadopted-increment-exact-1-row",
+   "pass": true,
+   "detail": "['s5verdict,1152921504607911937,68719476736,5,2,32012059']"
+  },
+  {
+   "gate": "unadopted-pin-increments-manifest-shared",
+   "pass": true,
+   "detail": "0ad3469ede4bfbddaee21d12dbab97f7e0babdbe5cbaba8cc7a6f2f41d0d22c9"
+  },
+  {
+   "gate": "unadopted-manifest-schema",
+   "pass": true,
+   "detail": "af034loss1-increments-manifest-v1"
+  },
+  {
+   "gate": "unadopted-manifest-ids",
+   "pass": true,
+   "detail": "['af034']"
+  },
+  {
+   "gate": "unadopted-manifest-flags",
+   "pass": true,
+   "detail": "full_eq_loss=True base=6665 quarantine=0"
+  },
+  {
+   "gate": "unadopted-manifest-row-counts",
+   "pass": true,
+   "detail": "row_counts={'adopted_loss_rows': 1, 'exhausted_excluded': 0, 'prior_adopted_loss_rows_base': 2, 'wins_unconsumed': 0}"
+  },
+  {
+   "gate": "unadopted-manifest-note-names-af029",
+   "pass": true,
+   "detail": "the EE manifest win_scenario_note must name the pooled unconsumed WIN child"
+  },
+  {
+   "gate": "unadopted-manifest-note-names-af047",
+   "pass": true,
+   "detail": "the EE manifest win_scenario_note must name the pooled unconsumed WIN child"
+  },
+  {
+   "gate": "unadopted-manifest-note-names-af050",
+   "pass": true,
+   "detail": "the EE manifest win_scenario_note must name the pooled unconsumed WIN child"
+  },
+  {
+   "gate": "unadopted-manifest-note-names-af053",
+   "pass": true,
+   "detail": "the EE manifest win_scenario_note must name the pooled unconsumed WIN child"
+  },
+  {
+   "gate": "unadopted-manifest-note-names-af023",
+   "pass": true,
+   "detail": "the EE manifest win_scenario_note must name the pooled unconsumed WIN child"
+  },
+  {
+   "gate": "unadopted-manifest-note-names-af048",
+   "pass": true,
+   "detail": "the EE manifest win_scenario_note must name the pooled unconsumed WIN child"
+  },
+  {
+   "gate": "unadopted-manifest-batch-adopted",
+   "pass": true,
+   "detail": "['af034']"
+  },
+  {
+   "gate": "unadopted-manifest-target-not-in-adopted-lists-af029",
+   "pass": true,
+   "detail": "af029 must not appear in any adopted/win/probed id list of the increments-manifest"
+  },
+  {
+   "gate": "unadopted-manifest-target-not-in-adopted-lists-af047",
+   "pass": true,
+   "detail": "af047 must not appear in any adopted/win/probed id list of the increments-manifest"
+  },
+  {
+   "gate": "unadopted-manifest-target-not-in-adopted-lists-af050",
+   "pass": true,
+   "detail": "af050 must not appear in any adopted/win/probed id list of the increments-manifest"
+  },
+  {
+   "gate": "unadopted-manifest-target-not-in-adopted-lists-af053",
+   "pass": true,
+   "detail": "af053 must not appear in any adopted/win/probed id list of the increments-manifest"
+  },
+  {
+   "gate": "unadopted-manifest-target-not-in-adopted-lists-af023",
+   "pass": true,
+   "detail": "af023 must not appear in any adopted/win/probed id list of the increments-manifest"
+  },
+  {
+   "gate": "unadopted-manifest-target-not-in-adopted-lists-af048",
+   "pass": true,
+   "detail": "af048 must not appear in any adopted/win/probed id list of the increments-manifest"
+  },
+  {
+   "gate": "valgate-at2m-s5-1152921504606851072-536870946-present",
+   "pass": true,
+   "detail": "baseline=True host=True"
+  },
+  {
+   "gate": "valgate-at2m-s5-1152921504606851072-536870946-node-exact",
+   "pass": true,
+   "detail": "host=['2000000', '0', '2000000'] baseline=['2000000', '0', '2000000']"
+  },
+  {
+   "gate": "valgate-at2m-s5-1188950301626860544-536870912-present",
+   "pass": true,
+   "detail": "baseline=True host=True"
+  },
+  {
+   "gate": "valgate-at2m-s5-1188950301626860544-536870912-node-exact",
+   "pass": true,
+   "detail": "host=['2000000', '0', '2000000'] baseline=['2000000', '0', '2000000']"
+  },
+  {
+   "gate": "valgate-first-15m-s5-1152921504606851072-536870946-present",
+   "pass": true,
+   "detail": "baseline=True host=True"
+  },
+  {
+   "gate": "valgate-first-15m-s5-1152921504606851072-536870946-node-exact",
+   "pass": true,
+   "detail": "host=['15000000', '2', '3651923'] baseline=['15000000', '2', '3651923']"
+  },
+  {
+   "gate": "valgate-second-15m-s5-1188950301626860544-536870912-present",
+   "pass": true,
+   "detail": "baseline=True host=True"
+  },
+  {
+   "gate": "valgate-second-15m-s5-1188950301626860544-536870912-node-exact",
+   "pass": true,
+   "detail": "host=['15000000', '2', '5040200'] baseline=['15000000', '2', '5040200']"
+  }
+ ]
+}
