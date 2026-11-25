@@ -1,0 +1,321 @@
+{
+  "claim": "Exact replay values are solver outputs. UNKNOWN, interrupted, and not-dispatched keys are not entered in the exact cache.",
+  "class_key": [
+    1297177430172106752,
+    0
+  ],
+  "outputs": [
+    {
+      "bytes": 388,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-next-class-1297177430172106752-0-probe8-early-win-raw-exact.csv",
+      "sha256": "114d6cf9a2e7868d0de689ea58f3374de2acd3e3eec6bd00ea2e80523b181013"
+    },
+    {
+      "bytes": 388,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-next-class-1297177430172106752-0-probe8-early-win-raw-all.csv",
+      "sha256": "114d6cf9a2e7868d0de689ea58f3374de2acd3e3eec6bd00ea2e80523b181013"
+    },
+    {
+      "bytes": 434,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-next-class-1297177430172106752-0-probe8-early-win-exact-targets.csv",
+      "sha256": "b7eafeff21cf0af5e3812f826a2ff9066880bec3c49fc7df767d9b9845d0038e"
+    },
+    {
+      "bytes": 301,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-next-class-1297177430172106752-0-probe8-early-win-new-exact-s5.cache",
+      "sha256": "98c428d35e6f50114b7e7f7f33d57edf8759d62a030a1e7bbefb30c274ea47a3"
+    },
+    {
+      "bytes": 888,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-next-class-1297177430172106752-0-probe8-early-win-summary.json",
+      "sha256": "f54069f716667bcf67559c969bf4db527271c04df7d182a5d6a296e7068c4f2b"
+    },
+    {
+      "bytes": 6400,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-next-class-1297177430172106752-0-probe8-early-win-runner-summary.json",
+      "sha256": "032a2ed6739b34197447315ffa5a419453d1c39a940d9aa5136b0ebf3bd2b805"
+    }
+  ],
+  "partial_solver_outputs": [],
+  "probe_target_sha256": "b7eafeff21cf0af5e3812f826a2ff9066880bec3c49fc7df767d9b9845d0038e",
+  "probe_targets": [
+    [
+      1297177430172106752,
+      64
+    ],
+    [
+      1297177430172106752,
+      67108864
+    ],
+    [
+      1297177430172106880,
+      0
+    ],
+    [
+      1297177430306324480,
+      0
+    ],
+    [
+      10414574138294276096,
+      0
+    ]
+  ],
+  "runner_summary": {
+    "budget": 15000000,
+    "class_key": [
+      1297177430172106752,
+      0
+    ],
+    "class_status_from_exact_witness": "WIN_WITNESS_PENDING_GEOMETRY_AUDIT",
+    "completed_output_rows": 5,
+    "completed_unknown": 0,
+    "exact_verdict_conflicts": 0,
+    "exact_win_witness_candidates": [
+      [
+        1297177430172106752,
+        64
+      ],
+      [
+        1297177430172106880,
+        0
+      ]
+    ],
+    "interrupted": [],
+    "interrupted_partial_count": 0,
+    "new_exact": 5,
+    "new_loss": 3,
+    "new_win": 2,
+    "nodes_all_completed_rows": 39801125,
+    "nodes_exact": 39801125,
+    "not_dispatched": [
+      [
+        1152921642181066752,
+        68719476736
+      ],
+      [
+        5908863448599494656,
+        0
+      ],
+      [
+        10378545341275312128,
+        65536
+      ]
+    ],
+    "not_dispatched_count": 3,
+    "scheduled": 8,
+    "schema": "n11-dual-tight-early-win-runner-summary-v1",
+    "scope": "the eight scheduled s5 probes only; remaining class children were not scheduled",
+    "started": 5,
+    "stop_reason": "An exact s5 WIN row appeared. No further targets were dispatched; the runner drained already active workers and preserved their completed rows.",
+    "target_statuses": [
+      {
+        "input": {
+          "bytes": 68,
+          "path": ".local/n11/dual-tight-ready-1297177430172106752-0-probe8/s5-1297177430172106752-64.input.csv",
+          "sha256": "3b31d0b9256627a118d96997ae78b38f348c6ea08ac3b5216a83c1b3df78ff93"
+        },
+        "key": [
+          1297177430172106752,
+          64
+        ],
+        "log": {
+          "bytes": 0,
+          "path": ".local/n11/dual-tight-ready-1297177430172106752-0-probe8/s5-1297177430172106752-64.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "output": {
+          "bytes": 277,
+          "nodes": 6515382,
+          "path": ".local/n11/dual-tight-ready-1297177430172106752-0-probe8/s5-1297177430172106752-64.out.csv",
+          "sha256": "779b3caeda3c253a32e302c2076d42f8c6bf68af86e082d33005edea3b95f7e4",
+          "verdict": 1
+        },
+        "started": true,
+        "status": "exact_WIN"
+      },
+      {
+        "input": {
+          "bytes": 74,
+          "path": ".local/n11/dual-tight-ready-1297177430172106752-0-probe8/s5-1297177430172106752-67108864.input.csv",
+          "sha256": "5cdf0aa74dba01445abbae67d1dfd12fb7b8a46db7e27649215ca8e456f952b1"
+        },
+        "key": [
+          1297177430172106752,
+          67108864
+        ],
+        "log": {
+          "bytes": 0,
+          "path": ".local/n11/dual-tight-ready-1297177430172106752-0-probe8/s5-1297177430172106752-67108864.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "output": {
+          "bytes": 283,
+          "nodes": 7093800,
+          "path": ".local/n11/dual-tight-ready-1297177430172106752-0-probe8/s5-1297177430172106752-67108864.out.csv",
+          "sha256": "c950f2a19a70be273c602f99cbfcfa5a462494d26ee96d9948a82be56b15d351",
+          "verdict": 2
+        },
+        "started": true,
+        "status": "exact_LOSS"
+      },
+      {
+        "input": {
+          "bytes": 67,
+          "path": ".local/n11/dual-tight-ready-1297177430172106752-0-probe8/s5-1297177430172106880-0.input.csv",
+          "sha256": "6c3145efd87e08f50eea22ce1adf1db9d9a6d80c244f618d21b9accb36cad6cc"
+        },
+        "key": [
+          1297177430172106880,
+          0
+        ],
+        "log": {
+          "bytes": 0,
+          "path": ".local/n11/dual-tight-ready-1297177430172106752-0-probe8/s5-1297177430172106880-0.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "output": {
+          "bytes": 277,
+          "nodes": 11630473,
+          "path": ".local/n11/dual-tight-ready-1297177430172106752-0-probe8/s5-1297177430172106880-0.out.csv",
+          "sha256": "d0704bb08f5a91435b79def0ef0178f09b3f752c5da878b618e22aa3f5060687",
+          "verdict": 1
+        },
+        "started": true,
+        "status": "exact_WIN"
+      },
+      {
+        "input": {
+          "bytes": 67,
+          "path": ".local/n11/dual-tight-ready-1297177430172106752-0-probe8/s5-1297177430306324480-0.input.csv",
+          "sha256": "fda4111c0b8b0ec0a5161a5188134882f9870b21cad3019d847556874094af15"
+        },
+        "key": [
+          1297177430306324480,
+          0
+        ],
+        "log": {
+          "bytes": 0,
+          "path": ".local/n11/dual-tight-ready-1297177430172106752-0-probe8/s5-1297177430306324480-0.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "output": {
+          "bytes": 274,
+          "nodes": 1237263,
+          "path": ".local/n11/dual-tight-ready-1297177430172106752-0-probe8/s5-1297177430306324480-0.out.csv",
+          "sha256": "88fa35fbedfab1bd4982510419c6216f52f9795faf80f387799087b21683cc00",
+          "verdict": 2
+        },
+        "started": true,
+        "status": "exact_LOSS"
+      },
+      {
+        "input": {
+          "bytes": 68,
+          "path": ".local/n11/dual-tight-ready-1297177430172106752-0-probe8/s5-10414574138294276096-0.input.csv",
+          "sha256": "f09a99fd32cd1eeb8c3cf2768f0caa0d851bea75f7f7ea828948cb9273404f75"
+        },
+        "key": [
+          10414574138294276096,
+          0
+        ],
+        "log": {
+          "bytes": 0,
+          "path": ".local/n11/dual-tight-ready-1297177430172106752-0-probe8/s5-10414574138294276096-0.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "output": {
+          "bytes": 278,
+          "nodes": 13324207,
+          "path": ".local/n11/dual-tight-ready-1297177430172106752-0-probe8/s5-10414574138294276096-0.out.csv",
+          "sha256": "992fbc4c2de02333e09332f61106d381f73b34e77763296719bd43b43d81a968",
+          "verdict": 2
+        },
+        "started": true,
+        "status": "exact_LOSS"
+      },
+      {
+        "input": null,
+        "key": [
+          1152921642181066752,
+          68719476736
+        ],
+        "log": null,
+        "started": false,
+        "status": "not_dispatched"
+      },
+      {
+        "input": null,
+        "key": [
+          5908863448599494656,
+          0
+        ],
+        "log": null,
+        "started": false,
+        "status": "not_dispatched"
+      },
+      {
+        "input": null,
+        "key": [
+          10378545341275312128,
+          65536
+        ],
+        "log": null,
+        "started": false,
+        "status": "not_dispatched"
+      }
+    ],
+    "unresolved_probe_keys": [
+      [
+        1152921642181066752,
+        68719476736
+      ],
+      [
+        5908863448599494656,
+        0
+      ],
+      [
+        10378545341275312128,
+        65536
+      ]
+    ],
+    "workers": 4
+  },
+  "schedule_manifest": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-next-class-1297177430172106752-0-probe8-manifest.json",
+    "sha256": "ef1ecd2de00fac4318ebe434e86e3fbe60c55e5137addbd572d8593e5d9f0454"
+  },
+  "scheduled_probe_target_sha256": "dd0d82e81583ce00904e37ed350d11ad07558003eeb03d4f503e7b6fb72c3f9c",
+  "schema": "n11-dual-tight-early-win-run-manifest-v1",
+  "source_inputs": [
+    {
+      "bytes": 629,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-next-class-1297177430172106752-0-probe8.csv",
+      "sha256": "dd0d82e81583ce00904e37ed350d11ad07558003eeb03d4f503e7b6fb72c3f9c"
+    },
+    {
+      "bytes": 5902,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-next-class-1297177430172106752-0-probe8-manifest.json",
+      "sha256": "ef1ecd2de00fac4318ebe434e86e3fbe60c55e5137addbd572d8593e5d9f0454"
+    },
+    {
+      "bytes": 1339924,
+      "path": ".local/n11/reply27-probe9/dfpn.exe",
+      "sha256": "05fa5a45c0749506ead2036174c7fc9047badd94835a06c7588d0c892bfafbd7"
+    },
+    {
+      "bytes": 187573,
+      "path": "cpp/solvers/kyouen_dfpn_root.cpp",
+      "sha256": "523f56e61550e1f5b93882229baf8b4cd83489be719ca484d13adef8424c3063"
+    },
+    {
+      "bytes": 13986,
+      "path": "research/experiments/n11-boundary-recovery-20261006/scripts/complete_class_local.py",
+      "sha256": "04ca107661447f40d9c43034f7adbc20a65512c3cd5839b0536f257f2a64d4f4"
+    },
+    {
+      "bytes": 15352,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-collect-early-win-drained.py",
+      "sha256": "99eb44d84d2163a73953579693805c9e4532648b833a96f5ad6b36b5568bf165"
+    }
+  ]
+}

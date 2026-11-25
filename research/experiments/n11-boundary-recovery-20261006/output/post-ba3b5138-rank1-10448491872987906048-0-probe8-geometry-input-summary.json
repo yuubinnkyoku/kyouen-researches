@@ -1,0 +1,28 @@
+{
+  "claim": "Derived from the collector output; only the five completed exact rows are presented to the class geometry verifier. The three not-dispatched targets remain UNKNOWN.",
+  "exact_replay_counts": {
+    "LOSS": 3,
+    "UNKNOWN": 0,
+    "WIN": 2
+  },
+  "exact_targets": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-rank1-10448491872987906048-0-probe8-exact-targets.csv",
+    "rows": 5,
+    "sha256": "f6669fa49b5c10778fe7955a50a40357d1f0baf4ab67f1ebee7cde90f5ffd969"
+  },
+  "new_exact_cache": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-rank1-10448491872987906048-0-probe8-new-exact-s5.cache",
+    "rows": 5,
+    "sha256": "005a00b727bfd91f8b252b0c62a8f0ddeafd55947007fc870a898ded3da4df54"
+  },
+  "raw_output": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-rank1-10448491872987906048-0-probe8-raw-exact.csv",
+    "rows": 5,
+    "sha256": "4cbbe490d5815f0c465e7ea657f1d636d9331d0d4d62f9e3540919cd64ed9b17"
+  },
+  "run_manifest": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-rank1-10448491872987906048-0-probe8-run-manifest.json",
+    "sha256": "402f5d67717f479c358235860e4046625e5a246a06fb97c62d4a1bd4bf9c51b1"
+  },
+  "schema": "n11-dual-tight-probe-exact-subset-summary-v1"
+}

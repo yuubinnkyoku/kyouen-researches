@@ -1,0 +1,113 @@
+{
+  "conflicts": 0,
+  "finite_frontier": {
+    "best_class_targets": {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-next14-best-class.csv",
+      "rows": 104,
+      "sha256": "3157f6f7a38fa82b6c176d83785cf6d21e96759668e802a570acb7c123f4f2a4"
+    },
+    "cardinality": {
+      "cache_entries": 4270,
+      "class_status_counts": {
+        "LOSS": 28,
+        "UNKNOWN": 3186,
+        "WIN": 170
+      },
+      "dual_certificate_matches_integer_optimum": true,
+      "minimum_additional_classes": 4,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-next14-expanded-cardinality.json",
+      "rational_dual_total": "4",
+      "secured_vertices": 109,
+      "sha256": "5a958f1b2521d5443d1feab8b3031d51f0001f00595249d41fc856a153c6f9ba",
+      "uncovered_vertices": 10
+    },
+    "ranking": {
+      "best_target": {
+        "key": [
+          1297036692682702984,
+          0
+        ],
+        "new_vertices": [
+          33,
+          43,
+          77,
+          87
+        ],
+        "targets_out": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-next14-best-class.csv",
+        "unknown_s5": 104
+      },
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-next14-expanded-ranking.json",
+      "ranked_classes": 4,
+      "secured_vertices": 109,
+      "sha256": "7a16662ea285433cefb6727f07ff68b1beb3cb9becec1c8ddfe4a006f46ff200"
+    },
+    "repair": {
+      "additive_unknown_s5": 379,
+      "exact_15_additive_unknown_s5": 1403,
+      "exact_15_unique_unknown_s5": 1361,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-next14-expanded-repair.json",
+      "repair_classes": 4,
+      "sha256": "7df698fd845ff29596041105271cccf77cade156cc264384a05c876b9a3597e0",
+      "unique_unknown_s5": 379
+    },
+    "repair_targets": {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-next14-repair.csv",
+      "rows": 379,
+      "sha256": "d010c3e7e07cfc2104083911507ddf999b0cd54705c8b9de9105eedbdc0fea0f"
+    }
+  },
+  "independent_solver_audit": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/next14-run-model8-independent-audit.json",
+    "sha256": "29ee3c2eab8161b733cfc168ce4fb18c34731be0966797ffdc1b4e7d19c6590c"
+  },
+  "loss": 4176,
+  "merge_scope": {
+    "baseline_cache_path": "research/experiments/n11-boundary-recovery-20261006/output/post-next13-expanded-s5.cache",
+    "baseline_cache_sha256": "03b93d52c8e5756d61dea8ca848cf2a08d7b01650d8c122363bc6754ca865235",
+    "baseline_loss": 4171,
+    "baseline_unique": 4263,
+    "baseline_win": 92,
+    "boundary_scope": "supplied model8 targets only; the full 57-child s4 class is independently checked by parent",
+    "class_status": "WIN",
+    "conflicts": 0,
+    "next14_exact": 7,
+    "next14_exact_cache_path": "research/experiments/n11-boundary-recovery-20261006/output/next14-run-model8-new-exact-s5.cache",
+    "next14_exact_cache_sha256": "fa88a17fd1bbfe666c72834e0486e39dfc5c8cf7fbf118859a0d5883789f2c16",
+    "next14_new_loss": 5,
+    "next14_new_win": 2,
+    "next14_raw_replay_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/next14-run-model8-out.csv",
+    "next14_raw_replay_sha256": "161f66041656ebdea0640f04ab8cb7f586bc08d1c3ef855d3c12b14a9f676968"
+  },
+  "merged_cache": {
+    "line_endings": "LF",
+    "loss": 4176,
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-next14-expanded-s5.cache",
+    "sha256": "c9f61027e80a9e71c70536ff4b7c24e55e6bd76b1fa2525ccb7458a82a7f7529",
+    "unique_exact_s5": 4270,
+    "win": 94
+  },
+  "sources": [
+    {
+      "counts": {
+        "1": 92,
+        "2": 4171
+      },
+      "nodes": 0,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-next13-expanded-s5.cache",
+      "rows": 4263,
+      "sha256": "03b93d52c8e5756d61dea8ca848cf2a08d7b01650d8c122363bc6754ca865235"
+    },
+    {
+      "counts": {
+        "1": 2,
+        "2": 5
+      },
+      "nodes": 44039611,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/next14-run-model8-out.csv",
+      "rows": 7,
+      "sha256": "161f66041656ebdea0640f04ab8cb7f586bc08d1c3ef855d3c12b14a9f676968"
+    }
+  ],
+  "unique_exact_s5": 4270,
+  "win": 94
+}

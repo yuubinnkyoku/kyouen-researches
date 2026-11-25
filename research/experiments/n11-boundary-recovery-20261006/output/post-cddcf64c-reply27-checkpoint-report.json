@@ -1,0 +1,157 @@
+{
+  "checkpoint_base_main": "cddcf64ccdd110eb6bfb535aaaa4b96a0f73fa43",
+  "dual_positive_weights": {
+    "100": "1",
+    "77": "1"
+  },
+  "dual_tight": true,
+  "exact_s5_cache": {
+    "LOSS": 5271,
+    "WIN": 138,
+    "conflict": 0,
+    "entries": 5409,
+    "new_rows": 8,
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-cddcf64c-next-class-1297036761403228160-0-probe8-completed-merged-s5.cache",
+    "sha256": "be1ce064f3b76581f7fdae6302c3defe164c3698e7f90255e76e88b1417eebad"
+  },
+  "minimum_additional_classes": 2,
+  "next_target": {
+    "canonical_s5_children": 102,
+    "coverage": [
+      37,
+      39,
+      100,
+      108
+    ],
+    "dual_vertex": 100,
+    "dual_weight": "1",
+    "key": [
+      1297177430172106752,
+      0
+    ],
+    "known_loss_s5": 5,
+    "rank": 1,
+    "targets_csv": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-cddcf64c-next-class-1297036761403228160-0-probe8-completed-ranking-targets.csv",
+    "unknown_s5": 97,
+    "unknown_s5_legal_count_max": 101,
+    "unknown_s5_legal_count_min": 80
+  },
+  "optimizer_environment": "research/experiments/n11-boundary-recovery-20261006/output/post-cddcf64c-optimizer-environment.json",
+  "processed_class": {
+    "boundary_status_counts": {
+      "LOSS": 12,
+      "UNKNOWN": 88,
+      "WIN": 2
+    },
+    "canonical_s5_children": 102,
+    "coverage_vertices": [
+      36,
+      40,
+      100,
+      108
+    ],
+    "exact_win_witnesses": [
+      [
+        1152921504607899648,
+        536936448
+      ],
+      [
+        1152921573461590016,
+        68719476736
+      ]
+    ],
+    "geometry_audit_passed": true,
+    "key": [
+      1297036761403228160,
+      0
+    ],
+    "status": "WIN",
+    "unexplored_children_after_probe": 88
+  },
+  "proof_status": {
+    "empty_11x11": "UNKNOWN",
+    "reply27_root": "UNKNOWN"
+  },
+  "rational_dual": "2",
+  "raw_history_preflight": {
+    "conflicts": 0,
+    "full_class_csv_files": 8739,
+    "full_class_prior_exact": 0,
+    "full_class_ready": 96,
+    "full_class_same_budget_unknown": 0,
+    "full_class_targets": 96,
+    "probe_csv_files": 8740,
+    "probe_prior_exact": 0,
+    "probe_ready": 8,
+    "probe_same_budget_unknown": 0
+  },
+  "remaining_third_moves": 5,
+  "repair": {
+    "additive_unknown_s5": 196,
+    "claim": "repair classes are scheduling targets and remain UNKNOWN",
+    "classes": 2,
+    "distinct_unknown_s5": 196,
+    "selected": [
+      {
+        "coverage": [
+          37,
+          39,
+          100,
+          108
+        ],
+        "key": [
+          1297177430172106752,
+          0
+        ],
+        "uncached_s5": 97
+      },
+      {
+        "coverage": [
+          38,
+          77,
+          87
+        ],
+        "key": [
+          1585267068834414720,
+          0
+        ],
+        "uncached_s5": 99
+      }
+    ]
+  },
+  "root": [
+    60,
+    27
+  ],
+  "s4_classes": {
+    "LOSS": 30,
+    "UNKNOWN": 3108,
+    "WIN": 246
+  },
+  "s5_probe": {
+    "additional_class_siblings_dispatched": 0,
+    "budget_per_target": 15000000,
+    "completed": 8,
+    "nodes_all_rows": 35894680,
+    "nodes_exact": 35894680,
+    "scheduled": 8,
+    "verdicts": {
+      "LOSS": 6,
+      "UNKNOWN": 0,
+      "WIN": 2
+    },
+    "workers": 4
+  },
+  "saved_s6_intersection": {
+    "canonical_s6_keys": 4467,
+    "conflicts": 0,
+    "derived_exact_s5": 0,
+    "full_class_parents": 96,
+    "probe_parents": 8,
+    "source_files": 1468,
+    "unknown_full_class_parents": 96,
+    "unknown_probe_parents": 8
+  },
+  "schema": "n11-reply27-finite-checkpoint-v1",
+  "secured_third_moves": 114
+}

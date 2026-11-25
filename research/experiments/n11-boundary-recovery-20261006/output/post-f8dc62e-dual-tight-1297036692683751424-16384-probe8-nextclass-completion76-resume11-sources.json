@@ -1,0 +1,148 @@
+{
+  "budget_per_target": 15000000,
+  "checkpoint": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-f8dc62e-dual-tight-1297036692683751424-16384-probe8-nextclass-completion76-pre-retry-summary.json",
+    "sha256": "66a807d12b45181c7393de817f2b688b0cd41f149c34c9bc73a09d36197d7951"
+  },
+  "claim": "The failed target has no solver verdict; saved exact and UNKNOWN rows are excluded from this resume input.",
+  "class_key": [
+    10448351169859289088,
+    0
+  ],
+  "current_cache": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-f8dc62e-dual-tight-1297036692683751424-16384-probe8-nextclass-next-probe8-second-merged-s5.cache",
+    "sha256": "2b15dfbcbe307f571da9370ad6f4f61e2e27629b50c2a90f1d83f6c6fa15e9e9"
+  },
+  "excluded_completed_exact_or_UNKNOWN": 65,
+  "failed_without_verdict": [
+    [
+      10448351169859551232,
+      0
+    ]
+  ],
+  "full_targets": {
+    "count": 76,
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-f8dc62e-dual-tight-1297036692683751424-16384-probe8-nextclass-next-probe8-second-next-completion76-v2.csv",
+    "sha256": "1191c7fc13d5a36474ffb7f1e334ae4dd8d75cd5ea97230e47abe8bbe6652770"
+  },
+  "never_dispatched": [
+    [
+      10448351135499550848,
+      32768
+    ],
+    [
+      10448351135499812864,
+      32768
+    ],
+    [
+      10448351135501647872,
+      32768
+    ],
+    [
+      10448351135503745024,
+      32768
+    ],
+    [
+      10448351135767986176,
+      32768
+    ],
+    [
+      10448351137647034368,
+      32768
+    ],
+    [
+      10448351169859289600,
+      0
+    ],
+    [
+      10448351169859297280,
+      0
+    ],
+    [
+      10448351169861386240,
+      0
+    ],
+    [
+      10448353334522806272,
+      32768
+    ]
+  ],
+  "prior_schedule": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-f8dc62e-dual-tight-1297036692683751424-16384-probe8-nextclass-next-probe8-second-next-completion76-v2-sources.json",
+    "sha256": "d1754c746376d5a3f03f8ed75acc75a81c2949bbb855ac9a3cd8a48a3b73865c"
+  },
+  "resume_targets": {
+    "count": 11,
+    "keys": [
+      [
+        10448351135499550848,
+        32768
+      ],
+      [
+        10448351135499812864,
+        32768
+      ],
+      [
+        10448351135501647872,
+        32768
+      ],
+      [
+        10448351135503745024,
+        32768
+      ],
+      [
+        10448351135767986176,
+        32768
+      ],
+      [
+        10448351137647034368,
+        32768
+      ],
+      [
+        10448351169859289600,
+        0
+      ],
+      [
+        10448351169859297280,
+        0
+      ],
+      [
+        10448351169859551232,
+        0
+      ],
+      [
+        10448351169861386240,
+        0
+      ],
+      [
+        10448353334522806272,
+        32768
+      ]
+    ],
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-f8dc62e-dual-tight-1297036692683751424-16384-probe8-nextclass-completion76-resume11.csv",
+    "sha256": "3bd751b2a490d2ab13f63880f6c086053f0af283584d5cdf3fad0a634acf7eba"
+  },
+  "run_dir": "C:\\Users\\yuubi\\AppData\\Local\\Temp\\kyouen-reply27-completion76-resume11",
+  "schema": "n11-dual-tight-run-resume-manifest-v1",
+  "selection_rule": "resume only keys with no completed replay row; do not rerun exact or completed UNKNOWN rows",
+  "solver_command": "research/experiments/n11-boundary-recovery-20261006/scripts/complete_class_local.py --solver .local/n11/reply27-probe9/dfpn.exe --targets research/experiments/n11-boundary-recovery-20261006/output/post-f8dc62e-dual-tight-1297036692683751424-16384-probe8-nextclass-completion76-resume11.csv --cache research/experiments/n11-boundary-recovery-20261006/output/post-f8dc62e-dual-tight-1297036692683751424-16384-probe8-nextclass-next-probe8-second-merged-s5.cache --out-dir C:\\Users\\yuubi\\AppData\\Local\\Temp\\kyouen-reply27-completion76-resume11 --workers 4 --budget 15000000",
+  "sources": [
+    {
+      "path": ".local/n11/reply27-probe9/dfpn.exe",
+      "sha256": "05fa5a45c0749506ead2036174c7fc9047badd94835a06c7588d0c892bfafbd7"
+    },
+    {
+      "path": "cpp/solvers/kyouen_dfpn_root.cpp",
+      "sha256": "523f56e61550e1f5b93882229baf8b4cd83489be719ca484d13adef8424c3063"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/scripts/complete_class_local.py",
+      "sha256": "04ca107661447f40d9c43034f7adbc20a65512c3cd5839b0536f257f2a64d4f4"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/scripts/prepare_dual_tight_run_resume.py",
+      "sha256": "9a6d4a0b5d1b08b3be57767e7a8b07606655df85238baa9d774922ebbfbb66cb"
+    }
+  ],
+  "workers": 4
+}

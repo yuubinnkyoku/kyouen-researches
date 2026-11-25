@@ -1,0 +1,22 @@
+{
+  "budget_per_target": 15000000,
+  "exact_replay_counts": {
+    "LOSS": 3,
+    "UNKNOWN": 0,
+    "WIN": 2
+  },
+  "new_exact_cache": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-next-class-1297177430172106752-0-probe8-early-win-new-exact-s5.cache",
+    "rows": 5,
+    "sha256": "98c428d35e6f50114b7e7f7f33d57edf8759d62a030a1e7bbefb30c274ea47a3"
+  },
+  "nodes": 39801125,
+  "raw_output": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-next-class-1297177430172106752-0-probe8-early-win-raw-exact.csv",
+    "rows": 5,
+    "sha256": "114d6cf9a2e7868d0de689ea58f3374de2acd3e3eec6bd00ea2e80523b181013"
+  },
+  "schema": "n11-dual-tight-class-exact-subset-summary-v1",
+  "scope": "completed exact replay rows only; the enclosing s4 WIN conclusion is recorded after geometry verification",
+  "target_count": 5
+}

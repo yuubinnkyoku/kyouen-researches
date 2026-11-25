@@ -1,0 +1,105 @@
+{
+  "best_target": {
+    "key": [
+      1298162592589545600,
+      0
+    ],
+    "new_vertices": [
+      70,
+      72,
+      77,
+      87
+    ],
+    "targets_out": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-next12-expanded-best-class.csv",
+    "unknown_s5": 104
+  },
+  "derived_cache_entries": 4257,
+  "loss_classes": 28,
+  "ranking": [
+    {
+      "all_s5": 108,
+      "coverage": [
+        70,
+        72,
+        77,
+        87
+      ],
+      "key": [
+        1298162592589545600,
+        0
+      ],
+      "known_loss_fraction": 0.037037037037037035,
+      "known_loss_s5": 4,
+      "max_unknown_legal": 107,
+      "min_unknown_legal": 86,
+      "new_vertex_count": 4,
+      "new_vertices": [
+        70,
+        72,
+        77,
+        87
+      ],
+      "rank": 1,
+      "unknown_per_new_vertex": 26.0,
+      "unknown_s5": 104
+    },
+    {
+      "all_s5": 106,
+      "coverage": [
+        38,
+        100,
+        108
+      ],
+      "key": [
+        1585267068835463168,
+        0
+      ],
+      "known_loss_fraction": 0.04716981132075472,
+      "known_loss_s5": 5,
+      "max_unknown_legal": 105,
+      "min_unknown_legal": 81,
+      "new_vertex_count": 3,
+      "new_vertices": [
+        38,
+        100,
+        108
+      ],
+      "rank": 2,
+      "unknown_per_new_vertex": 33.666666666666664,
+      "unknown_s5": 101
+    },
+    {
+      "all_s5": 107,
+      "coverage": [
+        33,
+        43,
+        104
+      ],
+      "key": [
+        10448351135499550848,
+        0
+      ],
+      "known_loss_fraction": 0.037383177570093455,
+      "known_loss_s5": 4,
+      "max_unknown_legal": 105,
+      "min_unknown_legal": 84,
+      "new_vertex_count": 3,
+      "new_vertices": [
+        33,
+        43,
+        104
+      ],
+      "rank": 3,
+      "unknown_per_new_vertex": 34.333333333333336,
+      "unknown_s5": 103
+    }
+  ],
+  "ranking_rule": "unknown_s5/new_vertices, then unknown_s5, then known-loss fraction",
+  "repair_classes": 3,
+  "root": [
+    60,
+    27
+  ],
+  "secured_vertices": 109,
+  "win_forbidden_classes": 163
+}

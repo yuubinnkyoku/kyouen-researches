@@ -1,0 +1,43 @@
+{
+  "generated": [
+    {
+      "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-f8dc62e-dual-tight-1297036692683751424-16384-probe8-nextclass-next-probe8-second-next-s6-unknown2-next-targets.csv",
+      "sha256": "4b66e2b3b48d3063bdc8073160ae9cae5d5c2fc062c11c49222c6224603574d8"
+    },
+    {
+      "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-f8dc62e-dual-tight-1297036692683751424-16384-probe8-nextclass-next-probe8-second-next-s6-unknown2-ranking.json",
+      "sha256": "1b72c7bafe121f5aa970d23460a0007a4d3c59639d732a82b16d09f232dd66e4"
+    }
+  ],
+  "schema": "n11-dual-tight-repair-ranking-sources-v1",
+  "sources": [
+    {
+      "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-f8dc62e-dual-tight-1297036692683751424-16384-probe8-nextclass-next-probe8-second-next-s6-unknown2-final-merged-s5.cache",
+      "sha256": "907521ce464b8127ebb1ff0d47e68903d0c37985055bb9a52daf0bc099ad7940"
+    },
+    {
+      "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-f8dc62e-dual-tight-1297036692683751424-16384-probe8-nextclass-next-probe8-second-next-s6-unknown2-repair-ranking-input.json",
+      "sha256": "99d26aeb9b747f377ec745e41667163a9289fbc1de5907c1830533e63710870c"
+    },
+    {
+      "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-f8dc62e-dual-tight-1297036692683751424-16384-probe8-nextclass-next-probe8-second-next-s6-unknown2-cardinality.json",
+      "sha256": "de5083e8136122b7c835dbfceb76d1ebdb0486c6f7e0dbe9dcfded796f93fe12"
+    },
+    {
+      "path": "research\\experiments\\n11-boundary-recovery-20261006\\scripts\\rank_dual_tight_repair_classes.py",
+      "sha256": "bdb0e9124e4286202a5e7cee597bef2dab98800e038bf7274b92a0877ee5da11"
+    },
+    {
+      "path": "research\\experiments\\n11-frontier-selection-20261005\\scripts\\cache_aware_reply27_cover.py",
+      "sha256": "8c0f81cca2517f36f1c5c08aeb94cdff334cfcbefe2ff2c36dfff6bf3ed1dc33"
+    },
+    {
+      "path": "research\\experiments\\n11-frontier-selection-20261005\\scripts\\cache_aware_reply27_cardinality.py",
+      "sha256": "df7f1c736ce9ac44feb0a30eb7378467257edc25c7791a4d552a05456b5369b1"
+    },
+    {
+      "path": "research\\experiments\\n11-search-methods\\scripts\\dfpn_edge_classes.py",
+      "sha256": "6cca3cfe161ffc9ffc199c56b595e9d0f72b839ee945e8b7e2c4090dafcf0c0c"
+    }
+  ]
+}

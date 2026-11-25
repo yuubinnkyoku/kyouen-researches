@@ -1,0 +1,112 @@
+{
+  "all_saved_s6_loss_reverse_audit": {
+    "conflicts": 0,
+    "new_s5_loss_rows": 0,
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-d5136a93-all-saved-s6-loss-reverse-audit.json",
+    "reply27_relevant_parents": 637,
+    "safe_canonical_s5_parents": 897,
+    "sha256": "4126ebd471466b5d2109d42bf38d4336ff221e30942de5ffd5d92d31f85fd17a",
+    "unique_exact_s6_loss_keys": 172
+  },
+  "class_key": [
+    1585267068835463168,
+    0
+  ],
+  "complete_s6_boundary": {
+    "canonical_children": 5022,
+    "parent_child_incidences": 9235,
+    "parent_count": 96,
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-d5136a93-next-class-1585267068835463168-0-s6-boundary.json",
+    "sha256": "d633d4bea78e095a262d80d7914957db387e024d038d82b48655221034536f90"
+  },
+  "current_s5_cache": {
+    "exact_rows": 5580,
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-67ecfaa9-class-1585267068834414720-0-after-ready83-s6-reverse-merged-s5.cache",
+    "selected_exact_hits": 0,
+    "sha256": "a8002eb4a6dd33de9cae0ae625f04de63881184211380d7efecacca8c5476ac6"
+  },
+  "decision": "Ready for a bounded 9-target S5 probe. A WIN result makes the s4 class WIN; then do not dispatch any remaining S5 child. UNKNOWN remains UNKNOWN and must not be repeated at the same budget.",
+  "main_commit": "d5136a939be1a60b921f0a4eab739596684458da",
+  "probe_count": 9,
+  "ranking_sha256": "fb45ada4f9d52f5a54e21c13b72b36e87e349855fe1cea25a1735222b4c59d3a",
+  "ranking_source": "research/experiments/n11-boundary-recovery-20261006/output/post-67ecfaa9-class-1585267068834414720-0-after-ready83-s6-reverse-ranking-targets.csv",
+  "raw_s5_history": {
+    "conflicts": 0,
+    "csv_files_examined": 10529,
+    "dispatch_ready": 96,
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-d5136a93-next-class-1585267068835463168-0-raw-history-audit.json",
+    "prior_exact": 0,
+    "requested_budget": 15000000,
+    "same_or_higher_budget_unknown": 0,
+    "sha256": "7317aa8cf7144d49d9d00d252d98d5ba2d341c55d47212e97b52cf840df78fbf",
+    "targets": 96
+  },
+  "saved_s6_intersection": {
+    "full_detail": "research/experiments/n11-boundary-recovery-20261006/output/post-d5136a93-next-class-1585267068835463168-0-saved-s6-full.json.gz",
+    "full_detail_sha256": "67c7217ffd75149a8c1c17d68c696df1702020ce8becd78b7616ed550dea31db",
+    "selected_parent_outcomes": {
+      "1152921779620020224:68719476736": "UNKNOWN",
+      "1585267068835463168:64": "UNKNOWN",
+      "1585267068835463168:65536": "UNKNOWN",
+      "1585267068835463168:67108864": "UNKNOWN",
+      "1585267068835594240:0": "UNKNOWN",
+      "1585267068852240384:0": "UNKNOWN",
+      "1585267069103898624:0": "UNKNOWN",
+      "1585407806323818496:0": "UNKNOWN",
+      "1585548543812173824:0": "UNKNOWN"
+    },
+    "source_audit": "research/experiments/n11-boundary-recovery-20261006/output/post-67ecfaa9-class-1585267068834414720-0-after-ready83-s6-extended-source-audit.json",
+    "source_audit_sha256": "19d35c492b2600839ac168935e8fcf8d8fbdd4a9ec842d37059e4ab18e502b5a",
+    "summary": "research/experiments/n11-boundary-recovery-20261006/output/post-d5136a93-next-class-1585267068835463168-0-saved-s6-summary.json",
+    "summary_sha256": "61b525595baa22425c4371aef2f70b1aa9a614c744246df3beec77ad1e7d4621"
+  },
+  "schema": "n11-reply27-s5-probe-preflight-v1",
+  "selected_keys": [
+    [
+      1585267068835463168,
+      67108864
+    ],
+    [
+      1585267068835463168,
+      64
+    ],
+    [
+      1585267068835463168,
+      65536
+    ],
+    [
+      1152921779620020224,
+      68719476736
+    ],
+    [
+      1585267068835594240,
+      0
+    ],
+    [
+      1585267068852240384,
+      0
+    ],
+    [
+      1585267069103898624,
+      0
+    ],
+    [
+      1585407806323818496,
+      0
+    ],
+    [
+      1585548543812173824,
+      0
+    ]
+  ],
+  "selection_rule": "first nine entries of the latest saved current-cache ranking; scheduling heuristic only",
+  "solver": {
+    "budget_per_target": 15000000,
+    "output_dir": ".local/n11/dual-tight-class-1585267068835463168-0-probe9",
+    "path": "D:/ghq/github.com/yuubinnkyoku/kyouen-researches/.local/n11/reply27-probe9/dfpn.exe",
+    "sha256": "05fa5a45c0749506ead2036174c7fc9047badd94835a06c7588d0c892bfafbd7",
+    "workers": 4
+  },
+  "target_csv": "research/experiments/n11-boundary-recovery-20261006/output/post-d5136a93-next-class-1585267068835463168-0-probe9.csv",
+  "target_sha256": "a079e107f840e3aa50f98979a7d3eb330af8b6b21be7da28a6ee31ca6536fe5a"
+}

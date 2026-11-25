@@ -1,0 +1,845 @@
+{
+  "schema": "n11-next17-partial-s6-reverse-loss-v1",
+  "source": "research/experiments/n11-boundary-recovery-20261006/output/next17-hard5-s6-partial-replay.csv",
+  "source_sha256": "12000ad6248f9331b90bd78f29c8a120bb0d6cb07ed7c51bf19383be217448ce",
+  "source_git_blob_sha": "93e788de61a33bf0dffbabac7d96aceac71459ac",
+  "baseline_cache": "research/experiments/n11-boundary-recovery-20261006/output/post-951a5619-rank1-1297036692683882496-0-probe8-next-collected-merged-s5.cache",
+  "baseline_sha256": "eee8da7e463efbc7fabfae19bab34c54a8c5d8ef1b0485749f1634c0b5d31c94",
+  "baseline_git_blob_sha": "e3bb86048e2632e4a21795205bb7ebc430d74843",
+  "delta_cache": "research/experiments/n11-boundary-recovery-20261006/output/post-next17-partial-s6-derived-s5.cache",
+  "delta_cache_git_blob_sha": "6a2581f20c549615029ad4d57757ca5d057b810f",
+  "source_replay_rows": 71,
+  "source_s6_win": 44,
+  "source_s6_loss": 13,
+  "source_s6_unknown": 14,
+  "source_budget_per_row": 10000000,
+  "baseline_exact_s5": 4847,
+  "new_s5_loss": 51,
+  "new_reply27_s5_loss": 25,
+  "delta_conflicts": 0,
+  "proof_rule": "For each exact s6 OR LOSS, each legal s5 AND predecessor has a LOSS child and is LOSS; all s5 predecessors are canonicalized under D4.",
+  "independent_checks": "All 71 source s6 keys were checked to be safe canonical six-stone boards with matching legal counts; all 13 LOSS rows were checked to have legal one-stone deletion predecessors; no WIN cache conflicts.",
+  "limits": [
+    "Original df-pn s6 LOSS results are solver outputs, not independently replayed certificates.",
+    "This adds s5 LOSS only; does not close any s4 LOSS class or 11x11 two-stone root.",
+    "The strict historical raw-source completeness preflight is unchanged."
+  ],
+  "witnesses": [
+    {
+      "s5_key": [
+        "13019119616",
+        "16448"
+      ],
+      "s6_loss_witnesses": [
+        {
+          "line": 1,
+          "s6_key": [
+            "1152921517625966592",
+            "16448"
+          ],
+          "removed_point": 60
+        }
+      ]
+    },
+    {
+      "s5_key": [
+        "13019136000",
+        "64"
+      ],
+      "s6_loss_witnesses": [
+        {
+          "line": 5,
+          "s6_key": [
+            "1152921517625982976",
+            "64"
+          ],
+          "removed_point": 60
+        }
+      ]
+    },
+    {
+      "s5_key": [
+        "47378857984",
+        "64"
+      ],
+      "s6_loss_witnesses": [
+        {
+          "line": 6,
+          "s6_key": [
+            "1152921551985704960",
+            "64"
+          ],
+          "removed_point": 60
+        }
+      ]
+    },
+    {
+      "s5_key": [
+        "281474976711172",
+        "536879104"
+      ],
+      "s6_loss_witnesses": [
+        {
+          "line": 17,
+          "s6_key": [
+            "1153202979583558148",
+            "536879104"
+          ],
+          "removed_point": 60
+        }
+      ]
+    },
+    {
+      "s5_key": [
+        "281474976711232",
+        "536879104"
+      ],
+      "s6_loss_witnesses": [
+        {
+          "line": 18,
+          "s6_key": [
+            "1153202979583558208",
+            "536879104"
+          ],
+          "removed_point": 60
+        }
+      ]
+    },
+    {
+      "s5_key": [
+        "281477124194816",
+        "536879104"
+      ],
+      "s6_loss_witnesses": [
+        {
+          "line": 27,
+          "s6_key": [
+            "1153202981731041792",
+            "536879104"
+          ],
+          "removed_point": 60
+        }
+      ]
+    },
+    {
+      "s5_key": [
+        "1125899906842880",
+        "562036736"
+      ],
+      "s6_loss_witnesses": [
+        {
+          "line": 37,
+          "s6_key": [
+            "1154047404513689856",
+            "562036736"
+          ],
+          "removed_point": 60
+        }
+      ]
+    },
+    {
+      "s5_key": [
+        "145522562959409162",
+        "0"
+      ],
+      "s6_loss_witnesses": [
+        {
+          "line": 44,
+          "s6_key": [
+            "1298444067566256138",
+            "0"
+          ],
+          "removed_point": 60
+        }
+      ]
+    },
+    {
+      "s5_key": [
+        "145804037940314120",
+        "0"
+      ],
+      "s6_loss_witnesses": [
+        {
+          "line": 51,
+          "s6_key": [
+            "1298725542547161096",
+            "0"
+          ],
+          "removed_point": 60
+        }
+      ]
+    },
+    {
+      "s5_key": [
+        "145804042231087112",
+        "0"
+      ],
+      "s6_loss_witnesses": [
+        {
+          "line": 52,
+          "s6_key": [
+            "1298725546837934088",
+            "0"
+          ],
+          "removed_point": 60
+        }
+      ]
+    },
+    {
+      "s5_key": [
+        "433471464134410250",
+        "0"
+      ],
+      "s6_loss_witnesses": [
+        {
+          "line": 54,
+          "s6_key": [
+            "1586392968741257226",
+            "0"
+          ],
+          "removed_point": 60
+        }
+      ]
+    },
+    {
+      "s5_key": [
+        "576460761027576064",
+        "64"
+      ],
+      "s6_loss_witnesses": [
+        {
+          "line": 58,
+          "s6_key": [
+            "1729382265634423040",
+            "64"
+          ],
+          "removed_point": 60
+        }
+      ]
+    },
+    {
+      "s5_key": [
+        "1152921504606847232",
+        "562036736"
+      ],
+      "s6_loss_witnesses": [
+        {
+          "line": 37,
+          "s6_key": [
+            "1154047404513689856",
+            "562036736"
+          ],
+          "removed_point": 50
+        }
+      ]
+    },
+    {
+      "s5_key": [
+        "1152921504606847492",
+        "536879104"
+      ],
+      "s6_loss_witnesses": [
+        {
+          "line": 17,
+          "s6_key": [
+            "1153202979583558148",
+            "536879104"
+          ],
+          "removed_point": 48
+        }
+      ]
+    },
+    {
+      "s5_key": [
+        "1152921504606847552",
+        "536879104"
+      ],
+      "s6_loss_witnesses": [
+        {
+          "line": 18,
+          "s6_key": [
+            "1153202979583558208",
+            "536879104"
+          ],
+          "removed_point": 48
+        }
+      ]
+    },
+    {
+      "s5_key": [
+        "1152921506754331136",
+        "536879104"
+      ],
+      "s6_loss_witnesses": [
+        {
+          "line": 27,
+          "s6_key": [
+            "1153202981731041792",
+            "536879104"
+          ],
+          "removed_point": 48
+        }
+      ]
+    },
+    {
+      "s5_key": [
+        "1152921509036032000",
+        "16448"
+      ],
+      "s6_loss_witnesses": [
+        {
+          "line": 1,
+          "s6_key": [
+            "1152921517625966592",
+            "16448"
+          ],
+          "removed_point": 33
+        }
+      ]
+    },
+    {
+      "s5_key": [
+        "1152921509036048384",
+        "64"
+      ],
+      "s6_loss_witnesses": [
+        {
+          "line": 5,
+          "s6_key": [
+            "1152921517625982976",
+            "64"
+          ],
+          "removed_point": 33
+        }
+      ]
+    },
+    {
+      "s5_key": [
+        "1152921517491748864",
+        "16448"
+      ],
+      "s6_loss_witnesses": [
+        {
+          "line": 1,
+          "s6_key": [
+            "1152921517625966592",
+            "16448"
+          ],
+          "removed_point": 27
+        }
+      ]
+    },
+    {
+      "s5_key": [
+        "1152921517491765248",
+        "64"
+      ],
+      "s6_loss_witnesses": [
+        {
+          "line": 5,
+          "s6_key": [
+            "1152921517625982976",
+            "64"
+          ],
+          "removed_point": 27
+        }
+      ]
+    },
+    {
+      "s5_key": [
+        "1152921517625966592",
+        "16384"
+      ],
+      "s6_loss_witnesses": [
+        {
+          "line": 1,
+          "s6_key": [
+            "1152921517625966592",
+            "16448"
+          ],
+          "removed_point": 70
+        }
+      ]
+    },
+    {
+      "s5_key": [
+        "1152921517625982976",
+        "0"
+      ],
+      "s6_loss_witnesses": [
+        {
+          "line": 5,
+          "s6_key": [
+            "1152921517625982976",
+            "64"
+          ],
+          "removed_point": 70
+        }
+      ]
+    },
+    {
+      "s5_key": [
+        "1152921543395770368",
+        "64"
+      ],
+      "s6_loss_witnesses": [
+        {
+          "line": 6,
+          "s6_key": [
+            "1152921551985704960",
+            "64"
+          ],
+          "removed_point": 33
+        }
+      ]
+    },
+    {
+      "s5_key": [
+        "1152921551851487232",
+        "64"
+      ],
+      "s6_loss_witnesses": [
+        {
+          "line": 6,
+          "s6_key": [
+            "1152921551985704960",
+            "64"
+          ],
+          "removed_point": 27
+        }
+      ]
+    },
+    {
+      "s5_key": [
+        "1152921551985704960",
+        "0"
+      ],
+      "s6_loss_witnesses": [
+        {
+          "line": 6,
+          "s6_key": [
+            "1152921551985704960",
+            "64"
+          ],
+          "removed_point": 70
+        }
+      ]
+    },
+    {
+      "s5_key": [
+        "1153202979583558148",
+        "8192"
+      ],
+      "s6_loss_witnesses": [
+        {
+          "line": 17,
+          "s6_key": [
+            "1153202979583558148",
+            "536879104"
+          ],
+          "removed_point": 93
+        }
+      ]
+    },
+    {
+      "s5_key": [
+        "1153202979583558208",
+        "8192"
+      ],
+      "s6_loss_witnesses": [
+        {
+          "line": 18,
+          "s6_key": [
+            "1153202979583558208",
+            "536879104"
+          ],
+          "removed_point": 93
+        }
+      ]
+    },
+    {
+      "s5_key": [
+        "1153202981731041792",
+        "8192"
+      ],
+      "s6_loss_witnesses": [
+        {
+          "line": 27,
+          "s6_key": [
+            "1153202981731041792",
+            "536879104"
+          ],
+          "removed_point": 93
+        }
+      ]
+    },
+    {
+      "s5_key": [
+        "1153202988307712000",
+        "0"
+      ],
+      "s6_loss_witnesses": [
+        {
+          "line": 44,
+          "s6_key": [
+            "1298444067566256138",
+            "0"
+          ],
+          "removed_point": 50
+        }
+      ]
+    },
+    {
+      "s5_key": [
+        "1153765929541173376",
+        "0"
+      ],
+      "s6_loss_witnesses": [
+        {
+          "line": 52,
+          "s6_key": [
+            "1298725546837934088",
+            "0"
+          ],
+          "removed_point": 57
+        }
+      ]
+    },
+    {
+      "s5_key": [
+        "1153765933831946368",
+        "0"
+      ],
+      "s6_loss_witnesses": [
+        {
+          "line": 51,
+          "s6_key": [
+            "1298725542547161096",
+            "0"
+          ],
+          "removed_point": 57
+        }
+      ]
+    },
+    {
+      "s5_key": [
+        "1154047404513689856",
+        "25165824"
+      ],
+      "s6_loss_witnesses": [
+        {
+          "line": 37,
+          "s6_key": [
+            "1154047404513689856",
+            "562036736"
+          ],
+          "removed_point": 93
+        }
+      ]
+    },
+    {
+      "s5_key": [
+        "1154328879490400266",
+        "0"
+      ],
+      "s6_loss_witnesses": [
+        {
+          "line": 44,
+          "s6_key": [
+            "1298444067566256138",
+            "0"
+          ],
+          "removed_point": 57
+        }
+      ]
+    },
+    {
+      "s5_key": [
+        "1297599642640318472",
+        "0"
+      ],
+      "s6_loss_witnesses": [
+        {
+          "line": 51,
+          "s6_key": [
+            "1298725542547161096",
+            "0"
+          ],
+          "removed_point": 50
+        }
+      ]
+    },
+    {
+      "s5_key": [
+        "1297599646931091464",
+        "0"
+      ],
+      "s6_loss_witnesses": [
+        {
+          "line": 52,
+          "s6_key": [
+            "1298725546837934088",
+            "0"
+          ],
+          "removed_point": 50
+        }
+      ]
+    },
+    {
+      "s5_key": [
+        "1298444067566256130",
+        "0"
+      ],
+      "s6_loss_witnesses": [
+        {
+          "line": 44,
+          "s6_key": [
+            "1298444067566256138",
+            "0"
+          ],
+          "removed_point": 3
+        }
+      ]
+    },
+    {
+      "s5_key": [
+        "1298725542547161088",
+        "0"
+      ],
+      "s6_loss_witnesses": [
+        {
+          "line": 51,
+          "s6_key": [
+            "1298725542547161096",
+            "0"
+          ],
+          "removed_point": 3
+        }
+      ]
+    },
+    {
+      "s5_key": [
+        "1298725546837934080",
+        "0"
+      ],
+      "s6_loss_witnesses": [
+        {
+          "line": 52,
+          "s6_key": [
+            "1298725546837934088",
+            "0"
+          ],
+          "removed_point": 3
+        }
+      ]
+    },
+    {
+      "s5_key": [
+        "1442277780665401354",
+        "0"
+      ],
+      "s6_loss_witnesses": [
+        {
+          "line": 54,
+          "s6_key": [
+            "1586392968741257226",
+            "0"
+          ],
+          "removed_point": 57
+        }
+      ]
+    },
+    {
+      "s5_key": [
+        "1586392968741257218",
+        "0"
+      ],
+      "s6_loss_witnesses": [
+        {
+          "line": 54,
+          "s6_key": [
+            "1586392968741257226",
+            "0"
+          ],
+          "removed_point": 3
+        }
+      ]
+    },
+    {
+      "s5_key": [
+        "1729382257044488448",
+        "64"
+      ],
+      "s6_loss_witnesses": [
+        {
+          "line": 58,
+          "s6_key": [
+            "1729382265634423040",
+            "64"
+          ],
+          "removed_point": 33
+        }
+      ]
+    },
+    {
+      "s5_key": [
+        "1729382265500205312",
+        "64"
+      ],
+      "s6_loss_witnesses": [
+        {
+          "line": 58,
+          "s6_key": [
+            "1729382265634423040",
+            "64"
+          ],
+          "removed_point": 27
+        }
+      ]
+    },
+    {
+      "s5_key": [
+        "1729382265634423040",
+        "0"
+      ],
+      "s6_loss_witnesses": [
+        {
+          "line": 58,
+          "s6_key": [
+            "1729382265634423040",
+            "64"
+          ],
+          "removed_point": 70
+        }
+      ]
+    },
+    {
+      "s5_key": [
+        "1729668129933492224",
+        "8192"
+      ],
+      "s6_loss_witnesses": [
+        {
+          "line": 64,
+          "s6_key": [
+            "3458773310047780864",
+            "16640"
+          ],
+          "removed_point": 27
+        }
+      ]
+    },
+    {
+      "s5_key": [
+        "2305851805440933888",
+        "16640"
+      ],
+      "s6_loss_witnesses": [
+        {
+          "line": 64,
+          "s6_key": [
+            "3458773310047780864",
+            "16640"
+          ],
+          "removed_point": 60
+        }
+      ]
+    },
+    {
+      "s5_key": [
+        "3458773310047780864",
+        "16384"
+      ],
+      "s6_loss_witnesses": [
+        {
+          "line": 64,
+          "s6_key": [
+            "3458773310047780864",
+            "16640"
+          ],
+          "removed_point": 72
+        }
+      ]
+    },
+    {
+      "s5_key": [
+        "10376293541461623040",
+        "16777280"
+      ],
+      "s6_loss_witnesses": [
+        {
+          "line": 37,
+          "s6_key": [
+            "1154047404513689856",
+            "562036736"
+          ],
+          "removed_point": 87
+        }
+      ]
+    },
+    {
+      "s5_key": [
+        "10376293541461624832",
+        "16777280"
+      ],
+      "s6_loss_witnesses": [
+        {
+          "line": 17,
+          "s6_key": [
+            "1153202979583558148",
+            "536879104"
+          ],
+          "removed_point": 77
+        }
+      ]
+    },
+    {
+      "s5_key": [
+        "10376293541461633024",
+        "64"
+      ],
+      "s6_loss_witnesses": [
+        {
+          "line": 27,
+          "s6_key": [
+            "1153202981731041792",
+            "536879104"
+          ],
+          "removed_point": 77
+        }
+      ]
+    },
+    {
+      "s5_key": [
+        "10376293541461639168",
+        "192"
+      ],
+      "s6_loss_witnesses": [
+        {
+          "line": 64,
+          "s6_key": [
+            "3458773310047780864",
+            "16640"
+          ],
+          "removed_point": 43
+        }
+      ]
+    },
+    {
+      "s5_key": [
+        "10376311133647669248",
+        "64"
+      ],
+      "s6_loss_witnesses": [
+        {
+          "line": 18,
+          "s6_key": [
+            "1153202979583558208",
+            "536879104"
+          ],
+          "removed_point": 77
+        }
+      ]
+    }
+  ]
+}

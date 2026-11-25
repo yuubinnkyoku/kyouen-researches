@@ -1,0 +1,91 @@
+{
+  "claim": "scheduling order only; UNKNOWN remains UNKNOWN until exact proof",
+  "dual_certificate_matches_integer_optimum": true,
+  "minimum_additional_classes": 3,
+  "next_target": {
+    "canonical_s5_children": 105,
+    "coverage": [
+      99,
+      104,
+      109
+    ],
+    "dual_vertex": 104,
+    "dual_weight": "1",
+    "key": [
+      10448351135499550722,
+      0
+    ],
+    "known_loss_s5": 9,
+    "rank": 1,
+    "targets_csv": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-e8d965fd-repair-ranking-targets.csv",
+    "unknown_s5": 96,
+    "unknown_s5_legal_count_max": 102,
+    "unknown_s5_legal_count_min": 84
+  },
+  "ranking": [
+    {
+      "canonical_s5_children": 105,
+      "coverage": [
+        99,
+        104,
+        109
+      ],
+      "dual_vertex": 104,
+      "dual_weight": "1",
+      "key": [
+        10448351135499550722,
+        0
+      ],
+      "known_loss_s5": 9,
+      "rank": 1,
+      "unknown_s5": 96,
+      "unknown_s5_legal_count_max": 102,
+      "unknown_s5_legal_count_min": 84
+    },
+    {
+      "canonical_s5_children": 102,
+      "coverage": [
+        36,
+        40,
+        100,
+        108
+      ],
+      "dual_vertex": 100,
+      "dual_weight": "1",
+      "key": [
+        1297036761403228160,
+        0
+      ],
+      "known_loss_s5": 5,
+      "rank": 2,
+      "unknown_s5": 97,
+      "unknown_s5_legal_count_max": 101,
+      "unknown_s5_legal_count_min": 74
+    },
+    {
+      "canonical_s5_children": 104,
+      "coverage": [
+        38,
+        77,
+        87
+      ],
+      "dual_vertex": 77,
+      "dual_weight": "1",
+      "key": [
+        1585267068834414720,
+        0
+      ],
+      "known_loss_s5": 5,
+      "rank": 3,
+      "unknown_s5": 99,
+      "unknown_s5_legal_count_max": 103,
+      "unknown_s5_legal_count_min": 85
+    }
+  ],
+  "ranking_rule": "selected additive-optimum classes; dual-tight only; unknown s5 count, then max legal count, then canonical key",
+  "rational_dual_total": "3",
+  "root": [
+    60,
+    27
+  ]
+}

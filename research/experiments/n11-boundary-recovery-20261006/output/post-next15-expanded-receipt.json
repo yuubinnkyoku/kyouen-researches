@@ -1,0 +1,201 @@
+{
+  "class_status": {
+    "reason": "one complete s5 child parent is WIN after complete 99-child s6 boundary; this is sufficient for the s4 OR class; no remaining s5 children were explored",
+    "status": "WIN"
+  },
+  "finite_frontier": {
+    "best_class_targets": {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-next15-best-class.csv",
+      "rows": 91,
+      "sha256": "26a7fec4f17ee096af99619d807c2f938cc04404c9f174b85b92e28de6dd93e6"
+    },
+    "cardinality": {
+      "cache_entries": 4385,
+      "class_status_counts": {
+        "LOSS": 28,
+        "UNKNOWN": 3184,
+        "WIN": 172
+      },
+      "dual_certificate_matches_integer_optimum": true,
+      "minimum_additional_classes": 4,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-next15-expanded-cardinality.json",
+      "rational_dual_total": "4",
+      "secured_vertices": 109,
+      "sha256": "b668e76e27a1cb7a6b4d0df96733dba910a97df5f06b29d6e064bc5bf1573955",
+      "uncovered_vertices": 10
+    },
+    "ranking": {
+      "best_target": {
+        "key": [
+          1586392968741257216,
+          0
+        ],
+        "new_vertices": [
+          38,
+          70,
+          72
+        ],
+        "targets_out": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-next15-best-class.csv",
+        "unknown_s5": 91
+      },
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-next15-expanded-ranking.json",
+      "ranked_classes": 4,
+      "secured_vertices": 109,
+      "sha256": "58f06872fc700a0ecc5df3df46d97661c73792368741b3d3c0f6605b6ce0f722"
+    },
+    "repair": {
+      "additive_unknown_s5": 377,
+      "exact_15_additive_unknown_s5": 1399,
+      "exact_15_unique_unknown_s5": 1358,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-next15-expanded-repair.json",
+      "repair_classes": 4,
+      "sha256": "22c309eb0a28c68b1acb2b8572e67096aa8c6ed1c8707350c3088885b6ea50a6",
+      "unique_unknown_s5": 377
+    },
+    "repair_targets": {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-next15-repair.csv",
+      "rows": 377,
+      "sha256": "3a819378c76c7c786d321562a550b8880fea4757ec73b2d806c88039c2248779"
+    }
+  },
+  "geometry_and_independent_audits": {
+    "combined_s5_partial_audit": {
+      "boundary_children": 108,
+      "boundary_loss": 105,
+      "boundary_unknown": 3,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/next15-combined-s5-independent-audit.json",
+      "sha256": "e37abbdb5e7e020f9feafffa22abe4e0f804ea1fbfba6cc1920eab0a9df7e634"
+    },
+    "hard3_direct_boundary_audit": {
+      "parent_child_relations": 299,
+      "parent_outcomes": {
+        "LOSS": 2,
+        "WIN": 1
+      },
+      "parents": 3,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/next15-hard3-independent-boundary-audit.json",
+      "sha256": "e76da64ebf642abf55780d61aea6b055e897295424ab28be040cc68737ba1d6c",
+      "union_s6_children": 296
+    },
+    "saved35_hard3_target_audit": {
+      "derived_s5": 0,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/next15-hard-s6-summary.json",
+      "sha256": "583e780dfa58dd456152ec2409fc334b96b60054924d67d5c644c54626e071e7",
+      "unknown_parents": 3
+    }
+  },
+  "merge_scope": {
+    "36_source_reverse_loss_derivation": {
+      "canonical_s6_keys": 2434,
+      "conflicts": 0,
+      "duplicate_existing_loss_parents": 501,
+      "loss": 133,
+      "new_s5_loss_parents": 13,
+      "opposite_verdicts": 0,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/next15-expanded-s6-derived-s5.cache",
+      "rows": 13,
+      "sha256": "45382db9dd9c08a496baa3e8a24ad1c86d72dcbb70016d1c0a7c4b3a03cbc645",
+      "source_count": 36,
+      "sources_audit": "research/experiments/n11-boundary-recovery-20261006/output/next15-expanded-s6-audit.json",
+      "sources_audit_sha256": "b132b6902678fab8af30986f78407059a1e833665a397afdc63a35d13a886e38",
+      "unknown_only": 46,
+      "win": 2255
+    },
+    "baseline_partial_cache": {
+      "loss": 4277,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/next15-run-post-completion-s5.cache",
+      "rows": 4371,
+      "sha256": "d5b9889aa31416bd18216247019a4ce42a1c80873c6d3de880cbcde1a2f88415",
+      "win": 94
+    },
+    "hard3_complete_s6_parent_results": {
+      "loss": 2,
+      "nodes": 89196422,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/next15-hard3-adaptive15m-derived-s5.cache",
+      "rows": 3,
+      "saved_unknown_boundary_count": 134,
+      "saved_unknown_rows_retried": 0,
+      "scope": "Complete 296-position geometry union generated; 134 previously saved UNKNOWN-only positions were preserved without retry, and 162 new exact s6 replays resolved the remainder. Parent outcomes include two LOSS witnesses and one fully-WIN parent.",
+      "sha256": "430bc29c21e63641aaa09cacb69730d3ad70341807ca0bae6460446b71416699",
+      "win": 1
+    }
+  },
+  "merge_summary": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-next15-expanded-merge.json",
+    "sha256": "a3691e7b8d50e870400af133c65453c4c423c5b61aabd48fec9c06965eea177e",
+    "sources": [
+      {
+        "counts": {
+          "1": 94,
+          "2": 4277
+        },
+        "nodes": 0,
+        "path": "research/experiments/n11-boundary-recovery-20261006/output/next15-run-post-completion-s5.cache",
+        "rows": 4371,
+        "sha256": "d5b9889aa31416bd18216247019a4ce42a1c80873c6d3de880cbcde1a2f88415"
+      },
+      {
+        "counts": {
+          "1": 1,
+          "2": 2
+        },
+        "nodes": 0,
+        "path": "research/experiments/n11-boundary-recovery-20261006/output/next15-hard3-adaptive15m-derived-s5.cache",
+        "rows": 3,
+        "sha256": "430bc29c21e63641aaa09cacb69730d3ad70341807ca0bae6460446b71416699"
+      },
+      {
+        "counts": {
+          "2": 13
+        },
+        "nodes": 0,
+        "path": "research/experiments/n11-boundary-recovery-20261006/output/next15-expanded-s6-derived-s5.cache",
+        "rows": 13,
+        "sha256": "45382db9dd9c08a496baa3e8a24ad1c86d72dcbb70016d1c0a7c4b3a03cbc645"
+      }
+    ]
+  },
+  "merged_cache": {
+    "conflicts": 0,
+    "line_endings": "LF",
+    "loss": 4290,
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-next15-expanded-s5.cache",
+    "sha256": "8a199081c83868ef931f6ef2e9a8b3d02ce2988b86893984abc6d5d3843f4b59",
+    "unique_exact_s5": 4385,
+    "win": 95
+  },
+  "schema": "n11-expanded-s5-cache-receipt-v1",
+  "solver_evidence": {
+    "completion96_raw": {
+      "loss": 93,
+      "nodes": 625428983,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/next15-completion96-out.csv",
+      "rows": 96,
+      "sha256": "42ef44b830fa2861ca86f62a608fa26c36e3e0ea135484f0cee8b24e352287ca",
+      "unknown": 3,
+      "win": 0
+    },
+    "hard3_adaptive_raw": {
+      "nodes": 89196422,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/next15-hard3-adaptive15m-out.csv",
+      "rows": 162,
+      "s6_loss": 5,
+      "s6_unknown": 0,
+      "s6_win": 157,
+      "sha256": "63029381e165ea3ac70c9b2a59e4e930196ae31d8dde97d62735da95969c3ecb",
+      "sources": "research/experiments/n11-boundary-recovery-20261006/output/next15-hard3-adaptive15m-sources.json",
+      "sources_sha256": "1226f33456f071afce9c0c1a0974c7ca1986ffd3a2e863b7fcbac91adf742d1f",
+      "summary": "research/experiments/n11-boundary-recovery-20261006/output/next15-hard3-adaptive15m-summary.json",
+      "summary_sha256": "6243a594d55b697170973721014d6596bc323d7d112775374da130e31334e144"
+    },
+    "model8_raw": {
+      "loss": 8,
+      "nodes": 39622373,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/next15-run-model8-out.csv",
+      "rows": 8,
+      "sha256": "0b2e939fd414fd3a8d49f05864b249d7f69542f54a3b6bcb3a4b30678c4600a2",
+      "unknown": 0,
+      "win": 0
+    }
+  }
+}

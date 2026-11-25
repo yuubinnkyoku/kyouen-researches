@@ -1,0 +1,56 @@
+{
+  "schema": "n11-post-next17-dual-tight-92-boundary-audit-v1",
+  "scope": "Independent finite geometry/cache-intersection audit. UNKNOWN children remain UNKNOWN; no solver verdict is inferred.",
+  "root": [
+    60,
+    27
+  ],
+  "class_key": [
+    "10452854735126921216",
+    "0"
+  ],
+  "class_points": [
+    52,
+    56,
+    60,
+    63
+  ],
+  "generation": "Enumerate every legal extension of the canonical safe s4 set under the exact 4x4 concyclicity determinant, D4-canonicalize each s5 child using solver (hi,lo) minimization, then intersect exact keys with post-next17-expanded-s5.cache.",
+  "source_cache": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-next17-expanded-s5.cache",
+    "sha256": "2fa27a15625af7449ca8f3fa21e683ba2e13a5d4deb99f8919d02ea61b59c82c",
+    "entries": 4515
+  },
+  "complete_canonical_s5_children": 95,
+  "known_exact_children": {
+    "LOSS": 3,
+    "WIN": 0,
+    "keys": [
+      [
+        "10452854735126925312",
+        "0"
+      ],
+      [
+        "10452854735194030080",
+        "0"
+      ],
+      [
+        "1297036692683751424",
+        "17"
+      ]
+    ]
+  },
+  "unknown_children": 92,
+  "unknown_legal_count": {
+    "min": 74,
+    "max": 92
+  },
+  "targets_path": "research/experiments/n11-boundary-recovery-20261006/output/post-next17-dual-tight-92-targets.csv",
+  "scheduling_note": "Targets are ordered by legal-move count then canonical key. This ordering is scheduling only, not proof evidence.",
+  "consequence": "This independently materializes the full unresolved boundary for the preferred dual-tight repair class. A future exact replay need not rediscover or recompute the three already-known LOSS children.",
+  "status": {
+    "class": "UNKNOWN",
+    "root_60_27": "UNKNOWN",
+    "empty_board": "UNKNOWN"
+  }
+}

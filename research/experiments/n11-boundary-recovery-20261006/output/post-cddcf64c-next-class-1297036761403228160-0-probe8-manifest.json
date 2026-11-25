@@ -1,0 +1,101 @@
+{
+  "budget_per_target": 15000000,
+  "canonical_s5_children": 102,
+  "claim": "Probe order carries no verdict. Prior same-or-higher-budget UNKNOWN keys are excluded, and only exact solver results may update class status.",
+  "class_key": [
+    1297036761403228160,
+    0
+  ],
+  "class_rank": null,
+  "dispatch_ready_s5": 96,
+  "excluded_same_or_higher_budget_unknown_keys": [],
+  "known_loss_s5": 6,
+  "probe_count": 8,
+  "probe_target_sha256": "48140ac9db06d0bea9d11df429f82158ad84d88b416401abe634efe5fe3c111b",
+  "probe_targets": [
+    [
+      1297177498891583488,
+      0
+    ],
+    [
+      10376294640973254656,
+      65536
+    ],
+    [
+      10376294640973254656,
+      67108864
+    ],
+    [
+      10376294640973254656,
+      8
+    ],
+    [
+      1297036761403228160,
+      65536
+    ],
+    [
+      1297036761420005376,
+      0
+    ],
+    [
+      1152921504607899648,
+      536936448
+    ],
+    [
+      1152921573461590016,
+      68719476736
+    ]
+  ],
+  "same_budget_unknown_observations": [],
+  "schema": "n11-dual-tight-ready-subset-probe-manifest-v1",
+  "selection_rule": "among raw-history dispatch-ready UNKNOWN parents, sort by (legal move count, canonical key), then take the first count",
+  "solver_command": "research/experiments/n11-boundary-recovery-20261006/scripts/complete_class_local.py --solver .local/n11/reply27-probe9/dfpn.exe --targets research/experiments/n11-boundary-recovery-20261006/output/post-cddcf64c-next-class-1297036761403228160-0-probe8.csv --cache research/experiments/n11-boundary-recovery-20261006/output/post-d18e1cc7-next-class-1297318167660462080-0-probe8-completed-merged-s5.cache --out-dir .local/n11/dual-tight-ready-1297036761403228160-0-probe8 --workers 4 --budget 15000000",
+  "sources": [
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-cddcf64c-next-class-1297036761403228160-0-unknown-s5-targets.csv",
+      "sha256": "96e7f796a91a68f7589d1784d273399fd138af1d1bba1df03614ec09dd109270"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-d18e1cc7-reply27-checkpoint-report.json",
+      "sha256": "b9dcf86c13a6e8885df77ec49d2bd89680320e3b4d1538382d4e8229aa9d72a1"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-d18e1cc7-next-class-1297318167660462080-0-probe8-completed-merged-s5.cache",
+      "sha256": "5b36c7b486df5a15238dd7658530aab003e1fd910e5609eaa864dd8a516538b0"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-cddcf64c-next-class-1297036761403228160-0-raw-history-current.json",
+      "sha256": "ad51b69f5aa4cc2de05999d60053fbc4ec06693c0a4636ddda48e86d6747aec4"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-cddcf64c-next-class-1297036761403228160-0-raw-history-baseline.json",
+      "sha256": "ad51b69f5aa4cc2de05999d60053fbc4ec06693c0a4636ddda48e86d6747aec4"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/scripts/verify_raw_history_coverage.py",
+      "sha256": "8c050fe79b37ca280623a5ae1f46c7a6eb487780e33f88904932fbb7247679f0"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-cddcf64c-next-class-1297036761403228160-0-saved-s6-summary.json",
+      "sha256": "bdf38a56ddd94a8a47e6a04470f90b443a75ef65af665cc077e2788657ff930c"
+    },
+    {
+      "path": ".local/n11/reply27-probe9/dfpn.exe",
+      "sha256": "05fa5a45c0749506ead2036174c7fc9047badd94835a06c7588d0c892bfafbd7"
+    },
+    {
+      "path": "cpp/solvers/kyouen_dfpn_root.cpp",
+      "sha256": "523f56e61550e1f5b93882229baf8b4cd83489be719ca484d13adef8424c3063"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/scripts/complete_class_local.py",
+      "sha256": "04ca107661447f40d9c43034f7adbc20a65512c3cd5839b0536f257f2a64d4f4"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/scripts/prepare_dual_tight_ready_subset_probe.py",
+      "sha256": "de650b375c1dfd7fe74460e8da2ed5f2d9c441997b315247078fa54bfb86901b"
+    }
+  ],
+  "unknown_s5_before_probe": 96,
+  "workers": 4
+}

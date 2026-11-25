@@ -1,0 +1,85 @@
+{
+  "conflicts": 0,
+  "finite_outputs": {
+    "post-next16-best-class": {
+      "bytes": 6829,
+      "line_endings": "LF",
+      "path": "C:/Users/yuubi/.codex/worktrees/n11-proof-boundary/kyouen-researches/research/experiments/n11-boundary-recovery-20261006/output/post-next16-best-class.csv",
+      "sha256": "511dbcd679079f665e5755fca31eeb345fa4a571eb9a18d7d5ae443cc01442ff"
+    },
+    "post-next16-expanded-cardinality": {
+      "bytes": 2603,
+      "line_endings": "LF",
+      "path": "C:/Users/yuubi/.codex/worktrees/n11-proof-boundary/kyouen-researches/research/experiments/n11-boundary-recovery-20261006/output/post-next16-expanded-cardinality.json",
+      "sha256": "5b22e747e97e1bf5b384ead09b0cb89880dbd5fd1f4fd9cd3b5e4e660aeea2ce"
+    },
+    "post-next16-expanded-ranking": {
+      "bytes": 2474,
+      "line_endings": "LF",
+      "path": "C:/Users/yuubi/.codex/worktrees/n11-proof-boundary/kyouen-researches/research/experiments/n11-boundary-recovery-20261006/output/post-next16-expanded-ranking.json",
+      "sha256": "ec73ec7977e63d402c1df049488e0a9c5efbf457814a34998500292645572aae"
+    },
+    "post-next16-expanded-repair": {
+      "bytes": 5459,
+      "line_endings": "LF",
+      "path": "C:/Users/yuubi/.codex/worktrees/n11-proof-boundary/kyouen-researches/research/experiments/n11-boundary-recovery-20261006/output/post-next16-expanded-repair.json",
+      "sha256": "8c2b556b2ed0ebe56f93a2ca3058d20674b48af675cea73157140cc405036ffc"
+    },
+    "post-next16-repair": {
+      "bytes": 23744,
+      "line_endings": "LF",
+      "path": "C:/Users/yuubi/.codex/worktrees/n11-proof-boundary/kyouen-researches/research/experiments/n11-boundary-recovery-20261006/output/post-next16-repair.csv",
+      "sha256": "b11b72c49c0c20d162cf17898aadf33d6e3203d121e68b0718861b4faf245038"
+    }
+  },
+  "loss": 4291,
+  "merge_output": {
+    "bytes": 177898,
+    "line_endings": "LF",
+    "loss": 4291,
+    "path": "C:/Users/yuubi/.codex/worktrees/n11-proof-boundary/kyouen-researches/research/experiments/n11-boundary-recovery-20261006/output/post-next16-expanded-s5.cache",
+    "sha256": "ddc997e18480ed9ceb669148dcc46166eae1bb6ae9ec08d07e4954d6aa91c081",
+    "unique_exact_s5": 4388,
+    "win": 97
+  },
+  "next16_run": {
+    "boundary_scope": "supplied model8 targets only; exact WIN witness found, so class WIN; unknown and undispatched targets remain archived without further solving",
+    "class_status": "WIN",
+    "loss": 1,
+    "new_exact": 3,
+    "new_exact_cache_sha256": "7d82d3887a7a8300f7e195af75607a4aa0f125bd33124b8b82d61e81b03c7c4c",
+    "not_dispatched": 4,
+    "outcome_scope_note": "Runner status is for the eight supplied model targets. It found exact WIN witnesses among those targets, which suffices to classify the parent OR class WIN; one dispatched UNKNOWN and four undispatched targets are retained without additional search.",
+    "raw_sha256": "52ca2d4e085833c4e07ad99585d7942b1bd3b56f39dc7a877b00ad83d1ec68b5",
+    "sources_path": "C:/Users/yuubi/.codex/worktrees/n11-proof-boundary/kyouen-researches/research/experiments/n11-boundary-recovery-20261006/output/next16-run-model8-sources.json",
+    "sources_sha256": "1447e54ec1bee5b964840cab9cada3effbb07a9c323be19ee882b061cb8a1d57",
+    "summary_sha256": "05ac404095efed31a8fb9c9f9f18a8930ece28d1ce540bfebdc749b9ed49ee5a",
+    "unknown": 1,
+    "win": 2
+  },
+  "sources": [
+    {
+      "counts": {
+        "1": 95,
+        "2": 4290
+      },
+      "nodes": 0,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-next15-expanded-s5.cache",
+      "rows": 4385,
+      "sha256": "8a199081c83868ef931f6ef2e9a8b3d02ce2988b86893984abc6d5d3843f4b59"
+    },
+    {
+      "counts": {
+        "0": 1,
+        "1": 2,
+        "2": 1
+      },
+      "nodes": 43173440,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/next16-run-model8-out.csv",
+      "rows": 4,
+      "sha256": "52ca2d4e085833c4e07ad99585d7942b1bd3b56f39dc7a877b00ad83d1ec68b5"
+    }
+  ],
+  "unique_exact_s5": 4388,
+  "win": 97
+}

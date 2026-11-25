@@ -1,0 +1,242 @@
+{
+  "class_key": [
+    10412322338480586760,
+    0
+  ],
+  "completed_rows": 8,
+  "exact_rows": 7,
+  "exact_win_witnesses": [],
+  "failed_no_result_keys": [],
+  "interrupted_partial_keys": [],
+  "nodes_all_completed_rows": 46211577,
+  "nodes_exact": 31211577,
+  "not_dispatched_keys": [],
+  "runner_summary": {
+    "path": ".local/n11/dual-tight-ready-10412322338480586760-0-probe8/summary.json",
+    "sha256": "786e2feb482258dd2c0cf465ca87db2e56749c4b6835a07a91a04a6bb5ce51a5"
+  },
+  "scheduled": 8,
+  "schema": "n11-dual-tight-completion-run-collection-v1",
+  "started": 8,
+  "status_counts": {
+    "completed_UNKNOWN": 1,
+    "exact_LOSS": 7
+  },
+  "target_statuses": [
+    {
+      "input": {
+        "bytes": 60,
+        "path": ".local/n11/dual-tight-ready-10412322338480586760-0-probe8/s5-10412322888236400648-0.input.csv",
+        "sha256": "bb5fb8833d96da0bf9a4a647c19dec7b000e7f4ed36fe5ea6b9161ebe68fc0ad"
+      },
+      "key": [
+        10412322888236400648,
+        0
+      ],
+      "log": {
+        "bytes": 0,
+        "path": ".local/n11/dual-tight-ready-10412322338480586760-0-probe8/s5-10412322888236400648-0.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "output": {
+        "bytes": 277,
+        "nodes": 2133060,
+        "path": ".local/n11/dual-tight-ready-10412322338480586760-0-probe8/s5-10412322888236400648-0.out.csv",
+        "sha256": "11f92033ee721b9506aefe94175527acc9c1d7d07df5ae34dffc457195eeb598",
+        "verdict": 2
+      },
+      "started": true,
+      "status": "exact_LOSS"
+    },
+    {
+      "input": {
+        "bytes": 64,
+        "path": ".local/n11/dual-tight-ready-10412322338480586760-0-probe8/s5-1297036692682702976-131074.input.csv",
+        "sha256": "d03d7b0f9734e77d4578c55005faad9646b47fb8d5e99848745cad6bc2463fb1"
+      },
+      "key": [
+        1297036692682702976,
+        131074
+      ],
+      "log": {
+        "bytes": 0,
+        "path": ".local/n11/dual-tight-ready-10412322338480586760-0-probe8/s5-1297036692682702976-131074.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "output": {
+        "bytes": 279,
+        "nodes": 1908290,
+        "path": ".local/n11/dual-tight-ready-10412322338480586760-0-probe8/s5-1297036692682702976-131074.out.csv",
+        "sha256": "ab2aa338b6a03a5f91c980c72cac659bdab1c45eadb8cfa5be27dfd5010dc1f0",
+        "verdict": 2
+      },
+      "started": true,
+      "status": "exact_LOSS"
+    },
+    {
+      "input": {
+        "bytes": 64,
+        "path": ".local/n11/dual-tight-ready-10412322338480586760-0-probe8/s5-10412322338480586760-65536.input.csv",
+        "sha256": "a2590838e1517010444371588568947284fe8ee8ddc8471eab50b4e2f8a667b6"
+      },
+      "key": [
+        10412322338480586760,
+        65536
+      ],
+      "log": {
+        "bytes": 0,
+        "path": ".local/n11/dual-tight-ready-10412322338480586760-0-probe8/s5-10412322338480586760-65536.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "output": {
+        "bytes": 281,
+        "nodes": 8239117,
+        "path": ".local/n11/dual-tight-ready-10412322338480586760-0-probe8/s5-10412322338480586760-65536.out.csv",
+        "sha256": "eae514d837c0e2b2d15982114f67f1c5271dc14810b855f46fd5c7f0144d392d",
+        "verdict": 2
+      },
+      "started": true,
+      "status": "exact_LOSS"
+    },
+    {
+      "input": {
+        "bytes": 60,
+        "path": ".local/n11/dual-tight-ready-10412322338480586760-0-probe8/s5-10412322338497363976-0.input.csv",
+        "sha256": "d3166f01e9069f875e1966d66f6f6e00f7bbdc39b3b194b08e017dd6027b81d8"
+      },
+      "key": [
+        10412322338497363976,
+        0
+      ],
+      "log": {
+        "bytes": 0,
+        "path": ".local/n11/dual-tight-ready-10412322338480586760-0-probe8/s5-10412322338497363976-0.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "output": {
+        "bytes": 277,
+        "nodes": 2929506,
+        "path": ".local/n11/dual-tight-ready-10412322338480586760-0-probe8/s5-10412322338497363976-0.out.csv",
+        "sha256": "30ef11a7750427a99c22f4e89d517093f046f43651bcf2c41447fbe9e84bdb23",
+        "verdict": 2
+      },
+      "started": true,
+      "status": "exact_LOSS"
+    },
+    {
+      "input": {
+        "bytes": 67,
+        "path": ".local/n11/dual-tight-ready-10412322338480586760-0-probe8/s5-1188959097718833184-536870912.input.csv",
+        "sha256": "669fbce7d7e5075a41bf1052817b0bc045ba9aa4c7a79e60b4799f7952915670"
+      },
+      "key": [
+        1188959097718833184,
+        536870912
+      ],
+      "log": {
+        "bytes": 0,
+        "path": ".local/n11/dual-tight-ready-10412322338480586760-0-probe8/s5-1188959097718833184-536870912.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "output": {
+        "bytes": 285,
+        "nodes": 10279524,
+        "path": ".local/n11/dual-tight-ready-10412322338480586760-0-probe8/s5-1188959097718833184-536870912.out.csv",
+        "sha256": "10ca3e1b3902154597f14c59dd1c4140ebd61c2bb470a471f7879b4ffb3f86d4",
+        "verdict": 2
+      },
+      "started": true,
+      "status": "exact_LOSS"
+    },
+    {
+      "input": {
+        "bytes": 60,
+        "path": ".local/n11/dual-tight-ready-10412322338480586760-0-probe8/s5-10414574138294272008-0.input.csv",
+        "sha256": "a29b4c83e9d21f5d1c12ee929d29d4a3112794e8193780af2b7c907802826eef"
+      },
+      "key": [
+        10414574138294272008,
+        0
+      ],
+      "log": {
+        "bytes": 0,
+        "path": ".local/n11/dual-tight-ready-10412322338480586760-0-probe8/s5-10414574138294272008-0.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "output": {
+        "bytes": 278,
+        "nodes": 15000000,
+        "path": ".local/n11/dual-tight-ready-10412322338480586760-0-probe8/s5-10414574138294272008-0.out.csv",
+        "sha256": "a39102bb165053ca4f029ee5c09e9ca7c5d1cce48456f0cae4bc5961e0d46297",
+        "verdict": 0
+      },
+      "started": true,
+      "status": "completed_UNKNOWN"
+    },
+    {
+      "input": {
+        "bytes": 67,
+        "path": ".local/n11/dual-tight-ready-10412322338480586760-0-probe8/s5-1152930309289803808-536870912.input.csv",
+        "sha256": "6624508b313468bcad89de35e2efc92e9bb0da75154492a4f05a56b7411ff230"
+      },
+      "key": [
+        1152930309289803808,
+        536870912
+      ],
+      "log": {
+        "bytes": 0,
+        "path": ".local/n11/dual-tight-ready-10412322338480586760-0-probe8/s5-1152930309289803808-536870912.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "output": {
+        "bytes": 284,
+        "nodes": 3067201,
+        "path": ".local/n11/dual-tight-ready-10412322338480586760-0-probe8/s5-1152930309289803808-536870912.out.csv",
+        "sha256": "8714d18508da0f759b059629698c6211a115897e88f138e8e9aa71ac4cfa63ad",
+        "verdict": 2
+      },
+      "started": true,
+      "status": "exact_LOSS"
+    },
+    {
+      "input": {
+        "bytes": 62,
+        "path": ".local/n11/dual-tight-ready-10412322338480586760-0-probe8/s5-10412322338480586760-128.input.csv",
+        "sha256": "07ed8efbdfc9787dd3a64bb92c592c0cb1740af6572777969ed889c18c9aba0b"
+      },
+      "key": [
+        10412322338480586760,
+        128
+      ],
+      "log": {
+        "bytes": 0,
+        "path": ".local/n11/dual-tight-ready-10412322338480586760-0-probe8/s5-10412322338480586760-128.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "output": {
+        "bytes": 279,
+        "nodes": 2654879,
+        "path": ".local/n11/dual-tight-ready-10412322338480586760-0-probe8/s5-10412322338480586760-128.out.csv",
+        "sha256": "15a3b1157a96d8d7b3fac746bffe3199ab3dd4e8f786a7acea1aa0e8243d1903",
+        "verdict": 2
+      },
+      "started": true,
+      "status": "exact_LOSS"
+    }
+  ],
+  "targets": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-bdbdea7c-rank1-10412322338480586760-0-probe8.csv",
+    "sha256": "e0ace9f37708837225731e39ccedff54b5dd72a04fcb2a1fb03d2973b27955ea"
+  },
+  "unknown_keys": [
+    [
+      10414574138294272008,
+      0
+    ]
+  ],
+  "verdict_counts": {
+    "LOSS": 7,
+    "UNKNOWN": 1,
+    "WIN": 0
+  }
+}

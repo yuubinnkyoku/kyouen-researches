@@ -1,0 +1,43 @@
+{
+  "generated": [
+    {
+      "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-f390d290-after-probe8-dual-tight-targets.csv",
+      "sha256": "d62b7b6381a649572435a5f240004306cfc87d8787d4d16cac8c7bc09a810a08"
+    },
+    {
+      "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-f390d290-after-probe8-dual-tight-ranking.json",
+      "sha256": "5deea5d6eb2b168c1913a53b3375c784a0c4f8a73fb016a014fffe482ab46a4b"
+    }
+  ],
+  "schema": "n11-dual-tight-repair-ranking-sources-v1",
+  "sources": [
+    {
+      "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-f390d290-rank1-10448351135499550976-0-probe8-merged-s5.cache",
+      "sha256": "55d1468ce93a00fd86d02111a8aafcaeebee5e515daec0ddc50282209d1043ec"
+    },
+    {
+      "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-f390d290-rank1-10448351135499550976-0-probe8-repair.json",
+      "sha256": "d330aa4ee817871b2f3e93ffe4f72fdc3f3612e87c94008cfc44aa3c903490d8"
+    },
+    {
+      "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-f390d290-rank1-10448351135499550976-0-probe8-cardinality.json",
+      "sha256": "6918d5604933be435246b7e2862795778d18991f4a0fffd223fed365f7bf1cf9"
+    },
+    {
+      "path": "research\\experiments\\n11-boundary-recovery-20261006\\scripts\\rank_dual_tight_repair_classes.py",
+      "sha256": "bdb0e9124e4286202a5e7cee597bef2dab98800e038bf7274b92a0877ee5da11"
+    },
+    {
+      "path": "research\\experiments\\n11-frontier-selection-20261005\\scripts\\cache_aware_reply27_cover.py",
+      "sha256": "8c0f81cca2517f36f1c5c08aeb94cdff334cfcbefe2ff2c36dfff6bf3ed1dc33"
+    },
+    {
+      "path": "research\\experiments\\n11-frontier-selection-20261005\\scripts\\cache_aware_reply27_cardinality.py",
+      "sha256": "df7f1c736ce9ac44feb0a30eb7378467257edc25c7791a4d552a05456b5369b1"
+    },
+    {
+      "path": "research\\experiments\\n11-search-methods\\scripts\\dfpn_edge_classes.py",
+      "sha256": "6cca3cfe161ffc9ffc199c56b595e9d0f72b839ee945e8b7e2c4090dafcf0c0c"
+    }
+  ]
+}

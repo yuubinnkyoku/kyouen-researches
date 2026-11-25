@@ -1,0 +1,630 @@
+{
+  "schema": "n11-post-next14-s3-v104-win-witness-cover-v1",
+  "scope": "Hypothetical finite witness-selection diagnostic only. No candidate s5 was solved; selecting a candidate does not claim its verdict is WIN.",
+  "inputs": {
+    "s5_cache": "research/experiments/n11-boundary-recovery-20261006/output/post-next14-expanded-s5.cache",
+    "s5_cache_sha256": "c9f61027e80a9e71c70536ff4b7c24e55e6bd76b1fa2525ccb7458a82a7f7529",
+    "s5_cache_bytes": 173166,
+    "geometry_index": ".local/n11/reply27-geometry-v1.json.gz",
+    "geometry_index_sha256": "f35ce99e8ef0c8729d31970fbc2377f293180acd6d3cf8435c59fc2c6591fbe0",
+    "geometry_index_bytes": 1798405,
+    "s3_diagnostic": "research/experiments/n11-boundary-recovery-20261006/output/post-next14-s3-boundary-diagnostic.json",
+    "s3_diagnostic_sha256": "bfe88aab22eec717719b669f6cd8ebeeae7fe289fac326c06c798b4974e82d0f"
+  },
+  "target": {
+    "third_move": 104,
+    "canonical_s3_key": [
+      10448351135499550720,
+      0
+    ],
+    "unknown_s4_class_count": 36,
+    "currently_known_s4_counts": {
+      "WIN": 19,
+      "LOSS": 0,
+      "UNKNOWN": 36
+    },
+    "goal": "Make all 36 currently UNKNOWN even-stone s4 OR classes WIN so this odd-stone s3 AND branch can be WIN."
+  },
+  "candidate_s5_WIN_keys_union_count": 2401,
+  "candidate_multiplicity": {
+    "maximum_s4_classes_per_s5_candidate": 2,
+    "distribution_s5_candidates_by_multiplicity": {
+      "1": 1191,
+      "2": 1210
+    }
+  },
+  "minimum_candidate_s5_WIN_set_cover": {
+    "status": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+    "optimal_cardinality": 18,
+    "selected_s5_keys": [
+      [
+        10448351135499551488,
+        0
+      ],
+      [
+        10448351135499551872,
+        0
+      ],
+      [
+        10448351135501647904,
+        0
+      ],
+      [
+        10448351135767986240,
+        0
+      ],
+      [
+        10448351139794649088,
+        0
+      ],
+      [
+        10448351144626356224,
+        0
+      ],
+      [
+        10448351152679428096,
+        0
+      ],
+      [
+        10448351169859551232,
+        0
+      ],
+      [
+        10448351685259558912,
+        0
+      ],
+      [
+        10448353334522808320,
+        0
+      ],
+      [
+        10448355533546061825,
+        0
+      ],
+      [
+        10448359931592572944,
+        0
+      ],
+      [
+        10448368727686119424,
+        0
+      ],
+      [
+        10448386319871655936,
+        0
+      ],
+      [
+        10448421504277282816,
+        0
+      ],
+      [
+        10448491872987906052,
+        0
+      ],
+      [
+        10452854737274404864,
+        0
+      ],
+      [
+        10466365534009032706,
+        0
+      ]
+    ],
+    "covered_unknown_s4_classes": 36
+  },
+  "rational_dual_lower_bound": {
+    "weights_by_s4_key": [
+      {
+        "s4_key": [
+          10448351135499550721,
+          0
+        ],
+        "weight": "1/2"
+      },
+      {
+        "s4_key": [
+          10448351135499550722,
+          0
+        ],
+        "weight": "1/2"
+      },
+      {
+        "s4_key": [
+          10448351135499550724,
+          0
+        ],
+        "weight": "1/2"
+      },
+      {
+        "s4_key": [
+          10448351135499550736,
+          0
+        ],
+        "weight": "1/2"
+      },
+      {
+        "s4_key": [
+          10448351135499550752,
+          0
+        ],
+        "weight": "1/2"
+      },
+      {
+        "s4_key": [
+          10448351135499550784,
+          0
+        ],
+        "weight": "1/2"
+      },
+      {
+        "s4_key": [
+          10448351135499550848,
+          0
+        ],
+        "weight": "1/2"
+      },
+      {
+        "s4_key": [
+          10448351135499550976,
+          0
+        ],
+        "weight": "1/2"
+      },
+      {
+        "s4_key": [
+          10448351135499551232,
+          0
+        ],
+        "weight": "1/2"
+      },
+      {
+        "s4_key": [
+          10448351135499551744,
+          0
+        ],
+        "weight": "1/2"
+      },
+      {
+        "s4_key": [
+          10448351135499552768,
+          0
+        ],
+        "weight": "1/2"
+      },
+      {
+        "s4_key": [
+          10448351135499558912,
+          0
+        ],
+        "weight": "1/2"
+      },
+      {
+        "s4_key": [
+          10448351135499567104,
+          0
+        ],
+        "weight": "1/2"
+      },
+      {
+        "s4_key": [
+          10448351135499681792,
+          0
+        ],
+        "weight": "1/2"
+      },
+      {
+        "s4_key": [
+          10448351135499812864,
+          0
+        ],
+        "weight": "1/2"
+      },
+      {
+        "s4_key": [
+          10448351135500075008,
+          0
+        ],
+        "weight": "1/2"
+      },
+      {
+        "s4_key": [
+          10448351135501647872,
+          0
+        ],
+        "weight": "1/2"
+      },
+      {
+        "s4_key": [
+          10448351135503745024,
+          0
+        ],
+        "weight": "1/2"
+      },
+      {
+        "s4_key": [
+          10448351135533105152,
+          0
+        ],
+        "weight": "1/2"
+      },
+      {
+        "s4_key": [
+          10448351135767986176,
+          0
+        ],
+        "weight": "1/2"
+      },
+      {
+        "s4_key": [
+          10448351136036421632,
+          0
+        ],
+        "weight": "1/2"
+      },
+      {
+        "s4_key": [
+          10448351137647034368,
+          0
+        ],
+        "weight": "1/2"
+      },
+      {
+        "s4_key": [
+          10448351139794518016,
+          0
+        ],
+        "weight": "1/2"
+      },
+      {
+        "s4_key": [
+          10448351144089485312,
+          0
+        ],
+        "weight": "1/2"
+      },
+      {
+        "s4_key": [
+          10448351152679419904,
+          0
+        ],
+        "weight": "1/2"
+      },
+      {
+        "s4_key": [
+          10448351169859289088,
+          0
+        ],
+        "weight": "1/2"
+      },
+      {
+        "s4_key": [
+          10448351685255364608,
+          0
+        ],
+        "weight": "1/2"
+      },
+      {
+        "s4_key": [
+          10448353334522806272,
+          0
+        ],
+        "weight": "1/2"
+      },
+      {
+        "s4_key": [
+          10448355533546061824,
+          0
+        ],
+        "weight": "1/2"
+      },
+      {
+        "s4_key": [
+          10448359931592572928,
+          0
+        ],
+        "weight": "1/2"
+      },
+      {
+        "s4_key": [
+          10448368727685595136,
+          0
+        ],
+        "weight": "1/2"
+      },
+      {
+        "s4_key": [
+          10448386319871639552,
+          0
+        ],
+        "weight": "1/2"
+      },
+      {
+        "s4_key": [
+          10448421504243728384,
+          0
+        ],
+        "weight": "1/2"
+      },
+      {
+        "s4_key": [
+          10448491872987906048,
+          0
+        ],
+        "weight": "1/2"
+      },
+      {
+        "s4_key": [
+          10452854735126921216,
+          0
+        ],
+        "weight": "1/2"
+      },
+      {
+        "s4_key": [
+          10466365534009032704,
+          0
+        ],
+        "weight": "1/2"
+      }
+    ],
+    "total": "18/1",
+    "numeric_value": 18.0,
+    "max_candidate_load": "1",
+    "feasible": true
+  },
+  "class_candidate_counts": [
+    {
+      "s4_key": [
+        10448351135499550721,
+        0
+      ],
+      "unknown_s5_candidates": 101
+    },
+    {
+      "s4_key": [
+        10448351135499550722,
+        0
+      ],
+      "unknown_s5_candidates": 102
+    },
+    {
+      "s4_key": [
+        10448351135499550724,
+        0
+      ],
+      "unknown_s5_candidates": 104
+    },
+    {
+      "s4_key": [
+        10448351135499550736,
+        0
+      ],
+      "unknown_s5_candidates": 105
+    },
+    {
+      "s4_key": [
+        10448351135499550752,
+        0
+      ],
+      "unknown_s5_candidates": 96
+    },
+    {
+      "s4_key": [
+        10448351135499550784,
+        0
+      ],
+      "unknown_s5_candidates": 98
+    },
+    {
+      "s4_key": [
+        10448351135499550848,
+        0
+      ],
+      "unknown_s5_candidates": 103
+    },
+    {
+      "s4_key": [
+        10448351135499550976,
+        0
+      ],
+      "unknown_s5_candidates": 97
+    },
+    {
+      "s4_key": [
+        10448351135499551232,
+        0
+      ],
+      "unknown_s5_candidates": 104
+    },
+    {
+      "s4_key": [
+        10448351135499551744,
+        0
+      ],
+      "unknown_s5_candidates": 102
+    },
+    {
+      "s4_key": [
+        10448351135499552768,
+        0
+      ],
+      "unknown_s5_candidates": 102
+    },
+    {
+      "s4_key": [
+        10448351135499558912,
+        0
+      ],
+      "unknown_s5_candidates": 104
+    },
+    {
+      "s4_key": [
+        10448351135499567104,
+        0
+      ],
+      "unknown_s5_candidates": 99
+    },
+    {
+      "s4_key": [
+        10448351135499681792,
+        0
+      ],
+      "unknown_s5_candidates": 102
+    },
+    {
+      "s4_key": [
+        10448351135499812864,
+        0
+      ],
+      "unknown_s5_candidates": 103
+    },
+    {
+      "s4_key": [
+        10448351135500075008,
+        0
+      ],
+      "unknown_s5_candidates": 100
+    },
+    {
+      "s4_key": [
+        10448351135501647872,
+        0
+      ],
+      "unknown_s5_candidates": 105
+    },
+    {
+      "s4_key": [
+        10448351135503745024,
+        0
+      ],
+      "unknown_s5_candidates": 103
+    },
+    {
+      "s4_key": [
+        10448351135533105152,
+        0
+      ],
+      "unknown_s5_candidates": 104
+    },
+    {
+      "s4_key": [
+        10448351135767986176,
+        0
+      ],
+      "unknown_s5_candidates": 104
+    },
+    {
+      "s4_key": [
+        10448351136036421632,
+        0
+      ],
+      "unknown_s5_candidates": 95
+    },
+    {
+      "s4_key": [
+        10448351137647034368,
+        0
+      ],
+      "unknown_s5_candidates": 104
+    },
+    {
+      "s4_key": [
+        10448351139794518016,
+        0
+      ],
+      "unknown_s5_candidates": 100
+    },
+    {
+      "s4_key": [
+        10448351144089485312,
+        0
+      ],
+      "unknown_s5_candidates": 102
+    },
+    {
+      "s4_key": [
+        10448351152679419904,
+        0
+      ],
+      "unknown_s5_candidates": 100
+    },
+    {
+      "s4_key": [
+        10448351169859289088,
+        0
+      ],
+      "unknown_s5_candidates": 94
+    },
+    {
+      "s4_key": [
+        10448351685255364608,
+        0
+      ],
+      "unknown_s5_candidates": 94
+    },
+    {
+      "s4_key": [
+        10448353334522806272,
+        0
+      ],
+      "unknown_s5_candidates": 103
+    },
+    {
+      "s4_key": [
+        10448355533546061824,
+        0
+      ],
+      "unknown_s5_candidates": 99
+    },
+    {
+      "s4_key": [
+        10448359931592572928,
+        0
+      ],
+      "unknown_s5_candidates": 100
+    },
+    {
+      "s4_key": [
+        10448368727685595136,
+        0
+      ],
+      "unknown_s5_candidates": 99
+    },
+    {
+      "s4_key": [
+        10448386319871639552,
+        0
+      ],
+      "unknown_s5_candidates": 95
+    },
+    {
+      "s4_key": [
+        10448421504243728384,
+        0
+      ],
+      "unknown_s5_candidates": 97
+    },
+    {
+      "s4_key": [
+        10448491872987906048,
+        0
+      ],
+      "unknown_s5_candidates": 96
+    },
+    {
+      "s4_key": [
+        10452854735126921216,
+        0
+      ],
+      "unknown_s5_candidates": 92
+    },
+    {
+      "s4_key": [
+        10466365534009032704,
+        0
+      ],
+      "unknown_s5_candidates": 103
+    }
+  ],
+  "interpretation": "A canonical s5 key may be a child of multiple s4 classes; therefore 36 UNKNOWN s4 classes does not imply 36 distinct candidate s5 WINs. The set-cover optimum accounts for shared witnesses. Its value is a hypothetical minimum count of s5 WIN verdicts, not solve cost and not proof; comparison with a four-class universal LOSS cover is not meaningful from cardinality alone."
+}

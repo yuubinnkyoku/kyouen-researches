@@ -1,0 +1,285 @@
+{
+  "checkpoint": "dual-tight repair class stopped at exact S5 WIN; cache, S6 reverse propagation, and repair reoptimized",
+  "checkpoint_base_main": "d01858aa1a1d5ba5843b7a71c3a1539359de5889",
+  "claim": "The complete canonical S5 boundary of the processed S4 class has an exact WIN child. This makes the class WIN; it does not prove the reply27 root or the empty board.",
+  "created_on": "2026-10-09T05:08:05+00:00",
+  "dual_tight": true,
+  "exact_s5_cache": {
+    "LOSS": 5259,
+    "WIN": 134,
+    "base_cache": {
+      "LOSS": 5232,
+      "WIN": 132,
+      "entries": 5364
+    },
+    "conflict": 0,
+    "entries": 5393,
+    "new_rows_since_base_cache": 29,
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-d01858aa-next-class-1297599642637172736-0-after-completion87-current-s5.cache",
+    "sha256": "1e540d2837734f92154db7bf55a00c784b4f9c9468477f93a7b15e0f3abe92dc"
+  },
+  "key_artifacts": [
+    {
+      "bytes": 565,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-d01858aa-next-class-1297599642637172736-0-probe8-completed-raw-all.csv",
+      "sha256": "439f24ca2f98cab2ac0bac5cb02642893df91616d2f53696702484eea611bf6e"
+    },
+    {
+      "bytes": 415,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-d01858aa-next-class-1297599642637172736-0-probe8-completed-raw-exact.csv",
+      "sha256": "052b37ee54d12752bd40989ba4005a5b3d4f8e78ab819cfc0aba11777016c891"
+    },
+    {
+      "bytes": 1510,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-d01858aa-next-class-1297599642637172736-0-probe8-completed-summary.json",
+      "sha256": "ba804b571aae16642e00b37bdda6a6fa435e272c9eb477e845f2fb416570d36d"
+    },
+    {
+      "bytes": 1077,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-d01858aa-next-class-1297599642637172736-0-probe8-completed-merge-receipt.json",
+      "sha256": "19b93315956168d31b2da7b9ae0b8c5275b53a5ba119678007b1d2c223a35d98"
+    },
+    {
+      "bytes": 9819,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-d01858aa-next-class-1297599642637172736-0-unknown2-s6-raw-all.csv",
+      "sha256": "ebc7bfa2cc3c680e1d2567da79efe9fb2c019dc8a4c129c692706f355d1f6180"
+    },
+    {
+      "bytes": 2492,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-d01858aa-next-class-1297599642637172736-0-unknown2-s6-summary.json",
+      "sha256": "49b441333aa022d4ae9c44ef6743648cbf87cf459b50dc8d2c0bb3963569baca"
+    },
+    {
+      "bytes": 252,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-d01858aa-next-class-1297599642637172736-0-unknown2-s6-15m-raw-all.csv",
+      "sha256": "218b5c93cc709c763536226c5d1739a4790e5019867e2149ef62090e292c15ef"
+    },
+    {
+      "bytes": 2536,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-d01858aa-next-class-1297599642637172736-0-unknown2-s6-15m-summary.json",
+      "sha256": "bc33719ca115434d3e69d52bd8baac220144c49345e25ac7ec76fc039ca2942d"
+    },
+    {
+      "bytes": 32412,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-d01858aa-next-class-1297599642637172736-0-unknown2-s6-15m-reverse-audit.json",
+      "sha256": "f46ccb856cbf05046cae285b6ca3acd91dda1cdfd337f7bbe1fbeb0490a20872"
+    },
+    {
+      "bytes": 1195,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-d01858aa-next-class-1297599642637172736-0-completion87-collected-raw-all.csv",
+      "sha256": "eb1f926e4f35e675bcce0073ee9709ea548de770e02d66f11dbe6d3e63138795"
+    },
+    {
+      "bytes": 1045,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-d01858aa-next-class-1297599642637172736-0-completion87-collected-raw-exact.csv",
+      "sha256": "96da8bba3f387171d27735281953afd27c1bbbb190e96553ef2b5d9631b33858"
+    },
+    {
+      "bytes": 33107,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-d01858aa-next-class-1297599642637172736-0-completion87-collected-summary.json",
+      "sha256": "71988e46ce265f2e9306fc62e80e4f02a547764c786ebae267cbb90c0f5d0301"
+    },
+    {
+      "bytes": 39331,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-d01858aa-next-class-1297599642637172736-0-completion87-collected-manifest.json",
+      "sha256": "c851e202f39bd281499bf30321a578177a04284678e4177ea15f10ca6746327a"
+    },
+    {
+      "bytes": 832,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-d01858aa-next-class-1297599642637172736-0-after-completion87-merge-receipt.json",
+      "sha256": "26fb264990b8d1819b46a1df6b652fc9c97672ade50ee8cac0dae6395b8923a5"
+    },
+    {
+      "bytes": 224178,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-d01858aa-next-class-1297599642637172736-0-after-completion87-current-s5.cache",
+      "sha256": "1e540d2837734f92154db7bf55a00c784b4f9c9468477f93a7b15e0f3abe92dc"
+    },
+    {
+      "bytes": 13544,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-d01858aa-next-class-1297599642637172736-0-after-completion87-boundary-audit.json",
+      "sha256": "c238d30580287cba96cd5196139676f5582bb676f4ec7236971a56c918dee918"
+    },
+    {
+      "bytes": 2546,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-d01858aa-next-class-1297599642637172736-0-after-completion87-cardinality.json",
+      "sha256": "75f5f15c0cc7ed9d1231c5ab6aca5c1e1a8c8063f2af7b4c1b4a9429d3d22839"
+    },
+    {
+      "bytes": 5187,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-d01858aa-next-class-1297599642637172736-0-after-completion87-repair.json",
+      "sha256": "78712c0f20e8d9cad4cbbbc660b1c149b812da6e34308c8accc72dd8ba6160aa"
+    },
+    {
+      "bytes": 1753,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-d01858aa-next-class-1297599642637172736-0-after-completion87-ranking.json",
+      "sha256": "76aff02a21ebc374636d074bdb0f5fd1528faaf09f40960ef159c9b5826f4c99"
+    },
+    {
+      "bytes": 206,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-d01858aa-optimizer-environment-after-completion87.json",
+      "sha256": "35cf53c2cdd8349aa69813d9dd25774ba7f1e070c9057345c637dd535bfff9e0"
+    }
+  ],
+  "minimum_additional_classes": 2,
+  "next_target": {
+    "canonical_s5_children": 104,
+    "claim": "ranking is scheduling only",
+    "coverage": [
+      48,
+      50,
+      100,
+      108
+    ],
+    "dual_vertex": 100,
+    "key": [
+      1297318167660462080,
+      0
+    ],
+    "known_loss_s5": 9,
+    "unknown_s5": 95
+  },
+  "nodes_all_solver_rows": 228283989,
+  "optimizer_environment": {
+    "bytes": 206,
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-d01858aa-optimizer-environment-after-completion87.json",
+    "sha256": "35cf53c2cdd8349aa69813d9dd25774ba7f1e070c9057345c637dd535bfff9e0"
+  },
+  "processed_class": {
+    "boundary_status_counts": {
+      "LOSS": 29,
+      "UNKNOWN": 72,
+      "WIN": 2
+    },
+    "canonical_s5_children": 103,
+    "coverage_vertices": [
+      59,
+      61,
+      100,
+      108
+    ],
+    "exact_win_witnesses": [
+      [
+        1297599642637172736,
+        67108864
+      ],
+      [
+        1297599642637172736,
+        68719476736
+      ]
+    ],
+    "geometry_audit_passed": true,
+    "key": [
+      1297599642637172736,
+      0
+    ],
+    "status": "WIN",
+    "unexplored_children_after_first_win": 70
+  },
+  "rational_dual": "2",
+  "remaining_third_moves": 5,
+  "repair": {
+    "classes": 2,
+    "distinct_unknown_s5": 194,
+    "selected": [
+      {
+        "all_s5": 104,
+        "coverage": [
+          48,
+          50,
+          100,
+          108
+        ],
+        "key": [
+          1297318167660462080,
+          0
+        ],
+        "unknown_s5": 95
+      },
+      {
+        "all_s5": 104,
+        "coverage": [
+          38,
+          77,
+          87
+        ],
+        "key": [
+          1585267068834414720,
+          0
+        ],
+        "unknown_s5": 99
+      }
+    ]
+  },
+  "root_outcomes": {
+    "empty_11x11": "UNKNOWN",
+    "reply27_60_27": "UNKNOWN"
+  },
+  "s4_classes": {
+    "LOSS": 30,
+    "UNKNOWN": 3112,
+    "WIN": 242
+  },
+  "s5_probe": {
+    "adaptive_completion87": {
+      "completed": 17,
+      "exact_rows": 15,
+      "nodes_all_rows": 122175061,
+      "nodes_exact_rows": 92175061,
+      "not_dispatched_after_win": 70,
+      "scheduled": 87,
+      "verdicts": {
+        "LOSS": 13,
+        "UNKNOWN": 2,
+        "WIN": 2
+      }
+    },
+    "budget_per_target": 15000000,
+    "probe8": {
+      "exact_rows": 6,
+      "nodes_all_rows": 47043116,
+      "nodes_exact_rows": 17043116,
+      "targets": 8,
+      "verdicts": {
+        "LOSS": 6,
+        "UNKNOWN": 2,
+        "WIN": 0
+      }
+    }
+  },
+  "s6_descent": {
+    "at_2m": {
+      "nodes": 49417008,
+      "verdicts": {
+        "LOSS": 0,
+        "UNKNOWN": 3,
+        "WIN": 159
+      }
+    },
+    "canonical_children": 162,
+    "direct_s5_parent_losses": 2,
+    "parent_child_incidences": 163,
+    "previously_unknown_replayed_at_15m": {
+      "nodes": 9648804,
+      "verdicts": {
+        "LOSS": 2,
+        "UNKNOWN": 0,
+        "WIN": 1
+      }
+    },
+    "reverse_incidence": {
+      "conflicts": 0,
+      "duplicate_losses": 26,
+      "new_s5_losses": 8,
+      "reply27_parents": 34,
+      "safe_canonical_parents": 48
+    },
+    "unknown_propagated": false
+  },
+  "schema": "n11-reply27-finite-checkpoint-v1",
+  "secured_third_moves": 114,
+  "source_manifest": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-d01858aa-reply27-checkpoint-source-manifest.json",
+    "sha256": "fbdb98087df24e5bbdef96eb3386bbe58c58d7792a336cc05e9dc30418d0077c",
+    "source_count": 323
+  }
+}

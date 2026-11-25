@@ -1,0 +1,52 @@
+{
+  "claim": "Field mapping only: repair_selected is copied from additive_optimum.selected; no verdict or optimization is changed.",
+  "repair_additive_unknown_s5": 285,
+  "repair_classes": 3,
+  "repair_selected": [
+    {
+      "all_s5": 104,
+      "coverage": [
+        38,
+        77,
+        87
+      ],
+      "key": [
+        1585267068834414720,
+        0
+      ],
+      "unknown_s5": 99
+    },
+    {
+      "all_s5": 100,
+      "coverage": [
+        100,
+        108,
+        115
+      ],
+      "key": [
+        10412322338480590848,
+        0
+      ],
+      "unknown_s5": 93
+    },
+    {
+      "all_s5": 98,
+      "coverage": [
+        47,
+        51,
+        104
+      ],
+      "key": [
+        10448351685255364608,
+        0
+      ],
+      "unknown_s5": 93
+    }
+  ],
+  "repair_unique_unknown_s5": 285,
+  "schema": "n11-selected31-repair-dual-tight-ranking-adapter-v1",
+  "source": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-f8dc62e-dual-tight-1297036692683751424-16384-probe8-repair.json",
+    "sha256": "ac827680c87299ab7cb9ad2a132946c22808d49f00d15a01a3652fd1957b90e8"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "budget_per_target": 15000000,
+  "class_key": [
+    1297036692683759616,
+    0
+  ],
+  "class_status_from_exact_witness": "WIN",
+  "completed_targets": 4,
+  "dispatched_targets": 4,
+  "exact_replay_counts": {
+    "LOSS": 1,
+    "UNKNOWN": 0,
+    "WIN": 3
+  },
+  "merged_cache": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-d5136a93-class-1297036692683759616-0-probe9-merged-s5.cache",
+    "rows": 5588,
+    "sha256": "cb975246f8e3f44613a8e3a1206b966a7b2a1a35f347cd80a010dd56d59e6bea"
+  },
+  "new_exact": 4,
+  "new_exact_cache": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-d5136a93-class-1297036692683759616-0-probe9-new-exact-s5.cache",
+    "rows": 4,
+    "sha256": "473f3c4ca867f6da6d239fb137e5ac8c6cf69a3c52f283dfbf417ba6606192e4"
+  },
+  "nodes_all_completed_rows": 21889842,
+  "nodes_exact": 21889842,
+  "not_dispatched_after_win": [
+    [
+      1297036692683759616,
+      64
+    ],
+    [
+      1297036692683759616,
+      65536
+    ],
+    [
+      1297036692683763712,
+      0
+    ],
+    [
+      1297036692683792384,
+      0
+    ],
+    [
+      10412322338481115136,
+      0
+    ]
+  ],
+  "raw_all_output": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-d5136a93-class-1297036692683759616-0-probe9-raw-all.csv",
+    "rows": 4,
+    "sha256": "5a8a35eda158887728a9b58ffa376abe7f9b0e1287515cebc8c1d1c36cbf88b7"
+  },
+  "raw_output": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-d5136a93-class-1297036692683759616-0-probe9-raw-exact.csv",
+    "rows": 4,
+    "sha256": "88f418d1abd8098e87ed0b240da47d2849ee96192603a38d40e9c3d91b7f61ba"
+  },
+  "root": [
+    60,
+    27
+  ],
+  "scheduled_targets": 9,
+  "schema": "n11-dual-tight-adaptive-win-probe-summary-v1",
+  "stop_reason": "first exact s5 WIN; only already-running workers were drained",
+  "unknown_keys": []
+}

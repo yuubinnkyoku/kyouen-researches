@@ -1,0 +1,30 @@
+{
+  "budget_per_target": 15000000,
+  "class_status_on_supplied_probe": "LOSS",
+  "exact_replay_counts": {
+    "LOSS": 8,
+    "UNKNOWN": 0,
+    "WIN": 0
+  },
+  "new_exact_cache": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-f8dc62e-dual-tight-1297036692683751424-16384-probe8-nextclass-next-probe8-second-new-exact-s5.cache",
+    "rows": 8,
+    "sha256": "f39c31da4b89a0d022d6ea886cf85a330293664ca7d6425a06ce29381a835b76"
+  },
+  "nodes": 36684589,
+  "not_dispatched": [],
+  "raw_output": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-f8dc62e-dual-tight-1297036692683751424-16384-probe8-nextclass-next-probe8-second-raw-exact.csv",
+    "rows": 8,
+    "sha256": "36fcb1f3488a0d962f1d3fd04f295258d9bd7d50fe8983a844499f85a097b5f8"
+  },
+  "runner_summary": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-f8dc62e-dual-tight-1297036692683751424-16384-probe8-nextclass-next-probe8-second-runner-summary.json",
+    "sha256": "58b2ca050a04ba99213d53576355ea50d949b6343e0609416f1d8d2e6a57e4df"
+  },
+  "scheduled": 8,
+  "schema": "n11-dual-tight-class-probe-run-summary-v1",
+  "scope": "The supplied low-legal-count probe only; the containing s4 class is WIN if any exact s5 child is WIN.",
+  "target_count": 8,
+  "workers": 4
+}

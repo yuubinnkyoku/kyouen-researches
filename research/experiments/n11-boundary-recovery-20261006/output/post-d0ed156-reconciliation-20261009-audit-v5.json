@@ -1,0 +1,232 @@
+{
+  "schema": "n11-reply27-upstream-s5-cache-reconciliation-v2",
+  "main_commit": "d0ed156ca6a7c6c596d08da518d5c32b911ae8ba",
+  "root": [
+    60,
+    27
+  ],
+  "status": "hold-cache-merge-solver-dispatch-and-push-pending-upstream-s5-win-boundary",
+  "proof_status": "{60,27} UNKNOWN; 11x11 empty board UNKNOWN",
+  "accepted_s5_cache": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-e8d965fd-current-exact-s5.cache",
+    "unique_exact_rows": 4963,
+    "WIN": 127,
+    "LOSS": 4836,
+    "conflicts": 0,
+    "sha256": "3e840785537f45012dbc29552120a004472f8622ef084d2c4796578a28da1079"
+  },
+  "upstream_derived_s5_cache": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-2199bcc-s6-87win-derived-s5.cache",
+    "rows": 2,
+    "sha256": "fb0d95dfd2e59b6d71fd441b9775059c1e3202d3b74e7a6dd69477f84ef777b1",
+    "rows_assessed": [
+      {
+        "key": [
+          "10448351135633770496",
+          "0"
+        ],
+        "verdict": "WIN",
+        "status": "already-in-accepted-cache-and-supported"
+      },
+      {
+        "key": [
+          "10449477035406395392",
+          "0"
+        ],
+        "verdict": "WIN",
+        "status": "held-unverified"
+      }
+    ]
+  },
+  "new_s6_exact_result": {
+    "key": [
+      "1297318167661510656",
+      "33554433"
+    ],
+    "verdict": "WIN",
+    "budget": 15000000,
+    "nodes": 3014767,
+    "dispatch_commit_inference": "artifact name post-2199bcc8; exact dispatch metadata is not present in raw CSV",
+    "raw_path": "research/experiments/n11-boundary-recovery-20261006/output/post-2199bcc-s6-1297318167661510656-33554433-probe15m-raw.csv",
+    "raw_sha256": "9000aa83ed9ef4a2689e2faf34b63077f6d1d3b3146599cf62112e8c82604fa4",
+    "target_path": "research/experiments/n11-boundary-recovery-20261006/output/post-2199bcc-s6-1297318167661510656-33554433-probe15m-target.csv",
+    "target_sha256": "3a7cd9cedad6140e6674cc52ce57614c94b0db6889ca1a800dd60793f6e24a22"
+  },
+  "s5_parent_boundary": {
+    "key": [
+      "10449477035406395392",
+      "0"
+    ],
+    "canonical_s6_children": 89,
+    "exact_WIN": 88,
+    "exact_LOSS": 0,
+    "UNKNOWN": 1,
+    "outcome": "UNKNOWN",
+    "full_coverage": false,
+    "derived_s5_rows": 0,
+    "cache_conflicts": 0,
+    "boundary_summary": "research/experiments/n11-boundary-recovery-20261006/output/post-d0ed156-reconciliation-20261009-s6-boundary-audit-summary.json",
+    "boundary_summary_sha256": "fbf4ac520c32faf46353eb7c61f2dae2cf5c2cc29b2c89cb9342106193288ab7",
+    "full_boundary": "research/experiments/n11-boundary-recovery-20261006/output/post-d0ed156-reconciliation-20261009-s6-boundary-audit-full.json.gz",
+    "full_boundary_sha256": "4b505ebc2381807a8fd071d7d6acf504196d65fca012afe17980e09a0d04ba20"
+  },
+  "remaining_s6_child": {
+    "key": [
+      "10449477035406395392",
+      "16777216"
+    ],
+    "saved_status": "UNKNOWN",
+    "last_recorded_budget": 2000000,
+    "raw_path": ".local/n11/reply27-s6-descent-post1173099-class10448351135499552768/s6-10449477035406395392-16777216.out.csv",
+    "raw_sha256": "8b27521b20c52c9f49b176128c554470d6fac288d8ceb180bfbfe81906657e05",
+    "higher_budget_replay_dispatched": false
+  },
+  "prior_s7_intersection": {
+    "outcomes": {
+      "WIN": 0,
+      "LOSS": 0,
+      "UNKNOWN": 2
+    },
+    "canonical_s7_children": 157,
+    "saved_exact_s7_keys": 0,
+    "scanned_files": 5124,
+    "audit_path": "research/experiments/n11-boundary-recovery-20261006/output/post-18109950-s7-saved-intersection.json",
+    "audit_sha256": "695de4b20bc184d9d13a2f94ccd4f1ecaa9e1259ed180c3be52b80d20b158ee6",
+    "sources_path": "research/experiments/n11-boundary-recovery-20261006/output/post-18109950-s7-saved-intersection-sources.json",
+    "sources_sha256": "c279a7db8edd325b64ed353116d957f4be9bcb439fc3513482d02946377fbb97"
+  },
+  "frontier": {
+    "class_status_counts": {
+      "LOSS": 29,
+      "UNKNOWN": 3125,
+      "WIN": 230
+    },
+    "secured_vertices": 113,
+    "remaining_vertices": 6,
+    "minimum_additional_classes": 3,
+    "rational_dual": 3.0,
+    "dual_tight": true,
+    "repair_classes": 3,
+    "distinct_unknown_s5": 292,
+    "next_rank1_class": [
+      "10448351135499550722",
+      "0"
+    ],
+    "next_rank1_unknown_s5": 96,
+    "source_cache_sha256": "3e840785537f45012dbc29552120a004472f8622ef084d2c4796578a28da1079",
+    "metrics_unchanged_by_s6_result": true
+  },
+  "supersedes_attempts": [
+    "research/experiments/n11-boundary-recovery-20261006/output/post-d0ed156-reconciliation-20261009-audit.json research/experiments/n11-boundary-recovery-20261006/output/post-d0ed156-reconciliation-20261009-artifact-hashes.json"
+  ],
+  "decision": "Stop before cache merge, further solver dispatch, commit, or push. The upstream S5 WIN row lacks full exact WIN coverage: the complete S6 boundary now has 88 WIN and one UNKNOWN child. No exact contradiction is asserted; the row remains unverified.",
+  "artifact_hashes": [
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-e8d965fd-current-exact-s5.cache",
+      "bytes": 206043,
+      "sha256": "3e840785537f45012dbc29552120a004472f8622ef084d2c4796578a28da1079"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-2199bcc-s6-87win-derived-s5.cache",
+      "bytes": 78,
+      "sha256": "fb0d95dfd2e59b6d71fd441b9775059c1e3202d3b74e7a6dd69477f84ef777b1"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-2199bcc-s6-1297318167661510656-33554433-probe15m-raw.csv",
+      "bytes": 247,
+      "sha256": "9000aa83ed9ef4a2689e2faf34b63077f6d1d3b3146599cf62112e8c82604fa4"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-2199bcc-s6-1297318167661510656-33554433-probe15m-target.csv",
+      "bytes": 53,
+      "sha256": "3a7cd9cedad6140e6674cc52ce57614c94b0db6889ca1a800dd60793f6e24a22"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-d0ed156-reconciliation-20261009-s6-source-manifest.json",
+      "bytes": 614,
+      "sha256": "e163a61bf7f87f189f901ea2668a61e690a325590ad8d7440d46be6130c74632"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-d0ed156-reconciliation-20261009-augmented-s6-source-audit.json",
+      "bytes": 418134,
+      "sha256": "f4634411db657b41f11c25c3678165f0729307add7943bead2da44975329ff0b"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-d0ed156-reconciliation-20261009-s5-10449477035406395392-0-target.csv",
+      "bytes": 68,
+      "sha256": "6ee37f5f918b96f62971a017d80d0fa7056311682bccbdcc2e7de5c2dace3fe8"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-d0ed156-reconciliation-20261009-s6-boundary-audit-summary.json",
+      "bytes": 207623,
+      "sha256": "fbf4ac520c32faf46353eb7c61f2dae2cf5c2cc29b2c89cb9342106193288ab7"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-d0ed156-reconciliation-20261009-s6-boundary-audit-full.json.gz",
+      "bytes": 34025,
+      "sha256": "4b505ebc2381807a8fd071d7d6acf504196d65fca012afe17980e09a0d04ba20"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-d0ed156-reconciliation-20261009-derived-s5.cache",
+      "bytes": 86,
+      "sha256": "0d2a80585f98789d79d08495f4b38534ed48dcb5c82f603f7090aabe66aa85b4"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-18109950-s7-saved-intersection.json",
+      "bytes": 2582,
+      "sha256": "695de4b20bc184d9d13a2f94ccd4f1ecaa9e1259ed180c3be52b80d20b158ee6"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-18109950-s7-saved-intersection-sources.json",
+      "bytes": 1440,
+      "sha256": "c279a7db8edd325b64ed353116d957f4be9bcb439fc3513482d02946377fbb97"
+    },
+    {
+      "path": ".local/n11/reply27-s6-descent-post1173099-class10448351135499552768/s6-10449477035406395392-16777216.out.csv",
+      "bytes": 281,
+      "sha256": "8b27521b20c52c9f49b176128c554470d6fac288d8ceb180bfbfe81906657e05"
+    },
+    {
+      "path": ".local/n11/dual-tight-ready-10448351135499552768-0-probe8/s5-10449477035406395392-0.out.csv",
+      "bytes": 278,
+      "sha256": "8fe5ccb378677a5c530ea40ac041f2432ab475684857f2b87a87371cb95de895"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-e8d965fd-repair-cardinality.json",
+      "bytes": 2660,
+      "sha256": "c56600853e2099fb275c8f924eab14c1f5862430337deda44707dd165f818800"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-e8d965fd-repair-additive.json",
+      "bytes": 2674,
+      "sha256": "4a7a2f9cd319eb4bba9dc3456872396be131ca8d176abb49f5434be2a8dd8142"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-e8d965fd-repair-ranking.json",
+      "bytes": 2095,
+      "sha256": "853f4e1b6c152822c3f81a4d2ca1600431c9a7c481d6ca5a7ccc0efcb31a8f03"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-d0ed156-reconciliation-20261009-cardinality.json",
+      "bytes": 2660,
+      "sha256": "c56600853e2099fb275c8f924eab14c1f5862430337deda44707dd165f818800"
+    }
+  ],
+  "recalculated_cardinality": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-d0ed156-reconciliation-20261009-cardinality.json",
+    "sha256": "c56600853e2099fb275c8f924eab14c1f5862430337deda44707dd165f818800",
+    "cache_entries": 4963,
+    "class_status_counts": {
+      "LOSS": 29,
+      "UNKNOWN": 3125,
+      "WIN": 230
+    },
+    "secured_vertices": 113,
+    "remaining_vertices": 6,
+    "minimum_additional_classes": 3,
+    "rational_dual": 3.0,
+    "dual_tight": true,
+    "this_recomputed_result_matches_prior_snapshot": true
+  },
+  "supersedes_v4": "research/experiments/n11-boundary-recovery-20261006/output/post-d0ed156-reconciliation-20261009-audit-v4.json"
+}

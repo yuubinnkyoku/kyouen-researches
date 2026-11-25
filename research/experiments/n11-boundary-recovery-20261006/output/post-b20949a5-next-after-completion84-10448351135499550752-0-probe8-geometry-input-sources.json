@@ -1,0 +1,40 @@
+{
+  "claim": "Exact replay subset input for independent complete-boundary geometry verification; UNKNOWN is excluded from the probe subset and remains unresolved.",
+  "class_key": [
+    10448351135499550752,
+    0
+  ],
+  "inputs": [
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-b20949a5-next-after-completion84-10448351135499550752-0-probe8-raw-exact.csv",
+      "sha256": "3677de85fb944f03bc3d36608702d056a9c33b33692c3efbe32d966a5fa8419a"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-b20949a5-next-after-completion84-10448351135499550752-0-probe8-new-exact-s5.cache",
+      "sha256": "1650114d50240b0ba7b8c1694295818fd5521d29bfaaaa4af80b395ed9622417"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-b20949a5-next-after-completion84-10448351135499550752-0-probe8-exact-targets.csv",
+      "sha256": "db84fbbd3e1452438d153471a2f908ce1b6bd2e1add7ab6c5719cdd6cf4253d9"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-next-after-completion84-10448351135499550752-0-probe8.csv",
+      "sha256": "df241ac021ab19c7739283af3e70a7f5694dd60f9f5c2e0c33b0567ec5693488"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-b20949a5-next-after-completion84-10448351135499550752-0-probe8-run-manifest.json",
+      "sha256": "35c4465d4de228f48d309b116364746cf70efabd41d5aace1ae05daaadeab4f0"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-b20949a5-next-after-completion84-10448351135499550752-0-probe8-raw-all.csv",
+      "sha256": "0951d5e9c982ac34cca69ce682855e11b6bec9e9c5cdb24563cd00e5adc775f8"
+    }
+  ],
+  "probe_target_sha256": "db84fbbd3e1452438d153471a2f908ce1b6bd2e1add7ab6c5719cdd6cf4253d9",
+  "run_manifest": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-b20949a5-next-after-completion84-10448351135499550752-0-probe8-run-manifest.json",
+    "sha256": "35c4465d4de228f48d309b116364746cf70efabd41d5aace1ae05daaadeab4f0"
+  },
+  "scheduled_probe_target_sha256": "df241ac021ab19c7739283af3e70a7f5694dd60f9f5c2e0c33b0567ec5693488",
+  "schema": "n11-dual-tight-probe-exact-subset-source-manifest-v1"
+}

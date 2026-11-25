@@ -1,0 +1,16 @@
+{
+  "schema": "n11-reply27-frontier-optimizer-environment-v1",
+  "environment": {
+    "python": "3.11.15",
+    "numpy": "2.4.6",
+    "scipy": "1.15.3",
+    "executable": "D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\.local\\n11\\reply27-optimizer-20261009\\Scripts\\python.exe"
+  },
+  "commands": [
+    "cache_aware_reply27_cardinality.py: scipy.optimize.milp and scipy.optimize.linprog",
+    "cache_aware_reply27_cover.py: scipy.optimize.milp",
+    "refine_cache_aware_reply27_cover.py: geometry-validated deterministic one-class exchanges",
+    "rank_dual_tight_repair_classes.py: dual-tight candidate ranking"
+  ],
+  "claim": "These packages were used only for finite integer/rational-cover frontier optimization; no game verdict is inferred from optimizer scores."
+}

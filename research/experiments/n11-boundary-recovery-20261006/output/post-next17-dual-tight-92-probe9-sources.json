@@ -1,0 +1,93 @@
+{
+  "execution_result": "all nine probe targets completed with exact LOSS; no WIN, UNKNOWN, or undispatched target",
+  "replay": {
+    "counts": {
+      "LOSS": 9,
+      "UNKNOWN": 0,
+      "WIN": 0
+    },
+    "nodes": 21927853,
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-next17-dual-tight-92-probe9-out.csv",
+    "rows": 9,
+    "sha256": "844987871cb03dc040b5dbed6910b92feceb3b4e916bf70e3b39ef17ba5e7631"
+  },
+  "reuse_audits": [
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-next17-dual-tight-92-probe9-saved-s6-summary.json",
+      "sha256": "1f1c99340a44791ed64ae564efb23c704ec4ddfbe72a953b982d514f8a22cde5"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-next17-dual-tight-92-probe9-saved-s6-sources.json",
+      "sha256": "3d7cce98eb5dff519eaf300a15a8a763da9ebc4d27953392d51d2783fdc9ff5b"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-next17-dual-tight-92-probe9-prior-s5-replay-audit.json",
+      "sha256": "20b97ceb7e32c7a546b5101c6e95b4641674e689dfefb1d1f8d61d2864aafe42"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-next17-expanded-s5.cache",
+      "sha256": "2fa27a15625af7449ca8f3fa21e683ba2e13a5d4deb99f8919d02ea61b59c82c"
+    }
+  ],
+  "schema": "n11-post-next17-dual-tight-92-probe9-source-manifest-v1",
+  "scope": "Finite exact s5 probe9 replay. Search order is the committed schedule; it does not infer outcomes from scheduling metadata.",
+  "solver": {
+    "binary_path": ".local/n11/reply27-probe9/dfpn.exe",
+    "binary_sha256": "05fa5a45c0749506ead2036174c7fc9047badd94835a06c7588d0c892bfafbd7",
+    "budget_per_target": 15000000,
+    "compile_command": "c++ -std=c++20 -O3 -DNDEBUG -Icpp/solvers cpp/solvers/kyouen_dfpn_root.cpp -o .local/n11/reply27-probe9/dfpn.exe",
+    "compiler": "c++ (Rev8, Built by MSYS2 project) 15.2.0",
+    "runner_path": "research/experiments/n11-boundary-recovery-20261006/scripts/complete_class_local.py",
+    "runner_sha256": "04ca107661447f40d9c43034f7adbc20a65512c3cd5839b0536f257f2a64d4f4",
+    "source_path": "cpp/solvers/kyouen_dfpn_root.cpp",
+    "source_sha256": "523f56e61550e1f5b93882229baf8b4cd83489be719ca484d13adef8424c3063",
+    "workers": 4
+  },
+  "summary": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-next17-dual-tight-92-probe9-summary.json",
+    "sha256": "4a61d2b026f39002e229b32150caf3fb5a27d37776d2dc2f5c3dbc1aba2449cb"
+  },
+  "targets": {
+    "count": 9,
+    "keys": [
+      [
+        1297107061426880512,
+        17
+      ],
+      [
+        10452854736200663040,
+        0
+      ],
+      [
+        1297036692682702852,
+        17
+      ],
+      [
+        10452854735261138944,
+        0
+      ],
+      [
+        1297036692682833920,
+        17
+      ],
+      [
+        1297036692699480064,
+        17
+      ],
+      [
+        1297036693756444672,
+        17
+      ],
+      [
+        1297036967560609792,
+        17
+      ],
+      [
+        10452854737274404864,
+        0
+      ]
+    ],
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-next17-dual-tight-92-probe9.csv",
+    "sha256": "6bee4760b0a924f88238d6bfd17d261f862906c2fa9f8c0a85a8810e20917194"
+  }
+}

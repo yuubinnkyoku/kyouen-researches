@@ -1,0 +1,147 @@
+{
+  "artifact_inventory": "research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-reply27-checkpoint-artifact-hashes.json",
+  "checkpoint_base_main": "f7cdef1714ca417a2201b68beb5a18b4b33f8fd9",
+  "dual_tight": true,
+  "exact_s5_cache": {
+    "LOSS": 5274,
+    "WIN": 140,
+    "conflict": 0,
+    "entries": 5414,
+    "new_exact_rows": 5,
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-next-class-1297177430172106752-0-probe8-early-win-merged-s5.cache",
+    "sha256": "6049d2e9a31253896e1a17cff4360e41aea612c7ee5be3a7fee93e8e32d630e1"
+  },
+  "minimum_additional_classes": 2,
+  "next_target": {
+    "canonical_s5_children": 106,
+    "coverage": [
+      90,
+      96,
+      100,
+      108
+    ],
+    "dual_vertex": 100,
+    "dual_weight": "1",
+    "key": [
+      10376293541461626880,
+      67108864
+    ],
+    "known_loss_s5": 9,
+    "rank": 1,
+    "targets_csv": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-f7cdef17-after-class-win-ranking-targets.csv",
+    "unknown_s5": 97,
+    "unknown_s5_legal_count_max": 104,
+    "unknown_s5_legal_count_min": 80
+  },
+  "processed_class": {
+    "boundary_status_counts": {
+      "LOSS": 8,
+      "UNKNOWN": 92,
+      "WIN": 2
+    },
+    "canonical_s5_children": 102,
+    "exact_win_witnesses": [
+      [
+        1297177430172106752,
+        64
+      ],
+      [
+        1297177430172106880,
+        0
+      ]
+    ],
+    "geometry_audit_passed": true,
+    "key": [
+      1297177430172106752,
+      0
+    ],
+    "saved_history_conflicts": 0,
+    "status": "WIN",
+    "unexplored_after_early_win": 92
+  },
+  "proof_status": {
+    "empty_11x11": "UNKNOWN",
+    "reply27_root": "UNKNOWN"
+  },
+  "rational_dual": "2",
+  "remaining_third_moves": 5,
+  "repair": {
+    "classes": 2,
+    "distinct_unknown_s5": 196,
+    "selected": [
+      {
+        "coverage": [
+          38,
+          77,
+          87
+        ],
+        "key": [
+          1585267068834414720,
+          0
+        ],
+        "uncached_s5": 99
+      },
+      {
+        "coverage": [
+          90,
+          96,
+          100,
+          108
+        ],
+        "key": [
+          10376293541461626880,
+          67108864
+        ],
+        "uncached_s5": 97
+      }
+    ]
+  },
+  "report_source_manifest": "research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-reply27-checkpoint-source-manifest.json",
+  "reverse_propagated_s5_loss": 0,
+  "root": [
+    60,
+    27
+  ],
+  "s4_classes": {
+    "LOSS": 30,
+    "UNKNOWN": 3106,
+    "WIN": 248
+  },
+  "s5_probe": {
+    "budget_per_target": 15000000,
+    "completed_exact": 5,
+    "nodes": 39801125,
+    "not_dispatched": [
+      [
+        1152921642181066752,
+        68719476736
+      ],
+      [
+        5908863448599494656,
+        0
+      ],
+      [
+        10378545341275312128,
+        65536
+      ]
+    ],
+    "scheduled": 8,
+    "started": 5,
+    "stop_reason": "An exact s5 WIN row appeared. No further targets were dispatched; the runner drained already active workers and preserved their completed rows.",
+    "verdicts": {
+      "LOSS": 3,
+      "UNKNOWN": 0,
+      "WIN": 2
+    },
+    "workers": 4
+  },
+  "s6_descent": 0,
+  "saved_history_audit": {
+    "conflicts": 0,
+    "exact_evidence_records_for_boundary": 329,
+    "files_scanned": 9208,
+    "same_budget_unknown_keys": 2
+  },
+  "schema": "n11-reply27-finite-checkpoint-v1",
+  "secured_third_moves": 114
+}

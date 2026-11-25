@@ -1,0 +1,387 @@
+{
+  "budget_per_target": 15000000,
+  "claim": "Completed resume rows only; existing output rows are never overwritten and a prior failed log is kept separately.",
+  "copied_completed_rows": 11,
+  "primary_run_dir": ".local/n11/dual-tight-ready-10448351169859289088-0-completion76",
+  "resume_manifest": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-f8dc62e-dual-tight-1297036692683751424-16384-probe8-nextclass-completion76-resume11-sources.json",
+    "sha256": "c5150aa76ee1b15ace5ce93800f4799681ceef1e05dad1460d3361229a7a895d"
+  },
+  "resume_run_dir": "C:\\Users\\yuubi\\AppData\\Local\\Temp\\kyouen-reply27-completion76-resume11",
+  "resume_targets": {
+    "count": 11,
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-f8dc62e-dual-tight-1297036692683751424-16384-probe8-nextclass-completion76-resume11.csv",
+    "sha256": "3bd751b2a490d2ab13f63880f6c086053f0af283584d5cdf3fad0a634acf7eba"
+  },
+  "rows": [
+    {
+      "destination_input": {
+        "path": ".local/n11/dual-tight-ready-10448351169859289088-0-completion76/s5-10448351135499550848-32768.input.csv",
+        "sha256": "3594f0814847c73afedd8f0d611b1cdbe1e6b1bdbf8d9f9a0f4bbb93e4f86a6b"
+      },
+      "destination_log": {
+        "path": ".local/n11/dual-tight-ready-10448351169859289088-0-completion76/s5-10448351135499550848-32768.log",
+        "prior_log_preserved": false,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "destination_output": {
+        "path": ".local/n11/dual-tight-ready-10448351169859289088-0-completion76/s5-10448351135499550848-32768.out.csv",
+        "sha256": "ca0eb9d90329a57a44ebc90129b5f907f50653f087e353494ba5b839a3e8dd8c"
+      },
+      "key": [
+        10448351135499550848,
+        32768
+      ],
+      "nodes": 3538360,
+      "source_input": {
+        "path": "C:\\Users\\yuubi\\AppData\\Local\\Temp\\kyouen-reply27-completion76-resume11\\s5-10448351135499550848-32768.input.csv",
+        "sha256": "3594f0814847c73afedd8f0d611b1cdbe1e6b1bdbf8d9f9a0f4bbb93e4f86a6b"
+      },
+      "source_log": {
+        "path": "C:\\Users\\yuubi\\AppData\\Local\\Temp\\kyouen-reply27-completion76-resume11\\s5-10448351135499550848-32768.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "source_output": {
+        "path": "C:\\Users\\yuubi\\AppData\\Local\\Temp\\kyouen-reply27-completion76-resume11\\s5-10448351135499550848-32768.out.csv",
+        "sha256": "ca0eb9d90329a57a44ebc90129b5f907f50653f087e353494ba5b839a3e8dd8c"
+      },
+      "verdict": 2
+    },
+    {
+      "destination_input": {
+        "path": ".local/n11/dual-tight-ready-10448351169859289088-0-completion76/s5-10448351135499812864-32768.input.csv",
+        "sha256": "1fbb7c205c5d739fb6161f2f578453c0a673013eaa71bd34c09bd1abf10fd2c3"
+      },
+      "destination_log": {
+        "path": ".local/n11/dual-tight-ready-10448351169859289088-0-completion76/s5-10448351135499812864-32768.log",
+        "prior_log_preserved": false,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "destination_output": {
+        "path": ".local/n11/dual-tight-ready-10448351169859289088-0-completion76/s5-10448351135499812864-32768.out.csv",
+        "sha256": "cf70dcfb4954810835b721c69b2872d3c075396e2563dea9d6f9517ae280c61e"
+      },
+      "key": [
+        10448351135499812864,
+        32768
+      ],
+      "nodes": 6528041,
+      "source_input": {
+        "path": "C:\\Users\\yuubi\\AppData\\Local\\Temp\\kyouen-reply27-completion76-resume11\\s5-10448351135499812864-32768.input.csv",
+        "sha256": "1fbb7c205c5d739fb6161f2f578453c0a673013eaa71bd34c09bd1abf10fd2c3"
+      },
+      "source_log": {
+        "path": "C:\\Users\\yuubi\\AppData\\Local\\Temp\\kyouen-reply27-completion76-resume11\\s5-10448351135499812864-32768.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "source_output": {
+        "path": "C:\\Users\\yuubi\\AppData\\Local\\Temp\\kyouen-reply27-completion76-resume11\\s5-10448351135499812864-32768.out.csv",
+        "sha256": "cf70dcfb4954810835b721c69b2872d3c075396e2563dea9d6f9517ae280c61e"
+      },
+      "verdict": 2
+    },
+    {
+      "destination_input": {
+        "path": ".local/n11/dual-tight-ready-10448351169859289088-0-completion76/s5-10448351135501647872-32768.input.csv",
+        "sha256": "91c28aed6afaad308587e2c592e7cedb6a0744f2e990a1fee04384164218e5fe"
+      },
+      "destination_log": {
+        "path": ".local/n11/dual-tight-ready-10448351169859289088-0-completion76/s5-10448351135501647872-32768.log",
+        "prior_log_preserved": false,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "destination_output": {
+        "path": ".local/n11/dual-tight-ready-10448351169859289088-0-completion76/s5-10448351135501647872-32768.out.csv",
+        "sha256": "bb23c036c468e0c656b5d3d0b3532286d212f7fc377fbf085850773f84ba2fac"
+      },
+      "key": [
+        10448351135501647872,
+        32768
+      ],
+      "nodes": 2371189,
+      "source_input": {
+        "path": "C:\\Users\\yuubi\\AppData\\Local\\Temp\\kyouen-reply27-completion76-resume11\\s5-10448351135501647872-32768.input.csv",
+        "sha256": "91c28aed6afaad308587e2c592e7cedb6a0744f2e990a1fee04384164218e5fe"
+      },
+      "source_log": {
+        "path": "C:\\Users\\yuubi\\AppData\\Local\\Temp\\kyouen-reply27-completion76-resume11\\s5-10448351135501647872-32768.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "source_output": {
+        "path": "C:\\Users\\yuubi\\AppData\\Local\\Temp\\kyouen-reply27-completion76-resume11\\s5-10448351135501647872-32768.out.csv",
+        "sha256": "bb23c036c468e0c656b5d3d0b3532286d212f7fc377fbf085850773f84ba2fac"
+      },
+      "verdict": 2
+    },
+    {
+      "destination_input": {
+        "path": ".local/n11/dual-tight-ready-10448351169859289088-0-completion76/s5-10448351135503745024-32768.input.csv",
+        "sha256": "75c3f9633cb17fbfa9801649d516af16ff7e5eb5a97c21e9dbc7a8929d141793"
+      },
+      "destination_log": {
+        "path": ".local/n11/dual-tight-ready-10448351169859289088-0-completion76/s5-10448351135503745024-32768.log",
+        "prior_log_preserved": false,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "destination_output": {
+        "path": ".local/n11/dual-tight-ready-10448351169859289088-0-completion76/s5-10448351135503745024-32768.out.csv",
+        "sha256": "c31e1a27de508a096047d12e7948c74b887bebafa2c60f10c383dd0da4896a38"
+      },
+      "key": [
+        10448351135503745024,
+        32768
+      ],
+      "nodes": 8372090,
+      "source_input": {
+        "path": "C:\\Users\\yuubi\\AppData\\Local\\Temp\\kyouen-reply27-completion76-resume11\\s5-10448351135503745024-32768.input.csv",
+        "sha256": "75c3f9633cb17fbfa9801649d516af16ff7e5eb5a97c21e9dbc7a8929d141793"
+      },
+      "source_log": {
+        "path": "C:\\Users\\yuubi\\AppData\\Local\\Temp\\kyouen-reply27-completion76-resume11\\s5-10448351135503745024-32768.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "source_output": {
+        "path": "C:\\Users\\yuubi\\AppData\\Local\\Temp\\kyouen-reply27-completion76-resume11\\s5-10448351135503745024-32768.out.csv",
+        "sha256": "c31e1a27de508a096047d12e7948c74b887bebafa2c60f10c383dd0da4896a38"
+      },
+      "verdict": 2
+    },
+    {
+      "destination_input": {
+        "path": ".local/n11/dual-tight-ready-10448351169859289088-0-completion76/s5-10448351135767986176-32768.input.csv",
+        "sha256": "cf397b26ecf9003c697f6663e5ebf25ee1b9f8729aed756392eb1d1e6a4e56e4"
+      },
+      "destination_log": {
+        "path": ".local/n11/dual-tight-ready-10448351169859289088-0-completion76/s5-10448351135767986176-32768.log",
+        "prior_log_preserved": false,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "destination_output": {
+        "path": ".local/n11/dual-tight-ready-10448351169859289088-0-completion76/s5-10448351135767986176-32768.out.csv",
+        "sha256": "10514db7eae9b551663d9cd15a9f4c1774ea1c25598bc210ff385cd6de18aa16"
+      },
+      "key": [
+        10448351135767986176,
+        32768
+      ],
+      "nodes": 10143103,
+      "source_input": {
+        "path": "C:\\Users\\yuubi\\AppData\\Local\\Temp\\kyouen-reply27-completion76-resume11\\s5-10448351135767986176-32768.input.csv",
+        "sha256": "cf397b26ecf9003c697f6663e5ebf25ee1b9f8729aed756392eb1d1e6a4e56e4"
+      },
+      "source_log": {
+        "path": "C:\\Users\\yuubi\\AppData\\Local\\Temp\\kyouen-reply27-completion76-resume11\\s5-10448351135767986176-32768.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "source_output": {
+        "path": "C:\\Users\\yuubi\\AppData\\Local\\Temp\\kyouen-reply27-completion76-resume11\\s5-10448351135767986176-32768.out.csv",
+        "sha256": "10514db7eae9b551663d9cd15a9f4c1774ea1c25598bc210ff385cd6de18aa16"
+      },
+      "verdict": 2
+    },
+    {
+      "destination_input": {
+        "path": ".local/n11/dual-tight-ready-10448351169859289088-0-completion76/s5-10448351137647034368-32768.input.csv",
+        "sha256": "62049906f766d01fbe7303058a17434b9069c7878edebdb5fa0c315c19f353e3"
+      },
+      "destination_log": {
+        "path": ".local/n11/dual-tight-ready-10448351169859289088-0-completion76/s5-10448351137647034368-32768.log",
+        "prior_log_preserved": false,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "destination_output": {
+        "path": ".local/n11/dual-tight-ready-10448351169859289088-0-completion76/s5-10448351137647034368-32768.out.csv",
+        "sha256": "e648d81c8a1d02f34282ab8809b8aee781be8d22adaf4b3774950563065b90e5"
+      },
+      "key": [
+        10448351137647034368,
+        32768
+      ],
+      "nodes": 4361550,
+      "source_input": {
+        "path": "C:\\Users\\yuubi\\AppData\\Local\\Temp\\kyouen-reply27-completion76-resume11\\s5-10448351137647034368-32768.input.csv",
+        "sha256": "62049906f766d01fbe7303058a17434b9069c7878edebdb5fa0c315c19f353e3"
+      },
+      "source_log": {
+        "path": "C:\\Users\\yuubi\\AppData\\Local\\Temp\\kyouen-reply27-completion76-resume11\\s5-10448351137647034368-32768.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "source_output": {
+        "path": "C:\\Users\\yuubi\\AppData\\Local\\Temp\\kyouen-reply27-completion76-resume11\\s5-10448351137647034368-32768.out.csv",
+        "sha256": "e648d81c8a1d02f34282ab8809b8aee781be8d22adaf4b3774950563065b90e5"
+      },
+      "verdict": 2
+    },
+    {
+      "destination_input": {
+        "path": ".local/n11/dual-tight-ready-10448351169859289088-0-completion76/s5-10448351169859289600-0.input.csv",
+        "sha256": "b9617e8784ead6153a20b4639f79ef0ec7b844010a8f08c0bd87145a954f6b48"
+      },
+      "destination_log": {
+        "path": ".local/n11/dual-tight-ready-10448351169859289088-0-completion76/s5-10448351169859289600-0.log",
+        "prior_log_preserved": false,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "destination_output": {
+        "path": ".local/n11/dual-tight-ready-10448351169859289088-0-completion76/s5-10448351169859289600-0.out.csv",
+        "sha256": "e94660e59d8f5d371adbf2e52c981d61c53aa48a365057c80e4aac480f5f7fc0"
+      },
+      "key": [
+        10448351169859289600,
+        0
+      ],
+      "nodes": 3659744,
+      "source_input": {
+        "path": "C:\\Users\\yuubi\\AppData\\Local\\Temp\\kyouen-reply27-completion76-resume11\\s5-10448351169859289600-0.input.csv",
+        "sha256": "b9617e8784ead6153a20b4639f79ef0ec7b844010a8f08c0bd87145a954f6b48"
+      },
+      "source_log": {
+        "path": "C:\\Users\\yuubi\\AppData\\Local\\Temp\\kyouen-reply27-completion76-resume11\\s5-10448351169859289600-0.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "source_output": {
+        "path": "C:\\Users\\yuubi\\AppData\\Local\\Temp\\kyouen-reply27-completion76-resume11\\s5-10448351169859289600-0.out.csv",
+        "sha256": "e94660e59d8f5d371adbf2e52c981d61c53aa48a365057c80e4aac480f5f7fc0"
+      },
+      "verdict": 2
+    },
+    {
+      "destination_input": {
+        "path": ".local/n11/dual-tight-ready-10448351169859289088-0-completion76/s5-10448351169859297280-0.input.csv",
+        "sha256": "645d44069074ef85d8dba6916b476836fb03d4fe91b5dd779a53a8ea23c8bddf"
+      },
+      "destination_log": {
+        "path": ".local/n11/dual-tight-ready-10448351169859289088-0-completion76/s5-10448351169859297280-0.log",
+        "prior_log_preserved": false,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "destination_output": {
+        "path": ".local/n11/dual-tight-ready-10448351169859289088-0-completion76/s5-10448351169859297280-0.out.csv",
+        "sha256": "965d57a410630cf51451ecb392de6e6e492da3eb2445075b56e1b04a301c777b"
+      },
+      "key": [
+        10448351169859297280,
+        0
+      ],
+      "nodes": 1983296,
+      "source_input": {
+        "path": "C:\\Users\\yuubi\\AppData\\Local\\Temp\\kyouen-reply27-completion76-resume11\\s5-10448351169859297280-0.input.csv",
+        "sha256": "645d44069074ef85d8dba6916b476836fb03d4fe91b5dd779a53a8ea23c8bddf"
+      },
+      "source_log": {
+        "path": "C:\\Users\\yuubi\\AppData\\Local\\Temp\\kyouen-reply27-completion76-resume11\\s5-10448351169859297280-0.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "source_output": {
+        "path": "C:\\Users\\yuubi\\AppData\\Local\\Temp\\kyouen-reply27-completion76-resume11\\s5-10448351169859297280-0.out.csv",
+        "sha256": "965d57a410630cf51451ecb392de6e6e492da3eb2445075b56e1b04a301c777b"
+      },
+      "verdict": 2
+    },
+    {
+      "destination_input": {
+        "path": ".local/n11/dual-tight-ready-10448351169859289088-0-completion76/s5-10448351169859551232-0.input.csv",
+        "sha256": "64d00b8f0b4f531471026e7333beda82c91c0a89dec4b1b90bb9565f789907c7"
+      },
+      "destination_log": {
+        "path": ".local/n11/dual-tight-ready-10448351169859289088-0-completion76/s5-10448351169859551232-0.log",
+        "prior_log_preserved": true,
+        "sha256": "20be20c5502205413a317dbf9e8b354d5614bbbc9234faf274d10309bdef2853"
+      },
+      "destination_output": {
+        "path": ".local/n11/dual-tight-ready-10448351169859289088-0-completion76/s5-10448351169859551232-0.out.csv",
+        "sha256": "d75381a7184fbfe746ab42131004232b064f07dd802243cba3f7444ad0c4d814"
+      },
+      "key": [
+        10448351169859551232,
+        0
+      ],
+      "nodes": 4179132,
+      "source_input": {
+        "path": "C:\\Users\\yuubi\\AppData\\Local\\Temp\\kyouen-reply27-completion76-resume11\\s5-10448351169859551232-0.input.csv",
+        "sha256": "64d00b8f0b4f531471026e7333beda82c91c0a89dec4b1b90bb9565f789907c7"
+      },
+      "source_log": {
+        "path": "C:\\Users\\yuubi\\AppData\\Local\\Temp\\kyouen-reply27-completion76-resume11\\s5-10448351169859551232-0.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "source_output": {
+        "path": "C:\\Users\\yuubi\\AppData\\Local\\Temp\\kyouen-reply27-completion76-resume11\\s5-10448351169859551232-0.out.csv",
+        "sha256": "d75381a7184fbfe746ab42131004232b064f07dd802243cba3f7444ad0c4d814"
+      },
+      "verdict": 2
+    },
+    {
+      "destination_input": {
+        "path": ".local/n11/dual-tight-ready-10448351169859289088-0-completion76/s5-10448351169861386240-0.input.csv",
+        "sha256": "09fc800d2bf8d9b8e5ba2e2ad4ce692cec544951a632cacfbd6d90e8f559eb7e"
+      },
+      "destination_log": {
+        "path": ".local/n11/dual-tight-ready-10448351169859289088-0-completion76/s5-10448351169861386240-0.log",
+        "prior_log_preserved": false,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "destination_output": {
+        "path": ".local/n11/dual-tight-ready-10448351169859289088-0-completion76/s5-10448351169861386240-0.out.csv",
+        "sha256": "920f1f49559f06cbcf784c7c892c38316342e51089b13c82f9ca9c257180b017"
+      },
+      "key": [
+        10448351169861386240,
+        0
+      ],
+      "nodes": 3357288,
+      "source_input": {
+        "path": "C:\\Users\\yuubi\\AppData\\Local\\Temp\\kyouen-reply27-completion76-resume11\\s5-10448351169861386240-0.input.csv",
+        "sha256": "09fc800d2bf8d9b8e5ba2e2ad4ce692cec544951a632cacfbd6d90e8f559eb7e"
+      },
+      "source_log": {
+        "path": "C:\\Users\\yuubi\\AppData\\Local\\Temp\\kyouen-reply27-completion76-resume11\\s5-10448351169861386240-0.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "source_output": {
+        "path": "C:\\Users\\yuubi\\AppData\\Local\\Temp\\kyouen-reply27-completion76-resume11\\s5-10448351169861386240-0.out.csv",
+        "sha256": "920f1f49559f06cbcf784c7c892c38316342e51089b13c82f9ca9c257180b017"
+      },
+      "verdict": 2
+    },
+    {
+      "destination_input": {
+        "path": ".local/n11/dual-tight-ready-10448351169859289088-0-completion76/s5-10448353334522806272-32768.input.csv",
+        "sha256": "6dd80fb8e960cf2e2e8330ea6f5dcb6ff2264581f6e77dc31c809e6fb41ceee3"
+      },
+      "destination_log": {
+        "path": ".local/n11/dual-tight-ready-10448351169859289088-0-completion76/s5-10448353334522806272-32768.log",
+        "prior_log_preserved": false,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "destination_output": {
+        "path": ".local/n11/dual-tight-ready-10448351169859289088-0-completion76/s5-10448353334522806272-32768.out.csv",
+        "sha256": "d291ef70381ab20b7a104db06e2d81026b929cadb9ebb8a225bafd65233d5d34"
+      },
+      "key": [
+        10448353334522806272,
+        32768
+      ],
+      "nodes": 2679203,
+      "source_input": {
+        "path": "C:\\Users\\yuubi\\AppData\\Local\\Temp\\kyouen-reply27-completion76-resume11\\s5-10448353334522806272-32768.input.csv",
+        "sha256": "6dd80fb8e960cf2e2e8330ea6f5dcb6ff2264581f6e77dc31c809e6fb41ceee3"
+      },
+      "source_log": {
+        "path": "C:\\Users\\yuubi\\AppData\\Local\\Temp\\kyouen-reply27-completion76-resume11\\s5-10448353334522806272-32768.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "source_output": {
+        "path": "C:\\Users\\yuubi\\AppData\\Local\\Temp\\kyouen-reply27-completion76-resume11\\s5-10448353334522806272-32768.out.csv",
+        "sha256": "d291ef70381ab20b7a104db06e2d81026b929cadb9ebb8a225bafd65233d5d34"
+      },
+      "verdict": 2
+    }
+  ],
+  "schema": "n11-dual-tight-resume-output-merge-v1",
+  "verdict_counts": {
+    "LOSS": 11,
+    "UNKNOWN": 0,
+    "WIN": 0
+  }
+}

@@ -1,0 +1,143 @@
+{
+  "budget_per_target": 15000000,
+  "canonical_s5_children": 102,
+  "claim": "Probe order carries no verdict. Prior same-or-higher-budget UNKNOWN keys are excluded, and only exact solver results may update class status.",
+  "class_key": [
+    10448355533546061824,
+    0
+  ],
+  "class_rank": 1,
+  "dispatch_ready_s5": 93,
+  "excluded_same_or_higher_budget_unknown_keys": [
+    [
+      1297036692683751424,
+      16385
+    ]
+  ],
+  "known_loss_s5": 8,
+  "probe_count": 8,
+  "probe_target_sha256": "9db9a3a86f1b6fb93aa9ff7b72490c5ba1dcdc513b361419aad0c6b25674f711",
+  "probe_targets": [
+    [
+      1297036709862572032,
+      65
+    ],
+    [
+      10448355533562839040,
+      0
+    ],
+    [
+      10448356633057689600,
+      0
+    ],
+    [
+      10449481433452904448,
+      0
+    ],
+    [
+      1297036692682706944,
+      16385
+    ],
+    [
+      1297036692682833920,
+      16385
+    ],
+    [
+      10448356083301875712,
+      0
+    ],
+    [
+      1297036692682768384,
+      16385
+    ]
+  ],
+  "same_budget_unknown_observations": [
+    {
+      "budget": 15000000,
+      "canonical_key": [
+        1297036692683751424,
+        16385
+      ],
+      "key": [
+        1297036692683751424,
+        16385
+      ],
+      "legal_count": 93,
+      "nodes": 15000000,
+      "normalized_noncanonical": false,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/repair5-batch-out.csv",
+      "raw_key": [
+        1297036692683751424,
+        16385
+      ],
+      "row": 455,
+      "sha256": "ab84563413acee5f0214d98599632bd6205bbfdf135922823857af85e9512b11",
+      "verdict": 0
+    },
+    {
+      "budget": 15000000,
+      "canonical_key": [
+        1297036692683751424,
+        16385
+      ],
+      "key": [
+        1297036692683751424,
+        16385
+      ],
+      "legal_count": 93,
+      "nodes": 15000000,
+      "normalized_noncanonical": false,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/repair5-batch-shard15-out.csv",
+      "raw_key": [
+        1297036692683751424,
+        16385
+      ],
+      "row": 12,
+      "sha256": "bbd59dce124d145fa8023cdf73c1da66a57cc937b8d6f0315a4657a5477e46d3",
+      "verdict": 0
+    }
+  ],
+  "schema": "n11-dual-tight-ready-subset-probe-manifest-v1",
+  "selection_rule": "among raw-history dispatch-ready UNKNOWN parents, sort by (legal move count, canonical key), then take the first count",
+  "solver_command": "research/experiments/n11-boundary-recovery-20261006/scripts/complete_class_local.py --solver .local/n11/reply27-probe9/dfpn.exe --targets research/experiments/n11-boundary-recovery-20261006/output/post-d9583782-rank1-10448355533546061824-0-probe8.csv --cache research/experiments/n11-boundary-recovery-20261006/output/post-bdbdea7c-rank1-10412322338480586760-0-final-merged-s5.cache --out-dir .local/n11/dual-tight-ready-10448355533546061824-0-probe8 --workers 4 --budget 15000000",
+  "sources": [
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-bdbdea7c-rank1-10412322338480586760-0-dual-tight-targets.csv",
+      "sha256": "5330403d54bcb75e47fc37ed2ff745ad90a214045681c0ceb71a4284476df044"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-bdbdea7c-rank1-10412322338480586760-0-dual-tight-ranking.json",
+      "sha256": "4856294909dd18e821e1d5fff0af13ed28cadf96c857549d037ea404d86aa7cc"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-bdbdea7c-rank1-10412322338480586760-0-final-merged-s5.cache",
+      "sha256": "5c78d9f9b73cc0271160974eb0d9cb69935de36c7a183a5c48e4151d0bbffa58"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-d9583782-rank1-10448355533546061824-0-raw-history-audit.json",
+      "sha256": "b5480b4986603af70304deea8d186074960119c641d2ed5bd2e79c7a964b4bde"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-d9583782-rank1-10448355533546061824-0-saved-s6-summary.json",
+      "sha256": "c87e00f0ddcc8e684966eb925059ef5f9ef0039e944866dc990df130aea6528b"
+    },
+    {
+      "path": ".local/n11/reply27-probe9/dfpn.exe",
+      "sha256": "05fa5a45c0749506ead2036174c7fc9047badd94835a06c7588d0c892bfafbd7"
+    },
+    {
+      "path": "cpp/solvers/kyouen_dfpn_root.cpp",
+      "sha256": "523f56e61550e1f5b93882229baf8b4cd83489be719ca484d13adef8424c3063"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/scripts/complete_class_local.py",
+      "sha256": "04ca107661447f40d9c43034f7adbc20a65512c3cd5839b0536f257f2a64d4f4"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/scripts/prepare_dual_tight_ready_subset_probe.py",
+      "sha256": "331ea1040a8aa49ed585bed27e77b68d442bf59539ffca4a69eeec10cea3915a"
+    }
+  ],
+  "unknown_s5_before_probe": 94,
+  "workers": 4
+}

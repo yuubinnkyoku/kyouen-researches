@@ -1,0 +1,49 @@
+{
+  "claim": "schema adapter only; selected classes and optimizer values are copied verbatim; no verdict or optimization is changed",
+  "repair_selected": [
+    {
+      "all_s5": 104,
+      "coverage": [
+        38,
+        77,
+        87
+      ],
+      "key": [
+        1585267068834414720,
+        0
+      ],
+      "unknown_s5": 99
+    },
+    {
+      "all_s5": 100,
+      "coverage": [
+        100,
+        108,
+        115
+      ],
+      "key": [
+        10412322338480590848,
+        0
+      ],
+      "unknown_s5": 93
+    },
+    {
+      "all_s5": 99,
+      "coverage": [
+        81,
+        83,
+        104
+      ],
+      "key": [
+        10448491872987906048,
+        0
+      ],
+      "unknown_s5": 92
+    }
+  ],
+  "schema": "n11-dual-tight-repair-ranking-input-v1",
+  "source_repair": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-f8dc62e-dual-tight-1297036692683751424-16384-probe8-nextclass-next-probe8-second-next-s6-unknown2-repair.json",
+    "sha256": "16d81c195f5de590e40b73dd48fa09c016b2b0add026a551ea91525e36c239d2"
+  }
+}

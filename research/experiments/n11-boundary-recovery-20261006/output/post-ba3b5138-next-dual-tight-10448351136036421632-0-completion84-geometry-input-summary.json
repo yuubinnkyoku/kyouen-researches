@@ -1,0 +1,28 @@
+{
+  "claim": "Derived from the collector output; only completed exact rows are presented to the class geometry verifier. UNKNOWN and not-dispatched targets remain unresolved.",
+  "exact_replay_counts": {
+    "LOSS": 33,
+    "UNKNOWN": 0,
+    "WIN": 1
+  },
+  "exact_targets": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-next-dual-tight-10448351136036421632-0-completion84-exact-targets.csv",
+    "rows": 34,
+    "sha256": "4c0ef62b094b51a2ba0b136c8134054bebcfb00e477d7df4366f23ef10ed6e6d"
+  },
+  "new_exact_cache": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-next-dual-tight-10448351136036421632-0-completion84-new-exact-s5.cache",
+    "rows": 34,
+    "sha256": "11237a29b042f38bb0a74911679ae0427f96e4658cbb05afca1bd426f95bb423"
+  },
+  "raw_output": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-next-dual-tight-10448351136036421632-0-completion84-raw-exact.csv",
+    "rows": 34,
+    "sha256": "b3b81ed01b77c4c3252c1ea9ece0bef297a7dd9b09295cf01f78bbe4c5d34e83"
+  },
+  "run_manifest": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-next-dual-tight-10448351136036421632-0-completion84-run-manifest.json",
+    "sha256": "cb97343df9d3eef3b5e5259e67cc1de01c1aacd002dbbfb1ba05221371edf72a"
+  },
+  "schema": "n11-dual-tight-probe-exact-subset-summary-v1"
+}

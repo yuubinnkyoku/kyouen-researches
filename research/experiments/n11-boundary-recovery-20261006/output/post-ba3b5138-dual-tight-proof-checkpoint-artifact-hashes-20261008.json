@@ -1,0 +1,739 @@
+{
+  "additive_optimal_repair": {
+    "classes": 3,
+    "distinct_unknown_s5_union": 283,
+    "selected": [
+      {
+        "coverage": [
+          38,
+          77,
+          87
+        ],
+        "key": [
+          1585267068834414720,
+          0
+        ],
+        "uncached_s5": 99
+      },
+      {
+        "coverage": [
+          100,
+          108,
+          115
+        ],
+        "key": [
+          10412322338480590848,
+          0
+        ],
+        "uncached_s5": 93
+      },
+      {
+        "coverage": [
+          55,
+          65,
+          104
+        ],
+        "key": [
+          10448351135499550752,
+          0
+        ],
+        "uncached_s5": 91
+      }
+    ]
+  },
+  "created_date": "2026-10-08",
+  "exact_s5_cache": {
+    "LOSS": 4657,
+    "WIN": 105,
+    "conflict": 0,
+    "entries": 4762,
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-next-dual-tight-10448351136036421632-0-completion84-merged-s5.cache",
+    "sha256": "646ade4242704de54011316fd69d357e56236f2fea63b1ad5c8d9b55ccbb632f"
+  },
+  "files": [
+    {
+      "bytes": 2103,
+      "git_blob_bytes": 2013,
+      "git_blob_sha256": "9da0fcdcf98d0d7fba8118531fc7caac3d03d8b6fba3a6a95577ecb5969ed20d",
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-after-completion84-next-dual-tight-ranking.json",
+      "sha256": "81f867a9d4a841b4039d1f95e37ab17d0dcccf26c29a9890c1e38d4f823ef15e"
+    },
+    {
+      "bytes": 2205,
+      "git_blob_bytes": 2162,
+      "git_blob_sha256": "ed5a372a1c946aefead73c14edd3cf0012a5b6984f5e72aeab76a1cdeb168405",
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-after-completion84-next-dual-tight-sources.json",
+      "sha256": "1e0f3c085e34710fe659621d73b7a07ef1ceebe3ab6cf6ff364b2da893338f0a"
+    },
+    {
+      "bytes": 5791,
+      "git_blob_bytes": 5791,
+      "git_blob_sha256": "98635e8a1a5ab6eb478ab2b285616754dc1497d7a44cc9a5000d9248f5e9c64f",
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-after-completion84-next-dual-tight-targets.csv",
+      "sha256": "98635e8a1a5ab6eb478ab2b285616754dc1497d7a44cc9a5000d9248f5e9c64f"
+    },
+    {
+      "bytes": 3743,
+      "git_blob_bytes": 3743,
+      "git_blob_sha256": "c91834cabf6b4863f2b599bd53510622324f3ba864b3521c1d7bf336c877845a",
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-next-after-completion84-10448351135499550752-0-probe8-manifest.json",
+      "sha256": "c91834cabf6b4863f2b599bd53510622324f3ba864b3521c1d7bf336c877845a"
+    },
+    {
+      "bytes": 564,
+      "git_blob_bytes": 564,
+      "git_blob_sha256": "df241ac021ab19c7739283af3e70a7f5694dd60f9f5c2e0c33b0567ec5693488",
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-next-after-completion84-10448351135499550752-0-probe8.csv",
+      "sha256": "df241ac021ab19c7739283af3e70a7f5694dd60f9f5c2e0c33b0567ec5693488"
+    },
+    {
+      "bytes": 473522,
+      "git_blob_bytes": 473522,
+      "git_blob_sha256": "39581881fcdac88af265dd2a0ed98360c4214632bbb8511bc88a536c3f115efa",
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-next-after-completion84-10448351135499550752-0-raw-history-audit.json",
+      "sha256": "39581881fcdac88af265dd2a0ed98360c4214632bbb8511bc88a536c3f115efa"
+    },
+    {
+      "bytes": 86,
+      "git_blob_bytes": 86,
+      "git_blob_sha256": "0d2a80585f98789d79d08495f4b38534ed48dcb5c82f603f7090aabe66aa85b4",
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-next-after-completion84-10448351135499550752-0-saved-s6-10source-derived-s5.cache",
+      "sha256": "0d2a80585f98789d79d08495f4b38534ed48dcb5c82f603f7090aabe66aa85b4"
+    },
+    {
+      "bytes": 50468,
+      "git_blob_bytes": 50468,
+      "git_blob_sha256": "84597d7194581a10a5a18ab7a52d8842eff8a12f21e2a5220ae4a4d79cd11cc3",
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-next-after-completion84-10448351135499550752-0-saved-s6-10source-full.json.gz",
+      "sha256": "84597d7194581a10a5a18ab7a52d8842eff8a12f21e2a5220ae4a4d79cd11cc3"
+    },
+    {
+      "bytes": 20710,
+      "git_blob_bytes": 20710,
+      "git_blob_sha256": "a77099d7743a89c4ed5e384dc52211425402aa5521122a8b03d10793fa3bc75a",
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-next-after-completion84-10448351135499550752-0-saved-s6-10source-summary.json",
+      "sha256": "a77099d7743a89c4ed5e384dc52211425402aa5521122a8b03d10793fa3bc75a"
+    },
+    {
+      "bytes": 86,
+      "git_blob_bytes": 86,
+      "git_blob_sha256": "0d2a80585f98789d79d08495f4b38534ed48dcb5c82f603f7090aabe66aa85b4",
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-next-after-completion84-10448351135499550752-0-saved-s6-37source-derived-s5.cache",
+      "sha256": "0d2a80585f98789d79d08495f4b38534ed48dcb5c82f603f7090aabe66aa85b4"
+    },
+    {
+      "bytes": 52073,
+      "git_blob_bytes": 52073,
+      "git_blob_sha256": "538b8dd5456448b5a5869a7c794ca3ad6b508a0b0f4b5070cddb0584ae29f6c8",
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-next-after-completion84-10448351135499550752-0-saved-s6-37source-full.json.gz",
+      "sha256": "538b8dd5456448b5a5869a7c794ca3ad6b508a0b0f4b5070cddb0584ae29f6c8"
+    },
+    {
+      "bytes": 27505,
+      "git_blob_bytes": 27505,
+      "git_blob_sha256": "334ea4536ca90ce2a91cd0b5cfcd70b1fc4c807ad5fd70f1f50271afff238947",
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-next-after-completion84-10448351135499550752-0-saved-s6-37source-summary.json",
+      "sha256": "334ea4536ca90ce2a91cd0b5cfcd70b1fc4c807ad5fd70f1f50271afff238947"
+    },
+    {
+      "bytes": 7723,
+      "git_blob_bytes": 7723,
+      "git_blob_sha256": "c4fb5fb531ca3061f25c545b06a5b9cc1cdfc794f4294e09e24c0530276a60f1",
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-next-dual-tight-10448351136036421632-0-after-probe8-completion84-manifest.json",
+      "sha256": "c4fb5fb531ca3061f25c545b06a5b9cc1cdfc794f4294e09e24c0530276a60f1"
+    },
+    {
+      "bytes": 5327,
+      "git_blob_bytes": 5327,
+      "git_blob_sha256": "88113ec4994a87f946c326f89d0861fabb466a581eef1675890130df508ebc67",
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-next-dual-tight-10448351136036421632-0-after-probe8-completion84.csv",
+      "sha256": "88113ec4994a87f946c326f89d0861fabb466a581eef1675890130df508ebc67"
+    },
+    {
+      "bytes": 2116,
+      "git_blob_bytes": 2026,
+      "git_blob_sha256": "83f1afa438af160edc24f002e4bea09055375470832cdcf01ba5cb6164c70fc0",
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-next-dual-tight-10448351136036421632-0-after-probe8-ranking.json",
+      "sha256": "47f625cb28ffbe3ac81368278216c93b8d385f50d3bb6bc187e21e6c7e8370e1"
+    },
+    {
+      "bytes": 452702,
+      "git_blob_bytes": 452702,
+      "git_blob_sha256": "1fd2daf9e5c76134d14ff17773ae5e275965d99b22e5b7bd303cbb4adf3b4484",
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-next-dual-tight-10448351136036421632-0-after-probe8-raw-history-audit.json",
+      "sha256": "1fd2daf9e5c76134d14ff17773ae5e275965d99b22e5b7bd303cbb4adf3b4484"
+    },
+    {
+      "bytes": 86,
+      "git_blob_bytes": 86,
+      "git_blob_sha256": "0d2a80585f98789d79d08495f4b38534ed48dcb5c82f603f7090aabe66aa85b4",
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-next-dual-tight-10448351136036421632-0-after-probe8-saved-s6-10source-derived-s5.cache",
+      "sha256": "0d2a80585f98789d79d08495f4b38534ed48dcb5c82f603f7090aabe66aa85b4"
+    },
+    {
+      "bytes": 41424,
+      "git_blob_bytes": 41424,
+      "git_blob_sha256": "14299acf747056e5734db29688e910fe9774c416c5d9538db841ce98249017f3",
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-next-dual-tight-10448351136036421632-0-after-probe8-saved-s6-10source-full.json.gz",
+      "sha256": "14299acf747056e5734db29688e910fe9774c416c5d9538db841ce98249017f3"
+    },
+    {
+      "bytes": 19478,
+      "git_blob_bytes": 19478,
+      "git_blob_sha256": "f5dd20700cfefcf60bff571af61722052d1bc0ddb0ec86d2e8d82864cccd65a1",
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-next-dual-tight-10448351136036421632-0-after-probe8-saved-s6-10source-summary.json",
+      "sha256": "f5dd20700cfefcf60bff571af61722052d1bc0ddb0ec86d2e8d82864cccd65a1"
+    },
+    {
+      "bytes": 86,
+      "git_blob_bytes": 86,
+      "git_blob_sha256": "0d2a80585f98789d79d08495f4b38534ed48dcb5c82f603f7090aabe66aa85b4",
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-next-dual-tight-10448351136036421632-0-after-probe8-saved-s6-37source-derived-s5.cache",
+      "sha256": "0d2a80585f98789d79d08495f4b38534ed48dcb5c82f603f7090aabe66aa85b4"
+    },
+    {
+      "bytes": 43037,
+      "git_blob_bytes": 43037,
+      "git_blob_sha256": "cebf8cb959ca37ef6efa5413d1a440c50f1247cd03e2e7900cb8bd321d7d07c3",
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-next-dual-tight-10448351136036421632-0-after-probe8-saved-s6-37source-full.json.gz",
+      "sha256": "cebf8cb959ca37ef6efa5413d1a440c50f1247cd03e2e7900cb8bd321d7d07c3"
+    },
+    {
+      "bytes": 26272,
+      "git_blob_bytes": 26272,
+      "git_blob_sha256": "6c7cc553c0d4e3b0788d341c119e12ef4f2ef0a0317190f27e5a467937f17b35",
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-next-dual-tight-10448351136036421632-0-after-probe8-saved-s6-37source-summary.json",
+      "sha256": "6c7cc553c0d4e3b0788d341c119e12ef4f2ef0a0317190f27e5a467937f17b35"
+    },
+    {
+      "bytes": 2221,
+      "git_blob_bytes": 2178,
+      "git_blob_sha256": "f925dc3567873af8407f6adb93f19f43d83902be42b013b89eb2a43b877b9cdf",
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-next-dual-tight-10448351136036421632-0-after-probe8-sources.json",
+      "sha256": "91410455506f3d1f66bfc563700158e1d793a3369b17351326d393575cef1342"
+    },
+    {
+      "bytes": 5339,
+      "git_blob_bytes": 5339,
+      "git_blob_sha256": "fa0eb3f6f810e419291b0e43aa8018ac71b600492aa710550028a69fca01e8d6",
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-next-dual-tight-10448351136036421632-0-after-probe8-targets.csv",
+      "sha256": "fa0eb3f6f810e419291b0e43aa8018ac71b600492aa710550028a69fca01e8d6"
+    },
+    {
+      "bytes": 2660,
+      "git_blob_bytes": 2482,
+      "git_blob_sha256": "a722ba9039c5dda8ae5ea502dc148deedf2745c6db6f0843d6363a5fb1d18e4a",
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-next-dual-tight-10448351136036421632-0-completion84-cardinality.json",
+      "sha256": "37e6df71e9f3e6b884339e8fe278648521382b63955732d8d427e051ad80bf78"
+    },
+    {
+      "bytes": 2181,
+      "git_blob_bytes": 2181,
+      "git_blob_sha256": "4c0ef62b094b51a2ba0b136c8134054bebcfb00e477d7df4366f23ef10ed6e6d",
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-next-dual-tight-10448351136036421632-0-completion84-exact-targets.csv",
+      "sha256": "4c0ef62b094b51a2ba0b136c8134054bebcfb00e477d7df4366f23ef10ed6e6d"
+    },
+    {
+      "bytes": 17487,
+      "git_blob_bytes": 17487,
+      "git_blob_sha256": "2c559e6eeb973420f83cc35450df1d2600877a3a085a3a2333eb645e4031fac5",
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-next-dual-tight-10448351136036421632-0-completion84-geometry-audit.json",
+      "sha256": "2c559e6eeb973420f83cc35450df1d2600877a3a085a3a2333eb645e4031fac5"
+    },
+    {
+      "bytes": 2058,
+      "git_blob_bytes": 2022,
+      "git_blob_sha256": "70447cc653d41cd81ea08c761b8591798b5f3a2dfeddbc4b6f1bad81c7ed469d",
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-next-dual-tight-10448351136036421632-0-completion84-geometry-input-sources.json",
+      "sha256": "e3908584a6411b7da6bbfefc04ecb2c1a76721393da267dd9ca0ae9f70fa4af9"
+    },
+    {
+      "bytes": 1448,
+      "git_blob_bytes": 1420,
+      "git_blob_sha256": "b1cbdf82a8232574da4ac5bb1db46f686d5a76d5952e5acf4c21bea8662bd556",
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-next-dual-tight-10448351136036421632-0-completion84-geometry-input-summary.json",
+      "sha256": "59dab2a44d797755f206bf09e28e188044225566a1a1f3ff535642c31ade360b"
+    },
+    {
+      "bytes": 844,
+      "git_blob_bytes": 815,
+      "git_blob_sha256": "f2420c7fb3a74efb8025f6bef1de80cacb1491b6826222811bb20884ab063d4e",
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-next-dual-tight-10448351136036421632-0-completion84-merge-receipt.json",
+      "sha256": "d9df211b02ed1d1605d8eebae5b0fe139792156058386628f82870b2eb47bc59"
+    },
+    {
+      "bytes": 197643,
+      "git_blob_bytes": 197643,
+      "git_blob_sha256": "646ade4242704de54011316fd69d357e56236f2fea63b1ad5c8d9b55ccbb632f",
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-next-dual-tight-10448351136036421632-0-completion84-merged-s5.cache",
+      "sha256": "646ade4242704de54011316fd69d357e56236f2fea63b1ad5c8d9b55ccbb632f"
+    },
+    {
+      "bytes": 1664,
+      "git_blob_bytes": 1664,
+      "git_blob_sha256": "11237a29b042f38bb0a74911679ae0427f96e4658cbb05afca1bd426f95bb423",
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-next-dual-tight-10448351136036421632-0-completion84-new-exact-s5.cache",
+      "sha256": "11237a29b042f38bb0a74911679ae0427f96e4658cbb05afca1bd426f95bb423"
+    },
+    {
+      "bytes": 2288,
+      "git_blob_bytes": 2288,
+      "git_blob_sha256": "75670ba4eb9ed4f5d297538c51bde31351260deebabbb919832ba219a8205f1a",
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-next-dual-tight-10448351136036421632-0-completion84-raw-all.csv",
+      "sha256": "75670ba4eb9ed4f5d297538c51bde31351260deebabbb919832ba219a8205f1a"
+    },
+    {
+      "bytes": 2209,
+      "git_blob_bytes": 2209,
+      "git_blob_sha256": "b3b81ed01b77c4c3252c1ea9ece0bef297a7dd9b09295cf01f78bbe4c5d34e83",
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-next-dual-tight-10448351136036421632-0-completion84-raw-exact.csv",
+      "sha256": "b3b81ed01b77c4c3252c1ea9ece0bef297a7dd9b09295cf01f78bbe4c5d34e83"
+    },
+    {
+      "bytes": 16995,
+      "git_blob_bytes": 16711,
+      "git_blob_sha256": "c66ddffb9d784a33ba75f6d6fd661b9cd812cb4ada0e7368c4275f4e361a459b",
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-next-dual-tight-10448351136036421632-0-completion84-repair-targets.csv",
+      "sha256": "5439786113e66bcf0e2fdd53b730287fff3a6318420a6eecde87c3bd90fa6589"
+    },
+    {
+      "bytes": 2662,
+      "git_blob_bytes": 2485,
+      "git_blob_sha256": "585c7ea99b0bb815937281b98d579f2d87f5520decef43d9de27b6b6d86fc5ec",
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-next-dual-tight-10448351136036421632-0-completion84-repair.json",
+      "sha256": "19034e44502fcdd7a66a7fa05b3c79160267290d48a8205cb287b4ac00a0f50e"
+    },
+    {
+      "bytes": 51447,
+      "git_blob_bytes": 51447,
+      "git_blob_sha256": "cb97343df9d3eef3b5e5259e67cc1de01c1aacd002dbbfb1ba05221371edf72a",
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-next-dual-tight-10448351136036421632-0-completion84-run-manifest.json",
+      "sha256": "cb97343df9d3eef3b5e5259e67cc1de01c1aacd002dbbfb1ba05221371edf72a"
+    },
+    {
+      "bytes": 44975,
+      "git_blob_bytes": 44975,
+      "git_blob_sha256": "8b8f39ba0fd377e4b9cd34cc4807bbac91daf8e5b617a16fbae6c8530250b8a5",
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-next-dual-tight-10448351136036421632-0-completion84-summary.json",
+      "sha256": "8b8f39ba0fd377e4b9cd34cc4807bbac91daf8e5b617a16fbae6c8530250b8a5"
+    },
+    {
+      "bytes": 2660,
+      "git_blob_bytes": 2482,
+      "git_blob_sha256": "06ee6f8e38e2501088265a8af81f07830e0a7e4bb8bf8722402a8d073b20fd65",
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-next-dual-tight-10448351136036421632-0-probe8-cardinality.json",
+      "sha256": "56dc392ba74a307ec8cba9b3e1129eacfdef526f0ccd8d8e59502614856b4e9d"
+    },
+    {
+      "bytes": 574,
+      "git_blob_bytes": 574,
+      "git_blob_sha256": "cc440f010b3060fa799797a4465d8691b1f42e6980851afff34c0e99dd9d9d17",
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-next-dual-tight-10448351136036421632-0-probe8-exact-targets.csv",
+      "sha256": "cc440f010b3060fa799797a4465d8691b1f42e6980851afff34c0e99dd9d9d17"
+    },
+    {
+      "bytes": 3719,
+      "git_blob_bytes": 3719,
+      "git_blob_sha256": "191b465edea457e497846e6f395d841bb4d4b658826bad6714f44da403f29a41",
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-next-dual-tight-10448351136036421632-0-probe8-manifest.json",
+      "sha256": "191b465edea457e497846e6f395d841bb4d4b658826bad6714f44da403f29a41"
+    },
+    {
+      "bytes": 791,
+      "git_blob_bytes": 764,
+      "git_blob_sha256": "350fbfba89efd8b2ac560d4cb22816bb2cedc577a3bb3245a46a4f0a7aee5c27",
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-next-dual-tight-10448351136036421632-0-probe8-merge-receipt.json",
+      "sha256": "bb5e07c4ddf520b34a0e26e41490c40cd18306da998fce9c58c038fa77ff331d"
+    },
+    {
+      "bytes": 196220,
+      "git_blob_bytes": 196220,
+      "git_blob_sha256": "d1e17bedca9c64ad6e7df90a7f8c54babfeb5d841ec7348b6fe108f68cb7d9a0",
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-next-dual-tight-10448351136036421632-0-probe8-merged-s5.cache",
+      "sha256": "d1e17bedca9c64ad6e7df90a7f8c54babfeb5d841ec7348b6fe108f68cb7d9a0"
+    },
+    {
+      "bytes": 444,
+      "git_blob_bytes": 444,
+      "git_blob_sha256": "b6b3bcb330cf6a5621f594d64424f4e93211eba5ae2f974ca3d57e0b014ebf51",
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-next-dual-tight-10448351136036421632-0-probe8-new-exact-s5.cache",
+      "sha256": "b6b3bcb330cf6a5621f594d64424f4e93211eba5ae2f974ca3d57e0b014ebf51"
+    },
+    {
+      "bytes": 586,
+      "git_blob_bytes": 586,
+      "git_blob_sha256": "d23dc36a5cb1a746d4b3dbe9485f732613f0d33e72956080a218a7878d15b0bf",
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-next-dual-tight-10448351136036421632-0-probe8-raw-all.csv",
+      "sha256": "d23dc36a5cb1a746d4b3dbe9485f732613f0d33e72956080a218a7878d15b0bf"
+    },
+    {
+      "bytes": 576,
+      "git_blob_bytes": 576,
+      "git_blob_sha256": "bb4b80d5df6964c87330c66f6a27522a8dfac7c4f5925be3c7b0a9864eaf5f05",
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-next-dual-tight-10448351136036421632-0-probe8-raw-exact.csv",
+      "sha256": "bb4b80d5df6964c87330c66f6a27522a8dfac7c4f5925be3c7b0a9864eaf5f05"
+    },
+    {
+      "bytes": 16557,
+      "git_blob_bytes": 16280,
+      "git_blob_sha256": "7d656b2fa225fdfb8582e778468382778724c4bb8b6ce4e87d98cc034dcf9833",
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-next-dual-tight-10448351136036421632-0-probe8-repair-targets.csv",
+      "sha256": "4dfb137fbe26f8624300d0f452a239e16bdfc946caba2339233a425b6f0e48c7"
+    },
+    {
+      "bytes": 2662,
+      "git_blob_bytes": 2485,
+      "git_blob_sha256": "0903b8c8e8b03438395bb8018a3928cd8c612dcb00948c525a2013ae26d8848d",
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-next-dual-tight-10448351136036421632-0-probe8-repair.json",
+      "sha256": "2c7342f6bf44c51a75c315dd43c66b1ef6c6a42218e8dea6560f1733cc7b4ec6"
+    },
+    {
+      "bytes": 11896,
+      "git_blob_bytes": 11896,
+      "git_blob_sha256": "7ca51181ec65077ecd404a31b377f5a03ec171518929ead316b6bacf99a8402b",
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-next-dual-tight-10448351136036421632-0-probe8-run-manifest.json",
+      "sha256": "7ca51181ec65077ecd404a31b377f5a03ec171518929ead316b6bacf99a8402b"
+    },
+    {
+      "bytes": 8267,
+      "git_blob_bytes": 8267,
+      "git_blob_sha256": "fce382ec38681da281f9fe36e81f54a979fedb9fe86511652339cdac034379f1",
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-next-dual-tight-10448351136036421632-0-probe8-summary.json",
+      "sha256": "fce382ec38681da281f9fe36e81f54a979fedb9fe86511652339cdac034379f1"
+    },
+    {
+      "bytes": 564,
+      "git_blob_bytes": 564,
+      "git_blob_sha256": "08f60f28cd66d90470eb9db863875887837b39f8233bee95b49a034734ebb093",
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-next-dual-tight-10448351136036421632-0-probe8.csv",
+      "sha256": "08f60f28cd66d90470eb9db863875887837b39f8233bee95b49a034734ebb093"
+    },
+    {
+      "bytes": 447738,
+      "git_blob_bytes": 447738,
+      "git_blob_sha256": "c031fb5ff98f9d6e1d884adde77460b179f7c40299979ae3aa317b5d87641a7f",
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-next-dual-tight-10448351136036421632-0-raw-history-audit.json",
+      "sha256": "c031fb5ff98f9d6e1d884adde77460b179f7c40299979ae3aa317b5d87641a7f"
+    },
+    {
+      "bytes": 86,
+      "git_blob_bytes": 86,
+      "git_blob_sha256": "0d2a80585f98789d79d08495f4b38534ed48dcb5c82f603f7090aabe66aa85b4",
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-next-dual-tight-10448351136036421632-0-saved-s6-10source-derived-s5.cache",
+      "sha256": "0d2a80585f98789d79d08495f4b38534ed48dcb5c82f603f7090aabe66aa85b4"
+    },
+    {
+      "bytes": 44708,
+      "git_blob_bytes": 44708,
+      "git_blob_sha256": "439536bbbffd44124453cf00d68259cd2d66ba50d98b04027cf8a1f1b571e9d2",
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-next-dual-tight-10448351136036421632-0-saved-s6-10source-full.json.gz",
+      "sha256": "439536bbbffd44124453cf00d68259cd2d66ba50d98b04027cf8a1f1b571e9d2"
+    },
+    {
+      "bytes": 20833,
+      "git_blob_bytes": 20833,
+      "git_blob_sha256": "de8afa2f21a8e1ee6bc062d83a510fd7e9ca9ba8e07de69a10237f3914354bd2",
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-next-dual-tight-10448351136036421632-0-saved-s6-10source-summary.json",
+      "sha256": "de8afa2f21a8e1ee6bc062d83a510fd7e9ca9ba8e07de69a10237f3914354bd2"
+    },
+    {
+      "bytes": 86,
+      "git_blob_bytes": 86,
+      "git_blob_sha256": "0d2a80585f98789d79d08495f4b38534ed48dcb5c82f603f7090aabe66aa85b4",
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-next-dual-tight-10448351136036421632-0-saved-s6-37source-derived-s5.cache",
+      "sha256": "0d2a80585f98789d79d08495f4b38534ed48dcb5c82f603f7090aabe66aa85b4"
+    },
+    {
+      "bytes": 46326,
+      "git_blob_bytes": 46326,
+      "git_blob_sha256": "82372a380e2c3f91da4fe11ad3b79e4883babd9775caeb9bdce5f643713064db",
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-next-dual-tight-10448351136036421632-0-saved-s6-37source-full.json.gz",
+      "sha256": "82372a380e2c3f91da4fe11ad3b79e4883babd9775caeb9bdce5f643713064db"
+    },
+    {
+      "bytes": 27627,
+      "git_blob_bytes": 27627,
+      "git_blob_sha256": "64af1cba7660503316d3c6dfd0750e6f4c97658d906f42e2957c8eefc85c2bba",
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-next-dual-tight-10448351136036421632-0-saved-s6-37source-summary.json",
+      "sha256": "64af1cba7660503316d3c6dfd0750e6f4c97658d906f42e2957c8eefc85c2bba"
+    },
+    {
+      "bytes": 2660,
+      "git_blob_bytes": 2482,
+      "git_blob_sha256": "2a5419ecb9c3ad5a7148f2075f3edd8d488cab4f339cfbd627c42ce36ebf74e7",
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-rank1-10448491872987906048-0-probe8-cardinality.json",
+      "sha256": "d1844e3297e2c146c8255c6f803ff4dea088fd7274d1d38e64bf18bafade2c0d"
+    },
+    {
+      "bytes": 381,
+      "git_blob_bytes": 381,
+      "git_blob_sha256": "f6669fa49b5c10778fe7955a50a40357d1f0baf4ab67f1ebee7cde90f5ffd969",
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-rank1-10448491872987906048-0-probe8-exact-targets.csv",
+      "sha256": "f6669fa49b5c10778fe7955a50a40357d1f0baf4ab67f1ebee7cde90f5ffd969"
+    },
+    {
+      "bytes": 19563,
+      "git_blob_bytes": 19563,
+      "git_blob_sha256": "342cb2eb1cdd19bb0f0b92511f4d4aeecbe8178960f566648fa0f3d8250b7b21",
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-rank1-10448491872987906048-0-probe8-geometry-audit.json",
+      "sha256": "342cb2eb1cdd19bb0f0b92511f4d4aeecbe8178960f566648fa0f3d8250b7b21"
+    },
+    {
+      "bytes": 1915,
+      "git_blob_bytes": 1915,
+      "git_blob_sha256": "dfb74a1366b326fb5ec60eb6c708b4146e2ffdf2e857c75b9ac8b0a744c25aeb",
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-rank1-10448491872987906048-0-probe8-geometry-input-sources.json",
+      "sha256": "dfb74a1366b326fb5ec60eb6c708b4146e2ffdf2e857c75b9ac8b0a744c25aeb"
+    },
+    {
+      "bytes": 1356,
+      "git_blob_bytes": 1356,
+      "git_blob_sha256": "0f4db3208e19da383680df7af1ce48fad56537d3f3d46ee5f9be37fe93aba7c7",
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-rank1-10448491872987906048-0-probe8-geometry-input-summary.json",
+      "sha256": "0f4db3208e19da383680df7af1ce48fad56537d3f3d46ee5f9be37fe93aba7c7"
+    },
+    {
+      "bytes": 857,
+      "git_blob_bytes": 829,
+      "git_blob_sha256": "6fa189c7ab534c6a81fb98165e7694f046b556fd7e57472a4b5921ae884beec6",
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-rank1-10448491872987906048-0-probe8-merge-receipt.json",
+      "sha256": "efd189dcf06ba81aff326a62480e425d010dcfa887869da6d7409d4d5fef4f85"
+    },
+    {
+      "bytes": 195885,
+      "git_blob_bytes": 195885,
+      "git_blob_sha256": "772e3b43ea40d29926ea492ae01f675f3d6fe2be3ba5faef0d42803daec4e1ca",
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-rank1-10448491872987906048-0-probe8-merged-s5.cache",
+      "sha256": "772e3b43ea40d29926ea492ae01f675f3d6fe2be3ba5faef0d42803daec4e1ca"
+    },
+    {
+      "bytes": 297,
+      "git_blob_bytes": 297,
+      "git_blob_sha256": "005a00b727bfd91f8b252b0c62a8f0ddeafd55947007fc870a898ded3da4df54",
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-rank1-10448491872987906048-0-probe8-new-exact-s5.cache",
+      "sha256": "005a00b727bfd91f8b252b0c62a8f0ddeafd55947007fc870a898ded3da4df54"
+    },
+    {
+      "bytes": 2114,
+      "git_blob_bytes": 2024,
+      "git_blob_sha256": "8a59a61e7e47a7d369c9b3613903f6eddfdfbe2a7cf3d1d14fbca4fc2550f87c",
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-rank1-10448491872987906048-0-probe8-next-dual-tight-ranking.json",
+      "sha256": "fed82ae8612d5fcfb68719332e31e6ee52b3714e0daa16d1a59a9a042cfda718"
+    },
+    {
+      "bytes": 2191,
+      "git_blob_bytes": 2148,
+      "git_blob_sha256": "64384205b93728ee04365647c57265724bf824596e9282ef2d96158cbdfed575",
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-rank1-10448491872987906048-0-probe8-next-dual-tight-sources.json",
+      "sha256": "02688b9222d6721d1c2703dd008b30870b3e4723e05b256a02b2d0856c596d22"
+    },
+    {
+      "bytes": 5834,
+      "git_blob_bytes": 5834,
+      "git_blob_sha256": "a3c8d128e0ccf38c05af5fb2a9a5dc95e27ffe72f3c2c8c08d1fd770786be417",
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-rank1-10448491872987906048-0-probe8-next-dual-tight-targets.csv",
+      "sha256": "a3c8d128e0ccf38c05af5fb2a9a5dc95e27ffe72f3c2c8c08d1fd770786be417"
+    },
+    {
+      "bytes": 392,
+      "git_blob_bytes": 392,
+      "git_blob_sha256": "60b99f6ab225d6717b9a1194fac64d15d725ac73dc041e2ca81d82b91ce0a2fc",
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-rank1-10448491872987906048-0-probe8-raw-all.csv",
+      "sha256": "60b99f6ab225d6717b9a1194fac64d15d725ac73dc041e2ca81d82b91ce0a2fc"
+    },
+    {
+      "bytes": 382,
+      "git_blob_bytes": 382,
+      "git_blob_sha256": "4cbbe490d5815f0c465e7ea657f1d636d9331d0d4d62f9e3540919cd64ed9b17",
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-rank1-10448491872987906048-0-probe8-raw-exact.csv",
+      "sha256": "4cbbe490d5815f0c465e7ea657f1d636d9331d0d4d62f9e3540919cd64ed9b17"
+    },
+    {
+      "bytes": 17036,
+      "git_blob_bytes": 16751,
+      "git_blob_sha256": "81d3f5128d59034017ccaaaf69a32450d76b7536712cb954f3829fb0b58773b3",
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-rank1-10448491872987906048-0-probe8-repair-targets.csv",
+      "sha256": "ba0a687293a5c5443f86df107e4e51ffb9b37a17ca3d20c992019f12c5eef06f"
+    },
+    {
+      "bytes": 2662,
+      "git_blob_bytes": 2485,
+      "git_blob_sha256": "9ea4eb1d8fd0807573ae085021673d2917cd34a93a85a5568d79f5c3dc2a1950",
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-rank1-10448491872987906048-0-probe8-repair.json",
+      "sha256": "7261f8bfaab7eb8e6004d959bc1685952e24b59e99bd17a51e85f37f8478d713"
+    },
+    {
+      "bytes": 9818,
+      "git_blob_bytes": 9818,
+      "git_blob_sha256": "402f5d67717f479c358235860e4046625e5a246a06fb97c62d4a1bd4bf9c51b1",
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-rank1-10448491872987906048-0-probe8-run-manifest.json",
+      "sha256": "402f5d67717f479c358235860e4046625e5a246a06fb97c62d4a1bd4bf9c51b1"
+    },
+    {
+      "bytes": 3890,
+      "git_blob_bytes": 3890,
+      "git_blob_sha256": "96206d24c5b228d6da3b0500717eafe236b390440e4171fa4eced78601951603",
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-rank1-10448491872987906048-0-probe8-sources.json",
+      "sha256": "96206d24c5b228d6da3b0500717eafe236b390440e4171fa4eced78601951603"
+    },
+    {
+      "bytes": 6313,
+      "git_blob_bytes": 6313,
+      "git_blob_sha256": "828fd9395f29cd495f02b4169b22c3e3d11bb17ab467536ef9e25090b7d6036a",
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-rank1-10448491872987906048-0-probe8-summary.json",
+      "sha256": "828fd9395f29cd495f02b4169b22c3e3d11bb17ab467536ef9e25090b7d6036a"
+    },
+    {
+      "bytes": 552,
+      "git_blob_bytes": 552,
+      "git_blob_sha256": "d434d46c45d3b1917ca2e00c9ee5266fd55db7f5faf66ffa5f9e37b8640774e9",
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-rank1-10448491872987906048-0-probe8.csv",
+      "sha256": "d434d46c45d3b1917ca2e00c9ee5266fd55db7f5faf66ffa5f9e37b8640774e9"
+    }
+  ],
+  "inventory_note": "SHA-256 is over working-tree bytes. git_blob_sha256/git_blob_bytes are over the staged Git blob bytes after repository clean filters. .local solver inputs and raw run files are preserved separately and bound by the run manifests; they are intentionally not staged.",
+  "next_target": {
+    "UNKNOWN": 91,
+    "canonical_s5_children": 102,
+    "coverage": [
+      55,
+      65,
+      104
+    ],
+    "dispatch_ready": 91,
+    "dual_vertex": 104,
+    "key": [
+      10448351135499550752,
+      0
+    ],
+    "known_LOSS": 11,
+    "probe_schedule": "research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-next-after-completion84-10448351135499550752-0-probe8.csv",
+    "raw_history_csv_files_examined": 1697,
+    "raw_history_exact_rows": 0,
+    "same_or_higher_budget_UNKNOWN": 0,
+    "saved_s6_10source_new_exact": 0,
+    "saved_s6_10source_outcome_counts": {
+      "UNKNOWN": 91
+    },
+    "saved_s6_37source_new_exact": 0,
+    "saved_s6_37source_outcome_counts": {
+      "UNKNOWN": 91
+    }
+  },
+  "processed_classes": [
+    {
+      "before_probe": {
+        "UNKNOWN": 92,
+        "known_LOSS": 7
+      },
+      "canonical_s5_children": 99,
+      "class_status": "WIN",
+      "exact_WIN_witnesses": [
+        [
+          10448491873004683264,
+          0
+        ],
+        [
+          10448773347964616704,
+          0
+        ]
+      ],
+      "final_boundary_counts": {
+        "LOSS": 10,
+        "UNKNOWN": 87,
+        "WIN": 2
+      },
+      "geometry_audit": "research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-rank1-10448491872987906048-0-probe8-geometry-audit.json",
+      "key": [
+        10448491872987906048,
+        0
+      ],
+      "probe": {
+        "LOSS": 3,
+        "WIN": 2,
+        "completed_exact": 5,
+        "nodes": 35507222,
+        "scheduled": 8
+      },
+      "unexplored_children": 87
+    },
+    {
+      "before_probe": {
+        "UNKNOWN": 92,
+        "known_LOSS": 6
+      },
+      "canonical_s5_children": 98,
+      "class_status": "WIN",
+      "completion84": {
+        "LOSS": 33,
+        "UNKNOWN": 1,
+        "WIN": 1,
+        "all_completed_nodes": 191500060,
+        "exact": 34,
+        "exact_nodes": 176500060,
+        "not_dispatched": 49,
+        "scheduled": 84,
+        "started": 35
+      },
+      "exact_WIN_witnesses": [
+        [
+          1297036692682719232,
+          134217729
+        ]
+      ],
+      "final_boundary_counts": {
+        "LOSS": 47,
+        "UNKNOWN": 50,
+        "WIN": 1
+      },
+      "geometry_audit": "research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-next-dual-tight-10448351136036421632-0-completion84-geometry-audit.json",
+      "key": [
+        10448351136036421632,
+        0
+      ],
+      "probe8": {
+        "LOSS": 8,
+        "WIN": 0,
+        "nodes": 33683635,
+        "scheduled": 8
+      }
+    }
+  ],
+  "proof_status": {
+    "empty_board_11x11": "UNKNOWN",
+    "root_60_27": "UNKNOWN"
+  },
+  "root": [
+    60,
+    27
+  ],
+  "s4_frontier": {
+    "LOSS": 29,
+    "UNKNOWN": 3163,
+    "WIN": 192,
+    "classes": 3384,
+    "dual_tight": true,
+    "minimum_additional_classes": 3,
+    "rational_lp_dual": "3",
+    "remaining_vertices": 6,
+    "secured_vertices": 113,
+    "total_vertices": 119
+  },
+  "saved_s6_descent": {
+    "new_exact_s6": 0,
+    "reverse_propagated_s5_LOSS": 0,
+    "target_audits": {
+      "10_source": {
+        "new_exact": 0,
+        "parents": 92
+      },
+      "37_source": {
+        "new_exact": 0,
+        "parents": 92
+      }
+    }
+  },
+  "schema": "n11-reply27-dual-tight-proof-checkpoint-inventory-v1",
+  "source_checkout_head": "ba3b51388b2f943f890f5f61cc2a857fd6ac2c56",
+  "synchronized_main": "ba3b51388b2f943f890f5f61cc2a857fd6ac2c56"
+}

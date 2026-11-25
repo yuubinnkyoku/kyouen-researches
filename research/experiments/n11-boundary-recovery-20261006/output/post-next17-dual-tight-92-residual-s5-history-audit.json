@@ -1,0 +1,31 @@
+{
+  "current_exact_cache": {
+    "entries": 4524,
+    "intersection": {},
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-next17-dual-tight-92-probe9-merged-s5.cache",
+    "sha256": "d7577ae3c1f4071db94311b24356b389c104fac022d6328ca13caad265c81d8b",
+    "target_exact_intersection": 0
+  },
+  "dispatch_rule": "Do not repeat any prior UNKNOWN row whose node count reached the 15,000,000 limit. If an UNKNOWN has fewer nodes, inspect its source budget before dispatch. Existing exact raw rows are extracted once and must be merged before solver dispatch.",
+  "exact_conflicts": [],
+  "files_examined": 360,
+  "files_with_matching_rows": {},
+  "observations": {},
+  "prior_exact": {},
+  "prior_exact_replay_out": null,
+  "prior_unknown_below_15m_nodes_needs_budget_review": [],
+  "prior_unknown_same_budget_or_higher_node_limit": [],
+  "s6_full_boundary_audit": {
+    "all_92_parents_unknown": true,
+    "new_exact_s5_rows": 0,
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-next17-dual-tight-92-saved-s6-summary.json",
+    "sha256": "038119283524874d24af8bf1644b2a2aa60525f982b8df436228f4af77ae6cae"
+  },
+  "schema": "n11-post-next17-dual-tight-92-residual-s5-history-audit-v1",
+  "scope": "CSV replay outputs under recovery/output and frontier-selection/output recursively scanned, matching the preceding next17/next18 raw replay audit scope; not a repository-wide completeness claim. Exact current cache, full saved-s6 boundary audit, and same-budget UNKNOWN results are reported separately.",
+  "targets": {
+    "count": 83,
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-next17-dual-tight-92-residual83.csv",
+    "sha256": "ac65b69af2041d95e0e98977ecab5253fff59d5344fda7060a4fbcfc45d1a12b"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "schema": "n11-post-next17-dual-tight-v104-witness-overlap-audit-v1",
+  "scope": "Exact key-set intersection audit only. This does not solve either the dual-tight s4 class or the v=104 s3 branch.",
+  "inputs": {
+    "dual_tight_targets_path": "research/experiments/n11-boundary-recovery-20261006/output/post-next17-dual-tight-92-targets.csv",
+    "dual_tight_targets_git_blob_sha": "a71da83f652807a17f2e24b3549d6ffaea261c57",
+    "v104_witness_cover_path": "research/experiments/n11-boundary-recovery-20261006/output/post-next14-s3-v104-win-witness-cover.json",
+    "v104_witness_cover_git_blob_sha": "1666bdcd165d62e1cb948d039d193045797c52e8",
+    "post_next17_witness_freshness_audit_path": "research/experiments/n11-boundary-recovery-20261006/output/post-next17-s3-v104-selected18-cache-audit.json",
+    "post_next17_witness_freshness_audit_git_blob_sha": "a3c1ac44ec01008d6358d83c05aafc76e9c22274"
+  },
+  "set_sizes": {
+    "dual_tight_unknown_s5": 92,
+    "v104_selected_hypothetical_win_witnesses": 18,
+    "intersection": 1
+  },
+  "intersection": [
+    {
+      "lo": "10452854737274404864",
+      "hi": "0",
+      "dual_tight_target_rank_zero_based": 63,
+      "legal_move_count": 88,
+      "post_next17_verdict": "UNKNOWN"
+    }
+  ],
+  "consequences": {
+    "if_intersection_key_is_WIN": "The dual-tight s4 OR class 10452854735126921216:0 is immediately WIN, so its remaining unresolved s5 children need not be solved for that class. The key also realizes one member of the particular 18-key hypothetical v=104 witness cover, but does not by itself prove the v=104 s3 branch WIN.",
+    "if_intersection_key_is_LOSS": "The particular 18-key hypothetical v=104 witness cover is refuted because one selected key cannot be a WIN witness. This does not refute the existence of a different v=104 witness cover and does not close the dual-tight s4 class; its other unresolved children still matter.",
+    "if_dual_tight_s4_class_is_eventually_LOSS": "This intersection key is necessarily LOSS, so the particular stored 18-key v=104 cover is necessarily refuted as a by-product."
+  },
+  "scheduling_note": "The existing low-legal-count probe8 remains a reasonable cost-first prefix. If one additional diagnostic target is desired before bulk completion, this unique overlap key has strictly broader logical diagnostic value than a non-overlap child: either verdict changes a tracked proof route. This is a scheduling heuristic, not a solver-cost claim.",
+  "interpretation": "The 92-child universal-LOSS route and the stored 18-key hypothetical v=104 WIN-witness route are not disjoint. They share exactly one canonical s5 key. Therefore progress on the preferred dual-tight class can also invalidate or partially realize that specific alternative witness set, depending on the exact verdict."
+}

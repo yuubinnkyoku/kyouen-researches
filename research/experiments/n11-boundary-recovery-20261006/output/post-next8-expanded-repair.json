@@ -1,0 +1,323 @@
+{
+  "additive_optimum": {
+    "additive_unknown_s5": 552,
+    "mip_gap": 0.0,
+    "repair_classes": 6,
+    "selected": [
+      {
+        "all_s5": 102,
+        "coverage": [
+          33,
+          38,
+          43
+        ],
+        "key": [
+          1152921788208906240,
+          0
+        ],
+        "unknown_s5": 90
+      },
+      {
+        "all_s5": 102,
+        "coverage": [
+          5,
+          55,
+          57,
+          63,
+          65
+        ],
+        "key": [
+          1297036692816920608,
+          0
+        ],
+        "unknown_s5": 86
+      },
+      {
+        "all_s5": 108,
+        "coverage": [
+          49,
+          88,
+          98
+        ],
+        "key": [
+          1873497444986126592,
+          0
+        ],
+        "unknown_s5": 94
+      },
+      {
+        "all_s5": 100,
+        "coverage": [
+          34,
+          42,
+          82
+        ],
+        "key": [
+          5908722711110107136,
+          0
+        ],
+        "unknown_s5": 84
+      },
+      {
+        "all_s5": 104,
+        "coverage": [
+          70,
+          72,
+          100,
+          108
+        ],
+        "key": [
+          10376293541461626880,
+          64
+        ],
+        "unknown_s5": 102
+      },
+      {
+        "all_s5": 101,
+        "coverage": [
+          77,
+          87,
+          104
+        ],
+        "key": [
+          10448351135499550728,
+          0
+        ],
+        "unknown_s5": 96
+      }
+    ],
+    "unique_unknown_s5": 552
+  },
+  "claim": "repair scheduling only; UNKNOWN selected repair classes are not certificates until their remaining s5 children are proved LOSS",
+  "class_status_from_derived_cache_plus_manifest": {
+    "LOSS": 25,
+    "UNKNOWN": 3228,
+    "WIN_forbidden": 131
+  },
+  "derived_s5_cache": {
+    "LOSS": 3549,
+    "WIN": 65,
+    "entries": 3614,
+    "extra_entries": 2273
+  },
+  "evidence_note": "Historical stage1 manifest note (not a current archive inventory): The raw Xserver shard files had not yet been archived in-repo when this manifest was written; treat this manifest as a scheduling/result preservation record until those raw files are recovered.",
+  "exact_15_class_repair": {
+    "additive_unknown_s5": 1200,
+    "mip_gap": 0.0,
+    "repair_classes": 15,
+    "selected": [
+      {
+        "all_s5": 60,
+        "coverage": [
+          100,
+          108
+        ],
+        "key": [
+          1152921504607899648,
+          536870912
+        ],
+        "unknown_s5": 59
+      },
+      {
+        "all_s5": 98,
+        "coverage": [
+          5,
+          15,
+          17
+        ],
+        "key": [
+          1152921504741097504,
+          0
+        ],
+        "unknown_s5": 87
+      },
+      {
+        "all_s5": 63,
+        "coverage": [
+          88,
+          98
+        ],
+        "key": [
+          1152921508906008576,
+          536870912
+        ],
+        "unknown_s5": 62
+      },
+      {
+        "all_s5": 115,
+        "coverage": [
+          2,
+          8,
+          34,
+          42
+        ],
+        "key": [
+          1152921521920933892,
+          0
+        ],
+        "unknown_s5": 67
+      },
+      {
+        "all_s5": 96,
+        "coverage": [
+          5,
+          37,
+          39
+        ],
+        "key": [
+          1152921642180018208,
+          0
+        ],
+        "unknown_s5": 93
+      },
+      {
+        "all_s5": 102,
+        "coverage": [
+          33,
+          38,
+          43
+        ],
+        "key": [
+          1152921788208906240,
+          0
+        ],
+        "unknown_s5": 90
+      },
+      {
+        "all_s5": 60,
+        "coverage": [
+          34,
+          42
+        ],
+        "key": [
+          1152925919967444992,
+          0
+        ],
+        "unknown_s5": 59
+      },
+      {
+        "all_s5": 98,
+        "coverage": [
+          13,
+          19,
+          49
+        ],
+        "key": [
+          1153484454694494208,
+          0
+        ],
+        "unknown_s5": 93
+      },
+      {
+        "all_s5": 102,
+        "coverage": [
+          5,
+          55,
+          57,
+          63,
+          65
+        ],
+        "key": [
+          1297036692816920608,
+          0
+        ],
+        "unknown_s5": 86
+      },
+      {
+        "all_s5": 98,
+        "coverage": [
+          5,
+          59,
+          61
+        ],
+        "key": [
+          1333628439655088128,
+          0
+        ],
+        "unknown_s5": 91
+      },
+      {
+        "all_s5": 94,
+        "coverage": [
+          22,
+          32,
+          82
+        ],
+        "key": [
+          5908722711110090756,
+          0
+        ],
+        "unknown_s5": 91
+      },
+      {
+        "all_s5": 100,
+        "coverage": [
+          34,
+          42,
+          82
+        ],
+        "key": [
+          5908722711110107136,
+          0
+        ],
+        "unknown_s5": 84
+      },
+      {
+        "all_s5": 57,
+        "coverage": [
+          57,
+          63,
+          70,
+          72
+        ],
+        "key": [
+          10376293541595840512,
+          64
+        ],
+        "unknown_s5": 52
+      },
+      {
+        "all_s5": 94,
+        "coverage": [
+          55,
+          65,
+          115
+        ],
+        "key": [
+          10412322338480586784,
+          0
+        ],
+        "unknown_s5": 90
+      },
+      {
+        "all_s5": 101,
+        "coverage": [
+          77,
+          87,
+          104
+        ],
+        "key": [
+          10448351135499550728,
+          0
+        ],
+        "unknown_s5": 96
+      }
+    ],
+    "unique_unknown_s5": 1192
+  },
+  "materialized_targets": 552,
+  "minimum_additional_classes": 6,
+  "minimum_additional_classes_mip_gap": 0.0,
+  "root": [
+    60,
+    27
+  ],
+  "sample_per_class": 2,
+  "sample_targets": 12,
+  "secured_vertices": 100,
+  "selected_status_counts": {
+    "LOSS": 16,
+    "WIN": 15
+  },
+  "uncovered_vertices": 19
+}
