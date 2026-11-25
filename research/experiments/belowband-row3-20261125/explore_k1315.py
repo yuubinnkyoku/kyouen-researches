@@ -34,7 +34,7 @@ Waves (all deterministic; JSON on stdout; frozen as explore_k1315.out):
   WG  seeded random sweep (seed 1315) beyond the grid families.
 
 Everything here is OBSERVATION grade over the stated swept grids unless a
-wave says \"machine-verified\"; no universal theorem is claimed.  CONJ-BBL3
+wave says "machine-verified"; no universal theorem is claimed.  CONJ-BBL3
 (the conjecture lifting these tables to all instances) is stated in the
 declaration note, not proven here.
 """
