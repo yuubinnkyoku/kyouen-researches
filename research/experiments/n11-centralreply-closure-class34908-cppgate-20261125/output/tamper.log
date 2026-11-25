@@ -1,0 +1,15 @@
+# Part EO tamper battery (scratch copies at /home/user/kr-lt/tamper, never the kit)
+canonical audit sha256: b46f2130e9855204b5d3a12c07833083af1e96fc4dd9013893f6be7ed0bfa057
+T1 corrupt-audit-expected-pin: sha_pre=07ec4c0d5dff2c47d596521a2da351276816ecc55fc6c19f18fe3d5631a5f0ff sha_post=c8ecffa748fb495049eb8561dac0b07ba00521f42f76b517a61b34fc9ee643c7 rc=1
+T1 failing gates: G3:af029
+T1 overall: FAIL
+
+T2 corrupt-raw-nodes-byte: sha_pre=7eaa8e6e7c13046999b8deff33810f8d4d594ccf2a1e3e9d13707671a2de2d81 sha_post=df6e1a63acbcbaf00163d9a644550f1f701f697d5e62c475e75a4fe405beb805 rc=1
+T2 failing gates: G2:af029,G3:af029
+T2 overall: FAIL
+
+T3 inject-phantom-gate-fail: sha_pre=2f601864d2dbc3b76b88ad71ec7994515db006b243112597aeb71c717347e4e1 sha_post=b218a31a2f4fb39f6a1c238e5f05daee9aaac8211f7f13ee7c97cda0044bee78 rc=1
+T3 failing gates: G4
+T3 overall: FAIL
+
+control clean-copy: rc=0 audit_sha=b46f2130e9855204b5d3a12c07833083af1e96fc4dd9013893f6be7ed0bfa057
