@@ -1,0 +1,88 @@
+{
+  "checks": [
+    {
+      "detail": "8 letters",
+      "name": "witness word C -> phi(A) verified",
+      "passed": true
+    },
+    {
+      "detail": "10 letters",
+      "name": "witness word B -> phi^2(A) verified",
+      "passed": true
+    },
+    {
+      "detail": 686784,
+      "name": "orbit_A.bin has 686,784 caps",
+      "passed": true
+    },
+    {
+      "detail": 686784,
+      "name": "orbit_B.bin has 686,784 caps",
+      "passed": true
+    },
+    {
+      "detail": 686784,
+      "name": "orbit_C.bin has 686,784 caps",
+      "passed": true
+    },
+    {
+      "detail": "0 images outside",
+      "name": "phi(orbit A) = orbit C (all 686,784 caps)",
+      "passed": true
+    },
+    {
+      "detail": "0 images outside",
+      "name": "phi(orbit C) = orbit B (all 686,784 caps)",
+      "passed": true
+    },
+    {
+      "detail": "0 images outside",
+      "name": "phi(orbit B) = orbit A (all 686,784 caps)",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "phi(A) is a cap of orbit_C.bin",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "phi^2(A) is a cap of orbit_B.bin",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "A is not in orbit_B.bin or orbit_C.bin",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "B is not in orbit_C.bin",
+      "passed": true
+    }
+  ],
+  "n_checks": 12,
+  "n_failed": 0,
+  "witness_B_to_phi2A": [
+    4,
+    0,
+    1,
+    6,
+    6,
+    1,
+    6,
+    7,
+    5,
+    3
+  ],
+  "witness_C_to_phiA": [
+    6,
+    6,
+    0,
+    2,
+    3,
+    6,
+    6,
+    6
+  ]
+}
