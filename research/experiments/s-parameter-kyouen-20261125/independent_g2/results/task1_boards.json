@@ -1,0 +1,133 @@
+{
+ "PG(2,9)": {
+  "n": 91,
+  "b": 91,
+  "line_size_histogram": {
+   "10": 91
+  },
+  "point_labels_in_range": true,
+  "no_repeated_point_within_line": true,
+  "pairs_seen": 4095,
+  "pairs_possible": 4095,
+  "pair_multiplicity_histogram": {
+   "1": 4095
+  },
+  "each_pair_at_most_one_line": true,
+  "each_pair_exactly_one_line": true,
+  "point_degree_histogram": {
+   "10": 91
+  },
+  "point_degree_constant": true,
+  "point_degree": 10,
+  "line_intersection_size_histogram": {
+   "1": 4095
+  },
+  "any_two_lines_meet_in_at_most_one_point": true,
+  "uniform_line_size": true,
+  "k": 10,
+  "design_b_formula": 91,
+  "design_b_matches": true,
+  "replication_formula": 10,
+  "replication_matches": true,
+  "parallel_class_count": 0,
+  "parallel_classes_are_cliques": true,
+  "parallel_class_count_is_k_plus_1": false,
+  "every_two_lines_meet": true,
+  "all_lines_have_at_least_3_points": true,
+  "s": 2,
+  "valid_s2_incidence_structure": true,
+  "board_path": "research/experiments/pg2q9-cap-game-20261125/output/board_pg2q9.txt",
+  "sha256": "81c82d03b5094c3b3b4c912b8144b4cb119b2db365b6790e0c844dfbf228486b",
+  "size_bytes": 3001
+ },
+ "AG(2,7)": {
+  "n": 49,
+  "b": 56,
+  "line_size_histogram": {
+   "7": 56
+  },
+  "point_labels_in_range": true,
+  "no_repeated_point_within_line": true,
+  "pairs_seen": 1176,
+  "pairs_possible": 1176,
+  "pair_multiplicity_histogram": {
+   "1": 1176
+  },
+  "each_pair_at_most_one_line": true,
+  "each_pair_exactly_one_line": true,
+  "point_degree_histogram": {
+   "8": 49
+  },
+  "point_degree_constant": true,
+  "point_degree": 8,
+  "line_intersection_size_histogram": {
+   "0": 168,
+   "1": 1372
+  },
+  "any_two_lines_meet_in_at_most_one_point": true,
+  "uniform_line_size": true,
+  "k": 7,
+  "design_b_formula": 56,
+  "design_b_matches": true,
+  "replication_formula": 8,
+  "replication_matches": true,
+  "parallel_class_count": 8,
+  "parallel_class_size_histogram": {
+   "7": 8
+  },
+  "parallel_classes_are_cliques": true,
+  "parallel_class_count_is_k_plus_1": true,
+  "every_two_lines_meet": false,
+  "all_lines_have_at_least_3_points": true,
+  "s": 2,
+  "valid_s2_incidence_structure": true,
+  "board_path": "research/experiments/s-parameter-kyouen-20261125/output/board_ag2q7.txt",
+  "sha256": "17e2bae586f60dd243aa201b451a5952b02360477e7bf066bbe25f28ad088594",
+  "size_bytes": 1271
+ },
+ "AG(2,5)": {
+  "n": 25,
+  "b": 30,
+  "line_size_histogram": {
+   "5": 30
+  },
+  "point_labels_in_range": true,
+  "no_repeated_point_within_line": true,
+  "pairs_seen": 300,
+  "pairs_possible": 300,
+  "pair_multiplicity_histogram": {
+   "1": 300
+  },
+  "each_pair_at_most_one_line": true,
+  "each_pair_exactly_one_line": true,
+  "point_degree_histogram": {
+   "6": 25
+  },
+  "point_degree_constant": true,
+  "point_degree": 6,
+  "line_intersection_size_histogram": {
+   "0": 60,
+   "1": 375
+  },
+  "any_two_lines_meet_in_at_most_one_point": true,
+  "uniform_line_size": true,
+  "k": 5,
+  "design_b_formula": 30,
+  "design_b_matches": true,
+  "replication_formula": 6,
+  "replication_matches": true,
+  "parallel_class_count": 6,
+  "parallel_class_size_histogram": {
+   "5": 6
+  },
+  "parallel_classes_are_cliques": true,
+  "parallel_class_count_is_k_plus_1": true,
+  "every_two_lines_meet": false,
+  "all_lines_have_at_least_3_points": true,
+  "s": 2,
+  "valid_s2_incidence_structure": true,
+  "board_path": "research/experiments/s-parameter-kyouen-20261125/output/board_ag2q5.txt",
+  "sha256": "b6fe706177f8d9d19753d770772fb3e7c40f9161bc941aec4bca8f4cd1039b1c",
+  "size_bytes": 487
+ }
+}

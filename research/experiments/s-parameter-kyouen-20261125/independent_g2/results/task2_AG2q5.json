@@ -1,0 +1,111 @@
+{
+ "board": "AG(2,5)",
+ "n": 25,
+ "b": 30,
+ "size_counts": {
+  "0": 1,
+  "1": 25,
+  "2": 300,
+  "3": 2000,
+  "4": 6500,
+  "5": 6600,
+  "6": 1000
+ },
+ "total_caps": 16426,
+ "maximal_by_size": {
+  "5": 600,
+  "6": 1000
+ },
+ "max_size": 6,
+ "grundy_dist": {
+  "0": 5401,
+  "1": 8025,
+  "2": 3000
+ },
+ "grundy_by_size": {
+  "0,0": 1,
+  "1,1": 25,
+  "2,0": 300,
+  "3,1": 2000,
+  "4,0": 3500,
+  "4,2": 3000,
+  "5,0": 600,
+  "5,1": 6000,
+  "6,0": 1000
+ },
+ "maximal_odd_caps": {
+  "size": 5,
+  "count": 600,
+  "claimed": 600,
+  "all_terminal": true
+ },
+ "subsets": {
+  "subset_size": 4,
+  "generated": 3000,
+  "distinct": 3000,
+  "duplicates": 0,
+  "claimed": 3000,
+  "all_are_caps": true
+ },
+ "g2": {
+  "count": 3000,
+  "claimed": 3000,
+  "sizes": {
+   "4": 3000
+  },
+  "equals_all_subsets": true,
+  "all_size_subset_size": true
+ },
+ "seconds": 0.18,
+ "comparison": {
+  "json_size_counts": {
+   "published": {
+    "0": 1,
+    "1": 25,
+    "2": 300,
+    "3": 2000,
+    "4": 6500,
+    "5": 6600,
+    "6": 1000
+   },
+   "ours": {
+    "0": 1,
+    "1": 25,
+    "2": 300,
+    "3": 2000,
+    "4": 6500,
+    "5": 6600,
+    "6": 1000
+   },
+   "match": true
+  },
+  "json_maximal_by_size": {
+   "published": {
+    "5": 600,
+    "6": 1000
+   },
+   "ours": {
+    "6": 1000,
+    "5": 600
+   },
+   "match": true
+  },
+  "json_grundy_dist": {
+   "published": {
+    "0": 5401,
+    "1": 8025,
+    "2": 3000
+   },
+   "ours": {
+    "0": 5401,
+    "1": 8025,
+    "2": 3000
+   },
+   "match": true
+  },
+  "json_root_grundy": {
+   "published": 0,
+   "ours": 0
+  }
+ }
+}
