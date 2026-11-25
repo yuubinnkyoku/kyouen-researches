@@ -1,0 +1,165 @@
+{
+ "name": "ts-verify-crosscheck",
+ "system": "second independent verification system for this band: pure TypeScript, no repo code, no census, no SA; exact integer arithmetic (all intermediates < 2^53, IEEE-754 exact); safety = exhaustive 4-subset enumeration (collinear branch + cleared-denominator integer circle membership), maximality = every empty cell on a line or circle with >= 3 stones",
+ "date": "2026-11-15",
+ "note": "each base config is verified at its free-column chain maximum (43/44/46/49/52/56); by monotonicity (blocked cells at width W include all cells at widths base<=w<=W, and stones fit at every width >= base) this covers all 15 widths m=42..56",
+ "controls": [
+  {
+   "name": "4 collinear detected unsafe at q=4",
+   "pass": true
+  },
+  {
+   "name": "4 of the x^2+y^2=25 points detected unsafe at q=4",
+   "pass": true
+  },
+  {
+   "name": "3 isolated stones on 7x42: all 291 empty cells unblocked",
+   "pass": true
+  }
+ ],
+ "records": [
+  {
+   "base": 42,
+   "verified_at_m": 43,
+   "covers": [
+    42,
+    43
+   ],
+   "n": 20,
+   "rows": [
+    3,
+    3,
+    3,
+    3,
+    3,
+    2,
+    3
+   ],
+   "min_row": 2,
+   "safe": true,
+   "unblocked": 0,
+   "row_deficient": true,
+   "verdict": "PASS"
+  },
+  {
+   "base": 44,
+   "verified_at_m": 44,
+   "covers": [
+    44
+   ],
+   "n": 20,
+   "rows": [
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    2
+   ],
+   "min_row": 2,
+   "safe": true,
+   "unblocked": 0,
+   "row_deficient": true,
+   "verdict": "PASS"
+  },
+  {
+   "base": 45,
+   "verified_at_m": 46,
+   "covers": [
+    45,
+    46
+   ],
+   "n": 20,
+   "rows": [
+    2,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3
+   ],
+   "min_row": 2,
+   "safe": true,
+   "unblocked": 0,
+   "row_deficient": true,
+   "verdict": "PASS"
+  },
+  {
+   "base": 47,
+   "verified_at_m": 49,
+   "covers": [
+    47,
+    48,
+    49
+   ],
+   "n": 20,
+   "rows": [
+    3,
+    2,
+    3,
+    3,
+    3,
+    3,
+    3
+   ],
+   "min_row": 2,
+   "safe": true,
+   "unblocked": 0,
+   "row_deficient": true,
+   "verdict": "PASS"
+  },
+  {
+   "base": 50,
+   "verified_at_m": 52,
+   "covers": [
+    50,
+    51,
+    52
+   ],
+   "n": 20,
+   "rows": [
+    3,
+    3,
+    2,
+    3,
+    3,
+    3,
+    3
+   ],
+   "min_row": 2,
+   "safe": true,
+   "unblocked": 0,
+   "row_deficient": true,
+   "verdict": "PASS"
+  },
+  {
+   "base": 53,
+   "verified_at_m": 56,
+   "covers": [
+    53,
+    54,
+    55,
+    56
+   ],
+   "n": 20,
+   "rows": [
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    2
+   ],
+   "min_row": 2,
+   "safe": true,
+   "unblocked": 0,
+   "row_deficient": true,
+   "verdict": "PASS"
+  }
+ ],
+ "widths_covered": 15,
+ "verdict": "all 6 base configs PASS safe+maximal+row-deficient at their chain maxima, covering all 15 widths m=42..56 — the SA band is now dual-verified (Python arbitrary precision + this TS system)"
+}

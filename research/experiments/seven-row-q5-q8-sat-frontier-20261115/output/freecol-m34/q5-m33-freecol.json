@@ -1,0 +1,13 @@
+{
+ "name": "7x33q5-rowY0-SAT-900s",
+ "w": 7,
+ "q": 5,
+ "source_m": 33,
+ "extends_to": 33,
+ "chain": [
+  {"m": 33, "ok": true, "n": 27},
+  {"m": 34, "ok": false, "why": "not-maximal", "cells": [[33, 0]]}
+ ],
+ "verifier": "verify_witness.py md5 0530d166572987988a01ec40dee12d4c (Python exact arithmetic, no census)",
+ "note": "the 7x33 rowY=0 900s-cap SAT witness does not extend to 7x34 by free-column extension; frontier stays 7x34"
+}

@@ -1,0 +1,7 @@
+selftest PASS
+stones=34 maxLine=5 maxCircle=5 curves=5918
+m=31: empty=183 blocked=217 unblocked=[]
+m=32: empty=190 blocked=223 unblocked=[(31, 3)]
+m=33: empty=197 blocked=229 unblocked=[(31, 3), (32, 3)]
+m=34: empty=204 blocked=235 unblocked=[(31, 3), (32, 3), (33, 3)]
+MAXIMAL_THROUGH_m=31

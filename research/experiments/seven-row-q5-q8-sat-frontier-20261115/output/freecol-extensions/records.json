@@ -1,0 +1,210 @@
+{
+ "family": "(7,6)",
+ "method": "free-column extension (append empty column; config stays maximal iff every appended cell is covered by a >=5-stone line/circle)",
+ "source": "s7x28q6_rowY3.witness.json (SAT rowY=3 split, 442,479 conflicts, this experiment)",
+ "stones": [
+  [
+   9,
+   0
+  ],
+  [
+   14,
+   0
+  ],
+  [
+   19,
+   0
+  ],
+  [
+   20,
+   0
+  ],
+  [
+   21,
+   0
+  ],
+  [
+   2,
+   1
+  ],
+  [
+   8,
+   1
+  ],
+  [
+   10,
+   1
+  ],
+  [
+   13,
+   1
+  ],
+  [
+   22,
+   1
+  ],
+  [
+   7,
+   2
+  ],
+  [
+   10,
+   2
+  ],
+  [
+   13,
+   2
+  ],
+  [
+   19,
+   2
+  ],
+  [
+   22,
+   2
+  ],
+  [
+   3,
+   3
+  ],
+  [
+   8,
+   3
+  ],
+  [
+   11,
+   3
+  ],
+  [
+   27,
+   3
+  ],
+  [
+   1,
+   4
+  ],
+  [
+   5,
+   4
+  ],
+  [
+   7,
+   4
+  ],
+  [
+   8,
+   4
+  ],
+  [
+   14,
+   4
+  ],
+  [
+   4,
+   5
+  ],
+  [
+   6,
+   5
+  ],
+  [
+   19,
+   5
+  ],
+  [
+   20,
+   5
+  ],
+  [
+   25,
+   5
+  ],
+  [
+   7,
+   6
+  ],
+  [
+   8,
+   6
+  ],
+  [
+   11,
+   6
+  ],
+  [
+   17,
+   6
+  ],
+  [
+   22,
+   6
+  ]
+ ],
+ "n": 34,
+ "rows": [
+  5,
+  5,
+  5,
+  4,
+  5,
+  5,
+  5
+ ],
+ "verify": {
+  "m28": {
+   "py": {
+    "ok": true,
+    "n": 34,
+    "rows": [
+     5,
+     5,
+     5,
+     4,
+     5,
+     5,
+     5
+    ],
+    "min_row": 4
+   },
+   "js": null
+  },
+  "m29": {
+   "py": {
+    "ok": true,
+    "n": 34,
+    "rows": [
+     5,
+     5,
+     5,
+     4,
+     5,
+     5,
+     5
+    ],
+    "min_row": 4
+   },
+   "js": {
+    "m": 29,
+    "ok": true,
+    "size": 34,
+    "rows": [
+     5,
+     5,
+     5,
+     4,
+     5,
+     5,
+     5
+    ]
+   }
+  }
+ },
+ "m30_fail": {
+  "cell_uncovered": [
+   29,
+   3
+  ],
+  "py_not_maximal": true
+ },
+ "conclusion": "witness band (7,6) extends to m=29; M_{7,6} >= 30 (upper K0318 U=862 unchanged)"
+}

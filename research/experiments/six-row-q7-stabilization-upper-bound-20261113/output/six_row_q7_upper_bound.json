@@ -1,0 +1,115 @@
+{
+  "schema": 1,
+  "date": "2026-11-13",
+  "target": {
+    "w": 6,
+    "q": 7
+  },
+  "repo_bound_6_7": {
+    "w": 6,
+    "q": 7,
+    "old_T": 10101,
+    "packing_U": 402,
+    "combined": 402,
+    "Q": 3960,
+    "Y": 215,
+    "d0": 20,
+    "d1": 10,
+    "integer_optimizer": [
+      198,
+      0
+    ]
+  },
+  "brute_6_7": {
+    "H": 396,
+    "argmax_xy": [
+      198,
+      0
+    ],
+    "Q": 3960,
+    "Y_raw": 215,
+    "ymax": 215,
+    "d0": 20,
+    "d1": 10
+  },
+  "closed_form_6_7": {
+    "r": 6,
+    "a": 5,
+    "N": 30,
+    "Q": 3960,
+    "d0": 20,
+    "d1": 10,
+    "per_point": 43,
+    "Y": 215,
+    "H": 396,
+    "argmax": [
+      198,
+      0
+    ],
+    "U": 402,
+    "algebra_note": "d0 = 2*d1 so 10*(2x+y) = (20x+10y) + 10y - ... parity: 2x+y = (Q - 10y)//10 + y adjusted; exact max by scan"
+  },
+  "controls": {
+    "3_5_expect_40": 40,
+    "5_6_expect_249": 249,
+    "5_7_expect_200": 200
+  },
+  "k0024_T_6_7": {
+    "A": 1900076,
+    "B": 10101,
+    "T": 10101
+  },
+  "w6_board_audits": [
+    {
+      "w": 6,
+      "m": 3,
+      "q": 7,
+      "safe_sets": 262144,
+      "row_checks": 1572864
+    }
+  ],
+  "supplementary_U_6q": [
+    {
+      "w": 6,
+      "q": 4,
+      "packing_U": 1113,
+      "old_T": 1113,
+      "combined": 1113
+    },
+    {
+      "w": 6,
+      "q": 5,
+      "packing_U": 658,
+      "old_T": 2814,
+      "combined": 658
+    },
+    {
+      "w": 6,
+      "q": 6,
+      "packing_U": 495,
+      "old_T": 5705,
+      "combined": 495
+    },
+    {
+      "w": 6,
+      "q": 7,
+      "packing_U": 402,
+      "old_T": 10101,
+      "combined": 402
+    },
+    {
+      "w": 6,
+      "q": 8,
+      "packing_U": 371,
+      "old_T": 16317,
+      "combined": 371
+    }
+  ],
+  "conclusion": {
+    "M_6_7_lower": 20,
+    "M_6_7_lower_source": "K0761 (35-stone one-row-deficient maximal witnesses at 6x13/16/19)",
+    "M_6_7_upper": 402,
+    "M_6_7_upper_source": "K0318 curve-packing substitution U_{6,7}=402 (K0024 T=10101)",
+    "statement": "20 <= M_{6,7} <= 402"
+  }
+}

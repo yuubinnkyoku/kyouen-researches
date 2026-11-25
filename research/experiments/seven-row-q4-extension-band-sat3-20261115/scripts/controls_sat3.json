@@ -1,0 +1,35 @@
+{
+ "byte_identical_vs_sat2": [
+  "5 12 4 --deficient",
+  "5 15 4 --deficient",
+  "6 10 5 --deficient",
+  "7 12 4 --deficient",
+  "5 12 4 --cap=10 --counter=seq",
+  "5 12 4 --cap=10 --counter=tot",
+  "5 12 4 --lex=H,V,HV",
+  "6 10 5 --rowY=2",
+  "4 14 6 --deficient"
+ ],
+ "byte_identical_result": "9/9 cmp MATCH (md5-level byte identity incl. header)",
+ "published_meta_match": {
+  "7 22 4": [
+   40543,
+   437624,
+   1458224
+  ],
+  "7 23 4": [
+   46141,
+   497139,
+   1656195
+  ],
+  "7 23 5": [
+   4438,
+   89001,
+   311126
+  ]
+ },
+ "published_meta_source": "seven-row-q4-q6-witness-frontier-20261115 output/records.jsonl (curves,vars,clauses all exact)",
+ "kissat_calibration": "(7,5) m=23: 1200 conflicts bit-exact vs published record",
+ "witness_reproduction": "m=22..27 q4: 0 conflicts all, decoded stones 6/6 identical to published witnesses",
+ "note": "sat2.js OOMs (rc 137) in this container at 7x22 q4 already; sat3 byte-identity established at smaller widths + end-to-end kissat/witness reproduction at the frontier family widths."
+}

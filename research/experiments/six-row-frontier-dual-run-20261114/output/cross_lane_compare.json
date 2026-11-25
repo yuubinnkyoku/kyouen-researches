@@ -1,0 +1,78 @@
+{
+ "date": "2026-11-14",
+ "context": "two lanes independently ran the 6x20 q=8 class-split sweep and the 6x21 q=7 witness search in the same hour; this lane finished solving 13:42-13:55Z (all 35 UNSAT) and found the 6x21 witness at 14:11Z; the parallel lane pushed K0819 + K0815 dai-7 at 14:06/14:16Z (commits a1769a4b..79095bcf)",
+ "boards": "6x20 q=8 (35 canonical classes) + 6x21 q=7 witness + 6x22 q=7 frontier + controls",
+ "shared_canonical_classes_bit_exact": 32,
+ "shared_total_conflicts": 15960066,
+ "mismatched_shared_classes": 0,
+ "coverage_note": "their sweep lists the three 5-element classes under non-canonical mirror labels; satisfiability is mirror-invariant so their coverage (32 canonical + 3 mirrors) is complete and agrees with this lane 35-canonical labeling; all UNSAT on both sides",
+ "mirror_covered": [
+  {
+   "their_noncanonical_class": "1,2,3,4,5",
+   "canonical_equivalent": "0,1,2,3,4",
+   "their_result": "UNSAT",
+   "their_conflicts": 102406,
+   "my_result": "UNSAT",
+   "my_conflicts": 152326
+  },
+  {
+   "their_noncanonical_class": "0,2,3,4,5",
+   "canonical_equivalent": "0,1,2,3,5",
+   "their_result": "UNSAT",
+   "their_conflicts": 169736,
+   "my_result": "UNSAT",
+   "my_conflicts": 144037
+  },
+  {
+   "their_noncanonical_class": "0,1,3,4,5",
+   "canonical_equivalent": "0,1,2,4,5",
+   "their_result": "UNSAT",
+   "their_conflicts": 213873,
+   "my_result": "UNSAT",
+   "my_conflicts": 82099
+  }
+ ],
+ "this_lane_only_extras": {
+  "mirror_spot_check_class_1_5": {
+   "result": "UNSAT",
+   "conflicts": 258595,
+   "canonical_0_4_conflicts": 246856
+  },
+  "lexH_extra_classes": {
+   "1,2": 1606595,
+   "1,3": 1209815
+  },
+  "determinism_fresh_reruns": {
+   "1": 2289935,
+   "2": 2763766
+  }
+ },
+ "shared_with_parallel_lane": {
+  "controls": {
+   "6x18_q8_class1": 511895,
+   "2x8_q4": "SAT",
+   "2x9_q4": "UNSAT"
+  },
+  "lexH": {
+   "1": 2038080,
+   "2": 2331073
+  },
+  "witness_6x21_q7_class2": {
+   "conflicts": 1904706,
+   "stones": 35,
+   "rows": [
+    6,
+    6,
+    5,
+    6,
+    6,
+    6
+   ]
+  },
+  "frontier_6x22_q7_class2": {
+   "this_lane": "INDET 250s 2,397,369 conflicts",
+   "parallel_lane": "INDET 279.5s 5,038,264 conflicts"
+  }
+ },
+ "interpretation": "identical per-class conflict counts across two independently launched runs (different execution environments, same published sat3.js encoding and kissat 4.0.4 binary) — the strongest form of the cross-lane reproduction observed so far (5th instance); independent of the n11 sweep reproductions"
+}

@@ -1,0 +1,9 @@
+selftest PASS
+curves c=3: 5292
+curves c=4: 98
+curves c=5: 30
+T-curve census: c4=1 c3=10
+  c4 curve: [(12, 3), (23, 3), (27, 3), (29, 3)] empty_on: 27
+unique candidates: 2224675  [17s]
+checked=2224675 safe=0 witnesses=0 [31s]
+wrote output/surgery-m32.json

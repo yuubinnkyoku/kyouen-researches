@@ -1,0 +1,94 @@
+{
+ "experiment": "(7,5) two-edit surgery of the m=34 witness winA on the 7x35 board, q=5, NEED=4, target T=(34,0)",
+ "census": {
+  "baseNeedCurves": 61,
+  "threeStoneTCurves": 6,
+  "tCells3": 38,
+  "twoStoneTCurves": 333,
+  "spPairs": 49,
+  "emptyCells7x35": 218
+ },
+ "cases": [
+  {
+   "case": "A (1 swap: 1 removed, 1 added on a 3-stone T-curve or T)",
+   "sessionCandidates": 1053,
+   "sessionSafe": 173,
+   "sessionMaximal": 0,
+   "freshCandidates": 1053,
+   "freshSafe": 173,
+   "freshMaximal": 0,
+   "status": "freshly re-enumerated (complete)"
+  },
+  {
+   "case": "F (2 removed, 1 added on a 3-stone T-curve or T)",
+   "sessionCandidates": 13689,
+   "sessionSafe": 3723,
+   "sessionMaximal": 0,
+   "freshCandidates": 13689,
+   "freshSafe": 3723,
+   "freshMaximal": 0,
+   "status": "freshly re-enumerated (complete)"
+  },
+  {
+   "case": "b (2 removed, both new stones on a 2-stone T-curve)",
+   "sessionCandidates": 17199,
+   "sessionSafe": 594,
+   "sessionMaximal": 1,
+   "freshCandidates": 17199,
+   "freshSafe": 594,
+   "freshMaximal": 1,
+   "freshWitnesses": [
+    {
+     "removed": [
+      [
+       8,
+       5
+      ],
+      [
+       16,
+       6
+      ]
+     ],
+     "added": [
+      [
+       24,
+       5
+      ],
+      [
+       22,
+       6
+      ]
+     ]
+    }
+   ],
+   "status": "freshly re-enumerated (complete); unique witness winC rediscovered"
+  },
+  {
+   "case": "b2a1 (2 removed, both new stones on a 3-stone T-curve, exactly 1 removed stone on that curve)",
+   "freshCandidates": 36432,
+   "freshSafe": 3247,
+   "freshMaximal": 0,
+   "status": "freshly enumerated (complete; new decomposition not present in the session record)"
+  },
+  {
+   "case": "E (T-occupancy: one added stone at T, other added anywhere, 2 removed)",
+   "sessionCandidates": 76167,
+   "sessionMaximal": 0,
+   "status": "session record only (not re-enumerated here)"
+  },
+  {
+   "case": "case-a (3-stone-T-curve-mediated: at least one new stone on a 3-stone T-curve)",
+   "sessionSafe": 671398,
+   "sessionUnsafeIntermediate": 623644,
+   "sessionMaximal": 0,
+   "sessionCrossCheck": "300 samples, 0 mismatches",
+   "status": "session record only (not re-enumerated here)"
+  }
+ ],
+ "structuralExclusions": "both new on a 3-stone T-curve with 0 curve removals gives 3+2=5=q (unsafe); with 2 curve removals gives 3<4 (not blocking); 1 new on a 2-stone T-curve gives 3<4; the base has no 4-stone T-curve (T uncovered on 7x35)",
+ "note": "counts are complete enumerations of their case spaces; the session and fresh machines are independent implementations; the lower bound M_{7,5} >= 38 rests only on the verified winC witness, not on the enumerations",
+ "references": {
+  "session": "research/log/2026-11-15-seven-row-q5-witness-surgery.md",
+  "fresh": "output/fresh-campaign.json (scripts/verify_and_campaign.ts)"
+ }
+}

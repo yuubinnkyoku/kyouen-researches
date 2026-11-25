@@ -1,0 +1,86 @@
+{
+ "probe": "free-column extension of each family's frontier witness to the next width (negative results)",
+ "date": "2026-11-14",
+ "cases": [
+  {
+   "case": "(7,5) m=32 SAT rowY=0 witness -> m=33",
+   "w": 7,
+   "m": 33,
+   "q": 5,
+   "result": {
+    "ok": false,
+    "why": "not-maximal",
+    "cells": [
+     [
+      32,
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "case": "(7,6) m=27 SAT rowY=3 witness -> m=28",
+   "w": 7,
+   "m": 28,
+   "q": 6,
+   "result": {
+    "ok": false,
+    "why": "not-maximal",
+    "cells": [
+     [
+      27,
+      3
+     ]
+    ]
+   }
+  },
+  {
+   "case": "(7,7) m=26 SAT rowY=3 witness -> m=27",
+   "w": 7,
+   "m": 27,
+   "q": 7,
+   "result": {
+    "ok": false,
+    "why": "not-maximal",
+    "cells": [
+     [
+      26,
+      3
+     ]
+    ]
+   }
+  },
+  {
+   "case": "(7,8) m=24 SAT rowY=3 witness -> m=25",
+   "w": 7,
+   "m": 25,
+   "q": 8,
+   "result": {
+    "ok": false,
+    "why": "not-maximal",
+    "cells": [
+     [
+      24,
+      3
+     ]
+    ]
+   }
+  },
+  {
+   "case": "(7,4) m=53 SA base (extends to 56 per SA lane) -> m=57",
+   "w": 7,
+   "m": 57,
+   "q": 4,
+   "result": {
+    "ok": false,
+    "why": "not-maximal",
+    "cells": [
+     [
+      56,
+      6
+     ]
+    ]
+   }
+  }
+ ]
+}

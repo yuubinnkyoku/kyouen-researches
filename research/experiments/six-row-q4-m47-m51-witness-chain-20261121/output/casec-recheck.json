@@ -1,0 +1,266 @@
+{
+ "purpose": "diagnostic re-derivation at publication time: the 8 K1209 published (5,4) m40 hits not rediscovered by engine_v2 restricted pair-enumeration",
+ "w": 5,
+ "m": 40,
+ "q": 4,
+ "finding": "each missing hit has exactly one empty cell all of whose blocking curves contain exactly one surviving seed stone together with the two added stones (case c); engine_v2 2R2A/3R2A enumeration does not cover case c",
+ "method": "for each missing set: enumerate all 3-subsets of the 14 stones as (kind,desc) via engine_v2.triple_curve; a cell is case-c-only if every blocking triple has <=1 surviving member",
+ "missing": [
+  {
+   "base": "m39/id",
+   "rem": [
+    0,
+    4
+   ],
+   "add": [
+    [
+     32,
+     1
+    ],
+    [
+     37,
+     0
+    ]
+   ],
+   "caseCOnlyCells": [
+    {
+     "cell": [
+      39,
+      1
+     ],
+     "survivorCounts": [
+      1
+     ],
+     "curveKinds": [
+      "circle"
+     ]
+    }
+   ],
+   "nCaseC": 1
+  },
+  {
+   "base": "m39/id",
+   "rem": [
+    4,
+    13
+   ],
+   "add": [
+    [
+     37,
+     4
+    ],
+    [
+     38,
+     1
+    ]
+   ],
+   "caseCOnlyCells": [
+    {
+     "cell": [
+      14,
+      1
+     ],
+     "survivorCounts": [
+      1
+     ],
+     "curveKinds": [
+      "circle"
+     ]
+    }
+   ],
+   "nCaseC": 1
+  },
+  {
+   "base": "m39/H",
+   "rem": [
+    0,
+    4
+   ],
+   "add": [
+    [
+     2,
+     0
+    ],
+    [
+     7,
+     1
+    ]
+   ],
+   "caseCOnlyCells": [
+    {
+     "cell": [
+      0,
+      1
+     ],
+     "survivorCounts": [
+      1
+     ],
+     "curveKinds": [
+      "circle"
+     ]
+    }
+   ],
+   "nCaseC": 1
+  },
+  {
+   "base": "m39/H",
+   "rem": [
+    4,
+    13
+   ],
+   "add": [
+    [
+     1,
+     1
+    ],
+    [
+     2,
+     4
+    ]
+   ],
+   "caseCOnlyCells": [
+    {
+     "cell": [
+      25,
+      1
+     ],
+     "survivorCounts": [
+      1
+     ],
+     "curveKinds": [
+      "circle"
+     ]
+    }
+   ],
+   "nCaseC": 1
+  },
+  {
+   "base": "m39/V",
+   "rem": [
+    0,
+    4
+   ],
+   "add": [
+    [
+     32,
+     3
+    ],
+    [
+     37,
+     4
+    ]
+   ],
+   "caseCOnlyCells": [
+    {
+     "cell": [
+      39,
+      3
+     ],
+     "survivorCounts": [
+      1
+     ],
+     "curveKinds": [
+      "circle"
+     ]
+    }
+   ],
+   "nCaseC": 1
+  },
+  {
+   "base": "m39/V",
+   "rem": [
+    4,
+    13
+   ],
+   "add": [
+    [
+     37,
+     0
+    ],
+    [
+     38,
+     3
+    ]
+   ],
+   "caseCOnlyCells": [
+    {
+     "cell": [
+      14,
+      3
+     ],
+     "survivorCounts": [
+      1
+     ],
+     "curveKinds": [
+      "circle"
+     ]
+    }
+   ],
+   "nCaseC": 1
+  },
+  {
+   "base": "m39/HV",
+   "rem": [
+    0,
+    4
+   ],
+   "add": [
+    [
+     2,
+     4
+    ],
+    [
+     7,
+     3
+    ]
+   ],
+   "caseCOnlyCells": [
+    {
+     "cell": [
+      0,
+      3
+     ],
+     "survivorCounts": [
+      1
+     ],
+     "curveKinds": [
+      "circle"
+     ]
+    }
+   ],
+   "nCaseC": 1
+  },
+  {
+   "base": "m39/HV",
+   "rem": [
+    4,
+    13
+   ],
+   "add": [
+    [
+     1,
+     3
+    ],
+    [
+     2,
+     0
+    ]
+   ],
+   "caseCOnlyCells": [
+    {
+     "cell": [
+      25,
+      3
+     ],
+     "survivorCounts": [
+      1
+     ],
+     "curveKinds": [
+      "circle"
+     ]
+    }
+   ],
+   "nCaseC": 1
+  }
+ ]
+}

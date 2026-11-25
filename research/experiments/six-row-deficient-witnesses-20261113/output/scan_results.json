@@ -1,0 +1,594 @@
+{
+  "experiment": "six-row-deficient-witnesses-20261113",
+  "date": "2026-11-13",
+  "tool": "scripts/deficient_maximal_machine.ts",
+  "method": "hybrid greedy (sampled q-2-count score) + shake re-maximalization, min over restarts; independent census-free verification (pair-lines + triple-circumcenters, exact integer arithmetic)",
+  "bugfixes_vs_draft": [
+    "tangent circle double-add [r,-r]=[0,-0] produced spurious danger curves -> non-maximal witnesses (caught by independent verifier, cell (13,2) unblocked in a 6x16 candidate)",
+    "circumcenter normalization divided r^2 by g instead of g^2 -> real danger circles dropped from census (caught: 6x15 candidate had worstCirc=5 at q=6)"
+  ],
+  "params": {
+    "restarts": "1000 (m<=17) / 400 (m>=18)",
+    "shake": 10,
+    "sampleK": 24,
+    "seeds": "varying per run"
+  },
+  "results": [
+    {
+      "w": 6,
+      "q": 5,
+      "full": 24,
+      "min_stones_by_m": {
+        "8": 15,
+        "9": 17,
+        "10": 18,
+        "11": 19,
+        "12": 21,
+        "13": 21,
+        "14": 22,
+        "15": 22,
+        "16": 22,
+        "17": 22,
+        "18": 23,
+        "19": 23
+      },
+      "not_found": {
+        "20": {
+          "min_found": 24,
+          "restarts": 1000,
+          "note": "greedy non-discovery, not an absence proof"
+        }
+      },
+      "independent_verification": "all PASS: worstLine=worstCirc=4, unblocked=0"
+    },
+    {
+      "w": 6,
+      "q": 6,
+      "full": 30,
+      "min_stones_by_m": {
+        "8": 22,
+        "9": 24,
+        "10": 25,
+        "11": 27,
+        "12": 27,
+        "13": 28,
+        "14": 29,
+        "15": 29
+      },
+      "not_found": {
+        "16": {
+          "min_found": 30,
+          "restarts": 1000,
+          "note": "greedy non-discovery, not an absence proof"
+        }
+      },
+      "independent_verification": "all PASS: worstLine=worstCirc=5, unblocked=0"
+    },
+    {
+      "w": 6,
+      "q": 8,
+      "full": 42,
+      "min_stones_by_m": {
+        "9": 37,
+        "10": 40,
+        "11": 41
+      },
+      "not_found": {
+        "12": {
+          "min_found": 42,
+          "restarts": 400,
+          "note": "greedy non-discovery"
+        },
+        "13": {
+          "min_found": 42,
+          "restarts": 400,
+          "note": "greedy non-discovery"
+        }
+      },
+      "independent_verification": "all PASS: worstLine=worstCirc=7, unblocked=0"
+    },
+    {
+      "w": 5,
+      "q": 6,
+      "full": 25,
+      "not_found": {
+        "16": {
+          "min_found": 25,
+          "restarts": 1000
+        },
+        "17": {
+          "min_found": 25,
+          "restarts": 1000
+        },
+        "18": {
+          "min_found": 25,
+          "restarts": 1000
+        }
+      },
+      "note": "greedy non-discovery; existing lower bound 16 (K0723) unchanged"
+    },
+    {
+      "w": 5,
+      "q": 7,
+      "full": 30,
+      "not_found": {
+        "19": {
+          "min_found": 30,
+          "restarts": 1000
+        },
+        "20": {
+          "min_found": 30,
+          "restarts": 1000
+        },
+        "21": {
+          "min_found": 30,
+          "restarts": 1000
+        }
+      },
+      "note": "greedy non-discovery; existing lower bound 19 (K0332) unchanged"
+    }
+  ],
+  "witnesses_largest_m": [
+    {
+      "w": 6,
+      "m": 19,
+      "q": 5,
+      "stones": 23,
+      "cells": [
+        [
+          0,
+          0
+        ],
+        [
+          9,
+          0
+        ],
+        [
+          11,
+          0
+        ],
+        [
+          16,
+          0
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          1
+        ],
+        [
+          16,
+          1
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          8,
+          2
+        ],
+        [
+          14,
+          2
+        ],
+        [
+          18,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          6,
+          3
+        ],
+        [
+          7,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          7,
+          4
+        ],
+        [
+          10,
+          4
+        ],
+        [
+          6,
+          5
+        ],
+        [
+          7,
+          5
+        ],
+        [
+          10,
+          5
+        ],
+        [
+          12,
+          5
+        ]
+      ],
+      "verified": {
+        "safe": true,
+        "maximal": true,
+        "worstLine": 4,
+        "worstCirc": 4,
+        "unblocked": 0
+      }
+    },
+    {
+      "w": 6,
+      "m": 15,
+      "q": 6,
+      "stones": 29,
+      "cells": [
+        [
+          0,
+          0
+        ],
+        [
+          7,
+          0
+        ],
+        [
+          9,
+          0
+        ],
+        [
+          10,
+          0
+        ],
+        [
+          12,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          12,
+          1
+        ],
+        [
+          14,
+          1
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          8,
+          2
+        ],
+        [
+          10,
+          2
+        ],
+        [
+          11,
+          2
+        ],
+        [
+          13,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          5,
+          3
+        ],
+        [
+          7,
+          3
+        ],
+        [
+          8,
+          3
+        ],
+        [
+          11,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          7,
+          4
+        ],
+        [
+          9,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          6,
+          5
+        ],
+        [
+          7,
+          5
+        ],
+        [
+          12,
+          5
+        ]
+      ],
+      "verified": {
+        "safe": true,
+        "maximal": true,
+        "worstLine": 5,
+        "worstCirc": 5,
+        "unblocked": 0
+      }
+    },
+    {
+      "w": 6,
+      "m": 11,
+      "q": 8,
+      "stones": 41,
+      "cells": [
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          6,
+          0
+        ],
+        [
+          8,
+          0
+        ],
+        [
+          9,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          7,
+          2
+        ],
+        [
+          8,
+          2
+        ],
+        [
+          10,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          5,
+          3
+        ],
+        [
+          6,
+          3
+        ],
+        [
+          8,
+          3
+        ],
+        [
+          9,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          6,
+          4
+        ],
+        [
+          7,
+          4
+        ],
+        [
+          8,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          7,
+          5
+        ],
+        [
+          8,
+          5
+        ]
+      ],
+      "verified": {
+        "safe": true,
+        "maximal": true,
+        "worstLine": 7,
+        "worstCirc": 7,
+        "unblocked": 0
+      }
+    }
+  ],
+  "controls": [
+    {
+      "run": "2x8 q=4",
+      "min": 5,
+      "expected": 5,
+      "ref": "K0796 (5-stone deficient maximal witness re-found)",
+      "pass": true
+    },
+    {
+      "run": "2x9 q=4",
+      "min": 6,
+      "expected": 6,
+      "ref": "K0796 full capacity",
+      "pass": true
+    },
+    {
+      "run": "2x12 q=4",
+      "min": 6,
+      "expected": 6,
+      "ref": "K0069 full capacity",
+      "pass": true
+    },
+    {
+      "run": "5x19 q=7",
+      "min": 30,
+      "expected": 30,
+      "ref": "K0759 complete enumeration: all maximal safe are 30 stones",
+      "pass": true
+    },
+    {
+      "run": "K0761 6x19 q=7 witness (35 stones)",
+      "pass": "safe+maximal in independent verification"
+    },
+    {
+      "run": "K0796 2x8 witness (5 stones)",
+      "pass": "safe+maximal in independent verification"
+    }
+  ],
+  "implications": {
+    "M_6,5 >= 20": "23-stone deficient maximal witness in 6x19 (full capacity 24)",
+    "M_6,6 >= 16": "29-stone deficient maximal witness in 6x15 (full capacity 30)",
+    "M_6,8 >= 12": "41-stone deficient maximal witness in 6x11 (full capacity 42)"
+  },
+  "caveats": "greedy non-discovery at (6,5) m>=20, (6,6) m>=16, (6,8) m>=12, (5,6) m=16..18, (5,7) m=19..21 is NOT an absence proof; upper bounds unchanged (K0318 substitution)"
+}

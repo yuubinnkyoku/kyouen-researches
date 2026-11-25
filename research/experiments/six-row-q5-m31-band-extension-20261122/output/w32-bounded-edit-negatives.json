@@ -1,0 +1,1118 @@
+{
+ "frontier": "6x32 q=5 (witness hunt; all-negative so far = scoped bounded-edit negatives, NOT non-existence)",
+ "base_pool": "the 24 closest width-32 placements of the published m<=30 witness pool (unblocked count <= 3), engine surgery_deep.js (sha256 pinned in manifest)",
+ "classes": {
+  "r0s": "rem k add 0, k=1..4, complete per base",
+  "r1a1": "remove 1 add 1, complete per base (3,887 candidates)",
+  "r2a1": "remove 2 add 1, complete per base (42,757 candidates)",
+  "r3a1": "remove 3 add 1, complete per base (299,299 candidates)",
+  "r4a1": "remove 4 add 1, complete per base (1,496,495 candidates)",
+  "t2": "remove 3 add 2, targeted-complete: enumerated pairs enforce the D-set necessary coverage condition on every base-unblocked target (kept<=3 on any covering curve since target was unblocked => every covering curve carries an add on a >=2-base-stone curve through the target, or the target is itself filled); adds restricted to cells empty in the base (re-add reductions covered by r0s); crossed with ALL C(23,3) removals"
+ },
+ "inputs_per_base": "23 stones base; 169 empty cells at width 32",
+ "note_adds_scope": "in rKa1/t2 classes, adds are cells empty in the base; a witness whose add coincides with a removed base-stone position reduces to a strictly smaller class (net stones identical), and pure-removal classes r0s close those reductions for k<=4; therefore k<=4R<=1A + 3R2A(from targets) coverage per base is complete in the stated edit neighborhood",
+ "bases": [
+  {
+   "baseIndex": 0,
+   "label": "c009@off3",
+   "targets": [
+    [
+     31,
+     5
+    ]
+   ],
+   "rows": [
+    4,
+    4,
+    4,
+    4,
+    4,
+    3
+   ],
+   "ml": 4,
+   "mc": 4,
+   "r0s": {
+    "witnesses": 0
+   },
+   "r1a1": {
+    "candidates": 3887,
+    "witnesses": 0
+   },
+   "r2a1": {
+    "candidates": 42757,
+    "witnesses": 0
+   },
+   "r3a1": {
+    "candidates": 299299,
+    "witnesses": 0
+   },
+   "r4a1": {
+    "candidates": 1496495,
+    "witnesses": 0
+   }
+  },
+  {
+   "baseIndex": 1,
+   "label": "c009@off4",
+   "targets": [
+    [
+     0,
+     5
+    ]
+   ],
+   "rows": [
+    4,
+    4,
+    4,
+    4,
+    4,
+    3
+   ],
+   "ml": 4,
+   "mc": 4,
+   "r0s": {
+    "witnesses": 0
+   },
+   "r1a1": {
+    "candidates": 3887,
+    "witnesses": 0
+   },
+   "r2a1": {
+    "candidates": 42757,
+    "witnesses": 0
+   },
+   "r3a1": {
+    "candidates": 299299,
+    "witnesses": 0
+   },
+   "r4a1": {
+    "candidates": 1496495,
+    "witnesses": 0
+   }
+  },
+  {
+   "baseIndex": 2,
+   "label": "c008@off0",
+   "targets": [
+    [
+     30,
+     4
+    ],
+    [
+     31,
+     4
+    ]
+   ],
+   "rows": [
+    4,
+    4,
+    4,
+    4,
+    3,
+    4
+   ],
+   "ml": 4,
+   "mc": 4,
+   "r0s": {
+    "witnesses": 0
+   },
+   "r1a1": {
+    "candidates": 3887,
+    "witnesses": 0
+   },
+   "r2a1": {
+    "candidates": 42757,
+    "witnesses": 0
+   },
+   "r3a1": {
+    "candidates": 299299,
+    "witnesses": 0
+   },
+   "r4a1": {
+    "candidates": 1496495,
+    "witnesses": 0
+   }
+  },
+  {
+   "baseIndex": 3,
+   "label": "c008@off1",
+   "targets": [
+    [
+     0,
+     4
+    ],
+    [
+     31,
+     4
+    ]
+   ],
+   "rows": [
+    4,
+    4,
+    4,
+    4,
+    3,
+    4
+   ],
+   "ml": 4,
+   "mc": 4,
+   "r0s": {
+    "witnesses": 0
+   },
+   "r1a1": {
+    "candidates": 3887,
+    "witnesses": 0
+   },
+   "r2a1": {
+    "candidates": 42757,
+    "witnesses": 0
+   },
+   "r3a1": {
+    "candidates": 299299,
+    "witnesses": 0
+   },
+   "r4a1": {
+    "candidates": 1496495,
+    "witnesses": 0
+   }
+  },
+  {
+   "baseIndex": 4,
+   "label": "c008@off2",
+   "targets": [
+    [
+     0,
+     4
+    ],
+    [
+     1,
+     4
+    ]
+   ],
+   "rows": [
+    4,
+    4,
+    4,
+    4,
+    3,
+    4
+   ],
+   "ml": 4,
+   "mc": 4,
+   "r0s": {
+    "witnesses": 0
+   },
+   "r1a1": {
+    "candidates": 3887,
+    "witnesses": 0
+   },
+   "r2a1": {
+    "candidates": 42757,
+    "witnesses": 0
+   },
+   "r3a1": {
+    "candidates": 299299,
+    "witnesses": 0
+   },
+   "r4a1": {
+    "candidates": 1496495,
+    "witnesses": 0
+   }
+  },
+  {
+   "baseIndex": 5,
+   "label": "c009@off2",
+   "targets": [
+    [
+     30,
+     5
+    ],
+    [
+     31,
+     5
+    ]
+   ],
+   "rows": [
+    4,
+    4,
+    4,
+    4,
+    4,
+    3
+   ],
+   "ml": 4,
+   "mc": 4,
+   "r0s": {
+    "witnesses": 0
+   },
+   "r1a1": {
+    "candidates": 3887,
+    "witnesses": 0
+   },
+   "r2a1": {
+    "candidates": 42757,
+    "witnesses": 0
+   },
+   "r3a1": {
+    "candidates": 299299,
+    "witnesses": 0
+   },
+   "r4a1": {
+    "candidates": 1496495,
+    "witnesses": 0
+   }
+  },
+  {
+   "baseIndex": 6,
+   "label": "c009@off5",
+   "targets": [
+    [
+     0,
+     5
+    ],
+    [
+     1,
+     5
+    ]
+   ],
+   "rows": [
+    4,
+    4,
+    4,
+    4,
+    4,
+    3
+   ],
+   "ml": 4,
+   "mc": 4,
+   "r0s": {
+    "witnesses": 0
+   },
+   "r1a1": {
+    "candidates": 3887,
+    "witnesses": 0
+   },
+   "r2a1": {
+    "candidates": 42757,
+    "witnesses": 0
+   },
+   "r3a1": {
+    "candidates": 299299,
+    "witnesses": 0
+   },
+   "r4a1": {
+    "candidates": 1496495,
+    "witnesses": 0
+   }
+  },
+  {
+   "baseIndex": 7,
+   "label": "c011@off4",
+   "targets": [
+    [
+     30,
+     4
+    ],
+    [
+     31,
+     4
+    ]
+   ],
+   "rows": [
+    4,
+    4,
+    4,
+    4,
+    3,
+    4
+   ],
+   "ml": 4,
+   "mc": 4,
+   "r0s": {
+    "witnesses": 0
+   },
+   "r1a1": {
+    "candidates": 3887,
+    "witnesses": 0
+   },
+   "r2a1": {
+    "candidates": 42757,
+    "witnesses": 0
+   },
+   "r3a1": {
+    "candidates": 299299,
+    "witnesses": 0
+   },
+   "r4a1": {
+    "candidates": 1496495,
+    "witnesses": 0
+   }
+  },
+  {
+   "baseIndex": 8,
+   "label": "c011@off5",
+   "targets": [
+    [
+     0,
+     4
+    ],
+    [
+     31,
+     4
+    ]
+   ],
+   "rows": [
+    4,
+    4,
+    4,
+    4,
+    3,
+    4
+   ],
+   "ml": 4,
+   "mc": 4,
+   "r0s": {
+    "witnesses": 0
+   },
+   "r1a1": {
+    "candidates": 3887,
+    "witnesses": 0
+   },
+   "r2a1": {
+    "candidates": 42757,
+    "witnesses": 0
+   },
+   "r3a1": {
+    "candidates": 299299,
+    "witnesses": 0
+   },
+   "r4a1": {
+    "candidates": 1496495,
+    "witnesses": 0
+   }
+  },
+  {
+   "baseIndex": 9,
+   "label": "c011@off6",
+   "targets": [
+    [
+     0,
+     4
+    ],
+    [
+     1,
+     4
+    ]
+   ],
+   "rows": [
+    4,
+    4,
+    4,
+    4,
+    3,
+    4
+   ],
+   "ml": 4,
+   "mc": 4,
+   "r0s": {
+    "witnesses": 0
+   },
+   "r1a1": {
+    "candidates": 3887,
+    "witnesses": 0
+   },
+   "r2a1": {
+    "candidates": 42757,
+    "witnesses": 0
+   },
+   "r3a1": {
+    "candidates": 299299,
+    "witnesses": 0
+   },
+   "r4a1": {
+    "candidates": 1496495,
+    "witnesses": 0
+   }
+  },
+  {
+   "baseIndex": 10,
+   "label": "c004@off7",
+   "targets": [
+    [
+     2,
+     2
+    ],
+    [
+     4,
+     2
+    ],
+    [
+     31,
+     2
+    ]
+   ],
+   "rows": [
+    4,
+    4,
+    3,
+    4,
+    4,
+    4
+   ],
+   "ml": 4,
+   "mc": 4,
+   "r0s": {
+    "witnesses": 0
+   },
+   "r1a1": {
+    "candidates": 3887,
+    "witnesses": 0
+   },
+   "r2a1": {
+    "candidates": 42757,
+    "witnesses": 0
+   },
+   "r3a1": {
+    "candidates": 299299,
+    "witnesses": 0
+   },
+   "r4a1": {
+    "candidates": 1496495,
+    "witnesses": 0
+   }
+  },
+  {
+   "baseIndex": 11,
+   "label": "c004@off8",
+   "targets": [
+    [
+     0,
+     2
+    ],
+    [
+     3,
+     2
+    ],
+    [
+     5,
+     2
+    ]
+   ],
+   "rows": [
+    4,
+    4,
+    3,
+    4,
+    4,
+    4
+   ],
+   "ml": 4,
+   "mc": 4,
+   "r0s": {
+    "witnesses": 0
+   },
+   "r1a1": {
+    "candidates": 3887,
+    "witnesses": 0
+   },
+   "r2a1": {
+    "candidates": 42757,
+    "witnesses": 0
+   },
+   "r3a1": {
+    "candidates": 299299,
+    "witnesses": 0
+   },
+   "r4a1": {
+    "candidates": 1496495,
+    "witnesses": 0
+   }
+  },
+  {
+   "baseIndex": 12,
+   "label": "c006@off4",
+   "targets": [
+    [
+     29,
+     4
+    ],
+    [
+     30,
+     4
+    ],
+    [
+     31,
+     4
+    ]
+   ],
+   "rows": [
+    4,
+    4,
+    4,
+    4,
+    3,
+    4
+   ],
+   "ml": 4,
+   "mc": 4,
+   "r0s": {
+    "witnesses": 0
+   },
+   "r1a1": {
+    "candidates": 3887,
+    "witnesses": 0
+   },
+   "r2a1": {
+    "candidates": 42757,
+    "witnesses": 0
+   },
+   "r3a1": {
+    "candidates": 299299,
+    "witnesses": 0
+   },
+   "r4a1": {
+    "candidates": 1496495,
+    "witnesses": 0
+   }
+  },
+  {
+   "baseIndex": 13,
+   "label": "c006@off5",
+   "targets": [
+    [
+     0,
+     4
+    ],
+    [
+     30,
+     4
+    ],
+    [
+     31,
+     4
+    ]
+   ],
+   "rows": [
+    4,
+    4,
+    4,
+    4,
+    3,
+    4
+   ],
+   "ml": 4,
+   "mc": 4,
+   "r0s": {
+    "witnesses": 0
+   },
+   "r1a1": {
+    "candidates": 3887,
+    "witnesses": 0
+   },
+   "r2a1": {
+    "candidates": 42757,
+    "witnesses": 0
+   },
+   "r3a1": {
+    "candidates": 299299,
+    "witnesses": 0
+   },
+   "r4a1": {
+    "candidates": 1496495,
+    "witnesses": 0
+   }
+  },
+  {
+   "baseIndex": 14,
+   "label": "c006@off6",
+   "targets": [
+    [
+     0,
+     4
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     31,
+     4
+    ]
+   ],
+   "rows": [
+    4,
+    4,
+    4,
+    4,
+    3,
+    4
+   ],
+   "ml": 4,
+   "mc": 4,
+   "r0s": {
+    "witnesses": 0
+   },
+   "r1a1": {
+    "candidates": 3887,
+    "witnesses": 0
+   },
+   "r2a1": {
+    "candidates": 42757,
+    "witnesses": 0
+   },
+   "r3a1": {
+    "candidates": 299299,
+    "witnesses": 0
+   },
+   "r4a1": {
+    "candidates": 1496495,
+    "witnesses": 0
+   }
+  },
+  {
+   "baseIndex": 15,
+   "label": "c006@off7",
+   "targets": [
+    [
+     0,
+     4
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     2,
+     4
+    ]
+   ],
+   "rows": [
+    4,
+    4,
+    4,
+    4,
+    3,
+    4
+   ],
+   "ml": 4,
+   "mc": 4,
+   "r0s": {
+    "witnesses": 0
+   },
+   "r1a1": {
+    "candidates": 3887,
+    "witnesses": 0
+   },
+   "r2a1": {
+    "candidates": 42757,
+    "witnesses": 0
+   },
+   "r3a1": {
+    "candidates": 299299,
+    "witnesses": 0
+   },
+   "r4a1": {
+    "candidates": 1496495,
+    "witnesses": 0
+   }
+  },
+  {
+   "baseIndex": 16,
+   "label": "c008@off3",
+   "targets": [
+    [
+     0,
+     4
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     2,
+     4
+    ]
+   ],
+   "rows": [
+    4,
+    4,
+    4,
+    4,
+    3,
+    4
+   ],
+   "ml": 4,
+   "mc": 4,
+   "r0s": {
+    "witnesses": 0
+   },
+   "r1a1": {
+    "candidates": 3887,
+    "witnesses": 0
+   },
+   "r2a1": {
+    "candidates": 42757,
+    "witnesses": 0
+   },
+   "r3a1": {
+    "candidates": 299299,
+    "witnesses": 0
+   },
+   "r4a1": {
+    "candidates": 1496495,
+    "witnesses": 0
+   }
+  },
+  {
+   "baseIndex": 17,
+   "label": "c009@off1",
+   "targets": [
+    [
+     29,
+     5
+    ],
+    [
+     30,
+     5
+    ],
+    [
+     31,
+     5
+    ]
+   ],
+   "rows": [
+    4,
+    4,
+    4,
+    4,
+    4,
+    3
+   ],
+   "ml": 4,
+   "mc": 4,
+   "r0s": {
+    "witnesses": 0
+   },
+   "r1a1": {
+    "candidates": 3887,
+    "witnesses": 0
+   },
+   "r2a1": {
+    "candidates": 42757,
+    "witnesses": 0
+   },
+   "r3a1": {
+    "candidates": 299299,
+    "witnesses": 0
+   },
+   "r4a1": {
+    "candidates": 1496495,
+    "witnesses": 0
+   }
+  },
+  {
+   "baseIndex": 18,
+   "label": "c009@off6",
+   "targets": [
+    [
+     0,
+     5
+    ],
+    [
+     1,
+     5
+    ],
+    [
+     2,
+     5
+    ]
+   ],
+   "rows": [
+    4,
+    4,
+    4,
+    4,
+    4,
+    3
+   ],
+   "ml": 4,
+   "mc": 4,
+   "r0s": {
+    "witnesses": 0
+   },
+   "r1a1": {
+    "candidates": 3887,
+    "witnesses": 0
+   },
+   "r2a1": {
+    "candidates": 42757,
+    "witnesses": 0
+   },
+   "r3a1": {
+    "candidates": 299299,
+    "witnesses": 0
+   },
+   "r4a1": {
+    "candidates": 1496495,
+    "witnesses": 0
+   }
+  },
+  {
+   "baseIndex": 19,
+   "label": "c010@off3",
+   "targets": [
+    [
+     29,
+     0
+    ],
+    [
+     30,
+     0
+    ],
+    [
+     31,
+     0
+    ]
+   ],
+   "rows": [
+    3,
+    4,
+    4,
+    4,
+    4,
+    4
+   ],
+   "ml": 4,
+   "mc": 4,
+   "r0s": {
+    "witnesses": 0
+   },
+   "r1a1": {
+    "candidates": 3887,
+    "witnesses": 0
+   },
+   "r2a1": {
+    "candidates": 42757,
+    "witnesses": 0
+   },
+   "r3a1": {
+    "candidates": 299299,
+    "witnesses": 0
+   },
+   "r4a1": {
+    "candidates": 1496495,
+    "witnesses": 0
+   }
+  },
+  {
+   "baseIndex": 20,
+   "label": "c010@off4",
+   "targets": [
+    [
+     0,
+     0
+    ],
+    [
+     30,
+     0
+    ],
+    [
+     31,
+     0
+    ]
+   ],
+   "rows": [
+    3,
+    4,
+    4,
+    4,
+    4,
+    4
+   ],
+   "ml": 4,
+   "mc": 4,
+   "r0s": {
+    "witnesses": 0
+   },
+   "r1a1": {
+    "candidates": 3887,
+    "witnesses": 0
+   },
+   "r2a1": {
+    "candidates": 42757,
+    "witnesses": 0
+   },
+   "r3a1": {
+    "candidates": 299299,
+    "witnesses": 0
+   },
+   "r4a1": {
+    "candidates": 1496495,
+    "witnesses": 0
+   }
+  },
+  {
+   "baseIndex": 21,
+   "label": "c010@off5",
+   "targets": [
+    [
+     0,
+     0
+    ],
+    [
+     1,
+     0
+    ],
+    [
+     31,
+     0
+    ]
+   ],
+   "rows": [
+    3,
+    4,
+    4,
+    4,
+    4,
+    4
+   ],
+   "ml": 4,
+   "mc": 4,
+   "r0s": {
+    "witnesses": 0
+   },
+   "r1a1": {
+    "candidates": 3887,
+    "witnesses": 0
+   },
+   "r2a1": {
+    "candidates": 42757,
+    "witnesses": 0
+   },
+   "r3a1": {
+    "candidates": 299299,
+    "witnesses": 0
+   },
+   "r4a1": {
+    "candidates": 1496495,
+    "witnesses": 0
+   }
+  },
+  {
+   "baseIndex": 22,
+   "label": "c010@off6",
+   "targets": [
+    [
+     0,
+     0
+    ],
+    [
+     1,
+     0
+    ],
+    [
+     2,
+     0
+    ]
+   ],
+   "rows": [
+    3,
+    4,
+    4,
+    4,
+    4,
+    4
+   ],
+   "ml": 4,
+   "mc": 4,
+   "r0s": {
+    "witnesses": 0
+   },
+   "r1a1": {
+    "candidates": 3887,
+    "witnesses": 0
+   },
+   "r2a1": {
+    "candidates": 42757,
+    "witnesses": 0
+   },
+   "r3a1": {
+    "candidates": 299299,
+    "witnesses": 0
+   },
+   "r4a1": {
+    "candidates": 1496495,
+    "witnesses": 0
+   }
+  },
+  {
+   "baseIndex": 23,
+   "label": "c011@off3",
+   "targets": [
+    [
+     29,
+     4
+    ],
+    [
+     30,
+     4
+    ],
+    [
+     31,
+     4
+    ]
+   ],
+   "rows": [
+    4,
+    4,
+    4,
+    4,
+    3,
+    4
+   ],
+   "ml": 4,
+   "mc": 4,
+   "r0s": {
+    "witnesses": 0
+   },
+   "r1a1": {
+    "candidates": 3887,
+    "witnesses": 0
+   },
+   "r2a1": {
+    "candidates": 42757,
+    "witnesses": 0
+   },
+   "r3a1": {
+    "candidates": 299299,
+    "witnesses": 0
+   },
+   "r4a1": {
+    "candidates": 1496495,
+    "witnesses": 0
+   }
+  }
+ ],
+ "t2_complete_bases": 1,
+ "t2_partial_bases": 0,
+ "result": "0 witnesses in every completed class on every scanned base. All 24 bases have complete r0s/r1a1/r2a1/r3a1/r4a1 (candidate counts in per-basis rows). t2 (rem3add2 targeted-complete) is DONE only on c009@off3: D-size 74 -> 9,731 pairs x 1,771 removals = 17,233,201 verifies, 0 witnesses (sha256-identical engine; the deep-v1 tag re-ran r0s/r1a1... for the same base and matched). Remaining 23 t2 bases resumable via config+witness kit checkpoints.",
+ "claim_scope": "bounded-edit-neighborhood negatives relative to the published pool placements; the 6x32 witness question remains OPEN/UNDETERMINED",
+ "t2_detail": [
+  {
+   "label": "c009@off3",
+   "targets": [
+    [
+     31,
+     5
+    ]
+   ],
+   "dsizes": [
+    74
+   ],
+   "pairs": 9731,
+   "removals": 1771,
+   "witnesses": 0,
+   "tag": "w32-deep-v1/base-000"
+  }
+ ]
+}

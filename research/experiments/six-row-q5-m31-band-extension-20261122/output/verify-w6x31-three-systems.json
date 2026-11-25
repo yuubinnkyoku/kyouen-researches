@@ -1,0 +1,81 @@
+{
+ "witness": "w6x31q5_L2shift1.json",
+ "witness_sha256": "245adc6d17a0d83f61a88c211d8387801fedf60f7ae55bce2681b10049a7f7c7",
+ "board": {
+  "w": 6,
+  "m": 31,
+  "q": 5,
+  "n": 23,
+  "rows": [
+   4,
+   4,
+   4,
+   4,
+   4,
+   3
+  ]
+ },
+ "provenance": "K0815 6th wave L2 6x30 witness (L2_c630_def.json, conflicts 4,001,401), pure x+1 translation; maxx 24->25",
+ "systems": {
+  "a_surgery_gen": {
+   "verdict": "WITNESS_OK",
+   "safe": true,
+   "maximal": true,
+   "deficient": true,
+   "maxline": 4,
+   "maxcirc": 4,
+   "unblockedEmpty": 0,
+   "rc": 0
+  },
+  "b_det_q_verify": {
+   "safe": true,
+   "maximal_at_m": true,
+   "empty_cells": 163,
+   "maxline": 4,
+   "maxcirc": 4,
+   "det_system": "det3/det4 zeros",
+   "rc": 0
+  },
+  "c_append_criterion": {
+   "safe": true,
+   "maxline": 4,
+   "maxcirc": 4,
+   "old_uncovered_count": 0,
+   "free_append_reach": 31,
+   "first_unblocked": [
+    31,
+    5
+   ],
+   "witness_widths": [
+    26,
+    31
+   ],
+   "scan_limit": 50,
+   "rc": 0
+  }
+ },
+ "controls": {
+  "tamper1_move_stone_14_5_to_15_5": {
+   "sysa_rc": 1,
+   "sysb_rc": 1,
+   "append_record": "see verify-suite/tamper1_sysc.txt"
+  },
+  "tamper2_drop_13_0_add_26_0": {
+   "sysa_rc": 1,
+   "sysb_rc": 1,
+   "append_record": "see verify-suite/tamper2_sysc.txt"
+  },
+  "five_same_row": {
+   "sysa_rc": 1,
+   "sysb_rc": 1
+  },
+  "positive_L2_6x30": {
+   "sysa": "WITNESS_OK rc=0",
+   "sysb": "maximal_at_m rc=0",
+   "sysc": "reach 30 rc=0"
+  }
+ },
+ "determinism": "runs A and B byte-identical (diff -r clean)",
+ "claim": "witness exists at 6x31 -> M_{6,5} >= 32 (lower-bound update only); witness_widths [26,31] single-set staircase (6 consecutive widths); no non-existence claim for m>=32",
+ "upper_bound": "T unchanged (658, K0806-style substitution record in K0815)"
+}

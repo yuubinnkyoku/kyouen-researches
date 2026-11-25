@@ -1,0 +1,168 @@
+{
+ "name": "ts-verify-batch2-crosscheck",
+ "system": "third independent verification system: pure TypeScript, no repo code, no census, no SAT; exact integer arithmetic (every intermediate is an integer with |value| < 2^38 < 2^53, IEEE-754 exact); safety = exhaustive q-subset enumeration (collinear branch + rational circle via cleared-denominator integer Cramer), maximality = every empty cell on a curve with >= q-1 stones (all lines e-s and all circles e-s1-s2)",
+ "date": "2026-11-15",
+ "controls": [
+  {
+   "name": "5 collinear detected unsafe at q=5",
+   "pass": true
+  },
+  {
+   "name": "5 concyclic (x^2+y^2=25) detected unsafe at q=5",
+   "pass": true
+  },
+  {
+   "name": "same 5 concyclic are safe at q=6",
+   "pass": true
+  },
+  {
+   "name": "3 isolated stones on 7x33: all 228 empty cells unblocked",
+   "pass": true
+  },
+  {
+   "name": "4 collinear NOT flagged at q=5 (subset size only q)",
+   "pass": true
+  }
+ ],
+ "records": [
+  {
+   "name": "(7,5) m=32 rowY=0 (seven-row-q5-q6-frontier-row-split-20261115)",
+   "q": 5,
+   "w": 7,
+   "m": 32,
+   "n": 27,
+   "rows": [
+    3,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4
+   ],
+   "min_row": 3,
+   "row_deficient": true,
+   "single_deficiency": true,
+   "safe": true,
+   "unblocked": 0,
+   "verdict": "PASS"
+  },
+  {
+   "name": "(7,5) m=33 rowY=0 900s (seven-row-q5-q8-sat-frontier-20261115)",
+   "q": 5,
+   "w": 7,
+   "m": 33,
+   "n": 27,
+   "rows": [
+    3,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4
+   ],
+   "min_row": 3,
+   "row_deficient": true,
+   "single_deficiency": true,
+   "safe": true,
+   "unblocked": 0,
+   "verdict": "PASS"
+  },
+  {
+   "name": "(7,6) m=27 rowY=3 (seven-row-q5-q6-frontier-row-split-20261115)",
+   "q": 6,
+   "w": 7,
+   "m": 27,
+   "n": 34,
+   "rows": [
+    5,
+    5,
+    5,
+    4,
+    5,
+    5,
+    5
+   ],
+   "min_row": 4,
+   "row_deficient": true,
+   "single_deficiency": true,
+   "safe": true,
+   "unblocked": 0,
+   "verdict": "PASS"
+  },
+  {
+   "name": "(7,6) m=28 rowY=3 (seven-row-q5-q8-sat-frontier-20261115)",
+   "q": 6,
+   "w": 7,
+   "m": 28,
+   "n": 34,
+   "rows": [
+    5,
+    5,
+    5,
+    4,
+    5,
+    5,
+    5
+   ],
+   "min_row": 4,
+   "row_deficient": true,
+   "single_deficiency": true,
+   "safe": true,
+   "unblocked": 0,
+   "verdict": "PASS"
+  },
+  {
+   "name": "(7,6) m=29 free-column extension, same 34 stones on 7x29",
+   "q": 6,
+   "w": 7,
+   "m": 29,
+   "n": 34,
+   "rows": [
+    5,
+    5,
+    5,
+    4,
+    5,
+    5,
+    5
+   ],
+   "min_row": 4,
+   "row_deficient": true,
+   "single_deficiency": true,
+   "safe": true,
+   "unblocked": 0,
+   "verdict": "PASS"
+  }
+ ],
+ "extension_probes": [
+  {
+   "name": "(7,5) m=33 stones on 7x34 (freecol-m34 negative reproduced)",
+   "q": 5,
+   "w": 7,
+   "m": 34,
+   "extends_ok": false,
+   "unblocked": [
+    [
+     33,
+     0
+    ]
+   ]
+  },
+  {
+   "name": "(7,6) m=29 stones on 7x30 (freecol negative reproduced)",
+   "q": 6,
+   "w": 7,
+   "m": 30,
+   "extends_ok": false,
+   "unblocked": [
+    [
+     29,
+     3
+    ]
+   ]
+  }
+ ],
+ "verdict": "all 5 witnesses PASS safe+maximal+row-deficient (triple-verified: kissat SAT + js/py dual verification + this ts third system); both free-column negatives reproduced with identical cells; all 5 controls pass"
+}

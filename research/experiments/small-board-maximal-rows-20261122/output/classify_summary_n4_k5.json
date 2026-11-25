@@ -1,0 +1,301 @@
+{
+ "N": 16,
+ "all_have_three_collinear": false,
+ "checks": {
+  "C1_unique_sorted": true,
+  "C2_d4_closure": true,
+  "C3_orbit_sum": 176
+ },
+ "dirs_histogram_all_sets": {
+  "0": 56,
+  "1": 88,
+  "2": 32
+ },
+ "ecc_histogram_all_sets": {
+  "4": 40,
+  "5": 80,
+  "6": 24,
+  "7": 24,
+  "8": 8
+ },
+ "k": 5,
+ "n": 4,
+ "orbit_details_compact": [
+  {
+   "ecc": 4,
+   "orbit_size": 8,
+   "rep": [
+    0,
+    1,
+    2,
+    7,
+    10
+   ],
+   "stabilizer_order": 1
+  },
+  {
+   "ecc": 5,
+   "orbit_size": 8,
+   "rep": [
+    0,
+    1,
+    2,
+    10,
+    11
+   ],
+   "stabilizer_order": 1
+  },
+  {
+   "ecc": 5,
+   "orbit_size": 8,
+   "rep": [
+    0,
+    1,
+    3,
+    4,
+    13
+   ],
+   "stabilizer_order": 1
+  },
+  {
+   "ecc": 7,
+   "orbit_size": 8,
+   "rep": [
+    0,
+    1,
+    3,
+    5,
+    9
+   ],
+   "stabilizer_order": 1
+  },
+  {
+   "ecc": 5,
+   "orbit_size": 8,
+   "rep": [
+    0,
+    1,
+    3,
+    7,
+    13
+   ],
+   "stabilizer_order": 1
+  },
+  {
+   "ecc": 8,
+   "orbit_size": 8,
+   "rep": [
+    0,
+    1,
+    3,
+    9,
+    13
+   ],
+   "stabilizer_order": 1
+  },
+  {
+   "ecc": 4,
+   "orbit_size": 8,
+   "rep": [
+    0,
+    1,
+    4,
+    10,
+    11
+   ],
+   "stabilizer_order": 1
+  },
+  {
+   "ecc": 5,
+   "orbit_size": 8,
+   "rep": [
+    0,
+    1,
+    5,
+    7,
+    13
+   ],
+   "stabilizer_order": 1
+  },
+  {
+   "ecc": 5,
+   "orbit_size": 8,
+   "rep": [
+    0,
+    1,
+    5,
+    8,
+    11
+   ],
+   "stabilizer_order": 1
+  },
+  {
+   "ecc": 5,
+   "orbit_size": 8,
+   "rep": [
+    0,
+    1,
+    6,
+    8,
+    11
+   ],
+   "stabilizer_order": 1
+  },
+  {
+   "ecc": 4,
+   "orbit_size": 8,
+   "rep": [
+    0,
+    1,
+    7,
+    10,
+    11
+   ],
+   "stabilizer_order": 1
+  },
+  {
+   "ecc": 5,
+   "orbit_size": 8,
+   "rep": [
+    0,
+    1,
+    8,
+    10,
+    11
+   ],
+   "stabilizer_order": 1
+  },
+  {
+   "ecc": 4,
+   "orbit_size": 8,
+   "rep": [
+    0,
+    1,
+    9,
+    11,
+    13
+   ],
+   "stabilizer_order": 1
+  },
+  {
+   "ecc": 7,
+   "orbit_size": 8,
+   "rep": [
+    0,
+    2,
+    6,
+    7,
+    10
+   ],
+   "stabilizer_order": 1
+  },
+  {
+   "ecc": 5,
+   "orbit_size": 8,
+   "rep": [
+    0,
+    2,
+    6,
+    8,
+    11
+   ],
+   "stabilizer_order": 1
+  },
+  {
+   "ecc": 6,
+   "orbit_size": 8,
+   "rep": [
+    0,
+    2,
+    7,
+    10,
+    11
+   ],
+   "stabilizer_order": 1
+  },
+  {
+   "ecc": 7,
+   "orbit_size": 8,
+   "rep": [
+    0,
+    2,
+    7,
+    10,
+    12
+   ],
+   "stabilizer_order": 1
+  },
+  {
+   "ecc": 5,
+   "orbit_size": 8,
+   "rep": [
+    0,
+    2,
+    7,
+    10,
+    13
+   ],
+   "stabilizer_order": 1
+  },
+  {
+   "ecc": 6,
+   "orbit_size": 8,
+   "rep": [
+    0,
+    2,
+    7,
+    10,
+    14
+   ],
+   "stabilizer_order": 1
+  },
+  {
+   "ecc": 6,
+   "orbit_size": 8,
+   "rep": [
+    0,
+    6,
+    7,
+    13,
+    14
+   ],
+   "stabilizer_order": 1
+  },
+  {
+   "ecc": 4,
+   "orbit_size": 8,
+   "rep": [
+    1,
+    5,
+    6,
+    7,
+    13
+   ],
+   "stabilizer_order": 1
+  },
+  {
+   "ecc": 5,
+   "orbit_size": 8,
+   "rep": [
+    1,
+    5,
+    7,
+    10,
+    13
+   ],
+   "stabilizer_order": 1
+  }
+ ],
+ "orbits": 22,
+ "source_full_classify_local_only": "members/configs arrays dropped for publication; regenerate by rerunning classify.mjs",
+ "source_full_classify_sha256_local": "a17abc88ac1f725d641782a245b8c71b3b988ef1cd60d6d3fc77f1e1b5ba06ce",
+ "stabilizer_histogram": {
+  "1": 22
+ },
+ "total": 176,
+ "trips3_histogram_all_sets": {
+  "0": 56,
+  "1": 88,
+  "2": 32
+ }
+}

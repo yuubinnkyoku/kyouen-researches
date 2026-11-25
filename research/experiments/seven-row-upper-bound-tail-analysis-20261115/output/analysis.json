@@ -1,0 +1,126 @@
+{
+ "name": "seven-row-upper-bound-tail-analysis",
+ "date": "2026-11-15",
+ "question": "do the K0332-style chord-energy + Melchior refinements (that improved (5,7) from 200 to 158) improve the K0318 upper bounds U_{7,q} = 1142/862/708/651?",
+ "method": "exact integer LP over the K0318 triple budget with (a) the K0318 cross-row pair cap, (b) the Melchior-inversion per-stone y-cap (same derivation as K0332 sec.3), (c) a chord-pair event audit using the sharp K0342 energy E_r; pure TypeScript, exhaustive integer optimization over y",
+ "control": {
+  "(5,7)": {
+   "melchior_per_s": 22,
+   "E_6": 29,
+   "Y_pair": 135,
+   "matches": "K0332 proof.md sec.2-3 values"
+  }
+ },
+ "baseline_reproduction": {
+  "H": {
+   "q5": 1138,
+   "q6": 857,
+   "q7": 702,
+   "q8": 644
+  },
+  "U": {
+   "q5": 1142,
+   "q6": 862,
+   "q7": 708,
+   "q8": 651
+  },
+  "matches_published_K0318_bounds": true
+ },
+ "families": [
+  {
+   "q": 5,
+   "r": 4,
+   "N": 24,
+   "Q": 2000,
+   "d0": 4,
+   "d1": 1,
+   "d1_over_d0": 0.25,
+   "E_r": 8,
+   "melchior_per_stone": 91,
+   "pair_cap": 120,
+   "Y_k0318": 276,
+   "Y_melchior": 273,
+   "H_old": 1138,
+   "H_new": 1136,
+   "U_old": 1142,
+   "U_new": 1140,
+   "gain": 2
+  },
+  {
+   "q": 6,
+   "r": 5,
+   "N": 30,
+   "Q": 4000,
+   "d0": 10,
+   "d1": 4,
+   "d1_over_d0": 0.4,
+   "E_r": 16,
+   "melchior_per_stone": 61,
+   "pair_cap": 93,
+   "Y_k0318": 288,
+   "Y_melchior": 244,
+   "H_old": 857,
+   "H_new": 848,
+   "U_old": 862,
+   "U_new": 853,
+   "gain": 9
+  },
+  {
+   "q": 7,
+   "r": 6,
+   "N": 36,
+   "Q": 7020,
+   "d0": 20,
+   "d1": 10,
+   "d1_over_d0": 0.5,
+   "E_r": 29,
+   "melchior_per_stone": 52,
+   "pair_cap": 67,
+   "Y_k0318": 315,
+   "Y_melchior": 260,
+   "H_old": 702,
+   "H_new": 702,
+   "U_old": 708,
+   "U_new": 708,
+   "gain": 0,
+   "immune": "H = 2Q/d0 = 702 exactly (integer, achieved at y=0); any y-cap is irrelevant"
+  },
+  {
+   "q": 8,
+   "r": 7,
+   "N": 42,
+   "Q": 11270,
+   "d0": 35,
+   "d1": 20,
+   "d1_over_d0": 0.5714,
+   "E_r": 47,
+   "melchior_per_stone": 47,
+   "pair_cap": 61,
+   "Y_k0318": 342,
+   "Y_melchior": 282,
+   "H_old": 644,
+   "H_new": 644,
+   "U_old": 651,
+   "U_new": 651,
+   "gain": 0,
+   "immune": "H = 2Q/d0 = 644 exactly (integer, achieved at y=0); any y-cap is irrelevant"
+  }
+ ],
+ "chord_event_audit": {
+  "row_pair_budget_15Er": {
+   "q5": 120,
+   "q6": 240,
+   "q7": 435,
+   "q8": 705
+  },
+  "zero_event_profiles_available": "q=5/6/7: type-0 (2,1,1,..)/(1,1,..) and type-1 (2,1,..)/(1,..) all have k2<=1 (0 events); q=8 type-0 forced k2>=2 by pigeonhole+mod9 with profiles (2,2,2,1)/(2,2,1,1,1) (>=1 event) but 705 >> 322 (triple cap); q=8 type-1 (2,1,1,1,1) has 0 events",
+  "conclusion": "chord-pair events never bind at w=7; the K0332 (5,7) success relied on profile forcing (2+2+2 / 2+2+1) which disappears at 6 external rows"
+ },
+ "mod9_7row_facts": [
+  "type-1 blocker circles (2 points p,s in the target row => 2-point row) must fully miss >=1 of the 6 external rows as lattice points (external stones occupy <=5 rows)",
+  "type-0 circles with a 2-stone row cannot have lattice points on all 6 external rows (p in L makes 7 rows)",
+  "at q=8 (r=7 > 6) no non-horizontal line blocker exists (<=1 point per external row, <=6 < 7); all type-0 q=8 blockers are circles"
+ ],
+ "next_avenue": "reduce the triple budget Q itself: triples whose determined circle has lattice points on all 7 rows and a 2-point row are mod9-impossible as blockers and can be removed from the usable budget; a universal lower bound on the number of such excluded triples (adversary minimization) is unimplemented",
+ "promotion": "NOT promoted to a knowledge item: the only improvements (1142->1140, 862->853) are negligible against witness lower bounds 34/30; K0318 remains the canonical upper bound"
+}
