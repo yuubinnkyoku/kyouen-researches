@@ -50,6 +50,15 @@ byte 一致で閉じた。本 log は出版 chain の全体を記録する (item
 10. **fetch-back**: 成果物 25 ファイル (official 8 + tamper 15 + detcheck +
     MANIFEST) を FNV-1a 64 bit で照合・25/25 byte 一致 (rate limit 2 件は
     45 秒待ち再試行で解消)。
+11. **K item/run log `af74f1c4`** (単一 commit・item 19,989 bytes + log 5,972
+    bytes・fetch-back 両ファイル byte 一致) → **knowledge README bullet
+    `3f8c5efe`** (K1314 bullet 6 行を EOF に追記・+6/−0・fetch-back sha256
+    28d4fe82… 全文照合)。**インシデント (honest 記録)**: bullet push の
+    実行環境側で MemoryLimitError が報告されたが、実際には push は成功しており
+    (3f8c5efe で +6 行反映済み)、誤再試行した同一内容 push が空 commit
+    `f1accee3` (stats 0/0・tree 不変) を生成した。内容への影響なし
+    (main README は f1accee3 時点で意図どおり sha256 28d4fe82… と byte 一致)。
+    教訓: 実行環境のエラー報告とリモート実結果は必ず独立に照合する。
 
 ## 成果の要約
 
