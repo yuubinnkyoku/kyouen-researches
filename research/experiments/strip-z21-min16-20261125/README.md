@@ -151,3 +151,29 @@ proofs. The paper proofs, the slot claim and the verification machine belong
 to the declaration lane. Section (g) is a pure closed-form pre-computation: it
 uses no engine recursion at all and inherits only the published K0832
 single-token closed form.
+
+## Verify machine (added by the K1337 declaration lane)
+
+- `verify_k1337.py` — sha256 `2291a8977b057ceb1e95d3db2bb36520d2e40b2d8328e4500b02bbc18baea7d1`
+  (structural copy of the published `verify_k1335.py` machine with the disclosed
+  diff: z 20→21, rung budget 14→15, floor 15→16, the declared z=21 closed forms
+  in D1, the published K1335 z=20 cell transcriptions + T-Z20 claim-row anchors
+  re-checked independently in D3/D5, the (ii') below-band supply pair
+  v(s,22,22)/v(s,21,22) in D8. Provisionally named verify_k1336.py; renumbered
+  to verify_k1337.py at the pre-push refetch after the parallel conic lane
+  claimed K1336 — 3 label bytes differ, battery structure unchanged; the
+  numbering incident is disclosed in the declaration note). The K1337
+  single-owner declaration note is
+  `research/log/2026-11-25-strip-z21-min16-single-owner-note.md` (commit
+  `0a89c1c5`). Declaration battery **17,482 points, fail-closed** (per-gate
+  declared point counts enforced; any deviation or any bad point → FAIL):
+  D1 cells 1,440 / D2 strip 150 / D3 z20 anchors 478 / D4 stair anchors 465 /
+  D5 self anchors 14,697 / D6 deviant/collapse witnesses 23 / D7 extension
+  anchors 133 / D8 below-band anchors 96. Engine pin `bd5f22e4…` startup gate.
+  Predry 8 runs byte-identical (default ×2, PYTHONHASHSEED=random/1/0 same-cwd,
+  env -i isolated ×3): stdout sha256
+  `6a3bfb08c189226e559d73caefe89f5b296275bc7b1c8304fbf76b6199948357`.
+  Tamper 8/8 fail-closed (engine rc 2; cell/strip/anchor20/stair/deviant/ext/
+  belowband each rc 1, flagging exactly its target gate with bad=1 and no
+  other). Official runs (publish-then-execute, from these published bytes)
+  follow in `official_runs/`.
