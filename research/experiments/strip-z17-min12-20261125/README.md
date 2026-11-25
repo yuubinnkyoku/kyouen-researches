@@ -112,3 +112,35 @@ of any game position (11x11 standard board, two-stone roots, S2, class 1/2/4 —
 all UNKNOWN) is consumed. Battery/point counts are engine cross-checks, not
 proofs. The paper proofs, the slot claim and the verification machine belong to
 the declaration lane.
+
+## Verification machine (K1325, publish-then-execute wave 2)
+
+- `verify_k1325.py` — sha256
+  `17efe50098a4bd4d491978380d9118de6218365252f0f5ebd29488f29a6b4953`
+  (structural copy of the published verify_k1322.py `27e37152…`; disclosed
+  changes: z 16→17, cell budget j+17→j+18, floor 11→12, rungs 10→11 with the
+  provisional 11th-rank label `A5` adopted as final **A517f12** (min=11, the
+  THIRD consecutive in-band base child), D3 anchors = the published K1322
+  z=16 lines F16f11..A416f11 + T-Z16 C-hand anchors (m ∈ {11..16},
+  covering BOTH the j=11 C-hand child = the T-Z16 m=11 row AND the T-Z17
+  strip rows m ∈ {12..16}), D4 11 x 31 floor-12 s-values, D5 grid x ∈ {1..30},
+  z ∈ {0..18}, 21 R-points per pair + 171 empty anchors, D6 22
+  deviant/collapse witnesses (incl. the F17f12 eighth-form DOWN point, the
+  s=17 hole, the s=18 tail start, the far-tail spot, the FLAT absorptions at
+  the in-run supply points G17 s=14 / D17 s=12,16 / B17 s=14 / A217 s=12,
+  the A-RANK break spot and the fully collapsing A-ranks' spots + the
+  in-band base child spot), D7 tail spots s ∈ {43..50} x 11 cells (the F rows
+  are engine==form==2 mismatches against the collapse 0 by declared design)
+  + strip spots m ∈ {17..20} + m=12 base spot (value 1), D8 below-band gate
+  sweeping H(18;Y;18) vs v(s,18,18) over the full floor-12 census domain
+  (the absorption identity v(s,18,18)=v(s,17,18) holds on {0} ∪ {12..17} and
+  breaks at s>=18, supplying the F17f12 constant-2 tail).
+  Battery: **15,173 fail-closed points** (D1 1705 / D2 358 / D3 350 /
+  D4 341 / D5 12141 / D6 22 / D7 101 / D8 155); engine pin `bd5f22e4…`
+  startup gate; `--tamper-engine` rc 2 + 7 value modes rc 1 each flagging
+  exactly one declared gate (8/8 measured pre-publication).
+  Predry (pre-publication): 7 runs (default; PYTHONHASHSEED=random/1/0 same
+  cwd; 3× env -i isolated dirs) all rc 0, stdout byte-identical, sha256
+  `571403b128cf7e391f6b5151bda819d40c2f5d5b0ef9839f4fc6f17e42f7219f`
+  (~18 s per run). The official 4-run protocol from these published bytes
+  follows in wave 3. No verdict claimed; 11x11 stays UNKNOWN.
