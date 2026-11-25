@@ -1,0 +1,39 @@
+{
+ "session": "class2-lane cost-56a WIN7 certificate (long-term lane session 12, 2026-11-14)",
+ "child_hex": "00000000000000803202020000000000",
+ "certificates": [
+  {
+   "bit": 89,
+   "root_hex": "00000000020000803202020000000000",
+   "verdict": "WIN7",
+   "rows": 27817,
+   "extraction_nodes": 3091585,
+   "extraction": "blind extractBatch (empty kill table, FBS=1<<20): fbt_drops=0, fatal=null, all 43 per-move extractions ok and uncapped",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 43,
+    "independent_enumeration_legal": 43,
+    "match": true
+   },
+   "sub_roots_verified": 43,
+   "sub_roots_pass": 43,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "md5": "b4a5f2234ad913c4b67cf1f5706bfc79",
+   "sha256": "df538e23896bb66ebe696e2065ce5479d9d8063c972d614e5ba6214e74082580",
+   "file": "class2-lane-cost56a-certificates/bit89-root-00000000020000803202020000000000.cert (single file, 1,004,863 bytes; remote md5 verified identical at commit ea5061d6)",
+   "root_not_among_existing": true,
+   "root_absence_check": "GitHub code search over yuubinnkyoku/kyouen-researches for the root hex: 0 hits (absent from all published win7-certificates records)",
+   "v16_search_nodes": 602578,
+   "v15_crosscheck_nodes": 1592278,
+   "v15_crosscheck_verdict": "loss=true (identical)"
+  }
+ ],
+ "unverified_win7_bits": [],
+ "unknown_status": "11x11 empty board, two-stone root {49,60}, S2 {59,60}, class 2, class 4: UNKNOWN"
+}

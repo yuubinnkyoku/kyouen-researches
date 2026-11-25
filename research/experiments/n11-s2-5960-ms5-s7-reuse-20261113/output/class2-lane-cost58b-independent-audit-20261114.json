@@ -1,0 +1,112 @@
+{
+  "schema": "n11-cost58b-win7-independent-bigint-audit-v1",
+  "date": "2026-11-14",
+  "source_commit": "9983c53349b6df6639622cfeaee96f0a84cc6d15",
+  "certificate": {
+    "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost58b-certificates/bit18-root-00000000000000803202000000042000.cert",
+    "git_blob_sha1": "da591d87cdef5c43426847811a37be99c6fcf8cb",
+    "bytes": 1208076,
+    "nonempty_lines": 33461,
+    "strategy_rows": 33459,
+    "header": "n11-terminal-strategy-v1 original_first_WIN7 second_to_move_LOSS"
+  },
+  "root": {
+    "hex": "00000000000000803202000000042000",
+    "stones": 7,
+    "safe": true,
+    "legal_loser_moves": 48,
+    "added_seventh_stone_bit": 18
+  },
+  "verification": {
+    "status": "PASS",
+    "independent_method": "BigInt 3x3-minor Laplace expansion of det([x^2+y^2,x,y,1]); no solver/verifier imports, no floating point, no verdict cache",
+    "subroots_passed": 48,
+    "total_seen_across_subroots": 71903,
+    "consumed_winner_state_visits": 46839,
+    "unique_consumed_winner_states": 33459,
+    "terminals": 9855,
+    "opponent_edges": 68210,
+    "terminal_stone_range": [
+      13,
+      17
+    ],
+    "row_union_missing": 0,
+    "row_union_extra": 0,
+    "distinct_triples_cached": 16439,
+    "exact_determinant_evaluations": 1939802
+  },
+  "s6_parent_lifts": [
+    {
+      "winning_move": 13,
+      "parent_hex": "00000000000000803202000000040000",
+      "worklist": {
+        "cost": 73,
+        "classes": 2
+      }
+    },
+    {
+      "winning_move": 18,
+      "parent_hex": "00000000000000803202000000002000",
+      "worklist": {
+        "cost": 58,
+        "classes": 6
+      }
+    },
+    {
+      "winning_move": 49,
+      "parent_hex": "00000000000000803200000000042000",
+      "worklist": null
+    },
+    {
+      "winning_move": 57,
+      "parent_hex": "00000000000000801802000000084000",
+      "worklist": {
+        "cost": 65,
+        "classes": 4
+      }
+    },
+    {
+      "winning_move": 60,
+      "parent_hex": "00000000000000802202000000042000",
+      "worklist": null
+    },
+    {
+      "winning_move": 61,
+      "parent_hex": "00000000000000801202000000042000",
+      "worklist": {
+        "cost": 77,
+        "classes": 6
+      }
+    },
+    {
+      "winning_move": 71,
+      "parent_hex": "00000000000000003202000000042000",
+      "worklist": null
+    }
+  ],
+  "frontier_context": {
+    "baseline": "class-frontier-cost56a-recompute-20261114.json",
+    "baseline_after_cost56a": {
+      "solved_s6_in_manifest": 927,
+      "unique_remaining_s6": 6920,
+      "sum_remaining_cost": 544617,
+      "s6_needed_by_open_classes": 5190,
+      "cost_needed_by_open_classes": 408340
+    },
+    "s5_target_hex": "00000000000000803202000000000000",
+    "s5_target_after_cost56a": {
+      "remaining_s6_orbits": 39,
+      "remaining_s7_edge_cost": 2657
+    },
+    "explicitly_open_s6_parent": "00000000000000803202000000002000",
+    "explicitly_open_parent_cost": 58,
+    "local_target_after_one_known_child": {
+      "remaining_s6_orbits": 38,
+      "remaining_s7_edge_cost": 2599
+    },
+    "worklist_parent_hits": 4,
+    "marginal_status_of_other_three_parent_lifts": "not recomputed against the full receipt union",
+    "global_recomputed_after_cost58b": false
+  },
+  "interpretation_guard": "This is a verified WIN7 root and gives a first-player winning move from each matched six-stone parent. It does not settle the five-stone S5 target, S2 {59,60}, two-stone root {49,60}, or empty 11x11 board; all remain UNKNOWN."
+}

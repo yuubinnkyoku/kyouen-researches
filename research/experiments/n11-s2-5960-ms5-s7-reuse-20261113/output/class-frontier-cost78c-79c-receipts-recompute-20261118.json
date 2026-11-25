@@ -1,0 +1,1455 @@
+{
+  "schema": "n11-class2-lane-cost78c-79c-combined-receipt-fold-20261118-v1",
+  "date": "2026-11-18",
+  "status": "fold-complete",
+  "source_main_head_before": "62279f626e5f11f58b136861c4c8662e146c3c21",
+  "reproduction_script": {
+    "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/fold_cost78c_79c_receipts_20261118.mjs",
+    "git_blob_sha1": "17f543a11b74bf88f3c4234fcb4c93c5199dbba9"
+  },
+  "source_blob_pins": {
+    "worklist": {
+      "path": "research/experiments/n11-class2-lane-closability-ranking-20261116/output/class-frontier-remaining-s6-worklist-1410-20261116.csv",
+      "git_blob_sha1": "2fee1d0718547a62e346d35f5858d7913e37c097"
+    },
+    "ledger": {
+      "path": "research/experiments/n11-head1410-partial-parent-nonsterile-children-20261118/output/fold-chain-ledger-1410-1476-crosscheck-20261118.json",
+      "git_blob_sha1": "e8785d509e8a11a37c0d03cc450455a14708c34d"
+    },
+    "census": {
+      "path": "research/experiments/n11-head1410-receipt-unclosability-census-20261116/output/n11-head1410-receipt-unclosability-census-20261116.json",
+      "git_blob_sha1": "9c251da3138c5cb0516e097be5e5d0427dfaf5f0"
+    },
+    "globalFold": {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-receipt-harvest-global-fold-20261118.json",
+      "git_blob_sha1": "753a4bf4d0e11bea894111f9fa43bcff5e9ab7dc"
+    },
+    "man78": {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost78c-certificates/class2-lane-cost78c-win7-certificates-20261117.json",
+      "git_blob_sha1": "b7fe519e923c6170e836f71e3f084f73219319d5"
+    },
+    "man79": {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost79c-certificates/class2-lane-cost79c-win7-certificates-20261118.json",
+      "git_blob_sha1": "e904a37665fb77c971ce7f9c64a3c4aa9109da4d"
+    }
+  },
+  "certificate_sources": {
+    "cost78c": {
+      "sweep": "11 WIN7-D10 / 67 REFUTED-D10 / 0 capped",
+      "manifest_certificates": 11,
+      "bigint_independent_verification": "11/11 PASS",
+      "cross_lane_agreement": "7/7 PASS"
+    },
+    "cost79c": {
+      "sweep": "20 WIN7-D10 / 59 REFUTED-D10 / 0 capped",
+      "manifest_certificates": 19,
+      "transferred_win_bit": 110,
+      "transferred_certificate": "canon-equal to published cost73k bit 87",
+      "bigint_third_implementation": "19/19 PASS (3 + 16 split audits)",
+      "raw_batch_audit": "19/19 PASS",
+      "v15_cross_engine": "14/14 agreement",
+      "v13_verdict_conflicts": 0
+    }
+  },
+  "method": {
+    "root_population": "11 cost78c + 19 cost79c published WIN7-D10 certificate roots; cost79c bit110 is not duplicated because its canon-equal cost73k certificate is already in the prior global fold",
+    "root_checks": "all 30 roots have 7 stones, match their manifest D4 canon, and equal child | (1 << win_bit); 30 distinct D4 canons",
+    "independent_cover_algorithms": [
+      "root -> all 8 D4 images -> delete each of 7 stones -> canonicalize the resulting S6 row",
+      "each open S6 row -> all 30 roots -> all 8 D4 images -> direct one-stone subset test"
+    ],
+    "conflict_control": "cost78c cross-lane agreement PASS; cost79c v13 sixteen-map and harvest cross-conflict counts are both zero"
+  },
+  "root_checks": {
+    "roots": 30,
+    "distinct_d4_canons": 30,
+    "all_7_stones": true,
+    "all_manifest_canons_match": true,
+    "all_child_plus_bit": true,
+    "duplicate_canons": 0
+  },
+  "new_receipt_coverage": {
+    "unique_s6_rows": 19,
+    "total_row_root_pairs": 29,
+    "closed_edge_cost": 1542,
+    "rows_with_multiple_receipts": 1,
+    "by_band": {
+      "cost78c": {
+        "certificates": 11,
+        "new_rows": 5,
+        "new_edge_cost": 387,
+        "root_row_pairs": 15,
+        "marginal_by_bit": [
+          {
+            "bit": 1,
+            "marginal": 2,
+            "rows": [
+              "0000000000000000380000000800000a",
+              "00000000000000403800000008000008"
+            ]
+          },
+          {
+            "bit": 4,
+            "marginal": 1,
+            "rows": [
+              "00000000000000003800000008000018"
+            ]
+          },
+          {
+            "bit": 9,
+            "marginal": 0,
+            "rows": []
+          },
+          {
+            "bit": 30,
+            "marginal": 0,
+            "rows": []
+          },
+          {
+            "bit": 49,
+            "marginal": 0,
+            "rows": []
+          },
+          {
+            "bit": 69,
+            "marginal": 0,
+            "rows": []
+          },
+          {
+            "bit": 75,
+            "marginal": 0,
+            "rows": []
+          },
+          {
+            "bit": 79,
+            "marginal": 0,
+            "rows": []
+          },
+          {
+            "bit": 100,
+            "marginal": 0,
+            "rows": []
+          },
+          {
+            "bit": 114,
+            "marginal": 1,
+            "rows": [
+              "00000000000000801242000200000000"
+            ]
+          },
+          {
+            "bit": 116,
+            "marginal": 1,
+            "rows": [
+              "00000000000000849002080000000000"
+            ]
+          }
+        ]
+      },
+      "cost79c": {
+        "certificates": 19,
+        "new_rows": 14,
+        "new_edge_cost": 1155,
+        "root_row_pairs": 14,
+        "roots_with_no_new_open_row": 5,
+        "marginal_by_bit": [
+          {
+            "bit": 1,
+            "marginal": 1,
+            "rows": [
+              "00000000000000801202080000000200"
+            ]
+          },
+          {
+            "bit": 2,
+            "marginal": 1,
+            "rows": [
+              "00000000000000801202080000000100"
+            ]
+          },
+          {
+            "bit": 17,
+            "marginal": 1,
+            "rows": [
+              "00000000000000801202080000008000"
+            ]
+          },
+          {
+            "bit": 21,
+            "marginal": 1,
+            "rows": [
+              "00000000000000801202080000000800"
+            ]
+          },
+          {
+            "bit": 26,
+            "marginal": 1,
+            "rows": [
+              "00000000000000801202080010000000"
+            ]
+          },
+          {
+            "bit": 28,
+            "marginal": 1,
+            "rows": [
+              "00000000000000801202080004000000"
+            ]
+          },
+          {
+            "bit": 29,
+            "marginal": 1,
+            "rows": [
+              "00000000000000801202080002000000"
+            ]
+          },
+          {
+            "bit": 30,
+            "marginal": 1,
+            "rows": [
+              "00000000000000801202080001000000"
+            ]
+          },
+          {
+            "bit": 31,
+            "marginal": 0,
+            "rows": []
+          },
+          {
+            "bit": 47,
+            "marginal": 0,
+            "rows": []
+          },
+          {
+            "bit": 58,
+            "marginal": 1,
+            "rows": [
+              "00000000000000805202080000000000"
+            ]
+          },
+          {
+            "bit": 62,
+            "marginal": 0,
+            "rows": []
+          },
+          {
+            "bit": 91,
+            "marginal": 1,
+            "rows": [
+              "00000000000020809002000002000000"
+            ]
+          },
+          {
+            "bit": 96,
+            "marginal": 0,
+            "rows": []
+          },
+          {
+            "bit": 100,
+            "marginal": 1,
+            "rows": [
+              "00000000000020809002000000001000"
+            ]
+          },
+          {
+            "bit": 109,
+            "marginal": 1,
+            "rows": [
+              "00000000000020809002000000200000"
+            ]
+          },
+          {
+            "bit": 113,
+            "marginal": 1,
+            "rows": [
+              "00000000000020809002000000000008"
+            ]
+          },
+          {
+            "bit": 117,
+            "marginal": 0,
+            "rows": []
+          },
+          {
+            "bit": 120,
+            "marginal": 1,
+            "rows": [
+              "00000000000020809002000000000400"
+            ]
+          }
+        ]
+      }
+    },
+    "marginal_by_root": [
+      {
+        "band": "78c",
+        "bit": 1,
+        "root": "0000000000000040380000000800000a",
+        "child_row": "00000000000000403800000008000008",
+        "child_row_open_before": true,
+        "child_row_newly_closed": true,
+        "covered_open_rows": [
+          "0000000000000000380000000800000a",
+          "00000000000000403800000008000008"
+        ],
+        "marginal_rows": [
+          "0000000000000000380000000800000a",
+          "00000000000000403800000008000008"
+        ],
+        "marginal": 2,
+        "marginal_edge_cost": 150
+      },
+      {
+        "band": "78c",
+        "bit": 4,
+        "root": "00000000000000403800000008000018",
+        "child_row": "00000000000000403800000008000008",
+        "child_row_open_before": true,
+        "child_row_newly_closed": false,
+        "covered_open_rows": [
+          "00000000000000003800000008000018",
+          "00000000000000403800000008000008"
+        ],
+        "marginal_rows": [
+          "00000000000000003800000008000018"
+        ],
+        "marginal": 1,
+        "marginal_edge_cost": 74
+      },
+      {
+        "band": "78c",
+        "bit": 9,
+        "root": "00000000000000403800000008000208",
+        "child_row": "00000000000000403800000008000008",
+        "child_row_open_before": true,
+        "child_row_newly_closed": false,
+        "covered_open_rows": [
+          "00000000000000403800000008000008"
+        ],
+        "marginal_rows": [],
+        "marginal": 0,
+        "marginal_edge_cost": 0
+      },
+      {
+        "band": "78c",
+        "bit": 30,
+        "root": "00000000000000403800000048000008",
+        "child_row": "00000000000000403800000008000008",
+        "child_row_open_before": true,
+        "child_row_newly_closed": false,
+        "covered_open_rows": [
+          "00000000000000403800000008000008"
+        ],
+        "marginal_rows": [],
+        "marginal": 0,
+        "marginal_edge_cost": 0
+      },
+      {
+        "band": "78c",
+        "bit": 49,
+        "root": "00000000000000403802000008000008",
+        "child_row": "00000000000000403800000008000008",
+        "child_row_open_before": true,
+        "child_row_newly_closed": false,
+        "covered_open_rows": [
+          "00000000000000403800000008000008"
+        ],
+        "marginal_rows": [],
+        "marginal": 0,
+        "marginal_edge_cost": 0
+      },
+      {
+        "band": "78c",
+        "bit": 69,
+        "root": "00000000000000603800000008000008",
+        "child_row": "00000000000000403800000008000008",
+        "child_row_open_before": true,
+        "child_row_newly_closed": false,
+        "covered_open_rows": [
+          "00000000000000403800000008000008"
+        ],
+        "marginal_rows": [],
+        "marginal": 0,
+        "marginal_edge_cost": 0
+      },
+      {
+        "band": "78c",
+        "bit": 75,
+        "root": "00000000000001083800000008000080",
+        "child_row": "00000000000000403800000008000008",
+        "child_row_open_before": true,
+        "child_row_newly_closed": false,
+        "covered_open_rows": [
+          "00000000000000403800000008000008"
+        ],
+        "marginal_rows": [],
+        "marginal": 0,
+        "marginal_edge_cost": 0
+      },
+      {
+        "band": "78c",
+        "bit": 79,
+        "root": "00000000000000801206000220000000",
+        "child_row": "00000000000000403800000008000008",
+        "child_row_open_before": true,
+        "child_row_newly_closed": false,
+        "covered_open_rows": [
+          "00000000000000403800000008000008"
+        ],
+        "marginal_rows": [],
+        "marginal": 0,
+        "marginal_edge_cost": 0
+      },
+      {
+        "band": "78c",
+        "bit": 100,
+        "root": "00000000000000801206000200100000",
+        "child_row": "00000000000000403800000008000008",
+        "child_row_open_before": true,
+        "child_row_newly_closed": false,
+        "covered_open_rows": [
+          "00000000000000403800000008000008"
+        ],
+        "marginal_rows": [],
+        "marginal": 0,
+        "marginal_edge_cost": 0
+      },
+      {
+        "band": "78c",
+        "bit": 114,
+        "root": "00000000000000801246000200000000",
+        "child_row": "00000000000000403800000008000008",
+        "child_row_open_before": true,
+        "child_row_newly_closed": false,
+        "covered_open_rows": [
+          "00000000000000403800000008000008",
+          "00000000000000801242000200000000"
+        ],
+        "marginal_rows": [
+          "00000000000000801242000200000000"
+        ],
+        "marginal": 1,
+        "marginal_edge_cost": 81
+      },
+      {
+        "band": "78c",
+        "bit": 116,
+        "root": "00000000000000849003080000000000",
+        "child_row": "00000000000000403800000008000008",
+        "child_row_open_before": true,
+        "child_row_newly_closed": false,
+        "covered_open_rows": [
+          "00000000000000403800000008000008",
+          "00000000000000849002080000000000"
+        ],
+        "marginal_rows": [
+          "00000000000000849002080000000000"
+        ],
+        "marginal": 1,
+        "marginal_edge_cost": 82
+      },
+      {
+        "band": "79c",
+        "bit": 1,
+        "root": "00000000000000c09002000200000002",
+        "child_row": "00000000000000c09002000200000000",
+        "child_row_open_before": false,
+        "child_row_newly_closed": false,
+        "covered_open_rows": [
+          "00000000000000801202080000000200"
+        ],
+        "marginal_rows": [
+          "00000000000000801202080000000200"
+        ],
+        "marginal": 1,
+        "marginal_edge_cost": 89
+      },
+      {
+        "band": "79c",
+        "bit": 2,
+        "root": "00000000000000c09002000200000004",
+        "child_row": "00000000000000c09002000200000000",
+        "child_row_open_before": false,
+        "child_row_newly_closed": false,
+        "covered_open_rows": [
+          "00000000000000801202080000000100"
+        ],
+        "marginal_rows": [
+          "00000000000000801202080000000100"
+        ],
+        "marginal": 1,
+        "marginal_edge_cost": 89
+      },
+      {
+        "band": "79c",
+        "bit": 17,
+        "root": "00000000000000c09002000200020000",
+        "child_row": "00000000000000c09002000200000000",
+        "child_row_open_before": false,
+        "child_row_newly_closed": false,
+        "covered_open_rows": [
+          "00000000000000801202080000008000"
+        ],
+        "marginal_rows": [
+          "00000000000000801202080000008000"
+        ],
+        "marginal": 1,
+        "marginal_edge_cost": 84
+      },
+      {
+        "band": "79c",
+        "bit": 21,
+        "root": "00000000000000c09002000200200000",
+        "child_row": "00000000000000c09002000200000000",
+        "child_row_open_before": false,
+        "child_row_newly_closed": false,
+        "covered_open_rows": [
+          "00000000000000801202080000000800"
+        ],
+        "marginal_rows": [
+          "00000000000000801202080000000800"
+        ],
+        "marginal": 1,
+        "marginal_edge_cost": 82
+      },
+      {
+        "band": "79c",
+        "bit": 26,
+        "root": "00000000000000c09002000204000000",
+        "child_row": "00000000000000c09002000200000000",
+        "child_row_open_before": false,
+        "child_row_newly_closed": false,
+        "covered_open_rows": [
+          "00000000000000801202080010000000"
+        ],
+        "marginal_rows": [
+          "00000000000000801202080010000000"
+        ],
+        "marginal": 1,
+        "marginal_edge_cost": 80
+      },
+      {
+        "band": "79c",
+        "bit": 28,
+        "root": "00000000000000c09002000210000000",
+        "child_row": "00000000000000c09002000200000000",
+        "child_row_open_before": false,
+        "child_row_newly_closed": false,
+        "covered_open_rows": [
+          "00000000000000801202080004000000"
+        ],
+        "marginal_rows": [
+          "00000000000000801202080004000000"
+        ],
+        "marginal": 1,
+        "marginal_edge_cost": 86
+      },
+      {
+        "band": "79c",
+        "bit": 29,
+        "root": "00000000000000c09002000220000000",
+        "child_row": "00000000000000c09002000200000000",
+        "child_row_open_before": false,
+        "child_row_newly_closed": false,
+        "covered_open_rows": [
+          "00000000000000801202080002000000"
+        ],
+        "marginal_rows": [
+          "00000000000000801202080002000000"
+        ],
+        "marginal": 1,
+        "marginal_edge_cost": 82
+      },
+      {
+        "band": "79c",
+        "bit": 30,
+        "root": "00000000000000c09002000240000000",
+        "child_row": "00000000000000c09002000200000000",
+        "child_row_open_before": false,
+        "child_row_newly_closed": false,
+        "covered_open_rows": [
+          "00000000000000801202080001000000"
+        ],
+        "marginal_rows": [
+          "00000000000000801202080001000000"
+        ],
+        "marginal": 1,
+        "marginal_edge_cost": 82
+      },
+      {
+        "band": "79c",
+        "bit": 31,
+        "root": "00000000000000c09002000280000000",
+        "child_row": "00000000000000c09002000200000000",
+        "child_row_open_before": false,
+        "child_row_newly_closed": false,
+        "covered_open_rows": [],
+        "marginal_rows": [],
+        "marginal": 0,
+        "marginal_edge_cost": 0
+      },
+      {
+        "band": "79c",
+        "bit": 47,
+        "root": "00000000000000c09002800200000000",
+        "child_row": "00000000000000c09002000200000000",
+        "child_row_open_before": false,
+        "child_row_newly_closed": false,
+        "covered_open_rows": [],
+        "marginal_rows": [],
+        "marginal": 0,
+        "marginal_edge_cost": 0
+      },
+      {
+        "band": "79c",
+        "bit": 58,
+        "root": "00000000000000c09402000200000000",
+        "child_row": "00000000000000c09002000200000000",
+        "child_row_open_before": false,
+        "child_row_newly_closed": false,
+        "covered_open_rows": [
+          "00000000000000805202080000000000"
+        ],
+        "marginal_rows": [
+          "00000000000000805202080000000000"
+        ],
+        "marginal": 1,
+        "marginal_edge_cost": 71
+      },
+      {
+        "band": "79c",
+        "bit": 62,
+        "root": "00000000000000c0d002000200000000",
+        "child_row": "00000000000000c09002000200000000",
+        "child_row_open_before": false,
+        "child_row_newly_closed": false,
+        "covered_open_rows": [],
+        "marginal_rows": [],
+        "marginal": 0,
+        "marginal_edge_cost": 0
+      },
+      {
+        "band": "79c",
+        "bit": 91,
+        "root": "00000000000020809003000002000000",
+        "child_row": "00000000000000c09002000200000000",
+        "child_row_open_before": false,
+        "child_row_newly_closed": false,
+        "covered_open_rows": [
+          "00000000000020809002000002000000"
+        ],
+        "marginal_rows": [
+          "00000000000020809002000002000000"
+        ],
+        "marginal": 1,
+        "marginal_edge_cost": 82
+      },
+      {
+        "band": "79c",
+        "bit": 96,
+        "root": "00000000000020809003000040000000",
+        "child_row": "00000000000000c09002000200000000",
+        "child_row_open_before": false,
+        "child_row_newly_closed": false,
+        "covered_open_rows": [],
+        "marginal_rows": [],
+        "marginal": 0,
+        "marginal_edge_cost": 0
+      },
+      {
+        "band": "79c",
+        "bit": 100,
+        "root": "00000000000020809003000000001000",
+        "child_row": "00000000000000c09002000200000000",
+        "child_row_open_before": false,
+        "child_row_newly_closed": false,
+        "covered_open_rows": [
+          "00000000000020809002000000001000"
+        ],
+        "marginal_rows": [
+          "00000000000020809002000000001000"
+        ],
+        "marginal": 1,
+        "marginal_edge_cost": 81
+      },
+      {
+        "band": "79c",
+        "bit": 109,
+        "root": "00000000000020809003000000200000",
+        "child_row": "00000000000000c09002000200000000",
+        "child_row_open_before": false,
+        "child_row_newly_closed": false,
+        "covered_open_rows": [
+          "00000000000020809002000000200000"
+        ],
+        "marginal_rows": [
+          "00000000000020809002000000200000"
+        ],
+        "marginal": 1,
+        "marginal_edge_cost": 81
+      },
+      {
+        "band": "79c",
+        "bit": 113,
+        "root": "00000000000020809003000000000008",
+        "child_row": "00000000000000c09002000200000000",
+        "child_row_open_before": false,
+        "child_row_newly_closed": false,
+        "covered_open_rows": [
+          "00000000000020809002000000000008"
+        ],
+        "marginal_rows": [
+          "00000000000020809002000000000008"
+        ],
+        "marginal": 1,
+        "marginal_edge_cost": 79
+      },
+      {
+        "band": "79c",
+        "bit": 117,
+        "root": "00000000000020809003000000000080",
+        "child_row": "00000000000000c09002000200000000",
+        "child_row_open_before": false,
+        "child_row_newly_closed": false,
+        "covered_open_rows": [],
+        "marginal_rows": [],
+        "marginal": 0,
+        "marginal_edge_cost": 0
+      },
+      {
+        "band": "79c",
+        "bit": 120,
+        "root": "00000000000020809003000000000400",
+        "child_row": "00000000000000c09002000200000000",
+        "child_row_open_before": false,
+        "child_row_newly_closed": false,
+        "covered_open_rows": [
+          "00000000000020809002000000000400"
+        ],
+        "marginal_rows": [
+          "00000000000020809002000000000400"
+        ],
+        "marginal": 1,
+        "marginal_edge_cost": 87
+      }
+    ],
+    "receipts_by_row": [
+      {
+        "row_hex": "0000000000000000380000000800000a",
+        "cost": 72,
+        "category": "unswept",
+        "demand": {
+          "c1": 0,
+          "c2": 1,
+          "c4": 0
+        },
+        "parents": [
+          "00000000000000003800000008000002"
+        ],
+        "receipts": [
+          {
+            "root": "0000000000000040380000000800000a",
+            "band": "78c",
+            "bit": 1,
+            "transform": 0,
+            "extra_bit": 70
+          }
+        ]
+      },
+      {
+        "row_hex": "00000000000000003800000008000018",
+        "cost": 74,
+        "category": "unswept",
+        "demand": {
+          "c1": 0,
+          "c2": 1,
+          "c4": 0
+        },
+        "parents": [
+          "00000000000000003800000008000010"
+        ],
+        "receipts": [
+          {
+            "root": "00000000000000403800000008000018",
+            "band": "78c",
+            "bit": 4,
+            "transform": 0,
+            "extra_bit": 70
+          }
+        ]
+      },
+      {
+        "row_hex": "00000000000000403800000008000008",
+        "cost": 78,
+        "category": "unswept",
+        "demand": {
+          "c1": 0,
+          "c2": 1,
+          "c4": 0
+        },
+        "parents": [
+          "00000000000000403800000008000000"
+        ],
+        "receipts": [
+          {
+            "root": "0000000000000040380000000800000a",
+            "band": "78c",
+            "bit": 1,
+            "transform": 0,
+            "extra_bit": 1
+          },
+          {
+            "root": "00000000000000403800000008000018",
+            "band": "78c",
+            "bit": 4,
+            "transform": 0,
+            "extra_bit": 4
+          },
+          {
+            "root": "00000000000000403800000008000208",
+            "band": "78c",
+            "bit": 9,
+            "transform": 0,
+            "extra_bit": 9
+          },
+          {
+            "root": "00000000000000403800000048000008",
+            "band": "78c",
+            "bit": 30,
+            "transform": 0,
+            "extra_bit": 30
+          },
+          {
+            "root": "00000000000000403802000008000008",
+            "band": "78c",
+            "bit": 49,
+            "transform": 0,
+            "extra_bit": 49
+          },
+          {
+            "root": "00000000000000603800000008000008",
+            "band": "78c",
+            "bit": 69,
+            "transform": 0,
+            "extra_bit": 69
+          },
+          {
+            "root": "00000000000001083800000008000080",
+            "band": "78c",
+            "bit": 75,
+            "transform": 0,
+            "extra_bit": 75
+          },
+          {
+            "root": "00000000000000801206000220000000",
+            "band": "78c",
+            "bit": 79,
+            "transform": 0,
+            "extra_bit": 79
+          },
+          {
+            "root": "00000000000000801206000200100000",
+            "band": "78c",
+            "bit": 100,
+            "transform": 0,
+            "extra_bit": 100
+          },
+          {
+            "root": "00000000000000801246000200000000",
+            "band": "78c",
+            "bit": 114,
+            "transform": 0,
+            "extra_bit": 114
+          },
+          {
+            "root": "00000000000000849003080000000000",
+            "band": "78c",
+            "bit": 116,
+            "transform": 0,
+            "extra_bit": 116
+          }
+        ]
+      },
+      {
+        "row_hex": "00000000000000801202080000000100",
+        "cost": 89,
+        "category": "unswept",
+        "demand": {
+          "c1": 0,
+          "c2": 2,
+          "c4": 0
+        },
+        "parents": [
+          "00000000000000801202000000000100",
+          "00000000000000801202080000000000"
+        ],
+        "receipts": [
+          {
+            "root": "00000000000000c09002000200000004",
+            "band": "79c",
+            "bit": 2,
+            "transform": 4,
+            "extra_bit": 72
+          }
+        ]
+      },
+      {
+        "row_hex": "00000000000000801202080000000200",
+        "cost": 89,
+        "category": "unswept",
+        "demand": {
+          "c1": 0,
+          "c2": 2,
+          "c4": 0
+        },
+        "parents": [
+          "00000000000000801202000000000200",
+          "00000000000000801202080000000000"
+        ],
+        "receipts": [
+          {
+            "root": "00000000000000c09002000200000002",
+            "band": "79c",
+            "bit": 1,
+            "transform": 4,
+            "extra_bit": 72
+          }
+        ]
+      },
+      {
+        "row_hex": "00000000000000801202080000000800",
+        "cost": 82,
+        "category": "unswept",
+        "demand": {
+          "c1": 0,
+          "c2": 2,
+          "c4": 0
+        },
+        "parents": [
+          "00000000000000003800000008000002",
+          "00000000000000801202080000000000"
+        ],
+        "receipts": [
+          {
+            "root": "00000000000000c09002000200200000",
+            "band": "79c",
+            "bit": 21,
+            "transform": 4,
+            "extra_bit": 72
+          }
+        ]
+      },
+      {
+        "row_hex": "00000000000000801202080000008000",
+        "cost": 84,
+        "category": "unswept",
+        "demand": {
+          "c1": 0,
+          "c2": 2,
+          "c4": 0
+        },
+        "parents": [
+          "00000000000000003800200008000000",
+          "00000000000000801202080000000000"
+        ],
+        "receipts": [
+          {
+            "root": "00000000000000c09002000200020000",
+            "band": "79c",
+            "bit": 17,
+            "transform": 4,
+            "extra_bit": 72
+          }
+        ]
+      },
+      {
+        "row_hex": "00000000000000801202080001000000",
+        "cost": 82,
+        "category": "unswept",
+        "demand": {
+          "c1": 0,
+          "c2": 2,
+          "c4": 0
+        },
+        "parents": [
+          "00000000000000003800000009000000",
+          "00000000000000801202080000000000"
+        ],
+        "receipts": [
+          {
+            "root": "00000000000000c09002000240000000",
+            "band": "79c",
+            "bit": 30,
+            "transform": 4,
+            "extra_bit": 72
+          }
+        ]
+      },
+      {
+        "row_hex": "00000000000000801202080002000000",
+        "cost": 82,
+        "category": "unswept",
+        "demand": {
+          "c1": 0,
+          "c2": 2,
+          "c4": 0
+        },
+        "parents": [
+          "00000000000000003800000808000000",
+          "00000000000000801202080000000000"
+        ],
+        "receipts": [
+          {
+            "root": "00000000000000c09002000220000000",
+            "band": "79c",
+            "bit": 29,
+            "transform": 4,
+            "extra_bit": 72
+          }
+        ]
+      },
+      {
+        "row_hex": "00000000000000801202080004000000",
+        "cost": 86,
+        "category": "unswept",
+        "demand": {
+          "c1": 0,
+          "c2": 2,
+          "c4": 0
+        },
+        "parents": [
+          "00000000000000003800400008000000",
+          "00000000000000801202080000000000"
+        ],
+        "receipts": [
+          {
+            "root": "00000000000000c09002000210000000",
+            "band": "79c",
+            "bit": 28,
+            "transform": 4,
+            "extra_bit": 72
+          }
+        ]
+      },
+      {
+        "row_hex": "00000000000000801202080010000000",
+        "cost": 80,
+        "category": "unswept",
+        "demand": {
+          "c1": 0,
+          "c2": 2,
+          "c4": 0
+        },
+        "parents": [
+          "00000000000000103800000008000000",
+          "00000000000000801202080000000000"
+        ],
+        "receipts": [
+          {
+            "root": "00000000000000c09002000204000000",
+            "band": "79c",
+            "bit": 26,
+            "transform": 4,
+            "extra_bit": 72
+          }
+        ]
+      },
+      {
+        "row_hex": "00000000000000801242000200000000",
+        "cost": 81,
+        "category": "unswept",
+        "demand": {
+          "c1": 0,
+          "c2": 1,
+          "c4": 0
+        },
+        "parents": [
+          "00000000000000801242000000000000"
+        ],
+        "receipts": [
+          {
+            "root": "00000000000000801246000200000000",
+            "band": "78c",
+            "bit": 114,
+            "transform": 6,
+            "extra_bit": 50
+          }
+        ]
+      },
+      {
+        "row_hex": "00000000000000805202080000000000",
+        "cost": 71,
+        "category": "unswept",
+        "demand": {
+          "c1": 0,
+          "c2": 1,
+          "c4": 0
+        },
+        "parents": [
+          "00000000000000801202080000000000"
+        ],
+        "receipts": [
+          {
+            "root": "00000000000000c09402000200000000",
+            "band": "79c",
+            "bit": 58,
+            "transform": 4,
+            "extra_bit": 72
+          }
+        ]
+      },
+      {
+        "row_hex": "00000000000000849002080000000000",
+        "cost": 82,
+        "category": "unswept",
+        "demand": {
+          "c1": 0,
+          "c2": 1,
+          "c4": 0
+        },
+        "parents": [
+          "00000000000000801242000000000000"
+        ],
+        "receipts": [
+          {
+            "root": "00000000000000849003080000000000",
+            "band": "78c",
+            "bit": 116,
+            "transform": 3,
+            "extra_bit": 48
+          }
+        ]
+      },
+      {
+        "row_hex": "00000000000020809002000000000008",
+        "cost": 79,
+        "category": "unswept",
+        "demand": {
+          "c1": 0,
+          "c2": 2,
+          "c4": 0
+        },
+        "parents": [
+          "00000000000000801202000000000080",
+          "00000000000000801202080000000000"
+        ],
+        "receipts": [
+          {
+            "root": "00000000000020809003000000000008",
+            "band": "79c",
+            "bit": 113,
+            "transform": 5,
+            "extra_bit": 48
+          }
+        ]
+      },
+      {
+        "row_hex": "00000000000020809002000000000400",
+        "cost": 87,
+        "category": "unswept",
+        "demand": {
+          "c1": 0,
+          "c2": 2,
+          "c4": 0
+        },
+        "parents": [
+          "00000000000000003800000008000001",
+          "00000000000000801202080000000000"
+        ],
+        "receipts": [
+          {
+            "root": "00000000000020809003000000000400",
+            "band": "79c",
+            "bit": 120,
+            "transform": 5,
+            "extra_bit": 48
+          }
+        ]
+      },
+      {
+        "row_hex": "00000000000020809002000000001000",
+        "cost": 81,
+        "category": "unswept",
+        "demand": {
+          "c1": 0,
+          "c2": 2,
+          "c4": 0
+        },
+        "parents": [
+          "00000000000000801202000000100000",
+          "00000000000000801202080000000000"
+        ],
+        "receipts": [
+          {
+            "root": "00000000000020809003000000001000",
+            "band": "79c",
+            "bit": 100,
+            "transform": 5,
+            "extra_bit": 48
+          }
+        ]
+      },
+      {
+        "row_hex": "00000000000020809002000000200000",
+        "cost": 81,
+        "category": "unswept",
+        "demand": {
+          "c1": 0,
+          "c2": 2,
+          "c4": 0
+        },
+        "parents": [
+          "00000000000000003800000008000002",
+          "00000000000000801202080000000000"
+        ],
+        "receipts": [
+          {
+            "root": "00000000000020809003000000200000",
+            "band": "79c",
+            "bit": 109,
+            "transform": 5,
+            "extra_bit": 48
+          }
+        ]
+      },
+      {
+        "row_hex": "00000000000020809002000002000000",
+        "cost": 82,
+        "category": "unswept",
+        "demand": {
+          "c1": 0,
+          "c2": 2,
+          "c4": 0
+        },
+        "parents": [
+          "00000000000000801202000020000000",
+          "00000000000000801202080000000000"
+        ],
+        "receipts": [
+          {
+            "root": "00000000000020809003000002000000",
+            "band": "79c",
+            "bit": 91,
+            "transform": 5,
+            "extra_bit": 48
+          }
+        ]
+      }
+    ]
+  },
+  "parent_deltas": [
+    {
+      "parent_hex": "00000000000000003800000008000001",
+      "classes": 2,
+      "rows_before": 46,
+      "cost_before": 3721,
+      "rows_closed": 1,
+      "cost_closed": 87,
+      "rows_after": 45,
+      "cost_after": 3634
+    },
+    {
+      "parent_hex": "00000000000000003800000008000002",
+      "classes": 2,
+      "rows_before": 31,
+      "cost_before": 2350,
+      "rows_closed": 3,
+      "cost_closed": 235,
+      "rows_after": 28,
+      "cost_after": 2115
+    },
+    {
+      "parent_hex": "00000000000000003800000008000010",
+      "classes": 2,
+      "rows_before": 47,
+      "cost_before": 3531,
+      "rows_closed": 1,
+      "cost_closed": 74,
+      "rows_after": 46,
+      "cost_after": 3457
+    },
+    {
+      "parent_hex": "00000000000000003800000009000000",
+      "classes": 2,
+      "rows_before": 26,
+      "cost_before": 1985,
+      "rows_closed": 1,
+      "cost_closed": 82,
+      "rows_after": 25,
+      "cost_after": 1903
+    },
+    {
+      "parent_hex": "00000000000000003800000808000000",
+      "classes": 2,
+      "rows_before": 50,
+      "cost_before": 3743,
+      "rows_closed": 1,
+      "cost_closed": 82,
+      "rows_after": 49,
+      "cost_after": 3661
+    },
+    {
+      "parent_hex": "00000000000000003800200008000000",
+      "classes": 2,
+      "rows_before": 58,
+      "cost_before": 4494,
+      "rows_closed": 1,
+      "cost_closed": 84,
+      "rows_after": 57,
+      "cost_after": 4410
+    },
+    {
+      "parent_hex": "00000000000000003800400008000000",
+      "classes": 2,
+      "rows_before": 44,
+      "cost_before": 3507,
+      "rows_closed": 1,
+      "cost_closed": 86,
+      "rows_after": 43,
+      "cost_after": 3421
+    },
+    {
+      "parent_hex": "00000000000000103800000008000000",
+      "classes": 2,
+      "rows_before": 54,
+      "cost_before": 4059,
+      "rows_closed": 1,
+      "cost_closed": 80,
+      "rows_after": 53,
+      "cost_after": 3979
+    },
+    {
+      "parent_hex": "00000000000000403800000008000000",
+      "classes": 2,
+      "rows_before": 1,
+      "cost_before": 78,
+      "rows_closed": 1,
+      "cost_closed": 78,
+      "rows_after": 0,
+      "cost_after": 0
+    },
+    {
+      "parent_hex": "00000000000000801202000000000080",
+      "classes": 2,
+      "rows_before": 46,
+      "cost_before": 3462,
+      "rows_closed": 1,
+      "cost_closed": 79,
+      "rows_after": 45,
+      "cost_after": 3383
+    },
+    {
+      "parent_hex": "00000000000000801202000000000100",
+      "classes": 2,
+      "rows_before": 56,
+      "cost_before": 4600,
+      "rows_closed": 1,
+      "cost_closed": 89,
+      "rows_after": 55,
+      "cost_after": 4511
+    },
+    {
+      "parent_hex": "00000000000000801202000000000200",
+      "classes": 2,
+      "rows_before": 61,
+      "cost_before": 4996,
+      "rows_closed": 1,
+      "cost_closed": 89,
+      "rows_after": 60,
+      "cost_after": 4907
+    },
+    {
+      "parent_hex": "00000000000000801202000000100000",
+      "classes": 2,
+      "rows_before": 39,
+      "cost_before": 2864,
+      "rows_closed": 1,
+      "cost_closed": 81,
+      "rows_after": 38,
+      "cost_after": 2783
+    },
+    {
+      "parent_hex": "00000000000000801202000020000000",
+      "classes": 2,
+      "rows_before": 41,
+      "cost_before": 3113,
+      "rows_closed": 1,
+      "cost_closed": 82,
+      "rows_after": 40,
+      "cost_after": 3031
+    },
+    {
+      "parent_hex": "00000000000000801202080000000000",
+      "classes": 2,
+      "rows_before": 70,
+      "cost_before": 5804,
+      "rows_closed": 14,
+      "cost_closed": 1155,
+      "rows_after": 56,
+      "cost_after": 4649
+    },
+    {
+      "parent_hex": "00000000000000801242000000000000",
+      "classes": 2,
+      "rows_before": 45,
+      "cost_before": 3578,
+      "rows_closed": 2,
+      "cost_closed": 163,
+      "rows_after": 43,
+      "cost_after": 3415
+    }
+  ],
+  "parent_closure": {
+    "fully_closed_count": 1,
+    "fully_closed": [
+      {
+        "parent_hex": "00000000000000403800000008000000",
+        "classes": 2,
+        "rows_before": 1,
+        "cost_before": 78,
+        "rows_closed": 1,
+        "cost_closed": 78,
+        "rows_after": 0,
+        "cost_after": 0
+      }
+    ],
+    "affected_parents": 16,
+    "parent_row_incidence_touched": 32
+  },
+  "frontier_after": {
+    "solved_s6_in_manifest": 1608,
+    "remaining_s5_orbits": 173,
+    "unique_remaining_s6": 6240,
+    "sum_remaining_cost": 493965,
+    "s6_needed_by_open_classes": 4524,
+    "cost_needed_by_open_classes": 358685,
+    "parent_row_incidence": 11886
+  },
+  "controls": {
+    "base_frontier_recomputed": [
+      6259,
+      495507,
+      4543,
+      360227
+    ],
+    "base_frontier_matches_global_fold": true,
+    "two_cover_algorithms_same_19_rows": true,
+    "two_cover_algorithms_same_29_root_row_pairs": true,
+    "cost78c_child_was_open": true,
+    "cost79c_child_was_already_closed_by_global_fold": true,
+    "first_fully_receipt_closed_s5_parent": "00000000000000403800000008000000",
+    "target_parent_rows_before_after": [
+      1,
+      0
+    ],
+    "target_parent_cost_before_after": [
+      78,
+      0
+    ]
+  },
+  "interpretation_guard": [
+    "This is certificate-receipt and manifest-coverage bookkeeping only; no new engine verdict was created in this fold.",
+    "WIN7-D10 proves a first-player win within depth 10 only from the individual seven-stone root.",
+    "REFUTED-D10 is not a LOSS proof.",
+    "The standard 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, and classes 1/2/4 remain UNKNOWN."
+  ]
+}

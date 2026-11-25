@@ -1,0 +1,675 @@
+{
+ "schema": "n11-class2-lane-cost61b-child-sweep-20261114-v1",
+ "date": "2026-11-14",
+ "target": {
+  "s6_child_hex": "00000000000000801a02020000000000",
+  "s6_s7_edge_cost": 61,
+  "demand": "c2=2,c4=0",
+  "role": "second cheapest unswept S6 child of the best class-2 blocker S5 00000000000000003802000008000000 after the cost-61 (a) sweep; class-2-only demand"
+ },
+ "method": "same as class2-lane cost-61 (a) sweep: v15 engine verbatim (class4_child1_runner.ts) via native Node v22, per-candidate freshEngine, close-first AND at depth>=8, cap 50M, depth 10 single-run, 61 non-degenerate candidates (= all legal 7th stones), 2 parallel workers, per-bit incremental JSONL",
+ "verdicts": {
+  "win7_d10": [
+   0,
+   1,
+   6,
+   28,
+   32,
+   33,
+   50,
+   84,
+   90,
+   99,
+   105,
+   110
+  ],
+  "refuted_d10": [
+   3,
+   4,
+   8,
+   9,
+   10,
+   11,
+   12,
+   14,
+   17,
+   18,
+   19,
+   21,
+   22,
+   24,
+   25,
+   26,
+   31,
+   35,
+   42,
+   43,
+   52,
+   54,
+   66,
+   72,
+   77,
+   78,
+   79,
+   86,
+   87,
+   88,
+   92,
+   94,
+   97,
+   98,
+   100,
+   102,
+   106,
+   107,
+   108,
+   109,
+   111,
+   112,
+   113,
+   114,
+   116,
+   117,
+   118,
+   119,
+   120
+  ]
+ },
+ "totals": {
+  "nodes": 122567571,
+  "win7": 12,
+  "refuted": 49,
+  "capped": 0,
+  "candidates": 61
+ },
+ "pilot_control": {
+  "root": "00000000000000003802000008000006",
+  "depth": 6,
+  "loss": false,
+  "nodes": 5949,
+  "result": "PASS",
+  "runs": 2
+ },
+ "determinism_controls": {
+  "bits_rerun": [
+   102,
+   1,
+   84
+  ],
+  "independent_reruns": 1,
+  "node_counts_identical": true,
+  "loss_identical": true,
+  "note": "the 3 heaviest candidates rerun fresh in an independent process: node-exact and verdict-identical; all 61 terminal ranges [13,17]."
+ },
+ "per_candidate": {
+  "0": {
+   "loss": true,
+   "nodes": 3970395,
+   "capped": false,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  "1": {
+   "loss": true,
+   "nodes": 5724997,
+   "capped": false,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  "3": {
+   "loss": false,
+   "nodes": 1916942,
+   "capped": false,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  "4": {
+   "loss": false,
+   "nodes": 418970,
+   "capped": false,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  "6": {
+   "loss": true,
+   "nodes": 4031119,
+   "capped": false,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  "8": {
+   "loss": false,
+   "nodes": 706744,
+   "capped": false,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  "9": {
+   "loss": false,
+   "nodes": 570246,
+   "capped": false,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  "10": {
+   "loss": false,
+   "nodes": 663043,
+   "capped": false,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  "11": {
+   "loss": false,
+   "nodes": 2297962,
+   "capped": false,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  "12": {
+   "loss": false,
+   "nodes": 3951591,
+   "capped": false,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  "14": {
+   "loss": false,
+   "nodes": 2792343,
+   "capped": false,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  "17": {
+   "loss": false,
+   "nodes": 914216,
+   "capped": false,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  "18": {
+   "loss": false,
+   "nodes": 1302016,
+   "capped": false,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  "19": {
+   "loss": false,
+   "nodes": 327049,
+   "capped": false,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  "21": {
+   "loss": false,
+   "nodes": 1039693,
+   "capped": false,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  "22": {
+   "loss": false,
+   "nodes": 426916,
+   "capped": false,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  "24": {
+   "loss": false,
+   "nodes": 738608,
+   "capped": false,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  "25": {
+   "loss": false,
+   "nodes": 1115631,
+   "capped": false,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  "26": {
+   "loss": false,
+   "nodes": 537500,
+   "capped": false,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  "28": {
+   "loss": true,
+   "nodes": 3516079,
+   "capped": false,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  "31": {
+   "loss": false,
+   "nodes": 3177515,
+   "capped": false,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  "32": {
+   "loss": true,
+   "nodes": 2904755,
+   "capped": false,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  "33": {
+   "loss": true,
+   "nodes": 3648470,
+   "capped": false,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  "35": {
+   "loss": false,
+   "nodes": 304272,
+   "capped": false,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  "42": {
+   "loss": false,
+   "nodes": 334287,
+   "capped": false,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  "43": {
+   "loss": false,
+   "nodes": 2689493,
+   "capped": false,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  "50": {
+   "loss": true,
+   "nodes": 2240402,
+   "capped": false,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  "52": {
+   "loss": false,
+   "nodes": 2732181,
+   "capped": false,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  "54": {
+   "loss": false,
+   "nodes": 685245,
+   "capped": false,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  "66": {
+   "loss": false,
+   "nodes": 1277538,
+   "capped": false,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  "72": {
+   "loss": false,
+   "nodes": 1319569,
+   "capped": false,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  "77": {
+   "loss": false,
+   "nodes": 2725525,
+   "capped": false,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  "78": {
+   "loss": false,
+   "nodes": 1406907,
+   "capped": false,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  "79": {
+   "loss": false,
+   "nodes": 689825,
+   "capped": false,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  "84": {
+   "loss": true,
+   "nodes": 5092913,
+   "capped": false,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  "86": {
+   "loss": false,
+   "nodes": 1655901,
+   "capped": false,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  "87": {
+   "loss": false,
+   "nodes": 3376686,
+   "capped": false,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  "88": {
+   "loss": false,
+   "nodes": 3859411,
+   "capped": false,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  "90": {
+   "loss": true,
+   "nodes": 3601991,
+   "capped": false,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  "92": {
+   "loss": false,
+   "nodes": 1072362,
+   "capped": false,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  "94": {
+   "loss": false,
+   "nodes": 1063057,
+   "capped": false,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  "97": {
+   "loss": false,
+   "nodes": 2057494,
+   "capped": false,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  "98": {
+   "loss": false,
+   "nodes": 3434819,
+   "capped": false,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  "99": {
+   "loss": true,
+   "nodes": 1561356,
+   "capped": false,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  "100": {
+   "loss": false,
+   "nodes": 394309,
+   "capped": false,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  "102": {
+   "loss": false,
+   "nodes": 6396662,
+   "capped": false,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  "105": {
+   "loss": true,
+   "nodes": 1467970,
+   "capped": false,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  "106": {
+   "loss": false,
+   "nodes": 958332,
+   "capped": false,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  "107": {
+   "loss": false,
+   "nodes": 561931,
+   "capped": false,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  "108": {
+   "loss": false,
+   "nodes": 1007635,
+   "capped": false,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  "109": {
+   "loss": false,
+   "nodes": 2125920,
+   "capped": false,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  "110": {
+   "loss": true,
+   "nodes": 2924741,
+   "capped": false,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  "111": {
+   "loss": false,
+   "nodes": 845437,
+   "capped": false,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  "112": {
+   "loss": false,
+   "nodes": 4768122,
+   "capped": false,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  "113": {
+   "loss": false,
+   "nodes": 564236,
+   "capped": false,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  "114": {
+   "loss": false,
+   "nodes": 1081320,
+   "capped": false,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  "116": {
+   "loss": false,
+   "nodes": 4272611,
+   "capped": false,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  "117": {
+   "loss": false,
+   "nodes": 212945,
+   "capped": false,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  "118": {
+   "loss": false,
+   "nodes": 1055390,
+   "capped": false,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  "119": {
+   "loss": false,
+   "nodes": 2722156,
+   "capped": false,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  "120": {
+   "loss": false,
+   "nodes": 1333820,
+   "capped": false,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  }
+ },
+ "win7_roots": {
+  "0": "00000000000000801a02020000000001",
+  "1": "00000000000000801a02020000000002",
+  "6": "00000000000000801a02020000000040",
+  "28": "00000000000000801a02020010000000",
+  "32": "00000000000000801a02020100000000",
+  "33": "00000000000000801a02020200000000",
+  "50": "00000000000000801a06020000000000",
+  "84": "00000000001000801a02020000000000",
+  "90": "00000000040000801a02020000000000",
+  "99": "00000008000000801a02020000000000",
+  "105": "00000200000000801a02020000000000",
+  "110": "00004000000000801a02020000000000"
+ },
+ "frontier_effect_estimate_UNVERIFIED": "the 12 WIN7-D10 roots are certificate-rebuild candidates; their covers are counted only after verified certificates exist.",
+ "interpretation_guard": [
+  "WIN7-D10 entries certify (after certificate extraction + independent verification) a WIN7 for the root mover side within depth 10 from the corresponding 7-stone root.",
+  "REFUTED entries negate only WIN7-within-depth-10; deeper wins remain possible and are NOT excluded.",
+  "class 2, class 4, S2 {59,60}, two-stone root {49,60}, and the 11x11 empty root remain UNKNOWN."
+ ]
+}

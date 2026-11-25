@@ -1,0 +1,41 @@
+== candidate-supply whole-record third-verification battery reproduction (2026-11-21T07:xxZ) ==
+== B1: fresh base b1, all stages (pin fetch x8 + recon 15-points x2 refs + machine placement + rerun 4x + tampers 2x on probe-local out paths) ==
+third harness gates 111 all_pass True
+
+real	0m1.423s
+user	0m0.224s
+sys	0m0.170s
+B1 captured rc=0
+
+== B2: same base b1, all stages re-run (incl. pin/recon re-fetch, rerun overwrite) ==
+third harness gates 111 all_pass True
+
+real	0m1.401s
+user	0m0.255s
+sys	0m0.133s
+B2 captured rc=0
+
+== B1f: fresh base b1f, all stages (independent fresh-base capture after B2 overwrote the shared audit path) ==
+third harness gates 111 all_pass True
+
+real	0m1.463s
+user	0m0.223s
+sys	0m0.230s
+B1f captured rc=0
+
+== B3: isolated fresh base b3 + env -i isolated HOME/TMPDIR + PYTHONHASHSEED=random + different cwd (/tmp) ==
+third harness gates 111 all_pass True
+
+real	0m1.403s
+user	0m0.251s
+sys	0m0.144s
+B3 captured rc=0
+
+== cmp four captures ==
+B1==B2 byte-identical
+B1f==B2 byte-identical
+B1f==B3 byte-identical
+365fbdfc81d4d642a5a047e7cf50a531ebc9ded75a5d0ce778b354f2ce421798  capture_b1.json
+365fbdfc81d4d642a5a047e7cf50a531ebc9ded75a5d0ce778b354f2ce421798  capture_b2.json
+365fbdfc81d4d642a5a047e7cf50a531ebc9ded75a5d0ce778b354f2ce421798  capture_b1f.json
+365fbdfc81d4d642a5a047e7cf50a531ebc9ded75a5d0ce778b354f2ce421798  capture_b3.json

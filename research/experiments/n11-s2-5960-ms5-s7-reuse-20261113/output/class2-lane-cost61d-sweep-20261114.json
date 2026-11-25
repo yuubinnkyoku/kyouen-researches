@@ -1,0 +1,177 @@
+{
+ "schema": "n11-class2-lane-cost61d-sweep-20261114-v1",
+ "date": "2026-11-14",
+ "session": "long-term lane session 12 (2026-11-14)",
+ "s5_parent_hex": "00000000000000803202000000000000",
+ "s6_child_hex": "00000000000000803202000000000002",
+ "s6_s7_edge_cost": 61,
+ "demand_classes": {
+  "c1": 0,
+  "c2": 2,
+  "c4": 0
+ },
+ "candidate_enumeration": "legal_candidates.py independent Bareiss 4x4 enumeration: 61 legal candidates, bit-exact with the published edge cost 61 (after-cost60b frontier: cheapest remaining unswept child of the second class-2 target S5 00000000000000803202000000000000, best coverable class-2 target, 29 orbits / 2,005); named cost-61d because the cost-61 band names are occupied by the published cost-61 / cost-61b / cost-61c sweeps of other targets' children",
+ "engine": "class4_child1_runner_v16.ts (published repo-verbatim v16 runner), depth 10, andclose=1, cap 1e9, pilot d6 control (loss=false at exactly 3,402 nodes) per batch",
+ "engine_gate": "v16 agreement-gated in cost-56a and used for cost-58b / cost-60b",
+ "win7_d10": 14,
+ "win7_bits": [
+  2,
+  8,
+  22,
+  23,
+  30,
+  53,
+  74,
+  75,
+  84,
+  94,
+  102,
+  114,
+  116,
+  119
+ ],
+ "win7_roots": [
+  "00000000000000803202000000000006",
+  "00000000000000803202000000000102",
+  "00000000000000803202000000400002",
+  "00000000000000803202000000800002",
+  "00000000000000803202000040000002",
+  "00000000000000803222000000000002",
+  "00000000000004803202000000000002",
+  "00000000000008803202000000000002",
+  "00000000001000803202000000000002",
+  "00000000400000803202000000000002",
+  "00000040000000803202000000000002",
+  "00040000000000803202000000000002",
+  "00100000000000803202000000000002",
+  "00800000000000803202000000000002"
+ ],
+ "verdict": "WIN7",
+ "refuted_d10": 47,
+ "capped": 0,
+ "total_nodes": 50848724,
+ "total_nodes_note": "v16 engine node count; the three heaviest WIN7 candidates (114/102/75), the cheapest verified WIN7 (30) and the heaviest REFUTED candidate (32) are additionally anchored on the v15 runner (see cross_engine_check)",
+ "pilot_d6_controls": "loss=false at exactly 3,402 nodes in all 8 batch invocations (identical control lines)",
+ "terminal_stone_range_all": [
+  [
+   13,
+   17
+  ]
+ ],
+ "heaviest_bits": [
+  {
+   "bit": 114,
+   "nodes": 3493610
+  },
+  {
+   "bit": 102,
+   "nodes": 3471936
+  },
+  {
+   "bit": 75,
+   "nodes": 2964686
+  },
+  {
+   "bit": 119,
+   "nodes": 2009100
+  },
+  {
+   "bit": 116,
+   "nodes": 2008333
+  },
+  {
+   "bit": 22,
+   "nodes": 1955533
+  }
+ ],
+ "determinism_rerun_node_exact": "bits 114 (WIN7, 3,493,610), 102 (WIN7, 3,471,936) and 75 (WIN7, 2,964,686) re-solved fresh in a separate process after the sweep: node counts identical (class2-lane-cost61d-v16-determinism-rerun-20261114.jsonl)",
+ "cross_engine_check": "v15 runner (class4_child1_runner.ts, pilot 5,949 PASS) on the same child: bits 114/102/75/30 all loss=true at 7,110,338 / 5,276,136 / 5,440,676 / 1,660,324 nodes and bit 32 loss=false at 4,206,190 nodes \u2014 verdicts identical to v16 (class2-lane-cost61d-v15-crosscheck-20261114.jsonl)",
+ "certificate": [
+  {
+   "bit": 30,
+   "root_hex": "00000000000000803202000040000002",
+   "root_check": "7 stones, loserMobility 44 = independent legal_candidates.py enumeration",
+   "rows": 23348,
+   "extraction_nodes": 2808588,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table), FBS=1<<20: fbt_drops=0, all per-move extractions ok and uncapped",
+   "rows_sorted_unique": true,
+   "sub_roots_verified": 44,
+   "sub_roots_pass": 44,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "md5": "93bc0a6afaf5009123e54c03448ed975",
+   "file": "class2-lane-cost61d-certificates/bit30-root-00000000000000803202000040000002.cert (single file, full paged-read push, remote md5 verified)",
+   "root_not_among_existing": true,
+   "root_absence_check": "GitHub code search over yuubinnkyoku/kyouen-researches for the root hex: 0 hits",
+   "v16_search_nodes": 483043,
+   "v15_crosscheck_verdict": "loss=true (identical)"
+  },
+  {
+   "bit": 74,
+   "root_hex": "00000000000004803202000000000002",
+   "root_check": "7 stones, loserMobility 49 = independent legal_candidates.py enumeration",
+   "rows": 26090,
+   "extraction_nodes": 2464620,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table), FBS=1<<20: fbt_drops=0, all per-move extractions ok and uncapped",
+   "rows_sorted_unique": true,
+   "sub_roots_verified": 49,
+   "sub_roots_pass": 49,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "md5": "23d3ef0e0f021b56fae74fc579a15c2e",
+   "file": "class2-lane-cost61d-certificates/bit74-root-00000000000004803202000000000002.cert (single file, full paged-read push, remote md5 verified)",
+   "root_not_among_existing": true,
+   "root_absence_check": "GitHub code search over yuubinnkyoku/kyouen-researches for the root hex: 0 hits",
+   "v16_search_nodes": 530473,
+   "v15_crosscheck_verdict": null
+  },
+  {
+   "bit": 94,
+   "root_hex": "00000000400000803202000000000002",
+   "root_check": "7 stones, loserMobility 45 = independent legal_candidates.py enumeration",
+   "rows": 23982,
+   "extraction_nodes": 3984132,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table), FBS=1<<20: fbt_drops=0, all per-move extractions ok and uncapped",
+   "rows_sorted_unique": true,
+   "sub_roots_verified": 45,
+   "sub_roots_pass": 45,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "md5": "85784c48d42a58bbd621afcd9669830f",
+   "file": "class2-lane-cost61d-certificates/bit94-root-00000000400000803202000000000002.cert (single file, full paged-read push, remote md5 verified)",
+   "root_not_among_existing": true,
+   "root_absence_check": "GitHub code search over yuubinnkyoku/kyouen-researches for the root hex: 0 hits",
+   "v16_search_nodes": 898566,
+   "v15_crosscheck_verdict": null
+  }
+ ],
+ "unverified_win7_bits": [
+  2,
+  8,
+  22,
+  23,
+  53,
+  75,
+  84,
+  102,
+  114,
+  116,
+  119
+ ],
+ "unverified_win7_bits_note": "11 WIN7-D10 candidates without extracted certificates yet (warm certificate-rebuild candidates per the cost-62a/cost-60b precedent); bits 114/102/75 carry v15 cross-engine loss=true anchors",
+ "raw_batches": "batch1 = bits 2,3,4,8,9,14,15,18; batch2 = bits 19,20,22,23,24,26,28,29; batch3 = bits 30,31,32,34,40,41,42,43; batch4 = bits 44,52,53,54,66,74,75,76; batch5 = bits 77,78,84,86,87,88,89,90; batch6 = bits 92,94,95,96,98,101,102,103; batch7 = bits 105,106,107,108,110,112,113,114; batch8 = bits 116,117,118,119,120",
+ "interpretation_guard": "WIN7-D10 is a winner-win-within-depth-10 from the individual 7-stone roots only; REFUTED-D10 is the absence of such a win in that subtree; this record is not a claim about the 11x11 empty root / {49,60} / S2 {59,60} / class 2 / class 4 which remain UNKNOWN",
+ "unknown_status": "11x11 empty board, two-stone root {49,60}, S2 {59,60}, class 2, class 4: UNKNOWN"
+}

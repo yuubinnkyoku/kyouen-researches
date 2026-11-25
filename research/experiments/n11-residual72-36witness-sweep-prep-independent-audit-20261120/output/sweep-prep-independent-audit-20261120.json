@@ -1,0 +1,402 @@
+{
+ "audited_lane_declaration": "research/log/2026-11-20-n11-36witness-sweep-prep-independent-audit-single-owner-note.md",
+ "audited_prep_commit": "53b07ebe1647b2c966af098897290df243ba0d19",
+ "date": "2026-11-20",
+ "gates": [
+  {
+   "detail": {
+    "canon": "00004000000000000000000000000400",
+    "orbit": [
+     "00004000000000000000000000000400",
+     "01000000000000000000000000000001"
+    ]
+   },
+   "name": "self-d4-corner",
+   "pass": true
+  },
+  {
+   "detail": {
+    "canon": "00000000000000001000000000000000"
+   },
+   "name": "self-d4-center",
+   "pass": true
+  },
+  {
+   "detail": {
+    "rot90": [
+     [
+      9,
+      0
+     ],
+     [
+      10,
+      0
+     ],
+     [
+      10,
+      1
+     ]
+    ],
+    "transpose": [
+     [
+      0,
+      0
+     ],
+     [
+      0,
+      1
+     ],
+     [
+      1,
+      0
+     ]
+    ]
+   },
+   "name": "self-d4-triomino",
+   "pass": true
+  },
+  {
+   "detail": {
+    "identity_roundtrip": true,
+    "rot180": "00200080000040000000000000200004"
+   },
+   "name": "self-d4-composition",
+   "pass": true
+  },
+  {
+   "detail": {
+    "sha256": "49b6f85f6b51cfdd8a59c7797223da3d8797885d3c992ce67dc9dae629a883fa"
+   },
+   "name": "pin-k1075-canonical-json",
+   "pass": true
+  },
+  {
+   "detail": {
+    "sha256": "3904041ea40c4e7c419d437046358eac7b91d169782e8d64abac0c9b044f160f"
+   },
+   "name": "pin-roots-json-sha",
+   "pass": true
+  },
+  {
+   "detail": {
+    "sha256": "78e3ee7a8092dbca23fa3bf41491fdc666ba73a2e62c23f3da7570430bf28f9b"
+   },
+   "name": "pin-residual72-json-sha",
+   "pass": true
+  },
+  {
+   "detail": {
+    "git_blob_sha1": "c132cc6425eee3feaeef1d697dd74f968cfedb59"
+   },
+   "name": "pin-runner-v17-git-blob",
+   "pass": true
+  },
+  {
+   "detail": {
+    "copy_sha256": "192903714b1b06a8ea58aa80e22da23fcf9d9ef175830a65a0da5eb0ca64f3d4",
+    "orig_sha256": "192903714b1b06a8ea58aa80e22da23fcf9d9ef175830a65a0da5eb0ca64f3d4"
+   },
+   "name": "runner-copy-equals-pinned-original",
+   "pass": true
+  },
+  {
+   "detail": {
+    "note": "prepare_roots.py fail-closes on the K1075 SHA-256 pin"
+   },
+   "name": "prepare-pins-k1075-sha",
+   "pass": true
+  },
+  {
+   "detail": {
+    "residual_pin_in_assemble": true,
+    "roots_pin_in_assemble": true,
+    "runner_blob_pin_in_assemble": true
+   },
+   "name": "assemble-pins-match-prep-artifacts",
+   "pass": true
+  },
+  {
+   "detail": {
+    "rows": 72,
+    "unique": 72
+   },
+   "name": "source-residual-72-unique",
+   "pass": true
+  },
+  {
+   "detail": {
+    "bad": [],
+    "count": 0
+   },
+   "name": "source-residual-rows-canonical-s6",
+   "pass": true
+  },
+  {
+   "detail": {
+    "len": 36
+   },
+   "name": "source-witness-36",
+   "pass": true
+  },
+  {
+   "detail": {
+    "unique": 36
+   },
+   "name": "source-witness-roots-unique",
+   "pass": true
+  },
+  {
+   "detail": {
+    "keys": [
+     "covered",
+     "root",
+     "rows",
+     "rule",
+     "safe"
+    ]
+   },
+   "name": "source-witness-keys-and-safe",
+   "pass": true
+  },
+  {
+   "detail": {
+    "rule": "live candidate: unjudged in the phase-2 full cache join over residual 72 (not REFUTED, not WIN, not a retired/dead root)"
+   },
+   "name": "source-witness-rule-string",
+   "pass": true
+  },
+  {
+   "detail": {
+    "overlap": [],
+    "retired_listed": 38
+   },
+   "name": "source-witness-not-retired",
+   "pass": true
+  },
+  {
+   "detail": {
+    "newly_win": [
+     "00004000000000821082000000000100"
+    ]
+   },
+   "name": "source-witness-not-newly-win",
+   "pass": true
+  },
+  {
+   "detail": {
+    "row_demand": 72
+   },
+   "name": "source-row-demand-covers-residual",
+   "pass": true
+  },
+  {
+   "detail": {
+    "duplicates_or_missing": 0,
+    "memberships": 72
+   },
+   "name": "rederive-exact-1-cover",
+   "pass": true
+  },
+  {
+   "detail": {
+    "bad": []
+   },
+   "name": "rederive-roundtrip-child-bit",
+   "pass": true
+  },
+  {
+   "detail": {
+    "bytes": 8522,
+    "mine_sha256": "3904041ea40c4e7c419d437046358eac7b91d169782e8d64abac0c9b044f160f",
+    "pub_bytes": 8522,
+    "pub_sha256": "3904041ea40c4e7c419d437046358eac7b91d169782e8d64abac0c9b044f160f"
+   },
+   "name": "byteequal-roots-json",
+   "pass": true
+  },
+  {
+   "detail": {
+    "bytes": 2667,
+    "mine_sha256": "78e3ee7a8092dbca23fa3bf41491fdc666ba73a2e62c23f3da7570430bf28f9b",
+    "pub_bytes": 2667,
+    "pub_sha256": "78e3ee7a8092dbca23fa3bf41491fdc666ba73a2e62c23f3da7570430bf28f9b"
+   },
+   "name": "byteequal-residual72-json",
+   "pass": true
+  },
+  {
+   "detail": {
+    "roots": 36
+   },
+   "name": "published-roots-sorted-and-fields",
+   "pass": true
+  },
+  {
+   "detail": {
+    "orbit_sizes": {
+     "7": 36
+    }
+   },
+   "name": "rederive-orbit-histogram",
+   "pass": true
+  },
+  {
+   "detail": {
+    "bad": []
+   },
+   "name": "cross-published-rows-equal-record",
+   "pass": true
+  },
+  {
+   "detail": {
+    "sizes": [
+     9,
+     9,
+     9,
+     9
+    ]
+   },
+   "name": "mach-partition-roots-w-slice-4",
+   "pass": true
+  },
+  {
+   "detail": {
+    "keys": 72
+   },
+   "name": "mach-72-unique-probe-keys",
+   "pass": true
+  },
+  {
+   "detail": {
+    "cap": "30_000_000",
+    "timeout": 280
+   },
+   "name": "mach-cap-30m-timeout-280",
+   "pass": true
+  },
+  {
+   "detail": {
+    "driver_flags": [
+     "--andclose",
+     "--bits",
+     "--cap",
+     "--child",
+     "--depth",
+     "--out"
+    ],
+    "runner_parse_flags": [
+     "--andclose",
+     "--bits",
+     "--cap",
+     "--child",
+     "--depth",
+     "--nocontrol",
+     "--out"
+    ]
+   },
+   "name": "mach-argv-contract",
+   "pass": true
+  },
+  {
+   "detail": {
+    "note": "andclose ordering applies at d>=8; sweep depth 10 => both modes active"
+   },
+   "name": "mach-andclose-threshold-depth8",
+   "pass": true
+  },
+  {
+   "detail": {
+    "note": "driver skips (root,ordering) only for records assemble counts as ok"
+   },
+   "name": "mach-resume-predicate",
+   "pass": true
+  },
+  {
+   "detail": {
+    "assemble_expected_nodes": 3402,
+    "runner_pilot_requirement": "loss=false nodes=3402 at depth 6"
+   },
+   "name": "mach-pilot-gate-agreement",
+   "pass": true
+  },
+  {
+   "detail": {
+    "note": "interpretation guards present in both runner and assemble"
+   },
+   "name": "mach-interpretation-guards",
+   "pass": true
+  },
+  {
+   "detail": {
+    "capped": false,
+    "control": "pilot_d6",
+    "loss": false,
+    "nodes": 3402
+   },
+   "name": "smoke-order1-pilot-control",
+   "pass": true
+  },
+  {
+   "detail": {
+    "bit": 5,
+    "cap": 2000,
+    "capped": true,
+    "depth": 10,
+    "loss": false,
+    "nodes": 2001
+   },
+   "name": "smoke-order1-capped-microprobe",
+   "pass": true
+  },
+  {
+   "detail": {
+    "capped": false,
+    "control": "pilot_d6",
+    "loss": false,
+    "nodes": 3402
+   },
+   "name": "smoke-order0-pilot-control",
+   "pass": true
+  },
+  {
+   "detail": {
+    "bit": 5,
+    "cap": 2000,
+    "capped": true,
+    "depth": 10,
+    "loss": false,
+    "nodes": 2001
+   },
+   "name": "smoke-order0-capped-microprobe",
+   "pass": true
+  },
+  {
+   "detail": {
+    "note": "one control line + one result line per invocation, both orderings"
+   },
+   "name": "smoke-twoline-output-shape",
+   "pass": true
+  }
+ ],
+ "inputs": {
+  "k1075_canonical_json_sha256": "49b6f85f6b51cfdd8a59c7797223da3d8797885d3c992ce67dc9dae629a883fa",
+  "published_residual72_json_sha256": "78e3ee7a8092dbca23fa3bf41491fdc666ba73a2e62c23f3da7570430bf28f9b",
+  "published_roots_json_sha256": "3904041ea40c4e7c419d437046358eac7b91d169782e8d64abac0c9b044f160f",
+  "runner_v17_git_blob": "c132cc6425eee3feaeef1d697dd74f968cfedb59"
+ },
+ "interpretation_guard": [
+  "This audit is candidate bookkeeping verification and implies nothing about game-theoretic values.",
+  "The smoke test uses cap 2000; capped results prove nothing in either direction.",
+  "REFUTED-D10 is not a LOSS proof; WIN7-D10 is a certificate-extraction candidate only.",
+  "The standard 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, and classes 1/2/4 remain UNKNOWN."
+ ],
+ "schema": "n11-residual72-36witness-sweep-prep-independent-audit-20261120-v1",
+ "summary": {
+  "gates_pass": 40,
+  "gates_total": 40,
+  "probe_keys": 72,
+  "residual_rows": 72,
+  "roots": 36,
+  "verdict": "audited-prep-consistent"
+ }
+}

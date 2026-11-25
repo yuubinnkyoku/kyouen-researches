@@ -1,0 +1,180 @@
+{
+ "schema": "n11-class2-lane-cost61e-sweep-20261114-v1",
+ "date": "2026-11-14",
+ "session": "long-term lane session 12 (2026-11-14)",
+ "s5_parent_hex": "00000000000000803202000000000000",
+ "s6_child_hex": "00000000000000803202000040000000",
+ "s6_s7_edge_cost": 61,
+ "demand_classes": "CORRECTION (found during frontier integration): the recorded c1=0,c2=2,c4=0 was inherited from the cost-61d claim without re-verification and is wrong; the S6 child was already solved in the published after-cost-60b baseline (demand empty in every frontier state since). The sweep itself and all certificates remain valid research on never-solved 7-stone positions.",
+ "candidate_enumeration": "legal_candidates.py independent Bareiss 4x4 enumeration: 61 legal candidates, bit-exact with the published edge cost 61 (after-cost61d frontier: CORRECTION: not a remaining child (already solved in the after-cost-60b baseline); claimed cheapest remaining unswept child S5 00000000000000803202000000000000, best coverable class-2 target, 27 orbits / 1,876); named cost-61e (cost-61/-61b/-61c/-61d occupied)",
+ "engine": "class4_child1_runner_v16.ts (published repo-verbatim v16 runner), depth 10, andclose=1, cap 1e9, pilot d6 control (loss=false at exactly 3,402 nodes) per batch",
+ "engine_gate": "v16 agreement-gated in cost-56a and used for cost-58b/cost-60b/cost-61d",
+ "win7_d10": 13,
+ "win7_bits": [
+  1,
+  4,
+  17,
+  40,
+  74,
+  87,
+  89,
+  92,
+  102,
+  105,
+  109,
+  114,
+  120
+ ],
+ "win7_roots": [
+  "00000000000000803202000040000002",
+  "00000000000000803202000040000010",
+  "00000000000000803202000040020000",
+  "00000000000000803202010040000000",
+  "00000000000004803202000040000000",
+  "00000000008000803202000040000000",
+  "00000000020000803202000040000000",
+  "00000000100000803202000040000000",
+  "00000040000000803202000040000000",
+  "00000200000000803202000040000000",
+  "00002000000000803202000040000000",
+  "00040000000000803202000040000000",
+  "01000000000000803202000040000000"
+ ],
+ "verdict": "WIN7",
+ "refuted_d10": 48,
+ "capped": 0,
+ "total_nodes": 32935423,
+ "total_nodes_note": "v16 engine node count; the heaviest WIN7 candidate (102), the second heaviest REFUTED candidate (3), the third heaviest WIN7 candidate (4) and the cheapest verified WIN7 (109) are additionally anchored on the v15 runner (see cross_engine_check)",
+ "pilot_d6_controls": "loss=false at exactly 3,402 nodes in all 8 batch invocations (identical control lines)",
+ "terminal_stone_range_all": [
+  [
+   13,
+   17
+  ]
+ ],
+ "heaviest_bits": [
+  {
+   "bit": 102,
+   "nodes": 2241701
+  },
+  {
+   "bit": 3,
+   "nodes": 1932707
+  },
+  {
+   "bit": 4,
+   "nodes": 1594068
+  },
+  {
+   "bit": 8,
+   "nodes": 1496203
+  },
+  {
+   "bit": 14,
+   "nodes": 1392905
+  },
+  {
+   "bit": 114,
+   "nodes": 1230688
+  }
+ ],
+ "determinism_rerun_node_exact": "bits 102 (WIN7, 2,241,701), 3 (REFUTED, 1,932,707) and 4 (WIN7, 1,594,068) re-solved fresh in a separate process after the sweep: node counts identical (class2-lane-cost61e-v16-determinism-rerun-20261114.jsonl)",
+ "cross_engine_check": "v15 runner (class4_child1_runner.ts, pilot 5,949 PASS) on the same child: bits 102/4/109 all loss=true at 5,705,537 / 4,993,271 / 702,145 nodes and bit 3 loss=false at 6,411,106 nodes \u2014 verdicts identical to v16 (class2-lane-cost61e-v15-crosscheck-20261114.jsonl)",
+ "duplicate_root_note": "WIN7 bit 1's root 00000000000000803202000040000002 is the identical 7-stone position as the published cost-61d bit-30 receipt (bit30 of child 00000000000000803202000000000002 = bit1 of this child): the freshly extracted certificate reproduced the published file bit-exact (md5 93bc0a6afaf5009123e54c03448ed975, 23,348 rows) and is NOT pushed again; the root is already solved in the frontier via the cost-61d receipt",
+ "certificate": [
+  {
+   "bit": 109,
+   "root_hex": "00002000000000803202000040000000",
+   "root_check": "7 stones, loserMobility 43 = independent legal_candidates.py enumeration",
+   "rows": 15534,
+   "extraction_nodes": 1141887,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table), FBS=1<<20: fbt_drops=0, all per-move extractions ok and uncapped",
+   "rows_sorted_unique": true,
+   "sub_roots_verified": 43,
+   "sub_roots_pass": 43,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "md5": "ada3f6a1c54effc6fda21867e654b778",
+   "file": "class2-lane-cost61e-certificates/bit109-root-00002000000000803202000040000000.cert (single file, full paged-read push, remote md5 verified)",
+   "root_not_among_existing": true,
+   "root_absence_check": "GitHub code search over yuubinnkyoku/kyouen-researches for the root hex: 0 hits",
+   "v16_search_nodes": 184742,
+   "v15_crosscheck_verdict": "loss=true (identical)"
+  },
+  {
+   "bit": 17,
+   "root_hex": "00000000000000803202000040020000",
+   "root_check": "7 stones, loserMobility 47 = independent legal_candidates.py enumeration",
+   "rows": 22590,
+   "extraction_nodes": 2901988,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table), FBS=1<<20: fbt_drops=0, all per-move extractions ok and uncapped",
+   "rows_sorted_unique": true,
+   "sub_roots_verified": 47,
+   "sub_roots_pass": 47,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "md5": "25b81adb876e6f6352473daaf668c857",
+   "file": "class2-lane-cost61e-certificates/bit17-root-00000000000000803202000040020000.cert (single file, full paged-read push, remote md5 verified)",
+   "root_not_among_existing": true,
+   "root_absence_check": "GitHub code search over yuubinnkyoku/kyouen-researches for the root hex: 0 hits",
+   "v16_search_nodes": 497307,
+   "v15_crosscheck_verdict": null
+  },
+  {
+   "bit": 40,
+   "root_hex": "00000000000000803202010040000000",
+   "root_check": "7 stones, loserMobility 44 = independent legal_candidates.py enumeration",
+   "rows": 25428,
+   "extraction_nodes": 2129491,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table), FBS=1<<20: fbt_drops=0, all per-move extractions ok and uncapped",
+   "rows_sorted_unique": true,
+   "sub_roots_verified": 44,
+   "sub_roots_pass": 44,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "md5": "6cf359c92cea60a62d283e8bf1e68431",
+   "file": "class2-lane-cost61e-certificates/bit40-root-00000000000000803202010040000000.cert (single file, full paged-read push, remote md5 verified)",
+   "root_not_among_existing": true,
+   "root_absence_check": "GitHub code search over yuubinnkyoku/kyouen-researches for the root hex: 0 hits",
+   "v16_search_nodes": 522681,
+   "v15_crosscheck_verdict": null
+  }
+ ],
+ "unverified_win7_bits": [
+  4,
+  74,
+  87,
+  89,
+  92,
+  102,
+  105,
+  114,
+  120
+ ],
+ "unverified_win7_bits_note": "9 WIN7-D10 candidates without extracted certificates yet (warm certificate-rebuild candidates); bit 1 is NOT unverified \u2014 it is the duplicate of the published cost-61d bit-30 certificate; bits 102/4 carry v15 loss=true anchors",
+ "raw_batches": "batch1 = bits 0,1,3,4,8,9,10,12; batch2 = bits 13,14,15,17,18,21,24,26; batch3 = bits 28,32,33,40,42,43,44,45; batch4 = bits 51,52,53,66,67,73,74,75; batch5 = bits 76,77,78,86,87,88,89,92; batch6 = bits 95,97,98,99,100,101,102,103; batch7 = bits 105,106,109,110,111,112,113,114; batch8 = bits 116,117,118,119,120",
+ "interpretation_guard": "WIN7-D10 is a winner-win-within-depth-10 from the individual 7-stone roots only; REFUTED-D10 is the absence of such a win in that subtree; this record is not a claim about the 11x11 empty root / {49,60} / S2 {59,60} / class 2 / class 4 which remain UNKNOWN",
+ "unknown_status": "11x11 empty board, two-stone root {49,60}, S2 {59,60}, class 2, class 4: UNKNOWN",
+ "demand_classes_correction": {
+  "recorded": {
+   "c1": 0,
+   "c2": 2,
+   "c4": 0
+  },
+  "recorded_source": "claim (incorrect)",
+  "actual": "empty (child already solved in the after-cost-60b baseline)",
+  "found": "during recompute_frontier_cost61e_20261114.py integration"
+ }
+}

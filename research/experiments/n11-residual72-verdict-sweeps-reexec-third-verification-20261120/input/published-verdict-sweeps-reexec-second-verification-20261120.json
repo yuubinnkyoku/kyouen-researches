@@ -1,0 +1,256 @@
+{
+ "cap": 30000000,
+ "date": "2026-11-20",
+ "gates": [
+  {
+   "detail": {
+    "git_blob": "c132cc6425eee3feaeef1d697dd74f968cfedb59"
+   },
+   "name": "runner-blob-pin",
+   "pass": true
+  },
+  {
+   "detail": {
+    "bad": [],
+    "count": 0
+   },
+   "name": "published-internal-consistency-jsonl-vs-per-root",
+   "pass": true
+  },
+  {
+   "detail": {
+    "pins": {
+     "k1086_greedy23": {
+      "nodes_total": 18032471,
+      "refuted": 16,
+      "win": 7
+     },
+     "k1089_replace16": {
+      "nodes_total": 6339079,
+      "refuted": 13,
+      "win": 3
+     },
+     "k1091_replace15": {
+      "nodes_total": 7383022,
+      "refuted": 12,
+      "win": 3
+     },
+     "k1095_replace12": {
+      "nodes_total": 5700222,
+      "refuted": 9,
+      "win": 3
+     }
+    }
+   },
+   "name": "published-classification-pins",
+   "pass": true
+  },
+  {
+   "detail": {
+    "k1086_greedy23": {
+     "cap_or_error_probes": 0,
+     "nodes_sum": 18032471,
+     "ordering_conflicts": [],
+     "probes_compared_ok": 46,
+     "refuted_roots": 16,
+     "win_roots": 7
+    },
+    "k1089_replace16": {
+     "cap_or_error_probes": 0,
+     "nodes_sum": 6339079,
+     "ordering_conflicts": [],
+     "probes_compared_ok": 32,
+     "refuted_roots": 13,
+     "win_roots": 3
+    },
+    "k1091_replace15": {
+     "cap_or_error_probes": 0,
+     "nodes_sum": 7383022,
+     "ordering_conflicts": [],
+     "probes_compared_ok": 30,
+     "refuted_roots": 12,
+     "win_roots": 3
+    },
+    "k1095_replace12": {
+     "cap_or_error_probes": 0,
+     "nodes_sum": 5700222,
+     "ordering_conflicts": [],
+     "probes_compared_ok": 24,
+     "refuted_roots": 9,
+     "win_roots": 3
+    }
+   },
+   "name": "passA-fresh-vs-published-all-fields",
+   "pass": true
+  },
+  {
+   "detail": {
+    "k1086_greedy23": {
+     "cap_or_error_probes": 0,
+     "nodes_sum": 18032471,
+     "ordering_conflicts": [],
+     "probes_compared_ok": 46,
+     "refuted_roots": 16,
+     "win_roots": 7
+    },
+    "k1089_replace16": {
+     "cap_or_error_probes": 0,
+     "nodes_sum": 6339079,
+     "ordering_conflicts": [],
+     "probes_compared_ok": 32,
+     "refuted_roots": 13,
+     "win_roots": 3
+    },
+    "k1091_replace15": {
+     "cap_or_error_probes": 0,
+     "nodes_sum": 7383022,
+     "ordering_conflicts": [],
+     "probes_compared_ok": 30,
+     "refuted_roots": 12,
+     "win_roots": 3
+    },
+    "k1095_replace12": {
+     "cap_or_error_probes": 0,
+     "nodes_sum": 5700222,
+     "ordering_conflicts": [],
+     "probes_compared_ok": 24,
+     "refuted_roots": 9,
+     "win_roots": 3
+    }
+   },
+   "name": "passB-fresh-vs-published-all-fields",
+   "pass": true
+  },
+  {
+   "detail": {
+    "bad": [],
+    "count": 0
+   },
+   "name": "passA-vs-passB-deterministic-fields",
+   "pass": true
+  }
+ ],
+ "inputs": {
+  "k1086_record_sha256": "3045e15295af9b85b86578b5e8d55a8b325466eac576ee15b8450f6acb9b9ced",
+  "k1086_records_jsonl_sha256": "773fef4262a9c69766402d3c0f846f5569ce095107efedaa02a76690ab35b8f3",
+  "k1089_record_sha256": "808fbda1152cb492bb76641a101660f965f2801c0b74790d20a0d998d5b747fc",
+  "k1089_records_jsonl_sha256": "75fda6ade767e731ba4e42049230bcea6498eee6e9b2348a9d909a1832f329f6",
+  "k1091_record_sha256": "edd7ac84f47268adcc8a3364a5ff687499cb2a76ded0c0fa379506af02f40b25",
+  "k1091_records_jsonl_sha256": "47165331b68f10684db9217a18fd3a2aab6748ecf1191f0216905981737a773a",
+  "k1095_record_sha256": "335eca5ecb7c72e6fb0ee41eb740de736bf4eb78791823ae55f6375a68cb4707",
+  "k1095_records_jsonl_sha256": "89e2c30d93fc26b5f760c3f9f00c6190595e6adc2fd6320fd2ac69a2603f9c56"
+ },
+ "interpretation_guard": [
+  "This verification re-executes published probe facts with the pinned engine and compares deterministic fields; it verifies NO win/loss claim beyond the runner's depth-bounded probe semantics.",
+  "loss=true (uncapped) marks a WIN8-within-depth-10 candidate for that 8-stone root only; row closure semantics require the separate published extraction, triple-verification and receipt fold machines.",
+  "loss=false (uncapped) is a REFUTED-D10 probe fact: it is NOT a LOSS proof of any earlier position and only erodes the replacement pool.",
+  "capped/timeout probes are cost lower bounds and evidence in NO direction (none occurred).",
+  "Node counts and solved counts are not win/loss readings.",
+  "The standard 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60} and classes 1/2/4 all remain UNKNOWN."
+ ],
+ "passA_reexec_stats": {
+  "k1086_greedy23": {
+   "cap_or_error_probes": 0,
+   "nodes_sum": 18032471,
+   "ordering_conflicts": [],
+   "probes_compared_ok": 46,
+   "refuted_roots": 16,
+   "win_roots": 7
+  },
+  "k1089_replace16": {
+   "cap_or_error_probes": 0,
+   "nodes_sum": 6339079,
+   "ordering_conflicts": [],
+   "probes_compared_ok": 32,
+   "refuted_roots": 13,
+   "win_roots": 3
+  },
+  "k1091_replace15": {
+   "cap_or_error_probes": 0,
+   "nodes_sum": 7383022,
+   "ordering_conflicts": [],
+   "probes_compared_ok": 30,
+   "refuted_roots": 12,
+   "win_roots": 3
+  },
+  "k1095_replace12": {
+   "cap_or_error_probes": 0,
+   "nodes_sum": 5700222,
+   "ordering_conflicts": [],
+   "probes_compared_ok": 24,
+   "refuted_roots": 9,
+   "win_roots": 3
+  }
+ },
+ "passB_reexec_stats": {
+  "k1086_greedy23": {
+   "cap_or_error_probes": 0,
+   "nodes_sum": 18032471,
+   "ordering_conflicts": [],
+   "probes_compared_ok": 46,
+   "refuted_roots": 16,
+   "win_roots": 7
+  },
+  "k1089_replace16": {
+   "cap_or_error_probes": 0,
+   "nodes_sum": 6339079,
+   "ordering_conflicts": [],
+   "probes_compared_ok": 32,
+   "refuted_roots": 13,
+   "win_roots": 3
+  },
+  "k1091_replace15": {
+   "cap_or_error_probes": 0,
+   "nodes_sum": 7383022,
+   "ordering_conflicts": [],
+   "probes_compared_ok": 30,
+   "refuted_roots": 12,
+   "win_roots": 3
+  },
+  "k1095_replace12": {
+   "cap_or_error_probes": 0,
+   "nodes_sum": 5700222,
+   "ordering_conflicts": [],
+   "probes_compared_ok": 24,
+   "refuted_roots": 9,
+   "win_roots": 3
+  }
+ },
+ "protocol": "probe re-execution second verification; runner v17 pinned by git blob, depth 10, cap 30M, timeout 280s, both AND orderings, pilot_d6 control required on every probe; raw child hex rule (child = root minus lowest set bit) re-derived per record and is bookkeeping only (the engine receives the identical cell set); deterministic comparison fields are nodes/loss/capped/terminalStoneRange; ms/wall timings are excluded; passA runs in this tree and passB in an isolated cwd/HOME/EXPERIMENT_ROOT",
+ "runner_git_blob": "c132cc6425eee3feaeef1d697dd74f968cfedb59",
+ "schema": "n11-residual72-verdict-sweeps-reexec-second-verification-20261120-v1",
+ "single_owner_note": "research/log/2026-11-20-n11-residual72-verdict-sweeps-reexec-second-verification-single-owner-note.md (commit 259e4019db88395a1b8ca48fda9d0b842665653a)",
+ "targets": {
+  "fresh_nodes_total_passA": 37454794,
+  "pass_b_included": true,
+  "probes_total": 132,
+  "published_nodes_total": 37454794,
+  "sweeps": {
+   "k1086_greedy23": {
+    "nodes_total": 18032471,
+    "probes": 46,
+    "refuted": 16,
+    "win": 7
+   },
+   "k1089_replace16": {
+    "nodes_total": 6339079,
+    "probes": 32,
+    "refuted": 13,
+    "win": 3
+   },
+   "k1091_replace15": {
+    "nodes_total": 7383022,
+    "probes": 30,
+    "refuted": 12,
+    "win": 3
+   },
+   "k1095_replace12": {
+    "nodes_total": 5700222,
+    "probes": 24,
+    "refuted": 9,
+    "win": 3
+   }
+  }
+ },
+ "timeout_s": 280
+}

@@ -1,0 +1,1176 @@
+{
+ "all_checks_pass": true,
+ "checks": [
+  {
+   "check": "engine_blob_sha1_matches_pinned_c132cc64",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "64d_raw_batch1_blob_sha1_matches_main",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "64d_batch1_bit_set_identity",
+   "detail": "v16=[0, 1, 2, 3, 4, 5, 6, 8] v17=[0, 1, 2, 3, 4, 5, 6, 8]",
+   "pass": true
+  },
+  {
+   "check": "64d_raw_batch2_blob_sha1_matches_main",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "64d_batch2_bit_set_identity",
+   "detail": "v16=[9, 10, 11, 16, 17, 21, 25, 29] v17=[9, 10, 11, 16, 17, 21, 25, 29]",
+   "pass": true
+  },
+  {
+   "check": "64d_raw_batch3_blob_sha1_matches_main",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "64d_batch3_bit_set_identity",
+   "detail": "v16=[30, 32, 38, 42, 43, 44, 46, 53] v17=[30, 32, 38, 42, 43, 44, 46, 53]",
+   "pass": true
+  },
+  {
+   "check": "64d_raw_batch4_blob_sha1_matches_main",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "64d_batch4_bit_set_identity",
+   "detail": "v16=[54, 66, 69, 74, 75, 76, 78, 79] v17=[54, 66, 69, 74, 75, 76, 78, 79]",
+   "pass": true
+  },
+  {
+   "check": "64d_raw_batch5_blob_sha1_matches_main",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "64d_batch5_bit_set_identity",
+   "detail": "v16=[80, 83, 85, 86, 87, 88, 89, 92] v17=[80, 83, 85, 86, 87, 88, 89, 92]",
+   "pass": true
+  },
+  {
+   "check": "64d_raw_batch6_blob_sha1_matches_main",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "64d_batch6_bit_set_identity",
+   "detail": "v16=[95, 96, 97, 98, 99, 100, 101, 102] v17=[95, 96, 97, 98, 99, 100, 101, 102]",
+   "pass": true
+  },
+  {
+   "check": "64d_raw_batch7_blob_sha1_matches_main",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "64d_batch7_bit_set_identity",
+   "detail": "v16=[103, 105, 106, 107, 108, 109, 110, 111] v17=[103, 105, 106, 107, 108, 109, 110, 111]",
+   "pass": true
+  },
+  {
+   "check": "64d_raw_batch8_blob_sha1_matches_main",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "64d_batch8_bit_set_identity",
+   "detail": "v16=[113, 114, 115, 116, 117, 118, 119, 120] v17=[113, 114, 115, 116, 117, 118, 119, 120]",
+   "pass": true
+  },
+  {
+   "check": "64d_all_8_pilots_identity_3402",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "64d_all_bits_field_identical",
+   "detail": "mismatches=[]",
+   "pass": true
+  },
+  {
+   "check": "64d_nodes_total_identity",
+   "detail": "v16=64291757 v17=64291757 published=64291757",
+   "pass": true
+  },
+  {
+   "check": "64d_win_bits_unchanged",
+   "detail": "v17=[0, 1, 2, 11, 16, 30, 32, 43, 53, 66, 69, 75, 79, 86, 92, 95, 98, 106, 107, 109, 111, 113, 120] published=[0, 1, 2, 11, 16, 30, 32, 43, 53, 66, 69, 75, 79, 86, 92, 95, 98, 106, 107, 109, 111, 113, 120]",
+   "pass": true
+  },
+  {
+   "check": "64d_verdict_flips_zero",
+   "detail": "flips=[]",
+   "pass": true
+  },
+  {
+   "check": "64g_raw_batch1_blob_sha1_matches_main",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "64g_batch1_bit_set_identity",
+   "detail": "v16=[1, 2, 4, 6, 7, 8, 9, 11] v17=[1, 2, 4, 6, 7, 8, 9, 11]",
+   "pass": true
+  },
+  {
+   "check": "64g_raw_batch2_blob_sha1_matches_main",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "64g_batch2_bit_set_identity",
+   "detail": "v16=[15, 16, 20, 21, 22, 24, 25, 33] v17=[15, 16, 20, 21, 22, 24, 25, 33]",
+   "pass": true
+  },
+  {
+   "check": "64g_raw_batch3_blob_sha1_matches_main",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "64g_batch3_bit_set_identity",
+   "detail": "v16=[34, 38, 42, 43, 44, 45, 52, 54] v17=[34, 38, 42, 43, 44, 45, 52, 54]",
+   "pass": true
+  },
+  {
+   "check": "64g_raw_batch4_blob_sha1_matches_main",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "64g_batch4_bit_set_identity",
+   "detail": "v16=[66, 67, 68, 70, 71, 73, 75, 76] v17=[66, 67, 68, 70, 71, 73, 75, 76]",
+   "pass": true
+  },
+  {
+   "check": "64g_raw_batch5_blob_sha1_matches_main",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "64g_batch5_bit_set_identity",
+   "detail": "v16=[78, 79, 81, 86, 88, 89, 90, 94] v17=[78, 79, 81, 86, 88, 89, 90, 94]",
+   "pass": true
+  },
+  {
+   "check": "64g_raw_batch6_blob_sha1_matches_main",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "64g_batch6_bit_set_identity",
+   "detail": "v16=[97, 98, 99, 100, 101, 102, 103, 105] v17=[97, 98, 99, 100, 101, 102, 103, 105]",
+   "pass": true
+  },
+  {
+   "check": "64g_raw_batch7_blob_sha1_matches_main",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "64g_batch7_bit_set_identity",
+   "detail": "v16=[106, 107, 108, 109, 110, 112, 113, 114] v17=[106, 107, 108, 109, 110, 112, 113, 114]",
+   "pass": true
+  },
+  {
+   "check": "64g_raw_batch8_blob_sha1_matches_main",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "64g_batch8_bit_set_identity",
+   "detail": "v16=[117, 118, 120] v17=[117, 118, 120]",
+   "pass": true
+  },
+  {
+   "check": "64g_all_8_pilots_identity_3402",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "64g_all_bits_field_identical",
+   "detail": "mismatches=[]",
+   "pass": true
+  },
+  {
+   "check": "64g_nodes_total_identity",
+   "detail": "v16=33505865 v17=33505865 published=33505865",
+   "pass": true
+  },
+  {
+   "check": "64g_win_bits_unchanged",
+   "detail": "v17=[89] published=[89]",
+   "pass": true
+  },
+  {
+   "check": "64g_verdict_flips_zero",
+   "detail": "flips=[]",
+   "pass": true
+  }
+ ],
+ "date": "2026-11-17",
+ "engine_blob_sha1": "c132cc6425eee3feaeef1d697dd74f968cfedb59",
+ "interpretation_guard": "bookkeeping verification only; WIN7-D10 proves a first-player win within depth 10 from the individual 7-stone roots only; REFUTED-D10 is not a LOSS proof; unsaturated row identity is engine-consistency evidence, not a game resolution; 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60} and classes 1/2/4 remain UNKNOWN",
+ "method": "fbt-repaired v17 engine (class4_child1_runner_v17.ts, blob c132cc64) re-executed all swept bits of both rows from scratch with the published batch partitions, depth 10, cap 1e9 (published rows are 0-capped with max per-bit 3,457,163 / 3,672,017 nodes so the cap never binds), --andclose 1, fresh engine state per candidate, pilot_d6 control per batch; compared field-by-field against the published v16 raw batches 1-8",
+ "rows": {
+  "64d": {
+   "checked_bits": 64,
+   "child": "00000000000000403800000008002000",
+   "field_identical_bits": 64,
+   "mismatches": [],
+   "per_bit": [
+    {
+     "batch": 1,
+     "bit": 0,
+     "v16_nodes": 2145200,
+     "v17_loss": true,
+     "v17_nodes": 2145200
+    },
+    {
+     "batch": 1,
+     "bit": 1,
+     "v16_nodes": 738037,
+     "v17_loss": true,
+     "v17_nodes": 738037
+    },
+    {
+     "batch": 1,
+     "bit": 2,
+     "v16_nodes": 3457163,
+     "v17_loss": true,
+     "v17_nodes": 3457163
+    },
+    {
+     "batch": 1,
+     "bit": 3,
+     "v16_nodes": 1601553,
+     "v17_loss": false,
+     "v17_nodes": 1601553
+    },
+    {
+     "batch": 1,
+     "bit": 4,
+     "v16_nodes": 370130,
+     "v17_loss": false,
+     "v17_nodes": 370130
+    },
+    {
+     "batch": 1,
+     "bit": 5,
+     "v16_nodes": 1860840,
+     "v17_loss": false,
+     "v17_nodes": 1860840
+    },
+    {
+     "batch": 1,
+     "bit": 6,
+     "v16_nodes": 266264,
+     "v17_loss": false,
+     "v17_nodes": 266264
+    },
+    {
+     "batch": 1,
+     "bit": 8,
+     "v16_nodes": 417542,
+     "v17_loss": false,
+     "v17_nodes": 417542
+    },
+    {
+     "batch": 2,
+     "bit": 9,
+     "v16_nodes": 196619,
+     "v17_loss": false,
+     "v17_nodes": 196619
+    },
+    {
+     "batch": 2,
+     "bit": 10,
+     "v16_nodes": 193128,
+     "v17_loss": false,
+     "v17_nodes": 193128
+    },
+    {
+     "batch": 2,
+     "bit": 11,
+     "v16_nodes": 1107865,
+     "v17_loss": true,
+     "v17_nodes": 1107865
+    },
+    {
+     "batch": 2,
+     "bit": 16,
+     "v16_nodes": 1853380,
+     "v17_loss": true,
+     "v17_nodes": 1853380
+    },
+    {
+     "batch": 2,
+     "bit": 17,
+     "v16_nodes": 295790,
+     "v17_loss": false,
+     "v17_nodes": 295790
+    },
+    {
+     "batch": 2,
+     "bit": 21,
+     "v16_nodes": 373500,
+     "v17_loss": false,
+     "v17_nodes": 373500
+    },
+    {
+     "batch": 2,
+     "bit": 25,
+     "v16_nodes": 113956,
+     "v17_loss": false,
+     "v17_nodes": 113956
+    },
+    {
+     "batch": 2,
+     "bit": 29,
+     "v16_nodes": 625668,
+     "v17_loss": false,
+     "v17_nodes": 625668
+    },
+    {
+     "batch": 3,
+     "bit": 30,
+     "v16_nodes": 357342,
+     "v17_loss": true,
+     "v17_nodes": 357342
+    },
+    {
+     "batch": 3,
+     "bit": 32,
+     "v16_nodes": 2648192,
+     "v17_loss": true,
+     "v17_nodes": 2648192
+    },
+    {
+     "batch": 3,
+     "bit": 38,
+     "v16_nodes": 113956,
+     "v17_loss": false,
+     "v17_nodes": 113956
+    },
+    {
+     "batch": 3,
+     "bit": 42,
+     "v16_nodes": 2481006,
+     "v17_loss": false,
+     "v17_nodes": 2481006
+    },
+    {
+     "batch": 3,
+     "bit": 43,
+     "v16_nodes": 1275050,
+     "v17_loss": true,
+     "v17_nodes": 1275050
+    },
+    {
+     "batch": 3,
+     "bit": 44,
+     "v16_nodes": 306099,
+     "v17_loss": false,
+     "v17_nodes": 306099
+    },
+    {
+     "batch": 3,
+     "bit": 46,
+     "v16_nodes": 490691,
+     "v17_loss": false,
+     "v17_nodes": 490691
+    },
+    {
+     "batch": 3,
+     "bit": 53,
+     "v16_nodes": 1849832,
+     "v17_loss": true,
+     "v17_nodes": 1849832
+    },
+    {
+     "batch": 4,
+     "bit": 54,
+     "v16_nodes": 3368638,
+     "v17_loss": false,
+     "v17_nodes": 3368638
+    },
+    {
+     "batch": 4,
+     "bit": 66,
+     "v16_nodes": 3401428,
+     "v17_loss": true,
+     "v17_nodes": 3401428
+    },
+    {
+     "batch": 4,
+     "bit": 69,
+     "v16_nodes": 569947,
+     "v17_loss": true,
+     "v17_nodes": 569947
+    },
+    {
+     "batch": 4,
+     "bit": 74,
+     "v16_nodes": 701832,
+     "v17_loss": false,
+     "v17_nodes": 701832
+    },
+    {
+     "batch": 4,
+     "bit": 75,
+     "v16_nodes": 319937,
+     "v17_loss": true,
+     "v17_nodes": 319937
+    },
+    {
+     "batch": 4,
+     "bit": 76,
+     "v16_nodes": 606303,
+     "v17_loss": false,
+     "v17_nodes": 606303
+    },
+    {
+     "batch": 4,
+     "bit": 78,
+     "v16_nodes": 1010183,
+     "v17_loss": false,
+     "v17_nodes": 1010183
+    },
+    {
+     "batch": 4,
+     "bit": 79,
+     "v16_nodes": 377990,
+     "v17_loss": true,
+     "v17_nodes": 377990
+    },
+    {
+     "batch": 5,
+     "bit": 80,
+     "v16_nodes": 403191,
+     "v17_loss": false,
+     "v17_nodes": 403191
+    },
+    {
+     "batch": 5,
+     "bit": 83,
+     "v16_nodes": 391662,
+     "v17_loss": false,
+     "v17_nodes": 391662
+    },
+    {
+     "batch": 5,
+     "bit": 85,
+     "v16_nodes": 137767,
+     "v17_loss": false,
+     "v17_nodes": 137767
+    },
+    {
+     "batch": 5,
+     "bit": 86,
+     "v16_nodes": 2071433,
+     "v17_loss": true,
+     "v17_nodes": 2071433
+    },
+    {
+     "batch": 5,
+     "bit": 87,
+     "v16_nodes": 88735,
+     "v17_loss": false,
+     "v17_nodes": 88735
+    },
+    {
+     "batch": 5,
+     "bit": 88,
+     "v16_nodes": 569949,
+     "v17_loss": false,
+     "v17_nodes": 569949
+    },
+    {
+     "batch": 5,
+     "bit": 89,
+     "v16_nodes": 1921196,
+     "v17_loss": false,
+     "v17_nodes": 1921196
+    },
+    {
+     "batch": 5,
+     "bit": 92,
+     "v16_nodes": 1215671,
+     "v17_loss": true,
+     "v17_nodes": 1215671
+    },
+    {
+     "batch": 6,
+     "bit": 95,
+     "v16_nodes": 887709,
+     "v17_loss": true,
+     "v17_nodes": 887709
+    },
+    {
+     "batch": 6,
+     "bit": 96,
+     "v16_nodes": 406500,
+     "v17_loss": false,
+     "v17_nodes": 406500
+    },
+    {
+     "batch": 6,
+     "bit": 97,
+     "v16_nodes": 92932,
+     "v17_loss": false,
+     "v17_nodes": 92932
+    },
+    {
+     "batch": 6,
+     "bit": 98,
+     "v16_nodes": 981906,
+     "v17_loss": true,
+     "v17_nodes": 981906
+    },
+    {
+     "batch": 6,
+     "bit": 99,
+     "v16_nodes": 276774,
+     "v17_loss": false,
+     "v17_nodes": 276774
+    },
+    {
+     "batch": 6,
+     "bit": 100,
+     "v16_nodes": 147394,
+     "v17_loss": false,
+     "v17_nodes": 147394
+    },
+    {
+     "batch": 6,
+     "bit": 101,
+     "v16_nodes": 3037746,
+     "v17_loss": false,
+     "v17_nodes": 3037746
+    },
+    {
+     "batch": 6,
+     "bit": 102,
+     "v16_nodes": 1802203,
+     "v17_loss": false,
+     "v17_nodes": 1802203
+    },
+    {
+     "batch": 7,
+     "bit": 103,
+     "v16_nodes": 124774,
+     "v17_loss": false,
+     "v17_nodes": 124774
+    },
+    {
+     "batch": 7,
+     "bit": 105,
+     "v16_nodes": 1380239,
+     "v17_loss": false,
+     "v17_nodes": 1380239
+    },
+    {
+     "batch": 7,
+     "bit": 106,
+     "v16_nodes": 1368669,
+     "v17_loss": true,
+     "v17_nodes": 1368669
+    },
+    {
+     "batch": 7,
+     "bit": 107,
+     "v16_nodes": 1120894,
+     "v17_loss": true,
+     "v17_nodes": 1120894
+    },
+    {
+     "batch": 7,
+     "bit": 108,
+     "v16_nodes": 487422,
+     "v17_loss": false,
+     "v17_nodes": 487422
+    },
+    {
+     "batch": 7,
+     "bit": 109,
+     "v16_nodes": 457181,
+     "v17_loss": true,
+     "v17_nodes": 457181
+    },
+    {
+     "batch": 7,
+     "bit": 110,
+     "v16_nodes": 432692,
+     "v17_loss": false,
+     "v17_nodes": 432692
+    },
+    {
+     "batch": 7,
+     "bit": 111,
+     "v16_nodes": 1740815,
+     "v17_loss": true,
+     "v17_nodes": 1740815
+    },
+    {
+     "batch": 8,
+     "bit": 113,
+     "v16_nodes": 1630001,
+     "v17_loss": true,
+     "v17_nodes": 1630001
+    },
+    {
+     "batch": 8,
+     "bit": 114,
+     "v16_nodes": 29055,
+     "v17_loss": false,
+     "v17_nodes": 29055
+    },
+    {
+     "batch": 8,
+     "bit": 115,
+     "v16_nodes": 278013,
+     "v17_loss": false,
+     "v17_nodes": 278013
+    },
+    {
+     "batch": 8,
+     "bit": 116,
+     "v16_nodes": 503002,
+     "v17_loss": false,
+     "v17_nodes": 503002
+    },
+    {
+     "batch": 8,
+     "bit": 117,
+     "v16_nodes": 819085,
+     "v17_loss": false,
+     "v17_nodes": 819085
+    },
+    {
+     "batch": 8,
+     "bit": 118,
+     "v16_nodes": 768078,
+     "v17_loss": false,
+     "v17_nodes": 768078
+    },
+    {
+     "batch": 8,
+     "bit": 119,
+     "v16_nodes": 739113,
+     "v17_loss": false,
+     "v17_nodes": 739113
+    },
+    {
+     "batch": 8,
+     "bit": 120,
+     "v16_nodes": 2484895,
+     "v17_loss": true,
+     "v17_nodes": 2484895
+    }
+   ],
+   "published_evidence": {
+    "fold_commit": "c7a849e0",
+    "sweep_commit": "f38be6d6",
+    "total_nodes": 64291757,
+    "win_bits": [
+     0,
+     1,
+     2,
+     11,
+     16,
+     30,
+     32,
+     43,
+     53,
+     66,
+     69,
+     75,
+     79,
+     86,
+     92,
+     95,
+     98,
+     106,
+     107,
+     109,
+     111,
+     113,
+     120
+    ]
+   },
+   "total_nodes_v16": 64291757,
+   "total_nodes_v17": 64291757,
+   "verdict_flips": [],
+   "win_bits_v17": [
+    0,
+    1,
+    2,
+    11,
+    16,
+    30,
+    32,
+    43,
+    53,
+    66,
+    69,
+    75,
+    79,
+    86,
+    92,
+    95,
+    98,
+    106,
+    107,
+    109,
+    111,
+    113,
+    120
+   ]
+  },
+  "64g": {
+   "checked_bits": 59,
+   "child": "00000000000100003800000008080000",
+   "field_identical_bits": 59,
+   "mismatches": [],
+   "per_bit": [
+    {
+     "batch": 1,
+     "bit": 1,
+     "v16_nodes": 216377,
+     "v17_loss": false,
+     "v17_nodes": 216377
+    },
+    {
+     "batch": 1,
+     "bit": 2,
+     "v16_nodes": 1391740,
+     "v17_loss": false,
+     "v17_nodes": 1391740
+    },
+    {
+     "batch": 1,
+     "bit": 4,
+     "v16_nodes": 745756,
+     "v17_loss": false,
+     "v17_nodes": 745756
+    },
+    {
+     "batch": 1,
+     "bit": 6,
+     "v16_nodes": 879695,
+     "v17_loss": false,
+     "v17_nodes": 879695
+    },
+    {
+     "batch": 1,
+     "bit": 7,
+     "v16_nodes": 232912,
+     "v17_loss": false,
+     "v17_nodes": 232912
+    },
+    {
+     "batch": 1,
+     "bit": 8,
+     "v16_nodes": 505887,
+     "v17_loss": false,
+     "v17_nodes": 505887
+    },
+    {
+     "batch": 1,
+     "bit": 9,
+     "v16_nodes": 360862,
+     "v17_loss": false,
+     "v17_nodes": 360862
+    },
+    {
+     "batch": 1,
+     "bit": 11,
+     "v16_nodes": 425447,
+     "v17_loss": false,
+     "v17_nodes": 425447
+    },
+    {
+     "batch": 2,
+     "bit": 15,
+     "v16_nodes": 381407,
+     "v17_loss": false,
+     "v17_nodes": 381407
+    },
+    {
+     "batch": 2,
+     "bit": 16,
+     "v16_nodes": 491171,
+     "v17_loss": false,
+     "v17_nodes": 491171
+    },
+    {
+     "batch": 2,
+     "bit": 20,
+     "v16_nodes": 83516,
+     "v17_loss": false,
+     "v17_nodes": 83516
+    },
+    {
+     "batch": 2,
+     "bit": 21,
+     "v16_nodes": 583791,
+     "v17_loss": false,
+     "v17_nodes": 583791
+    },
+    {
+     "batch": 2,
+     "bit": 22,
+     "v16_nodes": 372935,
+     "v17_loss": false,
+     "v17_nodes": 372935
+    },
+    {
+     "batch": 2,
+     "bit": 24,
+     "v16_nodes": 566270,
+     "v17_loss": false,
+     "v17_nodes": 566270
+    },
+    {
+     "batch": 2,
+     "bit": 25,
+     "v16_nodes": 420210,
+     "v17_loss": false,
+     "v17_nodes": 420210
+    },
+    {
+     "batch": 2,
+     "bit": 33,
+     "v16_nodes": 102460,
+     "v17_loss": false,
+     "v17_nodes": 102460
+    },
+    {
+     "batch": 3,
+     "bit": 34,
+     "v16_nodes": 313099,
+     "v17_loss": false,
+     "v17_nodes": 313099
+    },
+    {
+     "batch": 3,
+     "bit": 38,
+     "v16_nodes": 319167,
+     "v17_loss": false,
+     "v17_nodes": 319167
+    },
+    {
+     "batch": 3,
+     "bit": 42,
+     "v16_nodes": 347681,
+     "v17_loss": false,
+     "v17_nodes": 347681
+    },
+    {
+     "batch": 3,
+     "bit": 43,
+     "v16_nodes": 3672017,
+     "v17_loss": false,
+     "v17_nodes": 3672017
+    },
+    {
+     "batch": 3,
+     "bit": 44,
+     "v16_nodes": 690088,
+     "v17_loss": false,
+     "v17_nodes": 690088
+    },
+    {
+     "batch": 3,
+     "bit": 45,
+     "v16_nodes": 351637,
+     "v17_loss": false,
+     "v17_nodes": 351637
+    },
+    {
+     "batch": 3,
+     "bit": 52,
+     "v16_nodes": 241479,
+     "v17_loss": false,
+     "v17_nodes": 241479
+    },
+    {
+     "batch": 3,
+     "bit": 54,
+     "v16_nodes": 269479,
+     "v17_loss": false,
+     "v17_nodes": 269479
+    },
+    {
+     "batch": 4,
+     "bit": 66,
+     "v16_nodes": 340789,
+     "v17_loss": false,
+     "v17_nodes": 340789
+    },
+    {
+     "batch": 4,
+     "bit": 67,
+     "v16_nodes": 300018,
+     "v17_loss": false,
+     "v17_nodes": 300018
+    },
+    {
+     "batch": 4,
+     "bit": 68,
+     "v16_nodes": 288675,
+     "v17_loss": false,
+     "v17_nodes": 288675
+    },
+    {
+     "batch": 4,
+     "bit": 70,
+     "v16_nodes": 548696,
+     "v17_loss": false,
+     "v17_nodes": 548696
+    },
+    {
+     "batch": 4,
+     "bit": 71,
+     "v16_nodes": 927475,
+     "v17_loss": false,
+     "v17_nodes": 927475
+    },
+    {
+     "batch": 4,
+     "bit": 73,
+     "v16_nodes": 168483,
+     "v17_loss": false,
+     "v17_nodes": 168483
+    },
+    {
+     "batch": 4,
+     "bit": 75,
+     "v16_nodes": 1707450,
+     "v17_loss": false,
+     "v17_nodes": 1707450
+    },
+    {
+     "batch": 4,
+     "bit": 76,
+     "v16_nodes": 444816,
+     "v17_loss": false,
+     "v17_nodes": 444816
+    },
+    {
+     "batch": 5,
+     "bit": 78,
+     "v16_nodes": 733834,
+     "v17_loss": false,
+     "v17_nodes": 733834
+    },
+    {
+     "batch": 5,
+     "bit": 79,
+     "v16_nodes": 230760,
+     "v17_loss": false,
+     "v17_nodes": 230760
+    },
+    {
+     "batch": 5,
+     "bit": 81,
+     "v16_nodes": 731256,
+     "v17_loss": false,
+     "v17_nodes": 731256
+    },
+    {
+     "batch": 5,
+     "bit": 86,
+     "v16_nodes": 501744,
+     "v17_loss": false,
+     "v17_nodes": 501744
+    },
+    {
+     "batch": 5,
+     "bit": 88,
+     "v16_nodes": 164265,
+     "v17_loss": false,
+     "v17_nodes": 164265
+    },
+    {
+     "batch": 5,
+     "bit": 89,
+     "v16_nodes": 690457,
+     "v17_loss": true,
+     "v17_nodes": 690457
+    },
+    {
+     "batch": 5,
+     "bit": 90,
+     "v16_nodes": 440708,
+     "v17_loss": false,
+     "v17_nodes": 440708
+    },
+    {
+     "batch": 5,
+     "bit": 94,
+     "v16_nodes": 1253749,
+     "v17_loss": false,
+     "v17_nodes": 1253749
+    },
+    {
+     "batch": 6,
+     "bit": 97,
+     "v16_nodes": 275965,
+     "v17_loss": false,
+     "v17_nodes": 275965
+    },
+    {
+     "batch": 6,
+     "bit": 98,
+     "v16_nodes": 462183,
+     "v17_loss": false,
+     "v17_nodes": 462183
+    },
+    {
+     "batch": 6,
+     "bit": 99,
+     "v16_nodes": 206317,
+     "v17_loss": false,
+     "v17_nodes": 206317
+    },
+    {
+     "batch": 6,
+     "bit": 100,
+     "v16_nodes": 207448,
+     "v17_loss": false,
+     "v17_nodes": 207448
+    },
+    {
+     "batch": 6,
+     "bit": 101,
+     "v16_nodes": 167264,
+     "v17_loss": false,
+     "v17_nodes": 167264
+    },
+    {
+     "batch": 6,
+     "bit": 102,
+     "v16_nodes": 424669,
+     "v17_loss": false,
+     "v17_nodes": 424669
+    },
+    {
+     "batch": 6,
+     "bit": 103,
+     "v16_nodes": 236043,
+     "v17_loss": false,
+     "v17_nodes": 236043
+    },
+    {
+     "batch": 6,
+     "bit": 105,
+     "v16_nodes": 208378,
+     "v17_loss": false,
+     "v17_nodes": 208378
+    },
+    {
+     "batch": 7,
+     "bit": 106,
+     "v16_nodes": 445456,
+     "v17_loss": false,
+     "v17_nodes": 445456
+    },
+    {
+     "batch": 7,
+     "bit": 107,
+     "v16_nodes": 1319132,
+     "v17_loss": false,
+     "v17_nodes": 1319132
+    },
+    {
+     "batch": 7,
+     "bit": 108,
+     "v16_nodes": 281742,
+     "v17_loss": false,
+     "v17_nodes": 281742
+    },
+    {
+     "batch": 7,
+     "bit": 109,
+     "v16_nodes": 1429950,
+     "v17_loss": false,
+     "v17_nodes": 1429950
+    },
+    {
+     "batch": 7,
+     "bit": 110,
+     "v16_nodes": 584157,
+     "v17_loss": false,
+     "v17_nodes": 584157
+    },
+    {
+     "batch": 7,
+     "bit": 112,
+     "v16_nodes": 472765,
+     "v17_loss": false,
+     "v17_nodes": 472765
+    },
+    {
+     "batch": 7,
+     "bit": 113,
+     "v16_nodes": 378339,
+     "v17_loss": false,
+     "v17_nodes": 378339
+    },
+    {
+     "batch": 7,
+     "bit": 114,
+     "v16_nodes": 1631330,
+     "v17_loss": false,
+     "v17_nodes": 1631330
+    },
+    {
+     "batch": 8,
+     "bit": 117,
+     "v16_nodes": 332379,
+     "v17_loss": false,
+     "v17_nodes": 332379
+    },
+    {
+     "batch": 8,
+     "bit": 118,
+     "v16_nodes": 740700,
+     "v17_loss": false,
+     "v17_nodes": 740700
+    },
+    {
+     "batch": 8,
+     "bit": 120,
+     "v16_nodes": 263390,
+     "v17_loss": false,
+     "v17_nodes": 263390
+    }
+   ],
+   "published_evidence": {
+    "fold_commit": "f14f8bdb",
+    "sweep_commit": "2a0b46a2",
+    "total_nodes": 33505865,
+    "win_bits": [
+     89
+    ]
+   },
+   "total_nodes_v16": 33505865,
+   "total_nodes_v17": 33505865,
+   "verdict_flips": [],
+   "win_bits_v17": [
+    89
+   ]
+  }
+ },
+ "schema": "n11-class2-lane-cost64d64g-v17-full-row-rechecks-20261117-v1"
+}

@@ -1,0 +1,203 @@
+{
+ "session": "class2-lane cost-60b WIN7 certificates (long-term lane session 12, 2026-11-14)",
+ "child_hex": "00000000000000803202000000200000",
+ "certificates": [
+  {
+   "bit": 117,
+   "root_hex": "00200000000000803202000000200000",
+   "verdict": "WIN7",
+   "rows": 10145,
+   "extraction_nodes": 1102035,
+   "extraction": "blind extractBatch (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 37,
+    "independent_enumeration_legal": 37,
+    "match": true
+   },
+   "sub_roots_verified": 37,
+   "sub_roots_pass": 37,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "md5": "94f9411adfd26ac8441c0438bc4861d1",
+   "file": "class2-lane-cost60b-certificates/bit117-root-00200000000000803202000000200000.cert",
+   "root_not_among_existing": true,
+   "root_absence_check": "GitHub code search over yuubinnkyoku/kyouen-researches for the root hex: 0 hits",
+   "v16_search_nodes": 125277,
+   "v15_crosscheck_verdict": "loss=true (identical)"
+  },
+  {
+   "bit": 96,
+   "root_hex": "00000001000000803202000000200000",
+   "verdict": "WIN7",
+   "rows": 15654,
+   "extraction_nodes": 734068,
+   "extraction": "blind extractBatch (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 43,
+    "independent_enumeration_legal": 43,
+    "match": true
+   },
+   "sub_roots_verified": 43,
+   "sub_roots_pass": 43,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "md5": "f60bfdadc67a0b5c0c08d033e5f4c8e9",
+   "file": "class2-lane-cost60b-certificates/bit96-root-00000001000000803202000000200000.cert",
+   "root_not_among_existing": true,
+   "root_absence_check": "GitHub code search over yuubinnkyoku/kyouen-researches for the root hex: 0 hits",
+   "v16_search_nodes": 183336,
+   "v15_crosscheck_verdict": null
+  },
+  {
+   "bit": 94,
+   "root_hex": "00000000400000803202000000200000",
+   "verdict": "WIN7",
+   "rows": 17637,
+   "extraction_nodes": 1145298,
+   "extraction": "blind extractBatch (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 40,
+    "independent_enumeration_legal": 40,
+    "match": true
+   },
+   "sub_roots_verified": 40,
+   "sub_roots_pass": 40,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "md5": "9d05d9d1d6a22e7476b73674649451d8",
+   "file": "class2-lane-cost60b-certificates/bit94-root-00000000400000803202000000200000.cert",
+   "root_not_among_existing": true,
+   "root_absence_check": "GitHub code search over yuubinnkyoku/kyouen-researches for the root hex: 0 hits",
+   "v16_search_nodes": 243463,
+   "v15_crosscheck_verdict": null
+  },
+  {
+   "bit": 105,
+   "root_hex": "00000200000000803202000000200000",
+   "verdict": "WIN7",
+   "rows": 15804,
+   "extraction_nodes": 1130428,
+   "extraction": "blind extractBatch (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 45,
+    "independent_enumeration_legal": 45,
+    "match": true
+   },
+   "sub_roots_verified": 45,
+   "sub_roots_pass": 45,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "md5": "8544bb5d89489cdd96111fa715b536df",
+   "file": "class2-lane-cost60b-certificates/bit105-root-00000200000000803202000000200000.cert",
+   "root_not_among_existing": true,
+   "root_absence_check": "GitHub code search over yuubinnkyoku/kyouen-researches for the root hex: 0 hits",
+   "v16_search_nodes": 254443,
+   "v15_crosscheck_verdict": null
+  },
+  {
+   "bit": 73,
+   "root_hex": "00000000000002803202000000200000",
+   "verdict": "WIN7",
+   "rows": 19986,
+   "extraction_nodes": 1711622,
+   "extraction": "blind extractBatch (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 43,
+    "independent_enumeration_legal": 43,
+    "match": true
+   },
+   "sub_roots_verified": 43,
+   "sub_roots_pass": 43,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "md5": "79c7d7299c316960055c2f8087371f5b",
+   "file": "class2-lane-cost60b-certificates/bit73-root-00000000000002803202000000200000.cert",
+   "root_not_among_existing": true,
+   "root_absence_check": "GitHub code search over yuubinnkyoku/kyouen-researches for the root hex: 0 hits",
+   "v16_search_nodes": 265790,
+   "v15_crosscheck_verdict": null
+  },
+  {
+   "bit": 23,
+   "root_hex": "00000000000000803202000000a00000",
+   "verdict": "WIN7",
+   "rows": 18570,
+   "extraction_nodes": 1696945,
+   "extraction": "blind extractBatch (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 45,
+    "independent_enumeration_legal": 45,
+    "match": true
+   },
+   "sub_roots_verified": 45,
+   "sub_roots_pass": 45,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "md5": "458fe88d60ee8dd0f75146fdd9694bfd",
+   "file": "class2-lane-cost60b-certificates/bit23-root-00000000000000803202000000a00000.cert",
+   "root_not_among_existing": true,
+   "root_absence_check": "GitHub code search over yuubinnkyoku/kyouen-researches for the root hex: 0 hits",
+   "v16_search_nodes": 314722,
+   "v15_crosscheck_verdict": null
+  }
+ ],
+ "unverified_win7_bits": [
+  8,
+  15,
+  22,
+  26,
+  28,
+  32,
+  34,
+  40,
+  43,
+  44,
+  74,
+  77,
+  87,
+  88,
+  95,
+  100,
+  106,
+  108,
+  114
+ ],
+ "unverified_win7_bits_note": "19 further WIN7-D10 bits from the same sweep remain certificate-rebuild candidates (sweep record class2-lane-cost60b-sweep-20261114.json); v15 anchors exist for bits 43/114/32",
+ "unknown_status": "11x11 empty board, two-stone root {49,60}, S2 {59,60}, class 2, class 4: UNKNOWN"
+}

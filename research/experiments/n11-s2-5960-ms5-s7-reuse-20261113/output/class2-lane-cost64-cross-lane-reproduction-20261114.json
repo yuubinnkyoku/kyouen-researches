@@ -1,0 +1,16 @@
+{
+ "schema": "class2-lane-cost64-cross-lane-reproduction-20261114",
+ "date": "2026-11-14",
+ "subject": "cost-64 S6 child 00000000000000801a0a000000000000 (c2=2, class-2 S5 00000000000000003802000008000000)",
+ "reproduced_by": "this lane, independently, after a full execution-environment reset mid-sweep",
+ "reproduction_details": {
+  "sweep": "redone from scratch after the reset: 64 legal 7th-stone candidates enumerated from the child root, v15 engine verbatim (repo class4_child1_runner.ts), cap 50M, depth 10, close-first AND d>=8, 2 parallel workers, pilot d6 5949 PASS x2",
+  "sweep_result": "24 WIN7-D10 (bits 0,4,10,14,22,24,33,35,40,43,52,53,54,78,79,88,90,99,105,106,109,113,114,119) + 40 REFUTED + 0 capped, 195,421,906 nodes",
+  "main_comparison": "main's cost64 sweep record (35394f4a) reports the identical 24-bit WIN7 set and the bit-exact same node total 195,421,906",
+  "pre_reset_run": "the pre-reset first run of this lane gave the identical 24-bit WIN7 set as well (192,882,107 nodes there only because bits 3,6,86 were still capped at 950k in an intermediate pass; those three resolved REFUTED in the full re-run)",
+  "certificates": "all 24 WIN7 certificates re-extracted (kill-table-optional driver, pref=null closeScore order) and independently verified: root-check PASS, all sub-roots PASS (43-56 per root), union miss=0 extra=0; total 904,966 rows \u2014 identical to main's certificate record total",
+  "frontier_recompute": "recomputed locally with staged controls through after_cost61b (749/7097/557548/5314/417555 reproduced) plus the cost-64 stage: after cost-64 solved 779 / unique remaining 7067 / sum cost 555,327 / open 5284/415,334 \u2014 identical to main's pushed recompute record 4bc289dc"
+ },
+ "action": "no duplicate push of sweep/certificates/recompute/CSVs (all already on main from the parallel lane); this record documents the independent reproduction only",
+ "interpretation_guard": "WIN7 certificates prove only a depth-10 win from the 7-stone roots; REFUTED is only absence of depth-10 WIN7; 11x11 empty board, two-stone root {49,60}, S2 {59,60}, class 2 and class 4 lanes all remain UNKNOWN."
+}

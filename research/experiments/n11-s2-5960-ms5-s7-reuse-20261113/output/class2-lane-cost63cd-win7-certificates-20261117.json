@@ -1,0 +1,93 @@
+{
+ "schema": "n11-class2-lane-cost63cd-win7-certificates-20261117-v1",
+ "date": "2026-11-17",
+ "s5_parent_hex": "00000000000000809082000000000000",
+ "s6_children_hex": [
+  "000000000000008090a2000000000000",
+  "00000000000000809082000000080000"
+ ],
+ "s6_s7_edge_cost": 63,
+ "method": "deferred-certificate regeneration and first publication: the two WIN7-D10 certificates of the 2026-11-14 cost-63c (bit 46) and cost-63d (bit 70) sweeps were documented in the sweep records but never pushed (push_note: 1.4-1.6MB deferred to next run; bytes existed only as per-entry records and the head-1452 census v3 carried them as receiptcert-only). The 2026-11-17 regeneration reconstructs the 2026-11-14 extraction: repo-verbatim class4_child1_cert_extractor_exact.ts (FBS=1<<20, probe96) with the extractor CLI's default KILL_BIT7 session-6 preference table active (cert_driver63cd.ts archives the table; a blind empty-kill-table extraction was tested first and does NOT reproduce the bytes: 63c bit46 blind union 43473 rows vs recorded 45337), one process per move, 4 parallel workers, sort -u merge, header+root prepend. Both certificates regenerate BYTE-IDENTICALLY to the 2026-11-14 md5 records (01bcaabc9d20d20e6215826e22c01181 / 63a3cb44f1cfc7262509214a9f24d3ca) from a different execution environment three days later; 63c also node-exactly (per-move sum 14524021 = recorded extraction_nodes); 63d's recorded 9616344 nodes came from the original batch partition (memo cache shared across moves; per-move regeneration sums 14424015; rows/bytes partition-invariant). Independent verification: verify_bit7_win7_cert.ts (Bareiss 4x4, engine-free; root-check stones=7, loser mobility equals the independent legal_candidates.py enumeration on the RAW root 52/49, all sub-roots PASS, consumed-winner-state union == certificate row set 0/0 both directions, terminal stone range [13,17] on every sub-root) AND the third-implementation BigInt verify_win7_certificate_bigint_independent.mjs, with full per-sub-root stat cross-agreement. Determinism: the full per-move regeneration was run twice on 2026-11-17, byte-identical. Loser defenses are enumerated on the RAW child|bit root (both roots are D4 canonical).",
+ "driver_note": "cert_driver63cd.ts and regenerate_verify_cost63cd_certificates_20261117.py are archived in scripts/; the latter re-runs the full pipeline (enumeration, per-move extraction, md5 assert vs the pinned sweep records, both verifiers, parts/sidecar agreement) and writes the verification record JSON",
+ "certificates": [
+  {
+   "bit": 46,
+   "root": "000000000000008090a2400000000000",
+   "verdict": "WIN7",
+   "depth": 10,
+   "rows": 45337,
+   "extraction_nodes": 14524021,
+   "extraction_nodes_note": "per-move partition node sum; equals the 2026-11-14 sweep-record value",
+   "regeneration_per_move_node_sum": 14524021,
+   "regeneration_per_move_processes": 52,
+   "fbt_drops": 0,
+   "fatal": null,
+   "subroots": 52,
+   "subroots_pass": 52,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_stone_range": [
+    13,
+    17
+   ],
+   "loser_mobility": 52,
+   "file": "n11_s7_000000000000008090a2400000000000.cert",
+   "md5": "01bcaabc9d20d20e6215826e22c01181",
+   "sha256": "485fdea26c0b56685bd6443bc1c03b4fad34011be55063265f4338f02e27bba9",
+   "d4_canon_root": "000000000000008090a2400000000000",
+   "raw_is_canon": true,
+   "certificate_split": {
+    "parts": 2,
+    "part1of2_bytes": 819839,
+    "part2of2_bytes": 819813,
+    "split_at_line_boundary_byte": 819839,
+    "part1of2_md5": "f31eb74ecd4762a0b91127ef2f36a0ac",
+    "part2of2_md5": "68a5c3a495a35a266cfda9b3a3784ebc"
+   },
+   "storage": "split part1of2+part2of2 concatenation",
+   "band_dir": "class2-lane-cost63cd-certificates",
+   "sweep_record": "class2-lane-cost63c-sweep-20261114.json",
+   "byte_identical_regeneration_20261117": true
+  },
+  {
+   "bit": 70,
+   "root": "00000000000000c09082000000080000",
+   "verdict": "WIN7",
+   "depth": 10,
+   "rows": 39213,
+   "extraction_nodes": 9616344,
+   "extraction_nodes_note": "2026-11-14 sweep-record value from the original batch partition (memo table shared across moves); the 2026-11-17 per-move regeneration sums to 14424015 nodes; the row set and certificate bytes are partition-invariant",
+   "regeneration_per_move_node_sum": 14424015,
+   "regeneration_per_move_processes": 49,
+   "fbt_drops": 0,
+   "fatal": null,
+   "subroots": 49,
+   "subroots_pass": 49,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_stone_range": [
+    13,
+    17
+   ],
+   "loser_mobility": 49,
+   "file": "n11_s7_00000000000000c09082000000080000.cert",
+   "md5": "63a3cb44f1cfc7262509214a9f24d3ca",
+   "sha256": "46acdf5eab5f37b0298fe353b419f33971d2a2164ff3d5d1ddcda6658d8a73dd",
+   "d4_canon_root": "00000000000000c09082000000080000",
+   "raw_is_canon": true,
+   "certificate_split": {
+    "parts": 2,
+    "part1of2_bytes": 707859,
+    "part2of2_bytes": 707791,
+    "split_at_line_boundary_byte": 707859,
+    "part1of2_md5": "caaafe7fd8b99139d9541903d94ee35e",
+    "part2of2_md5": "1a6172cbf97d01b8fdc337c2418a2a55"
+   },
+   "storage": "split part1of2+part2of2 concatenation",
+   "band_dir": "class2-lane-cost63cd-certificates",
+   "sweep_record": "class2-lane-cost63d-sweep-20261114.json",
+   "byte_identical_regeneration_20261117": true
+  }
+ ],
+ "interpretation_guard": "REFUTED-D10 proves only absence of a winner within depth 10; WIN7-D10 certificates prove a win within depth 10 from the 7-stone root only; this publication upgrades two receiptcert-only records to bytes-on-main and closes no manifest row and no frontier number; 11x11 empty root / {49,60} / S2 {59,60} / class 1 / class 2 / class 4 remain UNKNOWN"
+}

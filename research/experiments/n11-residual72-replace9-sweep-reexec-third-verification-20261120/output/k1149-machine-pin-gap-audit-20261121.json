@@ -1,0 +1,46 @@
+{
+  "gates": {
+    "k1146_machine_actual_sha256": true,
+    "k1149_machine_pin_has_no_gate_reference": true,
+    "k1149_machine_pin_is_63_char_metadata_only": true,
+    "k1149_published_audit_sha256": true,
+    "k1149_records_pin_is_actively_checked": true,
+    "k1149_second_verifier_sha256": true,
+    "k1159_external_machine_pin_is_correct_and_present": true,
+    "k1159_harness_sha256": true
+  },
+  "interpretation": "K1149's 24/24 audit gates do not validate the K1146 sweep-machine source hash: the 63-character value is metadata-only. K1159 independently pins the actual 64-character source hash and reassembles the published machine, closing this provenance gap at the third-verification layer. This does not invalidate the freshly re-executed probe facts and does not close any residual row.",
+  "k1146_sweep_machine": {
+    "bytes": 33969,
+    "expected_sha256": "d163b2a120ac46abee40d0b9a32269bce14a73901a85a80e5925b7d2512bcd41",
+    "sha256": "d163b2a120ac46abee40d0b9a32269bce14a73901a85a80e5925b7d2512bcd41"
+  },
+  "k1149_second_verifier": {
+    "machine_pin_assignment_line": 96,
+    "machine_pin_constant": "d163b2a120ac46abee40d0b9a32269bce14a73901a85a80e595b7d2512bcd41",
+    "machine_pin_gate_reference_lines": [],
+    "machine_pin_length": 63,
+    "machine_pin_load_reference_lines": [
+      886
+    ],
+    "pristine_gate_source_excerpt": "        \"k1089\": opt(\"--k1089\") or os.environ.get(\"K1089_JSON\"),\n        \"k1091\": opt(\"--k1091\") or os.environ.get(\"K1091_JSON\"),\n        \"k1095\": opt(\"--k1095\") or os.environ.get(\"K1095_JSON\"),\n        \"k1097\": opt(\"--k1097\") or os.environ.get(\"K1097_JSON\"),\n        \"records\": opt(\"--records\") or os.environ.get(\"SWEEP_RECORDS_JSONL\"),\n        \"volume\": opt(\"--volume\") or os.environ.get(\"SWEEP_VOLUME_JSON\"),\n    }\n\n\ndef load_all(paths):\n    out = {}\n    out[\"k1085\"], out[\"sha_k1085\"] = load_pinned(\n        find_pinned(paths[\"k1085\"], None, \".input-k1085.json\"),\n        K1085_SHA256, \"K1085\")\n    out[\"k1086\"], out[\"sha_k1086\"] = load_pinned(\n        find_pinned(paths[\"k1086\"], None, \".input-k1086.json\"),\n        K1086_SHA256, \"K1086\")\n    out[\"k1089\"], out[\"sha_k1089\"] = load_pinned(\n        find_pinned(paths[\"k1089\"], None, \".input-k1089.json\"),\n        K1089_SHA256, \"K1089\")\n    out[\"k1091\"], out[\"sha_k1091\"] = load_pinned(\n        find_pinned(paths[\"k1091\"], None, \".input-k1091.json\"),",
+    "published_audit_has_machine_source_gate": false,
+    "published_audit_machine_pin": "d163b2a120ac46abee40d0b9a32269bce14a73901a85a80e595b7d2512bcd41",
+    "records_pin_direct_check_present": true,
+    "sha256": "77cdd9e3450aed9d2c900475f15d9e09367985b909027c50e485995737252db4"
+  },
+  "k1159_third_verifier": {
+    "external_pin_gate_label_present": true,
+    "machine_pin_assignment_line": 49,
+    "machine_pin_constant": "d163b2a120ac46abee40d0b9a32269bce14a73901a85a80e5925b7d2512bcd41",
+    "sha256": "ec55f78a2a109a60d295569aa856a9c01764859c64655ed6aae405d678234979"
+  },
+  "schema": "n11-k1149-machine-source-pin-gap-review-20261121-v1",
+  "source_commits": {
+    "k1146_sweep_machine_publication": "e9ea153bc469aa551689a5d275773553852f3342",
+    "k1149_verifier_publication": "7ab77aa1bb5e80c2355261edc8e3f1ab08acd9d5",
+    "k1159_third_verification_part1": "76ef33b2cf84a6fc5b837784ea1a80c987820962"
+  },
+  "status": "source-pin-gap-confirmed-and-covered-by-k1159",
+  "subject": "K1149 replace9 sweep re-execution second-verifier source pin review"
+}

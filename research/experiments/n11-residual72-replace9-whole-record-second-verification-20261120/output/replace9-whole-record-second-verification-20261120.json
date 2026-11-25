@@ -1,0 +1,4674 @@
+{
+  "census": {
+    "cross_sweep_canonical_win_refuted_conflicts": [],
+    "new_win_candidate_intrinsic_over_base72": {
+      "claimed": [
+        "00000000000000801202000001000400",
+        "00000000000000801202000001080000",
+        "00000000010000809002000040000000"
+      ],
+      "intrinsic": [
+        "00000000000000801202000001000400",
+        "00000000000000801202000001080000",
+        "00000000010000809002000040000000"
+      ],
+      "intrinsic_equals_claimed": true,
+      "intrinsic_rows_within_residual23_beyond_claim": [],
+      "root": "00000000010000809002000040002001"
+    },
+    "per_record": [
+      {
+        "nodes_total": 18032471,
+        "record": "k1086",
+        "refuted": 16,
+        "terminal_union": [
+          12,
+          18
+        ],
+        "win": 7
+      },
+      {
+        "nodes_total": 6339079,
+        "record": "k1089",
+        "refuted": 13,
+        "terminal_union": [
+          12,
+          18
+        ],
+        "win": 3
+      },
+      {
+        "nodes_total": 7383022,
+        "record": "k1091",
+        "refuted": 12,
+        "terminal_union": [
+          14,
+          18
+        ],
+        "win": 3
+      },
+      {
+        "nodes_total": 5700222,
+        "record": "k1095",
+        "refuted": 9,
+        "terminal_union": [
+          12,
+          18
+        ],
+        "win": 3
+      },
+      {
+        "nodes_total": 3574172,
+        "record": "replace9",
+        "refuted": 8,
+        "terminal_union": [
+          14,
+          18
+        ],
+        "win": 1
+      }
+    ],
+    "per_root_table": [
+      {
+        "andclose0": 1146417,
+        "andclose1": 903977,
+        "canonical": "00000000000000003800000008003180",
+        "gained_rows": 4,
+        "order_loss_pair": [
+          true,
+          true
+        ],
+        "record": "k1086",
+        "root": "00000000000000003800000008003180",
+        "verdict": "WIN8-D10-candidate"
+      },
+      {
+        "andclose0": 751581,
+        "andclose1": 619138,
+        "canonical": "00000000000000003800000008005021",
+        "gained_rows": 3,
+        "order_loss_pair": [
+          true,
+          true
+        ],
+        "record": "k1086",
+        "root": "00000000000000003800000008005021",
+        "verdict": "WIN8-D10-candidate"
+      },
+      {
+        "andclose0": 249156,
+        "andclose1": 101112,
+        "canonical": "00000000000000003800000008710000",
+        "gained_rows": 3,
+        "order_loss_pair": [
+          false,
+          false
+        ],
+        "record": "k1086",
+        "root": "00000000000000003800000008710000",
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose0": 1528656,
+        "andclose1": 1143198,
+        "canonical": "00000000000000003800000009840004",
+        "gained_rows": 3,
+        "order_loss_pair": [
+          true,
+          true
+        ],
+        "record": "k1086",
+        "root": "00000000000000003800000009840004",
+        "verdict": "WIN8-D10-candidate"
+      },
+      {
+        "andclose0": 131523,
+        "andclose1": 106359,
+        "canonical": "0000000000000000380010000a002010",
+        "gained_rows": 3,
+        "order_loss_pair": [
+          false,
+          false
+        ],
+        "record": "k1086",
+        "root": "0000000000000000380010000a002010",
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose0": 1325001,
+        "andclose1": 1064515,
+        "canonical": "00000000000000043800020008900000",
+        "gained_rows": 3,
+        "order_loss_pair": [
+          false,
+          false
+        ],
+        "record": "k1086",
+        "root": "00000000000000043800020008900000",
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose0": 234480,
+        "andclose1": 35114,
+        "canonical": "00000000000000083820000048100000",
+        "gained_rows": 4,
+        "order_loss_pair": [
+          false,
+          false
+        ],
+        "record": "k1086",
+        "root": "00000000000000083820000048100000",
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose0": 509436,
+        "andclose1": 409899,
+        "canonical": "00000000000000143800000009080000",
+        "gained_rows": 4,
+        "order_loss_pair": [
+          false,
+          false
+        ],
+        "record": "k1086",
+        "root": "00000000000000143800000009080000",
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose0": 302769,
+        "andclose1": 112275,
+        "canonical": "00000000000000801202000000840300",
+        "gained_rows": 3,
+        "order_loss_pair": [
+          false,
+          false
+        ],
+        "record": "k1086",
+        "root": "00000000000000801202000000840300",
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose0": 53828,
+        "andclose1": 22084,
+        "canonical": "00000000000000801202000001004408",
+        "gained_rows": 3,
+        "order_loss_pair": [
+          false,
+          false
+        ],
+        "record": "k1086",
+        "root": "00000000000000801202000001004408",
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose0": 177229,
+        "andclose1": 132665,
+        "canonical": "00000000000000801202040000901000",
+        "gained_rows": 4,
+        "order_loss_pair": [
+          false,
+          false
+        ],
+        "record": "k1086",
+        "root": "00000000000000801202040000901000",
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose0": 80786,
+        "andclose1": 50558,
+        "canonical": "00000000000000801212000001081000",
+        "gained_rows": 4,
+        "order_loss_pair": [
+          false,
+          false
+        ],
+        "record": "k1086",
+        "root": "00000000000000801212000001081000",
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose0": 130387,
+        "andclose1": 72484,
+        "canonical": "00000000000000821082000000000818",
+        "gained_rows": 3,
+        "order_loss_pair": [
+          false,
+          false
+        ],
+        "record": "k1086",
+        "root": "00000000000000821082000000000818",
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose0": 94416,
+        "andclose1": 21818,
+        "canonical": "00000000000000821086800000001000",
+        "gained_rows": 3,
+        "order_loss_pair": [
+          false,
+          false
+        ],
+        "record": "k1086",
+        "root": "00000000000000821086800000001000",
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose0": 286992,
+        "andclose1": 186038,
+        "canonical": "00000000000000841202000000880400",
+        "gained_rows": 3,
+        "order_loss_pair": [
+          false,
+          false
+        ],
+        "record": "k1086",
+        "root": "00000000000000841202000000880400",
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose0": 614246,
+        "andclose1": 512590,
+        "canonical": "00000000000000909002200080100000",
+        "gained_rows": 4,
+        "order_loss_pair": [
+          true,
+          true
+        ],
+        "record": "k1086",
+        "root": "00000000000000909002200080100000",
+        "verdict": "WIN8-D10-candidate"
+      },
+      {
+        "andclose0": 180515,
+        "andclose1": 64906,
+        "canonical": "00000000000040809002000802100000",
+        "gained_rows": 3,
+        "order_loss_pair": [
+          false,
+          false
+        ],
+        "record": "k1086",
+        "root": "00000000000040809002000802100000",
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose0": 288448,
+        "andclose1": 261294,
+        "canonical": "00000000000200003800200008180000",
+        "gained_rows": 2,
+        "order_loss_pair": [
+          true,
+          true
+        ],
+        "record": "k1086",
+        "root": "00000000000200003800200008180000",
+        "verdict": "WIN8-D10-candidate"
+      },
+      {
+        "andclose0": 575570,
+        "andclose1": 409407,
+        "canonical": "00000000010000889002000080100000",
+        "gained_rows": 4,
+        "order_loss_pair": [
+          true,
+          true
+        ],
+        "record": "k1086",
+        "root": "00000000010000889002000080100000",
+        "verdict": "WIN8-D10-candidate"
+      },
+      {
+        "andclose0": 825127,
+        "andclose1": 657152,
+        "canonical": "00000000012000003800080009000000",
+        "gained_rows": 3,
+        "order_loss_pair": [
+          true,
+          true
+        ],
+        "record": "k1086",
+        "root": "00000000012000003800080009000000",
+        "verdict": "WIN8-D10-candidate"
+      },
+      {
+        "andclose0": 64060,
+        "andclose1": 25660,
+        "canonical": "00000000020000801202080800100000",
+        "gained_rows": 3,
+        "order_loss_pair": [
+          false,
+          false
+        ],
+        "record": "k1086",
+        "root": "00000000020000801202080800100000",
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose0": 77795,
+        "andclose1": 63084,
+        "canonical": "0000001000000080120200000000040c",
+        "gained_rows": 1,
+        "order_loss_pair": [
+          false,
+          false
+        ],
+        "record": "k1086",
+        "root": "0000001000000080120200000000040c",
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose0": 1178731,
+        "andclose1": 249995,
+        "canonical": "00000010040000801202000100000200",
+        "gained_rows": 2,
+        "order_loss_pair": [
+          false,
+          false
+        ],
+        "record": "k1086",
+        "root": "00000010040000801202000100000200",
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose0": 257478,
+        "andclose1": 226909,
+        "canonical": "00000000000000003800000008b10000",
+        "gained_rows": 3,
+        "order_loss_pair": [
+          false,
+          false
+        ],
+        "record": "k1089",
+        "root": "00000000000000003800000008b10000",
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose0": 288299,
+        "andclose1": 162524,
+        "canonical": "00000000000000003800100028002040",
+        "gained_rows": 3,
+        "order_loss_pair": [
+          false,
+          false
+        ],
+        "record": "k1089",
+        "root": "00000000000000003800100028002040",
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose0": 239967,
+        "andclose1": 107427,
+        "canonical": "00000000000000043800000609000000",
+        "gained_rows": 3,
+        "order_loss_pair": [
+          false,
+          false
+        ],
+        "record": "k1089",
+        "root": "00000000000000043800000609000000",
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose0": 174419,
+        "andclose1": 6573,
+        "canonical": "00000000000000103800000009080040",
+        "gained_rows": 3,
+        "order_loss_pair": [
+          false,
+          false
+        ],
+        "record": "k1089",
+        "root": "00000000000000103800000009080040",
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose0": 878391,
+        "andclose1": 736409,
+        "canonical": "00000000000000801202000000840500",
+        "gained_rows": 3,
+        "order_loss_pair": [
+          true,
+          true
+        ],
+        "record": "k1089",
+        "root": "00000000000000801202000000840500",
+        "verdict": "WIN8-D10-candidate"
+      },
+      {
+        "andclose0": 64674,
+        "andclose1": 60828,
+        "canonical": "00000000000000801202000001089000",
+        "gained_rows": 4,
+        "order_loss_pair": [
+          false,
+          false
+        ],
+        "record": "k1089",
+        "root": "00000000000000801202000001089000",
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose0": 669067,
+        "andclose1": 618359,
+        "canonical": "00000000000000801202000800880200",
+        "gained_rows": 3,
+        "order_loss_pair": [
+          true,
+          true
+        ],
+        "record": "k1089",
+        "root": "00000000000000801202000800880200",
+        "verdict": "WIN8-D10-candidate"
+      },
+      {
+        "andclose0": 64035,
+        "andclose1": 8905,
+        "canonical": "00000000000000801202020022001000",
+        "gained_rows": 3,
+        "order_loss_pair": [
+          false,
+          false
+        ],
+        "record": "k1089",
+        "root": "00000000000000801202020022001000",
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose0": 12386,
+        "andclose1": 6582,
+        "canonical": "00000000000000821082000000000848",
+        "gained_rows": 3,
+        "order_loss_pair": [
+          false,
+          false
+        ],
+        "record": "k1089",
+        "root": "00000000000000821082000000000848",
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose0": 25949,
+        "andclose1": 10493,
+        "canonical": "00000000000000821086800000100000",
+        "gained_rows": 3,
+        "order_loss_pair": [
+          false,
+          false
+        ],
+        "record": "k1089",
+        "root": "00000000000000821086800000100000",
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose0": 442824,
+        "andclose1": 350792,
+        "canonical": "00000000000020809002000480100000",
+        "gained_rows": 3,
+        "order_loss_pair": [
+          true,
+          true
+        ],
+        "record": "k1089",
+        "root": "00000000000020809002000480100000",
+        "verdict": "WIN8-D10-candidate"
+      },
+      {
+        "andclose0": 28768,
+        "andclose1": 74496,
+        "canonical": "00000000010000809002000040000009",
+        "gained_rows": 2,
+        "order_loss_pair": [
+          false,
+          false
+        ],
+        "record": "k1089",
+        "root": "00000000010000809002000040000009",
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose0": 229351,
+        "andclose1": 99967,
+        "canonical": "00000000100008003800000009001000",
+        "gained_rows": 4,
+        "order_loss_pair": [
+          false,
+          false
+        ],
+        "record": "k1089",
+        "root": "00000000100008003800000009001000",
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose0": 144794,
+        "andclose1": 40602,
+        "canonical": "00000010000000801202040000000204",
+        "gained_rows": 3,
+        "order_loss_pair": [
+          false,
+          false
+        ],
+        "record": "k1089",
+        "root": "00000010000000801202040000000204",
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose0": 47124,
+        "andclose1": 41515,
+        "canonical": "00000010000000809202000080000400",
+        "gained_rows": 2,
+        "order_loss_pair": [
+          false,
+          false
+        ],
+        "record": "k1089",
+        "root": "00000010000000809202000080000400",
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose0": 178392,
+        "andclose1": 40780,
+        "canonical": "00000010000010003800000008003000",
+        "gained_rows": 4,
+        "order_loss_pair": [
+          false,
+          false
+        ],
+        "record": "k1089",
+        "root": "00000010000010003800000008003000",
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose0": 673870,
+        "andclose1": 564695,
+        "canonical": "00000000000000003800000008d10000",
+        "gained_rows": 3,
+        "order_loss_pair": [
+          true,
+          true
+        ],
+        "record": "k1091",
+        "root": "00000000000000003800000008d10000",
+        "verdict": "WIN8-D10-candidate"
+      },
+      {
+        "andclose0": 1054873,
+        "andclose1": 882327,
+        "canonical": "00000000000000043800000008180010",
+        "gained_rows": 3,
+        "order_loss_pair": [
+          true,
+          true
+        ],
+        "record": "k1091",
+        "root": "00000000000000043800000008180010",
+        "verdict": "WIN8-D10-candidate"
+      },
+      {
+        "andclose0": 193993,
+        "andclose1": 163509,
+        "canonical": "0000000000000010380000000b080000",
+        "gained_rows": 3,
+        "order_loss_pair": [
+          false,
+          false
+        ],
+        "record": "k1091",
+        "root": "0000000000000010380000000b080000",
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose0": 74875,
+        "andclose1": 129142,
+        "canonical": "00000000000000801202000000901002",
+        "gained_rows": 3,
+        "order_loss_pair": [
+          false,
+          false
+        ],
+        "record": "k1091",
+        "root": "00000000000000801202000000901002",
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose0": 105802,
+        "andclose1": 66127,
+        "canonical": "00000000000000801202000001000448",
+        "gained_rows": 3,
+        "order_loss_pair": [
+          false,
+          false
+        ],
+        "record": "k1091",
+        "root": "00000000000000801202000001000448",
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose0": 141870,
+        "andclose1": 87126,
+        "canonical": "00000000000000801202020001005000",
+        "gained_rows": 2,
+        "order_loss_pair": [
+          false,
+          false
+        ],
+        "record": "k1091",
+        "root": "00000000000000801202020001005000",
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose0": 229502,
+        "andclose1": 192365,
+        "canonical": "00000000000000801212000001009000",
+        "gained_rows": 4,
+        "order_loss_pair": [
+          true,
+          true
+        ],
+        "record": "k1091",
+        "root": "00000000000000801212000001009000",
+        "verdict": "WIN8-D10-candidate"
+      },
+      {
+        "andclose0": 36282,
+        "andclose1": 93857,
+        "canonical": "00000000000000821082000000000890",
+        "gained_rows": 3,
+        "order_loss_pair": [
+          false,
+          false
+        ],
+        "record": "k1091",
+        "root": "00000000000000821082000000000890",
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose0": 49100,
+        "andclose1": 31785,
+        "canonical": "00000000000000a21083000000001000",
+        "gained_rows": 3,
+        "order_loss_pair": [
+          false,
+          false
+        ],
+        "record": "k1091",
+        "root": "00000000000000a21083000000001000",
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose0": 233735,
+        "andclose1": 68546,
+        "canonical": "00000000000040809002000022100000",
+        "gained_rows": 3,
+        "order_loss_pair": [
+          false,
+          false
+        ],
+        "record": "k1091",
+        "root": "00000000000040809002000022100000",
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose0": 292326,
+        "andclose1": 14182,
+        "canonical": "00000000010000809002000040000006",
+        "gained_rows": 1,
+        "order_loss_pair": [
+          false,
+          false
+        ],
+        "record": "k1091",
+        "root": "00000000010000809002000040000006",
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose0": 73911,
+        "andclose1": 32406,
+        "canonical": "00000000020008003800000009001000",
+        "gained_rows": 4,
+        "order_loss_pair": [
+          false,
+          false
+        ],
+        "record": "k1091",
+        "root": "00000000020008003800000009001000",
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose0": 1065993,
+        "andclose1": 196156,
+        "canonical": "00000008000000003800000008100006",
+        "gained_rows": 1,
+        "order_loss_pair": [
+          false,
+          false
+        ],
+        "record": "k1091",
+        "root": "00000008000000003800000008100006",
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose0": 20290,
+        "andclose1": 57250,
+        "canonical": "00000010000000003840000008080040",
+        "gained_rows": 3,
+        "order_loss_pair": [
+          false,
+          false
+        ],
+        "record": "k1091",
+        "root": "00000010000000003840000008080040",
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose0": 305546,
+        "andclose1": 251581,
+        "canonical": "00000010000000801202000000000414",
+        "gained_rows": 1,
+        "order_loss_pair": [
+          false,
+          false
+        ],
+        "record": "k1091",
+        "root": "00000010000000801202000000000414",
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose0": 87055,
+        "andclose1": 23524,
+        "canonical": "00000000000000083800000048300000",
+        "gained_rows": 3,
+        "order_loss_pair": [
+          false,
+          false
+        ],
+        "record": "k1095",
+        "root": "00000000000000083800000048300000",
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose0": 159862,
+        "andclose1": 5279,
+        "canonical": "00000000000000103800000209080000",
+        "gained_rows": 3,
+        "order_loss_pair": [
+          false,
+          false
+        ],
+        "record": "k1095",
+        "root": "00000000000000103800000209080000",
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose0": 240848,
+        "andclose1": 198622,
+        "canonical": "00000000000000801202000000901010",
+        "gained_rows": 3,
+        "order_loss_pair": [
+          true,
+          true
+        ],
+        "record": "k1095",
+        "root": "00000000000000801202000000901010",
+        "verdict": "WIN8-D10-candidate"
+      },
+      {
+        "andclose0": 118586,
+        "andclose1": 80063,
+        "canonical": "00000000000000801202000001004440",
+        "gained_rows": 3,
+        "order_loss_pair": [
+          false,
+          false
+        ],
+        "record": "k1095",
+        "root": "00000000000000801202000001004440",
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose0": 137565,
+        "andclose1": 126683,
+        "canonical": "00000000000000801202000022081000",
+        "gained_rows": 3,
+        "order_loss_pair": [
+          true,
+          true
+        ],
+        "record": "k1095",
+        "root": "00000000000000801202000022081000",
+        "verdict": "WIN8-D10-candidate"
+      },
+      {
+        "andclose0": 62182,
+        "andclose1": 27847,
+        "canonical": "000000000000008210820000000008c0",
+        "gained_rows": 3,
+        "order_loss_pair": [
+          false,
+          false
+        ],
+        "record": "k1095",
+        "root": "000000000000008210820000000008c0",
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose0": 66147,
+        "andclose1": 21984,
+        "canonical": "00000000000000a21083000000100000",
+        "gained_rows": 3,
+        "order_loss_pair": [
+          false,
+          false
+        ],
+        "record": "k1095",
+        "root": "00000000000000a21083000000100000",
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose0": 120752,
+        "andclose1": 112243,
+        "canonical": "00000000000040809002000040102000",
+        "gained_rows": 2,
+        "order_loss_pair": [
+          false,
+          false
+        ],
+        "record": "k1095",
+        "root": "00000000000040809002000040102000",
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose0": 25455,
+        "andclose1": 10056,
+        "canonical": "00000000020000809202000800100000",
+        "gained_rows": 3,
+        "order_loss_pair": [
+          false,
+          false
+        ],
+        "record": "k1095",
+        "root": "00000000020000809202000800100000",
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose0": 74759,
+        "andclose1": 55252,
+        "canonical": "00000000040000801202100100800000",
+        "gained_rows": 2,
+        "order_loss_pair": [
+          false,
+          false
+        ],
+        "record": "k1095",
+        "root": "00000000040000801202100100800000",
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose0": 1416679,
+        "andclose1": 1226804,
+        "canonical": "0000000800000000380000000810000a",
+        "gained_rows": 1,
+        "order_loss_pair": [
+          true,
+          true
+        ],
+        "record": "k1095",
+        "root": "0000000800000000380000000810000a",
+        "verdict": "WIN8-D10-candidate"
+      },
+      {
+        "andclose0": 1046283,
+        "andclose1": 255692,
+        "canonical": "00000010000000801202000000000444",
+        "gained_rows": 1,
+        "order_loss_pair": [
+          false,
+          false
+        ],
+        "record": "k1095",
+        "root": "00000010000000801202000000000444",
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose0": 80912,
+        "andclose1": 11664,
+        "canonical": "00000000000000083800040048100000",
+        "gained_rows": 3,
+        "order_loss_pair": [
+          false,
+          false
+        ],
+        "record": "replace9",
+        "root": "00000000000000083800040048100000",
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose0": 242618,
+        "andclose1": 13781,
+        "canonical": "00000000000000103800000008080041",
+        "gained_rows": 2,
+        "order_loss_pair": [
+          false,
+          false
+        ],
+        "record": "replace9",
+        "root": "00000000000000103800000008080041",
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose0": 292251,
+        "andclose1": 572204,
+        "canonical": "00000000000000143800000209000000",
+        "gained_rows": 3,
+        "order_loss_pair": [
+          false,
+          false
+        ],
+        "record": "replace9",
+        "root": "00000000000000143800000209000000",
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose0": 74966,
+        "andclose1": 53667,
+        "canonical": "00000000000000821082000000001018",
+        "gained_rows": 3,
+        "order_loss_pair": [
+          false,
+          false
+        ],
+        "record": "replace9",
+        "root": "00000000000000821082000000001018",
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose0": 23112,
+        "andclose1": 42629,
+        "canonical": "00000000000000821086800000000800",
+        "gained_rows": 3,
+        "order_loss_pair": [
+          false,
+          false
+        ],
+        "record": "replace9",
+        "root": "00000000000000821086800000000800",
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose0": 81137,
+        "andclose1": 120916,
+        "canonical": "00000000000040809002000800100200",
+        "gained_rows": 3,
+        "order_loss_pair": [
+          false,
+          false
+        ],
+        "record": "replace9",
+        "root": "00000000000040809002000800100200",
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose0": 691784,
+        "andclose1": 608293,
+        "canonical": "00000000010000809002000040002001",
+        "gained_rows": 3,
+        "order_loss_pair": [
+          true,
+          true
+        ],
+        "record": "replace9",
+        "root": "00000000010000809002000040002001",
+        "verdict": "WIN8-D10-candidate"
+      },
+      {
+        "andclose0": 126875,
+        "andclose1": 11535,
+        "canonical": "00000000020000801202000800100001",
+        "gained_rows": 2,
+        "order_loss_pair": [
+          false,
+          false
+        ],
+        "record": "replace9",
+        "root": "00000000020000801202000800100001",
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose0": 377046,
+        "andclose1": 148782,
+        "canonical": "00000010000000801202000000000448",
+        "gained_rows": 1,
+        "order_loss_pair": [
+          false,
+          false
+        ],
+        "record": "replace9",
+        "root": "00000010000000801202000000000448",
+        "verdict": "REFUTED-D10"
+      }
+    ],
+    "pool_P4_after_replace9": 120416,
+    "pool_p_triple_prime": 120424,
+    "probed_roots_total": 75,
+    "refuted_d10_facts_58": [
+      "00000000000000003800000008710000",
+      "00000000000000003800000008b10000",
+      "0000000000000000380010000a002010",
+      "00000000000000003800100028002040",
+      "00000000000000043800000609000000",
+      "00000000000000043800020008900000",
+      "00000000000000083800000048300000",
+      "00000000000000083800040048100000",
+      "00000000000000083820000048100000",
+      "00000000000000103800000008080041",
+      "00000000000000103800000009080040",
+      "0000000000000010380000000b080000",
+      "00000000000000103800000209080000",
+      "00000000000000143800000009080000",
+      "00000000000000143800000209000000",
+      "00000000000000801202000000840300",
+      "00000000000000801202000000901002",
+      "00000000000000801202000001000448",
+      "00000000000000801202000001004408",
+      "00000000000000801202000001004440",
+      "00000000000000801202000001089000",
+      "00000000000000801202020001005000",
+      "00000000000000801202020022001000",
+      "00000000000000801202040000901000",
+      "00000000000000801212000001081000",
+      "00000000000000821082000000000818",
+      "00000000000000821082000000000848",
+      "00000000000000821082000000000890",
+      "000000000000008210820000000008c0",
+      "00000000000000821082000000001018",
+      "00000000000000821086800000000800",
+      "00000000000000821086800000001000",
+      "00000000000000821086800000100000",
+      "00000000000000841202000000880400",
+      "00000000000000a21083000000001000",
+      "00000000000000a21083000000100000",
+      "00000000000040809002000022100000",
+      "00000000000040809002000040102000",
+      "00000000000040809002000800100200",
+      "00000000000040809002000802100000",
+      "00000000010000809002000040000006",
+      "00000000010000809002000040000009",
+      "00000000020000801202000800100001",
+      "00000000020000801202080800100000",
+      "00000000020000809202000800100000",
+      "00000000020008003800000009001000",
+      "00000000040000801202100100800000",
+      "00000000100008003800000009001000",
+      "00000008000000003800000008100006",
+      "00000010000000003840000008080040",
+      "0000001000000080120200000000040c",
+      "00000010000000801202000000000414",
+      "00000010000000801202000000000444",
+      "00000010000000801202000000000448",
+      "00000010000000801202040000000204",
+      "00000010000000809202000080000400",
+      "00000010000010003800000008003000",
+      "00000010040000801202000100000200"
+    ],
+    "residual_after_k1146_win_folds_only_20_rows": 20,
+    "win8_d10_candidates_17": [
+      "00000000000000003800000008003180",
+      "00000000000000003800000008005021",
+      "00000000000000003800000008d10000",
+      "00000000000000003800000009840004",
+      "00000000000000043800000008180010",
+      "00000000000000801202000000840500",
+      "00000000000000801202000000901010",
+      "00000000000000801202000022081000",
+      "00000000000000801202000800880200",
+      "00000000000000801212000001009000",
+      "00000000000000909002200080100000",
+      "00000000000020809002000480100000",
+      "00000000000200003800200008180000",
+      "00000000010000809002000040002001",
+      "00000000010000889002000080100000",
+      "00000000012000003800080009000000",
+      "0000000800000000380000000810000a"
+    ],
+    "win_claimed_rows_cumulative_52": 52
+  },
+  "gates": [
+    {
+      "detail": {
+        "expected": "5fdd342d624abec9b8478b69b13fc63a2dbbec99d227da4740cfe068647e688e",
+        "sha256": "5fdd342d624abec9b8478b69b13fc63a2dbbec99d227da4740cfe068647e688e"
+      },
+      "name": "pin-k1085",
+      "pass": true
+    },
+    {
+      "detail": {
+        "expected": "3045e15295af9b85b86578b5e8d55a8b325466eac576ee15b8450f6acb9b9ced",
+        "sha256": "3045e15295af9b85b86578b5e8d55a8b325466eac576ee15b8450f6acb9b9ced"
+      },
+      "name": "pin-k1086",
+      "pass": true
+    },
+    {
+      "detail": {
+        "expected": "808fbda1152cb492bb76641a101660f965f2801c0b74790d20a0d998d5b747fc",
+        "sha256": "808fbda1152cb492bb76641a101660f965f2801c0b74790d20a0d998d5b747fc"
+      },
+      "name": "pin-k1089",
+      "pass": true
+    },
+    {
+      "detail": {
+        "expected": "edd7ac84f47268adcc8a3364a5ff687499cb2a76ded0c0fa379506af02f40b25",
+        "sha256": "edd7ac84f47268adcc8a3364a5ff687499cb2a76ded0c0fa379506af02f40b25"
+      },
+      "name": "pin-k1091",
+      "pass": true
+    },
+    {
+      "detail": {
+        "expected": "335eca5ecb7c72e6fb0ee41eb740de736bf4eb78791823ae55f6375a68cb4707",
+        "sha256": "335eca5ecb7c72e6fb0ee41eb740de736bf4eb78791823ae55f6375a68cb4707"
+      },
+      "name": "pin-k1095",
+      "pass": true
+    },
+    {
+      "detail": {
+        "expected": "2896deb0c5e820904d0e2463e3fd9ebd1613b540a66a97f88d86c75bffa71f40",
+        "sha256": "2896deb0c5e820904d0e2463e3fd9ebd1613b540a66a97f88d86c75bffa71f40"
+      },
+      "name": "pin-k1097",
+      "pass": true
+    },
+    {
+      "detail": {
+        "expected": "e8f5d6749032c4ad95136d2915c03ce7e997fe494bf3eebf7f912cccc88ded1e",
+        "sha256": "e8f5d6749032c4ad95136d2915c03ce7e997fe494bf3eebf7f912cccc88ded1e"
+      },
+      "name": "pin-replace9",
+      "pass": true
+    },
+    {
+      "detail": {
+        "expected": "bdacf0e7056093145bef917ad384220b70c06be68bdd892b56dd23b3a7d4cb06",
+        "sha256": "bdacf0e7056093145bef917ad384220b70c06be68bdd892b56dd23b3a7d4cb06"
+      },
+      "name": "pin-probes",
+      "pass": true
+    },
+    {
+      "detail": {
+        "expected": "c5aaf83e23b6a716e981aaff745996668c60edba164fb3f5288b60ff9b8ac4d1",
+        "sha256": "c5aaf83e23b6a716e981aaff745996668c60edba164fb3f5288b60ff9b8ac4d1"
+      },
+      "name": "pin-decision",
+      "pass": true
+    },
+    {
+      "detail": {
+        "expected": "17dbd6ab3a9a9b5aef1cf1cf517a5a0fd216dff755f0ed86fcf029e1612cabcb",
+        "sha256": "17dbd6ab3a9a9b5aef1cf1cf517a5a0fd216dff755f0ed86fcf029e1612cabcb"
+      },
+      "name": "pin-k1147audit",
+      "pass": true
+    },
+    {
+      "detail": {
+        "cap": 30000000,
+        "runner_blob": "c132cc6425eee3feaeef1d697dd74f968cfedb59",
+        "timeout_s": 280
+      },
+      "name": "replace9-protocol",
+      "pass": true
+    },
+    {
+      "detail": {
+        "inputs": {
+          "k1085_sha256": "5fdd342d624abec9b8478b69b13fc63a2dbbec99d227da4740cfe068647e688e",
+          "k1086_sha256": "3045e15295af9b85b86578b5e8d55a8b325466eac576ee15b8450f6acb9b9ced",
+          "k1089_sha256": "808fbda1152cb492bb76641a101660f965f2801c0b74790d20a0d998d5b747fc",
+          "k1091_sha256": "edd7ac84f47268adcc8a3364a5ff687499cb2a76ded0c0fa379506af02f40b25",
+          "k1095_sha256": "335eca5ecb7c72e6fb0ee41eb740de736bf4eb78791823ae55f6375a68cb4707",
+          "k1097_sha256": "2896deb0c5e820904d0e2463e3fd9ebd1613b540a66a97f88d86c75bffa71f40"
+        }
+      },
+      "name": "replace9-input-pins-recorded",
+      "pass": true
+    },
+    {
+      "detail": {
+        "n": 18
+      },
+      "name": "probes-count-18",
+      "pass": true
+    },
+    {
+      "detail": {
+        "bit": 20,
+        "child": "00000000000000083800040048000000",
+        "ordering": "andclose0",
+        "root": "00000000000000083800040048100000"
+      },
+      "name": "probe-raw-child-000000-andclose0",
+      "pass": true
+    },
+    {
+      "detail": {
+        "bit": 20,
+        "child": "00000000000000083800040048000000",
+        "ordering": "andclose1",
+        "root": "00000000000000083800040048100000"
+      },
+      "name": "probe-raw-child-000000-andclose1",
+      "pass": true
+    },
+    {
+      "detail": {
+        "bit": 3,
+        "child": "00000000000000821082000000001010",
+        "ordering": "andclose1",
+        "root": "00000000000000821082000000001018"
+      },
+      "name": "probe-raw-child-000000-andclose1",
+      "pass": true
+    },
+    {
+      "detail": {
+        "bit": 24,
+        "child": "00000000000000143800000208000000",
+        "ordering": "andclose0",
+        "root": "00000000000000143800000209000000"
+      },
+      "name": "probe-raw-child-000000-andclose0",
+      "pass": true
+    },
+    {
+      "detail": {
+        "bit": 3,
+        "child": "00000000000000821082000000001010",
+        "ordering": "andclose0",
+        "root": "00000000000000821082000000001018"
+      },
+      "name": "probe-raw-child-000000-andclose0",
+      "pass": true
+    },
+    {
+      "detail": {
+        "bit": 11,
+        "child": "00000000000000821086800000000000",
+        "ordering": "andclose1",
+        "root": "00000000000000821086800000000800"
+      },
+      "name": "probe-raw-child-000000-andclose1",
+      "pass": true
+    },
+    {
+      "detail": {
+        "bit": 11,
+        "child": "00000000000000821086800000000000",
+        "ordering": "andclose0",
+        "root": "00000000000000821086800000000800"
+      },
+      "name": "probe-raw-child-000000-andclose0",
+      "pass": true
+    },
+    {
+      "detail": {
+        "bit": 9,
+        "child": "00000000000040809002000800100000",
+        "ordering": "andclose1",
+        "root": "00000000000040809002000800100200"
+      },
+      "name": "probe-raw-child-000000-andclose1",
+      "pass": true
+    },
+    {
+      "detail": {
+        "bit": 9,
+        "child": "00000000000040809002000800100000",
+        "ordering": "andclose0",
+        "root": "00000000000040809002000800100200"
+      },
+      "name": "probe-raw-child-000000-andclose0",
+      "pass": true
+    },
+    {
+      "detail": {
+        "bit": 0,
+        "child": "00000000000000103800000008080040",
+        "ordering": "andclose1",
+        "root": "00000000000000103800000008080041"
+      },
+      "name": "probe-raw-child-000000-andclose1",
+      "pass": true
+    },
+    {
+      "detail": {
+        "bit": 24,
+        "child": "00000000000000143800000208000000",
+        "ordering": "andclose1",
+        "root": "00000000000000143800000209000000"
+      },
+      "name": "probe-raw-child-000000-andclose1",
+      "pass": true
+    },
+    {
+      "detail": {
+        "bit": 0,
+        "child": "00000000020000801202000800100000",
+        "ordering": "andclose1",
+        "root": "00000000020000801202000800100001"
+      },
+      "name": "probe-raw-child-000000-andclose1",
+      "pass": true
+    },
+    {
+      "detail": {
+        "bit": 0,
+        "child": "00000000000000103800000008080040",
+        "ordering": "andclose0",
+        "root": "00000000000000103800000008080041"
+      },
+      "name": "probe-raw-child-000000-andclose0",
+      "pass": true
+    },
+    {
+      "detail": {
+        "bit": 0,
+        "child": "00000000020000801202000800100000",
+        "ordering": "andclose0",
+        "root": "00000000020000801202000800100001"
+      },
+      "name": "probe-raw-child-000000-andclose0",
+      "pass": true
+    },
+    {
+      "detail": {
+        "bit": 0,
+        "child": "00000000010000809002000040002000",
+        "ordering": "andclose1",
+        "root": "00000000010000809002000040002001"
+      },
+      "name": "probe-raw-child-000000-andclose1",
+      "pass": true
+    },
+    {
+      "detail": {
+        "bit": 3,
+        "child": "00000010000000801202000000000440",
+        "ordering": "andclose1",
+        "root": "00000010000000801202000000000448"
+      },
+      "name": "probe-raw-child-000000-andclose1",
+      "pass": true
+    },
+    {
+      "detail": {
+        "bit": 0,
+        "child": "00000000010000809002000040002000",
+        "ordering": "andclose0",
+        "root": "00000000010000809002000040002001"
+      },
+      "name": "probe-raw-child-000000-andclose0",
+      "pass": true
+    },
+    {
+      "detail": {
+        "bit": 3,
+        "child": "00000010000000801202000000000440",
+        "ordering": "andclose0",
+        "root": "00000010000000801202000000000448"
+      },
+      "name": "probe-raw-child-000000-andclose0",
+      "pass": true
+    },
+    {
+      "detail": {
+        "unique": 18
+      },
+      "name": "probes-unique-pairs",
+      "pass": true
+    },
+    {
+      "detail": {
+        "roots": 9
+      },
+      "name": "probes-both-orderings",
+      "pass": true
+    },
+    {
+      "detail": {
+        "root": "00000000000000083800040048100000"
+      },
+      "name": "popcount8-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "loss": [
+          false,
+          false
+        ],
+        "nodes": [
+          80912,
+          80912
+        ],
+        "ordering": "andclose0",
+        "range": [
+          [
+            14,
+            18
+          ],
+          [
+            14,
+            18
+          ]
+        ],
+        "root": "00000000000000083800040048100000"
+      },
+      "name": "record-vs-jsonl-000000-andclose0",
+      "pass": true
+    },
+    {
+      "detail": {
+        "loss": [
+          false,
+          false
+        ],
+        "nodes": [
+          11664,
+          11664
+        ],
+        "ordering": "andclose1",
+        "range": [
+          [
+            14,
+            16
+          ],
+          [
+            14,
+            16
+          ]
+        ],
+        "root": "00000000000000083800040048100000"
+      },
+      "name": "record-vs-jsonl-000000-andclose1",
+      "pass": true
+    },
+    {
+      "detail": {
+        "root": "00000000000000103800000008080041"
+      },
+      "name": "popcount8-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "loss": [
+          false,
+          false
+        ],
+        "nodes": [
+          242618,
+          242618
+        ],
+        "ordering": "andclose0",
+        "range": [
+          [
+            14,
+            18
+          ],
+          [
+            14,
+            18
+          ]
+        ],
+        "root": "00000000000000103800000008080041"
+      },
+      "name": "record-vs-jsonl-000000-andclose0",
+      "pass": true
+    },
+    {
+      "detail": {
+        "loss": [
+          false,
+          false
+        ],
+        "nodes": [
+          13781,
+          13781
+        ],
+        "ordering": "andclose1",
+        "range": [
+          [
+            14,
+            18
+          ],
+          [
+            14,
+            18
+          ]
+        ],
+        "root": "00000000000000103800000008080041"
+      },
+      "name": "record-vs-jsonl-000000-andclose1",
+      "pass": true
+    },
+    {
+      "detail": {
+        "root": "00000000000000143800000209000000"
+      },
+      "name": "popcount8-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "loss": [
+          false,
+          false
+        ],
+        "nodes": [
+          292251,
+          292251
+        ],
+        "ordering": "andclose0",
+        "range": [
+          [
+            14,
+            18
+          ],
+          [
+            14,
+            18
+          ]
+        ],
+        "root": "00000000000000143800000209000000"
+      },
+      "name": "record-vs-jsonl-000000-andclose0",
+      "pass": true
+    },
+    {
+      "detail": {
+        "loss": [
+          false,
+          false
+        ],
+        "nodes": [
+          572204,
+          572204
+        ],
+        "ordering": "andclose1",
+        "range": [
+          [
+            14,
+            18
+          ],
+          [
+            14,
+            18
+          ]
+        ],
+        "root": "00000000000000143800000209000000"
+      },
+      "name": "record-vs-jsonl-000000-andclose1",
+      "pass": true
+    },
+    {
+      "detail": {
+        "root": "00000000000000821082000000001018"
+      },
+      "name": "popcount8-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "loss": [
+          false,
+          false
+        ],
+        "nodes": [
+          74966,
+          74966
+        ],
+        "ordering": "andclose0",
+        "range": [
+          [
+            14,
+            18
+          ],
+          [
+            14,
+            18
+          ]
+        ],
+        "root": "00000000000000821082000000001018"
+      },
+      "name": "record-vs-jsonl-000000-andclose0",
+      "pass": true
+    },
+    {
+      "detail": {
+        "loss": [
+          false,
+          false
+        ],
+        "nodes": [
+          53667,
+          53667
+        ],
+        "ordering": "andclose1",
+        "range": [
+          [
+            14,
+            18
+          ],
+          [
+            14,
+            18
+          ]
+        ],
+        "root": "00000000000000821082000000001018"
+      },
+      "name": "record-vs-jsonl-000000-andclose1",
+      "pass": true
+    },
+    {
+      "detail": {
+        "root": "00000000000000821086800000000800"
+      },
+      "name": "popcount8-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "loss": [
+          false,
+          false
+        ],
+        "nodes": [
+          23112,
+          23112
+        ],
+        "ordering": "andclose0",
+        "range": [
+          [
+            14,
+            18
+          ],
+          [
+            14,
+            18
+          ]
+        ],
+        "root": "00000000000000821086800000000800"
+      },
+      "name": "record-vs-jsonl-000000-andclose0",
+      "pass": true
+    },
+    {
+      "detail": {
+        "loss": [
+          false,
+          false
+        ],
+        "nodes": [
+          42629,
+          42629
+        ],
+        "ordering": "andclose1",
+        "range": [
+          [
+            14,
+            18
+          ],
+          [
+            14,
+            18
+          ]
+        ],
+        "root": "00000000000000821086800000000800"
+      },
+      "name": "record-vs-jsonl-000000-andclose1",
+      "pass": true
+    },
+    {
+      "detail": {
+        "root": "00000000000040809002000800100200"
+      },
+      "name": "popcount8-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "loss": [
+          false,
+          false
+        ],
+        "nodes": [
+          81137,
+          81137
+        ],
+        "ordering": "andclose0",
+        "range": [
+          [
+            14,
+            18
+          ],
+          [
+            14,
+            18
+          ]
+        ],
+        "root": "00000000000040809002000800100200"
+      },
+      "name": "record-vs-jsonl-000000-andclose0",
+      "pass": true
+    },
+    {
+      "detail": {
+        "loss": [
+          false,
+          false
+        ],
+        "nodes": [
+          120916,
+          120916
+        ],
+        "ordering": "andclose1",
+        "range": [
+          [
+            14,
+            18
+          ],
+          [
+            14,
+            18
+          ]
+        ],
+        "root": "00000000000040809002000800100200"
+      },
+      "name": "record-vs-jsonl-000000-andclose1",
+      "pass": true
+    },
+    {
+      "detail": {
+        "root": "00000000010000809002000040002001"
+      },
+      "name": "popcount8-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "loss": [
+          true,
+          true
+        ],
+        "nodes": [
+          691784,
+          691784
+        ],
+        "ordering": "andclose0",
+        "range": [
+          [
+            14,
+            18
+          ],
+          [
+            14,
+            18
+          ]
+        ],
+        "root": "00000000010000809002000040002001"
+      },
+      "name": "record-vs-jsonl-000000-andclose0",
+      "pass": true
+    },
+    {
+      "detail": {
+        "loss": [
+          true,
+          true
+        ],
+        "nodes": [
+          608293,
+          608293
+        ],
+        "ordering": "andclose1",
+        "range": [
+          [
+            14,
+            18
+          ],
+          [
+            14,
+            18
+          ]
+        ],
+        "root": "00000000010000809002000040002001"
+      },
+      "name": "record-vs-jsonl-000000-andclose1",
+      "pass": true
+    },
+    {
+      "detail": {
+        "root": "00000000020000801202000800100001"
+      },
+      "name": "popcount8-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "loss": [
+          false,
+          false
+        ],
+        "nodes": [
+          126875,
+          126875
+        ],
+        "ordering": "andclose0",
+        "range": [
+          [
+            14,
+            18
+          ],
+          [
+            14,
+            18
+          ]
+        ],
+        "root": "00000000020000801202000800100001"
+      },
+      "name": "record-vs-jsonl-000000-andclose0",
+      "pass": true
+    },
+    {
+      "detail": {
+        "loss": [
+          false,
+          false
+        ],
+        "nodes": [
+          11535,
+          11535
+        ],
+        "ordering": "andclose1",
+        "range": [
+          [
+            14,
+            16
+          ],
+          [
+            14,
+            16
+          ]
+        ],
+        "root": "00000000020000801202000800100001"
+      },
+      "name": "record-vs-jsonl-000000-andclose1",
+      "pass": true
+    },
+    {
+      "detail": {
+        "root": "00000010000000801202000000000448"
+      },
+      "name": "popcount8-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "loss": [
+          false,
+          false
+        ],
+        "nodes": [
+          377046,
+          377046
+        ],
+        "ordering": "andclose0",
+        "range": [
+          [
+            14,
+            18
+          ],
+          [
+            14,
+            18
+          ]
+        ],
+        "root": "00000010000000801202000000000448"
+      },
+      "name": "record-vs-jsonl-000000-andclose0",
+      "pass": true
+    },
+    {
+      "detail": {
+        "loss": [
+          false,
+          false
+        ],
+        "nodes": [
+          148782,
+          148782
+        ],
+        "ordering": "andclose1",
+        "range": [
+          [
+            14,
+            18
+          ],
+          [
+            14,
+            18
+          ]
+        ],
+        "root": "00000010000000801202000000000448"
+      },
+      "name": "record-vs-jsonl-000000-andclose1",
+      "pass": true
+    },
+    {
+      "detail": {
+        "derived": [
+          "00000000010000809002000040002001"
+        ],
+        "published": [
+          "00000000010000809002000040002001"
+        ]
+      },
+      "name": "classification-win-rederive",
+      "pass": true
+    },
+    {
+      "detail": {
+        "derived": [
+          "00000000000000083800040048100000",
+          "00000000000000103800000008080041",
+          "00000000000000143800000209000000",
+          "00000000000000821082000000001018",
+          "00000000000000821086800000000800",
+          "00000000000040809002000800100200",
+          "00000000020000801202000800100001",
+          "00000010000000801202000000000448"
+        ],
+        "published": [
+          "00000000000000083800040048100000",
+          "00000000000000103800000008080041",
+          "00000000000000143800000209000000",
+          "00000000000000821082000000001018",
+          "00000000000000821086800000000800",
+          "00000000000040809002000800100200",
+          "00000000020000801202000800100001",
+          "00000010000000801202000000000448"
+        ]
+      },
+      "name": "classification-ref-rederive",
+      "pass": true
+    },
+    {
+      "detail": {
+        "derived": 3574172,
+        "published": 3574172
+      },
+      "name": "classification-nodes-total",
+      "pass": true
+    },
+    {
+      "detail": {
+        "gained": 3,
+        "n": 3,
+        "root": "00000000000000083800040048100000"
+      },
+      "name": "gained-eq-len-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "gained": 2,
+        "n": 2,
+        "root": "00000000000000103800000008080041"
+      },
+      "name": "gained-eq-len-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "gained": 3,
+        "n": 3,
+        "root": "00000000000000143800000209000000"
+      },
+      "name": "gained-eq-len-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "gained": 3,
+        "n": 3,
+        "root": "00000000000000821082000000001018"
+      },
+      "name": "gained-eq-len-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "gained": 3,
+        "n": 3,
+        "root": "00000000000000821086800000000800"
+      },
+      "name": "gained-eq-len-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "gained": 3,
+        "n": 3,
+        "root": "00000000000040809002000800100200"
+      },
+      "name": "gained-eq-len-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "gained": 3,
+        "n": 3,
+        "root": "00000000010000809002000040002001"
+      },
+      "name": "gained-eq-len-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "gained": 2,
+        "n": 2,
+        "root": "00000000020000801202000800100001"
+      },
+      "name": "gained-eq-len-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "gained": 1,
+        "n": 1,
+        "root": "00000010000000801202000000000448"
+      },
+      "name": "gained-eq-len-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "derived": {
+          "1": 1,
+          "2": 2,
+          "3": 6
+        }
+      },
+      "name": "classification-gains-hist",
+      "pass": true
+    },
+    {
+      "detail": {
+        "derived": [
+          14,
+          18
+        ],
+        "published": [
+          14,
+          18
+        ]
+      },
+      "name": "classification-terminal-union",
+      "pass": true
+    },
+    {
+      "detail": {
+        "capped": 0,
+        "error": 0
+      },
+      "name": "classification-capped-error-zero",
+      "pass": true
+    },
+    {
+      "detail": {
+        "root": "00000000010000809002000040002001",
+        "rows": [
+          "00000000000000801202000001000400",
+          "00000000000000801202000001080000",
+          "00000000010000809002000040000000"
+        ]
+      },
+      "name": "win-claimed-rows-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "n": 72,
+        "unique": 72
+      },
+      "name": "base72",
+      "pass": true
+    },
+    {
+      "detail": {
+        "safe8": 120474
+      },
+      "name": "safe8-recorded",
+      "pass": true
+    },
+    {
+      "detail": {
+        "refuted": 16,
+        "win": 7
+      },
+      "name": "round-k1086-counts",
+      "pass": true
+    },
+    {
+      "detail": {
+        "n": 4,
+        "root": "00000000000000003800000008003180"
+      },
+      "name": "round-k1086-win-rows-match-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "n": 4,
+        "root": "00000000000000909002200080100000"
+      },
+      "name": "round-k1086-win-rows-match-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "n": 4,
+        "root": "00000000010000889002000080100000"
+      },
+      "name": "round-k1086-win-rows-match-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "n": 3,
+        "root": "00000000000000003800000008005021"
+      },
+      "name": "round-k1086-win-rows-match-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "n": 3,
+        "root": "00000000000000003800000009840004"
+      },
+      "name": "round-k1086-win-rows-match-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "n": 3,
+        "root": "00000000012000003800080009000000"
+      },
+      "name": "round-k1086-win-rows-match-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "n": 2,
+        "root": "00000000000200003800200008180000"
+      },
+      "name": "round-k1086-win-rows-match-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "claimed": 23,
+        "distinct": 23
+      },
+      "name": "round-k1086-win-rows-distinct",
+      "pass": true
+    },
+    {
+      "detail": {
+        "outside": []
+      },
+      "name": "round-k1086-win-rows-in-residual",
+      "pass": true
+    },
+    {
+      "detail": {
+        "gained": 4,
+        "n": 4,
+        "root": "00000000000000083820000048100000"
+      },
+      "name": "round-k1086-ref-rows-match-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "gained": 4,
+        "n": 4,
+        "root": "00000000000000143800000009080000"
+      },
+      "name": "round-k1086-ref-rows-match-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "gained": 4,
+        "n": 4,
+        "root": "00000000000000801202040000901000"
+      },
+      "name": "round-k1086-ref-rows-match-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "gained": 4,
+        "n": 4,
+        "root": "00000000000000801212000001081000"
+      },
+      "name": "round-k1086-ref-rows-match-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "gained": 3,
+        "n": 3,
+        "root": "00000000000000003800000008710000"
+      },
+      "name": "round-k1086-ref-rows-match-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "gained": 3,
+        "n": 3,
+        "root": "0000000000000000380010000a002010"
+      },
+      "name": "round-k1086-ref-rows-match-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "gained": 3,
+        "n": 3,
+        "root": "00000000000000043800020008900000"
+      },
+      "name": "round-k1086-ref-rows-match-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "gained": 3,
+        "n": 3,
+        "root": "00000000000000801202000000840300"
+      },
+      "name": "round-k1086-ref-rows-match-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "gained": 3,
+        "n": 3,
+        "root": "00000000000000801202000001004408"
+      },
+      "name": "round-k1086-ref-rows-match-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "gained": 3,
+        "n": 3,
+        "root": "00000000000000821082000000000818"
+      },
+      "name": "round-k1086-ref-rows-match-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "gained": 3,
+        "n": 3,
+        "root": "00000000000000821086800000001000"
+      },
+      "name": "round-k1086-ref-rows-match-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "gained": 3,
+        "n": 3,
+        "root": "00000000000000841202000000880400"
+      },
+      "name": "round-k1086-ref-rows-match-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "gained": 3,
+        "n": 3,
+        "root": "00000000000040809002000802100000"
+      },
+      "name": "round-k1086-ref-rows-match-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "gained": 3,
+        "n": 3,
+        "root": "00000000020000801202080800100000"
+      },
+      "name": "round-k1086-ref-rows-match-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "gained": 2,
+        "n": 2,
+        "root": "00000010040000801202000100000200"
+      },
+      "name": "round-k1086-ref-rows-match-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "gained": 1,
+        "n": 1,
+        "root": "0000001000000080120200000000040c"
+      },
+      "name": "round-k1086-ref-rows-match-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "claimed_total": 72,
+        "distinct": 72,
+        "extra": [],
+        "uncovered": []
+      },
+      "name": "round-k1086-exactly-once-partition",
+      "pass": true
+    },
+    {
+      "detail": {
+        "expected": 49,
+        "size": 49
+      },
+      "name": "round-k1086-residual-size",
+      "pass": true
+    },
+    {
+      "detail": {
+        "refuted": 13,
+        "win": 3
+      },
+      "name": "round-k1089-counts",
+      "pass": true
+    },
+    {
+      "detail": {
+        "n": 3,
+        "root": "00000000000000801202000000840500"
+      },
+      "name": "round-k1089-win-rows-match-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "n": 3,
+        "root": "00000000000000801202000800880200"
+      },
+      "name": "round-k1089-win-rows-match-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "n": 3,
+        "root": "00000000000020809002000480100000"
+      },
+      "name": "round-k1089-win-rows-match-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "claimed": 9,
+        "distinct": 9
+      },
+      "name": "round-k1089-win-rows-distinct",
+      "pass": true
+    },
+    {
+      "detail": {
+        "outside": []
+      },
+      "name": "round-k1089-win-rows-in-residual",
+      "pass": true
+    },
+    {
+      "detail": {
+        "gained": 4,
+        "n": 4,
+        "root": "00000000000000801202000001089000"
+      },
+      "name": "round-k1089-ref-rows-match-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "gained": 4,
+        "n": 4,
+        "root": "00000000100008003800000009001000"
+      },
+      "name": "round-k1089-ref-rows-match-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "gained": 4,
+        "n": 4,
+        "root": "00000010000010003800000008003000"
+      },
+      "name": "round-k1089-ref-rows-match-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "gained": 3,
+        "n": 3,
+        "root": "00000000000000003800000008b10000"
+      },
+      "name": "round-k1089-ref-rows-match-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "gained": 3,
+        "n": 3,
+        "root": "00000000000000003800100028002040"
+      },
+      "name": "round-k1089-ref-rows-match-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "gained": 3,
+        "n": 3,
+        "root": "00000000000000043800000609000000"
+      },
+      "name": "round-k1089-ref-rows-match-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "gained": 3,
+        "n": 3,
+        "root": "00000000000000103800000009080040"
+      },
+      "name": "round-k1089-ref-rows-match-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "gained": 3,
+        "n": 3,
+        "root": "00000000000000801202020022001000"
+      },
+      "name": "round-k1089-ref-rows-match-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "gained": 3,
+        "n": 3,
+        "root": "00000000000000821082000000000848"
+      },
+      "name": "round-k1089-ref-rows-match-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "gained": 3,
+        "n": 3,
+        "root": "00000000000000821086800000100000"
+      },
+      "name": "round-k1089-ref-rows-match-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "gained": 3,
+        "n": 3,
+        "root": "00000010000000801202040000000204"
+      },
+      "name": "round-k1089-ref-rows-match-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "gained": 2,
+        "n": 2,
+        "root": "00000000010000809002000040000009"
+      },
+      "name": "round-k1089-ref-rows-match-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "gained": 2,
+        "n": 2,
+        "root": "00000010000000809202000080000400"
+      },
+      "name": "round-k1089-ref-rows-match-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "claimed_total": 49,
+        "distinct": 49,
+        "extra": [],
+        "uncovered": []
+      },
+      "name": "round-k1089-exactly-once-partition",
+      "pass": true
+    },
+    {
+      "detail": {
+        "expected": 40,
+        "size": 40
+      },
+      "name": "round-k1089-residual-size",
+      "pass": true
+    },
+    {
+      "detail": {
+        "expected": [
+          23,
+          49
+        ],
+        "own_row_counts": [
+          23,
+          49
+        ]
+      },
+      "name": "round-k1089-own-red-bookkeeping",
+      "pass": true
+    },
+    {
+      "detail": {
+        "refuted": 12,
+        "win": 3
+      },
+      "name": "round-k1091-counts",
+      "pass": true
+    },
+    {
+      "detail": {
+        "n": 4,
+        "root": "00000000000000801212000001009000"
+      },
+      "name": "round-k1091-win-rows-match-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "n": 3,
+        "root": "00000000000000003800000008d10000"
+      },
+      "name": "round-k1091-win-rows-match-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "n": 3,
+        "root": "00000000000000043800000008180010"
+      },
+      "name": "round-k1091-win-rows-match-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "claimed": 10,
+        "distinct": 10
+      },
+      "name": "round-k1091-win-rows-distinct",
+      "pass": true
+    },
+    {
+      "detail": {
+        "outside": []
+      },
+      "name": "round-k1091-win-rows-in-residual",
+      "pass": true
+    },
+    {
+      "detail": {
+        "gained": 4,
+        "n": 4,
+        "root": "00000000020008003800000009001000"
+      },
+      "name": "round-k1091-ref-rows-match-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "gained": 3,
+        "n": 3,
+        "root": "0000000000000010380000000b080000"
+      },
+      "name": "round-k1091-ref-rows-match-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "gained": 3,
+        "n": 3,
+        "root": "00000000000000801202000000901002"
+      },
+      "name": "round-k1091-ref-rows-match-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "gained": 3,
+        "n": 3,
+        "root": "00000000000000801202000001000448"
+      },
+      "name": "round-k1091-ref-rows-match-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "gained": 3,
+        "n": 3,
+        "root": "00000000000000821082000000000890"
+      },
+      "name": "round-k1091-ref-rows-match-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "gained": 3,
+        "n": 3,
+        "root": "00000000000000a21083000000001000"
+      },
+      "name": "round-k1091-ref-rows-match-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "gained": 3,
+        "n": 3,
+        "root": "00000000000040809002000022100000"
+      },
+      "name": "round-k1091-ref-rows-match-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "gained": 3,
+        "n": 3,
+        "root": "00000010000000003840000008080040"
+      },
+      "name": "round-k1091-ref-rows-match-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "gained": 2,
+        "n": 2,
+        "root": "00000000000000801202020001005000"
+      },
+      "name": "round-k1091-ref-rows-match-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "gained": 1,
+        "n": 1,
+        "root": "00000000010000809002000040000006"
+      },
+      "name": "round-k1091-ref-rows-match-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "gained": 1,
+        "n": 1,
+        "root": "00000008000000003800000008100006"
+      },
+      "name": "round-k1091-ref-rows-match-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "gained": 1,
+        "n": 1,
+        "root": "00000010000000801202000000000414"
+      },
+      "name": "round-k1091-ref-rows-match-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "claimed_total": 40,
+        "distinct": 40,
+        "extra": [],
+        "uncovered": []
+      },
+      "name": "round-k1091-exactly-once-partition",
+      "pass": true
+    },
+    {
+      "detail": {
+        "expected": 30,
+        "size": 30
+      },
+      "name": "round-k1091-residual-size",
+      "pass": true
+    },
+    {
+      "detail": {
+        "expected": [
+          9,
+          40
+        ],
+        "own_row_counts": [
+          9,
+          40
+        ]
+      },
+      "name": "round-k1091-own-red-bookkeeping",
+      "pass": true
+    },
+    {
+      "detail": {
+        "refuted": 9,
+        "win": 3
+      },
+      "name": "round-k1095-counts",
+      "pass": true
+    },
+    {
+      "detail": {
+        "n": 3,
+        "root": "00000000000000801202000000901010"
+      },
+      "name": "round-k1095-win-rows-match-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "n": 3,
+        "root": "00000000000000801202000022081000"
+      },
+      "name": "round-k1095-win-rows-match-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "n": 1,
+        "root": "0000000800000000380000000810000a"
+      },
+      "name": "round-k1095-win-rows-match-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "claimed": 7,
+        "distinct": 7
+      },
+      "name": "round-k1095-win-rows-distinct",
+      "pass": true
+    },
+    {
+      "detail": {
+        "outside": []
+      },
+      "name": "round-k1095-win-rows-in-residual",
+      "pass": true
+    },
+    {
+      "detail": {
+        "gained": 3,
+        "n": 3,
+        "root": "00000000000000083800000048300000"
+      },
+      "name": "round-k1095-ref-rows-match-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "gained": 3,
+        "n": 3,
+        "root": "00000000000000103800000209080000"
+      },
+      "name": "round-k1095-ref-rows-match-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "gained": 3,
+        "n": 3,
+        "root": "00000000000000801202000001004440"
+      },
+      "name": "round-k1095-ref-rows-match-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "gained": 3,
+        "n": 3,
+        "root": "000000000000008210820000000008c0"
+      },
+      "name": "round-k1095-ref-rows-match-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "gained": 3,
+        "n": 3,
+        "root": "00000000000000a21083000000100000"
+      },
+      "name": "round-k1095-ref-rows-match-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "gained": 3,
+        "n": 3,
+        "root": "00000000020000809202000800100000"
+      },
+      "name": "round-k1095-ref-rows-match-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "gained": 2,
+        "n": 2,
+        "root": "00000000000040809002000040102000"
+      },
+      "name": "round-k1095-ref-rows-match-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "gained": 2,
+        "n": 2,
+        "root": "00000000040000801202100100800000"
+      },
+      "name": "round-k1095-ref-rows-match-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "gained": 1,
+        "n": 1,
+        "root": "00000010000000801202000000000444"
+      },
+      "name": "round-k1095-ref-rows-match-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "claimed_total": 30,
+        "distinct": 30,
+        "extra": [],
+        "uncovered": []
+      },
+      "name": "round-k1095-exactly-once-partition",
+      "pass": true
+    },
+    {
+      "detail": {
+        "expected": 23,
+        "size": 23
+      },
+      "name": "round-k1095-residual-size",
+      "pass": true
+    },
+    {
+      "detail": {
+        "expected": [
+          10,
+          30
+        ],
+        "own_row_counts": [
+          10,
+          30
+        ]
+      },
+      "name": "round-k1095-own-red-bookkeeping",
+      "pass": true
+    },
+    {
+      "detail": {
+        "refuted": 8,
+        "win": 1
+      },
+      "name": "round-replace9-counts",
+      "pass": true
+    },
+    {
+      "detail": {
+        "n": 3,
+        "root": "00000000010000809002000040002001"
+      },
+      "name": "round-replace9-win-rows-match-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "claimed": 3,
+        "distinct": 3
+      },
+      "name": "round-replace9-win-rows-distinct",
+      "pass": true
+    },
+    {
+      "detail": {
+        "outside": []
+      },
+      "name": "round-replace9-win-rows-in-residual",
+      "pass": true
+    },
+    {
+      "detail": {
+        "gained": 3,
+        "n": 3,
+        "root": "00000000000000083800040048100000"
+      },
+      "name": "round-replace9-ref-rows-match-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "gained": 3,
+        "n": 3,
+        "root": "00000000000000143800000209000000"
+      },
+      "name": "round-replace9-ref-rows-match-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "gained": 3,
+        "n": 3,
+        "root": "00000000000000821082000000001018"
+      },
+      "name": "round-replace9-ref-rows-match-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "gained": 3,
+        "n": 3,
+        "root": "00000000000000821086800000000800"
+      },
+      "name": "round-replace9-ref-rows-match-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "gained": 3,
+        "n": 3,
+        "root": "00000000000040809002000800100200"
+      },
+      "name": "round-replace9-ref-rows-match-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "gained": 2,
+        "n": 2,
+        "root": "00000000000000103800000008080041"
+      },
+      "name": "round-replace9-ref-rows-match-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "gained": 2,
+        "n": 2,
+        "root": "00000000020000801202000800100001"
+      },
+      "name": "round-replace9-ref-rows-match-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "gained": 1,
+        "n": 1,
+        "root": "00000010000000801202000000000448"
+      },
+      "name": "round-replace9-ref-rows-match-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "claimed_total": 23,
+        "distinct": 23,
+        "extra": [],
+        "uncovered": []
+      },
+      "name": "round-replace9-exactly-once-partition",
+      "pass": true
+    },
+    {
+      "detail": {
+        "expected": 20,
+        "size": 20
+      },
+      "name": "round-replace9-residual-size",
+      "pass": true
+    },
+    {
+      "detail": {
+        "expected": [
+          7,
+          23
+        ],
+        "own_row_counts": [
+          7,
+          23
+        ]
+      },
+      "name": "round-replace9-own-red-bookkeeping",
+      "pass": true
+    },
+    {
+      "detail": {
+        "k1097": 23,
+        "mine": 23
+      },
+      "name": "residual23-mine-vs-k1097",
+      "pass": true
+    },
+    {
+      "detail": {
+        "P3_touching23": 45219,
+        "demand_sum": 50670,
+        "hist": {
+          "1": 40065,
+          "2": 4857,
+          "3": 297
+        }
+      },
+      "name": "decision-universe-bookkeeping",
+      "pass": true
+    },
+    {
+      "detail": {
+        "decision": "UNSAT",
+        "min_cover": 9
+      },
+      "name": "decision-master-byte-ledger",
+      "pass": true
+    },
+    {
+      "detail": {
+        "n": 9
+      },
+      "name": "greedy-size-9",
+      "pass": true
+    },
+    {
+      "detail": {
+        "k1097": [
+          "00000000000000083800040048100000",
+          "00000000000000103800000008080041",
+          "00000000000000143800000209000000",
+          "00000000000000821082000000001018",
+          "00000000000000821086800000000800",
+          "00000000000040809002000800100200",
+          "00000000010000809002000040002001",
+          "00000000020000801202000800100001",
+          "00000010000000801202000000000448"
+        ],
+        "replace9": [
+          "00000000000000083800040048100000",
+          "00000000000000103800000008080041",
+          "00000000000000143800000209000000",
+          "00000000000000821082000000001018",
+          "00000000000000821086800000000800",
+          "00000000000040809002000800100200",
+          "00000000010000809002000040002001",
+          "00000000020000801202000800100001",
+          "00000010000000801202000000000448"
+        ]
+      },
+      "name": "greedy-identity-root-by-root",
+      "pass": true
+    },
+    {
+      "detail": {
+        "bookkeeping": {
+          "greedy_size": 9,
+          "leftover_rows": [],
+          "max_matching": 23,
+          "probes_two_orderings": 18,
+          "stranded_rows": []
+        }
+      },
+      "name": "greedy-plan-bookkeeping",
+      "pass": true
+    },
+    {
+      "detail": {
+        "bad_quad": null,
+        "root": "00000000000000083800040048100000"
+      },
+      "name": "quad-free-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "canon": "00000000000000083800040048100000",
+        "root": "00000000000000083800040048100000"
+      },
+      "name": "d4-min-canonical-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "row": "00000000000000003800000409000000"
+      },
+      "name": "row-popcount6-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "row": "00000000000000083800000008100000"
+      },
+      "name": "row-popcount6-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "row": "00000000000000083800000048000000"
+      },
+      "name": "row-popcount6-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "bad_quad": null,
+        "root": "00000000000000103800000008080041"
+      },
+      "name": "quad-free-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "canon": "00000000000000103800000008080041",
+        "root": "00000000000000103800000008080041"
+      },
+      "name": "d4-min-canonical-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "row": "00000000000000003800000008002010"
+      },
+      "name": "row-popcount6-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "row": "00000000000000103800000008080000"
+      },
+      "name": "row-popcount6-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "bad_quad": null,
+        "root": "00000000000000143800000209000000"
+      },
+      "name": "quad-free-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "canon": "00000000000000143800000209000000",
+        "root": "00000000000000143800000209000000"
+      },
+      "name": "d4-min-canonical-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "row": "00000000000000003800000209000000"
+      },
+      "name": "row-popcount6-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "row": "00000000000000043800000009000000"
+      },
+      "name": "row-popcount6-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "row": "00000000000000103800000009000000"
+      },
+      "name": "row-popcount6-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "bad_quad": null,
+        "root": "00000000000000821082000000001018"
+      },
+      "name": "quad-free-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "canon": "00000000000000821082000000001018",
+        "root": "00000000000000821082000000001018"
+      },
+      "name": "d4-min-canonical-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "row": "00000000000000821082000000000008"
+      },
+      "name": "row-popcount6-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "row": "00000000000000821082000000000010"
+      },
+      "name": "row-popcount6-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "row": "00000000000000821082000000001000"
+      },
+      "name": "row-popcount6-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "bad_quad": null,
+        "root": "00000000000000821086800000000800"
+      },
+      "name": "quad-free-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "canon": "00000000000000821086800000000800",
+        "root": "00000000000000821086800000000800"
+      },
+      "name": "d4-min-canonical-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "row": "00000000000000821082000000000800"
+      },
+      "name": "row-popcount6-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "row": "00000000000000821082800000000000"
+      },
+      "name": "row-popcount6-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "row": "00000000000000821083000000000000"
+      },
+      "name": "row-popcount6-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "bad_quad": null,
+        "root": "00000000000040809002000800100200"
+      },
+      "name": "quad-free-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "canon": "00000000000040809002000800100200",
+        "root": "00000000000040809002000800100200"
+      },
+      "name": "d4-min-canonical-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "row": "00000000000000003800000008001800"
+      },
+      "name": "row-popcount6-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "row": "00000000000000801202020000001000"
+      },
+      "name": "row-popcount6-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "row": "00000000000040809002000000100000"
+      },
+      "name": "row-popcount6-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "bad_quad": null,
+        "root": "00000000010000809002000040002001"
+      },
+      "name": "quad-free-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "canon": "00000000010000809002000040002001",
+        "root": "00000000010000809002000040002001"
+      },
+      "name": "d4-min-canonical-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "row": "00000000000000801202000001000400"
+      },
+      "name": "row-popcount6-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "row": "00000000000000801202000001080000"
+      },
+      "name": "row-popcount6-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "row": "00000000010000809002000040000000"
+      },
+      "name": "row-popcount6-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "bad_quad": null,
+        "root": "00000000020000801202000800100001"
+      },
+      "name": "quad-free-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "canon": "00000000020000801202000800100001",
+        "root": "00000000020000801202000800100001"
+      },
+      "name": "d4-min-canonical-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "row": "0000000000000000380000000a080000"
+      },
+      "name": "row-popcount6-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "row": "00000000020000801202000000100000"
+      },
+      "name": "row-popcount6-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "bad_quad": null,
+        "root": "00000010000000801202000000000448"
+      },
+      "name": "quad-free-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "canon": "00000010000000801202000000000448",
+        "root": "00000010000000801202000000000448"
+      },
+      "name": "d4-min-canonical-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "row": "00000010000000801202000000000400"
+      },
+      "name": "row-popcount6-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "distinct": 23,
+        "n": 23
+      },
+      "name": "exactly-once-over-residual23",
+      "pass": true
+    },
+    {
+      "detail": {
+        "probed": 75
+      },
+      "name": "census-probed-75",
+      "pass": true
+    },
+    {
+      "detail": {
+        "root": "00000000000000003800000008003180"
+      },
+      "name": "census-popcount-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "root": "00000000000000003800000008005021"
+      },
+      "name": "census-popcount-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "root": "00000000000000003800000008710000"
+      },
+      "name": "census-popcount-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "root": "00000000000000003800000009840004"
+      },
+      "name": "census-popcount-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "root": "0000000000000000380010000a002010"
+      },
+      "name": "census-popcount-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "root": "00000000000000043800020008900000"
+      },
+      "name": "census-popcount-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "root": "00000000000000083820000048100000"
+      },
+      "name": "census-popcount-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "root": "00000000000000143800000009080000"
+      },
+      "name": "census-popcount-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "root": "00000000000000801202000000840300"
+      },
+      "name": "census-popcount-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "root": "00000000000000801202000001004408"
+      },
+      "name": "census-popcount-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "root": "00000000000000801202040000901000"
+      },
+      "name": "census-popcount-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "root": "00000000000000801212000001081000"
+      },
+      "name": "census-popcount-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "root": "00000000000000821082000000000818"
+      },
+      "name": "census-popcount-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "root": "00000000000000821086800000001000"
+      },
+      "name": "census-popcount-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "root": "00000000000000841202000000880400"
+      },
+      "name": "census-popcount-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "root": "00000000000000909002200080100000"
+      },
+      "name": "census-popcount-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "root": "00000000000040809002000802100000"
+      },
+      "name": "census-popcount-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "root": "00000000000200003800200008180000"
+      },
+      "name": "census-popcount-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "root": "00000000010000889002000080100000"
+      },
+      "name": "census-popcount-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "root": "00000000012000003800080009000000"
+      },
+      "name": "census-popcount-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "root": "00000000020000801202080800100000"
+      },
+      "name": "census-popcount-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "root": "0000001000000080120200000000040c"
+      },
+      "name": "census-popcount-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "root": "00000010040000801202000100000200"
+      },
+      "name": "census-popcount-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "root": "00000000000000003800000008b10000"
+      },
+      "name": "census-popcount-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "root": "00000000000000003800100028002040"
+      },
+      "name": "census-popcount-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "root": "00000000000000043800000609000000"
+      },
+      "name": "census-popcount-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "root": "00000000000000103800000009080040"
+      },
+      "name": "census-popcount-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "root": "00000000000000801202000000840500"
+      },
+      "name": "census-popcount-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "root": "00000000000000801202000001089000"
+      },
+      "name": "census-popcount-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "root": "00000000000000801202000800880200"
+      },
+      "name": "census-popcount-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "root": "00000000000000801202020022001000"
+      },
+      "name": "census-popcount-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "root": "00000000000000821082000000000848"
+      },
+      "name": "census-popcount-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "root": "00000000000000821086800000100000"
+      },
+      "name": "census-popcount-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "root": "00000000000020809002000480100000"
+      },
+      "name": "census-popcount-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "root": "00000000010000809002000040000009"
+      },
+      "name": "census-popcount-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "root": "00000000100008003800000009001000"
+      },
+      "name": "census-popcount-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "root": "00000010000000801202040000000204"
+      },
+      "name": "census-popcount-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "root": "00000010000000809202000080000400"
+      },
+      "name": "census-popcount-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "root": "00000010000010003800000008003000"
+      },
+      "name": "census-popcount-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "root": "00000000000000003800000008d10000"
+      },
+      "name": "census-popcount-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "root": "00000000000000043800000008180010"
+      },
+      "name": "census-popcount-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "root": "0000000000000010380000000b080000"
+      },
+      "name": "census-popcount-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "root": "00000000000000801202000000901002"
+      },
+      "name": "census-popcount-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "root": "00000000000000801202000001000448"
+      },
+      "name": "census-popcount-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "root": "00000000000000801202020001005000"
+      },
+      "name": "census-popcount-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "root": "00000000000000801212000001009000"
+      },
+      "name": "census-popcount-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "root": "00000000000000821082000000000890"
+      },
+      "name": "census-popcount-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "root": "00000000000000a21083000000001000"
+      },
+      "name": "census-popcount-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "root": "00000000000040809002000022100000"
+      },
+      "name": "census-popcount-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "root": "00000000010000809002000040000006"
+      },
+      "name": "census-popcount-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "root": "00000000020008003800000009001000"
+      },
+      "name": "census-popcount-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "root": "00000008000000003800000008100006"
+      },
+      "name": "census-popcount-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "root": "00000010000000003840000008080040"
+      },
+      "name": "census-popcount-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "root": "00000010000000801202000000000414"
+      },
+      "name": "census-popcount-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "root": "00000000000000083800000048300000"
+      },
+      "name": "census-popcount-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "root": "00000000000000103800000209080000"
+      },
+      "name": "census-popcount-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "root": "00000000000000801202000000901010"
+      },
+      "name": "census-popcount-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "root": "00000000000000801202000001004440"
+      },
+      "name": "census-popcount-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "root": "00000000000000801202000022081000"
+      },
+      "name": "census-popcount-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "root": "000000000000008210820000000008c0"
+      },
+      "name": "census-popcount-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "root": "00000000000000a21083000000100000"
+      },
+      "name": "census-popcount-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "root": "00000000000040809002000040102000"
+      },
+      "name": "census-popcount-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "root": "00000000020000809202000800100000"
+      },
+      "name": "census-popcount-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "root": "00000000040000801202100100800000"
+      },
+      "name": "census-popcount-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "root": "0000000800000000380000000810000a"
+      },
+      "name": "census-popcount-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "root": "00000010000000801202000000000444"
+      },
+      "name": "census-popcount-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "root": "00000000000000083800040048100000"
+      },
+      "name": "census-popcount-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "root": "00000000000000103800000008080041"
+      },
+      "name": "census-popcount-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "root": "00000000000000143800000209000000"
+      },
+      "name": "census-popcount-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "root": "00000000000000821082000000001018"
+      },
+      "name": "census-popcount-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "root": "00000000000000821086800000000800"
+      },
+      "name": "census-popcount-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "root": "00000000000040809002000800100200"
+      },
+      "name": "census-popcount-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "root": "00000000010000809002000040002001"
+      },
+      "name": "census-popcount-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "root": "00000000020000801202000800100001"
+      },
+      "name": "census-popcount-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "root": "00000010000000801202000000000448"
+      },
+      "name": "census-popcount-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "duplicates": []
+      },
+      "name": "census-canonical-uniqueness-75",
+      "pass": true
+    },
+    {
+      "detail": {
+        "win": 17
+      },
+      "name": "census-win-17",
+      "pass": true
+    },
+    {
+      "detail": {
+        "refuted": 58
+      },
+      "name": "census-refuted-58",
+      "pass": true
+    },
+    {
+      "detail": {
+        "conflicts": []
+      },
+      "name": "census-win-refuted-disjoint",
+      "pass": true
+    },
+    {
+      "detail": {
+        "P3": 120424,
+        "P4": 120416
+      },
+      "name": "census-poolarithmetic",
+      "pass": true
+    },
+    {
+      "detail": {
+        "excluded_n": 50
+      },
+      "name": "exclusion-list-identity-50",
+      "pass": true
+    },
+    {
+      "detail": {
+        "unique": 58
+      },
+      "name": "refuted58-canonical-unique",
+      "pass": true
+    },
+    {
+      "detail": {
+        "n": 16
+      },
+      "name": "footprints-16",
+      "pass": true
+    },
+    {
+      "detail": {
+        "mine": [
+          "00000000000000003800000008001080",
+          "00000000000000003800000008001100",
+          "00000000000000003800000008002080",
+          "00000000000000003800000008002100"
+        ],
+        "published": [
+          "00000000000000003800000008001080",
+          "00000000000000003800000008001100",
+          "00000000000000003800000008002080",
+          "00000000000000003800000008002100"
+        ],
+        "root": "00000000000000003800000008003180"
+      },
+      "name": "footprint-rederive-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "mine": [
+          "00000000000000003800000008001001",
+          "00000000000000003800000008001020",
+          "00000000000000003800000008005000"
+        ],
+        "published": [
+          "00000000000000003800000008001001",
+          "00000000000000003800000008001020",
+          "00000000000000003800000008005000"
+        ],
+        "root": "00000000000000003800000008005021"
+      },
+      "name": "footprint-rederive-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "mine": [
+          "00000000000000003800000008011000",
+          "00000000000000003800000008500000",
+          "00000000000000003800000008900000"
+        ],
+        "published": [
+          "00000000000000003800000008011000",
+          "00000000000000003800000008500000",
+          "00000000000000003800000008900000"
+        ],
+        "root": "00000000000000003800000008d10000"
+      },
+      "name": "footprint-rederive-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "mine": [
+          "00000000000000003800000009000004",
+          "00000000000000003800000009040000",
+          "00000000000000003800000009800000"
+        ],
+        "published": [
+          "00000000000000003800000009000004",
+          "00000000000000003800000009040000",
+          "00000000000000003800000009800000"
+        ],
+        "root": "00000000000000003800000009840004"
+      },
+      "name": "footprint-rederive-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "mine": [
+          "00000000000000003800000008002040",
+          "00000000000000043800000008080000",
+          "00000000000000043800000008100000"
+        ],
+        "published": [
+          "00000000000000003800000008002040",
+          "00000000000000043800000008080000",
+          "00000000000000043800000008100000"
+        ],
+        "root": "00000000000000043800000008180010"
+      },
+      "name": "footprint-rederive-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "mine": [
+          "00000000000000801202000000800100",
+          "00000000000000801202000000800400",
+          "00000000000000801202000000840000"
+        ],
+        "published": [
+          "00000000000000801202000000800100",
+          "00000000000000801202000000800400",
+          "00000000000000801202000000840000"
+        ],
+        "root": "00000000000000801202000000840500"
+      },
+      "name": "footprint-rederive-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "mine": [
+          "00000000000000003800100008002000",
+          "00000000000000801202000000101000",
+          "00000000000000801202000000900000"
+        ],
+        "published": [
+          "00000000000000003800100008002000",
+          "00000000000000801202000000101000",
+          "00000000000000801202000000900000"
+        ],
+        "root": "00000000000000801202000000901010"
+      },
+      "name": "footprint-rederive-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "mine": [
+          "00000000000000003800000808001000",
+          "00000000000000801202000000081000",
+          "00000000000000801202000020001000"
+        ],
+        "published": [
+          "00000000000000003800000808001000",
+          "00000000000000801202000000081000",
+          "00000000000000801202000020001000"
+        ],
+        "root": "00000000000000801202000022081000"
+      },
+      "name": "footprint-rederive-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "mine": [
+          "0000000000000000380000000a002000",
+          "00000000000000801202000000800200",
+          "00000000000000801202000000880000"
+        ],
+        "published": [
+          "0000000000000000380000000a002000",
+          "00000000000000801202000000800200",
+          "00000000000000801202000000880000"
+        ],
+        "root": "00000000000000801202000800880200"
+      },
+      "name": "footprint-rederive-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "mine": [
+          "00000000000000003800200008001000",
+          "00000000000000003800200009000000",
+          "00000000000000801212000000001000",
+          "00000000000000801212000001000000"
+        ],
+        "published": [
+          "00000000000000003800200008001000",
+          "00000000000000003800200009000000",
+          "00000000000000801212000000001000",
+          "00000000000000801212000001000000"
+        ],
+        "root": "00000000000000801212000001009000"
+      },
+      "name": "footprint-rederive-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "mine": [
+          "00000000000000801222000000001000",
+          "00000000000000801222000000800000",
+          "00000000000000909002000000100000",
+          "00000000000000909002000080000000"
+        ],
+        "published": [
+          "00000000000000801222000000001000",
+          "00000000000000801222000000800000",
+          "00000000000000909002000000100000",
+          "00000000000000909002000080000000"
+        ],
+        "root": "00000000000000909002200080100000"
+      },
+      "name": "footprint-rederive-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "mine": [
+          "00000000000000801202040000001000",
+          "00000000000000801202040000800000",
+          "00000000000020809002000080000000"
+        ],
+        "published": [
+          "00000000000000801202040000001000",
+          "00000000000000801202040000800000",
+          "00000000000020809002000080000000"
+        ],
+        "root": "00000000000020809002000480100000"
+      },
+      "name": "footprint-rederive-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "mine": [
+          "00000000000000003800200008100000",
+          "00000000000000a09002000080000000"
+        ],
+        "published": [
+          "00000000000000003800200008100000",
+          "00000000000000a09002000080000000"
+        ],
+        "root": "00000000000200003800200008180000"
+      },
+      "name": "footprint-rederive-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "mine": [
+          "00000000000000889002000000100000",
+          "00000000000000889002000080000000",
+          "00000000010000809002000000100000",
+          "00000000010000809002000080000000"
+        ],
+        "published": [
+          "00000000000000889002000000100000",
+          "00000000000000889002000080000000",
+          "00000000010000809002000000100000",
+          "00000000010000809002000080000000"
+        ],
+        "root": "00000000010000889002000080100000"
+      },
+      "name": "footprint-rederive-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "mine": [
+          "00000000000000003800000248000000",
+          "00000000000000801202000001000100",
+          "00000000000080003800000048000000"
+        ],
+        "published": [
+          "00000000000000003800000248000000",
+          "00000000000000801202000001000100",
+          "00000000000080003800000048000000"
+        ],
+        "root": "00000000012000003800080009000000"
+      },
+      "name": "footprint-rederive-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "mine": [
+          "00000000000000003800000008001080",
+          "00000008000000003800000008100000"
+        ],
+        "published": [
+          "00000000000000003800000008001080",
+          "00000008000000003800000008100000"
+        ],
+        "root": "0000000800000000380000000810000a"
+      },
+      "name": "footprint-rederive-000000",
+      "pass": true
+    },
+    {
+      "detail": {
+        "equal": 15
+      },
+      "name": "footprints-15-equal-claimed",
+      "pass": true
+    },
+    {
+      "detail": {
+        "intrinsic": [
+          "00000000000000003800000008001080",
+          "00000008000000003800000008100000"
+        ]
+      },
+      "name": "footprints-16th-surplus-row",
+      "pass": true
+    },
+    {
+      "detail": {
+        "claimed": [
+          "00000000000000801202000001000400",
+          "00000000000000801202000001080000",
+          "00000000010000809002000040000000"
+        ],
+        "intrinsic": [
+          "00000000000000801202000001000400",
+          "00000000000000801202000001080000",
+          "00000000010000809002000040000000"
+        ]
+      },
+      "name": "new-win-claim-subset-intrinsic",
+      "pass": true
+    },
+    {
+      "detail": {
+        "hits": []
+      },
+      "name": "win16-intrinsic-hits-residual23-empty",
+      "pass": true
+    }
+  ],
+  "gates_all_pass": true,
+  "gates_total": 334,
+  "inputs": {
+    "decision": {
+      "path": ".input-cover-decision.json",
+      "sha256": "c5aaf83e23b6a716e981aaff745996668c60edba164fb3f5288b60ff9b8ac4d1"
+    },
+    "k1085": {
+      "path": ".input-k1085.json",
+      "sha256": "5fdd342d624abec9b8478b69b13fc63a2dbbec99d227da4740cfe068647e688e"
+    },
+    "k1086": {
+      "path": ".input-k1086.json",
+      "sha256": "3045e15295af9b85b86578b5e8d55a8b325466eac576ee15b8450f6acb9b9ced"
+    },
+    "k1089": {
+      "path": ".input-k1089.json",
+      "sha256": "808fbda1152cb492bb76641a101660f965f2801c0b74790d20a0d998d5b747fc"
+    },
+    "k1091": {
+      "path": ".input-k1091.json",
+      "sha256": "edd7ac84f47268adcc8a3364a5ff687499cb2a76ded0c0fa379506af02f40b25"
+    },
+    "k1095": {
+      "path": ".input-k1095.json",
+      "sha256": "335eca5ecb7c72e6fb0ee41eb740de736bf4eb78791823ae55f6375a68cb4707"
+    },
+    "k1097": {
+      "path": ".input-k1097.json",
+      "sha256": "2896deb0c5e820904d0e2463e3fd9ebd1613b540a66a97f88d86c75bffa71f40"
+    },
+    "k1147audit": {
+      "path": ".input-k1147-external-audit.json",
+      "sha256": "17dbd6ab3a9a9b5aef1cf1cf517a5a0fd216dff755f0ed86fcf029e1612cabcb"
+    },
+    "probes": {
+      "path": ".input-probe-records-replace9.jsonl",
+      "sha256": "bdacf0e7056093145bef917ad384220b70c06be68bdd892b56dd23b3a7d4cb06"
+    },
+    "replace9": {
+      "path": ".input-replace9.json",
+      "sha256": "e8f5d6749032c4ad95136d2915c03ce7e997fe494bf3eebf7f912cccc88ded1e"
+    }
+  },
+  "interpretation_guard": [
+    "WIN8-D10 candidate is not a certificate until extraction, independent double verification and the 8-stone receipt fold; no row was closed here",
+    "REFUTED-D10 is not a LOSS proof; it only erodes the replacement pool",
+    "node counts and solved counts are not win/loss evidence",
+    "greedy and witness selections are conditional planning bookkeeping, not certificates",
+    "the standard 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60} and classes 1/2/4 all remain UNKNOWN"
+  ],
+  "residual_chain_row_hex": {
+    "20": [
+      "00000000000000003800000008001800",
+      "00000000000000003800000008002010",
+      "0000000000000000380000000a080000",
+      "00000000000000003800000209000000",
+      "00000000000000003800000409000000",
+      "00000000000000043800000009000000",
+      "00000000000000083800000008100000",
+      "00000000000000083800000048000000",
+      "00000000000000103800000008080000",
+      "00000000000000103800000009000000",
+      "00000000000000801202020000001000",
+      "00000000000000821082000000000008",
+      "00000000000000821082000000000010",
+      "00000000000000821082000000000800",
+      "00000000000000821082000000001000",
+      "00000000000000821082800000000000",
+      "00000000000000821083000000000000",
+      "00000000000040809002000000100000",
+      "00000000020000801202000000100000",
+      "00000010000000801202000000000400"
+    ],
+    "23": [
+      "00000000000000003800000008001800",
+      "00000000000000003800000008002010",
+      "0000000000000000380000000a080000",
+      "00000000000000003800000209000000",
+      "00000000000000003800000409000000",
+      "00000000000000043800000009000000",
+      "00000000000000083800000008100000",
+      "00000000000000083800000048000000",
+      "00000000000000103800000008080000",
+      "00000000000000103800000009000000",
+      "00000000000000801202000001000400",
+      "00000000000000801202000001080000",
+      "00000000000000801202020000001000",
+      "00000000000000821082000000000008",
+      "00000000000000821082000000000010",
+      "00000000000000821082000000000800",
+      "00000000000000821082000000001000",
+      "00000000000000821082800000000000",
+      "00000000000000821083000000000000",
+      "00000000000040809002000000100000",
+      "00000000010000809002000040000000",
+      "00000000020000801202000000100000",
+      "00000010000000801202000000000400"
+    ],
+    "30": [
+      "00000000000000003800000008001800",
+      "00000000000000003800000008002010",
+      "0000000000000000380000000a080000",
+      "00000000000000003800000209000000",
+      "00000000000000003800000409000000",
+      "00000000000000003800000808001000",
+      "00000000000000003800100008002000",
+      "00000000000000043800000009000000",
+      "00000000000000083800000008100000",
+      "00000000000000083800000048000000",
+      "00000000000000103800000008080000",
+      "00000000000000103800000009000000",
+      "00000000000000801202000000081000",
+      "00000000000000801202000000101000",
+      "00000000000000801202000000900000",
+      "00000000000000801202000001000400",
+      "00000000000000801202000001080000",
+      "00000000000000801202000020001000",
+      "00000000000000801202020000001000",
+      "00000000000000821082000000000008",
+      "00000000000000821082000000000010",
+      "00000000000000821082000000000800",
+      "00000000000000821082000000001000",
+      "00000000000000821082800000000000",
+      "00000000000000821083000000000000",
+      "00000000000040809002000000100000",
+      "00000000010000809002000040000000",
+      "00000000020000801202000000100000",
+      "00000008000000003800000008100000",
+      "00000010000000801202000000000400"
+    ],
+    "40": [
+      "00000000000000003800000008001800",
+      "00000000000000003800000008002010",
+      "00000000000000003800000008002040",
+      "00000000000000003800000008011000",
+      "00000000000000003800000008500000",
+      "00000000000000003800000008900000",
+      "0000000000000000380000000a080000",
+      "00000000000000003800000209000000",
+      "00000000000000003800000409000000",
+      "00000000000000003800000808001000",
+      "00000000000000003800100008002000",
+      "00000000000000003800200008001000",
+      "00000000000000003800200009000000",
+      "00000000000000043800000008080000",
+      "00000000000000043800000008100000",
+      "00000000000000043800000009000000",
+      "00000000000000083800000008100000",
+      "00000000000000083800000048000000",
+      "00000000000000103800000008080000",
+      "00000000000000103800000009000000",
+      "00000000000000801202000000081000",
+      "00000000000000801202000000101000",
+      "00000000000000801202000000900000",
+      "00000000000000801202000001000400",
+      "00000000000000801202000001080000",
+      "00000000000000801202000020001000",
+      "00000000000000801202020000001000",
+      "00000000000000801212000000001000",
+      "00000000000000801212000001000000",
+      "00000000000000821082000000000008",
+      "00000000000000821082000000000010",
+      "00000000000000821082000000000800",
+      "00000000000000821082000000001000",
+      "00000000000000821082800000000000",
+      "00000000000000821083000000000000",
+      "00000000000040809002000000100000",
+      "00000000010000809002000040000000",
+      "00000000020000801202000000100000",
+      "00000008000000003800000008100000",
+      "00000010000000801202000000000400"
+    ],
+    "49": [
+      "00000000000000003800000008001800",
+      "00000000000000003800000008002010",
+      "00000000000000003800000008002040",
+      "00000000000000003800000008011000",
+      "00000000000000003800000008500000",
+      "00000000000000003800000008900000",
+      "0000000000000000380000000a002000",
+      "0000000000000000380000000a080000",
+      "00000000000000003800000209000000",
+      "00000000000000003800000409000000",
+      "00000000000000003800000808001000",
+      "00000000000000003800100008002000",
+      "00000000000000003800200008001000",
+      "00000000000000003800200009000000",
+      "00000000000000043800000008080000",
+      "00000000000000043800000008100000",
+      "00000000000000043800000009000000",
+      "00000000000000083800000008100000",
+      "00000000000000083800000048000000",
+      "00000000000000103800000008080000",
+      "00000000000000103800000009000000",
+      "00000000000000801202000000081000",
+      "00000000000000801202000000101000",
+      "00000000000000801202000000800100",
+      "00000000000000801202000000800200",
+      "00000000000000801202000000800400",
+      "00000000000000801202000000840000",
+      "00000000000000801202000000880000",
+      "00000000000000801202000000900000",
+      "00000000000000801202000001000400",
+      "00000000000000801202000001080000",
+      "00000000000000801202000020001000",
+      "00000000000000801202020000001000",
+      "00000000000000801202040000001000",
+      "00000000000000801202040000800000",
+      "00000000000000801212000000001000",
+      "00000000000000801212000001000000",
+      "00000000000000821082000000000008",
+      "00000000000000821082000000000010",
+      "00000000000000821082000000000800",
+      "00000000000000821082000000001000",
+      "00000000000000821082800000000000",
+      "00000000000000821083000000000000",
+      "00000000000020809002000080000000",
+      "00000000000040809002000000100000",
+      "00000000010000809002000040000000",
+      "00000000020000801202000000100000",
+      "00000008000000003800000008100000",
+      "00000010000000801202000000000400"
+    ],
+    "72": [
+      "00000000000000003800000008001001",
+      "00000000000000003800000008001020",
+      "00000000000000003800000008001080",
+      "00000000000000003800000008001100",
+      "00000000000000003800000008001800",
+      "00000000000000003800000008002010",
+      "00000000000000003800000008002040",
+      "00000000000000003800000008002080",
+      "00000000000000003800000008002100",
+      "00000000000000003800000008005000",
+      "00000000000000003800000008011000",
+      "00000000000000003800000008500000",
+      "00000000000000003800000008900000",
+      "00000000000000003800000009000004",
+      "00000000000000003800000009040000",
+      "00000000000000003800000009800000",
+      "0000000000000000380000000a002000",
+      "0000000000000000380000000a080000",
+      "00000000000000003800000209000000",
+      "00000000000000003800000248000000",
+      "00000000000000003800000409000000",
+      "00000000000000003800000808001000",
+      "00000000000000003800100008002000",
+      "00000000000000003800200008001000",
+      "00000000000000003800200008100000",
+      "00000000000000003800200009000000",
+      "00000000000000043800000008080000",
+      "00000000000000043800000008100000",
+      "00000000000000043800000009000000",
+      "00000000000000083800000008100000",
+      "00000000000000083800000048000000",
+      "00000000000000103800000008080000",
+      "00000000000000103800000009000000",
+      "00000000000000801202000000081000",
+      "00000000000000801202000000101000",
+      "00000000000000801202000000800100",
+      "00000000000000801202000000800200",
+      "00000000000000801202000000800400",
+      "00000000000000801202000000840000",
+      "00000000000000801202000000880000",
+      "00000000000000801202000000900000",
+      "00000000000000801202000001000100",
+      "00000000000000801202000001000400",
+      "00000000000000801202000001080000",
+      "00000000000000801202000020001000",
+      "00000000000000801202020000001000",
+      "00000000000000801202040000001000",
+      "00000000000000801202040000800000",
+      "00000000000000801212000000001000",
+      "00000000000000801212000001000000",
+      "00000000000000801222000000001000",
+      "00000000000000801222000000800000",
+      "00000000000000821082000000000008",
+      "00000000000000821082000000000010",
+      "00000000000000821082000000000800",
+      "00000000000000821082000000001000",
+      "00000000000000821082800000000000",
+      "00000000000000821083000000000000",
+      "00000000000000889002000000100000",
+      "00000000000000889002000080000000",
+      "00000000000000909002000000100000",
+      "00000000000000909002000080000000",
+      "00000000000000a09002000080000000",
+      "00000000000020809002000080000000",
+      "00000000000040809002000000100000",
+      "00000000000080003800000048000000",
+      "00000000010000809002000000100000",
+      "00000000010000809002000040000000",
+      "00000000010000809002000080000000",
+      "00000000020000801202000000100000",
+      "00000008000000003800000008100000",
+      "00000010000000801202000000000400"
+    ]
+  },
+  "schema": "n11-residual72-replace9-whole-record-second-verification-20261120-v1",
+  "single_owner_note": "commit edc231213f (2026-11-20T14:29Z declaration, first-published-priority)",
+  "status": "PASS",
+  "trust_boundary": "whole-record re-derivation of published artifacts only; the DFPN engine was not re-run; verdicts are accepted as published probe facts, independently re-checked only at the record bookkeeping/geometry/accounting level"
+}

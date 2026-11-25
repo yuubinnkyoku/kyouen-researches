@@ -1,0 +1,141 @@
+{
+ "external_verifier": {
+  "all_byte_identical_to_published_audit": true,
+  "checks_all_ok": true,
+  "checks_total": 71,
+  "runs": {
+   "V1": {
+    "byte_identical_to_published_audit": true,
+    "checks_all_ok": true,
+    "checks_total": 71,
+    "cwd_note": "same cwd, indir paths",
+    "returncode": 0,
+    "sha256": "17dbd6ab3a9a9b5aef1cf1cf517a5a0fd216dff755f0ed86fcf029e1612cabcb"
+   },
+   "V2": {
+    "byte_identical_to_published_audit": true,
+    "checks_all_ok": true,
+    "checks_total": 71,
+    "cwd_note": "same cwd, indir paths",
+    "returncode": 0,
+    "sha256": "17dbd6ab3a9a9b5aef1cf1cf517a5a0fd216dff755f0ed86fcf029e1612cabcb"
+   },
+   "V3": {
+    "byte_identical_to_published_audit": true,
+    "checks_all_ok": true,
+    "checks_total": 71,
+    "cwd_note": "isolated tree/cwd/HOME, copies keep published-stage basenames (isolation by directory)",
+    "returncode": 0,
+    "sha256": "17dbd6ab3a9a9b5aef1cf1cf517a5a0fd216dff755f0ed86fcf029e1612cabcb"
+   }
+  }
+ },
+ "interpretation_guard": [
+  "No row is closed by this verification or by the cover decision it re-checks.",
+  "The cover numbers are candidate-root plan bookkeeping, not certificates.",
+  "REFUTED-D10 is not a LOSS proof; nodes and solved counts are not game values.",
+  "The audit lower bound 8 remains valid on any universe; 9 is specific to pool P-triple-prime.",
+  "The standard 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, classes 1/2/4 remain UNKNOWN."
+ ],
+ "pinned_inputs": [
+  {
+   "name": "eight-root-cover-decision-machine.py",
+   "pin_ok": true,
+   "role": "decision machine",
+   "sha256": "da51063c6db43cb9d0fe7c69dbbbe17268c250abec3080390384a14316168277"
+  },
+  {
+   "name": "published-decision.json",
+   "pin_ok": true,
+   "role": "decision record (published master)",
+   "sha256": "c5aaf83e23b6a716e981aaff745996668c60edba164fb3f5288b60ff9b8ac4d1"
+  },
+  {
+   "name": "k1097-refsolve.json",
+   "pin_ok": true,
+   "role": "K1097 refsolve record",
+   "sha256": "2896deb0c5e820904d0e2463e3fd9ebd1613b540a66a97f88d86c75bffa71f40"
+  },
+  {
+   "name": "k1102-second-verification.json",
+   "pin_ok": true,
+   "role": "K1102 second-verification record",
+   "sha256": "d0b5d845c234cf51c55555295f1fe3042f262cccaa0e2923c9c4205d6b6e168b"
+  },
+  {
+   "name": "lower-bound-audit.json",
+   "pin_ok": true,
+   "role": "lower-bound strengthening audit",
+   "sha256": "1310ef74f40a98095d6128f28cba1c5e87e45a45694a3ec6940b541ec0dd3b00"
+  },
+  {
+   "name": "verify_external_cover8_decision_20261120.py",
+   "pin_ok": true,
+   "role": "external verification machine",
+   "sha256": "7bee45ec2b8a83cc931ada1d3ef88da9ab79ee3f4175efa95ab770707352b353"
+  },
+  {
+   "name": "external-verification-audit.json",
+   "pin_ok": true,
+   "role": "published external verification audit",
+   "sha256": "17dbd6ab3a9a9b5aef1cf1cf517a5a0fd216dff755f0ed86fcf029e1612cabcb"
+  }
+ ],
+ "published_decision_record_sha256": "c5aaf83e23b6a716e981aaff745996668c60edba164fb3f5288b60ff9b8ac4d1",
+ "published_external_audit_sha256": "17dbd6ab3a9a9b5aef1cf1cf517a5a0fd216dff755f0ed86fcf029e1612cabcb",
+ "reexecution": {
+  "all_four_byte_identical_to_published": true,
+  "passes": {
+   "passA1": {
+    "byte_identical_to_published_record": true,
+    "cwd_note": "same cwd, inputs from indir paths",
+    "isolated": false,
+    "returncode": 0,
+    "sha256": "c5aaf83e23b6a716e981aaff745996668c60edba164fb3f5288b60ff9b8ac4d1"
+   },
+   "passA2": {
+    "byte_identical_to_published_record": true,
+    "cwd_note": "same cwd, inputs from indir paths",
+    "isolated": false,
+    "returncode": 0,
+    "sha256": "c5aaf83e23b6a716e981aaff745996668c60edba164fb3f5288b60ff9b8ac4d1"
+   },
+   "passB": {
+    "byte_identical_to_published_record": true,
+    "cwd_note": "isolated tree/cwd/HOME, input copies at different paths",
+    "isolated": true,
+    "returncode": 0,
+    "sha256": "c5aaf83e23b6a716e981aaff745996668c60edba164fb3f5288b60ff9b8ac4d1"
+   },
+   "passB_hashseed_random": {
+    "byte_identical_to_published_record": true,
+    "cwd_note": "isolated tree/cwd/HOME, input copies at different paths, PYTHONHASHSEED=random",
+    "isolated": true,
+    "returncode": 0,
+    "sha256": "c5aaf83e23b6a716e981aaff745996668c60edba164fb3f5288b60ff9b8ac4d1"
+   }
+  }
+ },
+ "rows_closed": 0,
+ "schema": "n11-residual23-eight-root-cover-reexec-third-verification-20261120/v1",
+ "single_owner_note": "research/log/2026-11-20-n11-residual23-eight-root-cover-third-verification-single-owner-note.md (commit 887e594de7)",
+ "status": "all gates pass",
+ "tamper_gates": {
+  "decision_record_1byte_xor": {
+   "caught": true,
+   "offset": 7701,
+   "output_written": false,
+   "returncode": 2,
+   "sha256_after_tamper": "2b98e8f1843c4d8a119db0dbe5066851896b2f29421298d45c3d47bbf1bb8256"
+  },
+  "k1097_record_1byte_xor": {
+   "caught": true,
+   "offset": 77,
+   "output_written": false,
+   "returncode": 1,
+   "sha256_after_tamper": "2af8ff8ef69a46a5f6e9785c0a3ca5d435fa7cf57c0cc1f3cc3bf81173699274"
+  }
+ },
+ "trust_boundary": "record-level determinism and pin-chain reproducibility only; the touching universe / safe8 predicates were re-executed by the published decision machine, not re-derived by yet another implementation here",
+ "verification_kind": "third verification: regenerate K1147's four decision-machine re-executions and its 71-check external verification audit from GitHub published bytes only"
+}

@@ -1,0 +1,93 @@
+{
+ "schema": "n11-class2-lane-cost60c-win7-certificates-20261116-v1",
+ "date": "2026-11-16",
+ "sweep_source": {
+  "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost60c-sweep-audit-20261116.json",
+  "git_blob_sha": "492095735eda127dac9dc465bbff1844f3c818f1",
+  "s6_child_hex": "00000000000000003800000008008020",
+  "s5_parents_open": [
+   "00000000000000003800000008008000",
+   "00000000000000003800000000008020"
+  ],
+  "s6_s7_edge_cost": 60,
+  "demand": {
+   "c1": 1,
+   "c2": 1,
+   "c4": 0
+  },
+  "win7_d10_bits": [
+   92
+  ],
+  "refuted_d10_count": 59,
+  "capped_count": 0
+ },
+ "claim_source": {
+  "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost60c-inflight-20261116.json",
+  "inflight_commit": "a20fff852e400ca56256c7dc7868edd1af6d9906 (v1 in-flight claim; this session republishes the file as the v2 completed record)",
+  "git_blob_sha_v2": "5b9df50226f5420c03af39813c55b247992deaf6",
+  "chain_head_at_claim": "1407/174/6441/509300/4711/373023 (class-frontier-cost75e-receipts-recompute-20261116.json, git blob sha 5cd93de7ee8943681549b8f97918f6112548b373, commit dd623408)"
+ },
+ "extraction": {
+  "engine": "repo-verbatim class4_child1_cert_extractor_exact_v16.ts (FBS 1<<20, drop-counting fbt cache) driven by scripts/cert_driver60c.ts (published this session), empty kill table (blind extraction, pref=null), single chunk part1of1, no node budget aborts",
+  "chunking": "single part (part1of1); rows sorted-unique via sort -u; header and root lines prepended per the cost-74d chunk convention",
+  "cross_cover_note": "the 45 loser first-moves are the full legal mobility of the root 00000000100000003800000008008020 (re-derived by scripts/legal_candidates.py and by the independent audit); the sweep also tested the unique cross-cover root of the STERILE cost-70j child (bit 119, root 00800000000000003800000008008020): REFUTED-D10, so the 70j row is NOT closed by this child"
+ },
+ "certificates": [
+  {
+   "bit": 92,
+   "child_hex": "00000000000000003800000008008020",
+   "root_hex": "00000000100000003800000008008020",
+   "d4_canonical_hex": "00000000000000801292200000000000",
+   "verdict": "WIN7",
+   "sub_roots": 45,
+   "root_mobility_matches_legal_candidates_py": true,
+   "rows": 27547,
+   "extraction_nodes": 804782,
+   "fbt_drops": 0,
+   "fatal": null,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "terminal_count": 8543,
+   "winner_states": 38090,
+   "loser_states": 12028,
+   "published_cert": {
+    "note": "single part (part1of1); the whole cert is published as one file (996,758 bytes, under the push tooling single-file size limit unlike the cost-75e bit-6 cert)",
+    "whole_bytes": 996758,
+    "whole_md5": "d771ef8275a9889a22974310e5c1e411",
+    "whole_sha256": "33fcd4853b874f88d44a7c0e7a2f0d48c9d96dadf12eaad4bf6b27a3eebf31d9",
+    "git_blob_sha": "b35128897b07f03e4baa11583423453cb378e18d",
+    "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost60c-certificates/bit92-root-00000000100000003800000008008020.cert"
+   },
+   "summary": {
+    "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost60c-certificates/bit92-root-00000000100000003800000008008020.cert.part1of1.summary.json",
+    "git_blob_sha": "163c559393079fff82491bcaaf6cef88c2d57708"
+   },
+   "bigint_verify": {
+    "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost60c-certificates/bit92-root-00000000100000003800000008008020.bigint-verify.json",
+    "git_blob_sha": "975ee846ddffd9c7717ca62f7667705c99768961",
+    "subroots_passed": 45,
+    "union_missing": 0,
+    "union_extra": 0
+   },
+   "bareiss_verify": {
+    "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost60c-certificates/bit92-root-00000000100000003800000008008020-bareiss-verify.json",
+    "git_blob_sha": "ffc799d9d0a0f400efa78eed7f01d5b842f438f2",
+    "subroots_verified": 45,
+    "all_subroots_pass": true
+   }
+  }
+ ],
+ "totals": {
+  "published_certificates": 1,
+  "rows": 27547,
+  "extraction_nodes": 804782,
+  "sub_roots": 45,
+  "winner_states": 38090,
+  "loser_states": 12028,
+  "terminal_count": 8543,
+  "cert_bytes": 996758
+ },
+ "bookkeeping_only_note": "bookkeeping and WIN7-D10 certificate publication only; the fold of this receipt onto the canonical head 1407 is recorded separately; 11x11 empty board / two-stone root {49,60} / S2 {59,60} / class 1 / class 2 / class 4 all remain UNKNOWN; REFUTED-D10 is not a LOSS proof; STERILE is not a LOSS proof"
+}

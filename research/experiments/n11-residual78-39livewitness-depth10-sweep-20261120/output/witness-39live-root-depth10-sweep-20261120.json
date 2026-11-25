@@ -1,0 +1,168 @@
+{
+ "classification": {
+  "00000000000000003800000008001220": "REFUTED-D10",
+  "00000000000000003800000008001880": "REFUTED-D10",
+  "00000000000000003800000008005001": "REFUTED-D10",
+  "00000000000000003800000008510000": "REFUTED-D10",
+  "00000000000000003800000009080004": "REFUTED-D10",
+  "00000000000000003800000009840000": "REFUTED-D10",
+  "0000000000000000380000000a002080": "REFUTED-D10",
+  "00000000000000003800000888001000": "REFUTED-D10",
+  "00000000000000003800200009001000": "REFUTED-D10",
+  "00000000000000083800000248000000": "REFUTED-D10",
+  "000000000000000c3800000008100000": "REFUTED-D10",
+  "0000000000000010380000000a080000": "REFUTED-D10",
+  "00000000000000801202000000880100": "REFUTED-D10",
+  "00000000000000801202000000900400": "REFUTED-D10",
+  "00000000000000801202000001000440": "REFUTED-D10",
+  "00000000000000801202000001004100": "REFUTED-D10",
+  "00000000000000801202040000101000": "REFUTED-D10",
+  "00000000000000801202040000800200": "REFUTED-D10",
+  "00000000000000801202080020001000": "REFUTED-D10",
+  "00000000000000801212000011000000": "REFUTED-D10",
+  "00000000000000801222000000840000": "REFUTED-D10",
+  "00000000000000801222010000001000": "REFUTED-D10",
+  "00000000000000821082800000000800": "REFUTED-D10",
+  "00000000000000821083000000001000": "REFUTED-D10",
+  "00000000000000889042000080000000": "REFUTED-D10",
+  "00000000000000909002000080000040": "REFUTED-D10",
+  "00000000000030809002000080000000": "REFUTED-D10",
+  "00000000000040809002000800100000": "REFUTED-D10",
+  "00000000010000809002000040000080": "REFUTED-D10",
+  "00000000010000889002000000100000": "REFUTED-D10",
+  "00000000010000a09002000080000000": "REFUTED-D10",
+  "00000000020000003820000008001000": "REFUTED-D10",
+  "00000000020000801202000000100040": "REFUTED-D10",
+  "00000000022000003800000009000000": "REFUTED-D10",
+  "00000000410000003800000008100000": "REFUTED-D10",
+  "00000008100000003800000008100000": "REFUTED-D10",
+  "00000010000000801202000000400400": "REFUTED-D10",
+  "00004000000000821082000000000100": "WIN7-D10",
+  "00020000000000821082000000000040": "REFUTED-D10"
+ },
+ "date": "2026-11-20",
+ "gates": [
+  {
+   "detail": {
+    "errors": 0,
+    "recorded": 98
+   },
+   "name": "no-error-records",
+   "pass": true
+  },
+  {
+   "detail": {
+    "roots": 39,
+    "unique_keys": 78
+   },
+   "name": "partition-78",
+   "pass": true
+  },
+  {
+   "detail": {
+    "dup_keys": 20,
+    "mismatches": 0
+   },
+   "name": "duplicate-agreement",
+   "pass": true
+  },
+  {
+   "detail": {
+    "roots": 39
+   },
+   "name": "both-orders",
+   "pass": true
+  },
+  {
+   "detail": {
+    "capped": 0
+   },
+   "name": "uncapped",
+   "pass": true
+  },
+  {
+   "detail": {
+    "expected_nodes": 3402,
+    "failures": 0
+   },
+   "name": "pilot-d6",
+   "pass": true
+  },
+  {
+   "detail": {
+    "conflicts": []
+   },
+   "name": "order-consistency",
+   "pass": true
+  },
+  {
+   "detail": {
+    "covered": 78,
+    "residual": 78
+   },
+   "name": "covered-rows-equal-residual78",
+   "pass": true
+  },
+  {
+   "detail": {
+    "popcount": 7,
+    "roots": 39,
+    "rule": "child = root - lowest set bit, raw hex, canon_hex forbidden"
+   },
+   "name": "anatomy-decomposition",
+   "pass": true
+  }
+ ],
+ "inputs": {
+  "resolve6": {
+   "path": "research/experiments/n11-residual78-cache-join-resolve6-20261120/output/post-saturation-full-cache-join-resolve6-20261120.json",
+   "sha256": "e85d4bfb867a193f2b3cdb23ec9e15679359c9f337fcd97eb5c62473b90c281a",
+   "witness_selection": "witness_full (39 live roots, maximum matching 39 over 78 residual rows, stranded 0, all safe)"
+  }
+ },
+ "interpretation_guard": [
+  "REFUTED-D10 is not a LOSS proof; it means no first-mover win within depth 10 under the runner v17 move model.",
+  "WIN7-D10 roots are certificate extraction candidates only; rows are closed by receipt fold after extraction and independent dual verification.",
+  "This sweep is row-coverage candidate bookkeeping and says nothing about game-theoretic values of rows, the two-stone roots, or the empty board.",
+  "The standard 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, and classes 1/2/4 remain UNKNOWN."
+ ],
+ "protocol": {
+  "cap": 30000000,
+  "child_rule": "RAW integer hex, child = root - lowest set bit (canon_hex forbidden, K1046 incident rule)",
+  "depth": 10,
+  "orderings": [
+   "andclose1",
+   "andclose0"
+  ],
+  "pilot_d6_control": {
+   "loss": false,
+   "nodes": 3402
+  },
+  "runner": "class4_child1_runner_v17.ts git blob c132cc6425eee3feaeef1d697dd74f968cfedb59",
+  "runner_transport": "raw.githubusercontent.com commit-SHA-pinned, git blob sha1 verified c132cc6425eee3feaeef1d697dd74f968cfedb59"
+ },
+ "schema": "n11-residual78-39livewitness-depth10-sweep-20261120-v1",
+ "summary": {
+  "avg_nodes_per_probe": 2174557,
+  "capped": 0,
+  "max_probe": {
+   "andclose": false,
+   "bit": 7,
+   "capped": false,
+   "loss": false,
+   "ms": 167793,
+   "nodes": 14249420,
+   "root": "00000000010000809002000040000080",
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  "order_conflicts": 0,
+  "probes": 78,
+  "refuted": 38,
+  "roots": 39,
+  "total_nodes": 169615508,
+  "win": 1
+ }
+}

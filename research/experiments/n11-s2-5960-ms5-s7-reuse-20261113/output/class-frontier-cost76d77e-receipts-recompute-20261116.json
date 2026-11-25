@@ -1,0 +1,337 @@
+{
+ "schema": "n11-class-frontier-cost76d77e-receipts-20261116-v1",
+ "date": "2026-11-16",
+ "baseline_record": {
+  "basis_head_1450": "1450/174/6398/506297/4671/370211 (independently reconstructed from the 764 published receipt roots + the seven cost-66c WIN7-D10 receipt roots of the published fold JSON (8783993e5c73cc9697c3ca48aef981725f422be8) + the 498 sweep winners; 771 roots / 756 distinct D4 canons; identical to the published cost-66c fold record and to the pre-registration basis summary)",
+  "receipt_roots": {
+   "count": 771,
+   "distinct_d4_canons": 756
+  },
+  "claims": "cost-76d class2-lane-cost76d-inflight-20261116.json (v1 completed, git blob d2e40a3e4c3ff5002395c7dcf46d50977c3a4964, commit 99848fd309b32f26cfe91f8fda0be03568425412) and cost-77e class2-lane-cost77e-inflight-20261116.json (v1 in-flight, git blob 1cfa89e5b95b43dc497b439f9e1bfb4481c64669, commit e11268dac7ca62f642f4186d90160a200b43bec0); both superseded by the v2 fold-complete claim updates in this fold",
+  "sweeps": "20 raw batch JSONLs (v16), all blob-pinned: 76d 76/76 candidates = WIN7-D10 bits [19, 49] + 74 REFUTED-D10, 0 capped, 96246915 nodes + 10 pilots x 3402 (sweep audit + claim completed, commit eba444aa); 77e 77/77 = WIN7-D10 bits [37, 69] + 75 REFUTED-D10, 0 capped, 116019458 nodes + 10 pilots x 3402 (sweep record class2-lane-cost77e-sweep-20261116.json, git blob 57afde38..., commit 35b8ccee); v15 crosschecks (76d anchors 19/49, 77e anchors 0/37/69) verdict-agree; 77e determinism rerun batches 4+6 (16 bits) node-exact; 76d determinism batches 3+5 node-exact (claim note)",
+  "certificates": "all four WIN7-D10 certificates re-hashed byte-for-byte: 76d bit19 44,810 rows / 1,618,698 B and bit49 33,648 rows / 1,215,488 B (manifest class2-lane-cost76d-win7-certificates-20261116.json, git blob e8a6116a..., commit 6c3432d5; Bareiss 55/54 sub-roots PASS); 77e bit37 47,018 rows / 1,695,679 B and bit69 54,491 rows / 1,964,949 B (parts joined == whole; BigInt union 0/0 with 57/57 sub-roots each); second independent verification VERIFICATION PASSED (git blob d267fa8d..., commit ce88e071)",
+  "preregistration": "class2-lane-cost76d-77e-fold-preregistration-20261116.json (git blob d150d3118227f1f0ed1b7b96a83c0ac96521bd27, commit 40d1e16b591242b5239da163dd9281f62aec2584, published before this fold; every machine-checkable field re-derived and compared here), projection artifact class2-lane-fold-projection-basis1450-4roots-20261116.json (git blob 005423113c601301e2b5c208d1138e17283cb774, commit e97ba632ee46edf7fb1fb36d2ee6ade3e2891baf), tool fold_projection_head1450_tool_20261116.py (git blob 49fcd8ae6706c075b39eea5b115b2a045c2950cf, commit f337939803a328cc987881e4447fea0e83aab801)",
+  "sterility_audit": "class2-lane-post-cost66c-top-candidates-sterility-audit-20261116.json (commit 0e972b0d)"
+ },
+ "method": "independent basis reconstruction of head 1450 (published fold-projection tool), re-derivation of both sweeps from the 20 blob-pinned raw batches with the v15 crosschecks and the 77e determinism rerun, re-hashing of all four certificates byte-for-byte, 153-candidate-orbit conflict census vs the 771 folded roots (zero overlaps; one cross-lane shared orbit 00000000040000809002000000004080 = 76d bit 86 == 77e bit 7, both REFUTED-D10, agreement), the children-remaining fact asserted on both open parents each, then the four receipts folded in publication order (76d bit 19, 76d bit 49, 77e bit 37, 77e bit 69) with per-receipt marginals, a set-equality control and field-by-field agreement with the pre-registration",
+ "receipts": [
+  {
+   "lane": "cost-76d",
+   "bit": 19,
+   "root_hex": "00000000040000003800080008080000",
+   "d4_canonical_hex": "00000000040000003800080008080000",
+   "d4_orbit_distinct_from_all_folded_roots": true,
+   "certificate": {
+    "rows": 44810,
+    "sub_roots": 55,
+    "extraction_nodes": 7205539,
+    "md5": "c3bdda791f9b63a8d3e5f975a7175ad6",
+    "sha256": "55dce4ba86a33b0b1541d38f8b8d44a46fa9d717f37a484ea5d7389c7e6a321e",
+    "git_blob_sha": "f36ac20a9d4c9ed27e76f3968f4619042e343beb",
+    "bytes": 1618698
+   },
+   "covers": 7,
+   "covers_hexes": [
+    "00000000000000003800000208002000",
+    "00000000020000801202000040000000",
+    "00000000040000001800080008080000",
+    "00000000040000002800080008080000",
+    "00000000040000003000080008080000",
+    "00000000040000003800080000080000",
+    "00000000040000003800080008000000"
+   ],
+   "marginal": 5,
+   "marginal_hexes": [
+    "00000000040000001800080008080000",
+    "00000000040000002800080008080000",
+    "00000000040000003000080008080000",
+    "00000000040000003800080000080000",
+    "00000000040000003800080008000000"
+   ],
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000040000003800080008000000"
+   ],
+   "marginal_non_manifest_hexes": [
+    "00000000040000001800080008080000",
+    "00000000040000002800080008080000",
+    "00000000040000003000080008080000",
+    "00000000040000003800080000080000"
+   ],
+   "sweep_nodes": 1738943
+  },
+  {
+   "lane": "cost-76d",
+   "bit": 49,
+   "root_hex": "00000000040000003802080008000000",
+   "d4_canonical_hex": "00000000040000003802080008000000",
+   "d4_orbit_distinct_from_all_folded_roots": true,
+   "certificate": {
+    "rows": 33648,
+    "sub_roots": 54,
+    "extraction_nodes": 4333257,
+    "md5": "eb4a1a1370e3302f4e1152d1f74f98c9",
+    "sha256": "9ef8848ffd371783533043ebd853ef7f3ee9cfb8fe6854e89f7c12eafc550c8b",
+    "git_blob_sha": "5e2b8d56de5d8ecca8d309a930b1b5133f09a61f",
+    "bytes": 1215488
+   },
+   "covers": 7,
+   "covers_hexes": [
+    "00000000000000003802000208000000",
+    "00000000000000801a02000040000000",
+    "00000000000020803800000040000000",
+    "00000000040000001802080008000000",
+    "00000000040000002802080008000000",
+    "00000000040000003002080008000000",
+    "00000000040000003800080008000000"
+   ],
+   "marginal": 4,
+   "marginal_hexes": [
+    "00000000000020803800000040000000",
+    "00000000040000001802080008000000",
+    "00000000040000002802080008000000",
+    "00000000040000003002080008000000"
+   ],
+   "marginal_in_manifest": 0,
+   "marginal_manifest_hexes": [],
+   "marginal_non_manifest_hexes": [
+    "00000000000020803800000040000000",
+    "00000000040000001802080008000000",
+    "00000000040000002802080008000000",
+    "00000000040000003002080008000000"
+   ],
+   "sweep_nodes": 1263398
+  },
+  {
+   "lane": "cost-77e",
+   "bit": 37,
+   "root_hex": "00000000040000809002002000004000",
+   "d4_canonical_hex": "00000000040000809002002000004000",
+   "d4_orbit_distinct_from_all_folded_roots": true,
+   "certificate": {
+    "rows": 47018,
+    "sub_roots": 57,
+    "extraction_nodes": null,
+    "md5": "5bf6a67f38f2027e45d62a5ee3eadfa2",
+    "sha256": "d73fd0422e5ecf2e1d7a488882b67be709fe9a9767911933098dafd8852369c0",
+    "git_blob_sha": null,
+    "bytes": 1695679
+   },
+   "covers": 7,
+   "covers_hexes": [
+    "00000000000000003800800440000000",
+    "00000000000000801202008000040000",
+    "00000000000200809002000001000000",
+    "00000000040000009002002000004000",
+    "00000000040000808002002000004000",
+    "00000000040000809000002000004000",
+    "00000000040000809002000000004000"
+   ],
+   "marginal": 6,
+   "marginal_hexes": [
+    "00000000000000003800800440000000",
+    "00000000000000801202008000040000",
+    "00000000040000009002002000004000",
+    "00000000040000808002002000004000",
+    "00000000040000809000002000004000",
+    "00000000040000809002000000004000"
+   ],
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000040000809002000000004000"
+   ],
+   "marginal_non_manifest_hexes": [
+    "00000000000000003800800440000000",
+    "00000000000000801202008000040000",
+    "00000000040000009002002000004000",
+    "00000000040000808002002000004000",
+    "00000000040000809000002000004000"
+   ],
+   "sweep_nodes": 1819936
+  },
+  {
+   "lane": "cost-77e",
+   "bit": 69,
+   "root_hex": "00000000040000a09002000000004000",
+   "d4_canonical_hex": "00000000040000a09002000000004000",
+   "d4_orbit_distinct_from_all_folded_roots": true,
+   "certificate": {
+    "rows": 54491,
+    "sub_roots": 57,
+    "extraction_nodes": null,
+    "md5": "1e738110f8796278cd117cf02508425c",
+    "sha256": "840cc4aa090c12968849b8d1039659a6479ead506962bddfc08d5833032b528b",
+    "git_blob_sha": null,
+    "bytes": 1964949
+   },
+   "covers": 7,
+   "covers_hexes": [
+    "00000000000000003800008440000000",
+    "0000000000000080120a000040000000",
+    "00000000000000a09002000000004000",
+    "00000000040000209002000000004000",
+    "00000000040000809002000000004000",
+    "00000000040000a08002000000004000",
+    "00000000040000a09000000000004000"
+   ],
+   "marginal": 4,
+   "marginal_hexes": [
+    "00000000000000003800008440000000",
+    "00000000040000209002000000004000",
+    "00000000040000a08002000000004000",
+    "00000000040000a09000000000004000"
+   ],
+   "marginal_in_manifest": 0,
+   "marginal_manifest_hexes": [],
+   "marginal_non_manifest_hexes": [
+    "00000000000000003800008440000000",
+    "00000000040000209002000000004000",
+    "00000000040000a08002000000004000",
+    "00000000040000a09000000000004000"
+   ],
+   "sweep_nodes": 2623346
+  }
+ ],
+ "totals": {
+  "receipts": 4,
+  "win_bits": {
+   "cost-76d": [
+    19,
+    49
+   ],
+   "cost-77e": [
+    37,
+    69
+   ]
+  },
+  "root_hexes": [
+   "00000000040000003800080008080000",
+   "00000000040000003802080008000000",
+   "00000000040000809002002000004000",
+   "00000000040000a09002000000004000"
+  ],
+  "total_marginal": 19,
+  "total_marginal_in_manifest": 2,
+  "children_closed_by_bit": {
+   "cost-76d": 19,
+   "cost-77e": 37
+  },
+  "conflict_census_overlaps": 0,
+  "folded_roots_at_1450": {
+   "receipt_roots": 771,
+   "distinct_d4_canons": 756
+  },
+  "cross_lane_overlap": {
+   "d4_canonical_hex": "00000000040000809002000000004080",
+   "cost-76d_bit": 86,
+   "cost-77e_bit": 7,
+   "verdicts": [
+    "REFUTED-D10",
+    "REFUTED-D10"
+   ],
+   "agreement": true
+  },
+  "rows_closed_hexes": [
+   "00000000040000003800080008000000",
+   "00000000040000809002000000004000"
+  ],
+  "sweep_nodes_76d": 96246915,
+  "sweep_nodes_77e": 116019458,
+  "parent_row_incidences": 4,
+  "parent_edge_cost_delta": 306
+ },
+ "frontier_after_cost76d77e": {
+  "solved_s6_in_manifest": 1452,
+  "remaining_s5_orbits": 174,
+  "unique_remaining_s6": 6396,
+  "sum_remaining_cost": 506144,
+  "s6_needed_by_open_classes": 4669,
+  "cost_needed_by_open_classes": 370058,
+  "demand_histogram_open_only": {
+   "c2=0,c4=1": 526,
+   "c2=0,c4=2": 3011,
+   "c2=0,c4=3": 12,
+   "c2=1,c4=0": 208,
+   "c2=1,c4=1": 54,
+   "c2=1,c4=2": 8,
+   "c2=2,c4=0": 795,
+   "c2=2,c4=1": 5,
+   "c2=2,c4=2": 50
+  },
+  "best_class2_fully_sterile": {
+   "s5_hex": "00000000000000801202000000200000",
+   "classes": 2,
+   "remaining_s6_orbits": 3,
+   "remaining_s7_edge_cost": 209
+  },
+  "best_class4": {
+   "s5_hex": "00000000020000003800000080000000",
+   "classes": 4,
+   "remaining_s6_orbits": 18,
+   "remaining_s7_edge_cost": 1460
+  },
+  "best_class1": {
+   "s5_hex": "00000000000000809082000000000000",
+   "classes": 3,
+   "remaining_s6_orbits": 10,
+   "remaining_s7_edge_cost": 698
+  },
+  "best_coverable_class2": {
+   "s5_hex": "00000000000000801202000040000000",
+   "classes": 2,
+   "remaining_s6_orbits": 3,
+   "remaining_s7_edge_cost": 211
+  },
+  "second_coverable_class2": {
+   "s5_hex": "00000000000000809082000000000000",
+   "classes": 3,
+   "remaining_s6_orbits": 10,
+   "remaining_s7_edge_cost": 698
+  },
+  "next_pure_class2_sweep_target": {
+   "s5_hex": "00000000000000403800000008000000",
+   "classes": 2,
+   "remaining_s6_orbits": 18,
+   "remaining_s7_edge_cost": 1287
+  }
+ },
+ "parents_after": {
+  "00000000000000003800000208000000": {
+   "s5_hex": "00000000000000003800000208000000",
+   "classes": 2,
+   "rows": 64,
+   "edge_cost": 5282,
+   "rows_before": 65,
+   "edge_cost_before": 5358
+  },
+  "00000000000000801202000000040000": {
+   "s5_hex": "00000000000000801202000000040000",
+   "classes": 2,
+   "rows": 71,
+   "edge_cost": 5883,
+   "rows_before": 72,
+   "edge_cost_before": 5960
+  },
+  "00000000000000801202000040000000": {
+   "s5_hex": "00000000000000801202000040000000",
+   "classes": 2,
+   "rows": 3,
+   "edge_cost": 211,
+   "rows_before": 5,
+   "edge_cost_before": 364
+  }
+ },
+ "lost_rows_per_parent": {
+  "00000000000000003800000208000000": {
+   "00000000040000003800080008000000": 76
+  },
+  "00000000000000801202000000040000": {
+   "00000000040000809002000000004000": 77
+  },
+  "00000000000000801202000040000000": {
+   "00000000040000003800080008000000": 76,
+   "00000000040000809002000000004000": 77
+  }
+ },
+ "interpretation_guard": "bookkeeping over published receipts; solved counts measure manifest coverage, not the game-theoretic value of any position; WIN7 certificates prove a first-player win within depth 10 from the individual 7-stone roots only; REFUTED-D10 proves only absence of WIN7-D10 from that root and is never a LOSS proof; 11x11 empty board / two-stone roots {49,60} and {59,60} / S2 {59,60} / class 1 / class 2 / class 4 remain UNKNOWN"
+}

@@ -1,0 +1,479 @@
+{
+ "binding_checks": {
+  "audit_numbers_match": true,
+  "demand_drop_from_safe8_reproduced": "sum over 23 rows, each row drop 4 via excluded roots",
+  "greedy9_exact_reproduction": true,
+  "intrinsic_equals_witness_population_fraction": 1.0,
+  "k1097_k1102_document_consistency": true,
+  "k1102_matching_witness_verified": true,
+  "kuhn_matching_size": 23,
+  "per_row_demand_reproduced_23": true
+ },
+ "date": "2026-11-20",
+ "decision": {
+  "decision": "UNSAT",
+  "elapsed_interval_collapse": "the K-audit interval [8,9] collapses to [9,9] over P''' (counting certificate: 3 no-triple rows make k_min=2 > k_max=1; confirmed by the exhaustive two-shape search)",
+  "greedy_upper_bound_reproduced": 9,
+  "interval_after": [
+   9,
+   9
+  ],
+  "interval_before": [
+   8,
+   9
+  ],
+  "minimum_cover_size_over_P3": 9,
+  "question": "can 8 roots of pool P''' cover all residual-23 rows",
+  "unconditional_lower_bound_carryover": "the audit's ceil(23/3)=8 bound remains valid on any universe; the 9 lower bound here is specific to P''' providers",
+  "witness": null,
+  "witness_coverage_hist": null,
+  "witness_detail": null
+ },
+ "gates": [
+  {
+   "detail": {
+    "k1097_k1102_demand_equality": true,
+    "k1097_k1102_row_sets_equal": true,
+    "rows": 23
+   },
+   "name": "documents-residual23-consistent",
+   "ok": true
+  },
+  {
+   "detail": {
+    "roots": 50
+   },
+   "name": "refuted50-canonical-8stones",
+   "ok": true
+  },
+  {
+   "detail": {
+    "rows": 23
+   },
+   "name": "rows23-canonical-6stones",
+   "ok": true
+  },
+  {
+   "detail": {
+    "note": "K1097 alternating-sum form and K1102 anchor-translation form agree: no forbidden quadruple on any row",
+    "pred1_cocircular_quads": 0,
+    "pred2_cocircular_quads": 0,
+    "rows": 23
+   },
+   "name": "rows23-quad-free-two-predicates",
+   "ok": true
+  },
+  {
+   "detail": {
+    "generation_events": 150765,
+    "per_row_events": 6555,
+    "rows": 23,
+    "universe_touching23_unique_roots": 137959
+   },
+   "name": "generation-events",
+   "ok": true
+  },
+  {
+   "detail": {
+    "roots": 137959
+   },
+   "name": "universe-roots-canonical-8stones",
+   "ok": true
+  },
+  {
+   "detail": {
+    "disagree_hex": [],
+    "disagreements": 0,
+    "note": "both predicates classify the full touching population",
+    "population": 137959,
+    "safe8_touching23": 45263,
+    "unsafe8": 92696,
+    "unsafe_pred1": "K1097 alternating 3x3-sum",
+    "unsafe_pred2": "K1102 anchor-translation 3x3"
+   },
+   "name": "safety-two-predicates-fullpopulation",
+   "ok": true
+  },
+  {
+   "detail": {
+    "note": "every excluded root that touches a residual-23 row is classified safe by both predicates; roots that touch no residual-23 row cannot affect this decision",
+    "refuted_classified_unsafe": 0,
+    "refuted_not_touching23": 6,
+    "refuted_touching23": 44
+   },
+   "name": "refuted50-in-safe8-touching",
+   "ok": true
+  },
+  {
+   "detail": {
+    "eligible_pair_plus_triple": 5154,
+    "provider_coverage_hist": {
+     "1": 40065,
+     "2": 4857,
+     "3": 297
+    },
+    "providers_touching_23rows": 45219,
+    "singleton_exclusion_reason": "7*3+1 = 22 < 23 caps any cover containing a singleton",
+    "singletons_excluded_from_8cover": 40065
+   },
+   "name": "providers-45219-hist",
+   "ok": true
+  },
+  {
+   "detail": {
+    "per_row": [
+     {
+      "demand_P_triple_prime_computed": 2210,
+      "demand_P_triple_prime_published": 2210,
+      "demand_drop_from_safe8_computed": 4,
+      "refuted_touch_count": 4,
+      "row": "00000000000000003800000008001800"
+     },
+     {
+      "demand_P_triple_prime_computed": 1824,
+      "demand_P_triple_prime_published": 1824,
+      "demand_drop_from_safe8_computed": 4,
+      "refuted_touch_count": 4,
+      "row": "00000000000000003800000008002010"
+     },
+     {
+      "demand_P_triple_prime_computed": 2015,
+      "demand_P_triple_prime_published": 2015,
+      "demand_drop_from_safe8_computed": 4,
+      "refuted_touch_count": 4,
+      "row": "0000000000000000380000000a080000"
+     },
+     {
+      "demand_P_triple_prime_computed": 2310,
+      "demand_P_triple_prime_published": 2310,
+      "demand_drop_from_safe8_computed": 4,
+      "refuted_touch_count": 4,
+      "row": "00000000000000003800000209000000"
+     },
+     {
+      "demand_P_triple_prime_computed": 2338,
+      "demand_P_triple_prime_published": 2338,
+      "demand_drop_from_safe8_computed": 4,
+      "refuted_touch_count": 4,
+      "row": "00000000000000003800000409000000"
+     },
+     {
+      "demand_P_triple_prime_computed": 2784,
+      "demand_P_triple_prime_published": 2784,
+      "demand_drop_from_safe8_computed": 4,
+      "refuted_touch_count": 4,
+      "row": "00000000000000043800000009000000"
+     },
+     {
+      "demand_P_triple_prime_computed": 2230,
+      "demand_P_triple_prime_published": 2230,
+      "demand_drop_from_safe8_computed": 4,
+      "refuted_touch_count": 4,
+      "row": "00000000000000083800000008100000"
+     },
+     {
+      "demand_P_triple_prime_computed": 2248,
+      "demand_P_triple_prime_published": 2248,
+      "demand_drop_from_safe8_computed": 4,
+      "refuted_touch_count": 4,
+      "row": "00000000000000083800000048000000"
+     },
+     {
+      "demand_P_triple_prime_computed": 1993,
+      "demand_P_triple_prime_published": 1993,
+      "demand_drop_from_safe8_computed": 4,
+      "refuted_touch_count": 4,
+      "row": "00000000000000103800000008080000"
+     },
+     {
+      "demand_P_triple_prime_computed": 2205,
+      "demand_P_triple_prime_published": 2205,
+      "demand_drop_from_safe8_computed": 4,
+      "refuted_touch_count": 4,
+      "row": "00000000000000103800000009000000"
+     },
+     {
+      "demand_P_triple_prime_computed": 2602,
+      "demand_P_triple_prime_published": 2602,
+      "demand_drop_from_safe8_computed": 4,
+      "refuted_touch_count": 4,
+      "row": "00000000000000801202000001000400"
+     },
+     {
+      "demand_P_triple_prime_computed": 2428,
+      "demand_P_triple_prime_published": 2428,
+      "demand_drop_from_safe8_computed": 4,
+      "refuted_touch_count": 4,
+      "row": "00000000000000801202000001080000"
+     },
+     {
+      "demand_P_triple_prime_computed": 1822,
+      "demand_P_triple_prime_published": 1822,
+      "demand_drop_from_safe8_computed": 4,
+      "refuted_touch_count": 4,
+      "row": "00000000000000801202020000001000"
+     },
+     {
+      "demand_P_triple_prime_computed": 2211,
+      "demand_P_triple_prime_published": 2211,
+      "demand_drop_from_safe8_computed": 4,
+      "refuted_touch_count": 4,
+      "row": "00000000000000821082000000000008"
+     },
+     {
+      "demand_P_triple_prime_computed": 2302,
+      "demand_P_triple_prime_published": 2302,
+      "demand_drop_from_safe8_computed": 4,
+      "refuted_touch_count": 4,
+      "row": "00000000000000821082000000000010"
+     },
+     {
+      "demand_P_triple_prime_computed": 1881,
+      "demand_P_triple_prime_published": 1881,
+      "demand_drop_from_safe8_computed": 4,
+      "refuted_touch_count": 4,
+      "row": "00000000000000821082000000000800"
+     },
+     {
+      "demand_P_triple_prime_computed": 1781,
+      "demand_P_triple_prime_published": 1781,
+      "demand_drop_from_safe8_computed": 4,
+      "refuted_touch_count": 4,
+      "row": "00000000000000821082000000001000"
+     },
+     {
+      "demand_P_triple_prime_computed": 1812,
+      "demand_P_triple_prime_published": 1812,
+      "demand_drop_from_safe8_computed": 4,
+      "refuted_touch_count": 4,
+      "row": "00000000000000821082800000000000"
+     },
+     {
+      "demand_P_triple_prime_computed": 1942,
+      "demand_P_triple_prime_published": 1942,
+      "demand_drop_from_safe8_computed": 4,
+      "refuted_touch_count": 4,
+      "row": "00000000000000821083000000000000"
+     },
+     {
+      "demand_P_triple_prime_computed": 2758,
+      "demand_P_triple_prime_published": 2758,
+      "demand_drop_from_safe8_computed": 4,
+      "refuted_touch_count": 4,
+      "row": "00000000000040809002000000100000"
+     },
+     {
+      "demand_P_triple_prime_computed": 2934,
+      "demand_P_triple_prime_published": 2934,
+      "demand_drop_from_safe8_computed": 4,
+      "refuted_touch_count": 4,
+      "row": "00000000010000809002000040000000"
+     },
+     {
+      "demand_P_triple_prime_computed": 1819,
+      "demand_P_triple_prime_published": 1819,
+      "demand_drop_from_safe8_computed": 4,
+      "refuted_touch_count": 4,
+      "row": "00000000020000801202000000100000"
+     },
+     {
+      "demand_P_triple_prime_computed": 2221,
+      "demand_P_triple_prime_published": 2221,
+      "demand_drop_from_safe8_computed": 4,
+      "refuted_touch_count": 4,
+      "row": "00000010000000801202000000000400"
+     }
+    ],
+    "rows": 23
+   },
+   "name": "demand-and-drop-reproduced",
+   "ok": true
+  },
+  {
+   "detail": {
+    "audit_fields_match_this_rederivation": true,
+    "audit_interval_recorded": [
+     8,
+     9
+    ]
+   },
+   "name": "audit-consistency",
+   "ok": true
+  },
+  {
+   "detail": {
+    "k1097_sampling_was": "39,255 of 120,474 safe8 roots",
+    "k1102_check_was": "100% of safe8 pool over the 72 rows",
+    "mismatch_hex": [],
+    "mismatches": 0,
+    "note": "every root's C(8,6)=28 subset canonicalization equals its generation witness over the residual-23 rows",
+    "population": 137959,
+    "sampling": "100% full population of the touching universe"
+   },
+   "name": "intrinsic-equals-witness-fullpopulation",
+   "ok": true
+  },
+  {
+   "detail": {
+    "exact_sequence_and_marginals": true,
+    "gains_hist": {
+     "1": 1,
+     "2": 2,
+     "3": 6
+    },
+    "greedy_size": 9,
+    "k1102_selection_equal": true,
+    "leftover_rows": 0,
+    "published_cov_sorted": true
+   },
+   "name": "greedy9-reproduced",
+   "ok": true
+  },
+  {
+   "detail": {
+    "roots": 9
+   },
+   "name": "greedy9-roots-in-P3-and-quadfree",
+   "ok": true
+  },
+  {
+   "detail": {
+    "distinct_roots": 23,
+    "each_root_covers_its_row": true,
+    "each_root_in_P3": true,
+    "rows": 23
+   },
+   "name": "k1102-hopcroft-karp-witness-verified",
+   "ok": true
+  },
+  {
+   "detail": {
+    "algorithm": "Kuhn augmenting paths (deterministic order)",
+    "matching_rows_roots": 23
+   },
+   "name": "kuhn-matching-23",
+   "ok": true
+  },
+  {
+   "detail": {
+    "arithmetic": "k >= ceil(a/2) = 2 but capacity needs k <= 3*8 - 23 = 1; contradiction for n = 8",
+    "k_max_allowed_by_capacity_at_n8": 1,
+    "k_min_roots_touching_no_triple": 2,
+    "no_triple_row_count": 3,
+    "no_triple_rows": [
+     "00000000000000003800000008002010",
+     "0000000000000000380000000a080000",
+     "00000000020000801202000000100000"
+    ],
+    "note": "three residual-23 rows have zero triple providers on P''': any root covering them covers at most 2 rows, so 2 of 8 roots are consumed for these rows and the remaining 6 roots cover at most 18 of the other 20 rows (+2 from the consumed roots at best 19 < 20). This is an arithmetic impossibility certificate for any 8-root cover, independent of the search below",
+    "per_row_triple_availability": {
+     "00000000000000003800000008001800": 5,
+     "00000000000000003800000008002010": 0,
+     "0000000000000000380000000a080000": 0,
+     "00000000000000003800000209000000": 10,
+     "00000000000000003800000409000000": 9,
+     "00000000000000043800000009000000": 9,
+     "00000000000000083800000008100000": 8,
+     "00000000000000083800000048000000": 10,
+     "00000000000000103800000008080000": 2,
+     "00000000000000103800000009000000": 8,
+     "00000000000000801202000001000400": 15,
+     "00000000000000801202000001080000": 13,
+     "00000000000000801202020000001000": 6,
+     "00000000000000821082000000000008": 139,
+     "00000000000000821082000000000010": 140,
+     "00000000000000821082000000000800": 126,
+     "00000000000000821082000000001000": 120,
+     "00000000000000821082800000000000": 131,
+     "00000000000000821083000000000000": 115,
+     "00000000000040809002000000100000": 6,
+     "00000000010000809002000040000000": 16,
+     "00000000020000801202000000100000": 0,
+     "00000010000000801202000000000400": 3
+    }
+   },
+   "name": "eight-impossible-counting-certificate",
+   "ok": true
+  },
+  {
+   "detail": {
+    "cover3_calls": 451,
+    "cover3_memo_size": 211,
+    "decision": "UNSAT",
+    "eligible_pair_roots": 4857,
+    "eligible_triple_roots": 297,
+    "note": "mechanical confirmation of the counting certificate: Shape B: exact partition 2+3*7 of 23 rows; Shape A: two triples meeting exactly in the duplicated row d cover 5 rows, the remaining 18 split into 6 disjoint triples; both shapes subtended by a memoized exact cover search over the 297-eligible triple masks; independent second implementation (fresh geometry, no memo, different branch order) agrees on the enumeration space (100 pair patterns, 351 dup pairs) and the UNSAT",
+    "pair_mask_patterns": 100,
+    "shape_A_executed": true,
+    "shape_A_pair_enumeration_per_d": {
+     "00000000000000003800000008001800": 2,
+     "00000000000000003800000008002010": 0,
+     "0000000000000000380000000a080000": 0,
+     "00000000000000003800000209000000": 19,
+     "00000000000000003800000409000000": 16,
+     "00000000000000043800000009000000": 15,
+     "00000000000000083800000008100000": 11,
+     "00000000000000083800000048000000": 20,
+     "00000000000000103800000008080000": 0,
+     "00000000000000103800000009000000": 9,
+     "00000000000000801202000001000400": 59,
+     "00000000000000801202000001080000": 33,
+     "00000000000000801202020000001000": 5,
+     "00000000000000821082000000000008": 15,
+     "00000000000000821082000000000010": 15,
+     "00000000000000821082000000000800": 15,
+     "00000000000000821082000000001000": 15,
+     "00000000000000821082800000000000": 15,
+     "00000000000000821083000000000000": 15,
+     "00000000000040809002000000100000": 5,
+     "00000000010000809002000040000000": 67,
+     "00000000020000801202000000100000": 0,
+     "00000010000000801202000000000400": 0
+    },
+    "shape_B_pair_masks_tried": 100,
+    "shape_B_pair_pattern_space": 100,
+    "singleton_ineligibility": "7*3+1 = 22 < 23",
+    "triple_mask_patterns": 60
+   },
+   "name": "eight-root-decision-exhaustive",
+   "ok": true
+  }
+ ],
+ "inputs": {
+  "k1097_refsolve_sha256": "2896deb0c5e820904d0e2463e3fd9ebd1613b540a66a97f88d86c75bffa71f40",
+  "k1102_second_verification_sha256": "d0b5d845c234cf51c55555295f1fe3042f262cccaa0e2923c9c4205d6b6e168b",
+  "residual23_lower_bound_audit_sha256": "1310ef74f40a98095d6128f28cba1c5e87e45a45694a3ec6940b541ec0dd3b00"
+ },
+ "interpretation_guard": [
+  "No row is closed by this computation: the cover decision is candidate-root bookkeeping over pool P''' (safe8 minus the 50 REFUTED-D10 roots); a cover is a conditional plan, not a certificate.",
+  "The decision is geometric only: a provider covers a residual-23 row iff the row's canonical form appears among the root's C(8,6)=28 stone-removal subsets. Certificate extraction and receipt folding remain future work.",
+  "REFUTED-D10 is a probe fact (no forced win within depth 10 at the root position), not a LOSS proof. Excluding those 50 roots from the plan universe is a planning restriction, not a result about the game.",
+  "Node counts and solved counts are not game outcomes.",
+  "The standard 11x11 empty board, the two-stone roots {49,60}/{59,60}, S2 {59,60}, and classes 1/2/4 all remain UNKNOWN."
+ ],
+ "provider_universe_rederivation": {
+  "P3_touching23": 45219,
+  "eligible_pair_providers": 4857,
+  "eligible_triple_providers": 297,
+  "generation_events": 150765,
+  "ineligible_singletons": 40065,
+  "per_row_demand_sum": 50670,
+  "per_row_events": 6555,
+  "provider_coverage_hist": {
+   "1": 40065,
+   "2": 4857,
+   "3": 297
+  },
+  "refuted_not_touching23": 6,
+  "refuted_touching23": 44,
+  "rows": 23,
+  "safe8_touching23": 45263,
+  "universe_touching23_unique_roots": 137959,
+  "unsafe8_predicates": "K1097 alternating 3x3-sum and K1102 anchor-translation 3x3, full population, zero disagreement",
+  "unsafe8_touching23": 92696
+ },
+ "schema": "n11-residual23-eight-root-cover-decision-20261120-v1",
+ "single_owner_note": "research/log/2026-11-20-n11-residual23-eight-root-cover-decision-single-owner-note.md",
+ "status": "eight-root-cover-unsat-minimum-9",
+ "trust_boundary": "engine depth-10 verdict soundness + D4 invariance, identical to the published verdict corpus; the 50 excluded roots enter through the pinned K1097/K1102正本 pins; this computation runs no probes and closes no rows"
+}

@@ -1,0 +1,559 @@
+{
+ "schema": "n11-class2-lane-cert-state-sharing-and-conf-cost-measurement-20261117-v1",
+ "date": "2026-11-17",
+ "method": "Deterministic set measurement over the published WIN7-D10 certificate bands (73j: 16 certs, 72d: 11 certs, 71e: 13 certs; every input file byte-pinned by git blob sha). State sharing is exact 32-hex equality of certificate row states; D4-canonical keying would only increase the sharing and is NOT quantified here. Confirmation-bit cost is summed from the published independent-rerun verification of the 73i/73j sweeps (mismatch 0), i.e. nodes spent re-searching positions whose verdict the census overlay had already transferred.",
+ "bands": {
+  "73j": {
+   "certificates": 16,
+   "rows_total": 726778,
+   "distinct_states": 547910,
+   "states_in_multiple_certs": 142470,
+   "states_shared_pct": 26.002,
+   "duplicate_rows": 178868,
+   "duplicate_rows_pct": 24.611,
+   "cert_count_histogram": {
+    "1": 405440,
+    "2": 112647,
+    "3": 24076,
+    "4": 5013,
+    "5": 647,
+    "6": 80,
+    "7": 7
+   },
+   "roots": [
+    "00000000000000403800000408000001",
+    "00000000000000403800000408000002",
+    "00000000000000403800000408000040",
+    "00000000000000403800000428000000",
+    "00000000000000403800100408000000",
+    "00000000000000403802000408000000",
+    "00000000000000403810000408000000",
+    "00000000000004403800000408000000",
+    "00000000008000403800000408000000",
+    "00000000080000403800000408000000",
+    "00000004000000403800000408000000",
+    "00000010000000403800000408000000",
+    "00004000000000403800000408000000",
+    "00400000000000403800000408000000",
+    "00000000000000603800000408000000",
+    "00000000000400403800000408000000"
+   ],
+   "input_pins": [
+    {
+     "file": "n11_s7_00000000000000403800000408000001.cert.part1of2",
+     "bytes": 841418,
+     "git_blob_sha": "864c6030ec51a48b134d559c0d197aac41367962"
+    },
+    {
+     "file": "n11_s7_00000000000000403800000408000001.cert.part2of2",
+     "bytes": 841453,
+     "git_blob_sha": "1a908087d7e5dfd4d3d56606006cbf67b11f81ac"
+    },
+    {
+     "file": "n11_s7_00000000000000403800000408000002.cert.part1of2",
+     "bytes": 864639,
+     "git_blob_sha": "ee50039cba29f7f880c411b261060238192aeaf3"
+    },
+    {
+     "file": "n11_s7_00000000000000403800000408000002.cert.part2of2",
+     "bytes": 864691,
+     "git_blob_sha": "c96aa82d515472e477c7553541196425d014770f"
+    },
+    {
+     "file": "n11_s7_00000000000000403800000408000040.cert.part1of2",
+     "bytes": 857811,
+     "git_blob_sha": "f21ce92539edcb917eca1439192a04bb5785c3df"
+    },
+    {
+     "file": "n11_s7_00000000000000403800000408000040.cert.part2of2",
+     "bytes": 857830,
+     "git_blob_sha": "2a68aa53e8c00902be67518849480b05c4572533"
+    },
+    {
+     "file": "n11_s7_00000000000000403800000428000000.cert.part1of2",
+     "bytes": 979621,
+     "git_blob_sha": "6273910c8cdba81b2292c781dfcc0c58e884223c"
+    },
+    {
+     "file": "n11_s7_00000000000000403800000428000000.cert.part2of2",
+     "bytes": 979687,
+     "git_blob_sha": "6041054c8957179aee715cf00924eae448dd1047"
+    },
+    {
+     "file": "n11_s7_00000000000000403800100408000000.cert.part1of2",
+     "bytes": 967342,
+     "git_blob_sha": "5115c78965269b9734d3985e4b3c3936f16f3ec5"
+    },
+    {
+     "file": "n11_s7_00000000000000403800100408000000.cert.part2of2",
+     "bytes": 967354,
+     "git_blob_sha": "3a59a7ebebc1e06c643c4e90f4594f25341419b8"
+    },
+    {
+     "file": "n11_s7_00000000000000403802000408000000.cert.part1of2",
+     "bytes": 602340,
+     "git_blob_sha": "1868e53866c50c206e23d52cb85c346436af0f60"
+    },
+    {
+     "file": "n11_s7_00000000000000403802000408000000.cert.part2of2",
+     "bytes": 602351,
+     "git_blob_sha": "bf4e7d08a0d1004b7358a1e8311c96872a2b243a"
+    },
+    {
+     "file": "n11_s7_00000000000000403810000408000000.cert.part1of2",
+     "bytes": 973361,
+     "git_blob_sha": "444ec256bc251ead61319d12592cfe3be51f4880"
+    },
+    {
+     "file": "n11_s7_00000000000000403810000408000000.cert.part2of2",
+     "bytes": 973364,
+     "git_blob_sha": "ee3b43dded780f5d8bdec6a3ce4806ec12acaeba"
+    },
+    {
+     "file": "n11_s7_00000000000004403800000408000000.cert.part1of2",
+     "bytes": 813229,
+     "git_blob_sha": "2490106baa5629ec1fbe7fa4c853b78a5e9afe13"
+    },
+    {
+     "file": "n11_s7_00000000000004403800000408000000.cert.part2of2",
+     "bytes": 813243,
+     "git_blob_sha": "45657b71fe6bb040c146b78a861ae35a4e496713"
+    },
+    {
+     "file": "n11_s7_00000000008000403800000408000000.cert.part1of2",
+     "bytes": 1040916,
+     "git_blob_sha": "58d605a55929bfb605bd134f6a9546c1ca848660"
+    },
+    {
+     "file": "n11_s7_00000000008000403800000408000000.cert.part2of2",
+     "bytes": 1040974,
+     "git_blob_sha": "e9b8b872ac08869957683ceb7458be2709ede0f8"
+    },
+    {
+     "file": "n11_s7_00000000080000403800000408000000.cert.part1of2",
+     "bytes": 625660,
+     "git_blob_sha": "ddf35cef03ec282c3025cc570c17160ea9e72578"
+    },
+    {
+     "file": "n11_s7_00000000080000403800000408000000.cert.part2of2",
+     "bytes": 625671,
+     "git_blob_sha": "c37e2d803e9797ce1d04b97dfcb7dd229aa755f4"
+    },
+    {
+     "file": "n11_s7_00000004000000403800000408000000.cert.part1of2",
+     "bytes": 1162311,
+     "git_blob_sha": "4d63a90bd9cd04f2f8441ec99f7701a2e4b1e90c"
+    },
+    {
+     "file": "n11_s7_00000004000000403800000408000000.cert.part2of2",
+     "bytes": 1162360,
+     "git_blob_sha": "d9a42abed17b3c4950f79a08de197027c98ffaff"
+    },
+    {
+     "file": "n11_s7_00000010000000403800000408000000.cert.part1of2",
+     "bytes": 739486,
+     "git_blob_sha": "ffc39b8c7992ea91c9fb29f1faec0e4d969421cc"
+    },
+    {
+     "file": "n11_s7_00000010000000403800000408000000.cert.part2of2",
+     "bytes": 739526,
+     "git_blob_sha": "ec29e2b49413f8a5bd24437b359e0fcfc8c59809"
+    },
+    {
+     "file": "n11_s7_00004000000000403800000408000000.cert.part1of2",
+     "bytes": 816511,
+     "git_blob_sha": "6d6de50d00a0df7061963639037e764a4ee31728"
+    },
+    {
+     "file": "n11_s7_00004000000000403800000408000000.cert.part2of2",
+     "bytes": 816540,
+     "git_blob_sha": "ed870ea4c7c4dfd07c40ead2d6eec5f2c20ee7d4"
+    },
+    {
+     "file": "n11_s7_00400000000000403800000408000000.cert.part1of2",
+     "bytes": 796516,
+     "git_blob_sha": "b969ea3840f194da504e75e5133d955e6bbc4ba3"
+    },
+    {
+     "file": "n11_s7_00400000000000403800000408000000.cert.part2of2",
+     "bytes": 796527,
+     "git_blob_sha": "00ea57a146aad1214ab559f3250faebb2f0a79a0"
+    },
+    {
+     "file": "n11_s7_00000000000000603800000408000000.cert",
+     "bytes": 1105284,
+     "git_blob_sha": "3b838b0380157ca0cf4ba5b82ad622f4d8b93c0b"
+    },
+    {
+     "file": "n11_s7_00000000000400403800000408000000.cert",
+     "bytes": 968835,
+     "git_blob_sha": "0f99cc936ea008abc11787a586c6395a7a0ccf74"
+    }
+   ]
+  },
+  "72d": {
+   "certificates": 11,
+   "rows_total": 522517,
+   "distinct_states": 423044,
+   "states_in_multiple_certs": 85254,
+   "states_shared_pct": 20.153,
+   "duplicate_rows": 99473,
+   "duplicate_rows_pct": 19.037,
+   "cert_count_histogram": {
+    "1": 337790,
+    "2": 72638,
+    "3": 11126,
+    "4": 1387,
+    "5": 93,
+    "6": 10
+   },
+   "roots": [
+    "00000000000000403800000008004002",
+    "00000000000000403800000008004040",
+    "00000000000000403800000009004000",
+    "0000000000000040380000000a004000",
+    "00000000000000403800080008004000",
+    "00000000000000403802000008004000",
+    "00000000000100403800000008004000",
+    "00000000000800403800000008004000",
+    "00000004000000403800000008004000",
+    "00040000000000403800000008004000",
+    "00000000000008403800000008004000"
+   ],
+   "input_pins": [
+    {
+     "file": "n11_s7_00000000000000403800000008004002.cert.part1of2",
+     "bytes": 809957,
+     "git_blob_sha": "5170ee22eee337a568d3038a30016d635d687bbf"
+    },
+    {
+     "file": "n11_s7_00000000000000403800000008004002.cert.part2of2",
+     "bytes": 809986,
+     "git_blob_sha": "7c8418685f56ab0f190ba6578cc412c37cd21cec"
+    },
+    {
+     "file": "n11_s7_00000000000000403800000008004040.cert.part1of2",
+     "bytes": 970453,
+     "git_blob_sha": "d1898656000772a77c2cc1e5cc16185c7bfcb120"
+    },
+    {
+     "file": "n11_s7_00000000000000403800000008004040.cert.part2of2",
+     "bytes": 970521,
+     "git_blob_sha": "1f419df00bff456d0afe30d16fc3fa1a14fbec46"
+    },
+    {
+     "file": "n11_s7_00000000000000403800000009004000.cert.part1of2",
+     "bytes": 977031,
+     "git_blob_sha": "860b6340c55e6f8dedd502f79d1ddbabc3fb3a8d"
+    },
+    {
+     "file": "n11_s7_00000000000000403800000009004000.cert.part2of2",
+     "bytes": 977092,
+     "git_blob_sha": "2c8c7610b53e8bd676398c85ecb4a39991b3dc5b"
+    },
+    {
+     "file": "n11_s7_0000000000000040380000000a004000.cert.part1of2",
+     "bytes": 741336,
+     "git_blob_sha": "8fff0ab2cf66527da594398886c8950848fadec9"
+    },
+    {
+     "file": "n11_s7_0000000000000040380000000a004000.cert.part2of2",
+     "bytes": 741397,
+     "git_blob_sha": "7d936cd45f0f124d0f9ebc301035bad8866f5c3c"
+    },
+    {
+     "file": "n11_s7_00000000000000403800080008004000.cert.part1of2",
+     "bytes": 1014224,
+     "git_blob_sha": "649c7d15e543ab8e698f7a73d6c278cdffef10d5"
+    },
+    {
+     "file": "n11_s7_00000000000000403800080008004000.cert.part2of2",
+     "bytes": 1014248,
+     "git_blob_sha": "d66b07853137e2fc7bb873589e2732eea3d168c2"
+    },
+    {
+     "file": "n11_s7_00000000000000403802000008004000.cert.part1of2",
+     "bytes": 754148,
+     "git_blob_sha": "1efb00ec414137a467cad83353ac62044e09e8cf"
+    },
+    {
+     "file": "n11_s7_00000000000000403802000008004000.cert.part2of2",
+     "bytes": 754215,
+     "git_blob_sha": "0b746a3313936037c4afcfe4223522477afb17e9"
+    },
+    {
+     "file": "n11_s7_00000000000100403800000008004000.cert.part1of2",
+     "bytes": 685530,
+     "git_blob_sha": "f155a992bb60e15cadc9262b75851eb2e11a9844"
+    },
+    {
+     "file": "n11_s7_00000000000100403800000008004000.cert.part2of2",
+     "bytes": 685578,
+     "git_blob_sha": "b3eb2d020872d3a364f35ae550aac9babb3b72ef"
+    },
+    {
+     "file": "n11_s7_00000000000800403800000008004000.cert.part1of2",
+     "bytes": 1012546,
+     "git_blob_sha": "ccc904d4c13273836a52b83f737e00ba7fa55c1a"
+    },
+    {
+     "file": "n11_s7_00000000000800403800000008004000.cert.part2of2",
+     "bytes": 1012578,
+     "git_blob_sha": "09851c7889bc1b531c4d0a9ec1f2de2593410b73"
+    },
+    {
+     "file": "n11_s7_00000004000000403800000008004000.cert.part1of2",
+     "bytes": 822057,
+     "git_blob_sha": "4d1c99a85296f5f2629b839a8a8e68c1fd6f5e4a"
+    },
+    {
+     "file": "n11_s7_00000004000000403800000008004000.cert.part2of2",
+     "bytes": 822114,
+     "git_blob_sha": "adb5ee45a0b560781b52cd00b63ee2440c05a81c"
+    },
+    {
+     "file": "n11_s7_00040000000000403800000008004000.cert.part1of2",
+     "bytes": 1057595,
+     "git_blob_sha": "f5f522ca15be02a8e2ccc246790fbc8573560e42"
+    },
+    {
+     "file": "n11_s7_00040000000000403800000008004000.cert.part2of2",
+     "bytes": 1057640,
+     "git_blob_sha": "4a8bfb838fe982018b956d103b659f6545f4df80"
+    },
+    {
+     "file": "n11_s7_00000000000008403800000008004000.cert",
+     "bytes": 1159922,
+     "git_blob_sha": "ed0281dcd719ab68190cc0f4f8824eab63b3c58c"
+    }
+   ]
+  },
+  "71e": {
+   "certificates": 13,
+   "rows_total": 534804,
+   "distinct_states": 422313,
+   "states_in_multiple_certs": 95101,
+   "states_shared_pct": 22.519,
+   "duplicate_rows": 112491,
+   "duplicate_rows_pct": 21.034,
+   "cert_count_histogram": {
+    "1": 327212,
+    "2": 79865,
+    "3": 13255,
+    "4": 1821,
+    "5": 147,
+    "6": 13
+   },
+   "roots": [
+    "00000000000000c09002000000002008",
+    "00000000000000c09002000000002010",
+    "00000000000000c09002000000002100",
+    "00000000000000c09042000000002000",
+    "00000000000010c09002000000002000",
+    "00000000400000c09002000000002000",
+    "00000001000000c09002000000002000",
+    "00000010000000c09002000000002000",
+    "00100000000000c09002000000002000",
+    "00800000000000c09002000000002000",
+    "00000000000000c09002020000002000",
+    "00000000000000c09402000000002000",
+    "00000000000080c09002000000002000"
+   ],
+   "input_pins": [
+    {
+     "file": "n11_s7_00000000000000c09002000000002008.cert.part1of2",
+     "bytes": 649608,
+     "git_blob_sha": "16b72b4415630ffc3120f2d6b416fa028bc79003"
+    },
+    {
+     "file": "n11_s7_00000000000000c09002000000002008.cert.part2of2",
+     "bytes": 649592,
+     "git_blob_sha": "57a1750e285802179580e539428eb30e73e85119"
+    },
+    {
+     "file": "n11_s7_00000000000000c09002000000002010.cert.part1of2",
+     "bytes": 919446,
+     "git_blob_sha": "72b00cbebe5299247aca7c29c7bcc0ab2e770059"
+    },
+    {
+     "file": "n11_s7_00000000000000c09002000000002010.cert.part2of2",
+     "bytes": 919439,
+     "git_blob_sha": "db25b9c3c2ecc58cc8ec2acfca240a5cffbb0b63"
+    },
+    {
+     "file": "n11_s7_00000000000000c09002000000002100.cert.part1of2",
+     "bytes": 744382,
+     "git_blob_sha": "0be4079a6dc1eb6ed4e649b20e857614a112dfe3"
+    },
+    {
+     "file": "n11_s7_00000000000000c09002000000002100.cert.part2of2",
+     "bytes": 744349,
+     "git_blob_sha": "08921dbbbd7a177d46d9881e9f512a05a0ad80dc"
+    },
+    {
+     "file": "n11_s7_00000000000000c09042000000002000.cert.part1of2",
+     "bytes": 853607,
+     "git_blob_sha": "8b77f6061bc252881914e193e47169794e5b6fd9"
+    },
+    {
+     "file": "n11_s7_00000000000000c09042000000002000.cert.part2of2",
+     "bytes": 853601,
+     "git_blob_sha": "9f14fca6605197bda43464874e56fd0368afbe22"
+    },
+    {
+     "file": "n11_s7_00000000000010c09002000000002000.cert.part1of2",
+     "bytes": 766956,
+     "git_blob_sha": "e67ae2417551ea53adc824fab34ea2f0cbf327e9"
+    },
+    {
+     "file": "n11_s7_00000000000010c09002000000002000.cert.part2of2",
+     "bytes": 766945,
+     "git_blob_sha": "c225f6107f99cf78a4bcbbaf2607d2a8af6f30e5"
+    },
+    {
+     "file": "n11_s7_00000000400000c09002000000002000.cert.part1of2",
+     "bytes": 814565,
+     "git_blob_sha": "0ff23779c1aec7abf2c1772ce75d8a60d26885f6"
+    },
+    {
+     "file": "n11_s7_00000000400000c09002000000002000.cert.part2of2",
+     "bytes": 814537,
+     "git_blob_sha": "52af7185685ee3df2b6d886ded2ff7486b7345b2"
+    },
+    {
+     "file": "n11_s7_00000001000000c09002000000002000.cert.part1of2",
+     "bytes": 854599,
+     "git_blob_sha": "8661b207e014c8c09991dd88f0664428b3df25fc"
+    },
+    {
+     "file": "n11_s7_00000001000000c09002000000002000.cert.part2of2",
+     "bytes": 854581,
+     "git_blob_sha": "9419ded12565c94f6c5ede2c858094ce4d9acffd"
+    },
+    {
+     "file": "n11_s7_00000010000000c09002000000002000.cert.part1of2",
+     "bytes": 610900,
+     "git_blob_sha": "780f37c796f0c5aa4666676609f5857ba143587a"
+    },
+    {
+     "file": "n11_s7_00000010000000c09002000000002000.cert.part2of2",
+     "bytes": 610894,
+     "git_blob_sha": "b543eb35042a19a4a111e8aa4e0e4c4cf02ebb80"
+    },
+    {
+     "file": "n11_s7_00100000000000c09002000000002000.cert.part1of2",
+     "bytes": 1008085,
+     "git_blob_sha": "bd6d2a54f953ac642e05c8da7a5512b4c15a7b4e"
+    },
+    {
+     "file": "n11_s7_00100000000000c09002000000002000.cert.part2of2",
+     "bytes": 1008069,
+     "git_blob_sha": "dafa93aed937599fe50b3ceda27d928feca33ed0"
+    },
+    {
+     "file": "n11_s7_00800000000000c09002000000002000.cert.part1of2",
+     "bytes": 892908,
+     "git_blob_sha": "6c90044dba2ef21ce0e13eaf767f0d669fbe9346"
+    },
+    {
+     "file": "n11_s7_00800000000000c09002000000002000.cert.part2of2",
+     "bytes": 892846,
+     "git_blob_sha": "43a864871390bb8f5541eaf8b7f0110859031a12"
+    },
+    {
+     "file": "n11_s7_00000000000000c09002020000002000.cert",
+     "bytes": 955669,
+     "git_blob_sha": "7c8c5a0134972b2707ca4fba0e7eb53fb4fc4930"
+    },
+    {
+     "file": "n11_s7_00000000000000c09402000000002000.cert",
+     "bytes": 1178240,
+     "git_blob_sha": "5cef59d206ae4d553212d436ff68fecbebb25cbc"
+    },
+    {
+     "file": "n11_s7_00000000000080c09002000000002000.cert",
+     "bytes": 936287,
+     "git_blob_sha": "3bf73f56eb9f6408e47683e714ce572bb225ef14"
+    }
+   ]
+  }
+ },
+ "cross_band_pairwise": {
+  "71e_and_72d": {
+   "shared_states": 0,
+   "pct_of_71e": 0.0,
+   "pct_of_72d": 0.0,
+   "shared_state_stone_histogram": {}
+  },
+  "71e_and_73j": {
+   "shared_states": 0,
+   "pct_of_71e": 0.0,
+   "pct_of_73j": 0.0,
+   "shared_state_stone_histogram": {}
+  },
+  "72d_and_73j": {
+   "shared_states": 17939,
+   "pct_of_72d": 4.24,
+   "pct_of_73j": 3.274,
+   "shared_state_stone_histogram": {
+    "8": 3,
+    "10": 262,
+    "12": 3748,
+    "14": 11506,
+    "16": 2420
+   }
+  }
+ },
+ "cross_band_three_way": {
+  "shared_states": 0,
+  "shared_state_stone_histogram": {}
+ },
+ "confirmation_bit_research_cost": {
+  "73i": {
+   "confirmation_bits": [
+    5,
+    13,
+    20,
+    103,
+    108
+   ],
+   "confirmation_nodes": 2797233,
+   "total_candidate_nodes": 131402821,
+   "pct_of_sweep": 2.129,
+   "per_bit_nodes": {
+    "5": 407704,
+    "13": 490691,
+    "20": 442634,
+    "103": 788659,
+    "108": 667545
+   },
+   "source": "class2-lane-cost73ij-sweep-independent-rerun-verification-20261117.json (published, mismatch 0)"
+  },
+  "73j": {
+   "confirmation_bits": [
+    5,
+    14,
+    20,
+    46,
+    97,
+    103,
+    108
+   ],
+   "confirmation_nodes": 11739699,
+   "total_candidate_nodes": 168445380,
+   "pct_of_sweep": 6.969,
+   "per_bit_nodes": {
+    "5": 776542,
+    "14": 2843241,
+    "20": 884272,
+    "46": 5307830,
+    "97": 815744,
+    "103": 508452,
+    "108": 603618
+   },
+   "source": "class2-lane-cost73ij-sweep-independent-rerun-verification-20261117.json (published, mismatch 0)"
+  }
+ },
+ "implications_measured": "Within-band shared extraction memo: up to 24.6% (73j) of certificate rows are duplicate states already proven in another root's certificate of the same band; the per-root extraction processes used for these bands did not share a memo. Cross-band persistent cache: 3.3-4.2% of states are shared between band pairs (concentrated at 12-16 stones). Transfer-trusting verdict cache for confirmation bits: 2.1% (73i) to 7.0% (73j) of sweep nodes are re-search of already-decided positions. All three numbers are measured lower bounds for exact-key caches; symmetry-aware keying is additional upside.",
+ "interpretation_guard": "Bookkeeping/efficiency measurement only. WIN7-D10 certificates prove a first-player win within depth 10 from the individual 7-stone roots only; REFUTED-D10 is not a LOSS proof. No manifest row is closed by this measurement. The 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60} and classes 1/2/4 all remain UNKNOWN."
+}

@@ -1,0 +1,475 @@
+{
+ "gates": [
+  {
+   "detail": "2a9405aacb98b1a8558e1ec1a4642776479bd9a46ac7c8c2a7b73eb5938a3ead",
+   "name": "pin-readme-sha256",
+   "pass": true
+  },
+  {
+   "detail": "5772",
+   "name": "pin-readme-bytes",
+   "pass": true
+  },
+  {
+   "detail": "695e56d7371e4ee974eab8aa67fab5477c7afd9c78eaabbc5c012c8501cb9773",
+   "name": "pin-machine-sha256",
+   "pass": true
+  },
+  {
+   "detail": "29959",
+   "name": "pin-machine-bytes",
+   "pass": true
+  },
+  {
+   "detail": "4286100804d82376418066da89167c50017244f2c6f02b81ad76a07b45bd91d6",
+   "name": "pin-audit-sha256",
+   "pass": true
+  },
+  {
+   "detail": "21842",
+   "name": "pin-audit-bytes",
+   "pass": true
+  },
+  {
+   "detail": "bed7d33193299a0aa06ea4e076562dfa46251d20d5c3c4ca7fd231ffe854908a",
+   "name": "recon-fold10.json-refA-sha256",
+   "pass": true
+  },
+  {
+   "detail": "bed7d33193299a0aa06ea4e076562dfa46251d20d5c3c4ca7fd231ffe854908a",
+   "name": "recon-fold10.json-refB-sha256",
+   "pass": true
+  },
+  {
+   "detail": "cmp",
+   "name": "recon-fold10.json-two-ref-identical",
+   "pass": true
+  },
+  {
+   "detail": "bed7d33193299a0aa06ea4e076562dfa46251d20d5c3c4ca7fd231ffe854908a",
+   "name": "recon-fold10.json-placed-sha256",
+   "pass": true
+  },
+  {
+   "detail": "a62d6d50ffe3196ad2de1ff7b1df67ff8208b2a13510cce3f13aee0e9a085054",
+   "name": "recon-fold10second.json-refA-sha256",
+   "pass": true
+  },
+  {
+   "detail": "a62d6d50ffe3196ad2de1ff7b1df67ff8208b2a13510cce3f13aee0e9a085054",
+   "name": "recon-fold10second.json-refB-sha256",
+   "pass": true
+  },
+  {
+   "detail": "cmp",
+   "name": "recon-fold10second.json-two-ref-identical",
+   "pass": true
+  },
+  {
+   "detail": "a62d6d50ffe3196ad2de1ff7b1df67ff8208b2a13510cce3f13aee0e9a085054",
+   "name": "recon-fold10second.json-placed-sha256",
+   "pass": true
+  },
+  {
+   "detail": "24db2352ad0d94ee4a76ec3de294f02cbdac7899f0b6ef64ea695d261017cdc2",
+   "name": "recon-fold9.json-refA-sha256",
+   "pass": true
+  },
+  {
+   "detail": "24db2352ad0d94ee4a76ec3de294f02cbdac7899f0b6ef64ea695d261017cdc2",
+   "name": "recon-fold9.json-refB-sha256",
+   "pass": true
+  },
+  {
+   "detail": "cmp",
+   "name": "recon-fold9.json-two-ref-identical",
+   "pass": true
+  },
+  {
+   "detail": "24db2352ad0d94ee4a76ec3de294f02cbdac7899f0b6ef64ea695d261017cdc2",
+   "name": "recon-fold9.json-placed-sha256",
+   "pass": true
+  },
+  {
+   "detail": "6b045eaefdd59e2c0fbd0f9b4a1e876b89c3f8b03cfade8f0ab1f8192cd0a984",
+   "name": "recon-probes-w0.jsonl-refA-sha256",
+   "pass": true
+  },
+  {
+   "detail": "6b045eaefdd59e2c0fbd0f9b4a1e876b89c3f8b03cfade8f0ab1f8192cd0a984",
+   "name": "recon-probes-w0.jsonl-refB-sha256",
+   "pass": true
+  },
+  {
+   "detail": "cmp",
+   "name": "recon-probes-w0.jsonl-two-ref-identical",
+   "pass": true
+  },
+  {
+   "detail": "6b045eaefdd59e2c0fbd0f9b4a1e876b89c3f8b03cfade8f0ab1f8192cd0a984",
+   "name": "recon-probes-w0.jsonl-placed-sha256",
+   "pass": true
+  },
+  {
+   "detail": "4aaa4d0a691f6da40e68dbaa41a353aaf3ea518a6863aec04886c17197e00967",
+   "name": "recon-probes-w1.jsonl-refA-sha256",
+   "pass": true
+  },
+  {
+   "detail": "4aaa4d0a691f6da40e68dbaa41a353aaf3ea518a6863aec04886c17197e00967",
+   "name": "recon-probes-w1.jsonl-refB-sha256",
+   "pass": true
+  },
+  {
+   "detail": "cmp",
+   "name": "recon-probes-w1.jsonl-two-ref-identical",
+   "pass": true
+  },
+  {
+   "detail": "4aaa4d0a691f6da40e68dbaa41a353aaf3ea518a6863aec04886c17197e00967",
+   "name": "recon-probes-w1.jsonl-placed-sha256",
+   "pass": true
+  },
+  {
+   "detail": "2d4ff7dd40b2fc66745068f6772724f38ccd04dd2a65507af925fb85252b3032",
+   "name": "recon-probes-w2.jsonl-refA-sha256",
+   "pass": true
+  },
+  {
+   "detail": "2d4ff7dd40b2fc66745068f6772724f38ccd04dd2a65507af925fb85252b3032",
+   "name": "recon-probes-w2.jsonl-refB-sha256",
+   "pass": true
+  },
+  {
+   "detail": "cmp",
+   "name": "recon-probes-w2.jsonl-two-ref-identical",
+   "pass": true
+  },
+  {
+   "detail": "2d4ff7dd40b2fc66745068f6772724f38ccd04dd2a65507af925fb85252b3032",
+   "name": "recon-probes-w2.jsonl-placed-sha256",
+   "pass": true
+  },
+  {
+   "detail": "e04e20bdadd1cba94cd0a285ff9fb72bb9e9d0a2d5a687f1d76ceccc7d0ccb0c",
+   "name": "recon-probes-w3.jsonl-refA-sha256",
+   "pass": true
+  },
+  {
+   "detail": "e04e20bdadd1cba94cd0a285ff9fb72bb9e9d0a2d5a687f1d76ceccc7d0ccb0c",
+   "name": "recon-probes-w3.jsonl-refB-sha256",
+   "pass": true
+  },
+  {
+   "detail": "cmp",
+   "name": "recon-probes-w3.jsonl-two-ref-identical",
+   "pass": true
+  },
+  {
+   "detail": "e04e20bdadd1cba94cd0a285ff9fb72bb9e9d0a2d5a687f1d76ceccc7d0ccb0c",
+   "name": "recon-probes-w3.jsonl-placed-sha256",
+   "pass": true
+  },
+  {
+   "detail": "e85d4bfb867a193f2b3cdb23ec9e15679359c9f337fcd97eb5c62473b90c281a",
+   "name": "recon-resolve6.json-refA-sha256",
+   "pass": true
+  },
+  {
+   "detail": "e85d4bfb867a193f2b3cdb23ec9e15679359c9f337fcd97eb5c62473b90c281a",
+   "name": "recon-resolve6.json-refB-sha256",
+   "pass": true
+  },
+  {
+   "detail": "cmp",
+   "name": "recon-resolve6.json-two-ref-identical",
+   "pass": true
+  },
+  {
+   "detail": "e85d4bfb867a193f2b3cdb23ec9e15679359c9f337fcd97eb5c62473b90c281a",
+   "name": "recon-resolve6.json-placed-sha256",
+   "pass": true
+  },
+  {
+   "detail": "207f4094a906817ebb4bbc5ad9b90c203c6a334ee6c8d9a501661257a0e1ce3f",
+   "name": "recon-resolve7.json-refA-sha256",
+   "pass": true
+  },
+  {
+   "detail": "207f4094a906817ebb4bbc5ad9b90c203c6a334ee6c8d9a501661257a0e1ce3f",
+   "name": "recon-resolve7.json-refB-sha256",
+   "pass": true
+  },
+  {
+   "detail": "cmp",
+   "name": "recon-resolve7.json-two-ref-identical",
+   "pass": true
+  },
+  {
+   "detail": "207f4094a906817ebb4bbc5ad9b90c203c6a334ee6c8d9a501661257a0e1ce3f",
+   "name": "recon-resolve7.json-placed-sha256",
+   "pass": true
+  },
+  {
+   "detail": "9f0161a8a61d311534fd3a4035b1c367426691c72ad5eb44efd01a5fae37e0cc",
+   "name": "recon-roots.json-refA-sha256",
+   "pass": true
+  },
+  {
+   "detail": "9f0161a8a61d311534fd3a4035b1c367426691c72ad5eb44efd01a5fae37e0cc",
+   "name": "recon-roots.json-refB-sha256",
+   "pass": true
+  },
+  {
+   "detail": "cmp",
+   "name": "recon-roots.json-two-ref-identical",
+   "pass": true
+  },
+  {
+   "detail": "9f0161a8a61d311534fd3a4035b1c367426691c72ad5eb44efd01a5fae37e0cc",
+   "name": "recon-roots.json-placed-sha256",
+   "pass": true
+  },
+  {
+   "detail": "c1073bae1d056db7f56d04a77fd9889d1e297a82a07537ddcd02c00d329dbabc",
+   "name": "recon-sv17.json-refA-sha256",
+   "pass": true
+  },
+  {
+   "detail": "c1073bae1d056db7f56d04a77fd9889d1e297a82a07537ddcd02c00d329dbabc",
+   "name": "recon-sv17.json-refB-sha256",
+   "pass": true
+  },
+  {
+   "detail": "cmp",
+   "name": "recon-sv17.json-two-ref-identical",
+   "pass": true
+  },
+  {
+   "detail": "c1073bae1d056db7f56d04a77fd9889d1e297a82a07537ddcd02c00d329dbabc",
+   "name": "recon-sv17.json-placed-sha256",
+   "pass": true
+  },
+  {
+   "detail": "22953ae16a6002d87638531f2ca9fd286f6736b834fa296e5648505ada9074dc",
+   "name": "recon-sweep39.json-refA-sha256",
+   "pass": true
+  },
+  {
+   "detail": "22953ae16a6002d87638531f2ca9fd286f6736b834fa296e5648505ada9074dc",
+   "name": "recon-sweep39.json-refB-sha256",
+   "pass": true
+  },
+  {
+   "detail": "cmp",
+   "name": "recon-sweep39.json-two-ref-identical",
+   "pass": true
+  },
+  {
+   "detail": "22953ae16a6002d87638531f2ca9fd286f6736b834fa296e5648505ada9074dc",
+   "name": "recon-sweep39.json-placed-sha256",
+   "pass": true
+  },
+  {
+   "detail": "rc=0 stderr=",
+   "name": "rerun-r1-rc0",
+   "pass": true
+  },
+  {
+   "detail": "file",
+   "name": "rerun-r1-audit-exists",
+   "pass": true
+  },
+  {
+   "detail": "gates_total=76",
+   "name": "rerun-r1-gates76-allpass",
+   "pass": true
+  },
+  {
+   "detail": "4286100804d82376418066da89167c50017244f2c6f02b81ad76a07b45bd91d6",
+   "name": "rerun-r1-sha256-published",
+   "pass": true
+  },
+  {
+   "detail": "cmp",
+   "name": "rerun-r1-byte-identical-master",
+   "pass": true
+  },
+  {
+   "detail": "21842",
+   "name": "rerun-r1-bytes",
+   "pass": true
+  },
+  {
+   "detail": "rc=0 stderr=",
+   "name": "rerun-r2-rc0",
+   "pass": true
+  },
+  {
+   "detail": "file",
+   "name": "rerun-r2-audit-exists",
+   "pass": true
+  },
+  {
+   "detail": "gates_total=76",
+   "name": "rerun-r2-gates76-allpass",
+   "pass": true
+  },
+  {
+   "detail": "4286100804d82376418066da89167c50017244f2c6f02b81ad76a07b45bd91d6",
+   "name": "rerun-r2-sha256-published",
+   "pass": true
+  },
+  {
+   "detail": "cmp",
+   "name": "rerun-r2-byte-identical-master",
+   "pass": true
+  },
+  {
+   "detail": "21842",
+   "name": "rerun-r2-bytes",
+   "pass": true
+  },
+  {
+   "detail": "rc=0 stderr=",
+   "name": "rerun-r3-rc0",
+   "pass": true
+  },
+  {
+   "detail": "file",
+   "name": "rerun-r3-audit-exists",
+   "pass": true
+  },
+  {
+   "detail": "gates_total=76",
+   "name": "rerun-r3-gates76-allpass",
+   "pass": true
+  },
+  {
+   "detail": "4286100804d82376418066da89167c50017244f2c6f02b81ad76a07b45bd91d6",
+   "name": "rerun-r3-sha256-published",
+   "pass": true
+  },
+  {
+   "detail": "cmp",
+   "name": "rerun-r3-byte-identical-master",
+   "pass": true
+  },
+  {
+   "detail": "21842",
+   "name": "rerun-r3-bytes",
+   "pass": true
+  },
+  {
+   "detail": "rc=0 stderr=",
+   "name": "rerun-r4-rc0",
+   "pass": true
+  },
+  {
+   "detail": "file",
+   "name": "rerun-r4-audit-exists",
+   "pass": true
+  },
+  {
+   "detail": "gates_total=76",
+   "name": "rerun-r4-gates76-allpass",
+   "pass": true
+  },
+  {
+   "detail": "4286100804d82376418066da89167c50017244f2c6f02b81ad76a07b45bd91d6",
+   "name": "rerun-r4-sha256-published",
+   "pass": true
+  },
+  {
+   "detail": "cmp",
+   "name": "rerun-r4-byte-identical-master",
+   "pass": true
+  },
+  {
+   "detail": "21842",
+   "name": "rerun-r4-bytes",
+   "pass": true
+  },
+  {
+   "detail": "cmp",
+   "name": "rerun-4outputs-mutually-identical",
+   "pass": true
+  },
+  {
+   "detail": "rc=1",
+   "name": "tamper-t1-rc-not0",
+   "pass": true
+  },
+  {
+   "detail": "stderr=pin mismatch for sweep39.json",
+   "name": "tamper-t1-stderr-names-input",
+   "pass": true
+  },
+  {
+   "detail": "exclusive",
+   "name": "tamper-t1-stderr-name-exclusive",
+   "pass": true
+  },
+  {
+   "detail": "absent",
+   "name": "tamper-t1-no-audit-written",
+   "pass": true
+  },
+  {
+   "detail": "22953ae16a6002d87638531f2ca9fd286f6736b834fa296e5648505ada9074dc",
+   "name": "tamper-t1-w-restored-sha",
+   "pass": true
+  },
+  {
+   "detail": "rc=1",
+   "name": "tamper-t2-rc-not0",
+   "pass": true
+  },
+  {
+   "detail": "stderr=pin mismatch for resolve6.json",
+   "name": "tamper-t2-stderr-names-input",
+   "pass": true
+  },
+  {
+   "detail": "exclusive",
+   "name": "tamper-t2-stderr-name-exclusive",
+   "pass": true
+  },
+  {
+   "detail": "absent",
+   "name": "tamper-t2-no-audit-written",
+   "pass": true
+  },
+  {
+   "detail": "e85d4bfb867a193f2b3cdb23ec9e15679359c9f337fcd97eb5c62473b90c281a",
+   "name": "tamper-t2-w-restored-sha",
+   "pass": true
+  },
+  {
+   "detail": "two distinct stderr identifications",
+   "name": "tamper-independent-gates",
+   "pass": true
+  }
+ ],
+ "gates_all_pass": true,
+ "gates_pass": 90,
+ "gates_total": 90,
+ "interpretation_guard": [
+  "This third verification re-executes the published resolver verifier on published bytes; it performs no search, judges no root, closes no row, rebuilds no candidate universe.",
+  "REFUTED-D10 is NOT a LOSS proof; it certifies no first-player win within depth-10 from that root only.",
+  "Folds and coverage are row bookkeeping and say nothing about the game-theoretic value of any row.",
+  "nodes/solved/coverage counts are not verdicts.",
+  "The standard 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, and classes 1/2/4 remain UNKNOWN."
+ ],
+ "schema": "resolve7-second-verification-pristine-reexec-third/1",
+ "status": "all-gates-pass",
+ "targets": {
+  "declaration_refs": [
+   "12eefdeae3198852cd0a8ca14f42457547b92773",
+   "86c6d546e20b4b1809425dbdf8270700186d955a"
+  ],
+  "published_audit_sha256": "4286100804d82376418066da89167c50017244f2c6f02b81ad76a07b45bd91d6",
+  "second_verification_commit": "e836dd127a90e520d8e2801e62b59eb4966f0ed8",
+  "w_inputs": 12
+ }
+}

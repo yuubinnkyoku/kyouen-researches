@@ -1,0 +1,185 @@
+{
+ "schema": "n11-class-frontier-cost65g-warm-recompute-20261114-v1",
+ "date": "2026-11-14",
+ "baseline_main": "class-frontier-cost63e-warm-recompute-20261114 (solved 997 / unique remaining 6850 / sum 539745 / open 5120/403468)",
+ "method": "direct runpy extension of recompute_frontier_cost63e_warm_20261114.py: every staged control reproduces the published after-cost-63e-warm frontier exactly (asserted: 997/6850/539745/5120/403468), the original cost-65g sweep record is asserted (unverified_win7_bits exactly 0/15/44/52/75/105), then the six warm-rebuild receipts of the NEW class2-lane-cost65g-warm-certificates-20261114.json record (bits 0/15/44/52/75/105; rows 42,091/41,226/40,807/37,706/39,625/43,743; extraction nodes 13,545,545/7,209,440/11,705,049/9,427,271/7,380,455/10,918,655; sub-roots 54/52/52/51/52/52 PASS; union 0/0 each; v15 anchors bits 0/44/105 loss=true; the original 3-cert records untouched so the chain keeps asserting them) are added; this closes the cost-65g band - all 9 WIN7-D10 candidates certified; no new sweep, only certificates move the frontier",
+ "controls": {
+  "after_cost63e_warm": {
+   "solved_in_manifest": 997,
+   "unique_remaining": 6850,
+   "sum_cost": 539745,
+   "open_s6": 5120,
+   "open_cost": 403468,
+   "reproduced": true
+  },
+  "cost65g_sweep_original": {
+   "win7_d10": 9,
+   "unverified_bits": [
+    0,
+    15,
+    44,
+    52,
+    75,
+    105
+   ],
+   "reproduced": true
+  },
+  "cost65g_warm_receipts": {
+   "rows": {
+    "0": 42091,
+    "15": 41226,
+    "44": 40807,
+    "52": 37706,
+    "75": 39625,
+    "105": 43743
+   },
+   "sub_roots_pass": {
+    "0": 54,
+    "15": 52,
+    "44": 52,
+    "52": 51,
+    "75": 52,
+    "105": 52
+   },
+   "union_missing": 0,
+   "union_extra": 0,
+   "reproduced": true
+  }
+ },
+ "cost65g_warm_addition": {
+  "0": {
+   "root_hex": "00000000000000803202000000000005",
+   "covers": 7,
+   "marginal": 6,
+   "marginal_in_manifest": 2,
+   "marginal_manifest_hexes": [
+    "00000000000000003800000008400001",
+    "00000000000000803202000000000001"
+   ]
+  },
+  "15": {
+   "root_hex": "00000000000000803202000000008004",
+   "covers": 7,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000803202000000008000"
+   ]
+  },
+  "44": {
+   "root_hex": "00000000000000803202100000000004",
+   "covers": 7,
+   "marginal": 6,
+   "marginal_in_manifest": 2,
+   "marginal_manifest_hexes": [
+    "00000000000000003800000008400010",
+    "00000000000000803202100000000000"
+   ]
+  },
+  "52": {
+   "root_hex": "00000000000000803212000000000004",
+   "covers": 7,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000801212000000000004"
+   ]
+  },
+  "75": {
+   "root_hex": "00000000000008803202000000000004",
+   "covers": 7,
+   "marginal": 6,
+   "marginal_in_manifest": 2,
+   "marginal_manifest_hexes": [
+    "00000000000000803222000000000000",
+    "00000000000000889002000000000100"
+   ]
+  },
+  "105": {
+   "root_hex": "00000200000000803202000000000004",
+   "covers": 7,
+   "marginal": 4,
+   "marginal_in_manifest": 0,
+   "marginal_manifest_hexes": []
+  }
+ },
+ "frontier_after_cost65g_warm": {
+  "solved_s6_in_manifest": 1005,
+  "remaining_s5_orbits": 176,
+  "unique_remaining_s6": 6842,
+  "sum_remaining_cost": 539174,
+  "s6_needed_by_open_classes": 5112,
+  "cost_needed_by_open_classes": 402897,
+  "demand_histogram_open_only": {
+   "c2=0,c4=1": 527,
+   "c2=0,c4=2": 3021,
+   "c2=0,c4=3": 12,
+   "c2=1,c4=0": 250,
+   "c2=1,c4=1": 60,
+   "c2=1,c4=2": 9,
+   "c2=2,c4=0": 1172,
+   "c2=2,c4=1": 6,
+   "c2=2,c4=2": 55
+  },
+  "best_class2": {
+   "s5_hex": "00000000000000809082000000000000",
+   "classes": 3,
+   "remaining_s6_orbits": 10,
+   "remaining_s7_edge_cost": 698
+  },
+  "best_class2_note": "receipt-unclosable per class-frontier-uncoverability-audit-20261114.json (all 10 remaining children sterile-swept); shown for reference only",
+  "best_coverable_class2": {
+   "s5_hex": "00000000000000803202000000000000",
+   "classes": 2,
+   "remaining_s6_orbits": 10,
+   "remaining_s7_edge_cost": 721
+  },
+  "next_class2": [
+   {
+    "s5_hex": "00000000000000803202000000000000",
+    "classes": 2,
+    "remaining_s6_orbits": 10,
+    "remaining_s7_edge_cost": 721
+   },
+   {
+    "s5_hex": "00000000000000809102000000000000",
+    "classes": 2,
+    "remaining_s6_orbits": 35,
+    "remaining_s7_edge_cost": 2525
+   },
+   {
+    "s5_hex": "0000000000000080120a000000000000",
+    "classes": 2,
+    "remaining_s6_orbits": 53,
+    "remaining_s7_edge_cost": 3865
+   }
+  ],
+  "best_class4": {
+   "s5_hex": "00000000020000003800000080000000",
+   "classes": 4,
+   "remaining_s6_orbits": 18,
+   "remaining_s7_edge_cost": 1460
+  },
+  "next_class4": [
+   {
+    "s5_hex": "00000000000000003800002000800000",
+    "classes": 4,
+    "remaining_s6_orbits": 60,
+    "remaining_s7_edge_cost": 4216
+   },
+   {
+    "s5_hex": "00000000000000801802000000080000",
+    "classes": 4,
+    "remaining_s6_orbits": 64,
+    "remaining_s7_edge_cost": 4390
+   },
+   {
+    "s5_hex": "00000000020000003800000000080000",
+    "classes": 4,
+    "remaining_s6_orbits": 64,
+    "remaining_s7_edge_cost": 4570
+   }
+  ]
+ },
+ "interpretation_guard": "bookkeeping over published receipts; REFUTED-D10 sweeps prove only absence of WIN7-D10; WIN7 certificates prove a win within depth 10 from the 7-stone root only; 11x11 empty root / {49,60} / S2 {59,60} / class 2 / class 4 remain UNKNOWN"
+}

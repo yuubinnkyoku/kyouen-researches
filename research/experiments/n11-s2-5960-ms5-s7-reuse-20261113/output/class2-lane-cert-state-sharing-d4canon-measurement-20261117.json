@@ -1,0 +1,86 @@
+{
+ "schema": "n11-class2-lane-cert-state-sharing-d4canon-measurement-20261117-v1",
+ "date": "2026-11-17",
+ "extends": "class2-lane-cert-state-sharing-and-conf-cost-measurement-20261117.json (commit 9f2422d3)",
+ "method": "Same three published certificate bands, same input pins as the v1 measurement; every row state mapped to its D4 canonical form (min hex over the eight square symmetries of the 11x11 board) and all sharing statistics recomputed on canonical keys. Correctness gate: the canon function reproduces all 16 published d4_canon_root values of the cost73j certificate manifest before measuring.",
+ "d4_canon_root_assertions": 16,
+ "bands": {
+  "73j": {
+   "certificates": 16,
+   "rows_total": 726778,
+   "exact_distinct_states": 547910,
+   "d4_canon_distinct_states": 547910,
+   "canon_reduction_pct": 0.0,
+   "canon_states_in_multiple_certs": 142470,
+   "canon_states_shared_pct": 26.002,
+   "canon_duplicate_rows": 178868,
+   "canon_duplicate_rows_pct": 24.611,
+   "canon_cert_count_histogram": {
+    "1": 405440,
+    "2": 112647,
+    "3": 24076,
+    "4": 5013,
+    "5": 647,
+    "6": 80,
+    "7": 7
+   }
+  },
+  "72d": {
+   "certificates": 11,
+   "rows_total": 522517,
+   "exact_distinct_states": 423044,
+   "d4_canon_distinct_states": 423044,
+   "canon_reduction_pct": 0.0,
+   "canon_states_in_multiple_certs": 85254,
+   "canon_states_shared_pct": 20.153,
+   "canon_duplicate_rows": 99473,
+   "canon_duplicate_rows_pct": 19.037,
+   "canon_cert_count_histogram": {
+    "1": 337790,
+    "2": 72638,
+    "3": 11126,
+    "4": 1387,
+    "5": 93,
+    "6": 10
+   }
+  },
+  "71e": {
+   "certificates": 13,
+   "rows_total": 534804,
+   "exact_distinct_states": 422313,
+   "d4_canon_distinct_states": 422313,
+   "canon_reduction_pct": 0.0,
+   "canon_states_in_multiple_certs": 95101,
+   "canon_states_shared_pct": 22.519,
+   "canon_duplicate_rows": 112491,
+   "canon_duplicate_rows_pct": 21.034,
+   "canon_cert_count_histogram": {
+    "1": 327212,
+    "2": 79865,
+    "3": 13255,
+    "4": 1821,
+    "5": 147,
+    "6": 13
+   }
+  }
+ },
+ "cross_band_pairwise": {
+  "71e_and_72d": {
+   "canon_shared_states": 7315,
+   "pct_of_71e": 1.732,
+   "pct_of_72d": 1.729
+  },
+  "71e_and_73j": {
+   "canon_shared_states": 17301,
+   "pct_of_71e": 4.097,
+   "pct_of_73j": 3.158
+  },
+  "72d_and_73j": {
+   "canon_shared_states": 17939,
+   "pct_of_72d": 4.24,
+   "pct_of_73j": 3.274
+  }
+ },
+ "cross_band_three_way_canon_shared_states": 258,
+ "interpretation_guard": "Efficiency measurement only, on published certificate bytes. WIN7-D10 certificates prove a first-player win within depth 10 from the individual 7-stone roots only; REFUTED-D10 is not a LOSS proof. No manifest row is closed. The 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60} and classes 1/2/4 all remain UNKNOWN."
+}

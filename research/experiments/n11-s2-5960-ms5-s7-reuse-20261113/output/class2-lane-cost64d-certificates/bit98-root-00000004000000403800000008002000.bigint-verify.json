@@ -1,0 +1,30 @@
+{
+ "schema": "n11-class2-lane-cost64d-bigint-verify-20261116-v1",
+ "bit_label": "bit98-root-00000004000000403800000008002000",
+ "verifier": "verify_win7_certificate_bigint_independent.mjs (BigInt 3x3 cofactor expansion; no solver/verdict cache/repo import)",
+ "bigint_record": {
+  "verdict": "WIN7 certificate independently verified",
+  "method": "BigInt 3x3 cofactor expansion of the exact lifted determinant [x\u00b2+y\u00b2,x,y,1]; no floating point",
+  "root_hex": "00000004000000403800000008002000",
+  "root_stones": 7,
+  "root_safe": true,
+  "root_mobility": 51,
+  "strategy_rows": 35070,
+  "rows_sorted_unique": true,
+  "subroots_passed": 51,
+  "consumed_winner_rows": 35070,
+  "union_missing": 0,
+  "union_extra": 0,
+  "visited_states_across_subroots": 79262,
+  "winner_states": 51315,
+  "loser_states": 15347,
+  "loser_reply_edges": 72397,
+  "terminal_count": 12600,
+  "terminal_range": [
+   13,
+   17
+  ],
+  "forbidden_triple_cache_entries": 18238,
+  "legal_state_cache_entries": 53055
+ }
+}

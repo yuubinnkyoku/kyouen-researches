@@ -1,0 +1,116 @@
+{
+  "schema": "n11-class2-lane-cost63a-sweep-20261114-v1",
+  "date": "2026-11-14",
+  "session": "long-term lane session 11 second run (2026-11-14)",
+  "s5_parent_hex": "00000000000000809102000000000000",
+  "s6_child_hex": "00000000000000809102000800000000",
+  "s6_s7_edge_cost": 63,
+  "demand_classes": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+  },
+  "role": "cheapest remaining unswept child of the class-2 target S5 00000000000000809102000000000000 after the cost-62a receipt (38 orbits / 2,721 at claim time); second child of that S5 swept, covering a second orbit simultaneously",
+  "candidate_enumeration": "legal_candidates.py independent Bareiss 4x4 enumeration: 63 legal candidates, bit-exact with the published edge cost 63; candidate list recorded in class2-lane-cost63a-inflight-20261114.json; the parallel raw audit (class2-lane-cost63a-batch1-independent-audit-20261114.json, BigInt 3x3-minor Laplace expansion) confirmed exact_set_match=true over the identical 63-bit set",
+  "win7_d10": 10,
+  "win7_bits": [
+    2,
+    11,
+    15,
+    28,
+    96,
+    97,
+    100,
+    109,
+    118,
+    119
+  ],
+  "win7_roots": [
+    "00000000000000809102000800000004",
+    "00000000000000809102000800000800",
+    "00000000000000809102000800008000",
+    "00000000000000809102000810000000",
+    "00000001000000809102000800000000",
+    "00000002000000809102000800000000",
+    "00000010000000809102000800000000",
+    "00002000000000809102000800000000",
+    "00400000000000809102000800000000",
+    "00800000000000809102000800000000"
+  ],
+  "verdict": "WIN7",
+  "refuted_d10": 53,
+  "capped": 0,
+  "total_nodes": 288069056,
+  "pilot_d6_controls": "loss=false at exactly 5,949 nodes in all 8 batch invocations (identical control lines)",
+  "terminal_stone_range_all": [
+    [
+      13,
+      17
+    ]
+  ],
+  "heaviest_bits": [
+    {
+      "bit": 32,
+      "nodes": 13242071
+    },
+    {
+      "bit": 2,
+      "nodes": 12280257,
+      "win7": true
+    },
+    {
+      "bit": 28,
+      "nodes": 11624100,
+      "win7": true
+    },
+    {
+      "bit": 102,
+      "nodes": 11585058
+    },
+    {
+      "bit": 78,
+      "nodes": 11544969
+    },
+    {
+      "bit": 97,
+      "nodes": 11447839,
+      "win7": true
+    }
+  ],
+  "heaviest_fresh_rerun_node_exact": "bits 32 (13,242,071, heaviest) and the WIN7s 2 (12,280,257), 119 (3,074,897), 11 (5,671,351) re-solved fresh in separate processes after the sweep: node counts identical",
+  "cross_engine_check": "runner_fbs20.ts (repo FBS=1<<20 instrumented engine from n11-fbt-saturation-audit-20261114): bits 32/2/119 verdicts AND node counts bit-exact identical, fbtDrops=0, fbtMaxProbe<=3 (class2-lane-cost63a-fbs20-crosscheck-20261114.jsonl)",
+  "env_reset_cross_restart_control": "the execution environment reset mid-sweep and the local raw JSONL for batches 1-5 was lost; every affected batch was re-run deterministically from scratch and reproduced its pre-reset node counts exactly (batch1-3 re-pushed byte-identical, commit 4c0b2c8d; batch4-8 pushed from the post-reset reruns, commit 31a4c24b) - recorded as a cross-restart reproduction control",
+  "parallel_raw_audit": "class2-lane-cost63a-batch1-independent-audit-20261114.json (pushed by the parallel audit lane while this sweep was in flight): batch1 reconciled (8 candidate rows, 39,419,093 candidate nodes + pilot 5,949, bit2 WIN7 root 00000000000000809102000800000004 independently confirmed, 0 capped) and the 63-candidate set confirmed by an independent BigInt Laplace expansion with exact_set_match=true",
+  "certificate": {
+    "bit": 119,
+    "root_hex": "00800000000000809102000800000000",
+    "root_check": "7 stones, loserMobility 49 = independent legal_candidates.py enumeration",
+    "rows": 28509,
+    "extraction_nodes": 5731248,
+    "extraction": "cert_driver68.ts over class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table), FBS=1<<20, single batch over all 49 loser first-moves, fbt_drops=0, fatal=null, all 49 per-move extractions ok and uncapped; rows sorted (no duplicates) before verification per the established extractor note",
+    "fbt_drops": 0,
+    "fatal": null,
+    "verification": "verify_bit7_win7_cert.ts: root-check PASS (stones=7, loserMobility=49); 49/49 sub-roots PASS (all seen>0, terminals>0); union of consumed winner states equals the 28,509-row set exactly (0 missing / 0 extra); terminal stone ranges per sub-root within [13,17]",
+    "md5_joined": "c042fbf46be29ecc0ac74ceb25324b16",
+    "sha256": "3c7e7133d0176e073bfafaebb7b037b06236e76158d92f85f9c0408ba3997d6b",
+    "split": "certificate pushed as part1of2 (14,256 lines, 514,887 bytes, md5 c920f058977d3773d2b7ec098a77b622) + part2of2 (14,255 lines, 513,526 bytes, md5 580ac8e73099b0828353571062114d96); cat part1of2 part2of2 > bit119.sorted.cert (concat md5 = c042fbf46be29ecc0ac74ceb25324b16, verified JOIN-IDENTICAL locally and by commit-SHA raw md5 after landing)",
+    "root_not_among_existing": "root hex grepped against all 33 published win7-certificates manifests on main (class2-lane cost-56a..cost-75 bands, class4 batch1/batch3*/74b/78/78b/80b): 0 hits"
+  },
+  "unverified_win7_bits": [
+    2,
+    11,
+    15,
+    28,
+    96,
+    97,
+    100,
+    109,
+    118
+  ],
+  "unverified_note": "search verdicts from this completed sweep; certificates not yet extracted; the single verified bit-119 receipt suffices to cover the S6 child orbit within the WIN7-D10 receipt framework",
+  "raw_batches": "class2-lane-cost63a-raw-batch1..8-20261114.jsonl (63 candidate lines + pilot control per batch; batch1 = bits 0,1,2,4,6,7,9,10; batch2 = 11,13,14,15,17,18,19,20; batch3 = 21,22,23,25,28,29,30,32; batch4 = 33,34,41,44,46,53,69,75; batch5 = 76,77,78,85,86,88,89,92; batch6 = 94,96,97,98,99,100,101,102; batch7 = 105,106,107,108,109,110,111,112; batch8 = 113,114,116,117,118,119,120)",
+  "determinism_rerun_file": "class2-lane-cost63a-determinism-rerun-20261114.jsonl",
+  "fbs20_crosscheck_file": "class2-lane-cost63a-fbs20-crosscheck-20261114.jsonl",
+  "interpretation_guard": "WIN7-D10 is a winner-win-within-depth-10 from the individual 7-stone root only; REFUTED-D10 is the absence of such a win in that subtree; this record is not a claim about the 11x11 empty root / {49,60} / S2 {59,60} / class 2 / class 4 which remain UNKNOWN",
+  "unknown_status": "11x11 empty board, two-stone root {49,60}, S2 {59,60}, class 2, class 4: UNKNOWN"
+}

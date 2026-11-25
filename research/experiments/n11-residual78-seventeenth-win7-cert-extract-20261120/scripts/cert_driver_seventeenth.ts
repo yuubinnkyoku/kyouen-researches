@@ -1,0 +1,39 @@
+// blind certificate extraction driver for the seventeenth WIN7-D10 root
+// (00004000000000821082000000000100, child 4000000000821082000000000000, bit 8),
+// discovered by the resolve6 (K1063) 39-live-witness depth-10 sweep run recorded under
+// sweep-records/.
+// Modeled on cert_driver78c.ts: imports extractBatch from the repo-verbatim
+// class4_child1_cert_extractor_exact_ms23.ts; empty kill table (pref=null) = blind.
+// usage (moves read from stdin, last line a comma list):
+//   python3 legal_candidates.py ROOT_HEX | tail -1 |
+//     node --experimental-strip-types cert_driver_seventeenth.ts CHILD_HEX BIT OUT_PATH
+// writes the full certificate (header + root + sorted rows) only when every
+// per-move extraction is ok/uncapped and fbt_drops == 0; otherwise exit 1.
+import { extractBatch } from './class4_child1_cert_extractor_exact_ms23.ts';
+import fs from 'fs';
+const NL = String.fromCharCode(10);
+const child = process.argv[2];
+const bit = Number(process.argv[3]);
+const outPath = process.argv[4];
+let input = '';
+process.stdin.on('data', c => input += c);
+process.stdin.on('end', () => {
+  const moves = input.trim().split(NL).pop().trim().split(',').filter(s => s !== '').map(Number);
+  const t0 = Date.now();
+  const res = extractBatch(child, bit, {}, moves);
+  const summary = { child, bit, moves: moves.length, perMove: res.perMove, sum: res.sum,
+    nRows: res.nRows, fbt_drops: res.fbt_drops, fatal: res.fatal, ms: Date.now() - t0 };
+  fs.writeFileSync(outPath + '.summary.json', JSON.stringify(summary));
+  process.stderr.write(JSON.stringify({ moves: moves.length, sum: res.sum, nRows: res.nRows,
+    fbt_drops: res.fbt_drops, fatal: res.fatal, ms: Date.now() - t0 }) + NL);
+  if (!Array.isArray(res.rows) || res.fatal || res.fbt_drops !== 0) {
+    process.stderr.write('refusing certificate output: rows missing, fatal set, or fbt_drops != 0' + NL);
+    process.exitCode = 1;
+    return;
+  }
+  const lines = ['n11-terminal-strategy-v1 original_first_WIN7 second_to_move_LOSS',
+    'root ' + (BigInt('0x' + child) | (1n << BigInt(bit))).toString(16).padStart(32, '0')];
+  const sorted = Array.from(new Set(res.rows)).sort();
+  fs.writeFileSync(outPath, lines.join(NL) + NL + sorted.join(NL) + NL);
+  process.stderr.write('written ' + outPath + NL);
+});

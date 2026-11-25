@@ -1,0 +1,517 @@
+{
+ "schema": "n11-class-frontier-warm-multiband-recompute-20261115-v1",
+ "date": "2026-11-15",
+ "baseline_main": "class-frontier-cost75c-recompute-20261115 (solved 1062 / unique remaining 6785 / sum 534768 / open 5055/398491)",
+ "method": "direct runpy extension of recompute_frontier_cost75c_20261115.py: the after-cost-75c baseline is reproduced exactly (asserted 1062/6785/534768/5055/398491, byte-identical output to main), then all 35 warm multiband WIN7 receipts from class2-lane-warm-multiband-certificates-20261115.json are folded in the published record order (greedy marginal_in_manifest ranking over uncertified WIN7 roots of the my-lane bands, computed against the after-cost-75b frontier; every record asserts rows/sub-roots/extraction-nodes/union-0-0/md5/sha256 and root == child | 1<<bit). Each certificate was extracted with the repo-verbatim blind extractor (FBS=1<<20, fbt_drops=0, rows LC_ALL=C sorted-unique) and independently verified with verify_win7_certificate_bigint_independent.mjs (BigInt exact geometry, no solver/cache import; sub_roots == loser mobility all PASS, strategy/consumed union 0/0 both directions, terminal range 13..17); the verification was re-run on the local bytes after extraction and the remote bytes were verified byte-exact by md5 per part before this recompute. The cost-71b bit-14 root 00000000000000803202000000404000 duplicates the already-folded cost-75c bit-22 root: the independent re-extraction reproduces the same WIN7 verdict (positive duplicate cross-check, zero marginal here). The cost-72 bit-52 receipt (sweep owner explicitly deprioritized bit-52 to warm) is folded as part of this batch; the remaining cost-72 sweep bookkeeping stays with the cost-72 lane. No sweep claims are made here - receipts only",
+ "controls": {
+  "after_cost75c_baseline": {
+   "solved_in_manifest": 1062,
+   "unique_remaining": 6785,
+   "sum_cost": 534768,
+   "open_s6": 5055,
+   "open_cost": 398491,
+   "reproduced_byte_identical": true
+  },
+  "warm_records_asserted_rows_subs_extraction_union_md5_sha256_roots": true,
+  "records_folded_in_published_record_order": true,
+  "duplicate_cost71b_bit14_vs_cost75c_bit22_asserted": true,
+  "extends_after_cost75c_baseline": true
+ },
+ "warm_multiband_addition": [
+  {
+   "band": "class2-lane-cost71b",
+   "bit": 14,
+   "root_hex": "00000000000000803202000000404000",
+   "covers": 7,
+   "marginal": 0,
+   "marginal_in_manifest": 0,
+   "marginal_manifest_hexes": []
+  },
+  {
+   "band": "class2-lane-cost65e",
+   "bit": 7,
+   "root_hex": "00000000000000809102000000800080",
+   "covers": 7,
+   "marginal": 6,
+   "marginal_in_manifest": 2,
+   "marginal_manifest_hexes": [
+    "00000000000000801202000080000008",
+    "00000000000000809102000000000080"
+   ]
+  },
+  {
+   "band": "class2-lane-cost65e",
+   "bit": 26,
+   "root_hex": "00000000000000809102000004800000",
+   "covers": 7,
+   "marginal": 6,
+   "marginal_in_manifest": 2,
+   "marginal_manifest_hexes": [
+    "00000000000000801202000090000000",
+    "00000000000000809102000004000000"
+   ]
+  },
+  {
+   "band": "class2-lane-cost65e",
+   "bit": 29,
+   "root_hex": "00000000000000809102000020800000",
+   "covers": 7,
+   "marginal": 6,
+   "marginal_in_manifest": 2,
+   "marginal_manifest_hexes": [
+    "00000000000000801202000082000000",
+    "00000000000000809102000020000000"
+   ]
+  },
+  {
+   "band": "class2-lane-cost65e",
+   "bit": 32,
+   "root_hex": "00000000000000809102000100800000",
+   "covers": 7,
+   "marginal": 6,
+   "marginal_in_manifest": 2,
+   "marginal_manifest_hexes": [
+    "00000000000000801202000080400000",
+    "00000000000000809102000100000000"
+   ]
+  },
+  {
+   "band": "class2-lane-cost62a",
+   "bit": 32,
+   "root_hex": "00000000000000809102000101000000",
+   "covers": 7,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000801202000040400000"
+   ]
+  },
+  {
+   "band": "class2-lane-cost65e",
+   "bit": 33,
+   "root_hex": "00000000000000809102000200800000",
+   "covers": 7,
+   "marginal": 6,
+   "marginal_in_manifest": 2,
+   "marginal_manifest_hexes": [
+    "00000000000000801202080080000000",
+    "00000000000000809102000200000000"
+   ]
+  },
+  {
+   "band": "class2-lane-cost63a",
+   "bit": 2,
+   "root_hex": "00000000000000809102000800000004",
+   "covers": 7,
+   "marginal": 6,
+   "marginal_in_manifest": 2,
+   "marginal_manifest_hexes": [
+    "00000000000000801202020000000100",
+    "00000000000000809102000000000004"
+   ]
+  },
+  {
+   "band": "class2-lane-cost63a",
+   "bit": 15,
+   "root_hex": "00000000000000809102000800008000",
+   "covers": 7,
+   "marginal": 6,
+   "marginal_in_manifest": 2,
+   "marginal_manifest_hexes": [
+    "00000000000000801202020000020000",
+    "00000000000000809102000000008000"
+   ]
+  },
+  {
+   "band": "class2-lane-cost63a",
+   "bit": 28,
+   "root_hex": "00000000000000809102000810000000",
+   "covers": 7,
+   "marginal": 6,
+   "marginal_in_manifest": 2,
+   "marginal_manifest_hexes": [
+    "00000000000000801202020004000000",
+    "00000000000000809102000010000000"
+   ]
+  },
+  {
+   "band": "class2-lane-cost65e",
+   "bit": 42,
+   "root_hex": "00000000000000809102040000800000",
+   "covers": 7,
+   "marginal": 6,
+   "marginal_in_manifest": 2,
+   "marginal_manifest_hexes": [
+    "00000000000000801202000480000000",
+    "00000000000000809102040000000000"
+   ]
+  },
+  {
+   "band": "class2-lane-cost62a",
+   "bit": 66,
+   "root_hex": "00000000000000849102000001000000",
+   "covers": 7,
+   "marginal": 6,
+   "marginal_in_manifest": 2,
+   "marginal_manifest_hexes": [
+    "00000000000000809102100000000000",
+    "00000000000000849002000001000000"
+   ]
+  },
+  {
+   "band": "class2-lane-cost62a",
+   "bit": 86,
+   "root_hex": "00000000004000809102000001000000",
+   "covers": 7,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000040801202000040000000"
+   ]
+  },
+  {
+   "band": "class2-lane-cost65e",
+   "bit": 94,
+   "root_hex": "00000000400000809102000000800000",
+   "covers": 7,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000020000809002000010000000"
+   ]
+  },
+  {
+   "band": "class2-lane-cost62a",
+   "bit": 95,
+   "root_hex": "00000000800000809102000001000000",
+   "covers": 7,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000040000003800020008000000"
+   ]
+  },
+  {
+   "band": "class2-lane-cost63a",
+   "bit": 100,
+   "root_hex": "00000010000000809102000800000000",
+   "covers": 7,
+   "marginal": 6,
+   "marginal_in_manifest": 2,
+   "marginal_manifest_hexes": [
+    "00000000000000809102000000001000",
+    "00000000000080809002000000001000"
+   ]
+  },
+  {
+   "band": "class2-lane-cost64b",
+   "bit": 102,
+   "root_hex": "00000040000000803202000000100000",
+   "covers": 7,
+   "marginal": 0,
+   "marginal_in_manifest": 0,
+   "marginal_manifest_hexes": []
+  },
+  {
+   "band": "class2-lane-cost61e",
+   "bit": 102,
+   "root_hex": "00000040000000803202000040000000",
+   "covers": 7,
+   "marginal": 0,
+   "marginal_in_manifest": 0,
+   "marginal_manifest_hexes": []
+  },
+  {
+   "band": "class2-lane-cost61f",
+   "bit": 102,
+   "root_hex": "00000040000000803202000080000000",
+   "covers": 7,
+   "marginal": 0,
+   "marginal_in_manifest": 0,
+   "marginal_manifest_hexes": []
+  },
+  {
+   "band": "class2-lane-cost65e",
+   "bit": 105,
+   "root_hex": "00000200000000809102000000800000",
+   "covers": 7,
+   "marginal": 6,
+   "marginal_in_manifest": 2,
+   "marginal_manifest_hexes": [
+    "00000000000000809102000000020000",
+    "00000000020000809002000000020000"
+   ]
+  },
+  {
+   "band": "class2-lane-cost62a",
+   "bit": 105,
+   "root_hex": "00000200000000809102000001000000",
+   "covers": 7,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000040000003820000008000000"
+   ]
+  },
+  {
+   "band": "class2-lane-cost65e",
+   "bit": 106,
+   "root_hex": "00000400000000809102000000800000",
+   "covers": 7,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000809102000000040000"
+   ]
+  },
+  {
+   "band": "class2-lane-cost62a",
+   "bit": 109,
+   "root_hex": "00002000000000809102000001000000",
+   "covers": 7,
+   "marginal": 6,
+   "marginal_in_manifest": 2,
+   "marginal_manifest_hexes": [
+    "00000000000000809102000000200000",
+    "00000000040000003800000008000200"
+   ]
+  },
+  {
+   "band": "class2-lane-cost65e",
+   "bit": 111,
+   "root_hex": "00008000000000809102000000800000",
+   "covers": 7,
+   "marginal": 6,
+   "marginal_in_manifest": 2,
+   "marginal_manifest_hexes": [
+    "00000000000000809102000000000002",
+    "00000000020000809002000000000002"
+   ]
+  },
+  {
+   "band": "class2-lane-cost62a",
+   "bit": 112,
+   "root_hex": "00010000000000809102000001000000",
+   "covers": 7,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000040000809002000000000004"
+   ]
+  },
+  {
+   "band": "class2-lane-cost65e",
+   "bit": 114,
+   "root_hex": "00040000000000809102000000800000",
+   "covers": 7,
+   "marginal": 6,
+   "marginal_in_manifest": 2,
+   "marginal_manifest_hexes": [
+    "00000000000000809102000000000010",
+    "00000000020000809002000000000010"
+   ]
+  },
+  {
+   "band": "class2-lane-cost65e",
+   "bit": 116,
+   "root_hex": "00100000000000809102000000800000",
+   "covers": 7,
+   "marginal": 6,
+   "marginal_in_manifest": 2,
+   "marginal_manifest_hexes": [
+    "00000000000000809102000000000040",
+    "00000000020000809002000000000040"
+   ]
+  },
+  {
+   "band": "class2-lane-cost62a",
+   "bit": 118,
+   "root_hex": "00400000000000809102000001000000",
+   "covers": 7,
+   "marginal": 6,
+   "marginal_in_manifest": 2,
+   "marginal_manifest_hexes": [
+    "00000000000000809102000000000100",
+    "00000000040000003800000108000000"
+   ]
+  },
+  {
+   "band": "class2-lane-cost63a",
+   "bit": 118,
+   "root_hex": "00400000000000809102000800000000",
+   "covers": 7,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000080809002000000000100"
+   ]
+  },
+  {
+   "band": "class2-lane-cost61d",
+   "bit": 119,
+   "root_hex": "00800000000000803202000000000002",
+   "covers": 7,
+   "marginal": 0,
+   "marginal_in_manifest": 0,
+   "marginal_manifest_hexes": []
+  },
+  {
+   "band": "class2-lane-cost72",
+   "bit": 52,
+   "root_hex": "00000000000000803212000000000200",
+   "covers": 7,
+   "marginal": 4,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000801212000000000200"
+   ]
+  },
+  {
+   "band": "class2-lane-cost64b",
+   "bit": 8,
+   "root_hex": "00000000000000803202000000100100",
+   "covers": 7,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000801202000000100100"
+   ]
+  },
+  {
+   "band": "class2-lane-cost61e",
+   "bit": 4,
+   "root_hex": "00000000000000803202000040000010",
+   "covers": 7,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000801202000040000010"
+   ]
+  },
+  {
+   "band": "class2-lane-cost71b",
+   "bit": 32,
+   "root_hex": "00000000000000803202000100400000",
+   "covers": 7,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000801202000100400000"
+   ]
+  },
+  {
+   "band": "class2-lane-cost64b",
+   "bit": 33,
+   "root_hex": "00000000000000803202000200100000",
+   "covers": 7,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000801202000200100000"
+   ]
+  }
+ ],
+ "warm_multiband_totals": {
+  "receipts": 35,
+  "total_marginal": 166,
+  "total_marginal_in_manifest": 47,
+  "zero_marginal_in_manifest": [
+   "class2-lane-cost71b-bit14",
+   "class2-lane-cost64b-bit102",
+   "class2-lane-cost61e-bit102",
+   "class2-lane-cost61f-bit102",
+   "class2-lane-cost61d-bit119"
+  ],
+  "total_rows": 1586728,
+  "total_extraction_nodes": 481639572
+ },
+ "frontier_after_warm_multiband": {
+  "solved_s6_in_manifest": 1109,
+  "remaining_s5_orbits": 175,
+  "unique_remaining_s6": 6738,
+  "sum_remaining_cost": 531295,
+  "s6_needed_by_open_classes": 5008,
+  "cost_needed_by_open_classes": 395018,
+  "demand_histogram_open_only": {
+   "c2=0,c4=1": 527,
+   "c2=0,c4=2": 3021,
+   "c2=0,c4=3": 12,
+   "c2=1,c4=0": 241,
+   "c2=1,c4=1": 60,
+   "c2=1,c4=2": 9,
+   "c2=2,c4=0": 1077,
+   "c2=2,c4=1": 6,
+   "c2=2,c4=2": 55
+  },
+  "best_class2": {
+   "s5_hex": "00000000000000809082000000000000",
+   "classes": 3,
+   "remaining_s6_orbits": 10,
+   "remaining_s7_edge_cost": 698
+  },
+  "audit_blocked_class2": {
+   "s5_hex": "00000000000000809082000000000000",
+   "classes": 3,
+   "remaining_s6_orbits": 10,
+   "remaining_s7_edge_cost": 698
+  },
+  "best_coverable_class2": {
+   "s5_hex": "00000000000000809102000000000000",
+   "classes": 2,
+   "remaining_s6_orbits": 17,
+   "remaining_s7_edge_cost": 1220
+  },
+  "next_class2": [
+   {
+    "s5_hex": "00000000000000809102000000000000",
+    "classes": 2,
+    "remaining_s6_orbits": 17,
+    "remaining_s7_edge_cost": 1220
+   },
+   {
+    "s5_hex": "00000000000000801202000000200000",
+    "classes": 2,
+    "remaining_s6_orbits": 41,
+    "remaining_s7_edge_cost": 3058
+   },
+   {
+    "s5_hex": "00000000000000801202000080000000",
+    "classes": 2,
+    "remaining_s6_orbits": 47,
+    "remaining_s7_edge_cost": 3570
+   }
+  ],
+  "best_class4": {
+   "s5_hex": "00000000020000003800000080000000",
+   "classes": 4,
+   "remaining_s6_orbits": 18,
+   "remaining_s7_edge_cost": 1460
+  },
+  "next_class4": [
+   {
+    "s5_hex": "00000000000000003800002000800000",
+    "classes": 4,
+    "remaining_s6_orbits": 60,
+    "remaining_s7_edge_cost": 4216
+   },
+   {
+    "s5_hex": "00000000000000801802000000080000",
+    "classes": 4,
+    "remaining_s6_orbits": 64,
+    "remaining_s7_edge_cost": 4390
+   },
+   {
+    "s5_hex": "00000000020000003800000000080000",
+    "classes": 4,
+    "remaining_s6_orbits": 64,
+    "remaining_s7_edge_cost": 4570
+   }
+  ]
+ },
+ "outstanding_not_folded": {
+  "cost72_sweep_record": "the completed cost-72 sweep record (raw batches 1-9 + audits published; 2 WIN7-D10 bits 52/111) remains the cost-72 lane to publish; bit-52 is folded here as a receipt, bit-111 is already folded in the baseline",
+  "warm_rebuild_candidates_without_records": "cost-61d bit-22 (= cost-71b bit-1 root), cost-71b remaining WIN7 bits 1/74/94/117 (bits 14/32 now certified here), and other unverified WIN7 bits of earlier bands",
+  "parallel_lane_bands": "cost-65h/67b/68c warm candidates intentionally not touched by this batch (active parallel-lane bands)"
+ },
+ "interpretation_guard": "bookkeeping over published receipts; REFUTED-D10 sweeps prove only absence of WIN7-D10; WIN7 certificates prove a win within depth 10 from the 7-stone root only; solved counts measure manifest coverage, not the game-theoretic value of the 11x11 empty board; 11x11 empty root / {49,60} / S2 {59,60} / class 2 / class 4 remain UNKNOWN"
+}

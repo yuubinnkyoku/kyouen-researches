@@ -1,0 +1,221 @@
+{
+ "schema": "n11-class-frontier-cost71c-receipts-recompute-20261115-v1",
+ "date": "2026-11-15",
+ "baseline_main": "class-frontier-cost70e-receipts-recompute-20261115.json (cost-70e receipts fold head 1233/6614/522131/4884/385854, git blob sha a0171d4bb839aeb813d231c7d879d6a89452359f); the head JSON, both published 70e head CSVs (blobs 33fe27c1 / 4561af13), the merged-head CSVs (blobs 4eeca615 / 0f9905fc) and the 70e claim v3 fold record are re-asserted byte-exact, the 1227 merged head is reconstructed independently by pure geometry and the published cost-70e receipts fold is re-derived on it (per-record marginals equal to the published 70e head JSON addition records) before this fold extends the chain",
+ "method": "baseline reconstruction from published artifacts only: every published input file (29 base inputs, 52 pre-70e published frontier head JSONs, the 70e head JSON and its 2 CSVs, 4 merged-head CSVs, 4 cost-70e lane records, 7 cost-71c lane records, 9 raw sweep batches, v16 determinism rerun, v15 crosscheck, 3 published certificate files + README, 2 scripts, 6 MS5 manifest parts) asserted byte-exact against main by git blob sha; the solved set rebuilt by pure geometry as winners UNION covers(12 baseline verified files) UNION covers(class4 batch1/batch2/batch3) UNION covers(7 class2 lane files) UNION covers(402 distinct receipt roots recorded in the 52 blob-verified head JSON addition records), reaching the published 1227 merged head with staged controls (638/7208/565500, 657/7189/564070, 665/7181/563509 open 5398/423516, 814/7032/552811/5256/413283) and byte-identical merged-head CSV regeneration; the published cost-70e receipts fold re-derived in published order [0, 8, 24, 66, 79] with per-record marginals equal to the published 70e head JSON addition records, set-equality and byte-identical 70e head CSV regeneration, giving the 1233 baseline 1233/6614/522131/4884/385854 with the published histogram; then the cost-71c child asserted genuinely remaining at 1233 (both open class-2 parents 00000000000000801202000000200000 at 28 rows / 2119 and 00000000000000801202000080000000 at 43 rows / 3268 holding the child row, the child held by exactly these two open parents, child unsolved in-manifest, demand c1=0,c2=2,c4=0 re-derived from the remaining incidences, lift stones 31 against parent1 and 21 against the second class-2 parent D4-verified, the other four child stones lifting to closed rows); the published sweep audit re-derived from the nine raw batch JSONLs (71 candidates exactly once equal to the claim enumeration, 2 WIN7-D10 / 69 REFUTED-D10 / 0 capped / 94,128,613 nodes with win sum 4,442,926, roots == child | 1<<bit, 2 distinct D4 orbits, pilots 3402 x9, batch-5 determinism rerun node-exact), the v15 cross-engine anchors asserted from the published JSONL (2 WIN loss=true nodes 2,695,796 / 14,334,967 sum 17,030,763, refuted anchors bits 75/113/116 loss=false with raw verdict agreement, pilot 5949), both published certificates asserted against the local certificate bytes (bit24 single file, bit112 two parts joining to the manifest md5; rows sorted-unique, sub-roots == loser mobility == len(loser_first_moves) == 47/56, terminal ranges, BigInt and Bareiss verify records re-read with union 0/0, each root minus its own added stone canonicalizes to the child) with the manifest totals re-summed (82,602 rows / 24,639,331 extraction nodes / 2 roots); the 2 roots asserted disjoint from every folded root raw-hex and D4-canonically (497 distinct roots including the 5 cost-70e receipt roots), then the 2 receipts folded in published bit order [24, 112] with every per-record marginal re-derived from the growing union; the child-orbit closure (bit24), the both-open-parents-lose-the-child-row control, the set-equality control s_after == s_1233 UNION covers(2 roots) and a reverse-order replay control all hold. Receipts only - no sweep claims",
+ "controls": {
+  "input_files_byte_exact_vs_main": 122,
+  "baseline_reconstruction_method": "published head JSONs + pure geometry (no runpy chain replay); the reconstructed state regenerates the published merged-head and 70e head CSVs byte-identically",
+  "staged_controls_reproduced": "638/7208/565500, 657/7189/564070, 665/7181/563509 (open 5398/423516), 814/7032/552811/5256/413283",
+  "chain_head_1227_reproduced": true,
+  "cost70e_fold_rederived": true,
+  "chain_head_1233_reproduced": true,
+  "merged_csvs_regenerated_byte_identical": true,
+  "cost70e_head_csvs_regenerated_byte_identical": true,
+  "child_genuinely_remaining_at_baseline": true,
+  "both_open_parents_held_child_row_at_baseline": true,
+  "child_held_by_exactly_the_two_open_parents": true,
+  "lift_stones_d4_verified": "parent1 stone 31, parent2 stone 21",
+  "sweep_rederived_from_raw_batches": true,
+  "determinism_rerun_batch5_node_exact": true,
+  "v15_cross_engine_anchors_verified": true,
+  "certificates_bytes_md5_blobsha_verified": true,
+  "bit112_parts_join_whole_md5": true,
+  "verify_records_reread": true,
+  "manifest_totals_resummed": true,
+  "bit112_join_md5_typo_detected": "the published manifest / claim v2 / sweep audit / certificates README record the bit112 join md5 as e38d80cfd89ccc8e48264c36a9e7701a5 (33 chars, stray trailing 5); the true 32-char join md5 e38d80cfd89ccc8e48264c36a9e7701a is asserted here from the joined part bytes; part md5s, the join and the certificate bytes are unaffected; corrected by the claim v3 fold record and the md5 erratum",
+  "root_disjointness_vs_all_folded_roots": true,
+  "d4_duplicate_scan_published_audit": "49 manifests / 126 roots / 0 duplicates (sweep audit, re-asserted here)",
+  "child_orbit_closure": "closed by the bit-24 receipt (first in published order), of this fold",
+  "both_open_parents_lost_child_row": true,
+  "set_equality_after_2": "s == s_1233 UNION covers(2 cost-71c roots)",
+  "reverse_order_replay_identical": true
+ },
+ "target": {
+  "s5_parent_hex": "00000000000000801202000000200000",
+  "s6_child_hex": "00000000000000801202000080200000",
+  "edge_cost": 71,
+  "open_parents": [
+   "00000000000000801202000000200000",
+   "00000000000000801202000080000000"
+  ],
+  "demand_at_baseline_1233": {
+   "c1": 0,
+   "c2": 2,
+   "c4": 0
+  },
+  "child_orbit_closure": "closed by the bit-24 receipt of this fold",
+  "candidates": 71,
+  "win7_d10": 2,
+  "refuted_d10": 69,
+  "capped": 0,
+  "candidate_nodes": 94128613,
+  "remaining_rows_after": {
+   "class2_parent1_orbits": 26,
+   "class2_parent1_edge_cost": 1976,
+   "class2_parent2_orbits": 42,
+   "class2_parent2_edge_cost": 3197,
+   "parent1_rows_lost": [
+    "00000000000000801202000080200000",
+    "00000000210000003800000000000200"
+   ],
+   "parent2_rows_lost": [
+    "00000000000000801202000080200000"
+   ]
+  }
+ },
+ "cost71c_addition": [
+  {
+   "bit": 24,
+   "root_hex": "00000000000000801202000081200000",
+   "d4_canonical_hex": "00000000000000801202000081200000",
+   "sweep_nodes": 457250,
+   "certified": true,
+   "covers": 7,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000801202000080200000"
+   ],
+   "marginal_non_manifest_hexes": [
+    "00000000000000001202000081200000",
+    "00000000000000800202000081200000",
+    "00000000000000801002000040800800",
+    "00000000000000801200000081200000"
+   ],
+   "rows": 22196,
+   "extraction_nodes": 4163765,
+   "md5": "9e63e160ba08a7edc827b81dbf9067a5",
+   "sub_roots_pass": 47,
+   "v15_anchor_nodes": 2695796
+  },
+  {
+   "bit": 112,
+   "root_hex": "00010000000000801202000080200000",
+   "d4_canonical_hex": "00000000210000003800000000080200",
+   "sweep_nodes": 3985676,
+   "certified": true,
+   "covers": 7,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000210000003800000000000200"
+   ],
+   "marginal_non_manifest_hexes": [
+    "00000000010000003800000000080200",
+    "00000000210000001800000000080200",
+    "00000000210000002800000000080200",
+    "00000000210000003000000000080200"
+   ],
+   "rows": 60406,
+   "extraction_nodes": 20475566,
+   "md5": "e38d80cfd89ccc8e48264c36a9e7701a",
+   "sub_roots_pass": 56,
+   "v15_anchor_nodes": 14334967
+  }
+ ],
+ "totals": {
+  "receipts": 2,
+  "total_marginal": 10,
+  "total_marginal_in_manifest": 2,
+  "zero_marginal_in_manifest": [],
+  "child_closed_by_bit": 24,
+  "certificate_rows": 82602,
+  "certificate_bytes": 2984259,
+  "certificate_extraction_nodes": 24639331,
+  "certificate_sub_roots": 103,
+  "v15_crosscheck_nodes_sum": 17030763,
+  "v16_sweep_win_nodes_sum": 4442926
+ },
+ "frontier_after_cost71c": {
+  "solved_s6_in_manifest": 1235,
+  "remaining_s5_orbits": 175,
+  "unique_remaining_s6": 6612,
+  "sum_remaining_cost": 521988,
+  "s6_needed_by_open_classes": 4882,
+  "cost_needed_by_open_classes": 385711,
+  "demand_histogram_open_only": {
+   "c2=0,c4=1": 527,
+   "c2=0,c4=2": 3020,
+   "c2=0,c4=3": 12,
+   "c2=1,c4=0": 238,
+   "c2=1,c4=1": 58,
+   "c2=1,c4=2": 9,
+   "c2=2,c4=0": 957,
+   "c2=2,c4=1": 6,
+   "c2=2,c4=2": 55
+  },
+  "best_class2": {
+   "s5_hex": "00000000000000809102000000000000",
+   "classes": 2,
+   "remaining_s6_orbits": 2,
+   "remaining_s7_edge_cost": 143
+  },
+  "audit_blocked_class2": {
+   "s5_hex": "00000000000000809082000000000000",
+   "classes": 3,
+   "remaining_s6_orbits": 10,
+   "remaining_s7_edge_cost": 698
+  },
+  "best_coverable_class2": {
+   "s5_hex": "00000000000000809102000000000000",
+   "classes": 2,
+   "remaining_s6_orbits": 2,
+   "remaining_s7_edge_cost": 143
+  },
+  "next_class2": [
+   {
+    "s5_hex": "00000000000000809082000000000000",
+    "classes": 3,
+    "remaining_s6_orbits": 10,
+    "remaining_s7_edge_cost": 698
+   },
+   {
+    "s5_hex": "00000000000000801202000000200000",
+    "classes": 2,
+    "remaining_s6_orbits": 26,
+    "remaining_s7_edge_cost": 1976
+   },
+   {
+    "s5_hex": "00000000000000801202000080000000",
+    "classes": 2,
+    "remaining_s6_orbits": 42,
+    "remaining_s7_edge_cost": 3197
+   }
+  ],
+  "best_class4": {
+   "s5_hex": "00000000020000003800000080000000",
+   "classes": 4,
+   "remaining_s6_orbits": 18,
+   "remaining_s7_edge_cost": 1460
+  },
+  "next_class4": [
+   {
+    "s5_hex": "00000000000000003800002000800000",
+    "classes": 4,
+    "remaining_s6_orbits": 60,
+    "remaining_s7_edge_cost": 4216
+   },
+   {
+    "s5_hex": "00000000000000801802000000080000",
+    "classes": 4,
+    "remaining_s6_orbits": 64,
+    "remaining_s7_edge_cost": 4390
+   },
+   {
+    "s5_hex": "00000000020000003800000000080000",
+    "classes": 4,
+    "remaining_s6_orbits": 64,
+    "remaining_s7_edge_cost": 4570
+   }
+  ]
+ },
+ "outstanding_not_folded": {
+  "cost65l": "2 WIN7-D10 receipts (bits 21/48) with extraction/verify artifacts but no certificate bodies on main; not folded",
+  "cost70f": "cost-70f WIN7 certificates + sweep audit + v15 crosscheck landed on main (merge ec7149cf series) but no receipts fold landed; not folded here",
+  "parallel_lanes": "in-flight sweeps/receipts on parallel lanes (class4-82b, five-row-q7 and others) are not folded here; their folds must re-fetch latest main, re-assert the canonical chain head and rebase on this new head",
+  "sterile_sweeps": "cost-65k/73f/74f/74c/75/79/79b/70d and other sterile sweeps recorded (all REFUTED-D10, 0 WIN7-D10, frontier unchanged); no receipts to fold",
+  "next_fold_baseline": "this chain head (see frontier_after_cost71c) is the new canonical baseline for all subsequent folds; assert it before extending"
+ },
+ "interpretation_guard": "bookkeeping over published receipts; solved counts measure manifest coverage, not the game-theoretic value of any position; REFUTED-D10 sweeps prove only absence of WIN7-D10; WIN7 certificates prove a win within depth 10 from the individual 7-stone roots only; closing the cost-71c child orbit removes the child from both open class-2 parents remaining rows but does not solve either S5 parent and does not decide class 2 or class 4; 11x11 empty board / two-stone root {49,60} / S2 {59,60} / class 2 / class 4 remain UNKNOWN"
+}

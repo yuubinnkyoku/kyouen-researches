@@ -1,0 +1,62 @@
+{
+  "schema": "n11-class2-lane-cost64e-v17-full-row-recheck-20261117-v1",
+  "date": "2026-11-17",
+  "status": "64e swept row (60 open candidates) record-identical under v17; the STERILE determination's swept-verdict basis is unaffected by the fbtOR saturation defect",
+  "role": "Post-defect assurance re-check of the cheapest STERILE row of the shared class-2 parent (child 0000000000000000380000000a002000): all 60 freshly-swept open candidates were REFUTED-D10 in the published v16 sweep and feed the K0863 STERILE-row depth-10 unclosability theorem, so the whole row was re-run with the fbt-repaired v17 engine after the cost76c fbt-saturation defect discovery. The 4 pre-sweep REFUTED-D10 transfers (bits 70/104/115/119) are D4-canonical identities of other published rows and are not re-swept here.",
+  "target": {
+    "s5": "00000000000000003800000008002000",
+    "s6_child": "0000000000000000380000000a002000",
+    "row_candidate_count": 64,
+    "swept_candidate_count": 60,
+    "transferred_refuted_d10_bits": [
+      70,
+      104,
+      115,
+      119
+    ]
+  },
+  "published_raw_blob_pins": {
+    "class2-lane-cost64e-raw-batch1-20261116.jsonl": "b13d7a2ed1e37279c9ea3c77eea9df5c00313043",
+    "class2-lane-cost64e-raw-batch2-20261116.jsonl": "db07d4750d34682e641a65a74d2f37951c5f2300",
+    "class2-lane-cost64e-raw-batch3-20261116.jsonl": "f40e2c4e516664c019458463ef1c1d1e11d36a95",
+    "class2-lane-cost64e-raw-batch4-20261116.jsonl": "c0d2407eb23f23f8b47a82b37d12b230bfe0c2fc",
+    "class2-lane-cost64e-raw-batch5-20261116.jsonl": "21b63669b9e548e39c5dbb7205e79d7297e10a39",
+    "class2-lane-cost64e-raw-batch6-20261116.jsonl": "8c89db80cf161ef1d3b0dc1328e2341628504735",
+    "class2-lane-cost64e-raw-batch7-20261116.jsonl": "3969f5fbba04c4eed36e05cfb3c81f54ac258ede",
+    "class2-lane-cost64e-raw-batch8-20261116.jsonl": "39732fe25d52d520e0298cb91bbfbf027c7a61c2"
+  },
+  "v17_runner_blob": "c132cc6425eee3feaeef1d697dd74f968cfedb59",
+  "v17_chunk_blob_pins": {
+    "class2-lane-cost64e-v17-refuted-chunk1-20261117.jsonl": "0dc8141d8d4e9997bedc8687d9dab984a44f088d",
+    "class2-lane-cost64e-v17-refuted-chunk2-20261117.jsonl": "a77486cd0d71dfa985f065066fdf598dba9b5871",
+    "class2-lane-cost64e-v17-refuted-chunk3-20261117.jsonl": "65e12b5c65f1d3e074865ccaf90ff19acc12a0dd"
+  },
+  "v17_chunk_partitions": {
+    "chunk1": [0, 2, 3, 4, 7, 8, 9, 10, 11, 12, 16, 21, 32, 33, 34, 38, 42, 43, 44, 46],
+    "chunk2": [53, 54, 66, 67, 72, 74, 75, 76, 78, 79, 80, 81, 83, 84, 86, 87, 88, 89, 92, 93],
+    "chunk3": [95, 96, 98, 99, 100, 102, 103, 105, 106, 107, 108, 110, 111, 112, 113, 114, 116, 117, 118, 120]
+  },
+  "engine_settings": "v17, depth 10, cap 1e9 (non-binding; heaviest bit 3,279,693 nodes; the published v16 sweep used cap 1e7 per candidate, also non-binding), andclose 1, pilot_d6 controls 3/3 at exactly 3402 nodes",
+  "cross_partition_note": "the v17 re-run used 20-bit chunks while the published v16 sweep used 8-bit batches (plus a 4-bit tail); node-exact equality across different batch partitions doubles as an order-invariance observation for this row",
+  "result": {
+    "bits_checked": 60,
+    "verdict_flips": [],
+    "node_count_changes": [],
+    "identical_bits": 60,
+    "identity_scope": "all non-timing fields record-identical on every bit: loss, nodes, capped, terminalStoneRange, andclose (only per-record wall-clock ms differs)",
+    "win_bits": [],
+    "v17_total_nodes": 39961790,
+    "v16_published_total_nodes": 39961790,
+    "heaviest_bits_nodes": {
+      "32": 3279693,
+      "21": 3270894,
+      "118": 2185077
+    },
+    "conclusion": "every cost64e swept-bit search was fb-unsaturated (v17 node-exact equality with the published v16 row, including the 3.28M-node heaviest bit); the published v16 verdicts for the whole swept row are exactly reproduced by v17, so the STERILE determination and its K0863 depth-10 unclosability consequence for this row stand unchanged on their swept-verdict basis; the 4 REFUTED-D10 transfers keep their published-verbatim source rows as their evidence and those source rows' own v17 re-checks remain queued"
+  },
+  "caveats": [
+    "REFUTED-D10 is not a LOSS proof; STERILE is not a game-theoretic value for the row",
+    "the 4 transferred bits (70/104/115/119) were not re-swept in this re-check; they inherit their verdicts from other published lane rows, which are queued for v17 re-check alongside the other past-lane REFUTED verdicts",
+    "11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, class 1/2/4 all remain UNKNOWN"
+  ]
+}

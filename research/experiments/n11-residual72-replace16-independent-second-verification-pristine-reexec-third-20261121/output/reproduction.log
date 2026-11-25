@@ -1,0 +1,28 @@
+== replace16v third-verification battery reproduction (batt dir, 2026-11-21T06:4xZ) ==
+== B1: fresh base, all stages (pin fetch x6 + recon 2-ref fetch x5 + runner git blob sha1 + machine placement + rerun 4x + erratum assert x10 + tampers 2x on audit-free fresh trees) ==
+third harness gates 75 all_pass True
+
+real	0m1.714s
+user	0m0.472s
+sys	0m0.151s
+B1 captured rc=0
+== B2: same base b1, all stages re-run (incl. pin re-fetch and recon re-fetch) ==
+third harness gates 75 all_pass True
+
+real	0m1.144s
+user	0m0.498s
+sys	0m0.106s
+B2 captured rc=0
+== B3: isolated fresh base b3 + env -i isolated HOME/TMPDIR + PYTHONHASHSEED=random + different cwd ==
+third harness gates 75 all_pass True
+
+real	0m1.269s
+user	0m0.502s
+sys	0m0.148s
+B3 captured rc=0
+== cmp three captures ==
+B1==B2 byte-identical
+B1==B3 byte-identical
+569c6bbda909d4f3993ffaee64395d9a62911e7cddb49added51abb87393e545  batt_r16/capture_b1.json
+569c6bbda909d4f3993ffaee64395d9a62911e7cddb49added51abb87393e545  batt_r16/capture_b2.json
+569c6bbda909d4f3993ffaee64395d9a62911e7cddb49added51abb87393e545  batt_r16/capture_b3.json

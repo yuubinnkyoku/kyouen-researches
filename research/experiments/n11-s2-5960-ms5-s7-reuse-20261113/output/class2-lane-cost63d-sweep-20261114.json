@@ -1,0 +1,31 @@
+{
+ "schema": "n11-class2-lane-cost63d-sweep-20261114-v1",
+ "date": "2026-11-14",
+ "s6_child": "00000000000000809082000000080000",
+ "child_s7_edge_cost": 63,
+ "method": "v15 engine verbatim (class4_child1_runner.ts, per-candidate freshEngine), close-first AND at depth>=8, depth-10 single shot, cap 50,000,000 nodes; candidates independently enumerated by legal_candidates.py (Bareiss 4x4); one candidate per process, 4 parallel workers, pilot d6 control 5949 nodes required per process; raw JSONL pushed per batch",
+ "candidates": 63,
+ "win7_d10_bits": [70],
+ "refuted_d10": 62,
+ "capped": 0,
+ "total_nodes": 232732466,
+ "win7_certificates": [
+  {
+   "root": "00000000000000c09082000000080000",
+   "bit": 70,
+   "rows": 39213,
+   "extraction_nodes": 9616344,
+   "sub_roots_verified": 49,
+   "sub_roots_pass": 49,
+   "consumed_union_minus_cert": 0,
+   "cert_minus_consumed_union": 0,
+   "root_check": {"stones": 7, "loser_mobility": 49, "loser_mobility_matches_independent_enumeration": true},
+   "terminal_stone_range": [13, 17],
+   "fbt_drops": 0,
+   "md5": "63a3cb44f1cfc7262509214a9f24d3ca",
+   "verifier": "verify_bit7_win7_cert.ts (Bareiss det4, engine-free)",
+   "push_note": "certificate file push deferred to next run (1.4MB through connector); regenerate deterministically via extractor if needed"
+  }
+ ],
+ "interpretation_guard": "REFUTED-D10 proves only absence of a winner within depth 10; WIN7-D10 certificates prove a win within depth 10 from the 7-stone root only; 11x11 empty root / {49,60} / S2 {59,60} / class 2 / class 4 remain UNKNOWN"
+}

@@ -1,0 +1,565 @@
+{
+  "schema": "n11-residual78-witness39-candidate-supply-scope-audit-20261120-v1",
+  "date": "2026-11-20",
+  "status": "verified-scope-audit",
+  "inputs": {
+    "resolve5_output": {
+      "path": "research/experiments/n11-stranded86-add-one-stone-expansion-d10-sweep-20261119/fold/output/post-twelfth-receipt-cover-resolve5-20261119.json",
+      "git_blob_sha": "431ce3bf4199b46b18c30ef79f43165da38c9e13"
+    },
+    "resolve5_source": {
+      "path": "research/experiments/n11-stranded86-add-one-stone-expansion-d10-sweep-20261119/fold/resolve5.py",
+      "git_blob_sha": "c910a450f0e70023ebbc1608c3f4de9ef3aeeea1"
+    },
+    "witness_roots": {
+      "path": "research/experiments/n11-residual78-39witness-depth10-sweep-20261119/roots.json",
+      "git_blob_sha": "c6f447431980418f0426ef909835301142f5c432"
+    },
+    "sweep_result": {
+      "path": "research/experiments/n11-residual78-39witness-depth10-sweep-20261119/output/witness-39-root-depth10-sweep-20261119.json",
+      "git_blob_sha": "49fa9109b68f9226aa7495c8c6c718de996b7980"
+    }
+  },
+  "pre_sweep_candidate_graph": {
+    "residual_rows": 78,
+    "fresh_safe_roots": 4728,
+    "distinct_pair_edges": 706,
+    "singleton_eligible_rows": 78,
+    "multi_cover_roots": 0,
+    "selected_matching_roots": 39,
+    "selected_pair_edges": 39,
+    "selected_rows": 78
+  },
+  "sweep": {
+    "roots": 39,
+    "win7_d10": 0,
+    "refuted_d10": 39,
+    "capped": 0,
+    "ordering_conflicts": 0,
+    "probe_count": 78,
+    "total_nodes": 115940695,
+    "max_single_probe_nodes": 9930490,
+    "all_pilot_controls_pass": true
+  },
+  "scope_arithmetic": {
+    "fresh_safe_roots_outside_this_sweep": 4689,
+    "distinct_pair_edges_not_selected_by_this_matching": 667,
+    "singleton_eligible_rows_not_touched_by_this_sweep": 78,
+    "interpretation": "The selected 39-root matching plan was fully consumed. This does not establish exhaustion of the full pre-sweep add-one-stone candidate universe. The other 4,689 fresh-safe roots were outside this sweep; their status against the full 8,964-entry D4 cache is not established here. The 667 unselected pair edges are pre-sweep row-pair relations, not a recomputed post-sweep matching."
+  },
+  "checks": [
+    {
+      "name": "pinned source blobs",
+      "pass": true
+    },
+    {
+      "name": "resolve5 candidate counts and matching",
+      "pass": true
+    },
+    {
+      "name": "39-root input equals selected witness set",
+      "pass": true
+    },
+    {
+      "name": "sweep partition 0/39/0/0",
+      "pass": true
+    },
+    {
+      "name": "all 39 roots canonical and seven-stone",
+      "pass": true
+    },
+    {
+      "name": "all 39 roots safe by exact determinant",
+      "pass": true
+    },
+    {
+      "name": "all 39 D4 deletion covers match two recorded residual rows",
+      "pass": true
+    },
+    {
+      "name": "39 pairs are disjoint and cover all 78 residual rows",
+      "pass": true
+    },
+    {
+      "name": "all 78 probes uncapped and pilot-controlled",
+      "pass": true
+    }
+  ],
+  "geometry_checks": [
+    {
+      "root": "000000000000000038000000080010a0",
+      "covered_rows": [
+        "00000000000000003800000008001020",
+        "00000000000000003800000008001080"
+      ],
+      "unsafe_quadruples": 0,
+      "probe_nodes": [
+        1544910,
+        297351
+      ]
+    },
+    {
+      "root": "00000000000000003800000008001101",
+      "covered_rows": [
+        "00000000000000003800000008001001",
+        "00000000000000003800000008001100"
+      ],
+      "unsafe_quadruples": 0,
+      "probe_nodes": [
+        4062807,
+        1119559
+      ]
+    },
+    {
+      "root": "00000000000000003800000008015000",
+      "covered_rows": [
+        "00000000000000003800000008005000",
+        "00000000000000003800000008011000"
+      ],
+      "unsafe_quadruples": 0,
+      "probe_nodes": [
+        2453156,
+        655436
+      ]
+    },
+    {
+      "root": "00000000000000003800000008500002",
+      "covered_rows": [
+        "00000000000000003800000008001200",
+        "00000000000000003800000008500000"
+      ],
+      "unsafe_quadruples": 0,
+      "probe_nodes": [
+        1860837,
+        2693843
+      ]
+    },
+    {
+      "root": "00000000000000003800000008b00000",
+      "covered_rows": [
+        "00000000000000003800000008001800",
+        "00000000000000003800000008900000"
+      ],
+      "unsafe_quadruples": 0,
+      "probe_nodes": [
+        1752476,
+        1554227
+      ]
+    },
+    {
+      "root": "00000000000000003800000009800004",
+      "covered_rows": [
+        "00000000000000003800000009000004",
+        "00000000000000003800000009800000"
+      ],
+      "unsafe_quadruples": 0,
+      "probe_nodes": [
+        3131300,
+        444996
+      ]
+    },
+    {
+      "root": "0000000000000000380000000a002010",
+      "covered_rows": [
+        "00000000000000003800000008002010",
+        "0000000000000000380000000a002000"
+      ],
+      "unsafe_quadruples": 0,
+      "probe_nodes": [
+        562267,
+        516812
+      ]
+    },
+    {
+      "root": "0000000000000000380000000a080010",
+      "covered_rows": [
+        "00000000000000003800000008002040",
+        "0000000000000000380000000a080000"
+      ],
+      "unsafe_quadruples": 0,
+      "probe_nodes": [
+        352863,
+        529896
+      ]
+    },
+    {
+      "root": "00000000000000003800000248004000",
+      "covered_rows": [
+        "00000000000000003800000009040000",
+        "00000000000000003800000248000000"
+      ],
+      "unsafe_quadruples": 0,
+      "probe_nodes": [
+        872805,
+        3103762
+      ]
+    },
+    {
+      "root": "00000000000000003800000609000000",
+      "covered_rows": [
+        "00000000000000003800000209000000",
+        "00000000000000003800000409000000"
+      ],
+      "unsafe_quadruples": 0,
+      "probe_nodes": [
+        1191560,
+        1093194
+      ]
+    },
+    {
+      "root": "00000000000000003800220008100000",
+      "covered_rows": [
+        "00000000000000003800000808001000",
+        "00000000000000003800200008100000"
+      ],
+      "unsafe_quadruples": 0,
+      "probe_nodes": [
+        9930490,
+        832026
+      ]
+    },
+    {
+      "root": "00000000000000043800000008180000",
+      "covered_rows": [
+        "00000000000000043800000008080000",
+        "00000000000000043800000008100000"
+      ],
+      "unsafe_quadruples": 0,
+      "probe_nodes": [
+        1182657,
+        1447040
+      ]
+    },
+    {
+      "root": "00000000000000103840000008080000",
+      "covered_rows": [
+        "00000000000000003800100008002000",
+        "00000000000000103800000008080000"
+      ],
+      "unsafe_quadruples": 0,
+      "probe_nodes": [
+        1366510,
+        1273886
+      ]
+    },
+    {
+      "root": "00000000000000143800000009000000",
+      "covered_rows": [
+        "00000000000000043800000009000000",
+        "00000000000000103800000009000000"
+      ],
+      "unsafe_quadruples": 0,
+      "probe_nodes": [
+        1841341,
+        1303448
+      ]
+    },
+    {
+      "root": "00000000000000801202000000840100",
+      "covered_rows": [
+        "00000000000000801202000000800100",
+        "00000000000000801202000000840000"
+      ],
+      "unsafe_quadruples": 0,
+      "probe_nodes": [
+        1429235,
+        438963
+      ]
+    },
+    {
+      "root": "00000000000000801202000000900200",
+      "covered_rows": [
+        "00000000000000801202000000800200",
+        "00000000000000801202000000900000"
+      ],
+      "unsafe_quadruples": 0,
+      "probe_nodes": [
+        1523387,
+        672569
+      ]
+    },
+    {
+      "root": "00000000000000801202000001080100",
+      "covered_rows": [
+        "00000000000000801202000001000100",
+        "00000000000000801202000001080000"
+      ],
+      "unsafe_quadruples": 0,
+      "probe_nodes": [
+        440624,
+        301880
+      ]
+    },
+    {
+      "root": "00000000000000801202000020081000",
+      "covered_rows": [
+        "00000000000000801202000000081000",
+        "00000000000000801202000020001000"
+      ],
+      "unsafe_quadruples": 0,
+      "probe_nodes": [
+        417096,
+        83526
+      ]
+    },
+    {
+      "root": "00000000000000801202040000800400",
+      "covered_rows": [
+        "00000000000000801202000000800400",
+        "00000000000000801202040000800000"
+      ],
+      "unsafe_quadruples": 0,
+      "probe_nodes": [
+        1246014,
+        4021023
+      ]
+    },
+    {
+      "root": "00000000000000801202090000001000",
+      "covered_rows": [
+        "00000000000000801202010000001000",
+        "00000000000000801202080000001000"
+      ],
+      "unsafe_quadruples": 0,
+      "probe_nodes": [
+        3613661,
+        657931
+      ]
+    },
+    {
+      "root": "00000000000000801212020000001000",
+      "covered_rows": [
+        "00000000000000801202020000001000",
+        "00000000000000801212000000001000"
+      ],
+      "unsafe_quadruples": 0,
+      "probe_nodes": [
+        2193885,
+        336252
+      ]
+    },
+    {
+      "root": "00000000000000801222000000880000",
+      "covered_rows": [
+        "00000000000000801202000000880000",
+        "00000000000000801222000000800000"
+      ],
+      "unsafe_quadruples": 0,
+      "probe_nodes": [
+        691916,
+        429053
+      ]
+    },
+    {
+      "root": "00000000000000801222040000001000",
+      "covered_rows": [
+        "00000000000000801202040000001000",
+        "00000000000000801222000000001000"
+      ],
+      "unsafe_quadruples": 0,
+      "probe_nodes": [
+        6955926,
+        470333
+      ]
+    },
+    {
+      "root": "00000000000000a21086000000000000",
+      "covered_rows": [
+        "00000000000000821082800000000000",
+        "00000000000000821083000000000000"
+      ],
+      "unsafe_quadruples": 0,
+      "probe_nodes": [
+        984320,
+        1073871
+      ]
+    },
+    {
+      "root": "00000000000020909002000080000000",
+      "covered_rows": [
+        "00000000000000909002000080000000",
+        "00000000000020809002000080000000"
+      ],
+      "unsafe_quadruples": 0,
+      "probe_nodes": [
+        2814929,
+        593619
+      ]
+    },
+    {
+      "root": "00000000000022801202000000800000",
+      "covered_rows": [
+        "00000000000000003800000008002080",
+        "00000000000000a09002000080000000"
+      ],
+      "unsafe_quadruples": 0,
+      "probe_nodes": [
+        1095278,
+        170848
+      ]
+    },
+    {
+      "root": "00000000010000809002000040020000",
+      "covered_rows": [
+        "00000000000000003800200009000000",
+        "00000000010000809002000040000000"
+      ],
+      "unsafe_quadruples": 0,
+      "probe_nodes": [
+        499609,
+        2023380
+      ]
+    },
+    {
+      "root": "00000000010000889002000080000000",
+      "covered_rows": [
+        "00000000000000889002000080000000",
+        "00000000010000809002000080000000"
+      ],
+      "unsafe_quadruples": 0,
+      "probe_nodes": [
+        2659256,
+        695492
+      ]
+    },
+    {
+      "root": "00000000010000909002000000100000",
+      "covered_rows": [
+        "00000000000000909002000000100000",
+        "00000000010000809002000000100000"
+      ],
+      "unsafe_quadruples": 0,
+      "probe_nodes": [
+        2082956,
+        2103518
+      ]
+    },
+    {
+      "root": "00000000020000801202000000500000",
+      "covered_rows": [
+        "00000000000000003800000008002100",
+        "00000000020000801202000000100000"
+      ],
+      "unsafe_quadruples": 0,
+      "probe_nodes": [
+        444108,
+        586563
+      ]
+    },
+    {
+      "root": "00000000040004801202000020000000",
+      "covered_rows": [
+        "00000000000000801212000001000000",
+        "00000000000080003800000048000000"
+      ],
+      "unsafe_quadruples": 0,
+      "probe_nodes": [
+        1278670,
+        1136682
+      ]
+    },
+    {
+      "root": "00000000240000003820000000000001",
+      "covered_rows": [
+        "00000000000000083800000048000000",
+        "00000000000000801202000001000400"
+      ],
+      "unsafe_quadruples": 0,
+      "probe_nodes": [
+        1195523,
+        396318
+      ]
+    },
+    {
+      "root": "00000008000000821082000000100000",
+      "covered_rows": [
+        "00000000000000821082000000000800",
+        "00000000000000821082000000001000"
+      ],
+      "unsafe_quadruples": 0,
+      "probe_nodes": [
+        2025511,
+        1041430
+      ]
+    },
+    {
+      "root": "00000010000000801202040000000200",
+      "covered_rows": [
+        "00000000000040809002000000100000",
+        "00000008000000003800000008100000"
+      ],
+      "unsafe_quadruples": 0,
+      "probe_nodes": [
+        1883215,
+        278010
+      ]
+    },
+    {
+      "root": "00000010000000801222000000000100",
+      "covered_rows": [
+        "00000000000000889002000000100000",
+        "00000000010000003800000008100000"
+      ],
+      "unsafe_quadruples": 0,
+      "probe_nodes": [
+        3355460,
+        1312443
+      ]
+    },
+    {
+      "root": "00000010000008003800000008001000",
+      "covered_rows": [
+        "00000000000000083800000008100000",
+        "00000000000000801202000000101000"
+      ],
+      "unsafe_quadruples": 0,
+      "probe_nodes": [
+        599710,
+        656832
+      ]
+    },
+    {
+      "root": "00000010200000083800000000000400",
+      "covered_rows": [
+        "00000000000000003800200008001000",
+        "00000010000000801202000000000400"
+      ],
+      "unsafe_quadruples": 0,
+      "probe_nodes": [
+        1307827,
+        1416118
+      ]
+    },
+    {
+      "root": "00004000000000821082000000000004",
+      "covered_rows": [
+        "00000000000000821082000000000001",
+        "00000000000000821082000000000004"
+      ],
+      "unsafe_quadruples": 0,
+      "probe_nodes": [
+        731518,
+        75706
+      ]
+    },
+    {
+      "root": "00020000000000821082000000000010",
+      "covered_rows": [
+        "00000000000000821082000000000008",
+        "00000000000000821082000000000010"
+      ],
+      "unsafe_quadruples": 0,
+      "probe_nodes": [
+        4117461,
+        409785
+      ]
+    }
+  ],
+  "interpretation_guard": [
+    "REFUTED-D10 is not a LOSS proof.",
+    "The 39-root plan's exhaustion is not global add-one-stone candidate exhaustion.",
+    "No post-sweep maximum matching is claimed.",
+    "No receipt was created and no S6 row was closed.",
+    "The 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, and classes 1/2/4 remain UNKNOWN."
+  ]
+}

@@ -1,0 +1,261 @@
+{
+ "schema": "n11-class2-lane-cost61b-win7-certificates-20261114-v1",
+ "date": "2026-11-14",
+ "child": "00000000000000801a02020000000000",
+ "source_sweep": "output/class2-lane-cost61b-sweep-20261114.json (12 WIN7-D10 candidates: bits 0,1,6,28,32,33,50,84,90,99,105,110; 0 capped)",
+ "method": "kill-table-first extraction (engine v15 verbatim via extract_engine_patched.ts = class4_child1_cert_extractor.ts with export keywords added only, no logic change; per-candidate fresh process with pilot d6 control loss=false; own kill tables); independent verification by verify_bit7_win7_cert.ts (exact integer Bareiss 4x4, no engine import; fs-import + argv-guard ESM patch only, logic verbatim): root-check + every legal sub-root PASS + consumed winner-state union vs certificate rows compared in both directions (0/0)",
+ "certificates": [
+  {
+   "root": "00000000000000801a02020000000001",
+   "bit": 0,
+   "verdict": "WIN7",
+   "certificate": "output/class2-lane-cost61b-certificates/n11_s7_00000000000000801a02020000000001.cert",
+   "rows": 49376,
+   "bytes": 1785648,
+   "md5": "5bb428b4b7501dde1c5180ebc0bc2a90",
+   "subroots_verified": 51,
+   "all_subroots_pass": true,
+   "union_missing": 0,
+   "union_extra": 0,
+   "loser_mobility": 51,
+   "extraction_nodes": 4573848,
+   "extraction_rows": 49376,
+   "terminal_range": [
+    13,
+    17
+   ]
+  },
+  {
+   "root": "00000000000000801a02020000000002",
+   "bit": 1,
+   "verdict": "WIN7",
+   "certificate": "output/class2-lane-cost61b-certificates/n11_s7_00000000000000801a02020000000002.cert",
+   "rows": 44444,
+   "bytes": 1607690,
+   "md5": "8829a9f67adc34af2eaceff6f8cae7c4",
+   "subroots_verified": 50,
+   "all_subroots_pass": true,
+   "union_missing": 0,
+   "union_extra": 0,
+   "loser_mobility": 50,
+   "extraction_nodes": 4202548,
+   "extraction_rows": 44444,
+   "terminal_range": [
+    13,
+    17
+   ]
+  },
+  {
+   "root": "00000000000000801a02020000000040",
+   "bit": 6,
+   "verdict": "WIN7",
+   "certificate": "output/class2-lane-cost61b-certificates/n11_s7_00000000000000801a02020000000040.cert",
+   "rows": 50398,
+   "bytes": 1823649,
+   "md5": "b8ae6a9b8b3e871b6fb4528b7ea93401",
+   "subroots_verified": 52,
+   "all_subroots_pass": true,
+   "union_missing": 0,
+   "union_extra": 0,
+   "loser_mobility": 52,
+   "extraction_nodes": 3739260,
+   "extraction_rows": 50398,
+   "terminal_range": [
+    13,
+    17
+   ]
+  },
+  {
+   "root": "00000000000000801a02020010000000",
+   "bit": 28,
+   "verdict": "WIN7",
+   "certificate": "output/class2-lane-cost61b-certificates/n11_s7_00000000000000801a02020010000000.cert",
+   "rows": 36824,
+   "bytes": 1331453,
+   "md5": "f26bbf3d784b0ccbfc5051b8cf49fe12",
+   "subroots_verified": 51,
+   "all_subroots_pass": true,
+   "union_missing": 0,
+   "union_extra": 0,
+   "loser_mobility": 51,
+   "extraction_nodes": 2340413,
+   "extraction_rows": 36824,
+   "terminal_range": [
+    13,
+    17
+   ]
+  },
+  {
+   "root": "00000000000000801a02020100000000",
+   "bit": 32,
+   "verdict": "WIN7",
+   "certificate": "output/class2-lane-cost61b-certificates/n11_s7_00000000000000801a02020100000000.cert",
+   "rows": 37358,
+   "bytes": 1350800,
+   "md5": "28f79ed5e15e03c253afcbdfb88354eb",
+   "subroots_verified": 50,
+   "all_subroots_pass": true,
+   "union_missing": 0,
+   "union_extra": 0,
+   "loser_mobility": 50,
+   "extraction_nodes": 2204493,
+   "extraction_rows": 37358,
+   "terminal_range": [
+    13,
+    17
+   ]
+  },
+  {
+   "root": "00000000000000801a02020200000000",
+   "bit": 33,
+   "verdict": "WIN7",
+   "certificate": "output/class2-lane-cost61b-certificates/n11_s7_00000000000000801a02020200000000.cert",
+   "rows": 43401,
+   "bytes": 1569785,
+   "md5": "8550cbb923447ad974edab6a9d6b073e",
+   "subroots_verified": 47,
+   "all_subroots_pass": true,
+   "union_missing": 0,
+   "union_extra": 0,
+   "loser_mobility": 47,
+   "extraction_nodes": 3908109,
+   "extraction_rows": 43401,
+   "terminal_range": [
+    13,
+    17
+   ]
+  },
+  {
+   "root": "00000000000000801a06020000000000",
+   "bit": 50,
+   "verdict": "WIN7",
+   "certificate": "output/class2-lane-cost61b-certificates/n11_s7_00000000000000801a06020000000000.cert",
+   "rows": 27109,
+   "bytes": 980781,
+   "md5": "b66506113420437875f375e082165640",
+   "subroots_verified": 47,
+   "all_subroots_pass": true,
+   "union_missing": 0,
+   "union_extra": 0,
+   "loser_mobility": 47,
+   "extraction_nodes": 1770336,
+   "extraction_rows": 27109,
+   "terminal_range": [
+    13,
+    17
+   ]
+  },
+  {
+   "root": "00000000001000801a02020000000000",
+   "bit": 84,
+   "verdict": "WIN7",
+   "certificate": "output/class2-lane-cost61b-certificates/n11_s7_00000000001000801a02020000000000.cert",
+   "rows": 38810,
+   "bytes": 1402809,
+   "md5": "adacbb915a1213fec950574ee9d55c59",
+   "subroots_verified": 50,
+   "all_subroots_pass": true,
+   "union_missing": 0,
+   "union_extra": 0,
+   "loser_mobility": 50,
+   "extraction_nodes": 2421415,
+   "extraction_rows": 38810,
+   "terminal_range": [
+    13,
+    17
+   ]
+  },
+  {
+   "root": "00000000040000801a02020000000000",
+   "bit": 90,
+   "verdict": "WIN7",
+   "certificate": "output/class2-lane-cost61b-certificates/n11_s7_00000000040000801a02020000000000.cert",
+   "rows": 39049,
+   "bytes": 1410582,
+   "md5": "0b8bf88dda3eb4a9abaa8c44ea393cbc",
+   "subroots_verified": 49,
+   "all_subroots_pass": true,
+   "union_missing": 0,
+   "union_extra": 0,
+   "loser_mobility": 49,
+   "extraction_nodes": 3127631,
+   "extraction_rows": 39049,
+   "terminal_range": [
+    13,
+    17
+   ]
+  },
+  {
+   "root": "00000008000000801a02020000000000",
+   "bit": 99,
+   "verdict": "WIN7",
+   "certificate": "output/class2-lane-cost61b-certificates/n11_s7_00000008000000801a02020000000000.cert",
+   "rows": 24657,
+   "bytes": 888639,
+   "md5": "67044837e347336b47d0dccb9edb62f8",
+   "subroots_verified": 42,
+   "all_subroots_pass": true,
+   "union_missing": 0,
+   "union_extra": 0,
+   "loser_mobility": 42,
+   "extraction_nodes": 1559026,
+   "extraction_rows": 24657,
+   "terminal_range": [
+    13,
+    17
+   ]
+  },
+  {
+   "root": "00000200000000801a02020000000000",
+   "bit": 105,
+   "verdict": "WIN7",
+   "certificate": "output/class2-lane-cost61b-certificates/n11_s7_00000200000000801a02020000000000.cert",
+   "rows": 20295,
+   "bytes": 733861,
+   "md5": "e334a0fc9c76cf2da9145561a255fc80",
+   "subroots_verified": 42,
+   "all_subroots_pass": true,
+   "union_missing": 0,
+   "union_extra": 0,
+   "loser_mobility": 42,
+   "extraction_nodes": 1135205,
+   "extraction_rows": 20295,
+   "terminal_range": [
+    13,
+    17
+   ]
+  },
+  {
+   "root": "00004000000000801a02020000000000",
+   "bit": 110,
+   "verdict": "WIN7",
+   "certificate": "output/class2-lane-cost61b-certificates/n11_s7_00004000000000801a02020000000000.cert",
+   "rows": 42700,
+   "bytes": 1539387,
+   "md5": "db0a10cd7a562e405d4a558e52640f83",
+   "subroots_verified": 48,
+   "all_subroots_pass": true,
+   "union_missing": 0,
+   "union_extra": 0,
+   "loser_mobility": 48,
+   "extraction_nodes": 3189933,
+   "extraction_rows": 42700,
+   "terminal_range": [
+    13,
+    17
+   ]
+  }
+ ],
+ "totals": {
+  "certificates": 12,
+  "rows": 454421,
+  "bytes": 16425084,
+  "extraction_nodes": 34172217
+ },
+ "frontier_effect_note": "frontier numbers change only via the recomputation in output/class2-lane-cost61b-frontier-recompute-20261114.json",
+ "interpretation_guard": [
+  "WIN7 certificates prove a win within depth 10 from the corresponding 7-stone root only.",
+  "REFUTED-D10 sweep entries negate only WIN7-within-depth-10; deeper wins remain possible.",
+  "class 2, class 4, S2 {59,60}, two-stone root {49,60}, and the 11x11 empty root remain UNKNOWN."
+ ]
+}

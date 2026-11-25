@@ -1,0 +1,129 @@
+{
+  "declaration_note": "research/log/2026-11-20-n11-residual72-replace9-whole-record-reexec-third-verification-single-owner-note.md",
+  "harness": "verify_k1151_reexec_third_20261120",
+  "input_snapshots": [
+    {
+      "exists": true,
+      "path": "output/.input-k1085.json",
+      "sha256": "5fdd342d624abec9b8478b69b13fc63a2dbbec99d227da4740cfe068647e688e"
+    },
+    {
+      "exists": true,
+      "path": "output/.input-k1086.json",
+      "sha256": "3045e15295af9b85b86578b5e8d55a8b325466eac576ee15b8450f6acb9b9ced"
+    },
+    {
+      "exists": true,
+      "path": "output/.input-k1089.json",
+      "sha256": "808fbda1152cb492bb76641a101660f965f2801c0b74790d20a0d998d5b747fc"
+    },
+    {
+      "exists": true,
+      "path": "output/.input-k1091.json",
+      "sha256": "edd7ac84f47268adcc8a3364a5ff687499cb2a76ded0c0fa379506af02f40b25"
+    },
+    {
+      "exists": true,
+      "path": "output/.input-k1095.json",
+      "sha256": "335eca5ecb7c72e6fb0ee41eb740de736bf4eb78791823ae55f6375a68cb4707"
+    },
+    {
+      "exists": true,
+      "path": "output/.input-k1097.json",
+      "sha256": "2896deb0c5e820904d0e2463e3fd9ebd1613b540a66a97f88d86c75bffa71f40"
+    },
+    {
+      "exists": true,
+      "path": "output/.input-cover-decision.json",
+      "sha256": "c5aaf83e23b6a716e981aaff745996668c60edba164fb3f5288b60ff9b8ac4d1"
+    },
+    {
+      "exists": true,
+      "path": "output/.input-k1147-external-audit.json",
+      "sha256": "17dbd6ab3a9a9b5aef1cf1cf517a5a0fd216dff755f0ed86fcf029e1612cabcb"
+    },
+    {
+      "exists": true,
+      "path": "output/.input-probe-records-replace9.jsonl",
+      "sha256": "bdacf0e7056093145bef917ad384220b70c06be68bdd892b56dd23b3a7d4cb06"
+    },
+    {
+      "exists": true,
+      "path": "output/.input-replace9.json",
+      "sha256": "e8f5d6749032c4ad95136d2915c03ce7e997fe494bf3eebf7f912cccc88ded1e"
+    }
+  ],
+  "interpretation_guard": [
+    "本検証は残余23行のどの行も閉じない",
+    "WIN8-D10 candidate は証明書ではない",
+    "REFUTED-D10 は LOSS 証明ではない",
+    "node数・solved数を勝敗として読まない",
+    "標準11×11空盤・二石root {49,60}/{59,60}・S2 {59,60}・class 1/2/4 はすべて UNKNOWN のまま"
+  ],
+  "pin_gates": [
+    {
+      "actual_sha256": "e92fb7556a6f12c6e3cee06477e5387ddb6214cb58875e4ee3385010f9043e8a",
+      "expected_sha256": "e92fb7556a6f12c6e3cee06477e5387ddb6214cb58875e4ee3385010f9043e8a",
+      "label": "machine_verify_replace9_whole_record_20261120.py",
+      "pass": true
+    },
+    {
+      "actual_sha256": "5888afb3e1c07f8555fbafc73fc0b9d1006b0a31c88bbdd55a0d8975c0cabcb4",
+      "expected_sha256": "5888afb3e1c07f8555fbafc73fc0b9d1006b0a31c88bbdd55a0d8975c0cabcb4",
+      "label": "published_audit_replace9-whole-record-second-verification-20261120.json",
+      "pass": true
+    }
+  ],
+  "pinned_commit": "f7aa541f342d67b33f34fee2df5e31c262cb0691",
+  "pins": {
+    "machine_sha256": "e92fb7556a6f12c6e3cee06477e5387ddb6214cb58875e4ee3385010f9043e8a",
+    "published_audit_sha256": "5888afb3e1c07f8555fbafc73fc0b9d1006b0a31c88bbdd55a0d8975c0cabcb4"
+  },
+  "run_gate": true,
+  "runs": [
+    {
+      "byte_identical_to_published_audit": true,
+      "environment": "ambient (PYTHONHASHSEED unset), fresh regeneration (audit deleted before run)",
+      "output_bytes": 115002,
+      "output_sha256": "5888afb3e1c07f8555fbafc73fc0b9d1006b0a31c88bbdd55a0d8975c0cabcb4",
+      "returncode": 0,
+      "run": "same-cwd-1"
+    },
+    {
+      "byte_identical_to_published_audit": true,
+      "environment": "ambient (PYTHONHASHSEED unset), fresh regeneration (audit deleted before run)",
+      "output_bytes": 115002,
+      "output_sha256": "5888afb3e1c07f8555fbafc73fc0b9d1006b0a31c88bbdd55a0d8975c0cabcb4",
+      "returncode": 0,
+      "run": "same-cwd-2"
+    },
+    {
+      "byte_identical_to_published_audit": true,
+      "environment": "isolated tree/cwd/HOME (PYTHONHASHSEED unset)",
+      "output_bytes": 115002,
+      "output_sha256": "5888afb3e1c07f8555fbafc73fc0b9d1006b0a31c88bbdd55a0d8975c0cabcb4",
+      "returncode": 0,
+      "run": "isolated-tree-1"
+    },
+    {
+      "byte_identical_to_published_audit": true,
+      "environment": "isolated tree/cwd/HOME + PYTHONHASHSEED=random",
+      "output_bytes": 115002,
+      "output_sha256": "5888afb3e1c07f8555fbafc73fc0b9d1006b0a31c88bbdd55a0d8975c0cabcb4",
+      "returncode": 0,
+      "run": "isolated-plus-hashseed-random"
+    }
+  ],
+  "source_experiment_dir": "research/experiments/n11-residual72-replace9-whole-record-second-verification-20261120",
+  "status": "k1151-reexec-third-verification-passed",
+  "subject": "K1151 replace9 whole-record second verification",
+  "tamper_gate": true,
+  "tamper_test": {
+    "failed_closed": true,
+    "mutated_input_sha256": "74e25aa4d3f31261af69895939c8b93ace30ba2e961f7d60e84bd7a37f61754c",
+    "mutation": "1 byte flipped at offset 7701 (XOR 0x01) of output/.input-replace9.json in a copied tree",
+    "no_output_written": true,
+    "pin_caught_mutation": true,
+    "returncode": 1
+  }
+}

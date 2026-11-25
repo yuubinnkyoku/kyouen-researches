@@ -1,0 +1,84 @@
+{
+  "declaration_note": "research/log/2026-11-20-n11-residual23-zero-triple-provider-reexec-third-verification-single-owner-note.md",
+  "harness": "verify_k1148_reexec_third_20261120",
+  "interpretation_guard": [
+    "この検証は残余23行のどの行も閉じない",
+    "zero rows の列挙は残余行の勝敗決着ではない",
+    "nodes/solved 等の計数を勝敗として読まない",
+    "本検証は幾何の新規計算を含まない（出版機械のpristine再実行のみ）",
+    "標準11×11空盤・二石root {49,60}/{59,60}・S2 {59,60}・class 1/2/4 はすべて UNKNOWN のまま"
+  ],
+  "pin_gates": [
+    {
+      "actual_sha256": "cb8c95c8799e6c12bbc7fdb2cc9b6236f664724f29827e56d2e75de62a084892",
+      "expected_sha256": "cb8c95c8799e6c12bbc7fdb2cc9b6236f664724f29827e56d2e75de62a084892",
+      "label": "machine_audit_zero_triple_providers.py",
+      "pass": true
+    },
+    {
+      "actual_sha256": "51e7a465e18646097073e4f8231f89cbff327d05f9bfeac102e57c754b4ff822",
+      "expected_sha256": "51e7a465e18646097073e4f8231f89cbff327d05f9bfeac102e57c754b4ff822",
+      "label": "fixture_residual23-provider-input.json",
+      "pass": true
+    },
+    {
+      "actual_sha256": "526eada2c94457f06a7cf27a86011586e394c342687e539a6b545b42577b9573",
+      "expected_sha256": "526eada2c94457f06a7cf27a86011586e394c342687e539a6b545b42577b9573",
+      "label": "published_audit_third-geometry-audit.json",
+      "pass": true
+    }
+  ],
+  "pinned_commit": "6564fded75038c887c095873c5d3e5633c4fcd35",
+  "pins": {
+    "fixture_sha256": "51e7a465e18646097073e4f8231f89cbff327d05f9bfeac102e57c754b4ff822",
+    "machine_sha256": "cb8c95c8799e6c12bbc7fdb2cc9b6236f664724f29827e56d2e75de62a084892",
+    "published_audit_sha256": "526eada2c94457f06a7cf27a86011586e394c342687e539a6b545b42577b9573"
+  },
+  "run_gate": true,
+  "runs": [
+    {
+      "byte_identical_to_published_audit": true,
+      "environment": "ambient (PYTHONHASHSEED unset)",
+      "output_bytes": 4418,
+      "output_sha256": "526eada2c94457f06a7cf27a86011586e394c342687e539a6b545b42577b9573",
+      "returncode": 0,
+      "run": "same-cwd-1"
+    },
+    {
+      "byte_identical_to_published_audit": true,
+      "environment": "ambient (PYTHONHASHSEED unset)",
+      "output_bytes": 4418,
+      "output_sha256": "526eada2c94457f06a7cf27a86011586e394c342687e539a6b545b42577b9573",
+      "returncode": 0,
+      "run": "same-cwd-2"
+    },
+    {
+      "byte_identical_to_published_audit": true,
+      "environment": "isolated tree/cwd/HOME (PYTHONHASHSEED unset)",
+      "output_bytes": 4418,
+      "output_sha256": "526eada2c94457f06a7cf27a86011586e394c342687e539a6b545b42577b9573",
+      "returncode": 0,
+      "run": "isolated-tree-1"
+    },
+    {
+      "byte_identical_to_published_audit": true,
+      "environment": "isolated tree/cwd/HOME + PYTHONHASHSEED=random",
+      "output_bytes": 4418,
+      "output_sha256": "526eada2c94457f06a7cf27a86011586e394c342687e539a6b545b42577b9573",
+      "returncode": 0,
+      "run": "isolated-plus-hashseed-random"
+    }
+  ],
+  "source_experiment_dir": "research/experiments/n11-residual23-zero-triple-provider-third-geometry-20261120",
+  "status": "k1148-reexec-third-verification-passed",
+  "subject": "K1148 residual23 zero-triple-provider third geometry",
+  "tamper_gate": true,
+  "tamper_test": {
+    "failed_closed": true,
+    "mutated_fixture_sha256": "dd3f3c48e69bd74359b6c0653d591277237963724789d4cbaaeea3bef348c3bf",
+    "mutation": "1 byte flipped at offset 1552 (XOR 0x01) of fixture",
+    "no_output_written": true,
+    "pin_caught_mutation": true,
+    "returncode": 1
+  }
+}

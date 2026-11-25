@@ -1,0 +1,170 @@
+{
+ "schema": "n11-class-frontier-cost69e-recompute-20261115-v1",
+ "date": "2026-11-15",
+ "baseline_main": "class-frontier-merged-recompute-after65h65i-warm67b68c-20261115 (solved 1012 / unique remaining 6835 / sum 538670 / open 5105/402393)",
+ "method": "direct runpy extension of recompute_frontier_merged_after65h65i_warm_67b68c_20261115.py: the merged baseline is reproduced exactly (asserted 1012/6835/538670/5105/402393), the cost-69e child remaining-membership and demand are re-derived from the merged frontier (the child was closed in the manifest mid-flight by the parallel cost-65g-warm bit-15 receipt; the sweep completed on an already-receipt-closed child and its certificates are pure new-coverage additions), the completed cost-69e sweep is asserted from the published raw batches (69 candidates: 11 WIN7-D10 + 58 REFUTED, 0 capped, 80,172,332 v16 nodes; 9 pilot d6 controls; determinism rerun bits 116/44 node-exact; v15 cross-engine anchors on all 11 WIN7 bits loss=true at 1,131,809/1,746,232/4,764,589/9,765,935/5,510,814/5,109,539/6,478,505/5,747,330/5,599,058/6,171,899/16,776,783 nodes), and the three fully verified receipts (bits 21/99/87 + warm rebuilds 84/76/90; rows 22,261/25,149/43,838/29,614/45,665/46,959; sub-roots 45/50/59/50/57/58 PASS; union 0/0 each) are added in the published record order with per-bit marginals re-derived from the growing union; the bit-21 WIN7 root 00000000000000803202000000208000 is a cross-child duplicate of the cost-60b bit-15 win7_roots listing with no prior published certificate, so that receipt is new coverage and also closes the cost-60b bit-15 warm entry; the bit-2 WIN7 root duplicates the cost-65g-warm bit-15 certificate (cross-lane reproduction, no new certificate needed); the remaining WIN7-D10 bits (89/94/108/116; bit 2 already certified by the parallel cost-65g-warm bit-15 rebuild; bits 84/76/90 rebuilt as warm certificates) stay warm certificate-rebuild candidates and change no frontier number",
+ "controls": {
+  "merged_baseline": {
+   "solved_in_manifest": 1012,
+   "unique_remaining": 6835,
+   "sum_cost": 538670,
+   "open_s6": 5105,
+   "open_cost": 402393,
+   "reproduced": true
+  },
+  "child_membership_reproduced": true,
+  "sweep_asserted_from_raw_batches": true,
+  "extends_merged_baseline": true
+ },
+ "child_membership": {
+  "child_hex": "00000000000000803202000000008000",
+  "claimed_as": "one of the two cheapest remaining unswept children of the second class-2 target (12 orbits / 864 after cost-68c, demand c1=0,c2=2,c4=0; claim commit 41693097)",
+  "still_in_parent_remaining_children_after_merged": false,
+  "demand_after_merged": null,
+  "midflight_manifest_closure": "the parallel warm-merged recompute (commit a7f3fc97) closed this child in the manifest via the cost-65g-warm bit-15 receipt (root 00000000000000803202000000008004, the same 7-stone root this sweep independently re-derived as WIN7 bit 2); the sweep completed on an already-receipt-closed child; its certificates are pure new-coverage additions"
+ },
+ "cost69e_addition": {
+  "21": {
+   "root_hex": "00000000000000803202000000208000",
+   "covers": 7,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000801202000000208000"
+   ]
+  },
+  "99": {
+   "root_hex": "00000008000000803202000000008000",
+   "covers": 7,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000003800200008000200"
+   ]
+  },
+  "87": {
+   "root_hex": "00000000008000803202000000008000",
+   "covers": 7,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000020809002000000020000"
+   ]
+  },
+  "84": {
+   "root_hex": "00000000001000803202000000008000",
+   "covers": 7,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000100003820000008000000"
+   ]
+  },
+  "76": {
+   "root_hex": "00000000000010803202000000008000",
+   "covers": 7,
+   "marginal": 6,
+   "marginal_in_manifest": 2,
+   "marginal_manifest_hexes": [
+    "00000000000000803242000000000000",
+    "00000000000000849002000000020000"
+   ]
+  },
+  "90": {
+   "root_hex": "00000000040000803202000000008000",
+   "covers": 7,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000003800200048000000"
+   ]
+  }
+ },
+ "frontier_after_cost69e": {
+  "solved_s6_in_manifest": 1019,
+  "remaining_s5_orbits": 176,
+  "unique_remaining_s6": 6828,
+  "sum_remaining_cost": 538143,
+  "s6_needed_by_open_classes": 5098,
+  "cost_needed_by_open_classes": 401866,
+  "demand_histogram_open_only": {
+   "c2=0,c4=1": 527,
+   "c2=0,c4=2": 3021,
+   "c2=0,c4=3": 12,
+   "c2=1,c4=0": 246,
+   "c2=1,c4=1": 60,
+   "c2=1,c4=2": 9,
+   "c2=2,c4=0": 1162,
+   "c2=2,c4=1": 6,
+   "c2=2,c4=2": 55
+  },
+  "best_class2": {
+   "s5_hex": "00000000000000803202000000000000",
+   "classes": 2,
+   "remaining_s6_orbits": 6,
+   "remaining_s7_edge_cost": 443
+  },
+  "best_class2_note": "best_class2 and best_coverable_class2 are the same coverable S5; the separate receipt-unclosable S5 is recorded in receipt_unclosable_class2.",
+  "receipt_unclosable_class2": {
+   "s5_hex": "00000000000000809082000000000000",
+   "classes": 3,
+   "remaining_s6_orbits": 10,
+   "remaining_s7_edge_cost": 698,
+   "all_remaining_children_sterile_swept": true,
+   "status": "unresolved; no WIN7-D10 was found in the recorded sweeps"
+  },
+  "best_coverable_class2": {
+   "s5_hex": "00000000000000803202000000000000",
+   "classes": 2,
+   "remaining_s6_orbits": 6,
+   "remaining_s7_edge_cost": 443
+  },
+  "next_class2": [
+   {
+    "s5_hex": "00000000000000809082000000000000",
+    "classes": 3,
+    "remaining_s6_orbits": 10,
+    "remaining_s7_edge_cost": 698
+   },
+   {
+    "s5_hex": "00000000000000809102000000000000",
+    "classes": 2,
+    "remaining_s6_orbits": 35,
+    "remaining_s7_edge_cost": 2525
+   },
+   {
+    "s5_hex": "0000000000000080120a000000000000",
+    "classes": 2,
+    "remaining_s6_orbits": 53,
+    "remaining_s7_edge_cost": 3865
+   }
+  ],
+  "best_class4": {
+   "s5_hex": "00000000020000003800000080000000",
+   "classes": 4,
+   "remaining_s6_orbits": 18,
+   "remaining_s7_edge_cost": 1460
+  },
+  "next_class4": [
+   {
+    "s5_hex": "00000000000000003800002000800000",
+    "classes": 4,
+    "remaining_s6_orbits": 60,
+    "remaining_s7_edge_cost": 4216
+   },
+   {
+    "s5_hex": "00000000000000801802000000080000",
+    "classes": 4,
+    "remaining_s6_orbits": 64,
+    "remaining_s7_edge_cost": 4390
+   },
+   {
+    "s5_hex": "00000000020000003800000000080000",
+    "classes": 4,
+    "remaining_s6_orbits": 64,
+    "remaining_s7_edge_cost": 4570
+   }
+  ]
+ },
+ "interpretation_guard": "bookkeeping over published receipts; REFUTED-D10 sweeps prove only absence of WIN7-D10; WIN7 certificates prove a win within depth 10 from the 7-stone root only; 11x11 empty root / {49,60} / S2 {59,60} / class 2 / class 4 remain UNKNOWN"
+}

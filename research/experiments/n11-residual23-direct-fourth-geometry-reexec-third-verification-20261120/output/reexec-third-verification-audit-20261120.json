@@ -1,0 +1,110 @@
+{
+  "declaration_note": "research/log/2026-11-20-n11-residual23-direct-fourth-geometry-reexec-third-verification-single-owner-note.md",
+  "harness": "verify_k1156_reexec_third_20261120",
+  "input_snapshot_gates": [
+    {
+      "actual_sha256": "51e7a465e18646097073e4f8231f89cbff327d05f9bfeac102e57c754b4ff822",
+      "exists": true,
+      "expected_sha256": "51e7a465e18646097073e4f8231f89cbff327d05f9bfeac102e57c754b4ff822",
+      "pass": true,
+      "path": "input/residual23-provider-input.json"
+    },
+    {
+      "actual_sha256": "526eada2c94457f06a7cf27a86011586e394c342687e539a6b545b42577b9573",
+      "exists": true,
+      "expected_sha256": "526eada2c94457f06a7cf27a86011586e394c342687e539a6b545b42577b9573",
+      "pass": true,
+      "path": "input/k1148-third-geometry-audit.json"
+    },
+    {
+      "actual_sha256": "17dbd6ab3a9a9b5aef1cf1cf517a5a0fd216dff755f0ed86fcf029e1612cabcb",
+      "exists": true,
+      "expected_sha256": "17dbd6ab3a9a9b5aef1cf1cf517a5a0fd216dff755f0ed86fcf029e1612cabcb",
+      "pass": true,
+      "path": "input/k1147-external-audit.json"
+    }
+  ],
+  "interpretation_guard": [
+    "本検証は残余23行のどの行も閉じない",
+    "第四幾何は被覆計画の簿記でありゲーム理論的証明書ではない",
+    "REFUTED-D10 は LOSS 証明ではない",
+    "node数・solved数を勝敗として読まない",
+    "標準11×11空盤・二石root {49,60}/{59,60}・S2 {59,60}・class 1/2/4 はすべて UNKNOWN のまま"
+  ],
+  "pin_gates": [
+    {
+      "actual_sha256": "850df34b4c01ecb44cd9a5b480be276b63ec0f8c7f5fc541acb9e7f182304156",
+      "expected_sha256": "850df34b4c01ecb44cd9a5b480be276b63ec0f8c7f5fc541acb9e7f182304156",
+      "label": "machine_verify_direct_fourth.py",
+      "pass": true
+    },
+    {
+      "actual_sha256": "c4e55dbe8d937dce93430f5804296dcd5cf42a9d42de14f8e90bbebe262eb61f",
+      "expected_sha256": "c4e55dbe8d937dce93430f5804296dcd5cf42a9d42de14f8e90bbebe262eb61f",
+      "label": "published_audit_direct-fourth-geometry-audit.json",
+      "pass": true
+    }
+  ],
+  "pinned_fetch_commit": "49e420fe76c277b8669e2fc0c2a423c8df3a5d54",
+  "pins": {
+    "machine_sha256": "850df34b4c01ecb44cd9a5b480be276b63ec0f8c7f5fc541acb9e7f182304156",
+    "published_audit_sha256": "c4e55dbe8d937dce93430f5804296dcd5cf42a9d42de14f8e90bbebe262eb61f"
+  },
+  "publication_commits": {
+    "fetch_back_record": "49e420fe76c277b8669e2fc0c2a423c8df3a5d54",
+    "input_k1147_external_audit": "ce13afe41e4f19041afa7622c0fe142206f36108",
+    "input_k1148_third_geometry_audit": "261f484751e7349dc391940dd4d1a7b014b2f15d",
+    "input_provider_fixture": "6f2c70e8ff815d2751985aab5bfc0434d6421948",
+    "item": "1d1b185a7de36748d1653a48f1f0ca397a3b75da",
+    "knowledge_index_bullet": "65980eac02a370db535785af0e5326afdd754d71",
+    "machine_verify_direct_fourth": "3969a0505d03bebaf12f88875f3fba6b9a5635ff",
+    "published_audit": "7c21ad16311c9af36e928f993e94da205b577cf7"
+  },
+  "run_gate": true,
+  "runs": [
+    {
+      "byte_identical_to_published_audit": true,
+      "environment": "ambient (PYTHONHASHSEED unset), fresh regeneration (audit deleted before run)",
+      "output_bytes": 7627,
+      "output_sha256": "c4e55dbe8d937dce93430f5804296dcd5cf42a9d42de14f8e90bbebe262eb61f",
+      "returncode": 0,
+      "run": "same-cwd-1"
+    },
+    {
+      "byte_identical_to_published_audit": true,
+      "environment": "ambient (PYTHONHASHSEED unset), fresh regeneration (audit deleted before run)",
+      "output_bytes": 7627,
+      "output_sha256": "c4e55dbe8d937dce93430f5804296dcd5cf42a9d42de14f8e90bbebe262eb61f",
+      "returncode": 0,
+      "run": "same-cwd-2"
+    },
+    {
+      "byte_identical_to_published_audit": true,
+      "environment": "isolated tree/cwd/HOME (PYTHONHASHSEED unset)",
+      "output_bytes": 7627,
+      "output_sha256": "c4e55dbe8d937dce93430f5804296dcd5cf42a9d42de14f8e90bbebe262eb61f",
+      "returncode": 0,
+      "run": "isolated-tree-1"
+    },
+    {
+      "byte_identical_to_published_audit": true,
+      "environment": "isolated tree/cwd/HOME + PYTHONHASHSEED=random",
+      "output_bytes": 7627,
+      "output_sha256": "c4e55dbe8d937dce93430f5804296dcd5cf42a9d42de14f8e90bbebe262eb61f",
+      "returncode": 0,
+      "run": "isolated-plus-hashseed-random"
+    }
+  ],
+  "source_experiment_dir": "research/experiments/n11-residual23-zero-triple-provider-direct-fourth-geometry-20261121",
+  "status": "k1156-reexec-third-verification-passed",
+  "subject": "K1156 residual23 zero triple-provider direct fourth geometry",
+  "tamper_gate": true,
+  "tamper_test": {
+    "failed_closed": true,
+    "mutated_input_sha256": "f5c6a73d26d7f5c9444a2e93bab2d37a0f2d53d7169787ed318c7b1607068445",
+    "mutation": "1 byte flipped at offset 200 (XOR 0x01) of input/residual23-provider-input.json in a copied tree (publishing lane covered offset 100)",
+    "no_output_written": true,
+    "pin_caught_mutation": true,
+    "returncode": 1
+  }
+}

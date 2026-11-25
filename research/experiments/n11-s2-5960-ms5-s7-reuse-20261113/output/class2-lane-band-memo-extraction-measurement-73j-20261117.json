@@ -1,0 +1,389 @@
+{
+ "schema": "n11-class2-lane-band-memo-extraction-measurement-73j-20261117-v1",
+ "date": "2026-11-17",
+ "lane": "n11 class2-lane long-term lane (cost-73j band)",
+ "purpose": "measurement of the extraction-memo (position-keyed win/loss table) capacity effect on certificate extraction cost for the published cost-73j WIN7-D10 band; no new verdicts, no certificate bytes changed",
+ "inputs": {
+  "extractor_engine": {
+   "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/class4_child1_cert_extractor_exact.ts",
+   "git_blob_sha": "52bcaf509ea12fad4c936501d30d26b5b66c0085",
+   "memo_spec": "MS=1<<18 slots, 64-probe linear probing, memoEntry silently skips on chain exhaustion",
+   "fbt_spec": "FBS=1<<20"
+  },
+  "manifest": {
+   "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost73j-win7-certificates-20261117.json",
+   "git_blob_sha": "e88710b5a2d4848be77a03ae5104e46aefc1279a"
+  },
+  "candidate_enumerator": {
+   "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/legal_candidates.py",
+   "git_blob_sha": "8e97082c42838c7a4a4b6d2dd235276c8d43ab9a"
+  },
+  "driver": {
+   "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/measure_band_memo_extraction_73j.ts",
+   "note": "imports the extractor verbatim (or one-line MS-substituted variant) and records per-bit nodes; adds no search behavior"
+  }
+ },
+ "published_baseline": {
+  "child_hex": "00000000000000403800000408000000",
+  "bits": [
+   0,
+   1,
+   6,
+   29,
+   44,
+   49,
+   52,
+   69,
+   74,
+   82,
+   87,
+   91,
+   98,
+   100,
+   110,
+   118
+  ],
+  "per_bit_fresh_process_extraction_nodes_total": 166238087,
+  "per_bit_rows_total": 726778,
+  "union_rows": 547910,
+  "union_bytes": 19774257,
+  "union_md5": "5eb31648e510d1718eaf68de8c6a1e97"
+ },
+ "fidelity_checks": {
+  "bit0_band_start_run_a": {
+   "nodes": 9260973,
+   "published_nodes": 9260973,
+   "match": true,
+   "rows": 46463,
+   "published_rows": 46463
+  },
+  "bit98_fresh_verbatim_ms18": {
+   "nodes": 25505012,
+   "published_nodes": 25505012,
+   "match": true,
+   "rows": 64451,
+   "published_rows": 64451,
+   "rows_md5": "6db21986f3a67c35dde3d9d275acd29f",
+   "rows_byte_identical_to_published_certificate_data_rows": true
+  }
+ },
+ "run_a_band_wide_verbatim_ms18": {
+  "total_nodes": 229836337,
+  "ratio_vs_published_fresh": 1.382573,
+  "interpretation": "memo saturates during bit 0; later bits lose intra-bit memoization; per-bit ratios 1.244513..2.050475 (bit 0 exactly 1.0)",
+  "per_bit_ratio_min_excluding_bit0": 1.244513,
+  "per_bit_ratio_max_excluding_bit0": 2.050475,
+  "fbt_drops": 0,
+  "all_bits_ok": true
+ },
+ "run_b_band_wide_ms24": {
+  "total_nodes": 94005413,
+  "ratio_vs_published_fresh": 0.565487,
+  "fbt_drops": 0,
+  "all_bits_ok": true,
+  "wall_ms_note": "wall_ms fields in the run summaries are timing, not evidence"
+ },
+ "attribution_battery_fresh_ms24": {
+  "description": "each of the 16 bits re-extracted in its own fresh process with MS=1<<24",
+  "total_nodes": 91941958,
+  "ratio_vs_published_fresh": 0.5531,
+  "per_bit": [
+   {
+    "bit": 0,
+    "root": "00000000000000403800000408000001",
+    "moves": 58,
+    "published_ms18_fresh_nodes": 9260973,
+    "ms24_fresh_nodes": 5552603,
+    "ms24_band_nodes": 5552603,
+    "ms18_band_nodes": 9260973,
+    "capacity_ratio": 0.5996,
+    "band_vs_fresh_ratio": 1.0,
+    "band_vs_published_ratio": 0.5996,
+    "rows": 46463,
+    "row_set_identical": true
+   },
+   {
+    "bit": 1,
+    "root": "00000000000000403800000408000002",
+    "moves": 56,
+    "published_ms18_fresh_nodes": 12536865,
+    "ms24_fresh_nodes": 6008165,
+    "ms24_band_nodes": 5992950,
+    "ms18_band_nodes": 19596746,
+    "capacity_ratio": 0.4792,
+    "band_vs_fresh_ratio": 0.9975,
+    "band_vs_published_ratio": 0.478,
+    "rows": 47847,
+    "row_set_identical": true
+   },
+   {
+    "bit": 6,
+    "root": "00000000000000403800000408000040",
+    "moves": 54,
+    "published_ms18_fresh_nodes": 8273579,
+    "ms24_fresh_nodes": 4737802,
+    "ms24_band_nodes": 4774586,
+    "ms18_band_nodes": 12628304,
+    "capacity_ratio": 0.5726,
+    "band_vs_fresh_ratio": 1.0078,
+    "band_vs_published_ratio": 0.5771,
+    "rows": 47337,
+    "row_set_identical": true
+   },
+   {
+    "bit": 29,
+    "root": "00000000000000403800000428000000",
+    "moves": 59,
+    "published_ms18_fresh_nodes": 16627225,
+    "ms24_fresh_nodes": 7807628,
+    "ms24_band_nodes": 8021476,
+    "ms18_band_nodes": 23182302,
+    "capacity_ratio": 0.4696,
+    "band_vs_fresh_ratio": 1.0274,
+    "band_vs_published_ratio": 0.4824,
+    "rows": 54255,
+    "row_set_identical": true
+   },
+   {
+    "bit": 44,
+    "root": "00000000000000403800100408000000",
+    "moves": 62,
+    "published_ms18_fresh_nodes": 8781833,
+    "ms24_fresh_nodes": 5230952,
+    "ms24_band_nodes": 5045862,
+    "ms18_band_nodes": 12039937,
+    "capacity_ratio": 0.5957,
+    "band_vs_fresh_ratio": 0.9646,
+    "band_vs_published_ratio": 0.5746,
+    "rows": 53579,
+    "row_set_identical": true
+   },
+   {
+    "bit": 49,
+    "root": "00000000000000403802000408000000",
+    "moves": 56,
+    "published_ms18_fresh_nodes": 3629855,
+    "ms24_fresh_nodes": 2488992,
+    "ms24_band_nodes": 2236308,
+    "ms18_band_nodes": 6534316,
+    "capacity_ratio": 0.6857,
+    "band_vs_fresh_ratio": 0.8985,
+    "band_vs_published_ratio": 0.6161,
+    "rows": 33294,
+    "row_set_identical": true
+   },
+   {
+    "bit": 52,
+    "root": "00000000000000403810000408000000",
+    "moves": 62,
+    "published_ms18_fresh_nodes": 15209310,
+    "ms24_fresh_nodes": 6961553,
+    "ms24_band_nodes": 6785742,
+    "ms18_band_nodes": 21772223,
+    "capacity_ratio": 0.4577,
+    "band_vs_fresh_ratio": 0.9747,
+    "band_vs_published_ratio": 0.4462,
+    "rows": 53965,
+    "row_set_identical": true
+   },
+   {
+    "bit": 69,
+    "root": "00000000000000603800000408000000",
+    "moves": 51,
+    "published_ms18_fresh_nodes": 5442877,
+    "ms24_fresh_nodes": 3666034,
+    "ms24_band_nodes": 3413407,
+    "ms18_band_nodes": 8364155,
+    "capacity_ratio": 0.6735,
+    "band_vs_fresh_ratio": 0.9311,
+    "band_vs_published_ratio": 0.6271,
+    "rows": 30669,
+    "row_set_identical": true
+   },
+   {
+    "bit": 74,
+    "root": "00000000000004403800000408000000",
+    "moves": 57,
+    "published_ms18_fresh_nodes": 8619586,
+    "ms24_fresh_nodes": 5127282,
+    "ms24_band_nodes": 4922844,
+    "ms18_band_nodes": 11296799,
+    "capacity_ratio": 0.5948,
+    "band_vs_fresh_ratio": 0.9601,
+    "band_vs_published_ratio": 0.5711,
+    "rows": 45056,
+    "row_set_identical": true
+   },
+   {
+    "bit": 82,
+    "root": "00000000000400403800000408000000",
+    "moves": 48,
+    "published_ms18_fresh_nodes": 3102063,
+    "ms24_fresh_nodes": 2191375,
+    "ms24_band_nodes": 1988017,
+    "ms18_band_nodes": 6360703,
+    "capacity_ratio": 0.7064,
+    "band_vs_fresh_ratio": 0.9072,
+    "band_vs_published_ratio": 0.6409,
+    "rows": 26799,
+    "row_set_identical": true
+   },
+   {
+    "bit": 87,
+    "root": "00000000008000403800000408000000",
+    "moves": 62,
+    "published_ms18_fresh_nodes": 16182923,
+    "ms24_fresh_nodes": 9567421,
+    "ms24_band_nodes": 10308288,
+    "ms18_band_nodes": 20818875,
+    "capacity_ratio": 0.5912,
+    "band_vs_fresh_ratio": 1.0774,
+    "band_vs_published_ratio": 0.637,
+    "rows": 57675,
+    "row_set_identical": true
+   },
+   {
+    "bit": 91,
+    "root": "00000000080000403800000408000000",
+    "moves": 51,
+    "published_ms18_fresh_nodes": 5205708,
+    "ms24_fresh_nodes": 3056024,
+    "ms24_band_nodes": 3259386,
+    "ms18_band_nodes": 9073687,
+    "capacity_ratio": 0.5871,
+    "band_vs_fresh_ratio": 1.0665,
+    "band_vs_published_ratio": 0.6261,
+    "rows": 34691,
+    "row_set_identical": true
+   },
+   {
+    "bit": 98,
+    "root": "00000004000000403800000408000000",
+    "moves": 62,
+    "published_ms18_fresh_nodes": 25505012,
+    "ms24_fresh_nodes": 12193647,
+    "ms24_band_nodes": 12655557,
+    "ms18_band_nodes": 32664694,
+    "capacity_ratio": 0.4781,
+    "band_vs_fresh_ratio": 1.0379,
+    "band_vs_published_ratio": 0.4962,
+    "rows": 64451,
+    "row_set_identical": true
+   },
+   {
+    "bit": 100,
+    "root": "00000010000000403800000408000000",
+    "moves": 53,
+    "published_ms18_fresh_nodes": 8712268,
+    "ms24_fresh_nodes": 5365483,
+    "ms24_band_nodes": 5357987,
+    "ms18_band_nodes": 11929434,
+    "capacity_ratio": 0.6159,
+    "band_vs_fresh_ratio": 0.9986,
+    "band_vs_published_ratio": 0.615,
+    "rows": 41105,
+    "row_set_identical": true
+   },
+   {
+    "bit": 110,
+    "root": "00004000000000403800000408000000",
+    "moves": 59,
+    "published_ms18_fresh_nodes": 12620740,
+    "ms24_fresh_nodes": 7663548,
+    "ms24_band_nodes": 8417514,
+    "ms18_band_nodes": 15706674,
+    "capacity_ratio": 0.6072,
+    "band_vs_fresh_ratio": 1.0984,
+    "band_vs_published_ratio": 0.667,
+    "rows": 45350,
+    "row_set_identical": true
+   },
+   {
+    "bit": 118,
+    "root": "00400000000000403800000408000000",
+    "moves": 57,
+    "published_ms18_fresh_nodes": 6527270,
+    "ms24_fresh_nodes": 4323449,
+    "ms24_band_nodes": 5272886,
+    "ms18_band_nodes": 8606515,
+    "capacity_ratio": 0.6624,
+    "band_vs_fresh_ratio": 1.2196,
+    "band_vs_published_ratio": 0.8078,
+    "rows": 44242,
+    "row_set_identical": true
+   }
+  ]
+ },
+ "band_sharing_attribution": {
+  "fresh_ms24_total": 91941958,
+  "band_wide_ms24_total": 94005413,
+  "band_wide_overhead_ratio": 1.0224,
+  "conclusion": "memo capacity is the dominant factor; carrying the memo across band bits does NOT reduce nodes (band-wide costs +2.24% vs fresh per-bit under MS=1<<24); band-wide verbatim MS=1<<18 costs +38.26% vs published fresh baseline"
+ },
+ "sensitivity_bit98_fresh_process": {
+  "published_nodes_ms18": 25505012,
+  "rows_constant": 64451,
+  "rows_md5_constant_across_all_ms": "6db21986f3a67c35dde3d9d275acd29f",
+  "curve": [
+   {
+    "ms_shift": 18,
+    "memo_slots": 262144,
+    "nodes": 25505012,
+    "ratio_vs_ms18": 1.0
+   },
+   {
+    "ms_shift": 20,
+    "memo_slots": 1048576,
+    "nodes": 17721785,
+    "ratio_vs_ms18": 0.6948
+   },
+   {
+    "ms_shift": 21,
+    "memo_slots": 2097152,
+    "nodes": 14860944,
+    "ratio_vs_ms18": 0.5827
+   },
+   {
+    "ms_shift": 22,
+    "memo_slots": 4194304,
+    "nodes": 13262116,
+    "ratio_vs_ms18": 0.52
+   },
+   {
+    "ms_shift": 23,
+    "memo_slots": 8388608,
+    "nodes": 12462197,
+    "ratio_vs_ms18": 0.4886
+   },
+   {
+    "ms_shift": 24,
+    "memo_slots": 16777216,
+    "nodes": 12193647,
+    "ratio_vs_ms18": 0.4781
+   },
+   {
+    "ms_shift": 25,
+    "memo_slots": 33554432,
+    "nodes": 12100297,
+    "ratio_vs_ms18": 0.4744
+   }
+  ],
+  "saturation": "ratio plateaus between MS=1<<23 and 1<<24"
+ },
+ "union_invariance": {
+  "run_a_union_md5": "5eb31648e510d1718eaf68de8c6a1e97",
+  "run_b_union_md5": "5eb31648e510d1718eaf68de8c6a1e97",
+  "published_union_md5": "5eb31648e510d1718eaf68de8c6a1e97",
+  "run_a_equals_run_b": true,
+  "run_a_equals_published_union": true
+ },
+ "prescription": {
+  "future_extraction": "fresh per-bit process with MS>=1<<23 (176-352 MB memo) cuts extraction nodes by ~44.7% vs the verbatim MS=1<<18 fresh baseline while keeping every certificate byte identical; band-wide single-process execution is unnecessary",
+  "sweep_side": "the v17 sweep runner class4_child1_runner_v17.ts carries the same MS=1<<18 memo; sweep-side measurement is published separately the same day (see class2-lane-sweep-memo-capacity-73ij-20261117.json)"
+ },
+ "environment": {
+  "node": "v22.20.0 (--experimental-strip-types)",
+  "note": "memo footprint MS=1<<23 is 176 MB, MS=1<<24 is 352 MB per process"
+ },
+ "interpretation_guard": "measurement only: no new WIN/LOSS verdicts, no manifest row is opened or closed, certificate bytes unchanged, the published cost-73j sweep verdicts (16 WIN7-D10 + 57 REFUTED-D10) are unchanged; WIN7-D10 proves a first-player win within depth 10 from the individual 7-stone roots only and REFUTED-D10 is not a LOSS proof; the 11x11 empty board, both two-stone roots {49,60} and {59,60}, S2 {59,60} and classes 1/2/4 all remain UNKNOWN"
+}

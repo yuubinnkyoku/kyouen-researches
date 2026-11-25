@@ -1,0 +1,162 @@
+{
+  "schema": "n11-class2-lane-cost66i-bit19-receipts-recompute-20261118-v1",
+  "date": "2026-11-18",
+  "status": "fold-complete",
+  "basis_head": {
+    "solved_s6_in_manifest": 1473,
+    "remaining_s5_orbits": 174,
+    "unique_remaining_s6": 6375,
+    "sum_remaining_cost": 504596,
+    "s6_needed_by_open_classes": 4648,
+    "cost_needed_by_open_classes": 368510
+  },
+  "frontier_after_cost66i_bit19": {
+    "solved_s6_in_manifest": 1476,
+    "remaining_s5_orbits": 174,
+    "unique_remaining_s6": 6372,
+    "sum_remaining_cost": 504389,
+    "s6_needed_by_open_classes": 4645,
+    "cost_needed_by_open_classes": 368303
+  },
+  "receipts": [
+    {
+      "bit": 19,
+      "root_hex": "00000000000000801226000000080000",
+      "d4_canon_root": "00000000000000801226000000080000",
+      "verdict": "WIN7-D10",
+      "depth": 10,
+      "certificate": {
+        "path": "class2-lane-cost66i-certificates/n11_s7_00000000000000801226000000080000.cert",
+        "storage": "two pinned parts; reconstruct by concatenating part1of2 then part2of2",
+        "part1_git_blob_sha": "e8f083cd357ce03aaf177f8ee40c868450e11a37",
+        "part2_git_blob_sha": "53efcd57fbda21c8f5976987a23f55dbd4cad993",
+        "split_readme_git_blob_sha": "aa6edc6acff4234d18ee3ee6838e7852f05e4c3a",
+        "bytes": 1478743,
+        "sha256": "f87df551ab38f73fb34d756fc4be287de42f1538735e7daf6006deb05749b0ac",
+        "strategy_rows": 40935,
+        "subroots_passed": 52,
+        "root_mobility": 52,
+        "visited_states": 89700,
+        "loser_reply_edges": 84973,
+        "terminal_count": 12879,
+        "terminal_range": [
+          13,
+          17
+        ],
+        "union_missing": 0,
+        "union_extra": 0,
+        "bigint_status": "PASS",
+        "extraction_nodes": 11200170,
+        "fbt_drops": 0
+      },
+      "marginal_d4_s6_orbits": 7,
+      "marginal_manifest_rows": 3,
+      "marginal_manifest_hexes": [
+        "00000000000000003801000000808000",
+        "00000000000000801222000000080000",
+        "00000000000000801226000000000000"
+      ],
+      "extraction_nodes": 11200170,
+      "fbt_drops": 0,
+      "fatal": null
+    }
+  ],
+  "totals": {
+    "receipts": 1,
+    "total_certificate_bytes": 1478743,
+    "total_strategy_rows": 40935,
+    "total_extraction_nodes": 11200170,
+    "total_visited_states": 89700,
+    "total_loser_reply_edges": 84973,
+    "total_terminals": 12879,
+    "marginal_d4_s6_orbits": 7,
+    "marginal_manifest_rows": 3,
+    "s6_edge_cost_removed": 207
+  },
+  "parents_after": {
+    "00000000000000003800000000808000": {
+      "s5_hex": "00000000000000003800000000808000",
+      "classes": 4,
+      "rows_before": 83,
+      "rows_after": 81,
+      "edge_cost_before": 6374,
+      "edge_cost_after": 6233,
+      "lost_rows": 2,
+      "lost_edge_cost": 141
+    },
+    "00000000000000003801000000800000": {
+      "s5_hex": "00000000000000003801000000800000",
+      "classes": 4,
+      "rows_before": 67,
+      "rows_after": 66,
+      "edge_cost_before": 5085,
+      "edge_cost_after": 5019,
+      "lost_rows": 1,
+      "lost_edge_cost": 66
+    },
+    "00000000000000403800000008000000": {
+      "s5_hex": "00000000000000403800000008000000",
+      "classes": 2,
+      "rows_before": 12,
+      "rows_after": 11,
+      "edge_cost_before": 872,
+      "edge_cost_after": 806,
+      "lost_rows": 1,
+      "lost_edge_cost": 66
+    },
+    "00000000000000801202000000080000": {
+      "s5_hex": "00000000000000801202000000080000",
+      "classes": 6,
+      "rows_before": 63,
+      "rows_after": 62,
+      "edge_cost_before": 4842,
+      "edge_cost_after": 4767,
+      "lost_rows": 1,
+      "lost_edge_cost": 75
+    },
+    "00000000000000801222000000000000": {
+      "s5_hex": "00000000000000801222000000000000",
+      "classes": 2,
+      "rows_before": 70,
+      "rows_after": 68,
+      "edge_cost_before": 5345,
+      "edge_cost_after": 5204,
+      "lost_rows": 2,
+      "lost_edge_cost": 141
+    }
+  },
+  "parent_row_incidences": 7,
+  "parent_edge_cost_delta": 489,
+  "parent_count_fully_closed": 0,
+  "conflict_census": {
+    "cost64h_cost66i_conflicts": 0,
+    "d4_overlap_with_cost64h": 0,
+    "d4_overlap_with_cost76c": 0,
+    "cost76c_verdict_conflicts": 0
+  },
+  "source_blob_pins": {
+    "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-s5-ranking-after-cost65j-receipts-20261116.csv": "cbed4d094b87dc4fe2cc48b2db375d7ddb0776c6",
+    "research/experiments/n11-class2-lane-closability-ranking-20261116/output/class-frontier-s5-closability-after-cost60c-20261116.csv": "65215b6582de6efedfed8d77d91630edd883a2cb",
+    "research/experiments/n11-class2-lane-closability-ranking-20261116/output/class-frontier-remaining-s6-worklist-1410-20261116.csv": "2fee1d0718547a62e346d35f5858d7913e37c097",
+    "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost64h-receipts-recompute-20261117.json": "1633be292f6f1862c895009eac29d398d0be7738",
+    "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost76c-receipts-recompute-20261117.json": "953beaea054989e8b1de33f48b1f2ebc13ae7e11",
+    "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost66i-head1473-marginal-rebase-20261117.json": "b54ed7b84d7bdc8272652fdd334e02f9b26d49ed",
+    "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost66i-win7-certificates-20261116.json": "8a85ecef573bb6234b2ee1d9f7cb747926bd26ca",
+    "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost66i-bit19-bigint-independent-reverification-20261117.json": "ef1cefe30f6e030a1a0c5a76339d75f3a9514d7d",
+    "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost66i-inflight-20261116.json": "0393e86ae99cc9f6805f7c40b8b14e07329c410f",
+    "input_snapshot": "24a750eb2967930b92023f556b14797b661678b9",
+    "certificate_part1": "e8f083cd357ce03aaf177f8ee40c868450e11a37",
+    "certificate_part2": "53efcd57fbda21c8f5976987a23f55dbd4cad993",
+    "certificate_split_readme": "aa6edc6acff4234d18ee3ee6838e7852f05e4c3a"
+  },
+  "certificate_manifest": {
+    "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost66i-win7-certificates-20261116.json",
+    "git_blob_sha": "8a85ecef573bb6234b2ee1d9f7cb747926bd26ca"
+  },
+  "input_snapshot": {
+    "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost66i-bit19-parent-incidence-input-20261118.json",
+    "git_blob_sha": "24a750eb2967930b92023f556b14797b661678b9"
+  },
+  "interpretation_guard": "Bookkeeping fold over one independently verified WIN7-D10 receipt. It closes three S6 manifest rows and reduces open frontier demand; it closes no S5 parent, creates no new engine verdict, and does not solve the standard 11x11 empty board.",
+  "next_action": "Recompute the remaining eight cost66i receipt marginals and conflict census against head 1476 before folding another receipt."
+}

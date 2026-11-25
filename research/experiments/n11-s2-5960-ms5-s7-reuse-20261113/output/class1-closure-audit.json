@@ -1,0 +1,22 @@
+{
+  "s5_hex": "00000000000000803082000000000000",
+  "legal_s5_moves": 80,
+  "distinct_s6_orbits": 40,
+  "s6_source_counts": {
+    "new_verified_certificate": 13,
+    "prior_receipt": 25,
+    "sweep": 2
+  },
+  "blocker_moves": [
+    {
+      "s4_move": 5,
+      "s5_move": 71
+    },
+    {
+      "s4_move": 115,
+      "s5_move": 49
+    }
+  ],
+  "result": "FIRST_WIN for this S5 and S4 blockers 5,115, conditional on published sweep and prior verifier receipts",
+  "scope": "class 1 only; remaining blockers, S2 and empty board not decided"
+}

@@ -1,0 +1,305 @@
+{
+ "gates": [
+  {
+   "detail": "bbc9b255e63e46941b372b145f2440b0d6a774c7c455f23d573af374db9ee34c",
+   "name": "pin-readme-sha256",
+   "pass": true
+  },
+  {
+   "detail": "2782",
+   "name": "pin-readme-bytes",
+   "pass": true
+  },
+  {
+   "detail": "cmp bbc9b255e63e46941b372b145f2440b0d6a774c7c455f23d573af374db9ee34c",
+   "name": "pin-readme-head-identical",
+   "pass": true
+  },
+  {
+   "detail": "d8876e5b61d7df02cca4958407ad310b3ceba4de8746f04657598df471834481",
+   "name": "pin-machine-sha256",
+   "pass": true
+  },
+  {
+   "detail": "14671",
+   "name": "pin-machine-bytes",
+   "pass": true
+  },
+  {
+   "detail": "cmp d8876e5b61d7df02cca4958407ad310b3ceba4de8746f04657598df471834481",
+   "name": "pin-machine-head-identical",
+   "pass": true
+  },
+  {
+   "detail": "a6272056df6aa1dc348a00e1961a95223b4642a230a7da95a04b857bd9118b83",
+   "name": "pin-audit-sha256",
+   "pass": true
+  },
+  {
+   "detail": "55614",
+   "name": "pin-audit-bytes",
+   "pass": true
+  },
+  {
+   "detail": "cmp a6272056df6aa1dc348a00e1961a95223b4642a230a7da95a04b857bd9118b83",
+   "name": "pin-audit-head-identical",
+   "pass": true
+  },
+  {
+   "detail": "49b6f85f6b51cfdd8a59c7797223da3d8797885d3c992ce67dc9dae629a883fa",
+   "name": "recon-cand-refA-sha256",
+   "pass": true
+  },
+  {
+   "detail": "49b6f85f6b51cfdd8a59c7797223da3d8797885d3c992ce67dc9dae629a883fa",
+   "name": "recon-cand-refB-sha256",
+   "pass": true
+  },
+  {
+   "detail": "cmp",
+   "name": "recon-cand-two-ref-identical",
+   "pass": true
+  },
+  {
+   "detail": "49b6f85f6b51cfdd8a59c7797223da3d8797885d3c992ce67dc9dae629a883fa",
+   "name": "recon-cand-placed-sha256",
+   "pass": true
+  },
+  {
+   "detail": "94fdb0c6e3503f1e9d19aaaf345f4478157c5a44374f10642c52325f346c2023",
+   "name": "recon-census-refA-sha256",
+   "pass": true
+  },
+  {
+   "detail": "94fdb0c6e3503f1e9d19aaaf345f4478157c5a44374f10642c52325f346c2023",
+   "name": "recon-census-refB-sha256",
+   "pass": true
+  },
+  {
+   "detail": "cmp",
+   "name": "recon-census-two-ref-identical",
+   "pass": true
+  },
+  {
+   "detail": "94fdb0c6e3503f1e9d19aaaf345f4478157c5a44374f10642c52325f346c2023",
+   "name": "recon-census-placed-sha256",
+   "pass": true
+  },
+  {
+   "detail": "d8876e5b61d7df02cca4958407ad310b3ceba4de8746f04657598df471834481",
+   "name": "recon-machine-placed-sha256",
+   "pass": true
+  },
+  {
+   "detail": "rc=0 stderr=",
+   "name": "rerun-r1-rc0",
+   "pass": true
+  },
+  {
+   "detail": "{\"status\": \"second-verified\", \"check_count\": 19, \"all_pass\": true, \"summary\": {\"roots\": 36",
+   "name": "rerun-r1-stdout-second-verified",
+   "pass": true
+  },
+  {
+   "detail": "a6272056df6aa1dc348a00e1961a95223b4642a230a7da95a04b857bd9118b83",
+   "name": "rerun-r1-audit-sha256-published",
+   "pass": true
+  },
+  {
+   "detail": "55614",
+   "name": "rerun-r1-audit-bytes",
+   "pass": true
+  },
+  {
+   "detail": "checks=19",
+   "name": "rerun-r1-gates19-allpass",
+   "pass": true
+  },
+  {
+   "detail": "rc=0 stderr=",
+   "name": "rerun-r2-rc0",
+   "pass": true
+  },
+  {
+   "detail": "{\"status\": \"second-verified\", \"check_count\": 19, \"all_pass\": true, \"summary\": {\"roots\": 36",
+   "name": "rerun-r2-stdout-second-verified",
+   "pass": true
+  },
+  {
+   "detail": "a6272056df6aa1dc348a00e1961a95223b4642a230a7da95a04b857bd9118b83",
+   "name": "rerun-r2-audit-sha256-published",
+   "pass": true
+  },
+  {
+   "detail": "55614",
+   "name": "rerun-r2-audit-bytes",
+   "pass": true
+  },
+  {
+   "detail": "checks=19",
+   "name": "rerun-r2-gates19-allpass",
+   "pass": true
+  },
+  {
+   "detail": "cmp",
+   "name": "rerun-r2-byte-identical-first",
+   "pass": true
+  },
+  {
+   "detail": "rc=0 stderr=",
+   "name": "rerun-r3-rc0",
+   "pass": true
+  },
+  {
+   "detail": "{\"status\": \"second-verified\", \"check_count\": 19, \"all_pass\": true, \"summary\": {\"roots\": 36",
+   "name": "rerun-r3-stdout-second-verified",
+   "pass": true
+  },
+  {
+   "detail": "a6272056df6aa1dc348a00e1961a95223b4642a230a7da95a04b857bd9118b83",
+   "name": "rerun-r3-audit-sha256-published",
+   "pass": true
+  },
+  {
+   "detail": "55614",
+   "name": "rerun-r3-audit-bytes",
+   "pass": true
+  },
+  {
+   "detail": "checks=19",
+   "name": "rerun-r3-gates19-allpass",
+   "pass": true
+  },
+  {
+   "detail": "cmp",
+   "name": "rerun-r3-byte-identical-first",
+   "pass": true
+  },
+  {
+   "detail": "rc=0 stderr=",
+   "name": "rerun-r4-rc0",
+   "pass": true
+  },
+  {
+   "detail": "{\"status\": \"second-verified\", \"check_count\": 19, \"all_pass\": true, \"summary\": {\"roots\": 36",
+   "name": "rerun-r4-stdout-second-verified",
+   "pass": true
+  },
+  {
+   "detail": "a6272056df6aa1dc348a00e1961a95223b4642a230a7da95a04b857bd9118b83",
+   "name": "rerun-r4-audit-sha256-published",
+   "pass": true
+  },
+  {
+   "detail": "55614",
+   "name": "rerun-r4-audit-bytes",
+   "pass": true
+  },
+  {
+   "detail": "checks=19",
+   "name": "rerun-r4-gates19-allpass",
+   "pass": true
+  },
+  {
+   "detail": "cmp",
+   "name": "rerun-r4-byte-identical-first",
+   "pass": true
+  },
+  {
+   "detail": "removed",
+   "name": "tamper-t1-fresh-tree-no-audit-pre",
+   "pass": true
+  },
+  {
+   "detail": "rc=1",
+   "name": "tamper-t1-rc1",
+   "pass": true
+  },
+  {
+   "detail": "len=0",
+   "name": "tamper-t1-stdout-empty",
+   "pass": true
+  },
+  {
+   "detail": "RuntimeError: K1075 source SHA-256 mismatch",
+   "name": "tamper-t1-stderr-final-line",
+   "pass": true
+  },
+  {
+   "detail": "exclusive",
+   "name": "tamper-t1-stderr-exclusive",
+   "pass": true
+  },
+  {
+   "detail": "absent",
+   "name": "tamper-t1-no-audit-written-post",
+   "pass": true
+  },
+  {
+   "detail": "49b6f85f6b51cfdd8a59c7797223da3d8797885d3c992ce67dc9dae629a883fa",
+   "name": "tamper-t1-maintree-w-unchanged",
+   "pass": true
+  },
+  {
+   "detail": "removed",
+   "name": "tamper-t2-fresh-tree-no-audit-pre",
+   "pass": true
+  },
+  {
+   "detail": "rc=1",
+   "name": "tamper-t2-rc1",
+   "pass": true
+  },
+  {
+   "detail": "len=0",
+   "name": "tamper-t2-stdout-empty",
+   "pass": true
+  },
+  {
+   "detail": "RuntimeError: published frontier SHA-256 mismatch",
+   "name": "tamper-t2-stderr-final-line",
+   "pass": true
+  },
+  {
+   "detail": "exclusive",
+   "name": "tamper-t2-stderr-exclusive",
+   "pass": true
+  },
+  {
+   "detail": "absent",
+   "name": "tamper-t2-no-audit-written-post",
+   "pass": true
+  },
+  {
+   "detail": "94fdb0c6e3503f1e9d19aaaf345f4478157c5a44374f10642c52325f346c2023",
+   "name": "tamper-t2-maintree-w-unchanged",
+   "pass": true
+  },
+  {
+   "detail": "two distinct RuntimeError identifications",
+   "name": "tamper-independent-errors",
+   "pass": true
+  }
+ ],
+ "gates_all_pass": true,
+ "gates_pass": 56,
+ "gates_total": 56,
+ "interpretation_guard": [
+  "This third verification re-executes the published 36-root three-ply frontier second-verifier on published bytes; it performs no search, judges no root, closes no row, rebuilds no candidate universe, launches no depth-10 sweep (separate lane).",
+  "The census measures geometric state overlap only, not DFPN node cost or transposition-table hit rate, and justifies no sharing implementation or worker split by itself.",
+  "REFUTED-D10 is NOT a LOSS proof; the 36 roots are candidate roots, not WIN certificates.",
+  "nodes/solved/coverage counts are not verdicts.",
+  "The standard 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, and classes 1/2/4 remain UNKNOWN."
+ ],
+ "schema": "t36-frontier-second-verification-pristine-reexec-third/1",
+ "status": "all-gates-pass",
+ "targets": {
+  "declaration_refs": [
+   "3ba28e88fd1d5c0fffaa9ae042fe3dfa68318ca0",
+   "ffba79856ecbc4e915d01a4b74c4b1bfeee62f31"
+  ],
+  "published_audit_sha256": "a6272056df6aa1dc348a00e1961a95223b4642a230a7da95a04b857bd9118b83",
+  "second_verification_commit": "67766eac2f30c856543a1319cdfc5d1458382c73",
+  "w_inputs": 2
+ }
+}

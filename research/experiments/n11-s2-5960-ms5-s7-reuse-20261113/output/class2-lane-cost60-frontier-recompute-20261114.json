@@ -1,0 +1,130 @@
+{
+ "schema": "n11-class2-lane-cost60-frontier-recompute-20261114-v1",
+ "date": "2026-11-14",
+ "baseline_main_before": "b9a908b9 (frontier after batch3 published at 08e060f0 lineage)",
+ "method": "recompute_frontier_full.py logic + the 19 verified cost-60 WIN7 certificates (output/class2-lane-cost60-win7-certificates-20261114.json); after-batch3 values recomputed as a staged control (assert) before the cost-60 covers are added",
+ "controls": {
+  "after_batch3": {
+   "solved_in_manifest": 690,
+   "unique_remaining": 7156,
+   "sum_cost": 561764,
+   "open_s6": 5373,
+   "open_cost": 421771,
+   "reproduced": true
+  }
+ },
+ "cost60_additions": {
+  "certificates": 19,
+  "covers": 111,
+  "marginal": 110,
+  "marginal_in_manifest": 34,
+  "marginal_manifest_hexes": [
+   "00000000000000003802000008000800",
+   "00000000000000003802000008400000",
+   "00000000000000003802000208000000",
+   "00000000000000003802000808000000",
+   "00000000000000003802400008000000",
+   "00000000000000403802000008000000",
+   "00000000000000801202000020000001",
+   "00000000000000801202000020000002",
+   "00000000000000801202000020000400",
+   "00000000000000801202000020100000",
+   "00000000000000801202000022000000",
+   "00000000000000801202000024000000",
+   "00000000000000801206000020000000",
+   "00000000000000801212000020000000",
+   "00000000000000801222000020000000",
+   "00000000000000801a02000000000080",
+   "00000000000000801a02000000000400",
+   "00000000000000801a02000000100000",
+   "00000000000000801a02000020000000",
+   "00000000000000801a02000040000000",
+   "00000000000000801a02000100000000",
+   "00000000000000801a12000000000000",
+   "00000000000000801a22000000000000",
+   "00000000000000801a42000000000000",
+   "00000000000000849002000002000000",
+   "00000000000000c09002000002000000",
+   "00000000000080003800000008000400",
+   "00000000000080003800000008200000",
+   "00000000000080003800000108000000",
+   "00000000000080003800080008000000",
+   "00000000000080003810000008000000",
+   "00000000002020003800000008000000",
+   "00000000010000809002000002000000",
+   "00000000040000809002000002000000"
+  ]
+ },
+ "frontier_after_cost60": {
+  "solved_s6_in_manifest": 724,
+  "remaining_s5_orbits": 177,
+  "unique_remaining_s6": 7122,
+  "sum_remaining_cost": 559294,
+  "s6_needed_by_open_classes": 5339,
+  "cost_needed_by_open_classes": 419301,
+  "demand_histogram_open_only": {
+   "c2=0,c4=1": 528,
+   "c2=0,c4=2": 3046,
+   "c2=0,c4=3": 18,
+   "c2=1,c4=0": 279,
+   "c2=1,c4=1": 65,
+   "c2=1,c4=2": 9,
+   "c2=2,c4=0": 1322,
+   "c2=2,c4=1": 6,
+   "c2=2,c4=2": 66
+  },
+  "best_class2": {
+   "s5_hex": "00000000000000003802000008000000",
+   "classes": 2,
+   "remaining_s6_orbits": 17,
+   "remaining_s7_edge_cost": 1168
+  },
+  "next_class2": [
+   {
+    "s5_hex": "00000000000000809082000000000000",
+    "classes": 3,
+    "remaining_s6_orbits": 37,
+    "remaining_s7_edge_cost": 2507
+   },
+   {
+    "s5_hex": "00000000000000809102000000000000",
+    "classes": 2,
+    "remaining_s6_orbits": 40,
+    "remaining_s7_edge_cost": 2850
+   },
+   {
+    "s5_hex": "00000000000000803202000000000000",
+    "classes": 2,
+    "remaining_s6_orbits": 41,
+    "remaining_s7_edge_cost": 2776
+   }
+  ],
+  "best_class4": {
+   "s5_hex": "00000000020000003800000080000000",
+   "classes": 4,
+   "remaining_s6_orbits": 24,
+   "remaining_s7_edge_cost": 1934
+  },
+  "next_class4": [
+   {
+    "s5_hex": "00000000000000003800002000800000",
+    "classes": 4,
+    "remaining_s6_orbits": 60,
+    "remaining_s7_edge_cost": 4216
+   },
+   {
+    "s5_hex": "00000000000000003800000000802000",
+    "classes": 4,
+    "remaining_s6_orbits": 64,
+    "remaining_s7_edge_cost": 4598
+   },
+   {
+    "s5_hex": "00000000000000003800001000800000",
+    "classes": 4,
+    "remaining_s6_orbits": 66,
+    "remaining_s7_edge_cost": 4719
+   }
+  ]
+ },
+ "interpretation_guard": "bookkeeping over published receipts; every counted cover comes from an independently verified certificate; REFUTED-D10 sweeps prove only absence of WIN7-D10; 11x11 empty root / {49,60} / S2 {59,60} / class 2 / class 4 remain UNKNOWN"
+}

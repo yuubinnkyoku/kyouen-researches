@@ -1,0 +1,368 @@
+{
+ "cap": 30000000,
+ "date": "2026-11-20",
+ "gates": [
+  {
+   "detail": {
+    "git_blob": "c132cc6425eee3feaeef1d697dd74f968cfedb59"
+   },
+   "name": "runner-blob-pin",
+   "pass": true
+  },
+  {
+   "detail": {
+    "sha256": "5fdd342d624abec9b8478b69b13fc63a2dbbec99d227da4740cfe068647e688e"
+   },
+   "name": "k1085-sha-pin",
+   "pass": true
+  },
+  {
+   "detail": {
+    "sha256": "3045e15295af9b85b86578b5e8d55a8b325466eac576ee15b8450f6acb9b9ced"
+   },
+   "name": "k1086-sha-pin",
+   "pass": true
+  },
+  {
+   "detail": {
+    "sha256": "808fbda1152cb492bb76641a101660f965f2801c0b74790d20a0d998d5b747fc"
+   },
+   "name": "k1089-sha-pin",
+   "pass": true
+  },
+  {
+   "detail": {
+    "sha256": "edd7ac84f47268adcc8a3364a5ff687499cb2a76ded0c0fa379506af02f40b25"
+   },
+   "name": "k1091-sha-pin",
+   "pass": true
+  },
+  {
+   "detail": {
+    "sha256": "335eca5ecb7c72e6fb0ee41eb740de736bf4eb78791823ae55f6375a68cb4707"
+   },
+   "name": "k1095-sha-pin",
+   "pass": true
+  },
+  {
+   "detail": {
+    "sha256": "2896deb0c5e820904d0e2463e3fd9ebd1613b540a66a97f88d86c75bffa71f40"
+   },
+   "name": "k1097-sha-pin",
+   "pass": true
+  },
+  {
+   "detail": {
+    "sha256": "e8f5d6749032c4ad95136d2915c03ce7e997fe494bf3eebf7f912cccc88ded1e"
+   },
+   "name": "sweep-volume-pin",
+   "pass": true
+  },
+  {
+   "detail": {
+    "records": 18,
+    "roots": 9,
+    "rule": "child = root minus lowest set bit; both AND orderings per root; depth 10; cap 30M; timeout 280s; runner blob and k1097 input sha stamped in every published record"
+   },
+   "name": "probe-plan-rederivation-vs-published-records",
+   "pass": true
+  },
+  {
+   "detail": {
+    "bad": [],
+    "count": 0
+   },
+   "name": "published-internal-consistency-jsonl-vs-volume-per-root",
+   "pass": true
+  },
+  {
+   "detail": {
+    "gained_hist": {
+     "1": 1,
+     "2": 2,
+     "3": 6
+    },
+    "nodes_total": 3574172,
+    "refuted_roots": [
+     "00000000000000083800040048100000",
+     "00000000000000103800000008080041",
+     "00000000000000143800000209000000",
+     "00000000000000821082000000001018",
+     "00000000000000821086800000000800",
+     "00000000000040809002000800100200",
+     "00000000020000801202000800100001",
+     "00000010000000801202000000000448"
+    ],
+    "terminalStoneRange_union_from_records": [
+     14,
+     18
+    ],
+    "win_roots": [
+     "00000000010000809002000040002001"
+    ]
+   },
+   "name": "published-classification-pins",
+   "pass": true
+  },
+  {
+   "detail": {
+    "partition": {
+     "disjoint": true,
+     "refuted_claims_distinct": true,
+     "refuted_claims_subset_of_prior": true,
+     "union_is_prior_universe": true,
+     "win_claims_distinct": true
+    },
+    "refuted_claimed_rows": 49,
+    "refuted_roots": 16,
+    "unknown_claim_rows": [],
+    "win_claimed_rows": 23,
+    "win_roots": 7
+   },
+   "name": "residual49-rederived-from-k1085-k1086",
+   "pass": true
+  },
+  {
+   "detail": {
+    "partition": {
+     "disjoint": true,
+     "refuted_claims_distinct": true,
+     "refuted_claims_subset_of_prior": true,
+     "union_is_prior_universe": true,
+     "win_claims_distinct": true
+    },
+    "refuted_claimed_rows": 40,
+    "refuted_roots": 13,
+    "unknown_claim_rows": [],
+    "win_claimed_rows": 9,
+    "win_roots": 3
+   },
+   "name": "residual40-rederived-k1085-k1086-k1089",
+   "pass": true
+  },
+  {
+   "detail": {
+    "partition": {
+     "disjoint": true,
+     "refuted_claims_distinct": true,
+     "refuted_claims_subset_of_prior": true,
+     "union_is_prior_universe": true,
+     "win_claims_distinct": true
+    },
+    "refuted_claimed_rows": 30,
+    "refuted_roots": 12,
+    "unknown_claim_rows": [],
+    "win_claimed_rows": 10,
+    "win_roots": 3
+   },
+   "name": "residual30-rederived-k1085-k1086-k1089-k1091",
+   "pass": true
+  },
+  {
+   "detail": {
+    "partition": {
+     "disjoint": true,
+     "refuted_claims_distinct": true,
+     "refuted_claims_subset_of_prior": true,
+     "union_is_prior_universe": true,
+     "win_claims_distinct": true
+    },
+    "refuted_claimed_rows": 23,
+    "refuted_roots": 9,
+    "unknown_claim_rows": [],
+    "win_claimed_rows": 7,
+    "win_roots": 3
+   },
+   "name": "residual23-rederived-k1085-k1086-k1089-k1091-k1095",
+   "pass": true
+  },
+  {
+   "detail": {
+    "equal": true,
+    "k1097_per_row_residual23_rows": 23,
+    "k1097_scope1_scope2_same_selection": true,
+    "note": "the re-derivation above does not use K1097 for the universe; this gate is a crosscheck only"
+   },
+   "name": "residual23-consistency-with-k1097-bookkeeping",
+   "pass": true
+  },
+  {
+   "detail": {
+    "d4_min_canonical_roots": 9,
+    "popcount8_all": true,
+    "quad_free_roots": 9
+   },
+   "name": "replace9-plan-geometry-basic",
+   "pass": true
+  },
+  {
+   "detail": {
+    "bad": [],
+    "gains_equals_len_all": true,
+    "pairs_ok": 23
+   },
+   "name": "replace9-claims-geometry-rederived",
+   "pass": true
+  },
+  {
+   "detail": {
+    "covered_union": 23,
+    "matches_rederived_residual23": true
+   },
+   "name": "coverage-23-exactly-once",
+   "pass": true
+  },
+  {
+   "detail": {
+    "k1097_scope1_gains_hist": {
+     "1": 1,
+     "2": 2,
+     "3": 6
+    },
+    "k1097_scope1_greedy_size": 9,
+    "k1097_scope1_leftover": [],
+    "k1097_scope1_max_matching": 23,
+    "k1097_scope1_stranded": [],
+    "observed_hist": {
+     "1": 1,
+     "2": 2,
+     "3": 6
+    }
+   },
+   "name": "replace9-gains-hist-and-k1097-plan-agreement",
+   "pass": true
+  },
+  {
+   "detail": {
+    "cap_or_error_probes": 0,
+    "nodes_sum": 3574172,
+    "ordering_conflicts": [],
+    "probes_compared_ok": 18,
+    "refuted_roots": [
+     "00000000000000083800040048100000",
+     "00000000000000103800000008080041",
+     "00000000000000143800000209000000",
+     "00000000000000821082000000001018",
+     "00000000000000821086800000000800",
+     "00000000000040809002000800100200",
+     "00000000020000801202000800100001",
+     "00000010000000801202000000000448"
+    ],
+    "win_roots": [
+     "00000000010000809002000040002001"
+    ]
+   },
+   "name": "passA-fresh-vs-published-all-fields",
+   "pass": true
+  },
+  {
+   "detail": {
+    "cap_or_error_probes": 0,
+    "nodes_sum": 3574172,
+    "ordering_conflicts": [],
+    "probes_compared_ok": 18,
+    "refuted_roots": [
+     "00000000000000083800040048100000",
+     "00000000000000103800000008080041",
+     "00000000000000143800000209000000",
+     "00000000000000821082000000001018",
+     "00000000000000821086800000000800",
+     "00000000000040809002000800100200",
+     "00000000020000801202000800100001",
+     "00000010000000801202000000000448"
+    ],
+    "win_roots": [
+     "00000000010000809002000040002001"
+    ]
+   },
+   "name": "passB-fresh-vs-published-all-fields",
+   "pass": true
+  },
+  {
+   "detail": {
+    "bad": [],
+    "count": 0
+   },
+   "name": "passA-vs-passB-deterministic-fields",
+   "pass": true
+  },
+  {
+   "detail": {
+    "note": "published sweep machine replace9_d10_sweep_20261120.py (machine sha256 d163b2a1...) re-assembled in an isolated tree on the published probe records",
+    "pristine_output_sha256": "e8f5d6749032c4ad95136d2915c03ce7e997fe494bf3eebf7f912cccc88ded1e",
+    "published_volume_sha256": "e8f5d6749032c4ad95136d2915c03ce7e997fe494bf3eebf7f912cccc88ded1e"
+   },
+   "name": "pristine-reassemble-volume-byte-identical",
+   "pass": true
+  }
+ ],
+ "inputs": {
+  "k1085_sha256": "5fdd342d624abec9b8478b69b13fc63a2dbbec99d227da4740cfe068647e688e",
+  "k1086_sha256": "3045e15295af9b85b86578b5e8d55a8b325466eac576ee15b8450f6acb9b9ced",
+  "k1089_sha256": "808fbda1152cb492bb76641a101660f965f2801c0b74790d20a0d998d5b747fc",
+  "k1091_sha256": "edd7ac84f47268adcc8a3364a5ff687499cb2a76ded0c0fa379506af02f40b25",
+  "k1095_sha256": "335eca5ecb7c72e6fb0ee41eb740de736bf4eb78791823ae55f6375a68cb4707",
+  "k1097_sha256": "2896deb0c5e820904d0e2463e3fd9ebd1613b540a66a97f88d86c75bffa71f40",
+  "k1146_probe_records_jsonl_sha256": "bdacf0e7056093145bef917ad384220b70c06be68bdd892b56dd23b3a7d4cb06",
+  "k1146_sweep_machine_sha256": "d163b2a120ac46abee40d0b9a32269bce14a73901a85a80e595b7d2512bcd41",
+  "k1146_volume_sha256": "e8f5d6749032c4ad95136d2915c03ce7e997fe494bf3eebf7f912cccc88ded1e"
+ },
+ "interpretation_guard": [
+  "This verification re-executes published probe facts with the pinned engine and compares deterministic fields; it verifies NO win/loss claim beyond the runner's depth-bounded probe semantics.",
+  "loss=true (uncapped) marks a WIN8-within-depth-10 candidate for that 8-stone root only; its certificate extraction is a separate declared undertaking and row closure semantics require the published extraction, triple-verification and receipt fold machines.",
+  "loss=false (uncapped) is a REFUTED-D10 probe fact: it is NOT a LOSS proof of any earlier position and only erodes the replacement pool (safe8 120,474 - 58 = 120,416 roots).",
+  "No row is closed by this verification; the residual-23 rows all remain open.",
+  "Node counts and solved counts are not win/loss readings.",
+  "The standard 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60} and classes 1/2/4 all remain UNKNOWN."
+ ],
+ "passA_reexec_stats": {
+  "cap_or_error_probes": 0,
+  "nodes_sum": 3574172,
+  "ordering_conflicts": [],
+  "probes_compared_ok": 18,
+  "refuted_roots": [
+   "00000000000000083800040048100000",
+   "00000000000000103800000008080041",
+   "00000000000000143800000209000000",
+   "00000000000000821082000000001018",
+   "00000000000000821086800000000800",
+   "00000000000040809002000800100200",
+   "00000000020000801202000800100001",
+   "00000010000000801202000000000448"
+  ],
+  "win_roots": [
+   "00000000010000809002000040002001"
+  ]
+ },
+ "passB_reexec_stats": {
+  "cap_or_error_probes": 0,
+  "nodes_sum": 3574172,
+  "ordering_conflicts": [],
+  "probes_compared_ok": 18,
+  "refuted_roots": [
+   "00000000000000083800040048100000",
+   "00000000000000103800000008080041",
+   "00000000000000143800000209000000",
+   "00000000000000821082000000001018",
+   "00000000000000821086800000000800",
+   "00000000000040809002000800100200",
+   "00000000020000801202000800100001",
+   "00000010000000801202000000000448"
+  ],
+  "win_roots": [
+   "00000000010000809002000040002001"
+  ]
+ },
+ "protocol": "full re-execution second verification of the published K1146 replace-9 sweep probe facts; runner v17 pinned by git blob; depth 10; cap 30M; timeout 280s; both AND orderings; pilot_d6 control required on every probe; the raw child hex rule (child = root minus lowest set bit) is re-derived per record and is bookkeeping only (the engine receives the identical cell set); deterministic comparison fields are nodes/loss/capped/terminalStoneRange; ms/wall timings are excluded; passA runs in this tree, passB in an isolated cwd/HOME tree; the residual-23 universe and the replacement-plan geometry are re-derived by this machine from the pinned upstream inputs",
+ "runner_git_blob": "c132cc6425eee3feaeef1d697dd74f968cfedb59",
+ "schema": "n11-residual72-replace9-sweep-reexec-second-verification-20261120-v1",
+ "single_owner_note": "research/log/2026-11-20-n11-residual72-replace9-d10-sweep-reexec-second-verification-single-owner-note.md (commit 3f340466218bb47a08d1f7421947ff720bc52b85)",
+ "targets": {
+  "fresh_nodes_total_passA": 3574172,
+  "pass_b_included": true,
+  "probes_total": 18,
+  "published_nodes_total": 3574172,
+  "replacement_roots": 9
+ },
+ "timeout_s": 280
+}

@@ -1,0 +1,468 @@
+{
+ "schema": "n11-five-parent-win8-root208090020004-receipt-fold-20261120-v1",
+ "date": "2026-11-20",
+ "status": "fold-complete",
+ "receipt_ordinal": "thirtieth (fold23, thirteenth WIN8 receipt fold)",
+ "single_owner_note": "research/log/2026-11-20-n11-fold23-win8-root208090020004-single-owner-note.md",
+ "previous_fold": {
+  "record": "research/experiments/n11-residual32-win8-receipt-fold-root840500-20261120/output/win8-root840500-receipt-fold-20261120.json (sha256 f6e011f4a16e6fe257694c3cd3ed90490623f84e1c24113c3f55df68ba3e3488)",
+  "frontier_after": {
+   "solved_s6_in_manifest": 1718,
+   "remaining_s5_orbits": 173,
+   "unique_remaining_s6": 6130,
+   "sum_remaining_cost": 485759,
+   "s6_needed_by_open_classes": 4438,
+   "cost_needed_by_open_classes": 352207,
+   "parent_row_incidence": 11671
+  }
+ },
+ "certificate_source": {
+  "record": "research/experiments/n11-residual48-win8-cert-extract-root208090020004-20261120 (K1123: WIN8 root certificate extract + triple verification, 19 gates; 54-mobility 3-claim WIN8-D10 candidate on the fresh-probe basis, fresh probes 350792/442824 matching the published K1119 total 793616)",
+  "verification_sha256": "6ea634c9fdd005626904669e08cb7139e59e78120a0b8c9e1dd48fde0b70ddf0",
+  "certificate_path": "research/experiments/n11-residual48-win8-cert-extract-root208090020004-20261120/certs/win8-root-00000000000020809002000480100000-20261120.n11",
+  "certificate_sha256": "b8145352cc1d8e21247595bdaedcb123c8e34cf0fb476502a561b46a106f701e",
+  "fresh_probe_basis": "research/experiments/n11-residual48-win8-cert-extract-root208090020004-20261120/output/.input-k1119-log.md (published K1119 fresh-probe log; git blob 51bad3fac..., sha256 4d11ca89...; probe total 793616, pinned by K1123 g01/g02/g06/g08)",
+  "claims_record": "research/experiments/n11-residual72-safe8-refuted50-refsolve-20261120/output/safe8-refuted50-refsolve-20261120.json (K1097; sha256 2896deb0c5e820904d0e2463e3fd9ebd1613b540a66a97f88d86c75bffa71f40; win16_intrinsic_footprints: intrinsic == claimed == 3 rows)"
+ },
+ "source_blob_pins": {
+  "inputs/worklist.csv": "2fee1d0718547a62e346d35f5858d7913e37c097",
+  "inputs/ledger.json": "e8785d509e8a11a37c0d03cc450455a14708c34d",
+  "inputs/globalFold.json": "753a4bf4d0e11bea894111f9fa43bcff5e9ab7dc",
+  "inputs/previousCostFold.json": "7e6144cc4bc92c34faa14bed3058cde64fb3880e",
+  "inputs/firstFoldTarball.tar.gz": "fa5f26a9dc9bd2fb8222aa8ba0431d7578043019",
+  "inputs/census.json": "9c251da3138c5cb0516e097be5e5d0427dfaf5f0",
+  "inputs/audit.json": "7cdc7c9ef341b5d9759923b3fc4986231c48895f",
+  "ex48/output/secondThirdFold.json": "7923a0fe5331d1f7c896748031c4071b68fcc13a",
+  "fold4rec/fold4.json": "38715413d6dd23b97717c92d73d8b4a0af807cda",
+  "fold56rec/fold56.json": "134796a7de1e472c26e35defd7340d208a10b9b0",
+  "fold9/output/ninth-twelfth-win7-receipt-fold-20261119.json": "5b1a30f9b56230382d502aa66ea89d3083b16dd2",
+  "fold_fourth_fifth_sixth.py": "d8068a8eea48fde5203ac6342abd4df2bd584b99"
+ },
+ "source_sha256_pins": {
+  "foldv2/output/seventh-win7-receipt-fold-20261119.json": "f1baf15942d3efeaa3ca75c4d803148239269715e297aaf9b00042611543b737",
+  "foldv2/output/eighth-win7-receipt-fold-20261119.json": "afcf7d0ad0d6ca1edf31e150a7ba840f802a6382506f4a662b4e13567fbd30a2",
+  "resolve6/output/post-saturation-full-cache-join-resolve6-20261120.json": "e85d4bfb867a193f2b3cdb23ec9e15679359c9f337fcd97eb5c62473b90c281a",
+  "fs13/output/windfall4-thirteenth-sixteenth-win7-receipt-fold-20261120.json": "24db2352ad0d94ee4a76ec3de294f02cbdac7899f0b6ef64ea695d261017cdc2",
+  "sv17pub/output/seventeenth-cert-triple-verification-20261120.json": "c1073bae1d056db7f56d04a77fd9889d1e297a82a07537ddcd02c00d329dbabc",
+  "sv17pub/certs/win7-root-00004000000000821082000000000100-20261120.n11": "21dd2f0e9f0b8ec22e917fce5a732835098baf37570a227bebacacb4c13807c8",
+  "fold10/output/seventeenth-win7-receipt-fold-20261120.json": "bed7d33193299a0aa06ea4e076562dfa46251d20d5c3c4ca7fd231ffe854908a",
+  "k1096/output/win8-cert-extract-verification-20261120.json": "ad0d9fb3a30edbd76fcb5562ab01f1e7e51781381377a04fa4a195378eb887da",
+  "k1096/certs/win8-root-00000000000000003800000008003180-20261120.n11": "1393128972a2ee2bd7586239c830caac967ee45166be8ed87107907c42f23e2c",
+  "k1097/output/safe8-refuted50-refsolve-20261120.json": "2896deb0c5e820904d0e2463e3fd9ebd1613b540a66a97f88d86c75bffa71f40",
+  "fold11/output/win8-root8003180-receipt-fold-20261120.json": "d7bf2cd53d99d836418678abd172f4d5890d70bf8a90633b1e434b784bf7e50e",
+  "k1106/output/win8-cert-extract-verification-20261120.json": "0bd2dd10c1d5b735a04f31425003c635d80266e4c03a6bef0fdff212d499408f",
+  "k1106/certs/win8-root-00000000000000003800000008005021-20261120.n11": "69f32661d80ae0887ecf385cb690e0d4300c5ad28686ec42fc83e93da79ac6f5",
+  "fold12/output/win8-root8005021-receipt-fold-20261120.json": "0f73795ce71aec83ba4a9f1b97a530891f3e6d1c807bfa47c9fbb88a1b33f5bd",
+  "k1108/output/win8-cert-extract-verification-20261120.json": "2e453a76fc3168b8eb2e5c224d4a271eea0839eb5256d51fd9c02eb54bb1f648",
+  "k1108/certs/win8-root-00000000000000003800000009840004-20261120.n11": "5b114b9e739b7a0a300434afb7ec5326564fc54b0d234df5e3d61abc44541143",
+  "fold13/output/win8-root9840004-receipt-fold-20261120.json": "c2bf80511e816306bbb8dcf4efb450214234f020c513386c3b3a82045f71e9ae",
+  "k1109/output/win8-cert-extract-verification-20261120.json": "00836a6e859c780e2204b1aea427eefc044f0d4c5a6b8e8c33505a57fa950bb4",
+  "k1109/certs/win8-root-00000000000000909002200080100000-20261120.n11": "b8a15f9aac5e5f802f85459318247cb20bc983e3b2372167917ba8138cbc7a54",
+  "fold14/output/win8-root9090022-receipt-fold-20261120.json": "ed3159fdb8cf2dd8884beb845cd4ef776cbc8b4b7b442d568d895cd930a13f71",
+  "k1114/output/win8-cert-extract-verification-20261120.json": "ab8cd535c14637c150c02ceeb688b335eb2da9dc1c5778b6a7c05a1a0906f67e",
+  "k1114/certs/win8-root-00000000012000003800080009000000-20261120.n11": "5a1359033325e918cf5d9cd2d60ff63fc2fd45e30b926e79330560a7a3a23c4c",
+  "fold15/output/win8-root120000038-receipt-fold-20261120.json": "bae2b3c182da6b0b06be530604f43d1bfa3bf008190860dad6d27f2b9c285aef",
+  "k1113/output/win8-cert-extract-verification-20261120.json": "b8c264e671b9e26fa9caf8cd2454f75b13c992d548e2d5ed0b02f2bec75c5236",
+  "k1113/certs/win8-root-00000000010000889002000080100000-20261120.n11": "105e1e2ad59f4f6baa85f37dde7306b98fc96d2164edf5b5d12205b1c71e2bc4",
+  "fold16/output/win8-root8890020-receipt-fold-20261120.json": "edd552588e265ada1cf015b4359584288cca3f18686c0fc8ca1536b6458b969b",
+  "k1117/output/win8-cert-extract-verification-20261120.json": "3d97ac6d90e239638b019c95218f0051b432ccdcc6dd2d25e805dcbab11024d9",
+  "k1117/certs/win8-root-00000000000000801202000022081000-20261120.n11": "f62f6704a0d9a1366d333529dd9e742813fe87814f3857a00406d6cfc87f3c8f",
+  "fold17/output/win8-root22081000-receipt-fold-20261120.json": "1175244d1da269b1851d5298a824b12a6ed445edc99307acc9c0fefd803bd674",
+  "k1120/output/win8-cert-extract-verification-20261120.json": "ea6f1945c5a8ff359b93336a0a5d4e29035928447503e2bf2f0d13277174b516",
+  "k1120/certs/win8-root-00000000000000801202000000901010-20261120.n11": "d6745edbc77a53bbef66e807fd18e69c039e3007345af906452af11d3206cbe1",
+  "fold18/output/win8-root00901010-receipt-fold-20261120.json": "18b543c45c98c22297fd31b8060971aa90e92826f494acb27ad94ce869250026",
+  "k1119/output/win8-cert-extract-verification-20261120.json": "4696ce1475fd3313c6bb46ebf553e48db4eff2d7182edb0f2b8015258fd17100",
+  "k1119/certs/win8-root-00000000000000801212000001009000-20261120.n11": "b4dd1e065ca2fdea4715e5b97e1145288a9861f738ccec5a241dd3c3c70d390c",
+  "fold19/output/win8-root1009000-receipt-fold-20261120.json": "c02d9a549fb685a1310813e47726598417907fe1e007495b06799ec0b57052ae",
+  "k1121/output/win8-cert-extract-verification-20261120.json": "0088ebab040a29e608c987fb8ae866abf59253d60455b0d2ca6b6ef963170940",
+  "k1121/certs/win8-root-00000000000000003800000008d10000-20261120.n11": "8513e36613c2676fb82816f47a1ecdda674264eedb9c583dae2616346f4000d2",
+  "fold20/output/win8-root08d10000-receipt-fold-20261120.json": "76fd255bf16f0e434d15579cf148015bd564929e85910172f0a0ef87015842a2",
+  "k1124/output/win8-cert-extract-verification-20261120.json": "422e61095e80ee5ea6a52278e2ba52bb18d4ea301cab4c26e1e45d9c9701f172",
+  "k1124/certs/win8-root-00000000000000801202000800880200-20261120.n11": "eca214f0c53f966c912f3d18b9816dc74baa250a2fe538bfcb2734076512fabf",
+  "fold21/output/win8-root80880200-receipt-fold-20261120.json": "9a4da2f61fb5010ebfbddf784cd76f5972b438c244fa29c1f96f2c3cde65cb39",
+  "k1125/output/win8-cert-extract-verification-20261120.json": "06c65f7611b7fea17131d5e13b28792aee1b7d723e7b8cdb1cb3b54012282886",
+  "k1125/certs/win8-root-00000000000000801202000000840500-20261120.n11": "21ad61959f6b2ae13e2e24fd98842788c88ada50643ccfd1f88a459701d0cbcc",
+  "fold22/output/win8-root840500-receipt-fold-20261120.json": "f6e011f4a16e6fe257694c3cd3ed90490623f84e1c24113c3f55df68ba3e3488",
+  "k1123/output/win8-cert-extract-verification-20261120.json": "6ea634c9fdd005626904669e08cb7139e59e78120a0b8c9e1dd48fde0b70ddf0",
+  "k1123/certs/win8-root-00000000000020809002000480100000-20261120.n11": "b8145352cc1d8e21247595bdaedcb123c8e34cf0fb476502a561b46a106f701e"
+ },
+ "receipt_count": 1,
+ "receipts": [
+  {
+   "root": "00000000000020809002000480100000",
+   "raw_root_hex": "00000000000020809002000480100000",
+   "receipt": "thirtieth",
+   "stones": 8,
+   "verdict": "WIN8-D10",
+   "legal_next_moves": 54,
+   "covered_s6_rows": [
+    "00000000000000801202040000001000",
+    "00000000000000801202040000800000",
+    "00000000000020809002000080000000",
+    "00000000000020809002000400000000"
+   ],
+   "covered_five_parent_target_rows": [
+    "00000000000000801202040000001000",
+    "00000000000000801202040000800000",
+    "00000000000020809002000080000000"
+   ],
+   "extra_s6_rows_not_in_target": [
+    "00000000000020809002000400000000"
+   ],
+   "unique_strategy_rows": 23621,
+   "certificate_sha256": "b8145352cc1d8e21247595bdaedcb123c8e34cf0fb476502a561b46a106f701e",
+   "certificate_bytes": 855258,
+   "closed_edge_cost": 321,
+   "affected_parents": 3,
+   "parent_deltas": [
+    {
+     "parent_hex": "00000000000000003800000008001000",
+     "classes": 2,
+     "rows_before": 9,
+     "rows_closed": 1,
+     "rows_after": 8
+    },
+    {
+     "parent_hex": "00000000000000003800000008002000",
+     "classes": 2,
+     "rows_before": 11,
+     "rows_closed": 2,
+     "rows_after": 9
+    },
+    {
+     "parent_hex": "00000000000000801202080000000000",
+     "classes": 2,
+     "rows_before": 55,
+     "rows_closed": 2,
+     "rows_after": 53
+    }
+   ],
+   "independent_verification": {
+    "extraction_and_triple": {
+     "gates": 19,
+     "all_pass": true,
+     "methods": [
+      "extraction self-check A1/A2/B byte-identical",
+      "BigInt 3x3 cofactor",
+      "Bareiss 4x4",
+      "python third-method exact traversal"
+     ],
+     "third_method_aggregates": {
+      "loser_reply_edges": 43650,
+      "loser_states": 9955,
+      "root_first_moves": 54,
+      "terminal_count": 7516,
+      "terminal_range": [
+       14,
+       18
+      ],
+      "visited_states": 49094,
+      "winner_states": 31623
+     }
+    },
+    "coverage_geometry_two_methods": {
+     "d4_images_two_stone_removals_ops": 224,
+     "c86_subsets": 28,
+     "canonical_row_sets_equal": true,
+     "canonical_rows": [
+      "00000000000000001202040000801000",
+      "00000000000000003800000008003000",
+      "00000000000000800202040000801000",
+      "00000000000000801002000480100000",
+      "00000000000000801200040000801000",
+      "00000000000000801202040000001000",
+      "00000000000000801202040000800000",
+      "00000000000020001002000480100000",
+      "00000000000020008002000480100000",
+      "00000000000020009000000480100000",
+      "00000000000020009002000080100000",
+      "00000000000020009002000400100000",
+      "00000000000020009002000480000000",
+      "00000000000020800002000480100000",
+      "00000000000020801000000480100000",
+      "00000000000020801002000080100000",
+      "00000000000020801002000400100000",
+      "00000000000020801002000480000000",
+      "00000000000020808000000480100000",
+      "00000000000020808002000080100000",
+      "00000000000020808002000400100000",
+      "00000000000020808002000480000000",
+      "00000000000020809000000080100000",
+      "00000000000020809000000400100000",
+      "00000000000020809000000480000000",
+      "00000000000020809002000000100000",
+      "00000000000020809002000080000000",
+      "00000000000020809002000400000000"
+     ]
+    },
+    "cross_method_union_exact": true,
+    "source_record": "research/experiments/n11-residual48-win8-cert-extract-root208090020004-20261120"
+   }
+  }
+ ],
+ "frontier_before": {
+  "solved_s6_in_manifest": 1718,
+  "remaining_s5_orbits": 173,
+  "unique_remaining_s6": 6130,
+  "sum_remaining_cost": 485759,
+  "s6_needed_by_open_classes": 4438,
+  "cost_needed_by_open_classes": 352207,
+  "parent_row_incidence": 11671
+ },
+ "frontier_after": {
+  "solved_s6_in_manifest": 1722,
+  "remaining_s5_orbits": 173,
+  "unique_remaining_s6": 6126,
+  "sum_remaining_cost": 485438,
+  "s6_needed_by_open_classes": 4434,
+  "cost_needed_by_open_classes": 351886,
+  "parent_row_incidence": 11666
+ },
+ "new_receipt_coverage": {
+  "unique_s6_rows": 4,
+  "closed_edge_cost": 321,
+  "rows": [
+   {
+    "row_hex": "00000000000000801202040000001000",
+    "cost": 82,
+    "category": "unswept",
+    "demand": {
+     "c1": 0,
+     "c2": 1,
+     "c4": 0
+    },
+    "parents": [
+     "00000000000000003800000008001000"
+    ],
+    "receipt": {
+     "root": "00000000000020809002000480100000",
+     "verdict": "WIN8-D10"
+    }
+   },
+   {
+    "row_hex": "00000000000000801202040000800000",
+    "cost": 75,
+    "category": "unswept",
+    "demand": {
+     "c1": 0,
+     "c2": 1,
+     "c4": 0
+    },
+    "parents": [
+     "00000000000000003800000008002000"
+    ],
+    "receipt": {
+     "root": "00000000000020809002000480100000",
+     "verdict": "WIN8-D10"
+    }
+   },
+   {
+    "row_hex": "00000000000020809002000080000000",
+    "cost": 75,
+    "category": "unswept",
+    "demand": {
+     "c1": 0,
+     "c2": 2,
+     "c4": 0
+    },
+    "parents": [
+     "00000000000000003800000008002000",
+     "00000000000000801202080000000000"
+    ],
+    "receipt": {
+     "root": "00000000000020809002000480100000",
+     "verdict": "WIN8-D10"
+    }
+   },
+   {
+    "row_hex": "00000000000020809002000400000000",
+    "cost": 89,
+    "category": "unswept",
+    "demand": {
+     "c1": 0,
+     "c2": 1,
+     "c4": 0
+    },
+    "parents": [
+     "00000000000000801202080000000000"
+    ],
+    "receipt": {
+     "root": "00000000000020809002000480100000",
+     "verdict": "WIN8-D10"
+    }
+   }
+  ]
+ },
+ "six_stone_subgeometry_classification": {
+  "00000000000000001202040000801000": "not-in-worklist",
+  "00000000000000003800000008003000": "closed-before-this-receipt",
+  "00000000000000800202040000801000": "not-in-worklist",
+  "00000000000000801002000480100000": "not-in-worklist",
+  "00000000000000801200040000801000": "not-in-worklist",
+  "00000000000000801202040000001000": "open-frontier",
+  "00000000000000801202040000800000": "open-frontier",
+  "00000000000020001002000480100000": "not-in-worklist",
+  "00000000000020008002000480100000": "not-in-worklist",
+  "00000000000020009000000480100000": "not-in-worklist",
+  "00000000000020009002000080100000": "not-in-worklist",
+  "00000000000020009002000400100000": "not-in-worklist",
+  "00000000000020009002000480000000": "not-in-worklist",
+  "00000000000020800002000480100000": "not-in-worklist",
+  "00000000000020801000000480100000": "not-in-worklist",
+  "00000000000020801002000080100000": "not-in-worklist",
+  "00000000000020801002000400100000": "not-in-worklist",
+  "00000000000020801002000480000000": "not-in-worklist",
+  "00000000000020808000000480100000": "not-in-worklist",
+  "00000000000020808002000080100000": "not-in-worklist",
+  "00000000000020808002000400100000": "not-in-worklist",
+  "00000000000020808002000480000000": "not-in-worklist",
+  "00000000000020809000000080100000": "not-in-worklist",
+  "00000000000020809000000400100000": "not-in-worklist",
+  "00000000000020809000000480000000": "not-in-worklist",
+  "00000000000020809002000000100000": "closed-before-this-receipt",
+  "00000000000020809002000080000000": "open-frontier",
+  "00000000000020809002000400000000": "open-frontier"
+ },
+ "parent_closure": {
+  "fully_closed_parent_count": 0,
+  "affected_unique_parents": 3
+ },
+ "five_parent_target_after": {
+  "closed_target_rows_total": 83,
+  "residual_target_rows": 29,
+  "residual_row_hex_after": [
+   "00000000000000003800000008001800",
+   "00000000000000003800000008002010",
+   "00000000000000003800000008002040",
+   "0000000000000000380000000a080000",
+   "00000000000000003800000209000000",
+   "00000000000000003800000409000000",
+   "00000000000000003800200008100000",
+   "00000000000000043800000008080000",
+   "00000000000000043800000008100000",
+   "00000000000000043800000009000000",
+   "00000000000000083800000008100000",
+   "00000000000000083800000048000000",
+   "00000000000000103800000008080000",
+   "00000000000000103800000009000000",
+   "00000000000000801202000001000400",
+   "00000000000000801202000001080000",
+   "00000000000000801202020000001000",
+   "00000000000000821082000000000008",
+   "00000000000000821082000000000010",
+   "00000000000000821082000000000800",
+   "00000000000000821082000000001000",
+   "00000000000000821082800000000000",
+   "00000000000000821083000000000000",
+   "00000000000000a09002000080000000",
+   "00000000000040809002000000100000",
+   "00000000010000809002000040000000",
+   "00000000020000801202000000100000",
+   "00000008000000003800000008100000",
+   "00000010000000801202000000000400"
+  ]
+ },
+ "win_candidate_plan_impact": {
+  "note": "Observation only. The K1086 probe classified 7 WIN8-D10 candidates (claims 4+4+4+3+3+3+2 = 23 rows) inside the K1097 plan (16 candidates, 49 rows, exactly-once partition) with 9 alternative roots (residual 23 rows). Fold11 retired root 8003180 (4 claimed rows), fold12 retired root 8005021 (3 claimed rows), fold13 retired root 9840004 (3 claimed rows), fold14 retired root 9090022 (4 claimed rows), fold15 retired root 120000038 (3 claimed rows), fold16 retired root 8890020 (4 claimed rows), fold17 retired root 22081000 (3 claimed rows), fold18 retired root 00901010 (3 claimed rows), fold19 retired root 1009000 (4 claimed rows), fold20 retired root 08d10000 (3 claimed rows), fold21 retired root 80880200 (3 claimed rows) and fold22 retired root 840500 (3 claimed rows); this receipt closes the 3 claimed rows of root 208090020004 (the last published WIN8-D10 candidate inside the same K1097 footprint win16 plan); the remaining 3 WIN8 candidates keep 49-4-3-3-4-3-4-3-3-4-3-3-3-3 = 6 claimed rows, the residual-23 alternative sweep plan is untouched: its rows are disjoint from every WIN16 claim, machine-checked.",
+  "retired_win_candidate_root": "00000000000020809002000480100000",
+  "rows_of_retired_root": [
+   "00000000000000801202040000001000",
+   "00000000000000801202040000800000",
+   "00000000000020809002000080000000"
+  ],
+  "retired_root_predecessor": "00000000000000801202000000840500",
+  "win16_candidates_remaining": 3,
+  "win16_claimed_rows_remaining": 6,
+  "residual23_untouched": true
+ },
+ "verdict_join_summary": {
+  "join_basis": "published fold22 chain frontier (single fresh rerun gate: the published fold22 machine executed pristine in an isolated W copy, byte-identical to the published fold22 record; the fold21 machine pristine rerun gate and the K1125 gate block re-run transitively inside it; fold10..fold21 upstream verified by SHA-256 pins and the full frontier chain recomputation per the adopted rerun-gate redesign) + K1123 triple-verified WIN8 certificate on the fresh-probe basis (probes match the published K1119 total 793616) + K1097 refsolve coverage footprints",
+  "receipt_root_is": "certificate-backed WIN8-D10 (K1123: extraction self-check + BigInt 3x3 + Bareiss 4x4 + python third-method; independently re-audited 19-gate fresh-probe record)"
+ },
+ "controls": {
+  "base_frontier_recomputed": true,
+  "chain_frontiers_recomputed_each_step": true,
+  "fold10_record_chained_and_published_values_matched": true,
+  "fold10_frontier_6206_491497_recomputed_from_worklist": true,
+  "post_fold10_incidence_11810_recomputed": true,
+  "fold11_record_chained_and_published_values_matched": true,
+  "fold11_frontier_6201_491110_recomputed_from_worklist": true,
+  "post_fold11_incidence_11803_recomputed": true,
+  "fold12_record_chained_and_published_values_matched": true,
+  "fold12_frontier_6193_490526_recomputed_from_worklist": true,
+  "post_fold12_incidence_11790_recomputed": true,
+  "fold13_record_chained_and_published_values_matched": true,
+  "fold13_frontier_6184_489813_recomputed_from_worklist": true,
+  "post_fold13_incidence_11775_recomputed": true,
+  "fold14_record_chained_and_published_values_matched": true,
+  "fold14_frontier_6179_489440_recomputed_from_worklist": true,
+  "post_fold14_incidence_11765_recomputed": true,
+  "fold15_record_chained_and_published_values_matched": true,
+  "fold15_frontier_6173_488954_recomputed_from_worklist": true,
+  "post_fold15_incidence_11753_recomputed": true,
+  "fold16_record_chained_and_published_values_matched": true,
+  "fold16_frontier_6168_488575_recomputed_from_worklist": true,
+  "post_fold16_incidence_11743_recomputed": true,
+  "fold17_record_chained_and_published_values_matched": true,
+  "fold17_frontier_6161_488094_recomputed_from_worklist": true,
+  "post_fold17_incidence_11729_recomputed": true,
+  "fold18_record_chained_and_published_values_matched": true,
+  "fold18_frontier_6157_487800_recomputed_from_worklist": true,
+  "post_fold18_incidence_11721_recomputed": true,
+  "fold19_record_chained_and_published_values_matched": true,
+  "fold19_frontier_6152_487418_recomputed_from_worklist": true,
+  "post_fold19_incidence_11711_recomputed": true,
+  "fold20_record_chained_and_published_values_matched": true,
+  "fold20_frontier_6144_486819_recomputed_from_worklist": true,
+  "post_fold20_incidence_11701_recomputed": true,
+  "fold21_record_chained_and_published_values_matched": true,
+  "fold21_frontier_6136_486243_recomputed_from_worklist": true,
+  "post_fold21_incidence_11683_recomputed": true,
+  "fold22_record_chained_and_published_values_matched": true,
+  "fold22_frontier_6130_485759_recomputed_from_worklist": true,
+  "post_fold22_incidence_11671_recomputed": true,
+  "fold10_record_sha256_pin_verified": true,
+  "fold11_record_sha256_pin_verified": true,
+  "fold12_record_sha256_pin_verified": true,
+  "fold13_record_sha256_pin_verified": true,
+  "fold14_record_sha256_pin_verified": true,
+  "fold15_record_sha256_pin_verified": true,
+  "fold16_record_sha256_pin_verified": true,
+  "fold17_record_sha256_pin_verified": true,
+  "fold18_record_sha256_pin_verified": true,
+  "fold19_record_sha256_pin_verified": true,
+  "fold20_record_sha256_pin_verified": true,
+  "fold21_record_sha256_pin_verified": true,
+  "fold22_record_sha256_pin_verified": true,
+  "rerun_gate_redesign_adopted_single_predecessor_rerun": true,
+  "fold11_through_fold17_machine_recursive_reruns_replaced_by_sha_pins_and_chain_recomputation": true,
+  "fold20_machine_pristine_rerun_byte_identical": true,
+  "fold21_machine_pristine_rerun_byte_identical": true,
+  "fold22_machine_pristine_rerun_byte_identical": true,
+  "fold19_machine_pristine_rerun_rechecked_transitively_inside_fold20_rerun": true,
+  "fold20_machine_pristine_rerun_rechecked_transitively_inside_fold21_rerun": true,
+  "fold21_machine_pristine_rerun_rechecked_transitively_inside_fold22_rerun": true,
+  "all_chain_input_pins_verified_upfront": true,
+  "k1123_cert_19_gates_rechecked_and_bytes_verified": true,
+  "k1125_cert_gates_rechecked_inside_fold22_pristine_rerun": true,
+  "k1124_cert_gates_rechecked_inside_fold21_pristine_rerun": true,
+  "k1121_cert_gates_rechecked_inside_fold20_pristine_rerun": true,
+  "k1120_cert_gates_rechecked_inside_preverified_fold18_rerun": true,
+  "k1119_cert_gates_rechecked_inside_fold19_pristine_rerun": true,
+  "k1097_refsolve_27_gates_rechecked": true,
+  "coverage_rederived_from_d4_images_and_subsets_two_methods": true,
+  "rederived_target_rows_match_published_claim": true,
+  "all_receipt_rows_were_open_before": true,
+  "coverage_of_historical_closed_set_empty": true,
+  "win16_claim_partition_exactly_once_rechecked": true,
+  "legal_move_count_independently_rederived": true,
+  "certificates_sha256_verified": true
+ },
+ "interpretation_guard": [
+  "WIN8-D10 proves a first-player win within depth 10 only from the eight-stone root of this receipt.",
+  "The receipt closes its S6 rows in the frontier through the published two-stone-removal cover convention (refsolve coverage_of82 / K1096 cover semantics); it proves nothing about the empty board or any two-stone root.",
+  "The closed rows are a bookkeeping closure of the five-parent depth-10 receipt chain, not a LOSS proof of the rows.",
+  "REFUTED-D10 witnesses are NOT LOSS proofs; node counts and solved counts are not win/loss readings.",
+  "The standard 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, and classes 1/2/4 remain UNKNOWN."
+ ]
+}

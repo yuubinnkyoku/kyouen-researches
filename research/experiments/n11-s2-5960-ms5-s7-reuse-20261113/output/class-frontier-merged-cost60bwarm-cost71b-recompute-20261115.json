@@ -1,0 +1,430 @@
+{
+ "schema": "n11-class-frontier-merged-after69ev2-70c-60bwarm-71b-20261115-v1",
+ "date": "2026-11-15",
+ "baseline_main": "class-frontier-cost69e-recompute-20261115 schema v2 (solved 1023 / unique remaining 6824 / sum 537833 / open 5094/401556)",
+ "method": "merged replay of the three post-69e-v2 receipt groups on the current published baseline: the cost-69e v2 state (1023) is reproduced by runpy, the pre-v2 six-receipt state (1019) and the three superseded published endpoints (after-cost-70c 1022, after-cost-60b-warm 1040, after-cost-71b 1026) are re-derived exactly from raw records (their scripts now fail their baseline asserts on main because the 69e v2 update postdates them), all three sweeps and receipt groups are asserted from their published records (70c: 70 candidates, 13 WIN7 + 57 REFUTED, 100,935,666 nodes, det 86/66, v15 anchors 13/13, receipts 94/20/23; 60b warm: sweep unverified 19, 17 warm certificates, cross-child duplicates 15/34 not re-added; 71b: 71 candidates, 9 WIN7 + 62 REFUTED, 87,586,636 nodes, det 32/113, v15 anchors 9/9 - control JSONLs re-published in commit 86bbe2ef after being found missing - receipts 109/21/105), and all 23 receipts are re-added in canonical chronological order (70c -> 60b-warm -> 71b) with per-bit marginals re-derived from the growing union and compared with their published stage marginals (marginal_reduced_vs_published flags; the 71b bit-21 root duplicates the 60b-warm bit-22 root - duplicate-fold rule); the merged solved set equals the 69e v2 baseline union all 23 receipt covers and contains every superseded endpoint solved set",
+ "chain_break": {
+  "discovered": "2026-11-15 (this session)",
+  "cause": "the cost-69e layer was updated to v2 on main (recompute_frontier_cost69e_20261115.py + class2-lane-cost69e-win7-certificates-20261114.json + class-frontier-cost69e-recompute-20261115.json schema v2) folding all ten cost-69e receipts (21/99/87/84/76/90 + warm rebuilds 89/94/108/116) and moving the after-cost-69e endpoint 1019 -> 1023, without rebasing the downstream scripts",
+  "broken_scripts": [
+   "recompute_frontier_cost70c_20261115.py (asserts the 1019 baseline; fails at line 47 against current main - verified locally)",
+   "recompute_frontier_cost60b_warm_20261115.py (runpy-extends the 70c script)",
+   "recompute_frontier_cost71b_20261115.py (runpy-extends the 70c script)"
+  ],
+  "superseded_endpoints_reproduced_here": {
+   "after_cost69e_pre_v2_six_receipts": 1019,
+   "after_cost70c": 1022,
+   "after_cost60b_warm": 1040,
+   "after_cost71b": 1026
+  },
+  "repair": "this script re-derives every superseded endpoint from raw records and is the canonical chain head from the 69e v2 baseline onward; the three superseded scripts remain on main as historical stage documentation and their failing asserts are an experiment fact, not a game-theoretic claim"
+ },
+ "controls": {
+  "baseline_after_cost69e_v2": {
+   "solved_in_manifest": 1023,
+   "unique_remaining": 6824,
+   "sum_cost": 537833,
+   "open_s6": 5094,
+   "open_cost": 401556,
+   "reproduced": true
+  },
+  "pre_v2_six_receipt_state_1019_reproduced": true,
+  "superseded_1022_reproduced": true,
+  "superseded_1040_reproduced": true,
+  "superseded_1026_reproduced": true,
+  "sweeps_asserted_from_raw_batches": true,
+  "receipts_asserted_rows_subs_union_md5_roots": true,
+  "sequential_replay_equals_baseline_union_all_covers": true,
+  "superseded_endpoints_contained_in_merged": true
+ },
+ "stage_frontiers": {
+  "cost70c": {
+   "solved_s6_in_manifest": 1026,
+   "unique_remaining_s6": 6821,
+   "sum_remaining_cost": 537611,
+   "s6_needed_by_open_classes": 5091,
+   "cost_needed_by_open_classes": 401334
+  },
+  "cost60b_warm": {
+   "solved_s6_in_manifest": 1044,
+   "unique_remaining_s6": 6803,
+   "sum_remaining_cost": 536212,
+   "s6_needed_by_open_classes": 5073,
+   "cost_needed_by_open_classes": 399935
+  },
+  "cost71b": {
+   "solved_s6_in_manifest": 1045,
+   "unique_remaining_s6": 6802,
+   "sum_remaining_cost": 536131,
+   "s6_needed_by_open_classes": 5072,
+   "cost_needed_by_open_classes": 399854
+  }
+ },
+ "group_additions": {
+  "cost70c": {
+   "94": {
+    "root_hex": "00000000400000803242000000000000",
+    "covers": 7,
+    "marginal": 4,
+    "marginal_in_manifest": 1,
+    "marginal_manifest_hexes": [
+     "00000000000000849002000004000000"
+    ],
+    "published_stage_marginal": 4,
+    "published_stage_marginal_in_manifest": 1,
+    "marginal_reduced_vs_published": false
+   },
+   "20": {
+    "root_hex": "00000000000000803242000000100000",
+    "covers": 7,
+    "marginal": 4,
+    "marginal_in_manifest": 1,
+    "marginal_manifest_hexes": [
+     "00000000000000801242000000100000"
+    ],
+    "published_stage_marginal": 4,
+    "published_stage_marginal_in_manifest": 1,
+    "marginal_reduced_vs_published": false
+   },
+   "23": {
+    "root_hex": "00000000000000803242000000800000",
+    "covers": 7,
+    "marginal": 5,
+    "marginal_in_manifest": 1,
+    "marginal_manifest_hexes": [
+     "00000000000000801242000000800000"
+    ],
+    "published_stage_marginal": 5,
+    "published_stage_marginal_in_manifest": 1,
+    "marginal_reduced_vs_published": false
+   }
+  },
+  "cost60b_warm": {
+   "40": {
+    "root_hex": "00000000000000803202010000200000",
+    "covers": 7,
+    "marginal": 5,
+    "marginal_in_manifest": 1,
+    "marginal_manifest_hexes": [
+     "00000000000000801202010000200000"
+    ],
+    "published_stage_marginal": 5,
+    "published_stage_marginal_in_manifest": 1,
+    "marginal_reduced_vs_published": false
+   },
+   "77": {
+    "root_hex": "00000000000020803202000000200000",
+    "covers": 7,
+    "marginal": 5,
+    "marginal_in_manifest": 1,
+    "marginal_manifest_hexes": [
+     "00000000000020801202000000200000"
+    ],
+    "published_stage_marginal": 5,
+    "published_stage_marginal_in_manifest": 1,
+    "marginal_reduced_vs_published": false
+   },
+   "26": {
+    "root_hex": "00000000000000803202000004200000",
+    "covers": 7,
+    "marginal": 5,
+    "marginal_in_manifest": 1,
+    "marginal_manifest_hexes": [
+     "00000000000000801202000004200000"
+    ],
+    "published_stage_marginal": 5,
+    "published_stage_marginal_in_manifest": 1,
+    "marginal_reduced_vs_published": false
+   },
+   "74": {
+    "root_hex": "00000000000004803202000000200000",
+    "covers": 7,
+    "marginal": 5,
+    "marginal_in_manifest": 1,
+    "marginal_manifest_hexes": [
+     "00000000000000909002000000000800"
+    ],
+    "published_stage_marginal": 5,
+    "published_stage_marginal_in_manifest": 1,
+    "marginal_reduced_vs_published": false
+   },
+   "44": {
+    "root_hex": "00000000000000803202100000200000",
+    "covers": 7,
+    "marginal": 5,
+    "marginal_in_manifest": 1,
+    "marginal_manifest_hexes": [
+     "00000000000000801202100000200000"
+    ],
+    "published_stage_marginal": 5,
+    "published_stage_marginal_in_manifest": 1,
+    "marginal_reduced_vs_published": false
+   },
+   "28": {
+    "root_hex": "00000000000000803202000010200000",
+    "covers": 7,
+    "marginal": 5,
+    "marginal_in_manifest": 1,
+    "marginal_manifest_hexes": [
+     "00000000000000801202000010200000"
+    ],
+    "published_stage_marginal": 5,
+    "published_stage_marginal_in_manifest": 1,
+    "marginal_reduced_vs_published": false
+   },
+   "8": {
+    "root_hex": "00000000000000803202000000200100",
+    "covers": 7,
+    "marginal": 5,
+    "marginal_in_manifest": 1,
+    "marginal_manifest_hexes": [
+     "00000000000000801202000000200100"
+    ],
+    "published_stage_marginal": 5,
+    "published_stage_marginal_in_manifest": 1,
+    "marginal_reduced_vs_published": false
+   },
+   "88": {
+    "root_hex": "00000000010000803202000000200000",
+    "covers": 7,
+    "marginal": 6,
+    "marginal_in_manifest": 2,
+    "marginal_manifest_hexes": [
+     "00000000000000803202000000400000",
+     "00000000010000801202000000200000"
+    ],
+    "published_stage_marginal": 6,
+    "published_stage_marginal_in_manifest": 2,
+    "marginal_reduced_vs_published": false
+   },
+   "95": {
+    "root_hex": "00000000800000803202000000200000",
+    "covers": 7,
+    "marginal": 0,
+    "marginal_in_manifest": 0,
+    "marginal_manifest_hexes": [],
+    "published_stage_marginal": 0,
+    "published_stage_marginal_in_manifest": 0,
+    "marginal_reduced_vs_published": false
+   },
+   "106": {
+    "root_hex": "00000400000000803202000000200000",
+    "covers": 7,
+    "marginal": 5,
+    "marginal_in_manifest": 1,
+    "marginal_manifest_hexes": [
+     "00000000200000003800000400000200"
+    ],
+    "published_stage_marginal": 5,
+    "published_stage_marginal_in_manifest": 1,
+    "marginal_reduced_vs_published": false
+   },
+   "87": {
+    "root_hex": "00000000008000803202000000200000",
+    "covers": 7,
+    "marginal": 5,
+    "marginal_in_manifest": 1,
+    "marginal_manifest_hexes": [
+     "00000000000020809002000000000800"
+    ],
+    "published_stage_marginal": 5,
+    "published_stage_marginal_in_manifest": 1,
+    "marginal_reduced_vs_published": false
+   },
+   "22": {
+    "root_hex": "00000000000000803202000000600000",
+    "covers": 7,
+    "marginal": 5,
+    "marginal_in_manifest": 1,
+    "marginal_manifest_hexes": [
+     "00000000000000801202000000600000"
+    ],
+    "published_stage_marginal": 5,
+    "published_stage_marginal_in_manifest": 1,
+    "marginal_reduced_vs_published": false
+   },
+   "100": {
+    "root_hex": "00000010000000803202000000200000",
+    "covers": 7,
+    "marginal": 0,
+    "marginal_in_manifest": 0,
+    "marginal_manifest_hexes": [],
+    "published_stage_marginal": 0,
+    "published_stage_marginal_in_manifest": 0,
+    "marginal_reduced_vs_published": false
+   },
+   "108": {
+    "root_hex": "00001000000000803202000000200000",
+    "covers": 7,
+    "marginal": 5,
+    "marginal_in_manifest": 1,
+    "marginal_manifest_hexes": [
+     "00000000200000003800000000001200"
+    ],
+    "published_stage_marginal": 5,
+    "published_stage_marginal_in_manifest": 1,
+    "marginal_reduced_vs_published": false
+   },
+   "32": {
+    "root_hex": "00000000000000803202000100200000",
+    "covers": 7,
+    "marginal": 5,
+    "marginal_in_manifest": 2,
+    "marginal_manifest_hexes": [
+     "00000000000000801202000100200000",
+     "00000000000000803202000100000000"
+    ],
+    "published_stage_marginal": 5,
+    "published_stage_marginal_in_manifest": 2,
+    "marginal_reduced_vs_published": false
+   },
+   "114": {
+    "root_hex": "00040000000000803202000000200000",
+    "covers": 7,
+    "marginal": 6,
+    "marginal_in_manifest": 2,
+    "marginal_manifest_hexes": [
+     "00000000000000803202000000000010",
+     "00000000200000043800000000000200"
+    ],
+    "published_stage_marginal": 6,
+    "published_stage_marginal_in_manifest": 2,
+    "marginal_reduced_vs_published": false
+   },
+   "43": {
+    "root_hex": "00000000000000803202080000200000",
+    "covers": 7,
+    "marginal": 5,
+    "marginal_in_manifest": 1,
+    "marginal_manifest_hexes": [
+     "00000000000000801202080000200000"
+    ],
+    "published_stage_marginal": 5,
+    "published_stage_marginal_in_manifest": 1,
+    "marginal_reduced_vs_published": false
+   }
+  },
+  "cost71b": {
+   "109": {
+    "root_hex": "00002000000000803202000000400000",
+    "covers": 7,
+    "marginal": 0,
+    "marginal_in_manifest": 0,
+    "marginal_manifest_hexes": [],
+    "published_stage_marginal": 6,
+    "published_stage_marginal_in_manifest": 2,
+    "marginal_reduced_vs_published": true
+   },
+   "21": {
+    "root_hex": "00000000000000803202000000600000",
+    "covers": 7,
+    "marginal": 0,
+    "marginal_in_manifest": 0,
+    "marginal_manifest_hexes": [],
+    "published_stage_marginal": 5,
+    "published_stage_marginal_in_manifest": 1,
+    "marginal_reduced_vs_published": true
+   },
+   "105": {
+    "root_hex": "00000200000000803202000000400000",
+    "covers": 7,
+    "marginal": 5,
+    "marginal_in_manifest": 1,
+    "marginal_manifest_hexes": [
+     "00000000000000083800000008000100"
+    ],
+    "published_stage_marginal": 5,
+    "published_stage_marginal_in_manifest": 1,
+    "marginal_reduced_vs_published": false
+   }
+  }
+ },
+ "frontier_after_merged": {
+  "solved_s6_in_manifest": 1045,
+  "remaining_s5_orbits": 176,
+  "unique_remaining_s6": 6802,
+  "sum_remaining_cost": 536131,
+  "s6_needed_by_open_classes": 5072,
+  "cost_needed_by_open_classes": 399854,
+  "demand_histogram_open_only": {
+   "c2=0,c4=1": 527,
+   "c2=0,c4=2": 3021,
+   "c2=0,c4=3": 12,
+   "c2=1,c4=0": 245,
+   "c2=1,c4=1": 60,
+   "c2=1,c4=2": 9,
+   "c2=2,c4=0": 1137,
+   "c2=2,c4=1": 6,
+   "c2=2,c4=2": 55
+  },
+  "best_class2": {
+   "s5_hex": "00000000000000803202000000000000",
+   "classes": 2,
+   "remaining_s6_orbits": 3,
+   "remaining_s7_edge_cost": 222
+  },
+  "audit_blocked_class2": {
+   "s5_hex": "00000000000000809082000000000000",
+   "classes": 3,
+   "remaining_s6_orbits": 10,
+   "remaining_s7_edge_cost": 698
+  },
+  "best_coverable_class2": {
+   "s5_hex": "00000000000000803202000000000000",
+   "classes": 2,
+   "remaining_s6_orbits": 3,
+   "remaining_s7_edge_cost": 222
+  },
+  "next_class2": [
+   {
+    "s5_hex": "00000000000000809082000000000000",
+    "classes": 3,
+    "remaining_s6_orbits": 10,
+    "remaining_s7_edge_cost": 698
+   },
+   {
+    "s5_hex": "00000000000000809102000000000000",
+    "classes": 2,
+    "remaining_s6_orbits": 35,
+    "remaining_s7_edge_cost": 2525
+   },
+   {
+    "s5_hex": "00000000000000801202000000200000",
+    "classes": 2,
+    "remaining_s6_orbits": 41,
+    "remaining_s7_edge_cost": 3058
+   }
+  ],
+  "best_class4": {
+   "s5_hex": "00000000020000003800000080000000",
+   "classes": 4,
+   "remaining_s6_orbits": 18,
+   "remaining_s7_edge_cost": 1460
+  },
+  "next_class4": [
+   {
+    "s5_hex": "00000000000000003800002000800000",
+    "classes": 4,
+    "remaining_s6_orbits": 60,
+    "remaining_s7_edge_cost": 4216
+   },
+   {
+    "s5_hex": "00000000000000801802000000080000",
+    "classes": 4,
+    "remaining_s6_orbits": 64,
+    "remaining_s7_edge_cost": 4390
+   },
+   {
+    "s5_hex": "00000000020000003800000000080000",
+    "classes": 4,
+    "remaining_s6_orbits": 64,
+    "remaining_s7_edge_cost": 4570
+   }
+  ]
+ },
+ "outstanding_not_folded": {
+  "cost72_sweep": "parallel lane in flight (9 raw batches + batches1-9 audit published; 2 WIN7-D10 bits 52/111; bit-111 certificate published; no completed sweep record yet) - certificates without records are not receipts",
+  "warm_rebuild_candidates_without_records": "cost-61d bit-22 (= cost-71b bit-1 root), cost-71b remaining WIN7 bits 1/14/32/74/94/117, and other unverified WIN7 bits of earlier bands"
+ },
+ "interpretation_guard": "bookkeeping over published receipts; REFUTED-D10 sweeps prove only absence of WIN7-D10; WIN7 certificates prove a win within depth 10 from the 7-stone root only; 11x11 empty root / {49,60} / S2 {59,60} / class 2 / class 4 remain UNKNOWN"
+}

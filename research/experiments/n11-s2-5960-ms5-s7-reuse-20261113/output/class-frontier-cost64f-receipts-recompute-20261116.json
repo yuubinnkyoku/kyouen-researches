@@ -1,0 +1,218 @@
+{
+ "schema": "n11-class-frontier-cost64f-receipts-20261116-v1",
+ "date": "2026-11-16",
+ "baseline_record": {
+  "cost64d_head_1435": "1435/174/6413/507337/4686/371251 (reproduced byte-identically by runpy of the published cost-64d fold script)",
+  "claim": "class2-lane-cost64f-inflight-20261116.json (v5, git blob sha b43303e88f04949cb037fafaf7d898885af6eada; supersedes the v4 counter-corrected completed NOT-STERILE claim blob b9d0f9fa714237ca5f7cfffcedc2d7917fee8eb3 (61 REFUTED-D10 = 56 swept + 5 transferred) which superseded the v3 parent-metadata-corrected claim blob 5159e0ac0ba9591e95ee6a9ab7a01aeb9e899f6e; all v1/v2/v3/v4 fields preserved)",
+  "sweep": "8 raw batch JSONLs (v16), all blob-pinned; 64 candidates = 3 WIN7-D10 + 56 REFUTED-D10 swept + 5 REFUTED-D10 transferred (D4-canonical identity, published head-1435 v2 presweep), 0 capped, 54905391 nodes + 8 pilots x 3402; determinism rerun batch2 node-exact; v15 crosscheck two-directional",
+  "presweep_v2": "class2-lane-next-target-presweep-1435-v2-20261116.json (git blob sha 59d42a6b1d8db4dbc498872576283e0130a0c390)",
+  "parent_and_marginal_audit": "class2-lane-cost64f-parent-and-marginal-audit-20261116.json (git blob sha d9f5f377b9503f034cb7e9220b0d84d716bde87d)"
+ },
+ "method": "runpy reproduction of the published cost-64d fold script (whole-chain head 1435), re-derivation of the cost-64f sweep from the 8 blob-pinned raw batches plus the 5 blob-pinned pre-sweep transferred REFUTED verdicts, re-assertion of the published parent-and-marginal audit (sequential per-receipt in-manifest marginals in publication order on the 1435 baseline), re-assertion of all 3 win3 certificates byte-for-byte (whole/parts blob pins, join receipts, sorted-unique rows, root mobility == legal_candidates.py, BigInt union 0/0 + Bareiss records), 64-candidate-orbit conflict census vs the folded roots (zero overlaps), the child-remaining fact asserted on both direct open parents, then the 3 receipts folded in publication order with per-receipt marginals pinned and a set-equality control",
+ "cost64f_additions_on_cost64d_1435": [
+  {
+   "bit": 39,
+   "root_hex": "0000000000000080120a008000800000",
+   "d4_canonical_hex": "0000000000000080120a008000800000",
+   "source": "cost-64f raw batches 1-8 (v16) + the published head-1435 v2 presweep transfer census",
+   "certified": true,
+   "sweep_nodes": 1484481,
+   "covers": 7,
+   "marginal": 6,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "0000000000000080120a000000800000"
+   ],
+   "marginal_non_manifest_hexes": [
+    "0000000000000000120a008000800000",
+    "0000000000000080020a008000800000",
+    "00000000000000801002802080000000",
+    "00000000000000801208008000800000",
+    "0000000000000080120a008000000000"
+   ],
+   "rows": 44078,
+   "md5": "42561d3ff7e0eb8c9d9b5f407a60009c",
+   "sub_roots_pass": 50,
+   "extraction_nodes": 2681848,
+   "terminal_count": 16205
+  },
+  {
+   "bit": 72,
+   "root_hex": "0000000000000180120a000000800000",
+   "d4_canonical_hex": "00000000000000c09002800080000000",
+   "source": "cost-64f raw batches 1-8 (v16) + the published head-1435 v2 presweep transfer census",
+   "certified": true,
+   "sweep_nodes": 2913001,
+   "covers": 7,
+   "marginal": 4,
+   "marginal_in_manifest": 0,
+   "marginal_manifest_hexes": [],
+   "marginal_non_manifest_hexes": [
+    "00000000000000409002800080000000",
+    "00000000000000c01002800080000000",
+    "00000000000000c08002800080000000",
+    "00000000000000c09000800080000000"
+   ],
+   "rows": 44343,
+   "md5": "0bfe17ee9abbd1d35cb90f5237539e33",
+   "sub_roots_pass": 51,
+   "extraction_nodes": 5037452,
+   "terminal_count": 13944
+  },
+  {
+   "bit": 107,
+   "root_hex": "0000080000000080120a000000800000",
+   "d4_canonical_hex": "00000000020002801202000000080000",
+   "source": "cost-64f raw batches 1-8 (v16) + the published head-1435 v2 presweep transfer census",
+   "certified": true,
+   "sweep_nodes": 866393,
+   "covers": 7,
+   "marginal": 5,
+   "marginal_in_manifest": 2,
+   "marginal_manifest_hexes": [
+    "00000000000000a09002000000002000",
+    "00000000020002801002000000080000"
+   ],
+   "marginal_non_manifest_hexes": [
+    "00000000020002001202000000080000",
+    "00000000020002800202000000080000",
+    "00000000020002801200000000080000"
+   ],
+   "rows": 27946,
+   "md5": "0aa381e667919a61ab98cc8c3966969c",
+   "sub_roots_pass": 41,
+   "extraction_nodes": 1990119,
+   "terminal_count": 8421
+  }
+ ],
+ "totals": {
+  "receipts": 3,
+  "total_marginal": 15,
+  "total_marginal_in_manifest": 3,
+  "child_closed_by_bit": 39,
+  "zero_mim_receipts": [
+   72
+  ],
+  "transferred_refuted_bits": [
+   21,
+   35,
+   55,
+   64,
+   109
+  ],
+  "conflict_census_overlaps": [],
+  "folded_roots_at_1435": {
+   "receipt_roots": 757,
+   "distinct_roots": 757,
+   "distinct_d4_canons": 743
+  },
+  "rows_closed_hexes": [
+   "0000000000000080120a000000800000",
+   "00000000000000a09002000000002000",
+   "00000000020002801002000000080000"
+  ],
+  "sweep_nodes_excluding_pilots": 54905391,
+  "parent_row_incidences": 7,
+  "parent_edge_cost_delta": 455
+ },
+ "frontier_after_cost64f": {
+  "solved_s6_in_manifest": 1438,
+  "remaining_s5_orbits": 174,
+  "unique_remaining_s6": 6410,
+  "sum_remaining_cost": 507143,
+  "s6_needed_by_open_classes": 4683,
+  "cost_needed_by_open_classes": 371057,
+  "demand_histogram_open_only": {
+   "c2=0,c4=1": 526,
+   "c2=0,c4=2": 3012,
+   "c2=0,c4=3": 12,
+   "c2=1,c4=0": 212,
+   "c2=1,c4=1": 54,
+   "c2=1,c4=2": 9,
+   "c2=2,c4=0": 802,
+   "c2=2,c4=1": 5,
+   "c2=2,c4=2": 51
+  },
+  "best_class2": {
+   "s5_hex": "00000000000000801202000000200000",
+   "classes": 2,
+   "remaining_s6_orbits": 3,
+   "remaining_s7_edge_cost": 209
+  },
+  "best_class4": {
+   "s5_hex": "00000000020000003800000080000000",
+   "classes": 4,
+   "remaining_s6_orbits": 18,
+   "remaining_s7_edge_cost": 1460
+  },
+  "best_coverable_class2": {
+   "s5_hex": "00000000000000801202000000200000",
+   "classes": 2,
+   "remaining_s6_orbits": 3,
+   "remaining_s7_edge_cost": 209
+  },
+  "second_coverable_class2": {
+   "s5_hex": "00000000000000801202000040000000",
+   "classes": 2,
+   "remaining_s6_orbits": 5,
+   "remaining_s7_edge_cost": 364
+  }
+ },
+ "parents_after": {
+  "00000000000000003800000008002000": {
+   "s5_hex": "00000000000000003800000008002000",
+   "rows": 30,
+   "edge_cost": 2081,
+   "rows_before": 31,
+   "edge_cost_before": 2145
+  },
+  "00000000000000003800002080000000": {
+   "s5_hex": "00000000000000003800002080000000",
+   "rows": 76,
+   "edge_cost": 5707,
+   "rows_before": 78,
+   "edge_cost_before": 5837
+  },
+  "00000000000000801202000000080000": {
+   "s5_hex": "00000000000000801202000000080000",
+   "rows": 67,
+   "edge_cost": 5135,
+   "rows_before": 68,
+   "edge_cost_before": 5202
+  },
+  "0000000000000080120a000000000000": {
+   "s5_hex": "0000000000000080120a000000000000",
+   "rows": 41,
+   "edge_cost": 3036,
+   "rows_before": 43,
+   "edge_cost_before": 3167
+  },
+  "00000000020000003800000000080000": {
+   "s5_hex": "00000000020000003800000000080000",
+   "rows": 60,
+   "edge_cost": 4288,
+   "rows_before": 61,
+   "edge_cost_before": 4351
+  }
+ },
+ "lost_rows_per_parent": {
+  "00000000000000003800000008002000": {
+   "0000000000000080120a000000800000": 64
+  },
+  "00000000000000003800002080000000": {
+   "00000000000000a09002000000002000": 67,
+   "00000000020002801002000000080000": 63
+  },
+  "00000000000000801202000000080000": {
+   "00000000000000a09002000000002000": 67
+  },
+  "0000000000000080120a000000000000": {
+   "0000000000000080120a000000800000": 64,
+   "00000000000000a09002000000002000": 67
+  },
+  "00000000020000003800000000080000": {
+   "00000000020002801002000000080000": 63
+  }
+ },
+ "interpretation_guard": "bookkeeping over published receipts; solved counts measure manifest coverage, not the game-theoretic value of any position; WIN7 certificates prove a first-player win within depth 10 from the individual 7-stone roots only; REFUTED-D10 proves only absence of WIN7-D10 from that root and is never a LOSS proof; 11x11 empty board / two-stone root {49,60} / S2 {59,60} / class 1 / class 2 / class 4 remain UNKNOWN"
+}

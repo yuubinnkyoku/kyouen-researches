@@ -1,0 +1,49 @@
+{
+ "schema": "n11-class2-lane-bit79-orbit-certificate-verification-20261116-v1",
+ "date": "2026-11-16",
+ "purpose": "verify that the D4 orbit of the 65f bit-79 root is fully certificate-backed on main, and mark any 'uncertified (both sides)' reading derived from the cost-65j claim v5 certified:false note as stale",
+ "method": {
+  "d4_canonicalization": "independent Python-stdlib re-derivation (8-element D4 group on 11x11, bit = y*11+x, exact integers; cross-checked against a second independent Node.js BigInt implementation, d4check.js - identical canon on both)",
+  "certificate_check": "published part join re-downloaded from main and md5-compared against the win13 manifest whole_md5 record",
+  "sources": [
+   "class2-lane-cost65f-win13-certificates-20261116.json (blob 617d3d8d, commit 64ff9c1d)",
+   "class2-lane-cost65j-inflight-20261115.json (claim v5, schema n11-class2-lane-cost65j-inflight-20261115-v5)",
+   "research/log/2026-11-14-n11-class2-lane-cost63a-win7.md (63a sweep WIN bits [2,11,15,28,96,97,100,109,118,119])"
+  ]
+ },
+ "orbit": {
+  "root_65f_bit79": "00000000000080809102000080000000",
+  "root_63a_bit97": "00000002000000809102000800000000",
+  "popcounts": [
+   7,
+   7
+  ],
+  "d4_canonical_hex_both": "00000000000080809102000080000000",
+  "same_orbit": true,
+  "canonical_root_is_the_65f_root": true,
+  "verdicts": {
+   "65f_bit79": "WIN7-D10 (65f sweep, certified)",
+   "63a_bit97": "WIN7-D10 (63a sweep, verdict agree)"
+  }
+ },
+ "certificate": {
+  "manifest": "class2-lane-cost65f-win13-certificates-20261116.json (blob 617d3d8d, bit 79 entry)",
+  "published_parts": [
+   "bit79-root-00000000000080809102000080000000.cert.part1of2 (715,086 B, blob 809f2c57)",
+   "bit79-root-00000000000080809102000080000000.cert.part2of2 (715,054 B, blob 3a823f02)"
+  ],
+  "whole_bytes": 1430140,
+  "join_md5_reverified": "e94b722b45445f11156df7830c79f1b9 (matches the manifest whole_md5; cat of the two published parts, downloaded from main at commit 9f4684ad)",
+  "rows": 39574,
+  "extraction_nodes": 3246377,
+  "sub_roots": 49,
+  "double_verification": "BigInt union missing 0 / extra 0 (49/49 sub-roots) + Bareiss verify_bit7_win7_cert.ts --root-check 49/49 PASS (win13 manifest)",
+  "covers_63a_bit97_by_d4_symmetry": "the 63a bit-97 root is a D4 image of the certified canonical root; the certificate strategy tree transforms under the same symmetry, so the published certificate covers that manifestation of the orbit as well"
+ },
+ "stale_reading_correction": {
+  "claim_v5_text": "the thirteen cost-65f receipts (v15, 2026-11-14) have no published certificates ... (certified:false in the fold record)",
+  "status": "accurate at claim v5's writing time, superseded on 2026-11-16 by the win13 certificate completion (commit 64ff9c1d): all thirteen 65f receipts including bit 79 now have published, independently verifiable certificates",
+  "consequence": "any 'bit-79 orbit uncertified on both sides / top engine-certificate target' observation derived from claim v5's certified:false field is stale; the orbit needs no new certificate extraction"
+ },
+ "interpretation_guard": "the WIN7 certificate proves a first-player win within depth 10 from the individual 7-stone roots of this orbit only; 11x11 empty board / two-stone roots {49,60} and {59,60} / S2 {59,60} / class 1 / class 2 / class 4 remain UNKNOWN"
+}

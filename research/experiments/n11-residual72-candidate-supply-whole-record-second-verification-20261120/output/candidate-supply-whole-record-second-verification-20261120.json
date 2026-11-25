@@ -1,0 +1,518 @@
+{
+ "date": "2026-11-20",
+ "gates": [
+  {
+   "detail": "bed7d33193299a0aa06ea4e076562dfa46251d20d5c3c4ca7fd231ffe854908a",
+   "name": "pin-fold10.json",
+   "pass": true
+  },
+  {
+   "detail": "24db2352ad0d94ee4a76ec3de294f02cbdac7899f0b6ef64ea695d261017cdc2",
+   "name": "pin-fold9.json",
+   "pass": true
+  },
+  {
+   "detail": "49b6f85f6b51cfdd8a59c7797223da3d8797885d3c992ce67dc9dae629a883fa",
+   "name": "pin-k1075.json",
+   "pass": true
+  },
+  {
+   "detail": "6b045eaefdd59e2c0fbd0f9b4a1e876b89c3f8b03cfade8f0ab1f8192cd0a984",
+   "name": "pin-probes-w0.jsonl",
+   "pass": true
+  },
+  {
+   "detail": "4aaa4d0a691f6da40e68dbaa41a353aaf3ea518a6863aec04886c17197e00967",
+   "name": "pin-probes-w1.jsonl",
+   "pass": true
+  },
+  {
+   "detail": "2d4ff7dd40b2fc66745068f6772724f38ccd04dd2a65507af925fb85252b3032",
+   "name": "pin-probes-w2.jsonl",
+   "pass": true
+  },
+  {
+   "detail": "e04e20bdadd1cba94cd0a285ff9fb72bb9e9d0a2d5a687f1d76ceccc7d0ccb0c",
+   "name": "pin-probes-w3.jsonl",
+   "pass": true
+  },
+  {
+   "detail": "4286100804d82376418066da89167c50017244f2c6f02b81ad76a07b45bd91d6",
+   "name": "pin-r7second.json",
+   "pass": true
+  },
+  {
+   "detail": "5a2f4815c1d5fbbf40a76f839425a6e3750673bb37a60b64aca8ff03e5aeef9e",
+   "name": "pin-resolve5.json",
+   "pass": true
+  },
+  {
+   "detail": "e85d4bfb867a193f2b3cdb23ec9e15679359c9f337fcd97eb5c62473b90c281a",
+   "name": "pin-resolve6.json",
+   "pass": true
+  },
+  {
+   "detail": "207f4094a906817ebb4bbc5ad9b90c203c6a334ee6c8d9a501661257a0e1ce3f",
+   "name": "pin-resolve7.json",
+   "pass": true
+  },
+  {
+   "detail": "9f0161a8a61d311534fd3a4035b1c367426691c72ad5eb44efd01a5fae37e0cc",
+   "name": "pin-roots.json",
+   "pass": true
+  },
+  {
+   "detail": "c1073bae1d056db7f56d04a77fd9889d1e297a82a07537ddcd02c00d329dbabc",
+   "name": "pin-sv17.json",
+   "pass": true
+  },
+  {
+   "detail": "22953ae16a6002d87638531f2ca9fd286f6736b834fa296e5648505ada9074dc",
+   "name": "pin-sweep39.json",
+   "pass": true
+  },
+  {
+   "detail": "f8608d0a04a132012f0aa692099cebe851cdf261a3ea916dc4c15d6841fc5246",
+   "name": "pin-sweep39dead.json",
+   "pass": true
+  },
+  {
+   "detail": "n11-residual72-full-cache-join-candidate-supply-20261120-v1",
+   "name": "k1075-schema",
+   "pass": true
+  },
+  {
+   "detail": "2026-11-20",
+   "name": "k1075-date-2026-11-20",
+   "pass": true
+  },
+  {
+   "detail": "fresh-pool-exact-live-candidate-cover",
+   "name": "k1075-status",
+   "pass": true
+  },
+  {
+   "detail": "guard[0]=REFUTED-D10 is not a LOSS proof; depth-10 saturation labels are experimental nod",
+   "name": "k1075-interpretation-guard-loss-clause",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "k1075-interpretation-guard-not-certificates",
+   "pass": true
+  },
+  {
+   "detail": "records=98 unique(root,ordering)=78",
+   "name": "probes-corpus-parsed",
+   "pass": true
+  },
+  {
+   "detail": "dups=20 disagree=[]",
+   "name": "probes-duplicate-records-node-exact-agree",
+   "pass": true
+  },
+  {
+   "detail": "checked dup keys=20; wall_s/result.ms may differ, all evidence fields identical",
+   "name": "probes-duplicates-differ-only-in-timing-fields",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "probes-cap-uniform-30000000",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "probes-control-pilot-d6-uniform",
+   "pass": true
+  },
+  {
+   "detail": "roots=39 missing=[]",
+   "name": "probes-both-orders-per-root",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "probes-andclose-field-consistent",
+   "pass": true
+  },
+  {
+   "detail": "mismatch=[]",
+   "name": "k1069-classification-rebuilt-from-raw-probes",
+   "pass": true
+  },
+  {
+   "detail": "{\"REFUTED-D10\": 38, \"WIN7-D10\": 1}",
+   "name": "k1069-rebuilt-won1-refuted38-capped0",
+   "pass": true
+  },
+  {
+   "detail": "169615508 vs 169615508",
+   "name": "k1069-total-nodes-rebuilt",
+   "pass": true
+  },
+  {
+   "detail": "root=00000000010000809002000040000080 nodes=14249420",
+   "name": "k1069-max-probe-fields-rebuilt",
+   "pass": true
+  },
+  {
+   "detail": "2174557 vs 2174557",
+   "name": "k1069-avg-nodes-rebuilt",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "k1069-no-capped",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "k1069-win-root-is-retired-root",
+   "pass": true
+  },
+  {
+   "detail": "cls=39 records=39 r6dead=39",
+   "name": "k1059-dead39-set-agreement",
+   "pass": true
+  },
+  {
+   "detail": "both-order uncapped loss=false runs for 39/39 records",
+   "name": "k1059-refuted-d10-rebuilt-from-probe-runs",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "roots39-manifest-is-classification-keys",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "roots39-manifest-anatomy",
+   "pass": true
+  },
+  {
+   "detail": "roots.json vs resolve6.witness_full vs probe covered_rows",
+   "name": "retired39-three-source-row-agreement",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "resolve5-rows-78",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "resolve5-rows-identical-to-resolve6",
+   "pass": true
+  },
+  {
+   "detail": "39 roots x 2 rows, popcount 7",
+   "name": "resolve5-witness-39-onecover-78",
+   "pass": true
+  },
+  {
+   "detail": "39 roots x 2 rows, popcount 7",
+   "name": "resolve6-witness-39-onecover-78",
+   "pass": true
+  },
+  {
+   "detail": "['00000000000000003800000008001200', '00000000000000801202010000001000', '00000000000000801202080000001000', '00000000010000003800000008100000']",
+   "name": "fold9-4receipts-4rows",
+   "pass": true
+  },
+  {
+   "detail": "['00000000000000821082000000000001', '00000000000000821082000000000004']",
+   "name": "fold10-1receipt-2rows",
+   "pass": true
+  },
+  {
+   "detail": "78 - 4 (fold9) - 2 (fold10) == 72; agrees with k1075, fold10, resolve7",
+   "name": "residual72-set-derivation",
+   "pass": true
+  },
+  {
+   "detail": "{\"solved_s6_in_manifest\": 1639, \"remaining_s5_orbits\": 173, \"unique_remaining_s6\": 6209, \"sum_remaining_cost\": 491722, \"",
+   "name": "fold9-frontier-chain-link",
+   "pass": true
+  },
+  {
+   "detail": "cost/s6/solved fields",
+   "name": "published-base-equals-fold10-frontier-after",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "five-parent-target-40-of-112",
+   "pass": true
+  },
+  {
+   "detail": "seventeenth receipt root == live-sweep WIN == record win root; sv17 38 gates",
+   "name": "sv17-retired-root-consensus",
+   "pass": true
+  },
+  {
+   "detail": "the 4 judge-WIN-covered rows of residual-78 are exactly the fold9 receipts",
+   "name": "resolve6-win-cover-rows-equal-fold9-target-rows",
+   "pass": true
+  },
+  {
+   "detail": "{\"cache_engine_roots\": 7145, \"canonical_roots_judged\": 7493, \"published_transfer_only_roots\": 0, \"refuted_roots\": 6707, \"win_refuted_conflicts\": 0, \"win_roots\": 786}",
+   "name": "stage1-join-stats-equal-published-resolve6",
+   "pass": true
+  },
+  {
+   "detail": "{\"fresh_safe\": 4417, \"fresh_unsafe\": 3102, \"judged_refuted\": 446, \"judged_win\": 4, \"unjudged_fresh\": 7519}",
+   "name": "stage1-universe-hits-equal-published-resolve6",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "stage1-win-cover-hits-4",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "stage1-witness-39-live-roots",
+   "pass": true
+  },
+  {
+   "detail": "7532=7493+39, 6745=6707+38, 787=786+1, conflicts 0",
+   "name": "join-stats-plus-39-arithmetic",
+   "pass": true
+  },
+  {
+   "detail": "39 = 38 REFUTED-D10 + 1 WIN7-D10 (the seventeenth receipt root)",
+   "name": "newly-judged-since-resolve6-anatomy",
+   "pass": true
+  },
+  {
+   "detail": "4109+2871=6980; 6980+468+0=7448=universe72_roots",
+   "name": "universe72-hits-identity",
+   "pass": true
+  },
+  {
+   "detail": "{\"fresh_safe\": 4109, \"fresh_unsafe\": 2871, \"judged_refuted\": 468, \"judged_win\": 0, \"unjudged_fresh\": 6980}",
+   "name": "universe72-hits-equal-published-numbers",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "fresh-safe-pool-equals-hits",
+   "pass": true
+  },
+  {
+   "detail": "4417+3102=7519; 7519+446+4=7969",
+   "name": "universe78-hits-identity",
+   "pass": true
+  },
+  {
+   "detail": "{\"published\": 7969, \"rebuilt\": 7969}",
+   "name": "universe-size-check-78-7969",
+   "pass": true
+  },
+  {
+   "detail": "{\"rebuilt72\": 7448, \"universe78\": 7969}",
+   "name": "universe72-subset-check-7448-of-7969",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "row-demand-covers-all-72-rows",
+   "pass": true
+  },
+  {
+   "detail": "min=52 max=76 sum=4678",
+   "name": "fresh-safe-per-row-52-76",
+   "pass": true
+  },
+  {
+   "detail": "min=4 max=13 sum=638",
+   "name": "judged-refuted-per-row-4-13",
+   "pass": true
+  },
+  {
+   "detail": "no judged-WIN root covers any open row",
+   "name": "judged-win-supply-zero",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "no-fresh-safe-deficit",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "fresh-safe-pool-one-covers-residual72",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "witness-36-entries-distinct-roots",
+   "pass": true
+  },
+  {
+   "detail": "36 roots, popcount 7, each covering exactly its 2 assigned open rows (cover relation is the join's row-graph data, see trust boundary)",
+   "name": "witness-anatomy-2row-safe-popcount7",
+   "pass": true
+  },
+  {
+   "detail": "36 x 2 rows, disjoint, exact cover",
+   "name": "witness-onecover-of-residual72",
+   "pass": true
+  },
+  {
+   "detail": "36 disjoint 2-row pairs cover all 72 rows (>=36); no matching on 72 rows can pair more than floor(72/2)=36; witness proves 36 attained -> maximum = 36",
+   "name": "maximum-matching-36-proof-from-record",
+   "pass": true
+  },
+  {
+   "detail": "witness roots are unjudged fresh candidates",
+   "name": "witness-roots-disjoint-from-all-judged-sets",
+   "pass": true
+  },
+  {
+   "detail": "live38 == live-sweep-39-minus-WIN == resolve7 rows_per_root keys",
+   "name": "live38-record-anatomy",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "dead39-live39-disjoint",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "witness-roots-disjoint-from-dead-3rd",
+   "pass": true
+  },
+  {
+   "detail": "{\"assigned_rows_covered_geometrically\": 72, \"one_row_roots\": 4, \"two_row_roots\": 34}",
+   "name": "resolve7-geometry-recheck-detail",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "receipted-and-windfall-open-row-supply-empty",
+   "pass": true
+  },
+  {
+   "detail": "unmatched=0 unmatched+singleton=0 greedy_leftover=0 stranded=0",
+   "name": "unmatched-and-greedy-leftovers-zero",
+   "pass": true
+  },
+  {
+   "detail": "conflict-fails-closed + stage-1 abort semantics present",
+   "name": "trust-boundary-stated-in-record",
+   "pass": true
+  },
+  {
+   "detail": "count=25 all_pass=True",
+   "name": "published-25-checks-all-pass",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "published-25-check-names-exact",
+   "pass": true
+  },
+  {
+   "detail": "207f4094a906817ebb4bbc5ad9b90c203c6a334ee6c8d9a501661257a0e1ce3f",
+   "name": "resolve7-record-pin-match",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "resolve7-gates-all-pass-27",
+   "pass": true
+  },
+  {
+   "detail": "34x2+4x1 == 72 == r7geom 34+4 (2-row roots + 1-row roots)",
+   "name": "resolve7-cross-check-fields",
+   "pass": true
+  },
+  {
+   "detail": "76-gate resolve7 second verification agrees on the resolve7 pin",
+   "name": "r7second-record-consistency",
+   "pass": true
+  }
+ ],
+ "gates_all_pass": true,
+ "gates_total": 87,
+ "independent_routes": [
+  "route A: K1069 classification + node statistics rebuilt from raw 4-worker probe records (98 lines, 78 unique (root,ordering), 20 duplicates node-exact), and K1059 dead-39 REFUTED-D10 rebuilt from sweep39dead probe_runs",
+  "route B: fold-chain set arithmetic rows78 -> fold9 -4 -> fold10 -2 -> 72 with frontier/published-base numerics, checked against four independent row lists (k1075, fold10, resolve7, set derivation)",
+  "route C: stage-1 reproduction identity against resolve6 verdict_join plus the +38/+1/7532 delta arithmetic and universe-size identities 7448/7969",
+  "route D: phase-2 row_demand re-aggregation for all 72 rows, witness one-cover anatomy, maximum-matching-36 proof from the record alone, and disjointness from every judged set, cross-checked with resolve7 and its 76-gate second verification"
+ ],
+ "input_pins": {
+  "fold10.json": "bed7d33193299a0aa06ea4e076562dfa46251d20d5c3c4ca7fd231ffe854908a",
+  "fold9.json": "24db2352ad0d94ee4a76ec3de294f02cbdac7899f0b6ef64ea695d261017cdc2",
+  "k1075.json": "49b6f85f6b51cfdd8a59c7797223da3d8797885d3c992ce67dc9dae629a883fa",
+  "probes-w0.jsonl": "6b045eaefdd59e2c0fbd0f9b4a1e876b89c3f8b03cfade8f0ab1f8192cd0a984",
+  "probes-w1.jsonl": "4aaa4d0a691f6da40e68dbaa41a353aaf3ea518a6863aec04886c17197e00967",
+  "probes-w2.jsonl": "2d4ff7dd40b2fc66745068f6772724f38ccd04dd2a65507af925fb85252b3032",
+  "probes-w3.jsonl": "e04e20bdadd1cba94cd0a285ff9fb72bb9e9d0a2d5a687f1d76ceccc7d0ccb0c",
+  "r7second.json": "4286100804d82376418066da89167c50017244f2c6f02b81ad76a07b45bd91d6",
+  "resolve5.json": "5a2f4815c1d5fbbf40a76f839425a6e3750673bb37a60b64aca8ff03e5aeef9e",
+  "resolve6.json": "e85d4bfb867a193f2b3cdb23ec9e15679359c9f337fcd97eb5c62473b90c281a",
+  "resolve7.json": "207f4094a906817ebb4bbc5ad9b90c203c6a334ee6c8d9a501661257a0e1ce3f",
+  "roots.json": "9f0161a8a61d311534fd3a4035b1c367426691c72ad5eb44efd01a5fae37e0cc",
+  "sv17.json": "c1073bae1d056db7f56d04a77fd9889d1e297a82a07537ddcd02c00d329dbabc",
+  "sweep39.json": "22953ae16a6002d87638531f2ca9fd286f6736b834fa296e5648505ada9074dc",
+  "sweep39dead.json": "f8608d0a04a132012f0aa692099cebe851cdf261a3ea916dc4c15d6841fc5246"
+ },
+ "interpretation_guard": [
+  "REFUTED-D10 is NOT a LOSS proof; it certifies no first-player win within depth-10 from that root only.",
+  "A fold is row-coverage bookkeeping and says nothing about game-theoretic values.",
+  "Witness roots and candidate supply are conditional depth-10 sweep plans, not certificates.",
+  "This second verification judges no root, closes no row, and rebuilds no candidate universe.",
+  "The standard 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, and classes 1/2/4 remain UNKNOWN."
+ ],
+ "rederived": {
+  "dead_sweep_refuted_rebuilt_from_probe_runs": 39,
+  "fresh_safe_per_row_min_max_sum": [
+   52,
+   76,
+   4678
+  ],
+  "fresh_safe_pool": 4109,
+  "judged_refuted_per_row_min_max_sum": [
+   4,
+   13,
+   638
+  ],
+  "judged_roots_after_live_sweep": 7532,
+  "judged_win_open_row_supply": 0,
+  "maximum_matching": 36,
+  "probe_duplicate_records_node_exact": 20,
+  "probe_records": 98,
+  "probe_total_nodes": 169615508,
+  "probe_unique_pairs": 78,
+  "refuted_roots": 6745,
+  "residual72": 72,
+  "residual72_rows_equal_in_k1075_fold10_resolve7_and_set_derivation": true,
+  "retired_live_witness_supply_for_residual72": 0,
+  "universe72": 7448,
+  "universe78": 7969,
+  "win_refuted_conflicts": 0,
+  "win_roots": 787,
+  "witness_size": 36
+ },
+ "schema": "n11-residual72-candidate-supply-whole-record-second-verification/1",
+ "single_owner_note": "research/log/2026-11-20-n11-candidate-supply-whole-record-second-verification-single-owner-note.md",
+ "status": "independent second verification; published records only; no search, no new judging",
+ "target_record_faithful": true,
+ "trust_boundary": [
+  "The root-level universe lists (7969 and 7448 roots) and the 4109-root fresh pool are not published in any pinned record; per-root pool membership is not recomputable from records alone.",
+  "pair_edges=536, greedy_set_cover_size=40, singleton_eligible_rows=72 and the universe-intersection counts (dead39_in_universe72=37, live38_in_universe72=38) are K1075-internal claims outside the independent gate set of this second verification.",
+  "The maximum-matching-36 claim is re-proved here only through the pairing bound: the published witness is 36 disjoint 2-row pairs covering all 72 rows, and no matching on 72 rows exceeds 36 pairs; the row-graph itself is not published.",
+  "The root-to-row cover relation for the 36 witness roots (and the whole candidate supply) is the join's row-graph list as published in the record; it is not bitset-set-inclusion and is not re-derivable from the hexes alone.",
+  "Engine depth-10 verdict soundness and D4 invariance are upstream premises, identical to the published resolve6 join; this record judges no position."
+ ],
+ "verification_target": {
+  "path": "research/experiments/n11-residual72-full-cache-join-candidate-supply-20261120/output/residual72-full-cache-join-candidate-supply-20261120.json",
+  "published_checks": 25,
+  "sha256": "49b6f85f6b51cfdd8a59c7797223da3d8797885d3c992ce67dc9dae629a883fa"
+ }
+}

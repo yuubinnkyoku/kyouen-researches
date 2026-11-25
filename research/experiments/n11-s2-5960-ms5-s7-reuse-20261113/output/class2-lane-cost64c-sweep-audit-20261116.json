@@ -1,0 +1,285 @@
+{
+ "schema": "n11-class2-lane-cost64c-raw-sweep-audit-20261116-v1",
+ "date": "2026-11-16",
+ "independent_method": "Python standard library; exact Bareiss integer determinants; D4 canonicalization and CSV parsing implemented independently; no repository engine/solver/cache, no floating point",
+ "target": {
+  "s5_parent_class2_hex": "00000000000000003800000008002000",
+  "s5_parent_class1_hex": "00000000000000003800000000002020",
+  "s6_child_hex": "00000000000000003800000008002020",
+  "edge_cost": 64,
+  "legal_candidate_count": 64,
+  "demand": {
+   "c1": 1,
+   "c2": 1,
+   "c4": 0
+  }
+ },
+ "source_claim": {
+  "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost64c-inflight-20261116.json",
+  "chain_head_at_claim": "1410/174/6438/509109/4711/373023 (class-frontier-cost60c-receipts-recompute-20261116.json, git blob sha 239a6cf432e53713514d583e3682e1bef6075968, commit 05cc8bdb)"
+ },
+ "geometry": {
+  "child_stones": 6,
+  "child_safe": true,
+  "independent_legal_candidate_count": 64,
+  "candidate_bits_exact_match": true,
+  "lift_note": "one-stone deletions re-derived independently: stone 5 deletion reproduces the class-2 lift parent 00000000000000003800000008002000 bit-exact (51 rows / 3564, classes_bitmask 2 at the post-cost-60c head 1410) and stone 27 deletion reproduces the class-1 lift parent 00000000000000003800000000002020 bit-exact (74 rows / 5785, classes_bitmask 1); the other four deletions (stones 13, 59, 60, 61) canonicalize to 00000000000000003800000008000020, 00000000000000001800000008080020, 00000000000000002800000008002020, 00000000000000001282000000800000: six distinct orbits, all four closed and absent from the head-1410 ranking CSV; per-mask-bit demand is therefore c1=1, c2=1, c4=0 (a dual class-1+class-2 demand row), matching the claim and the MS5 S6 manifest row (cost 64, class bitmask 3)"
+ },
+ "batches": [
+  {
+   "batch": 1,
+   "file": "class2-lane-cost64c-raw-batch1-20261116.jsonl",
+   "candidate_bits": [
+    0,
+    1,
+    2,
+    3,
+    7,
+    8,
+    9,
+    10
+   ],
+   "pilot_nodes": 3402,
+   "nodes": 4316671
+  },
+  {
+   "batch": 2,
+   "file": "class2-lane-cost64c-raw-batch2-20261116.jsonl",
+   "candidate_bits": [
+    11,
+    12,
+    17,
+    21,
+    32,
+    33,
+    34,
+    42
+   ],
+   "pilot_nodes": 3402,
+   "nodes": 6238994
+  },
+  {
+   "batch": 3,
+   "file": "class2-lane-cost64c-raw-batch3-20261116.jsonl",
+   "candidate_bits": [
+    43,
+    44,
+    53,
+    54,
+    66,
+    67,
+    69,
+    70
+   ],
+   "pilot_nodes": 3402,
+   "nodes": 6454900
+  },
+  {
+   "batch": 4,
+   "file": "class2-lane-cost64c-raw-batch4-20261116.jsonl",
+   "candidate_bits": [
+    72,
+    73,
+    74,
+    75,
+    76,
+    78,
+    79,
+    80
+   ],
+   "pilot_nodes": 3402,
+   "nodes": 9906451
+  },
+  {
+   "batch": 5,
+   "file": "class2-lane-cost64c-raw-batch5-20261116.jsonl",
+   "candidate_bits": [
+    81,
+    83,
+    84,
+    85,
+    86,
+    87,
+    88,
+    92
+   ],
+   "pilot_nodes": 3402,
+   "nodes": 3640343
+  },
+  {
+   "batch": 6,
+   "file": "class2-lane-cost64c-raw-batch6-20261116.jsonl",
+   "candidate_bits": [
+    94,
+    95,
+    96,
+    98,
+    99,
+    100,
+    101,
+    102
+   ],
+   "pilot_nodes": 3402,
+   "nodes": 4303504
+  },
+  {
+   "batch": 7,
+   "file": "class2-lane-cost64c-raw-batch7-20261116.jsonl",
+   "candidate_bits": [
+    103,
+    105,
+    106,
+    107,
+    108,
+    109,
+    110,
+    111
+   ],
+   "pilot_nodes": 3402,
+   "nodes": 4192047
+  },
+  {
+   "batch": 8,
+   "file": "class2-lane-cost64c-raw-batch8-20261116.jsonl",
+   "candidate_bits": [
+    112,
+    113,
+    114,
+    116,
+    117,
+    118,
+    119,
+    120
+   ],
+   "pilot_nodes": 3402,
+   "nodes": 7095596
+  }
+ ],
+ "aggregate": {
+  "candidates": 64,
+  "win7_d10_bits": [],
+  "refuted_d10": 64,
+  "refuted_d10_bits": [
+   0,
+   1,
+   2,
+   3,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   17,
+   21,
+   32,
+   33,
+   34,
+   42,
+   43,
+   44,
+   53,
+   54,
+   66,
+   67,
+   69,
+   70,
+   72,
+   73,
+   74,
+   75,
+   76,
+   78,
+   79,
+   80,
+   81,
+   83,
+   84,
+   85,
+   86,
+   87,
+   88,
+   92,
+   94,
+   95,
+   96,
+   98,
+   99,
+   100,
+   101,
+   102,
+   103,
+   105,
+   106,
+   107,
+   108,
+   109,
+   110,
+   111,
+   112,
+   113,
+   114,
+   116,
+   117,
+   118,
+   119,
+   120
+  ],
+  "capped": 0,
+  "capped_bits": [],
+  "candidate_nodes": 46148506,
+  "pilots": 8,
+  "heaviest_bits_nodes": {
+   "113": 2540082,
+   "79": 2137917,
+   "80": 2076976,
+   "12": 1997132,
+   "70": 1860840,
+   "74": 1719749
+  }
+ },
+ "crosschecks": {
+  "v16_determinism_rerun": {
+   "file": "class2-lane-cost64c-v16-determinism-rerun-20261116.jsonl",
+   "batch_rerun": 5,
+   "identical_ignoring_ms": true
+  },
+  "v15_cross_engine": {
+   "file": "class2-lane-cost64c-v15-crosscheck-20261116.jsonl",
+   "anchors": [
+    0,
+    79,
+    111,
+    113,
+    119
+   ],
+   "anchor_nodes": {
+    "0": 1069405,
+    "79": 3898526,
+    "111": 2049140,
+    "113": 5021777,
+    "119": 735484
+   },
+   "pilots_5949": 1,
+   "run_note": "single foreground invocation (both 70j cross-cover roots 111/119, the double-cover root bit 119 being also the unique 65k cover root, plus the two heaviest candidates 113/79 and bit 0), one d6 pilot at 5949 nodes; v15 confirms loss=false on all five anchors, agreeing with v16"
+  }
+ },
+ "checks": {
+  "all_bits_exactly_once": true,
+  "all_terminal_ranges_within_depth10_bounds": true,
+  "distinct_terminal_ranges": [
+   [
+    13,
+    17
+   ]
+  ],
+  "pilot_3402_per_batch": true,
+  "independent_enumeration_matches_claim": true,
+  "one_stone_deletion_d4_canonicalization_verified": true,
+  "parents_verified_against_head1410_ranking_csv": true,
+  "total_nodes_match": true
+ },
+ "cross_cover_consequence": "the sweep tested the three candidate roots of this child that cover STERILE rows of the best coverable class-2 S5 00000000000000801202000000200000 (3 rows / 209, all three rows STERILE by their own-row sweeps): bit 111 (root 00008000000000003800000008002020, 654,732 v16 nodes / 2,049,140 v15 nodes) and bit 119 (root 00800000000000003800000008002020, 301,375 v16 / 735,484 v15) cover the STERILE 70j child 00000000000000801282000000200000, and bit 119 ADDITIONALLY covers the STERILE 65k child 00000000020000801202000000200000 - a single receipt that would have closed BOTH STERILE rows. All three are REFUTED-D10 (re-derived independently here by canonical covers over all 64 candidates x 7 deletions), so neither row is closed by this neighbor. Together with the cost-60c (bit 119) and cost-62b (bits 21, 109) negative facts, the three cheapest one-stone-replacement neighbors of the 70j child are exhausted, and the cheapest neighbor of the 65k child is exhausted. The rows remain open; closure depends on the remaining neighbors (65k: cost 64 group beyond 64c; 74h: cost 66 group), other cross-cover routes, or evidence beyond depth 10. Negative facts only; NOT LOSS proofs.",
+ "structural_consequence": "64/64 REFUTED-D10 at cap 1e9 (0 capped): the cost-64c child is STERILE - no WIN7-D10 receipt can be produced from any of its 64 legal roots, so this S6 row is unclosable by depth-10 WIN7 receipts from its own row. This is NOT a LOSS proof. The canonical head 1410/174/6438/509109/4711/373023 is unchanged (no fold material): both open parents keep the child row (class-2 51/3564 and class-1 74/5785).",
+ "interpretation": "win7_d10_bits is []: the sweep is STERILE. refuted_d10 is NOT a LOSS proof; it records only the absence of a first-player win within depth 10 from each root. There were no capped candidates. The standard 11x11 empty board, both two-stone roots {49,60}/{59,60}, S2 {59,60}, class 1, class 2 and class 4 all remain UNKNOWN."
+}

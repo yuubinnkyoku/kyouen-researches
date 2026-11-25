@@ -1,0 +1,202 @@
+{
+  "schema": "n11-residual72-replace16-independent-second-verification-v1",
+  "date": "2026-11-20",
+  "inputs": [
+    {
+      "name": "K1085",
+      "path": "research/experiments/n11-residual72-unsafe-classification-add2stones-20261120/output/residual72-unsafe-classification-add2stones-20261120.json",
+      "sha256": "5fdd342d624abec9b8478b69b13fc63a2dbbec99d227da4740cfe068647e688e",
+      "git_blob_sha1": "cb66fe9dd6454783bece126a643bf247d84def20"
+    },
+    {
+      "name": "K1086",
+      "path": "research/experiments/n11-residual72-addtwo-greedy23-d10-sweep-20261120/output/addtwo-greedy23-d10-sweep-20261120.json",
+      "sha256": "3045e15295af9b85b86578b5e8d55a8b325466eac576ee15b8450f6acb9b9ced",
+      "git_blob_sha1": "277757358a52db87ba22b0d5f50e9af51b211193"
+    },
+    {
+      "name": "K1088",
+      "path": "research/experiments/n11-residual72-safe8-refuted16-refsolve-20261120/output/safe8-refuted16-refsolve-20261120.json",
+      "sha256": "16b38d04a488617b1b8c002c6a5f3171038f557cd3cca8b8e4dbd4657bc2f724",
+      "git_blob_sha1": "95eef43460000d20bc821ac34ec7d2767aacd5f2"
+    },
+    {
+      "name": "K1089",
+      "path": "research/experiments/n11-residual72-replace16-d10-sweep-20261120/output/replace16-d10-sweep-20261120.json",
+      "sha256": "808fbda1152cb492bb76641a101660f965f2801c0b74790d20a0d998d5b747fc",
+      "git_blob_sha1": "e6c35ab1d456be082b509ce19244501019b86bb7"
+    }
+  ],
+  "runner": {
+    "path": "research/experiments/n11-residual72-replace16-d10-sweep-20261120/runner_v17.ts",
+    "git_blob_sha1": "c132cc6425eee3feaeef1d697dd74f968cfedb59"
+  },
+  "checks": [
+    {
+      "name": "input-sha256-pins",
+      "pass": true,
+      "detail": {
+        "k1085": "5fdd342d624abec9b8478b69b13fc63a2dbbec99d227da4740cfe068647e688e",
+        "k1086": "3045e15295af9b85b86578b5e8d55a8b325466eac576ee15b8450f6acb9b9ced",
+        "k1088": "16b38d04a488617b1b8c002c6a5f3171038f557cd3cca8b8e4dbd4657bc2f724",
+        "k1089": "808fbda1152cb492bb76641a101660f965f2801c0b74790d20a0d998d5b747fc"
+      }
+    },
+    {
+      "name": "runner-v17-git-blob-pin",
+      "pass": true,
+      "detail": {
+        "expected": "c132cc6425eee3feaeef1d697dd74f968cfedb59",
+        "actual": "c132cc6425eee3feaeef1d697dd74f968cfedb59"
+      }
+    },
+    {
+      "name": "k1085-base-has-72-unique-six-stone-rows",
+      "pass": true,
+      "detail": {
+        "count": 72,
+        "unique": 72
+      }
+    },
+    {
+      "name": "k1086-partition-is-7-win-16-refuted",
+      "pass": true,
+      "detail": {
+        "win": 7,
+        "refuted": 16
+      }
+    },
+    {
+      "name": "k1086-win-and-refuted-rows-disjoint",
+      "pass": true,
+      "detail": {
+        "winRows": 23,
+        "refutedRows": 49
+      }
+    },
+    {
+      "name": "k1086-claimed-rows-partition-k1085-base",
+      "pass": true,
+      "detail": {
+        "win": 23,
+        "refuted": 49,
+        "union": 72
+      }
+    },
+    {
+      "name": "k1088-residual49-equals-k1086-refuted-footprints",
+      "pass": true,
+      "detail": {
+        "k1088": 49,
+        "k1086": 49
+      }
+    },
+    {
+      "name": "k1088-plan-and-k1089-sweep-root-sets-match",
+      "pass": true,
+      "detail": {
+        "planned": 16,
+        "swept": 16
+      }
+    },
+    {
+      "name": "replacement-roots-are-16-safe-eight-stone-canonical",
+      "pass": true,
+      "detail": {
+        "badCanonical": 0,
+        "badSafe": 0,
+        "badRows": 0,
+        "quadruplesChecked": 1120
+      }
+    },
+    {
+      "name": "replacement-claims-match-k1088-plan",
+      "pass": true,
+      "detail": {
+        "badClaims": 0
+      }
+    },
+    {
+      "name": "all-49-rows-covered-exactly-once-by-subset-of-a-d4-image",
+      "pass": true,
+      "detail": {
+        "badCoverage": 0,
+        "badMultiplicity": 0,
+        "covered": 49
+      }
+    },
+    {
+      "name": "replacement-gains-histogram-reproduces",
+      "pass": true,
+      "detail": {
+        "gainsHist": {
+          "2": 2,
+          "3": 11,
+          "4": 3
+        },
+        "leftover": 0
+      }
+    },
+    {
+      "name": "all-32-published-probes-uncapped-and-order-consistent",
+      "pass": true,
+      "detail": {
+        "probes": 32,
+        "bad": 0
+      }
+    },
+    {
+      "name": "k1089-classification-and-node-ledger-reproduce",
+      "pass": true,
+      "detail": {
+        "wins": 3,
+        "refuted": 13,
+        "nodes": 6339079,
+        "maxNode": 878391,
+        "capped": 0,
+        "errors": 0,
+        "terminalRange": [
+          12,
+          18
+        ]
+      }
+    },
+    {
+      "name": "all-72-base-rows-are-quadruple-free",
+      "pass": true,
+      "detail": {
+        "rows": 72,
+        "quadruplesChecked": 1080
+      }
+    },
+    {
+      "name": "k1089-source-gates-and-target-contract-pass",
+      "pass": true,
+      "detail": {
+        "sourceGates": 13,
+        "failed": 0,
+        "targetRoots": 16,
+        "plannedProbes": 32,
+        "pairsOk": 49
+      }
+    }
+  ],
+  "summary": {
+    "base_rows": 72,
+    "refuted_residual_rows": 49,
+    "replacement_roots": 16,
+    "probes": 32,
+    "win8_d10_candidates": 3,
+    "refuted_d10_facts": 13,
+    "nodes_total": 6339079,
+    "max_probe_nodes": 878391,
+    "quadruple_checks_roots": 1120,
+    "quadruple_checks_rows": 1080
+  },
+  "interpretation_guard": [
+    "この監査はK1089の公開済み根・行の幾何と32 probe記録の整合性を独立照合したもので、DFPNエンジンを再実行したものではない。",
+    "WIN8-D10 candidateは証明書ではなく、receipt foldもS6行の閉鎖も行っていない。",
+    "REFUTED-D10はLOSS証明ではない。",
+    "標準11×11空盤、二石root {49,60}/{59,60}、S2 {59,60}、class 1/2/4はUNKNOWNのまま."
+  ]
+}

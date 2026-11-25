@@ -1,0 +1,99 @@
+{
+  "census_harvest_gap": {
+    "corrected_status_counts": {
+      "harvested_refuted": 8,
+      "open": 0,
+      "refuted_via_cost64a_v17": 56
+    },
+    "family_consequence": "family 00000000000000801202000040000000 (S5) can only be closed through its cost-76 child 00000000010000809092000001000000 (WIN7-D10 bits {61,99}, fold pending on the parallel lane); the cost-71 sibling is also STERILE (71/71 REFUTED-D10, K0863)",
+    "finding": "the head-1452 census v1 bit table marks this row open=56 / harvested_refuted=8, but all 64 legal bits are REFUTED-D10 in the published cost-64a sweep; the corrected status is swept, STERILE, open=0",
+    "other_open_rows_check": "none of the other 12 census open rows matches a skipped claim file's child: the only other swept children among them (64h/76c/66i/66j/69j) are handled by the v2/v3/v4 overlays or are the active 69j claim",
+    "root_cause": "the v1 harvest glob pass skips class2-lane-cost64a-inflight-20261116.json with reason 'no win bits' (the claim stores verdicts as sweep_result counts, not bit lists) and there is no explicit raw-batch ingestion pass for 64a, unlike 64f/76d/77e/65f/65j",
+    "rows_affected_in_v1_bit_tables": 1,
+    "v1_bit_table_status_counts": {
+      "harvested_refuted": 8,
+      "open": 56
+    },
+    "v4_ranking_consequence": "census v4 ranking_top10[0] is this child (cost 64, 55 open): a false-open row. Removing it, the cheapest remaining unclaimed rows are ranking[1] 00000000000000403800000008000020 (cost 69, the in-flight cost-69j target) and then ranking[2] 00000000000000c09002000000002000 (cost 71, 70 open, demand c2=2/c4=2), subject to the v4 selection policy (fold-pending exclusions); the definitive next-target selection belongs to the next census run with the 64a verdict map ingested"
+  },
+  "cross_source_conflict_scan": {
+    "conflicts": [],
+    "maps_scanned": [
+      "cost64h",
+      "cost66i",
+      "cost66j",
+      "cost76c"
+    ],
+    "overlap_bits_in_new_sweeps": [
+      98
+    ]
+  },
+  "date": "2026-11-17",
+  "determinism": {
+    "batches": [
+      5,
+      8
+    ],
+    "result": "field-identical on loss/nodes/capped/terminalStoneRange for all 16 bits"
+  },
+  "interpretation_guard": "no manifest row is closed or changed; head 1472 untouched; solved counts are manifest-coverage bookkeeping",
+  "schema": "n11-class2-lane-cost64a-v17-full-row-recheck-20261117",
+  "status": "completed: v17 full-row re-check 64/64 REFUTED-D10, verdict flips 0, node-exact 63/64 (bit 87 -1755), determinism 16/16, census runner-up harvest-gap confirmed and corrected; row is swept STERILE; 11x11 UNKNOWN",
+  "target": {
+    "andclose": 1,
+    "cap": 1000000000,
+    "demand": {
+      "c1": 1,
+      "c2": 1,
+      "c4": 0
+    },
+    "depth": 10,
+    "engine": "class4_child1_runner_v17.ts (git blob c132cc6425eee3feaeef1d697dd74f968cfedb59, fbt-saturation-repaired)",
+    "legal_candidate_count": 64,
+    "s5": "00000000000000801202000040000000",
+    "s6_child": "00000000000000801282000040000000",
+    "s6_s7_edge_cost": 64
+  },
+  "unknown_status": "11x11 empty board: UNKNOWN. The two-stone roots {49,60} and {59,60}, S2 {59,60} and classes 1/2/4 remain UNKNOWN.",
+  "v16_published": {
+    "candidate_nodes": 38157151,
+    "claim_blob": "08551cd0716b3655f03ddb2256bef942c1f89ab6",
+    "pilots": "3402 x8",
+    "source": "class2-lane-cost64a-raw-batch{1..8}-20261116.jsonl (git blob sha pinned in this record)",
+    "verdicts": {
+      "capped": 0,
+      "refuted_d10": 64,
+      "win7_d10": 0
+    }
+  },
+  "v16_vs_v17": {
+    "node_corrections": [
+      {
+        "bit": 87,
+        "delta": -1755,
+        "v16_nodes": 2102913,
+        "v17_nodes": 2101158
+      }
+    ],
+    "node_exact_bits": 63,
+    "note": "bit 87 is the only fbt-saturation node correction (-1755 nodes, -0.08%); v17 engine-corrected total for this row is 38,155,396",
+    "total_delta": -1755,
+    "total_nodes_v16": 38157151,
+    "total_nodes_v17": 38155396,
+    "verdict_flips": []
+  },
+  "v17_recheck": {
+    "batch_partition": "identical to the published v16 raw batches",
+    "candidate_nodes": 38155396,
+    "pilots": "3402 x8",
+    "source": "class2-lane-cost64a-v17-recheck-batch{1..8}-20261117.jsonl (git blob sha pinned in this record)",
+    "terminal_ranges": "[13,17] only",
+    "verdicts": {
+      "capped": 0,
+      "refuted_d10": 64,
+      "win7_d10": 0
+    },
+    "wall_time_note": "single sandbox, 2 concurrent node processes (nproc=2)"
+  },
+  "verdict_semantics": "loss=false && !capped => REFUTED-D10, no first-player win within depth 10 (NOT a LOSS proof); STERILE => the row cannot be closed by depth-10 WIN7 receipts"
+}

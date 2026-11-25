@@ -1,0 +1,736 @@
+{
+ "cap": 30000000,
+ "classification": {
+  "capped_probes": 0,
+  "error_probes": 0,
+  "nodes_total": 5700222,
+  "refuted_d10_facts": [
+   {
+    "gained_rows": 3,
+    "root": "00000000000000083800000048300000"
+   },
+   {
+    "gained_rows": 3,
+    "root": "00000000000000103800000209080000"
+   },
+   {
+    "gained_rows": 3,
+    "root": "00000000000000801202000001004440"
+   },
+   {
+    "gained_rows": 3,
+    "root": "000000000000008210820000000008c0"
+   },
+   {
+    "gained_rows": 3,
+    "root": "00000000000000a21083000000100000"
+   },
+   {
+    "gained_rows": 3,
+    "root": "00000000020000809202000800100000"
+   },
+   {
+    "gained_rows": 2,
+    "root": "00000000000040809002000040102000"
+   },
+   {
+    "gained_rows": 2,
+    "root": "00000000040000801202100100800000"
+   },
+   {
+    "gained_rows": 1,
+    "root": "00000010000000801202000000000444"
+   }
+  ],
+  "terminalStoneRange_union": [
+   12,
+   18
+  ],
+  "unresolved": [],
+  "win8_d10_candidates": [
+   {
+    "covered_rows": [
+     "00000000000000003800100008002000",
+     "00000000000000801202000000101000",
+     "00000000000000801202000000900000"
+    ],
+    "gained_rows": 3,
+    "root": "00000000000000801202000000901010"
+   },
+   {
+    "covered_rows": [
+     "00000000000000003800000808001000",
+     "00000000000000801202000000081000",
+     "00000000000000801202000020001000"
+    ],
+    "gained_rows": 3,
+    "root": "00000000000000801202000022081000"
+   },
+   {
+    "covered_rows": [
+     "00000008000000003800000008100000"
+    ],
+    "gained_rows": 1,
+    "root": "0000000800000000380000000810000a"
+   }
+  ]
+ },
+ "date": "2026-11-20",
+ "gates": [
+  {
+   "detail": {
+    "sha256": "5fdd342d624abec9b8478b69b13fc63a2dbbec99d227da4740cfe068647e688e"
+   },
+   "name": "k1085-sha-pin",
+   "pass": true
+  },
+  {
+   "detail": {
+    "sha256": "3045e15295af9b85b86578b5e8d55a8b325466eac576ee15b8450f6acb9b9ced"
+   },
+   "name": "k1086-sha-pin",
+   "pass": true
+  },
+  {
+   "detail": {
+    "sha256": "808fbda1152cb492bb76641a101660f965f2801c0b74790d20a0d998d5b747fc"
+   },
+   "name": "k1089-sha-pin",
+   "pass": true
+  },
+  {
+   "detail": {
+    "sha256": "edd7ac84f47268adcc8a3364a5ff687499cb2a76ded0c0fa379506af02f40b25"
+   },
+   "name": "k1091-sha-pin",
+   "pass": true
+  },
+  {
+   "detail": {
+    "sha256": "e19244904779d906853de603d42c07903e08ab80008aeeb621913669a249baa8"
+   },
+   "name": "k1094-sha-pin",
+   "pass": true
+  },
+  {
+   "detail": {
+    "git_blob": "c132cc6425eee3feaeef1d697dd74f968cfedb59"
+   },
+   "name": "runner-blob-pin",
+   "pass": true
+  },
+  {
+   "detail": {
+    "partition": {
+     "disjoint": true,
+     "refuted_claims_distinct": true,
+     "union_is_residual72": true,
+     "win8_claims_distinct": true
+    },
+    "refuted_claimed_rows": 49,
+    "refuted_roots": 16,
+    "unknown_claim_rows": [],
+    "win8_claimed_rows": 23,
+    "win8_roots": 7
+   },
+   "name": "residual49-rederived-from-k1085-k1086",
+   "pass": true
+  },
+  {
+   "detail": {
+    "partition": {
+     "disjoint": true,
+     "ref13_claims_distinct": true,
+     "ref13_claims_subset_of_resid49": true,
+     "union_is_residual49": true,
+     "win9_claims_distinct": true
+    },
+    "ref13_claimed_rows": 40,
+    "ref13_roots": 13,
+    "unknown_claim_rows": [],
+    "win9_claimed_rows": 9,
+    "win9_roots": 3
+   },
+   "name": "residual40-rederived-from-k1085-k1086-k1089",
+   "pass": true
+  },
+  {
+   "detail": {
+    "partition": {
+     "disjoint": true,
+     "ref12_claims_distinct": true,
+     "ref12_claims_subset_of_resid40": true,
+     "union_is_residual40": true,
+     "win11_claims_distinct": true
+    },
+    "ref12_claimed_rows": 30,
+    "ref12_roots": 12,
+    "unknown_claim_rows": [],
+    "win11_claimed_rows": 10,
+    "win11_roots": 3
+   },
+   "name": "residual30-rederived-from-k1085-k1086-k1089-k1091",
+   "pass": true
+  },
+  {
+   "detail": {
+    "equal": true,
+    "k1094_per_row_residual30_rows": 30,
+    "note": "equality expected: both enumerate the ref12 claimed rows in resid40 canonical form; the independent derivation above does not use K1094 for the universe"
+   },
+   "name": "residual30-consistency-with-k1094-bookkeeping",
+   "pass": true
+  },
+  {
+   "detail": {
+    "d4_min_canonical": 12,
+    "note": "each replacement root is 8 stones, quadruple-free, and the minimal hex over its own D4 orbit",
+    "popcount8": true,
+    "quad_free": 12
+   },
+   "name": "replace12-geometry-basic",
+   "pass": true
+  },
+  {
+   "detail": {
+    "bad": [],
+    "note": "each claimed (root,row) pair: row hex is a D4 orientation of a re-derived residual-30 row, row-set \u2286 some D4 image of the root (in either orientation), and each residual-30 row is covered at most once",
+    "pairs_ok": 30
+   },
+   "name": "replace12-pairs-rederived",
+   "pass": true
+  },
+  {
+   "detail": {
+    "covered_union": 30,
+    "matches_rederived_residual30": true
+   },
+   "name": "coverage-30-exactly-once",
+   "pass": true
+  },
+  {
+   "detail": {
+    "k1094_scope1_gains_hist": {
+     "1": 2,
+     "2": 2,
+     "3": 8
+    },
+    "k1094_scope1_greedy_size": 12,
+    "k1094_scope1_leftover": [],
+    "observed_hist": {
+     "1": 2,
+     "2": 2,
+     "3": 8
+    },
+    "per_root_claim_consistent": true
+   },
+   "name": "replace12-gains-hist",
+   "pass": true
+  },
+  {
+   "detail": {
+    "rule": "child = root minus lowest set bit; verdict is designation-independent (engine receives the same cell set)"
+   },
+   "name": "raw-child-rebuild",
+   "pass": true
+  },
+  {
+   "detail": {
+    "missing": [],
+    "planned": 24,
+    "present": 24
+   },
+   "name": "all-probes-present",
+   "pass": true
+  },
+  {
+   "detail": {
+    "bad": []
+   },
+   "name": "pilot-d6-control-all-probes",
+   "pass": true
+  },
+  {
+   "detail": {
+    "conflicts": []
+   },
+   "name": "ordering-consistency-scan",
+   "pass": true
+  }
+ ],
+ "inputs": {
+  "k1085_sha256": "5fdd342d624abec9b8478b69b13fc63a2dbbec99d227da4740cfe068647e688e",
+  "k1086_sha256": "3045e15295af9b85b86578b5e8d55a8b325466eac576ee15b8450f6acb9b9ced",
+  "k1089_sha256": "808fbda1152cb492bb76641a101660f965f2801c0b74790d20a0d998d5b747fc",
+  "k1091_sha256": "edd7ac84f47268adcc8a3364a5ff687499cb2a76ded0c0fa379506af02f40b25",
+  "k1094_sha256": "e19244904779d906853de603d42c07903e08ab80008aeeb621913669a249baa8"
+ },
+ "interpretation_guard": [
+  "loss=true (uncapped) is a WIN8-within-depth-10 probe candidate: a certificate rebuild target whose extraction, fold and row-closure semantics are NOT established by this sweep and require a separate single-owner undertaking.",
+  "loss=false with at least one uncapped ordering is a REFUTED-D10 probe fact for the 8-stone root: it is NOT a LOSS proof of any earlier position, and it only erodes the replacement pool for the residual-49 rows.",
+  "capped/timeout probes are cost lower bounds and evidence in NO direction.",
+  "Node counts and solved counts are not win/loss readings.",
+  "The standard 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60} and classes 1/2/4 all remain UNKNOWN."
+ ],
+ "per_root": {
+  "00000000000000083800000048300000": {
+   "covered_rows": [
+    "00000000000000003800000008001800",
+    "00000000000000083800000008100000",
+    "00000000000000083800000048000000"
+   ],
+   "gained_rows": 3,
+   "probes": {
+    "andclose0": {
+     "capped": false,
+     "loss": false,
+     "ms": 794,
+     "nodes": 87055,
+     "ordering": "andclose0",
+     "terminalStoneRange": [
+      14,
+      18
+     ],
+     "wall_s": 1.3
+    },
+    "andclose1": {
+     "capped": false,
+     "loss": false,
+     "ms": 392,
+     "nodes": 23524,
+     "ordering": "andclose1",
+     "terminalStoneRange": [
+      14,
+      18
+     ],
+     "wall_s": 0.9
+    }
+   }
+  },
+  "00000000000000103800000209080000": {
+   "covered_rows": [
+    "00000000000000003800000209000000",
+    "00000000000000103800000008080000",
+    "00000000000000103800000009000000"
+   ],
+   "gained_rows": 3,
+   "probes": {
+    "andclose0": {
+     "capped": false,
+     "loss": false,
+     "ms": 1867,
+     "nodes": 159862,
+     "ordering": "andclose0",
+     "terminalStoneRange": [
+      14,
+      18
+     ],
+     "wall_s": 2.4
+    },
+    "andclose1": {
+     "capped": false,
+     "loss": false,
+     "ms": 271,
+     "nodes": 5279,
+     "ordering": "andclose1",
+     "terminalStoneRange": [
+      12,
+      16
+     ],
+     "wall_s": 0.9
+    }
+   }
+  },
+  "00000000000000801202000000901010": {
+   "covered_rows": [
+    "00000000000000003800100008002000",
+    "00000000000000801202000000101000",
+    "00000000000000801202000000900000"
+   ],
+   "gained_rows": 3,
+   "probes": {
+    "andclose0": {
+     "capped": false,
+     "loss": true,
+     "ms": 2070,
+     "nodes": 240848,
+     "ordering": "andclose0",
+     "terminalStoneRange": [
+      14,
+      18
+     ],
+     "wall_s": 2.8
+    },
+    "andclose1": {
+     "capped": false,
+     "loss": true,
+     "ms": 1604,
+     "nodes": 198622,
+     "ordering": "andclose1",
+     "terminalStoneRange": [
+      14,
+      18
+     ],
+     "wall_s": 2.2
+    }
+   }
+  },
+  "00000000000000801202000001004440": {
+   "covered_rows": [
+    "00000000000000003800000409000000",
+    "00000000000000043800000009000000",
+    "00000000000000801202000001000400"
+   ],
+   "gained_rows": 3,
+   "probes": {
+    "andclose0": {
+     "capped": false,
+     "loss": false,
+     "ms": 1201,
+     "nodes": 118586,
+     "ordering": "andclose0",
+     "terminalStoneRange": [
+      14,
+      18
+     ],
+     "wall_s": 1.8
+    },
+    "andclose1": {
+     "capped": false,
+     "loss": false,
+     "ms": 818,
+     "nodes": 80063,
+     "ordering": "andclose1",
+     "terminalStoneRange": [
+      14,
+      18
+     ],
+     "wall_s": 1.6
+    }
+   }
+  },
+  "00000000000000801202000022081000": {
+   "covered_rows": [
+    "00000000000000003800000808001000",
+    "00000000000000801202000000081000",
+    "00000000000000801202000020001000"
+   ],
+   "gained_rows": 3,
+   "probes": {
+    "andclose0": {
+     "capped": false,
+     "loss": true,
+     "ms": 1335,
+     "nodes": 137565,
+     "ordering": "andclose0",
+     "terminalStoneRange": [
+      14,
+      18
+     ],
+     "wall_s": 2.0
+    },
+    "andclose1": {
+     "capped": false,
+     "loss": true,
+     "ms": 1082,
+     "nodes": 126683,
+     "ordering": "andclose1",
+     "terminalStoneRange": [
+      14,
+      18
+     ],
+     "wall_s": 1.7
+    }
+   }
+  },
+  "000000000000008210820000000008c0": {
+   "covered_rows": [
+    "00000000000000821082000000000008",
+    "00000000000000821082000000000010",
+    "00000000000000821082000000000800"
+   ],
+   "gained_rows": 3,
+   "probes": {
+    "andclose0": {
+     "capped": false,
+     "loss": false,
+     "ms": 625,
+     "nodes": 62182,
+     "ordering": "andclose0",
+     "terminalStoneRange": [
+      14,
+      18
+     ],
+     "wall_s": 1.5
+    },
+    "andclose1": {
+     "capped": false,
+     "loss": false,
+     "ms": 377,
+     "nodes": 27847,
+     "ordering": "andclose1",
+     "terminalStoneRange": [
+      14,
+      18
+     ],
+     "wall_s": 1.1
+    }
+   }
+  },
+  "00000000000000a21083000000100000": {
+   "covered_rows": [
+    "00000000000000821082000000001000",
+    "00000000000000821082800000000000",
+    "00000000000000821083000000000000"
+   ],
+   "gained_rows": 3,
+   "probes": {
+    "andclose0": {
+     "capped": false,
+     "loss": false,
+     "ms": 788,
+     "nodes": 66147,
+     "ordering": "andclose0",
+     "terminalStoneRange": [
+      14,
+      18
+     ],
+     "wall_s": 1.4
+    },
+    "andclose1": {
+     "capped": false,
+     "loss": false,
+     "ms": 400,
+     "nodes": 21984,
+     "ordering": "andclose1",
+     "terminalStoneRange": [
+      14,
+      18
+     ],
+     "wall_s": 1.1
+    }
+   }
+  },
+  "00000000000040809002000040102000": {
+   "covered_rows": [
+    "00000000000000801202000001080000",
+    "00000000000040809002000000100000"
+   ],
+   "gained_rows": 2,
+   "probes": {
+    "andclose0": {
+     "capped": false,
+     "loss": false,
+     "ms": 1187,
+     "nodes": 120752,
+     "ordering": "andclose0",
+     "terminalStoneRange": [
+      14,
+      18
+     ],
+     "wall_s": 1.7
+    },
+    "andclose1": {
+     "capped": false,
+     "loss": false,
+     "ms": 1207,
+     "nodes": 112243,
+     "ordering": "andclose1",
+     "terminalStoneRange": [
+      14,
+      18
+     ],
+     "wall_s": 2.0
+    }
+   }
+  },
+  "00000000020000809202000800100000": {
+   "covered_rows": [
+    "0000000000000000380000000a080000",
+    "00000000000000801202020000001000",
+    "00000000020000801202000000100000"
+   ],
+   "gained_rows": 3,
+   "probes": {
+    "andclose0": {
+     "capped": false,
+     "loss": false,
+     "ms": 402,
+     "nodes": 25455,
+     "ordering": "andclose0",
+     "terminalStoneRange": [
+      14,
+      18
+     ],
+     "wall_s": 1.4
+    },
+    "andclose1": {
+     "capped": false,
+     "loss": false,
+     "ms": 206,
+     "nodes": 10056,
+     "ordering": "andclose1",
+     "terminalStoneRange": [
+      14,
+      18
+     ],
+     "wall_s": 0.9
+    }
+   }
+  },
+  "00000000040000801202100100800000": {
+   "covered_rows": [
+    "00000000000000003800000008002010",
+    "00000000010000809002000040000000"
+   ],
+   "gained_rows": 2,
+   "probes": {
+    "andclose0": {
+     "capped": false,
+     "loss": false,
+     "ms": 888,
+     "nodes": 74759,
+     "ordering": "andclose0",
+     "terminalStoneRange": [
+      14,
+      18
+     ],
+     "wall_s": 1.5
+    },
+    "andclose1": {
+     "capped": false,
+     "loss": false,
+     "ms": 666,
+     "nodes": 55252,
+     "ordering": "andclose1",
+     "terminalStoneRange": [
+      14,
+      18
+     ],
+     "wall_s": 1.3
+    }
+   }
+  },
+  "0000000800000000380000000810000a": {
+   "covered_rows": [
+    "00000008000000003800000008100000"
+   ],
+   "gained_rows": 1,
+   "probes": {
+    "andclose0": {
+     "capped": false,
+     "loss": true,
+     "ms": 9874,
+     "nodes": 1416679,
+     "ordering": "andclose0",
+     "terminalStoneRange": [
+      14,
+      18
+     ],
+     "wall_s": 10.6
+    },
+    "andclose1": {
+     "capped": false,
+     "loss": true,
+     "ms": 8515,
+     "nodes": 1226804,
+     "ordering": "andclose1",
+     "terminalStoneRange": [
+      14,
+      18
+     ],
+     "wall_s": 9.2
+    }
+   }
+  },
+  "00000010000000801202000000000444": {
+   "covered_rows": [
+    "00000010000000801202000000000400"
+   ],
+   "gained_rows": 1,
+   "probes": {
+    "andclose0": {
+     "capped": false,
+     "loss": false,
+     "ms": 8609,
+     "nodes": 1046283,
+     "ordering": "andclose0",
+     "terminalStoneRange": [
+      14,
+      18
+     ],
+     "wall_s": 9.2
+    },
+    "andclose1": {
+     "capped": false,
+     "loss": false,
+     "ms": 3272,
+     "nodes": 255692,
+     "ordering": "andclose1",
+     "terminalStoneRange": [
+      14,
+      18
+     ],
+     "wall_s": 4.0
+    }
+   }
+  }
+ },
+ "protocol": "verdict probe facts only; runner v17, depth 10, cap 30M, timeout 280s, both AND orderings, pilot_d6 control required on every probe; raw child hex rule (child = root minus lowest set bit) is bookkeeping only, the engine receives the identical cell set; resume-safe sequential records; capped/timeout probes are cost lower bounds and evidence in NO direction",
+ "replacement_plan_geometry_independent_rederivation": {
+  "claimed_pairs_bad": [],
+  "claimed_pairs_ok": 30,
+  "d4_min_canonical_roots": 12,
+  "quad_free_roots": 12
+ },
+ "residual30_rederivation": {
+  "partition": {
+   "disjoint": true,
+   "ref12_claims_distinct": true,
+   "ref12_claims_subset_of_resid40": true,
+   "union_is_residual40": true,
+   "win11_claims_distinct": true
+  },
+  "ref12_claimed_rows": 30,
+  "ref12_roots": 12,
+  "unknown_claim_rows": [],
+  "win11_claimed_rows": 10,
+  "win11_roots": 3
+ },
+ "residual40_rederivation": {
+  "partition": {
+   "disjoint": true,
+   "ref13_claims_distinct": true,
+   "ref13_claims_subset_of_resid49": true,
+   "union_is_residual49": true,
+   "win9_claims_distinct": true
+  },
+  "ref13_claimed_rows": 40,
+  "ref13_roots": 13,
+  "unknown_claim_rows": [],
+  "win9_claimed_rows": 9,
+  "win9_roots": 3
+ },
+ "residual49_rederivation": {
+  "partition": {
+   "disjoint": true,
+   "refuted_claims_distinct": true,
+   "union_is_residual72": true,
+   "win8_claims_distinct": true
+  },
+  "refuted_claimed_rows": 49,
+  "refuted_roots": 16,
+  "unknown_claim_rows": [],
+  "win8_claimed_rows": 23,
+  "win8_roots": 7
+ },
+ "runner_git_blob": "c132cc6425eee3feaeef1d697dd74f968cfedb59",
+ "schema": "n11-residual72-replace12-d10-sweep-20261120-v1",
+ "single_owner_note": "research/log/2026-11-20-n11-residual72-replace12-d10-sweep-single-owner-note.md (commit 71536f20561f15e98f293bf238b45ad214aa2f2b)",
+ "targets": {
+  "base": "K1094 scope1_refsolve_residual30.greedy_selection (pinned by sha256), residual-30 universe re-derived from K1085+K1086+K1089+K1091 inside this machine",
+  "probes_planned": 24,
+  "replacement_roots": 12
+ },
+ "timeout_s": 280
+}

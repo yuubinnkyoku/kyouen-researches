@@ -1,0 +1,462 @@
+{
+ "controls": {
+  "batch_bit_lists": "8/8 exact",
+  "candidate_enumeration_bit_exact": true,
+  "child_safety": true,
+  "determinism_node_exact": true,
+  "every_receipt_covers_the_child": true,
+  "no_capped": true,
+  "parents_match_head_1419_ranking": true,
+  "pilots_3402": 8,
+  "v15_agreement_two_directional": true
+ },
+ "date": "2026-11-16",
+ "determinism_rerun_batch5": {
+  "bits": [
+   80,
+   83,
+   85,
+   86,
+   87,
+   88,
+   89,
+   92
+  ],
+  "node_exact": true
+ },
+ "fold_prep_marginals_at_1419": {
+  "per_open_parent_projected_row_loss": {
+   "00000000000000003800000008000004": {
+    "projected_cost_delta": -74,
+    "rows_after_projection": 65,
+    "rows_before": 66,
+    "rows_lost": 1
+   },
+   "00000000000000003800000008002000": {
+    "projected_cost_delta": -784,
+    "rows_after_projection": 31,
+    "rows_before": 42,
+    "rows_lost": 11
+   },
+   "00000000000000003800000008400000": {
+    "projected_cost_delta": -70,
+    "rows_after_projection": 42,
+    "rows_before": 43,
+    "rows_lost": 1
+   },
+   "00000000000000003800000009000000": {
+    "projected_cost_delta": -73,
+    "rows_after_projection": 29,
+    "rows_before": 30,
+    "rows_lost": 1
+   },
+   "00000000000000083800000008000000": {
+    "projected_cost_delta": -67,
+    "rows_after_projection": 49,
+    "rows_before": 50,
+    "rows_lost": 1
+   },
+   "00000000000000403800000008000000": {
+    "projected_cost_delta": -417,
+    "rows_after_projection": 18,
+    "rows_before": 24,
+    "rows_lost": 6
+   },
+   "00000000000000801202000000000200": {
+    "projected_cost_delta": -74,
+    "rows_after_projection": 64,
+    "rows_before": 65,
+    "rows_lost": 1
+   },
+   "00000000000000801202000000000400": {
+    "projected_cost_delta": -74,
+    "rows_after_projection": 67,
+    "rows_before": 68,
+    "rows_lost": 1
+   },
+   "00000000000000801202000000040000": {
+    "projected_cost_delta": -153,
+    "rows_after_projection": 72,
+    "rows_before": 74,
+    "rows_lost": 2
+   },
+   "00000000000000801202000080000000": {
+    "projected_cost_delta": -137,
+    "rows_after_projection": 38,
+    "rows_before": 40,
+    "rows_lost": 2
+   },
+   "00000000000000801202020000000000": {
+    "projected_cost_delta": -64,
+    "rows_after_projection": 48,
+    "rows_before": 49,
+    "rows_lost": 1
+   },
+   "00000000000000801202080000000000": {
+    "projected_cost_delta": -75,
+    "rows_after_projection": 73,
+    "rows_before": 74,
+    "rows_lost": 1
+   },
+   "00000000000000801212000000000000": {
+    "projected_cost_delta": -71,
+    "rows_after_projection": 67,
+    "rows_before": 68,
+    "rows_lost": 1
+   }
+  },
+  "projected_head_after_fold": 1435,
+  "receipts": [
+   {
+    "bit": 0,
+    "d4_canonical_hex": "00000000000000403800000008002001",
+    "marginal_in_manifest_1419": [
+     "00000000000000403800000008002000"
+    ],
+    "root_hex": "00000000000000403800000008002001"
+   },
+   {
+    "bit": 1,
+    "d4_canonical_hex": "00000000000000403800000008002002",
+    "marginal_in_manifest_1419": [
+     "00000000000000403800000008002000"
+    ],
+    "root_hex": "00000000000000403800000008002002"
+   },
+   {
+    "bit": 2,
+    "d4_canonical_hex": "00000000000000403800000008002004",
+    "marginal_in_manifest_1419": [
+     "00000000000000003800000008002004",
+     "00000000000000403800000008002000"
+    ],
+    "root_hex": "00000000000000403800000008002004"
+   },
+   {
+    "bit": 11,
+    "d4_canonical_hex": "00000000000000403800000008002800",
+    "marginal_in_manifest_1419": [
+     "00000000000000403800000008002000"
+    ],
+    "root_hex": "00000000000000403800000008002800"
+   },
+   {
+    "bit": 16,
+    "d4_canonical_hex": "00000000000000403800000008012000",
+    "marginal_in_manifest_1419": [
+     "00000000000000003800000008012000",
+     "00000000000000403800000008002000"
+    ],
+    "root_hex": "00000000000000403800000008012000"
+   },
+   {
+    "bit": 30,
+    "d4_canonical_hex": "00000000000000403800000048002000",
+    "marginal_in_manifest_1419": [
+     "00000000000000003800000009080000",
+     "00000000000000403800000008002000"
+    ],
+    "root_hex": "00000000000000403800000048002000"
+   },
+   {
+    "bit": 32,
+    "d4_canonical_hex": "00000000000000403800000108002000",
+    "marginal_in_manifest_1419": [
+     "00000000000000403800000008002000",
+     "00000000000000403800000108000000"
+    ],
+    "root_hex": "00000000000000403800000108002000"
+   },
+   {
+    "bit": 43,
+    "d4_canonical_hex": "00000000000000403800080008002000",
+    "marginal_in_manifest_1419": [
+     "00000000000000403800000008002000"
+    ],
+    "root_hex": "00000000000000403800080008002000"
+   },
+   {
+    "bit": 53,
+    "d4_canonical_hex": "00000000000000403820000008002000",
+    "marginal_in_manifest_1419": [
+     "00000000000000403800000008002000"
+    ],
+    "root_hex": "00000000000000403820000008002000"
+   },
+   {
+    "bit": 66,
+    "d4_canonical_hex": "00000000000000443800000008002000",
+    "marginal_in_manifest_1419": [
+     "00000000000000403800000008002000"
+    ],
+    "root_hex": "00000000000000443800000008002000"
+   },
+   {
+    "bit": 69,
+    "d4_canonical_hex": "00000000000000603800000008002000",
+    "marginal_in_manifest_1419": [
+     "00000000000000403800000008002000"
+    ],
+    "root_hex": "00000000000000603800000008002000"
+   },
+   {
+    "bit": 75,
+    "d4_canonical_hex": "00000000000001083800000008080000",
+    "marginal_in_manifest_1419": [
+     "00000000000000083800000008080000",
+     "00000000000000403800000008002000"
+    ],
+    "root_hex": "00000000000008403800000008002000"
+   },
+   {
+    "bit": 79,
+    "d4_canonical_hex": "00000000000000801206000020800000",
+    "marginal_in_manifest_1419": [
+     "00000000000000403800000008002000"
+    ],
+    "root_hex": "00000000000080403800000008002000"
+   },
+   {
+    "bit": 86,
+    "d4_canonical_hex": "00000000000041003800000008080000",
+    "marginal_in_manifest_1419": [
+     "00000000000000403800000008002000",
+     "00000000000000c09002000000004000",
+     "00000000000040003800000008080000"
+    ],
+    "root_hex": "00000000004000403800000008002000"
+   },
+   {
+    "bit": 92,
+    "d4_canonical_hex": "00000000000000801216000000800000",
+    "marginal_in_manifest_1419": [
+     "00000000000000403800000008002000",
+     "00000000000000801212000000800000"
+    ],
+    "root_hex": "00000000100000403800000008002000"
+   },
+   {
+    "bit": 95,
+    "d4_canonical_hex": "00000000000080809003000080000000",
+    "marginal_in_manifest_1419": [
+     "00000000000000403800000008002000",
+     "00000000000000c09002000800000000"
+    ],
+    "root_hex": "00000000800000403800000008002000"
+   },
+   {
+    "bit": 98,
+    "d4_canonical_hex": "00000000010001003800000008080000",
+    "marginal_in_manifest_1419": [
+     "00000000000000403800000008002000"
+    ],
+    "root_hex": "00000004000000403800000008002000"
+   },
+   {
+    "bit": 106,
+    "d4_canonical_hex": "00000000000040809003000080000000",
+    "marginal_in_manifest_1419": [
+     "00000000000000403800000008002000",
+     "00000000000040809002000080000000"
+    ],
+    "root_hex": "00000400000000403800000008002000"
+   },
+   {
+    "bit": 107,
+    "d4_canonical_hex": "00000000020000809003000080000000",
+    "marginal_in_manifest_1419": [
+     "00000000000000403800000008002000",
+     "00000000000000c09002000000800000",
+     "00000000020000801202000080000000"
+    ],
+    "root_hex": "00000800000000403800000008002000"
+   },
+   {
+    "bit": 109,
+    "d4_canonical_hex": "00000000020001801202000000000200",
+    "marginal_in_manifest_1419": [
+     "00000000000000403800000008002000",
+     "00000000000000c09002000000000002"
+    ],
+    "root_hex": "00002000000000403800000008002000"
+   },
+   {
+    "bit": 111,
+    "d4_canonical_hex": "00000000000000801206000000a00000",
+    "marginal_in_manifest_1419": [
+     "00000000000000403800000008002000"
+    ],
+    "root_hex": "00008000000000403800000008002000"
+   },
+   {
+    "bit": 113,
+    "d4_canonical_hex": "00000000000000801206080000800000",
+    "marginal_in_manifest_1419": [
+     "00000000000000403800000008002000",
+     "00000000000000801202080000800000"
+    ],
+    "root_hex": "00020000000000403800000008002000"
+   },
+   {
+    "bit": 120,
+    "d4_canonical_hex": "00000000020001801202000000000400",
+    "marginal_in_manifest_1419": [
+     "00000000000000403800000008002000",
+     "00000000020000801202000000000400"
+    ],
+    "root_hex": "01000000000000403800000008002000"
+   }
+  ],
+  "remaining_rows_used": 6429,
+  "union_closed_rows": [
+   "00000000000000003800000008002004",
+   "00000000000000003800000008012000",
+   "00000000000000003800000009080000",
+   "00000000000000083800000008080000",
+   "00000000000000403800000008002000",
+   "00000000000000403800000108000000",
+   "00000000000000801202080000800000",
+   "00000000000000801212000000800000",
+   "00000000000000c09002000000000002",
+   "00000000000000c09002000000004000",
+   "00000000000000c09002000000800000",
+   "00000000000000c09002000800000000",
+   "00000000000040003800000008080000",
+   "00000000000040809002000080000000",
+   "00000000020000801202000000000400",
+   "00000000020000801202000080000000"
+  ],
+  "union_closed_rows_count": 16
+ },
+ "independent_candidate_enumeration": {
+  "count": 64,
+  "matches_claim_bit_exact": true,
+  "matches_presweep_preregistration": true
+ },
+ "interpretation_guard": "WIN7-D10 candidates prove a first-player win within depth 10 from the individual 7-stone roots only; REFUTED-D10 is not a LOSS proof; the row closing is manifest bookkeeping (fold pending the chain-reproduction protocol); no game-theoretic value is asserted for any parent, row, class, two-stone root or the 11x11 empty board; all remain UNKNOWN",
+ "method": "independent stdlib re-derivation: exact-integer Bareiss 4x4 determinants for survival legality, D4 canonicalization of all deletions, sweep aggregate re-read from the 8 raw batches, determinism and v15 two-directional crosschecks, head-1419 remaining-set reconstruction (1410 worklist minus the 9 cost-65j-fold lost rows), fold-prep marginals of all 23 WIN7-D10 receipts",
+ "parent_derivation": {
+  "closed_deletions_lift_stones": [
+   27,
+   59,
+   60,
+   61
+  ],
+  "open_parents_at_1419": [
+   {
+    "classes": 2,
+    "cost": 1704,
+    "lift_stone": 13,
+    "rows": 24,
+    "s5_canon": "00000000000000403800000008000000"
+   },
+   {
+    "classes": 2,
+    "cost": 2929,
+    "lift_stone": 70,
+    "rows": 42,
+    "s5_canon": "00000000000000003800000008002000"
+   }
+  ],
+  "ranking_csv_checks": "both open parents match class/rows/cost exactly"
+ },
+ "schema": "n11-class2-lane-cost64d-raw-sweep-audit-20261116-v1",
+ "sweep_aggregate": {
+  "all_terminal_ranges": [
+   [
+    13,
+    17
+   ]
+  ],
+  "candidate_nodes_excluding_pilots": 64291757,
+  "candidates": 64,
+  "capped_bits": [],
+  "pilots": 27216,
+  "refuted_d10_bits": [
+   3,
+   4,
+   5,
+   6,
+   8,
+   9,
+   10,
+   17,
+   21,
+   25,
+   29,
+   38,
+   42,
+   44,
+   46,
+   54,
+   74,
+   76,
+   78,
+   80,
+   83,
+   85,
+   87,
+   88,
+   89,
+   96,
+   97,
+   99,
+   100,
+   101,
+   102,
+   103,
+   105,
+   108,
+   110,
+   114,
+   115,
+   116,
+   117,
+   118,
+   119
+  ],
+  "win7_d10_bits": [
+   0,
+   1,
+   2,
+   11,
+   16,
+   30,
+   32,
+   43,
+   53,
+   66,
+   69,
+   75,
+   79,
+   86,
+   92,
+   95,
+   98,
+   106,
+   107,
+   109,
+   111,
+   113,
+   120
+  ]
+ },
+ "v15_crosscheck": {
+  "anchors": [
+   2,
+   66,
+   87,
+   92,
+   113
+  ],
+  "pilot_nodes": 5949,
+  "refuted_anchor_agrees": 87,
+  "two_directional_agreement": true,
+  "win_anchors_agree": [
+   2,
+   66,
+   113,
+   92
+  ]
+ }
+}
