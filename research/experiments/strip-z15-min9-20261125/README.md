@@ -112,3 +112,40 @@ collapse, m>=10 step inherited from the published T-Z15).
 
 The standard 11x11 empty board, two-stone root, S2, and class 1/2/4
 remain UNKNOWN at all times; no verdict is consumed.
+
+## Verification machine (K1321, added post-declaration)
+
+- `verify_k1321.py` — sha256
+  `9eb114c1547c3a348154055d39ebd34a6f233d49a05899d23d169f2533bf87da`.
+  Audit machine for the single-owner declaration note
+  `research/log/2026-11-25-strip-z15-min9-single-owner-note.md`
+  (slot-claim commit `cfa1c6b0`). Structural copy of the published K1320
+  machine `verify_k1320.py` (sha256 `081fe719...`) with the following
+  disclosed changes (both endpoints published in-repo):
+  1. All cell/below-band sweeps at floor 9: `parts(s, 9, 4)`, s domain
+     `{0} U {9..40}` (D1: 9 cells x 312 = 2,808 pts; D8: 312 pts).
+  2. D2 strip sweep m in {9..14}: NEW m=9 claim positions (265 shapes)
+     plus the m in {10..14} re-measurement (594) = 859 pts.
+  3. D3 z14 anchors: 8 lines x 33 s-values = 264 + T-Z14 C-hand anchors
+     m in {9..14} x i in {1..5} = 30 (m=9 INCLUDED: the j=9 C-hand line,
+     closing the gap noted by the K1320 second-lane verification log)
+     = 294 pts.
+  4. D4 stair anchors: 9 x 32 (s in {9..40}) = 288 pts.
+  5. D6 witnesses: the 17 K1320 witnesses over the floor-9 domain + 3 NEW
+     (F15f9 s=9 FLAT 0 = floor-entry collapse, A215f9 s=9 FLAT 1 =
+     floor-entry collapse, A315f9 co-token (Y=(9,)) FLAT 0 = claim-position
+     shape H(25;(9,9);15)=v(18,15,25)) = 20 pts.
+  6. D7 extension: tail spots 72 + strip spots 12 + NEW m=9 base spot
+     (25;(9,9);15)=0=v(18,15,25) + m=10 base spot (26;(10,10);15)=1 = 86 pts.
+  7. D5 unchanged (5,865 pts same grid as K1320; the v(s,16,16) floor-9
+     evaluation is anchored directly by D8).
+  Declared battery total: 10,532 pts, all endpoint fail-closed (declared
+  count mismatch itself FAILs). MODES: default full battery (rc 0 iff
+  overall_bad == 0); `--tamper-engine` rc 2; `--tamper=cell|strip|anchor14|
+  stair|deviant|ext|belowband` rc 1 contaminating exactly the declared gate.
+  Predry (pre-declaration, disclosed in note sec.6): 6 runs byte-identical,
+  stdout sha256
+  `c337e63b37f2f7fdc0b0e22f16b3210a37e3fd1d59abcacaec57195bdaf7d381`,
+  rc 0, tamper 8/8 fail-closed. Official protocol: 4 runs from the
+  PUBLISHED bytes (fetch-back byte-verified with cmp) + 8 tamper modes +
+  detcheck.json OFFICIAL-PASS published under `published/`.
