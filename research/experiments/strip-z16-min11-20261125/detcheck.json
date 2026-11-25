@@ -1,0 +1,146 @@
+{
+  "battery_declared_pts": 13293,
+  "battery_pts": 13293,
+  "date": "2026-11-25",
+  "engine_startup_pin": "bd5f22e415a78368c9b798296bc84948d5637decbf3c21a92404d45fb12e3a92",
+  "fetch_back_byte_verification": {
+    "declaration_note": "cmp byte-identical to the pre-publication working copy",
+    "kit_README": "published bytes = pre-extension bytes + the appended machine section (pure append, prefix verified)",
+    "verify_k1322.py": "cmp byte-identical to the pre-publication working copy (sha256 27e37152...)"
+  },
+  "gates": {
+    "D1_cells": {
+      "bad": 0,
+      "declared_pts": 1830,
+      "pts": 1830
+    },
+    "D2_strip": {
+      "bad": 0,
+      "declared_pts": 456,
+      "pts": 456
+    },
+    "D3_z15_anchors": {
+      "bad": 0,
+      "declared_pts": 322,
+      "pts": 322
+    },
+    "D4_stair_anchors": {
+      "bad": 0,
+      "declared_pts": 310,
+      "pts": 310
+    },
+    "D5_self_anchors": {
+      "bad": 0,
+      "declared_pts": 10080,
+      "pts": 10080
+    },
+    "D6_deviant_witnesses": {
+      "bad": 0,
+      "declared_pts": 19,
+      "pts": 19
+    },
+    "D7_extension_anchors": {
+      "bad": 0,
+      "declared_pts": 93,
+      "pts": 93
+    },
+    "D8_belowband_anchors": {
+      "bad": 0,
+      "declared_pts": 183,
+      "pts": 183
+    }
+  },
+  "honest_notes": [
+    "All official runs executed from the fetched-back published bytes (cmp-verified before execution).",
+    "The predry env -i runs initially targeted /usr/bin/python3 and returned rc 127 with empty output (python3 is at /usr/local/bin/python3 on this host); corrected and re-run before publication (recorded in the declaration note sec.6). The official runs used the correct path from the start.",
+    "Battery coverage is a finite engine cross-check of the universally proven statements in the declaration note sec.2; it is not a substitute for the paper proofs.",
+    "11x11 standard board, two-stone roots, S2, class 1/2/4: all UNKNOWN, no verdict consumed."
+  ],
+  "machine": "verify_k1322",
+  "machine_sha256": "27e37152896a67798ab7cdf13e08fd2d5b80b4960bbceb7ea00025e87a96097c",
+  "official_runs": {
+    "run1": {
+      "cmd": "PYTHONHASHSEED=random python3 fb_verify_k1322.py (same cwd)",
+      "rc": 0,
+      "stdout_sha256": "e0c6559f523f768204e7704e5e9ce42022d694d680bb059fef515f6d34bbad04"
+    },
+    "run2": {
+      "cmd": "PYTHONHASHSEED=1 python3 fb_verify_k1322.py (same cwd)",
+      "rc": 0,
+      "stdout_sha256": "e0c6559f523f768204e7704e5e9ce42022d694d680bb059fef515f6d34bbad04"
+    },
+    "run3": {
+      "cmd": "env -i /usr/local/bin/python3 verify_k1322.py (isolated dir fb_run1)",
+      "rc": 0,
+      "stdout_sha256": "e0c6559f523f768204e7704e5e9ce42022d694d680bb059fef515f6d34bbad04"
+    },
+    "run4": {
+      "cmd": "env -i PYTHONHASHSEED=5150 /usr/local/bin/python3 verify_k1322.py (isolated dir fb_run2)",
+      "rc": 0,
+      "stdout_sha256": "e0c6559f523f768204e7704e5e9ce42022d694d680bb059fef515f6d34bbad04"
+    }
+  },
+  "official_runs_all_byte_identical_to_predry": true,
+  "overall_bad": 0,
+  "predry_declared_stdout_sha256": "e0c6559f523f768204e7704e5e9ce42022d694d680bb059fef515f6d34bbad04",
+  "predry_runs": "7 runs (default; PYTHONHASHSEED=random/1/0 same cwd; 3x env -i isolated) all rc 0 byte-identical",
+  "publish_chain": {
+    "declaration_note_commit": "fd760f34",
+    "machine_path": "research/experiments/strip-z16-min11-20261125/verify_k1322.py",
+    "note_path": "research/log/2026-11-25-strip-z16-min11-single-owner-note.md",
+    "predecl_kit_commit": "e0ca8d75",
+    "verify_machine_commit": "cb105a1b"
+  },
+  "slice": "z=16 min>=11 (floor-11)",
+  "tamper_battery": {
+    "all_fail_closed": true,
+    "anchor15": {
+      "bad_gate": "D3_z15_anchors",
+      "overall_bad": 1,
+      "rc": 1,
+      "stdout_sha256": "fd59f856985488dea41e1ed8ed61843b2c9c57fb8e672c3a357987e76508a179"
+    },
+    "belowband": {
+      "bad_gate": "D8_belowband_anchors",
+      "overall_bad": 1,
+      "rc": 1,
+      "stdout_sha256": "ca1f6eccfdb07b50e4b899b3c70db7d4b071a864b8879dcfea57cb9ad856e4f7"
+    },
+    "cell": {
+      "bad_gate": "D1_cells",
+      "overall_bad": 1,
+      "rc": 1,
+      "stdout_sha256": "c89fd9e221a868e9b8c478bbe1abef8883e510ed8ae76b1652e72c736cccac96"
+    },
+    "deviant": {
+      "bad_gate": "D6_deviant_witnesses",
+      "overall_bad": 1,
+      "rc": 1,
+      "stdout_sha256": "47198b50ed2c5be9c8288bb24d9f6f4367835e16efa2f55616184c5f96e9684f"
+    },
+    "engine": {
+      "engine_gate": "FAIL",
+      "rc": 2,
+      "stdout_sha256": "bab622d42c1e14db16e2c2c8b2acd36d7e2ab5c3da45f4b7a31be8dc0116c8ad"
+    },
+    "ext": {
+      "bad_gate": "D7_extension_anchors",
+      "overall_bad": 1,
+      "rc": 1,
+      "stdout_sha256": "aa2b145478d548c41ef89553e79ba5d2ac24c03a8b099eb1fa1ca06134a5740d"
+    },
+    "stair": {
+      "bad_gate": "D4_stair_anchors",
+      "overall_bad": 1,
+      "rc": 1,
+      "stdout_sha256": "fe44345bbd6d3395bb7ca08358595f9a8a89d2b895141eb31a0a79089e5c3fcb"
+    },
+    "strip": {
+      "bad_gate": "D2_strip",
+      "overall_bad": 1,
+      "rc": 1,
+      "stdout_sha256": "b289c0f4c9cf4c4d2de1c2bab84ff04ed6b858c6705b2caaf5caaedea7e099e6"
+    }
+  },
+  "verdict": "OFFICIAL-PASS"
+}
