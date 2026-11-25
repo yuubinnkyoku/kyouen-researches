@@ -1,0 +1,172 @@
+{
+ "adopted_table": [
+  {
+   "hi": 68719476736,
+   "legal": 89,
+   "lo": 1152921504607895681,
+   "nodes": 19234232,
+   "result": 2
+  },
+  {
+   "hi": 68719476736,
+   "legal": 93,
+   "lo": 3458764513821589505,
+   "nodes": 23126072,
+   "result": 2
+  }
+ ],
+ "adopted_table_digest_sha256": "7c74832f57c9b54a6b5606880ee8c40b7d563ad518cc04e96ef257b543172182",
+ "base_cache_absent_hits_for_emitted": 0,
+ "base_cache_prior_adoption_confirmed": 0,
+ "base_cache_rows": 6663,
+ "base_cache_sha256": "c3026468c74b56e71f3a9e0cd45c13e4a8cba147d137c25703c5be62b9c4c94e",
+ "batches": [
+  {
+   "adopted_loss_ids": [
+    "af003",
+    "af039"
+   ],
+   "adopted_nodes_per_pool": 42360304,
+   "anchor_ids": [
+    "af001",
+    "af029"
+   ],
+   "batch_keys_sha256": "8a863381454fcfec3cb190db7130ce6801accf56170ee3a1b944402491fecbaa",
+   "exhausted_excluded_ids": [
+    "af034"
+   ],
+   "input_sha256": "3744b522346b00108f66991cd4009943af84344ab388431652783fbf8227a663",
+   "kit_integrity": {
+    "exh15m_source_sha256_pins": {
+     "af003.p1.out": "fdd1e84dc9b5a4e9cd49c6d26c33d208ac9f3f89125594426606f5fba15d597a",
+     "af003.p2.out": "4ef154cba92ba078bd31f68ba1643c22518057243bdeb00e53894b5840e41225",
+     "af039.p1.out": "a04e23ea9bd1914c997dfb26b820ce793572d2c96e9aebbae7ce283a59281331",
+     "af039.p2.out": "aaaaef87ff9406f8f49ea395a9d6513379636e5c2491ce9d4b95fbc7d5ef3abe"
+    },
+    "kit_files_verified": 61,
+    "kit_manifest_sha256": "42ba81bc79dd887074dbc9514b87f0c9d1a656d53a98ff3dfef29b9c4666601e",
+    "note": "the Part EA b33exh5 kit raws are PUBLISHED (61 files, byte-pinned above; fetch-verified against the kit MANIFEST 42ba81bc...); the 2 adopted keys are fresh at BASE (EXHAUSTED honest-UNKNOWN at 15M in the batch-33 packet, resolved exact LOSS only at the pre-declared 30M condition)",
+    "raw_file_sha256_pins": {
+     "af001.p1.out": "c2bc73f6a5d88720e33fc3fb498ab16f2d541d7cad62248ef8d04b5f9351381d",
+     "af001.p2.out": "e4614f6bd7d4f20cfdd7dba3362e6db52328827a120b9d379fdd2accbdbf1681",
+     "af003.p1.out": "5fd8731437146e310992441aa16eb473920cb5cffc87cbf6d758eaba8adb7123",
+     "af003.p2.out": "cda10962c1ee55efb58de00742c727df14ee99a5c96e9d8da5c4a7ef9c103cf6",
+     "af023.p1.out": "fe118851a927944328a62387d0410a596713c87f1360dda662c97f87913c1dbe",
+     "af023.p2.out": "af02e38b07a7f1da9af28c0af7985eaa0cdd97ec2884298ede3a831b19c9198b",
+     "af029.p1.out": "1726ecb6d8199d612130d3c2cae12b176102fef0468263cbc1397f525eb0aa66",
+     "af029.p2.out": "c937f8964385b2e4c74c1f1d417cdb113b2548dca33c3e0604facea7d9c905a6",
+     "af034.p1.out": "9ecfdc770c0b8a6eab027c097051ae2731ee15f1ede0babbc619e38acf2fca74",
+     "af034.p2.out": "3978990d5821850476e7b38d1de98fbe7a56738cfd48a8b03cf8ed3350d1b290",
+     "af039.p1.out": "9325c7c555823b9a7479442c66cd0b174b3e45cc8b6621b5dc4f45af21de8286",
+     "af039.p2.out": "9325c7c555823b9a7479442c66cd0b174b3e45cc8b6621b5dc4f45af21de8286",
+     "af048.p1.out": "ae8df6ad6f922669f285f1c2a20d7fa09453c2ef38f64f1b4b878c3034e9d07a",
+     "af048.p2.out": "e2056ca26533124e20d3538eebc5e6c4b752be21b92e9e3780c5a0040f0bb620"
+    }
+   },
+   "pool": "b33exh5",
+   "probed_ids": [
+    "af003",
+    "af023",
+    "af034",
+    "af039",
+    "af048"
+   ],
+   "reprobe_budget": 30000000,
+   "source_budget": 15000000,
+   "status_log_exhausted_lines": [
+    "2026-11-25T02:53:19Z af034 EXHAUSTED 30000000,0,30000000"
+   ],
+   "status_log_final_line": "2026-11-25T03:00:04Z af048 WIN-HALT",
+   "status_log_first_line": "2026-11-25T02:33:51Z af001 PASS 30000000,2,2952432",
+   "status_log_lines": 13,
+   "status_log_retry_lines": [
+    "2026-11-25T02:43:31Z af023 P2-TRUNCATED-RETRY",
+    "2026-11-25T02:50:34Z af034 P2-TRUNCATED-RETRY"
+   ],
+   "status_log_sha256": "db7c7017d7bfeef2d0c17c646b22f77b8bfd52a66796433b86e88444741c0438",
+   "status_log_win_halt_lines": [
+    "2026-11-25T02:34:39Z af029 WIN-HALT",
+    "2026-11-25T02:46:09Z af023 WIN-HALT",
+    "2026-11-25T03:00:04Z af048 WIN-HALT"
+   ],
+   "unadopted_win_ids": [
+    "af023",
+    "af048"
+   ],
+   "whole_packet_nodes": 119110099
+  }
+ ],
+ "exhausted_excluded_ids": [
+  "af034"
+ ],
+ "exhausted_rows": [
+  {
+   "hi": 68719476736,
+   "key_id": "af034",
+   "lo": 1152921504607911937,
+   "nodes": 30000000,
+   "pool": "b33exh5",
+   "status": "still EXHAUSTED at the pre-declared 30M condition; honest UNKNOWN, excluded from adoption; same-condition re-probe forbidden (a higher-budget re-probe needs a NEW declaration)",
+   "verdict": "EXHAUSTED"
+  }
+ ],
+ "full_packet_eq_loss_only": false,
+ "full_packet_eq_loss_only_rationale": "the re-probed Part EA packet is probe-complete at the pre-declared 30M condition but is NOT loss-only: 2 probe-level WIN rows and 1 still-EXHAUSTED row stay UNCONSUMED / excluded; the adopted packet is the 2 fresh LOSS rows plus nothing else; no packet row was adopted before (fresh-increment gate against BASE c3026468...)",
+ "interpretation_guard": "canonical 2-LOSS adoption increment: only the 2 fresh af003/af039 exact-LOSS rows are consumed into the canonical cache via the fail-closed union merger; the af023/af048 probe-level WINs are consumed NOWHERE (no verdict claim, no exclusion claim) and belong to the scrutiny owner's C++ second-implementation gate; af034 is honest UNKNOWN at the 30M condition (excluded); nodes are bookkeeping, never verdicts; the standard 11x11 empty board stays UNKNOWN; no class is freed or excluded by this Part",
+ "loss_ids": [
+  "af003",
+  "af039"
+ ],
+ "merger_sha256": "907119610034fb2aebfde012550a4129dfa3b086c6de11194e856747ac74606a",
+ "provenance": {
+  "b33_status_lines": 66,
+  "b33exh5_status_lines": 13,
+  "ea_kit_files": 61,
+  "raws_published": true
+ },
+ "quarantine_hits": 0,
+ "resolved_ids": [
+  "af003",
+  "af039"
+ ],
+ "row_counts": {
+  "adopted_loss_rows": 2,
+  "exhausted_excluded": 1,
+  "prior_adopted_loss_rows": 0,
+  "wins_unconsumed": 2
+ },
+ "schema": "b33exh5loss2-increments-manifest-v1",
+ "sha256": {
+  "loss_increment": "8f45a202af94faa448ac5f39f061100e3370ce9397c475c98f75cc9ea30d04a1"
+ },
+ "unadopted_win_ids": [
+  "af023",
+  "af048"
+ ],
+ "unadopted_win_rows": [
+  {
+   "hi": 68719478784,
+   "key_id": "af023",
+   "lo": 1152921504607895553,
+   "nodes": 28933179,
+   "pool": "b33exh5",
+   "status": "probe-level WIN, consumed NOWHERE (scrutiny-owner C++ gate 9193f5b6...)",
+   "verdict": "WIN"
+  },
+  {
+   "hi": 68719476736,
+   "key_id": "af048",
+   "lo": 1152921508902862849,
+   "nodes": 17816616,
+   "pool": "b33exh5",
+   "status": "probe-level WIN, consumed NOWHERE (scrutiny-owner C++ gate 9193f5b6...)",
+   "verdict": "WIN"
+  }
+ ],
+ "win_ids": [
+  "af023",
+  "af048"
+ ],
+ "win_scenario_exists": true,
+ "win_scenario_note": "two probe-level WIN rows (af023 s5 810351 / af048 s5 962172) stay UNCONSUMED and belong to the scrutiny-owner C++ second-implementation gate pin 9193f5b6...; loss-only adoption NEVER frees class 34908 (6 unconsumed WIN children {af029, af047, af050, af053} plus af023/af048 remain, plus 1 still-EXHAUSTED af034)"
+}
