@@ -1,0 +1,363 @@
+{
+ "cache": {
+  "adopted_s5_indices": [
+   39148,
+   298570,
+   473959,
+   604944,
+   657234,
+   716150,
+   754556,
+   800006,
+   827502,
+   866157,
+   878758,
+   879412,
+   888325,
+   889976,
+   891015,
+   891592,
+   893644,
+   894824,
+   895608,
+   895907,
+   897427,
+   900292,
+   900354,
+   900436
+  ],
+  "base_rows": 6713,
+  "base_sha256": "cf08e1817a369853747706872763046c4544e289eae6d847bfd27d7503d23e7d",
+  "increment_rows": 24,
+  "merge_audit_runs": 3,
+  "merge_audit_sha256_each": "4a877e17881e0aac0ca46a6aa4124b428ee69e45016320e2762c41adcb3c4ad8",
+  "naming_note": "chain name merged-exact-s5-chain-plus-b38loss24-20261125.cache (short-form convention; the sha pin carries the identity)",
+  "relation": "scenario == base rows + the 24 increment rows verbatim (no other row changed)",
+  "scenario_rows": 6737,
+  "scenario_sha256": "b5be64e6b96af435ab589caced29273bab765085ba13c3033e897de13fab636c",
+  "verdict_counts": {
+   "LOSS": 6579,
+   "WIN": 158
+  }
+ },
+ "class_16371": {
+  "status": "byte-static across Part EM (witness)"
+ },
+ "class_20421": {
+  "status": "byte-static across Part EM (witness)"
+ },
+ "class_30118": {
+  "adopted_own": 1,
+  "adopted_own_id": "ai033",
+  "children_total_raw": 56,
+  "class_rank": [
+   21,
+   17
+  ],
+  "non_s5_children": 0,
+  "note": "exactly one adopted row (ai033) sits inside the in-flight Part EJ batch-40 target class; recomputed here from the frozen graph, the EJ owner lane is untouched",
+  "status_after": "unknown",
+  "status_before": "unknown",
+  "unknown_after": 51,
+  "unknown_before": 52
+ },
+ "class_30345": {
+  "adopted_own": 24,
+  "children_total_raw": 51,
+  "class_rank": [
+   13,
+   11
+  ],
+  "groups_served_count": [
+   4,
+   4
+  ],
+  "non_s5_children": 1,
+  "note": "the batch-38 target class: all 24 adopted rows sit inside its 51-child Board boundary; NOT freed, NOT excluded (26 unknown children remain)",
+  "status_after": "unknown",
+  "status_before": "unknown",
+  "unknown_after": 26,
+  "unknown_before": 50
+ },
+ "class_30484": {
+  "adopted_own": 1,
+  "adopted_own_id": "ai044",
+  "base_known_loss_children": 49,
+  "children_total_raw": 54,
+  "class_rank": [
+   7,
+   7
+  ],
+  "groups_served_count": [
+   4,
+   4
+  ],
+  "non_s5_children": 0,
+  "not_a_root_verdict": "the loss-only adoption of the 24 rows frees nothing and excludes nothing; free_now/coverage quantities are Board-derived scheduling bookkeeping; no root verdict and no coverage claim is made",
+  "receipt_known_loss_children": 0,
+  "status_after": "unknown",
+  "status_before": "unknown",
+  "unconsumed_win_children": 4,
+  "unknown_after": 4,
+  "unknown_before": 5,
+  "unknown_s5_remaining": [
+   892576,
+   900718,
+   902511,
+   902512
+  ],
+  "unknown_s5_remaining_ids": {
+   "ai048": 900718,
+   "aj030": 892576,
+   "aj049": 902511,
+   "aj050": 902512
+  }
+ },
+ "class_34908": {
+  "status": "byte-static across Part EM (witness)"
+ },
+ "class_status_counts_after": {
+  "excluded": 390,
+  "excluded_now": 23,
+  "free_now": 39,
+  "unknown": 34497
+ },
+ "class_status_counts_before": {
+  "excluded": 390,
+  "excluded_now": 23,
+  "free_now": 39,
+  "unknown": 34497
+ },
+ "closure_table": {
+  "entered": [],
+  "fully_stable_rows": 798,
+  "groups_served_decrease_churn": [],
+  "left": [],
+  "left_reason": "EMPTY: the 807-row frontier table is fully static across this Part (no left/entered exchange)",
+  "rank_churn_detail": [
+   {
+    "class_index": 1518,
+    "from": 19,
+    "to": 20
+   },
+   {
+    "class_index": 2634,
+    "from": 17,
+    "to": 18
+   },
+   {
+    "class_index": 5343,
+    "from": 11,
+    "to": 12
+   },
+   {
+    "class_index": 8106,
+    "from": 20,
+    "to": 21
+   },
+   {
+    "class_index": 8785,
+    "from": 18,
+    "to": 19
+   },
+   {
+    "class_index": 13342,
+    "from": 12,
+    "to": 13
+   }
+  ],
+  "rank_churn_only_rows": 6,
+  "rows_after": 807,
+  "rows_before": 807,
+  "unknown_changed_classes": []
+ },
+ "interpretation_guard": "only the 24 fresh Part EF batch-38 exact-LOSS rows (two-pass fresh-cold node-exact at the single 15M budget/order-0 condition) are consumed into the canonical cache by this Part; the 19 batch-38 probe-level WIN rows (incl. ai048) are consumed NOWHERE (WIN adoption is scrutiny-owner C++ second-implementation gate pin 9193f5b6... exclusive) and their keys sit in NO cache; the 6 honest-EXHAUSTED keys stay honest UNKNOWN; b018 stays excluded; class 30484 (4 children remaining: aj030/ai048/aj049/aj050, all unconsumed probe-level WINs) is NOT freed and NOT excluded; class 30345 (26 unknown children remain) is NOT freed; class 30118 (51 unknown children remain, Part EJ in-flight owner) is NOT freed; witnesses byte-static; class status stays unknown, free_now 39 static, closure table 807 rows static with NO left/entered exchange, the 6 rank-churn-only rows being pure bookkeeping; no root verdict and no coverage claim is made anywhere; the per-root/greedy/worklist quantities quoted here are bookkeeping, never verdicts; no update8 resolution changed (all 24 adopted s5 indices sit outside the frozen baseline requirement); 11x11 stays UNKNOWN",
+ "metrics": {
+  "cache_rows_in_universe": [
+   869,
+   893
+  ],
+  "joint_greedy_union_size": [
+   36505,
+   36460
+  ],
+  "known_universe_indices": [
+   892,
+   916
+  ],
+  "note": "the joint greedy union moves 36,505 -> 36,460 and the worklist shrinks 64,365 -> 64,339 with the class-30345 frontier cost 50 -> 26 and class-30484's 5 -> 4; per-root free/uncovered thirds are IDENTICAL at every root (nothing was freed); the 6 greedy shifts (incl. root 2's 6,129 -> 6,134 re-selection increase) are pure bookkeeping; root 27 stays 119/119",
+  "per_root_coverage_delta": {
+   "0": {
+    "free": [
+     7,
+     7
+    ],
+    "greedy": [
+     3001,
+     3000
+    ],
+    "uncovered": [
+     112,
+     112
+    ]
+   },
+   "1": {
+    "free": [
+     4,
+     4
+    ],
+    "greedy": [
+     6352,
+     6351
+    ],
+    "uncovered": [
+     115,
+     115
+    ]
+   },
+   "12": {
+    "free": [
+     6,
+     6
+    ],
+    "greedy": [
+     2890,
+     2866
+    ],
+    "uncovered": [
+     113,
+     113
+    ]
+   },
+   "2": {
+    "free": [
+     8,
+     8
+    ],
+    "greedy": [
+     6129,
+     6134
+    ],
+    "uncovered": [
+     111,
+     111
+    ]
+   },
+   "24": {
+    "free": [
+     12,
+     12
+    ],
+    "greedy": [
+     2781,
+     2780
+    ],
+    "uncovered": [
+     107,
+     107
+    ]
+   },
+   "36": {
+    "free": [
+     4,
+     4
+    ],
+    "greedy": [
+     2997,
+     2975
+    ],
+    "uncovered": [
+     115,
+     115
+    ]
+   }
+  },
+  "per_root_remaining_delta": {},
+  "unique_groups": [
+   2115,
+   2115
+  ],
+  "worklist_total": [
+   64365,
+   64339
+  ]
+ },
+ "packet": {
+  "adopted_loss_ids": [
+   "ai001",
+   "ai004",
+   "ai008",
+   "ai009",
+   "ai011",
+   "ai012",
+   "ai015",
+   "ai016",
+   "ai018",
+   "ai019",
+   "ai020",
+   "ai021",
+   "ai022",
+   "ai025",
+   "ai026",
+   "ai027",
+   "ai029",
+   "ai031",
+   "ai032",
+   "ai033",
+   "ai037",
+   "ai042",
+   "ai044",
+   "ai045"
+  ],
+  "adopted_loss_rows": 24,
+  "adopted_total_nodes_per_pass": 168055078,
+  "batch_total_nodes_per_pass": 396892270,
+  "batches": [
+   {
+    "adopted_loss_rows": 24,
+    "adopted_nodes_per_pool": 168055078,
+    "batch_total_nodes_per_pass": 396892270,
+    "class_index": 30345,
+    "excluded_prior_win_rows": 1,
+    "exhausted_honest_unknown_rows": 6,
+    "pool": "ef-b38loss24",
+    "probed_rows": 49,
+    "unadopted_win_rows": 19
+   }
+  ],
+  "decisive_labels": "24 fresh exact-LOSS rows of the published Part EF batch-38 kit adopted (each a first-ever probe, two-pass fresh-cold node-exact at the single 15M budget/order-0 condition, solved within budget, MISMATCH 0, resolved by its own single pass history - no re-probe, no exhaustion conversion); the 19 probe-level WIN rows (incl. ai048 the class-30484 dual-class sibling of the adopted ai044) are unconsumed (scrutiny-owner C++ gate 9193f5b6 exclusive) and sit in NO cache; the 6 honest-EXHAUSTED keys stay honest UNKNOWN; b018 (prior batch-1 dual-class WIN) stays excluded and unconsumed",
+  "exhausted_honest_unknown_rows": 6,
+  "unadopted_win_rows": 19
+ },
+ "scenario": "ADOPTED-CANONICAL",
+ "schema": "em-b38loss24-adoption-decomp-deltas-v1",
+ "update8": {
+  "groups_free_now_static": 131,
+  "newly_resolved_s5": [],
+  "newly_resolved_within_adopted": false,
+  "note": "ALL 24 adopted s5 indices sit OUTSIDE the frozen update8 baseline requirement: resolved, remaining and every per-root remaining are BYTE-STATIC",
+  "remaining_after": 31600,
+  "remaining_before": 31600,
+  "resolved_after": 259,
+  "resolved_before": 259
+ },
+ "verification": {
+  "board_child_regeneration": "class-30484 54-child / class-30345 51-child (1 non-s5) / class-30118 56-child / class-16371 52-child / class-20421 50-child / class-34908 56-child boundaries regenerated via Board(11).children",
+  "kit_files_verified": {
+   "ef": 181
+  },
+  "packet_pins": {
+   "audit_b38_json": "73652099bcc47ac86b89a790524fb78c353e01c91ddcdc3748b91cfea5b75fdc",
+   "batch_keys": "298071046bfba8473c5b3d6e0b6a30108697eb0899aed7c70fcb4c5343f7cb8d",
+   "ef_manifest": "4dbf8856597709b3bd41d6f185a0502ebbdee447b1fc48d0caab586fdcc5ac02",
+   "status_log": "8ca390768e317b5fdf810767dbd6e7bc31790d58762701e71759b4883fd8e14f"
+  },
+  "raws_two_pass_verified": 49,
+  "refresh_outputs_byte_identical": true,
+  "refresh_scripts_reexecuted": [
+   "c0debd185919fb9791fa0f9ca07883d682429e536c8f31c65548047032ab02b1",
+   "baf9cbde6aa49949eb5a9668134dd3d6cfad7aee057ad61ea0a631b686a0ef78"
+  ],
+  "truncation_retry_artifacts_accounted": 7
+ }
+}
