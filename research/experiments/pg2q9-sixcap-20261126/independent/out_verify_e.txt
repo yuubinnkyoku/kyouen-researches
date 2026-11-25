@@ -1,0 +1,48 @@
+non-maximal 6-caps without a complete 7-arc extension: 25 (from 35 random 6-cap draws)
+random maximal 6-caps: 10
+
+Non-maximal 6-caps without a complete 7-arc extension:
+  nonmax X=[2, 3, 39, 45, 67, 69]             |X|=6  upset= 13  G=0  max-ext sizes=[8, 8, 8, 8] all even=True all G=0=True  OK
+  nonmax X=[9, 31, 53, 60, 70, 82]            |X|=6  upset= 13  G=0  max-ext sizes=[8, 8, 8, 8] all even=True all G=0=True  OK
+  nonmax X=[22, 27, 33, 39, 54, 69]           |X|=6  upset= 22  G=0  max-ext sizes=[8, 8, 10] all even=True all G=0=True  OK
+  nonmax X=[4, 25, 37, 41, 53, 89]            |X|=6  upset= 10  G=0  max-ext sizes=[8, 8, 8]  all even=True all G=0=True  OK
+  nonmax X=[29, 33, 63, 65, 82, 87]           |X|=6  upset= 10  G=0  max-ext sizes=[8, 8, 8]  all even=True all G=0=True  OK
+  nonmax X=[4, 30, 36, 44, 49, 64]            |X|=6  upset= 10  G=0  max-ext sizes=[8, 8, 8]  all even=True all G=0=True  OK
+  nonmax X=[5, 15, 41, 71, 73, 90]            |X|=6  upset= 22  G=0  max-ext sizes=[8, 8, 10] all even=True all G=0=True  OK
+  nonmax X=[21, 35, 48, 65, 69, 89]           |X|=6  upset= 22  G=0  max-ext sizes=[8, 8, 10] all even=True all G=0=True  OK
+  nonmax X=[5, 26, 53, 64, 65, 86]            |X|=6  upset= 10  G=0  max-ext sizes=[8, 8, 8]  all even=True all G=0=True  OK
+  nonmax X=[16, 23, 34, 51, 84, 90]           |X|=6  upset= 16  G=0  max-ext sizes=[10]       all even=True all G=0=True  OK
+  nonmax X=[3, 7, 27, 37, 39, 68]             |X|=6  upset= 13  G=0  max-ext sizes=[8, 8, 8, 8] all even=True all G=0=True  OK
+  nonmax X=[11, 38, 42, 52, 57, 58]           |X|=6  upset= 10  G=0  max-ext sizes=[8, 8, 8]  all even=True all G=0=True  OK
+  nonmax X=[11, 12, 61, 65, 67, 79]           |X|=6  upset= 22  G=0  max-ext sizes=[8, 8, 10] all even=True all G=0=True  OK
+  nonmax X=[14, 27, 50, 78, 82, 90]           |X|=6  upset= 10  G=0  max-ext sizes=[8, 8, 8]  all even=True all G=0=True  OK
+  nonmax X=[6, 46, 51, 56, 66, 81]            |X|=6  upset= 22  G=0  max-ext sizes=[8, 8, 10] all even=True all G=0=True  OK
+  nonmax X=[19, 35, 37, 47, 54, 60]           |X|=6  upset= 13  G=0  max-ext sizes=[8, 8, 8, 8] all even=True all G=0=True  OK
+  nonmax X=[7, 9, 20, 36, 67, 72]             |X|=6  upset= 13  G=0  max-ext sizes=[8, 8, 8, 8] all even=True all G=0=True  OK
+  nonmax X=[30, 37, 43, 61, 68, 82]           |X|=6  upset= 10  G=0  max-ext sizes=[8, 8, 8]  all even=True all G=0=True  OK
+  nonmax X=[32, 40, 44, 51, 62, 70]           |X|=6  upset= 16  G=0  max-ext sizes=[10]       all even=True all G=0=True  OK
+  nonmax X=[12, 19, 20, 57, 82, 86]           |X|=6  upset= 10  G=0  max-ext sizes=[8, 8, 8]  all even=True all G=0=True  OK
+  nonmax X=[3, 30, 32, 37, 47, 80]            |X|=6  upset= 16  G=0  max-ext sizes=[10]       all even=True all G=0=True  OK
+  nonmax X=[9, 15, 17, 37, 80, 87]            |X|=6  upset= 16  G=0  max-ext sizes=[10]       all even=True all G=0=True  OK
+  nonmax X=[11, 30, 36, 56, 62, 90]           |X|=6  upset= 10  G=0  max-ext sizes=[8, 8, 8]  all even=True all G=0=True  OK
+  nonmax X=[3, 4, 17, 18, 54, 74]             |X|=6  upset= 13  G=0  max-ext sizes=[8, 8, 8, 8] all even=True all G=0=True  OK
+  nonmax X=[9, 20, 27, 34, 43, 63]            |X|=6  upset= 10  G=0  max-ext sizes=[8, 8, 8]  all even=True all G=0=True  OK
+
+Maximal 6-caps (no addable point at all):
+  max6   X=[1, 14, 34, 36, 48, 89]            |X|=6  upset=  1  G=0  max-ext sizes=[6]        all even=True all G=0=True  OK
+  max6   X=[2, 12, 44, 66, 85, 89]            |X|=6  upset=  1  G=0  max-ext sizes=[6]        all even=True all G=0=True  OK
+  max6   X=[13, 17, 24, 64, 77, 78]           |X|=6  upset=  1  G=0  max-ext sizes=[6]        all even=True all G=0=True  OK
+  max6   X=[1, 20, 30, 72, 73, 76]            |X|=6  upset=  1  G=0  max-ext sizes=[6]        all even=True all G=0=True  OK
+  max6   X=[15, 20, 26, 42, 65, 89]           |X|=6  upset=  1  G=0  max-ext sizes=[6]        all even=True all G=0=True  OK
+  max6   X=[8, 13, 32, 33, 41, 87]            |X|=6  upset=  1  G=0  max-ext sizes=[6]        all even=True all G=0=True  OK
+  max6   X=[30, 33, 58, 59, 75, 79]           |X|=6  upset=  1  G=0  max-ext sizes=[6]        all even=True all G=0=True  OK
+  max6   X=[7, 11, 16, 33, 60, 88]            |X|=6  upset=  1  G=0  max-ext sizes=[6]        all even=True all G=0=True  OK
+  max6   X=[37, 45, 57, 64, 83, 86]           |X|=6  upset=  1  G=0  max-ext sizes=[6]        all even=True all G=0=True  OK
+  max6   X=[8, 16, 47, 56, 60, 88]            |X|=6  upset=  1  G=0  max-ext sizes=[6]        all even=True all G=0=True  OK
+
+Summary:
+  sampled caps: 35 (25 no-7-extension non-maximal + 10 maximal)
+  G values observed: [0]
+  every sampled cap has G=0: PASS
+  every maximal extension even-sized and G=0: PASS
+  => no 6-cap without a complete 7-arc extension has G=2: PASS
