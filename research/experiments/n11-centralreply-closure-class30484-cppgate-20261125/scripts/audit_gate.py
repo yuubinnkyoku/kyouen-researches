@@ -60,7 +60,7 @@ RAW_PROV = {
     "anchor-af039": "EK kit output/raw/af039.p1.out (30000000,2,19234232); canonical cache row",
     "anchor-aj001": "EK kit output/raw/aj001.p1.out (30000000,2,5156075)",
 }
-REPLAY = re.compile(r"^replay,(\d+),(\d+),(\d+),(\d+),(\d+),(\d+),(\d+),(\d+),([0-9.]+),(\d+),(\d+)$")
+REPLAY = re.compile(r"^replay,(\d+),(\d+),(\d+),(\d+),(\d+),(\d+),(\d+),([0-9.]+),(\d+),(\d+)$")
 
 def sha256(path):
     h = hashlib.sha256()
