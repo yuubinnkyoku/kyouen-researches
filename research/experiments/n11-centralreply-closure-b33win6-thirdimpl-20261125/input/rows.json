@@ -1,0 +1,172 @@
+{
+ "schema": "n11-centralreply-closure-b33win6-thirdimpl-input-v1",
+ "consumed_into_canonical_cache": false,
+ "unadopted_win_rows": true,
+ "unadopted_loss_rows": false,
+ "canonical_cache_sha256_unchanged": "fc3e4ac9052447158202f09d5efe05468dba32fe95ec90beaaa0a0de9d2c020f",
+ "sources": {
+  "b33_drive": "sources/b33-raw (12 files) + sources/b33-status.log + sources/b33-batch-keys.json: published batch-33 class-34908 drive (experiment n11-centralreply-closure-class34908-batch33-20261124, commit-pinned raw fetch, MANIFEST-verified)",
+  "ea_reprobe30m": "sources/ea-raw (8 files) + sources/ea-status.log + sources/ea-reprobe-keys.json: published Part EA b33exh5 30M re-probe (experiment n11-centralreply-closure-class34908-b33exh5-reprobe30m-20261125)",
+  "ee_adoption": "sources/ee-* 3 files: published Part EE af034loss1 adoption core (merged canonical 6,666 rows fc3e4ac9, increment cc9c4746, manifest 0ad3469e)",
+  "merged_canonical_sha256": "fc3e4ac9052447158202f09d5efe05468dba32fe95ec90beaaa0a0de9d2c020f",
+  "attention": "verdicts NOT consumed: all six rows are honest unconsumed probe-level WIN labels pending the scrutiny owner C++ second-implementation gate pin 9193f5b6; nothing in this Part adopts, frees or excludes anything"
+ },
+ "targets": [
+  {
+   "key_id": "af029",
+   "stones": 5,
+   "lo": 1152921504607895553,
+   "hi": 68720525312,
+   "legal": 86,
+   "s5_index": 900646,
+   "membership_class_count": 2,
+   "replica_result": 1,
+   "replica_nodes": 4862485,
+   "budget": 15000000,
+   "source": "batch33-class34908-drive-15m",
+   "extra30m": {
+    "replica_result": 1,
+    "replica_nodes": 4862485,
+    "budget": 30000000,
+    "source": "part-ea-b33exh5-reprobe30m-anchor"
+   },
+   "expect_third": 1
+  },
+  {
+   "key_id": "af047",
+   "stones": 5,
+   "lo": 1152921504607895809,
+   "hi": 68719476736,
+   "legal": 84,
+   "s5_index": 961976,
+   "membership_class_count": 3,
+   "replica_result": 1,
+   "replica_nodes": 9841975,
+   "budget": 15000000,
+   "source": "batch33-class34908-drive-15m",
+   "expect_third": 1
+  },
+  {
+   "key_id": "af050",
+   "stones": 5,
+   "lo": 1152921504607899649,
+   "hi": 68719476736,
+   "legal": 94,
+   "s5_index": 962386,
+   "membership_class_count": 3,
+   "replica_result": 1,
+   "replica_nodes": 7311834,
+   "budget": 15000000,
+   "source": "batch33-class34908-drive-15m",
+   "expect_third": 1
+  },
+  {
+   "key_id": "af053",
+   "stones": 5,
+   "lo": 1152921504606852096,
+   "hi": 17660905521152,
+   "legal": 90,
+   "s5_index": 962470,
+   "membership_class_count": 2,
+   "replica_result": 1,
+   "replica_nodes": 5182129,
+   "budget": 15000000,
+   "source": "batch33-class34908-drive-15m",
+   "expect_third": 1
+  },
+  {
+   "key_id": "af023",
+   "stones": 5,
+   "lo": 1152921504607895553,
+   "hi": 68719478784,
+   "legal": 94,
+   "s5_index": 810351,
+   "membership_class_count": 4,
+   "replica_result": 1,
+   "replica_nodes": 28933179,
+   "budget": 30000000,
+   "source": "part-ea-b33exh5-reprobe30m",
+   "prior_15m_exhausted": true,
+   "expect_third": 1
+  },
+  {
+   "key_id": "af048",
+   "stones": 5,
+   "lo": 1152921508902862849,
+   "hi": 68719476736,
+   "legal": 87,
+   "s5_index": 962172,
+   "membership_class_count": 3,
+   "replica_result": 1,
+   "replica_nodes": 17816616,
+   "budget": 30000000,
+   "source": "part-ea-b33exh5-reprobe30m",
+   "prior_15m_exhausted": true,
+   "expect_third": 1
+  }
+ ],
+ "anchors": [
+  {
+   "key_id": "k02a",
+   "stones": 5,
+   "lo": 1297036692683751424,
+   "hi": 68157440,
+   "legal": 87,
+   "expect_third": 1,
+   "anchor_expansions": 9106337,
+   "anchor_ttHits": 4991527,
+   "expect_kind": "win",
+   "replica_result": null,
+   "replica_nodes": null
+  },
+  {
+   "key_id": "l1a",
+   "stones": 5,
+   "lo": 13019119616,
+   "hi": 16448,
+   "legal": 116,
+   "expect_third": 2,
+   "anchor_expansions": 7660602,
+   "anchor_ttHits": 3951175,
+   "expect_kind": "loss",
+   "replica_result": null,
+   "replica_nodes": null
+  }
+ ],
+ "negatives": [
+  {
+   "key_id": "ng1",
+   "lo": 1297036692683751424,
+   "hi": 68157440,
+   "legal": 88,
+   "stones": 5,
+   "why": "legal+1 vs derived 87"
+  },
+  {
+   "key_id": "ng2",
+   "lo": 1297036692683751424,
+   "hi": 68157440,
+   "legal": 87,
+   "stones": 6,
+   "why": "stones 6 vs actual 5"
+  }
+ ],
+ "valgate": [
+  {
+   "key_id": "at2m-s5-1152921504606851072-536870946",
+   "budget": 2000000
+  },
+  {
+   "key_id": "at2m-s5-1188950301626860544-536870912",
+   "budget": 2000000
+  },
+  {
+   "key_id": "first-15m-s5-1152921504606851072-536870946",
+   "budget": 15000000
+  },
+  {
+   "key_id": "second-15m-s5-1188950301626860544-536870912",
+   "budget": 15000000
+  }
+ ]
+}
