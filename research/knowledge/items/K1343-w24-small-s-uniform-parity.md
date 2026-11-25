@@ -25,7 +25,7 @@ artifacts:
   role: data
   note: s=7 の GSIZE（比較用）
 scope: W_24（24 点、759 オクタッド）の s=1..6 共演ゲームのサイズ別 Grundy（全サイズで一様）と、s=7 で混在が始まることの確認。
-evidence: 各 s の SIZE 行（count, maximal, grundy0）から G0 = grundy0、G1 = count − grundy0 を計算し、GRUNDY 行と照合。s=1: G=(k+1) mod 2（0→1, 1→0）。s=2,4,5,6: G = k mod 2（全サイズ一様）。s=3: G=(k+1) mod 2。s=7 のみ G=2 がサイズ 9（566,720）と 11（2,040,192）に現れ、サイズ 9 以降で一様性が破れる（K1342）。全 s で G0/G1 の合計は GRUNDY 行と一致。
+evidence: 各 s の SIZE 行（count, maximal, grundy0）から G0 = grundy0、G1 = count − grundy0 を計算し、GRUNDY 行と照合。s=1 では G=(k+1) mod 2（0→1, 1→0）。s=2,4,5,6 では G = k mod 2（全サイズ一様）。s=3 では G=(k+1) mod 2。s=7 のみ G=2 がサイズ 9（566,720）と 11（2,040,192）に現れ、サイズ 9 以降で一様性が破れる（K1342）。全 s で G0/G1 の合計は GRUNDY 行と一致。
 ---
 
 # W_24 の s=1..6 はサイズごとに Grundy 一定
