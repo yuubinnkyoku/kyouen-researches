@@ -99,7 +99,7 @@ def main():
             parsed[key] = rec; continue
         # G2 determinism on all fields except wall_s (index 8)
         a = rows["p1"]; b = rows["p2"]
-        det = (a[:8] == b[:8]) and (a[9:] == b[9:])
+        det = (a[:7] == b[:7]) and (a[8:] == b[8:])
         ok &= g("G2:" + key, det, "p1=%s p2=%s" % (",".join(a), ",".join(b)))
         # G3 published pins: fields legal(2),budget(4),result(5),nodes(6) -> f3,6,7,8 of csv
         rec["observed_p1"] = ",".join([a[2], a[4], a[5], a[6]])
