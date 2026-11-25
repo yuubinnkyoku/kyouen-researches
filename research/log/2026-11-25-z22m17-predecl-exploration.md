@@ -227,7 +227,7 @@ the exact +2 shift of the published z=20 even profile:
   therefore complete before T-Z22's slot claim.
 - The base claim position is H(40;{17}∪Y;22) (T-Z22 numbering R=m+23 at
   m=17); its a=17 child (token 17→16, R→39) is (39;{16}∪Y;22) = the
-  A1022f16-style A10 cell domain ITSELF (small token 16, z*(16)=30>22;
+  A1022f17-style A10 cell domain ITSELF (small token 16, z*(16)=30>22;
   the EIGHTH consecutive in-band base child), fully collapsed over all
   88 shapes; the m=16-row z=22 record (40 shapes + 39 ext, 0 separations)
   provides the row-style dossier over the same lattice position, and is
