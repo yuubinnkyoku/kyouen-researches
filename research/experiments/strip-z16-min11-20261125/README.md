@@ -83,3 +83,29 @@ of any game position (11x11 standard board, two-stone roots, S2, class 1/2/4 —
 all UNKNOWN) is consumed. Battery/point counts are engine cross-checks, not
 proofs. The paper proofs, the slot claim and the verification machine belong to
 the declaration lane.
+
+## Verification machine (K1322, publish-then-execute wave 2)
+
+- `verify_k1322.py` — sha256
+  `27e37152896a67798ab7cdf13e08fd2d5b80b4960bbceb7ea00025e87a96097c`
+  (structural copy of the published verify_k1320.py `081fe719…`; disclosed
+  changes: z 15→16, cell budget j+16→j+17, floor 10→11, rungs 9→10 with the
+  provisional 10th-rank label `A4` adopted as final **A416f11** (min=10, the
+  SECOND consecutive in-band base child), D3 anchors = the published K1320
+  z=15 lines F15f10..A315f10 + T-Z15 C-hand anchors (m ∈ {11..15}),
+  D4 31 floor-11 s-values, D5 grid x ∈ {1..29}, z ∈ {0..17}, 19 R-points per
+  pair + empty anchors, D6 19 deviant/collapse witnesses (incl. the F16f11
+  absorption-break UP, the s>=17 uniform-absorption witness, the FLAT
+  absorptions at the in-run supply points, and the four fully collapsing
+  A-ranks' spots + the in-band base spot), D7 tail spots × 10 cells + strip
+  spots m ∈ {16..19} + m=11 base spot, D8 below-band gate sweeping
+  H(17;Y;17) vs v(s,17,17) over the full floor-11 census domain).
+  Battery: **13,293 fail-closed points** (D1 1830 / D2 456 / D3 322 / D4 310 /
+  D5 10080 / D6 19 / D7 93 / D8 183); engine pin `bd5f22e4…` startup gate;
+  `--tamper-engine` rc 2 + 7 value modes rc 1 each flagging exactly one declared
+  gate (8/8 measured pre-publication).
+  Predry (pre-publication): 7 runs (default; PYTHONHASHSEED=random/1/0 same cwd;
+  3× env -i isolated dirs) all rc 0, stdout byte-identical, sha256
+  `e0c6559f523f768204e7704e5e9ce42022d694d680bb059fef515f6d34bbad04`
+  (~16 s per run). The official 4-run protocol from these published bytes
+  follows in wave 3. No verdict claimed; 11x11 stays UNKNOWN.
