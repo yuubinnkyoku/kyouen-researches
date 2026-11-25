@@ -1,0 +1,7 @@
+# fold10（第17 WIN7 receipt fold・ext2第三検証）単一オーナー宣言ノート: 受入条件4の期待値修正addendum
+
+- 本addendumは `research/log/2026-11-21-n11-fold10-17threceipt-ext2-pristine-reexec-third-single-owner-note.md`（宣言commit `4987c2b7dffd98d590ba65499bfb1caed3e1e939`）の**受入条件4 t1の予測記述の修正**であり、宣言ノート本体のbyteは無変更、それ以外の受入条件・対象・pin・非目標はすべて無変更とする。記録の所有者（本レーン）による事前battery前の修正である。
+- **予測の誤り**: 宣言ノートの受入条件4は t1（fold10正本 @12,345 の1 byte XOR 0x01）について「json load失敗で rc≠0・監査未書込でfail-closed」と予測した。battery前の予備探針（2026-11-21T05:5xZ・同一sandbox）で fold10正本（12,918 bytes）@12,345 が**メタデータ文字列 `_against_published_verdict_uni…` の内部**であることが判明し、単一 byte反転ではJSON parseが生存し、出版社の検証機は31 gateを走行のうえ **ちょうど `fold10 正本 sha256 == published bed7d331...` の1 gateのみが失敗**し、rc≠0・監査JSONは `gate-failed` statusで書込まれる。これは当該探針が幾何・簿記の全gateに波及しない（文字列メタデータ外のbyte不改変のため対象外の記録値は無変化）ことを機械確認済み。
+- **修正後の受入条件4 t1**: t1（fold10正本 @12,345 の1 byte XOR 0x01）は、rc≠0・出力監査JSONが `status gate-failed`・`gates_total == 31` で書込まれ、**失敗gateがちょうど `fold10 正本 sha256 == published bed7d331...` の1件のみ**（証明書SHA-256 pin gateを含む他30 gateは全pass）、実施後のW復帰でbyte無改変、であることを確認する。
+- **実験事実としての記録**: 第三検証レーンの選定offsetが文字列値の内部に当たった場合、出版社の検証機はparse死ではなく「対象入力のSHA-256 pin gate単独失敗」でfail-closedする。この挙動はfail-closed防衛の設計どおりであり、t2（証明書 @1,234,567）とあわせて「2種の入力pin gateが互いに独立して発火する」ことを1 battery内で実証する構成となった。
+- 本修正以降のbatteryはすべてこの修正後受入条件で実施する。受入条件を満たせない場合は失敗・未完として記録し、部分成果を検証完了と表現しない。**標準11×11空盤・二石root {49,60}/{59,60}・S2 {59,60}・class 1/2/4はすべてUNKNOWNのまま。**REFUTED-D10はLOSS証明ではない。nodes数・solved数・coverage数を勝敗として読まない。

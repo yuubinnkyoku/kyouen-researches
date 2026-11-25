@@ -1,0 +1,57 @@
+# 2026-11-12 S3 {59,60,61} blocker collapse（102/110）とjudgedS6矛盾解消
+
+## 経緯
+
+前回セッションのV4 blocker解析で、judgedS6が3,868（cert {73}・manifest・K0675 sweepと外部整合）
+と4,342（同94位置から直接計算）の2通りに出る矛盾を残したまま圧縮された。
+今回まず両計算を並行再実行して矛盾を解消した。
+
+## 矛盾の原因（確定）
+
+4,342側で使った埋込みfwHex/swHex配列（"2038..."系エントリ）に**先行ゼロが過多に入っており**
+（例: 17個の先行ゼロ vs 正しい14個）、各位置が約8ビットずれていた。破損配列では
+6軌道がsweep frontierと不一致・raw edges 7,882≠7,890・S6 4,342≠3,868。
+repoの`s5_verdicts.json`を`get_file_contents`で直接fetchして配列を解析的に取り出し再計算すると、
+**S5 94 / raw 7,890 / S6 3,868**が完全再現した（verify_conditional_s6_cover_46.reconstructの錨と一致）。
+破損はrepo側でなくセッション側の転写によるもの。
+
+## blocker collapseの確定
+
+権威あるオラクルでS3 {59,60,61}（S2 {59,60}のbest S3）のS4子を全D4像照合で判定:
+
+- 合法S4子110個のうち**102個がFW像を直接持ちW4即閉鎖**（fc=102）。
+- blockerは**8個のみ**: {5,23,27,31,89,93,97,115}。3 V4類: {5,115}/{27,93}/{23,31,89,97}。
+- V4類内統計完全一致（{23}≡{31}: 100/9,014/4,417）。前回の「{23}=98/8,859/4,416」は誤り。
+- 4代表のS6和集合8,340・うちjudged 460・**新規7,880・cost 616,491**。
+
+前回の「62 blocker・54個がV4で無料閉鎖」はraw一致(48)+V4推論の中間報告で、
+最終的な正しい構造は「全D4像照合で102直接閉鎖・8残」である。
+K0757 published ladderの61 blockerはraw一致のみの照合に基づくため8に訂正縮小される。
+
+## 方向規約
+
+chain_audit.py（s6sweep）の機関でW4(S4)=∃FIRST_WIN S5子・S3 proven-first⟺全S4子W4を再確認済み。
+K0762の「blocker 73閉鎖判定は方向規約未確認」は解消。blocker 73∈fcのため閉鎖可能。
+
+## 実装教訓
+
+- **hex定数を会話越しに手で再埋込みしてはならない**。fetchしたJSONから解析的に埋め込む+自己assert。
+  今回の検証scriptは配列を埋め込みつつ全錨をassertするため、転写破損があれば自動的にfailする。
+- get_file_contentsの目録はfields絞りで取得。resource.textで本文。
+- 同一run内で「並走pushの再取得→K番号決定→push」を行い、衝突は記録して次回に回す。
+
+## 次の一手
+
+1. 残8 blockerのcost昇順バッチmanifest生成・実計算（新規S6 7,880・sandbox単発では重い）。
+2. 8 blocker閉鎖でS3 {59,60,61} proven-first、その後S2 {59,60}条件付き判定。
+
+S2 {59,60}・二石root・11×11空盤は**UNKNOWN**のまま。本日はいかなる勝敗も断定していない。
+
+## cost昇順バッチmanifestの生成
+
+同日の追記: 4代表blocker（5, 27, 23, 31）の新規S6 7,880件をcost（合法S7子数）昇順にソートした
+worklist manifestを `output/blocker_new_s6_worklist.tsv` として生成した（schema: n11-s3-361-blocker-new-s6-worklist-v1）。
+各エントリは canonical hex key・cost・親代表blocker。総cost 616,491・cost分布はsummary参照。
+次段はこのmanifestの頭からバッチ判定（df-pn/solver）し、blocker単位でW4判定へ集約する。
+judged除外の検証はscript（blocker_collapse_audit.ts）のunion錨（8,340/460/7,880/616,491）と
+manifest行数・cost総和の一致で担保される。

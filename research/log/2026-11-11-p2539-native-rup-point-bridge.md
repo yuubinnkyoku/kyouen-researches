@@ -1,0 +1,48 @@
+# 2026-11-11 p2539の60除外単位節を親CNFだけのRUPへ接続
+
+開始HEADはafee8ccaad5e51da9b1edf17c82c43010316886e、main。
+AGENTS.md、knowledge README、現行K0693/K0702/K0706/K0727、最新logとexperimentを読んだ。
+git fetch origin main、status、実行中プロセスを確認。研究計算や新しいremote commitはなかった。
+他者の未コミットequality_screen_200k.jsonは保持した。
+
+前回pruned60全体はUNKNOWNだったため、同じ入力を再探索せず、除外60単位節の親CNF内証明を選んだ。
+各a_u仮定下の子CNFをproof-enabled・budget10000で実行し、60子全てSOLVER_UNSAT・終了値0。
+最初のu=555の結果を保持して他の59子だけを追加し、同一対象を重複起動していない。
+最大conflicts144、DRATは合計697205行。子の正単位節を仮定として持つ証明と、親だけの証明は区別した。
+
+各追加Cに¬a_uを付けて仮定を除去し、恒真節・重複literal・削除行を整理した。
+固定DRAT-trimの無変更ソースを-f -Uで使い、個別60本全てで親FだけのRUP導出を受理した。
+成功はs DERIVATIONとc VERIFIED derivationの両行で判定した。
+DERIVATIONは終了値1であり、上流mainは最終UNSATだけを終了値0にする。終了値1だけを根拠に成功扱いしない。
+native controlで有効な単位・非単位導出を受理し、偽の単位・二項節を拒否した。
+独立小型UPと真理値総当たりで561仮定下の負例・574 lift節を確認し、4不正入力とguard欠落を検出した。
+
+単純結合の初回検査は120秒でsubprocess.TimeoutExpiredとなった。
+個別60本の受理は維持し、失敗版の証明をbyte復元してplain-attempt.rup.gzとtimeout記録へ保存した。
+使用済みlift補助節を各点の後で削除し、親の節・目標単位節を保つ結合へ変更した。
+新形式は追加696834・削除696774行、計1393608行で、300秒上限内の135.535秒でDERIVATIONを受理した。
+これは空節を含まず、親全体のUNSAT証明ではない。
+
+個別60本はindividual-summary.jsonへ採用し、結合検査の状態と独立に参照できるようにした。
+今回の60節は親FだけのRUP帰結なので、前回pruned60入力はFと全モデルが一致する。
+K0727の60点回避の別根拠として追加できる。既存の幾何hitting証明はターゲット選択以外の前提には使っていない。
+全体のUNKNOWN、五点削除局所最適性の未解決状態、1258..1271は不変。
+
+SATライブラリや子証明を使わず、採用親F・結合RUP・manifestから別処理再生し、129.800秒でDERIVATIONを受理した。
+qualify.pyで60個別導出・結合導出と、元の保持側CNFおよびpruned60入力のbyte対応を確認した。
+同じ60点回避の証拠強化なので、新しいKを作らずK0727へ追加する。
+実行途中のheartbeatは新しい探索の指示として分割せず、進行中の証明監査を継続した。
+再fetchでremoteのa9814a24406dede4e4813bb2a70ae1c28697e1bc（C4飽和グラフの独立log一つ）が追加されていた。
+他者の未コミットscreenを保持したままorigin/mainをmergeし、正本・既存証拠との競合はなかった。
+
+初回control名rat-onlyは先頭pivotでのRAT成立まで確認した例ではなかったため、元のreceiptを保持したまま追加native controlを作った。
+負出現のない新変数3の単位節は-fだけならRATとして受理され、-f -Uでは拒否された。
+guard付き実導出は受理され、guard欠落は拒否された。これをnative-controls.jsonへ保存し、RAT/RUPの区別を明確にした。
+途中のfetchに付随してGitが自動maintenance/repackを起動していた。探索の重複起動ではなく、既存pack処理を停止・削除していない。
+
+uv sync --locked、統合後のknowledge check（709項目、error/warningとも0）、33 unittest（383.526秒）、buildが成功した。
+control追加に対応してcheck/buildを更新し、生成物をstage後に再buildしてgit diff --exit-code -- README.md research/knowledge/generatedの一致を確認した。
+全frozen source、60個別receipt、結合・別処理再生証明、元のtimeout入力、全モデル一致のbindingを照合した。
+scope指定のindexは392ファイル（実験388ファイル）で、experimentの全index blobが作業中raw bytesと一致し、他者screenや__pycache__を含めていない。
+branch/PRを作らず、検証済みの自分の変更だけmainへ直接commitする。既存の自動Git packと重複するmaintenanceは当該commitでは起動しない。
+pushや長時間探索workflowの設定変更は行わない。次回はこのRUP接続を後段の完結証明に利用できるが、現時点の全体UNKNOWNを同条件で再実行しない。
