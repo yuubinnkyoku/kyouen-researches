@@ -195,6 +195,7 @@ K(13)≥10（K1058 訂正）、s(13)=7 はランダム測定値。
   `PG(2,8)` の極大キャップは hyperoval が単一軌道（32,704）、極大 6-キャップが
   3 軌道（各 686,784、K1324）。
   `PG(2,8)` の 9-キャップは 2 軌道（conic 32,704 / 非 conic 294,336、K1326）。
+  全キャップの軌道分類（K1327）: k=1–5,10 は 1 軌道、k=6 は 5 軌道、k=7–9 は 2 軌道。
 - 実験: [s-parameter-kyouen-20261125](../research/experiments/s-parameter-kyouen-20261125/report.md)・[parity-characterization-20261125](../research/experiments/parity-characterization-20261125/report.md)
 
 ## 0c. 高速な反転平面構成（新）
