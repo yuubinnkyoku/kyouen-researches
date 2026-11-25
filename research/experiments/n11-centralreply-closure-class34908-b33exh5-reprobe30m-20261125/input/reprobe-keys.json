@@ -1,0 +1,182 @@
+{
+ "schema": "n11-centralreply-c34908-b33exh5-reprobe30m-input-v1",
+ "class_index": 34908,
+ "batch": 33,
+ "source_condition": {
+  "budget": 15000000,
+  "published_batch_packet_sha256": "8a863381454fcfec3cb190db7130ce6801accf56170ee3a1b944402491fecbaa",
+  "published_b33_status": {
+   "sha256": "1f663fc802c03b27c2e39d6130cf6c1392d62dd99b5847d6af477cd823a94b52",
+   "published_commit": "72877473",
+   "lines": 66,
+   "target_remaining_exhausted_set": {
+    "af003": "15000000,0,15000000",
+    "af023": "15000000,0,15000000",
+    "af034": "15000000,0,15000000",
+    "af039": "15000000,0,15000000",
+    "af048": "15000000,0,15000000"
+   },
+   "targets_in_resolved_lines": false,
+   "win_halt_set": [
+    "af029",
+    "af047",
+    "af050",
+    "af053"
+   ],
+   "anchor_facts": {
+    "af001_pass": "15000000,2,2952432",
+    "af029_pass": "15000000,1,4862485",
+    "af029_win_halt": true
+   },
+   "source_experiment_dir": "research/experiments/n11-centralreply-closure-class34908-batch33-20261124/"
+  },
+  "published_aggregate": {
+   "loss": 45,
+   "win": [
+    "af029",
+    "af047",
+    "af050",
+    "af053"
+   ],
+   "exhausted": [
+    "af003",
+    "af023",
+    "af034",
+    "af039",
+    "af048"
+   ],
+   "source": "published batch-33 README (Part DS full-batch completion, commit 72877473)"
+  }
+ },
+ "reprobe_condition": {
+  "budget": 30000000,
+  "derived_runner_sha256": "3b5083b47c043f93bbe01a5f3335baba6be6d1d6929885f4ab5b28b1778cf7b4",
+  "note": "higher-budget NEW-condition reprobe pre-declared by Part EA (Part CT/DI precedent followed byte-for-byte in design); the published 15M condition is not re-run (no-same-condition-re-search rule for COMPLETED exhaustion rows is untouched); result 0 at 30M remains honest UNKNOWN with no same-condition re-probe; published batch-33 15M exhaustion pass walls are 88-130s so a 30M single pass is expected ~176-260s: a single invocation cannot host p1+p2 inside the 260s inner window, so the cross-invocation p1/p2 file-existence resume guard is exercised as pre-declared (1-3 invocations per key, WINDOW-EXCEEDED backup rule intact); a still-exhausted target at 30M would need a future Part with a different window/budget design"
+ },
+ "base_cache_absence_check": {
+  "path": "research/experiments/n11-centralreply-b4loss1-b36loss40-b37loss46-adoption-reaudit-20261125/output/merged-exact-s5-chain-plus-b28loss1-plus-b28loss7-plus-b29loss16-plus-b29loss37-plus-b31loss51-plus-b30loss43-plus-b32loss54-plus-b33loss45-plus-b35loss26-plus-b4loss1-plus-b36loss40-plus-b37loss46-20261125.cache",
+  "sha256": "4a30b88dba782138585f16e1ad0ea65da55431dbc2c59250998fc5a1331349c9",
+  "verdict_rows": 6660,
+  "target_hits": {
+   "af003": 0,
+   "af023": 0,
+   "af034": 0,
+   "af039": 0,
+   "af048": 0
+  },
+  "note": "Part DZ merged canonical 6,660-row chain head (published as the Part DZ outputs commit 01f1fcc9); the 5 batch-33 EXHAUSTED targets are pre-adoption there by construction (EXHAUSTED rows are never consumed into any canonical cache) - recorded here as a machine fact"
+ },
+ "keys": [
+  {
+   "key_id": "af003",
+   "s5_index": 153030,
+   "lo": "3458764513821589505",
+   "hi": "68719476736",
+   "legal": 93,
+   "membership_class_count": 3,
+   "input_csv_sha256": "1ab3277e33ad16b66caf796e4c5f2211bfbbe62eec01f02a71bdc5de13a9330a",
+   "published_15m": {
+    "result": 0,
+    "nodes": 15000000,
+    "raw_p1_sha256": "fdd1e84dc9b5a4e9cd49c6d26c33d208ac9f3f89125594426606f5fba15d597a",
+    "raw_p2_sha256": "4ef154cba92ba078bd31f68ba1643c22518057243bdeb00e53894b5840e41225"
+   }
+  },
+  {
+   "key_id": "af023",
+   "s5_index": 810351,
+   "lo": "1152921504607895553",
+   "hi": "68719478784",
+   "legal": 94,
+   "membership_class_count": 4,
+   "input_csv_sha256": "0ba31256582eae15cc80fb2bdbfe56a140533828cdab7a05eeef6ca1089a1c08",
+   "published_15m": {
+    "result": 0,
+    "nodes": 15000000,
+    "raw_p1_sha256": "225b4d6526f1f8c5b6a6dafe6b5b359df4718c6b6b958147582ead3c14b5e33a",
+    "raw_p2_sha256": "fc86c52502e08f04dd2a7d35d257021d808f1a3652f1ed758f91ac3c3954e17f"
+   }
+  },
+  {
+   "key_id": "af034",
+   "s5_index": 930660,
+   "lo": "1152921504607911937",
+   "hi": "68719476736",
+   "legal": 95,
+   "membership_class_count": 4,
+   "input_csv_sha256": "a4bff56606cbb11107b77dac677b1e1151f59686174bddcf7e08c0558f590326",
+   "published_15m": {
+    "result": 0,
+    "nodes": 15000000,
+    "raw_p1_sha256": "6041fdeed69907458ca68cb7b335793d3c172a017368da868345f98ac8b45af0",
+    "raw_p2_sha256": "710a214bb5737b5011e8e7fe3377f6f85adc6fe3430c53c064b44eccc550d102"
+   }
+  },
+  {
+   "key_id": "af039",
+   "s5_index": 950512,
+   "lo": "1152921504607895681",
+   "hi": "68719476736",
+   "legal": 89,
+   "membership_class_count": 4,
+   "input_csv_sha256": "e51a3c9de08c62a54d80547c520876af4245394d05e37bbebf01d74204f64691",
+   "published_15m": {
+    "result": 0,
+    "nodes": 15000000,
+    "raw_p1_sha256": "a04e23ea9bd1914c997dfb26b820ce793572d2c96e9aebbae7ce283a59281331",
+    "raw_p2_sha256": "aaaaef87ff9406f8f49ea395a9d6513379636e5c2491ce9d4b95fbc7d5ef3abe"
+   }
+  },
+  {
+   "key_id": "af048",
+   "s5_index": 962172,
+   "lo": "1152921508902862849",
+   "hi": "68719476736",
+   "legal": 87,
+   "membership_class_count": 3,
+   "input_csv_sha256": "d619dcd7d47d7b65f1c4325d99b69211826eb83732c3eb475f14ea4f9f973422",
+   "published_15m": {
+    "result": 0,
+    "nodes": 15000000,
+    "raw_p1_sha256": "95c30994057c5017b5e3f153fea9432c21ca7d9da119ff1181ffee95805ce2a4",
+    "raw_p2_sha256": "25fa2c2279eadd297b488d2156dfac9ee5c9abbb06e0026bfc878aaf4fce6450"
+   }
+  }
+ ],
+ "anchors": [
+  {
+   "key_id": "af001",
+   "lo": "1152921504742113281",
+   "hi": "68719476736",
+   "legal": 91,
+   "published_15m": {
+    "result": 2,
+    "nodes": 2952432,
+    "raw_p1_sha256": "6adb122cb8c6b0df4792bca2f4e5f43ad1e597ecea45a31bcd1af13135b69125",
+    "raw_p2_sha256": "6adb122cb8c6b0df4792bca2f4e5f43ad1e597ecea45a31bcd1af13135b69125"
+   },
+   "expect_at_30m": {
+    "result": 2,
+    "nodes": 2952432
+   },
+   "note": "resolved rows re-run under the higher budget flag as derived-runner val anchors; the deterministic search must reproduce the published node count exactly (budget only caps, so nodes are unchanged)"
+  },
+  {
+   "key_id": "af029",
+   "lo": "1152921504607895553",
+   "hi": "68720525312",
+   "legal": 86,
+   "published_15m": {
+    "result": 1,
+    "nodes": 4862485,
+    "raw_p1_sha256": "6bd7a2ac37cccd8a387d6b505112c1a93b712e8d41b43467fa0844ce64ec0036",
+    "raw_p2_sha256": "b6abaa6384ee93c890cadd350f2f844889f3ee42110935a366af7893a2030e0b"
+   },
+   "expect_at_30m": {
+    "result": 1,
+    "nodes": 4862485
+   },
+   "note": "resolved rows re-run under the higher budget flag as derived-runner val anchors; the deterministic search must reproduce the published node count exactly (budget only caps, so nodes are unchanged)"
+  }
+ ]
+}

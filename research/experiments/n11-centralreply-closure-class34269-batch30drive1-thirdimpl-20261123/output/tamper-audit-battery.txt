@@ -1,0 +1,6 @@
+A[a1] GATE-FAILED rc=1 :: GATE FAILED: pin-third_impl.js 08ea958ff59c3234ec5ac55c5c40689bd0999a34e101a88ea0546800cc4a1998
+A[a2] GATE-FAILED rc=1 :: GATE FAILED: target-ac001-det-pair a=(2,6522042,clean) b=(2,6522043,clean)
+A[a3] GATE-FAILED rc=1 :: GATE FAILED: input-ac001-matches-rows 5,1152921504758890496,68719476736,87 vs 5,1152921504758890496,6871947673
+A[a4] GATE-FAILED rc=1 :: GATE FAILED: rows-schema n11-centralreply-closure-class34269-batch30drive1-thirdimpl-input-v1
+---- control ----
+CONTROL rc=0 :: ALL 148 GATES PASS; verdict agreements 4/4 (WIN=2 LOSS=2); inconclusive=0; total third-impl expansio

@@ -1,0 +1,20 @@
+{
+  "schema": "n11-s5-evidence-quarantine-v1",
+  "scope": "Persisted S5 cache rows only. Independently supported future replay/derivation can rehabilitate a key by updating this registry.",
+  "entries": [
+    {
+      "key": [1152925911243358208, 536870912],
+      "active": true,
+      "unsupported_verdict": 1,
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s7-witness-derived-s5.cache",
+      "reason": "S7 LOSS was incorrectly negated to S6 WIN in the fixed-player proposition; S5 remains UNKNOWN."
+    },
+    {
+      "key": [10448351135499552768, 128],
+      "active": true,
+      "unsupported_verdict": 1,
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/post-2199bcc8-s5-10448351135499552768-128-s7-witness-derived-s5.cache",
+      "reason": "S7 LOSS was incorrectly negated to S6 WIN in the fixed-player proposition; S5 remains UNKNOWN."
+    }
+  ]
+}

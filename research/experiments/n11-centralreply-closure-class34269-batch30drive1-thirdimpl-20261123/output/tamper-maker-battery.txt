@@ -1,0 +1,12 @@
+T[t1] ABORT rc=1 :: ABORT raw ac001.p1 sha 15d96605bf9b99b085aac25e2fe46ce984ad22cbfaf6f693eca20ce63ba1c3be != pin 1bef2dc2477f36f
+T[t2] ABORT rc=1 :: ABORT log-cp-drive1.md sha 0590ae1cc3229d5d1447b2948b78d588fedc753088dbba9a882f72b632706961 != pin 9903944e73a
+T[t3] ABORT rc=1 :: ABORT README-cp.md sha 654359933d919d1c47efb4d0bcd7a08ec5104988067988ad7217783067f55296 != pin 94bf05175696140
+T[t4] ABORT rc=1 :: ABORT status-cp.log sha 5b669f388fe5d99c1dcd9618c628e6f887ae30898e96eca25f2b98020b546bf1 != pin 43fcad174e7d3e
+T[t5] ABORT rc=1 :: ABORT published-input ac001 sha bfa4a06666356d3b6f90a7e3b53f8d3aed032d4d687c77a1c88dc88acb85d8f7 != pin a7502c
+T[t6] ABORT rc=1 :: ABORT published-input-bf k02a sha ad530fa59cadc82b6d4afa9c7b018e6966418fc0d49cdf9165ea4bdd937c96ac != pin b617
+T[t7] ABORT rc=1 :: ABORT batch-keys-b30.json sha 8ff91411184c4aa4a1a2207b22fa0110ac2a26ede0bff35e3391525ea621b24c != pin 79fbd166
+T[t8] ABORT rc=1 :: ABORT canonical-cache-co-merged-b28loss7.cache sha 4462b6abcf324bd982b42f28bd02c7d9fe55f2da74e79b1a39986f27c3f
+---- control (untampered scratch) ----
+CONTROL rc=0 :: unadopted rows: absent from merged canonical cache + increment + manifest (machine-gated)
+CONTROL rows.json byte-identical
+EXECUTION-DIR (input+val-gate+sources) BYTES UNCHANGED: YES
