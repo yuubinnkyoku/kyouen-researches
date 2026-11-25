@@ -1,7 +1,7 @@
 ---
 id: K1333
 title: "PG(2,9) のキャップ Grundy — サイズと極大性による決定（k=7,8,9,10、k=6 は 0/2 混在）"
-kind: computation
+kind: proposition
 status: proved
 topics: [geometry, grundy]
 aliases:
