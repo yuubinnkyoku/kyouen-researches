@@ -1,0 +1,271 @@
+{
+ "cache": {
+  "adopted_s5_indices": [
+   38215,
+   259023,
+   300778
+  ],
+  "base_rows": 6660,
+  "base_sha256": "4a30b88dba782138585f16e1ad0ea65da55431dbc2c59250998fc5a1331349c9",
+  "increment_rows": 3,
+  "merge_audit_runs": 3,
+  "merge_audit_sha256_each": "e4dd5024ade5d793db96f82b7f20e6201fe480303c19e2fd81679376f0f523ff",
+  "relation": "scenario == base rows + the 3 increment rows verbatim (no other row changed)",
+  "scenario_rows": 6663,
+  "scenario_sha256": "c3026468c74b56e71f3a9e0cd45c13e4a8cba147d137c25703c5be62b9c4c94e",
+  "verdict_counts": {
+   "LOSS": 6505,
+   "WIN": 158
+  }
+ },
+ "class_16371": {
+  "adopted_own": 0,
+  "base_known_loss_s5_cache": [
+   546606
+  ],
+  "children_total": 52,
+  "class_rank": [
+   4,
+   4
+  ],
+  "groups_served_count": [
+   3,
+   3
+  ],
+  "not_a_root_verdict": "the loss-only adoption of a mixed packet frees nothing and excludes nothing; free_now/coverage quantities are Board-derived scheduling bookkeeping; no root verdict and no coverage claim is made",
+  "receipt_known_loss_s5": [
+   381858,
+   550881
+  ],
+  "status_after": "unknown (BYTE-STATIC across Part EB: no EB row sits in this class; the 2 unconsumed probe-level WIN children {e042, e002} remain)",
+  "status_before": "unknown",
+  "unconsumed_win_children": 2,
+  "unknown_after": 2,
+  "unknown_before": 2,
+  "unknown_s5_remaining": [
+   183566,
+   550879
+  ]
+ },
+ "class_20421": {
+  "adopted_own": 3,
+  "base_known_loss_s5_cache": [
+   356378,
+   393798,
+   441775,
+   565995,
+   570139,
+   574236,
+   578232,
+   582153,
+   585861,
+   589727,
+   593275,
+   596738,
+   602640,
+   605690,
+   608779,
+   611801,
+   614833,
+   617672,
+   623364,
+   625189,
+   630432,
+   636913,
+   641189,
+   643424,
+   645317,
+   650304,
+   651925,
+   653505,
+   655969,
+   657407,
+   662182,
+   664455,
+   669726,
+   671112,
+   671120,
+   671129,
+   671133,
+   671137,
+   671143,
+   671146
+  ],
+  "children_total_raw": 50,
+  "children_total_s5": 49,
+  "class_rank": [
+   8,
+   7
+  ],
+  "groups_served_count": [
+   4,
+   4
+  ],
+  "non_s5_precious_cache_child": [
+   10378545341275312128,
+   131072
+  ],
+  "not_a_root_verdict": "identical guard as class_16371",
+  "receipt_known_loss_s5": [],
+  "status_after": "unknown (NOT freed, NOT excluded: the 6 unconsumed probe-level WIN children remain)",
+  "status_before": "unknown",
+  "unconsumed_win_children": 6,
+  "unknown_after": 6,
+  "unknown_before": 9,
+  "unknown_s5_remaining": [
+   197253,
+   528689,
+   543795,
+   605961,
+   620742,
+   625899
+  ]
+ },
+ "class_status_counts_after": {
+  "excluded": 390,
+  "excluded_now": 23,
+  "free_now": 39,
+  "unknown": 34497
+ },
+ "class_status_counts_before": {
+  "excluded": 390,
+  "excluded_now": 23,
+  "free_now": 39,
+  "unknown": 34497
+ },
+ "closure_table": {
+  "entered": [],
+  "fully_stable_rows": 804,
+  "groups_served_decrease_churn": [],
+  "left": [],
+  "left_reason": "EMPTY: the 807-row frontier table is fully static across this Part (no rank-bookkeeping exchange rows)",
+  "rank_churn_detail": [
+   [
+    34908,
+    7,
+    8
+   ]
+  ],
+  "rank_churn_only_rows": 1,
+  "rows_after": 807,
+  "rows_before": 807,
+  "unknown_changed_classes": []
+ },
+ "interpretation_guard": "only the 3 fresh batch-3 LOSS rows are consumed into the canonical cache by this Part; the probed packet is MIXED: the d002 probe-level WIN row is consumed NOWHERE and belongs to the scrutiny-owner C++ second-implementation gate (pin 9193f5b6...); classes 16371 (byte-static, 2 WIN children) and 20421 (6 WIN children) are NOT freed and NOT excluded; class status stays unknown, free_now 39 static, closure table 807 rows fully static with NO left/entered exchange; no root verdict and no coverage claim is made anywhere; the per-root/greedy/worklist quantities quoted here are bookkeeping, never verdicts; no update8 resolution was lost; 11x11 stays UNKNOWN",
+ "metrics": {
+  "cache_rows_in_universe": [
+   816,
+   819
+  ],
+  "joint_greedy_union_size": [
+   36511,
+   36511
+  ],
+  "known_universe_indices": [
+   839,
+   842
+  ],
+  "note": "the joint greedy union stays 36,511 static and the worklist shrinks (64,420 -> 64,417) after class 20421's frontier cost drops (unknown 9 -> 6); per-root free/uncovered thirds are IDENTICAL at every root (nothing was freed); roots 12/37 individual greedy unions shift as pure bookkeeping; per-root remaining decreases only at roots 12/37 (-6 each); root 27 stays 119/119",
+  "per_root_coverage_delta": {
+   "12": {
+    "free": [
+     6,
+     6
+    ],
+    "greedy": [
+     2896,
+     2893
+    ],
+    "uncovered": [
+     113,
+     113
+    ]
+   },
+   "37": {
+    "free": [
+     4,
+     4
+    ],
+    "greedy": [
+     3622,
+     3620
+    ],
+    "uncovered": [
+     115,
+     115
+    ]
+   }
+  },
+  "per_root_remaining_delta": {
+   "12": -6,
+   "37": -6
+  },
+  "unique_groups": [
+   2115,
+   2115
+  ],
+  "worklist_total": [
+   64420,
+   64417
+  ]
+ },
+ "packet": {
+  "adopted_loss_ids": [
+   "d001",
+   "d003",
+   "d004"
+  ],
+  "adopted_loss_rows": 3,
+  "adopted_total_nodes_per_pass": 14962526,
+  "batches": [
+   {
+    "adopted_loss_rows": 3,
+    "adopted_nodes_per_pool": 14962526,
+    "class_index": 20421,
+    "pool": "b3",
+    "probed_rows": 4,
+    "unadopted_win_rows": 1,
+    "whole_packet_nodes": 20322520
+   }
+  ],
+  "decisive_labels": "3 fresh LOSS @15M adopted (batch-3 d001/d003/d004, 2-pass node-exact) + 1 probe-level WIN @15M (d002) unconsumed + 0 EXHAUSTED + MISMATCH 0",
+  "exhausted_excluded_rows": 0,
+  "unadopted_win_ids": [
+   "d002"
+  ],
+  "unadopted_win_rows": 1,
+  "unadopted_win_s5": {
+   "d002": 197253
+  }
+ },
+ "scenario": "ADOPTED-CANONICAL",
+ "schema": "b3loss3-adoption-decomp-deltas-v1",
+ "update8": {
+  "groups_free_now_static": 131,
+  "newly_resolved_s5": [
+   38215,
+   259023,
+   300778
+  ],
+  "newly_resolved_within_adopted": true,
+  "remaining_after": 31600,
+  "remaining_before": 31603,
+  "resolved_after": 259,
+  "resolved_before": 256
+ },
+ "verification": {
+  "board_child_regeneration": "class-16371 52-child and class-20421 50-child (49 s5 + 1 pinned non-s5 cache row) canonical 5-stone boundaries regenerated via Board(11).children",
+  "kit_files_verified": {
+   "b36": 160
+  },
+  "packet_pins": {
+   "b3_keys": "ad05073a845e511669d28fde3691fe9f3bf9f08eef2021039c884f1411f6dd3f",
+   "b3_status": "7877f4a085b466289b7647a1d88b98b755afa2065efae8f59c01bb10dca4cbbb"
+  },
+  "refresh_outputs_byte_identical": true,
+  "refresh_scripts_reexecuted": [
+   "cbb1d2b753975563efa193b06a56919b6e1758ab13bcfcedc77d0bfd76751e56",
+   "b6b780a3fd3ef81a07a052c48002fa511f016b30cae3007f199283c6f87a3b7a"
+  ]
+ }
+}
