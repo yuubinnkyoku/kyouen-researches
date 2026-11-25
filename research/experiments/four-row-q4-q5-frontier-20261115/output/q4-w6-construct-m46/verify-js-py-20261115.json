@@ -1,0 +1,31 @@
+{
+  "subject": "(6,4) m=46 constructive free-column-append witness (K0833 artifact, originally published with pure-TS verification only, js+py pending)",
+  "date": "2026-11-15T12:10:00Z",
+  "stones_source": "research/experiments/four-row-q4-q5-frontier-20261115/output/q4-w6-construct-m46/records.jsonl (17 stones, rows [2,3,3,3,3,3], maxx=39)",
+  "js_verify": {
+    "system": "sat.js verifyConfig (census-free, repo blob md5 0cc6021a4e523a0d7f4d5ea0f5f5d40c)",
+    "results": {
+      "verifyConfig(6,46,4)": {"ok": true, "size": 17, "rows": [2,3,3,3,3,3], "minRow": 2},
+      "verifyConfig(6,45,4) same set": {"ok": true, "size": 17, "rows": [2,3,3,3,3,3], "minRow": 2}
+    }
+  },
+  "py_verify": {
+    "system": "verify_witness.py (Python Fraction, census-free, repo blob md5 0530d166572987988a01ec40dee12d4c)",
+    "results": {
+      "(6,46,4)": {"ok": true, "n": 17, "rows": [2,3,3,3,3,3], "min_row": 2},
+      "(6,45,4) same set": {"ok": true, "n": 17, "rows": [2,3,3,3,3,3], "min_row": 2}
+    }
+  },
+  "negative_control": {
+    "input": "[[0,0],[1,0],[2,0],[3,0]] (4 collinear stones in row 0)",
+    "expected": "unsafe-line rejection",
+    "py_result": {"ok": false, "why": "unsafe-line", "co": [0,1,0]},
+    "js_result": "unsafe detected"
+  },
+  "criterion_crosscheck": {
+    "system": "free-column append criterion checker (K0853, independent Fraction implementation)",
+    "result": {"safe": true, "maxline": 3, "maxcirc": 3, "free_append_reach": 46, "first_unblocked": [46,0], "old_uncovered_count": 0, "witness_widths": [40,46]},
+    "agreement": "reproduces the published m=46 PASS and the m=47 stop at cell (46,0)"
+  },
+  "conclusion": "The pending js+py 2-system verification of the (6,4) m=46 constructive witness is complete: both PASS, negative control correctly rejected. The witness band m=6..46 and M_{6,4} in [47,1113] stand on 4 systems (pure-TS, js, py, criterion)."
+}

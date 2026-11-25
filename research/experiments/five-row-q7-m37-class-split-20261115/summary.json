@@ -1,0 +1,26 @@
+{
+ "w": 5,
+ "m": 37,
+ "q": 7,
+ "claim": "no row-deficient maximal safe configuration on 5x37 q=7; witness-free width set of (5,7) is {19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37}; M_{5,7} = 19 or >= 39 (upper 158 unchanged); independently cross-checked by the five-row-q7-band-closure-35-157-20261115 def-mode UNSAT at m=37 (different census/encoding)",
+ "direct_classes_unsat": 17,
+ "class0_k_minpos_split_unsat": 24,
+ "class1_k_minpos_split_unsat": 24,
+ "indet": 0,
+ "sat": 0,
+ "total_conflicts_37": 5028592,
+ "hardest": [
+  "1 k1:5 mp0: 472443",
+  "0 k0:5 mp0: 345111",
+  "0,1: 223591",
+  "0,1: 200526",
+  "1 k1:5 mp1: 177745"
+ ],
+ "lex_cross_checks": {
+  "2": 98758,
+  "0,1": 200526
+ },
+ "positive_control": "5x18 class {0} SAT 343,134 conflicts (bit-exact with the K0821..K0850 lane controls — sixteenth cross-lane reproduction); decoded 29 stones rows (5,6,6,6,6), census-free verifyConfig PASS",
+ "decomposition_soundness": "k=0..5 partitions the deficient-row stone count; k=5 instances split by minpos=0..18, which pins the leftmost stone of the first deficient row at column exactly P; every configuration or its column mirror has leftmost stone column <= floor((m-1)/2) = 18 at m=37 (columns 0..36: min(x_min, 36-x_max) <= 18 since x_min <= x_max); the column mirror preserves row occupancy, hence the class",
+ "environment_note": "single continuous session; sat.js/sat2.js/sat3.js byte-identical to the K0836..K0850 lane scripts (restored from the m=36 lane, blob shas verified: 6c3262d6 / edfae1d2 / 6dfa7db3; the control CNF c5x18q7_0.cnf regenerates md5-identical 0bb6187d36e537a170e4fb451359bb94); mkcnf.sh/qrun.sh ported m=36 -> m=37 (minpos bound grows 17 -> 18: floor((37-1)/2)=18); mkrecords5737.js log-name templates match the actual log names (no c prefix on direct/lexH logs); raw logs pushed batch-by-batch"
+}

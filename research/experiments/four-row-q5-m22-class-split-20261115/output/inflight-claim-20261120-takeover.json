@@ -1,0 +1,22 @@
+{
+  "claim": "IN FLIGHT (TAKEOVER): (4,22,5) absence-capable class-split sweep",
+  "lane": "fast lane 2026-11-20 takeover",
+  "owner_session": "four-row-q5-m22-class-split-20261115 takeover 2026-11-20",
+  "previous_owner_last_push": "2026-11-15T17:55:53Z (README addendum; 5 records on record)",
+  "started": "2026-11-20T11:49:46Z",
+  "scope": {
+    "board": "4x22 q=5",
+    "cover": "9 canonical deficiency classes mod row-mirror V; singletons {0},{1} by exact count k in 0..3 x minpos p in 0..10; multi classes direct (krow-pin split for INDET); class-0/1 k3 buckets by complete disjoint x2 second-stone split (k-aware sat4)",
+    "instances": "previous 5 records kept; batchAB = 6 multi (c02,c03,c12,c012,c013,c0123) + k2 22 + k1 22 + k0 2; then k3 direct (c1k3p*, c0k3p3..p10) at CAP=900; x2 splits for resistant buckets (c0k3p0: b 1..20, c0k3p1: b 2..20, others as needed)",
+    "cap_s": 900,
+    "runner": "sequential resumable runner (records append-only, done-key skip, deterministic CNF md5 per instance)"
+  },
+  "calibration": {
+    "positive_control": "ctrl_4x20_c0k3p1 CNF md5 362034b210d89ed3a25d34072995f3a6 byte-exact; kissat 4.0.4 SAT 375415 conflicts bit-exact (19.4s)",
+    "solver": "kissat 4.0.4 official static linux-amd64, md5 3a5eba830aa6008a604fcc9bbe99a325",
+    "x2_encoder": "k-aware sat4 byte-identical to m21 sat4 on k=3 ((4,21,5) c0k3p0 --x2=1 md5 13749780ebd7467aca0a7b2e3ea7e163); k=2 --x2=21 generates only with k-aware version (completeness fix active)"
+  },
+  "expected_outcome": "all UNSAT => 4x22 witness-free => witness-free width set {21,22}, M_{4,5} = 21 or >= 24; any SAT => witness band extends to 22 and M in [23,140]",
+  "core_budget": "single kissat at a time (1.0 CPU cgroup)",
+  "note": "honest negatives recorded for INDET; c0k3p0/p1/p2 go straight to x2 splits (600s INDET already recorded on main)"
+}

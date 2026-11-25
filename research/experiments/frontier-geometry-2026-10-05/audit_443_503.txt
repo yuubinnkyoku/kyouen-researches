@@ -1,0 +1,24 @@
+# Independent audit for residue-parabola witnesses, p=443..503
+# columns: p, witness_size, congruence-filtered selected quadruples checked, zero determinants
+443 223 233624 0
+449 226 241539 0
+457 230 257082 0
+461 232 260639 0
+463 233 266699 0
+467 235 275012 0
+479 241 292756 0
+487 245 306731 0
+491 247 314925 0
+499 251 335903 0
+503 253 343450 0
+
+Method:
+- Decode witnesses_443_503.txt as bitsets (bit t selects (t,t^2 mod p)).
+- Assert witness_size=(p+3)/2.
+- By the proved necessary congruence for four selected parabola points, enumerate every
+  selected a<b<c<d with a+b+c+d == 0 (mod p).
+- For every such candidate, evaluate the integer 4x4 cocircularity determinant on
+  rows [x,y,x^2+y^2,1] using fraction-free Bareiss elimination.
+- zero determinants = 0 for every listed prime.
+
+This is a finite exhaustive audit of the saved witnesses, not a proof for all primes.

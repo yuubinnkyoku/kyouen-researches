@@ -1,0 +1,168 @@
+{
+  "board": "11x11",
+  "q": 12,
+  "scope": "113-stone return-to-layer backbone, floor111; NOT unrestricted reconfiguration distance",
+  "states": 60000,
+  "orbits_D4": 7574,
+  "edges_weight_2_moves": 643176,
+  "edges_weight_4_moves": 2952916,
+  "eccentricity_orbits_in_2_move_units": {
+    "10": 2,
+    "11": 3614,
+    "12": 3472,
+    "13": 480,
+    "14": 6
+  },
+  "eccentricity_positions_in_2_move_units": {
+    "10": 12,
+    "11": 28820,
+    "12": 27504,
+    "13": 3640,
+    "14": 24
+  },
+  "radius_in_single_stone_moves": 20,
+  "diameter_in_single_stone_moves": 28,
+  "center_representative_ordinal": 2345,
+  "center_deleted_points": [
+    31,
+    44,
+    45,
+    46,
+    74,
+    75,
+    76,
+    89
+  ],
+  "diameter_witness": {
+    "source_representative_ordinal": 758,
+    "source_deleted_points": [
+      13,
+      16,
+      19,
+      27,
+      47,
+      51,
+      66,
+      76
+    ],
+    "target_deleted_points": [
+      25,
+      29,
+      81,
+      83,
+      100,
+      104,
+      108,
+      115
+    ],
+    "shortest_backbone_moves": 28,
+    "path_deleted_points": [
+      [
+        13,
+        16,
+        19,
+        27,
+        47,
+        51,
+        66,
+        76
+      ],
+      [
+        4,
+        16,
+        19,
+        27,
+        47,
+        51,
+        66,
+        76
+      ],
+      [
+        4,
+        16,
+        19,
+        28,
+        47,
+        66,
+        74,
+        76
+      ],
+      [
+        4,
+        16,
+        28,
+        47,
+        66,
+        74,
+        107,
+        108
+      ],
+      [
+        4,
+        25,
+        28,
+        47,
+        74,
+        84,
+        107,
+        108
+      ],
+      [
+        4,
+        25,
+        28,
+        74,
+        81,
+        84,
+        107,
+        108
+      ],
+      [
+        25,
+        28,
+        74,
+        81,
+        84,
+        100,
+        108,
+        115
+      ],
+      [
+        25,
+        28,
+        56,
+        81,
+        83,
+        100,
+        108,
+        115
+      ],
+      [
+        25,
+        29,
+        81,
+        83,
+        100,
+        104,
+        108,
+        115
+      ]
+    ],
+    "path_segment_single_stone_moves": [
+      2,
+      4,
+      4,
+      4,
+      2,
+      4,
+      4,
+      4
+    ]
+  },
+  "sha256": {
+    "states.bin": "98d7644540886f26ed16b150b82c44a25c87ca16272094596700dfbd26178bb1",
+    "reps.bin": "7974ce400ccad8f7088422d5570d08024a4cbc0a18384b302b1262d0c1da0b36",
+    "graph.bin": "13a98cc92f226370094225463318a2aaa5008ffc7c224a5cdf1bcd8117f280d9"
+  },
+  "limitation": "An unrestricted floor111 path can stay below 113 for multiple consecutive exchanges, and may be shorter."
+}

@@ -1,0 +1,25 @@
+=== reproduction battery: 2026-11-21T14:52:16Z ===
+python3 Python 3.12.14
+--- run1: full (baseline from main run) ---
+gate g_bands PASS (0.00s)
+gate g_negctl PASS
+ALL GATES PASS; audit.json written; digest=cd7631a5c05221da42b5789f16db1f2e2d6dc6c22c5cbd83c0a73f67cecd5c70 (136.9s)
+--- run2: full, isolated cwd ---
+gate g_bands PASS (0.00s)
+gate g_negctl PASS
+ALL GATES PASS; audit.json written; digest=cd7631a5c05221da42b5789f16db1f2e2d6dc6c22c5cbd83c0a73f67cecd5c70 (136.3s)
+--- run3: PYTHONHASHSEED=random, fast ---
+gate g_negctl PASS
+ALL GATES PASS; audit.json written; digest=c253138f0168f461948a4b3971b807896427827fc33a52456c01d1cf1edcdf42 (5.4s)
+--- run4: tamper (negative control) ---
+tamper tamper_census REJECTED as required (0.01s)
+tamper tamper_witness REJECTED as required (0.00s)
+TAMPER MODE: all corruptions rejected; audit intentionally not written
+--- digest comparison ---
+--- digest comparison (content_digest, timings excluded by construction) ---
+  run1 full  : cd7631a5c05221da42b5789f16db1f2e2d6dc6c22c5cbd83c0a73f67cecd5c70
+  run2 full (isolated cwd) : cd7631a5c05221da42b5789f16db1f2e2d6dc6c22c5cbd83c0a73f67cecd5c70  == run1
+  run3 fast (PYTHONHASHSEED=random) : c253138f0168f461948a4b3971b807896427827fc33a52456c01d1cf1edcdf42  == earlier fast run
+  table_digest both full runs: 55f9df703da68ba2eb283d3b44ac7565d2e7eb84dabdc4bd08c77faaf766a7e4
+  tamper: rc=0, four corruptions rejected (tamper_table, tamper_bands, tamper_census, tamper_witness), no audit written
+  verifier sha256: see audit.json pins; script self-path research/experiments/four-row-q4-m35-witness-hunt-counting-20261121/scripts/verify_counting_wq4_20261121.py

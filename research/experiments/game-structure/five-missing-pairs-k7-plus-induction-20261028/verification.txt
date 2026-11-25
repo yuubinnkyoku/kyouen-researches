@@ -1,0 +1,34 @@
+2026-10-28: local complete enumeration and independent checks
+
+C++: c++ -std=c++17 -O3 -Wall -Wextra -pedantic verify_k6.cpp
+k=6, exactly 5 absent pair signatures:
+  15 isomorphism orbits, covering all C(15,5)=3003 labeled missing sets.
+  1024 positive-pair parity patterns * 729 leaf states per orbit.
+  Total 11,197,440 normalized representatives.
+  Missing-star orbit 01,02,03,04,05:
+    mismatches=241024, all with center leaf count zero.
+    center-leaf-positive mismatches=0 (497664 representatives).
+  Other 14 orbits: mismatches=0 (10,450,944 representatives).
+  Every orbit has actual Grundy distribution:
+    g0=11680 g1=11680 g2=361568 g3=361568 g>=4=0.
+  PASS all assertions.
+
+Python: python3 verify_independent.py
+  PASS k=5, exactly 5 missing pairs and all 5 private-leaf types positive:
+    6 isomorphism orbits, covering C(10,5)=252 labeled missing sets.
+    32 pair parity patterns * 32 positive-leaf parity patterns per orbit.
+    Total 6144 representatives, mismatches=0.
+  PASS named-vertex direct checks:
+    17-vertex counterexample k6 star, leaf at c1: actual=2, formula=3.
+    Add leaf at c0: actual=formula=2.
+    12 fixed-seed k6 and 12 fixed-seed k7 named-vertex samples
+    agree with separate quotient recursion; k7 samples agree with formula.
+
+Evidence boundary:
+  k6 11,197,440 exhaustive cases were not independently enumerated
+  by a second complete implementation.
+  The named-vertex samples are not themselves a proof.
+  Universal k>=7 statement uses exact parity/positivity reduction,
+  these finite bases, previously established <=4-missing results,
+  and the mathematical induction documented in README.md.
+  No integer-grid realizability or 11x11 outcome is implied.

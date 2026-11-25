@@ -1,0 +1,39 @@
+# reproduction log — four-row-q7-blocking-counting-self-contained-20261121
+# 検証機: verify_blocking_counting_20261121.py (23,986 bytes, sha256 ee5d88e200a5ae15dfc426354e9f550efac3a45d1243f921c5db4b1155a93147)
+# 監査正本: output/audit.json (9,266 bytes, sha256 4361837037034b632f79f2b6c9cef6f1ca3fc03a85d65e66b90acc810fefb277)
+
+## 実行環境
+- python3 (Debian 13 trixie / CPython, PATH /usr/local/bin/python3)
+- 入力: repo 内 four-row-q6-q7-frontier-20261121/output/records.jsonl
+  (実行時全体 sha256 b24ebe86b317e813d8499b0218b2712bd5d8c9a68eb32c6ba1bbbb882ef87d3c, 117 行)
+  + witnesses/s4x12q7_def.witness.json (sha256 c64a6e46b906f065658ede2ebd8c873a893f03b71de414e4ff8858a206aaabf5)
+  + witnesses/s4x13q7_capacity.witness.json (sha256 1da6a4b50e6b8b9e111adf4f0129339ad4c1d570a47a5971cad537d8550c545c)
+- 監査には records.jsonl 全体 sha を埋め込まない(q7 射影 pin のみ・append 不変設計)
+
+## battery (全て 2026-11-21T07:35-07:40Z の隔離された独立実行)
+- run0 (same cwd): rc=0, ALL 49 GATES PASS, audit_sha=4361837037034b632f79f2b6c9cef6f1ca3fc03a85d65e66b90acc810fefb277
+- run2 (same cwd, 2 回目): rc=0, audit sha 同上 (byte 一致)
+- run3 (same cwd, 3 回目): rc=0, audit sha 同上 (byte 一致)
+- B2 (隔離 copytree scratch + 隔離 HOME/TMPDIR + env -i + PYTHONHASHSEED=random): rc=0,
+  ALL 49 GATES PASS, audit byte-identical (cmp 完全一致)
+- 1 実行の実測時間 約 1.0 秒(49 gate・A stage の全 3 点組列挙を含む)
+
+## 負の制御 (fail-closed 実証)
+- P1: m=12 witness byte 400 XOR 0x20 を施した隔離コピーで実行 →
+  rc=1, stderr 末行 "GATE FAILED [g15_pin] witness sha256 pin (s4x12q7_def.witness.json) sha=6007ee0759867192e64063e28bb877158bfa4a92f96be15710e416db035ac412",
+  監査未書込(output/audit.json なし)
+- 探針位置選定注記: byte 400 は witness JSON 本文内(座標領域)で、
+  既知の tamper offset universe は対象ファイル自体が本実験入力の
+  s4x12q7_def.witness.json であり既知レーン(fold/証明書などの別ファイル
+  への @150,000 / @200,222 / @777,777 等)と無関係・非重複
+
+## 正の制御 (append 不変性)
+- P2: records.jsonl に無関係な control 行 1 行 ({"w":4,"m":999,"q":6,...}) を
+  追記した隔離コピーで実行 → rc=0, ALL 49 GATES PASS, 監査 byte-identical
+  (q7 射影 pin が append 不変であることの実証)
+
+## 備考
+- 初版機械の正準化は d2 の符号を揃えていなかったため、同一円が正準 tuple と
+  して二重登録され A2 gate が collisions=8,304 で fail した。符号正規化
+  (d2 < 0なら全係数反転)を加えて collisions=0 となった。これは実験事実として
+  記録する(出版前の機械修正・監査正本は修正後のもののみ)。

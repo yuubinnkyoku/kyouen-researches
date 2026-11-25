@@ -1,0 +1,6 @@
+Finite-field audit 2026-10-21
+Python: all primes 5..43, p consecutive rows: count=p for p=1 mod4; count=0 for p=3 mod4. Two independent residue formulations agree exactly.
+C++: independently enumerates (A,L) directly and agrees on all full-period counts and short-window counts.
+Short-window maxima for d unit: p=7:5, p=11:6, p=19:9, p=23:8, p=31:10.
+mod9: six unit classes d=1,2,4,5,7,8 each have 0/81 admissible (A,L) for 5 rows.
+This is a complete finite-residue audit, not an exhaustive search for integer circles. The universal theorem follows from the proof in the report.

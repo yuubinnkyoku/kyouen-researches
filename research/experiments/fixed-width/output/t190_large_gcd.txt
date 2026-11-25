@@ -1,0 +1,10 @@
+g=5: 38 candidate rows; mod19 <= 11*2=22 <25
+g=6: 32 candidate rows; mod19 <= 11*2=22 <25
+g=7: 28 candidate rows; mod19 <= 11*2=22 <25
+g=4, p=11: local=109, intersections=109
+g=4, p=19: local=305, intersections=0
+g=3, p=11: local=110, intersections=110
+g=3, p=19: local=342, intersections=3350
+g=3, p=23: local=506, intersections=0
+PASS: 25 double-hit rows in 0..189 imply row-difference gcd in {1,2}
+COROLLARY (assuming T(189)<=24): 25 rows in 0..189 imply gcd=1

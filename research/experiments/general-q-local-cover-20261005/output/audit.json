@@ -1,0 +1,692 @@
+{
+  "scope": "finite exact audit of universal inversion and Melchior proofs",
+  "small_board": {
+    "board": [
+      4,
+      3
+    ],
+    "subsets": 4096,
+    "primitive_curves": 101,
+    "original_circle_masks_match_inverted_lines_for_anchors": 12,
+    "q_audits": [
+      {
+        "q": 4,
+        "safe_states": 1199,
+        "empty_anchor_tests": 6660,
+        "occupied_anchor_tests": 0,
+        "maximum_empty_saturated_curves": 4,
+        "maximum_occupied_saturated_curves": 0
+      },
+      {
+        "q": 5,
+        "safe_states": 3308,
+        "empty_anchor_tests": 14652,
+        "occupied_anchor_tests": 15516,
+        "maximum_empty_saturated_curves": 2,
+        "maximum_occupied_saturated_curves": 8
+      },
+      {
+        "q": 6,
+        "safe_states": 3972,
+        "empty_anchor_tests": 11908,
+        "occupied_anchor_tests": 16724,
+        "maximum_empty_saturated_curves": 2,
+        "maximum_occupied_saturated_curves": 2
+      },
+      {
+        "q": 7,
+        "safe_states": 4096,
+        "empty_anchor_tests": 6744,
+        "occupied_anchor_tests": 12288,
+        "maximum_empty_saturated_curves": 0,
+        "maximum_occupied_saturated_curves": 2
+      },
+      {
+        "q": 8,
+        "safe_states": 4096,
+        "empty_anchor_tests": 2784,
+        "occupied_anchor_tests": 6744,
+        "maximum_empty_saturated_curves": 0,
+        "maximum_occupied_saturated_curves": 0
+      }
+    ]
+  },
+  "sharp_smallest_nontrivial_witnesses": [
+    {
+      "q": 4,
+      "occupied_anchor": false,
+      "points": [
+        [
+          0,
+          20
+        ],
+        [
+          10,
+          10
+        ],
+        [
+          8,
+          4
+        ],
+        [
+          0,
+          10
+        ]
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "rich_points": 3,
+      "saturated_curves": 1,
+      "bound": 1,
+      "scale": 20,
+      "primitive_saturated_circle": [
+        1,
+        0,
+        -20,
+        0
+      ]
+    },
+    {
+      "q": 5,
+      "occupied_anchor": false,
+      "points": [
+        [
+          0,
+          20
+        ],
+        [
+          10,
+          10
+        ],
+        [
+          8,
+          4
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          0,
+          10
+        ]
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "rich_points": 4,
+      "saturated_curves": 1,
+      "bound": 1,
+      "scale": 20,
+      "primitive_saturated_circle": [
+        1,
+        0,
+        -20,
+        0
+      ]
+    },
+    {
+      "q": 6,
+      "occupied_anchor": false,
+      "points": [
+        [
+          0,
+          340
+        ],
+        [
+          170,
+          170
+        ],
+        [
+          136,
+          68
+        ],
+        [
+          102,
+          34
+        ],
+        [
+          80,
+          20
+        ],
+        [
+          0,
+          170
+        ]
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "rich_points": 5,
+      "saturated_curves": 1,
+      "bound": 1,
+      "scale": 340,
+      "primitive_saturated_circle": [
+        1,
+        0,
+        -340,
+        0
+      ]
+    },
+    {
+      "q": 7,
+      "occupied_anchor": false,
+      "points": [
+        [
+          0,
+          4420
+        ],
+        [
+          2210,
+          2210
+        ],
+        [
+          1768,
+          884
+        ],
+        [
+          1326,
+          442
+        ],
+        [
+          1040,
+          260
+        ],
+        [
+          850,
+          170
+        ],
+        [
+          0,
+          2210
+        ]
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "rich_points": 6,
+      "saturated_curves": 1,
+      "bound": 1,
+      "scale": 4420,
+      "primitive_saturated_circle": [
+        1,
+        0,
+        -4420,
+        0
+      ]
+    },
+    {
+      "q": 8,
+      "occupied_anchor": false,
+      "points": [
+        [
+          0,
+          163540
+        ],
+        [
+          81770,
+          81770
+        ],
+        [
+          65416,
+          32708
+        ],
+        [
+          49062,
+          16354
+        ],
+        [
+          38480,
+          9620
+        ],
+        [
+          31450,
+          6290
+        ],
+        [
+          26520,
+          4420
+        ],
+        [
+          0,
+          81770
+        ]
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "rich_points": 7,
+      "saturated_curves": 1,
+      "bound": 1,
+      "scale": 163540,
+      "primitive_saturated_circle": [
+        1,
+        0,
+        -163540,
+        0
+      ]
+    },
+    {
+      "q": 9,
+      "occupied_anchor": false,
+      "points": [
+        [
+          0,
+          817700
+        ],
+        [
+          408850,
+          408850
+        ],
+        [
+          327080,
+          163540
+        ],
+        [
+          245310,
+          81770
+        ],
+        [
+          192400,
+          48100
+        ],
+        [
+          157250,
+          31450
+        ],
+        [
+          132600,
+          22100
+        ],
+        [
+          114478,
+          16354
+        ],
+        [
+          0,
+          408850
+        ]
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "rich_points": 8,
+      "saturated_curves": 1,
+      "bound": 1,
+      "scale": 817700,
+      "primitive_saturated_circle": [
+        1,
+        0,
+        -817700,
+        0
+      ]
+    },
+    {
+      "q": 10,
+      "occupied_anchor": false,
+      "points": [
+        [
+          0,
+          817700
+        ],
+        [
+          408850,
+          408850
+        ],
+        [
+          327080,
+          163540
+        ],
+        [
+          245310,
+          81770
+        ],
+        [
+          192400,
+          48100
+        ],
+        [
+          157250,
+          31450
+        ],
+        [
+          132600,
+          22100
+        ],
+        [
+          114478,
+          16354
+        ],
+        [
+          100640,
+          12580
+        ],
+        [
+          0,
+          408850
+        ]
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "rich_points": 9,
+      "saturated_curves": 1,
+      "bound": 1,
+      "scale": 817700,
+      "primitive_saturated_circle": [
+        1,
+        0,
+        -817700,
+        0
+      ]
+    },
+    {
+      "q": 5,
+      "occupied_anchor": true,
+      "points": [
+        [
+          0,
+          20
+        ],
+        [
+          10,
+          10
+        ],
+        [
+          8,
+          4
+        ],
+        [
+          0,
+          10
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "rich_points": 3,
+      "saturated_curves": 1,
+      "bound": 1,
+      "scale": 20,
+      "primitive_saturated_circle": [
+        1,
+        0,
+        -20,
+        0
+      ]
+    },
+    {
+      "q": 6,
+      "occupied_anchor": true,
+      "points": [
+        [
+          0,
+          20
+        ],
+        [
+          10,
+          10
+        ],
+        [
+          8,
+          4
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          0,
+          10
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "rich_points": 4,
+      "saturated_curves": 1,
+      "bound": 1,
+      "scale": 20,
+      "primitive_saturated_circle": [
+        1,
+        0,
+        -20,
+        0
+      ]
+    },
+    {
+      "q": 7,
+      "occupied_anchor": true,
+      "points": [
+        [
+          0,
+          340
+        ],
+        [
+          170,
+          170
+        ],
+        [
+          136,
+          68
+        ],
+        [
+          102,
+          34
+        ],
+        [
+          80,
+          20
+        ],
+        [
+          0,
+          170
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "rich_points": 5,
+      "saturated_curves": 1,
+      "bound": 1,
+      "scale": 340,
+      "primitive_saturated_circle": [
+        1,
+        0,
+        -340,
+        0
+      ]
+    },
+    {
+      "q": 8,
+      "occupied_anchor": true,
+      "points": [
+        [
+          0,
+          4420
+        ],
+        [
+          2210,
+          2210
+        ],
+        [
+          1768,
+          884
+        ],
+        [
+          1326,
+          442
+        ],
+        [
+          1040,
+          260
+        ],
+        [
+          850,
+          170
+        ],
+        [
+          0,
+          2210
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "rich_points": 6,
+      "saturated_curves": 1,
+      "bound": 1,
+      "scale": 4420,
+      "primitive_saturated_circle": [
+        1,
+        0,
+        -4420,
+        0
+      ]
+    },
+    {
+      "q": 9,
+      "occupied_anchor": true,
+      "points": [
+        [
+          0,
+          163540
+        ],
+        [
+          81770,
+          81770
+        ],
+        [
+          65416,
+          32708
+        ],
+        [
+          49062,
+          16354
+        ],
+        [
+          38480,
+          9620
+        ],
+        [
+          31450,
+          6290
+        ],
+        [
+          26520,
+          4420
+        ],
+        [
+          0,
+          81770
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "rich_points": 7,
+      "saturated_curves": 1,
+      "bound": 1,
+      "scale": 163540,
+      "primitive_saturated_circle": [
+        1,
+        0,
+        -163540,
+        0
+      ]
+    },
+    {
+      "q": 10,
+      "occupied_anchor": true,
+      "points": [
+        [
+          0,
+          817700
+        ],
+        [
+          408850,
+          408850
+        ],
+        [
+          327080,
+          163540
+        ],
+        [
+          245310,
+          81770
+        ],
+        [
+          192400,
+          48100
+        ],
+        [
+          157250,
+          31450
+        ],
+        [
+          132600,
+          22100
+        ],
+        [
+          114478,
+          16354
+        ],
+        [
+          0,
+          408850
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "rich_points": 8,
+      "saturated_curves": 1,
+      "bound": 1,
+      "scale": 817700,
+      "primitive_saturated_circle": [
+        1,
+        0,
+        -817700,
+        0
+      ]
+    }
+  ]
+}

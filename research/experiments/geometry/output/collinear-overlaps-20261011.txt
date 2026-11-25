@@ -1,0 +1,33 @@
+OK (2, 2) 3 H 0 overlaps {2: 0}
+OK (2, 2) 4 H 0 overlaps {2: 0, 3: 0}
+OK (2, 2) 5 H 0 overlaps {2: 0, 3: 0, 4: 0}
+OK (3, 3) 3 H 8 overlaps {2: 0}
+OK (3, 3) 4 H 0 overlaps {2: 0, 3: 0}
+OK (3, 3) 5 H 0 overlaps {2: 0, 3: 0, 4: 0}
+OK (4, 4) 3 H 44 overlaps {2: 60}
+OK (4, 4) 4 H 10 overlaps {2: 0, 3: 0}
+OK (4, 4) 5 H 0 overlaps {2: 0, 3: 0, 4: 0}
+OK (5, 5) 3 H 152 overlaps {2: 384}
+OK (5, 5) 4 H 64 overlaps {2: 0, 3: 120}
+OK (5, 5) 5 H 12 overlaps {2: 0, 3: 0, 4: 0}
+OK (6, 6) 3 H 372 overlaps {2: 1404}
+OK (6, 6) 4 H 234 overlaps {2: 630, 3: 880}
+OK (6, 6) 5 H 88 overlaps {2: 0, 3: 0, 4: 210}
+OK (7, 7) 3 H 824 overlaps {2: 3960}
+OK (7, 7) 4 H 660 overlaps {2: 5220, 3: 3640}
+OK (7, 7) 5 H 364 overlaps {2: 0, 3: 1680, 4: 1740}
+OK (2, 3, 4) 3 H 40 overlaps {2: 36}
+OK (2, 3, 4) 4 H 6 overlaps {2: 0, 3: 0}
+OK (3, 3, 3) 3 H 49 overlaps {2: 0}
+OK (3, 3, 3) 4 H 0 overlaps {2: 0, 3: 0}
+ALL 22 cases matched
+11x11 3 (6992, {2: 62568})
+11x11 4 (10428, {2: 559440, 3: 131160})
+11x11 5 (13116, {2: 1170400, 3: 900900, 4: 186480})
+11x11 8 (4180, {2: 0, 3: 0, 4: 0, 5: 110880, 6: 168840, 7: 49104})
+11x11 independent line histogram OK {2: 2668, 3: 396, 4: 124, 5: 40, 6: 28, 7: 4, 8: 4, 9: 4, 10: 4, 11: 24}
+minor audit OK (4, 4) 3
+minor audit OK (4, 4) 4
+minor audit OK (5, 5) 4
+minor audit OK (6, 6) 4
+minor audit OK (2, 3, 4) 3

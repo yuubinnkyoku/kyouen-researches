@@ -1,0 +1,56 @@
+{
+  "claim": "On (4,22,5), the three class-{0} krow-0:3 buckets minpos=0/1/2 (c0k3p0/p1/p2) — each a 600s direct-INDET honest negative on record — are UNSAT, decided by the complete disjoint second-stone x2 case split of the k-aware sat4 encoder; combined with the 65 directly-decided UNSAT instances (7 multi + k0 2 + k1 22 + k2 22 + c1k3 11 + c0k3p3..p10 8... reduced: every one of the 9 canonical deficiency classes is UNSAT), no row-deficient maximal safe configuration exists on the 4x22 grid.",
+  "split_protocol": {
+    "definition": "x2=B pins the 2nd-leftmost stone of deficient row 0 at column B: cells (0,p+1..B-1) = false (units), cell (0,B) = true (unit), on top of class{0} --krow=0:3 --minpos=p",
+    "ranges": {
+      "c0k3p0": "B in 1..20 (a=0 pinned at minpos=0; m-2=20 since the 3rd stone c>B must fit on width 22)",
+      "c0k3p1": "B in 2..20 (a=1)",
+      "c0k3p2": "B in 3..20 (a=2)"
+    },
+    "completeness": "exhaustive and disjoint case analysis on the 2nd stone column; identical protocol to the 4x21 lane (K0857), with the k-aware B<=m-1-extension not applicable (k=3 keeps B<=m-2)",
+    "supersedes": "the three 600s-cap direct-INDET records of 2026-11-15 (kept in records.jsonl as honest negatives; cap-reach is not bit-exact and is not a nonexistence claim by itself)"
+  },
+  "buckets": {
+    "c0k3p0": {"sub_buckets": 20, "range": "b1..b20", "unsat": 20, "sat": 0, "indet": 0, "conflicts_sum": 14914910, "hardest": {"key": "c0k3p0x2b1", "conflicts": 2196989, "sec_wallclock": 115, "cap_s": 900}},
+    "c0k3p1": {"sub_buckets": 19, "range": "b2..b20", "unsat": 19, "sat": 0, "indet": 0, "conflicts_sum": 11831256, "hardest": {"key": "c0k3p1x2b2", "conflicts": 1310589, "sec_wallclock": 67, "cap_s": 900}},
+    "c0k3p2": {"sub_buckets": 18, "range": "b3..b20", "unsat": 18, "sat": 0, "indet": 0, "conflicts_sum": 9750138, "hardest_by_conflicts": {"key": "c0k3p2x2b4", "conflicts": 906219, "sec_wallclock": 47, "cap_s": 900}}
+  },
+  "x2_total": {"buckets": 57, "unsat": 57, "sat": 0, "indet": 0, "conflicts_total": 36496304},
+  "batchD_direct": {"instances": "c0k3p3..p10 (class {0}, --krow=0:3, direct sat3.js at cap 900s)", "unsat": 8, "hardest": {"key": "c0k3p3", "conflicts": 5162737, "sec_wallclock": 415}},
+  "cnf_regen_md5_checks": [
+    {"key": "c0k3p0x2b7", "recorded_md5": "317e8914ddc5177d088371ff7f3d9511", "regenerated_md5": "317e8914ddc5177d088371ff7f3d9511", "match": true},
+    {"key": "c0k3p1x2b13", "recorded_md5": "ec9e3198a8cefff3e26bffc53e386c55", "regenerated_md5": "ec9e3198a8cefff3e26bffc53e386c55", "match": true},
+    {"key": "c0k3p2x2b10", "recorded_md5": "6c76bf56de3a0336fcbf81dd1521fdfc", "regenerated_md5": "6c76bf56de3a0336fcbf81dd1521fdfc", "match": true},
+    {"key": "c0k3p0x2b12", "recorded_md5": "89a1e9632d0441d81a22b30bf424bfab", "regenerated_md5": "89a1e9632d0441d81a22b30bf424bfab", "match": true}
+  ],
+  "sample_bitexact_reruns": [
+    {"key": "c0k3p0x2b1", "record": {"result": "UNSAT", "conflicts": 2196989}, "rerun": {"result": "UNSAT", "conflicts": 2196989}, "bitexact": true},
+    {"key": "c0k3p1x2b2", "record": {"result": "UNSAT", "conflicts": 1310589}, "rerun": {"result": "UNSAT", "conflicts": 1310589}, "bitexact": true},
+    {"key": "c0k3p2x2b3", "record": {"result": "UNSAT", "conflicts": 866392}, "rerun": {"result": "UNSAT", "conflicts": 866392}, "bitexact": true}
+  ],
+  "environment_reset_crossing_reproductions": {
+    "incident": "2026-11-21T07:53Z hard execution-environment reset (sandbox wiped incl. the unpublished c0k3p0 b1..b20 / c0k3p1 b2..b11 ledger lines; repo base at HEAD 497f4e17 intact)",
+    "rebuilt_from": "pinned repo artifacts (kissat 4.0.4 md5 3a5eba830aa6008a604fcc9bbe99a325, scripts raw-pinned, records.jsonl fetched back from main and md5-verified f025b0a8->(76 rows))",
+    "pre_reset_observed_conflicts": {"c0k3p0x2b1": 2196989, "c0k3p0x2b4": 870895, "c0k3p0x2b5": 826926, "c0k3p0x2b6": 998167, "c0k3p0x2b7": 1037562, "c0k3p0x2b8": 839299, "c0k3p0x2b18": 288320, "c0k3p0x2b19": 178341, "c0k3p0x2b20": 134020, "c0k3p1x2b2": 1310589, "c0k3p1x2b8": 690728, "c0k3p1x2b9": 629565, "c0k3p1x2b10": 701470, "c0k3p1x2b11": 538122},
+    "post_reset_rerun": "15/15 of the observed subset reproduced bit-exact; the remaining lost instances were re-run and recorded in the post-reset environment (all 57 final records are post-reset)",
+    "calibration_pre_reset": {"ctrl_4x20_c0k3p1": {"cnf_md5": "362034b210d89ed3a25d34072995f3a6", "result": "SAT", "conflicts": 375415}, "c1k3p3_cnf_regen_md5": "25bccf63818429f81cc84eccd172c5ad", "c1k3p10_rerun": {"result": "UNSAT", "conflicts": 1146769}, "sat4_old_vs_kaware_4x21_c0k3p0_x2_1_md5": "13749780ebd7467aca0a7b2e3ea7e163"},
+    "calibration_post_reset": {"ctrl_4x20_c0k3p1_cnf_md5": "362034b210d89ed3a25d34072995f3a6"}
+  },
+  "ledger": {
+    "records_lines": 133,
+    "final_file_bytes": 31123,
+    "final_md5": "c24fd8b7d125c77a906f2365c026a89b",
+    "composition": {"positive_control_SAT": 1, "direct_INDET_honest_negatives_superseded": 3, "decided_UNSAT": 129, "total": 133},
+    "unsat_breakdown": {"multi_direct": 7, "k0": 2, "k1": 22, "k2": 22, "k3_c1_direct": 11, "k3_c0_direct_p3_p10": 8, "k3_c0_x2_splits": 57, "sum": 129},
+    "append_only_increment_pushes": [
+      {"commit": "497f4e17", "rows": "68->76", "content": "batchD c0k3p3..p10 direct UNSAT"},
+      {"commit": "433215df", "rows": "76->88", "content": "c0k3p0 x2 b1..b12 UNSAT"},
+      {"commit": "dddf26bd", "rows": "88->112", "content": "c0k3p0 x2 b13..b20 + c0k3p1 x2 b2..b17 UNSAT"},
+      {"commit": "02517132", "rows": "112->133", "content": "c0k3p1 x2 b18..b20 + c0k3p2 x2 b3..b20 UNSAT (final)"}
+    ]
+  },
+  "solver": "kissat 4.0.4 official static linux-amd64, md5 3a5eba830aa6008a604fcc9bbe99a325, deterministic per CNF; wall-clock caps are not bit-exact at the cut point, decided runs are",
+  "scope_and_limits": "finite machine verification up to the correctness of the K0810 census core, the sat3/sat4 encodings (class/krow/minpos/x2 as pinned in the repo), and kissat 4.0.4; 4x22 q=5 only. Persistence at m>=23 remains open: exact M_{4,5} needs witness-free verification for all widths up to U=140 or a universal tail argument. The 11x11 empty board and its two-stone roots are unaffected and remain as recorded (UNKNOWN).",
+  "generated": "2026-11-21T08:30Z",
+  "lane": "fast lane batchD/batchE resumption takeover (single-owner declaration f0b1fbad of 2026-11-21)"
+}

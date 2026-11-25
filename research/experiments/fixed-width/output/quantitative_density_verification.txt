@@ -1,0 +1,16 @@
+p=3: PASS all 9 coefficient choices
+p=7: PASS all 49 coefficient choices
+p=11: PASS all 121 coefficient choices
+p=19: PASS all 361 coefficient choices
+p=23: PASS all 529 coefficient choices
+p=31: PASS all 961 coefficient choices
+p=43: PASS all 1849 coefficient choices
+p=47: PASS all 2209 coefficient choices
+p=59: PASS all 3481 coefficient choices
+p=67: PASS all 4489 coefficient choices
+p=71: PASS all 5041 coefficient choices
+CRT(0,1): 385/1463 <= 385: PASS
+CRT(4,9): 385/1463 <= 385: PASS
+CRT(19,97): 280/1463 <= 385: PASS
+CRT(25,0): 1/1463 <= 385: PASS
+PASS 19099 local conditions, 4 CRT checks

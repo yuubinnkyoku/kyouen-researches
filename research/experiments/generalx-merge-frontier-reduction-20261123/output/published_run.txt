@@ -1,0 +1,89 @@
+execution environment reset + full rebuild (2026-11-23)
+
+[1] Informal preflight (before the single-owner declaration was published):
+    - exploration of merge law z>=S+1 (two-token, y<=12 raw + DP), boundary
+      row z=S profiles, R* formula fit, F+- derivation from the mex table,
+      GX-M on 3/4-token samples, low-R reduction samples. Predicted counts
+      recorded in the declaration were machine-computed here.
+
+[2] Engine cross-validation during development:
+    - DP column engine vs published raw H_canonical: (6,4) 14,760 cells,
+      (9,7) 49,419 cells, (12,12) 148,230 cells, all bad 0 (pre-reset run).
+    - published bytes re-fetched after the reset (see [6]); blocks identical
+      by SHA-256.
+
+[3] Official run 1 (pre-reset, published-tree cwd):
+    python3 audit_frontier.py --out output/audit.json
+    => overall_bad = 0, wall 3m6.8s, audit.json SHA-256
+       206ab3ac51e481e5761aba5c65a9cba0fd65a4003c8cd42782e38497bc14a69b
+
+[4] Official run 2 (pre-reset, isolated tree /tmp/iso, PYTHONHASHSEED=random):
+    => overall_bad = 0, wall ~3m05s, audit.json byte-identical to run 1
+       (cmp PASS, same SHA-256 206ab3ac...).
+
+[5] Tamper battery (each variant single run, must print TAMPER-DETECTED rc=1):
+    T1 single_token_val flip (S=7,R=1 -> 0), components M2D,G3 : bad=24  rc=1
+    T2 R* shift (+1),                    components M2D    : bad=778 rc=1
+    T3 F zero-clause rewrite,            components M2D    : bad=7515 rc=1
+    T4 DP engine bit flip,               components CX     : bad=6   rc=1
+    T5 single_token R off-by-one,        components L4,XB  : bad=14126 rc=1
+    T6 GX single-side sigma-1,           components G3     : bad=3164 rc=1
+    All 6 detected. Honest incident caught by the battery: the first draft
+    of comp_m2d returned no top-level "bad", so T2/T3 initially reported
+    TAMPER-MISSED while the component sub-counters showed the violation.
+    Fixed (top-level bad = sum of sub-bads) before any run was published;
+    the clean runs are unaffected (all sub-bads are 0 either way), and the
+    battery then passed 6/6. Recorded as the battery catching a detector
+    bug pre-publication.
+
+[6] Sandbox full reset during the tamper battery:
+    - a 300s bash call bundling two heavy tamper runs timed out and the
+      environment was reset; all working files were lost (kr-mirror wiped,
+      /tmp wiped). Rebuild procedure, mirroring the published y=20 fit
+      lane's honest reset record:
+      a. re-fetched verify_y18_universal.py (published bytes,
+         SHA-256 8ddd0c2f24213e658705a403ede55d185aab59e7b7d47bd68679d9b3b0b6072a,
+         byte-verified)
+      b. re-extracted the three transcription blocks (SHA-256 identical to
+         pre-reset: engine e5abe053..., cand17 44f1ce4e..., cand18 caf13e80...)
+      c. re-emitted audit_frontier.py from the sources
+      d. re-ran the OFFICIAL audit from scratch (run 3): overall_bad = 0,
+         wall 3m57.4s, output/audit.json SHA-256
+         206ab3ac51e481e5761aba5c65a9cba0fd65a4003c8cd42782e38497bc14a69b
+         BYTE-IDENTICAL to runs 1 and 2 (cmp across the environment reset
+         PASS). The published numbers all come from this post-reset
+         authoritative regeneration; the byte-equality across the reset is
+         recorded as additional determinism evidence.
+      e. re-ran the tamper battery post-reset, one variant per call:
+         T4 bad=6, T5 bad=14126, T6 bad=3164, T1 bad=24, T2 bad=778,
+         T3 bad=7155/7515 (post-reset value 7515), all rc=1.
+    - note: T3's post-reset recorded value is bad=7515.
+
+[7] Block transcription check (post-reset):
+    python3 scripts/check_blocks.py => ENGINE OK, CAND17 OK, CAND18 OK, PASS.
+
+[8] Published authoritative bytes (this experiment dir):
+    - audit_frontier.py SHA-256
+      6c275bfe3621eca48b53a43beb41850ec9f3b3b132c501fc779f3dd0ede88c28
+      (31,761 bytes)
+    - output/audit.json SHA-256
+      206ab3ac51e481e5761aba5c65a9cba0fd65a4003c8cd42782e38497bc14a69b
+      (overall_bad 0; component counts:
+        CX 5,567,472 cells + 1,137 ordered/canonical spot, bad 0
+        XB 13,784, bad 0
+        M2 12 fresh families, 9,096 three-way checks, bad 0
+        M2D merge 63,180 / bsl1 21,060 / bsl2 10,140 / rstop 390 /
+             window 390 / F 29,640, all bad 0
+        G3 96 families, 5,080, bad 0
+        G4 65 families, 1,237, bad 0
+        L4 57 families, 5,984, bad 0
+        E5 9,266 cells (17,308 checks incl. F), bad 0
+        C8 27 cases, bad 0
+      total comparison points 5,737,883)
+
+[9] Honest smoke-test record (pre-publication):
+    - the first draft of the C8 predicate used "t=0: equal iff b==s"; the
+      smoke run flagged 2 mismatching cases ((0,1,2),(0,2,1)); corrected to
+      the true rule "t=0: equal iff [b==0]==[s==0]" (both give mex=1 when
+      b in {1,2}; mex({0,1^b}) is 2 iff b==0). The false draft was never
+      published; the FR-X derivation of F+- used the correct rule.

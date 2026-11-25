@@ -1,0 +1,21 @@
+generic_off u,v,a,b= (3, 1, 1, 1) {'circles': 0, 'safe': 32768, 'root': 1, 'max_g': 1, 'maximal': {15: 1}, 'g_counts': {0: 16384, 1: 16384}, 'pairwise_intersections': []}
+  repeated sums= {0: [(0, 4), (1, 3)]}
+  edges= []
+generic_one u,v,a,b= (3, 1, 1, 7) {'circles': 1, 'safe': 32256, 'root': 0, 'max_g': 1, 'maximal': {14: 6}, 'g_counts': {0: 16128, 1: 16128}, 'pairwise_intersections': []}
+  repeated sums= {0: [(0, 4), (1, 3)]}
+  edges= [[(1, 0), (3, 0), (0, 1), (4, 1), (0, 2), (4, 2)]]
+generic_two u,v,a,b= (3, 1, 2, 2) {'circles': 2, 'safe': 31776, 'root': 1, 'max_g': 3, 'maximal': {13: 16, 14: 2}, 'g_counts': {0: 11024, 1: 11024, 2: 4864, 3: 4864}, 'pairwise_intersections': [2]}
+  repeated sums= {0: [(0, 4), (1, 3)]}
+  edges= [[(0, 0), (4, 0), (0, 1), (4, 1), (1, 2), (3, 2)], [(1, 0), (3, 0), (0, 1), (4, 1), (0, 2), (4, 2)]]
+exceptional_four u,v,a,b= (2, 1, 1, 1) {'circles': 4, 'safe': 30866, 'root': 1, 'max_g': 5, 'maximal': {11: 1, 12: 58, 13: 9}, 'g_counts': {0: 9749, 1: 9749, 2: 5412, 3: 5412, 4: 272, 5: 272}, 'pairwise_intersections': [1, 1, 2, 2, 2, 2]}
+  repeated sums= {-1: [(0, 3), (1, 2)], 0: [(0, 4), (1, 3)], 1: [(1, 4), (2, 3)]}
+  edges= [[(0, 0), (3, 0), (0, 1), (3, 1), (1, 2), (2, 2)], [(1, 0), (2, 0), (0, 1), (3, 1), (0, 2), (3, 2)], [(1, 0), (4, 0), (1, 1), (4, 1), (2, 2), (3, 2)], [(2, 0), (3, 0), (1, 1), (4, 1), (1, 2), (4, 2)]]
+generic_ratio_3_2 u,v,a,b= (3, 2, 1, 4) {'circles': 1, 'safe': 32256, 'root': 0, 'max_g': 1, 'maximal': {14: 6}, 'g_counts': {0: 16128, 1: 16128}, 'pairwise_intersections': []}
+  repeated sums= {0: [(0, 4), (1, 3)]}
+  edges= [[(1, 0), (3, 0), (0, 1), (4, 1), (0, 2), (4, 2)]]
+PASS generic_off circles=0 safe=32768 root=1 maxg=1
+PASS generic_one circles=1 safe=32256 root=0 maxg=1
+PASS generic_two circles=2 safe=31776 root=1 maxg=3
+PASS exceptional_four circles=4 safe=30866 root=1 maxg=5
+PASS generic_ratio_3_2 circles=1 safe=32256 root=0 maxg=1
+PASS all 5 independent determinant/game cases

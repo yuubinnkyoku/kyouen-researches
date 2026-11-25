@@ -1,0 +1,8 @@
+odd residue pairs checked: 863
+H,Bmax= 500 100 counts= {'passed_previous_necessary_conditions': 221, 'odd_B': 35, 'remaining_after_mod64': 199, 'excluded_by_new_mod64': 22}
+newly excluded examples: [(63, 5, 3944, 416), (63, 11, 3848, 320), (99, 17, 9512, 800), (135, 13, 18056, 1856), (135, 29, 17384, 1184), (171, 7, 29192, 3200), (171, 23, 28712, 2720), (207, 5, 42824, 4736), (207, 37, 41480, 3392), (243, 49, 56648, 4160)]
+H,Bmax= 1000 200 counts= {'passed_previous_necessary_conditions': 735, 'odd_B': 99, 'remaining_after_mod64': 675, 'excluded_by_new_mod64': 60}
+newly excluded examples: [(63, 5, 3944, 416), (63, 11, 3848, 320), (99, 17, 9512, 800), (135, 13, 18056, 1856), (135, 29, 17384, 1184), (171, 7, 29192, 3200), (171, 23, 28712, 2720), (207, 5, 42824, 4736), (207, 37, 41480, 3392), (243, 49, 56648, 4160)]
+known circles: 5 PASS
+counterexample A/B=63/5: norm-8 equation impossible modulo 64
+PASS: finite modular audits only

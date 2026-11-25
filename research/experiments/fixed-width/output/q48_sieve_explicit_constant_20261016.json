@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "script": "research/experiments/fixed-width/scripts/q48_sieve_dimension2_20261015.py",
+      "stdout": "{\n  \"status\": \"PASS\",\n  \"finite_audits\": [\n    {\n      \"H\": 80,\n      \"Q\": 8,\n      \"primitive_candidates\": 653,\n      \"survivors_mod_primes_at_most_Q\": 327,\n      \"G_Q\": \"7/3\",\n      \"max_sieve_ratio\": 0.55555556\n    },\n    {\n      \"H\": 160,\n      \"Q\": 12,\n      \"primitive_candidates\": 2603,\n      \"survivors_mod_primes_at_most_Q\": 859,\n      \"G_Q\": \"61/21\",\n      \"max_sieve_ratio\": 0.52725564\n    },\n    {\n      \"H\": 320,\n      \"Q\": 17,\n      \"primitive_candidates\": 10407,\n      \"survivors_mod_primes_at_most_Q\": 3456,\n      \"G_Q\": \"61/21\",\n      \"max_sieve_ratio\": 0.52638987\n    },\n    {\n      \"H\": 640,\n      \"Q\": 25,\n      \"primitive_candidates\": 41513,\n      \"survivors_mod_primes_at_most_Q\": 9294,\n      \"G_Q\": \"2249/665\",\n      \"max_sieve_ratio\": 0.48811594\n    }\n  ],\n  \"scope\": \"finite checks only; analytic large sieve and asymptotic require proofs\"\n}\n"
+    },
+    {
+      "script": "research/experiments/fixed-width/scripts/q48_sieve_constant_independent_20261016.py",
+      "stdout": "{\"z\": 100, \"G_fraction\": \"13988430058511/2921876132175\", \"G_float\": 4.787482229131399}\n{\"z\": 200, \"G_fraction\": \"68477197937631002933397/11933374500024289016705\", \"G_float\": 5.73829288081855}\n{\"z\": 500, \"G_fraction\": \"32008972753888192286541871683159199879044081733812130362740699207/4418247782493627654618444906196503598873291204693617254573119875\", \"G_float\": 7.244721059039961}\n{\"z\": 1000, \"G_fraction\": \"48414730729528619908318943651620487115925126947605350499748609679932442551395580404527274895054690415971461011/5913064497779670931888491721579796345509632086261428386919989885756120352790552290241419119781385779247500875\", \"G_float\": 8.187756238361366}\n{\"z\": 2000, \"G_fraction\": \"31268312992897065479182202016345620929647761079901975811031930012563283380062338740660903723660739223768983375297858841684087593297482309328223791962966211966202694389667763889702493414064995404159/3299653271013206945424719885898685978373598611822513398532476200613089637621942025512226269182949115508218141953037588825415252076847090526665539682300216304776898109748970680319325907567366064375\", \"G_float\": 9.476242024452366}\nPASS: 2000 exact rational weights, five partial sums; direct trial factorization vs independent DP\n"
+    },
+    {
+      "script": "research/experiments/fixed-width/scripts/q48_sieve_constant_audit_20261016.py",
+      "stdout": "{\n  \"N\": 1000000,\n  \"primes_3mod4_at_least7\": 39321,\n  \"constant_truncated_at_N\": 0.0783106722409805,\n  \"samples\": [\n    {\n      \"z\": 1000,\n      \"G\": 8.187756238361366,\n      \"G/log(z)^2\": 0.17158962209275178\n    },\n    {\n      \"z\": 10000,\n      \"G\": 12.484314574764081,\n      \"G/log(z)^2\": 0.1471679848733174\n    },\n    {\n      \"z\": 100000,\n      \"G\": 17.547522653510327,\n      \"G/log(z)^2\": 0.13238672104113286\n    },\n    {\n      \"z\": 1000000,\n      \"G\": 23.47584290354681,\n      \"G/log(z)^2\": 0.12299496024488939\n    }\n  ]\n}\n"
+    },
+    {
+      "script": "research/experiments/fixed-width/scripts/q48_sieve_interval_audit_20261016.py",
+      "stdout": "{\n  \"status\": \"PASS\",\n  \"interval_large_sieve\": [\n    {\n      \"H\": 80,\n      \"z\": 8,\n      \"denominators_with_A_above_gap\": 19,\n      \"local_survivors_in_gap_region\": 360\n    },\n    {\n      \"H\": 160,\n      \"z\": 12,\n      \"denominators_with_A_above_gap\": 38,\n      \"local_survivors_in_gap_region\": 980\n    },\n    {\n      \"H\": 320,\n      \"z\": 17,\n      \"denominators_with_A_above_gap\": 76,\n      \"local_survivors_in_gap_region\": 4040\n    },\n    {\n      \"H\": 640,\n      \"z\": 25,\n      \"denominators_with_A_above_gap\": 153,\n      \"local_survivors_in_gap_region\": 10933\n    }\n  ]\n}\n"
+    }
+  ],
+  "analytic_constant": {
+    "E_product_truncated_at_1000000": 1.5457907108036868,
+    "F_product_truncated_at_1000000": 1.3038608641593867,
+    "limsup_constant_truncated": 7.963499935841362,
+    "rigorous_statement": "4*pi*pi*F/(sqrt(9+6sqrt(2))*E)"
+  }
+}

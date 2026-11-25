@@ -1,0 +1,23 @@
+{
+  "claim": "IN FLIGHT",
+  "subject": "(4,21,5) sweepp0x2.sh resume - c0k3p1 b8..b19 then c0k3p0 b1..b19 (31 remaining buckets, cap 900s each)",
+  "date": "2026-11-15T16:29:00Z",
+  "lane": "fast lane (this session)",
+  "state_at_claim": {
+    "records_lines": 86,
+    "b2_b7": "c0k3p1 b2..b7 all UNSAT (pushed in 5c440d57)",
+    "sweep76": "control SAT + 73 UNSAT + 2 INDET (c0k3p0/c0k3p1)",
+    "m45_bounds": "M_{4,5} in [21,140]"
+  },
+  "determinism_check": {
+    "c0k3p1b7_cnf_md5": "286e4509bdccd0f6e722452c5c2ec7df (regenerated, matches record)",
+    "c0k3p1b2_cnf_md5": "1dcb4c46536a9e3c635ed01f08581879 (regenerated, matches record)"
+  },
+  "driver": "sweepp0x2.sh v2.1 (comma-anchor skip, main 1828b78b)",
+  "kissat": "official rel-4.0.4 linux-amd64 asset, md5 3a5eba830aa6008a604fcc9bbe99a325",
+  "meaning": {
+    "all37UNSAT": "4x21 deficient-maximal absence confirmed -> M_{4,5} = 21 or >= 23 (K0821-audit convention)",
+    "anySAT": "decode + verify_witness.py, witness band extends to m=5..21, M_{4,5} in [22,140]"
+  },
+  "note": "driver v2.1 skip keys are exact (comma anchor); do not edit records.jsonl while the driver runs; do not relaunch this sweep in parallel sessions"
+}

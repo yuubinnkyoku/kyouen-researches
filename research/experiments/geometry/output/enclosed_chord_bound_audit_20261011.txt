@@ -1,0 +1,13 @@
+parameter_pairs=36 (1<=p,q<=6)
+enclosed_candidates=1410889
+cocircular_hits=1328
+strictly_enclosed_hits=484
+independent_full_4x4_determinant_checks=8411
+maximum_chord_length_for_each_pair=1+(p+q)*max(p,q): ALL MATCH
+strictly_inside_bound=1+p*q: ALL MATCH
+p=1,q=1: max_d=3, strict_max_d=2
+p=1,q=2: max_d=7, strict_max_d=3
+p=2,q=2: max_d=9, strict_max_d=5
+p=1,q=3: max_d=13, strict_max_d=4
+p=3,q=4: max_d=29, strict_max_d=13
+p=6,q=6: max_d=73, strict_max_d=37

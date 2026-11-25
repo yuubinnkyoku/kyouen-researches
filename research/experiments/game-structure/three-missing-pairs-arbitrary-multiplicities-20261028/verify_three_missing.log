@@ -1,0 +1,10 @@
+k=5 missing=triangle cases=31104 histogram=972,972,14580,14580 exact_small_states=32534
+k=5 missing=star cases=31104 histogram=972,972,14580,14580 exact_small_states=67642
+k=5 missing=path4 cases=31104 histogram=972,972,14580,14580 exact_small_states=101002
+k=5 missing=path3_plus_edge cases=31104 histogram=972,972,14580,14580 exact_small_states=133914
+k=6 missing=triangle cases=2985984 histogram=46720,46720,1446272,1446272 exact_small_states=133914
+k=6 missing=star cases=2985984 histogram=46720,46720,1446272,1446272 exact_small_states=133914
+k=6 missing=path4 cases=2985984 histogram=46720,46720,1446272,1446272 exact_small_states=133914
+k=6 missing=path3_plus_edge cases=2985984 histogram=46720,46720,1446272,1446272 exact_small_states=133914
+k=6 missing=matching3 cases=2985984 histogram=46720,46720,1446272,1446272 exact_small_states=133914
+PASS total=15054336 small_exact_calls=133914

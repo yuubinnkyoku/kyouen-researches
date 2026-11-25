@@ -1,0 +1,21 @@
+C++ (g++ -std=c++17 -O3 -Wall -Wextra -pedantic)
+k5 classes=23 checked=756216 failures=25 bad_masks=183, min_exception_vertices=13 min_g4_vertices=14
+k5 g=0 count=23529 failures=0
+k5 g=1 count=23775 failures=0
+k5 g=2 count=354368 failures=5
+k5 g=3 count=354532 failures=8
+k5 g=4 count=12 failures=12
+k6 missing_K4=615 checked=373248 failures=0
+total_checked=1129464
+
+Python (independent quotient and named-vertex recursion)
+star representatives: 3888
+star Grundy distribution: {0: 120, 1: 123, 2: 1775, 3: 1858, 4: 12}
+star formula exceptions: 25 {(2, 3): 5, (3, 2): 8, (4, 2): 4, (4, 3): 8}
+all exceptions named-vertex verified: 25
+k6 named-vertex binary-leaf cases: 64
+
+Scope: C++ exhaustive normalized representatives; Python independently exhaustive
+only for k5 missing K4 and named-vertex audit for 25 exceptions plus 64
+restricted k6 configurations. General theorem additionally uses K0336
+and a mathematical induction; k6 full second-implementation audit is open.

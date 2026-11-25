@@ -1,0 +1,16 @@
+{
+  "claim": "IN FLIGHT: (4,22,5) absence-capable class-split sweep",
+  "lane": "fast lane 2026-11-15",
+  "owner_session": "four-row-q5-m22-class-split-20261115",
+  "started": "2026-11-15T17:13:00Z",
+  "scope": {
+    "board": "4x22 q=5",
+    "cover": "9 canonical deficiency classes mod row-mirror V; singletons {0},{1} by exact count k in 0..3 x minpos p in 0..10 (sound: min(x1,21-xk) <= 10 = floor((m-1)/2)); multi classes direct",
+    "instances": 76 including the (4,20,5) class{0} k3 p1 positive control (V-image of the m=20 witness)",
+    "cap_s": 600,
+    "driver": "sweep22.sh (resumable, comma-anchored keys in sweepp0x2.sh lineage; sweep22.sh uses sat3.js like sweep21.sh)"
+  },
+  "expected_outcome": "all UNSAT => 4x22 witness-free => witness-free width set {21,22}, M_{4,5} = 21 or >= 24; any SAT => M_{4,5} in [22,140] with a witness to decode+verify",
+  "core_budget": "single kissat at a time (2-core box; ge20_cuts n10 lane holds the other core)",
+  "note": "x2 second-stone split driver available for cap-resistant buckets (per the 4x21 completion)"
+}

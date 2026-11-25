@@ -1,0 +1,110 @@
+{
+  "scope": "all labelled graphs n<=4; stars t<=5; corona graphs n<=3 plus 2 n4 cases",
+  "graphs_checked": 95,
+  "quadruples_checked": 15590,
+  "safe_subsets_checked": 2284,
+  "stars": [
+    {
+      "n": 2,
+      "m": 1,
+      "safe_count": 3,
+      "independence_polynomial": [
+        1,
+        2,
+        0
+      ],
+      "alpha": 1,
+      "minimum_maximal": 1,
+      "maximum_maximal": 1,
+      "maximal_count": 2,
+      "four_sets_checked": 1
+    },
+    {
+      "n": 3,
+      "m": 2,
+      "safe_count": 5,
+      "independence_polynomial": [
+        1,
+        3,
+        1,
+        0
+      ],
+      "alpha": 2,
+      "minimum_maximal": 1,
+      "maximum_maximal": 2,
+      "maximal_count": 2,
+      "four_sets_checked": 15
+    },
+    {
+      "n": 4,
+      "m": 3,
+      "safe_count": 9,
+      "independence_polynomial": [
+        1,
+        4,
+        3,
+        1,
+        0
+      ],
+      "alpha": 3,
+      "minimum_maximal": 1,
+      "maximum_maximal": 3,
+      "maximal_count": 2,
+      "four_sets_checked": 70
+    },
+    {
+      "n": 5,
+      "m": 4,
+      "safe_count": 17,
+      "independence_polynomial": [
+        1,
+        5,
+        6,
+        4,
+        1,
+        0
+      ],
+      "alpha": 4,
+      "minimum_maximal": 1,
+      "maximum_maximal": 4,
+      "maximal_count": 2,
+      "four_sets_checked": 210
+    },
+    {
+      "n": 6,
+      "m": 5,
+      "safe_count": 33,
+      "independence_polynomial": [
+        1,
+        6,
+        10,
+        10,
+        5,
+        1,
+        0
+      ],
+      "alpha": 5,
+      "minimum_maximal": 1,
+      "maximum_maximal": 5,
+      "maximal_count": 2,
+      "four_sets_checked": 495
+    }
+  ],
+  "coronas_checked": 14,
+  "corona_maximal_counts": [
+    1,
+    2,
+    4,
+    3,
+    8,
+    6,
+    6,
+    5,
+    6,
+    5,
+    5,
+    4,
+    8,
+    5
+  ]
+}

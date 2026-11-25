@@ -1,0 +1,20 @@
+2026-10-15
+Proof: four admissible mod-27 chord-square patterns for all 4-row 8-point circles.
+Independent Python residue enumerations: (C,N) 729 cases and (d0,d1) 729 cases; PASS.
+Pell mod27 recurrence: order 9; square patterns repeat every 3; PASS.
+Direct integer-square enumeration at B=73,150,300: PASS.
+
+Exhaustive modular-sieve enumeration (d0,d1) with M=12096:
+B=1000000: 7 patterns; tested=2519531872; 3.75594 seconds (excluding prep)
+B=2000000: 11 patterns; tested=10078148652; 15.0533 seconds
+B=3000000: 11 patterns; tested=22675723356; 35.0962 seconds
+
+Independent (d1,d2) modular-sieve enumeration with M=12096, exact integer bound:
+B=2500000: 11 patterns; tested=12452952939; output SHA256 matches B=3000000 result.
+B=3000000: independent completion not established (attempt timed out).
+
+B=1000000 baseline M=4032: 7 patterns; tested=3779297808; 5.82097 seconds.
+B=1000000 M=12096: 7 patterns; tested=2519531872; 3.75594 seconds.
+All durations machine-dependent, not mathematical assertions.
+
+GitHub main write: attempted via connector, rejected by safety checks. No branch or PR created.

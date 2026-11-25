@@ -1,0 +1,21 @@
+circles=21; independent center/triple enumerations agree
+private-circle subsets=20 / 1330; assignments= 189440
+103-stone maximal-safe configurations= 171008
+three-point prefixes impossible at 103 stones= 96 / 287980
+D4 orbits of impossible triples= 15 DP triple-orbit checks= 36390
+obstruction ((3, 1), (1, 3), (4, 4)) orbit_size 4
+obstruction ((3, 1), (1, 3), (6, 4)) orbit_size 8
+obstruction ((3, 1), (1, 3), (6, 6)) orbit_size 4
+obstruction ((3, 1), (9, 3), (1, 7)) orbit_size 8
+obstruction ((3, 1), (4, 4), (2, 8)) orbit_size 8
+obstruction ((3, 1), (4, 4), (7, 9)) orbit_size 8
+obstruction ((3, 1), (6, 4), (2, 8)) orbit_size 8
+obstruction ((3, 1), (6, 4), (7, 9)) orbit_size 8
+obstruction ((3, 1), (4, 6), (2, 8)) orbit_size 8
+obstruction ((3, 1), (6, 6), (2, 8)) orbit_size 8
+obstruction ((2, 2), (4, 4), (8, 8)) orbit_size 4
+obstruction ((2, 2), (6, 4), (8, 8)) orbit_size 4
+obstruction ((5, 3), (4, 4), (3, 5)) orbit_size 4
+obstruction ((5, 3), (4, 4), (7, 5)) orbit_size 8
+obstruction ((5, 3), (3, 5), (6, 6)) orbit_size 4
+PASS: exhaustive cover enumeration agrees with independent private-circle DP

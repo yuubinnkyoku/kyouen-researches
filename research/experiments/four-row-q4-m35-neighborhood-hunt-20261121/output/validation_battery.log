@@ -1,0 +1,58 @@
+== census-anchors (rebuild all 8 pinned censuses from first principles; pin: input/pin_census4_check_output.txt, part-1 verifier g_census) ==
+(4,8,4) total=485 lines=26 circles=459 | pin sat=485 circles=459 | PASS (0.0s)
+(4,20,4) total=7689 lines=138 circles=7551 | pin sat=7689 circles=7551 | PASS (0.3s)
+(4,35,4) total=41607 lines=413 circles=41194 | pin sat=41607 circles=41194 | PASS (2.3s)
+(5,12,4) total=2875 lines=65 circles=2810 | pin sat=2875 circles=2810 | PASS (0.1s)
+(6,10,4) total=2735 lines=56 circles=2679 | pin sat=2735 circles=2679 | PASS (0.1s)
+(3,24,4) total=6413 lines=3 circles=6410 | pin sat=6413 circles=6410 | PASS (0.1s)
+(4,10,5) total=89 lines=4 circles=85 | pin sat=89 circles=85 | PASS (0.0s)
+(4,20,5) total=491 lines=4 circles=487 | pin sat=491 circles=487 | PASS (0.2s)
+SUMMARY 8/8 PASS, allPass=true
+
+== verify-published (31 published (4,4) def-mode witnesses m=4..34 re-verified: safe+maximal+deficient+rows+n+capped-class alive m<=B) ==
+verify-published: 31/31 PASS, 0 FAIL
+
+== battery board 10 bases 9,8 x8 ==
+battery: board=4x10 bases=[9,8] placements<=8
+census (4,10,4): 947 curves = 38 lines + 909 circles (0.0s)
+base m=9 (9 stones): 8 placements in 4x10
+  pl#0 g=0 tx=0 ty=0: layered 120 / brute 120 witnesses, brute 25490 configs, rCfg=46 -> EQUIV (0.3s)
+  pl#1 g=0 tx=1 ty=0: layered 133 / brute 133 witnesses, brute 25490 configs, rCfg=46 -> EQUIV (0.3s)
+  pl#2 g=1 tx=0 ty=0: layered 133 / brute 133 witnesses, brute 25490 configs, rCfg=46 -> EQUIV (0.3s)
+  pl#3 g=1 tx=1 ty=0: layered 120 / brute 120 witnesses, brute 25490 configs, rCfg=46 -> EQUIV (0.3s)
+  pl#4 g=2 tx=0 ty=0: layered 120 / brute 120 witnesses, brute 25490 configs, rCfg=46 -> EQUIV (0.2s)
+  pl#5 g=2 tx=1 ty=0: layered 133 / brute 133 witnesses, brute 25490 configs, rCfg=46 -> EQUIV (0.3s)
+  pl#6 g=3 tx=0 ty=0: layered 133 / brute 133 witnesses, brute 25490 configs, rCfg=46 -> EQUIV (0.2s)
+  pl#7 g=3 tx=1 ty=0: layered 120 / brute 120 witnesses, brute 25490 configs, rCfg=46 -> EQUIV (0.2s)
+base m=8 (10 stones): 12 placements in 4x10
+battery result: 8 placements, EQUIV 8, DIFF 0 -> ALL EQUIV
+
+== battery board 12 bases 11,10 x6 ==
+battery: board=4x12 bases=[11,10] placements<=6
+census (4,12,4): 1651 curves = 52 lines + 1599 circles (0.0s)
+base m=11 (11 stones): 8 placements in 4x12
+  pl#0 g=0 tx=0 ty=0: layered 158 / brute 158 witnesses, brute 51821 configs, rCfg=67 -> EQUIV (0.8s)
+  pl#1 g=0 tx=1 ty=0: layered 125 / brute 125 witnesses, brute 51821 configs, rCfg=67 -> EQUIV (0.8s)
+  pl#2 g=1 tx=0 ty=0: layered 125 / brute 125 witnesses, brute 51821 configs, rCfg=67 -> EQUIV (0.8s)
+  pl#3 g=1 tx=1 ty=0: layered 158 / brute 158 witnesses, brute 51821 configs, rCfg=67 -> EQUIV (0.7s)
+  pl#4 g=2 tx=0 ty=0: layered 158 / brute 158 witnesses, brute 51821 configs, rCfg=67 -> EQUIV (0.7s)
+  pl#5 g=2 tx=1 ty=0: layered 125 / brute 125 witnesses, brute 51821 configs, rCfg=67 -> EQUIV (0.7s)
+battery result: 6 placements, EQUIV 6, DIFF 0 -> ALL EQUIV
+
+== battery board 14 bases 13,12 x4 ==
+battery: board=4x14 bases=[13,12] placements<=4
+census (4,14,4): 2627 curves = 70 lines + 2557 circles (0.1s)
+base m=13 (11 stones): 12 placements in 4x14
+  pl#0 g=0 tx=0 ty=0: layered 156 / brute 156 witnesses, brute 75033 configs, rCfg=67 -> EQUIV (1.2s)
+  pl#1 g=0 tx=1 ty=0: layered 177 / brute 177 witnesses, brute 75033 configs, rCfg=67 -> EQUIV (1.2s)
+  pl#2 g=0 tx=2 ty=0: layered 193 / brute 193 witnesses, brute 75033 configs, rCfg=67 -> EQUIV (1.1s)
+  pl#3 g=1 tx=0 ty=0: layered 193 / brute 193 witnesses, brute 75033 configs, rCfg=67 -> EQUIV (1.2s)
+battery result: 4 placements, EQUIV 4, DIFF 0 -> ALL EQUIV
+
+== battery board 16 bases 13,12 x2 ==
+battery: board=4x16 bases=[13,12] placements<=2
+census (4,16,4): 3925 curves = 90 lines + 3835 circles (0.1s)
+base m=13 (11 stones): 20 placements in 4x16
+  pl#0 g=0 tx=0 ty=0: layered 146 / brute 146 witnesses, brute 102533 configs, rCfg=67 -> EQUIV (2.2s)
+  pl#1 g=0 tx=1 ty=0: layered 165 / brute 165 witnesses, brute 102533 configs, rCfg=67 -> EQUIV (2.0s)
+battery result: 2 placements, EQUIV 2, DIFF 0 -> ALL EQUIV

@@ -1,0 +1,1396 @@
+[
+  {
+    "m": 10,
+    "target": 0,
+    "engine": "cadical195",
+    "status": "SAT",
+    "wall_seconds": 0.000428,
+    "variables": 196,
+    "clauses": 500,
+    "circles": 26,
+    "profiles": [
+      [
+        0,
+        1,
+        3,
+        3,
+        1
+      ],
+      [
+        1,
+        3,
+        3,
+        1,
+        0
+      ],
+      [
+        1,
+        5,
+        0,
+        7,
+        7
+      ],
+      [
+        2,
+        4,
+        0,
+        4,
+        2
+      ],
+      [
+        7,
+        7,
+        0,
+        5,
+        1
+      ]
+    ],
+    "rows": [
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        8,
+        9
+      ],
+      [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7
+      ],
+      [
+        0,
+        2,
+        3,
+        4,
+        7,
+        8,
+        9
+      ],
+      [
+        0,
+        2,
+        4,
+        5,
+        6,
+        7,
+        9
+      ]
+    ],
+    "solver_statistics": {
+      "restarts": 0,
+      "conflicts": 0,
+      "decisions": 0,
+      "propagations": 0
+    },
+    "scope": "All safe target-saturated states; other rows need not be saturated"
+  },
+  {
+    "m": 10,
+    "target": 1,
+    "engine": "cadical195",
+    "status": "SAT",
+    "wall_seconds": 0.00049,
+    "variables": 210,
+    "clauses": 598,
+    "circles": 26,
+    "profiles": [
+      [
+        0,
+        1,
+        3,
+        3,
+        1
+      ],
+      [
+        1,
+        3,
+        3,
+        1,
+        0
+      ],
+      [
+        1,
+        5,
+        0,
+        7,
+        7
+      ],
+      [
+        2,
+        4,
+        0,
+        4,
+        2
+      ],
+      [
+        7,
+        7,
+        0,
+        5,
+        1
+      ]
+    ],
+    "rows": [
+      [
+        0,
+        2,
+        4,
+        5,
+        7,
+        8,
+        9
+      ],
+      [
+        0,
+        1,
+        3,
+        5,
+        7,
+        9
+      ],
+      [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      [
+        0,
+        1,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    ],
+    "solver_statistics": {
+      "restarts": 0,
+      "conflicts": 2,
+      "decisions": 36,
+      "propagations": 214
+    },
+    "scope": "All safe target-saturated states; other rows need not be saturated"
+  },
+  {
+    "m": 10,
+    "target": 2,
+    "engine": "cadical195",
+    "status": "SAT",
+    "wall_seconds": 0.000406,
+    "variables": 186,
+    "clauses": 430,
+    "circles": 26,
+    "profiles": [
+      [
+        0,
+        1,
+        3,
+        3,
+        1
+      ],
+      [
+        1,
+        3,
+        3,
+        1,
+        0
+      ],
+      [
+        1,
+        5,
+        0,
+        7,
+        7
+      ],
+      [
+        2,
+        4,
+        0,
+        4,
+        2
+      ],
+      [
+        7,
+        7,
+        0,
+        5,
+        1
+      ]
+    ],
+    "rows": [
+      [
+        0,
+        1,
+        3,
+        4,
+        7,
+        8
+      ],
+      [
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      [
+        0,
+        1,
+        3,
+        4,
+        5,
+        6
+      ],
+      [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      [
+        0,
+        1,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    ],
+    "solver_statistics": {
+      "restarts": 0,
+      "conflicts": 2,
+      "decisions": 40,
+      "propagations": 191
+    },
+    "scope": "All safe target-saturated states; other rows need not be saturated"
+  },
+  {
+    "m": 12,
+    "target": 0,
+    "engine": "cadical195",
+    "status": "SAT",
+    "wall_seconds": 0.001402,
+    "variables": 294,
+    "clauses": 800,
+    "circles": 38,
+    "profiles": [
+      [
+        0,
+        1,
+        3,
+        3,
+        1
+      ],
+      [
+        1,
+        3,
+        3,
+        1,
+        0
+      ],
+      [
+        1,
+        5,
+        0,
+        7,
+        7
+      ],
+      [
+        2,
+        4,
+        0,
+        4,
+        2
+      ],
+      [
+        3,
+        7,
+        9,
+        0,
+        11
+      ],
+      [
+        7,
+        7,
+        0,
+        5,
+        1
+      ],
+      [
+        11,
+        0,
+        9,
+        7,
+        3
+      ]
+    ],
+    "rows": [
+      [
+        1,
+        3,
+        4,
+        7,
+        9,
+        11
+      ],
+      [
+        0,
+        2,
+        3,
+        7,
+        8,
+        9,
+        10
+      ],
+      [
+        1,
+        5,
+        6,
+        7,
+        8,
+        10,
+        11
+      ],
+      [
+        1,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9
+      ],
+      [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    ],
+    "solver_statistics": {
+      "restarts": 3,
+      "conflicts": 79,
+      "decisions": 159,
+      "propagations": 4477
+    },
+    "scope": "All safe target-saturated states; other rows need not be saturated"
+  },
+  {
+    "m": 12,
+    "target": 1,
+    "engine": "cadical195",
+    "status": "SAT",
+    "wall_seconds": 0.000559,
+    "variables": 310,
+    "clauses": 912,
+    "circles": 38,
+    "profiles": [
+      [
+        0,
+        1,
+        3,
+        3,
+        1
+      ],
+      [
+        1,
+        3,
+        3,
+        1,
+        0
+      ],
+      [
+        1,
+        5,
+        0,
+        7,
+        7
+      ],
+      [
+        2,
+        4,
+        0,
+        4,
+        2
+      ],
+      [
+        3,
+        7,
+        9,
+        0,
+        11
+      ],
+      [
+        7,
+        7,
+        0,
+        5,
+        1
+      ],
+      [
+        11,
+        0,
+        9,
+        7,
+        3
+      ]
+    ],
+    "rows": [
+      [
+        0,
+        4,
+        6,
+        7,
+        8,
+        9,
+        11
+      ],
+      [
+        0,
+        1,
+        3,
+        7,
+        9,
+        11
+      ],
+      [
+        1,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      [
+        0,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ]
+    ],
+    "solver_statistics": {
+      "restarts": 0,
+      "conflicts": 3,
+      "decisions": 27,
+      "propagations": 355
+    },
+    "scope": "All safe target-saturated states; other rows need not be saturated"
+  },
+  {
+    "m": 12,
+    "target": 2,
+    "engine": "cadical195",
+    "status": "SAT",
+    "wall_seconds": 0.000523,
+    "variables": 276,
+    "clauses": 674,
+    "circles": 38,
+    "profiles": [
+      [
+        0,
+        1,
+        3,
+        3,
+        1
+      ],
+      [
+        1,
+        3,
+        3,
+        1,
+        0
+      ],
+      [
+        1,
+        5,
+        0,
+        7,
+        7
+      ],
+      [
+        2,
+        4,
+        0,
+        4,
+        2
+      ],
+      [
+        3,
+        7,
+        9,
+        0,
+        11
+      ],
+      [
+        7,
+        7,
+        0,
+        5,
+        1
+      ],
+      [
+        11,
+        0,
+        9,
+        7,
+        3
+      ]
+    ],
+    "rows": [
+      [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        8
+      ],
+      [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      [
+        0,
+        1,
+        2,
+        6,
+        7,
+        8
+      ],
+      [
+        3,
+        5,
+        6,
+        7,
+        8,
+        10,
+        11
+      ],
+      [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    ],
+    "solver_statistics": {
+      "restarts": 0,
+      "conflicts": 9,
+      "decisions": 51,
+      "propagations": 593
+    },
+    "scope": "All safe target-saturated states; other rows need not be saturated"
+  },
+  {
+    "m": 14,
+    "target": 0,
+    "engine": "cadical195",
+    "status": "SAT",
+    "wall_seconds": 0.011681,
+    "variables": 396,
+    "clauses": 1130,
+    "circles": 52,
+    "profiles": [
+      [
+        0,
+        1,
+        3,
+        3,
+        1
+      ],
+      [
+        1,
+        3,
+        3,
+        1,
+        0
+      ],
+      [
+        1,
+        5,
+        0,
+        7,
+        7
+      ],
+      [
+        2,
+        4,
+        0,
+        4,
+        2
+      ],
+      [
+        3,
+        7,
+        9,
+        0,
+        11
+      ],
+      [
+        7,
+        7,
+        0,
+        5,
+        1
+      ],
+      [
+        11,
+        0,
+        9,
+        7,
+        3
+      ]
+    ],
+    "rows": [
+      [
+        1,
+        2,
+        4,
+        8,
+        10,
+        11
+      ],
+      [
+        3,
+        5,
+        6,
+        7,
+        9,
+        10,
+        13
+      ],
+      [
+        1,
+        3,
+        6,
+        7,
+        10,
+        12,
+        13
+      ],
+      [
+        2,
+        4,
+        5,
+        8,
+        9,
+        11,
+        12
+      ],
+      [
+        4,
+        6,
+        7,
+        8,
+        9,
+        11,
+        12
+      ]
+    ],
+    "solver_statistics": {
+      "restarts": 39,
+      "conflicts": 868,
+      "decisions": 1458,
+      "propagations": 65958
+    },
+    "scope": "All safe target-saturated states; other rows need not be saturated"
+  },
+  {
+    "m": 14,
+    "target": 1,
+    "engine": "cadical195",
+    "status": "SAT",
+    "wall_seconds": 0.001265,
+    "variables": 412,
+    "clauses": 1242,
+    "circles": 52,
+    "profiles": [
+      [
+        0,
+        1,
+        3,
+        3,
+        1
+      ],
+      [
+        1,
+        3,
+        3,
+        1,
+        0
+      ],
+      [
+        1,
+        5,
+        0,
+        7,
+        7
+      ],
+      [
+        2,
+        4,
+        0,
+        4,
+        2
+      ],
+      [
+        3,
+        7,
+        9,
+        0,
+        11
+      ],
+      [
+        7,
+        7,
+        0,
+        5,
+        1
+      ],
+      [
+        11,
+        0,
+        9,
+        7,
+        3
+      ]
+    ],
+    "rows": [
+      [
+        4,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      [
+        0,
+        1,
+        3,
+        5,
+        9,
+        11
+      ],
+      [
+        1,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      [
+        5,
+        7,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      [
+        0,
+        5,
+        7,
+        8,
+        10,
+        11,
+        12
+      ]
+    ],
+    "solver_statistics": {
+      "restarts": 0,
+      "conflicts": 47,
+      "decisions": 86,
+      "propagations": 3372
+    },
+    "scope": "All safe target-saturated states; other rows need not be saturated"
+  },
+  {
+    "m": 14,
+    "target": 2,
+    "engine": "cadical195",
+    "status": "UNSAT",
+    "wall_seconds": 0.005716,
+    "variables": 370,
+    "clauses": 948,
+    "circles": 52,
+    "profiles": [
+      [
+        0,
+        1,
+        3,
+        3,
+        1
+      ],
+      [
+        1,
+        3,
+        3,
+        1,
+        0
+      ],
+      [
+        1,
+        5,
+        0,
+        7,
+        7
+      ],
+      [
+        2,
+        4,
+        0,
+        4,
+        2
+      ],
+      [
+        3,
+        7,
+        9,
+        0,
+        11
+      ],
+      [
+        7,
+        7,
+        0,
+        5,
+        1
+      ],
+      [
+        11,
+        0,
+        9,
+        7,
+        3
+      ]
+    ],
+    "rows": null,
+    "solver_statistics": {
+      "restarts": 22,
+      "conflicts": 650,
+      "decisions": 958,
+      "propagations": 43075
+    },
+    "scope": "All safe target-saturated states; other rows need not be saturated"
+  },
+  {
+    "m": 16,
+    "target": 0,
+    "engine": "cadical195",
+    "status": "UNSAT",
+    "wall_seconds": 0.228977,
+    "variables": 498,
+    "clauses": 1460,
+    "circles": 66,
+    "profiles": [
+      [
+        0,
+        1,
+        3,
+        3,
+        1
+      ],
+      [
+        1,
+        3,
+        3,
+        1,
+        0
+      ],
+      [
+        1,
+        5,
+        0,
+        7,
+        7
+      ],
+      [
+        2,
+        4,
+        0,
+        4,
+        2
+      ],
+      [
+        3,
+        7,
+        9,
+        0,
+        11
+      ],
+      [
+        7,
+        7,
+        0,
+        5,
+        1
+      ],
+      [
+        11,
+        0,
+        9,
+        7,
+        3
+      ]
+    ],
+    "rows": null,
+    "solver_statistics": {
+      "restarts": 419,
+      "conflicts": 14190,
+      "decisions": 18597,
+      "propagations": 967451
+    },
+    "scope": "All safe target-saturated states; other rows need not be saturated"
+  },
+  {
+    "m": 16,
+    "target": 1,
+    "engine": "cadical195",
+    "status": "UNSAT",
+    "wall_seconds": 0.38176,
+    "variables": 514,
+    "clauses": 1572,
+    "circles": 66,
+    "profiles": [
+      [
+        0,
+        1,
+        3,
+        3,
+        1
+      ],
+      [
+        1,
+        3,
+        3,
+        1,
+        0
+      ],
+      [
+        1,
+        5,
+        0,
+        7,
+        7
+      ],
+      [
+        2,
+        4,
+        0,
+        4,
+        2
+      ],
+      [
+        3,
+        7,
+        9,
+        0,
+        11
+      ],
+      [
+        7,
+        7,
+        0,
+        5,
+        1
+      ],
+      [
+        11,
+        0,
+        9,
+        7,
+        3
+      ]
+    ],
+    "rows": null,
+    "solver_statistics": {
+      "restarts": 649,
+      "conflicts": 24559,
+      "decisions": 32373,
+      "propagations": 1488485
+    },
+    "scope": "All safe target-saturated states; other rows need not be saturated"
+  },
+  {
+    "m": 16,
+    "target": 2,
+    "engine": "cadical195",
+    "status": "UNSAT",
+    "wall_seconds": 0.003086,
+    "variables": 464,
+    "clauses": 1222,
+    "circles": 66,
+    "profiles": [
+      [
+        0,
+        1,
+        3,
+        3,
+        1
+      ],
+      [
+        1,
+        3,
+        3,
+        1,
+        0
+      ],
+      [
+        1,
+        5,
+        0,
+        7,
+        7
+      ],
+      [
+        2,
+        4,
+        0,
+        4,
+        2
+      ],
+      [
+        3,
+        7,
+        9,
+        0,
+        11
+      ],
+      [
+        7,
+        7,
+        0,
+        5,
+        1
+      ],
+      [
+        11,
+        0,
+        9,
+        7,
+        3
+      ]
+    ],
+    "rows": null,
+    "solver_statistics": {
+      "restarts": 19,
+      "conflicts": 315,
+      "decisions": 587,
+      "propagations": 19965
+    },
+    "scope": "All safe target-saturated states; other rows need not be saturated"
+  },
+  {
+    "m": 20,
+    "target": 0,
+    "engine": "cadical195",
+    "status": "UNSAT",
+    "wall_seconds": 0.160454,
+    "variables": 706,
+    "clauses": 2150,
+    "circles": 96,
+    "profiles": [
+      [
+        0,
+        1,
+        3,
+        3,
+        1
+      ],
+      [
+        1,
+        3,
+        3,
+        1,
+        0
+      ],
+      [
+        1,
+        5,
+        0,
+        7,
+        7
+      ],
+      [
+        2,
+        4,
+        0,
+        4,
+        2
+      ],
+      [
+        3,
+        7,
+        9,
+        0,
+        11
+      ],
+      [
+        5,
+        11,
+        0,
+        17,
+        19
+      ],
+      [
+        7,
+        7,
+        0,
+        5,
+        1
+      ],
+      [
+        11,
+        0,
+        9,
+        7,
+        3
+      ],
+      [
+        19,
+        17,
+        0,
+        11,
+        5
+      ]
+    ],
+    "rows": null,
+    "solver_statistics": {
+      "restarts": 432,
+      "conflicts": 10422,
+      "decisions": 15329,
+      "propagations": 976054
+    },
+    "scope": "All safe target-saturated states; other rows need not be saturated"
+  },
+  {
+    "m": 20,
+    "target": 1,
+    "engine": "cadical195",
+    "status": "UNSAT",
+    "wall_seconds": 0.28776,
+    "variables": 722,
+    "clauses": 2262,
+    "circles": 96,
+    "profiles": [
+      [
+        0,
+        1,
+        3,
+        3,
+        1
+      ],
+      [
+        1,
+        3,
+        3,
+        1,
+        0
+      ],
+      [
+        1,
+        5,
+        0,
+        7,
+        7
+      ],
+      [
+        2,
+        4,
+        0,
+        4,
+        2
+      ],
+      [
+        3,
+        7,
+        9,
+        0,
+        11
+      ],
+      [
+        5,
+        11,
+        0,
+        17,
+        19
+      ],
+      [
+        7,
+        7,
+        0,
+        5,
+        1
+      ],
+      [
+        11,
+        0,
+        9,
+        7,
+        3
+      ],
+      [
+        19,
+        17,
+        0,
+        11,
+        5
+      ]
+    ],
+    "rows": null,
+    "solver_statistics": {
+      "restarts": 253,
+      "conflicts": 17578,
+      "decisions": 21621,
+      "propagations": 1489793
+    },
+    "scope": "All safe target-saturated states; other rows need not be saturated"
+  },
+  {
+    "m": 20,
+    "target": 2,
+    "engine": "cadical195",
+    "status": "UNSAT",
+    "wall_seconds": 0.002691,
+    "variables": 652,
+    "clauses": 1772,
+    "circles": 96,
+    "profiles": [
+      [
+        0,
+        1,
+        3,
+        3,
+        1
+      ],
+      [
+        1,
+        3,
+        3,
+        1,
+        0
+      ],
+      [
+        1,
+        5,
+        0,
+        7,
+        7
+      ],
+      [
+        2,
+        4,
+        0,
+        4,
+        2
+      ],
+      [
+        3,
+        7,
+        9,
+        0,
+        11
+      ],
+      [
+        5,
+        11,
+        0,
+        17,
+        19
+      ],
+      [
+        7,
+        7,
+        0,
+        5,
+        1
+      ],
+      [
+        11,
+        0,
+        9,
+        7,
+        3
+      ],
+      [
+        19,
+        17,
+        0,
+        11,
+        5
+      ]
+    ],
+    "rows": null,
+    "solver_statistics": {
+      "restarts": 2,
+      "conflicts": 246,
+      "decisions": 319,
+      "propagations": 18729
+    },
+    "scope": "All safe target-saturated states; other rows need not be saturated"
+  }
+]

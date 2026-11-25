@@ -1,0 +1,115 @@
+{
+  "theorem": "At most three six-point circles on three parallel lines with at most four candidate points per line; attained",
+  "proof_scope": "universal real Euclidean geometry; circle count (not grid coordinates)",
+  "pattern_audit": {
+    "row_patterns": 6,
+    "ordered_pattern_triples": 216,
+    "pairwise_twice_candidates": 21,
+    "impossible_single_intersection": 15,
+    "forced_fourfold_row_intersection": 6,
+    "survivors": []
+  },
+  "example": {
+    "points_y_sign_x_squared": [
+      [
+        0,
+        -1,
+        16
+      ],
+      [
+        0,
+        1,
+        16
+      ],
+      [
+        0,
+        -1,
+        18
+      ],
+      [
+        0,
+        1,
+        18
+      ],
+      [
+        1,
+        -1,
+        15
+      ],
+      [
+        1,
+        1,
+        15
+      ],
+      [
+        1,
+        -1,
+        14
+      ],
+      [
+        1,
+        1,
+        14
+      ],
+      [
+        2,
+        -1,
+        12
+      ],
+      [
+        2,
+        1,
+        12
+      ],
+      [
+        2,
+        -1,
+        10
+      ],
+      [
+        2,
+        1,
+        10
+      ]
+    ],
+    "circle_equations": [
+      "x^2+y^2=16",
+      "x^2+y^2+y=16",
+      "x^2+y^2+2y=18"
+    ],
+    "forbidden_six_masks": [
+      819,
+      3267,
+      3132
+    ]
+  },
+  "finite_game": {
+    "empty_grundy": 0,
+    "safe_states": 3915,
+    "grundy_histogram": {
+      "0": 1865,
+      "1": 1837,
+      "2": 90,
+      "3": 123
+    },
+    "maximal_safe_size_histogram": {
+      "9": 8,
+      "10": 24
+    },
+    "first_move_grundy": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "independent_recursive_states": 3915
+  }
+}

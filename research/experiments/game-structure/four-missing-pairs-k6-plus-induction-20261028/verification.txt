@@ -1,0 +1,18 @@
+Local verification, 2026-10-28. Compiler: g++ -O3 -march=native -std=c++17.
+k=6 missing-pair orbit representatives: 9 (cover 1365 labelled four-edge missing sets).
+For each representative: 2^11 * 3^6 = 1,492,992 configurations.
+shape 1: missing 01,02,03,04; bad=0; g0=23360 g1=23360 g2=723136 g3=723136
+shape 2: missing 01,02,03,12; bad=0; g0=23360 g1=23360 g2=723136 g3=723136
+shape 3: missing 01,02,03,14; bad=0; g0=23360 g1=23360 g2=723136 g3=723136
+shape 4: missing 01,02,03,45; bad=0; g0=23360 g1=23360 g2=723136 g3=723136
+shape 5: missing 01,02,12,34; bad=0; g0=23360 g1=23360 g2=723136 g3=723136
+shape 6: missing 01,02,13,23; bad=0; g0=23360 g1=23360 g2=723136 g3=723136
+shape 7: missing 01,02,13,24; bad=0; g0=23360 g1=23360 g2=723136 g3=723136
+shape 8: missing 01,02,13,45; bad=0; g0=23360 g1=23360 g2=723136 g3=723136
+shape 9: missing 01,02,34,35; bad=0; g0=23360 g1=23360 g2=723136 g3=723136
+TOTAL=13,436,928; mismatches=0; g>=4 cases=0.
+Independent Python quotient: k=5 four-star with positive centre leaf, 10,368/10,368 agree.
+Independent named-vertex closed-neighbourhood recursion: 27/27 k=6 samples agree.
+Additional deterministic random k=6,7,8 quotient samples: 64,785 / 73,950 / 79,954; no mismatches.
+The random samples are regression checks only, not the basis for the universal theorem.
+The k=6 exhaustive result plus the k=5 star-centre lemma and the written induction establish the universal theorem.

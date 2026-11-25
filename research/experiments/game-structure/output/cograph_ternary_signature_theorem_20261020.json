@@ -1,0 +1,53 @@
+{
+  "claim": "cograph option signatures indexed bijectively by positive ternary ranks",
+  "closure": [
+    {
+      "k": 1,
+      "signatures_including_empty": 4,
+      "ordered_pair_operations": 32
+    },
+    {
+      "k": 2,
+      "signatures_including_empty": 10,
+      "ordered_pair_operations": 200
+    },
+    {
+      "k": 3,
+      "signatures_including_empty": 28,
+      "ordered_pair_operations": 1568
+    },
+    {
+      "k": 4,
+      "signatures_including_empty": 82,
+      "ordered_pair_operations": 13448
+    }
+  ],
+  "small_graphs": {
+    "1": {
+      "all_labeled_graphs": 1,
+      "cographs_checked": 1
+    },
+    "2": {
+      "all_labeled_graphs": 2,
+      "cographs_checked": 2
+    },
+    "3": {
+      "all_labeled_graphs": 8,
+      "cographs_checked": 8
+    },
+    "4": {
+      "all_labeled_graphs": 64,
+      "cographs_checked": 52
+    },
+    "5": {
+      "all_labeled_graphs": 1024,
+      "cographs_checked": 472
+    },
+    "6": {
+      "all_labeled_graphs": 32768,
+      "cographs_checked": 5504
+    }
+  },
+  "cpp_dump_max_n": 400,
+  "cpp_dump_signature_pairs": 80200
+}

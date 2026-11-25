@@ -1,0 +1,26 @@
+{
+  "board": {
+    "width": 3,
+    "length": 23,
+    "q": 4
+  },
+  "witness_rows": {
+    "0": [4, 15, 18],
+    "1": [18, 19],
+    "2": [9, 12, 18]
+  },
+  "stone_count": 8,
+  "row_counts": [3, 2, 3],
+  "full_capacity": 9,
+  "safe": true,
+  "maximal": true,
+  "empty_points": 61,
+  "blocked_empty_points": 61,
+  "middle_row_empty_points": 21,
+  "middle_row_blocked_empty_points": 21,
+  "unblocked_empty_points": [],
+  "board_forbidden_quadruples": 33819,
+  "predicate_agreement_all_board_quadruples": true,
+  "witness_forbidden_quadruples": 0,
+  "conclusion": "M_{3,4} >= 24"
+}
