@@ -1,0 +1,69 @@
+{
+  "n": 49,
+  "m": 56,
+  "max_cap_size": 8,
+  "counts_by_size": {
+    "0": 1,
+    "1": 49,
+    "2": 1176,
+    "3": 16464,
+    "4": 127596,
+    "5": 444528,
+    "6": 460992,
+    "7": 51744,
+    "8": 6174
+  },
+  "maximal_by_size": {
+    "0": 0,
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 0,
+    "5": 0,
+    "6": 271656,
+    "7": 2352,
+    "8": 6174
+  },
+  "six_cap_classes": {
+    "maximal": 271656,
+    "only8": 172872,
+    "only7": 16464,
+    "mixed": 0,
+    "total": 460992
+  },
+  "seven_caps": {
+    "total": 51744,
+    "maximal": 2352,
+    "nonmaximal": 49392,
+    "incidence_6subsets": 16464,
+    "incidence_6subsets_all7": 362208,
+    "distinct_6subsets_of_maximal": 16464
+  },
+  "eight_caps": {
+    "total": 6174,
+    "maximal": 6174,
+    "incidence_6subsets": 172872,
+    "distinct_6subsets": 172872
+  },
+  "six_subset_checks": {
+    "max7_subsets_all_only7": true,
+    "eight_subsets_all_only8": true,
+    "bad7": 0,
+    "bad8": 0
+  },
+  "five_caps": {
+    "total": 444528,
+    "with_maximal_6_child": 444528,
+    "with_only7_child": 49392,
+    "without_only7_child": 395136,
+    "with_only8_child": 345744,
+    "with_mixed_child": 0,
+    "with_any_8_child": 345744,
+    "no_child": 0,
+    "distinct_5subsets_of_maximal7": 49392,
+    "incidence_5subsets_of_8": 345744,
+    "distinct_5subsets_of_8": 345744
+  },
+  "safety_primitive_sample": 320,
+  "safety_primitive_mismatches": 0
+}
