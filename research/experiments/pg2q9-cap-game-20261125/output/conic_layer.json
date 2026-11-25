@@ -1,0 +1,190 @@
+{
+ "conic": [
+  0,
+  1,
+  10,
+  20,
+  31,
+  45,
+  51,
+  62,
+  75,
+  88
+ ],
+ "conics": 58968,
+ "pgl2_9_order": 720,
+ "k": {
+  "3": {
+   "caps": 7076160,
+   "orbits": [
+    {
+     "orbit_size": 7076160,
+     "count_per_conic": 120,
+     "representative": [
+      0,
+      1,
+      10
+     ],
+     "grundy": 1,
+     "upset_positions": 31681
+    }
+   ]
+  },
+  "4": {
+   "caps": 12383280,
+   "orbits": [
+    {
+     "orbit_size": 1769040,
+     "count_per_conic": 30,
+     "representative": [
+      0,
+      1,
+      10,
+      20
+     ],
+     "grundy": 0,
+     "upset_positions": 1868
+    },
+    {
+     "orbit_size": 10614240,
+     "count_per_conic": 180,
+     "representative": [
+      0,
+      1,
+      10,
+      31
+     ],
+     "grundy": 0,
+     "upset_positions": 1868
+    }
+   ]
+  },
+  "5": {
+   "caps": 14859936,
+   "orbits": [
+    {
+     "orbit_size": 10614240,
+     "count_per_conic": 180,
+     "representative": [
+      0,
+      1,
+      10,
+      20,
+      31
+     ],
+     "grundy": 1,
+     "upset_positions": 132
+    },
+    {
+     "orbit_size": 4245696,
+     "count_per_conic": 72,
+     "representative": [
+      0,
+      1,
+      10,
+      31,
+      51
+     ],
+     "grundy": 1,
+     "upset_positions": 132
+    }
+   ]
+  },
+  "6": {
+   "caps": 12383280,
+   "orbits": [
+    {
+     "orbit_size": 10614240,
+     "count_per_conic": 180,
+     "representative": [
+      0,
+      1,
+      10,
+      20,
+      31,
+      45
+     ],
+     "grundy": 0,
+     "upset_positions": 16
+    },
+    {
+     "orbit_size": 1769040,
+     "count_per_conic": 30,
+     "representative": [
+      0,
+      1,
+      10,
+      20,
+      31,
+      62
+     ],
+     "grundy": 0,
+     "upset_positions": 22
+    }
+   ]
+  },
+  "7": {
+   "caps": 7076160,
+   "orbits": [
+    {
+     "orbit_size": 7076160,
+     "count_per_conic": 120,
+     "representative": [
+      0,
+      1,
+      10,
+      20,
+      31,
+      45,
+      51
+     ],
+     "grundy": 1,
+     "upset_positions": 8
+    }
+   ]
+  },
+  "8": {
+   "caps": 2653560,
+   "orbits": [
+    {
+     "orbit_size": 2653560,
+     "count_per_conic": 45,
+     "representative": [
+      0,
+      1,
+      10,
+      20,
+      31,
+      45,
+      51,
+      62
+     ],
+     "grundy": 0,
+     "upset_positions": 4
+    }
+   ]
+  },
+  "9": {
+   "caps": 589680,
+   "orbits": [
+    {
+     "orbit_size": 589680,
+     "count_per_conic": 10,
+     "representative": [
+      0,
+      1,
+      10,
+      20,
+      31,
+      45,
+      51,
+      62,
+      75
+     ],
+     "grundy": 1,
+     "upset_positions": 2
+    }
+   ]
+  }
+ }
+}
