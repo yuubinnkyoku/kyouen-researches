@@ -1,0 +1,13 @@
+# Reproduction log
+
+Input snapshot: d173632fc19a3d9f9abf8e66d0595f4629748bf0
+Publication parent: 3b83004b0b0354fa48a60c402134ebe8063e78f8
+Environment: CT204, Python 3.13.5; input/output files kept in /dev/shm.
+
+- `python3 -m py_compile audit_candidate_supply.py`: PASS.
+- Full audit run A: 4,577 initial / 4,575 post candidates; 32,039 and 32,025 gates PASS; errors 0.
+- Full audit run B: same results; `cmp -s audit-A.json audit-B.json`: PASS.
+- Audit JSON SHA-256: `f2bcc59fd1f3ff51d71c96ce918cee74938340ebc6381fe352a100098e4627a1`, 8,182 bytes; byte-identical across runs.
+- Verifier SHA-256: `58d96602af1cb1ac5635cf96faebe922429c230d7b132cabdb66b645f173b952`, 13,221 bytes.
+- Negative control: one newline appended to a copy of post-probe task CSV. Verifier exited 1 with `pin mismatch post_tasks: b7bdfba6efa577a88c6e80c34073123329ead974`; stdout empty and audit output absent: PASS.
+- No files in repository working copies changed. No exact probe or search was launched.

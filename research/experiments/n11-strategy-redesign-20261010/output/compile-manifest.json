@@ -1,0 +1,17 @@
+{
+  "binary_sha256": "f4eeda404e644687d55077ce5eff5bb1c803cd06cfee0f5d11dbf64929e3ba84",
+  "command": "g++ -O3 -std=c++20 -DNDEBUG cpp/solvers/kyouen_dfpn_root.cpp -o .local/n11/strategy-20261010/dfpn.exe",
+  "compiler": "g++ 15.2.0 MSYS2 Rev8",
+  "hardware": "AMD Ryzen 7 5800HS / 8 cores / 16 threads",
+  "main_at_dispatch": "52239697a6a65b11889669725f8599604d53656f",
+  "sources": [
+    {
+      "path": "cpp/solvers/kyouen_dfpn_root.cpp",
+      "sha256": "523f56e61550e1f5b93882229baf8b4cd83489be719ca484d13adef8424c3063"
+    },
+    {
+      "path": "cpp/solvers/kyouen_residual_micro.hpp",
+      "sha256": "5976935dcfccb9b5a26fa68f8de20868ce45363dd8c372dcd67d9b841167e7f5"
+    }
+  ]
+}

@@ -1,0 +1,1733 @@
+{
+  "schema": "n11-win8-four-row-one-certified-root-response-cover-second-verification-v1",
+  "date": "2026-11-20",
+  "status": "verified-geometric-response-cover-not-game-solved",
+  "all_gates_pass": true,
+  "gate_count": 19,
+  "inputs": {
+    "k1085": {
+      "path": "research/experiments/n11-residual72-unsafe-classification-add2stones-20261120/output/residual72-unsafe-classification-add2stones-20261120.json",
+      "sha256": "5fdd342d624abec9b8478b69b13fc63a2dbbec99d227da4740cfe068647e688e",
+      "git_blob_sha1": "cb66fe9dd6454783bece126a643bf247d84def20"
+    },
+    "k1097": {
+      "path": "research/experiments/n11-residual72-safe8-refuted50-refsolve-20261120/output/safe8-refuted50-refsolve-20261120.json",
+      "sha256": "2896deb0c5e820904d0e2463e3fd9ebd1613b540a66a97f88d86c75bffa71f40",
+      "git_blob_sha1": "4660c012333b04896c36a23a0837fbdbc2572ef9"
+    },
+    "plan": {
+      "path": "research/experiments/n11-win8-four-row-two-ply-response-cover-20261120/output/selected-response-cover-plan.json",
+      "sha256": "125c9746b93f65f1f48eef18628f440c264c5f7dace4e98ed32e672295a16530",
+      "git_blob_sha1": "1c8f9cd34a19922ae8abe0f0840c0d60273b390d"
+    },
+    "k1096Certificate": {
+      "path": "research/experiments/n11-residual72-win8-cert-extract-root8003180-20261120/certs/win8-root-00000000000000003800000008003180-20261120.n11",
+      "sha256": "1393128972a2ee2bd7586239c830caac967ee45166be8ed87107907c42f23e2c",
+      "git_blob_sha1": "afc0a1bc005215696e18e02baaaad3c3bf9ba599"
+    },
+    "k1096Audit": {
+      "path": "research/experiments/n11-residual72-win8-cert-extract-root8003180-20261120/output/win8-cert-extract-verification-20261120.json",
+      "sha256": "ad0d9fb3a30edbd76fcb5562ab01f1e7e51781381377a04fa4a195378eb887da",
+      "git_blob_sha1": "fa70a6f12927ada9bed3da4c02c7dffef87631ad"
+    },
+    "priorVerifier": {
+      "path": "research/experiments/n11-win8-four-row-two-ply-response-cover-20261120/scripts/verify_response_cover_plan.py",
+      "sha256": null,
+      "git_blob_sha1": "e87237026bdf207b8f3052dc6e4fc8e425d40f74"
+    }
+  },
+  "prior_verifier": {
+    "path": "research/experiments/n11-win8-four-row-two-ply-response-cover-20261120/scripts/verify_response_cover_plan.py",
+    "git_blob_sha1": "e87237026bdf207b8f3052dc6e4fc8e425d40f74",
+    "method_difference": "This verifier enumerates all unordered two-stone extensions and uses 4x4 Bareiss elimination; the prior verifier uses sequential legal additions and a 24-term 4x4 determinant."
+  },
+  "parents": {
+    "rows": [
+      "00000000000000003800000008001080",
+      "00000000000000003800000008001100",
+      "00000000000000003800000008002080",
+      "00000000000000003800000008002100"
+    ],
+    "legal_first_moves": [
+      {
+        "row_hex": "00000000000000003800000008001080",
+        "count": 79,
+        "moves": [
+          0,
+          5,
+          6,
+          8,
+          9,
+          11,
+          13,
+          14,
+          16,
+          17,
+          18,
+          24,
+          25,
+          29,
+          31,
+          32,
+          33,
+          34,
+          35,
+          38,
+          41,
+          42,
+          43,
+          44,
+          45,
+          49,
+          52,
+          53,
+          54,
+          66,
+          68,
+          69,
+          71,
+          72,
+          73,
+          74,
+          75,
+          76,
+          77,
+          78,
+          79,
+          80,
+          81,
+          82,
+          83,
+          85,
+          86,
+          88,
+          89,
+          90,
+          91,
+          92,
+          93,
+          94,
+          95,
+          96,
+          97,
+          98,
+          99,
+          100,
+          101,
+          102,
+          103,
+          105,
+          106,
+          107,
+          108,
+          109,
+          110,
+          111,
+          112,
+          113,
+          114,
+          115,
+          116,
+          117,
+          118,
+          119,
+          120
+        ]
+      },
+      {
+        "row_hex": "00000000000000003800000008001100",
+        "count": 82,
+        "moves": [
+          0,
+          4,
+          5,
+          6,
+          7,
+          9,
+          11,
+          13,
+          14,
+          16,
+          17,
+          18,
+          24,
+          25,
+          29,
+          31,
+          32,
+          33,
+          34,
+          35,
+          38,
+          41,
+          42,
+          43,
+          44,
+          45,
+          49,
+          52,
+          53,
+          54,
+          66,
+          68,
+          69,
+          71,
+          72,
+          73,
+          74,
+          75,
+          76,
+          77,
+          78,
+          79,
+          80,
+          81,
+          82,
+          83,
+          84,
+          86,
+          87,
+          88,
+          89,
+          90,
+          91,
+          92,
+          93,
+          94,
+          95,
+          96,
+          97,
+          98,
+          99,
+          100,
+          101,
+          102,
+          103,
+          104,
+          105,
+          106,
+          107,
+          108,
+          109,
+          110,
+          111,
+          112,
+          113,
+          114,
+          115,
+          116,
+          117,
+          118,
+          119,
+          120
+        ]
+      },
+      {
+        "row_hex": "00000000000000003800000008002080",
+        "count": 69,
+        "moves": [
+          0,
+          1,
+          5,
+          6,
+          8,
+          9,
+          11,
+          12,
+          16,
+          17,
+          25,
+          29,
+          30,
+          32,
+          33,
+          34,
+          38,
+          42,
+          43,
+          44,
+          46,
+          53,
+          54,
+          66,
+          67,
+          69,
+          71,
+          72,
+          73,
+          74,
+          75,
+          76,
+          78,
+          79,
+          80,
+          81,
+          83,
+          85,
+          86,
+          88,
+          89,
+          92,
+          93,
+          94,
+          95,
+          96,
+          97,
+          98,
+          99,
+          100,
+          101,
+          102,
+          103,
+          105,
+          106,
+          107,
+          108,
+          109,
+          110,
+          111,
+          112,
+          113,
+          114,
+          115,
+          116,
+          117,
+          118,
+          119,
+          120
+        ]
+      },
+      {
+        "row_hex": "00000000000000003800000008002100",
+        "count": 74,
+        "moves": [
+          0,
+          4,
+          5,
+          6,
+          7,
+          9,
+          10,
+          11,
+          12,
+          16,
+          17,
+          21,
+          25,
+          29,
+          30,
+          32,
+          33,
+          34,
+          38,
+          42,
+          43,
+          44,
+          46,
+          53,
+          54,
+          66,
+          67,
+          69,
+          70,
+          71,
+          72,
+          73,
+          74,
+          75,
+          76,
+          78,
+          79,
+          80,
+          81,
+          83,
+          84,
+          86,
+          87,
+          88,
+          89,
+          92,
+          93,
+          94,
+          95,
+          96,
+          97,
+          98,
+          99,
+          100,
+          101,
+          102,
+          103,
+          104,
+          105,
+          106,
+          107,
+          108,
+          109,
+          110,
+          111,
+          112,
+          113,
+          114,
+          115,
+          116,
+          117,
+          118,
+          119,
+          120
+        ]
+      }
+    ],
+    "obligations_total": 304
+  },
+  "candidate_universe": {
+    "raw_two_stone_pairs": 26220,
+    "safe_raw_extensions": 9744,
+    "safe8_d4_orbits_before_refuted_exclusion": 9490,
+    "known_win8_candidate_hits": [
+      "00000000000000003800000008003180",
+      "0000000800000000380000000810000a"
+    ],
+    "known_refuted_d10_hits": [
+      "00000008000000003800000008100006"
+    ],
+    "available_safe8_d4_orbits_after_refuted_exclusion": 9489,
+    "all_root_obligation_coverage_histogram": {
+      "2": 9237,
+      "4": 251,
+      "8": 1
+    }
+  },
+  "proof_backed_fixed_root": {
+    "root_hex": "00000000000000003800000008003180",
+    "certificate_sha256": "1393128972a2ee2bd7586239c830caac967ee45166be8ed87107907c42f23e2c",
+    "certificate_git_blob_sha1": "afc0a1bc005215696e18e02baaaad3c3bf9ba599",
+    "certificate_bytes": 1251923,
+    "certificate_lines": 34531,
+    "existing_audit_sha256": "ad0d9fb3a30edbd76fcb5562ab01f1e7e51781381377a04fa4a195378eb887da",
+    "existing_audit_gate_count": 18,
+    "existing_audit_all_gates_pass": true,
+    "reverified_in_this_run": false,
+    "obligations_covered": [
+      {
+        "row_hex": "00000000000000003800000008001080",
+        "first_moves": [
+          8,
+          13
+        ]
+      },
+      {
+        "row_hex": "00000000000000003800000008001100",
+        "first_moves": [
+          7,
+          13
+        ]
+      },
+      {
+        "row_hex": "00000000000000003800000008002080",
+        "first_moves": [
+          8,
+          12
+        ]
+      },
+      {
+        "row_hex": "00000000000000003800000008002100",
+        "first_moves": [
+          7,
+          12
+        ]
+      }
+    ]
+  },
+  "additional_obligations": {
+    "total": 296,
+    "coverage_histogram_over_all_nonfixed_candidates": {
+      "2": 9488
+    },
+    "maximum_coverage_per_nonfixed_candidate": 2
+  },
+  "optimal_response_cover": {
+    "lower_bound_additional_roots": 148,
+    "constructed_additional_roots": 148,
+    "total_roots_including_k1096": 149,
+    "exact_once_coverage": true,
+    "k1095_reclassified_as_additional_candidate": true,
+    "selected_root_status_counts": {
+      "k1095_candidate_without_certificate": 1,
+      "safe8_candidates_without_verdict_or_certificate": 147
+    },
+    "selected_roots": [
+      {
+        "root_hex": "0000000800000000380000000810000a",
+        "source": "K1095_WIN8_D10_candidate_no_certificate",
+        "obligations": [
+          "0:109",
+          "0:9"
+        ]
+      },
+      {
+        "root_hex": "00000000000000003800000008002320",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "3:5",
+          "3:9"
+        ]
+      },
+      {
+        "root_hex": "00000000000000003800000008011880",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "0:11",
+          "0:16"
+        ]
+      },
+      {
+        "root_hex": "00000000000000003800000008480018",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "2:32",
+          "2:6"
+        ]
+      },
+      {
+        "root_hex": "0000000000000000380000000a005080",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "0:14",
+          "0:25"
+        ]
+      },
+      {
+        "root_hex": "00000000000000003800000208088008",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "2:17",
+          "2:43"
+        ]
+      },
+      {
+        "root_hex": "00000000000000003800000408180008",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "0:42",
+          "2:42"
+        ]
+      },
+      {
+        "root_hex": "00000000000000003800000408480004",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "3:32",
+          "3:42"
+        ]
+      },
+      {
+        "root_hex": "00000000000000003800000428001080",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "0:29",
+          "0:34"
+        ]
+      },
+      {
+        "root_hex": "00000000000000003800000808001140",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "1:35",
+          "1:6"
+        ]
+      },
+      {
+        "root_hex": "00000000000000003800000808100044",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "1:4",
+          "1:41"
+        ]
+      },
+      {
+        "root_hex": "00000000000000003800004008021080",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "0:17",
+          "0:38"
+        ]
+      },
+      {
+        "root_hex": "00000000000000003800004008900004",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "1:31",
+          "1:38"
+        ]
+      },
+      {
+        "root_hex": "000000000000000038001000080010a0",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "0:44",
+          "0:5"
+        ]
+      },
+      {
+        "root_hex": "0000000000000000380010000a080008",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "2:29",
+          "2:54"
+        ]
+      },
+      {
+        "root_hex": "00000000000000003800100808100008",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "0:41",
+          "0:54"
+        ]
+      },
+      {
+        "root_hex": "00000000000000003800400008110004",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "1:16",
+          "1:52"
+        ]
+      },
+      {
+        "root_hex": "00000000000000043800000008002140",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "3:6",
+          "3:66"
+        ]
+      },
+      {
+        "root_hex": "00000000000000043800000008021100",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "1:17",
+          "1:66"
+        ]
+      },
+      {
+        "root_hex": "00000000000000043820000008002080",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "2:53",
+          "2:66"
+        ]
+      },
+      {
+        "root_hex": "00000000000000083800000008300004",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "1:11",
+          "1:75"
+        ]
+      },
+      {
+        "root_hex": "00000000000000083800000028080008",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "2:25",
+          "2:75"
+        ]
+      },
+      {
+        "root_hex": "00000000000000083800400008002080",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "2:46",
+          "2:67"
+        ]
+      },
+      {
+        "root_hex": "00000000000000103800080008001100",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "1:43",
+          "1:68"
+        ]
+      },
+      {
+        "root_hex": "00000000000000103840000008100004",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "1:44",
+          "1:74"
+        ]
+      },
+      {
+        "root_hex": "00000000000000203800000008001081",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "0:0",
+          "0:69"
+        ]
+      },
+      {
+        "root_hex": "00000000000000203800000008500004",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "1:32",
+          "1:73"
+        ]
+      },
+      {
+        "root_hex": "00000000000000203800000009001100",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "1:24",
+          "1:69"
+        ]
+      },
+      {
+        "root_hex": "00000000000000203800004008002100",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "3:38",
+          "3:69"
+        ]
+      },
+      {
+        "root_hex": "00000000000000403800000008140004",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "1:14",
+          "1:72"
+        ]
+      },
+      {
+        "root_hex": "00000000000000803800000208002080",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "2:33",
+          "2:71"
+        ]
+      },
+      {
+        "root_hex": "00000000000000803800400008100008",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "0:52",
+          "0:71"
+        ]
+      },
+      {
+        "root_hex": "00000000000002043800000008080008",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "2:69",
+          "2:76"
+        ]
+      },
+      {
+        "root_hex": "00000000000020003800000009080004",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "3:30",
+          "3:87"
+        ]
+      },
+      {
+        "root_hex": "00000000000020801202000000081008",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "0:33",
+          "0:89"
+        ]
+      },
+      {
+        "root_hex": "00000000000020801202000000209000",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "0:111",
+          "0:45"
+        ]
+      },
+      {
+        "root_hex": "000000000000208012020000008c0000",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "2:78",
+          "2:89"
+        ]
+      },
+      {
+        "root_hex": "00000000000020801202000000901000",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "0:100",
+          "2:100"
+        ]
+      },
+      {
+        "root_hex": "00000000000020801202000020001080",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "0:77",
+          "0:79"
+        ]
+      },
+      {
+        "root_hex": "00000000000020801202000102001000",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "0:112",
+          "0:35"
+        ]
+      },
+      {
+        "root_hex": "00000000000020801202000120800000",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "2:112",
+          "2:79"
+        ]
+      },
+      {
+        "root_hex": "00000000000020801202020000001040",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "0:66",
+          "0:91"
+        ]
+      },
+      {
+        "root_hex": "00000000000020801202040001001000",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "0:102",
+          "0:24"
+        ]
+      },
+      {
+        "root_hex": "00000000000020801202040080800000",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "2:101",
+          "2:102"
+        ]
+      },
+      {
+        "root_hex": "00000000000020801202080000804000",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "2:113",
+          "2:34"
+        ]
+      },
+      {
+        "root_hex": "00000000000020801212000040001000",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "0:90",
+          "0:92"
+        ]
+      },
+      {
+        "root_hex": "00000000000020801222000000801000",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "0:103",
+          "2:103"
+        ]
+      },
+      {
+        "root_hex": "00000000000020801282000000800200",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "2:5",
+          "2:99"
+        ]
+      },
+      {
+        "root_hex": "00000000000020801312000000800000",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "2:16",
+          "2:92"
+        ]
+      },
+      {
+        "root_hex": "00000000000020801642000000800000",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "2:114",
+          "2:38"
+        ]
+      },
+      {
+        "root_hex": "00000000000020841202010000001000",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "0:6",
+          "0:80"
+        ]
+      },
+      {
+        "root_hex": "00000000000022801202000000001200",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "0:83",
+          "0:99"
+        ]
+      },
+      {
+        "root_hex": "00000000000024801242000000001000",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "0:114",
+          "0:94"
+        ]
+      },
+      {
+        "root_hex": "00000000000028801202000000800400",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "2:105",
+          "2:110"
+        ]
+      },
+      {
+        "root_hex": "00000000000030805202000000001000",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "0:116",
+          "0:82"
+        ]
+      },
+      {
+        "root_hex": "00000000000040003800000008088004",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "3:17",
+          "3:86"
+        ]
+      },
+      {
+        "root_hex": "00000000000040003800400008002100",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "3:46",
+          "3:78"
+        ]
+      },
+      {
+        "root_hex": "00000000000050003800000008001080",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "0:76",
+          "0:78"
+        ]
+      },
+      {
+        "root_hex": "00000000000060801202000080001000",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "0:101",
+          "0:18"
+        ]
+      },
+      {
+        "root_hex": "00000000000100803800000008001100",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "1:71",
+          "1:80"
+        ]
+      },
+      {
+        "root_hex": "00000000000102003800000008002100",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "3:73",
+          "3:80"
+        ]
+      },
+      {
+        "root_hex": "00000000000200003800000008041100",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "1:18",
+          "1:81"
+        ]
+      },
+      {
+        "root_hex": "00000000000200003800000048002080",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "2:30",
+          "2:81"
+        ]
+      },
+      {
+        "root_hex": "00000000000200803800000008080004",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "3:71",
+          "3:83"
+        ]
+      },
+      {
+        "root_hex": "00000000000201003800000008002100",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "3:72",
+          "3:81"
+        ]
+      },
+      {
+        "root_hex": "00000000000204003800000008001080",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "0:74",
+          "0:81"
+        ]
+      },
+      {
+        "root_hex": "00000000000500003800000008100004",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "1:82",
+          "1:84"
+        ]
+      },
+      {
+        "root_hex": "00000000000820801202000000001400",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "0:110",
+          "0:73"
+        ]
+      },
+      {
+        "root_hex": "00000000001040003800000008080008",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "2:80",
+          "2:86"
+        ]
+      },
+      {
+        "root_hex": "00000000002020801202000000800010",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "2:44",
+          "2:95"
+        ]
+      },
+      {
+        "root_hex": "00000000002021801202000000001000",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "0:72",
+          "0:95"
+        ]
+      },
+      {
+        "root_hex": "00000000004022801202000000800000",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "2:106",
+          "2:83"
+        ]
+      },
+      {
+        "root_hex": "00000000008020801202000000800001",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "2:0",
+          "2:117"
+        ]
+      },
+      {
+        "root_hex": "00000000008020801a02000000001000",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "0:117",
+          "0:49"
+        ]
+      },
+      {
+        "root_hex": "00000000010000003800000008002280",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "2:88",
+          "2:9"
+        ]
+      },
+      {
+        "root_hex": "00000000010000003800000008280008",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "2:11",
+          "2:98"
+        ]
+      },
+      {
+        "root_hex": "00000000010000003800080008001080",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "0:43",
+          "0:88"
+        ]
+      },
+      {
+        "root_hex": "00000000010000003800200008080004",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "3:53",
+          "3:98"
+        ]
+      },
+      {
+        "root_hex": "00000000010000801202000000880002",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "3:11",
+          "3:89"
+        ]
+      },
+      {
+        "root_hex": "00000000010000801202000000a00001",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "3:0",
+          "3:111"
+        ]
+      },
+      {
+        "root_hex": "00000000010000801202000020201000",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "1:111",
+          "1:79"
+        ]
+      },
+      {
+        "root_hex": "00000000010000801202000040009000",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "1:45",
+          "1:90"
+        ]
+      },
+      {
+        "root_hex": "00000000010000801202000080900000",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "3:100",
+          "3:101"
+        ]
+      },
+      {
+        "root_hex": "00000000010000801202080000081000",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "1:113",
+          "1:89"
+        ]
+      },
+      {
+        "root_hex": "00000000010000801202100100800000",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "3:112",
+          "3:4"
+        ]
+      },
+      {
+        "root_hex": "00000000010000801206000000800400",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "3:110",
+          "3:70"
+        ]
+      },
+      {
+        "root_hex": "00000000010000801212000080001000",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "1:101",
+          "1:92"
+        ]
+      },
+      {
+        "root_hex": "00000000010000801222000000001080",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "1:103",
+          "1:77"
+        ]
+      },
+      {
+        "root_hex": "00000000010000809202000000800008",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "3:33",
+          "3:93"
+        ]
+      },
+      {
+        "root_hex": "00000000010000821222000000800000",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "3:103",
+          "3:115"
+        ]
+      },
+      {
+        "root_hex": "00000000010002801202000100001000",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "1:112",
+          "1:83"
+        ]
+      },
+      {
+        "root_hex": "00000000010008801202000000001008",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "1:105",
+          "1:33"
+        ]
+      },
+      {
+        "root_hex": "00000000010008801212000000800000",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "3:105",
+          "3:92"
+        ]
+      },
+      {
+        "root_hex": "00000000010010801282000000001000",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "1:116",
+          "1:5"
+        ]
+      },
+      {
+        "root_hex": "00000000010080801202000000800200",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "3:29",
+          "3:99"
+        ]
+      },
+      {
+        "root_hex": "00000000011000801202080000800000",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "3:113",
+          "3:84"
+        ]
+      },
+      {
+        "root_hex": "00000000012000801302000000800000",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "3:16",
+          "3:95"
+        ]
+      },
+      {
+        "root_hex": "00000000012080801202000000001000",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "1:29",
+          "1:95"
+        ]
+      },
+      {
+        "root_hex": "00000000014000801202000000041000",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "1:106",
+          "1:78"
+        ]
+      },
+      {
+        "root_hex": "00000000014000811202000000800000",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "3:104",
+          "3:106"
+        ]
+      },
+      {
+        "root_hex": "00000000018000801202000020800000",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "3:117",
+          "3:79"
+        ]
+      },
+      {
+        "root_hex": "00000000018000809002000004100000",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "0:118",
+          "0:68"
+        ]
+      },
+      {
+        "root_hex": "00000000018004801202000000001000",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "1:117",
+          "1:94"
+        ]
+      },
+      {
+        "root_hex": "00000000020000003800000028100004",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "1:25",
+          "1:97"
+        ]
+      },
+      {
+        "root_hex": "00000000020000003840000008080004",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "3:44",
+          "3:97"
+        ]
+      },
+      {
+        "root_hex": "00000000020000083800000008100008",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "0:75",
+          "0:97"
+        ]
+      },
+      {
+        "root_hex": "00000000020000403800000008080008",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "2:72",
+          "2:97"
+        ]
+      },
+      {
+        "root_hex": "00000000020000801202000000500040",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "3:108",
+          "3:76"
+        ]
+      },
+      {
+        "root_hex": "00000000020000801202000010600000",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "3:119",
+          "3:74"
+        ]
+      },
+      {
+        "root_hex": "00000000020000801202000100400002",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "3:118",
+          "3:21"
+        ]
+      },
+      {
+        "root_hex": "00000000020000801202000320000000",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "2:118",
+          "2:85"
+        ]
+      },
+      {
+        "root_hex": "00000000020000801202008200200000",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "2:119",
+          "2:73"
+        ]
+      },
+      {
+        "root_hex": "00000000020000801212000000400010",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "3:54",
+          "3:94"
+        ]
+      },
+      {
+        "root_hex": "00000000020000801212000200000200",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "2:109",
+          "2:94"
+        ]
+      },
+      {
+        "root_hex": "00000000020000801242000000400008",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "3:116",
+          "3:43"
+        ]
+      },
+      {
+        "root_hex": "00000000020000801242000200000400",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "2:116",
+          "2:120"
+        ]
+      },
+      {
+        "root_hex": "00000000020000809202000200100000",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "2:108",
+          "2:93"
+        ]
+      },
+      {
+        "root_hex": "00000000020000821202000280000000",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "2:107",
+          "2:115"
+        ]
+      },
+      {
+        "root_hex": "00000000020010801202000000420000",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "3:114",
+          "3:75"
+        ]
+      },
+      {
+        "root_hex": "00000000020080801202000000400400",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "3:120",
+          "3:25"
+        ]
+      },
+      {
+        "root_hex": "00000000024000801202000000400001",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "3:10",
+          "3:102"
+        ]
+      },
+      {
+        "root_hex": "00000000040000003800000008080208",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "2:1",
+          "2:96"
+        ]
+      },
+      {
+        "root_hex": "00000000040000003800040008100004",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "1:34",
+          "1:96"
+        ]
+      },
+      {
+        "root_hex": "00000000050000003800000008100008",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "0:96",
+          "0:98"
+        ]
+      },
+      {
+        "root_hex": "00000000080000003800000008001300",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "1:9",
+          "1:91"
+        ]
+      },
+      {
+        "root_hex": "00000000108000809002000080000800",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "2:111",
+          "2:74"
+        ]
+      },
+      {
+        "root_hex": "00000000200000003800100008100004",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "1:54",
+          "1:93"
+        ]
+      },
+      {
+        "root_hex": "00000000200040003800000008100008",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "0:86",
+          "0:93"
+        ]
+      },
+      {
+        "root_hex": "00000001010000003800000008002100",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "3:88",
+          "3:96"
+        ]
+      },
+      {
+        "root_hex": "00000002010000801202000000001001",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "1:0",
+          "1:107"
+        ]
+      },
+      {
+        "root_hex": "00000002010000801202000000804000",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "3:107",
+          "3:34"
+        ]
+      },
+      {
+        "root_hex": "00000004010000801a02000000001000",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "1:118",
+          "1:49"
+        ]
+      },
+      {
+        "root_hex": "00000008000000003820000008001100",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "1:53",
+          "1:99"
+        ]
+      },
+      {
+        "root_hex": "00000008000008003800000008080004",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "3:109",
+          "3:67"
+        ]
+      },
+      {
+        "root_hex": "00000008088000809002000000100000",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "0:119",
+          "0:85"
+        ]
+      },
+      {
+        "root_hex": "0000000c000000809002000000100004",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "1:119",
+          "1:88"
+        ]
+      },
+      {
+        "root_hex": "00000010000000801202000000400440",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "1:120",
+          "1:76"
+        ]
+      },
+      {
+        "root_hex": "00000010000000801202000280100000",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "0:107",
+          "0:108"
+        ]
+      },
+      {
+        "root_hex": "00000010000000801202040200000004",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "0:106",
+          "0:32"
+        ]
+      },
+      {
+        "root_hex": "00000010000000801222000200000400",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "0:105",
+          "0:120"
+        ]
+      },
+      {
+        "root_hex": "00000010000000811202000000404000",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "1:104",
+          "1:42"
+        ]
+      },
+      {
+        "root_hex": "00000010000000821202000000440000",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "1:115",
+          "1:86"
+        ]
+      },
+      {
+        "root_hex": "00000010000000821202000200008000",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "0:115",
+          "0:53"
+        ]
+      },
+      {
+        "root_hex": "00000010000010801202000000500000",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "1:108",
+          "1:114"
+        ]
+      },
+      {
+        "root_hex": "00000010004000801202000000400200",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "1:102",
+          "1:109"
+        ]
+      },
+      {
+        "root_hex": "00000010008000003800000008001100",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "1:100",
+          "1:87"
+        ]
+      },
+      {
+        "root_hex": "00000010008000801202000200002000",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "0:113",
+          "0:31"
+        ]
+      },
+      {
+        "root_hex": "00004004000000003800000008001100",
+        "source": "published_147_root_geometric_plan_no_verdict",
+        "obligations": [
+          "1:110",
+          "1:98"
+        ]
+      }
+    ]
+  },
+  "checks": [
+    {
+      "gate": "all_input_sha256_and_git_blob_pins",
+      "passed": true
+    },
+    {
+      "gate": "prior_verifier_blob_pin",
+      "passed": true
+    },
+    {
+      "gate": "k1085_residual72_and_four_parent_membership",
+      "passed": true
+    },
+    {
+      "gate": "four_parent_rows_are_safe_six_stone_positions",
+      "passed": true
+    },
+    {
+      "gate": "legal_first_moves_rederived_79_82_69_74",
+      "passed": true
+    },
+    {
+      "gate": "304_first_move_obligations_rederived",
+      "passed": true
+    },
+    {
+      "gate": "all_safe8_extensions_rebuilt_by_bareiss_and_d4",
+      "passed": true
+    },
+    {
+      "gate": "9490_candidate_orbits_and_9744_safe_raw_pairs",
+      "passed": true
+    },
+    {
+      "gate": "known_win8_intersection_is_exactly_k1096_and_k1095",
+      "passed": true
+    },
+    {
+      "gate": "known_refuted_intersection_is_exactly_one_root",
+      "passed": true
+    },
+    {
+      "gate": "k1096_certificate_bytes_and_existing_18_gate_audit_pinned",
+      "passed": true
+    },
+    {
+      "gate": "k1096_certificate_is_the_only_fixed_proof_root",
+      "passed": true
+    },
+    {
+      "gate": "k1096_covers_exactly_eight_obligations",
+      "passed": true
+    },
+    {
+      "gate": "k1095_reclassified_as_unproved_candidate_covering_two",
+      "passed": true
+    },
+    {
+      "gate": "296_positive_obligations_after_k1096",
+      "passed": true
+    },
+    {
+      "gate": "all_9488_nonfixed_candidates_cover_exactly_two_positive_obligations",
+      "passed": true
+    },
+    {
+      "gate": "148_additional_roots_are_safe_unique_and_available",
+      "passed": true
+    },
+    {
+      "gate": "148_roots_cover_296_obligations_exactly_once",
+      "passed": true
+    },
+    {
+      "gate": "lower_bound_148_equals_constructed_cover_148",
+      "passed": true
+    }
+  ],
+  "interpretation_guard": [
+    "K1096 is the only proof-backed root fixed in this plan; its existing triple-verification audit and certificate bytes are hash-pinned but its proof is not re-run here.",
+    "K1095 is only a WIN8-D10 candidate and is counted among the 148 additional roots, not as an already-proved root.",
+    "The other 147 selected roots are safe 8-stone candidates only; this audit assigns them no WIN/LOSS verdict.",
+    "The 149-root minimum is for this four-parent, two-ply response-cover construction after excluding the known REFUTED-D10 orbit, conditional on proving all 148 additional roots.",
+    "This is a geometric response-cover result only: no S6 row is closed, no receipt is folded, and no game value is inferred.",
+    "REFUTED-D10 is not a LOSS proof; node counts and solved counts are not game outcomes.",
+    "The standard 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, and classes 1/2/4 remain UNKNOWN."
+  ]
+}

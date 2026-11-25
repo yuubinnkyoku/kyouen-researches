@@ -1,0 +1,77 @@
+{
+  "date": "2026-10-15",
+  "board": "11x11",
+  "rules": "standard q=4 complete-call normal-play",
+  "verdict_perspective": "fixed-original-first-player",
+  "main_checked": "ebcd4cbb4616c7e027050af62940c077a4c4c792",
+  "empty_root": "UNKNOWN",
+  "new_two_stone_roots": 0,
+  "s10_cache_before": 51164,
+  "s10_cache_after": 51571,
+  "s10_delta": {
+    "WIN": 364,
+    "LOSS": 43,
+    "total": 407,
+    "independent_cpp_python_terminal_states": 378648,
+    "conflicts": 0
+  },
+  "s9_win_before": 1588,
+  "s9_win_after": 1611,
+  "s8_win_before": 13314,
+  "s8_win_after": 13501,
+  "s8_loss_before": 291,
+  "s8_loss_after": 294,
+  "s7_loss_before": 2213,
+  "s7_loss_after": 2232,
+  "s7_win_before": 17,
+  "s7_win_after": 17,
+  "s8_loss_roots": [
+    "00000000001040001000044400810000",
+    "00000000004020001000044480010000",
+    "00000000040014011004000404000000"
+  ],
+  "s8_loss_certificate": {
+    "s9_obligations": 104,
+    "s10_terminal_loss_leaves": 63,
+    "terminal_memo_states": 85676,
+    "candidate_pool": 143,
+    "candidate_restricted_milp_gap": 0,
+    "states_min_milp_gap": 0
+  },
+  "s8_win_certificates": [
+    {
+      "roots": 171,
+      "s9_witnesses": 21,
+      "s10_terminal_win_leaves": 517,
+      "terminal_memo_states": 152566
+    },
+    {
+      "roots": 16,
+      "s9_witnesses": 2,
+      "s10_terminal_win_leaves": 38,
+      "terminal_memo_states": 5929
+    }
+  ],
+  "new_s7_loss": 19,
+  "next_s6_root": "00000000000040001000044400010000",
+  "next_s6_legal_s7": 51,
+  "next_s6_loss_s7": 23,
+  "next_s6_unknown_s7": 28,
+  "trust_boundary": "S8 certificates cache-free terminal-only; first 51164 cache records retain previous audit provenance; 2229 C++-only candidates excluded from verified cache",
+  "github_write": "blocked_by_safety_check",
+  "near_loss_rank_after_verified_cache": {
+    "coverage_threshold_known_s9": 12,
+    "maximum_missing_s9": 5,
+    "candidates": 475,
+    "classified": 475,
+    "unknown": 0,
+    "missing_histogram": {
+      "0": 293,
+      "1": 38,
+      "2": 47,
+      "3": 35,
+      "4": 33,
+      "5": 29
+    }
+  }
+}

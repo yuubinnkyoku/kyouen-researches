@@ -1,0 +1,1284 @@
+{
+  "command_options": [
+    "--n=11",
+    "--memo=22",
+    "--exact-order=count"
+  ],
+  "hardware": {
+    "machine": "AMD64",
+    "node": "ASUSSSSSSSSSS",
+    "processor": "AMD64 Family 25 Model 80 Stepping 0, AuthenticAMD",
+    "release": "11",
+    "system": "Windows",
+    "version": "10.0.26200"
+  },
+  "history_sha256": "1ed1f0f4d94417ab1b81ec6ddbe81cbeaef0596a0b62db9929a7f3f794d58791",
+  "plan": "research/experiments/n11-strategy-redesign-20261010/output/next-class-completion-plan.json",
+  "plan_sha256": "dbc22bac253965022c7355fe6f4b5ed8abaa45f3f6ece88edb3c99d885d39618",
+  "residual_header_sha256": "5976935dcfccb9b5a26fa68f8de20868ce45363dd8c372dcd67d9b841167e7f5",
+  "results": [
+    {
+      "arm": "B_completion",
+      "budget": 15000000,
+      "command": [
+        "D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\.local\\n11\\strategy-20261010\\dfpn.exe",
+        "--n=11",
+        "--memo=22",
+        "--exact-replay=D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\research\\experiments\\n11-strategy-redesign-20261010\\output\\next-class-completion\\row-0\\s5-5908722711379574784-0.input.csv",
+        "--only=5",
+        "--exact-order=count",
+        "--exact-replay-budget=15000000",
+        "--csv=D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\research\\experiments\\n11-strategy-redesign-20261010\\output\\next-class-completion\\row-0\\s5-5908722711379574784-0.out.csv"
+      ],
+      "exit_code": 0,
+      "group": "B-[1297036692952186880, 0]",
+      "input": "research/experiments/n11-strategy-redesign-20261010/output/next-class-completion/row-0/s5-5908722711379574784-0.input.csv",
+      "input_sha256": "f45814f2923672b4ab2b7441e9e0c605be40e8c7bb77bdffa031502e689acf79",
+      "key": [
+        5908722711379574784,
+        0
+      ],
+      "legal": 88,
+      "log": "research/experiments/n11-strategy-redesign-20261010/output/next-class-completion/row-0/s5-5908722711379574784-0.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "nodes": 2405476,
+      "peak_rss_bytes": 173273088,
+      "raw": "research/experiments/n11-strategy-redesign-20261010/output/next-class-completion/row-0/s5-5908722711379574784-0.out.csv",
+      "raw_sha256": "59d7803ca11090baae3b6d2f1141ad52b4caea0249287860153c4a470e07f51e",
+      "stones": 5,
+      "verdict": 2,
+      "wall_seconds": 8.343999999997322
+    },
+    {
+      "arm": "B_completion",
+      "budget": 15000000,
+      "command": [
+        "D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\.local\\n11\\strategy-20261010\\dfpn.exe",
+        "--n=11",
+        "--memo=22",
+        "--exact-replay=D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\research\\experiments\\n11-strategy-redesign-20261010\\output\\next-class-completion\\row-3\\s5-1585267069103898624-0.input.csv",
+        "--only=5",
+        "--exact-order=count",
+        "--exact-replay-budget=15000000",
+        "--csv=D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\research\\experiments\\n11-strategy-redesign-20261010\\output\\next-class-completion\\row-3\\s5-1585267069103898624-0.out.csv"
+      ],
+      "exit_code": 0,
+      "group": "B-[1297036692952186880, 0]",
+      "input": "research/experiments/n11-strategy-redesign-20261010/output/next-class-completion/row-3/s5-1585267069103898624-0.input.csv",
+      "input_sha256": "dad6ed4623f2d0cac5d2eb0e3fbffdf17ee9e34bfcbc28cf7b37dd79df152300",
+      "key": [
+        1585267069103898624,
+        0
+      ],
+      "legal": 89,
+      "log": "research/experiments/n11-strategy-redesign-20261010/output/next-class-completion/row-3/s5-1585267069103898624-0.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "nodes": 2703217,
+      "peak_rss_bytes": 172748800,
+      "raw": "research/experiments/n11-strategy-redesign-20261010/output/next-class-completion/row-3/s5-1585267069103898624-0.out.csv",
+      "raw_sha256": "86d7e1bfce6597181be84dd509626a2b3d2901658dd308e4e4d9d3c1aed49f3b",
+      "stones": 5,
+      "verdict": 2,
+      "wall_seconds": 9.360000000000582
+    },
+    {
+      "arm": "B_completion",
+      "budget": 15000000,
+      "command": [
+        "D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\.local\\n11\\strategy-20261010\\dfpn.exe",
+        "--n=11",
+        "--memo=22",
+        "--exact-replay=D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\research\\experiments\\n11-strategy-redesign-20261010\\output\\next-class-completion\\row-2\\s5-1297318167928897536-0.input.csv",
+        "--only=5",
+        "--exact-order=count",
+        "--exact-replay-budget=15000000",
+        "--csv=D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\research\\experiments\\n11-strategy-redesign-20261010\\output\\next-class-completion\\row-2\\s5-1297318167928897536-0.out.csv"
+      ],
+      "exit_code": 0,
+      "group": "B-[1297036692952186880, 0]",
+      "input": "research/experiments/n11-strategy-redesign-20261010/output/next-class-completion/row-2/s5-1297318167928897536-0.input.csv",
+      "input_sha256": "377b1684094f7b1dbad8071aca1acee599dedd0fdad1a147694007a2518deebe",
+      "key": [
+        1297318167928897536,
+        0
+      ],
+      "legal": 89,
+      "log": "research/experiments/n11-strategy-redesign-20261010/output/next-class-completion/row-2/s5-1297318167928897536-0.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "nodes": 3565285,
+      "peak_rss_bytes": 172752896,
+      "raw": "research/experiments/n11-strategy-redesign-20261010/output/next-class-completion/row-2/s5-1297318167928897536-0.out.csv",
+      "raw_sha256": "911aec5f21aa081f05c54d96c41f93e50ff4e4b3db077fbd48f1abb6e1f76c7f",
+      "stones": 5,
+      "verdict": 2,
+      "wall_seconds": 12.26600000000326
+    },
+    {
+      "arm": "B_completion",
+      "budget": 15000000,
+      "command": [
+        "D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\.local\\n11\\strategy-20261010\\dfpn.exe",
+        "--n=11",
+        "--memo=22",
+        "--exact-replay=D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\research\\experiments\\n11-strategy-redesign-20261010\\output\\next-class-completion\\row-5\\s5-1297036692952186912-0.input.csv",
+        "--only=5",
+        "--exact-order=count",
+        "--exact-replay-budget=15000000",
+        "--csv=D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\research\\experiments\\n11-strategy-redesign-20261010\\output\\next-class-completion\\row-5\\s5-1297036692952186912-0.out.csv"
+      ],
+      "exit_code": 0,
+      "group": "B-[1297036692952186880, 0]",
+      "input": "research/experiments/n11-strategy-redesign-20261010/output/next-class-completion/row-5/s5-1297036692952186912-0.input.csv",
+      "input_sha256": "d65e8315486bce987314f2685bf86d89a2e585bf7c306ecd051837e12a60a523",
+      "key": [
+        1297036692952186912,
+        0
+      ],
+      "legal": 90,
+      "log": "research/experiments/n11-strategy-redesign-20261010/output/next-class-completion/row-5/s5-1297036692952186912-0.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "nodes": 1467564,
+      "peak_rss_bytes": 173322240,
+      "raw": "research/experiments/n11-strategy-redesign-20261010/output/next-class-completion/row-5/s5-1297036692952186912-0.out.csv",
+      "raw_sha256": "ca318dccc2d20f6be84a043532605e4cbaab85accd7b3f4e116028efb6fd1b38",
+      "stones": 5,
+      "verdict": 2,
+      "wall_seconds": 4.625
+    },
+    {
+      "arm": "B_completion",
+      "budget": 15000000,
+      "command": [
+        "D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\.local\\n11\\strategy-20261010\\dfpn.exe",
+        "--n=11",
+        "--memo=22",
+        "--exact-replay=D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\research\\experiments\\n11-strategy-redesign-20261010\\output\\next-class-completion\\row-7\\s5-10412322338547699712-0.input.csv",
+        "--only=5",
+        "--exact-order=count",
+        "--exact-replay-budget=15000000",
+        "--csv=D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\research\\experiments\\n11-strategy-redesign-20261010\\output\\next-class-completion\\row-7\\s5-10412322338547699712-0.out.csv"
+      ],
+      "exit_code": 0,
+      "group": "B-[1297036692952186880, 0]",
+      "input": "research/experiments/n11-strategy-redesign-20261010/output/next-class-completion/row-7/s5-10412322338547699712-0.input.csv",
+      "input_sha256": "528ebd3a3c61fb83178ed95e2298be2ed2320cea7e8705c0580f0b35a55a2bf1",
+      "key": [
+        10412322338547699712,
+        0
+      ],
+      "legal": 90,
+      "log": "research/experiments/n11-strategy-redesign-20261010/output/next-class-completion/row-7/s5-10412322338547699712-0.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "nodes": 2506724,
+      "peak_rss_bytes": 173326336,
+      "raw": "research/experiments/n11-strategy-redesign-20261010/output/next-class-completion/row-7/s5-10412322338547699712-0.out.csv",
+      "raw_sha256": "ec803ed70c1d921620a8d21abef21345fa9a0f9fbca7df8782a69d9e4fb7a050",
+      "stones": 5,
+      "verdict": 2,
+      "wall_seconds": 8.453999999997905
+    },
+    {
+      "arm": "B_completion",
+      "budget": 15000000,
+      "command": [
+        "D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\.local\\n11\\strategy-20261010\\dfpn.exe",
+        "--n=11",
+        "--memo=22",
+        "--exact-replay=D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\research\\experiments\\n11-strategy-redesign-20261010\\output\\next-class-completion\\row-6\\s5-1297036694025928704-0.input.csv",
+        "--only=5",
+        "--exact-order=count",
+        "--exact-replay-budget=15000000",
+        "--csv=D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\research\\experiments\\n11-strategy-redesign-20261010\\output\\next-class-completion\\row-6\\s5-1297036694025928704-0.out.csv"
+      ],
+      "exit_code": 0,
+      "group": "B-[1297036692952186880, 0]",
+      "input": "research/experiments/n11-strategy-redesign-20261010/output/next-class-completion/row-6/s5-1297036694025928704-0.input.csv",
+      "input_sha256": "0fb1e6fde35dc4ce83fd1f5ecb5b209d1390b1cc843384d010e7c3226b7af449",
+      "key": [
+        1297036694025928704,
+        0
+      ],
+      "legal": 90,
+      "log": "research/experiments/n11-strategy-redesign-20261010/output/next-class-completion/row-6/s5-1297036694025928704-0.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "nodes": 4829763,
+      "peak_rss_bytes": 172802048,
+      "raw": "research/experiments/n11-strategy-redesign-20261010/output/next-class-completion/row-6/s5-1297036694025928704-0.out.csv",
+      "raw_sha256": "e0c7b6cacbf8a21106bd522edada2b91140ab82a5013a7a3b6ea72f25a622959",
+      "stones": 5,
+      "verdict": 2,
+      "wall_seconds": 16.98399999999674
+    },
+    {
+      "arm": "B_completion",
+      "budget": 15000000,
+      "command": [
+        "D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\.local\\n11\\strategy-20261010\\dfpn.exe",
+        "--n=11",
+        "--memo=22",
+        "--exact-replay=D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\research\\experiments\\n11-strategy-redesign-20261010\\output\\next-class-completion\\row-8\\s5-1229482698273193984-536870912.input.csv",
+        "--only=5",
+        "--exact-order=count",
+        "--exact-replay-budget=15000000",
+        "--csv=D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\research\\experiments\\n11-strategy-redesign-20261010\\output\\next-class-completion\\row-8\\s5-1229482698273193984-536870912.out.csv"
+      ],
+      "exit_code": 0,
+      "group": "B-[1297036692952186880, 0]",
+      "input": "research/experiments/n11-strategy-redesign-20261010/output/next-class-completion/row-8/s5-1229482698273193984-536870912.input.csv",
+      "input_sha256": "1d213779450a529db8c28722afcd5c1762f15dd8182a5b392c5d341ae6efa599",
+      "key": [
+        1229482698273193984,
+        536870912
+      ],
+      "legal": 91,
+      "log": "research/experiments/n11-strategy-redesign-20261010/output/next-class-completion/row-8/s5-1229482698273193984-536870912.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "nodes": 3117021,
+      "peak_rss_bytes": 172867584,
+      "raw": "research/experiments/n11-strategy-redesign-20261010/output/next-class-completion/row-8/s5-1229482698273193984-536870912.out.csv",
+      "raw_sha256": "aa41d1d974fdeae404bfdbf30b89e7540061c1d1f6c5fb0a2ff1b17a81c84779",
+      "stones": 5,
+      "verdict": 2,
+      "wall_seconds": 11.062999999994645
+    },
+    {
+      "arm": "B_completion",
+      "budget": 15000000,
+      "command": [
+        "D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\.local\\n11\\strategy-20261010\\dfpn.exe",
+        "--n=11",
+        "--memo=22",
+        "--exact-replay=D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\research\\experiments\\n11-strategy-redesign-20261010\\output\\next-class-completion\\row-9\\s5-1297036692952187904-0.input.csv",
+        "--only=5",
+        "--exact-order=count",
+        "--exact-replay-budget=15000000",
+        "--csv=D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\research\\experiments\\n11-strategy-redesign-20261010\\output\\next-class-completion\\row-9\\s5-1297036692952187904-0.out.csv"
+      ],
+      "exit_code": 0,
+      "group": "B-[1297036692952186880, 0]",
+      "input": "research/experiments/n11-strategy-redesign-20261010/output/next-class-completion/row-9/s5-1297036692952187904-0.input.csv",
+      "input_sha256": "c8fa330310cae5008777ce9207d5daed12bd313554ab136b4078b9581b050f74",
+      "key": [
+        1297036692952187904,
+        0
+      ],
+      "legal": 91,
+      "log": "research/experiments/n11-strategy-redesign-20261010/output/next-class-completion/row-9/s5-1297036692952187904-0.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "nodes": 3458403,
+      "peak_rss_bytes": 172797952,
+      "raw": "research/experiments/n11-strategy-redesign-20261010/output/next-class-completion/row-9/s5-1297036692952187904-0.out.csv",
+      "raw_sha256": "a2acf4168ee07908497237f6d7c5f242ebd7d652e6f7e563d3e124fcf5f0ca0c",
+      "stones": 5,
+      "verdict": 2,
+      "wall_seconds": 11.796999999991385
+    },
+    {
+      "arm": "B_completion",
+      "budget": 15000000,
+      "command": [
+        "D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\.local\\n11\\strategy-20261010\\dfpn.exe",
+        "--n=11",
+        "--memo=22",
+        "--exact-replay=D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\research\\experiments\\n11-strategy-redesign-20261010\\output\\next-class-completion\\row-1\\s5-1157460288607354880-536870912.input.csv",
+        "--only=5",
+        "--exact-order=count",
+        "--exact-replay-budget=15000000",
+        "--csv=D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\research\\experiments\\n11-strategy-redesign-20261010\\output\\next-class-completion\\row-1\\s5-1157460288607354880-536870912.out.csv"
+      ],
+      "exit_code": 0,
+      "group": "B-[1297036692952186880, 0]",
+      "input": "research/experiments/n11-strategy-redesign-20261010/output/next-class-completion/row-1/s5-1157460288607354880-536870912.input.csv",
+      "input_sha256": "a7325525457f1824b09c9a973777e292d817935eb0293db25c3d7e013bb0dd79",
+      "key": [
+        1157460288607354880,
+        536870912
+      ],
+      "legal": 89,
+      "log": "research/experiments/n11-strategy-redesign-20261010/output/next-class-completion/row-1/s5-1157460288607354880-536870912.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "nodes": 12635570,
+      "peak_rss_bytes": 173330432,
+      "raw": "research/experiments/n11-strategy-redesign-20261010/output/next-class-completion/row-1/s5-1157460288607354880-536870912.out.csv",
+      "raw_sha256": "7ca890348408a9728d47752187352c0017f5d9095138dc668b913bf9a53dd984",
+      "stones": 5,
+      "verdict": 1,
+      "wall_seconds": 49.375
+    },
+    {
+      "arm": "B_completion",
+      "budget": 15000000,
+      "group": "B-[1297036692952186880, 0]",
+      "key": [
+        1297036692968964096,
+        0
+      ],
+      "skipped": "class WIN witness; not dispatched",
+      "stones": 5
+    },
+    {
+      "arm": "B_completion",
+      "budget": 15000000,
+      "group": "B-[1297036692952186880, 0]",
+      "key": [
+        1297037242708000768,
+        0
+      ],
+      "skipped": "class WIN witness; not dispatched",
+      "stones": 5
+    },
+    {
+      "arm": "B_completion",
+      "budget": 15000000,
+      "group": "B-[1297036692952186880, 0]",
+      "key": [
+        1873497445255610368,
+        0
+      ],
+      "skipped": "class WIN witness; not dispatched",
+      "stones": 5
+    },
+    {
+      "arm": "B_completion",
+      "budget": 15000000,
+      "group": "B-[1297036692952186880, 0]",
+      "key": [
+        10376293541528735744,
+        8
+      ],
+      "skipped": "class WIN witness; not dispatched",
+      "stones": 5
+    },
+    {
+      "arm": "B_completion",
+      "budget": 15000000,
+      "group": "B-[1297036692952186880, 0]",
+      "key": [
+        1297036692952187136,
+        0
+      ],
+      "skipped": "class WIN witness; not dispatched",
+      "stones": 5
+    },
+    {
+      "arm": "B_completion",
+      "budget": 15000000,
+      "group": "B-[1297036692952186880, 0]",
+      "key": [
+        1297036692952203264,
+        0
+      ],
+      "skipped": "class WIN witness; not dispatched",
+      "stones": 5
+    },
+    {
+      "arm": "B_completion",
+      "budget": 15000000,
+      "group": "B-[1297036692952186880, 0]",
+      "key": [
+        1297036692952219648,
+        0
+      ],
+      "skipped": "class WIN witness; not dispatched",
+      "stones": 5
+    },
+    {
+      "arm": "B_completion",
+      "budget": 15000000,
+      "group": "B-[1297036692952186880, 0]",
+      "key": [
+        1297036967830093824,
+        0
+      ],
+      "skipped": "class WIN witness; not dispatched",
+      "stones": 5
+    },
+    {
+      "arm": "B_completion",
+      "budget": 15000000,
+      "group": "B-[1297036692952186880, 0]",
+      "key": [
+        1297036692952186881,
+        0
+      ],
+      "skipped": "class WIN witness; not dispatched",
+      "stones": 5
+    },
+    {
+      "arm": "B_completion",
+      "budget": 15000000,
+      "group": "B-[1297036692952186880, 0]",
+      "key": [
+        1297036692952195072,
+        0
+      ],
+      "skipped": "class WIN witness; not dispatched",
+      "stones": 5
+    },
+    {
+      "arm": "B_completion",
+      "budget": 15000000,
+      "group": "B-[1297036692952186880, 0]",
+      "key": [
+        1297036697247154176,
+        0
+      ],
+      "skipped": "class WIN witness; not dispatched",
+      "stones": 5
+    },
+    {
+      "arm": "B_completion",
+      "budget": 15000000,
+      "group": "B-[1297036692952186880, 0]",
+      "key": [
+        1297036830391140352,
+        0
+      ],
+      "skipped": "class WIN witness; not dispatched",
+      "stones": 5
+    },
+    {
+      "arm": "B_completion",
+      "budget": 15000000,
+      "group": "B-[1297036692952186880, 0]",
+      "key": [
+        1297036692952187008,
+        0
+      ],
+      "skipped": "class WIN witness; not dispatched",
+      "stones": 5
+    },
+    {
+      "arm": "B_completion",
+      "budget": 15000000,
+      "group": "B-[1297036692952186880, 0]",
+      "key": [
+        1297036692952252416,
+        0
+      ],
+      "skipped": "class WIN witness; not dispatched",
+      "stones": 5
+    },
+    {
+      "arm": "B_completion",
+      "budget": 15000000,
+      "group": "B-[1297036692952186880, 0]",
+      "key": [
+        1157425104235266048,
+        553648128
+      ],
+      "skipped": "class WIN witness; not dispatched",
+      "stones": 5
+    },
+    {
+      "arm": "B_completion",
+      "budget": 15000000,
+      "group": "B-[1297036692952186880, 0]",
+      "key": [
+        1157442696421310464,
+        536870912
+      ],
+      "skipped": "class WIN witness; not dispatched",
+      "stones": 5
+    },
+    {
+      "arm": "B_completion",
+      "budget": 15000000,
+      "group": "B-[1297036692952186880, 0]",
+      "key": [
+        1297036692952186880,
+        32
+      ],
+      "skipped": "class WIN witness; not dispatched",
+      "stones": 5
+    },
+    {
+      "arm": "B_completion",
+      "budget": 15000000,
+      "group": "B-[1297036692952186880, 0]",
+      "key": [
+        1297036692952186880,
+        128
+      ],
+      "skipped": "class WIN witness; not dispatched",
+      "stones": 5
+    },
+    {
+      "arm": "B_completion",
+      "budget": 15000000,
+      "group": "B-[1297036692952186880, 0]",
+      "key": [
+        1297036692952186884,
+        0
+      ],
+      "skipped": "class WIN witness; not dispatched",
+      "stones": 5
+    },
+    {
+      "arm": "B_completion",
+      "budget": 15000000,
+      "group": "B-[1297036692952186880, 0]",
+      "key": [
+        1297036695099670528,
+        0
+      ],
+      "skipped": "class WIN witness; not dispatched",
+      "stones": 5
+    },
+    {
+      "arm": "B_completion",
+      "budget": 15000000,
+      "group": "B-[1297036692952186880, 0]",
+      "key": [
+        1297107061696364544,
+        0
+      ],
+      "skipped": "class WIN witness; not dispatched",
+      "stones": 5
+    },
+    {
+      "arm": "B_completion",
+      "budget": 15000000,
+      "group": "B-[1297036692952186880, 0]",
+      "key": [
+        1369094286990114816,
+        0
+      ],
+      "skipped": "class WIN witness; not dispatched",
+      "stones": 5
+    },
+    {
+      "arm": "B_completion",
+      "budget": 15000000,
+      "group": "B-[1297036692952186880, 0]",
+      "key": [
+        1297036692952190976,
+        0
+      ],
+      "skipped": "class WIN witness; not dispatched",
+      "stones": 5
+    },
+    {
+      "arm": "B_completion",
+      "budget": 15000000,
+      "group": "B-[1297036692952186880, 0]",
+      "key": [
+        1297036693019295744,
+        0
+      ],
+      "skipped": "class WIN witness; not dispatched",
+      "stones": 5
+    },
+    {
+      "arm": "B_completion",
+      "budget": 15000000,
+      "group": "B-[1297036692952186880, 0]",
+      "key": [
+        1297041090998697984,
+        0
+      ],
+      "skipped": "class WIN witness; not dispatched",
+      "stones": 5
+    },
+    {
+      "arm": "B_completion",
+      "budget": 15000000,
+      "group": "B-[1297036692952186880, 0]",
+      "key": [
+        1315051091461668864,
+        0
+      ],
+      "skipped": "class WIN witness; not dispatched",
+      "stones": 5
+    },
+    {
+      "arm": "B_completion",
+      "budget": 15000000,
+      "group": "B-[1297036692952186880, 0]",
+      "key": [
+        1152991873351029760,
+        536870912
+      ],
+      "skipped": "class WIN witness; not dispatched",
+      "stones": 5
+    },
+    {
+      "arm": "B_completion",
+      "budget": 15000000,
+      "group": "B-[1297036692952186880, 0]",
+      "key": [
+        1297036692954284032,
+        0
+      ],
+      "skipped": "class WIN witness; not dispatched",
+      "stones": 5
+    },
+    {
+      "arm": "B_completion",
+      "budget": 15000000,
+      "group": "B-[1297036692952186880, 0]",
+      "key": [
+        1306043892206927872,
+        0
+      ],
+      "skipped": "class WIN witness; not dispatched",
+      "stones": 5
+    },
+    {
+      "arm": "B_completion",
+      "budget": 15000000,
+      "group": "B-[1297036692952186880, 0]",
+      "key": [
+        10376293541528735744,
+        65536
+      ],
+      "skipped": "class WIN witness; not dispatched",
+      "stones": 5
+    },
+    {
+      "arm": "B_completion",
+      "budget": 15000000,
+      "group": "B-[1297036692952186880, 0]",
+      "key": [
+        1297036692952186880,
+        16384
+      ],
+      "skipped": "class WIN witness; not dispatched",
+      "stones": 5
+    },
+    {
+      "arm": "B_completion",
+      "budget": 15000000,
+      "group": "B-[1297036692952186880, 0]",
+      "key": [
+        1297036692952186880,
+        131072
+      ],
+      "skipped": "class WIN witness; not dispatched",
+      "stones": 5
+    },
+    {
+      "arm": "B_completion",
+      "budget": 15000000,
+      "group": "B-[1297036692952186880, 0]",
+      "key": [
+        1297036692952188928,
+        0
+      ],
+      "skipped": "class WIN witness; not dispatched",
+      "stones": 5
+    },
+    {
+      "arm": "B_completion",
+      "budget": 15000000,
+      "group": "B-[1297036692952186880, 0]",
+      "key": [
+        1297036693489057792,
+        0
+      ],
+      "skipped": "class WIN witness; not dispatched",
+      "stones": 5
+    },
+    {
+      "arm": "B_completion",
+      "budget": 15000000,
+      "group": "B-[1297036692952186880, 0]",
+      "key": [
+        1297071877324275712,
+        0
+      ],
+      "skipped": "class WIN witness; not dispatched",
+      "stones": 5
+    },
+    {
+      "arm": "B_completion",
+      "budget": 15000000,
+      "group": "B-[1297036692952186880, 0]",
+      "key": [
+        10376293541528735744,
+        16
+      ],
+      "skipped": "class WIN witness; not dispatched",
+      "stones": 5
+    },
+    {
+      "arm": "B_completion",
+      "budget": 15000000,
+      "group": "B-[1297036692952186880, 0]",
+      "key": [
+        10376293541528735744,
+        268435456
+      ],
+      "skipped": "class WIN witness; not dispatched",
+      "stones": 5
+    },
+    {
+      "arm": "B_completion",
+      "budget": 15000000,
+      "group": "B-[1297036692952186880, 0]",
+      "key": [
+        1152991873353125888,
+        536870912
+      ],
+      "skipped": "class WIN witness; not dispatched",
+      "stones": 5
+    },
+    {
+      "arm": "B_completion",
+      "budget": 15000000,
+      "group": "B-[1297036692952186880, 0]",
+      "key": [
+        1152996271397539840,
+        536870912
+      ],
+      "skipped": "class WIN witness; not dispatched",
+      "stones": 5
+    },
+    {
+      "arm": "B_completion",
+      "budget": 15000000,
+      "group": "B-[1297036692952186880, 0]",
+      "key": [
+        1157425104235266048,
+        536879104
+      ],
+      "skipped": "class WIN witness; not dispatched",
+      "stones": 5
+    },
+    {
+      "arm": "B_completion",
+      "budget": 15000000,
+      "group": "B-[1297036692952186880, 0]",
+      "key": [
+        1193453901254230016,
+        536870912
+      ],
+      "skipped": "class WIN witness; not dispatched",
+      "stones": 5
+    },
+    {
+      "arm": "B_completion",
+      "budget": 15000000,
+      "group": "B-[1297036692952186880, 0]",
+      "key": [
+        1297036692952186880,
+        8
+      ],
+      "skipped": "class WIN witness; not dispatched",
+      "stones": 5
+    },
+    {
+      "arm": "B_completion",
+      "budget": 15000000,
+      "group": "B-[1297036692952186880, 0]",
+      "key": [
+        1297036692952186880,
+        536870912
+      ],
+      "skipped": "class WIN witness; not dispatched",
+      "stones": 5
+    },
+    {
+      "arm": "B_completion",
+      "budget": 15000000,
+      "group": "B-[1297036692952186880, 0]",
+      "key": [
+        1301540292579557376,
+        0
+      ],
+      "skipped": "class WIN witness; not dispatched",
+      "stones": 5
+    },
+    {
+      "arm": "B_completion",
+      "budget": 15000000,
+      "group": "B-[1297036692952186880, 0]",
+      "key": [
+        10376293541528735744,
+        16384
+      ],
+      "skipped": "class WIN witness; not dispatched",
+      "stones": 5
+    },
+    {
+      "arm": "B_completion",
+      "budget": 15000000,
+      "group": "B-[1297036692952186880, 0]",
+      "key": [
+        1152991873352077312,
+        536870912
+      ],
+      "skipped": "class WIN witness; not dispatched",
+      "stones": 5
+    },
+    {
+      "arm": "B_completion",
+      "budget": 15000000,
+      "group": "B-[1297036692952186880, 0]",
+      "key": [
+        1153000669444050944,
+        536870912
+      ],
+      "skipped": "class WIN witness; not dispatched",
+      "stones": 5
+    },
+    {
+      "arm": "B_completion",
+      "budget": 15000000,
+      "group": "B-[1297036692952186880, 0]",
+      "key": [
+        1297036692952186880,
+        262144
+      ],
+      "skipped": "class WIN witness; not dispatched",
+      "stones": 5
+    },
+    {
+      "arm": "B_completion",
+      "budget": 15000000,
+      "group": "B-[1297036692952186880, 0]",
+      "key": [
+        1297036692985741312,
+        0
+      ],
+      "skipped": "class WIN witness; not dispatched",
+      "stones": 5
+    },
+    {
+      "arm": "B_completion",
+      "budget": 15000000,
+      "group": "B-[1297036692952186880, 0]",
+      "key": [
+        10376293541528735744,
+        4
+      ],
+      "skipped": "class WIN witness; not dispatched",
+      "stones": 5
+    },
+    {
+      "arm": "B_completion",
+      "budget": 15000000,
+      "group": "B-[1297036692952186880, 0]",
+      "key": [
+        10376293541528735744,
+        32
+      ],
+      "skipped": "class WIN witness; not dispatched",
+      "stones": 5
+    },
+    {
+      "arm": "B_completion",
+      "budget": 15000000,
+      "group": "B-[1297036692952186880, 0]",
+      "key": [
+        1157425104235266048,
+        570425344
+      ],
+      "skipped": "class WIN witness; not dispatched",
+      "stones": 5
+    },
+    {
+      "arm": "B_completion",
+      "budget": 15000000,
+      "group": "B-[1297036692952186880, 0]",
+      "key": [
+        1297036692952186880,
+        4
+      ],
+      "skipped": "class WIN witness; not dispatched",
+      "stones": 5
+    },
+    {
+      "arm": "B_completion",
+      "budget": 15000000,
+      "group": "B-[1297036692952186880, 0]",
+      "key": [
+        1297036692952186880,
+        8192
+      ],
+      "skipped": "class WIN witness; not dispatched",
+      "stones": 5
+    },
+    {
+      "arm": "B_completion",
+      "budget": 15000000,
+      "group": "B-[1297036692952186880, 0]",
+      "key": [
+        1297036692952186896,
+        0
+      ],
+      "skipped": "class WIN witness; not dispatched",
+      "stones": 5
+    },
+    {
+      "arm": "B_completion",
+      "budget": 15000000,
+      "group": "B-[1297036692952186880, 0]",
+      "key": [
+        1297036692952186944,
+        0
+      ],
+      "skipped": "class WIN witness; not dispatched",
+      "stones": 5
+    },
+    {
+      "arm": "B_completion",
+      "budget": 15000000,
+      "group": "B-[1297036692952186880, 0]",
+      "key": [
+        1297036692952187392,
+        0
+      ],
+      "skipped": "class WIN witness; not dispatched",
+      "stones": 5
+    },
+    {
+      "arm": "B_completion",
+      "budget": 15000000,
+      "group": "B-[1297036692952186880, 0]",
+      "key": [
+        1297036692956381184,
+        0
+      ],
+      "skipped": "class WIN witness; not dispatched",
+      "stones": 5
+    },
+    {
+      "arm": "B_completion",
+      "budget": 15000000,
+      "group": "B-[1297036692952186880, 0]",
+      "key": [
+        1297036701542121472,
+        0
+      ],
+      "skipped": "class WIN witness; not dispatched",
+      "stones": 5
+    },
+    {
+      "arm": "B_completion",
+      "budget": 15000000,
+      "group": "B-[1297036692952186880, 0]",
+      "key": [
+        1297036710132056064,
+        0
+      ],
+      "skipped": "class WIN witness; not dispatched",
+      "stones": 5
+    },
+    {
+      "arm": "B_completion",
+      "budget": 15000000,
+      "group": "B-[1297036692952186880, 0]",
+      "key": [
+        1297036727311925248,
+        0
+      ],
+      "skipped": "class WIN witness; not dispatched",
+      "stones": 5
+    },
+    {
+      "arm": "B_completion",
+      "budget": 15000000,
+      "group": "B-[1297036692952186880, 0]",
+      "key": [
+        10376293541528735744,
+        32768
+      ],
+      "skipped": "class WIN witness; not dispatched",
+      "stones": 5
+    },
+    {
+      "arm": "B_completion",
+      "budget": 15000000,
+      "group": "B-[1297036692952186880, 0]",
+      "key": [
+        1152991873351029248,
+        536870912
+      ],
+      "skipped": "class WIN witness; not dispatched",
+      "stones": 5
+    },
+    {
+      "arm": "B_completion",
+      "budget": 15000000,
+      "group": "B-[1297036692952186880, 0]",
+      "key": [
+        1152991875498512384,
+        536870912
+      ],
+      "skipped": "class WIN witness; not dispatched",
+      "stones": 5
+    },
+    {
+      "arm": "B_completion",
+      "budget": 15000000,
+      "group": "B-[1297036692952186880, 0]",
+      "key": [
+        1297036692952186880,
+        32768
+      ],
+      "skipped": "class WIN witness; not dispatched",
+      "stones": 5
+    },
+    {
+      "arm": "B_completion",
+      "budget": 15000000,
+      "group": "B-[1297036692952186880, 0]",
+      "key": [
+        1297036692952186882,
+        0
+      ],
+      "skipped": "class WIN witness; not dispatched",
+      "stones": 5
+    },
+    {
+      "arm": "B_completion",
+      "budget": 15000000,
+      "group": "B-[1297036692952186880, 0]",
+      "key": [
+        1157425104235266048,
+        536870916
+      ],
+      "skipped": "class WIN witness; not dispatched",
+      "stones": 5
+    },
+    {
+      "arm": "B_completion",
+      "budget": 15000000,
+      "group": "B-[1297036692952186880, 0]",
+      "key": [
+        1157425104235266048,
+        536870920
+      ],
+      "skipped": "class WIN witness; not dispatched",
+      "stones": 5
+    },
+    {
+      "arm": "B_completion",
+      "budget": 15000000,
+      "group": "B-[1297036692952186880, 0]",
+      "key": [
+        1157425104235266048,
+        536887296
+      ],
+      "skipped": "class WIN witness; not dispatched",
+      "stones": 5
+    },
+    {
+      "arm": "B_completion",
+      "budget": 15000000,
+      "group": "B-[1297036692952186880, 0]",
+      "key": [
+        1157425104235266048,
+        34896609280
+      ],
+      "skipped": "class WIN witness; not dispatched",
+      "stones": 5
+    },
+    {
+      "arm": "B_completion",
+      "budget": 15000000,
+      "group": "B-[1297036692952186880, 0]",
+      "key": [
+        1297036692952186880,
+        33554432
+      ],
+      "skipped": "class WIN witness; not dispatched",
+      "stones": 5
+    },
+    {
+      "arm": "B_completion",
+      "budget": 15000000,
+      "group": "B-[1297036692952186880, 0]",
+      "key": [
+        1297036692952186880,
+        268435456
+      ],
+      "skipped": "class WIN witness; not dispatched",
+      "stones": 5
+    },
+    {
+      "arm": "B_completion",
+      "budget": 15000000,
+      "group": "B-[1297036692952186880, 0]",
+      "key": [
+        1297036692952186880,
+        34359738368
+      ],
+      "skipped": "class WIN witness; not dispatched",
+      "stones": 5
+    },
+    {
+      "arm": "B_completion",
+      "budget": 15000000,
+      "group": "B-[1297036692952186880, 0]",
+      "key": [
+        1297036692952186888,
+        0
+      ],
+      "skipped": "class WIN witness; not dispatched",
+      "stones": 5
+    },
+    {
+      "arm": "B_completion",
+      "budget": 15000000,
+      "group": "B-[1297036692952186880, 0]",
+      "key": [
+        1297045489045209088,
+        0
+      ],
+      "skipped": "class WIN witness; not dispatched",
+      "stones": 5
+    },
+    {
+      "arm": "B_completion",
+      "budget": 15000000,
+      "group": "B-[1297036692952186880, 0]",
+      "key": [
+        1152991877645996032,
+        536870912
+      ],
+      "skipped": "class WIN witness; not dispatched",
+      "stones": 5
+    },
+    {
+      "arm": "B_completion",
+      "budget": 15000000,
+      "group": "B-[1297036692952186880, 0]",
+      "key": [
+        10376293541528735744,
+        8192
+      ],
+      "skipped": "class WIN witness; not dispatched",
+      "stones": 5
+    },
+    {
+      "arm": "B_completion",
+      "budget": 15000000,
+      "group": "B-[1297036692952186880, 0]",
+      "key": [
+        10376293541528735744,
+        16777216
+      ],
+      "skipped": "class WIN witness; not dispatched",
+      "stones": 5
+    },
+    {
+      "arm": "B_completion",
+      "budget": 15000000,
+      "group": "B-[1297036692952186880, 0]",
+      "key": [
+        10376293541528735744,
+        134217728
+      ],
+      "skipped": "class WIN witness; not dispatched",
+      "stones": 5
+    },
+    {
+      "arm": "B_completion",
+      "budget": 15000000,
+      "command": [
+        "D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\.local\\n11\\strategy-20261010\\dfpn.exe",
+        "--n=11",
+        "--memo=22",
+        "--exact-replay=D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\research\\experiments\\n11-strategy-redesign-20261010\\output\\next-class-completion\\row-11\\s5-1297036692952449024-0.input.csv",
+        "--only=5",
+        "--exact-order=count",
+        "--exact-replay-budget=15000000",
+        "--csv=D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\research\\experiments\\n11-strategy-redesign-20261010\\output\\next-class-completion\\row-11\\s5-1297036692952449024-0.out.csv"
+      ],
+      "exit_code": 0,
+      "group": "B-[1297036692952186880, 0]",
+      "input": "research/experiments/n11-strategy-redesign-20261010/output/next-class-completion/row-11/s5-1297036692952449024-0.input.csv",
+      "input_sha256": "c169fc031a61e4130b347dcc203230e4bb8dcd96fd1ae4778496a78124530359",
+      "key": [
+        1297036692952449024,
+        0
+      ],
+      "legal": 92,
+      "log": "research/experiments/n11-strategy-redesign-20261010/output/next-class-completion/row-11/s5-1297036692952449024-0.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "nodes": 2558726,
+      "peak_rss_bytes": 172806144,
+      "raw": "research/experiments/n11-strategy-redesign-20261010/output/next-class-completion/row-11/s5-1297036692952449024-0.out.csv",
+      "raw_sha256": "c90fdaadacea355a1cfe6c1930aec33b9dda41b2410d1ac437ebf53c69066415",
+      "stones": 5,
+      "verdict": 2,
+      "wall_seconds": 9.156000000002678
+    },
+    {
+      "arm": "B_completion",
+      "budget": 15000000,
+      "command": [
+        "D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\.local\\n11\\strategy-20261010\\dfpn.exe",
+        "--n=11",
+        "--memo=22",
+        "--exact-replay=D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\research\\experiments\\n11-strategy-redesign-20261010\\output\\next-class-completion\\row-4\\s5-1297036692952186880-68719476736.input.csv",
+        "--only=5",
+        "--exact-order=count",
+        "--exact-replay-budget=15000000",
+        "--csv=D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\research\\experiments\\n11-strategy-redesign-20261010\\output\\next-class-completion\\row-4\\s5-1297036692952186880-68719476736.out.csv"
+      ],
+      "exit_code": 0,
+      "group": "B-[1297036692952186880, 0]",
+      "input": "research/experiments/n11-strategy-redesign-20261010/output/next-class-completion/row-4/s5-1297036692952186880-68719476736.input.csv",
+      "input_sha256": "4f8b900cf1d299e4cda138817b933578ae42acbfd20999b338c071551e808250",
+      "key": [
+        1297036692952186880,
+        68719476736
+      ],
+      "legal": 90,
+      "log": "research/experiments/n11-strategy-redesign-20261010/output/next-class-completion/row-4/s5-1297036692952186880-68719476736.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "nodes": 13193928,
+      "peak_rss_bytes": 173367296,
+      "raw": "research/experiments/n11-strategy-redesign-20261010/output/next-class-completion/row-4/s5-1297036692952186880-68719476736.out.csv",
+      "raw_sha256": "ff0602262aa7c50d903403acd3d5c15c05432a0e52c07cd8e08973ad219dd301",
+      "stones": 5,
+      "verdict": 2,
+      "wall_seconds": 50.53100000000268
+    },
+    {
+      "arm": "B_completion",
+      "budget": 15000000,
+      "command": [
+        "D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\.local\\n11\\strategy-20261010\\dfpn.exe",
+        "--n=11",
+        "--memo=22",
+        "--exact-replay=D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\research\\experiments\\n11-strategy-redesign-20261010\\output\\next-class-completion\\row-10\\s5-1297036692952186880-134217728.input.csv",
+        "--only=5",
+        "--exact-order=count",
+        "--exact-replay-budget=15000000",
+        "--csv=D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\research\\experiments\\n11-strategy-redesign-20261010\\output\\next-class-completion\\row-10\\s5-1297036692952186880-134217728.out.csv"
+      ],
+      "exit_code": 0,
+      "group": "B-[1297036692952186880, 0]",
+      "input": "research/experiments/n11-strategy-redesign-20261010/output/next-class-completion/row-10/s5-1297036692952186880-134217728.input.csv",
+      "input_sha256": "5614dbad0effbc13b2331d9cbdf7d4e7f93c3461d78c69b0662e0c8b88adbf80",
+      "key": [
+        1297036692952186880,
+        134217728
+      ],
+      "legal": 92,
+      "log": "research/experiments/n11-strategy-redesign-20261010/output/next-class-completion/row-10/s5-1297036692952186880-134217728.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "nodes": 9582652,
+      "peak_rss_bytes": 172806144,
+      "raw": "research/experiments/n11-strategy-redesign-20261010/output/next-class-completion/row-10/s5-1297036692952186880-134217728.out.csv",
+      "raw_sha256": "72fac077b19f5a23d5b0ca3067ff49cc0e08ccf2f7dd9d337a1b5ab6e59998d0",
+      "stones": 5,
+      "verdict": 2,
+      "wall_seconds": 35.07799999999406
+    }
+  ],
+  "solver_path": ".local/n11/strategy-20261010/dfpn.exe",
+  "solver_sha256": "f4eeda404e644687d55077ce5eff5bb1c803cd06cfee0f5d11dbf64929e3ba84",
+  "solver_source_sha256": "523f56e61550e1f5b93882229baf8b4cd83489be719ca484d13adef8424c3063",
+  "total_nodes": 62024329,
+  "verdict_counts": {
+    "1": 1,
+    "2": 11
+  },
+  "watchdog_seconds": 180,
+  "workers": 4
+}

@@ -1,0 +1,76 @@
+{
+  "schema": "n9-sls19-runs-1",
+  "date": "2026-11-15",
+  "board": "9x9",
+  "target": 19,
+  "energy": "E(S) = number of forbidden quads fully contained in S; F_9 = 29152",
+  "engine": "scripts/sls_n9_19.ts",
+  "prng": "mulberry32 (deterministic); call1 seed 0x9E3779B9, call2 seed 0x9E3779B9 xor 0xA5A5A5A5",
+  "budgetUnitsPerCall": 480000000,
+  "calls": [
+    {
+      "call": 1,
+      "controls": {
+        "censusQuads": 29152,
+        "w9Energy": 0,
+        "positiveControl18": {
+          "seed": "perturb(W9, 6 swaps)",
+          "foundE0": true,
+          "moves": 809
+        }
+      },
+      "run19": {
+        "seed": "W9 + argmin addcost cell",
+        "cap": 30000,
+        "moves": 14059,
+        "bestE": 3,
+        "lastE": 7,
+        "e1seen": 0,
+        "e2seen": 0
+      }
+    },
+    {
+      "call": 2,
+      "campaign19": {
+        "restartsCompleted": 2,
+        "moves": 12875,
+        "bestE": 3,
+        "bestSet": [
+          5,
+          6,
+          8,
+          9,
+          11,
+          18,
+          24,
+          31,
+          44,
+          47,
+          50,
+          52,
+          53,
+          54,
+          55,
+          70,
+          73,
+          75,
+          79
+        ],
+        "e1seen": 0,
+        "e2seen": 0
+      },
+      "oneSwapNeighborhoodOfBestSet": {
+        "swaps": 1178,
+        "bestE": 3,
+        "belowThree": 0
+      }
+    }
+  ],
+  "totals": {
+    "moves": 27743,
+    "units": 963590377,
+    "witnessE0": false,
+    "minE": 3
+  },
+  "interpretation": "bounded negative evidence only; does NOT imply K_9 <= 18"
+}

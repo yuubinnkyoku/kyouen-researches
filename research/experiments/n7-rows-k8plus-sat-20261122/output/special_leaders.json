@@ -1,0 +1,58 @@
+{
+ "n_leaders_scanned": 331,
+ "special": [
+  {
+   "i": 77,
+   "stones": [
+    10,
+    12,
+    15,
+    20,
+    25,
+    27,
+    42,
+    45
+   ],
+   "orbit_size": 8,
+   "stabilizer": 1,
+   "trips": 0,
+   "dirs": 0
+  },
+  {
+   "i": 82,
+   "stones": [
+    10,
+    12,
+    14,
+    23,
+    39,
+    40,
+    45,
+    46
+   ],
+   "orbit_size": 8,
+   "stabilizer": 1,
+   "trips": 0,
+   "dirs": 0
+  },
+  {
+   "i": 136,
+   "stones": [
+    3,
+    6,
+    14,
+    19,
+    29,
+    34,
+    42,
+    45
+   ],
+   "orbit_size": 4,
+   "stabilizer": 2,
+   "trips": 2,
+   "dirs": 1
+  }
+ ],
+ "note_stab2": "i=136 is stabilized by the 180-degree rotation (x,y)->(6-x,6-y): 3<->45, 6<->42, 14<->34, 19<->29",
+ "note_trips0": "i=77 and i=82 are 8-stone maximal-safe with NO three collinear stones"
+}

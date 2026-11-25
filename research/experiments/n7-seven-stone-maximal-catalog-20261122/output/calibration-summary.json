@@ -1,0 +1,70 @@
+{
+ "purpose": "omitted-body calibration records: full JSONL bodies of the heavy calibration enumerations (n6 k=8: 115,496 configurations, 5.5MB) are not published; hashes and the count agreement with the published K0030 distribution rows are recorded here.",
+ "published_reference": "K0030-n3-n6-maximal-safe-size-distributions (3x3..6x6 complete maximal-safe size distribution)",
+ "rows": [
+  {
+   "n": 5,
+   "k": 5,
+   "mine": 4,
+   "published": 4,
+   "file": "output/enum_n5_k5.jsonl",
+   "published_in_repo": true,
+   "sha256": "fb5c5fb2da5c107321ec94488b4866e9b0a5f332f7769399e293b7aa41559655"
+  },
+  {
+   "n": 5,
+   "k": 6,
+   "mine": 1136,
+   "published": 1136,
+   "file": "output/enum_n5_k6.jsonl",
+   "published_in_repo": true,
+   "sha256": "dbb8a0c7e2d1971c63825503c8bc7a87fee42f0117296339adf1ed838b817ab6"
+  },
+  {
+   "n": 5,
+   "k": 7,
+   "mine": 11280,
+   "published": 11280,
+   "file": "output/enum_n5_k7.jsonl",
+   "published_in_repo": true,
+   "sha256": "1ae1b12a1a3e1ebe241a38a778684d0334215df6e05bd734a58f786653042cae"
+  },
+  {
+   "n": 5,
+   "k": 8,
+   "mine": 4340,
+   "published": 4340,
+   "file": "output/enum_n5_k8.jsonl",
+   "published_in_repo": true,
+   "sha256": "6a0f8e28370b5e250e614c27ea5b4936d1044379a2bb0c3c67c63c1ec279f4f8"
+  },
+  {
+   "n": 6,
+   "k": 6,
+   "mine": 8,
+   "published": 8,
+   "file": "output/enum_n6_k6.jsonl",
+   "published_in_repo": true,
+   "sha256": "69b5796290fd8e80ae0cfbf9695b28d7f4e5831250287358a037f39320b2e68f"
+  },
+  {
+   "n": 6,
+   "k": 7,
+   "mine": 3952,
+   "published": 3952,
+   "file": "output/enum_n6_k7.jsonl",
+   "published_in_repo": true,
+   "sha256": "2cfddd8e936fac03901c4577893a4a2e6258edaf6b6d2b228887ef0cfff33076"
+  },
+  {
+   "n": 6,
+   "k": 8,
+   "mine": 115496,
+   "published": 115496,
+   "file": "(not published; 5.5MB body)",
+   "published_in_repo": false,
+   "sha256": "bb675c897223a65a52e71277241340582929a9f357664219407056ac9dade35e"
+  }
+ ],
+ "all_counts_match_published": true
+}

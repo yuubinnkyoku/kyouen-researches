@@ -1,0 +1,130 @@
+{
+ "witness": [
+  [
+   7,
+   0
+  ],
+  [
+   7,
+   1
+  ],
+  [
+   0,
+   2
+  ],
+  [
+   2,
+   2
+  ],
+  [
+   7,
+   2
+  ],
+  [
+   0,
+   3
+  ],
+  [
+   1,
+   3
+  ],
+  [
+   0,
+   6
+  ],
+  [
+   1,
+   7
+  ]
+ ],
+ "n": 8,
+ "k": 9,
+ "n_tampers": 9,
+ "all_safe": true,
+ "all_not_maximal": true,
+ "uncovered_counts": [
+  4,
+  8,
+  15,
+  10,
+  10,
+  12,
+  10,
+  18,
+  10
+ ],
+ "per_removal": [
+  {
+   "removed": [
+    7,
+    0
+   ],
+   "n_uncovered": 4,
+   "n_viol": 0
+  },
+  {
+   "removed": [
+    7,
+    1
+   ],
+   "n_uncovered": 8,
+   "n_viol": 0
+  },
+  {
+   "removed": [
+    0,
+    2
+   ],
+   "n_uncovered": 15,
+   "n_viol": 0
+  },
+  {
+   "removed": [
+    2,
+    2
+   ],
+   "n_uncovered": 10,
+   "n_viol": 0
+  },
+  {
+   "removed": [
+    7,
+    2
+   ],
+   "n_uncovered": 10,
+   "n_viol": 0
+  },
+  {
+   "removed": [
+    0,
+    3
+   ],
+   "n_uncovered": 12,
+   "n_viol": 0
+  },
+  {
+   "removed": [
+    1,
+    3
+   ],
+   "n_uncovered": 10,
+   "n_viol": 0
+  },
+  {
+   "removed": [
+    0,
+    6
+   ],
+   "n_uncovered": 18,
+   "n_viol": 0
+  },
+  {
+   "removed": [
+    1,
+    7
+   ],
+   "n_uncovered": 10,
+   "n_viol": 0
+  }
+ ]
+}

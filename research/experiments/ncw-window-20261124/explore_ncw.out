@@ -1,0 +1,70 @@
+=== X1: T-NCW-P pair census vs claim, z3..16, m1..8, g1..32 ===
+  z=3: points=256 bad=0
+  z=4: points=512 bad=0
+  z=5: points=512 bad=0
+  z=6: points=768 bad=0
+  z=7: points=768 bad=0
+  z=8: points=1024 bad=0
+  z=9: points=1024 bad=0
+  z=10: points=1280 bad=0
+  z=11: points=1280 bad=0
+  z=12: points=1536 bad=0
+  z=13: points=1536 bad=0
+  z=14: points=1792 bad=0
+  z=15: points=1792 bad=0
+  z=16: points=2048 bad=0
+X1 total=16128 bad=0 regions={'N': 15406, 'T2': 224, 'F': 498}
+
+=== X2: T-NCW-B bed census vs claim, z3..18, a1..26 ===
+  z=3: points=26 bad=0
+  z=4: points=52 bad=0
+  z=5: points=52 bad=0
+  z=6: points=78 bad=0
+  z=7: points=78 bad=0
+  z=8: points=104 bad=0
+  z=9: points=104 bad=0
+  z=10: points=130 bad=0
+  z=11: points=130 bad=0
+  z=12: points=156 bad=0
+  z=13: points=156 bad=0
+  z=14: points=182 bad=0
+  z=15: points=182 bad=0
+  z=16: points=208 bad=0
+  z=17: points=208 bad=0
+  z=18: points=234 bad=0
+X2 total=2080 bad=0
+
+=== X3: value-2 localization check (all 2s lie on the two bands) ===
+    bands: dominant g = z-2k (m >= k implied) and diagonal g = z-2m
+X3 total=16128 offband_or_missing=0
+
+=== X4: typed packet closure (children from claims + published laws) ===
+    pairs z2..12, m1..6, g1..24; beds z2..12, a1..12 ===
+  z=2: pts=156 bad_typed=0 bad_engine=0
+  z=3: pts=156 bad_typed=0 bad_engine=0
+  z=4: pts=312 bad_typed=0 bad_engine=0
+  z=5: pts=312 bad_typed=0 bad_engine=0
+  z=6: pts=468 bad_typed=0 bad_engine=0
+  z=7: pts=468 bad_typed=0 bad_engine=0
+  z=8: pts=624 bad_typed=0 bad_engine=0
+  z=9: pts=624 bad_typed=0 bad_engine=0
+  z=10: pts=780 bad_typed=0 bad_engine=0
+  z=11: pts=780 bad_typed=0 bad_engine=0
+  z=12: pts=936 bad_typed=0 bad_engine=0
+X4 total=5616 bad_typed_mex=0 bad_typed_vs_engine=0
+
+=== X5: cross-engine canonical vs ordered, NCW samples ===
+X5 total=297 bad=0
+
+=== X6: OBS-NCW subsumption (K1309 D10 frozen 35-row table) ===
+X6 cells=1260 frozen_mismatch_rows=0 claim_bad=0
+
+=== X7: band k=0 gates (K1303 transcription) w1..12 ===
+X7 total=840 bad=0
+
+=== X8: far stress z {24, 28}, m1..6, g1..24, a1..20 ===
+  z=24: points=1968 bad=0
+  z=28: points=2296 bad=0
+X8 total=4264 bad=0
+
+ALL STAGES COMPLETE

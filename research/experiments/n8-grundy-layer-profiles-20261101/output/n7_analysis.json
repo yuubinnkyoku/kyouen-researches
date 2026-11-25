@@ -1,0 +1,303 @@
+{
+ "n": 7,
+ "V": 49,
+ "K_n": 14,
+ "g_root": 0,
+ "n_P": 41264615,
+ "n_N": 138545735,
+ "n_safe_subsets": 179810350,
+ "forbidden_quads_python": 6364,
+ "forbidden_quads_cpp": 6364,
+ "quad_count_match": true,
+ "one_stone": {
+  "distinct_values": [
+   1
+  ],
+  "distinct_count": 1,
+  "value_counts": {
+   "1": 49
+  },
+  "nonzero_all_odd": true,
+  "nonzero_values": [
+   1
+  ],
+  "points_by_value": {
+   "1": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48
+   ]
+  }
+ },
+ "J_n": {
+  "vertices": 49,
+  "edges": 552,
+  "isolated_vertices": [],
+  "isolated_count": 0,
+  "nonisolated_components_unionfind": 1,
+  "nonisolated_components_bfs": 1,
+  "nonisolated_connected": true,
+  "degree_min": 1,
+  "degree_max": 44,
+  "degree_hist": {
+   "1": 4,
+   "17": 4,
+   "20": 8,
+   "21": 8,
+   "22": 12,
+   "28": 4,
+   "34": 4,
+   "37": 4,
+   "44": 1
+  }
+ },
+ "saturation": {
+  "K_n": 14,
+  "M_n_k": [
+   0,
+   1,
+   5,
+   7,
+   10,
+   9,
+   8,
+   7,
+   6,
+   5,
+   4,
+   3,
+   2,
+   1,
+   0
+  ],
+  "sigma_n": 4,
+  "D_n_k": [
+   14,
+   12,
+   7,
+   4,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "D_monotone_nonincreasing": true,
+  "ceiling_invariant_M_le_K_minus_k": true,
+  "sigma_layer": {
+   "k": 4,
+   "realized_nimbers": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "range_j_lt_K_minus_sigma": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+   ],
+   "missing": [],
+   "missing_consecutive_pair_exists": false,
+   "missing_positive_all_powers_of_two": true
+  },
+  "holes_by_layer": {
+   "0": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "1": [
+    0,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "2": [
+    1,
+    4,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "3": [
+    5,
+    6,
+    8,
+    9,
+    10
+   ],
+   "4": [],
+   "5": [
+    10
+   ],
+   "6": [
+    9,
+    10
+   ],
+   "7": [
+    8,
+    9,
+    10
+   ],
+   "8": [
+    7,
+    8,
+    9,
+    10
+   ],
+   "9": [
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "10": [
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "11": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "12": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "13": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "14": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ]
+  }
+ },
+ "mex_recheck": {
+  "level1_sample_size": 49,
+  "level1_mismatches": [],
+  "level2_sample_size": 300,
+  "level2_mismatches": []
+ },
+ "sigma_witness": {
+  "k": 4,
+  "idx": 9461,
+  "mask": 9044480,
+  "g_dp": 10,
+  "g_recomputed": 10,
+  "mask_matches": true
+ }
+}

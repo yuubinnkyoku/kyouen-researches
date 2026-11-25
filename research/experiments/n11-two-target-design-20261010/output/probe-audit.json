@@ -1,0 +1,252 @@
+{
+  "baseline_cache_rows": 5741,
+  "baseline_cache_sha256": "f890dbc12e3731596afea3cd120f3aafa6103ecd2cd6872c05a0d1c99cc819ca",
+  "cache_quarantine": "validated against current S5 evidence policy; UNKNOWN not merged",
+  "candidate_classes": {
+    "UNKNOWN": 62,
+    "WIN": 53
+  },
+  "changed_boundaries": [
+    {
+      "S5_LOSS": 5,
+      "S5_UNKNOWN": 105,
+      "S5_WIN": 0,
+      "coverage": [
+        55,
+        65,
+        110,
+        120
+      ],
+      "key": [
+        1188950301625811968,
+        536870912
+      ],
+      "status": "UNKNOWN"
+    },
+    {
+      "S5_LOSS": 16,
+      "S5_UNKNOWN": 93,
+      "S5_WIN": 0,
+      "coverage": [
+        55,
+        65,
+        100,
+        108
+      ],
+      "key": [
+        1188950301626859520,
+        536870912
+      ],
+      "status": "UNKNOWN"
+    },
+    {
+      "S5_LOSS": 4,
+      "S5_UNKNOWN": 100,
+      "S5_WIN": 0,
+      "coverage": [
+        47,
+        51,
+        55,
+        65
+      ],
+      "key": [
+        1191202101573713920,
+        0
+      ],
+      "status": "UNKNOWN"
+    },
+    {
+      "S5_LOSS": 7,
+      "S5_UNKNOWN": 99,
+      "S5_WIN": 0,
+      "coverage": [
+        100,
+        108,
+        110,
+        120
+      ],
+      "key": [
+        1297036692683752448,
+        0
+      ],
+      "status": "UNKNOWN"
+    },
+    {
+      "S5_LOSS": 7,
+      "S5_UNKNOWN": 100,
+      "S5_WIN": 0,
+      "coverage": [
+        47,
+        51,
+        100,
+        108
+      ],
+      "key": [
+        1297036830122704896,
+        0
+      ],
+      "status": "UNKNOWN"
+    }
+  ],
+  "exact_evidence_type": "raw solver-trusted; S4/S5 geometry independently checked; terminal-only minimax NOT complete",
+  "geometry_sha256": "146be80b5794462c2444e983fc4c4a6e76d3b464bfd5e86fac14509024100b54",
+  "independent_geometry_python_sha256": "954d3a104c1723ebb15b8c9bae63a4494f07f9eb73446a6d067c4fd6a4ba189f",
+  "merged_cache_rows": 5743,
+  "merged_cache_sha256": "24e97b746667bd1c5468d5203e8444a0d379023f6c67facaf9bbd4787c3759e6",
+  "merged_s5_verdicts": {
+    "LOSS": 5585,
+    "WIN": 158,
+    "conflict": 0
+  },
+  "minimum_additional_loss_classes": 1,
+  "new_loss_s4_classes": 0,
+  "new_raw_exact": 2,
+  "new_win_s4_classes": 0,
+  "nodes_all_replays": 12692123,
+  "nodes_exact_replays": 8692123,
+  "nodes_initial_2m": 4000000,
+  "probes": [
+    {
+      "independent_geometry": "safe canonical child; complete S4 legal incidence",
+      "independent_terminal_minimax": "not established",
+      "legal": 98,
+      "nodes_at_15m": 3651923,
+      "nodes_at_2m": 2000000,
+      "raw_verdict": "LOSS",
+      "related_s4_keys": [
+        [
+          1188950301626859520,
+          536870912
+        ],
+        [
+          1191202101573713920,
+          0
+        ],
+        [
+          1297036830122704896,
+          0
+        ]
+      ],
+      "s5_key": [
+        1152921504606851072,
+        536870946
+      ],
+      "stages": {
+        "at2m": {
+          "budget": 2000000,
+          "nodes": 2000000,
+          "verdict": "UNKNOWN"
+        },
+        "first-15m": {
+          "budget": 15000000,
+          "nodes": 3651923,
+          "verdict": "LOSS"
+        }
+      }
+    },
+    {
+      "independent_geometry": "safe canonical child; complete S4 legal incidence",
+      "independent_terminal_minimax": "not established",
+      "legal": 99,
+      "nodes_at_15m": 5040200,
+      "nodes_at_2m": 2000000,
+      "raw_verdict": "LOSS",
+      "related_s4_keys": [
+        [
+          1188950301625811968,
+          536870912
+        ],
+        [
+          1188950301626859520,
+          536870912
+        ],
+        [
+          1297036692683752448,
+          0
+        ]
+      ],
+      "s5_key": [
+        1188950301626860544,
+        536870912
+      ],
+      "stages": {
+        "at2m": {
+          "budget": 2000000,
+          "nodes": 2000000,
+          "verdict": "UNKNOWN"
+        },
+        "second-15m": {
+          "budget": 15000000,
+          "nodes": 5040200,
+          "verdict": "LOSS"
+        }
+      }
+    }
+  ],
+  "rational_dual": 1,
+  "raw_artifacts": [
+    {
+      "path": "research/experiments/n11-two-target-design-20261010/output/raw/at2m-s5-1152921504606851072-536870946.input.csv",
+      "sha256": "ecc0299b8142abde201fcc40ea9666dac7368d0888d0600abc717af66ddfe348"
+    },
+    {
+      "path": "research/experiments/n11-two-target-design-20261010/output/raw/at2m-s5-1152921504606851072-536870946.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "research/experiments/n11-two-target-design-20261010/output/raw/at2m-s5-1152921504606851072-536870946.out.csv",
+      "sha256": "65a9a901519ae9d6208900917539c4a3eefb39664ab37c4f8b275163dc964e06"
+    },
+    {
+      "path": "research/experiments/n11-two-target-design-20261010/output/raw/at2m-s5-1188950301626860544-536870912.input.csv",
+      "sha256": "56aacb71769b231c9728dcc841d39f0d5cb579517d34769f0e7382516d4c3a62"
+    },
+    {
+      "path": "research/experiments/n11-two-target-design-20261010/output/raw/at2m-s5-1188950301626860544-536870912.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "research/experiments/n11-two-target-design-20261010/output/raw/at2m-s5-1188950301626860544-536870912.out.csv",
+      "sha256": "10c703d98e8ec6c09a58605728de7cb926d3f6929d981e17d06669977861c21b"
+    },
+    {
+      "path": "research/experiments/n11-two-target-design-20261010/output/raw/first-15m-s5-1152921504606851072-536870946.input.csv",
+      "sha256": "ecc0299b8142abde201fcc40ea9666dac7368d0888d0600abc717af66ddfe348"
+    },
+    {
+      "path": "research/experiments/n11-two-target-design-20261010/output/raw/first-15m-s5-1152921504606851072-536870946.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "research/experiments/n11-two-target-design-20261010/output/raw/first-15m-s5-1152921504606851072-536870946.out.csv",
+      "sha256": "daf5d4457ea350dc8e3c653a9ccb7a681ef7061a3bfc9d75438e4d0d73b1a155"
+    },
+    {
+      "path": "research/experiments/n11-two-target-design-20261010/output/raw/second-15m-s5-1188950301626860544-536870912.input.csv",
+      "sha256": "56aacb71769b231c9728dcc841d39f0d5cb579517d34769f0e7382516d4c3a62"
+    },
+    {
+      "path": "research/experiments/n11-two-target-design-20261010/output/raw/second-15m-s5-1188950301626860544-536870912.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "research/experiments/n11-two-target-design-20261010/output/raw/second-15m-s5-1188950301626860544-536870912.out.csv",
+      "sha256": "8212579f96742814b54de77e20ca9dc2cb711c69dd25bd8664f8add3bfa2bc13"
+    }
+  ],
+  "remaining_third_moves": [
+    100,
+    108
+  ],
+  "s4_class_counts": {
+    "LOSS": 31,
+    "UNKNOWN": 3081,
+    "WIN": 272
+  },
+  "secured": 117,
+  "solver_binary_sha256_from_probe_host": "98aadf580119ea3fb89be77fa161defded6feb87f5cb2f30b0503e35a4163c01",
+  "solver_compile": "g++ 14.2.0 -O3 -std=c++20 -DNDEBUG on Intel Core i5-9400T (Debian)",
+  "source_cpp_sha256": "9193f5b6065e0fbcad2ef7c65f386187701cafa1f5b718cc35a5cbb0d138f92e",
+  "source_residual_hpp_sha256": "5976935dcfccb9b5a26fa68f8de20868ce45363dd8c372dcd67d9b841167e7f5",
+  "title": "Two shared-S5 targeted probes; strict solver/geometry trust separation"
+}

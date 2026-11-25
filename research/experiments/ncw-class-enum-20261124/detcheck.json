@@ -1,0 +1,68 @@
+{
+  "certificate": "ncw-class-enum-20261124",
+  "completed": "2026-11-25T00:05Z",
+  "lane": "high-speed lane, single owner (declaration research/log/2026-11-24-ncw-class-enum-note.md)",
+  "target_k_item": "K1310",
+  "contribution_type": "evidence addition: machine certificate of the SS2.4/SS2.5 mex closure algebra (finite case split 280 pair + 39 bed classes) of the published K1310 hand proof",
+  "new_theorem_claimed": false,
+  "verdict_scope_note": "no 11x11 verdict consumption; 11x11 remains UNKNOWN",
+  "published_pins": {
+    "enum_classes.py_sha256": "716b2976306a437d16f8e8ad088ffbe8f37f9131430a1a318c63b79f8becbad7",
+    "eqcheck.py_sha256": "6c005154bae91546edfb990ae749834a6acdb0fa86b446e4b2393334f633ffa1",
+    "expected_enum_default_stdout_sha256": "4284f248a319cf9e8ba02916b7eebaed3be97d9e41f717e0e53f6dc311160651",
+    "expected_enum_deep_stdout_sha256": "a4149b372defbcba2cdcf9f88f89047b93d8965e9e34c8178504bf5f394bc80e",
+    "expected_eqcheck_stdout_sha256": "a7bfb3bb05dd7a7f6f627230fc78c31818f5a9832aad1fd859404cf32b917650"
+  },
+  "fetch_back_verification": {
+    "files_checked": 13,
+    "result": "byte-identical on all 13 (raw fetch from main vs local copy, sha256 match)",
+    "kits_published_chain": {
+      "declaration_note": "research/log/2026-11-24-ncw-class-enum-note.md @ cb72a442",
+      "kit_core": "README.md, enum_classes.py, eqcheck.py, output/{frozen_default,frozen_deep,predry1..4,eqcheck}.out @ a33ede53",
+      "tamper_scripts": "tamper/{t1,t2,t3}.py + tamper/t3.out @ 076f7056"
+    }
+  },
+  "official_runs": {
+    "source": "fetch-back bytes (not local drafts)",
+    "enum_runs": [
+      {"id": 1, "mode": "same cwd", "PYTHONHASHSEED": "unset (randomized)", "rc": 0, "stdout_sha256": "4284f248a319cf9e8ba02916b7eebaed3be97d9e41f717e0e53f6dc311160651"},
+      {"id": 2, "mode": "same cwd", "PYTHONHASHSEED": "1", "rc": 0, "stdout_sha256": "4284f248a319cf9e8ba02916b7eebaed3be97d9e41f717e0e53f6dc311160651"},
+      {"id": 3, "mode": "isolated fresh copy, env -i", "PYTHONHASHSEED": "99", "rc": 0, "stdout_sha256": "4284f248a319cf9e8ba02916b7eebaed3be97d9e41f717e0e53f6dc311160651"},
+      {"id": 4, "mode": "isolated fresh copy, env -i", "PYTHONHASHSEED": "7", "rc": 0, "stdout_sha256": "4284f248a319cf9e8ba02916b7eebaed3be97d9e41f717e0e53f6dc311160651"}
+    ],
+    "eqcheck_runs": [
+      {"id": 1, "rc": 0, "stdout_sha256": "a7bfb3bb05dd7a7f6f627230fc78c31818f5a9832aad1fd859404cf32b917650"},
+      {"id": 2, "rc": 0, "stdout_sha256": "a7bfb3bb05dd7a7f6f627230fc78c31818f5a9832aad1fd859404cf32b917650"}
+    ],
+    "freeze": "all outputs frozen under output/ as audit_run1..4.out and audit_eq1..2.out",
+    "verdict": "OFFICIAL-PASS"
+  },
+  "tamper_battery": {
+    "expectation": "all mutants must fail closed with rc=1 (declared in advance)",
+    "t1": {
+      "mutation": "sym_claim_pair zone-A parent-NEG claim [g odd] flipped to [g even]",
+      "rc": 1,
+      "declared_result": "FAIL pair_bad=110 xpair=110 census_pair_bad=57600",
+      "actual_result": "FAIL pair_classes=280 pair_bad=110 bed_classes=39 bed_bad=0 xpair=110 xbed=0 census_pair=108000 census_pair_bad=57600 census_bed=3150 census_bed_bad=0 missing_class=0"
+    },
+    "t2": {
+      "mutation": "concession flip '1 ^ ' removed from sym_cchild_kge2 (reproduces draft-era bug)",
+      "rc": 1,
+      "declared_result": "FAIL pair_bad=205 xpair=230 census_pair_bad=100800",
+      "actual_result": "FAIL pair_classes=280 pair_bad=205 bed_bad=0 xpair=230 xbed=0 census_pair=108000 census_pair_bad=100800 census_bed_bad=0 missing_class=0"
+    },
+    "t3": {
+      "mutation": "pair_witness rejection 'gs >= 0' relaxed to 'gs >= -1' (reproduces draft-era off-by-one that dropped 3 classes)",
+      "rc": 1,
+      "declared_result": "FAIL pair_classes=277 census_pair_bad=12 missing_class=12",
+      "actual_result": "FAIL pair_classes=277 pair_bad=0 bed_bad=0 xpair=0 xbed=0 census_pair=108000 census_pair_bad=12 census_bed_bad=0 missing_class=12"
+    },
+    "verdict": "3/3 mutants detected, fail-closed confirmed"
+  },
+  "certificate_facts": {
+    "class_split": {"pair_classes": 280, "bed_classes": 39, "all_classes_have_witness": true, "claim_eq_mex_per_class": true},
+    "coverage_census_default": {"pair_cells": 108000, "pair_bad": 0, "bed_cells": 3150, "bed_bad": 0, "missing_class": 0},
+    "coverage_census_deep": {"argv": "34 16 44 20", "pair_cells": 203456, "pair_bad": 0, "bed_cells": 5780, "bed_bad": 0},
+    "law_transfer_eqcheck": {"comparisons": 1031085, "bad": 0, "method": "shipped enum_classes.py law implementations vs published K1310 verify_k1310.py P/Bm/single_token(q_odd)/cpsfG verbatim"}
+  }
+}

@@ -1,0 +1,148 @@
+{
+ "D0": {
+  "bad_canonical": 0,
+  "bad_ordered": 0,
+  "label": "D0 raw-vs-closedform anchor",
+  "points": 55242
+ },
+ "D1": {
+  "bad": 0,
+  "label": "D1 Lemma V1 characterization",
+  "points": 6426
+ },
+ "D2": {
+  "bad": 0,
+  "label": "D2 ones-pair theorem sweep",
+  "points": 2697
+ },
+ "D3": {
+  "bad": 0,
+  "label": "D3 ones-pair random deep (fixed seed)",
+  "points": 1500
+ },
+ "D4": {
+  "bad_t2": 0,
+  "breaks_by_t": {
+   "2": 0,
+   "3": 6,
+   "4": 9,
+   "5": 17,
+   "6": 16
+  },
+  "first_break": {
+   "3": [
+    0,
+    3,
+    0,
+    1
+   ],
+   "4": [
+    0,
+    3,
+    0,
+    1
+   ],
+   "5": [
+    0,
+    3,
+    0,
+    1
+   ],
+   "6": [
+    0,
+    3,
+    0,
+    1
+   ]
+  },
+  "label": "D4 ones^t census",
+  "points": 1615
+ },
+ "D5": {
+  "bad": 0,
+  "details": [
+   {
+    "R": 1,
+    "X": [
+     1,
+     1
+    ],
+    "equal": true,
+    "parent": 1,
+    "single": 1,
+    "src": "ones-pair z=0,R=1 equality anchor",
+    "z": 0
+   },
+   {
+    "R": 2,
+    "X": [
+     1,
+     1
+    ],
+    "equal": true,
+    "parent": 0,
+    "single": 0,
+    "src": "ones-pair z=0,R=2 equality anchor",
+    "z": 0
+   },
+   {
+    "R": 3,
+    "X": [
+     1,
+     1,
+     1
+    ],
+    "equal": false,
+    "parent": 0,
+    "single": 1,
+    "src": "ones^3 z=0,R=3 separation anchor (pre-declaration probe)",
+    "z": 0
+   },
+   {
+    "R": 3,
+    "X": [
+     1,
+     1,
+     1
+    ],
+    "equal": false,
+    "parent": 2,
+    "single": 0,
+    "src": "published K1264 witness ones^3 z=1,R=3",
+    "z": 1
+   },
+   {
+    "R": 3,
+    "X": [
+     2,
+     1
+    ],
+    "equal": false,
+    "parent": 2,
+    "single": 0,
+    "src": "published K1264 sharpness witness (2,1) z=1,R=3",
+    "z": 1
+   },
+   {
+    "R": 3,
+    "X": [
+     1,
+     1
+    ],
+    "equal": true,
+    "parent": 0,
+    "single": 0,
+    "src": "ones-pair z=1,R=3 boundary+1 collapse counterpoint",
+    "z": 1
+   }
+  ],
+  "label": "D5 witness anchors",
+  "points": 33
+ },
+ "meta": {
+  "proof": "structural strong induction on R (report.md); Lemma V1 characterizes v(1,z,n)",
+  "theorem": "ones-pair total collapse: H(R;(1,1);z)=v(2,z,R) for all z>=0, R>=0",
+  "total_bad": 0,
+  "verifier_sha256": "a187c295712842e24ae8ebdfe8d021ef03d2d173e40c1dbf84fb4e8730581fcd"
+ }
+}

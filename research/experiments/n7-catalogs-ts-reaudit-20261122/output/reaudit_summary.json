@@ -1,0 +1,240 @@
+{
+ "experiment": "n7-catalogs-ts-reaudit-20261122",
+ "date": "2026-11-22",
+ "purpose": "third-line re-audit of published K1226 (n7 k8 bounded census 331 leaders + n7/n8 k8/k9 witnesses/tampers) and K1224 (n7 k7 catalog 16 configs / 2 orbits). No new mathematical claims.",
+ "environment": "Mistral TS sandbox on run_typescript; no Node.js/Python; inputs fetched via github_app.get_file_contents; deterministic integer arithmetic (all intermediate values below 2^53); no randomness; core audit executed 3 times this session (2 pre-compaction + 1 post-compaction) with identical results; supplement (n8 trips/dirs, n7 tamper published match, negative control) once.",
+ "fetchedAtHead": "95a119851acf6d649bdbde1574ea73d698c164ef",
+ "inputPins": {
+  "research/experiments/n7-rows-k8plus-sat-20261122/output/census_k8_state.json": "8743e4dafdfbf94fa6b3302399b95eab49b1521d",
+  "research/experiments/n7-rows-k8plus-sat-20261122/output/verify_census8_partial.json": "1376515e05aa81133d793c276130885029ce8c8a",
+  "research/experiments/n7-rows-k8plus-sat-20261122/output/tamper_n8k9_summary.json": "7b53dbefaa789362bf6ef4b916c0e0b0644fb41a",
+  "research/experiments/n7-rows-k8plus-sat-20261122/output/witness_n8k9_shot1.json": "c5a164cc7fe23cd2e414b58d0ad5a7c91683a6ee",
+  "research/experiments/n7-rows-k8plus-sat-20261122/output/witness_n8k9_shot2.json": "0a80979d4f24970d21b5ac51869ac09a5c565f91",
+  "research/experiments/n7-rows-k8plus-sat-20261122/output/tamper_k8_summary.json": "c578f31204c951b32b87982c8ec163933c5e65fe",
+  "research/experiments/n7-rows-k8plus-sat-20261122/output/determinism.json": "0681e43566757c972feac90933cf8b1d89647632",
+  "research/experiments/n7-seven-stone-maximal-catalog-20261122/output/classify_n7.json": "716758ed1469c29a5d2d7bcbd0d20057f383e3c9"
+ },
+ "method": {
+  "forbiddenQuad": "integer 4x4 determinant det[[x^2+y^2,x,y,1]x4]=0 over all C(n^2,4) quadruples (concyclic or collinear), independent implementation of the published convention",
+  "safe": "no forbidden quad among all C(k,4) stone subsets",
+  "maximal": "every empty cell c is blocked: c + some 3-stone subset forms a forbidden quad; uncovered = count of unblocked empty cells (maximal iff 0)",
+  "orbit": "D4 group generated as closure of reflection and 90-degree rotation cell maps; osize = distinct images, stab = fixing maps, indicator lex-min uses 0<1 convention",
+  "trips": "number of collinear 3-subsets; dirs = number of distinct directions (gcd-normalized, undirected) among them"
+ },
+ "results": {
+  "F_counts": {
+   "F3": 14,
+   "F4": 194,
+   "F5": 826,
+   "F6": 2491,
+   "F7": 6364,
+   "F8": 14564
+  },
+  "F_anchors": "F5..F7 match published anchors (826/2491/6364); F8=14564 matches determinism.json n8k9 encoding.F (same value, no novelty); F3/F4 match published forbidgen calibrations (14/194)",
+  "census8": {
+   "nLeaders": 331,
+   "allSafe": 331,
+   "allMaximal": 331,
+   "lexmin": 331,
+   "dupOrbits": 0,
+   "d4ClosureTotal": 2644,
+   "orbitSizeHistogram": {
+    "4": 1,
+    "8": 330
+   },
+   "stabilizerHistogram": {
+    "1": 330,
+    "2": 1
+   },
+   "tripsHistogram": {
+    "0": 2,
+    "1": 34,
+    "2": 119,
+    "3": 131,
+    "4": 36,
+    "5": 8,
+    "6": 1
+   },
+   "dirsHistogram": {
+    "0": 2,
+    "1": 40,
+    "2": 126,
+    "3": 123,
+    "4": 36,
+    "5": 3,
+    "6": 1
+   },
+   "perLeaderChecks": "all fields {safe,maximal,nViol,nUnc,lexmin,dup,osize,stab,trips,dirs} equal published verify_census8_partial.json for every i=0..330; mismatch count 0",
+   "trips0Leaders": [
+    [
+     10,
+     12,
+     15,
+     20,
+     25,
+     27,
+     42,
+     45
+    ],
+    [
+     10,
+     12,
+     14,
+     23,
+     39,
+     40,
+     45,
+     46
+    ]
+   ],
+   "stab2Leader": [
+    3,
+    6,
+    14,
+    19,
+    29,
+    34,
+    42,
+    45
+   ],
+   "summaryMatch": true
+  },
+  "n7k8_witness": {
+   "stones": [
+    17,
+    19,
+    22,
+    26,
+    27,
+    28,
+    30,
+    31
+   ],
+   "safe": true,
+   "maximal": true
+  },
+  "n7k8_tamper": {
+   "uncoveredInWitnessOrder": [
+    5,
+    9,
+    13,
+    7,
+    9,
+    3,
+    10,
+    10
+   ],
+   "allSafeAndNotMaximal": true,
+   "publishedMatch": "exactly equal to published tamper_k8_summary.json uncovered_counts (blob c578f312...)"
+  },
+  "n8k9_witnesses": {
+   "shot1": {
+    "safe": true,
+    "maximal": true,
+    "trips": 3,
+    "dirs": 2
+   },
+   "shot2": {
+    "safe": true,
+    "maximal": true,
+    "trips": 5,
+    "dirs": 4
+   },
+   "nonCongruent": true,
+   "tamperShot1": {
+    "uncovered": [
+     4,
+     8,
+     15,
+     10,
+     10,
+     12,
+     10,
+     18,
+     10
+    ],
+    "publishedMatch": "exactly equal to published tamper_n8k9_summary.json per-removal values"
+   },
+   "tamperShot2": {
+    "uncovered": [
+     4,
+     7,
+     6,
+     4,
+     7,
+     10,
+     9,
+     6,
+     4
+    ],
+    "note": "no published per-stone counterpart (determinism.json records shot1 only); recorded as new data consistent with published all-SAFE/NOT-MAXIMAL claim"
+   }
+  },
+  "k1224_catalog": {
+   "nConfigs": 16,
+   "allSafeMaximal": true,
+   "tripsHistogram": {
+    "2": 8,
+    "3": 8
+   },
+   "dirsHistogram": {
+    "2": 8,
+    "3": 8
+   },
+   "nOrbits": 2,
+   "allInList": true,
+   "pubMembersMatch": true,
+   "stoneListLexReps": [
+    [
+     1,
+     9,
+     22,
+     23,
+     27,
+     44,
+     45
+    ],
+    [
+     3,
+     10,
+     22,
+     23,
+     30,
+     32,
+     38
+    ]
+   ],
+   "satConventionLexReps": [
+    [
+     10,
+     13,
+     14,
+     17,
+     19,
+     21,
+     45
+    ],
+    [
+     18,
+     21,
+     22,
+     26,
+     31,
+     32,
+     38
+    ]
+   ]
+  },
+  "negativeControl": {
+   "description": "deliberately wrong D4-free map (n8-style reflection applied to n7) produces off-board images (y=7 row) and a degenerate closure (2 distinct sets) vs correct orbit size 8; any leader would fail the osize/in-board gates",
+   "preCompactionIncident": "an execution variant with the wrong reflection on n7 failed the orbit gate and was detected via published-value mismatch; result discarded and re-run corrected -- recorded as evidence of gate discriminative power"
+  }
+ },
+ "verdict": "ALL-MATCH (every recomputed quantity consistent with the published records; no discrepancy found)",
+ "nonClaims": [
+  "census completeness is untouched: the n7 k8 row orbit count remains >= 331 (publication explicitly does not claim spanning)",
+  "no upper bounds for M_7/M_8; n8 k9 census untouched (>= 2 orbits)",
+  "this is a finite re-verification, not a formal proof; it does not modify K1224/K1226 items or knowledge README",
+  "run_typescript sandbox is not Node.js; wall-clock timings were not recorded (irrelevant to correctness)"
+ ]
+}

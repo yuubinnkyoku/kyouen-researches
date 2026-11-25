@@ -1,0 +1,101 @@
+{
+ "D1": {
+  "bad": 0,
+  "comparisons": 78570,
+  "details_mismatch": [],
+  "points": 26190
+ },
+ "D2": {
+  "bad": 0,
+  "comparisons": 4488,
+  "details_mismatch": [],
+  "points": 2244
+ },
+ "D3": {
+  "bad": 0,
+  "comparisons": 9680,
+  "details_mismatch": [],
+  "points": 2420,
+  "sep_points": 546,
+  "sep_points_claimed": 546
+ },
+ "D4": {
+  "bad": 0,
+  "comparisons": 472,
+  "details_mismatch": [],
+  "points": 225
+ },
+ "comparisons_totals": {
+  "D1": 78570,
+  "D2": 4488,
+  "D3": 9680,
+  "D4": 472
+ },
+ "points_totals": {
+  "D1": 26190,
+  "D2": 2244,
+  "D3": 2420,
+  "D4": 225
+ },
+ "sep_set_sizes": {
+  "1": 0,
+  "2": 0,
+  "3": 4,
+  "4": 2,
+  "5": 5,
+  "6": 3,
+  "7": 6,
+  "8": 4,
+  "9": 7,
+  "10": 5,
+  "11": 8,
+  "12": 6,
+  "13": 9,
+  "14": 7,
+  "15": 10,
+  "16": 8,
+  "17": 11,
+  "18": 9,
+  "19": 12,
+  "20": 10,
+  "21": 13,
+  "22": 11,
+  "23": 14,
+  "24": 12,
+  "25": 15,
+  "26": 13,
+  "27": 16,
+  "28": 14,
+  "29": 17,
+  "30": 15,
+  "31": 18,
+  "32": 16,
+  "33": 19,
+  "34": 17,
+  "35": 20,
+  "36": 18,
+  "37": 21,
+  "38": 19,
+  "39": 22,
+  "40": 20,
+  "41": 23,
+  "42": 21,
+  "43": 24,
+  "44": 22
+ },
+ "summary": {
+  "declared_totals": {
+   "comparisons": 93210,
+   "points": 31079
+  },
+  "meta": {
+   "verifier_sha256": "1ce7df23f15165180773fcfd45c9b789e0f22981a148fdc07e6708cbb5e43173"
+  },
+  "n_bad": 0,
+  "observed_totals": {
+   "comparisons": 93210,
+   "points": 31079
+  },
+  "theorem": "M-RC/M-DIAG/M-SEP: {1}^t row window-edge frontier (published note 55e6b109). Universal claim proved on paper in report.md; engines corroborate the declared grid."
+ }
+}
