@@ -192,6 +192,8 @@ K(13)≥10（K1058 訂正）、s(13)=7 はランダム測定値。
   k=5 の 180/72 軌道が K1305 の 2 軌道を独立に確認。
   `PG(2,8)` の円錐曲線レイヤーは各 k で単一 PGL(2,8) 軌道・極大拡大偶数で
   **Grundy = k mod 2**（K1323）。
+  `PG(2,8)` の極大キャップは hyperoval が単一軌道（32,704）、極大 6-キャップが
+  3 軌道（各 686,784、K1324）。
 - 実験: [s-parameter-kyouen-20261125](../research/experiments/s-parameter-kyouen-20261125/report.md)・[parity-characterization-20261125](../research/experiments/parity-characterization-20261125/report.md)
 
 ## 0c. 高速な反転平面構成（新）
