@@ -40,3 +40,19 @@ up the slot claim, the paper proof, the verification machine and the official ru
 
 See `research/log/2026-11-25-z14-predecl-exploration.md` for the full primary-source
 timeline, honest disclosure and handoff instructions.
+
+## Verify machine (added by the declaration lane, K1319 slot claimed)
+
+- `verify_k1319.py` — sha256
+  `564ac761af0c520a43ad22c44981aa3f386c6233c3d02cfa93ee4b7493afd96c`
+  (audit machine for the claims in
+  `research/log/2026-11-25-strip-z14-min9-single-owner-note.md`; engine-pin
+  startup gate `bd5f22e4…`; declared fail-closed battery 8,394 points
+  D1 cells 2,496 / D2 strip 791 / D3 z13 anchors 297 / D4 stair 256 /
+  D5 self 4,464 / D6 deviant+collapse witnesses 13 / D7 extension 77;
+  count mismatch itself FAILs; tamper battery: `--tamper-engine` rc 2,
+  `--tamper=cell/strip/anchor13/stair/deviant/ext` rc 1 on the single
+  contaminated gate). Predry 5-run byte-identical stdout sha256
+  `e06315ae72ac99718615623c148145fcc7fbbf6c54a7e162b78eee73a37ed225`.
+  The exploration files above stay frozen; this file is the only addition
+  besides `published/` outputs after the official runs.
