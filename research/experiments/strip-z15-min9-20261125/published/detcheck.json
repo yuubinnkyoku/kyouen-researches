@@ -1,0 +1,134 @@
+{
+ "battery": {
+  "declared_pts": 10532,
+  "gates": {
+   "D1_cells": 2808,
+   "D2_strip": 859,
+   "D3_z14_anchors": 294,
+   "D4_stair_anchors": 288,
+   "D5_self_anchors": 5865,
+   "D6_deviant_witnesses": 20,
+   "D7_extension_anchors": 86,
+   "D8_belowband_anchors": 312
+  },
+  "overall_bad": 0,
+  "pts": 10532
+ },
+ "declaration_note_commit": "cfa1c6b0911da6dd81005ed9f842912ef7cbca1b",
+ "engine_sha": "bd5f22e415a78368c9b798296bc84948d5637decbf3c21a92404d45fb12e3a92",
+ "honest_notes": [
+  "Official runs 3 and 4 (env -i isolated dirs) initially returned rc 2 with empty stdout because the fetched-back file had been copied under the name fb_verify.py inside iso3/iso4 (python: can't open file); fixed by renaming to verify_k1321.py and re-running: rc 0, byte-identical. No bytes of the machine were touched; the failed runs produced zero output.",
+  "All 4 official runs use the published bytes fetched-back at commit 65db46fd and cmp-verified against the local build before execution."
+ ],
+ "kit_commit_machine_published": "65db46fd2b736611dfba4bd8979586bf569f0de0",
+ "machine": "verify_k1321",
+ "official_runs": {
+  "run1": {
+   "byte_identical_to_predry": true,
+   "bytes": 669,
+   "env": "PYTHONHASHSEED=random, same cwd as published verify_k1321.py",
+   "rc": 0,
+   "sha256": "c337e63b37f2f7fdc0b0e22f16b3210a37e3fd1d59abcacaec57195bdaf7d381"
+  },
+  "run2": {
+   "byte_identical_to_predry": true,
+   "bytes": 669,
+   "env": "PYTHONHASHSEED=1, same cwd",
+   "rc": 0,
+   "sha256": "c337e63b37f2f7fdc0b0e22f16b3210a37e3fd1d59abcacaec57195bdaf7d381"
+  },
+  "run3": {
+   "byte_identical_to_predry": true,
+   "bytes": 669,
+   "env": "env -i isolated dir /official/iso3",
+   "rc": 0,
+   "sha256": "c337e63b37f2f7fdc0b0e22f16b3210a37e3fd1d59abcacaec57195bdaf7d381"
+  },
+  "run4": {
+   "byte_identical_to_predry": true,
+   "bytes": 669,
+   "env": "env -i isolated dir /official/iso4",
+   "rc": 0,
+   "sha256": "c337e63b37f2f7fdc0b0e22f16b3210a37e3fd1d59abcacaec57195bdaf7d381"
+  }
+ },
+ "predry_runs": 6,
+ "predry_sha256": "c337e63b37f2f7fdc0b0e22f16b3210a37e3fd1d59abcacaec57195bdaf7d381",
+ "published_bytes_fetchback": {
+  "README.md": {
+   "cmp_with_local_build": "BYTE MATCH",
+   "sha256": "b6dc03925272cd4d5328111b16ac31fe0b4220c6f3c4c38ea35c28cbb3b945c2"
+  },
+  "verify_k1321.py": {
+   "cmp_with_local_build": "BYTE MATCH",
+   "sha256": "9eb114c1547c3a348154055d39ebd34a6f233d49a05899d23d169f2533bf87da"
+  }
+ },
+ "tamper_battery": {
+  "all_modes_fail_closed": true,
+  "modes": {
+   "anchor14": {
+    "flagged_gate": {
+     "D3_z14_anchors": 1
+    },
+    "overall_bad": 1,
+    "rc": 1
+   },
+   "belowband": {
+    "flagged_gate": {
+     "D8_belowband_anchors": 1
+    },
+    "overall_bad": 1,
+    "rc": 1
+   },
+   "cell": {
+    "flagged_gate": {
+     "D1_cells": 1
+    },
+    "overall_bad": 1,
+    "rc": 1
+   },
+   "deviant": {
+    "flagged_gate": {
+     "D6_deviant_witnesses": 1
+    },
+    "overall_bad": 1,
+    "rc": 1
+   },
+   "ext": {
+    "flagged_gate": {
+     "D7_extension_anchors": 1
+    },
+    "overall_bad": 1,
+    "rc": 1
+   },
+   "stair": {
+    "flagged_gate": {
+     "D4_stair_anchors": 1
+    },
+    "overall_bad": 1,
+    "rc": 1
+   },
+   "strip": {
+    "flagged_gate": {
+     "D2_strip": 1
+    },
+    "overall_bad": 1,
+    "rc": 1
+   }
+  },
+  "tamper_engine": {
+   "engine_gate": "FAIL",
+   "raw": "{\"engine_gate\": \"FAIL\", \"engine_sha\": \"bd5f22e415a78368c9b798296bc84948d5637decbf3c21a92404d45fb12e3a90\", \"mode\": \"tamper-engine\"}",
+   "rc": 2
+  }
+ },
+ "timing_run": {
+  "note": "extra 5th same-bytes run solely to capture wall time (byte-identical, disclosed)",
+  "rc": 0,
+  "sha256": "c337e63b37f2f7fdc0b0e22f16b3210a37e3fd1d59abcacaec57195bdaf7d381",
+  "wall_s_real": 23.7
+ },
+ "utc": "2026-11-25",
+ "verdict": "OFFICIAL-PASS"
+}
