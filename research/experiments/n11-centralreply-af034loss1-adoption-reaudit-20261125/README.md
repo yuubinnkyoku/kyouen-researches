@@ -82,7 +82,7 @@ refresh fork `73186e63…` を scratch 再実行で再検証 (EC summary
 - `output/decomp-deltas-af034loss1-adoption.json` (sha256
   `614bbda0…`・schema af034loss1-adoption-decomp-deltas-v1)
 
-### wave F 機器導出の確定値 (wave E の予想を実証・全て extractor が fail-closed 検証)
+### wave F 機械導出の確定値 (wave E の予想を実証・全て extractor が fail-closed 検証)
 
 - **class 34908**: unknown 7→6・rank 8→7・groups_served 5 static・
   base_known_loss_children 49→50 (adopted_own 1)・**NOT freed・NOT
@@ -108,16 +108,28 @@ refresh fork `73186e63…` を scratch 再実行で再検証 (EC summary
   unknown 34,497 (before/after 同一・static)・board 検証 free
   候補 39/39・reject 0
 
-### 次 probe 候補 (検討用・次 Part の宣言が最終選定)
+### 次 probe 候補 (2026-11-25 補遺で訂正)
 
-worklist regen (`b4933810…`) の機器抽出: closure表 rank 上位で残
-unknown の小さい **class 5804 (rank 6・unknown 4)** を筆頭に
-**class 34269 (rank 9・unknown 11)**・**class 5343 (rank 10・
-unknown 46)**。class 34908 の残 6子 (rank 7) は全て scrutiny
-gate 専権のため本 lane の次 probe 対象外。rank 1-5 の class
-(23101/1849/2251: unknown 1・16371: unknown 2・16757: unknown 3)
-の残子を含む最終選定は次 Part の宣言が pool 状態と突き合わせて
-行う (本 dir は候補の機器抽出結果のみを出版)。
+worklist regen (`b4933810…`) と published closure-class batch packets
+(41 dirs・batch input keys 1,717 unique s5 + 各 family status.log) を
+機械 cross-join した結果: **closure rank 1-10 の全 class (23101/1849/
+2251/16371/16757/5804/34908/20421/34269/5343) の残 unknown 計 81子は
+全て過去 packet 済み (fresh 0) かつ全て probe-level WIN-labeled
+(unconsumed・scrutiny owner C++ 第二実装 gate pin `9193f5b6…` 待ち)**。
+class 5343 の 11 EXHAUSTED@15M 行も Part CQ (20M: 7 WIN) → Part CS
+(25M: 3 WIN) → Part CT (30M: aa050 WIN) の budget ladder で解決済み。
+34269 の 11 残子は batch-30 WIN-HALT 行・5804 の 4 残子は batch-31 WIN
+行 (ad024/ad028/ad043@30M (Part DI)/ad055)。よって本 README 初版の
+「class 5804 を筆頭とする次 probe 候補」提示は取り下げる (top-10 には
+fresh・still-EXHAUSTED とも存在しない)。
+
+次 Part の実行可能選択肢: (a) scrutiny gate 通過後の WIN 行採用 Part
+(C++ 環境専権)・(b) fresh キーを持つ最上位 class からの新規 batch
+probe。機械抽出基準では fresh 最上位は rank 12 class 30345 (unknown
+50・fresh 49) (以後 rank 20 class 30484 (52 fresh)・rank 22 class
+23964 (51) が続く)。抽出は closure-class batch 41 dirs 基準で・旧
+night/terminal 系 batch は未照合。最終選定は次 Part の宣言が
+fail-closed maker で行う (本dirは候補抽出結果のみを出版)。
 
 ## 解釈ガード
 
@@ -130,7 +142,7 @@ gate 専権のため本 lane の次 probe 対象外。rank 1-5 の class
   不消費
 - loss-only adoption は class を free化も excluded化もしない
   (class 34908 は 6不消費WIN子が残るため unknown のまま・reaudit
-  の機器導出で確定)
+  の機械導出で確定)
 - nodes は bookkeeping・pn/dn ではない・solved数は勝敗ではない
 - closure表・worklist・greedy union・候補 class の列挙はいずれも
   bookkeeping であり、verdict・coverage 主張ではない
