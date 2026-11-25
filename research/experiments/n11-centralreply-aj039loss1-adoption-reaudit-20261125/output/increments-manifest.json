@@ -1,0 +1,185 @@
+{
+ "adopted_table": [
+  {
+   "hi": 65536,
+   "legal": 88,
+   "lo": 1152922606282735616,
+   "nodes": 16549916,
+   "result": 2
+  }
+ ],
+ "adopted_table_digest_sha256": "cd77a0d107b99ef7515b3e1f95a0913cfc514a4c2240a8e003743d8db06ebc52",
+ "base_cache_absent_hits_for_emitted": 0,
+ "base_cache_rows": 6712,
+ "base_cache_sha256": "73482be0cf0201b2d812f9205b0315e91527234e02196691279753853feddc70",
+ "batches": [
+  {
+   "adopted_loss_ids": [
+    "aj039"
+   ],
+   "adopted_nodes_per_pool": 16549916,
+   "anchor_ids": [
+    "aj001",
+    "aj049",
+    "af039"
+   ],
+   "b39_exhausted_history_lines": [
+    "2026-11-25T09:56:39Z aj030 EXHAUSTED 15000000,0,15000000",
+    "2026-11-25T10:06:11Z aj039 EXHAUSTED 15000000,0,15000000"
+   ],
+   "claim_reserved_excluded_ids": [
+    "ai044",
+    "ai048"
+   ],
+   "claim_reserved_pairs": {
+    "ai044": [
+     1152922604135256064,
+     65536
+    ],
+    "ai048": [
+     1152921573327372288,
+     68157440
+    ]
+   },
+   "exhausted_history_budget": 15000000,
+   "kit_integrity": {
+    "audit_ek_json_sha256": "d9aa8aab971ca0975caea7e52156bea86b3c183d843a40a8cea44a8dcf54691b",
+    "audit_ek_py_sha256": "7636def1cc7ca87171a0716e8eb76386ea9965485f28a942a53137439ac4bcfb",
+    "input_csv_sha256_pins": {
+     "af039": "e51a3c9de08c62a54d80547c520876af4245394d05e37bbebf01d74204f64691",
+     "aj001": "2f6daea5ca3b3fe6b7713c8d450af3f3c9f203acacb8a1340255d8e8f656496c",
+     "aj030": "520ee52abefaec80b800245dd1913489cd511923732e14d3315f4806aec83595",
+     "aj039": "82f8dff3136ce54e33203f69f3589b72891a41129b11f7b0811b4053e9858394",
+     "aj049": "46349391b3aa212cf7ffffbeae94d01b5202f25ca24a6c5294b75ced6184951a"
+    },
+    "kit_files_verified": 42,
+    "kit_manifest_sha256": "97574401309964806a8eed4968496dcd222aecaf029aa9b1115dcaaa2ec78a68",
+    "note": "the Part EK kit is PUBLISHED (42 files, byte-pinned above; MANIFEST-sha256 rev2 97574401...); the adopted aj039 key is fresh at BASE (never adopted before; probed honestly to EXHAUSTED at 15M in batch-39 and resolved fresh LOSS at the pre-declared 30M condition - not a same-condition re-probe); the probe-level WIN row aj030 and the 2 claim-reserved batch-38 keys are NOT consumed",
+    "raw_file_sha256_pins": {
+     "af039.p1.out": "2ba27ad40d2b344491f52e6efc724312ee3f597b9a9d7a8d194c60c6740a2fb4",
+     "af039.p2.out": "93b3a25d25b96af4cc27eb6994ece201be6befa1b40722d61b5cf18303019a7e",
+     "aj001.p1.out": "41a6b129005bd360741d89b48be2b3e35bba38d26fa9c08228e4519f2747ade1",
+     "aj001.p2.out": "0348aa062d7a488f8d802fcaec18c43dd87faa41089c63f0f78ee9a9922dd5ab",
+     "aj030.p1.out": "a0c88b3511d551fec1efa3069a7df59b1291bce2ae4bcb24cdb2bcda70573c7b",
+     "aj030.p2.out": "f0eb149af394f79f795186bf714d7da23a22c0df07d7bc2f1e35d6d661613062",
+     "aj039.p1.out": "529b3efeefd4c3d2c12988c9254b4a39931405708b707dece56dc9a508863238",
+     "aj039.p2.out": "930d0b48063c1b0f18381beaa16d038c1129406539da579b68a8224fa9274dd8",
+     "aj049.p1.out": "741f62f999d6944dc5d6151850f9f1960051b56c476ee53fd5b611dae8c49af5",
+     "aj049.p2.out": "850df2ae34a0f3e437a83f557e57b8ccca59ab418de54c64fd06beea212b9257"
+    },
+    "source_pins": {
+     "audit_ek_py": "7636def1cc7ca87171a0716e8eb76386ea9965485f28a942a53137439ac4bcfb",
+     "b39_status": "08d70bb77c08e7a37b77005b3b2dca1a759f56b4146e1623eef4eb69759a3cea",
+     "canonical_cache_src": "73482be0cf0201b2d812f9205b0315e91527234e02196691279753853feddc70",
+     "exh15m_aj030_p1": "843a0a0c976699d937391377455504797f5bece24222eef74d4452f20e20178c",
+     "exh15m_aj030_p2": "661c8e410f8e3f93227ac635233556fec5069ccf115117255a38b3b19f551757",
+     "exh15m_aj039_p1": "60ae21db0e099b22403b8ce64ba97e15de3987acfafb218d79c11aae6c3b4906",
+     "exh15m_aj039_p2": "c51899d50649444c3ee8cbb43f3318392131cc3add8b54cbe77d3f600a59dfbb",
+     "jsreplay": "845856175d3c793a7eb4306f5902ecda3f1c046a8a53e8f34ed375e51febc3df",
+     "quarantine": "81d231604d3a095c115135e05ca393d6be83e1aadde4f614d3b5a9cc67d17fe9",
+     "runbatch_ek_30m": "3b5083b47c043f93bbe01a5f3335baba6be6d1d6929885f4ab5b28b1778cf7b4",
+     "valgate_at2m_first_baseline": "6e902ab147b117bb09216070f272969418247f5eb73870bf7705c8220fc9c35c",
+     "valgate_at2m_first_host": "2e940c8f5bd1e595827f7958b5094a461f8e137e64062346154c144501a8bdad",
+     "valgate_at2m_first_input": "ecc0299b8142abde201fcc40ea9666dac7368d0888d0600abc717af66ddfe348",
+     "valgate_at2m_second_baseline": "eeafe3ac9bf3bed8a5aea5d1f652a1075771b44ab4aa51f8e83e13a4561e3c24",
+     "valgate_at2m_second_host": "878cbb5c5f08eed0913163ac0a8329e0d9a65fa22a51bc8666c2b7c686a3f1a6",
+     "valgate_first15m_baseline": "8035fe54f8c79dd44c4c80d6b38e4ad39d3d4660eaf57a32799969087b8a5591",
+     "valgate_first15m_host": "d654674d72cf26292af993bd6b9bb745b17902cc047212804c89b589b4f495b5",
+     "valgate_second15m_baseline": "91dffdec33a409bc3e5f6eb50c0ea95313574ef74d0692c5912a0814946de1fb",
+     "valgate_second15m_host": "b2aee5684906582f02cefb70ea24f1a9cab5112b945aa59d6d2a31fb0ac19729",
+     "valgate_second_input": "56aacb71769b231c9728dcc841d39f0d5cb579517d34769f0e7382516d4c3a62"
+    }
+   },
+   "pool": "ek-aj039loss1",
+   "probed_budget": 30000000,
+   "probed_ids": [
+    "aj030",
+    "aj039"
+   ],
+   "status_log_final_line": "2026-11-25T14:17:28Z aj039 PASS 30000000,2,16549916",
+   "status_log_first_line": "2026-11-25T14:06:22Z aj049 PASS 30000000,1,4998452",
+   "status_log_lines": 7,
+   "status_log_sha256": "868bfbff196343d074c909b0290739a0111f2b3dcfc04967f459528dbab6c01c",
+   "status_log_win_halt_lines": [
+    "2026-11-25T14:06:22Z aj049 WIN-HALT",
+    "2026-11-25T14:12:54Z aj030 WIN-HALT"
+   ],
+   "unadopted_win_ids": [
+    "aj030"
+   ],
+   "unconsumed_win_no_cache_pairs": {
+    "aj049": [
+     1152921574400065536,
+     1114112
+    ],
+    "aj050": [
+     1152921574400065536,
+     68157440
+    ]
+   },
+   "whole_packet_nodes": 31834615
+  }
+ ],
+ "exhausted_history_15m": {
+  "aj030": {
+   "key": [
+    1152922604135251976,
+    65536
+   ],
+   "nodes": 15000000,
+   "result": 0
+  },
+  "aj039": {
+   "key": [
+    1152922606282735616,
+    65536
+   ],
+   "nodes": 15000000,
+   "result": 0
+  }
+ },
+ "full_packet_eq_loss_only": false,
+ "interpretation_guard": "canonical single-LOSS adoption increment: only the fresh Part EK exact-LOSS row aj039 (two-pass fresh-cold node-exact at the pre-declared 30M budget/order 0 condition, resolved in (15M,30M] beyond the honest EXHAUSTED 15M history) is consumed into the canonical cache via the fail-closed union merger; nodes are bookkeeping, never verdicts; the standard 11x11 empty board stays UNKNOWN; no class freed or excluded claim is made by the maker (the reaudit refresh derives scheduling effects machine-only)",
+ "loss_ids": [
+  "aj039"
+ ],
+ "merger_sha256": "907119610034fb2aebfde012550a4129dfa3b086c6de11194e856747ac74606a",
+ "provenance": {
+  "audit_gates_total": 79,
+  "ek_kit_files": 42,
+  "raws_published": true,
+  "status_lines": 7
+ },
+ "quarantine_hits": 0,
+ "resolved_ids": [
+  "aj039"
+ ],
+ "row_counts": {
+  "adopted_loss_rows": 1,
+  "claim_reserved_excluded": 2,
+  "exhausted_history_prior": 2,
+  "prior_canonical_rows_base": 6712,
+  "wins_unconsumed_this_pool": 1
+ },
+ "schema": "ek-aj039loss1-increments-manifest-v1",
+ "sha256": {
+  "loss_increment": "7838b08131c5ee5bd8a2819ee8e3bcb4fb9733034f495e7da24b2758890ad36a"
+ },
+ "unadopted_win_ids": [
+  "aj030"
+ ],
+ "unadopted_win_rows": [
+  {
+   "hi": 65536,
+   "legal": 83,
+   "lo": 1152922604135251976,
+   "nodes": 15284699,
+   "result": 1
+  }
+ ],
+ "win_ids": [
+  "aj030"
+ ],
+ "win_scenario_exists": true,
+ "win_scenario_note": "the Part EK 30M packet holds, beside the adopted aj039 exact-LOSS row, the probe-level WIN row aj030 (nodes 15,284,699, WIN-HALT): it is NOT consumed by this Part (adoption of WIN verdicts is scrutiny-owner C++ second-implementation gate 9193f5b6... exclusive) and the aj030 key sits in NO cache"
+}
