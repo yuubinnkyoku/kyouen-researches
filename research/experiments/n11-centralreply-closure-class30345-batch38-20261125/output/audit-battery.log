@@ -1,0 +1,31 @@
+Part EF batch-38 audit battery (takeover lane, 2026-11-25)
+=========================================================
+Machine: scripts/audit_b38.py (EH audit_b39.py pattern adapted; see script docstring).
+Clean runs: 3x AUDIT-OK byte-identical output batch-audit.json
+  sha256 73652099bcc47ac86b89a790524fb78c353e01c91ddcdc3748b91cfea5b75fdc
+  "AUDIT-OK batch-38 class 30345: 49 keys, LOSS 24 / EXHAUSTED 6 / WIN 19, MISMATCH 0,
+   truncation artifacts 7, total_nodes_single_pass 396892270"
+Control (untampered copy-tree): AUDIT-OK, batch-audit.json byte-identical (73652099...).
+
+Tamper battery 9/9 fail-closed (each: copied tree, tamper applied, audit must exit rc=1,
+flag exactly the expected single gate, and NOT write batch-audit.json):
+  T-A2     batch-keys-b38.json 1-byte append ..................... A2 batch-keys-b38.json sha256 drift
+  T-A3     sources/quarantine.json 1-byte append ................. A3 pin drift for quarantine.json
+  T-A4     delete output/raw/ai049.p2.out ....................... A4 output/raw file set drift
+  T-A4t    truncated artifact gains a replay_done line ........... A4 truncated artifact carries replay_done
+  T-A7     status.log 1-byte append .............................. A7 status.log sha256 drift
+  T-A6     raw p2-only node bump (ai001) ........................ A6 ai001 p1/p2 not node-exact
+  T-A7raw  coordinated raw p1+p2 node bump (ai001) .............. A7 ai001 PASS line drift
+  T-A5     coordinated raw p1+p2 legal drift (ai005) ............ A5 ai005 legal/lo/hi drift vs batch-keys
+  T-A9     deep coordination: fake s5verdict ai049 WIN pair appended to an
+           canonical-cache copy + batch-keys pins + canonical_cache_s5verdict_rows + BOTH
+           script pin constants rewired (batch-keys sha + cache sha) .............. A9 canonical cache contains batch-38 pair(s)
+  T-A8     deep coordination: ai002 WIN->LOSS flipped in both raw passes + both status
+           lines rewoven (PASS fields + WIN-HALT removed) + STATUS_LINES 81->80 + status
+           pin rewire in the script copy ........................ A8 honest label counts drift
+
+Note on the deep cases: a fully coordinated raw+status+script-pin node-sum bump (with counts
+preserved) is not caught by this machine alone; that class is covered by the layered pin
+structure (kit MANIFEST raw pins, published per-raw sha256s, and the second-environment
+verification lane's 86-raw node-exact crosscheck of inc1-3; the EH/EK RAW_SHAS defense
+depth applies). Recorded honestly as a machine-scope limitation shared with audit_b39.py.

@@ -1,0 +1,526 @@
+{
+  "batch": "batch-38",
+  "batch_keys_b38_sha256": "298071046bfba8473c5b3d6e0b6a30108697eb0899aed7c70fcb4c5343f7cb8d",
+  "claims": "no closure, no coverage, no secured-coverage, no root outcome claimed; standard 11x11 empty board and all 19 central-reply roots stay UNKNOWN; nodes are bookkeeping",
+  "class_index": 30345,
+  "class_mask": [
+    1152922604118478848,
+    65536
+  ],
+  "drive": "2-pass fresh-cold exact replay, budget 15000000, order 0, 1 solver row / key / pass, drive step = 2 keys x 2 workers (2-core host), WIN-CONTINUE single-drive design to 49/49 keys",
+  "part": "Part EF (takeover lane completed ai044..ai049)",
+  "per_key": [
+    {
+      "budget": 15000000,
+      "key_id": "ai001",
+      "nodes": 10528977,
+      "probe_order": 132,
+      "result": 2,
+      "result_label": "LOSS",
+      "ts": "2026-11-25T07:13:18Z"
+    },
+    {
+      "budget": 15000000,
+      "key_id": "ai002",
+      "nodes": 3552766,
+      "probe_order": 133,
+      "result": 1,
+      "result_label": "WIN",
+      "ts": "2026-11-25T07:11:52Z"
+    },
+    {
+      "budget": 15000000,
+      "key_id": "ai003",
+      "nodes": 5682652,
+      "probe_order": 134,
+      "result": 1,
+      "result_label": "WIN",
+      "ts": "2026-11-25T07:15:11Z"
+    },
+    {
+      "budget": 15000000,
+      "key_id": "ai004",
+      "nodes": 4352970,
+      "probe_order": 135,
+      "result": 2,
+      "result_label": "LOSS",
+      "ts": "2026-11-25T07:14:55Z"
+    },
+    {
+      "budget": 15000000,
+      "key_id": "ai005",
+      "nodes": 11770537,
+      "probe_order": 136,
+      "result": 1,
+      "result_label": "WIN",
+      "ts": "2026-11-25T07:19:06Z"
+    },
+    {
+      "budget": 15000000,
+      "key_id": "ai006",
+      "nodes": 8819998,
+      "probe_order": 137,
+      "result": 1,
+      "result_label": "WIN",
+      "ts": "2026-11-25T07:18:25Z"
+    },
+    {
+      "budget": 15000000,
+      "key_id": "ai007",
+      "nodes": 15000000,
+      "probe_order": 138,
+      "result": 0,
+      "result_label": "EXHAUSTED",
+      "ts": "2026-11-25T07:22:45Z"
+    },
+    {
+      "budget": 15000000,
+      "key_id": "ai008",
+      "nodes": 3221447,
+      "probe_order": 139,
+      "result": 2,
+      "result_label": "LOSS",
+      "ts": "2026-11-25T07:20:32Z"
+    },
+    {
+      "budget": 15000000,
+      "key_id": "ai009",
+      "nodes": 7514829,
+      "probe_order": 141,
+      "result": 2,
+      "result_label": "LOSS",
+      "ts": "2026-11-25T07:26:06Z"
+    },
+    {
+      "budget": 15000000,
+      "key_id": "ai010",
+      "nodes": 13066796,
+      "probe_order": 142,
+      "result": 1,
+      "result_label": "WIN",
+      "ts": "2026-11-25T07:27:07Z"
+    },
+    {
+      "budget": 15000000,
+      "key_id": "ai011",
+      "nodes": 6715814,
+      "probe_order": 143,
+      "result": 2,
+      "result_label": "LOSS",
+      "ts": "2026-11-25T07:29:29Z"
+    },
+    {
+      "budget": 15000000,
+      "key_id": "ai012",
+      "nodes": 4767152,
+      "probe_order": 144,
+      "result": 2,
+      "result_label": "LOSS",
+      "ts": "2026-11-25T07:29:04Z"
+    },
+    {
+      "budget": 15000000,
+      "key_id": "ai013",
+      "nodes": 10255279,
+      "probe_order": 145,
+      "result": 1,
+      "result_label": "WIN",
+      "ts": "2026-11-25T07:33:40Z"
+    },
+    {
+      "budget": 15000000,
+      "key_id": "ai014",
+      "nodes": 14969659,
+      "probe_order": 146,
+      "result": 1,
+      "result_label": "WIN",
+      "ts": "2026-11-25T07:36:10Z"
+    },
+    {
+      "budget": 15000000,
+      "key_id": "ai015",
+      "nodes": 3086764,
+      "probe_order": 147,
+      "result": 2,
+      "result_label": "LOSS",
+      "ts": "2026-11-25T07:35:20Z"
+    },
+    {
+      "budget": 15000000,
+      "key_id": "ai016",
+      "nodes": 3496190,
+      "probe_order": 148,
+      "result": 2,
+      "result_label": "LOSS",
+      "ts": "2026-11-25T07:37:29Z"
+    },
+    {
+      "budget": 15000000,
+      "key_id": "ai017",
+      "nodes": 8468415,
+      "probe_order": 149,
+      "result": 1,
+      "result_label": "WIN",
+      "ts": "2026-11-25T07:38:24Z"
+    },
+    {
+      "budget": 15000000,
+      "key_id": "ai018",
+      "nodes": 6236845,
+      "probe_order": 150,
+      "result": 2,
+      "result_label": "LOSS",
+      "ts": "2026-11-25T07:49:04Z"
+    },
+    {
+      "budget": 15000000,
+      "key_id": "ai019",
+      "nodes": 4269857,
+      "probe_order": 151,
+      "result": 2,
+      "result_label": "LOSS",
+      "ts": "2026-11-25T07:48:43Z"
+    },
+    {
+      "budget": 15000000,
+      "key_id": "ai020",
+      "nodes": 9007508,
+      "probe_order": 152,
+      "result": 2,
+      "result_label": "LOSS",
+      "ts": "2026-11-25T07:52:10Z"
+    },
+    {
+      "budget": 15000000,
+      "key_id": "ai021",
+      "nodes": 6190420,
+      "probe_order": 153,
+      "result": 2,
+      "result_label": "LOSS",
+      "ts": "2026-11-25T07:51:36Z"
+    },
+    {
+      "budget": 15000000,
+      "key_id": "ai022",
+      "nodes": 7405631,
+      "probe_order": 154,
+      "result": 2,
+      "result_label": "LOSS",
+      "ts": "2026-11-25T07:55:32Z"
+    },
+    {
+      "budget": 15000000,
+      "key_id": "ai023",
+      "nodes": 13676098,
+      "probe_order": 155,
+      "result": 1,
+      "result_label": "WIN",
+      "ts": "2026-11-25T07:56:45Z"
+    },
+    {
+      "budget": 15000000,
+      "key_id": "ai024",
+      "nodes": 15000000,
+      "probe_order": 156,
+      "result": 0,
+      "result_label": "EXHAUSTED",
+      "ts": "2026-11-25T08:04:29Z"
+    },
+    {
+      "budget": 15000000,
+      "key_id": "ai025",
+      "nodes": 9392986,
+      "probe_order": 157,
+      "result": 2,
+      "result_label": "LOSS",
+      "ts": "2026-11-25T08:00:41Z"
+    },
+    {
+      "budget": 15000000,
+      "key_id": "ai026",
+      "nodes": 9199731,
+      "probe_order": 158,
+      "result": 2,
+      "result_label": "LOSS",
+      "ts": "2026-11-25T08:04:50Z"
+    },
+    {
+      "budget": 15000000,
+      "key_id": "ai027",
+      "nodes": 10234914,
+      "probe_order": 159,
+      "result": 2,
+      "result_label": "LOSS",
+      "ts": "2026-11-25T08:07:51Z"
+    },
+    {
+      "budget": 15000000,
+      "key_id": "ai028",
+      "nodes": 4892185,
+      "probe_order": 160,
+      "result": 1,
+      "result_label": "WIN",
+      "ts": "2026-11-25T08:06:48Z"
+    },
+    {
+      "budget": 15000000,
+      "key_id": "ai029",
+      "nodes": 12001061,
+      "probe_order": 161,
+      "result": 2,
+      "result_label": "LOSS",
+      "ts": "2026-11-25T08:15:12Z"
+    },
+    {
+      "budget": 15000000,
+      "key_id": "ai030",
+      "nodes": 15000000,
+      "probe_order": 162,
+      "result": 0,
+      "result_label": "EXHAUSTED",
+      "ts": "2026-11-25T08:15:33Z"
+    },
+    {
+      "budget": 15000000,
+      "key_id": "ai031",
+      "nodes": 4148336,
+      "probe_order": 163,
+      "result": 2,
+      "result_label": "LOSS",
+      "ts": "2026-11-25T08:17:18Z"
+    },
+    {
+      "budget": 15000000,
+      "key_id": "ai032",
+      "nodes": 11928171,
+      "probe_order": 164,
+      "result": 2,
+      "result_label": "LOSS",
+      "ts": "2026-11-25T08:18:51Z"
+    },
+    {
+      "budget": 15000000,
+      "key_id": "ai033",
+      "nodes": 4181137,
+      "probe_order": 165,
+      "result": 2,
+      "result_label": "LOSS",
+      "ts": "2026-11-25T08:20:53Z"
+    },
+    {
+      "budget": 15000000,
+      "key_id": "ai034",
+      "nodes": 3087464,
+      "probe_order": 166,
+      "result": 1,
+      "result_label": "WIN",
+      "ts": "2026-11-25T08:20:38Z"
+    },
+    {
+      "budget": 15000000,
+      "key_id": "ai035",
+      "nodes": 4227036,
+      "probe_order": 167,
+      "result": 1,
+      "result_label": "WIN",
+      "ts": "2026-11-25T08:22:30Z"
+    },
+    {
+      "budget": 15000000,
+      "key_id": "ai036",
+      "nodes": 8137160,
+      "probe_order": 168,
+      "result": 1,
+      "result_label": "WIN",
+      "ts": "2026-11-25T08:23:16Z"
+    },
+    {
+      "budget": 15000000,
+      "key_id": "ai037",
+      "nodes": 7709821,
+      "probe_order": 169,
+      "result": 2,
+      "result_label": "LOSS",
+      "ts": "2026-11-25T08:26:44Z"
+    },
+    {
+      "budget": 15000000,
+      "key_id": "ai038",
+      "nodes": 15000000,
+      "probe_order": 170,
+      "result": 0,
+      "result_label": "EXHAUSTED",
+      "ts": "2026-11-25T08:31:24Z"
+    },
+    {
+      "budget": 15000000,
+      "key_id": "ai039",
+      "nodes": 13065437,
+      "probe_order": 171,
+      "result": 1,
+      "result_label": "WIN",
+      "ts": "2026-11-25T08:32:25Z"
+    },
+    {
+      "budget": 15000000,
+      "key_id": "ai040",
+      "nodes": 15000000,
+      "probe_order": 172,
+      "result": 0,
+      "result_label": "EXHAUSTED",
+      "ts": "2026-11-25T08:40:16Z"
+    },
+    {
+      "budget": 15000000,
+      "key_id": "ai041",
+      "nodes": 15000000,
+      "probe_order": 173,
+      "result": 0,
+      "result_label": "EXHAUSTED",
+      "ts": "2026-11-25T08:40:16Z"
+    },
+    {
+      "budget": 15000000,
+      "key_id": "ai042",
+      "nodes": 9086966,
+      "probe_order": 174,
+      "result": 2,
+      "result_label": "LOSS",
+      "ts": "2026-11-25T08:43:00Z"
+    },
+    {
+      "budget": 15000000,
+      "key_id": "ai043",
+      "nodes": 3897909,
+      "probe_order": 175,
+      "result": 1,
+      "result_label": "WIN",
+      "ts": "2026-11-25T08:41:55Z"
+    },
+    {
+      "budget": 15000000,
+      "key_id": "ai044",
+      "nodes": 5677449,
+      "probe_order": 176,
+      "result": 2,
+      "result_label": "LOSS",
+      "ts": "2026-11-25T15:19:27Z"
+    },
+    {
+      "budget": 15000000,
+      "key_id": "ai045",
+      "nodes": 7700102,
+      "probe_order": 177,
+      "result": 2,
+      "result_label": "LOSS",
+      "ts": "2026-11-25T15:19:49Z"
+    },
+    {
+      "budget": 15000000,
+      "key_id": "ai046",
+      "nodes": 5256793,
+      "probe_order": 178,
+      "result": 1,
+      "result_label": "WIN",
+      "ts": "2026-11-25T15:21:18Z"
+    },
+    {
+      "budget": 15000000,
+      "key_id": "ai047",
+      "nodes": 2946085,
+      "probe_order": 179,
+      "result": 1,
+      "result_label": "WIN",
+      "ts": "2026-11-25T15:20:51Z"
+    },
+    {
+      "budget": 15000000,
+      "key_id": "ai048",
+      "nodes": 2232854,
+      "probe_order": 180,
+      "result": 1,
+      "result_label": "WIN",
+      "ts": "2026-11-25T15:21:51Z"
+    },
+    {
+      "budget": 15000000,
+      "key_id": "ai049",
+      "nodes": 832069,
+      "probe_order": 181,
+      "result": 1,
+      "result_label": "WIN",
+      "ts": "2026-11-25T15:21:37Z"
+    }
+  ],
+  "pins": {
+    "batch1_batch_keys": "2aaccc941d7aec35c416b27d5cdd10f7fbb82c9801bcf560b61e20be88c331f8",
+    "batch1_status": "559a0884d4c728c05a992bcf144661fbd8212bc09d2c8b56341aebe7b94348b1",
+    "canonical_cache": "fc3e4ac9052447158202f09d5efe05468dba32fe95ec90beaaa0a0de9d2c020f",
+    "closure_classes": "27e00b0dbf2f33603dfbed91b00153f73c7a2d05b1258133a39c9ec5bfd41364",
+    "freshness_ranks1to12": "e5f517177778102d2313da5bb6b46c3084c9a99c11323b750407b0f1919da148",
+    "jsreplay": "845856175d3c793a7eb4306f5902ecda3f1c046a8a53e8f34ed375e51febc3df",
+    "prior_probe_universe": "6deee846a4e67778437cd052502535f4839f3fbe76d5e1ec9bc9b6c0036e942b",
+    "quarantine": "81d231604d3a095c115135e05ca393d6be83e1aadde4f614d3b5a9cc67d17fe9",
+    "refresh_summary": "6af660a1e0ad8f0ad3b0ac6b32c1a24099aa8f1c3a2271496a9bfb99dc80b6bc",
+    "runbatch": "f591f8c2b67326e53873f8ea70f8d04d18423e7c8ef8359838cbafe8264f3b84",
+    "worklist_class30345_extract": "7fe5551327f1ac65e2ce1477b5dde8ab03a7cae23aa0be86ce4821c8c3dc7a72"
+  },
+  "reported_truncation_artifacts": [
+    "ai014.p2.truncated.073413.out",
+    "ai024.p2.truncated.080131.out",
+    "ai029.p2.truncated.081247.out",
+    "ai030.p2.truncated.081247.out",
+    "ai038.p2.truncated.082814.out",
+    "ai040.p2.truncated.083709.out",
+    "ai041.p2.truncated.083709.out"
+  ],
+  "results": {
+    "EXHAUSTED": 6,
+    "LOSS": 24,
+    "MISMATCH": 0,
+    "WIN": 19,
+    "class_30484_dual_class_children": {
+      "ai044": "LOSS 5677449 (unconsumed honest label; future loss-only adoption candidate)",
+      "ai048": "WIN 2232854 (unconsumed; scrutiny-owner C++ gate exclusive)",
+      "note": "the two class-30484 claim-reserved batch-38 children measured here for the first time; both verdicts remain unconsumed"
+    },
+    "exhausted_keys_honest_unknown": [
+      "ai007",
+      "ai024",
+      "ai030",
+      "ai038",
+      "ai040",
+      "ai041"
+    ],
+    "exhausted_note": "result==0 at 15000000-node budget on both passes; honest UNKNOWN, no same-condition re-probe permitted",
+    "total_nodes_all_keys_single_pass": 396892270,
+    "win_keys_unconsumed": [
+      "ai002",
+      "ai003",
+      "ai005",
+      "ai006",
+      "ai010",
+      "ai013",
+      "ai014",
+      "ai017",
+      "ai023",
+      "ai028",
+      "ai034",
+      "ai035",
+      "ai036",
+      "ai039",
+      "ai043",
+      "ai046",
+      "ai047",
+      "ai048",
+      "ai049"
+    ],
+    "win_note": "WIN verdicts NOT consumed anywhere; adoption only via scrutiny-owner C++ gate 9193f5b6 (C++ scrutiny-owner gate; batch-38 verdicts are NOT consumed)"
+  },
+  "schema": "n11-centralreply-closure-batch38-audit-v1",
+  "selection": "closure-classes 27e00b0d rank 12, class 30345 unknown_now 50 = 49 clean fresh targets ai001..ai049 (probe_order 132..139, 141..181) + prior batch-1 dual-class key b018 (probe_order 140, probe-level unconsumed WIN, excluded, same-condition re-probe prohibited); ranks 1..11 machine-verified fresh-0 (freshness-ranks1to12.csv e5f51717)",
+  "status_log_sha256": "8ca390768e317b5fdf810767dbd6e7bc31790d58762701e71759b4883fd8e14f",
+  "target_key_count": 49,
+  "truncation_retries_status_lines": 7,
+  "verdicts_consumed_into_canonical_cache": false
+}
