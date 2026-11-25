@@ -1,0 +1,2879 @@
+{
+ "all_pass": true,
+ "check_count": 27,
+ "checks": [
+  {
+   "detail": "",
+   "name": "pairs.prev_105",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "pairs.new_15",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "pairs.complete_120",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "pairs.bounds",
+   "pass": true
+  },
+  {
+   "detail": {
+    "disjoint": 8,
+    "shared": 7
+   },
+   "name": "pairs.new_census",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "pairs.shared_jointA_zero",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "triples.prev_455",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "triples.new_105",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "triples.complete_560",
+   "pass": true
+  },
+  {
+   "detail": {
+    "b_only": 352,
+    "disjoint": 63,
+    "zero": 145
+   },
+   "name": "triples.census",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "triples.disjoint_A_terms",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "triples.bounds",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "quads.prev_1365",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "quads.new_455",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "quads.complete_1820",
+   "pass": true
+  },
+  {
+   "detail": {
+    "b_only": 73,
+    "zero": 382
+   },
+   "name": "quads.new_census",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "quints.all_zero_4368",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "cross.triples_2",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "cross.quads_2",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "split.identity_per_k",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "reproduce_k1_15",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "split.reproduce_k1_15",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "split.monotone",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "survival.monotone",
+   "pass": true
+  },
+  {
+   "detail": {
+    "k16_minus_k15": "81948093391505762",
+    "m16": "124700761709066759"
+   },
+   "name": "survival.marginal",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "survival.union_bound",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "mixed.b_survive_monotone",
+   "pass": true
+  }
+ ],
+ "date": "2026-11-18",
+ "inputs": {
+  "groups_aggregate": {
+   "git_blob_sha1": "31bdefdb2e2cc90b706cbb8090e98eb5eece4d87",
+   "path": "research/experiments/n11-head1410-partial-parent-nonsterile-children-20261118/output/cost16-b-phase-groups-20261118.json"
+  },
+  "survival_k14_json": {
+   "commit": "dc8cb4a4",
+   "git_blob_sha1": "1f0b64b1d0587333be30b412e87178dd28afec6a",
+   "path": "research/experiments/n11-head1410-partial-parent-nonsterile-children-20261118/output/cost16-survival-k14-20261118.json"
+  },
+  "survival_k15_json": {
+   "commit": "be21591e",
+   "git_blob_sha1": "fdf99a93571c8c76d5e97325dd2e92ef4b57ce31",
+   "path": "research/experiments/n11-head1410-partial-parent-nonsterile-children-20261118/output/cost16-survival-k15-20261118.json"
+  }
+ },
+ "interpretation_guard": "Cover-plan combinatorics only. Survival points count minimum cover plans containing at least one banned root; they are not search costs and imply nothing about WIN/REFUTED verdicts of the banned roots. REFUTED-D10 and STERILE are not LOSS proofs.",
+ "lane": "n11 long lane (verification side)",
+ "schema": "n11-cost16-survival-k16-20261118-v1",
+ "structure": {
+  "ie_mechanism": "kill(k) = sum m - sum j2 + sum j3 - sum j4 for k <= 16; same A/B split identities as the k=14/k=15 publications",
+  "new_quad_census": {
+   "b_only": 73,
+   "zero": 382
+  },
+  "quints_all_zero": true,
+  "rank16_root": {
+   "a_part": "95656752852273140",
+   "b_part": "29044008856793619",
+   "membership": "124700761709066759",
+   "root": "00000000000000801202020000009000",
+   "rows": [
+    11,
+    19
+   ]
+  },
+  "triple_census_k16": {
+   "b_only": 352,
+   "disjoint": 63,
+   "zero": 145
+  }
+ },
+ "title": "Exact survival curve extended to k=16 for the 31-row cost-16 parent: hub root (11,19) returns; 11 new disjoint triples (A-type 3-way terms) and 73 new B-type-only quads; I-E verified to still terminate at quads (all 4,368 5-subsets structurally zero)",
+ "unknown_status": "Standard 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, and classes 1/2/4 remain UNKNOWN.",
+ "values": {
+  "A_survive": {
+   "k1": "2201089659239772678",
+   "k10": "1400734279274103379",
+   "k11": "1319225112917587991",
+   "k12": "1247882269674605395",
+   "k13": "1177695220165504118",
+   "k14": "1123103343070779575",
+   "k15": "1069022110325447552",
+   "k16": "1005515314465815036",
+   "k2": "2104574580015675814",
+   "k3": "2008239738475228380",
+   "k4": "1912189176067079977",
+   "k5": "1824754211028709357",
+   "k6": "1737697276534435264",
+   "k7": "1651027802902603340",
+   "k8": "1564239038548375836",
+   "k9": "1482354862862959467"
+  },
+  "B_survive_full_singleton_ban": {
+   "k0": "660663050386546968",
+   "k1": "628978083295235013",
+   "k10": "389244119480989629",
+   "k11": "365139769030068297",
+   "k12": "344139100713603297",
+   "k13": "323601481801299033",
+   "k14": "307687702837177515",
+   "k15": "291965616884613987",
+   "k16": "273524319352740741",
+   "k2": "599802122093455224",
+   "k3": "570661010410478769",
+   "k4": "541653214551014457",
+   "k5": "515382673185362019",
+   "k6": "489488821032193431",
+   "k7": "463603768146918291",
+   "k8": "437686674003751251",
+   "k9": "413510331772804041"
+  },
+  "B_survive_share_percent": {
+   "k0": 22.271165,
+   "k1": 21.203055,
+   "k10": 13.121545,
+   "k11": 12.30898,
+   "k12": 11.60104,
+   "k13": 10.908711,
+   "k14": 10.372252,
+   "k15": 9.842255,
+   "k16": 9.220593,
+   "k2": 20.219523,
+   "k3": 19.237167,
+   "k4": 18.259305,
+   "k5": 17.373717,
+   "k6": 16.500826,
+   "k7": 15.628233,
+   "k8": 14.754559,
+   "k9": 13.939567
+  },
+  "kill": {
+   "k1": "136382599145473665",
+   "k10": "1176471942925388348",
+   "k11": "1282085459732825068",
+   "k12": "1374428971292272664",
+   "k13": "1465153639713678205",
+   "k14": "1535659295772524266",
+   "k15": "1605462614470419817",
+   "k16": "1687410707861925579",
+   "k2": "262073639571350318",
+   "k3": "387549592794774207",
+   "k4": "512607951062386922",
+   "k5": "626313457466409980",
+   "k6": "739264244113852661",
+   "k7": "851818770630959725",
+   "k8": "964524629128354269",
+   "k9": "1070585147044717848"
+  },
+  "kill_A": {
+   "k1": "104697632054161710",
+   "k10": "905053012019831009",
+   "k11": "986562178376346397",
+   "k12": "1057905021619328993",
+   "k13": "1128092071128430270",
+   "k14": "1182683948223154813",
+   "k15": "1236765180968486836",
+   "k16": "1300271976828119352",
+   "k2": "201212711278258574",
+   "k3": "297547552818706008",
+   "k4": "393598115226854411",
+   "k5": "481033080265225031",
+   "k6": "568090014759499124",
+   "k7": "654759488391331048",
+   "k8": "741548252745558552",
+   "k9": "823432428430974921"
+  },
+  "kill_B": {
+   "k1": "31684967091311955",
+   "k10": "271418930905557339",
+   "k11": "295523281356478671",
+   "k12": "316523949672943671",
+   "k13": "337061568585247935",
+   "k14": "352975347549369453",
+   "k15": "368697433501932981",
+   "k16": "387138731033806227",
+   "k2": "60860928293091744",
+   "k3": "90002039976068199",
+   "k4": "119009835835532511",
+   "k5": "145280377201184949",
+   "k6": "171174229354353537",
+   "k7": "197059282239628677",
+   "k8": "222976376382795717",
+   "k9": "247152718613742927"
+  },
+  "kill_share_percent": {
+   "k1": 4.597502,
+   "k10": 39.65925,
+   "k11": 43.219515,
+   "k12": 46.332445,
+   "k13": 49.390803,
+   "k14": 51.767571,
+   "k15": 54.120664,
+   "k16": 56.88316,
+   "k2": 8.834587,
+   "k3": 13.064422,
+   "k4": 17.28018,
+   "k5": 21.113229,
+   "k6": 24.920837,
+   "k7": 28.715086,
+   "k8": 32.514437,
+   "k9": 36.089771
+  },
+  "marginal_k16": "81948093391505762",
+  "new_pair_joints": {
+   "0,15": {
+    "joint": "77630861929656",
+    "joint_A": "0",
+    "joint_B": "77630861929656",
+    "shared_row": true
+   },
+   "1,15": {
+    "joint": "5624412105933660",
+    "joint_A": "4258020284969025",
+    "joint_B": "1366391820964635",
+    "shared_row": false
+   },
+   "10,15": {
+    "joint": "73866658878180",
+    "joint_A": "0",
+    "joint_B": "73866658878180",
+    "shared_row": true
+   },
+   "11,15": {
+    "joint": "5360592596427726",
+    "joint_A": "4054904198753640",
+    "joint_B": "1305688397674086",
+    "shared_row": false
+   },
+   "12,15": {
+    "joint": "77789548476882",
+    "joint_A": "0",
+    "joint_B": "77789548476882",
+    "shared_row": true
+   },
+   "13,15": {
+    "joint": "5868544794159441",
+    "joint_A": "4444861265862354",
+    "joint_B": "1423683528297087",
+    "shared_row": false
+   },
+   "14,15": {
+    "joint": "5574443817734628",
+    "joint_A": "4219267858965120",
+    "joint_B": "1355175958769508",
+    "shared_row": false
+   },
+   "2,15": {
+    "joint": "74924996566143",
+    "joint_A": "0",
+    "joint_B": "74924996566143",
+    "shared_row": true
+   },
+   "3,15": {
+    "joint": "74762416784685",
+    "joint_A": "0",
+    "joint_B": "74762416784685",
+    "shared_row": true
+   },
+   "4,15": {
+    "joint": "5591318641755438",
+    "joint_A": "4229998397328816",
+    "joint_B": "1361320244426622",
+    "shared_row": false
+   },
+   "5,15": {
+    "joint": "5615772035973876",
+    "joint_A": "4256770209385836",
+    "joint_B": "1359001826588040",
+    "shared_row": false
+   },
+   "6,15": {
+    "joint": "5831881970499912",
+    "joint_A": "4415738074063542",
+    "joint_B": "1416143896436370",
+    "shared_row": false
+   },
+   "7,15": {
+    "joint": "5831529426276654",
+    "joint_A": "4412607373694016",
+    "joint_B": "1418922052582638",
+    "shared_row": false
+   },
+   "8,15": {
+    "joint": "70792097238666",
+    "joint_A": "0",
+    "joint_B": "70792097238666",
+    "shared_row": true
+   },
+   "9,15": {
+    "joint": "74171678237514",
+    "joint_A": "0",
+    "joint_B": "74171678237514",
+    "shared_row": true
+   }
+  },
+  "new_quads": {
+   "0,1,10,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "0,1,11,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "0,1,12,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "0,1,13,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "0,1,14,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "0,1,2,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "0,1,3,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "0,1,4,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "0,1,5,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "0,1,6,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "0,1,7,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "0,1,8,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "0,1,9,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "0,10,11,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "0,10,12,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "0,10,13,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "0,10,14,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "0,11,12,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "0,11,13,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "0,11,14,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "0,12,13,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "0,12,14,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "0,13,14,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "0,2,10,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "0,2,11,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "0,2,12,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "0,2,13,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "0,2,14,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "0,2,3,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "0,2,4,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "0,2,5,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "0,2,6,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "0,2,7,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "0,2,8,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "0,2,9,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "0,3,10,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "0,3,11,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "0,3,12,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "0,3,13,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "0,3,14,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "0,3,4,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "0,3,5,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "0,3,6,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "0,3,7,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "0,3,8,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "0,3,9,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "0,4,10,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "0,4,11,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "0,4,12,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "0,4,13,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "0,4,14,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "0,4,5,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "0,4,6,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "0,4,7,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "0,4,8,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "0,4,9,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "0,5,10,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "0,5,11,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "0,5,12,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "0,5,13,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "0,5,14,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "0,5,6,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "0,5,7,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "0,5,8,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "0,5,9,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "0,6,10,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "0,6,11,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "0,6,12,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "0,6,13,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "0,6,14,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "0,6,7,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "0,6,8,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "0,6,9,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "0,7,10,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "0,7,11,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "0,7,12,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "0,7,13,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "0,7,14,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "0,7,8,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "0,7,9,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "0,8,10,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "0,8,11,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "0,8,12,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "0,8,13,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "0,8,14,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "0,8,9,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "0,9,10,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "0,9,11,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "0,9,12,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "0,9,13,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "0,9,14,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "1,10,11,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "1,10,12,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "1,10,13,15": {
+    "class": "b_only",
+    "joint": "160892971830"
+   },
+   "1,10,14,15": {
+    "class": "b_only",
+    "joint": "168936729360"
+   },
+   "1,11,12,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "1,11,13,15": {
+    "class": "b_only",
+    "joint": "161697458700"
+   },
+   "1,11,14,15": {
+    "class": "b_only",
+    "joint": "153632539260"
+   },
+   "1,12,13,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "1,12,14,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "1,13,14,15": {
+    "class": "b_only",
+    "joint": "169742465700"
+   },
+   "1,2,10,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "1,2,11,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "1,2,12,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "1,2,13,15": {
+    "class": "b_only",
+    "joint": "154414531560"
+   },
+   "1,2,14,15": {
+    "class": "b_only",
+    "joint": "161696209230"
+   },
+   "1,2,3,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "1,2,4,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "1,2,5,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "1,2,6,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "1,2,7,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "1,2,8,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "1,2,9,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "1,3,10,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "1,3,11,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "1,3,12,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "1,3,13,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "1,3,14,15": {
+    "class": "b_only",
+    "joint": "169742465700"
+   },
+   "1,3,4,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "1,3,5,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "1,3,6,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "1,3,7,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "1,3,8,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "1,3,9,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "1,4,10,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "1,4,11,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "1,4,12,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "1,4,13,15": {
+    "class": "b_only",
+    "joint": "169742465700"
+   },
+   "1,4,14,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "1,4,5,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "1,4,6,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "1,4,7,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "1,4,8,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "1,4,9,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "1,5,10,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "1,5,11,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "1,5,12,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "1,5,13,15": {
+    "class": "b_only",
+    "joint": "160892971830"
+   },
+   "1,5,14,15": {
+    "class": "b_only",
+    "joint": "160488187860"
+   },
+   "1,5,6,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "1,5,7,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "1,5,8,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "1,5,9,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "1,6,10,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "1,6,11,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "1,6,12,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "1,6,13,15": {
+    "class": "b_only",
+    "joint": "160892971830"
+   },
+   "1,6,14,15": {
+    "class": "b_only",
+    "joint": "168936729360"
+   },
+   "1,6,7,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "1,6,8,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "1,6,9,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "1,7,10,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "1,7,11,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "1,7,12,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "1,7,13,15": {
+    "class": "b_only",
+    "joint": "169341513330"
+   },
+   "1,7,14,15": {
+    "class": "b_only",
+    "joint": "169319018760"
+   },
+   "1,7,8,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "1,7,9,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "1,8,10,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "1,8,11,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "1,8,12,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "1,8,13,15": {
+    "class": "b_only",
+    "joint": "160892971830"
+   },
+   "1,8,14,15": {
+    "class": "b_only",
+    "joint": "160488187860"
+   },
+   "1,8,9,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "1,9,10,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "1,9,11,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "1,9,12,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "1,9,13,15": {
+    "class": "b_only",
+    "joint": "169341513330"
+   },
+   "1,9,14,15": {
+    "class": "b_only",
+    "joint": "169319018760"
+   },
+   "10,11,12,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "10,11,13,15": {
+    "class": "b_only",
+    "joint": "169297773660"
+   },
+   "10,11,14,15": {
+    "class": "b_only",
+    "joint": "169276528560"
+   },
+   "10,12,13,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "10,12,14,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "10,13,14,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "11,12,13,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "11,12,14,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "11,13,14,15": {
+    "class": "b_only",
+    "joint": "161677546260"
+   },
+   "12,13,14,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "2,10,11,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "2,10,12,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "2,10,13,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "2,10,14,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "2,11,12,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "2,11,13,15": {
+    "class": "b_only",
+    "joint": "154435859850"
+   },
+   "2,11,14,15": {
+    "class": "b_only",
+    "joint": "153611294160"
+   },
+   "2,12,13,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "2,12,14,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "2,13,14,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "2,3,10,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "2,3,11,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "2,3,12,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "2,3,13,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "2,3,14,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "2,3,4,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "2,3,5,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "2,3,6,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "2,3,7,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "2,3,8,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "2,3,9,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "2,4,10,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "2,4,11,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "2,4,12,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "2,4,13,15": {
+    "class": "b_only",
+    "joint": "161695042950"
+   },
+   "2,4,14,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "2,4,5,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "2,4,6,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "2,4,7,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "2,4,8,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "2,4,9,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "2,5,10,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "2,5,11,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "2,5,12,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "2,5,13,15": {
+    "class": "b_only",
+    "joint": "153699333480"
+   },
+   "2,5,14,15": {
+    "class": "b_only",
+    "joint": "160465595220"
+   },
+   "2,5,6,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "2,5,7,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "2,5,8,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "2,5,9,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "2,6,10,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "2,6,11,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "2,6,12,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "2,6,13,15": {
+    "class": "b_only",
+    "joint": "161635056060"
+   },
+   "2,6,14,15": {
+    "class": "b_only",
+    "joint": "177767560260"
+   },
+   "2,6,7,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "2,6,8,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "2,6,9,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "2,7,10,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "2,7,11,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "2,7,12,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "2,7,13,15": {
+    "class": "b_only",
+    "joint": "154418363160"
+   },
+   "2,7,14,15": {
+    "class": "b_only",
+    "joint": "160870477260"
+   },
+   "2,7,8,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "2,7,9,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "2,8,10,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "2,8,11,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "2,8,12,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "2,8,13,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "2,8,14,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "2,8,9,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "2,9,10,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "2,9,11,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "2,9,12,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "2,9,13,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "2,9,14,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "3,10,11,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "3,10,12,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "3,10,13,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "3,10,14,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "3,11,12,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "3,11,13,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "3,11,14,15": {
+    "class": "b_only",
+    "joint": "161677546260"
+   },
+   "3,12,13,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "3,12,14,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "3,13,14,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "3,4,10,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "3,4,11,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "3,4,12,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "3,4,13,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "3,4,14,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "3,4,5,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "3,4,6,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "3,4,7,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "3,4,8,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "3,4,9,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "3,5,10,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "3,5,11,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "3,5,12,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "3,5,13,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "3,5,14,15": {
+    "class": "b_only",
+    "joint": "168936729360"
+   },
+   "3,5,6,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "3,5,7,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "3,5,8,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "3,5,9,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "3,6,10,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "3,6,11,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "3,6,12,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "3,6,13,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "3,6,14,15": {
+    "class": "b_only",
+    "joint": "177767560260"
+   },
+   "3,6,7,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "3,6,8,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "3,6,9,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "3,7,10,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "3,7,11,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "3,7,12,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "3,7,13,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "3,7,14,15": {
+    "class": "b_only",
+    "joint": "168936729360"
+   },
+   "3,7,8,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "3,7,9,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "3,8,10,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "3,8,11,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "3,8,12,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "3,8,13,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "3,8,14,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "3,8,9,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "3,9,10,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "3,9,11,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "3,9,12,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "3,9,13,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "3,9,14,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "4,10,11,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "4,10,12,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "4,10,13,15": {
+    "class": "b_only",
+    "joint": "177767560260"
+   },
+   "4,10,14,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "4,11,12,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "4,11,13,15": {
+    "class": "b_only",
+    "joint": "161677546260"
+   },
+   "4,11,14,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "4,12,13,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "4,12,14,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "4,13,14,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "4,5,10,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "4,5,11,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "4,5,12,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "4,5,13,15": {
+    "class": "b_only",
+    "joint": "168936729360"
+   },
+   "4,5,14,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "4,5,6,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "4,5,7,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "4,5,8,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "4,5,9,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "4,6,10,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "4,6,11,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "4,6,12,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "4,6,13,15": {
+    "class": "b_only",
+    "joint": "177767560260"
+   },
+   "4,6,14,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "4,6,7,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "4,6,8,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "4,6,9,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "4,7,10,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "4,7,11,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "4,7,12,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "4,7,13,15": {
+    "class": "b_only",
+    "joint": "168936729360"
+   },
+   "4,7,14,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "4,7,8,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "4,7,9,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "4,8,10,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "4,8,11,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "4,8,12,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "4,8,13,15": {
+    "class": "b_only",
+    "joint": "168936729360"
+   },
+   "4,8,14,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "4,8,9,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "4,9,10,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "4,9,11,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "4,9,12,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "4,9,13,15": {
+    "class": "b_only",
+    "joint": "168936729360"
+   },
+   "4,9,14,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "5,10,11,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "5,10,12,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "5,10,13,15": {
+    "class": "b_only",
+    "joint": "168445428420"
+   },
+   "5,10,14,15": {
+    "class": "b_only",
+    "joint": "176913867480"
+   },
+   "5,11,12,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "5,11,13,15": {
+    "class": "b_only",
+    "joint": "160939875600"
+   },
+   "5,11,14,15": {
+    "class": "b_only",
+    "joint": "152450373360"
+   },
+   "5,12,13,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "5,12,14,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "5,13,14,15": {
+    "class": "b_only",
+    "joint": "168936729360"
+   },
+   "5,6,10,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "5,6,11,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "5,6,12,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "5,6,13,15": {
+    "class": "b_only",
+    "joint": "168445428420"
+   },
+   "5,6,14,15": {
+    "class": "b_only",
+    "joint": "176913867480"
+   },
+   "5,6,7,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "5,6,8,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "5,6,9,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "5,7,10,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "5,7,11,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "5,7,12,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "5,7,13,15": {
+    "class": "b_only",
+    "joint": "168538857900"
+   },
+   "5,7,14,15": {
+    "class": "b_only",
+    "joint": "168016515240"
+   },
+   "5,7,8,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "5,7,9,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "5,8,10,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "5,8,11,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "5,8,12,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "5,8,13,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "5,8,14,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "5,8,9,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "5,9,10,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "5,9,11,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "5,9,12,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "5,9,13,15": {
+    "class": "b_only",
+    "joint": "168538857900"
+   },
+   "5,9,14,15": {
+    "class": "b_only",
+    "joint": "168016515240"
+   },
+   "6,10,11,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "6,10,12,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "6,10,13,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "6,10,14,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "6,11,12,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "6,11,13,15": {
+    "class": "b_only",
+    "joint": "169297773660"
+   },
+   "6,11,14,15": {
+    "class": "b_only",
+    "joint": "169276528560"
+   },
+   "6,12,13,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "6,12,14,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "6,13,14,15": {
+    "class": "b_only",
+    "joint": "177767560260"
+   },
+   "6,7,10,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "6,7,11,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "6,7,12,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "6,7,13,15": {
+    "class": "b_only",
+    "joint": "177342780660"
+   },
+   "6,7,14,15": {
+    "class": "b_only",
+    "joint": "186216101760"
+   },
+   "6,7,8,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "6,7,9,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "6,8,10,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "6,8,11,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "6,8,12,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "6,8,13,15": {
+    "class": "b_only",
+    "joint": "168445428420"
+   },
+   "6,8,14,15": {
+    "class": "b_only",
+    "joint": "176913867480"
+   },
+   "6,8,9,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "6,9,10,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "6,9,11,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "6,9,12,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "6,9,13,15": {
+    "class": "b_only",
+    "joint": "177342780660"
+   },
+   "6,9,14,15": {
+    "class": "b_only",
+    "joint": "186216101760"
+   },
+   "7,10,11,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "7,10,12,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "7,10,13,15": {
+    "class": "b_only",
+    "joint": "177342780660"
+   },
+   "7,10,14,15": {
+    "class": "b_only",
+    "joint": "186216101760"
+   },
+   "7,11,12,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "7,11,13,15": {
+    "class": "b_only",
+    "joint": "168936729360"
+   },
+   "7,11,14,15": {
+    "class": "b_only",
+    "joint": "160806741960"
+   },
+   "7,12,13,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "7,12,14,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "7,13,14,15": {
+    "class": "b_only",
+    "joint": "168936729360"
+   },
+   "7,8,10,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "7,8,11,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "7,8,12,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "7,8,13,15": {
+    "class": "b_only",
+    "joint": "168538857900"
+   },
+   "7,8,14,15": {
+    "class": "b_only",
+    "joint": "168016515240"
+   },
+   "7,8,9,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "7,9,10,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "7,9,11,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "7,9,12,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "7,9,13,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "7,9,14,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "8,10,11,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "8,10,12,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "8,10,13,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "8,10,14,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "8,11,12,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "8,11,13,15": {
+    "class": "b_only",
+    "joint": "160939875600"
+   },
+   "8,11,14,15": {
+    "class": "b_only",
+    "joint": "152450373360"
+   },
+   "8,12,13,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "8,12,14,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "8,13,14,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "8,9,10,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "8,9,11,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "8,9,12,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "8,9,13,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "8,9,14,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "9,10,11,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "9,10,12,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "9,10,13,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "9,10,14,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "9,11,12,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "9,11,13,15": {
+    "class": "b_only",
+    "joint": "168936729360"
+   },
+   "9,11,14,15": {
+    "class": "b_only",
+    "joint": "160806741960"
+   },
+   "9,12,13,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "9,12,14,15": {
+    "class": "zero",
+    "joint": "0"
+   },
+   "9,13,14,15": {
+    "class": "zero",
+    "joint": "0"
+   }
+  },
+  "new_triples": {
+   "0,1,15": {
+    "class": "b_only",
+    "joint": "3434546841120",
+    "joint_A": "0",
+    "joint_B": "3434546841120"
+   },
+   "0,10,15": {
+    "class": "zero",
+    "joint": "0",
+    "joint_A": "0",
+    "joint_B": "0"
+   },
+   "0,11,15": {
+    "class": "b_only",
+    "joint": "3427356391200",
+    "joint_A": "0",
+    "joint_B": "3427356391200"
+   },
+   "0,12,15": {
+    "class": "zero",
+    "joint": "0",
+    "joint_A": "0",
+    "joint_B": "0"
+   },
+   "0,13,15": {
+    "class": "zero",
+    "joint": "0",
+    "joint_A": "0",
+    "joint_B": "0"
+   },
+   "0,14,15": {
+    "class": "zero",
+    "joint": "0",
+    "joint_A": "0",
+    "joint_B": "0"
+   },
+   "0,2,15": {
+    "class": "zero",
+    "joint": "0",
+    "joint_A": "0",
+    "joint_B": "0"
+   },
+   "0,3,15": {
+    "class": "zero",
+    "joint": "0",
+    "joint_A": "0",
+    "joint_B": "0"
+   },
+   "0,4,15": {
+    "class": "b_only",
+    "joint": "3588163133160",
+    "joint_A": "0",
+    "joint_B": "3588163133160"
+   },
+   "0,5,15": {
+    "class": "b_only",
+    "joint": "3413390002320",
+    "joint_A": "0",
+    "joint_B": "3413390002320"
+   },
+   "0,6,15": {
+    "class": "b_only",
+    "joint": "3747971722620",
+    "joint_A": "0",
+    "joint_B": "3747971722620"
+   },
+   "0,7,15": {
+    "class": "b_only",
+    "joint": "3756845043720",
+    "joint_A": "0",
+    "joint_B": "3756845043720"
+   },
+   "0,8,15": {
+    "class": "zero",
+    "joint": "0",
+    "joint_A": "0",
+    "joint_B": "0"
+   },
+   "0,9,15": {
+    "class": "zero",
+    "joint": "0",
+    "joint_A": "0",
+    "joint_B": "0"
+   },
+   "1,10,15": {
+    "class": "b_only",
+    "joint": "3427437245130",
+    "joint_A": "0",
+    "joint_B": "3427437245130"
+   },
+   "1,11,15": {
+    "class": "b_only",
+    "joint": "3287835869094",
+    "joint_A": "0",
+    "joint_B": "3287835869094"
+   },
+   "1,12,15": {
+    "class": "zero",
+    "joint": "0",
+    "joint_A": "0",
+    "joint_B": "0"
+   },
+   "1,13,15": {
+    "class": "disjoint",
+    "joint": "256451966424528",
+    "joint_A": "191467899454173",
+    "joint_B": "64984066970355"
+   },
+   "1,14,15": {
+    "class": "disjoint",
+    "joint": "255833010626550",
+    "joint_A": "191000081762580",
+    "joint_B": "64832928863970"
+   },
+   "1,2,15": {
+    "class": "b_only",
+    "joint": "3456788937888",
+    "joint_A": "0",
+    "joint_B": "3456788937888"
+   },
+   "1,3,15": {
+    "class": "b_only",
+    "joint": "3456413357088",
+    "joint_A": "0",
+    "joint_B": "3456413357088"
+   },
+   "1,4,15": {
+    "class": "b_only",
+    "joint": "3441834849330",
+    "joint_A": "0",
+    "joint_B": "3441834849330"
+   },
+   "1,5,15": {
+    "class": "b_only",
+    "joint": "3426229427670",
+    "joint_A": "0",
+    "joint_B": "3426229427670"
+   },
+   "1,6,15": {
+    "class": "b_only",
+    "joint": "3427437245130",
+    "joint_A": "0",
+    "joint_B": "3427437245130"
+   },
+   "1,7,15": {
+    "class": "b_only",
+    "joint": "3610867403778",
+    "joint_A": "0",
+    "joint_B": "3610867403778"
+   },
+   "1,8,15": {
+    "class": "b_only",
+    "joint": "3426229427670",
+    "joint_A": "0",
+    "joint_B": "3426229427670"
+   },
+   "1,9,15": {
+    "class": "b_only",
+    "joint": "3610867403778",
+    "joint_A": "0",
+    "joint_B": "3610867403778"
+   },
+   "10,11,15": {
+    "class": "b_only",
+    "joint": "3426365424684",
+    "joint_A": "0",
+    "joint_B": "3426365424684"
+   },
+   "10,12,15": {
+    "class": "zero",
+    "joint": "0",
+    "joint_A": "0",
+    "joint_B": "0"
+   },
+   "10,13,15": {
+    "class": "b_only",
+    "joint": "3603208743174",
+    "joint_A": "0",
+    "joint_B": "3603208743174"
+   },
+   "10,14,15": {
+    "class": "b_only",
+    "joint": "3578992503060",
+    "joint_A": "0",
+    "joint_B": "3578992503060"
+   },
+   "11,12,15": {
+    "class": "zero",
+    "joint": "0",
+    "joint_A": "0",
+    "joint_B": "0"
+   },
+   "11,13,15": {
+    "class": "disjoint",
+    "joint": "255677659682220",
+    "joint_A": "190841603399190",
+    "joint_B": "64836056283030"
+   },
+   "11,14,15": {
+    "class": "disjoint",
+    "joint": "243593504192424",
+    "joint_A": "181708275219804",
+    "joint_B": "61885228972620"
+   },
+   "12,13,15": {
+    "class": "b_only",
+    "joint": "3604270643850",
+    "joint_A": "0",
+    "joint_B": "3604270643850"
+   },
+   "12,14,15": {
+    "class": "b_only",
+    "joint": "3588163133160",
+    "joint_A": "0",
+    "joint_B": "3588163133160"
+   },
+   "13,14,15": {
+    "class": "b_only",
+    "joint": "3611833632870",
+    "joint_A": "0",
+    "joint_B": "3611833632870"
+   },
+   "2,10,15": {
+    "class": "zero",
+    "joint": "0",
+    "joint_A": "0",
+    "joint_B": "0"
+   },
+   "2,11,15": {
+    "class": "b_only",
+    "joint": "3295495709694",
+    "joint_A": "0",
+    "joint_B": "3295495709694"
+   },
+   "2,12,15": {
+    "class": "zero",
+    "joint": "0",
+    "joint_A": "0",
+    "joint_B": "0"
+   },
+   "2,13,15": {
+    "class": "b_only",
+    "joint": "3464656956120",
+    "joint_A": "0",
+    "joint_B": "3464656956120"
+   },
+   "2,14,15": {
+    "class": "b_only",
+    "joint": "3442112329080",
+    "joint_A": "0",
+    "joint_B": "3442112329080"
+   },
+   "2,3,15": {
+    "class": "zero",
+    "joint": "0",
+    "joint_A": "0",
+    "joint_B": "0"
+   },
+   "2,4,15": {
+    "class": "b_only",
+    "joint": "3441475152570",
+    "joint_A": "0",
+    "joint_B": "3441475152570"
+   },
+   "2,5,15": {
+    "class": "b_only",
+    "joint": "3434745929010",
+    "joint_A": "0",
+    "joint_B": "3434745929010"
+   },
+   "2,6,15": {
+    "class": "b_only",
+    "joint": "3603275432058",
+    "joint_A": "0",
+    "joint_B": "3603275432058"
+   },
+   "2,7,15": {
+    "class": "b_only",
+    "joint": "3441947694978",
+    "joint_A": "0",
+    "joint_B": "3441947694978"
+   },
+   "2,8,15": {
+    "class": "zero",
+    "joint": "0",
+    "joint_A": "0",
+    "joint_B": "0"
+   },
+   "2,9,15": {
+    "class": "zero",
+    "joint": "0",
+    "joint_A": "0",
+    "joint_B": "0"
+   },
+   "3,10,15": {
+    "class": "zero",
+    "joint": "0",
+    "joint_A": "0",
+    "joint_B": "0"
+   },
+   "3,11,15": {
+    "class": "b_only",
+    "joint": "3295437083970",
+    "joint_A": "0",
+    "joint_B": "3295437083970"
+   },
+   "3,12,15": {
+    "class": "zero",
+    "joint": "0",
+    "joint_A": "0",
+    "joint_B": "0"
+   },
+   "3,13,15": {
+    "class": "zero",
+    "joint": "0",
+    "joint_A": "0",
+    "joint_B": "0"
+   },
+   "3,14,15": {
+    "class": "b_only",
+    "joint": "3611833632870",
+    "joint_A": "0",
+    "joint_B": "3611833632870"
+   },
+   "3,4,15": {
+    "class": "b_only",
+    "joint": "3441412568670",
+    "joint_A": "0",
+    "joint_B": "3441412568670"
+   },
+   "3,5,15": {
+    "class": "b_only",
+    "joint": "3442681651590",
+    "joint_A": "0",
+    "joint_B": "3442681651590"
+   },
+   "3,6,15": {
+    "class": "b_only",
+    "joint": "3441640375998",
+    "joint_A": "0",
+    "joint_B": "3441640375998"
+   },
+   "3,7,15": {
+    "class": "b_only",
+    "joint": "3441889089990",
+    "joint_A": "0",
+    "joint_B": "3441889089990"
+   },
+   "3,8,15": {
+    "class": "zero",
+    "joint": "0",
+    "joint_A": "0",
+    "joint_B": "0"
+   },
+   "3,9,15": {
+    "class": "zero",
+    "joint": "0",
+    "joint_A": "0",
+    "joint_B": "0"
+   },
+   "4,10,15": {
+    "class": "b_only",
+    "joint": "3587105378940",
+    "joint_A": "0",
+    "joint_B": "3587105378940"
+   },
+   "4,11,15": {
+    "class": "b_only",
+    "joint": "3134346495444",
+    "joint_A": "0",
+    "joint_B": "3134346495444"
+   },
+   "4,12,15": {
+    "class": "zero",
+    "joint": "0",
+    "joint_A": "0",
+    "joint_B": "0"
+   },
+   "4,13,15": {
+    "class": "disjoint",
+    "joint": "267363296121060",
+    "joint_A": "199589928069630",
+    "joint_B": "67773368051430"
+   },
+   "4,14,15": {
+    "class": "b_only",
+    "joint": "3588163133160",
+    "joint_A": "0",
+    "joint_B": "3588163133160"
+   },
+   "4,5,15": {
+    "class": "b_only",
+    "joint": "3419361959640",
+    "joint_A": "0",
+    "joint_B": "3419361959640"
+   },
+   "4,6,15": {
+    "class": "b_only",
+    "joint": "3587105378940",
+    "joint_A": "0",
+    "joint_B": "3587105378940"
+   },
+   "4,7,15": {
+    "class": "b_only",
+    "joint": "3426301423020",
+    "joint_A": "0",
+    "joint_B": "3426301423020"
+   },
+   "4,8,15": {
+    "class": "b_only",
+    "joint": "3419361959640",
+    "joint_A": "0",
+    "joint_B": "3419361959640"
+   },
+   "4,9,15": {
+    "class": "b_only",
+    "joint": "3426301423020",
+    "joint_A": "0",
+    "joint_B": "3426301423020"
+   },
+   "5,10,15": {
+    "class": "b_only",
+    "joint": "3579526294200",
+    "joint_A": "0",
+    "joint_B": "3579526294200"
+   },
+   "5,11,15": {
+    "class": "b_only",
+    "joint": "3266597438640",
+    "joint_A": "0",
+    "joint_B": "3266597438640"
+   },
+   "5,12,15": {
+    "class": "zero",
+    "joint": "0",
+    "joint_A": "0",
+    "joint_B": "0"
+   },
+   "5,13,15": {
+    "class": "disjoint",
+    "joint": "256479340176120",
+    "joint_A": "191755193060040",
+    "joint_B": "64724147116080"
+   },
+   "5,14,15": {
+    "class": "disjoint",
+    "joint": "255223267584540",
+    "joint_A": "190804324310700",
+    "joint_B": "64418943273840"
+   },
+   "5,6,15": {
+    "class": "b_only",
+    "joint": "3579526294200",
+    "joint_A": "0",
+    "joint_B": "3579526294200"
+   },
+   "5,7,15": {
+    "class": "b_only",
+    "joint": "3587544484020",
+    "joint_A": "0",
+    "joint_B": "3587544484020"
+   },
+   "5,8,15": {
+    "class": "zero",
+    "joint": "0",
+    "joint_A": "0",
+    "joint_B": "0"
+   },
+   "5,9,15": {
+    "class": "b_only",
+    "joint": "3587544484020",
+    "joint_A": "0",
+    "joint_B": "3587544484020"
+   },
+   "6,10,15": {
+    "class": "zero",
+    "joint": "0",
+    "joint_A": "0",
+    "joint_B": "0"
+   },
+   "6,11,15": {
+    "class": "b_only",
+    "joint": "3426365424684",
+    "joint_A": "0",
+    "joint_B": "3426365424684"
+   },
+   "6,12,15": {
+    "class": "zero",
+    "joint": "0",
+    "joint_A": "0",
+    "joint_B": "0"
+   },
+   "6,13,15": {
+    "class": "disjoint",
+    "joint": "266989002238818",
+    "joint_A": "199375868187708",
+    "joint_B": "67613134051110"
+   },
+   "6,14,15": {
+    "class": "disjoint",
+    "joint": "278891359462140",
+    "joint_A": "208380812141220",
+    "joint_B": "70510547320920"
+   },
+   "6,7,15": {
+    "class": "b_only",
+    "joint": "3755721300888",
+    "joint_A": "0",
+    "joint_B": "3755721300888"
+   },
+   "6,8,15": {
+    "class": "b_only",
+    "joint": "3579526294200",
+    "joint_A": "0",
+    "joint_B": "3579526294200"
+   },
+   "6,9,15": {
+    "class": "b_only",
+    "joint": "3755721300888",
+    "joint_A": "0",
+    "joint_B": "3755721300888"
+   },
+   "7,10,15": {
+    "class": "b_only",
+    "joint": "3755721300888",
+    "joint_A": "0",
+    "joint_B": "3755721300888"
+   },
+   "7,11,15": {
+    "class": "b_only",
+    "joint": "3426301423020",
+    "joint_A": "0",
+    "joint_B": "3426301423020"
+   },
+   "7,12,15": {
+    "class": "zero",
+    "joint": "0",
+    "joint_A": "0",
+    "joint_B": "0"
+   },
+   "7,13,15": {
+    "class": "disjoint",
+    "joint": "266583094801350",
+    "joint_A": "198927988324200",
+    "joint_B": "67655106477150"
+   },
+   "7,14,15": {
+    "class": "disjoint",
+    "joint": "265830400075980",
+    "joint_A": "198358696452480",
+    "joint_B": "67471703623500"
+   },
+   "7,8,15": {
+    "class": "b_only",
+    "joint": "3587544484020",
+    "joint_A": "0",
+    "joint_B": "3587544484020"
+   },
+   "7,9,15": {
+    "class": "zero",
+    "joint": "0",
+    "joint_A": "0",
+    "joint_B": "0"
+   },
+   "8,10,15": {
+    "class": "zero",
+    "joint": "0",
+    "joint_A": "0",
+    "joint_B": "0"
+   },
+   "8,11,15": {
+    "class": "b_only",
+    "joint": "3266597438640",
+    "joint_A": "0",
+    "joint_B": "3266597438640"
+   },
+   "8,12,15": {
+    "class": "zero",
+    "joint": "0",
+    "joint_A": "0",
+    "joint_B": "0"
+   },
+   "8,13,15": {
+    "class": "b_only",
+    "joint": "3444067213770",
+    "joint_A": "0",
+    "joint_B": "3444067213770"
+   },
+   "8,14,15": {
+    "class": "b_only",
+    "joint": "3252301956780",
+    "joint_A": "0",
+    "joint_B": "3252301956780"
+   },
+   "8,9,15": {
+    "class": "zero",
+    "joint": "0",
+    "joint_A": "0",
+    "joint_B": "0"
+   },
+   "9,10,15": {
+    "class": "zero",
+    "joint": "0",
+    "joint_A": "0",
+    "joint_B": "0"
+   },
+   "9,11,15": {
+    "class": "b_only",
+    "joint": "3426301423020",
+    "joint_A": "0",
+    "joint_B": "3426301423020"
+   },
+   "9,12,15": {
+    "class": "zero",
+    "joint": "0",
+    "joint_A": "0",
+    "joint_B": "0"
+   },
+   "9,13,15": {
+    "class": "b_only",
+    "joint": "3611906757630",
+    "joint_A": "0",
+    "joint_B": "3611906757630"
+   },
+   "9,14,15": {
+    "class": "b_only",
+    "joint": "3427356391200",
+    "joint_A": "0",
+    "joint_B": "3427356391200"
+   }
+  },
+  "total_minimum_covers": "2966450341680481356",
+  "type_A_total": "2305787291293934388",
+  "type_B_total": "660663050386546968"
+ }
+}

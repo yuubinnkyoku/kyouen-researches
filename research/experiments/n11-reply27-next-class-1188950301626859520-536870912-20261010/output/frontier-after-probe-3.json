@@ -1,0 +1,288 @@
+{
+  "baseline_main_commit": "154f3b7a67b97e13acbaee8b04dc74ddca728d19",
+  "baseline_s4_class_counts_for_comparison": {
+    "LOSS": 31,
+    "UNKNOWN": 3081,
+    "WIN": 272
+  },
+  "best_unresolved_class_covering_all_remaining": {
+    "boundary": {
+      "LOSS": 14,
+      "UNKNOWN": 95
+    },
+    "coverage": [
+      55,
+      65,
+      100,
+      108
+    ],
+    "key": [
+      1188950301626859520,
+      536870912
+    ],
+    "known_s5_losses": 14,
+    "s5_children": 109,
+    "unknown_s5_children": 95,
+    "verdict": "UNKNOWN"
+  },
+  "fixed_player_aggregation": {
+    "S4": "OR: any S5 WIN => WIN; all S5 LOSS => LOSS; otherwise UNKNOWN"
+  },
+  "geometry": {
+    "base_independent_audit_path": "research/experiments/n11-independent-exact-audit-20261010/output/audit.json",
+    "base_independent_audit_sha256": "e504245c873ed908e3f23f64dcf81b3558a07cf3226406076d9d3f5e2b911b20",
+    "classes": 3384,
+    "path": "research/experiments/n11-strategy-redesign-20261010/output/geometry.json.gz",
+    "sha256": "146be80b5794462c2444e983fc4c4a6e76d3b464bfd5e86fac14509024100b54"
+  },
+  "integer_minimum_additional_classes": 1,
+  "rational_lp_dual": {
+    "feasibility": "each class covers a vertex at most once",
+    "value": "1",
+    "weights": {
+      "100": "1"
+    }
+  },
+  "remaining_third_moves": [
+    100,
+    108
+  ],
+  "s4_class_counts": {
+    "LOSS": 31,
+    "UNKNOWN": 3081,
+    "WIN": 272
+  },
+  "s4_classes_changed_by_compared_evidence": [],
+  "s5_cache": {
+    "exact_rows": 5741,
+    "path": "research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/current-exact-s5-after-probe-3.cache",
+    "sha256": "f890dbc12e3731596afea3cd120f3aafa6103ecd2cd6872c05a0d1c99cc819ca",
+    "verdict_counts": {
+      "1": 158,
+      "2": 5583
+    }
+  },
+  "schema": "n11-reply27-fixed-player-frontier-reclassification-v1",
+  "secured_third_moves": 117,
+  "target_s4": {
+    "boundary": {
+      "LOSS": 9,
+      "UNKNOWN": 98,
+      "WIN": 1
+    },
+    "coverage": [
+      26,
+      28,
+      100,
+      108
+    ],
+    "key": [
+      1297036692683751424,
+      16
+    ],
+    "s5_children": 108,
+    "verdict": "WIN"
+  },
+  "top_unresolved_cover_candidates": [
+    {
+      "boundary": {
+        "LOSS": 14,
+        "UNKNOWN": 95
+      },
+      "coverage": [
+        55,
+        65,
+        100,
+        108
+      ],
+      "key": [
+        1188950301626859520,
+        536870912
+      ],
+      "known_s5_losses": 14,
+      "s5_children": 109,
+      "unknown_s5_children": 95,
+      "verdict": "UNKNOWN"
+    },
+    {
+      "boundary": {
+        "LOSS": 12,
+        "UNKNOWN": 100
+      },
+      "coverage": [
+        35,
+        41,
+        100,
+        108
+      ],
+      "key": [
+        1297036692683751424,
+        134217728
+      ],
+      "known_s5_losses": 12,
+      "s5_children": 112,
+      "unknown_s5_children": 100,
+      "verdict": "UNKNOWN"
+    },
+    {
+      "boundary": {
+        "LOSS": 6,
+        "UNKNOWN": 100
+      },
+      "coverage": [
+        100,
+        108,
+        110,
+        120
+      ],
+      "key": [
+        1297036692683752448,
+        0
+      ],
+      "known_s5_losses": 6,
+      "s5_children": 106,
+      "unknown_s5_children": 100,
+      "verdict": "UNKNOWN"
+    },
+    {
+      "boundary": {
+        "LOSS": 13,
+        "UNKNOWN": 101
+      },
+      "coverage": [
+        88,
+        98,
+        100,
+        108
+      ],
+      "key": [
+        1152921504612089856,
+        536870912
+      ],
+      "known_s5_losses": 13,
+      "s5_children": 114,
+      "unknown_s5_children": 101,
+      "verdict": "UNKNOWN"
+    },
+    {
+      "boundary": {
+        "LOSS": 8,
+        "UNKNOWN": 101
+      },
+      "coverage": [
+        33,
+        43,
+        100,
+        108
+      ],
+      "key": [
+        1152921504607895552,
+        536879104
+      ],
+      "known_s5_losses": 8,
+      "s5_children": 109,
+      "unknown_s5_children": 101,
+      "verdict": "UNKNOWN"
+    },
+    {
+      "boundary": {
+        "LOSS": 8,
+        "UNKNOWN": 101
+      },
+      "coverage": [
+        92,
+        94,
+        100,
+        108
+      ],
+      "key": [
+        1301540292311121920,
+        0
+      ],
+      "known_s5_losses": 8,
+      "s5_children": 109,
+      "unknown_s5_children": 101,
+      "verdict": "UNKNOWN"
+    },
+    {
+      "boundary": {
+        "LOSS": 7,
+        "UNKNOWN": 101
+      },
+      "coverage": [
+        46,
+        52,
+        100,
+        108
+      ],
+      "key": [
+        1297036692750860288,
+        0
+      ],
+      "known_s5_losses": 7,
+      "s5_children": 108,
+      "unknown_s5_children": 101,
+      "verdict": "UNKNOWN"
+    },
+    {
+      "boundary": {
+        "LOSS": 7,
+        "UNKNOWN": 101
+      },
+      "coverage": [
+        26,
+        28,
+        100,
+        108
+      ],
+      "key": [
+        1297107061427929088,
+        0
+      ],
+      "known_s5_losses": 7,
+      "s5_children": 108,
+      "unknown_s5_children": 101,
+      "verdict": "UNKNOWN"
+    },
+    {
+      "boundary": {
+        "LOSS": 7,
+        "UNKNOWN": 101
+      },
+      "coverage": [
+        80,
+        84,
+        100,
+        108
+      ],
+      "key": [
+        10376293541461626880,
+        65536
+      ],
+      "known_s5_losses": 7,
+      "s5_children": 108,
+      "unknown_s5_children": 101,
+      "verdict": "UNKNOWN"
+    },
+    {
+      "boundary": {
+        "LOSS": 6,
+        "UNKNOWN": 101
+      },
+      "coverage": [
+        47,
+        51,
+        100,
+        108
+      ],
+      "key": [
+        1297036830122704896,
+        0
+      ],
+      "known_s5_losses": 6,
+      "s5_children": 107,
+      "unknown_s5_children": 101,
+      "verdict": "UNKNOWN"
+    }
+  ]
+}

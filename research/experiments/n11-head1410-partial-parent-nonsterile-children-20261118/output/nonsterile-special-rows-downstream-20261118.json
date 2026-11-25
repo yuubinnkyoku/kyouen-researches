@@ -1,0 +1,581 @@
+{
+ "schema": "nonsterile-special-rows-downstream-20261118-v1",
+ "date": "2026-11-18",
+ "lane": "n11 long-term lane, autonomous session (standard 11x11 weak-resolution)",
+ "title": "downstream cross-verification of the 13 special non-STERILE candidate rows of the 57 partial-STERILE head-1410 S5 parents (9 cost-65j fold closures, 2 cost-76d/77e WIN7 receipt rows, 2 transfer_partial rows)",
+ "inputs": {
+  "worklist": {
+   "git_blob_sha1": "2fee1d0718547a62e346d35f5858d7913e37c097"
+  },
+  "scan": {
+   "git_blob_sha1": "24f214e6a9dd721ef95ac97d6b84cf34af33b14b"
+  },
+  "scanverify": {
+   "git_blob_sha1": "65e3e822a390ee945f632d07e80c95049985078c"
+  },
+  "c65j": {
+   "git_blob_sha1": "7a4c900710e3ddb34fb9e272e8e673815e13a4f3"
+  },
+  "s76d": {
+   "git_blob_sha1": "a57af0161942a6f597cfabe9aef892df2fa7be3f"
+  },
+  "c76d": {
+   "git_blob_sha1": "e8a6116aec45c19642877db85340e120d23331b3"
+  },
+  "v76d77e": {
+   "git_blob_sha1": "d267fa8d93017110ff74df4520b3a8e8a47bee5b"
+  },
+  "s77e": {
+   "git_blob_sha1": "57afde38509ae3c10df0c6c38883c9b5d4fc67a5"
+  },
+  "census19": {
+   "git_blob_sha1": "a0c6abaf0df163eddc35f8b8dc0f8c0eb4268fe6"
+  },
+  "prior": {
+   "git_blob_sha1": "30c8fdc4e7212bafe271662d8dcf0bbbde35b63b"
+  }
+ },
+ "method": "independent cross-file consistency verification over pinned published records; exact 121-bit one-bit extension arithmetic; third-implementation D4 canonicalisation for every transfer via entry; no engine, no float",
+ "checks": [
+  {
+   "check": "A.pin.worklist",
+   "pass": true,
+   "detail": "2fee1d0718547a62e346d35f5858d7913e37c097"
+  },
+  {
+   "check": "A.pin.scan",
+   "pass": true,
+   "detail": "24f214e6a9dd721ef95ac97d6b84cf34af33b14b"
+  },
+  {
+   "check": "A.pin.scanverify",
+   "pass": true,
+   "detail": "65e3e822a390ee945f632d07e80c95049985078c"
+  },
+  {
+   "check": "A.pin.c65j",
+   "pass": true,
+   "detail": "7a4c900710e3ddb34fb9e272e8e673815e13a4f3"
+  },
+  {
+   "check": "A.pin.s76d",
+   "pass": true,
+   "detail": "a57af0161942a6f597cfabe9aef892df2fa7be3f"
+  },
+  {
+   "check": "A.pin.c76d",
+   "pass": true,
+   "detail": "e8a6116aec45c19642877db85340e120d23331b3"
+  },
+  {
+   "check": "A.pin.v76d77e",
+   "pass": true,
+   "detail": "d267fa8d93017110ff74df4520b3a8e8a47bee5b"
+  },
+  {
+   "check": "A.pin.s77e",
+   "pass": true,
+   "detail": "57afde38509ae3c10df0c6c38883c9b5d4fc67a5"
+  },
+  {
+   "check": "A.pin.census19",
+   "pass": true,
+   "detail": "a0c6abaf0df163eddc35f8b8dc0f8c0eb4268fe6"
+  },
+  {
+   "check": "A.pin.prior",
+   "pass": true,
+   "detail": "30c8fdc4e7212bafe271662d8dcf0bbbde35b63b"
+  },
+  {
+   "check": "B.prior.special_rows",
+   "pass": true,
+   "detail": "13"
+  },
+  {
+   "check": "B.prior.categories",
+   "pass": true,
+   "detail": "{'win_receipt_scheduled': 9, 'transfer_partial': 2, 'win_pending': 2}"
+  },
+  {
+   "check": "B.worklist_fields_match",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "C1.scheduled_equals_fold_rows_closed",
+   "pass": true,
+   "detail": "9 vs 9"
+  },
+  {
+   "check": "C1.fold.rows_closed",
+   "pass": true,
+   "detail": "9"
+  },
+  {
+   "check": "C2.scheduled_own_sum",
+   "pass": true,
+   "detail": "635"
+  },
+  {
+   "check": "C2.head_cost_delta",
+   "pass": true,
+   "detail": "635"
+  },
+  {
+   "check": "C3.head_rows_delta",
+   "pass": true,
+   "detail": "9"
+  },
+  {
+   "check": "C3.head_parents_unchanged",
+   "pass": true,
+   "detail": "(174, 174)"
+  },
+  {
+   "check": "C4.scheduled_absent_from_scan_targets",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "C5.scheduled_worklist_counters_zero",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "C6.c65j_status_receipt_counts",
+   "pass": true,
+   "detail": "65/65 resolved / 17 WIN receipts / 48 REFUTED / 0 capped"
+  },
+  {
+   "check": "D0.pending_hexes",
+   "pass": true,
+   "detail": "['00000000040000003800080008000000', '00000000040000809002000000004000']"
+  },
+  {
+   "check": "D1.s76d_target_child",
+   "pass": true,
+   "detail": "00000000040000003800080008000000"
+  },
+  {
+   "check": "D1.s76d_target_parent_is_claimant",
+   "pass": true,
+   "detail": "00000000000000801202000040000000"
+  },
+  {
+   "check": "D2.s76d_totals",
+   "pass": true,
+   "detail": "win bits [19, 49]"
+  },
+  {
+   "check": "D2b.s76d_win_roots_bit_arithmetic",
+   "pass": true,
+   "detail": "root == child | 1<<bit (121-bit exact)"
+  },
+  {
+   "check": "D3.c76d_manifest",
+   "pass": true,
+   "detail": "2 certificates"
+  },
+  {
+   "check": "D3b.c76d_roots_are_d4_canonical",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "D4.v76d77e_verdict",
+   "pass": true,
+   "detail": "VERIFICATION PASSED"
+  },
+  {
+   "check": "D4.v76d77e_cost76d_checks_all_true",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "D4.v76d77e_cost77e_checks_all_true",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "D5.s77e_child_and_parent",
+   "pass": true,
+   "detail": "('00000000040000809002000000004000', '00000000000000801202000040000000')"
+  },
+  {
+   "check": "D5.s77e_totals",
+   "pass": true,
+   "detail": "win bits [37, 69]"
+  },
+  {
+   "check": "D5b.s77e_win_roots_bit_arithmetic",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "D5c.s77e_fold_pending",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "D6.scan_targets_match",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "D7.pending_open_after_zero",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "E0.transfer_hexes",
+   "pass": true,
+   "detail": "['00000000000000801222000000800000', '00000000010000809002000001000000']"
+  },
+  {
+   "check": "E1.transfer_counts",
+   "pass": true,
+   "detail": "(15, 3)"
+  },
+  {
+   "check": "E1b.all_via_kind_engine",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "E2.canon_of_extension_equals_via_root",
+   "pass": true,
+   "detail": "21 via entries: canon(row|1<<b) == canon(via_child|1<<via_bit)"
+  },
+  {
+   "check": "E3.open_arithmetic",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "E4.census19_76c_map_child",
+   "pass": true,
+   "detail": "00000000010000809002000001000000"
+  },
+  {
+   "check": "E4.transferred_bits_all_confirmed_refuted",
+   "pass": true,
+   "detail": "15/15"
+  },
+  {
+   "check": "E4.win_bits_disjoint_from_transfers",
+   "pass": true,
+   "detail": "[61, 99]"
+  },
+  {
+   "check": "E4.census19_76c_totals",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "E5.row69a_absent_from_census19",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "E5b.pending_rows_absent_from_census19",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "E6.scanverify_verdict",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "E6.scanverify_transfer_canon_count",
+   "pass": true,
+   "detail": ""
+  }
+ ],
+ "all_checks_pass": true,
+ "rows": [
+  {
+   "hex": "00000000000000801222000000800000",
+   "category": "transfer_partial",
+   "cost": 69,
+   "partial_parents": [
+    "00000000000000003800000008002000",
+    "00000000000000801222000000000000"
+   ],
+   "worklist": {
+    "own_candidates": 69,
+    "engine_win7_d10": 0,
+    "engine_refuted_d10": 0,
+    "transferred_refuted_d10": 3,
+    "open_after_transfers": 66
+   },
+   "transferred_bits": [
+    55,
+    65,
+    109
+   ],
+   "later_direct_sweep": null
+  },
+  {
+   "hex": "00000000010000809002000001000000",
+   "category": "transfer_partial",
+   "cost": 76,
+   "partial_parents": [
+    "00000000000000801202000040000000",
+    "00000000000000801202000100000000"
+   ],
+   "worklist": {
+    "own_candidates": 76,
+    "engine_win7_d10": 0,
+    "engine_refuted_d10": 0,
+    "transferred_refuted_d10": 15,
+    "open_after_transfers": 61
+   },
+   "transferred_bits": [
+    0,
+    10,
+    13,
+    19,
+    20,
+    48,
+    56,
+    59,
+    65,
+    70,
+    96,
+    102,
+    108,
+    111,
+    117
+   ],
+   "later_direct_sweep": {
+    "source": "census v19 cost76c verdict map (v17 raw batches)",
+    "win7_d10_bits": [
+     61,
+     99
+    ],
+    "transferred_bits_confirmed_refuted": 15,
+    "conflicts": 0,
+    "fold": "PENDING (parallel lane; bit 61 certificate in flight)"
+   }
+  },
+  {
+   "hex": "00000000040000003800080008000000",
+   "category": "win_pending",
+   "cost": 76,
+   "partial_parents": [
+    "00000000000000003800000208000000",
+    "00000000000000801202000040000000"
+   ],
+   "worklist": {
+    "own_candidates": 76,
+    "engine_win7_d10": 2,
+    "engine_refuted_d10": 74,
+    "transferred_refuted_d10": 0,
+    "open_after_transfers": 0
+   },
+   "win_bits": [
+    19,
+    49
+   ],
+   "win_root_hexes": [
+    "00000000040000003800080008080000",
+    "00000000040000003802080008000000"
+   ],
+   "fold_status_at_record": "PENDING (cost-76d/77e records)"
+  },
+  {
+   "hex": "00000000040000809002000000004000",
+   "category": "win_pending",
+   "cost": 77,
+   "partial_parents": [
+    "00000000000000801202000040000000"
+   ],
+   "worklist": {
+    "own_candidates": 77,
+    "engine_win7_d10": 2,
+    "engine_refuted_d10": 75,
+    "transferred_refuted_d10": 0,
+    "open_after_transfers": 0
+   },
+   "win_bits": [
+    37,
+    69
+   ],
+   "win_root_hexes": [
+    "00000000040000809002002000004000",
+    "00000000040000a09002000000004000"
+   ],
+   "fold_status_at_record": "PENDING (cost-76d/77e records)"
+  },
+  {
+   "hex": "00000000000000003800000008002002",
+   "category": "win_receipt_scheduled",
+   "cost": 64,
+   "partial_parents": [
+    "00000000000000003800000008002000"
+   ],
+   "worklist": {
+    "own_candidates": 64,
+    "engine_win7_d10": 0,
+    "engine_refuted_d10": 0,
+    "transferred_refuted_d10": 0,
+    "open_after_transfers": 0
+   },
+   "closed_by": "cost-65j receipt fold, head 1410 -> 1419"
+  },
+  {
+   "hex": "00000000000000003800000008002200",
+   "category": "win_receipt_scheduled",
+   "cost": 69,
+   "partial_parents": [
+    "00000000000000003800000008002000"
+   ],
+   "worklist": {
+    "own_candidates": 69,
+    "engine_win7_d10": 0,
+    "engine_refuted_d10": 0,
+    "transferred_refuted_d10": 0,
+    "open_after_transfers": 0
+   },
+   "closed_by": "cost-65j receipt fold, head 1410 -> 1419"
+  },
+  {
+   "hex": "00000000000000003800000008003000",
+   "category": "win_receipt_scheduled",
+   "cost": 64,
+   "partial_parents": [
+    "00000000000000003800000008002000"
+   ],
+   "worklist": {
+    "own_candidates": 64,
+    "engine_win7_d10": 0,
+    "engine_refuted_d10": 0,
+    "transferred_refuted_d10": 0,
+    "open_after_transfers": 0
+   },
+   "closed_by": "cost-65j receipt fold, head 1410 -> 1419"
+  },
+  {
+   "hex": "00000000000000003800000008480000",
+   "category": "win_receipt_scheduled",
+   "cost": 71,
+   "partial_parents": [
+    "00000000000000003800000008002000"
+   ],
+   "worklist": {
+    "own_candidates": 71,
+    "engine_win7_d10": 0,
+    "engine_refuted_d10": 0,
+    "transferred_refuted_d10": 0,
+    "open_after_transfers": 0
+   },
+   "closed_by": "cost-65j receipt fold, head 1410 -> 1419"
+  },
+  {
+   "hex": "00000000000000003800000408002000",
+   "category": "win_receipt_scheduled",
+   "cost": 74,
+   "partial_parents": [
+    "00000000000000003800000008002000"
+   ],
+   "worklist": {
+    "own_candidates": 74,
+    "engine_win7_d10": 0,
+    "engine_refuted_d10": 0,
+    "transferred_refuted_d10": 0,
+    "open_after_transfers": 0
+   },
+   "closed_by": "cost-65j receipt fold, head 1410 -> 1419"
+  },
+  {
+   "hex": "00000000000000003800100008080000",
+   "category": "win_receipt_scheduled",
+   "cost": 76,
+   "partial_parents": [
+    "00000000000000003800000008002000",
+    "00000000000000003800100008000000"
+   ],
+   "worklist": {
+    "own_candidates": 76,
+    "engine_win7_d10": 0,
+    "engine_refuted_d10": 0,
+    "transferred_refuted_d10": 0,
+    "open_after_transfers": 0
+   },
+   "closed_by": "cost-65j receipt fold, head 1410 -> 1419"
+  },
+  {
+   "hex": "00000000000000003800400008002000",
+   "category": "win_receipt_scheduled",
+   "cost": 69,
+   "partial_parents": [
+    "00000000000000003800000008002000"
+   ],
+   "worklist": {
+    "own_candidates": 69,
+    "engine_win7_d10": 0,
+    "engine_refuted_d10": 0,
+    "transferred_refuted_d10": 0,
+    "open_after_transfers": 0
+   },
+   "closed_by": "cost-65j receipt fold, head 1410 -> 1419"
+  },
+  {
+   "hex": "00000000000000043800000008002000",
+   "category": "win_receipt_scheduled",
+   "cost": 74,
+   "partial_parents": [
+    "00000000000000003800000008002000"
+   ],
+   "worklist": {
+    "own_candidates": 74,
+    "engine_win7_d10": 0,
+    "engine_refuted_d10": 0,
+    "transferred_refuted_d10": 0,
+    "open_after_transfers": 0
+   },
+   "closed_by": "cost-65j receipt fold, head 1410 -> 1419"
+  },
+  {
+   "hex": "00000000010000003800000008080000",
+   "category": "win_receipt_scheduled",
+   "cost": 74,
+   "partial_parents": [
+    "00000000000000003800000008002000"
+   ],
+   "worklist": {
+    "own_candidates": 74,
+    "engine_win7_d10": 0,
+    "engine_refuted_d10": 0,
+    "transferred_refuted_d10": 0,
+    "open_after_transfers": 0
+   },
+   "closed_by": "cost-65j receipt fold, head 1410 -> 1419"
+  }
+ ],
+ "summary": {
+  "special_rows_total": 13,
+  "win_receipt_scheduled": 9,
+  "win_pending": 2,
+  "transfer_partial": 2,
+  "engine_win7_roots_pending_fold": 4,
+  "engine_win7_bits_pending_fold": [
+   19,
+   37,
+   49,
+   69
+  ],
+  "win_pending_rows_serve_partial_parents": [
+   "00000000000000003800000208000000",
+   "00000000000000801202000040000000"
+  ],
+  "scheduled_rows_closed_at_head": "1410 -> 1419 (cost-65j fold, 9 rows / 635 own candidates)",
+  "transfer_predictions_confirmed_by_later_sweep": "76c row: 15/15 REFUTED-D10, 0 conflicts",
+  "distinct_partial_parents_touched": 6
+ },
+ "interpretation_guard": "this audit verifies bookkeeping and record consistency only; WIN7 certificates prove individual 7-stone roots; REFUTED-D10 is not a LOSS proof; STERILE is not a LOSS proof; folds and sweeps remain sweep-lane jurisdiction; non-STERILE remains only a necessary condition for depth-10 receipt cover",
+ "trust_boundary": "engine depth-10 verdict soundness underlying the pinned sweep records, identical to all published lane verdicts; the cost-65j and cost-76d/77e records carry their own published verifications which are quoted, not re-run",
+ "unknown_status": "11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60} and classes 1/2/4 all remain UNKNOWN; REFUTED-D10 is not a LOSS proof; STERILE is not a LOSS proof"
+}

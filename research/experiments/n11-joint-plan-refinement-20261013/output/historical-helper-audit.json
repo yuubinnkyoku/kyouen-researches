@@ -1,0 +1,104 @@
+{
+  "auxiliary_lp": {
+    "cost": [
+      [
+        0
+      ],
+      [
+        1
+      ]
+    ],
+    "diagnosis": "an integral union must contain one chosen option per group; it need not intersect every unchosen option",
+    "exact_optimum": 1,
+    "feasible_assign": [
+      0
+    ],
+    "feasible_union": [
+      0
+    ],
+    "groups": [
+      [
+        0,
+        1
+      ]
+    ],
+    "historical_auxiliary_bound": 2.0
+  },
+  "historical_source_path": "research/experiments/n11-joint-s5-proof-planning-20261012/scripts/optimize_s5_selection.py",
+  "schema": "historical-minimum-union-helper-counterexamples-v1",
+  "scope": "The existing 6577 element-only dual certificate and all feasible-plan upper bounds are unaffected. The auxiliary 728 value should not be presented as a generic valid minimum-union lower bound.",
+  "shrink": {
+    "corrected_assign": [
+      0,
+      1,
+      0
+    ],
+    "corrected_history": [
+      {
+        "accepted": true,
+        "before": 3,
+        "candidate": 2,
+        "forced": 0,
+        "iteration": 0,
+        "phase": "forced_shrink",
+        "repair_groups": 3
+      },
+      {
+        "accepted": false,
+        "before": 2,
+        "candidate": 2,
+        "forced": 2,
+        "iteration": 1,
+        "phase": "forced_shrink",
+        "repair_groups": 0
+      }
+    ],
+    "corrected_output_union": [
+      0,
+      1
+    ],
+    "cost": [
+      [
+        0
+      ],
+      [
+        1
+      ],
+      [
+        2
+      ]
+    ],
+    "diagnosis": "feasible remains false after successful repair, so repaired candidates are discarded",
+    "groups": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        0
+      ]
+    ],
+    "historical_output_union": [
+      0,
+      1,
+      2
+    ],
+    "initial_assign": [
+      0,
+      1,
+      2
+    ],
+    "initial_union": [
+      0,
+      1,
+      2
+    ]
+  },
+  "source_path": "research/experiments/n11-joint-plan-refinement-20261013/input/historical-optimizer-before-lp-audit.py",
+  "source_sha256": "10dbd25657a5c71f1a68aa60b0edfa812957b32f1c94392ad2d082ce5fdb802e"
+}

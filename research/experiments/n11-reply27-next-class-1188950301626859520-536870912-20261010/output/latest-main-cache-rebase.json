@@ -1,0 +1,167 @@
+{
+  "base_cache": {
+    "path": "research/experiments/n11-two-target-design-20261010/output/merged-exact-s5.cache",
+    "rows": 5743,
+    "sha256": "24e97b746667bd1c5468d5203e8444a0d379023f6c67facaf9bbd4787c3759e6",
+    "verdict_counts": {
+      "LOSS": 5585,
+      "WIN": 158
+    }
+  },
+  "base_cache_source_audit": {
+    "new_exact_losses": 2,
+    "new_s4_loss_classes": 0,
+    "path": "research/experiments/n11-two-target-design-20261010/output/probe-audit.json",
+    "sha256": "ad341a2eb813606fa376f133af595c6295a38d274339e4728a22465365dad9a9"
+  },
+  "conflicts": 0,
+  "independent_geometry": {
+    "canonical_legal_edges_checked": 8,
+    "complete_s5_boundary": 109,
+    "source": "research/experiments/n11-independent-exact-audit-20261010/scripts/independent.py"
+  },
+  "latest_main_delta": [
+    {
+      "key": [
+        1152921504606851072,
+        536870946
+      ],
+      "verdict": "LOSS"
+    },
+    {
+      "key": [
+        1188950301626860544,
+        536870912
+      ],
+      "verdict": "LOSS"
+    }
+  ],
+  "main_commit": "f3c0c8ec265e034a3e69c03e6eee6d5d9a4a8e43",
+  "merged_evidence": [
+    {
+      "key": [
+        1152921504606851072,
+        537001986
+      ],
+      "legal_count": 90,
+      "merge_receipt": "research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/merge-receipt-fourth.json",
+      "nodes": 4519790,
+      "raw": "research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/probe-15m-fourth.csv",
+      "raw_sha256": "4f40498c1def526c9c7e7e9ce310cbc5b2693778d90a091b2aa6585060fafe48",
+      "source": "local-continuation"
+    },
+    {
+      "key": [
+        1188950301626859520,
+        536870976
+      ],
+      "legal_count": 90,
+      "merge_receipt": "research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/merge-receipt-fifth.json",
+      "nodes": 8361840,
+      "raw": "research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/probe-15m-fifth.csv",
+      "raw_sha256": "3de2272f2fdbac57dbbee32b0c951051fe0bf8c60c8d0d284f6b914dd79ccb33",
+      "source": "local-continuation"
+    },
+    {
+      "key": [
+        10412322338481635328,
+        536870912
+      ],
+      "legal_count": 91,
+      "merge_receipt": "research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/merge-receipt-seventh.json",
+      "nodes": 2569967,
+      "raw": "research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/probe-15m-seventh.csv",
+      "raw_sha256": "a685f404557d9aa9cb32e8d90b06be303f52d51f67d2846872839ba140b535a9",
+      "source": "local-continuation"
+    },
+    {
+      "key": [
+        1189091039115214848,
+        536870912
+      ],
+      "legal_count": 92,
+      "merge_receipt": "research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/merge-receipt-eighth.json",
+      "nodes": 4808557,
+      "raw": "research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/probe-15m-eighth.csv",
+      "raw_sha256": "5a4391044167f5d5b543d371bf447017a37572046fc65bac0bd1ba1dd98a6b06",
+      "source": "local-continuation"
+    },
+    {
+      "key": [
+        1765411053930283008,
+        536870912
+      ],
+      "legal_count": 92,
+      "merge_receipt": "research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/merge-receipt-ninth.json",
+      "nodes": 4785007,
+      "raw": "research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/probe-15m-ninth.csv",
+      "raw_sha256": "82f2c3f060fd64e38129b703ad37c079ed4aa06dbafc02ac79f6b60de1533da3",
+      "source": "local-continuation"
+    },
+    {
+      "key": [
+        1152921504606851072,
+        570425346
+      ],
+      "legal_count": 93,
+      "merge_receipt": "research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/merge-receipt-tenth.json",
+      "nodes": 6730471,
+      "raw": "research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/probe-15m-tenth.csv",
+      "raw_sha256": "62cef29784676235e0c57b840452e0a824c62449bd07be2872852fa9e9687431",
+      "source": "local-continuation"
+    },
+    {
+      "input": "research/experiments/n11-two-target-design-20261010/output/raw/first-15m-s5-1152921504606851072-536870946.input.csv",
+      "input_sha256": "ecc0299b8142abde201fcc40ea9666dac7368d0888d0600abc717af66ddfe348",
+      "key": [
+        1152921504606851072,
+        536870946
+      ],
+      "legal_count": 98,
+      "nodes": 3651923,
+      "raw": "research/experiments/n11-two-target-design-20261010/output/raw/first-15m-s5-1152921504606851072-536870946.out.csv",
+      "raw_sha256": "daf5d4457ea350dc8e3c653a9ccb7a681ef7061a3bfc9d75438e4d0d73b1a155",
+      "source": "f3c0c8ec-main"
+    },
+    {
+      "input": "research/experiments/n11-two-target-design-20261010/output/raw/second-15m-s5-1188950301626860544-536870912.input.csv",
+      "input_sha256": "56aacb71769b231c9728dcc841d39f0d5cb579517d34769f0e7382516d4c3a62",
+      "key": [
+        1188950301626860544,
+        536870912
+      ],
+      "legal_count": 99,
+      "nodes": 5040200,
+      "raw": "research/experiments/n11-two-target-design-20261010/output/raw/second-15m-s5-1188950301626860544-536870912.out.csv",
+      "raw_sha256": "8212579f96742814b54de77e20ca9dc2cb711c69dd25bd8664f8add3bfa2bc13",
+      "source": "f3c0c8ec-main"
+    }
+  ],
+  "old_checkpoint_cache": {
+    "path": "research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/current-exact-s5-after-probe-3.cache",
+    "rows": 5741,
+    "sha256": "f890dbc12e3731596afea3cd120f3aafa6103ecd2cd6872c05a0d1c99cc819ca"
+  },
+  "old_main_continuation_cache": {
+    "new_exact_loss_delta": 6,
+    "path": "research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/current-exact-s5-after-probe-9.cache",
+    "rows": 5747,
+    "sha256": "db3eb6065a58883cffbe3de3719614972cbbc1de1364f43e0e9a9798ec7957c9"
+  },
+  "quarantine_registry_sha256": "81d231604d3a095c115135e05ca393d6be83e1aadde4f614d3b5a9cc67d17fe9",
+  "rebased_cache": {
+    "path": "research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/current-exact-s5-after-probe-9-rebased-main.cache",
+    "rows": 5749,
+    "sha256": "c4a77facb2269f51ffcb13493c668a5b7656a1b42f8c280647dc8936011db2a2",
+    "target_s4_boundary": {
+      "LOSS": 22,
+      "UNKNOWN": 87,
+      "WIN": 0
+    },
+    "verdict_counts": {
+      "LOSS": 5591,
+      "WIN": 158
+    }
+  },
+  "schema": "n11-reply27-latest-main-cache-rebase-v1"
+}

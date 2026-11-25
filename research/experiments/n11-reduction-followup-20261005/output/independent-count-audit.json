@@ -1,0 +1,7262 @@
+{
+  "scope": "Exchangeable-class normal/misere kernel; 11x11 outcome remains UNKNOWN.",
+  "independent_formulation": "Count selected X points and explicit outside subset.",
+  "misere_scope": "Auxiliary mex has terminal value one; its zero means P. No xor additivity claimed.",
+  "exhaustive_orbit_families": [
+    {
+      "k": 6,
+      "outside": 2,
+      "rank": 4,
+      "all_invariant_clutters": 122,
+      "count_states": 1393
+    },
+    {
+      "k": 6,
+      "outside": 3,
+      "rank": 4,
+      "all_invariant_clutters": 5097,
+      "count_states": 98246
+    }
+  ],
+  "deterministic_random_orbit_cases": [
+    {
+      "k": 35,
+      "outside": 2,
+      "orbit_count": 12,
+      "kept": 1,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 5,
+      "reduced_count_states": 5
+    },
+    {
+      "k": 46,
+      "outside": 4,
+      "orbit_count": 7,
+      "kept": 4,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 250,
+      "reduced_count_states": 40
+    },
+    {
+      "k": 19,
+      "outside": 2,
+      "orbit_count": 1,
+      "kept": 1,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 61,
+      "reduced_count_states": 7
+    },
+    {
+      "k": 11,
+      "outside": 6,
+      "orbit_count": 9,
+      "kept": 5,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 256,
+      "reduced_count_states": 154
+    },
+    {
+      "k": 37,
+      "outside": 6,
+      "orbit_count": 11,
+      "kept": 4,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 164,
+      "reduced_count_states": 164
+    },
+    {
+      "k": 43,
+      "outside": 0,
+      "orbit_count": 0,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 44,
+      "reduced_count_states": 2
+    },
+    {
+      "k": 32,
+      "outside": 6,
+      "orbit_count": 2,
+      "kept": 2,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 1584,
+      "reduced_count_states": 144
+    },
+    {
+      "k": 37,
+      "outside": 6,
+      "orbit_count": 10,
+      "kept": 5,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 763,
+      "reduced_count_states": 187
+    },
+    {
+      "k": 18,
+      "outside": 0,
+      "orbit_count": 1,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 2,
+      "reduced_count_states": 2
+    },
+    {
+      "k": 47,
+      "outside": 1,
+      "orbit_count": 7,
+      "kept": 7,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 49,
+      "reduced_count_states": 9
+    },
+    {
+      "k": 8,
+      "outside": 4,
+      "orbit_count": 4,
+      "kept": 6,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 100,
+      "reduced_count_states": 84
+    },
+    {
+      "k": 10,
+      "outside": 1,
+      "orbit_count": 8,
+      "kept": 8,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 12,
+      "reduced_count_states": 10
+    },
+    {
+      "k": 9,
+      "outside": 6,
+      "orbit_count": 24,
+      "kept": 1,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 239,
+      "reduced_count_states": 55
+    },
+    {
+      "k": 47,
+      "outside": 3,
+      "orbit_count": 17,
+      "kept": 5,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 57,
+      "reduced_count_states": 15
+    },
+    {
+      "k": 6,
+      "outside": 6,
+      "orbit_count": 15,
+      "kept": 6,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 173,
+      "reduced_count_states": 173
+    },
+    {
+      "k": 10,
+      "outside": 4,
+      "orbit_count": 13,
+      "kept": 8,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 70,
+      "reduced_count_states": 62
+    },
+    {
+      "k": 39,
+      "outside": 1,
+      "orbit_count": 8,
+      "kept": 4,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 6,
+      "reduced_count_states": 6
+    },
+    {
+      "k": 13,
+      "outside": 4,
+      "orbit_count": 8,
+      "kept": 3,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 74,
+      "reduced_count_states": 24
+    },
+    {
+      "k": 18,
+      "outside": 4,
+      "orbit_count": 5,
+      "kept": 4,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 105,
+      "reduced_count_states": 49
+    },
+    {
+      "k": 33,
+      "outside": 0,
+      "orbit_count": 0,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 34,
+      "reduced_count_states": 2
+    },
+    {
+      "k": 46,
+      "outside": 1,
+      "orbit_count": 12,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 3,
+      "reduced_count_states": 3
+    },
+    {
+      "k": 32,
+      "outside": 4,
+      "orbit_count": 6,
+      "kept": 6,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 325,
+      "reduced_count_states": 91
+    },
+    {
+      "k": 34,
+      "outside": 0,
+      "orbit_count": 0,
+      "kept": 0,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 35,
+      "reduced_count_states": 1
+    },
+    {
+      "k": 21,
+      "outside": 6,
+      "orbit_count": 1,
+      "kept": 1,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 1324,
+      "reduced_count_states": 124
+    },
+    {
+      "k": 33,
+      "outside": 2,
+      "orbit_count": 15,
+      "kept": 2,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 6,
+      "reduced_count_states": 6
+    },
+    {
+      "k": 20,
+      "outside": 0,
+      "orbit_count": 0,
+      "kept": 0,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 21,
+      "reduced_count_states": 1
+    },
+    {
+      "k": 18,
+      "outside": 6,
+      "orbit_count": 24,
+      "kept": 6,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 314,
+      "reduced_count_states": 170
+    },
+    {
+      "k": 37,
+      "outside": 3,
+      "orbit_count": 5,
+      "kept": 7,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 49,
+      "reduced_count_states": 19
+    },
+    {
+      "k": 48,
+      "outside": 6,
+      "orbit_count": 14,
+      "kept": 8,
+      "grundy": 3,
+      "misere_auxiliary_mex": 3,
+      "original_count_states": 1159,
+      "reduced_count_states": 239
+    },
+    {
+      "k": 17,
+      "outside": 4,
+      "orbit_count": 4,
+      "kept": 3,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 185,
+      "reduced_count_states": 45
+    },
+    {
+      "k": 8,
+      "outside": 4,
+      "orbit_count": 15,
+      "kept": 2,
+      "grundy": 3,
+      "misere_auxiliary_mex": 3,
+      "original_count_states": 40,
+      "reduced_count_states": 16
+    },
+    {
+      "k": 16,
+      "outside": 1,
+      "orbit_count": 0,
+      "kept": 0,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 34,
+      "reduced_count_states": 2
+    },
+    {
+      "k": 2,
+      "outside": 5,
+      "orbit_count": 13,
+      "kept": 2,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 38,
+      "reduced_count_states": 38
+    },
+    {
+      "k": 22,
+      "outside": 1,
+      "orbit_count": 6,
+      "kept": 6,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 24,
+      "reduced_count_states": 8
+    },
+    {
+      "k": 25,
+      "outside": 1,
+      "orbit_count": 0,
+      "kept": 1,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 52,
+      "reduced_count_states": 4
+    },
+    {
+      "k": 14,
+      "outside": 6,
+      "orbit_count": 24,
+      "kept": 0,
+      "grundy": 3,
+      "misere_auxiliary_mex": 3,
+      "original_count_states": 255,
+      "reduced_count_states": 17
+    },
+    {
+      "k": 36,
+      "outside": 5,
+      "orbit_count": 6,
+      "kept": 1,
+      "grundy": 3,
+      "misere_auxiliary_mex": 3,
+      "original_count_states": 44,
+      "reduced_count_states": 44
+    },
+    {
+      "k": 4,
+      "outside": 0,
+      "orbit_count": 0,
+      "kept": 0,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 5,
+      "reduced_count_states": 1
+    },
+    {
+      "k": 31,
+      "outside": 5,
+      "orbit_count": 7,
+      "kept": 3,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 432,
+      "reduced_count_states": 68
+    },
+    {
+      "k": 10,
+      "outside": 5,
+      "orbit_count": 23,
+      "kept": 2,
+      "grundy": 4,
+      "misere_auxiliary_mex": 4,
+      "original_count_states": 66,
+      "reduced_count_states": 26
+    },
+    {
+      "k": 42,
+      "outside": 2,
+      "orbit_count": 11,
+      "kept": 1,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 5,
+      "reduced_count_states": 5
+    },
+    {
+      "k": 25,
+      "outside": 0,
+      "orbit_count": 0,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 26,
+      "reduced_count_states": 2
+    },
+    {
+      "k": 36,
+      "outside": 1,
+      "orbit_count": 13,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 3,
+      "reduced_count_states": 3
+    },
+    {
+      "k": 20,
+      "outside": 6,
+      "orbit_count": 23,
+      "kept": 4,
+      "grundy": 3,
+      "misere_auxiliary_mex": 3,
+      "original_count_states": 254,
+      "reduced_count_states": 110
+    },
+    {
+      "k": 13,
+      "outside": 0,
+      "orbit_count": 1,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 2,
+      "reduced_count_states": 2
+    },
+    {
+      "k": 6,
+      "outside": 0,
+      "orbit_count": 0,
+      "kept": 0,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 7,
+      "reduced_count_states": 1
+    },
+    {
+      "k": 48,
+      "outside": 6,
+      "orbit_count": 25,
+      "kept": 6,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 811,
+      "reduced_count_states": 181
+    },
+    {
+      "k": 13,
+      "outside": 1,
+      "orbit_count": 3,
+      "kept": 3,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 15,
+      "reduced_count_states": 5
+    },
+    {
+      "k": 39,
+      "outside": 3,
+      "orbit_count": 12,
+      "kept": 3,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 21,
+      "reduced_count_states": 21
+    },
+    {
+      "k": 26,
+      "outside": 3,
+      "orbit_count": 4,
+      "kept": 0,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 108,
+      "reduced_count_states": 4
+    },
+    {
+      "k": 5,
+      "outside": 3,
+      "orbit_count": 0,
+      "kept": 1,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 48,
+      "reduced_count_states": 16
+    },
+    {
+      "k": 20,
+      "outside": 6,
+      "orbit_count": 12,
+      "kept": 2,
+      "grundy": 5,
+      "misere_auxiliary_mex": 5,
+      "original_count_states": 572,
+      "reduced_count_states": 86
+    },
+    {
+      "k": 21,
+      "outside": 4,
+      "orbit_count": 18,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 18,
+      "reduced_count_states": 18
+    },
+    {
+      "k": 31,
+      "outside": 3,
+      "orbit_count": 11,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 35,
+      "reduced_count_states": 5
+    },
+    {
+      "k": 38,
+      "outside": 5,
+      "orbit_count": 18,
+      "kept": 2,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 206,
+      "reduced_count_states": 26
+    },
+    {
+      "k": 41,
+      "outside": 0,
+      "orbit_count": 0,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 42,
+      "reduced_count_states": 2
+    },
+    {
+      "k": 14,
+      "outside": 0,
+      "orbit_count": 7,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 2,
+      "reduced_count_states": 2
+    },
+    {
+      "k": 32,
+      "outside": 5,
+      "orbit_count": 16,
+      "kept": 6,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 390,
+      "reduced_count_states": 104
+    },
+    {
+      "k": 1,
+      "outside": 2,
+      "orbit_count": 4,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 4,
+      "reduced_count_states": 4
+    },
+    {
+      "k": 17,
+      "outside": 3,
+      "orbit_count": 15,
+      "kept": 9,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 64,
+      "reduced_count_states": 40
+    },
+    {
+      "k": 13,
+      "outside": 0,
+      "orbit_count": 2,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 2,
+      "reduced_count_states": 2
+    },
+    {
+      "k": 13,
+      "outside": 2,
+      "orbit_count": 7,
+      "kept": 5,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 18,
+      "reduced_count_states": 10
+    },
+    {
+      "k": 15,
+      "outside": 5,
+      "orbit_count": 22,
+      "kept": 1,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 96,
+      "reduced_count_states": 12
+    },
+    {
+      "k": 15,
+      "outside": 3,
+      "orbit_count": 2,
+      "kept": 3,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 96,
+      "reduced_count_states": 24
+    },
+    {
+      "k": 31,
+      "outside": 2,
+      "orbit_count": 5,
+      "kept": 5,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 24,
+      "reduced_count_states": 24
+    },
+    {
+      "k": 31,
+      "outside": 4,
+      "orbit_count": 19,
+      "kept": 7,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 50,
+      "reduced_count_states": 26
+    },
+    {
+      "k": 22,
+      "outside": 5,
+      "orbit_count": 17,
+      "kept": 8,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 148,
+      "reduced_count_states": 92
+    },
+    {
+      "k": 44,
+      "outside": 5,
+      "orbit_count": 18,
+      "kept": 2,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 276,
+      "reduced_count_states": 24
+    },
+    {
+      "k": 16,
+      "outside": 6,
+      "orbit_count": 22,
+      "kept": 2,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 242,
+      "reduced_count_states": 60
+    },
+    {
+      "k": 3,
+      "outside": 0,
+      "orbit_count": 0,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 4,
+      "reduced_count_states": 2
+    },
+    {
+      "k": 34,
+      "outside": 3,
+      "orbit_count": 20,
+      "kept": 1,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 9,
+      "reduced_count_states": 9
+    },
+    {
+      "k": 32,
+      "outside": 4,
+      "orbit_count": 0,
+      "kept": 0,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 528,
+      "reduced_count_states": 16
+    },
+    {
+      "k": 39,
+      "outside": 0,
+      "orbit_count": 4,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 2,
+      "reduced_count_states": 2
+    },
+    {
+      "k": 17,
+      "outside": 6,
+      "orbit_count": 18,
+      "kept": 5,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 272,
+      "reduced_count_states": 128
+    },
+    {
+      "k": 44,
+      "outside": 6,
+      "orbit_count": 12,
+      "kept": 5,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 182,
+      "reduced_count_states": 182
+    },
+    {
+      "k": 2,
+      "outside": 6,
+      "orbit_count": 16,
+      "kept": 2,
+      "grundy": 3,
+      "misere_auxiliary_mex": 3,
+      "original_count_states": 82,
+      "reduced_count_states": 82
+    },
+    {
+      "k": 13,
+      "outside": 5,
+      "orbit_count": 4,
+      "kept": 3,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 259,
+      "reduced_count_states": 79
+    },
+    {
+      "k": 4,
+      "outside": 1,
+      "orbit_count": 4,
+      "kept": 4,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 6,
+      "reduced_count_states": 6
+    },
+    {
+      "k": 1,
+      "outside": 1,
+      "orbit_count": 1,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 3,
+      "reduced_count_states": 3
+    },
+    {
+      "k": 12,
+      "outside": 5,
+      "orbit_count": 4,
+      "kept": 4,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 305,
+      "reduced_count_states": 129
+    },
+    {
+      "k": 8,
+      "outside": 0,
+      "orbit_count": 2,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 2,
+      "reduced_count_states": 2
+    },
+    {
+      "k": 31,
+      "outside": 2,
+      "orbit_count": 13,
+      "kept": 5,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 34,
+      "reduced_count_states": 8
+    },
+    {
+      "k": 1,
+      "outside": 5,
+      "orbit_count": 20,
+      "kept": 1,
+      "grundy": 3,
+      "misere_auxiliary_mex": 3,
+      "original_count_states": 20,
+      "reduced_count_states": 20
+    },
+    {
+      "k": 33,
+      "outside": 3,
+      "orbit_count": 16,
+      "kept": 7,
+      "grundy": 3,
+      "misere_auxiliary_mex": 3,
+      "original_count_states": 41,
+      "reduced_count_states": 15
+    },
+    {
+      "k": 18,
+      "outside": 1,
+      "orbit_count": 7,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 3,
+      "reduced_count_states": 3
+    },
+    {
+      "k": 5,
+      "outside": 0,
+      "orbit_count": 0,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 6,
+      "reduced_count_states": 2
+    },
+    {
+      "k": 19,
+      "outside": 3,
+      "orbit_count": 3,
+      "kept": 5,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 76,
+      "reduced_count_states": 34
+    },
+    {
+      "k": 39,
+      "outside": 2,
+      "orbit_count": 13,
+      "kept": 5,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 42,
+      "reduced_count_states": 8
+    },
+    {
+      "k": 44,
+      "outside": 4,
+      "orbit_count": 14,
+      "kept": 2,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 34,
+      "reduced_count_states": 34
+    },
+    {
+      "k": 10,
+      "outside": 0,
+      "orbit_count": 0,
+      "kept": 0,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 11,
+      "reduced_count_states": 1
+    },
+    {
+      "k": 7,
+      "outside": 2,
+      "orbit_count": 9,
+      "kept": 1,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 6,
+      "reduced_count_states": 6
+    },
+    {
+      "k": 41,
+      "outside": 2,
+      "orbit_count": 1,
+      "kept": 1,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 126,
+      "reduced_count_states": 6
+    },
+    {
+      "k": 33,
+      "outside": 4,
+      "orbit_count": 1,
+      "kept": 1,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 478,
+      "reduced_count_states": 30
+    },
+    {
+      "k": 11,
+      "outside": 5,
+      "orbit_count": 0,
+      "kept": 1,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 384,
+      "reduced_count_states": 64
+    },
+    {
+      "k": 6,
+      "outside": 6,
+      "orbit_count": 13,
+      "kept": 6,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 157,
+      "reduced_count_states": 157
+    },
+    {
+      "k": 40,
+      "outside": 1,
+      "orbit_count": 1,
+      "kept": 2,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 42,
+      "reduced_count_states": 4
+    },
+    {
+      "k": 10,
+      "outside": 6,
+      "orbit_count": 24,
+      "kept": 2,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 138,
+      "reduced_count_states": 66
+    },
+    {
+      "k": 1,
+      "outside": 6,
+      "orbit_count": 13,
+      "kept": 1,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 62,
+      "reduced_count_states": 62
+    },
+    {
+      "k": 45,
+      "outside": 2,
+      "orbit_count": 4,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 48,
+      "reduced_count_states": 4
+    },
+    {
+      "k": 11,
+      "outside": 5,
+      "orbit_count": 18,
+      "kept": 5,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 63,
+      "reduced_count_states": 45
+    },
+    {
+      "k": 23,
+      "outside": 6,
+      "orbit_count": 18,
+      "kept": 4,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 108,
+      "reduced_count_states": 108
+    },
+    {
+      "k": 40,
+      "outside": 4,
+      "orbit_count": 14,
+      "kept": 6,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 104,
+      "reduced_count_states": 36
+    },
+    {
+      "k": 39,
+      "outside": 5,
+      "orbit_count": 0,
+      "kept": 1,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 1280,
+      "reduced_count_states": 64
+    },
+    {
+      "k": 6,
+      "outside": 5,
+      "orbit_count": 22,
+      "kept": 4,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 54,
+      "reduced_count_states": 50
+    },
+    {
+      "k": 40,
+      "outside": 3,
+      "orbit_count": 14,
+      "kept": 5,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 27,
+      "reduced_count_states": 27
+    },
+    {
+      "k": 20,
+      "outside": 2,
+      "orbit_count": 0,
+      "kept": 0,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 84,
+      "reduced_count_states": 4
+    },
+    {
+      "k": 21,
+      "outside": 5,
+      "orbit_count": 19,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 31,
+      "reduced_count_states": 31
+    },
+    {
+      "k": 39,
+      "outside": 1,
+      "orbit_count": 6,
+      "kept": 7,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 41,
+      "reduced_count_states": 9
+    },
+    {
+      "k": 45,
+      "outside": 6,
+      "orbit_count": 20,
+      "kept": 9,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 1021,
+      "reduced_count_states": 301
+    },
+    {
+      "k": 46,
+      "outside": 3,
+      "orbit_count": 2,
+      "kept": 0,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 282,
+      "reduced_count_states": 6
+    },
+    {
+      "k": 22,
+      "outside": 4,
+      "orbit_count": 6,
+      "kept": 1,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 24,
+      "reduced_count_states": 24
+    },
+    {
+      "k": 23,
+      "outside": 2,
+      "orbit_count": 10,
+      "kept": 7,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 31,
+      "reduced_count_states": 15
+    },
+    {
+      "k": 18,
+      "outside": 5,
+      "orbit_count": 1,
+      "kept": 0,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 456,
+      "reduced_count_states": 24
+    },
+    {
+      "k": 32,
+      "outside": 0,
+      "orbit_count": 0,
+      "kept": 0,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 33,
+      "reduced_count_states": 1
+    },
+    {
+      "k": 43,
+      "outside": 1,
+      "orbit_count": 9,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 3,
+      "reduced_count_states": 3
+    },
+    {
+      "k": 3,
+      "outside": 2,
+      "orbit_count": 10,
+      "kept": 3,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 6,
+      "reduced_count_states": 6
+    },
+    {
+      "k": 8,
+      "outside": 0,
+      "orbit_count": 6,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 2,
+      "reduced_count_states": 2
+    },
+    {
+      "k": 10,
+      "outside": 3,
+      "orbit_count": 11,
+      "kept": 8,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 27,
+      "reduced_count_states": 25
+    },
+    {
+      "k": 45,
+      "outside": 5,
+      "orbit_count": 16,
+      "kept": 5,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 387,
+      "reduced_count_states": 67
+    },
+    {
+      "k": 30,
+      "outside": 3,
+      "orbit_count": 5,
+      "kept": 6,
+      "grundy": 3,
+      "misere_auxiliary_mex": 3,
+      "original_count_states": 96,
+      "reduced_count_states": 24
+    },
+    {
+      "k": 47,
+      "outside": 0,
+      "orbit_count": 6,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 2,
+      "reduced_count_states": 2
+    },
+    {
+      "k": 20,
+      "outside": 0,
+      "orbit_count": 0,
+      "kept": 0,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 21,
+      "reduced_count_states": 1
+    },
+    {
+      "k": 7,
+      "outside": 3,
+      "orbit_count": 24,
+      "kept": 1,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 7,
+      "reduced_count_states": 7
+    },
+    {
+      "k": 15,
+      "outside": 0,
+      "orbit_count": 0,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 16,
+      "reduced_count_states": 2
+    },
+    {
+      "k": 40,
+      "outside": 6,
+      "orbit_count": 20,
+      "kept": 4,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 451,
+      "reduced_count_states": 127
+    },
+    {
+      "k": 26,
+      "outside": 5,
+      "orbit_count": 7,
+      "kept": 2,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 185,
+      "reduced_count_states": 41
+    },
+    {
+      "k": 19,
+      "outside": 0,
+      "orbit_count": 0,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 20,
+      "reduced_count_states": 2
+    },
+    {
+      "k": 9,
+      "outside": 5,
+      "orbit_count": 6,
+      "kept": 5,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 137,
+      "reduced_count_states": 101
+    },
+    {
+      "k": 47,
+      "outside": 0,
+      "orbit_count": 6,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 2,
+      "reduced_count_states": 2
+    },
+    {
+      "k": 40,
+      "outside": 4,
+      "orbit_count": 20,
+      "kept": 6,
+      "grundy": 3,
+      "misere_auxiliary_mex": 3,
+      "original_count_states": 105,
+      "reduced_count_states": 37
+    },
+    {
+      "k": 4,
+      "outside": 0,
+      "orbit_count": 3,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 2,
+      "reduced_count_states": 2
+    },
+    {
+      "k": 30,
+      "outside": 0,
+      "orbit_count": 0,
+      "kept": 0,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 31,
+      "reduced_count_states": 1
+    },
+    {
+      "k": 3,
+      "outside": 4,
+      "orbit_count": 3,
+      "kept": 1,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 22,
+      "reduced_count_states": 22
+    },
+    {
+      "k": 14,
+      "outside": 3,
+      "orbit_count": 4,
+      "kept": 8,
+      "grundy": 3,
+      "misere_auxiliary_mex": 3,
+      "original_count_states": 66,
+      "reduced_count_states": 48
+    },
+    {
+      "k": 7,
+      "outside": 6,
+      "orbit_count": 2,
+      "kept": 7,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 468,
+      "reduced_count_states": 468
+    },
+    {
+      "k": 12,
+      "outside": 1,
+      "orbit_count": 2,
+      "kept": 2,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 14,
+      "reduced_count_states": 4
+    },
+    {
+      "k": 47,
+      "outside": 2,
+      "orbit_count": 14,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 4,
+      "reduced_count_states": 4
+    },
+    {
+      "k": 47,
+      "outside": 4,
+      "orbit_count": 5,
+      "kept": 7,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 350,
+      "reduced_count_states": 70
+    },
+    {
+      "k": 37,
+      "outside": 1,
+      "orbit_count": 5,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 3,
+      "reduced_count_states": 3
+    },
+    {
+      "k": 26,
+      "outside": 4,
+      "orbit_count": 25,
+      "kept": 2,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 31,
+      "reduced_count_states": 7
+    },
+    {
+      "k": 2,
+      "outside": 4,
+      "orbit_count": 2,
+      "kept": 2,
+      "grundy": 3,
+      "misere_auxiliary_mex": 3,
+      "original_count_states": 43,
+      "reduced_count_states": 43
+    },
+    {
+      "k": 26,
+      "outside": 5,
+      "orbit_count": 24,
+      "kept": 4,
+      "grundy": 5,
+      "misere_auxiliary_mex": 5,
+      "original_count_states": 78,
+      "reduced_count_states": 34
+    },
+    {
+      "k": 9,
+      "outside": 4,
+      "orbit_count": 2,
+      "kept": 7,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 92,
+      "reduced_count_states": 84
+    },
+    {
+      "k": 6,
+      "outside": 3,
+      "orbit_count": 2,
+      "kept": 4,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 38,
+      "reduced_count_states": 34
+    },
+    {
+      "k": 22,
+      "outside": 5,
+      "orbit_count": 16,
+      "kept": 6,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 206,
+      "reduced_count_states": 110
+    },
+    {
+      "k": 48,
+      "outside": 4,
+      "orbit_count": 25,
+      "kept": 2,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 55,
+      "reduced_count_states": 9
+    },
+    {
+      "k": 23,
+      "outside": 3,
+      "orbit_count": 15,
+      "kept": 2,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 9,
+      "reduced_count_states": 9
+    },
+    {
+      "k": 27,
+      "outside": 6,
+      "orbit_count": 10,
+      "kept": 3,
+      "grundy": 4,
+      "misere_auxiliary_mex": 4,
+      "original_count_states": 574,
+      "reduced_count_states": 94
+    },
+    {
+      "k": 25,
+      "outside": 5,
+      "orbit_count": 25,
+      "kept": 9,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 193,
+      "reduced_count_states": 129
+    },
+    {
+      "k": 6,
+      "outside": 2,
+      "orbit_count": 13,
+      "kept": 4,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 9,
+      "reduced_count_states": 7
+    },
+    {
+      "k": 21,
+      "outside": 1,
+      "orbit_count": 5,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 3,
+      "reduced_count_states": 3
+    },
+    {
+      "k": 1,
+      "outside": 3,
+      "orbit_count": 11,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 5,
+      "reduced_count_states": 5
+    },
+    {
+      "k": 12,
+      "outside": 3,
+      "orbit_count": 7,
+      "kept": 1,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 9,
+      "reduced_count_states": 9
+    },
+    {
+      "k": 21,
+      "outside": 1,
+      "orbit_count": 3,
+      "kept": 3,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 23,
+      "reduced_count_states": 5
+    },
+    {
+      "k": 37,
+      "outside": 0,
+      "orbit_count": 0,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 38,
+      "reduced_count_states": 2
+    },
+    {
+      "k": 34,
+      "outside": 5,
+      "orbit_count": 21,
+      "kept": 2,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 127,
+      "reduced_count_states": 31
+    },
+    {
+      "k": 44,
+      "outside": 6,
+      "orbit_count": 23,
+      "kept": 5,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 126,
+      "reduced_count_states": 126
+    },
+    {
+      "k": 17,
+      "outside": 4,
+      "orbit_count": 15,
+      "kept": 3,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 81,
+      "reduced_count_states": 25
+    },
+    {
+      "k": 38,
+      "outside": 5,
+      "orbit_count": 13,
+      "kept": 2,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 210,
+      "reduced_count_states": 30
+    },
+    {
+      "k": 27,
+      "outside": 4,
+      "orbit_count": 22,
+      "kept": 5,
+      "grundy": 3,
+      "misere_auxiliary_mex": 3,
+      "original_count_states": 41,
+      "reduced_count_states": 19
+    },
+    {
+      "k": 22,
+      "outside": 6,
+      "orbit_count": 21,
+      "kept": 8,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 410,
+      "reduced_count_states": 200
+    },
+    {
+      "k": 40,
+      "outside": 1,
+      "orbit_count": 4,
+      "kept": 4,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 42,
+      "reduced_count_states": 6
+    },
+    {
+      "k": 35,
+      "outside": 5,
+      "orbit_count": 8,
+      "kept": 1,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 648,
+      "reduced_count_states": 36
+    },
+    {
+      "k": 7,
+      "outside": 2,
+      "orbit_count": 4,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 10,
+      "reduced_count_states": 4
+    },
+    {
+      "k": 20,
+      "outside": 5,
+      "orbit_count": 5,
+      "kept": 3,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 119,
+      "reduced_count_states": 119
+    },
+    {
+      "k": 38,
+      "outside": 4,
+      "orbit_count": 9,
+      "kept": 6,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 187,
+      "reduced_count_states": 59
+    },
+    {
+      "k": 28,
+      "outside": 5,
+      "orbit_count": 4,
+      "kept": 4,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 504,
+      "reduced_count_states": 120
+    },
+    {
+      "k": 33,
+      "outside": 0,
+      "orbit_count": 0,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 34,
+      "reduced_count_states": 2
+    },
+    {
+      "k": 34,
+      "outside": 5,
+      "orbit_count": 18,
+      "kept": 2,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 216,
+      "reduced_count_states": 24
+    },
+    {
+      "k": 23,
+      "outside": 3,
+      "orbit_count": 6,
+      "kept": 5,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 84,
+      "reduced_count_states": 30
+    },
+    {
+      "k": 2,
+      "outside": 5,
+      "orbit_count": 16,
+      "kept": 2,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 35,
+      "reduced_count_states": 35
+    },
+    {
+      "k": 32,
+      "outside": 1,
+      "orbit_count": 6,
+      "kept": 6,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 34,
+      "reduced_count_states": 8
+    },
+    {
+      "k": 44,
+      "outside": 0,
+      "orbit_count": 1,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 2,
+      "reduced_count_states": 2
+    },
+    {
+      "k": 23,
+      "outside": 4,
+      "orbit_count": 13,
+      "kept": 5,
+      "grundy": 0,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 62,
+      "reduced_count_states": 26
+    },
+    {
+      "k": 44,
+      "outside": 1,
+      "orbit_count": 12,
+      "kept": 2,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 4,
+      "reduced_count_states": 4
+    },
+    {
+      "k": 32,
+      "outside": 2,
+      "orbit_count": 13,
+      "kept": 6,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 39,
+      "reduced_count_states": 13
+    },
+    {
+      "k": 13,
+      "outside": 1,
+      "orbit_count": 11,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 3,
+      "reduced_count_states": 3
+    },
+    {
+      "k": 37,
+      "outside": 3,
+      "orbit_count": 7,
+      "kept": 5,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 87,
+      "reduced_count_states": 23
+    },
+    {
+      "k": 19,
+      "outside": 1,
+      "orbit_count": 0,
+      "kept": 1,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 40,
+      "reduced_count_states": 4
+    },
+    {
+      "k": 6,
+      "outside": 1,
+      "orbit_count": 6,
+      "kept": 6,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 8,
+      "reduced_count_states": 8
+    },
+    {
+      "k": 15,
+      "outside": 6,
+      "orbit_count": 14,
+      "kept": 5,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 294,
+      "reduced_count_states": 134
+    },
+    {
+      "k": 34,
+      "outside": 5,
+      "orbit_count": 20,
+      "kept": 8,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 309,
+      "reduced_count_states": 127
+    },
+    {
+      "k": 41,
+      "outside": 3,
+      "orbit_count": 13,
+      "kept": 2,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 14,
+      "reduced_count_states": 14
+    },
+    {
+      "k": 9,
+      "outside": 2,
+      "orbit_count": 24,
+      "kept": 9,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 12,
+      "reduced_count_states": 12
+    },
+    {
+      "k": 2,
+      "outside": 6,
+      "orbit_count": 11,
+      "kept": 2,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 97,
+      "reduced_count_states": 97
+    },
+    {
+      "k": 4,
+      "outside": 6,
+      "orbit_count": 1,
+      "kept": 4,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 304,
+      "reduced_count_states": 304
+    },
+    {
+      "k": 44,
+      "outside": 1,
+      "orbit_count": 3,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 3,
+      "reduced_count_states": 3
+    },
+    {
+      "k": 26,
+      "outside": 4,
+      "orbit_count": 17,
+      "kept": 6,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 78,
+      "reduced_count_states": 38
+    },
+    {
+      "k": 25,
+      "outside": 2,
+      "orbit_count": 4,
+      "kept": 1,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 6,
+      "reduced_count_states": 6
+    },
+    {
+      "k": 32,
+      "outside": 4,
+      "orbit_count": 1,
+      "kept": 2,
+      "grundy": 3,
+      "misere_auxiliary_mex": 3,
+      "original_count_states": 272,
+      "reduced_count_states": 32
+    },
+    {
+      "k": 10,
+      "outside": 2,
+      "orbit_count": 12,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 4,
+      "reduced_count_states": 4
+    },
+    {
+      "k": 33,
+      "outside": 3,
+      "orbit_count": 20,
+      "kept": 9,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 41,
+      "reduced_count_states": 17
+    },
+    {
+      "k": 7,
+      "outside": 2,
+      "orbit_count": 3,
+      "kept": 3,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 14,
+      "reduced_count_states": 14
+    },
+    {
+      "k": 9,
+      "outside": 1,
+      "orbit_count": 3,
+      "kept": 3,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 11,
+      "reduced_count_states": 5
+    },
+    {
+      "k": 8,
+      "outside": 2,
+      "orbit_count": 12,
+      "kept": 4,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 10,
+      "reduced_count_states": 10
+    },
+    {
+      "k": 48,
+      "outside": 3,
+      "orbit_count": 4,
+      "kept": 0,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 196,
+      "reduced_count_states": 4
+    },
+    {
+      "k": 16,
+      "outside": 1,
+      "orbit_count": 6,
+      "kept": 1,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 4,
+      "reduced_count_states": 4
+    },
+    {
+      "k": 44,
+      "outside": 6,
+      "orbit_count": 21,
+      "kept": 4,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 625,
+      "reduced_count_states": 105
+    },
+    {
+      "k": 24,
+      "outside": 0,
+      "orbit_count": 2,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 2,
+      "reduced_count_states": 2
+    },
+    {
+      "k": 5,
+      "outside": 1,
+      "orbit_count": 0,
+      "kept": 1,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 12,
+      "reduced_count_states": 4
+    },
+    {
+      "k": 24,
+      "outside": 5,
+      "orbit_count": 2,
+      "kept": 0,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 650,
+      "reduced_count_states": 26
+    },
+    {
+      "k": 41,
+      "outside": 5,
+      "orbit_count": 22,
+      "kept": 3,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 264,
+      "reduced_count_states": 36
+    },
+    {
+      "k": 35,
+      "outside": 4,
+      "orbit_count": 0,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 576,
+      "reduced_count_states": 32
+    },
+    {
+      "k": 18,
+      "outside": 4,
+      "orbit_count": 5,
+      "kept": 4,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 110,
+      "reduced_count_states": 40
+    },
+    {
+      "k": 38,
+      "outside": 1,
+      "orbit_count": 13,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 3,
+      "reduced_count_states": 3
+    },
+    {
+      "k": 18,
+      "outside": 5,
+      "orbit_count": 14,
+      "kept": 2,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 134,
+      "reduced_count_states": 38
+    },
+    {
+      "k": 41,
+      "outside": 5,
+      "orbit_count": 16,
+      "kept": 3,
+      "grundy": 3,
+      "misere_auxiliary_mex": 3,
+      "original_count_states": 95,
+      "reduced_count_states": 95
+    },
+    {
+      "k": 6,
+      "outside": 5,
+      "orbit_count": 5,
+      "kept": 2,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 120,
+      "reduced_count_states": 56
+    },
+    {
+      "k": 6,
+      "outside": 6,
+      "orbit_count": 24,
+      "kept": 6,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 126,
+      "reduced_count_states": 126
+    },
+    {
+      "k": 19,
+      "outside": 3,
+      "orbit_count": 2,
+      "kept": 5,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 84,
+      "reduced_count_states": 28
+    },
+    {
+      "k": 1,
+      "outside": 6,
+      "orbit_count": 12,
+      "kept": 1,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 74,
+      "reduced_count_states": 74
+    },
+    {
+      "k": 40,
+      "outside": 1,
+      "orbit_count": 5,
+      "kept": 6,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 42,
+      "reduced_count_states": 8
+    },
+    {
+      "k": 31,
+      "outside": 6,
+      "orbit_count": 10,
+      "kept": 5,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 704,
+      "reduced_count_states": 184
+    },
+    {
+      "k": 36,
+      "outside": 5,
+      "orbit_count": 19,
+      "kept": 0,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 259,
+      "reduced_count_states": 7
+    },
+    {
+      "k": 23,
+      "outside": 3,
+      "orbit_count": 24,
+      "kept": 2,
+      "grundy": 3,
+      "misere_auxiliary_mex": 3,
+      "original_count_states": 11,
+      "reduced_count_states": 11
+    },
+    {
+      "k": 45,
+      "outside": 5,
+      "orbit_count": 18,
+      "kept": 7,
+      "grundy": 3,
+      "misere_auxiliary_mex": 3,
+      "original_count_states": 234,
+      "reduced_count_states": 82
+    },
+    {
+      "k": 18,
+      "outside": 1,
+      "orbit_count": 13,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 3,
+      "reduced_count_states": 3
+    },
+    {
+      "k": 43,
+      "outside": 0,
+      "orbit_count": 0,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 44,
+      "reduced_count_states": 2
+    },
+    {
+      "k": 21,
+      "outside": 0,
+      "orbit_count": 2,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 2,
+      "reduced_count_states": 2
+    },
+    {
+      "k": 38,
+      "outside": 1,
+      "orbit_count": 6,
+      "kept": 6,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 40,
+      "reduced_count_states": 8
+    },
+    {
+      "k": 19,
+      "outside": 3,
+      "orbit_count": 4,
+      "kept": 1,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 80,
+      "reduced_count_states": 8
+    },
+    {
+      "k": 9,
+      "outside": 3,
+      "orbit_count": 17,
+      "kept": 3,
+      "grundy": 3,
+      "misere_auxiliary_mex": 3,
+      "original_count_states": 15,
+      "reduced_count_states": 9
+    },
+    {
+      "k": 27,
+      "outside": 3,
+      "orbit_count": 23,
+      "kept": 1,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 6,
+      "reduced_count_states": 6
+    },
+    {
+      "k": 46,
+      "outside": 2,
+      "orbit_count": 4,
+      "kept": 2,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 49,
+      "reduced_count_states": 5
+    },
+    {
+      "k": 45,
+      "outside": 4,
+      "orbit_count": 2,
+      "kept": 5,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 644,
+      "reduced_count_states": 84
+    },
+    {
+      "k": 41,
+      "outside": 2,
+      "orbit_count": 14,
+      "kept": 7,
+      "grundy": 3,
+      "misere_auxiliary_mex": 3,
+      "original_count_states": 45,
+      "reduced_count_states": 11
+    },
+    {
+      "k": 17,
+      "outside": 5,
+      "orbit_count": 8,
+      "kept": 7,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 176,
+      "reduced_count_states": 96
+    },
+    {
+      "k": 2,
+      "outside": 2,
+      "orbit_count": 7,
+      "kept": 2,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 5,
+      "reduced_count_states": 5
+    },
+    {
+      "k": 17,
+      "outside": 0,
+      "orbit_count": 1,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 2,
+      "reduced_count_states": 2
+    },
+    {
+      "k": 1,
+      "outside": 2,
+      "orbit_count": 4,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 4,
+      "reduced_count_states": 4
+    },
+    {
+      "k": 1,
+      "outside": 3,
+      "orbit_count": 10,
+      "kept": 1,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 6,
+      "reduced_count_states": 6
+    },
+    {
+      "k": 38,
+      "outside": 1,
+      "orbit_count": 4,
+      "kept": 4,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 40,
+      "reduced_count_states": 6
+    },
+    {
+      "k": 22,
+      "outside": 1,
+      "orbit_count": 2,
+      "kept": 4,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 24,
+      "reduced_count_states": 6
+    },
+    {
+      "k": 23,
+      "outside": 4,
+      "orbit_count": 11,
+      "kept": 5,
+      "grundy": 4,
+      "misere_auxiliary_mex": 4,
+      "original_count_states": 61,
+      "reduced_count_states": 25
+    },
+    {
+      "k": 7,
+      "outside": 5,
+      "orbit_count": 7,
+      "kept": 7,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 142,
+      "reduced_count_states": 142
+    },
+    {
+      "k": 8,
+      "outside": 6,
+      "orbit_count": 14,
+      "kept": 4,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 294,
+      "reduced_count_states": 174
+    },
+    {
+      "k": 27,
+      "outside": 2,
+      "orbit_count": 0,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 112,
+      "reduced_count_states": 8
+    },
+    {
+      "k": 23,
+      "outside": 6,
+      "orbit_count": 19,
+      "kept": 9,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 450,
+      "reduced_count_states": 212
+    },
+    {
+      "k": 29,
+      "outside": 6,
+      "orbit_count": 1,
+      "kept": 5,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 1720,
+      "reduced_count_states": 376
+    },
+    {
+      "k": 6,
+      "outside": 2,
+      "orbit_count": 12,
+      "kept": 6,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 10,
+      "reduced_count_states": 10
+    },
+    {
+      "k": 38,
+      "outside": 2,
+      "orbit_count": 11,
+      "kept": 1,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 5,
+      "reduced_count_states": 5
+    },
+    {
+      "k": 24,
+      "outside": 4,
+      "orbit_count": 17,
+      "kept": 4,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 49,
+      "reduced_count_states": 29
+    },
+    {
+      "k": 3,
+      "outside": 5,
+      "orbit_count": 10,
+      "kept": 2,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 61,
+      "reduced_count_states": 61
+    },
+    {
+      "k": 38,
+      "outside": 5,
+      "orbit_count": 18,
+      "kept": 6,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 103,
+      "reduced_count_states": 39
+    },
+    {
+      "k": 33,
+      "outside": 5,
+      "orbit_count": 8,
+      "kept": 5,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 694,
+      "reduced_count_states": 134
+    },
+    {
+      "k": 48,
+      "outside": 3,
+      "orbit_count": 18,
+      "kept": 2,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 52,
+      "reduced_count_states": 6
+    },
+    {
+      "k": 38,
+      "outside": 6,
+      "orbit_count": 1,
+      "kept": 2,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 1888,
+      "reduced_count_states": 160
+    },
+    {
+      "k": 17,
+      "outside": 2,
+      "orbit_count": 7,
+      "kept": 9,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 30,
+      "reduced_count_states": 22
+    },
+    {
+      "k": 42,
+      "outside": 2,
+      "orbit_count": 20,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 4,
+      "reduced_count_states": 4
+    },
+    {
+      "k": 4,
+      "outside": 2,
+      "orbit_count": 6,
+      "kept": 4,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 9,
+      "reduced_count_states": 9
+    },
+    {
+      "k": 24,
+      "outside": 5,
+      "orbit_count": 25,
+      "kept": 4,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 54,
+      "reduced_count_states": 54
+    },
+    {
+      "k": 1,
+      "outside": 4,
+      "orbit_count": 14,
+      "kept": 1,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 12,
+      "reduced_count_states": 12
+    },
+    {
+      "k": 21,
+      "outside": 4,
+      "orbit_count": 7,
+      "kept": 4,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 41,
+      "reduced_count_states": 41
+    },
+    {
+      "k": 11,
+      "outside": 0,
+      "orbit_count": 0,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 12,
+      "reduced_count_states": 2
+    },
+    {
+      "k": 5,
+      "outside": 0,
+      "orbit_count": 0,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 6,
+      "reduced_count_states": 2
+    },
+    {
+      "k": 48,
+      "outside": 4,
+      "orbit_count": 4,
+      "kept": 2,
+      "grundy": 3,
+      "misere_auxiliary_mex": 3,
+      "original_count_states": 540,
+      "reduced_count_states": 34
+    },
+    {
+      "k": 12,
+      "outside": 6,
+      "orbit_count": 6,
+      "kept": 2,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 527,
+      "reduced_count_states": 157
+    },
+    {
+      "k": 25,
+      "outside": 5,
+      "orbit_count": 23,
+      "kept": 7,
+      "grundy": 3,
+      "misere_auxiliary_mex": 3,
+      "original_count_states": 107,
+      "reduced_count_states": 71
+    },
+    {
+      "k": 36,
+      "outside": 2,
+      "orbit_count": 15,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 4,
+      "reduced_count_states": 4
+    },
+    {
+      "k": 14,
+      "outside": 1,
+      "orbit_count": 8,
+      "kept": 8,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 16,
+      "reduced_count_states": 10
+    },
+    {
+      "k": 21,
+      "outside": 0,
+      "orbit_count": 3,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 2,
+      "reduced_count_states": 2
+    },
+    {
+      "k": 46,
+      "outside": 3,
+      "orbit_count": 11,
+      "kept": 6,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 56,
+      "reduced_count_states": 16
+    },
+    {
+      "k": 47,
+      "outside": 0,
+      "orbit_count": 2,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 2,
+      "reduced_count_states": 2
+    },
+    {
+      "k": 1,
+      "outside": 2,
+      "orbit_count": 4,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 4,
+      "reduced_count_states": 4
+    },
+    {
+      "k": 47,
+      "outside": 5,
+      "orbit_count": 16,
+      "kept": 5,
+      "grundy": 3,
+      "misere_auxiliary_mex": 3,
+      "original_count_states": 304,
+      "reduced_count_states": 52
+    },
+    {
+      "k": 43,
+      "outside": 3,
+      "orbit_count": 5,
+      "kept": 5,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 96,
+      "reduced_count_states": 20
+    },
+    {
+      "k": 30,
+      "outside": 5,
+      "orbit_count": 11,
+      "kept": 2,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 198,
+      "reduced_count_states": 30
+    },
+    {
+      "k": 16,
+      "outside": 1,
+      "orbit_count": 3,
+      "kept": 4,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 18,
+      "reduced_count_states": 6
+    },
+    {
+      "k": 16,
+      "outside": 1,
+      "orbit_count": 5,
+      "kept": 1,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 4,
+      "reduced_count_states": 4
+    },
+    {
+      "k": 20,
+      "outside": 2,
+      "orbit_count": 1,
+      "kept": 2,
+      "grundy": 3,
+      "misere_auxiliary_mex": 3,
+      "original_count_states": 44,
+      "reduced_count_states": 8
+    },
+    {
+      "k": 23,
+      "outside": 4,
+      "orbit_count": 19,
+      "kept": 4,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 22,
+      "reduced_count_states": 22
+    },
+    {
+      "k": 20,
+      "outside": 5,
+      "orbit_count": 22,
+      "kept": 4,
+      "grundy": 4,
+      "misere_auxiliary_mex": 4,
+      "original_count_states": 120,
+      "reduced_count_states": 40
+    },
+    {
+      "k": 24,
+      "outside": 4,
+      "orbit_count": 9,
+      "kept": 1,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 26,
+      "reduced_count_states": 26
+    },
+    {
+      "k": 18,
+      "outside": 1,
+      "orbit_count": 8,
+      "kept": 8,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 20,
+      "reduced_count_states": 10
+    },
+    {
+      "k": 11,
+      "outside": 3,
+      "orbit_count": 8,
+      "kept": 1,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 26,
+      "reduced_count_states": 6
+    },
+    {
+      "k": 33,
+      "outside": 2,
+      "orbit_count": 13,
+      "kept": 9,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 38,
+      "reduced_count_states": 14
+    },
+    {
+      "k": 17,
+      "outside": 3,
+      "orbit_count": 1,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 108,
+      "reduced_count_states": 12
+    },
+    {
+      "k": 11,
+      "outside": 4,
+      "orbit_count": 19,
+      "kept": 7,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 57,
+      "reduced_count_states": 49
+    },
+    {
+      "k": 27,
+      "outside": 2,
+      "orbit_count": 9,
+      "kept": 2,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 10,
+      "reduced_count_states": 10
+    },
+    {
+      "k": 12,
+      "outside": 6,
+      "orbit_count": 22,
+      "kept": 8,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 345,
+      "reduced_count_states": 277
+    },
+    {
+      "k": 20,
+      "outside": 0,
+      "orbit_count": 6,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 2,
+      "reduced_count_states": 2
+    },
+    {
+      "k": 23,
+      "outside": 5,
+      "orbit_count": 6,
+      "kept": 1,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 385,
+      "reduced_count_states": 33
+    },
+    {
+      "k": 16,
+      "outside": 1,
+      "orbit_count": 15,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 3,
+      "reduced_count_states": 3
+    },
+    {
+      "k": 4,
+      "outside": 5,
+      "orbit_count": 3,
+      "kept": 4,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 104,
+      "reduced_count_states": 104
+    },
+    {
+      "k": 20,
+      "outside": 2,
+      "orbit_count": 4,
+      "kept": 2,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 23,
+      "reduced_count_states": 5
+    },
+    {
+      "k": 6,
+      "outside": 5,
+      "orbit_count": 19,
+      "kept": 0,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 49,
+      "reduced_count_states": 7
+    },
+    {
+      "k": 46,
+      "outside": 3,
+      "orbit_count": 22,
+      "kept": 4,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 22,
+      "reduced_count_states": 22
+    },
+    {
+      "k": 24,
+      "outside": 2,
+      "orbit_count": 20,
+      "kept": 8,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 27,
+      "reduced_count_states": 11
+    },
+    {
+      "k": 40,
+      "outside": 1,
+      "orbit_count": 7,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 3,
+      "reduced_count_states": 3
+    },
+    {
+      "k": 26,
+      "outside": 3,
+      "orbit_count": 1,
+      "kept": 2,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 190,
+      "reduced_count_states": 22
+    },
+    {
+      "k": 37,
+      "outside": 2,
+      "orbit_count": 3,
+      "kept": 5,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 82,
+      "reduced_count_states": 18
+    },
+    {
+      "k": 12,
+      "outside": 4,
+      "orbit_count": 15,
+      "kept": 4,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 52,
+      "reduced_count_states": 28
+    },
+    {
+      "k": 11,
+      "outside": 6,
+      "orbit_count": 23,
+      "kept": 1,
+      "grundy": 5,
+      "misere_auxiliary_mex": 5,
+      "original_count_states": 306,
+      "reduced_count_states": 56
+    },
+    {
+      "k": 46,
+      "outside": 4,
+      "orbit_count": 22,
+      "kept": 2,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 52,
+      "reduced_count_states": 8
+    },
+    {
+      "k": 9,
+      "outside": 4,
+      "orbit_count": 21,
+      "kept": 9,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 58,
+      "reduced_count_states": 58
+    },
+    {
+      "k": 40,
+      "outside": 1,
+      "orbit_count": 7,
+      "kept": 8,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 42,
+      "reduced_count_states": 10
+    },
+    {
+      "k": 43,
+      "outside": 0,
+      "orbit_count": 4,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 2,
+      "reduced_count_states": 2
+    },
+    {
+      "k": 42,
+      "outside": 1,
+      "orbit_count": 0,
+      "kept": 0,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 86,
+      "reduced_count_states": 2
+    },
+    {
+      "k": 15,
+      "outside": 1,
+      "orbit_count": 0,
+      "kept": 1,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 32,
+      "reduced_count_states": 4
+    },
+    {
+      "k": 26,
+      "outside": 1,
+      "orbit_count": 0,
+      "kept": 0,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 54,
+      "reduced_count_states": 2
+    },
+    {
+      "k": 11,
+      "outside": 6,
+      "orbit_count": 13,
+      "kept": 7,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 341,
+      "reduced_count_states": 245
+    },
+    {
+      "k": 31,
+      "outside": 6,
+      "orbit_count": 20,
+      "kept": 5,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 643,
+      "reduced_count_states": 175
+    },
+    {
+      "k": 15,
+      "outside": 6,
+      "orbit_count": 23,
+      "kept": 7,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 350,
+      "reduced_count_states": 230
+    },
+    {
+      "k": 17,
+      "outside": 4,
+      "orbit_count": 14,
+      "kept": 3,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 81,
+      "reduced_count_states": 25
+    },
+    {
+      "k": 13,
+      "outside": 4,
+      "orbit_count": 20,
+      "kept": 1,
+      "grundy": 3,
+      "misere_auxiliary_mex": 3,
+      "original_count_states": 12,
+      "reduced_count_states": 12
+    },
+    {
+      "k": 8,
+      "outside": 0,
+      "orbit_count": 0,
+      "kept": 0,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 9,
+      "reduced_count_states": 1
+    },
+    {
+      "k": 34,
+      "outside": 6,
+      "orbit_count": 21,
+      "kept": 4,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 548,
+      "reduced_count_states": 98
+    },
+    {
+      "k": 10,
+      "outside": 5,
+      "orbit_count": 8,
+      "kept": 2,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 150,
+      "reduced_count_states": 54
+    },
+    {
+      "k": 45,
+      "outside": 1,
+      "orbit_count": 9,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 3,
+      "reduced_count_states": 3
+    },
+    {
+      "k": 44,
+      "outside": 3,
+      "orbit_count": 11,
+      "kept": 4,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 52,
+      "reduced_count_states": 12
+    },
+    {
+      "k": 44,
+      "outside": 6,
+      "orbit_count": 7,
+      "kept": 8,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 1165,
+      "reduced_count_states": 373
+    },
+    {
+      "k": 1,
+      "outside": 4,
+      "orbit_count": 24,
+      "kept": 1,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 8,
+      "reduced_count_states": 8
+    },
+    {
+      "k": 11,
+      "outside": 4,
+      "orbit_count": 17,
+      "kept": 7,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 51,
+      "reduced_count_states": 39
+    },
+    {
+      "k": 9,
+      "outside": 2,
+      "orbit_count": 10,
+      "kept": 7,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 14,
+      "reduced_count_states": 12
+    },
+    {
+      "k": 12,
+      "outside": 0,
+      "orbit_count": 2,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 2,
+      "reduced_count_states": 2
+    },
+    {
+      "k": 1,
+      "outside": 4,
+      "orbit_count": 17,
+      "kept": 1,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 10,
+      "reduced_count_states": 10
+    },
+    {
+      "k": 11,
+      "outside": 4,
+      "orbit_count": 0,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 192,
+      "reduced_count_states": 32
+    },
+    {
+      "k": 23,
+      "outside": 1,
+      "orbit_count": 0,
+      "kept": 1,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 48,
+      "reduced_count_states": 4
+    },
+    {
+      "k": 27,
+      "outside": 2,
+      "orbit_count": 17,
+      "kept": 1,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 6,
+      "reduced_count_states": 6
+    },
+    {
+      "k": 38,
+      "outside": 2,
+      "orbit_count": 10,
+      "kept": 4,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 41,
+      "reduced_count_states": 7
+    },
+    {
+      "k": 1,
+      "outside": 5,
+      "orbit_count": 19,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 24,
+      "reduced_count_states": 24
+    },
+    {
+      "k": 48,
+      "outside": 1,
+      "orbit_count": 4,
+      "kept": 4,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 50,
+      "reduced_count_states": 6
+    },
+    {
+      "k": 48,
+      "outside": 2,
+      "orbit_count": 25,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 4,
+      "reduced_count_states": 4
+    },
+    {
+      "k": 17,
+      "outside": 0,
+      "orbit_count": 0,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 18,
+      "reduced_count_states": 2
+    },
+    {
+      "k": 7,
+      "outside": 3,
+      "orbit_count": 19,
+      "kept": 2,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 8,
+      "reduced_count_states": 8
+    },
+    {
+      "k": 27,
+      "outside": 0,
+      "orbit_count": 0,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 28,
+      "reduced_count_states": 2
+    },
+    {
+      "k": 21,
+      "outside": 2,
+      "orbit_count": 20,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 4,
+      "reduced_count_states": 4
+    },
+    {
+      "k": 48,
+      "outside": 0,
+      "orbit_count": 0,
+      "kept": 0,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 49,
+      "reduced_count_states": 1
+    },
+    {
+      "k": 6,
+      "outside": 2,
+      "orbit_count": 5,
+      "kept": 1,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 6,
+      "reduced_count_states": 6
+    },
+    {
+      "k": 36,
+      "outside": 4,
+      "orbit_count": 10,
+      "kept": 6,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 270,
+      "reduced_count_states": 60
+    },
+    {
+      "k": 23,
+      "outside": 0,
+      "orbit_count": 5,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 2,
+      "reduced_count_states": 2
+    },
+    {
+      "k": 47,
+      "outside": 0,
+      "orbit_count": 0,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 48,
+      "reduced_count_states": 2
+    },
+    {
+      "k": 34,
+      "outside": 3,
+      "orbit_count": 9,
+      "kept": 3,
+      "grundy": 3,
+      "misere_auxiliary_mex": 3,
+      "original_count_states": 19,
+      "reduced_count_states": 19
+    },
+    {
+      "k": 17,
+      "outside": 0,
+      "orbit_count": 0,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 18,
+      "reduced_count_states": 2
+    },
+    {
+      "k": 34,
+      "outside": 2,
+      "orbit_count": 1,
+      "kept": 0,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 105,
+      "reduced_count_states": 3
+    },
+    {
+      "k": 23,
+      "outside": 1,
+      "orbit_count": 3,
+      "kept": 3,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 25,
+      "reduced_count_states": 5
+    },
+    {
+      "k": 46,
+      "outside": 0,
+      "orbit_count": 6,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 2,
+      "reduced_count_states": 2
+    },
+    {
+      "k": 36,
+      "outside": 3,
+      "orbit_count": 11,
+      "kept": 2,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 40,
+      "reduced_count_states": 6
+    },
+    {
+      "k": 18,
+      "outside": 2,
+      "orbit_count": 4,
+      "kept": 2,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 21,
+      "reduced_count_states": 5
+    },
+    {
+      "k": 37,
+      "outside": 4,
+      "orbit_count": 3,
+      "kept": 5,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 429,
+      "reduced_count_states": 77
+    },
+    {
+      "k": 30,
+      "outside": 5,
+      "orbit_count": 22,
+      "kept": 1,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 30,
+      "reduced_count_states": 30
+    },
+    {
+      "k": 41,
+      "outside": 0,
+      "orbit_count": 0,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 42,
+      "reduced_count_states": 2
+    },
+    {
+      "k": 37,
+      "outside": 0,
+      "orbit_count": 1,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 2,
+      "reduced_count_states": 2
+    },
+    {
+      "k": 31,
+      "outside": 2,
+      "orbit_count": 0,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 128,
+      "reduced_count_states": 8
+    },
+    {
+      "k": 13,
+      "outside": 4,
+      "orbit_count": 17,
+      "kept": 2,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 19,
+      "reduced_count_states": 19
+    },
+    {
+      "k": 9,
+      "outside": 0,
+      "orbit_count": 0,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 10,
+      "reduced_count_states": 2
+    },
+    {
+      "k": 8,
+      "outside": 1,
+      "orbit_count": 9,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 3,
+      "reduced_count_states": 3
+    },
+    {
+      "k": 39,
+      "outside": 0,
+      "orbit_count": 0,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 40,
+      "reduced_count_states": 2
+    },
+    {
+      "k": 13,
+      "outside": 0,
+      "orbit_count": 0,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 14,
+      "reduced_count_states": 2
+    },
+    {
+      "k": 19,
+      "outside": 2,
+      "orbit_count": 7,
+      "kept": 3,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 22,
+      "reduced_count_states": 6
+    },
+    {
+      "k": 35,
+      "outside": 1,
+      "orbit_count": 1,
+      "kept": 3,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 39,
+      "reduced_count_states": 7
+    },
+    {
+      "k": 40,
+      "outside": 0,
+      "orbit_count": 0,
+      "kept": 0,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 41,
+      "reduced_count_states": 1
+    },
+    {
+      "k": 27,
+      "outside": 2,
+      "orbit_count": 8,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 4,
+      "reduced_count_states": 4
+    },
+    {
+      "k": 11,
+      "outside": 1,
+      "orbit_count": 1,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 13,
+      "reduced_count_states": 3
+    },
+    {
+      "k": 8,
+      "outside": 0,
+      "orbit_count": 2,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 2,
+      "reduced_count_states": 2
+    },
+    {
+      "k": 16,
+      "outside": 2,
+      "orbit_count": 9,
+      "kept": 8,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 35,
+      "reduced_count_states": 19
+    },
+    {
+      "k": 14,
+      "outside": 3,
+      "orbit_count": 20,
+      "kept": 2,
+      "grundy": 3,
+      "misere_auxiliary_mex": 3,
+      "original_count_states": 11,
+      "reduced_count_states": 11
+    },
+    {
+      "k": 24,
+      "outside": 1,
+      "orbit_count": 4,
+      "kept": 4,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 26,
+      "reduced_count_states": 6
+    },
+    {
+      "k": 48,
+      "outside": 0,
+      "orbit_count": 7,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 2,
+      "reduced_count_states": 2
+    },
+    {
+      "k": 36,
+      "outside": 2,
+      "orbit_count": 1,
+      "kept": 6,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 117,
+      "reduced_count_states": 27
+    },
+    {
+      "k": 44,
+      "outside": 5,
+      "orbit_count": 24,
+      "kept": 3,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 63,
+      "reduced_count_states": 63
+    },
+    {
+      "k": 32,
+      "outside": 6,
+      "orbit_count": 18,
+      "kept": 2,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 491,
+      "reduced_count_states": 71
+    },
+    {
+      "k": 21,
+      "outside": 4,
+      "orbit_count": 21,
+      "kept": 5,
+      "grundy": 3,
+      "misere_auxiliary_mex": 3,
+      "original_count_states": 39,
+      "reduced_count_states": 23
+    },
+    {
+      "k": 5,
+      "outside": 5,
+      "orbit_count": 16,
+      "kept": 5,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 87,
+      "reduced_count_states": 87
+    },
+    {
+      "k": 23,
+      "outside": 0,
+      "orbit_count": 2,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 2,
+      "reduced_count_states": 2
+    },
+    {
+      "k": 42,
+      "outside": 5,
+      "orbit_count": 21,
+      "kept": 8,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 146,
+      "reduced_count_states": 78
+    },
+    {
+      "k": 26,
+      "outside": 0,
+      "orbit_count": 3,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 2,
+      "reduced_count_states": 2
+    },
+    {
+      "k": 30,
+      "outside": 4,
+      "orbit_count": 10,
+      "kept": 4,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 190,
+      "reduced_count_states": 34
+    },
+    {
+      "k": 32,
+      "outside": 5,
+      "orbit_count": 25,
+      "kept": 6,
+      "grundy": 3,
+      "misere_auxiliary_mex": 3,
+      "original_count_states": 192,
+      "reduced_count_states": 62
+    },
+    {
+      "k": 6,
+      "outside": 2,
+      "orbit_count": 11,
+      "kept": 6,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 10,
+      "reduced_count_states": 10
+    },
+    {
+      "k": 42,
+      "outside": 1,
+      "orbit_count": 7,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 3,
+      "reduced_count_states": 3
+    },
+    {
+      "k": 22,
+      "outside": 0,
+      "orbit_count": 0,
+      "kept": 0,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 23,
+      "reduced_count_states": 1
+    },
+    {
+      "k": 12,
+      "outside": 5,
+      "orbit_count": 0,
+      "kept": 0,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 416,
+      "reduced_count_states": 32
+    },
+    {
+      "k": 43,
+      "outside": 3,
+      "orbit_count": 9,
+      "kept": 3,
+      "grundy": 3,
+      "misere_auxiliary_mex": 3,
+      "original_count_states": 49,
+      "reduced_count_states": 9
+    },
+    {
+      "k": 2,
+      "outside": 6,
+      "orbit_count": 21,
+      "kept": 2,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 70,
+      "reduced_count_states": 70
+    },
+    {
+      "k": 33,
+      "outside": 0,
+      "orbit_count": 0,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 34,
+      "reduced_count_states": 2
+    },
+    {
+      "k": 15,
+      "outside": 6,
+      "orbit_count": 1,
+      "kept": 3,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 972,
+      "reduced_count_states": 252
+    },
+    {
+      "k": 37,
+      "outside": 5,
+      "orbit_count": 5,
+      "kept": 3,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 773,
+      "reduced_count_states": 93
+    },
+    {
+      "k": 12,
+      "outside": 6,
+      "orbit_count": 15,
+      "kept": 0,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 338,
+      "reduced_count_states": 26
+    },
+    {
+      "k": 17,
+      "outside": 4,
+      "orbit_count": 24,
+      "kept": 5,
+      "grundy": 3,
+      "misere_auxiliary_mex": 3,
+      "original_count_states": 34,
+      "reduced_count_states": 22
+    },
+    {
+      "k": 34,
+      "outside": 0,
+      "orbit_count": 2,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 2,
+      "reduced_count_states": 2
+    },
+    {
+      "k": 20,
+      "outside": 0,
+      "orbit_count": 0,
+      "kept": 0,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 21,
+      "reduced_count_states": 1
+    },
+    {
+      "k": 20,
+      "outside": 5,
+      "orbit_count": 24,
+      "kept": 8,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 165,
+      "reduced_count_states": 81
+    },
+    {
+      "k": 24,
+      "outside": 2,
+      "orbit_count": 10,
+      "kept": 4,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 27,
+      "reduced_count_states": 7
+    },
+    {
+      "k": 25,
+      "outside": 4,
+      "orbit_count": 20,
+      "kept": 2,
+      "grundy": 3,
+      "misere_auxiliary_mex": 3,
+      "original_count_states": 16,
+      "reduced_count_states": 16
+    },
+    {
+      "k": 29,
+      "outside": 2,
+      "orbit_count": 7,
+      "kept": 3,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 32,
+      "reduced_count_states": 6
+    },
+    {
+      "k": 13,
+      "outside": 2,
+      "orbit_count": 7,
+      "kept": 5,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 20,
+      "reduced_count_states": 12
+    },
+    {
+      "k": 14,
+      "outside": 3,
+      "orbit_count": 18,
+      "kept": 4,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 22,
+      "reduced_count_states": 12
+    },
+    {
+      "k": 13,
+      "outside": 0,
+      "orbit_count": 0,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 14,
+      "reduced_count_states": 2
+    },
+    {
+      "k": 9,
+      "outside": 2,
+      "orbit_count": 3,
+      "kept": 5,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 32,
+      "reduced_count_states": 20
+    },
+    {
+      "k": 26,
+      "outside": 4,
+      "orbit_count": 17,
+      "kept": 2,
+      "grundy": 3,
+      "misere_auxiliary_mex": 3,
+      "original_count_states": 60,
+      "reduced_count_states": 12
+    },
+    {
+      "k": 29,
+      "outside": 2,
+      "orbit_count": 9,
+      "kept": 7,
+      "grundy": 3,
+      "misere_auxiliary_mex": 3,
+      "original_count_states": 35,
+      "reduced_count_states": 13
+    },
+    {
+      "k": 8,
+      "outside": 6,
+      "orbit_count": 10,
+      "kept": 4,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 206,
+      "reduced_count_states": 162
+    },
+    {
+      "k": 3,
+      "outside": 6,
+      "orbit_count": 15,
+      "kept": 3,
+      "grundy": 3,
+      "misere_auxiliary_mex": 3,
+      "original_count_states": 92,
+      "reduced_count_states": 92
+    },
+    {
+      "k": 19,
+      "outside": 0,
+      "orbit_count": 3,
+      "kept": 2,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 3,
+      "reduced_count_states": 3
+    },
+    {
+      "k": 18,
+      "outside": 6,
+      "orbit_count": 16,
+      "kept": 2,
+      "grundy": 4,
+      "misere_auxiliary_mex": 4,
+      "original_count_states": 208,
+      "reduced_count_states": 48
+    },
+    {
+      "k": 40,
+      "outside": 5,
+      "orbit_count": 0,
+      "kept": 0,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 1312,
+      "reduced_count_states": 32
+    },
+    {
+      "k": 39,
+      "outside": 2,
+      "orbit_count": 7,
+      "kept": 3,
+      "grundy": 3,
+      "misere_auxiliary_mex": 3,
+      "original_count_states": 43,
+      "reduced_count_states": 7
+    },
+    {
+      "k": 36,
+      "outside": 2,
+      "orbit_count": 6,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 8,
+      "reduced_count_states": 8
+    },
+    {
+      "k": 47,
+      "outside": 3,
+      "orbit_count": 11,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 51,
+      "reduced_count_states": 5
+    },
+    {
+      "k": 30,
+      "outside": 6,
+      "orbit_count": 25,
+      "kept": 6,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 364,
+      "reduced_count_states": 172
+    },
+    {
+      "k": 9,
+      "outside": 6,
+      "orbit_count": 15,
+      "kept": 1,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 197,
+      "reduced_count_states": 53
+    },
+    {
+      "k": 2,
+      "outside": 2,
+      "orbit_count": 8,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 4,
+      "reduced_count_states": 4
+    },
+    {
+      "k": 45,
+      "outside": 2,
+      "orbit_count": 1,
+      "kept": 1,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 138,
+      "reduced_count_states": 6
+    },
+    {
+      "k": 6,
+      "outside": 4,
+      "orbit_count": 11,
+      "kept": 0,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 35,
+      "reduced_count_states": 5
+    },
+    {
+      "k": 21,
+      "outside": 1,
+      "orbit_count": 4,
+      "kept": 5,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 23,
+      "reduced_count_states": 7
+    },
+    {
+      "k": 22,
+      "outside": 4,
+      "orbit_count": 11,
+      "kept": 0,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 115,
+      "reduced_count_states": 5
+    },
+    {
+      "k": 12,
+      "outside": 1,
+      "orbit_count": 1,
+      "kept": 2,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 14,
+      "reduced_count_states": 4
+    },
+    {
+      "k": 37,
+      "outside": 5,
+      "orbit_count": 15,
+      "kept": 7,
+      "grundy": 3,
+      "misere_auxiliary_mex": 3,
+      "original_count_states": 268,
+      "reduced_count_states": 88
+    },
+    {
+      "k": 33,
+      "outside": 0,
+      "orbit_count": 0,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 34,
+      "reduced_count_states": 2
+    },
+    {
+      "k": 4,
+      "outside": 1,
+      "orbit_count": 0,
+      "kept": 0,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 10,
+      "reduced_count_states": 2
+    },
+    {
+      "k": 41,
+      "outside": 1,
+      "orbit_count": 3,
+      "kept": 3,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 43,
+      "reduced_count_states": 5
+    },
+    {
+      "k": 28,
+      "outside": 2,
+      "orbit_count": 3,
+      "kept": 1,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 6,
+      "reduced_count_states": 6
+    },
+    {
+      "k": 37,
+      "outside": 0,
+      "orbit_count": 0,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 38,
+      "reduced_count_states": 2
+    },
+    {
+      "k": 21,
+      "outside": 3,
+      "orbit_count": 9,
+      "kept": 5,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 30,
+      "reduced_count_states": 30
+    },
+    {
+      "k": 12,
+      "outside": 1,
+      "orbit_count": 8,
+      "kept": 8,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 14,
+      "reduced_count_states": 10
+    },
+    {
+      "k": 41,
+      "outside": 3,
+      "orbit_count": 19,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 5,
+      "reduced_count_states": 5
+    },
+    {
+      "k": 14,
+      "outside": 5,
+      "orbit_count": 22,
+      "kept": 4,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 129,
+      "reduced_count_states": 59
+    },
+    {
+      "k": 45,
+      "outside": 5,
+      "orbit_count": 7,
+      "kept": 7,
+      "grundy": 3,
+      "misere_auxiliary_mex": 3,
+      "original_count_states": 356,
+      "reduced_count_states": 128
+    },
+    {
+      "k": 4,
+      "outside": 2,
+      "orbit_count": 1,
+      "kept": 0,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 15,
+      "reduced_count_states": 3
+    },
+    {
+      "k": 44,
+      "outside": 5,
+      "orbit_count": 2,
+      "kept": 4,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 128,
+      "reduced_count_states": 128
+    },
+    {
+      "k": 41,
+      "outside": 1,
+      "orbit_count": 6,
+      "kept": 7,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 43,
+      "reduced_count_states": 9
+    },
+    {
+      "k": 47,
+      "outside": 4,
+      "orbit_count": 6,
+      "kept": 5,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 359,
+      "reduced_count_states": 65
+    },
+    {
+      "k": 48,
+      "outside": 4,
+      "orbit_count": 8,
+      "kept": 2,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 114,
+      "reduced_count_states": 22
+    },
+    {
+      "k": 7,
+      "outside": 6,
+      "orbit_count": 25,
+      "kept": 3,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 123,
+      "reduced_count_states": 83
+    },
+    {
+      "k": 18,
+      "outside": 3,
+      "orbit_count": 4,
+      "kept": 0,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 76,
+      "reduced_count_states": 4
+    },
+    {
+      "k": 38,
+      "outside": 6,
+      "orbit_count": 4,
+      "kept": 6,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 1978,
+      "reduced_count_states": 410
+    },
+    {
+      "k": 27,
+      "outside": 1,
+      "orbit_count": 0,
+      "kept": 1,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 56,
+      "reduced_count_states": 4
+    },
+    {
+      "k": 25,
+      "outside": 4,
+      "orbit_count": 25,
+      "kept": 9,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 82,
+      "reduced_count_states": 50
+    },
+    {
+      "k": 12,
+      "outside": 5,
+      "orbit_count": 11,
+      "kept": 6,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 150,
+      "reduced_count_states": 96
+    },
+    {
+      "k": 37,
+      "outside": 2,
+      "orbit_count": 0,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 152,
+      "reduced_count_states": 8
+    },
+    {
+      "k": 19,
+      "outside": 3,
+      "orbit_count": 11,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 23,
+      "reduced_count_states": 5
+    },
+    {
+      "k": 47,
+      "outside": 3,
+      "orbit_count": 14,
+      "kept": 1,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 6,
+      "reduced_count_states": 6
+    },
+    {
+      "k": 31,
+      "outside": 0,
+      "orbit_count": 0,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 32,
+      "reduced_count_states": 2
+    },
+    {
+      "k": 33,
+      "outside": 3,
+      "orbit_count": 13,
+      "kept": 2,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 19,
+      "reduced_count_states": 19
+    },
+    {
+      "k": 39,
+      "outside": 5,
+      "orbit_count": 16,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 440,
+      "reduced_count_states": 22
+    },
+    {
+      "k": 4,
+      "outside": 5,
+      "orbit_count": 11,
+      "kept": 4,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 96,
+      "reduced_count_states": 96
+    },
+    {
+      "k": 18,
+      "outside": 0,
+      "orbit_count": 0,
+      "kept": 0,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 19,
+      "reduced_count_states": 1
+    },
+    {
+      "k": 24,
+      "outside": 4,
+      "orbit_count": 22,
+      "kept": 1,
+      "grundy": 3,
+      "misere_auxiliary_mex": 3,
+      "original_count_states": 12,
+      "reduced_count_states": 12
+    },
+    {
+      "k": 45,
+      "outside": 0,
+      "orbit_count": 0,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 46,
+      "reduced_count_states": 2
+    },
+    {
+      "k": 11,
+      "outside": 0,
+      "orbit_count": 2,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 2,
+      "reduced_count_states": 2
+    },
+    {
+      "k": 36,
+      "outside": 1,
+      "orbit_count": 0,
+      "kept": 0,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 74,
+      "reduced_count_states": 2
+    },
+    {
+      "k": 7,
+      "outside": 5,
+      "orbit_count": 11,
+      "kept": 5,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 131,
+      "reduced_count_states": 101
+    },
+    {
+      "k": 23,
+      "outside": 3,
+      "orbit_count": 11,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 27,
+      "reduced_count_states": 5
+    },
+    {
+      "k": 38,
+      "outside": 1,
+      "orbit_count": 5,
+      "kept": 2,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 5,
+      "reduced_count_states": 5
+    },
+    {
+      "k": 34,
+      "outside": 2,
+      "orbit_count": 2,
+      "kept": 2,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 105,
+      "reduced_count_states": 9
+    },
+    {
+      "k": 37,
+      "outside": 1,
+      "orbit_count": 6,
+      "kept": 2,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 6,
+      "reduced_count_states": 6
+    },
+    {
+      "k": 19,
+      "outside": 6,
+      "orbit_count": 1,
+      "kept": 1,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 1120,
+      "reduced_count_states": 112
+    },
+    {
+      "k": 26,
+      "outside": 3,
+      "orbit_count": 6,
+      "kept": 4,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 67,
+      "reduced_count_states": 23
+    },
+    {
+      "k": 22,
+      "outside": 5,
+      "orbit_count": 1,
+      "kept": 2,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 694,
+      "reduced_count_states": 94
+    },
+    {
+      "k": 26,
+      "outside": 2,
+      "orbit_count": 12,
+      "kept": 2,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 7,
+      "reduced_count_states": 7
+    },
+    {
+      "k": 34,
+      "outside": 2,
+      "orbit_count": 4,
+      "kept": 2,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 37,
+      "reduced_count_states": 5
+    },
+    {
+      "k": 8,
+      "outside": 1,
+      "orbit_count": 1,
+      "kept": 2,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 10,
+      "reduced_count_states": 4
+    },
+    {
+      "k": 34,
+      "outside": 6,
+      "orbit_count": 9,
+      "kept": 4,
+      "grundy": 3,
+      "misere_auxiliary_mex": 3,
+      "original_count_states": 895,
+      "reduced_count_states": 175
+    },
+    {
+      "k": 38,
+      "outside": 6,
+      "orbit_count": 10,
+      "kept": 4,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 807,
+      "reduced_count_states": 161
+    },
+    {
+      "k": 7,
+      "outside": 6,
+      "orbit_count": 13,
+      "kept": 7,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 227,
+      "reduced_count_states": 227
+    },
+    {
+      "k": 26,
+      "outside": 6,
+      "orbit_count": 10,
+      "kept": 2,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 654,
+      "reduced_count_states": 102
+    },
+    {
+      "k": 44,
+      "outside": 5,
+      "orbit_count": 19,
+      "kept": 0,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 360,
+      "reduced_count_states": 8
+    },
+    {
+      "k": 4,
+      "outside": 2,
+      "orbit_count": 9,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 4,
+      "reduced_count_states": 4
+    },
+    {
+      "k": 14,
+      "outside": 1,
+      "orbit_count": 1,
+      "kept": 2,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 16,
+      "reduced_count_states": 4
+    },
+    {
+      "k": 2,
+      "outside": 1,
+      "orbit_count": 3,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 3,
+      "reduced_count_states": 3
+    },
+    {
+      "k": 48,
+      "outside": 2,
+      "orbit_count": 21,
+      "kept": 8,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 51,
+      "reduced_count_states": 11
+    },
+    {
+      "k": 39,
+      "outside": 6,
+      "orbit_count": 6,
+      "kept": 5,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 990,
+      "reduced_count_states": 310
+    },
+    {
+      "k": 23,
+      "outside": 6,
+      "orbit_count": 5,
+      "kept": 5,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 684,
+      "reduced_count_states": 252
+    },
+    {
+      "k": 18,
+      "outside": 3,
+      "orbit_count": 9,
+      "kept": 1,
+      "grundy": 3,
+      "misere_auxiliary_mex": 3,
+      "original_count_states": 11,
+      "reduced_count_states": 11
+    },
+    {
+      "k": 26,
+      "outside": 6,
+      "orbit_count": 21,
+      "kept": 4,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 736,
+      "reduced_count_states": 164
+    },
+    {
+      "k": 22,
+      "outside": 2,
+      "orbit_count": 7,
+      "kept": 1,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 6,
+      "reduced_count_states": 6
+    },
+    {
+      "k": 33,
+      "outside": 1,
+      "orbit_count": 3,
+      "kept": 7,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 36,
+      "reduced_count_states": 10
+    },
+    {
+      "k": 33,
+      "outside": 6,
+      "orbit_count": 6,
+      "kept": 3,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 1312,
+      "reduced_count_states": 202
+    },
+    {
+      "k": 46,
+      "outside": 6,
+      "orbit_count": 23,
+      "kept": 6,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 853,
+      "reduced_count_states": 173
+    },
+    {
+      "k": 20,
+      "outside": 5,
+      "orbit_count": 11,
+      "kept": 4,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 148,
+      "reduced_count_states": 52
+    },
+    {
+      "k": 47,
+      "outside": 1,
+      "orbit_count": 0,
+      "kept": 1,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 96,
+      "reduced_count_states": 4
+    },
+    {
+      "k": 35,
+      "outside": 4,
+      "orbit_count": 1,
+      "kept": 1,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 296,
+      "reduced_count_states": 24
+    },
+    {
+      "k": 7,
+      "outside": 1,
+      "orbit_count": 7,
+      "kept": 7,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 9,
+      "reduced_count_states": 9
+    },
+    {
+      "k": 34,
+      "outside": 0,
+      "orbit_count": 1,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 2,
+      "reduced_count_states": 2
+    },
+    {
+      "k": 4,
+      "outside": 1,
+      "orbit_count": 4,
+      "kept": 4,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 6,
+      "reduced_count_states": 6
+    },
+    {
+      "k": 35,
+      "outside": 1,
+      "orbit_count": 6,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 3,
+      "reduced_count_states": 3
+    },
+    {
+      "k": 5,
+      "outside": 2,
+      "orbit_count": 10,
+      "kept": 5,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 10,
+      "reduced_count_states": 10
+    },
+    {
+      "k": 8,
+      "outside": 3,
+      "orbit_count": 12,
+      "kept": 1,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 9,
+      "reduced_count_states": 9
+    },
+    {
+      "k": 14,
+      "outside": 3,
+      "orbit_count": 17,
+      "kept": 4,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 20,
+      "reduced_count_states": 10
+    },
+    {
+      "k": 29,
+      "outside": 1,
+      "orbit_count": 5,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 3,
+      "reduced_count_states": 3
+    },
+    {
+      "k": 25,
+      "outside": 4,
+      "orbit_count": 3,
+      "kept": 7,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 216,
+      "reduced_count_states": 72
+    },
+    {
+      "k": 45,
+      "outside": 4,
+      "orbit_count": 2,
+      "kept": 3,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 435,
+      "reduced_count_states": 57
+    },
+    {
+      "k": 27,
+      "outside": 6,
+      "orbit_count": 22,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 532,
+      "reduced_count_states": 38
+    },
+    {
+      "k": 6,
+      "outside": 2,
+      "orbit_count": 4,
+      "kept": 2,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 9,
+      "reduced_count_states": 5
+    },
+    {
+      "k": 4,
+      "outside": 1,
+      "orbit_count": 4,
+      "kept": 4,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 6,
+      "reduced_count_states": 6
+    },
+    {
+      "k": 22,
+      "outside": 0,
+      "orbit_count": 0,
+      "kept": 0,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 23,
+      "reduced_count_states": 1
+    },
+    {
+      "k": 45,
+      "outside": 6,
+      "orbit_count": 19,
+      "kept": 3,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 544,
+      "reduced_count_states": 82
+    },
+    {
+      "k": 3,
+      "outside": 5,
+      "orbit_count": 14,
+      "kept": 3,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 42,
+      "reduced_count_states": 42
+    },
+    {
+      "k": 17,
+      "outside": 6,
+      "orbit_count": 25,
+      "kept": 5,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 324,
+      "reduced_count_states": 132
+    },
+    {
+      "k": 41,
+      "outside": 2,
+      "orbit_count": 20,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 4,
+      "reduced_count_states": 4
+    },
+    {
+      "k": 35,
+      "outside": 3,
+      "orbit_count": 20,
+      "kept": 5,
+      "grundy": 3,
+      "misere_auxiliary_mex": 3,
+      "original_count_states": 45,
+      "reduced_count_states": 15
+    },
+    {
+      "k": 48,
+      "outside": 2,
+      "orbit_count": 16,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 4,
+      "reduced_count_states": 4
+    },
+    {
+      "k": 16,
+      "outside": 1,
+      "orbit_count": 3,
+      "kept": 4,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 18,
+      "reduced_count_states": 6
+    },
+    {
+      "k": 6,
+      "outside": 4,
+      "orbit_count": 21,
+      "kept": 2,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 23,
+      "reduced_count_states": 23
+    },
+    {
+      "k": 17,
+      "outside": 3,
+      "orbit_count": 15,
+      "kept": 5,
+      "grundy": 3,
+      "misere_auxiliary_mex": 3,
+      "original_count_states": 29,
+      "reduced_count_states": 17
+    },
+    {
+      "k": 4,
+      "outside": 0,
+      "orbit_count": 0,
+      "kept": 0,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 5,
+      "reduced_count_states": 1
+    },
+    {
+      "k": 29,
+      "outside": 4,
+      "orbit_count": 15,
+      "kept": 9,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 84,
+      "reduced_count_states": 44
+    },
+    {
+      "k": 44,
+      "outside": 2,
+      "orbit_count": 17,
+      "kept": 1,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 5,
+      "reduced_count_states": 5
+    },
+    {
+      "k": 8,
+      "outside": 6,
+      "orbit_count": 22,
+      "kept": 2,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 109,
+      "reduced_count_states": 61
+    },
+    {
+      "k": 1,
+      "outside": 2,
+      "orbit_count": 1,
+      "kept": 1,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 6,
+      "reduced_count_states": 6
+    },
+    {
+      "k": 29,
+      "outside": 1,
+      "orbit_count": 6,
+      "kept": 7,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 31,
+      "reduced_count_states": 9
+    },
+    {
+      "k": 28,
+      "outside": 2,
+      "orbit_count": 1,
+      "kept": 0,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 87,
+      "reduced_count_states": 3
+    },
+    {
+      "k": 37,
+      "outside": 5,
+      "orbit_count": 5,
+      "kept": 1,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 874,
+      "reduced_count_states": 46
+    },
+    {
+      "k": 41,
+      "outside": 0,
+      "orbit_count": 3,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 2,
+      "reduced_count_states": 2
+    },
+    {
+      "k": 20,
+      "outside": 0,
+      "orbit_count": 0,
+      "kept": 0,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 21,
+      "reduced_count_states": 1
+    },
+    {
+      "k": 4,
+      "outside": 5,
+      "orbit_count": 15,
+      "kept": 2,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 39,
+      "reduced_count_states": 33
+    },
+    {
+      "k": 39,
+      "outside": 4,
+      "orbit_count": 5,
+      "kept": 7,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 267,
+      "reduced_count_states": 75
+    },
+    {
+      "k": 15,
+      "outside": 3,
+      "orbit_count": 20,
+      "kept": 3,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 10,
+      "reduced_count_states": 10
+    },
+    {
+      "k": 29,
+      "outside": 1,
+      "orbit_count": 2,
+      "kept": 3,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 31,
+      "reduced_count_states": 5
+    },
+    {
+      "k": 43,
+      "outside": 2,
+      "orbit_count": 4,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 46,
+      "reduced_count_states": 4
+    },
+    {
+      "k": 28,
+      "outside": 4,
+      "orbit_count": 4,
+      "kept": 4,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 247,
+      "reduced_count_states": 55
+    },
+    {
+      "k": 17,
+      "outside": 0,
+      "orbit_count": 1,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 2,
+      "reduced_count_states": 2
+    },
+    {
+      "k": 3,
+      "outside": 5,
+      "orbit_count": 14,
+      "kept": 3,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 69,
+      "reduced_count_states": 69
+    },
+    {
+      "k": 22,
+      "outside": 5,
+      "orbit_count": 10,
+      "kept": 8,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 185,
+      "reduced_count_states": 143
+    },
+    {
+      "k": 47,
+      "outside": 2,
+      "orbit_count": 7,
+      "kept": 3,
+      "grundy": 3,
+      "misere_auxiliary_mex": 3,
+      "original_count_states": 51,
+      "reduced_count_states": 7
+    },
+    {
+      "k": 9,
+      "outside": 0,
+      "orbit_count": 5,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 2,
+      "reduced_count_states": 2
+    },
+    {
+      "k": 14,
+      "outside": 1,
+      "orbit_count": 8,
+      "kept": 8,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 16,
+      "reduced_count_states": 10
+    },
+    {
+      "k": 41,
+      "outside": 6,
+      "orbit_count": 11,
+      "kept": 3,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 490,
+      "reduced_count_states": 110
+    },
+    {
+      "k": 4,
+      "outside": 0,
+      "orbit_count": 0,
+      "kept": 0,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 5,
+      "reduced_count_states": 1
+    },
+    {
+      "k": 34,
+      "outside": 4,
+      "orbit_count": 11,
+      "kept": 0,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 175,
+      "reduced_count_states": 5
+    },
+    {
+      "k": 41,
+      "outside": 4,
+      "orbit_count": 4,
+      "kept": 1,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 462,
+      "reduced_count_states": 22
+    },
+    {
+      "k": 19,
+      "outside": 6,
+      "orbit_count": 9,
+      "kept": 9,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 761,
+      "reduced_count_states": 481
+    },
+    {
+      "k": 8,
+      "outside": 5,
+      "orbit_count": 22,
+      "kept": 0,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 63,
+      "reduced_count_states": 7
+    },
+    {
+      "k": 2,
+      "outside": 5,
+      "orbit_count": 16,
+      "kept": 2,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 25,
+      "reduced_count_states": 25
+    },
+    {
+      "k": 45,
+      "outside": 0,
+      "orbit_count": 0,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 46,
+      "reduced_count_states": 2
+    },
+    {
+      "k": 7,
+      "outside": 6,
+      "orbit_count": 22,
+      "kept": 1,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 190,
+      "reduced_count_states": 52
+    },
+    {
+      "k": 41,
+      "outside": 2,
+      "orbit_count": 1,
+      "kept": 1,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 126,
+      "reduced_count_states": 6
+    },
+    {
+      "k": 33,
+      "outside": 3,
+      "orbit_count": 5,
+      "kept": 7,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 80,
+      "reduced_count_states": 28
+    },
+    {
+      "k": 1,
+      "outside": 0,
+      "orbit_count": 0,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 2,
+      "reduced_count_states": 2
+    },
+    {
+      "k": 21,
+      "outside": 1,
+      "orbit_count": 13,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 3,
+      "reduced_count_states": 3
+    },
+    {
+      "k": 15,
+      "outside": 3,
+      "orbit_count": 0,
+      "kept": 1,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 128,
+      "reduced_count_states": 16
+    },
+    {
+      "k": 31,
+      "outside": 4,
+      "orbit_count": 8,
+      "kept": 2,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 29,
+      "reduced_count_states": 29
+    },
+    {
+      "k": 12,
+      "outside": 6,
+      "orbit_count": 6,
+      "kept": 2,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 678,
+      "reduced_count_states": 158
+    },
+    {
+      "k": 7,
+      "outside": 2,
+      "orbit_count": 4,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 10,
+      "reduced_count_states": 4
+    },
+    {
+      "k": 21,
+      "outside": 0,
+      "orbit_count": 0,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 22,
+      "reduced_count_states": 2
+    },
+    {
+      "k": 4,
+      "outside": 6,
+      "orbit_count": 1,
+      "kept": 4,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 288,
+      "reduced_count_states": 288
+    },
+    {
+      "k": 7,
+      "outside": 5,
+      "orbit_count": 7,
+      "kept": 1,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 96,
+      "reduced_count_states": 24
+    },
+    {
+      "k": 12,
+      "outside": 5,
+      "orbit_count": 21,
+      "kept": 6,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 99,
+      "reduced_count_states": 63
+    },
+    {
+      "k": 34,
+      "outside": 0,
+      "orbit_count": 0,
+      "kept": 0,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 35,
+      "reduced_count_states": 1
+    },
+    {
+      "k": 40,
+      "outside": 2,
+      "orbit_count": 0,
+      "kept": 0,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 164,
+      "reduced_count_states": 4
+    },
+    {
+      "k": 41,
+      "outside": 0,
+      "orbit_count": 0,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 42,
+      "reduced_count_states": 2
+    },
+    {
+      "k": 46,
+      "outside": 2,
+      "orbit_count": 11,
+      "kept": 2,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 7,
+      "reduced_count_states": 7
+    },
+    {
+      "k": 45,
+      "outside": 4,
+      "orbit_count": 13,
+      "kept": 5,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 125,
+      "reduced_count_states": 45
+    },
+    {
+      "k": 46,
+      "outside": 6,
+      "orbit_count": 16,
+      "kept": 2,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 413,
+      "reduced_count_states": 61
+    },
+    {
+      "k": 43,
+      "outside": 0,
+      "orbit_count": 0,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 44,
+      "reduced_count_states": 2
+    },
+    {
+      "k": 1,
+      "outside": 6,
+      "orbit_count": 13,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 4,
+      "original_count_states": 67,
+      "reduced_count_states": 67
+    },
+    {
+      "k": 22,
+      "outside": 3,
+      "orbit_count": 17,
+      "kept": 6,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 52,
+      "reduced_count_states": 20
+    },
+    {
+      "k": 28,
+      "outside": 3,
+      "orbit_count": 19,
+      "kept": 3,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 12,
+      "reduced_count_states": 12
+    },
+    {
+      "k": 48,
+      "outside": 0,
+      "orbit_count": 0,
+      "kept": 0,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 49,
+      "reduced_count_states": 1
+    },
+    {
+      "k": 19,
+      "outside": 0,
+      "orbit_count": 7,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 2,
+      "reduced_count_states": 2
+    },
+    {
+      "k": 48,
+      "outside": 5,
+      "orbit_count": 8,
+      "kept": 6,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 652,
+      "reduced_count_states": 148
+    },
+    {
+      "k": 36,
+      "outside": 0,
+      "orbit_count": 7,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 2,
+      "reduced_count_states": 2
+    },
+    {
+      "k": 32,
+      "outside": 6,
+      "orbit_count": 8,
+      "kept": 0,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 1452,
+      "reduced_count_states": 44
+    },
+    {
+      "k": 2,
+      "outside": 2,
+      "orbit_count": 8,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 4,
+      "reduced_count_states": 4
+    },
+    {
+      "k": 16,
+      "outside": 6,
+      "orbit_count": 16,
+      "kept": 6,
+      "grundy": 4,
+      "misere_auxiliary_mex": 4,
+      "original_count_states": 486,
+      "reduced_count_states": 216
+    },
+    {
+      "k": 28,
+      "outside": 2,
+      "orbit_count": 22,
+      "kept": 1,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 6,
+      "reduced_count_states": 6
+    },
+    {
+      "k": 14,
+      "outside": 3,
+      "orbit_count": 7,
+      "kept": 4,
+      "grundy": 3,
+      "misere_auxiliary_mex": 3,
+      "original_count_states": 36,
+      "reduced_count_states": 16
+    },
+    {
+      "k": 10,
+      "outside": 0,
+      "orbit_count": 4,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 2,
+      "reduced_count_states": 2
+    },
+    {
+      "k": 12,
+      "outside": 1,
+      "orbit_count": 6,
+      "kept": 6,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 14,
+      "reduced_count_states": 8
+    },
+    {
+      "k": 2,
+      "outside": 1,
+      "orbit_count": 3,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 3,
+      "reduced_count_states": 3
+    },
+    {
+      "k": 29,
+      "outside": 1,
+      "orbit_count": 0,
+      "kept": 1,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 60,
+      "reduced_count_states": 4
+    },
+    {
+      "k": 23,
+      "outside": 6,
+      "orbit_count": 13,
+      "kept": 3,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 329,
+      "reduced_count_states": 89
+    },
+    {
+      "k": 33,
+      "outside": 5,
+      "orbit_count": 25,
+      "kept": 7,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 229,
+      "reduced_count_states": 99
+    },
+    {
+      "k": 18,
+      "outside": 0,
+      "orbit_count": 6,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 2,
+      "reduced_count_states": 2
+    },
+    {
+      "k": 45,
+      "outside": 3,
+      "orbit_count": 3,
+      "kept": 3,
+      "grundy": 3,
+      "misere_auxiliary_mex": 3,
+      "original_count_states": 230,
+      "reduced_count_states": 20
+    },
+    {
+      "k": 32,
+      "outside": 4,
+      "orbit_count": 6,
+      "kept": 4,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 56,
+      "reduced_count_states": 56
+    },
+    {
+      "k": 16,
+      "outside": 6,
+      "orbit_count": 15,
+      "kept": 2,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 321,
+      "reduced_count_states": 83
+    },
+    {
+      "k": 10,
+      "outside": 0,
+      "orbit_count": 7,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 2,
+      "reduced_count_states": 2
+    },
+    {
+      "k": 15,
+      "outside": 6,
+      "orbit_count": 8,
+      "kept": 7,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 588,
+      "reduced_count_states": 332
+    },
+    {
+      "k": 6,
+      "outside": 4,
+      "orbit_count": 3,
+      "kept": 2,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 50,
+      "reduced_count_states": 26
+    },
+    {
+      "k": 44,
+      "outside": 5,
+      "orbit_count": 17,
+      "kept": 6,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 237,
+      "reduced_count_states": 85
+    },
+    {
+      "k": 25,
+      "outside": 5,
+      "orbit_count": 15,
+      "kept": 3,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 107,
+      "reduced_count_states": 41
+    },
+    {
+      "k": 35,
+      "outside": 0,
+      "orbit_count": 0,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 36,
+      "reduced_count_states": 2
+    },
+    {
+      "k": 32,
+      "outside": 1,
+      "orbit_count": 11,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 3,
+      "reduced_count_states": 3
+    },
+    {
+      "k": 36,
+      "outside": 1,
+      "orbit_count": 4,
+      "kept": 4,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 38,
+      "reduced_count_states": 6
+    },
+    {
+      "k": 40,
+      "outside": 6,
+      "orbit_count": 15,
+      "kept": 0,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 1066,
+      "reduced_count_states": 26
+    },
+    {
+      "k": 7,
+      "outside": 0,
+      "orbit_count": 0,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 8,
+      "reduced_count_states": 2
+    },
+    {
+      "k": 45,
+      "outside": 4,
+      "orbit_count": 1,
+      "kept": 1,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 552,
+      "reduced_count_states": 24
+    },
+    {
+      "k": 36,
+      "outside": 2,
+      "orbit_count": 4,
+      "kept": 2,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 39,
+      "reduced_count_states": 5
+    },
+    {
+      "k": 6,
+      "outside": 5,
+      "orbit_count": 14,
+      "kept": 2,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 72,
+      "reduced_count_states": 36
+    },
+    {
+      "k": 27,
+      "outside": 2,
+      "orbit_count": 23,
+      "kept": 9,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 31,
+      "reduced_count_states": 13
+    },
+    {
+      "k": 3,
+      "outside": 2,
+      "orbit_count": 12,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 4,
+      "reduced_count_states": 4
+    },
+    {
+      "k": 16,
+      "outside": 4,
+      "orbit_count": 11,
+      "kept": 0,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 85,
+      "reduced_count_states": 5
+    },
+    {
+      "k": 4,
+      "outside": 1,
+      "orbit_count": 7,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 3,
+      "reduced_count_states": 3
+    },
+    {
+      "k": 28,
+      "outside": 5,
+      "orbit_count": 12,
+      "kept": 8,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 228,
+      "reduced_count_states": 108
+    },
+    {
+      "k": 31,
+      "outside": 1,
+      "orbit_count": 3,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 3,
+      "reduced_count_states": 3
+    },
+    {
+      "k": 28,
+      "outside": 4,
+      "orbit_count": 21,
+      "kept": 4,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 69,
+      "reduced_count_states": 21
+    },
+    {
+      "k": 13,
+      "outside": 6,
+      "orbit_count": 1,
+      "kept": 7,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 864,
+      "reduced_count_states": 504
+    },
+    {
+      "k": 5,
+      "outside": 4,
+      "orbit_count": 3,
+      "kept": 5,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 36,
+      "reduced_count_states": 36
+    },
+    {
+      "k": 46,
+      "outside": 4,
+      "orbit_count": 21,
+      "kept": 2,
+      "grundy": 3,
+      "misere_auxiliary_mex": 3,
+      "original_count_states": 150,
+      "reduced_count_states": 18
+    },
+    {
+      "k": 42,
+      "outside": 4,
+      "orbit_count": 0,
+      "kept": 0,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 688,
+      "reduced_count_states": 16
+    },
+    {
+      "k": 1,
+      "outside": 5,
+      "orbit_count": 10,
+      "kept": 1,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 32,
+      "reduced_count_states": 32
+    },
+    {
+      "k": 9,
+      "outside": 4,
+      "orbit_count": 23,
+      "kept": 1,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 15,
+      "reduced_count_states": 7
+    },
+    {
+      "k": 22,
+      "outside": 1,
+      "orbit_count": 1,
+      "kept": 2,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 24,
+      "reduced_count_states": 4
+    },
+    {
+      "k": 12,
+      "outside": 6,
+      "orbit_count": 19,
+      "kept": 4,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 279,
+      "reduced_count_states": 111
+    },
+    {
+      "k": 21,
+      "outside": 0,
+      "orbit_count": 4,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 2,
+      "reduced_count_states": 2
+    },
+    {
+      "k": 20,
+      "outside": 6,
+      "orbit_count": 17,
+      "kept": 4,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 422,
+      "reduced_count_states": 134
+    },
+    {
+      "k": 25,
+      "outside": 4,
+      "orbit_count": 11,
+      "kept": 3,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 164,
+      "reduced_count_states": 32
+    },
+    {
+      "k": 31,
+      "outside": 4,
+      "orbit_count": 16,
+      "kept": 3,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 134,
+      "reduced_count_states": 22
+    },
+    {
+      "k": 43,
+      "outside": 1,
+      "orbit_count": 3,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 3,
+      "reduced_count_states": 3
+    },
+    {
+      "k": 6,
+      "outside": 4,
+      "orbit_count": 5,
+      "kept": 2,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 44,
+      "reduced_count_states": 32
+    },
+    {
+      "k": 47,
+      "outside": 3,
+      "orbit_count": 20,
+      "kept": 2,
+      "grundy": 3,
+      "misere_auxiliary_mex": 3,
+      "original_count_states": 13,
+      "reduced_count_states": 13
+    },
+    {
+      "k": 28,
+      "outside": 2,
+      "orbit_count": 1,
+      "kept": 0,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 87,
+      "reduced_count_states": 3
+    },
+    {
+      "k": 42,
+      "outside": 5,
+      "orbit_count": 7,
+      "kept": 4,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 407,
+      "reduced_count_states": 103
+    },
+    {
+      "k": 42,
+      "outside": 2,
+      "orbit_count": 19,
+      "kept": 6,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 45,
+      "reduced_count_states": 9
+    },
+    {
+      "k": 17,
+      "outside": 6,
+      "orbit_count": 1,
+      "kept": 1,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 880,
+      "reduced_count_states": 112
+    },
+    {
+      "k": 6,
+      "outside": 1,
+      "orbit_count": 5,
+      "kept": 6,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 8,
+      "reduced_count_states": 8
+    },
+    {
+      "k": 22,
+      "outside": 5,
+      "orbit_count": 12,
+      "kept": 2,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 285,
+      "reduced_count_states": 45
+    },
+    {
+      "k": 13,
+      "outside": 4,
+      "orbit_count": 24,
+      "kept": 7,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 39,
+      "reduced_count_states": 33
+    },
+    {
+      "k": 30,
+      "outside": 6,
+      "orbit_count": 20,
+      "kept": 2,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 210,
+      "reduced_count_states": 42
+    },
+    {
+      "k": 35,
+      "outside": 3,
+      "orbit_count": 9,
+      "kept": 1,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 74,
+      "reduced_count_states": 6
+    },
+    {
+      "k": 16,
+      "outside": 2,
+      "orbit_count": 14,
+      "kept": 3,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 8,
+      "reduced_count_states": 8
+    },
+    {
+      "k": 11,
+      "outside": 1,
+      "orbit_count": 2,
+      "kept": 3,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 13,
+      "reduced_count_states": 5
+    },
+    {
+      "k": 9,
+      "outside": 0,
+      "orbit_count": 3,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 2,
+      "reduced_count_states": 2
+    },
+    {
+      "k": 6,
+      "outside": 4,
+      "orbit_count": 23,
+      "kept": 6,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 33,
+      "reduced_count_states": 33
+    },
+    {
+      "k": 43,
+      "outside": 6,
+      "orbit_count": 24,
+      "kept": 3,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 757,
+      "reduced_count_states": 77
+    },
+    {
+      "k": 30,
+      "outside": 2,
+      "orbit_count": 20,
+      "kept": 8,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 34,
+      "reduced_count_states": 12
+    },
+    {
+      "k": 15,
+      "outside": 6,
+      "orbit_count": 20,
+      "kept": 5,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 303,
+      "reduced_count_states": 133
+    },
+    {
+      "k": 10,
+      "outside": 6,
+      "orbit_count": 3,
+      "kept": 4,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 566,
+      "reduced_count_states": 290
+    },
+    {
+      "k": 31,
+      "outside": 3,
+      "orbit_count": 4,
+      "kept": 3,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 40,
+      "reduced_count_states": 12
+    },
+    {
+      "k": 48,
+      "outside": 2,
+      "orbit_count": 16,
+      "kept": 6,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 51,
+      "reduced_count_states": 9
+    },
+    {
+      "k": 20,
+      "outside": 0,
+      "orbit_count": 6,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 2,
+      "reduced_count_states": 2
+    },
+    {
+      "k": 4,
+      "outside": 6,
+      "orbit_count": 6,
+      "kept": 2,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 263,
+      "reduced_count_states": 161
+    },
+    {
+      "k": 2,
+      "outside": 2,
+      "orbit_count": 8,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 4,
+      "reduced_count_states": 4
+    },
+    {
+      "k": 14,
+      "outside": 0,
+      "orbit_count": 0,
+      "kept": 0,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 15,
+      "reduced_count_states": 1
+    },
+    {
+      "k": 4,
+      "outside": 4,
+      "orbit_count": 15,
+      "kept": 4,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 40,
+      "reduced_count_states": 40
+    },
+    {
+      "k": 15,
+      "outside": 1,
+      "orbit_count": 8,
+      "kept": 9,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 17,
+      "reduced_count_states": 11
+    },
+    {
+      "k": 8,
+      "outside": 6,
+      "orbit_count": 22,
+      "kept": 6,
+      "grundy": 4,
+      "misere_auxiliary_mex": 4,
+      "original_count_states": 159,
+      "reduced_count_states": 139
+    },
+    {
+      "k": 37,
+      "outside": 1,
+      "orbit_count": 5,
+      "kept": 5,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 39,
+      "reduced_count_states": 7
+    },
+    {
+      "k": 8,
+      "outside": 2,
+      "orbit_count": 8,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 4,
+      "reduced_count_states": 4
+    },
+    {
+      "k": 21,
+      "outside": 3,
+      "orbit_count": 18,
+      "kept": 3,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 25,
+      "reduced_count_states": 7
+    },
+    {
+      "k": 47,
+      "outside": 0,
+      "orbit_count": 2,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 2,
+      "reduced_count_states": 2
+    },
+    {
+      "k": 31,
+      "outside": 2,
+      "orbit_count": 13,
+      "kept": 5,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 34,
+      "reduced_count_states": 8
+    },
+    {
+      "k": 46,
+      "outside": 4,
+      "orbit_count": 21,
+      "kept": 3,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 23,
+      "reduced_count_states": 23
+    },
+    {
+      "k": 48,
+      "outside": 0,
+      "orbit_count": 0,
+      "kept": 0,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 49,
+      "reduced_count_states": 1
+    },
+    {
+      "k": 38,
+      "outside": 0,
+      "orbit_count": 3,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 2,
+      "reduced_count_states": 2
+    },
+    {
+      "k": 24,
+      "outside": 4,
+      "orbit_count": 0,
+      "kept": 0,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 400,
+      "reduced_count_states": 16
+    },
+    {
+      "k": 16,
+      "outside": 0,
+      "orbit_count": 3,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 2,
+      "reduced_count_states": 2
+    },
+    {
+      "k": 18,
+      "outside": 6,
+      "orbit_count": 19,
+      "kept": 4,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 154,
+      "reduced_count_states": 70
+    },
+    {
+      "k": 17,
+      "outside": 3,
+      "orbit_count": 2,
+      "kept": 1,
+      "grundy": 3,
+      "misere_auxiliary_mex": 3,
+      "original_count_states": 91,
+      "reduced_count_states": 11
+    },
+    {
+      "k": 18,
+      "outside": 3,
+      "orbit_count": 20,
+      "kept": 4,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 26,
+      "reduced_count_states": 12
+    },
+    {
+      "k": 33,
+      "outside": 5,
+      "orbit_count": 2,
+      "kept": 1,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 612,
+      "reduced_count_states": 36
+    },
+    {
+      "k": 7,
+      "outside": 5,
+      "orbit_count": 3,
+      "kept": 1,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 132,
+      "reduced_count_states": 36
+    },
+    {
+      "k": 4,
+      "outside": 5,
+      "orbit_count": 25,
+      "kept": 4,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 44,
+      "reduced_count_states": 44
+    },
+    {
+      "k": 43,
+      "outside": 4,
+      "orbit_count": 14,
+      "kept": 5,
+      "grundy": 4,
+      "misere_auxiliary_mex": 4,
+      "original_count_states": 107,
+      "reduced_count_states": 31
+    },
+    {
+      "k": 18,
+      "outside": 5,
+      "orbit_count": 8,
+      "kept": 4,
+      "grundy": 5,
+      "misere_auxiliary_mex": 5,
+      "original_count_states": 171,
+      "reduced_count_states": 59
+    },
+    {
+      "k": 26,
+      "outside": 0,
+      "orbit_count": 0,
+      "kept": 0,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 27,
+      "reduced_count_states": 1
+    },
+    {
+      "k": 23,
+      "outside": 2,
+      "orbit_count": 13,
+      "kept": 1,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 5,
+      "reduced_count_states": 5
+    },
+    {
+      "k": 10,
+      "outside": 1,
+      "orbit_count": 7,
+      "kept": 8,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 12,
+      "reduced_count_states": 10
+    },
+    {
+      "k": 48,
+      "outside": 5,
+      "orbit_count": 4,
+      "kept": 6,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 633,
+      "reduced_count_states": 129
+    },
+    {
+      "k": 43,
+      "outside": 6,
+      "orbit_count": 7,
+      "kept": 5,
+      "grundy": 3,
+      "misere_auxiliary_mex": 3,
+      "original_count_states": 1492,
+      "reduced_count_states": 238
+    },
+    {
+      "k": 20,
+      "outside": 5,
+      "orbit_count": 7,
+      "kept": 4,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 204,
+      "reduced_count_states": 76
+    },
+    {
+      "k": 47,
+      "outside": 3,
+      "orbit_count": 2,
+      "kept": 7,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 298,
+      "reduced_count_states": 58
+    },
+    {
+      "k": 1,
+      "outside": 6,
+      "orbit_count": 24,
+      "kept": 1,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 37,
+      "reduced_count_states": 37
+    },
+    {
+      "k": 12,
+      "outside": 5,
+      "orbit_count": 18,
+      "kept": 4,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 112,
+      "reduced_count_states": 48
+    },
+    {
+      "k": 17,
+      "outside": 3,
+      "orbit_count": 11,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 21,
+      "reduced_count_states": 5
+    },
+    {
+      "k": 1,
+      "outside": 4,
+      "orbit_count": 1,
+      "kept": 1,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 28,
+      "reduced_count_states": 28
+    },
+    {
+      "k": 36,
+      "outside": 0,
+      "orbit_count": 0,
+      "kept": 0,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 37,
+      "reduced_count_states": 1
+    },
+    {
+      "k": 11,
+      "outside": 2,
+      "orbit_count": 3,
+      "kept": 7,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 36,
+      "reduced_count_states": 24
+    },
+    {
+      "k": 17,
+      "outside": 2,
+      "orbit_count": 22,
+      "kept": 1,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 5,
+      "reduced_count_states": 5
+    },
+    {
+      "k": 31,
+      "outside": 0,
+      "orbit_count": 0,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 32,
+      "reduced_count_states": 2
+    },
+    {
+      "k": 19,
+      "outside": 4,
+      "orbit_count": 8,
+      "kept": 9,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 131,
+      "reduced_count_states": 81
+    },
+    {
+      "k": 25,
+      "outside": 5,
+      "orbit_count": 24,
+      "kept": 1,
+      "grundy": 3,
+      "misere_auxiliary_mex": 3,
+      "original_count_states": 208,
+      "reduced_count_states": 16
+    },
+    {
+      "k": 10,
+      "outside": 4,
+      "orbit_count": 21,
+      "kept": 5,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 34,
+      "reduced_count_states": 34
+    },
+    {
+      "k": 8,
+      "outside": 2,
+      "orbit_count": 16,
+      "kept": 6,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 11,
+      "reduced_count_states": 9
+    },
+    {
+      "k": 30,
+      "outside": 6,
+      "orbit_count": 24,
+      "kept": 0,
+      "grundy": 3,
+      "misere_auxiliary_mex": 3,
+      "original_count_states": 558,
+      "reduced_count_states": 18
+    },
+    {
+      "k": 34,
+      "outside": 4,
+      "orbit_count": 23,
+      "kept": 8,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 59,
+      "reduced_count_states": 33
+    },
+    {
+      "k": 20,
+      "outside": 0,
+      "orbit_count": 0,
+      "kept": 0,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 21,
+      "reduced_count_states": 1
+    },
+    {
+      "k": 47,
+      "outside": 1,
+      "orbit_count": 3,
+      "kept": 3,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 49,
+      "reduced_count_states": 5
+    },
+    {
+      "k": 29,
+      "outside": 5,
+      "orbit_count": 1,
+      "kept": 3,
+      "grundy": 3,
+      "misere_auxiliary_mex": 3,
+      "original_count_states": 736,
+      "reduced_count_states": 112
+    },
+    {
+      "k": 15,
+      "outside": 5,
+      "orbit_count": 24,
+      "kept": 3,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 105,
+      "reduced_count_states": 45
+    },
+    {
+      "k": 38,
+      "outside": 0,
+      "orbit_count": 1,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 2,
+      "reduced_count_states": 2
+    },
+    {
+      "k": 17,
+      "outside": 4,
+      "orbit_count": 11,
+      "kept": 1,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 90,
+      "reduced_count_states": 10
+    },
+    {
+      "k": 46,
+      "outside": 5,
+      "orbit_count": 6,
+      "kept": 2,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 662,
+      "reduced_count_states": 46
+    },
+    {
+      "k": 35,
+      "outside": 5,
+      "orbit_count": 3,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 872,
+      "reduced_count_states": 56
+    },
+    {
+      "k": 29,
+      "outside": 6,
+      "orbit_count": 21,
+      "kept": 7,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 444,
+      "reduced_count_states": 158
+    },
+    {
+      "k": 30,
+      "outside": 1,
+      "orbit_count": 7,
+      "kept": 8,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 32,
+      "reduced_count_states": 10
+    },
+    {
+      "k": 9,
+      "outside": 0,
+      "orbit_count": 4,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 2,
+      "reduced_count_states": 2
+    },
+    {
+      "k": 38,
+      "outside": 6,
+      "orbit_count": 22,
+      "kept": 6,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 994,
+      "reduced_count_states": 226
+    },
+    {
+      "k": 28,
+      "outside": 5,
+      "orbit_count": 8,
+      "kept": 6,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 493,
+      "reduced_count_states": 141
+    },
+    {
+      "k": 44,
+      "outside": 4,
+      "orbit_count": 7,
+      "kept": 8,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 180,
+      "reduced_count_states": 72
+    },
+    {
+      "k": 11,
+      "outside": 5,
+      "orbit_count": 7,
+      "kept": 5,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 230,
+      "reduced_count_states": 152
+    },
+    {
+      "k": 47,
+      "outside": 3,
+      "orbit_count": 4,
+      "kept": 3,
+      "grundy": 3,
+      "misere_auxiliary_mex": 3,
+      "original_count_states": 149,
+      "reduced_count_states": 17
+    },
+    {
+      "k": 2,
+      "outside": 2,
+      "orbit_count": 1,
+      "kept": 0,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 9,
+      "reduced_count_states": 3
+    },
+    {
+      "k": 31,
+      "outside": 2,
+      "orbit_count": 10,
+      "kept": 9,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 36,
+      "reduced_count_states": 14
+    },
+    {
+      "k": 45,
+      "outside": 1,
+      "orbit_count": 0,
+      "kept": 1,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 92,
+      "reduced_count_states": 4
+    },
+    {
+      "k": 41,
+      "outside": 3,
+      "orbit_count": 11,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 45,
+      "reduced_count_states": 5
+    },
+    {
+      "k": 33,
+      "outside": 1,
+      "orbit_count": 3,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 3,
+      "reduced_count_states": 3
+    },
+    {
+      "k": 26,
+      "outside": 0,
+      "orbit_count": 0,
+      "kept": 0,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 27,
+      "reduced_count_states": 1
+    },
+    {
+      "k": 1,
+      "outside": 2,
+      "orbit_count": 2,
+      "kept": 1,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 5,
+      "reduced_count_states": 5
+    },
+    {
+      "k": 39,
+      "outside": 3,
+      "orbit_count": 1,
+      "kept": 5,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 248,
+      "reduced_count_states": 44
+    },
+    {
+      "k": 5,
+      "outside": 3,
+      "orbit_count": 9,
+      "kept": 1,
+      "grundy": 3,
+      "misere_auxiliary_mex": 3,
+      "original_count_states": 11,
+      "reduced_count_states": 11
+    },
+    {
+      "k": 22,
+      "outside": 5,
+      "orbit_count": 16,
+      "kept": 4,
+      "grundy": 5,
+      "misere_auxiliary_mex": 5,
+      "original_count_states": 205,
+      "reduced_count_states": 61
+    },
+    {
+      "k": 29,
+      "outside": 0,
+      "orbit_count": 1,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 2,
+      "reduced_count_states": 2
+    },
+    {
+      "k": 21,
+      "outside": 6,
+      "orbit_count": 13,
+      "kept": 7,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 246,
+      "reduced_count_states": 162
+    },
+    {
+      "k": 4,
+      "outside": 1,
+      "orbit_count": 7,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 3,
+      "reduced_count_states": 3
+    },
+    {
+      "k": 19,
+      "outside": 1,
+      "orbit_count": 4,
+      "kept": 5,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 21,
+      "reduced_count_states": 7
+    },
+    {
+      "k": 7,
+      "outside": 3,
+      "orbit_count": 21,
+      "kept": 1,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 8,
+      "reduced_count_states": 8
+    },
+    {
+      "k": 15,
+      "outside": 0,
+      "orbit_count": 0,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 16,
+      "reduced_count_states": 2
+    },
+    {
+      "k": 47,
+      "outside": 2,
+      "orbit_count": 15,
+      "kept": 1,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 5,
+      "reduced_count_states": 5
+    },
+    {
+      "k": 14,
+      "outside": 0,
+      "orbit_count": 0,
+      "kept": 0,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 15,
+      "reduced_count_states": 1
+    },
+    {
+      "k": 36,
+      "outside": 3,
+      "orbit_count": 3,
+      "kept": 0,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 185,
+      "reduced_count_states": 5
+    },
+    {
+      "k": 22,
+      "outside": 1,
+      "orbit_count": 2,
+      "kept": 2,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 24,
+      "reduced_count_states": 4
+    },
+    {
+      "k": 19,
+      "outside": 2,
+      "orbit_count": 24,
+      "kept": 2,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 5,
+      "reduced_count_states": 5
+    },
+    {
+      "k": 39,
+      "outside": 4,
+      "orbit_count": 12,
+      "kept": 3,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 129,
+      "reduced_count_states": 21
+    },
+    {
+      "k": 44,
+      "outside": 3,
+      "orbit_count": 13,
+      "kept": 4,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 50,
+      "reduced_count_states": 10
+    },
+    {
+      "k": 24,
+      "outside": 6,
+      "orbit_count": 11,
+      "kept": 8,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 848,
+      "reduced_count_states": 368
+    },
+    {
+      "k": 42,
+      "outside": 5,
+      "orbit_count": 5,
+      "kept": 4,
+      "grundy": 3,
+      "misere_auxiliary_mex": 3,
+      "original_count_states": 682,
+      "reduced_count_states": 112
+    },
+    {
+      "k": 45,
+      "outside": 4,
+      "orbit_count": 1,
+      "kept": 1,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 644,
+      "reduced_count_states": 28
+    },
+    {
+      "k": 42,
+      "outside": 2,
+      "orbit_count": 12,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 4,
+      "reduced_count_states": 4
+    },
+    {
+      "k": 3,
+      "outside": 5,
+      "orbit_count": 12,
+      "kept": 1,
+      "grundy": 2,
+      "misere_auxiliary_mex": 2,
+      "original_count_states": 48,
+      "reduced_count_states": 24
+    },
+    {
+      "k": 25,
+      "outside": 1,
+      "orbit_count": 3,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 3,
+      "reduced_count_states": 3
+    },
+    {
+      "k": 28,
+      "outside": 5,
+      "orbit_count": 9,
+      "kept": 0,
+      "grundy": 3,
+      "misere_auxiliary_mex": 3,
+      "original_count_states": 435,
+      "reduced_count_states": 15
+    },
+    {
+      "k": 8,
+      "outside": 2,
+      "orbit_count": 16,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 4,
+      "reduced_count_states": 4
+    },
+    {
+      "k": 8,
+      "outside": 6,
+      "orbit_count": 23,
+      "kept": 0,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 198,
+      "reduced_count_states": 22
+    },
+    {
+      "k": 42,
+      "outside": 6,
+      "orbit_count": 22,
+      "kept": 6,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 646,
+      "reduced_count_states": 214
+    },
+    {
+      "k": 15,
+      "outside": 2,
+      "orbit_count": 7,
+      "kept": 3,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 18,
+      "reduced_count_states": 6
+    },
+    {
+      "k": 46,
+      "outside": 1,
+      "orbit_count": 3,
+      "kept": 1,
+      "grundy": 1,
+      "misere_auxiliary_mex": 0,
+      "original_count_states": 3,
+      "reduced_count_states": 3
+    },
+    {
+      "k": 1,
+      "outside": 4,
+      "orbit_count": 16,
+      "kept": 1,
+      "grundy": 0,
+      "misere_auxiliary_mex": 1,
+      "original_count_states": 11,
+      "reduced_count_states": 11
+    }
+  ],
+  "rank_four_sharpness": [
+    {
+      "k": 0,
+      "grundy": 0
+    },
+    {
+      "k": 1,
+      "grundy": 1
+    },
+    {
+      "k": 2,
+      "grundy": 2
+    },
+    {
+      "k": 3,
+      "grundy": 2
+    },
+    {
+      "k": 4,
+      "grundy": 3
+    },
+    {
+      "k": 5,
+      "grundy": 2
+    },
+    {
+      "k": 6,
+      "grundy": 3
+    },
+    {
+      "k": 7,
+      "grundy": 2
+    },
+    {
+      "k": 8,
+      "grundy": 3
+    }
+  ],
+  "status": "VERIFIED"
+}

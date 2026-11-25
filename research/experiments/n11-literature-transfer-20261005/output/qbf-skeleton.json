@@ -1,0 +1,91 @@
+{
+  "scope": "stateless full-game QBF skeleton for standard Kyouen",
+  "n11_empty_root_outcome": "UNKNOWN",
+  "rows": [
+    {
+      "n": 4,
+      "sound_full_game_depth_bound": 12,
+      "quantifier_blocks": 12,
+      "coordinate_bits_per_move": 4,
+      "quantified_move_bits": 48,
+      "pairwise_distinctness_predicates": 66,
+      "four_move_determinant_predicates": 495,
+      "minimum_known_required_depth_lower_bound": null
+    },
+    {
+      "n": 5,
+      "sound_full_game_depth_bound": 15,
+      "quantifier_blocks": 15,
+      "coordinate_bits_per_move": 6,
+      "quantified_move_bits": 90,
+      "pairwise_distinctness_predicates": 105,
+      "four_move_determinant_predicates": 1365,
+      "minimum_known_required_depth_lower_bound": null
+    },
+    {
+      "n": 6,
+      "sound_full_game_depth_bound": 18,
+      "quantifier_blocks": 18,
+      "coordinate_bits_per_move": 6,
+      "quantified_move_bits": 108,
+      "pairwise_distinctness_predicates": 153,
+      "four_move_determinant_predicates": 3060,
+      "minimum_known_required_depth_lower_bound": null
+    },
+    {
+      "n": 7,
+      "sound_full_game_depth_bound": 21,
+      "quantifier_blocks": 21,
+      "coordinate_bits_per_move": 6,
+      "quantified_move_bits": 126,
+      "pairwise_distinctness_predicates": 210,
+      "four_move_determinant_predicates": 5985,
+      "minimum_known_required_depth_lower_bound": null
+    },
+    {
+      "n": 8,
+      "sound_full_game_depth_bound": 24,
+      "quantifier_blocks": 24,
+      "coordinate_bits_per_move": 6,
+      "quantified_move_bits": 144,
+      "pairwise_distinctness_predicates": 276,
+      "four_move_determinant_predicates": 10626,
+      "minimum_known_required_depth_lower_bound": null
+    },
+    {
+      "n": 9,
+      "sound_full_game_depth_bound": 27,
+      "quantifier_blocks": 27,
+      "coordinate_bits_per_move": 8,
+      "quantified_move_bits": 216,
+      "pairwise_distinctness_predicates": 351,
+      "four_move_determinant_predicates": 17550,
+      "minimum_known_required_depth_lower_bound": null
+    },
+    {
+      "n": 10,
+      "sound_full_game_depth_bound": 30,
+      "quantifier_blocks": 30,
+      "coordinate_bits_per_move": 8,
+      "quantified_move_bits": 240,
+      "pairwise_distinctness_predicates": 435,
+      "four_move_determinant_predicates": 27405,
+      "minimum_known_required_depth_lower_bound": null
+    },
+    {
+      "n": 11,
+      "sound_full_game_depth_bound": 33,
+      "quantifier_blocks": 33,
+      "coordinate_bits_per_move": 8,
+      "quantified_move_bits": 264,
+      "pairwise_distinctness_predicates": 528,
+      "four_move_determinant_predicates": 40920,
+      "minimum_known_required_depth_lower_bound": 21
+    }
+  ],
+  "limitations": [
+    "Counts treat one determinant test as one high-level predicate; bit-blasting it requires many Boolean gates.",
+    "The QBF paper benchmarks maker-breaker games, while Kyouen is a normal-play impartial avoidance game; the guarded recursion is a new adaptation.",
+    "No generic QBF solver benchmark is claimed here."
+  ]
+}

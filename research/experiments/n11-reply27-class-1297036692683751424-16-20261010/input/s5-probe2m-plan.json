@@ -1,0 +1,53 @@
+{
+  "history_sha256": "1ed1f0f4d94417ab1b81ec6ddbe81cbeaef0596a0b62db9929a7f3f794d58791",
+  "preflight_sha256": "c18ba501cbe49bc892539dfbce8d62b7b5e25e2877747df067130e43c9473dba",
+  "raw_s5_history_audit_sha256": "850ceeeda7e289a912e22f6b866862aee827ca1420aa797b7256e60d6cff26b0",
+  "saved_layer_preflight_sha256": "bc02a6866f9290a7cfbb6c0c73568f4b1f91a75502fb963f02664d927afcb252",
+  "selection": "Four dispatch-ready S5 children with the fewest legal moves; 2,000,000-node exact budget each, one worker, stop after any S5 WIN.",
+  "targets": [
+    {
+      "arm": "requested-s4-completion",
+      "budget": 2000000,
+      "group": "S4-1297036692683751424-16",
+      "key": [
+        1297036692683751424,
+        67108880
+      ],
+      "legal_count": 81,
+      "stones": 5
+    },
+    {
+      "arm": "requested-s4-completion",
+      "budget": 2000000,
+      "group": "S4-1297036692683751424-16",
+      "key": [
+        1297036692683759616,
+        16
+      ],
+      "legal_count": 85,
+      "stones": 5
+    },
+    {
+      "arm": "requested-s4-completion",
+      "budget": 2000000,
+      "group": "S4-1297036692683751424-16",
+      "key": [
+        1152921505010548736,
+        68719476736
+      ],
+      "legal_count": 87,
+      "stones": 5
+    },
+    {
+      "arm": "requested-s4-completion",
+      "budget": 2000000,
+      "group": "S4-1297036692683751424-16",
+      "key": [
+        1297036761403228160,
+        16
+      ],
+      "legal_count": 87,
+      "stones": 5
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "schema": "n11-resolved-s5-tt-sharing-input-v1",
+  "board_size": 11,
+  "common_s4": {
+    "lo": 1188950301626859520,
+    "hi": 536870912
+  },
+  "positions": [
+    {
+      "id": "first",
+      "lo": 3494793310840553472,
+      "hi": 536870912,
+      "legal": 88,
+      "expected_verdict": 2,
+      "prior_nodes": 3981449,
+      "prior_wall_seconds": 14,
+      "source_csv": "research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/probe-15m.csv"
+    },
+    {
+      "id": "second",
+      "lo": 1188950301626859520,
+      "hi": 536936448,
+      "legal": 89,
+      "expected_verdict": 2,
+      "prior_nodes": 2335333,
+      "prior_wall_seconds": 8,
+      "source_csv": "research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/probe-15m-second.csv"
+    },
+    {
+      "id": "third",
+      "lo": 1189513251580280832,
+      "hi": 536870912,
+      "legal": 89,
+      "expected_verdict": 2,
+      "prior_nodes": 2457938,
+      "prior_wall_seconds": 9,
+      "source_csv": "research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/probe-15m-third.csv"
+    }
+  ]
+}

@@ -1,0 +1,615 @@
+{
+  "schema": "n11-head1476-class2-top15-verdict-aware-cover-audit-20261118-v1",
+  "date": "2026-11-18",
+  "lane": "n11 long lane",
+  "source_main_commit": "e3efa46aa9ae36e3c8d06a1fae3a4a25936c53b8",
+  "target_parent": "00000000000000403800000008000000",
+  "target_description": "head-1476 best own-closable class-2 S5 parent; 11 non-STERILE S6 rows; 757 D4-canonical candidate roots; minimum cover size 6",
+  "inputs": {
+    "membership": {
+      "path": "research/experiments/n11-head1410-partial-parent-nonsterile-children-20261118/output/minimum-cover-root-membership-20261118.json",
+      "git_blob_sha1": "ab1e655f4a89a677e57515cdbacfe56894323013"
+    },
+    "cost69j": {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost69j-inflight-20261117.json",
+      "git_blob_sha1": "a87dcb727a2d29a34be244d2713cb21f36f85442"
+    },
+    "cost79c": {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost79c-inflight-20261118.json",
+      "git_blob_sha1": "ca517b73ffe287def7bf2c215fa4c38a6d15838a"
+    },
+    "cost73j": {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost73j-inflight-20261117.json",
+      "git_blob_sha1": "74fc3417391e30cf4cff9c2ffce059dce529ed86"
+    },
+    "cost78c": {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost78c-inflight-20261117.json",
+      "git_blob_sha1": "1850832186ba9c8715624094f05d67aa4eb10f0b"
+    },
+    "cost73l": {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost73l-inflight-20261117.json",
+      "git_blob_sha1": "39cf0f9b31a28ad6358f157e2433477ab0659243"
+    },
+    "cost72d": {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost72d-inflight-20261117.json",
+      "git_blob_sha1": "c64e28fdc91ba9ffaa3518dfbc9d764ec5663b05"
+    },
+    "cost73i": {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost73i-inflight-20261117.json",
+      "git_blob_sha1": "4a6a17e66fc1a1bfe8efb7dc6fb2400b9af6aa1d"
+    },
+    "win66j": {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost66j-win7-certificates-20261117.json",
+      "git_blob_sha1": "b0af082044f669cdc7d5e633544069173938f7cb"
+    },
+    "win73i": {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost73i-certificates/class2-lane-cost73i-win7-certificates-20261118.json",
+      "git_blob_sha1": "8a766a4225c418cb5eae297404de71d7f402c103"
+    },
+    "audit66j": {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-66j69j-certificates-bigint-independent-reverification-20261117.json",
+      "git_blob_sha1": "c24224eaa3f48b0e5d1fbe90f4daccf284e6c968"
+    },
+    "audit73i": {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost73i-certificates-third-independent-audit-20261118.json",
+      "git_blob_sha1": "f98b2c54c612339ad06b97306b32d04e701beb18"
+    }
+  },
+  "method": "Pinned membership table plus pinned published verdict-transfer claims and two independently re-verified WIN7-D10 certificate manifests. Recounted all 6-root covers with a 0/1 DP over 11-bit row masks; independently rechecked top-15 D4 canonicality, 7-stone safety, and root legal-move counts using exact integer det4.",
+  "derived": {
+    "candidate_universe": {
+      "target_rows": 11,
+      "candidate_roots": 757,
+      "minimum_root_count": 6,
+      "minimum_covers": 359610
+    },
+    "top15_hitting_set": {
+      "roots": 15,
+      "covers_avoiding_all_top15": 0,
+      "meaning": "Every minimum 6-root cover contains at least one of these 15 roots."
+    },
+    "top15_status_counts": {
+      "refuted_d10": 10,
+      "win7_d10": 2,
+      "not_classified_in_pinned_sources": 3,
+      "classified": 12
+    },
+    "top15": [
+      {
+        "rank": 1,
+        "root": "00000000200000003801000080000001",
+        "membership": 58410,
+        "cover_rows": [
+          "00000000000000801206000000000400",
+          "00000000000000c09002000000002000"
+        ],
+        "status": "NOT_CLASSIFIED_BY_PINNED_STATUS_SOURCES",
+        "legal_replies": 62,
+        "evidence": null
+      },
+      {
+        "rank": 2,
+        "root": "00000000000000c29002000000001000",
+        "membership": 51990,
+        "cover_rows": [
+          "00000000000000403800000008000020",
+          "00000000000000c09002000000001000"
+        ],
+        "status": "REFUTED-D10",
+        "legal_replies": 53,
+        "evidence": {
+          "type": "published_D4_verdict_transfer",
+          "claim": "cost69j",
+          "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost69j-inflight-20261117.json",
+          "blob_sha1": "a87dcb727a2d29a34be244d2713cb21f36f85442",
+          "transfer_key": "108",
+          "source": null,
+          "kind": "cost-66j orbit transfer (66j bit 65, 139240 nodes, v17 raw batch map)"
+        }
+      },
+      {
+        "rank": 3,
+        "root": "00000000000041801202000000080000",
+        "membership": 51150,
+        "cover_rows": [
+          "00000000000000403800000008004000",
+          "00000000000000c09002000000002000"
+        ],
+        "status": "NOT_CLASSIFIED_BY_PINNED_STATUS_SOURCES",
+        "legal_replies": 57,
+        "evidence": null
+      },
+      {
+        "rank": 4,
+        "root": "00000000000000c09002000200001000",
+        "membership": 51090,
+        "cover_rows": [
+          "00000000000000c09002000000001000",
+          "00000000000000c09002000200000000"
+        ],
+        "status": "REFUTED-D10",
+        "legal_replies": 61,
+        "evidence": {
+          "type": "published_D4_verdict_transfer",
+          "claim": "cost79c",
+          "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost79c-inflight-20261118.json",
+          "blob_sha1": "ca517b73ffe287def7bf2c215fa4c38a6d15838a",
+          "transfer_key": "12",
+          "source": "cost66j bit 33 (raw-identical root)",
+          "kind": "census v12 fifteen-map/harvest overlay verdict transfer (head-1473 census v12 rank-1 confirmation)"
+        }
+      },
+      {
+        "rank": 5,
+        "root": "00000000020001003800040008000000",
+        "membership": 51075,
+        "cover_rows": [
+          "00000000000000403800000408000000",
+          "00000000000000c09002000000002000"
+        ],
+        "status": "REFUTED-D10",
+        "legal_replies": 62,
+        "evidence": {
+          "type": "published_D4_verdict_transfer",
+          "claim": "cost73j",
+          "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost73j-inflight-20261117.json",
+          "blob_sha1": "74fc3417391e30cf4cff9c2ffce059dce529ed86",
+          "transfer_key": "97",
+          "source": "cost71e bit 106",
+          "kind": "census v6 nine-map/harvest overlay verdict transfer (head-1472 census v6 confirmation)"
+        }
+      },
+      {
+        "rank": 6,
+        "root": "00000000020001003810000008000000",
+        "membership": 51075,
+        "cover_rows": [
+          "00000000000000403800400008000000",
+          "00000000000000c09002000000002000"
+        ],
+        "status": "WIN7-D10",
+        "legal_replies": 57,
+        "evidence": {
+          "type": "published_independently_verified_certificate",
+          "manifest": "win73i",
+          "manifest_path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost73i-certificates/class2-lane-cost73i-win7-certificates-20261118.json",
+          "manifest_blob_sha1": "8a766a4225c418cb5eae297404de71d7f402c103",
+          "bit": 97,
+          "raw_root": "00000002000000403800400008000000",
+          "d4_canon_root": "00000000020001003810000008000000",
+          "file": "n11_s7_00000002000000403800400008000000.cert",
+          "md5": "9a0e2c0ca8e6df62845f27f8ca92e1d4",
+          "sha256": "bf310fe569f5d3f62ee5a43dc65f645ac91903ce1b619b34c2f90052174a773b",
+          "raw_is_canon": false,
+          "independent_audit": "audit73i",
+          "audit_path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost73i-certificates-third-independent-audit-20261118.json",
+          "audit_blob_sha1": "f98b2c54c612339ad06b97306b32d04e701beb18",
+          "verifier_status": "PASS",
+          "root_mobility": 57,
+          "union_missing": 0,
+          "union_extra": 0
+        }
+      },
+      {
+        "rank": 7,
+        "root": "00000000000021801202000000080000",
+        "membership": 50700,
+        "cover_rows": [
+          "00000000000000403800000008000008",
+          "00000000000000c09002000000002000"
+        ],
+        "status": "REFUTED-D10",
+        "legal_replies": 64,
+        "evidence": {
+          "type": "published_D4_verdict_transfer",
+          "claim": "cost78c",
+          "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost78c-inflight-20261117.json",
+          "blob_sha1": "1850832186ba9c8715624094f05d67aa4eb10f0b",
+          "transfer_key": "97",
+          "source": "cost71e bit 87",
+          "kind": "census v11 fourteen-map/harvest overlay verdict transfer (head-1473 census v11 rank-1 confirmation)"
+        }
+      },
+      {
+        "rank": 8,
+        "root": "00000000000000c09002000000002200",
+        "membership": 50625,
+        "cover_rows": [
+          "00000000000000403800000008200000",
+          "00000000000000c09002000000002000"
+        ],
+        "status": "NOT_CLASSIFIED_BY_PINNED_STATUS_SOURCES",
+        "legal_replies": 62,
+        "evidence": null
+      },
+      {
+        "rank": 9,
+        "root": "00000000000000c29002000000400000",
+        "membership": 45030,
+        "cover_rows": [
+          "00000000000000403800000008000020",
+          "00000000000000c09002000000400000"
+        ],
+        "status": "REFUTED-D10",
+        "legal_replies": 59,
+        "evidence": {
+          "type": "published_D4_verdict_transfer",
+          "claim": "cost73l",
+          "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost73l-inflight-20261117.json",
+          "blob_sha1": "39cf0f9b31a28ad6358f157e2433477ab0659243",
+          "transfer_key": "65",
+          "source": "cost69j bit 118",
+          "kind": "census v8 eleven-map/harvest overlay verdict transfer (head-1473 census v8 rank-1 confirmation)"
+        }
+      },
+      {
+        "rank": 10,
+        "root": "00000000000041801202000000100000",
+        "membership": 44340,
+        "cover_rows": [
+          "00000000000000403800000008004000",
+          "00000000000000c09002000000001000"
+        ],
+        "status": "REFUTED-D10",
+        "legal_replies": 55,
+        "evidence": {
+          "type": "published_D4_verdict_transfer",
+          "claim": "cost72d",
+          "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost72d-inflight-20261117.json",
+          "blob_sha1": "c64e28fdc91ba9ffaa3518dfbc9d764ec5663b05",
+          "transfer_key": "108",
+          "source": "cost66j bit 86",
+          "kind": "census v5 six-map/harvest overlay verdict transfer (head-1472 census v5 runner-up confirmation)"
+        }
+      },
+      {
+        "rank": 11,
+        "root": "00000000000000c09002000200400000",
+        "membership": 44280,
+        "cover_rows": [
+          "00000000000000c09002000000400000",
+          "00000000000000c09002000200000000"
+        ],
+        "status": "REFUTED-D10",
+        "legal_replies": 65,
+        "evidence": {
+          "type": "published_D4_verdict_transfer",
+          "claim": "cost79c",
+          "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost79c-inflight-20261118.json",
+          "blob_sha1": "ca517b73ffe287def7bf2c215fa4c38a6d15838a",
+          "transfer_key": "22",
+          "source": "cost73l bit 33 (raw-identical root)",
+          "kind": "census v12 fifteen-map/harvest overlay verdict transfer (head-1473 census v12 rank-1 confirmation)"
+        }
+      },
+      {
+        "rank": 12,
+        "root": "00000000100001801202000000100000",
+        "membership": 44280,
+        "cover_rows": [
+          "00000000000000403800400008000000",
+          "00000000000000c09002000000001000"
+        ],
+        "status": "REFUTED-D10",
+        "legal_replies": 55,
+        "evidence": {
+          "type": "published_D4_verdict_transfer",
+          "claim": "cost73i",
+          "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost73i-inflight-20261117.json",
+          "blob_sha1": "4a6a17e66fc1a1bfe8efb7dc6fb2400b9af6aa1d",
+          "transfer_key": "108",
+          "source": "cost66j bit 94",
+          "kind": "census v5 six-map/harvest overlay verdict transfer (head-1472 census v5 rank-3 confirmation)"
+        }
+      },
+      {
+        "rank": 13,
+        "root": "00000000200040003801000000100000",
+        "membership": 44280,
+        "cover_rows": [
+          "00000000000000403800000408000000",
+          "00000000000000c09002000000001000"
+        ],
+        "status": "REFUTED-D10",
+        "legal_replies": 55,
+        "evidence": {
+          "type": "published_D4_verdict_transfer",
+          "claim": "cost73j",
+          "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost73j-inflight-20261117.json",
+          "blob_sha1": "74fc3417391e30cf4cff9c2ffce059dce529ed86",
+          "transfer_key": "108",
+          "source": "cost66j bit 106",
+          "kind": "census v6 nine-map/harvest overlay verdict transfer (head-1472 census v6 confirmation)"
+        }
+      },
+      {
+        "rank": 14,
+        "root": "00000000000021801202000000100000",
+        "membership": 43980,
+        "cover_rows": [
+          "00000000000000403800000008000008",
+          "00000000000000c09002000000001000"
+        ],
+        "status": "REFUTED-D10",
+        "legal_replies": 60,
+        "evidence": {
+          "type": "published_D4_verdict_transfer",
+          "claim": "cost78c",
+          "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost78c-inflight-20261117.json",
+          "blob_sha1": "1850832186ba9c8715624094f05d67aa4eb10f0b",
+          "transfer_key": "108",
+          "source": "cost66j bit 87",
+          "kind": "census v11 fourteen-map/harvest overlay verdict transfer (head-1473 census v11 rank-1 confirmation)"
+        }
+      },
+      {
+        "rank": 15,
+        "root": "00000000000000c09002000000001200",
+        "membership": 43920,
+        "cover_rows": [
+          "00000000000000403800000008200000",
+          "00000000000000c09002000000001000"
+        ],
+        "status": "WIN7-D10",
+        "legal_replies": 60,
+        "evidence": {
+          "type": "published_independently_verified_certificate",
+          "manifest": "win66j",
+          "manifest_path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost66j-win7-certificates-20261117.json",
+          "manifest_blob_sha1": "b0af082044f669cdc7d5e633544069173938f7cb",
+          "bit": 9,
+          "raw_root": "00000000000000c09002000000001200",
+          "d4_canon_root": "00000000000000c09002000000001200",
+          "file": "n11_s7_00000000000000c09002000000001200.cert",
+          "md5": "3b188baa01a8b8062c6c844e15263441",
+          "sha256": "b2686e22ce5385c944cfcfe583d475fb0e3458745efa8e34827acf0ea2168aa4",
+          "raw_is_canon": true,
+          "independent_audit": "audit66j",
+          "audit_path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-66j69j-certificates-bigint-independent-reverification-20261117.json",
+          "audit_blob_sha1": "c24224eaa3f48b0e5d1fbe90f4daccf284e6c968",
+          "verifier_status": "PASS",
+          "root_mobility": 60,
+          "union_missing": 0,
+          "union_extra": 0
+        }
+      }
+    ],
+    "verdict_aware_plan_counts": {
+      "excluded_known_refuted_top15_roots": 10,
+      "covers_avoiding_those_refuted_roots": 38265,
+      "covers_with_at_least_one_known_win7_root": 24990,
+      "covers_with_no_known_win7_root": 13275,
+      "known_win_root_inclusion_counts": {
+        "00000000020001003810000008000000": 9639,
+        "00000000000000c09002000000001200": 20565
+      },
+      "covers_containing_both_known_win_roots": 5214,
+      "no_win_residual_partition_by_unclassified_root": [
+        {
+          "rank": 1,
+          "root": "00000000200000003801000080000001",
+          "covers": 4425,
+          "legal_replies": 62
+        },
+        {
+          "rank": 3,
+          "root": "00000000000041801202000000080000",
+          "covers": 4425,
+          "legal_replies": 57
+        },
+        {
+          "rank": 8,
+          "root": "00000000000000c09002000000002200",
+          "covers": 4425,
+          "legal_replies": 62
+        }
+      ],
+      "no_win_residual_pairwise_intersections": [
+        {
+          "a": "00000000200000003801000080000001",
+          "b": "00000000000041801202000000080000",
+          "covers": 0
+        },
+        {
+          "a": "00000000200000003801000080000001",
+          "b": "00000000000000c09002000000002200",
+          "covers": 0
+        },
+        {
+          "a": "00000000000041801202000000080000",
+          "b": "00000000000000c09002000000002200",
+          "covers": 0
+        }
+      ],
+      "no_win_residual_triple_intersection": 0
+    },
+    "next_probe_candidate": {
+      "rank": 3,
+      "root": "00000000000041801202000000080000",
+      "legal_replies": 57,
+      "reason": "The three unclassified roots each occur in exactly 4,425 of the 13,275 no-known-WIN residual plans and their plan sets are pairwise disjoint. Rank 3 has 57 legal replies versus 62 and 62; this is a geometric branching proxy, not measured engine node cost."
+    },
+    "unjoined_candidate_roots_outside_top15": 742
+  },
+  "checks": [
+    {
+      "name": "membership.roots_757",
+      "pass": true,
+      "detail": 757
+    },
+    {
+      "name": "membership.rows_11",
+      "pass": true,
+      "detail": 11
+    },
+    {
+      "name": "membership.total_359610",
+      "pass": true,
+      "detail": 359610
+    },
+    {
+      "name": "membership.identity_6x",
+      "pass": true,
+      "detail": 2157660
+    },
+    {
+      "name": "top15.hitting_set",
+      "pass": true,
+      "detail": 0
+    },
+    {
+      "name": "status.refuted_10",
+      "pass": true,
+      "detail": 10
+    },
+    {
+      "name": "status.win_2",
+      "pass": true,
+      "detail": 2
+    },
+    {
+      "name": "status.unclassified_3",
+      "pass": true,
+      "detail": [
+        "00000000200000003801000080000001",
+        "00000000000041801202000000080000",
+        "00000000000000c09002000000002200"
+      ]
+    },
+    {
+      "name": "status.no_conflicts",
+      "pass": true,
+      "detail": 12
+    },
+    {
+      "name": "cert.66j_bit9_bigint_pass",
+      "pass": true,
+      "detail": true
+    },
+    {
+      "name": "cert.73i_bit97_bigint_pass",
+      "pass": true,
+      "detail": true
+    },
+    {
+      "name": "cover.after_refuted_38265",
+      "pass": true,
+      "detail": 38265
+    },
+    {
+      "name": "cover.with_known_win_24990",
+      "pass": true,
+      "detail": 24990
+    },
+    {
+      "name": "cover.without_known_win_13275",
+      "pass": true,
+      "detail": 13275
+    },
+    {
+      "name": "cover.win_inclusion_identity",
+      "pass": true,
+      "detail": {
+        "winInclusion": {
+          "00000000020001003810000008000000": 9639,
+          "00000000000000c09002000000001200": 20565
+        },
+        "bothWins": 5214,
+        "withWin": 24990
+      }
+    },
+    {
+      "name": "cover.unknown_equal_4425",
+      "pass": true,
+      "detail": {
+        "00000000200000003801000080000001": 4425,
+        "00000000000041801202000000080000": 4425,
+        "00000000000000c09002000000002200": 4425
+      }
+    },
+    {
+      "name": "cover.unknown_pairwise_disjoint",
+      "pass": true,
+      "detail": [
+        {
+          "a": "00000000200000003801000080000001",
+          "b": "00000000000041801202000000080000",
+          "covers": 0
+        },
+        {
+          "a": "00000000200000003801000080000001",
+          "b": "00000000000000c09002000000002200",
+          "covers": 0
+        },
+        {
+          "a": "00000000000041801202000000080000",
+          "b": "00000000000000c09002000000002200",
+          "covers": 0
+        }
+      ]
+    },
+    {
+      "name": "cover.unknown_partition",
+      "pass": true,
+      "detail": {
+        "unknownForced": {
+          "00000000200000003801000080000001": 4425,
+          "00000000000041801202000000080000": 4425,
+          "00000000000000c09002000000002200": 4425
+        },
+        "unknownPairs": [
+          {
+            "a": "00000000200000003801000080000001",
+            "b": "00000000000041801202000000080000",
+            "covers": 0
+          },
+          {
+            "a": "00000000200000003801000080000001",
+            "b": "00000000000000c09002000000002200",
+            "covers": 0
+          },
+          {
+            "a": "00000000000041801202000000080000",
+            "b": "00000000000000c09002000000002200",
+            "covers": 0
+          }
+        ],
+        "unknownTriple": 0
+      }
+    },
+    {
+      "name": "geometry.top15_safe_canonical",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "geometry.win_mobility_matches",
+      "pass": true,
+      "detail": {
+        "rank6": 57,
+        "rank15": 60
+      }
+    },
+    {
+      "name": "geometry.rank3_min_unclassified",
+      "pass": true,
+      "detail": {
+        "rank": 3,
+        "root": "00000000000041801202000000080000",
+        "stones": 7,
+        "safe": true,
+        "canonical": true,
+        "legal_replies": 57
+      }
+    }
+  ],
+  "check_count": 21,
+  "all_pass": true,
+  "interpretation_guard": [
+    "REFUTED-D10 is not a LOSS proof; it only cannot serve as a WIN7-D10 receipt in this depth-10 scheme.",
+    "WIN7-D10 certificates prove the individual 7-stone root only; they do not by themselves close the 11-row S5 parent or fold a receipt into S6.",
+    "The 38,265 plans exclude only the 10 known REFUTED roots among the top 15. Verdicts of the other 742 candidate roots were not joined here, so 38,265 is an upper bound on plans not yet disqualified by this partial status join, not a count of proven-viable plans.",
+    "The three unclassified roots are not declared globally UNKNOWN; they were not matched in the pinned transfer/certificate sources used by this audit."
+  ],
+  "unknown_status": "The standard 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, and classes 1/2/4 remain UNKNOWN."
+}

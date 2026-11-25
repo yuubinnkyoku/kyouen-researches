@@ -1,0 +1,1075 @@
+{
+  "schema": "n11-cost16-node-third-impl-crosscheck-20261118-v1",
+  "date": "2026-11-18",
+  "lane": "n11 long lane (verification side)",
+  "title": "Third-implementation (Node.js) cross-check of the cost-16 parent A16/B16 minimum-cover totals: 31 fresh-memo B slices, 31 fresh-memo A slices, full 11-row anchor with all 757 root memberships",
+  "inputs": {
+    "shared_memo_crosscheck": {
+      "path": "research/experiments/n11-head1410-partial-parent-nonsterile-children-20261118/output/cost16-shared-memo-crosscheck-20261118.json",
+      "git_blob_sha1": "41d37ed863a85c8a9bdadaf0f39bb6d1a452c60d"
+    },
+    "phase_a": {
+      "path": "research/experiments/n11-head1410-partial-parent-nonsterile-children-20261118/output/cost16-a-phase-20261118.json",
+      "git_blob_sha1": "fe4b4b559fd8c3fdc9bc9b9f40a048fc3217c55b"
+    },
+    "membership11": {
+      "path": "research/experiments/n11-head1410-partial-parent-nonsterile-children-20261118/output/minimum-cover-root-membership-20261118.json",
+      "git_blob_sha1": "ab1e655f4a89a677e57515cdbacfe56894323013"
+    },
+    "worklist": {
+      "path": "research/experiments/n11-class2-lane-closability-ranking-20261116/output/class-frontier-remaining-s6-worklist-1410-20261116.csv",
+      "git_blob_sha1": "2fee1d0718547a62e346d35f5858d7913e37c097"
+    },
+    "census": {
+      "path": "research/experiments/n11-head1410-receipt-unclosability-census-20261116/output/n11-head1410-receipt-unclosability-census-20261116.json",
+      "git_blob_sha1": "9c251da3138c5cb0516e097be5e5d0427dfaf5f0"
+    },
+    "ledger": {
+      "path": "research/experiments/n11-head1410-partial-parent-nonsterile-children-20261118/output/fold-chain-ledger-1410-1476-crosscheck-20261118.json",
+      "git_blob_sha1": "e8785d509e8a11a37c0d03cc450455a14708c34d"
+    }
+  },
+  "method": "node_crosscheck_cost16_ab_20261118.mjs re-derives the 31 target rows from the pinned worklist/census/ledger, regenerates candidate roots with integer det4 + D4 BigInt canonicalization, and computes weighted perfect-matching counts with a lazily evaluated memo DP stored as JS Numbers (every stored pm value is asserted < 2^53 so all Number arithmetic in the DP is exact); outer products and sums (B_d, A16, B16) accumulate in BigInt. Each B slice and each A slice runs in its own node process with a fresh memo (independent of both the published checkpoint fresh-slice design and the shared-memo design). The 11-row anchor recomputes A/B/total, per-row singleton counts and ways10, and per-root membership for every root, matching the published membership output field by field.",
+  "derived": {
+    "node_version": "v22.20.0",
+    "anchor11": {
+      "cover_space": {
+        "singleton_type_covers": "337020",
+        "six_pair_covers": "22590",
+        "total_minimum_covers": "359610",
+        "minimum_root_count": 6
+      },
+      "per_row": [
+        {
+          "row": "00000000000000403800000008000008",
+          "singleton_roots": 68,
+          "ways10": 390
+        },
+        {
+          "row": "00000000000000403800000008000020",
+          "singleton_roots": 60,
+          "ways10": 465
+        },
+        {
+          "row": "00000000000000403800000008004000",
+          "singleton_roots": 62,
+          "ways10": 390
+        },
+        {
+          "row": "00000000000000403800000008200000",
+          "singleton_roots": 69,
+          "ways10": 390
+        },
+        {
+          "row": "00000000000000403800000408000000",
+          "singleton_roots": 63,
+          "ways10": 390
+        },
+        {
+          "row": "00000000000000403800400008000000",
+          "singleton_roots": 63,
+          "ways10": 390
+        },
+        {
+          "row": "00000000000000801206000000000400",
+          "singleton_roots": 64,
+          "ways10": 450
+        },
+        {
+          "row": "00000000000000c09002000000001000",
+          "singleton_roots": 59,
+          "ways10": 630
+        },
+        {
+          "row": "00000000000000c09002000000002000",
+          "singleton_roots": 65,
+          "ways10": 735
+        },
+        {
+          "row": "00000000000000c09002000000400000",
+          "singleton_roots": 65,
+          "ways10": 555
+        },
+        {
+          "row": "00000000000000c09002000200000000",
+          "singleton_roots": 70,
+          "ways10": 465
+        }
+      ],
+      "root_membership_count": 757,
+      "root_membership_mismatches": 0,
+      "identity_sum_equals_6x_total": true,
+      "memo_states": 540
+    },
+    "graph31": {
+      "row_count": 31,
+      "candidate_occurrences": 2333,
+      "distinct_D4_roots": 1908,
+      "root_coverage_histogram": {
+        "1": 1483,
+        "2": 425
+      },
+      "pair_types": 425,
+      "pair_type_multiplicity_histogram": {
+        "1": 425
+      },
+      "singleton_root_count": 1483,
+      "per_row_singleton_root_count": [
+        48,
+        39,
+        49,
+        52,
+        50,
+        47,
+        44,
+        46,
+        47,
+        48,
+        44,
+        45,
+        51,
+        54,
+        46,
+        41,
+        45,
+        45,
+        40,
+        42,
+        54,
+        51,
+        50,
+        49,
+        48,
+        51,
+        54,
+        51,
+        52,
+        53,
+        47
+      ],
+      "per_row_pair_root_degree": [
+        26,
+        26,
+        30,
+        30,
+        26,
+        26,
+        27,
+        28,
+        28,
+        28,
+        29,
+        27,
+        28,
+        30,
+        28,
+        25,
+        26,
+        29,
+        24,
+        24,
+        28,
+        28,
+        28,
+        27,
+        26,
+        28,
+        28,
+        29,
+        29,
+        28,
+        26
+      ]
+    },
+    "B_by_doubled_row_fresh_memo": [
+      {
+        "double_row_index": 0,
+        "row_hex": "00000000000000003800000008001001",
+        "degree": 26,
+        "anchors": 325,
+        "B_d": "19989813118410060",
+        "fresh_memo_states": 3524183
+      },
+      {
+        "double_row_index": 1,
+        "row_hex": "00000000000000003800000008001020",
+        "degree": 26,
+        "anchors": 325,
+        "B_d": "20231480588424789",
+        "fresh_memo_states": 3524157
+      },
+      {
+        "double_row_index": 2,
+        "row_hex": "00000000000000003800000008001080",
+        "degree": 30,
+        "anchors": 435,
+        "B_d": "23475415507703040",
+        "fresh_memo_states": 3524540
+      },
+      {
+        "double_row_index": 3,
+        "row_hex": "00000000000000003800000008001100",
+        "degree": 30,
+        "anchors": 435,
+        "B_d": "23475415507703040",
+        "fresh_memo_states": 3524540
+      },
+      {
+        "double_row_index": 4,
+        "row_hex": "00000000000000003800000008001200",
+        "degree": 26,
+        "anchors": 325,
+        "B_d": "20126168376317970",
+        "fresh_memo_states": 3524006
+      },
+      {
+        "double_row_index": 5,
+        "row_hex": "00000000000000003800000008001800",
+        "degree": 26,
+        "anchors": 325,
+        "B_d": "19949644933307451",
+        "fresh_memo_states": 3523382
+      },
+      {
+        "double_row_index": 6,
+        "row_hex": "00000000000000003800000008005000",
+        "degree": 27,
+        "anchors": 351,
+        "B_d": "20837648422422600",
+        "fresh_memo_states": 3524055
+      },
+      {
+        "double_row_index": 7,
+        "row_hex": "00000000000000003800000008011000",
+        "degree": 28,
+        "anchors": 378,
+        "B_d": "21877571800568925",
+        "fresh_memo_states": 3524484
+      },
+      {
+        "double_row_index": 8,
+        "row_hex": "00000000000000003800000008500000",
+        "degree": 28,
+        "anchors": 378,
+        "B_d": "21881632103807445",
+        "fresh_memo_states": 3524456
+      },
+      {
+        "double_row_index": 9,
+        "row_hex": "00000000000000003800000008900000",
+        "degree": 28,
+        "anchors": 378,
+        "B_d": "21846032764844793",
+        "fresh_memo_states": 3524134
+      },
+      {
+        "double_row_index": 10,
+        "row_hex": "00000000000000003800000808001000",
+        "degree": 29,
+        "anchors": 406,
+        "B_d": "22633134813509241",
+        "fresh_memo_states": 3524512
+      },
+      {
+        "double_row_index": 11,
+        "row_hex": "00000000000000003800200008001000",
+        "degree": 27,
+        "anchors": 351,
+        "B_d": "21065935137217452",
+        "fresh_memo_states": 3524430
+      },
+      {
+        "double_row_index": 12,
+        "row_hex": "00000000000000003800200008100000",
+        "degree": 28,
+        "anchors": 378,
+        "B_d": "21881518331587500",
+        "fresh_memo_states": 3524456
+      },
+      {
+        "double_row_index": 13,
+        "row_hex": "00000000000000043800000008100000",
+        "degree": 30,
+        "anchors": 435,
+        "B_d": "23475415507703040",
+        "fresh_memo_states": 3524540
+      },
+      {
+        "double_row_index": 14,
+        "row_hex": "00000000000000083800000008100000",
+        "degree": 28,
+        "anchors": 378,
+        "B_d": "21848904683811324",
+        "fresh_memo_states": 3524134
+      },
+      {
+        "double_row_index": 15,
+        "row_hex": "00000000000000801202000000081000",
+        "degree": 25,
+        "anchors": 300,
+        "B_d": "19220589083360616",
+        "fresh_memo_states": 3523332
+      },
+      {
+        "double_row_index": 16,
+        "row_hex": "00000000000000801202000000101000",
+        "degree": 26,
+        "anchors": 325,
+        "B_d": "20024592896488569",
+        "fresh_memo_states": 3523883
+      },
+      {
+        "double_row_index": 17,
+        "row_hex": "00000000000000801202000020001000",
+        "degree": 29,
+        "anchors": 406,
+        "B_d": "22694405566544229",
+        "fresh_memo_states": 3524511
+      },
+      {
+        "double_row_index": 18,
+        "row_hex": "00000000000000801202010000001000",
+        "degree": 24,
+        "anchors": 276,
+        "B_d": "18319351945126110",
+        "fresh_memo_states": 3523494
+      },
+      {
+        "double_row_index": 19,
+        "row_hex": "00000000000000801202020000001000",
+        "degree": 24,
+        "anchors": 276,
+        "B_d": "18393925676301009",
+        "fresh_memo_states": 3522873
+      },
+      {
+        "double_row_index": 20,
+        "row_hex": "00000000000000801202040000001000",
+        "degree": 28,
+        "anchors": 378,
+        "B_d": "21844463670173823",
+        "fresh_memo_states": 3524456
+      },
+      {
+        "double_row_index": 21,
+        "row_hex": "00000000000000801202080000001000",
+        "degree": 28,
+        "anchors": 378,
+        "B_d": "21900956177685741",
+        "fresh_memo_states": 3524456
+      },
+      {
+        "double_row_index": 22,
+        "row_hex": "00000000000000801212000000001000",
+        "degree": 28,
+        "anchors": 378,
+        "B_d": "21760907863912257",
+        "fresh_memo_states": 3524134
+      },
+      {
+        "double_row_index": 23,
+        "row_hex": "00000000000000801222000000001000",
+        "degree": 27,
+        "anchors": 351,
+        "B_d": "20916496069670628",
+        "fresh_memo_states": 3524352
+      },
+      {
+        "double_row_index": 24,
+        "row_hex": "00000000000000889002000000100000",
+        "degree": 26,
+        "anchors": 325,
+        "B_d": "20094318085122831",
+        "fresh_memo_states": 3523884
+      },
+      {
+        "double_row_index": 25,
+        "row_hex": "00000000000000909002000000100000",
+        "degree": 28,
+        "anchors": 378,
+        "B_d": "21764499528802476",
+        "fresh_memo_states": 3524456
+      },
+      {
+        "double_row_index": 26,
+        "row_hex": "00000000000040809002000000100000",
+        "degree": 28,
+        "anchors": 378,
+        "B_d": "21875642092233507",
+        "fresh_memo_states": 3524456
+      },
+      {
+        "double_row_index": 27,
+        "row_hex": "00000000010000003800000008100000",
+        "degree": 29,
+        "anchors": 406,
+        "B_d": "22590034030095750",
+        "fresh_memo_states": 3524511
+      },
+      {
+        "double_row_index": 28,
+        "row_hex": "00000000010000809002000000100000",
+        "degree": 29,
+        "anchors": 406,
+        "B_d": "22695213659555052",
+        "fresh_memo_states": 3524511
+      },
+      {
+        "double_row_index": 29,
+        "row_hex": "00000008000000003800000008100000",
+        "degree": 28,
+        "anchors": 378,
+        "B_d": "21778554803188839",
+        "fresh_memo_states": 3524134
+      },
+      {
+        "double_row_index": 30,
+        "row_hex": "00000010000000801202000000000400",
+        "degree": 26,
+        "anchors": 325,
+        "B_d": "20193367640946861",
+        "fresh_memo_states": 3524330
+      }
+    ],
+    "A_per_row_pm_fresh_memo": [
+      {
+        "row_index": 0,
+        "row_hex": "00000000000000003800000008001001",
+        "singleton_root_count": 48,
+        "pm_value": 1653308795286330,
+        "fresh_memo_states": 1346254
+      },
+      {
+        "row_index": 1,
+        "row_hex": "00000000000000003800000008001020",
+        "singleton_root_count": 39,
+        "pm_value": 1633667531950608,
+        "fresh_memo_states": 1346258
+      },
+      {
+        "row_index": 2,
+        "row_hex": "00000000000000003800000008001080",
+        "singleton_root_count": 49,
+        "pm_value": 1415501771326047,
+        "fresh_memo_states": 1346247
+      },
+      {
+        "row_index": 3,
+        "row_hex": "00000000000000003800000008001100",
+        "singleton_root_count": 52,
+        "pm_value": 1415501771326047,
+        "fresh_memo_states": 1346247
+      },
+      {
+        "row_index": 4,
+        "row_hex": "00000000000000003800000008001200",
+        "singleton_root_count": 50,
+        "pm_value": 1642191620360697,
+        "fresh_memo_states": 1346251
+      },
+      {
+        "row_index": 5,
+        "row_hex": "00000000000000003800000008001800",
+        "singleton_root_count": 47,
+        "pm_value": 1656435361289220,
+        "fresh_memo_states": 1346251
+      },
+      {
+        "row_index": 6,
+        "row_hex": "00000000000000003800000008005000",
+        "singleton_root_count": 44,
+        "pm_value": 1588514963738622,
+        "fresh_memo_states": 1346244
+      },
+      {
+        "row_index": 7,
+        "row_hex": "00000000000000003800000008011000",
+        "singleton_root_count": 46,
+        "pm_value": 1515076266220878,
+        "fresh_memo_states": 1346251
+      },
+      {
+        "row_index": 8,
+        "row_hex": "00000000000000003800000008500000",
+        "singleton_root_count": 47,
+        "pm_value": 1514782563044328,
+        "fresh_memo_states": 1346244
+      },
+      {
+        "row_index": 9,
+        "row_hex": "00000000000000003800000008900000",
+        "singleton_root_count": 48,
+        "pm_value": 1517283706254840,
+        "fresh_memo_states": 1346244
+      },
+      {
+        "row_index": 10,
+        "row_hex": "00000000000000003800000808001000",
+        "singleton_root_count": 44,
+        "pm_value": 1466395627763037,
+        "fresh_memo_states": 1346251
+      },
+      {
+        "row_index": 11,
+        "row_hex": "00000000000000003800200008001000",
+        "singleton_root_count": 45,
+        "pm_value": 1571220486875283,
+        "fresh_memo_states": 1346251
+      },
+      {
+        "row_index": 12,
+        "row_hex": "00000000000000003800200008100000",
+        "singleton_root_count": 51,
+        "pm_value": 1514791930427004,
+        "fresh_memo_states": 1346244
+      },
+      {
+        "row_index": 13,
+        "row_hex": "00000000000000043800000008100000",
+        "singleton_root_count": 54,
+        "pm_value": 1415501771326047,
+        "fresh_memo_states": 1346244
+      },
+      {
+        "row_index": 14,
+        "row_hex": "00000000000000083800000008100000",
+        "singleton_root_count": 46,
+        "pm_value": 1517065529197626,
+        "fresh_memo_states": 1346244
+      },
+      {
+        "row_index": 15,
+        "row_hex": "00000000000000801202000000081000",
+        "singleton_root_count": 41,
+        "pm_value": 1717011697072743,
+        "fresh_memo_states": 1346251
+      },
+      {
+        "row_index": 16,
+        "row_hex": "00000000000000801202000000101000",
+        "singleton_root_count": 45,
+        "pm_value": 1650691554122205,
+        "fresh_memo_states": 1346244
+      },
+      {
+        "row_index": 17,
+        "row_hex": "00000000000000801202000020001000",
+        "singleton_root_count": 45,
+        "pm_value": 1462445387422791,
+        "fresh_memo_states": 1346244
+      },
+      {
+        "row_index": 18,
+        "row_hex": "00000000000000801202010000001000",
+        "singleton_root_count": 40,
+        "pm_value": 1798095446108235,
+        "fresh_memo_states": 1346251
+      },
+      {
+        "row_index": 19,
+        "row_hex": "00000000000000801202020000001000",
+        "singleton_root_count": 42,
+        "pm_value": 1790912116327797,
+        "fresh_memo_states": 1346244
+      },
+      {
+        "row_index": 20,
+        "row_hex": "00000000000000801202040000001000",
+        "singleton_root_count": 54,
+        "pm_value": 1517396622107139,
+        "fresh_memo_states": 1346244
+      },
+      {
+        "row_index": 21,
+        "row_hex": "00000000000000801202080000001000",
+        "singleton_root_count": 51,
+        "pm_value": 1513513415712273,
+        "fresh_memo_states": 1346244
+      },
+      {
+        "row_index": 22,
+        "row_hex": "00000000000000801212000000001000",
+        "singleton_root_count": 50,
+        "pm_value": 1523350516656960,
+        "fresh_memo_states": 1346244
+      },
+      {
+        "row_index": 23,
+        "row_hex": "00000000000000801222000000001000",
+        "singleton_root_count": 49,
+        "pm_value": 1582419706785732,
+        "fresh_memo_states": 1346244
+      },
+      {
+        "row_index": 24,
+        "row_hex": "00000000000000889002000000100000",
+        "singleton_root_count": 48,
+        "pm_value": 1644776550905100,
+        "fresh_memo_states": 1346244
+      },
+      {
+        "row_index": 25,
+        "row_hex": "00000000000000909002000000100000",
+        "singleton_root_count": 51,
+        "pm_value": 1523071096142418,
+        "fresh_memo_states": 1346244
+      },
+      {
+        "row_index": 26,
+        "row_hex": "00000000000040809002000000100000",
+        "singleton_root_count": 54,
+        "pm_value": 1515232273372242,
+        "fresh_memo_states": 1346244
+      },
+      {
+        "row_index": 27,
+        "row_hex": "00000000010000003800000008100000",
+        "singleton_root_count": 51,
+        "pm_value": 1469253029467884,
+        "fresh_memo_states": 1346244
+      },
+      {
+        "row_index": 28,
+        "row_hex": "00000000010000809002000000100000",
+        "singleton_root_count": 52,
+        "pm_value": 1462392051909750,
+        "fresh_memo_states": 1346244
+      },
+      {
+        "row_index": 29,
+        "row_hex": "00000008000000003800000008100000",
+        "singleton_root_count": 53,
+        "pm_value": 1521856299364719,
+        "fresh_memo_states": 1346244
+      },
+      {
+        "row_index": 30,
+        "row_hex": "00000010000000801202000000000400",
+        "singleton_root_count": 47,
+        "pm_value": 1636675326867525,
+        "fresh_memo_states": 1346251
+      }
+    ],
+    "A16": 2305787291293934388,
+    "B16": 660663050386546968,
+    "total_minimum_covers": 2966450341680481356,
+    "max_pm_value": 1798095446108235,
+    "pm_limit": 9007199254740992
+  },
+  "checks": [
+    {
+      "name": "node.version",
+      "pass": true,
+      "detail": "v22.20.0"
+    },
+    {
+      "name": "anchor11.A",
+      "pass": true,
+      "detail": "{\"mine\": \"337020\", \"pub\": 337020}"
+    },
+    {
+      "name": "anchor11.B",
+      "pass": true,
+      "detail": "{\"mine\": \"22590\", \"pub\": 22590}"
+    },
+    {
+      "name": "anchor11.total",
+      "pass": true,
+      "detail": "{\"mine\": \"359610\", \"pub\": 359610}"
+    },
+    {
+      "name": "anchor11.per_row",
+      "pass": true,
+      "detail": "[]"
+    },
+    {
+      "name": "anchor11.root_memberships",
+      "pass": true,
+      "detail": "{\"mismatches\": [], \"mine\": 757, \"pub\": 757}"
+    },
+    {
+      "name": "anchor11.identity_6x",
+      "pass": true,
+      "detail": "2157660"
+    },
+    {
+      "name": "graph31.rows",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "graph31.candidate_occurrences",
+      "pass": true,
+      "detail": "2333"
+    },
+    {
+      "name": "graph31.distinct_roots",
+      "pass": true,
+      "detail": "1908"
+    },
+    {
+      "name": "graph31.span_histogram",
+      "pass": true,
+      "detail": "{\"1\": 1483, \"2\": 425}"
+    },
+    {
+      "name": "graph31.pair_types",
+      "pass": true,
+      "detail": "425"
+    },
+    {
+      "name": "graph31.pair_multiplicity",
+      "pass": true,
+      "detail": "{\"1\": 425}"
+    },
+    {
+      "name": "graph31.singleton_roots",
+      "pass": true,
+      "detail": "1483"
+    },
+    {
+      "name": "graph31.per_row_singleton",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "graph31.per_row_degree",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "slices.complete",
+      "pass": true,
+      "detail": "[]"
+    },
+    {
+      "name": "bslice.0",
+      "pass": true,
+      "detail": "{\"mine\": \"19989813118410060\", \"pub\": \"19989813118410060\", \"degree\": 26, \"anchors\": 325}"
+    },
+    {
+      "name": "bslice.1",
+      "pass": true,
+      "detail": "{\"mine\": \"20231480588424789\", \"pub\": \"20231480588424789\", \"degree\": 26, \"anchors\": 325}"
+    },
+    {
+      "name": "bslice.2",
+      "pass": true,
+      "detail": "{\"mine\": \"23475415507703040\", \"pub\": \"23475415507703040\", \"degree\": 30, \"anchors\": 435}"
+    },
+    {
+      "name": "bslice.3",
+      "pass": true,
+      "detail": "{\"mine\": \"23475415507703040\", \"pub\": \"23475415507703040\", \"degree\": 30, \"anchors\": 435}"
+    },
+    {
+      "name": "bslice.4",
+      "pass": true,
+      "detail": "{\"mine\": \"20126168376317970\", \"pub\": \"20126168376317970\", \"degree\": 26, \"anchors\": 325}"
+    },
+    {
+      "name": "bslice.5",
+      "pass": true,
+      "detail": "{\"mine\": \"19949644933307451\", \"pub\": \"19949644933307451\", \"degree\": 26, \"anchors\": 325}"
+    },
+    {
+      "name": "bslice.6",
+      "pass": true,
+      "detail": "{\"mine\": \"20837648422422600\", \"pub\": \"20837648422422600\", \"degree\": 27, \"anchors\": 351}"
+    },
+    {
+      "name": "bslice.7",
+      "pass": true,
+      "detail": "{\"mine\": \"21877571800568925\", \"pub\": \"21877571800568925\", \"degree\": 28, \"anchors\": 378}"
+    },
+    {
+      "name": "bslice.8",
+      "pass": true,
+      "detail": "{\"mine\": \"21881632103807445\", \"pub\": \"21881632103807445\", \"degree\": 28, \"anchors\": 378}"
+    },
+    {
+      "name": "bslice.9",
+      "pass": true,
+      "detail": "{\"mine\": \"21846032764844793\", \"pub\": \"21846032764844793\", \"degree\": 28, \"anchors\": 378}"
+    },
+    {
+      "name": "bslice.10",
+      "pass": true,
+      "detail": "{\"mine\": \"22633134813509241\", \"pub\": \"22633134813509241\", \"degree\": 29, \"anchors\": 406}"
+    },
+    {
+      "name": "bslice.11",
+      "pass": true,
+      "detail": "{\"mine\": \"21065935137217452\", \"pub\": \"21065935137217452\", \"degree\": 27, \"anchors\": 351}"
+    },
+    {
+      "name": "bslice.12",
+      "pass": true,
+      "detail": "{\"mine\": \"21881518331587500\", \"pub\": \"21881518331587500\", \"degree\": 28, \"anchors\": 378}"
+    },
+    {
+      "name": "bslice.13",
+      "pass": true,
+      "detail": "{\"mine\": \"23475415507703040\", \"pub\": \"23475415507703040\", \"degree\": 30, \"anchors\": 435}"
+    },
+    {
+      "name": "bslice.14",
+      "pass": true,
+      "detail": "{\"mine\": \"21848904683811324\", \"pub\": \"21848904683811324\", \"degree\": 28, \"anchors\": 378}"
+    },
+    {
+      "name": "bslice.15",
+      "pass": true,
+      "detail": "{\"mine\": \"19220589083360616\", \"pub\": \"19220589083360616\", \"degree\": 25, \"anchors\": 300}"
+    },
+    {
+      "name": "bslice.16",
+      "pass": true,
+      "detail": "{\"mine\": \"20024592896488569\", \"pub\": \"20024592896488569\", \"degree\": 26, \"anchors\": 325}"
+    },
+    {
+      "name": "bslice.17",
+      "pass": true,
+      "detail": "{\"mine\": \"22694405566544229\", \"pub\": \"22694405566544229\", \"degree\": 29, \"anchors\": 406}"
+    },
+    {
+      "name": "bslice.18",
+      "pass": true,
+      "detail": "{\"mine\": \"18319351945126110\", \"pub\": \"18319351945126110\", \"degree\": 24, \"anchors\": 276}"
+    },
+    {
+      "name": "bslice.19",
+      "pass": true,
+      "detail": "{\"mine\": \"18393925676301009\", \"pub\": \"18393925676301009\", \"degree\": 24, \"anchors\": 276}"
+    },
+    {
+      "name": "bslice.20",
+      "pass": true,
+      "detail": "{\"mine\": \"21844463670173823\", \"pub\": \"21844463670173823\", \"degree\": 28, \"anchors\": 378}"
+    },
+    {
+      "name": "bslice.21",
+      "pass": true,
+      "detail": "{\"mine\": \"21900956177685741\", \"pub\": \"21900956177685741\", \"degree\": 28, \"anchors\": 378}"
+    },
+    {
+      "name": "bslice.22",
+      "pass": true,
+      "detail": "{\"mine\": \"21760907863912257\", \"pub\": \"21760907863912257\", \"degree\": 28, \"anchors\": 378}"
+    },
+    {
+      "name": "bslice.23",
+      "pass": true,
+      "detail": "{\"mine\": \"20916496069670628\", \"pub\": \"20916496069670628\", \"degree\": 27, \"anchors\": 351}"
+    },
+    {
+      "name": "bslice.24",
+      "pass": true,
+      "detail": "{\"mine\": \"20094318085122831\", \"pub\": \"20094318085122831\", \"degree\": 26, \"anchors\": 325}"
+    },
+    {
+      "name": "bslice.25",
+      "pass": true,
+      "detail": "{\"mine\": \"21764499528802476\", \"pub\": \"21764499528802476\", \"degree\": 28, \"anchors\": 378}"
+    },
+    {
+      "name": "bslice.26",
+      "pass": true,
+      "detail": "{\"mine\": \"21875642092233507\", \"pub\": \"21875642092233507\", \"degree\": 28, \"anchors\": 378}"
+    },
+    {
+      "name": "bslice.27",
+      "pass": true,
+      "detail": "{\"mine\": \"22590034030095750\", \"pub\": \"22590034030095750\", \"degree\": 29, \"anchors\": 406}"
+    },
+    {
+      "name": "bslice.28",
+      "pass": true,
+      "detail": "{\"mine\": \"22695213659555052\", \"pub\": \"22695213659555052\", \"degree\": 29, \"anchors\": 406}"
+    },
+    {
+      "name": "bslice.29",
+      "pass": true,
+      "detail": "{\"mine\": \"21778554803188839\", \"pub\": \"21778554803188839\", \"degree\": 28, \"anchors\": 378}"
+    },
+    {
+      "name": "bslice.30",
+      "pass": true,
+      "detail": "{\"mine\": \"20193367640946861\", \"pub\": \"20193367640946861\", \"degree\": 26, \"anchors\": 325}"
+    },
+    {
+      "name": "aslice.0",
+      "pass": true,
+      "detail": "{\"mine\": 1653308795286330, \"pub\": 1653308795286330}"
+    },
+    {
+      "name": "aslice.1",
+      "pass": true,
+      "detail": "{\"mine\": 1633667531950608, \"pub\": 1633667531950608}"
+    },
+    {
+      "name": "aslice.2",
+      "pass": true,
+      "detail": "{\"mine\": 1415501771326047, \"pub\": 1415501771326047}"
+    },
+    {
+      "name": "aslice.3",
+      "pass": true,
+      "detail": "{\"mine\": 1415501771326047, \"pub\": 1415501771326047}"
+    },
+    {
+      "name": "aslice.4",
+      "pass": true,
+      "detail": "{\"mine\": 1642191620360697, \"pub\": 1642191620360697}"
+    },
+    {
+      "name": "aslice.5",
+      "pass": true,
+      "detail": "{\"mine\": 1656435361289220, \"pub\": 1656435361289220}"
+    },
+    {
+      "name": "aslice.6",
+      "pass": true,
+      "detail": "{\"mine\": 1588514963738622, \"pub\": 1588514963738622}"
+    },
+    {
+      "name": "aslice.7",
+      "pass": true,
+      "detail": "{\"mine\": 1515076266220878, \"pub\": 1515076266220878}"
+    },
+    {
+      "name": "aslice.8",
+      "pass": true,
+      "detail": "{\"mine\": 1514782563044328, \"pub\": 1514782563044328}"
+    },
+    {
+      "name": "aslice.9",
+      "pass": true,
+      "detail": "{\"mine\": 1517283706254840, \"pub\": 1517283706254840}"
+    },
+    {
+      "name": "aslice.10",
+      "pass": true,
+      "detail": "{\"mine\": 1466395627763037, \"pub\": 1466395627763037}"
+    },
+    {
+      "name": "aslice.11",
+      "pass": true,
+      "detail": "{\"mine\": 1571220486875283, \"pub\": 1571220486875283}"
+    },
+    {
+      "name": "aslice.12",
+      "pass": true,
+      "detail": "{\"mine\": 1514791930427004, \"pub\": 1514791930427004}"
+    },
+    {
+      "name": "aslice.13",
+      "pass": true,
+      "detail": "{\"mine\": 1415501771326047, \"pub\": 1415501771326047}"
+    },
+    {
+      "name": "aslice.14",
+      "pass": true,
+      "detail": "{\"mine\": 1517065529197626, \"pub\": 1517065529197626}"
+    },
+    {
+      "name": "aslice.15",
+      "pass": true,
+      "detail": "{\"mine\": 1717011697072743, \"pub\": 1717011697072743}"
+    },
+    {
+      "name": "aslice.16",
+      "pass": true,
+      "detail": "{\"mine\": 1650691554122205, \"pub\": 1650691554122205}"
+    },
+    {
+      "name": "aslice.17",
+      "pass": true,
+      "detail": "{\"mine\": 1462445387422791, \"pub\": 1462445387422791}"
+    },
+    {
+      "name": "aslice.18",
+      "pass": true,
+      "detail": "{\"mine\": 1798095446108235, \"pub\": 1798095446108235}"
+    },
+    {
+      "name": "aslice.19",
+      "pass": true,
+      "detail": "{\"mine\": 1790912116327797, \"pub\": 1790912116327797}"
+    },
+    {
+      "name": "aslice.20",
+      "pass": true,
+      "detail": "{\"mine\": 1517396622107139, \"pub\": 1517396622107139}"
+    },
+    {
+      "name": "aslice.21",
+      "pass": true,
+      "detail": "{\"mine\": 1513513415712273, \"pub\": 1513513415712273}"
+    },
+    {
+      "name": "aslice.22",
+      "pass": true,
+      "detail": "{\"mine\": 1523350516656960, \"pub\": 1523350516656960}"
+    },
+    {
+      "name": "aslice.23",
+      "pass": true,
+      "detail": "{\"mine\": 1582419706785732, \"pub\": 1582419706785732}"
+    },
+    {
+      "name": "aslice.24",
+      "pass": true,
+      "detail": "{\"mine\": 1644776550905100, \"pub\": 1644776550905100}"
+    },
+    {
+      "name": "aslice.25",
+      "pass": true,
+      "detail": "{\"mine\": 1523071096142418, \"pub\": 1523071096142418}"
+    },
+    {
+      "name": "aslice.26",
+      "pass": true,
+      "detail": "{\"mine\": 1515232273372242, \"pub\": 1515232273372242}"
+    },
+    {
+      "name": "aslice.27",
+      "pass": true,
+      "detail": "{\"mine\": 1469253029467884, \"pub\": 1469253029467884}"
+    },
+    {
+      "name": "aslice.28",
+      "pass": true,
+      "detail": "{\"mine\": 1462392051909750, \"pub\": 1462392051909750}"
+    },
+    {
+      "name": "aslice.29",
+      "pass": true,
+      "detail": "{\"mine\": 1521856299364719, \"pub\": 1521856299364719}"
+    },
+    {
+      "name": "aslice.30",
+      "pass": true,
+      "detail": "{\"mine\": 1636675326867525, \"pub\": 1636675326867525}"
+    },
+    {
+      "name": "A16",
+      "pass": true,
+      "detail": "{\"mine\": 2305787291293934388, \"pub\": 2305787291293934388}"
+    },
+    {
+      "name": "B16",
+      "pass": true,
+      "detail": "{\"mine\": 660663050386546968, \"pub\": 660663050386546968}"
+    },
+    {
+      "name": "total",
+      "pass": true,
+      "detail": "{\"mine\": 2966450341680481356, \"pub\": 2966450341680481356}"
+    }
+  ],
+  "check_count": 82,
+  "all_pass": true,
+  "interpretation_guard": "Finite combinatorial verification only. A16/B16 count minimum certificate-covers of the 31 target rows under the planning cover semantics (a root covers a row iff the row generates the root as a 1-stone D4-canonical extension); they are bookkeeping counts, not WIN/REFUTED claims, and no root has been validated as a certificate. REFUTED-D10 and STERILE are not LOSS proofs.",
+  "unknown_status": "Standard 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, and classes 1/2/4 remain UNKNOWN."
+}

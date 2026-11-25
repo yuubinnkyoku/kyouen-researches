@@ -1,0 +1,226 @@
+{
+  "schema": "n11-night-repaired-joint-plan-update4-v1",
+  "baseline_plan_sha256": "c5f72fce5aa748c7a39c907e0feccf4f4c85e2c2815bf70adc7eda7abe79a054",
+  "baseline_schema": "n11-night-repaired-joint-plan-update3-v1",
+  "baseline_union_size": 31774,
+  "union_size": 31774,
+  "union_delta_vs_baseline": 0,
+  "roots": 19,
+  "third_moves_covered": 2261,
+  "baseline_free_thirds": 122,
+  "free_thirds": 122,
+  "baseline_excluded_s4_classes": [
+    3569,
+    3570,
+    3942,
+    4050,
+    5408,
+    5687,
+    5690,
+    5830,
+    13938
+  ],
+  "excluded_s4_classes": [
+    3569,
+    3570,
+    3942,
+    4050,
+    5266,
+    5267,
+    5408,
+    5570,
+    5687,
+    5690,
+    5830,
+    13938
+  ],
+  "new_excluded_s4_classes": [
+    5266,
+    5267,
+    5570
+  ],
+  "baseline_resolved_s5_verdicts": {
+    "121263": 2,
+    "126017": 1,
+    "126899": 2,
+    "137694": 2,
+    "143240": 2,
+    "144095": 1,
+    "145001": 2,
+    "209644": 1,
+    "220231": 2,
+    "558600": 2
+  },
+  "resolved_s5_verdicts": {
+    "121263": 2,
+    "126017": 1,
+    "126899": 2,
+    "137694": 2,
+    "143240": 2,
+    "144095": 1,
+    "145001": 2,
+    "197665": 1,
+    "209644": 1,
+    "220231": 2,
+    "558600": 2
+  },
+  "known_loss_removed_from_cost": [],
+  "changed_choice_count": 0,
+  "verification": {
+    "passed": true,
+    "checked_selected_s4": 351,
+    "complete_third_boundaries": 19,
+    "complete_s5_boundaries": 351,
+    "third_moves_checked": 2261,
+    "known_win_selected": 0,
+    "known_loss_in_union": 0
+  },
+  "trust": "optimistic plan only: old exact-S5 leaves remain solver-trusted; eleven additions (558600 LOSS, 209644 WIN, 126899 LOSS, 144095 WIN, 121263 LOSS, 145001 LOSS, 137694 LOSS, 143240 LOSS, 220231 LOSS, 126017 WIN, 197665 WIN) terminal-verified with trusted leaves 0; all remaining required S5 verdicts UNKNOWN; not a root proof"
+}
+{
+  "batch": {
+    "resolved_verdicts": [
+      [
+        121263,
+        2
+      ],
+      [
+        126017,
+        1
+      ],
+      [
+        126899,
+        2
+      ],
+      [
+        137694,
+        2
+      ],
+      [
+        143240,
+        2
+      ],
+      [
+        144095,
+        1
+      ],
+      [
+        145001,
+        2
+      ],
+      [
+        197665,
+        1
+      ],
+      [
+        209644,
+        1
+      ],
+      [
+        220231,
+        2
+      ],
+      [
+        558600,
+        2
+      ]
+    ],
+    "labels_sha": "fb458e93a2781b544872bae062da734f7c356a9ad029491649f0c1784b9d88a7",
+    "candidates_sha": "d693f5099dd3f0841a9ad4cc5c790c8a600c0b9157e586871464fc3770dce9dc",
+    "obligations_sha": "cbc1fdf128245fd30c2d13a3a939414e60d72ae97f68f330dff27b7f74b0abd3",
+    "choices_sha": "79c8372e1c1d4e91abe6fb9e800bb1ac1d6d35e9954448d25c6745871cf1f68d",
+    "union_sha": "8b0de0539ccb745e25e9c24e9c24d4f4c7c2ba859863952b714d2cdf3562eb8c",
+    "union_size": 31774,
+    "free_thirds": 122,
+    "changed_choice_count": 0,
+    "known_wins_in_union": [],
+    "known_losses_in_union": []
+  },
+  "staged_forward": {
+    "resolved_verdicts": [
+      [
+        121263,
+        2
+      ],
+      [
+        126017,
+        1
+      ],
+      [
+        126899,
+        2
+      ],
+      [
+        137694,
+        2
+      ],
+      [
+        143240,
+        2
+      ],
+      [
+        144095,
+        1
+      ],
+      [
+        145001,
+        2
+      ],
+      [
+        197665,
+        1
+      ],
+      [
+        209644,
+        1
+      ],
+      [
+        220231,
+        2
+      ],
+      [
+        558600,
+        2
+      ]
+    ],
+    "labels_sha": "fb458e93a2781b544872bae062da734f7c356a9ad029491649f0c1784b9d88a7",
+    "candidates_sha": "d693f5099dd3f0841a9ad4cc5c790c8a600c0b9157e586871464fc3770dce9dc",
+    "obligations_sha": "cbc1fdf128245fd30c2d13a3a939414e60d72ae97f68f330dff27b7f74b0abd3",
+    "choices_sha": "79c8372e1c1d4e91abe6fb9e800bb1ac1d6d35e9954448d25c6745871cf1f68d",
+    "union_sha": "8b0de0539ccb745e25e9c24e9c24d4f4c7c2ba859863952b714d2cdf3562eb8c",
+    "union_size": 31774,
+    "free_thirds": 122,
+    "changed_choice_count": 0,
+    "known_wins_in_union": [],
+    "known_losses_in_union": []
+  }
+}
+{
+  "197665": {
+    "verdict": 1,
+    "ranking_on_k0423_baseline": {
+      "affected_choices": 3,
+      "affected_s4": [
+        5830
+      ],
+      "invalidated_options": 4,
+      "invalidated_s4_options": [
+        5266,
+        5267,
+        5570,
+        5830
+      ],
+      "greedy_delta": 49,
+      "greedy_union": 31685,
+      "new_free_win_branches": 18,
+      "loss_uncovered_branches": 4
+    },
+    "this_baseline": {
+      "affected_choices": 0,
+      "affected_s4": [],
+      "invalidated_options_total": 4,
+      "newly_excluded_options": 3
+    },
+    "absorbed_by_third_update": "the ranking counterfactual invalidates the K0423-baseline selections on S4 class 5830 (3 responses); the third update already excluded 5830 for 126017 WIN and re-selected those responses, so the third-update baseline carries zero affected selections for 197665"
+  }
+}

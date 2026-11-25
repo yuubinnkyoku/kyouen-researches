@@ -1,0 +1,118 @@
+{
+ "checkpoint": "pass1 keys k34-k41 (ladder COMPLETE for all 41 keys)",
+ "head_before_push": "8155d21ec05cd9fc62a0ccd64fcb2d7ef1b7dfe1",
+ "raw_tally": {
+  "LOSS": 33,
+  "UNKNOWN_at_15M_parked": 8,
+  "WIN": 0,
+  "parked_orders": [
+   2,
+   11,
+   13,
+   17,
+   23,
+   31,
+   32,
+   38
+  ]
+ },
+ "rows": [
+  {
+   "key": "10380797141088997376:8",
+   "budget": 15000000,
+   "result": 2,
+   "nodes": 3221348
+  },
+  {
+   "key": "10380797141088997376:8",
+   "budget": 15000000,
+   "result": 2,
+   "nodes": 3221348
+  },
+  {
+   "key": "10380797141088997376:131072",
+   "budget": 15000000,
+   "result": 2,
+   "nodes": 4193333
+  },
+  {
+   "key": "10380797141088997376:131072",
+   "budget": 15000000,
+   "result": 2,
+   "nodes": 4193333
+  },
+  {
+   "key": "10380797141088997376:67108864",
+   "budget": 15000000,
+   "result": 2,
+   "nodes": 3116170
+  },
+  {
+   "key": "10380797141088997376:67108864",
+   "budget": 15000000,
+   "result": 2,
+   "nodes": 3116170
+  },
+  {
+   "key": "1152921504606851072:805306369",
+   "budget": 15000000,
+   "result": 2,
+   "nodes": 3615154
+  },
+  {
+   "key": "1152921504606851072:805306369",
+   "budget": 15000000,
+   "result": 2,
+   "nodes": 3615154
+  },
+  {
+   "key": "1152921504607899648:805306368",
+   "budget": 15000000,
+   "result": 0,
+   "nodes": 15000000
+  },
+  {
+   "key": "1152921504607899648:805306368",
+   "budget": 15000000,
+   "result": 0,
+   "nodes": 15000000
+  },
+  {
+   "key": "1152930300699873280:805306368",
+   "budget": 15000000,
+   "result": 2,
+   "nodes": 5519163
+  },
+  {
+   "key": "1152930300699873280:805306368",
+   "budget": 15000000,
+   "result": 2,
+   "nodes": 5519163
+  },
+  {
+   "key": "1297107061427929088:16777216",
+   "budget": 15000000,
+   "result": 2,
+   "nodes": 8109091
+  },
+  {
+   "key": "1297107061427929088:16777216",
+   "budget": 15000000,
+   "result": 2,
+   "nodes": 8109091
+  },
+  {
+   "key": "1297107336305836032:0",
+   "budget": 15000000,
+   "result": 2,
+   "nodes": 2515856
+  },
+  {
+   "key": "1297107336305836032:0",
+   "budget": 15000000,
+   "result": 2,
+   "nodes": 2515856
+  }
+ ],
+ "status_guard": "per-key S5 verdicts only; 33 LOSS rows are exclusive-key facts, the fourth-cost class is NOT closed (100 unknowns total; 57 shared children remain unclaimed by anyone); 11x11 empty board remains UNKNOWN"
+}

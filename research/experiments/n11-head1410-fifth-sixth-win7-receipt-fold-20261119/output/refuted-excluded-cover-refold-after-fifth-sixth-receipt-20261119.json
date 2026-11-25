@@ -1,0 +1,1061 @@
+{
+  "schema": "n11-five-parent-refold-cover-after-fifth-sixth-receipt-20261119-v1",
+  "date": "2026-11-19",
+  "status": "partial-candidate-cover-with-stranded-rows",
+  "source_main_head_before": "d3a6e69fee8ce7873e21499e0dac999313b97b1e",
+  "input_pins": {
+    "joint": {
+      "path": "research/experiments/n11-head1410-partial-parent-nonsterile-children-20261118/output/joint-parent-cover-sharing-cost16-20261118.json",
+      "git_blob_sha1": "40581746dc3304bdaff4b1934fd6f1d3d2981ea5"
+    },
+    "audit": {
+      "path": "research/experiments/n11-head1410-partial-parent-nonsterile-children-20261118/output/joint-cover-cost16-five-parent-independent-audit-20261118.json",
+      "git_blob_sha1": "7cdc7c9ef341b5d9759923b3fc4986231c48895f"
+    },
+    "head1476": {
+      "path": "research/experiments/n11-head1410-partial-parent-nonsterile-children-20261118/output/head1476-cost71e-full-universe-verdict-join-20261118.json",
+      "git_blob_sha1": "65d0c7ce0200638a50db5451b11b8cb88ec64b5d"
+    },
+    "globalFold": {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-receipt-harvest-global-fold-20261118.json",
+      "git_blob_sha1": "753a4bf4d0e11bea894111f9fa43bcff5e9ab7dc"
+    },
+    "fold78": {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost78c-79c-receipts-recompute-20261118.json",
+      "git_blob_sha1": "7e6144cc4bc92c34faa14bed3058cde64fb3880e"
+    },
+    "cost78c": {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost78c-inflight-20261117.json",
+      "git_blob_sha1": "626409d50d0a7bb1b925ebecbff7dbee9adfa398"
+    },
+    "cost79c": {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost79c-inflight-20261118.json",
+      "git_blob_sha1": "054923a47ea0387b25f734222c499e60c054109b"
+    },
+    "cost73j": {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost73j-inflight-20261117.json",
+      "git_blob_sha1": "74fc3417391e30cf4cff9c2ffce059dce529ed86"
+    },
+    "firstFoldTarball": {
+      "path": "research/experiments/n11-head1410-residual-cover-after-receipt-fold-20261119/output/first-win7-root-evidence-20261119.tar.gz",
+      "git_blob_sha1": "fa5f26a9dc9bd2fb8222aa8ba0431d7578043019"
+    },
+    "sweep": {
+      "path": "research/experiments/n11-head1410-residual-48-root-sweep-two-win-receipts-20261119/output/residual-48-root-depth10-sweep-20261119.json",
+      "git_blob_sha1": "37aba599d0b69275225bf231d56cb18feed14090"
+    },
+    "fold23": {
+      "path": "research/experiments/n11-head1410-residual-48-root-sweep-two-win-receipts-20261119/output/second-third-win7-root-receipt-fold-20261119.json",
+      "git_blob_sha1": "7923a0fe5331d1f7c896748031c4071b68fcc13a"
+    },
+    "witnessProbes": {
+      "path": "research/experiments/n11-head1410-residual-28-root-witness-win7-20261119/output/witness-root-probes-and-certificate-20261119.json",
+      "git_blob_sha1": "9cfb5c9c5d8d857b46bd147a68f9795d0a3c59b1"
+    },
+    "fold4": {
+      "path": "research/experiments/n11-head1410-fourth-win7-receipt-fold-20261119/output/fourth-win7-root-receipt-fold-20261119.json",
+      "git_blob_sha1": "38715413d6dd23b97717c92d73d8b4a0af807cda"
+    },
+    "refold4": {
+      "path": "research/experiments/n11-head1410-fourth-win7-receipt-fold-20261119/output/refuted-excluded-cover-refold-after-fourth-receipt-20261119.json",
+      "git_blob_sha1": "791e6be736d7802497df6c1e3a4df81d5ec2d8fe"
+    },
+    "fold56": {
+      "path": "research/experiments/n11-head1410-fifth-sixth-win7-receipt-fold-20261119/output/fifth-sixth-win7-root-receipt-fold-20261119.json",
+      "git_blob_sha1": "134796a7de1e472c26e35defd7340d208a10b9b0"
+    },
+    "k1039sweep": {
+      "path": "research/experiments/n11-head1410-witness-28-root-full-depth10-sweep-20261119/output/witness-28-root-depth10-sweep-20261119.json",
+      "git_blob_sha1": "a4e5d6f8ef180b0b7910ea90bf240c1a3a773134"
+    },
+    "k1040sweep": {
+      "path": "research/experiments/n11-head1410-k1038-witness-remaining-3-root-depth10-sweep-20261119/output/k1038-witness-remaining-3-root-depth10-sweep-20261119.json",
+      "git_blob_sha1": "82adcae089ceb88241cd3ec96d98cf2c9800535d"
+    }
+  },
+  "target": {
+    "parents": 5,
+    "rows": 112,
+    "maximum_candidate_root_span": 2
+  },
+  "receipts": {
+    "global_fold_rows": 113,
+    "global_hits": 13,
+    "cost78c_79c_rows": 19,
+    "first_win7_rows": 4,
+    "second_third_win7_rows": 7,
+    "fourth_win7_rows": 3,
+    "fifth_sixth_win7_rows": 2,
+    "closed_target_rows": 25,
+    "first_win7_target_rows": [
+      "00000000000000821082000000800000",
+      "00000000000000821082000004000000"
+    ],
+    "second_third_win7_target_rows": [
+      "00000000000000821082000000002000",
+      "00000000000000821082000000004000",
+      "00000000000000821082000000008000",
+      "00000000000000821082000000400000"
+    ],
+    "fourth_win7_target_rows": [
+      "00000000000000801202020001000000",
+      "00000000000000801202040001000000"
+    ],
+    "fifth_win7_target_rows": [
+      "00000000000000805202000001000000"
+    ],
+    "sixth_win7_target_rows": [
+      "00000000020000809002000040000000"
+    ],
+    "residual_rows": 87,
+    "residual_row_hex": [
+      "00000000000000003800000008001001",
+      "00000000000000003800000008001020",
+      "00000000000000003800000008001080",
+      "00000000000000003800000008001100",
+      "00000000000000003800000008001200",
+      "00000000000000003800000008001800",
+      "00000000000000003800000008002010",
+      "00000000000000003800000008002040",
+      "00000000000000003800000008002080",
+      "00000000000000003800000008002100",
+      "00000000000000003800000008005000",
+      "00000000000000003800000008011000",
+      "00000000000000003800000008500000",
+      "00000000000000003800000008900000",
+      "00000000000000003800000009000004",
+      "00000000000000003800000009040000",
+      "00000000000000003800000009800000",
+      "0000000000000000380000000a002000",
+      "0000000000000000380000000a080000",
+      "0000000000000000380000000b000000",
+      "00000000000000003800000209000000",
+      "00000000000000003800000248000000",
+      "00000000000000003800000409000000",
+      "00000000000000003800000808001000",
+      "00000000000000003800100008002000",
+      "00000000000000003800200008001000",
+      "00000000000000003800200008100000",
+      "00000000000000003800200009000000",
+      "00000000000000043800000008080000",
+      "00000000000000043800000008100000",
+      "00000000000000043800000009000000",
+      "00000000000000083800000008100000",
+      "00000000000000083800000048000000",
+      "00000000000000103800000008080000",
+      "00000000000000103800000009000000",
+      "00000000000000801202000000081000",
+      "00000000000000801202000000101000",
+      "00000000000000801202000000800100",
+      "00000000000000801202000000800200",
+      "00000000000000801202000000800400",
+      "00000000000000801202000000840000",
+      "00000000000000801202000000880000",
+      "00000000000000801202000000900000",
+      "00000000000000801202000001000100",
+      "00000000000000801202000001000200",
+      "00000000000000801202000001000400",
+      "00000000000000801202000001040000",
+      "00000000000000801202000001080000",
+      "00000000000000801202000020001000",
+      "00000000000000801202010000001000",
+      "00000000000000801202010001000000",
+      "00000000000000801202020000001000",
+      "00000000000000801202040000001000",
+      "00000000000000801202040000800000",
+      "00000000000000801202080000001000",
+      "00000000000000801212000000001000",
+      "00000000000000801212000001000000",
+      "00000000000000801222000000001000",
+      "00000000000000801222000000800000",
+      "00000000000000821082000000000001",
+      "00000000000000821082000000000004",
+      "00000000000000821082000000000008",
+      "00000000000000821082000000000010",
+      "00000000000000821082000000000800",
+      "00000000000000821082000000001000",
+      "00000000000000821082000200000000",
+      "00000000000000821082000400000000",
+      "00000000000000821082200000000000",
+      "00000000000000821082400000000000",
+      "00000000000000821082800000000000",
+      "00000000000000821083000000000000",
+      "00000000000000889002000000100000",
+      "00000000000000889002000080000000",
+      "00000000000000909002000000100000",
+      "00000000000000909002000080000000",
+      "00000000000000a09002000080000000",
+      "00000000000020003800000048000000",
+      "00000000000020809002000080000000",
+      "00000000000040809002000000100000",
+      "00000000000080003800000048000000",
+      "00000000010000003800000008100000",
+      "00000000010000809002000000100000",
+      "00000000010000809002000040000000",
+      "00000000010000809002000080000000",
+      "00000000020000801202000000100000",
+      "00000008000000003800000008100000",
+      "00000010000000801202000000000400"
+    ]
+  },
+  "verdict_pool": {
+    "known_refuted_roots": 310,
+    "known_win_roots": 162,
+    "refuted_before_sweep": 236,
+    "win_before_sweep": 156,
+    "sweep_added_refuted": 46,
+    "sweep_added_win": 2,
+    "fourth_receipt_win_added": 1,
+    "fifth_sixth_receipt_win_added": 2,
+    "witness_probe_added_refuted": 2,
+    "k1039_sweep_added_refuted": 23,
+    "k1040_sweep_added_refuted": 3,
+    "pool_roots": 117,
+    "pool_refuted": 79,
+    "pool_win": 6,
+    "eligible_candidates": 32,
+    "zero_residual_cover_in_pool": 6,
+    "limitation": "the known-verdict join uses the explicitly pinned sweep/receipt/probe sources (originals plus the 48-root depth-10 sweep, the first/second/third receipt folds, the K1035 28-root witness probes, the K1036 fifth/sixth fold, the K1039 full 28-root witness sweep and the K1040 3-root depth-10 sweep); it is not the full 8,964-entry cache join"
+  },
+  "resolve": {
+    "pair_edges": 17,
+    "singleton_eligible_rows": 8,
+    "maximum_matching": 12,
+    "matched_rows": 24,
+    "unmatched_rows": 63,
+    "unmatched_with_singleton": 6,
+    "stranded_rows": 57,
+    "stranded_row_hex": [
+      "00000000000000003800000008001001",
+      "00000000000000003800000008001020",
+      "00000000000000003800000008001080",
+      "00000000000000003800000008001100",
+      "00000000000000003800000008001200",
+      "00000000000000003800000008001800",
+      "00000000000000003800000008002010",
+      "00000000000000003800000008002040",
+      "00000000000000003800000008002080",
+      "00000000000000003800000008002100",
+      "00000000000000003800000008005000",
+      "00000000000000003800000008011000",
+      "00000000000000003800000008500000",
+      "00000000000000003800000008900000",
+      "00000000000000003800000009000004",
+      "00000000000000003800000009040000",
+      "00000000000000003800000009800000",
+      "0000000000000000380000000a002000",
+      "00000000000000003800000209000000",
+      "00000000000000003800000248000000",
+      "00000000000000003800000409000000",
+      "00000000000000003800000808001000",
+      "00000000000000003800100008002000",
+      "00000000000000003800200008001000",
+      "00000000000000003800200008100000",
+      "00000000000000003800200009000000",
+      "00000000000000043800000008100000",
+      "00000000000000043800000009000000",
+      "00000000000000083800000008100000",
+      "00000000000000103800000008080000",
+      "00000000000000103800000009000000",
+      "00000000000000801202000000800100",
+      "00000000000000801202000000800200",
+      "00000000000000801202000000800400",
+      "00000000000000801202000000840000",
+      "00000000000000801202000000880000",
+      "00000000000000801202000001000100",
+      "00000000000000801202000001000400",
+      "00000000000000801202000020001000",
+      "00000000000000801202010000001000",
+      "00000000000000801202040000800000",
+      "00000000000000821082000000000001",
+      "00000000000000821082000000000004",
+      "00000000000000821082000000000008",
+      "00000000000000821082000000000010",
+      "00000000000000821082000000000800",
+      "00000000000000821082000000001000",
+      "00000000000000821082000200000000",
+      "00000000000000821082000400000000",
+      "00000000000000821082200000000000",
+      "00000000000000821082400000000000",
+      "00000000000000821082800000000000",
+      "00000000000000821083000000000000",
+      "00000000000000a09002000080000000",
+      "00000000000040809002000000100000",
+      "00000000010000003800000008100000",
+      "00000008000000003800000008100000"
+    ],
+    "stranded_classification": {
+      "structural_rows": 53,
+      "plan_dependent_rows": 4,
+      "plan_dependent_matchable_rows": 0,
+      "classification_definition": [
+        "structural: no remaining eligible candidate in the 117-root pool covers this row over the current residual, so no depth-10 WIN7 receipt from the remaining pool can close it",
+        "plan-dependent: eligible 2-row candidates still cover this row; this specific maximum-cardinality matching plus singleton fallback leaves it unmatched",
+        "plan-dependent-matchable: a plan-dependent row that some alternative maximum-cardinality matching covers (verified by removing the row vertex: subgraph maximum + 1 equals the full maximum)",
+        "plan-dependent (not matchable): every maximum-cardinality matching leaves the row unmatched, but eligible candidates still cover it, so a depth-10 WIN7 receipt could still close it"
+      ],
+      "rows": [
+        {
+          "row_hex": "00000000000000003800000008001001",
+          "eligible_providers": [],
+          "classification": "structural"
+        },
+        {
+          "row_hex": "00000000000000003800000008001020",
+          "eligible_providers": [],
+          "classification": "structural"
+        },
+        {
+          "row_hex": "00000000000000003800000008001080",
+          "eligible_providers": [],
+          "classification": "structural"
+        },
+        {
+          "row_hex": "00000000000000003800000008001100",
+          "eligible_providers": [],
+          "classification": "structural"
+        },
+        {
+          "row_hex": "00000000000000003800000008001200",
+          "eligible_providers": [],
+          "classification": "structural"
+        },
+        {
+          "row_hex": "00000000000000003800000008001800",
+          "eligible_providers": [],
+          "classification": "structural"
+        },
+        {
+          "row_hex": "00000000000000003800000008002010",
+          "eligible_providers": [],
+          "classification": "structural"
+        },
+        {
+          "row_hex": "00000000000000003800000008002040",
+          "eligible_providers": [],
+          "classification": "structural"
+        },
+        {
+          "row_hex": "00000000000000003800000008002080",
+          "eligible_providers": [],
+          "classification": "structural"
+        },
+        {
+          "row_hex": "00000000000000003800000008002100",
+          "eligible_providers": [],
+          "classification": "structural"
+        },
+        {
+          "row_hex": "00000000000000003800000008005000",
+          "eligible_providers": [],
+          "classification": "structural"
+        },
+        {
+          "row_hex": "00000000000000003800000008011000",
+          "eligible_providers": [],
+          "classification": "structural"
+        },
+        {
+          "row_hex": "00000000000000003800000008500000",
+          "eligible_providers": [],
+          "classification": "structural"
+        },
+        {
+          "row_hex": "00000000000000003800000008900000",
+          "eligible_providers": [],
+          "classification": "structural"
+        },
+        {
+          "row_hex": "00000000000000003800000009000004",
+          "eligible_providers": [],
+          "classification": "structural"
+        },
+        {
+          "row_hex": "00000000000000003800000009040000",
+          "eligible_providers": [],
+          "classification": "structural"
+        },
+        {
+          "row_hex": "00000000000000003800000009800000",
+          "eligible_providers": [],
+          "classification": "structural"
+        },
+        {
+          "row_hex": "0000000000000000380000000a002000",
+          "eligible_providers": [],
+          "classification": "structural"
+        },
+        {
+          "row_hex": "00000000000000003800000209000000",
+          "eligible_providers": [],
+          "classification": "structural"
+        },
+        {
+          "row_hex": "00000000000000003800000248000000",
+          "eligible_providers": [],
+          "classification": "structural"
+        },
+        {
+          "row_hex": "00000000000000003800000409000000",
+          "eligible_providers": [],
+          "classification": "structural"
+        },
+        {
+          "row_hex": "00000000000000003800000808001000",
+          "eligible_providers": [],
+          "classification": "structural"
+        },
+        {
+          "row_hex": "00000000000000003800100008002000",
+          "eligible_providers": [],
+          "classification": "structural"
+        },
+        {
+          "row_hex": "00000000000000003800200008001000",
+          "eligible_providers": [],
+          "classification": "structural"
+        },
+        {
+          "row_hex": "00000000000000003800200008100000",
+          "eligible_providers": [],
+          "classification": "structural"
+        },
+        {
+          "row_hex": "00000000000000003800200009000000",
+          "eligible_providers": [],
+          "classification": "structural"
+        },
+        {
+          "row_hex": "00000000000000043800000008100000",
+          "eligible_providers": [],
+          "classification": "structural"
+        },
+        {
+          "row_hex": "00000000000000043800000009000000",
+          "eligible_providers": [],
+          "classification": "structural"
+        },
+        {
+          "row_hex": "00000000000000083800000008100000",
+          "eligible_providers": [],
+          "classification": "structural"
+        },
+        {
+          "row_hex": "00000000000000103800000008080000",
+          "eligible_providers": [],
+          "classification": "structural"
+        },
+        {
+          "row_hex": "00000000000000103800000009000000",
+          "eligible_providers": [],
+          "classification": "structural"
+        },
+        {
+          "row_hex": "00000000000000801202000000800100",
+          "eligible_providers": [],
+          "classification": "structural"
+        },
+        {
+          "row_hex": "00000000000000801202000000800200",
+          "eligible_providers": [],
+          "classification": "structural"
+        },
+        {
+          "row_hex": "00000000000000801202000000800400",
+          "eligible_providers": [],
+          "classification": "structural"
+        },
+        {
+          "row_hex": "00000000000000801202000000840000",
+          "eligible_providers": [],
+          "classification": "structural"
+        },
+        {
+          "row_hex": "00000000000000801202000000880000",
+          "eligible_providers": [],
+          "classification": "structural"
+        },
+        {
+          "row_hex": "00000000000000801202000001000100",
+          "eligible_providers": [],
+          "classification": "structural"
+        },
+        {
+          "row_hex": "00000000000000801202000001000400",
+          "eligible_providers": [],
+          "classification": "structural"
+        },
+        {
+          "row_hex": "00000000000000801202000020001000",
+          "eligible_providers": [],
+          "classification": "structural"
+        },
+        {
+          "row_hex": "00000000000000801202010000001000",
+          "eligible_providers": [],
+          "classification": "structural"
+        },
+        {
+          "row_hex": "00000000000000801202040000800000",
+          "eligible_providers": [
+            "00000000000000801222040000800000"
+          ],
+          "classification": "plan-dependent"
+        },
+        {
+          "row_hex": "00000000000000821082000000000001",
+          "eligible_providers": [],
+          "classification": "structural"
+        },
+        {
+          "row_hex": "00000000000000821082000000000004",
+          "eligible_providers": [],
+          "classification": "structural"
+        },
+        {
+          "row_hex": "00000000000000821082000000000008",
+          "eligible_providers": [],
+          "classification": "structural"
+        },
+        {
+          "row_hex": "00000000000000821082000000000010",
+          "eligible_providers": [],
+          "classification": "structural"
+        },
+        {
+          "row_hex": "00000000000000821082000000000800",
+          "eligible_providers": [],
+          "classification": "structural"
+        },
+        {
+          "row_hex": "00000000000000821082000000001000",
+          "eligible_providers": [],
+          "classification": "structural"
+        },
+        {
+          "row_hex": "00000000000000821082000200000000",
+          "eligible_providers": [],
+          "classification": "structural"
+        },
+        {
+          "row_hex": "00000000000000821082000400000000",
+          "eligible_providers": [],
+          "classification": "structural"
+        },
+        {
+          "row_hex": "00000000000000821082200000000000",
+          "eligible_providers": [],
+          "classification": "structural"
+        },
+        {
+          "row_hex": "00000000000000821082400000000000",
+          "eligible_providers": [],
+          "classification": "structural"
+        },
+        {
+          "row_hex": "00000000000000821082800000000000",
+          "eligible_providers": [],
+          "classification": "structural"
+        },
+        {
+          "row_hex": "00000000000000821083000000000000",
+          "eligible_providers": [],
+          "classification": "structural"
+        },
+        {
+          "row_hex": "00000000000000a09002000080000000",
+          "eligible_providers": [
+            "00000000000000b09002000080000000"
+          ],
+          "classification": "plan-dependent"
+        },
+        {
+          "row_hex": "00000000000040809002000000100000",
+          "eligible_providers": [
+            "00000010000000801202040000000400"
+          ],
+          "classification": "plan-dependent"
+        },
+        {
+          "row_hex": "00000000010000003800000008100000",
+          "eligible_providers": [],
+          "classification": "structural"
+        },
+        {
+          "row_hex": "00000008000000003800000008100000",
+          "eligible_providers": [
+            "00000008800000003800000008100000",
+            "00000010000000801202000100000200"
+          ],
+          "classification": "plan-dependent"
+        }
+      ]
+    },
+    "witness_size": 18,
+    "lower_bound": 44,
+    "covered_rows": 30
+  },
+  "witness": [
+    {
+      "root": "0000000000000004380000000a080000",
+      "rows": [
+        "0000000000000000380000000a080000",
+        "00000000000000043800000008080000"
+      ]
+    },
+    {
+      "root": "00000000000000801202000001081000",
+      "rows": [
+        "00000000000000801202000000081000",
+        "00000000000000801202000001080000"
+      ]
+    },
+    {
+      "root": "00000000000000801202000001101000",
+      "rows": [
+        "00000000000000801202000000101000"
+      ]
+    },
+    {
+      "root": "00000000000000801202000001140000",
+      "rows": [
+        "00000000000000801202000001040000"
+      ]
+    },
+    {
+      "root": "00000000000000801202010001100000",
+      "rows": [
+        "00000000000000801202010001000000"
+      ]
+    },
+    {
+      "root": "00000000000000801202060000001000",
+      "rows": [
+        "00000000000000801202020000001000",
+        "00000000000000801202040000001000"
+      ]
+    },
+    {
+      "root": "00000000000000801212080000001000",
+      "rows": [
+        "00000000000000801202080000001000",
+        "00000000000000801212000000001000"
+      ]
+    },
+    {
+      "root": "00000000000000801222000000900000",
+      "rows": [
+        "00000000000000801202000000900000",
+        "00000000000000801222000000800000"
+      ]
+    },
+    {
+      "root": "00000000000000909002200000100000",
+      "rows": [
+        "00000000000000801222000000001000",
+        "00000000000000909002000000100000"
+      ]
+    },
+    {
+      "root": "00000000000000989002000080000000",
+      "rows": [
+        "00000000000000889002000080000000",
+        "00000000000000909002000080000000"
+      ]
+    },
+    {
+      "root": "00000000010000809002000080100000",
+      "rows": [
+        "00000000010000809002000000100000",
+        "00000000010000809002000080000000"
+      ]
+    },
+    {
+      "root": "00000000010000809003000040000000",
+      "rows": [
+        "00000000010000809002000040000000"
+      ]
+    },
+    {
+      "root": "00000000020000801202080000100000",
+      "rows": [
+        "00000000000020809002000080000000",
+        "00000000020000801202000000100000"
+      ]
+    },
+    {
+      "root": "00000000020080003800000048000000",
+      "rows": [
+        "00000000000080003800000048000000"
+      ]
+    },
+    {
+      "root": "00000000040004801202000000000080",
+      "rows": [
+        "00000000000000801212000001000000",
+        "00000000000020003800000048000000"
+      ]
+    },
+    {
+      "root": "00000000040080801202000000100000",
+      "rows": [
+        "0000000000000000380000000b000000"
+      ]
+    },
+    {
+      "root": "00000000240000003820000000000800",
+      "rows": [
+        "00000000000000083800000048000000",
+        "00000000000000801202000001000200"
+      ]
+    },
+    {
+      "root": "00000010000000801222000000000400",
+      "rows": [
+        "00000000000000889002000000100000",
+        "00000010000000801202000000000400"
+      ]
+    }
+  ],
+  "root_checks": [
+    {
+      "root": "0000000000000004380000000a080000",
+      "stones": 7,
+      "d4_canonical": true,
+      "unsafe_quadruples": 0,
+      "covered_residual_rows": [
+        "0000000000000000380000000a080000",
+        "00000000000000043800000008080000"
+      ]
+    },
+    {
+      "root": "00000000000000801202000001081000",
+      "stones": 7,
+      "d4_canonical": true,
+      "unsafe_quadruples": 0,
+      "covered_residual_rows": [
+        "00000000000000801202000000081000",
+        "00000000000000801202000001080000"
+      ]
+    },
+    {
+      "root": "00000000000000801202000001101000",
+      "stones": 7,
+      "d4_canonical": true,
+      "unsafe_quadruples": 0,
+      "covered_residual_rows": [
+        "00000000000000801202000000101000"
+      ]
+    },
+    {
+      "root": "00000000000000801202000001140000",
+      "stones": 7,
+      "d4_canonical": true,
+      "unsafe_quadruples": 0,
+      "covered_residual_rows": [
+        "00000000000000801202000001040000"
+      ]
+    },
+    {
+      "root": "00000000000000801202010001100000",
+      "stones": 7,
+      "d4_canonical": true,
+      "unsafe_quadruples": 0,
+      "covered_residual_rows": [
+        "00000000000000801202010001000000"
+      ]
+    },
+    {
+      "root": "00000000000000801202060000001000",
+      "stones": 7,
+      "d4_canonical": true,
+      "unsafe_quadruples": 0,
+      "covered_residual_rows": [
+        "00000000000000801202020000001000",
+        "00000000000000801202040000001000"
+      ]
+    },
+    {
+      "root": "00000000000000801212080000001000",
+      "stones": 7,
+      "d4_canonical": true,
+      "unsafe_quadruples": 0,
+      "covered_residual_rows": [
+        "00000000000000801202080000001000",
+        "00000000000000801212000000001000"
+      ]
+    },
+    {
+      "root": "00000000000000801222000000900000",
+      "stones": 7,
+      "d4_canonical": true,
+      "unsafe_quadruples": 0,
+      "covered_residual_rows": [
+        "00000000000000801202000000900000",
+        "00000000000000801222000000800000"
+      ]
+    },
+    {
+      "root": "00000000000000909002200000100000",
+      "stones": 7,
+      "d4_canonical": true,
+      "unsafe_quadruples": 0,
+      "covered_residual_rows": [
+        "00000000000000801222000000001000",
+        "00000000000000909002000000100000"
+      ]
+    },
+    {
+      "root": "00000000000000989002000080000000",
+      "stones": 7,
+      "d4_canonical": true,
+      "unsafe_quadruples": 0,
+      "covered_residual_rows": [
+        "00000000000000889002000080000000",
+        "00000000000000909002000080000000"
+      ]
+    },
+    {
+      "root": "00000000010000809002000080100000",
+      "stones": 7,
+      "d4_canonical": true,
+      "unsafe_quadruples": 0,
+      "covered_residual_rows": [
+        "00000000010000809002000000100000",
+        "00000000010000809002000080000000"
+      ]
+    },
+    {
+      "root": "00000000010000809003000040000000",
+      "stones": 7,
+      "d4_canonical": true,
+      "unsafe_quadruples": 0,
+      "covered_residual_rows": [
+        "00000000010000809002000040000000"
+      ]
+    },
+    {
+      "root": "00000000020000801202080000100000",
+      "stones": 7,
+      "d4_canonical": true,
+      "unsafe_quadruples": 0,
+      "covered_residual_rows": [
+        "00000000000020809002000080000000",
+        "00000000020000801202000000100000"
+      ]
+    },
+    {
+      "root": "00000000020080003800000048000000",
+      "stones": 7,
+      "d4_canonical": true,
+      "unsafe_quadruples": 0,
+      "covered_residual_rows": [
+        "00000000000080003800000048000000"
+      ]
+    },
+    {
+      "root": "00000000040004801202000000000080",
+      "stones": 7,
+      "d4_canonical": true,
+      "unsafe_quadruples": 0,
+      "covered_residual_rows": [
+        "00000000000000801212000001000000",
+        "00000000000020003800000048000000"
+      ]
+    },
+    {
+      "root": "00000000040080801202000000100000",
+      "stones": 7,
+      "d4_canonical": true,
+      "unsafe_quadruples": 0,
+      "covered_residual_rows": [
+        "0000000000000000380000000b000000"
+      ]
+    },
+    {
+      "root": "00000000240000003820000000000800",
+      "stones": 7,
+      "d4_canonical": true,
+      "unsafe_quadruples": 0,
+      "covered_residual_rows": [
+        "00000000000000083800000048000000",
+        "00000000000000801202000001000200"
+      ]
+    },
+    {
+      "root": "00000010000000801222000000000400",
+      "stones": 7,
+      "d4_canonical": true,
+      "unsafe_quadruples": 0,
+      "covered_residual_rows": [
+        "00000000000000889002000000100000",
+        "00000010000000801202000000000400"
+      ]
+    }
+  ],
+  "witness_sweep_plan": {
+    "probed_refuted_roots": [
+      "00000000000000003800000008001021",
+      "0000000000000000380000000b080000",
+      "00000000000000003800280009000000",
+      "00000000000000083800000048100000",
+      "00000000000000403800000008100020",
+      "00000000000000801202000000840200",
+      "00000000000000801202000000880400",
+      "00000000000000801202000001040100",
+      "00000000000000801202000011000400",
+      "00000000000000801202000020101000",
+      "00000000000000801202010001080000",
+      "00000000000000801202040000900000",
+      "00000000000000801202050000001000",
+      "000000000000008012020a0000001000",
+      "00000000000000801212000001001000",
+      "00000000000000801222000000801000",
+      "00000000000000889002000080100000",
+      "00000000000000909002000080100000",
+      "00000000000020a09002000080000000",
+      "00000000000040889002000000100000",
+      "00000000010000809003000080000000",
+      "00000000010004003800000008002000",
+      "00000000020000801202000100100000",
+      "00000000020000801222000000100000",
+      "00000000040000801202000120000000",
+      "0000000a000000003800000008100000",
+      "00000010000000801202000000000404",
+      "00000010000000801202000100000100"
+    ],
+    "previously_stranded_rows": {
+      "total": 40,
+      "still_stranded": 37,
+      "newly_matched": 3,
+      "newly_matched_row_hex": [
+        "00000000000000043800000008080000",
+        "00000000000000801202000001000200",
+        "00000000000020003800000048000000"
+      ]
+    },
+    "refuted_roots_now_in_witness": [],
+    "untested_witness_roots": [
+      "0000000000000004380000000a080000",
+      "00000000000000801202000001081000",
+      "00000000000000801202000001101000",
+      "00000000000000801202000001140000",
+      "00000000000000801202010001100000",
+      "00000000000000801202060000001000",
+      "00000000000000801212080000001000",
+      "00000000000000801222000000900000",
+      "00000000000000909002200000100000",
+      "00000000000000989002000080000000",
+      "00000000010000809002000080100000",
+      "00000000010000809003000040000000",
+      "00000000020000801202080000100000",
+      "00000000020080003800000048000000",
+      "00000000040004801202000000000080",
+      "00000000040080801202000000100000",
+      "00000000240000003820000000000800",
+      "00000010000000801222000000000400"
+    ],
+    "untested_witness_rows_coverable": 30,
+    "previous_witness_roots_reused": [],
+    "previous_witness_roots_dropped": [
+      "0000000000000000380000000b080000",
+      "00000000000000003800280009000000",
+      "00000000000000083800000048100000",
+      "00000000000000403800000008100020",
+      "00000000000000801202000000840200",
+      "00000000000000801202000000880400",
+      "00000000000000801202000001040100",
+      "00000000000000801202000011000400",
+      "00000000000000801202000020101000",
+      "00000000000000801202010001080000",
+      "00000000000000801202040000900000",
+      "00000000000000801202050000001000",
+      "000000000000008012020a0000001000",
+      "00000000000000801212000001001000",
+      "00000000000000801222000000801000",
+      "00000000000000805202080001000000",
+      "00000000000000889002000080100000",
+      "00000000000000909002000080100000",
+      "00000000000020a09002000080000000",
+      "00000000010004003800000008002000",
+      "00000000020000801202000100100000",
+      "00000000040000801202000080100000",
+      "00000000040000801202000120000000",
+      "0000000a000000003800000008100000",
+      "00000010000000801202000000000404",
+      "00000010000000801202000100000100"
+    ],
+    "note": "untested_witness_roots are the next depth-10 probe targets; they are candidate plan entries, not certificates."
+  },
+  "checks": [
+    {
+      "name": "original 236/156 enumerated totals reproduce",
+      "pass": true
+    },
+    {
+      "name": "sweep adds exactly 46 REFUTED-D10 pool roots",
+      "pass": true
+    },
+    {
+      "name": "witness probes add exactly 2 REFUTED-D10 and 1 WIN",
+      "pass": true
+    },
+    {
+      "name": "fifth/sixth receipts add exactly 2 WINs (284/162 at fold head)",
+      "pass": true
+    },
+    {
+      "name": "K1039 sweep adds exactly 23 new REFUTED-D10 (post-fold 307/162)",
+      "pass": true
+    },
+    {
+      "name": "K1040 sweep adds exactly 3 new REFUTED-D10 (post-fold 310/162)",
+      "pass": true
+    },
+    {
+      "name": "receipt roots are the only pool WINs (6)",
+      "pass": true
+    },
+    {
+      "name": "total closed target rows 25 (13+2+2+4+2+1+1)",
+      "pass": true
+    },
+    {
+      "name": "87 residual rows remain (were 89; the two receipt target rows closed)",
+      "pass": true
+    },
+    {
+      "name": "candidate pool = 117 - 79 refuted - 6 win = 32",
+      "pass": true
+    },
+    {
+      "name": "witness rows are open residual rows",
+      "pass": true
+    },
+    {
+      "name": "previously stranded rows either remain stranded or became matched",
+      "pass": true
+    },
+    {
+      "name": "stranded classification partitions the stranded rows",
+      "pass": true
+    },
+    {
+      "name": "structural classification consistent with eligible coverage",
+      "pass": true
+    },
+    {
+      "name": "witness covers every non-stranded residual row",
+      "pass": true
+    }
+  ],
+  "all_pass": true,
+  "interpretation_guard": [
+    "This re-solve strikes the refuted candidates (including the 23 newly REFUTED-D10 roots of the K1039 full witness sweep and the 3 newly REFUTED-D10 roots of the K1040 remaining-witness sweep, which completes the depth-10 judgment of the entire K1038 26-root witness: 2 WIN + 24 REFUTED + 0 CAPPED) and recomputes a fresh candidate cover over the 87 residual rows; witness roots still require actual depth-10 probes and independently verified certificates.",
+    "Of the 57 stranded rows, 53 are structural: no remaining eligible candidate in the 117-root pool covers them, so closing them needs a candidate beyond this pool, a deeper search, or a different closure mechanism. NOT a mathematical impossibility proof.",
+    "The other 4 stranded rows are plan-dependent: eligible 2-row candidates in the pool still cover them (0 are coverable by an alternative maximum-cardinality plan; 4 are left unmatched by every maximum-cardinality plan yet remain closable by a depth-10 WIN7 receipt from the pool).",
+    "The fifth/sixth receipt roots were already independently verified WIN7-D10 certificates (K1036) and are folded here; the remaining untested witness roots are NOT certificates.",
+    "REFUTED-D10 is not a LOSS proof. The refuted witness roots only bound first-player wins within depth 10 from those exact roots.",
+    "The standard 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, and classes 1/2/4 remain UNKNOWN."
+  ]
+}

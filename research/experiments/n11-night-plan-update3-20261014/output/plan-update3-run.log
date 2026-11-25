@@ -1,0 +1,104 @@
+{
+  "schema": "n11-night-repaired-joint-plan-update3-v1",
+  "baseline_plan_sha256": "06072128cc5e41e1f3026a8e7f16cc394eb4620335aebbef24e051646abfd665",
+  "baseline_schema": "n11-adaptive-repaired-joint-plan-update2-v1",
+  "baseline_union_size": 31728,
+  "union_size": 31774,
+  "union_delta_vs_baseline": 46,
+  "roots": 19,
+  "third_moves_covered": 2261,
+  "baseline_free_thirds": 122,
+  "free_thirds": 122,
+  "baseline_excluded_s4_classes": [
+    3942,
+    5408,
+    5687,
+    5690,
+    13938
+  ],
+  "excluded_s4_classes": [
+    3569,
+    3570,
+    3942,
+    4050,
+    5408,
+    5687,
+    5690,
+    5830,
+    13938
+  ],
+  "new_excluded_s4_classes": [
+    3569,
+    3570,
+    4050,
+    5830
+  ],
+  "baseline_resolved_s5_verdicts": {
+    "121263": 2,
+    "126899": 2,
+    "144095": 1,
+    "145001": 2,
+    "209644": 1,
+    "558600": 2
+  },
+  "resolved_s5_verdicts": {
+    "121263": 2,
+    "126017": 1,
+    "126899": 2,
+    "137694": 2,
+    "143240": 2,
+    "144095": 1,
+    "145001": 2,
+    "209644": 1,
+    "220231": 2,
+    "558600": 2
+  },
+  "known_loss_removed_from_cost": [
+    137694,
+    143240,
+    220231
+  ],
+  "changed_choice_count": 3,
+  "verification": {
+    "passed": true,
+    "checked_selected_s4": 351,
+    "complete_third_boundaries": 19,
+    "complete_s5_boundaries": 351,
+    "third_moves_checked": 2261,
+    "known_win_selected": 0,
+    "known_loss_in_union": 0
+  },
+  "trust": "optimistic plan only: old exact-S5 leaves remain solver-trusted; ten additions (558600 LOSS, 209644 WIN, 126899 LOSS, 144095 WIN, 121263 LOSS, 145001 LOSS, 137694 LOSS, 143240 LOSS, 220231 LOSS, 126017 WIN) terminal-verified with trusted leaves 0; all remaining required S5 verdicts UNKNOWN; not a root proof"
+}
+{
+  "labels_equal": true,
+  "candidates_equal": true,
+  "obligations_equal": true,
+  "choices_identical": {
+    "staged_forward": true,
+    "staged_reverse": true
+  },
+  "union_sizes": {
+    "batch": 31774,
+    "staged_forward": 31774,
+    "staged_reverse": 31774
+  },
+  "upper_bound_differences": {
+    "staged_forward": {
+      "union_size": 31774,
+      "symmetric_difference_vs_batch": 0,
+      "added_vs_batch": [],
+      "missing_vs_batch": [],
+      "changed_choices_vs_batch": 0,
+      "free_thirds": 122
+    },
+    "staged_reverse": {
+      "union_size": 31774,
+      "symmetric_difference_vs_batch": 0,
+      "added_vs_batch": [],
+      "missing_vs_batch": [],
+      "changed_choices_vs_batch": 0,
+      "free_thirds": 122
+    }
+  }
+}

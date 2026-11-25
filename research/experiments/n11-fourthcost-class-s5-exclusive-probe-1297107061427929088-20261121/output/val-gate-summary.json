@@ -1,0 +1,49 @@
+{
+ "mode": "validation gate (fresh re-run this session)",
+ "replica": "jsreplay.js sha256 845856175d3c793a7eb4306f5902ecda3f1c046a8a53e8f34ed375e51febc3df",
+ "method": "the four published two-target validation rows re-run fresh; identical stones/legal/is_or/budget/result/nodes required; wall_s may differ",
+ "rows": [
+  {
+   "row": "val-at2m-first",
+   "input_csv": "at2m-s5-1152921504606851072-536870946.input.csv",
+   "budget": 2000000,
+   "expected_source": "reply27 probe-13 experiment output/raw/val-*.out.csv",
+   "expected_sha256": "d766154adda47bd2af09905fa8d3e709abc7192596b928d5ff1251f1e1c911e7",
+   "fresh_output_file": "output/val-gate/val-at2m-first.out",
+   "fresh_output_sha256": "d766154adda47bd2af09905fa8d3e709abc7192596b928d5ff1251f1e1c911e7",
+   "node_exact": true
+  },
+  {
+   "row": "val-at2m-second",
+   "input_csv": "at2m-s5-1188950301626860544-536870912.input.csv",
+   "budget": 2000000,
+   "expected_source": "reply27 probe-13 experiment output/raw/val-*.out.csv",
+   "expected_sha256": "23e36443eb69d120e271cd80b8391f86873daf747ee1c7f78e91fc92fc1c6ebe",
+   "fresh_output_file": "output/val-gate/val-at2m-second.out",
+   "fresh_output_sha256": "0af850c443c5574f5a806c760bc236f7937c109003e7bf6ca7e3b5b023646481",
+   "node_exact": true
+  },
+  {
+   "row": "val-first-15m",
+   "input_csv": "first-15m-s5-1152921504606851072-536870946.input.csv",
+   "budget": 15000000,
+   "expected_source": "reply27 probe-13 experiment output/raw/val-*.out.csv",
+   "expected_sha256": "7f5040ae9358e780c61345f41a224d68d2a7f3c4f1ae782ed7701ecf2e19e092",
+   "fresh_output_file": "output/val-gate/val-first-15m.out",
+   "fresh_output_sha256": "410cc98e3b34a51e9781d14a026ceb730005ec90561c2a9b86acee2be7c86419",
+   "node_exact": true
+  },
+  {
+   "row": "val-second-15m",
+   "input_csv": "second-15m-s5-1188950301626860544-536870912.input.csv",
+   "budget": 15000000,
+   "expected_source": "reply27 probe-13 experiment output/raw/val-*.out.csv",
+   "expected_sha256": "c45ea3fa8654241cdd2aa874c86ded1110a3527b159bb657b5ecdac4f68c2e6e",
+   "fresh_output_file": "output/val-gate/val-second-15m.out",
+   "fresh_output_sha256": "7253282c800f8c3cc297c622665f142ef568b8e71fb930aff943dc8a46298042",
+   "node_exact": true
+  }
+ ],
+ "summary": "4/4 node-exact PASS",
+ "status_guard": "gate rows are two-target S5 replays; no new verdict; 11x11 UNKNOWN"
+}

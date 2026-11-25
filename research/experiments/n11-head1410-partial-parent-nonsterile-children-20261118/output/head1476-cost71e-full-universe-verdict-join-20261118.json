@@ -1,0 +1,1802 @@
+{
+  "all_pass": true,
+  "candidate_root_universe": {
+    "candidate_nodes": 88919559,
+    "certificate_manifest": {
+      "all_subroots_pass": true,
+      "all_unions_exact": true,
+      "blob_sha1": "a9ddec439e1931614679c2575e4adeb5fe770d2b",
+      "certificates": 13,
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost71e-certificates/class2-lane-cost71e-win7-certificates-20261117.json"
+    },
+    "cost71e_capped": 0,
+    "cost71e_joined_fraction": "71/757",
+    "cost71e_refuted_d10": 58,
+    "cost71e_sweep_roots_joined": 71,
+    "cost71e_win7_d10": 13,
+    "distinct_d4_roots": 757,
+    "matched_roots": [
+      {
+        "andclose": true,
+        "batch": 1,
+        "bit": 0,
+        "capped": false,
+        "cover_membership": 735,
+        "cover_rows": [
+          "00000000000000c09002000000002000"
+        ],
+        "d4_canon_root": "00000000000000c09002000000002001",
+        "nodes": 262648,
+        "raw_root": "00000000000000c09002000000002001",
+        "terminal_stone_range": [
+          13,
+          17
+        ],
+        "top15_rank": null,
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose": true,
+        "batch": 1,
+        "bit": 1,
+        "capped": false,
+        "cover_membership": 735,
+        "cover_rows": [
+          "00000000000000c09002000000002000"
+        ],
+        "d4_canon_root": "00000000000000c09002000000002002",
+        "nodes": 452397,
+        "raw_root": "00000000000000c09002000000002002",
+        "terminal_stone_range": [
+          13,
+          17
+        ],
+        "top15_rank": null,
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose": true,
+        "batch": 1,
+        "bit": 2,
+        "capped": false,
+        "cover_membership": 735,
+        "cover_rows": [
+          "00000000000000c09002000000002000"
+        ],
+        "d4_canon_root": "00000000000000c09002000000002004",
+        "nodes": 1155161,
+        "raw_root": "00000000000000c09002000000002004",
+        "terminal_stone_range": [
+          13,
+          17
+        ],
+        "top15_rank": null,
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose": true,
+        "batch": 1,
+        "bit": 3,
+        "capped": false,
+        "cover_membership": 735,
+        "cover_rows": [
+          "00000000000000c09002000000002000"
+        ],
+        "d4_canon_root": "00000000000000c09002000000002008",
+        "nodes": 1069212,
+        "raw_root": "00000000000000c09002000000002008",
+        "terminal_stone_range": [
+          13,
+          17
+        ],
+        "top15_rank": null,
+        "verdict": "WIN7-D10"
+      },
+      {
+        "andclose": true,
+        "batch": 1,
+        "bit": 4,
+        "capped": false,
+        "cover_membership": 735,
+        "cover_rows": [
+          "00000000000000c09002000000002000"
+        ],
+        "d4_canon_root": "00000000000000c09002000000002010",
+        "nodes": 2431024,
+        "raw_root": "00000000000000c09002000000002010",
+        "terminal_stone_range": [
+          13,
+          17
+        ],
+        "top15_rank": null,
+        "verdict": "WIN7-D10"
+      },
+      {
+        "andclose": true,
+        "batch": 1,
+        "bit": 6,
+        "capped": false,
+        "cover_membership": 735,
+        "cover_rows": [
+          "00000000000000c09002000000002000"
+        ],
+        "d4_canon_root": "00000000000000c09002000000002040",
+        "nodes": 2237199,
+        "raw_root": "00000000000000c09002000000002040",
+        "terminal_stone_range": [
+          13,
+          17
+        ],
+        "top15_rank": null,
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose": true,
+        "batch": 1,
+        "bit": 7,
+        "capped": false,
+        "cover_membership": 735,
+        "cover_rows": [
+          "00000000000000c09002000000002000"
+        ],
+        "d4_canon_root": "00000000000000c09002000000002080",
+        "nodes": 301786,
+        "raw_root": "00000000000000c09002000000002080",
+        "terminal_stone_range": [
+          13,
+          17
+        ],
+        "top15_rank": null,
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose": true,
+        "batch": 1,
+        "bit": 8,
+        "capped": false,
+        "cover_membership": 735,
+        "cover_rows": [
+          "00000000000000c09002000000002000"
+        ],
+        "d4_canon_root": "00000000000000c09002000000002100",
+        "nodes": 2675348,
+        "raw_root": "00000000000000c09002000000002100",
+        "terminal_stone_range": [
+          13,
+          17
+        ],
+        "top15_rank": null,
+        "verdict": "WIN7-D10"
+      },
+      {
+        "andclose": true,
+        "batch": 1,
+        "bit": 9,
+        "capped": false,
+        "cover_membership": 50625,
+        "cover_rows": [
+          "00000000000000403800000008200000",
+          "00000000000000c09002000000002000"
+        ],
+        "d4_canon_root": "00000000000000c09002000000002200",
+        "nodes": 910209,
+        "raw_root": "00000000000000c09002000000002200",
+        "terminal_stone_range": [
+          13,
+          17
+        ],
+        "top15_rank": 8,
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose": true,
+        "batch": 2,
+        "bit": 10,
+        "capped": false,
+        "cover_membership": 735,
+        "cover_rows": [
+          "00000000000000c09002000000002000"
+        ],
+        "d4_canon_root": "00000000000000c09002000000002400",
+        "nodes": 380110,
+        "raw_root": "00000000000000c09002000000002400",
+        "terminal_stone_range": [
+          13,
+          17
+        ],
+        "top15_rank": null,
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose": true,
+        "batch": 2,
+        "bit": 14,
+        "capped": false,
+        "cover_membership": 735,
+        "cover_rows": [
+          "00000000000000c09002000000002000"
+        ],
+        "d4_canon_root": "00000000000000c09002000000006000",
+        "nodes": 198502,
+        "raw_root": "00000000000000c09002000000006000",
+        "terminal_stone_range": [
+          13,
+          17
+        ],
+        "top15_rank": null,
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose": true,
+        "batch": 2,
+        "bit": 15,
+        "capped": false,
+        "cover_membership": 735,
+        "cover_rows": [
+          "00000000000000c09002000000002000"
+        ],
+        "d4_canon_root": "00000000000000c0900200000000a000",
+        "nodes": 268777,
+        "raw_root": "00000000000000c0900200000000a000",
+        "terminal_stone_range": [
+          13,
+          17
+        ],
+        "top15_rank": null,
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose": true,
+        "batch": 2,
+        "bit": 17,
+        "capped": false,
+        "cover_membership": 735,
+        "cover_rows": [
+          "00000000000000c09002000000002000"
+        ],
+        "d4_canon_root": "00000000000000c09002000000022000",
+        "nodes": 161252,
+        "raw_root": "00000000000000c09002000000022000",
+        "terminal_stone_range": [
+          13,
+          17
+        ],
+        "top15_rank": null,
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose": true,
+        "batch": 2,
+        "bit": 19,
+        "capped": false,
+        "cover_membership": 735,
+        "cover_rows": [
+          "00000000000000c09002000000002000"
+        ],
+        "d4_canon_root": "00000000000000c09002000000082000",
+        "nodes": 399517,
+        "raw_root": "00000000000000c09002000000082000",
+        "terminal_stone_range": [
+          13,
+          17
+        ],
+        "top15_rank": null,
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose": true,
+        "batch": 9,
+        "bit": 20,
+        "capped": false,
+        "cover_membership": 735,
+        "cover_rows": [
+          "00000000000000c09002000000002000"
+        ],
+        "d4_canon_root": "00000000000000c09002000000102000",
+        "nodes": 66575,
+        "raw_root": "00000000000000c09002000000102000",
+        "terminal_stone_range": [
+          13,
+          17
+        ],
+        "top15_rank": null,
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose": true,
+        "batch": 2,
+        "bit": 21,
+        "capped": false,
+        "cover_membership": 735,
+        "cover_rows": [
+          "00000000000000c09002000000002000"
+        ],
+        "d4_canon_root": "00000000000000c09002000000202000",
+        "nodes": 18639,
+        "raw_root": "00000000000000c09002000000202000",
+        "terminal_stone_range": [
+          13,
+          17
+        ],
+        "top15_rank": null,
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose": true,
+        "batch": 2,
+        "bit": 23,
+        "capped": false,
+        "cover_membership": 735,
+        "cover_rows": [
+          "00000000000000c09002000000002000"
+        ],
+        "d4_canon_root": "00000000000000c09002000000802000",
+        "nodes": 160699,
+        "raw_root": "00000000000000c09002000000802000",
+        "terminal_stone_range": [
+          13,
+          17
+        ],
+        "top15_rank": null,
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose": true,
+        "batch": 2,
+        "bit": 24,
+        "capped": false,
+        "cover_membership": 735,
+        "cover_rows": [
+          "00000000000000c09002000000002000"
+        ],
+        "d4_canon_root": "00000000000000c09002000001002000",
+        "nodes": 242822,
+        "raw_root": "00000000000000c09002000001002000",
+        "terminal_stone_range": [
+          13,
+          17
+        ],
+        "top15_rank": null,
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose": true,
+        "batch": 2,
+        "bit": 25,
+        "capped": false,
+        "cover_membership": 735,
+        "cover_rows": [
+          "00000000000000c09002000000002000"
+        ],
+        "d4_canon_root": "00000000000000c09002000002002000",
+        "nodes": 357187,
+        "raw_root": "00000000000000c09002000002002000",
+        "terminal_stone_range": [
+          13,
+          17
+        ],
+        "top15_rank": null,
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose": true,
+        "batch": 3,
+        "bit": 28,
+        "capped": false,
+        "cover_membership": 735,
+        "cover_rows": [
+          "00000000000000c09002000000002000"
+        ],
+        "d4_canon_root": "00000000000000c09002000010002000",
+        "nodes": 149483,
+        "raw_root": "00000000000000c09002000010002000",
+        "terminal_stone_range": [
+          13,
+          17
+        ],
+        "top15_rank": null,
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose": true,
+        "batch": 3,
+        "bit": 29,
+        "capped": false,
+        "cover_membership": 735,
+        "cover_rows": [
+          "00000000000000c09002000000002000"
+        ],
+        "d4_canon_root": "00000000000000c09002000020002000",
+        "nodes": 1320951,
+        "raw_root": "00000000000000c09002000020002000",
+        "terminal_stone_range": [
+          13,
+          17
+        ],
+        "top15_rank": null,
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose": true,
+        "batch": 3,
+        "bit": 30,
+        "capped": false,
+        "cover_membership": 735,
+        "cover_rows": [
+          "00000000000000c09002000000002000"
+        ],
+        "d4_canon_root": "00000000000000c09002000040002000",
+        "nodes": 549777,
+        "raw_root": "00000000000000c09002000040002000",
+        "terminal_stone_range": [
+          13,
+          17
+        ],
+        "top15_rank": null,
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose": true,
+        "batch": 3,
+        "bit": 31,
+        "capped": false,
+        "cover_membership": 735,
+        "cover_rows": [
+          "00000000000000c09002000000002000"
+        ],
+        "d4_canon_root": "00000000000000c09002000080002000",
+        "nodes": 28860,
+        "raw_root": "00000000000000c09002000080002000",
+        "terminal_stone_range": [
+          13,
+          17
+        ],
+        "top15_rank": null,
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose": true,
+        "batch": 3,
+        "bit": 32,
+        "capped": false,
+        "cover_membership": 735,
+        "cover_rows": [
+          "00000000000000c09002000000002000"
+        ],
+        "d4_canon_root": "00000000000000c09002000100002000",
+        "nodes": 1952240,
+        "raw_root": "00000000000000c09002000100002000",
+        "terminal_stone_range": [
+          13,
+          17
+        ],
+        "top15_rank": null,
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose": true,
+        "batch": 3,
+        "bit": 34,
+        "capped": false,
+        "cover_membership": 735,
+        "cover_rows": [
+          "00000000000000c09002000000002000"
+        ],
+        "d4_canon_root": "00000000000000c09002000400002000",
+        "nodes": 236927,
+        "raw_root": "00000000000000c09002000400002000",
+        "terminal_stone_range": [
+          13,
+          17
+        ],
+        "top15_rank": null,
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose": true,
+        "batch": 3,
+        "bit": 35,
+        "capped": false,
+        "cover_membership": 735,
+        "cover_rows": [
+          "00000000000000c09002000000002000"
+        ],
+        "d4_canon_root": "00000000000000c09002000800002000",
+        "nodes": 503046,
+        "raw_root": "00000000000000c09002000800002000",
+        "terminal_stone_range": [
+          13,
+          17
+        ],
+        "top15_rank": null,
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose": true,
+        "batch": 3,
+        "bit": 41,
+        "capped": false,
+        "cover_membership": 735,
+        "cover_rows": [
+          "00000000000000c09002000000002000"
+        ],
+        "d4_canon_root": "00000000000000c09002020000002000",
+        "nodes": 508866,
+        "raw_root": "00000000000000c09002020000002000",
+        "terminal_stone_range": [
+          13,
+          17
+        ],
+        "top15_rank": null,
+        "verdict": "WIN7-D10"
+      },
+      {
+        "andclose": true,
+        "batch": 3,
+        "bit": 42,
+        "capped": false,
+        "cover_membership": 735,
+        "cover_rows": [
+          "00000000000000c09002000000002000"
+        ],
+        "d4_canon_root": "00000000000000c09002040000002000",
+        "nodes": 712107,
+        "raw_root": "00000000000000c09002040000002000",
+        "terminal_stone_range": [
+          13,
+          17
+        ],
+        "top15_rank": null,
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose": true,
+        "batch": 4,
+        "bit": 44,
+        "capped": false,
+        "cover_membership": 735,
+        "cover_rows": [
+          "00000000000000c09002000000002000"
+        ],
+        "d4_canon_root": "00000000000000c09002100000002000",
+        "nodes": 958821,
+        "raw_root": "00000000000000c09002100000002000",
+        "terminal_stone_range": [
+          13,
+          17
+        ],
+        "top15_rank": null,
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose": true,
+        "batch": 4,
+        "bit": 45,
+        "capped": false,
+        "cover_membership": 735,
+        "cover_rows": [
+          "00000000000000c09002000000002000"
+        ],
+        "d4_canon_root": "00000000000000c09002200000002000",
+        "nodes": 264492,
+        "raw_root": "00000000000000c09002200000002000",
+        "terminal_stone_range": [
+          13,
+          17
+        ],
+        "top15_rank": null,
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose": true,
+        "batch": 4,
+        "bit": 47,
+        "capped": false,
+        "cover_membership": 735,
+        "cover_rows": [
+          "00000000000000c09002000000002000"
+        ],
+        "d4_canon_root": "00000000000000c09002800000002000",
+        "nodes": 988337,
+        "raw_root": "00000000000000c09002800000002000",
+        "terminal_stone_range": [
+          13,
+          17
+        ],
+        "top15_rank": null,
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose": true,
+        "batch": 4,
+        "bit": 53,
+        "capped": false,
+        "cover_membership": 735,
+        "cover_rows": [
+          "00000000000000c09002000000002000"
+        ],
+        "d4_canon_root": "00000000000000c09022000000002000",
+        "nodes": 2395804,
+        "raw_root": "00000000000000c09022000000002000",
+        "terminal_stone_range": [
+          13,
+          17
+        ],
+        "top15_rank": null,
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose": true,
+        "batch": 4,
+        "bit": 54,
+        "capped": false,
+        "cover_membership": 735,
+        "cover_rows": [
+          "00000000000000c09002000000002000"
+        ],
+        "d4_canon_root": "00000000000000c09042000000002000",
+        "nodes": 2363545,
+        "raw_root": "00000000000000c09042000000002000",
+        "terminal_stone_range": [
+          13,
+          17
+        ],
+        "top15_rank": null,
+        "verdict": "WIN7-D10"
+      },
+      {
+        "andclose": true,
+        "batch": 4,
+        "bit": 55,
+        "capped": false,
+        "cover_membership": 735,
+        "cover_rows": [
+          "00000000000000c09002000000002000"
+        ],
+        "d4_canon_root": "00000000000000c09082000000002000",
+        "nodes": 249806,
+        "raw_root": "00000000000000c09082000000002000",
+        "terminal_stone_range": [
+          13,
+          17
+        ],
+        "top15_rank": null,
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose": true,
+        "batch": 4,
+        "bit": 58,
+        "capped": false,
+        "cover_membership": 735,
+        "cover_rows": [
+          "00000000000000c09002000000002000"
+        ],
+        "d4_canon_root": "00000000000000c09402000000002000",
+        "nodes": 858616,
+        "raw_root": "00000000000000c09402000000002000",
+        "terminal_stone_range": [
+          13,
+          17
+        ],
+        "top15_rank": null,
+        "verdict": "WIN7-D10"
+      },
+      {
+        "andclose": true,
+        "batch": 4,
+        "bit": 61,
+        "capped": false,
+        "cover_membership": 735,
+        "cover_rows": [
+          "00000000000000c09002000000002000"
+        ],
+        "d4_canon_root": "00000000000000c0b002000000002000",
+        "nodes": 224985,
+        "raw_root": "00000000000000c0b002000000002000",
+        "terminal_stone_range": [
+          13,
+          17
+        ],
+        "top15_rank": null,
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose": true,
+        "batch": 4,
+        "bit": 62,
+        "capped": false,
+        "cover_membership": 735,
+        "cover_rows": [
+          "00000000000000c09002000000002000"
+        ],
+        "d4_canon_root": "00000000000000c0d002000000002000",
+        "nodes": 333274,
+        "raw_root": "00000000000000c0d002000000002000",
+        "terminal_stone_range": [
+          13,
+          17
+        ],
+        "top15_rank": null,
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose": true,
+        "batch": 5,
+        "bit": 64,
+        "capped": false,
+        "cover_membership": 735,
+        "cover_rows": [
+          "00000000000000c09002000000002000"
+        ],
+        "d4_canon_root": "00000000000000c19002000000002000",
+        "nodes": 325042,
+        "raw_root": "00000000000000c19002000000002000",
+        "terminal_stone_range": [
+          13,
+          17
+        ],
+        "top15_rank": null,
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose": true,
+        "batch": 5,
+        "bit": 66,
+        "capped": false,
+        "cover_membership": 735,
+        "cover_rows": [
+          "00000000000000c09002000000002000"
+        ],
+        "d4_canon_root": "00000000000000c49002000000002000",
+        "nodes": 3810240,
+        "raw_root": "00000000000000c49002000000002000",
+        "terminal_stone_range": [
+          13,
+          17
+        ],
+        "top15_rank": null,
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose": true,
+        "batch": 9,
+        "bit": 67,
+        "capped": false,
+        "cover_membership": 735,
+        "cover_rows": [
+          "00000000000000c09002000000002000"
+        ],
+        "d4_canon_root": "00000000000000c89002000000002000",
+        "nodes": 242986,
+        "raw_root": "00000000000000c89002000000002000",
+        "terminal_stone_range": [
+          13,
+          17
+        ],
+        "top15_rank": null,
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose": true,
+        "batch": 5,
+        "bit": 68,
+        "capped": false,
+        "cover_membership": 735,
+        "cover_rows": [
+          "00000000000000c09002000000002000"
+        ],
+        "d4_canon_root": "00000000000000d09002000000002000",
+        "nodes": 103707,
+        "raw_root": "00000000000000d09002000000002000",
+        "terminal_stone_range": [
+          13,
+          17
+        ],
+        "top15_rank": null,
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose": true,
+        "batch": 5,
+        "bit": 76,
+        "capped": false,
+        "cover_membership": 735,
+        "cover_rows": [
+          "00000000000000c09002000000002000"
+        ],
+        "d4_canon_root": "00000000000001841202000000080000",
+        "nodes": 1733802,
+        "raw_root": "00000000000010c09002000000002000",
+        "terminal_stone_range": [
+          13,
+          17
+        ],
+        "top15_rank": null,
+        "verdict": "WIN7-D10"
+      },
+      {
+        "andclose": true,
+        "batch": 5,
+        "bit": 77,
+        "capped": false,
+        "cover_membership": 735,
+        "cover_rows": [
+          "00000000000000c09002000000002000"
+        ],
+        "d4_canon_root": "00000000000020c09002000000002000",
+        "nodes": 4965168,
+        "raw_root": "00000000000020c09002000000002000",
+        "terminal_stone_range": [
+          13,
+          17
+        ],
+        "top15_rank": null,
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose": true,
+        "batch": 5,
+        "bit": 78,
+        "capped": false,
+        "cover_membership": 735,
+        "cover_rows": [
+          "00000000000000c09002000000002000"
+        ],
+        "d4_canon_root": "00000000000040c09002000000002000",
+        "nodes": 5624674,
+        "raw_root": "00000000000040c09002000000002000",
+        "terminal_stone_range": [
+          13,
+          17
+        ],
+        "top15_rank": null,
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose": true,
+        "batch": 5,
+        "bit": 79,
+        "capped": false,
+        "cover_membership": 735,
+        "cover_rows": [
+          "00000000000000c09002000000002000"
+        ],
+        "d4_canon_root": "00000000000080c09002000000002000",
+        "nodes": 773921,
+        "raw_root": "00000000000080c09002000000002000",
+        "terminal_stone_range": [
+          13,
+          17
+        ],
+        "top15_rank": null,
+        "verdict": "WIN7-D10"
+      },
+      {
+        "andclose": true,
+        "batch": 5,
+        "bit": 80,
+        "capped": false,
+        "cover_membership": 735,
+        "cover_rows": [
+          "00000000000000c09002000000002000"
+        ],
+        "d4_canon_root": "00000000000100c09002000000002000",
+        "nodes": 1030268,
+        "raw_root": "00000000000100c09002000000002000",
+        "terminal_stone_range": [
+          13,
+          17
+        ],
+        "top15_rank": null,
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose": true,
+        "batch": 5,
+        "bit": 85,
+        "capped": false,
+        "cover_membership": 735,
+        "cover_rows": [
+          "00000000000000c09002000000002000"
+        ],
+        "d4_canon_root": "00000000000081801202000000080000",
+        "nodes": 822830,
+        "raw_root": "00000000002000c09002000000002000",
+        "terminal_stone_range": [
+          13,
+          17
+        ],
+        "top15_rank": null,
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose": true,
+        "batch": 6,
+        "bit": 86,
+        "capped": false,
+        "cover_membership": 51150,
+        "cover_rows": [
+          "00000000000000403800000008004000",
+          "00000000000000c09002000000002000"
+        ],
+        "d4_canon_root": "00000000000041801202000000080000",
+        "nodes": 658628,
+        "raw_root": "00000000004000c09002000000002000",
+        "terminal_stone_range": [
+          13,
+          17
+        ],
+        "top15_rank": 3,
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose": true,
+        "batch": 6,
+        "bit": 87,
+        "capped": false,
+        "cover_membership": 50700,
+        "cover_rows": [
+          "00000000000000403800000008000008",
+          "00000000000000c09002000000002000"
+        ],
+        "d4_canon_root": "00000000000021801202000000080000",
+        "nodes": 1872170,
+        "raw_root": "00000000008000c09002000000002000",
+        "terminal_stone_range": [
+          13,
+          17
+        ],
+        "top15_rank": 7,
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose": true,
+        "batch": 6,
+        "bit": 88,
+        "capped": false,
+        "cover_membership": 735,
+        "cover_rows": [
+          "00000000000000c09002000000002000"
+        ],
+        "d4_canon_root": "00000000010000c09002000000002000",
+        "nodes": 9928319,
+        "raw_root": "00000000010000c09002000000002000",
+        "terminal_stone_range": [
+          13,
+          17
+        ],
+        "top15_rank": null,
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose": true,
+        "batch": 6,
+        "bit": 91,
+        "capped": false,
+        "cover_membership": 735,
+        "cover_rows": [
+          "00000000000000c09002000000002000"
+        ],
+        "d4_canon_root": "00000000022001003800000008000000",
+        "nodes": 2215200,
+        "raw_root": "00000000080000c09002000000002000",
+        "terminal_stone_range": [
+          13,
+          17
+        ],
+        "top15_rank": null,
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose": true,
+        "batch": 6,
+        "bit": 92,
+        "capped": false,
+        "cover_membership": 735,
+        "cover_rows": [
+          "00000000000000c09002000000002000"
+        ],
+        "d4_canon_root": "00000000020005003800000008000000",
+        "nodes": 2565177,
+        "raw_root": "00000000100000c09002000000002000",
+        "terminal_stone_range": [
+          13,
+          17
+        ],
+        "top15_rank": null,
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose": true,
+        "batch": 6,
+        "bit": 94,
+        "capped": false,
+        "cover_membership": 51075,
+        "cover_rows": [
+          "00000000000000403800400008000000",
+          "00000000000000c09002000000002000"
+        ],
+        "d4_canon_root": "00000000020001003810000008000000",
+        "nodes": 2464870,
+        "raw_root": "00000000400000c09002000000002000",
+        "terminal_stone_range": [
+          13,
+          17
+        ],
+        "top15_rank": 6,
+        "verdict": "WIN7-D10"
+      },
+      {
+        "andclose": true,
+        "batch": 6,
+        "bit": 95,
+        "capped": false,
+        "cover_membership": 735,
+        "cover_rows": [
+          "00000000000000c09002000000002000"
+        ],
+        "d4_canon_root": "00000000020001003800020008000000",
+        "nodes": 417212,
+        "raw_root": "00000000800000c09002000000002000",
+        "terminal_stone_range": [
+          13,
+          17
+        ],
+        "top15_rank": null,
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose": true,
+        "batch": 6,
+        "bit": 96,
+        "capped": false,
+        "cover_membership": 735,
+        "cover_rows": [
+          "00000000000000c09002000000002000"
+        ],
+        "d4_canon_root": "00000000020001003800000048000000",
+        "nodes": 1971782,
+        "raw_root": "00000001000000c09002000000002000",
+        "terminal_stone_range": [
+          13,
+          17
+        ],
+        "top15_rank": null,
+        "verdict": "WIN7-D10"
+      },
+      {
+        "andclose": true,
+        "batch": 9,
+        "bit": 97,
+        "capped": false,
+        "cover_membership": 735,
+        "cover_rows": [
+          "00000000000000c09002000000002000"
+        ],
+        "d4_canon_root": "00000000020001003800000008080000",
+        "nodes": 81320,
+        "raw_root": "00000002000000c09002000000002000",
+        "terminal_stone_range": [
+          13,
+          17
+        ],
+        "top15_rank": null,
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose": true,
+        "batch": 6,
+        "bit": 98,
+        "capped": false,
+        "cover_membership": 735,
+        "cover_rows": [
+          "00000000000000c09002000000002000"
+        ],
+        "d4_canon_root": "00000000010001801202000000080000",
+        "nodes": 2061718,
+        "raw_root": "00000004000000c09002000000002000",
+        "terminal_stone_range": [
+          13,
+          17
+        ],
+        "top15_rank": null,
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose": true,
+        "batch": 7,
+        "bit": 100,
+        "capped": false,
+        "cover_membership": 735,
+        "cover_rows": [
+          "00000000000000c09002000000002000"
+        ],
+        "d4_canon_root": "00000000200000003801000080001000",
+        "nodes": 1027024,
+        "raw_root": "00000010000000c09002000000002000",
+        "terminal_stone_range": [
+          13,
+          17
+        ],
+        "top15_rank": null,
+        "verdict": "WIN7-D10"
+      },
+      {
+        "andclose": true,
+        "batch": 7,
+        "bit": 102,
+        "capped": false,
+        "cover_membership": 735,
+        "cover_rows": [
+          "00000000000000c09002000000002000"
+        ],
+        "d4_canon_root": "00000000024001003800000008000000",
+        "nodes": 802301,
+        "raw_root": "00000040000000c09002000000002000",
+        "terminal_stone_range": [
+          13,
+          17
+        ],
+        "top15_rank": null,
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose": true,
+        "batch": 7,
+        "bit": 105,
+        "capped": false,
+        "cover_membership": 735,
+        "cover_rows": [
+          "00000000000000c09002000000002000"
+        ],
+        "d4_canon_root": "00000000020001003820000008000000",
+        "nodes": 3736405,
+        "raw_root": "00000200000000c09002000000002000",
+        "terminal_stone_range": [
+          13,
+          17
+        ],
+        "top15_rank": null,
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose": true,
+        "batch": 7,
+        "bit": 106,
+        "capped": false,
+        "cover_membership": 51075,
+        "cover_rows": [
+          "00000000000000403800000408000000",
+          "00000000000000c09002000000002000"
+        ],
+        "d4_canon_root": "00000000020001003800040008000000",
+        "nodes": 421079,
+        "raw_root": "00000400000000c09002000000002000",
+        "terminal_stone_range": [
+          13,
+          17
+        ],
+        "top15_rank": 5,
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose": true,
+        "batch": 7,
+        "bit": 107,
+        "capped": false,
+        "cover_membership": 735,
+        "cover_rows": [
+          "00000000000000c09002000000002000"
+        ],
+        "d4_canon_root": "00000000020001003800000088000000",
+        "nodes": 499963,
+        "raw_root": "00000800000000c09002000000002000",
+        "terminal_stone_range": [
+          13,
+          17
+        ],
+        "top15_rank": null,
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose": true,
+        "batch": 7,
+        "bit": 109,
+        "capped": false,
+        "cover_membership": 735,
+        "cover_rows": [
+          "00000000000000c09002000000002000"
+        ],
+        "d4_canon_root": "00000000020001003800000008000200",
+        "nodes": 496538,
+        "raw_root": "00002000000000c09002000000002000",
+        "terminal_stone_range": [
+          13,
+          17
+        ],
+        "top15_rank": null,
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose": true,
+        "batch": 7,
+        "bit": 110,
+        "capped": false,
+        "cover_membership": 58410,
+        "cover_rows": [
+          "00000000000000801206000000000400",
+          "00000000000000c09002000000002000"
+        ],
+        "d4_canon_root": "00000000200000003801000080000001",
+        "nodes": 1191862,
+        "raw_root": "00004000000000c09002000000002000",
+        "terminal_stone_range": [
+          13,
+          17
+        ],
+        "top15_rank": 1,
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose": true,
+        "batch": 7,
+        "bit": 111,
+        "capped": false,
+        "cover_membership": 735,
+        "cover_rows": [
+          "00000000000000c09002000000002000"
+        ],
+        "d4_canon_root": "00000000200000003801000080000800",
+        "nodes": 1508626,
+        "raw_root": "00008000000000c09002000000002000",
+        "terminal_stone_range": [
+          13,
+          17
+        ],
+        "top15_rank": null,
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose": true,
+        "batch": 7,
+        "bit": 113,
+        "capped": false,
+        "cover_membership": 735,
+        "cover_rows": [
+          "00000000000000c09002000000002000"
+        ],
+        "d4_canon_root": "00000000028001003800000008000000",
+        "nodes": 358111,
+        "raw_root": "00020000000000c09002000000002000",
+        "terminal_stone_range": [
+          13,
+          17
+        ],
+        "top15_rank": null,
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose": true,
+        "batch": 8,
+        "bit": 114,
+        "capped": false,
+        "cover_membership": 735,
+        "cover_rows": [
+          "00000000000000c09002000000002000"
+        ],
+        "d4_canon_root": "00000000020011003800000008000000",
+        "nodes": 332202,
+        "raw_root": "00040000000000c09002000000002000",
+        "terminal_stone_range": [
+          13,
+          17
+        ],
+        "top15_rank": null,
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose": true,
+        "batch": 8,
+        "bit": 116,
+        "capped": false,
+        "cover_membership": 735,
+        "cover_rows": [
+          "00000000000000c09002000000002000"
+        ],
+        "d4_canon_root": "00000000020001003840000008000000",
+        "nodes": 2390643,
+        "raw_root": "00100000000000c09002000000002000",
+        "terminal_stone_range": [
+          13,
+          17
+        ],
+        "top15_rank": null,
+        "verdict": "WIN7-D10"
+      },
+      {
+        "andclose": true,
+        "batch": 8,
+        "bit": 117,
+        "capped": false,
+        "cover_membership": 735,
+        "cover_rows": [
+          "00000000000000c09002000000002000"
+        ],
+        "d4_canon_root": "00000000020001003800080008000000",
+        "nodes": 1312626,
+        "raw_root": "00200000000000c09002000000002000",
+        "terminal_stone_range": [
+          13,
+          17
+        ],
+        "top15_rank": null,
+        "verdict": "REFUTED-D10"
+      },
+      {
+        "andclose": true,
+        "batch": 8,
+        "bit": 119,
+        "capped": false,
+        "cover_membership": 735,
+        "cover_rows": [
+          "00000000000000c09002000000002000"
+        ],
+        "d4_canon_root": "00000000020001003800000008200000",
+        "nodes": 2375039,
+        "raw_root": "00800000000000c09002000000002000",
+        "terminal_stone_range": [
+          13,
+          17
+        ],
+        "top15_rank": null,
+        "verdict": "WIN7-D10"
+      },
+      {
+        "andclose": true,
+        "batch": 8,
+        "bit": 120,
+        "capped": false,
+        "cover_membership": 735,
+        "cover_rows": [
+          "00000000000000c09002000000002000"
+        ],
+        "d4_canon_root": "00000000020001003800000008000400",
+        "nodes": 449105,
+        "raw_root": "01000000000000c09002000000002000",
+        "terminal_stone_range": [
+          13,
+          17
+        ],
+        "top15_rank": null,
+        "verdict": "REFUTED-D10"
+      }
+    ],
+    "raw_batches": [
+      {
+        "batch": 1,
+        "candidate_bits": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          6,
+          7,
+          8,
+          9
+        ],
+        "candidate_count": 9,
+        "candidate_nodes": 11494984,
+        "git_blob_sha1": "d8f279c49c59ae9990590543bfcb92762a15dbff"
+      },
+      {
+        "batch": 2,
+        "candidate_bits": [
+          10,
+          14,
+          15,
+          17,
+          19,
+          21,
+          23,
+          24,
+          25
+        ],
+        "candidate_count": 9,
+        "candidate_nodes": 2187505,
+        "git_blob_sha1": "068c78522d763e685e90901f2fa455e8d08af5fe"
+      },
+      {
+        "batch": 3,
+        "candidate_bits": [
+          28,
+          29,
+          30,
+          31,
+          32,
+          34,
+          35,
+          41,
+          42
+        ],
+        "candidate_count": 9,
+        "candidate_nodes": 5962257,
+        "git_blob_sha1": "b328ef87c9470bcdcfe752306a54859a8c9d764f"
+      },
+      {
+        "batch": 4,
+        "candidate_bits": [
+          44,
+          45,
+          47,
+          53,
+          54,
+          55,
+          58,
+          61,
+          62
+        ],
+        "candidate_count": 9,
+        "candidate_nodes": 8637680,
+        "git_blob_sha1": "1655120dd13423b6a65e951721271a1c32e19f7f"
+      },
+      {
+        "batch": 5,
+        "candidate_bits": [
+          64,
+          66,
+          68,
+          76,
+          77,
+          78,
+          79,
+          80,
+          85
+        ],
+        "candidate_count": 9,
+        "candidate_nodes": 19189652,
+        "git_blob_sha1": "7e3afdd181e9a68c235a27100dd8bc1003513f81"
+      },
+      {
+        "batch": 6,
+        "candidate_bits": [
+          86,
+          87,
+          88,
+          91,
+          92,
+          94,
+          95,
+          96,
+          98
+        ],
+        "candidate_count": 9,
+        "candidate_nodes": 24155076,
+        "git_blob_sha1": "7f2e1fe078468357112a22bf0a08494b14138d38"
+      },
+      {
+        "batch": 7,
+        "candidate_bits": [
+          100,
+          102,
+          105,
+          106,
+          107,
+          109,
+          110,
+          111,
+          113
+        ],
+        "candidate_count": 9,
+        "candidate_nodes": 10041909,
+        "git_blob_sha1": "7c1519eadea48b1a32f4cb8663d4ceaf78d8be3c"
+      },
+      {
+        "batch": 8,
+        "candidate_bits": [
+          114,
+          116,
+          117,
+          119,
+          120
+        ],
+        "candidate_count": 5,
+        "candidate_nodes": 6859615,
+        "git_blob_sha1": "37d0ed0a1217332a62635af16de808df0571eb14"
+      },
+      {
+        "batch": 9,
+        "candidate_bits": [
+          20,
+          67,
+          97
+        ],
+        "candidate_count": 3,
+        "candidate_nodes": 390881,
+        "git_blob_sha1": "bc384419ba2b8f8b0f55ef2a234f22c68c069bb6"
+      }
+    ],
+    "total_nodes_including_pilots": 88950177
+  },
+  "check_count": 12,
+  "checks": {
+    "all_757_roots_cover_at_most_two_rows": true,
+    "cost71e_13_certificates_exact_union": true,
+    "cost71e_13_win_58_refuted_zero_capped": true,
+    "cost71e_71_of_71_d4_roots_in_universe": true,
+    "cost71e_71_of_71_raw_bits": true,
+    "eleven_target_rows": true,
+    "membership_757_distinct_roots": true,
+    "no_verdict_conflict": true,
+    "post_filter_all_survivors_include_known_win": true,
+    "three_prior_unknown_top15_roots_now_refuted": true,
+    "top15_fully_classified": true,
+    "top15_hitting_set_reproduced": true
+  },
+  "date": "2026-11-18",
+  "interpretation_guard": "This is a join of already published cost71e raw verdicts/certificates to a separate 757-root minimum-cover universe. It creates no new game-engine verdict and does not close an S6 manifest row. REFUTED-D10 is not a LOSS proof. The 14,496 covers are only those avoiding the 13 REFUTED roots among the top15; other roots in them may remain unclassified or may have statuses outside this audit. The standard 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, and classes 1/2/4 remain UNKNOWN.",
+  "minimum_cover_counts": {
+    "after_all_13_refuted_top15": {
+      "covers_avoiding_refuted": 14496,
+      "covers_containing_both_known_wins": 5196,
+      "covers_containing_each_known_win": {
+        "00000000000000c09002000000001200": 10071,
+        "00000000020001003810000008000000": 9621
+      },
+      "covers_containing_only_each_known_win": {
+        "00000000000000c09002000000001200": 4875,
+        "00000000020001003810000008000000": 4425
+      },
+      "covers_without_either_known_win": 0,
+      "interpretation": "All surviving six-root covers contain at least one of the two known WIN7-D10 roots; the other roots in these covers are not thereby proven WIN."
+    },
+    "after_prior_10_refuted_top15": {
+      "covers_avoiding_refuted": 38265,
+      "covers_with_known_win": 24990,
+      "covers_without_known_win": 13275,
+      "no_win_residual_per_unknown_root": {
+        "00000000000000c09002000000002200": 4425,
+        "00000000000041801202000000080000": 4425,
+        "00000000200000003801000080000001": 4425
+      },
+      "pairwise_intersection_first_two_unknown_roots": 0
+    },
+    "after_rank8_refuted": {
+      "covers_avoiding_11_refuted": 33765,
+      "covers_without_known_win": 8850
+    },
+    "base_minimum_covers": 359610
+  },
+  "receipt_fold": {
+    "closed_manifest_rows_by_this_join": 0,
+    "cost71e_status": "pending behind the cost-76c, cost-66i, cost-66j and cost-69j folds",
+    "note": "The 13 certificates are published, but this audit does not fold them into the S6 manifest. The cost71e claim still lists the cost76c, cost66i, cost66j and cost69j fold dependencies."
+  },
+  "schema": "n11-head1476-cost71e-full-universe-verdict-join-20261118-v1",
+  "script_blob_sha1": "1a2b7e35e885a935f1b6fd7dcd6b8813978e8192",
+  "source_blob_pins": {
+    "cost71e_certificate_manifest": "a9ddec439e1931614679c2575e4adeb5fe770d2b",
+    "cost71e_claim": "3ca1c69864f5c3d63b48ea6d96bc21f45ba06299",
+    "cost71e_raw_audit": "9f56bdb74a71ef5a647432409ffd76928702870a",
+    "cost71e_raw_batch_blobs": {
+      "1": "d8f279c49c59ae9990590543bfcb92762a15dbff",
+      "2": "068c78522d763e685e90901f2fa455e8d08af5fe",
+      "3": "b328ef87c9470bcdcfe752306a54859a8c9d764f",
+      "4": "1655120dd13423b6a65e951721271a1c32e19f7f",
+      "5": "7e3afdd181e9a68c235a27100dd8bc1003513f81",
+      "6": "7f2e1fe078468357112a22bf0a08494b14138d38",
+      "7": "7c1519eadea48b1a32f4cb8663d4ceaf78d8be3c",
+      "8": "37d0ed0a1217332a62635af16de808df0571eb14",
+      "9": "bc384419ba2b8f8b0f55ef2a234f22c68c069bb6"
+    },
+    "membership": "ab1e655f4a89a677e57515cdbacfe56894323013",
+    "top15_audit": "4fd00ae75658021d7a735bf1bd9823ed96cdc9d3"
+  },
+  "source_main_commit": "c56d630bd7e6a7e981de54073a5fd22f79c801cc",
+  "target_parent": "00000000000000403800000008000000",
+  "target_s6_rows": 11,
+  "top15_status": {
+    "final_counts": {
+      "REFUTED-D10": 13,
+      "UNKNOWN": 0,
+      "WIN7-D10": 2
+    },
+    "final_roots": [
+      {
+        "cost71e_batch": 7,
+        "cost71e_bit": 110,
+        "cost71e_nodes": 1191862,
+        "legal_replies": 62,
+        "membership": 58410,
+        "rank": 1,
+        "root": "00000000200000003801000080000001",
+        "status": "REFUTED-D10"
+      },
+      {
+        "cost71e_batch": null,
+        "cost71e_bit": null,
+        "cost71e_nodes": null,
+        "legal_replies": 53,
+        "membership": 51990,
+        "rank": 2,
+        "root": "00000000000000c29002000000001000",
+        "status": "REFUTED-D10"
+      },
+      {
+        "cost71e_batch": 6,
+        "cost71e_bit": 86,
+        "cost71e_nodes": 658628,
+        "legal_replies": 57,
+        "membership": 51150,
+        "rank": 3,
+        "root": "00000000000041801202000000080000",
+        "status": "REFUTED-D10"
+      },
+      {
+        "cost71e_batch": null,
+        "cost71e_bit": null,
+        "cost71e_nodes": null,
+        "legal_replies": 61,
+        "membership": 51090,
+        "rank": 4,
+        "root": "00000000000000c09002000200001000",
+        "status": "REFUTED-D10"
+      },
+      {
+        "cost71e_batch": 7,
+        "cost71e_bit": 106,
+        "cost71e_nodes": 421079,
+        "legal_replies": 62,
+        "membership": 51075,
+        "rank": 5,
+        "root": "00000000020001003800040008000000",
+        "status": "REFUTED-D10"
+      },
+      {
+        "cost71e_batch": 6,
+        "cost71e_bit": 94,
+        "cost71e_nodes": 2464870,
+        "legal_replies": 57,
+        "membership": 51075,
+        "rank": 6,
+        "root": "00000000020001003810000008000000",
+        "status": "WIN7-D10"
+      },
+      {
+        "cost71e_batch": 6,
+        "cost71e_bit": 87,
+        "cost71e_nodes": 1872170,
+        "legal_replies": 64,
+        "membership": 50700,
+        "rank": 7,
+        "root": "00000000000021801202000000080000",
+        "status": "REFUTED-D10"
+      },
+      {
+        "cost71e_batch": 1,
+        "cost71e_bit": 9,
+        "cost71e_nodes": 910209,
+        "legal_replies": 62,
+        "membership": 50625,
+        "rank": 8,
+        "root": "00000000000000c09002000000002200",
+        "status": "REFUTED-D10"
+      },
+      {
+        "cost71e_batch": null,
+        "cost71e_bit": null,
+        "cost71e_nodes": null,
+        "legal_replies": 59,
+        "membership": 45030,
+        "rank": 9,
+        "root": "00000000000000c29002000000400000",
+        "status": "REFUTED-D10"
+      },
+      {
+        "cost71e_batch": null,
+        "cost71e_bit": null,
+        "cost71e_nodes": null,
+        "legal_replies": 55,
+        "membership": 44340,
+        "rank": 10,
+        "root": "00000000000041801202000000100000",
+        "status": "REFUTED-D10"
+      },
+      {
+        "cost71e_batch": null,
+        "cost71e_bit": null,
+        "cost71e_nodes": null,
+        "legal_replies": 65,
+        "membership": 44280,
+        "rank": 11,
+        "root": "00000000000000c09002000200400000",
+        "status": "REFUTED-D10"
+      },
+      {
+        "cost71e_batch": null,
+        "cost71e_bit": null,
+        "cost71e_nodes": null,
+        "legal_replies": 55,
+        "membership": 44280,
+        "rank": 12,
+        "root": "00000000100001801202000000100000",
+        "status": "REFUTED-D10"
+      },
+      {
+        "cost71e_batch": null,
+        "cost71e_bit": null,
+        "cost71e_nodes": null,
+        "legal_replies": 55,
+        "membership": 44280,
+        "rank": 13,
+        "root": "00000000200040003801000000100000",
+        "status": "REFUTED-D10"
+      },
+      {
+        "cost71e_batch": null,
+        "cost71e_bit": null,
+        "cost71e_nodes": null,
+        "legal_replies": 60,
+        "membership": 43980,
+        "rank": 14,
+        "root": "00000000000021801202000000100000",
+        "status": "REFUTED-D10"
+      },
+      {
+        "cost71e_batch": null,
+        "cost71e_bit": null,
+        "cost71e_nodes": null,
+        "legal_replies": 60,
+        "membership": 43920,
+        "rank": 15,
+        "root": "00000000000000c09002000000001200",
+        "status": "WIN7-D10"
+      }
+    ],
+    "hitting_set": {
+      "covers_avoiding_all_top15": 0,
+      "minimum_cover_count": 359610
+    },
+    "newly_classified": [
+      {
+        "batch": 7,
+        "cost71e_bit": 110,
+        "joined_status": "REFUTED-D10",
+        "membership": 58410,
+        "nodes": 1191862,
+        "prior_status": "NOT_CLASSIFIED_BY_PINNED_STATUS_SOURCES",
+        "rank": 1,
+        "raw_root": "00004000000000c09002000000002000",
+        "root": "00000000200000003801000080000001"
+      },
+      {
+        "batch": 6,
+        "cost71e_bit": 86,
+        "joined_status": "REFUTED-D10",
+        "membership": 51150,
+        "nodes": 658628,
+        "prior_status": "NOT_CLASSIFIED_BY_PINNED_STATUS_SOURCES",
+        "rank": 3,
+        "raw_root": "00000000004000c09002000000002000",
+        "root": "00000000000041801202000000080000"
+      },
+      {
+        "batch": 1,
+        "cost71e_bit": 9,
+        "joined_status": "REFUTED-D10",
+        "membership": 50625,
+        "nodes": 910209,
+        "prior_status": "NOT_CLASSIFIED_BY_PINNED_STATUS_SOURCES",
+        "rank": 8,
+        "raw_root": "00000000000000c09002000000002200",
+        "root": "00000000000000c09002000000002200"
+      }
+    ],
+    "prior_counts": {
+      "NOT_CLASSIFIED": 3,
+      "REFUTED-D10": 10,
+      "WIN7-D10": 2
+    }
+  }
+}

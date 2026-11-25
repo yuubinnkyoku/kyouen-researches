@@ -1,0 +1,8 @@
+exhaustive: k=3, h=2, orbit-families=32768
+exhaustive: k=2, h=2, orbit-families=2048
+random: k=4, h=3, cases=1200
+random: k=5, h=3, cases=1000
+random: k=6, h=2, cases=1000
+witness k=4,h=1,orbits=[(3, 0), (1, 1)],polynomial={1: 1, 2: 6}
+PASS total=38016 independent brute-force comparisons
+PASS C++ exhaustive exchangeable hypergraph families=32768 k=3 h=2

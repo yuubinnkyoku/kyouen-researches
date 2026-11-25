@@ -1,0 +1,47 @@
+{
+  "cache_only_budget_zero_projections_ignored": {
+    "6": 172
+  },
+  "interpretation": "Direct positive-budget replay and cache-only rows are separate. Raw S7 propagation uses the fixed original-player AND/OR rule; S7 LOSS alone never implies S6 WIN. The six quarantined false S6 WIN keys are excluded from cache propagation.",
+  "preflight": {
+    "path": "research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/geometric-cache-preflight.json",
+    "sha256": "cf506ecd7c92985af32d881d03a6be216830ab8afc5383fed4c7d463db2fd7cc"
+  },
+  "raw_s6": {
+    "exact_keys": {},
+    "matching_sources": {},
+    "observations": {},
+    "same_or_higher_15m_unknown_keys": []
+  },
+  "raw_s7": {
+    "exact_keys": {},
+    "matching_sources": {},
+    "observations": {},
+    "target_s6_parent_intersections": {}
+  },
+  "s5_raw_history_audit": {
+    "path": "research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/raw-history-before-15m-fifth.json",
+    "scanned_csv_files": 11931,
+    "sha256": "bd1c7cdee9b525109438f10cf07bbee0ac8a5d6547301f4f4d2ca160aa28f864",
+    "target_s5_children": 1
+  },
+  "s5_results_from_raw_s6_s7_only": {},
+  "s5_results_with_saved_cache_s6_s7": {},
+  "s6_boundary": {
+    "distinct_canonical_keys": 90,
+    "legacy_false_s6_win_keys_in_boundary": [],
+    "s5_to_s6_edges": 90
+  },
+  "s6_derived_from_cache_s7": {},
+  "s6_derived_from_raw_s7": {},
+  "saved_cache_s6": {
+    "cache_only_keys": [],
+    "exact_keys": {},
+    "matching_sources": {}
+  },
+  "saved_cache_s7": {
+    "matching_sources": {},
+    "target_intersections": {}
+  },
+  "schema": "n11-reply27-target-s6-s7-preflight-v1"
+}

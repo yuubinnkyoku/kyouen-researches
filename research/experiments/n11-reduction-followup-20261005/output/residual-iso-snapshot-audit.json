@@ -1,0 +1,86 @@
+{
+  "n11_empty_root_outcome": "UNKNOWN",
+  "source": "research/experiments/n11-reduction-followup-20261005/output/n11-snapshots.json",
+  "snapshots": 826,
+  "exact_labeled": 826,
+  "gated": 0,
+  "exact_iso_unique": 460,
+  "states_saved_vs_separate_snapshot_keys": 366,
+  "duplicate_iso_groups": 32,
+  "states_in_duplicate_groups": 398,
+  "all_duplicate_groups_cross_multiple_board_D4_classes": true,
+  "by_min_legal": [
+    {
+      "min_legal": 1,
+      "states": 826,
+      "unique_iso": 460,
+      "states_saved": 366,
+      "duplicate_groups": 32
+    },
+    {
+      "min_legal": 2,
+      "states": 696,
+      "unique_iso": 459,
+      "states_saved": 237,
+      "duplicate_groups": 31
+    },
+    {
+      "min_legal": 3,
+      "states": 604,
+      "unique_iso": 457,
+      "states_saved": 147,
+      "duplicate_groups": 29
+    },
+    {
+      "min_legal": 4,
+      "states": 538,
+      "unique_iso": 453,
+      "states_saved": 85,
+      "duplicate_groups": 25
+    },
+    {
+      "min_legal": 5,
+      "states": 471,
+      "unique_iso": 439,
+      "states_saved": 32,
+      "duplicate_groups": 16
+    },
+    {
+      "min_legal": 6,
+      "states": 417,
+      "unique_iso": 413,
+      "states_saved": 4,
+      "duplicate_groups": 4
+    },
+    {
+      "min_legal": 8,
+      "states": 323,
+      "unique_iso": 323,
+      "states_saved": 0,
+      "duplicate_groups": 0
+    },
+    {
+      "min_legal": 10,
+      "states": 250,
+      "unique_iso": 250,
+      "states_saved": 0,
+      "duplicate_groups": 0
+    },
+    {
+      "min_legal": 12,
+      "states": 186,
+      "unique_iso": 186,
+      "states_saved": 0,
+      "duplicate_groups": 0
+    },
+    {
+      "min_legal": 14,
+      "states": 133,
+      "unique_iso": 133,
+      "states_saved": 0,
+      "duplicate_groups": 0
+    }
+  ],
+  "interpretation": "Exact residual isomorphism beyond board D4 exists frequently only in very late saved snapshots. No duplicate remained in this cross-snapshot sample at legal>=8. This is evidence against paying canonical-label cost near the s5 handoff; any production use should be gated to deep exact recursion / small legal count.",
+  "limitation": "Cross-snapshot dedup is not an exact-search TT benchmark and does not establish wall-time speedup."
+}

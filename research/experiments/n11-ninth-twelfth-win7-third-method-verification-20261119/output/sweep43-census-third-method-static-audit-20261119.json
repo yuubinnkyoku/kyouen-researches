@@ -1,0 +1,102 @@
+{
+ "schema": "n11-sweep43-census-third-method-static-audit-20261119-v1",
+ "method": "exact rational circle solve (cross-multiplied) + exact line test; python3 stdlib only",
+ "gates": [
+  {
+   "name": "resolve4 residual 86 unique rows",
+   "pass": true,
+   "detail": "86"
+  },
+  {
+   "name": "residual rows are 6-stone D4-canonical",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "witness records 43",
+   "pass": true,
+   "detail": "43"
+  },
+  {
+   "name": "roots.json entries 43",
+   "pass": true,
+   "detail": "43"
+  },
+  {
+   "name": "witness roots: 7 stones + D4-canon + safe + maxbit child + coverage recomputed",
+   "pass": true,
+   "detail": "43/43"
+  },
+  {
+   "name": "86 residual rows each covered exactly once by the 43 witnesses",
+   "pass": true,
+   "detail": "86 rows, cover multiplicities ok=True"
+  },
+  {
+   "name": "covered row set == resolve4 residual set",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "roots.json == witness records (root/child/bit/rows)",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "probe records cover 43 roots",
+   "pass": true,
+   "detail": "43"
+  },
+  {
+   "name": "probe records match published witness records (nodes/cap/loss/pilot)",
+   "pass": true,
+   "detail": "43/43"
+  },
+  {
+   "name": "classification counted 43",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "classification WIN roots recomputed == 4",
+   "pass": true,
+   "detail": "4"
+  },
+  {
+   "name": "classification REFUTED roots recomputed == 39",
+   "pass": true,
+   "detail": "39"
+  },
+  {
+   "name": "zero capped/conflicts",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "controls.nodes_total_all_probes recomputed",
+   "pass": true,
+   "detail": "173165148 vs 173165148"
+  },
+  {
+   "name": "verdict partition 4+39",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "sweep WIN roots == certificate roots 9th..12th",
+   "pass": true,
+   "detail": ""
+  }
+ ],
+ "all_pass": true,
+ "witness_root_structural_audit_pass": true,
+ "win_roots_recomputed": [
+  "00000000000000801202000001040200",
+  "00000000000000821082040200000000",
+  "00000000000000821092200000000000",
+  "00000000001020003800000048000000"
+ ],
+ "refuted_roots_count": 39,
+ "nodes_total_recomputed": 173165148,
+ "covered_rows_exactly_once": true
+}

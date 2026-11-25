@@ -1,0 +1,1998 @@
+{
+ "schema": "n11-fold-chain-ledger-1410-1476-crosscheck-20261118-v1",
+ "date": "2026-11-18",
+ "lane": "n11 long-term lane, verification-side crosscheck session (standard 11x11 weak-resolution)",
+ "title": "complete fold-chain ledger crosscheck head-1410 -> head-1476: ten published receipt-fold records audited against the raw 6,438-row head-1410 worklist; one per-parent double-count found in the published cost76c record (parent B), all other bookkeeping confirmed",
+ "inputs": {
+  "class-frontier-cost60c-receipts-recompute-20261116.json": "239a6cf432e53713514d583e3682e1bef6075968",
+  "class-frontier-cost64d-receipts-recompute-20261116.json": "082aa7f25596fe52e89ae4b158adba64a7f0d4c9",
+  "class-frontier-cost64f-receipts-recompute-20261116.json": "e11f31f303d0f3ab1b6d124403867e9f4ecdbebf",
+  "class-frontier-cost64g-receipts-recompute-20261116.json": "aff790021f6f8137ef1bc3ffaec1c980b37fad0c",
+  "class-frontier-cost64h-receipts-recompute-20261117.json": "1633be292f6f1862c895009eac29d398d0be7738",
+  "class-frontier-cost65j-receipts-recompute-20261116.json": "e8c835840f2fad8ffd9a9a8e6f1a9f5944470524",
+  "class-frontier-cost65n-receipts-recompute-20261116.json": "7390c540836d5e8440833aec9b4ac014fd96dd44",
+  "class-frontier-cost66c-receipts-recompute-20261116.json": "8783993e5c73cc9697c3ca48aef981725f422be8",
+  "class-frontier-cost66i-bit19-receipts-recompute-20261118.json": "a555ee3a575df04ecddf98ce890bd8eec53dd415",
+  "class-frontier-cost76c-receipts-recompute-20261117.json": "953beaea054989e8b1de33f48b1f2ebc13ae7e11",
+  "class-frontier-cost76d77e-receipts-recompute-20261116.json": "8d4bc622f9da22b8754f2e398e5481359656d956",
+  "reconc.json": "6992f2dcc8b87a5409cff31c8a87134fc4283a6a",
+  "worklist1410.csv": "2fee1d0718547a62e346d35f5858d7913e37c097"
+ },
+ "source_pin_commit": "376e4f44c791cfae345de564ee8a414ee0c8afa1",
+ "method": "fourth-implementation D4; 5-subset canon index over all 6,438 rows (cross-validated against the direct orbit join on the deliverable-2 nine parents); per-record closures extracted from both published bookkeeping styles; absolute per-parent ledgers vs join1410 minus cumulative chain closures; no engine, no new verdict",
+ "finding": {
+  "summary": "published cost76c parents_after entry for parent 00000000000000801202000000040000 (B) re-lists the 77e row (closed by cost76d77e at head-1452) as a new loss on a post-cost64h baseline: published rows_after 69 / edge_cost_after 5725; chain-correct values 70 / 5802. The 76c row itself is a D4 child of parents P and E only. Global head arithmetic (1473/6375/504596) is unaffected: the fold closes exactly one row once.",
+  "recommended_fix": "in class-frontier-cost76c-receipts-recompute-20261117.json, parent B entry: lost_rows 1 -> 0, lost_rows_hexes -> [], lost_edge_cost 77 -> 0, rows_after 69 -> 70, edge_cost_after 5725 -> 5802 (or restated as cumulative-since-1410 with rows_before 74 and lost_rows_hexes of all 5 closed rows)."
+ },
+ "derived": {
+  "chain": [
+   {
+    "tag": "cost65j",
+    "file": "class-frontier-cost65j-receipts-recompute-20261116.json",
+    "basis": 1410,
+    "after": 1419,
+    "closed_rows": 9,
+    "closed_cost": 635,
+    "closure": [
+     "00000000000000003800000008002002",
+     "00000000000000003800000008002200",
+     "00000000000000003800000008003000",
+     "00000000000000003800000008480000",
+     "00000000000000003800000408002000",
+     "00000000000000003800100008080000",
+     "00000000000000003800400008002000",
+     "00000000000000043800000008002000",
+     "00000000010000003800000008080000"
+    ]
+   },
+   {
+    "tag": "cost64d",
+    "file": "class-frontier-cost64d-receipts-recompute-20261116.json",
+    "basis": 1419,
+    "after": 1435,
+    "closed_rows": 16,
+    "closed_cost": 1137,
+    "closure": [
+     "00000000000000003800000008002004",
+     "00000000000000003800000008012000",
+     "00000000000000003800000009080000",
+     "00000000000000083800000008080000",
+     "00000000000000403800000008002000",
+     "00000000000000403800000108000000",
+     "00000000000000801202080000800000",
+     "00000000000000801212000000800000",
+     "00000000000000c09002000000000002",
+     "00000000000000c09002000000004000",
+     "00000000000000c09002000000800000",
+     "00000000000000c09002000800000000",
+     "00000000000040003800000008080000",
+     "00000000000040809002000080000000",
+     "00000000020000801202000000000400",
+     "00000000020000801202000080000000"
+    ]
+   },
+   {
+    "tag": "cost64f",
+    "file": "class-frontier-cost64f-receipts-recompute-20261116.json",
+    "basis": 1435,
+    "after": 1438,
+    "closed_rows": 3,
+    "closed_cost": 194,
+    "closure": [
+     "0000000000000080120a000000800000",
+     "00000000000000a09002000000002000",
+     "00000000020002801002000000080000"
+    ]
+   },
+   {
+    "tag": "cost64g",
+    "file": "class-frontier-cost64g-receipts-recompute-20261116.json",
+    "basis": 1438,
+    "after": 1441,
+    "closed_rows": 3,
+    "closed_cost": 198,
+    "closure": [
+     "00000000000000801202010000080000",
+     "00000000000100003800000008080000",
+     "00000000020000801002010000080000"
+    ]
+   },
+   {
+    "tag": "cost65n",
+    "file": "class-frontier-cost65n-receipts-recompute-20261116.json",
+    "basis": 1441,
+    "after": 1444,
+    "closed_rows": 3,
+    "closed_cost": 199,
+    "closure": [
+     "00000000000000801202010000800000",
+     "00000000000020003800000008080000",
+     "00000000000100809002000000000008"
+    ]
+   },
+   {
+    "tag": "cost66c",
+    "file": "class-frontier-cost66c-receipts-recompute-20261116.json",
+    "basis": 1444,
+    "after": 1450,
+    "closed_rows": 6,
+    "closed_cost": 449,
+    "closure": [
+     "00000000000000003800000008002008",
+     "00000000000000801202000100800000",
+     "00000000000000801202000220000000",
+     "00000000000000801202000300000000",
+     "00000000000020003800000008000080",
+     "00000000000020801202000000080000"
+    ]
+   },
+   {
+    "tag": "cost76d77e",
+    "file": "class-frontier-cost76d77e-receipts-recompute-20261116.json",
+    "basis": 1450,
+    "after": 1452,
+    "closed_rows": 2,
+    "closed_cost": 153,
+    "closure": [
+     "00000000040000003800080008000000",
+     "00000000040000809002000000004000"
+    ]
+   },
+   {
+    "tag": "cost64h",
+    "file": "class-frontier-cost64h-receipts-recompute-20261117.json",
+    "basis": 1452,
+    "after": 1472,
+    "closed_rows": 20,
+    "closed_cost": 1472,
+    "closure": [
+     "00000000000000003800100008100000",
+     "00000000000000103800000008100000",
+     "00000000000000403800000008100000",
+     "00000000000000503800000008000000",
+     "00000000000000801202000000001200",
+     "00000000000000801202000000001400",
+     "00000000000000801206000000000080",
+     "00000000000000801206000000080000",
+     "0000000000000080120a000000001000",
+     "00000000000000801242000000001000",
+     "00000000000000849003000000000000",
+     "00000000000000c09002000004000000",
+     "00000000000020003800000008100000",
+     "00000000000020809002000000100000",
+     "00000000000040003800000008100000",
+     "00000000000080003800000008100000",
+     "00000000000080809002000000100000",
+     "00000000020000003800000008100000",
+     "00000000020000403800000000100000",
+     "00000000020000809002000000100000"
+    ]
+   },
+   {
+    "tag": "cost76c",
+    "file": "class-frontier-cost76c-receipts-recompute-20261117.json",
+    "basis": 1472,
+    "after": 1473,
+    "closed_rows": 1,
+    "closed_cost": 76,
+    "closure": [
+     "00000000010000809002000001000000"
+    ]
+   },
+   {
+    "tag": "cost66i",
+    "file": "class-frontier-cost66i-bit19-receipts-recompute-20261118.json",
+    "basis": 1473,
+    "after": 1476,
+    "closed_rows": 3,
+    "closed_cost": 207,
+    "closure": [
+     "00000000000000003801000000808000",
+     "00000000000000801222000000080000",
+     "00000000000000801226000000000000"
+    ]
+   }
+  ],
+  "closed_rows_66": [
+   "00000000000000003800000008002002",
+   "00000000000000003800000008002004",
+   "00000000000000003800000008002008",
+   "00000000000000003800000008002200",
+   "00000000000000003800000008003000",
+   "00000000000000003800000008012000",
+   "00000000000000003800000008480000",
+   "00000000000000003800000009080000",
+   "00000000000000003800000408002000",
+   "00000000000000003800100008080000",
+   "00000000000000003800100008100000",
+   "00000000000000003800400008002000",
+   "00000000000000003801000000808000",
+   "00000000000000043800000008002000",
+   "00000000000000083800000008080000",
+   "00000000000000103800000008100000",
+   "00000000000000403800000008002000",
+   "00000000000000403800000008100000",
+   "00000000000000403800000108000000",
+   "00000000000000503800000008000000",
+   "00000000000000801202000000001200",
+   "00000000000000801202000000001400",
+   "00000000000000801202000100800000",
+   "00000000000000801202000220000000",
+   "00000000000000801202000300000000",
+   "00000000000000801202010000080000",
+   "00000000000000801202010000800000",
+   "00000000000000801202080000800000",
+   "00000000000000801206000000000080",
+   "00000000000000801206000000080000",
+   "0000000000000080120a000000001000",
+   "0000000000000080120a000000800000",
+   "00000000000000801212000000800000",
+   "00000000000000801222000000080000",
+   "00000000000000801226000000000000",
+   "00000000000000801242000000001000",
+   "00000000000000849003000000000000",
+   "00000000000000a09002000000002000",
+   "00000000000000c09002000000000002",
+   "00000000000000c09002000000004000",
+   "00000000000000c09002000000800000",
+   "00000000000000c09002000004000000",
+   "00000000000000c09002000800000000",
+   "00000000000020003800000008000080",
+   "00000000000020003800000008080000",
+   "00000000000020003800000008100000",
+   "00000000000020801202000000080000",
+   "00000000000020809002000000100000",
+   "00000000000040003800000008080000",
+   "00000000000040003800000008100000",
+   "00000000000040809002000080000000",
+   "00000000000080003800000008100000",
+   "00000000000080809002000000100000",
+   "00000000000100003800000008080000",
+   "00000000000100809002000000000008",
+   "00000000010000003800000008080000",
+   "00000000010000809002000001000000",
+   "00000000020000003800000008100000",
+   "00000000020000403800000000100000",
+   "00000000020000801002010000080000",
+   "00000000020000801202000000000400",
+   "00000000020000801202000080000000",
+   "00000000020000809002000000100000",
+   "00000000020002801002000000080000",
+   "00000000040000003800080008000000",
+   "00000000040000809002000000004000"
+  ],
+  "parent_ledger": {
+   "00000000000000003800000000808000": {
+    "join1410_rows": 83,
+    "join1410_cost": 6374,
+    "cum_closed": 2,
+    "final_ledger_rows": 81,
+    "final_ledger_cost": 6233,
+    "events": [
+     {
+      "tag": "cost66i",
+      "closes": [
+       "00000000000000003801000000808000",
+       "00000000000000801222000000080000"
+      ],
+      "cum_rows": 2,
+      "cum_cost": 141,
+      "ledger_rows_before": 83,
+      "ledger_rows_after": 81,
+      "ledger_cost_after": 6233,
+      "published_rows_after": 81,
+      "published_cost_after": 6233
+     }
+    ]
+   },
+   "00000000000000003800000008000002": {
+    "join1410_rows": 41,
+    "join1410_cost": 3095,
+    "cum_closed": 2,
+    "final_ledger_rows": 39,
+    "final_ledger_cost": 2962,
+    "events": [
+     {
+      "tag": "cost65j",
+      "closes": [
+       "00000000000000003800000008002002",
+       "00000000000000003800000008002200"
+      ],
+      "cum_rows": 2,
+      "cum_cost": 133,
+      "ledger_rows_before": 41,
+      "ledger_rows_after": 39,
+      "ledger_cost_after": 2962,
+      "published_rows_after": 39,
+      "published_cost_after": 2962
+     }
+    ]
+   },
+   "00000000000000003800000008000004": {
+    "join1410_rows": 66,
+    "join1410_cost": 5451,
+    "cum_closed": 1,
+    "final_ledger_rows": 65,
+    "final_ledger_cost": 5377,
+    "events": [
+     {
+      "tag": "cost64d",
+      "closes": [
+       "00000000000000003800000008002004"
+      ],
+      "cum_rows": 1,
+      "cum_cost": 74,
+      "ledger_rows_before": 66,
+      "ledger_rows_after": 65,
+      "ledger_cost_after": 5377,
+      "published_rows_after": 65,
+      "published_cost_after": 5377
+     }
+    ]
+   },
+   "00000000000000003800000008001000": {
+    "join1410_rows": 46,
+    "join1410_cost": 3448,
+    "cum_closed": 15,
+    "final_ledger_rows": 31,
+    "final_ledger_cost": 2333,
+    "events": [
+     {
+      "tag": "cost65j",
+      "closes": [
+       "00000000000000003800000008003000"
+      ],
+      "cum_rows": 1,
+      "cum_cost": 64,
+      "ledger_rows_before": 46,
+      "ledger_rows_after": 45,
+      "ledger_cost_after": 3384,
+      "published_rows_after": 45,
+      "published_cost_after": 3384
+     },
+     {
+      "tag": "cost64h",
+      "closes": [
+       "00000000000000003800100008100000",
+       "00000000000000103800000008100000",
+       "00000000000000403800000008100000",
+       "00000000000000801202000000001200",
+       "00000000000000801202000000001400",
+       "0000000000000080120a000000001000",
+       "00000000000000801242000000001000",
+       "00000000000020003800000008100000",
+       "00000000000020809002000000100000",
+       "00000000000040003800000008100000",
+       "00000000000080003800000008100000",
+       "00000000000080809002000000100000",
+       "00000000020000003800000008100000",
+       "00000000020000809002000000100000"
+      ],
+      "cum_rows": 15,
+      "cum_cost": 1115,
+      "ledger_rows_before": 45,
+      "ledger_rows_after": 31,
+      "ledger_cost_after": 2333,
+      "published_rows_after": 31,
+      "published_cost_after": 2333
+     }
+    ]
+   },
+   "00000000000000003800000008002000": {
+    "join1410_rows": 51,
+    "join1410_cost": 3564,
+    "cum_closed": 26,
+    "final_ledger_rows": 25,
+    "final_ledger_cost": 1748,
+    "events": [
+     {
+      "tag": "cost65j",
+      "closes": [
+       "00000000000000003800000008002002",
+       "00000000000000003800000008002200",
+       "00000000000000003800000008003000",
+       "00000000000000003800000008480000",
+       "00000000000000003800000408002000",
+       "00000000000000003800100008080000",
+       "00000000000000003800400008002000",
+       "00000000000000043800000008002000",
+       "00000000010000003800000008080000"
+      ],
+      "cum_rows": 9,
+      "cum_cost": 635,
+      "ledger_rows_before": 51,
+      "ledger_rows_after": 42,
+      "ledger_cost_after": 2929,
+      "published_rows_after": 42,
+      "published_cost_after": 2929
+     },
+     {
+      "tag": "cost64d",
+      "closes": [
+       "00000000000000003800000008002004",
+       "00000000000000003800000008012000",
+       "00000000000000003800000009080000",
+       "00000000000000083800000008080000",
+       "00000000000000403800000008002000",
+       "00000000000000801202080000800000",
+       "00000000000000801212000000800000",
+       "00000000000040003800000008080000",
+       "00000000000040809002000080000000",
+       "00000000020000801202000000000400",
+       "00000000020000801202000080000000"
+      ],
+      "cum_rows": 20,
+      "cum_cost": 1419,
+      "ledger_rows_before": 42,
+      "ledger_rows_after": 31,
+      "ledger_cost_after": 2145,
+      "published_rows_after": 31,
+      "published_cost_after": 2145
+     },
+     {
+      "tag": "cost64f",
+      "closes": [
+       "0000000000000080120a000000800000"
+      ],
+      "cum_rows": 21,
+      "cum_cost": 1483,
+      "ledger_rows_before": 31,
+      "ledger_rows_after": 30,
+      "ledger_cost_after": 2081,
+      "published_rows_after": 30,
+      "published_cost_after": 2081
+     },
+     {
+      "tag": "cost64g",
+      "closes": [
+       "00000000000100003800000008080000"
+      ],
+      "cum_rows": 22,
+      "cum_cost": 1547,
+      "ledger_rows_before": 30,
+      "ledger_rows_after": 29,
+      "ledger_cost_after": 2017,
+      "published_rows_after": 29,
+      "published_cost_after": 2017
+     },
+     {
+      "tag": "cost65n",
+      "closes": [
+       "00000000000000801202010000800000",
+       "00000000000020003800000008080000"
+      ],
+      "cum_rows": 24,
+      "cum_cost": 1681,
+      "ledger_rows_before": 29,
+      "ledger_rows_after": 27,
+      "ledger_cost_after": 1883,
+      "published_rows_after": 27,
+      "published_cost_after": 1883
+     },
+     {
+      "tag": "cost66c",
+      "closes": [
+       "00000000000000003800000008002008",
+       "00000000000000801202000100800000"
+      ],
+      "cum_rows": 26,
+      "cum_cost": 1816,
+      "ledger_rows_before": 27,
+      "ledger_rows_after": 25,
+      "ledger_cost_after": 1748,
+      "published_rows_after": 25,
+      "published_cost_after": 1748
+     }
+    ]
+   },
+   "00000000000000003800000008400000": {
+    "join1410_rows": 44,
+    "join1410_cost": 3268,
+    "cum_closed": 2,
+    "final_ledger_rows": 42,
+    "final_ledger_cost": 3127,
+    "events": [
+     {
+      "tag": "cost65j",
+      "closes": [
+       "00000000000000003800000008480000"
+      ],
+      "cum_rows": 1,
+      "cum_cost": 71,
+      "ledger_rows_before": 44,
+      "ledger_rows_after": 43,
+      "ledger_cost_after": 3197,
+      "published_rows_after": 43,
+      "published_cost_after": 3197
+     },
+     {
+      "tag": "cost64d",
+      "closes": [
+       "00000000000000403800000108000000"
+      ],
+      "cum_rows": 2,
+      "cum_cost": 141,
+      "ledger_rows_before": 43,
+      "ledger_rows_after": 42,
+      "ledger_cost_after": 3127,
+      "published_rows_after": 42,
+      "published_cost_after": 3127
+     }
+    ]
+   },
+   "00000000000000003800000009000000": {
+    "join1410_rows": 30,
+    "join1410_cost": 2276,
+    "cum_closed": 1,
+    "final_ledger_rows": 29,
+    "final_ledger_cost": 2203,
+    "events": [
+     {
+      "tag": "cost64d",
+      "closes": [
+       "00000000000000003800000009080000"
+      ],
+      "cum_rows": 1,
+      "cum_cost": 73,
+      "ledger_rows_before": 30,
+      "ledger_rows_after": 29,
+      "ledger_cost_after": 2203,
+      "published_rows_after": 29,
+      "published_cost_after": 2203
+     }
+    ]
+   },
+   "00000000000000003800000208000000": {
+    "join1410_rows": 65,
+    "join1410_cost": 5358,
+    "cum_closed": 1,
+    "final_ledger_rows": 64,
+    "final_ledger_cost": 5282,
+    "events": [
+     {
+      "tag": "cost76d77e",
+      "closes": [
+       "00000000040000003800080008000000"
+      ],
+      "cum_rows": 1,
+      "cum_cost": 76,
+      "ledger_rows_before": 65,
+      "ledger_rows_after": 64,
+      "ledger_cost_after": 5282,
+      "published_rows_after": 64,
+      "published_cost_after": 5282
+     },
+     {
+      "tag": "cost76c",
+      "closes": [],
+      "cum_rows": 1,
+      "cum_cost": 76,
+      "ledger_rows_before": 64,
+      "ledger_rows_after": 64,
+      "ledger_cost_after": 5282,
+      "published_rows_after": 64,
+      "published_cost_after": 5282
+     }
+    ]
+   },
+   "00000000000000003800000408000000": {
+    "join1410_rows": 56,
+    "join1410_cost": 4624,
+    "cum_closed": 1,
+    "final_ledger_rows": 55,
+    "final_ledger_cost": 4550,
+    "events": [
+     {
+      "tag": "cost65j",
+      "closes": [
+       "00000000000000003800000408002000"
+      ],
+      "cum_rows": 1,
+      "cum_cost": 74,
+      "ledger_rows_before": 56,
+      "ledger_rows_after": 55,
+      "ledger_cost_after": 4550,
+      "published_rows_after": 55,
+      "published_cost_after": 4550
+     }
+    ]
+   },
+   "00000000000000003800001000800000": {
+    "join1410_rows": 66,
+    "join1410_cost": 4719,
+    "cum_closed": 2,
+    "final_ledger_rows": 64,
+    "final_ledger_cost": 4585,
+    "events": [
+     {
+      "tag": "cost64g",
+      "closes": [
+       "00000000000000801202010000080000",
+       "00000000020000801002010000080000"
+      ],
+      "cum_rows": 2,
+      "cum_cost": 134,
+      "ledger_rows_before": 66,
+      "ledger_rows_after": 64,
+      "ledger_cost_after": 4585,
+      "published_rows_after": 64,
+      "published_cost_after": 4585
+     }
+    ]
+   },
+   "00000000000000003800002080000000": {
+    "join1410_rows": 78,
+    "join1410_cost": 5837,
+    "cum_closed": 2,
+    "final_ledger_rows": 76,
+    "final_ledger_cost": 5707,
+    "events": [
+     {
+      "tag": "cost64f",
+      "closes": [
+       "00000000000000a09002000000002000",
+       "00000000020002801002000000080000"
+      ],
+      "cum_rows": 2,
+      "cum_cost": 130,
+      "ledger_rows_before": 78,
+      "ledger_rows_after": 76,
+      "ledger_cost_after": 5707,
+      "published_rows_after": 76,
+      "published_cost_after": 5707
+     }
+    ]
+   },
+   "00000000000000003800100008000000": {
+    "join1410_rows": 66,
+    "join1410_cost": 5493,
+    "cum_closed": 2,
+    "final_ledger_rows": 64,
+    "final_ledger_cost": 5336,
+    "events": [
+     {
+      "tag": "cost65j",
+      "closes": [
+       "00000000000000003800100008080000"
+      ],
+      "cum_rows": 1,
+      "cum_cost": 76,
+      "ledger_rows_before": 66,
+      "ledger_rows_after": 65,
+      "ledger_cost_after": 5417,
+      "published_rows_after": 65,
+      "published_cost_after": 5417
+     },
+     {
+      "tag": "cost64h",
+      "closes": [
+       "00000000000000003800100008100000"
+      ],
+      "cum_rows": 2,
+      "cum_cost": 157,
+      "ledger_rows_before": 65,
+      "ledger_rows_after": 64,
+      "ledger_cost_after": 5336,
+      "published_rows_after": 64,
+      "published_cost_after": 5336
+     }
+    ]
+   },
+   "00000000000000003800400008000000": {
+    "join1410_rows": 56,
+    "join1410_cost": 4444,
+    "cum_closed": 1,
+    "final_ledger_rows": 55,
+    "final_ledger_cost": 4375,
+    "events": [
+     {
+      "tag": "cost65j",
+      "closes": [
+       "00000000000000003800400008002000"
+      ],
+      "cum_rows": 1,
+      "cum_cost": 69,
+      "ledger_rows_before": 56,
+      "ledger_rows_after": 55,
+      "ledger_cost_after": 4375,
+      "published_rows_after": 55,
+      "published_cost_after": 4375
+     }
+    ]
+   },
+   "00000000000000003801000000800000": {
+    "join1410_rows": 69,
+    "join1410_cost": 5226,
+    "cum_closed": 3,
+    "final_ledger_rows": 66,
+    "final_ledger_cost": 5019,
+    "events": [
+     {
+      "tag": "cost64h",
+      "closes": [
+       "00000000000000801206000000080000",
+       "00000000020000403800000000100000"
+      ],
+      "cum_rows": 2,
+      "cum_cost": 141,
+      "ledger_rows_before": 69,
+      "ledger_rows_after": 67,
+      "ledger_cost_after": 5085,
+      "published_rows_after": 67,
+      "published_cost_after": 5085
+     },
+     {
+      "tag": "cost66i",
+      "closes": [
+       "00000000000000003801000000808000"
+      ],
+      "cum_rows": 3,
+      "cum_cost": 207,
+      "ledger_rows_before": 67,
+      "ledger_rows_after": 66,
+      "ledger_cost_after": 5019,
+      "published_rows_after": 66,
+      "published_cost_after": 5019
+     }
+    ]
+   },
+   "00000000000000043800000008000000": {
+    "join1410_rows": 67,
+    "join1410_cost": 5621,
+    "cum_closed": 1,
+    "final_ledger_rows": 66,
+    "final_ledger_cost": 5547,
+    "events": [
+     {
+      "tag": "cost65j",
+      "closes": [
+       "00000000000000043800000008002000"
+      ],
+      "cum_rows": 1,
+      "cum_cost": 74,
+      "ledger_rows_before": 67,
+      "ledger_rows_after": 66,
+      "ledger_cost_after": 5547,
+      "published_rows_after": 66,
+      "published_cost_after": 5547
+     }
+    ]
+   },
+   "00000000000000083800000008000000": {
+    "join1410_rows": 50,
+    "join1410_cost": 3750,
+    "cum_closed": 1,
+    "final_ledger_rows": 49,
+    "final_ledger_cost": 3683,
+    "events": [
+     {
+      "tag": "cost64d",
+      "closes": [
+       "00000000000000083800000008080000"
+      ],
+      "cum_rows": 1,
+      "cum_cost": 67,
+      "ledger_rows_before": 50,
+      "ledger_rows_after": 49,
+      "ledger_cost_after": 3683,
+      "published_rows_after": 49,
+      "published_cost_after": 3683
+     }
+    ]
+   },
+   "00000000000000103800000008000000": {
+    "join1410_rows": 59,
+    "join1410_cost": 4426,
+    "cum_closed": 3,
+    "final_ledger_rows": 56,
+    "final_ledger_cost": 4214,
+    "events": [
+     {
+      "tag": "cost64h",
+      "closes": [
+       "00000000000000103800000008100000",
+       "00000000000000503800000008000000",
+       "00000000000000c09002000004000000"
+      ],
+      "cum_rows": 3,
+      "cum_cost": 212,
+      "ledger_rows_before": 59,
+      "ledger_rows_after": 56,
+      "ledger_cost_after": 4214,
+      "published_rows_after": 56,
+      "published_cost_after": 4214
+     }
+    ]
+   },
+   "00000000000000403800000008000000": {
+    "join1410_rows": 24,
+    "join1410_cost": 1704,
+    "cum_closed": 13,
+    "final_ledger_rows": 11,
+    "final_ledger_cost": 806,
+    "events": [
+     {
+      "tag": "cost64d",
+      "closes": [
+       "00000000000000403800000008002000",
+       "00000000000000403800000108000000",
+       "00000000000000c09002000000000002",
+       "00000000000000c09002000000004000",
+       "00000000000000c09002000000800000",
+       "00000000000000c09002000800000000"
+      ],
+      "cum_rows": 6,
+      "cum_cost": 417,
+      "ledger_rows_before": 24,
+      "ledger_rows_after": 18,
+      "ledger_cost_after": 1287,
+      "published_rows_after": 18,
+      "published_cost_after": 1287
+     },
+     {
+      "tag": "cost64h",
+      "closes": [
+       "00000000000000403800000008100000",
+       "00000000000000503800000008000000",
+       "00000000000000801206000000000080",
+       "00000000000000801206000000080000",
+       "00000000000000849003000000000000",
+       "00000000000000c09002000004000000"
+      ],
+      "cum_rows": 12,
+      "cum_cost": 832,
+      "ledger_rows_before": 18,
+      "ledger_rows_after": 12,
+      "ledger_cost_after": 872,
+      "published_rows_after": 12,
+      "published_cost_after": 872
+     },
+     {
+      "tag": "cost66i",
+      "closes": [
+       "00000000000000801226000000000000"
+      ],
+      "cum_rows": 13,
+      "cum_cost": 898,
+      "ledger_rows_before": 12,
+      "ledger_rows_after": 11,
+      "ledger_cost_after": 806,
+      "published_rows_after": 11,
+      "published_cost_after": 806
+     }
+    ]
+   },
+   "00000000000000801202000000000080": {
+    "join1410_rows": 55,
+    "join1410_cost": 4137,
+    "cum_closed": 5,
+    "final_ledger_rows": 50,
+    "final_ledger_cost": 3784,
+    "events": [
+     {
+      "tag": "cost65n",
+      "closes": [
+       "00000000000020003800000008080000",
+       "00000000000100809002000000000008"
+      ],
+      "cum_rows": 2,
+      "cum_cost": 134,
+      "ledger_rows_before": 55,
+      "ledger_rows_after": 53,
+      "ledger_cost_after": 4003,
+      "published_rows_after": 53,
+      "published_cost_after": 4003
+     },
+     {
+      "tag": "cost66c",
+      "closes": [
+       "00000000000020003800000008000080"
+      ],
+      "cum_rows": 3,
+      "cum_cost": 208,
+      "ledger_rows_before": 53,
+      "ledger_rows_after": 52,
+      "ledger_cost_after": 3929,
+      "published_rows_after": 52,
+      "published_cost_after": 3929
+     },
+     {
+      "tag": "cost64h",
+      "closes": [
+       "00000000000000801206000000000080",
+       "00000000000020003800000008100000"
+      ],
+      "cum_rows": 5,
+      "cum_cost": 353,
+      "ledger_rows_before": 52,
+      "ledger_rows_after": 50,
+      "ledger_cost_after": 3784,
+      "published_rows_after": 50,
+      "published_cost_after": 3784
+     }
+    ]
+   },
+   "00000000000000801202000000000100": {
+    "join1410_rows": 60,
+    "join1410_cost": 4939,
+    "cum_closed": 1,
+    "final_ledger_rows": 59,
+    "final_ledger_cost": 4865,
+    "events": [
+     {
+      "tag": "cost65j",
+      "closes": [
+       "00000000010000003800000008080000"
+      ],
+      "cum_rows": 1,
+      "cum_cost": 74,
+      "ledger_rows_before": 60,
+      "ledger_rows_after": 59,
+      "ledger_cost_after": 4865,
+      "published_rows_after": 59,
+      "published_cost_after": 4865
+     }
+    ]
+   },
+   "00000000000000801202000000000200": {
+    "join1410_rows": 65,
+    "join1410_cost": 5316,
+    "cum_closed": 2,
+    "final_ledger_rows": 63,
+    "final_ledger_cost": 5161,
+    "events": [
+     {
+      "tag": "cost64d",
+      "closes": [
+       "00000000000000c09002000000000002"
+      ],
+      "cum_rows": 1,
+      "cum_cost": 74,
+      "ledger_rows_before": 65,
+      "ledger_rows_after": 64,
+      "ledger_cost_after": 5242,
+      "published_rows_after": 64,
+      "published_cost_after": 5242
+     },
+     {
+      "tag": "cost64h",
+      "closes": [
+       "00000000000000801202000000001200"
+      ],
+      "cum_rows": 2,
+      "cum_cost": 155,
+      "ledger_rows_before": 64,
+      "ledger_rows_after": 63,
+      "ledger_cost_after": 5161,
+      "published_rows_after": 63,
+      "published_cost_after": 5161
+     }
+    ]
+   },
+   "00000000000000801202000000000400": {
+    "join1410_rows": 68,
+    "join1410_cost": 5588,
+    "cum_closed": 2,
+    "final_ledger_rows": 66,
+    "final_ledger_cost": 5436,
+    "events": [
+     {
+      "tag": "cost64d",
+      "closes": [
+       "00000000020000801202000000000400"
+      ],
+      "cum_rows": 1,
+      "cum_cost": 74,
+      "ledger_rows_before": 68,
+      "ledger_rows_after": 67,
+      "ledger_cost_after": 5514,
+      "published_rows_after": 67,
+      "published_cost_after": 5514
+     },
+     {
+      "tag": "cost64h",
+      "closes": [
+       "00000000000000801202000000001400"
+      ],
+      "cum_rows": 2,
+      "cum_cost": 152,
+      "ledger_rows_before": 67,
+      "ledger_rows_after": 66,
+      "ledger_cost_after": 5436,
+      "published_rows_after": 66,
+      "published_cost_after": 5436
+     }
+    ]
+   },
+   "00000000000000801202000000040000": {
+    "join1410_rows": 74,
+    "join1410_cost": 6113,
+    "cum_closed": 4,
+    "final_ledger_rows": 70,
+    "final_ledger_cost": 5802,
+    "events": [
+     {
+      "tag": "cost64d",
+      "closes": [
+       "00000000000000c09002000000004000",
+       "00000000000040003800000008080000"
+      ],
+      "cum_rows": 2,
+      "cum_cost": 153,
+      "ledger_rows_before": 74,
+      "ledger_rows_after": 72,
+      "ledger_cost_after": 5960,
+      "published_rows_after": 72,
+      "published_cost_after": 5960
+     },
+     {
+      "tag": "cost76d77e",
+      "closes": [
+       "00000000040000809002000000004000"
+      ],
+      "cum_rows": 3,
+      "cum_cost": 230,
+      "ledger_rows_before": 72,
+      "ledger_rows_after": 71,
+      "ledger_cost_after": 5883,
+      "published_rows_after": 71,
+      "published_cost_after": 5883
+     },
+     {
+      "tag": "cost64h",
+      "closes": [
+       "00000000000040003800000008100000"
+      ],
+      "cum_rows": 4,
+      "cum_cost": 311,
+      "ledger_rows_before": 71,
+      "ledger_rows_after": 70,
+      "ledger_cost_after": 5802,
+      "published_rows_after": 70,
+      "published_cost_after": 5802
+     },
+     {
+      "tag": "cost76c",
+      "closes": [],
+      "cum_rows": 4,
+      "cum_cost": 311,
+      "ledger_rows_before": 70,
+      "ledger_rows_after": 70,
+      "ledger_cost_after": 5802,
+      "published_rows_after": 69,
+      "published_cost_after": 5725
+     }
+    ]
+   },
+   "00000000000000801202000000080000": {
+    "join1410_rows": 68,
+    "join1410_cost": 5202,
+    "cum_closed": 6,
+    "final_ledger_rows": 62,
+    "final_ledger_cost": 4767,
+    "events": [
+     {
+      "tag": "cost64f",
+      "closes": [
+       "00000000000000a09002000000002000"
+      ],
+      "cum_rows": 1,
+      "cum_cost": 67,
+      "ledger_rows_before": 68,
+      "ledger_rows_after": 67,
+      "ledger_cost_after": 5135,
+      "published_rows_after": 67,
+      "published_cost_after": 5135
+     },
+     {
+      "tag": "cost64g",
+      "closes": [
+       "00000000000000801202010000080000"
+      ],
+      "cum_rows": 2,
+      "cum_cost": 136,
+      "ledger_rows_before": 67,
+      "ledger_rows_after": 66,
+      "ledger_cost_after": 5066,
+      "published_rows_after": 66,
+      "published_cost_after": 5066
+     },
+     {
+      "tag": "cost66c",
+      "closes": [
+       "00000000000020801202000000080000"
+      ],
+      "cum_rows": 3,
+      "cum_cost": 214,
+      "ledger_rows_before": 66,
+      "ledger_rows_after": 65,
+      "ledger_cost_after": 4988,
+      "published_rows_after": 65,
+      "published_cost_after": 4988
+     },
+     {
+      "tag": "cost64h",
+      "closes": [
+       "00000000000000801206000000080000",
+       "00000000020000003800000008100000"
+      ],
+      "cum_rows": 5,
+      "cum_cost": 360,
+      "ledger_rows_before": 65,
+      "ledger_rows_after": 63,
+      "ledger_cost_after": 4842,
+      "published_rows_after": 63,
+      "published_cost_after": 4842
+     },
+     {
+      "tag": "cost66i",
+      "closes": [
+       "00000000000000801222000000080000"
+      ],
+      "cum_rows": 6,
+      "cum_cost": 435,
+      "ledger_rows_before": 63,
+      "ledger_rows_after": 62,
+      "ledger_cost_after": 4767,
+      "published_rows_after": 62,
+      "published_cost_after": 4767
+     }
+    ]
+   },
+   "00000000000000801202000020000000": {
+    "join1410_rows": 46,
+    "join1410_cost": 3497,
+    "cum_closed": 2,
+    "final_ledger_rows": 44,
+    "final_ledger_cost": 3348,
+    "events": [
+     {
+      "tag": "cost66c",
+      "closes": [
+       "00000000000000801202000220000000"
+      ],
+      "cum_rows": 1,
+      "cum_cost": 77,
+      "ledger_rows_before": 46,
+      "ledger_rows_after": 45,
+      "ledger_cost_after": 3420,
+      "published_rows_after": 45,
+      "published_cost_after": 3420
+     },
+     {
+      "tag": "cost64h",
+      "closes": [
+       "00000000000080003800000008100000"
+      ],
+      "cum_rows": 2,
+      "cum_cost": 149,
+      "ledger_rows_before": 45,
+      "ledger_rows_after": 44,
+      "ledger_cost_after": 3348,
+      "published_rows_after": 44,
+      "published_cost_after": 3348
+     }
+    ]
+   },
+   "00000000000000801202000040000000": {
+    "join1410_rows": 5,
+    "join1410_cost": 364,
+    "cum_closed": 3,
+    "final_ledger_rows": 2,
+    "final_ledger_cost": 135,
+    "events": [
+     {
+      "tag": "cost76d77e",
+      "closes": [
+       "00000000040000003800080008000000",
+       "00000000040000809002000000004000"
+      ],
+      "cum_rows": 2,
+      "cum_cost": 153,
+      "ledger_rows_before": 5,
+      "ledger_rows_after": 3,
+      "ledger_cost_after": 211,
+      "published_rows_after": 3,
+      "published_cost_after": 211
+     },
+     {
+      "tag": "cost76c",
+      "closes": [
+       "00000000010000809002000001000000"
+      ],
+      "cum_rows": 3,
+      "cum_cost": 229,
+      "ledger_rows_before": 3,
+      "ledger_rows_after": 2,
+      "ledger_cost_after": 135,
+      "published_rows_after": 2,
+      "published_cost_after": 135
+     }
+    ]
+   },
+   "00000000000000801202000080000000": {
+    "join1410_rows": 40,
+    "join1410_cost": 3038,
+    "cum_closed": 3,
+    "final_ledger_rows": 37,
+    "final_ledger_cost": 2825,
+    "events": [
+     {
+      "tag": "cost64d",
+      "closes": [
+       "00000000000000c09002000000800000",
+       "00000000020000801202000080000000"
+      ],
+      "cum_rows": 2,
+      "cum_cost": 137,
+      "ledger_rows_before": 40,
+      "ledger_rows_after": 38,
+      "ledger_cost_after": 2901,
+      "published_rows_after": 38,
+      "published_cost_after": 2901
+     },
+     {
+      "tag": "cost64h",
+      "closes": [
+       "00000000020000809002000000100000"
+      ],
+      "cum_rows": 3,
+      "cum_cost": 213,
+      "ledger_rows_before": 38,
+      "ledger_rows_after": 37,
+      "ledger_cost_after": 2825,
+      "published_rows_after": 37,
+      "published_cost_after": 2825
+     }
+    ]
+   },
+   "00000000000000801202000100000000": {
+    "join1410_rows": 71,
+    "join1410_cost": 5912,
+    "cum_closed": 3,
+    "final_ledger_rows": 68,
+    "final_ledger_cost": 5682,
+    "events": [
+     {
+      "tag": "cost66c",
+      "closes": [
+       "00000000000000801202000100800000",
+       "00000000000000801202000300000000"
+      ],
+      "cum_rows": 2,
+      "cum_cost": 154,
+      "ledger_rows_before": 71,
+      "ledger_rows_after": 69,
+      "ledger_cost_after": 5758,
+      "published_rows_after": 69,
+      "published_cost_after": 5758
+     },
+     {
+      "tag": "cost76c",
+      "closes": [
+       "00000000010000809002000001000000"
+      ],
+      "cum_rows": 3,
+      "cum_cost": 230,
+      "ledger_rows_before": 69,
+      "ledger_rows_after": 68,
+      "ledger_cost_after": 5682,
+      "published_rows_after": 68,
+      "published_cost_after": 5682
+     }
+    ]
+   },
+   "00000000000000801202010000000000": {
+    "join1410_rows": 50,
+    "join1410_cost": 3631,
+    "cum_closed": 4,
+    "final_ledger_rows": 46,
+    "final_ledger_cost": 3368,
+    "events": [
+     {
+      "tag": "cost64g",
+      "closes": [
+       "00000000000000801202010000080000",
+       "00000000000100003800000008080000"
+      ],
+      "cum_rows": 2,
+      "cum_cost": 133,
+      "ledger_rows_before": 50,
+      "ledger_rows_after": 48,
+      "ledger_cost_after": 3498,
+      "published_rows_after": 48,
+      "published_cost_after": 3498
+     },
+     {
+      "tag": "cost65n",
+      "closes": [
+       "00000000000000801202010000800000",
+       "00000000000100809002000000000008"
+      ],
+      "cum_rows": 4,
+      "cum_cost": 263,
+      "ledger_rows_before": 48,
+      "ledger_rows_after": 46,
+      "ledger_cost_after": 3368,
+      "published_rows_after": 46,
+      "published_cost_after": 3368
+     }
+    ]
+   },
+   "00000000000000801202020000000000": {
+    "join1410_rows": 49,
+    "join1410_cost": 3360,
+    "cum_closed": 2,
+    "final_ledger_rows": 47,
+    "final_ledger_cost": 3231,
+    "events": [
+     {
+      "tag": "cost64d",
+      "closes": [
+       "00000000000000c09002000800000000"
+      ],
+      "cum_rows": 1,
+      "cum_cost": 64,
+      "ledger_rows_before": 49,
+      "ledger_rows_after": 48,
+      "ledger_cost_after": 3296,
+      "published_rows_after": 48,
+      "published_cost_after": 3296
+     },
+     {
+      "tag": "cost64h",
+      "closes": [
+       "00000000000080809002000000100000"
+      ],
+      "cum_rows": 2,
+      "cum_cost": 129,
+      "ledger_rows_before": 48,
+      "ledger_rows_after": 47,
+      "ledger_cost_after": 3231,
+      "published_rows_after": 47,
+      "published_cost_after": 3231
+     }
+    ]
+   },
+   "00000000000000801202080000000000": {
+    "join1410_rows": 74,
+    "join1410_cost": 6127,
+    "cum_closed": 2,
+    "final_ledger_rows": 72,
+    "final_ledger_cost": 5970,
+    "events": [
+     {
+      "tag": "cost64d",
+      "closes": [
+       "00000000000000801202080000800000"
+      ],
+      "cum_rows": 1,
+      "cum_cost": 75,
+      "ledger_rows_before": 74,
+      "ledger_rows_after": 73,
+      "ledger_cost_after": 6052,
+      "published_rows_after": 73,
+      "published_cost_after": 6052
+     },
+     {
+      "tag": "cost64h",
+      "closes": [
+       "00000000000020809002000000100000"
+      ],
+      "cum_rows": 2,
+      "cum_cost": 157,
+      "ledger_rows_before": 73,
+      "ledger_rows_after": 72,
+      "ledger_cost_after": 5970,
+      "published_rows_after": 72,
+      "published_cost_after": 5970
+     }
+    ]
+   },
+   "0000000000000080120a000000000000": {
+    "join1410_rows": 43,
+    "join1410_cost": 3167,
+    "cum_closed": 3,
+    "final_ledger_rows": 40,
+    "final_ledger_cost": 2965,
+    "events": [
+     {
+      "tag": "cost64f",
+      "closes": [
+       "0000000000000080120a000000800000",
+       "00000000000000a09002000000002000"
+      ],
+      "cum_rows": 2,
+      "cum_cost": 131,
+      "ledger_rows_before": 43,
+      "ledger_rows_after": 41,
+      "ledger_cost_after": 3036,
+      "published_rows_after": 41,
+      "published_cost_after": 3036
+     },
+     {
+      "tag": "cost64h",
+      "closes": [
+       "0000000000000080120a000000001000"
+      ],
+      "cum_rows": 3,
+      "cum_cost": 202,
+      "ledger_rows_before": 41,
+      "ledger_rows_after": 40,
+      "ledger_cost_after": 2965,
+      "published_rows_after": 40,
+      "published_cost_after": 2965
+     }
+    ]
+   },
+   "00000000000000801212000000000000": {
+    "join1410_rows": 68,
+    "join1410_cost": 5376,
+    "cum_closed": 1,
+    "final_ledger_rows": 67,
+    "final_ledger_cost": 5305,
+    "events": [
+     {
+      "tag": "cost64d",
+      "closes": [
+       "00000000000000801212000000800000"
+      ],
+      "cum_rows": 1,
+      "cum_cost": 71,
+      "ledger_rows_before": 68,
+      "ledger_rows_after": 67,
+      "ledger_cost_after": 5305,
+      "published_rows_after": 67,
+      "published_cost_after": 5305
+     }
+    ]
+   },
+   "00000000000000801222000000000000": {
+    "join1410_rows": 70,
+    "join1410_cost": 5345,
+    "cum_closed": 2,
+    "final_ledger_rows": 68,
+    "final_ledger_cost": 5204,
+    "events": [
+     {
+      "tag": "cost66i",
+      "closes": [
+       "00000000000000801222000000080000",
+       "00000000000000801226000000000000"
+      ],
+      "cum_rows": 2,
+      "cum_cost": 141,
+      "ledger_rows_before": 70,
+      "ledger_rows_after": 68,
+      "ledger_cost_after": 5204,
+      "published_rows_after": 68,
+      "published_cost_after": 5204
+     }
+    ]
+   },
+   "00000000000000801242000000000000": {
+    "join1410_rows": 52,
+    "join1410_cost": 4129,
+    "cum_closed": 2,
+    "final_ledger_rows": 50,
+    "final_ledger_cost": 3981,
+    "events": [
+     {
+      "tag": "cost64h",
+      "closes": [
+       "00000000000000801242000000001000",
+       "00000000000000849003000000000000"
+      ],
+      "cum_rows": 2,
+      "cum_cost": 148,
+      "ledger_rows_before": 52,
+      "ledger_rows_after": 50,
+      "ledger_cost_after": 3981,
+      "published_rows_after": 50,
+      "published_cost_after": 3981
+     }
+    ]
+   },
+   "00000000000020801002000000080000": {
+    "join1410_rows": 88,
+    "join1410_cost": 7439,
+    "cum_closed": 1,
+    "final_ledger_rows": 87,
+    "final_ledger_cost": 7361,
+    "events": [
+     {
+      "tag": "cost66c",
+      "closes": [
+       "00000000000020801202000000080000"
+      ],
+      "cum_rows": 1,
+      "cum_cost": 78,
+      "ledger_rows_before": 88,
+      "ledger_rows_after": 87,
+      "ledger_cost_after": 7361,
+      "published_rows_after": 87,
+      "published_cost_after": 7361
+     }
+    ]
+   },
+   "00000000020000003800000000080000": {
+    "join1410_rows": 61,
+    "join1410_cost": 4351,
+    "cum_closed": 2,
+    "final_ledger_rows": 59,
+    "final_ledger_cost": 4223,
+    "events": [
+     {
+      "tag": "cost64f",
+      "closes": [
+       "00000000020002801002000000080000"
+      ],
+      "cum_rows": 1,
+      "cum_cost": 63,
+      "ledger_rows_before": 61,
+      "ledger_rows_after": 60,
+      "ledger_cost_after": 4288,
+      "published_rows_after": 60,
+      "published_cost_after": 4288
+     },
+     {
+      "tag": "cost64g",
+      "closes": [
+       "00000000020000801002010000080000"
+      ],
+      "cum_rows": 2,
+      "cum_cost": 128,
+      "ledger_rows_before": 60,
+      "ledger_rows_after": 59,
+      "ledger_cost_after": 4223,
+      "published_rows_after": 59,
+      "published_cost_after": 4223
+     }
+    ]
+   },
+   "00000000020000003800000000100000": {
+    "join1410_rows": 87,
+    "join1410_cost": 6881,
+    "cum_closed": 2,
+    "final_ledger_rows": 85,
+    "final_ledger_cost": 6736,
+    "events": [
+     {
+      "tag": "cost64h",
+      "closes": [
+       "00000000020000003800000008100000",
+       "00000000020000403800000000100000"
+      ],
+      "cum_rows": 2,
+      "cum_cost": 145,
+      "ledger_rows_before": 87,
+      "ledger_rows_after": 85,
+      "ledger_cost_after": 6736,
+      "published_rows_after": 85,
+      "published_cost_after": 6736
+     }
+    ]
+   }
+  },
+  "head_points": [
+   {
+    "tag": "cost65j",
+    "solved": 1419,
+    "uniq": 6429,
+    "cost": 508474,
+    "ledger": [
+     1419,
+     6429,
+     508474
+    ]
+   },
+   {
+    "tag": "cost64d",
+    "solved": 1435,
+    "uniq": 6413,
+    "cost": 507337,
+    "ledger": [
+     1435,
+     6413,
+     507337
+    ]
+   },
+   {
+    "tag": "cost64f",
+    "solved": 1438,
+    "uniq": 6410,
+    "cost": 507143,
+    "ledger": [
+     1438,
+     6410,
+     507143
+    ]
+   },
+   {
+    "tag": "cost64g",
+    "solved": 1441,
+    "uniq": 6407,
+    "cost": 506945,
+    "ledger": [
+     1441,
+     6407,
+     506945
+    ]
+   },
+   {
+    "tag": "cost65n",
+    "solved": 1444,
+    "uniq": 6404,
+    "cost": 506746,
+    "ledger": [
+     1444,
+     6404,
+     506746
+    ]
+   },
+   {
+    "tag": "cost66c",
+    "solved": 1450,
+    "uniq": 6398,
+    "cost": 506297,
+    "ledger": [
+     1450,
+     6398,
+     506297
+    ]
+   },
+   {
+    "tag": "cost76d77e",
+    "solved": 1452,
+    "uniq": 6396,
+    "cost": 506144,
+    "ledger": [
+     1452,
+     6396,
+     506144
+    ]
+   },
+   {
+    "tag": "cost64h",
+    "solved": 1472,
+    "uniq": 6376,
+    "cost": 504672,
+    "ledger": [
+     1472,
+     6376,
+     504672
+    ]
+   },
+   {
+    "tag": "cost76c",
+    "solved": 1473,
+    "uniq": 6375,
+    "cost": 504596,
+    "ledger": [
+     1473,
+     6375,
+     504596
+    ]
+   },
+   {
+    "tag": "cost66i",
+    "solved": 1476,
+    "uniq": 6372,
+    "cost": 504389,
+    "ledger": [
+     1476,
+     6372,
+     504389
+    ]
+   }
+  ],
+  "parents_count": 38,
+  "mismatches_all": [
+   {
+    "tag": "cost76c",
+    "parent": "00000000000000801202000000040000",
+    "field": "rows_after",
+    "published": 69,
+    "ledger": 70
+   },
+   {
+    "tag": "cost76c",
+    "parent": "00000000000000801202000000040000",
+    "field": "edge_cost_after",
+    "published": 5725,
+    "ledger": 5802
+   }
+  ]
+ },
+ "checks": [
+  {
+   "check": "pin.reconc",
+   "pass": true,
+   "detail": "6992f2dcc8b87a5409cff31c8a87134fc4283a6a"
+  },
+  {
+   "check": "pin.worklist1410",
+   "pass": true,
+   "detail": "2fee1d0718547a62e346d35f5858d7913e37c097"
+  },
+  {
+   "check": "pin.cost65j-receipts-recompute-20261116",
+   "pass": true,
+   "detail": "e8c835840f2fad8ffd9a9a8e6f1a9f5944470524"
+  },
+  {
+   "check": "pin.cost64d-receipts-recompute-20261116",
+   "pass": true,
+   "detail": "082aa7f25596fe52e89ae4b158adba64a7f0d4c9"
+  },
+  {
+   "check": "pin.cost64f-receipts-recompute-20261116",
+   "pass": true,
+   "detail": "e11f31f303d0f3ab1b6d124403867e9f4ecdbebf"
+  },
+  {
+   "check": "pin.cost64g-receipts-recompute-20261116",
+   "pass": true,
+   "detail": "aff790021f6f8137ef1bc3ffaec1c980b37fad0c"
+  },
+  {
+   "check": "pin.cost65n-receipts-recompute-20261116",
+   "pass": true,
+   "detail": "7390c540836d5e8440833aec9b4ac014fd96dd44"
+  },
+  {
+   "check": "pin.cost66c-receipts-recompute-20261116",
+   "pass": true,
+   "detail": "8783993e5c73cc9697c3ca48aef981725f422be8"
+  },
+  {
+   "check": "pin.cost76d77e-receipts-recompute-20261116",
+   "pass": true,
+   "detail": "8d4bc622f9da22b8754f2e398e5481359656d956"
+  },
+  {
+   "check": "pin.cost64h-receipts-recompute-20261117",
+   "pass": true,
+   "detail": "1633be292f6f1862c895009eac29d398d0be7738"
+  },
+  {
+   "check": "pin.cost76c-receipts-recompute-20261117",
+   "pass": true,
+   "detail": "953beaea054989e8b1de33f48b1f2ebc13ae7e11"
+  },
+  {
+   "check": "pin.cost66i-bit19-receipts-recompute-20261118",
+   "pass": true,
+   "detail": "a555ee3a575df04ecddf98ce890bd8eec53dd415"
+  },
+  {
+   "check": "pin.cost60c",
+   "pass": true,
+   "detail": "239a6cf432e53713514d583e3682e1bef6075968"
+  },
+  {
+   "check": "wl.rows",
+   "pass": true,
+   "detail": "6438"
+  },
+  {
+   "check": "wl.all_six_stones",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "wl.total_cost",
+   "pass": true,
+   "detail": "509109"
+  },
+  {
+   "check": "join.index_selftest_vs_direct_and_deliverable2",
+   "pass": true,
+   "detail": "{\"H\": 83, \"A\": 65, \"F\": 69, \"X\": 24, \"B\": 74, \"I\": 68, \"P\": 5, \"E\": 71, \"G\": 70}"
+  },
+  {
+   "check": "b60c.after_state_is_worklist",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "b60c.lost_rows_absent_from_worklist",
+   "pass": true,
+   "detail": "[\"00000000000000003800000008008020\", \"00000000000000801092200000000000\", \"00000000000000801292000000000000\"]"
+  },
+  {
+   "check": "chain.contiguity_1410_to_1476",
+   "pass": true,
+   "detail": "[{\"tag\": \"cost65j\", \"basis\": 1410, \"after\": 1419}, {\"tag\": \"cost64d\", \"basis\": 1419, \"after\": 1435}, {\"tag\": \"cost64f\", \"basis\": 1435, \"after\": 1438}, {\"tag\": \"cost64g\", \"basis\": 1438, \"after\": 1441}, {\"tag\": \"cost65n\", \"basis\": 1441, \"after\": 1444}, {\"tag\": \"cost66c\", \"basis\": 1444, \"after\": 1450}, {\"tag\": \"cost76d77e\", \"basis\": 1450, \"after\": 1452}, {\"tag\": \"cost64h\", \"basis\": 1452, \"after\": 1472}, {\"tag\": \"cost76c\", \"basis\": 1472, \"after\": 1473}, {\"tag\": \"cost66i\", \"basis\": 1473, \"after\": 1476}]"
+  },
+  {
+   "check": "chain.basis_cost_uniq_match_predecessor_after",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "chain.no_other_published_segments_in_window",
+   "pass": true,
+   "detail": "[]"
+  },
+  {
+   "check": "closure.cost65j_matches_head_delta",
+   "pass": true,
+   "detail": "closed=9 delta=9"
+  },
+  {
+   "check": "closure.cost65j_cost_delta",
+   "pass": true,
+   "detail": "basis=509109 after=508474 closed=635"
+  },
+  {
+   "check": "closure.cost64d_matches_head_delta",
+   "pass": true,
+   "detail": "closed=16 delta=16"
+  },
+  {
+   "check": "closure.cost64d_cost_delta",
+   "pass": true,
+   "detail": "basis=508474 after=507337 closed=1137"
+  },
+  {
+   "check": "closure.cost64f_matches_head_delta",
+   "pass": true,
+   "detail": "closed=3 delta=3"
+  },
+  {
+   "check": "closure.cost64f_cost_delta",
+   "pass": true,
+   "detail": "basis=507337 after=507143 closed=194"
+  },
+  {
+   "check": "closure.cost64g_matches_head_delta",
+   "pass": true,
+   "detail": "closed=3 delta=3"
+  },
+  {
+   "check": "closure.cost64g_cost_delta",
+   "pass": true,
+   "detail": "basis=507143 after=506945 closed=198"
+  },
+  {
+   "check": "closure.cost65n_matches_head_delta",
+   "pass": true,
+   "detail": "closed=3 delta=3"
+  },
+  {
+   "check": "closure.cost65n_cost_delta",
+   "pass": true,
+   "detail": "basis=506945 after=506746 closed=199"
+  },
+  {
+   "check": "closure.cost66c_matches_head_delta",
+   "pass": true,
+   "detail": "closed=6 delta=6"
+  },
+  {
+   "check": "closure.cost66c_cost_delta",
+   "pass": true,
+   "detail": "basis=506746 after=506297 closed=449"
+  },
+  {
+   "check": "closure.cost76d77e_matches_head_delta",
+   "pass": true,
+   "detail": "closed=2 delta=2"
+  },
+  {
+   "check": "closure.cost76d77e_cost_delta",
+   "pass": true,
+   "detail": "basis=506297 after=506144 closed=153"
+  },
+  {
+   "check": "closure.cost64h_matches_head_delta",
+   "pass": true,
+   "detail": "closed=20 delta=20"
+  },
+  {
+   "check": "closure.cost64h_cost_delta",
+   "pass": true,
+   "detail": "basis=506144 after=504672 closed=1472"
+  },
+  {
+   "check": "closure.cost76c_matches_head_delta",
+   "pass": true,
+   "detail": "closed=1 delta=1"
+  },
+  {
+   "check": "closure.cost76c_cost_delta",
+   "pass": true,
+   "detail": "basis=504672 after=504596 closed=76"
+  },
+  {
+   "check": "closure.cost66i_matches_head_delta",
+   "pass": true,
+   "detail": "closed=3 delta=3"
+  },
+  {
+   "check": "closure.cost66i_cost_delta",
+   "pass": true,
+   "detail": "basis=504596 after=504389 closed=207"
+  },
+  {
+   "check": "closure.cost66i_totals_field",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "closure.cost64h_incidence_fields",
+   "pass": true,
+   "detail": "incidences=42 attr_cost=3090 unique_closure_cost=1472"
+  },
+  {
+   "check": "closure.cost76c_relisted_rows_closed_earlier",
+   "pass": true,
+   "detail": "{\"00000000000000003800000208000000\": [\"00000000040000003800080008000000\"], \"00000000000000801202000000040000\": [\"00000000040000809002000000004000\"], \"00000000000000801202000040000000\": [\"00000000040000003800080008000000\", \"00000000040000809002000000004000\"]}"
+  },
+  {
+   "check": "chain.global_disjoint_66_rows",
+   "pass": true,
+   "detail": "66"
+  },
+  {
+   "check": "chain.closed_rows_in_worklist",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "chain.total_closed_cost",
+   "pass": true,
+   "detail": "4720"
+  },
+  {
+   "check": "chain.attributed_rows_join_membership",
+   "pass": true,
+   "detail": "[]"
+  },
+  {
+   "check": "chain.parents_canon_popcount5",
+   "pass": true,
+   "detail": "38"
+  },
+  {
+   "check": "ledger.all_other_entries_absolute_consistent",
+   "pass": true,
+   "detail": "[]"
+  },
+  {
+   "check": "findings.cost76c_B_entry_double_counts_77e",
+   "pass": true,
+   "detail": "[{\"tag\": \"cost76c\", \"parent\": \"00000000000000801202000000040000\", \"field\": \"rows_after\", \"published\": 69, \"ledger\": 70}, {\"tag\": \"cost76c\", \"parent\": \"00000000000000801202000000040000\", \"field\": \"edge_cost_after\", \"published\": 5725, \"ledger\": 5802}]"
+  },
+  {
+   "check": "findings.cost76c_row_not_child_of_B_and_77e_closed_at_1452",
+   "pass": true,
+   "detail": "76c_row_in_join_B=False; 77e_closed_by=cost76d77e"
+  },
+  {
+   "check": "findings.B_true_state_at_1476",
+   "pass": true,
+   "detail": "{\"join1410_rows\": 74, \"join1410_cost\": 6113, \"cum_closed\": 4, \"final_ledger_rows\": 70, \"final_ledger_cost\": 5802}"
+  },
+  {
+   "check": "closure.cost66i_per_parent_derivation",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "ledger.head_telescopes_from_worklist_at_every_record",
+   "pass": true,
+   "detail": "[{\"tag\": \"cost65j\", \"solved\": 1419, \"uniq\": 6429, \"cost\": 508474, \"ledger\": [1419, 6429, 508474]}, {\"tag\": \"cost64d\", \"solved\": 1435, \"uniq\": 6413, \"cost\": 507337, \"ledger\": [1435, 6413, 507337]}, {\"tag\": \"cost64f\", \"solved\": 1438, \"uniq\": 6410, \"cost\": 507143, \"ledger\": [1438, 6410, 507143]}, {\"tag\": \"cost64g\", \"solved\": 1441, \"uniq\": 6407, \"cost\": 506945, \"ledger\": [1441, 6407, 506945]}, {\"tag\": \"cost65n\", \"solved\": 1444, \"uniq\": 6404, \"cost\": 506746, \"ledger\": [1444, 6404, 506746]}, {\"tag\": \"cost66c\", \"solved\": 1450, \"uniq\": 6398, \"cost\": 506297, \"ledger\": [1450, 6398, 506297]}, {\"tag\": \"cost76d77e\", \"solved\": 1452, \"uniq\": 6396, \"cost\": 506144, \"ledger\": [1452, 6396, 506144]}, {\"tag\": \"cost64h\", \"solved\": 1472, \"uniq\": 6376, \"cost\": 504672, \"ledger\": [1472, 6376, 504672]}, {\"tag\": \"cost76c\", \"solved\": 1473, \"uniq\": 6375, \"cost\": 504596, \"ledger\": [1473, 6375, 504596]}, {\"tag\": \"cost66i\", \"solved\": 1476, \"uniq\": 6372, \"cost\": 504389, \"ledger\": [1476, 6372, 504389]}]"
+  },
+  {
+   "check": "ledger.head1476_matches_reconciliation",
+   "pass": true,
+   "detail": ""
+  }
+ ],
+ "check_count": 57,
+ "all_pass": true,
+ "interpretation_guard": "Bookkeeping verification only. The ten fold records form a contiguous, disjoint, fully parent-accounted chain from head-1410 to head-1476 except the single characterized B-entry double-count in cost76c (global state unaffected). Receipt-level certificate content was not re-verified here (see the head-1476 reconciliation crosscheck for six certificates). REFUTED-D10 is not a LOSS proof; no S5 parent is closed by this audit.",
+ "unknown_status": "11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, and classes 1/2/4 remain UNKNOWN."
+}

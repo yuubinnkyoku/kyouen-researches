@@ -1,0 +1,176 @@
+{
+  "evidence_limit": "The three new direct S5 LOSS verdicts are positive-budget solver outputs with independent geometry and history checks. They are not terminal-only independent minimax certificates. The merged cache and overall frontier retain pre-existing cache-only leaves.",
+  "final_exact_s5_cache": {
+    "active_quarantined_keys": 0,
+    "path": "research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/current-exact-s5-after-probe-3.cache",
+    "rows": 5741,
+    "sha256": "f890dbc12e3731596afea3cd120f3aafa6103ecd2cd6872c05a0d1c99cc819ca",
+    "verdict_counts": {
+      "LOSS": 5583,
+      "WIN": 158
+    }
+  },
+  "frontier": {
+    "classes": 3384,
+    "integer_minimum_additional_classes": 1,
+    "rational_lp_dual": {
+      "feasibility": "each class covers a vertex at most once",
+      "value": "1",
+      "weights": {
+        "100": "1"
+      }
+    },
+    "remaining_third_moves": [
+      100,
+      108
+    ],
+    "s4_class_counts": {
+      "LOSS": 31,
+      "UNKNOWN": 3081,
+      "WIN": 272
+    },
+    "secured_third_moves": 117,
+    "total_third_moves": 119
+  },
+  "independent_geometry_source": {
+    "path": "research/experiments/n11-independent-exact-audit-20261010/scripts/independent.py",
+    "sha256": "954d3a104c1723ebb15b8c9bae63a4494f07f9eb73446a6d067c4fd6a4ba189f"
+  },
+  "main_commit_at_start": "1739ddf2f9a5ec411ad5aeb0a2d8f9259951597c",
+  "next_candidate": {
+    "legal_count": 90,
+    "prior_observations": [],
+    "raw_history_ready": true,
+    "s4_key": [
+      1188950301626859520,
+      536870912
+    ],
+    "s5_key": [
+      1152921504606851072,
+      537001986
+    ],
+    "saved_layer_verdict": null
+  },
+  "post_probe_raw_history": {
+    "cache_hits": 13,
+    "conflicts": 0,
+    "csv_files_examined": 11925,
+    "dispatch_ready_unknown_children": 95,
+    "raw_exact_rows": 7,
+    "same_or_higher_15m_unknown": 0,
+    "target_children": {
+      "count": 109
+    }
+  },
+  "probes": {
+    "distinct_s5_positions": 3,
+    "exact_nodes": 8774720,
+    "exact_s5_loss": 3,
+    "positions": [
+      {
+        "15m": {
+          "nodes": 3981449,
+          "path": "research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/probe-15m.csv",
+          "sha256": "1c90a0cc7123e4f9cfbf11a6bd77fbafe35d273ce626952b60ebba37e99068a7",
+          "verdict": "LOSS"
+        },
+        "2m": {
+          "nodes": 2000000,
+          "path": "research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/probe-2m.csv",
+          "sha256": "2dc9a5d4989e7812032366bcf3d066b4b7be084da2beb680c65f7f66fb08040a",
+          "verdict": "UNKNOWN"
+        },
+        "key": [
+          3494793310840553472,
+          536870912
+        ],
+        "legal_count": 88
+      },
+      {
+        "15m": {
+          "nodes": 2335333,
+          "path": "research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/probe-15m-second.csv",
+          "sha256": "41d9122c6a2d368b95680f5b59a98e332310d0c952c56d6ce341a3137062cbea",
+          "verdict": "LOSS"
+        },
+        "2m": {
+          "nodes": 2000000,
+          "path": "research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/probe-2m-second.csv",
+          "sha256": "c2340c4d8193197fbb5b4ef95eb3959c79ccccf4a1dae9e7ca2d611ca0372adb",
+          "verdict": "UNKNOWN"
+        },
+        "key": [
+          1188950301626859520,
+          536936448
+        ],
+        "legal_count": 89
+      },
+      {
+        "15m": {
+          "nodes": 2457938,
+          "path": "research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/probe-15m-third.csv",
+          "sha256": "f79ef6bbf390936ba36ef2daaa2f7d83ecb8349eccd1684ce4eb1d1d59e508f1",
+          "verdict": "LOSS"
+        },
+        "2m": {
+          "nodes": 2000000,
+          "path": "research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/probe-2m-third.csv",
+          "sha256": "6daa575540a53ae18dcdf8eb75ee4fc28d0e81ed502123b18a6ed809ca247cb1",
+          "verdict": "UNKNOWN"
+        },
+        "key": [
+          1189513251580280832,
+          536870912
+        ],
+        "legal_count": 89
+      }
+    ],
+    "runs": 6,
+    "total_nodes": 14774720,
+    "unknown_runs": 3
+  },
+  "saved_layers": {
+    "cache_s6_exact": 17,
+    "raw_s6_exact": 16,
+    "raw_s7_exact": 0,
+    "s5_derived": 0,
+    "s6_boundary_keys": 5366,
+    "s7_cache_intersections": 0
+  },
+  "schema": "n11-reply27-next-class-probe-report-v1",
+  "solver": {
+    "options": [
+      "--n=11",
+      "--memo=22",
+      "--exact-order=count"
+    ],
+    "path": ".local/n11-independent-audit-solver.exe",
+    "sha256": "ac8f4931e4c81bd06ba1622844933962134f663d970885c2990fbb96a167677a",
+    "source_path": "cpp/solvers/kyouen_dfpn_root.cpp",
+    "source_sha256": "9193f5b6065e0fbcad2ef7c65f386187701cafa1f5b718cc35a5cbb0d138f92e"
+  },
+  "target_s4": {
+    "children": 109,
+    "coverage": [
+      55,
+      65,
+      100,
+      108
+    ],
+    "final_boundary": {
+      "LOSS": 14,
+      "UNKNOWN": 95,
+      "WIN": 0
+    },
+    "final_status": "UNKNOWN",
+    "key": [
+      1188950301626859520,
+      536870912
+    ],
+    "starting_boundary": {
+      "LOSS": 11,
+      "UNKNOWN": 98,
+      "WIN": 0
+    }
+  }
+}

@@ -1,0 +1,606 @@
+{
+  "schema": "n11-minimum-cover-elimination-structure-20261118-v1",
+  "date": "2026-11-18",
+  "lane": "n11 long lane (verification side)",
+  "title": "Survival of the 359,610 minimum covers under root elimination; joint membership of the top-10 roots",
+  "inputs": {
+    "worklist": {
+      "path": "research/experiments/n11-class2-lane-closability-ranking-20261116/output/class-frontier-remaining-s6-worklist-1410-20261116.csv",
+      "git_blob_sha1": "2fee1d0718547a62e346d35f5858d7913e37c097"
+    },
+    "census": {
+      "path": "research/experiments/n11-head1410-receipt-unclosability-census-20261116/output/n11-head1410-receipt-unclosability-census-20261116.json",
+      "git_blob_sha1": "9c251da3138c5cb0516e097be5e5d0427dfaf5f0"
+    },
+    "ledger": {
+      "path": "research/experiments/n11-head1410-partial-parent-nonsterile-children-20261118/output/fold-chain-ledger-1410-1476-crosscheck-20261118.json",
+      "git_blob_sha1": "e8785d509e8a11a37c0d03cc450455a14708c34d"
+    },
+    "head1476": {
+      "path": "research/experiments/n11-head1410-partial-parent-nonsterile-children-20261118/output/head1476-parent-census-and-class2-cover-20261118.json",
+      "git_blob_sha1": "8e870809251fdc27701518d66d6b8a65ec6798c7"
+    },
+    "membership": {
+      "path": "research/experiments/n11-head1410-partial-parent-nonsterile-children-20261118/output/minimum-cover-root-membership-20261118.json",
+      "git_blob_sha1": "ab1e655f4a89a677e57515cdbacfe56894323013"
+    }
+  },
+  "method": "0/1 knapsack count DP over the 11-row mask (2048 states), restricted to the non-excluded candidate roots; forced-inclusion variant with init_mask/init_k for joint memberships. Skip-if-no-new is exact because in a size-6 cover every root is essential (5 covers do not exist).",
+  "derived": {
+    "total_minimum_covers": 359610,
+    "survival_curve_excluding_topk_membership_roots": [
+      {
+        "k": 0,
+        "excluded_next": "00000000200000003801000080000001",
+        "surviving_covers": 359610,
+        "killed_covers": 0,
+        "killed_share": 0.0,
+        "marginal_kill": 0,
+        "membership_of_next": 58410
+      },
+      {
+        "k": 1,
+        "excluded_next": "00000000000000c29002000000001000",
+        "surviving_covers": 301200,
+        "killed_covers": 58410,
+        "killed_share": 0.162426,
+        "marginal_kill": 58410,
+        "membership_of_next": 51990
+      },
+      {
+        "k": 2,
+        "excluded_next": "00000000000041801202000000080000",
+        "surviving_covers": 256800,
+        "killed_covers": 102810,
+        "killed_share": 0.285893,
+        "marginal_kill": 44400,
+        "membership_of_next": 51150
+      },
+      {
+        "k": 3,
+        "excluded_next": "00000000000000c09002000200001000",
+        "surviving_covers": 213330,
+        "killed_covers": 146280,
+        "killed_share": 0.406774,
+        "marginal_kill": 43470,
+        "membership_of_next": 51090
+      },
+      {
+        "k": 4,
+        "excluded_next": "00000000020001003800040008000000",
+        "surviving_covers": 177180,
+        "killed_covers": 182430,
+        "killed_share": 0.5073,
+        "marginal_kill": 36150,
+        "membership_of_next": 51075
+      },
+      {
+        "k": 5,
+        "excluded_next": "00000000020001003810000008000000",
+        "surviving_covers": 141225,
+        "killed_covers": 218385,
+        "killed_share": 0.607283,
+        "marginal_kill": 35955,
+        "membership_of_next": 51075
+      },
+      {
+        "k": 6,
+        "excluded_next": "00000000000021801202000000080000",
+        "surviving_covers": 105315,
+        "killed_covers": 254295,
+        "killed_share": 0.707141,
+        "marginal_kill": 35910,
+        "membership_of_next": 50700
+      },
+      {
+        "k": 7,
+        "excluded_next": "00000000000000c09002000000002200",
+        "surviving_covers": 69675,
+        "killed_covers": 289935,
+        "killed_share": 0.806248,
+        "marginal_kill": 35640,
+        "membership_of_next": 50625
+      },
+      {
+        "k": 8,
+        "excluded_next": "00000000000000c29002000000400000",
+        "surviving_covers": 34125,
+        "killed_covers": 325485,
+        "killed_share": 0.905106,
+        "marginal_kill": 35550,
+        "membership_of_next": 45030
+      },
+      {
+        "k": 9,
+        "excluded_next": "00000000000041801202000000100000",
+        "surviving_covers": 29250,
+        "killed_covers": 330360,
+        "killed_share": 0.918662,
+        "marginal_kill": 4875,
+        "membership_of_next": 44340
+      },
+      {
+        "k": 10,
+        "excluded_next": "00000000000000c09002000200400000",
+        "surviving_covers": 23400,
+        "killed_covers": 336210,
+        "killed_share": 0.93493,
+        "marginal_kill": 5850,
+        "membership_of_next": 44280
+      },
+      {
+        "k": 11,
+        "excluded_next": "00000000100001801202000000100000",
+        "surviving_covers": 19500,
+        "killed_covers": 340110,
+        "killed_share": 0.945775,
+        "marginal_kill": 3900,
+        "membership_of_next": 44280
+      },
+      {
+        "k": 12,
+        "excluded_next": null,
+        "surviving_covers": 14625,
+        "killed_covers": 344985,
+        "killed_share": 0.959331,
+        "marginal_kill": 4875,
+        "membership_of_next": null
+      }
+    ],
+    "lex_plan_resilience": {
+      "lex_cover_roots": [
+        "0000000000000040380000000800000a",
+        "00000000000000403800000008004020",
+        "00000000000000403800000408200000",
+        "00000000000000c09002000200001000",
+        "00000000010000809003000000000001",
+        "00000000020001003810000008000000"
+      ],
+      "covers_avoiding_all_lex_roots": 201360,
+      "killed_share": 0.44006
+    },
+    "top10_joint_membership": [
+      {
+        "a": "00000000200000003801000080000001",
+        "b": "00000000000000c29002000000001000",
+        "membership_a": 58410,
+        "membership_b": 51990,
+        "joint_membership": 7590
+      },
+      {
+        "a": "00000000200000003801000080000001",
+        "b": "00000000000041801202000000080000",
+        "membership_a": 58410,
+        "membership_b": 51150,
+        "joint_membership": 90
+      },
+      {
+        "a": "00000000200000003801000080000001",
+        "b": "00000000000000c09002000200001000",
+        "membership_a": 58410,
+        "membership_b": 51090,
+        "joint_membership": 7440
+      },
+      {
+        "a": "00000000200000003801000080000001",
+        "b": "00000000020001003800040008000000",
+        "membership_a": 58410,
+        "membership_b": 51075,
+        "joint_membership": 90
+      },
+      {
+        "a": "00000000200000003801000080000001",
+        "b": "00000000020001003810000008000000",
+        "membership_a": 58410,
+        "membership_b": 51075,
+        "joint_membership": 90
+      },
+      {
+        "a": "00000000200000003801000080000001",
+        "b": "00000000000021801202000000080000",
+        "membership_a": 58410,
+        "membership_b": 50700,
+        "joint_membership": 90
+      },
+      {
+        "a": "00000000200000003801000080000001",
+        "b": "00000000000000c09002000000002200",
+        "membership_a": 58410,
+        "membership_b": 50625,
+        "joint_membership": 90
+      },
+      {
+        "a": "00000000200000003801000080000001",
+        "b": "00000000000000c29002000000400000",
+        "membership_a": 58410,
+        "membership_b": 45030,
+        "joint_membership": 7485
+      },
+      {
+        "a": "00000000200000003801000080000001",
+        "b": "00000000000041801202000000100000",
+        "membership_a": 58410,
+        "membership_b": 44340,
+        "joint_membership": 7545
+      },
+      {
+        "a": "00000000000000c29002000000001000",
+        "b": "00000000000041801202000000080000",
+        "membership_a": 51990,
+        "membership_b": 51150,
+        "joint_membership": 7605
+      },
+      {
+        "a": "00000000000000c29002000000001000",
+        "b": "00000000000000c09002000200001000",
+        "membership_a": 51990,
+        "membership_b": 51090,
+        "joint_membership": 90
+      },
+      {
+        "a": "00000000000000c29002000000001000",
+        "b": "00000000020001003800040008000000",
+        "membership_a": 51990,
+        "membership_b": 51075,
+        "joint_membership": 7590
+      },
+      {
+        "a": "00000000000000c29002000000001000",
+        "b": "00000000020001003810000008000000",
+        "membership_a": 51990,
+        "membership_b": 51075,
+        "joint_membership": 7590
+      },
+      {
+        "a": "00000000000000c29002000000001000",
+        "b": "00000000000021801202000000080000",
+        "membership_a": 51990,
+        "membership_b": 50700,
+        "joint_membership": 7515
+      },
+      {
+        "a": "00000000000000c29002000000001000",
+        "b": "00000000000000c09002000000002200",
+        "membership_a": 51990,
+        "membership_b": 50625,
+        "joint_membership": 7500
+      },
+      {
+        "a": "00000000000000c29002000000001000",
+        "b": "00000000000000c29002000000400000",
+        "membership_a": 51990,
+        "membership_b": 45030,
+        "joint_membership": 90
+      },
+      {
+        "a": "00000000000000c29002000000001000",
+        "b": "00000000000041801202000000100000",
+        "membership_a": 51990,
+        "membership_b": 44340,
+        "joint_membership": 75
+      },
+      {
+        "a": "00000000000041801202000000080000",
+        "b": "00000000000000c09002000200001000",
+        "membership_a": 51150,
+        "membership_b": 51090,
+        "joint_membership": 7455
+      },
+      {
+        "a": "00000000000041801202000000080000",
+        "b": "00000000020001003800040008000000",
+        "membership_a": 51150,
+        "membership_b": 51075,
+        "joint_membership": 75
+      },
+      {
+        "a": "00000000000041801202000000080000",
+        "b": "00000000020001003810000008000000",
+        "membership_a": 51150,
+        "membership_b": 51075,
+        "joint_membership": 75
+      },
+      {
+        "a": "00000000000041801202000000080000",
+        "b": "00000000000021801202000000080000",
+        "membership_a": 51150,
+        "membership_b": 50700,
+        "joint_membership": 75
+      },
+      {
+        "a": "00000000000041801202000000080000",
+        "b": "00000000000000c09002000000002200",
+        "membership_a": 51150,
+        "membership_b": 50625,
+        "joint_membership": 75
+      },
+      {
+        "a": "00000000000041801202000000080000",
+        "b": "00000000000000c29002000000400000",
+        "membership_a": 51150,
+        "membership_b": 45030,
+        "joint_membership": 6414
+      },
+      {
+        "a": "00000000000041801202000000080000",
+        "b": "00000000000041801202000000100000",
+        "membership_a": 51150,
+        "membership_b": 44340,
+        "joint_membership": 105
+      },
+      {
+        "a": "00000000000000c09002000200001000",
+        "b": "00000000020001003800040008000000",
+        "membership_a": 51090,
+        "membership_b": 51075,
+        "joint_membership": 7440
+      },
+      {
+        "a": "00000000000000c09002000200001000",
+        "b": "00000000020001003810000008000000",
+        "membership_a": 51090,
+        "membership_b": 51075,
+        "joint_membership": 7440
+      },
+      {
+        "a": "00000000000000c09002000200001000",
+        "b": "00000000000021801202000000080000",
+        "membership_a": 51090,
+        "membership_b": 50700,
+        "joint_membership": 7365
+      },
+      {
+        "a": "00000000000000c09002000200001000",
+        "b": "00000000000000c09002000000002200",
+        "membership_a": 51090,
+        "membership_b": 50625,
+        "joint_membership": 7350
+      },
+      {
+        "a": "00000000000000c09002000200001000",
+        "b": "00000000000000c29002000000400000",
+        "membership_a": 51090,
+        "membership_b": 45030,
+        "joint_membership": 7470
+      },
+      {
+        "a": "00000000000000c09002000200001000",
+        "b": "00000000000041801202000000100000",
+        "membership_a": 51090,
+        "membership_b": 44340,
+        "joint_membership": 75
+      },
+      {
+        "a": "00000000020001003800040008000000",
+        "b": "00000000020001003810000008000000",
+        "membership_a": 51075,
+        "membership_b": 51075,
+        "joint_membership": 75
+      },
+      {
+        "a": "00000000020001003800040008000000",
+        "b": "00000000000021801202000000080000",
+        "membership_a": 51075,
+        "membership_b": 50700,
+        "joint_membership": 75
+      },
+      {
+        "a": "00000000020001003800040008000000",
+        "b": "00000000000000c09002000000002200",
+        "membership_a": 51075,
+        "membership_b": 50625,
+        "joint_membership": 75
+      },
+      {
+        "a": "00000000020001003800040008000000",
+        "b": "00000000000000c29002000000400000",
+        "membership_a": 51075,
+        "membership_b": 45030,
+        "joint_membership": 6402
+      },
+      {
+        "a": "00000000020001003800040008000000",
+        "b": "00000000000041801202000000100000",
+        "membership_a": 51075,
+        "membership_b": 44340,
+        "joint_membership": 7545
+      },
+      {
+        "a": "00000000020001003810000008000000",
+        "b": "00000000000021801202000000080000",
+        "membership_a": 51075,
+        "membership_b": 50700,
+        "joint_membership": 75
+      },
+      {
+        "a": "00000000020001003810000008000000",
+        "b": "00000000000000c09002000000002200",
+        "membership_a": 51075,
+        "membership_b": 50625,
+        "joint_membership": 75
+      },
+      {
+        "a": "00000000020001003810000008000000",
+        "b": "00000000000000c29002000000400000",
+        "membership_a": 51075,
+        "membership_b": 45030,
+        "joint_membership": 6402
+      },
+      {
+        "a": "00000000020001003810000008000000",
+        "b": "00000000000041801202000000100000",
+        "membership_a": 51075,
+        "membership_b": 44340,
+        "joint_membership": 7545
+      },
+      {
+        "a": "00000000000021801202000000080000",
+        "b": "00000000000000c09002000000002200",
+        "membership_a": 50700,
+        "membership_b": 50625,
+        "joint_membership": 75
+      },
+      {
+        "a": "00000000000021801202000000080000",
+        "b": "00000000000000c29002000000400000",
+        "membership_a": 50700,
+        "membership_b": 45030,
+        "joint_membership": 6342
+      },
+      {
+        "a": "00000000000021801202000000080000",
+        "b": "00000000000041801202000000100000",
+        "membership_a": 50700,
+        "membership_b": 44340,
+        "joint_membership": 7470
+      },
+      {
+        "a": "00000000000000c09002000000002200",
+        "b": "00000000000000c29002000000400000",
+        "membership_a": 50625,
+        "membership_b": 45030,
+        "joint_membership": 6330
+      },
+      {
+        "a": "00000000000000c09002000000002200",
+        "b": "00000000000041801202000000100000",
+        "membership_a": 50625,
+        "membership_b": 44340,
+        "joint_membership": 7455
+      },
+      {
+        "a": "00000000000000c29002000000400000",
+        "b": "00000000000041801202000000100000",
+        "membership_a": 45030,
+        "membership_b": 44340,
+        "joint_membership": 6507
+      }
+    ]
+  },
+  "checks": [
+    {
+      "name": "pin.worklist",
+      "pass": true,
+      "detail": "2fee1d0718547a62e346d35f5858d7913e37c097"
+    },
+    {
+      "name": "pin.census",
+      "pass": true,
+      "detail": "9c251da3138c5cb0516e097be5e5d0427dfaf5f0"
+    },
+    {
+      "name": "pin.ledger",
+      "pass": true,
+      "detail": "e8785d509e8a11a37c0d03cc450455a14708c34d"
+    },
+    {
+      "name": "pin.head1476",
+      "pass": true,
+      "detail": "8e870809251fdc27701518d66d6b8a65ec6798c7"
+    },
+    {
+      "name": "pin.membership",
+      "pass": true,
+      "detail": "ab1e655f4a89a677e57515cdbacfe56894323013"
+    },
+    {
+      "name": "target.rows",
+      "pass": true,
+      "detail": "11"
+    },
+    {
+      "name": "roots.distinct",
+      "pass": true,
+      "detail": "757"
+    },
+    {
+      "name": "total.minimum_covers",
+      "pass": true,
+      "detail": "359610"
+    },
+    {
+      "name": "membership.table_size",
+      "pass": true,
+      "detail": "757"
+    },
+    {
+      "name": "survival.monotone.1",
+      "pass": true,
+      "detail": "{\"k\": 1, \"rem\": 301200}"
+    },
+    {
+      "name": "survival.monotone.2",
+      "pass": true,
+      "detail": "{\"k\": 2, \"rem\": 256800}"
+    },
+    {
+      "name": "survival.monotone.3",
+      "pass": true,
+      "detail": "{\"k\": 3, \"rem\": 213330}"
+    },
+    {
+      "name": "survival.monotone.4",
+      "pass": true,
+      "detail": "{\"k\": 4, \"rem\": 177180}"
+    },
+    {
+      "name": "survival.monotone.5",
+      "pass": true,
+      "detail": "{\"k\": 5, \"rem\": 141225}"
+    },
+    {
+      "name": "survival.monotone.6",
+      "pass": true,
+      "detail": "{\"k\": 6, \"rem\": 105315}"
+    },
+    {
+      "name": "survival.monotone.7",
+      "pass": true,
+      "detail": "{\"k\": 7, \"rem\": 69675}"
+    },
+    {
+      "name": "survival.monotone.8",
+      "pass": true,
+      "detail": "{\"k\": 8, \"rem\": 34125}"
+    },
+    {
+      "name": "survival.monotone.9",
+      "pass": true,
+      "detail": "{\"k\": 9, \"rem\": 29250}"
+    },
+    {
+      "name": "survival.monotone.10",
+      "pass": true,
+      "detail": "{\"k\": 10, \"rem\": 23400}"
+    },
+    {
+      "name": "survival.monotone.11",
+      "pass": true,
+      "detail": "{\"k\": 11, \"rem\": 19500}"
+    },
+    {
+      "name": "survival.monotone.12",
+      "pass": true,
+      "detail": "{\"k\": 12, \"rem\": 14625}"
+    },
+    {
+      "name": "survival.k1_kill_equals_membership",
+      "pass": true,
+      "detail": "{\"kill\": 58410, \"membership\": 58410}"
+    },
+    {
+      "name": "joint.bounded",
+      "pass": true,
+      "detail": "45"
+    },
+    {
+      "name": "joint.top1_forced_inclusion",
+      "pass": true,
+      "detail": "{\"forced\": 58410, \"published\": 58410}"
+    }
+  ],
+  "check_count": 24,
+  "all_pass": true,
+  "interpretation_guard": "Bookkeeping and combinatorics only. No engine run, no verdict, no fold, no closure claim. 'Excluded' models a root becoming unusable for certificate planning; the counts measure how many minimum-size 6-root plans remain, and imply nothing about WIN/REFUTED outcomes or about non-minimum plans. REFUTED-D10 and STERILE are not LOSS proofs.",
+  "unknown_status": "Standard 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, and classes 1/2/4 remain UNKNOWN."
+}

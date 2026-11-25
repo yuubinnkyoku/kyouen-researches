@@ -1,0 +1,485 @@
+{
+  "counts": {
+    "exact_s5_cache_rows": 5851,
+    "roots": 20,
+    "s4_classes_loss": 32,
+    "s4_classes_total": 34949,
+    "s4_classes_unknown": 34527,
+    "s4_classes_win_excluded": 390,
+    "s5_cost_universe": 962525
+  },
+  "graph_bytes_gzip": 16001318,
+  "parameters": {
+    "extra_replies_per_first": 0
+  },
+  "roots": [
+    {
+      "canonical_first": 27,
+      "canonical_reply": 60,
+      "options_per_third_max": 118,
+      "options_per_third_mean": 101.622,
+      "options_per_third_min": 14,
+      "origin_first": 27,
+      "origin_reply": 60,
+      "pair_mask": [
+        1152921504741064704,
+        0
+      ],
+      "reachable_s4_classes": 3110,
+      "role": "known-loss-baseline",
+      "s4_option_slots": 12093,
+      "s4_option_status_counts": {
+        "LOSS": 137,
+        "UNKNOWN": 11956,
+        "WIN_EXCLUDED": 1021
+      },
+      "third_count": 119,
+      "thirds_with_free_loss_s4": 119
+    },
+    {
+      "canonical_first": 49,
+      "canonical_reply": 60,
+      "options_per_third_max": 118,
+      "options_per_third_mean": 107.832,
+      "options_per_third_min": 30,
+      "origin_first": 49,
+      "origin_reply": 60,
+      "pair_mask": [
+        1153484454560268288,
+        0
+      ],
+      "reachable_s4_classes": 3308,
+      "role": "central",
+      "s4_option_slots": 12832,
+      "s4_option_status_counts": {
+        "LOSS": 10,
+        "UNKNOWN": 12822,
+        "WIN_EXCLUDED": 242
+      },
+      "third_count": 119,
+      "thirds_with_free_loss_s4": 10
+    },
+    {
+      "canonical_first": 38,
+      "canonical_reply": 60,
+      "options_per_third_max": 118,
+      "options_per_third_mean": 109.933,
+      "options_per_third_min": 30,
+      "origin_first": 38,
+      "origin_reply": 60,
+      "pair_mask": [
+        1152921779484753920,
+        0
+      ],
+      "reachable_s4_classes": 3370,
+      "role": "central",
+      "s4_option_slots": 13082,
+      "s4_option_status_counts": {
+        "LOSS": 10,
+        "UNKNOWN": 13072,
+        "WIN_EXCLUDED": 98
+      },
+      "third_count": 119,
+      "thirds_with_free_loss_s4": 10
+    },
+    {
+      "canonical_first": 16,
+      "canonical_reply": 60,
+      "options_per_third_max": 118,
+      "options_per_third_mean": 107.882,
+      "options_per_third_min": 15,
+      "origin_first": 16,
+      "origin_reply": 60,
+      "pair_mask": [
+        1152921504606912512,
+        0
+      ],
+      "reachable_s4_classes": 3302,
+      "role": "central",
+      "s4_option_slots": 12838,
+      "s4_option_status_counts": {
+        "LOSS": 10,
+        "UNKNOWN": 12828,
+        "WIN_EXCLUDED": 350
+      },
+      "third_count": 119,
+      "thirds_with_free_loss_s4": 10
+    },
+    {
+      "canonical_first": 5,
+      "canonical_reply": 60,
+      "options_per_third_max": 118,
+      "options_per_third_mean": 109.639,
+      "options_per_third_min": 28,
+      "origin_first": 5,
+      "origin_reply": 60,
+      "pair_mask": [
+        1152921504606847008,
+        0
+      ],
+      "reachable_s4_classes": 3364,
+      "role": "central",
+      "s4_option_slots": 13047,
+      "s4_option_status_counts": {
+        "LOSS": 6,
+        "UNKNOWN": 13041,
+        "WIN_EXCLUDED": 71
+      },
+      "third_count": 119,
+      "thirds_with_free_loss_s4": 6
+    },
+    {
+      "canonical_first": 48,
+      "canonical_reply": 60,
+      "options_per_third_max": 118,
+      "options_per_third_mean": 106.395,
+      "options_per_third_min": 26,
+      "origin_first": 48,
+      "origin_reply": 60,
+      "pair_mask": [
+        1153202979583557632,
+        0
+      ],
+      "reachable_s4_classes": 3265,
+      "role": "central",
+      "s4_option_slots": 12661,
+      "s4_option_status_counts": {
+        "LOSS": 7,
+        "UNKNOWN": 12654,
+        "WIN_EXCLUDED": 427
+      },
+      "third_count": 119,
+      "thirds_with_free_loss_s4": 7
+    },
+    {
+      "canonical_first": 37,
+      "canonical_reply": 60,
+      "options_per_third_max": 118,
+      "options_per_third_mean": 113.521,
+      "options_per_third_min": 58,
+      "origin_first": 37,
+      "origin_reply": 60,
+      "pair_mask": [
+        1152921642045800448,
+        0
+      ],
+      "reachable_s4_classes": 6514,
+      "role": "central",
+      "s4_option_slots": 13509,
+      "s4_option_status_counts": {
+        "LOSS": 4,
+        "UNKNOWN": 13505,
+        "WIN_EXCLUDED": 64
+      },
+      "third_count": 119,
+      "thirds_with_free_loss_s4": 4
+    },
+    {
+      "canonical_first": 26,
+      "canonical_reply": 60,
+      "options_per_third_max": 118,
+      "options_per_third_mean": 113.387,
+      "options_per_third_min": 58,
+      "origin_first": 26,
+      "origin_reply": 60,
+      "pair_mask": [
+        1152921504673955840,
+        0
+      ],
+      "reachable_s4_classes": 6507,
+      "role": "central",
+      "s4_option_slots": 13493,
+      "s4_option_status_counts": {
+        "LOSS": 7,
+        "UNKNOWN": 13486,
+        "WIN_EXCLUDED": 72
+      },
+      "third_count": 119,
+      "thirds_with_free_loss_s4": 7
+    },
+    {
+      "canonical_first": 15,
+      "canonical_reply": 60,
+      "options_per_third_max": 118,
+      "options_per_third_mean": 114.101,
+      "options_per_third_min": 59,
+      "origin_first": 15,
+      "origin_reply": 60,
+      "pair_mask": [
+        1152921504606879744,
+        0
+      ],
+      "reachable_s4_classes": 6547,
+      "role": "central",
+      "s4_option_slots": 13578,
+      "s4_option_status_counts": {
+        "LOSS": 5,
+        "UNKNOWN": 13573,
+        "WIN_EXCLUDED": 87
+      },
+      "third_count": 119,
+      "thirds_with_free_loss_s4": 5
+    },
+    {
+      "canonical_first": 4,
+      "canonical_reply": 60,
+      "options_per_third_max": 118,
+      "options_per_third_mean": 114.563,
+      "options_per_third_min": 59,
+      "origin_first": 4,
+      "origin_reply": 60,
+      "pair_mask": [
+        1152921504606846992,
+        0
+      ],
+      "reachable_s4_classes": 6572,
+      "role": "central",
+      "s4_option_slots": 13633,
+      "s4_option_status_counts": {
+        "LOSS": 4,
+        "UNKNOWN": 13629,
+        "WIN_EXCLUDED": 32
+      },
+      "third_count": 119,
+      "thirds_with_free_loss_s4": 4
+    },
+    {
+      "canonical_first": 36,
+      "canonical_reply": 60,
+      "options_per_third_max": 118,
+      "options_per_third_mean": 109.723,
+      "options_per_third_min": 30,
+      "origin_first": 36,
+      "origin_reply": 60,
+      "pair_mask": [
+        1152921573326323712,
+        0
+      ],
+      "reachable_s4_classes": 3367,
+      "role": "central",
+      "s4_option_slots": 13057,
+      "s4_option_status_counts": {
+        "LOSS": 4,
+        "UNKNOWN": 13053,
+        "WIN_EXCLUDED": 75
+      },
+      "third_count": 119,
+      "thirds_with_free_loss_s4": 4
+    },
+    {
+      "canonical_first": 25,
+      "canonical_reply": 60,
+      "options_per_third_max": 118,
+      "options_per_third_mean": 114.597,
+      "options_per_third_min": 59,
+      "origin_first": 25,
+      "origin_reply": 60,
+      "pair_mask": [
+        1152921504640401408,
+        0
+      ],
+      "reachable_s4_classes": 6576,
+      "role": "central",
+      "s4_option_slots": 13637,
+      "s4_option_status_counts": {
+        "LOSS": 6,
+        "UNKNOWN": 13631,
+        "WIN_EXCLUDED": 18
+      },
+      "third_count": 119,
+      "thirds_with_free_loss_s4": 6
+    },
+    {
+      "canonical_first": 14,
+      "canonical_reply": 60,
+      "options_per_third_max": 118,
+      "options_per_third_mean": 114.361,
+      "options_per_third_min": 58,
+      "origin_first": 14,
+      "origin_reply": 60,
+      "pair_mask": [
+        1152921504606863360,
+        0
+      ],
+      "reachable_s4_classes": 6562,
+      "role": "central",
+      "s4_option_slots": 13609,
+      "s4_option_status_counts": {
+        "LOSS": 6,
+        "UNKNOWN": 13603,
+        "WIN_EXCLUDED": 30
+      },
+      "third_count": 119,
+      "thirds_with_free_loss_s4": 6
+    },
+    {
+      "canonical_first": 3,
+      "canonical_reply": 60,
+      "options_per_third_max": 118,
+      "options_per_third_mean": 114.429,
+      "options_per_third_min": 59,
+      "origin_first": 3,
+      "origin_reply": 60,
+      "pair_mask": [
+        1152921504606846984,
+        0
+      ],
+      "reachable_s4_classes": 6565,
+      "role": "central",
+      "s4_option_slots": 13617,
+      "s4_option_status_counts": {
+        "LOSS": 6,
+        "UNKNOWN": 13611,
+        "WIN_EXCLUDED": 96
+      },
+      "third_count": 119,
+      "thirds_with_free_loss_s4": 6
+    },
+    {
+      "canonical_first": 24,
+      "canonical_reply": 60,
+      "options_per_third_max": 118,
+      "options_per_third_mean": 108.244,
+      "options_per_third_min": 29,
+      "origin_first": 24,
+      "origin_reply": 60,
+      "pair_mask": [
+        1152921504623624192,
+        0
+      ],
+      "reachable_s4_classes": 3321,
+      "role": "central",
+      "s4_option_slots": 12881,
+      "s4_option_status_counts": {
+        "LOSS": 8,
+        "UNKNOWN": 12873,
+        "WIN_EXCLUDED": 235
+      },
+      "third_count": 119,
+      "thirds_with_free_loss_s4": 8
+    },
+    {
+      "canonical_first": 13,
+      "canonical_reply": 60,
+      "options_per_third_max": 118,
+      "options_per_third_mean": 114.412,
+      "options_per_third_min": 59,
+      "origin_first": 13,
+      "origin_reply": 60,
+      "pair_mask": [
+        1152921504606855168,
+        0
+      ],
+      "reachable_s4_classes": 6565,
+      "role": "central",
+      "s4_option_slots": 13615,
+      "s4_option_status_counts": {
+        "LOSS": 6,
+        "UNKNOWN": 13609,
+        "WIN_EXCLUDED": 42
+      },
+      "third_count": 119,
+      "thirds_with_free_loss_s4": 6
+    },
+    {
+      "canonical_first": 2,
+      "canonical_reply": 60,
+      "options_per_third_max": 118,
+      "options_per_third_mean": 114.437,
+      "options_per_third_min": 59,
+      "origin_first": 2,
+      "origin_reply": 60,
+      "pair_mask": [
+        1152921504606846980,
+        0
+      ],
+      "reachable_s4_classes": 6565,
+      "role": "central",
+      "s4_option_slots": 13618,
+      "s4_option_status_counts": {
+        "LOSS": 6,
+        "UNKNOWN": 13612,
+        "WIN_EXCLUDED": 59
+      },
+      "third_count": 119,
+      "thirds_with_free_loss_s4": 6
+    },
+    {
+      "canonical_first": 12,
+      "canonical_reply": 60,
+      "options_per_third_max": 118,
+      "options_per_third_mean": 106.563,
+      "options_per_third_min": 23,
+      "origin_first": 12,
+      "origin_reply": 60,
+      "pair_mask": [
+        1152921504606851072,
+        0
+      ],
+      "reachable_s4_classes": 3269,
+      "role": "central",
+      "s4_option_slots": 12681,
+      "s4_option_status_counts": {
+        "LOSS": 6,
+        "UNKNOWN": 12675,
+        "WIN_EXCLUDED": 455
+      },
+      "third_count": 119,
+      "thirds_with_free_loss_s4": 6
+    },
+    {
+      "canonical_first": 1,
+      "canonical_reply": 60,
+      "options_per_third_max": 118,
+      "options_per_third_mean": 115.101,
+      "options_per_third_min": 59,
+      "origin_first": 1,
+      "origin_reply": 60,
+      "pair_mask": [
+        1152921504606846978,
+        0
+      ],
+      "reachable_s4_classes": 6604,
+      "role": "central",
+      "s4_option_slots": 13697,
+      "s4_option_status_counts": {
+        "LOSS": 4,
+        "UNKNOWN": 13693,
+        "WIN_EXCLUDED": 22
+      },
+      "third_count": 119,
+      "thirds_with_free_loss_s4": 4
+    },
+    {
+      "canonical_first": 0,
+      "canonical_reply": 60,
+      "options_per_third_max": 118,
+      "options_per_third_mean": 110.538,
+      "options_per_third_min": 30,
+      "origin_first": 0,
+      "origin_reply": 60,
+      "pair_mask": [
+        1152921504606846977,
+        0
+      ],
+      "reachable_s4_classes": 3393,
+      "role": "central",
+      "s4_option_slots": 13154,
+      "s4_option_status_counts": {
+        "LOSS": 11,
+        "UNKNOWN": 13143,
+        "WIN_EXCLUDED": 10
+      },
+      "third_count": 119,
+      "thirds_with_free_loss_s4": 7
+    }
+  ],
+  "schema": "n11-joint-s5-dependency-summary-v1",
+  "source_hashes": {
+    "cached_second_reply_ranking_sha256": "38a196d697c41a820292915dc1eb7890cb85a24c1db1cd1831b67815361ad174",
+    "central_reply_frontier_sha256": "e3ac27ccf48162616b19459c9d78ffbc749d8f543bcbe299b5bf601a4e070d4f",
+    "current_exact_s5_cache_sha256": "c469eff06559c57b7f4b679c80c1e576c7bddb6f69ea03da0b8b64d0ef4aa198",
+    "independent_geometry_sha256": "954d3a104c1723ebb15b8c9bae63a4494f07f9eb73446a6d067c4fd6a4ba189f",
+    "opening_analysis_sha256": "b4a4c18e68b575a4001fdb06f32740b6e18c95a27103ba9f1d8d305d8034f3f5"
+  }
+}

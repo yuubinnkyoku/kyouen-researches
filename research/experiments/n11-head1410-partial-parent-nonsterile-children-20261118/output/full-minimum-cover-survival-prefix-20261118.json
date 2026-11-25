@@ -1,0 +1,468 @@
+{
+  "schema": "n11-head1476-class2-full-minimum-cover-survival-prefix-20261118-v1",
+  "date": "2026-11-18",
+  "lane": "standard 11x11 weak-resolution, verification side",
+  "title": "Exact full membership-ranked prefix survival curve for the 359,610 minimum 6-root covers",
+  "inputs": {
+    "membership": {
+      "path": "research/experiments/n11-head1410-partial-parent-nonsterile-children-20261118/output/minimum-cover-root-membership-20261118.json",
+      "git_blob_sha1": "ab1e655f4a89a677e57515cdbacfe56894323013"
+    },
+    "prior_elimination": {
+      "path": "research/experiments/n11-head1410-partial-parent-nonsterile-children-20261118/output/minimum-cover-elimination-structure-20261118.json",
+      "git_blob_sha1": "5f6185483f7a6458535b8e38a73483a23db2ef29"
+    }
+  },
+  "method": "One reverse suffix 0/1 DP over 11-row masks and exact root count 0..6. Roots are processed from lowest to highest membership rank; after adding rank i, dp[full][6] counts 6-root covers using only ranks i..757. The no-new-row transition is skipped because every 6-root cover is minimum and hence every selected root is essential. Forced-inclusion DP independently partitions the k=12 residual by ranks 13..15.",
+  "derived": {
+    "target_parent": "00000000000000403800000008000000",
+    "target_rows": [
+      "00000000000000403800000008000008",
+      "00000000000000403800000008000020",
+      "00000000000000403800000008004000",
+      "00000000000000403800000008200000",
+      "00000000000000403800000408000000",
+      "00000000000000403800400008000000",
+      "00000000000000801206000000000400",
+      "00000000000000c09002000000001000",
+      "00000000000000c09002000000002000",
+      "00000000000000c09002000000400000",
+      "00000000000000c09002000200000000"
+    ],
+    "candidate_roots": 757,
+    "minimum_root_count": 6,
+    "total_minimum_covers": 359610,
+    "membership_sum": 2157660,
+    "full_prefix_survival_k0_to_k15": [
+      {
+        "k": 0,
+        "surviving_covers": 359610,
+        "killed_covers": 0,
+        "marginal_kill": 0,
+        "killed_share": 0
+      },
+      {
+        "k": 1,
+        "surviving_covers": 301200,
+        "killed_covers": 58410,
+        "marginal_kill": 58410,
+        "killed_share": 0.16242596
+      },
+      {
+        "k": 2,
+        "surviving_covers": 256800,
+        "killed_covers": 102810,
+        "marginal_kill": 44400,
+        "killed_share": 0.28589305
+      },
+      {
+        "k": 3,
+        "surviving_covers": 213330,
+        "killed_covers": 146280,
+        "marginal_kill": 43470,
+        "killed_share": 0.40677401
+      },
+      {
+        "k": 4,
+        "surviving_covers": 177180,
+        "killed_covers": 182430,
+        "marginal_kill": 36150,
+        "killed_share": 0.50729957
+      },
+      {
+        "k": 5,
+        "surviving_covers": 141225,
+        "killed_covers": 218385,
+        "marginal_kill": 35955,
+        "killed_share": 0.60728289
+      },
+      {
+        "k": 6,
+        "surviving_covers": 105315,
+        "killed_covers": 254295,
+        "marginal_kill": 35910,
+        "killed_share": 0.70714107
+      },
+      {
+        "k": 7,
+        "surviving_covers": 69675,
+        "killed_covers": 289935,
+        "marginal_kill": 35640,
+        "killed_share": 0.80624844
+      },
+      {
+        "k": 8,
+        "surviving_covers": 34125,
+        "killed_covers": 325485,
+        "marginal_kill": 35550,
+        "killed_share": 0.90510553
+      },
+      {
+        "k": 9,
+        "surviving_covers": 29250,
+        "killed_covers": 330360,
+        "marginal_kill": 4875,
+        "killed_share": 0.91866188
+      },
+      {
+        "k": 10,
+        "surviving_covers": 23400,
+        "killed_covers": 336210,
+        "marginal_kill": 5850,
+        "killed_share": 0.93492951
+      },
+      {
+        "k": 11,
+        "surviving_covers": 19500,
+        "killed_covers": 340110,
+        "marginal_kill": 3900,
+        "killed_share": 0.94577459
+      },
+      {
+        "k": 12,
+        "surviving_covers": 14625,
+        "killed_covers": 344985,
+        "marginal_kill": 4875,
+        "killed_share": 0.95933094
+      },
+      {
+        "k": 13,
+        "surviving_covers": 9750,
+        "killed_covers": 349860,
+        "marginal_kill": 4875,
+        "killed_share": 0.97288729
+      },
+      {
+        "k": 14,
+        "surviving_covers": 4875,
+        "killed_covers": 354735,
+        "marginal_kill": 4875,
+        "killed_share": 0.98644365
+      },
+      {
+        "k": 15,
+        "surviving_covers": 0,
+        "killed_covers": 359610,
+        "marginal_kill": 4875,
+        "killed_share": 1
+      }
+    ],
+    "first_zero_membership_prefix_length": 15,
+    "zero_survival_for_all_larger_prefixes": true,
+    "top15_membership_roots": [
+      {
+        "rank": 1,
+        "root": "00000000200000003801000080000001",
+        "membership": 58410,
+        "cover_rows": [
+          "00000000000000801206000000000400",
+          "00000000000000c09002000000002000"
+        ]
+      },
+      {
+        "rank": 2,
+        "root": "00000000000000c29002000000001000",
+        "membership": 51990,
+        "cover_rows": [
+          "00000000000000403800000008000020",
+          "00000000000000c09002000000001000"
+        ]
+      },
+      {
+        "rank": 3,
+        "root": "00000000000041801202000000080000",
+        "membership": 51150,
+        "cover_rows": [
+          "00000000000000403800000008004000",
+          "00000000000000c09002000000002000"
+        ]
+      },
+      {
+        "rank": 4,
+        "root": "00000000000000c09002000200001000",
+        "membership": 51090,
+        "cover_rows": [
+          "00000000000000c09002000000001000",
+          "00000000000000c09002000200000000"
+        ]
+      },
+      {
+        "rank": 5,
+        "root": "00000000020001003800040008000000",
+        "membership": 51075,
+        "cover_rows": [
+          "00000000000000403800000408000000",
+          "00000000000000c09002000000002000"
+        ]
+      },
+      {
+        "rank": 6,
+        "root": "00000000020001003810000008000000",
+        "membership": 51075,
+        "cover_rows": [
+          "00000000000000403800400008000000",
+          "00000000000000c09002000000002000"
+        ]
+      },
+      {
+        "rank": 7,
+        "root": "00000000000021801202000000080000",
+        "membership": 50700,
+        "cover_rows": [
+          "00000000000000403800000008000008",
+          "00000000000000c09002000000002000"
+        ]
+      },
+      {
+        "rank": 8,
+        "root": "00000000000000c09002000000002200",
+        "membership": 50625,
+        "cover_rows": [
+          "00000000000000403800000008200000",
+          "00000000000000c09002000000002000"
+        ]
+      },
+      {
+        "rank": 9,
+        "root": "00000000000000c29002000000400000",
+        "membership": 45030,
+        "cover_rows": [
+          "00000000000000403800000008000020",
+          "00000000000000c09002000000400000"
+        ]
+      },
+      {
+        "rank": 10,
+        "root": "00000000000041801202000000100000",
+        "membership": 44340,
+        "cover_rows": [
+          "00000000000000403800000008004000",
+          "00000000000000c09002000000001000"
+        ]
+      },
+      {
+        "rank": 11,
+        "root": "00000000000000c09002000200400000",
+        "membership": 44280,
+        "cover_rows": [
+          "00000000000000c09002000000400000",
+          "00000000000000c09002000200000000"
+        ]
+      },
+      {
+        "rank": 12,
+        "root": "00000000100001801202000000100000",
+        "membership": 44280,
+        "cover_rows": [
+          "00000000000000403800400008000000",
+          "00000000000000c09002000000001000"
+        ]
+      },
+      {
+        "rank": 13,
+        "root": "00000000200040003801000000100000",
+        "membership": 44280,
+        "cover_rows": [
+          "00000000000000403800000408000000",
+          "00000000000000c09002000000001000"
+        ]
+      },
+      {
+        "rank": 14,
+        "root": "00000000000021801202000000100000",
+        "membership": 43980,
+        "cover_rows": [
+          "00000000000000403800000008000008",
+          "00000000000000c09002000000001000"
+        ]
+      },
+      {
+        "rank": 15,
+        "root": "00000000000000c09002000000001200",
+        "membership": 43920,
+        "cover_rows": [
+          "00000000000000403800000008200000",
+          "00000000000000c09002000000001000"
+        ]
+      }
+    ],
+    "residual_after_top12": {
+      "surviving_minimum_covers": 14625,
+      "partition_roots": [
+        {
+          "rank": 13,
+          "root": "00000000200040003801000000100000",
+          "membership": 44280,
+          "cover_rows": [
+            "00000000000000403800000408000000",
+            "00000000000000c09002000000001000"
+          ],
+          "residual_forced_covers": 4875
+        },
+        {
+          "rank": 14,
+          "root": "00000000000021801202000000100000",
+          "membership": 43980,
+          "cover_rows": [
+            "00000000000000403800000008000008",
+            "00000000000000c09002000000001000"
+          ],
+          "residual_forced_covers": 4875
+        },
+        {
+          "rank": 15,
+          "root": "00000000000000c09002000000001200",
+          "membership": 43920,
+          "cover_rows": [
+            "00000000000000403800000008200000",
+            "00000000000000c09002000000001000"
+          ],
+          "residual_forced_covers": 4875
+        }
+      ],
+      "pairwise_joint_counts": [
+        {
+          "ranks": [
+            13,
+            14
+          ],
+          "roots": [
+            "00000000200040003801000000100000",
+            "00000000000021801202000000100000"
+          ],
+          "joint_residual_covers": 0
+        },
+        {
+          "ranks": [
+            13,
+            15
+          ],
+          "roots": [
+            "00000000200040003801000000100000",
+            "00000000000000c09002000000001200"
+          ],
+          "joint_residual_covers": 0
+        },
+        {
+          "ranks": [
+            14,
+            15
+          ],
+          "roots": [
+            "00000000000021801202000000100000",
+            "00000000000000c09002000000001200"
+          ],
+          "joint_residual_covers": 0
+        }
+      ],
+      "triple_joint_count": 0,
+      "exact_partition": true
+    }
+  },
+  "checks": [
+    {
+      "name": "pin.membership",
+      "pass": true,
+      "detail": "ab1e655f4a89a677e57515cdbacfe56894323013"
+    },
+    {
+      "name": "pin.prior_elimination",
+      "pass": true,
+      "detail": "5f6185483f7a6458535b8e38a73483a23db2ef29"
+    },
+    {
+      "name": "target.rows",
+      "pass": true,
+      "detail": "11"
+    },
+    {
+      "name": "roots.unique",
+      "pass": true,
+      "detail": "757"
+    },
+    {
+      "name": "roots.all_cover_1_or_2_rows",
+      "pass": true,
+      "detail": "757"
+    },
+    {
+      "name": "cover.total",
+      "pass": true,
+      "detail": "359610"
+    },
+    {
+      "name": "cover.minimum_size",
+      "pass": true,
+      "detail": "6"
+    },
+    {
+      "name": "membership.sum_identity",
+      "pass": true,
+      "detail": "2157660"
+    },
+    {
+      "name": "prior.k0_to_k12_reproduced",
+      "pass": true,
+      "detail": "13 points"
+    },
+    {
+      "name": "curve.monotone",
+      "pass": true,
+      "detail": "758 suffix counts"
+    },
+    {
+      "name": "top15_are_pair_roots",
+      "pass": true,
+      "detail": "15"
+    },
+    {
+      "name": "prefix.k14_nonzero",
+      "pass": true,
+      "detail": "4875"
+    },
+    {
+      "name": "prefix.k15_zero",
+      "pass": true,
+      "detail": "0"
+    },
+    {
+      "name": "prefix.first_zero_is_15",
+      "pass": true,
+      "detail": "15"
+    },
+    {
+      "name": "residual.after_top12",
+      "pass": true,
+      "detail": "14625"
+    },
+    {
+      "name": "residual.final_three_each_4875",
+      "pass": true,
+      "detail": "[4875,4875,4875]"
+    },
+    {
+      "name": "residual.final_three_pairwise_disjoint",
+      "pass": true,
+      "detail": "[0,0,0]"
+    },
+    {
+      "name": "residual.final_three_cover_all",
+      "pass": true,
+      "detail": "14625"
+    },
+    {
+      "name": "residual.triple_joint_zero",
+      "pass": true,
+      "detail": "0"
+    }
+  ],
+  "check_count": 19,
+  "all_pass": true,
+  "interpretation_guard": "This is exact combinatorial bookkeeping for minimum 6-root candidate covers only. The top-15 prefix is a hitting set for all minimum covers in the published membership ranking, but this does not prove it is a globally minimum hitting set. If all 15 roots were unavailable to depth-10 receipts, no 6-root receipt plan would remain; larger covers may still exist. No root verdict, WIN7-D10 receipt, S6 fold, S5 closure, or game-theoretic outcome is created. REFUTED-D10 and STERILE are not LOSS proofs.",
+  "unknown_status": {
+    "standard_11x11_empty_board": "UNKNOWN",
+    "two_stone_roots": "UNKNOWN",
+    "S2_59_60": "UNKNOWN",
+    "classes_1_2_4": "UNKNOWN"
+  }
+}

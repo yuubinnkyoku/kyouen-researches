@@ -1,0 +1,119 @@
+# exact replay: order=0 (0=count-asc 1=count-desc 2=key-asc 3=s5-count-desc 4=s5-target92) share_tt=0
+# exact replay: id,stones,legal,is_or,budget,result,nodes,wall_s,key_lo,key_hi
+# exact-profile row=0 table_hit=1246087 table_miss=11173391 table_new=1048576 evict_open=0 evict_solved=951416 table_used=1048576 table_capacity=1048576 table_solved=1048576 solved_discoveries=1999992 avg_probe=15.9845
+# exact-profile-rank row=0 s5 calls=1 nodes=1 win=0 loss=0 unknown=1 tt_solved=0 tt_open=0 tt_miss=1
+# exact-profile-rank row=0 s6 calls=100 nodes=12 win=11 loss=0 unknown=89 tt_solved=0 tt_open=0 tt_miss=100
+# exact-profile-rank row=0 s7 calls=113 nodes=38 win=9 loss=28 unknown=76 tt_solved=0 tt_open=0 tt_miss=113
+# exact-profile-rank row=0 s8 calls=854 nodes=841 win=814 loss=26 unknown=14 tt_solved=0 tt_open=0 tt_miss=854
+# exact-profile-rank row=0 s9 calls=4887 nodes=4860 win=638 loss=4221 unknown=28 tt_solved=0 tt_open=0 tt_miss=4887
+# exact-profile-rank row=0 s10 calls=32632 nodes=32606 win=29563 loss=3042 unknown=27 tt_solved=0 tt_open=0 tt_miss=32632
+# exact-profile-rank row=0 s11 calls=120951 nodes=120944 win=20094 loss=100849 unknown=8 tt_solved=0 tt_open=0 tt_miss=120951
+# exact-profile-rank row=0 s12 calls=351527 nodes=351520 win=287542 loss=63977 unknown=8 tt_solved=0 tt_open=0 tt_miss=351527
+# exact-profile-rank row=0 s13 calls=581885 nodes=581881 win=158237 loss=423644 unknown=4 tt_solved=0 tt_open=0 tt_miss=581885
+# exact-profile-rank row=0 s14 calls=581365 nodes=581365 win=441792 loss=139573 unknown=0 tt_solved=0 tt_open=0 tt_miss=581365
+# exact-profile-rank row=0 s15 calls=274553 nodes=274553 win=37657 loss=236896 unknown=0 tt_solved=0 tt_open=0 tt_miss=274553
+# exact-profile-rank row=0 s16 calls=48660 nodes=48660 win=45688 loss=2972 unknown=0 tt_solved=0 tt_open=0 tt_miss=48660
+# exact-profile-rank row=0 s17 calls=2690 nodes=2690 win=45 loss=2645 unknown=0 tt_solved=0 tt_open=0 tt_miss=2690
+# exact-profile-rank row=0 s18 calls=29 nodes=29 win=29 loss=0 unknown=0 tt_solved=0 tt_open=0 tt_miss=29
+# exact-profile-child row=0 lo=1747537393444978688 hi=32 legal=69 nodes=35820 verdict=WIN
+# exact-profile-child row=0 lo=1749789192721793024 hi=32 legal=71 nodes=714659 verdict=WIN
+# exact-profile-child row=0 lo=4053380402121801728 hi=32 legal=71 nodes=204998 verdict=WIN
+# exact-profile-child row=0 lo=3461016313667780608 hi=516 legal=71 nodes=291307 verdict=WIN
+# exact-profile-child row=0 lo=3461016314171097088 hi=516 legal=72 nodes=67565 verdict=WIN
+# exact-profile-child row=0 lo=1747537392908107776 hi=34 legal=73 nodes=45177 verdict=WIN
+# exact-profile-child row=0 lo=3461016382353702912 hi=516 legal=75 nodes=100328 verdict=WIN
+# exact-profile-child row=0 lo=1747537392908124160 hi=32 legal=76 nodes=145844 verdict=WIN
+# exact-profile-child row=0 lo=1783566189927071744 hi=32 legal=76 nodes=356270 verdict=WIN
+# exact-profile-child row=0 lo=2035767769059819520 hi=32 legal=76 nodes=1 verdict=WIN
+# exact-profile-child row=0 lo=3461016313634234368 hi=516 legal=76 nodes=1 verdict=WIN
+# exact-profile-child row=0 lo=3461016313634488320 hi=516 legal=76 nodes=38029 verdict=UNKNOWN
+# exact-profile-child row=0 lo=3461157051122581504 hi=516 legal=76 nodes=0 verdict=UNKNOWN
+# exact-profile-child row=0 lo=1747537392908632064 hi=32 legal=77 nodes=0 verdict=UNKNOWN
+# exact-profile-child row=0 lo=1747607761652285440 hi=32 legal=77 nodes=0 verdict=UNKNOWN
+# exact-profile-child row=0 lo=1748100342861529088 hi=32 legal=77 nodes=0 verdict=UNKNOWN
+# exact-profile-child row=0 lo=3461016863390040064 hi=516 legal=77 nodes=0 verdict=UNKNOWN
+# exact-profile-child row=0 lo=1747537392916496384 hi=32 legal=78 nodes=0 verdict=UNKNOWN
+# exact-profile-child row=0 lo=1752040992535478272 hi=32 legal=78 nodes=0 verdict=UNKNOWN
+# exact-profile-child row=0 lo=3461016315781709824 hi=516 legal=78 nodes=0 verdict=UNKNOWN
+# exact-profile-child row=0 lo=1747537392941662208 hi=32 legal=79 nodes=0 verdict=UNKNOWN
+# exact-profile-child row=0 lo=1747572577280196608 hi=32 legal=79 nodes=0 verdict=UNKNOWN
+# exact-profile-child row=0 lo=6359223411335495680 hi=32 legal=79 nodes=0 verdict=UNKNOWN
+# exact-profile-child row=0 lo=3461086682378403840 hi=516 legal=79 nodes=0 verdict=UNKNOWN
+# exact-profile-child row=0 lo=1747537393981849600 hi=32 legal=80 nodes=0 verdict=UNKNOWN
+# exact-profile-child row=0 lo=1747537392908107776 hi=96 legal=80 nodes=0 verdict=UNKNOWN
+# exact-profile-child row=0 lo=3461016313634226178 hi=516 legal=80 nodes=0 verdict=UNKNOWN
+# exact-profile-child row=0 lo=1747537392908108288 hi=32 legal=81 nodes=0 verdict=UNKNOWN
+# exact-profile-child row=0 lo=1747537392908238848 hi=32 legal=81 nodes=0 verdict=UNKNOWN
+# exact-profile-child row=0 lo=1747537392908107776 hi=48 legal=81 nodes=0 verdict=UNKNOWN
+# exact-profile-child row=0 lo=3461016313701335040 hi=516 legal=81 nodes=0 verdict=UNKNOWN
+# exact-profile-child row=0 lo=3461016314707968000 hi=516 legal=81 nodes=0 verdict=UNKNOWN
+# exact-profile-child row=0 lo=3461018512657481728 hi=516 legal=81 nodes=0 verdict=UNKNOWN
+# exact-profile-child row=0 lo=1747537392908107808 hi=32 legal=82 nodes=0 verdict=UNKNOWN
+# exact-profile-child row=0 lo=1747537392908107904 hi=32 legal=82 nodes=0 verdict=UNKNOWN
+# exact-profile-child row=0 lo=1747537392909156352 hi=32 legal=82 nodes=0 verdict=UNKNOWN
+# exact-profile-child row=0 lo=1747537530347061248 hi=32 legal=82 nodes=0 verdict=UNKNOWN
+# exact-profile-child row=0 lo=3461016313634226208 hi=516 legal=82 nodes=0 verdict=UNKNOWN
+# exact-profile-child row=0 lo=1747537392908140544 hi=32 legal=83 nodes=0 verdict=UNKNOWN
+# exact-profile-child row=0 lo=1747818867884818432 hi=32 legal=83 nodes=0 verdict=UNKNOWN
+# exact-profile-child row=0 lo=1756544592162848768 hi=32 legal=83 nodes=0 verdict=UNKNOWN
+# exact-profile-child row=0 lo=1819594986946035712 hi=32 legal=83 nodes=0 verdict=UNKNOWN
+# exact-profile-child row=0 lo=1747537392908107776 hi=40 legal=83 nodes=0 verdict=UNKNOWN
+# exact-profile-child row=0 lo=1747537392908107776 hi=160 legal=83 nodes=0 verdict=UNKNOWN
+# exact-profile-child row=0 lo=3461016313634226184 hi=516 legal=83 nodes=0 verdict=UNKNOWN
+# exact-profile-child row=0 lo=3461016313634226240 hi=516 legal=83 nodes=0 verdict=UNKNOWN
+# exact-profile-child row=0 lo=3461016313636323328 hi=516 legal=83 nodes=0 verdict=UNKNOWN
+# exact-profile-child row=0 lo=3461051498006315008 hi=516 legal=83 nodes=0 verdict=UNKNOWN
+# exact-profile-child row=0 lo=1747537395055591424 hi=32 legal=84 nodes=0 verdict=UNKNOWN
+# exact-profile-child row=0 lo=1747537392908107784 hi=32 legal=85 nodes=0 verdict=UNKNOWN
+# exact-profile-child row=0 lo=1747537392908107792 hi=32 legal=85 nodes=0 verdict=UNKNOWN
+# exact-profile-child row=0 lo=1747537392924884992 hi=32 legal=85 nodes=0 verdict=UNKNOWN
+# exact-profile-child row=0 lo=1747538492419735552 hi=32 legal=85 nodes=0 verdict=UNKNOWN
+# exact-profile-child row=0 lo=1747554985094152192 hi=32 legal=85 nodes=0 verdict=UNKNOWN
+# exact-profile-child row=0 lo=3461016313634226304 hi=516 legal=85 nodes=0 verdict=UNKNOWN
+# exact-profile-child row=0 lo=3461016313634227200 hi=516 legal=85 nodes=0 verdict=UNKNOWN
+# exact-profile-child row=0 lo=1747537392908369920 hi=32 legal=86 nodes=0 verdict=UNKNOWN
+# exact-profile-child row=0 lo=1747541790954618880 hi=32 legal=86 nodes=0 verdict=UNKNOWN
+# exact-profile-child row=0 lo=3461016330814095360 hi=516 legal=86 nodes=0 verdict=UNKNOWN
+# exact-profile-child row=0 lo=1747537392908107840 hi=32 legal=87 nodes=0 verdict=UNKNOWN
+# exact-profile-child row=0 lo=1747537393176543232 hi=32 legal=87 nodes=0 verdict=UNKNOWN
+# exact-profile-child row=0 lo=3461016313634258944 hi=516 legal=87 nodes=0 verdict=UNKNOWN
+# exact-profile-child row=0 lo=1747537392908107777 hi=32 legal=88 nodes=0 verdict=UNKNOWN
+# exact-profile-child row=0 lo=1747537392908109824 hi=32 legal=88 nodes=0 verdict=UNKNOWN
+# exact-profile-child row=0 lo=3461016313634291712 hi=516 legal=88 nodes=0 verdict=UNKNOWN
+# exact-profile-child row=0 lo=3461016313638420480 hi=516 legal=88 nodes=0 verdict=UNKNOWN
+# exact-profile-child row=0 lo=3461016313651003392 hi=516 legal=88 nodes=0 verdict=UNKNOWN
+# exact-profile-child row=0 lo=1747546189001129984 hi=32 legal=89 nodes=0 verdict=UNKNOWN
+# exact-profile-child row=0 lo=3461016313634226192 hi=516 legal=89 nodes=0 verdict=UNKNOWN
+# exact-profile-child row=0 lo=3461016313634230272 hi=516 legal=89 nodes=0 verdict=UNKNOWN
+# exact-profile-child row=0 lo=3461016313634357248 hi=516 legal=89 nodes=0 verdict=UNKNOWN
+# exact-profile-child row=0 lo=3461016347993964544 hi=516 legal=89 nodes=0 verdict=UNKNOWN
+# exact-profile-child row=0 lo=1747537392908115968 hi=32 legal=90 nodes=0 verdict=UNKNOWN
+# exact-profile-child row=0 lo=1747537397203075072 hi=32 legal=90 nodes=0 verdict=UNKNOWN
+# exact-profile-child row=0 lo=3461016313634750464 hi=516 legal=90 nodes=0 verdict=UNKNOWN
+# exact-profile-child row=0 lo=3461016313635274752 hi=516 legal=90 nodes=0 verdict=UNKNOWN
+# exact-profile-child row=0 lo=3461025109727248384 hi=516 legal=90 nodes=0 verdict=UNKNOWN
+# exact-profile-child row=0 lo=1747537401498042368 hi=32 legal=91 nodes=0 verdict=UNKNOWN
+# exact-profile-child row=0 lo=3461016313634226177 hi=516 legal=91 nodes=0 verdict=UNKNOWN
+# exact-profile-child row=0 lo=3461016322224160768 hi=516 legal=91 nodes=0 verdict=UNKNOWN
+# exact-profile-child row=0 lo=3461020711680737280 hi=516 legal=91 nodes=0 verdict=UNKNOWN
+# exact-profile-child row=0 lo=1747537392908173312 hi=32 legal=92 nodes=0 verdict=UNKNOWN
+# exact-profile-child row=0 lo=1747537667786014720 hi=32 legal=92 nodes=0 verdict=UNKNOWN
+# exact-profile-child row=0 lo=3461016313642614784 hi=516 legal=92 nodes=0 verdict=UNKNOWN
+# exact-profile-child row=0 lo=3461016588512133120 hi=516 legal=92 nodes=0 verdict=UNKNOWN
+# exact-profile-child row=0 lo=1747537392910204928 hi=32 legal=93 nodes=0 verdict=UNKNOWN
+# exact-profile-child row=0 lo=1747537410087976960 hi=32 legal=93 nodes=0 verdict=UNKNOWN
+# exact-profile-child row=0 lo=1747539591931363328 hi=32 legal=93 nodes=0 verdict=UNKNOWN
+# exact-profile-child row=0 lo=1747537392908107776 hi=36 legal=93 nodes=0 verdict=UNKNOWN
+# exact-profile-child row=0 lo=3461016313634228224 hi=516 legal=93 nodes=0 verdict=UNKNOWN
+# exact-profile-child row=0 lo=3461016313634242560 hi=516 legal=93 nodes=0 verdict=UNKNOWN
+# exact-profile-child row=0 lo=1747537392908108800 hi=32 legal=94 nodes=0 verdict=UNKNOWN
+# exact-profile-child row=0 lo=3461016313634226688 hi=516 legal=94 nodes=0 verdict=UNKNOWN
+# exact-profile-child row=0 lo=1747537392908107780 hi=32 legal=95 nodes=0 verdict=UNKNOWN
+# exact-profile-child row=0 lo=1747537392908107778 hi=32 legal=96 nodes=0 verdict=UNKNOWN
+# exact-profile-child row=0 lo=1747537392908108032 hi=32 legal=96 nodes=0 verdict=UNKNOWN
+# exact-profile-child row=0 lo=1747537392912302080 hi=32 legal=96 nodes=0 verdict=UNKNOWN
+# exact-profile-child row=0 lo=3461016313634226180 hi=516 legal=96 nodes=0 verdict=UNKNOWN
+# exact-profile-child row=0 lo=3461016313634226432 hi=516 legal=96 nodes=0 verdict=UNKNOWN
+# exact-profile-child row=0 lo=3461016317929193472 hi=516 legal=96 nodes=0 verdict=UNKNOWN
+replay,0,5,100,0,2000000,0,2000000,20,1747537392908107776,32
+# replay_done rows=1 wall_s=20

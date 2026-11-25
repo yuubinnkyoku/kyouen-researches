@@ -1,0 +1,135 @@
+{
+ "a_survive_39": "189465234042187464",
+ "a_survive_percent": "6.386934",
+ "aggregates_blob_sha1": "31bdefdb2e2cc90b706cbb8090e98eb5eece4d87",
+ "b_survive_39": "44989365335921856",
+ "b_survive_percent": "1.516606",
+ "checks": {
+  "all_pass": true,
+  "count": 35,
+  "failed": [],
+  "summary": "record census + pair shared/disjoint + preread agreement (new quint/sextet census, sextet double-row histogram, rank-39 membership) + double-row histograms + subset structure of b_only/disjoint quints and b_only sextets + disjoint-quint union size 10 and joint_A > 0 + I-E identities + bounds + maintained monotonicity k38->k39"
+ },
+ "corpus": {
+  "as_run_record_jsonl": {
+   "bytes": 5519169,
+   "git_blob_sha1": "742aed958ce844d38d96a3a2471d14c2d2f53b8f",
+   "lines": 29233,
+   "md5": "25209c872995ec5d3b9959ad76062461",
+   "note": "as-run harness executed the official anchor mode and the official pairs budget mode in sequence; the 14 distinct cross rows were appended once per mode (28 rows), value-identical between both copies (0 field mismatches excluding elapsed-time fields); the canonical 29,219-record dedup (first occurrence, stable order) removes them; all sums below are unaffected (cross rows contribute no I-E terms) and both corpora pass the same 35 checks with identical values"
+  },
+  "assembly": "pair records: official pairs/triples/quads budget mode (rc=0); anchor records: official anchor mode (rc=0); triple/quad/quint/sextet records: lane driver replaying the official per-record computation path in resumable shards (prescan extracts the 14,166 quint and 5,852 sextet work items classified as b_only/disjoint; zero-class subsets are exact zeros of the classifier and contribute no I-E terms)",
+  "canonical_record_jsonl": {
+   "bytes": 5516755,
+   "git_blob_sha1": "ec323a3132773d372b7de5adbb2be02566cd7ae6",
+   "md5": "b8fc1e210685041cda7ccd9e33ba221b",
+   "records": 29219
+  }
+ },
+ "identities": {
+  "kill_chain": "kill_38 + marginal_39 == kill_39 on the total and on both A/B splits (k38 values reproduced from the pinned k38 result blob c45ea8d0a11f009343c0736f6b98b5e4d06e8d4e)",
+  "marginal_from_ie": "mem[38] - S2 + S3 - S4 + S5 - S6 = marginal_39 (S5 = new-layer 5-subsets containing rank-39, first-ever nonzero disjoint quint term included; S6 = new-layer 6-subsets containing rank-39, first-ever b_only sextet term, j6_A == 0)",
+  "marginal_split": "marginal_39_A + marginal_39_B == marginal_39",
+  "total_cover_identity": "kill_39_A + a_survive_39 + kill_39_B + b_survive_39 == total_cover"
+ },
+ "k38_result_blob_sha1": "c45ea8d0a11f009343c0736f6b98b5e4d06e8d4e",
+ "k38_result_kill": "2719931616763264020",
+ "k38_to_k39_patch_blob_sha1": "d532e09dc787c988425de3bd73537ca4b272b098",
+ "k38_to_k39_patch_commit": "8bf8484cab3ca9c239592bc9eee4745ef5abdf07",
+ "k39_preread_blob_sha1": "6056bd831d4ea32212f39016455078ff0557573c",
+ "k39_production_script_blob_sha1": "ce52edc9fcf1c14b31bd4c9058aeca34c2b0f38a",
+ "k39_production_script_commit": "84bda7514e4ad87521bef72448293ff59dbf3d93",
+ "kill_39": "2731995742302372036",
+ "kill_39_A": "2116322057251746924",
+ "kill_39_B": "615673685050625112",
+ "kill_39_percent": "92.096460",
+ "m39": "119883868794265826",
+ "marginal_39": "12064125539108016",
+ "marginal_39_A": "9621593393447259",
+ "marginal_39_B": "2442532145660757",
+ "marginal_over_total_percent": "0.406686",
+ "marginal_ratio_percent": "10.063177",
+ "n11_empty_board_verdict": "UNKNOWN",
+ "next_steps_on_owner_landing": "when the official k=39 result/records land, run the record-by-record comparison against the canonical corpus (blob ec323a31...) and the S2..S6/marginal/kill value comparison; identical -> agreement note (k38 ec62057f precedent); any mismatch -> immediate discrepancy report",
+ "owner_publication_status": "the official k=39 result JSON / record JSONL / log were NOT yet published at this commit; this file is an independent second execution and does not duplicate them",
+ "rank39_root": [
+  5,
+  24
+ ],
+ "record_census": {
+  "anchor2": 4,
+  "anchor3": 2,
+  "anchor4": 4,
+  "cross": {
+   "by_kind": {
+    "cross3": 2,
+    "cross4": 2,
+    "cross5": 2,
+    "cross6": 2,
+    "crossq4": 2,
+    "crossq5": 4
+   },
+   "lineage_mismatches": 0,
+   "total": 14
+  },
+  "pair": {
+   "disjoint": 34,
+   "shared_row": 4,
+   "total": 38
+  },
+  "quad": {
+   "b_only": 4398,
+   "disjoint": 1009,
+   "total": 8436,
+   "zero": 3029
+  },
+  "quint": {
+   "b_only": 13658,
+   "disjoint": 508,
+   "total": 14166
+  },
+  "sextet": {
+   "b_only": 5852,
+   "total": 5852
+  },
+  "triple": {
+   "b_only": 319,
+   "disjoint": 342,
+   "total": 703,
+   "zero": 42
+  }
+ },
+ "run_facts": {
+  "determinism_checkpoint": "the pair (37,38) record of the first and second executions carries identical joints (joint_A=3864883981998822, joint_B=1256159032032453), the two-build determinism anchor",
+  "executions": 2,
+  "finalize_mode_oom": "the official finalize mode exceeds this environment's 3.2GB memory cap (OOM kill, rc=137, during the C(39,6)-scale sextet census construction); this lane therefore verified lean (records + identities) and left the full finalize publication to the owner environment",
+  "first_execution": "full corpus completed before an environment reset at 09:29Z (provider 503); first corpus lost with the environment; identical-value re-execution followed; the publishable values below all come from the second execution",
+  "harness_corrections_before_publication": [
+   "lean verifier first read the absent joint_B field on published-path b_only quad records as literal zero; corrected to the finalize semantics (b_only quad joints count fully on the B side), after which all identities hold",
+   "lean verifier first detected double rows from a single union pass; corrected to a rows-multiset recount (union columns of double-row records list the doubled row once)"
+  ],
+  "parity": "1 process; no CPU worker parallelism; no shared-cache writes; all pinned inputs fetched via commit-SHA-pinned raw CDN with sha1 verification, except the candidate-root tables regenerated locally (git blob 89b24065d0588b0891395c9283e3a5b3d5551595)",
+  "second_execution_wall_utc": "prescan 09:31:56Z; official anchor mode rc=0 09:32:43Z; official pairs budget mode rc=0 09:34:04Z; all sextet records 09:48:29Z; all quad records 10:00:08Z; all triple records 10:03:33Z; all quint records 10:21:41Z (2 shards); lean verify 10:24Z; all checks re-confirmed after the canonical dedup"
+ },
+ "schema": "n11-cost16-k39-second-execution-lean-verification-20261119-v1",
+ "scope": "independent second-execution lean verification of the k=39 rank-layer record corpus for the 31-row cost-16 parent; cover-plan combinatorics only; not a game-theoretic verdict",
+ "source_main_commit_at_run": "26fc92d1e9c73a2306fc36a139c054fba50f00db",
+ "sums": {
+  "j2": "177719762480252278",
+  "j2_A": "134048048821617775",
+  "j2_B": "43671713658634503",
+  "j3": "81323301076158782",
+  "j3_A": "59828162703113978",
+  "j3_B": "21495138373044804",
+  "j4": "11792614387000557",
+  "j4_A": "8178733671816696",
+  "j4_B": "3613880715183861",
+  "j5": "371572113381822",
+  "j5_A": "195547521346740",
+  "j5_B": "176024592035082",
+  "j6": "2239577445579",
+  "j6_A": "0",
+  "j6_B": "2239577445579"
+ },
+ "total_cover": "2966450341680481356"
+}

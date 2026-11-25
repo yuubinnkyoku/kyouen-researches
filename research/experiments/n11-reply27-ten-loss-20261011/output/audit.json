@@ -1,0 +1,414 @@
+{
+  "after_cache_loss": 5606,
+  "after_cache_rows": 5765,
+  "after_cache_win": 159,
+  "baseline_cache_sha256": "7e9711e06ec0328f812058f97b8d64a5cf2463dfc5ac7bd6292581709a3c7ae0",
+  "baseline_main_sha": "3db4b36cd647bf895c96f4484e0884d20b29e5d3",
+  "before_cache_rows": 5755,
+  "cache_conflicts": 0,
+  "decisive_replay_nodes": 52325136,
+  "geometry_sha256": "146be80b5794462c2444e983fc4c4a6e76d3b464bfd5e86fac14509024100b54",
+  "independent_board_sha256": "954d3a104c1723ebb15b8c9bae63a4494f07f9eb73446a6d067c4fd6a4ba189f",
+  "independent_terminal_only_certificates_for_new_s5": 0,
+  "merged_cache_sha256": "3a1e14c16003525e17833e3da792a0cd93ed16e661484660ca185474025cb19c",
+  "minimal_additional_loss_classes": 1,
+  "probe_15m_exact_loss": 10,
+  "probe_15m_win": 0,
+  "probe_count": 10,
+  "probe_initial_2m_unknown": 10,
+  "raw_sha256": {
+    "research/experiments/n11-reply27-ten-loss-20261011/output/raw/group1-2m.csv": "f36a42ca147dfbeba1a1f30b645aa1917fe0ae3f326e394113efbc6f7735d89f",
+    "research/experiments/n11-reply27-ten-loss-20261011/output/raw/group1a-15m.csv": "e7e057834e2d3f104bed9894b5719b5418b62b94d902f296294ed27265cab761",
+    "research/experiments/n11-reply27-ten-loss-20261011/output/raw/group1b-15m.csv": "1a3c56c1e1e2536b45a4ca05d9dd3bb9bbd28415710fe2dbcc30d45e4ce09cda",
+    "research/experiments/n11-reply27-ten-loss-20261011/output/raw/group2-2m.csv": "7995cc2dcc5d72371a19e90f0f058dee854ec4b9f02cbfd14a8fd3a1b6fc1bbe",
+    "research/experiments/n11-reply27-ten-loss-20261011/output/raw/group2a-15m.csv": "fb2a1deb7b6c4773a82f554af16670d79442725fb50a62dffb39b125b205bb75",
+    "research/experiments/n11-reply27-ten-loss-20261011/output/raw/group2b-15m.csv": "5be65ac8607096ee215f2b1bf483d2eb708d8465068e20ffd4327b6a52bb4c66",
+    "research/experiments/n11-reply27-ten-loss-20261011/output/raw/input-group1.csv": "ddec1a49b0df015c939861ca1eaea5f089860c8001d95985568567bbb2c88d23",
+    "research/experiments/n11-reply27-ten-loss-20261011/output/raw/input-group1a.csv": "b9638f57645c58d29fbe9f7593f9151e8cf7d1210e0554b3d54546dd6477d77d",
+    "research/experiments/n11-reply27-ten-loss-20261011/output/raw/input-group1b.csv": "1434af292f6951edc02033cafbf992aba4770ac798249de553ee23b3676d154d",
+    "research/experiments/n11-reply27-ten-loss-20261011/output/raw/input-group2.csv": "a4b819f1a9cec36fe6305ce69c117a5a604ce81e42ca63fa46a3511b9c655958",
+    "research/experiments/n11-reply27-ten-loss-20261011/output/raw/input-group2a.csv": "751784e885c3e85b40ab23364d3c128c13742d13c631c497adb18a78176ecd06",
+    "research/experiments/n11-reply27-ten-loss-20261011/output/raw/input-group2b.csv": "13783b3174cde59c2b354b185a9d71e5372859ff1734df11ffcc54676b4ecf53",
+    "research/experiments/n11-reply27-ten-loss-20261011/output/raw/input-single91.csv": "4f41971884827a890bec857c108b79c3401360ac1b1863de31f0c8483372bc36",
+    "research/experiments/n11-reply27-ten-loss-20261011/output/raw/input-single92.csv": "c8cafdd8f36984be5f2102e7fe7150d6e169a48c784ecc8ee2dbfdda5ffdc258",
+    "research/experiments/n11-reply27-ten-loss-20261011/output/raw/single91-15m.csv": "df77a0b7921f81a951464b3eaad8f7b15f9975e833f971c897f66ccf99c66aa3",
+    "research/experiments/n11-reply27-ten-loss-20261011/output/raw/single92-15m.csv": "415b7df9ba630ae4149a261bebf425a01d9d13e5057b890dd5ee3b7905ea3387"
+  },
+  "results": [
+    {
+      "exact": {
+        "legal": 91,
+        "nodes": 3983104,
+        "source": "research/experiments/n11-reply27-ten-loss-20261011/output/raw/single91-15m.csv",
+        "verdict": 2
+      },
+      "key": [
+        1297036692683752480,
+        0
+      ],
+      "legal": 91,
+      "parents": [
+        [
+          1297036692682703904,
+          0
+        ],
+        [
+          1297036692683751456,
+          0
+        ],
+        [
+          1297036692683752448,
+          0
+        ]
+      ],
+      "pilot": {
+        "legal": 91,
+        "nodes": 2000000,
+        "source": "research/experiments/n11-reply27-ten-loss-20261011/output/raw/group1-2m.csv",
+        "verdict": 0
+      }
+    },
+    {
+      "exact": {
+        "legal": 90,
+        "nodes": 14122712,
+        "source": "research/experiments/n11-reply27-ten-loss-20261011/output/raw/group1b-15m.csv",
+        "verdict": 2
+      },
+      "key": [
+        1297036692683760640,
+        0
+      ],
+      "legal": 90,
+      "parents": [
+        [
+          1297036692682712064,
+          0
+        ],
+        [
+          1297036692683752448,
+          0
+        ],
+        [
+          1297036692683759616,
+          0
+        ]
+      ],
+      "pilot": {
+        "legal": 90,
+        "nodes": 2000000,
+        "source": "research/experiments/n11-reply27-ten-loss-20261011/output/raw/group1-2m.csv",
+        "verdict": 0
+      }
+    },
+    {
+      "exact": {
+        "legal": 93,
+        "nodes": 4100570,
+        "source": "research/experiments/n11-reply27-ten-loss-20261011/output/raw/group2a-15m.csv",
+        "verdict": 2
+      },
+      "key": [
+        1297036692683883520,
+        0
+      ],
+      "legal": 93,
+      "parents": [
+        [
+          1297036692682834944,
+          0
+        ],
+        [
+          1297036692683752448,
+          0
+        ],
+        [
+          1297036692683882496,
+          0
+        ]
+      ],
+      "pilot": {
+        "legal": 93,
+        "nodes": 2000000,
+        "source": "research/experiments/n11-reply27-ten-loss-20261011/output/raw/group2-2m.csv",
+        "verdict": 0
+      }
+    },
+    {
+      "exact": {
+        "legal": 92,
+        "nodes": 6522725,
+        "source": "research/experiments/n11-reply27-ten-loss-20261011/output/raw/single92-15m.csv",
+        "verdict": 2
+      },
+      "key": [
+        1297036761403229184,
+        0
+      ],
+      "legal": 92,
+      "parents": [
+        [
+          1297036692683752448,
+          0
+        ],
+        [
+          1297036761402180608,
+          0
+        ],
+        [
+          1297036761403228160,
+          0
+        ]
+      ],
+      "pilot": {
+        "legal": 92,
+        "nodes": 2000000,
+        "source": "research/experiments/n11-reply27-ten-loss-20261011/output/raw/group1-2m.csv",
+        "verdict": 0
+      }
+    },
+    {
+      "exact": {
+        "legal": 95,
+        "nodes": 3670909,
+        "source": "research/experiments/n11-reply27-ten-loss-20261011/output/raw/group2b-15m.csv",
+        "verdict": 2
+      },
+      "key": [
+        1297036830122705920,
+        0
+      ],
+      "legal": 95,
+      "parents": [
+        [
+          1297036692683752448,
+          0
+        ],
+        [
+          1297036830121657344,
+          0
+        ],
+        [
+          1297036830122704896,
+          0
+        ]
+      ],
+      "pilot": {
+        "legal": 95,
+        "nodes": 2000000,
+        "source": "research/experiments/n11-reply27-ten-loss-20261011/output/raw/group2-2m.csv",
+        "verdict": 0
+      }
+    },
+    {
+      "exact": {
+        "legal": 95,
+        "nodes": 7147572,
+        "source": "research/experiments/n11-reply27-ten-loss-20261011/output/raw/group2b-15m.csv",
+        "verdict": 2
+      },
+      "key": [
+        1297107061427930112,
+        0
+      ],
+      "legal": 95,
+      "parents": [
+        [
+          1297036692683752448,
+          0
+        ],
+        [
+          1297107061426881536,
+          0
+        ],
+        [
+          1297107061427929088,
+          0
+        ]
+      ],
+      "pilot": {
+        "legal": 95,
+        "nodes": 2000000,
+        "source": "research/experiments/n11-reply27-ten-loss-20261011/output/raw/group2-2m.csv",
+        "verdict": 0
+      }
+    },
+    {
+      "exact": {
+        "legal": 89,
+        "nodes": 2742740,
+        "source": "research/experiments/n11-reply27-ten-loss-20261011/output/raw/group1a-15m.csv",
+        "verdict": 2
+      },
+      "key": [
+        3602879701897446400,
+        0
+      ],
+      "legal": 89,
+      "parents": [
+        [
+          1297036692683752448,
+          0
+        ],
+        [
+          3602879701896397824,
+          0
+        ],
+        [
+          3602879701897445376,
+          0
+        ]
+      ],
+      "pilot": {
+        "legal": 89,
+        "nodes": 2000000,
+        "source": "research/experiments/n11-reply27-ten-loss-20261011/output/raw/group1-2m.csv",
+        "verdict": 0
+      }
+    },
+    {
+      "exact": {
+        "legal": 89,
+        "nodes": 3182164,
+        "source": "research/experiments/n11-reply27-ten-loss-20261011/output/raw/group1a-15m.csv",
+        "verdict": 2
+      },
+      "key": [
+        5908722711111140352,
+        0
+      ],
+      "legal": 89,
+      "parents": [
+        [
+          1297036692683752448,
+          0
+        ],
+        [
+          5908722711110091776,
+          0
+        ],
+        [
+          5908722711111139328,
+          0
+        ]
+      ],
+      "pilot": {
+        "legal": 89,
+        "nodes": 2000000,
+        "source": "research/experiments/n11-reply27-ten-loss-20261011/output/raw/group1-2m.csv",
+        "verdict": 0
+      }
+    },
+    {
+      "exact": {
+        "legal": 95,
+        "nodes": 3777766,
+        "source": "research/experiments/n11-reply27-ten-loss-20261011/output/raw/group2a-15m.csv",
+        "verdict": 2
+      },
+      "key": [
+        10376293541461626881,
+        32
+      ],
+      "legal": 95,
+      "parents": [
+        [
+          1297036692683752448,
+          0
+        ],
+        [
+          10376293541461622785,
+          32
+        ],
+        [
+          10376293541461626880,
+          32
+        ]
+      ],
+      "pilot": {
+        "legal": 95,
+        "nodes": 2000000,
+        "source": "research/experiments/n11-reply27-ten-loss-20261011/output/raw/group2-2m.csv",
+        "verdict": 0
+      }
+    },
+    {
+      "exact": {
+        "legal": 96,
+        "nodes": 3074874,
+        "source": "research/experiments/n11-reply27-ten-loss-20261011/output/raw/group2b-15m.csv",
+        "verdict": 2
+      },
+      "key": [
+        10376293541461626881,
+        65536
+      ],
+      "legal": 96,
+      "parents": [
+        [
+          1297036692683752448,
+          0
+        ],
+        [
+          10376293541461622785,
+          65536
+        ],
+        [
+          10376293541461626880,
+          65536
+        ]
+      ],
+      "pilot": {
+        "legal": 96,
+        "nodes": 2000000,
+        "source": "research/experiments/n11-reply27-ten-loss-20261011/output/raw/group2-2m.csv",
+        "verdict": 0
+      }
+    }
+  ],
+  "run_15m_partial": {
+    "completed_rows": 1,
+    "file": "group1b-15m.csv",
+    "incomplete_last_two": "not used; single91/single92 rerun separately"
+  },
+  "s4_after": {
+    "LOSS": 31,
+    "UNKNOWN": 3079,
+    "WIN": 274
+  },
+  "s4_before": {
+    "LOSS": 31,
+    "UNKNOWN": 3079,
+    "WIN": 274
+  },
+  "solver_binary_sha256": "2878dc74ab1228c1bba6b13140dcd8f65f457f9813ae98d801a1709c77497ee5",
+  "solver_build_commit": "f33693cdd8be54738cedea8fc141553209c9a669",
+  "solver_command": "--n=11 --memo=22 --only=5 --exact-order=count --exact-replay-budget=2000000/15000000; cold per target",
+  "target": {
+    "after_loss": 20,
+    "after_unknown": 86,
+    "after_win": 0,
+    "before_loss": 10,
+    "before_unknown": 96,
+    "coverage": [
+      100,
+      108,
+      110,
+      120
+    ],
+    "key": [
+      1297036692683752448,
+      0
+    ],
+    "s5_complete_children": 106,
+    "status": "UNKNOWN"
+  },
+  "third_moves_remaining": [
+    100,
+    108
+  ],
+  "third_moves_secured": 117,
+  "total_nodes_excluding_unreported_interrupted_work": 72325136,
+  "verdict_trust": "exact solver raw verdicts; independent canonical/legal/transition/cache checks, not terminal-only minimax",
+  "version": "n11-reply27-ten-loss-v1"
+}

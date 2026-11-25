@@ -1,0 +1,42 @@
+{
+  "independent_geometry": {
+    "legal_s4_to_s5_edge": true,
+    "s4_canonical": true,
+    "s5_legal_moves": 84,
+    "s5_safe_canonical": true
+  },
+  "independent_minimax": {
+    "checker_source_sha256": "5f9cc9ec3ffdcab8d68f68cbceadcc42bcd641641c21b59a93fbc69a8378e635",
+    "elapsed_seconds": 47.91596900000877,
+    "geometry_source_sha256": "954d3a104c1723ebb15b8c9bae63a4494f07f9eb73446a6d067c4fd6a4ba189f",
+    "method": "terminal-only ranked DAG, no trusted leaves",
+    "state_limit": 30000,
+    "verdict": "UNKNOWN",
+    "visited": 30000
+  },
+  "s4_key": [
+    1224979098645823488,
+    536870912
+  ],
+  "s5_key": [
+    1224979098645823488,
+    536870976
+  ],
+  "schema": "n11-reply27-candidate-s5-win-independent-check-v1",
+  "solver_replay": {
+    "budget": 15000000,
+    "input_path": "research/experiments/n11-reply27-class-1297036692683751424-16-20261010/output/candidate-s5-probe15m-third/s5-1224979098645823488-536870976.input.csv",
+    "input_sha256": "e0931ca2c7240e284860fa0925cdc8cd2930c900b019c2a9e93f1ea2cb44035b",
+    "log_path": "research/experiments/n11-reply27-class-1297036692683751424-16-20261010/output/candidate-s5-probe15m-third/s5-1224979098645823488-536870976.log",
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "nodes": 9611717,
+    "raw_path": "research/experiments/n11-reply27-class-1297036692683751424-16-20261010/output/candidate-s5-probe15m-third/s5-1224979098645823488-536870976.out.csv",
+    "raw_sha256": "6f2c49e0849871f18d5286af8970231970392e3cc3edfcb17ca39578045c597f",
+    "solver_path": ".local/n11-independent-audit-solver.exe",
+    "solver_sha256": "ac8f4931e4c81bd06ba1622844933962134f663d970885c2990fbb96a167677a",
+    "source_sha256": "9193f5b6065e0fbcad2ef7c65f386187701cafa1f5b718cc35a5cbb0d138f92e",
+    "summary_path": "research/experiments/n11-reply27-class-1297036692683751424-16-20261010/output/candidate-s5-probe15m-third/summary.json",
+    "summary_sha256": "d63c5fdaad62b5d6990357719870e507603d3c84346b9062cb042c38b1d0b37d",
+    "verdict": "WIN"
+  }
+}

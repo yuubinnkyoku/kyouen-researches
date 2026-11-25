@@ -1,0 +1,170 @@
+{
+  "budget": 2000000,
+  "completed_candidates": 3,
+  "counts": {
+    "LOSS": 0,
+    "UNKNOWN": 3,
+    "WIN": 0
+  },
+  "kind": "initial 2M probe of untouched-pool members",
+  "memo_power": 20,
+  "order": "count",
+  "prefix": "nightb2m",
+  "profile": true,
+  "ranking": "research/experiments/n11-conflict-ranking-20261013/output/ranking.tsv",
+  "ranking_sha256": "4da6c93bbe29dc6df32b13f45afc0c4b893619b09d59356ad4a187de9c9bb9ad",
+  "rows": [
+    {
+      "canonical_children": 98,
+      "exact_profile": {
+        "avg_probe": "15.9343",
+        "evict_open": "0",
+        "evict_solved": "951414",
+        "row": "0",
+        "solved_discoveries": "1999990",
+        "table_capacity": "1048576",
+        "table_hit": "1285987",
+        "table_miss": "11118316",
+        "table_new": "1048576",
+        "table_solved": "1048576",
+        "table_used": "1048576"
+      },
+      "input_sha256": "495d0f03f529b94ab444fe4e0b8daca58619aff30fb464862d16aca3af63589f",
+      "legal": 98,
+      "mask": [
+        1224979098644779008,
+        129
+      ],
+      "nodes": 2000000,
+      "output_sha256": "a5992177b966bd8fa667abda459b2905eb266b20094a88cbd78d18339551bac9",
+      "peak_rss_kib": 394776,
+      "ranking": {
+        "canonical_s6_children": "98",
+        "geometry_rank": "22",
+        "if_loss_fixed_win_branches_uncovered": "1",
+        "if_win_greedy_delta": "49",
+        "if_win_loss_choices_invalidated": "5",
+        "if_win_new_free_win_branches": "3",
+        "impact_per_child_rank": "27",
+        "stabilizer_order": "1"
+      },
+      "root_child_census": {
+        "LOSS": 0,
+        "UNKNOWN": 90,
+        "WIN": 8
+      },
+      "s5_index": 211133,
+      "status": "NODE_LIMIT",
+      "trace_bytes": null,
+      "trace_path": null,
+      "trace_sha256": null,
+      "trust_class": "UNKNOWN (not evidence)",
+      "verdict": 0,
+      "wall_seconds": 16.186
+    },
+    {
+      "canonical_children": 99,
+      "exact_profile": {
+        "avg_probe": "15.9906",
+        "evict_open": "0",
+        "evict_solved": "951416",
+        "row": "0",
+        "solved_discoveries": "1999992",
+        "table_capacity": "1048576",
+        "table_hit": "1275271",
+        "table_miss": "11137128",
+        "table_new": "1048576",
+        "table_solved": "1048576",
+        "table_used": "1048576"
+      },
+      "input_sha256": "e807d395deb419118ea8e3bcd2f9b78de9cc46f0a7d906f3a55ffe3d121430ca",
+      "legal": 99,
+      "mask": [
+        4035788216077385732,
+        0
+      ],
+      "nodes": 2000000,
+      "output_sha256": "2dde36cc9f485edb2a6a3aaec3158c39b3ffb4d61e2ca8387a6a58626d7c9f9a",
+      "peak_rss_kib": 395136,
+      "ranking": {
+        "canonical_s6_children": "99",
+        "geometry_rank": "23",
+        "if_loss_fixed_win_branches_uncovered": "4",
+        "if_win_greedy_delta": "49",
+        "if_win_loss_choices_invalidated": "3",
+        "if_win_new_free_win_branches": "18",
+        "impact_per_child_rank": "23",
+        "stabilizer_order": "1"
+      },
+      "root_child_census": {
+        "LOSS": 0,
+        "UNKNOWN": 88,
+        "WIN": 11
+      },
+      "s5_index": 131631,
+      "status": "NODE_LIMIT",
+      "trace_bytes": null,
+      "trace_path": null,
+      "trace_sha256": null,
+      "trust_class": "UNKNOWN (not evidence)",
+      "verdict": 0,
+      "wall_seconds": 15.472
+    },
+    {
+      "canonical_children": 99,
+      "exact_profile": {
+        "avg_probe": "15.9521",
+        "evict_open": "0",
+        "evict_solved": "951416",
+        "row": "0",
+        "solved_discoveries": "1999992",
+        "table_capacity": "1048576",
+        "table_hit": "1314616",
+        "table_miss": "11127381",
+        "table_new": "1048576",
+        "table_solved": "1048576",
+        "table_used": "1048576"
+      },
+      "input_sha256": "c76bd8ee5fb52035abc338631b2055ba854676da30116d2b46964ff8f3c25316",
+      "legal": 99,
+      "mask": [
+        4035788216077402112,
+        0
+      ],
+      "nodes": 2000000,
+      "output_sha256": "fc2c0497f29a89e6ddc765264272ecd66aced73d9b1cf61d6ccbc1e7e37d371f",
+      "peak_rss_kib": 393532,
+      "ranking": {
+        "canonical_s6_children": "99",
+        "geometry_rank": "25",
+        "if_loss_fixed_win_branches_uncovered": "4",
+        "if_win_greedy_delta": "49",
+        "if_win_loss_choices_invalidated": "3",
+        "if_win_new_free_win_branches": "18",
+        "impact_per_child_rank": "25",
+        "stabilizer_order": "1"
+      },
+      "root_child_census": {
+        "LOSS": 0,
+        "UNKNOWN": 88,
+        "WIN": 11
+      },
+      "s5_index": 162106,
+      "status": "NODE_LIMIT",
+      "trace_bytes": null,
+      "trace_path": null,
+      "trace_sha256": null,
+      "trust_class": "UNKNOWN (not evidence)",
+      "verdict": 0,
+      "wall_seconds": 15.614
+    }
+  ],
+  "schema": "n11-night-batch3-task-b-v1",
+  "selection": "research/experiments/n11-night-batch3-20261014/output/selection-task-b.json",
+  "solver_binary_sha256": "72f1da293931c590f54d2d70b9f6318ce6d207e04ff4b6dbe6050ea34876de14",
+  "solver_source_sha256": "48e51bb56288e090f51996eb4d9a208ca0458d11f73ba61bf5f08dade25db446",
+  "source": "research/experiments/n11-s5-s6-quotient-20261013/output/pilots.json",
+  "source_sha256": "771df57ea88bcd7311c20752db706c0d6b00cba3391fd1a1b9d53ddce5e88f70",
+  "trust": "completed labels solver-trusted until independent terminal-only verification; UNKNOWN is not evidence; NODE_LIMIT rows stay UNKNOWN and are not re-run at this budget",
+  "workers": 1
+}

@@ -1,0 +1,70 @@
+{
+  "scope": "826 saved n11 late snapshots from 200 greedy trajectories",
+  "n11_empty_root_outcome": "UNKNOWN",
+  "method": "exact full minimal-residual-clutter isomorphism; cross-trial reuse only",
+  "snapshots": 826,
+  "total_components": 1011,
+  "gated_components": 0,
+  "cross_trial_exact_types": 26,
+  "cross_trial_occurrences": 603,
+  "nontrivial_occurrences_size_gt_1": 238,
+  "by_component_size": {
+    "1": {
+      "types": 1,
+      "occurrences": 365
+    },
+    "2": {
+      "types": 1,
+      "occurrences": 92
+    },
+    "3": {
+      "types": 2,
+      "occurrences": 53
+    },
+    "4": {
+      "types": 7,
+      "occurrences": 53
+    },
+    "5": {
+      "types": 10,
+      "occurrences": 30
+    },
+    "6": {
+      "types": 5,
+      "occurrences": 10
+    }
+  },
+  "by_grundy": {
+    "0": {
+      "types": 8,
+      "occurrences": 22
+    },
+    "1": {
+      "types": 5,
+      "occurrences": 480
+    },
+    "2": {
+      "types": 6,
+      "occurrences": 82
+    },
+    "3": {
+      "types": 7,
+      "occurrences": 19
+    }
+  },
+  "memo_state_estimate": {
+    "naive_recompute": 1676,
+    "shared_type_once": 174,
+    "saved": 1502,
+    "reduction_ratio": 0.89618138424821,
+    "nontrivial_naive_recompute": 946,
+    "nontrivial_shared_type_once": 172,
+    "nontrivial_saved": 774,
+    "nontrivial_reduction_ratio": 0.8181818181818181
+  },
+  "limitations": [
+    "The corpus is greedy-trajectory biased, not the distribution of exact-search transposition-table nodes.",
+    "Memo-state reduction is not a wall-time benchmark and excludes residual construction/canonical-label overhead.",
+    "Cross-trial repetition is required to reduce trivial reuse along one trajectory."
+  ]
+}

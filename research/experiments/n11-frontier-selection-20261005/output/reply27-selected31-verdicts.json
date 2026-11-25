@@ -1,0 +1,255 @@
+{
+  "scope": "n=11 first=60 reply=27 selected 31-class frontier verdict manifest",
+  "root": [
+    60,
+    27
+  ],
+  "empty_root_outcome": "UNKNOWN",
+  "status_counts": {
+    "LOSS": 16,
+    "WIN": 15,
+    "UNKNOWN": 0
+  },
+  "sources": {
+    "stage1": {
+      "description": "Completed Xserver 4-shard cold exact replay of the 2,262 selected canonical s5 targets at 15M nodes/root.",
+      "result_counts": {
+        "WIN": 42,
+        "LOSS": 2187,
+        "UNKNOWN": 33
+      },
+      "conflicts": 0,
+      "note": "The raw Xserver shard files had not yet been archived in-repo when this manifest was written; treat this manifest as a scheduling/result preservation record until those raw files are recovered."
+    },
+    "stage2": {
+      "description": "Archived GitHub Actions full canonical s6 boundary proof for the nine hard s5 roots.",
+      "workflow_run": 37269759034,
+      "head": "93b7120afa",
+      "hard_s5_counts": {
+        "WIN": 1,
+        "LOSS": 8,
+        "UNKNOWN": 0
+      },
+      "artifact": "hard9-s6-boundary-proof"
+    }
+  },
+  "classes": [
+    {
+      "key": [
+        "10520408729537511424",
+        "0"
+      ],
+      "status": "WIN"
+    },
+    {
+      "key": [
+        "10520408729537480704",
+        "0"
+      ],
+      "status": "LOSS"
+    },
+    {
+      "key": [
+        "10520408729541672960",
+        "0"
+      ],
+      "status": "LOSS"
+    },
+    {
+      "key": [
+        "10520408729537478657",
+        "0"
+      ],
+      "status": "LOSS"
+    },
+    {
+      "key": [
+        "3530822107992686592",
+        "0"
+      ],
+      "status": "WIN"
+    },
+    {
+      "key": [
+        "1188950301760028704",
+        "0"
+      ],
+      "status": "WIN"
+    },
+    {
+      "key": [
+        "10412322338514141184",
+        "0"
+      ],
+      "status": "LOSS"
+    },
+    {
+      "key": [
+        "10520408729537478672",
+        "0"
+      ],
+      "status": "LOSS"
+    },
+    {
+      "key": [
+        "5909004186086801408",
+        "0"
+      ],
+      "status": "WIN"
+    },
+    {
+      "key": [
+        "10520408729537478664",
+        "0"
+      ],
+      "status": "WIN"
+    },
+    {
+      "key": [
+        "1874623344892968960",
+        "0"
+      ],
+      "status": "WIN"
+    },
+    {
+      "key": [
+        "10520408729545867264",
+        "0"
+      ],
+      "status": "LOSS"
+    },
+    {
+      "key": [
+        "10520408763897217024",
+        "0"
+      ],
+      "status": "LOSS"
+    },
+    {
+      "key": [
+        "10520408738127413248",
+        "0"
+      ],
+      "status": "LOSS"
+    },
+    {
+      "key": [
+        "1152991873485307904",
+        "0"
+      ],
+      "status": "LOSS"
+    },
+    {
+      "key": [
+        "10520443913909567488",
+        "0"
+      ],
+      "status": "WIN"
+    },
+    {
+      "key": [
+        "10520408729537478660",
+        "0"
+      ],
+      "status": "WIN"
+    },
+    {
+      "key": [
+        "10520408729537482752",
+        "0"
+      ],
+      "status": "WIN"
+    },
+    {
+      "key": [
+        "10520408729554255872",
+        "0"
+      ],
+      "status": "WIN"
+    },
+    {
+      "key": [
+        "3602879701929951232",
+        "0"
+      ],
+      "status": "LOSS"
+    },
+    {
+      "key": [
+        "10520408746717347840",
+        "0"
+      ],
+      "status": "LOSS"
+    },
+    {
+      "key": [
+        "10520408866976432128",
+        "0"
+      ],
+      "status": "LOSS"
+    },
+    {
+      "key": [
+        "10520408729537495040",
+        "0"
+      ],
+      "status": "WIN"
+    },
+    {
+      "key": [
+        "1297036967694827520",
+        "0"
+      ],
+      "status": "WIN"
+    },
+    {
+      "key": [
+        "10520408798256955392",
+        "0"
+      ],
+      "status": "LOSS"
+    },
+    {
+      "key": [
+        "10520426321723523072",
+        "0"
+      ],
+      "status": "LOSS"
+    },
+    {
+      "key": [
+        "10520479098281656320",
+        "0"
+      ],
+      "status": "WIN"
+    },
+    {
+      "key": [
+        "10520549467025833984",
+        "0"
+      ],
+      "status": "LOSS"
+    },
+    {
+      "key": [
+        "10520408729537486848",
+        "0"
+      ],
+      "status": "WIN"
+    },
+    {
+      "key": [
+        "10520408729537478658",
+        "0"
+      ],
+      "status": "LOSS"
+    },
+    {
+      "key": [
+        "10448351135566659584",
+        "0"
+      ],
+      "status": "WIN"
+    }
+  ]
+}

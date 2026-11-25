@@ -1,0 +1,394 @@
+{
+  "schema": "n11-cost76c-parent-b-amendment-crosscheck-20261118-v1",
+  "date": "2026-11-18",
+  "lane": "n11 long lane (verification side)",
+  "title": "Independent crosscheck of the additive amendment to the cost76c fold record parent-B entry (commit c4ab218965); corrected values confirmed; one parent-attribution sentence in the amendment finding text is mis-resolved",
+  "inputs": {
+    "worklist": {
+      "path": "research/experiments/n11-class2-lane-closability-ranking-20261116/output/class-frontier-remaining-s6-worklist-1410-20261116.csv",
+      "git_blob_sha1": "2fee1d0718547a62e346d35f5858d7913e37c097"
+    },
+    "census": {
+      "path": "research/experiments/n11-head1410-receipt-unclosability-census-20261116/output/n11-head1410-receipt-unclosability-census-20261116.json",
+      "git_blob_sha1": "9c251da3138c5cb0516e097be5e5d0427dfaf5f0"
+    },
+    "ledger": {
+      "path": "research/experiments/n11-head1410-partial-parent-nonsterile-children-20261118/output/fold-chain-ledger-1410-1476-crosscheck-20261118.json",
+      "git_blob_sha1": "e8785d509e8a11a37c0d03cc450455a14708c34d"
+    },
+    "bookkeeping": {
+      "path": "research/experiments/n11-head1410-partial-parent-nonsterile-children-20261118/output/fold-parent-bookkeeping-crosscheck-20261118.json",
+      "git_blob_sha1": "ed98c01429f08d6f046905b4bc2633c18767ca95"
+    },
+    "record_amended": {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost76c-receipts-recompute-20261117.json",
+      "git_blob_sha1": "cb875a1da69eff1a80341e563130faa618706f48"
+    }
+  },
+  "method": "5-subset D4 canon-index join recomputation over the pinned head-1410 worklist and all 174 open S5 parents; fold-chain ledger closures as the chain ground truth; textual-insert reconstruction of the pre-amendment record pinned at git blob 953beaea054989e8b1de33f48b1f2ebc13ae7e11",
+  "derived": {
+    "insert_verification": {
+      "reconstructed_original_blob": "953beaea054989e8b1de33f48b1f2ebc13ae7e11",
+      "amendment_block_keys": [
+        "aggregate_fields_note",
+        "amended_by",
+        "basis",
+        "corrected_entry_00000000000000801202000000040000",
+        "finding",
+        "global_arithmetic_unaffected",
+        "unknown_status"
+      ]
+    },
+    "parent_B": {
+      "join1410_rows": 74,
+      "join1410_cost": 6113,
+      "closure_history": [
+        {
+          "tag": "cost64d",
+          "rows_closed_in_B": [
+            "00000000000000c09002000000004000",
+            "00000000000040003800000008080000"
+          ],
+          "costs": [
+            78,
+            75
+          ]
+        },
+        {
+          "tag": "cost76d77e",
+          "rows_closed_in_B": [
+            "00000000040000809002000000004000"
+          ],
+          "costs": [
+            77
+          ]
+        },
+        {
+          "tag": "cost64h",
+          "rows_closed_in_B": [
+            "00000000000040003800000008100000"
+          ],
+          "costs": [
+            81
+          ]
+        }
+      ],
+      "state_through_cost76c": {
+        "rows": 70,
+        "cost": 5802
+      },
+      "corrected_entry": {
+        "lost_rows": 0,
+        "lost_rows_hexes": [],
+        "lost_edge_cost": 0,
+        "rows_after": 70,
+        "edge_cost_after": 5802
+      },
+      "original_misrecorded_entry": {
+        "classes": 2,
+        "cost64h_preapplied": true,
+        "edge_cost_after": 5725,
+        "edge_cost_before": 5802,
+        "lost_edge_cost": 77,
+        "lost_rows": 1,
+        "lost_rows_hexes": [
+          "00000000040000809002000000004000"
+        ],
+        "rows_after": 69,
+        "rows_before": 70,
+        "s5_hex": "00000000000000801202000000040000"
+      }
+    },
+    "row_parent_attribution": {
+      "row_76c": {
+        "hex": "00000000010000809002000001000000",
+        "cost": 76,
+        "parents": [
+          "00000000000000801202000040000000",
+          "00000000000000801202000100000000"
+        ]
+      },
+      "row_76d": {
+        "hex": "00000000040000003800080008000000",
+        "cost": 76,
+        "parents": [
+          "00000000000000003800000208000000",
+          "00000000000000801202000040000000"
+        ]
+      },
+      "row_77e": {
+        "hex": "00000000040000809002000000004000",
+        "cost": 77,
+        "parents": [
+          "00000000000000801202000000040000",
+          "00000000000000801202000040000000"
+        ]
+      }
+    },
+    "aggregates": {
+      "original": {
+        "parent_edge_cost_delta": 458,
+        "parent_row_incidences": 6
+      },
+      "corrected_record_total": {
+        "delta": 381,
+        "incidences": 5
+      },
+      "strict_76c_chain_marginal": {
+        "parent_incidences": 2,
+        "edge_delta": 152
+      }
+    },
+    "other_entries_chain_check": {
+      "P_76d_row_parent": {
+        "join1410": [
+          65,
+          5358
+        ],
+        "after_through_76c": [
+          64,
+          5282
+        ]
+      },
+      "rank1": {
+        "join1410": [
+          5,
+          364
+        ],
+        "after_through_76c": [
+          2,
+          135
+        ]
+      },
+      "E": {
+        "join1410": [
+          71,
+          5912
+        ],
+        "earlier_closed_before_record_basis": [
+          "00000000000000801202000100800000",
+          "00000000000000801202000300000000"
+        ],
+        "earlier_closed_costs": [
+          69,
+          85
+        ],
+        "after_through_76c": [
+          68,
+          5682
+        ]
+      }
+    }
+  },
+  "findings": {
+    "confirmed": "the amendment's corrected parent-B values (lost 0 / rows_after 70 / edge_cost_after 5802) and corrected aggregate record-total (381 / 5) are chain-correct; the insert preserves the original record verbatim; the original 69/5725 entry is internally consistent but double-counts the 77e row against a post-cost64h baseline that already excludes it",
+    "attribution_error_in_amendment_text": "the amendment finding text states 'The cost76c WIN row is a D4 child of parents P and E only' and resolves P to 00000000000000003800000208000000. Direct recomputation over all 174 open parents shows the 76c row 00000000010000809002000001000000 is a D4 child of the rank-1 parent 00000000000000801202000040000000 and E 00000000000000801202000100000000 only. The hex 00000000000000003800000208000000 is a D4 parent of the 76d row 00000000040000003800080008000000. Root cause: the fold-chain ledger finding (aa3af62b) used the bare letter P meaning the rank-1 parent (join 5/364 in the per-parent crosscheck convention) without a hex, and the amendment resolved that letter to the 65/5358 parent. No corrected value is affected: B is in neither parent set, so the B correction stands",
+    "clarification": "the amendment's gloss 'chain-correct cost76c marginal per-parent values are 381 and 5' refers to the corrected record-total of the cumulative-style parents_after bookkeeping (76 + 229 + 76 and 1 + 3 + 1); the strict chain marginal of the cost76c fold itself is 2 parent incidences / 152 edge delta (the single closed 76c row, cost 76, times its 2 D4 parents)"
+  },
+  "checks": [
+    {
+      "name": "pin.worklist",
+      "pass": true,
+      "detail": "2fee1d0718547a62e346d35f5858d7913e37c097"
+    },
+    {
+      "name": "pin.census",
+      "pass": true,
+      "detail": "9c251da3138c5cb0516e097be5e5d0427dfaf5f0"
+    },
+    {
+      "name": "pin.ledger",
+      "pass": true,
+      "detail": "e8785d509e8a11a37c0d03cc450455a14708c34d"
+    },
+    {
+      "name": "pin.bookkeeping",
+      "pass": true,
+      "detail": "ed98c01429f08d6f046905b4bc2633c18767ca95"
+    },
+    {
+      "name": "pin.record_amended",
+      "pass": true,
+      "detail": "cb875a1da69eff1a80341e563130faa618706f48"
+    },
+    {
+      "name": "insert.reconstructs_original_blob",
+      "pass": true,
+      "detail": "953beaea054989e8b1de33f48b1f2ebc13ae7e11"
+    },
+    {
+      "name": "insert.amended_parses",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "insert.original_fields_preserved",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "worklist.rows",
+      "pass": true,
+      "detail": "6438"
+    },
+    {
+      "name": "census.parents",
+      "pass": true,
+      "detail": "174"
+    },
+    {
+      "name": "B.join1410",
+      "pass": true,
+      "detail": "{\"rows\": 74, \"cost\": 6113}"
+    },
+    {
+      "name": "B.closure_history",
+      "pass": true,
+      "detail": "[{\"tag\": \"cost64d\", \"rows_closed_in_B\": [\"00000000000000c09002000000004000\", \"00000000000040003800000008080000\"], \"costs\": [78, 75]}, {\"tag\": \"cost76d77e\", \"rows_closed_in_B\": [\"00000000040000809002000000004000\"], \"costs\": [77]}, {\"tag\": \"cost64h\", \"rows_closed_in_B\": [\"00000000000040003800000008100000\"], \"costs\": [81]}]"
+    },
+    {
+      "name": "B.state_through_76c",
+      "pass": true,
+      "detail": "{\"rows\": 70, \"cost\": 5802}"
+    },
+    {
+      "name": "amendment.corrected_entry_matches",
+      "pass": true,
+      "detail": "{\"lost_rows\": 0, \"lost_rows_hexes\": [], \"lost_edge_cost\": 0, \"rows_after\": 70, \"edge_cost_after\": 5802}"
+    },
+    {
+      "name": "amendment.original_entry_was_chain_wrong",
+      "pass": true,
+      "detail": "post-cost64h baseline of 70/5802 already excludes the 77e row (closed at head-1452); re-listing it gives the recorded but chain-wrong 69/5725"
+    },
+    {
+      "name": "bookkeeping.baseline_agrees",
+      "pass": true,
+      "detail": "{\"rows_before\": 70, \"edge_cost_before\": 5802, \"join1410_rows\": 74, \"join1410_cost\": 6113, \"rows_closed_by_earlier_folds\": 4, \"cost_closed_by_earlier_folds\": 311}"
+    },
+    {
+      "name": "attribution.76c_row_parents",
+      "pass": true,
+      "detail": "[\"00000000000000801202000040000000\", \"00000000000000801202000100000000\"]"
+    },
+    {
+      "name": "attribution.76d_row_parents",
+      "pass": true,
+      "detail": "[\"00000000000000003800000208000000\", \"00000000000000801202000040000000\"]"
+    },
+    {
+      "name": "attribution.77e_row_parents",
+      "pass": true,
+      "detail": "[\"00000000000000801202000000040000\", \"00000000000000801202000040000000\"]"
+    },
+    {
+      "name": "attribution.B_not_a_76c_parent",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "attribution.amendment_P_hex_is_76d_parent_not_76c",
+      "pass": true,
+      "detail": "the amendment finding text says the 76c row is a D4 child of parents P (00000000000000003800000208000000) and E; direct recomputation over all 174 open parents shows the 76c row's parents are the rank-1 parent (00000000000000801202000040000000) and E; the P hex belongs to the 76d row"
+    },
+    {
+      "name": "attribution.root_cause_ledger_letter",
+      "pass": true,
+      "detail": "the ledger finding used the bare letter P (= the rank-1 parent, join 5/364, in the per-parent crosscheck convention) without a hex; the amendment resolved P to the 65/5358 parent, which is the 76d row's parent"
+    },
+    {
+      "name": "aggregate.original_fields",
+      "pass": true,
+      "detail": "{\"delta\": 458, \"incidences\": 6}"
+    },
+    {
+      "name": "aggregate.corrected_381_5",
+      "pass": true,
+      "detail": "{\"delta\": 381, \"incidences\": 5}"
+    },
+    {
+      "name": "aggregate.strict_76c_marginal",
+      "pass": true,
+      "detail": "{\"parents\": 2, \"delta\": 152, \"note\": \"the strict chain marginal of the cost76c fold is 2 parent incidences / 152 edge delta (the 76c row cost 76 x its 2 parents); the amendment's 381/5 is the corrected record-total of the cumulative-style parents_after bookkeeping, which also lists the 76d row (76) and the rank-1 cumulative loss (229 = 76+77+76)\"}"
+    },
+    {
+      "name": "entry.P.join1410",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "entry.P.after_matches_record",
+      "pass": true,
+      "detail": "{\"rows\": 64, \"cost\": 5282}"
+    },
+    {
+      "name": "entry.rank1.join1410",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "entry.rank1.after_matches_record",
+      "pass": true,
+      "detail": "{\"rows\": 2, \"cost\": 135}"
+    },
+    {
+      "name": "entry.E.join1410",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "entry.E.baseline_69_5758",
+      "pass": true,
+      "detail": "{\"earlier_closed\": [\"00000000000000801202000100800000\", \"00000000000000801202000300000000\"], \"costs\": [69, 85]}"
+    },
+    {
+      "name": "entry.E.after_matches_record",
+      "pass": true,
+      "detail": "{\"rows\": 68, \"cost\": 5682}"
+    },
+    {
+      "name": "bookkeeping.fold76c.P",
+      "pass": true,
+      "detail": "{\"rows_before\": 65, \"edge_cost_before\": 5358, \"join1410_rows\": 65, \"join1410_cost\": 5358, \"rows_closed_by_earlier_folds\": 0, \"cost_closed_by_earlier_folds\": 0}"
+    },
+    {
+      "name": "bookkeeping.fold76c.rank1",
+      "pass": true,
+      "detail": "{\"rows_before\": 5, \"edge_cost_before\": 364, \"join1410_rows\": 5, \"join1410_cost\": 364, \"rows_closed_by_earlier_folds\": 0, \"cost_closed_by_earlier_folds\": 0}"
+    },
+    {
+      "name": "bookkeeping.fold76c.E",
+      "pass": true,
+      "detail": "{\"rows_before\": 69, \"edge_cost_before\": 5758, \"join1410_rows\": 71, \"join1410_cost\": 5912, \"rows_closed_by_earlier_folds\": 2, \"cost_closed_by_earlier_folds\": 154}"
+    },
+    {
+      "name": "bookkeeping.fold76c.P_values",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "bookkeeping.fold76c.E_values",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "global.frontier_after_76c",
+      "pass": true,
+      "detail": "[1473, 6375, 504596]"
+    },
+    {
+      "name": "global.ledger_endpoint_unaffected_note",
+      "pass": true,
+      "detail": "the 76c fold is one link of the verified chain; the amendment does not touch any global field"
+    },
+    {
+      "name": "global.amendment_claim",
+      "pass": true,
+      "detail": ""
+    }
+  ],
+  "check_count": 40,
+  "all_pass": true,
+  "interpretation_guard": "Bookkeeping verification only. No engine run, no new verdict, no fold, no closure claim. REFUTED-D10 and STERILE are not LOSS proofs.",
+  "unknown_status": "Standard 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, and classes 1/2/4 remain UNKNOWN."
+}

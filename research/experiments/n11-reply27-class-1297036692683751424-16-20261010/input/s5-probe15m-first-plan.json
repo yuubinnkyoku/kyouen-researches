@@ -1,0 +1,32 @@
+{
+  "history_sha256": "1ed1f0f4d94417ab1b81ec6ddbe81cbeaef0596a0b62db9929a7f3f794d58791",
+  "preflight_sha256": "c18ba501cbe49bc892539dfbce8d62b7b5e25e2877747df067130e43c9473dba",
+  "prior_lower_budget_attempts": [
+    {
+      "budget": 2000000,
+      "key": [
+        1297036692683751424,
+        67108880
+      ],
+      "summary": "research/experiments/n11-reply27-class-1297036692683751424-16-20261010/output/s5-probe2m/summary.json",
+      "summary_sha256": "ff39f546a338b37171b34717ff52d04d1520c42025bdf8027cfe687202ed1456",
+      "verdict": 0
+    }
+  ],
+  "raw_s5_history_audit_sha256": "850ceeeda7e289a912e22f6b866862aee827ca1420aa797b7256e60d6cff26b0",
+  "saved_layer_preflight_sha256": "bc02a6866f9290a7cfbb6c0c73568f4b1f91a75502fb963f02664d927afcb252",
+  "selection": "Escalate the lowest-legal-count target from 2M UNKNOWN to 15M; one worker; stop on class WIN.",
+  "targets": [
+    {
+      "arm": "requested-s4-completion-escalation",
+      "budget": 15000000,
+      "group": "S4-1297036692683751424-16",
+      "key": [
+        1297036692683751424,
+        67108880
+      ],
+      "legal_count": 81,
+      "stones": 5
+    }
+  ]
+}

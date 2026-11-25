@@ -1,0 +1,965 @@
+{
+  "canonical_s5_child_count": 108,
+  "canonical_s5_child_keys_sha256": "633595fe66774ed7b4d9573e4951c0dfc038ba469d2d6778d8ba61d03d67dfa1",
+  "current_cache": {
+    "path": "research/experiments/n11-independent-exact-audit-20261010/output/canonical-current-s5.cache",
+    "rows": 5734,
+    "sha256": "87ac745de02c68eaf99925e1deaa98fab5d527f21c7a8d3f719fc4c8429e2076",
+    "target_cache_hits": [
+      [
+        1152921505009501184,
+        68719476736,
+        2
+      ],
+      [
+        1224979098645823488,
+        805306368,
+        2
+      ],
+      [
+        1297036692683751424,
+        17,
+        2
+      ],
+      [
+        1297036692683751424,
+        272,
+        2
+      ],
+      [
+        1297036692952186880,
+        16,
+        2
+      ],
+      [
+        1297599642637172736,
+        16,
+        2
+      ],
+      [
+        1298162592590594048,
+        16,
+        2
+      ],
+      [
+        1333065489702715392,
+        16,
+        2
+      ],
+      [
+        10520408729538527232,
+        16,
+        2
+      ]
+    ],
+    "target_cache_unknown_or_absent": 99,
+    "target_verdict_counts": {
+      "LOSS": 9,
+      "WIN": 0
+    },
+    "verdict_rows_identical_to_strategy_cache": true
+  },
+  "current_s4_frontier": {
+    "audit_path": "research/experiments/n11-independent-exact-audit-20261010/output/audit.json",
+    "audit_sha256": "e504245c873ed908e3f23f64dcf81b3558a07cf3226406076d9d3f5e2b911b20",
+    "class_counts": {
+      "LOSS": 31,
+      "UNKNOWN": 3085,
+      "WIN": 268
+    },
+    "integer_minimum_additional_classes": 1,
+    "rational_lp_dual": {
+      "max_class_weight": "1",
+      "primal_example": [
+        1297036692683751426,
+        0
+      ],
+      "value": "1",
+      "weights": {
+        "100": "1"
+      }
+    },
+    "remaining_third_moves": [
+      100,
+      108
+    ],
+    "secured_third_moves": 117
+  },
+  "independent_geometry_source": "research/experiments/n11-independent-exact-audit-20261010/scripts/independent.py",
+  "independent_geometry_source_sha256": "954d3a104c1723ebb15b8c9bae63a4494f07f9eb73446a6d067c4fd6a4ba189f",
+  "main_commit": "154f3b7a67b97e13acbaee8b04dc74ddca728d19",
+  "raw_history_target_csv": "research/experiments/n11-reply27-class-1297036692683751424-16-20261010/input/target-s5-all.csv",
+  "s4_canonical": true,
+  "s4_key": [
+    1297036692683751424,
+    16
+  ],
+  "s5_children": [
+    {
+      "cache_verdict": null,
+      "key": [
+        1152921504607895552,
+        805306372
+      ],
+      "legal_count": 105
+    },
+    {
+      "cache_verdict": null,
+      "key": [
+        1152921504607895552,
+        805306376
+      ],
+      "legal_count": 101
+    },
+    {
+      "cache_verdict": null,
+      "key": [
+        1152921504607895552,
+        805314560
+      ],
+      "legal_count": 101
+    },
+    {
+      "cache_verdict": null,
+      "key": [
+        1152921504607895552,
+        805322752
+      ],
+      "legal_count": 99
+    },
+    {
+      "cache_verdict": null,
+      "key": [
+        1152921504607895552,
+        822083584
+      ],
+      "legal_count": 93
+    },
+    {
+      "cache_verdict": null,
+      "key": [
+        1152921504607895552,
+        838860800
+      ],
+      "legal_count": 95
+    },
+    {
+      "cache_verdict": null,
+      "key": [
+        1152921504607895552,
+        35165044736
+      ],
+      "legal_count": 105
+    },
+    {
+      "cache_verdict": null,
+      "key": [
+        1152921504607895553,
+        805306368
+      ],
+      "legal_count": 102
+    },
+    {
+      "cache_verdict": null,
+      "key": [
+        1152921504607895554,
+        805306368
+      ],
+      "legal_count": 106
+    },
+    {
+      "cache_verdict": null,
+      "key": [
+        1152921504607899648,
+        805306368
+      ],
+      "legal_count": 102
+    },
+    {
+      "cache_verdict": null,
+      "key": [
+        1152921504612089856,
+        805306368
+      ],
+      "legal_count": 106
+    },
+    {
+      "cache_verdict": null,
+      "key": [
+        1152921504616284160,
+        805306368
+      ],
+      "legal_count": 95
+    },
+    {
+      "cache_verdict": 2,
+      "key": [
+        1152921505009501184,
+        68719476736
+      ],
+      "legal_count": 90
+    },
+    {
+      "cache_verdict": null,
+      "key": [
+        1152921505010548736,
+        68719476736
+      ],
+      "legal_count": 87
+    },
+    {
+      "cache_verdict": null,
+      "key": [
+        1152921513197830144,
+        805306368
+      ],
+      "legal_count": 101
+    },
+    {
+      "cache_verdict": null,
+      "key": [
+        1152921521787764736,
+        805306368
+      ],
+      "legal_count": 105
+    },
+    {
+      "cache_verdict": null,
+      "key": [
+        1152939096793939968,
+        805306368
+      ],
+      "legal_count": 99
+    },
+    {
+      "cache_verdict": null,
+      "key": [
+        1152956688979984384,
+        805306368
+      ],
+      "legal_count": 93
+    },
+    {
+      "cache_verdict": null,
+      "key": [
+        1188950301626859520,
+        805306368
+      ],
+      "legal_count": 100
+    },
+    {
+      "cache_verdict": 2,
+      "key": [
+        1224979098645823488,
+        805306368
+      ],
+      "legal_count": 88
+    },
+    {
+      "cache_verdict": 2,
+      "key": [
+        1297036692683751424,
+        17
+      ],
+      "legal_count": 86
+    },
+    {
+      "cache_verdict": null,
+      "key": [
+        1297036692683751424,
+        18
+      ],
+      "legal_count": 88
+    },
+    {
+      "cache_verdict": null,
+      "key": [
+        1297036692683751424,
+        20
+      ],
+      "legal_count": 102
+    },
+    {
+      "cache_verdict": null,
+      "key": [
+        1297036692683751424,
+        24
+      ],
+      "legal_count": 99
+    },
+    {
+      "cache_verdict": null,
+      "key": [
+        1297036692683751424,
+        48
+      ],
+      "legal_count": 96
+    },
+    {
+      "cache_verdict": null,
+      "key": [
+        1297036692683751424,
+        80
+      ],
+      "legal_count": 88
+    },
+    {
+      "cache_verdict": 2,
+      "key": [
+        1297036692683751424,
+        272
+      ],
+      "legal_count": 91
+    },
+    {
+      "cache_verdict": null,
+      "key": [
+        1297036692683751424,
+        528
+      ],
+      "legal_count": 92
+    },
+    {
+      "cache_verdict": null,
+      "key": [
+        1297036692683751424,
+        1040
+      ],
+      "legal_count": 100
+    },
+    {
+      "cache_verdict": null,
+      "key": [
+        1297036692683751424,
+        8208
+      ],
+      "legal_count": 102
+    },
+    {
+      "cache_verdict": null,
+      "key": [
+        1297036692683751424,
+        16400
+      ],
+      "legal_count": 97
+    },
+    {
+      "cache_verdict": null,
+      "key": [
+        1297036692683751424,
+        32784
+      ],
+      "legal_count": 96
+    },
+    {
+      "cache_verdict": null,
+      "key": [
+        1297036692683751424,
+        262160
+      ],
+      "legal_count": 102
+    },
+    {
+      "cache_verdict": null,
+      "key": [
+        1297036692683751424,
+        16777232
+      ],
+      "legal_count": 101
+    },
+    {
+      "cache_verdict": null,
+      "key": [
+        1297036692683751424,
+        33554448
+      ],
+      "legal_count": 100
+    },
+    {
+      "cache_verdict": null,
+      "key": [
+        1297036692683751424,
+        67108880
+      ],
+      "legal_count": 81
+    },
+    {
+      "cache_verdict": null,
+      "key": [
+        1297036692683751424,
+        134217744
+      ],
+      "legal_count": 97
+    },
+    {
+      "cache_verdict": null,
+      "key": [
+        1297036692683751424,
+        268435472
+      ],
+      "legal_count": 101
+    },
+    {
+      "cache_verdict": null,
+      "key": [
+        1297036692683751424,
+        536870928
+      ],
+      "legal_count": 97
+    },
+    {
+      "cache_verdict": null,
+      "key": [
+        1297036692683751424,
+        34359738384
+      ],
+      "legal_count": 105
+    },
+    {
+      "cache_verdict": null,
+      "key": [
+        1297036692683751425,
+        16
+      ],
+      "legal_count": 96
+    },
+    {
+      "cache_verdict": null,
+      "key": [
+        1297036692683751426,
+        16
+      ],
+      "legal_count": 105
+    },
+    {
+      "cache_verdict": null,
+      "key": [
+        1297036692683751428,
+        16
+      ],
+      "legal_count": 91
+    },
+    {
+      "cache_verdict": null,
+      "key": [
+        1297036692683751432,
+        16
+      ],
+      "legal_count": 102
+    },
+    {
+      "cache_verdict": null,
+      "key": [
+        1297036692683751440,
+        16
+      ],
+      "legal_count": 106
+    },
+    {
+      "cache_verdict": null,
+      "key": [
+        1297036692683751456,
+        16
+      ],
+      "legal_count": 91
+    },
+    {
+      "cache_verdict": null,
+      "key": [
+        1297036692683751488,
+        16
+      ],
+      "legal_count": 105
+    },
+    {
+      "cache_verdict": null,
+      "key": [
+        1297036692683751552,
+        16
+      ],
+      "legal_count": 100
+    },
+    {
+      "cache_verdict": null,
+      "key": [
+        1297036692683751680,
+        16
+      ],
+      "legal_count": 96
+    },
+    {
+      "cache_verdict": null,
+      "key": [
+        1297036692683751936,
+        16
+      ],
+      "legal_count": 104
+    },
+    {
+      "cache_verdict": null,
+      "key": [
+        1297036692683752448,
+        16
+      ],
+      "legal_count": 100
+    },
+    {
+      "cache_verdict": null,
+      "key": [
+        1297036692683753472,
+        16
+      ],
+      "legal_count": 100
+    },
+    {
+      "cache_verdict": null,
+      "key": [
+        1297036692683755520,
+        16
+      ],
+      "legal_count": 99
+    },
+    {
+      "cache_verdict": null,
+      "key": [
+        1297036692683759616,
+        16
+      ],
+      "legal_count": 85
+    },
+    {
+      "cache_verdict": null,
+      "key": [
+        1297036692683767808,
+        16
+      ],
+      "legal_count": 100
+    },
+    {
+      "cache_verdict": null,
+      "key": [
+        1297036692683784192,
+        16
+      ],
+      "legal_count": 99
+    },
+    {
+      "cache_verdict": null,
+      "key": [
+        1297036692683816960,
+        16
+      ],
+      "legal_count": 101
+    },
+    {
+      "cache_verdict": null,
+      "key": [
+        1297036692683882496,
+        16
+      ],
+      "legal_count": 90
+    },
+    {
+      "cache_verdict": null,
+      "key": [
+        1297036692684013568,
+        16
+      ],
+      "legal_count": 98
+    },
+    {
+      "cache_verdict": null,
+      "key": [
+        1297036692684275712,
+        16
+      ],
+      "legal_count": 101
+    },
+    {
+      "cache_verdict": null,
+      "key": [
+        1297036692685848576,
+        16
+      ],
+      "legal_count": 105
+    },
+    {
+      "cache_verdict": null,
+      "key": [
+        1297036692687945728,
+        16
+      ],
+      "legal_count": 105
+    },
+    {
+      "cache_verdict": null,
+      "key": [
+        1297036692692140032,
+        16
+      ],
+      "legal_count": 105
+    },
+    {
+      "cache_verdict": null,
+      "key": [
+        1297036692700528640,
+        16
+      ],
+      "legal_count": 88
+    },
+    {
+      "cache_verdict": null,
+      "key": [
+        1297036692717305856,
+        16
+      ],
+      "legal_count": 104
+    },
+    {
+      "cache_verdict": null,
+      "key": [
+        1297036692750860288,
+        16
+      ],
+      "legal_count": 91
+    },
+    {
+      "cache_verdict": null,
+      "key": [
+        1297036692817969152,
+        16
+      ],
+      "legal_count": 92
+    },
+    {
+      "cache_verdict": 2,
+      "key": [
+        1297036692952186880,
+        16
+      ],
+      "legal_count": 87
+    },
+    {
+      "cache_verdict": null,
+      "key": [
+        1297036693220622336,
+        16
+      ],
+      "legal_count": 102
+    },
+    {
+      "cache_verdict": null,
+      "key": [
+        1297036693757493248,
+        16
+      ],
+      "legal_count": 93
+    },
+    {
+      "cache_verdict": null,
+      "key": [
+        1297036694831235072,
+        16
+      ],
+      "legal_count": 102
+    },
+    {
+      "cache_verdict": null,
+      "key": [
+        1297036696978718720,
+        16
+      ],
+      "legal_count": 99
+    },
+    {
+      "cache_verdict": null,
+      "key": [
+        1297036701273686016,
+        16
+      ],
+      "legal_count": 103
+    },
+    {
+      "cache_verdict": null,
+      "key": [
+        1297036709863620608,
+        16
+      ],
+      "legal_count": 98
+    },
+    {
+      "cache_verdict": null,
+      "key": [
+        1297036727043489792,
+        16
+      ],
+      "legal_count": 95
+    },
+    {
+      "cache_verdict": null,
+      "key": [
+        1297036761403228160,
+        16
+      ],
+      "legal_count": 87
+    },
+    {
+      "cache_verdict": null,
+      "key": [
+        1297036830122704896,
+        16
+      ],
+      "legal_count": 95
+    },
+    {
+      "cache_verdict": null,
+      "key": [
+        1297036967561658368,
+        16
+      ],
+      "legal_count": 92
+    },
+    {
+      "cache_verdict": null,
+      "key": [
+        1297037242439565312,
+        16
+      ],
+      "legal_count": 95
+    },
+    {
+      "cache_verdict": null,
+      "key": [
+        1297037792195379200,
+        16
+      ],
+      "legal_count": 94
+    },
+    {
+      "cache_verdict": null,
+      "key": [
+        1297041090730262528,
+        16
+      ],
+      "legal_count": 103
+    },
+    {
+      "cache_verdict": null,
+      "key": [
+        1297045488776773632,
+        16
+      ],
+      "legal_count": 105
+    },
+    {
+      "cache_verdict": null,
+      "key": [
+        1297071877055840256,
+        16
+      ],
+      "legal_count": 100
+    },
+    {
+      "cache_verdict": null,
+      "key": [
+        1297107061427929088,
+        16
+      ],
+      "legal_count": 92
+    },
+    {
+      "cache_verdict": 2,
+      "key": [
+        1297599642637172736,
+        16
+      ],
+      "legal_count": 94
+    },
+    {
+      "cache_verdict": 2,
+      "key": [
+        1298162592590594048,
+        16
+      ],
+      "legal_count": 93
+    },
+    {
+      "cache_verdict": null,
+      "key": [
+        1301540292311121920,
+        16
+      ],
+      "legal_count": 102
+    },
+    {
+      "cache_verdict": null,
+      "key": [
+        1306043891938492416,
+        16
+      ],
+      "legal_count": 101
+    },
+    {
+      "cache_verdict": null,
+      "key": [
+        1315051091193233408,
+        16
+      ],
+      "legal_count": 105
+    },
+    {
+      "cache_verdict": 2,
+      "key": [
+        1333065489702715392,
+        16
+      ],
+      "legal_count": 93
+    },
+    {
+      "cache_verdict": null,
+      "key": [
+        1369094286721679360,
+        16
+      ],
+      "legal_count": 93
+    },
+    {
+      "cache_verdict": null,
+      "key": [
+        1585267068835463168,
+        16
+      ],
+      "legal_count": 93
+    },
+    {
+      "cache_verdict": null,
+      "key": [
+        1873497444987174912,
+        16
+      ],
+      "legal_count": 90
+    },
+    {
+      "cache_verdict": null,
+      "key": [
+        3602879701897445376,
+        16
+      ],
+      "legal_count": 92
+    },
+    {
+      "cache_verdict": null,
+      "key": [
+        5908722711111139328,
+        16
+      ],
+      "legal_count": 89
+    },
+    {
+      "cache_verdict": null,
+      "key": [
+        10376293541461626880,
+        1028
+      ],
+      "legal_count": 98
+    },
+    {
+      "cache_verdict": null,
+      "key": [
+        10376293541461626880,
+        1032
+      ],
+      "legal_count": 88
+    },
+    {
+      "cache_verdict": null,
+      "key": [
+        10376293541461626880,
+        9216
+      ],
+      "legal_count": 106
+    },
+    {
+      "cache_verdict": null,
+      "key": [
+        10376293541461626880,
+        17408
+      ],
+      "legal_count": 97
+    },
+    {
+      "cache_verdict": null,
+      "key": [
+        10376293541461626880,
+        33792
+      ],
+      "legal_count": 99
+    },
+    {
+      "cache_verdict": null,
+      "key": [
+        10376293541461626880,
+        66560
+      ],
+      "legal_count": 100
+    },
+    {
+      "cache_verdict": null,
+      "key": [
+        10376293541461626880,
+        132096
+      ],
+      "legal_count": 95
+    },
+    {
+      "cache_verdict": null,
+      "key": [
+        10376293541461626880,
+        16778240
+      ],
+      "legal_count": 106
+    },
+    {
+      "cache_verdict": null,
+      "key": [
+        10376293541461626880,
+        33555456
+      ],
+      "legal_count": 99
+    },
+    {
+      "cache_verdict": null,
+      "key": [
+        10376293541461626880,
+        67109888
+      ],
+      "legal_count": 88
+    },
+    {
+      "cache_verdict": null,
+      "key": [
+        10376293541461626880,
+        134218752
+      ],
+      "legal_count": 105
+    },
+    {
+      "cache_verdict": null,
+      "key": [
+        10376293541461626880,
+        268436480
+      ],
+      "legal_count": 100
+    },
+    {
+      "cache_verdict": 2,
+      "key": [
+        10520408729538527232,
+        16
+      ],
+      "legal_count": 93
+    }
+  ],
+  "schema": "n11-reply27-s4-s5-boundary-preflight-v1",
+  "unknown_cache_target_csv": "research/experiments/n11-reply27-class-1297036692683751424-16-20261010/input/target-s5-cache-unknown.csv"
+}

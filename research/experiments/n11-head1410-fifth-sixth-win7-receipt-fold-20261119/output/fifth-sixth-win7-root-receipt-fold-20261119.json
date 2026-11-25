@@ -1,0 +1,314 @@
+{
+  "schema": "n11-five-parent-fifth-sixth-win7-receipt-fold-20261119-v1",
+  "date": "2026-11-19",
+  "status": "fold-complete",
+  "source_main_head_before": "d3a6e69fee8ce7873e21499e0dac999313b97b1e",
+  "previous_fold": {
+    "path": "research/experiments/n11-head1410-fourth-win7-receipt-fold-20261119/output/fourth-win7-root-receipt-fold-20261119.json",
+    "git_blob_sha1": "38715413d6dd23b97717c92d73d8b4a0af807cda",
+    "frontier_after": {
+      "solved_s6_in_manifest": 1622,
+      "remaining_s5_orbits": 173,
+      "unique_remaining_s6": 6226,
+      "sum_remaining_cost": 492970,
+      "s6_needed_by_open_classes": 4521,
+      "cost_needed_by_open_classes": 358471,
+      "parent_row_incidence": 11855
+    }
+  },
+  "source_blob_pins": {
+    "worklist": "2fee1d0718547a62e346d35f5858d7913e37c097",
+    "ledger": "e8785d509e8a11a37c0d03cc450455a14708c34d",
+    "census": "9c251da3138c5cb0516e097be5e5d0427dfaf5f0",
+    "globalFold": "753a4bf4d0e11bea894111f9fa43bcff5e9ab7dc",
+    "previousCostFold": "7e6144cc4bc92c34faa14bed3058cde64fb3880e",
+    "firstFoldTarball": "fa5f26a9dc9bd2fb8222aa8ba0431d7578043019",
+    "cover": "a8eaf00bd6494eda50a68e7d06498bed833a7688",
+    "head1476": "65d0c7ce0200638a50db5451b11b8cb88ec64b5d",
+    "cost78c": "626409d50d0a7bb1b925ebecbff7dbee9adfa398",
+    "cost79c": "054923a47ea0387b25f734222c499e60c054109b",
+    "cost73j": "74fc3417391e30cf4cff9c2ffce059dce529ed86",
+    "sweep": "37aba599d0b69275225bf231d56cb18feed14090",
+    "fold23": "7923a0fe5331d1f7c896748031c4071b68fcc13a",
+    "coverResolve": "600b23d39888ea0e693742da4b2ae9c372a9faf0",
+    "fold4": "38715413d6dd23b97717c92d73d8b4a0af807cda",
+    "refold4": "791e6be736d7802497df6c1e3a4df81d5ec2d8fe",
+    "summary56": "9e71ab4e6e7d8e16fb1ca89e9e0c0b08a53190b9",
+    "legal56": "b5b8fb2dec81fc7e648f4d8d10ebb7989af15c36",
+    "cert5": "b072170a0557ee15622c9f8dd94ec0fa81c65e18",
+    "verif5": "433e59f172b4ccdc2a6246b90a4732243af58f3b",
+    "audit5": "3e5bcc808a6f0fd0295a7c79927e0dec450ee29f",
+    "cert6": "02ea43b389327ea68c54249017a236d2a93360a0",
+    "verif6": "f9819aa373a968bd86d2683ffcb40bf3de547363",
+    "audit6": "564e8201cc5f02634637a8463846b0741004474e",
+    "bigintVerifier": "62b5d9413daafb172f6e10249976ee6808f7b454",
+    "bareissVerifier": "2960afabdf7c1a7012d223974b65f1423e6890da"
+  },
+  "receipt_count": 2,
+  "receipts": [
+    {
+      "root": "00000000000000805202080001000000",
+      "added_bit": 71,
+      "child_hex": "00000000000000005202080001000000",
+      "covered_s6_rows": [
+        "00000000000000805202000001000000"
+      ],
+      "covered_five_parent_target_rows": [
+        "00000000000000805202000001000000"
+      ],
+      "legal_next_moves": 54,
+      "total_nodes": 5121073,
+      "unique_strategy_rows": 55857,
+      "fbt_drops": 0,
+      "closed_edge_cost": 62,
+      "parent_deltas": [
+        {
+          "parent_hex": "00000000000000003800000009000000",
+          "classes": 2,
+          "rows_before": 23,
+          "rows_closed": 1,
+          "rows_after": 22
+        }
+      ],
+      "affected_parents": 1,
+      "certificate_path": "research/experiments/n11-head1410-fifth-sixth-witness-win7-certificates-20261119/output/win7-root-00000000000000805202080001000000-20261119.n11",
+      "certificate_git_blob_sha1": "b072170a0557ee15622c9f8dd94ec0fa81c65e18",
+      "certificate_sha256": "69589e76e5d2e5f22e6992929f38d9fd67f07ce1bd9fe9e3f971d32bdd635a49",
+      "certificate_bytes": 2017673,
+      "certificate_strategy_rows": 55857,
+      "independent_verification": {
+        "published": {
+          "per_root_record": "research/experiments/n11-head1410-fifth-sixth-witness-win7-certificates-20261119/output/win7-root-00000000000000805202080001000000-independent-verification-20261119.json",
+          "per_root_git_blob_sha1": "433e59f172b4ccdc2a6246b90a4732243af58f3b",
+          "bareiss_union_audit_git_blob_sha1": "3e5bcc808a6f0fd0295a7c79927e0dec450ee29f",
+          "summary_git_blob_sha1": "9e71ab4e6e7d8e16fb1ca89e9e0c0b08a53190b9"
+        },
+        "rerun_in_this_environment": {
+          "bigint_subroots_passed": 54,
+          "bigint_union_missing": 0,
+          "bigint_union_extra": 0,
+          "bareiss_subroots": 54,
+          "bareiss_state_flow": {
+            "seen": 127080,
+            "terminals": 16170,
+            "opponentEdges": 124176,
+            "terminal_min": 13,
+            "terminal_max": 17
+          },
+          "bareiss_consumed_unique": 55857,
+          "bareiss_union_missing": 0,
+          "bareiss_union_extra": 0,
+          "cross_method_state_flow_equal": true,
+          "published_values_reproduced": true
+        }
+      }
+    },
+    {
+      "root": "00000000040000801202000080100000",
+      "added_bit": 90,
+      "child_hex": "00000000000000801202000080100000",
+      "covered_s6_rows": [
+        "00000000020000809002000040000000"
+      ],
+      "covered_five_parent_target_rows": [
+        "00000000020000809002000040000000"
+      ],
+      "legal_next_moves": 55,
+      "total_nodes": 931581,
+      "unique_strategy_rows": 30984,
+      "fbt_drops": 0,
+      "closed_edge_cost": 78,
+      "parent_deltas": [
+        {
+          "parent_hex": "00000000000000003800000009000000",
+          "classes": 2,
+          "rows_before": 22,
+          "rows_closed": 1,
+          "rows_after": 21
+        },
+        {
+          "parent_hex": "00000000000000801202000080000000",
+          "classes": 2,
+          "rows_before": 35,
+          "rows_closed": 1,
+          "rows_after": 34
+        }
+      ],
+      "affected_parents": 2,
+      "certificate_path": "research/experiments/n11-head1410-fifth-sixth-witness-win7-certificates-20261119/output/win7-root-00000000040000801202000080100000-20261119.n11",
+      "certificate_git_blob_sha1": "02ea43b389327ea68c54249017a236d2a93360a0",
+      "certificate_sha256": "5289f152e88072d716f22d42414222162facb7486d07fd024b61fdc50ddef885",
+      "certificate_bytes": 1117575,
+      "certificate_strategy_rows": 30984,
+      "independent_verification": {
+        "published": {
+          "per_root_record": "research/experiments/n11-head1410-fifth-sixth-witness-win7-certificates-20261119/output/win7-root-00000000040000801202000080100000-independent-verification-20261119.json",
+          "per_root_git_blob_sha1": "f9819aa373a968bd86d2683ffcb40bf3de547363",
+          "bareiss_union_audit_git_blob_sha1": "564e8201cc5f02634637a8463846b0741004474e",
+          "summary_git_blob_sha1": "9e71ab4e6e7d8e16fb1ca89e9e0c0b08a53190b9"
+        },
+        "rerun_in_this_environment": {
+          "bigint_subroots_passed": 55,
+          "bigint_union_missing": 0,
+          "bigint_union_extra": 0,
+          "bareiss_subroots": 55,
+          "bareiss_state_flow": {
+            "seen": 66292,
+            "terminals": 10905,
+            "opponentEdges": 59089,
+            "terminal_min": 13,
+            "terminal_max": 17
+          },
+          "bareiss_consumed_unique": 30984,
+          "bareiss_union_missing": 0,
+          "bareiss_union_extra": 0,
+          "cross_method_state_flow_equal": true,
+          "published_values_reproduced": true
+        }
+      }
+    }
+  ],
+  "new_receipt_coverage": {
+    "unique_s6_rows": 2,
+    "closed_edge_cost": 140,
+    "rows": [
+      {
+        "row_hex": "00000000000000805202000001000000",
+        "cost": 62,
+        "category": "unswept",
+        "demand": {
+          "c1": 0,
+          "c2": 1,
+          "c4": 0
+        },
+        "parents": [
+          "00000000000000003800000009000000"
+        ],
+        "receipt": {
+          "root": "00000000000000805202080001000000",
+          "verdict": "WIN7-D10",
+          "certificate_sha256": "69589e76e5d2e5f22e6992929f38d9fd67f07ce1bd9fe9e3f971d32bdd635a49"
+        }
+      },
+      {
+        "row_hex": "00000000020000809002000040000000",
+        "cost": 78,
+        "category": "unswept",
+        "demand": {
+          "c1": 0,
+          "c2": 2,
+          "c4": 0
+        },
+        "parents": [
+          "00000000000000003800000009000000",
+          "00000000000000801202000080000000"
+        ],
+        "receipt": {
+          "root": "00000000040000801202000080100000",
+          "verdict": "WIN7-D10",
+          "certificate_sha256": "5289f152e88072d716f22d42414222162facb7486d07fd024b61fdc50ddef885"
+        }
+      }
+    ]
+  },
+  "parent_closure": {
+    "fully_closed_parent_count": 0,
+    "affected_unique_parents": 2
+  },
+  "frontier_before": {
+    "solved_s6_in_manifest": 1622,
+    "remaining_s5_orbits": 173,
+    "unique_remaining_s6": 6226,
+    "sum_remaining_cost": 492970,
+    "s6_needed_by_open_classes": 4521,
+    "cost_needed_by_open_classes": 358471,
+    "parent_row_incidence": 11855
+  },
+  "frontier_after": {
+    "solved_s6_in_manifest": 1624,
+    "remaining_s5_orbits": 173,
+    "unique_remaining_s6": 6224,
+    "sum_remaining_cost": 492830,
+    "s6_needed_by_open_classes": 4519,
+    "cost_needed_by_open_classes": 358331,
+    "parent_row_incidence": 11852
+  },
+  "five_parent_target_after": {
+    "framework": "49-cover residual framework (97 rows at the first-fold head)",
+    "closed_target_rows_total": 10,
+    "residual_target_rows": 87
+  },
+  "witness_plan_after": {
+    "framework": "refuted-excluded 63-candidate 28-root witness plan (K1033)",
+    "planned_cover_rows": 53,
+    "folded_win_roots": [
+      "00000000000000821082000010800000",
+      "00000000000000821082000000042000",
+      "00000000000000821082000000420000",
+      "00000000000000801202060001000000",
+      "00000000000000805202080001000000",
+      "00000000040000801202000080100000"
+    ],
+    "refuted_probed_roots": [
+      "00000000000000003800000008001021",
+      "00000000020000801222000000100000"
+    ],
+    "untested_roots": [
+      "0000000000000000380000000b080000",
+      "00000000000000003800280009000000",
+      "00000000000000083800000048100000",
+      "00000000000000801202000000840200",
+      "00000000000000801202000000880400",
+      "00000000000000801202000001040100",
+      "00000000000000801202000011000400",
+      "00000000000000801202000020101000",
+      "00000000000000801202010001080000",
+      "00000000000000801202040000900000",
+      "00000000000000801202050000001000",
+      "000000000000008012020a0000001000",
+      "00000000000000801212000001001000",
+      "00000000000000801222000000801000",
+      "00000000000000909002000080100000",
+      "00000000000020a09002000080000000",
+      "00000000000040889002000000100000",
+      "00000000010000809003000080000000",
+      "00000000010004003800000008002000",
+      "00000000040000801202000120000000",
+      "0000000a000000003800000008100000",
+      "00000010000000801202000000000404",
+      "00000010000000801202000100000100"
+    ],
+    "untested_root_count": 23,
+    "rows_still_coverable_by_untested_plan": 45,
+    "residual_target_rows_after_fold": 87,
+    "note": "untested roots are candidate plan entries, not certificates; REFUTED-D10 is not a LOSS proof."
+  },
+  "verdict_join_summary": {
+    "known_refuted_roots_pre_fold": 284,
+    "known_win_roots_pre_fold": 160,
+    "join_limitation": "explicit pinned sources only (head1476/cost78c/79c/73j transfers, global fold, cost78c/79c receipts, 48-root sweep, first/second/third/fourth receipt folds); crosschecked against the K1038 refold verdict_pool (284/160); not the full 8,964-entry cache join",
+    "win_loss_conflicts": 0
+  },
+  "controls": {
+    "base_frontier_recomputed": true,
+    "first_fold_frontier_chained": true,
+    "second_third_fold_frontier_chained": true,
+    "fourth_fold_frontier_chained": true,
+    "verdict_universe_crosschecked_against_k1038_refold": true,
+    "receipt_rows_rederived_from_all_8_d4_images": true,
+    "receipt_target_rows_match_cover_resolve_witness": true,
+    "all_receipt_rows_were_open_before_their_receipt": true,
+    "live_bigint_verification_rerun_both": true,
+    "live_bareiss_verification_rerun_both": true,
+    "cross_method_state_flow_agreement_rerun_both": true,
+    "published_verification_values_reproduced_both": true,
+    "win_loss_conflict_scan_against_published_verdict_universe": true
+  },
+  "interpretation_guard": [
+    "WIN7-D10 proves a first-player win within depth 10 only from the individual seven-stone roots of these receipts.",
+    "The receipts close their S6 rows in the frontier but prove nothing about the empty board or any two-stone root.",
+    "REFUTED-D10 verdicts referenced by the join are NOT LOSS proofs; they only bound first-player wins within depth 10 from those exact roots.",
+    "The 23 untested witness roots are a conditional plan, not certificates.",
+    "The standard 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, and classes 1/2/4 remain UNKNOWN."
+  ]
+}

@@ -1,0 +1,61 @@
+{
+ "checkpoint": "pass1 keys k01-k05",
+ "head_before_push": "a829b6e79ba24fa0a9a4a47e6015270621b31e00",
+ "rows": [
+  {
+   "key": "1297107061427929088:65536",
+   "budget": 2000000,
+   "result": 2,
+   "nodes": 1914160
+  },
+  {
+   "key": "1297107061427929088:67108864",
+   "budget": 2000000,
+   "result": 0,
+   "nodes": 2000000
+  },
+  {
+   "key": "1297107061427937280:0",
+   "budget": 2000000,
+   "result": 2,
+   "nodes": 1762669
+  },
+  {
+   "key": "1297107061427994624:0",
+   "budget": 2000000,
+   "result": 0,
+   "nodes": 2000000
+  },
+  {
+   "key": "1297107061428060160:0",
+   "budget": 2000000,
+   "result": 2,
+   "nodes": 1814500
+  },
+  {
+   "key": "1297107061427929088:67108864",
+   "budget": 15000000,
+   "result": 0,
+   "nodes": 15000000
+  },
+  {
+   "key": "1297107061427929088:67108864",
+   "budget": 15000000,
+   "result": 0,
+   "nodes": 15000000
+  },
+  {
+   "key": "1297107061427994624:0",
+   "budget": 15000000,
+   "result": 2,
+   "nodes": 2631074
+  },
+  {
+   "key": "1297107061427994624:0",
+   "budget": 15000000,
+   "result": 2,
+   "nodes": 2631074
+  }
+ ],
+ "status_guard": "per-key S5 verdicts only; 11x11 empty board remains UNKNOWN; no class or board-level claim"
+}

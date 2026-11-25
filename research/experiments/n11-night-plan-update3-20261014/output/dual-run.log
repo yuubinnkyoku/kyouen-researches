@@ -1,0 +1,19 @@
+{
+  "schema": "n11-night-updated-exact-element-dual-update3-v1",
+  "repaired_plan_sha256": "c5f72fce5aa748c7a39c907e0feccf4f4c85e2c2815bf70adc7eda7abe79a054",
+  "baseline_dual_schema": "n11-adaptive-updated-exact-element-dual-update2-v1",
+  "distinct_groups": 948,
+  "paid_groups": 869,
+  "options_scored": 34440,
+  "elements": 962459,
+  "degree_sha256": "93939a11604ce4bab3f8caf79e9b39daa40a9d3174279d84af1c005ef25d2087",
+  "total_exact": [
+    182461931,
+    27720
+  ],
+  "total_float": 6582.320743145743,
+  "integer_lower_bound": 6583,
+  "upper_bound": 31774,
+  "method": "beta[t,s,e]=1/deg[e]; exact minimum over ALL options in each paid group; all degree capacities equal 1; ceil by integrality",
+  "note": "identical certificate for the batch and both staged reflections: the dual depends only on legal candidate sets and element-cost obligations, which batch_vs_staged shows to be identical"
+}

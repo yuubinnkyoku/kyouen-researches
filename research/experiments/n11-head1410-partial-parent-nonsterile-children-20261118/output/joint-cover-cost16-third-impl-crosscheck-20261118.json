@@ -1,0 +1,582 @@
+{
+ "schema": "n11-joint-cover-cost16-third-impl-crosscheck-20261118-v1",
+ "date": "2026-11-18",
+ "lane": "n11 long lane (verification side)",
+ "title": "Third-implementation cross-check of the five-cheapest joint certificate-cover analysis (commit 3a04ca5b): algorithm-independent determination of all 31 subset minimum cover sizes via Tutte-matrix rank (two prime fields) plus exact 2^r DP on the r <= 18 subsets, with full field comparison and witness validation",
+ "inputs": {
+  "published_cost16_extension": {
+   "path": "research/experiments/n11-head1410-partial-parent-nonsterile-children-20261118/output/joint-parent-cover-sharing-cost16-20261118.json",
+   "git_blob_sha1": "40581746dc3304bdaff4b1934fd6f1d3d2981ea5"
+  },
+  "published_4parent_joint": {
+   "path": "research/experiments/n11-head1410-partial-parent-nonsterile-children-20261118/output/joint-parent-cover-sharing-20261118.json",
+   "git_blob_sha1": "f1a4783292897a6e9128dc1a5718617a33b119a1"
+  },
+  "cover_table": {
+   "git_blob_sha1": "4e4a911d0e05779437d4a8e97685a8feb66c0d25"
+  },
+  "candidate_roots_jsonl": {
+   "git_blob_sha1": "89b24065d0588b0891395c9283e3a5b3d5551595"
+  },
+  "worklist": {
+   "git_blob_sha1": "2fee1d0718547a62e346d35f5858d7913e37c097"
+  },
+  "census": {
+   "git_blob_sha1": "9c251da3138c5cb0516e097be5e5d0427dfaf5f0"
+  },
+  "ledger": {
+   "git_blob_sha1": "e8785d509e8a11a37c0d03cc450455a14708c34d"
+  }
+ },
+ "method": "Independent re-derivation of all 31 subset universes from the pinned inputs; max matching determined by randomized Tutte-matrix rank over GF(1000000007) and GF(998244353) with independent deterministic LCG streams (algebraic method, disjoint from the published blossom), self-tested against brute force on 500 deterministic small graphs; minimum cover size r - m (Gallai) independently confirmed on the two r <= 18 subsets by an exact 2^r bitmask minimum-cover DP that uses no matching at all; every published witness validated for distinctness, universe membership, count == r - m, and full row coverage; all 31 published subset results compared field by field.",
+ "derived": {
+  "subsets": [
+   {
+    "subset": [
+     "000000"
+    ],
+    "r": 11,
+    "tutte": [
+     5,
+     5
+    ],
+    "exact_size": 6,
+    "dp": 6
+   },
+   {
+    "subset": [
+     "000000"
+    ],
+    "r": 18,
+    "tutte": [
+     9,
+     9
+    ],
+    "exact_size": 9,
+    "dp": 9
+   },
+   {
+    "subset": [
+     "002000"
+    ],
+    "r": 23,
+    "tutte": [
+     11,
+     11
+    ],
+    "exact_size": 12,
+    "dp": null
+   },
+   {
+    "subset": [
+     "000000"
+    ],
+    "r": 29,
+    "tutte": [
+     14,
+     14
+    ],
+    "exact_size": 15,
+    "dp": null
+   },
+   {
+    "subset": [
+     "001000"
+    ],
+    "r": 31,
+    "tutte": [
+     15,
+     15
+    ],
+    "exact_size": 16,
+    "dp": null
+   },
+   {
+    "subset": [
+     "000000",
+     "000000"
+    ],
+    "r": 29,
+    "tutte": [
+     14,
+     14
+    ],
+    "exact_size": 15,
+    "dp": null
+   },
+   {
+    "subset": [
+     "000000",
+     "002000"
+    ],
+    "r": 34,
+    "tutte": [
+     17,
+     17
+    ],
+    "exact_size": 17,
+    "dp": null
+   },
+   {
+    "subset": [
+     "000000",
+     "000000"
+    ],
+    "r": 40,
+    "tutte": [
+     20,
+     20
+    ],
+    "exact_size": 20,
+    "dp": null
+   },
+   {
+    "subset": [
+     "000000",
+     "001000"
+    ],
+    "r": 42,
+    "tutte": [
+     21,
+     21
+    ],
+    "exact_size": 21,
+    "dp": null
+   },
+   {
+    "subset": [
+     "000000",
+     "002000"
+    ],
+    "r": 41,
+    "tutte": [
+     20,
+     20
+    ],
+    "exact_size": 21,
+    "dp": null
+   },
+   {
+    "subset": [
+     "000000",
+     "000000"
+    ],
+    "r": 47,
+    "tutte": [
+     23,
+     23
+    ],
+    "exact_size": 24,
+    "dp": null
+   },
+   {
+    "subset": [
+     "000000",
+     "001000"
+    ],
+    "r": 49,
+    "tutte": [
+     24,
+     24
+    ],
+    "exact_size": 25,
+    "dp": null
+   },
+   {
+    "subset": [
+     "002000",
+     "000000"
+    ],
+    "r": 52,
+    "tutte": [
+     26,
+     26
+    ],
+    "exact_size": 26,
+    "dp": null
+   },
+   {
+    "subset": [
+     "002000",
+     "001000"
+    ],
+    "r": 54,
+    "tutte": [
+     27,
+     27
+    ],
+    "exact_size": 27,
+    "dp": null
+   },
+   {
+    "subset": [
+     "000000",
+     "001000"
+    ],
+    "r": 60,
+    "tutte": [
+     30,
+     30
+    ],
+    "exact_size": 30,
+    "dp": null
+   },
+   {
+    "subset": [
+     "000000",
+     "000000",
+     "002000"
+    ],
+    "r": 52,
+    "tutte": [
+     26,
+     26
+    ],
+    "exact_size": 26,
+    "dp": null
+   },
+   {
+    "subset": [
+     "000000",
+     "000000",
+     "000000"
+    ],
+    "r": 58,
+    "tutte": [
+     29,
+     29
+    ],
+    "exact_size": 29,
+    "dp": null
+   },
+   {
+    "subset": [
+     "000000",
+     "000000",
+     "001000"
+    ],
+    "r": 60,
+    "tutte": [
+     30,
+     30
+    ],
+    "exact_size": 30,
+    "dp": null
+   },
+   {
+    "subset": [
+     "000000",
+     "002000",
+     "000000"
+    ],
+    "r": 63,
+    "tutte": [
+     31,
+     31
+    ],
+    "exact_size": 32,
+    "dp": null
+   },
+   {
+    "subset": [
+     "000000",
+     "002000",
+     "001000"
+    ],
+    "r": 65,
+    "tutte": [
+     32,
+     32
+    ],
+    "exact_size": 33,
+    "dp": null
+   },
+   {
+    "subset": [
+     "000000",
+     "000000",
+     "001000"
+    ],
+    "r": 71,
+    "tutte": [
+     35,
+     35
+    ],
+    "exact_size": 36,
+    "dp": null
+   },
+   {
+    "subset": [
+     "000000",
+     "002000",
+     "000000"
+    ],
+    "r": 70,
+    "tutte": [
+     35,
+     35
+    ],
+    "exact_size": 35,
+    "dp": null
+   },
+   {
+    "subset": [
+     "000000",
+     "002000",
+     "001000"
+    ],
+    "r": 72,
+    "tutte": [
+     36,
+     36
+    ],
+    "exact_size": 36,
+    "dp": null
+   },
+   {
+    "subset": [
+     "000000",
+     "000000",
+     "001000"
+    ],
+    "r": 78,
+    "tutte": [
+     39,
+     39
+    ],
+    "exact_size": 39,
+    "dp": null
+   },
+   {
+    "subset": [
+     "002000",
+     "000000",
+     "001000"
+    ],
+    "r": 83,
+    "tutte": [
+     41,
+     41
+    ],
+    "exact_size": 42,
+    "dp": null
+   },
+   {
+    "subset": [
+     "000000",
+     "000000",
+     "002000",
+     "000000"
+    ],
+    "r": 81,
+    "tutte": [
+     40,
+     40
+    ],
+    "exact_size": 41,
+    "dp": null
+   },
+   {
+    "subset": [
+     "000000",
+     "000000",
+     "002000",
+     "001000"
+    ],
+    "r": 83,
+    "tutte": [
+     41,
+     41
+    ],
+    "exact_size": 42,
+    "dp": null
+   },
+   {
+    "subset": [
+     "000000",
+     "000000",
+     "000000",
+     "001000"
+    ],
+    "r": 89,
+    "tutte": [
+     44,
+     44
+    ],
+    "exact_size": 45,
+    "dp": null
+   },
+   {
+    "subset": [
+     "000000",
+     "002000",
+     "000000",
+     "001000"
+    ],
+    "r": 94,
+    "tutte": [
+     47,
+     47
+    ],
+    "exact_size": 47,
+    "dp": null
+   },
+   {
+    "subset": [
+     "000000",
+     "002000",
+     "000000",
+     "001000"
+    ],
+    "r": 101,
+    "tutte": [
+     50,
+     50
+    ],
+    "exact_size": 51,
+    "dp": null
+   },
+   {
+    "subset": [
+     "000000",
+     "000000",
+     "002000",
+     "000000",
+     "001000"
+    ],
+    "r": 112,
+    "tutte": [
+     56,
+     56
+    ],
+    "exact_size": 56,
+    "dp": null
+   }
+  ],
+  "dp_verified": [
+   {
+    "subset": [
+     "000000"
+    ],
+    "r": 11,
+    "dp": 6,
+    "gallai": 6,
+    "published": 6
+   },
+   {
+    "subset": [
+     "000000"
+    ],
+    "r": 18,
+    "dp": 9,
+    "gallai": 9,
+    "published": 9
+   }
+  ],
+  "field_mismatches": [],
+  "witness_invalid": [],
+  "tutte_field_disagreements": [],
+  "subsets_compared": 31
+ },
+ "checks": [
+  {
+   "name": "pub5.pin",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "jsonl.pin",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "universe.rows",
+   "pass": true,
+   "detail": "{\"worklist_open\": 6337, \"jsonl_rows\": 6337}"
+  },
+  {
+   "name": "tutte.selftest_vs_bruteforce",
+   "pass": true,
+   "detail": "{\"graphs\": 500, \"failures\": 0}"
+  },
+  {
+   "name": "table.08000000",
+   "pass": true,
+   "detail": "{\"cost\": 6, \"rows_r\": 11, \"targets\": 11}"
+  },
+  {
+   "name": "table.00000000",
+   "pass": true,
+   "detail": "{\"cost\": 9, \"rows_r\": 18, \"targets\": 18}"
+  },
+  {
+   "name": "table.08002000",
+   "pass": true,
+   "detail": "{\"cost\": 12, \"rows_r\": 23, \"targets\": 23}"
+  },
+  {
+   "name": "table.09000000",
+   "pass": true,
+   "detail": "{\"cost\": 15, \"rows_r\": 29, \"targets\": 29}"
+  },
+  {
+   "name": "table.08001000",
+   "pass": true,
+   "detail": "{\"cost\": 16, \"rows_r\": 31, \"targets\": 31}"
+  },
+  {
+   "name": "selection.cheapest5",
+   "pass": true,
+   "detail": "[[\"00000000000000403800000008000000\", 6], [\"00000000000000821082000000000000\", 9], [\"00000000000000003800000008002000\", 12], [\"00000000000000003800000009000000\", 15], [\"00000000000000003800000008001000\", 16]]"
+  },
+  {
+   "name": "targets.disjoint",
+   "pass": true,
+   "detail": "{\"union\": 112, \"sum\": 112}"
+  },
+  {
+   "name": "joint.fields_31_subsets",
+   "pass": true,
+   "detail": "{\"compared\": 31, \"mismatches\": []}"
+  },
+  {
+   "name": "joint.tutte_two_fields_agree",
+   "pass": true,
+   "detail": "[]"
+  },
+  {
+   "name": "joint.witnesses_valid",
+   "pass": true,
+   "detail": "[]"
+  },
+  {
+   "name": "dp.exact_agreement_r_le_18",
+   "pass": true,
+   "detail": "{\"verified\": 2, \"detail\": [{\"subset\": [\"000000\"], \"r\": 11, \"dp\": 6, \"gallai\": 6, \"published\": 6}, {\"subset\": [\"000000\"], \"r\": 18, \"dp\": 9, \"gallai\": 9, \"published\": 9}]}"
+  },
+  {
+   "name": "pub4.fifteen_subset_sizes_reproduced",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "pub5.check_count_agrees",
+   "pass": true,
+   "detail": "{\"check_count\": 91, \"all_pass\": true}"
+  },
+  {
+   "name": "quint.headline",
+   "pass": true,
+   "detail": "{\"joint\": 56, \"rows\": 112, \"benefit\": 2}"
+  },
+  {
+   "name": "cost16.singleton_size",
+   "pass": true,
+   "detail": ""
+  }
+ ],
+ "check_count": 19,
+ "all_pass": true,
+ "interpretation_guard": "Cover-plan combinatorics only. Joint cover cost presumes every chosen root would validate as a certificate; sharing benefit is a planning count, not a WIN/REFUTED claim. REFUTED-D10 and STERILE are not LOSS proofs.",
+ "unknown_status": "Standard 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, and classes 1/2/4 remain UNKNOWN."
+}

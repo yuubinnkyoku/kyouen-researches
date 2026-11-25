@@ -1,0 +1,35 @@
+{
+  "coverage": [
+    56,
+    64,
+    100,
+    108
+  ],
+  "history_sha256": "212ce320b141ad2a322b13f788a0d60ba31d594860768b5de7d578883bb9bd3e",
+  "raw_history_audit": {
+    "path": "research/experiments/n11-reply27-class-1297036692683751424-16-20261010/output/candidate-raw-history-after15m.json",
+    "sha256": "027cb223de8e9c72829fc629490eb0a318108194960ba1520f8fb453eea385d2"
+  },
+  "s4_key": [
+    1224979098645823488,
+    536870912
+  ],
+  "saved_layer_audit": {
+    "path": "research/experiments/n11-reply27-class-1297036692683751424-16-20261010/output/candidate-saved-layer-after15m.json",
+    "sha256": "feed7bf0ec728f9054ad98e9f66d861fd5e53829476822bec67c7cde2909d33c"
+  },
+  "schema": "n11-reply27-single-s5-escalation-plan-v1",
+  "targets": [
+    {
+      "arm": "next-class-escalation-15m",
+      "budget": 15000000,
+      "group": "candidate-s4-1224979098645823488-536870912",
+      "key": [
+        10448351135500599296,
+        536870912
+      ],
+      "preflight_legal_count": 83,
+      "stones": 5
+    }
+  ]
+}

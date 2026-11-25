@@ -1,0 +1,86 @@
+{
+  "graph": "research\\experiments\\n11-joint-s5-proof-planning-20261012\\output\\dependency-graph.json.gz",
+  "graph_sha256": "54f9c3643eeba139ea5e8d3babb1db9744d19f00f3cf024bbf192ec0d408c00b",
+  "integer_lower_bound": 346,
+  "method": "greedy maximal packing of paid groups with pairwise-disjoint option pools; value = sum of per-group minimum option sizes, a valid integer lower bound since disjoint pools force disjoint option contents in every feasible union",
+  "packed": [
+    {
+      "group": 927,
+      "labels": [
+        [
+          12,
+          60,
+          108
+        ]
+      ],
+      "min_option_size": 54,
+      "pool_size": 1380
+    },
+    {
+      "group": 279,
+      "labels": [
+        [
+          48,
+          60,
+          72
+        ]
+      ],
+      "min_option_size": 53,
+      "pool_size": 1410
+    },
+    {
+      "group": 856,
+      "labels": [
+        [
+          24,
+          60,
+          108
+        ],
+        [
+          12,
+          60,
+          96
+        ]
+      ],
+      "min_option_size": 95,
+      "pool_size": 2674
+    },
+    {
+      "group": 291,
+      "labels": [
+        [
+          48,
+          60,
+          108
+        ],
+        [
+          12,
+          60,
+          72
+        ]
+      ],
+      "min_option_size": 92,
+      "pool_size": 2692
+    },
+    {
+      "group": 944,
+      "labels": [
+        [
+          0,
+          60,
+          10
+        ],
+        [
+          0,
+          60,
+          110
+        ]
+      ],
+      "min_option_size": 52,
+      "pool_size": 3021
+    }
+  ],
+  "packed_groups": 5,
+  "schema": "n11-disjoint-pool-packing-v1",
+  "seconds": 7.5
+}

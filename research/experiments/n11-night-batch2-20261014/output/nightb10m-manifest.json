@@ -1,0 +1,73 @@
+{
+  "budget": 10000000,
+  "completed_candidates": 1,
+  "counts": {
+    "LOSS": 0,
+    "UNKNOWN": 1,
+    "WIN": 0
+  },
+  "kind": "sanctioned single-row budget extension",
+  "memo_power": 20,
+  "order": "count",
+  "prefix": "nightb10m",
+  "profile": true,
+  "ranking": "research/experiments/n11-conflict-ranking-20261013/output/ranking.tsv",
+  "ranking_sha256": "4da6c93bbe29dc6df32b13f45afc0c4b893619b09d59356ad4a187de9c9bb9ad",
+  "rows": [
+    {
+      "canonical_children": 88,
+      "exact_profile": {
+        "avg_probe": "26.1365",
+        "evict_open": "0",
+        "evict_solved": "8951414",
+        "row": "0",
+        "solved_discoveries": "9999990",
+        "table_capacity": "1048576",
+        "table_hit": "6740973",
+        "table_miss": "55772674",
+        "table_new": "1048576",
+        "table_solved": "1048576",
+        "table_used": "1048576"
+      },
+      "input_sha256": "daeb47d90ca6ceea9a255455127b72ed9c0a027bfeb4882380167fb9b7347265",
+      "legal": 88,
+      "mask": [
+        1732197006677377024,
+        128
+      ],
+      "nodes": 10000000,
+      "output_sha256": "6975cada02d430958b36bfe6866e1f314c92459de71ad8b7ffb57d3639cfe818",
+      "peak_rss_kib": 1387596,
+      "ranking": {
+        "canonical_s6_children": "88",
+        "geometry_rank": "18",
+        "if_loss_fixed_win_branches_uncovered": "4",
+        "if_win_greedy_delta": "49",
+        "if_win_loss_choices_invalidated": "3",
+        "if_win_new_free_win_branches": "18",
+        "impact_per_child_rank": "20",
+        "stabilizer_order": "1"
+      },
+      "root_child_census": {
+        "LOSS": 0,
+        "UNKNOWN": 6,
+        "WIN": 82
+      },
+      "s5_index": 206386,
+      "status": "NODE_LIMIT",
+      "trace_bytes": null,
+      "trace_path": null,
+      "trace_sha256": null,
+      "trust_class": "UNKNOWN (not evidence)",
+      "verdict": 0,
+      "wall_seconds": 85.955
+    }
+  ],
+  "schema": "n11-night-batch2-task-b-v1",
+  "solver_binary_sha256": "72f1da293931c590f54d2d70b9f6318ce6d207e04ff4b6dbe6050ea34876de14",
+  "solver_source_sha256": "48e51bb56288e090f51996eb4d9a208ca0458d11f73ba61bf5f08dade25db446",
+  "source": "research/experiments/n11-s5-s6-quotient-20261013/output/pilots.json",
+  "source_sha256": "771df57ea88bcd7311c20752db706c0d6b00cba3391fd1a1b9d53ddce5e88f70",
+  "trust": "completed labels solver-trusted until independent terminal-only verification; UNKNOWN is not evidence; NODE_LIMIT rows stay UNKNOWN and are not re-run at this budget",
+  "workers": 1
+}

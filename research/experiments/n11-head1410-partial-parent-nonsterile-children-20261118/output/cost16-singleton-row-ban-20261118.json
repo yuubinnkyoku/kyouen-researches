@@ -1,0 +1,298 @@
+{
+ "all_pass": true,
+ "check_count": 20,
+ "checks": [
+  {
+   "detail": 23,
+   "name": "disjoint_pairs.count_23",
+   "pass": true
+  },
+  {
+   "detail": [
+    0,
+    4,
+    24
+   ],
+   "name": "rows.count_3",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "rows.rank_by_Fs",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "anchor.pm_row_0",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "row0.j2_le_pmfull",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "row0.j3_keys_match_disjoint",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "row0.j3_le_min_j2",
+   "pass": true
+  },
+  {
+   "detail": {
+    "marg_root": "1038346617734472",
+    "pm_full": "1653308795286330"
+   },
+   "name": "row0.marginal_bounds",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "anchor.pm_row_4",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "row4.j2_le_pmfull",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "row4.j3_keys_match_disjoint",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "row4.j3_le_min_j2",
+   "pass": true
+  },
+  {
+   "detail": {
+    "marg_root": "1079571415364592",
+    "pm_full": "1642191620360697"
+   },
+   "name": "row4.marginal_bounds",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "anchor.pm_row_24",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "row24.j2_le_pmfull",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "row24.j3_keys_match_disjoint",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "row24.j3_le_min_j2",
+   "pass": true
+  },
+  {
+   "detail": {
+    "marg_root": "1027433572894695",
+    "pm_full": "1644776550905100"
+   },
+   "name": "row24.marginal_bounds",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "k10.pin_and_value",
+   "pass": true
+  },
+  {
+   "detail": {
+    "pairs10": "1176471942925388348",
+    "pairs10_plus_rows1": "1230450513693617948",
+    "pairs10_plus_rows2": "1280291151344872604",
+    "pairs10_plus_rows3": "1329607962843817964"
+   },
+   "name": "mixed.monotone_le_total",
+   "pass": true
+  }
+ ],
+ "date": "2026-11-18",
+ "inputs": {
+  "groups_aggregate": {
+   "git_blob_sha1": "31bdefdb2e2cc90b706cbb8090e98eb5eece4d87"
+  },
+  "parent_pickle": "(regenerable via the canonical loader)",
+  "phase_a": {
+   "git_blob_sha1": "fe4b4b559fd8c3fdc9bc9b9f40a048fc3217c55b"
+  },
+  "published_joint_jsonl": {
+   "git_blob_sha1": "95194096b2dcb547b5b77fb846795edbc5c43e05"
+  },
+  "survival_k10_json": {
+   "git_blob_sha1": "6be591d458e3d9b863c070b85c0196692dfe5c6d"
+  }
+ },
+ "interpretation_guard": "Marginals count minimum cover plans; cover-plan combinatorics only, not search costs or verdicts. REFUTED-D10 and STERILE are not LOSS proofs.",
+ "lane": "n11 long lane (verification side)",
+ "schema": "n11-cost16-singleton-row-ban-20261118-v1",
+ "structure": {
+  "a_type_only": "a B-type cover has 16 pair roots and no singleton, so all overlap terms are A-type",
+  "event": "F_s = plans whose singleton covers row s (banning all w1[s] singleton roots on row s)",
+  "ie_truncation": "F_s n E_e n E_e' nonzero only for disjoint e,e'; no three pairwise-disjoint top-10 pairs exist, so the I-E stops at pairs",
+  "rows_disjoint": "F_s and F_s' are disjoint (exactly one singleton per A-plan) -> marginals add"
+ },
+ "title": "Exact singleton-row ban marginals on top of the top-10 pair-root bans for the 31-row cost-16 parent: event F_s (A-plan singleton on row s), I-E truncated at pairs because three pairwise-disjoint top-10 pairs do not exist (hub rows 18/19); rows ranked by |F_s| = w1[s]*pm(V\\{s}), top-3 rows 4/0/24 computed with the independent MyPm counter",
+ "unknown_status": "Standard 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, and classes 1/2/4 remain UNKNOWN.",
+ "values": {
+  "kill_mixed": {
+   "pairs10": "1176471942925388348",
+   "pairs10_plus_rows1": "1230450513693617948",
+   "pairs10_plus_rows2": "1280291151344872604",
+   "pairs10_plus_rows3": "1329607962843817964"
+  },
+  "kill_share_percent": {
+   "pairs10": 39.65925,
+   "pairs10_plus_rows1": 41.478885,
+   "pairs10_plus_rows2": 43.159029,
+   "pairs10_plus_rows3": 44.821514
+  },
+  "root_level_note": "a single top singleton root (row 18 by root-level pm) has |F| = 1,798,095,446,108,235 = 0.0606% of total, so root-level singleton bans are an order of magnitude weaker than any top-10 pair ban",
+  "rows": {
+   "0": {
+    "j2": {
+     "0": "81849025234836",
+     "1": "75060161028957",
+     "2": "75336670880133",
+     "3": "0",
+     "4": "74917474101297",
+     "5": "74476329801816",
+     "6": "71512672741461",
+     "7": "71516459940567",
+     "8": "78085862347176",
+     "9": "74767885042329"
+    },
+    "j3": {
+     "0,1": "3450217239780",
+     "0,4": "3604213322280",
+     "0,5": "3597392213580",
+     "0,6": "3596358392430",
+     "0,7": "3597746632470",
+     "1,2": "3308957852388",
+     "1,3": "0",
+     "1,8": "3610410367350",
+     "1,9": "3448730300160",
+     "2,4": "3295087873980",
+     "2,5": "3456797452770",
+     "2,6": "3302059698708",
+     "2,7": "3162137109108",
+     "3,4": "0",
+     "3,5": "0",
+     "3,6": "0",
+     "3,7": "0",
+     "4,8": "3603472328250",
+     "4,9": "3281289271590",
+     "5,9": "3603869335410",
+     "6,8": "3603528279630",
+     "6,9": "3434226561420",
+     "7,8": "3603869335410"
+    },
+    "marginal_root_level": "1038346617734472",
+    "marginal_row_level": "49840637651254656",
+    "pm_full": "1653308795286330",
+    "w1": 48
+   },
+   "24": {
+    "j2": {
+     "0": "77804447670030",
+     "1": "78380229622452",
+     "2": "74784806449002",
+     "3": "74614509212691",
+     "4": "0",
+     "5": "77793124995900",
+     "6": "77954931115992",
+     "7": "74652260137302",
+     "8": "73889368542150",
+     "9": "71076723640236"
+    },
+    "j3": {
+     "0,1": "3443301687480",
+     "0,4": "0",
+     "0,5": "3581307757440",
+     "0,6": "3757571265900",
+     "0,7": "3589083347280",
+     "1,2": "3449117693280",
+     "1,3": "3448313123220",
+     "1,8": "3595448664420",
+     "1,9": "3441837446340",
+     "2,4": "0",
+     "2,5": "3595066375020",
+     "2,6": "3594681662760",
+     "2,7": "3281775476580",
+     "3,4": "0",
+     "3,5": "3603472328250",
+     "3,6": "3433431493110",
+     "3,7": "3281289271590",
+     "4,8": "0",
+     "4,9": "0",
+     "5,9": "3587782100340",
+     "6,8": "3757122455160",
+     "6,9": "3579039126840",
+     "7,8": "3587782100340"
+    },
+    "marginal_root_level": "1027433572894695",
+    "marginal_row_level": "49316811498945360",
+    "pm_full": "1644776550905100",
+    "w1": 48
+   },
+   "4": {
+    "j2": {
+     "0": "81409772438946",
+     "1": "78242424304455",
+     "2": "74930490186837",
+     "3": "74767885042329",
+     "4": "74652260137302",
+     "5": "77479615595406",
+     "6": "77507222465304",
+     "7": "0",
+     "8": "77478327014976",
+     "9": "0"
+    },
+    "j3": {
+     "0,1": "3604287664410",
+     "0,4": "3589083347280",
+     "0,5": "3749945375460",
+     "0,6": "3925764752520",
+     "0,7": "0",
+     "1,2": "3449489608860",
+     "1,3": "3448730300160",
+     "1,8": "3772848736890",
+     "1,9": "0",
+     "2,4": "3281775476580",
+     "2,5": "3595886807130",
+     "2,6": "3588244176120",
+     "2,7": "0",
+     "3,4": "3281289271590",
+     "3,5": "3603869335410",
+     "3,6": "3434226561420",
+     "3,7": "0",
+     "4,8": "3587782100340",
+     "4,9": "0",
+     "5,9": "0",
+     "6,8": "3934568675280",
+     "6,9": "0",
+     "7,8": "0"
+    },
+    "marginal_root_level": "1079571415364592",
+    "marginal_row_level": "53978570768229600",
+    "pm_full": "1642191620360697",
+    "w1": 50
+   }
+  },
+  "total_minimum_covers": "2966450341680481356"
+ }
+}

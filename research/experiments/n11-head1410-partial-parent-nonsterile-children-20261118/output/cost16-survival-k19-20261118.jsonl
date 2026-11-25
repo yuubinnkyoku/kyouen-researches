@@ -1,0 +1,991 @@
+{"kind": "pair", "idx_i": 0, "idx_j": 18, "shared_row": false, "joint_A": 4271416357677582, "joint_B": 1367521591693890, "joint": 5638937949371472, "memo_states": 1345863, "sec": 11.8}
+{"kind": "pair", "idx_i": 1, "idx_j": 18, "shared_row": true, "joint_A": 0, "joint_B": 71790838968669, "joint": 71790838968669, "memo_states": 1785049, "sec": 15.6}
+{"kind": "pair", "idx_i": 2, "idx_j": 18, "shared_row": false, "joint_A": 4089569926146741, "joint_B": 1316068900382115, "joint": 5405638826528856, "memo_states": 2501757, "sec": 23.1}
+{"kind": "pair", "idx_i": 3, "idx_j": 18, "shared_row": false, "joint_A": 4077513611461134, "joint_B": 1313510467363176, "joint": 5391024078824310, "memo_states": 2732806, "sec": 26.4}
+{"kind": "pair", "idx_i": 4, "idx_j": 18, "shared_row": true, "joint_A": 0, "joint_B": 71793405517857, "joint": 71793405517857, "memo_states": 2929206, "sec": 28.6}
+{"kind": "pair", "idx_i": 5, "idx_j": 18, "shared_row": true, "joint_A": 0, "joint_B": 71225564014536, "joint": 71225564014536, "memo_states": 3050593, "sec": 30.0}
+{"kind": "pair", "idx_i": 6, "idx_j": 18, "shared_row": true, "joint_A": 0, "joint_B": 68534182836198, "joint": 68534182836198, "memo_states": 3125615, "sec": 30.9}
+{"kind": "pair", "idx_i": 7, "idx_j": 18, "shared_row": true, "joint_A": 0, "joint_B": 71510540130873, "joint": 71510540130873, "memo_states": 3126983, "sec": 31.0}
+{"kind": "pair", "idx_i": 8, "idx_j": 18, "shared_row": false, "joint_A": 4269636339052116, "joint_B": 1360698213090420, "joint": 5630334552142536, "memo_states": 3129034, "sec": 31.0}
+{"kind": "pair", "idx_i": 9, "idx_j": 18, "shared_row": false, "joint_A": 4235430238668861, "joint_B": 1363516488567903, "joint": 5598946727236764, "memo_states": 3220288, "sec": 32.6}
+{"kind": "pair", "idx_i": 10, "idx_j": 18, "shared_row": false, "joint_A": 4065572911459542, "joint_B": 1308638659478040, "joint": 5374211570937582, "memo_states": 3642198, "sec": 37.1}
+{"kind": "pair", "idx_i": 11, "idx_j": 18, "shared_row": true, "joint_A": 0, "joint_B": 68791081945671, "joint": 68791081945671, "memo_states": 3688362, "sec": 37.7}
+{"kind": "pair", "idx_i": 12, "idx_j": 18, "shared_row": true, "joint_A": 0, "joint_B": 68272567183311, "joint": 68272567183311, "memo_states": 3716874, "sec": 38.1}
+{"kind": "pair", "idx_i": 13, "idx_j": 18, "shared_row": false, "joint_A": 3893298647601834, "joint_B": 1252634235566634, "joint": 5145932883168468, "memo_states": 4248306, "sec": 45.1}
+{"kind": "pair", "idx_i": 14, "idx_j": 18, "shared_row": false, "joint_A": 4083175825607661, "joint_B": 1310447259130785, "joint": 5393623084738446, "memo_states": 4762204, "sec": 50.6}
+{"kind": "pair", "idx_i": 15, "idx_j": 18, "shared_row": false, "joint_A": 4066698519384975, "joint_B": 1302981509035917, "joint": 5369680028420892, "memo_states": 5011056, "sec": 53.5}
+{"kind": "pair", "idx_i": 16, "idx_j": 18, "shared_row": false, "joint_A": 4052312470405551, "joint_B": 1302825478277973, "joint": 5355137948683524, "memo_states": 5102551, "sec": 54.8}
+{"kind": "pair", "idx_i": 17, "idx_j": 18, "shared_row": false, "joint_A": 3889430118547128, "joint_B": 1250308379822520, "joint": 5139738498369648, "memo_states": 5396769, "sec": 57.7}
+{"kind": "triple", "combo": [18, 0, 1], "class": "b_only", "union": [14, 15, 16, 18, 19], "joint_A": 0, "joint_B": 3289297359810, "joint": 3289297359810, "memo_states": 196407, "sec": 0.6}
+{"kind": "triple", "combo": [18, 0, 2], "class": "b_only", "union": [5, 14, 15, 18, 19], "joint_A": 0, "joint_B": 3304074648630, "joint": 3304074648630, "memo_states": 196411, "sec": 0.6}
+{"kind": "triple", "combo": [18, 0, 3], "class": "b_only", "union": [0, 14, 15, 18, 19], "joint_A": 0, "joint_B": 3450874411920, "joint": 3450874411920, "memo_states": 196411, "sec": 0.6}
+{"kind": "triple", "combo": [18, 0, 4], "class": "b_only", "union": [14, 15, 18, 19, 24], "joint_A": 0, "joint_B": 3443638965750, "joint": 3443638965750, "memo_states": 196407, "sec": 0.6}
+{"kind": "triple", "combo": [18, 0, 5], "class": "b_only", "union": [1, 14, 15, 18, 19], "joint_A": 0, "joint_B": 3428029462260, "joint": 3428029462260, "memo_states": 196412, "sec": 0.6}
+{"kind": "triple", "combo": [18, 0, 6], "class": "b_only", "union": [14, 15, 18, 19, 30], "joint_A": 0, "joint_B": 3435438512460, "joint": 3435438512460, "memo_states": 196411, "sec": 0.5}
+{"kind": "triple", "combo": [18, 0, 7], "class": "b_only", "union": [4, 14, 15, 18, 19], "joint_A": 0, "joint_B": 3604668515310, "joint": 3604668515310, "memo_states": 196411, "sec": 0.6}
+{"kind": "triple", "combo": [18, 0, 8], "class": "b_only", "union": [1, 14, 15, 18, 19], "joint_A": 0, "joint_B": 3428029462260, "joint": 3428029462260, "memo_states": 196412, "sec": 0.7}
+{"kind": "triple", "combo": [18, 0, 9], "class": "b_only", "union": [4, 14, 15, 18, 19], "joint_A": 0, "joint_B": 3604668515310, "joint": 3604668515310, "memo_states": 196411, "sec": 0.6}
+{"kind": "triple", "combo": [18, 0, 10], "class": "b_only", "union": [14, 15, 18, 19, 30], "joint_A": 0, "joint_B": 3435438512460, "joint": 3435438512460, "memo_states": 196411, "sec": 0.5}
+{"kind": "triple", "combo": [18, 0, 11], "class": "b_only", "union": [14, 15, 18, 19, 23], "joint_A": 0, "joint_B": 3289958273250, "joint": 3289958273250, "memo_states": 196407, "sec": 0.6}
+{"kind": "triple", "combo": [18, 0, 12], "class": "b_only", "union": [11, 14, 15, 18, 19], "joint_A": 0, "joint_B": 3428367042510, "joint": 3428367042510, "memo_states": 196410, "sec": 0.6}
+{"kind": "triple", "combo": [18, 0, 13], "class": "b_only", "union": [0, 14, 15, 18, 19], "joint_A": 0, "joint_B": 3450874411920, "joint": 3450874411920, "memo_states": 196411, "sec": 0.6}
+{"kind": "triple", "combo": [18, 0, 14], "class": "b_only", "union": [14, 15, 18, 19, 24], "joint_A": 0, "joint_B": 3443638965750, "joint": 3443638965750, "memo_states": 196407, "sec": 0.6}
+{"kind": "triple", "combo": [18, 0, 15], "class": "b_only", "union": [11, 14, 15, 18, 19], "joint_A": 0, "joint_B": 3428367042510, "joint": 3428367042510, "memo_states": 196410, "sec": 0.7}
+{"kind": "triple", "combo": [18, 0, 16], "class": "b_only", "union": [4, 14, 15, 18, 19], "joint_A": 0, "joint_B": 3604668515310, "joint": 3604668515310, "memo_states": 196411, "sec": 0.7}
+{"kind": "triple", "combo": [18, 0, 17], "class": "b_only", "union": [14, 15, 18, 19, 30], "joint_A": 0, "joint_B": 3435438512460, "joint": 3435438512460, "memo_states": 196411, "sec": 0.5}
+{"kind": "triple", "combo": [18, 1, 2], "class": "b_only", "union": [5, 14, 16, 18, 19], "joint_A": 0, "joint_B": 3302463248088, "joint": 3302463248088, "memo_states": 196404, "sec": 0.6}
+{"kind": "triple", "combo": [18, 1, 3], "class": "b_only", "union": [0, 14, 16, 18, 19], "joint_A": 0, "joint_B": 3295243958178, "joint": 3295243958178, "memo_states": 196403, "sec": 0.7}
+{"kind": "triple", "combo": [18, 1, 4], "class": "zero", "union": [14, 16, 18, 24], "joint_A": 0, "joint_B": 0, "joint": 0}
+{"kind": "triple", "combo": [18, 1, 5], "class": "zero", "union": [1, 14, 16, 18], "joint_A": 0, "joint_B": 0, "joint": 0}
+{"kind": "triple", "combo": [18, 1, 6], "class": "zero", "union": [14, 16, 18, 30], "joint_A": 0, "joint_B": 0, "joint": 0}
+{"kind": "triple", "combo": [18, 1, 7], "class": "zero", "union": [4, 14, 16, 18], "joint_A": 0, "joint_B": 0, "joint": 0}
+{"kind": "triple", "combo": [18, 1, 8], "class": "b_only", "union": [1, 14, 16, 18, 19], "joint_A": 0, "joint_B": 3433066330110, "joint": 3433066330110, "memo_states": 196412, "sec": 0.6}
+{"kind": "triple", "combo": [18, 1, 9], "class": "b_only", "union": [4, 14, 16, 18, 19], "joint_A": 0, "joint_B": 3448747951518, "joint": 3448747951518, "memo_states": 196404, "sec": 0.6}
+{"kind": "triple", "combo": [18, 1, 10], "class": "b_only", "union": [14, 16, 18, 19, 30], "joint_A": 0, "joint_B": 3136786506210, "joint": 3136786506210, "memo_states": 196404, "sec": 0.5}
+{"kind": "triple", "combo": [18, 1, 11], "class": "zero", "union": [14, 16, 18, 23], "joint_A": 0, "joint_B": 0, "joint": 0}
+{"kind": "triple", "combo": [18, 1, 12], "class": "zero", "union": [11, 14, 16, 18], "joint_A": 0, "joint_B": 0, "joint": 0}
+{"kind": "triple", "combo": [18, 1, 13], "class": "b_only", "union": [0, 14, 15, 16, 18], "joint_A": 0, "joint_B": 3135639535674, "joint": 3135639535674, "memo_states": 196411, "sec": 0.6}
+{"kind": "triple", "combo": [18, 1, 14], "class": "b_only", "union": [14, 15, 16, 18, 24], "joint_A": 0, "joint_B": 3304433946075, "joint": 3304433946075, "memo_states": 196407, "sec": 0.7}
+{"kind": "triple", "combo": [18, 1, 15], "class": "b_only", "union": [11, 14, 16, 18, 19], "joint_A": 0, "joint_B": 3281317254390, "joint": 3281317254390, "memo_states": 196407, "sec": 0.6}
+{"kind": "triple", "combo": [18, 1, 16], "class": "b_only", "union": [4, 14, 15, 16, 18], "joint_A": 0, "joint_B": 3289278272409, "joint": 3289278272409, "memo_states": 196411, "sec": 0.6}
+{"kind": "triple", "combo": [18, 1, 17], "class": "b_only", "union": [14, 15, 16, 18, 30], "joint_A": 0, "joint_B": 2991844916130, "joint": 2991844916130, "memo_states": 196411, "sec": 0.5}
+{"kind": "triple", "combo": [18, 2, 3], "class": "b_only", "union": [0, 5, 14, 18, 19], "joint_A": 0, "joint_B": 3162801297090, "joint": 3162801297090, "memo_states": 196403, "sec": 0.6}
+{"kind": "triple", "combo": [18, 2, 4], "class": "b_only", "union": [5, 14, 18, 19, 24], "joint_A": 0, "joint_B": 3295446314160, "joint": 3295446314160, "memo_states": 196404, "sec": 0.6}
+{"kind": "triple", "combo": [18, 2, 5], "class": "b_only", "union": [1, 5, 14, 18, 19], "joint_A": 0, "joint_B": 3449537195010, "joint": 3449537195010, "memo_states": 196415, "sec": 0.6}
+{"kind": "triple", "combo": [18, 2, 6], "class": "b_only", "union": [5, 14, 18, 19, 30], "joint_A": 0, "joint_B": 3295902568818, "joint": 3295902568818, "memo_states": 196406, "sec": 0.5}
+{"kind": "triple", "combo": [18, 2, 7], "class": "b_only", "union": [4, 5, 14, 18, 19], "joint_A": 0, "joint_B": 3295830777378, "joint": 3295830777378, "memo_states": 196406, "sec": 0.6}
+{"kind": "triple", "combo": [18, 2, 8], "class": "b_only", "union": [1, 5, 14, 18, 19], "joint_A": 0, "joint_B": 3449537195010, "joint": 3449537195010, "memo_states": 196415, "sec": 0.6}
+{"kind": "triple", "combo": [18, 2, 9], "class": "b_only", "union": [4, 5, 14, 18, 19], "joint_A": 0, "joint_B": 3295830777378, "joint": 3295830777378, "memo_states": 196406, "sec": 0.7}
+{"kind": "triple", "combo": [18, 2, 10], "class": "b_only", "union": [5, 14, 18, 19, 30], "joint_A": 0, "joint_B": 3295902568818, "joint": 3295902568818, "memo_states": 196406, "sec": 0.5}
+{"kind": "triple", "combo": [18, 2, 11], "class": "b_only", "union": [5, 14, 18, 19, 23], "joint_A": 0, "joint_B": 3156284065194, "joint": 3156284065194, "memo_states": 196404, "sec": 0.6}
+{"kind": "triple", "combo": [18, 2, 12], "class": "b_only", "union": [5, 11, 14, 18, 19], "joint_A": 0, "joint_B": 3296896447950, "joint": 3296896447950, "memo_states": 196411, "sec": 0.6}
+{"kind": "triple", "combo": [18, 2, 13], "class": "disjoint", "union": [0, 5, 14, 15, 18, 19], "joint_A": 175254913936290, "joint_B": 59792135374770, "joint": 235047049311060, "memo_states": 513885, "sec": 3.9}
+{"kind": "triple", "combo": [18, 2, 14], "class": "disjoint", "union": [5, 14, 15, 18, 19, 24], "joint_A": 182671441893690, "joint_B": 62194333721550, "joint": 244865775615240, "memo_states": 831388, "sec": 2.8}
+{"kind": "triple", "combo": [18, 2, 15], "class": "b_only", "union": [5, 11, 14, 18, 19], "joint_A": 0, "joint_B": 3296896447950, "joint": 3296896447950, "memo_states": 196411, "sec": 0.6}
+{"kind": "triple", "combo": [18, 2, 16], "class": "disjoint", "union": [4, 5, 14, 15, 18, 19], "joint_A": 182436708797118, "joint_B": 62208861475560, "joint": 244645570272678, "memo_states": 899597, "sec": 0.8}
+{"kind": "triple", "combo": [18, 2, 17], "class": "disjoint", "union": [5, 14, 15, 18, 19, 30], "joint_A": 182483728640718, "joint_B": 62070908384880, "joint": 244554637025598, "memo_states": 1077694, "sec": 1.3}
+{"kind": "triple", "combo": [18, 3, 4], "class": "b_only", "union": [0, 14, 18, 19, 24], "joint_A": 0, "joint_B": 3287722444050, "joint": 3287722444050, "memo_states": 196403, "sec": 0.6}
+{"kind": "triple", "combo": [18, 3, 5], "class": "b_only", "union": [0, 1, 14, 18, 19], "joint_A": 0, "joint_B": 3449858255160, "joint": 3449858255160, "memo_states": 196418, "sec": 0.6}
+{"kind": "triple", "combo": [18, 3, 6], "class": "b_only", "union": [0, 14, 18, 19, 30], "joint_A": 0, "joint_B": 3149102805528, "joint": 3149102805528, "memo_states": 196403, "sec": 0.6}
+{"kind": "triple", "combo": [18, 3, 7], "class": "b_only", "union": [0, 4, 14, 18, 19], "joint_A": 0, "joint_B": 3288492887820, "joint": 3288492887820, "memo_states": 196403, "sec": 0.6}
+{"kind": "triple", "combo": [18, 3, 8], "class": "b_only", "union": [0, 1, 14, 18, 19], "joint_A": 0, "joint_B": 3449858255160, "joint": 3449858255160, "memo_states": 196418, "sec": 0.6}
+{"kind": "triple", "combo": [18, 3, 9], "class": "b_only", "union": [0, 4, 14, 18, 19], "joint_A": 0, "joint_B": 3288492887820, "joint": 3288492887820, "memo_states": 196403, "sec": 0.6}
+{"kind": "triple", "combo": [18, 3, 10], "class": "b_only", "union": [0, 14, 18, 19, 30], "joint_A": 0, "joint_B": 3149102805528, "joint": 3149102805528, "memo_states": 196403, "sec": 0.5}
+{"kind": "triple", "combo": [18, 3, 11], "class": "b_only", "union": [0, 14, 18, 19, 23], "joint_A": 0, "joint_B": 3148946253630, "joint": 3148946253630, "memo_states": 196403, "sec": 0.6}
+{"kind": "triple", "combo": [18, 3, 12], "class": "b_only", "union": [0, 11, 14, 18, 19], "joint_A": 0, "joint_B": 3289621478880, "joint": 3289621478880, "memo_states": 196411, "sec": 0.6}
+{"kind": "triple", "combo": [18, 3, 13], "class": "b_only", "union": [0, 14, 15, 18, 19], "joint_A": 0, "joint_B": 3450874411920, "joint": 3450874411920, "memo_states": 196411, "sec": 0.6}
+{"kind": "triple", "combo": [18, 3, 14], "class": "disjoint", "union": [0, 14, 15, 18, 19, 24], "joint_A": 190739404613670, "joint_B": 64851720694290, "joint": 255591125307960, "memo_states": 1246706, "sec": 1.7}
+{"kind": "triple", "combo": [18, 3, 15], "class": "b_only", "union": [0, 11, 14, 18, 19], "joint_A": 0, "joint_B": 3289621478880, "joint": 3289621478880, "memo_states": 196411, "sec": 0.7}
+{"kind": "triple", "combo": [18, 3, 16], "class": "disjoint", "union": [0, 4, 14, 15, 18, 19], "joint_A": 190129539966360, "joint_B": 64745633258160, "joint": 254875173224520, "memo_states": 1314917, "sec": 0.8}
+{"kind": "triple", "combo": [18, 3, 17], "class": "disjoint", "union": [0, 14, 15, 18, 19, 30], "joint_A": 182336928877428, "joint_B": 62070908384880, "joint": 244407837262308, "memo_states": 1415483, "sec": 1.0}
+{"kind": "triple", "combo": [18, 4, 5], "class": "zero", "union": [1, 14, 18, 24], "joint_A": 0, "joint_B": 0, "joint": 0}
+{"kind": "triple", "combo": [18, 4, 6], "class": "zero", "union": [14, 18, 24, 30], "joint_A": 0, "joint_B": 0, "joint": 0}
+{"kind": "triple", "combo": [18, 4, 7], "class": "zero", "union": [4, 14, 18, 24], "joint_A": 0, "joint_B": 0, "joint": 0}
+{"kind": "triple", "combo": [18, 4, 8], "class": "b_only", "union": [1, 14, 18, 19, 24], "joint_A": 0, "joint_B": 3434535598890, "joint": 3434535598890, "memo_states": 196412, "sec": 0.6}
+{"kind": "triple", "combo": [18, 4, 9], "class": "b_only", "union": [4, 14, 18, 19, 24], "joint_A": 0, "joint_B": 3280924645260, "joint": 3280924645260, "memo_states": 196404, "sec": 0.7}
+{"kind": "triple", "combo": [18, 4, 10], "class": "b_only", "union": [14, 18, 19, 24, 30], "joint_A": 0, "joint_B": 3280945807170, "joint": 3280945807170, "memo_states": 196404, "sec": 0.6}
+{"kind": "triple", "combo": [18, 4, 11], "class": "zero", "union": [14, 18, 23, 24], "joint_A": 0, "joint_B": 0, "joint": 0}
+{"kind": "triple", "combo": [18, 4, 12], "class": "zero", "union": [11, 14, 18, 24], "joint_A": 0, "joint_B": 0, "joint": 0}
+{"kind": "triple", "combo": [18, 4, 13], "class": "b_only", "union": [0, 14, 15, 18, 24], "joint_A": 0, "joint_B": 3296804929140, "joint": 3296804929140, "memo_states": 196411, "sec": 0.6}
+{"kind": "triple", "combo": [18, 4, 14], "class": "zero", "union": [14, 15, 18, 24], "joint_A": 0, "joint_B": 0, "joint": 0}
+{"kind": "triple", "combo": [18, 4, 15], "class": "b_only", "union": [11, 14, 18, 19, 24], "joint_A": 0, "joint_B": 3274723398300, "joint": 3274723398300, "memo_states": 196407, "sec": 0.6}
+{"kind": "triple", "combo": [18, 4, 16], "class": "b_only", "union": [4, 14, 15, 18, 24], "joint_A": 0, "joint_B": 3289995485580, "joint": 3289995485580, "memo_states": 196411, "sec": 0.6}
+{"kind": "triple", "combo": [18, 4, 17], "class": "b_only", "union": [14, 15, 18, 24, 30], "joint_A": 0, "joint_B": 3297592833240, "joint": 3297592833240, "memo_states": 196411, "sec": 0.5}
+{"kind": "triple", "combo": [18, 5, 6], "class": "zero", "union": [1, 14, 18, 30], "joint_A": 0, "joint_B": 0, "joint": 0}
+{"kind": "triple", "combo": [18, 5, 7], "class": "zero", "union": [1, 4, 14, 18], "joint_A": 0, "joint_B": 0, "joint": 0}
+{"kind": "triple", "combo": [18, 5, 8], "class": "zero", "union": [1, 14, 18, 19], "joint_A": 0, "joint_B": 0, "joint": 0}
+{"kind": "triple", "combo": [18, 5, 9], "class": "b_only", "union": [1, 4, 14, 18, 19], "joint_A": 0, "joint_B": 3603506065050, "joint": 3603506065050, "memo_states": 196415, "sec": 0.6}
+{"kind": "triple", "combo": [18, 5, 10], "class": "b_only", "union": [1, 14, 18, 19, 30], "joint_A": 0, "joint_B": 3434208102360, "joint": 3434208102360, "memo_states": 196415, "sec": 0.5}
+{"kind": "triple", "combo": [18, 5, 11], "class": "zero", "union": [1, 14, 18, 23], "joint_A": 0, "joint_B": 0, "joint": 0}
+{"kind": "triple", "combo": [18, 5, 12], "class": "zero", "union": [1, 11, 14, 18], "joint_A": 0, "joint_B": 0, "joint": 0}
+{"kind": "triple", "combo": [18, 5, 13], "class": "b_only", "union": [0, 1, 14, 15, 18], "joint_A": 0, "joint_B": 3113338058820, "joint": 3113338058820, "memo_states": 196418, "sec": 0.7}
+{"kind": "triple", "combo": [18, 5, 14], "class": "b_only", "union": [1, 14, 15, 18, 24], "joint_A": 0, "joint_B": 3283103009820, "joint": 3283103009820, "memo_states": 196412, "sec": 0.7}
+{"kind": "triple", "combo": [18, 5, 15], "class": "b_only", "union": [1, 11, 14, 18, 19], "joint_A": 0, "joint_B": 3267982794570, "joint": 3267982794570, "memo_states": 196412, "sec": 0.7}
+{"kind": "triple", "combo": [18, 5, 16], "class": "b_only", "union": [1, 4, 14, 15, 18], "joint_A": 0, "joint_B": 3259110148740, "joint": 3259110148740, "memo_states": 196415, "sec": 0.6}
+{"kind": "triple", "combo": [18, 5, 17], "class": "b_only", "union": [1, 14, 15, 18, 30], "joint_A": 0, "joint_B": 3106733200620, "joint": 3106733200620, "memo_states": 196415, "sec": 0.6}
+{"kind": "triple", "combo": [18, 6, 7], "class": "zero", "union": [4, 14, 18, 30], "joint_A": 0, "joint_B": 0, "joint": 0}
+{"kind": "triple", "combo": [18, 6, 8], "class": "b_only", "union": [1, 14, 18, 19, 30], "joint_A": 0, "joint_B": 3434208102360, "joint": 3434208102360, "memo_states": 196415, "sec": 0.5}
+{"kind": "triple", "combo": [18, 6, 9], "class": "b_only", "union": [4, 14, 18, 19, 30], "joint_A": 0, "joint_B": 3433884417948, "joint": 3433884417948, "memo_states": 196406, "sec": 0.5}
+{"kind": "triple", "combo": [18, 6, 10], "class": "zero", "union": [14, 18, 19, 30], "joint_A": 0, "joint_B": 0, "joint": 0}
+{"kind": "triple", "combo": [18, 6, 11], "class": "zero", "union": [14, 18, 23, 30], "joint_A": 0, "joint_B": 0, "joint": 0}
+{"kind": "triple", "combo": [18, 6, 12], "class": "zero", "union": [11, 14, 18, 30], "joint_A": 0, "joint_B": 0, "joint": 0}
+{"kind": "triple", "combo": [18, 6, 13], "class": "b_only", "union": [0, 14, 15, 18, 30], "joint_A": 0, "joint_B": 2989498383024, "joint": 2989498383024, "memo_states": 196411, "sec": 0.5}
+{"kind": "triple", "combo": [18, 6, 14], "class": "b_only", "union": [14, 15, 18, 24, 30], "joint_A": 0, "joint_B": 3297592833240, "joint": 3297592833240, "memo_states": 196411, "sec": 0.5}
+{"kind": "triple", "combo": [18, 6, 15], "class": "b_only", "union": [11, 14, 18, 19, 30], "joint_A": 0, "joint_B": 3274905335460, "joint": 3274905335460, "memo_states": 196411, "sec": 0.5}
+{"kind": "triple", "combo": [18, 6, 16], "class": "b_only", "union": [4, 14, 15, 18, 30], "joint_A": 0, "joint_B": 3266608176144, "joint": 3266608176144, "memo_states": 196413, "sec": 0.5}
+{"kind": "triple", "combo": [18, 6, 17], "class": "zero", "union": [14, 15, 18, 30], "joint_A": 0, "joint_B": 0, "joint": 0}
+{"kind": "triple", "combo": [18, 7, 8], "class": "b_only", "union": [1, 4, 14, 18, 19], "joint_A": 0, "joint_B": 3603506065050, "joint": 3603506065050, "memo_states": 196415, "sec": 0.6}
+{"kind": "triple", "combo": [18, 7, 9], "class": "zero", "union": [4, 14, 18, 19], "joint_A": 0, "joint_B": 0, "joint": 0}
+{"kind": "triple", "combo": [18, 7, 10], "class": "b_only", "union": [4, 14, 18, 19, 30], "joint_A": 0, "joint_B": 3433884417948, "joint": 3433884417948, "memo_states": 196406, "sec": 0.5}
+{"kind": "triple", "combo": [18, 7, 11], "class": "zero", "union": [4, 14, 18, 23], "joint_A": 0, "joint_B": 0, "joint": 0}
+{"kind": "triple", "combo": [18, 7, 12], "class": "zero", "union": [4, 11, 14, 18], "joint_A": 0, "joint_B": 0, "joint": 0}
+{"kind": "triple", "combo": [18, 7, 13], "class": "b_only", "union": [0, 4, 14, 15, 18], "joint_A": 0, "joint_B": 3122813556600, "joint": 3122813556600, "memo_states": 196411, "sec": 0.6}
+{"kind": "triple", "combo": [18, 7, 14], "class": "b_only", "union": [4, 14, 15, 18, 24], "joint_A": 0, "joint_B": 3289995485580, "joint": 3289995485580, "memo_states": 196411, "sec": 0.7}
+{"kind": "triple", "combo": [18, 7, 15], "class": "b_only", "union": [4, 11, 14, 18, 19], "joint_A": 0, "joint_B": 3434967207150, "joint": 3434967207150, "memo_states": 196411, "sec": 0.7}
+{"kind": "triple", "combo": [18, 7, 16], "class": "zero", "union": [4, 14, 15, 18], "joint_A": 0, "joint_B": 0, "joint": 0}
+{"kind": "triple", "combo": [18, 7, 17], "class": "b_only", "union": [4, 14, 15, 18, 30], "joint_A": 0, "joint_B": 3266608176144, "joint": 3266608176144, "memo_states": 196413, "sec": 0.6}
+{"kind": "triple", "combo": [18, 8, 9], "class": "b_only", "union": [1, 4, 14, 18, 19], "joint_A": 0, "joint_B": 3603506065050, "joint": 3603506065050, "memo_states": 196415, "sec": 0.6}
+{"kind": "triple", "combo": [18, 8, 10], "class": "b_only", "union": [1, 14, 18, 19, 30], "joint_A": 0, "joint_B": 3434208102360, "joint": 3434208102360, "memo_states": 196415, "sec": 0.6}
+{"kind": "triple", "combo": [18, 8, 11], "class": "b_only", "union": [1, 14, 18, 19, 23], "joint_A": 0, "joint_B": 3280924304730, "joint": 3280924304730, "memo_states": 196412, "sec": 0.7}
+{"kind": "triple", "combo": [18, 8, 12], "class": "b_only", "union": [1, 11, 14, 18, 19], "joint_A": 0, "joint_B": 3267982794570, "joint": 3267982794570, "memo_states": 196412, "sec": 0.7}
+{"kind": "triple", "combo": [18, 8, 13], "class": "disjoint", "union": [0, 1, 14, 15, 18, 19], "joint_A": 192013346580960, "joint_B": 64702765178100, "joint": 256716111759060, "memo_states": 513886, "sec": 4.0}
+{"kind": "triple", "combo": [18, 8, 14], "class": "disjoint", "union": [1, 14, 15, 18, 19, 24], "joint_A": 191524393862160, "joint_B": 64545225493260, "joint": 256069619355420, "memo_states": 831394, "sec": 2.8}
+{"kind": "triple", "combo": [18, 8, 15], "class": "b_only", "union": [1, 11, 14, 18, 19], "joint_A": 0, "joint_B": 3267982794570, "joint": 3267982794570, "memo_states": 196412, "sec": 0.7}
+{"kind": "triple", "combo": [18, 8, 16], "class": "disjoint", "union": [1, 4, 14, 15, 18, 19], "joint_A": 200336688687780, "joint_B": 67464600883860, "joint": 267801289571640, "memo_states": 860852, "sec": 0.3}
+{"kind": "triple", "combo": [18, 8, 17], "class": "disjoint", "union": [1, 14, 15, 18, 19, 30], "joint_A": 191279997978720, "joint_B": 64402134979860, "joint": 255682132958580, "memo_states": 1050583, "sec": 1.4}
+{"kind": "triple", "combo": [18, 9, 10], "class": "b_only", "union": [4, 14, 18, 19, 30], "joint_A": 0, "joint_B": 3433884417948, "joint": 3433884417948, "memo_states": 196406, "sec": 0.6}
+{"kind": "triple", "combo": [18, 9, 11], "class": "b_only", "union": [4, 14, 18, 19, 23], "joint_A": 0, "joint_B": 3280924645260, "joint": 3280924645260, "memo_states": 196404, "sec": 0.7}
+{"kind": "triple", "combo": [18, 9, 12], "class": "b_only", "union": [4, 11, 14, 18, 19], "joint_A": 0, "joint_B": 3434967207150, "joint": 3434967207150, "memo_states": 196411, "sec": 0.7}
+{"kind": "triple", "combo": [18, 9, 13], "class": "disjoint", "union": [0, 4, 14, 15, 18, 19], "joint_A": 190129539966360, "joint_B": 64745633258160, "joint": 254875173224520, "memo_states": 513889, "sec": 4.0}
+{"kind": "triple", "combo": [18, 9, 14], "class": "disjoint", "union": [4, 14, 15, 18, 19, 24], "joint_A": 190024316259960, "joint_B": 64711586506770, "joint": 254735902766730, "memo_states": 831390, "sec": 2.8}
+{"kind": "triple", "combo": [18, 9, 15], "class": "b_only", "union": [4, 11, 14, 18, 19], "joint_A": 0, "joint_B": 3434967207150, "joint": 3434967207150, "memo_states": 196411, "sec": 0.7}
+{"kind": "triple", "combo": [18, 9, 16], "class": "b_only", "union": [4, 14, 15, 18, 19], "joint_A": 0, "joint_B": 3604668515310, "joint": 3604668515310, "memo_states": 196411, "sec": 0.7}
+{"kind": "triple", "combo": [18, 9, 17], "class": "disjoint", "union": [4, 14, 15, 18, 19, 30], "joint_A": 198771231383088, "joint_B": 67478484026550, "joint": 266249715409638, "memo_states": 1027521, "sec": 1.5}
+{"kind": "triple", "combo": [18, 10, 11], "class": "b_only", "union": [14, 18, 19, 23, 30], "joint_A": 0, "joint_B": 3135395368434, "joint": 3135395368434, "memo_states": 196404, "sec": 0.5}
+{"kind": "triple", "combo": [18, 10, 12], "class": "b_only", "union": [11, 14, 18, 19, 30], "joint_A": 0, "joint_B": 3274905335460, "joint": 3274905335460, "memo_states": 196411, "sec": 0.5}
+{"kind": "triple", "combo": [18, 10, 13], "class": "disjoint", "union": [0, 14, 15, 18, 19, 30], "joint_A": 182336928877428, "joint_B": 62070908384880, "joint": 244407837262308, "memo_states": 1119011, "sec": 0.9}
+{"kind": "triple", "combo": [18, 10, 14], "class": "disjoint", "union": [14, 15, 18, 19, 24, 30], "joint_A": 190488949574730, "joint_B": 64705282006590, "joint": 255194231581320, "memo_states": 1413230, "sec": 2.3}
+{"kind": "triple", "combo": [18, 10, 15], "class": "b_only", "union": [11, 14, 18, 19, 30], "joint_A": 0, "joint_B": 3274905335460, "joint": 3274905335460, "memo_states": 196411, "sec": 0.6}
+{"kind": "triple", "combo": [18, 10, 16], "class": "disjoint", "union": [4, 14, 15, 18, 19, 30], "joint_A": 198771231383088, "joint_B": 67478484026550, "joint": 266249715409638, "memo_states": 1413230, "sec": 0.0}
+{"kind": "triple", "combo": [18, 10, 17], "class": "b_only", "union": [14, 15, 18, 19, 30], "joint_A": 0, "joint_B": 3435438512460, "joint": 3435438512460, "memo_states": 196411, "sec": 0.6}
+{"kind": "triple", "combo": [18, 11, 12], "class": "zero", "union": [11, 14, 18, 23], "joint_A": 0, "joint_B": 0, "joint": 0}
+{"kind": "triple", "combo": [18, 11, 13], "class": "b_only", "union": [0, 14, 15, 18, 23], "joint_A": 0, "joint_B": 3150662436810, "joint": 3150662436810, "memo_states": 196411, "sec": 0.6}
+{"kind": "triple", "combo": [18, 11, 14], "class": "b_only", "union": [14, 15, 18, 23, 24], "joint_A": 0, "joint_B": 3157613536812, "joint": 3157613536812, "memo_states": 196407, "sec": 0.6}
+{"kind": "triple", "combo": [18, 11, 15], "class": "b_only", "union": [11, 14, 18, 19, 23], "joint_A": 0, "joint_B": 3129108957900, "joint": 3129108957900, "memo_states": 196407, "sec": 0.6}
+{"kind": "triple", "combo": [18, 11, 16], "class": "b_only", "union": [4, 14, 15, 18, 23], "joint_A": 0, "joint_B": 3289995485580, "joint": 3289995485580, "memo_states": 196411, "sec": 0.6}
+{"kind": "triple", "combo": [18, 11, 17], "class": "b_only", "union": [14, 15, 18, 23, 30], "joint_A": 0, "joint_B": 3143930683572, "joint": 3143930683572, "memo_states": 196411, "sec": 0.6}
+{"kind": "triple", "combo": [18, 12, 13], "class": "b_only", "union": [0, 11, 14, 15, 18], "joint_A": 0, "joint_B": 3113612691990, "joint": 3113612691990, "memo_states": 196415, "sec": 0.7}
+{"kind": "triple", "combo": [18, 12, 14], "class": "b_only", "union": [11, 14, 15, 18, 24], "joint_A": 0, "joint_B": 3283399787280, "joint": 3283399787280, "memo_states": 196410, "sec": 0.6}
+{"kind": "triple", "combo": [18, 12, 15], "class": "zero", "union": [11, 14, 18, 19], "joint_A": 0, "joint_B": 0, "joint": 0}
+{"kind": "triple", "combo": [18, 12, 16], "class": "b_only", "union": [4, 11, 14, 15, 18], "joint_A": 0, "joint_B": 3259110148740, "joint": 3259110148740, "memo_states": 196414, "sec": 0.6}
+{"kind": "triple", "combo": [18, 12, 17], "class": "b_only", "union": [11, 14, 15, 18, 30], "joint_A": 0, "joint_B": 3107025513240, "joint": 3107025513240, "memo_states": 196414, "sec": 0.5}
+{"kind": "triple", "combo": [18, 13, 14], "class": "b_only", "union": [0, 14, 15, 18, 24], "joint_A": 0, "joint_B": 3296804929140, "joint": 3296804929140, "memo_states": 196411, "sec": 0.6}
+{"kind": "triple", "combo": [18, 13, 15], "class": "disjoint", "union": [0, 11, 14, 15, 18, 19], "joint_A": 191012183181870, "joint_B": 64554976223190, "joint": 255567159405060, "memo_states": 1552402, "sec": 1.4}
+{"kind": "triple", "combo": [18, 13, 16], "class": "b_only", "union": [0, 4, 14, 15, 18], "joint_A": 0, "joint_B": 3122813556600, "joint": 3122813556600, "memo_states": 196411, "sec": 0.6}
+{"kind": "triple", "combo": [18, 13, 17], "class": "b_only", "union": [0, 14, 15, 18, 30], "joint_A": 0, "joint_B": 2989498383024, "joint": 2989498383024, "memo_states": 196411, "sec": 0.5}
+{"kind": "triple", "combo": [18, 14, 15], "class": "disjoint", "union": [11, 14, 15, 18, 19, 24], "joint_A": 190525950620310, "joint_B": 64397833712070, "joint": 254923784332380, "memo_states": 1730517, "sec": 1.8}
+{"kind": "triple", "combo": [18, 14, 16], "class": "b_only", "union": [4, 14, 15, 18, 24], "joint_A": 0, "joint_B": 3289995485580, "joint": 3289995485580, "memo_states": 196411, "sec": 0.6}
+{"kind": "triple", "combo": [18, 14, 17], "class": "b_only", "union": [14, 15, 18, 24, 30], "joint_A": 0, "joint_B": 3297592833240, "joint": 3297592833240, "memo_states": 196411, "sec": 0.6}
+{"kind": "triple", "combo": [18, 15, 16], "class": "disjoint", "union": [4, 11, 14, 15, 18, 19], "joint_A": 199265951761200, "joint_B": 67303299274470, "joint": 266569251035670, "memo_states": 1780704, "sec": 0.6}
+{"kind": "triple", "combo": [18, 15, 17], "class": "disjoint", "union": [11, 14, 15, 18, 19, 30], "joint_A": 190285905377460, "joint_B": 64255582255950, "joint": 254541487633410, "memo_states": 1958804, "sec": 1.4}
+{"kind": "triple", "combo": [18, 16, 17], "class": "b_only", "union": [4, 14, 15, 18, 30], "joint_A": 0, "joint_B": 3266608176144, "joint": 3266608176144, "memo_states": 196413, "sec": 0.5}
+{"kind": "quad", "combo": [18, 0, 1, 2], "class": "zero", "union": [5, 14, 15, 16, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 1, 3], "class": "zero", "union": [0, 14, 15, 16, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 1, 4], "class": "zero", "union": [14, 15, 16, 18, 19, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 1, 5], "class": "zero", "union": [1, 14, 15, 16, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 1, 6], "class": "zero", "union": [14, 15, 16, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 1, 7], "class": "zero", "union": [4, 14, 15, 16, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 1, 8], "class": "zero", "union": [1, 14, 15, 16, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 1, 9], "class": "zero", "union": [4, 14, 15, 16, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 1, 10], "class": "zero", "union": [14, 15, 16, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 1, 11], "class": "zero", "union": [14, 15, 16, 18, 19, 23], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 1, 12], "class": "zero", "union": [11, 14, 15, 16, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 1, 13], "class": "zero", "union": [0, 14, 15, 16, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 1, 14], "class": "zero", "union": [14, 15, 16, 18, 19, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 1, 15], "class": "zero", "union": [11, 14, 15, 16, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 1, 16], "class": "zero", "union": [4, 14, 15, 16, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 1, 17], "class": "zero", "union": [14, 15, 16, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 2, 3], "class": "zero", "union": [0, 5, 14, 15, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 2, 4], "class": "zero", "union": [5, 14, 15, 18, 19, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 2, 5], "class": "zero", "union": [1, 5, 14, 15, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 2, 6], "class": "zero", "union": [5, 14, 15, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 2, 7], "class": "zero", "union": [4, 5, 14, 15, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 2, 8], "class": "zero", "union": [1, 5, 14, 15, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 2, 9], "class": "zero", "union": [4, 5, 14, 15, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 2, 10], "class": "zero", "union": [5, 14, 15, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 2, 11], "class": "zero", "union": [5, 14, 15, 18, 19, 23], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 2, 12], "class": "zero", "union": [5, 11, 14, 15, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 2, 13], "class": "zero", "union": [0, 5, 14, 15, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 2, 14], "class": "zero", "union": [5, 14, 15, 18, 19, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 2, 15], "class": "zero", "union": [5, 11, 14, 15, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 2, 16], "class": "zero", "union": [4, 5, 14, 15, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 2, 17], "class": "zero", "union": [5, 14, 15, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 3, 4], "class": "zero", "union": [0, 14, 15, 18, 19, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 3, 5], "class": "zero", "union": [0, 1, 14, 15, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 3, 6], "class": "zero", "union": [0, 14, 15, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 3, 7], "class": "zero", "union": [0, 4, 14, 15, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 3, 8], "class": "zero", "union": [0, 1, 14, 15, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 3, 9], "class": "zero", "union": [0, 4, 14, 15, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 3, 10], "class": "zero", "union": [0, 14, 15, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 3, 11], "class": "zero", "union": [0, 14, 15, 18, 19, 23], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 3, 12], "class": "zero", "union": [0, 11, 14, 15, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 3, 13], "class": "zero", "union": [0, 14, 15, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 3, 14], "class": "zero", "union": [0, 14, 15, 18, 19, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 3, 15], "class": "zero", "union": [0, 11, 14, 15, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 3, 16], "class": "zero", "union": [0, 4, 14, 15, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 3, 17], "class": "zero", "union": [0, 14, 15, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 4, 5], "class": "zero", "union": [1, 14, 15, 18, 19, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 4, 6], "class": "zero", "union": [14, 15, 18, 19, 24, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 4, 7], "class": "zero", "union": [4, 14, 15, 18, 19, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 4, 8], "class": "zero", "union": [1, 14, 15, 18, 19, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 4, 9], "class": "zero", "union": [4, 14, 15, 18, 19, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 4, 10], "class": "zero", "union": [14, 15, 18, 19, 24, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 4, 11], "class": "zero", "union": [14, 15, 18, 19, 23, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 4, 12], "class": "zero", "union": [11, 14, 15, 18, 19, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 4, 13], "class": "zero", "union": [0, 14, 15, 18, 19, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 4, 14], "class": "zero", "union": [14, 15, 18, 19, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 4, 15], "class": "zero", "union": [11, 14, 15, 18, 19, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 4, 16], "class": "zero", "union": [4, 14, 15, 18, 19, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 4, 17], "class": "zero", "union": [14, 15, 18, 19, 24, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 5, 6], "class": "zero", "union": [1, 14, 15, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 5, 7], "class": "zero", "union": [1, 4, 14, 15, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 5, 8], "class": "zero", "union": [1, 14, 15, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 5, 9], "class": "zero", "union": [1, 4, 14, 15, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 5, 10], "class": "zero", "union": [1, 14, 15, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 5, 11], "class": "zero", "union": [1, 14, 15, 18, 19, 23], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 5, 12], "class": "zero", "union": [1, 11, 14, 15, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 5, 13], "class": "zero", "union": [0, 1, 14, 15, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 5, 14], "class": "zero", "union": [1, 14, 15, 18, 19, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 5, 15], "class": "zero", "union": [1, 11, 14, 15, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 5, 16], "class": "zero", "union": [1, 4, 14, 15, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 5, 17], "class": "zero", "union": [1, 14, 15, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 6, 7], "class": "zero", "union": [4, 14, 15, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 6, 8], "class": "zero", "union": [1, 14, 15, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 6, 9], "class": "zero", "union": [4, 14, 15, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 6, 10], "class": "zero", "union": [14, 15, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 6, 11], "class": "zero", "union": [14, 15, 18, 19, 23, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 6, 12], "class": "zero", "union": [11, 14, 15, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 6, 13], "class": "zero", "union": [0, 14, 15, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 6, 14], "class": "zero", "union": [14, 15, 18, 19, 24, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 6, 15], "class": "zero", "union": [11, 14, 15, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 6, 16], "class": "zero", "union": [4, 14, 15, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 6, 17], "class": "zero", "union": [14, 15, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 7, 8], "class": "zero", "union": [1, 4, 14, 15, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 7, 9], "class": "zero", "union": [4, 14, 15, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 7, 10], "class": "zero", "union": [4, 14, 15, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 7, 11], "class": "zero", "union": [4, 14, 15, 18, 19, 23], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 7, 12], "class": "zero", "union": [4, 11, 14, 15, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 7, 13], "class": "zero", "union": [0, 4, 14, 15, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 7, 14], "class": "zero", "union": [4, 14, 15, 18, 19, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 7, 15], "class": "zero", "union": [4, 11, 14, 15, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 7, 16], "class": "zero", "union": [4, 14, 15, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 7, 17], "class": "zero", "union": [4, 14, 15, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 8, 9], "class": "zero", "union": [1, 4, 14, 15, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 8, 10], "class": "zero", "union": [1, 14, 15, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 8, 11], "class": "zero", "union": [1, 14, 15, 18, 19, 23], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 8, 12], "class": "zero", "union": [1, 11, 14, 15, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 8, 13], "class": "zero", "union": [0, 1, 14, 15, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 8, 14], "class": "zero", "union": [1, 14, 15, 18, 19, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 8, 15], "class": "zero", "union": [1, 11, 14, 15, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 8, 16], "class": "zero", "union": [1, 4, 14, 15, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 8, 17], "class": "zero", "union": [1, 14, 15, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 9, 10], "class": "zero", "union": [4, 14, 15, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 9, 11], "class": "zero", "union": [4, 14, 15, 18, 19, 23], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 9, 12], "class": "zero", "union": [4, 11, 14, 15, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 9, 13], "class": "zero", "union": [0, 4, 14, 15, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 9, 14], "class": "zero", "union": [4, 14, 15, 18, 19, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 9, 15], "class": "zero", "union": [4, 11, 14, 15, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 9, 16], "class": "zero", "union": [4, 14, 15, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 9, 17], "class": "zero", "union": [4, 14, 15, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 10, 11], "class": "zero", "union": [14, 15, 18, 19, 23, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 10, 12], "class": "zero", "union": [11, 14, 15, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 10, 13], "class": "zero", "union": [0, 14, 15, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 10, 14], "class": "zero", "union": [14, 15, 18, 19, 24, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 10, 15], "class": "zero", "union": [11, 14, 15, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 10, 16], "class": "zero", "union": [4, 14, 15, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 10, 17], "class": "zero", "union": [14, 15, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 11, 12], "class": "zero", "union": [11, 14, 15, 18, 19, 23], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 11, 13], "class": "zero", "union": [0, 14, 15, 18, 19, 23], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 11, 14], "class": "zero", "union": [14, 15, 18, 19, 23, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 11, 15], "class": "zero", "union": [11, 14, 15, 18, 19, 23], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 11, 16], "class": "zero", "union": [4, 14, 15, 18, 19, 23], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 11, 17], "class": "zero", "union": [14, 15, 18, 19, 23, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 12, 13], "class": "zero", "union": [0, 11, 14, 15, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 12, 14], "class": "zero", "union": [11, 14, 15, 18, 19, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 12, 15], "class": "zero", "union": [11, 14, 15, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 12, 16], "class": "zero", "union": [4, 11, 14, 15, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 12, 17], "class": "zero", "union": [11, 14, 15, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 13, 14], "class": "zero", "union": [0, 14, 15, 18, 19, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 13, 15], "class": "zero", "union": [0, 11, 14, 15, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 13, 16], "class": "zero", "union": [0, 4, 14, 15, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 13, 17], "class": "zero", "union": [0, 14, 15, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 14, 15], "class": "zero", "union": [11, 14, 15, 18, 19, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 14, 16], "class": "zero", "union": [4, 14, 15, 18, 19, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 14, 17], "class": "zero", "union": [14, 15, 18, 19, 24, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 15, 16], "class": "zero", "union": [4, 11, 14, 15, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 15, 17], "class": "zero", "union": [11, 14, 15, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 0, 16, 17], "class": "zero", "union": [4, 14, 15, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 1, 2, 3], "class": "zero", "union": [0, 5, 14, 16, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 1, 2, 4], "class": "zero", "union": [5, 14, 16, 18, 19, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 1, 2, 5], "class": "zero", "union": [1, 5, 14, 16, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 1, 2, 6], "class": "zero", "union": [5, 14, 16, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 1, 2, 7], "class": "zero", "union": [4, 5, 14, 16, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 1, 2, 8], "class": "zero", "union": [1, 5, 14, 16, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 1, 2, 9], "class": "zero", "union": [4, 5, 14, 16, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 1, 2, 10], "class": "zero", "union": [5, 14, 16, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 1, 2, 11], "class": "zero", "union": [5, 14, 16, 18, 19, 23], "joint": 0}
+{"kind": "quad", "combo": [18, 1, 2, 12], "class": "zero", "union": [5, 11, 14, 16, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 1, 2, 13], "class": "b_only", "union": [0, 5, 14, 15, 16, 18, 19], "joint": 146799763290, "memo_states": 75018, "sec": 0.2}
+{"kind": "quad", "combo": [18, 1, 2, 14], "class": "b_only", "union": [5, 14, 15, 16, 18, 19, 24], "joint": 154053668520, "memo_states": 75018, "sec": 0.2}
+{"kind": "quad", "combo": [18, 1, 2, 15], "class": "zero", "union": [5, 11, 14, 16, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 1, 2, 16], "class": "b_only", "union": [4, 5, 14, 15, 16, 18, 19], "joint": 154056175230, "memo_states": 75020, "sec": 0.2}
+{"kind": "quad", "combo": [18, 1, 2, 17], "class": "b_only", "union": [5, 14, 15, 16, 18, 19, 30], "joint": 146141152650, "memo_states": 75020, "sec": 0.2}
+{"kind": "quad", "combo": [18, 1, 3, 4], "class": "zero", "union": [0, 14, 16, 18, 19, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 1, 3, 5], "class": "zero", "union": [0, 1, 14, 16, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 1, 3, 6], "class": "zero", "union": [0, 14, 16, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 1, 3, 7], "class": "zero", "union": [0, 4, 14, 16, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 1, 3, 8], "class": "zero", "union": [0, 1, 14, 16, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 1, 3, 9], "class": "zero", "union": [0, 4, 14, 16, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 1, 3, 10], "class": "zero", "union": [0, 14, 16, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 1, 3, 11], "class": "zero", "union": [0, 14, 16, 18, 19, 23], "joint": 0}
+{"kind": "quad", "combo": [18, 1, 3, 12], "class": "zero", "union": [0, 11, 14, 16, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 1, 3, 13], "class": "zero", "union": [0, 14, 15, 16, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 1, 3, 14], "class": "b_only", "union": [0, 14, 15, 16, 18, 19, 24], "joint": 161272762290, "memo_states": 75018, "sec": 0.2}
+{"kind": "quad", "combo": [18, 1, 3, 15], "class": "zero", "union": [0, 11, 14, 16, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 1, 3, 16], "class": "b_only", "union": [0, 4, 14, 15, 16, 18, 19], "joint": 160918441470, "memo_states": 75018, "sec": 0.2}
+{"kind": "quad", "combo": [18, 1, 3, 17], "class": "b_only", "union": [0, 14, 15, 16, 18, 19, 30], "joint": 146141152650, "memo_states": 75018, "sec": 0.2}
+{"kind": "quad", "combo": [18, 1, 4, 5], "class": "zero", "union": [1, 14, 16, 18, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 1, 4, 6], "class": "zero", "union": [14, 16, 18, 24, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 1, 4, 7], "class": "zero", "union": [4, 14, 16, 18, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 1, 4, 8], "class": "zero", "union": [1, 14, 16, 18, 19, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 1, 4, 9], "class": "zero", "union": [4, 14, 16, 18, 19, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 1, 4, 10], "class": "zero", "union": [14, 16, 18, 19, 24, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 1, 4, 11], "class": "zero", "union": [14, 16, 18, 23, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 1, 4, 12], "class": "zero", "union": [11, 14, 16, 18, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 1, 4, 13], "class": "zero", "union": [0, 14, 15, 16, 18, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 1, 4, 14], "class": "zero", "union": [14, 15, 16, 18, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 1, 4, 15], "class": "zero", "union": [11, 14, 16, 18, 19, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 1, 4, 16], "class": "zero", "union": [4, 14, 15, 16, 18, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 1, 4, 17], "class": "zero", "union": [14, 15, 16, 18, 24, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 1, 5, 6], "class": "zero", "union": [1, 14, 16, 18, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 1, 5, 7], "class": "zero", "union": [1, 4, 14, 16, 18], "joint": 0}
+{"kind": "quad", "combo": [18, 1, 5, 8], "class": "zero", "union": [1, 14, 16, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 1, 5, 9], "class": "zero", "union": [1, 4, 14, 16, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 1, 5, 10], "class": "zero", "union": [1, 14, 16, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 1, 5, 11], "class": "zero", "union": [1, 14, 16, 18, 23], "joint": 0}
+{"kind": "quad", "combo": [18, 1, 5, 12], "class": "zero", "union": [1, 11, 14, 16, 18], "joint": 0}
+{"kind": "quad", "combo": [18, 1, 5, 13], "class": "zero", "union": [0, 1, 14, 15, 16, 18], "joint": 0}
+{"kind": "quad", "combo": [18, 1, 5, 14], "class": "zero", "union": [1, 14, 15, 16, 18, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 1, 5, 15], "class": "zero", "union": [1, 11, 14, 16, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 1, 5, 16], "class": "zero", "union": [1, 4, 14, 15, 16, 18], "joint": 0}
+{"kind": "quad", "combo": [18, 1, 5, 17], "class": "zero", "union": [1, 14, 15, 16, 18, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 1, 6, 7], "class": "zero", "union": [4, 14, 16, 18, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 1, 6, 8], "class": "zero", "union": [1, 14, 16, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 1, 6, 9], "class": "zero", "union": [4, 14, 16, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 1, 6, 10], "class": "zero", "union": [14, 16, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 1, 6, 11], "class": "zero", "union": [14, 16, 18, 23, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 1, 6, 12], "class": "zero", "union": [11, 14, 16, 18, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 1, 6, 13], "class": "zero", "union": [0, 14, 15, 16, 18, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 1, 6, 14], "class": "zero", "union": [14, 15, 16, 18, 24, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 1, 6, 15], "class": "zero", "union": [11, 14, 16, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 1, 6, 16], "class": "zero", "union": [4, 14, 15, 16, 18, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 1, 6, 17], "class": "zero", "union": [14, 15, 16, 18, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 1, 7, 8], "class": "zero", "union": [1, 4, 14, 16, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 1, 7, 9], "class": "zero", "union": [4, 14, 16, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 1, 7, 10], "class": "zero", "union": [4, 14, 16, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 1, 7, 11], "class": "zero", "union": [4, 14, 16, 18, 23], "joint": 0}
+{"kind": "quad", "combo": [18, 1, 7, 12], "class": "zero", "union": [4, 11, 14, 16, 18], "joint": 0}
+{"kind": "quad", "combo": [18, 1, 7, 13], "class": "zero", "union": [0, 4, 14, 15, 16, 18], "joint": 0}
+{"kind": "quad", "combo": [18, 1, 7, 14], "class": "zero", "union": [4, 14, 15, 16, 18, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 1, 7, 15], "class": "zero", "union": [4, 11, 14, 16, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 1, 7, 16], "class": "zero", "union": [4, 14, 15, 16, 18], "joint": 0}
+{"kind": "quad", "combo": [18, 1, 7, 17], "class": "zero", "union": [4, 14, 15, 16, 18, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 1, 8, 9], "class": "zero", "union": [1, 4, 14, 16, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 1, 8, 10], "class": "zero", "union": [1, 14, 16, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 1, 8, 11], "class": "zero", "union": [1, 14, 16, 18, 19, 23], "joint": 0}
+{"kind": "quad", "combo": [18, 1, 8, 12], "class": "zero", "union": [1, 11, 14, 16, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 1, 8, 13], "class": "b_only", "union": [0, 1, 14, 15, 16, 18, 19], "joint": 160871915760, "memo_states": 75025, "sec": 0.2}
+{"kind": "quad", "combo": [18, 1, 8, 14], "class": "b_only", "union": [1, 14, 15, 16, 18, 19, 24], "joint": 160890472890, "memo_states": 75019, "sec": 0.2}
+{"kind": "quad", "combo": [18, 1, 8, 15], "class": "zero", "union": [1, 11, 14, 16, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 1, 8, 16], "class": "b_only", "union": [1, 4, 14, 15, 16, 18, 19], "joint": 169341513330, "memo_states": 75022, "sec": 0.2}
+{"kind": "quad", "combo": [18, 1, 8, 17], "class": "b_only", "union": [1, 14, 15, 16, 18, 19, 30], "joint": 152510853600, "memo_states": 75022, "sec": 0.2}
+{"kind": "quad", "combo": [18, 1, 9, 10], "class": "zero", "union": [4, 14, 16, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 1, 9, 11], "class": "zero", "union": [4, 14, 16, 18, 19, 23], "joint": 0}
+{"kind": "quad", "combo": [18, 1, 9, 12], "class": "zero", "union": [4, 11, 14, 16, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 1, 9, 13], "class": "b_only", "union": [0, 4, 14, 15, 16, 18, 19], "joint": 160918441470, "memo_states": 75018, "sec": 0.2}
+{"kind": "quad", "combo": [18, 1, 9, 14], "class": "b_only", "union": [4, 14, 15, 16, 18, 19, 24], "joint": 161293924200, "memo_states": 75018, "sec": 0.2}
+{"kind": "quad", "combo": [18, 1, 9, 15], "class": "zero", "union": [4, 11, 14, 16, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 1, 9, 16], "class": "zero", "union": [4, 14, 15, 16, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 1, 9, 17], "class": "b_only", "union": [4, 14, 15, 16, 18, 19, 30], "joint": 160918441470, "memo_states": 75020, "sec": 0.2}
+{"kind": "quad", "combo": [18, 1, 10, 11], "class": "zero", "union": [14, 16, 18, 19, 23, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 1, 10, 12], "class": "zero", "union": [11, 14, 16, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 1, 10, 13], "class": "b_only", "union": [0, 14, 15, 16, 18, 19, 30], "joint": 146141152650, "memo_states": 75018, "sec": 0.2}
+{"kind": "quad", "combo": [18, 1, 10, 14], "class": "b_only", "union": [14, 15, 16, 18, 19, 24, 30], "joint": 153357943620, "memo_states": 75018, "sec": 0.2}
+{"kind": "quad", "combo": [18, 1, 10, 15], "class": "zero", "union": [11, 14, 16, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 1, 10, 16], "class": "b_only", "union": [4, 14, 15, 16, 18, 19, 30], "joint": 160918441470, "memo_states": 75020, "sec": 0.2}
+{"kind": "quad", "combo": [18, 1, 10, 17], "class": "zero", "union": [14, 15, 16, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 1, 11, 12], "class": "zero", "union": [11, 14, 16, 18, 23], "joint": 0}
+{"kind": "quad", "combo": [18, 1, 11, 13], "class": "zero", "union": [0, 14, 15, 16, 18, 23], "joint": 0}
+{"kind": "quad", "combo": [18, 1, 11, 14], "class": "zero", "union": [14, 15, 16, 18, 23, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 1, 11, 15], "class": "zero", "union": [11, 14, 16, 18, 19, 23], "joint": 0}
+{"kind": "quad", "combo": [18, 1, 11, 16], "class": "zero", "union": [4, 14, 15, 16, 18, 23], "joint": 0}
+{"kind": "quad", "combo": [18, 1, 11, 17], "class": "zero", "union": [14, 15, 16, 18, 23, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 1, 12, 13], "class": "zero", "union": [0, 11, 14, 15, 16, 18], "joint": 0}
+{"kind": "quad", "combo": [18, 1, 12, 14], "class": "zero", "union": [11, 14, 15, 16, 18, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 1, 12, 15], "class": "zero", "union": [11, 14, 16, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 1, 12, 16], "class": "zero", "union": [4, 11, 14, 15, 16, 18], "joint": 0}
+{"kind": "quad", "combo": [18, 1, 12, 17], "class": "zero", "union": [11, 14, 15, 16, 18, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 1, 13, 14], "class": "zero", "union": [0, 14, 15, 16, 18, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 1, 13, 15], "class": "b_only", "union": [0, 11, 14, 15, 16, 18, 19], "joint": 160892971830, "memo_states": 75022, "sec": 0.2}
+{"kind": "quad", "combo": [18, 1, 13, 16], "class": "zero", "union": [0, 4, 14, 15, 16, 18], "joint": 0}
+{"kind": "quad", "combo": [18, 1, 13, 17], "class": "zero", "union": [0, 14, 15, 16, 18, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 1, 14, 15], "class": "b_only", "union": [11, 14, 15, 16, 18, 19, 24], "joint": 160911634800, "memo_states": 75017, "sec": 0.2}
+{"kind": "quad", "combo": [18, 1, 14, 16], "class": "zero", "union": [4, 14, 15, 16, 18, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 1, 14, 17], "class": "zero", "union": [14, 15, 16, 18, 24, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 1, 15, 16], "class": "b_only", "union": [4, 11, 14, 15, 16, 18, 19], "joint": 169341513330, "memo_states": 75021, "sec": 0.2}
+{"kind": "quad", "combo": [18, 1, 15, 17], "class": "b_only", "union": [11, 14, 15, 16, 18, 19, 30], "joint": 152531909670, "memo_states": 75021, "sec": 0.2}
+{"kind": "quad", "combo": [18, 1, 16, 17], "class": "zero", "union": [4, 14, 15, 16, 18, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 2, 3, 4], "class": "zero", "union": [0, 5, 14, 18, 19, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 2, 3, 5], "class": "zero", "union": [0, 1, 5, 14, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 2, 3, 6], "class": "zero", "union": [0, 5, 14, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 2, 3, 7], "class": "zero", "union": [0, 4, 5, 14, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 2, 3, 8], "class": "zero", "union": [0, 1, 5, 14, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 2, 3, 9], "class": "zero", "union": [0, 4, 5, 14, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 2, 3, 10], "class": "zero", "union": [0, 5, 14, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 2, 3, 11], "class": "zero", "union": [0, 5, 14, 18, 19, 23], "joint": 0}
+{"kind": "quad", "combo": [18, 2, 3, 12], "class": "zero", "union": [0, 5, 11, 14, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 2, 3, 13], "class": "zero", "union": [0, 5, 14, 15, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 2, 3, 14], "class": "b_only", "union": [0, 5, 14, 15, 18, 19, 24], "joint": 154072323720, "memo_states": 75018, "sec": 0.2}
+{"kind": "quad", "combo": [18, 2, 3, 15], "class": "zero", "union": [0, 5, 11, 14, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 2, 3, 16], "class": "b_only", "union": [0, 4, 5, 14, 15, 18, 19], "joint": 147193908990, "memo_states": 75018, "sec": 0.2}
+{"kind": "quad", "combo": [18, 2, 3, 17], "class": "b_only", "union": [0, 5, 14, 15, 18, 19, 30], "joint": 146799763290, "memo_states": 75018, "sec": 0.2}
+{"kind": "quad", "combo": [18, 2, 4, 5], "class": "zero", "union": [1, 5, 14, 18, 19, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 2, 4, 6], "class": "zero", "union": [5, 14, 18, 19, 24, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 2, 4, 7], "class": "zero", "union": [4, 5, 14, 18, 19, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 2, 4, 8], "class": "zero", "union": [1, 5, 14, 18, 19, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 2, 4, 9], "class": "zero", "union": [4, 5, 14, 18, 19, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 2, 4, 10], "class": "zero", "union": [5, 14, 18, 19, 24, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 2, 4, 11], "class": "zero", "union": [5, 14, 18, 19, 23, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 2, 4, 12], "class": "zero", "union": [5, 11, 14, 18, 19, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 2, 4, 13], "class": "b_only", "union": [0, 5, 14, 15, 18, 19, 24], "joint": 154072323720, "memo_states": 75018, "sec": 0.2}
+{"kind": "quad", "combo": [18, 2, 4, 14], "class": "zero", "union": [5, 14, 15, 18, 19, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 2, 4, 15], "class": "zero", "union": [5, 11, 14, 18, 19, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 2, 4, 16], "class": "b_only", "union": [4, 5, 14, 15, 18, 19, 24], "joint": 153717640380, "memo_states": 75020, "sec": 0.2}
+{"kind": "quad", "combo": [18, 2, 4, 17], "class": "b_only", "union": [5, 14, 15, 18, 19, 24, 30], "joint": 161272762290, "memo_states": 75020, "sec": 0.2}
+{"kind": "quad", "combo": [18, 2, 5, 6], "class": "zero", "union": [1, 5, 14, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 2, 5, 7], "class": "zero", "union": [1, 4, 5, 14, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 2, 5, 8], "class": "zero", "union": [1, 5, 14, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 2, 5, 9], "class": "zero", "union": [1, 4, 5, 14, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 2, 5, 10], "class": "zero", "union": [1, 5, 14, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 2, 5, 11], "class": "zero", "union": [1, 5, 14, 18, 19, 23], "joint": 0}
+{"kind": "quad", "combo": [18, 2, 5, 12], "class": "zero", "union": [1, 5, 11, 14, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 2, 5, 13], "class": "b_only", "union": [0, 1, 5, 14, 15, 18, 19], "joint": 154074808440, "memo_states": 75025, "sec": 0.2}
+{"kind": "quad", "combo": [18, 2, 5, 14], "class": "b_only", "union": [1, 5, 14, 15, 18, 19, 24], "joint": 161315350560, "memo_states": 75022, "sec": 0.2}
+{"kind": "quad", "combo": [18, 2, 5, 15], "class": "zero", "union": [1, 5, 11, 14, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 2, 5, 16], "class": "b_only", "union": [1, 4, 5, 14, 15, 18, 19], "joint": 161340246000, "memo_states": 75024, "sec": 0.2}
+{"kind": "quad", "combo": [18, 2, 5, 17], "class": "b_only", "union": [1, 5, 14, 15, 18, 19, 30], "joint": 160871915760, "memo_states": 75024, "sec": 0.2}
+{"kind": "quad", "combo": [18, 2, 6, 7], "class": "zero", "union": [4, 5, 14, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 2, 6, 8], "class": "zero", "union": [1, 5, 14, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 2, 6, 9], "class": "zero", "union": [4, 5, 14, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 2, 6, 10], "class": "zero", "union": [5, 14, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 2, 6, 11], "class": "zero", "union": [5, 14, 18, 19, 23, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 2, 6, 12], "class": "zero", "union": [5, 11, 14, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 2, 6, 13], "class": "b_only", "union": [0, 5, 14, 15, 18, 19, 30], "joint": 146799763290, "memo_states": 75018, "sec": 0.2}
+{"kind": "quad", "combo": [18, 2, 6, 14], "class": "b_only", "union": [5, 14, 15, 18, 19, 24, 30], "joint": 161272762290, "memo_states": 75020, "sec": 0.2}
+{"kind": "quad", "combo": [18, 2, 6, 15], "class": "zero", "union": [5, 11, 14, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 2, 6, 16], "class": "b_only", "union": [4, 5, 14, 15, 18, 19, 30], "joint": 160918441470, "memo_states": 75021, "sec": 0.2}
+{"kind": "quad", "combo": [18, 2, 6, 17], "class": "zero", "union": [5, 14, 15, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 2, 7, 8], "class": "zero", "union": [1, 4, 5, 14, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 2, 7, 9], "class": "zero", "union": [4, 5, 14, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 2, 7, 10], "class": "zero", "union": [4, 5, 14, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 2, 7, 11], "class": "zero", "union": [4, 5, 14, 18, 19, 23], "joint": 0}
+{"kind": "quad", "combo": [18, 2, 7, 12], "class": "zero", "union": [4, 5, 11, 14, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 2, 7, 13], "class": "b_only", "union": [0, 4, 5, 14, 15, 18, 19], "joint": 147193908990, "memo_states": 75018, "sec": 0.2}
+{"kind": "quad", "combo": [18, 2, 7, 14], "class": "b_only", "union": [4, 5, 14, 15, 18, 19, 24], "joint": 153717640380, "memo_states": 75020, "sec": 0.2}
+{"kind": "quad", "combo": [18, 2, 7, 15], "class": "zero", "union": [4, 5, 11, 14, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 2, 7, 16], "class": "zero", "union": [4, 5, 14, 15, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 2, 7, 17], "class": "b_only", "union": [4, 5, 14, 15, 18, 19, 30], "joint": 160918441470, "memo_states": 75021, "sec": 0.2}
+{"kind": "quad", "combo": [18, 2, 8, 9], "class": "zero", "union": [1, 4, 5, 14, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 2, 8, 10], "class": "zero", "union": [1, 5, 14, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 2, 8, 11], "class": "zero", "union": [1, 5, 14, 18, 19, 23], "joint": 0}
+{"kind": "quad", "combo": [18, 2, 8, 12], "class": "zero", "union": [1, 5, 11, 14, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 2, 8, 13], "class": "b_only", "union": [0, 1, 5, 14, 15, 18, 19], "joint": 154074808440, "memo_states": 75025, "sec": 0.2}
+{"kind": "quad", "combo": [18, 2, 8, 14], "class": "b_only", "union": [1, 5, 14, 15, 18, 19, 24], "joint": 161315350560, "memo_states": 75022, "sec": 0.2}
+{"kind": "quad", "combo": [18, 2, 8, 15], "class": "zero", "union": [1, 5, 11, 14, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 2, 8, 16], "class": "b_only", "union": [1, 4, 5, 14, 15, 18, 19], "joint": 161340246000, "memo_states": 75024, "sec": 0.2}
+{"kind": "quad", "combo": [18, 2, 8, 17], "class": "b_only", "union": [1, 5, 14, 15, 18, 19, 30], "joint": 160871915760, "memo_states": 75024, "sec": 0.2}
+{"kind": "quad", "combo": [18, 2, 9, 10], "class": "zero", "union": [4, 5, 14, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 2, 9, 11], "class": "zero", "union": [4, 5, 14, 18, 19, 23], "joint": 0}
+{"kind": "quad", "combo": [18, 2, 9, 12], "class": "zero", "union": [4, 5, 11, 14, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 2, 9, 13], "class": "b_only", "union": [0, 4, 5, 14, 15, 18, 19], "joint": 147193908990, "memo_states": 75018, "sec": 0.2}
+{"kind": "quad", "combo": [18, 2, 9, 14], "class": "b_only", "union": [4, 5, 14, 15, 18, 19, 24], "joint": 153717640380, "memo_states": 75020, "sec": 0.3}
+{"kind": "quad", "combo": [18, 2, 9, 15], "class": "zero", "union": [4, 5, 11, 14, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 2, 9, 16], "class": "zero", "union": [4, 5, 14, 15, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 2, 9, 17], "class": "b_only", "union": [4, 5, 14, 15, 18, 19, 30], "joint": 160918441470, "memo_states": 75021, "sec": 0.2}
+{"kind": "quad", "combo": [18, 2, 10, 11], "class": "zero", "union": [5, 14, 18, 19, 23, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 2, 10, 12], "class": "zero", "union": [5, 11, 14, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 2, 10, 13], "class": "b_only", "union": [0, 5, 14, 15, 18, 19, 30], "joint": 146799763290, "memo_states": 75018, "sec": 0.2}
+{"kind": "quad", "combo": [18, 2, 10, 14], "class": "b_only", "union": [5, 14, 15, 18, 19, 24, 30], "joint": 161272762290, "memo_states": 75020, "sec": 0.2}
+{"kind": "quad", "combo": [18, 2, 10, 15], "class": "zero", "union": [5, 11, 14, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 2, 10, 16], "class": "b_only", "union": [4, 5, 14, 15, 18, 19, 30], "joint": 160918441470, "memo_states": 75021, "sec": 0.2}
+{"kind": "quad", "combo": [18, 2, 10, 17], "class": "zero", "union": [5, 14, 15, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 2, 11, 12], "class": "zero", "union": [5, 11, 14, 18, 19, 23], "joint": 0}
+{"kind": "quad", "combo": [18, 2, 11, 13], "class": "b_only", "union": [0, 5, 14, 15, 18, 19, 23], "joint": 147191583540, "memo_states": 75018, "sec": 0.2}
+{"kind": "quad", "combo": [18, 2, 11, 14], "class": "b_only", "union": [5, 14, 15, 18, 19, 23, 24], "joint": 146818320420, "memo_states": 75018, "sec": 0.2}
+{"kind": "quad", "combo": [18, 2, 11, 15], "class": "zero", "union": [5, 11, 14, 18, 19, 23], "joint": 0}
+{"kind": "quad", "combo": [18, 2, 11, 16], "class": "b_only", "union": [4, 5, 14, 15, 18, 19, 23], "joint": 153717640380, "memo_states": 75020, "sec": 0.2}
+{"kind": "quad", "combo": [18, 2, 11, 17], "class": "b_only", "union": [5, 14, 15, 18, 19, 23, 30], "joint": 153678004530, "memo_states": 75020, "sec": 0.2}
+{"kind": "quad", "combo": [18, 2, 12, 13], "class": "b_only", "union": [0, 5, 11, 14, 15, 18, 19], "joint": 154093395330, "memo_states": 75022, "sec": 0.2}
+{"kind": "quad", "combo": [18, 2, 12, 14], "class": "b_only", "union": [5, 11, 14, 15, 18, 19, 24], "joint": 161335081740, "memo_states": 75021, "sec": 0.2}
+{"kind": "quad", "combo": [18, 2, 12, 15], "class": "zero", "union": [5, 11, 14, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 2, 12, 16], "class": "b_only", "union": [4, 5, 11, 14, 15, 18, 19], "joint": 161340246000, "memo_states": 75023, "sec": 0.2}
+{"kind": "quad", "combo": [18, 2, 12, 17], "class": "b_only", "union": [5, 11, 14, 15, 18, 19, 30], "joint": 160892971830, "memo_states": 75023, "sec": 0.2}
+{"kind": "quad", "combo": [18, 2, 13, 14], "class": "b_only", "union": [0, 5, 14, 15, 18, 19, 24], "joint": 154072323720, "memo_states": 75018, "sec": 0.2}
+{"kind": "quad", "combo": [18, 2, 13, 15], "class": "b_only", "union": [0, 5, 11, 14, 15, 18, 19], "joint": 154093395330, "memo_states": 75022, "sec": 0.2}
+{"kind": "quad", "combo": [18, 2, 13, 16], "class": "b_only", "union": [0, 4, 5, 14, 15, 18, 19], "joint": 147193908990, "memo_states": 75018, "sec": 0.2}
+{"kind": "quad", "combo": [18, 2, 13, 17], "class": "b_only", "union": [0, 5, 14, 15, 18, 19, 30], "joint": 146799763290, "memo_states": 75018, "sec": 0.2}
+{"kind": "quad", "combo": [18, 2, 14, 15], "class": "b_only", "union": [5, 11, 14, 15, 18, 19, 24], "joint": 161335081740, "memo_states": 75021, "sec": 0.2}
+{"kind": "quad", "combo": [18, 2, 14, 16], "class": "b_only", "union": [4, 5, 14, 15, 18, 19, 24], "joint": 153717640380, "memo_states": 75020, "sec": 0.2}
+{"kind": "quad", "combo": [18, 2, 14, 17], "class": "b_only", "union": [5, 14, 15, 18, 19, 24, 30], "joint": 161272762290, "memo_states": 75020, "sec": 0.2}
+{"kind": "quad", "combo": [18, 2, 15, 16], "class": "b_only", "union": [4, 5, 11, 14, 15, 18, 19], "joint": 161340246000, "memo_states": 75023, "sec": 0.2}
+{"kind": "quad", "combo": [18, 2, 15, 17], "class": "b_only", "union": [5, 11, 14, 15, 18, 19, 30], "joint": 160892971830, "memo_states": 75023, "sec": 0.2}
+{"kind": "quad", "combo": [18, 2, 16, 17], "class": "b_only", "union": [4, 5, 14, 15, 18, 19, 30], "joint": 160918441470, "memo_states": 75021, "sec": 0.2}
+{"kind": "quad", "combo": [18, 3, 4, 5], "class": "zero", "union": [0, 1, 14, 18, 19, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 3, 4, 6], "class": "zero", "union": [0, 14, 18, 19, 24, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 3, 4, 7], "class": "zero", "union": [0, 4, 14, 18, 19, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 3, 4, 8], "class": "zero", "union": [0, 1, 14, 18, 19, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 3, 4, 9], "class": "zero", "union": [0, 4, 14, 18, 19, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 3, 4, 10], "class": "zero", "union": [0, 14, 18, 19, 24, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 3, 4, 11], "class": "zero", "union": [0, 14, 18, 19, 23, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 3, 4, 12], "class": "zero", "union": [0, 11, 14, 18, 19, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 3, 4, 13], "class": "zero", "union": [0, 14, 15, 18, 19, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 3, 4, 14], "class": "zero", "union": [0, 14, 15, 18, 19, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 3, 4, 15], "class": "zero", "union": [0, 11, 14, 18, 19, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 3, 4, 16], "class": "b_only", "union": [0, 4, 14, 15, 18, 19, 24], "joint": 160955389350, "memo_states": 75018, "sec": 0.2}
+{"kind": "quad", "combo": [18, 3, 4, 17], "class": "b_only", "union": [0, 14, 15, 18, 19, 24, 30], "joint": 161272762290, "memo_states": 75018, "sec": 0.2}
+{"kind": "quad", "combo": [18, 3, 5, 6], "class": "zero", "union": [0, 1, 14, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 3, 5, 7], "class": "zero", "union": [0, 1, 4, 14, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 3, 5, 8], "class": "zero", "union": [0, 1, 14, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 3, 5, 9], "class": "zero", "union": [0, 1, 4, 14, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 3, 5, 10], "class": "zero", "union": [0, 1, 14, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 3, 5, 11], "class": "zero", "union": [0, 1, 14, 18, 19, 23], "joint": 0}
+{"kind": "quad", "combo": [18, 3, 5, 12], "class": "zero", "union": [0, 1, 11, 14, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 3, 5, 13], "class": "zero", "union": [0, 1, 14, 15, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 3, 5, 14], "class": "b_only", "union": [0, 1, 14, 15, 18, 19, 24], "joint": 169360266600, "memo_states": 75025, "sec": 0.2}
+{"kind": "quad", "combo": [18, 3, 5, 15], "class": "zero", "union": [0, 1, 11, 14, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 3, 5, 16], "class": "b_only", "union": [0, 1, 4, 14, 15, 18, 19], "joint": 168981718500, "memo_states": 75025, "sec": 0.2}
+{"kind": "quad", "combo": [18, 3, 5, 17], "class": "b_only", "union": [0, 1, 14, 15, 18, 19, 30], "joint": 160871915760, "memo_states": 75025, "sec": 0.2}
+{"kind": "quad", "combo": [18, 3, 6, 7], "class": "zero", "union": [0, 4, 14, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 3, 6, 8], "class": "zero", "union": [0, 1, 14, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 3, 6, 9], "class": "zero", "union": [0, 4, 14, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 3, 6, 10], "class": "zero", "union": [0, 14, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 3, 6, 11], "class": "zero", "union": [0, 14, 18, 19, 23, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 3, 6, 12], "class": "zero", "union": [0, 11, 14, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 3, 6, 13], "class": "zero", "union": [0, 14, 15, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 3, 6, 14], "class": "b_only", "union": [0, 14, 15, 18, 19, 24, 30], "joint": 161272762290, "memo_states": 75018, "sec": 0.2}
+{"kind": "quad", "combo": [18, 3, 6, 15], "class": "zero", "union": [0, 11, 14, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 3, 6, 16], "class": "b_only", "union": [0, 4, 14, 15, 18, 19, 30], "joint": 160918441470, "memo_states": 75018, "sec": 0.2}
+{"kind": "quad", "combo": [18, 3, 6, 17], "class": "zero", "union": [0, 14, 15, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 3, 7, 8], "class": "zero", "union": [0, 1, 4, 14, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 3, 7, 9], "class": "zero", "union": [0, 4, 14, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 3, 7, 10], "class": "zero", "union": [0, 4, 14, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 3, 7, 11], "class": "zero", "union": [0, 4, 14, 18, 19, 23], "joint": 0}
+{"kind": "quad", "combo": [18, 3, 7, 12], "class": "zero", "union": [0, 4, 11, 14, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 3, 7, 13], "class": "zero", "union": [0, 4, 14, 15, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 3, 7, 14], "class": "b_only", "union": [0, 4, 14, 15, 18, 19, 24], "joint": 160955389350, "memo_states": 75018, "sec": 0.2}
+{"kind": "quad", "combo": [18, 3, 7, 15], "class": "zero", "union": [0, 4, 11, 14, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 3, 7, 16], "class": "zero", "union": [0, 4, 14, 15, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 3, 7, 17], "class": "b_only", "union": [0, 4, 14, 15, 18, 19, 30], "joint": 160918441470, "memo_states": 75018, "sec": 0.2}
+{"kind": "quad", "combo": [18, 3, 8, 9], "class": "zero", "union": [0, 1, 4, 14, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 3, 8, 10], "class": "zero", "union": [0, 1, 14, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 3, 8, 11], "class": "zero", "union": [0, 1, 14, 18, 19, 23], "joint": 0}
+{"kind": "quad", "combo": [18, 3, 8, 12], "class": "zero", "union": [0, 1, 11, 14, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 3, 8, 13], "class": "zero", "union": [0, 1, 14, 15, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 3, 8, 14], "class": "b_only", "union": [0, 1, 14, 15, 18, 19, 24], "joint": 169360266600, "memo_states": 75025, "sec": 0.2}
+{"kind": "quad", "combo": [18, 3, 8, 15], "class": "zero", "union": [0, 1, 11, 14, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 3, 8, 16], "class": "b_only", "union": [0, 1, 4, 14, 15, 18, 19], "joint": 168981718500, "memo_states": 75025, "sec": 0.2}
+{"kind": "quad", "combo": [18, 3, 8, 17], "class": "b_only", "union": [0, 1, 14, 15, 18, 19, 30], "joint": 160871915760, "memo_states": 75025, "sec": 0.2}
+{"kind": "quad", "combo": [18, 3, 9, 10], "class": "zero", "union": [0, 4, 14, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 3, 9, 11], "class": "zero", "union": [0, 4, 14, 18, 19, 23], "joint": 0}
+{"kind": "quad", "combo": [18, 3, 9, 12], "class": "zero", "union": [0, 4, 11, 14, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 3, 9, 13], "class": "zero", "union": [0, 4, 14, 15, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 3, 9, 14], "class": "b_only", "union": [0, 4, 14, 15, 18, 19, 24], "joint": 160955389350, "memo_states": 75018, "sec": 0.2}
+{"kind": "quad", "combo": [18, 3, 9, 15], "class": "zero", "union": [0, 4, 11, 14, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 3, 9, 16], "class": "zero", "union": [0, 4, 14, 15, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 3, 9, 17], "class": "b_only", "union": [0, 4, 14, 15, 18, 19, 30], "joint": 160918441470, "memo_states": 75018, "sec": 0.2}
+{"kind": "quad", "combo": [18, 3, 10, 11], "class": "zero", "union": [0, 14, 18, 19, 23, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 3, 10, 12], "class": "zero", "union": [0, 11, 14, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 3, 10, 13], "class": "zero", "union": [0, 14, 15, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 3, 10, 14], "class": "b_only", "union": [0, 14, 15, 18, 19, 24, 30], "joint": 161272762290, "memo_states": 75018, "sec": 0.2}
+{"kind": "quad", "combo": [18, 3, 10, 15], "class": "zero", "union": [0, 11, 14, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 3, 10, 16], "class": "b_only", "union": [0, 4, 14, 15, 18, 19, 30], "joint": 160918441470, "memo_states": 75018, "sec": 0.2}
+{"kind": "quad", "combo": [18, 3, 10, 17], "class": "zero", "union": [0, 14, 15, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 3, 11, 12], "class": "zero", "union": [0, 11, 14, 18, 19, 23], "joint": 0}
+{"kind": "quad", "combo": [18, 3, 11, 13], "class": "zero", "union": [0, 14, 15, 18, 19, 23], "joint": 0}
+{"kind": "quad", "combo": [18, 3, 11, 14], "class": "b_only", "union": [0, 14, 15, 18, 19, 23, 24], "joint": 154054819920, "memo_states": 75018, "sec": 0.2}
+{"kind": "quad", "combo": [18, 3, 11, 15], "class": "zero", "union": [0, 11, 14, 18, 19, 23], "joint": 0}
+{"kind": "quad", "combo": [18, 3, 11, 16], "class": "b_only", "union": [0, 4, 14, 15, 18, 19, 23], "joint": 160955389350, "memo_states": 75018, "sec": 0.2}
+{"kind": "quad", "combo": [18, 3, 11, 17], "class": "b_only", "union": [0, 14, 15, 18, 19, 23, 30], "joint": 153678004530, "memo_states": 75018, "sec": 0.2}
+{"kind": "quad", "combo": [18, 3, 12, 13], "class": "zero", "union": [0, 11, 14, 15, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 3, 12, 14], "class": "b_only", "union": [0, 11, 14, 15, 18, 19, 24], "joint": 169381338210, "memo_states": 75022, "sec": 0.2}
+{"kind": "quad", "combo": [18, 3, 12, 15], "class": "zero", "union": [0, 11, 14, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 3, 12, 16], "class": "b_only", "union": [0, 4, 11, 14, 15, 18, 19], "joint": 168981718500, "memo_states": 75022, "sec": 0.2}
+{"kind": "quad", "combo": [18, 3, 12, 17], "class": "b_only", "union": [0, 11, 14, 15, 18, 19, 30], "joint": 160892971830, "memo_states": 75022, "sec": 0.2}
+{"kind": "quad", "combo": [18, 3, 13, 14], "class": "zero", "union": [0, 14, 15, 18, 19, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 3, 13, 15], "class": "zero", "union": [0, 11, 14, 15, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 3, 13, 16], "class": "zero", "union": [0, 4, 14, 15, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 3, 13, 17], "class": "zero", "union": [0, 14, 15, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 3, 14, 15], "class": "b_only", "union": [0, 11, 14, 15, 18, 19, 24], "joint": 169381338210, "memo_states": 75022, "sec": 0.2}
+{"kind": "quad", "combo": [18, 3, 14, 16], "class": "b_only", "union": [0, 4, 14, 15, 18, 19, 24], "joint": 160955389350, "memo_states": 75018, "sec": 0.2}
+{"kind": "quad", "combo": [18, 3, 14, 17], "class": "b_only", "union": [0, 14, 15, 18, 19, 24, 30], "joint": 161272762290, "memo_states": 75018, "sec": 0.2}
+{"kind": "quad", "combo": [18, 3, 15, 16], "class": "b_only", "union": [0, 4, 11, 14, 15, 18, 19], "joint": 168981718500, "memo_states": 75022, "sec": 0.2}
+{"kind": "quad", "combo": [18, 3, 15, 17], "class": "b_only", "union": [0, 11, 14, 15, 18, 19, 30], "joint": 160892971830, "memo_states": 75022, "sec": 0.2}
+{"kind": "quad", "combo": [18, 3, 16, 17], "class": "b_only", "union": [0, 4, 14, 15, 18, 19, 30], "joint": 160918441470, "memo_states": 75018, "sec": 0.2}
+{"kind": "quad", "combo": [18, 4, 5, 6], "class": "zero", "union": [1, 14, 18, 24, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 4, 5, 7], "class": "zero", "union": [1, 4, 14, 18, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 4, 5, 8], "class": "zero", "union": [1, 14, 18, 19, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 4, 5, 9], "class": "zero", "union": [1, 4, 14, 18, 19, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 4, 5, 10], "class": "zero", "union": [1, 14, 18, 19, 24, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 4, 5, 11], "class": "zero", "union": [1, 14, 18, 23, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 4, 5, 12], "class": "zero", "union": [1, 11, 14, 18, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 4, 5, 13], "class": "zero", "union": [0, 1, 14, 15, 18, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 4, 5, 14], "class": "zero", "union": [1, 14, 15, 18, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 4, 5, 15], "class": "zero", "union": [1, 11, 14, 18, 19, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 4, 5, 16], "class": "zero", "union": [1, 4, 14, 15, 18, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 4, 5, 17], "class": "zero", "union": [1, 14, 15, 18, 24, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 4, 6, 7], "class": "zero", "union": [4, 14, 18, 24, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 4, 6, 8], "class": "zero", "union": [1, 14, 18, 19, 24, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 4, 6, 9], "class": "zero", "union": [4, 14, 18, 19, 24, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 4, 6, 10], "class": "zero", "union": [14, 18, 19, 24, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 4, 6, 11], "class": "zero", "union": [14, 18, 23, 24, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 4, 6, 12], "class": "zero", "union": [11, 14, 18, 24, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 4, 6, 13], "class": "zero", "union": [0, 14, 15, 18, 24, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 4, 6, 14], "class": "zero", "union": [14, 15, 18, 24, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 4, 6, 15], "class": "zero", "union": [11, 14, 18, 19, 24, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 4, 6, 16], "class": "zero", "union": [4, 14, 15, 18, 24, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 4, 6, 17], "class": "zero", "union": [14, 15, 18, 24, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 4, 7, 8], "class": "zero", "union": [1, 4, 14, 18, 19, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 4, 7, 9], "class": "zero", "union": [4, 14, 18, 19, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 4, 7, 10], "class": "zero", "union": [4, 14, 18, 19, 24, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 4, 7, 11], "class": "zero", "union": [4, 14, 18, 23, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 4, 7, 12], "class": "zero", "union": [4, 11, 14, 18, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 4, 7, 13], "class": "zero", "union": [0, 4, 14, 15, 18, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 4, 7, 14], "class": "zero", "union": [4, 14, 15, 18, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 4, 7, 15], "class": "zero", "union": [4, 11, 14, 18, 19, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 4, 7, 16], "class": "zero", "union": [4, 14, 15, 18, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 4, 7, 17], "class": "zero", "union": [4, 14, 15, 18, 24, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 4, 8, 9], "class": "zero", "union": [1, 4, 14, 18, 19, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 4, 8, 10], "class": "zero", "union": [1, 14, 18, 19, 24, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 4, 8, 11], "class": "zero", "union": [1, 14, 18, 19, 23, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 4, 8, 12], "class": "zero", "union": [1, 11, 14, 18, 19, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 4, 8, 13], "class": "b_only", "union": [0, 1, 14, 15, 18, 19, 24], "joint": 169360266600, "memo_states": 75025, "sec": 0.2}
+{"kind": "quad", "combo": [18, 4, 8, 14], "class": "zero", "union": [1, 14, 15, 18, 19, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 4, 8, 15], "class": "zero", "union": [1, 11, 14, 18, 19, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 4, 8, 16], "class": "b_only", "union": [1, 4, 14, 15, 18, 19, 24], "joint": 168936729360, "memo_states": 75022, "sec": 0.2}
+{"kind": "quad", "combo": [18, 4, 8, 17], "class": "b_only", "union": [1, 14, 15, 18, 19, 24, 30], "joint": 168914136720, "memo_states": 75022, "sec": 0.2}
+{"kind": "quad", "combo": [18, 4, 9, 10], "class": "zero", "union": [4, 14, 18, 19, 24, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 4, 9, 11], "class": "zero", "union": [4, 14, 18, 19, 23, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 4, 9, 12], "class": "zero", "union": [4, 11, 14, 18, 19, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 4, 9, 13], "class": "b_only", "union": [0, 4, 14, 15, 18, 19, 24], "joint": 160955389350, "memo_states": 75018, "sec": 0.2}
+{"kind": "quad", "combo": [18, 4, 9, 14], "class": "zero", "union": [4, 14, 15, 18, 19, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 4, 9, 15], "class": "zero", "union": [4, 11, 14, 18, 19, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 4, 9, 16], "class": "zero", "union": [4, 14, 15, 18, 19, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 4, 9, 17], "class": "b_only", "union": [4, 14, 15, 18, 19, 24, 30], "joint": 168870208020, "memo_states": 75020, "sec": 0.2}
+{"kind": "quad", "combo": [18, 4, 10, 11], "class": "zero", "union": [14, 18, 19, 23, 24, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 4, 10, 12], "class": "zero", "union": [11, 14, 18, 19, 24, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 4, 10, 13], "class": "b_only", "union": [0, 14, 15, 18, 19, 24, 30], "joint": 161272762290, "memo_states": 75018, "sec": 0.2}
+{"kind": "quad", "combo": [18, 4, 10, 14], "class": "zero", "union": [14, 15, 18, 19, 24, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 4, 10, 15], "class": "zero", "union": [11, 14, 18, 19, 24, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 4, 10, 16], "class": "b_only", "union": [4, 14, 15, 18, 19, 24, 30], "joint": 168870208020, "memo_states": 75020, "sec": 0.2}
+{"kind": "quad", "combo": [18, 4, 10, 17], "class": "zero", "union": [14, 15, 18, 19, 24, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 4, 11, 12], "class": "zero", "union": [11, 14, 18, 23, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 4, 11, 13], "class": "zero", "union": [0, 14, 15, 18, 23, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 4, 11, 14], "class": "zero", "union": [14, 15, 18, 23, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 4, 11, 15], "class": "zero", "union": [11, 14, 18, 19, 23, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 4, 11, 16], "class": "zero", "union": [4, 14, 15, 18, 23, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 4, 11, 17], "class": "zero", "union": [14, 15, 18, 23, 24, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 4, 12, 13], "class": "zero", "union": [0, 11, 14, 15, 18, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 4, 12, 14], "class": "zero", "union": [11, 14, 15, 18, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 4, 12, 15], "class": "zero", "union": [11, 14, 18, 19, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 4, 12, 16], "class": "zero", "union": [4, 11, 14, 15, 18, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 4, 12, 17], "class": "zero", "union": [11, 14, 15, 18, 24, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 4, 13, 14], "class": "zero", "union": [0, 14, 15, 18, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 4, 13, 15], "class": "b_only", "union": [0, 11, 14, 15, 18, 19, 24], "joint": 169381338210, "memo_states": 75022, "sec": 0.2}
+{"kind": "quad", "combo": [18, 4, 13, 16], "class": "zero", "union": [0, 4, 14, 15, 18, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 4, 13, 17], "class": "zero", "union": [0, 14, 15, 18, 24, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 4, 14, 15], "class": "zero", "union": [11, 14, 15, 18, 19, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 4, 14, 16], "class": "zero", "union": [4, 14, 15, 18, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 4, 14, 17], "class": "zero", "union": [14, 15, 18, 24, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 4, 15, 16], "class": "b_only", "union": [4, 11, 14, 15, 18, 19, 24], "joint": 168936729360, "memo_states": 75021, "sec": 0.2}
+{"kind": "quad", "combo": [18, 4, 15, 17], "class": "b_only", "union": [11, 14, 15, 18, 19, 24, 30], "joint": 168936729360, "memo_states": 75021, "sec": 0.2}
+{"kind": "quad", "combo": [18, 4, 16, 17], "class": "zero", "union": [4, 14, 15, 18, 24, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 5, 6, 7], "class": "zero", "union": [1, 4, 14, 18, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 5, 6, 8], "class": "zero", "union": [1, 14, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 5, 6, 9], "class": "zero", "union": [1, 4, 14, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 5, 6, 10], "class": "zero", "union": [1, 14, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 5, 6, 11], "class": "zero", "union": [1, 14, 18, 23, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 5, 6, 12], "class": "zero", "union": [1, 11, 14, 18, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 5, 6, 13], "class": "zero", "union": [0, 1, 14, 15, 18, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 5, 6, 14], "class": "zero", "union": [1, 14, 15, 18, 24, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 5, 6, 15], "class": "zero", "union": [1, 11, 14, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 5, 6, 16], "class": "zero", "union": [1, 4, 14, 15, 18, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 5, 6, 17], "class": "zero", "union": [1, 14, 15, 18, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 5, 7, 8], "class": "zero", "union": [1, 4, 14, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 5, 7, 9], "class": "zero", "union": [1, 4, 14, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 5, 7, 10], "class": "zero", "union": [1, 4, 14, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 5, 7, 11], "class": "zero", "union": [1, 4, 14, 18, 23], "joint": 0}
+{"kind": "quad", "combo": [18, 5, 7, 12], "class": "zero", "union": [1, 4, 11, 14, 18], "joint": 0}
+{"kind": "quad", "combo": [18, 5, 7, 13], "class": "zero", "union": [0, 1, 4, 14, 15, 18], "joint": 0}
+{"kind": "quad", "combo": [18, 5, 7, 14], "class": "zero", "union": [1, 4, 14, 15, 18, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 5, 7, 15], "class": "zero", "union": [1, 4, 11, 14, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 5, 7, 16], "class": "zero", "union": [1, 4, 14, 15, 18], "joint": 0}
+{"kind": "quad", "combo": [18, 5, 7, 17], "class": "zero", "union": [1, 4, 14, 15, 18, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 5, 8, 9], "class": "zero", "union": [1, 4, 14, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 5, 8, 10], "class": "zero", "union": [1, 14, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 5, 8, 11], "class": "zero", "union": [1, 14, 18, 19, 23], "joint": 0}
+{"kind": "quad", "combo": [18, 5, 8, 12], "class": "zero", "union": [1, 11, 14, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 5, 8, 13], "class": "zero", "union": [0, 1, 14, 15, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 5, 8, 14], "class": "zero", "union": [1, 14, 15, 18, 19, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 5, 8, 15], "class": "zero", "union": [1, 11, 14, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 5, 8, 16], "class": "zero", "union": [1, 4, 14, 15, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 5, 8, 17], "class": "zero", "union": [1, 14, 15, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 5, 9, 10], "class": "zero", "union": [1, 4, 14, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 5, 9, 11], "class": "zero", "union": [1, 4, 14, 18, 19, 23], "joint": 0}
+{"kind": "quad", "combo": [18, 5, 9, 12], "class": "zero", "union": [1, 4, 11, 14, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 5, 9, 13], "class": "b_only", "union": [0, 1, 4, 14, 15, 18, 19], "joint": 168981718500, "memo_states": 75025, "sec": 0.2}
+{"kind": "quad", "combo": [18, 5, 9, 14], "class": "b_only", "union": [1, 4, 14, 15, 18, 19, 24], "joint": 168936729360, "memo_states": 75022, "sec": 0.2}
+{"kind": "quad", "combo": [18, 5, 9, 15], "class": "zero", "union": [1, 4, 11, 14, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 5, 9, 16], "class": "zero", "union": [1, 4, 14, 15, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 5, 9, 17], "class": "b_only", "union": [1, 4, 14, 15, 18, 19, 30], "joint": 177342780660, "memo_states": 75024, "sec": 0.2}
+{"kind": "quad", "combo": [18, 5, 10, 11], "class": "zero", "union": [1, 14, 18, 19, 23, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 5, 10, 12], "class": "zero", "union": [1, 11, 14, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 5, 10, 13], "class": "b_only", "union": [0, 1, 14, 15, 18, 19, 30], "joint": 160871915760, "memo_states": 75025, "sec": 0.2}
+{"kind": "quad", "combo": [18, 5, 10, 14], "class": "b_only", "union": [1, 14, 15, 18, 19, 24, 30], "joint": 168914136720, "memo_states": 75022, "sec": 0.2}
+{"kind": "quad", "combo": [18, 5, 10, 15], "class": "zero", "union": [1, 11, 14, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 5, 10, 16], "class": "b_only", "union": [1, 4, 14, 15, 18, 19, 30], "joint": 177342780660, "memo_states": 75024, "sec": 0.2}
+{"kind": "quad", "combo": [18, 5, 10, 17], "class": "zero", "union": [1, 14, 15, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 5, 11, 12], "class": "zero", "union": [1, 11, 14, 18, 23], "joint": 0}
+{"kind": "quad", "combo": [18, 5, 11, 13], "class": "zero", "union": [0, 1, 14, 15, 18, 23], "joint": 0}
+{"kind": "quad", "combo": [18, 5, 11, 14], "class": "zero", "union": [1, 14, 15, 18, 23, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 5, 11, 15], "class": "zero", "union": [1, 11, 14, 18, 19, 23], "joint": 0}
+{"kind": "quad", "combo": [18, 5, 11, 16], "class": "zero", "union": [1, 4, 14, 15, 18, 23], "joint": 0}
+{"kind": "quad", "combo": [18, 5, 11, 17], "class": "zero", "union": [1, 14, 15, 18, 23, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 5, 12, 13], "class": "zero", "union": [0, 1, 11, 14, 15, 18], "joint": 0}
+{"kind": "quad", "combo": [18, 5, 12, 14], "class": "zero", "union": [1, 11, 14, 15, 18, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 5, 12, 15], "class": "zero", "union": [1, 11, 14, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 5, 12, 16], "class": "zero", "union": [1, 4, 11, 14, 15, 18], "joint": 0}
+{"kind": "quad", "combo": [18, 5, 12, 17], "class": "zero", "union": [1, 11, 14, 15, 18, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 5, 13, 14], "class": "zero", "union": [0, 1, 14, 15, 18, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 5, 13, 15], "class": "b_only", "union": [0, 1, 11, 14, 15, 18, 19], "joint": 160555769640, "memo_states": 75025, "sec": 0.2}
+{"kind": "quad", "combo": [18, 5, 13, 16], "class": "zero", "union": [0, 1, 4, 14, 15, 18], "joint": 0}
+{"kind": "quad", "combo": [18, 5, 13, 17], "class": "zero", "union": [0, 1, 14, 15, 18, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 5, 14, 15], "class": "b_only", "union": [1, 11, 14, 15, 18, 19, 24], "joint": 160129747680, "memo_states": 75019, "sec": 0.2}
+{"kind": "quad", "combo": [18, 5, 14, 16], "class": "zero", "union": [1, 4, 14, 15, 18, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 5, 14, 17], "class": "zero", "union": [1, 14, 15, 18, 24, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 5, 15, 16], "class": "b_only", "union": [1, 4, 11, 14, 15, 18, 19], "joint": 168538857900, "memo_states": 75022, "sec": 0.2}
+{"kind": "quad", "combo": [18, 5, 15, 17], "class": "b_only", "union": [1, 11, 14, 15, 18, 19, 30], "joint": 159641505660, "memo_states": 75022, "sec": 0.2}
+{"kind": "quad", "combo": [18, 5, 16, 17], "class": "zero", "union": [1, 4, 14, 15, 18, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 6, 7, 8], "class": "zero", "union": [1, 4, 14, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 6, 7, 9], "class": "zero", "union": [4, 14, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 6, 7, 10], "class": "zero", "union": [4, 14, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 6, 7, 11], "class": "zero", "union": [4, 14, 18, 23, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 6, 7, 12], "class": "zero", "union": [4, 11, 14, 18, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 6, 7, 13], "class": "zero", "union": [0, 4, 14, 15, 18, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 6, 7, 14], "class": "zero", "union": [4, 14, 15, 18, 24, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 6, 7, 15], "class": "zero", "union": [4, 11, 14, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 6, 7, 16], "class": "zero", "union": [4, 14, 15, 18, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 6, 7, 17], "class": "zero", "union": [4, 14, 15, 18, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 6, 8, 9], "class": "zero", "union": [1, 4, 14, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 6, 8, 10], "class": "zero", "union": [1, 14, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 6, 8, 11], "class": "zero", "union": [1, 14, 18, 19, 23, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 6, 8, 12], "class": "zero", "union": [1, 11, 14, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 6, 8, 13], "class": "b_only", "union": [0, 1, 14, 15, 18, 19, 30], "joint": 160871915760, "memo_states": 75025, "sec": 0.2}
+{"kind": "quad", "combo": [18, 6, 8, 14], "class": "b_only", "union": [1, 14, 15, 18, 19, 24, 30], "joint": 168914136720, "memo_states": 75022, "sec": 0.2}
+{"kind": "quad", "combo": [18, 6, 8, 15], "class": "zero", "union": [1, 11, 14, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 6, 8, 16], "class": "b_only", "union": [1, 4, 14, 15, 18, 19, 30], "joint": 177342780660, "memo_states": 75024, "sec": 0.2}
+{"kind": "quad", "combo": [18, 6, 8, 17], "class": "zero", "union": [1, 14, 15, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 6, 9, 10], "class": "zero", "union": [4, 14, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 6, 9, 11], "class": "zero", "union": [4, 14, 18, 19, 23, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 6, 9, 12], "class": "zero", "union": [4, 11, 14, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 6, 9, 13], "class": "b_only", "union": [0, 4, 14, 15, 18, 19, 30], "joint": 160918441470, "memo_states": 75018, "sec": 0.2}
+{"kind": "quad", "combo": [18, 6, 9, 14], "class": "b_only", "union": [4, 14, 15, 18, 19, 24, 30], "joint": 168870208020, "memo_states": 75020, "sec": 0.2}
+{"kind": "quad", "combo": [18, 6, 9, 15], "class": "zero", "union": [4, 11, 14, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 6, 9, 16], "class": "zero", "union": [4, 14, 15, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 6, 9, 17], "class": "zero", "union": [4, 14, 15, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 6, 10, 11], "class": "zero", "union": [14, 18, 19, 23, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 6, 10, 12], "class": "zero", "union": [11, 14, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 6, 10, 13], "class": "zero", "union": [0, 14, 15, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 6, 10, 14], "class": "zero", "union": [14, 15, 18, 19, 24, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 6, 10, 15], "class": "zero", "union": [11, 14, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 6, 10, 16], "class": "zero", "union": [4, 14, 15, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 6, 10, 17], "class": "zero", "union": [14, 15, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 6, 11, 12], "class": "zero", "union": [11, 14, 18, 23, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 6, 11, 13], "class": "zero", "union": [0, 14, 15, 18, 23, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 6, 11, 14], "class": "zero", "union": [14, 15, 18, 23, 24, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 6, 11, 15], "class": "zero", "union": [11, 14, 18, 19, 23, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 6, 11, 16], "class": "zero", "union": [4, 14, 15, 18, 23, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 6, 11, 17], "class": "zero", "union": [14, 15, 18, 23, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 6, 12, 13], "class": "zero", "union": [0, 11, 14, 15, 18, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 6, 12, 14], "class": "zero", "union": [11, 14, 15, 18, 24, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 6, 12, 15], "class": "zero", "union": [11, 14, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 6, 12, 16], "class": "zero", "union": [4, 11, 14, 15, 18, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 6, 12, 17], "class": "zero", "union": [11, 14, 15, 18, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 6, 13, 14], "class": "zero", "union": [0, 14, 15, 18, 24, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 6, 13, 15], "class": "b_only", "union": [0, 11, 14, 15, 18, 19, 30], "joint": 160892971830, "memo_states": 75022, "sec": 0.2}
+{"kind": "quad", "combo": [18, 6, 13, 16], "class": "zero", "union": [0, 4, 14, 15, 18, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 6, 13, 17], "class": "zero", "union": [0, 14, 15, 18, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 6, 14, 15], "class": "b_only", "union": [11, 14, 15, 18, 19, 24, 30], "joint": 168936729360, "memo_states": 75021, "sec": 0.2}
+{"kind": "quad", "combo": [18, 6, 14, 16], "class": "zero", "union": [4, 14, 15, 18, 24, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 6, 14, 17], "class": "zero", "union": [14, 15, 18, 24, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 6, 15, 16], "class": "b_only", "union": [4, 11, 14, 15, 18, 19, 30], "joint": 177342780660, "memo_states": 75023, "sec": 0.2}
+{"kind": "quad", "combo": [18, 6, 15, 17], "class": "zero", "union": [11, 14, 15, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 6, 16, 17], "class": "zero", "union": [4, 14, 15, 18, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 7, 8, 9], "class": "zero", "union": [1, 4, 14, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 7, 8, 10], "class": "zero", "union": [1, 4, 14, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 7, 8, 11], "class": "zero", "union": [1, 4, 14, 18, 19, 23], "joint": 0}
+{"kind": "quad", "combo": [18, 7, 8, 12], "class": "zero", "union": [1, 4, 11, 14, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 7, 8, 13], "class": "b_only", "union": [0, 1, 4, 14, 15, 18, 19], "joint": 168981718500, "memo_states": 75025, "sec": 0.2}
+{"kind": "quad", "combo": [18, 7, 8, 14], "class": "b_only", "union": [1, 4, 14, 15, 18, 19, 24], "joint": 168936729360, "memo_states": 75022, "sec": 0.2}
+{"kind": "quad", "combo": [18, 7, 8, 15], "class": "zero", "union": [1, 4, 11, 14, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 7, 8, 16], "class": "zero", "union": [1, 4, 14, 15, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 7, 8, 17], "class": "b_only", "union": [1, 4, 14, 15, 18, 19, 30], "joint": 177342780660, "memo_states": 75024, "sec": 0.2}
+{"kind": "quad", "combo": [18, 7, 9, 10], "class": "zero", "union": [4, 14, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 7, 9, 11], "class": "zero", "union": [4, 14, 18, 19, 23], "joint": 0}
+{"kind": "quad", "combo": [18, 7, 9, 12], "class": "zero", "union": [4, 11, 14, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 7, 9, 13], "class": "zero", "union": [0, 4, 14, 15, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 7, 9, 14], "class": "zero", "union": [4, 14, 15, 18, 19, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 7, 9, 15], "class": "zero", "union": [4, 11, 14, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 7, 9, 16], "class": "zero", "union": [4, 14, 15, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 7, 9, 17], "class": "zero", "union": [4, 14, 15, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 7, 10, 11], "class": "zero", "union": [4, 14, 18, 19, 23, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 7, 10, 12], "class": "zero", "union": [4, 11, 14, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 7, 10, 13], "class": "b_only", "union": [0, 4, 14, 15, 18, 19, 30], "joint": 160918441470, "memo_states": 75018, "sec": 0.2}
+{"kind": "quad", "combo": [18, 7, 10, 14], "class": "b_only", "union": [4, 14, 15, 18, 19, 24, 30], "joint": 168870208020, "memo_states": 75020, "sec": 0.2}
+{"kind": "quad", "combo": [18, 7, 10, 15], "class": "zero", "union": [4, 11, 14, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 7, 10, 16], "class": "zero", "union": [4, 14, 15, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 7, 10, 17], "class": "zero", "union": [4, 14, 15, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 7, 11, 12], "class": "zero", "union": [4, 11, 14, 18, 23], "joint": 0}
+{"kind": "quad", "combo": [18, 7, 11, 13], "class": "zero", "union": [0, 4, 14, 15, 18, 23], "joint": 0}
+{"kind": "quad", "combo": [18, 7, 11, 14], "class": "zero", "union": [4, 14, 15, 18, 23, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 7, 11, 15], "class": "zero", "union": [4, 11, 14, 18, 19, 23], "joint": 0}
+{"kind": "quad", "combo": [18, 7, 11, 16], "class": "zero", "union": [4, 14, 15, 18, 23], "joint": 0}
+{"kind": "quad", "combo": [18, 7, 11, 17], "class": "zero", "union": [4, 14, 15, 18, 23, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 7, 12, 13], "class": "zero", "union": [0, 4, 11, 14, 15, 18], "joint": 0}
+{"kind": "quad", "combo": [18, 7, 12, 14], "class": "zero", "union": [4, 11, 14, 15, 18, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 7, 12, 15], "class": "zero", "union": [4, 11, 14, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 7, 12, 16], "class": "zero", "union": [4, 11, 14, 15, 18], "joint": 0}
+{"kind": "quad", "combo": [18, 7, 12, 17], "class": "zero", "union": [4, 11, 14, 15, 18, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 7, 13, 14], "class": "zero", "union": [0, 4, 14, 15, 18, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 7, 13, 15], "class": "b_only", "union": [0, 4, 11, 14, 15, 18, 19], "joint": 168981718500, "memo_states": 75022, "sec": 0.2}
+{"kind": "quad", "combo": [18, 7, 13, 16], "class": "zero", "union": [0, 4, 14, 15, 18], "joint": 0}
+{"kind": "quad", "combo": [18, 7, 13, 17], "class": "zero", "union": [0, 4, 14, 15, 18, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 7, 14, 15], "class": "b_only", "union": [4, 11, 14, 15, 18, 19, 24], "joint": 168936729360, "memo_states": 75021, "sec": 0.2}
+{"kind": "quad", "combo": [18, 7, 14, 16], "class": "zero", "union": [4, 14, 15, 18, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 7, 14, 17], "class": "zero", "union": [4, 14, 15, 18, 24, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 7, 15, 16], "class": "zero", "union": [4, 11, 14, 15, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 7, 15, 17], "class": "b_only", "union": [4, 11, 14, 15, 18, 19, 30], "joint": 177342780660, "memo_states": 75023, "sec": 0.2}
+{"kind": "quad", "combo": [18, 7, 16, 17], "class": "zero", "union": [4, 14, 15, 18, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 8, 9, 10], "class": "zero", "union": [1, 4, 14, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 8, 9, 11], "class": "zero", "union": [1, 4, 14, 18, 19, 23], "joint": 0}
+{"kind": "quad", "combo": [18, 8, 9, 12], "class": "zero", "union": [1, 4, 11, 14, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 8, 9, 13], "class": "b_only", "union": [0, 1, 4, 14, 15, 18, 19], "joint": 168981718500, "memo_states": 75025, "sec": 0.2}
+{"kind": "quad", "combo": [18, 8, 9, 14], "class": "b_only", "union": [1, 4, 14, 15, 18, 19, 24], "joint": 168936729360, "memo_states": 75022, "sec": 0.2}
+{"kind": "quad", "combo": [18, 8, 9, 15], "class": "zero", "union": [1, 4, 11, 14, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 8, 9, 16], "class": "zero", "union": [1, 4, 14, 15, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 8, 9, 17], "class": "b_only", "union": [1, 4, 14, 15, 18, 19, 30], "joint": 177342780660, "memo_states": 75024, "sec": 0.2}
+{"kind": "quad", "combo": [18, 8, 10, 11], "class": "zero", "union": [1, 14, 18, 19, 23, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 8, 10, 12], "class": "zero", "union": [1, 11, 14, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 8, 10, 13], "class": "b_only", "union": [0, 1, 14, 15, 18, 19, 30], "joint": 160871915760, "memo_states": 75025, "sec": 0.2}
+{"kind": "quad", "combo": [18, 8, 10, 14], "class": "b_only", "union": [1, 14, 15, 18, 19, 24, 30], "joint": 168914136720, "memo_states": 75022, "sec": 0.2}
+{"kind": "quad", "combo": [18, 8, 10, 15], "class": "zero", "union": [1, 11, 14, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 8, 10, 16], "class": "b_only", "union": [1, 4, 14, 15, 18, 19, 30], "joint": 177342780660, "memo_states": 75024, "sec": 0.2}
+{"kind": "quad", "combo": [18, 8, 10, 17], "class": "zero", "union": [1, 14, 15, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 8, 11, 12], "class": "zero", "union": [1, 11, 14, 18, 19, 23], "joint": 0}
+{"kind": "quad", "combo": [18, 8, 11, 13], "class": "b_only", "union": [0, 1, 14, 15, 18, 19, 23], "joint": 161336504700, "memo_states": 75025, "sec": 0.2}
+{"kind": "quad", "combo": [18, 8, 11, 14], "class": "b_only", "union": [1, 14, 15, 18, 19, 23, 24], "joint": 153273024420, "memo_states": 75019, "sec": 0.2}
+{"kind": "quad", "combo": [18, 8, 11, 15], "class": "zero", "union": [1, 11, 14, 18, 19, 23], "joint": 0}
+{"kind": "quad", "combo": [18, 8, 11, 16], "class": "b_only", "union": [1, 4, 14, 15, 18, 19, 23], "joint": 168936729360, "memo_states": 75022, "sec": 0.2}
+{"kind": "quad", "combo": [18, 8, 11, 17], "class": "b_only", "union": [1, 14, 15, 18, 19, 23, 30], "joint": 160444350120, "memo_states": 75022, "sec": 0.2}
+{"kind": "quad", "combo": [18, 8, 12, 13], "class": "b_only", "union": [0, 1, 11, 14, 15, 18, 19], "joint": 160555769640, "memo_states": 75025, "sec": 0.2}
+{"kind": "quad", "combo": [18, 8, 12, 14], "class": "b_only", "union": [1, 11, 14, 15, 18, 19, 24], "joint": 160129747680, "memo_states": 75019, "sec": 0.2}
+{"kind": "quad", "combo": [18, 8, 12, 15], "class": "zero", "union": [1, 11, 14, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 8, 12, 16], "class": "b_only", "union": [1, 4, 11, 14, 15, 18, 19], "joint": 168538857900, "memo_states": 75022, "sec": 0.2}
+{"kind": "quad", "combo": [18, 8, 12, 17], "class": "b_only", "union": [1, 11, 14, 15, 18, 19, 30], "joint": 159641505660, "memo_states": 75022, "sec": 0.2}
+{"kind": "quad", "combo": [18, 8, 13, 14], "class": "b_only", "union": [0, 1, 14, 15, 18, 19, 24], "joint": 169360266600, "memo_states": 75025, "sec": 0.2}
+{"kind": "quad", "combo": [18, 8, 13, 15], "class": "b_only", "union": [0, 1, 11, 14, 15, 18, 19], "joint": 160555769640, "memo_states": 75025, "sec": 0.2}
+{"kind": "quad", "combo": [18, 8, 13, 16], "class": "b_only", "union": [0, 1, 4, 14, 15, 18, 19], "joint": 168981718500, "memo_states": 75025, "sec": 0.2}
+{"kind": "quad", "combo": [18, 8, 13, 17], "class": "b_only", "union": [0, 1, 14, 15, 18, 19, 30], "joint": 160871915760, "memo_states": 75025, "sec": 0.2}
+{"kind": "quad", "combo": [18, 8, 14, 15], "class": "b_only", "union": [1, 11, 14, 15, 18, 19, 24], "joint": 160129747680, "memo_states": 75019, "sec": 0.2}
+{"kind": "quad", "combo": [18, 8, 14, 16], "class": "b_only", "union": [1, 4, 14, 15, 18, 19, 24], "joint": 168936729360, "memo_states": 75022, "sec": 0.2}
+{"kind": "quad", "combo": [18, 8, 14, 17], "class": "b_only", "union": [1, 14, 15, 18, 19, 24, 30], "joint": 168914136720, "memo_states": 75022, "sec": 0.2}
+{"kind": "quad", "combo": [18, 8, 15, 16], "class": "b_only", "union": [1, 4, 11, 14, 15, 18, 19], "joint": 168538857900, "memo_states": 75022, "sec": 0.2}
+{"kind": "quad", "combo": [18, 8, 15, 17], "class": "b_only", "union": [1, 11, 14, 15, 18, 19, 30], "joint": 159641505660, "memo_states": 75022, "sec": 0.2}
+{"kind": "quad", "combo": [18, 8, 16, 17], "class": "b_only", "union": [1, 4, 14, 15, 18, 19, 30], "joint": 177342780660, "memo_states": 75024, "sec": 0.2}
+{"kind": "quad", "combo": [18, 9, 10, 11], "class": "zero", "union": [4, 14, 18, 19, 23, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 9, 10, 12], "class": "zero", "union": [4, 11, 14, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 9, 10, 13], "class": "b_only", "union": [0, 4, 14, 15, 18, 19, 30], "joint": 160918441470, "memo_states": 75018, "sec": 0.2}
+{"kind": "quad", "combo": [18, 9, 10, 14], "class": "b_only", "union": [4, 14, 15, 18, 19, 24, 30], "joint": 168870208020, "memo_states": 75020, "sec": 0.2}
+{"kind": "quad", "combo": [18, 9, 10, 15], "class": "zero", "union": [4, 11, 14, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 9, 10, 16], "class": "zero", "union": [4, 14, 15, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 9, 10, 17], "class": "zero", "union": [4, 14, 15, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 9, 11, 12], "class": "zero", "union": [4, 11, 14, 18, 19, 23], "joint": 0}
+{"kind": "quad", "combo": [18, 9, 11, 13], "class": "b_only", "union": [0, 4, 14, 15, 18, 19, 23], "joint": 160955389350, "memo_states": 75018, "sec": 0.2}
+{"kind": "quad", "combo": [18, 9, 11, 14], "class": "b_only", "union": [4, 14, 15, 18, 19, 23, 24], "joint": 153680692500, "memo_states": 75018, "sec": 0.2}
+{"kind": "quad", "combo": [18, 9, 11, 15], "class": "zero", "union": [4, 11, 14, 18, 19, 23], "joint": 0}
+{"kind": "quad", "combo": [18, 9, 11, 16], "class": "zero", "union": [4, 14, 15, 18, 19, 23], "joint": 0}
+{"kind": "quad", "combo": [18, 9, 11, 17], "class": "b_only", "union": [4, 14, 15, 18, 19, 23, 30], "joint": 168870208020, "memo_states": 75020, "sec": 0.2}
+{"kind": "quad", "combo": [18, 9, 12, 13], "class": "b_only", "union": [0, 4, 11, 14, 15, 18, 19], "joint": 168981718500, "memo_states": 75022, "sec": 0.2}
+{"kind": "quad", "combo": [18, 9, 12, 14], "class": "b_only", "union": [4, 11, 14, 15, 18, 19, 24], "joint": 168936729360, "memo_states": 75021, "sec": 0.2}
+{"kind": "quad", "combo": [18, 9, 12, 15], "class": "zero", "union": [4, 11, 14, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 9, 12, 16], "class": "zero", "union": [4, 11, 14, 15, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 9, 12, 17], "class": "b_only", "union": [4, 11, 14, 15, 18, 19, 30], "joint": 177342780660, "memo_states": 75023, "sec": 0.2}
+{"kind": "quad", "combo": [18, 9, 13, 14], "class": "b_only", "union": [0, 4, 14, 15, 18, 19, 24], "joint": 160955389350, "memo_states": 75018, "sec": 0.2}
+{"kind": "quad", "combo": [18, 9, 13, 15], "class": "b_only", "union": [0, 4, 11, 14, 15, 18, 19], "joint": 168981718500, "memo_states": 75022, "sec": 0.2}
+{"kind": "quad", "combo": [18, 9, 13, 16], "class": "zero", "union": [0, 4, 14, 15, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 9, 13, 17], "class": "b_only", "union": [0, 4, 14, 15, 18, 19, 30], "joint": 160918441470, "memo_states": 75018, "sec": 0.2}
+{"kind": "quad", "combo": [18, 9, 14, 15], "class": "b_only", "union": [4, 11, 14, 15, 18, 19, 24], "joint": 168936729360, "memo_states": 75021, "sec": 0.2}
+{"kind": "quad", "combo": [18, 9, 14, 16], "class": "zero", "union": [4, 14, 15, 18, 19, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 9, 14, 17], "class": "b_only", "union": [4, 14, 15, 18, 19, 24, 30], "joint": 168870208020, "memo_states": 75020, "sec": 0.2}
+{"kind": "quad", "combo": [18, 9, 15, 16], "class": "zero", "union": [4, 11, 14, 15, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 9, 15, 17], "class": "b_only", "union": [4, 11, 14, 15, 18, 19, 30], "joint": 177342780660, "memo_states": 75023, "sec": 0.2}
+{"kind": "quad", "combo": [18, 9, 16, 17], "class": "zero", "union": [4, 14, 15, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 10, 11, 12], "class": "zero", "union": [11, 14, 18, 19, 23, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 10, 11, 13], "class": "b_only", "union": [0, 14, 15, 18, 19, 23, 30], "joint": 153678004530, "memo_states": 75018, "sec": 0.2}
+{"kind": "quad", "combo": [18, 10, 11, 14], "class": "b_only", "union": [14, 15, 18, 19, 23, 24, 30], "joint": 153659447400, "memo_states": 75018, "sec": 0.2}
+{"kind": "quad", "combo": [18, 10, 11, 15], "class": "zero", "union": [11, 14, 18, 19, 23, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 10, 11, 16], "class": "b_only", "union": [4, 14, 15, 18, 19, 23, 30], "joint": 168870208020, "memo_states": 75020, "sec": 0.2}
+{"kind": "quad", "combo": [18, 10, 11, 17], "class": "zero", "union": [14, 15, 18, 19, 23, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 10, 12, 13], "class": "b_only", "union": [0, 11, 14, 15, 18, 19, 30], "joint": 160892971830, "memo_states": 75022, "sec": 0.2}
+{"kind": "quad", "combo": [18, 10, 12, 14], "class": "b_only", "union": [11, 14, 15, 18, 19, 24, 30], "joint": 168936729360, "memo_states": 75021, "sec": 0.2}
+{"kind": "quad", "combo": [18, 10, 12, 15], "class": "zero", "union": [11, 14, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 10, 12, 16], "class": "b_only", "union": [4, 11, 14, 15, 18, 19, 30], "joint": 177342780660, "memo_states": 75023, "sec": 0.2}
+{"kind": "quad", "combo": [18, 10, 12, 17], "class": "zero", "union": [11, 14, 15, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 10, 13, 14], "class": "b_only", "union": [0, 14, 15, 18, 19, 24, 30], "joint": 161272762290, "memo_states": 75018, "sec": 0.2}
+{"kind": "quad", "combo": [18, 10, 13, 15], "class": "b_only", "union": [0, 11, 14, 15, 18, 19, 30], "joint": 160892971830, "memo_states": 75022, "sec": 0.2}
+{"kind": "quad", "combo": [18, 10, 13, 16], "class": "b_only", "union": [0, 4, 14, 15, 18, 19, 30], "joint": 160918441470, "memo_states": 75018, "sec": 0.2}
+{"kind": "quad", "combo": [18, 10, 13, 17], "class": "zero", "union": [0, 14, 15, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 10, 14, 15], "class": "b_only", "union": [11, 14, 15, 18, 19, 24, 30], "joint": 168936729360, "memo_states": 75021, "sec": 0.2}
+{"kind": "quad", "combo": [18, 10, 14, 16], "class": "b_only", "union": [4, 14, 15, 18, 19, 24, 30], "joint": 168870208020, "memo_states": 75020, "sec": 0.2}
+{"kind": "quad", "combo": [18, 10, 14, 17], "class": "zero", "union": [14, 15, 18, 19, 24, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 10, 15, 16], "class": "b_only", "union": [4, 11, 14, 15, 18, 19, 30], "joint": 177342780660, "memo_states": 75023, "sec": 0.2}
+{"kind": "quad", "combo": [18, 10, 15, 17], "class": "zero", "union": [11, 14, 15, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 10, 16, 17], "class": "zero", "union": [4, 14, 15, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 11, 12, 13], "class": "zero", "union": [0, 11, 14, 15, 18, 23], "joint": 0}
+{"kind": "quad", "combo": [18, 11, 12, 14], "class": "zero", "union": [11, 14, 15, 18, 23, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 11, 12, 15], "class": "zero", "union": [11, 14, 18, 19, 23], "joint": 0}
+{"kind": "quad", "combo": [18, 11, 12, 16], "class": "zero", "union": [4, 11, 14, 15, 18, 23], "joint": 0}
+{"kind": "quad", "combo": [18, 11, 12, 17], "class": "zero", "union": [11, 14, 15, 18, 23, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 11, 13, 14], "class": "zero", "union": [0, 14, 15, 18, 23, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 11, 13, 15], "class": "b_only", "union": [0, 11, 14, 15, 18, 19, 23], "joint": 161357576310, "memo_states": 75022, "sec": 0.2}
+{"kind": "quad", "combo": [18, 11, 13, 16], "class": "zero", "union": [0, 4, 14, 15, 18, 23], "joint": 0}
+{"kind": "quad", "combo": [18, 11, 13, 17], "class": "zero", "union": [0, 14, 15, 18, 23, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 11, 14, 15], "class": "b_only", "union": [11, 14, 15, 18, 19, 23, 24], "joint": 153292740060, "memo_states": 75017, "sec": 0.2}
+{"kind": "quad", "combo": [18, 11, 14, 16], "class": "zero", "union": [4, 14, 15, 18, 23, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 11, 14, 17], "class": "zero", "union": [14, 15, 18, 23, 24, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 11, 15, 16], "class": "b_only", "union": [4, 11, 14, 15, 18, 19, 23], "joint": 168936729360, "memo_states": 75021, "sec": 0.2}
+{"kind": "quad", "combo": [18, 11, 15, 17], "class": "b_only", "union": [11, 14, 15, 18, 19, 23, 30], "joint": 160466942760, "memo_states": 75021, "sec": 0.2}
+{"kind": "quad", "combo": [18, 11, 16, 17], "class": "zero", "union": [4, 14, 15, 18, 23, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 12, 13, 14], "class": "zero", "union": [0, 11, 14, 15, 18, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 12, 13, 15], "class": "zero", "union": [0, 11, 14, 15, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 12, 13, 16], "class": "zero", "union": [0, 4, 11, 14, 15, 18], "joint": 0}
+{"kind": "quad", "combo": [18, 12, 13, 17], "class": "zero", "union": [0, 11, 14, 15, 18, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 12, 14, 15], "class": "zero", "union": [11, 14, 15, 18, 19, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 12, 14, 16], "class": "zero", "union": [4, 11, 14, 15, 18, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 12, 14, 17], "class": "zero", "union": [11, 14, 15, 18, 24, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 12, 15, 16], "class": "zero", "union": [4, 11, 14, 15, 18, 19], "joint": 0}
+{"kind": "quad", "combo": [18, 12, 15, 17], "class": "zero", "union": [11, 14, 15, 18, 19, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 12, 16, 17], "class": "zero", "union": [4, 11, 14, 15, 18, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 13, 14, 15], "class": "b_only", "union": [0, 11, 14, 15, 18, 19, 24], "joint": 169381338210, "memo_states": 75022, "sec": 0.2}
+{"kind": "quad", "combo": [18, 13, 14, 16], "class": "zero", "union": [0, 4, 14, 15, 18, 24], "joint": 0}
+{"kind": "quad", "combo": [18, 13, 14, 17], "class": "zero", "union": [0, 14, 15, 18, 24, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 13, 15, 16], "class": "b_only", "union": [0, 4, 11, 14, 15, 18, 19], "joint": 168981718500, "memo_states": 75022, "sec": 0.2}
+{"kind": "quad", "combo": [18, 13, 15, 17], "class": "b_only", "union": [0, 11, 14, 15, 18, 19, 30], "joint": 160892971830, "memo_states": 75022, "sec": 0.2}
+{"kind": "quad", "combo": [18, 13, 16, 17], "class": "zero", "union": [0, 4, 14, 15, 18, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 14, 15, 16], "class": "b_only", "union": [4, 11, 14, 15, 18, 19, 24], "joint": 168936729360, "memo_states": 75021, "sec": 0.2}
+{"kind": "quad", "combo": [18, 14, 15, 17], "class": "b_only", "union": [11, 14, 15, 18, 19, 24, 30], "joint": 168936729360, "memo_states": 75021, "sec": 0.2}
+{"kind": "quad", "combo": [18, 14, 16, 17], "class": "zero", "union": [4, 14, 15, 18, 24, 30], "joint": 0}
+{"kind": "quad", "combo": [18, 15, 16, 17], "class": "b_only", "union": [4, 11, 14, 15, 18, 19, 30], "joint": 177342780660, "memo_states": 75023, "sec": 0.2}
+{"kind": "cross3", "combo": [18, 2, 13], "lineage": "mypm", "joint_A": 175254913936290, "joint_B": 59792135374770, "ref_A": 175254913936290, "ref_B": 59792135374770, "match": true}
+{"kind": "cross3", "combo": [18, 2, 14], "lineage": "mypm", "joint_A": 182671441893690, "joint_B": 62194333721550, "ref_A": 182671441893690, "ref_B": 62194333721550, "match": true}
+{"kind": "cross4", "combo": [18, 1, 2, 13], "lineage": "lazypm", "joint": 146799763290, "ref": 146799763290, "match": true}
+{"kind": "cross4", "combo": [18, 1, 2, 14], "lineage": "lazypm", "joint": 154053668520, "ref": 154053668520, "match": true}

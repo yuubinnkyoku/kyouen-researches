@@ -1,0 +1,42 @@
+{
+  "independent_geometry": {
+    "legal_s4_to_s5_edge": true,
+    "s4_canonical": true,
+    "s5_legal_moves": 81,
+    "s5_safe_canonical": true
+  },
+  "independent_minimax": {
+    "checker_source_sha256": "ee59360fcfdd29752acfc7d88f8ce9e3ef2fe7d19fd6bbf0021cfc39ee98b92b",
+    "elapsed_seconds": 20.70479879999766,
+    "geometry_source_sha256": "954d3a104c1723ebb15b8c9bae63a4494f07f9eb73446a6d067c4fd6a4ba189f",
+    "method": "independent.py solve_certificate; terminal-only ranked DAG; no trusted leaves",
+    "state_limit": 30000,
+    "verdict": "UNKNOWN",
+    "visited": 30000
+  },
+  "s4_key": [
+    1297036692683751424,
+    16
+  ],
+  "s5_key": [
+    1297036692683751424,
+    67108880
+  ],
+  "schema": "n11-reply27-target-s5-win-independent-check-v1",
+  "solver_replay": {
+    "budget": 15000000,
+    "input_path": "research/experiments/n11-reply27-class-1297036692683751424-16-20261010/output/s5-probe15m-first/s5-1297036692683751424-67108880.input.csv",
+    "input_sha256": "90d5d45a9cee1de7224544eae96b92bf7c61b58eca806f42e81e5a48d65f9aa0",
+    "log_path": "research/experiments/n11-reply27-class-1297036692683751424-16-20261010/output/s5-probe15m-first/s5-1297036692683751424-67108880.log",
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "nodes": 14920591,
+    "raw_path": "research/experiments/n11-reply27-class-1297036692683751424-16-20261010/output/s5-probe15m-first/s5-1297036692683751424-67108880.out.csv",
+    "raw_sha256": "95967fb2952df3764bf4cc5a6a19a8c32533b1d85f8191cdcfca3c4d59f05094",
+    "solver_path": ".local/n11-independent-audit-solver.exe",
+    "solver_sha256": "ac8f4931e4c81bd06ba1622844933962134f663d970885c2990fbb96a167677a",
+    "source_sha256": "9193f5b6065e0fbcad2ef7c65f386187701cafa1f5b718cc35a5cbb0d138f92e",
+    "summary_path": "research/experiments/n11-reply27-class-1297036692683751424-16-20261010/output/s5-probe15m-first/summary.json",
+    "summary_sha256": "1c72c4bb718594343ce8c0c07aaef79044d16a4e927db0bc36a4633229aa2f65",
+    "verdict": "WIN"
+  }
+}

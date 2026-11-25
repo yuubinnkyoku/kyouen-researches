@@ -1,0 +1,5366 @@
+{
+  "schema": "n11-cost16-k27-preread-20261118-v1",
+  "date": "2026-11-18",
+  "lane": "n11 long lane (verification side)",
+  "title": "31-row cost-16 parent: rank-27 structural preread",
+  "inputs": {
+    "aggregate": {
+      "path": "research/experiments/n11-head1410-partial-parent-nonsterile-children-20261118/output/cost16-b-phase-groups-20261118.json",
+      "git_blob_sha1": "31bdefdb2e2cc90b706cbb8090e98eb5eece4d87",
+      "base_main": "6fc30c1b06bb15dd7ce4eac02bd175cacd5830fe"
+    },
+    "k26_result": {
+      "path": "research/experiments/n11-head1410-partial-parent-nonsterile-children-20261118/output/cost16-survival-k26-20261118.json",
+      "git_blob_sha1": "1841a281ff604e7f677b8c7772a7312f6f9da5e1"
+    }
+  },
+  "scope": {
+    "parent": "00000000000000003800000008001000",
+    "rows": 31,
+    "minimum_cover_size": 16,
+    "rank_convention": "top50_by_membershipの0始まりindex。k=26はindex 25、k=27はindex 26。",
+    "classifier": "3回以上現れる行、または2回現れる行が2本以上ならzero。2回現れる行がちょうど1本ならb_only。重複行がなければdisjoint。",
+    "warning": "membershipは被覆計画数であり、探索コスト・verdict・勝敗を表さない。"
+  },
+  "rank26_regression": {
+    "root": "00000000000000801202000000101002",
+    "rows_covered": [
+      5,
+      16
+    ],
+    "new_census": {
+      "pair": {
+        "b_only": 2,
+        "zero": 0,
+        "disjoint": 23,
+        "total": 25,
+        "expected_total": 25
+      },
+      "triple": {
+        "b_only": 134,
+        "zero": 19,
+        "disjoint": 147,
+        "total": 300,
+        "expected_total": 300
+      },
+      "quad": {
+        "b_only": 1194,
+        "zero": 873,
+        "disjoint": 233,
+        "total": 2300,
+        "expected_total": 2300
+      },
+      "quint": {
+        "b_only": 1872,
+        "zero": 10778,
+        "disjoint": 0,
+        "total": 12650,
+        "expected_total": 12650
+      }
+    },
+    "full_triple_census": {
+      "b_only": 1594,
+      "zero": 542,
+      "disjoint": 464,
+      "total": 2600,
+      "expected_total": 2600
+    },
+    "full_quint_census": {
+      "b_only": 1872,
+      "zero": 63908,
+      "disjoint": 0,
+      "total": 65780,
+      "expected_total": 65780
+    },
+    "new_quint_double_row_histogram": {
+      "15": 379,
+      "18": 1121,
+      "19": 372
+    },
+    "matches_published_k26": true
+  },
+  "rank27": {
+    "root": "00000000000100003820000008001000",
+    "rows_covered": [
+      12,
+      18
+    ],
+    "row_overlap_signature": {
+      "row12_prior_hits": 0,
+      "row18_prior_hits": 13
+    },
+    "census": {
+      "pair": {
+        "b_only": 13,
+        "zero": 0,
+        "disjoint": 13,
+        "total": 26,
+        "expected_total": 26
+      },
+      "triple": {
+        "b_only": 201,
+        "zero": 86,
+        "disjoint": 38,
+        "total": 325,
+        "expected_total": 325
+      },
+      "quad": {
+        "b_only": 588,
+        "zero": 1990,
+        "disjoint": 22,
+        "total": 2600,
+        "expected_total": 2600
+      },
+      "quint": {
+        "b_only": 309,
+        "zero": 14641,
+        "disjoint": 0,
+        "total": 14950,
+        "expected_total": 14950
+      }
+    },
+    "quint_b_only_double_row_histogram": {
+      "15": 38,
+      "18": 233,
+      "19": 38
+    },
+    "quint_four_subset_profile_distribution": {
+      "3/2/0": 309
+    },
+    "disjoint_quad_records": [
+      {
+        "indices": [
+          3,
+          14,
+          25,
+          26
+        ],
+        "rows_union": [
+          0,
+          5,
+          12,
+          15,
+          16,
+          18,
+          19,
+          24
+        ]
+      },
+      {
+        "indices": [
+          3,
+          16,
+          25,
+          26
+        ],
+        "rows_union": [
+          0,
+          4,
+          5,
+          12,
+          15,
+          16,
+          18,
+          19
+        ]
+      },
+      {
+        "indices": [
+          3,
+          17,
+          25,
+          26
+        ],
+        "rows_union": [
+          0,
+          5,
+          12,
+          15,
+          16,
+          18,
+          19,
+          30
+        ]
+      },
+      {
+        "indices": [
+          3,
+          22,
+          25,
+          26
+        ],
+        "rows_union": [
+          0,
+          5,
+          6,
+          12,
+          15,
+          16,
+          18,
+          19
+        ]
+      },
+      {
+        "indices": [
+          8,
+          13,
+          25,
+          26
+        ],
+        "rows_union": [
+          0,
+          1,
+          5,
+          12,
+          15,
+          16,
+          18,
+          19
+        ]
+      },
+      {
+        "indices": [
+          8,
+          14,
+          25,
+          26
+        ],
+        "rows_union": [
+          1,
+          5,
+          12,
+          15,
+          16,
+          18,
+          19,
+          24
+        ]
+      },
+      {
+        "indices": [
+          8,
+          16,
+          25,
+          26
+        ],
+        "rows_union": [
+          1,
+          4,
+          5,
+          12,
+          15,
+          16,
+          18,
+          19
+        ]
+      },
+      {
+        "indices": [
+          8,
+          17,
+          25,
+          26
+        ],
+        "rows_union": [
+          1,
+          5,
+          12,
+          15,
+          16,
+          18,
+          19,
+          30
+        ]
+      },
+      {
+        "indices": [
+          8,
+          22,
+          25,
+          26
+        ],
+        "rows_union": [
+          1,
+          5,
+          6,
+          12,
+          15,
+          16,
+          18,
+          19
+        ]
+      },
+      {
+        "indices": [
+          9,
+          13,
+          25,
+          26
+        ],
+        "rows_union": [
+          0,
+          4,
+          5,
+          12,
+          15,
+          16,
+          18,
+          19
+        ]
+      },
+      {
+        "indices": [
+          9,
+          14,
+          25,
+          26
+        ],
+        "rows_union": [
+          4,
+          5,
+          12,
+          15,
+          16,
+          18,
+          19,
+          24
+        ]
+      },
+      {
+        "indices": [
+          9,
+          17,
+          25,
+          26
+        ],
+        "rows_union": [
+          4,
+          5,
+          12,
+          15,
+          16,
+          18,
+          19,
+          30
+        ]
+      },
+      {
+        "indices": [
+          9,
+          22,
+          25,
+          26
+        ],
+        "rows_union": [
+          4,
+          5,
+          6,
+          12,
+          15,
+          16,
+          18,
+          19
+        ]
+      },
+      {
+        "indices": [
+          10,
+          13,
+          25,
+          26
+        ],
+        "rows_union": [
+          0,
+          5,
+          12,
+          15,
+          16,
+          18,
+          19,
+          30
+        ]
+      },
+      {
+        "indices": [
+          10,
+          14,
+          25,
+          26
+        ],
+        "rows_union": [
+          5,
+          12,
+          15,
+          16,
+          18,
+          19,
+          24,
+          30
+        ]
+      },
+      {
+        "indices": [
+          10,
+          16,
+          25,
+          26
+        ],
+        "rows_union": [
+          4,
+          5,
+          12,
+          15,
+          16,
+          18,
+          19,
+          30
+        ]
+      },
+      {
+        "indices": [
+          10,
+          22,
+          25,
+          26
+        ],
+        "rows_union": [
+          5,
+          6,
+          12,
+          15,
+          16,
+          18,
+          19,
+          30
+        ]
+      },
+      {
+        "indices": [
+          13,
+          15,
+          25,
+          26
+        ],
+        "rows_union": [
+          0,
+          5,
+          11,
+          12,
+          15,
+          16,
+          18,
+          19
+        ]
+      },
+      {
+        "indices": [
+          14,
+          15,
+          25,
+          26
+        ],
+        "rows_union": [
+          5,
+          11,
+          12,
+          15,
+          16,
+          18,
+          19,
+          24
+        ]
+      },
+      {
+        "indices": [
+          15,
+          16,
+          25,
+          26
+        ],
+        "rows_union": [
+          4,
+          5,
+          11,
+          12,
+          15,
+          16,
+          18,
+          19
+        ]
+      },
+      {
+        "indices": [
+          15,
+          17,
+          25,
+          26
+        ],
+        "rows_union": [
+          5,
+          11,
+          12,
+          15,
+          16,
+          18,
+          19,
+          30
+        ]
+      },
+      {
+        "indices": [
+          15,
+          22,
+          25,
+          26
+        ],
+        "rows_union": [
+          5,
+          6,
+          11,
+          12,
+          15,
+          16,
+          18,
+          19
+        ]
+      }
+    ],
+    "b_only_quint_records": [
+      {
+        "indices": [
+          3,
+          4,
+          16,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          3,
+          4,
+          17,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          3,
+          4,
+          22,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          3,
+          5,
+          14,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          3,
+          5,
+          16,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          3,
+          5,
+          17,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          3,
+          5,
+          22,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          3,
+          6,
+          14,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          3,
+          6,
+          16,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          3,
+          6,
+          22,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          3,
+          7,
+          14,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          3,
+          7,
+          17,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          3,
+          7,
+          22,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          3,
+          8,
+          14,
+          25,
+          26
+        ],
+        "double_row": 19,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          3,
+          8,
+          16,
+          25,
+          26
+        ],
+        "double_row": 19,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          3,
+          8,
+          17,
+          25,
+          26
+        ],
+        "double_row": 19,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          3,
+          8,
+          22,
+          25,
+          26
+        ],
+        "double_row": 19,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          3,
+          9,
+          14,
+          25,
+          26
+        ],
+        "double_row": 19,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          3,
+          9,
+          17,
+          25,
+          26
+        ],
+        "double_row": 19,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          3,
+          9,
+          22,
+          25,
+          26
+        ],
+        "double_row": 19,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          3,
+          10,
+          14,
+          25,
+          26
+        ],
+        "double_row": 19,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          3,
+          10,
+          16,
+          25,
+          26
+        ],
+        "double_row": 19,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          3,
+          10,
+          22,
+          25,
+          26
+        ],
+        "double_row": 19,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          3,
+          11,
+          14,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          3,
+          11,
+          16,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          3,
+          11,
+          17,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          3,
+          11,
+          22,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          3,
+          12,
+          14,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          3,
+          12,
+          16,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          3,
+          12,
+          17,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          3,
+          12,
+          22,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          3,
+          14,
+          15,
+          25,
+          26
+        ],
+        "double_row": 19,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          3,
+          14,
+          16,
+          25,
+          26
+        ],
+        "double_row": 15,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          3,
+          14,
+          17,
+          25,
+          26
+        ],
+        "double_row": 15,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          3,
+          14,
+          18,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          3,
+          14,
+          19,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          3,
+          14,
+          20,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          3,
+          14,
+          21,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          3,
+          14,
+          22,
+          25,
+          26
+        ],
+        "double_row": 15,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          3,
+          14,
+          23,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          3,
+          14,
+          24,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          3,
+          15,
+          16,
+          25,
+          26
+        ],
+        "double_row": 19,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          3,
+          15,
+          17,
+          25,
+          26
+        ],
+        "double_row": 19,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          3,
+          15,
+          22,
+          25,
+          26
+        ],
+        "double_row": 19,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          3,
+          16,
+          17,
+          25,
+          26
+        ],
+        "double_row": 15,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          3,
+          16,
+          18,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          3,
+          16,
+          19,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          3,
+          16,
+          20,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          3,
+          16,
+          21,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          3,
+          16,
+          22,
+          25,
+          26
+        ],
+        "double_row": 15,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          3,
+          16,
+          23,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          3,
+          16,
+          24,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          3,
+          17,
+          18,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          3,
+          17,
+          19,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          3,
+          17,
+          20,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          3,
+          17,
+          21,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          3,
+          17,
+          22,
+          25,
+          26
+        ],
+        "double_row": 15,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          3,
+          17,
+          23,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          3,
+          17,
+          24,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          3,
+          18,
+          22,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          3,
+          19,
+          22,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          3,
+          20,
+          22,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          3,
+          21,
+          22,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          3,
+          22,
+          23,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          3,
+          22,
+          24,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          4,
+          8,
+          13,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          4,
+          8,
+          16,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          4,
+          8,
+          17,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          4,
+          8,
+          22,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          4,
+          9,
+          13,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          4,
+          9,
+          17,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          4,
+          9,
+          22,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          4,
+          10,
+          13,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          4,
+          10,
+          16,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          4,
+          10,
+          22,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          4,
+          13,
+          15,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          4,
+          15,
+          16,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          4,
+          15,
+          17,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          4,
+          15,
+          22,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          5,
+          9,
+          13,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          5,
+          9,
+          14,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          5,
+          9,
+          17,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          5,
+          9,
+          22,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          5,
+          10,
+          13,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          5,
+          10,
+          14,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          5,
+          10,
+          16,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          5,
+          10,
+          22,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          5,
+          13,
+          15,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          5,
+          14,
+          15,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          5,
+          15,
+          16,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          5,
+          15,
+          17,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          5,
+          15,
+          22,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          6,
+          8,
+          13,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          6,
+          8,
+          14,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          6,
+          8,
+          16,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          6,
+          8,
+          22,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          6,
+          9,
+          13,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          6,
+          9,
+          14,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          6,
+          9,
+          22,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          6,
+          13,
+          15,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          6,
+          14,
+          15,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          6,
+          15,
+          16,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          6,
+          15,
+          22,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          7,
+          8,
+          13,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          7,
+          8,
+          14,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          7,
+          8,
+          17,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          7,
+          8,
+          22,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          7,
+          10,
+          13,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          7,
+          10,
+          14,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          7,
+          10,
+          22,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          7,
+          13,
+          15,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          7,
+          14,
+          15,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          7,
+          15,
+          17,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          7,
+          15,
+          22,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          8,
+          9,
+          13,
+          25,
+          26
+        ],
+        "double_row": 19,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          8,
+          9,
+          14,
+          25,
+          26
+        ],
+        "double_row": 19,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          8,
+          9,
+          17,
+          25,
+          26
+        ],
+        "double_row": 19,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          8,
+          9,
+          22,
+          25,
+          26
+        ],
+        "double_row": 19,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          8,
+          10,
+          13,
+          25,
+          26
+        ],
+        "double_row": 19,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          8,
+          10,
+          14,
+          25,
+          26
+        ],
+        "double_row": 19,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          8,
+          10,
+          16,
+          25,
+          26
+        ],
+        "double_row": 19,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          8,
+          10,
+          22,
+          25,
+          26
+        ],
+        "double_row": 19,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          8,
+          11,
+          13,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          8,
+          11,
+          14,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          8,
+          11,
+          16,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          8,
+          11,
+          17,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          8,
+          11,
+          22,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          8,
+          12,
+          13,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          8,
+          12,
+          14,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          8,
+          12,
+          16,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          8,
+          12,
+          17,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          8,
+          12,
+          22,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          8,
+          13,
+          14,
+          25,
+          26
+        ],
+        "double_row": 15,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          8,
+          13,
+          15,
+          25,
+          26
+        ],
+        "double_row": 19,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          8,
+          13,
+          16,
+          25,
+          26
+        ],
+        "double_row": 15,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          8,
+          13,
+          17,
+          25,
+          26
+        ],
+        "double_row": 15,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          8,
+          13,
+          18,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          8,
+          13,
+          19,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          8,
+          13,
+          20,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          8,
+          13,
+          21,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          8,
+          13,
+          22,
+          25,
+          26
+        ],
+        "double_row": 15,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          8,
+          13,
+          23,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          8,
+          13,
+          24,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          8,
+          14,
+          15,
+          25,
+          26
+        ],
+        "double_row": 19,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          8,
+          14,
+          16,
+          25,
+          26
+        ],
+        "double_row": 15,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          8,
+          14,
+          17,
+          25,
+          26
+        ],
+        "double_row": 15,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          8,
+          14,
+          18,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          8,
+          14,
+          19,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          8,
+          14,
+          20,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          8,
+          14,
+          21,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          8,
+          14,
+          22,
+          25,
+          26
+        ],
+        "double_row": 15,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          8,
+          14,
+          23,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          8,
+          14,
+          24,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          8,
+          15,
+          16,
+          25,
+          26
+        ],
+        "double_row": 19,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          8,
+          15,
+          17,
+          25,
+          26
+        ],
+        "double_row": 19,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          8,
+          15,
+          22,
+          25,
+          26
+        ],
+        "double_row": 19,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          8,
+          16,
+          17,
+          25,
+          26
+        ],
+        "double_row": 15,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          8,
+          16,
+          18,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          8,
+          16,
+          19,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          8,
+          16,
+          20,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          8,
+          16,
+          21,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          8,
+          16,
+          22,
+          25,
+          26
+        ],
+        "double_row": 15,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          8,
+          16,
+          23,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          8,
+          16,
+          24,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          8,
+          17,
+          18,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          8,
+          17,
+          19,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          8,
+          17,
+          20,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          8,
+          17,
+          21,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          8,
+          17,
+          22,
+          25,
+          26
+        ],
+        "double_row": 15,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          8,
+          17,
+          23,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          8,
+          17,
+          24,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          8,
+          18,
+          22,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          8,
+          19,
+          22,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          8,
+          20,
+          22,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          8,
+          21,
+          22,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          8,
+          22,
+          23,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          8,
+          22,
+          24,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          9,
+          10,
+          13,
+          25,
+          26
+        ],
+        "double_row": 19,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          9,
+          10,
+          14,
+          25,
+          26
+        ],
+        "double_row": 19,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          9,
+          10,
+          22,
+          25,
+          26
+        ],
+        "double_row": 19,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          9,
+          11,
+          13,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          9,
+          11,
+          14,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          9,
+          11,
+          17,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          9,
+          11,
+          22,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          9,
+          12,
+          13,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          9,
+          12,
+          14,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          9,
+          12,
+          17,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          9,
+          12,
+          22,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          9,
+          13,
+          14,
+          25,
+          26
+        ],
+        "double_row": 15,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          9,
+          13,
+          15,
+          25,
+          26
+        ],
+        "double_row": 19,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          9,
+          13,
+          17,
+          25,
+          26
+        ],
+        "double_row": 15,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          9,
+          13,
+          18,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          9,
+          13,
+          19,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          9,
+          13,
+          20,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          9,
+          13,
+          21,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          9,
+          13,
+          22,
+          25,
+          26
+        ],
+        "double_row": 15,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          9,
+          13,
+          23,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          9,
+          13,
+          24,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          9,
+          14,
+          15,
+          25,
+          26
+        ],
+        "double_row": 19,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          9,
+          14,
+          17,
+          25,
+          26
+        ],
+        "double_row": 15,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          9,
+          14,
+          18,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          9,
+          14,
+          19,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          9,
+          14,
+          20,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          9,
+          14,
+          21,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          9,
+          14,
+          22,
+          25,
+          26
+        ],
+        "double_row": 15,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          9,
+          14,
+          23,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          9,
+          14,
+          24,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          9,
+          15,
+          17,
+          25,
+          26
+        ],
+        "double_row": 19,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          9,
+          15,
+          22,
+          25,
+          26
+        ],
+        "double_row": 19,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          9,
+          17,
+          18,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          9,
+          17,
+          19,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          9,
+          17,
+          20,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          9,
+          17,
+          21,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          9,
+          17,
+          22,
+          25,
+          26
+        ],
+        "double_row": 15,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          9,
+          17,
+          23,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          9,
+          17,
+          24,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          9,
+          18,
+          22,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          9,
+          19,
+          22,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          9,
+          20,
+          22,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          9,
+          21,
+          22,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          9,
+          22,
+          23,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          9,
+          22,
+          24,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          10,
+          11,
+          13,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          10,
+          11,
+          14,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          10,
+          11,
+          16,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          10,
+          11,
+          22,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          10,
+          12,
+          13,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          10,
+          12,
+          14,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          10,
+          12,
+          16,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          10,
+          12,
+          22,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          10,
+          13,
+          14,
+          25,
+          26
+        ],
+        "double_row": 15,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          10,
+          13,
+          15,
+          25,
+          26
+        ],
+        "double_row": 19,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          10,
+          13,
+          16,
+          25,
+          26
+        ],
+        "double_row": 15,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          10,
+          13,
+          18,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          10,
+          13,
+          19,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          10,
+          13,
+          20,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          10,
+          13,
+          21,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          10,
+          13,
+          22,
+          25,
+          26
+        ],
+        "double_row": 15,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          10,
+          13,
+          23,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          10,
+          13,
+          24,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          10,
+          14,
+          15,
+          25,
+          26
+        ],
+        "double_row": 19,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          10,
+          14,
+          16,
+          25,
+          26
+        ],
+        "double_row": 15,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          10,
+          14,
+          18,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          10,
+          14,
+          19,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          10,
+          14,
+          20,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          10,
+          14,
+          21,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          10,
+          14,
+          22,
+          25,
+          26
+        ],
+        "double_row": 15,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          10,
+          14,
+          23,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          10,
+          14,
+          24,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          10,
+          15,
+          16,
+          25,
+          26
+        ],
+        "double_row": 19,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          10,
+          15,
+          22,
+          25,
+          26
+        ],
+        "double_row": 19,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          10,
+          16,
+          18,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          10,
+          16,
+          19,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          10,
+          16,
+          20,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          10,
+          16,
+          21,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          10,
+          16,
+          22,
+          25,
+          26
+        ],
+        "double_row": 15,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          10,
+          16,
+          23,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          10,
+          16,
+          24,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          10,
+          18,
+          22,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          10,
+          19,
+          22,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          10,
+          20,
+          22,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          10,
+          21,
+          22,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          10,
+          22,
+          23,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          10,
+          22,
+          24,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          11,
+          13,
+          15,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          11,
+          14,
+          15,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          11,
+          15,
+          16,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          11,
+          15,
+          17,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          11,
+          15,
+          22,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          13,
+          14,
+          15,
+          25,
+          26
+        ],
+        "double_row": 15,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          13,
+          15,
+          16,
+          25,
+          26
+        ],
+        "double_row": 15,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          13,
+          15,
+          17,
+          25,
+          26
+        ],
+        "double_row": 15,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          13,
+          15,
+          18,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          13,
+          15,
+          19,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          13,
+          15,
+          20,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          13,
+          15,
+          21,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          13,
+          15,
+          22,
+          25,
+          26
+        ],
+        "double_row": 15,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          13,
+          15,
+          23,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          13,
+          15,
+          24,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          14,
+          15,
+          16,
+          25,
+          26
+        ],
+        "double_row": 15,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          14,
+          15,
+          17,
+          25,
+          26
+        ],
+        "double_row": 15,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          14,
+          15,
+          18,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          14,
+          15,
+          19,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          14,
+          15,
+          20,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          14,
+          15,
+          21,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          14,
+          15,
+          22,
+          25,
+          26
+        ],
+        "double_row": 15,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          14,
+          15,
+          23,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          14,
+          15,
+          24,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          15,
+          16,
+          17,
+          25,
+          26
+        ],
+        "double_row": 15,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          15,
+          16,
+          18,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          15,
+          16,
+          19,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          15,
+          16,
+          20,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          15,
+          16,
+          21,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          15,
+          16,
+          22,
+          25,
+          26
+        ],
+        "double_row": 15,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          15,
+          16,
+          23,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          15,
+          16,
+          24,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          15,
+          17,
+          18,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          15,
+          17,
+          19,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          15,
+          17,
+          20,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          15,
+          17,
+          21,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          15,
+          17,
+          22,
+          25,
+          26
+        ],
+        "double_row": 15,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          15,
+          17,
+          23,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          15,
+          17,
+          24,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          15,
+          18,
+          22,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          15,
+          19,
+          22,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          15,
+          20,
+          22,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          15,
+          21,
+          22,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          15,
+          22,
+          23,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      },
+      {
+        "indices": [
+          15,
+          22,
+          24,
+          25,
+          26
+        ],
+        "double_row": 18,
+        "four_subset_profile": {
+          "b_only": 3,
+          "disjoint": 2,
+          "zero": 0
+        }
+      }
+    ]
+  },
+  "checks": [
+    {
+      "name": "top50_has_50_rows",
+      "pass": true,
+      "detail": {
+        "actual": 50
+      }
+    },
+    {
+      "name": "top50_root_keys_unique",
+      "pass": true,
+      "detail": {
+        "unique": 50
+      }
+    },
+    {
+      "name": "every_top50_root_covers_two_distinct_valid_rows",
+      "pass": true,
+      "detail": {
+        "row_count": 31
+      }
+    },
+    {
+      "name": "rank26_new_and_full_census_match_published_k26",
+      "pass": true,
+      "detail": {
+        "new": {
+          "pair": {
+            "b_only": 2,
+            "zero": 0,
+            "disjoint": 23,
+            "total": 25,
+            "expected_total": 25
+          },
+          "triple": {
+            "b_only": 134,
+            "zero": 19,
+            "disjoint": 147,
+            "total": 300,
+            "expected_total": 300
+          },
+          "quad": {
+            "b_only": 1194,
+            "zero": 873,
+            "disjoint": 233,
+            "total": 2300,
+            "expected_total": 2300
+          },
+          "quint": {
+            "b_only": 1872,
+            "zero": 10778,
+            "disjoint": 0,
+            "total": 12650,
+            "expected_total": 12650
+          }
+        },
+        "full_triples": {
+          "b_only": 1594,
+          "zero": 542,
+          "disjoint": 464,
+          "total": 2600,
+          "expected_total": 2600
+        },
+        "full_quints": {
+          "b_only": 1872,
+          "zero": 63908,
+          "disjoint": 0,
+          "total": 65780,
+          "expected_total": 65780
+        }
+      }
+    },
+    {
+      "name": "rank26_two_classifiers_agree_on_new_and_full_regressions",
+      "pass": true,
+      "detail": {
+        "new": 15275,
+        "new_mismatches": 0,
+        "full_triples": {
+          "counts": {
+            "b_only": 1594,
+            "zero": 542,
+            "disjoint": 464,
+            "total": 2600,
+            "expected_total": 2600
+          },
+          "compared": 2600,
+          "mismatches": 0
+        },
+        "full_quints": {
+          "counts": {
+            "b_only": 1872,
+            "zero": 63908,
+            "disjoint": 0,
+            "total": 65780,
+            "expected_total": 65780
+          },
+          "compared": 65780,
+          "mismatches": 0
+        }
+      }
+    },
+    {
+      "name": "rank26_root_matches_published_anchor",
+      "pass": true,
+      "detail": {
+        "root": "00000000000000801202000000101002",
+        "rows": [
+          5,
+          16
+        ]
+      }
+    },
+    {
+      "name": "rank27_root_and_rows_match_preread_target",
+      "pass": true,
+      "detail": {
+        "root": "00000000000100003820000008001000",
+        "rows": [
+          12,
+          18
+        ]
+      }
+    },
+    {
+      "name": "rank27_two_classifiers_agree_on_all_17901_combinations",
+      "pass": true,
+      "detail": {
+        "compared": 17901,
+        "mismatches": 0
+      }
+    },
+    {
+      "name": "rank27_combination_totals_match_binomial_counts",
+      "pass": true,
+      "detail": {
+        "actual": [
+          26,
+          325,
+          2600,
+          14950
+        ],
+        "expected": [
+          26,
+          325,
+          2600,
+          14950
+        ]
+      }
+    },
+    {
+      "name": "rank27_disjoint_quad_census_has_22_complete_eight_row_unions",
+      "pass": true,
+      "detail": {
+        "count": 22
+      }
+    },
+    {
+      "name": "rank27_b_only_quint_census_has_309_records",
+      "pass": true,
+      "detail": {
+        "count": 309
+      }
+    },
+    {
+      "name": "rank27_b_only_quint_double_row_histogram_matches",
+      "pass": true,
+      "detail": {
+        "15": 38,
+        "18": 233,
+        "19": 38
+      }
+    },
+    {
+      "name": "rank27_all_b_only_quints_have_three_b_only_two_disjoint_four_subsets",
+      "pass": true,
+      "detail": {
+        "3/2/0": 309
+      }
+    },
+    {
+      "name": "rank27_has_no_disjoint_quints",
+      "pass": true,
+      "detail": {
+        "disjoint": 0
+      }
+    },
+    {
+      "name": "rank27_new_row_overlap_signature",
+      "pass": true,
+      "detail": {
+        "row12_prior_hits": 0,
+        "row18_prior_hits": 13
+      }
+    }
+  ],
+  "check_count": 15,
+  "all_pass": true,
+  "interpretation_guard": "Structural preread of minimum-cover ban combinations only. It does not compute k=27 inclusion-exclusion Pm joints, classify any game position, or produce WIN/LOSS evidence.",
+  "unknown_status": "Standard 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, and classes 1/2/4 remain UNKNOWN."
+}

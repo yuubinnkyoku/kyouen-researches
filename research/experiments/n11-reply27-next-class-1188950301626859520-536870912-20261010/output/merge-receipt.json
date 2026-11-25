@@ -1,0 +1,59 @@
+{
+  "base_cache": {
+    "path": "research/experiments/n11-reply27-class-1297036692683751424-16-20261010/output/current-exact-s5-after-followup-loss.cache",
+    "rows": 5738,
+    "sha256": "c2a49d1f90873e2560f0ea3a5b0a176469e3e0d2bc06727be36a7fe15c8021fe"
+  },
+  "cache": {
+    "path": "research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/current-exact-s5-after-probe.cache",
+    "rows": 5739,
+    "sha256": "7b7e20d297b01341c783b90d503ad9cfb1d87764ea29b19e6752f87c55ce49d2",
+    "verdict_counts": {
+      "1": 158,
+      "2": 5581
+    }
+  },
+  "conflicts": 0,
+  "independent_geometry": {
+    "complete_parent_boundary": 109,
+    "legal_count": 88,
+    "legal_s4_parent_edge": true,
+    "safe_canonical_s5": true
+  },
+  "merged_key": [
+    3494793310840553472,
+    536870912
+  ],
+  "merged_verdict": "LOSS",
+  "plan": {
+    "path": "research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/probe-plan.json",
+    "sha256": "3a3f43ed059c5581f16fae8476ba390c6962fa7cf475d9f480fed26e235dc271"
+  },
+  "quarantine_registry_sha256": "81d231604d3a095c115135e05ca393d6be83e1aadde4f614d3b5a9cc67d17fe9",
+  "raw_history_audit": {
+    "conflicts": 0,
+    "path": "research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/raw-history-after-15m.json",
+    "sha256": "9e8350a5efee171f20e7ef62ff3e09e8f152c4fe3cb9904c11d813516edee663"
+  },
+  "raw_solver": {
+    "budget": 15000000,
+    "input_path": "research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/input/probe-target.csv",
+    "input_sha256": "ced20fdc4373fc4e765ea3500da4238ed5c83ca4e5a252fde810be78ca20fcd6",
+    "nodes": 3981449,
+    "path": "research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/probe-15m.csv",
+    "sha256": "1c90a0cc7123e4f9cfbf11a6bd77fbafe35d273ce626952b60ebba37e99068a7",
+    "verdict": "LOSS"
+  },
+  "schema": "n11-reply27-direct-s5-loss-merge-v1",
+  "solver": {
+    "options": [
+      "--n=11",
+      "--memo=22",
+      "--exact-order=count"
+    ],
+    "path": ".local/n11-independent-audit-solver.exe",
+    "sha256": "ac8f4931e4c81bd06ba1622844933962134f663d970885c2990fbb96a167677a",
+    "source_path": "cpp/solvers/kyouen_dfpn_root.cpp",
+    "source_sha256": "9193f5b6065e0fbcad2ef7c65f386187701cafa1f5b718cc35a5cbb0d138f92e"
+  }
+}

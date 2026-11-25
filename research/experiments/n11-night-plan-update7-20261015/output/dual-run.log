@@ -1,0 +1,19 @@
+{
+  "schema": "n11-night-updated-exact-element-dual-update7-v1",
+  "repaired_plan_sha256": "ea1a58d238a71abcc430c1cca5266b03cb1de5977919f0e3a0e8babc96e84d5c",
+  "baseline_dual_schema": "n11-night-updated-exact-element-dual-update6-v1",
+  "distinct_groups": 948,
+  "paid_groups": 869,
+  "options_scored": 34429,
+  "elements": 962452,
+  "degree_sha256": "8ed13a1af128573915bab8ca274a04a4ad940191adbf56a758e0f203aaf9e6a2",
+  "total_exact": [
+    9126455,
+    1386
+  ],
+  "total_float": 6584.7438672438675,
+  "integer_lower_bound": 6585,
+  "upper_bound": 31771,
+  "method": "beta[t,s,e]=1/deg[e]; exact minimum over ALL options in each paid group; all degree capacities equal 1; ceil by integrality",
+  "note": "identical certificate for the batch and the staged reflection: the dual depends only on legal candidate sets and element-cost obligations, which batch_vs_staged shows to be identical; the three S6-certificate-derived LOSS verdicts (381840 / 402066 / 550881) are removed from the element costs in both"
+}

@@ -1,0 +1,2868 @@
+{
+  "schema": "n11-residual-48-root-depth10-sweep-20261119-v1",
+  "date": "2026-11-19",
+  "status": "sweep-complete",
+  "source_main_head": "c8e974a26629a8b91662f479e1d84e10cae6ddcd",
+  "input_pins": {
+    "cover": {
+      "path": "research/experiments/n11-head1410-residual-cover-after-receipt-fold-20261119/output/five-parent-residual-49-cover-20261119.json",
+      "git_blob_sha1": "a8eaf00bd6494eda50a68e7d06498bed833a7688"
+    },
+    "mobility": {
+      "path": "research/experiments/n11-head1410-residual-cover-after-receipt-fold-20261119/output/49-root-cache-exclusion-mobility-20261119.json",
+      "git_blob_sha1": "b35d54a0ced182153802247452a593096a0acf81"
+    },
+    "prevFoldTarball": {
+      "path": "research/experiments/n11-head1410-residual-cover-after-receipt-fold-20261119/output/first-win7-root-evidence-20261119.tar.gz",
+      "git_blob_sha1": "fa5f26a9dc9bd2fb8222aa8ba0431d7578043019"
+    },
+    "runner": {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/class4_child1_runner_v17.ts",
+      "git_blob_sha1": "c132cc6425eee3feaeef1d697dd74f968cfedb59"
+    }
+  },
+  "probe_records": {
+    "path": "research/experiments/n11-head1410-residual-48-root-sweep-two-win-receipts-20261119/output/residual-48-root-depth10-probe-records-20261119.jsonl",
+    "git_blob_sha1": "96e850d93cd0baf74481dcf06009aa426d221143",
+    "records": 134,
+    "pilot_controls_passed": 134
+  },
+  "engine": {
+    "file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/class4_child1_runner_v17.ts (class4_child1_runner_v17)",
+    "depth": 10,
+    "caps": [
+      950000,
+      4000000,
+      16000000
+    ],
+    "andclose_orderings": [
+      1,
+      0
+    ],
+    "note": "v17 probe-exhaustion fallback (no silent fbt drops); fresh engine per candidate"
+  },
+  "classification_rule": "WIN7-D10 = uncapped loss=true in >=1 ordering (constructive); REFUTED-D10 = uncapped loss=false in >=1 ordering and no uncapped WIN (complete no-win-within-depth-10 proof at this 7-stone root); CAPPED-<cap> = every ordering hit the cap (no verdict). Numbers/nodes are exact proofs; ms fields are observational timing only.",
+  "classification": {
+    "counted_roots": 48,
+    "win7_d10": {
+      "count": 2,
+      "roots": [
+        "00000000000000821082000000042000",
+        "00000000000000821082000000420000"
+      ]
+    },
+    "refuted_d10": {
+      "count": 46,
+      "roots": [
+        "00000000000000003800000008001180",
+        "000000000000000038000000080020c0",
+        "00000000000000003800000008002110",
+        "00000000000000003800000008005200",
+        "00000000000000003800000008011800",
+        "00000000000000003800000008d00000",
+        "00000000000000003800000009040004",
+        "00000000000000003800000209800000",
+        "00000000000000003800000268000000",
+        "0000000000000000380010000a002000",
+        "00000000000000003800200808001000",
+        "00000000000000043800000409000000",
+        "00000000000000043800200008100000",
+        "00000000000000083820000048000000",
+        "00000000000000143800000008080000",
+        "00000000000000801202000000800300",
+        "00000000000000801202000000840400",
+        "00000000000000801202000000901000",
+        "00000000000000801202000001000500",
+        "000000000000008012020000010c0000",
+        "00000000000000801202000011000200",
+        "00000000000000801202010020001000",
+        "00000000000000801202020001001000",
+        "00000000000000801202040000880000",
+        "00000000000000801202050001000000",
+        "000000000000008012020c0000001000",
+        "00000000000000801232000000001000",
+        "00000000000000805212000001000000",
+        "00000000000000821082000000000005",
+        "00000000000000821082000000000018",
+        "00000000000000821082000000100800",
+        "00000000000000821082000600000000",
+        "00000000000000821082600000000000",
+        "00000000000000821086800000000000",
+        "00000000000000909002200080000000",
+        "00000000000000989002000000100000",
+        "00000000000000a89002000080000000",
+        "000000000000a0003800000048000000",
+        "00000000010000809002000040100000",
+        "00000000010020809002000080000000",
+        "00000000020000801202000800100000",
+        "00000000020008003800000008001000",
+        "00000000040000801202000080080000",
+        "00000008000000003800000008100400",
+        "00000010000000801202040000000100",
+        "00000010000000801282000000000400"
+      ]
+    },
+    "capped": {
+      "count": 0,
+      "roots": [],
+      "note": "no depth-10 verdict at the highest cap tried (16,000,000)"
+    },
+    "ordering_conflicts": []
+  },
+  "rows": [
+    {
+      "root": "00000000000000805212000001000000",
+      "priority_index": 1,
+      "declared_covered_rows": [
+        "00000000000000801212000001000000",
+        "00000000000000805202000001000000"
+      ],
+      "legal_next_moves": 49,
+      "d4_orbit": 8,
+      "added_bit_rule": "highest set bit of the root; engine verdict independent of the choice",
+      "probes": [
+        {
+          "ordering": "andclose0",
+          "cap": 950000,
+          "loss": false,
+          "nodes": 950001,
+          "capped": true,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 1800,
+          "ms_is_observational": true
+        },
+        {
+          "ordering": "andclose1",
+          "cap": 950000,
+          "loss": false,
+          "nodes": 880996,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 1795,
+          "ms_is_observational": true
+        }
+      ],
+      "classification": "REFUTED-D10"
+    },
+    {
+      "root": "00000000000000003800000209800000",
+      "priority_index": 2,
+      "declared_covered_rows": [
+        "00000000000000003800000009800000",
+        "00000000000000003800000209000000"
+      ],
+      "legal_next_moves": 51,
+      "d4_orbit": 8,
+      "added_bit_rule": "highest set bit of the root; engine verdict independent of the choice",
+      "probes": [
+        {
+          "ordering": "andclose0",
+          "cap": 4000000,
+          "loss": false,
+          "nodes": 1066650,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 2179,
+          "ms_is_observational": true
+        },
+        {
+          "ordering": "andclose0",
+          "cap": 950000,
+          "loss": false,
+          "nodes": 950001,
+          "capped": true,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 1985,
+          "ms_is_observational": true
+        },
+        {
+          "ordering": "andclose1",
+          "cap": 4000000,
+          "loss": false,
+          "nodes": 1570227,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 3237,
+          "ms_is_observational": true
+        },
+        {
+          "ordering": "andclose1",
+          "cap": 950000,
+          "loss": false,
+          "nodes": 950001,
+          "capped": true,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 2066,
+          "ms_is_observational": true
+        }
+      ],
+      "classification": "REFUTED-D10"
+    },
+    {
+      "root": "00000000000000801202010020001000",
+      "priority_index": 3,
+      "declared_covered_rows": [
+        "00000000000000801202000020001000",
+        "00000000000000801202010000001000"
+      ],
+      "legal_next_moves": 51,
+      "d4_orbit": 8,
+      "added_bit_rule": "highest set bit of the root; engine verdict independent of the choice",
+      "probes": [
+        {
+          "ordering": "andclose0",
+          "cap": 950000,
+          "loss": false,
+          "nodes": 406825,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 844,
+          "ms_is_observational": true
+        },
+        {
+          "ordering": "andclose1",
+          "cap": 950000,
+          "loss": false,
+          "nodes": 252986,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 555,
+          "ms_is_observational": true
+        }
+      ],
+      "classification": "REFUTED-D10"
+    },
+    {
+      "root": "00000000000000801202020001001000",
+      "priority_index": 4,
+      "declared_covered_rows": [
+        "00000000000000801202020000001000",
+        "00000000000000801202020001000000"
+      ],
+      "legal_next_moves": 51,
+      "d4_orbit": 8,
+      "added_bit_rule": "highest set bit of the root; engine verdict independent of the choice",
+      "probes": [
+        {
+          "ordering": "andclose0",
+          "cap": 950000,
+          "loss": false,
+          "nodes": 611893,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 1218,
+          "ms_is_observational": true
+        },
+        {
+          "ordering": "andclose1",
+          "cap": 950000,
+          "loss": false,
+          "nodes": 149638,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 334,
+          "ms_is_observational": true
+        }
+      ],
+      "classification": "REFUTED-D10"
+    },
+    {
+      "root": "00000000000000821082000000100800",
+      "priority_index": 5,
+      "declared_covered_rows": [
+        "00000000000000821082000000000800",
+        "00000000000000821082000000001000"
+      ],
+      "legal_next_moves": 51,
+      "d4_orbit": 8,
+      "added_bit_rule": "highest set bit of the root; engine verdict independent of the choice",
+      "probes": [
+        {
+          "ordering": "andclose0",
+          "cap": 950000,
+          "loss": false,
+          "nodes": 394387,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 746,
+          "ms_is_observational": true
+        },
+        {
+          "ordering": "andclose1",
+          "cap": 950000,
+          "loss": false,
+          "nodes": 169094,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 363,
+          "ms_is_observational": true
+        }
+      ],
+      "classification": "REFUTED-D10"
+    },
+    {
+      "root": "00000000000000821082600000000000",
+      "priority_index": 6,
+      "declared_covered_rows": [
+        "00000000000000821082200000000000",
+        "00000000000000821082400000000000"
+      ],
+      "legal_next_moves": 51,
+      "d4_orbit": 8,
+      "added_bit_rule": "highest set bit of the root; engine verdict independent of the choice",
+      "probes": [
+        {
+          "ordering": "andclose0",
+          "cap": 950000,
+          "loss": false,
+          "nodes": 564359,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 1066,
+          "ms_is_observational": true
+        },
+        {
+          "ordering": "andclose1",
+          "cap": 950000,
+          "loss": false,
+          "nodes": 141901,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 328,
+          "ms_is_observational": true
+        }
+      ],
+      "classification": "REFUTED-D10"
+    },
+    {
+      "root": "00000010000000801282000000000400",
+      "priority_index": 7,
+      "declared_covered_rows": [
+        "00000000000000003800000008001020",
+        "00000010000000801202000000000400"
+      ],
+      "legal_next_moves": 51,
+      "d4_orbit": 8,
+      "added_bit_rule": "highest set bit of the root; engine verdict independent of the choice",
+      "probes": [
+        {
+          "ordering": "andclose0",
+          "cap": 950000,
+          "loss": false,
+          "nodes": 646171,
+          "capped": false,
+          "terminal_range": [
+            15,
+            17
+          ],
+          "ms": 1280,
+          "ms_is_observational": true
+        },
+        {
+          "ordering": "andclose1",
+          "cap": 950000,
+          "loss": false,
+          "nodes": 245868,
+          "capped": false,
+          "terminal_range": [
+            15,
+            17
+          ],
+          "ms": 541,
+          "ms_is_observational": true
+        }
+      ],
+      "classification": "REFUTED-D10"
+    },
+    {
+      "root": "00000000000000003800200808001000",
+      "priority_index": 8,
+      "declared_covered_rows": [
+        "00000000000000003800000808001000",
+        "00000000000000003800200008001000"
+      ],
+      "legal_next_moves": 54,
+      "d4_orbit": 8,
+      "added_bit_rule": "highest set bit of the root; engine verdict independent of the choice",
+      "probes": [
+        {
+          "ordering": "andclose0",
+          "cap": 950000,
+          "loss": false,
+          "nodes": 725822,
+          "capped": false,
+          "terminal_range": [
+            15,
+            17
+          ],
+          "ms": 1595,
+          "ms_is_observational": true
+        },
+        {
+          "ordering": "andclose1",
+          "cap": 950000,
+          "loss": false,
+          "nodes": 540309,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 1131,
+          "ms_is_observational": true
+        }
+      ],
+      "classification": "REFUTED-D10"
+    },
+    {
+      "root": "00000000000000801202000000901000",
+      "priority_index": 9,
+      "declared_covered_rows": [
+        "00000000000000801202000000101000",
+        "00000000000000801202000000900000"
+      ],
+      "legal_next_moves": 54,
+      "d4_orbit": 8,
+      "added_bit_rule": "highest set bit of the root; engine verdict independent of the choice",
+      "probes": [
+        {
+          "ordering": "andclose0",
+          "cap": 950000,
+          "loss": false,
+          "nodes": 950001,
+          "capped": true,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 1894,
+          "ms_is_observational": true
+        },
+        {
+          "ordering": "andclose1",
+          "cap": 950000,
+          "loss": false,
+          "nodes": 519371,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 1113,
+          "ms_is_observational": true
+        }
+      ],
+      "classification": "REFUTED-D10"
+    },
+    {
+      "root": "00000000000000821086800000000000",
+      "priority_index": 10,
+      "declared_covered_rows": [
+        "00000000000000821082800000000000",
+        "00000000000000821083000000000000"
+      ],
+      "legal_next_moves": 54,
+      "d4_orbit": 8,
+      "added_bit_rule": "highest set bit of the root; engine verdict independent of the choice",
+      "probes": [
+        {
+          "ordering": "andclose0",
+          "cap": 950000,
+          "loss": false,
+          "nodes": 243344,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 509,
+          "ms_is_observational": true
+        },
+        {
+          "ordering": "andclose1",
+          "cap": 950000,
+          "loss": false,
+          "nodes": 429923,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 899,
+          "ms_is_observational": true
+        }
+      ],
+      "classification": "REFUTED-D10"
+    },
+    {
+      "root": "00000000000000a89002000080000000",
+      "priority_index": 11,
+      "declared_covered_rows": [
+        "00000000000000889002000080000000",
+        "00000000000000a09002000080000000"
+      ],
+      "legal_next_moves": 54,
+      "d4_orbit": 8,
+      "added_bit_rule": "highest set bit of the root; engine verdict independent of the choice",
+      "probes": [
+        {
+          "ordering": "andclose0",
+          "cap": 950000,
+          "loss": false,
+          "nodes": 926913,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 1824,
+          "ms_is_observational": true
+        },
+        {
+          "ordering": "andclose1",
+          "cap": 950000,
+          "loss": false,
+          "nodes": 514092,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 1081,
+          "ms_is_observational": true
+        }
+      ],
+      "classification": "REFUTED-D10"
+    },
+    {
+      "root": "00000000020008003800000008001000",
+      "priority_index": 12,
+      "declared_covered_rows": [
+        "00000000000000083800000008100000",
+        "00000000000000801202000000081000"
+      ],
+      "legal_next_moves": 54,
+      "d4_orbit": 8,
+      "added_bit_rule": "highest set bit of the root; engine verdict independent of the choice",
+      "probes": [
+        {
+          "ordering": "andclose0",
+          "cap": 950000,
+          "loss": false,
+          "nodes": 298756,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 599,
+          "ms_is_observational": true
+        },
+        {
+          "ordering": "andclose1",
+          "cap": 950000,
+          "loss": false,
+          "nodes": 187729,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 431,
+          "ms_is_observational": true
+        }
+      ],
+      "classification": "REFUTED-D10"
+    },
+    {
+      "root": "00000000000000821082000000042000",
+      "priority_index": 13,
+      "declared_covered_rows": [
+        "00000000000000821082000000002000",
+        "00000000000000821082000000004000"
+      ],
+      "legal_next_moves": 55,
+      "d4_orbit": 8,
+      "added_bit_rule": "highest set bit of the root; engine verdict independent of the choice",
+      "probes": [
+        {
+          "ordering": "andclose0",
+          "cap": 950000,
+          "loss": true,
+          "nodes": 935332,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 1703,
+          "ms_is_observational": true
+        },
+        {
+          "ordering": "andclose1",
+          "cap": 950000,
+          "loss": true,
+          "nodes": 665812,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 1305,
+          "ms_is_observational": true
+        }
+      ],
+      "classification": "WIN7-D10"
+    },
+    {
+      "root": "000000000000000038000000080020c0",
+      "priority_index": 14,
+      "declared_covered_rows": [
+        "00000000000000003800000008002040",
+        "00000000000000003800000008002080"
+      ],
+      "legal_next_moves": 56,
+      "d4_orbit": 8,
+      "added_bit_rule": "highest set bit of the root; engine verdict independent of the choice",
+      "probes": [
+        {
+          "ordering": "andclose0",
+          "cap": 950000,
+          "loss": false,
+          "nodes": 950001,
+          "capped": true,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 2021,
+          "ms_is_observational": true
+        },
+        {
+          "ordering": "andclose1",
+          "cap": 950000,
+          "loss": false,
+          "nodes": 170115,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 398,
+          "ms_is_observational": true
+        }
+      ],
+      "classification": "REFUTED-D10"
+    },
+    {
+      "root": "00000000020000801202000800100000",
+      "priority_index": 15,
+      "declared_covered_rows": [
+        "0000000000000000380000000a080000",
+        "00000000020000801202000000100000"
+      ],
+      "legal_next_moves": 56,
+      "d4_orbit": 8,
+      "added_bit_rule": "highest set bit of the root; engine verdict independent of the choice",
+      "probes": [
+        {
+          "ordering": "andclose0",
+          "cap": 950000,
+          "loss": false,
+          "nodes": 950001,
+          "capped": true,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 2035,
+          "ms_is_observational": true
+        },
+        {
+          "ordering": "andclose1",
+          "cap": 950000,
+          "loss": false,
+          "nodes": 320727,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 697,
+          "ms_is_observational": true
+        }
+      ],
+      "classification": "REFUTED-D10"
+    },
+    {
+      "root": "00000000000000003800000008011800",
+      "priority_index": 16,
+      "declared_covered_rows": [
+        "00000000000000003800000008001800",
+        "00000000000000003800000008011000"
+      ],
+      "legal_next_moves": 57,
+      "d4_orbit": 8,
+      "added_bit_rule": "highest set bit of the root; engine verdict independent of the choice",
+      "probes": [
+        {
+          "ordering": "andclose0",
+          "cap": 950000,
+          "loss": false,
+          "nodes": 874657,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 1843,
+          "ms_is_observational": true
+        },
+        {
+          "ordering": "andclose1",
+          "cap": 950000,
+          "loss": false,
+          "nodes": 950001,
+          "capped": true,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 2013,
+          "ms_is_observational": true
+        }
+      ],
+      "classification": "REFUTED-D10"
+    },
+    {
+      "root": "0000000000000000380010000a002000",
+      "priority_index": 17,
+      "declared_covered_rows": [
+        "0000000000000000380000000a002000",
+        "00000000000000003800100008002000"
+      ],
+      "legal_next_moves": 57,
+      "d4_orbit": 8,
+      "added_bit_rule": "highest set bit of the root; engine verdict independent of the choice",
+      "probes": [
+        {
+          "ordering": "andclose0",
+          "cap": 950000,
+          "loss": false,
+          "nodes": 439174,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 898,
+          "ms_is_observational": true
+        },
+        {
+          "ordering": "andclose1",
+          "cap": 950000,
+          "loss": false,
+          "nodes": 950001,
+          "capped": true,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 2078,
+          "ms_is_observational": true
+        }
+      ],
+      "classification": "REFUTED-D10"
+    },
+    {
+      "root": "00000000000000801202050001000000",
+      "priority_index": 18,
+      "declared_covered_rows": [
+        "00000000000000801202010001000000",
+        "00000000000000801202040001000000"
+      ],
+      "legal_next_moves": 58,
+      "d4_orbit": 8,
+      "added_bit_rule": "highest set bit of the root; engine verdict independent of the choice",
+      "probes": [
+        {
+          "ordering": "andclose0",
+          "cap": 950000,
+          "loss": false,
+          "nodes": 399253,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 855,
+          "ms_is_observational": true
+        },
+        {
+          "ordering": "andclose1",
+          "cap": 950000,
+          "loss": false,
+          "nodes": 236445,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 514,
+          "ms_is_observational": true
+        }
+      ],
+      "classification": "REFUTED-D10"
+    },
+    {
+      "root": "00000000000000821082000000000005",
+      "priority_index": 19,
+      "declared_covered_rows": [
+        "00000000000000821082000000000001",
+        "00000000000000821082000000000004"
+      ],
+      "legal_next_moves": 58,
+      "d4_orbit": 8,
+      "added_bit_rule": "highest set bit of the root; engine verdict independent of the choice",
+      "probes": [
+        {
+          "ordering": "andclose0",
+          "cap": 950000,
+          "loss": false,
+          "nodes": 319226,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 696,
+          "ms_is_observational": true
+        },
+        {
+          "ordering": "andclose1",
+          "cap": 950000,
+          "loss": false,
+          "nodes": 367919,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 826,
+          "ms_is_observational": true
+        }
+      ],
+      "classification": "REFUTED-D10"
+    },
+    {
+      "root": "00000000000000821082000000420000",
+      "priority_index": 20,
+      "declared_covered_rows": [
+        "00000000000000821082000000008000",
+        "00000000000000821082000000400000"
+      ],
+      "legal_next_moves": 59,
+      "d4_orbit": 8,
+      "added_bit_rule": "highest set bit of the root; engine verdict independent of the choice",
+      "probes": [
+        {
+          "ordering": "andclose0",
+          "cap": 950000,
+          "loss": false,
+          "nodes": 950001,
+          "capped": true,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 1903,
+          "ms_is_observational": true
+        },
+        {
+          "ordering": "andclose1",
+          "cap": 950000,
+          "loss": true,
+          "nodes": 875721,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 1670,
+          "ms_is_observational": true
+        }
+      ],
+      "classification": "WIN7-D10"
+    },
+    {
+      "root": "00000000000000909002200080000000",
+      "priority_index": 21,
+      "declared_covered_rows": [
+        "00000000000000801222000000800000",
+        "00000000000000909002000080000000"
+      ],
+      "legal_next_moves": 60,
+      "d4_orbit": 8,
+      "added_bit_rule": "highest set bit of the root; engine verdict independent of the choice",
+      "probes": [
+        {
+          "ordering": "andclose0",
+          "cap": 950000,
+          "loss": false,
+          "nodes": 950001,
+          "capped": true,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 2046,
+          "ms_is_observational": true
+        },
+        {
+          "ordering": "andclose1",
+          "cap": 950000,
+          "loss": false,
+          "nodes": 355902,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 832,
+          "ms_is_observational": true
+        }
+      ],
+      "classification": "REFUTED-D10"
+    },
+    {
+      "root": "00000000000000003800000008002110",
+      "priority_index": 22,
+      "declared_covered_rows": [
+        "00000000000000003800000008002010",
+        "00000000000000003800000008002100"
+      ],
+      "legal_next_moves": 61,
+      "d4_orbit": 8,
+      "added_bit_rule": "highest set bit of the root; engine verdict independent of the choice",
+      "probes": [
+        {
+          "ordering": "andclose0",
+          "cap": 4000000,
+          "loss": false,
+          "nodes": 1918139,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 4075,
+          "ms_is_observational": true
+        },
+        {
+          "ordering": "andclose0",
+          "cap": 950000,
+          "loss": false,
+          "nodes": 950001,
+          "capped": true,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 2040,
+          "ms_is_observational": true
+        },
+        {
+          "ordering": "andclose1",
+          "cap": 4000000,
+          "loss": false,
+          "nodes": 4000001,
+          "capped": true,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 8834,
+          "ms_is_observational": true
+        },
+        {
+          "ordering": "andclose1",
+          "cap": 950000,
+          "loss": false,
+          "nodes": 950001,
+          "capped": true,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 2209,
+          "ms_is_observational": true
+        }
+      ],
+      "classification": "REFUTED-D10"
+    },
+    {
+      "root": "00000000000000801202040000880000",
+      "priority_index": 23,
+      "declared_covered_rows": [
+        "00000000000000801202000000880000",
+        "00000000000000801202040000800000"
+      ],
+      "legal_next_moves": 61,
+      "d4_orbit": 8,
+      "added_bit_rule": "highest set bit of the root; engine verdict independent of the choice",
+      "probes": [
+        {
+          "ordering": "andclose0",
+          "cap": 950000,
+          "loss": false,
+          "nodes": 950001,
+          "capped": true,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 2045,
+          "ms_is_observational": true
+        },
+        {
+          "ordering": "andclose1",
+          "cap": 950000,
+          "loss": false,
+          "nodes": 765564,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 1580,
+          "ms_is_observational": true
+        }
+      ],
+      "classification": "REFUTED-D10"
+    },
+    {
+      "root": "00000000000000003800000008005200",
+      "priority_index": 24,
+      "declared_covered_rows": [
+        "00000000000000003800000008001200",
+        "00000000000000003800000008005000"
+      ],
+      "legal_next_moves": 62,
+      "d4_orbit": 8,
+      "added_bit_rule": "highest set bit of the root; engine verdict independent of the choice",
+      "probes": [
+        {
+          "ordering": "andclose0",
+          "cap": 4000000,
+          "loss": false,
+          "nodes": 1269673,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 2900,
+          "ms_is_observational": true
+        },
+        {
+          "ordering": "andclose0",
+          "cap": 950000,
+          "loss": false,
+          "nodes": 950001,
+          "capped": true,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 2049,
+          "ms_is_observational": true
+        },
+        {
+          "ordering": "andclose1",
+          "cap": 4000000,
+          "loss": false,
+          "nodes": 2041240,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 4479,
+          "ms_is_observational": true
+        },
+        {
+          "ordering": "andclose1",
+          "cap": 950000,
+          "loss": false,
+          "nodes": 950001,
+          "capped": true,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 2106,
+          "ms_is_observational": true
+        }
+      ],
+      "classification": "REFUTED-D10"
+    },
+    {
+      "root": "00000000000000003800000008d00000",
+      "priority_index": 25,
+      "declared_covered_rows": [
+        "00000000000000003800000008500000",
+        "00000000000000003800000008900000"
+      ],
+      "legal_next_moves": 62,
+      "d4_orbit": 8,
+      "added_bit_rule": "highest set bit of the root; engine verdict independent of the choice",
+      "probes": [
+        {
+          "ordering": "andclose0",
+          "cap": 4000000,
+          "loss": false,
+          "nodes": 1701342,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 3434,
+          "ms_is_observational": true
+        },
+        {
+          "ordering": "andclose0",
+          "cap": 950000,
+          "loss": false,
+          "nodes": 950001,
+          "capped": true,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 1931,
+          "ms_is_observational": true
+        },
+        {
+          "ordering": "andclose1",
+          "cap": 4000000,
+          "loss": false,
+          "nodes": 1425240,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 3176,
+          "ms_is_observational": true
+        },
+        {
+          "ordering": "andclose1",
+          "cap": 950000,
+          "loss": false,
+          "nodes": 950001,
+          "capped": true,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 1983,
+          "ms_is_observational": true
+        }
+      ],
+      "classification": "REFUTED-D10"
+    },
+    {
+      "root": "00000000000000003800000268000000",
+      "priority_index": 26,
+      "declared_covered_rows": [
+        "0000000000000000380000000b000000",
+        "00000000000000003800000248000000"
+      ],
+      "legal_next_moves": 63,
+      "d4_orbit": 8,
+      "added_bit_rule": "highest set bit of the root; engine verdict independent of the choice",
+      "probes": [
+        {
+          "ordering": "andclose0",
+          "cap": 16000000,
+          "loss": false,
+          "nodes": 5721204,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 12181,
+          "ms_is_observational": true
+        },
+        {
+          "ordering": "andclose0",
+          "cap": 4000000,
+          "loss": false,
+          "nodes": 4000001,
+          "capped": true,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 8636,
+          "ms_is_observational": true
+        },
+        {
+          "ordering": "andclose0",
+          "cap": 950000,
+          "loss": false,
+          "nodes": 950001,
+          "capped": true,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 1943,
+          "ms_is_observational": true
+        },
+        {
+          "ordering": "andclose1",
+          "cap": 16000000,
+          "loss": false,
+          "nodes": 9173186,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 19217,
+          "ms_is_observational": true
+        },
+        {
+          "ordering": "andclose1",
+          "cap": 4000000,
+          "loss": false,
+          "nodes": 4000001,
+          "capped": true,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 8643,
+          "ms_is_observational": true
+        },
+        {
+          "ordering": "andclose1",
+          "cap": 950000,
+          "loss": false,
+          "nodes": 950001,
+          "capped": true,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 2140,
+          "ms_is_observational": true
+        }
+      ],
+      "classification": "REFUTED-D10"
+    },
+    {
+      "root": "000000000000a0003800000048000000",
+      "priority_index": 27,
+      "declared_covered_rows": [
+        "00000000000020003800000048000000",
+        "00000000000080003800000048000000"
+      ],
+      "legal_next_moves": 63,
+      "d4_orbit": 8,
+      "added_bit_rule": "highest set bit of the root; engine verdict independent of the choice",
+      "probes": [
+        {
+          "ordering": "andclose0",
+          "cap": 950000,
+          "loss": false,
+          "nodes": 950001,
+          "capped": true,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 2005,
+          "ms_is_observational": true
+        },
+        {
+          "ordering": "andclose1",
+          "cap": 950000,
+          "loss": false,
+          "nodes": 174393,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 431,
+          "ms_is_observational": true
+        }
+      ],
+      "classification": "REFUTED-D10"
+    },
+    {
+      "root": "00000000040000801202000080080000",
+      "priority_index": 28,
+      "declared_covered_rows": [
+        "00000000020000809002000040000000"
+      ],
+      "legal_next_moves": 63,
+      "d4_orbit": 8,
+      "added_bit_rule": "highest set bit of the root; engine verdict independent of the choice",
+      "probes": [
+        {
+          "ordering": "andclose0",
+          "cap": 950000,
+          "loss": false,
+          "nodes": 598428,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 1293,
+          "ms_is_observational": true
+        },
+        {
+          "ordering": "andclose1",
+          "cap": 950000,
+          "loss": false,
+          "nodes": 461434,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 1029,
+          "ms_is_observational": true
+        }
+      ],
+      "classification": "REFUTED-D10"
+    },
+    {
+      "root": "00000000000000801202000000800300",
+      "priority_index": 29,
+      "declared_covered_rows": [
+        "00000000000000801202000000800100",
+        "00000000000000801202000000800200"
+      ],
+      "legal_next_moves": 64,
+      "d4_orbit": 8,
+      "added_bit_rule": "highest set bit of the root; engine verdict independent of the choice",
+      "probes": [
+        {
+          "ordering": "andclose0",
+          "cap": 4000000,
+          "loss": false,
+          "nodes": 1616056,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 3322,
+          "ms_is_observational": true
+        },
+        {
+          "ordering": "andclose0",
+          "cap": 950000,
+          "loss": false,
+          "nodes": 950001,
+          "capped": true,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 2042,
+          "ms_is_observational": true
+        },
+        {
+          "ordering": "andclose1",
+          "cap": 4000000,
+          "loss": false,
+          "nodes": 1076200,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 2181,
+          "ms_is_observational": true
+        },
+        {
+          "ordering": "andclose1",
+          "cap": 950000,
+          "loss": false,
+          "nodes": 950001,
+          "capped": true,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 1954,
+          "ms_is_observational": true
+        }
+      ],
+      "classification": "REFUTED-D10"
+    },
+    {
+      "root": "00000000000000043800000409000000",
+      "priority_index": 30,
+      "declared_covered_rows": [
+        "00000000000000003800000409000000",
+        "00000000000000043800000009000000"
+      ],
+      "legal_next_moves": 65,
+      "d4_orbit": 8,
+      "added_bit_rule": "highest set bit of the root; engine verdict independent of the choice",
+      "probes": [
+        {
+          "ordering": "andclose0",
+          "cap": 4000000,
+          "loss": false,
+          "nodes": 3333641,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 6936,
+          "ms_is_observational": true
+        },
+        {
+          "ordering": "andclose0",
+          "cap": 950000,
+          "loss": false,
+          "nodes": 950001,
+          "capped": true,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 1921,
+          "ms_is_observational": true
+        },
+        {
+          "ordering": "andclose1",
+          "cap": 4000000,
+          "loss": false,
+          "nodes": 4000001,
+          "capped": true,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 8646,
+          "ms_is_observational": true
+        },
+        {
+          "ordering": "andclose1",
+          "cap": 950000,
+          "loss": false,
+          "nodes": 950001,
+          "capped": true,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 2056,
+          "ms_is_observational": true
+        }
+      ],
+      "classification": "REFUTED-D10"
+    },
+    {
+      "root": "00000000000000083820000048000000",
+      "priority_index": 31,
+      "declared_covered_rows": [
+        "00000000000000003800200009000000",
+        "00000000000000083800000048000000"
+      ],
+      "legal_next_moves": 65,
+      "d4_orbit": 8,
+      "added_bit_rule": "highest set bit of the root; engine verdict independent of the choice",
+      "probes": [
+        {
+          "ordering": "andclose0",
+          "cap": 950000,
+          "loss": false,
+          "nodes": 950001,
+          "capped": true,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 1986,
+          "ms_is_observational": true
+        },
+        {
+          "ordering": "andclose1",
+          "cap": 950000,
+          "loss": false,
+          "nodes": 699900,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 1523,
+          "ms_is_observational": true
+        }
+      ],
+      "classification": "REFUTED-D10"
+    },
+    {
+      "root": "00000000000000801202000001000500",
+      "priority_index": 32,
+      "declared_covered_rows": [
+        "00000000000000801202000001000100",
+        "00000000000000801202000001000400"
+      ],
+      "legal_next_moves": 65,
+      "d4_orbit": 8,
+      "added_bit_rule": "highest set bit of the root; engine verdict independent of the choice",
+      "probes": [
+        {
+          "ordering": "andclose0",
+          "cap": 950000,
+          "loss": false,
+          "nodes": 496780,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 1015,
+          "ms_is_observational": true
+        },
+        {
+          "ordering": "andclose1",
+          "cap": 950000,
+          "loss": false,
+          "nodes": 382591,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 816,
+          "ms_is_observational": true
+        }
+      ],
+      "classification": "REFUTED-D10"
+    },
+    {
+      "root": "000000000000008012020000010c0000",
+      "priority_index": 33,
+      "declared_covered_rows": [
+        "00000000000000801202000001040000",
+        "00000000000000801202000001080000"
+      ],
+      "legal_next_moves": 65,
+      "d4_orbit": 8,
+      "added_bit_rule": "highest set bit of the root; engine verdict independent of the choice",
+      "probes": [
+        {
+          "ordering": "andclose0",
+          "cap": 4000000,
+          "loss": false,
+          "nodes": 1776711,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 3567,
+          "ms_is_observational": true
+        },
+        {
+          "ordering": "andclose0",
+          "cap": 950000,
+          "loss": false,
+          "nodes": 950001,
+          "capped": true,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 1971,
+          "ms_is_observational": true
+        },
+        {
+          "ordering": "andclose1",
+          "cap": 4000000,
+          "loss": false,
+          "nodes": 1027724,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 2166,
+          "ms_is_observational": true
+        },
+        {
+          "ordering": "andclose1",
+          "cap": 950000,
+          "loss": false,
+          "nodes": 950001,
+          "capped": true,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 2062,
+          "ms_is_observational": true
+        }
+      ],
+      "classification": "REFUTED-D10"
+    },
+    {
+      "root": "00000000010000809002000040100000",
+      "priority_index": 34,
+      "declared_covered_rows": [
+        "00000000010000809002000000100000",
+        "00000000010000809002000040000000"
+      ],
+      "legal_next_moves": 65,
+      "d4_orbit": 8,
+      "added_bit_rule": "highest set bit of the root; engine verdict independent of the choice",
+      "probes": [
+        {
+          "ordering": "andclose0",
+          "cap": 950000,
+          "loss": false,
+          "nodes": 950001,
+          "capped": true,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 2315,
+          "ms_is_observational": true
+        },
+        {
+          "ordering": "andclose1",
+          "cap": 950000,
+          "loss": false,
+          "nodes": 829998,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 1897,
+          "ms_is_observational": true
+        }
+      ],
+      "classification": "REFUTED-D10"
+    },
+    {
+      "root": "00000000000000143800000008080000",
+      "priority_index": 35,
+      "declared_covered_rows": [
+        "00000000000000043800000008080000",
+        "00000000000000103800000008080000"
+      ],
+      "legal_next_moves": 66,
+      "d4_orbit": 8,
+      "added_bit_rule": "highest set bit of the root; engine verdict independent of the choice",
+      "probes": [
+        {
+          "ordering": "andclose0",
+          "cap": 4000000,
+          "loss": false,
+          "nodes": 1794598,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 3606,
+          "ms_is_observational": true
+        },
+        {
+          "ordering": "andclose0",
+          "cap": 950000,
+          "loss": false,
+          "nodes": 950001,
+          "capped": true,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 1955,
+          "ms_is_observational": true
+        },
+        {
+          "ordering": "andclose1",
+          "cap": 4000000,
+          "loss": false,
+          "nodes": 980212,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 2368,
+          "ms_is_observational": true
+        },
+        {
+          "ordering": "andclose1",
+          "cap": 950000,
+          "loss": false,
+          "nodes": 950001,
+          "capped": true,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 2185,
+          "ms_is_observational": true
+        }
+      ],
+      "classification": "REFUTED-D10"
+    },
+    {
+      "root": "00000000000000801202000000840400",
+      "priority_index": 36,
+      "declared_covered_rows": [
+        "00000000000000801202000000800400",
+        "00000000000000801202000000840000"
+      ],
+      "legal_next_moves": 66,
+      "d4_orbit": 8,
+      "added_bit_rule": "highest set bit of the root; engine verdict independent of the choice",
+      "probes": [
+        {
+          "ordering": "andclose0",
+          "cap": 950000,
+          "loss": false,
+          "nodes": 950001,
+          "capped": true,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 2141,
+          "ms_is_observational": true
+        },
+        {
+          "ordering": "andclose1",
+          "cap": 950000,
+          "loss": false,
+          "nodes": 665774,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 1493,
+          "ms_is_observational": true
+        }
+      ],
+      "classification": "REFUTED-D10"
+    },
+    {
+      "root": "00000000000000801202000011000200",
+      "priority_index": 37,
+      "declared_covered_rows": [
+        "00000000000000103800000009000000",
+        "00000000000000801202000001000200"
+      ],
+      "legal_next_moves": 66,
+      "d4_orbit": 8,
+      "added_bit_rule": "highest set bit of the root; engine verdict independent of the choice",
+      "probes": [
+        {
+          "ordering": "andclose0",
+          "cap": 950000,
+          "loss": false,
+          "nodes": 950001,
+          "capped": true,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 2007,
+          "ms_is_observational": true
+        },
+        {
+          "ordering": "andclose1",
+          "cap": 950000,
+          "loss": false,
+          "nodes": 528827,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 1207,
+          "ms_is_observational": true
+        }
+      ],
+      "classification": "REFUTED-D10"
+    },
+    {
+      "root": "00000000000000821082000600000000",
+      "priority_index": 38,
+      "declared_covered_rows": [
+        "00000000000000821082000200000000",
+        "00000000000000821082000400000000"
+      ],
+      "legal_next_moves": 66,
+      "d4_orbit": 8,
+      "added_bit_rule": "highest set bit of the root; engine verdict independent of the choice",
+      "probes": [
+        {
+          "ordering": "andclose0",
+          "cap": 950000,
+          "loss": false,
+          "nodes": 950001,
+          "capped": true,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 1994,
+          "ms_is_observational": true
+        },
+        {
+          "ordering": "andclose1",
+          "cap": 950000,
+          "loss": false,
+          "nodes": 849479,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 1873,
+          "ms_is_observational": true
+        }
+      ],
+      "classification": "REFUTED-D10"
+    },
+    {
+      "root": "00000000000000989002000000100000",
+      "priority_index": 39,
+      "declared_covered_rows": [
+        "00000000000000889002000000100000",
+        "00000000000000909002000000100000"
+      ],
+      "legal_next_moves": 66,
+      "d4_orbit": 8,
+      "added_bit_rule": "highest set bit of the root; engine verdict independent of the choice",
+      "probes": [
+        {
+          "ordering": "andclose0",
+          "cap": 4000000,
+          "loss": false,
+          "nodes": 4000001,
+          "capped": true,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 9153,
+          "ms_is_observational": true
+        },
+        {
+          "ordering": "andclose0",
+          "cap": 950000,
+          "loss": false,
+          "nodes": 950001,
+          "capped": true,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 2045,
+          "ms_is_observational": true
+        },
+        {
+          "ordering": "andclose1",
+          "cap": 4000000,
+          "loss": false,
+          "nodes": 1754917,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 4118,
+          "ms_is_observational": true
+        },
+        {
+          "ordering": "andclose1",
+          "cap": 950000,
+          "loss": false,
+          "nodes": 950001,
+          "capped": true,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 2224,
+          "ms_is_observational": true
+        }
+      ],
+      "classification": "REFUTED-D10"
+    },
+    {
+      "root": "00000000000000801232000000001000",
+      "priority_index": 40,
+      "declared_covered_rows": [
+        "00000000000000801212000000001000",
+        "00000000000000801222000000001000"
+      ],
+      "legal_next_moves": 67,
+      "d4_orbit": 8,
+      "added_bit_rule": "highest set bit of the root; engine verdict independent of the choice",
+      "probes": [
+        {
+          "ordering": "andclose0",
+          "cap": 4000000,
+          "loss": false,
+          "nodes": 4000001,
+          "capped": true,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 9416,
+          "ms_is_observational": true
+        },
+        {
+          "ordering": "andclose0",
+          "cap": 950000,
+          "loss": false,
+          "nodes": 950001,
+          "capped": true,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 2061,
+          "ms_is_observational": true
+        },
+        {
+          "ordering": "andclose1",
+          "cap": 4000000,
+          "loss": false,
+          "nodes": 3382321,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 8193,
+          "ms_is_observational": true
+        },
+        {
+          "ordering": "andclose1",
+          "cap": 950000,
+          "loss": false,
+          "nodes": 950001,
+          "capped": true,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 2244,
+          "ms_is_observational": true
+        }
+      ],
+      "classification": "REFUTED-D10"
+    },
+    {
+      "root": "00000000000000821082000000000018",
+      "priority_index": 41,
+      "declared_covered_rows": [
+        "00000000000000821082000000000008",
+        "00000000000000821082000000000010"
+      ],
+      "legal_next_moves": 67,
+      "d4_orbit": 8,
+      "added_bit_rule": "highest set bit of the root; engine verdict independent of the choice",
+      "probes": [
+        {
+          "ordering": "andclose0",
+          "cap": 16000000,
+          "loss": false,
+          "nodes": 4533464,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 9368,
+          "ms_is_observational": true
+        },
+        {
+          "ordering": "andclose0",
+          "cap": 4000000,
+          "loss": false,
+          "nodes": 4000001,
+          "capped": true,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 8698,
+          "ms_is_observational": true
+        },
+        {
+          "ordering": "andclose0",
+          "cap": 950000,
+          "loss": false,
+          "nodes": 950001,
+          "capped": true,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 2029,
+          "ms_is_observational": true
+        },
+        {
+          "ordering": "andclose1",
+          "cap": 16000000,
+          "loss": false,
+          "nodes": 4678155,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 10511,
+          "ms_is_observational": true
+        },
+        {
+          "ordering": "andclose1",
+          "cap": 4000000,
+          "loss": false,
+          "nodes": 4000001,
+          "capped": true,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 9247,
+          "ms_is_observational": true
+        },
+        {
+          "ordering": "andclose1",
+          "cap": 950000,
+          "loss": false,
+          "nodes": 950001,
+          "capped": true,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 2152,
+          "ms_is_observational": true
+        }
+      ],
+      "classification": "REFUTED-D10"
+    },
+    {
+      "root": "00000008000000003800000008100400",
+      "priority_index": 42,
+      "declared_covered_rows": [
+        "00000000000000003800000008001001",
+        "00000008000000003800000008100000"
+      ],
+      "legal_next_moves": 70,
+      "d4_orbit": 8,
+      "added_bit_rule": "highest set bit of the root; engine verdict independent of the choice",
+      "probes": [
+        {
+          "ordering": "andclose0",
+          "cap": 16000000,
+          "loss": false,
+          "nodes": 15305142,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 38681,
+          "ms_is_observational": true
+        },
+        {
+          "ordering": "andclose0",
+          "cap": 4000000,
+          "loss": false,
+          "nodes": 4000001,
+          "capped": true,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 8801,
+          "ms_is_observational": true
+        },
+        {
+          "ordering": "andclose0",
+          "cap": 950000,
+          "loss": false,
+          "nodes": 950001,
+          "capped": true,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 2140,
+          "ms_is_observational": true
+        },
+        {
+          "ordering": "andclose1",
+          "cap": 16000000,
+          "loss": false,
+          "nodes": 4898287,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 12941,
+          "ms_is_observational": true
+        },
+        {
+          "ordering": "andclose1",
+          "cap": 4000000,
+          "loss": false,
+          "nodes": 4000001,
+          "capped": true,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 10019,
+          "ms_is_observational": true
+        },
+        {
+          "ordering": "andclose1",
+          "cap": 950000,
+          "loss": false,
+          "nodes": 950001,
+          "capped": true,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 2473,
+          "ms_is_observational": true
+        }
+      ],
+      "classification": "REFUTED-D10"
+    },
+    {
+      "root": "00000000000000003800000009040004",
+      "priority_index": 43,
+      "declared_covered_rows": [
+        "00000000000000003800000009000004",
+        "00000000000000003800000009040000"
+      ],
+      "legal_next_moves": 71,
+      "d4_orbit": 8,
+      "added_bit_rule": "highest set bit of the root; engine verdict independent of the choice",
+      "probes": [
+        {
+          "ordering": "andclose0",
+          "cap": 950000,
+          "loss": false,
+          "nodes": 950001,
+          "capped": true,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 2046,
+          "ms_is_observational": true
+        },
+        {
+          "ordering": "andclose1",
+          "cap": 950000,
+          "loss": false,
+          "nodes": 469630,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 1146,
+          "ms_is_observational": true
+        }
+      ],
+      "classification": "REFUTED-D10"
+    },
+    {
+      "root": "00000010000000801202040000000100",
+      "priority_index": 44,
+      "declared_covered_rows": [
+        "00000000000040809002000000100000",
+        "00000000010000003800000008100000"
+      ],
+      "legal_next_moves": 71,
+      "d4_orbit": 8,
+      "added_bit_rule": "highest set bit of the root; engine verdict independent of the choice",
+      "probes": [
+        {
+          "ordering": "andclose0",
+          "cap": 4000000,
+          "loss": false,
+          "nodes": 3015665,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 7237,
+          "ms_is_observational": true
+        },
+        {
+          "ordering": "andclose0",
+          "cap": 950000,
+          "loss": false,
+          "nodes": 950001,
+          "capped": true,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 2187,
+          "ms_is_observational": true
+        },
+        {
+          "ordering": "andclose1",
+          "cap": 4000000,
+          "loss": false,
+          "nodes": 1387371,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 3270,
+          "ms_is_observational": true
+        },
+        {
+          "ordering": "andclose1",
+          "cap": 950000,
+          "loss": false,
+          "nodes": 950001,
+          "capped": true,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 2283,
+          "ms_is_observational": true
+        }
+      ],
+      "classification": "REFUTED-D10"
+    },
+    {
+      "root": "00000000010020809002000080000000",
+      "priority_index": 45,
+      "declared_covered_rows": [
+        "00000000000020809002000080000000",
+        "00000000010000809002000080000000"
+      ],
+      "legal_next_moves": 72,
+      "d4_orbit": 8,
+      "added_bit_rule": "highest set bit of the root; engine verdict independent of the choice",
+      "probes": [
+        {
+          "ordering": "andclose0",
+          "cap": 4000000,
+          "loss": false,
+          "nodes": 2740805,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 8009,
+          "ms_is_observational": true
+        },
+        {
+          "ordering": "andclose0",
+          "cap": 950000,
+          "loss": false,
+          "nodes": 950001,
+          "capped": true,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 2542,
+          "ms_is_observational": true
+        },
+        {
+          "ordering": "andclose1",
+          "cap": 4000000,
+          "loss": false,
+          "nodes": 1142963,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 2927,
+          "ms_is_observational": true
+        },
+        {
+          "ordering": "andclose1",
+          "cap": 950000,
+          "loss": false,
+          "nodes": 950001,
+          "capped": true,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 2312,
+          "ms_is_observational": true
+        }
+      ],
+      "classification": "REFUTED-D10"
+    },
+    {
+      "root": "00000000000000003800000008001180",
+      "priority_index": 46,
+      "declared_covered_rows": [
+        "00000000000000003800000008001080",
+        "00000000000000003800000008001100"
+      ],
+      "legal_next_moves": 74,
+      "d4_orbit": 8,
+      "added_bit_rule": "highest set bit of the root; engine verdict independent of the choice",
+      "probes": [
+        {
+          "ordering": "andclose0",
+          "cap": 4000000,
+          "loss": false,
+          "nodes": 3315085,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 7031,
+          "ms_is_observational": true
+        },
+        {
+          "ordering": "andclose0",
+          "cap": 950000,
+          "loss": false,
+          "nodes": 950001,
+          "capped": true,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 2070,
+          "ms_is_observational": true
+        },
+        {
+          "ordering": "andclose1",
+          "cap": 4000000,
+          "loss": false,
+          "nodes": 2560474,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 6071,
+          "ms_is_observational": true
+        },
+        {
+          "ordering": "andclose1",
+          "cap": 950000,
+          "loss": false,
+          "nodes": 950001,
+          "capped": true,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 2195,
+          "ms_is_observational": true
+        }
+      ],
+      "classification": "REFUTED-D10"
+    },
+    {
+      "root": "000000000000008012020c0000001000",
+      "priority_index": 47,
+      "declared_covered_rows": [
+        "00000000000000801202040000001000",
+        "00000000000000801202080000001000"
+      ],
+      "legal_next_moves": 74,
+      "d4_orbit": 8,
+      "added_bit_rule": "highest set bit of the root; engine verdict independent of the choice",
+      "probes": [
+        {
+          "ordering": "andclose0",
+          "cap": 950000,
+          "loss": false,
+          "nodes": 950001,
+          "capped": true,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 2106,
+          "ms_is_observational": true
+        },
+        {
+          "ordering": "andclose1",
+          "cap": 950000,
+          "loss": false,
+          "nodes": 851879,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 2144,
+          "ms_is_observational": true
+        }
+      ],
+      "classification": "REFUTED-D10"
+    },
+    {
+      "root": "00000000000000043800200008100000",
+      "priority_index": 48,
+      "declared_covered_rows": [
+        "00000000000000003800200008100000",
+        "00000000000000043800000008100000"
+      ],
+      "legal_next_moves": 77,
+      "d4_orbit": 8,
+      "added_bit_rule": "highest set bit of the root; engine verdict independent of the choice",
+      "probes": [
+        {
+          "ordering": "andclose0",
+          "cap": 950000,
+          "loss": false,
+          "nodes": 950001,
+          "capped": true,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 2431,
+          "ms_is_observational": true
+        },
+        {
+          "ordering": "andclose1",
+          "cap": 950000,
+          "loss": false,
+          "nodes": 924063,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ],
+          "ms": 2181,
+          "ms_is_observational": true
+        }
+      ],
+      "classification": "REFUTED-D10"
+    }
+  ],
+  "escalation_runs": [
+    {
+      "root": "00000000000000003800000209800000",
+      "ordering": "andclose0",
+      "cap": 4000000,
+      "loss": false,
+      "nodes": 1066650,
+      "capped": false
+    },
+    {
+      "root": "00000000000000003800000209800000",
+      "ordering": "andclose1",
+      "cap": 4000000,
+      "loss": false,
+      "nodes": 1570227,
+      "capped": false
+    },
+    {
+      "root": "00000000000000003800000008002110",
+      "ordering": "andclose0",
+      "cap": 4000000,
+      "loss": false,
+      "nodes": 1918139,
+      "capped": false
+    },
+    {
+      "root": "00000000000000003800000008002110",
+      "ordering": "andclose1",
+      "cap": 4000000,
+      "loss": false,
+      "nodes": 4000001,
+      "capped": true
+    },
+    {
+      "root": "00000000000000003800000008005200",
+      "ordering": "andclose0",
+      "cap": 4000000,
+      "loss": false,
+      "nodes": 1269673,
+      "capped": false
+    },
+    {
+      "root": "00000000000000003800000008005200",
+      "ordering": "andclose1",
+      "cap": 4000000,
+      "loss": false,
+      "nodes": 2041240,
+      "capped": false
+    },
+    {
+      "root": "00000000000000003800000008d00000",
+      "ordering": "andclose0",
+      "cap": 4000000,
+      "loss": false,
+      "nodes": 1701342,
+      "capped": false
+    },
+    {
+      "root": "00000000000000003800000008d00000",
+      "ordering": "andclose1",
+      "cap": 4000000,
+      "loss": false,
+      "nodes": 1425240,
+      "capped": false
+    },
+    {
+      "root": "00000000000000003800000268000000",
+      "ordering": "andclose0",
+      "cap": 16000000,
+      "loss": false,
+      "nodes": 5721204,
+      "capped": false
+    },
+    {
+      "root": "00000000000000003800000268000000",
+      "ordering": "andclose0",
+      "cap": 4000000,
+      "loss": false,
+      "nodes": 4000001,
+      "capped": true
+    },
+    {
+      "root": "00000000000000003800000268000000",
+      "ordering": "andclose1",
+      "cap": 16000000,
+      "loss": false,
+      "nodes": 9173186,
+      "capped": false
+    },
+    {
+      "root": "00000000000000003800000268000000",
+      "ordering": "andclose1",
+      "cap": 4000000,
+      "loss": false,
+      "nodes": 4000001,
+      "capped": true
+    },
+    {
+      "root": "00000000000000801202000000800300",
+      "ordering": "andclose0",
+      "cap": 4000000,
+      "loss": false,
+      "nodes": 1616056,
+      "capped": false
+    },
+    {
+      "root": "00000000000000801202000000800300",
+      "ordering": "andclose1",
+      "cap": 4000000,
+      "loss": false,
+      "nodes": 1076200,
+      "capped": false
+    },
+    {
+      "root": "00000000000000043800000409000000",
+      "ordering": "andclose0",
+      "cap": 4000000,
+      "loss": false,
+      "nodes": 3333641,
+      "capped": false
+    },
+    {
+      "root": "00000000000000043800000409000000",
+      "ordering": "andclose1",
+      "cap": 4000000,
+      "loss": false,
+      "nodes": 4000001,
+      "capped": true
+    },
+    {
+      "root": "000000000000008012020000010c0000",
+      "ordering": "andclose0",
+      "cap": 4000000,
+      "loss": false,
+      "nodes": 1776711,
+      "capped": false
+    },
+    {
+      "root": "000000000000008012020000010c0000",
+      "ordering": "andclose1",
+      "cap": 4000000,
+      "loss": false,
+      "nodes": 1027724,
+      "capped": false
+    },
+    {
+      "root": "00000000000000143800000008080000",
+      "ordering": "andclose0",
+      "cap": 4000000,
+      "loss": false,
+      "nodes": 1794598,
+      "capped": false
+    },
+    {
+      "root": "00000000000000143800000008080000",
+      "ordering": "andclose1",
+      "cap": 4000000,
+      "loss": false,
+      "nodes": 980212,
+      "capped": false
+    },
+    {
+      "root": "00000000000000989002000000100000",
+      "ordering": "andclose0",
+      "cap": 4000000,
+      "loss": false,
+      "nodes": 4000001,
+      "capped": true
+    },
+    {
+      "root": "00000000000000989002000000100000",
+      "ordering": "andclose1",
+      "cap": 4000000,
+      "loss": false,
+      "nodes": 1754917,
+      "capped": false
+    },
+    {
+      "root": "00000000000000801232000000001000",
+      "ordering": "andclose0",
+      "cap": 4000000,
+      "loss": false,
+      "nodes": 4000001,
+      "capped": true
+    },
+    {
+      "root": "00000000000000801232000000001000",
+      "ordering": "andclose1",
+      "cap": 4000000,
+      "loss": false,
+      "nodes": 3382321,
+      "capped": false
+    },
+    {
+      "root": "00000000000000821082000000000018",
+      "ordering": "andclose0",
+      "cap": 16000000,
+      "loss": false,
+      "nodes": 4533464,
+      "capped": false
+    },
+    {
+      "root": "00000000000000821082000000000018",
+      "ordering": "andclose0",
+      "cap": 4000000,
+      "loss": false,
+      "nodes": 4000001,
+      "capped": true
+    },
+    {
+      "root": "00000000000000821082000000000018",
+      "ordering": "andclose1",
+      "cap": 16000000,
+      "loss": false,
+      "nodes": 4678155,
+      "capped": false
+    },
+    {
+      "root": "00000000000000821082000000000018",
+      "ordering": "andclose1",
+      "cap": 4000000,
+      "loss": false,
+      "nodes": 4000001,
+      "capped": true
+    },
+    {
+      "root": "00000008000000003800000008100400",
+      "ordering": "andclose0",
+      "cap": 16000000,
+      "loss": false,
+      "nodes": 15305142,
+      "capped": false
+    },
+    {
+      "root": "00000008000000003800000008100400",
+      "ordering": "andclose0",
+      "cap": 4000000,
+      "loss": false,
+      "nodes": 4000001,
+      "capped": true
+    },
+    {
+      "root": "00000008000000003800000008100400",
+      "ordering": "andclose1",
+      "cap": 16000000,
+      "loss": false,
+      "nodes": 4898287,
+      "capped": false
+    },
+    {
+      "root": "00000008000000003800000008100400",
+      "ordering": "andclose1",
+      "cap": 4000000,
+      "loss": false,
+      "nodes": 4000001,
+      "capped": true
+    },
+    {
+      "root": "00000010000000801202040000000100",
+      "ordering": "andclose0",
+      "cap": 4000000,
+      "loss": false,
+      "nodes": 3015665,
+      "capped": false
+    },
+    {
+      "root": "00000010000000801202040000000100",
+      "ordering": "andclose1",
+      "cap": 4000000,
+      "loss": false,
+      "nodes": 1387371,
+      "capped": false
+    },
+    {
+      "root": "00000000010020809002000080000000",
+      "ordering": "andclose0",
+      "cap": 4000000,
+      "loss": false,
+      "nodes": 2740805,
+      "capped": false
+    },
+    {
+      "root": "00000000010020809002000080000000",
+      "ordering": "andclose1",
+      "cap": 4000000,
+      "loss": false,
+      "nodes": 1142963,
+      "capped": false
+    },
+    {
+      "root": "00000000000000003800000008001180",
+      "ordering": "andclose0",
+      "cap": 4000000,
+      "loss": false,
+      "nodes": 3315085,
+      "capped": false
+    },
+    {
+      "root": "00000000000000003800000008001180",
+      "ordering": "andclose1",
+      "cap": 4000000,
+      "loss": false,
+      "nodes": 2560474,
+      "capped": false
+    }
+  ],
+  "checks": [
+    {
+      "name": "all 48 sweep roots are the published 49-cover witness minus the first WIN7 receipt root",
+      "pass": true
+    },
+    {
+      "name": "every record carries a passing pilot_d6 control (loss=false, 3402 nodes)",
+      "pass": true
+    },
+    {
+      "name": "every root has both-order 950k runs",
+      "pass": true
+    },
+    {
+      "name": "escalation runs exist only for 950k-capped roots",
+      "pass": true
+    },
+    {
+      "name": "no WIN/REFUTED ordering conflict",
+      "pass": true
+    },
+    {
+      "name": "classification totals 48",
+      "pass": true
+    },
+    {
+      "name": "every WIN7-D10 root has a complete 0-drop extraction summary alongside",
+      "pass": true
+    }
+  ],
+  "interpretation_guard": [
+    "REFUTED-D10 here is a 7-stone-root-level verdict: no first-player win within depth 10 from that exact root (cap never hit). It is NOT a LOSS proof for any earlier position.",
+    "CAPPED-16000000 roots have no verdict at the tried caps and remain eligible candidates.",
+    "This sweep does not decide the two-stone roots {49,60}/{59,60}, S2 {59,60}, classes 1/2/4, or the 11x11 empty board; all remain UNKNOWN."
+  ]
+}

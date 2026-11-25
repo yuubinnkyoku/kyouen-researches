@@ -1,0 +1,110 @@
+{
+  "already_10m_excluded": [
+    144019,
+    144692,
+    150871,
+    193768
+  ],
+  "baseline_plan_union": 31859,
+  "note": "if_win_delta is the optimistic union growth when the candidate is a WIN; if_loss_delta is the change when it is a LOSS; both measured on the frozen eighth-update instance",
+  "rows": [
+    {
+      "affected_choices": 1,
+      "if_loss_changed": 0,
+      "if_loss_delta": -1,
+      "if_win_changed": 1,
+      "if_win_delta": 1,
+      "in_plan_union": true,
+      "index": 144774,
+      "invalidated_classes": 3,
+      "mask": "00000000000008081002000000000020",
+      "score": {
+        "loss_benefit": 1,
+        "win_cost": 1
+      },
+      "uncovered_branches_resolved": 1
+    },
+    {
+      "affected_choices": 1,
+      "if_loss_changed": 0,
+      "if_loss_delta": -1,
+      "if_win_changed": 1,
+      "if_win_delta": 7,
+      "in_plan_union": true,
+      "index": 103564,
+      "invalidated_classes": 3,
+      "mask": "00000000000000809082000000000000",
+      "score": {
+        "loss_benefit": 1,
+        "win_cost": 7
+      },
+      "uncovered_branches_resolved": 1
+    },
+    {
+      "affected_choices": 5,
+      "if_loss_changed": 0,
+      "if_loss_delta": -1,
+      "if_win_changed": 5,
+      "if_win_delta": 49,
+      "in_plan_union": true,
+      "index": 211133,
+      "invalidated_classes": 3,
+      "mask": "00000000000000811100000000001000",
+      "score": {
+        "loss_benefit": 1,
+        "win_cost": 49
+      },
+      "uncovered_branches_resolved": 1
+    },
+    {
+      "affected_choices": 4,
+      "if_loss_changed": 0,
+      "if_loss_delta": -1,
+      "if_win_changed": 4,
+      "if_win_delta": 88,
+      "in_plan_union": true,
+      "index": 196002,
+      "invalidated_classes": 4,
+      "mask": "00000000000000201840800000000000",
+      "score": {
+        "loss_benefit": 1,
+        "win_cost": 88
+      },
+      "uncovered_branches_resolved": 1
+    },
+    {
+      "affected_choices": 4,
+      "if_loss_changed": 0,
+      "if_loss_delta": -1,
+      "if_win_changed": 4,
+      "if_win_delta": 97,
+      "in_plan_union": true,
+      "index": 143718,
+      "invalidated_classes": 3,
+      "mask": "00000000000000001002080200000020",
+      "score": {
+        "loss_benefit": 1,
+        "win_cost": 97
+      },
+      "uncovered_branches_resolved": 1
+    },
+    {
+      "affected_choices": 8,
+      "if_loss_changed": 0,
+      "if_loss_delta": -1,
+      "if_win_changed": 8,
+      "if_win_delta": 111,
+      "in_plan_union": true,
+      "index": 221294,
+      "invalidated_classes": 4,
+      "mask": "00000000000000203100000000000004",
+      "score": {
+        "loss_benefit": 1,
+        "win_cost": 111
+      },
+      "uncovered_branches_resolved": 1
+    }
+  ],
+  "schema": "n11-night-candidate-effects-update8-v1",
+  "uncovered_branches_total": 9
+}

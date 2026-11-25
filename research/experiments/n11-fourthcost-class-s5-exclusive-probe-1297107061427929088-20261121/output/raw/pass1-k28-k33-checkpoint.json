@@ -1,0 +1,75 @@
+{
+ "checkpoint": "pass1 keys k28-k33",
+ "head_before_push": "1882a870df45527ec8809773ef2f12df9eb0fd90",
+ "rows": [
+  {
+   "key": "k28",
+   "stage": "at15m-run1",
+   "missing": "resolved at an earlier stage (no 15M run needed)"
+  },
+  {
+   "key": "k28",
+   "stage": "at15m-run2",
+   "missing": "resolved at an earlier stage (no 15M run needed)"
+  },
+  {
+   "key": "1369164655465857024:0",
+   "budget": 15000000,
+   "result": 2,
+   "nodes": 5755774
+  },
+  {
+   "key": "1369164655465857024:0",
+   "budget": 15000000,
+   "result": 2,
+   "nodes": 5755774
+  },
+  {
+   "key": "1585337437579640832:0",
+   "budget": 15000000,
+   "result": 2,
+   "nodes": 5185651
+  },
+  {
+   "key": "1585337437579640832:0",
+   "budget": 15000000,
+   "result": 2,
+   "nodes": 5185651
+  },
+  {
+   "key": "1873567813731352576:0",
+   "budget": 15000000,
+   "result": 0,
+   "nodes": 15000000
+  },
+  {
+   "key": "1873567813731352576:0",
+   "budget": 15000000,
+   "result": 0,
+   "nodes": 15000000
+  },
+  {
+   "key": "3602950070641623040:0",
+   "budget": 15000000,
+   "result": 0,
+   "nodes": 15000000
+  },
+  {
+   "key": "3602950070641623040:0",
+   "budget": 15000000,
+   "result": 0,
+   "nodes": 15000000
+  },
+  {
+   "key": "k33",
+   "stage": "at15m-run1",
+   "missing": "resolved at an earlier stage (no 15M run needed)"
+  },
+  {
+   "key": "k33",
+   "stage": "at15m-run2",
+   "missing": "resolved at an earlier stage (no 15M run needed)"
+  }
+ ],
+ "status_guard": "per-key S5 verdicts only; 11x11 empty board remains UNKNOWN"
+}

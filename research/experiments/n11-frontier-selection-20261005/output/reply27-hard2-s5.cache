@@ -1,0 +1,8 @@
+# s5 verdict cache: n=11 schema=1 (reply27 hard2 complete s6-boundary derived)
+# source: GitHub Actions N11 reply27 hard2 s6 boundary run 37320154141
+# proof artifact: 11349806660 digest sha256:770def9ab3e9206b77cfcf90cf760fc171724ccb9f7433db452637db085db309
+# s6 exact: WIN 161 / LOSS 9 / UNKNOWN 0; total nodes 110137392
+# parent 10376575016438337536:131072 -> LOSS (75 WIN / 8 LOSS s6)
+# parent 1297036692818001920:0 -> LOSS (86 WIN / 1 LOSS s6)
+s5verdict,1297036692818001920,0,5,2,0
+s5verdict,10376575016438337536,131072,5,2,0

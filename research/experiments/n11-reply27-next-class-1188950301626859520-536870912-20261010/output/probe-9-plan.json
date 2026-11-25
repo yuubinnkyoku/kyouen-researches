@@ -1,0 +1,55 @@
+{
+  "dispatch_checks": {
+    "raw_cache_conflicts": 0,
+    "raw_exact": false,
+    "raw_s6_s7_derived": false,
+    "saved_s6_s7_derived": false,
+    "unknown_at_or_above_budget": false
+  },
+  "main_commit": "4a9ea150faca7f49a94b453eebfb87d2c22b57b7",
+  "preflight_sources": [
+    {
+      "path": "research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/raw-history-after-eighth.json",
+      "sha256": "c40a55c9f4057a6f4baacb765848aa04a32cf58c148ed75049a0b6635975da18"
+    },
+    {
+      "path": "research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/saved-layer-after-eighth.json",
+      "sha256": "a1a73c05a5c15b42b08282e650d85015cd68fb18db5ae35122bc54ee47ce2f8b"
+    },
+    {
+      "path": "research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/input/probe-target-9.csv",
+      "sha256": "b5fda0ab32ed81b2b3ec3131f72571178dd06479ed50f90a86ba4c98275ee2af"
+    },
+    {
+      "path": "research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/current-exact-s5-after-probe-7.cache",
+      "sha256": "278b2381ada91ac02e794a9f407377c02364356f63f77d3e3e6554939a066a1c"
+    }
+  ],
+  "prior_observations": [],
+  "s4_parent": [
+    1188950301626859520,
+    536870912
+  ],
+  "s5_target": {
+    "budget": 2000000,
+    "key": [
+      1765411053930283008,
+      536870912
+    ],
+    "legal_count": 92,
+    "watchdog_seconds": 180,
+    "workers": 1
+  },
+  "schema": "n11-reply27-s5-next-low-cost-probe-plan-v1",
+  "solver": {
+    "options": [
+      "--n=11",
+      "--memo=22",
+      "--exact-order=count"
+    ],
+    "path": ".local/n11-independent-audit-solver.exe",
+    "sha256": "ac8f4931e4c81bd06ba1622844933962134f663d970885c2990fbb96a167677a",
+    "source_path": "cpp/solvers/kyouen_dfpn_root.cpp",
+    "source_sha256": "9193f5b6065e0fbcad2ef7c65f386187701cafa1f5b718cc35a5cbb0d138f92e"
+  }
+}

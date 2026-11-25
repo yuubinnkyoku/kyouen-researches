@@ -1,0 +1,29 @@
+{
+  "schema": "n11-experiment-manifest-sha256-v1",
+  "experiment": "n11-reply27-s5-jsreplica-probe-10376293541461622788-20261121",
+  "note": "sha256 over the exact bytes of every file of this increment; base cache is NOT duplicated here (byte-pinned reference: research/experiments/n11-reply27-s5-jsreplica-probe-1306114260682670080-20261121/output/merged-exact-s5-after-js-probe-1.cache = 6ab46ac6c11ada0c2f45fceeda8304852052e09c27db4ed1989c4041d74afcd2)",
+  "files": {
+    "README.md": "fb1a232f6d8536f8891f81fe9ff73b699104e93b9afb5612bde28eed32e23988",
+    "input/at15m-s5-10376293541461622788-68727865344.input.csv": "30633d4da32830fe2ee00e4e53eb49aeab492e8049061dd10733564aaf4b785a",
+    "input/at2m-s5-10376293541461622788-68727865344.input.csv": "30633d4da32830fe2ee00e4e53eb49aeab492e8049061dd10733564aaf4b785a",
+    "input/val/at2m-s5-1152921504606851072-536870946.input.csv": "ecc0299b8142abde201fcc40ea9666dac7368d0888d0600abc717af66ddfe348",
+    "input/val/at2m-s5-1188950301626860544-536870912.input.csv": "56aacb71769b231c9728dcc841d39f0d5cb579517d34769f0e7382516d4c3a62",
+    "input/val/first-15m-s5-1152921504606851072-536870946.input.csv": "ecc0299b8142abde201fcc40ea9666dac7368d0888d0600abc717af66ddfe348",
+    "input/val/second-15m-s5-1188950301626860544-536870912.input.csv": "56aacb71769b231c9728dcc841d39f0d5cb579517d34769f0e7382516d4c3a62",
+    "output/merged-exact-s5-after-js-probe-2.cache": "b92a8eb06b38852c360fb173085be63705b582c3e72ccce49183a86d0da6d8cd",
+    "output/post-probe/candidate-classes.csv": "3ccfb5bbdec40622420195457bc8046e27e5ccf439d9e512f8650e4332677127",
+    "output/post-probe/shared-s5-tasks.csv": "64645f5ce9d30e11bce4d2db7852e7f101a04f2233e3fec0fb2d0825c69a9592",
+    "output/post-probe/strategy-analysis.json": "8cf2fe3e864a07c6330ebfbca5514ff3d19c2050881eb384c949e93d95e3b4c6",
+    "output/probe-audit.json": "4d56c7fdb23b1cb28378c0da77d293e84d061f08cbe7c84149de15c705feca87",
+    "output/raw/at15m-run2-s5-10376293541461622788-68727865344.out.csv": "61a399ec51e5f12a043adf2718dabfb5a7621be0e108087005bb7ed9c11eeef2",
+    "output/raw/at15m-s5-10376293541461622788-68727865344.out.csv": "d957d713fac826d44bc5cdbd94308c40365b38bcc206e8545fcf40bc8602ebd9",
+    "output/raw/at2m-s5-10376293541461622788-68727865344.out.csv": "7ee9cbbb4f538ed407d98b08319db44b9aefb845486c31f6a48df87a6fbb1883",
+    "output/raw/val-at2m-first.out.csv": "d766154adda47bd2af09905fa8d3e709abc7192596b928d5ff1251f1e1c911e7",
+    "output/raw/val-at2m-second.out.csv": "0af850c443c5574f5a806c760bc236f7937c109003e7bf6ca7e3b5b023646481",
+    "output/raw/val-first-15m.out.csv": "e5d33b954b81b6d766d870eff54a5425e6a0faf09cde049ce463920f8d4f9a25",
+    "output/raw/val-second-15m.out.csv": "5957bce29e5fa27fa3b67f0be6552ecac39e294c14cc3452cbc7711228cedc02",
+    "scripts/audit_probe.py": "59365b5928f7aa59624a0bb66f3e039349f518b07ec695ef1e1eace98ceb37c4",
+    "scripts/jsreplay.js": "845856175d3c793a7eb4306f5902ecda3f1c046a8a53e8f34ed375e51febc3df"
+  },
+  "regenerable_not_transported": {}
+}

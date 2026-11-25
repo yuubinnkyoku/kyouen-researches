@@ -1,0 +1,288 @@
+{
+ "schema": "n11-fold-parent-bookkeeping-crosscheck-20261118-v1",
+ "date": "2026-11-18",
+ "lane": "n11 long-term lane, verification-side crosscheck session (standard 11x11 weak-resolution)",
+ "title": "per-parent bookkeeping crosscheck of the three head-1410->head-1476 fold records (cost76d+77e, cost76c bit61, cost66i bit19) against the raw head-1410 worklist: orbit-join membership, receipt orbit-coverage, cost/row arithmetic, and baseline deltas for all nine touched S5 parents",
+ "inputs": {
+  "worklist1410.csv": "2fee1d0718547a62e346d35f5858d7913e37c097",
+  "fold76d77e.json": "8d4bc622f9da22b8754f2e398e5481359656d956",
+  "fold76c.json": "953beaea054989e8b1de33f48b1f2ebc13ae7e11",
+  "fold66i.json": "a555ee3a575df04ecddf98ce890bd8eec53dd415",
+  "claim76c.json": "678211c5a35c25cf41b4a56473942860903647f6",
+  "claim66i.json": "f8556f6c054d821e845b7ebe5035b8c280d2e97b",
+  "reconc.json": "6992f2dcc8b87a5409cff31c8a87134fc4283a6a"
+ },
+ "method": "fourth-implementation D4 orbit join recomputed per parent from the pinned 6,438-row head-1410 worklist; canon one-stone reduction sets recomputed per folded WIN7-D10 root; per-parent lost rows derived independently for the cost66i fold from membership of the receipt's marginal rows; no engine, no new verdict",
+ "derived": {
+  "parent_join_stats_1410": {
+   "00000000000000003800000000808000": {
+    "rows_1410": 83,
+    "cost_1410": 6374
+   },
+   "00000000000000003800000208000000": {
+    "rows_1410": 65,
+    "cost_1410": 5358
+   },
+   "00000000000000003801000000800000": {
+    "rows_1410": 69,
+    "cost_1410": 5226
+   },
+   "00000000000000403800000008000000": {
+    "rows_1410": 24,
+    "cost_1410": 1704
+   },
+   "00000000000000801202000000040000": {
+    "rows_1410": 74,
+    "cost_1410": 6113
+   },
+   "00000000000000801202000000080000": {
+    "rows_1410": 68,
+    "cost_1410": 5202
+   },
+   "00000000000000801202000040000000": {
+    "rows_1410": 5,
+    "cost_1410": 364
+   },
+   "00000000000000801202000100000000": {
+    "rows_1410": 71,
+    "cost_1410": 5912
+   },
+   "00000000000000801222000000000000": {
+    "rows_1410": 70,
+    "cost_1410": 5345
+   }
+  },
+  "fold66i_derived_lost_per_parent": {
+   "00000000000000003800000000808000": [
+    "00000000000000003801000000808000",
+    "00000000000000801222000000080000"
+   ],
+   "00000000000000003801000000800000": [
+    "00000000000000003801000000808000"
+   ],
+   "00000000000000403800000008000000": [
+    "00000000000000801226000000000000"
+   ],
+   "00000000000000801202000000080000": [
+    "00000000000000801222000000080000"
+   ],
+   "00000000000000801222000000000000": [
+    "00000000000000801222000000080000",
+    "00000000000000801226000000000000"
+   ]
+  },
+  "baseline_facts": {
+   "fold76d77e:00000000000000003800000208000000": {
+    "rows_before": 65,
+    "edge_cost_before": 5358,
+    "join1410_rows": 65,
+    "join1410_cost": 5358,
+    "rows_closed_by_earlier_folds": 0,
+    "cost_closed_by_earlier_folds": 0
+   },
+   "fold76d77e:00000000000000801202000000040000": {
+    "rows_before": 72,
+    "edge_cost_before": 5960,
+    "join1410_rows": 74,
+    "join1410_cost": 6113,
+    "rows_closed_by_earlier_folds": 2,
+    "cost_closed_by_earlier_folds": 153
+   },
+   "fold76d77e:00000000000000801202000040000000": {
+    "rows_before": 5,
+    "edge_cost_before": 364,
+    "join1410_rows": 5,
+    "join1410_cost": 364,
+    "rows_closed_by_earlier_folds": 0,
+    "cost_closed_by_earlier_folds": 0
+   },
+   "fold76c:00000000000000003800000208000000": {
+    "rows_before": 65,
+    "edge_cost_before": 5358,
+    "join1410_rows": 65,
+    "join1410_cost": 5358,
+    "rows_closed_by_earlier_folds": 0,
+    "cost_closed_by_earlier_folds": 0
+   },
+   "fold76c:00000000000000801202000000040000": {
+    "rows_before": 70,
+    "edge_cost_before": 5802,
+    "join1410_rows": 74,
+    "join1410_cost": 6113,
+    "rows_closed_by_earlier_folds": 4,
+    "cost_closed_by_earlier_folds": 311
+   },
+   "fold76c:00000000000000801202000040000000": {
+    "rows_before": 5,
+    "edge_cost_before": 364,
+    "join1410_rows": 5,
+    "join1410_cost": 364,
+    "rows_closed_by_earlier_folds": 0,
+    "cost_closed_by_earlier_folds": 0
+   },
+   "fold76c:00000000000000801202000100000000": {
+    "rows_before": 69,
+    "edge_cost_before": 5758,
+    "join1410_rows": 71,
+    "join1410_cost": 5912,
+    "rows_closed_by_earlier_folds": 2,
+    "cost_closed_by_earlier_folds": 154
+   }
+  },
+  "folded_roots_scanned": [
+   "0000000001000080b002000001000000",
+   "00000000000000801226000000080000"
+  ]
+ },
+ "checks": [
+  {
+   "check": "pin.worklist1410",
+   "pass": true,
+   "detail": "2fee1d0718547a62e346d35f5858d7913e37c097"
+  },
+  {
+   "check": "pin.fold76d77e",
+   "pass": true,
+   "detail": "8d4bc622f9da22b8754f2e398e5481359656d956"
+  },
+  {
+   "check": "pin.fold76c",
+   "pass": true,
+   "detail": "953beaea054989e8b1de33f48b1f2ebc13ae7e11"
+  },
+  {
+   "check": "pin.fold66i",
+   "pass": true,
+   "detail": "a555ee3a575df04ecddf98ce890bd8eec53dd415"
+  },
+  {
+   "check": "pin.claim76c",
+   "pass": true,
+   "detail": "678211c5a35c25cf41b4a56473942860903647f6"
+  },
+  {
+   "check": "pin.claim66i",
+   "pass": true,
+   "detail": "f8556f6c054d821e845b7ebe5035b8c280d2e97b"
+  },
+  {
+   "check": "pin.reconc",
+   "pass": true,
+   "detail": "6992f2dcc8b87a5409cff31c8a87134fc4283a6a"
+  },
+  {
+   "check": "book.worklist_rows",
+   "pass": true,
+   "detail": "6438"
+  },
+  {
+   "check": "book.parents_union",
+   "pass": true,
+   "detail": "[\"00000000000000003800000000808000\", \"00000000000000003800000208000000\", \"00000000000000003801000000800000\", \"00000000000000403800000008000000\", \"00000000000000801202000000040000\", \"00000000000000801202000000080000\", \"00000000000000801202000040000000\", \"00000000000000801202000100000000\", \"00000000000000801222000000000000\"]"
+  },
+  {
+   "check": "fd76d77e.parent_count",
+   "pass": true,
+   "detail": "3"
+  },
+  {
+   "check": "fd76d77e.membership",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "fd76d77e.parent_A_arithmetic",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "fd76d77e.parent_B_arithmetic",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "fd76d77e.parent_P_arithmetic",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "fd76c.parent_count",
+   "pass": true,
+   "detail": "4"
+  },
+  {
+   "check": "fd76c.per_parent_membership_and_arithmetic",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "fd76c.lost_union",
+   "pass": true,
+   "detail": "[\"00000000010000809002000001000000\", \"00000000040000003800080008000000\", \"00000000040000809002000000004000\"]"
+  },
+  {
+   "check": "fd76c.lost_rows_nonsterile",
+   "pass": true,
+   "detail": "{\"00000000010000809002000001000000\": \"transfer_partial\", \"00000000040000003800080008000000\": \"win_pending\", \"00000000040000809002000000004000\": \"win_pending\"}"
+  },
+  {
+   "check": "fd76c.basis_head",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "fd76c.receipt_covers_marginal",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "fd76c.frontier_after",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "fd66i.parent_count",
+   "pass": true,
+   "detail": "5"
+  },
+  {
+   "check": "fd66i.receipt_covers_marginal",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "fd66i.marginal_costs",
+   "pass": true,
+   "detail": "{\"00000000000000003801000000808000\": 66, \"00000000000000801222000000080000\": 75, \"00000000000000801226000000000000\": 66}"
+  },
+  {
+   "check": "fd66i.per_parent_derived_lost_and_arithmetic",
+   "pass": true,
+   "detail": "{\"00000000000000003800000000808000\": [\"00000000000000003801000000808000\", \"00000000000000801222000000080000\"], \"00000000000000003801000000800000\": [\"00000000000000003801000000808000\"], \"00000000000000403800000008000000\": [\"00000000000000801226000000000000\"], \"00000000000000801202000000080000\": [\"00000000000000801222000000080000\"], \"00000000000000801222000000000000\": [\"00000000000000801222000000080000\", \"00000000000000801226000000000000\"]}"
+  },
+  {
+   "check": "fd66i.incidence_total",
+   "pass": true,
+   "detail": "7"
+  },
+  {
+   "check": "fd66i.basis_chain",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "fd66i.head_matches_reconciliation",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "book.baseline_deltas_consistent",
+   "pass": true,
+   "detail": "{\"fold76c:00000000000000003800000208000000\": 0, \"fold76c:00000000000000801202000000040000\": 4, \"fold76c:00000000000000801202000040000000\": 0, \"fold76c:00000000000000801202000100000000\": 2, \"fold76d77e:00000000000000003800000208000000\": 0, \"fold76d77e:00000000000000801202000000040000\": 2, \"fold76d77e:00000000000000801202000040000000\": 0}"
+  }
+ ],
+ "check_count": 29,
+ "all_pass": true,
+ "interpretation_guard": "Bookkeeping verification only. Membership and arithmetic of published fold records are confirmed against the raw worklist; baseline differences (rows closed by earlier folds) are recorded as observed facts without re-deriving the intermediate folds. REFUTED-D10 is not a LOSS proof; no S5 parent is closed by this audit.",
+ "unknown_status": "11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, and classes 1/2/4 remain UNKNOWN."
+}

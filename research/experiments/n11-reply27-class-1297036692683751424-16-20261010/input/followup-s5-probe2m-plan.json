@@ -1,0 +1,39 @@
+{
+  "coverage": [
+    55,
+    65,
+    100,
+    108
+  ],
+  "history_sha256": "212ce320b141ad2a322b13f788a0d60ba31d594860768b5de7d578883bb9bd3e",
+  "preflight": {
+    "path": "research/experiments/n11-reply27-class-1297036692683751424-16-20261010/output/followup-preflight.json",
+    "sha256": "8133b03e859730052cb557708ba29996fc7f702b053f4e8369da73e76ab0f7fe"
+  },
+  "raw_history_audit": {
+    "path": "research/experiments/n11-reply27-class-1297036692683751424-16-20261010/output/followup-raw-history-audit.json",
+    "sha256": "b074908dd482fb55d02e449f1e984c2681c1333c15dff29f8e532c73d260f6b1"
+  },
+  "s4_key": [
+    1188950301626859520,
+    536870912
+  ],
+  "saved_layer_audit": {
+    "path": "research/experiments/n11-reply27-class-1297036692683751424-16-20261010/output/followup-saved-layer-preflight.json",
+    "sha256": "25166a253bbaf7ac82fa53e9437be7c87e9e2528f54279d47e6eeed917e6009f"
+  },
+  "schema": "n11-reply27-followup-single-s5-probe-v1",
+  "targets": [
+    {
+      "arm": "next-cover-candidate-low-legal-2m",
+      "budget": 2000000,
+      "group": "next-cover-candidate-1188950301626859520-536870912",
+      "key": [
+        1188950301626859552,
+        536870912
+      ],
+      "preflight_legal_count": 87,
+      "stones": 5
+    }
+  ]
+}

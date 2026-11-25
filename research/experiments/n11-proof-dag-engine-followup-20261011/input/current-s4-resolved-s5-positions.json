@@ -1,0 +1,40 @@
+{
+  "schema": "n11-resolved-s5-tt-sharing-input-v1",
+  "board_size": 11,
+  "common_s4": {
+    "lo": 1297036692683752448,
+    "hi": 0
+  },
+  "positions": [
+    {
+      "id": "legal84",
+      "lo": 10412322338480590849,
+      "hi": 0,
+      "legal": 84,
+      "expected_verdict": 2,
+      "prior_nodes": 5416337,
+      "prior_wall_seconds": 15,
+      "source_csv": "research/experiments/n11-reply27-next-candidate-20261011/output/raw/probe-15m.csv"
+    },
+    {
+      "id": "legal92",
+      "lo": 1297036692750861312,
+      "hi": 0,
+      "legal": 92,
+      "expected_verdict": 2,
+      "prior_nodes": 5026776,
+      "prior_wall_seconds": 14,
+      "source_csv": "research/experiments/n11-reply27-next-candidate-20261011/output/raw/probe-15m.csv"
+    },
+    {
+      "id": "legal94",
+      "lo": 1301540292311122944,
+      "hi": 0,
+      "legal": 94,
+      "expected_verdict": 2,
+      "prior_nodes": 3454253,
+      "prior_wall_seconds": 9,
+      "source_csv": "research/experiments/n11-reply27-next-candidate-20261011/output/raw/probe-15m.csv"
+    }
+  ]
+}
