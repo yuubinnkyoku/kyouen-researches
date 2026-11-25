@@ -1,5 +1,7 @@
 hyperoval (10-cap) orbit: 32704 (single orbit, stabilizer 504)
-maximal 6-cap starts: 4 random caps, each orbit 686784
-probes vs orbit of {10,47,49,55,61,64}: cap0 in, cap1 out, cap2 in, cap3 out
-total maximal 6-caps 2060352 = 3 * 686784 => 3 orbits of 686784 (stabilizer 24)
+maximal 6-cap start {10,47,49,55,61,64}: orbit 686784 (labelled orbit A)
+four sampled maximal 6-caps {8,48,50,51,58,61}, {17,27,30,44,52,70}, {15,22,27,43,53,55}, {4,8,40,44,47,56}:
+  each orbit 686784; probe membership vs the orbit of {8,48,50,51,58,61} (orbit C): cap0 in, cap1 out, cap2 in, cap3 out
+  (none of the four lies in orbit A; independent verification note)
+total maximal 6-caps 2060352 = 3 * 686784 => exactly 3 orbits of 686784 (stabilizer 24)
 |PGL(3,8)| = 16482816 = 686784*24 = 32704*504
