@@ -108,7 +108,7 @@ gate('G7_row_sweeps_recompute', not bad_rows, 'bad=%s' % bad_rows[:5])
 gate('G8_total_separations_117', len(recomputed_seps) == 117,
      'total=%d' % len(recomputed_seps))
 
-# frontier rows: the 27th/28th parity datums, FIRST-EVER m>38 rows
+# frontier rows: the 29th/30th parity datums, FIRST-EVER m>40 rows
 f41 = sec['frontier_m41_z81_row_record']
 f42 = sec['frontier_m42_z82_row_record']
 gate('G9_frontier_m41_datum', f41['separations'] ==
@@ -121,7 +121,7 @@ w39 = [sec['inband_m39_z%d_row_record' % z] for z in range(69, 77)]
 w40 = [sec['inband_m40_z%d_row_record' % z] for z in range(70, 78)]
 gate('G11_windows_16_clean', all(not s['separations'] for s in w39 + w40))
 
-# even-m next-depth rows (m=14/16/18, z=3m+4): parity-flipped template,
+# even-m next-depth rows (m=14/16/18, z=3m+6): parity-flipped template,
 # every stack an exact mimic of its host seat, trio conform (absent)
 ok_even = True
 for m in (14, 16, 18):
@@ -217,22 +217,18 @@ gate('G15b_future_frontier_31st_32nd',
      any(f.get('m') == 43 and f.get('z') == 85 for f in futc) and
      any(f.get('m') == 44 and f.get('z') == 86 for f in futc))
 
-# no already-published row may be re-measured here: the kit-10
-# self-overlap slices and the kit-11 measured frontier/window rows
+# no already-published row may be re-measured here: the kit-12 measured
+# ladder/frontier/window/evenlife rows
 gate('G16_duplicates_not_remeasured',
+     'ladder_m19_z64_row_record' not in sec and
+     'ladder_m20_z65_row_record' not in sec and
+     'ladder_m31_z68_row_record' not in sec and
+     'ladder_m32_z69_row_record' not in sec and
      'frontier_m39_z77_row_record' not in sec and
      'frontier_m40_z78_row_record' not in sec and
-     'ladder_m19_z64_row_record' not in sec and
-     'ladder_m19_z65_row_record' not in sec and
-     'ladder_m29_z70_row_record' not in sec and
-     'ladder_m29_z71_row_record' not in sec and
-     'ladder_m31_z68_row_record' not in sec and
-     'ladder_m31_z69_row_record' not in sec and
-     'evenlife_m14_z46_row_record' not in sec and
-     'evenlife_m16_z52_row_record' not in sec and
-     'evenlife_m18_z58_row_record' not in sec and
      'inband_m37_z65_row_record' not in sec and
-     'inband_m38_z73_row_record' not in sec)
+     'inband_m38_z66_row_record' not in sec and
+     'evenlife_m14_z46_row_record' not in sec)
 
 res = {'result': 'AUDIT-' + ('PASS' if all(g['pass'] for g in gates) else 'FAIL'),
        'gates': gates}

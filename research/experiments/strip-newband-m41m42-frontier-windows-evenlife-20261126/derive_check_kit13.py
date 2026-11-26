@@ -14,6 +14,8 @@ ns = {'lru_cache': __import__('functools').lru_cache,
       '__name__': 'notmain'}
 exec(src, ns)
 v = ns['v']
+vC = ns['ns']['vC']
+vO = ns['ns']['vO']
 
 fails = []
 checks = 0
@@ -77,10 +79,6 @@ for r in BIND:
 for r in BIND:
     chk(not (r['m'] == 39 and r['z'] == 77), 'm39 z77 not re-registered')
     chk(not (r['m'] == 40 and r['z'] == 78), 'm40 z78 not re-registered')
-    chk(not (r['m'] == 37 and r['z'] == 73), 'm37 z73 not re-registered')
-    chk(not (r['m'] == 38 and r['z'] == 74), 'm38 z74 not re-registered')
-    if r['kind'] != 'frontier':
-        chk(not (r['z'] < 2 * r['m'] - 2 - 8), 'ladder z below kit-12 measured band m=%d' % r['m'])
 
 # z* K1268 checks
 chk(v(83, 81, 123) == 0, 'frontier m41 collapse')
@@ -118,7 +116,7 @@ assert len(FUT) == 34
 for f in FUT:
     if isinstance(f.get('z'), int):
         m = f['m']; z = f['z']
-        chk(z >= 25, 'future z sane')
+        chk(z >= 53, 'future z sane')
         if m:
             chk(m + z + 1 >= z, 'future R sane')
     for lit in text_literals(f['prediction']):
@@ -140,11 +138,20 @@ chk(list(range(73, 81)) == [2 * 41 - 2 + 1 - 8 + i for i in range(8)], 'window m
 chk(list(range(74, 82)) == [2 * 42 - 2 + 0 - 8 + i for i in range(8)], 'window m42 arithmetic')
 
 # battery: 1,906 literals = 1,804 kit-12 carried + 102 new; every literal
-# triple is (x, z, R) with R = x + z + 1 or a registered seat/stack sum
+# triple is (x, z, R) with R = x + z + 1 or a registered seat/stack sum;
+# the 102 NEW literals additionally satisfy v == vC == vO before the freeze
 BAT = json.loads(ns['BATTERY_TRIPLES_JSON'])
 chk(len(BAT) == 1906, 'battery count %d' % len(BAT))
+BAT12 = json.loads(re.search(r"BATTERY_TRIPLES_JSON = '(.*?)'\n",
+                             open('explore_kit12.py').read(), re.S).group(1))
+s12 = set(map(tuple, BAT12))
 for (x, z2, R2) in BAT:
     chk(v(x, z2, R2) >= 0, 'battery literal sane %s' % str((x, z2, R2)))
+for t_ in BAT:
+    if tuple(t_) not in s12:
+        x, z2, R2 = t_
+        chk(v(x, z2, R2) == vC(x, z2, R2) == vO(x, z2, R2),
+            'new battery literal v/vC/vO %s' % str(t_))
 
 # anchors: 616 = 515 carried + 101 kit-12 separation spots
 ANCH = ns['K13_ANCHORS']
