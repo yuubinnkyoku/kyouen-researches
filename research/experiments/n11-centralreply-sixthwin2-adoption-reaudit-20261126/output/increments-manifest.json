@@ -1,0 +1,246 @@
+{
+ "adopted_nodes_total": 31781542,
+ "adopted_table": [
+  {
+   "hi": 536870912,
+   "legal": 95,
+   "lo": 1152921573327376384,
+   "nodes": 16402480,
+   "owner_classes_graph": [
+    3077,
+    30136
+   ],
+   "result": 1,
+   "s5_index": 112203,
+   "serving_class": 3077
+  },
+  {
+   "hi": 65664,
+   "legal": 95,
+   "lo": 10376293541461626880,
+   "nodes": 15379062,
+   "owner_classes_graph": [
+    2624,
+    3077,
+    5184
+   ],
+   "result": 1,
+   "s5_index": 103319,
+   "serving_class": 3077
+  }
+ ],
+ "adopted_table_digest_sha256": "e7e2b30d5e5ee504f299ec1e64ecf2c252d9d3ca412299d38932628e8844bd83",
+ "base_cache_absent_hits_for_emitted": 0,
+ "base_cache_rows": 6797,
+ "base_cache_sha256": "16a12390c0c3f046f0ae537b2a9940e15661263fc5034ce1b155c138bb9043cd",
+ "base_cache_win_loss": [
+  197,
+  6600
+ ],
+ "canonical_head_published_by_this_part": {
+  "merge_audit_runs": 3,
+  "merge_audit_sha256_x3_identical": "5904693ec6836515c2523d5a5b8744e4f515e56400e3288a07dff30e6875f9cf",
+  "merged_cache_bytes": 284127,
+  "merged_cache_name": "merged-exact-s5-chain-plus-sixthwin2-20261126.cache",
+  "merged_cache_rows": 6799,
+  "merged_cache_sha256": "cc3694bbe871ccf27bdf4dbcf5e93586da440164fd75c02c15dc2a0ae46d11b8",
+  "merged_cache_win_loss": [
+   199,
+   6600
+  ],
+  "merger": "pinned byte-clone of the published union merger (sha256 90711961..., this kit scripts/s5_union_merge.py)",
+  "note": "no pre-declaration dossier exists for sixthwin2 (unlike EW's sixthwin5); this Part SP publishes the merged head of record itself at this kit's output/ directory; three independent merge runs produced byte-identical output and byte-identical audit records"
+ },
+ "date": "2026-11-26",
+ "interpretation_guard": "Part SP canonical WIN-only adoption increment: the 2 fresh exact-WIN rows (each cold two-pass node-exact at 50M over the pinned 15M park-at-UNKNOWN baseline, plus a 32M budget-margin re-proof and a voluntary third cold 50M verify run, solved within budget, C++-gated by Part SM and third-implementation-corroborated by the Part SL batch) are consumed into the canonical chain via the fail-closed union merger whose output this Part publishes as the merged head of record (cc3694bb..., 6,799 rows WIN 199 / LOSS 6,600); WIN-only adoption asserts no root verdict and frees no class; owner classes of the adopted keys are excluded_now by the win-hit mechanism, derived machine-only by the reaudit refresh (flip set exactly {2624, 30136}; serving class 3077 stays excluded_now since Part EW with cost-unknown 95 -> 93); nodes are bookkeeping, never verdicts; the standard 11x11 empty board and every central-reply root stay UNKNOWN",
+ "loss_ids": [],
+ "merger_sha256": "907119610034fb2aebfde012550a4129dfa3b086c6de11194e856747ac74606a",
+ "part": "SP",
+ "pools": [
+  {
+   "adopted_nodes": 31781542,
+   "adopted_win_ids": [
+    "k13",
+    "k19"
+   ],
+   "budget": 50000000,
+   "kit": "n11-sixthcost-class10376293541461626880-parked4-s5-l50m-ladder-20261126",
+   "kit_integrity": {
+    "halt_audit_pins": {
+     "gates_passed_count": 77,
+     "halted_on_win_keys": [
+      "1152921573327376384:536870912",
+      "10376293541461626880:65664"
+     ],
+     "lane_time_base_chain_sha256": "6e49dd84...",
+     "lane_time_base_note": "the halt-audit pins the lane-time canonical head 6e49dd84 (pre-EW); the lane's if-adopted prediction was computed against that older head and is superseded by this Part's census measurement against the current 16a12390 head (Part EW already flipped serving class 3077; the full recount measures the flip set exactly {2624, 30136})"
+    },
+    "halt_audit_sha256": "9baeb8bebc09cbdb6812d5d3815e5ef00ff0fdfeead4ddb1a5b1f2dd3a5c5703",
+    "input_csv_cross_registration": "batch-k13/batch-k19 are byte-equal to the Part SM kit's MANIFEST-pinned gate inputs; the val anchors are byte-equal to the Part SM kit's pinned anchor-at2m input family",
+    "input_csv_sha256_pins": {
+     "batch-k13.input.csv": "298dd6e6b6655d12aefaae138a2e1d85388220546ff68e4d6b7081c6097b0526",
+     "batch-k19.input.csv": "88c107d7d060ef756a394d722de3a80b4ee60bad5647785cbbb65eb088da6190",
+     "batch-k20.input.csv": "0984400f8aa99735e11e2638f5bc9a9273ddd296e845f7b7118f3ada81adddad",
+     "batch-k33.input.csv": "ca081b0f2f85e62b39cbbd1178a7be839c87e3446b2357657bbfe8681f82e2f4",
+     "val-at2m-first.input.csv": "ecc0299b8142abde201fcc40ea9666dac7368d0888d0600abc717af66ddfe348",
+     "val-at2m-second.input.csv": "56aacb71769b231c9728dcc841d39f0d5cb579517d34769f0e7382516d4c3a62",
+     "val-first-15m.input.csv": "ecc0299b8142abde201fcc40ea9666dac7368d0888d0600abc717af66ddfe348",
+     "val-second-15m.input.csv": "56aacb71769b231c9728dcc841d39f0d5cb579517d34769f0e7382516d4c3a62"
+    },
+    "jsreplay_sha256": "845856175d3c793a7eb4306f5902ecda3f1c046a8a53e8f34ed375e51febc3df",
+    "note": "the parked4 ladder kit holds no MANIFEST-sha256; every consumed byte is pinned directly in this manifest: README, jsreplay.js, halt-audit.json, status.log, the 8 input CSVs (batch-k13/k19/k20/k33 and the 4 validation anchors) and all 14 raw CSV files (raw_file_sha256_pins / input_csv_sha256_pins below)",
+    "raw_file_sha256_pins": {
+     "base15m-10376293541461626880-65664.out.csv": "34e9a2b7aef6f5c60eb2dfbb2813cb663cf383af71e5852720529bfa01337539",
+     "base15m-1152921573327376384-536870912.out.csv": "c911a74041642a526584f4c0612908d0564d2595b1872aeffa1b57ec296d4f67",
+     "l50m-margin-10376293541461626880-65664.out.csv": "be8f4289607c24e1cba48b3bd4efac15e80874fec7987cef3c037d7de53a7517",
+     "l50m-margin-1152921573327376384-536870912.out.csv": "9b6a0026caf8781d268d9e9da16b2cc7389ffd1e23aae92dc136c1d2464c94eb",
+     "l50m-run1-10376293541461626880-65664.out.csv": "0e1287abba7d7f012f8e42bc9f774ec6cc093b46c54fb40f570f7c6d1c891abb",
+     "l50m-run1-1152921573327376384-536870912.out.csv": "b14273ee1a2b2c60375041f979db13f37c4b0b0b77d51e561bdf8abbac683985",
+     "l50m-run2-10376293541461626880-65664.out.csv": "0e1287abba7d7f012f8e42bc9f774ec6cc093b46c54fb40f570f7c6d1c891abb",
+     "l50m-run2-1152921573327376384-536870912.out.csv": "155ffe291e6d1c106bda6e31515ae481032b63fee8578bdde52d26101ab4ebe4",
+     "l50m-run3-verify-10376293541461626880-65664.out.csv": "eb624fcf4e753114ad708406b35683eedb3b1811be80fdb005c2eeed726ad3a5",
+     "l50m-run3-verify-1152921573327376384-536870912.out.csv": "979b11478c30b16c03630a1700e04421d25df7bf9437e981d2c0b35bf4799968",
+     "val-at2m-first.out.csv": "2bbfeba091014b8a38f54a1fee29f32ae610beaf02f9b1f5c92ae07cc00fa1de",
+     "val-at2m-second.out.csv": "0af850c443c5574f5a806c760bc236f7937c109003e7bf6ca7e3b5b023646481",
+     "val-first-15m.out.csv": "e5d33b954b81b6d766d870eff54a5425e6a0faf09cde049ce463920f8d4f9a25",
+     "val-second-15m.out.csv": "5957bce29e5fa27fa3b67f0be6552ecac39e294c14cc3452cbc7711228cedc02"
+    },
+    "readme_sha256": "f021e14bd33bf3fc701473ec393ce96702c1ed3a9341b52bffdfdf13bda487ac",
+    "status_log_sha256": "ea493ae9c886ebc38bb0355f2801c44e31109dc906b35f88254ef32c1d000be9",
+    "validation_anchor_replays": {
+     "val-at2m-first": [
+      98,
+      2000000,
+      0,
+      2000000,
+      1152921504606851072,
+      536870946
+     ],
+     "val-at2m-second": [
+      99,
+      2000000,
+      0,
+      2000000,
+      1188950301626860544,
+      536870912
+     ],
+     "val-first-15m": [
+      98,
+      15000000,
+      2,
+      3651923,
+      1152921504606851072,
+      536870946
+     ],
+     "val-second-15m": [
+      99,
+      15000000,
+      2,
+      5040200,
+      1188950301626860544,
+      536870912
+     ]
+    }
+   },
+   "margin_budget": 32000000,
+   "park_budget": 15000000,
+   "pool": "parked4-l50m-ladder",
+   "standing_unconsumed_keys_not_adopted": {
+    "k20": "10376293541461626880:33619968 (never started by this lane; resolved WIN(1) at 50M by the parked4rest2 ladder - outside this Part; third-implementation corroboration absent at SP build time; C++ gate kit Part SN in flight - disclosed)",
+    "k33": "12682136550675320832:65536 (same standing status as k20)"
+   }
+  },
+  {
+   "canonical_head_cross_gate": "the SM gate-rows.json canonical_head block pins this Part's BASE (16a12390, 6,797 rows, WIN 197 / LOSS 6600) and records the 2 adopted targets as fresh versus exactly that head, with raw/margin/run3 sha cross-registration to the parked4 ladder raws (gated here)",
+   "kit": "n11-sixthcost-parked4-l50m-cppgate-20261126",
+   "kit_integrity": {
+    "audit_gate_json_sha256": "a11983dda3b2279d530ccda5a8ed4ab00620648175568d99f92876000eb96f52",
+    "audit_run1_run2_run3_sha256_identical": "a11983dda3b2279d530ccda5a8ed4ab00620648175568d99f92876000eb96f52",
+    "cpp_solver_commit": "154f3b7a67b97e13acbaee8b04dc74ddca728d19",
+    "cpp_solver_sha256": "9193f5b6065e0fbcad2ef7c65f386187701cafa1f5b718cc35a5cbb0d138f92e",
+    "gate_rows_all_pass": 66,
+    "gate_rows_json_sha256": "9818accccba39af567c6a5b9f5e32a5267838a4a0299c691cf4a2ede7f60581a",
+    "gate_status_gate_pass_rows": 5,
+    "gate_status_log_sha256": "e0a1159e009b02d8a32ccb9c72a904055646f41ec5d2d60ce8bca44d7dc874e7",
+    "kit_files_verified": 28,
+    "kit_manifest_sha256": "976e079c069379d51efb2a36d3b7d8919ef30aae577764615d73468ebc6f4abe",
+    "note": "Part SM kit verified file-by-file against its published MANIFEST-sha256 976e079c... (28 files)",
+    "readme_sha256": "92a88c3e8d6607c094aa392f46afbec733070a80c9af749d2cd0750e4dc5a296"
+   },
+   "pool": "sm-cpp-second-implementation-gate"
+  },
+  {
+   "covered_ids": [
+    "k13",
+    "k19"
+   ],
+   "kit": "n11-sixthcost-k01-k03-thirdimpl-verdict-reverification-20261122",
+   "kit_integrity": {
+    "note": "Part SL batch audit summary pinned directly (same published kit as the TI-era audits); k13/k19 row_results, determinism triplets, replica 4-run unanimity, park-baseline replica rows, cold a/b/v witness rows, tt-overwrites and the fail-closed negative battery (legal96/stones6 GATE_FAIL) all field-gated here",
+    "row_pins": {
+     "k13": {
+      "expansions": 19433195,
+      "key": "1152921573327376384:536870912",
+      "legal": 95,
+      "tt_hits": 10181270,
+      "ttoverwrites": 15238891
+     },
+     "k19": {
+      "expansions": 17955947,
+      "key": "10376293541461626880:65664",
+      "legal": 95,
+      "tt_hits": 9504863,
+      "ttoverwrites": 13761643
+     }
+    },
+    "rows_audited": 32,
+    "summary_path": "out/audit-k09k43-summary.json",
+    "summary_sha256": "300c8c0a61e4e5fe5fb1a8a5a1fe32aaebd391ec767dc2783f3b87cfd943728e"
+   },
+   "pool": "sl-third-implementation-batch",
+   "standing_unconsumed_loss_rows": "the 30 fifth-resumption verified LOSS rows of the same batch are NOT adopted and NOT emitted by this Part; they remain unconsumed honest LOSS labels",
+   "verdict_agreement_note": "third-impl WIN(1) verdict-level agreement for k13/k19 with 3 identical cold runs each (expansions 19,433,195 / 17,955,947, tt-hits 10,181,270 / 9,504,863, tt-overwrites 15,238,891 / 13,761,643); expansions legitimately differ from replica node counts (different implementations); the summary's replica raw rows are payload-equal to the parked4 ladder raws"
+  }
+ ],
+ "provenance": {
+  "merged_cache_published_by_this_part": true,
+  "parked4_kit_direct_pins": true,
+  "part_maker_reverified_live": true,
+  "probe_kit_direct_pins": true,
+  "raws_published": true,
+  "sl_summary_sha_pinned": true,
+  "sm_kit_files_verified": 28
+ },
+ "quarantine_hits": 0,
+ "resolved_ids": [
+  "k13",
+  "k19"
+ ],
+ "row_counts": {
+  "adopted_win_rows": 2,
+  "prior_canonical_rows_base": 6797,
+  "standing_unconsumed_loss_rows": 30,
+  "standing_unconsumed_parked4rest2_win_rows": 2,
+  "win_ties_consumed_elsewhere": 0
+ },
+ "schema": "sixthwin2-adoption-increments-manifest-v1",
+ "sha256": {
+  "win_increment": "89bff217885ef89ae7a86d9580657818bdf4c7619ef24da7efd6392169aa1694"
+ },
+ "source_class": {
+  "adoption_requirement_of_record": "the parked4 halt-audit's pre-registered WIN-row requirement: published C++ second-implementation verification of the replica raw rows (pinned cpp/solvers/kyouen_dfpn_root.cpp sha256 9193f5b6...); satisfied for both rows by the Part SM kit (GATE-PASS); any C++ disagreement fails closed in favor of discarding the row; third-implementation verdict-level corroboration (Part SL batch audit) is additionally recorded for both rows per the repo's sixthwin5 adoption pattern",
+  "class": "10376293541461626880:65536",
+  "class_children_total": 108,
+  "note": "the sixth-cost live candidate class (s4 class 3077, coverage {80,84,100,108}); k13/k19 are positions 13/19 of the same published probe selection exclusive_probe_order of record (d5e9b059...), resolved by the parked4 L50M ladder over their pinned 15,000,000 park-at-UNKNOWN baselines",
+  "s5_unknown_before": 101,
+  "serving_class_index": 3077,
+  "unknown_exclusive": 43
+ },
+ "win_canonical_adoption": true,
+ "win_ids": [
+  "k13",
+  "k19"
+ ],
+ "win_ties": [],
+ "win_ties_note": "no consumed-WIN regression ties: both adopted keys are fresh to BASE"
+}
