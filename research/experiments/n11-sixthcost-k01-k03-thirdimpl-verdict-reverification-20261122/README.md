@@ -177,3 +177,87 @@ python3 audit_k04.py                 # 31/31 gates, rc=0, deterministic
 
 Input row spec: `input/k04.input.csv`
 (`target,0,5,10376293541461626888,65536,83,0,0,0,0,0`).
+
+## k05 addendum: third-implementation re-verification of the third-resumption WIN row (new host, 2026-11-26)
+
+Declared separately (single-owner WIN-row precedent) in
+`research/log/2026-11-26-n11-sixthcost-k05-thirdimpl-verdict-single-owner-note.md`,
+extending this dir's program to **k05 `10376293541461757952:65536`**
+(stones 5, legal 88): the fifth fresh WIN raw of the n11 exclusive-probe
+program, published at commit `704cb3ef` (probe-lane raw: 2M UNKNOWN
+nodes 2,000,000 result 0, then WIN(1) nodes 13,397,611 at 15M, three cold
+runs identical). Implementation and pins are unchanged from the parent
+program above. This addendum was executed on a NEW host (a fresh sandbox
+without a C++ toolchain), so the C1 calibration was re-executed THIS
+session on THIS host rather than reusing the 2026-11-22 calibration
+raws (honest non-reuse; new raws below).
+
+| row (lo:hi, legal) | replica raw (published at `704cb3ef`) | third_impl (this addendum) | runs | expansions | wall |
+|---|---|---|---|---|---|
+| k05 `10376293541461757952:65536`, 88 | WIN(1), nodes 13,397,611 @15M (x3); 2M UNKNOWN (nodes 2,000,000, result 0) | **WIN(1)** | x3 (a, b, v=verify-legal) | 15,949,585 (identical x3; ttHits 8,391,212; ttOverwrites 11,755,281; quads 95,670) | 44.44 / 45.13 / 80.42s |
+
+- Verdict-level agreement with the replica raws (result 1 vs 1). Expansion
+  counts are compared only across the third implementation's own cold runs,
+  never against the replica's node counts (the implementations count
+  different quantities).
+- C1 calibration re-executed on THIS host THIS session:
+  `out/k05-calib-verify-tbl.txt` (replica 95,670 == mine 95,670; 195,044
+  triples, 0 mismatches, rc=0) and anchor w2
+  `10376293541461626880:131328` reproducing WIN(1) with expansions
+  7,583,990 == the published ea73c3e3 witness value (two executions,
+  22.51s rc-annotated kept in `out/k05-calib-anchor-w2.txt`, 22.17s in
+  `out/k05-calib-anchor-w2-run2.txt`; identical counts both runs).
+- C4 fail-closed input gates on k05, both GATE_FAIL with process exit status
+  1: declared legal 89 vs derived 88; declared stones 6 vs bits 5.
+- The four replica raw copies consumed at `704cb3ef` are re-published inside
+  this dir at `out/k05-replica-raws/` so the auditor is self-contained; each
+  is pinned by its probe-lane sha256 inside `audit_k05.py` (`repl_sha_*`
+  gates) and byte-compared against the just-published blobs before this push.
+- `audit_k05.py` is a separate auditor so the published `audit.py` and
+  `audit_k04.py` stay byte-frozen. It re-verifies every addendum gate (31)
+  from the raw files, resolves the pinned third_impl.js / verify_tbl.js /
+  jsreplay.js from either this dir + the probe dir (repo checkout) or the
+  executable kit, is deterministic (byte-identical output across runs), and
+  exits 0 only if all gates pass. Negative (tamper) controls on full kit
+  copies detect a k05 verdict flip (1 -> 2:
+  `C2_k05_determinism_3runs_identical` + `C2_k05_win_verdict_level_vs_replica`)
+  and a replica-raw nodes edit (`repl_sha_*` + `repl_row_*` +
+  `repl_k05_win_3runs_unanimous`), each failing closed with rc=1
+  (`out/audit-tamper-controls-k05.txt`; kit restores byte-verified, final
+  clean control rc=0 byte-identical to baseline).
+- Honest note: the tamper-control log was reassembled from the executed
+  control transcript after an inline gate-listing helper printed a
+  SyntaxError to the transcript; the rc values and failed-gate lists in the
+  published log come directly from the control JSON outputs and all
+  restores were byte-verified. No raw predates or postdates any audit edit;
+  the published `out/audit-k05-summary.json` is the output of the clean
+  auditor.
+- No verdict is consumed. The delegated pinned C++ gate for k05
+  (`cpp/solvers/kyouen_dfpn_root.cpp` sha256 `9193f5b6...`,
+  `target,0,5,10376293541461757952,65536,88,0,0,0,0,0` @15,000,000, expected
+  result 1, nodes 13,397,611) is recorded and UNCHANGED; adoption stays with
+  the scrutiny owner. **The standard 11x11 empty board, the two-stone root
+  {60,27}, and its remaining third moves {100,108} remain UNKNOWN.
+  Node/expansion counts are never verdicts.**
+
+### Reproduce (addendum k05)
+
+```
+node verify_tbl.js                       # C1a gate (needs pinned jsreplay.js)
+node third_impl.js --lo=10376293541461626880 --hi=131328 --stones=5 --legal=80 \
+  --row=w2-anchor-k05 --cap=400000000 --wallcap=270 --memo-power=22    # C1b anchor
+node third_impl.js --lo=10376293541461757952 --hi=65536 --stones=5 --legal=88 \
+  --row=k05-a --cap=400000000 --wallcap=270 --memo-power=22        # k05 cold
+node third_impl.js --lo=10376293541461757952 --hi=65536 --stones=5 --legal=88 \
+  --row=k05-b --cap=400000000 --wallcap=270 --memo-power=22        # k05 cold
+node third_impl.js --lo=10376293541461757952 --hi=65536 --stones=5 --legal=88 \
+  --row=k05-v --verify-legal=1 --cap=400000000 --wallcap=270 --memo-power=22
+node third_impl.js --lo=10376293541461757952 --hi=65536 --stones=5 --legal=89 \
+  --row=ng1-k05 --cap=4000000 --wallcap=60 --memo-power=22  # GATE_FAIL, rc=1
+node third_impl.js --lo=10376293541461757952 --hi=65536 --stones=6 --legal=88 \
+  --row=ng2-k05 --cap=4000000 --wallcap=60 --memo-power=22  # GATE_FAIL, rc=1
+python3 audit_k05.py                 # 31/31 gates, rc=0, deterministic
+```
+
+Input row spec: `input/k05.input.csv`
+(`target,0,5,10376293541461757952,65536,88,0,0,0,0,0`).

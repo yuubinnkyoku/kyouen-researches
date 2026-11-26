@@ -1,0 +1,145 @@
+{
+ "all_pass": true,
+ "claim": "verdict-level agreement only; no verdict consumed; 11x11 empty board / two-stone root {60,27} / third moves {100,108} remain UNKNOWN",
+ "consumed": false,
+ "gates": {
+  "C2_k05_determinism_3runs_identical": {
+   "detail": "[('1', '15949585', '8391212'), ('1', '15949585', '8391212'), ('1', '15949585', '8391212')]",
+   "pass": true
+  },
+  "C2_k05_expansions_differ_from_replica_nodes_allowed": {
+   "detail": "third_expansions=15949585 replica_nodes=13397611 (different implementations; verdict-level agreement is the gate)",
+   "pass": true
+  },
+  "C2_k05_ttoverwrites_pinned": {
+   "detail": "ttOverwrites=11755281",
+   "pass": true
+  },
+  "C2_k05_win_verdict_level_vs_replica": {
+   "detail": "third={'1'} replica={'1'}",
+   "pass": true
+  },
+  "C4_ng1_k05_legal89_gate_fail": {
+   "detail": "third,ng1-k05,5,89,,GATE_FAIL,\"legal count mismatch: derived=88 declared=89\"\nrc=1",
+   "pass": true
+  },
+  "C4_ng2_k05_stones6_gate_fail": {
+   "detail": "third,ng2-k05,6,88,,GATE_FAIL,\"stone count mismatch: bits=5 declared=6\"\nrc=1",
+   "pass": true
+  },
+  "pin_jsreplay_js_sha256": {
+   "detail": "/home/user/kyouen-work/inv/jsreplay.js",
+   "pass": true
+  },
+  "pin_third_impl_js_sha256": {
+   "detail": "/home/user/kyouen-work/ti/third_impl.js",
+   "pass": true
+  },
+  "pin_verify_tbl_js_sha256": {
+   "detail": "/home/user/kyouen-work/ti/verify_tbl.js",
+   "pass": true
+  },
+  "repl_k05_2m_unknown": {
+   "detail": "replay,0,5,88,0,2000000,0,2000000,9,10376293541461757952,65536",
+   "pass": true
+  },
+  "repl_k05_win_3runs_unanimous": {
+   "detail": "[('1', '13397611'), ('1', '13397611'), ('1', '13397611')]",
+   "pass": true
+  },
+  "repl_row_at15m-run1-k05.out.csv": {
+   "detail": "replay | 0 | 5 | 88 | 0 | 15000000 | 1 | 13397611 | 67 | 10376293541461757952 | 65536",
+   "pass": true
+  },
+  "repl_row_at15m-run2-k05.out.csv": {
+   "detail": "replay | 0 | 5 | 88 | 0 | 15000000 | 1 | 13397611 | 70 | 10376293541461757952 | 65536",
+   "pass": true
+  },
+  "repl_row_at15m-run3-verify-k05.out.csv": {
+   "detail": "replay | 0 | 5 | 88 | 0 | 15000000 | 1 | 13397611 | 135 | 10376293541461757952 | 65536",
+   "pass": true
+  },
+  "repl_row_at2m-k05.out.csv": {
+   "detail": "replay | 0 | 5 | 88 | 0 | 2000000 | 0 | 2000000 | 9 | 10376293541461757952 | 65536",
+   "pass": true
+  },
+  "repl_sha_at15m-run1-k05.out.csv": {
+   "detail": "dde1e4f0eae6a0557f0a6da7fd54f43f8ab4749c0321c16eba8f4586ee743df8",
+   "pass": true
+  },
+  "repl_sha_at15m-run2-k05.out.csv": {
+   "detail": "562e2c9d3cfd7596e63a4f4d101c40ea6ea7dd66abfe5339cc095c6a0e408a2c",
+   "pass": true
+  },
+  "repl_sha_at15m-run3-verify-k05.out.csv": {
+   "detail": "1305562baff3d171ff24df0befd6dc519147b77dc3648f78580b7e039d6f9381",
+   "pass": true
+  },
+  "repl_sha_at2m-k05.out.csv": {
+   "detail": "6be638e623dcd3275cfb9cce04bebe447fbf3fa93dad33f8c30508b635f87297",
+   "pass": true
+  },
+  "third_clean_k05-cold-a.txt": {
+   "detail": "reason=clean",
+   "pass": true
+  },
+  "third_clean_k05-cold-b.txt": {
+   "detail": "reason=clean",
+   "pass": true
+  },
+  "third_clean_k05-cold-v-legal.txt": {
+   "detail": "reason=clean",
+   "pass": true
+  },
+  "third_derivedlegal_k05-cold-a.txt": {
+   "detail": "in=88 derived=88",
+   "pass": true
+  },
+  "third_derivedlegal_k05-cold-b.txt": {
+   "detail": "in=88 derived=88",
+   "pass": true
+  },
+  "third_derivedlegal_k05-cold-v-legal.txt": {
+   "detail": "in=88 derived=88",
+   "pass": true
+  },
+  "third_key_k05-cold-a.txt": {
+   "detail": "third | k05-a | 5 | 88 | 88 | 1 | 15949585 | 8391212 | 44.44 | 10376293541461757952 | 65536 | clean | quads=95670 | ttOverwrites=11755281 | memoPower=22",
+   "pass": true
+  },
+  "third_key_k05-cold-b.txt": {
+   "detail": "third | k05-b | 5 | 88 | 88 | 1 | 15949585 | 8391212 | 45.13 | 10376293541461757952 | 65536 | clean | quads=95670 | ttOverwrites=11755281 | memoPower=22",
+   "pass": true
+  },
+  "third_key_k05-cold-v-legal.txt": {
+   "detail": "third | k05-v | 5 | 88 | 88 | 1 | 15949585 | 8391212 | 80.42 | 10376293541461757952 | 65536 | clean | quads=95670 | ttOverwrites=11755281 | memoPower=22",
+   "pass": true
+  },
+  "third_quads_k05-cold-a.txt": {
+   "detail": "quads",
+   "pass": true
+  },
+  "third_quads_k05-cold-b.txt": {
+   "detail": "quads",
+   "pass": true
+  },
+  "third_quads_k05-cold-v-legal.txt": {
+   "detail": "quads",
+   "pass": true
+  }
+ },
+ "row_results": {
+  "k05": {
+   "replica_2m_result_unknown": true,
+   "replica_nodes_15m": 13397611,
+   "replica_verdict": 1,
+   "third_impl_determinism_3runs_identical": true,
+   "third_impl_expansions": 15949585,
+   "third_impl_runs": 3,
+   "third_impl_tt_hits": 8391212,
+   "third_impl_verdict": 1,
+   "verdict_level_agreement": true
+  }
+ },
+ "schema": "n11-sixthcost-k05-thirdimpl-audit-v1"
+}
