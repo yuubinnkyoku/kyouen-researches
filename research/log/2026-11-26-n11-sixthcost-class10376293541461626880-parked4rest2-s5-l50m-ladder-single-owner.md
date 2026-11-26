@@ -73,8 +73,8 @@ declared pair, the k02/k03/k04/k05/k08 precedent).
   byte-identical re-download verified; positions 20/33 of the authoritative
   `exclusive_probe_order`) and exclusive single-live-parent S5 children of the
   declared class per the frozen geometry (child-of-class membership
-   machine-verified; 5 stones; d4-canonical; canonical-safe under the pinned
-  2policy; legal counts 95/91 agree with the reply27 supply ledger).
+  machine-verified; 5 stones; d4-canonical; canonical-safe under the pinned
+  policy; legal counts 95/91 agree with the reply27 supply ledger).
 - Both exact (key_lo, key_hi) pairs are ABSENT from the chain head of record
   `16a12390` (machine scan over the published 6,797 rows) and from the S5
   quarantine registry (2 active entries, neither touching these keys).
