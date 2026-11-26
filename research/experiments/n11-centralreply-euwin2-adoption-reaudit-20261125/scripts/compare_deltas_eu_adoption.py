@@ -22,9 +22,11 @@ canonical adoption changed, from published bytes only:
   merged-exact-s5-chain-plus-euwin2-20261125.cache; the sha pin carries the
   identity), the merge-audits x3 (identical sha 9f807c95...), the maker
   f2ae97a1..., the byte-clone of the union merger 90711961... and both
-  refresh forks (the published Part ER refresh 6c91e0ce... and the Part
-  EU refresh fork a377eea0...), the frozen graph/update8/board/policy/
-  quarantine pins, and the batch-38 SSOT batch-keys 29807104...);
+  refresh forks (the published Part ER refresh 6c91e0ce... and the
+  disclosed-repair Part EU refresh fork 6dc24c15... - the declaration's
+  original a377eea0... pin pointed at never-published bytes and was
+  superseded 2026-11-26 by the disclosed 3-region-diff repair fork),
+  the frozen graph/update8/board/policy/quarantine pins, and the batch-38 SSOT batch-keys 29807104...);
   both probe-worklists are UNPUBLISHED per the size policy - they enter ONLY
   as regen pins (BASE 78e499dd... 3,717,828 B / SCEN 397a4379... 3,717,712 B)
   re-verified by the byte-verbatim refresh re-execution;
@@ -147,7 +149,21 @@ SCEN_CLOSURE_SHA = "59a4c85fdd25a8d161bfb46598a8f8c77a684c996d456ba85b125f840134
 SCEN_PRC_SHA = "cfc2bfe15508c4d0c3455ca2f2abedd2a233d01118dbae95353bdc5b79f8e47f"
 SCEN_WORKLIST_SHA = "397a43794be60442725825371a5cfba9c2744a69b8f5d32cb3a3f313ced29ba6"
 BASE_REFRESH_SHA = "6c91e0ceaee03592f18ca1c36130d868cc7221bbe1819b803c4ba12b917a6061"
-SCEN_REFRESH_SHA = "a377eea0cf5fac65fc248a7d50b5b8672c442dd9f26a80d3cd2cb08954ba067c"
+SCEN_REFRESH_SHA = "6dc24c15e0ddfa9043d715dd09a794819ef0c393fe15d0491c5beb04042e9fad"
+# REPAIR (2026-11-26, disclosed decision log
+# research/log/2026-11-26-part-eu-scen-refresh-pin-repair.md): the Part EU
+# declaration (7136d22c) pre-registered SCEN_REFRESH_SHA =
+# a377eea0cf5fac65fc248a7d50b5b8672c442dd9f26a80d3cd2cb08954ba067c
+# (the declaring session's pre-declaration exploration fork).  Those bytes
+# were never published (wave B carried only the three kit scripts) and are
+# unrecoverable (declaring environment gone; repo-wide search finds only
+# this pin).  Superseded by the published disclosed-repair fork
+# reaudit/scripts/refresh_adoption_eu.py: a byte-clone of the published
+# Part ER refresh 6c91e0ce... differing in EXACTLY the three declared
+# regions (CACHE path, expected cache sha, docstring); all computation
+# bytes identical.  All four refresh output pins pre-registered by the
+# declaration are docstring-insensitive and unchanged; the declared
+# post-conditions remain authoritative.
 MERGER_SHA = "907119610034fb2aebfde012550a4129dfa3b086c6de11194e856747ac74606a"
 MERGE_AUDIT_SHA = "9f807c95e71a3da1f4d3d958cdf87f5f31f2bd1c961a1b105b63368fa0b159ce"
 GRAPH_SHA = "54f9c3643eeba139ea5e8d3babb1db9744d19f00f3cf024bbf192ec0d408c00b"
