@@ -261,3 +261,112 @@ python3 audit_k05.py                 # 31/31 gates, rc=0, deterministic
 
 Input row spec: `input/k05.input.csv`
 (`target,0,5,10376293541461757952,65536,88,0,0,0,0,0`).
+
+## k06/k07/k08 addendum: third-implementation re-verification of the three fourth-resumption rows (new host, 2026-11-26)
+
+Declared separately (single-owner, fresh-declaration program rule) in
+`research/log/2026-11-26-n11-sixthcost-k06-k07-k08-thirdimpl-verdict-single-owner-note.md`
+(push `b9dc2bb3`), extending this dir's program to the three resolved rows of the
+fourth-resumption chain with no independent third-implementation verdict yet:
+**k06 `10376293541462675456:65536`** (stones 5, legal 89) and
+**k07 `10376293542535368704:65536`** (stones 5, legal 87), the batch's second and
+third solved-LOSS rows (published probe raws at `585d99ef` / `3780887d`:
+k06 2M UNKNOWN then 15M pair LOSS(2) nodes 8,182,231; k07 2M determinism pair
+LOSS(2) nodes 1,419,823 plus a 15M cold pair with identical counts), and
+**k08 `10376293610182148096:68719476736`** (stones 5, legal 89), the batch's
+fifth fresh WIN row (published at `575a58fe`: 2M UNKNOWN then a 15M triple all
+WIN(1) nodes 6,195,897; first non-65536 key_hi row of the selection).
+Implementation and pins are unchanged from the parent program above. This
+addendum ran on a NEW host (fresh sandbox, no C++ toolchain), so the C1
+calibration was re-executed THIS session on THIS host rather than reusing any
+earlier calibration raws (honest non-reuse; new raws below).
+
+| row (lo:hi, legal) | replica raw (published) | third_impl (this addendum) | runs | expansions | wall |
+|---|---|---|---|---|---|
+| k06 `10376293541462675456:65536`, 89 | LOSS(2), nodes 8,182,231 @15M (x2); 2M UNKNOWN (nodes 2,000,000, result 0) | **LOSS(2)** | x2 (a, b) | 9,474,431 (identical x2; ttHits 5,163,124; ttOverwrites 5,280,127; quads 95,670) | 27.38 / 28.03s |
+| k07 `10376293542535368704:65536`, 87 | LOSS(2), nodes 1,419,823 (2M pair x2 + 15M pair x2, all four identical) | **LOSS(2)** | x2 (a, b) | 1,608,994 (identical x2; ttHits 935,234; ttOverwrites 169; quads 95,670) | 4.83 / 4.84s |
+| k08 `10376293610182148096:68719476736`, 89 | WIN(1), nodes 6,195,897 @15M (x3); 2M UNKNOWN (nodes 2,000,000, result 0) | **WIN(1)** | x3 (a, b, v=verify-legal) | 7,243,596 (identical x3; ttHits 3,873,045; ttOverwrites 3,050,565; quads 95,670) | 19.88 / 19.77 / 35.67s |
+
+- Verdict-level agreement with the replica raws on all three rows (2 vs 2, 2 vs 2,
+  1 vs 1). Expansion counts are compared only across the third implementation's
+  own cold runs, never against the replica's node counts (the implementations
+  count different quantities).
+- C1 calibration re-executed on THIS host THIS session:
+  `out/calib-verify-tbl-k06k07k08.txt` (replica 95,670 == mine 95,670; 195,044
+  triples, 0 mismatches, rc=0) and anchor w2
+  `10376293541461626880:131328` reproducing WIN(1) with expansions 7,583,990 ==
+  the published ea73c3e3 witness value on two executions (21.57s kept in
+  `out/calib-anchor-w2-k06k07k08.txt`, 21.65s in
+  `out/calib-anchor-w2-run2-k06k07k08.txt`; identical counts both runs).
+- C4 fail-closed input gates per row, all GATE_FAIL with process exit status 1:
+  k07 row legal 88 vs derived 87; k06/k08 legal 90 vs derived 89; stones 6 vs
+  bits 5 (`out/neg-gate-*.txt`).
+- The eleven replica raw copies consumed at HEAD `dc7f36e1` are re-published
+  inside this dir at `out/k06-replica-raws/`, `out/k07-replica-raws/` and
+  `out/k08-replica-raws/` so the auditor is self-contained; each is pinned by
+  its probe-lane sha256 inside `audit_k06k07k08.py` (`repl_sha_*` gates) and
+  byte-compared against the republished blobs before this push.
+- `audit_k06k07k08.py` is a separate auditor so the published audit.py,
+  audit_k04.py and audit_k05.py stay byte-frozen. It re-verifies every addendum
+  gate (82: 11 repl_sha + 11 repl_row + 5 repl unanimity/UNKNOWN + 3 C1 + 28
+  third-row + 12 C2 + 6 C4 + 3 script pins + 3 input-spec pins), resolves
+  the pinned third_impl.js / verify_tbl.js / jsreplay.js
+  from either this dir + the probe dir (repo checkout) or the executable kit
+  layout, is deterministic (byte-identical output across runs in a fixed
+  layout; the only layout-dependent bytes are resolved-path detail strings,
+  normalized-identical across layouts), and exits 0 only if all gates pass.
+  Negative (tamper) controls on full kit copies detect a k08 verdict flip
+  (1 -> 2: `C2_k08_determinism_3runs_identical` +
+  `C2_k08_win_verdict_level_vs_replica`) and a k06 replica-raw nodes edit
+  (`repl_sha_*` + `repl_row_*` + `repl_k06_loss_2runs_unanimous`), each failing
+  closed with rc=1, kit restores byte-verified, final clean control rc=0
+  (`out/audit-tamper-controls-k06k07k08.txt`).
+- No verdict is consumed. The delegated pinned C++ gates for k06/k07/k08
+  (cpp/solvers/kyouen_dfpn_root.cpp sha256 `9193f5b6...`, expectations as
+  published in output/win-finding-ifadopted-k08.json: k06 2/8,182,231 @15M;
+  k07 2/1,419,823 @>=1.42M; k08 1/6,195,897 @15M) are recorded and UNCHANGED;
+  they could NOT be run on this host (no C++ toolchain in this sandbox) and
+  remain delegated to the scrutiny owner; adoption stays with the scrutiny
+  owner. **The standard 11x11 empty board, the two-stone root {60,27}, and its
+  remaining third moves {100,108} remain UNKNOWN. Node/expansion counts are
+  never verdicts.**
+
+### Reproduce (addendum k06/k07/k08)
+
+```
+node verify_tbl.js                       # C1a gate (needs pinned jsreplay.js)
+node third_impl.js --lo=10376293541461626880 --hi=131328 --stones=5 --legal=80 \
+  --row=w2-anchor-k06k07k08 --cap=400000000 --wallcap=270 --memo-power=22   # C1b anchor
+node third_impl.js --lo=10376293541462675456 --hi=65536 --stones=5 --legal=89 \
+  --row=k06-a --cap=400000000 --wallcap=270 --memo-power=22        # k06 cold
+node third_impl.js --lo=10376293541462675456 --hi=65536 --stones=5 --legal=89 \
+  --row=k06-b --cap=400000000 --wallcap=270 --memo-power=22        # k06 cold
+node third_impl.js --lo=10376293542535368704 --hi=65536 --stones=5 --legal=87 \
+  --row=k07-a --cap=400000000 --wallcap=270 --memo-power=22        # k07 cold
+node third_impl.js --lo=10376293542535368704 --hi=65536 --stones=5 --legal=87 \
+  --row=k07-b --cap=400000000 --wallcap=270 --memo-power=22        # k07 cold
+node third_impl.js --lo=10376293610182148096 --hi=68719476736 --stones=5 --legal=89 \
+  --row=k08-a --cap=400000000 --wallcap=270 --memo-power=22        # k08 cold
+node third_impl.js --lo=10376293610182148096 --hi=68719476736 --stones=5 --legal=89 \
+  --row=k08-b --cap=400000000 --wallcap=270 --memo-power=22        # k08 cold
+node third_impl.js --lo=10376293610182148096 --hi=68719476736 --stones=5 --legal=89 \
+  --row=k08-v --verify-legal=1 --cap=400000000 --wallcap=270 --memo-power=22
+node third_impl.js --lo=10376293541462675456 --hi=65536 --stones=5 --legal=90 \
+  --row=ng1-k06 --cap=4000000 --wallcap=60 --memo-power=22  # GATE_FAIL, rc=1
+node third_impl.js --lo=10376293541462675456 --hi=65536 --stones=6 --legal=89 \
+  --row=ng2-k06 --cap=4000000 --wallcap=60 --memo-power=22  # GATE_FAIL, rc=1
+node third_impl.js --lo=10376293542535368704 --hi=65536 --stones=5 --legal=88 \
+  --row=ng1-k07 --cap=4000000 --wallcap=60 --memo-power=22  # GATE_FAIL, rc=1
+node third_impl.js --lo=10376293542535368704 --hi=65536 --stones=6 --legal=87 \
+  --row=ng2-k07 --cap=4000000 --wallcap=60 --memo-power=22  # GATE_FAIL, rc=1
+node third_impl.js --lo=10376293610182148096 --hi=68719476736 --stones=5 --legal=90 \
+  --row=ng1-k08 --cap=4000000 --wallcap=60 --memo-power=22  # GATE_FAIL, rc=1
+node third_impl.js --lo=10376293610182148096 --hi=68719476736 --stones=6 --legal=89 \
+  --row=ng2-k08 --cap=4000000 --wallcap=60 --memo-power=22  # GATE_FAIL, rc=1
+python3 audit_k06k07k08.py           # 82/82 gates, rc=0, deterministic
+```
+
+Input row specs: `input/k06.input.csv`, `input/k07.input.csv`,
+`input/k08.input.csv`
+(`target,0,5,<lo>,<hi>,<legal>,0,0,0,0,0`; exact published batch input bytes,
+sha-pinned inside the auditor).

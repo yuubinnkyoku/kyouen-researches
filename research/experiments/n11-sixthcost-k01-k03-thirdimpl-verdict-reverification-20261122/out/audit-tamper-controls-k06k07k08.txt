@@ -1,0 +1,15 @@
+=== tamper battery for audit_k06k07k08.py (executed on this host this session) ===
+--- baseline clean control ---
+baseline rc=0 (expect 0)
+NOTE: raw-byte diff vs kit summary = local path details only
+--- T1: k08-cold-a.txt verdict flip 1->2 (kit copy) ---
+rc=1 (expect 1)
+failed gates: ['C2_k08_determinism_3runs_identical', 'C2_k08_win_verdict_level_vs_replica']
+T1 restore byte-verified
+--- T2: replica raw nodes edit at15m-run1-k06 (8182231 -> 8182232) (kit copy) ---
+rc=1 (expect 1)
+failed gates: ['repl_k06_loss_2runs_unanimous', 'repl_row_at15m-run1-k06.out.csv', 'repl_sha_at15m-run1-k06.out.csv']
+T2 restore byte-verified
+--- final clean control ---
+rc=0 (expect 0)
+final control byte-identical to this-layout baseline
