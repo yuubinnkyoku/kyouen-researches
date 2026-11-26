@@ -135,3 +135,17 @@ registration source:
    empty board, all 19 central-reply roots, the two-stone root {60,27},
    the third-move {100,108}, S2, and closure classes 1/2/4 remain UNKNOWN
    at all times. No verdict is consumed.
+7. Wave C transport and a repaired misplacement: the frozen .out
+   (353,101 bytes) could not transit the TS sandbox in one program with
+   b64 chunk reads (MemoryLimitError at ~471 KB of recorded tool results
+   plus the payload). Working route: two RAW ASCII chunk reads
+   (head -c 176550 / tail -c 176551; the bash wrapper strips the final
+   newline, restored in-program), i.e. ~706 KB total transit, matching
+   the kit-13 precedent budget (~767 KB). First wave C push (90fedd60)
+   placed the .out in the kit-13 dir
+   (strip-newband-m41m42-frontier-windows-evenlife-20261126) instead of
+   this kit's dir; repaired by re-pushing the byte-identical file here
+   (cf989198) and deleting the stray copy (7ccf91dc). Both locations
+   were fetch-back verified: all seven published files match the local
+   frozen bytes by sha256 (raw CDN; the stray deletion confirmed via the
+   contents API, which is authoritative over the stale CDN cache).
