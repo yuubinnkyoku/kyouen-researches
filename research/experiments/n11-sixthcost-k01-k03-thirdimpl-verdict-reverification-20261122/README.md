@@ -512,3 +512,96 @@ Input row specs: `input/k09.input.csv` ... `input/k43.input.csv` plus
 batch input bytes, sha-pinned inside the auditor; the two WIN-row specs are the
 parked4 ladder's consumed input bytes). Full per-row run raws: `out/kNN-cold-*.txt`;
 per-row replica raw copies: `out/kNN-replica-raws/`.
+
+## k20/k33 third-impl addendum: third-implementation verdict re-verification of
+the two parked4rest2 L50M ladder WIN rows (fresh host, 2026-11-26)
+
+Declared separately (single-owner, fresh-declaration program rule) in
+`research/log/2026-11-26-n11-sixthcost-k20-k33-thirdimpl-verdict-single-owner-note.md`
+(push `449ab209`), as pre-registered by the Part SN completion log: k20/k33
+carry the ladder 4-run primary battery plus the Part SN delegated pinned C++
+second-implementation gate (GATE-PASS, node-exact) but had NO
+third-implementation corroboration. This addendum extends the program to
+exactly those two rows. Implementation and pins unchanged from the parent
+program; the C1 calibration was re-executed FRESH on this host (new host,
+honest non-reuse of published calibration raws).
+
+| row | key lo:hi (legal) | replica raws (published) | third_impl | runs | expansions (ttHits / ttOverwrites) | wall (a-run) |
+|---|---|---|---|---|---|---|
+| k20 | `10376293541461626880:33619968` (95) | L50M pair + 32M margin + 50M verify, WIN(1) x4 identical + base15m parked baseline (UNKNOWN): nodes 16,196,331 x4 WIN | **WIN(1)** | x3 (a, b, v=verify-legal) | 19,455,330 (10,071,309 / 15,261,026) | 57.46s |
+| k33 | `12682136550675320832:65536` (91) | L50M pair + 32M margin + 50M verify, WIN(1) x4 identical + base15m parked baseline (UNKNOWN): nodes 15,842,649 x4 WIN | **WIN(1)** | x3 (a, b, v=verify-legal) | 18,829,006 (10,066,094 / 14,634,702) | 56.47s |
+
+Verdict-level agreement with the published replica raws on BOTH rows (2x WIN
+1v-WIN4). With this addendum k20/k33 reach the k13/k19 coverage level
+(ladder 4-run primary + delegated C++ second-implementation gate +
+third-implementation verdict-level corroboration) and become
+adoption-eligible inputs for a future adoption Part; that Part is NOT this
+addendum, weighs the coverage asymmetry explicitly, and stays with the
+scrutiny owner. Expansion counts are compared only across the third
+implementation's own cold runs and never to replica node counts (anti-copy
+gates enforced by the auditor; k20 expansions != 16,196,331, k33
+expansions != 15,842,649).
+
+- C1 fresh calibration on this host, before any k20/k33 row ran:
+  (i) verify_tbl.js replica-vs-mine completion-table battery: replica quads
+  95,670 == mine 95,670, 195,044 triples checked, 0 mismatches, rc=0
+  (identical counts to the published k05 calibration raws)
+  (`out/calib-verify-tbl.txt`); (ii) anchor w2 `10376293541461626880:131328`
+  reproducing WIN(1) expansions 7,583,990 == the published witness value on
+  both executions, identical quadruple (ttHits 4,157,314, ttOverwrites
+  3,390,391; walls 22.98 / 23.07s)
+  (`out/calib-anchor-w2-a.txt`, `out/calib-anchor-w2-b.txt`).
+- All TEN replica raws (five per row) consumed at HEAD `a0166a12` over the
+  raw CDN from the parked4rest2 ladder kit were fetched and sha-verified
+  against the ladder MANIFEST BEFORE the declaration, and re-published
+  inside this dir at `out/k20-replica-raws/` / `out/k33-replica-raws/` so the
+  auditor is self-contained (each sha-pinned inside `audit_k20k33.py`).
+- `audit_k20k33.py` is a separate data-driven auditor (audit.py,
+  audit_k04.py, audit_k05.py, audit_k06k07k08.py and audit_k09k43.py stay
+  byte-frozen): **49/49 gates ALL PASS, rc=0**, deterministic byte-identical
+  output across two runs. Gates: 2 script pins + 2 row-spec input pins +
+  2 input row-spec parses + 10 repl_sha + 10 repl_row + 2 stage-unanimity +
+  3 C1 + 6 C2 per row x2 (clean runs, keys/derived-legal, determinism,
+  verdict-level vs replica, verify-legal equality, anti-copy) + 4 C4
+  fail-closed input gates + 1 scope (no cache file, exactly two rows).
+  Negative tamper controls on full kit copies: k20 verdict flip 1->2 and
+  k33 verdict flip 1->2 (each failing the determinism + verdict-level +
+  verify-legal gates, rc=1) and a base15m-k33 replica-raw nodes edit
+  (sha + row + unanimity gates, rc=1); restores byte-verified; final clean
+  control rc=0 byte-identical to the baseline
+  (`out/audit-tamper-controls-k20k33.txt`).
+- Honest session notes: (1) the auditor had three pre-publication parse-bug
+  iterations (replica CSV column offsets, a GATE_FAIL short-row parse)
+  caught by its own crash/fail-closed behavior on the local kit; only the
+  final byte is published. (2) No verdict consumed; the delegated pinned C++
+  gate raws (Part SN, node-exact 16196331 / 15842649) are unchanged and
+  cross-consistent; adoption stays with the scrutiny owner. (3) This
+  sandbox has no C++ toolchain (re-verified).
+- **The standard 11x11 empty board, the two-stone root {60,27}, and its
+  remaining third moves {100,108} remain UNKNOWN. Node/expansion counts,
+  budgets and wall times are never verdicts.**
+
+### Reproduce (addendum k20/k33)
+
+```
+# per row (k20 shown; k33 likewise), three runs incl. the verify-legal run:
+node third_impl.js --lo=10376293541461626880 --hi=33619968 --stones=5 --legal=95 \
+  --row=k20-a --cap=400000000 --wallcap=270 --memo-power=22
+node third_impl.js --lo=10376293541461626880 --hi=33619968 --stones=5 --legal=95 \
+  --row=k20-b --cap=400000000 --wallcap=270 --memo-power=22
+node third_impl.js --lo=10376293541461626880 --hi=33619968 --stones=5 --legal=95 \
+  --row=k20-v --verify-legal=1 --cap=400000000 --wallcap=270 --memo-power=22
+# per row, both fail-closed input gates (GATE_FAIL, rc=1):
+node third_impl.js --lo=10376293541461626880 --hi=33619968 --stones=5 --legal=96 \
+  --row=ng-k20-ng1 --cap=4000000 --wallcap=60 --memo-power=22
+node third_impl.js --lo=10376293541461626880 --hi=33619968 --stones=6 --legal=95 \
+  --row=ng-k20-ng2 --cap=4000000 --wallcap=60 --memo-power=22
+python3 audit_k20k33.py            # 49/49 gates, rc=0, deterministic
+```
+
+Input row specs: `input/batch-k20.input.csv` and
+`input/batch-k33.input.csv` (exact published ladder input bytes, sha-pinned
+inside the auditor). Full per-row run raws: `out/k20-cold-*.txt` /
+`out/k33-cold-*.txt`; calibration raws: `out/calib-*.txt`; per-row replica raw
+copies: `out/k20-replica-raws/` / `out/k33-replica-raws/`; tamper battery
+log: `out/audit-tamper-controls-k20k33.txt`.
