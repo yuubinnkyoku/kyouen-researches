@@ -119,3 +119,47 @@ every kit battery) and per the lane's published equivalence claim;
 no K slot claimed (1 experiment != 1 K); 11x11 empty board,
 two-stone roots, S2, class 1/2/4, 19 central-reply roots and all
 closure classes: UNKNOWN unchanged; no verdict consumed.
+
+## Prior-art correction (added 2026-11-26, dated, in-place; the original text above is unchanged)
+
+1. The slot-check claim "no knowledge item describes it (see the
+   promotion note below)" — and the promotion note's "items run to
+   K1021 with no K1138/K1257" — were WRONG: the items/ directory
+   listing consulted at kit-build time was truncated at 1000 entries.
+   `research/knowledge/items/K1334-supply-identity-family-closed-form.md`
+   (published 2026-11-25) states the SAME universal theorem (its
+   Theorem A: for all k >= 1, s >= 0, A_k(s)=v(s,k+1,k+1)=s mod 2 on
+   [0..k] then 0 (k odd)/2 (k even), B_k(s)=v(s,k,k+1)=s mod 2 on
+   [0..k-1], B_k(k)=1/2, B_k(s)=1 for s >= k+1; identity domain and
+   uniform break constants identical to (i)-(v) above) over the same
+   published closed form, with an engine-free four-case proof, a
+   42,140-point machine cross-check, 45,000+5,850 raw-engine
+   re-validation rows and Lemma S. K1138 and K1257 also exist as
+   items-space files. The five-case analysis of this kit is therefore
+   an INDEPENDENT SECOND DERIVATION of an already-published theorem,
+   not the first universal statement. Integrator machine check
+   (2026-11-26): this kit's derived(s,k) vs K1334 Theorem A profile
+   on k in {1..400} x s in {1..k+45}: 98,200 points, 0 mismatches
+   (both also equal to the closed form on the same domain).
+2. The deferred promotion is RESOLVED (2026-11-26): the canonical
+   item is K1334, which was updated with this kit's artifacts (second
+   independent derivation), a dated body addendum recording the dedup
+   resolution and the s=0 degenerate divergence, and a related
+   relation to the new d-shift item. No separate knowledge item is
+   created for the same proposition (per the repo's same-proposition
+   update rule). The kit bytes are unchanged by this correction; only
+   this dated log note was added.
+3. Open structural question (a) (the two-supply family
+   v(s,k+2,k+2) vs v(s,k,k+2) and general d-shifts) was subsequently
+   CLOSED by `research/experiments/dshift-supply-family-theorem-20261126/`
+   (log `2026-11-26-dshift-supply-family-theorem.md`, knowledge item
+   K1345 temp numbering): A = v(s,k+d,k+d) and B = v(s,k,k+d) admit a
+   complete closed-form characterization for all d >= 1 whose d=1
+   slice machine-matches this theorem (98,200 points). Open
+   structural question (b) (the m-row separation life-cycle
+   scaffold) REMAINS OPEN.
+4. Nothing else changes: s=0 degenerate discovery and the
+   corroboration grids remain this kit's genuine new content; finite
+   corroboration only; the universal claim remains the written case
+   analysis of the published closed form; 11x11 roots UNKNOWN; no
+   verdict consumed.

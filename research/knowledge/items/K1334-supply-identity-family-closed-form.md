@@ -25,6 +25,9 @@ relations:
 - type: related
   target: K1268
   note: "帯域公式 z*(m)=2m−2+(m mod 2) とは独立。Lemma S の格子線 R=m+z+1 はスライス帯域構造と直交する全称閉形式。"
+- type: related
+  target: K1345
+  note: "d-shift 一般化 (2026-11-26 出版): 組 (v(s,k+d,k+d), v(s,k,k+d)) の d>=1 全称族定理。d=1 スライスが本項の定理 A と同一であることを機械照合 (98,200 点・2026-11-26 統合の追記参照)。本項の補題 S はその B 側一様部の m=d−1 インスタンスに相当し、格子線事実の正典は本項に残る。"
 artifacts:
 - path: research/experiments/supply-identity-closedform-20261125/verify_k1334.py
   role: verifier
@@ -61,6 +64,23 @@ artifacts:
 - path: research/log/2026-11-25-supply-identity-family-closedform.md
   role: log
   note: "本項の一次記録 (手計算先行の順序記録・定理と証明概略・機械照合結果・出版観測との整合表・k=25 以降の予測・事前調査と K 番号仮の開示)。"
+- path: research/experiments/single-token-tail-supply-identity-theorem-20261126/supply_identity_theorem_audit.py
+  role: verifier
+  note: "独立第二導出機体 (2026-11-26 06:14Z 出版・sha256 d4a8922c…・engine pin bd5f22e4… assert 内蔵)。閉形式 5 場合分けを k∈{1..400}×s∈{1..k+45} 98,200 点・広域 380 点・engine spot 317 座席で照合。定理 A の s>=1 部分の独立再導出として受領 (本項追記 1 参照)。"
+- path: research/experiments/single-token-tail-supply-identity-theorem-20261126/supply_identity_theorem_audit.out
+  role: data
+  commit: 17b50c9b35421d10c238466f437fefbcfac006d6
+  note: "凍結出力 (sha256 aafe5045…・degenerate_s0_boundary_record を含む)。"
+- path: research/experiments/single-token-tail-supply-identity-theorem-20261126/engine_block.py
+  role: data
+  note: "出版 chain engine 単体 (sha256 582c93c1…・pin bd5f22e4…)。"
+- path: research/experiments/single-token-tail-supply-identity-theorem-20261126/README.md
+  role: doc
+  note: "第二導出の 5 場合分け証明と s=0 degenerate 記録 ( kit bytes は出版時のまま不変・出版時 slot check の部分誤りは当該 log の dated Prior-art correction が開示)。"
+- path: research/log/2026-11-26-single-token-tail-supply-identity-theorem.md
+  role: log
+  commit: 17b50c9b35421d10c238466f437fefbcfac006d6
+  note: "第二導出の一次記録 (2026-11-26 dated Prior-art correction を統合側で追記済み): 定理 A との s>=1 同一性は 98,200 点の機械照合で確認 (本項追記 1)。s=0 degenerate 発見の一次出典。"
 ---
 
 # K1334: 供給恒等式族の完全閉形式特征付け (engine-free)
@@ -226,3 +246,40 @@ z+m+1=R (m>=0)。R<S+x=S+z ⟺ m+1<S ⟺ S>=m+2。ゆえに E3 の
 - 証明は K0832 が出版済みの全称閉形式への純代数計算であり、
   機械照合は手計算の転写ミス防禦と生 engine 一致の再確認で
   あって証明の代替ではない。
+
+## 追記 (2026-11-26 統合): 独立第二導出の受領・s=0 degenerate 記録・d-shift 一般化
+
+1. **独立第二導出の受領と重複解消**: 2026-11-26 06:14Z に出版された
+   `single-token-tail-supply-identity-theorem-20261126` (log
+   `2026-11-26-single-token-tail-supply-identity-theorem.md`) は
+   「単一トークン恒等式の普遍記述は未出版」の前提で 5 場合分けを
+   証明・出版したが、その slot check は本項を見逃していた (出版時
+   log の主張「no knowledge item describes it」「items は K1021
+   まで・K1138/K1257 なし」は items/ 一覧の 1000 件打ち切りに起因
+   する誤りで、items 空間には実際に K1138・K1257・本項 K1334 が
+   存在する)。統合側の機械照合 (2026-11-26): 第二導出の
+   derived(s,k) と本項の定理 A (s>=1 行) を k∈{1..400}×
+   s∈{1..k+45} の 98,200 点で照合、不一致 0 (両者は閉形式実値
+   とも同一域で一致)。よって同一命題の証拠更新として**本項を正典
+   のまま更新**し (artifacts に第二導出機体を追記)・第二導出は
+   「独立第二導出 + s=0 degenerate 発見」として位置づける。同一
+   命題への別項目は作らない。第二導出側の log には dated な
+   prior-art correction を追記済み (kit bytes は不変)。
+2. **s=0 degenerate 記録 (第二導出キットの発見した新事実)**:
+   x=0 (零サイズトークン) で生 engine (canonical・ordered 両方) は
+   両座席とも H(R;(0);z)=1 を返し (engine 側でも A=B は成立)、
+   閉形式は x<=0 規約で 0 を返す。本項の定理 A は閉形式 v に対する
+   主張であり s=0 行 (A=B=0) は不変だが、**s=0 における engine
+   転写は規約により発散する**ことをここに記録する。本項の生
+   engine 再検証 (canonical 45,000 行・ordered 5,850 行) は
+   x∈{1..30} から始まり s=0 座席を含まないため、当時の再検証の
+   主張は正しい (「engine 転写は s>=1 の標本で確認」と明示的に
+   狭める)。strip 系測定は parts >= m >= 13 を使うため影響なし。
+3. **d-shift 一般化の受領 (K1345・仮番号)**: 組
+   (v(s,k+d,k+d), v(s,k,k+d)) が d>=1 で全称閉形式特征付けされ、
+   d=1 スライスが本項の定理 A と 98,200 点で機械一致すること、
+   破れ構造 (縞 zone・双偶一様 tail・d=2 の even-k 単点破れと
+   odd-k の孤島) が d>=2 で新規に決定されたことが出版された
+   (`research/experiments/dshift-supply-family-theorem-20261126/` +
+   log)。本項の補題 S はその B 側一様部の m=d−1 インスタンスに
+   相当し、格子線事実の正典は本項に残る。
