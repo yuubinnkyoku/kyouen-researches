@@ -1,0 +1,1649 @@
+{
+ "all_pass": true,
+ "claim": "verdict-level agreement only; no verdict consumed; the 11x11 empty board, the two-stone root {60,27} and its remaining third moves {100,108} remain UNKNOWN; k20/k33/k38 stay parked with no new verdict",
+ "consumed": false,
+ "gates": {
+  "C1_anchor_w2_published_witness": {
+   "detail": "third | w2-anchor-k06k07k08 | 5 | 80 | 80 | 1 | 7583990 | 4157314 | 21.57 | 10376293541461626880 | 131328 | clean | quads=95670 | ttOverwrites=3390391 | memoPower=22",
+   "pass": true
+  },
+  "C1_anchor_w2_run2_identical": {
+   "detail": "third | w2-anchor-k06k07k08 | 5 | 80 | 80 | 1 | 7583990 | 4157314 | 21.65 | 10376293541461626880 | 131328 | clean | quads=95670 | ttOverwrites=3390391 | memoPower=22",
+   "pass": true
+  },
+  "C1_verify_tbl_quads_equality": {
+   "detail": "replica quads 95670 mine quads 95670\ntriples checked 195044 mismatches 0\nrc=0",
+   "pass": true
+  },
+  "C2_k09_determinism_2runs_identical": {
+   "detail": "[('2', '4622038', '2607830'), ('2', '4622038', '2607830')]",
+   "pass": true
+  },
+  "C2_k09_expansions_differ_from_replica_nodes_allowed": {
+   "detail": "third=4622038 replica=['2000000', '4018184'] (different implementations; verdict-level agreement is the gate)",
+   "pass": true
+  },
+  "C2_k09_loss_verdict_level_vs_replica": {
+   "detail": "third=['2'] replica=2",
+   "pass": true
+  },
+  "C2_k09_ttoverwrites_pinned": {
+   "detail": "ttOverwrites=652622",
+   "pass": true
+  },
+  "C2_k10_determinism_2runs_identical": {
+   "detail": "[('2', '4945820', '2741107'), ('2', '4945820', '2741107')]",
+   "pass": true
+  },
+  "C2_k10_expansions_differ_from_replica_nodes_allowed": {
+   "detail": "third=4945820 replica=['2000000', '4295355'] (different implementations; verdict-level agreement is the gate)",
+   "pass": true
+  },
+  "C2_k10_loss_verdict_level_vs_replica": {
+   "detail": "third=['2'] replica=2",
+   "pass": true
+  },
+  "C2_k10_ttoverwrites_pinned": {
+   "detail": "ttOverwrites=888907",
+   "pass": true
+  },
+  "C2_k11_determinism_2runs_identical": {
+   "detail": "[('2', '8105873', '4437184'), ('2', '8105873', '4437184')]",
+   "pass": true
+  },
+  "C2_k11_expansions_differ_from_replica_nodes_allowed": {
+   "detail": "third=8105873 replica=['2000000', '7012218'] (different implementations; verdict-level agreement is the gate)",
+   "pass": true
+  },
+  "C2_k11_loss_verdict_level_vs_replica": {
+   "detail": "third=['2'] replica=2",
+   "pass": true
+  },
+  "C2_k11_ttoverwrites_pinned": {
+   "detail": "ttOverwrites=3911738",
+   "pass": true
+  },
+  "C2_k12_determinism_2runs_identical": {
+   "detail": "[('2', '6593392', '3638963'), ('2', '6593392', '3638963')]",
+   "pass": true
+  },
+  "C2_k12_expansions_differ_from_replica_nodes_allowed": {
+   "detail": "third=6593392 replica=['2000000', '5688761'] (different implementations; verdict-level agreement is the gate)",
+   "pass": true
+  },
+  "C2_k12_loss_verdict_level_vs_replica": {
+   "detail": "third=['2'] replica=2",
+   "pass": true
+  },
+  "C2_k12_ttoverwrites_pinned": {
+   "detail": "ttOverwrites=2404936",
+   "pass": true
+  },
+  "C2_k13_determinism_3runs_identical": {
+   "detail": "[('1', '19433195', '10181270'), ('1', '19433195', '10181270'), ('1', '19433195', '10181270')]",
+   "pass": true
+  },
+  "C2_k13_expansions_differ_from_replica_nodes_allowed": {
+   "detail": "third=19433195 replica=['15000000', '16402480'] (different implementations; verdict-level agreement is the gate)",
+   "pass": true
+  },
+  "C2_k13_ttoverwrites_pinned": {
+   "detail": "ttOverwrites=15238891",
+   "pass": true
+  },
+  "C2_k13_win_verdict_level_vs_replica": {
+   "detail": "third=['1'] replica=1",
+   "pass": true
+  },
+  "C2_k14_determinism_2runs_identical": {
+   "detail": "[('2', '7836133', '4297914'), ('2', '7836133', '4297914')]",
+   "pass": true
+  },
+  "C2_k14_expansions_differ_from_replica_nodes_allowed": {
+   "detail": "third=7836133 replica=['2000000', '6801611'] (different implementations; verdict-level agreement is the gate)",
+   "pass": true
+  },
+  "C2_k14_loss_verdict_level_vs_replica": {
+   "detail": "third=['2'] replica=2",
+   "pass": true
+  },
+  "C2_k14_ttoverwrites_pinned": {
+   "detail": "ttOverwrites=3642312",
+   "pass": true
+  },
+  "C2_k15_determinism_2runs_identical": {
+   "detail": "[('2', '6903671', '3790763'), ('2', '6903671', '3790763')]",
+   "pass": true
+  },
+  "C2_k15_expansions_differ_from_replica_nodes_allowed": {
+   "detail": "third=6903671 replica=['2000000', '5947870'] (different implementations; verdict-level agreement is the gate)",
+   "pass": true
+  },
+  "C2_k15_loss_verdict_level_vs_replica": {
+   "detail": "third=['2'] replica=2",
+   "pass": true
+  },
+  "C2_k15_ttoverwrites_pinned": {
+   "detail": "ttOverwrites=2712282",
+   "pass": true
+  },
+  "C2_k16_determinism_2runs_identical": {
+   "detail": "[('2', '12650074', '6857256'), ('2', '12650074', '6857256')]",
+   "pass": true
+  },
+  "C2_k16_expansions_differ_from_replica_nodes_allowed": {
+   "detail": "third=12650074 replica=['10883904', '2000000'] (different implementations; verdict-level agreement is the gate)",
+   "pass": true
+  },
+  "C2_k16_loss_verdict_level_vs_replica": {
+   "detail": "third=['2'] replica=2",
+   "pass": true
+  },
+  "C2_k16_ttoverwrites_pinned": {
+   "detail": "ttOverwrites=8455770",
+   "pass": true
+  },
+  "C2_k17_determinism_2runs_identical": {
+   "detail": "[('2', '1405334', '826431'), ('2', '1405334', '826431')]",
+   "pass": true
+  },
+  "C2_k17_expansions_differ_from_replica_nodes_allowed": {
+   "detail": "third=1405334 replica=['1241921'] (different implementations; verdict-level agreement is the gate)",
+   "pass": true
+  },
+  "C2_k17_loss_verdict_level_vs_replica": {
+   "detail": "third=['2'] replica=2",
+   "pass": true
+  },
+  "C2_k17_ttoverwrites_pinned": {
+   "detail": "ttOverwrites=47",
+   "pass": true
+  },
+  "C2_k18_determinism_2runs_identical": {
+   "detail": "[('2', '2098799', '1184660'), ('2', '2098799', '1184660')]",
+   "pass": true
+  },
+  "C2_k18_expansions_differ_from_replica_nodes_allowed": {
+   "detail": "third=2098799 replica=['1838655'] (different implementations; verdict-level agreement is the gate)",
+   "pass": true
+  },
+  "C2_k18_loss_verdict_level_vs_replica": {
+   "detail": "third=['2'] replica=2",
+   "pass": true
+  },
+  "C2_k18_ttoverwrites_pinned": {
+   "detail": "ttOverwrites=2153",
+   "pass": true
+  },
+  "C2_k19_determinism_3runs_identical": {
+   "detail": "[('1', '17955947', '9504863'), ('1', '17955947', '9504863'), ('1', '17955947', '9504863')]",
+   "pass": true
+  },
+  "C2_k19_expansions_differ_from_replica_nodes_allowed": {
+   "detail": "third=17955947 replica=['15000000', '15379062'] (different implementations; verdict-level agreement is the gate)",
+   "pass": true
+  },
+  "C2_k19_ttoverwrites_pinned": {
+   "detail": "ttOverwrites=13761643",
+   "pass": true
+  },
+  "C2_k19_win_verdict_level_vs_replica": {
+   "detail": "third=['1'] replica=1",
+   "pass": true
+  },
+  "C2_k21_determinism_2runs_identical": {
+   "detail": "[('2', '4202005', '2326723'), ('2', '4202005', '2326723')]",
+   "pass": true
+  },
+  "C2_k21_expansions_differ_from_replica_nodes_allowed": {
+   "detail": "third=4202005 replica=['2000000', '3649839'] (different implementations; verdict-level agreement is the gate)",
+   "pass": true
+  },
+  "C2_k21_loss_verdict_level_vs_replica": {
+   "detail": "third=['2'] replica=2",
+   "pass": true
+  },
+  "C2_k21_ttoverwrites_pinned": {
+   "detail": "ttOverwrites=392033",
+   "pass": true
+  },
+  "C2_k22_determinism_2runs_identical": {
+   "detail": "[('2', '8820734', '4653093'), ('2', '8820734', '4653093')]",
+   "pass": true
+  },
+  "C2_k22_expansions_differ_from_replica_nodes_allowed": {
+   "detail": "third=8820734 replica=['2000000', '7527812'] (different implementations; verdict-level agreement is the gate)",
+   "pass": true
+  },
+  "C2_k22_loss_verdict_level_vs_replica": {
+   "detail": "third=['2'] replica=2",
+   "pass": true
+  },
+  "C2_k22_ttoverwrites_pinned": {
+   "detail": "ttOverwrites=4626471",
+   "pass": true
+  },
+  "C2_k23_determinism_2runs_identical": {
+   "detail": "[('2', '12654986', '6739220'), ('2', '12654986', '6739220')]",
+   "pass": true
+  },
+  "C2_k23_expansions_differ_from_replica_nodes_allowed": {
+   "detail": "third=12654986 replica=['10938326', '2000000'] (different implementations; verdict-level agreement is the gate)",
+   "pass": true
+  },
+  "C2_k23_loss_verdict_level_vs_replica": {
+   "detail": "third=['2'] replica=2",
+   "pass": true
+  },
+  "C2_k23_ttoverwrites_pinned": {
+   "detail": "ttOverwrites=8460682",
+   "pass": true
+  },
+  "C2_k24_determinism_2runs_identical": {
+   "detail": "[('2', '5616289', '3010163'), ('2', '5616289', '3010163')]",
+   "pass": true
+  },
+  "C2_k24_expansions_differ_from_replica_nodes_allowed": {
+   "detail": "third=5616289 replica=['2000000', '4796315'] (different implementations; verdict-level agreement is the gate)",
+   "pass": true
+  },
+  "C2_k24_loss_verdict_level_vs_replica": {
+   "detail": "third=['2'] replica=2",
+   "pass": true
+  },
+  "C2_k24_ttoverwrites_pinned": {
+   "detail": "ttOverwrites=1467038",
+   "pass": true
+  },
+  "C2_k25_determinism_2runs_identical": {
+   "detail": "[('2', '6336310', '3564228'), ('2', '6336310', '3564228')]",
+   "pass": true
+  },
+  "C2_k25_expansions_differ_from_replica_nodes_allowed": {
+   "detail": "third=6336310 replica=['2000000', '5496449'] (different implementations; verdict-level agreement is the gate)",
+   "pass": true
+  },
+  "C2_k25_loss_verdict_level_vs_replica": {
+   "detail": "third=['2'] replica=2",
+   "pass": true
+  },
+  "C2_k25_ttoverwrites_pinned": {
+   "detail": "ttOverwrites=2153523",
+   "pass": true
+  },
+  "C2_k26_determinism_2runs_identical": {
+   "detail": "[('2', '16684962', '8721684'), ('2', '16684962', '8721684')]",
+   "pass": true
+  },
+  "C2_k26_expansions_differ_from_replica_nodes_allowed": {
+   "detail": "third=16684962 replica=['14439424', '2000000'] (different implementations; verdict-level agreement is the gate)",
+   "pass": true
+  },
+  "C2_k26_loss_verdict_level_vs_replica": {
+   "detail": "third=['2'] replica=2",
+   "pass": true
+  },
+  "C2_k26_ttoverwrites_pinned": {
+   "detail": "ttOverwrites=12490658",
+   "pass": true
+  },
+  "C2_k27_determinism_2runs_identical": {
+   "detail": "[('2', '2578044', '1458498'), ('2', '2578044', '1458498')]",
+   "pass": true
+  },
+  "C2_k27_expansions_differ_from_replica_nodes_allowed": {
+   "detail": "third=2578044 replica=['2000000', '2250306'] (different implementations; verdict-level agreement is the gate)",
+   "pass": true
+  },
+  "C2_k27_loss_verdict_level_vs_replica": {
+   "detail": "third=['2'] replica=2",
+   "pass": true
+  },
+  "C2_k27_ttoverwrites_pinned": {
+   "detail": "ttOverwrites=10504",
+   "pass": true
+  },
+  "C2_k28_determinism_2runs_identical": {
+   "detail": "[('2', '2177958', '1274689'), ('2', '2177958', '1274689')]",
+   "pass": true
+  },
+  "C2_k28_expansions_differ_from_replica_nodes_allowed": {
+   "detail": "third=2177958 replica=['1918850'] (different implementations; verdict-level agreement is the gate)",
+   "pass": true
+  },
+  "C2_k28_loss_verdict_level_vs_replica": {
+   "detail": "third=['2'] replica=2",
+   "pass": true
+  },
+  "C2_k28_ttoverwrites_pinned": {
+   "detail": "ttOverwrites=2777",
+   "pass": true
+  },
+  "C2_k29_determinism_2runs_identical": {
+   "detail": "[('2', '5797487', '3237734'), ('2', '5797487', '3237734')]",
+   "pass": true
+  },
+  "C2_k29_expansions_differ_from_replica_nodes_allowed": {
+   "detail": "third=5797487 replica=['2000000', '4996919'] (different implementations; verdict-level agreement is the gate)",
+   "pass": true
+  },
+  "C2_k29_loss_verdict_level_vs_replica": {
+   "detail": "third=['2'] replica=2",
+   "pass": true
+  },
+  "C2_k29_ttoverwrites_pinned": {
+   "detail": "ttOverwrites=1635160",
+   "pass": true
+  },
+  "C2_k30_determinism_2runs_identical": {
+   "detail": "[('2', '4531296', '2619620'), ('2', '4531296', '2619620')]",
+   "pass": true
+  },
+  "C2_k30_expansions_differ_from_replica_nodes_allowed": {
+   "detail": "third=4531296 replica=['2000000', '3933511'] (different implementations; verdict-level agreement is the gate)",
+   "pass": true
+  },
+  "C2_k30_loss_verdict_level_vs_replica": {
+   "detail": "third=['2'] replica=2",
+   "pass": true
+  },
+  "C2_k30_ttoverwrites_pinned": {
+   "detail": "ttOverwrites=597949",
+   "pass": true
+  },
+  "C2_k31_determinism_2runs_identical": {
+   "detail": "[('2', '5269285', '2862847'), ('2', '5269285', '2862847')]",
+   "pass": true
+  },
+  "C2_k31_expansions_differ_from_replica_nodes_allowed": {
+   "detail": "third=5269285 replica=['2000000', '4560796'] (different implementations; verdict-level agreement is the gate)",
+   "pass": true
+  },
+  "C2_k31_loss_verdict_level_vs_replica": {
+   "detail": "third=['2'] replica=2",
+   "pass": true
+  },
+  "C2_k31_ttoverwrites_pinned": {
+   "detail": "ttOverwrites=1151374",
+   "pass": true
+  },
+  "C2_k32_determinism_2runs_identical": {
+   "detail": "[('2', '2235267', '1374600'), ('2', '2235267', '1374600')]",
+   "pass": true
+  },
+  "C2_k32_expansions_differ_from_replica_nodes_allowed": {
+   "detail": "third=2235267 replica=['1989908'] (different implementations; verdict-level agreement is the gate)",
+   "pass": true
+  },
+  "C2_k32_loss_verdict_level_vs_replica": {
+   "detail": "third=['2'] replica=2",
+   "pass": true
+  },
+  "C2_k32_ttoverwrites_pinned": {
+   "detail": "ttOverwrites=3852",
+   "pass": true
+  },
+  "C2_k34_determinism_2runs_identical": {
+   "detail": "[('2', '9966873', '5293840'), ('2', '9966873', '5293840')]",
+   "pass": true
+  },
+  "C2_k34_expansions_differ_from_replica_nodes_allowed": {
+   "detail": "third=9966873 replica=['2000000', '8567123'] (different implementations; verdict-level agreement is the gate)",
+   "pass": true
+  },
+  "C2_k34_loss_verdict_level_vs_replica": {
+   "detail": "third=['2'] replica=2",
+   "pass": true
+  },
+  "C2_k34_ttoverwrites_pinned": {
+   "detail": "ttOverwrites=5772570",
+   "pass": true
+  },
+  "C2_k35_determinism_2runs_identical": {
+   "detail": "[('2', '16896018', '8726341'), ('2', '16896018', '8726341')]",
+   "pass": true
+  },
+  "C2_k35_expansions_differ_from_replica_nodes_allowed": {
+   "detail": "third=16896018 replica=['14273589', '2000000'] (different implementations; verdict-level agreement is the gate)",
+   "pass": true
+  },
+  "C2_k35_loss_verdict_level_vs_replica": {
+   "detail": "third=['2'] replica=2",
+   "pass": true
+  },
+  "C2_k35_ttoverwrites_pinned": {
+   "detail": "ttOverwrites=12701714",
+   "pass": true
+  },
+  "C2_k36_determinism_2runs_identical": {
+   "detail": "[('2', '3440325', '1961576'), ('2', '3440325', '1961576')]",
+   "pass": true
+  },
+  "C2_k36_expansions_differ_from_replica_nodes_allowed": {
+   "detail": "third=3440325 replica=['2000000', '3007021'] (different implementations; verdict-level agreement is the gate)",
+   "pass": true
+  },
+  "C2_k36_loss_verdict_level_vs_replica": {
+   "detail": "third=['2'] replica=2",
+   "pass": true
+  },
+  "C2_k36_ttoverwrites_pinned": {
+   "detail": "ttOverwrites=107949",
+   "pass": true
+  },
+  "C2_k37_determinism_2runs_identical": {
+   "detail": "[('2', '9510402', '4989499'), ('2', '9510402', '4989499')]",
+   "pass": true
+  },
+  "C2_k37_expansions_differ_from_replica_nodes_allowed": {
+   "detail": "third=9510402 replica=['2000000', '8083885'] (different implementations; verdict-level agreement is the gate)",
+   "pass": true
+  },
+  "C2_k37_loss_verdict_level_vs_replica": {
+   "detail": "third=['2'] replica=2",
+   "pass": true
+  },
+  "C2_k37_ttoverwrites_pinned": {
+   "detail": "ttOverwrites=5316103",
+   "pass": true
+  },
+  "C2_k39_determinism_2runs_identical": {
+   "detail": "[('2', '6611082', '3659270'), ('2', '6611082', '3659270')]",
+   "pass": true
+  },
+  "C2_k39_expansions_differ_from_replica_nodes_allowed": {
+   "detail": "third=6611082 replica=['2000000', '5725348'] (different implementations; verdict-level agreement is the gate)",
+   "pass": true
+  },
+  "C2_k39_loss_verdict_level_vs_replica": {
+   "detail": "third=['2'] replica=2",
+   "pass": true
+  },
+  "C2_k39_ttoverwrites_pinned": {
+   "detail": "ttOverwrites=2422272",
+   "pass": true
+  },
+  "C2_k40_determinism_2runs_identical": {
+   "detail": "[('2', '6894081', '3725971'), ('2', '6894081', '3725971')]",
+   "pass": true
+  },
+  "C2_k40_expansions_differ_from_replica_nodes_allowed": {
+   "detail": "third=6894081 replica=['2000000', '5926395'] (different implementations; verdict-level agreement is the gate)",
+   "pass": true
+  },
+  "C2_k40_loss_verdict_level_vs_replica": {
+   "detail": "third=['2'] replica=2",
+   "pass": true
+  },
+  "C2_k40_ttoverwrites_pinned": {
+   "detail": "ttOverwrites=2703506",
+   "pass": true
+  },
+  "C2_k41_determinism_2runs_identical": {
+   "detail": "[('2', '7704061', '4018770'), ('2', '7704061', '4018770')]",
+   "pass": true
+  },
+  "C2_k41_expansions_differ_from_replica_nodes_allowed": {
+   "detail": "third=7704061 replica=['2000000', '6536846'] (different implementations; verdict-level agreement is the gate)",
+   "pass": true
+  },
+  "C2_k41_loss_verdict_level_vs_replica": {
+   "detail": "third=['2'] replica=2",
+   "pass": true
+  },
+  "C2_k41_ttoverwrites_pinned": {
+   "detail": "ttOverwrites=3510186",
+   "pass": true
+  },
+  "C2_k42_determinism_2runs_identical": {
+   "detail": "[('2', '10223560', '5244634'), ('2', '10223560', '5244634')]",
+   "pass": true
+  },
+  "C2_k42_expansions_differ_from_replica_nodes_allowed": {
+   "detail": "third=10223560 replica=['2000000', '8486305'] (different implementations; verdict-level agreement is the gate)",
+   "pass": true
+  },
+  "C2_k42_loss_verdict_level_vs_replica": {
+   "detail": "third=['2'] replica=2",
+   "pass": true
+  },
+  "C2_k42_ttoverwrites_pinned": {
+   "detail": "ttOverwrites=6029256",
+   "pass": true
+  },
+  "C2_k43_determinism_2runs_identical": {
+   "detail": "[('2', '8061097', '4354662'), ('2', '8061097', '4354662')]",
+   "pass": true
+  },
+  "C2_k43_expansions_differ_from_replica_nodes_allowed": {
+   "detail": "third=8061097 replica=['2000000', '6916669'] (different implementations; verdict-level agreement is the gate)",
+   "pass": true
+  },
+  "C2_k43_loss_verdict_level_vs_replica": {
+   "detail": "third=['2'] replica=2",
+   "pass": true
+  },
+  "C2_k43_ttoverwrites_pinned": {
+   "detail": "ttOverwrites=3867018",
+   "pass": true
+  },
+  "C4_ng1_k09_legal88_gate_fail": {
+   "detail": "third,ng1-k09,5,88,,GATE_FAIL,\"legal count mismatch: derived=87 declared=88\"\nrc=1",
+   "pass": true
+  },
+  "C4_ng1_k10_legal85_gate_fail": {
+   "detail": "third,ng1-k10,5,85,,GATE_FAIL,\"legal count mismatch: derived=84 declared=85\"\nrc=1",
+   "pass": true
+  },
+  "C4_ng1_k11_legal87_gate_fail": {
+   "detail": "third,ng1-k11,5,87,,GATE_FAIL,\"legal count mismatch: derived=86 declared=87\"\nrc=1",
+   "pass": true
+  },
+  "C4_ng1_k12_legal84_gate_fail": {
+   "detail": "third,ng1-k12,5,84,,GATE_FAIL,\"legal count mismatch: derived=83 declared=84\"\nrc=1",
+   "pass": true
+  },
+  "C4_ng1_k13_legal96_gate_fail": {
+   "detail": "third,ng1-k13,5,96,,GATE_FAIL,\"legal count mismatch: derived=95 declared=96\"\nrc=1",
+   "pass": true
+  },
+  "C4_ng1_k14_legal100_gate_fail": {
+   "detail": "third,ng1-k14,5,100,,GATE_FAIL,\"legal count mismatch: derived=99 declared=100\"\nrc=1",
+   "pass": true
+  },
+  "C4_ng1_k15_legal100_gate_fail": {
+   "detail": "third,ng1-k15,5,100,,GATE_FAIL,\"legal count mismatch: derived=99 declared=100\"\nrc=1",
+   "pass": true
+  },
+  "C4_ng1_k16_legal96_gate_fail": {
+   "detail": "third,ng1-k16,5,96,,GATE_FAIL,\"legal count mismatch: derived=95 declared=96\"\nrc=1",
+   "pass": true
+  },
+  "C4_ng1_k17_legal97_gate_fail": {
+   "detail": "third,ng1-k17,5,97,,GATE_FAIL,\"legal count mismatch: derived=96 declared=97\"\nrc=1",
+   "pass": true
+  },
+  "C4_ng1_k18_legal92_gate_fail": {
+   "detail": "third,ng1-k18,5,92,,GATE_FAIL,\"legal count mismatch: derived=91 declared=92\"\nrc=1",
+   "pass": true
+  },
+  "C4_ng1_k19_legal96_gate_fail": {
+   "detail": "third,ng1-k19,5,96,,GATE_FAIL,\"legal count mismatch: derived=95 declared=96\"\nrc=1",
+   "pass": true
+  },
+  "C4_ng1_k21_legal91_gate_fail": {
+   "detail": "third,ng1-k21,5,91,,GATE_FAIL,\"legal count mismatch: derived=90 declared=91\"\nrc=1",
+   "pass": true
+  },
+  "C4_ng1_k22_legal99_gate_fail": {
+   "detail": "third,ng1-k22,5,99,,GATE_FAIL,\"legal count mismatch: derived=98 declared=99\"\nrc=1",
+   "pass": true
+  },
+  "C4_ng1_k23_legal98_gate_fail": {
+   "detail": "third,ng1-k23,5,98,,GATE_FAIL,\"legal count mismatch: derived=97 declared=98\"\nrc=1",
+   "pass": true
+  },
+  "C4_ng1_k24_legal94_gate_fail": {
+   "detail": "third,ng1-k24,5,94,,GATE_FAIL,\"legal count mismatch: derived=93 declared=94\"\nrc=1",
+   "pass": true
+  },
+  "C4_ng1_k25_legal92_gate_fail": {
+   "detail": "third,ng1-k25,5,92,,GATE_FAIL,\"legal count mismatch: derived=91 declared=92\"\nrc=1",
+   "pass": true
+  },
+  "C4_ng1_k26_legal96_gate_fail": {
+   "detail": "third,ng1-k26,5,96,,GATE_FAIL,\"legal count mismatch: derived=95 declared=96\"\nrc=1",
+   "pass": true
+  },
+  "C4_ng1_k27_legal94_gate_fail": {
+   "detail": "third,ng1-k27,5,94,,GATE_FAIL,\"legal count mismatch: derived=93 declared=94\"\nrc=1",
+   "pass": true
+  },
+  "C4_ng1_k28_legal99_gate_fail": {
+   "detail": "third,ng1-k28,5,99,,GATE_FAIL,\"legal count mismatch: derived=98 declared=99\"\nrc=1",
+   "pass": true
+  },
+  "C4_ng1_k29_legal98_gate_fail": {
+   "detail": "third,ng1-k29,5,98,,GATE_FAIL,\"legal count mismatch: derived=97 declared=98\"\nrc=1",
+   "pass": true
+  },
+  "C4_ng1_k30_legal96_gate_fail": {
+   "detail": "third,ng1-k30,5,96,,GATE_FAIL,\"legal count mismatch: derived=95 declared=96\"\nrc=1",
+   "pass": true
+  },
+  "C4_ng1_k31_legal93_gate_fail": {
+   "detail": "third,ng1-k31,5,93,,GATE_FAIL,\"legal count mismatch: derived=92 declared=93\"\nrc=1",
+   "pass": true
+  },
+  "C4_ng1_k32_legal94_gate_fail": {
+   "detail": "third,ng1-k32,5,94,,GATE_FAIL,\"legal count mismatch: derived=93 declared=94\"\nrc=1",
+   "pass": true
+  },
+  "C4_ng1_k34_legal97_gate_fail": {
+   "detail": "third,ng1-k34,5,97,,GATE_FAIL,\"legal count mismatch: derived=96 declared=97\"\nrc=1",
+   "pass": true
+  },
+  "C4_ng1_k35_legal101_gate_fail": {
+   "detail": "third,ng1-k35,5,101,,GATE_FAIL,\"legal count mismatch: derived=100 declared=101\"\nrc=1",
+   "pass": true
+  },
+  "C4_ng1_k36_legal101_gate_fail": {
+   "detail": "third,ng1-k36,5,101,,GATE_FAIL,\"legal count mismatch: derived=100 declared=101\"\nrc=1",
+   "pass": true
+  },
+  "C4_ng1_k37_legal104_gate_fail": {
+   "detail": "third,ng1-k37,5,104,,GATE_FAIL,\"legal count mismatch: derived=103 declared=104\"\nrc=1",
+   "pass": true
+  },
+  "C4_ng1_k39_legal101_gate_fail": {
+   "detail": "third,ng1-k39,5,101,,GATE_FAIL,\"legal count mismatch: derived=100 declared=101\"\nrc=1",
+   "pass": true
+  },
+  "C4_ng1_k40_legal103_gate_fail": {
+   "detail": "third,ng1-k40,5,103,,GATE_FAIL,\"legal count mismatch: derived=102 declared=103\"\nrc=1",
+   "pass": true
+  },
+  "C4_ng1_k41_legal101_gate_fail": {
+   "detail": "third,ng1-k41,5,101,,GATE_FAIL,\"legal count mismatch: derived=100 declared=101\"\nrc=1",
+   "pass": true
+  },
+  "C4_ng1_k42_legal102_gate_fail": {
+   "detail": "third,ng1-k42,5,102,,GATE_FAIL,\"legal count mismatch: derived=101 declared=102\"\nrc=1",
+   "pass": true
+  },
+  "C4_ng1_k43_legal104_gate_fail": {
+   "detail": "third,ng1-k43,5,104,,GATE_FAIL,\"legal count mismatch: derived=103 declared=104\"\nrc=1",
+   "pass": true
+  },
+  "C4_ng2_k09_stones6_gate_fail": {
+   "detail": "third,ng2-k09,6,87,,GATE_FAIL,\"stone count mismatch: bits=5 declared=6\"\nrc=1",
+   "pass": true
+  },
+  "C4_ng2_k10_stones6_gate_fail": {
+   "detail": "third,ng2-k10,6,84,,GATE_FAIL,\"stone count mismatch: bits=5 declared=6\"\nrc=1",
+   "pass": true
+  },
+  "C4_ng2_k11_stones6_gate_fail": {
+   "detail": "third,ng2-k11,6,86,,GATE_FAIL,\"stone count mismatch: bits=5 declared=6\"\nrc=1",
+   "pass": true
+  },
+  "C4_ng2_k12_stones6_gate_fail": {
+   "detail": "third,ng2-k12,6,83,,GATE_FAIL,\"stone count mismatch: bits=5 declared=6\"\nrc=1",
+   "pass": true
+  },
+  "C4_ng2_k13_stones6_gate_fail": {
+   "detail": "third,ng2-k13,6,95,,GATE_FAIL,\"stone count mismatch: bits=5 declared=6\"\nrc=1",
+   "pass": true
+  },
+  "C4_ng2_k14_stones6_gate_fail": {
+   "detail": "third,ng2-k14,6,99,,GATE_FAIL,\"stone count mismatch: bits=5 declared=6\"\nrc=1",
+   "pass": true
+  },
+  "C4_ng2_k15_stones6_gate_fail": {
+   "detail": "third,ng2-k15,6,99,,GATE_FAIL,\"stone count mismatch: bits=5 declared=6\"\nrc=1",
+   "pass": true
+  },
+  "C4_ng2_k16_stones6_gate_fail": {
+   "detail": "third,ng2-k16,6,95,,GATE_FAIL,\"stone count mismatch: bits=5 declared=6\"\nrc=1",
+   "pass": true
+  },
+  "C4_ng2_k17_stones6_gate_fail": {
+   "detail": "third,ng2-k17,6,96,,GATE_FAIL,\"stone count mismatch: bits=5 declared=6\"\nrc=1",
+   "pass": true
+  },
+  "C4_ng2_k18_stones6_gate_fail": {
+   "detail": "third,ng2-k18,6,91,,GATE_FAIL,\"stone count mismatch: bits=5 declared=6\"\nrc=1",
+   "pass": true
+  },
+  "C4_ng2_k19_stones6_gate_fail": {
+   "detail": "third,ng2-k19,6,95,,GATE_FAIL,\"stone count mismatch: bits=5 declared=6\"\nrc=1",
+   "pass": true
+  },
+  "C4_ng2_k21_stones6_gate_fail": {
+   "detail": "third,ng2-k21,6,90,,GATE_FAIL,\"stone count mismatch: bits=5 declared=6\"\nrc=1",
+   "pass": true
+  },
+  "C4_ng2_k22_stones6_gate_fail": {
+   "detail": "third,ng2-k22,6,98,,GATE_FAIL,\"stone count mismatch: bits=5 declared=6\"\nrc=1",
+   "pass": true
+  },
+  "C4_ng2_k23_stones6_gate_fail": {
+   "detail": "third,ng2-k23,6,97,,GATE_FAIL,\"stone count mismatch: bits=5 declared=6\"\nrc=1",
+   "pass": true
+  },
+  "C4_ng2_k24_stones6_gate_fail": {
+   "detail": "third,ng2-k24,6,93,,GATE_FAIL,\"stone count mismatch: bits=5 declared=6\"\nrc=1",
+   "pass": true
+  },
+  "C4_ng2_k25_stones6_gate_fail": {
+   "detail": "third,ng2-k25,6,91,,GATE_FAIL,\"stone count mismatch: bits=5 declared=6\"\nrc=1",
+   "pass": true
+  },
+  "C4_ng2_k26_stones6_gate_fail": {
+   "detail": "third,ng2-k26,6,95,,GATE_FAIL,\"stone count mismatch: bits=5 declared=6\"\nrc=1",
+   "pass": true
+  },
+  "C4_ng2_k27_stones6_gate_fail": {
+   "detail": "third,ng2-k27,6,93,,GATE_FAIL,\"stone count mismatch: bits=5 declared=6\"\nrc=1",
+   "pass": true
+  },
+  "C4_ng2_k28_stones6_gate_fail": {
+   "detail": "third,ng2-k28,6,98,,GATE_FAIL,\"stone count mismatch: bits=5 declared=6\"\nrc=1",
+   "pass": true
+  },
+  "C4_ng2_k29_stones6_gate_fail": {
+   "detail": "third,ng2-k29,6,97,,GATE_FAIL,\"stone count mismatch: bits=5 declared=6\"\nrc=1",
+   "pass": true
+  },
+  "C4_ng2_k30_stones6_gate_fail": {
+   "detail": "third,ng2-k30,6,95,,GATE_FAIL,\"stone count mismatch: bits=5 declared=6\"\nrc=1",
+   "pass": true
+  },
+  "C4_ng2_k31_stones6_gate_fail": {
+   "detail": "third,ng2-k31,6,92,,GATE_FAIL,\"stone count mismatch: bits=5 declared=6\"\nrc=1",
+   "pass": true
+  },
+  "C4_ng2_k32_stones6_gate_fail": {
+   "detail": "third,ng2-k32,6,93,,GATE_FAIL,\"stone count mismatch: bits=5 declared=6\"\nrc=1",
+   "pass": true
+  },
+  "C4_ng2_k34_stones6_gate_fail": {
+   "detail": "third,ng2-k34,6,96,,GATE_FAIL,\"stone count mismatch: bits=5 declared=6\"\nrc=1",
+   "pass": true
+  },
+  "C4_ng2_k35_stones6_gate_fail": {
+   "detail": "third,ng2-k35,6,100,,GATE_FAIL,\"stone count mismatch: bits=5 declared=6\"\nrc=1",
+   "pass": true
+  },
+  "C4_ng2_k36_stones6_gate_fail": {
+   "detail": "third,ng2-k36,6,100,,GATE_FAIL,\"stone count mismatch: bits=5 declared=6\"\nrc=1",
+   "pass": true
+  },
+  "C4_ng2_k37_stones6_gate_fail": {
+   "detail": "third,ng2-k37,6,103,,GATE_FAIL,\"stone count mismatch: bits=5 declared=6\"\nrc=1",
+   "pass": true
+  },
+  "C4_ng2_k39_stones6_gate_fail": {
+   "detail": "third,ng2-k39,6,100,,GATE_FAIL,\"stone count mismatch: bits=5 declared=6\"\nrc=1",
+   "pass": true
+  },
+  "C4_ng2_k40_stones6_gate_fail": {
+   "detail": "third,ng2-k40,6,102,,GATE_FAIL,\"stone count mismatch: bits=5 declared=6\"\nrc=1",
+   "pass": true
+  },
+  "C4_ng2_k41_stones6_gate_fail": {
+   "detail": "third,ng2-k41,6,100,,GATE_FAIL,\"stone count mismatch: bits=5 declared=6\"\nrc=1",
+   "pass": true
+  },
+  "C4_ng2_k42_stones6_gate_fail": {
+   "detail": "third,ng2-k42,6,101,,GATE_FAIL,\"stone count mismatch: bits=5 declared=6\"\nrc=1",
+   "pass": true
+  },
+  "C4_ng2_k43_stones6_gate_fail": {
+   "detail": "third,ng2-k43,6,103,,GATE_FAIL,\"stone count mismatch: bits=5 declared=6\"\nrc=1",
+   "pass": true
+  },
+  "batch_2_win_verdict_level_agreement": {
+   "detail": "{'k13': 1, 'k19': 1}",
+   "pass": true
+  },
+  "batch_30_loss_verdict_level_agreement": {
+   "detail": "{'k09': 2, 'k10': 2, 'k11': 2, 'k12': 2, 'k14': 2, 'k15': 2, 'k16': 2, 'k17': 2, 'k18': 2, 'k21': 2, 'k22': 2, 'k23': 2, 'k24': 2, 'k25': 2, 'k26': 2, 'k27': 2, 'k28': 2, 'k29': 2, 'k30': 2, 'k31': 2, 'k32': 2, 'k34': 2, 'k35': 2, 'k36': 2, 'k37': 2, 'k39': 2, 'k40': 2, 'k41': 2, 'k42': 2, 'k43': 2}",
+   "pass": true
+  },
+  "batch_parked_k20_k33_k38_absent": {
+   "detail": "parked keys have no new verdict in this batch",
+   "pass": true
+  },
+  "pin_input_batch-k13_input_csv_sha256": {
+   "detail": "/home/user/knowledge/kyouen-research/_sixthcost-k06k07k08-thirdimpl-kit-20261126/inv5/batch-k13.input.csv",
+   "pass": true
+  },
+  "pin_input_batch-k19_input_csv_sha256": {
+   "detail": "/home/user/knowledge/kyouen-research/_sixthcost-k06k07k08-thirdimpl-kit-20261126/inv5/batch-k19.input.csv",
+   "pass": true
+  },
+  "pin_input_k09_input_csv_sha256": {
+   "detail": "/home/user/knowledge/kyouen-research/_sixthcost-k06k07k08-thirdimpl-kit-20261126/inv5/k09.input.csv",
+   "pass": true
+  },
+  "pin_input_k10_input_csv_sha256": {
+   "detail": "/home/user/knowledge/kyouen-research/_sixthcost-k06k07k08-thirdimpl-kit-20261126/inv5/k10.input.csv",
+   "pass": true
+  },
+  "pin_input_k11_input_csv_sha256": {
+   "detail": "/home/user/knowledge/kyouen-research/_sixthcost-k06k07k08-thirdimpl-kit-20261126/inv5/k11.input.csv",
+   "pass": true
+  },
+  "pin_input_k12_input_csv_sha256": {
+   "detail": "/home/user/knowledge/kyouen-research/_sixthcost-k06k07k08-thirdimpl-kit-20261126/inv5/k12.input.csv",
+   "pass": true
+  },
+  "pin_input_k14_input_csv_sha256": {
+   "detail": "/home/user/knowledge/kyouen-research/_sixthcost-k06k07k08-thirdimpl-kit-20261126/inv5/k14.input.csv",
+   "pass": true
+  },
+  "pin_input_k15_input_csv_sha256": {
+   "detail": "/home/user/knowledge/kyouen-research/_sixthcost-k06k07k08-thirdimpl-kit-20261126/inv5/k15.input.csv",
+   "pass": true
+  },
+  "pin_input_k16_input_csv_sha256": {
+   "detail": "/home/user/knowledge/kyouen-research/_sixthcost-k06k07k08-thirdimpl-kit-20261126/inv5/k16.input.csv",
+   "pass": true
+  },
+  "pin_input_k17_input_csv_sha256": {
+   "detail": "/home/user/knowledge/kyouen-research/_sixthcost-k06k07k08-thirdimpl-kit-20261126/inv5/k17.input.csv",
+   "pass": true
+  },
+  "pin_input_k18_input_csv_sha256": {
+   "detail": "/home/user/knowledge/kyouen-research/_sixthcost-k06k07k08-thirdimpl-kit-20261126/inv5/k18.input.csv",
+   "pass": true
+  },
+  "pin_input_k21_input_csv_sha256": {
+   "detail": "/home/user/knowledge/kyouen-research/_sixthcost-k06k07k08-thirdimpl-kit-20261126/inv5/k21.input.csv",
+   "pass": true
+  },
+  "pin_input_k22_input_csv_sha256": {
+   "detail": "/home/user/knowledge/kyouen-research/_sixthcost-k06k07k08-thirdimpl-kit-20261126/inv5/k22.input.csv",
+   "pass": true
+  },
+  "pin_input_k23_input_csv_sha256": {
+   "detail": "/home/user/knowledge/kyouen-research/_sixthcost-k06k07k08-thirdimpl-kit-20261126/inv5/k23.input.csv",
+   "pass": true
+  },
+  "pin_input_k24_input_csv_sha256": {
+   "detail": "/home/user/knowledge/kyouen-research/_sixthcost-k06k07k08-thirdimpl-kit-20261126/inv5/k24.input.csv",
+   "pass": true
+  },
+  "pin_input_k25_input_csv_sha256": {
+   "detail": "/home/user/knowledge/kyouen-research/_sixthcost-k06k07k08-thirdimpl-kit-20261126/inv5/k25.input.csv",
+   "pass": true
+  },
+  "pin_input_k26_input_csv_sha256": {
+   "detail": "/home/user/knowledge/kyouen-research/_sixthcost-k06k07k08-thirdimpl-kit-20261126/inv5/k26.input.csv",
+   "pass": true
+  },
+  "pin_input_k27_input_csv_sha256": {
+   "detail": "/home/user/knowledge/kyouen-research/_sixthcost-k06k07k08-thirdimpl-kit-20261126/inv5/k27.input.csv",
+   "pass": true
+  },
+  "pin_input_k28_input_csv_sha256": {
+   "detail": "/home/user/knowledge/kyouen-research/_sixthcost-k06k07k08-thirdimpl-kit-20261126/inv5/k28.input.csv",
+   "pass": true
+  },
+  "pin_input_k29_input_csv_sha256": {
+   "detail": "/home/user/knowledge/kyouen-research/_sixthcost-k06k07k08-thirdimpl-kit-20261126/inv5/k29.input.csv",
+   "pass": true
+  },
+  "pin_input_k30_input_csv_sha256": {
+   "detail": "/home/user/knowledge/kyouen-research/_sixthcost-k06k07k08-thirdimpl-kit-20261126/inv5/k30.input.csv",
+   "pass": true
+  },
+  "pin_input_k31_input_csv_sha256": {
+   "detail": "/home/user/knowledge/kyouen-research/_sixthcost-k06k07k08-thirdimpl-kit-20261126/inv5/k31.input.csv",
+   "pass": true
+  },
+  "pin_input_k32_input_csv_sha256": {
+   "detail": "/home/user/knowledge/kyouen-research/_sixthcost-k06k07k08-thirdimpl-kit-20261126/inv5/k32.input.csv",
+   "pass": true
+  },
+  "pin_input_k34_input_csv_sha256": {
+   "detail": "/home/user/knowledge/kyouen-research/_sixthcost-k06k07k08-thirdimpl-kit-20261126/inv5/k34.input.csv",
+   "pass": true
+  },
+  "pin_input_k35_input_csv_sha256": {
+   "detail": "/home/user/knowledge/kyouen-research/_sixthcost-k06k07k08-thirdimpl-kit-20261126/inv5/k35.input.csv",
+   "pass": true
+  },
+  "pin_input_k36_input_csv_sha256": {
+   "detail": "/home/user/knowledge/kyouen-research/_sixthcost-k06k07k08-thirdimpl-kit-20261126/inv5/k36.input.csv",
+   "pass": true
+  },
+  "pin_input_k37_input_csv_sha256": {
+   "detail": "/home/user/knowledge/kyouen-research/_sixthcost-k06k07k08-thirdimpl-kit-20261126/inv5/k37.input.csv",
+   "pass": true
+  },
+  "pin_input_k39_input_csv_sha256": {
+   "detail": "/home/user/knowledge/kyouen-research/_sixthcost-k06k07k08-thirdimpl-kit-20261126/inv5/k39.input.csv",
+   "pass": true
+  },
+  "pin_input_k40_input_csv_sha256": {
+   "detail": "/home/user/knowledge/kyouen-research/_sixthcost-k06k07k08-thirdimpl-kit-20261126/inv5/k40.input.csv",
+   "pass": true
+  },
+  "pin_input_k41_input_csv_sha256": {
+   "detail": "/home/user/knowledge/kyouen-research/_sixthcost-k06k07k08-thirdimpl-kit-20261126/inv5/k41.input.csv",
+   "pass": true
+  },
+  "pin_input_k42_input_csv_sha256": {
+   "detail": "/home/user/knowledge/kyouen-research/_sixthcost-k06k07k08-thirdimpl-kit-20261126/inv5/k42.input.csv",
+   "pass": true
+  },
+  "pin_input_k43_input_csv_sha256": {
+   "detail": "/home/user/knowledge/kyouen-research/_sixthcost-k06k07k08-thirdimpl-kit-20261126/inv5/k43.input.csv",
+   "pass": true
+  },
+  "pin_jsreplay_js_sha256": {
+   "detail": "/home/user/knowledge/kyouen-research/_sixthcost-k06k07k08-thirdimpl-kit-20261126/inv/jsreplay.js",
+   "pass": true
+  },
+  "pin_third_impl_js_sha256": {
+   "detail": "/home/user/knowledge/kyouen-research/_sixthcost-k06k07k08-thirdimpl-kit-20261126/inv/third_impl.js",
+   "pass": true
+  },
+  "pin_verify_tbl_js_sha256": {
+   "detail": "/home/user/knowledge/kyouen-research/_sixthcost-k06k07k08-thirdimpl-kit-20261126/inv/verify_tbl.js",
+   "pass": true
+  },
+  "repl_k09_15m_pair_extra": {
+   "detail": "{'at15m-run1-k09.out.csv': ('2', '4018184'), 'at15m-run2-k09.out.csv': ('2', '4018184'), 'at2m-k09.out.csv': ('0', '2000000')}",
+   "pass": true
+  },
+  "repl_k09_2m_unknown": {
+   "detail": "[('0', '2000000')]",
+   "pass": true
+  },
+  "repl_k09_loss_runs_unanimous": {
+   "detail": "{'at15m-run1-k09.out.csv': ('2', '4018184'), 'at15m-run2-k09.out.csv': ('2', '4018184'), 'at2m-k09.out.csv': ('0', '2000000')}",
+   "pass": true
+  },
+  "repl_k10_15m_pair_extra": {
+   "detail": "{'at15m-run1-k10.out.csv': ('2', '4295355'), 'at15m-run2-k10.out.csv': ('2', '4295355'), 'at2m-k10.out.csv': ('0', '2000000')}",
+   "pass": true
+  },
+  "repl_k10_2m_unknown": {
+   "detail": "[('0', '2000000')]",
+   "pass": true
+  },
+  "repl_k10_loss_runs_unanimous": {
+   "detail": "{'at15m-run1-k10.out.csv': ('2', '4295355'), 'at15m-run2-k10.out.csv': ('2', '4295355'), 'at2m-k10.out.csv': ('0', '2000000')}",
+   "pass": true
+  },
+  "repl_k11_15m_pair_extra": {
+   "detail": "{'at15m-run1-k11.out.csv': ('2', '7012218'), 'at15m-run2-k11.out.csv': ('2', '7012218'), 'at2m-k11.out.csv': ('0', '2000000')}",
+   "pass": true
+  },
+  "repl_k11_2m_unknown": {
+   "detail": "[('0', '2000000')]",
+   "pass": true
+  },
+  "repl_k11_loss_runs_unanimous": {
+   "detail": "{'at15m-run1-k11.out.csv': ('2', '7012218'), 'at15m-run2-k11.out.csv': ('2', '7012218'), 'at2m-k11.out.csv': ('0', '2000000')}",
+   "pass": true
+  },
+  "repl_k12_15m_pair_extra": {
+   "detail": "{'at15m-run1-k12.out.csv': ('2', '5688761'), 'at15m-run2-k12.out.csv': ('2', '5688761'), 'at2m-k12.out.csv': ('0', '2000000')}",
+   "pass": true
+  },
+  "repl_k12_2m_unknown": {
+   "detail": "[('0', '2000000')]",
+   "pass": true
+  },
+  "repl_k12_loss_runs_unanimous": {
+   "detail": "{'at15m-run1-k12.out.csv': ('2', '5688761'), 'at15m-run2-k12.out.csv': ('2', '5688761'), 'at2m-k12.out.csv': ('0', '2000000')}",
+   "pass": true
+  },
+  "repl_k13_base15m_parked_unknown": {
+   "detail": "[('0', '15000000')]",
+   "pass": true
+  },
+  "repl_k13_win_4runs_unanimous": {
+   "detail": "[('1', '16402480'), ('1', '16402480'), ('1', '16402480'), ('1', '16402480')]",
+   "pass": true
+  },
+  "repl_k14_15m_pair_extra": {
+   "detail": "{'at15m-run1-k14.out.csv': ('2', '6801611'), 'at15m-run2-k14.out.csv': ('2', '6801611'), 'at2m-k14.out.csv': ('0', '2000000')}",
+   "pass": true
+  },
+  "repl_k14_2m_unknown": {
+   "detail": "[('0', '2000000')]",
+   "pass": true
+  },
+  "repl_k14_loss_runs_unanimous": {
+   "detail": "{'at15m-run1-k14.out.csv': ('2', '6801611'), 'at15m-run2-k14.out.csv': ('2', '6801611'), 'at2m-k14.out.csv': ('0', '2000000')}",
+   "pass": true
+  },
+  "repl_k15_15m_pair_extra": {
+   "detail": "{'at15m-run1-k15.out.csv': ('2', '5947870'), 'at15m-run2-k15.out.csv': ('2', '5947870'), 'at2m-k15.out.csv': ('0', '2000000')}",
+   "pass": true
+  },
+  "repl_k15_2m_unknown": {
+   "detail": "[('0', '2000000')]",
+   "pass": true
+  },
+  "repl_k15_loss_runs_unanimous": {
+   "detail": "{'at15m-run1-k15.out.csv': ('2', '5947870'), 'at15m-run2-k15.out.csv': ('2', '5947870'), 'at2m-k15.out.csv': ('0', '2000000')}",
+   "pass": true
+  },
+  "repl_k16_15m_pair_extra": {
+   "detail": "{'at15m-run1-k16.out.csv': ('2', '10883904'), 'at15m-run2-k16.out.csv': ('2', '10883904'), 'at2m-k16.out.csv': ('0', '2000000')}",
+   "pass": true
+  },
+  "repl_k16_2m_unknown": {
+   "detail": "[('0', '2000000')]",
+   "pass": true
+  },
+  "repl_k16_loss_runs_unanimous": {
+   "detail": "{'at15m-run1-k16.out.csv': ('2', '10883904'), 'at15m-run2-k16.out.csv': ('2', '10883904'), 'at2m-k16.out.csv': ('0', '2000000')}",
+   "pass": true
+  },
+  "repl_k17_loss_runs_unanimous": {
+   "detail": "{'at15m-run1-k17.out.csv': ('2', '1241921'), 'at15m-run2-k17.out.csv': ('2', '1241921'), 'at2m-k17.out.csv': ('2', '1241921'), 'at2m-run2-k17.out.csv': ('2', '1241921')}",
+   "pass": true
+  },
+  "repl_k18_loss_runs_unanimous": {
+   "detail": "{'at15m-run1-k18.out.csv': ('2', '1838655'), 'at15m-run2-k18.out.csv': ('2', '1838655'), 'at2m-k18.out.csv': ('2', '1838655'), 'at2m-run2-k18.out.csv': ('2', '1838655')}",
+   "pass": true
+  },
+  "repl_k19_base15m_parked_unknown": {
+   "detail": "[('0', '15000000')]",
+   "pass": true
+  },
+  "repl_k19_win_4runs_unanimous": {
+   "detail": "[('1', '15379062'), ('1', '15379062'), ('1', '15379062'), ('1', '15379062')]",
+   "pass": true
+  },
+  "repl_k21_15m_pair_extra": {
+   "detail": "{'at15m-run1-k21.out.csv': ('2', '3649839'), 'at15m-run2-k21.out.csv': ('2', '3649839'), 'at2m-k21.out.csv': ('0', '2000000')}",
+   "pass": true
+  },
+  "repl_k21_2m_unknown": {
+   "detail": "[('0', '2000000')]",
+   "pass": true
+  },
+  "repl_k21_loss_runs_unanimous": {
+   "detail": "{'at15m-run1-k21.out.csv': ('2', '3649839'), 'at15m-run2-k21.out.csv': ('2', '3649839'), 'at2m-k21.out.csv': ('0', '2000000')}",
+   "pass": true
+  },
+  "repl_k22_15m_pair_extra": {
+   "detail": "{'at15m-run1-k22.out.csv': ('2', '7527812'), 'at15m-run2-k22.out.csv': ('2', '7527812'), 'at2m-k22.out.csv': ('0', '2000000')}",
+   "pass": true
+  },
+  "repl_k22_2m_unknown": {
+   "detail": "[('0', '2000000')]",
+   "pass": true
+  },
+  "repl_k22_loss_runs_unanimous": {
+   "detail": "{'at15m-run1-k22.out.csv': ('2', '7527812'), 'at15m-run2-k22.out.csv': ('2', '7527812'), 'at2m-k22.out.csv': ('0', '2000000')}",
+   "pass": true
+  },
+  "repl_k23_15m_pair_extra": {
+   "detail": "{'at15m-run1-k23.out.csv': ('2', '10938326'), 'at15m-run2-k23.out.csv': ('2', '10938326'), 'at2m-k23.out.csv': ('0', '2000000')}",
+   "pass": true
+  },
+  "repl_k23_2m_unknown": {
+   "detail": "[('0', '2000000')]",
+   "pass": true
+  },
+  "repl_k23_loss_runs_unanimous": {
+   "detail": "{'at15m-run1-k23.out.csv': ('2', '10938326'), 'at15m-run2-k23.out.csv': ('2', '10938326'), 'at2m-k23.out.csv': ('0', '2000000')}",
+   "pass": true
+  },
+  "repl_k24_15m_pair_extra": {
+   "detail": "{'at15m-run1-k24.out.csv': ('2', '4796315'), 'at15m-run2-k24.out.csv': ('2', '4796315'), 'at2m-k24.out.csv': ('0', '2000000')}",
+   "pass": true
+  },
+  "repl_k24_2m_unknown": {
+   "detail": "[('0', '2000000')]",
+   "pass": true
+  },
+  "repl_k24_loss_runs_unanimous": {
+   "detail": "{'at15m-run1-k24.out.csv': ('2', '4796315'), 'at15m-run2-k24.out.csv': ('2', '4796315'), 'at2m-k24.out.csv': ('0', '2000000')}",
+   "pass": true
+  },
+  "repl_k25_15m_pair_extra": {
+   "detail": "{'at15m-run1-k25.out.csv': ('2', '5496449'), 'at15m-run2-k25.out.csv': ('2', '5496449'), 'at2m-k25.out.csv': ('0', '2000000')}",
+   "pass": true
+  },
+  "repl_k25_2m_unknown": {
+   "detail": "[('0', '2000000')]",
+   "pass": true
+  },
+  "repl_k25_loss_runs_unanimous": {
+   "detail": "{'at15m-run1-k25.out.csv': ('2', '5496449'), 'at15m-run2-k25.out.csv': ('2', '5496449'), 'at2m-k25.out.csv': ('0', '2000000')}",
+   "pass": true
+  },
+  "repl_k26_15m_pair_extra": {
+   "detail": "{'at15m-run1-k26.out.csv': ('2', '14439424'), 'at15m-run2-k26.out.csv': ('2', '14439424'), 'at2m-k26.out.csv': ('0', '2000000')}",
+   "pass": true
+  },
+  "repl_k26_2m_unknown": {
+   "detail": "[('0', '2000000')]",
+   "pass": true
+  },
+  "repl_k26_loss_runs_unanimous": {
+   "detail": "{'at15m-run1-k26.out.csv': ('2', '14439424'), 'at15m-run2-k26.out.csv': ('2', '14439424'), 'at2m-k26.out.csv': ('0', '2000000')}",
+   "pass": true
+  },
+  "repl_k27_15m_pair_extra": {
+   "detail": "{'at15m-run1-k27.out.csv': ('2', '2250306'), 'at15m-run2-k27.out.csv': ('2', '2250306'), 'at2m-k27.out.csv': ('0', '2000000')}",
+   "pass": true
+  },
+  "repl_k27_2m_unknown": {
+   "detail": "[('0', '2000000')]",
+   "pass": true
+  },
+  "repl_k27_loss_runs_unanimous": {
+   "detail": "{'at15m-run1-k27.out.csv': ('2', '2250306'), 'at15m-run2-k27.out.csv': ('2', '2250306'), 'at2m-k27.out.csv': ('0', '2000000')}",
+   "pass": true
+  },
+  "repl_k28_loss_runs_unanimous": {
+   "detail": "{'at2m-k28.out.csv': ('2', '1918850'), 'at2m-run2-k28.out.csv': ('2', '1918850')}",
+   "pass": true
+  },
+  "repl_k29_15m_pair_extra": {
+   "detail": "{'at15m-run1-k29.out.csv': ('2', '4996919'), 'at15m-run2-k29.out.csv': ('2', '4996919'), 'at2m-k29.out.csv': ('0', '2000000')}",
+   "pass": true
+  },
+  "repl_k29_2m_unknown": {
+   "detail": "[('0', '2000000')]",
+   "pass": true
+  },
+  "repl_k29_loss_runs_unanimous": {
+   "detail": "{'at15m-run1-k29.out.csv': ('2', '4996919'), 'at15m-run2-k29.out.csv': ('2', '4996919'), 'at2m-k29.out.csv': ('0', '2000000')}",
+   "pass": true
+  },
+  "repl_k30_15m_pair_extra": {
+   "detail": "{'at15m-run1-k30.out.csv': ('2', '3933511'), 'at15m-run2-k30.out.csv': ('2', '3933511'), 'at2m-k30.out.csv': ('0', '2000000')}",
+   "pass": true
+  },
+  "repl_k30_2m_unknown": {
+   "detail": "[('0', '2000000')]",
+   "pass": true
+  },
+  "repl_k30_loss_runs_unanimous": {
+   "detail": "{'at15m-run1-k30.out.csv': ('2', '3933511'), 'at15m-run2-k30.out.csv': ('2', '3933511'), 'at2m-k30.out.csv': ('0', '2000000')}",
+   "pass": true
+  },
+  "repl_k31_15m_pair_extra": {
+   "detail": "{'at15m-run1-k31.out.csv': ('2', '4560796'), 'at15m-run2-k31.out.csv': ('2', '4560796'), 'at2m-k31.out.csv': ('0', '2000000')}",
+   "pass": true
+  },
+  "repl_k31_2m_unknown": {
+   "detail": "[('0', '2000000')]",
+   "pass": true
+  },
+  "repl_k31_loss_runs_unanimous": {
+   "detail": "{'at15m-run1-k31.out.csv': ('2', '4560796'), 'at15m-run2-k31.out.csv': ('2', '4560796'), 'at2m-k31.out.csv': ('0', '2000000')}",
+   "pass": true
+  },
+  "repl_k32_loss_runs_unanimous": {
+   "detail": "{'at2m-k32.out.csv': ('2', '1989908'), 'at2m-run2-k32.out.csv': ('2', '1989908')}",
+   "pass": true
+  },
+  "repl_k34_15m_pair_extra": {
+   "detail": "{'at15m-run1-k34.out.csv': ('2', '8567123'), 'at15m-run2-k34.out.csv': ('2', '8567123'), 'at2m-k34.out.csv': ('0', '2000000')}",
+   "pass": true
+  },
+  "repl_k34_2m_unknown": {
+   "detail": "[('0', '2000000')]",
+   "pass": true
+  },
+  "repl_k34_loss_runs_unanimous": {
+   "detail": "{'at15m-run1-k34.out.csv': ('2', '8567123'), 'at15m-run2-k34.out.csv': ('2', '8567123'), 'at2m-k34.out.csv': ('0', '2000000')}",
+   "pass": true
+  },
+  "repl_k35_15m_pair_extra": {
+   "detail": "{'at15m-run1-k35.out.csv': ('2', '14273589'), 'at15m-run2-k35.out.csv': ('2', '14273589'), 'at2m-k35.out.csv': ('0', '2000000')}",
+   "pass": true
+  },
+  "repl_k35_2m_unknown": {
+   "detail": "[('0', '2000000')]",
+   "pass": true
+  },
+  "repl_k35_loss_runs_unanimous": {
+   "detail": "{'at15m-run1-k35.out.csv': ('2', '14273589'), 'at15m-run2-k35.out.csv': ('2', '14273589'), 'at2m-k35.out.csv': ('0', '2000000')}",
+   "pass": true
+  },
+  "repl_k36_15m_pair_extra": {
+   "detail": "{'at15m-run1-k36.out.csv': ('2', '3007021'), 'at15m-run2-k36.out.csv': ('2', '3007021'), 'at2m-k36.out.csv': ('0', '2000000')}",
+   "pass": true
+  },
+  "repl_k36_2m_unknown": {
+   "detail": "[('0', '2000000')]",
+   "pass": true
+  },
+  "repl_k36_loss_runs_unanimous": {
+   "detail": "{'at15m-run1-k36.out.csv': ('2', '3007021'), 'at15m-run2-k36.out.csv': ('2', '3007021'), 'at2m-k36.out.csv': ('0', '2000000')}",
+   "pass": true
+  },
+  "repl_k37_15m_pair_extra": {
+   "detail": "{'at15m-run1-k37.out.csv': ('2', '8083885'), 'at15m-run2-k37.out.csv': ('2', '8083885'), 'at2m-k37.out.csv': ('0', '2000000')}",
+   "pass": true
+  },
+  "repl_k37_2m_unknown": {
+   "detail": "[('0', '2000000')]",
+   "pass": true
+  },
+  "repl_k37_loss_runs_unanimous": {
+   "detail": "{'at15m-run1-k37.out.csv': ('2', '8083885'), 'at15m-run2-k37.out.csv': ('2', '8083885'), 'at2m-k37.out.csv': ('0', '2000000')}",
+   "pass": true
+  },
+  "repl_k39_15m_pair_extra": {
+   "detail": "{'at15m-run1-k39.out.csv': ('2', '5725348'), 'at15m-run2-k39.out.csv': ('2', '5725348'), 'at2m-k39.out.csv': ('0', '2000000')}",
+   "pass": true
+  },
+  "repl_k39_2m_unknown": {
+   "detail": "[('0', '2000000')]",
+   "pass": true
+  },
+  "repl_k39_loss_runs_unanimous": {
+   "detail": "{'at15m-run1-k39.out.csv': ('2', '5725348'), 'at15m-run2-k39.out.csv': ('2', '5725348'), 'at2m-k39.out.csv': ('0', '2000000')}",
+   "pass": true
+  },
+  "repl_k40_15m_pair_extra": {
+   "detail": "{'at15m-run1-k40.out.csv': ('2', '5926395'), 'at15m-run2-k40.out.csv': ('2', '5926395'), 'at2m-k40.out.csv': ('0', '2000000')}",
+   "pass": true
+  },
+  "repl_k40_2m_unknown": {
+   "detail": "[('0', '2000000')]",
+   "pass": true
+  },
+  "repl_k40_loss_runs_unanimous": {
+   "detail": "{'at15m-run1-k40.out.csv': ('2', '5926395'), 'at15m-run2-k40.out.csv': ('2', '5926395'), 'at2m-k40.out.csv': ('0', '2000000')}",
+   "pass": true
+  },
+  "repl_k41_15m_pair_extra": {
+   "detail": "{'at15m-run1-k41.out.csv': ('2', '6536846'), 'at15m-run2-k41.out.csv': ('2', '6536846'), 'at2m-k41.out.csv': ('0', '2000000')}",
+   "pass": true
+  },
+  "repl_k41_2m_unknown": {
+   "detail": "[('0', '2000000')]",
+   "pass": true
+  },
+  "repl_k41_loss_runs_unanimous": {
+   "detail": "{'at15m-run1-k41.out.csv': ('2', '6536846'), 'at15m-run2-k41.out.csv': ('2', '6536846'), 'at2m-k41.out.csv': ('0', '2000000')}",
+   "pass": true
+  },
+  "repl_k42_15m_pair_extra": {
+   "detail": "{'at15m-run1-k42.out.csv': ('2', '8486305'), 'at15m-run2-k42.out.csv': ('2', '8486305'), 'at2m-k42.out.csv': ('0', '2000000')}",
+   "pass": true
+  },
+  "repl_k42_2m_unknown": {
+   "detail": "[('0', '2000000')]",
+   "pass": true
+  },
+  "repl_k42_loss_runs_unanimous": {
+   "detail": "{'at15m-run1-k42.out.csv': ('2', '8486305'), 'at15m-run2-k42.out.csv': ('2', '8486305'), 'at2m-k42.out.csv': ('0', '2000000')}",
+   "pass": true
+  },
+  "repl_k43_15m_pair_extra": {
+   "detail": "{'at15m-run1-k43.out.csv': ('2', '6916669'), 'at15m-run2-k43.out.csv': ('2', '6916669'), 'at2m-k43.out.csv': ('0', '2000000')}",
+   "pass": true
+  },
+  "repl_k43_2m_unknown": {
+   "detail": "[('0', '2000000')]",
+   "pass": true
+  },
+  "repl_k43_loss_runs_unanimous": {
+   "detail": "{'at15m-run1-k43.out.csv': ('2', '6916669'), 'at15m-run2-k43.out.csv': ('2', '6916669'), 'at2m-k43.out.csv': ('0', '2000000')}",
+   "pass": true
+  },
+  "repl_row_k09_at15m-run1-k09.out.csv": {
+   "detail": "replay | 0 | 5 | 87 | 0 | 15000000 | 2 | 4018184 | 19 | 10377419441368469504 | 65536",
+   "pass": true
+  },
+  "repl_row_k09_at15m-run2-k09.out.csv": {
+   "detail": "replay | 0 | 5 | 87 | 0 | 15000000 | 2 | 4018184 | 20 | 10377419441368469504 | 65536",
+   "pass": true
+  },
+  "repl_row_k09_at2m-k09.out.csv": {
+   "detail": "replay | 0 | 5 | 87 | 0 | 2000000 | 0 | 2000000 | 9 | 10377419441368469504 | 65536",
+   "pass": true
+  },
+  "repl_row_k10_at15m-run1-k10.out.csv": {
+   "detail": "replay | 0 | 5 | 84 | 0 | 15000000 | 2 | 4295355 | 20 | 10378545341275312128 | 65536",
+   "pass": true
+  },
+  "repl_row_k10_at15m-run2-k10.out.csv": {
+   "detail": "replay | 0 | 5 | 84 | 0 | 15000000 | 2 | 4295355 | 21 | 10378545341275312128 | 65536",
+   "pass": true
+  },
+  "repl_row_k10_at2m-k10.out.csv": {
+   "detail": "replay | 0 | 5 | 84 | 0 | 2000000 | 0 | 2000000 | 9 | 10378545341275312128 | 65536",
+   "pass": true
+  },
+  "repl_row_k11_at15m-run1-k11.out.csv": {
+   "detail": "replay | 0 | 5 | 86 | 0 | 15000000 | 2 | 7012218 | 38 | 10412322338480590848 | 65536",
+   "pass": true
+  },
+  "repl_row_k11_at15m-run2-k11.out.csv": {
+   "detail": "replay | 0 | 5 | 86 | 0 | 15000000 | 2 | 7012218 | 35 | 10412322338480590848 | 65536",
+   "pass": true
+  },
+  "repl_row_k11_at2m-k11.out.csv": {
+   "detail": "replay | 0 | 5 | 86 | 0 | 2000000 | 0 | 2000000 | 9 | 10412322338480590848 | 65536",
+   "pass": true
+  },
+  "repl_row_k12_at15m-run1-k12.out.csv": {
+   "detail": "replay | 0 | 5 | 83 | 0 | 15000000 | 2 | 5688761 | 29 | 10952754293765050368 | 65536",
+   "pass": true
+  },
+  "repl_row_k12_at15m-run2-k12.out.csv": {
+   "detail": "replay | 0 | 5 | 83 | 0 | 15000000 | 2 | 5688761 | 29 | 10952754293765050368 | 65536",
+   "pass": true
+  },
+  "repl_row_k12_at2m-k12.out.csv": {
+   "detail": "replay | 0 | 5 | 83 | 0 | 2000000 | 0 | 2000000 | 9 | 10952754293765050368 | 65536",
+   "pass": true
+  },
+  "repl_row_k13_base15m-1152921573327376384-536870912.out.csv": {
+   "detail": "replay | 0 | 5 | 95 | 0 | 15000000 | 0 | 15000000 | 173 | 1152921573327376384 | 536870912",
+   "pass": true
+  },
+  "repl_row_k13_l50m-margin-1152921573327376384-536870912.out.csv": {
+   "detail": "replay | 0 | 5 | 95 | 0 | 32000000 | 1 | 16402480 | 160 | 1152921573327376384 | 536870912",
+   "pass": true
+  },
+  "repl_row_k13_l50m-run1-1152921573327376384-536870912.out.csv": {
+   "detail": "replay | 0 | 5 | 95 | 0 | 50000000 | 1 | 16402480 | 184 | 1152921573327376384 | 536870912",
+   "pass": true
+  },
+  "repl_row_k13_l50m-run2-1152921573327376384-536870912.out.csv": {
+   "detail": "replay | 0 | 5 | 95 | 0 | 50000000 | 1 | 16402480 | 186 | 1152921573327376384 | 536870912",
+   "pass": true
+  },
+  "repl_row_k13_l50m-run3-verify-1152921573327376384-536870912.out.csv": {
+   "detail": "replay | 0 | 5 | 95 | 0 | 50000000 | 1 | 16402480 | 182 | 1152921573327376384 | 536870912",
+   "pass": true
+  },
+  "repl_row_k14_at15m-run1-k14.out.csv": {
+   "detail": "replay | 0 | 5 | 99 | 0 | 15000000 | 2 | 6801611 | 36 | 1152956757699461120 | 536870912",
+   "pass": true
+  },
+  "repl_row_k14_at15m-run2-k14.out.csv": {
+   "detail": "replay | 0 | 5 | 99 | 0 | 15000000 | 2 | 6801611 | 34 | 1152956757699461120 | 536870912",
+   "pass": true
+  },
+  "repl_row_k14_at2m-k14.out.csv": {
+   "detail": "replay | 0 | 5 | 99 | 0 | 2000000 | 0 | 2000000 | 9 | 1152956757699461120 | 536870912",
+   "pass": true
+  },
+  "repl_row_k15_at15m-run1-k15.out.csv": {
+   "detail": "replay | 0 | 5 | 99 | 0 | 15000000 | 2 | 5947870 | 30 | 1297036692683751424 | 1064960",
+   "pass": true
+  },
+  "repl_row_k15_at15m-run2-k15.out.csv": {
+   "detail": "replay | 0 | 5 | 99 | 0 | 15000000 | 2 | 5947870 | 31 | 1297036692683751424 | 1064960",
+   "pass": true
+  },
+  "repl_row_k15_at2m-k15.out.csv": {
+   "detail": "replay | 0 | 5 | 99 | 0 | 2000000 | 0 | 2000000 | 9 | 1297036692683751424 | 1064960",
+   "pass": true
+  },
+  "repl_row_k16_at15m-run1-k16.out.csv": {
+   "detail": "replay | 0 | 5 | 95 | 0 | 15000000 | 2 | 10883904 | 59 | 1297036761403228160 | 536870912",
+   "pass": true
+  },
+  "repl_row_k16_at15m-run2-k16.out.csv": {
+   "detail": "replay | 0 | 5 | 95 | 0 | 15000000 | 2 | 10883904 | 59 | 1297036761403228160 | 536870912",
+   "pass": true
+  },
+  "repl_row_k16_at2m-k16.out.csv": {
+   "detail": "replay | 0 | 5 | 95 | 0 | 2000000 | 0 | 2000000 | 9 | 1297036761403228160 | 536870912",
+   "pass": true
+  },
+  "repl_row_k17_at15m-run1-k17.out.csv": {
+   "detail": "replay | 0 | 5 | 96 | 0 | 15000000 | 2 | 1241921 | 5 | 10376293541461626880 | 65537",
+   "pass": true
+  },
+  "repl_row_k17_at15m-run2-k17.out.csv": {
+   "detail": "replay | 0 | 5 | 96 | 0 | 15000000 | 2 | 1241921 | 5 | 10376293541461626880 | 65537",
+   "pass": true
+  },
+  "repl_row_k17_at2m-k17.out.csv": {
+   "detail": "replay | 0 | 5 | 96 | 0 | 2000000 | 2 | 1241921 | 6 | 10376293541461626880 | 65537",
+   "pass": true
+  },
+  "repl_row_k17_at2m-run2-k17.out.csv": {
+   "detail": "replay | 0 | 5 | 96 | 0 | 2000000 | 2 | 1241921 | 6 | 10376293541461626880 | 65537",
+   "pass": true
+  },
+  "repl_row_k18_at15m-run1-k18.out.csv": {
+   "detail": "replay | 0 | 5 | 91 | 0 | 15000000 | 2 | 1838655 | 8 | 10376293541461626880 | 65544",
+   "pass": true
+  },
+  "repl_row_k18_at15m-run2-k18.out.csv": {
+   "detail": "replay | 0 | 5 | 91 | 0 | 15000000 | 2 | 1838655 | 8 | 10376293541461626880 | 65544",
+   "pass": true
+  },
+  "repl_row_k18_at2m-k18.out.csv": {
+   "detail": "replay | 0 | 5 | 91 | 0 | 2000000 | 2 | 1838655 | 8 | 10376293541461626880 | 65544",
+   "pass": true
+  },
+  "repl_row_k18_at2m-run2-k18.out.csv": {
+   "detail": "replay | 0 | 5 | 91 | 0 | 2000000 | 2 | 1838655 | 8 | 10376293541461626880 | 65544",
+   "pass": true
+  },
+  "repl_row_k19_base15m-10376293541461626880-65664.out.csv": {
+   "detail": "replay | 0 | 5 | 95 | 0 | 15000000 | 0 | 15000000 | 163 | 10376293541461626880 | 65664",
+   "pass": true
+  },
+  "repl_row_k19_l50m-margin-10376293541461626880-65664.out.csv": {
+   "detail": "replay | 0 | 5 | 95 | 0 | 32000000 | 1 | 15379062 | 174 | 10376293541461626880 | 65664",
+   "pass": true
+  },
+  "repl_row_k19_l50m-run1-10376293541461626880-65664.out.csv": {
+   "detail": "replay | 0 | 5 | 95 | 0 | 50000000 | 1 | 15379062 | 171 | 10376293541461626880 | 65664",
+   "pass": true
+  },
+  "repl_row_k19_l50m-run2-10376293541461626880-65664.out.csv": {
+   "detail": "replay | 0 | 5 | 95 | 0 | 50000000 | 1 | 15379062 | 171 | 10376293541461626880 | 65664",
+   "pass": true
+  },
+  "repl_row_k19_l50m-run3-verify-10376293541461626880-65664.out.csv": {
+   "detail": "replay | 0 | 5 | 95 | 0 | 50000000 | 1 | 15379062 | 176 | 10376293541461626880 | 65664",
+   "pass": true
+  },
+  "repl_row_k21_at15m-run1-k21.out.csv": {
+   "detail": "replay | 0 | 5 | 90 | 0 | 15000000 | 2 | 3649839 | 18 | 10376293541461626880 | 67174400",
+   "pass": true
+  },
+  "repl_row_k21_at15m-run2-k21.out.csv": {
+   "detail": "replay | 0 | 5 | 90 | 0 | 15000000 | 2 | 3649839 | 17 | 10376293541461626880 | 67174400",
+   "pass": true
+  },
+  "repl_row_k21_at2m-k21.out.csv": {
+   "detail": "replay | 0 | 5 | 90 | 0 | 2000000 | 0 | 2000000 | 9 | 10376293541461626880 | 67174400",
+   "pass": true
+  },
+  "repl_row_k22_at15m-run1-k22.out.csv": {
+   "detail": "replay | 0 | 5 | 98 | 0 | 15000000 | 2 | 7527812 | 38 | 10376293541461626880 | 268500992",
+   "pass": true
+  },
+  "repl_row_k22_at15m-run2-k22.out.csv": {
+   "detail": "replay | 0 | 5 | 98 | 0 | 15000000 | 2 | 7527812 | 39 | 10376293541461626880 | 268500992",
+   "pass": true
+  },
+  "repl_row_k22_at2m-k22.out.csv": {
+   "detail": "replay | 0 | 5 | 98 | 0 | 2000000 | 0 | 2000000 | 9 | 10376293541461626880 | 268500992",
+   "pass": true
+  },
+  "repl_row_k23_at15m-run1-k23.out.csv": {
+   "detail": "replay | 0 | 5 | 97 | 0 | 15000000 | 2 | 10938326 | 59 | 10376293541461626912 | 65536",
+   "pass": true
+  },
+  "repl_row_k23_at15m-run2-k23.out.csv": {
+   "detail": "replay | 0 | 5 | 97 | 0 | 15000000 | 2 | 10938326 | 58 | 10376293541461626912 | 65536",
+   "pass": true
+  },
+  "repl_row_k23_at2m-k23.out.csv": {
+   "detail": "replay | 0 | 5 | 97 | 0 | 2000000 | 0 | 2000000 | 9 | 10376293541461626912 | 65536",
+   "pass": true
+  },
+  "repl_row_k24_at15m-run1-k24.out.csv": {
+   "detail": "replay | 0 | 5 | 93 | 0 | 15000000 | 2 | 4796315 | 24 | 10376293541461627904 | 65536",
+   "pass": true
+  },
+  "repl_row_k24_at15m-run2-k24.out.csv": {
+   "detail": "replay | 0 | 5 | 93 | 0 | 15000000 | 2 | 4796315 | 24 | 10376293541461627904 | 65536",
+   "pass": true
+  },
+  "repl_row_k24_at2m-k24.out.csv": {
+   "detail": "replay | 0 | 5 | 93 | 0 | 2000000 | 0 | 2000000 | 9 | 10376293541461627904 | 65536",
+   "pass": true
+  },
+  "repl_row_k25_at15m-run1-k25.out.csv": {
+   "detail": "replay | 0 | 5 | 91 | 0 | 15000000 | 2 | 5496449 | 28 | 10376293541461659648 | 65536",
+   "pass": true
+  },
+  "repl_row_k25_at15m-run2-k25.out.csv": {
+   "detail": "replay | 0 | 5 | 91 | 0 | 15000000 | 2 | 5496449 | 27 | 10376293541461659648 | 65536",
+   "pass": true
+  },
+  "repl_row_k25_at2m-k25.out.csv": {
+   "detail": "replay | 0 | 5 | 91 | 0 | 2000000 | 0 | 2000000 | 9 | 10376293541461659648 | 65536",
+   "pass": true
+  },
+  "repl_row_k26_at15m-run1-k26.out.csv": {
+   "detail": "replay | 0 | 5 | 95 | 0 | 15000000 | 2 | 14439424 | 79 | 10376293541462151168 | 65536",
+   "pass": true
+  },
+  "repl_row_k26_at15m-run2-k26.out.csv": {
+   "detail": "replay | 0 | 5 | 95 | 0 | 15000000 | 2 | 14439424 | 78 | 10376293541462151168 | 65536",
+   "pass": true
+  },
+  "repl_row_k26_at2m-k26.out.csv": {
+   "detail": "replay | 0 | 5 | 95 | 0 | 2000000 | 0 | 2000000 | 9 | 10376293541462151168 | 65536",
+   "pass": true
+  },
+  "repl_row_k27_at15m-run1-k27.out.csv": {
+   "detail": "replay | 0 | 5 | 93 | 0 | 15000000 | 2 | 2250306 | 11 | 10376293541478404096 | 65536",
+   "pass": true
+  },
+  "repl_row_k27_at15m-run2-k27.out.csv": {
+   "detail": "replay | 0 | 5 | 93 | 0 | 15000000 | 2 | 2250306 | 11 | 10376293541478404096 | 65536",
+   "pass": true
+  },
+  "repl_row_k27_at2m-k27.out.csv": {
+   "detail": "replay | 0 | 5 | 93 | 0 | 2000000 | 0 | 2000000 | 9 | 10376293541478404096 | 65536",
+   "pass": true
+  },
+  "repl_row_k28_at2m-k28.out.csv": {
+   "detail": "replay | 0 | 5 | 98 | 0 | 2000000 | 2 | 1918850 | 9 | 10376293541528735744 | 65536",
+   "pass": true
+  },
+  "repl_row_k28_at2m-run2-k28.out.csv": {
+   "detail": "replay | 0 | 5 | 98 | 0 | 2000000 | 2 | 1918850 | 9 | 10376293541528735744 | 65536",
+   "pass": true
+  },
+  "repl_row_k29_at15m-run1-k29.out.csv": {
+   "detail": "replay | 0 | 5 | 97 | 0 | 15000000 | 2 | 4996919 | 26 | 10376293541595844608 | 65536",
+   "pass": true
+  },
+  "repl_row_k29_at15m-run2-k29.out.csv": {
+   "detail": "replay | 0 | 5 | 97 | 0 | 15000000 | 2 | 4996919 | 26 | 10376293541595844608 | 65536",
+   "pass": true
+  },
+  "repl_row_k29_at2m-k29.out.csv": {
+   "detail": "replay | 0 | 5 | 97 | 0 | 2000000 | 0 | 2000000 | 9 | 10376293541595844608 | 65536",
+   "pass": true
+  },
+  "repl_row_k30_at15m-run1-k30.out.csv": {
+   "detail": "replay | 0 | 5 | 95 | 0 | 15000000 | 2 | 3933511 | 20 | 10376293610181103616 | 65536",
+   "pass": true
+  },
+  "repl_row_k30_at15m-run2-k30.out.csv": {
+   "detail": "replay | 0 | 5 | 95 | 0 | 15000000 | 2 | 3933511 | 19 | 10376293610181103616 | 65536",
+   "pass": true
+  },
+  "repl_row_k30_at2m-k30.out.csv": {
+   "detail": "replay | 0 | 5 | 95 | 0 | 2000000 | 0 | 2000000 | 9 | 10376293610181103616 | 65536",
+   "pass": true
+  },
+  "repl_row_k31_at15m-run1-k31.out.csv": {
+   "detail": "replay | 0 | 5 | 92 | 0 | 15000000 | 2 | 4560796 | 22 | 10376856491415048192 | 65536",
+   "pass": true
+  },
+  "repl_row_k31_at15m-run2-k31.out.csv": {
+   "detail": "replay | 0 | 5 | 92 | 0 | 15000000 | 2 | 4560796 | 22 | 10376856491415048192 | 65536",
+   "pass": true
+  },
+  "repl_row_k31_at2m-k31.out.csv": {
+   "detail": "replay | 0 | 5 | 92 | 0 | 2000000 | 0 | 2000000 | 9 | 10376856491415048192 | 65536",
+   "pass": true
+  },
+  "repl_row_k32_at2m-k32.out.csv": {
+   "detail": "replay | 0 | 5 | 93 | 0 | 2000000 | 2 | 1989908 | 10 | 10664523917613338624 | 65536",
+   "pass": true
+  },
+  "repl_row_k32_at2m-run2-k32.out.csv": {
+   "detail": "replay | 0 | 5 | 93 | 0 | 2000000 | 2 | 1989908 | 10 | 10664523917613338624 | 65536",
+   "pass": true
+  },
+  "repl_row_k34_at15m-run1-k34.out.csv": {
+   "detail": "replay | 0 | 5 | 96 | 0 | 15000000 | 2 | 8567123 | 45 | 14987979559889014784 | 65536",
+   "pass": true
+  },
+  "repl_row_k34_at15m-run2-k34.out.csv": {
+   "detail": "replay | 0 | 5 | 96 | 0 | 15000000 | 2 | 8567123 | 46 | 14987979559889014784 | 65536",
+   "pass": true
+  },
+  "repl_row_k34_at2m-k34.out.csv": {
+   "detail": "replay | 0 | 5 | 96 | 0 | 2000000 | 0 | 2000000 | 8 | 14987979559889014784 | 65536",
+   "pass": true
+  },
+  "repl_row_k35_at15m-run1-k35.out.csv": {
+   "detail": "replay | 0 | 5 | 100 | 0 | 15000000 | 2 | 14273589 | 76 | 1152921573327372288 | 553648128",
+   "pass": true
+  },
+  "repl_row_k35_at15m-run2-k35.out.csv": {
+   "detail": "replay | 0 | 5 | 100 | 0 | 15000000 | 2 | 14273589 | 80 | 1152921573327372288 | 553648128",
+   "pass": true
+  },
+  "repl_row_k35_at2m-k35.out.csv": {
+   "detail": "replay | 0 | 5 | 100 | 0 | 2000000 | 0 | 2000000 | 9 | 1152921573327372288 | 553648128",
+   "pass": true
+  },
+  "repl_row_k36_at15m-run1-k36.out.csv": {
+   "detail": "replay | 0 | 5 | 100 | 0 | 15000000 | 2 | 3007021 | 14 | 1224979167365300224 | 536870912",
+   "pass": true
+  },
+  "repl_row_k36_at15m-run2-k36.out.csv": {
+   "detail": "replay | 0 | 5 | 100 | 0 | 15000000 | 2 | 3007021 | 14 | 1224979167365300224 | 536870912",
+   "pass": true
+  },
+  "repl_row_k36_at2m-k36.out.csv": {
+   "detail": "replay | 0 | 5 | 100 | 0 | 2000000 | 0 | 2000000 | 10 | 1224979167365300224 | 536870912",
+   "pass": true
+  },
+  "repl_row_k37_at15m-run1-k37.out.csv": {
+   "detail": "replay | 0 | 5 | 103 | 0 | 15000000 | 2 | 8083885 | 42 | 1297036692683751424 | 17825792",
+   "pass": true
+  },
+  "repl_row_k37_at15m-run2-k37.out.csv": {
+   "detail": "replay | 0 | 5 | 103 | 0 | 15000000 | 2 | 8083885 | 43 | 1297036692683751424 | 17825792",
+   "pass": true
+  },
+  "repl_row_k37_at2m-k37.out.csv": {
+   "detail": "replay | 0 | 5 | 103 | 0 | 2000000 | 0 | 2000000 | 10 | 1297036692683751424 | 17825792",
+   "pass": true
+  },
+  "repl_row_k39_at15m-run1-k39.out.csv": {
+   "detail": "replay | 0 | 5 | 100 | 0 | 15000000 | 2 | 5725348 | 29 | 10376293541461626880 | 66560",
+   "pass": true
+  },
+  "repl_row_k39_at15m-run2-k39.out.csv": {
+   "detail": "replay | 0 | 5 | 100 | 0 | 15000000 | 2 | 5725348 | 29 | 10376293541461626880 | 66560",
+   "pass": true
+  },
+  "repl_row_k39_at2m-k39.out.csv": {
+   "detail": "replay | 0 | 5 | 100 | 0 | 2000000 | 0 | 2000000 | 9 | 10376293541461626880 | 66560",
+   "pass": true
+  },
+  "repl_row_k40_at15m-run1-k40.out.csv": {
+   "detail": "replay | 0 | 5 | 102 | 0 | 15000000 | 2 | 5926395 | 31 | 10376293541461626880 | 67584",
+   "pass": true
+  },
+  "repl_row_k40_at15m-run2-k40.out.csv": {
+   "detail": "replay | 0 | 5 | 102 | 0 | 15000000 | 2 | 5926395 | 30 | 10376293541461626880 | 67584",
+   "pass": true
+  },
+  "repl_row_k40_at2m-k40.out.csv": {
+   "detail": "replay | 0 | 5 | 102 | 0 | 2000000 | 0 | 2000000 | 8 | 10376293541461626880 | 67584",
+   "pass": true
+  },
+  "repl_row_k41_at15m-run1-k41.out.csv": {
+   "detail": "replay | 0 | 5 | 100 | 0 | 15000000 | 2 | 6536846 | 35 | 10376293541461626884 | 65536",
+   "pass": true
+  },
