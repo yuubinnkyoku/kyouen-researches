@@ -1,0 +1,178 @@
+{
+ "adopted": {
+  "condition": "parked4rest2 L50M ladder four-run battery (15M park-at-UNKNOWN baseline, 50M cold two-pass node-exact, 32M budget-margin re-proof, voluntary third cold 50M verify), C++-gated GATE-PASS by the Part SN scrutiny kit, third-implementation-corroborated by the k20/k33 third-impl verdict re-verification addendum (3 identical cold runs each, auditor re-run live by the Part maker); re-verified live by this extractor (both refresh forks re-executed byte-verbatim, the Part maker re-executed byte-verbatim and the merger 3x; NO new solver pass ran)",
+  "direction": "WIN (win-only canonical adoption)",
+  "ids": [
+   "k20",
+   "k33"
+  ],
+  "nodes_total": 32038980,
+  "standing_unconsumed_loss_not_emitted": {
+   "count": 30,
+   "note": "the 30 fifth-resumption verified LOSS rows of the Part SL batch stay unconsumed honest labels WITHOUT a delegated C++ second-implementation gate (coverage asymmetry disclosed)"
+  },
+  "standing_unconsumed_win_not_emitted": {
+   "k38": "the still-parked key k38 of the same probe selection (15,000,000 park-at-UNKNOWN, NO L50M follow-up claimed - the coverage asymmetry the k20/k33 third-impl completion pre-registered)"
+  },
+  "win_ties": []
+ },
+ "base": {
+  "cache_path": "research/experiments/n11-centralreply-sixthwin2-adoption-reaudit-20261126/output/merged-exact-s5-chain-plus-sixthwin2-20261126.cache",
+  "cache_sha256": "cc3694bbe871ccf27bdf4dbcf5e93586da440164fd75c02c15dc2a0ae46d11b8",
+  "class_status_counts": {
+   "excluded": 390,
+   "excluded_now": 113,
+   "free_now": 39,
+   "unknown": 34407
+  },
+  "closure_classes_sha256": "350e269a9d4e0827274aff7c587cdb389f070eade0ff54c220c7c14f9197bc6d",
+  "loss": 6600,
+  "per_root_coverage_sha256": "9c5b277429f99157ff2e65323b5912b9ce957f1d2008f8ac8fc1e03b49f91ad1",
+  "probe_worklist_not_published_size_policy_bytes": 3715904,
+  "probe_worklist_regen_pin_sha256": "0818da81ba01259945d7fb0051b07221582cd4dc68d55d9edb61aa447e4628ac",
+  "refresh_summary_sha256": "7a500a032f997307defb37f28ce65f93ce935f2feca9ca6281c5474775ef4bc7",
+  "rows": 6799,
+  "win": 199
+ },
+ "canonical_head_publication": {
+  "merge_audit_runs": 3,
+  "merge_audit_sha256_x3_identical": "622ac17f72c9ad2a7b9e9714b3274c6bcba1df34910365268db16f3c76e0c368",
+  "merged_cache_bytes": 284230,
+  "merged_cache_name": "merged-exact-s5-chain-plus-sixthwin3-20261126.cache",
+  "merged_cache_rows": 6801,
+  "merged_cache_sha256": "02db5ab35b8ad71dfd0699217756291c6bc896c78e9fd7c609b5e25177f6b25c",
+  "merged_cache_win_loss": [
+   201,
+   6600
+  ],
+  "merger_sha256": "907119610034fb2aebfde012550a4129dfa3b086c6de11194e856747ac74606a",
+  "note": "no pre-declaration dossier exists for sixthwin3; the Part SQ kit publishes the merged head of record at its own output/ directory; the extractor re-ran the merger 3x from the kit directory with the recorded input path strings and reproduced the cache and all three audit records byte-identically"
+ },
+ "census_crosscheck": {
+  "agreement": "EXACT on both cache identities, the census counts (34,407/113/39/390 -> 34,405/115/39/390), the exact 2-class flip set {2402, 3054}, zero closure churn incl. the zero rank and unknown_now tables, per-root greedy deltas (none, byte-identical), joint greedy, worklist totals, update8 numbers (281 -> 281, both adopted indices 97791/111843 outside the frozen baseline requirement), win_hit identity, serving-class records, the owner histogram and the 2-row adopted table with owner sets",
+  "measurement_sha256": "8d8329d092557933300c3b7297c3fe532ce157a62b7694308aadf716a56e6fcc",
+  "verdict_fields_current": "verdict.part_declared=true and canonical_head_sha256=02db5ab3... describe the ADOPTED head declared by Part SQ; checked, current"
+ },
+ "class_flips": {
+  "count": 2,
+  "direction": "unknown -> excluded_now, win-hit only: exactly the owner classes of the adopted keys that were status-unknown at BASE (3054 owner of k20, 2402 owner of k33); the serving owner class 3077 was already excluded_now (Part EW); NO class is freed",
+  "flipped_classes": [
+   2402,
+   3054
+  ],
+  "owner_class_count_histogram": {
+   "3": 2
+  },
+  "per_key_owner_classes": {
+   "k20": [
+    3054,
+    3077,
+    30156
+   ],
+   "k33": [
+    2402,
+    3077,
+    6233
+   ]
+  },
+  "serving_classes": {
+   "3077": {
+    "adopted_members": [
+     "k20",
+     "k33"
+    ],
+    "boundary_raw": null,
+    "class": 3077,
+    "cost_unknown_base": 93,
+    "cost_unknown_scen": 91,
+    "status_base": "excluded_now",
+    "status_note": "already flipped by Part EW; measured cost-unknown 95 -> 93 by Part SP and 93 -> 91 by this Part",
+    "status_scen": "excluded_now"
+   }
+  }
+ },
+ "closure_classes": {
+  "entered_rows": [],
+  "exit_note": "no closure class enters or leaves: the 2 win-hit flips turn classes unknown -> excluded_now, which do not change closure membership; zero rank churn and zero unknown_now churn (measured on both regenerated CSVs)",
+  "groups_served_churn": {},
+  "left_rows": [],
+  "rank_churn_nature": "measured 0 re-ranked rows",
+  "rank_churn_rows": 0,
+  "rows_before_after": [
+   804,
+   804
+  ],
+  "unknown_churn": {}
+ },
+ "date": "2026-11-26",
+ "frozen_update8": {
+  "groups_free_now": [
+   131,
+   131
+  ],
+  "newly_resolved": [],
+  "newly_resolved_note": "both adopted s5 indices (k20 111843, k33 97791) sit outside the frozen update8 baseline requirement and are correctly not counted (measured, disclosed)",
+  "remaining_now": [
+   31445,
+   31445
+  ],
+  "resolved": [
+   281,
+   281
+  ],
+  "union_baseline": 31859,
+  "win_hit_groups": "25 -> 25 IDENTICAL sets (measured; no group crosses the win_hit boundary)"
+ },
+ "honesty": {
+  "no_class_freed": "no class flips to free_now; joint greedy and per-root coverage are byte-identical on both sides",
+  "no_root_verdict": "no root verdict is asserted or implied by consuming a WIN label; the win-hit mechanism only reclassifies owner classes as excluded_now",
+  "scheduling_effect": "joint greedy 35,155 -> 35,155 UNCHANGED, worklist 64,276 -> 64,276 (delta 0), update8 resolved 281 -> 281: no baseline-requirement scheduling change at all; the only measured effects are the 2 win-hit flips and the serving-class cost-unknown 93 -> 91",
+  "unconsumed": "the still-parked key k38 and the 30 SL batch LOSS rows stay unconsumed honest labels (not emitted, no cache); no root, no root class and no closure class verdict is asserted",
+  "unknown_still": "34,405 S4 classes remain status-unknown after the adoption; 11x11 stays UNKNOWN",
+  "win_only_adoption": true
+ },
+ "part": "SQ",
+ "per_root": {
+  "free_now_uncovered": "identical at all 20 rows incl. baseline; no coverage claim",
+  "greedy_union_changes": {},
+  "group_best_options_nonfree": [
+   2101,
+   2101
+  ],
+  "joint_greedy": [
+   35155,
+   35155
+  ],
+  "joint_greedy_delta": 0,
+  "unique_groups": [
+   2115,
+   2115
+  ],
+  "worklist_total": [
+   64276,
+   64276
+  ]
+ },
+ "scen": {
+  "cache_path_of_record": "research/experiments/n11-centralreply-sixthwin3-adoption-reaudit-20261126/output/merged-exact-s5-chain-plus-sixthwin3-20261126.cache",
+  "cache_sha256": "02db5ab35b8ad71dfd0699217756291c6bc896c78e9fd7c609b5e25177f6b25c",
+  "class_status_counts": {
+   "excluded": 390,
+   "excluded_now": 115,
+   "free_now": 39,
+   "unknown": 34405
+  },
+  "closure_classes_sha256": "350e269a9d4e0827274aff7c587cdb389f070eade0ff54c220c7c14f9197bc6d",
+  "increment_sha256": "47f7dfb02489a960184b5c83bd3ed36e33936bd40067c7cc97299ab1f740ecc6",
+  "loss": 6600,
+  "manifest_sha256": "07181de7e74b619be876fdfff907f452a294cec20705258314560327e12eeb27",
+  "merge_audit_sha256": "622ac17f72c9ad2a7b9e9714b3274c6bcba1df34910365268db16f3c76e0c368",
+  "per_root_coverage_sha256": "9c5b277429f99157ff2e65323b5912b9ce957f1d2008f8ac8fc1e03b49f91ad1",
+  "probe_worklist_not_published_size_policy_bytes": 3715904,
+  "probe_worklist_regen_pin_sha256": "24301312e1e7cfd904da085723144bbbaef15e272c2d430979410520672dcd33",
+  "refresh_summary_sha256": "de205c31e59aeeb22e4d040578d1d0d89ec55a074020d4f3a244815964e4eafd",
+  "rows": 6801,
+  "win": 201
+ },
+ "schema": "sixthwin3-decomp-deltas-v1"
+}

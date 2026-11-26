@@ -1,0 +1,266 @@
+{
+ "adopted_nodes_total": 32038980,
+ "adopted_table": [
+  {
+   "hi": 33619968,
+   "legal": 95,
+   "lo": 10376293541461626880,
+   "nodes": 16196331,
+   "owner_classes_graph": [
+    3054,
+    3077,
+    30156
+   ],
+   "result": 1,
+   "s5_index": 111843,
+   "serving_class": 3077
+  },
+  {
+   "hi": 65536,
+   "legal": 91,
+   "lo": 12682136550675320832,
+   "nodes": 15842649,
+   "owner_classes_graph": [
+    2402,
+    3077,
+    6233
+   ],
+   "result": 1,
+   "s5_index": 97791,
+   "serving_class": 3077
+  }
+ ],
+ "adopted_table_digest_sha256": "d89ccfbb53078359fb650b2ac7fec5d94fe2b7bfb0038b54ce476d7b01f6dd28",
+ "base_cache_absent_hits_for_emitted": 0,
+ "base_cache_rows": 6799,
+ "base_cache_sha256": "cc3694bbe871ccf27bdf4dbcf5e93586da440164fd75c02c15dc2a0ae46d11b8",
+ "base_cache_win_loss": [
+  199,
+  6600
+ ],
+ "canonical_head_published_by_this_part": {
+  "merge_audit_runs": 3,
+  "merge_audit_sha256_x3_identical": "622ac17f72c9ad2a7b9e9714b3274c6bcba1df34910365268db16f3c76e0c368",
+  "merged_cache_bytes": 284230,
+  "merged_cache_name": "merged-exact-s5-chain-plus-sixthwin3-20261126.cache",
+  "merged_cache_rows": 6801,
+  "merged_cache_sha256": "02db5ab35b8ad71dfd0699217756291c6bc896c78e9fd7c609b5e25177f6b25c",
+  "merged_cache_win_loss": [
+   201,
+   6600
+  ],
+  "merger": "pinned byte-clone of the published union merger (sha256 90711961..., this kit scripts/s5_union_merge.py)",
+  "note": "no pre-declaration dossier exists for sixthwin3 (unlike EW's sixthwin5); this Part SQ publishes the merged head of record itself at this kit's output/ directory; three independent merge runs produced byte-identical output and byte-identical audit records"
+ },
+ "date": "2026-11-26",
+ "interpretation_guard": "Part SQ canonical WIN-only adoption increment: the 2 fresh exact-WIN rows (each cold two-pass node-exact at 50M over the pinned 15M park-at-UNKNOWN baseline, plus a 32M budget-margin re-proof and a voluntary third cold 50M verify run, solved within budget, C++-gated by Part SN and third-implementation-corroborated by the k20/k33 third-impl addendum re-run live) are consumed into the canonical chain via the fail-closed union merger whose output this Part publishes as the merged head of record (02db5ab3..., 6,801 rows WIN 201 / LOSS 6,600); WIN-only adoption asserts no root verdict and frees no class; owner classes of the adopted keys are excluded_now by the win-hit mechanism, derived machine-only by the reaudit refresh (flip set exactly {2402, 3054}; serving class 3077 stays excluded_now with cost-unknown 93 -> 91); nodes are bookkeeping, never verdicts; the standard 11x11 empty board and every central-reply root stay UNKNOWN",
+ "loss_ids": [],
+ "merger_sha256": "907119610034fb2aebfde012550a4129dfa3b086c6de11194e856747ac74606a",
+ "part": "SQ",
+ "pools": [
+  {
+   "adopted_nodes": 32038980,
+   "adopted_win_ids": [
+    "k20",
+    "k33"
+   ],
+   "budget": 50000000,
+   "kit": "n11-sixthcost-class10376293541461626880-parked4rest2-s5-l50m-ladder-20261126",
+   "kit_integrity": {
+    "halt_audit_pins": {
+     "gates_passed_count": 75,
+     "halted_on_win_keys": [
+      "10376293541461626880:33619968",
+      "12682136550675320832:65536"
+     ],
+     "lane_time_base_chain_sha256": "16a12390...",
+     "lane_time_base_note": "the halt-audit and the Part SN gate-rows pin the lane-time canonical head 16a12390 (pre-SP); freshness vs the current cc3694bb head (this Part's BASE) is gated directly below and measured by the census measurer (flip set exactly {2402, 3054})"
+    },
+    "halt_audit_sha256": "544fc34fa28565118b5cc840ca0ce943ad4b9a44d904a23371ba325137b357c8",
+    "input_csv_cross_registration": "batch-k20/batch-k33 are byte-equal to the Part SN kit's MANIFEST-pinned gate inputs and to the third-impl addendum's row-spec inputs; the val anchors are byte-equal to the Part SN kit's pinned anchor-at2m input family",
+    "input_csv_sha256_pins": {
+     "batch-k20.input.csv": "0984400f8aa99735e11e2638f5bc9a9273ddd296e845f7b7118f3ada81adddad",
+     "batch-k33.input.csv": "ca081b0f2f85e62b39cbbd1178a7be839c87e3446b2357657bbfe8681f82e2f4",
+     "val-at2m-first.input.csv": "ecc0299b8142abde201fcc40ea9666dac7368d0888d0600abc717af66ddfe348",
+     "val-at2m-second.input.csv": "56aacb71769b231c9728dcc841d39f0d5cb579517d34769f0e7382516d4c3a62",
+     "val-first-15m.input.csv": "ecc0299b8142abde201fcc40ea9666dac7368d0888d0600abc717af66ddfe348",
+     "val-second-15m.input.csv": "56aacb71769b231c9728dcc841d39f0d5cb579517d34769f0e7382516d4c3a62"
+    },
+    "jsreplay_sha256": "845856175d3c793a7eb4306f5902ecda3f1c046a8a53e8f34ed375e51febc3df",
+    "kit_files_verified": 26,
+    "kit_manifest_sha256": "fa4b2615c1edce655e94a4be7cdc765e2d68015b68f323a0df7f8c4169b76fed",
+    "note": "the parked4rest2 ladder kit is MANIFEST-verified file-by-file here (26/26); the consumed bytes are additionally pinned directly: README, jsreplay.js, halt-audit.json, status.log, the 6 input CSVs (batch-k20/k33 and the 4 validation anchors) and all 14 raw CSV files (raw_file_sha256_pins / input_csv_sha256_pins below)",
+    "raw_file_sha256_pins": {
+     "base15m-10376293541461626880-33619968.out.csv": "64a069a2a66f677ffd01c4eb03eb6b43aa07ac041319c3fb5ecce5b853c21774",
+     "base15m-12682136550675320832-65536.out.csv": "4fb1067184f15036cea90c496c6ebb160ffacd18395adff327c104da71356af8",
+     "l50m-margin-10376293541461626880-33619968.out.csv": "e5525aab03eb0e272dd44dbe04a0c0c98bddcd2afc3c14c0e474e7055fbafa55",
+     "l50m-margin-12682136550675320832-65536.out.csv": "39154465a07ee7c97bebab517b284c77866d42374ba6ca5a446a5b502676526e",
+     "l50m-run1-10376293541461626880-33619968.out.csv": "f852cd55f7f80bdf57ccbe753e78a0b09deb5f7c552af51caed5f4d583aa2c73",
+     "l50m-run1-12682136550675320832-65536.out.csv": "664ebc3a88ed14cb5a8f418df213368ab8501533c13a60f50261d93d841fc54f",
+     "l50m-run2-10376293541461626880-33619968.out.csv": "86db668a0288aeb3695f0fb0c3285f128d906ca8dbbf240d6d17b566303601e3",
+     "l50m-run2-12682136550675320832-65536.out.csv": "c08cdd7854c9a1c177428e86d08039edfeafe79e340001dc7f386ca0c706a3d2",
+     "l50m-run3-verify-10376293541461626880-33619968.out.csv": "bf2b12fffb194540205b4eb2c80e98b907059701a36969035824f3b0a339efff",
+     "l50m-run3-verify-12682136550675320832-65536.out.csv": "598538dce0cadc2be4752a6276fe3a8de0f5d3d873d4e7d214063924ebd7b530",
+     "val-at2m-first.out.csv": "918659ce721241b5956f44c287a0ea4c39b25fa176d03806adba90f540671195",
+     "val-at2m-second.out.csv": "b61bf0f8f4700054a28134b803c11077a6c338cf3565a275b70bfbf4ad75b55f",
+     "val-first-15m.out.csv": "bf6114f4b5cb8d54fe55dd36250165e5a636c1559ee1d2e20867d668b4cae0db",
+     "val-second-15m.out.csv": "5ba4f3f0122855f014397cb50679a884bfac2426fd6467cc9312f3c058a2310f"
+    },
+    "readme_sha256": "7ea14f684464ddea292cad0e8567f1334fa33ee4530d443bf988962fe60db26c",
+    "status_log_sha256": "8ef612a545950f7558d48158f65c591e28be13444549b4c41131064ab96556ec",
+    "validation_anchor_replays": {
+     "val-at2m-first": [
+      98,
+      2000000,
+      0,
+      2000000,
+      1152921504606851072,
+      536870946
+     ],
+     "val-at2m-second": [
+      99,
+      2000000,
+      0,
+      2000000,
+      1188950301626860544,
+      536870912
+     ],
+     "val-first-15m": [
+      98,
+      15000000,
+      2,
+      3651923,
+      1152921504606851072,
+      536870946
+     ],
+     "val-second-15m": [
+      99,
+      15000000,
+      2,
+      5040200,
+      1188950301626860544,
+      536870912
+     ]
+    }
+   },
+   "margin_budget": 32000000,
+   "park_budget": 15000000,
+   "pool": "parked4rest2-l50m-ladder",
+   "standing_unconsumed_keys_not_adopted": {
+    "k38": "the still-parked key k38 of the same probe selection (15,000,000 park-at-UNKNOWN, NO L50M follow-up claimed - the coverage asymmetry the k20/k33 third-impl completion pre-registered)"
+   }
+  },
+  {
+   "canonical_head_cross_gate": "the SN gate-rows.json canonical_head block pins the lane-time head 16a12390 (6,797 rows, WIN 197 / LOSS 6600; the SN gate ran before Part SP merged) and records the 2 adopted targets as fresh versus exactly that head, with raw/margin/run3 sha cross-registration to the parked4rest2 ladder raws (gated here); freshness vs the current cc3694bb head is re-gated by this Part directly",
+   "kit": "n11-sixthcost-parked4rest2-l50m-cppgate-20261126",
+   "kit_integrity": {
+    "audit_gate_json_sha256": "3fbb449df2fd60b4f0075528799c7da369a105eaef601b565eda56a4c86b616e",
+    "audit_run1_run2_run3_sha256_identical": "3fbb449df2fd60b4f0075528799c7da369a105eaef601b565eda56a4c86b616e",
+    "cpp_solver_commit": "154f3b7a67b97e13acbaee8b04dc74ddca728d19",
+    "cpp_solver_sha256": "9193f5b6065e0fbcad2ef7c65f386187701cafa1f5b718cc35a5cbb0d138f92e",
+    "gate_rows_all_pass": 67,
+    "gate_rows_json_sha256": "b72105bca125354456161469f4bf5bb218b6d155e4ac91045291bab813affec8",
+    "gate_status_gate_pass_rows": 5,
+    "gate_status_log_sha256": "70b0ee89d6c6c4a1f0a611702227d34be94aeb4e98ee07c296b993240bee7e83",
+    "kit_files_verified": 28,
+    "kit_manifest_sha256": "9853b8616949cbfb9b64b23ce7b97e053303a0d9183ddb0873a36d2fd35a853d",
+    "note": "Part SN kit verified file-by-file against its published MANIFEST-sha256 9853b861... (28 files)",
+    "readme_sha256": "61cacfef2a395fbea56c4fdf6a96721f1e1db4d5e207588b7c2413d6e48170bc"
+   },
+   "pool": "sn-cpp-second-implementation-gate"
+  },
+  {
+   "covered_ids": [
+    "k20",
+    "k33"
+   ],
+   "kit": "n11-sixthcost-k01-k03-thirdimpl-verdict-reverification-20261122",
+   "kit_integrity": {
+    "auditor_live_rerun": "rc=0, 49/49 gates, deterministic byte-identical stdout x2",
+    "auditor_sha256": "32893172386f002b551b6380b71d44ba0bc18ef8f2ab6bbcaf78228e4de2c172",
+    "cold_raw_sha256_pins": {
+     "calib-anchor-w2-a.txt": "3812a557a01367165ed52a2a5ca3f9bdda2eb3c87fec21218bffd17bbfb690db",
+     "calib-anchor-w2-b.txt": "800d2698beea89632c993343e46297248430b0f0f218f1565a333e418ef2579f",
+     "calib-verify-tbl.txt": "88c0b78b2251ea799dbe3a91df0fb56f532ec95e991290ff179ebb918466c863",
+     "k20-cold-a.txt": "2153540d32f80d122dba5ef812b3e2809298103a399c4d121f2996a8bc831907",
+     "k20-cold-b.txt": "38daf3dc04160d350ea2de6640d0520b0a301a76da04c121d28e0aa07018900f",
+     "k20-cold-v-legal.txt": "5d2cb0c47ccc4da97743d6abefae2812971e3ab64709403bd6d4fa2fa17a5e23",
+     "k33-cold-a.txt": "6cf45221fe382896dbceedf03d3c20d23711ea41b8802767faeff78d69a11cd4",
+     "k33-cold-b.txt": "5f4db70e54eab2e177244065eeacd3868122377b8cedadeafb1318093a797e4e",
+     "k33-cold-v-legal.txt": "4243b74245fbd3118672439ed7c7605818b6652d1f6f538521871a04c91be2b1",
+     "neg-gate-k20-ng1.txt": "3683cc1b8037a082596d3efad7dee28df53de49cb9dd121bda1d4153b49909a4",
+     "neg-gate-k20-ng2.txt": "de3012e5bc2f8ab9553288b288871ae1e634f9d12d51cdc02454b2c5b1c03c51",
+     "neg-gate-k33-ng1.txt": "83c200c5f87d6340b149f914aa3652e77ae7259900a84b596da91faf8f50d305",
+     "neg-gate-k33-ng2.txt": "4ea2e13acae6aedb8d6a096656fb73097fd3f4bffeacf49a7f050fa26af7da37"
+    },
+    "note": "the k20/k33 third-impl addendum (published inside the k01-k03 third-impl kit) is gated here directly on its published bytes and re-verified LIVE: the data-driven auditor audit_k20k33.py is re-run twice in this maker with rc=0, 49/49 gates, byte-identical stdout; the cold a/b/v witness raws, C1 fresh-calibration raws, C4 negative-gate raws, tamper-controls log and the per-row replica-raw copies (byte-equal to the ladder raws) are all sha-pinned and field-gated",
+    "row_pins": {
+     "k20": {
+      "expansions": 19455330,
+      "key": "10376293541461626880:33619968",
+      "legal": 95,
+      "tt_hits": 10071309,
+      "ttoverwrites": 15261026
+     },
+     "k33": {
+      "expansions": 18829006,
+      "key": "12682136550675320832:65536",
+      "legal": 91,
+      "tt_hits": 10066094,
+      "ttoverwrites": 14634702
+     }
+    },
+    "tamper_controls_log_sha256": "3e12204989a6c53e70233829a115d2ee99d7176499266df9b4f85b8f3703183c",
+    "third_impl_js_sha256": "08ea958ff59c3234ec5ac55c5c40689bd0999a34e101a88ea0546800cc4a1998",
+    "verify_tbl_js_sha256": "c8c52528f70b3a9b438edc3feb4e432fbe705d6be21650383d3955efc6790251"
+   },
+   "pool": "k20k33-third-implementation-verdict-reverify",
+   "standing_parked_keys": [
+    "k38"
+   ],
+   "standing_unconsumed_loss_rows": "the 30 fifth-resumption verified LOSS rows of the Part SL batch are NOT adopted and NOT emitted by this Part; they remain unconsumed honest LOSS labels WITHOUT a delegated C++ second-implementation gate (coverage asymmetry disclosed)",
+   "verdict_agreement_note": "third-impl WIN(1) verdict-level agreement for k20/k33 with 3 identical cold runs each (expansions 19,455,330 / 18,829,006, tt-hits 10,071,309 / 10,066,094, tt-overwrites 15,261,026 / 14,634,702); expansions legitimately differ from replica node counts (different implementations); the addendum's replica raw copies are byte-equal to the parked4rest2 ladder raws"
+  }
+ ],
+ "provenance": {
+  "merged_cache_published_by_this_part": true,
+  "parked4rest2_kit_files_verified": 26,
+  "part_maker_reverified_live": true,
+  "probe_kit_direct_pins": true,
+  "raws_published": true,
+  "sn_kit_files_verified": 28,
+  "third_impl_auditor_live_rerun": true
+ },
+ "quarantine_hits": 0,
+ "resolved_ids": [
+  "k20",
+  "k33"
+ ],
+ "row_counts": {
+  "adopted_win_rows": 2,
+  "prior_canonical_rows_base": 6799,
+  "standing_unconsumed_loss_rows": 30,
+  "standing_unconsumed_parked_keys": 1,
+  "win_ties_consumed_elsewhere": 0
+ },
+ "schema": "sixthwin3-adoption-increments-manifest-v1",
+ "sha256": {
+  "win_increment": "47f7dfb02489a960184b5c83bd3ed36e33936bd40067c7cc97299ab1f740ecc6"
+ },
+ "source_class": {
+  "adoption_requirement_of_record": "the parked4rest2 halt-audit's pre-registered WIN-row requirement: published C++ second-implementation verification of the replica raw rows (pinned cpp/solvers/kyouen_dfpn_root.cpp sha256 9193f5b6...); satisfied for both rows by the Part SN kit (GATE-PASS); any C++ disagreement fails closed in favor of discarding the row; third-implementation verdict-level corroboration (the k20/k33 third-impl addendum, auditor re-run live) is additionally recorded for both rows per the repo's sixthwin5/sixthwin2 adoption pattern",
+  "class": "10376293541461626880:65536",
+  "class_children_total": 108,
+  "note": "the sixth-cost live candidate class (s4 class 3077, coverage {80,84,100,108}); k20/k33 are positions 20/33 of the same published probe selection exclusive_probe_order of record (d5e9b059...), resolved by the parked4rest2 L50M ladder over their pinned 15,000,000 park-at-UNKNOWN baselines",
+  "s5_unknown_before": 101,
+  "serving_class_index": 3077,
+  "unknown_exclusive": 43
+ },
+ "win_canonical_adoption": true,
+ "win_ids": [
+  "k20",
+  "k33"
+ ],
+ "win_ties": [],
+ "win_ties_note": "no consumed-WIN regression ties: both adopted keys are fresh to BASE"
+}
