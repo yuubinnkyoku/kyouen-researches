@@ -1,0 +1,55 @@
+{
+ "schema": "n11-sixthcost-k38-l50m-cppgate-rows-v1",
+ "part": "SS",
+ "declared_by": "research/log/2026-11-26-part-ss-k38-l50m-cppgate-declaration.md",
+ "anchors": {
+  "anchor-at2m": "98,2000000,0,2000000",
+  "anchor-aj001": "84,30000000,2,5156075",
+  "anchor-af039": "89,30000000,2,19234232"
+ },
+ "targets": {
+  "k38": "100,50000000,2,21839049"
+ },
+ "targets_runtime": {
+  "k38": ["50000000", "100,50000000,2,21839049"]
+ },
+ "anchors_runtime": {
+  "anchor-at2m": ["2000000", "98,2000000,0,2000000"],
+  "anchor-aj001": ["30000000", "84,30000000,2,5156075"],
+  "anchor-af039": ["30000000", "89,30000000,2,19234232"]
+ },
+ "run_order": ["anchor-at2m", "anchor-aj001", "anchor-af039", "k38"],
+ "target_provenance": {
+  "k38": {
+   "label": "sixth-cost exclusive S5 probe key 38, fifth resumption, loss-resolved at L50M by the follow-up completion (first implementation, jsreplay cold pair)",
+   "input": "research/experiments/n11-sixthcost-class-s5-exclusive-probe-10376293541461626880-20261121/input/k38.input.csv sha256 b6ef9f439ee0b6c9a35af08ff065a9323d0bec627beabb4defb9426a11d6600e",
+   "raws": [
+    "research/experiments/n11-sixthcost-class-s5-exclusive-probe-10376293541461626880-20261121/output/raw/at50m-run1-k38.out.csv sha256 f7e519586d8e9dd7c8378aef2c96ccd70479816056954e93ffdf16732178bfcc (commit 2bc21cf38d38d9ab59251b2b431c3fc1139ed1b6)",
+    "research/experiments/n11-sixthcost-class-s5-exclusive-probe-10376293541461626880-20261121/output/raw/at50m-run2-k38.out.csv sha256 53d0f69d03d0b04520f9f832e517f177ed9b0e33c917db3f114a5a77a602fe03 (commit 2bc21cf38d38d9ab59251b2b431c3fc1139ed1b6)"
+   ]
+  }
+ },
+ "gate_source": {
+  "commit": "154f3b7a67b97e13acbaee8b04dc74ddca728d19",
+  "path": "cpp/solvers/kyouen_dfpn_root.cpp",
+  "sha256": "9193f5b6065e0fbcad2ef7c65f386187701cafa1f5b718cc35a5cbb0d138f92e",
+  "header_pins": {
+   "kyouen_residual_micro.hpp": "5976935dcfccb9b5a26fa68f8de20868ce45363dd8c372dcd67d9b841167e7f5",
+   "n11_s5_quarantine.hpp": "2e36d69481fafcde7aede8ae4fedf3d5477f91ee9846bcd4ae2975f32a4ba1a5"
+  }
+ },
+ "toolchain": {
+  "zig": "0.13.0",
+  "tarball": "zig-linux-x86_64-0.13.0.tar.xz",
+  "tarball_sha256": "d45312e61ebcc48032b77bc4cf7fd6915c11fa16e4aad116b66c9468211230ea",
+  "binary_policy": "not pinned: source pins are authoritative (SK/SM/SN/SR protocol)"
+ },
+ "canonical_head": {
+  "label": "02db5ab3",
+  "rows": 6801,
+  "sha256": "02db5ab35b8ad71dfd0699217756291c6bc896c78e9fd7c609b5e25177f6b25c",
+  "path": "research/experiments/n11-centralreply-sixthwin3-adoption-reaudit-20261126/output/merged-exact-s5-chain-plus-sixthwin3-20261126.cache",
+  "targets_fresh_vs": "02db5ab3"
+ },
+ "verdict_scope": "NO verdict consumed. k38 stays a gate-verified UNCONSUMED batch row; adoption remains a separately declared Part. 11x11 empty board and all roots stay UNKNOWN. Nodes are bookkeeping."
+}
