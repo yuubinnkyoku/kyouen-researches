@@ -7,7 +7,7 @@
 - files: `research/experiments/strip-newband-m31m32-laddercont-midtrio-windows-20261126/{engine_block.py, explore_m31m32_laddercont_midtrio_windows.py, explore_m31m32_laddercont_midtrio_windows.out, README.md, sumonly_probe.py, sumonly_probe_R1.out, sumonly_probe_R2.out}`
 - engine: published chain clone, sha 582c93c1..., startup pin bd5f22e4... (engine_gate PASS in the frozen output; engine file re-fetched from the kit-7 commit and sha-verified at recovery)
 - original explorer sha256 (LOST in the sandbox reset; never pushed): 38c6074247b234f90facc5cee22c8e5fb5aa5f5bd8741de67591c79f3d45b344 (77,379 bytes)
-- published explorer (RECOVERY REBUILD) sha256: cbd521157b74006a27c300ff60d30daa3232964599709de5941e3d626028a8b1 (73,497 bytes)
+- published explorer (RECOVERY REBUILD) sha256: 6ba3df72d4ecdeb87b2425a401f04a38c62b787ff28bbb4972a8e348e7ad2a2c (73,496 bytes)
 - frozen output sha256: 487970c9db06e44902eb625401348a8d37e33d49b19781aaaa42da9e2d6f081e (123,422 bytes; recovered byte-exactly post-reset, sha verified against the pre-reset record before any use; the rebuild regenerates it byte-identically, rc 0)
 - status: EXECUTED (pre-reset, rc 0 ~38 s), VERIFIED (pre-reset, 5-run determinism + audit + derive), LOST (sandbox reset), RECOVERED, RE-VERIFIED (rebuild byte-identity + fresh audit/derive/probes), PUSHED (see S6.7)
 
@@ -72,9 +72,9 @@ recorded in the candidates, not the separation lists):
 both HIT exactly as registered, EXACTLY ONE each.)
 
 Plain-scan rows: m=29 z in {49..56} and m=30 z in {50..57} windows 16
-rows, 0 separations each (registered candidates clean — the
+rows, 0 separations each (registered candidates clean -- the
 below-frontier history of m=29/m=30 opens with 16 clean rows); hole row
-m=26@z=25 clean (registered candidate 0 separations) — the m=26
+m=26@z=25 clean (registered candidate 0 separations) -- the m=26
 measured line closes to {25..56}, the second fully-swept m-line of the
 series after m=25 {25..55} (kit-7).
 
@@ -82,14 +82,14 @@ All six deviations are of the stack class (a stacked shape sharing S
 with a seat separates with the seat's signature):
 
 1. m=19 z=56: trio {19,19,19}@S=57 mirrors the birth seat's one-past
-   (UP 1v0) — the kit-7 log S5 item 10 tracker's mimic candidate
+   (UP 1v0) -- the kit-7 log S5 item 10 tracker's mimic candidate
    measured exactly; the trio LIFECYCLE CONTINUES past its birth slice.
 2. m=19 z=57: the stick-S=57 trio mimics the stick (DOWN 1v2), and the
    ENTIRE in-sweep birth-S=59 family separates with identical
    signatures: {19,19,21} UP 2v0 and {19,20,20} UP 2v0 alongside the
    registered NEW seat {19,40}.
 3. m=20 z=58: the EVEN-m mid-slice (d=m/2, S_birth=3m=60) trio
-   {20,20,20} mirrors its birth seat (20,40) — the first even-m
+   {20,20,20} mirrors its birth seat (20,40) -- the first even-m
    mid-slice witness.
 4.-6. m=13 z=37, m=15 z=43, m=17 z=49: trio {m,m,m}@S=3m mirrors the
    mid-ladder birth seat (UP 2v0) at EVERY probe (measured with the
@@ -111,20 +111,20 @@ z=57), an exact mimic of the co-token seat's life at S=57/59.
 - Ladder depths after kit-8: m=19/20 d=10 COMPLETE (deepest measured of
   the series); m=21/22 d=6; m=23/24 d=5; m=25/26 d=4; m=27/28 d=2;
   m=29/30 d=1. One-past d=0 decay counts: odd 33 (m in {13..29}),
-  even 32 (m in {14..30}) — the m=29 z=58 / m=30 z=59 rows of this kit
+  even 32 (m in {14..30}) -- the m=29 z=58 / m=30 z=59 rows of this kit
   are the first m=29/m=30 decay datums.
 - Deaths witnessed: 10 NEW death datums (m=19/m=20 d=8, m=21/m=22 d=4,
-  m=23/m=24 d=3, m=25/m=26 d=2, m=29/m=30 d=0 — the first m=29 and
+  m=23/m=24 d=3, m=25/m=26 d=2, m=29/m=30 d=0 -- the first m=29 and
   m=30 deaths), plus TWO re-verified duplicates (S6.2).
 - Measured lines: m=25 {25..55} (kit-7); m=26 {25..56} (CLOSED this
   kit). Below-frontier windows opened for m=27..m=30.
 - L8 candidate law (see S4.5, finite observation, falsifiable): on
-  x0-style rows the measured value is a function of (S, z, R) alone —
+  x0-style rows the measured value is a function of (S, z, R) alone --
   seats ARE sums; stack shadows are necessary seats of their sums.
 
 ## S4. Verification (pre-reset and post-recovery records, all executed)
 
-1. Pre-freeze derivation (pre-reset): `derive_check_kit8.py` —
+1. Pre-freeze derivation (pre-reset): `derive_check_kit8.py` --
    engine-free paper derivation of every registered literal from the
    K0832 closed form and the seat lifecycle arithmetic: 204 checks,
    0 errors, run before the row sweeps. (Script bytes lost in the
@@ -137,7 +137,7 @@ z=57), an exact mimic of the co-token seat's life at S=57/59.
    PYTHONHASHSEED=random + env -i isolated: 5 runs byte-identical.
 4. Post-recovery (post-reset): frozen output recovered byte-exactly
    (sha verified against the pre-reset record); REBUILD explorer
-   (cbd52115...) regenerated the output BYTE-IDENTICALLY at recovery
+   (6ba3df72...) regenerated the output BYTE-IDENTICALLY at recovery
    time (rc 0, ~46 s, internal sha assert) plus a PYTHONHASHSEED=random
    rerun byte-identical; the rebuild re-executes every row sweep,
    anchor and battery check live (only documentation constants are
@@ -178,7 +178,7 @@ z=57), an exact mimic of the co-token seat's life at S=57/59.
 OPERATIVE (published by the concurrent kit 7af915fb, first): 34 binding
 rows (m=19..m=32 ladder/frontier continua incl. the d=11 stack-split
 candidates {19,19,23}/(19,23), (20,22), (21,21), and m=33@z=65 /
-m=34@z=66 FRONTIER 21st/22nd datum candidates — the kit-9 censi should
+m=34@z=66 FRONTIER 21st/22nd datum candidates -- the kit-9 censi should
 take THEIR registration table as the operative one).
 
 CONFIRMATORY (frozen blind in this kit's own output section
@@ -199,7 +199,7 @@ L8 trackers at m=19 z=59 (in-sweep birth-S=61 family expected size 4:
 expected by L8) and m=20 z=60 (family size 3: (20,42), {20,20,22},
 {20,21,21}); trio death expectation at m=19 z=58 (the S=57 family
 GLIDE-DEAD slice: by L8 the trio {19,19,19} tracks down with its
-family; any other outcome is the datum) — rider on the registered
+family; any other outcome is the datum) -- rider on the registered
 row 1 of the section (d); even-m mid-slice probe proposals m=14@z=40,
 m=16@z=46, m=18@z=52 (d=m/2, S_birth=3m, trio {m,m,m} mimic expected;
 COUNTER-PROBE BEFORE REGISTERING; full x0 row records).
@@ -219,7 +219,7 @@ COUNTER-PROBE BEFORE REGISTERING; full x0 row records).
    byte-identically with every measured field re-executed live; the
    audit and derivation checks were re-executed fresh (S4.5). No value
    anywhere in the frozen record is copied from the output into a
-   measurement claim — every claim above is re-executed.
+   measurement claim -- every claim above is re-executed.
 2. DATED DISCLOSURE: the published kit-7 frozen section (d)
    double-registered two rows kit-7 itself had ALREADY measured
    (m=27@z=56 and m=28@z=57: registered in kit-6 S5 items 21/24,
@@ -234,7 +234,7 @@ COUNTER-PROBE BEFORE REGISTERING; full x0 row records).
    run): the kit-7 log S5 item 12 mid-slice z values were misstated
    (z=42 for m=15, z=48 for m=17); the engine-free derivation gives
    z=43 and z=49; corrected values were registered and measured (no
-   datum was affected — those rows had never been measured).
+   datum was affected -- those rows had never been measured).
 4. Concurrency record: the kit-8 territory was registered and measured
    BLIND by two censi the same hour (this kit, and the concurrent lane
    at 7af915fb which pushed first at 10:54:57Z while this kit was
@@ -242,7 +242,7 @@ COUNTER-PROBE BEFORE REGISTERING; full x0 row records).
    agree verbatim (S4.6). Publication priority for the shared datums
    (incl. the frontier 19th/20th) belongs to the concurrent kit; this
    kit claims no firsts. The overlap exists because both censi wrote
-   the same kit-7 section (d) — the protocol worked as designed:
+   the same kit-7 section (d) -- the protocol worked as designed:
    registrations were binding, and the outcome is a blind
    double-census verification of the whole kit-8 territory. Registered
    duplication risk for FUTURE kits is handled by the counter-probe
@@ -257,14 +257,27 @@ COUNTER-PROBE BEFORE REGISTERING; full x0 row records).
 6. No universal claim is made here. K0832 is the only PROVED
    statement. The 11x11 standard cell remains UNKNOWN at all times.
    No K slot is claimed. No residual verdict is consumed.
+8. DATED CORRECTION (same day, post first push): the first push of this
+   kit (680421eb) double-encoded the non-ASCII punctuation of four
+   files (the explorer docstring, the kit README, the probe script and
+   this log) to mojibake (a byte->code-unit->UTF-8 re-encoding glitch of
+   the push transport; the frozen .out, engine and probe outputs were
+   pure ASCII and pushed byte-exact). The correction commit
+   re-publishes the four files ASCII-normalized (em-dash to --, arrow
+   to ->, set-membership to plain words); the explorer docstring is the
+   ONLY changed part of the explorer, so its sha changes from
+   cbd521157b74006a27c300ff60d30daa3232964599709de5941e3d626028a8b1
+   to 6ba3df72d4ecdeb87b2425a401f04a38c62b787ff28bbb4972a8e348e7ad2a2c
+   (73,496 bytes); the re-normalized explorer was RE-RUN at correction
+   time and REGRESSES the frozen output byte-identically (rc 0, internal
+   sha assert PASS). Fetch-back of the corrected files is
+   byte-verified in the correction commit body.
 7. Push-time records: latest-main re-fetch before the push returned
    head 7af915fb (the concurrent kit-8) and the part-ew wave commits
    (disjoint paths, no conflict); the push of this kit re-used no
    existing path; the push commit body carries this note and the
-   published-vs-rebuild facts (explorer sha cbd52115, original sha
+   published-vs-rebuild facts (explorer sha 6ba3df72, original sha
    38c60742 recorded as lost). Fetch-back verification (commit-pin
    raw URL byte-comparison of every pushed file) and the push-time
    rerun of the published explorer are recorded in the follow-up
-   commit once executed.
-
    commit once executed.

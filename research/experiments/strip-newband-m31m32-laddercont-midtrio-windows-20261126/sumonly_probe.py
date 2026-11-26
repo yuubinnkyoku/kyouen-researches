@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""sumonly_probe.py — post-recovery sum-only value witness probe
+"""sumonly_probe.py -- post-recovery sum-only value witness probe
 (analysis-time engine diagnostic; candidate law L8, NOT a registered row
 sweep and NOT part of the frozen kit-8 output).
 
@@ -117,4 +117,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-)
