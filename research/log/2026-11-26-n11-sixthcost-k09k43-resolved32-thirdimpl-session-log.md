@@ -91,6 +91,19 @@ ALL THIRTY-TWO (no budget-stop needed; the batch ran to full completion).
   path-filtered commit listing; the experiment dir was last touched by this
   lane's own `ebdc7de7`).
 
+- **Truncated-push incident (fixed the same session)**: the batch's 134,148-byte
+  `out/audit-k09k43-summary.json` was first pushed TRUNCATED at a 63,960-byte
+  file-read boundary of the publication tooling (a single unpaged read; every
+  other file of the push was well under that boundary). Detected by the
+  per-file fetch-back byte check (the only mismatch of 268); re-pushed complete
+  via a paged read (134,148 bytes). The final main state is byte-verified through
+  the GitHub contents API (blob size 134,148, sha256
+  `300c8c0a61e4e5fe5fb1a8a5a1fe32aaebd391ec767dc2783f3b87cfd943728e`, identical
+  to the staged file); the raw.githubusercontent CDN served a stale truncated
+  copy for a while afterwards (cache lag only, not the committed state). The
+  published MANIFEST.sha256 pin for this file matches the COMPLETE file
+  (the truncation never made it into the manifest).
+
 ## Result summary (verdict-level; nothing consumed)
 
 32/32 rows verdict-level agreement: 30 LOSS rows third-impl LOSS(2) vs replica
