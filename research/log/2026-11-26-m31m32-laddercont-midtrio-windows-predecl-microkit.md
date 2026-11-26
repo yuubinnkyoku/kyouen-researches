@@ -257,6 +257,16 @@ COUNTER-PROBE BEFORE REGISTERING; full x0 row records).
 6. No universal claim is made here. K0832 is the only PROVED
    statement. The 11x11 standard cell remains UNKNOWN at all times.
    No K slot is claimed. No residual verdict is consumed.
+7. Push-time records: latest-main re-fetch before the push returned
+   head 7af915fb (the concurrent kit-8) and the part-ew wave commits
+   (disjoint paths, no conflict); the push of this kit re-used no
+   existing path; the push commit body carries this note and the
+   published-vs-rebuild facts (explorer sha 6ba3df72, original sha
+   38c60742 recorded as lost). Fetch-back verification (commit-pin
+   raw URL byte-comparison of every pushed file) and the push-time
+   rerun of the published explorer are recorded in the follow-up
+   commit once executed.
+
 8. DATED CORRECTION (same day, post first push): the first push of this
    kit (680421eb) double-encoded the non-ASCII punctuation of four
    files (the explorer docstring, the kit README, the probe script and
@@ -272,6 +282,7 @@ COUNTER-PROBE BEFORE REGISTERING; full x0 row records).
    time and REGRESSES the frozen output byte-identically (rc 0, internal
    sha assert PASS). Fetch-back of the corrected files is
    byte-verified in the correction commit body.
+
 9. Fetch-back completion record (same day): at commit e9847712 every
    published file of this kit was fetched back over raw commit-pin URLs
    and byte-compared with the intended local state: 8/8 identical
@@ -281,12 +292,3 @@ COUNTER-PROBE BEFORE REGISTERING; full x0 row records).
    the frozen output byte-identically (rc 0, internal sha assert PASS).
    Cumulative post-recovery determinism: 4 explorers runs + 1
    push-time rerun, all byte-identical to 487970c9...
-7. Push-time records: latest-main re-fetch before the push returned
-   head 7af915fb (the concurrent kit-8) and the part-ew wave commits
-   (disjoint paths, no conflict); the push of this kit re-used no
-   existing path; the push commit body carries this note and the
-   published-vs-rebuild facts (explorer sha 6ba3df72, original sha
-   38c60742 recorded as lost). Fetch-back verification (commit-pin
-   raw URL byte-comparison of every pushed file) and the push-time
-   rerun of the published explorer are recorded in the follow-up
-   commit once executed.
