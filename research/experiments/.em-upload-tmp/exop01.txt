@@ -1,0 +1,78 @@
+  class EXITS the closure-classes ranking 805 -> 804 with
+  exited=[30345], entered=[]; its status stays excluded_now - flipped
+  by the Part EP/EU chain, NOT re-flipped here);
+* per-key owner class sets recomputed from the frozen graph must equal
+  the published dossier census measurement's owner_classes row-for-row
+  (owner-class count histogram EXACTLY {3 owners: 7 keys,
+  4 owners: 14 keys});
+* closure-classes.csv: exactly ONE row leaves (805 -> 804), ZERO rows
+  enter; the unknown_now churn is exactly {6518: 61->60, 6547: 58->57,
+  9478: 61->60, 12235: 61->60, 12264: 50->33} and the class_rank churn
+  recomputed from the two published CSVs must equal the published
+  dossier measurement's rank_churn table EXACTLY (763 re-ranked rows -
+  dense-rank bookkeeping at the cheap end of the ranking, no coverage
+  claim); NO groups_served churn anywhere; every other field of every
+  common row is byte-identical;
+* update8 refresh: resolved 263 -> 280 (the newly resolved set is
+  EXACTLY the 17 batch-5 adopted s5 indices; the 4 Part ES keys were
+  first probed in batch-38 AFTER the update8 baseline froze and are
+  correctly not in it - measured, disclosed), remaining 31,445
+  unchanged, groups_free_now stays 131, union baseline stays 31,859,
+  win_hit groups 25 -> 25 IDENTICAL sets (loss-only adoption adds no
+  win_hit group and removes none);
+* per-root coverage: free_now/uncovered third columns IDENTICAL at all
+  20 roots; Board verification 39/39 with zero rejections on both
+  sides; the individual greedy union changes only at the 6 roots
+  {49: 2697->2696, 38: 3014->2879, 16: 2969->2982, 5: 2883->2866,
+  36: 2951->3001, 12: 2846->2842} (four drops, two rises; the greedy
+  heuristic is a scheduling quantity, disclosed as-is);
+  greedy 36,618 -> 35,155, MINUS 1,463, the largest single scheduling
+  reduction of any pending adoption pool measured so far; unique groups
+  2,115 -> 2,115; group_best_options_nonfree 2,105 -> 2,101; worklist
+  64,302 -> 64,277 (-25));
+* the published dossier census measurement d67b6e9b... is machine
+  (census counts, zero-flip set, closure churn incl. the 763-row rank
+  table, per-root greedy deltas, joint greedy, worklist totals, update8
+  numbers, win_hit identity, serving-class records, owner histogram,
+  the adopted table and both cache identities): agreement must be
+  part_declared false) describe the dossier-time status and are
+  superseded by the Part EM declaration (disclosed, not asserted).
+root verdict claims.  Consuming the 21 LOSS labels transfers NO verdict
+to any root and flips NO class status: the census is identical on both
+sides.  k04 (sixth-cost WIN) and every other unconsumed probe-level WIN
+stay in NO cache; 11x11 stays UNKNOWN.
+# BASE side = the published Part EV pre-declaration dossier kit (head of
+# record = Part EV head merged-exact-s5-chain-plus-evwin4 63f33c4f...).
+BASE_EXP = ROOT / "research/experiments/n11-centralreply-evwin4-adoption-predecl-20261126"
+BASE_CACHE = BASE_EXP / "output/merged-exact-s5-chain-plus-evwin4-20261126.cache"
+# SCEN side = the published emloss21 pre-declaration dossier kit.
+DOSSIER = ROOT / "research/experiments/n11-centralreply-emloss21-adoption-predecl-20261126"
+SCEN_CACHE = DOSSIER / "output/merged-exact-s5-chain-plus-emloss21-20261126.cache"
+INCR = EXP / "output/increment-emloss21-adoption-20261126.cache"
+CENSUSJSON = DOSSIER / "output/census-deltas-emloss21-predecl.json"
+DOSSIER_INCR = DOSSIER / "output/increment-emloss21-20261126.cache"
+DOSSIER_MANIFEST = DOSSIER / "output/increments-manifest.json"
+DOSSIER_MAKER = DOSSIER / "scripts/make_increments_emloss21.py"
+EV_PART = ROOT / "research/experiments/n11-centralreply-evwin4-adoption-reaudit-20261126"
+EV_INCREMENT = EV_PART / "output/increment-evwin4-20261126.cache"
+BASE_REFRESH_SCRIPT = BASE_EXP / "reaudit/scripts/refresh_adoption_evwin4.py"
+SCEN_REFRESH_SCRIPT = DOSSIER / "reaudit/scripts/refresh_adoption_emloss21.py"
+MAKER = EXP / "scripts/make_increments_emloss21_adoption.py"
+DECOMP_OUT = EXP / "output/decomp-deltas-emloss21-adoption.json"
+BASE_CACHE_SHA = "63f33c4f620583449641102026b261c559ae5ecc29713cd6445d6fe9369858f0"
+SCEN_CACHE_SHA = "6e49dd841b7bfcb335d86ef2479c95f47ab7acbcf41ace389a8b8eb95c778c9d"
+INCR_SHA = "3e6e9bf0a5f410a1d584889832f21352dd01a97aef5a899de06a28373fcaef82"
+MANIFEST_SHA = "bd4b9e766d0806f60a6df1ec4e91076fa7564486caeadfc222a16baabca6c01d"
+MAKER_SHA = None  # asserted at run (the maker bytes are pinned by the wave-B/C MANIFEST)
+DOSSIER_INCR_SHA = "47443dc143c157ab972de0f39f2cf3afb5d062e209da9dcd8e486f0a57c8ebca"
+DOSSIER_MANIFEST_SHA = "94815c34f1142481a20fe411a0a1c87c4e0a075b100d47db2f5e7b35dea9707d"
+DOSSIER_MAKER_SHA = "74fbbfd9a206a28e1bcdf2d52ceb884bf71c5aee62ec0eefe520a41cd33d8035"
+CENSUSJSON_SHA = "d67b6e9bcf55a601afdc177aa804f2be2b8d4fd6ec9d76ac6389fa5b913edcd3"
+BASE_SUMMARY_SHA = "1fafd0811d4b5e806a11cf610111967b9d6fdb741fa86b68688ef1cee4411e6e"
+BASE_CLOSURE_SHA = "6ba51faa9824ba5065a8e938cc6970ce2ace464f74d26f30582cbaa8334c930d"
+BASE_PRC_SHA = "d9eee976e52c38c71440a26cb6f9f14ae68439feaec21e17600b1052870dd502"
+BASE_WORKLIST_SHA = "ca50cb68c10827e7e24e02c02e0166813b57ad646eb169bf8bd2c827fcdd09df"
+SCEN_SUMMARY_SHA = "7f379b718e48330c5acbc3c9c79be3c4fb6d616c4dc7bedfe7691e6ebb225f0b"
+SCEN_CLOSURE_SHA = "6862813431dd1abbaba81ac2a720385be394ce774f259b8001ca49630fc4a8e2"
+SCEN_PRC_SHA = "9c5b277429f99157ff2e65323b5912b9ce957f1d2008f8ac8fc1e03b49f91ad1"
+SCEN_WORKLIST_SHA = "147b62d643ba9039e9e2b64363cec602405bf11210a3aa4cfd9084eb0df3a973"
