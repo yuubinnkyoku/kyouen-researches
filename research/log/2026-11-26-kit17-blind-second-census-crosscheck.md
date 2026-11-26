@@ -88,3 +88,15 @@ README.md, engine_block.py (byte-clone `582c93c1...`), census_kit17x.py
 - 11x11 empty board, all roots, S2, closure classes: UNKNOWN throughout.
   Verdict NOT consumed. K slot not claimed. All results above are finite
   observations; no universal claim.
+
+## S6 Dated disclosure (post-publication correction, 2026-11-26)
+
+- S5's frontier summary line "m=51@z99 / m=52@z100" was written from the
+  published audit gate NAME, not from the frozen text, and is wrong. The
+  machine-read values from the published kit-17 frozen `.out`
+  (`420d1c83...`) `future_slice_registration_constants` are:
+  **38th datum m=51@z=101, {51,52}@S=103 UP 2v0 (collapse v(103,101,153)=0);
+  39th datum m=52@z=102, (52,52)@S=104 UP 2v1 (collapse v(104,102,155)=1)**.
+  Windows: m=49 z{89..96}, m=50 z{90..97}. As S5 already stated, the frozen
+  prediction text is authoritative; this correction aligns the log summary with
+  it. No kit byte is changed; no measurement depended on the log wording.
