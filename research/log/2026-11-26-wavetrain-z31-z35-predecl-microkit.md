@@ -148,10 +148,12 @@ scaffold from finite observations; no universal claim.
    {B-child = y1, C-child 1^w4 = 1^0 = 1 PUBLISHED} -> candidate
    mex{y1,1} = 0 = v(34,31,49)=0 CONFORMING iff y1 = 1.
 4. TAIL SUPPLY next (pattern: ODD k hold {0}U{12..k} then uniform 0v1;
-   EVEN k hold {0}U{12..k-1}, 0v2 at s=k, then uniform 2v1):
+   EVEN k hold {0}U{12..k-1}, 0v2 at s=k, then uniform 2v1; RANGE
+   TYPO CORRECTED in-place 2026-11-26: the scan domain ends at
+   s=k+34, so the break ranges are s in {k+1..k+34}):
    k=41 (thirty-second, ODD: hold {0} U {12..41}, uniform 0v1 for s
-   in {42..77}); k=42 (thirty-third, EVEN: 0v2 at s=42, uniform 2v1
-   for s in {43..78}). Both verified in closed form during drafting.
+   in {42..75}); k=42 (thirty-third, EVEN: 0v2 at s=42, uniform 2v1
+   for s in {43..76}). Both verified in closed form during drafting.
 5. z=26 floor-21 (z-5 CRITICAL) census kit remains the registered
    heavy lane; untouched here.
 6. 11x11 UNKNOWN: unchanged. No action.
