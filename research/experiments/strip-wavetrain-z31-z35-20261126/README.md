@@ -61,9 +61,14 @@ identical.
   - 4 TWO-PAST sticks (odd stuck 1 DOWN 1v2: m=15 {15,18}@z=33,
     m=13 {13,18}@z=31; even stuck 0 DOWN 0v2: m=16 (16,18)@z=34,
     m=14 (14,18)@z=32);
-  - 4 WAVE BIRTHS completing the d=3 (fourth) wave 4/4: m=13
-    {13,20}@S=33 UP 2v0, m=14 (14,20)@S=34 UP 2v1, m=15 {15,20}@S=35
-    UP 2v0, m=16 (16,20)@S=36 UP 2v1 — gap 2d+1 (odd) / 2d (even), d=3.
+  - 4 WAVE BIRTHS measured exactly as predicted (wave-index wording
+    corrected in-place 2026-11-26: the four seats sit at slice offset
+    z-z*(m) of 6,6,4,4 and birth-index d of 3,3,2,2 respectively):
+    m=13 {13,20}@S=33 UP 2v0 (SIX past, d=3, gap 7), m=14 (14,20)@S=34
+    UP 2v1 (SIX past, d=3, gap 6), m=15 {15,20}@S=35 UP 2v0 (FOUR
+    past, d=2, gap 5), m=16 (16,20)@S=36 UP 2v1 (FOUR past, d=2, gap
+    4) — every birth again at shape (m, m+2d+1) odd / (m, m+2d) even
+    with d = (z - z*(m))/2; all four labels follow the slot law.
 - The registered "clean valley" (ZERO separations) is REFUTED for all
   three registered death-valley rows: at the z*(m)+odd offsets
   exactly ONE separation survives (the newest birth in its stuck
@@ -78,7 +83,9 @@ identical.
 - ONE-PAST parity decay multi-datum: odd 2->1 now 8 observations,
   even 2->0 now 7; TWO-PAST stick 9 observations. Value trajectory
   2,1,1,dead (odd) / 2,0,0,dead (even) holds through every published
-  slice.
+  slice. (Wave-index wording corrected in-place 2026-11-26 — the
+  measured values were never in question; see the log's correction
+  note.)
 - Four first-ever z=30 engine touches w1..w4 = 0,1,1,0 ALL CONFORM:
   the m=18 base-spot on-line z-sequence extends to 15 members
   (z=16..30 = 0,1,0,1,0,1,0,1,1,1,1,1,1,1,1); the m=17 members

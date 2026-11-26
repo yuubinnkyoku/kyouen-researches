@@ -1,4 +1,4 @@
-# 2026-11-26 — wave-train micro-kit z=31..z=35: ALL TEN ROWS EXACT HIT (14 predicted separations, measured exactly those 14: 6 one-past decays 3/3 per parity, 4 two-past sticks, the d=3 wave-births 4/4 completing the fourth wave), the registered "clean-valley" ZERO predictions REFUTED via a pre-freeze R off-by-one correction of decay-kit S5 (3 bad constants + 2 "only" claims, original texts quoted verbatim and retracted BEFORE the run), death curve 9/9 at birth+3, four first-ever z=30 touches all conform (m=18 base-spot now 15 members), k=39/k=40 supply CONFIRMED (11/11 both)
+# 2026-11-26 — wave-train micro-kit z=31..z=35: ALL TEN ROWS EXACT HIT (14 predicted separations, measured exactly those 14: 6 one-past decays 3/3 per parity, 4 two-past sticks, 4 wave-births measured exactly as predicted — wave-index wording CORRECTED below), the registered "clean-valley" ZERO predictions REFUTED via a pre-freeze R off-by-one correction of decay-kit S5 (3 bad constants + 2 "only" claims, original texts quoted verbatim and retracted BEFORE the run), death curve 9/9 at birth+3, four first-ever z=30 touches all conform (m=18 base-spot now 15 members), k=39/k=40 supply CONFIRMED (11/11 both)
 
 Kit: `research/experiments/strip-wavetrain-z31-z35-20261126/`
 (explore_wavetrain_z31_z35.py `4a5f0901` 29254 B / engine_block.py
@@ -102,8 +102,15 @@ in-between slice: the measured wave profile is strictly periodic-2
 and rows NEVER empty in the covered regime (the "clean valley"
 hypothesis is closed: refuted by measurement). One-past parity decay
 odd 2->1 8 observations / even 2->0 7 observations; two-past sticks
-9/9; births now d=0..3 (the fourth wave completed 4/4 this kit:
-{13,20}, (14,20), {15,20}, (16,20)). This remains a CANDIDATE
+9/9; births now span d=0..3 for m in {13,14} and d=0..2 for m in
+{15,16} — the original "fourth wave 4/4" wording was WRONG for
+m=15/m=16 and is CORRECTED in-place (2026-11-26): the four kit
+births sit at slice offsets 6,6,4,4 (SIX past: m=13 {13,20} d=3 gap
+7, m=14 (14,20) d=3 gap 6; FOUR past: m=15 {15,20} d=2 gap 5, m=16
+(16,20) d=2 gap 4), all following the slot law shape (m, m+2d+1)
+odd / (m, m+2d) even with d = (z - z*(m))/2. The measured values,
+predictions and hits are untouched by this correction — a wording
+correction only, no measurement affected. This remains a CANDIDATE
 scaffold from finite observations; no universal claim.
 
 ## §5 Handoff (new registrations, all BEFORE any measurement; constants re-derived from the published K0832 closed form, R=m+z+1)
