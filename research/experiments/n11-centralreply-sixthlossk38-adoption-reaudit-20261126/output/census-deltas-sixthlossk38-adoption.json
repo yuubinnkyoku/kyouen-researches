@@ -1,0 +1,135 @@
+{
+ "adopted": [
+  {
+   "hi": 66048,
+   "legal": 100,
+   "lo": 10376293541461627000,
+   "nodes": 21839049,
+   "owner_classes": [
+    1957,
+    3077,
+    20675
+   ],
+   "owner_count": 3,
+   "s5_index": 85024,
+   "serving_class": 3077
+  }
+ ],
+ "adopted_outside_baseline_requirement": [
+  85024
+ ],
+ "base_cache": {
+  "loss": 6630,
+  "rows": 6831,
+  "sha256": "dade15780ce6625cc70d93ba77b1560145dd2b9f096a53dce556d2fccf7e312b",
+  "win": 201
+ },
+ "base_closure": {
+  "sha256": "0eb19c8955e92c3e96c9a7d40f84a4d2c274489fb03b8d1266b850995ea818e9"
+ },
+ "base_per_root": {
+  "sha256": "1828d7f764015a2d319dd56fc19de666fef49a30843b4a6ec37187d14370f849"
+ },
+ "base_summary": {
+  "sha256": "305838edf1ac349970eab071b8e4e054295ea72f4e87997ff4b00f8db62e87cf"
+ },
+ "census_recount_base": {
+  "excluded": 390,
+  "excluded_now": 115,
+  "free_now": 39,
+  "unknown": 34405
+ },
+ "census_recount_scen": {
+  "excluded": 390,
+  "excluded_now": 115,
+  "free_now": 39,
+  "unknown": 34405
+ },
+ "closure_churn": {
+  "entered": [],
+  "left": [],
+  "rank_churn_ranked": [],
+  "rows_base": 804,
+  "rows_scen": 804,
+  "unknown_now_churn": []
+ },
+ "increment": {
+  "sha256": "977780efc8cc447be8212c445c311e536f42e8a56bbb9ba2d06ec50e3b9ff6e5"
+ },
+ "joint_greedy": {
+  "base": 36789,
+  "scen": 36789
+ },
+ "owner_class_count_hist": {
+  "3": 1
+ },
+ "per_root_coverage_byte_identical": true,
+ "per_root_free_and_uncovered_identical": true,
+ "per_root_greedy_delta": [],
+ "scen_cache": {
+  "loss": 6631,
+  "rows": 6832,
+  "sha256": "42dbb58ffe8dd02a81f4a92993d08e3fbebdaeb4b4f7bf33e142120ff055bdc4",
+  "win": 201
+ },
+ "scen_closure": {
+  "sha256": "0eb19c8955e92c3e96c9a7d40f84a4d2c274489fb03b8d1266b850995ea818e9"
+ },
+ "scen_per_root": {
+  "sha256": "1828d7f764015a2d319dd56fc19de666fef49a30843b4a6ec37187d14370f849"
+ },
+ "scen_summary": {
+  "sha256": "451c1e3647b2a4431cb57a81c5c4b372ffd111638ef2f77bf95a295d2a36e19d"
+ },
+ "serving_class_rows": {
+  "3077": {
+   "adopted_owned_here": 1,
+   "base_status": "excluded_now",
+   "scen_status": "excluded_now",
+   "unknown_after": 60,
+   "unknown_before": 61
+  }
+ },
+ "status_flip_count": 0,
+ "status_flips": [],
+ "update8_new_resolved": [],
+ "update8_refresh_base": {
+  "groups_free_now": 131,
+  "remaining": 31445,
+  "resolved": 281,
+  "resolved_list_len": 281,
+  "win_hit_groups": 25
+ },
+ "update8_refresh_scen": {
+  "groups_free_now": 131,
+  "remaining": 31445,
+  "resolved": 281,
+  "resolved_list_len": 281,
+  "win_hit_groups": 25
+ },
+ "verdict": {
+  "canonical_head_sha256": "42dbb58ffe8dd02a81f4a92993d08e3fbebdaeb4b4f7bf33e142120ff055bdc4",
+  "census_counts_identical_to_published_summaries": true,
+  "consumed": "exactly the one standing unconsumed loss-resolved row k38 (10376293541461626880:66048)",
+  "note": "declared Part SV adoption measurement; LOSS-only adoption flips no root verdict, frees no class, excludes no class, changes no coverage claim; 11x11 stays UNKNOWN; no root verdict; nodes are bookkeeping",
+  "part": "SV",
+  "part_declared": true,
+  "status_flip_mechanism": "none: LOSS-only adoption flips no status (the Part EM precedent); the serving class 3077 stays excluded_now with cost-unknown 61 -> 60; the closure ladder, per-root coverage and probe worklist are measured byte-identical to BASE (zero churn, zero re-routing)",
+  "status_flips": 0
+ },
+ "win_hit_groups_identical": true,
+ "worklist_regen_pins": {
+  "base": {
+   "sha256": "b946ed062e84d0a14f84dd4db167d1b051bb1459bc3a8ff738eeda3d9c6d8c26",
+   "size": 3715960
+  },
+  "scen": {
+   "sha256": "b946ed062e84d0a14f84dd4db167d1b051bb1459bc3a8ff738eeda3d9c6d8c26",
+   "size": 3715960
+  }
+ },
+ "worklist_total": {
+  "base": 64275,
+  "scen": 64275
+ }
+}

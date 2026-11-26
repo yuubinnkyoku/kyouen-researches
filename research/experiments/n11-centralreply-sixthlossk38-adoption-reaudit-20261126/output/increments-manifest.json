@@ -1,0 +1,101 @@
+{
+ "adopted_nodes_total": 21839049,
+ "adopted_table": [
+  {
+   "hi": 66048,
+   "legal": 100,
+   "lo": 10376293541461627000,
+   "nodes": 21839049,
+   "owner_classes_graph": [
+    1957,
+    3077,
+    20675
+   ],
+   "result": 2,
+   "s5_index": 85024,
+   "serving_class": 3077
+  }
+ ],
+ "adopted_table_digest_sha256": "75a45f999795a170ba09f8522fdeaaf2bbece59b59b4d50025d42b6ef192bba5",
+ "base_cache_absent_hits_for_emitted": 0,
+ "base_cache_rows": 6831,
+ "base_cache_sha256": "dade15780ce6625cc70d93ba77b1560145dd2b9f096a53dce556d2fccf7e312b",
+ "base_cache_win_loss": [
+  201,
+  6630
+ ],
+ "canonical_head_published_by_this_part": {
+  "merge_audit_runs": 3,
+  "merged_cache_bytes": 285776,
+  "merged_cache_name": "merged-exact-s5-chain-plus-sixthlossk38-20261126.cache",
+  "merged_cache_rows": 6832,
+  "merged_cache_sha256": "42dbb58ffe8dd02a81f4a92993d08e3fbebdaeb4b4f7bf33e142120ff055bdc4",
+  "merged_cache_win_loss": [
+   201,
+   6631
+  ],
+  "merger": "pinned byte-clone of the published union merger (sha256 90711961..., this kit scripts/s5_union_merge.py)"
+ },
+ "date": "2026-11-26",
+ "interpretation_guard": "Part SV canonical LOSS-only adoption increment: the single fresh exact-LOSS row k38 (L50M cold two-pass node-exact 21,839,049, C++-gated by Part SS GATE-PASS and third-implementation-corroborated by Part SU, auditor re-run live 31/31) is consumed into the canonical chain via the fail-closed union merger whose output this Part publishes as the merged head of record (42dbb58f..., 6,832 rows WIN 201 / LOSS 6,631); LOSS-only adoption asserts no root verdict, frees no class and excludes no class (zero status flips); nodes are bookkeeping, never verdicts; the standard 11x11 empty board and every central-reply root stay UNKNOWN.",
+ "loss_canonical_adoption": true,
+ "loss_ids": [
+  "k38"
+ ],
+ "loss_ties": [],
+ "loss_ties_note": "no consumed-LOSS regression ties: k38 is fresh to BASE dade15780...",
+ "merger_sha256": "907119610034fb2aebfde012550a4129dfa3b086c6de11194e856747ac74606a",
+ "part": "SV",
+ "pools": [
+  {
+   "adopted_loss_ids": [
+    "k38"
+   ],
+   "adopted_nodes": 21839049,
+   "kit": "n11-sixthcost-class-s5-exclusive-probe-10376293541461626880-20261121",
+   "kit_integrity": {
+    "note": "the probe kit's published k38 stage raws are pinned directly per stage file (sha256 pins in this maker; every stage payload-gated against the pinned key/legal/budget/result/nodes table)",
+    "parked_at_unknown": [
+     2000000,
+     15000000,
+     15000000
+    ],
+    "raw_files_pinned": 5,
+    "resolution_budget_pair": [
+     50000000,
+     50000000
+    ]
+   }
+  }
+ ],
+ "provenance": {
+  "merged_cache_published_by_this_part": true,
+  "part_maker_reverified_live": true,
+  "probe_kit_direct_pins": true,
+  "raws_published": true,
+  "ss_gate_status_log_byte_clone_pinned": true,
+  "ss_manifest_byte_clone_pinned": true,
+  "su_auditor_live_rerun_x2_byte_identical": true,
+  "su_kit_manifest_verified_21_files": true
+ },
+ "quarantine_hits": 0,
+ "resolved_ids": [
+  "k38"
+ ],
+ "row_counts": {
+  "adopted_loss_rows": 1,
+  "loss_ties_consumed_elsewhere": 0,
+  "prior_canonical_rows_base": 6831,
+  "standing_unconsumed_parked_keys": 0
+ },
+ "schema": "sixthlossk38-adoption-increments-manifest-v1",
+ "sha256": {
+  "loss_increment": "977780efc8cc447be8212c445c311e536f42e8a56bbb9ba2d06ec50e3b9ff6e5"
+ },
+ "source_class": {
+  "adoption_requirement_of_record": "the parent batch's pre-registered consumption gate: published C++ second-implementation verification (Part SS GATE-PASS target quadruple 100,50000000,2,21839049) of the consumed raw row, and third-implementation verdict-level corroboration (Part SU, verdict-level LOSS(2) agreement, auditor 31/31 re-run live x2 by this maker); any disagreement fails closed in favor of discarding the row",
+  "class": "10376293541461626880:65536",
+  "exclusive_probe_order_position": 38
+ },
+ "win_ids": []
+}
