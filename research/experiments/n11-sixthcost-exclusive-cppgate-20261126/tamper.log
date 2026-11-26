@@ -1,0 +1,17 @@
+2026-11-26T08:28:41Z T1-START break audit ROWS pin k01 nodes 10369650->10369651
+2026-11-26T08:28:41Z T1 pin-assert audit_gate.py sha256=14f56c1da854f04e853d61ddd90b1915339b37023f3aaa6a02f771c2e146864f
+2026-11-26T08:28:41Z T1 pre-assert tampered sha256=e115045f54d3b34caec023c7fe19f0a71e6793063a01c6e5f76cb0295b768ae7 (differs: yes)
+2026-11-26T08:28:41Z T1 audit rc=1 (expected 1)
+2026-11-26T08:28:41Z T1 restore-assert sha256=14f56c1da854f04e853d61ddd90b1915339b37023f3aaa6a02f771c2e146864f (byte-identical: yes)
+2026-11-26T08:28:41Z T2-START break raw k01.p1 nodes 10369650->10369651
+2026-11-26T08:28:41Z T2 pin-assert k01.p1.out sha256=d6487a3332d2a4b780f8cb986954a6e42d90d9d1edcffc8e924723a69df61366
+2026-11-26T08:28:42Z T2 pre-assert tampered sha256=b03bde066e81bd00f2c42333ce59606ff98b183f8b6481e915c65bcbe85d4a52 (differs: yes)
+2026-11-26T08:28:42Z T2 audit rc=1 (expected 1)
+2026-11-26T08:28:42Z T2 restore-assert sha256=d6487a3332d2a4b780f8cb986954a6e42d90d9d1edcffc8e924723a69df61366 (byte-identical: yes)
+2026-11-26T08:28:42Z T3-START append phantom GATE-PASS line to gate-status.log
+2026-11-26T08:28:42Z T3 pin-assert gate-status.log sha256=f24f3766579c13f91addc12c277d201d2791bd2a2bef8e1985350e91b7421ba8
+2026-11-26T08:28:42Z T3 pre-assert tampered sha256=4770886b08de31ce092c6b1d904433971d847fcfb4b370a66fb51c2bb0a4c780 (differs: yes)
+2026-11-26T08:28:42Z T3 audit rc=1 (expected 1)
+2026-11-26T08:28:42Z T3 restore-assert sha256=f24f3766579c13f91addc12c277d201d2791bd2a2bef8e1985350e91b7421ba8 (byte-identical: yes)
+2026-11-26T08:28:42Z CLEAN-CONTROL audit rc=0 (expected 0)
+2026-11-26T08:28:42Z BATTERY-END
