@@ -1,0 +1,95 @@
+    return outs
+
+
+        ("dossier manifest", DOSSIER_MANIFEST, DOSSIER_MANIFEST_SHA),
+        ("dossier maker", DOSSIER_MAKER, DOSSIER_MAKER_SHA),
+        ("Part EV kit increment", EV_INCREMENT, EV_INCREMENT_SHA),
+    if manifest["schema"] != "emloss21-adoption-increments-manifest-v1":
+    if manifest["part"] != "EM" or manifest["date"] != "2026-11-26":
+    if manifest["loss_canonical_adoption"] is not True:
+        fail("manifest loss_canonical_adoption flag drift")
+    if manifest["sha256"]["loss_increment"] != INCR_SHA:
+        fail("manifest loss_increment pin drift")
+    if manifest["base_cache_rows"] != 6771:
+    if manifest["base_cache_win_loss"] != [192, 6579]:
+        fail("manifest base win/loss drift")
+    if manifest["row_counts"] != {"adopted_loss_rows": 21,
+                                   "win_ties_consumed_elsewhere": 3,
+                                   "prior_canonical_rows_base": 6771}:
+    if set(manifest["resolved_ids"]) != set(ADOPTED) or \
+            set(manifest["loss_ids"]) != set(ADOPTED) or \
+            len(manifest["resolved_ids"]) != 21 or len(manifest["loss_ids"]) != 21:
+    if manifest["adopted_nodes_total"] != ADOPTED_NODES:
+        fail("manifest adopted node total drift")
+    if manifest["adopted_table_digest_sha256"] != ADOPTED_TABLE_DIGEST:
+        fail("manifest adopted-table digest drift")
+    if manifest["base_cache_absent_hits_for_emitted"] != 0:
+    if manifest["full_packet_eq_loss_only"] is not True:
+        fail("manifest loss-only flag drift")
+    ds = manifest["dossier_supersession"]
+    if ds["dossier_increment_sha256"] != DOSSIER_INCR_SHA or \
+            ds["dossier_manifest_sha256"] != DOSSIER_MANIFEST_SHA or \
+            ds["dossier_maker_sha256"] != DOSSIER_MAKER_SHA or \
+            ds["row_region_byte_identical"] is not True or \
+            ds["merged_cache_sha256_of_record"] != SCEN_CACHE_SHA or \
+            not ds.get("note"):
+        fail("manifest dossier supersession drift")
+    prov = manifest["provenance"]
+    if prov["part_maker_reverified_live"] is not True or \
+            prov["dossier_bytes_repinned"] is not True or \
+            prov["b5_kit_direct_pins"] is not True or \
+            prov["es_kit_files_verified"] != 38 or \
+            prov["raws_published"] is not True or \
+            prov["b38_ssot_verified"] is not True or \
+            not prov.get("b5_fetch_anchor_note"):
+        fail("manifest provenance drift")
+    pools = {p["pool"]: p for p in manifest["pools"]}
+    if sorted(pools) != ["b5-class12264", "es-class30345-reprobe30m"]:
+        fail("manifest pool set drift")
+    pb5, pes = pools["b5-class12264"], pools["es-class30345-reprobe30m"]
+    if pb5["adopted_loss_ids"] != ADOPTED_B5_IDS or pb5["win_tie_ids"] != ["f017"] \
+            or pb5["budget"] != 15000000 or pb5["adopted_nodes"] != ADOPTED_NODES_B5:
+        fail("manifest b5 pool drift")
+    if pes["adopted_loss_ids"] != ADOPTED_ES_IDS or \
+            pes["win_tie_ids"] != ["ai007", "ai040"] or \
+            pes["budget"] != 30000000 or pes["adopted_nodes"] != ADOPTED_NODES_ES:
+        fail("manifest es pool drift")
+    if pes["prior_15m_condition"]["honest_label_pins"] != {
+            k: [0, 15000000] for k in ["ai007", "ai024", "ai030", "ai038",
+                                       "ai040", "ai041"]}:
+        fail("manifest es prior-15m honest-label pins drift")
+    if pes["b38_ssot_cross_check"]["batch_keys_b38_sha256"] != \
+            "298071046bfba8473c5b3d6e0b6a30108697eb0899aed7c70fcb4c5343f7cb8d":
+        fail("manifest b38 SSOT pin drift")
+    rows = manifest["adopted_table"]
+    if len(rows) != 21:
+        kid = None
+        for k, v in ADOPTED.items():
+            if (v[1], v[2]) == (r["lo"], r["hi"]):
+                kid = k
+                break
+        if kid is None:
+            fail(f"manifest adopted row not in the pinned table: {r}")
+        if (r["s5_index"], r["lo"], r["hi"], r["nodes"], r["serving_class"]) != \
+                (ADOPTED[kid][0], ADOPTED[kid][1], ADOPTED[kid][2],
+                 ADOPTED[kid][3], ADOPTED[kid][4]):
+            fail(f"manifest adopted row field drift: {kid}")
+        if r["result"] != 2:
+            fail(f"manifest adopted row must be exact LOSS: {kid}")
+    # win ties: manifest rows vs pins, then verified live against BASE below
+    wt = {w["id"]: w for w in manifest["win_ties"]}
+    if sorted(wt) != sorted(WIN_TIES):
+        fail("manifest win-tie ids drift")
+    for kid, (s5i, lo, hi, legal, nodes) in WIN_TIES.items():
+        w = wt[kid]
+        if (w["lo"], w["hi"], w["legal"], w["s5_index"], w["nodes"]) != (lo, hi, legal, s5i, nodes):
+            fail(f"manifest win-tie field drift: {kid}")
+    if "interpretation_guard" not in manifest or "UNKNOWN" not in manifest["interpretation_guard"]:
+    if cache_row_list(INCR) != [f"s5verdict,{ADOPTED[k][1]},{ADOPTED[k][2]},5,2,{ADOPTED[k][3]}"
+                                for k in ADOPTED_IDS]:
+        fail("increment rows differ from the pinned adopted table order/bytes")
+        if a["unique_rows"] != 6792 or a["duplicate_rows_elided"] != 0:
+        if a["verdict_counts"] != {"WIN(1)": 192, "LOSS(2)": 6600}:
+        if a["output_sha256"] != SCEN_CACHE_SHA or a["output_bytes"] != 283770:
+                ins[0]["rows"] != 6771 or ins[0]["unique_new"] != 6771:
+        if ins[1]["sha256"] != INCR_SHA or ins[1]["rows"] != 21 or ins[1]["unique_new"] != 21:
