@@ -370,3 +370,145 @@ Input row specs: `input/k06.input.csv`, `input/k07.input.csv`,
 `input/k08.input.csv`
 (`target,0,5,<lo>,<hi>,<legal>,0,0,0,0,0`; exact published batch input bytes,
 sha-pinned inside the auditor).
+
+## k09..k43 resolved-batch addendum: third-implementation re-verification of all
+thirty fifth-resumption resolved-LOSS rows plus the parked4-L50M-ladder WIN rows
+k13/k19 (same host, same session, 2026-11-26)
+
+Declared separately (single-owner, fresh-declaration program rule) in
+`research/log/2026-11-26-n11-sixthcost-k09-k43-resolved32-thirdimpl-batch-single-owner-note.md`
+(push `4d1b7db7`), extending this dir's program to the THIRTY resolved-LOSS rows
+of the fifth-resumption batch of the sixth-cost exclusive S5 probe (k09..k43 minus
+the three keys parked at that close: k20/k33/k38, which stay parked with NO new
+verdict) AND to the two fresh WIN rows **k13 `1152921573327376384:536870912`** and
+**k19 `10376293541461626880:65664`** published minutes before by the parked4 L50M
+ladder (`73dfd4a7` checkpoint, halt-audit close-out `4e87e67b`), whose consumption
+gate requires exactly this third-implementation scrutiny record as a separate
+implementation family. Implementation and pins are unchanged from the parent
+program; the C1 calibration raws of the k06/k07/k08 addendum (same host, same
+session, no restart between them) are HONESTLY REUSED per the k04-addendum
+precedent, as declared BEFORE any batch run.
+
+**Dated corrections of the published declaration note** (declaration bytes
+immutable; corrected here): the k13/k19 replica-raw count is TEN (five raws per
+row: base15m, l50m-run1, l50m-run2, l50m-run3-verify, l50m-margin - not
+"twelve"), and the total replica-raw count consumed by this batch is ONE HUNDRED
+(90 fifth-resumption + 10 parked4-ladder - not "102"). No stage, verdict, key,
+node count or scope statement of the declaration is affected.
+
+| row | key lo:hi (legal) | replica raws (published) | third_impl | runs | expansions (ttHits / ttOverwrites) | wall (a-run) |
+|---|---|---|---|---|---|---|
+| k09 | `10377419441368469504:65536` (87) | 15M pair LOSS(2) x2 + 2M UNKNOWN: resolution nodes 4,018,184 | **LOSS(2)** | x2 (a, b) | 4,622,038 (2,607,830 / 652,622) | 13.66s |
+| k10 | `10378545341275312128:65536` (84) | 15M pair LOSS(2) x2 + 2M UNKNOWN: resolution nodes 4,295,355 | **LOSS(2)** | x2 (a, b) | 4,945,820 (2,741,107 / 888,907) | 14.31s |
+| k11 | `10412322338480590848:65536` (86) | 15M pair LOSS(2) x2 + 2M UNKNOWN: resolution nodes 7,012,218 | **LOSS(2)** | x2 (a, b) | 8,105,873 (4,437,184 / 3,911,738) | 23.28s |
+| k12 | `10952754293765050368:65536` (83) | 15M pair LOSS(2) x2 + 2M UNKNOWN: resolution nodes 5,688,761 | **LOSS(2)** | x2 (a, b) | 6,593,392 (3,638,963 / 2,404,936) | 18.99s |
+| k13 | `1152921573327376384:536870912` (95) | L50M pair + 32M margin + 50M verify, WIN(1) x4 identical + base15m parked baseline (UNKNOWN): nodes 16,402,480 x4 WIN | **WIN(1)** | x3 (a, b, v=verify-legal) | 19,433,195 (10,181,270 / 15,238,891) | 54.12s |
+| k14 | `1152956757699461120:536870912` (99) | 15M pair LOSS(2) x2 + 2M UNKNOWN: resolution nodes 6,801,611 | **LOSS(2)** | x2 (a, b) | 7,836,133 (4,297,914 / 3,642,312) | 22.73s |
+| k15 | `1297036692683751424:1064960` (99) | 15M pair LOSS(2) x2 + 2M UNKNOWN: resolution nodes 5,947,870 | **LOSS(2)** | x2 (a, b) | 6,903,671 (3,790,763 / 2,712,282) | 20.41s |
+| k16 | `1297036761403228160:536870912` (95) | 15M pair LOSS(2) x2 + 2M UNKNOWN: resolution nodes 10,883,904 | **LOSS(2)** | x2 (a, b) | 12,650,074 (6,857,256 / 8,455,770) | 36.38s |
+| k17 | `10376293541461626880:65537` (96) | 2M pair LOSS(2) x2 + 15M pair LOSS(2) x2 (identical nodes): resolution nodes 1,241,921 | **LOSS(2)** | x2 (a, b) | 1,405,334 (826,431 / 47) | 4.39s |
+| k18 | `10376293541461626880:65544` (91) | 2M pair LOSS(2) x2 + 15M pair LOSS(2) x2 (identical nodes): resolution nodes 1,838,655 | **LOSS(2)** | x2 (a, b) | 2,098,799 (1,184,660 / 2,153) | 6.33s |
+| k19 | `10376293541461626880:65664` (95) | L50M pair + 32M margin + 50M verify, WIN(1) x4 identical + base15m parked baseline (UNKNOWN): nodes 15,379,062 x4 WIN | **WIN(1)** | x3 (a, b, v=verify-legal) | 17,955,947 (9,504,863 / 13,761,643) | 50.94s |
+| k21 | `10376293541461626880:67174400` (90) | 15M pair LOSS(2) x2 + 2M UNKNOWN: resolution nodes 3,649,839 | **LOSS(2)** | x2 (a, b) | 4,202,005 (2,326,723 / 392,033) | 12.60s |
+| k22 | `10376293541461626880:268500992` (98) | 15M pair LOSS(2) x2 + 2M UNKNOWN: resolution nodes 7,527,812 | **LOSS(2)** | x2 (a, b) | 8,820,734 (4,653,093 / 4,626,471) | 25.71s |
+| k23 | `10376293541461626912:65536` (97) | 15M pair LOSS(2) x2 + 2M UNKNOWN: resolution nodes 10,938,326 | **LOSS(2)** | x2 (a, b) | 12,654,986 (6,739,220 / 8,460,682) | 37.01s |
+| k24 | `10376293541461627904:65536` (93) | 15M pair LOSS(2) x2 + 2M UNKNOWN: resolution nodes 4,796,315 | **LOSS(2)** | x2 (a, b) | 5,616,289 (3,010,163 / 1,467,038) | 16.20s |
+| k25 | `10376293541461659648:65536` (91) | 15M pair LOSS(2) x2 + 2M UNKNOWN: resolution nodes 5,496,449 | **LOSS(2)** | x2 (a, b) | 6,336,310 (3,564,228 / 2,153,523) | 18.51s |
+| k26 | `10376293541462151168:65536` (95) | 15M pair LOSS(2) x2 + 2M UNKNOWN: resolution nodes 14,439,424 | **LOSS(2)** | x2 (a, b) | 16,684,962 (8,721,684 / 12,490,658) | 47.31s |
+| k27 | `10376293541478404096:65536` (93) | 15M pair LOSS(2) x2 + 2M UNKNOWN: resolution nodes 2,250,306 | **LOSS(2)** | x2 (a, b) | 2,578,044 (1,458,498 / 10,504) | 7.72s |
+| k28 | `10376293541528735744:65536` (98) | 2M pair LOSS(2) x2: resolution nodes 1,918,850 | **LOSS(2)** | x2 (a, b) | 2,177,958 (1,274,689 / 2,777) | 6.59s |
+| k29 | `10376293541595844608:65536` (97) | 15M pair LOSS(2) x2 + 2M UNKNOWN: resolution nodes 4,996,919 | **LOSS(2)** | x2 (a, b) | 5,797,487 (3,237,734 / 1,635,160) | 17.70s |
+| k30 | `10376293610181103616:65536` (95) | 15M pair LOSS(2) x2 + 2M UNKNOWN: resolution nodes 3,933,511 | **LOSS(2)** | x2 (a, b) | 4,531,296 (2,619,620 / 597,949) | 13.72s |
+| k31 | `10376856491415048192:65536` (92) | 15M pair LOSS(2) x2 + 2M UNKNOWN: resolution nodes 4,560,796 | **LOSS(2)** | x2 (a, b) | 5,269,285 (2,862,847 / 1,151,374) | 14.99s |
+| k32 | `10664523917613338624:65536` (93) | 2M pair LOSS(2) x2: resolution nodes 1,989,908 | **LOSS(2)** | x2 (a, b) | 2,235,267 (1,374,600 / 3,852) | 7.08s |
+| k34 | `14987979559889014784:65536` (96) | 15M pair LOSS(2) x2 + 2M UNKNOWN: resolution nodes 8,567,123 | **LOSS(2)** | x2 (a, b) | 9,966,873 (5,293,840 / 5,772,570) | 28.90s |
+| k35 | `1152921573327372288:553648128` (100) | 15M pair LOSS(2) x2 + 2M UNKNOWN: resolution nodes 14,273,589 | **LOSS(2)** | x2 (a, b) | 16,896,018 (8,726,341 / 12,701,714) | 48.12s |
+| k36 | `1224979167365300224:536870912` (100) | 15M pair LOSS(2) x2 + 2M UNKNOWN: resolution nodes 3,007,021 | **LOSS(2)** | x2 (a, b) | 3,440,325 (1,961,576 / 107,949) | 10.56s |
+| k37 | `1297036692683751424:17825792` (103) | 15M pair LOSS(2) x2 + 2M UNKNOWN: resolution nodes 8,083,885 | **LOSS(2)** | x2 (a, b) | 9,510,402 (4,989,499 / 5,316,103) | 27.32s |
+| k39 | `10376293541461626880:66560` (100) | 15M pair LOSS(2) x2 + 2M UNKNOWN: resolution nodes 5,725,348 | **LOSS(2)** | x2 (a, b) | 6,611,082 (3,659,270 / 2,422,272) | 19.31s |
+| k40 | `10376293541461626880:67584` (102) | 15M pair LOSS(2) x2 + 2M UNKNOWN: resolution nodes 5,926,395 | **LOSS(2)** | x2 (a, b) | 6,894,081 (3,725,971 / 2,703,506) | 20.16s |
+| k41 | `10376293541461626884:65536` (100) | 15M pair LOSS(2) x2 + 2M UNKNOWN: resolution nodes 6,536,846 | **LOSS(2)** | x2 (a, b) | 7,704,061 (4,018,770 / 3,510,186) | 22.54s |
+| k42 | `10376293541461627136:65536` (101) | 15M pair LOSS(2) x2 + 2M UNKNOWN: resolution nodes 8,486,305 | **LOSS(2)** | x2 (a, b) | 10,223,560 (5,244,634 / 6,029,256) | 30.03s |
+| k43 | `10376293541461692416:65536` (103) | 15M pair LOSS(2) x2 + 2M UNKNOWN: resolution nodes 6,916,669 | **LOSS(2)** | x2 (a, b) | 8,061,097 (4,354,662 / 3,867,018) | 23.17s |
+
+Batch totals (a-runs): 248,762,398 expansions; every row's cold runs
+byte-identical in (verdict, expansions, ttHits, ttOverwrites). Verdict-level
+agreement with the published replica raws on ALL THIRTY-TWO rows (30x LOSS 2v2,
+1x WIN k13 1v-WIN4, 1x WIN k19 1v-WIN4 - the first independent third-implementation
+confirmation of the parked4 L50M ladder halt). Expansion counts are compared only
+across the third implementation's own cold runs and are never compared to replica
+node counts (the implementations count different quantities; the auditor
+additionally enforces expansions != replica resolution nodes on every run as an
+anti-copy gate).
+
+- C4 fail-closed input gates: 64/64 GATE_FAIL with process exit status 1 (per-row
+  declared legal+1 and declared stones=6, `--cap=4000000 --wallcap=60`;
+  `out/neg-gate-k*.txt`).
+- All one hundred replica raws consumed over raw.githubusercontent.com at the
+  recorded HEADs (90 fifth-resumption raws at `0971173e`, fetched from the probe
+  dir; 10 parked4-ladder raws at `4e87e67b`) were re-fetched at publication time
+  and byte-verified against BOTH current main and the recorded consumption HEAD
+  (100/100 sha-identical to both; inputs likewise 32/32), then re-published inside
+  this dir at `out/<row>-replica-raws/` so the auditor is self-contained; each is
+  sha-pinned inside `audit_k09k43.py` (`repl_sha_*` gates).
+- `audit_k09k43.py` is a separate data-driven auditor (audit.py, audit_k04.py,
+  audit_k05.py and audit_k06k07k08.py stay byte-frozen): **850/850 gates ALL
+  PASS, rc=0**, deterministic byte-identical output across runs in a fixed layout
+  (resolved-path detail strings only being layout-dependent). Gates: 3 script
+  pins + 32 row-spec input pins + 100 repl_sha + 100 repl_row + per-row unanimity/
+  UNKNOWN/negative-input gates + 66 third-row gates (clean rc=0 derived-legal key
+  quads per run) + 32 determinism + 32 verdict-level + 32 anti-copy + 32
+  ttOverwrites pins + 64 C4 + 3 C1-reuse + 3 batch-level + 1 scope. Negative
+  tamper controls on full kit copies: k43 verdict flip 2->1 and k13 verdict flip
+  1->2 (each failing determinism + verdict-level gates, rc=1) and a k09 replica-raw
+  nodes edit (sha gate + batch-count gate, rc=1, row skipped fail-closed);
+  restores byte-verified; final clean control rc=0
+  (`out/audit-tamper-controls-k09k43.txt`).
+- Honest session notes: (1) the batch driver's first attempt mis-parsed the
+  published row-spec table (an awk column-offset error), producing four
+  mis-keyed or stones-mismatched invocations for k09..k12; all four outputs were
+  GATE_FAIL/aborted, deleted, and never published; the driver was fixed and the
+  four rows re-run cleanly (the pre-registered C4 fail-closed input gates are what
+  caught the mismatch on invocation). (2) The first k19 -v (verify-legal) attempt
+  was executed WITHOUT `--verify-legal=1` (identical counts, wall ~50.9s); it was
+  superseded BEFORE publication by the flagged re-run (`out/k19-cold-v-legal.txt`,
+  wall 90.65s, identical verdict/expansions/ttHits). (3) No verdict consumed; the
+  still-parked keys k20/k33/k38 were neither measured nor claimed; k38's L50M
+  follow-up remains unclaimed.
+- The delegated pinned C++ second-implementation gate
+  (cpp/solvers/kyouen_dfpn_root.cpp sha256 `9193f5b6...`) remains recorded and
+  UNCHANGED for these 32 rows (k13/k19 expectations: node-exact WIN at 16,402,480
+  / 15,379,062; the 30 LOSS rows at their published resolution nodes); this
+  sandbox has no C++ toolchain (re-verified this session). The parallel C++-gate
+  lane closed the k01..k08 chain separately (`28ed2d9c`); every verdict here and
+  there stays UNCONSUMED and adoption stays with the scrutiny owner.
+- **The standard 11x11 empty board, the two-stone root {60,27}, and its remaining
+  third moves {100,108} remain UNKNOWN. Node/expansion counts, budgets and wall
+  times are never verdicts.**
+
+### Reproduce (addendum k09..k43)
+
+```
+# per LOSS row kNN (a and b independent cold runs), e.g. k09:
+node third_impl.js --lo=10377419441368469504 --hi=65536 --stones=5 --legal=87 \
+  --row=k09-a --cap=400000000 --wallcap=270 --memo-power=22
+# per WIN row (k13 shown; k19 likewise), three runs incl. the verify-legal run:
+node third_impl.js --lo=1152921573327376384 --hi=536870912 --stones=5 --legal=95 \
+  --row=k13-a --cap=400000000 --wallcap=270 --memo-power=22
+node third_impl.js --lo=1152921573327376384 --hi=536870912 --stones=5 --legal=95 \
+  --row=k13-b --cap=400000000 --wallcap=270 --memo-power=22
+node third_impl.js --lo=1152921573327376384 --hi=536870912 --stones=5 --legal=95 \
+  --row=k13-v --verify-legal=1 --cap=400000000 --wallcap=270 --memo-power=22
+# per row, both fail-closed input gates (GATE_FAIL, rc=1):
+node third_impl.js --lo=<lo> --hi=<hi> --stones=5 --legal=<legal+1> \
+  --row=ng1-<row> --cap=4000000 --wallcap=60 --memo-power=22
+node third_impl.js --lo=<lo> --hi=<hi> --stones=6 --legal=<legal> \
+  --row=ng2-<row> --cap=4000000 --wallcap=60 --memo-power=22
+python3 audit_k09k43.py            # 850/850 gates, rc=0, deterministic
+```
+
+Input row specs: `input/k09.input.csv` ... `input/k43.input.csv` plus
+`input/batch-k13.input.csv` and `input/batch-k19.input.csv` (exact published
+batch input bytes, sha-pinned inside the auditor; the two WIN-row specs are the
+parked4 ladder's consumed input bytes). Full per-row run raws: `out/kNN-cold-*.txt`;
+per-row replica raw copies: `out/kNN-replica-raws/`.
