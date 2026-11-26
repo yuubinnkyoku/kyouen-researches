@@ -83,3 +83,10 @@ done 16 2m rc=0 res=0
 done 16 15m-run1 rc=0
 done 16 15m-run2 rc=0
 key 16 status=done res2m=0
+note concurrent 11e5d473 integrator-lane disjoint
+start 17 06:38:27
+done 17 2m rc=0 res=2
+done 17 2m-run2 rc=0 res=2
+key 17 status=done res2m=2
+done 17 15m-run1 rc=0
+done 17 15m-run2 rc=0
