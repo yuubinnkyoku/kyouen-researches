@@ -1,0 +1,80 @@
+"""Build the Part EM emloss21 (21 unconsumed closure-batch LOSS rows)
+canonical LOSS-adoption increment, fail-closed.
+Part EM kit n11-centralreply-emloss21-adoption-reaudit-20261126
+(2026-11-26).  This IS the adoption Part declared emission: the canonical
+head of record advances from merged-exact-s5-chain-plus-evwin4 (sha256
+63f33c4f..., 6,771 rows WIN 192 / LOSS 6,579) to merged-exact-s5-chain-
+plus-emloss21 (sha256 6e49dd84..., 6,792 rows WIN 192 / LOSS 6,600) by
+consuming exactly the 21 unconsumed closure-batch exact-LOSS rows of the
+EM-pattern loss-adoption territory (the published Part EV adoption
+README).  The verdict scope of the Part is exactly those 21 LOSS rows:
+NO root verdict, NO 11x11 outcome, NO class freed or excluded (the
+pre-declaration dossier census measured the scenario deltas IDENTICAL on
+both sides with zero status flips).
+
+Structural clone of the published pre-declaration dossier maker
+`make_increments_emloss21.py` (sha256
+74fbbfd9a206a28e1bcdf2d52ceb884bf71c5aee62ec0eefe520a41cd33d8035):
+the computation region (all source-kit byte gates, two-pass payload
+gates, b38 SSOT cross-gate, WIN regression ties, freshness/quarantine/
+canonical-safety gates, adopted-table digest) is byte-identical logic;
+the disclosed diff regions are the docstring, the emitted increment
+header block, the output file name, the manifest Part/supersession
+fields and the added dossier-supersession byte gates.  The Part
+executor additionally machine-asserts that the emitted increment rows
+are row-for-row identical to the published dossier increment rows (the
+header comment block is the only differing region).
+rows named by the published Part EV adoption README/declaration territory:
+  the 17 exact-LOSS rows f001-f016 and f018 (f018 published as-is after
+  the f017 WIN-HALT, per the kit README).  The 18th probed row f017 is the
+digest and the emitted increment sha are self-pinned; the published
+dossier kit bytes (increment 47443dc1..., manifest 94815c34..., maker
+74fbbfd9...) are re-pinned and the emitted rows cross-gated row-for-row.
+no class; scheduling effects remain those derived by the reaudit refresh
+(Board fail-closed child verification) and the census delta extractor.
+The standard 11x11 empty board and every central-reply root stay
+UNKNOWN; nodes are bookkeeping, never verdicts.
+DOSSIER_INCR_SHA_EXPECTED = "47443dc143c157ab972de0f39f2cf3afb5d062e209da9dcd8e486f0a57c8ebca"
+DOSSIER_MANIFEST_SHA_EXPECTED = "94815c34f1142481a20fe411a0a1c87c4e0a075b100d47db2f5e7b35dea9707d"
+DOSSIER_MAKER_SHA_EXPECTED = "74fbbfd9a206a28e1bcdf2d52ceb884bf71c5aee62ec0eefe520a41cd33d8035"
+DOSSIER_MERGED_SHA_EXPECTED = "6e49dd841b7bfcb335d86ef2479c95f47ab7acbcf41ace389a8b8eb95c778c9d"
+ADOPTED_INCREMENT_SHA = "3e6e9bf0a5f410a1d584889832f21352dd01a97aef5a899de06a28373fcaef82"
+INCREMENT_NAME = "increment-emloss21-adoption-20261126.cache"
+EMLOSS21_SCHEMA = "emloss21-adoption-increments-manifest-v1"
+ "# n11 central-reply closure emloss21 canonical-adoption increment",
+ "#   (Part EM, n11-centralreply-emloss21-adoption-reaudit-20261126,",
+ "#   2026-11-26) - loss-only, fresh 21-row increment.  Part EM declares",
+ "#   the emloss21 canonical LOSS adoption: the canonical head of record",
+ "#   advances to merged-exact-s5-chain-plus-emloss21 (6,792 rows",
+ "#   WIN 192 / LOSS 6,600) by consuming exactly the 21 unconsumed",
+ "#   closure-batch exact-LOSS rows of the EM-pattern territory.",
+ "# The sources of record (re-verified live by this Part maker against",
+ "#   published bytes): 17 rows f001-f016,f018 of the published batch-5",
+ "#   kit (closure class 12264, 2026-11-22, budget 15,000,000 order 0,",
+ "#   two-pass fresh-cold node-exact; f018 published as-is after the",
+ "#   f017 WIN-HALT) and 4 rows ai024/ai030/ai038/ai041 of the published",
+ "#   Part ES reprobe30m kit (closure class 30345, 2026-11-25, budget",
+ "#   30,000,000 order 0, two-pass fresh-cold node-exact; the batch-38",
+ "#   honest-EXHAUSTED keys resolved exact at the first next-highest",
+ "#   condition).  Adopted node total 129,518,414 (batch-5 58,253,401 +",
+ "#   Part ES 71,265,013).",
+ "# NOT re-adopted here (each sits in BASE already as a consumed WIN with",
+ "#   identical nodes, machine-verified regression ties): f017 (Part EV,",
+ "#   15M, nodes 3,522,635), ai007 and ai040 (Part EU euwin2, 30M, nodes",
+ "#   16,090,493 / 20,711,023).  Every adopted row is fresh to BASE",
+ "#   63f33c4f..., quarantine-free, canonical-safe per",
+ "#   s5_evidence_policy.",
+ "# This Part-emitted increment supersedes the pre-declaration dossier",
+ "#   increment 47443dc1... row-for-row (the header comment block is the",
+ "#   only differing region; the merged cache of record carries the",
+ "#   published dossier merged sha 6e49dd84...).",
+ "# Loss-only adoption asserts NO root verdict, frees no class and",
+ "#   excludes no class; the scheduling effects are derived only by the",
+ "#   reaudit refresh (Board fail-closed child verification) and the",
+ "#   census delta extractor.  The standard 11x11 empty board and every",
+ "#   central-reply root stay UNKNOWN; nodes are bookkeeping, never",
+ "#   verdicts.",
+    # --- Part EM dossier-supersession gates ----------------------------------
+    DOSSIER = ROOT / "research/experiments/n11-centralreply-emloss21-adoption-predecl-20261126"
+    if sha(DOSSIER / "output/increment-emloss21-20261126.cache") != DOSSIER_INCR_SHA_EXPECTED:
+        sys_exit("published dossier increment sha drift")
