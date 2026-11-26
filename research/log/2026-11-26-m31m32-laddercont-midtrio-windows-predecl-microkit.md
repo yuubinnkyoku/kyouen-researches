@@ -9,7 +9,7 @@
 - original explorer sha256 (LOST in the sandbox reset; never pushed): 38c6074247b234f90facc5cee22c8e5fb5aa5f5bd8741de67591c79f3d45b344 (77,379 bytes)
 - published explorer (RECOVERY REBUILD) sha256: 6ba3df72d4ecdeb87b2425a401f04a38c62b787ff28bbb4972a8e348e7ad2a2c (73,496 bytes)
 - frozen output sha256: 487970c9db06e44902eb625401348a8d37e33d49b19781aaaa42da9e2d6f081e (123,422 bytes; recovered byte-exactly post-reset, sha verified against the pre-reset record before any use; the rebuild regenerates it byte-identically, rc 0)
-- status: EXECUTED (pre-reset, rc 0 ~38 s), VERIFIED (pre-reset, 5-run determinism + audit + derive), LOST (sandbox reset), RECOVERED, RE-VERIFIED (rebuild byte-identity + fresh audit/derive/probes), PUSHED (see S6.7)
+- status: EXECUTED (pre-reset, rc 0 ~38 s), VERIFIED (pre-reset, 5-run determinism + audit + derive), LOST (sandbox reset), RECOVERED, RE-VERIFIED (rebuild byte-identity + fresh audit/derive/probes), PUSHED (680421eb), ENCODING-CORRECTED (e9847712, all 8 published files fetch-back byte-verified at e9847712 (8/8) compare-candidates identical incl. the frozen .out; corrected-explorer re-run byte-identical, see S6.8)
 
 ## S1. Anchor re-verification (180/180)
 
@@ -272,6 +272,15 @@ COUNTER-PROBE BEFORE REGISTERING; full x0 row records).
    time and REGRESSES the frozen output byte-identically (rc 0, internal
    sha assert PASS). Fetch-back of the corrected files is
    byte-verified in the correction commit body.
+9. Fetch-back completion record (same day): at commit e9847712 every
+   published file of this kit was fetched back over raw commit-pin URLs
+   and byte-compared with the intended local state: 8/8 identical
+   (engine_block.py, explorer, frozen .out, kit README, sumonly_probe.py,
+   probe R1/R2 outputs, kit log; the log compared at its final pushed
+   state). The corrected explorer was RE-RUN at push time and regressed
+   the frozen output byte-identically (rc 0, internal sha assert PASS).
+   Cumulative post-recovery determinism: 4 explorers runs + 1
+   push-time rerun, all byte-identical to 487970c9...
 7. Push-time records: latest-main re-fetch before the push returned
    head 7af915fb (the concurrent kit-8) and the part-ew wave commits
    (disjoint paths, no conflict); the push of this kit re-used no
