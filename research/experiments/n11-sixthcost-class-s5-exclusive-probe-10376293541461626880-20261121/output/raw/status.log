@@ -1,3 +1,146 @@
+done 1 2m rc=0
+done 1 15m-run1 rc=0
+done 1 15m-run2 rc=0
+key 01 status=done res2m=0
+done 2 2m rc=0
+done 2 15m-run1 rc=0
+done 2 15m-run2 rc=0
+key 02 status=done res2m=0
+start 03 21:37:32
+done 03 2m rc=0 res=0
+done 03 15m-run1 rc=0
+done 03 15m-run2 rc=0
+done 03 15m-run3-verify rc=0
+key 03 status=WIN-halt res2m=0
+start 04 00:48:20
+done 04 2m rc=0 res=0
+done 04 15m-run1 rc=0
+done 04 15m-run2 rc=0
+done 04 15m-run3-verify rc=0
+key 04 status=WIN-halt res2m=0
+start 05 04:33:40
+done 05 2m rc=0 res=0
+done 05 15m-run1 rc=0
+done 05 15m-run2 rc=0
+done 05 15m-run3-verify rc=0
+key 05 status=WIN-halt res2m=0
+start 06 05:44:03
+done 06 2m rc=0 res=0
+done 06 15m-run1 rc=0
+done 06 15m-run2 rc=0
+key 06 status=done res2m=0
+note concurrent 25b294ad d49b480a z-strip-lane disjoint
+start 07 05:47:00
+done 07 2m rc=0 res=2
+done 07 2m-run2 rc=0 res=2
+done 07 15m-run1 rc=0
+done 07 15m-run2 rc=0
+key 07 status=done res2m=2
+start 08 05:48:07
+done 08 2m rc=0 res=0
+done 08 15m-run1 rc=0
+done 08 15m-run2 rc=0
+done 08 15m-run3-verify rc=0
+key 08 status=WIN-halt res2m=0
+start 09 06:21:51
+done 09 2m rc=0 res=0
+done 09 15m-run1 rc=0
+done 09 15m-run2 rc=0
+key 09 status=done res2m=0
+start 10 06:23:34
+done 10 2m rc=0 res=0
+done 10 15m-run1 rc=0
+done 10 15m-run2 rc=0
+key 10 status=done res2m=0
+start 11 06:24:55
+done 11 2m rc=0 res=0
+done 11 15m-run1 rc=0
+done 11 15m-run2 rc=0
+key 11 status=done res2m=0
+start 12 06:27:04
+done 12 2m rc=0 res=0
+done 12 15m-run1 rc=0
+done 12 15m-run2 rc=0
+key 12 status=done res2m=0
+start 13 06:28:46
+done 13 2m rc=0 res=0
+done 13 15m-run1 rc=0
+done 13 15m-run2 rc=0
+key 13 status=parked res2m=0
+start 14 06:32:13
+done 14 2m rc=0 res=0
+done 14 15m-run1 rc=0
+done 14 15m-run2 rc=0
+key 14 status=done res2m=0
+note concurrent 254e397a z-strip-lane disjoint
+start 15 06:34:07
+done 15 2m rc=0 res=0
+done 15 15m-run1 rc=0
+done 15 15m-runm-run2 rc=0
+key 15 status=done res2m=0
+start 16 06:35:43
+done 16 2m rc=0 res=0
+done 16 15m-run1 rc=0
+done 16 15m-run2 rc=0
+key 16 status=done res2m=0
+note concurrent 11e5d473 integrator-lane disjoint
+start 17 06:38:27
+done 17 2m rc=0 res=2
+done 17 2m-run2 rc=0 res=2
+key 17 status=done res2m=2
+done 17 15m-run1 rc=0
+done 17 15m-run2 rc=0
+start 18 06:39:23
+done 18 2m rc=0 res=2
+done 18 2m-run2 rc=0 res=2
+key 18 status=done res2m=2
+done 18 15m-run1 rc=0
+done 18 15m-run2 rc=0
+start 19 06:40:31
+done 19 2m rc=0 res=0
+done 19 15m-run1 rc=0
+done 19 15m-run2 rc=0
+key 19 status=parked res2m=0
+start 20 06:44:09
+done 20 2m rc=0 res=0
+done 20 15m-run1 rc=0
+done 20 15m-run2 rc=0
+key 20 status=parked res2m=0
+start 21 06:47:38
+done 21 2m rc=0 res=0
+done 21 15m-run1 rc=0
+done 21 15m-run2 rc=0
+key 21 status=done res2m=0
+start 22 06:48:56
+done 22 2m rc=0 res=0
+done 22 15m-run1 rc=0
+done 22 15m-run2 rc=0
+key 22 status=done res2m=0
+start 23 06:51:06
+done 23 2m rc=0 res=0
+done 23 15m-run1 rc=0
+done 23 15m-run2 rc=0
+key 23 status=done res2m=0
+start 24 06:53:41
+done 24 2m rc=0 res=0
+done 24 15m-run1 rc=0
+done 24 15m-run2 rc=0
+key 24 status=done res2m=0
+start 25 06:55:09
+done 25 2m rc=0 res=0
+done 25 15m-run1 rc=0
+done 25 15m-run2 rc=0
+key 25 status=done res2m=0
+start 26 06:56:52
+done 26 2m rc=0 res=0
+done 26 15m-run1 rc=0
+done 26 15m-run2 rc=0
+key 26 status=done res2m=0
+start 27 07:00:15
+done 27 2m rc=0 res=0
+done 27 15m-run1 rc=0
+done 27 15m-run2 rc=0
+key 27 status=done res2m=0
 start 28 07:01:47
 done 28 2m rc=0 res=2
 done 28 2m-run2 rc=0 res=2
