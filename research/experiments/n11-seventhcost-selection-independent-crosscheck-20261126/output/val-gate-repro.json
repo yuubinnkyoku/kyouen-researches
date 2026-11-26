@@ -1,0 +1,13 @@
+{
+  "schema": "n11-seventhcost-val-gate-repro-v1",
+  "host": "vibe upgraded sandbox, Node.js v22.20.0 (independent lane)",
+  "jsreplay_sha256": "845856175d3c793a7eb4306f5902ecda3f1c046a8a53e8f34ed375e51febc3df",
+  "rows": [
+    {"input": "at2m-s5-1152921504606851072-536870946", "budget": 2000000, "legal": 98, "result": 0, "nodes": 2000000, "expect": [0, 2000000]},
+    {"input": "at2m-s5-1188950301626860544-536870912", "budget": 2000000, "legal": 99, "result": 0, "nodes": 2000000, "expect": [0, 2000000]},
+    {"input": "first-15m-s5-1152921504606851072-536870946", "budget": 15000000, "legal": 98, "result": 2, "nodes": 3651923, "expect": [2, 3651923]},
+    {"input": "second-15m-s5-1188950301626860544-536870912", "budget": 15000000, "legal": 99, "result": 2, "nodes": 5040200, "expect": [2, 5040200]}
+  ],
+  "all_pass": true,
+  "note": "wall_s column ignored (timing not evidence); rows node-exact against the published val-gate-summary expectations."
+}
