@@ -96,3 +96,12 @@ empty board, the two-stone root {60,27}, its remaining third moves
 throughout. Nodes and expansions are bookkeeping, never verdicts. S5 WIN
 raws are not class closure claims. The canonical head of record
 `cc3694bb` (6,799 rows, WIN199/LOSS6600) is untouched by this Part.
+5. Wave C's MANIFEST.sha256 push was TRUNCATED to 48,000 of 67,463 bytes
+   (the single-line base64 transit bundle exceeded a 64KB read cutoff and the
+   pushed file ended mid-line at the k16-replica-raws entry). Caught by the
+   immediate raw-CDN fetch-back comparison; repaired in the follow-up commit:
+   the full 67,463-byte / 371-line MANIFEST re-pushed and fetch-back
+   byte-verified, this disclosure appended. The README and completion-log
+   pushes of wave C were byte-exact and untouched by the defect. Lesson:
+   single-line transit bundles must be chunked under 60KB (split -b) before
+   the in-TS read.
