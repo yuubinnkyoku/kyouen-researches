@@ -29,3 +29,10 @@ done 06 2m rc=0 res=0
 done 06 15m-run1 rc=0
 done 06 15m-run2 rc=0
 key 06 status=done res2m=0
+note concurrent 25b294ad d49b480a z-strip-lane disjoint
+start 07 05:47:00
+done 07 2m rc=0 res=2
+done 07 2m-run2 rc=0 res=2
+done 07 15m-run1 rc=0
+done 07 15m-run2 rc=0
+key 07 status=done res2m=2
