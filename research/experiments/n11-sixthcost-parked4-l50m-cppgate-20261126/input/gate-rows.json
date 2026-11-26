@@ -1,0 +1,271 @@
+{
+ "anchors": {
+  "anchor-af039": "89,30000000,2,19234232",
+  "anchor-aj001": "84,30000000,2,5156075",
+  "anchor-at2m": "98,2000000,0,2000000"
+ },
+ "anchors_runtime": {
+  "anchor-af039": [
+   "30000000",
+   "89,30000000,2,19234232"
+  ],
+  "anchor-aj001": [
+   "30000000",
+   "84,30000000,2,5156075"
+  ],
+  "anchor-at2m": [
+   "2000000",
+   "98,2000000,0,2000000"
+  ]
+ },
+ "canonical_head": {
+  "census": {
+   "LOSS": 6600,
+   "WIN": 197
+  },
+  "label": "16a12390",
+  "path": "research/experiments/n11-centralreply-sixthwin5-adoption-predecl-20261126/output/merged-exact-s5-chain-plus-sixthwin5-20261126.cache",
+  "rows": 6797,
+  "sha256": "16a12390c0c3f046f0ae537b2a9940e15661263fc5034ce1b155c138bb9043cd",
+  "targets_fresh_vs": "16a12390"
+ },
+ "gate_source": {
+  "commit": "154f3b7a67b97e13acbaee8b04dc74ddca728d19",
+  "header_pins": {
+   "kyouen_residual_micro.hpp": "5976935dcfccb9b5a26fa68f8de20868ce45363dd8c372dcd67d9b841167e7f5",
+   "n11_s5_quarantine.hpp": "2e36d69481fafcde7aede8ae4fedf3d5477f91ee9846bcd4ae2975f32a4ba1a5"
+  },
+  "path": "cpp/solvers/kyouen_dfpn_root.cpp",
+  "sha256": "9193f5b6065e0fbcad2ef7c65f386187701cafa1f5b718cc35a5cbb0d138f92e"
+ },
+ "gates": {
+  "G0:gate-source-commit": {
+   "status": "PASS"
+  },
+  "G0:kyouen_dfpn_root.cpp": {
+   "status": "PASS"
+  },
+  "G0:kyouen_residual_micro.hpp": {
+   "status": "PASS"
+  },
+  "G0:n11_s5_quarantine.hpp": {
+   "status": "PASS"
+  },
+  "G0:sk-kit-rows-read": {
+   "status": "PASS"
+  },
+  "G1:k13:50m-budget-field": {
+   "status": "PASS"
+  },
+  "G1:k13:50m-pair-identity-except-wall_s": {
+   "status": "PASS"
+  },
+  "G1:k13:base15m-park-baseline": {
+   "status": "PASS"
+  },
+  "G1:k13:expected-quadruple-derived": {
+   "status": "PASS"
+  },
+  "G1:k13:input-legal==raw-legal": {
+   "status": "PASS"
+  },
+  "G1:k13:input-row-spec-shape": {
+   "status": "PASS"
+  },
+  "G1:k13:key-fields-in-raws": {
+   "status": "PASS"
+  },
+  "G1:k13:margin-reproof": {
+   "status": "PASS"
+  },
+  "G1:k13:run3-verify-identity": {
+   "status": "PASS"
+  },
+  "G1:k13:status-log-lines": {
+   "status": "PASS"
+  },
+  "G1:k13:win-inside-budget": {
+   "status": "PASS"
+  },
+  "G1:k19:50m-budget-field": {
+   "status": "PASS"
+  },
+  "G1:k19:50m-pair-identity-except-wall_s": {
+   "status": "PASS"
+  },
+  "G1:k19:base15m-park-baseline": {
+   "status": "PASS"
+  },
+  "G1:k19:expected-quadruple-derived": {
+   "status": "PASS"
+  },
+  "G1:k19:input-legal==raw-legal": {
+   "status": "PASS"
+  },
+  "G1:k19:input-row-spec-shape": {
+   "status": "PASS"
+  },
+  "G1:k19:key-fields-in-raws": {
+   "status": "PASS"
+  },
+  "G1:k19:margin-reproof": {
+   "status": "PASS"
+  },
+  "G1:k19:run3-verify-identity": {
+   "status": "PASS"
+  },
+  "G1:k19:status-log-lines": {
+   "status": "PASS"
+  },
+  "G1:k19:win-inside-budget": {
+   "status": "PASS"
+  },
+  "G1:status-log-halt-rule": {
+   "status": "PASS"
+  },
+  "G1:val-15m-two-target-rows": {
+   "status": "PASS"
+  },
+  "G1:val-at2m-two-target-rows": {
+   "status": "PASS"
+  },
+  "G2:halt-audit-gates-pass": {
+   "status": "PASS"
+  },
+  "G2:halt-audit-schema": {
+   "status": "PASS"
+  },
+  "G2:k13:delegated-expectation": {
+   "status": "PASS"
+  },
+  "G2:k13:delegated-target-line": {
+   "status": "PASS"
+  },
+  "G2:k13:halt-audit-per-key": {
+   "status": "PASS"
+  },
+  "G2:k13:kit-readme-result-line": {
+   "status": "PASS"
+  },
+  "G2:k13:third-impl-verdict-level": {
+   "status": "PASS"
+  },
+  "G2:k19:delegated-expectation": {
+   "status": "PASS"
+  },
+  "G2:k19:delegated-target-line": {
+   "status": "PASS"
+  },
+  "G2:k19:halt-audit-per-key": {
+   "status": "PASS"
+  },
+  "G2:k19:kit-readme-result-line": {
+   "status": "PASS"
+  },
+  "G2:k19:third-impl-verdict-level": {
+   "status": "PASS"
+  },
+  "G2:kit-readme-jsreplay-pin": {
+   "status": "PASS"
+  },
+  "G2:kit-readme-solver-pin": {
+   "status": "PASS"
+  },
+  "G2:third-impl-all-pass": {
+   "status": "PASS"
+  },
+  "G2:win-raws-list": {
+   "status": "PASS"
+  },
+  "G3:anchor-af039:byte-pin-vs-SK-kit-MANIFEST": {
+   "status": "PASS"
+  },
+  "G3:anchor-af039:expected-vs-SK-kit-anchors": {
+   "status": "PASS"
+  },
+  "G3:anchor-af039:input-row-spec-shape": {
+   "status": "PASS"
+  },
+  "G3:anchor-aj001:byte-pin-vs-SK-kit-MANIFEST": {
+   "status": "PASS"
+  },
+  "G3:anchor-aj001:expected-vs-SK-kit-anchors": {
+   "status": "PASS"
+  },
+  "G3:anchor-aj001:input-row-spec-shape": {
+   "status": "PASS"
+  },
+  "G3:anchor-at2m:byte-pin-vs-SK-kit-MANIFEST": {
+   "status": "PASS"
+  },
+  "G3:anchor-at2m:expected-vs-SK-kit-anchors": {
+   "status": "PASS"
+  },
+  "G3:anchor-at2m:input-row-spec-shape": {
+   "status": "PASS"
+  },
+  "G3:anchor-inventory": {
+   "status": "PASS"
+  },
+  "G4:canonical-census-WIN197-LOSS6600": {
+   "status": "PASS"
+  },
+  "G4:canonical-head-sha256": {
+   "status": "PASS"
+  },
+  "G4:canonical-row-count": {
+   "status": "PASS"
+  },
+  "G4:k13:fresh-not-in-canonical-head": {
+   "status": "PASS"
+  },
+  "G4:k19:fresh-not-in-canonical-head": {
+   "status": "PASS"
+  },
+  "G8:anchor-af039:input-clone-byte-verified": {
+   "status": "PASS"
+  },
+  "G8:anchor-aj001:input-clone-byte-verified": {
+   "status": "PASS"
+  },
+  "G8:anchor-at2m:input-clone-byte-verified": {
+   "status": "PASS"
+  },
+  "G8:k13:input-clone-byte-verified": {
+   "status": "PASS"
+  },
+  "G8:k19:input-clone-byte-verified": {
+   "status": "PASS"
+  }
+ },
+ "part": "SM",
+ "schema": "n11-sixthcost-parked4-cppgate-rows-v1",
+ "targets": {
+  "k13": {
+   "budget": "50000000",
+   "expected": "95,50000000,1,16402480",
+   "input_sha256": "298dd6e6b6655d12aefaae138a2e1d85388220546ff68e4d6b7081c6097b0526",
+   "key_hi": "536870912",
+   "key_lo": "1152921573327376384",
+   "margin_sha256": "9b6a0026caf8781d268d9e9da16b2cc7389ffd1e23aae92dc136c1d2464c94eb",
+   "raw_p1_sha256": "b14273ee1a2b2c60375041f979db13f37c4b0b0b77d51e561bdf8abbac683985",
+   "raw_p2_sha256": "155ffe291e6d1c106bda6e31515ae481032b63fee8578bdde52d26101ab4ebe4",
+   "row_spec": "target,0,5,1152921573327376384,536870912,95,0,0,0,0,0",
+   "run3_verify_sha256": "979b11478c30b16c03630a1700e04421d25df7bf9437e981d2c0b35bf4799968",
+   "third_impl_verdict_level_corroboration": true
+  },
+  "k19": {
+   "budget": "50000000",
+   "expected": "95,50000000,1,15379062",
+   "input_sha256": "88c107d7d060ef756a394d722de3a80b4ee60bad5647785cbbb65eb088da6190",
+   "key_hi": "65664",
+   "key_lo": "10376293541461626880",
+   "margin_sha256": "be8f4289607c24e1cba48b3bd4efac15e80874fec7987cef3c037d7de53a7517",
+   "raw_p1_sha256": "0e1287abba7d7f012f8e42bc9f774ec6cc093b46c54fb40f570f7c6d1c891abb",
+   "raw_p2_sha256": "0e1287abba7d7f012f8e42bc9f774ec6cc093b46c54fb40f570f7c6d1c891abb",
+   "row_spec": "target,0,5,10376293541461626880,65664,95,0,0,0,0,0",
+   "run3_verify_sha256": "eb624fcf4e753114ad708406b35683eedb3b1811be80fdb005c2eeed726ad3a5",
+   "third_impl_verdict_level_corroboration": true
+  }
+ }
+}
