@@ -1,0 +1,15 @@
+{
+  "schema": "n11-seventhcost-ladder-preaudit-selftest-v1",
+  "fixture": "synthetic jsreplay-format rows over the published k01..k05 selection keys (k01 2M LOSS pair, k02 2M UNKNOWN -> 15M LOSS pair, k03 2M UNKNOWN, k04 2M WIN pair); fixture rows were NEVER published to the seventh-cost kit and were deleted after the battery",
+  "clean_control": "rc=0, gates_passed 6959, checkpoint partial, resolved [1,2,4], win [4], pairs [1,2,4]",
+  "tamper_battery": [
+    {"id": "T1", "tamper": "at2m-run2-k01 nodes 1234567->1234568", "expect_gate": "pair_2m_01", "result": "FAIL-CLOSED rc=1 pair_2m_01"},
+    {"id": "T2", "tamper": "at2m-k03 row copied to at2m-k10 filename", "expect_gate": "raw_kidx_match", "result": "FAIL-CLOSED rc=1 raw_kidx_match_at2m-k10"},
+    {"id": "T2c", "tamper": "genuine k05 2M raw present beyond the WIN at k04", "expect_gate": "win_stopping_rule", "result": "FAIL-CLOSED rc=1 win_stopping_rule raws beyond first WIN k04: [5]"},
+    {"id": "T3", "tamper": "at2m-k03 budget 2000000->15000000", "expect_gate": "raw_budget", "result": "FAIL-CLOSED rc=1 raw_budget_at2m-k03"},
+    {"id": "T4b", "tamper": "at2m-k03 key lo+1 (key outside the 42-key selection)", "expect_gate": "raw_key_known", "result": "FAIL-CLOSED rc=1 raw_key_known_at2m-k03"},
+    {"id": "T5", "tamper": "at15m-run1-k01 row present although k01 resolved at 2M", "expect_gate": "raw_kidx_match/stage_order", "result": "FAIL-CLOSED rc=1 raw_kidx_match_at15m-run1-k01 (kidx provenance fires first)"}
+  ],
+  "post_battery_restore": "fixture raws deleted; clean control re-run rc=0",
+  "status_guard": "Self-test of the audit instrument only; no verdict consumed or implied; 11x11 UNKNOWN."
+}
