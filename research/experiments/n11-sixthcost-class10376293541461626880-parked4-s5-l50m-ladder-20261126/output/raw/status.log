@@ -1,0 +1,17 @@
+start k13 07:38:31
+start k19 07:38:31
+done k19 base15m rc=0 res=0 nodes=15000000
+done k13 base15m rc=0 res=0 nodes=15000000
+done k19 l50m-run1 rc=0 res=1 nodes=15379062
+done k13 l50m-run1 rc=0 res=1 nodes=16402480
+done k19 l50m-run2 rc=0 res=1 nodes=15379062
+done k13 l50m-run2 rc=0 res=1 nodes=16402480
+done k19 margin32m rc=0 res=1 nodes=15379062
+key k19 status=WIN-halt res50m=1 nodes=15379062
+done k13 margin32m rc=0 res=1 nodes=16402480
+key k13 status=WIN-halt res50m=1 nodes=16402480
+done k19 run3-verify rc=0
+done k13 run3-verify rc=0
+lane halted on WIN stop rule 1: keys k13,k19 resolved WIN; k20,k33 never started (remain parked@15M, claimable) 08:07:36Z
+voluntary run3-verify completed for both WIN keys (identical result/nodes) 08:07:36Z
+ladder wall totals: base15m 163/173 s (concurrent), 50M pairs ~315 s/run, margin 160/174 s, verify 176/182 s
