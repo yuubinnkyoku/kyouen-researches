@@ -1,4 +1,4 @@
-# n11-sixthcost-class-s5-exclusive-probe-10376293541461626880-20261121 (checkpoint state: third resumption halted on a FIFTH fresh WIN at k05; all batch verdicts unconsumed)
+# n11-sixthcost-class-s5-exclusive-probe-10376293541461626880-20261121 (checkpoint state: fourth resumption halted on a fresh WIN at k08 after fresh LOSS rows k06/k07; all batch verdicts unconsumed)
 
 Exclusive single-live-parent S5 probe batch for the sixth-cost candidate class
 `10376293541461626880:65536` (coverage {80, 84, 100, 108}),
@@ -294,6 +294,83 @@ Inputs and consumed pins (sha-verified, not duplicated here):
 - canonical-safe policy `s5_evidence_policy.py` at
   `research/experiments/n11-frontier-selection-20261005/scripts/`;
 - `results/n11-s5-evidence-quarantine.json` (sha256 `81d23160...`).
+
+## Checkpoint at k08 (fourth resumption): fresh LOSS rows k06/k07, then halted on a fresh WIN at k08 (verdicts NOT consumed)
+
+Status at this checkpoint commit:
+
+- Fourth resumption declared in
+  `research/log/2026-11-26-n11-sixthcost-class10376293541461626880-exclusive-s5-probe-resume-k06-k43-single-owner-note.md`
+  (single-owner note, commit `e4cabc98`): no new key claimed, the ladder
+  resumes the remaining 38 exclusive keys k06..k43 in ascending
+  truncated-cost-proxy machine order under the same fail-closed rules as all
+  earlier resumptions. D1 (selector re-run, 229 gate checks, selection JSON
+  byte-identical `d5e9b059...`, all 43 input CSV byte-identical) and D2
+  (val gate 4/4 node-exact, result 0/0/2/2, nodes 2,000,000 / 2,000,000 /
+  3,651,923 / 5,040,200, walls 9/9/17/25 s) both re-verified on this host
+  before the first ladder start (`output/val-gate-summary-resume4-20261126.json`).
+- k06 `10376293541462675456:65536` (legal 89, band-1 proxy 5,041,585): 2M
+  stage UNKNOWN (`at2m-k06.out.csv`, result 0, nodes 2,000,000, wall 9 s);
+  escalated 15M cold pair BOTH result 2 (LOSS) with identical
+  expansions 8,182,231 (walls 44/43 s) - the first LOSS-resolved row of the
+  k06..k43 batch and the second LOSS row of the whole ladder after k01.
+  Checkpoint commit `585d99ef` (raw pair + status.log), fetch-back
+  byte-verified.
+- k07 `10376293542535368704:65536` (legal 87): the first key of this lane
+  resolved at the 2M STAGE - result 2, expansions 1,419,823 (wall 7 s).
+  The pre-registered 2M determinism pair was completed with an independent
+  second 2M cold run (identical result and nodes), plus a voluntary 15M
+  cold pair (also identical, walls 6/6 s): FOUR identical runs. No third
+  verify run (LOSS row, k01 precedent). Checkpoint commit `3780887d`
+  (four raw files + status.log), fetch-back byte-verified; the status.log
+  also records the concurrent z-strip-lane commits `25b294ad`/`d49b480a`
+  observed between checkpoints (territory-disjoint).
+- k08 `10376293610182148096:68719476736` (legal 89, first key of this batch
+  with a non-65536 key_hi): 2M stage UNKNOWN (result 0, nodes 2,000,000,
+  wall 8 s); escalated 15M cold pair_PLUS_voluntary third verify run all
+  result 1 (WIN) with identical expansions 6,195,897 (walls 30/30/28 s).
+  Checkpoint commit `575a58fe`, fetch-back byte-verified.
+- WIN stopping rule: per the pre-registered session rule (identical to the
+  k02/k03/k04/k05 precedents) the ladder HALTS at k08; k09..k43 are NOT
+  started in this session and remain claimable by the next resumption.
+- Witness publication (published-after-execution, commit `0f4cbb85`):
+  `scripts/analyze_win_finding_k08.py` (285 fail-closed gates ALL PASS, two
+  runs byte-identical, negative control T1 = verdict flip on the k08 raw
+  fails closed at GATE `k08_15m_pair` with a byte-verified restore and a
+  clean T2) and `output/win-finding-ifadopted-k08.json`. If-adopted
+  summary: scenario A (k08 only) flips TWO classes UNKNOWN->WIN - the
+  sixth-cost class itself and k08's NON-candidate membership class
+  `1297037792194334720:0` (coverage {12, 20, 80, 84}; the second
+  probe-ladder WIN after k05 whose non-candidate membership class flips
+  already in the k-only scenario); k08's candidate membership class
+  `1152921504742113280:68719476736` (coverage {12, 20, 100, 108}) is
+  already base-stage WIN, no flip. Scenario B (all EIGHT unconsumed rows:
+  k01 LOSS, k02-k05 WIN, k06 LOSS, k07 LOSS, k08 WIN) flips FIVE classes
+  UNKNOWN->WIN (adding the k05-era `FLIP_CLASS_C`
+  `1161928703995805696:65536` {45, 53, 80, 84}, `FLIP_CLASS_B2`
+  `1297037792211107840:0` {24, 30, 80, 84} via k02 and `FLIP_CLASS_A2`
+  `1297319267171041280:0` {48, 50, 80, 84} via k03); the fresh LOSS rows
+  k06/k07 flip NO class (their UNKNOWN member classes keep 98/99 other
+  unknown children); the sixth-cost class would hold FIVE fresh WIN
+  children (k02, k03, k04, k05, k08) with unknown children 101 -> 93.
+  In BOTH scenarios: live candidate classes 62 -> 61, secured third-move
+  coverage UNCHANGED at 117/119 (remaining {100, 108}), no class becomes
+  LOSS. NOT a coverage event and NOT a route to the root certificate.
+- Adoption requirements unchanged: pinned C++
+  second-implementation verification for the fresh rows (k06
+  `target,0,5,10376293541462675456,65536,89,0,0,0,0,0` @15,000,000 expected
+  result 2, nodes 8,182,231; k07
+  `target,0,5,10376293542535368704,65536,87,0,0,0,0,0` expected result 2,
+  nodes 1,419,823 at any budget >= ~1.42M; k08
+  `target,0,5,10376293610182148096,68719476736,89,0,0,0,0,0` @15,000,000
+  expected result 1, nodes 6,195,897), plus the k01..k05 rows as published.
+  No C++ toolchain in this sandbox (re-verified this session); any later C++
+  disagreement fails closed in favor of discarding the row. No
+  third-implementation reproduction has run for k06/k07/k08 YET (that
+  program extends only with a fresh declaration).
+- Batch ledger after this checkpoint: k01 LOSS, k02/k03/k04/k05/k08 WIN,
+  k06/k07 LOSS, k09..k43 untouched; every verdict of this lane remains
+  UNCONSUMED and no cache file is modified.
 
 ## Status guard
 
