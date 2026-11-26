@@ -1,0 +1,138 @@
+{
+ "gates": {
+  "G1:anchor-af039:p1": {
+   "detail": "replay_rows=1 done=True header=True",
+   "status": "PASS"
+  },
+  "G1:anchor-af039:p2": {
+   "detail": "replay_rows=1 done=True header=True",
+   "status": "PASS"
+  },
+  "G1:anchor-aj001:p1": {
+   "detail": "replay_rows=1 done=True header=True",
+   "status": "PASS"
+  },
+  "G1:anchor-aj001:p2": {
+   "detail": "replay_rows=1 done=True header=True",
+   "status": "PASS"
+  },
+  "G1:anchor-at2m:p1": {
+   "detail": "replay_rows=1 done=True header=True",
+   "status": "PASS"
+  },
+  "G1:anchor-at2m:p2": {
+   "detail": "replay_rows=1 done=True header=True",
+   "status": "PASS"
+  },
+  "G1:k13:p1": {
+   "detail": "replay_rows=1 done=True header=True",
+   "status": "PASS"
+  },
+  "G1:k13:p2": {
+   "detail": "replay_rows=1 done=True header=True",
+   "status": "PASS"
+  },
+  "G1:k19:p1": {
+   "detail": "replay_rows=1 done=True header=True",
+   "status": "PASS"
+  },
+  "G1:k19:p2": {
+   "detail": "replay_rows=1 done=True header=True",
+   "status": "PASS"
+  },
+  "G2:anchor-af039": {
+   "detail": "p1=0,5,89,0,30000000,2,19234232,44,1152921504607895681,68719476736 p2=0,5,89,0,30000000,2,19234232,45,1152921504607895681,68719476736",
+   "status": "PASS"
+  },
+  "G2:anchor-aj001": {
+   "detail": "p1=0,5,84,0,30000000,2,5156075,12,1152922604269469696,65536 p2=0,5,84,0,30000000,2,5156075,12,1152922604269469696,65536",
+   "status": "PASS"
+  },
+  "G2:anchor-at2m": {
+   "detail": "p1=0,5,98,0,2000000,0,2000000,4,1152921504606851072,536870946 p2=0,5,98,0,2000000,0,2000000,4,1152921504606851072,536870946",
+   "status": "PASS"
+  },
+  "G2:k13": {
+   "detail": "p1=0,5,95,0,50000000,1,16402480,37,1152921573327376384,536870912 p2=0,5,95,0,50000000,1,16402480,37,1152921573327376384,536870912",
+   "status": "PASS"
+  },
+  "G2:k19": {
+   "detail": "p1=0,5,95,0,50000000,1,15379062,35,10376293541461626880,65664 p2=0,5,95,0,50000000,1,15379062,35,10376293541461626880,65664",
+   "status": "PASS"
+  },
+  "G3:anchor-af039": {
+   "detail": "observed 89,30000000,2,19234232 expected 89,30000000,2,19234232 (EV/SK kit raw condition (budget-ceiling baseline); == SK kit anchors block)",
+   "status": "PASS"
+  },
+  "G3:anchor-aj001": {
+   "detail": "observed 84,30000000,2,5156075 expected 84,30000000,2,5156075 (EV/SK kit raw condition (budget-ceiling baseline); == SK kit anchors block)",
+   "status": "PASS"
+  },
+  "G3:anchor-at2m": {
+   "detail": "observed 98,2000000,0,2000000 expected 98,2000000,0,2000000 (EV/SK kit raw condition (budget-ceiling baseline); == SK kit anchors block)",
+   "status": "PASS"
+  },
+  "G3:k13": {
+   "detail": "observed 95,50000000,1,16402480 expected 95,50000000,1,16402480 (parked4 kit output/raw/l50m-run1-1152921573327376384-536870912.out.csv (published replica 95,50000000,1,16402480); two-pass node-exact vs l50m-run2-1152921573327376384-536870912.out.csv; third-impl verdict-level agreement published (batch 32/32, k-row x3 runs))",
+   "status": "PASS"
+  },
+  "G3:k19": {
+   "detail": "observed 95,50000000,1,15379062 expected 95,50000000,1,15379062 (parked4 kit output/raw/l50m-run1-10376293541461626880-65664.out.csv (published replica 95,50000000,1,15379062); two-pass node-exact vs l50m-run2-10376293541461626880-65664.out.csv; third-impl verdict-level agreement published (batch 32/32, k-row x3 runs))",
+   "status": "PASS"
+  },
+  "G4": {
+   "detail": "passes=5/5 bad=0",
+   "status": "PASS"
+  },
+  "G5:anchor-af039": {
+   "detail": "sha256 e51a3c9de08c62a54d80547c520876af4245394d05e37bbebf01d74204f64691 ==",
+   "status": "PASS"
+  },
+  "G5:anchor-aj001": {
+   "detail": "sha256 2f6daea5ca3b3fe6b7713c8d450af3f3c9f203acacb8a1340255d8e8f656496c ==",
+   "status": "PASS"
+  },
+  "G5:anchor-at2m": {
+   "detail": "sha256 ecc0299b8142abde201fcc40ea9666dac7368d0888d0600abc717af66ddfe348 ==",
+   "status": "PASS"
+  },
+  "G5:k13": {
+   "detail": "sha256 298dd6e6b6655d12aefaae138a2e1d85388220546ff68e4d6b7081c6097b0526 ==",
+   "status": "PASS"
+  },
+  "G5:k19": {
+   "detail": "sha256 88c107d7d060ef756a394d722de3a80b4ee60bad5647785cbbb65eb088da6190 ==",
+   "status": "PASS"
+  }
+ },
+ "overall": "PASS",
+ "part": "SM",
+ "rows": {
+  "anchor-af039": {
+   "budget": "30000000",
+   "expected": "89,30000000,2,19234232",
+   "observed_p1": "89,30000000,2,19234232"
+  },
+  "anchor-aj001": {
+   "budget": "30000000",
+   "expected": "84,30000000,2,5156075",
+   "observed_p1": "84,30000000,2,5156075"
+  },
+  "anchor-at2m": {
+   "budget": "2000000",
+   "expected": "98,2000000,0,2000000",
+   "observed_p1": "98,2000000,0,2000000"
+  },
+  "k13": {
+   "budget": "50000000",
+   "expected": "95,50000000,1,16402480",
+   "observed_p1": "95,50000000,1,16402480"
+  },
+  "k19": {
+   "budget": "50000000",
+   "expected": "95,50000000,1,15379062",
+   "observed_p1": "95,50000000,1,15379062"
+  }
+ },
+ "schema": "n11-sixthcost-parked4-cppgate-audit-v1"
+}
