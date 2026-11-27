@@ -10,9 +10,19 @@ rows WIN 201 / LOSS 6,631). Declared in
 
 ## Status
 
-Checkpoint state: selection published, ladder in progress. See
-`output/raw/` for per-key checkpoint rows and the log for the latest
-checkpoint summary. No verdict of this table may be consumed before the full
+Ladder checkpoint complete (2026-11-26): all 42 claimed keys executed under
+the pre-registered stopping rules. 41 keys resolved exact LOSS with cold
+two-pass node-identical determinism pairs (k16/k17 at the 2M stage, nodes
+1,228,696 / 1,831,284; the other 39 at the 15M stage, nodes sum 208,729,439
+bookkeeping); 1 key parked UNKNOWN at 15M (k05
+1152921504607932416:536870912, both runs 15,000,000, no cache row); the WIN
+stopping rule never fired (0 WIN rows). Machine summary:
+`output/batch-summary.json` (schema n11-seventhcost-batch-checkpoint-summary-v1),
+raw manifest `MANIFEST-raw-sha256.txt` (124 raw files). All rows are
+single-implementation (Node.js replica) results: the pinned C++
+second-implementation scrutiny gate and a third-implementation
+corroboration are separate future Parts before any adoption (the sixth-cost
+precedent). No verdict of this table may be consumed before the full
 batch audit, the merged cache increment and the SHA-256 manifest are
 published by the closing commit of this lane.
 
