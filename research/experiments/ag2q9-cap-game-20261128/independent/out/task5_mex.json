@@ -1,0 +1,61 @@
+{
+ "counts": {
+  "N3_formula": 77760,
+  "N3_dfs": 77760,
+  "N4_dfs": 1108080,
+  "N5_dfs": 8328096,
+  "N3_claim": 77760,
+  "N4_claim": 1108080,
+  "N5_claim": 8328096,
+  "N3_ok": true,
+  "N4_ok": true,
+  "N5_ok": true
+ },
+ "T_from_global": {
+  "3": 1,
+  "4": 57,
+  "5": 1071
+ },
+ "T_from_global_ok": true,
+ "mex_chain": {
+  "N0": 1,
+  "N1": 81,
+  "N2": 3240,
+  "N2_is_all_pairs": true,
+  "all_2_sets_are_caps": true,
+  "all_3_caps_one_orbit": true,
+  "G_of_3_caps": 1,
+  "G_of_2_caps_mex_1": 0,
+  "G_of_1_point_mex_0": 1,
+  "G_of_empty_mex_1": 0,
+  "reason": "A 2-cap has exactly the 72 three-caps through it as options; all three-caps have G=1, so mex{1}=0.  A 1-point position has the 80 two-caps through it as options, all G=0, so mex{0}=1.  The empty position has the 81 one-point positions as options, all G=1, so mex{1}=0."
+ },
+ "mex_chain_ok": true,
+ "claim_size_sums": {
+  "0": 1,
+  "1": 81,
+  "2": 3240,
+  "3": 77760,
+  "4": 1108080,
+  "5": 8328096,
+  "6": 26290656,
+  "7": 23794560,
+  "8": 3411720,
+  "9": 239760,
+  "10": 23328
+ },
+ "claim_total": 63277282,
+ "claim_total_ok": true,
+ "claim_size_sums_ok": true,
+ "claim_grundy_totals": {
+  "0": 19276705,
+  "1": 29537217,
+  "2": 13996800,
+  "3": 466560
+ },
+ "claim_grundy_totals_ok": true,
+ "parent_json_consistent_with_claim": true,
+ "parent_json_cone_size": 21353,
+ "parent_json_N3": 77760,
+ "all_task5_checks_ok": true
+}

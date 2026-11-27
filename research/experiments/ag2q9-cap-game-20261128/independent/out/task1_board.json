@@ -1,0 +1,120 @@
+{
+ "my_board": {
+  "convention": "index = 9*enc(y) + enc(x), enc(a+bi) = 3a+b",
+  "n_points": 81,
+  "n_lines": 90,
+  "axioms_ok": true,
+  "errors": [],
+  "parallel_classes": 10
+ },
+ "parent_board": {
+  "path": "research\\experiments\\ag2q9-cap-game-20261128\\output\\board_ag2q9.txt",
+  "n_points": 81,
+  "n_lines": 90,
+  "axioms_ok": true,
+  "errors": [],
+  "parallel_classes": 10
+ },
+ "parent_indexing": {
+  "point_index_formula": "idx(x,y) = 9*enc(x) + enc(y), enc(a+bi)=3a+b",
+  "line_order": "lines 0..8: vertical x=c (c in E order); lines 9..89: y=m*x+b with m in E order, then b in E order",
+  "first_nine_are_consecutive_blocks": true,
+  "first_nine_partition_the_points": true,
+  "lines_9_to_17_are_transversals": true,
+  "exact_reconstruction_of_all_90_lines": true,
+  "lines_equal_as_sets": 90,
+  "endpoints_match": true
+ },
+ "indexing_isomorphism": {
+  "map": "my index i = 9*enc(y)+enc(x) -> parent index 9*(i mod 9) + i//9",
+  "bijection": true,
+  "line_lists_equal_in_order": true,
+  "line_lists_equal_as_sets": true
+ },
+ "F": {
+  "script_mask_points": [
+   0,
+   1,
+   9
+  ],
+  "script_points_coords": [
+   [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ]
+   ],
+   [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     1
+    ]
+   ],
+   [
+    [
+     0,
+     1
+    ],
+    [
+     0,
+     0
+    ]
+   ]
+  ],
+  "script_is_cap": true,
+  "coords_mask_points": [
+   0,
+   3,
+   27
+  ],
+  "coords_points_coords": [
+   [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ]
+   ],
+   [
+    [
+     0,
+     0
+    ],
+    [
+     1,
+     0
+    ]
+   ],
+   [
+    [
+     1,
+     0
+    ],
+    [
+     0,
+     0
+    ]
+   ]
+  ],
+  "coords_is_cap": true,
+  "note": "Both are non-collinear triples, hence in the same AGL(2,9) orbit; the cone statistics only depend on the orbit.",
+  "my_board_mask": [
+   0,
+   1,
+   9
+  ],
+  "my_mask_maps_to_script_mask": true
+ },
+ "all_task1_checks_ok": true
+}
