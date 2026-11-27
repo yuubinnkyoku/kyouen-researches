@@ -1,0 +1,35 @@
+{
+  "board_checks": {
+    "n_lines": 21,
+    "all_lines_size_5": true,
+    "lines_distinct": true,
+    "point_degrees": [
+      5
+    ],
+    "all_point_degree_5": true,
+    "n_pairs": 210,
+    "expected_pairs": 210,
+    "every_pair_on_exactly_one_line": true,
+    "distinct_line_intersections": [
+      1
+    ],
+    "every_two_lines_meet_once": true,
+    "is_projective_plane_order_4": true
+  },
+  "counts": {
+    "0": 1,
+    "1": 21,
+    "2": 210,
+    "3": 1330,
+    "4": 5880,
+    "5": 18648,
+    "6": 41328,
+    "7": 58320,
+    "8": 42840,
+    "9": 11480
+  },
+  "total": 180058,
+  "max_size": 9,
+  "matches_claim": true,
+  "elapsed_s": 0.7606942653656006
+}
