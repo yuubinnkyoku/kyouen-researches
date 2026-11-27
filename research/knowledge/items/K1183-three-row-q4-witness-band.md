@@ -67,6 +67,15 @@ artifacts:
 - path: research/experiments/three-row-q4-m26-partition-20261128/output/m26_partition_closure.json
   role: data
   note: "m=26 63-triple 完全被覆台帳（decided 63 / pending 0 / uncovered 0・SAT 0）・全ピース合計 6,538,493 conflicts"
+- path: research/experiments/three-row-q4-m28-partition-20261128/README.md
+  role: proof
+  note: "P(28) SAT 行和分割独立確認の主張・台帳・m=26 との比較（2026-11-28・継続単一オーナー宣言 cfcdffde）"
+- path: research/experiments/three-row-q4-m28-partition-20261128/output/m28_partition_closure.json
+  role: data
+  note: "m=28 63-triple 完全被覆台帳（decided 63 / pending 0 / uncovered 0・SAT 0）・全ピース合計 8,381,193 conflicts"
+- path: research/experiments/three-row-q4-m28-partition-20261128/output/records_m28.jsonl
+  role: data
+  note: "m=28 台帳（row-k 4 + row-sum 10 + (3,2,3)/(2,3,3) leftmost-column 28分割x2・全 UNSAT）・決定性2件含む"
 - path: research/experiments/three-row-q4-m26-partition-20261128/scripts/partition_closure_3row.py
   role: verifier
   note: "閉包検査の一般化版（board_tag 引数化・m25 台帳で等価再生成を確認）"
@@ -109,7 +118,7 @@ artifacts:
 - path: research/experiments/three-row-q4-enumeration-20261121/scripts/dx34.js
   role: verifier
   note: "def-mode 列挙器 direct/fast（md5 b02235a9・fast は family・(3,a,b)・(2,2,2) を circle-class 表で厳密処理・selftest m=4..12 で direct == fast）"
-scope: "'有限機械検証: (SAT 側・kissat 4.0.4 linux-amd64 md5 3a5eba830aa6008a604fcc9bbe99a325) 3×m q=4 幅 4..23 の def-mode SAT 判定と witness、幅 4..8 の全数分類、9幅の census 2実装一致、m=24 の行和63分割全滅による witness-free 判定（較正1件含む35分割ピースは第二環境 bit-exact 再検証）。(列挙閉包側・SAT 非依存) 63プロファイル完全分割（family 9: wsearch34.js 構造完全探索 / fast 13: dx34.js circle-class 列挙 / lemma 41: crossing-supply 算術キル）で m=24..27 を掃引し全て witness-free: P(25), P(26), P(27) はこちらの方法のみで確定・P(24) は両方法で一致。ext28plus 拡張（同一 pin scripts・m=30/31 は A-side chunk 分割・集計器 agg_chunks.py が区間の exactly-once 分割〔configs 和 = C(m,3)²〕を機械検査）で m=28..31 も掃引し全て witness-free: P(28), P(29), P(30), P(31) は列挙閉包のみで確定。m≥32 は未掃引であり一切主張しない。上界 69 は K0024 引用。標準 11×11 空盤等には無関係。P(25) は 2026-11-28 に SAT 行和分割（m25-partition kit・row-k 4 + row-sum 12〔うち (3,2,3)/(2,3,3) は leftmost-column 25分割〕で全63 triple UNSAT・closure pending/uncovered 0・較正 bit-exact）で独立再確認され 2方法一致。P(26) も 2026-11-28 に同一の SAT 行和分割（m26-partition kit・(3,2,3)/(2,3,3) は leftmost-column 26分割・全63 triple UNSAT・closure pending/uncovered 0）で独立再確認され 2方法一致。'"
+scope: "'有限機械検証: (SAT 側・kissat 4.0.4 linux-amd64 md5 3a5eba830aa6008a604fcc9bbe99a325) 3×m q=4 幅 4..23 の def-mode SAT 判定と witness、幅 4..8 の全数分類、9幅の census 2実装一致、m=24 の行和63分割全滅による witness-free 判定（較正1件含む35分割ピースは第二環境 bit-exact 再検証）。(列挙閉包側・SAT 非依存) 63プロファイル完全分割（family 9: wsearch34.js 構造完全探索 / fast 13: dx34.js circle-class 列挙 / lemma 41: crossing-supply 算術キル）で m=24..27 を掃引し全て witness-free: P(25), P(26), P(27) はこちらの方法のみで確定・P(24) は両方法で一致。ext28plus 拡張（同一 pin scripts・m=30/31 は A-side chunk 分割・集計器 agg_chunks.py が区間の exactly-once 分割〔configs 和 = C(m,3)²〕を機械検査）で m=28..31 も掃引し全て witness-free: P(28), P(29), P(30), P(31) は列挙閉包のみで確定。m≥32 は未掃引であり一切主張しない。上界 69 は K0024 引用。標準 11×11 空盤等には無関係。P(25) は 2026-11-28 に SAT 行和分割（m25-partition kit・row-k 4 + row-sum 12〔うち (3,2,3)/(2,3,3) は leftmost-column 25分割〕で全63 triple UNSAT・closure pending/uncovered 0・較正 bit-exact）で独立再確認され 2方法一致。P(26) も 2026-11-28 に同一の SAT 行和分割（m26-partition kit・(3,2,3)/(2,3,3) は leftmost-column 26分割・全63 triple UNSAT・closure pending/uncovered 0）で独立再確認され 2方法一致。P(28) も 2026-11-28 に同一の SAT 行和分割（m28-partition kit・(3,2,3)/(2,3,3) は leftmost-column 28分割・全63 triple UNSAT・closure pending/uncovered 0・決定性代表2件 bit-exact）で独立再確認され 2方法一致。'"
 evidence: "'SAT 側: 各幅の判定は決定論的 kissat run・witness は 2系統独立検証 (sat.js verifyConfig + verify34.py・21/21 PASS〔中央行系20+外側行系1・witness 794円の独立交差検査は parity_lemmas.py で機械確認〕)・m=4..8 では独立全数列挙 (brute34.py) が欠損極大の存在件数まで一致。m=23 は中央行系 row-split と外側行系行和分割の両面で判定。census は JS/Python 2実装で 9幅 byte-identical。UNSAT 側: m=24 の行和63分割 ({0..3}^3 ∖ (3,3,3)) は row-k piece (sat3) 4件 + row-sum piece (sat4) 12件の計16件で exactly-once 被覆 (partition_closure.py 機械検査・pending/uncovered 0) し全 UNSAT・決定打は (2,3,3) rs=2,671,271 conflicts。全35分割ピース+較正1件は第二環境で CNF 再生成・kissat 再実行され conflicts が出版台帳と bit-exact 一致・交差符号化 (m=24 lexH-only 再判定 x2 UNSAT・m=23 V鏡像 rspec (3,3,2) 交差で同一 witness 型再現) で verdict 一致。S/X/Y パリティ補題は有限剰余列挙で機械完証明・被覆円家族 identity は exact-rational 2,124 checks 0 mismatch。列挙閉包側: m=24..27 で fast 52/52 count 0・family 12掃引 0 witness・lemma 41/41 算術キル(m≥22)。検証チェーン (crossval_summary.json overall PASS): dx34 direct ≡ brute34.py m=4..8 全プロファイル一致（def totals 182/674/1724/4607/11542）・fast ≡ direct m=4..12（selftest・mismatch 0）・wsearch34 ≡ brute family 15実行一致・m=23 陽性対照 witness は sat.js verifyConfig + witness_check.py (整数行列式) の2系統 PASS かつ先行出版 wit_3x23_outer_4 と石集合 byte-exact 再発見・補題キル台帳は m=4..12 全数列挙と矛盾 0。ext28plus: family 12掃引（m=28/29 は全域1実行・m=30 は2chunk・m=31 は3chunk・a 計数 0・分割完全性は crossval_summary_ext28_31.json が全検査 PASS）・fast 52/52 count 0・閉包台帳 m=28..31 は41/41 closed・m=23 陽性対照は拡張環境でも同一 witness 2件（configs 3136441）を再発見して較正。'"
 ---
 
@@ -167,6 +176,15 @@ P(m) ⟺「3×m の全極大安全配置がちょうど (q−1)·3 = 9 石」（
    26/26 UNSAT）で全63 triple UNSAT・closure pending 0 / uncovered 0・
    全ピース合計 6,538,493 conflicts・代表2件の再実行で conflicts bit-exact。
    **P(26) も 2方法一致** になった。m≥27 の新幅主張なし。
+   **追記3 (2026-11-28): P(28) も同一の SAT 行和分割
+   （three-row-q4-m28-partition-20261128・継続単一オーナー宣言 cfcdffde）で
+   独立確認**: row-k 4件 + row-sum 10件 + (3,2,3)/(2,3,3) の
+   leftmost-column 28分割（合計 3,364,388 / 4,220,958 conflicts・28/28 UNSAT・
+   両家族 c27 は lex 制約で即時 UNSAT）で全63 triple UNSAT・closure pending 0 /
+   uncovered 0・全ピース合計 8,381,193 conflicts・代表2件（s233_c11・(2,2,2)）の
+   再実行で conflicts bit-exact。較正は m=26 全16 CNF md5 16/16 一致 + 代表4片
+   conflicts 4/4 bit-exact。**P(28) も 2方法一致** になった（P(29..31) は
+   列挙閉包単独のまま）。m≥29 の新幅主張なし。
    ただし P は単調でない（m=31 witness-free でも m≥32 での witness 復活は否定
    されない）。**M_{3,4} ∈ [24, 69]（不変）**: M=24 ⟺ P(m) が m ≥ 32 でもすべて
    成立、残る不確定幅は 32..68 の 37 幅の掃引（m≥32 は pinned wsearch34.js の
