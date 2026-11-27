@@ -1,0 +1,7 @@
+{
+ "headline": "(6,6) 6x26 class {0} krow=0:4 minpos P=0..11 (complete sound H-split) all INDET at 272s caps - no witness found, no absence claim; M_{6,6} in [26,495] unchanged, frontier stays 6x26",
+ "positive_control": "6x25 class {2} krow=2:4 minpos=11 SAT 3,574,244 conflicts == published K1217 value bit-exact (241.07s)",
+ "obs_probe": "6x25 class {0} krow=0:4 minpos=11 INDET 4,280,184 conflicts at 272s (family analog at the known-SAT width, bookkeeping)",
+ "note": "class {0} band 1.36M-4.05M conflicts is lower than the class {2} band 3.73M-4.12M at the same caps; V-mirror covers class {5}; multi-deficiency classes and krow k<=3 splits remain unswept",
+ "scope": "honest negatives only; 11x11 and all root verdicts UNKNOWN, not consumed"
+}
