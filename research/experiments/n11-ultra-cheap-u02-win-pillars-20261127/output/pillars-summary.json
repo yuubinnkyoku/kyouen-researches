@@ -1,0 +1,55 @@
+{
+ "schema": "n11-ultra-cheap-u02-win-pillars-summary-v1",
+ "part": "ultra-cheap u02 WIN-row pillars (declared in research/log/2026-11-27-n11-ultra-cheap-u02-pillars-declaration.md, commit 20360db5)",
+ "target": {
+  "key": "1297036830121656320:131074",
+  "class_index": 2251,
+  "legal": 80,
+  "s5_index": 93815,
+  "replica_win_nodes": 3167121
+ },
+ "head_basis": {
+  "sha256_prefix": "0ec4080d",
+  "rows": 6891,
+  "win": 209,
+  "loss": 6682,
+  "target_absent_from_head": true
+ },
+ "cpp_gate": {
+  "result": "PASS",
+  "gate_line": "u02 GATE-PASS 80,15000000,1,3167121",
+  "passes": 2,
+  "determinism": "p1 == p2 on (legal,budget,result,nodes); node-exact with the published replica raw",
+  "anchors": {
+   "anchor-at2m": "98,2000000,0,2000000",
+   "anchor-aj001": "84,30000000,2,5156075",
+   "anchor-af039": "89,30000000,2,19234232"
+  },
+  "gate_source_sha256": "9193f5b6065e0fbcad2ef7c65f386187701cafa1f5b718cc35a5cbb0d138f92e",
+  "headers_sha256": ["5976935dcfccb9b5a26fa68f8de20868ce45363dd8c372dcd67d9b841167e7f5", "2e36d69481fafcde7aede8ae4fedf3d5477f91ee9846bcd4ae2975f32a4ba1a5"],
+  "zig": "0.13.0 (tarball d45312e61ebcc48032b77bc4cf7fd6915c11fa16e4aad116b66c9468211230ea), -std=c++20 -O3",
+  "tamper_battery": "4/4 fail-closed (T1 wrong expected rc=43, T2 raw nodes edit rc=42, T3 missing input rc=2, T4 third_impl legal mismatch rc=1)"
+ },
+ "third_impl": {
+  "result": "CORROBORATION-PASS (verdict-level)",
+  "script_sha256": "08ea958ff59c3234ec5ac55c5c40689bd0999a34e101a88ea0546800cc4a1998",
+  "args": "--row=u02 --stones=5 --legal=80 --lo=1297036830121656320 --hi=131074 --cap=400000000 --wallcap=260 --memo-power=22",
+  "result_value": 1,
+  "expansions": 3595562,
+  "ttHits": 2114848,
+  "legal_derived": 80,
+  "passes": 2,
+  "identical_to_pre_registered": true,
+  "identical_to_calibration_pair": true,
+  "reason": "clean",
+  "node_rc": 0
+ },
+ "pillar_status": "3/3 complete (replica cold pair + C++ gate + third implementation); adoption-eligible",
+ "disclosures": [
+  "pre-declaration third_impl calibration pair (result 1, expansions 3595562 x2) disclosed in the declaration; the official pair was re-run fresh post-declaration and is expansions-identical",
+  "the gate binary emits a zig glibc-version warning (host 2.41 vs provided 2.39); all rows ran to replay_done",
+  "the tamper battery ran on the same kit after the official passes; its FAIL lines are recorded only in tamper-battery-stdout.log and were removed from gate-status.log, which keeps the 4 official GATE-PASS lines",
+  "wall_s fields differ across passes; timing is not evidence"
+ ],
+ "status_guard": "pillar bookkeeping only; NO verdict consumed; no adoption here; the u02 row is cache bookkeeping, not a class closure, not a root verdict, transfers nothing; 11x11 UNKNOWN"
+}
