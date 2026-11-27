@@ -1,0 +1,5 @@
+T1 rc=43 (expect 43)
+T2 rc=42 (expect 42)
+T3 rc=2 (expect 2)
+T4 rc=1 (expect nonzero)
+clean control rc=0 SUMMARY-PASS

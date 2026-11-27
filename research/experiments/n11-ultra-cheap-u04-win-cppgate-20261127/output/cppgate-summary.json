@@ -1,0 +1,49 @@
+{
+ "schema": "n11-ultra-cheap-u04-win-cppgate-summary-v1",
+ "part": "ultra-cheap u04 WIN-row C++ second-implementation scrutiny gate (completes the two-pillar requirement left OPEN by n11-ultra-cheap-u04-thirdimpl-20261127)",
+ "row": {
+  "key": "1152921505747697664:1032",
+  "class_index": 23101,
+  "legal": 85,
+  "budget": "15000000",
+  "expected": "85,15000000,1,9149084",
+  "input_pin": "e09332d76bd506e7a6613e29411fbd06b55135389c02260727336375c3fb6479"
+ },
+ "gate": {
+  "status": "GATE-PASS 85,15000000,1,9149084 (fresh-cold pair node-identical, node-exact vs the published escalation raw)",
+  "source_sha256": "9193f5b6065e0fbcad2ef7c65f386187701cafa1f5b718cc35a5cbb0d138f92e",
+  "build": "zig 0.13.0 c++ -std=c++20 -O2 (tarball pin d45312e6)",
+  "anchors": {
+   "anchor-at2m": {
+    "expected": "98,2000000,0,2000000",
+    "status": "GATE-PASS pair node-identical"
+   },
+   "anchor-aj001": {
+    "expected": "84,30000000,2,5156075",
+    "status": "GATE-PASS pair node-identical"
+   },
+   "anchor-af039": {
+    "expected": "89,30000000,2,19234232",
+    "status": "GATE-PASS pair node-identical"
+   }
+  }
+ },
+ "third_impl": {
+  "kit": "n11-ultra-cheap-u04-thirdimpl-20261127",
+  "summary_sha256": "542fb19f14583d445dfd67f22646bb47e3693a77bc18b054989f4d8d81389ccd",
+  "result": 1,
+  "expansions": 10728035,
+  "passes": 2,
+  "status": "CORROBORATION-PASS (published separately, commit 2691ac04)"
+ },
+ "pillars": "BOTH COMPLETE for u04: escalation replica + C++ gate (this kit) + third-impl corroboration (published kit 2691ac04); adoption remains a separate declared Part",
+ "disclosures": [
+  "gate source + headers byte-fetched from the published tenth-cost k01k02 cppgate kit and sha256-verified against the standing pins 9193f5b6/5976935d/2e36d694",
+  "zig 0.13.0 tarball pin d45312e6 re-verified before build; -std=c++20 as in the standing build recipe",
+  "anchor raws reproduce the published u03 pillars kit raw sha256 prefixes exactly (cross-host determinism)",
+  "u04 pair wall_s 17 vs 18; af039 pair wall_s 38 vs 37 (host wall-clock only)",
+  "no other key was run at any budget in this Part",
+  "no u04 adoption is performed here; the standing WIN-side flip-census review is required before any adoption"
+ ],
+ "status_guard": "pillar bookkeeping only; NO verdict consumed; nodes are bookkeeping; 11x11 UNKNOWN"
+}

@@ -1,0 +1,53 @@
+{
+ "schema": "n11-ultra-cheap-u04-win-cppgate-rows-v1",
+ "targets": {
+  "u04": {
+   "key": "1152921505747697664:1032",
+   "class_index": 23101,
+   "legal": 85,
+   "budget": "15000000",
+   "expected": "85,15000000,1,9149084",
+   "input_pin": "e09332d76bd506e7a6613e29411fbd06b55135389c02260727336375c3fb6479"
+  }
+ },
+ "anchors": {
+  "anchor-at2m": {
+   "budget": "2000000",
+   "expected": "98,2000000,0,2000000",
+   "input_pin": "ecc0299b8142abde201fcc40ea9666dac7368d0888d0600abc717af66ddfe348"
+  },
+  "anchor-aj001": {
+   "budget": "30000000",
+   "expected": "84,30000000,2,5156075",
+   "input_pin": "2f6daea5ca3b3fe6b7713c8d450af3f3c9f203acacb8a1340255d8e8f656496c"
+  },
+  "anchor-af039": {
+   "budget": "30000000",
+   "expected": "89,30000000,2,19234232",
+   "input_pin": "e51a3c9de08c62a54d80547c520876af4245394d05e37bbebf01d74204f64691"
+  }
+ },
+ "gate_source": {
+  "kyouen_dfpn_root.cpp": "9193f5b6065e0fbcad2ef7c65f386187701cafa1f5b718cc35a5cbb0d138f92e",
+  "kyouen_residual_micro.hpp": "5976935d",
+  "n11_s5_quarantine.hpp": "2e36d694",
+  "build": "zig 0.13.0 c++ -std=c++20 -O2 (tarball pin d45312e6)"
+ },
+ "head_basis": {
+  "cache": "merged-exact-s5-chain-plus-ultra-cheap-u03-20261127.cache",
+  "sha256_prefix": "c5082866",
+  "rows": 6893,
+  "win": 211,
+  "loss": 6682,
+  "target_absent_from_head": true
+ },
+ "third_impl_kit": {
+  "kit": "n11-ultra-cheap-u04-thirdimpl-20261127",
+  "summary_sha256": "542fb19f14583d445dfd67f22646bb47e3693a77bc18b054989f4d8d81389ccd",
+  "result": 1,
+  "expansions": 10728035,
+  "passes": 2,
+  "status": "CORROBORATION-PASS (published separately, commit 2691ac04)"
+ },
+ "status_guard": "pillar bookkeeping only; NO verdict consumed; 11x11 UNKNOWN"
+}
