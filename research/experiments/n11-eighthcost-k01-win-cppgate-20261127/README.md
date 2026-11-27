@@ -45,13 +45,39 @@ raw p1/p2 per row, audit_gate.json x4) published by the run-record
 waves. MANIFEST-sha256.txt published with the kit and refreshed with
 the run record.
 
-## Run record
+## Run record (2026-11-27, publish-then-execute per declaration, wave A)
 
-PENDING (wave A declaration published at HEAD 28b01ced; official
-execution to follow on this host: zig 0.13.0 tarball sha256
-d45312e6..., zig c++ -O2, binary not pinned; pre-registered order
+Waves A/B published first (declaration commit 28b01ced; kit commit
+7ed92d18 with maker gates all PASS, 2 runs byte-identical). Official
+execution 07:11:06Z-07:13:29Z sequential (pre-registered order
 anchor-at2m, anchor-aj001, anchor-af039, then the single k01 target at
-budget 15000000; 2 fresh-cold passes per row, HARD-STOP on mismatch).
-A pre-declaration sanity run of anchor-at2m on this host already
-reproduced 98,2000000,0,2000000 (disclosed; before the declaration
-push, on the probe copy, not the kit).
+budget 15000000), all 4 rows GATE-PASS with (legal,budget,result,nodes)
+exactly the published values (output/gate-status.log):
+**k01 GATE-PASS 84,15000000,1,8514427 - the pinned C++ second
+implementation reproduces the published WIN(1) verdict of the at15m
+cold pair (3be9db9b x2) node-exactly** (second WIN-side row of the
+gate lineage after SX). Results wave C 86d9659e.
+
+Audit: fresh single-row audit PASS, 31/31 gates, 3 runs
+byte-identical (audit_gate.json sha256 4c3a81fc575f7e36aa85f09e3b0bef
+b30d5def5c6c4ea4df8cb7e017eb038b7e). Tamper battery 3/3 fail-closed
+(T1 audit expected pin flip -> G0:target-expected + G3:k01 / T2 raw
+k01.p1 nodes edit -> G2:k01 + G3:k01 / T3 phantom GATE-PASS line ->
+G4) + clean control rc=0 (tamper.log, scratch copy only).
+
+Pillar status after this Part: k01 (1297036692750860288:64) has the
+replica cold pair (3be9db9b x2), the C++ second-implementation gate
+(this Part) and the published third-implementation CORROBORATION-PASS
+(third_impl 08ea958f) - implementation-pillar parity with the k05
+precedent. Adoption stays a separately declared Part under the parent
+batch's WIN/LOSS conflict policy. No verdict consumed: the k01 WIN row
+stays a gate-verified UNCONSUMED label; the canonical head 5b6e77f7
+(6,874 rows WIN202/LOSS6672) keeps it absent (G6 re-verified at audit
+time). The standard 11x11 empty board, every central-reply root, the
+two-stone root {60,27}, its remaining third moves {100,108}, S2, class
+1/2/4 and all closure classes stay UNKNOWN. Nodes are bookkeeping.
+
+Host disclosure: zig 0.13.0 (tarball sha256 d45312e6...), zig c++ -O2,
+binary not pinned. A pre-declaration sanity run of anchor-at2m on this
+host (probe copy, before the declaration push) already reproduced
+98,2000000,0,2000000.
