@@ -1,0 +1,21 @@
+== replay of explicit witness words ==
+  C -> to_phi(A): word [6, 6, 0, 2, 3, 6, 6, 6] = ['D1', 'D1', 'E01', 'E10', 'E12', 'D1', 'D1', 'D1']
+    image (10, 28, 31, 59, 65, 67)  target (10, 28, 31, 59, 65, 67)  collineation=True
+  B -> to_phi^2(A): word [4, 0, 1, 6, 6, 1, 6, 7, 5, 3] = ['E20', 'E01', 'E02', 'D1', 'D1', 'E02', 'D1', 'D2', 'E21', 'E12']
+    image (10, 29, 33, 37, 43, 46)  target (10, 29, 33, 37, 43, 46)  collineation=True
+PASS witness word C -> phi(A) verified  [8 letters]
+PASS witness word B -> phi^2(A) verified  [10 letters]
+
+== phi maps whole PGL orbits cyclically ==
+PASS orbit_A.bin has 686,784 caps  [686784]
+PASS orbit_B.bin has 686,784 caps  [686784]
+PASS orbit_C.bin has 686,784 caps  [686784]
+PASS phi(orbit A) = orbit C (all 686,784 caps)  [0 images outside]
+PASS phi(orbit C) = orbit B (all 686,784 caps)  [0 images outside]
+PASS phi(orbit B) = orbit A (all 686,784 caps)  [0 images outside]
+PASS phi(A) is a cap of orbit_C.bin
+PASS phi^2(A) is a cap of orbit_B.bin
+PASS A is not in orbit_B.bin or orbit_C.bin
+PASS B is not in orbit_C.bin
+
+12 checks, 0 failed

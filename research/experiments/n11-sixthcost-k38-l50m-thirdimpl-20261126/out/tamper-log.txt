@@ -1,0 +1,15 @@
+# tamper battery: full kit copies, fail-closed expectation rc=1 each
+T1 (k38-cold-a.txt verdict flip 2->1):
+  gates 31 fails 3 rc=1
+  FAILED: G25_C2_k38_determinism_3runs_identical, G26_C2_k38_loss_verdict_level_vs_replica, G27_C2_k38_verify_legal_identical
+T2 (at50m-run1-k38.out.csv replica nodes edit 21839049->21839048):
+  gates 31 fails 3 rc=1
+  FAILED: G11_repl_sha_at50m-run1, G16_repl_row_at50m-run1, G18_repl_stage_structure
+T3 (calib-anchor-w2-a.txt expansions edit 7583990->7583991):
+  gates 31 fails 2 rc=1
+  FAILED: G20_C1_anchor_w2_run_a, G22_C1_anchor_w2_identical
+tamper battery 3/3 fail-closed (rc=1); all tamper copies deleted; the
+tamper commands touched only the copies (T1/T3 sed on kit-t1/kit-t3
+copies, T2 sed on the kit-t2 replica-raw copy). Post-tamper clean control
+rc=0 byte-identical to the pre-tamper baseline audit output
+(sha256 b6a403b2e9338e0ec24a6b613026679b536b7ed08d66f7302b773f88230454b3).

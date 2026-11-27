@@ -1,0 +1,165 @@
+BOARD n=24 blocks=759 fmt_ok=1 size_ok=1 distinct_ok=1 range_ok=1 dup_blocks=0
+FIVES incidences=42504 distinct=42504 C(24,5)=42504 max_multiplicity=1
+GOLAY rank=12 span=4096 weights 0:1 4:0 8:759 12:2576 16:759 20:0 24:1
+GOLAY weight8_equals_blocks=1 DODECADS=2576
+UNSAFE_MARKS 11303787
+SAFE_TOTAL 7932035
+SAFE 0 1
+SAFE 1 24
+SAFE 2 276
+SAFE 3 2024
+SAFE 4 10626
+SAFE 5 42504
+SAFE 6 134596
+SAFE 7 346104
+SAFE 8 734712
+SAFE 9 1295360
+SAFE 10 1870176
+SAFE 11 2071104
+SAFE 12 1393616
+SAFE 13 30912
+SAFE 14 0
+MAXIMAL_TOTAL 1051008
+ROOT 0
+SIZE 0 safe=1 maximal=0
+GSIZE 0 0 1
+SIZE 1 safe=24 maximal=0
+GSIZE 1 1 24
+SIZE 2 safe=276 maximal=0
+GSIZE 2 0 276
+SIZE 3 safe=2024 maximal=0
+GSIZE 3 1 2024
+SIZE 4 safe=10626 maximal=0
+GSIZE 4 0 10626
+SIZE 5 safe=42504 maximal=0
+GSIZE 5 1 42504
+SIZE 6 safe=134596 maximal=0
+GSIZE 6 0 134596
+SIZE 7 safe=346104 maximal=0
+GSIZE 7 1 346104
+SIZE 8 safe=734712 maximal=0
+GSIZE 8 0 734712
+SIZE 9 safe=1295360 maximal=0
+GSIZE 9 1 728640
+GSIZE 9 2 566720
+SIZE 10 safe=1870176 maximal=0
+GSIZE 10 0 1700160
+GSIZE 10 1 170016
+SIZE 11 safe=2071104 maximal=0
+GSIZE 11 0 30912
+GSIZE 11 2 2040192
+SIZE 12 safe=1393616 maximal=1020096
+GSIZE 12 0 1020096
+GSIZE 12 1 373520
+SIZE 13 safe=30912 maximal=30912
+GSIZE 13 0 30912
+SIZE 14 safe=0 maximal=0
+MAXLIST 12 1020096 13 30912
+DODECADSUBSETS 9 566720
+DODECADSUBSETS 10 170016
+DODECADSUBSETS 11 30912
+DODECADSUBSETS 12 2576
+SIZE12 nonmax=373520 nonmax_dodecad=2576 nonmax_nondodecad=370944 nonmax_nondodecad_with_dodecad11=370944 maximal_with_dodecad11=0
+CROSS k=9 type=nondodecad G=1 count=728640
+CROSS k=9 type=dodecad G=2 count=566720
+CROSS k=10 type=nondodecad G=0 count=1700160
+CROSS k=10 type=dodecad G=1 count=170016
+CROSS k=11 type=nondodecad G=2 count=2040192
+CROSS k=11 type=dodecad G=0 count=30912
+CROSS k=12 type=nondodecad G=0 count=1020096
+CROSS k=12 type=nondodecad G=1 count=370944
+CROSS k=12 type=dodecad G=1 count=2576
+PROFILE k=9 type=nondodecad 12:168 13:14 count=728640
+PROFILE_TYPES k=9 type=nondodecad distinct=1
+PROFILE k=9 type=dodecad 12:180 13:21 count=566720
+PROFILE_TYPES k=9 type=dodecad distinct=1
+PROFILE k=10 type=nondodecad 12:36 13:4 count=1700160
+PROFILE_TYPES k=10 type=nondodecad distinct=1
+PROFILE k=10 type=dodecad 12:36 13:12 count=170016
+PROFILE_TYPES k=10 type=dodecad distinct=1
+PROFILE k=11 type=nondodecad 12:6 13:1 count=2040192
+PROFILE_TYPES k=11 type=nondodecad distinct=1
+PROFILE k=11 type=dodecad 12:0 13:12 count=30912
+PROFILE_TYPES k=11 type=dodecad distinct=1
+PROFILE k=12 type=nondodecad 12:1 13:0 count=1020096
+PROFILE k=12 type=nondodecad 12:0 13:1 count=370944
+PROFILE_TYPES k=12 type=nondodecad distinct=2
+PROFILE k=12 type=dodecad 12:0 13:12 count=2576
+PROFILE_TYPES k=12 type=dodecad distinct=1
+SAMPLE k=9 type=nondodecad mask=264079 G=1 12:168 13:14 points=0,1,2,3,7,8,9,10,18,
+SAMPLE k=9 type=nondodecad mask=2339204 G=1 12:168 13:14 points=2,7,8,12,13,15,16,17,21,
+SAMPLE k=9 type=nondodecad mask=8476826 G=1 12:168 13:14 points=1,3,4,7,11,12,14,16,23,
+SAMPLE k=9 type=nondodecad mask=166828 G=1 12:168 13:14 points=2,3,5,7,8,9,11,15,17,
+SAMPLE k=9 type=nondodecad mask=7914760 G=1 12:168 13:14 points=3,8,10,14,15,19,20,21,22,
+SAMPLE k=9 type=nondodecad mask=4227934 G=1 12:168 13:14 points=1,2,3,4,6,8,9,15,22,
+SAMPLE k=9 type=nondodecad mask=4262866 G=1 12:168 13:14 points=1,4,6,7,8,9,11,16,22,
+SAMPLE k=9 type=nondodecad mask=6689158 G=1 12:168 13:14 points=1,2,7,8,12,17,18,21,22,
+SAMPLE k=9 type=nondodecad mask=13050117 G=1 12:168 13:14 points=0,2,8,13,16,17,18,22,23,
+SAMPLE k=9 type=nondodecad mask=5450882 G=1 12:168 13:14 points=1,7,10,11,13,16,17,20,22,
+SAMPLE k=9 type=dodecad mask=1195784 G=2 12:180 13:21 points=3,8,9,10,11,12,13,17,20,
+SAMPLE k=9 type=dodecad mask=3387524 G=2 12:180 13:21 points=2,7,12,13,15,16,17,20,21,
+SAMPLE k=9 type=dodecad mask=1968901 G=2 12:180 13:21 points=0,2,8,9,11,17,18,19,20,
+SAMPLE k=9 type=dodecad mask=1210630 G=2 12:180 13:21 points=1,2,8,11,12,13,14,17,20,
+SAMPLE k=9 type=dodecad mask=625873 G=2 12:180 13:21 points=0,4,6,7,10,11,15,16,19,
+SAMPLE k=9 type=dodecad mask=1324720 G=2 12:180 13:21 points=4,5,7,9,10,12,13,18,20,
+SAMPLE k=9 type=dodecad mask=14722307 G=2 12:180 13:21 points=0,1,8,10,13,15,21,22,23,
+SAMPLE k=9 type=dodecad mask=12263441 G=2 12:180 13:21 points=0,4,13,16,17,19,20,21,23,
+SAMPLE k=9 type=dodecad mask=13189360 G=2 12:180 13:21 points=4,5,6,7,14,16,19,22,23,
+SAMPLE k=9 type=dodecad mask=4484032 G=2 12:180 13:21 points=6,7,8,9,11,13,14,18,22,
+SAMPLE k=10 type=nondodecad mask=3870763 G=0 12:36 13:4 points=0,1,3,5,12,16,17,19,20,21,
+SAMPLE k=10 type=nondodecad mask=6948209 G=0 12:36 13:4 points=0,4,5,6,8,10,17,19,21,22,
+SAMPLE k=10 type=nondodecad mask=1938057 G=0 12:36 13:4 points=0,3,7,9,12,15,16,18,19,20,
+SAMPLE k=10 type=nondodecad mask=8817091 G=0 12:36 13:4 points=0,1,6,7,8,11,15,17,18,23,
+SAMPLE k=10 type=nondodecad mask=11668523 G=0 12:36 13:4 points=0,1,3,5,10,11,17,20,21,23,
+SAMPLE k=10 type=nondodecad mask=7485957 G=0 12:36 13:4 points=0,2,9,11,12,13,17,20,21,22,
+SAMPLE k=10 type=nondodecad mask=10754792 G=0 12:36 13:4 points=3,5,6,7,9,11,12,18,21,23,
+SAMPLE k=10 type=nondodecad mask=12898056 G=0 12:36 13:4 points=3,8,9,10,11,14,15,18,22,23,
+SAMPLE k=10 type=nondodecad mask=10908752 G=0 12:36 13:4 points=4,6,10,12,13,14,17,18,21,23,
+SAMPLE k=10 type=nondodecad mask=16124484 G=0 12:36 13:4 points=2,6,9,11,17,18,20,21,22,23,
+SAMPLE k=10 type=dodecad mask=4772391 G=1 12:36 13:12 points=0,1,2,5,9,12,14,15,19,22,
+SAMPLE k=10 type=dodecad mask=7378252 G=1 12:36 13:12 points=2,3,6,8,10,12,15,20,21,22,
+SAMPLE k=10 type=dodecad mask=1202602 G=1 12:36 13:12 points=1,3,5,7,8,11,12,14,17,20,
+SAMPLE k=10 type=dodecad mask=1366200 G=1 12:36 13:12 points=3,4,5,7,11,12,14,15,18,20,
+SAMPLE k=10 type=dodecad mask=10161190 G=1 12:36 13:12 points=1,2,5,10,11,16,17,19,20,23,
+SAMPLE k=10 type=dodecad mask=7694856 G=1 12:36 13:12 points=3,9,11,13,14,16,18,20,21,22,
+SAMPLE k=10 type=dodecad mask=13119052 G=1 12:36 13:12 points=2,3,6,9,10,11,13,19,22,23,
+SAMPLE k=10 type=dodecad mask=73681 G=1 12:36 13:12 points=0,4,6,7,8,9,10,11,12,16,
+SAMPLE k=10 type=dodecad mask=1649873 G=1 12:36 13:12 points=0,4,6,7,10,11,13,16,19,20,
+SAMPLE k=10 type=dodecad mask=3672948 G=1 12:36 13:12 points=2,4,5,6,8,9,11,19,20,21,
+SAMPLE k=11 type=nondodecad mask=8197158 G=2 12:6 13:1 points=1,2,5,10,12,16,18,19,20,21,22,
+SAMPLE k=11 type=nondodecad mask=16155809 G=2 12:6 13:1 points=0,5,7,10,15,17,18,20,21,22,23,
+SAMPLE k=11 type=nondodecad mask=9672762 G=2 12:6 13:1 points=1,3,4,5,11,12,15,16,17,20,23,
+SAMPLE k=11 type=nondodecad mask=3745002 G=2 12:6 13:1 points=1,3,5,6,7,10,13,16,19,20,21,
+SAMPLE k=11 type=nondodecad mask=15754524 G=2 12:6 13:1 points=2,3,4,8,10,13,14,20,21,22,23,
+SAMPLE k=11 type=nondodecad mask=1265604 G=2 12:6 13:1 points=2,6,7,8,9,10,11,14,16,17,20,
+SAMPLE k=11 type=nondodecad mask=9768493 G=2 12:6 13:1 points=0,2,3,5,9,10,11,16,18,20,23,
+SAMPLE k=11 type=nondodecad mask=9902634 G=2 12:6 13:1 points=1,3,5,9,11,12,16,17,18,20,23,
+SAMPLE k=11 type=nondodecad mask=848665 G=2 12:6 13:1 points=0,3,4,8,9,12,13,14,15,18,19,
+SAMPLE k=11 type=nondodecad mask=14853290 G=2 12:6 13:1 points=1,3,5,7,10,13,15,17,21,22,23,
+SAMPLE k=11 type=dodecad mask=8770883 G=0 12:0 13:12 points=0,1,6,8,10,12,14,15,16,18,23,
+SAMPLE k=11 type=dodecad mask=5866558 G=0 12:0 13:12 points=1,2,3,4,5,10,15,16,19,20,22,
+SAMPLE k=11 type=dodecad mask=3758853 G=0 12:0 13:12 points=0,2,8,9,11,12,14,16,19,20,21,
+SAMPLE k=11 type=dodecad mask=8477275 G=0 12:0 13:12 points=0,1,3,4,6,9,11,12,14,16,23,
+SAMPLE k=11 type=dodecad mask=10953315 G=0 12:0 13:12 points=0,1,5,6,9,13,16,17,18,21,23,
+SAMPLE k=11 type=dodecad mask=14778611 G=0 12:0 13:12 points=0,1,4,5,6,7,15,16,21,22,23,
+SAMPLE k=11 type=dodecad mask=10438738 G=0 12:0 13:12 points=1,4,6,11,14,16,17,18,19,20,23,
+SAMPLE k=11 type=dodecad mask=6218376 G=0 12:0 13:12 points=3,7,9,13,14,15,17,18,19,20,22,
+SAMPLE k=11 type=dodecad mask=3395924 G=0 12:0 13:12 points=2,4,6,8,12,14,15,16,17,20,21,
+SAMPLE k=11 type=dodecad mask=9259489 G=0 12:0 13:12 points=0,5,6,7,8,11,14,16,18,19,23,
+SAMPLE k=12 type=nonmaximal mask=7548209 G=1 12:0 13:1 points=0,4,5,8,10,11,13,16,17,20,21,22,
+SAMPLE k=12 type=maximal mask=3560306 G=0 12:1 13:0 points=1,4,5,6,8,9,12,14,17,18,20,21,
+SAMPLE k=12 type=maximal mask=5173848 G=0 12:1 13:0 points=3,4,6,9,12,13,14,15,17,18,19,22,
+SAMPLE k=12 type=nonmaximal mask=10146187 G=1 12:0 13:1 points=0,1,3,7,8,12,14,15,17,19,20,23,
+SAMPLE k=12 type=maximal mask=9611479 G=0 12:1 13:0 points=0,1,2,4,6,7,11,13,15,17,20,23,
+SAMPLE k=12 type=maximal mask=1199567 G=0 12:1 13:0 points=0,1,2,3,6,7,8,10,11,14,17,20,
+SAMPLE k=12 type=maximal mask=6561431 G=0 12:1 13:0 points=0,1,2,4,7,9,10,11,12,18,21,22,
+SAMPLE k=12 type=nonmaximal mask=4942003 G=1 12:0 13:1 points=0,1,4,5,7,11,13,14,16,17,19,22,
+SAMPLE k=12 type=nonmaximal mask=3681739 G=1 12:0 13:1 points=0,1,3,6,7,8,10,11,13,19,20,21,
+SAMPLE k=12 type=nonmaximal mask=8804045 G=1 12:0 13:1 points=0,2,3,6,7,9,10,12,14,17,18,23,
+SAMPLE k=13 type=maximal mask=6887999 G=0 12:0 13:1 points=0,1,2,3,4,5,9,11,12,16,19,21,22,
+SAMPLE k=13 type=maximal mask=15364269 G=0 12:0 13:1 points=0,2,3,5,7,12,13,14,17,19,21,22,23,
+SAMPLE k=13 type=maximal mask=13978926 G=0 12:0 13:1 points=1,2,3,5,8,10,11,14,16,18,20,22,23,
+SAMPLE k=13 type=maximal mask=5320179 G=0 12:0 13:1 points=0,1,4,5,6,7,8,10,11,13,16,20,22,
+SAMPLE k=13 type=maximal mask=6399986 G=0 12:0 13:1 points=1,4,5,6,7,8,9,10,13,15,16,21,22,
+DODECAD_CHECK wrong_g=0 moves_ok=1 pairs=370944 pair_bad=0 distinct_extensions=370944 (expect 370944)
+TOTAL_G 0:3662291 1:1662832 2:2606912

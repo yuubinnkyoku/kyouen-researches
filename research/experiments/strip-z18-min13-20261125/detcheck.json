@@ -1,0 +1,113 @@
+{
+ "all_runs_byte_identical": true,
+ "battery_declared_pts": 15680,
+ "battery_pts": 15680,
+ "byte_identical_with_predry": true,
+ "claims_scope": "T-Z18 + 12 cell lemmas F18f13..A618f13 + corollaries, proven on paper in the declaration note section 2; this battery is a finite engine cross-check, NOT a proof.",
+ "declaration_note_commit": "71c66058703fc5accf54537ed9cc8a4b5230af85",
+ "declaration_note_repair_commit": "b94835e01484af71057147d4ff1d0dd0761aee63",
+ "declaration_note_sha256": "693829551b5db06e3eb99be83c77c9eb761288a2fa183739fc6e4aaaa90ed77a",
+ "eleven_by_eleven": "UNKNOWN unchanged; verdict not consumed.",
+ "engine_sha": "bd5f22e415a78368c9b798296bc84948d5637decbf3c21a92404d45fb12e3a92",
+ "gates": {
+  "D1_cells": {
+   "bad": 0,
+   "declared_pts": 1596,
+   "pts": 1596
+  },
+  "D2_strip": {
+   "bad": 0,
+   "declared_pts": 286,
+   "pts": 286
+  },
+  "D3_z17_anchors": {
+   "bad": 0,
+   "declared_pts": 382,
+   "pts": 382
+  },
+  "D4_stair_anchors": {
+   "bad": 0,
+   "declared_pts": 372,
+   "pts": 372
+  },
+  "D5_self_anchors": {
+   "bad": 0,
+   "declared_pts": 12780,
+   "pts": 12780
+  },
+  "D6_deviant_witnesses": {
+   "bad": 0,
+   "declared_pts": 22,
+   "pts": 22
+  },
+  "D7_extension_anchors": {
+   "bad": 0,
+   "declared_pts": 109,
+   "pts": 109
+  },
+  "D8_belowband_anchors": {
+   "bad": 0,
+   "declared_pts": 133,
+   "pts": 133
+  }
+ },
+ "machine": "verify_k1328",
+ "machine_sha256": "5d8b03c2c6557aeeedca12009625b93c39ab29b10ef3a332e0b13a9208a9bb9a",
+ "machine_source_commit": "8b157c9e6d46e4edd8f3a7b811cb01b421cf2418",
+ "overall_bad": 0,
+ "predry_stdout_sha256": "246aa6fdca5a128b9b1611a7902af41b87d101b1fcafc27ec41c9d8533928d3b",
+ "protocol": "publish-then-execute: official runs executed from the PUBLISHED bytes (raw fetch-back + cmp before every run)",
+ "runs": [
+  {
+   "battery_pts": 15680,
+   "mode": "PYTHONHASHSEED=random same-cwd isolated-dir",
+   "overall_bad": 0,
+   "rc": 0,
+   "result": "PASS",
+   "run": 1,
+   "stdout_sha256": "246aa6fdca5a128b9b1611a7902af41b87d101b1fcafc27ec41c9d8533928d3b"
+  },
+  {
+   "battery_pts": 15680,
+   "mode": "PYTHONHASHSEED=1 same-cwd isolated-dir",
+   "overall_bad": 0,
+   "rc": 0,
+   "result": "PASS",
+   "run": 2,
+   "stdout_sha256": "246aa6fdca5a128b9b1611a7902af41b87d101b1fcafc27ec41c9d8533928d3b"
+  },
+  {
+   "battery_pts": 15680,
+   "mode": "env -i isolated-dir (/usr/local/bin/python3)",
+   "overall_bad": 0,
+   "rc": 0,
+   "result": "PASS",
+   "run": 3,
+   "stdout_sha256": "246aa6fdca5a128b9b1611a7902af41b87d101b1fcafc27ec41c9d8533928d3b"
+  },
+  {
+   "battery_pts": 15680,
+   "mode": "env -i isolated-dir (/usr/local/bin/python3)",
+   "overall_bad": 0,
+   "rc": 0,
+   "result": "PASS",
+   "run": 4,
+   "stdout_sha256": "246aa6fdca5a128b9b1611a7902af41b87d101b1fcafc27ec41c9d8533928d3b"
+  }
+ ],
+ "status": "OFFICIAL-PASS",
+ "tamper_battery": {
+  "content_modes_rc": {
+   "anchor17": 1,
+   "belowband": 1,
+   "cell": 1,
+   "deviant": 1,
+   "ext": 1,
+   "stair": 1,
+   "strip": 1
+  },
+  "engine_rc": 2,
+  "fail_closed": 8,
+  "modes": 8
+ }
+}

@@ -1,0 +1,296 @@
+{
+  "arithmetic": {
+    "3_times_pgl": 49448448,
+    "orbit3": 2060352,
+    "pgl_over_orbit": 24,
+    "pgl_times_24": 395587584,
+    "total_over_24": 2060352,
+    "total_times_24": 49448448
+  },
+  "board_ok": true,
+  "caps": {
+    "A": {
+      "addable": [],
+      "cap": true,
+      "n_addable": 0,
+      "points": [
+        10,
+        47,
+        49,
+        55,
+        61,
+        64
+      ],
+      "six_distinct": true
+    },
+    "B": {
+      "addable": [],
+      "cap": true,
+      "n_addable": 0,
+      "points": [
+        17,
+        27,
+        30,
+        44,
+        52,
+        70
+      ],
+      "six_distinct": true
+    },
+    "C": {
+      "addable": [],
+      "cap": true,
+      "n_addable": 0,
+      "points": [
+        8,
+        48,
+        50,
+        51,
+        58,
+        61
+      ],
+      "six_distinct": true
+    },
+    "phi(A)": {
+      "addable": [],
+      "cap": true,
+      "n_addable": 0,
+      "points": [
+        10,
+        28,
+        31,
+        59,
+        65,
+        67
+      ],
+      "six_distinct": true
+    },
+    "phi^2(A)": {
+      "addable": [],
+      "cap": true,
+      "n_addable": 0,
+      "points": [
+        10,
+        29,
+        33,
+        37,
+        43,
+        46
+      ],
+      "six_distinct": true
+    }
+  },
+  "checks": [
+    {
+      "detail": "",
+      "name": "GF(8): commutative/associative/distributive/inverses, x=2 primitive",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "board: 73 rows of 9 points",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "rank convention: generated 73 lines == board rows (as sets)",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "board lines are 73 distinct lines",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "each point lies on exactly 9 lines",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "every pair of points lies on a unique line",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "every pair of lines meets in a unique point",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "phi is a bijection on the 73 points",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "phi^3 = identity on all 73 points",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "phi != identity (order exactly 3)",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "phi is a field automorphism with fixed field GF(2)",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "phi maps every board line to a board line (collineation)",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "phi induces a bijection (order 3) on the 73 lines",
+      "passed": true
+    },
+    {
+      "detail": "computed (10, 28, 31, 59, 65, 67) claimed (10, 28, 31, 59, 65, 67)",
+      "name": "phi(A) equals claimed set",
+      "passed": true
+    },
+    {
+      "detail": "computed (10, 29, 33, 37, 43, 46) claimed (10, 29, 33, 37, 43, 46)",
+      "name": "phi^2(A) equals claimed set",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "A, B, C, phi(A), phi^2(A) are 6-caps",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "A, B, C, phi(A), phi^2(A) are maximal (no addable point)",
+      "passed": true
+    },
+    {
+      "detail": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2
+      ],
+      "name": "generator matrices are invertible (det != 0)",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "no generator matrix is scalar",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "generator permutations are non-identity",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "every generator maps every line to a line (collineation group)",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "every generator induces a permutation of the 73 lines",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "all 7 scalar matrices act trivially on points",
+      "passed": true
+    },
+    {
+      "detail": "time 1.19s",
+      "name": "generated permutation group has order 16482816 (= |GL|/7 = 16482816)",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "|GL(3,8)| = (8^3-1)(8^3-8)(8^3-8^2) = 115379712",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "115379712 / 7 = 16482816",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "group is transitive on the 73 points",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "point stabiliser order 225792 = |PGL|/73 = 225792",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "group is transitive on the 73 lines",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "3*16,482,816 = 49,448,448",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "2,060,352*24 = 49,448,448",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "49,448,448/24 = 2,060,352 (exact)",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "3*686,784 = 2,060,352",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "16,482,816/686,784 = 24 (exact)",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "49,448,448/2,060,352 = 24 (exact)",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "phi normalises the generated PGL group (all 8 conjugates in PGL)",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "<PGL, phi> has order 49448448 = 3*|PGL| = 49,448,448",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "phi is not in PGL (|PGL| != |<PGL,phi>|)",
+      "passed": true
+    }
+  ],
+  "elapsed_sec": 19.814024925231934,
+  "field_ok": true,
+  "gl_order": 115379712,
+  "n_checks": 38,
+  "n_failed": 0,
+  "pgamma_order": 49448448,
+  "pgl_order": 16482816,
+  "pgl_order_expected": 16482816,
+  "phi_in_pgl": false,
+  "phi_normalises_pgl": true,
+  "phi_ok": true,
+  "point_stabilizer": 225792
+}

@@ -1,0 +1,164 @@
+{
+ "anchors": {
+  "anchor-af039": "89,30000000,2,19234232",
+  "anchor-aj001": "84,30000000,2,5156075",
+  "anchor-at2m": "98,2000000,0,2000000"
+ },
+ "anchors_runtime": {
+  "anchor-af039": [
+   "30000000",
+   "89,30000000,2,19234232"
+  ],
+  "anchor-aj001": [
+   "30000000",
+   "84,30000000,2,5156075"
+  ],
+  "anchor-at2m": [
+   "2000000",
+   "98,2000000,0,2000000"
+  ]
+ },
+ "auditor_source": {
+  "note": "the SX audit is a FRESH single-row implementation (Part SS precedent), not a byte transform; disclosed in the declaration and README",
+  "path": "research/experiments/n11-seventhcost-41loss-cppgate-20261127/scripts/audit_gate.py"
+ },
+ "canonical_head": {
+  "LOSS": 6631,
+  "WIN": 201,
+  "label": "42dbb58f",
+  "path": "research/experiments/n11-centralreply-sixthlossk38-adoption-reaudit-20261126/output/merged-exact-s5-chain-plus-sixthlossk38-20261126.cache",
+  "rows": 6832,
+  "sha256": "42dbb58ffe8dd02a81f4a92993d08e3fbebdaeb4b4f7bf33e142120ff055bdc4",
+  "targets_fresh_vs": "42dbb58f"
+ },
+ "gate_source": {
+  "commit": "154f3b7a67b97e13acbaee8b04dc74ddca728d19",
+  "header_pins": {
+   "kyouen_residual_micro.hpp": "5976935dcfccb9b5a26fa68f8de20868ce45363dd8c372dcd67d9b841167e7f5",
+   "n11_s5_quarantine.hpp": "2e36d69481fafcde7aede8ae4fedf3d5477f91ee9846bcd4ae2975f32a4ba1a5"
+  },
+  "path": "cpp/solvers/kyouen_dfpn_root.cpp",
+  "sha256": "9193f5b6065e0fbcad2ef7c65f386187701cafa1f5b718cc35a5cbb0d138f92e"
+ },
+ "gates": {
+  "G0:gate-source-commit": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "G0:kyouen_dfpn_root.cpp": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "G0:kyouen_residual_micro.hpp": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "G0:n11_s5_quarantine.hpp": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "G0:sw-kit-gate-rows-read": {
+   "detail": "n11-seventhcost-41loss-cppgate-rows-v1",
+   "status": "PASS"
+  },
+  "G1:k05-cold-pair-identity-except-wall": {
+   "detail": "replay,0,5,90,0,50000000,1,15763505,87,1152921504607932416,536870912 vs replay,0,5,90,0,50000000,1,15763505,87,1152921504607932416,536870912",
+   "status": "PASS"
+  },
+  "G1:k05-expected-quadruple-from-raw": {
+   "detail": "replay,0,5,90,0,50000000,1,15763505,87,1152921504607932416,536870912",
+   "status": "PASS"
+  },
+  "G1:k05-input-present": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "G1:k05-input-row-spec-shape": {
+   "detail": "target,0,5,1152921504607932416,536870912,90,0,0,0,0,0",
+   "status": "PASS"
+  },
+  "G1:k05-input-sha==published-manifest-pin": {
+   "detail": "a73a6c70a221619b94ce29c188434d24a1f8af43653b37c1019a3286ba2ddb91",
+   "status": "PASS"
+  },
+  "G1:k05-raw-run1-sha==ff750cc6": {
+   "detail": "ff750cc63e3ead314a5c5a22b09cca5588f284a34dc08c5c4d1cc5716eda342c",
+   "status": "PASS"
+  },
+  "G1:k05-raw-run2-sha==ff750cc6": {
+   "detail": "ff750cc63e3ead314a5c5a22b09cca5588f284a34dc08c5c4d1cc5716eda342c",
+   "status": "PASS"
+  },
+  "G1:k05-stage-policy-2m-unknown": {
+   "detail": "replay,0,5,90,0,2000000,0,2000000,8,1152921504607932416,536870912",
+   "status": "PASS"
+  },
+  "G1:k05-win-inside-budget": {
+   "detail": "replay,0,5,90,0,50000000,1,15763505,87,1152921504607932416,536870912",
+   "status": "PASS"
+  },
+  "G2:anchor-af039:input-present": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "G2:anchor-af039:input==sw-kit-byte-clone": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "G2:anchor-aj001:input-present": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "G2:anchor-aj001:input==sw-kit-byte-clone": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "G2:anchor-at2m:input-present": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "G2:anchor-at2m:input==sw-kit-byte-clone": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "G2:anchors==sw-kit": {
+   "detail": "{'anchor-af039': '89,30000000,2,19234232', 'anchor-aj001': '84,30000000,2,5156075', 'anchor-at2m': '98,2000000,0,2000000'}",
+   "status": "PASS"
+  },
+  "G2:canonical-head-census": {
+   "detail": "rows=6832 WIN=201 LOSS=6631",
+   "status": "PASS"
+  },
+  "G2:canonical-head-sha": {
+   "detail": "42dbb58ffe8dd02a81f4a92993d08e3fbebdaeb4b4f7bf33e142120ff055bdc4",
+   "status": "PASS"
+  },
+  "G2:freshness-k05-absent": {
+   "detail": "k05 must be absent from 42dbb58f",
+   "status": "PASS"
+  },
+  "G3:runner-transform-byte-exact": {
+   "detail": "runner sha256=5f019c416900f7f9363f454b5343241850aa31ebc9a46fff3799aade804d269f",
+   "status": "PASS"
+  }
+ },
+ "part": "SX",
+ "schema": "n11-seventhcost-k05-l50m-cppgate-rows-v1",
+ "target": {
+  "k05": {
+   "budget": "50000000",
+   "expected": "90,50000000,1,15763505",
+   "hi": "536870912",
+   "input_sha256": "a73a6c70a221619b94ce29c188434d24a1f8af43653b37c1019a3286ba2ddb91",
+   "legal": "90",
+   "lo": "1152921504607932416",
+   "raw_pair_sha256": "ff750cc63e3ead314a5c5a22b09cca5588f284a34dc08c5c4d1cc5716eda342c",
+   "raw_provenance": "research/experiments/n11-seventhcost-class-s5-exclusive-probe-1306043891938492416-20261126/output/raw/at50m-run1-k05.out.csv",
+   "replica_verdict": 1
+  }
+ },
+ "third_impl": {
+  "exists": false,
+  "note": "k05 WIN row: single-implementation Node replica cold pair + this delegated second-implementation gate; third-impl corroboration is a separate future Part before any adoption (k20/k33 WIN precedent)"
+ }
+}

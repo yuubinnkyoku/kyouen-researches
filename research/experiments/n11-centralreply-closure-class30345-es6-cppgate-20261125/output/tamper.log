@@ -1,0 +1,19 @@
+== Part ET tamper battery (protocol: every tamper byte-change asserted before the audit run; restore byte-verified) ==
+T1 pre-assert: audit ROWS pin sha changed 6825e04714084e9e3c23f632f51b13c01702934d771b9a7c3ad1139b0325fc10 -> e45be1a66b88e8024e4284d5436bc39ec543b054a7b1d3096ecce4ef9a80d67a
+T1 audit-pin break -> rc=1 (expect 1)
+audit_gate: FAIL
+FAIL G3:ai007 observed 84,30000000,1,16090493 expected 84,30000000,1,16090494 (ES kit output/raw/ai007.p1.out (replay...,16090493,...); two-pass node-exact vs ai007.p2)
+T1 restore byte-OK
+T2 pre-assert: raw sha changed d0ac312e8428ff5e0c92a370e9366968730334bb61d218d1a7f7d37415798f2c -> f1b031da3a24c45ff475524a913e337c17dba35a629485495d180adb03589408
+T2 raw nodes alter -> rc=1 (expect 1)
+audit_gate: FAIL
+FAIL G2:ai024 p1=0,5,86,0,30000000,2,19127058,39,1152922604118479104,65536 p2=0,5,86,0,30000000,2,19127057,39,1152922604118479104,65536
+FAIL G3:ai024 observed 86,30000000,2,19127058 expected 86,30000000,2,19127057 (ES kit output/raw/ai024.p1.out (replay...,19127057,...); two-pass node-exact vs ai024.p2)
+T2 restore byte-OK
+T3 pre-assert: status sha changed ff10256547b67a8dc8b8e425de2296a067bc6677cff3de004892bf504bf00ca7 -> 83f350582c290c084f437880255a97fdd0531e82fd760e7dba12ba6c670f8517
+T3 phantom GATE-PASS -> rc=1 (expect 1)
+audit_gate: FAIL
+FAIL G4 passes=10/9 bad=0
+T3 restore byte-OK
+clean control -> rc=0 (expect 0)
+2c6d7441d6f752f160efbe7e275b807ff174d8cd70ece3c85aed135ead11c0d0  output/audit_gate.json

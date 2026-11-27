@@ -1,0 +1,744 @@
+{
+ "schema": "evwin4-decomp-deltas-v1",
+ "part": "EV",
+ "date": "2026-11-26",
+ "base": {
+  "cache_sha256": "3ba486086703b9f44a0c685d7d5b45fab80f86760f2cd032a8dc18a2690233d6",
+  "rows": 6767,
+  "win": 188,
+  "loss": 6579,
+  "refresh_summary_sha256": "2b70bb55b25635f78e2cdd9559d8eab30d9c98640e5507ad280c6a510d958477",
+  "closure_classes_sha256": "59a4c85fdd25a8d161bfb46598a8f8c77a684c996d456ba85b125f840134bf0e",
+  "per_root_coverage_sha256": "cfc2bfe15508c4d0c3455ca2f2abedd2a233d01118dbae95353bdc5b79f8e47f",
+  "probe_worklist_sha256": "397a43794be60442725825371a5cfba9c2744a69b8f5d32cb3a3f313ced29ba6",
+  "class_status_counts": {
+   "unknown": 34430,
+   "excluded_now": 90,
+   "free_now": 39,
+   "excluded": 390
+  }
+ },
+ "scen": {
+  "cache_sha256": "63f33c4f620583449641102026b261c559ae5ecc29713cd6445d6fe9369858f0",
+  "cache_path_of_record": "research/experiments/n11-centralreply-evwin4-adoption-predecl-20261126/output/merged-exact-s5-chain-plus-evwin4-20261126.cache",
+  "rows": 6771,
+  "win": 192,
+  "loss": 6579,
+  "increment_sha256": "7f1256108d697bd96d473e55a5509dea35f4c0b1be45893cac3f667c4b3f55c4",
+  "manifest_sha256": "f013a8f54807297c649538958bbc19b156eab7d469019a1d1dbf7bc31a4726b9",
+  "merge_audit_sha256": "d9713aed5c0679605bb3e10e0198e1c15fd7b5b3867f3a253f5251b8a0dc667f",
+  "refresh_summary_sha256": "1fafd0811d4b5e806a11cf610111967b9d6fdb741fa86b68688ef1cee4411e6e",
+  "closure_classes_sha256": "6ba51faa9824ba5065a8e938cc6970ce2ace464f74d26f30582cbaa8334c930d",
+  "per_root_coverage_sha256": "d9eee976e52c38c71440a26cb6f9f14ae68439feaec21e17600b1052870dd502",
+  "probe_worklist_regen_pin_sha256": "ca50cb68c10827e7e24e02c02e0166813b57ad646eb169bf8bd2c827fcdd09df",
+  "probe_worklist_not_published_size_policy_bytes": 3717416,
+  "class_status_counts": {
+   "unknown": 34417,
+   "excluded_now": 103,
+   "free_now": 39,
+   "excluded": 390
+  }
+ },
+ "dossier_supersession": {
+  "dossier_increment_sha256": "8d0e43ed34b80142143f16d5fc4b1aa900473badc17341425ac517053552a7c7",
+  "part_increment_sha256": "7f1256108d697bd96d473e55a5509dea35f4c0b1be45893cac3f667c4b3f55c4",
+  "row_region_byte_identical": true,
+  "merged_cache_byte_identical": true,
+  "note": "the dossier increment header declared pre-declaration dossier status; the Part-emitted increment supersedes it with the Part EV adoption header; the 4 s5verdict rows are byte-identical and the merged scenario cache of record carries the published dossier sha 63f33c4f..."
+ },
+ "adopted": {
+  "ids": [
+   "b018",
+   "d002",
+   "e002",
+   "f017"
+  ],
+  "nodes_total": 26544863,
+  "classes": {
+   "16757": 1,
+   "20421": 1,
+   "16371": 1,
+   "12264": 1
+  },
+  "condition": "closure-batch 15M two-pass fresh-cold node-exact replica raws + EV C++ gate two-pass node-exact + third-impl a/b verdict-level corroboration (re-verified live by the Part maker; NO new solver pass ran)",
+  "gate": "Part EV C++ second implementation, audit 0327dad8..., 7/7 GATE-PASS, 4/4 byte-identical audit re-runs"
+ },
+ "class_flips": {
+  "count": 13,
+  "direction": "unknown->excluded_now",
+  "classes": {
+   "4864": {
+    "status_base": "unknown",
+    "status_scen": "excluded_now",
+    "adopted_members": [
+     "e002"
+    ],
+    "cost_size": 101,
+    "cost_unknown_base": 101,
+    "cost_unknown_scen": 100
+   },
+   "4903": {
+    "status_base": "unknown",
+    "status_scen": "excluded_now",
+    "adopted_members": [
+     "e002"
+    ],
+    "cost_size": 103,
+    "cost_unknown_base": 102,
+    "cost_unknown_scen": 101
+   },
+   "5255": {
+    "status_base": "unknown",
+    "status_scen": "excluded_now",
+    "adopted_members": [
+     "d002"
+    ],
+    "cost_size": 104,
+    "cost_unknown_base": 104,
+    "cost_unknown_scen": 103
+   },
+   "5282": {
+    "status_base": "unknown",
+    "status_scen": "excluded_now",
+    "adopted_members": [
+     "d002"
+    ],
+    "cost_size": 95,
+    "cost_unknown_base": 95,
+    "cost_unknown_scen": 94
+   },
+   "5613": {
+    "status_base": "unknown",
+    "status_scen": "excluded_now",
+    "adopted_members": [
+     "e002"
+    ],
+    "cost_size": 105,
+    "cost_unknown_base": 105,
+    "cost_unknown_scen": 104
+   },
+   "6030": {
+    "status_base": "unknown",
+    "status_scen": "excluded_now",
+    "adopted_members": [
+     "d002"
+    ],
+    "cost_size": 102,
+    "cost_unknown_base": 102,
+    "cost_unknown_scen": 101
+   },
+   "12264": {
+    "status_base": "unknown",
+    "status_scen": "excluded_now",
+    "adopted_members": [
+     "f017"
+    ],
+    "cost_size": 52,
+    "cost_unknown_base": 51,
+    "cost_unknown_scen": 50
+   },
+   "12327": {
+    "status_base": "unknown",
+    "status_scen": "excluded_now",
+    "adopted_members": [
+     "f017"
+    ],
+    "cost_size": 99,
+    "cost_unknown_base": 99,
+    "cost_unknown_scen": 98
+   },
+   "14776": {
+    "status_base": "unknown",
+    "status_scen": "excluded_now",
+    "adopted_members": [
+     "f017"
+    ],
+    "cost_size": 59,
+    "cost_unknown_base": 59,
+    "cost_unknown_scen": 58
+   },
+   "15640": {
+    "status_base": "unknown",
+    "status_scen": "excluded_now",
+    "adopted_members": [
+     "b018"
+    ],
+    "cost_size": 93,
+    "cost_unknown_base": 93,
+    "cost_unknown_scen": 92
+   },
+   "16371": {
+    "status_base": "unknown",
+    "status_scen": "excluded_now",
+    "adopted_members": [
+     "e002"
+    ],
+    "cost_size": 52,
+    "cost_unknown_base": 2,
+    "cost_unknown_scen": 1
+   },
+   "16757": {
+    "status_base": "unknown",
+    "status_scen": "excluded_now",
+    "adopted_members": [
+     "b018"
+    ],
+    "cost_size": 49,
+    "cost_unknown_base": 3,
+    "cost_unknown_scen": 2
+   },
+   "20421": {
+    "status_base": "unknown",
+    "status_scen": "excluded_now",
+    "adopted_members": [
+     "d002"
+    ],
+    "cost_size": 49,
+    "cost_unknown_base": 6,
+    "cost_unknown_scen": 5
+   }
+  },
+  "per_key_owner_classes": {
+   "b018": [
+    15640,
+    16757,
+    30345
+   ],
+   "d002": [
+    5255,
+    5282,
+    6030,
+    20421
+   ],
+   "e002": [
+    4864,
+    4903,
+    5613,
+    16371
+   ],
+   "f017": [
+    12264,
+    12327,
+    14776
+   ]
+  },
+  "owner_union_nonflip_classes": {
+   "30345": "excluded_now (EP flip via ai048; EU chain carried)"
+  }
+ },
+ "closure_classes": {
+  "rows_before_after": [
+   805,
+   805
+  ],
+  "left_rows": [],
+  "entered_rows": [],
+  "rank_churn": {
+   "1849": [
+    2,
+    3
+   ],
+   "2251": [
+    3,
+    4
+   ],
+   "12264": [
+    13,
+    11
+   ],
+   "13342": [
+    11,
+    12
+   ],
+   "16371": [
+    4,
+    1
+   ],
+   "23101": [
+    1,
+    2
+   ],
+   "30118": [
+    12,
+    13
+   ]
+  },
+  "rank_churn_nature": "16371 rises 4->1 (unknown_now 2->1, full 52-child class excluded); 12264 falls 13->11 displacing 30118/13342/23101/1849/2251 by one each; no renumbering elsewhere",
+  "unknown_churn": {
+   "12264": [
+    "51",
+    "50"
+   ],
+   "16371": [
+    "2",
+    "1"
+   ],
+   "16757": [
+    "3",
+    "2"
+   ],
+   "20421": [
+    "6",
+    "5"
+   ],
+   "30345": [
+    "5",
+    "4"
+   ]
+  },
+  "groups_served_churn": {}
+ },
+ "frozen_update8": {
+  "union_baseline": 31859,
+  "resolved": [
+   260,
+   263
+  ],
+  "remaining_now": [
+   31505,
+   31445
+  ],
+  "groups_free_now": [
+   131,
+   131
+  ],
+  "win_hit_groups_base_identical": [
+   {
+    "first": 12,
+    "third": 40,
+    "fourth": 96,
+    "reply": 60,
+    "s4_class_index": 30354,
+    "unknown_s5_children": 97
+   },
+   {
+    "first": 12,
+    "third": 80,
+    "fourth": 96,
+    "reply": 60,
+    "s4_class_index": 30354,
+    "unknown_s5_children": 97
+   },
+   {
+    "first": 12,
+    "third": 96,
+    "fourth": 40,
+    "reply": 60,
+    "s4_class_index": 30354,
+    "unknown_s5_children": 97
+   },
+   {
+    "first": 24,
+    "third": 40,
+    "fourth": 108,
+    "reply": 60,
+    "s4_class_index": 30354,
+    "unknown_s5_children": 97
+   },
+   {
+    "first": 24,
+    "third": 80,
+    "fourth": 108,
+    "reply": 60,
+    "s4_class_index": 30354,
+    "unknown_s5_children": 97
+   },
+   {
+    "first": 24,
+    "third": 108,
+    "fourth": 40,
+    "reply": 60,
+    "s4_class_index": 30354,
+    "unknown_s5_children": 97
+   },
+   {
+    "first": 36,
+    "third": 20,
+    "fourth": 90,
+    "reply": 60,
+    "s4_class_index": 30354,
+    "unknown_s5_children": 97
+   },
+   {
+    "first": 36,
+    "third": 30,
+    "fourth": 100,
+    "reply": 60,
+    "s4_class_index": 30354,
+    "unknown_s5_children": 97
+   },
+   {
+    "first": 36,
+    "third": 90,
+    "fourth": 20,
+    "reply": 60,
+    "s4_class_index": 30354,
+    "unknown_s5_children": 97
+   },
+   {
+    "first": 36,
+    "third": 100,
+    "fourth": 30,
+    "reply": 60,
+    "s4_class_index": 30354,
+    "unknown_s5_children": 97
+   }
+  ],
+  "win_hit_groups_new_15": [
+   {
+    "first": 0,
+    "third": 5,
+    "fourth": 10,
+    "reply": 60,
+    "s4_class_index": 12264,
+    "unknown_s5_children": 51
+   },
+   {
+    "first": 0,
+    "third": 10,
+    "fourth": 5,
+    "reply": 60,
+    "s4_class_index": 12264,
+    "unknown_s5_children": 51
+   },
+   {
+    "first": 0,
+    "third": 55,
+    "fourth": 110,
+    "reply": 60,
+    "s4_class_index": 12264,
+    "unknown_s5_children": 51
+   },
+   {
+    "first": 0,
+    "third": 110,
+    "fourth": 55,
+    "reply": 60,
+    "s4_class_index": 12264,
+    "unknown_s5_children": 51
+   },
+   {
+    "first": 5,
+    "third": 0,
+    "fourth": 10,
+    "reply": 60,
+    "s4_class_index": 12264,
+    "unknown_s5_children": 51
+   },
+   {
+    "first": 5,
+    "third": 10,
+    "fourth": 0,
+    "reply": 60,
+    "s4_class_index": 12264,
+    "unknown_s5_children": 51
+   },
+   {
+    "first": 12,
+    "third": 51,
+    "fourth": 81,
+    "reply": 60,
+    "s4_class_index": 20421,
+    "unknown_s5_children": 49
+   },
+   {
+    "first": 12,
+    "third": 81,
+    "fourth": 51,
+    "reply": 60,
+    "s4_class_index": 20421,
+    "unknown_s5_children": 49
+   },
+   {
+    "first": 36,
+    "third": 50,
+    "fourth": 84,
+    "reply": 60,
+    "s4_class_index": 16757,
+    "unknown_s5_children": 48
+   },
+   {
+    "first": 36,
+    "third": 70,
+    "fourth": 84,
+    "reply": 60,
+    "s4_class_index": 16757,
+    "unknown_s5_children": 48
+   },
+   {
+    "first": 36,
+    "third": 84,
+    "fourth": 50,
+    "reply": 60,
+    "s4_class_index": 16757,
+    "unknown_s5_children": 48
+   },
+   {
+    "first": 37,
+    "third": 73,
+    "fourth": 100,
+    "reply": 60,
+    "s4_class_index": 20421,
+    "unknown_s5_children": 49
+   },
+   {
+    "first": 37,
+    "third": 100,
+    "fourth": 73,
+    "reply": 60,
+    "s4_class_index": 20421,
+    "unknown_s5_children": 49
+   },
+   {
+    "first": 48,
+    "third": 40,
+    "fourth": 80,
+    "reply": 60,
+    "s4_class_index": 16757,
+    "unknown_s5_children": 48
+   },
+   {
+    "first": 48,
+    "third": 80,
+    "fourth": 40,
+    "reply": 60,
+    "s4_class_index": 16757,
+    "unknown_s5_children": 48
+   }
+  ],
+  "win_hit_delta_note": "10 base groups (all class 30354, recorded unknown_s5_children 97) stay identical; EXACTLY 15 new groups join, all quartets of classes 12264 (6) / 16757 (5) / 20421 (4); zero groups removed"
+ },
+ "per_root": {
+  "free_now_uncovered": "identical at all 20 rows incl. baseline; no coverage claim",
+  "greedy_union_changes": {
+   "0": [
+    2980,
+    2789
+   ],
+   "5": [
+    2884,
+    2883
+   ],
+   "12": [
+    2848,
+    2846
+   ],
+   "36": [
+    3005,
+    2951
+   ],
+   "37": [
+    3620,
+    3619
+   ],
+   "48": [
+    2895,
+    2893
+   ]
+  },
+  "joint_greedy": [
+   36619,
+   36618
+  ],
+  "group_best_options_nonfree": [
+   2105,
+   2105
+  ],
+  "worklist_total": [
+   64307,
+   64302
+  ]
+ },
+ "class_records": {
+  "4864": {
+   "class": 4864,
+   "boundary_raw": 101,
+   "cost_size": 101,
+   "cost_unknown_base": 101,
+   "cost_unknown_scen": 100,
+   "adopted_members": [
+    "e002"
+   ],
+   "status_base": "unknown",
+   "status_scen": "excluded_now"
+  },
+  "4903": {
+   "class": 4903,
+   "boundary_raw": 105,
+   "cost_size": 103,
+   "cost_unknown_base": 102,
+   "cost_unknown_scen": 101,
+   "adopted_members": [
+    "e002"
+   ],
+   "status_base": "unknown",
+   "status_scen": "excluded_now"
+  },
+  "5255": {
+   "class": 5255,
+   "boundary_raw": 104,
+   "cost_size": 104,
+   "cost_unknown_base": 104,
+   "cost_unknown_scen": 103,
+   "adopted_members": [
+    "d002"
+   ],
+   "status_base": "unknown",
+   "status_scen": "excluded_now"
+  },
+  "5282": {
+   "class": 5282,
+   "boundary_raw": 95,
+   "cost_size": 95,
+   "cost_unknown_base": 95,
+   "cost_unknown_scen": 94,
+   "adopted_members": [
+    "d002"
+   ],
+   "status_base": "unknown",
+   "status_scen": "excluded_now"
+  },
+  "5613": {
+   "class": 5613,
+   "boundary_raw": 105,
+   "cost_size": 105,
+   "cost_unknown_base": 105,
+   "cost_unknown_scen": 104,
+   "adopted_members": [
+    "e002"
+   ],
+   "status_base": "unknown",
+   "status_scen": "excluded_now"
+  },
+  "6030": {
+   "class": 6030,
+   "boundary_raw": 103,
+   "cost_size": 102,
+   "cost_unknown_base": 102,
+   "cost_unknown_scen": 101,
+   "adopted_members": [
+    "d002"
+   ],
+   "status_base": "unknown",
+   "status_scen": "excluded_now"
+  },
+  "12264": {
+   "class": 12264,
+   "boundary_raw": 52,
+   "cost_size": 52,
+   "cost_unknown_base": 51,
+   "cost_unknown_scen": 50,
+   "adopted_members": [
+    "f017"
+   ],
+   "status_base": "unknown",
+   "status_scen": "excluded_now"
+  },
+  "12327": {
+   "class": 12327,
+   "boundary_raw": 99,
+   "cost_size": 99,
+   "cost_unknown_base": 99,
+   "cost_unknown_scen": 98,
+   "adopted_members": [
+    "f017"
+   ],
+   "status_base": "unknown",
+   "status_scen": "excluded_now"
+  },
+  "14776": {
+   "class": 14776,
+   "boundary_raw": 59,
+   "cost_size": 59,
+   "cost_unknown_base": 59,
+   "cost_unknown_scen": 58,
+   "adopted_members": [
+    "f017"
+   ],
+   "status_base": "unknown",
+   "status_scen": "excluded_now"
+  },
+  "15640": {
+   "class": 15640,
+   "boundary_raw": 96,
+   "cost_size": 93,
+   "cost_unknown_base": 93,
+   "cost_unknown_scen": 92,
+   "adopted_members": [
+    "b018"
+   ],
+   "status_base": "unknown",
+   "status_scen": "excluded_now"
+  },
+  "16371": {
+   "class": 16371,
+   "boundary_raw": 52,
+   "cost_size": 52,
+   "cost_unknown_base": 2,
+   "cost_unknown_scen": 1,
+   "adopted_members": [
+    "e002"
+   ],
+   "status_base": "unknown",
+   "status_scen": "excluded_now"
+  },
+  "16757": {
+   "class": 16757,
+   "boundary_raw": 49,
+   "cost_size": 49,
+   "cost_unknown_base": 3,
+   "cost_unknown_scen": 2,
+   "adopted_members": [
+    "b018"
+   ],
+   "status_base": "unknown",
+   "status_scen": "excluded_now"
+  },
+  "20421": {
+   "class": 20421,
+   "boundary_raw": 50,
+   "cost_size": 49,
+   "cost_unknown_base": 6,
+   "cost_unknown_scen": 5,
+   "adopted_members": [
+    "d002"
+   ],
+   "status_base": "unknown",
+   "status_scen": "excluded_now"
+  },
+  "30345": {
+   "class": 30345,
+   "boundary_raw": 51,
+   "cost_size": 50,
+   "cost_unknown_base": 5,
+   "cost_unknown_scen": 4,
+   "adopted_members": [
+    "b018"
+   ],
+   "status_base": "excluded_now",
+   "status_scen": "excluded_now"
+  },
+  "30354": {
+   "class": 30354,
+   "boundary_raw": 97,
+   "cost_size": 97,
+   "cost_unknown_base": 96,
+   "cost_unknown_scen": 96,
+   "adopted_members": [],
+   "status_base": "excluded_now",
+   "status_scen": "excluded_now"
+  }
+ },
+ "dossier_census_crosscheck": {
+  "measurement_sha256": "ab97fba9149991be00f3d4f35d1382a974ff4dcedb15443eb23206b5b416d7d1",
+  "agreement": "EXACT on census counts, 13 flips, closure churn, per-root greedy deltas, joint greedy, worklist totals, update8 numbers, the 15 new win_hit quartets and both cache identities",
+  "superseded_scope_fields": "verdict.consumed=NOTHING / part_ev_declared=false describe the dossier-time status and are superseded by this Part declaration; not asserted"
+ },
+ "honesty": {
+  "fourth_win_adoption": true,
+  "no_root_verdict": "no root verdict is asserted or implied by any class flip",
+  "exclusion_effect": "13 classes become excluded (known WIN cost child ends free all-LOSS coverage): joint greedy 36,619 -> 36,618, worklist shrinks 64,307 -> 64,302 (-5), individual greedy shrinks at 6 roots (0: -191, 36: -54, 12: -2, 5: -1, 48: -2, 37: -1): scheduling bookkeeping only",
+  "unknown_still": "34,417 S4 classes remain status-unknown; 11x11 stays UNKNOWN",
+  "unconsumed": "the 21 closure-batch LOSS rows, k04 and every other unconsumed probe-level WIN stay in NO cache; no root, no root class and no closure class verdict is asserted"
+ }
+}

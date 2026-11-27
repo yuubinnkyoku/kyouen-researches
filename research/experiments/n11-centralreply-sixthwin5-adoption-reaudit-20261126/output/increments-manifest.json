@@ -1,0 +1,406 @@
+{
+ "adopted_nodes_total": 45999378,
+ "adopted_table": [
+  {
+   "hi": 68157440,
+   "legal": 87,
+   "lo": 1297036692683751424,
+   "nodes": 7717432,
+   "owner_classes_graph": [
+    1387,
+    3077,
+    30354
+   ],
+   "result": 1,
+   "s5_index": 64872,
+   "serving_class": 3077
+  },
+  {
+   "hi": 65792,
+   "legal": 81,
+   "lo": 10376293541461626880,
+   "nodes": 9255414,
+   "owner_classes_graph": [
+    2339,
+    3077,
+    16734
+   ],
+   "result": 1,
+   "s5_index": 96472,
+   "serving_class": 3077
+  },
+  {
+   "hi": 65536,
+   "legal": 83,
+   "lo": 10376293541461626888,
+   "nodes": 9433024,
+   "owner_classes_graph": [
+    3077,
+    30329
+   ],
+   "result": 1,
+   "s5_index": 112201,
+   "serving_class": 3077
+  },
+  {
+   "hi": 65536,
+   "legal": 88,
+   "lo": 10376293541461757952,
+   "nodes": 13397611,
+   "owner_classes_graph": [
+    2169,
+    3077,
+    25845
+   ],
+   "result": 1,
+   "s5_index": 91506,
+   "serving_class": 3077
+  },
+  {
+   "hi": 68719476736,
+   "legal": 89,
+   "lo": 10376293610182148096,
+   "nodes": 6195897,
+   "owner_classes_graph": [
+    774,
+    3077
+   ],
+   "result": 1,
+   "s5_index": 39127,
+   "serving_class": 3077
+  }
+ ],
+ "adopted_table_digest_sha256": "b6ea1bcc10829498add9c87bb874b18dd95904ddf83f022ee67af06c06d93b0c",
+ "base_cache_absent_hits_for_emitted": 0,
+ "base_cache_rows": 6792,
+ "base_cache_sha256": "6e49dd841b7bfcb335d86ef2479c95f47ab7acbcf41ace389a8b8eb95c778c9d",
+ "base_cache_win_loss": [
+  192,
+  6600
+ ],
+ "date": "2026-11-26",
+ "dossier_supersession": {
+  "dossier_increment_sha256": "44c16a28f944e255d3968f49a16cc61e06f70269ada833fe976f1607b7d40b03",
+  "dossier_maker_sha256": "424edee4116ab785376d5fe5d197599b1574b71a46cf847d90a291dd27f99558",
+  "dossier_manifest_sha256": "25defefac25a9a527b4de90408fe1dddcd13a19f29128a07afbab69f4e66e39f",
+  "merged_cache_sha256_of_record": "16a12390c0c3f046f0ae537b2a9940e15661263fc5034ce1b155c138bb9043cd",
+  "note": "the dossier increment header declared pre-declaration dossier status; this Part-emitted increment supersedes it with the Part EW adoption header; the 5 s5verdict rows are byte-identical and the merged cache of record carries the published dossier merged sha 16a12390...",
+  "row_region_byte_identical": true
+ },
+ "interpretation_guard": "Part EW canonical WIN-only adoption increment: the 5 fresh exact-WIN rows (each two-pass fresh-cold node-exact at the single published condition 15M plus a voluntary third cold verify run, solved within budget, C++-gated by Part SK and third-implementation-corroborated) are consumed into the canonical chain via the fail-closed union merger; WIN-only adoption asserts no root verdict and frees no class; owner classes of the adopted keys are excluded_now by the win-hit mechanism, derived machine-only by the reaudit refresh; nodes are bookkeeping, never verdicts; the standard 11x11 empty board and every central-reply root stay UNKNOWN",
+ "loss_ids": [],
+ "merger_sha256": "907119610034fb2aebfde012550a4129dfa3b086c6de11194e856747ac74606a",
+ "part": "EW",
+ "pools": [
+  {
+   "adopted_nodes": 45999378,
+   "adopted_win_ids": [
+    "k02",
+    "k03",
+    "k04",
+    "k05",
+    "k08"
+   ],
+   "budget": 15000000,
+   "first_stage_budget": 2000000,
+   "kit": "n11-sixthcost-class-s5-exclusive-probe-10376293541461626880-20261121",
+   "kit_integrity": {
+    "input_csv_cross_registration": "each of the 5 target input CSVs is byte-equal to the Part SK kit's MANIFEST-pinned gate input and to the TI kit's MANIFEST-pinned input",
+    "input_csv_sha256_pins": {
+     "k02": "b6174a3fa73687af2820fd3eee16d750ca0d43ac7c2a1ea063a392710ce73887",
+     "k03": "9e40900a8df77e9ce139359ec289d664c08b8f9010d50e80149b4e9e624a3b40",
+     "k04": "110776a29b4a9ce4fa0b61c47fc2a586e3475bdd94328db77b506ae8456a80a4",
+     "k05": "7f30311de61973274163246fb9502b65922788da868b47165ef86646ebb3e750",
+     "k08": "6fcbf158817f25e82ebb73010c49638949aa2f8ff9d48713d4806a2d4426c35f"
+    },
+    "note": "the probe kit (2026-11-21) predates the repo MANIFEST convention and holds no MANIFEST-sha256; every consumed byte is pinned directly in this manifest: README, the selection JSON, the k08 win-finding JSON, status.log, the 5 target input CSVs and all 20 raw CSV files (raw_file_sha256_pins / input_csv_sha256_pins below)",
+    "raw_file_sha256_pins": {
+     "at15m-run1-k02.out.csv": "29c9a80fdbcbe3b032b44d5c2763e8dd6c2d44abb293d067031a23c75779dfea",
+     "at15m-run1-k03.out.csv": "a1c51cdf3b4a7601b5afabf3c558127f3b762f1f3c87785c695a7ffe5d6b7151",
+     "at15m-run1-k04.out.csv": "c10896543282f563deeddf31af994465c9f5fac465c734fa22339a47dc81ca61",
+     "at15m-run1-k05.out.csv": "dde1e4f0eae6a0557f0a6da7fd54f43f8ab4749c0321c16eba8f4586ee743df8",
+     "at15m-run1-k08.out.csv": "b015a80c41c2aeb21c4c387c433d3a119569590c10907c8038d76e4e6c677044",
+     "at15m-run2-k02.out.csv": "29c9a80fdbcbe3b032b44d5c2763e8dd6c2d44abb293d067031a23c75779dfea",
+     "at15m-run2-k03.out.csv": "b17652530797f7ecca37668ae22145ae538afc498c5795a58846c87902c5cd32",
+     "at15m-run2-k04.out.csv": "7c12138c13d8ff5f256a51d3a311994248e405e05f0780678e86a008daac1e8e",
+     "at15m-run2-k05.out.csv": "562e2c9d3cfd7596e63a4f4d101c40ea6ea7dd66abfe5339cc095c6a0e408a2c",
+     "at15m-run2-k08.out.csv": "b015a80c41c2aeb21c4c387c433d3a119569590c10907c8038d76e4e6c677044",
+     "at15m-run3-verify-k02.out.csv": "29c9a80fdbcbe3b032b44d5c2763e8dd6c2d44abb293d067031a23c75779dfea",
+     "at15m-run3-verify-k03.out.csv": "27169f87a60b7600967e413433dc6fee12ca555b7a20f098ba61f09523e3b924",
+     "at15m-run3-verify-k04.out.csv": "492f758e4b2a6e1eb1e7a48df697979b39a83f180ecc6d9aa124700c98e1a4ec",
+     "at15m-run3-verify-k05.out.csv": "1305562baff3d171ff24df0befd6dc519147b77dc3648f78580b7e039d6f9381",
+     "at15m-run3-verify-k08.out.csv": "61d5379bccde66b43dc1bda2bf640a02152faeeeaa83cf982889ad4b8c732481",
+     "at2m-k02.out.csv": "ae2df9689268e1c61b9f814baad991d54ee4907779349ec4c7f07345d0ca2871",
+     "at2m-k03.out.csv": "ecd00db9ce475fda0adb57374c9c90624634387dd59eb51ccdca6b07713c3216",
+     "at2m-k04.out.csv": "e97fd079a6902287d992c68246b92817694f735f7273ef9f05e89b162b4a497e",
+     "at2m-k05.out.csv": "6be638e623dcd3275cfb9cce04bebe447fbf3fa93dad33f8c30508b635f87297",
+     "at2m-k08.out.csv": "274e02b011464194f397d5fda587aafe02b03d875d1c9e2f205438d9684f1c12"
+    },
+    "readme_sha256": "95cc5399a5c04b8db95decc450379c7b4489edc107147328eec4b9cb2f41c113",
+    "selection_json_sha256": "d5e9b059611849f7b7e69c7370a0e66cd7535c43b3a043ce9f5bfc0e5ff72e87",
+    "status_log_sha256": "2a253d081bf439960089ffb39b1934f0b4696a78d4750155ea26e60207fbd7b8",
+    "win_finding_k08_json_sha256": "be662d23e68dcc99731aa707b35b676893f949d8acf3bb2ba9de8d902fa5ce05"
+   },
+   "loss_adoption_note": "the 3 standing LOSS rows of the same ladder are NOT adopted and NOT emitted by this dossier; they remain unconsumed honest LOSS labels",
+   "pool": "sixthcost-exclusive-probe",
+   "standing_loss_ids_not_adopted": [
+    "k01",
+    "k06",
+    "k07"
+   ],
+   "standing_loss_labels": {
+    "k01": [
+     15000000,
+     2,
+     10369650
+    ],
+    "k06": [
+     15000000,
+     2,
+     8182231
+    ],
+    "k07": [
+     2000000,
+     2,
+     1419823
+    ]
+   }
+  },
+  {
+   "canonical_head_cross_gate": "the SK gate-rows.json canonical_head block pins this dossier's BASE (6e49dd84, 6,792 rows, WIN 192 / LOSS 6600) and records the 5 adopted targets as fresh versus exactly that head",
+   "kit": "n11-sixthcost-exclusive-cppgate-20261126",
+   "kit_integrity": {
+    "audit_gate_json_sha256": "ad139eceee6bd9e9c349410bf7e4b823a61dfaaf31b23df5b0438431f6bc3629",
+    "audit_run1_run2_run3_sha256_identical": "ad139eceee6bd9e9c349410bf7e4b823a61dfaaf31b23df5b0438431f6bc3629",
+    "gate_rows_all_pass": 178,
+    "gate_rows_json_sha256": "11fb829c10d489f90d9a05f322356168089a80bf1d0128343a054e14221d52d1",
+    "gate_status_gate_pass_rows": 11,
+    "gate_status_log_sha256": "f24f3766579c13f91addc12c277d201d2791bd2a2bef8e1985350e91b7421ba8",
+    "kit_files_verified": 46,
+    "kit_manifest_sha256": "8d84b1a58348b86a3bf8ca4b2d54c957b3c39683a745e52c5e33d2db19b5562a",
+    "note": "Part SK kit verified file-by-file against its published MANIFEST-sha256 8d84b1a5... (46 files)"
+   },
+   "pool": "sk-cpp-second-implementation-gate"
+  },
+  {
+   "covered_ids": [
+    "k03",
+    "k04",
+    "k05",
+    "k08"
+   ],
+   "kit": "n11-sixthcost-k01-k03-thirdimpl-verdict-reverification-20261122",
+   "kit_integrity": {
+    "audit_summary_sha256_pins": {
+     "out/audit-k04-summary.json": "5116045c07686dda8bcf6067d3d9b305a247cf23a25234e2563efd1d8052d84b",
+     "out/audit-k05-summary.json": "15373d0655ac1b17b0ac89b3a536dc5747e0b4451d25923beca47070fabb3daf",
+     "out/audit-k06k07k08-summary.json": "6cb112f8b6e4232976c65b8e65205f9e87ee943ad88282c7ce28edba2100bf2f",
+     "out/audit-summary.json": "c24da5cdef97717252f8152315b13087ff2a60fe5da66a944c5390aa7b7ad8de"
+    },
+    "determinism_triplets": {
+     "k03": [
+      [
+       "1",
+       "10896601",
+       "5996958"
+      ],
+      [
+       "1",
+       "10896601",
+       "5996958"
+      ],
+      [
+       "1",
+       "10896601",
+       "5996958"
+      ]
+     ],
+     "k04": [
+      [
+       "1",
+       "11020407",
+       "6092599"
+      ],
+      [
+       "1",
+       "11020407",
+       "6092599"
+      ],
+      [
+       "1",
+       "11020407",
+       "6092599"
+      ]
+     ],
+     "k05": [
+      [
+       "1",
+       "15949585",
+       "8391212"
+      ],
+      [
+       "1",
+       "15949585",
+       "8391212"
+      ],
+      [
+       "1",
+       "15949585",
+       "8391212"
+      ]
+     ],
+     "k08": [
+      [
+       "1",
+       "7243596",
+       "3873045"
+      ],
+      [
+       "1",
+       "7243596",
+       "3873045"
+      ],
+      [
+       "1",
+       "7243596",
+       "3873045"
+      ]
+     ]
+    },
+    "kit_manifest_lines": 344,
+    "kit_manifest_sha256": "538f8ec7e2a5eba71a4a1c4368d76ac1f5f2b77927759c6a26d592fde9c5342c",
+    "note": "TI kit MANIFEST.sha256 (repo-root-relative paths) pinned; the 4 consumed audit summaries and the input CSV pins verified",
+    "replica_unanimous_rows": {
+     "k03": [
+      [
+       "1",
+       "9255414"
+      ],
+      [
+       "1",
+       "9255414"
+      ],
+      [
+       "1",
+       "9255414"
+      ]
+     ],
+     "k04": [
+      [
+       "1",
+       "9433024"
+      ],
+      [
+       "1",
+       "9433024"
+      ],
+      [
+       "1",
+       "9433024"
+      ]
+     ],
+     "k05": [
+      [
+       "1",
+       "13397611"
+      ],
+      [
+       "1",
+       "13397611"
+      ],
+      [
+       "1",
+       "13397611"
+      ]
+     ],
+     "k08": [
+      [
+       "0",
+       "2000000"
+      ],
+      [
+       "1",
+       "6195897"
+      ],
+      [
+       "1",
+       "6195897"
+      ],
+      [
+       "1",
+       "6195897"
+      ]
+     ]
+    },
+    "third_impl_js_sha256": "08ea958ff59c3234ec5ac55c5c40689bd0999a34e101a88ea0546800cc4a1998"
+   },
+   "pool": "ti-third-implementation-audits",
+   "verdict_agreement_note": "third-impl WIN(1) verdict-level agreement for k03/k04/k05/k08; expansions legitimately differ from replica node counts (different implementations); the TI audits' replica raws are byte-identical to the probe kit's"
+  },
+  {
+   "covered_ids": [
+    "k02"
+   ],
+   "kit": "n11-sixthcost-third-implementation-verdict-reverification-20261121",
+   "kit_integrity": {
+    "readme_sha256": "1a3ddd07f6907524f7ea1562ac58f4e7d9ae210e3279b4b9ecbe643ca6196ce4",
+    "third_impl_js_sha256": "08ea958ff59c3234ec5ac55c5c40689bd0999a34e101a88ea0546800cc4a1998",
+    "witness_runs": 4,
+    "witness_sha256_pins": {
+     "out/witness/out-k02-a.txt": "bbce3433c184738052f078ffc0e83dd563de79bda0aba054b0b35b1e1602b50d",
+     "out/witness/out-k02-b.txt": "a0eec80f2f6c47f815469a2146b8f18055b163f8e95ff964114fb2956fcef7ea",
+     "out/witness/out-k02-g.txt": "98e9427fe73e2b48cda5b082396851b3a5b3066d30398be3a4b1ed26186079f0",
+     "out/witness/out-k02-v.txt": "7a490ad4046a422c06dfffd206ff75ecc191d43b6e60e768b2d42beadd0a1300"
+    }
+   },
+   "pool": "ea73c3e3-third-impl-k02",
+   "verdict_agreement_note": "k02 WIN(1) reproduced by the fixed third implementation on 4 witness runs (a/b/g/v) with 9,106,337 expansions each; expansions legitimately differ from the replica's 7,717,432 nodes; verdict-level agreement (the same rule the TI audits apply)"
+  }
+ ],
+ "provenance": {
+  "dossier_bytes_repinned": true,
+  "part_maker_reverified_live": true,
+  "probe_fetch_anchor_note": "the probe kit bytes were re-anchored to the published repo tree at dossier construction; the pins above are the anchor of record",
+  "probe_kit_direct_pins": true,
+  "raws_published": true,
+  "sk_kit_files_verified": 46,
+  "ti_kit_pins_verified": 8
+ },
+ "quarantine_hits": 0,
+ "resolved_ids": [
+  "k02",
+  "k03",
+  "k04",
+  "k05",
+  "k08"
+ ],
+ "row_counts": {
+  "adopted_win_rows": 5,
+  "prior_canonical_rows_base": 6792,
+  "standing_unconsumed_loss_rows": 3,
+  "win_ties_consumed_elsewhere": 0
+ },
+ "schema": "sixthwin5-adoption-increments-manifest-v1",
+ "sha256": {
+  "win_increment": "efee7b9e3b377aabbd5cb3606b84739be7f87aff8ddd4bffafc9d22fa557e6be"
+ },
+ "source_class": {
+  "adoption_requirement_of_record": "the probe kit's pre-registered WIN-row requirement: published C++ second-implementation verification of the replica raw rows (pinned cpp/solvers/kyouen_dfpn_root.cpp sha256 9193f5b6...); satisfied for all 5 rows by the Part SK kit (all GATE-PASS); any C++ disagreement fails closed in favor of discarding the row",
+  "class": "10376293541461626880:65536",
+  "class_children_total": 108,
+  "note": "the sixth-cost live candidate class (s4 class 3077, coverage {80,84,100,108}); WIN-elimination as a LOSS-completion route for third moves {100,108} is the documented motivation of the exclusive probe batch",
+  "s5_unknown_before": 101,
+  "serving_class_index": 3077,
+  "unknown_exclusive": 43
+ },
+ "win_canonical_adoption": true,
+ "win_ids": [
+  "k02",
+  "k03",
+  "k04",
+  "k05",
+  "k08"
+ ],
+ "win_ties": [],
+ "win_ties_note": "no consumed-WIN regression ties this time: all 5 adopted keys are fresh to BASE (unlike emloss21's f017/ai007/ai040 ties)"
+}

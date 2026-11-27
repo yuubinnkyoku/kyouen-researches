@@ -1,0 +1,213 @@
+{
+ "schema": "sixthwin5-decomp-deltas-v1",
+ "part": "EW",
+ "date": "2026-11-26",
+ "base": {
+  "cache_sha256": "6e49dd841b7bfcb335d86ef2479c95f47ab7acbcf41ace389a8b8eb95c778c9d",
+  "cache_path": "research/experiments/n11-centralreply-emloss21-adoption-predecl-20261126/output/merged-exact-s5-chain-plus-emloss21-20261126.cache",
+  "rows": 6792,
+  "win": 192,
+  "loss": 6600,
+  "refresh_summary_sha256": "7f379b718e48330c5acbc3c9c79be3c4fb6d616c4dc7bedfe7691e6ebb225f0b",
+  "closure_classes_sha256": "6862813431dd1abbaba81ac2a720385be394ce774f259b8001ca49630fc4a8e2",
+  "per_root_coverage_sha256": "9c5b277429f99157ff2e65323b5912b9ce957f1d2008f8ac8fc1e03b49f91ad1",
+  "probe_worklist_regen_pin_sha256": "147b62d643ba9039e9e2b64363cec602405bf11210a3aa4cfd9084eb0df3a973",
+  "probe_worklist_not_published_size_policy_bytes": 3715963,
+  "class_status_counts": {
+   "unknown": 34417,
+   "excluded_now": 103,
+   "free_now": 39,
+   "excluded": 390
+  }
+ },
+ "scen": {
+  "cache_sha256": "16a12390c0c3f046f0ae537b2a9940e15661263fc5034ce1b155c138bb9043cd",
+  "cache_path_of_record": "research/experiments/n11-centralreply-sixthwin5-adoption-predecl-20261126/output/merged-exact-s5-chain-plus-sixthwin5-20261126.cache",
+  "rows": 6797,
+  "win": 197,
+  "loss": 6600,
+  "increment_sha256": "efee7b9e3b377aabbd5cb3606b84739be7f87aff8ddd4bffafc9d22fa557e6be",
+  "manifest_sha256": "a7376780687fbacb0a9a958a94de0df4634d4512bb08d1631b36772a9c78ba86",
+  "merge_audit_sha256": "b404c2483988daac71c88de54f29962cfea90ab5b4c85fbf81697d5dab4e720a",
+  "refresh_summary_sha256": "295027cf9a3fd7eb4e74b2008f4794cc146f0ee769901db056e7e176a38deb3a",
+  "closure_classes_sha256": "350e269a9d4e0827274aff7c587cdb389f070eade0ff54c220c7c14f9197bc6d",
+  "per_root_coverage_sha256": "9c5b277429f99157ff2e65323b5912b9ce957f1d2008f8ac8fc1e03b49f91ad1",
+  "probe_worklist_regen_pin_sha256": "82f9e51798172d1e3a38cbc215b7230135bddd09d911ab672397264560e67cc7",
+  "probe_worklist_not_published_size_policy_bytes": 3715904,
+  "class_status_counts": {
+   "unknown": 34409,
+   "excluded_now": 111,
+   "free_now": 39,
+   "excluded": 390
+  }
+ },
+ "dossier_supersession": {
+  "dossier_increment_sha256": "44c16a28f944e255d3968f49a16cc61e06f70269ada833fe976f1607b7d40b03",
+  "dossier_manifest_sha256": "25defefac25a9a527b4de90408fe1dddcd13a19f29128a07afbab69f4e66e39f",
+  "dossier_maker_sha256": "424edee4116ab785376d5fe5d197599b1574b71a46cf847d90a291dd27f99558",
+  "part_increment_sha256": "efee7b9e3b377aabbd5cb3606b84739be7f87aff8ddd4bffafc9d22fa557e6be",
+  "row_region_byte_identical": true,
+  "merged_cache_byte_identical": true,
+  "note": "the dossier increment header declared pre-declaration dossier status; the Part-emitted increment supersedes it with the Part EW adoption header; the 5 s5verdict rows are byte-identical and the merged cache of record carries the published dossier merged sha 16a12390..."
+ },
+ "adopted": {
+  "ids": [
+   "k02",
+   "k03",
+   "k04",
+   "k05",
+   "k08"
+  ],
+  "nodes_total": 45999378,
+  "direction": "WIN (win-only canonical adoption)",
+  "condition": "closure-batch two-pass fresh-cold node-exact 15M raws plus a voluntary third cold verify run each, C++-gated GATE-PASS by the Part SK kit, third-implementation-corroborated (k02 by the ea73c3e3 fixed-implementation kit's 4-run witness; k03/k04/k05/k08 by the TI kit audits' verdict-level WIN agreement); re-verified live TWICE (Part maker + the byte-verbatim dossier-maker re-execution inside this extractor; NO new solver pass ran)",
+  "win_ties": [],
+  "standing_unconsumed_loss_not_emitted": {
+   "k01": [
+    15000000,
+    10369650
+   ],
+   "k06": [
+    15000000,
+    8182231
+   ],
+   "k07": [
+    2000000,
+    1419823
+   ]
+  }
+ },
+ "class_flips": {
+  "count": 8,
+  "direction": "unknown -> excluded_now, win-hit only: exactly the owner classes of the 5 adopted WIN keys that were status-unknown at BASE (the dossier census measured 8); NO class is freed",
+  "per_key_owner_classes": {
+   "k02": [
+    1387,
+    3077,
+    30354
+   ],
+   "k03": [
+    2339,
+    3077,
+    16734
+   ],
+   "k04": [
+    3077,
+    30329
+   ],
+   "k05": [
+    2169,
+    3077,
+    25845
+   ],
+   "k08": [
+    774,
+    3077
+   ]
+  },
+  "flipped_classes": [
+   774,
+   1387,
+   2169,
+   2339,
+   3077,
+   16734,
+   25845,
+   30329
+  ],
+  "owner_class_count_histogram": {
+   "2": 2,
+   "3": 3
+  },
+  "serving_classes": {
+   "3077": {
+    "class": 3077,
+    "boundary_raw": 108,
+    "cost_size": 100,
+    "cost_unknown_base": 100,
+    "cost_unknown_scen": 95,
+    "adopted_members": [
+     "k02",
+     "k03",
+     "k04",
+     "k05",
+     "k08"
+    ],
+    "status_base": "unknown",
+    "status_scen": "excluded_now"
+   }
+  }
+ },
+ "closure_classes": {
+  "rows_before_after": [
+   804,
+   804
+  ],
+  "left_rows": [],
+  "entered_rows": [],
+  "exit_note": "no closure class enters or leaves: the 8 win-hit flips turn classes unknown -> excluded_now, which do not change closure membership; class 16734 is the only unknown_now churn (92 -> 91) and the dense ranking is unchanged",
+  "rank_churn_rows": 0,
+  "rank_churn_nature": "measured 0 re-ranked rows",
+  "unknown_churn": {
+   "16734": [
+    92,
+    91
+   ]
+  },
+  "groups_served_churn": {}
+ },
+ "frozen_update8": {
+  "union_baseline": 31859,
+  "resolved": [
+   280,
+   281
+  ],
+  "remaining_now": [
+   31445,
+   31445
+  ],
+  "groups_free_now": [
+   131,
+   131
+  ],
+  "win_hit_groups": "25 -> 25 IDENTICAL sets (measured; no group crosses the win_hit boundary)",
+  "newly_resolved": [
+   64872
+  ],
+  "newly_resolved_note": "exactly k02's s5 index 64872; the other 4 adopted keys (s5 39127/91506/96472/112201) sit outside the frozen update8 baseline requirement and are correctly not counted (measured, disclosed)"
+ },
+ "per_root": {
+  "free_now_uncovered": "identical at all 20 rows incl. baseline; no coverage claim",
+  "greedy_union_changes": {},
+  "joint_greedy": [
+   35155,
+   35155
+  ],
+  "joint_greedy_delta": 0,
+  "unique_groups": [
+   2115,
+   2115
+  ],
+  "group_best_options_nonfree": [
+   2101,
+   2101
+  ],
+  "worklist_total": [
+   64277,
+   64276
+  ]
+ },
+ "dossier_census_crosscheck": {
+  "measurement_sha256": "fd684d83c689452f0da7dca2ec2cb5b6501f03b9f5d2b30c30fbcf0590f5ba5f",
+  "agreement": "EXACT on both cache identities, the census counts (34,417/103/39/390 -> 34,409/111/39/390), the exact 8-class flip set, closure churn incl. the zero rank table and the 16734 unknown churn, per-root greedy deltas (none), joint greedy, worklist totals, update8 numbers incl. the 1-key newly-resolved set and the 4 outside-baseline keys, win_hit identity, serving-class records, the owner histogram and the 5-row adopted table with owner sets",
+  "superseded_scope_fields": "verdict.consumed=NOTHING / part_declared=false describe the dossier-time status and are superseded by this Part EW declaration; checked, not asserted as current"
+ },
+ "honesty": {
+  "win_only_adoption": true,
+  "no_root_verdict": "no root verdict is asserted or implied by consuming a WIN label; the win-hit mechanism only reclassifies owner classes as excluded_now",
+  "no_class_freed": "no class flips to free_now; joint greedy and per-root coverage are byte-identical on both sides",
+  "scheduling_effect": "joint greedy 35,155 -> 35,155 UNCHANGED, worklist 64,277 -> 64,276 (-1), update8 resolved 280 -> 281 (the k02 index only): scheduling bookkeeping only",
+  "unknown_still": "34,409 S4 classes remain status-unknown after the adoption; 11x11 stays UNKNOWN",
+  "unconsumed": "k01/k06/k07 LOSS rows stay unconsumed honest labels (not emitted, no cache); the later parked4 L50M WIN rows (k13/k19 etc.) are NOT adopted and stay in NO cache; no root, no root class and no closure class verdict is asserted"
+ }
+}

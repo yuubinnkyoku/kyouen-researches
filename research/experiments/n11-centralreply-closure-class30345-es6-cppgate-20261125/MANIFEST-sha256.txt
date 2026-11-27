@@ -1,0 +1,41 @@
+# MANIFEST-sha256 - Part ET kit (n11-centralreply-closure-class30345-es6-cppgate-20261125) - ES re-probe-6 C++ scrutiny gate, 2026-11-25
+# all paths relative to research/experiments/n11-centralreply-closure-class30345-es6-cppgate-20261125/
+# parse line format: <sha256>  <size>  <path> ; README.md and MANIFEST-sha256.txt self-excluded per convention
+2f059c17bdbcfe8c229aec0cbf3e42f7eb2e9f4d84248407269012288a310d1f  5002  declaration.md
+73c6f31983c8a23490f30120fbe9951ca97d294461af7186fa4983278f610bc8  50  input/ai007.input.csv
+52d5edeade664da448d0414f8035026659a802b8a884e0ba7f3198ec38dab88a  50  input/ai024.input.csv
+99f67a1f27fe31cb480bceeb2579f63467dd7e45fe5051610c02036b8c1d40b2  53  input/ai030.input.csv
+93f1f2d168e0b21ad6bbbfbc1f65c3653930f71d78731d58f070eb07aa154572  50  input/ai038.input.csv
+e535844a4133e34542df079644514cea868bd062acaa8adef5026b8ca90f6656  50  input/ai040.input.csv
+443f757c0052e48b3bd5bd8cd30588cac8e5041ae96811a947928cc7ce0f4fa1  53  input/ai041.input.csv
+e51a3c9de08c62a54d80547c520876af4245394d05e37bbebf01d74204f64691  56  input/anchor-af039.input.csv
+2f6daea5ca3b3fe6b7713c8d450af3f3c9f203acacb8a1340255d8e8f656496c  50  input/anchor-aj001.input.csv
+ecc0299b8142abde201fcc40ea9666dac7368d0888d0600abc717af66ddfe348  54  input/anchor-at2m.input.csv
+6cf057ba2320a9d7be55e53edd9be2b65e41f552af206010899793a5b6a659c5  3764  input/gate-rows-et.json
+2c6d7441d6f752f160efbe7e275b807ff174d8cd70ece3c85aed135ead11c0d0  7950  output/audit_gate.json
+2c6d7441d6f752f160efbe7e275b807ff174d8cd70ece3c85aed135ead11c0d0  7950  output/audit_gate.run1.json
+2c6d7441d6f752f160efbe7e275b807ff174d8cd70ece3c85aed135ead11c0d0  7950  output/audit_gate.run2.json
+2c6d7441d6f752f160efbe7e275b807ff174d8cd70ece3c85aed135ead11c0d0  7950  output/audit_gate.run3.json
+ff10256547b67a8dc8b8e425de2296a067bc6677cff3de004892bf504bf00ca7  989  output/gate-status.log
+661a4990098e2cba188953a91cf67c37418a9b41a096aadb020941ed4b7facab  277  output/raw/ai007.p1.out
+9fa9690b1fdfa57898d8bf6ca1b34ed79d2f92d067428d0e84477bc5bb1d0640  277  output/raw/ai007.p2.out
+d0ac312e8428ff5e0c92a370e9366968730334bb61d218d1a7f7d37415798f2c  277  output/raw/ai024.p1.out
+d0ac312e8428ff5e0c92a370e9366968730334bb61d218d1a7f7d37415798f2c  277  output/raw/ai024.p2.out
+dad8dd53d463766ca6c298afeaeab528781d3da39c482c200b1e2a30468ce930  280  output/raw/ai030.p1.out
+dad8dd53d463766ca6c298afeaeab528781d3da39c482c200b1e2a30468ce930  280  output/raw/ai030.p2.out
+c8e6c7594fd647a7c4bd0c94df13fd0f91d718a496fbeb956bafd27da96637f7  277  output/raw/ai038.p1.out
+43ca501f8b00ff19b522ccd6401df84e0fccf6ad6bbe9cf33ec83fa6a85e9c79  277  output/raw/ai038.p2.out
+c665b8524d32eabd83ff71b09aa7cf586004e4f33980fe4177a8558be5cdb155  277  output/raw/ai040.p1.out
+d5b2a459e0a932c628c635d01fc9830ca26bb01c8e0898832e3cdb9d04e8ebe6  277  output/raw/ai040.p2.out
+31cf7210fd15f4516f559c93bce913ffe7cc7d69c57b5374b550eda21125937d  280  output/raw/ai041.p1.out
+31cf7210fd15f4516f559c93bce913ffe7cc7d69c57b5374b550eda21125937d  280  output/raw/ai041.p2.out
+57fd8b2e8943bb2b1829fadfe17736ee02034514d37b7087e5690d745ca841fa  283  output/raw/anchor-af039.p1.out
+8be4e07caefd0d4a7b1c09e24d3014b30ff1bcf5ad5761d893e430ab11391e84  283  output/raw/anchor-af039.p2.out
+f253c5d0326e3c0ba26ae976dd9ca1ab567f9fe01c5a454c366de272224c2086  276  output/raw/anchor-aj001.p1.out
+f253c5d0326e3c0ba26ae976dd9ca1ab567f9fe01c5a454c366de272224c2086  276  output/raw/anchor-aj001.p2.out
+cfa72d667428bfc7b3cc60306be5828b859f2e50631bb89b37a8601d6bf02ee3  277  output/raw/anchor-at2m.p1.out
+cfa72d667428bfc7b3cc60306be5828b859f2e50631bb89b37a8601d6bf02ee3  277  output/raw/anchor-at2m.p2.out
+7820783c00d0a16767991abe41d4154db8b4594debda2481ffc748ab598e3143  1471  output/tamper.log
+6825e04714084e9e3c23f632f51b13c01702934d771b9a7c3ad1139b0325fc10  8652  scripts/audit_gate.py
+aaf12017020000365199e9108fe3f52d7d9c87982509c28e70b0f8188ad2d708  2732  scripts/gate_runner.sh
+465a150b9873411f81e6a0645a703eaca00c1538c76f5ee3a78a05569881f962  19671  scripts/make_kit_et_es6_cppgate.py

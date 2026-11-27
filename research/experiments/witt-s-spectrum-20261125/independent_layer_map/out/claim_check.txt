@@ -1,0 +1,85 @@
+PASS board is 24 points / 759 blocks of size 8
+PASS S(5,8,24): lambda_0..5 = 759,253,77,21,5,1
+PASS block intersections only 0/2/4
+PASS Golay span rank 12, 4096 words
+PASS weight enumerator {0:1,8:759,12:2576,16:759,24:1}
+PASS weight-8 words are exactly the 759 blocks
+PASS dodecads = 2576 weight-12 words
+PASS dodecad/octad intersections = {2,4,6}, constant profile 132/495/132
+PASS dodecad 9-subsets distinct = 566720 (injective, no block inside)
+PASS dodecad 10-subsets distinct = 170016 (injective, no block inside)
+PASS dodecad 11-subsets distinct = 30912 (injective, no block inside)
+PASS dodecad 12-subsets distinct = 2576 (injective, no block inside)
+PASS independent SAFE total = 7,932,035
+PASS size 0: Grundy distribution sums to safe count
+PASS size 1: Grundy distribution sums to safe count
+PASS size 2: Grundy distribution sums to safe count
+PASS size 3: Grundy distribution sums to safe count
+PASS size 4: Grundy distribution sums to safe count
+PASS size 5: Grundy distribution sums to safe count
+PASS size 6: Grundy distribution sums to safe count
+PASS size 7: Grundy distribution sums to safe count
+PASS size 8: Grundy distribution sums to safe count
+PASS size 9: Grundy distribution sums to safe count
+PASS size 10: Grundy distribution sums to safe count
+PASS size 11: Grundy distribution sums to safe count
+PASS size 12: Grundy distribution sums to safe count
+PASS size 13: Grundy distribution sums to safe count
+PASS size 9 dodecad: count 566720 at G=2
+PASS size 9 dodecad: ALL such caps have G=2 (no other value)
+PASS size 9 dodecad: total = claimed count
+PASS size 9 nondodecad: count 728640 at G=1
+PASS size 9 nondodecad: ALL such caps have G=1 (no other value)
+PASS size 9 nondodecad: total = claimed count
+PASS size 10 dodecad: count 170016 at G=1
+PASS size 10 dodecad: ALL such caps have G=1 (no other value)
+PASS size 10 dodecad: total = claimed count
+PASS size 10 nondodecad: count 1700160 at G=0
+PASS size 10 nondodecad: ALL such caps have G=0 (no other value)
+PASS size 10 nondodecad: total = claimed count
+PASS size 11 dodecad: count 30912 at G=0
+PASS size 11 dodecad: ALL such caps have G=0 (no other value)
+PASS size 11 dodecad: total = claimed count
+PASS size 11 nondodecad: count 2040192 at G=2
+PASS size 11 nondodecad: ALL such caps have G=2 (no other value)
+PASS size 11 nondodecad: total = claimed count
+PASS size 9: dodecad + nondodecad = safe count 1295360
+PASS size 10: dodecad + nondodecad = safe count 1870176
+PASS size 11: dodecad + nondodecad = safe count 2071104
+PASS every dodecad-subset position is safe (flags count 566720+170016+30912+2576)
+PASS size 12 maximal count = 1,020,096
+PASS size 12: maxima have G=0 and non-maxima G=1
+PASS size 13 count 30,912, all maximal, all G=0
+PASS no safe position of size 14
+PASS maximal positions only at sizes 12 and 13
+PASS size 9 dodecad: profile (12:180, 13:21) and constant over all caps
+PASS size 9 nondodecad: profile (12:168, 13:14) and constant over all caps
+PASS size 10 dodecad: profile (12:36, 13:12) and constant over all caps
+PASS size 10 nondodecad: profile (12:36, 13:4) and constant over all caps
+PASS size 11 dodecad: profile (12:0, 13:12) and constant over all caps
+PASS size 11 nondodecad: profile (12:6, 13:1) and constant over all caps
+PASS total Grundy 0/1/2 = 3662291/1662832/2606912
+PASS G=2 total = dodecad9 + nondodecad11 = 566720+2040192
+PASS no Grundy value > 2 anywhere
+PASS G(empty) = 0
+PASS non-maximal 12-caps = 2576 dodecads + 370944 non-dodecad; the non-dodecad non-maxima are exactly the 11-subset-of-dodecad + outside-point family
+PASS dodecad check: every dodecad is a non-maximal 12-cap with G=1 and 12 moves; the 370944 extensions are distinct non-maximal non-dodecad 12-caps
+PASS engine file: SAFE total agrees
+PASS engine file: ROOT agrees
+PASS engine file SIZE 0 (count,maximal,G0) agrees
+PASS engine file SIZE 1 (count,maximal,G0) agrees
+PASS engine file SIZE 2 (count,maximal,G0) agrees
+PASS engine file SIZE 3 (count,maximal,G0) agrees
+PASS engine file SIZE 4 (count,maximal,G0) agrees
+PASS engine file SIZE 5 (count,maximal,G0) agrees
+PASS engine file SIZE 6 (count,maximal,G0) agrees
+PASS engine file SIZE 7 (count,maximal,G0) agrees
+PASS engine file SIZE 8 (count,maximal,G0) agrees
+PASS engine file SIZE 9 (count,maximal,G0) agrees
+PASS engine file SIZE 10 (count,maximal,G0) agrees
+PASS engine file SIZE 11 (count,maximal,G0) agrees
+PASS engine file SIZE 12 (count,maximal,G0) agrees
+PASS engine file SIZE 13 (count,maximal,G0) agrees
+PASS engine file: GRUNDY totals agree
+PASS engine GSIZE file agrees with independent GSIZE
+SUMMARY 84/84 passed, 0 failed

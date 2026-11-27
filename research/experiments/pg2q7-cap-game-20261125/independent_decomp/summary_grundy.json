@@ -1,0 +1,982 @@
+{
+  "total_caps": 1108724,
+  "max_cap_size": 8,
+  "grundy_totals": {
+    "0": 581827,
+    "1": 477505,
+    "2": 49392
+  },
+  "distribution_by_size": {
+    "0": {
+      "0": 1
+    },
+    "1": {
+      "1": 49
+    },
+    "2": {
+      "0": 1176
+    },
+    "3": {
+      "1": 16464
+    },
+    "4": {
+      "0": 127596
+    },
+    "5": {
+      "1": 395136,
+      "2": 49392
+    },
+    "6": {
+      "0": 444528,
+      "1": 16464
+    },
+    "7": {
+      "0": 2352,
+      "1": 49392
+    },
+    "8": {
+      "0": 6174
+    }
+  },
+  "five_caps": {
+    "total": 444528,
+    "g_distribution": {
+      "1": 395136,
+      "2": 49392
+    },
+    "with_maximal_6_child": 444528,
+    "with_g1_child": 49392,
+    "g2_count": 49392,
+    "five_subsets_of_maximal7": 49392,
+    "five_subsets_of_any7": 395136,
+    "five_subsets_of_nonmaximal7": 345744,
+    "five_subsets_of_8": 345744,
+    "g2_equals_five_subsets_of_maximal7": true
+  },
+  "seven_caps": {
+    "total": 51744,
+    "maximal": 2352,
+    "nonmaximal": 49392,
+    "g_distribution": {
+      "0": 2352,
+      "1": 49392
+    }
+  },
+  "eight_caps": {
+    "total": 6174,
+    "maximal": 6174,
+    "g_distribution": {
+      "0": 6174
+    }
+  },
+  "samples": {
+    "rng_seed": 20261125,
+    "with7": [
+      {
+        "group": "with7",
+        "points": [
+          12,
+          13,
+          15,
+          17,
+          23
+        ],
+        "g_recursive": 2,
+        "g_full_dp": 2,
+        "expected": 2,
+        "has_maximal_6_child": true,
+        "visited_positions": 8
+      },
+      {
+        "group": "with7",
+        "points": [
+          2,
+          9,
+          15,
+          27,
+          41
+        ],
+        "g_recursive": 2,
+        "g_full_dp": 2,
+        "expected": 2,
+        "has_maximal_6_child": true,
+        "visited_positions": 8
+      },
+      {
+        "group": "with7",
+        "points": [
+          9,
+          14,
+          27,
+          35,
+          44
+        ],
+        "g_recursive": 2,
+        "g_full_dp": 2,
+        "expected": 2,
+        "has_maximal_6_child": true,
+        "visited_positions": 8
+      },
+      {
+        "group": "with7",
+        "points": [
+          22,
+          27,
+          33,
+          34,
+          46
+        ],
+        "g_recursive": 2,
+        "g_full_dp": 2,
+        "expected": 2,
+        "has_maximal_6_child": true,
+        "visited_positions": 8
+      },
+      {
+        "group": "with7",
+        "points": [
+          4,
+          6,
+          27,
+          28,
+          39
+        ],
+        "g_recursive": 2,
+        "g_full_dp": 2,
+        "expected": 2,
+        "has_maximal_6_child": true,
+        "visited_positions": 8
+      },
+      {
+        "group": "with7",
+        "points": [
+          2,
+          11,
+          14,
+          17,
+          28
+        ],
+        "g_recursive": 2,
+        "g_full_dp": 2,
+        "expected": 2,
+        "has_maximal_6_child": true,
+        "visited_positions": 8
+      },
+      {
+        "group": "with7",
+        "points": [
+          4,
+          18,
+          34,
+          41,
+          45
+        ],
+        "g_recursive": 2,
+        "g_full_dp": 2,
+        "expected": 2,
+        "has_maximal_6_child": true,
+        "visited_positions": 8
+      },
+      {
+        "group": "with7",
+        "points": [
+          2,
+          9,
+          15,
+          27,
+          43
+        ],
+        "g_recursive": 2,
+        "g_full_dp": 2,
+        "expected": 2,
+        "has_maximal_6_child": true,
+        "visited_positions": 8
+      },
+      {
+        "group": "with7",
+        "points": [
+          4,
+          7,
+          8,
+          16,
+          37
+        ],
+        "g_recursive": 2,
+        "g_full_dp": 2,
+        "expected": 2,
+        "has_maximal_6_child": true,
+        "visited_positions": 8
+      },
+      {
+        "group": "with7",
+        "points": [
+          7,
+          33,
+          38,
+          45,
+          47
+        ],
+        "g_recursive": 2,
+        "g_full_dp": 2,
+        "expected": 2,
+        "has_maximal_6_child": true,
+        "visited_positions": 8
+      },
+      {
+        "group": "with7",
+        "points": [
+          10,
+          16,
+          27,
+          43,
+          44
+        ],
+        "g_recursive": 2,
+        "g_full_dp": 2,
+        "expected": 2,
+        "has_maximal_6_child": true,
+        "visited_positions": 8
+      },
+      {
+        "group": "with7",
+        "points": [
+          14,
+          18,
+          21,
+          22,
+          34
+        ],
+        "g_recursive": 2,
+        "g_full_dp": 2,
+        "expected": 2,
+        "has_maximal_6_child": true,
+        "visited_positions": 8
+      },
+      {
+        "group": "with7",
+        "points": [
+          7,
+          12,
+          15,
+          37,
+          40
+        ],
+        "g_recursive": 2,
+        "g_full_dp": 2,
+        "expected": 2,
+        "has_maximal_6_child": true,
+        "visited_positions": 8
+      },
+      {
+        "group": "with7",
+        "points": [
+          5,
+          6,
+          32,
+          34,
+          47
+        ],
+        "g_recursive": 2,
+        "g_full_dp": 2,
+        "expected": 2,
+        "has_maximal_6_child": true,
+        "visited_positions": 8
+      },
+      {
+        "group": "with7",
+        "points": [
+          0,
+          8,
+          26,
+          35,
+          44
+        ],
+        "g_recursive": 2,
+        "g_full_dp": 2,
+        "expected": 2,
+        "has_maximal_6_child": true,
+        "visited_positions": 8
+      },
+      {
+        "group": "with7",
+        "points": [
+          13,
+          31,
+          35,
+          47,
+          48
+        ],
+        "g_recursive": 2,
+        "g_full_dp": 2,
+        "expected": 2,
+        "has_maximal_6_child": true,
+        "visited_positions": 8
+      },
+      {
+        "group": "with7",
+        "points": [
+          3,
+          15,
+          23,
+          27,
+          29
+        ],
+        "g_recursive": 2,
+        "g_full_dp": 2,
+        "expected": 2,
+        "has_maximal_6_child": true,
+        "visited_positions": 8
+      },
+      {
+        "group": "with7",
+        "points": [
+          13,
+          19,
+          20,
+          24,
+          47
+        ],
+        "g_recursive": 2,
+        "g_full_dp": 2,
+        "expected": 2,
+        "has_maximal_6_child": true,
+        "visited_positions": 8
+      },
+      {
+        "group": "with7",
+        "points": [
+          0,
+          3,
+          14,
+          39,
+          47
+        ],
+        "g_recursive": 2,
+        "g_full_dp": 2,
+        "expected": 2,
+        "has_maximal_6_child": true,
+        "visited_positions": 8
+      },
+      {
+        "group": "with7",
+        "points": [
+          3,
+          5,
+          13,
+          19,
+          41
+        ],
+        "g_recursive": 2,
+        "g_full_dp": 2,
+        "expected": 2,
+        "has_maximal_6_child": true,
+        "visited_positions": 8
+      },
+      {
+        "group": "with7",
+        "points": [
+          17,
+          20,
+          28,
+          40,
+          47
+        ],
+        "g_recursive": 2,
+        "g_full_dp": 2,
+        "expected": 2,
+        "has_maximal_6_child": true,
+        "visited_positions": 8
+      },
+      {
+        "group": "with7",
+        "points": [
+          10,
+          17,
+          25,
+          46,
+          48
+        ],
+        "g_recursive": 2,
+        "g_full_dp": 2,
+        "expected": 2,
+        "has_maximal_6_child": true,
+        "visited_positions": 8
+      },
+      {
+        "group": "with7",
+        "points": [
+          5,
+          15,
+          21,
+          26,
+          28
+        ],
+        "g_recursive": 2,
+        "g_full_dp": 2,
+        "expected": 2,
+        "has_maximal_6_child": true,
+        "visited_positions": 8
+      },
+      {
+        "group": "with7",
+        "points": [
+          0,
+          14,
+          16,
+          22,
+          26
+        ],
+        "g_recursive": 2,
+        "g_full_dp": 2,
+        "expected": 2,
+        "has_maximal_6_child": true,
+        "visited_positions": 8
+      },
+      {
+        "group": "with7",
+        "points": [
+          7,
+          19,
+          22,
+          30,
+          47
+        ],
+        "g_recursive": 2,
+        "g_full_dp": 2,
+        "expected": 2,
+        "has_maximal_6_child": true,
+        "visited_positions": 8
+      },
+      {
+        "group": "with7",
+        "points": [
+          0,
+          9,
+          14,
+          33,
+          40
+        ],
+        "g_recursive": 2,
+        "g_full_dp": 2,
+        "expected": 2,
+        "has_maximal_6_child": true,
+        "visited_positions": 8
+      },
+      {
+        "group": "with7",
+        "points": [
+          24,
+          30,
+          33,
+          43,
+          48
+        ],
+        "g_recursive": 2,
+        "g_full_dp": 2,
+        "expected": 2,
+        "has_maximal_6_child": true,
+        "visited_positions": 8
+      },
+      {
+        "group": "with7",
+        "points": [
+          10,
+          30,
+          37,
+          43,
+          47
+        ],
+        "g_recursive": 2,
+        "g_full_dp": 2,
+        "expected": 2,
+        "has_maximal_6_child": true,
+        "visited_positions": 8
+      },
+      {
+        "group": "with7",
+        "points": [
+          12,
+          18,
+          23,
+          37,
+          46
+        ],
+        "g_recursive": 2,
+        "g_full_dp": 2,
+        "expected": 2,
+        "has_maximal_6_child": true,
+        "visited_positions": 8
+      },
+      {
+        "group": "with7",
+        "points": [
+          9,
+          12,
+          15,
+          35,
+          36
+        ],
+        "g_recursive": 2,
+        "g_full_dp": 2,
+        "expected": 2,
+        "has_maximal_6_child": true,
+        "visited_positions": 8
+      }
+    ],
+    "without7": [
+      {
+        "group": "without7",
+        "points": [
+          14,
+          17,
+          25,
+          27,
+          47
+        ],
+        "g_recursive": 1,
+        "g_full_dp": 1,
+        "expected": 1,
+        "has_maximal_6_child": true,
+        "visited_positions": 11
+      },
+      {
+        "group": "without7",
+        "points": [
+          1,
+          2,
+          27,
+          42,
+          44
+        ],
+        "g_recursive": 1,
+        "g_full_dp": 1,
+        "expected": 1,
+        "has_maximal_6_child": true,
+        "visited_positions": 11
+      },
+      {
+        "group": "without7",
+        "points": [
+          3,
+          10,
+          13,
+          22,
+          27
+        ],
+        "g_recursive": 1,
+        "g_full_dp": 1,
+        "expected": 1,
+        "has_maximal_6_child": true,
+        "visited_positions": 11
+      },
+      {
+        "group": "without7",
+        "points": [
+          4,
+          6,
+          9,
+          18,
+          21
+        ],
+        "g_recursive": 1,
+        "g_full_dp": 1,
+        "expected": 1,
+        "has_maximal_6_child": true,
+        "visited_positions": 11
+      },
+      {
+        "group": "without7",
+        "points": [
+          7,
+          18,
+          31,
+          43,
+          46
+        ],
+        "g_recursive": 1,
+        "g_full_dp": 1,
+        "expected": 1,
+        "has_maximal_6_child": true,
+        "visited_positions": 11
+      },
+      {
+        "group": "without7",
+        "points": [
+          16,
+          29,
+          33,
+          44,
+          45
+        ],
+        "g_recursive": 1,
+        "g_full_dp": 1,
+        "expected": 1,
+        "has_maximal_6_child": true,
+        "visited_positions": 12
+      },
+      {
+        "group": "without7",
+        "points": [
+          5,
+          6,
+          35,
+          36,
+          47
+        ],
+        "g_recursive": 1,
+        "g_full_dp": 1,
+        "expected": 1,
+        "has_maximal_6_child": true,
+        "visited_positions": 12
+      },
+      {
+        "group": "without7",
+        "points": [
+          3,
+          10,
+          14,
+          20,
+          42
+        ],
+        "g_recursive": 1,
+        "g_full_dp": 1,
+        "expected": 1,
+        "has_maximal_6_child": true,
+        "visited_positions": 6
+      },
+      {
+        "group": "without7",
+        "points": [
+          6,
+          8,
+          16,
+          22,
+          42
+        ],
+        "g_recursive": 1,
+        "g_full_dp": 1,
+        "expected": 1,
+        "has_maximal_6_child": true,
+        "visited_positions": 11
+      },
+      {
+        "group": "without7",
+        "points": [
+          6,
+          8,
+          22,
+          38,
+          44
+        ],
+        "g_recursive": 1,
+        "g_full_dp": 1,
+        "expected": 1,
+        "has_maximal_6_child": true,
+        "visited_positions": 11
+      },
+      {
+        "group": "without7",
+        "points": [
+          19,
+          22,
+          25,
+          39,
+          42
+        ],
+        "g_recursive": 1,
+        "g_full_dp": 1,
+        "expected": 1,
+        "has_maximal_6_child": true,
+        "visited_positions": 12
+      },
+      {
+        "group": "without7",
+        "points": [
+          3,
+          30,
+          36,
+          41,
+          48
+        ],
+        "g_recursive": 1,
+        "g_full_dp": 1,
+        "expected": 1,
+        "has_maximal_6_child": true,
+        "visited_positions": 11
+      },
+      {
+        "group": "without7",
+        "points": [
+          33,
+          34,
+          38,
+          41,
+          46
+        ],
+        "g_recursive": 1,
+        "g_full_dp": 1,
+        "expected": 1,
+        "has_maximal_6_child": true,
+        "visited_positions": 11
+      },
+      {
+        "group": "without7",
+        "points": [
+          12,
+          23,
+          24,
+          38,
+          46
+        ],
+        "g_recursive": 1,
+        "g_full_dp": 1,
+        "expected": 1,
+        "has_maximal_6_child": true,
+        "visited_positions": 12
+      },
+      {
+        "group": "without7",
+        "points": [
+          5,
+          7,
+          9,
+          22,
+          42
+        ],
+        "g_recursive": 1,
+        "g_full_dp": 1,
+        "expected": 1,
+        "has_maximal_6_child": true,
+        "visited_positions": 11
+      },
+      {
+        "group": "without7",
+        "points": [
+          0,
+          4,
+          7,
+          18,
+          31
+        ],
+        "g_recursive": 1,
+        "g_full_dp": 1,
+        "expected": 1,
+        "has_maximal_6_child": true,
+        "visited_positions": 12
+      },
+      {
+        "group": "without7",
+        "points": [
+          31,
+          34,
+          39,
+          43,
+          48
+        ],
+        "g_recursive": 1,
+        "g_full_dp": 1,
+        "expected": 1,
+        "has_maximal_6_child": true,
+        "visited_positions": 11
+      },
+      {
+        "group": "without7",
+        "points": [
+          5,
+          6,
+          19,
+          39,
+          41
+        ],
+        "g_recursive": 1,
+        "g_full_dp": 1,
+        "expected": 1,
+        "has_maximal_6_child": true,
+        "visited_positions": 11
+      },
+      {
+        "group": "without7",
+        "points": [
+          15,
+          18,
+          23,
+          27,
+          43
+        ],
+        "g_recursive": 1,
+        "g_full_dp": 1,
+        "expected": 1,
+        "has_maximal_6_child": true,
+        "visited_positions": 6
+      },
+      {
+        "group": "without7",
+        "points": [
+          14,
+          15,
+          29,
+          42,
+          48
+        ],
+        "g_recursive": 1,
+        "g_full_dp": 1,
+        "expected": 1,
+        "has_maximal_6_child": true,
+        "visited_positions": 6
+      },
+      {
+        "group": "without7",
+        "points": [
+          23,
+          30,
+          31,
+          42,
+          43
+        ],
+        "g_recursive": 1,
+        "g_full_dp": 1,
+        "expected": 1,
+        "has_maximal_6_child": true,
+        "visited_positions": 11
+      },
+      {
+        "group": "without7",
+        "points": [
+          7,
+          24,
+          25,
+          32,
+          43
+        ],
+        "g_recursive": 1,
+        "g_full_dp": 1,
+        "expected": 1,
+        "has_maximal_6_child": true,
+        "visited_positions": 12
+      },
+      {
+        "group": "without7",
+        "points": [
+          6,
+          17,
+          22,
+          31,
+          43
+        ],
+        "g_recursive": 1,
+        "g_full_dp": 1,
+        "expected": 1,
+        "has_maximal_6_child": true,
+        "visited_positions": 6
+      },
+      {
+        "group": "without7",
+        "points": [
+          8,
+          13,
+          22,
+          37,
+          47
+        ],
+        "g_recursive": 1,
+        "g_full_dp": 1,
+        "expected": 1,
+        "has_maximal_6_child": true,
+        "visited_positions": 12
+      },
+      {
+        "group": "without7",
+        "points": [
+          1,
+          10,
+          17,
+          37,
+          44
+        ],
+        "g_recursive": 1,
+        "g_full_dp": 1,
+        "expected": 1,
+        "has_maximal_6_child": true,
+        "visited_positions": 11
+      },
+      {
+        "group": "without7",
+        "points": [
+          20,
+          21,
+          39,
+          40,
+          44
+        ],
+        "g_recursive": 1,
+        "g_full_dp": 1,
+        "expected": 1,
+        "has_maximal_6_child": true,
+        "visited_positions": 11
+      },
+      {
+        "group": "without7",
+        "points": [
+          7,
+          31,
+          34,
+          41,
+          42
+        ],
+        "g_recursive": 1,
+        "g_full_dp": 1,
+        "expected": 1,
+        "has_maximal_6_child": true,
+        "visited_positions": 11
+      },
+      {
+        "group": "without7",
+        "points": [
+          2,
+          3,
+          15,
+          35,
+          36
+        ],
+        "g_recursive": 1,
+        "g_full_dp": 1,
+        "expected": 1,
+        "has_maximal_6_child": true,
+        "visited_positions": 12
+      },
+      {
+        "group": "without7",
+        "points": [
+          3,
+          6,
+          14,
+          35,
+          46
+        ],
+        "g_recursive": 1,
+        "g_full_dp": 1,
+        "expected": 1,
+        "has_maximal_6_child": true,
+        "visited_positions": 12
+      },
+      {
+        "group": "without7",
+        "points": [
+          7,
+          10,
+          26,
+          27,
+          48
+        ],
+        "g_recursive": 1,
+        "g_full_dp": 1,
+        "expected": 1,
+        "has_maximal_6_child": true,
+        "visited_positions": 12
+      }
+    ],
+    "bad": 0
+  },
+  "root_grundy": 0,
+  "elapsed_sec": 33.7
+}

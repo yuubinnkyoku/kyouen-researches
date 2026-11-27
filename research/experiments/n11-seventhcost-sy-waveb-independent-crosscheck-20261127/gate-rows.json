@@ -1,0 +1,530 @@
+{
+ "schema": "n11-seventhcost-thirdimpl-corroboration-rows-v1",
+ "part": "SY",
+ "declaration_head": "47ae14ea8455a4bf115f27e9bbbc2a3e8c9b4e9e",
+ "declaration_log": "research/log/2026-11-27-n11-seventhcost-thirdimpl-corroboration-declaration.md",
+ "canonical_head": {
+  "LOSS": 6631,
+  "WIN": 201,
+  "label": "42dbb58f",
+  "path": "research/experiments/n11-centralreply-sixthlossk38-adoption-reaudit-20261126/output/merged-exact-s5-chain-plus-sixthlossk38-20261126.cache",
+  "rows": 6832,
+  "sha256": "42dbb58ffe8dd02a81f4a92993d08e3fbebdaeb4b4f7bf33e142120ff055bdc4",
+  "targets_fresh_vs": "42dbb58f"
+ },
+ "third_impl": {
+  "path": "kit/scripts/third_impl.js",
+  "sha256": "08ea958ff59c3234ec5ac55c5c40689bd0999a34e101a88ea0546800cc4a1998",
+  "provenance": "byte-equal re-publication provenance of the ea73c3e3 publication; byte-verified against the pinned sixth-cost third-impl kit copy on this host"
+ },
+ "verify_tbl": {
+  "sha256": "c8c52528f70b3a9b438edc3feb4e432fbe705d6be21650383d3955efc6790251"
+ },
+ "jsreplay_replica": {
+  "sha256": "845856175d3c793a7eb4306f5902ecda3f1c046a8a53e8f34ed375e51febc3df"
+ },
+ "invocation": "node third_impl.js --lo=<lo> --hi=<hi> --stones=5 --legal=<legal> --row=<kNN>.pN --cap=400000000 --wallcap=260 --memo-power=22",
+ "calibration": {
+  "c1a_verify_tbl": {
+   "rc": 0,
+   "quads": "95670",
+   "triples_mismatches": "0"
+  },
+  "c1b_calib_k06": {
+   "lo": "10376293541462675456",
+   "hi": "65536",
+   "legal": "89",
+   "expected_result": "2",
+   "expected_expansions": "9474431",
+   "provenance": "published sixth-cost k06-cold-a raw"
+  },
+  "c1b_calib_k38": {
+   "lo": "10376293541461626880",
+   "hi": "66048",
+   "legal": "100",
+   "expected_result": "2",
+   "expected_expansions": "25898941",
+   "provenance": "Part SU publication"
+  }
+ },
+ "targets": {
+  "k01": {
+   "lo": "1297036692683882496",
+   "hi": "536870912",
+   "legal": "86",
+   "expected_result": "2",
+   "stage_budget": "15000000",
+   "replica_expected_quad": "86,15000000,2,2986255",
+   "input_sha256": "9b565fe5a773d8499ac0926fdde95df98eefdf94ae7c1b92cf4dc62c463ff5f5",
+   "raw_provenance": "research/experiments/n11-seventhcost-class-s5-exclusive-probe-1306043891938492416-20261126/output/raw/at15m-run1-k01.out.csv",
+   "second_impl_gate": "SW 44/44"
+  },
+  "k02": {
+   "lo": "1306043891938492416",
+   "hi": "65536",
+   "legal": "80",
+   "expected_result": "2",
+   "stage_budget": "15000000",
+   "replica_expected_quad": "80,15000000,2,3113635",
+   "input_sha256": "d5cf9b79de1b8be8e7e5bc8dfd61315f918c054b2aa1446883c1e46920cc4113",
+   "raw_provenance": "research/experiments/n11-seventhcost-class-s5-exclusive-probe-1306043891938492416-20261126/output/raw/at15m-run1-k02.out.csv",
+   "second_impl_gate": "SW 44/44"
+  },
+  "k03": {
+   "lo": "1306043893012234240",
+   "hi": "0",
+   "legal": "87",
+   "expected_result": "2",
+   "stage_budget": "15000000",
+   "replica_expected_quad": "87,15000000,2,4803039",
+   "input_sha256": "897ba37e9c0e79207ba9546896d38c3a2f57668c3ca6895713188b7c302e85ce",
+   "raw_provenance": "research/experiments/n11-seventhcost-class-s5-exclusive-probe-1306043891938492416-20261126/output/raw/at15m-run1-k03.out.csv",
+   "second_impl_gate": "SW 44/44"
+  },
+  "k04": {
+   "lo": "10412357522852679680",
+   "hi": "0",
+   "legal": "85",
+   "expected_result": "2",
+   "stage_budget": "15000000",
+   "replica_expected_quad": "85,15000000,2,3045320",
+   "input_sha256": "5a8ad2842da144df7815a1842cd0c189da152ea491a5223a2cc2947d6aae3ac8",
+   "raw_provenance": "research/experiments/n11-seventhcost-class-s5-exclusive-probe-1306043891938492416-20261126/output/raw/at15m-run1-k04.out.csv",
+   "second_impl_gate": "SW 44/44"
+  },
+  "k06": {
+   "lo": "1152921504608026624",
+   "hi": "553648128",
+   "legal": "99",
+   "expected_result": "2",
+   "stage_budget": "15000000",
+   "replica_expected_quad": "99,15000000,2,6557441",
+   "input_sha256": "43e31705667f10802af20432f82f9d02c938d903c1751782b3dab3113e2b599d",
+   "raw_provenance": "research/experiments/n11-seventhcost-class-s5-exclusive-probe-1306043891938492416-20261126/output/raw/at15m-run1-k06.out.csv",
+   "second_impl_gate": "SW 44/44"
+  },
+  "k07": {
+   "lo": "1152956688980115456",
+   "hi": "536870912",
+   "legal": "95",
+   "expected_result": "2",
+   "stage_budget": "15000000",
+   "replica_expected_quad": "95,15000000,2,4841679",
+   "input_sha256": "19bc75a6aa5892fd6abbe5e70bdfeaa0a27f92d3146c57cef93c9ebb2dd240a7",
+   "raw_provenance": "research/experiments/n11-seventhcost-class-s5-exclusive-probe-1306043891938492416-20261126/output/raw/at15m-run1-k07.out.csv",
+   "second_impl_gate": "SW 44/44"
+  },
+  "k08": {
+   "lo": "1306043891938492416",
+   "hi": "64",
+   "legal": "90",
+   "expected_result": "2",
+   "stage_budget": "15000000",
+   "replica_expected_quad": "90,15000000,2,10134007",
+   "input_sha256": "0ce2a6d002585d16d99a3f6da6b3f762b7bb8da4f0d840436e61d81abffa4042",
+   "raw_provenance": "research/experiments/n11-seventhcost-class-s5-exclusive-probe-1306043891938492416-20261126/output/raw/at15m-run1-k08.out.csv",
+   "second_impl_gate": "SW 44/44"
+  },
+  "k09": {
+   "lo": "1306043891938492416",
+   "hi": "128",
+   "legal": "97",
+   "expected_result": "2",
+   "stage_budget": "15000000",
+   "replica_expected_quad": "97,15000000,2,3009687",
+   "input_sha256": "2e5fefbbc234ffeb9c73173de816e49f06c3a8ba81ee1d2162b61d865bd97345",
+   "raw_provenance": "research/experiments/n11-seventhcost-class-s5-exclusive-probe-1306043891938492416-20261126/output/raw/at15m-run1-k09.out.csv",
+   "second_impl_gate": "SW 44/44"
+  },
+  "k10": {
+   "lo": "1306043891938492416",
+   "hi": "67108864",
+   "legal": "90",
+   "expected_result": "2",
+   "stage_budget": "15000000",
+   "replica_expected_quad": "90,15000000,2,13100811",
+   "input_sha256": "13869737887b0e671793c494137b4ad68158d74194c956611322bc2a04b3a688",
+   "raw_provenance": "research/experiments/n11-seventhcost-class-s5-exclusive-probe-1306043891938492416-20261126/output/raw/at15m-run1-k10.out.csv",
+   "second_impl_gate": "SW 44/44"
+  },
+  "k11": {
+   "lo": "1306043891938492416",
+   "hi": "68719476736",
+   "legal": "92",
+   "expected_result": "2",
+   "stage_budget": "15000000",
+   "replica_expected_quad": "92,15000000,2,8175719",
+   "input_sha256": "96ca108a1d6886e4d45db50b2371ce02cb0893f400c3f8301d4b652bc49af846",
+   "raw_provenance": "research/experiments/n11-seventhcost-class-s5-exclusive-probe-1306043891938492416-20261126/output/raw/at15m-run1-k11.out.csv",
+   "second_impl_gate": "SW 44/44"
+  },
+  "k12": {
+   "lo": "1306043891938492544",
+   "hi": "0",
+   "legal": "96",
+   "expected_result": "2",
+   "stage_budget": "15000000",
+   "replica_expected_quad": "96,15000000,2,6968873",
+   "input_sha256": "a213d3b2ec1129ec9be65aa0266190b3c191d822abd486017c7d4b219cff2dc8",
+   "raw_provenance": "research/experiments/n11-seventhcost-class-s5-exclusive-probe-1306043891938492416-20261126/output/raw/at15m-run1-k12.out.csv",
+   "second_impl_gate": "SW 44/44"
+  },
+  "k13": {
+   "lo": "1306043891938500608",
+   "hi": "0",
+   "legal": "93",
+   "expected_result": "2",
+   "stage_budget": "15000000",
+   "replica_expected_quad": "93,15000000,2,2482316",
+   "input_sha256": "0011bfc73c1c08ab4d5a0a3c9bfefa32263a0f4a26b3a50c5dbcfce2029d252d",
+   "raw_provenance": "research/experiments/n11-seventhcost-class-s5-exclusive-probe-1306043891938492416-20261126/output/raw/at15m-run1-k13.out.csv",
+   "second_impl_gate": "SW 44/44"
+  },
+  "k14": {
+   "lo": "1306043891938557952",
+   "hi": "0",
+   "legal": "91",
+   "expected_result": "2",
+   "stage_budget": "15000000",
+   "replica_expected_quad": "91,15000000,2,3184572",
+   "input_sha256": "0f21213527a50f626b5bf26915cfd1762d9188e62e02efdbb3dc626f3937e497",
+   "raw_provenance": "research/experiments/n11-seventhcost-class-s5-exclusive-probe-1306043891938492416-20261126/output/raw/at15m-run1-k14.out.csv",
+   "second_impl_gate": "SW 44/44"
+  },
+  "k15": {
+   "lo": "1306043891955269632",
+   "hi": "0",
+   "legal": "98",
+   "expected_result": "2",
+   "stage_budget": "15000000",
+   "replica_expected_quad": "98,15000000,2,4499006",
+   "input_sha256": "7d44c70fd571ac1a28903d5fe10c04f7483f86229ffca7de9ca31be5cb6def0d",
+   "raw_provenance": "research/experiments/n11-seventhcost-class-s5-exclusive-probe-1306043891938492416-20261126/output/raw/at15m-run1-k15.out.csv",
+   "second_impl_gate": "SW 44/44"
+  },
+  "k16": {
+   "lo": "1306043892206927872",
+   "hi": "0",
+   "legal": "98",
+   "expected_result": "2",
+   "stage_budget": "2000000",
+   "replica_expected_quad": "98,2000000,2,1228696",
+   "input_sha256": "908fadc540320db01234811fccf3d5c6db20aebc9733968211d7ff23a3bd8ebe",
+   "raw_provenance": "research/experiments/n11-seventhcost-class-s5-exclusive-probe-1306043891938492416-20261126/output/raw/at2m-k16.out.csv",
+   "second_impl_gate": "SW 44/44"
+  },
+  "k17": {
+   "lo": "1306043960657969152",
+   "hi": "0",
+   "legal": "94",
+   "expected_result": "2",
+   "stage_budget": "2000000",
+   "replica_expected_quad": "94,2000000,2,1831284",
+   "input_sha256": "a30a4dc4454ceb8314453c58cd805bfa35842aa7acad2a9795e8f203490a1f9a",
+   "raw_provenance": "research/experiments/n11-seventhcost-class-s5-exclusive-probe-1306043891938492416-20261126/output/raw/at2m-k17.out.csv",
+   "second_impl_gate": "SW 44/44"
+  },
+  "k18": {
+   "lo": "1306044991450120192",
+   "hi": "0",
+   "legal": "90",
+   "expected_result": "2",
+   "stage_budget": "15000000",
+   "replica_expected_quad": "90,15000000,2,2337950",
+   "input_sha256": "181d04f5bcac6402f5489fad520808d85323297f1ff49acc70ef7fc576b556a1",
+   "raw_provenance": "research/experiments/n11-seventhcost-class-s5-exclusive-probe-1306043891938492416-20261126/output/raw/at15m-run1-k18.out.csv",
+   "second_impl_gate": "SW 44/44"
+  },
+  "k19": {
+   "lo": "1306184629426847744",
+   "hi": "0",
+   "legal": "91",
+   "expected_result": "2",
+   "stage_budget": "15000000",
+   "replica_expected_quad": "91,15000000,2,7363042",
+   "input_sha256": "a9cdab6f1605fcb8c79165e97ae38a0b878b95cf5bb5a5e47464d4d6b3972093",
+   "raw_provenance": "research/experiments/n11-seventhcost-class-s5-exclusive-probe-1306043891938492416-20261126/output/raw/at15m-run1-k19.out.csv",
+   "second_impl_gate": "SW 44/44"
+  },
+  "k20": {
+   "lo": "1306606841891913728",
+   "hi": "0",
+   "legal": "92",
+   "expected_result": "2",
+   "stage_budget": "15000000",
+   "replica_expected_quad": "92,15000000,2,2198801",
+   "input_sha256": "d7682dbe75864e91b6001c163711857dac0341752432cae3953ed2379ba12cb7",
+   "raw_provenance": "research/experiments/n11-seventhcost-class-s5-exclusive-probe-1306043891938492416-20261126/output/raw/at15m-run1-k20.out.csv",
+   "second_impl_gate": "SW 44/44"
+  },
+  "k21": {
+   "lo": "1378101485976420352",
+   "hi": "0",
+   "legal": "98",
+   "expected_result": "2",
+   "stage_budget": "15000000",
+   "replica_expected_quad": "98,15000000,2,6786255",
+   "input_sha256": "924d069f8b6a3c5a334aaa331b1d2701d52d34cfee4937a980325b6874a53f43",
+   "raw_provenance": "research/experiments/n11-seventhcost-class-s5-exclusive-probe-1306043891938492416-20261126/output/raw/at15m-run1-k21.out.csv",
+   "second_impl_gate": "SW 44/44"
+  },
+  "k22": {
+   "lo": "1594274268090204160",
+   "hi": "0",
+   "legal": "99",
+   "expected_result": "2",
+   "stage_budget": "15000000",
+   "replica_expected_quad": "99,15000000,2,7990013",
+   "input_sha256": "ef4f7fb9c9037ec1e3ecc8882b49ca755382db137a1be2424815103500976e9f",
+   "raw_provenance": "research/experiments/n11-seventhcost-class-s5-exclusive-probe-1306043891938492416-20261126/output/raw/at15m-run1-k22.out.csv",
+   "second_impl_gate": "SW 44/44"
+  },
+  "k23": {
+   "lo": "1882504644241915904",
+   "hi": "0",
+   "legal": "96",
+   "expected_result": "2",
+   "stage_budget": "15000000",
+   "replica_expected_quad": "96,15000000,2,4822824",
+   "input_sha256": "9abc314ebeef716320f91574491aa56b85d035612aa24f8e41fdbb7804d0504c",
+   "raw_provenance": "research/experiments/n11-seventhcost-class-s5-exclusive-probe-1306043891938492416-20261126/output/raw/at15m-run1-k23.out.csv",
+   "second_impl_gate": "SW 44/44"
+  },
+  "k24": {
+   "lo": "3611886901152186368",
+   "hi": "0",
+   "legal": "92",
+   "expected_result": "2",
+   "stage_budget": "15000000",
+   "replica_expected_quad": "92,15000000,2,2960039",
+   "input_sha256": "6e55b8f94df003055cff5d7544ad4ec718e69aebe659e340f07931f2168d9c66",
+   "raw_provenance": "research/experiments/n11-seventhcost-class-s5-exclusive-probe-1306043891938492416-20261126/output/raw/at15m-run1-k24.out.csv",
+   "second_impl_gate": "SW 44/44"
+  },
+  "k25": {
+   "lo": "5917729910365880320",
+   "hi": "0",
+   "legal": "92",
+   "expected_result": "2",
+   "stage_budget": "15000000",
+   "replica_expected_quad": "92,15000000,2,2314036",
+   "input_sha256": "50804e32ee55da2ffcf556d38f644e602d00a945e8175279b1f96783f3a3c33f",
+   "raw_provenance": "research/experiments/n11-seventhcost-class-s5-exclusive-probe-1306043891938492416-20261126/output/raw/at15m-run1-k25.out.csv",
+   "second_impl_gate": "SW 44/44"
+  },
+  "k26": {
+   "lo": "10376293541461623808",
+   "hi": "68719476744",
+   "legal": "93",
+   "expected_result": "2",
+   "stage_budget": "15000000",
+   "replica_expected_quad": "93,15000000,2,7170686",
+   "input_sha256": "08952c518b381a68ecb7c39039c720a0940c3ed97428b83dc2e856d88707be47",
+   "raw_provenance": "research/experiments/n11-seventhcost-class-s5-exclusive-probe-1306043891938492416-20261126/output/raw/at15m-run1-k26.out.csv",
+   "second_impl_gate": "SW 44/44"
+  },
+  "k27": {
+   "lo": "10376328725833715712",
+   "hi": "8",
+   "legal": "93",
+   "expected_result": "2",
+   "stage_budget": "15000000",
+   "replica_expected_quad": "93,15000000,2,2535682",
+   "input_sha256": "3fb7fe2885a5eea42d5e12614fd2516f0b24ded5283ded9b4853f415a7589e49",
+   "raw_provenance": "research/experiments/n11-seventhcost-class-s5-exclusive-probe-1306043891938492416-20261126/output/raw/at15m-run1-k27.out.csv",
+   "second_impl_gate": "SW 44/44"
+  },
+  "k28": {
+   "lo": "10376328725833715712",
+   "hi": "65536",
+   "legal": "98",
+   "expected_result": "2",
+   "stage_budget": "15000000",
+   "replica_expected_quad": "98,15000000,2,3882046",
+   "input_sha256": "90438c8992092e913dfb2157793c510da6fda44b833976bba133f3182e9cce39",
+   "raw_provenance": "research/experiments/n11-seventhcost-class-s5-exclusive-probe-1306043891938492416-20261126/output/raw/at15m-run1-k28.out.csv",
+   "second_impl_gate": "SW 44/44"
+  },
+  "k29": {
+   "lo": "10376328725833715712",
+   "hi": "131072",
+   "legal": "92",
+   "expected_result": "2",
+   "stage_budget": "15000000",
+   "replica_expected_quad": "92,15000000,2,3329801",
+   "input_sha256": "09a6d82c959a8c5c2fe2ec16878896e4684fad566b0e0d5e3b9125627f5e945a",
+   "raw_provenance": "research/experiments/n11-seventhcost-class-s5-exclusive-probe-1306043891938492416-20261126/output/raw/at15m-run1-k29.out.csv",
+   "second_impl_gate": "SW 44/44"
+  },
+  "k30": {
+   "lo": "10376328725833715712",
+   "hi": "33554432",
+   "legal": "91",
+   "expected_result": "2",
+   "stage_budget": "15000000",
+   "replica_expected_quad": "91,15000000,2,4837865",
+   "input_sha256": "f411687469b2a66ef8ff543b2ed95cf97ad20e2597c94b2318925c7374267e54",
+   "raw_provenance": "research/experiments/n11-seventhcost-class-s5-exclusive-probe-1306043891938492416-20261126/output/raw/at15m-run1-k30.out.csv",
+   "second_impl_gate": "SW 44/44"
+  },
+  "k31": {
+   "lo": "10376328725833715712",
+   "hi": "67108864",
+   "legal": "98",
+   "expected_result": "2",
+   "stage_budget": "15000000",
+   "replica_expected_quad": "98,15000000,2,7435262",
+   "input_sha256": "e584563aae0a871a5b29f0536744f32571f27ca4b540779c26a10baad3d10077",
+   "raw_provenance": "research/experiments/n11-seventhcost-class-s5-exclusive-probe-1306043891938492416-20261126/output/raw/at15m-run1-k31.out.csv",
+   "second_impl_gate": "SW 44/44"
+  },
+  "k32": {
+   "lo": "10376328725833715712",
+   "hi": "268435456",
+   "legal": "97",
+   "expected_result": "2",
+   "stage_budget": "15000000",
+   "replica_expected_quad": "97,15000000,2,3831090",
+   "input_sha256": "1b10d8c41391f6f69910c6430dc24ca6f5735b68d610aefa962b6eed1dcff604",
+   "raw_provenance": "research/experiments/n11-seventhcost-class-s5-exclusive-probe-1306043891938492416-20261126/output/raw/at15m-run1-k32.out.csv",
+   "second_impl_gate": "SW 44/44"
+  },
+  "k33": {
+   "lo": "1152921513197961216",
+   "hi": "536870912",
+   "legal": "103",
+   "expected_result": "2",
+   "stage_budget": "15000000",
+   "replica_expected_quad": "103,15000000,2,2739658",
+   "input_sha256": "7b3bf9fab96c1ec23befe3afeb8444886ef0839c9fb61688318aa2bad69b15ee",
+   "raw_provenance": "research/experiments/n11-seventhcost-class-s5-exclusive-probe-1306043891938492416-20261126/output/raw/at15m-run1-k33.out.csv",
+   "second_impl_gate": "SW 44/44"
+  },
+  "k34": {
+   "lo": "1224979098645954560",
+   "hi": "536870912",
+   "legal": "102",
+   "expected_result": "2",
+   "stage_budget": "15000000",
+   "replica_expected_quad": "102,15000000,2,8150456",
+   "input_sha256": "bd981d7aa7c098f5e31aac3200b78548d93ebdfcd00d75aac056ac0561636562",
+   "raw_provenance": "research/experiments/n11-seventhcost-class-s5-exclusive-probe-1306043891938492416-20261126/output/raw/at15m-run1-k34.out.csv",
+   "second_impl_gate": "SW 44/44"
+  },
+  "k35": {
+   "lo": "1306043891938492416",
+   "hi": "8",
+   "legal": "102",
+   "expected_result": "2",
+   "stage_budget": "15000000",
+   "replica_expected_quad": "102,15000000,2,5484699",
+   "input_sha256": "bb48f792c13f8415992205521ceca0a530ee6ba7cec8e909c040703216eea5f7",
+   "raw_provenance": "research/experiments/n11-seventhcost-class-s5-exclusive-probe-1306043891938492416-20261126/output/raw/at15m-run1-k35.out.csv",
+   "second_impl_gate": "SW 44/44"
+  },
+  "k36": {
+   "lo": "1306043891938492416",
+   "hi": "16",
+   "legal": "101",
+   "expected_result": "2",
+   "stage_budget": "15000000",
+   "replica_expected_quad": "101,15000000,2,4856132",
+   "input_sha256": "45a08e25d07e2a0e890b67c32bb18ee030ed14b7c6aa33a9471ef08f8d1ddb56",
+   "raw_provenance": "research/experiments/n11-seventhcost-class-s5-exclusive-probe-1306043891938492416-20261126/output/raw/at15m-run1-k36.out.csv",
+   "second_impl_gate": "SW 44/44"
+  },
+  "k37": {
+   "lo": "1306043891938492416",
+   "hi": "32",
+   "legal": "102",
+   "expected_result": "2",
+   "stage_budget": "15000000",
+   "replica_expected_quad": "102,15000000,2,4695043",
+   "input_sha256": "a340b4880edce48e18060af0ec2b222db8052ac500507a2ec800b8f8fb721a05",
+   "raw_provenance": "research/experiments/n11-seventhcost-class-s5-exclusive-probe-1306043891938492416-20261126/output/raw/at15m-run1-k37.out.csv",
+   "second_impl_gate": "SW 44/44"
+  },
+  "k38": {
+   "lo": "1306043891938492416",
+   "hi": "16384",
+   "legal": "103",
+   "expected_result": "2",
+   "stage_budget": "15000000",
+   "replica_expected_quad": "103,15000000,2,6238916",
+   "input_sha256": "08fbeebf17add5dee54bf65176d497836515657e925cd51ac23da28383bc9d05",
+   "raw_provenance": "research/experiments/n11-seventhcost-class-s5-exclusive-probe-1306043891938492416-20261126/output/raw/at15m-run1-k38.out.csv",
+   "second_impl_gate": "SW 44/44"
+  },
+  "k39": {
+   "lo": "1306043891938492416",
+   "hi": "16777216",
+   "legal": "103",
+   "expected_result": "2",
+   "stage_budget": "15000000",
+   "replica_expected_quad": "103,15000000,2,10652524",
+   "input_sha256": "59e6140ec0032882d8c27602b20090ddbd54298a4fc285bf659795b07a34d905",
+   "raw_provenance": "research/experiments/n11-seventhcost-class-s5-exclusive-probe-1306043891938492416-20261126/output/raw/at15m-run1-k39.out.csv",
+   "second_impl_gate": "SW 44/44"
+  },
+  "k40": {
+   "lo": "1306043891938492417",
+   "hi": "0",
+   "legal": "100",
+   "expected_result": "2",
+   "stage_budget": "15000000",
+   "replica_expected_quad": "100,15000000,2,5235489",
+   "input_sha256": "a40e725ec2469e40dea4cb1fe734e15ccb43d5b39ded6733bb9354a258418044",
+   "raw_provenance": "research/experiments/n11-seventhcost-class-s5-exclusive-probe-1306043891938492416-20261126/output/raw/at15m-run1-k40.out.csv",
+   "second_impl_gate": "SW 44/44"
+  },
+  "k41": {
+   "lo": "1306043891938496512",
+   "hi": "0",
+   "legal": "104",
+   "expected_result": "2",
+   "stage_budget": "15000000",
+   "replica_expected_quad": "104,15000000,2,10889302",
+   "input_sha256": "47dd5c202d5e32628f34736f06754dc25fc6a487e415cc6da47cf3ce03d41dab",
+   "raw_provenance": "research/experiments/n11-seventhcost-class-s5-exclusive-probe-1306043891938492416-20261126/output/raw/at15m-run1-k41.out.csv",
+   "second_impl_gate": "SW 44/44"
+  },
+  "k42": {
+   "lo": "1306044166816399360",
+   "hi": "0",
+   "legal": "102",
+   "expected_result": "2",
+   "stage_budget": "15000000",
+   "replica_expected_quad": "102,15000000,2,3089468",
+   "input_sha256": "377eb6a4c1575d49db052362a138ca302acdb278071b7106dfe1934c48540832",
+   "raw_provenance": "research/experiments/n11-seventhcost-class-s5-exclusive-probe-1306043891938492416-20261126/output/raw/at15m-run1-k42.out.csv",
+   "second_impl_gate": "SW 44/44"
+  },
+  "k05": {
+   "lo": "1152921504607932416",
+   "hi": "536870912",
+   "legal": "90",
+   "expected_result": "1",
+   "stage_budget": "50000000",
+   "replica_expected_quad": "90,50000000,1,15763505",
+   "input_sha256": "a73a6c70a221619b94ce29c188434d24a1f8af43653b37c1019a3286ba2ddb91",
+   "raw_provenance": "research/experiments/n11-seventhcost-class-s5-exclusive-probe-1306043891938492416-20261126/output/raw/at50m-run1-k05.out.csv",
+   "second_impl_gate": "SX 4/4"
+  }
+ },
+ "protocol": {
+  "passes_per_target": 2,
+  "cold_pair_fields_equal": [
+   "result",
+   "expansions"
+  ],
+  "expansions_compared_only_across_third_impl_runs": true,
+  "hard_stop_on": [
+   "result != expected_result",
+   "cold-pair field mismatch",
+   "GATE_FAIL",
+   "crash",
+   "truncation"
+  ]
+ },
+ "meaning": "verdict-level corroboration bookkeeping only; NO verdict consumed, no cache increment, no class-status change; adoption stays with a separately declared adoption Part"
+}

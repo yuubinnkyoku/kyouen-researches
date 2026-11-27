@@ -1,0 +1,133 @@
+{
+ "gates": {
+  "G0:anchors": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "G0:gate-source": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "G0:head-pin": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "G0:schema": {
+   "detail": "n11-seventhcost-k05-l50m-cppgate-rows-v1",
+   "status": "PASS"
+  },
+  "G0:target-expected": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "G1:anchor-af039:p1": {
+   "detail": "replay_rows=1 done=True header=True",
+   "status": "PASS"
+  },
+  "G1:anchor-af039:p2": {
+   "detail": "replay_rows=1 done=True header=True",
+   "status": "PASS"
+  },
+  "G1:anchor-aj001:p1": {
+   "detail": "replay_rows=1 done=True header=True",
+   "status": "PASS"
+  },
+  "G1:anchor-aj001:p2": {
+   "detail": "replay_rows=1 done=True header=True",
+   "status": "PASS"
+  },
+  "G1:anchor-at2m:p1": {
+   "detail": "replay_rows=1 done=True header=True",
+   "status": "PASS"
+  },
+  "G1:anchor-at2m:p2": {
+   "detail": "replay_rows=1 done=True header=True",
+   "status": "PASS"
+  },
+  "G1:k05:p1": {
+   "detail": "replay_rows=1 done=True header=True",
+   "status": "PASS"
+  },
+  "G1:k05:p2": {
+   "detail": "replay_rows=1 done=True header=True",
+   "status": "PASS"
+  },
+  "G2:anchor-af039": {
+   "detail": "p1=0,5,89,0,30000000,2,19234232,39,1152921504607895681,68719476736 p2=0,5,89,0,30000000,2,19234232,39,1152921504607895681,68719476736",
+   "status": "PASS"
+  },
+  "G2:anchor-aj001": {
+   "detail": "p1=0,5,84,0,30000000,2,5156075,9,1152922604269469696,65536 p2=0,5,84,0,30000000,2,5156075,9,1152922604269469696,65536",
+   "status": "PASS"
+  },
+  "G2:anchor-at2m": {
+   "detail": "p1=0,5,98,0,2000000,0,2000000,3,1152921504606851072,536870946 p2=0,5,98,0,2000000,0,2000000,3,1152921504606851072,536870946",
+   "status": "PASS"
+  },
+  "G2:k05": {
+   "detail": "p1=0,5,90,0,50000000,1,15763505,31,1152921504607932416,536870912 p2=0,5,90,0,50000000,1,15763505,31,1152921504607932416,536870912",
+   "status": "PASS"
+  },
+  "G3:anchor-af039": {
+   "detail": "observed 89,30000000,2,19234232 expected 89,30000000,2,19234232",
+   "status": "PASS"
+  },
+  "G3:anchor-aj001": {
+   "detail": "observed 84,30000000,2,5156075 expected 84,30000000,2,5156075",
+   "status": "PASS"
+  },
+  "G3:anchor-at2m": {
+   "detail": "observed 98,2000000,0,2000000 expected 98,2000000,0,2000000",
+   "status": "PASS"
+  },
+  "G3:k05": {
+   "detail": "observed 90,50000000,1,15763505 expected 90,50000000,1,15763505",
+   "status": "PASS"
+  },
+  "G4": {
+   "detail": "passes=4/4 bad=0",
+   "status": "PASS"
+  },
+  "G5:anchor-af039": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "G5:anchor-aj001": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "G5:anchor-at2m": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "G5:k05": {
+   "detail": "",
+   "status": "PASS"
+  }
+ },
+ "overall": "PASS",
+ "part": "SX",
+ "rows": {
+  "anchor-af039": {
+   "budget": "30000000",
+   "expected": "89,30000000,2,19234232",
+   "observed_p1": "89,30000000,2,19234232"
+  },
+  "anchor-aj001": {
+   "budget": "30000000",
+   "expected": "84,30000000,2,5156075",
+   "observed_p1": "84,30000000,2,5156075"
+  },
+  "anchor-at2m": {
+   "budget": "2000000",
+   "expected": "98,2000000,0,2000000",
+   "observed_p1": "98,2000000,0,2000000"
+  },
+  "k05": {
+   "budget": "50000000",
+   "expected": "90,50000000,1,15763505",
+   "observed_p1": "90,50000000,1,15763505"
+  }
+ },
+ "schema": "n11-seventhcost-k05-l50m-cppgate-audit-v1"
+}

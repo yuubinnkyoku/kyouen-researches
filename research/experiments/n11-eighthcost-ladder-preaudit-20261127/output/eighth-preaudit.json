@@ -1,0 +1,2404 @@
+{
+ "batch_summary_sha256": "2379dbe031c59b368407a41a65c5366d5209234045c149d0ec2d40136698ba08",
+ "gates": {
+  "P0:batch-summary-class": {
+   "detail": "1297036692750860288:0",
+   "status": "PASS"
+  },
+  "P0:batch-summary-counters": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P0:batch-summary-head-basis": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P0:batch-summary-schema": {
+   "detail": "n11-eighthcost-batch-checkpoint-summary-v1",
+   "status": "PASS"
+  },
+  "P0:batch-summary-sha": {
+   "detail": "2379dbe031c59b368407a41a65c5366d5209234045c149d0ec2d40136698ba08",
+   "status": "PASS"
+  },
+  "P0:freshness-all-43-keys-absent": {
+   "detail": "present=[]",
+   "status": "PASS"
+  },
+  "P0:head-census": {
+   "detail": "rows=6874 WIN=202 LOSS=6672",
+   "status": "PASS"
+  },
+  "P0:head-sha": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P0:selection-class": {
+   "detail": "1297036692750860288:0",
+   "status": "PASS"
+  },
+  "P0:selection-head-basis": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P0:selection-order-len": {
+   "detail": "43",
+   "status": "PASS"
+  },
+  "P0:selection-order-unique": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P0:selection-schema": {
+   "detail": "n11-eighthcost-exclusive-selection-v1",
+   "status": "PASS"
+  },
+  "P0:selection-sha": {
+   "detail": "691dcd807d52b9b9dbe0118f2347db9a613565377350246fda53a6c518aeef33",
+   "status": "PASS"
+  },
+  "P0:selection-unknown-exclusive": {
+   "detail": "43",
+   "status": "PASS"
+  },
+  "P1:manifest-at15m-only-k01": {
+   "detail": "['output/raw/at15m-run1/k01.out.csv', 'output/raw/at15m-run2/k01.out.csv']",
+   "status": "PASS"
+  },
+  "P1:manifest-at2m-86": {
+   "detail": "86",
+   "status": "PASS"
+  },
+  "P1:manifest-count": {
+   "detail": "88",
+   "status": "PASS"
+  },
+  "P1:manifest-sha-all": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P1:raw-tree==manifest": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P2:k01:at15m-budget": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P2:k01:at15m-provenance": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P2:k01:at15m-rows": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P2:k01:at15m-win": {
+   "detail": "result=1 nodes=8514427",
+   "status": "PASS"
+  },
+  "P2:k01:row": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P2:k01:run1:budget": {
+   "detail": "2000000",
+   "status": "PASS"
+  },
+  "P2:k01:run1:provenance": {
+   "detail": "key=1297036692750860288:64 legal=84 exp=1297036692750860288:64/84",
+   "status": "PASS"
+  },
+  "P2:k01:run1:unknown-2m": {
+   "detail": "result=0 nodes=2000000",
+   "status": "PASS"
+  },
+  "P2:k01:run2:budget": {
+   "detail": "2000000",
+   "status": "PASS"
+  },
+  "P2:k01:run2:provenance": {
+   "detail": "key=1297036692750860288:64 legal=84 exp=1297036692750860288:64/84",
+   "status": "PASS"
+  },
+  "P2:k01:run2:unknown-2m": {
+   "detail": "result=0 nodes=2000000",
+   "status": "PASS"
+  },
+  "P2:k01:win-inside-budget": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P2:k02:row": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P2:k02:run1:budget": {
+   "detail": "2000000",
+   "status": "PASS"
+  },
+  "P2:k02:run1:provenance": {
+   "detail": "key=1297036692750868480:0 legal=88 exp=1297036692750868480:0/88",
+   "status": "PASS"
+  },
+  "P2:k02:run1:unknown-2m": {
+   "detail": "result=0 nodes=2000000",
+   "status": "PASS"
+  },
+  "P2:k02:run2:budget": {
+   "detail": "2000000",
+   "status": "PASS"
+  },
+  "P2:k02:run2:provenance": {
+   "detail": "key=1297036692750868480:0 legal=88 exp=1297036692750868480:0/88",
+   "status": "PASS"
+  },
+  "P2:k02:run2:unknown-2m": {
+   "detail": "result=0 nodes=2000000",
+   "status": "PASS"
+  },
+  "P2:k03:row": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P2:k03:run1:budget": {
+   "detail": "2000000",
+   "status": "PASS"
+  },
+  "P2:k03:run1:provenance": {
+   "detail": "key=1297036693824602112:0 legal=88 exp=1297036693824602112:0/88",
+   "status": "PASS"
+  },
+  "P2:k03:run1:unknown-2m": {
+   "detail": "result=0 nodes=2000000",
+   "status": "PASS"
+  },
+  "P2:k03:run2:budget": {
+   "detail": "2000000",
+   "status": "PASS"
+  },
+  "P2:k03:run2:provenance": {
+   "detail": "key=1297036693824602112:0 legal=88 exp=1297036693824602112:0/88",
+   "status": "PASS"
+  },
+  "P2:k03:run2:unknown-2m": {
+   "detail": "result=0 nodes=2000000",
+   "status": "PASS"
+  },
+  "P2:k04:row": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P2:k04:run1:budget": {
+   "detail": "2000000",
+   "status": "PASS"
+  },
+  "P2:k04:run1:provenance": {
+   "detail": "key=1297177430239215616:0 legal=88 exp=1297177430239215616:0/88",
+   "status": "PASS"
+  },
+  "P2:k04:run1:unknown-2m": {
+   "detail": "result=0 nodes=2000000",
+   "status": "PASS"
+  },
+  "P2:k04:run2:budget": {
+   "detail": "2000000",
+   "status": "PASS"
+  },
+  "P2:k04:run2:provenance": {
+   "detail": "key=1297177430239215616:0 legal=88 exp=1297177430239215616:0/88",
+   "status": "PASS"
+  },
+  "P2:k04:run2:unknown-2m": {
+   "detail": "result=0 nodes=2000000",
+   "status": "PASS"
+  },
+  "P2:k05:row": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P2:k05:run1:budget": {
+   "detail": "2000000",
+   "status": "PASS"
+  },
+  "P2:k05:run1:provenance": {
+   "detail": "key=5908722711178248192:0 legal=86 exp=5908722711178248192:0/86",
+   "status": "PASS"
+  },
+  "P2:k05:run1:unknown-2m": {
+   "detail": "result=0 nodes=2000000",
+   "status": "PASS"
+  },
+  "P2:k05:run2:budget": {
+   "detail": "2000000",
+   "status": "PASS"
+  },
+  "P2:k05:run2:provenance": {
+   "detail": "key=5908722711178248192:0 legal=86 exp=5908722711178248192:0/86",
+   "status": "PASS"
+  },
+  "P2:k05:run2:unknown-2m": {
+   "detail": "result=0 nodes=2000000",
+   "status": "PASS"
+  },
+  "P2:k06:row": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P2:k06:run1:budget": {
+   "detail": "2000000",
+   "status": "PASS"
+  },
+  "P2:k06:run1:provenance": {
+   "detail": "key=1152991873486290944:68719476736 legal=93 exp=1152991873486290944:68719476736/93",
+   "status": "PASS"
+  },
+  "P2:k06:run1:unknown-2m": {
+   "detail": "result=0 nodes=2000000",
+   "status": "PASS"
+  },
+  "P2:k06:run2:budget": {
+   "detail": "2000000",
+   "status": "PASS"
+  },
+  "P2:k06:run2:provenance": {
+   "detail": "key=1152991873486290944:68719476736 legal=93 exp=1152991873486290944:68719476736/93",
+   "status": "PASS"
+  },
+  "P2:k06:run2:unknown-2m": {
+   "detail": "result=0 nodes=2000000",
+   "status": "PASS"
+  },
+  "P2:k07:row": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P2:k07:run1:budget": {
+   "detail": "2000000",
+   "status": "PASS"
+  },
+  "P2:k07:run1:provenance": {
+   "detail": "key=1297036692750860288:16 legal=91 exp=1297036692750860288:16/91",
+   "status": "PASS"
+  },
+  "P2:k07:run1:unknown-2m": {
+   "detail": "result=0 nodes=2000000",
+   "status": "PASS"
+  },
+  "P2:k07:run2:budget": {
+   "detail": "2000000",
+   "status": "PASS"
+  },
+  "P2:k07:run2:provenance": {
+   "detail": "key=1297036692750860288:16 legal=91 exp=1297036692750860288:16/91",
+   "status": "PASS"
+  },
+  "P2:k07:run2:unknown-2m": {
+   "detail": "result=0 nodes=2000000",
+   "status": "PASS"
+  },
+  "P2:k08:row": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P2:k08:run1:budget": {
+   "detail": "2000000",
+   "status": "PASS"
+  },
+  "P2:k08:run1:provenance": {
+   "detail": "key=1297036692750860288:128 legal=97 exp=1297036692750860288:128/97",
+   "status": "PASS"
+  },
+  "P2:k08:run1:unknown-2m": {
+   "detail": "result=0 nodes=2000000",
+   "status": "PASS"
+  },
+  "P2:k08:run2:budget": {
+   "detail": "2000000",
+   "status": "PASS"
+  },
+  "P2:k08:run2:provenance": {
+   "detail": "key=1297036692750860288:128 legal=97 exp=1297036692750860288:128/97",
+   "status": "PASS"
+  },
+  "P2:k08:run2:unknown-2m": {
+   "detail": "result=0 nodes=2000000",
+   "status": "PASS"
+  },
+  "P2:k09:row": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P2:k09:run1:budget": {
+   "detail": "2000000",
+   "status": "PASS"
+  },
+  "P2:k09:run1:provenance": {
+   "detail": "key=1297036692750860288:65536 legal=91 exp=1297036692750860288:65536/91",
+   "status": "PASS"
+  },
+  "P2:k09:run1:unknown-2m": {
+   "detail": "result=0 nodes=2000000",
+   "status": "PASS"
+  },
+  "P2:k09:run2:budget": {
+   "detail": "2000000",
+   "status": "PASS"
+  },
+  "P2:k09:run2:provenance": {
+   "detail": "key=1297036692750860288:65536 legal=91 exp=1297036692750860288:65536/91",
+   "status": "PASS"
+  },
+  "P2:k09:run2:unknown-2m": {
+   "detail": "result=0 nodes=2000000",
+   "status": "PASS"
+  },
+  "P2:k10:row": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P2:k10:run1:budget": {
+   "detail": "2000000",
+   "status": "PASS"
+  },
+  "P2:k10:run1:provenance": {
+   "detail": "key=1297036692750860289:0 legal=97 exp=1297036692750860289:0/97",
+   "status": "PASS"
+  },
+  "P2:k10:run1:unknown-2m": {
+   "detail": "result=0 nodes=2000000",
+   "status": "PASS"
+  },
+  "P2:k10:run2:budget": {
+   "detail": "2000000",
+   "status": "PASS"
+  },
+  "P2:k10:run2:provenance": {
+   "detail": "key=1297036692750860289:0 legal=97 exp=1297036692750860289:0/97",
+   "status": "PASS"
+  },
+  "P2:k10:run2:unknown-2m": {
+   "detail": "result=0 nodes=2000000",
+   "status": "PASS"
+  },
+  "P2:k11:row": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P2:k11:run1:budget": {
+   "detail": "2000000",
+   "status": "PASS"
+  },
+  "P2:k11:run1:provenance": {
+   "detail": "key=1297036692750860292:0 legal=97 exp=1297036692750860292:0/97",
+   "status": "PASS"
+  },
+  "P2:k11:run1:unknown-2m": {
+   "detail": "result=0 nodes=2000000",
+   "status": "PASS"
+  },
+  "P2:k11:run2:budget": {
+   "detail": "2000000",
+   "status": "PASS"
+  },
+  "P2:k11:run2:provenance": {
+   "detail": "key=1297036692750860292:0 legal=97 exp=1297036692750860292:0/97",
+   "status": "PASS"
+  },
+  "P2:k11:run2:unknown-2m": {
+   "detail": "result=0 nodes=2000000",
+   "status": "PASS"
+  },
+  "P2:k12:row": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P2:k12:run1:budget": {
+   "detail": "2000000",
+   "status": "PASS"
+  },
+  "P2:k12:run1:provenance": {
+   "detail": "key=1297036692750860320:0 legal=93 exp=1297036692750860320:0/93",
+   "status": "PASS"
+  },
+  "P2:k12:run1:unknown-2m": {
+   "detail": "result=0 nodes=2000000",
+   "status": "PASS"
+  },
+  "P2:k12:run2:budget": {
+   "detail": "2000000",
+   "status": "PASS"
+  },
+  "P2:k12:run2:provenance": {
+   "detail": "key=1297036692750860320:0 legal=93 exp=1297036692750860320:0/93",
+   "status": "PASS"
+  },
+  "P2:k12:run2:unknown-2m": {
+   "detail": "result=0 nodes=2000000",
+   "status": "PASS"
+  },
+  "P2:k13:row": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P2:k13:run1:budget": {
+   "detail": "2000000",
+   "status": "PASS"
+  },
+  "P2:k13:run1:provenance": {
+   "detail": "key=1297036692750864384:0 legal=97 exp=1297036692750864384:0/97",
+   "status": "PASS"
+  },
+  "P2:k13:run1:unknown-2m": {
+   "detail": "result=0 nodes=2000000",
+   "status": "PASS"
+  },
+  "P2:k13:run2:budget": {
+   "detail": "2000000",
+   "status": "PASS"
+  },
+  "P2:k13:run2:provenance": {
+   "detail": "key=1297036692750864384:0 legal=97 exp=1297036692750864384:0/97",
+   "status": "PASS"
+  },
+  "P2:k13:run2:unknown-2m": {
+   "detail": "result=0 nodes=2000000",
+   "status": "PASS"
+  },
+  "P2:k14:row": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P2:k14:run1:budget": {
+   "detail": "2000000",
+   "status": "PASS"
+  },
+  "P2:k14:run1:provenance": {
+   "detail": "key=1297036692750893056:0 legal=95 exp=1297036692750893056:0/95",
+   "status": "PASS"
+  },
+  "P2:k14:run1:unknown-2m": {
+   "detail": "result=0 nodes=2000000",
+   "status": "PASS"
+  },
+  "P2:k14:run2:budget": {
+   "detail": "2000000",
+   "status": "PASS"
+  },
+  "P2:k14:run2:provenance": {
+   "detail": "key=1297036692750893056:0 legal=95 exp=1297036692750893056:0/95",
+   "status": "PASS"
+  },
+  "P2:k14:run2:unknown-2m": {
+   "detail": "result=0 nodes=2000000",
+   "status": "PASS"
+  },
+  "P2:k15:row": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P2:k15:run1:budget": {
+   "detail": "2000000",
+   "status": "PASS"
+  },
+  "P2:k15:run1:provenance": {
+   "detail": "key=1297036692750925824:0 legal=92 exp=1297036692750925824:0/92",
+   "status": "PASS"
+  },
+  "P2:k15:run1:unknown-2m": {
+   "detail": "result=0 nodes=2000000",
+   "status": "PASS"
+  },
+  "P2:k15:run2:budget": {
+   "detail": "2000000",
+   "status": "PASS"
+  },
+  "P2:k15:run2:provenance": {
+   "detail": "key=1297036692750925824:0 legal=92 exp=1297036692750925824:0/92",
+   "status": "PASS"
+  },
+  "P2:k15:run2:unknown-2m": {
+   "detail": "result=0 nodes=2000000",
+   "status": "PASS"
+  },
+  "P2:k16:row": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P2:k16:run1:budget": {
+   "detail": "2000000",
+   "status": "PASS"
+  },
+  "P2:k16:run1:provenance": {
+   "detail": "key=1297036692767637504:0 legal=94 exp=1297036692767637504:0/94",
+   "status": "PASS"
+  },
+  "P2:k16:run1:unknown-2m": {
+   "detail": "result=0 nodes=2000000",
+   "status": "PASS"
+  },
+  "P2:k16:run2:budget": {
+   "detail": "2000000",
+   "status": "PASS"
+  },
+  "P2:k16:run2:provenance": {
+   "detail": "key=1297036692767637504:0 legal=94 exp=1297036692767637504:0/94",
+   "status": "PASS"
+  },
+  "P2:k16:run2:unknown-2m": {
+   "detail": "result=0 nodes=2000000",
+   "status": "PASS"
+  },
+  "P2:k17:row": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P2:k17:run1:budget": {
+   "detail": "2000000",
+   "status": "PASS"
+  },
+  "P2:k17:run1:provenance": {
+   "detail": "key=1297036692885078016:0 legal=92 exp=1297036692885078016:0/92",
+   "status": "PASS"
+  },
+  "P2:k17:run1:unknown-2m": {
+   "detail": "result=0 nodes=2000000",
+   "status": "PASS"
+  },
+  "P2:k17:run2:budget": {
+   "detail": "2000000",
+   "status": "PASS"
+  },
+  "P2:k17:run2:provenance": {
+   "detail": "key=1297036692885078016:0 legal=92 exp=1297036692885078016:0/92",
+   "status": "PASS"
+  },
+  "P2:k17:run2:unknown-2m": {
+   "detail": "result=0 nodes=2000000",
+   "status": "PASS"
+  },
+  "P2:k18:row": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P2:k18:run1:budget": {
+   "detail": "2000000",
+   "status": "PASS"
+  },
+  "P2:k18:run1:provenance": {
+   "detail": "key=1297036693019295744:0 legal=97 exp=1297036693019295744:0/97",
+   "status": "PASS"
+  },
+  "P2:k18:run1:unknown-2m": {
+   "detail": "result=0 nodes=2000000",
+   "status": "PASS"
+  },
+  "P2:k18:run2:budget": {
+   "detail": "2000000",
+   "status": "PASS"
+  },
+  "P2:k18:run2:provenance": {
+   "detail": "key=1297036693019295744:0 legal=97 exp=1297036693019295744:0/97",
+   "status": "PASS"
+  },
+  "P2:k18:run2:unknown-2m": {
+   "detail": "result=0 nodes=2000000",
+   "status": "PASS"
+  },
+  "P2:k19:row": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P2:k19:run1:budget": {
+   "detail": "2000000",
+   "status": "PASS"
+  },
+  "P2:k19:run1:provenance": {
+   "detail": "key=1297036967628767232:0 legal=98 exp=1297036967628767232:0/98",
+   "status": "PASS"
+  },
+  "P2:k19:run1:unknown-2m": {
+   "detail": "result=0 nodes=2000000",
+   "status": "PASS"
+  },
+  "P2:k19:run2:budget": {
+   "detail": "2000000",
+   "status": "PASS"
+  },
+  "P2:k19:run2:provenance": {
+   "detail": "key=1297036967628767232:0 legal=98 exp=1297036967628767232:0/98",
+   "status": "PASS"
+  },
+  "P2:k19:run2:unknown-2m": {
+   "detail": "result=0 nodes=2000000",
+   "status": "PASS"
+  },
+  "P2:k20:row": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P2:k20:run1:budget": {
+   "detail": "2000000",
+   "status": "PASS"
+  },
+  "P2:k20:run1:provenance": {
+   "detail": "key=1297037792262488064:0 legal=97 exp=1297037792262488064:0/97",
+   "status": "PASS"
+  },
+  "P2:k20:run1:unknown-2m": {
+   "detail": "result=0 nodes=2000000",
+   "status": "PASS"
+  },
+  "P2:k20:run2:budget": {
+   "detail": "2000000",
+   "status": "PASS"
+  },
+  "P2:k20:run2:provenance": {
+   "detail": "key=1297037792262488064:0 legal=97 exp=1297037792262488064:0/97",
+   "status": "PASS"
+  },
+  "P2:k20:run2:unknown-2m": {
+   "detail": "result=0 nodes=2000000",
+   "status": "PASS"
+  },
+  "P2:k21:row": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P2:k21:run1:budget": {
+   "detail": "2000000",
+   "status": "PASS"
+  },
+  "P2:k21:run1:provenance": {
+   "detail": "key=1297318167727570944:0 legal=90 exp=1297318167727570944:0/90",
+   "status": "PASS"
+  },
+  "P2:k21:run1:unknown-2m": {
+   "detail": "result=0 nodes=2000000",
+   "status": "PASS"
+  },
+  "P2:k21:run2:budget": {
+   "detail": "2000000",
+   "status": "PASS"
+  },
+  "P2:k21:run2:provenance": {
+   "detail": "key=1297318167727570944:0 legal=90 exp=1297318167727570944:0/90",
+   "status": "PASS"
+  },
+  "P2:k21:run2:unknown-2m": {
+   "detail": "result=0 nodes=2000000",
+   "status": "PASS"
+  },
+  "P2:k22:row": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P2:k22:run1:budget": {
+   "detail": "2000000",
+   "status": "PASS"
+  },
+  "P2:k22:run1:provenance": {
+   "detail": "key=1297599642704281600:0 legal=93 exp=1297599642704281600:0/93",
+   "status": "PASS"
+  },
+  "P2:k22:run1:unknown-2m": {
+   "detail": "result=0 nodes=2000000",
+   "status": "PASS"
+  },
+  "P2:k22:run2:budget": {
+   "detail": "2000000",
+   "status": "PASS"
+  },
+  "P2:k22:run2:provenance": {
+   "detail": "key=1297599642704281600:0 legal=93 exp=1297599642704281600:0/93",
+   "status": "PASS"
+  },
+  "P2:k22:run2:unknown-2m": {
+   "detail": "result=0 nodes=2000000",
+   "status": "PASS"
+  },
+  "P2:k23:row": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P2:k23:run1:budget": {
+   "detail": "2000000",
+   "status": "PASS"
+  },
+  "P2:k23:run1:provenance": {
+   "detail": "key=1585267068902572032:0 legal=98 exp=1585267068902572032:0/98",
+   "status": "PASS"
+  },
+  "P2:k23:run1:unknown-2m": {
+   "detail": "result=0 nodes=2000000",
+   "status": "PASS"
+  },
+  "P2:k23:run2:budget": {
+   "detail": "2000000",
+   "status": "PASS"
+  },
+  "P2:k23:run2:provenance": {
+   "detail": "key=1585267068902572032:0 legal=98 exp=1585267068902572032:0/98",
+   "status": "PASS"
+  },
+  "P2:k23:run2:unknown-2m": {
+   "detail": "result=0 nodes=2000000",
+   "status": "PASS"
+  },
+  "P2:k24:row": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P2:k24:run1:budget": {
+   "detail": "2000000",
+   "status": "PASS"
+  },
+  "P2:k24:run1:provenance": {
+   "detail": "key=1873497445054283776:0 legal=90 exp=1873497445054283776:0/90",
+   "status": "PASS"
+  },
+  "P2:k24:run1:unknown-2m": {
+   "detail": "result=0 nodes=2000000",
+   "status": "PASS"
+  },
+  "P2:k24:run2:budget": {
+   "detail": "2000000",
+   "status": "PASS"
+  },
+  "P2:k24:run2:provenance": {
+   "detail": "key=1873497445054283776:0 legal=90 exp=1873497445054283776:0/90",
+   "status": "PASS"
+  },
+  "P2:k24:run2:unknown-2m": {
+   "detail": "result=0 nodes=2000000",
+   "status": "PASS"
+  },
+  "P2:k25:row": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P2:k25:run1:budget": {
+   "detail": "2000000",
+   "status": "PASS"
+  },
+  "P2:k25:run1:provenance": {
+   "detail": "key=3602879701964554240:0 legal=93 exp=3602879701964554240:0/93",
+   "status": "PASS"
+  },
+  "P2:k25:run1:unknown-2m": {
+   "detail": "result=0 nodes=2000000",
+   "status": "PASS"
+  },
+  "P2:k25:run2:budget": {
+   "detail": "2000000",
+   "status": "PASS"
+  },
+  "P2:k25:run2:provenance": {
+   "detail": "key=3602879701964554240:0 legal=93 exp=3602879701964554240:0/93",
+   "status": "PASS"
+  },
+  "P2:k25:run2:unknown-2m": {
+   "detail": "result=0 nodes=2000000",
+   "status": "PASS"
+  },
+  "P2:k26:row": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P2:k26:run1:budget": {
+   "detail": "2000000",
+   "status": "PASS"
+  },
+  "P2:k26:run1:provenance": {
+   "detail": "key=10376293541730062336:65536 legal=98 exp=10376293541730062336:65536/98",
+   "status": "PASS"
+  },
+  "P2:k26:run1:unknown-2m": {
+   "detail": "result=0 nodes=2000000",
+   "status": "PASS"
+  },
+  "P2:k26:run2:budget": {
+   "detail": "2000000",
+   "status": "PASS"
+  },
+  "P2:k26:run2:provenance": {
+   "detail": "key=10376293541730062336:65536 legal=98 exp=10376293541730062336:65536/98",
+   "status": "PASS"
+  },
+  "P2:k26:run2:unknown-2m": {
+   "detail": "result=0 nodes=2000000",
+   "status": "PASS"
+  },
+  "P2:k27:row": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P2:k27:run1:budget": {
+   "detail": "2000000",
+   "status": "PASS"
+  },
+  "P2:k27:run1:provenance": {
+   "detail": "key=10376293541730062336:131072 legal=96 exp=10376293541730062336:131072/96",
+   "status": "PASS"
+  },
+  "P2:k27:run1:unknown-2m": {
+   "detail": "result=0 nodes=2000000",
+   "status": "PASS"
+  },
+  "P2:k27:run2:budget": {
+   "detail": "2000000",
+   "status": "PASS"
+  },
+  "P2:k27:run2:provenance": {
+   "detail": "key=10376293541730062336:131072 legal=96 exp=10376293541730062336:131072/96",
+   "status": "PASS"
+  },
+  "P2:k27:run2:unknown-2m": {
+   "detail": "result=0 nodes=2000000",
+   "status": "PASS"
+  },
+  "P2:k28:row": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P2:k28:run1:budget": {
+   "detail": "2000000",
+   "status": "PASS"
+  },
+  "P2:k28:run1:provenance": {
+   "detail": "key=10376293541730062336:67108864 legal=98 exp=10376293541730062336:67108864/98",
+   "status": "PASS"
+  },
+  "P2:k28:run1:unknown-2m": {
+   "detail": "result=0 nodes=2000000",
+   "status": "PASS"
+  },
+  "P2:k28:run2:budget": {
+   "detail": "2000000",
+   "status": "PASS"
+  },
+  "P2:k28:run2:provenance": {
+   "detail": "key=10376293541730062336:67108864 legal=98 exp=10376293541730062336:67108864/98",
+   "status": "PASS"
+  },
+  "P2:k28:run2:unknown-2m": {
+   "detail": "result=0 nodes=2000000",
+   "status": "PASS"
+  },
+  "P2:k29:row": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P2:k29:run1:budget": {
+   "detail": "2000000",
+   "status": "PASS"
+  },
+  "P2:k29:run1:provenance": {
+   "detail": "key=10448351135767990272:0 legal=92 exp=10448351135767990272:0/92",
+   "status": "PASS"
+  },
+  "P2:k29:run1:unknown-2m": {
+   "detail": "result=0 nodes=2000000",
+   "status": "PASS"
+  },
+  "P2:k29:run2:budget": {
+   "detail": "2000000",
+   "status": "PASS"
+  },
+  "P2:k29:run2:provenance": {
+   "detail": "key=10448351135767990272:0 legal=92 exp=10448351135767990272:0/92",
+   "status": "PASS"
+  },
+  "P2:k29:run2:unknown-2m": {
+   "detail": "result=0 nodes=2000000",
+   "status": "PASS"
+  },
+  "P2:k30:row": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P2:k30:run1:budget": {
+   "detail": "2000000",
+   "status": "PASS"
+  },
+  "P2:k30:run1:provenance": {
+   "detail": "key=1152921504606851072:536870929 legal=102 exp=1152921504606851072:536870929/102",
+   "status": "PASS"
+  },
+  "P2:k30:run1:unknown-2m": {
+   "detail": "result=0 nodes=2000000",
+   "status": "PASS"
+  },
+  "P2:k30:run2:budget": {
+   "detail": "2000000",
+   "status": "PASS"
+  },
+  "P2:k30:run2:provenance": {
+   "detail": "key=1152921504606851072:536870929 legal=102 exp=1152921504606851072:536870929/102",
+   "status": "PASS"
+  },
+  "P2:k30:run2:unknown-2m": {
+   "detail": "result=0 nodes=2000000",
+   "status": "PASS"
+  },
+  "P2:k31:row": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P2:k31:run1:budget": {
+   "detail": "2000000",
+   "status": "PASS"
+  },
+  "P2:k31:run1:provenance": {
+   "detail": "key=1152921504607895552:553649152 legal=101 exp=1152921504607895552:553649152/101",
+   "status": "PASS"
+  },
+  "P2:k31:run1:unknown-2m": {
+   "detail": "result=0 nodes=2000000",
+   "status": "PASS"
+  },
+  "P2:k31:run2:budget": {
+   "detail": "2000000",
+   "status": "PASS"
+  },
+  "P2:k31:run2:provenance": {
+   "detail": "key=1152921504607895552:553649152 legal=101 exp=1152921504607895552:553649152/101",
+   "status": "PASS"
+  },
+  "P2:k31:run2:unknown-2m": {
+   "detail": "result=0 nodes=2000000",
+   "status": "PASS"
+  },
+  "P2:k32:row": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P2:k32:run1:budget": {
+   "detail": "2000000",
+   "status": "PASS"
+  },
+  "P2:k32:run1:provenance": {
+   "detail": "key=1152930300699873280:536870928 legal=103 exp=1152930300699873280:536870928/103",
+   "status": "PASS"
+  },
+  "P2:k32:run1:unknown-2m": {
+   "detail": "result=0 nodes=2000000",
+   "status": "PASS"
+  },
+  "P2:k32:run2:budget": {
+   "detail": "2000000",
+   "status": "PASS"
+  },
+  "P2:k32:run2:provenance": {
+   "detail": "key=1152930300699873280:536870928 legal=103 exp=1152930300699873280:536870928/103",
+   "status": "PASS"
+  },
+  "P2:k32:run2:unknown-2m": {
+   "detail": "result=0 nodes=2000000",
+   "status": "PASS"
+  },
+  "P2:k33:row": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P2:k33:run1:budget": {
+   "detail": "2000000",
+   "status": "PASS"
+  },
+  "P2:k33:run1:provenance": {
+   "detail": "key=1161928703861592064:536870928 legal=100 exp=1161928703861592064:536870928/100",
+   "status": "PASS"
+  },
+  "P2:k33:run1:unknown-2m": {
+   "detail": "result=0 nodes=2000000",
+   "status": "PASS"
+  },
+  "P2:k33:run2:budget": {
+   "detail": "2000000",
+   "status": "PASS"
+  },
+  "P2:k33:run2:provenance": {
+   "detail": "key=1161928703861592064:536870928 legal=100 exp=1161928703861592064:536870928/100",
+   "status": "PASS"
+  },
+  "P2:k33:run2:unknown-2m": {
+   "detail": "result=0 nodes=2000000",
+   "status": "PASS"
+  },
+  "P2:k34:row": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P2:k34:run1:budget": {
+   "detail": "2000000",
+   "status": "PASS"
+  },
+  "P2:k34:run1:provenance": {
+   "detail": "key=1297036692750860288:8 legal=102 exp=1297036692750860288:8/102",
+   "status": "PASS"
+  },
+  "P2:k34:run1:unknown-2m": {
+   "detail": "result=0 nodes=2000000",
+   "status": "PASS"
+  },
+  "P2:k34:run2:budget": {
+   "detail": "2000000",
+   "status": "PASS"
+  },
+  "P2:k34:run2:provenance": {
+   "detail": "key=1297036692750860288:8 legal=102 exp=1297036692750860288:8/102",
+   "status": "PASS"
+  },
+  "P2:k34:run2:unknown-2m": {
+   "detail": "result=0 nodes=2000000",
+   "status": "PASS"
+  },
+  "P2:k35:row": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P2:k35:run1:budget": {
+   "detail": "2000000",
+   "status": "PASS"
+  },
+  "P2:k35:run1:provenance": {
+   "detail": "key=1297036692750860288:32 legal=102 exp=1297036692750860288:32/102",
+   "status": "PASS"
+  },
+  "P2:k35:run1:unknown-2m": {
+   "detail": "result=0 nodes=2000000",
+   "status": "PASS"
+  },
+  "P2:k35:run2:budget": {
+   "detail": "2000000",
+   "status": "PASS"
+  },
+  "P2:k35:run2:provenance": {
+   "detail": "key=1297036692750860288:32 legal=102 exp=1297036692750860288:32/102",
+   "status": "PASS"
+  },
+  "P2:k35:run2:unknown-2m": {
+   "detail": "result=0 nodes=2000000",
+   "status": "PASS"
+  },
+  "P2:k36:row": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P2:k36:run1:budget": {
+   "detail": "2000000",
+   "status": "PASS"
+  },
+  "P2:k36:run1:provenance": {
+   "detail": "key=1297036692750860288:16384 legal=103 exp=1297036692750860288:16384/103",
+   "status": "PASS"
+  },
+  "P2:k36:run1:unknown-2m": {
+   "detail": "result=0 nodes=2000000",
+   "status": "PASS"
+  },
+  "P2:k36:run2:budget": {
+   "detail": "2000000",
+   "status": "PASS"
+  },
+  "P2:k36:run2:provenance": {
+   "detail": "key=1297036692750860288:16384 legal=103 exp=1297036692750860288:16384/103",
+   "status": "PASS"
+  },
+  "P2:k36:run2:unknown-2m": {
+   "detail": "result=0 nodes=2000000",
+   "status": "PASS"
+  },
+  "P2:k37:row": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P2:k37:run1:budget": {
+   "detail": "2000000",
+   "status": "PASS"
+  },
+  "P2:k37:run1:provenance": {
+   "detail": "key=1297036692750860288:16777216 legal=100 exp=1297036692750860288:16777216/100",
+   "status": "PASS"
+  },
+  "P2:k37:run1:unknown-2m": {
+   "detail": "result=0 nodes=2000000",
+   "status": "PASS"
+  },
+  "P2:k37:run2:budget": {
+   "detail": "2000000",
+   "status": "PASS"
+  },
+  "P2:k37:run2:provenance": {
+   "detail": "key=1297036692750860288:16777216 legal=100 exp=1297036692750860288:16777216/100",
+   "status": "PASS"
+  },
+  "P2:k37:run2:unknown-2m": {
+   "detail": "result=0 nodes=2000000",
+   "status": "PASS"
+  },
+  "P2:k38:row": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P2:k38:run1:budget": {
+   "detail": "2000000",
+   "status": "PASS"
+  },
+  "P2:k38:run1:provenance": {
+   "detail": "key=1297036692750860416:0 legal=100 exp=1297036692750860416:0/100",
+   "status": "PASS"
+  },
+  "P2:k38:run1:unknown-2m": {
+   "detail": "result=0 nodes=2000000",
+   "status": "PASS"
+  },
+  "P2:k38:run2:budget": {
+   "detail": "2000000",
+   "status": "PASS"
+  },
+  "P2:k38:run2:provenance": {
+   "detail": "key=1297036692750860416:0 legal=100 exp=1297036692750860416:0/100",
+   "status": "PASS"
+  },
+  "P2:k38:run2:unknown-2m": {
+   "detail": "result=0 nodes=2000000",
+   "status": "PASS"
+  },
+  "P2:k39:row": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P2:k39:run1:budget": {
+   "detail": "2000000",
+   "status": "PASS"
+  },
+  "P2:k39:run1:provenance": {
+   "detail": "key=1297036692750860544:0 legal=100 exp=1297036692750860544:0/100",
+   "status": "PASS"
+  },
+  "P2:k39:run1:unknown-2m": {
+   "detail": "result=0 nodes=2000000",
+   "status": "PASS"
+  },
+  "P2:k39:run2:budget": {
+   "detail": "2000000",
+   "status": "PASS"
+  },
+  "P2:k39:run2:provenance": {
+   "detail": "key=1297036692750860544:0 legal=100 exp=1297036692750860544:0/100",
+   "status": "PASS"
+  },
+  "P2:k39:run2:unknown-2m": {
+   "detail": "result=0 nodes=2000000",
+   "status": "PASS"
+  },
+  "P2:k40:row": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P2:k40:run1:budget": {
+   "detail": "2000000",
+   "status": "PASS"
+  },
+  "P2:k40:run1:provenance": {
+   "detail": "key=1306043892005601280:0 legal=100 exp=1306043892005601280:0/100",
+   "status": "PASS"
+  },
+  "P2:k40:run1:unknown-2m": {
+   "detail": "result=0 nodes=2000000",
+   "status": "PASS"
+  },
+  "P2:k40:run2:budget": {
+   "detail": "2000000",
+   "status": "PASS"
+  },
+  "P2:k40:run2:provenance": {
+   "detail": "key=1306043892005601280:0 legal=100 exp=1306043892005601280:0/100",
+   "status": "PASS"
+  },
+  "P2:k40:run2:unknown-2m": {
+   "detail": "result=0 nodes=2000000",
+   "status": "PASS"
+  },
+  "P2:k41:row": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P2:k41:run1:budget": {
+   "detail": "2000000",
+   "status": "PASS"
+  },
+  "P2:k41:run1:provenance": {
+   "detail": "key=10376293541730062336:8 legal=101 exp=10376293541730062336:8/101",
+   "status": "PASS"
+  },
+  "P2:k41:run1:unknown-2m": {
+   "detail": "result=0 nodes=2000000",
+   "status": "PASS"
+  },
+  "P2:k41:run2:budget": {
+   "detail": "2000000",
+   "status": "PASS"
+  },
+  "P2:k41:run2:provenance": {
+   "detail": "key=10376293541730062336:8 legal=101 exp=10376293541730062336:8/101",
+   "status": "PASS"
+  },
+  "P2:k41:run2:unknown-2m": {
+   "detail": "result=0 nodes=2000000",
+   "status": "PASS"
+  },
+  "P2:k42:row": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P2:k42:run1:budget": {
+   "detail": "2000000",
+   "status": "PASS"
+  },
+  "P2:k42:run1:provenance": {
+   "detail": "key=10376293541730062336:33554432 legal=100 exp=10376293541730062336:33554432/100",
+   "status": "PASS"
+  },
+  "P2:k42:run1:unknown-2m": {
+   "detail": "result=0 nodes=2000000",
+   "status": "PASS"
+  },
+  "P2:k42:run2:budget": {
+   "detail": "2000000",
+   "status": "PASS"
+  },
+  "P2:k42:run2:provenance": {
+   "detail": "key=10376293541730062336:33554432 legal=100 exp=10376293541730062336:33554432/100",
+   "status": "PASS"
+  },
+  "P2:k42:run2:unknown-2m": {
+   "detail": "result=0 nodes=2000000",
+   "status": "PASS"
+  },
+  "P2:k43:row": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P2:k43:run1:budget": {
+   "detail": "2000000",
+   "status": "PASS"
+  },
+  "P2:k43:run1:provenance": {
+   "detail": "key=10376293541730062336:268435456 legal=106 exp=10376293541730062336:268435456/106",
+   "status": "PASS"
+  },
+  "P2:k43:run1:unknown-2m": {
+   "detail": "result=0 nodes=2000000",
+   "status": "PASS"
+  },
+  "P2:k43:run2:budget": {
+   "detail": "2000000",
+   "status": "PASS"
+  },
+  "P2:k43:run2:provenance": {
+   "detail": "key=10376293541730062336:268435456 legal=106 exp=10376293541730062336:268435456/106",
+   "status": "PASS"
+  },
+  "P2:k43:run2:unknown-2m": {
+   "detail": "result=0 nodes=2000000",
+   "status": "PASS"
+  },
+  "P3:k01:at15m-pair-identity": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P3:k01:pair-identity": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P3:k02:pair-identity": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P3:k03:pair-identity": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P3:k04:pair-identity": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P3:k05:pair-identity": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P3:k06:pair-identity": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P3:k07:pair-identity": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P3:k08:pair-identity": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P3:k09:pair-identity": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P3:k10:pair-identity": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P3:k11:pair-identity": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P3:k12:pair-identity": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P3:k13:pair-identity": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P3:k14:pair-identity": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P3:k15:pair-identity": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P3:k16:pair-identity": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P3:k17:pair-identity": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P3:k18:pair-identity": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P3:k19:pair-identity": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P3:k20:pair-identity": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P3:k21:pair-identity": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P3:k22:pair-identity": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P3:k23:pair-identity": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P3:k24:pair-identity": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P3:k25:pair-identity": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P3:k26:pair-identity": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P3:k27:pair-identity": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P3:k28:pair-identity": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P3:k29:pair-identity": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P3:k30:pair-identity": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P3:k31:pair-identity": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P3:k32:pair-identity": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P3:k33:pair-identity": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P3:k34:pair-identity": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P3:k35:pair-identity": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P3:k36:pair-identity": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P3:k37:pair-identity": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P3:k38:pair-identity": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P3:k39:pair-identity": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P3:k40:pair-identity": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P3:k41:pair-identity": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P3:k42:pair-identity": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P3:k43:pair-identity": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k01:key==selection": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k01:ledger-15m==raw": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k01:ledger-2m==raw": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k01:ledger-resolved-win": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k01:pos": {
+   "detail": "1",
+   "status": "PASS"
+  },
+  "P4:k02:key==selection": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k02:ledger-2m==raw": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k02:ledger-suppressed": {
+   "detail": "suppressed_by_win_stopping_rule",
+   "status": "PASS"
+  },
+  "P4:k02:no-15m-raw": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k02:pos": {
+   "detail": "2",
+   "status": "PASS"
+  },
+  "P4:k03:key==selection": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k03:ledger-2m==raw": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k03:ledger-suppressed": {
+   "detail": "suppressed_by_win_stopping_rule",
+   "status": "PASS"
+  },
+  "P4:k03:no-15m-raw": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k03:pos": {
+   "detail": "3",
+   "status": "PASS"
+  },
+  "P4:k04:key==selection": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k04:ledger-2m==raw": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k04:ledger-suppressed": {
+   "detail": "suppressed_by_win_stopping_rule",
+   "status": "PASS"
+  },
+  "P4:k04:no-15m-raw": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k04:pos": {
+   "detail": "4",
+   "status": "PASS"
+  },
+  "P4:k05:key==selection": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k05:ledger-2m==raw": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k05:ledger-suppressed": {
+   "detail": "suppressed_by_win_stopping_rule",
+   "status": "PASS"
+  },
+  "P4:k05:no-15m-raw": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k05:pos": {
+   "detail": "5",
+   "status": "PASS"
+  },
+  "P4:k06:key==selection": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k06:ledger-2m==raw": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k06:ledger-suppressed": {
+   "detail": "suppressed_by_win_stopping_rule",
+   "status": "PASS"
+  },
+  "P4:k06:no-15m-raw": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k06:pos": {
+   "detail": "6",
+   "status": "PASS"
+  },
+  "P4:k07:key==selection": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k07:ledger-2m==raw": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k07:ledger-suppressed": {
+   "detail": "suppressed_by_win_stopping_rule",
+   "status": "PASS"
+  },
+  "P4:k07:no-15m-raw": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k07:pos": {
+   "detail": "7",
+   "status": "PASS"
+  },
+  "P4:k08:key==selection": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k08:ledger-2m==raw": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k08:ledger-suppressed": {
+   "detail": "suppressed_by_win_stopping_rule",
+   "status": "PASS"
+  },
+  "P4:k08:no-15m-raw": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k08:pos": {
+   "detail": "8",
+   "status": "PASS"
+  },
+  "P4:k09:key==selection": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k09:ledger-2m==raw": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k09:ledger-suppressed": {
+   "detail": "suppressed_by_win_stopping_rule",
+   "status": "PASS"
+  },
+  "P4:k09:no-15m-raw": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k09:pos": {
+   "detail": "9",
+   "status": "PASS"
+  },
+  "P4:k10:key==selection": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k10:ledger-2m==raw": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k10:ledger-suppressed": {
+   "detail": "suppressed_by_win_stopping_rule",
+   "status": "PASS"
+  },
+  "P4:k10:no-15m-raw": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k10:pos": {
+   "detail": "10",
+   "status": "PASS"
+  },
+  "P4:k11:key==selection": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k11:ledger-2m==raw": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k11:ledger-suppressed": {
+   "detail": "suppressed_by_win_stopping_rule",
+   "status": "PASS"
+  },
+  "P4:k11:no-15m-raw": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k11:pos": {
+   "detail": "11",
+   "status": "PASS"
+  },
+  "P4:k12:key==selection": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k12:ledger-2m==raw": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k12:ledger-suppressed": {
+   "detail": "suppressed_by_win_stopping_rule",
+   "status": "PASS"
+  },
+  "P4:k12:no-15m-raw": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k12:pos": {
+   "detail": "12",
+   "status": "PASS"
+  },
+  "P4:k13:key==selection": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k13:ledger-2m==raw": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k13:ledger-suppressed": {
+   "detail": "suppressed_by_win_stopping_rule",
+   "status": "PASS"
+  },
+  "P4:k13:no-15m-raw": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k13:pos": {
+   "detail": "13",
+   "status": "PASS"
+  },
+  "P4:k14:key==selection": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k14:ledger-2m==raw": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k14:ledger-suppressed": {
+   "detail": "suppressed_by_win_stopping_rule",
+   "status": "PASS"
+  },
+  "P4:k14:no-15m-raw": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k14:pos": {
+   "detail": "14",
+   "status": "PASS"
+  },
+  "P4:k15:key==selection": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k15:ledger-2m==raw": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k15:ledger-suppressed": {
+   "detail": "suppressed_by_win_stopping_rule",
+   "status": "PASS"
+  },
+  "P4:k15:no-15m-raw": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k15:pos": {
+   "detail": "15",
+   "status": "PASS"
+  },
+  "P4:k16:key==selection": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k16:ledger-2m==raw": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k16:ledger-suppressed": {
+   "detail": "suppressed_by_win_stopping_rule",
+   "status": "PASS"
+  },
+  "P4:k16:no-15m-raw": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k16:pos": {
+   "detail": "16",
+   "status": "PASS"
+  },
+  "P4:k17:key==selection": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k17:ledger-2m==raw": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k17:ledger-suppressed": {
+   "detail": "suppressed_by_win_stopping_rule",
+   "status": "PASS"
+  },
+  "P4:k17:no-15m-raw": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k17:pos": {
+   "detail": "17",
+   "status": "PASS"
+  },
+  "P4:k18:key==selection": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k18:ledger-2m==raw": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k18:ledger-suppressed": {
+   "detail": "suppressed_by_win_stopping_rule",
+   "status": "PASS"
+  },
+  "P4:k18:no-15m-raw": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k18:pos": {
+   "detail": "18",
+   "status": "PASS"
+  },
+  "P4:k19:key==selection": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k19:ledger-2m==raw": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k19:ledger-suppressed": {
+   "detail": "suppressed_by_win_stopping_rule",
+   "status": "PASS"
+  },
+  "P4:k19:no-15m-raw": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k19:pos": {
+   "detail": "19",
+   "status": "PASS"
+  },
+  "P4:k20:key==selection": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k20:ledger-2m==raw": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k20:ledger-suppressed": {
+   "detail": "suppressed_by_win_stopping_rule",
+   "status": "PASS"
+  },
+  "P4:k20:no-15m-raw": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k20:pos": {
+   "detail": "20",
+   "status": "PASS"
+  },
+  "P4:k21:key==selection": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k21:ledger-2m==raw": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k21:ledger-suppressed": {
+   "detail": "suppressed_by_win_stopping_rule",
+   "status": "PASS"
+  },
+  "P4:k21:no-15m-raw": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k21:pos": {
+   "detail": "21",
+   "status": "PASS"
+  },
+  "P4:k22:key==selection": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k22:ledger-2m==raw": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k22:ledger-suppressed": {
+   "detail": "suppressed_by_win_stopping_rule",
+   "status": "PASS"
+  },
+  "P4:k22:no-15m-raw": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k22:pos": {
+   "detail": "22",
+   "status": "PASS"
+  },
+  "P4:k23:key==selection": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k23:ledger-2m==raw": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k23:ledger-suppressed": {
+   "detail": "suppressed_by_win_stopping_rule",
+   "status": "PASS"
+  },
+  "P4:k23:no-15m-raw": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k23:pos": {
+   "detail": "23",
+   "status": "PASS"
+  },
+  "P4:k24:key==selection": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k24:ledger-2m==raw": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k24:ledger-suppressed": {
+   "detail": "suppressed_by_win_stopping_rule",
+   "status": "PASS"
+  },
+  "P4:k24:no-15m-raw": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k24:pos": {
+   "detail": "24",
+   "status": "PASS"
+  },
+  "P4:k25:key==selection": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k25:ledger-2m==raw": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k25:ledger-suppressed": {
+   "detail": "suppressed_by_win_stopping_rule",
+   "status": "PASS"
+  },
+  "P4:k25:no-15m-raw": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k25:pos": {
+   "detail": "25",
+   "status": "PASS"
+  },
+  "P4:k26:key==selection": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k26:ledger-2m==raw": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k26:ledger-suppressed": {
+   "detail": "suppressed_by_win_stopping_rule",
+   "status": "PASS"
+  },
+  "P4:k26:no-15m-raw": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k26:pos": {
+   "detail": "26",
+   "status": "PASS"
+  },
+  "P4:k27:key==selection": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k27:ledger-2m==raw": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k27:ledger-suppressed": {
+   "detail": "suppressed_by_win_stopping_rule",
+   "status": "PASS"
+  },
+  "P4:k27:no-15m-raw": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k27:pos": {
+   "detail": "27",
+   "status": "PASS"
+  },
+  "P4:k28:key==selection": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k28:ledger-2m==raw": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k28:ledger-suppressed": {
+   "detail": "suppressed_by_win_stopping_rule",
+   "status": "PASS"
+  },
+  "P4:k28:no-15m-raw": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k28:pos": {
+   "detail": "28",
+   "status": "PASS"
+  },
+  "P4:k29:key==selection": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k29:ledger-2m==raw": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k29:ledger-suppressed": {
+   "detail": "suppressed_by_win_stopping_rule",
+   "status": "PASS"
+  },
+  "P4:k29:no-15m-raw": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k29:pos": {
+   "detail": "29",
+   "status": "PASS"
+  },
+  "P4:k30:key==selection": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k30:ledger-2m==raw": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k30:ledger-suppressed": {
+   "detail": "suppressed_by_win_stopping_rule",
+   "status": "PASS"
+  },
+  "P4:k30:no-15m-raw": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k30:pos": {
+   "detail": "30",
+   "status": "PASS"
+  },
+  "P4:k31:key==selection": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k31:ledger-2m==raw": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k31:ledger-suppressed": {
+   "detail": "suppressed_by_win_stopping_rule",
+   "status": "PASS"
+  },
+  "P4:k31:no-15m-raw": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k31:pos": {
+   "detail": "31",
+   "status": "PASS"
+  },
+  "P4:k32:key==selection": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k32:ledger-2m==raw": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k32:ledger-suppressed": {
+   "detail": "suppressed_by_win_stopping_rule",
+   "status": "PASS"
+  },
+  "P4:k32:no-15m-raw": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k32:pos": {
+   "detail": "32",
+   "status": "PASS"
+  },
+  "P4:k33:key==selection": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k33:ledger-2m==raw": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k33:ledger-suppressed": {
+   "detail": "suppressed_by_win_stopping_rule",
+   "status": "PASS"
+  },
+  "P4:k33:no-15m-raw": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k33:pos": {
+   "detail": "33",
+   "status": "PASS"
+  },
+  "P4:k34:key==selection": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k34:ledger-2m==raw": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k34:ledger-suppressed": {
+   "detail": "suppressed_by_win_stopping_rule",
+   "status": "PASS"
+  },
+  "P4:k34:no-15m-raw": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k34:pos": {
+   "detail": "34",
+   "status": "PASS"
+  },
+  "P4:k35:key==selection": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k35:ledger-2m==raw": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k35:ledger-suppressed": {
+   "detail": "suppressed_by_win_stopping_rule",
+   "status": "PASS"
+  },
+  "P4:k35:no-15m-raw": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k35:pos": {
+   "detail": "35",
+   "status": "PASS"
+  },
+  "P4:k36:key==selection": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k36:ledger-2m==raw": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k36:ledger-suppressed": {
+   "detail": "suppressed_by_win_stopping_rule",
+   "status": "PASS"
+  },
+  "P4:k36:no-15m-raw": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k36:pos": {
+   "detail": "36",
+   "status": "PASS"
+  },
+  "P4:k37:key==selection": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k37:ledger-2m==raw": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k37:ledger-suppressed": {
+   "detail": "suppressed_by_win_stopping_rule",
+   "status": "PASS"
+  },
+  "P4:k37:no-15m-raw": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k37:pos": {
+   "detail": "37",
+   "status": "PASS"
+  },
+  "P4:k38:key==selection": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k38:ledger-2m==raw": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k38:ledger-suppressed": {
+   "detail": "suppressed_by_win_stopping_rule",
+   "status": "PASS"
+  },
+  "P4:k38:no-15m-raw": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k38:pos": {
+   "detail": "38",
+   "status": "PASS"
+  },
+  "P4:k39:key==selection": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k39:ledger-2m==raw": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k39:ledger-suppressed": {
+   "detail": "suppressed_by_win_stopping_rule",
+   "status": "PASS"
+  },
+  "P4:k39:no-15m-raw": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k39:pos": {
+   "detail": "39",
+   "status": "PASS"
+  },
+  "P4:k40:key==selection": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k40:ledger-2m==raw": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k40:ledger-suppressed": {
+   "detail": "suppressed_by_win_stopping_rule",
+   "status": "PASS"
+  },
+  "P4:k40:no-15m-raw": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k40:pos": {
+   "detail": "40",
+   "status": "PASS"
+  },
+  "P4:k41:key==selection": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k41:ledger-2m==raw": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k41:ledger-suppressed": {
+   "detail": "suppressed_by_win_stopping_rule",
+   "status": "PASS"
+  },
+  "P4:k41:no-15m-raw": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k41:pos": {
+   "detail": "41",
+   "status": "PASS"
+  },
+  "P4:k42:key==selection": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k42:ledger-2m==raw": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k42:ledger-suppressed": {
+   "detail": "suppressed_by_win_stopping_rule",
+   "status": "PASS"
+  },
+  "P4:k42:no-15m-raw": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k42:pos": {
+   "detail": "42",
+   "status": "PASS"
+  },
+  "P4:k43:key==selection": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k43:ledger-2m==raw": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k43:ledger-suppressed": {
+   "detail": "suppressed_by_win_stopping_rule",
+   "status": "PASS"
+  },
+  "P4:k43:no-15m-raw": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:k43:pos": {
+   "detail": "43",
+   "status": "PASS"
+  },
+  "P4:per-key-len": {
+   "detail": "43",
+   "status": "PASS"
+  },
+  "P5:k02-15m-raw-absent-from-manifest": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P5:no-50m-stage": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P5:no-post-win-15m-starts": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P5:overreach-not-official": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P5:overreach-present": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P5:overreach-values": {
+   "detail": "{'result': 0, 'nodes': 15000000, 'pair': 'identical'}",
+   "status": "PASS"
+  },
+  "P5:win-anchor-text": {
+   "detail": "k01 (pos 1, key 1297036692750860288:64) resolved WIN(1) at the 15M stage (cold p",
+   "status": "PASS"
+  },
+  "P6:nodes-bookkeeping": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P6:single-implementation-note": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P6:status-guard": {
+   "detail": "",
+   "status": "PASS"
+  }
+ },
+ "head_sha256": "5b6e77f7d7832d4ce84cb1f080a93e066eb052dcf8b817e5d560f95499fcdde2",
+ "keys": 43,
+ "kit": "research/experiments/n11-eighthcost-class-s5-exclusive-probe-1297036692750860288-20261127",
+ "overall": "PASS",
+ "overreach_disclosed": true,
+ "raws": 88,
+ "resolved": {
+  "loss": 0,
+  "parked": 0,
+  "suppressed": 42,
+  "win": 1
+ },
+ "schema": "n11-eighthcost-ladder-preaudit-v1",
+ "selection_sha256": "691dcd807d52b9b9dbe0118f2347db9a613565377350246fda53a6c518aeef33",
+ "temporal_anchor_disclosure": "batch-summary ledger git-published in the SAME commit as the raws (0005e5b1): content-level WIN-stop invariant checked (15M raws only for the WIN key; k02 post-anchor 15M pair only in overreach_disclosure); no git-preceding ledger anchor exists for this batch"
+}

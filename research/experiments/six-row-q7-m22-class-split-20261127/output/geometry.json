@@ -1,0 +1,41 @@
+{
+ "witness_rows": [
+  6,
+  6,
+  5,
+  6,
+  6,
+  6
+ ],
+ "size": 35,
+ "span_cols": [
+  0,
+  21
+ ],
+ "span_rows": [
+  0,
+  5
+ ],
+ "row2_stones_x": [
+  7,
+  9,
+  16,
+  19,
+  21
+ ],
+ "min_symdiff_vs_m21_witness_8images_dx4": 12,
+ "stone_moves_vs_m21": 6,
+ "free_column_right_shift_to_m23": {
+  "maximal": false,
+  "unblocked": [
+   [
+    0,
+    2
+   ]
+  ]
+ },
+ "translation_census_R(S)": [
+  22
+ ],
+ "note": "full column span 0..21, so pure translations witness only at width 22; right shift to 6x23 leaves (0,2) unblocked"
+}

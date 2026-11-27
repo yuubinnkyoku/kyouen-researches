@@ -1,0 +1,17 @@
+# MANIFEST-sha256: research/experiments/n11-centralreply-erwin18-adoption-reaudit-20261125 (erwin18 second WIN canonical adoption + reaudit, Part ER) 2026-11-25
+# README.md self-excluded per convention; MANIFEST self-excluded; every other published file in this experiment dir is byte-pinned below (sha256 over the exact published bytes).
+# reaudit/output/probe-worklist.csv is NOT published (3,717,828 B, size policy): regen pin sha256 78e499dd5553c99b2c1ec09ba3d8071ea72cc5ed065ba4578316bddfe8084996 (regenerable from the published refresh fork reaudit/scripts/refresh_adoption_er.py against cache pin 9c4dd94e...).
+39f6c86ab7d7772e608b23549500ac808a8f3298bdd0a744102dbb0cabed1e39  25007  scripts/make_increments_er_win18_adoption.py
+907119610034fb2aebfde012550a4129dfa3b086c6de11194e856747ac74606a  10887  scripts/s5_union_merge.py
+c3e82eaaaaa0100c236fbb7a2f2e60718786aa8022a1a0eef01721b8ee821abb  40899  scripts/compare_deltas_er_adoption.py
+4f6b7797df3bb950703f95e7ec72f288a447434da5b4ccf3d6d94ee8d8d6ffc1  1973  output/increment-erwin18-20261125.cache
+48b71d6af77306a94bd561f625838cff70cd94f12d702bcda0e945b67237450a  18600  output/increments-manifest.json
+9c4dd94e61b6ee724a966ecc9552e527ba5a7107de732f0e9c5ced33bdad4a5a  282435  output/merged-exact-s5-chain-plus-erwin18-20261125.cache
+d55f578f65be6ce3cb379dbdd56f80e08e69348e519137991660bac3362444b1  1458  output/merge-audit-run1.json
+d55f578f65be6ce3cb379dbdd56f80e08e69348e519137991660bac3362444b1  1458  output/merge-audit-run2.json
+d55f578f65be6ce3cb379dbdd56f80e08e69348e519137991660bac3362444b1  1458  output/merge-audit-run3.json
+cd11b1a5d7c3f7bf5e6271715007c99b9fcbdf34b69f8fd1e2573a9d1c519b5f  16449  output/decomp-deltas-erwin18-adoption.json
+6c91e0ceaee03592f18ca1c36130d868cc7221bbe1819b803c4ba12b917a6061  26112  reaudit/scripts/refresh_adoption_er.py
+a6b8d0824e21e3d4f37bdd32a26dd8146234afb5a83f67f2734c1a83b99e1317  34214  reaudit/output/refresh-summary.json
+4c03f965a717a80cf2ce9980de8d2658c316891ae8fb83e8d9e62d84b14b4c14  35852  reaudit/output/closure-classes.csv
+1bf6c25a2bdd7506bc5762acddc2f86aac2faf333e3d41d7b9c9fe4afb1c644a  588  reaudit/output/per-root-coverage.csv

@@ -1,0 +1,834 @@
+{
+ "adopted": {
+  "classes": {
+   "30345": 18
+  },
+  "eq_prose_correction": "Part EQ declaration prose summed 136,539,338 (mis-sum); per-row registry/audit/raw agree on 136,604,338 (SSOT = per-row data)",
+  "eq_prose_nodes_mis_sum_disclosed": 136539338,
+  "ids": [
+   "ai002",
+   "ai003",
+   "ai005",
+   "ai006",
+   "ai010",
+   "ai013",
+   "ai014",
+   "ai017",
+   "ai023",
+   "ai028",
+   "ai034",
+   "ai035",
+   "ai036",
+   "ai039",
+   "ai043",
+   "ai046",
+   "ai047",
+   "ai049"
+  ],
+  "nodes_total": 136604338
+ },
+ "base": {
+  "cache_sha256": "fd29a33726e2e083998c67d83bf90822f84beebac30728ea79ea713e880cd1af",
+  "class_status_counts": {
+   "excluded": 390,
+   "excluded_now": 43,
+   "free_now": 39,
+   "unknown": 34477
+  },
+  "closure_classes_sha256": "fdd4e4b2ae08db14f2fe5f0d934a3f42a93cf687f348ef1f3074b677758ba38d",
+  "loss": 6579,
+  "per_root_coverage_sha256": "487a95c48083b0626aba341e77eb80037be07104a3c7621ab2bac4e352816c57",
+  "probe_worklist_sha256": "7cd566bfa39a4211893156151ed976fa31e19ddfe0658de1afbf2b6757f0b004",
+  "refresh_summary_sha256": "5a1ff0c58acdb2bb96ae0eb0f2c5183fb9459afbacb3392ae08e005a313a3b01",
+  "rows": 6747,
+  "win": 168
+ },
+ "class_flips": {
+  "classes": {
+   "10165": {
+    "adopted_members": [
+     "ai005"
+    ],
+    "cost_size": 108,
+    "cost_unknown_base": 108,
+    "cost_unknown_scen": 107,
+    "status_base": "unknown",
+    "status_scen": "excluded_now"
+   },
+   "10197": {
+    "adopted_members": [
+     "ai005"
+    ],
+    "cost_size": 112,
+    "cost_unknown_base": 112,
+    "cost_unknown_scen": 111,
+    "status_base": "unknown",
+    "status_scen": "excluded_now"
+   },
+   "11127": {
+    "adopted_members": [
+     "ai006"
+    ],
+    "cost_size": 113,
+    "cost_unknown_base": 113,
+    "cost_unknown_scen": 112,
+    "status_base": "unknown",
+    "status_scen": "excluded_now"
+   },
+   "11162": {
+    "adopted_members": [
+     "ai005",
+     "ai006"
+    ],
+    "cost_size": 103,
+    "cost_unknown_base": 99,
+    "cost_unknown_scen": 97,
+    "status_base": "unknown",
+    "status_scen": "excluded_now"
+   },
+   "11979": {
+    "adopted_members": [
+     "ai006"
+    ],
+    "cost_size": 111,
+    "cost_unknown_base": 111,
+    "cost_unknown_scen": 110,
+    "status_base": "unknown",
+    "status_scen": "excluded_now"
+   },
+   "18652": {
+    "adopted_members": [
+     "ai010"
+    ],
+    "cost_size": 107,
+    "cost_unknown_base": 107,
+    "cost_unknown_scen": 106,
+    "status_base": "unknown",
+    "status_scen": "excluded_now"
+   },
+   "18684": {
+    "adopted_members": [
+     "ai010"
+    ],
+    "cost_size": 112,
+    "cost_unknown_base": 112,
+    "cost_unknown_scen": 111,
+    "status_base": "unknown",
+    "status_scen": "excluded_now"
+   },
+   "19683": {
+    "adopted_members": [
+     "ai010"
+    ],
+    "cost_size": 94,
+    "cost_unknown_base": 92,
+    "cost_unknown_scen": 91,
+    "status_base": "unknown",
+    "status_scen": "excluded_now"
+   },
+   "22617": {
+    "adopted_members": [
+     "ai013"
+    ],
+    "cost_size": 104,
+    "cost_unknown_base": 104,
+    "cost_unknown_scen": 103,
+    "status_base": "unknown",
+    "status_scen": "excluded_now"
+   },
+   "22642": {
+    "adopted_members": [
+     "ai013"
+    ],
+    "cost_size": 110,
+    "cost_unknown_base": 110,
+    "cost_unknown_scen": 109,
+    "status_base": "unknown",
+    "status_scen": "excluded_now"
+   },
+   "23424": {
+    "adopted_members": [
+     "ai014"
+    ],
+    "cost_size": 106,
+    "cost_unknown_base": 106,
+    "cost_unknown_scen": 105,
+    "status_base": "unknown",
+    "status_scen": "excluded_now"
+   },
+   "23452": {
+    "adopted_members": [
+     "ai013",
+     "ai014"
+    ],
+    "cost_size": 97,
+    "cost_unknown_base": 94,
+    "cost_unknown_scen": 92,
+    "status_base": "unknown",
+    "status_scen": "excluded_now"
+   },
+   "24199": {
+    "adopted_members": [
+     "ai014"
+    ],
+    "cost_size": 112,
+    "cost_unknown_base": 112,
+    "cost_unknown_scen": 111,
+    "status_base": "unknown",
+    "status_scen": "excluded_now"
+   },
+   "26520": {
+    "adopted_members": [
+     "ai017"
+    ],
+    "cost_size": 113,
+    "cost_unknown_base": 113,
+    "cost_unknown_scen": 112,
+    "status_base": "unknown",
+    "status_scen": "excluded_now"
+   },
+   "26543": {
+    "adopted_members": [
+     "ai017"
+    ],
+    "cost_size": 97,
+    "cost_unknown_base": 94,
+    "cost_unknown_scen": 93,
+    "status_base": "unknown",
+    "status_scen": "excluded_now"
+   },
+   "27071": {
+    "adopted_members": [
+     "ai017"
+    ],
+    "cost_size": 112,
+    "cost_unknown_base": 112,
+    "cost_unknown_scen": 111,
+    "status_base": "unknown",
+    "status_scen": "excluded_now"
+   },
+   "29779": {
+    "adopted_members": [
+     "ai023"
+    ],
+    "cost_size": 107,
+    "cost_unknown_base": 107,
+    "cost_unknown_scen": 106,
+    "status_base": "unknown",
+    "status_scen": "excluded_now"
+   },
+   "29806": {
+    "adopted_members": [
+     "ai023"
+    ],
+    "cost_size": 107,
+    "cost_unknown_base": 102,
+    "cost_unknown_scen": 101,
+    "status_base": "unknown",
+    "status_scen": "excluded_now"
+   },
+   "29957": {
+    "adopted_members": [
+     "ai028"
+    ],
+    "cost_size": 113,
+    "cost_unknown_base": 113,
+    "cost_unknown_scen": 112,
+    "status_base": "unknown",
+    "status_scen": "excluded_now"
+   },
+   "30118": {
+    "adopted_members": [
+     "ai034"
+    ],
+    "cost_size": 56,
+    "cost_unknown_base": 51,
+    "cost_unknown_scen": 50,
+    "status_base": "unknown",
+    "status_scen": "excluded_now"
+   },
+   "30130": {
+    "adopted_members": [
+     "ai034"
+    ],
+    "cost_size": 99,
+    "cost_unknown_base": 99,
+    "cost_unknown_scen": 98,
+    "status_base": "unknown",
+    "status_scen": "excluded_now"
+   },
+   "30146": {
+    "adopted_members": [
+     "ai035"
+    ],
+    "cost_size": 104,
+    "cost_unknown_base": 103,
+    "cost_unknown_scen": 102,
+    "status_base": "unknown",
+    "status_scen": "excluded_now"
+   },
+   "30156": {
+    "adopted_members": [
+     "ai036"
+    ],
+    "cost_size": 103,
+    "cost_unknown_base": 103,
+    "cost_unknown_scen": 102,
+    "status_base": "unknown",
+    "status_scen": "excluded_now"
+   },
+   "30189": {
+    "adopted_members": [
+     "ai036"
+    ],
+    "cost_size": 107,
+    "cost_unknown_base": 102,
+    "cost_unknown_scen": 101,
+    "status_base": "unknown",
+    "status_scen": "excluded_now"
+   },
+   "30257": {
+    "adopted_members": [
+     "ai039"
+    ],
+    "cost_size": 112,
+    "cost_unknown_base": 112,
+    "cost_unknown_scen": 111,
+    "status_base": "unknown",
+    "status_scen": "excluded_now"
+   },
+   "30278": {
+    "adopted_members": [
+     "ai039"
+    ],
+    "cost_size": 101,
+    "cost_unknown_base": 97,
+    "cost_unknown_scen": 96,
+    "status_base": "unknown",
+    "status_scen": "excluded_now"
+   },
+   "30324": {
+    "adopted_members": [
+     "ai043"
+    ],
+    "cost_size": 109,
+    "cost_unknown_base": 109,
+    "cost_unknown_scen": 108,
+    "status_base": "unknown",
+    "status_scen": "excluded_now"
+   },
+   "30330": {
+    "adopted_members": [
+     "ai043"
+    ],
+    "cost_size": 101,
+    "cost_unknown_base": 101,
+    "cost_unknown_scen": 100,
+    "status_base": "unknown",
+    "status_scen": "excluded_now"
+   },
+   "30333": {
+    "adopted_members": [
+     "ai046"
+    ],
+    "cost_size": 112,
+    "cost_unknown_base": 112,
+    "cost_unknown_scen": 111,
+    "status_base": "unknown",
+    "status_scen": "excluded_now"
+   },
+   "30338": {
+    "adopted_members": [
+     "ai036"
+    ],
+    "cost_size": 108,
+    "cost_unknown_base": 108,
+    "cost_unknown_scen": 107,
+    "status_base": "unknown",
+    "status_scen": "excluded_now"
+   },
+   "30340": {
+    "adopted_members": [
+     "ai023"
+    ],
+    "cost_size": 110,
+    "cost_unknown_base": 110,
+    "cost_unknown_scen": 109,
+    "status_base": "unknown",
+    "status_scen": "excluded_now"
+   },
+   "30344": {
+    "adopted_members": [
+     "ai047"
+    ],
+    "cost_size": 101,
+    "cost_unknown_base": 101,
+    "cost_unknown_scen": 100,
+    "status_base": "unknown",
+    "status_scen": "excluded_now"
+   },
+   "30349": {
+    "adopted_members": [
+     "ai028"
+    ],
+    "cost_size": 107,
+    "cost_unknown_base": 107,
+    "cost_unknown_scen": 106,
+    "status_base": "unknown",
+    "status_scen": "excluded_now"
+   },
+   "30350": {
+    "adopted_members": [
+     "ai039"
+    ],
+    "cost_size": 111,
+    "cost_unknown_base": 111,
+    "cost_unknown_scen": 110,
+    "status_base": "unknown",
+    "status_scen": "excluded_now"
+   },
+   "30351": {
+    "adopted_members": [
+     "ai046"
+    ],
+    "cost_size": 107,
+    "cost_unknown_base": 107,
+    "cost_unknown_scen": 106,
+    "status_base": "unknown",
+    "status_scen": "excluded_now"
+   },
+   "30463": {
+    "adopted_members": [
+     "ai043",
+     "ai046"
+    ],
+    "cost_size": 98,
+    "cost_unknown_base": 95,
+    "cost_unknown_scen": 93,
+    "status_base": "unknown",
+    "status_scen": "excluded_now"
+   },
+   "4099": {
+    "adopted_members": [
+     "ai002"
+    ],
+    "cost_size": 99,
+    "cost_unknown_base": 99,
+    "cost_unknown_scen": 98,
+    "status_base": "unknown",
+    "status_scen": "excluded_now"
+   },
+   "4133": {
+    "adopted_members": [
+     "ai002"
+    ],
+    "cost_size": 104,
+    "cost_unknown_base": 104,
+    "cost_unknown_scen": 103,
+    "status_base": "unknown",
+    "status_scen": "excluded_now"
+   },
+   "5184": {
+    "adopted_members": [
+     "ai003"
+    ],
+    "cost_size": 106,
+    "cost_unknown_base": 106,
+    "cost_unknown_scen": 105,
+    "status_base": "unknown",
+    "status_scen": "excluded_now"
+   },
+   "5220": {
+    "adopted_members": [
+     "ai002",
+     "ai003"
+    ],
+    "cost_size": 96,
+    "cost_unknown_base": 94,
+    "cost_unknown_scen": 92,
+    "status_base": "unknown",
+    "status_scen": "excluded_now"
+   },
+   "6233": {
+    "adopted_members": [
+     "ai003"
+    ],
+    "cost_size": 106,
+    "cost_unknown_base": 106,
+    "cost_unknown_scen": 105,
+    "status_base": "unknown",
+    "status_scen": "excluded_now"
+   }
+  },
+  "count": 41,
+  "direction": "unknown->excluded_now",
+  "owner_union_nonflip_classes": {
+   "29979": "excluded_now (EP flip)",
+   "30345": "excluded_now (EP flip via ai048)",
+   "30542": "excluded_now (EP flip)"
+  },
+  "per_key_owner_classes": {
+   "ai002": [
+    4099,
+    4133,
+    5220,
+    30345
+   ],
+   "ai003": [
+    5184,
+    5220,
+    6233,
+    30345
+   ],
+   "ai005": [
+    10165,
+    10197,
+    11162,
+    30345
+   ],
+   "ai006": [
+    11127,
+    11162,
+    11979,
+    30345
+   ],
+   "ai010": [
+    18652,
+    18684,
+    19683,
+    30345
+   ],
+   "ai013": [
+    22617,
+    22642,
+    23452,
+    30345
+   ],
+   "ai014": [
+    23424,
+    23452,
+    24199,
+    30345
+   ],
+   "ai017": [
+    26520,
+    26543,
+    27071,
+    30345
+   ],
+   "ai023": [
+    29779,
+    29806,
+    30340,
+    30345
+   ],
+   "ai028": [
+    29957,
+    29979,
+    30345,
+    30349
+   ],
+   "ai034": [
+    30118,
+    30130,
+    30345
+   ],
+   "ai035": [
+    30146,
+    30345,
+    30542
+   ],
+   "ai036": [
+    30156,
+    30189,
+    30338,
+    30345
+   ],
+   "ai039": [
+    30257,
+    30278,
+    30345,
+    30350
+   ],
+   "ai043": [
+    30324,
+    30330,
+    30345,
+    30463
+   ],
+   "ai046": [
+    30333,
+    30345,
+    30351,
+    30463
+   ],
+   "ai047": [
+    30344,
+    30345,
+    30542
+   ],
+   "ai049": [
+    30345
+   ]
+  }
+ },
+ "closure_classes": {
+  "class_30118": {
+   "adopted_members": [
+    "ai034"
+   ],
+   "boundary_raw": 56,
+   "class": 30118,
+   "cost_size": 56,
+   "cost_unknown_base": 51,
+   "cost_unknown_scen": 50,
+   "status_base": "unknown",
+   "status_scen": "excluded_now"
+  },
+  "class_30345": {
+   "adopted_members": [
+    "ai002",
+    "ai003",
+    "ai005",
+    "ai006",
+    "ai010",
+    "ai013",
+    "ai014",
+    "ai017",
+    "ai023",
+    "ai028",
+    "ai034",
+    "ai035",
+    "ai036",
+    "ai039",
+    "ai043",
+    "ai046",
+    "ai047",
+    "ai049"
+   ],
+   "boundary_raw": 51,
+   "class": 30345,
+   "cost_size": 50,
+   "cost_unknown_base": 25,
+   "cost_unknown_scen": 7,
+   "status_base": "excluded_now",
+   "status_scen": "excluded_now"
+  },
+  "class_30354": {
+   "adopted_members": [],
+   "boundary_raw": 97,
+   "class": 30354,
+   "cost_size": 97,
+   "cost_unknown_base": 96,
+   "cost_unknown_scen": 96,
+   "status_base": "excluded_now",
+   "status_scen": "excluded_now"
+  },
+  "entered_rows": [],
+  "groups_served_churn": {},
+  "left_rows": [],
+  "rank_churn": {
+   "12264": [
+    12,
+    13
+   ],
+   "16957": [
+    14,
+    15
+   ],
+   "30118": [
+    15,
+    12
+   ],
+   "30345": [
+    9,
+    8
+   ],
+   "34269": [
+    8,
+    9
+   ],
+   "5473": [
+    13,
+    14
+   ]
+  },
+  "rank_churn_nature": "30345 rises 9->8 and 30118 rises 15->12 (unknown_now drops); the displaced rows shift down by one; no renumbering elsewhere",
+  "rows_before_after": [
+   805,
+   805
+  ],
+  "unknown_churn": {
+   "30118": [
+    "51",
+    "50"
+   ],
+   "30345": [
+    "25",
+    "7"
+   ]
+  }
+ },
+ "date": "2026-11-25",
+ "frozen_update8": {
+  "groups_free_now": [
+   131,
+   131
+  ],
+  "remaining_now": [
+   31505,
+   31505
+  ],
+  "resolved": [
+   260,
+   260
+  ],
+  "union_baseline": 31859,
+  "win_hit_groups_base_and_scen_identical": [
+   {
+    "first": 12,
+    "fourth": 96,
+    "reply": 60,
+    "s4_class_index": 30354,
+    "third": 40,
+    "unknown_s5_children": 97
+   },
+   {
+    "first": 12,
+    "fourth": 96,
+    "reply": 60,
+    "s4_class_index": 30354,
+    "third": 80,
+    "unknown_s5_children": 97
+   },
+   {
+    "first": 12,
+    "fourth": 40,
+    "reply": 60,
+    "s4_class_index": 30354,
+    "third": 96,
+    "unknown_s5_children": 97
+   },
+   {
+    "first": 24,
+    "fourth": 108,
+    "reply": 60,
+    "s4_class_index": 30354,
+    "third": 40,
+    "unknown_s5_children": 97
+   },
+   {
+    "first": 24,
+    "fourth": 108,
+    "reply": 60,
+    "s4_class_index": 30354,
+    "third": 80,
+    "unknown_s5_children": 97
+   },
+   {
+    "first": 24,
+    "fourth": 40,
+    "reply": 60,
+    "s4_class_index": 30354,
+    "third": 108,
+    "unknown_s5_children": 97
+   },
+   {
+    "first": 36,
+    "fourth": 90,
+    "reply": 60,
+    "s4_class_index": 30354,
+    "third": 20,
+    "unknown_s5_children": 97
+   },
+   {
+    "first": 36,
+    "fourth": 100,
+    "reply": 60,
+    "s4_class_index": 30354,
+    "third": 30,
+    "unknown_s5_children": 97
+   },
+   {
+    "first": 36,
+    "fourth": 20,
+    "reply": 60,
+    "s4_class_index": 30354,
+    "third": 90,
+    "unknown_s5_children": 97
+   },
+   {
+    "first": 36,
+    "fourth": 30,
+    "reply": 60,
+    "s4_class_index": 30354,
+    "third": 100,
+    "unknown_s5_children": 97
+   }
+  ]
+ },
+ "honesty": {
+  "exclusion_effect": "41 classes become excluded (known WIN cost child ends free all-LOSS coverage): remaining greedy union shrinks 36,643 -> 36,619 (-24) and worklist shrinks 64,328 -> 64,309 (-19): scheduling bookkeeping only",
+  "no_root_verdict": "no root verdict is asserted or implied by any class flip",
+  "nodes_are_bookkeeping": true,
+  "out_of_scope_unconsumed": [
+   "batch-38 6 EXHAUSTED rows (honest UNKNOWN at the 15M condition)",
+   "b38 LOSS rows (Part EM territory)",
+   "b018 probe-level WIN",
+   "k04 sixth-cost WIN",
+   "all other probe-level WINs"
+  ],
+  "second_win_adoption": true,
+  "unknown_still": "34,436 S4 classes remain status-unknown; 11x11 stays UNKNOWN"
+ },
+ "part": "ER",
+ "per_root": {
+  "free_now_uncovered": "identical at all central roots + baseline; no coverage claim",
+  "greedy_union_changes": {
+   "0": [
+    2981,
+    2980
+   ],
+   "12": [
+    2868,
+    2850
+   ],
+   "36": [
+    3025,
+    3007
+   ]
+  },
+  "group_best_options_nonfree": [
+   2105,
+   2105
+  ],
+  "joint_greedy": [
+   36643,
+   36619
+  ],
+  "worklist_total": [
+   64328,
+   64309
+  ]
+ },
+ "scen": {
+  "cache_sha256": "9c4dd94e61b6ee724a966ecc9552e527ba5a7107de732f0e9c5ced33bdad4a5a",
+  "class_status_counts": {
+   "excluded": 390,
+   "excluded_now": 84,
+   "free_now": 39,
+   "unknown": 34436
+  },
+  "closure_classes_sha256": "4c03f965a717a80cf2ce9980de8d2658c316891ae8fb83e8d9e62d84b14b4c14",
+  "increment_sha256": "4f6b7797df3bb950703f95e7ec72f288a447434da5b4ccf3d6d94ee8d8d6ffc1",
+  "loss": 6579,
+  "manifest_sha256": "48b71d6af77306a94bd561f625838cff70cd94f12d702bcda0e945b67237450a",
+  "per_root_coverage_sha256": "1bf6c25a2bdd7506bc5762acddc2f86aac2faf333e3d41d7b9c9fe4afb1c644a",
+  "probe_worklist_not_published_size_policy_bytes": 3717828,
+  "probe_worklist_regen_pin_sha256": "78e499dd5553c99b2c1ec09ba3d8071ea72cc5ed065ba4578316bddfe8084996",
+  "refresh_summary_sha256": "a6b8d0824e21e3d4f37bdd32a26dd8146234afb5a83f67f2734c1a83b99e1317",
+  "rows": 6765,
+  "win": 186
+ },
+ "schema": "erwin18-decomp-deltas-v1"
+}

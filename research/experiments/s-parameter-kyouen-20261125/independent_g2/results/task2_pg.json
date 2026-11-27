@@ -1,0 +1,191 @@
+{
+ "census": {
+  "header": {
+   "N": 91,
+   "B": 91,
+   "SAFE": 128917712
+  },
+  "n_matches_board": true,
+  "b_matches_board": true,
+  "safe_matches_size_sum": true,
+  "safe_value": 128917712,
+  "size_sum": 128917712,
+  "maximal_sum": 8095464,
+  "size0_is_1": true,
+  "size1_is_n": true,
+  "size2_is_C_n_2": true,
+  "no_maximal_below_6": true,
+  "size9_equals_10_times_size10": true,
+  "size8_nonmax_equals_C10_8_times_ovals": true,
+  "maximal_total": 8095464,
+  "maximal_total_matches": true,
+  "claims": {
+   "maximal7": 2021760,
+   "claim_max7": 2021760,
+   "match": true
+  }
+ },
+ "census_rows": {
+  "0": {
+   "total": 1,
+   "maximal": 0
+  },
+  "1": {
+   "total": 91,
+   "maximal": 0
+  },
+  "2": {
+   "total": 4095,
+   "maximal": 0
+  },
+  "3": {
+   "total": 110565,
+   "maximal": 0
+  },
+  "4": {
+   "total": 1769040,
+   "maximal": 0
+  },
+  "5": {
+   "total": 14859936,
+   "maximal": 0
+  },
+  "6": {
+   "total": 52009776,
+   "maximal": 707616
+  },
+  "7": {
+   "total": 51554880,
+   "maximal": 2021760
+  },
+  "8": {
+   "total": 7960680,
+   "maximal": 5307120
+  },
+  "9": {
+   "total": 589680,
+   "maximal": 0
+  },
+  "10": {
+   "total": 58968,
+   "maximal": 58968
+  }
+ },
+ "low_size_independent": {
+  "counts": {
+   "0": 1,
+   "1": 91,
+   "2": 4095,
+   "3": 110565,
+   "4": 1769040
+  },
+  "maximal": {
+   "0": 0,
+   "1": 0,
+   "2": 0,
+   "3": 0,
+   "4": 0
+  },
+  "counts_match": true,
+  "maximal_match": true
+ },
+ "generators": {
+  "count": 8,
+  "all_ok": true,
+  "records": [
+   {
+    "gen": 0,
+    "permutation": true,
+    "bad_lines": 0
+   },
+   {
+    "gen": 1,
+    "permutation": true,
+    "bad_lines": 0
+   },
+   {
+    "gen": 2,
+    "permutation": true,
+    "bad_lines": 0
+   },
+   {
+    "gen": 3,
+    "permutation": true,
+    "bad_lines": 0
+   },
+   {
+    "gen": 4,
+    "permutation": true,
+    "bad_lines": 0
+   },
+   {
+    "gen": 5,
+    "permutation": true,
+    "bad_lines": 0
+   },
+   {
+    "gen": 6,
+    "permutation": true,
+    "bad_lines": 0
+   },
+   {
+    "gen": 7,
+    "permutation": true,
+    "bad_lines": 0
+   }
+  ]
+ },
+ "seed": {
+  "arc": [
+   33,
+   39,
+   57,
+   70,
+   74,
+   80,
+   89
+  ],
+  "mask": 620199015663972709038030848,
+  "is_cap": true,
+  "is_maximal": true
+ },
+ "orbit": {
+  "size": 2021760,
+  "claim": 2021760,
+  "match": true,
+  "bfs_levels": [
+   9,
+   61,
+   371,
+   2125,
+   11630,
+   60216,
+   283716,
+   1042529,
+   1948515,
+   2021759,
+   2021760,
+   2021760
+  ],
+  "sample_1000_all_maximal_7caps": true,
+  "arcs_file": "results/pg_max7_arcs.bin"
+ },
+ "six_subsets": {
+  "count": 14152320,
+  "generated_with_multiplicity": 14152320,
+  "duplicates": 0,
+  "claim": 14152320,
+  "match": true,
+  "total_6caps_census": 52009776,
+  "fraction_of_6caps": 0.272109,
+  "sample_200_caps": true
+ },
+ "seconds": 99.3,
+ "k1333_arithmetic": {
+  "total6": 52009776,
+  "g2_if_claim": 14152320,
+  "g0_implied": 37857456,
+  "published_g0": 37857456,
+  "match": true
+ }
+}

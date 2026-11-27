@@ -1,0 +1,23 @@
+== board checks ==
+  header: [73, 73]
+  n_lines: 73
+  all_lines_size_9: True
+  all_points_in_range: True
+  all_lines_distinct_sets: True
+  all_lines_distinct_points: True
+  n_pairs_covered: 2628
+  expected_pairs: 2628
+  every_pair_exactly_once: True
+  point_degrees: [9]
+  each_point_on_9_lines: True
+  matches_coordinate_PG28: True
+  lines_only_in_board: 0
+  lines_only_in_geo: 0
+== example 9-cap ==
+  size: 9 distinct: True
+  is cap: True witnesses: []
+  blocked points (on a secant): 72 of 73
+  points not on any secant (could extend): [23]
+  vectors: {2: (0, 1, 1), 3: (0, 1, 2), 10: (1, 0, 1), 12: (1, 0, 3), 21: (1, 1, 4), 45: (1, 4, 4), 47: (1, 4, 6), 50: (1, 5, 1), 52: (1, 5, 3)}
+
+PASS task1: True

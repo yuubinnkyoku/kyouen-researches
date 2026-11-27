@@ -1,0 +1,18 @@
+# MANIFEST-sha256 - emloss21 pre-declaration dossier kit (n11-centralreply-emloss21-adoption-predecl-20261126) - 2026-11-26
+# all paths relative to research/experiments/n11-centralreply-emloss21-adoption-predecl-20261126/
+# parse line format: <sha256>  <size>  <path> ; README.md and MANIFEST-sha256.txt self-excluded per convention
+# unpublished per the size policy: reaudit/output/probe-worklist.csv (regen pin 147b62d6... 3,715,963 B, recorded in the census json)
+74fbbfd9a206a28e1bcdf2d52ceb884bf71c5aee62ec0eefe520a41cd33d8035  39350  scripts/make_increments_emloss21.py
+907119610034fb2aebfde012550a4129dfa3b086c6de11194e856747ac74606a  10887  scripts/s5_union_merge.py
+a6979d1aadcd4b8a9af7c11321302f66c68ed331f5e1c20cf13fec6c5ea11e93  19462  scripts/measure_census_deltas_emloss21.py
+47443dc143c157ab972de0f39f2cf3afb5d062e209da9dcd8e486f0a57c8ebca  2728  output/increment-emloss21-20261126.cache
+94815c34f1142481a20fe411a0a1c87c4e0a075b100d47db2f5e7b35dea9707d  13020  output/increments-manifest.json
+f4304731136e4abfe41a349bc21388c57f65b9b615319650831624f661e18897  1548  output/merge-audit-run1.json
+f4304731136e4abfe41a349bc21388c57f65b9b615319650831624f661e18897  1548  output/merge-audit-run2.json
+f4304731136e4abfe41a349bc21388c57f65b9b615319650831624f661e18897  1548  output/merge-audit-run3.json
+6e49dd841b7bfcb335d86ef2479c95f47ab7acbcf41ace389a8b8eb95c778c9d  283770  output/merged-exact-s5-chain-plus-emloss21-20261126.cache
+d67b6e9bcf55a601afdc177aa804f2be2b8d4fd6ec9d76ac6389fa5b913edcd3  62156  output/census-deltas-emloss21-predecl.json
+cc01b3d8772a9e6fe0c5718ed0715b7c927c5ab149444690329c6e19c57e2131  26221  reaudit/scripts/refresh_adoption_emloss21.py
+7f379b718e48330c5acbc3c9c79be3c4fb6d616c4dc7bedfe7691e6ebb225f0b  38307  reaudit/output/refresh-summary.json
+6862813431dd1abbaba81ac2a720385be394ce774f259b8001ca49630fc4a8e2  35806  reaudit/output/closure-classes.csv
+9c5b277429f99157ff2e65323b5912b9ce957f1d2008f8ac8fc1e03b49f91ad1  588  reaudit/output/per-root-coverage.csv

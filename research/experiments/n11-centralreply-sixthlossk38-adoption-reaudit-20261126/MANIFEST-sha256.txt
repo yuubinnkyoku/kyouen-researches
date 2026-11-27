@@ -1,0 +1,19 @@
+# MANIFEST-sha256: research/experiments/n11-centralreply-sixthlossk38-adoption-reaudit-20261126 (sixthlossk38 LOSS-only canonical adoption + reaudit, Part SV) 2026-11-26
+# README.md self-excluded per convention; MANIFEST self-excluded; every other published file in this experiment dir is byte-pinned below (sha256 over the exact published bytes).
+# output/base-sixthloss30-head.cache is NOT published (size policy): byte-identical to the published Part ST merged head of record (sha256 dade15780ce6625cc70d93ba77b1560145dd2b9f096a53dce556d2fccf7e312b) and regenerable from it.
+# reaudit/output/probe-worklist.csv is NOT published (size policy): BASE and SCEN regen pins are byte-identical sha256 b946ed062e84d0a14f84dd4db167d1b051bb1459bc3a8ff738eeda3d9c6d8c26 (3,715,960 B, worklist_total 64,275 unchanged); both regenerable from the published refresh forks against the pinned cache heads.
+# wave C2 fetch-back correction of record: the first publication (commit 7fc923d9) of increments-manifest.json and census-deltas-sixthlossk38-adoption.json had corrupted the 20-digit key 10376293541461626880 to 10376293541461627000 through a JSON round-trip in the publishing step (JS Number precision); commit 28211442 republished both byte-exact; the sha256 pins of record were never wrong and are byte-verified on main by git blob sha.
+907119610034fb2aebfde012550a4129dfa3b086c6de11194e856747ac74606a  scripts/s5_union_merge.py
+15b1ed74ab8c7da9b7a447a4a1e57626652aa5189f82593ba9aafd39a408be15  scripts/make_increments_sixthlossk38_adoption.py
+2695e6180532f42a11997002ce4d0eff53e5868039a6be814a422d04181e3f1f  scripts/measure_census_deltas_sixthlossk38.py
+977780efc8cc447be8212c445c311e536f42e8a56bbb9ba2d06ec50e3b9ff6e5  output/increment-sixthlossk38-adoption-20261126.cache
+2619f1b345eec424bc8c8d2a7971cff1fe6004b107df84878dacf17dbdc99ce6  output/increments-manifest.json
+dc3d4e3cb06d269b9b483df5a1209cb9b4865046b0d4571615eb496833bb8b59  output/census-deltas-sixthlossk38-adoption.json
+c5e03c951c984aea60d416d52bd82e71aa78810b9a8a733a42239361dcbf870a  output/merge-audit-run1.json
+c5e03c951c984aea60d416d52bd82e71aa78810b9a8a733a42239361dcbf870a  output/merge-audit-run2.json
+c5e03c951c984aea60d416d52bd82e71aa78810b9a8a733a42239361dcbf870a  output/merge-audit-run3.json
+42dbb58ffe8dd02a81f4a92993d08e3fbebdaeb4b4f7bf33e142120ff055bdc4  output/merged-exact-s5-chain-plus-sixthlossk38-20261126.cache
+9500cc66389aa6c92b784e292baf8f0adb540a2f798ea176102e84194ac11b7b  reaudit/scripts/refresh_adoption_sixthlossk38.py
+451c1e3647b2a4431cb57a81c5c4b372ffd111638ef2f77bf95a295d2a36e19d  reaudit/output/refresh-summary.json
+0eb19c8955e92c3e96c9a7d40f84a4d2c274489fb03b8d1266b850995ea818e9  reaudit/output/closure-classes.csv
+1828d7f764015a2d319dd56fc19de666fef49a30843b4a6ec37187d14370f849  reaudit/output/per-root-coverage.csv

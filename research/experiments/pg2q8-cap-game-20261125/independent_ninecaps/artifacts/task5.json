@@ -1,0 +1,133 @@
+{
+ "reps": [
+  [
+   10,
+   47,
+   49,
+   55,
+   61,
+   64
+  ],
+  [
+   17,
+   27,
+   30,
+   44,
+   52,
+   70
+  ],
+  [
+   8,
+   48,
+   50,
+   51,
+   58,
+   61
+  ]
+ ],
+ "per_rep": [
+  {
+   "cap": [
+    10,
+    47,
+    49,
+    55,
+    61,
+    64
+   ],
+   "size": 6,
+   "is_cap": true,
+   "blocked_count": 73,
+   "is_maximal": true,
+   "secant_lines": 15,
+   "outside_points": 67,
+   "distribution": {
+    "1": 36,
+    "2": 24,
+    "3": 7
+   },
+   "zero_secant_outside_points": [],
+   "distribution_matches": true,
+   "no_zero_secants": true,
+   "self_consistent": true,
+   "n_10caps_containing": 0,
+   "contained_in_10cap": false,
+   "orbit_size": 686784,
+   "orbit_seconds": 11.88,
+   "stabilizer_order": 24
+  },
+  {
+   "cap": [
+    17,
+    27,
+    30,
+    44,
+    52,
+    70
+   ],
+   "size": 6,
+   "is_cap": true,
+   "blocked_count": 73,
+   "is_maximal": true,
+   "secant_lines": 15,
+   "outside_points": 67,
+   "distribution": {
+    "1": 36,
+    "2": 24,
+    "3": 7
+   },
+   "zero_secant_outside_points": [],
+   "distribution_matches": true,
+   "no_zero_secants": true,
+   "self_consistent": true,
+   "n_10caps_containing": 0,
+   "contained_in_10cap": false,
+   "orbit_size": 686784,
+   "orbit_seconds": 12.13,
+   "stabilizer_order": 24
+  },
+  {
+   "cap": [
+    8,
+    48,
+    50,
+    51,
+    58,
+    61
+   ],
+   "size": 6,
+   "is_cap": true,
+   "blocked_count": 73,
+   "is_maximal": true,
+   "secant_lines": 15,
+   "outside_points": 67,
+   "distribution": {
+    "1": 36,
+    "2": 24,
+    "3": 7
+   },
+   "zero_secant_outside_points": [],
+   "distribution_matches": true,
+   "no_zero_secants": true,
+   "self_consistent": true,
+   "n_10caps_containing": 0,
+   "contained_in_10cap": false,
+   "orbit_size": 686784,
+   "orbit_seconds": 12.63,
+   "stabilizer_order": 24
+  }
+ ],
+ "orbit_sizes": [
+  686784,
+  686784,
+  686784
+ ],
+ "pairwise_disjoint": true,
+ "union_size": 2060352,
+ "census_maximal6": 2060352,
+ "orbits_cover_all_maximal6": true,
+ "three_classes_confirmed": true,
+ "orbit_members_are_maximal_6caps_sampled": true,
+ "all_reps_10cap_free": true,
+ "conclusion_no_maximal6_in_10cap": true
+}

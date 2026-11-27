@@ -1,0 +1,153 @@
+{
+ "adopted": [
+  {
+   "hi": 33619968,
+   "legal": 95,
+   "lo": 10376293541461626880,
+   "nodes": 16196331,
+   "owner_classes": [
+    3054,
+    3077,
+    30156
+   ],
+   "owner_count": 3,
+   "s5_index": 111843,
+   "serving_class": 3077
+  },
+  {
+   "hi": 65536,
+   "legal": 91,
+   "lo": 12682136550675320832,
+   "nodes": 15842649,
+   "owner_classes": [
+    2402,
+    3077,
+    6233
+   ],
+   "owner_count": 3,
+   "s5_index": 97791,
+   "serving_class": 3077
+  }
+ ],
+ "adopted_outside_baseline_requirement": [
+  97791,
+  111843
+ ],
+ "base_cache": {
+  "loss": 6600,
+  "rows": 6799,
+  "sha256": "cc3694bbe871ccf27bdf4dbcf5e93586da440164fd75c02c15dc2a0ae46d11b8",
+  "win": 199
+ },
+ "base_closure": {
+  "sha256": "350e269a9d4e0827274aff7c587cdb389f070eade0ff54c220c7c14f9197bc6d"
+ },
+ "base_per_root": {
+  "sha256": "9c5b277429f99157ff2e65323b5912b9ce957f1d2008f8ac8fc1e03b49f91ad1"
+ },
+ "base_summary": {
+  "sha256": "7a500a032f997307defb37f28ce65f93ce935f2feca9ca6281c5474775ef4bc7"
+ },
+ "census_recount_base": {
+  "excluded": 390,
+  "excluded_now": 113,
+  "free_now": 39,
+  "unknown": 34407
+ },
+ "census_recount_scen": {
+  "excluded": 390,
+  "excluded_now": 115,
+  "free_now": 39,
+  "unknown": 34405
+ },
+ "closure_churn": {
+  "entered": [],
+  "left": [],
+  "rank_churn_ranked": [],
+  "rows_base": 804,
+  "rows_scen": 804,
+  "unknown_now_churn": []
+ },
+ "increment": {
+  "sha256": "47f7dfb02489a960184b5c83bd3ed36e33936bd40067c7cc97299ab1f740ecc6"
+ },
+ "joint_greedy": {
+  "base": 35155,
+  "scen": 35155
+ },
+ "owner_class_count_hist": {
+  "3": 2
+ },
+ "per_root_coverage_byte_identical": true,
+ "per_root_free_and_uncovered_identical": true,
+ "per_root_greedy_delta": [],
+ "scen_cache": {
+  "loss": 6600,
+  "rows": 6801,
+  "sha256": "02db5ab35b8ad71dfd0699217756291c6bc896c78e9fd7c609b5e25177f6b25c",
+  "win": 201
+ },
+ "scen_closure": {
+  "sha256": "350e269a9d4e0827274aff7c587cdb389f070eade0ff54c220c7c14f9197bc6d"
+ },
+ "scen_per_root": {
+  "sha256": "9c5b277429f99157ff2e65323b5912b9ce957f1d2008f8ac8fc1e03b49f91ad1"
+ },
+ "scen_summary": {
+  "sha256": "de205c31e59aeeb22e4d040578d1d0d89ec55a074020d4f3a244815964e4eafd"
+ },
+ "serving_class_rows": {
+  "3077": {
+   "adopted_owned_here": 2,
+   "base_status": "excluded_now",
+   "scen_status": "excluded_now",
+   "unknown_after": 91,
+   "unknown_before": 93
+  }
+ },
+ "status_flip_count": 2,
+ "status_flips": [
+  2402,
+  3054
+ ],
+ "update8_new_resolved": [],
+ "update8_refresh_base": {
+  "groups_free_now": 131,
+  "remaining": 31445,
+  "resolved": 281,
+  "resolved_list_len": 281,
+  "win_hit_groups": 25
+ },
+ "update8_refresh_scen": {
+  "groups_free_now": 131,
+  "remaining": 31445,
+  "resolved": 281,
+  "resolved_list_len": 281,
+  "win_hit_groups": 25
+ },
+ "verdict": {
+  "canonical_head_sha256": "02db5ab35b8ad71dfd0699217756291c6bc896c78e9fd7c609b5e25177f6b25c",
+  "census_counts_identical_to_published_summaries": true,
+  "consumed": "exactly the 2 parked4rest2 L50M ladder exact-WIN rows k20 (10376293541461626880:33619968) and k33 (12682136550675320832:65536)",
+  "note": "declared Part SQ adoption measurement; WIN-only adoption flips no root verdict, frees no class, changes no coverage claim; 11x11 stays UNKNOWN; no root verdict; nodes are bookkeeping",
+  "part": "SQ",
+  "part_declared": true,
+  "status_flip_mechanism": "unknown -> excluded_now only, win-hit; exactly the owner classes of the 2 adopted WIN keys that were unknown at BASE (3054 owner of k20, 2402 owner of k33); serving class 3077 stays excluded_now (Part EW) with cost-unknown 93 -> 91",
+  "status_flips": 2
+ },
+ "win_hit_groups_identical": true,
+ "worklist_regen_pins": {
+  "base": {
+   "sha256": "0818da81ba01259945d7fb0051b07221582cd4dc68d55d9edb61aa447e4628ac",
+   "size": 3715904
+  },
+  "scen": {
+   "sha256": "24301312e1e7cfd904da085723144bbbaef15e272c2d430979410520672dcd33",
+   "size": 3715904
+  }
+ },
+ "worklist_total": {
+  "base": 64276,
+  "scen": 64276
+ }
+}

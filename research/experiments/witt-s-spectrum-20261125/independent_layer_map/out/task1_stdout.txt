@@ -1,0 +1,12 @@
+BOARD 24 759 blocks of size [8] format_ok True
+lambda 0..5: [759, 253, 77, 21, 5, 1]
+block intersections: {0: 11385, 2: 170016, 4: 106260}
+Golay rank 12 span 4096 weights {'0': 1, '8': 759, '12': 2576, '16': 759, '24': 1}
+self_orthogonal True doubly_even True weight8==blocks True
+dodecads 2576 complement-closed True
+dodecad/octad profile: {'constant': True, 'profile': {'2': 132, '4': 495, '6': 132}, 'ok_even_2_4_6': True}
+  dodecad 9 -subsets: {'distinct': 566720, 'expected': 566720, 'injective': True, 'containing_a_block': 0}
+  dodecad 10 -subsets: {'distinct': 170016, 'expected': 170016, 'injective': True, 'containing_a_block': 0}
+  dodecad 11 -subsets: {'distinct': 30912, 'expected': 30912, 'injective': True, 'containing_a_block': 0}
+  dodecad 12 -subsets: {'distinct': 2576, 'expected': 2576, 'injective': True, 'containing_a_block': 0}
+OK

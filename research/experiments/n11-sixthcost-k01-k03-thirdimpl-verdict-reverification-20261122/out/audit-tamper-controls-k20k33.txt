@@ -1,0 +1,16 @@
+# audit_k20k33.py tamper battery (executed on a full kit copy; restores byte-verified)
+
+T1 k20 verdict flip 1->2 in out/k20-cold-a.txt -> rc=1
+  fails: G35_C2_k20_determinism_3runs_identical, G36_C2_k20_win_verdict_level_vs_replica, G37_C2_k20_verify_legal_identical
+  restore byte-verified sha256 2153540d32f80d122dba5ef812b3e2809298103a399c4d121f2996a8bc831907
+
+T2 k33 verdict flip 1->2 in out/k33-cold-a.txt -> rc=1
+  fails: G41_C2_k33_determinism_3runs_identical, G42_C2_k33_win_verdict_level_vs_replica, G43_C2_k33_verify_legal_identical
+  restore byte-verified sha256 6cf45221fe382896dbceedf03d3c20d23711ea41b8802767faeff78d69a11cd4 (full file restored from the clean kit, cmp-verified before T3)
+
+T3 replica-raw nodes edit base15m-k33 15000000->14999999 -> rc=1
+  fails: G12_repl_sha_k33_base15m, G23_repl_row_k33_base15m, G28_repl_k33_stage_unanimity
+  restore byte-verified against the clean kit copy
+
+final clean control rc=0, 49/49 gates ALL PASS, byte-identical to the baseline audit output
+control outputs: t1.json sha256 0f111cb525da1f9429447f3e658aa658d19c8abb2f0a9266f5d3d3df47e2beb7 / t2.json 0d5db18a7c6b5d0017fb6f4bfca9781a59798d61d0790451f2405135acaed0d0 / t3.json b03bb96f56faca0b7ed7b7229fcf6b012857c54a7b272d517eeb13390ca8e7d1 / t4-clean.json bfb88c56e87b3d098b1a6f00cc4d77504209d396721fb1130e55319fed875e33

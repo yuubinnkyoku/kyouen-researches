@@ -1,0 +1,141 @@
+Full upset Grundy DP for six-subsets of complete 7-arcs
+(6 complete 7-arcs, all 7 six-subsets for the first 3 arcs,
+ plus one six-subset for each further arc)
+
+  A=[3, 25, 26, 31, 37, 39, 75]  p=3
+    X = [25, 26, 31, 37, 39, 75]   is_cap=True  |X|=6  maximal=False
+    upset positions = 11   G(X) = 2
+    child Grundy values = [0, 1, 1, 1, 1, 1, 1]   (mex = 2)
+    maximal caps in upset: 4, sizes=[7, 8], all G=0? True
+  A=[3, 25, 26, 31, 37, 39, 75]  p=25
+    X = [3, 26, 31, 37, 39, 75]   is_cap=True  |X|=6  maximal=False
+    upset positions = 11   G(X) = 2
+    child Grundy values = [0, 1, 1, 1, 1, 1, 1]   (mex = 2)
+    maximal caps in upset: 4, sizes=[7, 8], all G=0? True
+  A=[3, 25, 26, 31, 37, 39, 75]  p=26
+    X = [3, 25, 31, 37, 39, 75]   is_cap=True  |X|=6  maximal=False
+    upset positions = 11   G(X) = 2
+    child Grundy values = [0, 1, 1, 1, 1, 1, 1]   (mex = 2)
+    maximal caps in upset: 4, sizes=[7, 8], all G=0? True
+  A=[3, 25, 26, 31, 37, 39, 75]  p=31
+    X = [3, 25, 26, 37, 39, 75]   is_cap=True  |X|=6  maximal=False
+    upset positions = 11   G(X) = 2
+    child Grundy values = [0, 1, 1, 1, 1, 1, 1]   (mex = 2)
+    maximal caps in upset: 4, sizes=[7, 8], all G=0? True
+  A=[3, 25, 26, 31, 37, 39, 75]  p=37
+    X = [3, 25, 26, 31, 39, 75]   is_cap=True  |X|=6  maximal=False
+    upset positions = 11   G(X) = 2
+    child Grundy values = [0, 1, 1, 1, 1, 1, 1]   (mex = 2)
+    maximal caps in upset: 4, sizes=[7, 8], all G=0? True
+  A=[3, 25, 26, 31, 37, 39, 75]  p=39
+    X = [3, 25, 26, 31, 37, 75]   is_cap=True  |X|=6  maximal=False
+    upset positions = 11   G(X) = 2
+    child Grundy values = [0, 1, 1, 1, 1, 1, 1]   (mex = 2)
+    maximal caps in upset: 4, sizes=[7, 8], all G=0? True
+  A=[3, 25, 26, 31, 37, 39, 75]  p=75
+    X = [3, 25, 26, 31, 37, 39]   is_cap=True  |X|=6  maximal=False
+    upset positions = 11   G(X) = 2
+    child Grundy values = [0, 1, 1, 1, 1, 1, 1]   (mex = 2)
+    maximal caps in upset: 4, sizes=[7, 8], all G=0? True
+  A=[16, 47, 51, 56, 60, 80, 82]  p=16
+    X = [47, 51, 56, 60, 80, 82]   is_cap=True  |X|=6  maximal=False
+    upset positions = 11   G(X) = 2
+    child Grundy values = [0, 1, 1, 1, 1, 1, 1]   (mex = 2)
+    maximal caps in upset: 4, sizes=[7, 8], all G=0? True
+  A=[16, 47, 51, 56, 60, 80, 82]  p=47
+    X = [16, 51, 56, 60, 80, 82]   is_cap=True  |X|=6  maximal=False
+    upset positions = 11   G(X) = 2
+    child Grundy values = [0, 1, 1, 1, 1, 1, 1]   (mex = 2)
+    maximal caps in upset: 4, sizes=[7, 8], all G=0? True
+  A=[16, 47, 51, 56, 60, 80, 82]  p=51
+    X = [16, 47, 56, 60, 80, 82]   is_cap=True  |X|=6  maximal=False
+    upset positions = 11   G(X) = 2
+    child Grundy values = [0, 1, 1, 1, 1, 1, 1]   (mex = 2)
+    maximal caps in upset: 4, sizes=[7, 8], all G=0? True
+  A=[16, 47, 51, 56, 60, 80, 82]  p=56
+    X = [16, 47, 51, 60, 80, 82]   is_cap=True  |X|=6  maximal=False
+    upset positions = 11   G(X) = 2
+    child Grundy values = [0, 1, 1, 1, 1, 1, 1]   (mex = 2)
+    maximal caps in upset: 4, sizes=[7, 8], all G=0? True
+  A=[16, 47, 51, 56, 60, 80, 82]  p=60
+    X = [16, 47, 51, 56, 80, 82]   is_cap=True  |X|=6  maximal=False
+    upset positions = 11   G(X) = 2
+    child Grundy values = [0, 1, 1, 1, 1, 1, 1]   (mex = 2)
+    maximal caps in upset: 4, sizes=[7, 8], all G=0? True
+  A=[16, 47, 51, 56, 60, 80, 82]  p=80
+    X = [16, 47, 51, 56, 60, 82]   is_cap=True  |X|=6  maximal=False
+    upset positions = 11   G(X) = 2
+    child Grundy values = [0, 1, 1, 1, 1, 1, 1]   (mex = 2)
+    maximal caps in upset: 4, sizes=[7, 8], all G=0? True
+  A=[16, 47, 51, 56, 60, 80, 82]  p=82
+    X = [16, 47, 51, 56, 60, 80]   is_cap=True  |X|=6  maximal=False
+    upset positions = 11   G(X) = 2
+    child Grundy values = [0, 1, 1, 1, 1, 1, 1]   (mex = 2)
+    maximal caps in upset: 4, sizes=[7, 8], all G=0? True
+  A=[33, 39, 57, 70, 74, 80, 89]  p=33
+    X = [39, 57, 70, 74, 80, 89]   is_cap=True  |X|=6  maximal=False
+    upset positions = 11   G(X) = 2
+    child Grundy values = [0, 1, 1, 1, 1, 1, 1]   (mex = 2)
+    maximal caps in upset: 4, sizes=[7, 8], all G=0? True
+  A=[33, 39, 57, 70, 74, 80, 89]  p=39
+    X = [33, 57, 70, 74, 80, 89]   is_cap=True  |X|=6  maximal=False
+    upset positions = 11   G(X) = 2
+    child Grundy values = [0, 1, 1, 1, 1, 1, 1]   (mex = 2)
+    maximal caps in upset: 4, sizes=[7, 8], all G=0? True
+  A=[33, 39, 57, 70, 74, 80, 89]  p=57
+    X = [33, 39, 70, 74, 80, 89]   is_cap=True  |X|=6  maximal=False
+    upset positions = 11   G(X) = 2
+    child Grundy values = [0, 1, 1, 1, 1, 1, 1]   (mex = 2)
+    maximal caps in upset: 4, sizes=[7, 8], all G=0? True
+  A=[33, 39, 57, 70, 74, 80, 89]  p=70
+    X = [33, 39, 57, 74, 80, 89]   is_cap=True  |X|=6  maximal=False
+    upset positions = 11   G(X) = 2
+    child Grundy values = [0, 1, 1, 1, 1, 1, 1]   (mex = 2)
+    maximal caps in upset: 4, sizes=[7, 8], all G=0? True
+  A=[33, 39, 57, 70, 74, 80, 89]  p=74
+    X = [33, 39, 57, 70, 80, 89]   is_cap=True  |X|=6  maximal=False
+    upset positions = 11   G(X) = 2
+    child Grundy values = [0, 1, 1, 1, 1, 1, 1]   (mex = 2)
+    maximal caps in upset: 4, sizes=[7, 8], all G=0? True
+  A=[33, 39, 57, 70, 74, 80, 89]  p=80
+    X = [33, 39, 57, 70, 74, 89]   is_cap=True  |X|=6  maximal=False
+    upset positions = 11   G(X) = 2
+    child Grundy values = [0, 1, 1, 1, 1, 1, 1]   (mex = 2)
+    maximal caps in upset: 4, sizes=[7, 8], all G=0? True
+  A=[33, 39, 57, 70, 74, 80, 89]  p=89
+    X = [33, 39, 57, 70, 74, 80]   is_cap=True  |X|=6  maximal=False
+    upset positions = 11   G(X) = 2
+    child Grundy values = [0, 1, 1, 1, 1, 1, 1]   (mex = 2)
+    maximal caps in upset: 4, sizes=[7, 8], all G=0? True
+  A=[10, 20, 29, 32, 64, 66, 76]  p=10
+    X = [20, 29, 32, 64, 66, 76]   is_cap=True  |X|=6  maximal=False
+    upset positions = 11   G(X) = 2
+    child Grundy values = [0, 1, 1, 1, 1, 1, 1]   (mex = 2)
+    maximal caps in upset: 4, sizes=[7, 8], all G=0? True
+  A=[10, 11, 23, 58, 60, 65, 76]  p=10
+    X = [11, 23, 58, 60, 65, 76]   is_cap=True  |X|=6  maximal=False
+    upset positions = 11   G(X) = 2
+    child Grundy values = [0, 1, 1, 1, 1, 1, 1]   (mex = 2)
+    maximal caps in upset: 4, sizes=[7, 8], all G=0? True
+  A=[18, 32, 53, 64, 69, 82, 87]  p=18
+    X = [32, 53, 64, 69, 82, 87]   is_cap=True  |X|=6  maximal=False
+    upset positions = 11   G(X) = 2
+    child Grundy values = [0, 1, 1, 1, 1, 1, 1]   (mex = 2)
+    maximal caps in upset: 4, sizes=[7, 8], all G=0? True
+
+Parent's earlier Grundy-2 witness:
+  witness [0, 1, 10, 20, 32, 39]
+    X = [0, 1, 10, 20, 32, 39]   is_cap=True  |X|=6  maximal=False
+    upset positions = 11   G(X) = 2
+    child Grundy values = [0, 1, 1, 1, 1, 1, 1]   (mex = 2)
+    maximal caps in upset: 4, sizes=[7, 8], all G=0? True
+
+Summary:
+  six-subsets evaluated: 25
+  G==2 for every six-subset of a complete 7-arc: PASS
+  G(witness)==2: PASS
+  maximal extensions are {7,8} (mixed parity) in every case: PASS
+  all maximal caps in the upsets have G=0: PASS
+
+Note: for X = A-{p} the maximal extensions are A itself (size 7,
+G=0) and three maximal 8-caps (G=0); the 7- vs 8-parity is mixed.

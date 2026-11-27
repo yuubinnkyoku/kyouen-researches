@@ -1,0 +1,20 @@
+# Part EN tamper battery for audit_gate.py (rev4) - fail-closed demonstration
+# protocol: tamper one thing in a fresh kit copy, assert the tampered
+# file's sha256 actually changed, run the audit, require rc=1.
+#
+CONTROL: no tamper; expect rc=0 and audit_gate.json bytewise == canonical f35cddd2...
+  tamper-sha-changed: N/A (control)
+  audit rc=0 (expect 0); first FAIL gate: None (expect None)
+  audit_gate.json sha256 == canonical f35cddd2...: True (failure would mean nondeterministic audit)
+T1: corrupt published pin aj030 15284699->15284698 in audit source
+  tamper-sha-changed: True (pre-asserted)
+  audit rc=1 (expect 1); first FAIL gate: G3:aj030
+T2: tamper raw aj049.p1.out nodes 4998452->4898452
+  tamper-sha-changed: True (pre-asserted)
+  audit rc=1 (expect 1); first FAIL gate: G2:aj049
+T3: append a GATE-FAIL line to gate-status.log
+  tamper-sha-changed: True (pre-asserted)
+  audit rc=1 (expect 1); first FAIL gate: G4
+#
+battery verdict: ALL-FAIL-CLOSED (3/3 tampers rc=1 with a named FAIL gate; control rc=0 byte-identical audit)
+audit source pin: scripts/audit_gate.py rev4 at main 319ebe5c

@@ -1,0 +1,426 @@
+{
+  "checks": [
+    {
+      "name": "board is 24 points / 759 blocks of size 8",
+      "ok": true,
+      "detail": "24 759 [8]"
+    },
+    {
+      "name": "S(5,8,24): lambda_0..5 = 759,253,77,21,5,1",
+      "ok": true,
+      "detail": "[759, 253, 77, 21, 5, 1]"
+    },
+    {
+      "name": "block intersections only 0/2/4",
+      "ok": true,
+      "detail": "{'0': 11385, '2': 170016, '4': 106260}"
+    },
+    {
+      "name": "Golay span rank 12, 4096 words",
+      "ok": true,
+      "detail": "12/4096"
+    },
+    {
+      "name": "weight enumerator {0:1,8:759,12:2576,16:759,24:1}",
+      "ok": true,
+      "detail": "{'0': 1, '8': 759, '12': 2576, '16': 759, '24': 1}"
+    },
+    {
+      "name": "weight-8 words are exactly the 759 blocks",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "dodecads = 2576 weight-12 words",
+      "ok": true,
+      "detail": "2576"
+    },
+    {
+      "name": "dodecad/octad intersections = {2,4,6}, constant profile 132/495/132",
+      "ok": true,
+      "detail": "{'2': 132, '4': 495, '6': 132}"
+    },
+    {
+      "name": "dodecad 9-subsets distinct = 566720 (injective, no block inside)",
+      "ok": true,
+      "detail": "{'distinct': 566720, 'expected': 566720, 'injective': True, 'containing_a_block': 0, 'containing_a_block_full_argument': 'no block meets any dodecad in more than 6 points', 'direct_scan_sample': 2000, 'direct_scan_sample_containing_a_block': 0}"
+    },
+    {
+      "name": "dodecad 10-subsets distinct = 170016 (injective, no block inside)",
+      "ok": true,
+      "detail": "{'distinct': 170016, 'expected': 170016, 'injective': True, 'containing_a_block': 0, 'containing_a_block_full_argument': 'no block meets any dodecad in more than 6 points', 'direct_scan_sample': 2000, 'direct_scan_sample_containing_a_block': 0}"
+    },
+    {
+      "name": "dodecad 11-subsets distinct = 30912 (injective, no block inside)",
+      "ok": true,
+      "detail": "{'distinct': 30912, 'expected': 30912, 'injective': True, 'containing_a_block': 0, 'containing_a_block_full_argument': 'no block meets any dodecad in more than 6 points', 'direct_scan_sample': 2000, 'direct_scan_sample_containing_a_block': 0}"
+    },
+    {
+      "name": "dodecad 12-subsets distinct = 2576 (injective, no block inside)",
+      "ok": true,
+      "detail": "{'distinct': 2576, 'expected': 2576, 'injective': True, 'containing_a_block': 0, 'containing_a_block_full_argument': 'no block meets any dodecad in more than 6 points', 'direct_scan_sample': 2000, 'direct_scan_sample_containing_a_block': 0}"
+    },
+    {
+      "name": "independent SAFE total = 7,932,035",
+      "ok": true,
+      "detail": "7932035"
+    },
+    {
+      "name": "size 0: Grundy distribution sums to safe count",
+      "ok": true,
+      "detail": "1 vs 1"
+    },
+    {
+      "name": "size 1: Grundy distribution sums to safe count",
+      "ok": true,
+      "detail": "24 vs 24"
+    },
+    {
+      "name": "size 2: Grundy distribution sums to safe count",
+      "ok": true,
+      "detail": "276 vs 276"
+    },
+    {
+      "name": "size 3: Grundy distribution sums to safe count",
+      "ok": true,
+      "detail": "2024 vs 2024"
+    },
+    {
+      "name": "size 4: Grundy distribution sums to safe count",
+      "ok": true,
+      "detail": "10626 vs 10626"
+    },
+    {
+      "name": "size 5: Grundy distribution sums to safe count",
+      "ok": true,
+      "detail": "42504 vs 42504"
+    },
+    {
+      "name": "size 6: Grundy distribution sums to safe count",
+      "ok": true,
+      "detail": "134596 vs 134596"
+    },
+    {
+      "name": "size 7: Grundy distribution sums to safe count",
+      "ok": true,
+      "detail": "346104 vs 346104"
+    },
+    {
+      "name": "size 8: Grundy distribution sums to safe count",
+      "ok": true,
+      "detail": "734712 vs 734712"
+    },
+    {
+      "name": "size 9: Grundy distribution sums to safe count",
+      "ok": true,
+      "detail": "1295360 vs 1295360"
+    },
+    {
+      "name": "size 10: Grundy distribution sums to safe count",
+      "ok": true,
+      "detail": "1870176 vs 1870176"
+    },
+    {
+      "name": "size 11: Grundy distribution sums to safe count",
+      "ok": true,
+      "detail": "2071104 vs 2071104"
+    },
+    {
+      "name": "size 12: Grundy distribution sums to safe count",
+      "ok": true,
+      "detail": "1393616 vs 1393616"
+    },
+    {
+      "name": "size 13: Grundy distribution sums to safe count",
+      "ok": true,
+      "detail": "30912 vs 30912"
+    },
+    {
+      "name": "size 9 dodecad: count 566720 at G=2",
+      "ok": true,
+      "detail": "got 566720"
+    },
+    {
+      "name": "size 9 dodecad: ALL such caps have G=2 (no other value)",
+      "ok": true,
+      "detail": "{}"
+    },
+    {
+      "name": "size 9 dodecad: total = claimed count",
+      "ok": true,
+      "detail": "566720"
+    },
+    {
+      "name": "size 9 nondodecad: count 728640 at G=1",
+      "ok": true,
+      "detail": "got 728640"
+    },
+    {
+      "name": "size 9 nondodecad: ALL such caps have G=1 (no other value)",
+      "ok": true,
+      "detail": "{}"
+    },
+    {
+      "name": "size 9 nondodecad: total = claimed count",
+      "ok": true,
+      "detail": "728640"
+    },
+    {
+      "name": "size 10 dodecad: count 170016 at G=1",
+      "ok": true,
+      "detail": "got 170016"
+    },
+    {
+      "name": "size 10 dodecad: ALL such caps have G=1 (no other value)",
+      "ok": true,
+      "detail": "{}"
+    },
+    {
+      "name": "size 10 dodecad: total = claimed count",
+      "ok": true,
+      "detail": "170016"
+    },
+    {
+      "name": "size 10 nondodecad: count 1700160 at G=0",
+      "ok": true,
+      "detail": "got 1700160"
+    },
+    {
+      "name": "size 10 nondodecad: ALL such caps have G=0 (no other value)",
+      "ok": true,
+      "detail": "{}"
+    },
+    {
+      "name": "size 10 nondodecad: total = claimed count",
+      "ok": true,
+      "detail": "1700160"
+    },
+    {
+      "name": "size 11 dodecad: count 30912 at G=0",
+      "ok": true,
+      "detail": "got 30912"
+    },
+    {
+      "name": "size 11 dodecad: ALL such caps have G=0 (no other value)",
+      "ok": true,
+      "detail": "{}"
+    },
+    {
+      "name": "size 11 dodecad: total = claimed count",
+      "ok": true,
+      "detail": "30912"
+    },
+    {
+      "name": "size 11 nondodecad: count 2040192 at G=2",
+      "ok": true,
+      "detail": "got 2040192"
+    },
+    {
+      "name": "size 11 nondodecad: ALL such caps have G=2 (no other value)",
+      "ok": true,
+      "detail": "{}"
+    },
+    {
+      "name": "size 11 nondodecad: total = claimed count",
+      "ok": true,
+      "detail": "2040192"
+    },
+    {
+      "name": "size 9: dodecad + nondodecad = safe count 1295360",
+      "ok": true,
+      "detail": "1295360"
+    },
+    {
+      "name": "size 10: dodecad + nondodecad = safe count 1870176",
+      "ok": true,
+      "detail": "1870176"
+    },
+    {
+      "name": "size 11: dodecad + nondodecad = safe count 2071104",
+      "ok": true,
+      "detail": "2071104"
+    },
+    {
+      "name": "every dodecad-subset position is safe (flags count 566720+170016+30912+2576)",
+      "ok": true,
+      "detail": "{9: 566720, 10: 170016, 11: 30912, 12: 2576}"
+    },
+    {
+      "name": "size 12 maximal count = 1,020,096",
+      "ok": true,
+      "detail": "1020096"
+    },
+    {
+      "name": "size 12: maxima have G=0 and non-maxima G=1",
+      "ok": true,
+      "detail": "{0: 1020096, 1: 373520}"
+    },
+    {
+      "name": "size 13 count 30,912, all maximal, all G=0",
+      "ok": true,
+      "detail": "(30912, 30912)"
+    },
+    {
+      "name": "no safe position of size 14",
+      "ok": true,
+      "detail": "0"
+    },
+    {
+      "name": "maximal positions only at sizes 12 and 13",
+      "ok": true,
+      "detail": "{12: 1020096, 13: 30912}"
+    },
+    {
+      "name": "size 9 dodecad: profile (12:180, 13:21) and constant over all caps",
+      "ok": true,
+      "detail": "{'distinct': 1, 'profiles': {(9, 'dodecad', 180, 21): 566720}}"
+    },
+    {
+      "name": "size 9 nondodecad: profile (12:168, 13:14) and constant over all caps",
+      "ok": true,
+      "detail": "{'distinct': 1, 'profiles': {(9, 'nondodecad', 168, 14): 728640}}"
+    },
+    {
+      "name": "size 10 dodecad: profile (12:36, 13:12) and constant over all caps",
+      "ok": true,
+      "detail": "{'distinct': 1, 'profiles': {(10, 'dodecad', 36, 12): 170016}}"
+    },
+    {
+      "name": "size 10 nondodecad: profile (12:36, 13:4) and constant over all caps",
+      "ok": true,
+      "detail": "{'distinct': 1, 'profiles': {(10, 'nondodecad', 36, 4): 1700160}}"
+    },
+    {
+      "name": "size 11 dodecad: profile (12:0, 13:12) and constant over all caps",
+      "ok": true,
+      "detail": "{'distinct': 1, 'profiles': {(11, 'dodecad', 0, 12): 30912}}"
+    },
+    {
+      "name": "size 11 nondodecad: profile (12:6, 13:1) and constant over all caps",
+      "ok": true,
+      "detail": "{'distinct': 1, 'profiles': {(11, 'nondodecad', 6, 1): 2040192}}"
+    },
+    {
+      "name": "total Grundy 0/1/2 = 3662291/1662832/2606912",
+      "ok": true,
+      "detail": "{0: 3662291, 1: 1662832, 2: 2606912}"
+    },
+    {
+      "name": "G=2 total = dodecad9 + nondodecad11 = 566720+2040192",
+      "ok": true,
+      "detail": "2606912"
+    },
+    {
+      "name": "no Grundy value > 2 anywhere",
+      "ok": true,
+      "detail": "[0, 1, 2]"
+    },
+    {
+      "name": "G(empty) = 0",
+      "ok": true,
+      "detail": "0"
+    },
+    {
+      "name": "non-maximal 12-caps = 2576 dodecads + 370944 non-dodecad; the non-dodecad non-maxima are exactly the 11-subset-of-dodecad + outside-point family",
+      "ok": true,
+      "detail": "{'nonmax': 373520, 'nonmax_dodecad': 2576, 'nonmax_nondodecad': 370944, 'nonmax_nondodecad_with_dodecad11': 370944, 'maximal_with_dodecad11': 0}"
+    },
+    {
+      "name": "dodecad check: every dodecad is a non-maximal 12-cap with G=1 and 12 moves; the 370944 extensions are distinct non-maximal non-dodecad 12-caps",
+      "ok": true,
+      "detail": "DODECAD_CHECK wrong_g=0 moves_ok=1 pairs=370944 pair_bad=0 distinct_extensions=370944 (expect 370944)"
+    },
+    {
+      "name": "engine file: SAFE total agrees",
+      "ok": true,
+      "detail": "(7932035, 7932035)"
+    },
+    {
+      "name": "engine file: ROOT agrees",
+      "ok": true,
+      "detail": "(0, 0)"
+    },
+    {
+      "name": "engine file SIZE 0 (count,maximal,G0) agrees",
+      "ok": true,
+      "detail": "engine (1, 0, 1) vs ours (1, 0, 1)"
+    },
+    {
+      "name": "engine file SIZE 1 (count,maximal,G0) agrees",
+      "ok": true,
+      "detail": "engine (24, 0, 0) vs ours (24, 0, 0)"
+    },
+    {
+      "name": "engine file SIZE 2 (count,maximal,G0) agrees",
+      "ok": true,
+      "detail": "engine (276, 0, 276) vs ours (276, 0, 276)"
+    },
+    {
+      "name": "engine file SIZE 3 (count,maximal,G0) agrees",
+      "ok": true,
+      "detail": "engine (2024, 0, 0) vs ours (2024, 0, 0)"
+    },
+    {
+      "name": "engine file SIZE 4 (count,maximal,G0) agrees",
+      "ok": true,
+      "detail": "engine (10626, 0, 10626) vs ours (10626, 0, 10626)"
+    },
+    {
+      "name": "engine file SIZE 5 (count,maximal,G0) agrees",
+      "ok": true,
+      "detail": "engine (42504, 0, 0) vs ours (42504, 0, 0)"
+    },
+    {
+      "name": "engine file SIZE 6 (count,maximal,G0) agrees",
+      "ok": true,
+      "detail": "engine (134596, 0, 134596) vs ours (134596, 0, 134596)"
+    },
+    {
+      "name": "engine file SIZE 7 (count,maximal,G0) agrees",
+      "ok": true,
+      "detail": "engine (346104, 0, 0) vs ours (346104, 0, 0)"
+    },
+    {
+      "name": "engine file SIZE 8 (count,maximal,G0) agrees",
+      "ok": true,
+      "detail": "engine (734712, 0, 734712) vs ours (734712, 0, 734712)"
+    },
+    {
+      "name": "engine file SIZE 9 (count,maximal,G0) agrees",
+      "ok": true,
+      "detail": "engine (1295360, 0, 0) vs ours (1295360, 0, 0)"
+    },
+    {
+      "name": "engine file SIZE 10 (count,maximal,G0) agrees",
+      "ok": true,
+      "detail": "engine (1870176, 0, 1700160) vs ours (1870176, 0, 1700160)"
+    },
+    {
+      "name": "engine file SIZE 11 (count,maximal,G0) agrees",
+      "ok": true,
+      "detail": "engine (2071104, 0, 30912) vs ours (2071104, 0, 30912)"
+    },
+    {
+      "name": "engine file SIZE 12 (count,maximal,G0) agrees",
+      "ok": true,
+      "detail": "engine (1393616, 1020096, 1020096) vs ours (1393616, 1020096, 1020096)"
+    },
+    {
+      "name": "engine file SIZE 13 (count,maximal,G0) agrees",
+      "ok": true,
+      "detail": "engine (30912, 30912, 30912) vs ours (30912, 30912, 30912)"
+    },
+    {
+      "name": "engine file: GRUNDY totals agree",
+      "ok": true,
+      "detail": "({0: 3662291, 1: 1662832, 2: 2606912}, {0: 3662291, 1: 1662832, 2: 2606912})"
+    },
+    {
+      "name": "engine GSIZE file agrees with independent GSIZE",
+      "ok": true,
+      "detail": "{'n_engine': 18, 'n_ours': 18, 'diff': {}}"
+    }
+  ],
+  "npass": 84,
+  "nfail": 0
+}

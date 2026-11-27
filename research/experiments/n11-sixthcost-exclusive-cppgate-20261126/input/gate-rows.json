@@ -1,0 +1,677 @@
+{
+ "anchors": {
+  "anchor-af039": "89,30000000,2,19234232",
+  "anchor-aj001": "84,30000000,2,5156075",
+  "anchor-at2m": "98,2000000,0,2000000"
+ },
+ "anchors_runtime": {
+  "anchor-af039": [
+   "30000000",
+   "89,30000000,2,19234232"
+  ],
+  "anchor-aj001": [
+   "30000000",
+   "84,30000000,2,5156075"
+  ],
+  "anchor-at2m": [
+   "2000000",
+   "98,2000000,0,2000000"
+  ]
+ },
+ "canonical_head": {
+  "census": {
+   "LOSS": 6600,
+   "WIN": 192
+  },
+  "label": "6e49dd84",
+  "path": "research/experiments/n11-centralreply-emloss21-adoption-predecl-20261126/output/merged-exact-s5-chain-plus-emloss21-20261126.cache",
+  "rows": 6792,
+  "sha256": "6e49dd841b7bfcb335d86ef2479c95f47ab7acbcf41ace389a8b8eb95c778c9d",
+  "targets_fresh_vs": "6e49dd84"
+ },
+ "gate_source": {
+  "commit": "154f3b7a67b97e13acbaee8b04dc74ddca728d19",
+  "header_pins": {
+   "kyouen_residual_micro.hpp": "5976935dcfccb9b5a26fa68f8de20868ce45363dd8c372dcd67d9b841167e7f5",
+   "n11_s5_quarantine.hpp": "2e36d69481fafcde7aede8ae4fedf3d5477f91ee9846bcd4ae2975f32a4ba1a5"
+  },
+  "path": "cpp/solvers/kyouen_dfpn_root.cpp",
+  "sha256": "9193f5b6065e0fbcad2ef7c65f386187701cafa1f5b718cc35a5cbb0d138f92e"
+ },
+ "gates": {
+  "G0:kyouen_dfpn_root.cpp": {
+   "status": "PASS"
+  },
+  "G0:kyouen_residual_micro.hpp": {
+   "status": "PASS"
+  },
+  "G0:n11_s5_quarantine.hpp": {
+   "status": "PASS"
+  },
+  "G1:k01:15m-budget-field": {
+   "status": "PASS"
+  },
+  "G1:k01:15m-pair-identity-except-wall_s": {
+   "status": "PASS"
+  },
+  "G1:k01:15m-run1==15m-run2-nodes": {
+   "status": "PASS"
+  },
+  "G1:k01:15m-run1==15m-run2-result": {
+   "status": "PASS"
+  },
+  "G1:k01:at2m-budget-field": {
+   "status": "PASS"
+  },
+  "G1:k01:at2m-present-key": {
+   "status": "PASS"
+  },
+  "G1:k01:expected-quadruple-derived": {
+   "status": "PASS"
+  },
+  "G1:k01:input-legal==raw-legal": {
+   "status": "PASS"
+  },
+  "G1:k01:input-row-spec-shape": {
+   "status": "PASS"
+  },
+  "G1:k01:key-fields-in-raws": {
+   "status": "PASS"
+  },
+  "G1:k01:res2m-unknown-2M-ceiling": {
+   "status": "PASS"
+  },
+  "G1:k01:status-log-lines": {
+   "status": "PASS"
+  },
+  "G1:k02:15m-budget-field": {
+   "status": "PASS"
+  },
+  "G1:k02:15m-pair-identity-except-wall_s": {
+   "status": "PASS"
+  },
+  "G1:k02:15m-run1==15m-run2-nodes": {
+   "status": "PASS"
+  },
+  "G1:k02:15m-run1==15m-run2-result": {
+   "status": "PASS"
+  },
+  "G1:k02:at2m-budget-field": {
+   "status": "PASS"
+  },
+  "G1:k02:at2m-present-key": {
+   "status": "PASS"
+  },
+  "G1:k02:expected-quadruple-derived": {
+   "status": "PASS"
+  },
+  "G1:k02:input-legal==raw-legal": {
+   "status": "PASS"
+  },
+  "G1:k02:input-row-spec-shape": {
+   "status": "PASS"
+  },
+  "G1:k02:key-fields-in-raws": {
+   "status": "PASS"
+  },
+  "G1:k02:res2m-unknown-2M-ceiling": {
+   "status": "PASS"
+  },
+  "G1:k02:run3-verify-identity": {
+   "status": "PASS"
+  },
+  "G1:k02:status-log-lines": {
+   "status": "PASS"
+  },
+  "G1:k03:15m-budget-field": {
+   "status": "PASS"
+  },
+  "G1:k03:15m-pair-identity-except-wall_s": {
+   "status": "PASS"
+  },
+  "G1:k03:15m-run1==15m-run2-nodes": {
+   "status": "PASS"
+  },
+  "G1:k03:15m-run1==15m-run2-result": {
+   "status": "PASS"
+  },
+  "G1:k03:at2m-budget-field": {
+   "status": "PASS"
+  },
+  "G1:k03:at2m-present-key": {
+   "status": "PASS"
+  },
+  "G1:k03:expected-quadruple-derived": {
+   "status": "PASS"
+  },
+  "G1:k03:input-legal==raw-legal": {
+   "status": "PASS"
+  },
+  "G1:k03:input-row-spec-shape": {
+   "status": "PASS"
+  },
+  "G1:k03:key-fields-in-raws": {
+   "status": "PASS"
+  },
+  "G1:k03:res2m-unknown-2M-ceiling": {
+   "status": "PASS"
+  },
+  "G1:k03:run3-verify-identity": {
+   "status": "PASS"
+  },
+  "G1:k03:status-log-lines": {
+   "status": "PASS"
+  },
+  "G1:k04:15m-budget-field": {
+   "status": "PASS"
+  },
+  "G1:k04:15m-pair-identity-except-wall_s": {
+   "status": "PASS"
+  },
+  "G1:k04:15m-run1==15m-run2-nodes": {
+   "status": "PASS"
+  },
+  "G1:k04:15m-run1==15m-run2-result": {
+   "status": "PASS"
+  },
+  "G1:k04:at2m-budget-field": {
+   "status": "PASS"
+  },
+  "G1:k04:at2m-present-key": {
+   "status": "PASS"
+  },
+  "G1:k04:expected-quadruple-derived": {
+   "status": "PASS"
+  },
+  "G1:k04:input-legal==raw-legal": {
+   "status": "PASS"
+  },
+  "G1:k04:input-row-spec-shape": {
+   "status": "PASS"
+  },
+  "G1:k04:key-fields-in-raws": {
+   "status": "PASS"
+  },
+  "G1:k04:res2m-unknown-2M-ceiling": {
+   "status": "PASS"
+  },
+  "G1:k04:run3-verify-identity": {
+   "status": "PASS"
+  },
+  "G1:k04:status-log-lines": {
+   "status": "PASS"
+  },
+  "G1:k05:15m-budget-field": {
+   "status": "PASS"
+  },
+  "G1:k05:15m-pair-identity-except-wall_s": {
+   "status": "PASS"
+  },
+  "G1:k05:15m-run1==15m-run2-nodes": {
+   "status": "PASS"
+  },
+  "G1:k05:15m-run1==15m-run2-result": {
+   "status": "PASS"
+  },
+  "G1:k05:at2m-budget-field": {
+   "status": "PASS"
+  },
+  "G1:k05:at2m-present-key": {
+   "status": "PASS"
+  },
+  "G1:k05:expected-quadruple-derived": {
+   "status": "PASS"
+  },
+  "G1:k05:input-legal==raw-legal": {
+   "status": "PASS"
+  },
+  "G1:k05:input-row-spec-shape": {
+   "status": "PASS"
+  },
+  "G1:k05:key-fields-in-raws": {
+   "status": "PASS"
+  },
+  "G1:k05:res2m-unknown-2M-ceiling": {
+   "status": "PASS"
+  },
+  "G1:k05:run3-verify-identity": {
+   "status": "PASS"
+  },
+  "G1:k05:status-log-lines": {
+   "status": "PASS"
+  },
+  "G1:k06:15m-budget-field": {
+   "status": "PASS"
+  },
+  "G1:k06:15m-pair-identity-except-wall_s": {
+   "status": "PASS"
+  },
+  "G1:k06:15m-run1==15m-run2-nodes": {
+   "status": "PASS"
+  },
+  "G1:k06:15m-run1==15m-run2-result": {
+   "status": "PASS"
+  },
+  "G1:k06:at2m-budget-field": {
+   "status": "PASS"
+  },
+  "G1:k06:at2m-present-key": {
+   "status": "PASS"
+  },
+  "G1:k06:expected-quadruple-derived": {
+   "status": "PASS"
+  },
+  "G1:k06:input-legal==raw-legal": {
+   "status": "PASS"
+  },
+  "G1:k06:input-row-spec-shape": {
+   "status": "PASS"
+  },
+  "G1:k06:key-fields-in-raws": {
+   "status": "PASS"
+  },
+  "G1:k06:res2m-unknown-2M-ceiling": {
+   "status": "PASS"
+  },
+  "G1:k06:status-log-lines": {
+   "status": "PASS"
+  },
+  "G1:k07:15m-budget-field": {
+   "status": "PASS"
+  },
+  "G1:k07:15m-pair-identity-except-wall_s": {
+   "status": "PASS"
+  },
+  "G1:k07:15m-run1==15m-run2-nodes": {
+   "status": "PASS"
+  },
+  "G1:k07:15m-run1==15m-run2-result": {
+   "status": "PASS"
+  },
+  "G1:k07:at2m-budget-field": {
+   "status": "PASS"
+  },
+  "G1:k07:at2m-pair-identity": {
+   "status": "PASS"
+  },
+  "G1:k07:at2m-present-key": {
+   "status": "PASS"
+  },
+  "G1:k07:at2m-vs-15m-agreement": {
+   "status": "PASS"
+  },
+  "G1:k07:expected-quadruple-derived": {
+   "status": "PASS"
+  },
+  "G1:k07:input-legal==raw-legal": {
+   "status": "PASS"
+  },
+  "G1:k07:input-row-spec-shape": {
+   "status": "PASS"
+  },
+  "G1:k07:key-fields-in-raws": {
+   "status": "PASS"
+  },
+  "G1:k07:res2m==2-nodes-1419823": {
+   "status": "PASS"
+  },
+  "G1:k07:status-log-lines": {
+   "status": "PASS"
+  },
+  "G1:k08:15m-budget-field": {
+   "status": "PASS"
+  },
+  "G1:k08:15m-pair-identity-except-wall_s": {
+   "status": "PASS"
+  },
+  "G1:k08:15m-run1==15m-run2-nodes": {
+   "status": "PASS"
+  },
+  "G1:k08:15m-run1==15m-run2-result": {
+   "status": "PASS"
+  },
+  "G1:k08:at2m-budget-field": {
+   "status": "PASS"
+  },
+  "G1:k08:at2m-present-key": {
+   "status": "PASS"
+  },
+  "G1:k08:expected-quadruple-derived": {
+   "status": "PASS"
+  },
+  "G1:k08:input-legal==raw-legal": {
+   "status": "PASS"
+  },
+  "G1:k08:input-row-spec-shape": {
+   "status": "PASS"
+  },
+  "G1:k08:key-fields-in-raws": {
+   "status": "PASS"
+  },
+  "G1:k08:res2m-unknown-2M-ceiling": {
+   "status": "PASS"
+  },
+  "G1:k08:run3-verify-identity": {
+   "status": "PASS"
+  },
+  "G1:k08:status-log-lines": {
+   "status": "PASS"
+  },
+  "G1:status-log-k06-mode": {
+   "status": "PASS"
+  },
+  "G1:status-log-k07-2m-run2": {
+   "status": "PASS"
+  },
+  "G1:status-log-k07-mode": {
+   "status": "PASS"
+  },
+  "G1:status-log-k08-mode": {
+   "status": "PASS"
+  },
+  "G2:k01:probe-readme-delegated-target": {
+   "status": "PASS"
+  },
+  "G2:k01:third-impl-verdict-level": {
+   "status": "PASS"
+  },
+  "G2:k01:witness-expected-text-short": {
+   "status": "PASS"
+  },
+  "G2:k01:witness-unconsumed-row": {
+   "status": "PASS"
+  },
+  "G2:k02-no-third-impl-honest-disclosure": {
+   "status": "PASS"
+  },
+  "G2:k02:probe-readme-delegated-target": {
+   "status": "PASS"
+  },
+  "G2:k02:witness-expected-text-short": {
+   "status": "PASS"
+  },
+  "G2:k02:witness-unconsumed-row": {
+   "status": "PASS"
+  },
+  "G2:k03:probe-readme-delegated-target": {
+   "status": "PASS"
+  },
+  "G2:k03:third-impl-verdict-level": {
+   "status": "PASS"
+  },
+  "G2:k03:witness-expected-text-short": {
+   "status": "PASS"
+  },
+  "G2:k03:witness-unconsumed-row": {
+   "status": "PASS"
+  },
+  "G2:k04:probe-readme-delegated-target": {
+   "status": "PASS"
+  },
+  "G2:k04:third-impl-verdict-level": {
+   "status": "PASS"
+  },
+  "G2:k04:witness-expected-text-short": {
+   "status": "PASS"
+  },
+  "G2:k04:witness-unconsumed-row": {
+   "status": "PASS"
+  },
+  "G2:k05:probe-readme-delegated-target": {
+   "status": "PASS"
+  },
+  "G2:k05:third-impl-verdict-level": {
+   "status": "PASS"
+  },
+  "G2:k05:witness-expected-text-short": {
+   "status": "PASS"
+  },
+  "G2:k05:witness-unconsumed-row": {
+   "status": "PASS"
+  },
+  "G2:k06:probe-readme-delegated-target": {
+   "status": "PASS"
+  },
+  "G2:k06:third-impl-verdict-level": {
+   "status": "PASS"
+  },
+  "G2:k06:witness-expected-text": {
+   "status": "PASS"
+  },
+  "G2:k06:witness-target-text": {
+   "status": "PASS"
+  },
+  "G2:k06:witness-unconsumed-row": {
+   "status": "PASS"
+  },
+  "G2:k07:probe-readme-delegated-target": {
+   "status": "PASS"
+  },
+  "G2:k07:third-impl-verdict-level": {
+   "status": "PASS"
+  },
+  "G2:k07:witness-expected-text": {
+   "status": "PASS"
+  },
+  "G2:k07:witness-target-text": {
+   "status": "PASS"
+  },
+  "G2:k07:witness-unconsumed-row": {
+   "status": "PASS"
+  },
+  "G2:k08:probe-readme-delegated-target": {
+   "status": "PASS"
+  },
+  "G2:k08:third-impl-verdict-level": {
+   "status": "PASS"
+  },
+  "G2:k08:witness-expected-text": {
+   "status": "PASS"
+  },
+  "G2:k08:witness-target-text": {
+   "status": "PASS"
+  },
+  "G2:k08:witness-unconsumed-row": {
+   "status": "PASS"
+  },
+  "G2:probe-readme-solver-pin": {
+   "status": "PASS"
+  },
+  "G2:witness-solver-pin": {
+   "status": "PASS"
+  },
+  "G3:anchor-af039:byte-pin-vs-EV-kit-MANIFEST": {
+   "status": "PASS"
+  },
+  "G3:anchor-af039:expected-vs-gate-rows-ev": {
+   "status": "PASS"
+  },
+  "G3:anchor-af039:input-row-spec-shape": {
+   "status": "PASS"
+  },
+  "G3:anchor-aj001:byte-pin-vs-EV-kit-MANIFEST": {
+   "status": "PASS"
+  },
+  "G3:anchor-aj001:expected-vs-gate-rows-ev": {
+   "status": "PASS"
+  },
+  "G3:anchor-aj001:input-row-spec-shape": {
+   "status": "PASS"
+  },
+  "G3:anchor-at2m:byte-pin-vs-EV-kit-MANIFEST": {
+   "status": "PASS"
+  },
+  "G3:anchor-at2m:expected-vs-gate-rows-ev": {
+   "status": "PASS"
+  },
+  "G3:anchor-at2m:input-row-spec-shape": {
+   "status": "PASS"
+  },
+  "G4:canonical-census-WIN192-LOSS6600": {
+   "status": "PASS"
+  },
+  "G4:canonical-head-sha256": {
+   "status": "PASS"
+  },
+  "G4:canonical-row-count": {
+   "status": "PASS"
+  },
+  "G4:k01:fresh-not-in-canonical-head": {
+   "status": "PASS"
+  },
+  "G4:k02:fresh-not-in-canonical-head": {
+   "status": "PASS"
+  },
+  "G4:k03:fresh-not-in-canonical-head": {
+   "status": "PASS"
+  },
+  "G4:k04:fresh-not-in-canonical-head": {
+   "status": "PASS"
+  },
+  "G4:k05:fresh-not-in-canonical-head": {
+   "status": "PASS"
+  },
+  "G4:k06:fresh-not-in-canonical-head": {
+   "status": "PASS"
+  },
+  "G4:k07:fresh-not-in-canonical-head": {
+   "status": "PASS"
+  },
+  "G4:k08:fresh-not-in-canonical-head": {
+   "status": "PASS"
+  },
+  "G8:anchor-af039:input-clone-byte-verified": {
+   "status": "PASS"
+  },
+  "G8:anchor-aj001:input-clone-byte-verified": {
+   "status": "PASS"
+  },
+  "G8:anchor-at2m:input-clone-byte-verified": {
+   "status": "PASS"
+  },
+  "G8:k01:input-clone-byte-verified": {
+   "status": "PASS"
+  },
+  "G8:k02:input-clone-byte-verified": {
+   "status": "PASS"
+  },
+  "G8:k03:input-clone-byte-verified": {
+   "status": "PASS"
+  },
+  "G8:k04:input-clone-byte-verified": {
+   "status": "PASS"
+  },
+  "G8:k05:input-clone-byte-verified": {
+   "status": "PASS"
+  },
+  "G8:k06:input-clone-byte-verified": {
+   "status": "PASS"
+  },
+  "G8:k07:input-clone-byte-verified": {
+   "status": "PASS"
+  },
+  "G8:k08:input-clone-byte-verified": {
+   "status": "PASS"
+  }
+ },
+ "part": "SK",
+ "schema": "n11-sixthcost-exclusive-cppgate-rows-v1",
+ "targets": {
+  "k01": {
+   "budget": "15000000",
+   "expected": "87,15000000,2,10369650",
+   "has_run3_verify": false,
+   "input_sha256": "fd2cf12d5d0691a85309ffd56508dcaa9dbd429a299d34c19e17692686647c7c",
+   "key_hi": "1114112",
+   "key_lo": "1297036692683751424",
+   "raw_p1_sha256": "8b923fffe30723a0ba5600ebbd3eb03bd5d30c2320d499746d1e0ef4d300447a",
+   "raw_p2_sha256": "9a51121df4a1e11264e74a0d403486f479842f2528a0fc9a28052822a76d485d",
+   "row_spec": "target,0,5,1297036692683751424,1114112,87,0,0,0,0,0",
+   "third_impl_verdict_level_corroboration": true
+  },
+  "k02": {
+   "budget": "15000000",
+   "expected": "87,15000000,1,7717432",
+   "has_run3_verify": true,
+   "input_sha256": "b6174a3fa73687af2820fd3eee16d750ca0d43ac7c2a1ea063a392710ce73887",
+   "key_hi": "68157440",
+   "key_lo": "1297036692683751424",
+   "raw_p1_sha256": "29c9a80fdbcbe3b032b44d5c2763e8dd6c2d44abb293d067031a23c75779dfea",
+   "raw_p2_sha256": "29c9a80fdbcbe3b032b44d5c2763e8dd6c2d44abb293d067031a23c75779dfea",
+   "row_spec": "target,0,5,1297036692683751424,68157440,87,0,0,0,0,0",
+   "third_impl_verdict_level_corroboration": false
+  },
+  "k03": {
+   "budget": "15000000",
+   "expected": "81,15000000,1,9255414",
+   "has_run3_verify": true,
+   "input_sha256": "9e40900a8df77e9ce139359ec289d664c08b8f9010d50e80149b4e9e624a3b40",
+   "key_hi": "65792",
+   "key_lo": "10376293541461626880",
+   "raw_p1_sha256": "a1c51cdf3b4a7601b5afabf3c558127f3b762f1f3c87785c695a7ffe5d6b7151",
+   "raw_p2_sha256": "b17652530797f7ecca37668ae22145ae538afc498c5795a58846c87902c5cd32",
+   "row_spec": "target,0,5,10376293541461626880,65792,81,0,0,0,0,0",
+   "third_impl_verdict_level_corroboration": true
+  },
+  "k04": {
+   "budget": "15000000",
+   "expected": "83,15000000,1,9433024",
+   "has_run3_verify": true,
+   "input_sha256": "110776a29b4a9ce4fa0b61c47fc2a586e3475bdd94328db77b506ae8456a80a4",
+   "key_hi": "65536",
+   "key_lo": "10376293541461626888",
+   "raw_p1_sha256": "c10896543282f563deeddf31af994465c9f5fac465c734fa22339a47dc81ca61",
+   "raw_p2_sha256": "7c12138c13d8ff5f256a51d3a311994248e405e05f0780678e86a008daac1e8e",
+   "row_spec": "target,0,5,10376293541461626888,65536,83,0,0,0,0,0",
+   "third_impl_verdict_level_corroboration": true
+  },
+  "k05": {
+   "budget": "15000000",
+   "expected": "88,15000000,1,13397611",
+   "has_run3_verify": true,
+   "input_sha256": "7f30311de61973274163246fb9502b65922788da868b47165ef86646ebb3e750",
+   "key_hi": "65536",
+   "key_lo": "10376293541461757952",
+   "raw_p1_sha256": "dde1e4f0eae6a0557f0a6da7fd54f43f8ab4749c0321c16eba8f4586ee743df8",
+   "raw_p2_sha256": "562e2c9d3cfd7596e63a4f4d101c40ea6ea7dd66abfe5339cc095c6a0e408a2c",
+   "row_spec": "target,0,5,10376293541461757952,65536,88,0,0,0,0,0",
+   "third_impl_verdict_level_corroboration": true
+  },
+  "k06": {
+   "budget": "15000000",
+   "expected": "89,15000000,2,8182231",
+   "has_run3_verify": false,
+   "input_sha256": "e94c2ade1facf9de78b91936238acacc196770878c50bd84bfdd585d91e8e6a4",
+   "key_hi": "65536",
+   "key_lo": "10376293541462675456",
+   "raw_p1_sha256": "070095ec004b960dae1d90a6bc44660ab70f40cda3aaf7499a16923625eb171f",
+   "raw_p2_sha256": "b48f6816532585b4646bfada3b45a791b5c892caf216ab4d255e6e8644a88635",
+   "row_spec": "target,0,5,10376293541462675456,65536,89,0,0,0,0,0",
+   "third_impl_verdict_level_corroboration": true
+  },
+  "k07": {
+   "budget": "2000000",
+   "expected": "87,2000000,2,1419823",
+   "has_run3_verify": false,
+   "input_sha256": "1e3deebf9777b232e6dbec4cabf64a12039926f339b8ca9a91c95635e094bdb5",
+   "key_hi": "65536",
+   "key_lo": "10376293542535368704",
+   "raw_p1_sha256": "c0e75a93df64d71aa90b54647ce593c6de4766bf730f6179ea8e9d0c849fc2cf",
+   "raw_p2_sha256": "c0e75a93df64d71aa90b54647ce593c6de4766bf730f6179ea8e9d0c849fc2cf",
+   "row_spec": "target,0,5,10376293542535368704,65536,87,0,0,0,0,0",
+   "third_impl_verdict_level_corroboration": true
+  },
+  "k08": {
+   "budget": "15000000",
+   "expected": "89,15000000,1,6195897",
+   "has_run3_verify": true,
+   "input_sha256": "6fcbf158817f25e82ebb73010c49638949aa2f8ff9d48713d4806a2d4426c35f",
+   "key_hi": "68719476736",
+   "key_lo": "10376293610182148096",
+   "raw_p1_sha256": "b015a80c41c2aeb21c4c387c433d3a119569590c10907c8038d76e4e6c677044",
+   "raw_p2_sha256": "b015a80c41c2aeb21c4c387c433d3a119569590c10907c8038d76e4e6c677044",
+   "row_spec": "target,0,5,10376293610182148096,68719476736,89,0,0,0,0,0",
+   "third_impl_verdict_level_corroboration": true
+  }
+ }
+}

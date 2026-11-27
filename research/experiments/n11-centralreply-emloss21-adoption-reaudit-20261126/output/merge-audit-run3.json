@@ -1,0 +1,32 @@
+{
+ "tool": "s5_union_merge.py",
+ "fail_closed_gates": "strict 6-field row schema, depth==5, verdict in {1,2}, WIN/LOSS conflict abort (no output), first-occurrence nodes",
+ "inputs": [
+  {
+   "file": "research/experiments/n11-centralreply-evwin4-adoption-predecl-20261126/output/merged-exact-s5-chain-plus-evwin4-20261126.cache",
+   "sha256": "63f33c4f620583449641102026b261c559ae5ecc29713cd6445d6fe9369858f0",
+   "rows": 6771,
+   "unique_new": 6771
+  },
+  {
+   "file": "research/experiments/n11-centralreply-emloss21-adoption-reaudit-20261126/output/increment-emloss21-adoption-20261126.cache",
+   "sha256": "3e6e9bf0a5f410a1d584889832f21352dd01a97aef5a899de06a28373fcaef82",
+   "rows": 21,
+   "unique_new": 21
+  }
+ ],
+ "unique_rows": 6792,
+ "duplicate_rows_elided": 0,
+ "verdict_counts": {
+  "WIN(1)": 192,
+  "LOSS(2)": 6600
+ },
+ "nodes_field_mismatches_recorded": [],
+ "comments_kept_from_first_input": [
+  "# S5 solver-trusted exact; base=merged-exact-s5-after-js-probe-13.cache (sha256 60e0dc3476920d4e...); increment=101 fresh rows (99 canonical S5 children of S4 1297036692683752448:0 absent from the chain, 2 unclaimed backward-only rows, 1 S6-witness-derived TARGET_S5 row nodes=0); see merge-manifest.json"
+ ],
+ "output_sha256": "6e49dd841b7bfcb335d86ef2479c95f47ab7acbcf41ace389a8b8eb95c778c9d",
+ "output_bytes": 283770,
+ "row_format": "s5verdict,<lo>,<hi>,5,<verdict>,<nodes>",
+ "interpretation_guard": "nodes are bookkeeping, never verdicts; merge of solver-trusted cache rows; no new verdict is created; 11x11 root questions remain UNKNOWN"
+}

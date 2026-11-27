@@ -1,0 +1,37 @@
+{
+  "schema": "n11-ninthcost-batch-checkpoint-summary-v1",
+  "stage": "stage2_15m_escalation",
+  "class": "1297036692683751424:134217728",
+  "head_basis": "0935c94c",
+  "keys_total": 45,
+  "stage1_2m": {
+    "rows": 90,
+    "all_unknown": true,
+    "pairs_node_identical": 45
+  },
+  "stage2_15m_resolved_loss": [
+    "k01 2163556",
+    "k03 7753840",
+    "k05 8687533",
+    "k06 8130387",
+    "k08 3306768",
+    "k09 4711230",
+    "k10 5542083",
+    "k11 5931960"
+  ],
+  "stage2_15m_resolved_win": [
+    "k12 14521862"
+  ],
+  "stage2_15m_parked_unknown_at15m": [
+    "k02",
+    "k04",
+    "k07"
+  ],
+  "win_stopping_rule": "FIRED at k12 WIN(1) nodes 14521862; escalation suppressed for k13..k45",
+  "overreach_disclosure": "k13 15M cold pair (LOSS 2, nodes 4217733) executed within the same batch command after the k12 WIN determination, before the operator observed it; disclosed as an observation only; official status of k13 = 2M UNKNOWN pair, escalation suppressed (k02 precedent of the eighth-cost batch).",
+  "pairs_node_identical": 13,
+  "scratch_reproduction": "k01..k10 15M values reproduce the disclosed scratch observations node-exactly (k01/k03/k05/k06/k08/k09/k10 LOSS; k02/k04/k07 UNKNOWN@15M); k11/k12/k13 were never started in the lost scratch round and are new results",
+  "jsreplay_sha256": "845856175d3c793a7eb4306f5902ecda3f1c046a8a53e8f34ed375e51febc3df",
+  "host": "vibe upgraded sandbox, Node.js v22.20.0 (two hosts across one environment reset disclosed in the wave-C log)",
+  "guards": "verdict NOT consumed; WIN(1)/LOSS(2) rows are cache bookkeeping rows only and transfer nothing to any root or class verdict; single-implementation (Node.js replica); per k20/k33/k05/k01 precedent a C++ second-implementation scrutiny gate and a third-implementation corroboration are required before adoption; standard 11x11 empty board UNKNOWN; all 19 central-reply roots UNKNOWN; two-stone root {60,27} UNKNOWN; third-move pair {100,108} UNKNOWN; every closure class UNKNOWN unless a published Part says otherwise"
+}

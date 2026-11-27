@@ -1,0 +1,33 @@
+== T1 k05 expected_result flip: rc=1
+INDEPENDENT-REAUDIT targets=42 (41 LOSS + 1 WIN) raws=84 pairs=42 expansion_bill=529416996 failures=4 verdicts_consumed=0 status=UNCONSUMED
+FAIL: H1 gate-rows vs crosscheck clone
+FAIL: k05 p1 result 1 vs expected 2
+FAIL: k05 p2 result 1 vs expected 2
+FAIL: H5 k05 replica verdict vs expected
+
+== T2 k10.p2 expansion edit: rc=1
+INDEPENDENT-REAUDIT targets=42 (41 LOSS + 1 WIN) raws=84 pairs=42 expansion_bill=529416997 failures=2 verdicts_consumed=0 status=UNCONSUMED
+FAIL: k10 pair expansions
+FAIL: H4 expansion bill 529416997
+
+== T3 phantom k99 raw: rc=1
+INDEPENDENT-REAUDIT targets=42 (41 LOSS + 1 WIN) raws=84 pairs=42 expansion_bill=529416996 failures=1 verdicts_consumed=0 status=UNCONSUMED
+FAIL: H7 raw set != 84 expected files
+
+== T4 k01.p1 result flip: rc=1
+INDEPENDENT-REAUDIT targets=42 (41 LOSS + 1 WIN) raws=84 pairs=42 expansion_bill=529416996 failures=6 verdicts_consumed=0 status=UNCONSUMED
+FAIL: k01 p1 result 1 vs expected 2
+FAIL: k01 p1 quad result
+FAIL: k01 pair result
+FAIL: H3 win set ['k01', 'k05']
+FAIL: H3 loss count 40
+FAIL: H5 k01 third-impl verdict 1 vs replica verdict 2
+
+== T5 k07.p2 rc trailer removal: rc=1
+INDEPENDENT-REAUDIT targets=42 (41 LOSS + 1 WIN) raws=84 pairs=42 expansion_bill=529416996 failures=1 verdicts_consumed=0 status=UNCONSUMED
+FAIL: /home/user/work/sy/sykit-t/output/raw/k07.p2.txt: missing rc=0 trailer
+
+== clean control (fresh copies): rc=0
+INDEPENDENT-REAUDIT targets=42 (41 LOSS + 1 WIN) raws=84 pairs=42 expansion_bill=529416996 failures=0 verdicts_consumed=0 status=UNCONSUMED
+
+all scratch copies deleted after battery

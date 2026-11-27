@@ -1,0 +1,27 @@
+{
+ "battery": [
+  {
+   "id": "T1",
+   "desc": "target changed to a seed-blocked cell (0,3)",
+   "expect": "fail-closed",
+   "result": "AssertionError: target must be unblocked in the seed (rc=1)",
+   "stdout_sha": "c72a0367afb6a8d379d1ddd410cb6069f1f8354b37502776715cdd3ca67768f8"
+  },
+  {
+   "id": "T2",
+   "desc": "seed tampered: stone added at (0,0) completing a 7-stone curve",
+   "expect": "fail-closed",
+   "result": "AssertionError: seed unsafe (rc=1)",
+   "stdout_sha": "894f1c6f99d84e98fa95ec0d77df61435e88bd44ab099ac4572c475587097575"
+  },
+  {
+   "id": "T3b",
+   "desc": "blocking gate weakened (>=Q-1 -> >=Q-2) on an engine copy",
+   "expect": "fail-loud",
+   "result": "counters diverge: safe 84,806, spurious witnesses 84,806; byte-differs from official run1; full spurious log elided, excerpt published",
+   "stdout_sha": "094cbb64b753075eac86f12131fc6ffe97d7f91dea392f2aa2eaf2f728682fa3"
+  }
+ ],
+ "main_output_sha256": "1ac7c6d84d7865e31cd6b18f87a4b4d42a53225cf154d2730d4fd5e66ff51d86",
+ "official_engine_sha256": "8ae82dde4b4959c1e0cfdc388f619d32508623befb29b0c91968bab25d3b6b6a"
+}

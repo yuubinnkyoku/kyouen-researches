@@ -1,0 +1,18 @@
+board file: C:\Users\yuubi\ghq\github.com\yuubinnkyoku\kyouen-researches\research\experiments\pg2q9-cap-game-20261125\output\board_pg2q9.txt
+axiom checks: {'n_points': 91, 'n_lines': 91, 'line_sizes': [10], 'distinct_lines': 91, 'point_degrees': [10], 'all_pairs_on_a_line': True, 'pair_line_unique': True, 'pairwise_line_intersection_sizes': [1], 'line_sizes_all': {10}}
+building standard PG(2,9) over GF(9) ...
+lines=91  line_sizes=[10]  point_degrees=[10]
+isomorphism test: PASS
+  rounds: 4
+  points_mapped: 91
+  lines_mapped: 91
+  subplane_closure: stall
+  subplane_points: 13
+  subplane_lines: 13
+  extra_point: 2
+  candidate_images: 78
+  attempts: 25
+  extra_point_image: 37
+  isomorphism_ok: True
+error: (none)
+time 0.026s

@@ -1,0 +1,141 @@
+{
+ "schema": "euwin2-increments-manifest-v1",
+ "part": "EU",
+ "date": "2026-11-25",
+ "win_canonical_adoption": true,
+ "base_cache_sha256": "9c4dd94e61b6ee724a966ecc9552e527ba5a7107de732f0e9c5ced33bdad4a5a",
+ "base_cache_path": "research/experiments/n11-centralreply-erwin18-adoption-reaudit-20261125/output/merged-exact-s5-chain-plus-erwin18-20261125.cache",
+ "base_cache_rows": 6765,
+ "merger_sha256": "907119610034fb2aebfde012550a4129dfa3b086c6de11194e856747ac74606a",
+ "merger_note": "fail-closed union merger byte-clone 90711961...; WIN/LOSS conflict abort; first-occurrence nodes",
+ "sha256": {
+  "win_increment": "d9365d80a90aff30cb451f8f2519ab2cc004c6d10ba4fb149a7ee340e0aa0b4f"
+ },
+ "adopted_win_rows": [
+  {
+   "key_id": "ai007",
+   "class": 30345,
+   "s5_index": 441292,
+   "lo": 1152922604118478880,
+   "hi": 65536,
+   "legal": 84,
+   "budget": 30000000,
+   "result": 1,
+   "nodes": 16090493,
+   "gate_kit": "et",
+   "gate_input_sha256": "73c6f31983c8a23490f30120fbe9951ca97d294461af7186fa4983278f610bc8",
+   "gate_raw_p1_sha256": "661a4990098e2cba188953a91cf67c37418a9b41a096aadb020941ed4b7facab",
+   "gate_raw_p2_sha256": "9fa9690b1fdfa57898d8bf6ca1b34ed79d2f92d067428d0e84477bc5bb1d0640",
+   "source_kit": "es",
+   "source_dir": "output/raw",
+   "source_input_sha256": "73c6f31983c8a23490f30120fbe9951ca97d294461af7186fa4983278f610bc8",
+   "source_raw_p1_sha256": "25cde975597131b0f1c52cf7f180590f896d53b0732507d9e07e717f02ff0a67",
+   "source_raw_p2_sha256": "2d18d0f3c3a6570b95470f94465c3f517694154c1254b29e4adbf502591ffb56",
+   "b38_basis": {
+    "kit": "b38",
+    "condition_budget": 15000000,
+    "honest_disposition": "EXHAUSTED (honest UNKNOWN, never re-probed at 15M)",
+    "raw_p1_sha256": "20c65a41d3cf1b1b8987d6e9dd0bc0f6e78e96dfdde59554d24850c625d1a1b5",
+    "raw_p2_sha256": "f2b6714c515ade00c5860da77f0bdec618114fc7183361a247a8ca7e64a8fc67"
+   },
+   "extra_provenance": null
+  },
+  {
+   "key_id": "ai040",
+   "class": 30345,
+   "s5_index": 899584,
+   "lo": 1152922604118487040,
+   "hi": 65536,
+   "legal": 85,
+   "budget": 30000000,
+   "result": 1,
+   "nodes": 20711023,
+   "gate_kit": "et",
+   "gate_input_sha256": "e535844a4133e34542df079644514cea868bd062acaa8adef5026b8ca90f6656",
+   "gate_raw_p1_sha256": "c665b8524d32eabd83ff71b09aa7cf586004e4f33980fe4177a8558be5cdb155",
+   "gate_raw_p2_sha256": "d5b2a459e0a932c628c635d01fc9830ca26bb01c8e0898832e3cdb9d04e8ebe6",
+   "source_kit": "es",
+   "source_dir": "output/raw",
+   "source_input_sha256": "e535844a4133e34542df079644514cea868bd062acaa8adef5026b8ca90f6656",
+   "source_raw_p1_sha256": "a5e2a470909e3f4489b3671fea47ae319fb90a4838ff47112c1d87bf5e5eba8e",
+   "source_raw_p2_sha256": "e77d25db6da44621be3744ac9e868b0691c37b45778f2c93c80d6ab8c56501a4",
+   "b38_basis": {
+    "kit": "b38",
+    "condition_budget": 15000000,
+    "honest_disposition": "EXHAUSTED (honest UNKNOWN, never re-probed at 15M)",
+    "raw_p1_sha256": "8cddecbb2bf8fe1b3ed85ad8bf74b1c04adf98bb8c85fad2c3c03dea2b222bdc",
+    "raw_p2_sha256": "1af07f50be792874a45c710e32d1479b403034497b5651c6cd5e9aba8560fbf8"
+   },
+   "extra_provenance": null
+  }
+ ],
+ "adopted_ids": [
+  "ai007",
+  "ai040"
+ ],
+ "resolved_ids": [
+  "ai007",
+  "ai024",
+  "ai030",
+  "ai038",
+  "ai040",
+  "ai041"
+ ],
+ "row_counts": {
+  "adopted_win_rows": 2,
+  "exhausted_honest_unknown_rows": 0,
+  "prior_canonical_rows_base": 6765,
+  "loss_rows_this_pool": 4
+ },
+ "adopted_nodes_per_pool": 36801516,
+ "pool_derivation": {
+  "selection": "the 6 batch-38 honest-EXHAUSTED keys of closure class 30345, re-derived from the published b38 raws (15M result==nodes==budget, two-pass fresh-cold node-exact)",
+  "resolution": "Part ES 30M re-probe (two-pass fresh-cold node-exact raws), the DIFFERENT condition; same-condition ban untouched",
+  "win_derived": [
+   "ai007",
+   "ai040"
+  ],
+  "loss_derived": [
+   "ai024",
+   "ai030",
+   "ai038",
+   "ai041"
+  ],
+  "targets_adopted_here": [
+   "ai007",
+   "ai040"
+  ],
+  "registry_crosscheck": "the ET registry target pool (gate-rows-et.json) equals the re-derived pool; the ET G4 audit aggregated 9/9 PASS"
+ },
+ "er_regression_tie": {
+  "er_increment_sha256": "4f6b7797df3bb950703f95e7ec72f288a447434da5b4ccf3d6d94ee8d8d6ffc1",
+  "er_manifest_sha256": "48b71d6af77306a94bd561f625838cff70cd94f12d702bcda0e945b67237450a",
+  "adopted_rows_win_in_base": 18,
+  "note": "all 18 Part-ER rows re-verified WIN in BASE with identical nodes; NOT re-adopted here"
+ },
+ "verdicts_out_of_scope_unconsumed": {
+  "es6_30m_resolved_loss_rows": "ai024/ai030/ai038/ai041 resolved LOSS at the 30M condition, unconsumed here (EM-pattern loss-adoption territory at its own gate standard)",
+  "b38_15m_exhausted_labels": "the 15M honest-EXHAUSTED label of every pool key remains honest UNKNOWN at 15M; nothing overwrote it",
+  "b018": "batch-1 dual-class probe-level WIN, scrutiny-owner pending, same-condition re-probe prohibited - consumed nowhere",
+  "k04_sixthcost_win": "owned by the sixth-cost lane; NOT adopted",
+  "other_closure_wins": "every other unconsumed probe-level WIN row stays in NO cache"
+ },
+ "provenance": {
+  "pin_policy": "no per-file kit sha is hand-typed; all per-row pins are extracted from the byte-verified published kit MANIFESTs and re-hashed live at emission",
+  "es_kit_manifest_sha256": "cc9877399ab18dddad1250a359d13d834849aceb4ff6d54612a79bf72a615819",
+  "et_kit_manifest_sha256": "f0c1c27a830448dca3cd9c17cfb0f225293bc19f402e7c16710bd32572b449c8",
+  "et_registry_sha256": "6cf057ba2320a9d7be55e53edd9be2b65e41f552af206010899793a5b6a659c5",
+  "et_audit_sha256": "2c6d7441d6f752f160efbe7e275b807ff174d8cd70ece3c85aed135ead11c0d0",
+  "et_audit_schema": "n11-centralreply-cppgate-30345es6-audit-v1",
+  "et_audit_reruns_byte_identical": 3,
+  "et_gate_source_sha256": "9193f5b6065e0fbcad2ef7c65f386187701cafa1f5b718cc35a5cbb0d138f92e",
+  "et_gate_source_commit": "154f3b7a67b97e13acbaee8b04dc74ddca728d19",
+  "et_gate_status_pass": 9,
+  "b38_manifest_sha256": "4dbf8856597709b3bd41d6f185a0502ebbdee447b1fc48d0caab586fdcc5ac02",
+  "b38_keys_sha256": "298071046bfba8473c5b3d6e0b6a30108697eb0899aed7c70fcb4c5343f7cb8d",
+  "kit_integrity": "all three referenced kits (es/et/b38) verified file-by-file against their pinned MANIFESTs (38 + 38 + 181 entries)"
+ },
+ "quarantine_hits": 0,
+ "base_cache_absent_hits_for_emitted": 2,
+ "interpretation_guard": "nodes are bookkeeping, never verdicts; consuming a WIN label asserts no root verdict; the standard 11x11 empty board stays UNKNOWN"
+}

@@ -1,0 +1,188 @@
+{
+ "gates": {
+  "G1:anchor-af039:p1": {
+   "detail": "replay_rows=1 done=True header=True",
+   "status": "PASS"
+  },
+  "G1:anchor-af039:p2": {
+   "detail": "replay_rows=1 done=True header=True",
+   "status": "PASS"
+  },
+  "G1:anchor-aj001:p1": {
+   "detail": "replay_rows=1 done=True header=True",
+   "status": "PASS"
+  },
+  "G1:anchor-aj001:p2": {
+   "detail": "replay_rows=1 done=True header=True",
+   "status": "PASS"
+  },
+  "G1:anchor-at2m:p1": {
+   "detail": "replay_rows=1 done=True header=True",
+   "status": "PASS"
+  },
+  "G1:anchor-at2m:p2": {
+   "detail": "replay_rows=1 done=True header=True",
+   "status": "PASS"
+  },
+  "G1:b018:p1": {
+   "detail": "replay_rows=1 done=True header=True",
+   "status": "PASS"
+  },
+  "G1:b018:p2": {
+   "detail": "replay_rows=1 done=True header=True",
+   "status": "PASS"
+  },
+  "G1:d002:p1": {
+   "detail": "replay_rows=1 done=True header=True",
+   "status": "PASS"
+  },
+  "G1:d002:p2": {
+   "detail": "replay_rows=1 done=True header=True",
+   "status": "PASS"
+  },
+  "G1:e002:p1": {
+   "detail": "replay_rows=1 done=True header=True",
+   "status": "PASS"
+  },
+  "G1:e002:p2": {
+   "detail": "replay_rows=1 done=True header=True",
+   "status": "PASS"
+  },
+  "G1:f017:p1": {
+   "detail": "replay_rows=1 done=True header=True",
+   "status": "PASS"
+  },
+  "G1:f017:p2": {
+   "detail": "replay_rows=1 done=True header=True",
+   "status": "PASS"
+  },
+  "G2:anchor-af039": {
+   "detail": "p1=0,5,89,0,30000000,2,19234232,38,1152921504607895681,68719476736 p2=0,5,89,0,30000000,2,19234232,41,1152921504607895681,68719476736",
+   "status": "PASS"
+  },
+  "G2:anchor-aj001": {
+   "detail": "p1=0,5,84,0,30000000,2,5156075,9,1152922604269469696,65536 p2=0,5,84,0,30000000,2,5156075,10,1152922604269469696,65536",
+   "status": "PASS"
+  },
+  "G2:anchor-at2m": {
+   "detail": "p1=0,5,98,0,2000000,0,2000000,3,1152921504606851072,536870946 p2=0,5,98,0,2000000,0,2000000,3,1152921504606851072,536870946",
+   "status": "PASS"
+  },
+  "G2:b018": {
+   "detail": "p1=0,5,60,0,15000000,1,3549602,7,1153204079095189504,65536 p2=0,5,60,0,15000000,1,3549602,6,1153204079095189504,65536",
+   "status": "PASS"
+  },
+  "G2:d002": {
+   "detail": "p1=0,5,73,0,15000000,1,5359994,10,3461016313634230272,131072 p2=0,5,73,0,15000000,1,5359994,10,3461016313634230272,131072",
+   "status": "PASS"
+  },
+  "G2:e002": {
+   "detail": "p1=0,5,79,0,15000000,1,14112632,27,1153765929805414400,16 p2=0,5,79,0,15000000,1,14112632,29,1153765929805414400,16",
+   "status": "PASS"
+  },
+  "G2:f017": {
+   "detail": "p1=0,5,82,0,15000000,1,3522635,6,1188950301625810945,70368744177666 p2=0,5,82,0,15000000,1,3522635,6,1188950301625810945,70368744177666",
+   "status": "PASS"
+  },
+  "G3:anchor-af039": {
+   "detail": "observed 89,30000000,2,19234232 expected 89,30000000,2,19234232 (EQ kit output/raw/anchor-af039.p1.out (30000000,2,19234232); budget-ceiling baseline)",
+   "status": "PASS"
+  },
+  "G3:anchor-aj001": {
+   "detail": "observed 84,30000000,2,5156075 expected 84,30000000,2,5156075 (EQ kit output/raw/anchor-aj001.p1.out (30000000,2,5156075); budget-ceiling baseline)",
+   "status": "PASS"
+  },
+  "G3:anchor-at2m": {
+   "detail": "observed 98,2000000,0,2000000 expected 98,2000000,0,2000000 (EQ kit output/raw/anchor-at2m.p1.out (2000000,0,2000000); budget-ceiling baseline)",
+   "status": "PASS"
+  },
+  "G3:b018": {
+   "detail": "observed 60,15000000,1,3549602 expected 60,15000000,1,3549602 (batch kit output/raw/b018.p1.out (replay...,3549602,...); two-pass node-exact vs b018.p2; third-impl reverify a/b agree verdict-level)",
+   "status": "PASS"
+  },
+  "G3:d002": {
+   "detail": "observed 73,15000000,1,5359994 expected 73,15000000,1,5359994 (batch kit output/raw/d002.p1.out (replay...,5359994,...); two-pass node-exact vs d002.p2; third-impl reverify a/b agree verdict-level)",
+   "status": "PASS"
+  },
+  "G3:e002": {
+   "detail": "observed 79,15000000,1,14112632 expected 79,15000000,1,14112632 (batch kit output/raw/e002.p1.out (replay...,14112632,...); two-pass node-exact vs e002.p2; third-impl reverify a/b agree verdict-level)",
+   "status": "PASS"
+  },
+  "G3:f017": {
+   "detail": "observed 82,15000000,1,3522635 expected 82,15000000,1,3522635 (batch kit output/raw/f017.p1.out (replay...,3522635,...); two-pass node-exact vs f017.p2; third-impl reverify a/b agree verdict-level)",
+   "status": "PASS"
+  },
+  "G4": {
+   "detail": "passes=7/7 bad=0",
+   "status": "PASS"
+  },
+  "G5:anchor-af039": {
+   "detail": "sha256 e51a3c9de08c62a54d80547c520876af4245394d05e37bbebf01d74204f64691 ==",
+   "status": "PASS"
+  },
+  "G5:anchor-aj001": {
+   "detail": "sha256 2f6daea5ca3b3fe6b7713c8d450af3f3c9f203acacb8a1340255d8e8f656496c ==",
+   "status": "PASS"
+  },
+  "G5:anchor-at2m": {
+   "detail": "sha256 ecc0299b8142abde201fcc40ea9666dac7368d0888d0600abc717af66ddfe348 ==",
+   "status": "PASS"
+  },
+  "G5:b018": {
+   "detail": "sha256 18f9aa5423aa2ff36adb5e49756e188f990e7d74cab5939dfd9ff908227c1b2a ==",
+   "status": "PASS"
+  },
+  "G5:d002": {
+   "detail": "sha256 d2d739232fe2cf57fa9e0aafdd3117c5469877572b2681db2c574bb8c6b0537d ==",
+   "status": "PASS"
+  },
+  "G5:e002": {
+   "detail": "sha256 d0a7ae5d073fb1f701f014730b46dbea90d20e9b05526a4e48d4b8a82a19a28e ==",
+   "status": "PASS"
+  },
+  "G5:f017": {
+   "detail": "sha256 d15dae820370554357059bc7b676a624d34e9ca2a7037ab0abd5f25f928e5c5f ==",
+   "status": "PASS"
+  }
+ },
+ "overall": "PASS",
+ "part": "EV",
+ "rows": {
+  "anchor-af039": {
+   "budget": "30000000",
+   "expected": "89,30000000,2,19234232",
+   "observed_p1": "89,30000000,2,19234232"
+  },
+  "anchor-aj001": {
+   "budget": "30000000",
+   "expected": "84,30000000,2,5156075",
+   "observed_p1": "84,30000000,2,5156075"
+  },
+  "anchor-at2m": {
+   "budget": "2000000",
+   "expected": "98,2000000,0,2000000",
+   "observed_p1": "98,2000000,0,2000000"
+  },
+  "b018": {
+   "budget": "15000000",
+   "expected": "60,15000000,1,3549602",
+   "observed_p1": "60,15000000,1,3549602"
+  },
+  "d002": {
+   "budget": "15000000",
+   "expected": "73,15000000,1,5359994",
+   "observed_p1": "73,15000000,1,5359994"
+  },
+  "e002": {
+   "budget": "15000000",
+   "expected": "79,15000000,1,14112632",
+   "observed_p1": "79,15000000,1,14112632"
+  },
+  "f017": {
+   "budget": "15000000",
+   "expected": "82,15000000,1,3522635",
+   "observed_p1": "82,15000000,1,3522635"
+  }
+ },
+ "schema": "n11-centralreply-cppgate-wins41164-audit-v1"
+}

@@ -1,0 +1,115 @@
+{
+ "schema": "class30345-reprobe30m-targets-v1",
+ "date": "2026-11-25",
+ "part": "ES",
+ "condition": {
+  "budget": 30000000,
+  "order": 0,
+  "envelope": "n=11,memo=22,only=5,exact-order=count,fresh-cold,independent 2-pass"
+ },
+ "previous_condition": {
+  "budget": 15000000,
+  "honest_label_per_key": "EXHAUSTED (honest UNKNOWN), never re-probed at 15M"
+ },
+ "ssot_source": "research/experiments/n11-centralreply-closure-class30345-batch38-20261125/input/batch-keys-b38.json (sha256 29807104...)",
+ "selection": "exactly the 6 batch-38 honest-EXHAUSTED keys of closure class 30345 (serving_class 30345), machine-extracted from the SSOT; fresh to canonical head 9c4dd94e...; not in the quarantine registry 81d23160...; b018 excluded (dual-class, scrutiny-owner pending, same-condition re-probe prohibited)",
+ "targets": [
+  {
+   "canonical_cache_same_lo_rows_context": 0,
+   "class_mask": [
+    1152922604118478848,
+    65536
+   ],
+   "class_unknown_now_at_selection": 50,
+   "hi": 65536,
+   "key_id": "ai007",
+   "legal": 84,
+   "lo": 1152922604118478880,
+   "membership_class_count": 4,
+   "probe_order": 138,
+   "s5_index": 441292,
+   "serving_class": 30345
+  },
+  {
+   "canonical_cache_same_lo_rows_context": 0,
+   "class_mask": [
+    1152922604118478848,
+    65536
+   ],
+   "class_unknown_now_at_selection": 50,
+   "hi": 65536,
+   "key_id": "ai024",
+   "legal": 86,
+   "lo": 1152922604118479104,
+   "membership_class_count": 4,
+   "probe_order": 156,
+   "s5_index": 889534,
+   "serving_class": 30345
+  },
+  {
+   "canonical_cache_same_lo_rows_context": 0,
+   "class_mask": [
+    1152922604118478848,
+    65536
+   ],
+   "class_unknown_now_at_selection": 50,
+   "hi": 17825792,
+   "key_id": "ai030",
+   "legal": 91,
+   "lo": 1152921573327372288,
+   "membership_class_count": 4,
+   "probe_order": 162,
+   "s5_index": 894456,
+   "serving_class": 30345
+  },
+  {
+   "canonical_cache_same_lo_rows_context": 0,
+   "class_mask": [
+    1152922604118478848,
+    65536
+   ],
+   "class_unknown_now_at_selection": 50,
+   "hi": 65536,
+   "key_id": "ai038",
+   "legal": 89,
+   "lo": 1152927002164989952,
+   "membership_class_count": 4,
+   "probe_order": 170,
+   "s5_index": 898436,
+   "serving_class": 30345
+  },
+  {
+   "canonical_cache_same_lo_rows_context": 0,
+   "class_mask": [
+    1152922604118478848,
+    65536
+   ],
+   "class_unknown_now_at_selection": 50,
+   "hi": 65536,
+   "key_id": "ai040",
+   "legal": 85,
+   "lo": 1152922604118487040,
+   "membership_class_count": 4,
+   "probe_order": 172,
+   "s5_index": 899584,
+   "serving_class": 30345
+  },
+  {
+   "canonical_cache_same_lo_rows_context": 0,
+   "class_mask": [
+    1152922604118478848,
+    65536
+   ],
+   "class_unknown_now_at_selection": 50,
+   "hi": 34603008,
+   "key_id": "ai041",
+   "legal": 91,
+   "lo": 1152921573327372288,
+   "membership_class_count": 4,
+   "probe_order": 173,
+   "s5_index": 900170,
+   "serving_class": 30345
+  }
+ ],
+ "interpretation_guard": "honest probe-level labels only; nothing consumed by this Part; the standard 11x11 empty board and all central-reply roots stay UNKNOWN; nodes are bookkeeping, never verdicts"
+}

@@ -1,0 +1,143 @@
+{
+ "anchors": {
+  "anchor-af039": "89,30000000,2,19234232",
+  "anchor-aj001": "84,30000000,2,5156075",
+  "anchor-at2m": "98,2000000,0,2000000"
+ },
+ "canonical_head_freshness": {
+  "loss": 6579,
+  "merged_sha256": "9c4dd94e61b6ee724a966ecc9552e527ba5a7107de732f0e9c5ced33bdad4a5a",
+  "rows": 6765,
+  "win": 186
+ },
+ "gate_source": {
+  "commit": "154f3b7a67b97e13acbaee8b04dc74ddca728d19",
+  "header_pins": {
+   "kyouen_residual_micro.hpp": "5976935dcfccb9b5a26fa68f8de20868ce45363dd8c372dcd67d9b841167e7f5",
+   "n11_s5_quarantine.hpp": "2e36d69481fafcde7aede8ae4fedf3d5477f91ee9846bcd4ae2975f32a4ba1a5"
+  },
+  "path": "cpp/solvers/kyouen_dfpn_root.cpp",
+  "sha256": "9193f5b6065e0fbcad2ef7c65f386187701cafa1f5b718cc35a5cbb0d138f92e"
+ },
+ "gates": {
+  "G0": {
+   "commit": "154f3b7a67b97e13acbaee8b04dc74ddca728d19",
+   "gate_source_sha256": "9193f5b6065e0fbcad2ef7c65f386187701cafa1f5b718cc35a5cbb0d138f92e",
+   "status": "PASS"
+  },
+  "G1": {
+   "files": 38,
+   "status": "PASS"
+  },
+  "G2": {
+   "files": 13,
+   "status": "PASS"
+  },
+  "G3": {
+   "keys": 6,
+   "status": "PASS"
+  },
+  "G4": {
+   "loss": [
+    "ai024",
+    "ai030",
+    "ai038",
+    "ai041"
+   ],
+   "status": "PASS",
+   "targets": [
+    "ai007",
+    "ai024",
+    "ai030",
+    "ai038",
+    "ai040",
+    "ai041"
+   ],
+   "win": [
+    "ai007",
+    "ai040"
+   ]
+  },
+  "G5": {
+   "status": "PASS",
+   "targets": 6
+  },
+  "G6": {
+   "increment_sha256": "4f6b7797df3bb950703f95e7ec72f288a447434da5b4ccf3d6d94ee8d8d6ffc1",
+   "loss": 6579,
+   "merged_sha256": "9c4dd94e61b6ee724a966ecc9552e527ba5a7107de732f0e9c5ced33bdad4a5a",
+   "rows": 6765,
+   "status": "PASS",
+   "targets_fresh_vs": "9c4dd94e",
+   "win": 186
+  },
+  "G7": {
+   "anchors": {
+    "anchor-af039": "89,30000000,2,19234232",
+    "anchor-aj001": "84,30000000,2,5156075",
+    "anchor-at2m": "98,2000000,0,2000000"
+   },
+   "status": "PASS"
+  }
+ },
+ "main_head_at_maker": "3683bf7d0c4c5f0003d16f731299c3fcab052ad4",
+ "out_of_scope": "b018 (dual-class, scrutiny-owner pending, same-condition re-probe prohibited), k04 sixth-cost WIN, all other probe-level WINs",
+ "part": "ET",
+ "schema": "n11-centralreply-cppgate-30345es6-rows-v1",
+ "targets": {
+  "ai007": {
+   "budget": 30000000,
+   "expected": "84,30000000,1,16090493",
+   "input_pin": "73c6f31983c8a23490f30120fbe9951ca97d294461af7186fa4983278f610bc8",
+   "probe_order": 138,
+   "result_label": "WIN",
+   "s5_index": 441292,
+   "serving_class": 30345
+  },
+  "ai024": {
+   "budget": 30000000,
+   "expected": "86,30000000,2,19127057",
+   "input_pin": "52d5edeade664da448d0414f8035026659a802b8a884e0ba7f3198ec38dab88a",
+   "probe_order": 156,
+   "result_label": "LOSS",
+   "s5_index": 889534,
+   "serving_class": 30345
+  },
+  "ai030": {
+   "budget": 30000000,
+   "expected": "91,30000000,2,16504156",
+   "input_pin": "99f67a1f27fe31cb480bceeb2579f63467dd7e45fe5051610c02036b8c1d40b2",
+   "probe_order": 162,
+   "result_label": "LOSS",
+   "s5_index": 894456,
+   "serving_class": 30345
+  },
+  "ai038": {
+   "budget": 30000000,
+   "expected": "89,30000000,2,19851840",
+   "input_pin": "93f1f2d168e0b21ad6bbbfbc1f65c3653930f71d78731d58f070eb07aa154572",
+   "probe_order": 170,
+   "result_label": "LOSS",
+   "s5_index": 898436,
+   "serving_class": 30345
+  },
+  "ai040": {
+   "budget": 30000000,
+   "expected": "85,30000000,1,20711023",
+   "input_pin": "e535844a4133e34542df079644514cea868bd062acaa8adef5026b8ca90f6656",
+   "probe_order": 172,
+   "result_label": "WIN",
+   "s5_index": 899584,
+   "serving_class": 30345
+  },
+  "ai041": {
+   "budget": 30000000,
+   "expected": "91,30000000,2,15781960",
+   "input_pin": "443f757c0052e48b3bd5bd8cd30588cac8e5041ae96811a947928cc7ce0f4fa1",
+   "probe_order": 173,
+   "result_label": "LOSS",
+   "s5_index": 900170,
+   "serving_class": 30345
+  }
+ }
+}

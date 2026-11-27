@@ -1,0 +1,238 @@
+{
+ "gates": {
+  "G1:af023:p1": {
+   "detail": "replay_rows=1 done=True header=True",
+   "status": "PASS"
+  },
+  "G1:af023:p2": {
+   "detail": "replay_rows=1 done=True header=True",
+   "status": "PASS"
+  },
+  "G1:af029:p1": {
+   "detail": "replay_rows=1 done=True header=True",
+   "status": "PASS"
+  },
+  "G1:af029:p2": {
+   "detail": "replay_rows=1 done=True header=True",
+   "status": "PASS"
+  },
+  "G1:af047:p1": {
+   "detail": "replay_rows=1 done=True header=True",
+   "status": "PASS"
+  },
+  "G1:af047:p2": {
+   "detail": "replay_rows=1 done=True header=True",
+   "status": "PASS"
+  },
+  "G1:af048:p1": {
+   "detail": "replay_rows=1 done=True header=True",
+   "status": "PASS"
+  },
+  "G1:af048:p2": {
+   "detail": "replay_rows=1 done=True header=True",
+   "status": "PASS"
+  },
+  "G1:af050:p1": {
+   "detail": "replay_rows=1 done=True header=True",
+   "status": "PASS"
+  },
+  "G1:af050:p2": {
+   "detail": "replay_rows=1 done=True header=True",
+   "status": "PASS"
+  },
+  "G1:af053:p1": {
+   "detail": "replay_rows=1 done=True header=True",
+   "status": "PASS"
+  },
+  "G1:af053:p2": {
+   "detail": "replay_rows=1 done=True header=True",
+   "status": "PASS"
+  },
+  "G1:anchor-af039:p1": {
+   "detail": "replay_rows=1 done=True header=True",
+   "status": "PASS"
+  },
+  "G1:anchor-af039:p2": {
+   "detail": "replay_rows=1 done=True header=True",
+   "status": "PASS"
+  },
+  "G1:anchor-aj001:p1": {
+   "detail": "replay_rows=1 done=True header=True",
+   "status": "PASS"
+  },
+  "G1:anchor-aj001:p2": {
+   "detail": "replay_rows=1 done=True header=True",
+   "status": "PASS"
+  },
+  "G1:anchor-at2m:p1": {
+   "detail": "replay_rows=1 done=True header=True",
+   "status": "PASS"
+  },
+  "G1:anchor-at2m:p2": {
+   "detail": "replay_rows=1 done=True header=True",
+   "status": "PASS"
+  },
+  "G2:af023": {
+   "detail": "p1=0,5,94,0,30000000,1,28933179,61,1152921504607895553,68719478784 p2=0,5,94,0,30000000,1,28933179,62,1152921504607895553,68719478784",
+   "status": "PASS"
+  },
+  "G2:af029": {
+   "detail": "p1=0,5,86,0,15000000,1,4862485,9,1152921504607895553,68720525312 p2=0,5,86,0,15000000,1,4862485,9,1152921504607895553,68720525312",
+   "status": "PASS"
+  },
+  "G2:af047": {
+   "detail": "p1=0,5,84,0,15000000,1,9841975,21,1152921504607895809,68719476736 p2=0,5,84,0,15000000,1,9841975,20,1152921504607895809,68719476736",
+   "status": "PASS"
+  },
+  "G2:af048": {
+   "detail": "p1=0,5,87,0,30000000,1,17816616,37,1152921508902862849,68719476736 p2=0,5,87,0,30000000,1,17816616,37,1152921508902862849,68719476736",
+   "status": "PASS"
+  },
+  "G2:af050": {
+   "detail": "p1=0,5,94,0,15000000,1,7311834,15,1152921504607899649,68719476736 p2=0,5,94,0,15000000,1,7311834,15,1152921504607899649,68719476736",
+   "status": "PASS"
+  },
+  "G2:af053": {
+   "detail": "p1=0,5,90,0,15000000,1,5182129,11,1152921504606852096,17660905521152 p2=0,5,90,0,15000000,1,5182129,10,1152921504606852096,17660905521152",
+   "status": "PASS"
+  },
+  "G2:anchor-af039": {
+   "detail": "p1=0,5,89,0,30000000,2,19234232,41,1152921504607895681,68719476736 p2=0,5,89,0,30000000,2,19234232,40,1152921504607895681,68719476736",
+   "status": "PASS"
+  },
+  "G2:anchor-aj001": {
+   "detail": "p1=0,5,84,0,30000000,2,5156075,10,1152922604269469696,65536 p2=0,5,84,0,30000000,2,5156075,10,1152922604269469696,65536",
+   "status": "PASS"
+  },
+  "G2:anchor-at2m": {
+   "detail": "p1=0,5,98,0,2000000,0,2000000,3,1152921504606851072,536870946 p2=0,5,98,0,2000000,0,2000000,3,1152921504606851072,536870946",
+   "status": "PASS"
+  },
+  "G3:af023": {
+   "detail": "observed 94,30000000,1,28933179 expected 94,30000000,1,28933179 (EG kit sources/ea-raw/af023.p1.out (30000000,1,28933179); b33 15M row is EXHAUSTED (budget ceiling) and is NOT pinned here)",
+   "status": "PASS"
+  },
+  "G3:af029": {
+   "detail": "observed 86,15000000,1,4862485 expected 86,15000000,1,4862485 (EG kit sources/b33-raw/af029.p1.out (replay...,15000000,1,4862485,...); EG sources/ea-raw/af029.p1.out 30M anchor row is (30000000,1,4862485) - identical nodes at the higher budget)",
+   "status": "PASS"
+  },
+  "G3:af047": {
+   "detail": "observed 84,15000000,1,9841975 expected 84,15000000,1,9841975 (EG kit sources/b33-raw/af047.p1.out (15000000,1,9841975))",
+   "status": "PASS"
+  },
+  "G3:af048": {
+   "detail": "observed 87,30000000,1,17816616 expected 87,30000000,1,17816616 (EG kit sources/ea-raw/af048.p1.out (30000000,1,17816616); b33 15M row is EXHAUSTED (budget ceiling) and is NOT pinned here)",
+   "status": "PASS"
+  },
+  "G3:af050": {
+   "detail": "observed 94,15000000,1,7311834 expected 94,15000000,1,7311834 (EG kit sources/b33-raw/af050.p1.out (15000000,1,7311834))",
+   "status": "PASS"
+  },
+  "G3:af053": {
+   "detail": "observed 90,15000000,1,5182129 expected 90,15000000,1,5182129 (EG kit sources/b33-raw/af053.p1.out (15000000,1,5182129))",
+   "status": "PASS"
+  },
+  "G3:anchor-af039": {
+   "detail": "observed 89,30000000,2,19234232 expected 89,30000000,2,19234232 (EN kit output/raw/anchor-af039.p1.out (30000000,2,19234232); canonical cache row, budget-ceiling baseline)",
+   "status": "PASS"
+  },
+  "G3:anchor-aj001": {
+   "detail": "observed 84,30000000,2,5156075 expected 84,30000000,2,5156075 (EN kit output/raw/anchor-aj001.p1.out (30000000,2,5156075); budget-ceiling baseline)",
+   "status": "PASS"
+  },
+  "G3:anchor-at2m": {
+   "detail": "observed 98,2000000,0,2000000 expected 98,2000000,0,2000000 (EN kit output/raw/anchor-at2m.p1.out (2000000,0,2000000); budget-ceiling baseline)",
+   "status": "PASS"
+  },
+  "G4": {
+   "detail": "passes=9/9 bad=0",
+   "status": "PASS"
+  },
+  "G5:af023": {
+   "detail": "sha256 0ba31256582eae15cc80fb2bdbfe56a140533828cdab7a05eeef6ca1089a1c08 ==",
+   "status": "PASS"
+  },
+  "G5:af029": {
+   "detail": "sha256 b5500b8d98cd3cbef56f6177245d8e3c21c31081f2252c6454f1aee73ce30c10 ==",
+   "status": "PASS"
+  },
+  "G5:af047": {
+   "detail": "sha256 24cc1aa00849f6b74c7f976b46903874321aac981f62dd542e51948a3f351418 ==",
+   "status": "PASS"
+  },
+  "G5:af048": {
+   "detail": "sha256 d619dcd7d47d7b65f1c4325d99b69211826eb83732c3eb475f14ea4f9f973422 ==",
+   "status": "PASS"
+  },
+  "G5:af050": {
+   "detail": "sha256 3bc623db974bc6285c575b8575a75510c3e9f1909a650a4969e214225e507729 ==",
+   "status": "PASS"
+  },
+  "G5:af053": {
+   "detail": "sha256 b30a43a948945d7b49946c28dec20b5859aac1003d522f042cfff4d1225d989e ==",
+   "status": "PASS"
+  },
+  "G5:anchor-af039": {
+   "detail": "sha256 e51a3c9de08c62a54d80547c520876af4245394d05e37bbebf01d74204f64691 ==",
+   "status": "PASS"
+  },
+  "G5:anchor-aj001": {
+   "detail": "sha256 2f6daea5ca3b3fe6b7713c8d450af3f3c9f203acacb8a1340255d8e8f656496c ==",
+   "status": "PASS"
+  },
+  "G5:anchor-at2m": {
+   "detail": "sha256 ecc0299b8142abde201fcc40ea9666dac7368d0888d0600abc717af66ddfe348 ==",
+   "status": "PASS"
+  }
+ },
+ "overall": "PASS",
+ "part": "EO",
+ "rows": {
+  "af023": {
+   "budget": "30000000",
+   "expected": "94,30000000,1,28933179",
+   "observed_p1": "94,30000000,1,28933179"
+  },
+  "af029": {
+   "budget": "15000000",
+   "expected": "86,15000000,1,4862485",
+   "observed_p1": "86,15000000,1,4862485"
+  },
+  "af047": {
+   "budget": "15000000",
+   "expected": "84,15000000,1,9841975",
+   "observed_p1": "84,15000000,1,9841975"
+  },
+  "af048": {
+   "budget": "30000000",
+   "expected": "87,30000000,1,17816616",
+   "observed_p1": "87,30000000,1,17816616"
+  },
+  "af050": {
+   "budget": "15000000",
+   "expected": "94,15000000,1,7311834",
+   "observed_p1": "94,15000000,1,7311834"
+  },
+  "af053": {
+   "budget": "15000000",
+   "expected": "90,15000000,1,5182129",
+   "observed_p1": "90,15000000,1,5182129"
+  },
+  "anchor-af039": {
+   "budget": "30000000",
+   "expected": "89,30000000,2,19234232",
+   "observed_p1": "89,30000000,2,19234232"
+  },
+  "anchor-aj001": {
+   "budget": "30000000",
+   "expected": "84,30000000,2,5156075",
+   "observed_p1": "84,30000000,2,5156075"
+  },
+  "anchor-at2m": {
+   "budget": "2000000",
+   "expected": "98,2000000,0,2000000",
+   "observed_p1": "98,2000000,0,2000000"
+  }
+ },
+ "schema": "n11-centralreply-cppgate-34908win6-audit-v1"
+}

@@ -1,0 +1,15 @@
+# MANIFEST-sha256: research/experiments/n11-centralreply-sixthwin5-adoption-reaudit-20261126 (sixthwin5 WIN-only canonical adoption + reaudit, Part EW) 2026-11-26
+# README.md self-excluded per convention; MANIFEST self-excluded; every other published file in this experiment dir is byte-pinned below (sha256 over the exact published bytes).
+# output/merged-exact-s5-chain-plus-sixthwin5-20261126.cache is NOT republished here: the byte-identical file is published in the dossier kit n11-centralreply-sixthwin5-adoption-predecl-20261126 (16a12390c0c3f046f0ae537b2a9940e15661263fc5034ce1b155c138bb9043cd, 6,797 rows WIN 197 / LOSS 6,600) and regenerable from BASE pin 6e49dd84... (Part EM dossier kit output) via scripts/s5_union_merge.py + output/increment-sixthwin5-adoption-20261126.cache.
+# probe-worklists are NOT published (size policy): BASE regen pin sha256 147b62d643ba9039e9e2b64363cec602405bf11210a3aa4cfd9084eb0df3a973 (3,715,963 B; regenerable from the published emloss21 dossier refresh fork cc01b3d8... against cache pin 6e49dd84...), SCEN regen pin sha256 82f9e51798172d1e3a38cbc215b7230135bddd09d911ab672397264560e67cc7 (3,715,904 B; regenerable from the published sixthwin5 dossier refresh fork 92a884c9... against cache pin 16a12390...).
+# census-deltas-sixthwin5-predecl.json is published dossier-side (predecl kit output/), not duplicated here.
+# wave commits (each fetch-back byte-verified against the pre-registered pins): 7fcf9dde declaration / 9bd8d586 kit scripts (merger byte-clone, maker, extractor) / 5f05a14a the six output files.
+907119610034fb2aebfde012550a4129dfa3b086c6de11194e856747ac74606a  10887  scripts/s5_union_merge.py
+9e6bf99249339e94aa85257a0e74e2b102a03c8b2a2d3f11904c960de45f80f5  51437  scripts/make_increments_sixthwin5_adoption.py
+cfefe839fcebfc89155e3fa9232f962174930a4ec9aaa07277ef2abdff7b3ee3  61094  scripts/compare_deltas_sixthwin5_adoption.py
+efee7b9e3b377aabbd5cb3606b84739be7f87aff8ddd4bffafc9d22fa557e6be  2276  output/increment-sixthwin5-adoption-20261126.cache
+a7376780687fbacb0a9a958a94de0df4644d4512bb08d1631b36772a9c78ba86  13998  output/increments-manifest.json
+b404c2483988daac71c88de54f29962cfea90ab5b4c85fbf81697d5dab4e720a  1469  output/merge-audit-run1.json
+b404c2483988daac71c88de54f29962cfea90ab5b4c85fbf81697d5dab4e720a  1469  output/merge-audit-run2.json
+b404c2483988daac71c88de54f29962cfea90ab5b4c85fbf81697d5dab4e720a  1469  output/merge-audit-run3.json
+48913dc4cb09aeebceb9e158dda02b913b12e0534f05b3e1639225576786ccc5  7664  output/decomp-deltas-sixthwin5-adoption.json

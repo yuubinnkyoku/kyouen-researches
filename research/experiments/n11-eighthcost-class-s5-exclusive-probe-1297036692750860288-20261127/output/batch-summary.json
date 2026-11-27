@@ -1,0 +1,481 @@
+{
+ "schema": "n11-eighthcost-batch-checkpoint-summary-v1",
+ "class": "1297036692750860288:0",
+ "head_basis": {
+  "path": "research/experiments/n11-seventhcost-sz-adoption-20261127/output/merged/merged-exact-s5-chain-plus-seventhcost42-20261127.cache",
+  "sha256": "5b6e77f7d7832d4ce84cb1f080a93e066eb052dcf8b817e5d560f95499fcdde2",
+  "rows": 6874,
+  "win": 202,
+  "loss": 6672
+ },
+ "batch_keys": 43,
+ "resolved_exact_loss": 0,
+ "resolved_exact_win": 1,
+ "win_resolved_keys": [
+  "1297036692750860288:64"
+ ],
+ "parked_unknown_15m": 0,
+ "parked_keys": [],
+ "win_stopping_rule_fired": true,
+ "win_stopping_rule_anchor": "k01 (pos 1, key 1297036692750860288:64) resolved WIN(1) at the 15M stage (cold pair node-identical, nodes 8514427); no key with pos > 1 was officially started at any stage after that resolution.",
+ "nodes_bookkeeping": {
+  "stage1_2m_budget_nodes_each": 2000000,
+  "stage1_2m_nodes_sum_all_43_keys_two_passes": 172000000,
+  "win_15m_nodes_each_pass": 8514427
+ },
+ "per_key": [
+  {
+   "pos": 1,
+   "key": "1297036692750860288:64",
+   "stage1_2m_pair": {
+    "result": 0,
+    "nodes": 2000000,
+    "pair": "identical"
+   },
+   "stage2_15m_pair": {
+    "result": 1,
+    "nodes": 8514427,
+    "pair": "identical"
+   },
+   "resolved": {
+    "stage": "15m",
+    "result": 1,
+    "nodes": 8514427,
+    "pair": "identical"
+   }
+  },
+  {
+   "pos": 2,
+   "key": "1297036692750868480:0",
+   "stage1_2m_pair": {
+    "result": 0,
+    "nodes": 2000000,
+    "pair": "identical"
+   },
+   "stage2_15m": "suppressed_by_win_stopping_rule"
+  },
+  {
+   "pos": 3,
+   "key": "1297036693824602112:0",
+   "stage1_2m_pair": {
+    "result": 0,
+    "nodes": 2000000,
+    "pair": "identical"
+   },
+   "stage2_15m": "suppressed_by_win_stopping_rule"
+  },
+  {
+   "pos": 4,
+   "key": "1297177430239215616:0",
+   "stage1_2m_pair": {
+    "result": 0,
+    "nodes": 2000000,
+    "pair": "identical"
+   },
+   "stage2_15m": "suppressed_by_win_stopping_rule"
+  },
+  {
+   "pos": 5,
+   "key": "5908722711178248192:0",
+   "stage1_2m_pair": {
+    "result": 0,
+    "nodes": 2000000,
+    "pair": "identical"
+   },
+   "stage2_15m": "suppressed_by_win_stopping_rule"
+  },
+  {
+   "pos": 6,
+   "key": "1152991873486290944:68719476736",
+   "stage1_2m_pair": {
+    "result": 0,
+    "nodes": 2000000,
+    "pair": "identical"
+   },
+   "stage2_15m": "suppressed_by_win_stopping_rule"
+  },
+  {
+   "pos": 7,
+   "key": "1297036692750860288:16",
+   "stage1_2m_pair": {
+    "result": 0,
+    "nodes": 2000000,
+    "pair": "identical"
+   },
+   "stage2_15m": "suppressed_by_win_stopping_rule"
+  },
+  {
+   "pos": 8,
+   "key": "1297036692750860288:128",
+   "stage1_2m_pair": {
+    "result": 0,
+    "nodes": 2000000,
+    "pair": "identical"
+   },
+   "stage2_15m": "suppressed_by_win_stopping_rule"
+  },
+  {
+   "pos": 9,
+   "key": "1297036692750860288:65536",
+   "stage1_2m_pair": {
+    "result": 0,
+    "nodes": 2000000,
+    "pair": "identical"
+   },
+   "stage2_15m": "suppressed_by_win_stopping_rule"
+  },
+  {
+   "pos": 10,
+   "key": "1297036692750860289:0",
+   "stage1_2m_pair": {
+    "result": 0,
+    "nodes": 2000000,
+    "pair": "identical"
+   },
+   "stage2_15m": "suppressed_by_win_stopping_rule"
+  },
+  {
+   "pos": 11,
+   "key": "1297036692750860292:0",
+   "stage1_2m_pair": {
+    "result": 0,
+    "nodes": 2000000,
+    "pair": "identical"
+   },
+   "stage2_15m": "suppressed_by_win_stopping_rule"
+  },
+  {
+   "pos": 12,
+   "key": "1297036692750860320:0",
+   "stage1_2m_pair": {
+    "result": 0,
+    "nodes": 2000000,
+    "pair": "identical"
+   },
+   "stage2_15m": "suppressed_by_win_stopping_rule"
+  },
+  {
+   "pos": 13,
+   "key": "1297036692750864384:0",
+   "stage1_2m_pair": {
+    "result": 0,
+    "nodes": 2000000,
+    "pair": "identical"
+   },
+   "stage2_15m": "suppressed_by_win_stopping_rule"
+  },
+  {
+   "pos": 14,
+   "key": "1297036692750893056:0",
+   "stage1_2m_pair": {
+    "result": 0,
+    "nodes": 2000000,
+    "pair": "identical"
+   },
+   "stage2_15m": "suppressed_by_win_stopping_rule"
+  },
+  {
+   "pos": 15,
+   "key": "1297036692750925824:0",
+   "stage1_2m_pair": {
+    "result": 0,
+    "nodes": 2000000,
+    "pair": "identical"
+   },
+   "stage2_15m": "suppressed_by_win_stopping_rule"
+  },
+  {
+   "pos": 16,
+   "key": "1297036692767637504:0",
+   "stage1_2m_pair": {
+    "result": 0,
+    "nodes": 2000000,
+    "pair": "identical"
+   },
+   "stage2_15m": "suppressed_by_win_stopping_rule"
+  },
+  {
+   "pos": 17,
+   "key": "1297036692885078016:0",
+   "stage1_2m_pair": {
+    "result": 0,
+    "nodes": 2000000,
+    "pair": "identical"
+   },
+   "stage2_15m": "suppressed_by_win_stopping_rule"
+  },
+  {
+   "pos": 18,
+   "key": "1297036693019295744:0",
+   "stage1_2m_pair": {
+    "result": 0,
+    "nodes": 2000000,
+    "pair": "identical"
+   },
+   "stage2_15m": "suppressed_by_win_stopping_rule"
+  },
+  {
+   "pos": 19,
+   "key": "1297036967628767232:0",
+   "stage1_2m_pair": {
+    "result": 0,
+    "nodes": 2000000,
+    "pair": "identical"
+   },
+   "stage2_15m": "suppressed_by_win_stopping_rule"
+  },
+  {
+   "pos": 20,
+   "key": "1297037792262488064:0",
+   "stage1_2m_pair": {
+    "result": 0,
+    "nodes": 2000000,
+    "pair": "identical"
+   },
+   "stage2_15m": "suppressed_by_win_stopping_rule"
+  },
+  {
+   "pos": 21,
+   "key": "1297318167727570944:0",
+   "stage1_2m_pair": {
+    "result": 0,
+    "nodes": 2000000,
+    "pair": "identical"
+   },
+   "stage2_15m": "suppressed_by_win_stopping_rule"
+  },
+  {
+   "pos": 22,
+   "key": "1297599642704281600:0",
+   "stage1_2m_pair": {
+    "result": 0,
+    "nodes": 2000000,
+    "pair": "identical"
+   },
+   "stage2_15m": "suppressed_by_win_stopping_rule"
+  },
+  {
+   "pos": 23,
+   "key": "1585267068902572032:0",
+   "stage1_2m_pair": {
+    "result": 0,
+    "nodes": 2000000,
+    "pair": "identical"
+   },
+   "stage2_15m": "suppressed_by_win_stopping_rule"
+  },
+  {
+   "pos": 24,
+   "key": "1873497445054283776:0",
+   "stage1_2m_pair": {
+    "result": 0,
+    "nodes": 2000000,
+    "pair": "identical"
+   },
+   "stage2_15m": "suppressed_by_win_stopping_rule"
+  },
+  {
+   "pos": 25,
+   "key": "3602879701964554240:0",
+   "stage1_2m_pair": {
+    "result": 0,
+    "nodes": 2000000,
+    "pair": "identical"
+   },
+   "stage2_15m": "suppressed_by_win_stopping_rule"
+  },
+  {
+   "pos": 26,
+   "key": "10376293541730062336:65536",
+   "stage1_2m_pair": {
+    "result": 0,
+    "nodes": 2000000,
+    "pair": "identical"
+   },
+   "stage2_15m": "suppressed_by_win_stopping_rule"
+  },
+  {
+   "pos": 27,
+   "key": "10376293541730062336:131072",
+   "stage1_2m_pair": {
+    "result": 0,
+    "nodes": 2000000,
+    "pair": "identical"
+   },
+   "stage2_15m": "suppressed_by_win_stopping_rule"
+  },
+  {
+   "pos": 28,
+   "key": "10376293541730062336:67108864",
+   "stage1_2m_pair": {
+    "result": 0,
+    "nodes": 2000000,
+    "pair": "identical"
+   },
+   "stage2_15m": "suppressed_by_win_stopping_rule"
+  },
+  {
+   "pos": 29,
+   "key": "10448351135767990272:0",
+   "stage1_2m_pair": {
+    "result": 0,
+    "nodes": 2000000,
+    "pair": "identical"
+   },
+   "stage2_15m": "suppressed_by_win_stopping_rule"
+  },
+  {
+   "pos": 30,
+   "key": "1152921504606851072:536870929",
+   "stage1_2m_pair": {
+    "result": 0,
+    "nodes": 2000000,
+    "pair": "identical"
+   },
+   "stage2_15m": "suppressed_by_win_stopping_rule"
+  },
+  {
+   "pos": 31,
+   "key": "1152921504607895552:553649152",
+   "stage1_2m_pair": {
+    "result": 0,
+    "nodes": 2000000,
+    "pair": "identical"
+   },
+   "stage2_15m": "suppressed_by_win_stopping_rule"
+  },
+  {
+   "pos": 32,
+   "key": "1152930300699873280:536870928",
+   "stage1_2m_pair": {
+    "result": 0,
+    "nodes": 2000000,
+    "pair": "identical"
+   },
+   "stage2_15m": "suppressed_by_win_stopping_rule"
+  },
+  {
+   "pos": 33,
+   "key": "1161928703861592064:536870928",
+   "stage1_2m_pair": {
+    "result": 0,
+    "nodes": 2000000,
+    "pair": "identical"
+   },
+   "stage2_15m": "suppressed_by_win_stopping_rule"
+  },
+  {
+   "pos": 34,
+   "key": "1297036692750860288:8",
+   "stage1_2m_pair": {
+    "result": 0,
+    "nodes": 2000000,
+    "pair": "identical"
+   },
+   "stage2_15m": "suppressed_by_win_stopping_rule"
+  },
+  {
+   "pos": 35,
+   "key": "1297036692750860288:32",
+   "stage1_2m_pair": {
+    "result": 0,
+    "nodes": 2000000,
+    "pair": "identical"
+   },
+   "stage2_15m": "suppressed_by_win_stopping_rule"
+  },
+  {
+   "pos": 36,
+   "key": "1297036692750860288:16384",
+   "stage1_2m_pair": {
+    "result": 0,
+    "nodes": 2000000,
+    "pair": "identical"
+   },
+   "stage2_15m": "suppressed_by_win_stopping_rule"
+  },
+  {
+   "pos": 37,
+   "key": "1297036692750860288:16777216",
+   "stage1_2m_pair": {
+    "result": 0,
+    "nodes": 2000000,
+    "pair": "identical"
+   },
+   "stage2_15m": "suppressed_by_win_stopping_rule"
+  },
+  {
+   "pos": 38,
+   "key": "1297036692750860416:0",
+   "stage1_2m_pair": {
+    "result": 0,
+    "nodes": 2000000,
+    "pair": "identical"
+   },
+   "stage2_15m": "suppressed_by_win_stopping_rule"
+  },
+  {
+   "pos": 39,
+   "key": "1297036692750860544:0",
+   "stage1_2m_pair": {
+    "result": 0,
+    "nodes": 2000000,
+    "pair": "identical"
+   },
+   "stage2_15m": "suppressed_by_win_stopping_rule"
+  },
+  {
+   "pos": 40,
+   "key": "1306043892005601280:0",
+   "stage1_2m_pair": {
+    "result": 0,
+    "nodes": 2000000,
+    "pair": "identical"
+   },
+   "stage2_15m": "suppressed_by_win_stopping_rule"
+  },
+  {
+   "pos": 41,
+   "key": "10376293541730062336:8",
+   "stage1_2m_pair": {
+    "result": 0,
+    "nodes": 2000000,
+    "pair": "identical"
+   },
+   "stage2_15m": "suppressed_by_win_stopping_rule"
+  },
+  {
+   "pos": 42,
+   "key": "10376293541730062336:33554432",
+   "stage1_2m_pair": {
+    "result": 0,
+    "nodes": 2000000,
+    "pair": "identical"
+   },
+   "stage2_15m": "suppressed_by_win_stopping_rule"
+  },
+  {
+   "pos": 43,
+   "key": "10376293541730062336:268435456",
+   "stage1_2m_pair": {
+    "result": 0,
+    "nodes": 2000000,
+    "pair": "identical"
+   },
+   "stage2_15m": "suppressed_by_win_stopping_rule"
+  }
+ ],
+ "overreach_disclosure": {
+  "event": "k02 (pos 2, key 1297036692750868480:0) 15M cold pair executed on this host in the same shell batch command AFTER k01 had already resolved WIN(1), i.e. after the WIN stopping-rule anchor; it is NOT an official ladder row and its raws are not published in output/raw/.",
+  "observed_values_not_official": {
+   "stage2_15m_pair": {
+    "result": 0,
+    "nodes": 15000000,
+    "pair": "identical"
+   }
+  },
+  "kept_as": "host-local scratch observation only (disclosed here for honesty); it changes no official status: k02's official status is stage-1 2M UNKNOWN pair with the 15M escalation suppressed."
+ },
+ "single_implementation_note": "All rows are Node.js replica (jsreplay 84585617) cold two-pass node-identical results on this host; the k01 WIN(1) row is single-implementation and NOT consumed: per the k20/k33/k05 precedent, a C++ second-implementation scrutiny gate and a third-implementation corroboration are required before any adoption; no cache increment, no class-status change, no coverage claim.",
+ "status_guard": "The standard 11x11 empty board: UNKNOWN. All 19 central-reply roots: UNKNOWN. Two-stone root {60,27}: UNKNOWN. Third-move pair {100,108}: UNKNOWN. Nodes are bookkeeping, never verdicts. A WIN(1) S5 raw is not a class closure claim, not a root verdict, and transfers nothing."
+}
