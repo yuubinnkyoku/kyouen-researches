@@ -54,7 +54,7 @@ def main():
     if 'rc=0' not in c1a or 'quads 95670' not in c1a or 'mismatches 0' not in c1a:
         fail('G1', 'c1a raw')
     for cal, exp in (('c1b-k06.txt', '9474431'), ('c1b-k38.txt', '25898941')):
-        m = parse_raw(OUT / cal, cal[4:-4])
+        m = parse_raw(OUT / cal, 'calib-' + cal[4:-4])
         if m.group(4) != '2' or m.group(5) != exp:
             fail('G1', f'{cal}: result {m.group(4)} expansions {m.group(5)} != {exp}')
     # G2
