@@ -1,0 +1,156 @@
+{
+ "schema": "n11-ultra-cheap-legal-precheck-v1",
+ "census_run_json_sha256": "a60716ac84e22833eaf570819d8744a2c66b2ad1d563b3791ade829eaed87906",
+ "calibration": {
+  "supply_rows": 4562,
+  "implA_vs_supply": "all exact",
+  "implB_vs_supply": "all exact",
+  "implA_vs_implB": "all exact"
+ },
+ "candidates": [
+  {
+   "class_index": 1849,
+   "unknown_key": "1153485622925590528:0",
+   "s5_index": 81011,
+   "stones": 5,
+   "d4_canonical": true,
+   "safe": true,
+   "legal": 88,
+   "legal_impl_agreement": true
+  },
+  {
+   "class_index": 2251,
+   "unknown_key": "1297036830121656320:131074",
+   "s5_index": 93815,
+   "stones": 5,
+   "d4_canonical": true,
+   "safe": true,
+   "legal": 80,
+   "legal_impl_agreement": true
+  },
+  {
+   "class_index": 16371,
+   "unknown_key": "1153202979851993088:272",
+   "s5_index": 550879,
+   "stones": 5,
+   "d4_canonical": true,
+   "safe": true,
+   "legal": 78,
+   "legal_impl_agreement": true
+  },
+  {
+   "class_index": 23101,
+   "unknown_key": "1152921505747697664:1032",
+   "s5_index": 745184,
+   "stones": 5,
+   "d4_canonical": true,
+   "safe": true,
+   "legal": 85,
+   "legal_impl_agreement": true
+  }
+ ],
+ "gates": {
+  "P0a:independent-sha": {
+   "status": "PASS",
+   "detail": ""
+  },
+  "P0b:policy-sha": {
+   "status": "PASS",
+   "detail": ""
+  },
+  "P0c:census-run-sha": {
+   "status": "PASS",
+   "detail": ""
+  },
+  "P0d:supply-sha": {
+   "status": "PASS",
+   "detail": ""
+  },
+  "P1a:supply-rows": {
+   "status": "PASS",
+   "detail": "4562"
+  },
+  "P1b:implA-matches-supply": {
+   "status": "PASS",
+   "detail": "[]"
+  },
+  "P1c:implB-matches-supply": {
+   "status": "PASS",
+   "detail": "[]"
+  },
+  "P1d:implA-eq-implB-supply": {
+   "status": "PASS",
+   "detail": "0"
+  },
+  "P2:census-candidate-count": {
+   "status": "PASS",
+   "detail": ""
+  },
+  "P3a:stones-1153485622925590528:0": {
+   "status": "PASS",
+   "detail": ""
+  },
+  "P3b:d4-1153485622925590528:0": {
+   "status": "PASS",
+   "detail": ""
+  },
+  "P3c:safe-1153485622925590528:0": {
+   "status": "PASS",
+   "detail": ""
+  },
+  "P3d:legalAB-1153485622925590528:0": {
+   "status": "PASS",
+   "detail": "A=88 B=88"
+  },
+  "P3a:stones-1297036830121656320:131074": {
+   "status": "PASS",
+   "detail": ""
+  },
+  "P3b:d4-1297036830121656320:131074": {
+   "status": "PASS",
+   "detail": ""
+  },
+  "P3c:safe-1297036830121656320:131074": {
+   "status": "PASS",
+   "detail": ""
+  },
+  "P3d:legalAB-1297036830121656320:131074": {
+   "status": "PASS",
+   "detail": "A=80 B=80"
+  },
+  "P3a:stones-1153202979851993088:272": {
+   "status": "PASS",
+   "detail": ""
+  },
+  "P3b:d4-1153202979851993088:272": {
+   "status": "PASS",
+   "detail": ""
+  },
+  "P3c:safe-1153202979851993088:272": {
+   "status": "PASS",
+   "detail": ""
+  },
+  "P3d:legalAB-1153202979851993088:272": {
+   "status": "PASS",
+   "detail": "A=78 B=78"
+  },
+  "P3a:stones-1152921505747697664:1032": {
+   "status": "PASS",
+   "detail": ""
+  },
+  "P3b:d4-1152921505747697664:1032": {
+   "status": "PASS",
+   "detail": ""
+  },
+  "P3c:safe-1152921505747697664:1032": {
+   "status": "PASS",
+   "detail": ""
+  },
+  "P3d:legalAB-1152921505747697664:1032": {
+   "status": "PASS",
+   "detail": "A=85 B=85"
+  }
+ },
+ "overall": "PASS",
+ "meaning": "geometry/legality bookkeeping for scheduling only; no verdict claimed or consumed; nodes and proxy are never evidence of WIN or LOSS; standard 11x11 empty board UNKNOWN; all 19 central-reply roots UNKNOWN; two-stone root {60,27} and third moves 100/108 UNKNOWN"
+}
