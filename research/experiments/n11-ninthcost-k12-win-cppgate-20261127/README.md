@@ -56,3 +56,34 @@ input/ (k12 + 3 anchors + gate-rows.json), output/ (gate-status.log,
 raw p1/p2 per row, audit_gate.json) published by the run-record waves.
 MANIFEST-sha256.txt published with the kit and refreshed with the run
 record.
+
+## Run record (2026-11-27, publish-then-execute per declaration e469345b)
+
+Waves A/B published first (declaration e469345b; kit 0ef85257 with all
+pins byte-verified). Official execution 10:52:42Z-10:55:49Z sequential
+(pre-registered order anchor-at2m, anchor-aj001, anchor-af039, then the
+single k12 target at budget 15000000), all 4 rows GATE-PASS with
+(legal,budget,result,nodes) exactly the published values
+(output/gate-status.log):
+
+**k12 GATE-PASS 92,15000000,1,14521862 - the pinned C++ second
+implementation reproduces the published WIN(1) verdict of the at15m cold
+pair node-exactly** (third WIN-side row of the gate lineage after SX
+and the eighth-cost k01 gate).
+
+Audit: single-row audit PASS, 3 runs byte-identical (audit_gate.json
+sha256 a8883d21ca58ca53f2cacbe0bde10bcf061ed52aeed0774d55ae7ce00f5ef
+b35). Tamper battery 4/4 fail-closed (T1 audit expected pin flip ->
+G0:target-expected:k12 + G3:k12 / T2 raw k12.p1 nodes edit -> G2:k12 +
+G3:k12 / T3 phantom GATE-PASS -> G4 passes=5/4 / T4 head byte append ->
+G6:head-sha) + clean control rc=0 (tamper-battery-stdout.log; scratch
+copies only, including a scratch copy of the canonical head cache).
+
+Pillar status after this Part: k12 (1297036692683751424:134217792) has
+the replica cold pair (wave C7), the C++ second-implementation gate
+(this Part) and the published third-implementation CORROBORATION-PASS
+(kit d9ce050a) - implementation-pillar parity with the k05/eighth-k01
+adoption precedent. Adoption of the k12 WIN row (and of the batch's
+LOSS rows where their own gates complete) stays a separately declared
+Part under the parent batch's WIN/LOSS conflict policy with the merger
+and flip-census machinery of the SZ/EM precedents.
