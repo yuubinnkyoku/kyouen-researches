@@ -1,5 +1,5 @@
 ---
-id: K1368
+id: K1369
 title: "極大数 = 最小ブロッキング集合の個数 — 4 盤での双対性確認と総括"
 kind: proposition
 status: proved
