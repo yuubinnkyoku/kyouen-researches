@@ -1,0 +1,73 @@
+{
+ "cpp_gate": {
+  "anchors": {
+   "anchor-af039": "GATE-PASS 89,30000000,2,19234232",
+   "anchor-aj001": "GATE-PASS 84,30000000,2,5156075",
+   "anchor-at2m": "GATE-PASS 98,2000000,0,2000000"
+  },
+  "compile": "zig c++ -std=c++20 -O3",
+  "headers": [
+   "5976935dcfccb9b5a26fa68f8de20868ce45363dd8c372dcd67d9b841167e7f5",
+   "2e36d69481fafcde7aede8ae4fedf3d5477f91ee9846bcd4ae2975f32a4ba1a5"
+  ],
+  "source_sha256": "9193f5b6065e0fbcad2ef7c65f386187701cafa1f5b718cc35a5cbb0d138f92e",
+  "tamper_battery": "4/4 fail-closed (T1 rc=43 wrong expected; T2 rc=42 raw nodes edit; T3 rc=2 missing input; T4 rc=1 third_impl legal mismatch)",
+  "u01": {
+   "expected": "88,15000000,1,4893014",
+   "observed": "88,15000000,1,4893014",
+   "verdict": "GATE-PASS (2-pass determinism + replica node-exact)"
+  },
+  "zig": "0.13.0 tarball d45312e61ebcc48032b77bc4cf7fd6915c11fa16e4aad116b66c9468211230ea"
+ },
+ "disclosures": [
+  "pre-declaration third_impl calibration pair executed and disclosed in the declaration (result 1, expansions 5646148 x2); the official pair was re-run fresh post-declaration and is expansions-identical",
+  "the gate binary emits a zig glibc-version warning (host glibc 2.41 vs provided 2.39); the binary ran all rows to replay_done",
+  "wall_s fields differ across passes; timing is not evidence",
+  "a first tamper-battery recording pass ran on an already-tampered copy (T1 then detected the stale p2 mismatch, rc=42); the battery was re-recorded on a fresh copy and that clean log is what is published"
+ ],
+ "head_freshness": {
+  "cache": "merged-exact-s5-chain-plus-eleventhcost-k01-20261127.cache",
+  "loss": 6682,
+  "rows": 6890,
+  "sha256_prefix": "1e2eeda2",
+  "target_absent": true,
+  "win": 208
+ },
+ "pillar_status": "3/3 pillars complete for the u01 WIN row (replica cold pair + C++ scrutiny gate + third-implementation corroboration); adoption is a separate future Part (fresh single-owner declaration, WIN/LOSS conflict review, flip-census review, merger)",
+ "replica_row": {
+  "budget": 15000000,
+  "implementation": "jsreplay.js 84585617...",
+  "nodes": 4893014,
+  "pair": "node-identical (batch kit raws at15m-u01-p1/p2)",
+  "result": 1
+ },
+ "schema": "n11-ultra-cheap-u01-win-pillars-summary-v1",
+ "status_guard": "pillar bookkeeping only; NO verdict consumed; 11x11 UNKNOWN",
+ "target": {
+  "class_index": 1849,
+  "key": "1153485622925590528:0",
+  "legal": 88,
+  "s5_index": 81011
+ },
+ "third_impl": {
+  "args": "--row=u01 --stones=5 --legal=88 --lo=1153485622925590528 --hi=0 --cap=400000000 --wallcap=260 --memo-power=22",
+  "p1": {
+   "expansions": 5646148,
+   "legalDerived": 88,
+   "node_rc": 0,
+   "reason": "clean",
+   "result": 1,
+   "ttHits": 3187475
+  },
+  "p2": {
+   "expansions": 5646148,
+   "legalDerived": 88,
+   "node_rc": 0,
+   "reason": "clean",
+   "result": 1,
+   "ttHits": 3187475
+  },
+  "script_sha256": "08ea958ff59c3234ec5ac55c5c40689bd0999a34e101a88ea0546800cc4a1998",
+  "verdict": "CORROBORATION-PASS (verdict-level): both fresh post-declaration cold passes WIN(1), expansions identical and equal to the pre-registered calibration value"
+ }
+}

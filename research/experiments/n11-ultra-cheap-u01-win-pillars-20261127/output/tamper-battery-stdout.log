@@ -1,0 +1,12 @@
+=== T1 wrong expected quadruple (clean copy)
+HARD-STOP: published-row disagreement on u01 (C5: no interpretation)
+rc=43
+=== T2 raw nodes edit u01.p2.out -> determinism mismatch
+HARD-STOP: determinism mismatch on u01
+rc=42
+=== T3 missing input file
+missing input/nokey.input.csv
+rc=2
+=== T4 third_impl legal mismatch (declared 87, derived 88)
+third,u01,5,87,,GATE_FAIL,"legal count mismatch: derived=88 declared=87"
+rc=1
