@@ -21,7 +21,7 @@ artifacts:
 - path: research/experiments/witt-s-spectrum-20261125/independent_gsize/comparison_results.txt
   role: log
   note: 105/105 チェック PASS の独立検証（s=1..6 一様性・s=7 GSIZE）
-- path: research/experiments/w24-s7-dodecad-20261127/
+- path: research/experiments/w24-s7-dodecad-20261127/README.md
   role: log
   note: ドデカッド仮説のサンプル検証（本ラウンド）
 scope: W_24 s=7 の Grundy 2/0 層とドデカッド（Golay 重み 12 語）の関係。
