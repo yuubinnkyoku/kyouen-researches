@@ -19,7 +19,8 @@
 - runner: `runner24.sh` (resumable chunk・records24.jsonl append-only・
   CAP=220s piece cap・BUDGET=60s chunk 先行制限)・`x2gen24.sh`
   (k=3: B∈p+1..22 = m−2・k=2: B∈p+1..23 = m−1)・
-  `coverage_check24.py` (M=24・被覆完全性監査)。
+  `multigen24.sh` (INDET multi の krow ピン分解)・
+  `coverage_check24.py` (M=24・被覆完全性監査 v2)。
 
 ## 被覆の完全性 (m23 と同一構造)
 
@@ -30,6 +31,12 @@
   インスタンス lex なし。
 - multi クラス直接・INDET は krow ピンで追分解。k3/k2 抵抗バケットは
   x2 第2石分割 (k-aware)。
+- **追分解 v2 (2026-11-27 宣言
+  [2026-11-27-four-row-q5-m24-multi-krow-decomposition-declaration](../../../log/2026-11-27-four-row-q5-m24-multi-krow-decomposition-declaration.md))**:
+  INDET multi c01/c02/c03/c12 は `multigen24.sh` で 16 厳密数ピース
+  (k0,k1)∈{0..3}² に分解・k0≥1 抵抗ピースは minpos p=0..11 副分割。
+  `coverage_check24.py` v2 は multi を「直接 UNSAT」または「16 ピース全 UNSAT」
+  で決着判定し、k2/k3 直接 INDET bucket の完全 x2 副分割による決着も受理する。
 - 陽性対照 (4,20,5) c0k3p1 は CNF md5 `362034b2…` byte-exact・kissat
   **SAT 375,415 conflicts bit-exact** (m21/m22/m23 交差較正値と同一・本
   host 2026-11-27 再現)。
