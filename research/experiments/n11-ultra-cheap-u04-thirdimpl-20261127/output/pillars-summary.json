@@ -1,0 +1,34 @@
+{
+ "schema": "n11-ultra-cheap-u04-thirdimpl-summary-v1",
+ "part": "ultra-cheap u04 WIN-row third-implementation corroboration (declared in research/log/2026-11-27-n11-ultra-cheap-u04-thirdimpl-declaration.md, commit f2210464)",
+ "row": {
+  "key": "1152921505747697664:1032",
+  "class_index": 23101,
+  "legal": 85,
+  "s5_index": 745184,
+  "escalation": "WIN(1) nodes 9149084 @15M (n11-ultra-cheap-u04-escalation-15m-20261127, kit commit 24c5b85f)"
+ },
+ "third_impl": {
+  "script_sha256": "08ea958ff59c3234ec5ac55c5c40689bd0999a34e101a88ea0546800cc4a1998",
+  "args": "--row=u04 --stones=5 --legal=85 --lo=1152921505747697664 --hi=1032 --cap=400000000 --wallcap=260 --memo-power=22",
+  "result": 1,
+  "expansions": 10728035,
+  "nodes": 5758042,
+  "quads": 95670,
+  "ttOverwrites": 6533731,
+  "passes": 2,
+  "pair_identical": "all fields identical except wall seconds (32.02 vs 32.46)",
+  "status": "CORROBORATION-PASS: result 1 (A wins) consistent with the escalation WIN(1) row"
+ },
+ "cpp_gate": {
+  "status": "OPEN - NOT RUN in this Part",
+  "reason": "this execution environment has no C/C++ toolchain and package installation is forbidden; the gate source 9193f5b6065e0fbcad2ef7c65f386187701cafa1f5b718cc35a5cbb0d138f92e was byte-fetched and sha256-verified but cannot be compiled here (previously built via zig 0.13.0, tarball pin d45312e6)",
+  "requirement": "the C++ second-implementation GATE-PASS (expected 85,15000000,1,9149084, cold pair, plus the published anchor set and tamper battery) remains REQUIRED before any adoption of the u04 row; this Part does not weaken the two-pillar requirement"
+ },
+ "disclosures": [
+  "declaration published before execution (commit f2210464); both passes executed after it",
+  "expansions were MEASURED by this Part (not pre-registered), mirroring the u03 pillar kit",
+  "no other key was run at any budget in this Part"
+ ],
+ "status_guard": "verification bookkeeping only; NO verdict consumed; the u04 WIN row remains single-implementation for adoption purposes until the C++ gate pillar completes; 11x11 UNKNOWN"
+}
