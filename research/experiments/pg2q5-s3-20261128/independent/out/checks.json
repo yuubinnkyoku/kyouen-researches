@@ -1,0 +1,151 @@
+{
+ "checks": [
+  {
+   "id": "T1-board",
+   "description": "board is 31 points / 31 lines of 6, every pair exactly once (PG(2,5))",
+   "pass": true,
+   "detail": "pairs=465/465, line intersections={'1': 465}"
+  },
+  {
+   "id": "T2-published",
+   "description": "recompiled published engine reproduces every SIZE/GRUNDY/GSIZE line of the claimed file",
+   "pass": true,
+   "detail": "all lines identical"
+  },
+  {
+   "id": "T2-independentC",
+   "description": "independent C implementation (separate parser, per-point rule, sorted binary-search DP) reproduces every line",
+   "pass": true,
+   "detail": "all lines identical"
+  },
+  {
+   "id": "T2-pythonFullDP",
+   "description": "complete pure-Python DP over all reachable safe positions reproduces every line",
+   "pass": true,
+   "detail": "all lines identical"
+  },
+  {
+   "id": "T5-size-sums",
+   "description": "every SIZE count equals the sum of its GSIZE counts and equals its G0 count",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "id": "T5-grundy-totals",
+   "description": "every GRUNDY total equals the sum over sizes of the GSIZE cells",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "id": "T5-safe-total",
+   "description": "sum of SIZE counts = sum of GRUNDY counts = SAFE = 7,906,892",
+   "pass": true,
+   "detail": "SIZE sum 7906892, GRUNDY sum 7906892, SAFE 7906892"
+  },
+  {
+   "id": "T5-claim-file-gsize",
+   "description": "claimed file GSIZE table equals the K1359 table in the task text",
+   "pass": true,
+   "detail": "25 cells vs 25 claimed"
+  },
+  {
+   "id": "T5-claim-file-grundy",
+   "description": "claimed file GRUNDY totals equal the task text",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "id": "T5-claim-file-sizes",
+   "description": "claimed file SIZE counts equal the task text",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "id": "T2-indep-eq-claim",
+   "description": "independent C GSIZE table equals the K1359 table",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "id": "T2-indep-grundy-eq-claim",
+   "description": "independent C GRUNDY totals equal the K1359 table",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "id": "T3-max-size",
+   "description": "maximum safe size is 11 (no size-12 positions)",
+   "pass": true,
+   "detail": "sizes present: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]"
+  },
+  {
+   "id": "T3-maximal-counts",
+   "description": "maximal-position counts are exactly 9:93,000, 10:248,000, 11:65,100",
+   "pass": true,
+   "detail": "maximal counts: {9: 93000, 10: 248000, 11: 65100}"
+  },
+  {
+   "id": "T3-maximal-indep",
+   "description": "independent C reproduces the maximal counts",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "id": "T3-g0-vs-maximal",
+   "description": "maximal positions are a subset of G0 and at sizes 10,11 all G0 positions are maximal",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "id": "T4-G4-only-size7",
+   "description": "Grundy 4 occurs only at size 7",
+   "pass": true,
+   "detail": "sizes with G4: [7]; G4 count 186000"
+  },
+  {
+   "id": "T4-all-4caps-G2",
+   "description": "all 31,000 safe 4-sets have Grundy 2 (complete enumeration, not a sample)",
+   "pass": true,
+   "detail": "size-4 distribution: {2: 31000}"
+  },
+  {
+   "id": "T4-G4-is-max",
+   "description": "maximum Grundy value is 4 and no value >4 occurs",
+   "pass": true,
+   "detail": "Grundy values: [0, 1, 2, 3, 4]"
+  },
+  {
+   "id": "T5-comb-k4",
+   "description": "size-4 count matches C(31,4) - 31*C(6,4) = 31,000",
+   "pass": true,
+   "detail": "31000"
+  },
+  {
+   "id": "T5-comb-k5",
+   "description": "size-5 count matches C(31,5) - 31*(C(6,4)*25 + C(6,5)) = 158,100",
+   "pass": true,
+   "detail": "158100"
+  },
+  {
+   "id": "T5-claim-json",
+   "description": "claimed JSON companion matches the claimed text table",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "id": "T5-root",
+   "description": "root (empty position) has Grundy 1",
+   "pass": true,
+   "detail": "(1, 1)"
+  },
+  {
+   "id": "T5-params",
+   "description": "31 points, 31 lines, line size 6, cap s=3",
+   "pass": true,
+   "detail": "POINTS 31, CIRCLES 31"
+  }
+ ],
+ "passed": 24,
+ "total": 24,
+ "all_pass": true
+}
