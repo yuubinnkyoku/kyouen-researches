@@ -1,0 +1,6 @@
+T1 1 ['P1:manifest-sha-all', 'P2:k01:at15m-win', 'P3:k01:at15m-pair-identity']
+T2 1 ['P1:raw-tree==manifest', 'P4:k02:no-15m-raw']
+T3 1 ['P1:manifest-at15m-only-k01', 'P1:manifest-count', 'P4:k02:no-15m-raw', 'P5:k02-15m-raw-absent-from-manifest', 'P5:no-post-win-15m-starts']
+T4 1 ['P0:batch-summary-counters', 'P0:batch-summary-sha']
+CLEAN-POST 0 True
+BATTERY FAIL-CLOSED-ALL-4 + CLEAN
