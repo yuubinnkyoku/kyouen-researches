@@ -80,3 +80,13 @@ nodes are bookkeeping, never verdicts.
   (scheduled-task run); all publication went through the GitHub API,
   all SSOT inputs were re-fetched from main and sha-verified before the
   maker gates ran.
+
+## Addendum (wave D correction)
+
+The first wave D MANIFEST (commit c7d5a7db) listed a stray non-source
+entry scripts/__pycache__/audit_gate.cpython-312.pyc (a local
+py_compile artifact, never pushed to main). The kit bytes themselves
+were unaffected (24/25 fetch-back matches; the single mismatch was the
+never-published .pyc). The .pyc was removed and the MANIFEST
+regenerated (24 entries, all published files) in the follow-up commit;
+fetch-back of the corrected MANIFEST is 24/24.
