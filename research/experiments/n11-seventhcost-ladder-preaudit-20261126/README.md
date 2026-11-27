@@ -66,6 +66,56 @@ MANIFEST-raw-sha256.txt). Full record:
 `research/log/2026-11-27-n11-seventhcost-ladder-preaudit-first-real-run.md`.
 Coverage numbers are bookkeeping only; no verdict is consumed or implied.
 
+## Revision 2: 50M-stage modeling (2026-11-27)
+
+Revision 1 (script sha256 89e816dc..., superseded) audited 2M/15M raws only:
+it had no pair_50m determinism gate, did not resolve or park keys at the
+50M stage, and its WIN stopping rule compared ladder key order, which
+false-fails once the k05 50M WIN raws (published in d08d4ddd, after the
+15M raws of k06..k42) are integrated: key order is not temporal order.
+
+`scripts/audit_seventh_ladder.py` (revision 2, fail-closed) adds:
+
+- pin: batch-summary checkpoint sha256 6881eaaf... (the ledger; git-published
+  in wave C3 commit 24f40b8b, strictly BEFORE any 50M raw existed) plus
+  schema/class/head-basis/counter gates and ledger-vs-raw cross-consistency
+  (every ledger stage1_2m equals the published at2m raw; every ledger
+  resolution 2M/15M matches the raw pair rows; every ledger park matches
+  raw 15M UNKNOWN pairs);
+- unconditional gate: every raw 15M start must be accounted for by the
+  ledger (a 15M raw for a key the ledger does not account is a post-anchor
+  start and fails);
+- 50M stage: rows only for keys the ledger parked UNKNOWN at 15M, only
+  after the 15M pair exists, with a mandatory identical cold pair
+  (pair_50m); result 1 resolves WIN, 2 resolves LOSS, 0 parks at 50M
+  (nodes==budget already gated);
+- temporal WIN stopping rule (replaces the key-order rule): if any WIN is
+  resolved at any stage, then all keys with raws, all 15M starts and all 50M
+  escalations must predate the ledger anchor or descend from ledger-parked
+  keys; no key-order comparison is made. The ledger pin (git publication
+  order) is the temporal anchor.
+
+Second real run (revision 2, 2026-11-27, published raws at HEAD d08d4ddd):
+rc=0, 9,211 gates passed, checkpoint=full. `output/ladder-preaudit.json`
+(sha256 28e4f9244fc4598728843225bfc7b8ee009098196a147e8a995fb7642c605ad0):
+126 raws audited (124 MANIFEST raws + 2 at50m raws), 42 keys with raws,
+42 resolved keys (41 exact LOSS + k05 exact WIN at 50M), 0 parked keys,
+escalated_50m_keys=[k05], determinism pairs present for all 42 keys (2M
+pairs k16/k17, 15M pairs for the 40 keys, pair_50m for k05). Determinism: 3
+runs byte-identical. Tamper battery on the real raws (scratch copy, deleted):
+6/6 fail-closed (pair_50m nodes edit; phantom 50M escalation of non-parked
+k06; batch-summary byte tamper; phantom post-anchor 15M start for k16; 50M
+budget flip; missing 50M pair); post-restore clean control rc=0
+byte-identical. Inputs re-pinned from scratch: selection JSON c395fe03...,
+head cache 42dbb58f..., batch-summary 6881eaaf..., 124/124 raws byte-matched
+against the kit's MANIFEST-raw-sha256.txt, at50m pair byte-identical
+(ff750cc6... x2). Full record:
+`research/log/2026-11-27-ladder-preaudit-50m-modeling-revision.md`.
+
+The WIN row of k05 is single-implementation (Node replica) at audit time;
+this instrument checks integrity and stopping-rule consistency only, and
+consumes or implies no verdict.
+
 ## Status guard
 
 Audit instrument only; nothing here claims, implies or consumes any verdict.
