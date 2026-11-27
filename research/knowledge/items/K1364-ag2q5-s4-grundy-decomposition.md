@@ -1,5 +1,5 @@
 ---
-id: K1363
+id: K1364
 title: "AG(2,5) s=4 の Grundy サイズ別完全分解 — 全 16,249,926 局面、最大 G=3"
 kind: computation
 status: computed
