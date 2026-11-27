@@ -1,0 +1,32 @@
+{
+ "tool": "s5_union_merge.py",
+ "fail_closed_gates": "strict 6-field row schema, depth==5, verdict in {1,2}, WIN/LOSS conflict abort (no output), first-occurrence nodes",
+ "inputs": [
+  {
+   "file": "/home/user/work/n11th/adoption/head.cache",
+   "sha256": "16b340146fe8a01667ae31fc2f0534a8a3977e56b7c701803d621edc23312ef3",
+   "rows": 6889,
+   "unique_new": 6889
+  },
+  {
+   "file": "/home/user/work/n11th/adoption/kitbuild/research/experiments/n11-eleventhcost-k01-win-adoption-20261127/output/increment-eleventhcost-k01-adoption-20261127.cache",
+   "sha256": "0f627887bbc370f05309807407b7389eec53d5bc12a002e34a3120a6fcf15db4",
+   "rows": 1,
+   "unique_new": 1
+  }
+ ],
+ "unique_rows": 6890,
+ "duplicate_rows_elided": 0,
+ "verdict_counts": {
+  "WIN(1)": 208,
+  "LOSS(2)": 6682
+ },
+ "nodes_field_mismatches_recorded": [],
+ "comments_kept_from_first_input": [
+  "# S5 solver-trusted exact; base=merged-exact-s5-after-js-probe-13.cache (sha256 60e0dc3476920d4e...); increment=101 fresh rows (99 canonical S5 children of S4 1297036692683752448:0 absent from the chain, 2 unclaimed backward-only rows, 1 S6-witness-derived TARGET_S5 row nodes=0); see merge-manifest.json"
+ ],
+ "output_sha256": "1e2eeda2db33738de99612531f9bb67456f90c81ceedf123c8bbba117aff2a17",
+ "output_bytes": 288584,
+ "row_format": "s5verdict,<lo>,<hi>,5,<verdict>,<nodes>",
+ "interpretation_guard": "nodes are bookkeeping, never verdicts; merge of solver-trusted cache rows; no new verdict is created; 11x11 root questions remain UNKNOWN"
+}

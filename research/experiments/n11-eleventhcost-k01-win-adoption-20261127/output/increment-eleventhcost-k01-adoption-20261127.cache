@@ -1,0 +1,21 @@
+# n11 eleventh-cost k01 canonical adoption increment
+#   (n11-eleventhcost-k01-win-adoption-20261127, 2026-11-27) - fresh
+#   1-row increment: 1 WIN (k01 1297036696978718720:64).  The
+#   canonical head of record advances from merged-exact-s5-chain-
+#   plus-tenthcost-k01k02 (sha256 16b34014..., 6,889 rows WIN 207 /
+#   LOSS 6,682) by consuming exactly the 1 published eleventh-cost
+#   row.  Sources of record (all re-verified live by this maker
+#   against published bytes): the eleventh-cost batch stage-1 kit
+#   (replica 15M cold pairs), the C++ scrutiny gate kit
+#   (4/4 GATE-PASS, live audit re-run PASS) and the third-impl
+#   corroboration kit (third_impl.js pin 08ea958f).
+# Every adopted key is fresh to BASE 16b34014... (absent from the
+#   canonical head), quarantine-free and canonical-safe per
+#   s5_evidence_policy; adopted node total 12,755,963
+#   (bookkeeping, never verdicts).
+# NO root verdict is consumed, NO class freed, NO class
+#   excluded; nodes are bookkeeping, never verdicts; the standard
+#   11x11 empty board, every central-reply root, the two-stone
+#   root {60,27} and its remaining third moves {100,108} stay
+#   UNKNOWN.
+s5verdict,1297036696978718720,64,5,1,12755963
