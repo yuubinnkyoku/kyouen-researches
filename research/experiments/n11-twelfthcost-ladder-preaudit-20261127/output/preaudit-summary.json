@@ -1,0 +1,79 @@
+{
+ "batch_stage_mock_selftest": [
+  {
+   "case": "win-stop violation (k03 15M row after k02 15M WIN)",
+   "caught_by": [
+    "B5:win-stop-content-rule"
+   ],
+   "rc": 1
+  },
+  {
+   "case": "clean mock (2M pairs + k01 15M LOSS + k02 15M WIN)",
+   "note": "all six B-gates PASS, stage_batch present, raw_rows 8",
+   "rc": 0
+  }
+ ],
+ "batch_stage_status": "absent at publication time (wave B of declaration f6d29d16 not yet published); B-gates PRE-REGISTERED before the raws exist",
+ "clean_control": "rc=0, output byte-identical to run1",
+ "clean_run": {
+  "determinism": "3 cold passes byte-identical (run1==run2==run3 json and stdout)",
+  "gates_pass": 28,
+  "gates_preregistered_batch": 6,
+  "gates_total": 34,
+  "rc": 0,
+  "run_json_sha256": "006760b4ca967c8d5dc62955e659f380dc3fadf9f02f4d036bb3df59f58d196d"
+ },
+ "instrument_sha256": "75a6ae6dafdb18fb64f7d0bf84c70a71cb251b37ed2e0fcb06271b22a1a1616a",
+ "meaning": "audit bookkeeping only; no verdict claimed or consumed; standard 11x11 empty board, 19 central-reply roots, two-stone root {60,27}, third moves 100/108 all UNKNOWN; nodes are bookkeeping",
+ "schema": "n11-twelfthcost-ladder-preaudit-summary-v1",
+ "tamper_battery": [
+  {
+   "caught_by": [
+    "S1:manifest-all-sha",
+    "S1:csv-order-legal-fidelity-51"
+   ],
+   "expect": "fail-closed",
+   "id": "T1",
+   "rc": 1,
+   "tamper": "k07 input CSV legal 97->98 (byte-diff verified)"
+  },
+  {
+   "caught_by": [
+    "S2:head-sha",
+    "S2:head-census"
+   ],
+   "expect": "fail-closed",
+   "id": "T2",
+   "rc": 1,
+   "tamper": "phantom s5verdict row appended to head copy"
+  },
+  {
+   "caught_by": [
+    "S0:declaration-sha"
+   ],
+   "expect": "fail-closed",
+   "id": "T3",
+   "rc": 1,
+   "tamper": "declaration log one-char edit"
+  },
+  {
+   "caught_by": [
+    "S0:selection-sha gate failed; the instrument then raised JSONDecodeError on the tampered file and exited rc=1 without emitting the gate JSON (fail-closed but ungraceful, disclosed)"
+   ],
+   "expect": "fail-closed",
+   "id": "T4",
+   "rc": 1,
+   "tamper": "selection json first key digit flip"
+  },
+  {
+   "caught_by": [
+    "S1:manifest-all-sha",
+    "S1:csv-order-legal-fidelity-51"
+   ],
+   "expect": "fail-closed",
+   "id": "T5",
+   "rc": 1,
+   "tamper": "k03/k04 input CSV contents swapped"
+  }
+ ]
+}

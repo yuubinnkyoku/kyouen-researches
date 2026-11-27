@@ -1,0 +1,150 @@
+{
+ "gates": {
+  "B1:raw-keys-subset-of-51": {
+   "detail": "batch raws absent",
+   "status": "PREREGISTERED"
+  },
+  "B2:stage1-two-rows-per-key-2M": {
+   "detail": "batch raws absent",
+   "status": "PREREGISTERED"
+  },
+  "B3:result-semantics": {
+   "detail": "batch raws absent",
+   "status": "PREREGISTERED"
+  },
+  "B4:escalation-only-for-unknown": {
+   "detail": "batch raws absent",
+   "status": "PREREGISTERED"
+  },
+  "B5:win-stop-content-rule": {
+   "detail": "batch raws absent",
+   "status": "PREREGISTERED"
+  },
+  "B6:cold-pair-node-identity": {
+   "detail": "batch raws absent",
+   "status": "PREREGISTERED"
+  },
+  "S0:declaration-class": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "S0:declaration-head-pin": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "S0:declaration-sha": {
+   "detail": "395cbeac81a709938b5303a83d8f4426c1bf9f8f39ed7422f168c1b5c6632385",
+   "status": "PASS"
+  },
+  "S0:declaration-single-owner": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "S0:declaration-win-stop-rule": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "S0:jsreplay-sha": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "S0:kit-readme-sha": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "S0:selection-bands": {
+   "detail": "{\"5041585\": 1, \"5069670\": 1, \"5234938\": 11, \"5932112\": 38}",
+   "status": "PASS"
+  },
+  "S0:selection-class": {
+   "detail": "10376293541461626880:16777216",
+   "status": "PASS"
+  },
+  "S0:selection-first-key": {
+   "detail": "1152921504607895556:603979776",
+   "status": "PASS"
+  },
+  "S0:selection-head-basis": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "S0:selection-last-key": {
+   "detail": "14987979559889014784:16777216",
+   "status": "PASS"
+  },
+  "S0:selection-order-len": {
+   "detail": "51",
+   "status": "PASS"
+  },
+  "S0:selection-order-unique": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "S0:selection-proxy-sum-recomputed": {
+   "detail": "293115829 vs 293115829",
+   "status": "PASS"
+  },
+  "S0:selection-schema": {
+   "detail": "n11-twelfthcost-exclusive-selection-v1",
+   "status": "PASS"
+  },
+  "S0:selection-sha": {
+   "detail": "1119d01bb2a4c0a02222414ae0506aa61a307334b263e619fdfed9b3eddc0878",
+   "status": "PASS"
+  },
+  "S0:selection-status-guard": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "S0:selection-unknown-counters": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "S0:selector-sha": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "S1:csv-order-legal-fidelity-51": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "S1:manifest-all-sha": {
+   "detail": "[]",
+   "status": "PASS"
+  },
+  "S1:manifest-len": {
+   "detail": "55",
+   "status": "PASS"
+  },
+  "S2:head-census": {
+   "detail": "6890/208/6682",
+   "status": "PASS"
+  },
+  "S2:head-first-line-comment": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "S2:head-freshness-51-absent": {
+   "detail": "51",
+   "status": "PASS"
+  },
+  "S2:head-no-duplicate-keys": {
+   "detail": "0",
+   "status": "PASS"
+  },
+  "S2:head-sha": {
+   "detail": "1e2eeda2db33738de99612531f9bb67456f90c81ceedf123c8bbba117aff2a17",
+   "status": "PASS"
+  }
+ },
+ "instrument": "audit_twelfth_ladder.py (pre-registered before wave-B raws)",
+ "meaning": "audit bookkeeping only; no verdict is claimed or consumed; the standard 11x11 empty board, all 19 central-reply roots, the two-stone root {60,27} and third moves 100/108 remain UNKNOWN; nodes are bookkeeping",
+ "overall": "PASS",
+ "schema": "n11-twelfthcost-ladder-preaudit-v1",
+ "selection_kit": "research/experiments/n11-twelfthcost-class-s5-exclusive-probe-20261127",
+ "stage_batch": {
+  "note": "wave B raws of declaration f6d29d16 are not yet published; the B-gates below are PRE-REGISTERED here before the raws exist and activate on the next run once <kit>/output/raw/ is populated",
+  "status": "absent"
+ },
+ "stage_selection": "complete"
+}
