@@ -87,9 +87,21 @@ col = (1 << 0) | (1 << 1) | (1 << 2)
 order2, g2 = cone(col)
 print('collinear cone', len(order2), 'G', g2[col])
 res['collinear_G'] = g2[col]
-# merge the collinear 3-caps (210, G=0) into the size-3 entry
-res['sizes']['3']['N'] += 210
-res['sizes']['3']['N_g']['0'] = res['sizes']['3']['N_g'].get('0', 0) + 210
+# Correct double count over ALL 3-caps: 1,120 triangles (T) + 210 collinear triples (U).
+# N_m(g) = (1120*T_m(g) + 210*U_m(g)) / C(m,3)
+T2 = Counter(); U2 = defaultdict(Counter)
+for m in order2:
+    U2[m.bit_count()][g2[m]] += 1
+    T2[m.bit_count()] += 1
+for m in sorted(T):
+    C = math.comb(m, 3)
+    num = 1120 * T[m] + 210 * T2[m]
+    assert num % C == 0
+    res['sizes'][str(m)] = {'T': T[m], 'T_g': dict(Tg[m]),
+                            'U': T2[m], 'U_g': dict(U2[m]),
+                            'N': num // C,
+                            'N_g': {str(k): (1120 * Tg[m].get(k, 0) + 210 * U2[m].get(k, 0)) // C
+                                    for k in set(Tg[m]) | set(U2[m])}}
 # k=0,1,2 by mex chain (all 3-caps G=0)
 res['sizes']['2'] = {'N': math.comb(21, 2), 'N_g': {str(1): math.comb(21, 2)}}
 res['sizes']['1'] = {'N': 21, 'N_g': {str(0): 21}}

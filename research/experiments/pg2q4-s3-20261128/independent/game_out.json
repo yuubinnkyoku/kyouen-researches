@@ -1,0 +1,1852 @@
+{
+ "board_problems": [],
+ "brute_force_counts_0_10": {
+  "0": 1,
+  "1": 21,
+  "2": 210,
+  "3": 1330,
+  "4": 5880,
+  "5": 18648,
+  "6": 41328,
+  "7": 58320,
+  "8": 42840,
+  "9": 11480,
+  "10": 0
+ },
+ "brute_total_le9": 180058,
+ "brute_size10": 0,
+ "true_counts": {
+  "0": 1,
+  "1": 21,
+  "2": 210,
+  "3": 1330,
+  "4": 5880,
+  "5": 18648,
+  "6": 41328,
+  "7": 58320,
+  "8": 42840,
+  "9": 11480
+ },
+ "true_total": 180058,
+ "grundy_distribution": {
+  "0": {
+   "1": 1
+  },
+  "1": {
+   "0": 21
+  },
+  "2": {
+   "1": 210
+  },
+  "3": {
+   "0": 1330
+  },
+  "4": {
+   "1": 5880
+  },
+  "5": {
+   "0": 18648
+  },
+  "6": {
+   "1": 41328
+  },
+  "7": {
+   "0": 58320
+  },
+  "8": {
+   "1": 42840
+  },
+  "9": {
+   "0": 11480
+  }
+ },
+ "uniform_grundy_per_size": true,
+ "max_safe_size": 9,
+ "dfs_vs_bruteforce_0_9": true,
+ "terminal_counts": {
+  "0": 0,
+  "1": 0,
+  "2": 0,
+  "3": 0,
+  "4": 0,
+  "5": 0,
+  "6": 0,
+  "7": 360,
+  "8": 0,
+  "9": 11480
+ },
+ "true_G0": 89799,
+ "true_G1": 90259,
+ "true_total_check": 180058,
+ "cones": {
+  "triangle": {
+   "base": [
+    0,
+    1,
+    5
+   ],
+   "base_grundy": 0,
+   "size": 5038,
+   "T": {
+    "3": 1,
+    "4": 18,
+    "5": 144,
+    "6": 642,
+    "7": 1593,
+    "8": 1881,
+    "9": 759
+   },
+   "T_grundy": {
+    "3": {
+     "0": 1
+    },
+    "4": {
+     "1": 18
+    },
+    "5": {
+     "0": 144
+    },
+    "6": {
+     "1": 642
+    },
+    "7": {
+     "0": 1593
+    },
+    "8": {
+     "1": 1881
+    },
+    "9": {
+     "0": 759
+    }
+   },
+   "via_full_enumeration": {
+    "3": 1,
+    "4": 18,
+    "5": 144,
+    "6": 642,
+    "7": 1593,
+    "8": 1881,
+    "9": 759
+   },
+   "dfs_matches_full": true
+  },
+  "collinear": {
+   "base": [
+    0,
+    1,
+    2
+   ],
+   "base_grundy": 0,
+   "size": 3809,
+   "T": {
+    "3": 1,
+    "4": 16,
+    "5": 120,
+    "6": 512,
+    "7": 1224,
+    "8": 1392,
+    "9": 544
+   },
+   "T_grundy": {
+    "3": {
+     "0": 1
+    },
+    "4": {
+     "1": 16
+    },
+    "5": {
+     "0": 120
+    },
+    "6": {
+     "1": 512
+    },
+    "7": {
+     "0": 1224
+    },
+    "8": {
+     "1": 1392
+    },
+    "9": {
+     "0": 544
+    }
+   },
+   "via_full_enumeration": {
+    "3": 1,
+    "4": 16,
+    "5": 120,
+    "6": 512,
+    "7": 1224,
+    "8": 1392,
+    "9": 544
+   },
+   "dfs_matches_full": true
+  }
+ },
+ "double_counting": {
+  "3": {
+   "C(m,3)": 1,
+   "T_m": 1,
+   "U_m": 1,
+   "claim_1120*T_m": 1120,
+   "claim_integer": true,
+   "claim_N_m": 1120,
+   "claim_N_m_plus_k3_210": 1330,
+   "corrected_numerator": 1330,
+   "corrected_integer": true,
+   "corrected_N_m": 1330,
+   "true_N_m": 1330,
+   "corrected_matches_true": true,
+   "claim_matches_true": true,
+   "deficit": 0
+  },
+  "4": {
+   "C(m,3)": 4,
+   "T_m": 18,
+   "U_m": 16,
+   "claim_1120*T_m": 20160,
+   "claim_integer": true,
+   "claim_N_m": 5040,
+   "claim_N_m_plus_k3_210": 5040,
+   "corrected_numerator": 23520,
+   "corrected_integer": true,
+   "corrected_N_m": 5880,
+   "true_N_m": 5880,
+   "corrected_matches_true": true,
+   "claim_matches_true": false,
+   "deficit": 840
+  },
+  "5": {
+   "C(m,3)": 10,
+   "T_m": 144,
+   "U_m": 120,
+   "claim_1120*T_m": 161280,
+   "claim_integer": true,
+   "claim_N_m": 16128,
+   "claim_N_m_plus_k3_210": 16128,
+   "corrected_numerator": 186480,
+   "corrected_integer": true,
+   "corrected_N_m": 18648,
+   "true_N_m": 18648,
+   "corrected_matches_true": true,
+   "claim_matches_true": false,
+   "deficit": 2520
+  },
+  "6": {
+   "C(m,3)": 20,
+   "T_m": 642,
+   "U_m": 512,
+   "claim_1120*T_m": 719040,
+   "claim_integer": true,
+   "claim_N_m": 35952,
+   "claim_N_m_plus_k3_210": 35952,
+   "corrected_numerator": 826560,
+   "corrected_integer": true,
+   "corrected_N_m": 41328,
+   "true_N_m": 41328,
+   "corrected_matches_true": true,
+   "claim_matches_true": false,
+   "deficit": 5376
+  },
+  "7": {
+   "C(m,3)": 35,
+   "T_m": 1593,
+   "U_m": 1224,
+   "claim_1120*T_m": 1784160,
+   "claim_integer": true,
+   "claim_N_m": 50976,
+   "claim_N_m_plus_k3_210": 50976,
+   "corrected_numerator": 2041200,
+   "corrected_integer": true,
+   "corrected_N_m": 58320,
+   "true_N_m": 58320,
+   "corrected_matches_true": true,
+   "claim_matches_true": false,
+   "deficit": 7344
+  },
+  "8": {
+   "C(m,3)": 56,
+   "T_m": 1881,
+   "U_m": 1392,
+   "claim_1120*T_m": 2106720,
+   "claim_integer": true,
+   "claim_N_m": 37620,
+   "claim_N_m_plus_k3_210": 37620,
+   "corrected_numerator": 2399040,
+   "corrected_integer": true,
+   "corrected_N_m": 42840,
+   "true_N_m": 42840,
+   "corrected_matches_true": true,
+   "claim_matches_true": false,
+   "deficit": 5220
+  },
+  "9": {
+   "C(m,3)": 84,
+   "T_m": 759,
+   "U_m": 544,
+   "claim_1120*T_m": 850080,
+   "claim_integer": true,
+   "claim_N_m": 10120,
+   "claim_N_m_plus_k3_210": 10120,
+   "corrected_numerator": 964320,
+   "corrected_integer": true,
+   "corrected_N_m": 11480,
+   "true_N_m": 11480,
+   "corrected_matches_true": true,
+   "claim_matches_true": false,
+   "deficit": 1360
+  }
+ },
+ "claim_table": {
+  "0": {
+   "G": 1,
+   "N": 1
+  },
+  "1": {
+   "G": 0,
+   "N": 21
+  },
+  "2": {
+   "G": 1,
+   "N": 210
+  },
+  "3": {
+   "G": 0,
+   "N": 1330
+  },
+  "4": {
+   "G": 1,
+   "N": 5040
+  },
+  "5": {
+   "G": 0,
+   "N": 16128
+  },
+  "6": {
+   "G": 1,
+   "N": 35952
+  },
+  "7": {
+   "G": 0,
+   "N": 50976
+  },
+  "8": {
+   "G": 1,
+   "N": 37620
+  },
+  "9": {
+   "G": 0,
+   "N": 10120
+  }
+ },
+ "claim_table_matches_formula": true,
+ "grundy_resolved_identity": {
+  "3": {
+   "0": {
+    "T_m_g": 1,
+    "U_m_g": 1,
+    "numerator": 1330,
+    "integer": true,
+    "N_m_g": 1330,
+    "true_N_m_g": 1330,
+    "matches": true
+   }
+  },
+  "4": {
+   "1": {
+    "T_m_g": 18,
+    "U_m_g": 16,
+    "numerator": 23520,
+    "integer": true,
+    "N_m_g": 5880,
+    "true_N_m_g": 5880,
+    "matches": true
+   }
+  },
+  "5": {
+   "0": {
+    "T_m_g": 144,
+    "U_m_g": 120,
+    "numerator": 186480,
+    "integer": true,
+    "N_m_g": 18648,
+    "true_N_m_g": 18648,
+    "matches": true
+   }
+  },
+  "6": {
+   "1": {
+    "T_m_g": 642,
+    "U_m_g": 512,
+    "numerator": 826560,
+    "integer": true,
+    "N_m_g": 41328,
+    "true_N_m_g": 41328,
+    "matches": true
+   }
+  },
+  "7": {
+   "0": {
+    "T_m_g": 1593,
+    "U_m_g": 1224,
+    "numerator": 2041200,
+    "integer": true,
+    "N_m_g": 58320,
+    "true_N_m_g": 58320,
+    "matches": true
+   }
+  },
+  "8": {
+   "1": {
+    "T_m_g": 1881,
+    "U_m_g": 1392,
+    "numerator": 2399040,
+    "integer": true,
+    "N_m_g": 42840,
+    "true_N_m_g": 42840,
+    "matches": true
+   }
+  },
+  "9": {
+   "0": {
+    "T_m_g": 759,
+    "U_m_g": 544,
+    "numerator": 964320,
+    "integer": true,
+    "N_m_g": 11480,
+    "true_N_m_g": 11480,
+    "matches": true
+   }
+  }
+ },
+ "three_caps": {
+  "total": 1330,
+  "collinear": 210,
+  "collinear_formula_21*C(5,3)": 210,
+  "noncollinear": 1120,
+  "noncollinear_formula": 1120,
+  "all_safe": true,
+  "all_grundy_zero": true
+ },
+ "samples": {
+  "0": [
+   {
+    "points": [],
+    "G": 1,
+    "claimed_G": 1,
+    "G_matches_claim": true,
+    "G_matches_full_DP": true,
+    "states": 180058
+   }
+  ],
+  "1": [
+   {
+    "points": [
+     3
+    ],
+    "G": 0,
+    "claimed_G": 0,
+    "G_matches_claim": true,
+    "G_matches_full_DP": true,
+    "states": 58259
+   },
+   {
+    "points": [
+     20
+    ],
+    "G": 0,
+    "claimed_G": 0,
+    "G_matches_claim": true,
+    "G_matches_full_DP": true,
+    "states": 58259
+   },
+   {
+    "points": [
+     0
+    ],
+    "G": 0,
+    "claimed_G": 0,
+    "G_matches_claim": true,
+    "G_matches_full_DP": true,
+    "states": 58259
+   },
+   {
+    "points": [
+     12
+    ],
+    "G": 0,
+    "claimed_G": 0,
+    "G_matches_claim": true,
+    "G_matches_full_DP": true,
+    "states": 58259
+   },
+   {
+    "points": [
+     17
+    ],
+    "G": 0,
+    "claimed_G": 0,
+    "G_matches_claim": true,
+    "G_matches_full_DP": true,
+    "states": 58259
+   },
+   {
+    "points": [
+     11
+    ],
+    "G": 0,
+    "claimed_G": 0,
+    "G_matches_claim": true,
+    "G_matches_full_DP": true,
+    "states": 58259
+   },
+   {
+    "points": [
+     14
+    ],
+    "G": 0,
+    "claimed_G": 0,
+    "G_matches_claim": true,
+    "G_matches_full_DP": true,
+    "states": 58259
+   },
+   {
+    "points": [
+     8
+    ],
+    "G": 0,
+    "claimed_G": 0,
+    "G_matches_claim": true,
+    "G_matches_full_DP": true,
+    "states": 58259
+   },
+   {
+    "points": [
+     15
+    ],
+    "G": 0,
+    "claimed_G": 0,
+    "G_matches_claim": true,
+    "G_matches_full_DP": true,
+    "states": 58259
+   },
+   {
+    "points": [
+     18
+    ],
+    "G": 0,
+    "claimed_G": 0,
+    "G_matches_claim": true,
+    "G_matches_full_DP": true,
+    "states": 58259
+   }
+  ],
+  "2": [
+   {
+    "points": [
+     4,
+     11
+    ],
+    "G": 1,
+    "claimed_G": 1,
+    "G_matches_claim": true,
+    "G_matches_full_DP": true,
+    "states": 17540
+   },
+   {
+    "points": [
+     0,
+     20
+    ],
+    "G": 1,
+    "claimed_G": 1,
+    "G_matches_claim": true,
+    "G_matches_full_DP": true,
+    "states": 17540
+   },
+   {
+    "points": [
+     0,
+     14
+    ],
+    "G": 1,
+    "claimed_G": 1,
+    "G_matches_claim": true,
+    "G_matches_full_DP": true,
+    "states": 17540
+   },
+   {
+    "points": [
+     3,
+     7
+    ],
+    "G": 1,
+    "claimed_G": 1,
+    "G_matches_claim": true,
+    "G_matches_full_DP": true,
+    "states": 17540
+   },
+   {
+    "points": [
+     11,
+     18
+    ],
+    "G": 1,
+    "claimed_G": 1,
+    "G_matches_claim": true,
+    "G_matches_full_DP": true,
+    "states": 17540
+   },
+   {
+    "points": [
+     6,
+     16
+    ],
+    "G": 1,
+    "claimed_G": 1,
+    "G_matches_claim": true,
+    "G_matches_full_DP": true,
+    "states": 17540
+   },
+   {
+    "points": [
+     3,
+     10
+    ],
+    "G": 1,
+    "claimed_G": 1,
+    "G_matches_claim": true,
+    "G_matches_full_DP": true,
+    "states": 17540
+   },
+   {
+    "points": [
+     3,
+     16
+    ],
+    "G": 1,
+    "claimed_G": 1,
+    "G_matches_claim": true,
+    "G_matches_full_DP": true,
+    "states": 17540
+   },
+   {
+    "points": [
+     2,
+     12
+    ],
+    "G": 1,
+    "claimed_G": 1,
+    "G_matches_claim": true,
+    "G_matches_full_DP": true,
+    "states": 17540
+   },
+   {
+    "points": [
+     1,
+     14
+    ],
+    "G": 1,
+    "claimed_G": 1,
+    "G_matches_claim": true,
+    "G_matches_full_DP": true,
+    "states": 17540
+   }
+  ],
+  "3": [
+   {
+    "points": [
+     11,
+     13,
+     20
+    ],
+    "G": 0,
+    "claimed_G": 0,
+    "G_matches_claim": true,
+    "G_matches_full_DP": true,
+    "states": 3809
+   },
+   {
+    "points": [
+     0,
+     5,
+     9
+    ],
+    "G": 0,
+    "claimed_G": 0,
+    "G_matches_claim": true,
+    "G_matches_full_DP": true,
+    "states": 5038
+   },
+   {
+    "points": [
+     6,
+     15,
+     19
+    ],
+    "G": 0,
+    "claimed_G": 0,
+    "G_matches_claim": true,
+    "G_matches_full_DP": true,
+    "states": 5038
+   },
+   {
+    "points": [
+     4,
+     8,
+     12
+    ],
+    "G": 0,
+    "claimed_G": 0,
+    "G_matches_claim": true,
+    "G_matches_full_DP": true,
+    "states": 5038
+   },
+   {
+    "points": [
+     3,
+     4,
+     15
+    ],
+    "G": 0,
+    "claimed_G": 0,
+    "G_matches_claim": true,
+    "G_matches_full_DP": true,
+    "states": 5038
+   },
+   {
+    "points": [
+     5,
+     7,
+     18
+    ],
+    "G": 0,
+    "claimed_G": 0,
+    "G_matches_claim": true,
+    "G_matches_full_DP": true,
+    "states": 5038
+   },
+   {
+    "points": [
+     6,
+     9,
+     18
+    ],
+    "G": 0,
+    "claimed_G": 0,
+    "G_matches_claim": true,
+    "G_matches_full_DP": true,
+    "states": 5038
+   },
+   {
+    "points": [
+     8,
+     9,
+     18
+    ],
+    "G": 0,
+    "claimed_G": 0,
+    "G_matches_claim": true,
+    "G_matches_full_DP": true,
+    "states": 3809
+   },
+   {
+    "points": [
+     11,
+     15,
+     20
+    ],
+    "G": 0,
+    "claimed_G": 0,
+    "G_matches_claim": true,
+    "G_matches_full_DP": true,
+    "states": 5038
+   },
+   {
+    "points": [
+     4,
+     5,
+     17
+    ],
+    "G": 0,
+    "claimed_G": 0,
+    "G_matches_claim": true,
+    "G_matches_full_DP": true,
+    "states": 5038
+   }
+  ],
+  "4": [
+   {
+    "points": [
+     1,
+     2,
+     5,
+     15
+    ],
+    "G": 1,
+    "claimed_G": 1,
+    "G_matches_claim": true,
+    "G_matches_full_DP": true,
+    "states": 1057
+   },
+   {
+    "points": [
+     0,
+     3,
+     4,
+     13
+    ],
+    "G": 1,
+    "claimed_G": 1,
+    "G_matches_claim": true,
+    "G_matches_full_DP": true,
+    "states": 1057
+   },
+   {
+    "points": [
+     0,
+     1,
+     17,
+     20
+    ],
+    "G": 1,
+    "claimed_G": 1,
+    "G_matches_claim": true,
+    "G_matches_full_DP": true,
+    "states": 1057
+   },
+   {
+    "points": [
+     1,
+     7,
+     14,
+     17
+    ],
+    "G": 1,
+    "claimed_G": 1,
+    "G_matches_claim": true,
+    "G_matches_full_DP": true,
+    "states": 1450
+   },
+   {
+    "points": [
+     2,
+     11,
+     13,
+     20
+    ],
+    "G": 1,
+    "claimed_G": 1,
+    "G_matches_claim": true,
+    "G_matches_full_DP": true,
+    "states": 1057
+   },
+   {
+    "points": [
+     0,
+     3,
+     7,
+     16
+    ],
+    "G": 1,
+    "claimed_G": 1,
+    "G_matches_claim": true,
+    "G_matches_full_DP": true,
+    "states": 1450
+   },
+   {
+    "points": [
+     5,
+     7,
+     12,
+     15
+    ],
+    "G": 1,
+    "claimed_G": 1,
+    "G_matches_claim": true,
+    "G_matches_full_DP": true,
+    "states": 1450
+   },
+   {
+    "points": [
+     6,
+     7,
+     15,
+     18
+    ],
+    "G": 1,
+    "claimed_G": 1,
+    "G_matches_claim": true,
+    "G_matches_full_DP": true,
+    "states": 1450
+   },
+   {
+    "points": [
+     1,
+     4,
+     7,
+     10
+    ],
+    "G": 1,
+    "claimed_G": 1,
+    "G_matches_claim": true,
+    "G_matches_full_DP": true,
+    "states": 1057
+   },
+   {
+    "points": [
+     0,
+     9,
+     11,
+     14
+    ],
+    "G": 1,
+    "claimed_G": 1,
+    "G_matches_claim": true,
+    "G_matches_full_DP": true,
+    "states": 1057
+   }
+  ],
+  "5": [
+   {
+    "points": [
+     2,
+     3,
+     7,
+     10,
+     17
+    ],
+    "G": 0,
+    "claimed_G": 0,
+    "G_matches_claim": true,
+    "G_matches_full_DP": true,
+    "states": 322
+   },
+   {
+    "points": [
+     3,
+     4,
+     7,
+     16,
+     19
+    ],
+    "G": 0,
+    "claimed_G": 0,
+    "G_matches_claim": true,
+    "G_matches_full_DP": true,
+    "states": 322
+   },
+   {
+    "points": [
+     4,
+     5,
+     9,
+     16,
+     19
+    ],
+    "G": 0,
+    "claimed_G": 0,
+    "G_matches_claim": true,
+    "G_matches_full_DP": true,
+    "states": 217
+   },
+   {
+    "points": [
+     1,
+     8,
+     10,
+     12,
+     18
+    ],
+    "G": 0,
+    "claimed_G": 0,
+    "G_matches_claim": true,
+    "G_matches_full_DP": true,
+    "states": 217
+   },
+   {
+    "points": [
+     0,
+     4,
+     11,
+     17,
+     18
+    ],
+    "G": 0,
+    "claimed_G": 0,
+    "G_matches_claim": true,
+    "G_matches_full_DP": true,
+    "states": 322
+   },
+   {
+    "points": [
+     8,
+     12,
+     13,
+     15,
+     17
+    ],
+    "G": 0,
+    "claimed_G": 0,
+    "G_matches_claim": true,
+    "G_matches_full_DP": true,
+    "states": 322
+   },
+   {
+    "points": [
+     1,
+     2,
+     6,
+     16,
+     17
+    ],
+    "G": 0,
+    "claimed_G": 0,
+    "G_matches_claim": true,
+    "G_matches_full_DP": true,
+    "states": 322
+   },
+   {
+    "points": [
+     6,
+     9,
+     11,
+     19,
+     20
+    ],
+    "G": 0,
+    "claimed_G": 0,
+    "G_matches_claim": true,
+    "G_matches_full_DP": true,
+    "states": 217
+   },
+   {
+    "points": [
+     1,
+     7,
+     12,
+     17,
+     20
+    ],
+    "G": 0,
+    "claimed_G": 0,
+    "G_matches_claim": true,
+    "G_matches_full_DP": true,
+    "states": 322
+   },
+   {
+    "points": [
+     0,
+     1,
+     2,
+     14,
+     18
+    ],
+    "G": 0,
+    "claimed_G": 0,
+    "G_matches_claim": true,
+    "G_matches_full_DP": true,
+    "states": 217
+   }
+  ],
+  "6": [
+   {
+    "points": [
+     5,
+     7,
+     10,
+     12,
+     13,
+     20
+    ],
+    "G": 1,
+    "claimed_G": 1,
+    "G_matches_claim": true,
+    "G_matches_full_DP": true,
+    "states": 83
+   },
+   {
+    "points": [
+     6,
+     7,
+     11,
+     13,
+     16,
+     19
+    ],
+    "G": 1,
+    "claimed_G": 1,
+    "G_matches_claim": true,
+    "G_matches_full_DP": true,
+    "states": 51
+   },
+   {
+    "points": [
+     0,
+     5,
+     9,
+     14,
+     16,
+     17
+    ],
+    "G": 1,
+    "claimed_G": 1,
+    "G_matches_claim": true,
+    "G_matches_full_DP": true,
+    "states": 83
+   },
+   {
+    "points": [
+     0,
+     1,
+     5,
+     6,
+     10,
+     15
+    ],
+    "G": 1,
+    "claimed_G": 1,
+    "G_matches_claim": true,
+    "G_matches_full_DP": true,
+    "states": 51
+   },
+   {
+    "points": [
+     1,
+     2,
+     3,
+     13,
+     15,
+     17
+    ],
+    "G": 1,
+    "claimed_G": 1,
+    "G_matches_claim": true,
+    "G_matches_full_DP": true,
+    "states": 51
+   },
+   {
+    "points": [
+     2,
+     4,
+     5,
+     10,
+     12,
+     18
+    ],
+    "G": 1,
+    "claimed_G": 1,
+    "G_matches_claim": true,
+    "G_matches_full_DP": true,
+    "states": 51
+   },
+   {
+    "points": [
+     0,
+     4,
+     7,
+     8,
+     14,
+     15
+    ],
+    "G": 1,
+    "claimed_G": 1,
+    "G_matches_claim": true,
+    "G_matches_full_DP": true,
+    "states": 51
+   },
+   {
+    "points": [
+     0,
+     1,
+     5,
+     10,
+     12,
+     15
+    ],
+    "G": 1,
+    "claimed_G": 1,
+    "G_matches_claim": true,
+    "G_matches_full_DP": true,
+    "states": 80
+   },
+   {
+    "points": [
+     0,
+     3,
+     8,
+     9,
+     14,
+     15
+    ],
+    "G": 1,
+    "claimed_G": 1,
+    "G_matches_claim": true,
+    "G_matches_full_DP": true,
+    "states": 51
+   },
+   {
+    "points": [
+     9,
+     10,
+     11,
+     13,
+     14,
+     15
+    ],
+    "G": 1,
+    "claimed_G": 1,
+    "G_matches_claim": true,
+    "G_matches_full_DP": true,
+    "states": 83
+   }
+  ],
+  "7": [
+   {
+    "points": [
+     0,
+     1,
+     4,
+     5,
+     7,
+     10,
+     20
+    ],
+    "G": 0,
+    "claimed_G": 0,
+    "G_matches_claim": true,
+    "G_matches_full_DP": true,
+    "states": 17
+   },
+   {
+    "points": [
+     2,
+     7,
+     9,
+     11,
+     15,
+     17,
+     18
+    ],
+    "G": 0,
+    "claimed_G": 0,
+    "G_matches_claim": true,
+    "G_matches_full_DP": true,
+    "states": 17
+   },
+   {
+    "points": [
+     1,
+     2,
+     9,
+     10,
+     11,
+     13,
+     16
+    ],
+    "G": 0,
+    "claimed_G": 0,
+    "G_matches_claim": true,
+    "G_matches_full_DP": true,
+    "states": 25
+   },
+   {
+    "points": [
+     7,
+     9,
+     10,
+     11,
+     13,
+     18,
+     20
+    ],
+    "G": 0,
+    "claimed_G": 0,
+    "G_matches_claim": true,
+    "G_matches_full_DP": true,
+    "states": 17
+   },
+   {
+    "points": [
+     0,
+     1,
+     4,
+     5,
+     6,
+     10,
+     12
+    ],
+    "G": 0,
+    "claimed_G": 0,
+    "G_matches_claim": true,
+    "G_matches_full_DP": true,
+    "states": 10
+   },
+   {
+    "points": [
+     0,
+     1,
+     6,
+     7,
+     9,
+     12,
+     19
+    ],
+    "G": 0,
+    "claimed_G": 0,
+    "G_matches_claim": true,
+    "G_matches_full_DP": true,
+    "states": 17
+   },
+   {
+    "points": [
+     3,
+     6,
+     13,
+     16,
+     17,
+     19,
+     20
+    ],
+    "G": 0,
+    "claimed_G": 0,
+    "G_matches_claim": true,
+    "G_matches_full_DP": true,
+    "states": 9
+   },
+   {
+    "points": [
+     0,
+     2,
+     3,
+     5,
+     6,
+     10,
+     12
+    ],
+    "G": 0,
+    "claimed_G": 0,
+    "G_matches_claim": true,
+    "G_matches_full_DP": true,
+    "states": 10
+   },
+   {
+    "points": [
+     4,
+     7,
+     15,
+     16,
+     18,
+     19,
+     20
+    ],
+    "G": 0,
+    "claimed_G": 0,
+    "G_matches_claim": true,
+    "G_matches_full_DP": true,
+    "states": 17
+   },
+   {
+    "points": [
+     4,
+     5,
+     6,
+     12,
+     13,
+     15,
+     18
+    ],
+    "G": 0,
+    "claimed_G": 0,
+    "G_matches_claim": true,
+    "G_matches_full_DP": true,
+    "states": 9
+   }
+  ],
+  "8": [
+   {
+    "points": [
+     1,
+     2,
+     5,
+     13,
+     14,
+     16,
+     19,
+     20
+    ],
+    "G": 1,
+    "claimed_G": 1,
+    "G_matches_claim": true,
+    "G_matches_full_DP": true,
+    "states": 5
+   },
+   {
+    "points": [
+     2,
+     11,
+     12,
+     15,
+     16,
+     17,
+     18,
+     19
+    ],
+    "G": 1,
+    "claimed_G": 1,
+    "G_matches_claim": true,
+    "G_matches_full_DP": true,
+    "states": 3
+   },
+   {
+    "points": [
+     2,
+     10,
+     12,
+     13,
+     14,
+     16,
+     19,
+     20
+    ],
+    "G": 1,
+    "claimed_G": 1,
+    "G_matches_claim": true,
+    "G_matches_full_DP": true,
+    "states": 3
+   },
+   {
+    "points": [
+     1,
+     5,
+     7,
+     12,
+     15,
+     17,
+     18,
+     20
+    ],
+    "G": 1,
+    "claimed_G": 1,
+    "G_matches_claim": true,
+    "G_matches_full_DP": true,
+    "states": 3
+   },
+   {
+    "points": [
+     0,
+     2,
+     4,
+     10,
+     11,
+     16,
+     18,
+     19
+    ],
+    "G": 1,
+    "claimed_G": 1,
+    "G_matches_claim": true,
+    "G_matches_full_DP": true,
+    "states": 5
+   },
+   {
+    "points": [
+     0,
+     3,
+     4,
+     5,
+     6,
+     16,
+     17,
+     19
+    ],
+    "G": 1,
+    "claimed_G": 1,
+    "G_matches_claim": true,
+    "G_matches_full_DP": true,
+    "states": 2
+   },
+   {
+    "points": [
+     0,
+     1,
+     2,
+     5,
+     9,
+     11,
+     15,
+     18
+    ],
+    "G": 1,
+    "claimed_G": 1,
+    "G_matches_claim": true,
+    "G_matches_full_DP": true,
+    "states": 3
+   },
+   {
+    "points": [
+     1,
+     2,
+     6,
+     7,
+     8,
+     13,
+     14,
+     15
+    ],
+    "G": 1,
+    "claimed_G": 1,
+    "G_matches_claim": true,
+    "G_matches_full_DP": true,
+    "states": 5
+   },
+   {
+    "points": [
+     0,
+     5,
+     7,
+     10,
+     12,
+     15,
+     17,
+     18
+    ],
+    "G": 1,
+    "claimed_G": 1,
+    "G_matches_claim": true,
+    "G_matches_full_DP": true,
+    "states": 3
+   },
+   {
+    "points": [
+     0,
+     3,
+     4,
+     5,
+     10,
+     12,
+     13,
+     17
+    ],
+    "G": 1,
+    "claimed_G": 1,
+    "G_matches_claim": true,
+    "G_matches_full_DP": true,
+    "states": 3
+   }
+  ],
+  "9": [
+   {
+    "points": [
+     1,
+     7,
+     9,
+     10,
+     13,
+     15,
+     16,
+     18,
+     20
+    ],
+    "G": 0,
+    "claimed_G": 0,
+    "G_matches_claim": true,
+    "G_matches_full_DP": true,
+    "states": 1
+   },
+   {
+    "points": [
+     0,
+     1,
+     3,
+     9,
+     12,
+     14,
+     16,
+     17,
+     18
+    ],
+    "G": 0,
+    "claimed_G": 0,
+    "G_matches_claim": true,
+    "G_matches_full_DP": true,
+    "states": 1
+   },
+   {
+    "points": [
+     6,
+     7,
+     8,
+     9,
+     10,
+     13,
+     17,
+     18,
+     20
+    ],
+    "G": 0,
+    "claimed_G": 0,
+    "G_matches_claim": true,
+    "G_matches_full_DP": true,
+    "states": 1
+   },
+   {
+    "points": [
+     0,
+     1,
+     4,
+     10,
+     12,
+     13,
+     15,
+     19,
+     20
+    ],
+    "G": 0,
+    "claimed_G": 0,
+    "G_matches_claim": true,
+    "G_matches_full_DP": true,
+    "states": 1
+   },
+   {
+    "points": [
+     1,
+     10,
+     11,
+     12,
+     13,
+     15,
+     16,
+     17,
+     18
+    ],
+    "G": 0,
+    "claimed_G": 0,
+    "G_matches_claim": true,
+    "G_matches_full_DP": true,
+    "states": 1
+   },
+   {
+    "points": [
+     2,
+     3,
+     5,
+     7,
+     10,
+     14,
+     17,
+     18,
+     19
+    ],
+    "G": 0,
+    "claimed_G": 0,
+    "G_matches_claim": true,
+    "G_matches_full_DP": true,
+    "states": 1
+   },
+   {
+    "points": [
+     1,
+     4,
+     5,
+     7,
+     13,
+     14,
+     16,
+     18,
+     20
+    ],
+    "G": 0,
+    "claimed_G": 0,
+    "G_matches_claim": true,
+    "G_matches_full_DP": true,
+    "states": 1
+   },
+   {
+    "points": [
+     6,
+     7,
+     8,
+     14,
+     15,
+     16,
+     17,
+     18,
+     20
+    ],
+    "G": 0,
+    "claimed_G": 0,
+    "G_matches_claim": true,
+    "G_matches_full_DP": true,
+    "states": 1
+   },
+   {
+    "points": [
+     0,
+     1,
+     2,
+     6,
+     7,
+     12,
+     14,
+     15,
+     20
+    ],
+    "G": 0,
+    "claimed_G": 0,
+    "G_matches_claim": true,
+    "G_matches_full_DP": true,
+    "states": 1
+   },
+   {
+    "points": [
+     0,
+     1,
+     4,
+     6,
+     9,
+     14,
+     15,
+     19,
+     20
+    ],
+    "G": 0,
+    "claimed_G": 0,
+    "G_matches_claim": true,
+    "G_matches_full_DP": true,
+    "states": 1
+   }
+  ]
+ },
+ "samples_all_pass": true,
+ "mex_chain": {
+  "G_empty": 1,
+  "G_singletons": [
+   0
+  ],
+  "empty_options_grundy_set": [
+   0
+  ],
+  "empty_mex_check": true,
+  "G_2sets_set": [
+   1
+  ],
+  "all_2sets_have_option": true,
+  "two_set_options_grundy_set": [
+   0
+  ],
+  "G_3sets_set": [
+   0
+  ],
+  "all_3sets_have_option": true,
+  "three_set_options_grundy_set": [
+   1
+  ],
+  "G_empty_mex_chain_ok": true
+ },
+ "claim_comparison": {
+  "0": {
+   "claim_G": 1,
+   "true_G": [
+    1
+   ],
+   "G_agree": true,
+   "claim_N": 1,
+   "true_N": 1,
+   "N_agree": true
+  },
+  "1": {
+   "claim_G": 0,
+   "true_G": [
+    0
+   ],
+   "G_agree": true,
+   "claim_N": 21,
+   "true_N": 21,
+   "N_agree": true
+  },
+  "2": {
+   "claim_G": 1,
+   "true_G": [
+    1
+   ],
+   "G_agree": true,
+   "claim_N": 210,
+   "true_N": 210,
+   "N_agree": true
+  },
+  "3": {
+   "claim_G": 0,
+   "true_G": [
+    0
+   ],
+   "G_agree": true,
+   "claim_N": 1330,
+   "true_N": 1330,
+   "N_agree": true
+  },
+  "4": {
+   "claim_G": 1,
+   "true_G": [
+    1
+   ],
+   "G_agree": true,
+   "claim_N": 5040,
+   "true_N": 5880,
+   "N_agree": false
+  },
+  "5": {
+   "claim_G": 0,
+   "true_G": [
+    0
+   ],
+   "G_agree": true,
+   "claim_N": 16128,
+   "true_N": 18648,
+   "N_agree": false
+  },
+  "6": {
+   "claim_G": 1,
+   "true_G": [
+    1
+   ],
+   "G_agree": true,
+   "claim_N": 35952,
+   "true_N": 41328,
+   "N_agree": false
+  },
+  "7": {
+   "claim_G": 0,
+   "true_G": [
+    0
+   ],
+   "G_agree": true,
+   "claim_N": 50976,
+   "true_N": 58320,
+   "N_agree": false
+  },
+  "8": {
+   "claim_G": 1,
+   "true_G": [
+    1
+   ],
+   "G_agree": true,
+   "claim_N": 37620,
+   "true_N": 42840,
+   "N_agree": false
+  },
+  "9": {
+   "claim_G": 0,
+   "true_G": [
+    0
+   ],
+   "G_agree": true,
+   "claim_N": 10120,
+   "true_N": 11480,
+   "N_agree": false
+  }
+ },
+ "claim_total_agree": false,
+ "claim_G0_agree": false,
+ "claim_G1_agree": false,
+ "claim_G_values_agree": true
+}
