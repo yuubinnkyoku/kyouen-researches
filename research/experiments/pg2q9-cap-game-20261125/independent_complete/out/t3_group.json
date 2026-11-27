@@ -1,0 +1,310 @@
+{
+ "generators": [
+  {
+   "index": 0,
+   "matrix": [
+    1,
+    1,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    1
+   ],
+   "det": 1,
+   "invertible": true,
+   "model_perm_ok": true,
+   "board_lines_preserved": true
+  },
+  {
+   "index": 1,
+   "matrix": [
+    1,
+    3,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    1
+   ],
+   "det": 1,
+   "invertible": true,
+   "model_perm_ok": true,
+   "board_lines_preserved": true
+  },
+  {
+   "index": 2,
+   "matrix": [
+    1,
+    0,
+    1,
+    0,
+    1,
+    0,
+    0,
+    0,
+    1
+   ],
+   "det": 1,
+   "invertible": true,
+   "model_perm_ok": true,
+   "board_lines_preserved": true
+  },
+  {
+   "index": 3,
+   "matrix": [
+    1,
+    0,
+    3,
+    0,
+    1,
+    0,
+    0,
+    0,
+    1
+   ],
+   "det": 1,
+   "invertible": true,
+   "model_perm_ok": true,
+   "board_lines_preserved": true
+  },
+  {
+   "index": 4,
+   "matrix": [
+    1,
+    0,
+    0,
+    1,
+    1,
+    0,
+    0,
+    0,
+    1
+   ],
+   "det": 1,
+   "invertible": true,
+   "model_perm_ok": true,
+   "board_lines_preserved": true
+  },
+  {
+   "index": 5,
+   "matrix": [
+    1,
+    0,
+    0,
+    3,
+    1,
+    0,
+    0,
+    0,
+    1
+   ],
+   "det": 1,
+   "invertible": true,
+   "model_perm_ok": true,
+   "board_lines_preserved": true
+  },
+  {
+   "index": 6,
+   "matrix": [
+    1,
+    0,
+    0,
+    0,
+    1,
+    1,
+    0,
+    0,
+    1
+   ],
+   "det": 1,
+   "invertible": true,
+   "model_perm_ok": true,
+   "board_lines_preserved": true
+  },
+  {
+   "index": 7,
+   "matrix": [
+    1,
+    0,
+    0,
+    0,
+    1,
+    3,
+    0,
+    0,
+    1
+   ],
+   "det": 1,
+   "invertible": true,
+   "model_perm_ok": true,
+   "board_lines_preserved": true
+  },
+  {
+   "index": 8,
+   "matrix": [
+    1,
+    0,
+    0,
+    0,
+    1,
+    0,
+    1,
+    0,
+    1
+   ],
+   "det": 1,
+   "invertible": true,
+   "model_perm_ok": true,
+   "board_lines_preserved": true
+  },
+  {
+   "index": 9,
+   "matrix": [
+    1,
+    0,
+    0,
+    0,
+    1,
+    0,
+    3,
+    0,
+    1
+   ],
+   "det": 1,
+   "invertible": true,
+   "model_perm_ok": true,
+   "board_lines_preserved": true
+  },
+  {
+   "index": 10,
+   "matrix": [
+    1,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    1,
+    1
+   ],
+   "det": 1,
+   "invertible": true,
+   "model_perm_ok": true,
+   "board_lines_preserved": true
+  },
+  {
+   "index": 11,
+   "matrix": [
+    1,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    3,
+    1
+   ],
+   "det": 1,
+   "invertible": true,
+   "model_perm_ok": true,
+   "board_lines_preserved": true
+  },
+  {
+   "index": 12,
+   "matrix": [
+    3,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    1
+   ],
+   "det": 3,
+   "invertible": true,
+   "model_perm_ok": true,
+   "board_lines_preserved": true
+  },
+  {
+   "index": 13,
+   "matrix": [
+    0,
+    1,
+    0,
+    0,
+    0,
+    1,
+    1,
+    0,
+    0
+   ],
+   "det": 1,
+   "invertible": true,
+   "model_perm_ok": true,
+   "board_lines_preserved": true
+  }
+ ],
+ "group_orders": {
+  "GL": 339655680,
+  "PGL": 42456960,
+  "ordered_frames_formula": 42456960
+ },
+ "ordered_triples": {
+  "count": 663390,
+  "extension_histogram": {
+   "64": 663390
+  },
+  "ordered_frames": 42456960
+ },
+ "sharp_transitivity_random_pairs": 30,
+ "orbits": {
+  "1": {
+   "start": [
+    0
+   ],
+   "size": 91,
+   "expected": 91,
+   "seconds": 0.0
+  },
+  "2": {
+   "start": [
+    0,
+    1
+   ],
+   "size": 4095,
+   "expected": 4095,
+   "seconds": 0.09
+  },
+  "3": {
+   "start": [
+    0,
+    1,
+    10
+   ],
+   "size": 110565,
+   "expected": 110565,
+   "seconds": 3.66
+  },
+  "4": {
+   "start": [
+    0,
+    1,
+    10,
+    20
+   ],
+   "size": 1769040,
+   "expected": 1769040,
+   "seconds": 74.07
+  }
+ },
+ "seconds": 79.672
+}
