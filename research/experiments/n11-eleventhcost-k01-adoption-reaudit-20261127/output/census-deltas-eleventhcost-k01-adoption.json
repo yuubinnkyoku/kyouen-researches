@@ -1,0 +1,178 @@
+{
+ "adopted": [
+  {
+   "hi": 64,
+   "lo": 1297036696978718720,
+   "nodes": 12755963,
+   "owner_classes": [
+    2376,
+    3288,
+    17116
+   ],
+   "owner_count": 3,
+   "s5_index": 97250,
+   "serving_class": 3288,
+   "verdict": 1
+  }
+ ],
+ "adopted_outside_baseline_requirement": [
+  97250
+ ],
+ "base_cache": {
+  "loss": 6682,
+  "rows": 6889,
+  "sha256": "16b340146fe8a01667ae31fc2f0534a8a3977e56b7c701803d621edc23312ef3",
+  "win": 207
+ },
+ "base_closure": {
+  "sha256": "d7ae77ddd05d433c0a59555f86efb009e64a5651ad6b918407682bdc5f3178f0"
+ },
+ "base_per_root": {
+  "sha256": "8cc804bb31fcc29393ee4e06c79e9eb407f10917a7996440c6116e78df5aa670"
+ },
+ "base_summary": {
+  "sha256": "40268a5e235851d798df9b59e0fd7622b2f667ae05cd447e5d4c1544c539ffef"
+ },
+ "census_recount_base": {
+  "excluded": 390,
+  "excluded_now": 129,
+  "free_now": 39,
+  "unknown": 34391
+ },
+ "census_recount_scen": {
+  "excluded": 390,
+  "excluded_now": 132,
+  "free_now": 39,
+  "unknown": 34388
+ },
+ "closure_byte_identical_to_base": true,
+ "closure_churn": {
+  "entered": [],
+  "left": [],
+  "rank_churn_ranked": [],
+  "rows_base": 804,
+  "rows_scen": 804,
+  "unknown_now_churn": []
+ },
+ "increment": {
+  "sha256": "0f627887bbc370f05309807407b7389eec53d5bc12a002e34a3120a6fcf15db4"
+ },
+ "joint_greedy": {
+  "base": 37398,
+  "scen": 37398
+ },
+ "loss_owner_class_union": [],
+ "manifest": {
+  "sha256": "6442d01d5a53f7e56002df8b21349a951538fb1d66214ac20022737857f6a39b"
+ },
+ "owner_class_count_hist": {
+  "3": 1
+ },
+ "per_root_coverage_byte_identical": false,
+ "per_root_free_and_uncovered_identical": true,
+ "per_root_greedy_delta": [
+  {
+   "base": 6132,
+   "root": 2,
+   "scen": 6131
+  }
+ ],
+ "scen_cache": {
+  "loss": 6682,
+  "rows": 6890,
+  "sha256": "1e2eeda2db33738de99612531f9bb67456f90c81ceedf123c8bbba117aff2a17",
+  "win": 208
+ },
+ "scen_closure": {
+  "sha256": "d7ae77ddd05d433c0a59555f86efb009e64a5651ad6b918407682bdc5f3178f0"
+ },
+ "scen_per_root": {
+  "sha256": "03fd32f2ff8da948a5e8df825b049f6e890749105ab6370dbaef2595d0f1ea2c"
+ },
+ "scen_summary": {
+  "sha256": "abaf62aadbdd4b41203d1bff7d362010ff83b4aae82114cdd0eaff67fab5b79e"
+ },
+ "serving_class_rows": {
+  "3288": {
+   "adopted_owned_here": 1,
+   "base_status": "unknown",
+   "class_mask": [
+    1297036696978718720,
+    0
+   ],
+   "scen_status": "excluded_now",
+   "unknown_after": 101,
+   "unknown_before": 102
+  }
+ },
+ "status_flip_count": 3,
+ "status_flips": [
+  {
+   "base": "unknown",
+   "class_index": 2376,
+   "class_mask": [
+    1297036696977670144,
+    64
+   ],
+   "scen": "excluded_now"
+  },
+  {
+   "base": "unknown",
+   "class_index": 3288,
+   "class_mask": [
+    1297036696978718720,
+    0
+   ],
+   "scen": "excluded_now"
+  },
+  {
+   "base": "unknown",
+   "class_index": 17116,
+   "class_mask": [
+    1152921504607895808,
+    64
+   ],
+   "scen": "excluded_now"
+  }
+ ],
+ "update8_new_resolved": [],
+ "update8_refresh_base": {
+  "groups_free_now": 131,
+  "remaining": 31444,
+  "resolved": 282,
+  "resolved_list_len": 282,
+  "win_hit_groups": 25
+ },
+ "update8_refresh_scen": {
+  "groups_free_now": 131,
+  "remaining": 31444,
+  "resolved": 282,
+  "resolved_list_len": 282,
+  "win_hit_groups": 25
+ },
+ "verdict": {
+  "canonical_head_sha256": "1e2eeda2db33738de99612531f9bb67456f90c81ceedf123c8bbba117aff2a17",
+  "census_counts_identical_to_published_summaries": true,
+  "consumed": "exactly the one published eleventh-cost row (1 WIN k01)",
+  "note": "declared eleventh-cost k01 adoption measurement; adopting solver-trusted S5 labels flips class-status bookkeeping only: no root verdict is consumed, no root freed, no root excluded, no coverage claim is made or changed; 11x11 stays UNKNOWN; no root verdict; nodes are bookkeeping",
+  "part": "eleventhcost-k01-flip-census",
+  "part_declared": true,
+  "status_flip_mechanism": "win-hit (the Part EW/EM mechanism): the adopted WIN row k01 (s5 index 97250) flips its three owner classes 2376 (1297036696977670144:64, cost-unknown 109 -> 108), 3288 (the eleventh-cost serving class 1297036696978718720:0, cost-unknown 102 -> 101, the adopted row owned here) and 17116 (1152921504607895808:64, cost-unknown 99 -> 98) from unknown to excluded_now; no class flips to free_now, free_now stays 39 (Board-verified both sides); the closure ladder is byte-identical to the BASE side (804 rows, no entered/left, no unknown_now churn, no rank churn); the per-root coverage MEASURES one individual greedy re-route (root 2 drops 6132 -> 6131, free_now/uncovered identical on all 20 roots); joint greedy stays 37398 and the probing worklist row count stays 64272 (regen content sha differs from the BASE pin); the adopted s5 index sits outside the frozen update8 baseline requirement (resolved 282 -> 282, remaining_now 31444 -> 31444, groups_free_now 131 -> 131); the win-hit group set is unchanged (25)",
+  "status_flips": 3
+ },
+ "win_hit_groups_identical": true,
+ "worklist_regen_pins": {
+  "base": {
+   "sha256": "b9f3f1a370974fe1cd895304b8a328d1863656725718b2b938bc2aa2d48a3d33",
+   "size": 3715222
+  },
+  "scen": {
+   "sha256": "407a340fdb9cc4db8b1d806fe13e4a2228b6783c974d1a54000029159475ff85",
+   "size": 3715222
+  }
+ },
+ "worklist_total": {
+  "base": 64272,
+  "scen": 64272
+ }
+}
