@@ -1,0 +1,21 @@
+# n11 ultra-cheap u01 canonical adoption increment
+#   (n11-ultra-cheap-u01-win-adoption-20261127, 2026-11-27) - fresh
+#   1-row increment: 1 WIN (u01 1153485622925590528:0, class 1849).
+#   The canonical head of record advances from merged-exact-s5-chain-
+#   plus-eleventhcost-k01 (sha256 1e2eeda2..., 6,890 rows WIN 208 /
+#   LOSS 6,682) by consuming exactly the 1 published ultra-cheap batch
+#   row.  Sources of record (all re-verified live by this maker
+#   against published bytes): the ultra-cheap batch stage-1 kit
+#   (replica 15M cold pair WIN(1) nodes 4,893,014), the pillars kit
+#   (C++ scrutiny gate 4/4 GATE-PASS with a live runner re-run,
+#   third_impl.js pin 08ea958f corroboration WIN(1) x2).
+# Every adopted key is fresh to BASE 1e2eeda2... (absent from the
+#   canonical head), quarantine-free and canonical-safe per
+#   s5_evidence_policy; adopted node total 4,893,014
+#   (bookkeeping, never verdicts).
+# NO root verdict is consumed, NO class freed, NO class
+#   excluded; nodes are bookkeeping, never verdicts; the standard
+#   11x11 empty board, every central-reply root, the two-stone
+#   root {60,27} and its remaining third moves {100,108} stay
+#   UNKNOWN.
+s5verdict,1153485622925590528,0,5,1,4893014
