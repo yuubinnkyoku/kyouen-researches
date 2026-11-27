@@ -1,0 +1,32 @@
+{
+ "tool": "s5_union_merge.py",
+ "fail_closed_gates": "strict 6-field row schema, depth==5, verdict in {1,2}, WIN/LOSS conflict abort (no output), first-occurrence nodes",
+ "inputs": [
+  {
+   "file": "/home/user/lane17/work/adopt4/root/head.cache",
+   "sha256": "c5082866c1bb61e9cbcb86b80b29c3b2a141b4b5e93a0b8d4b46e04151b631c8",
+   "rows": 6893,
+   "unique_new": 6893
+  },
+  {
+   "file": "/home/user/lane17/work/adopt4/root/kitout/research/experiments/n11-ultra-cheap-u04-win-adoption-20261127/output/increment-ultra-cheap-u04-adoption-20261127.cache",
+   "sha256": "c6344d3ad267c70b36319579230d9dce1135422cd5a1b1e61dc43887643199e5",
+   "rows": 1,
+   "unique_new": 1
+  }
+ ],
+ "unique_rows": 6894,
+ "duplicate_rows_elided": 0,
+ "verdict_counts": {
+  "WIN(1)": 212,
+  "LOSS(2)": 6682
+ },
+ "nodes_field_mismatches_recorded": [],
+ "comments_kept_from_first_input": [
+  "# S5 solver-trusted exact; base=merged-exact-s5-after-js-probe-13.cache (sha256 60e0dc3476920d4e...); increment=101 fresh rows (99 canonical S5 children of S4 1297036692683752448:0 absent from the chain, 2 unclaimed backward-only rows, 1 S6-witness-derived TARGET_S5 row nodes=0); see merge-manifest.json"
+ ],
+ "output_sha256": "beecb024a648d0ddb29eaf261b09326f9412328cd09f85cb180ee2ffd9ed4544",
+ "output_bytes": 288770,
+ "row_format": "s5verdict,<lo>,<hi>,5,<verdict>,<nodes>",
+ "interpretation_guard": "nodes are bookkeeping, never verdicts; merge of solver-trusted cache rows; no new verdict is created; 11x11 root questions remain UNKNOWN"
+}

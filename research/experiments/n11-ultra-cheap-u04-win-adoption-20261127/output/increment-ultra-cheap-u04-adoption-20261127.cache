@@ -1,0 +1,24 @@
+# n11 ultra-cheap u04 canonical adoption increment
+#   (n11-ultra-cheap-u04-win-adoption-20261127, 2026-11-27) - fresh
+#   1-row increment: 1 WIN (u04 1152921505747697664:1032, class 23101).
+#   The canonical head of record advances from merged-exact-s5-chain-
+#   plus-ultra-cheap-u03 (sha256 c5082866..., 6,893 rows WIN 211 /
+#   LOSS 6,682) by consuming exactly the 1 published ultra-cheap u04
+#   escalation row.  Sources of record (all re-verified live by this
+#   maker against published bytes): the ultra-cheap u04 escalation kit
+#   (replica 15M cold pair WIN(1) nodes 9,149,084), the C++ scrutiny
+#   gate kit (GATE-PASS with a live runner re-run, anchors 3/3,
+#   tamper 4/4 fail-closed), and the third-impl corroboration kit
+#   (third_impl.js pin 08ea958f, WIN(1) expansions 10,728,035 x2
+#   identical).  This completes the ultra-cheap 4-key family
+#   (u01/u02/u03/u04 all adopted).
+# Every adopted key is fresh to BASE c5082866... (absent from the
+#   canonical head), quarantine-free and canonical-safe per
+#   s5_evidence_policy; adopted node total 9,149,084
+#   (bookkeeping, never verdicts).
+# NO root verdict is consumed, NO class freed, NO class
+#   excluded; nodes are bookkeeping, never verdicts; the standard
+#   11x11 empty board, every central-reply root, the two-stone
+#   root {60,27} and its remaining third moves {100,108} stay
+#   UNKNOWN.
+s5verdict,1152921505747697664,1032,5,1,9149084
