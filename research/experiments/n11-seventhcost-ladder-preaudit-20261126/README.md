@@ -48,6 +48,24 @@ synthetic, were never pushed to the seventh-cost kit, and were deleted after
 the battery; the instrument had NOT been run against any real ladder raw at
 publication time.
 
+## First real run (2026-11-27, published raws)
+
+Executed against the published full checkpoint (waves 928dc19b / 64a46b4c /
+24f40b8b at HEAD 9ac8e079): rc=0, 8,699 gates passed, checkpoint=full.
+`output/ladder-preaudit.json`
+(sha256 232e42eca776738a51d653946a4a749e329a1a2f8ff1ad4b1172f56baf4cb18d):
+124 raws audited, 42 keys with raws, 41 resolved keys (k05 parked
+UNKNOWN@15M), 0 WIN keys, determinism pairs present for all 42 keys.
+Determinism: 3 runs byte-identical. Tamper battery on the real raws (scratch
+copy, deleted): 3/3 fail-closed (nodes edit -> pair_15m_01; phantom
+out-of-selection k43 raw -> raw_kidx_at15m; parked-key nodes without full
+budget -> raw_unknown_full_at15m); post-restore clean control rc=0
+byte-identical. Inputs re-pinned from scratch (selection JSON c395fe03...,
+head cache 42dbb58f..., 124/124 raws byte-matched against the kit's
+MANIFEST-raw-sha256.txt). Full record:
+`research/log/2026-11-27-n11-seventhcost-ladder-preaudit-first-real-run.md`.
+Coverage numbers are bookkeeping only; no verdict is consumed or implied.
+
 ## Status guard
 
 Audit instrument only; nothing here claims, implies or consumes any verdict.
