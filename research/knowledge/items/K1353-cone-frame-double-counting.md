@@ -14,6 +14,13 @@ relations:
 - type: depends_on
   target: K1058
   note: 共演ゲームの定義と Grundy の自己同型不変性
+artifacts:
+- path: research/experiments/pg2q9-cap-game-20261125/independent_complete/REPORT.md
+  role: log
+  note: 錐＋枠二重数え上げ法の応用検証（K1352）
+- path: research/log/2026-11-28-cone-double-counting.md
+  role: log
+  note: 方法の定式化ログ
 scope: 有限ハイパーグラフ盤の共演ゲーム一般。自己同型群 G が k0-キャップに推移的で Grundy が G 不変なとき、単一の k0-キャップの錐（それを含む安全集合全体）の完全 DP から、k≥k0 の全サイズの Grundy 分布を厳密に得る方法。
 evidence: 補題。盤 B、G ≤ Aut(B)、G は k0-キャップに推移的、Grundy は G 不変とする。固定した k0-キャップ F の錐で T_m(g) = #{M ⊇ F かつ |M|=m, Grundy(M)=g} を計算する。m ≥ k0 に対し N_m(g)·C(m,k0) = Σ_{F'} T_{F'}(g) = N_{k0}·T_m(g)（二重数え上げと推移性・不変性）。よって N_m(g) = N_{k0}·T_m(g)/C(m,k0)。PG(2,9) s=2 では k0=4（PGL(3,9) は 4-キャップに推移、|PGL|=91·90·81·64）、F={0,1,10,20}、錐は 1,868 局面。錐 DP と枠二重数え上げで k=4..10 の全分布が厳密に再現され、k=0..4 は mex 連鎖で確定する（独立検証 全項目 PASS、K1352）。
 ---
