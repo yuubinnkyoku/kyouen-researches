@@ -70,3 +70,26 @@ class-status change. The standard 11x11 empty board, all 19 central-reply
 roots, the two-stone root {60,27}, its remaining third moves {100,108},
 S2 and all closure classes are UNKNOWN. Expansions and nodes are
 bookkeeping, never verdicts.
+
+## Addendum (same-session post-publication review of the wave-C auditor)
+
+- Correction: the C1a run's stdout is byte-equal to the owner's published
+  c1a-verify-tbl.txt (both are the identical 73-byte two-line stdout);
+  this kit's copy additionally carries a trailing "rc=0" line appended by
+  this lane. The "byte-equal" wording above refers to the run stdout.
+- Pre-landing review of the published audit_sy.py (sha256 885d8c3a...):
+  its G1 requires the literal "rc=0" inside c1a-verify-tbl.txt and its
+  RAWTXT schema requires a trailing "\nrc=0\n" on the c1b calibration
+  raws, but all three published calibration raws (73B/127B/132B,
+  byte-verified at HEAD 53d000fd) end without any rc trailer, because the
+  calibrations were run outside run_target.sh (which appends "rc=$rc").
+  Consequence: audit_sy.py will fail-closed at G1 when it runs in wave C
+  on the current kit output. This is the safe direction (fail-closed, no
+  verdict impact), but the owner lane should either append the rc=0
+  trailer to the three calibration raws or amend the audit before wave C.
+  Target raws are unaffected (run_target.sh appends the rc line).
+- Further review notes (no action required): G4's cold-pair check is
+  result+expansions level (by design, verdict-level corroboration); G1
+  does not re-check the calibration lo/hi fields; the audit's G2-G5 gates
+  are keyed to gate-rows.json and complementary to this kit's cross-check
+  (which re-derives the expectations from the published probe raws).

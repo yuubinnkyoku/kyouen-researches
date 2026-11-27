@@ -73,3 +73,23 @@ Kit: research/experiments/n11-seventhcost-sy-waveb-independent-crosscheck-202611
 - kit-19 authoritative cross-check once kit-19 is published.
 - This kit is standalone-reproducible: python3 scripts/crosscheck_sy.py
   (CC_BASE defaults to the kit root).
+
+## Same-session addendum: pre-landing review of the wave-C auditor
+
+Fetched and reviewed the published audit_sy.py (sha256 885d8c3a...) before
+Part SY wave C lands:
+
+- FINDING (fail-closed direction): audit G1 requires the literal "rc=0"
+  in c1a-verify-tbl.txt and the RAWTXT schema requires a "\nrc=0\n"
+  trailer on the c1b raws, but the three published calibration raws end
+  without an rc trailer (byte-verified at HEAD 53d000fd; run_target.sh
+  appends the rc line, the calibrations were run outside it). audit_sy.py
+  will fail at G1 on the current kit output. The owner lane should append
+  the rc=0 trailer to the three calibration raws or amend the audit
+  before running wave C. No verdict impact; safe direction.
+- Correction to this kit's README wording: the C1a stdout (73 bytes) is
+  byte-equal to the owner's published file; this kit's copy adds a
+  trailing "rc=0" line appended by this lane.
+- Review notes: G4 cold-pair check is result+expansions-level (by
+  design); G1 does not re-check calibration lo/hi; audit G2-G5 are
+  complementary to this lane's raws-derived cross-check.
