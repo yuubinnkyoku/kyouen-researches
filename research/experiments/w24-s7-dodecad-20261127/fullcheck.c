@@ -8,7 +8,7 @@ static int n = 24, nb;
 static uint32_t blocks[1024];
 static int pc[32][1024], npc[32];
 static uint32_t allmask;
-static int g_count[32];
+static int g_count[64];
 
 /* memo hash: key uint32 (0 = empty), value int8 */
 #define HSIZE (1u<<23)
@@ -114,6 +114,15 @@ int main(int argc, char **argv) {
             int8_t gv = grundy(X, 0);
             g_count[gv]++;
         }
+        /* 10-subsets */
+        for (int a = 0; a < 12; a++) for (int b = a+1; b < 12; b++) for (int c = b+1; c < 12; c++)
+        for (int d = c+1; d < 12; d++) for (int e = d+1; e < 12; e++) for (int f = e+1; f < 12; f++)
+        for (int g = f+1; g < 12; g++) for (int h = g+1; h < 12; h++) for (int k = h+1; k < 12; k++)
+        for (int l = k+1; l < 12; l++) {
+            uint32_t Z = (1u<<pts[a])|(1u<<pts[b])|(1u<<pts[c])|(1u<<pts[d])|(1u<<pts[e])|(1u<<pts[f])|(1u<<pts[g])|(1u<<pts[h])|(1u<<pts[k])|(1u<<pts[l]);
+            int8_t gv = grundy(Z, 0);
+            g_count[32 + gv]++;  /* offset 32 for 10-subsets */
+        }
         /* 11-subsets */
         for (int a = 0; a < 12; a++) for (int b = a+1; b < 12; b++) for (int c = b+1; c < 12; c++)
         for (int d = c+1; d < 12; d++) for (int e = d+1; e < 12; e++) for (int f = e+1; f < 12; f++)
@@ -126,7 +135,9 @@ int main(int argc, char **argv) {
         if (dodecads % 256 == 0) fprintf(stderr, "dodecads %d\n", dodecads);
     }
     printf("dodecads %d\n", dodecads);
-    printf("9subsets: ");
+    printf("10subsets: ");
+    for (int g = 0; g < 10; g++) if (g_count[32+g]) printf("G%d=%d ", g, g_count[32+g]);
+    printf("\n9subsets: ");
     for (int g = 0; g < 10; g++) if (g_count[g]) printf("G%d=%d ", g, g_count[g]);
     printf("\n11subsets: ");
     for (int g = 0; g < 10; g++) if (g_count[16+g]) printf("G%d=%d ", g, g_count[16+g]);
