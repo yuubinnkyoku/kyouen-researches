@@ -1,42 +1,13 @@
-# 2026-11-27 six-row q=7, 6x23 class {2} minpos-rest decomposition sweep: single-owner declaration (fast lane)
+# (6,7) 6x23 class {2} krow=2:5 minpos 残り全値: 単一オーナー宣言 (2026-11-27 fast lane)
 
-## Claim
+## 宣言内容
 
-Single-owner lane. No other lane is currently executing or has declared the
-6x23 q=7 class {2} krow=2:5 minpos-rest sweep. HEAD at declaration time:
-`9b4cdaaccb8e2ab2f19added518d59331801a57b` (machine-checked immediately
-before this push).
+- 対象: (6,7) の未解決 frontier 幅 **6x23**。class {2} krow=2:5 の minpos (first deficient row の最左石) 分解のうち、出版済みの P=6/7/8 (INDET 4,968,075 / 5,055,896 / 4,935,522 @262s caps, six-row-q7-m22-class-split-20261127) を除く **P=0..5, 9..18 の計16 probe** を 262s cap で実行する。
+- 機材: kit byte-clone scripts (sat.js fcc0cfd8 / sat2.js 14ceb854 / sat3.js e04581eb / verify_frac.py 837fe24b) + kissat 4.0.4 official linux-amd64 (zip sha 63282e51, binary sha 21da5d98)。
+- 正制御 (宣言前に実施・開示): 6x22 q=7 class {2} krow=2:5 minpos=7 SAT **2,050,424 conflicts bit-exact** (出版値と完全一致)。encoder meta: 6x23 p6 vars 12556 / clauses 44937 出版 meta と一致、6x22 p7 vars 11682 / clauses 41800。
+- 判定規約: **SAT => 35石欠損極大witness が 6x23 に実在 => M_{6,7} >= 24 (frontier 更新)**。全 INDET => honest negative (不在主張ではない)。UNSAT は class {2} krow=2:5 minpos 分解のその値の不在のみ (他 class/krow 未掃引)。
+- 検証: SAT の場合は sat.js verifyConfig + verify_frac.py (fresh Fraction) の二系統 + 負制御 (remove->not maximal / add->reject) + 決定CNFの cold pair。
+- 重複回避: six-row-q7-m22-class-split-20261127 の拡張 probe 群と disjoint (P=6/7/8 のみ既刊)。6x26 (6,6) four-lane (a9dde1d3/f9a982d2/e61acf82/9e703319b) とは無関係。並走 lane はこの P 値に着手しないこと。
+- publish-then-execute。verdict 不消費。標準 11x11 空盤・19 central-reply roots・二石 root {60,27}・第三手 {100,108}・S2・全 closure class は全時点 UNKNOWN。conflicts は bookkeeping。
 
-## Target
-
-The (6,7) unresolved frontier is 6x23 (M_{6,7} in [23, 402] after the 6x22
-witness, kit `six-row-q7-m22-class-split-20261127`). The published extension
-probes covered class {2}, krow=2:5, minpos 6/7/8 (all INDET at 262s caps).
-This lane sweeps the remaining minpos values of the same sub-instance:
-
-- probes: 6x23, class {2}, krow=2:5, minpos P in {0,1,2,3,4,5,9,10,11,12,13,14,15,16,17,18}
-  (minpos <= 18 is the range bound for k=5 stones in a 23-wide row;
-  6/7/8 already INDET in the m22 kit, not repeated)
-- machinery: byte-verified clones of the published m22 kit scripts
-  (sat3.js `e04581eb...`, sat2.js `14ceb854...`, sat.js `fcc0cfd8...`),
-  kissat 4.0.4 official linux-amd64 binary sha256
-  `21da5d984e38b74f620f14c62442f834f27b9158decdb722540d97f98aac93a1`
-  (re-downloaded and sha-verified this session).
-- cap policy: 262s wall cap per probe, one kissat invocation per command
-  (m22 kit convention). CNFs regenerated, not published (size policy).
-
-## Pre-registered interpretation
-
-- Positive control: 6x20 class {2} must reproduce SAT at 641,859 conflicts
-  bit-exact (published value). Calibration runs before the declared probes.
-- SAT in any probe => a 6x23 deficient maximal witness exists in class {2}:
-  decode, dual-verify (sat.js verifyConfig + fresh Fraction verifier
-  byte-clone of the m22 kit `verify_frac.py`), negative controls
-  (remove -> non-maximal, add -> rejected), then M_{6,7} >= 24 and the
-  (6,7) range becomes [24, 402]; frontier moves to 6x24.
-- All INDET => honest negative at these caps, NOT absence; frontier stays
-  6x23; M_{6,7} in [23, 402] unchanged.
-- Verdicts not consumed; standard 11x11 empty board, roots, closure classes
-  UNKNOWN at all times; conflict counts are bookkeeping.
-- publish-then-execute: all official probe raw logs will be generated after
-  this declaration commit lands on main.
+- 宣言時 HEAD: 4aec0c19 (n11 eleventh-cost batch stage-1 completion log)。
