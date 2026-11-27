@@ -1,0 +1,1074 @@
+{
+  "board": "C:\\Users\\yuubi\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\research\\experiments\\projective-blocking-kyouen-20261125\\output\\board_pg2q3.txt",
+  "n": 13,
+  "line_count": 13,
+  "counts": {
+    "0": 1,
+    "1": 13,
+    "2": 78,
+    "3": 286,
+    "4": 702,
+    "5": 1170,
+    "6": 1248,
+    "7": 702,
+    "8": 117,
+    "9": 13,
+    "10": 0,
+    "11": 0,
+    "12": 0,
+    "13": 0
+  },
+  "grundy_dist": {
+    "0": {
+      "1": 1
+    },
+    "1": {
+      "0": 13
+    },
+    "2": {
+      "1": 78
+    },
+    "3": {
+      "0": 286
+    },
+    "4": {
+      "1": 702
+    },
+    "5": {
+      "0": 1170
+    },
+    "6": {
+      "1": 1248
+    },
+    "7": {
+      "0": 702
+    },
+    "8": {
+      "1": 117
+    },
+    "9": {
+      "0": 13
+    },
+    "10": {},
+    "11": {},
+    "12": {},
+    "13": {}
+  },
+  "total_safe": 4330,
+  "max_safe_size": 9,
+  "total_g0": 2184,
+  "total_g1": 2146,
+  "triangles": 234,
+  "collinear_triples": 52,
+  "cone_triangle": 260,
+  "cone_collinear": 214,
+  "T": {
+    "3": {
+      "0": 1,
+      "1": 0
+    },
+    "4": {
+      "0": 0,
+      "1": 10
+    },
+    "5": {
+      "0": 42,
+      "1": 0
+    },
+    "6": {
+      "0": 0,
+      "1": 90
+    },
+    "7": {
+      "0": 89,
+      "1": 0
+    },
+    "8": {
+      "0": 0,
+      "1": 24
+    },
+    "9": {
+      "0": 4,
+      "1": 0
+    }
+  },
+  "U": {
+    "3": {
+      "0": 1,
+      "1": 0
+    },
+    "4": {
+      "0": 0,
+      "1": 9
+    },
+    "5": {
+      "0": 36,
+      "1": 0
+    },
+    "6": {
+      "0": 0,
+      "1": 75
+    },
+    "7": {
+      "0": 72,
+      "1": 0
+    },
+    "8": {
+      "0": 0,
+      "1": 18
+    },
+    "9": {
+      "0": 3,
+      "1": 0
+    }
+  },
+  "identity": [
+    {
+      "m": 3,
+      "g": 0,
+      "T_m_g": 1,
+      "U_m_g": 1,
+      "N_m_g": 286,
+      "lhs": 286,
+      "rhs": 286,
+      "ok": true
+    },
+    {
+      "m": 3,
+      "g": 1,
+      "T_m_g": 0,
+      "U_m_g": 0,
+      "N_m_g": 0,
+      "lhs": 0,
+      "rhs": 0,
+      "ok": true
+    },
+    {
+      "m": 4,
+      "g": 0,
+      "T_m_g": 0,
+      "U_m_g": 0,
+      "N_m_g": 0,
+      "lhs": 0,
+      "rhs": 0,
+      "ok": true
+    },
+    {
+      "m": 4,
+      "g": 1,
+      "T_m_g": 10,
+      "U_m_g": 9,
+      "N_m_g": 702,
+      "lhs": 2808,
+      "rhs": 2808,
+      "ok": true
+    },
+    {
+      "m": 5,
+      "g": 0,
+      "T_m_g": 42,
+      "U_m_g": 36,
+      "N_m_g": 1170,
+      "lhs": 11700,
+      "rhs": 11700,
+      "ok": true
+    },
+    {
+      "m": 5,
+      "g": 1,
+      "T_m_g": 0,
+      "U_m_g": 0,
+      "N_m_g": 0,
+      "lhs": 0,
+      "rhs": 0,
+      "ok": true
+    },
+    {
+      "m": 6,
+      "g": 0,
+      "T_m_g": 0,
+      "U_m_g": 0,
+      "N_m_g": 0,
+      "lhs": 0,
+      "rhs": 0,
+      "ok": true
+    },
+    {
+      "m": 6,
+      "g": 1,
+      "T_m_g": 90,
+      "U_m_g": 75,
+      "N_m_g": 1248,
+      "lhs": 24960,
+      "rhs": 24960,
+      "ok": true
+    },
+    {
+      "m": 7,
+      "g": 0,
+      "T_m_g": 89,
+      "U_m_g": 72,
+      "N_m_g": 702,
+      "lhs": 24570,
+      "rhs": 24570,
+      "ok": true
+    },
+    {
+      "m": 7,
+      "g": 1,
+      "T_m_g": 0,
+      "U_m_g": 0,
+      "N_m_g": 0,
+      "lhs": 0,
+      "rhs": 0,
+      "ok": true
+    },
+    {
+      "m": 8,
+      "g": 0,
+      "T_m_g": 0,
+      "U_m_g": 0,
+      "N_m_g": 0,
+      "lhs": 0,
+      "rhs": 0,
+      "ok": true
+    },
+    {
+      "m": 8,
+      "g": 1,
+      "T_m_g": 24,
+      "U_m_g": 18,
+      "N_m_g": 117,
+      "lhs": 6552,
+      "rhs": 6552,
+      "ok": true
+    },
+    {
+      "m": 9,
+      "g": 0,
+      "T_m_g": 4,
+      "U_m_g": 3,
+      "N_m_g": 13,
+      "lhs": 1092,
+      "rhs": 1092,
+      "ok": true
+    },
+    {
+      "m": 9,
+      "g": 1,
+      "T_m_g": 0,
+      "U_m_g": 0,
+      "N_m_g": 0,
+      "lhs": 0,
+      "rhs": 0,
+      "ok": true
+    }
+  ],
+  "layer_options": {
+    "0": {
+      "positions": 1,
+      "option_count_dist": {
+        "13": 1
+      },
+      "no_options": 0,
+      "min_options": 13,
+      "max_options": 13,
+      "option_grundy_sets": {
+        "0": 1
+      }
+    },
+    "1": {
+      "positions": 13,
+      "option_count_dist": {
+        "12": 13
+      },
+      "no_options": 0,
+      "min_options": 12,
+      "max_options": 12,
+      "option_grundy_sets": {
+        "1": 13
+      }
+    },
+    "2": {
+      "positions": 78,
+      "option_count_dist": {
+        "11": 78
+      },
+      "no_options": 0,
+      "min_options": 11,
+      "max_options": 11,
+      "option_grundy_sets": {
+        "0": 78
+      }
+    },
+    "3": {
+      "positions": 286,
+      "option_count_dist": {
+        "9": 52,
+        "10": 234
+      },
+      "no_options": 0,
+      "min_options": 9,
+      "max_options": 10,
+      "option_grundy_sets": {
+        "1": 286
+      }
+    },
+    "4": {
+      "positions": 702,
+      "option_count_dist": {
+        "8": 468,
+        "9": 234
+      },
+      "no_options": 0,
+      "min_options": 8,
+      "max_options": 9,
+      "option_grundy_sets": {
+        "0": 702
+      }
+    },
+    "5": {
+      "positions": 1170,
+      "option_count_dist": {
+        "6": 702,
+        "7": 468
+      },
+      "no_options": 0,
+      "min_options": 6,
+      "max_options": 7,
+      "option_grundy_sets": {
+        "1": 1170
+      }
+    },
+    "6": {
+      "positions": 1248,
+      "option_count_dist": {
+        "3": 234,
+        "4": 936,
+        "6": 78
+      },
+      "no_options": 0,
+      "min_options": 3,
+      "max_options": 6,
+      "option_grundy_sets": {
+        "0": 1248
+      }
+    },
+    "7": {
+      "positions": 702,
+      "option_count_dist": {
+        "0": 234,
+        "2": 468
+      },
+      "no_options": 234,
+      "min_options": 0,
+      "max_options": 2,
+      "option_grundy_sets": {
+        "1": 468,
+        "(none)": 234
+      }
+    },
+    "8": {
+      "positions": 117,
+      "option_count_dist": {
+        "1": 117
+      },
+      "no_options": 0,
+      "min_options": 1,
+      "max_options": 1,
+      "option_grundy_sets": {
+        "0": 117
+      }
+    },
+    "9": {
+      "positions": 13,
+      "option_count_dist": {
+        "0": 13
+      },
+      "no_options": 13,
+      "min_options": 0,
+      "max_options": 0,
+      "option_grundy_sets": {
+        "(none)": 13
+      }
+    }
+  },
+  "terminal": {
+    "total": 247,
+    "by_size": {
+      "7": 234,
+      "9": 13
+    },
+    "characterisation_7": "complement is a Pasch 6-set; equivalently triangle + its free 4-arc",
+    "characterisation_9": "complement of a board line"
+  },
+  "claim_artifact": {
+    "path": "C:\\Users\\yuubi\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\research\\experiments\\pg2q3-s3-20261128\\output\\pg2q3_s3_spectrum.json",
+    "present": true,
+    "match": true
+  },
+  "checks": [
+    {
+      "check": "board has exactly 14 non-empty lines (header + 13 lines)",
+      "ok": true,
+      "detail": "14"
+    },
+    {
+      "check": "every data row starts with 4 and has 5 tokens",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "board header is '13 13'",
+      "ok": true,
+      "detail": "['13', '13']"
+    },
+    {
+      "check": "n = 13 points",
+      "ok": true,
+      "detail": "13"
+    },
+    {
+      "check": "number of line rows = 13",
+      "ok": true,
+      "detail": "13 rows, header b=13"
+    },
+    {
+      "check": "every line row lists exactly 4 points",
+      "ok": true,
+      "detail": "[(4, 13)]"
+    },
+    {
+      "check": "points inside every line are distinct",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "all point labels are in 0..12",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "the 13 lines are pairwise distinct",
+      "ok": true,
+      "detail": "13 distinct"
+    },
+    {
+      "check": "every point lies on exactly 4 lines",
+      "ok": true,
+      "detail": "[(0, 4), (1, 4), (2, 4), (3, 4), (4, 4), (5, 4), (6, 4), (7, 4), (8, 4), (9, 4), (10, 4), (11, 4), (12, 4)]"
+    },
+    {
+      "check": "every pair of points lies on exactly one line",
+      "ok": true,
+      "detail": "78 pairs of C(13,2)=78"
+    },
+    {
+      "check": "every pair of lines meets in exactly one point",
+      "ok": true,
+      "detail": "{1: 78}"
+    },
+    {
+      "check": "explicit model: the 13 coordinates are 13 distinct projective points",
+      "ok": true,
+      "detail": "[(0, (1, 0, 0)), (1, (0, 1, 0)), (2, (1, 1, 0)), (3, (1, 2, 0)), (4, (0, 0, 1)), (5, (1, 0, 1)), (6, (2, 0, 1)), (7, (0, 1, 1)), (8, (1, 1, 1)), (9, (2, 1, 1)), (10, (0, 2, 1)), (11, (1, 2, 1)), (12, (2, 2, 1))]"
+    },
+    {
+      "check": "explicit model: exactly 13 projective lines of 4 points",
+      "ok": true,
+      "detail": "[4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]"
+    },
+    {
+      "check": "explicit F_3^3 model reproduces exactly the 13 board lines",
+      "ok": true,
+      "detail": "mismatched lines: []"
+    },
+    {
+      "check": "total number of subsets tested is 2**13 = 8192",
+      "ok": true,
+      "detail": "8192"
+    },
+    {
+      "check": "k=0: safe count 1 equals claim 1",
+      "ok": true,
+      "detail": "1 vs 1"
+    },
+    {
+      "check": "k=1: safe count 13 equals claim 13",
+      "ok": true,
+      "detail": "13 vs 13"
+    },
+    {
+      "check": "k=2: safe count 78 equals claim 78",
+      "ok": true,
+      "detail": "78 vs 78"
+    },
+    {
+      "check": "k=3: safe count 286 equals claim 286",
+      "ok": true,
+      "detail": "286 vs 286"
+    },
+    {
+      "check": "k=4: safe count 702 equals claim 702",
+      "ok": true,
+      "detail": "702 vs 702"
+    },
+    {
+      "check": "k=5: safe count 1170 equals claim 1170",
+      "ok": true,
+      "detail": "1170 vs 1170"
+    },
+    {
+      "check": "k=6: safe count 1248 equals claim 1248",
+      "ok": true,
+      "detail": "1248 vs 1248"
+    },
+    {
+      "check": "k=7: safe count 702 equals claim 702",
+      "ok": true,
+      "detail": "702 vs 702"
+    },
+    {
+      "check": "k=8: safe count 117 equals claim 117",
+      "ok": true,
+      "detail": "117 vs 117"
+    },
+    {
+      "check": "k=9: safe count 13 equals claim 13",
+      "ok": true,
+      "detail": "13 vs 13"
+    },
+    {
+      "check": "k=10: no safe sets (max safe size is 9)",
+      "ok": true,
+      "detail": "0"
+    },
+    {
+      "check": "k=11: no safe sets (max safe size is 9)",
+      "ok": true,
+      "detail": "0"
+    },
+    {
+      "check": "k=12: no safe sets (max safe size is 9)",
+      "ok": true,
+      "detail": "0"
+    },
+    {
+      "check": "k=13: no safe sets (max safe size is 9)",
+      "ok": true,
+      "detail": "0"
+    },
+    {
+      "check": "no safe 10-set exists (hence max safe size = 9)",
+      "ok": true,
+      "detail": "0"
+    },
+    {
+      "check": "total safe sets 4330",
+      "ok": true,
+      "detail": "4330 vs 4330"
+    },
+    {
+      "check": "sum of per-size counts equals total",
+      "ok": true,
+      "detail": "4330"
+    },
+    {
+      "check": "all 9-sets are exactly the complements of the 13 lines",
+      "ok": true,
+      "detail": "13 nine-sets"
+    },
+    {
+      "check": "all 8-sets are exactly 'line complement minus one point' (13*9=117)",
+      "ok": true,
+      "detail": "117 eight-sets, expected 117"
+    },
+    {
+      "check": "every line complement is safe",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "every line itself is unsafe (4 points on a line)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "the 13 unsafe 4-sets are exactly the 13 lines",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "k=4 count = C(13,4) - 13",
+      "ok": true,
+      "detail": "702 vs 702"
+    },
+    {
+      "check": "k=5 count = C(13,5) - 13*9",
+      "ok": true,
+      "detail": "1170 vs 1170"
+    },
+    {
+      "check": "k=6 count = C(13,6) - 13*C(9,2)",
+      "ok": true,
+      "detail": "1248 vs 1248"
+    },
+    {
+      "check": "k=7 count = C(13,7) - 13*C(9,3) + C(13,2)",
+      "ok": true,
+      "detail": "702 vs 702"
+    },
+    {
+      "check": "DFS from the empty set enumerates exactly the same safe sets",
+      "ok": true,
+      "detail": "4330 sets"
+    },
+    {
+      "check": "Grundy values computed for every safe position",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "only Grundy values 0 and 1 occur",
+      "ok": true,
+      "detail": "[0, 1]"
+    },
+    {
+      "check": "k=0: all positions have G=1",
+      "ok": true,
+      "detail": "distribution {1: 1}"
+    },
+    {
+      "check": "k=1: all positions have G=0",
+      "ok": true,
+      "detail": "distribution {0: 13}"
+    },
+    {
+      "check": "k=2: all positions have G=1",
+      "ok": true,
+      "detail": "distribution {1: 78}"
+    },
+    {
+      "check": "k=3: all positions have G=0",
+      "ok": true,
+      "detail": "distribution {0: 286}"
+    },
+    {
+      "check": "k=4: all positions have G=1",
+      "ok": true,
+      "detail": "distribution {1: 702}"
+    },
+    {
+      "check": "k=5: all positions have G=0",
+      "ok": true,
+      "detail": "distribution {0: 1170}"
+    },
+    {
+      "check": "k=6: all positions have G=1",
+      "ok": true,
+      "detail": "distribution {1: 1248}"
+    },
+    {
+      "check": "k=7: all positions have G=0",
+      "ok": true,
+      "detail": "distribution {0: 702}"
+    },
+    {
+      "check": "k=8: all positions have G=1",
+      "ok": true,
+      "detail": "distribution {1: 117}"
+    },
+    {
+      "check": "k=9: all positions have G=0",
+      "ok": true,
+      "detail": "distribution {0: 13}"
+    },
+    {
+      "check": "G=0 count 2184",
+      "ok": true,
+      "detail": "2184 vs 2184"
+    },
+    {
+      "check": "G=1 count 2146",
+      "ok": true,
+      "detail": "2146 vs 2146"
+    },
+    {
+      "check": "G0 + G1 = 4330",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "mex chain k=0: every option has G=0 (so mex is 1)",
+      "ok": true,
+      "detail": "{(0,): 1}"
+    },
+    {
+      "check": "mex chain k=1: every option has G=1 (so mex is 0)",
+      "ok": true,
+      "detail": "{(1,): 13}"
+    },
+    {
+      "check": "mex chain k=2: every option has G=0 (so mex is 1)",
+      "ok": true,
+      "detail": "{(0,): 78}"
+    },
+    {
+      "check": "mex chain k=3: every option has G=1 (so mex is 0)",
+      "ok": true,
+      "detail": "{(1,): 286}"
+    },
+    {
+      "check": "mex chain k=4: every option has G=0 (so mex is 1)",
+      "ok": true,
+      "detail": "{(0,): 702}"
+    },
+    {
+      "check": "mex chain k=5: every option has G=1 (so mex is 0)",
+      "ok": true,
+      "detail": "{(1,): 1170}"
+    },
+    {
+      "check": "mex chain k=6: every option has G=0 (so mex is 1)",
+      "ok": true,
+      "detail": "{(0,): 1248}"
+    },
+    {
+      "check": "mex chain k=8: every option has G=0 (so mex is 1)",
+      "ok": true,
+      "detail": "{(0,): 117}"
+    },
+    {
+      "check": "mex chain k=7: 234 terminal positions (mex of empty set = 0) and 468 with both options of G=1 (mex {1} = 0); all G=0",
+      "ok": true,
+      "detail": "{(1,): 468, (): 234}"
+    },
+    {
+      "check": "mex chain k=9: no options (terminal), G=0",
+      "ok": true,
+      "detail": "{(): 13}"
+    },
+    {
+      "check": "terminal positions: 234 of size 7 and 13 of size 9 (247 total)",
+      "ok": true,
+      "detail": "{7: 234, 9: 13}"
+    },
+    {
+      "check": "no terminal positions of size <= 6 or of size 8",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "terminal 9-sets are exactly the complements of the 13 lines",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "every safe 8-set has exactly one legal move",
+      "ok": true,
+      "detail": "{1: 117}"
+    },
+    {
+      "check": "the 234 Pasch 6-sets are exactly the complements of the terminal 7-sets",
+      "ok": true,
+      "detail": "234 Pasch sets"
+    },
+    {
+      "check": "all 234 terminal 7-sets have G=0",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "the 468 non-terminal 7-sets each have exactly 2 moves, all G=1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "incidence double count k=0: sum of move counts = (k+1)*N_(k+1)",
+      "ok": true,
+      "detail": "13 vs 13"
+    },
+    {
+      "check": "incidence double count k=1: sum of move counts = (k+1)*N_(k+1)",
+      "ok": true,
+      "detail": "156 vs 156"
+    },
+    {
+      "check": "incidence double count k=2: sum of move counts = (k+1)*N_(k+1)",
+      "ok": true,
+      "detail": "858 vs 858"
+    },
+    {
+      "check": "incidence double count k=3: sum of move counts = (k+1)*N_(k+1)",
+      "ok": true,
+      "detail": "2808 vs 2808"
+    },
+    {
+      "check": "incidence double count k=4: sum of move counts = (k+1)*N_(k+1)",
+      "ok": true,
+      "detail": "5850 vs 5850"
+    },
+    {
+      "check": "incidence double count k=5: sum of move counts = (k+1)*N_(k+1)",
+      "ok": true,
+      "detail": "7488 vs 7488"
+    },
+    {
+      "check": "incidence double count k=6: sum of move counts = (k+1)*N_(k+1)",
+      "ok": true,
+      "detail": "4914 vs 4914"
+    },
+    {
+      "check": "incidence double count k=7: sum of move counts = (k+1)*N_(k+1)",
+      "ok": true,
+      "detail": "936 vs 936"
+    },
+    {
+      "check": "incidence double count k=8: sum of move counts = (k+1)*N_(k+1)",
+      "ok": true,
+      "detail": "117 vs 117"
+    },
+    {
+      "check": "234 4-line general-position sets, bijective to the Pasch 6-sets",
+      "ok": true,
+      "detail": "234 line sets, 234 point sets"
+    },
+    {
+      "check": "top-down recursion reproduces every bottom-up Grundy value",
+      "ok": true,
+      "detail": "0 mismatches"
+    },
+    {
+      "check": "there are C(13,3)=286 three-point sets",
+      "ok": true,
+      "detail": "286"
+    },
+    {
+      "check": "every three-point set is safe (a line holds 4 points)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "a three-point set lies on at most one line",
+      "ok": true,
+      "detail": "[]"
+    },
+    {
+      "check": "collinear triples = 52",
+      "ok": true,
+      "detail": "52"
+    },
+    {
+      "check": "non-collinear triples (triangles) = 234",
+      "ok": true,
+      "detail": "234"
+    },
+    {
+      "check": "collinear + triangles = 286",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "every three-point set has G=0",
+      "ok": true,
+      "detail": "[0]"
+    },
+    {
+      "check": "terminal 7-sets are exactly 'triangle + free 4-arc' (one per triangle)",
+      "ok": true,
+      "detail": "234 distinct terminal 7-sets"
+    },
+    {
+      "check": "for every triangle the 4 free points form a cap (no 3 collinear)",
+      "ok": true,
+      "detail": "0 failures"
+    },
+    {
+      "check": "{0,1,4} is non-collinear (a triangle)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "{0,1,2} is collinear",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "G({0,1,4}) = 0",
+      "ok": true,
+      "detail": "0"
+    },
+    {
+      "check": "G({0,1,2}) = 0",
+      "ok": true,
+      "detail": "0"
+    },
+    {
+      "check": "triangle {0,1,4} cone has 260 positions",
+      "ok": true,
+      "detail": "260 vs 260"
+    },
+    {
+      "check": "collinear {0,1,2} cone has 214 positions",
+      "ok": true,
+      "detail": "214 vs 214"
+    },
+    {
+      "check": "triangle cone size/G histogram equals the claimed T table",
+      "ok": true,
+      "detail": "computed {(3, 0): 1, (4, 1): 10, (5, 0): 42, (6, 1): 90, (7, 0): 89, (8, 1): 24, (9, 0): 4}"
+    },
+    {
+      "check": "collinear cone size/G histogram equals the claimed U table",
+      "ok": true,
+      "detail": "computed {(3, 0): 1, (4, 1): 9, (5, 0): 36, (6, 1): 75, (7, 0): 72, (8, 1): 18, (9, 0): 3}"
+    },
+    {
+      "check": "all 234 triangles have the same cone size/G histogram",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "all 52 collinear triples have the same cone size/G histogram",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "DFS cone enumeration for {0,1,4} matches the filter census",
+      "ok": true,
+      "detail": "260 positions"
+    },
+    {
+      "check": "DFS cone enumeration for {0,1,2} matches the filter census",
+      "ok": true,
+      "detail": "214 positions"
+    },
+    {
+      "check": "cone-local DP on {0,1,4} equals the global DP on all 260 positions",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "cone-local DP on {0,1,2} equals the global DP on all 214 positions",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "T_m table matches the claim",
+      "ok": true,
+      "detail": "computed {3: {0: 1}, 4: {1: 10}, 5: {0: 42}, 6: {1: 90}, 7: {0: 89}, 8: {1: 24}, 9: {0: 4}}"
+    },
+    {
+      "check": "U_m table matches the claim",
+      "ok": true,
+      "detail": "computed {3: {0: 1}, 4: {1: 9}, 5: {0: 36}, 6: {1: 75}, 7: {0: 72}, 8: {1: 18}, 9: {0: 3}}"
+    },
+    {
+      "check": "sum over m of T_m = 260",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "sum over m of U_m = 214",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "double count m=3, g=0: 234*1 + 52*1 = C(3,3)*286",
+      "ok": true,
+      "detail": "286 vs 286"
+    },
+    {
+      "check": "double count m=3, g=1: 234*0 + 52*0 = C(3,3)*0",
+      "ok": true,
+      "detail": "0 vs 0"
+    },
+    {
+      "check": "double count m=4, g=0: 234*0 + 52*0 = C(4,3)*0",
+      "ok": true,
+      "detail": "0 vs 0"
+    },
+    {
+      "check": "double count m=4, g=1: 234*10 + 52*9 = C(4,3)*702",
+      "ok": true,
+      "detail": "2808 vs 2808"
+    },
+    {
+      "check": "double count m=5, g=0: 234*42 + 52*36 = C(5,3)*1170",
+      "ok": true,
+      "detail": "11700 vs 11700"
+    },
+    {
+      "check": "double count m=5, g=1: 234*0 + 52*0 = C(5,3)*0",
+      "ok": true,
+      "detail": "0 vs 0"
+    },
+    {
+      "check": "double count m=6, g=0: 234*0 + 52*0 = C(6,3)*0",
+      "ok": true,
+      "detail": "0 vs 0"
+    },
+    {
+      "check": "double count m=6, g=1: 234*90 + 52*75 = C(6,3)*1248",
+      "ok": true,
+      "detail": "24960 vs 24960"
+    },
+    {
+      "check": "double count m=7, g=0: 234*89 + 52*72 = C(7,3)*702",
+      "ok": true,
+      "detail": "24570 vs 24570"
+    },
+    {
+      "check": "double count m=7, g=1: 234*0 + 52*0 = C(7,3)*0",
+      "ok": true,
+      "detail": "0 vs 0"
+    },
+    {
+      "check": "double count m=8, g=0: 234*0 + 52*0 = C(8,3)*0",
+      "ok": true,
+      "detail": "0 vs 0"
+    },
+    {
+      "check": "double count m=8, g=1: 234*24 + 52*18 = C(8,3)*117",
+      "ok": true,
+      "detail": "6552 vs 6552"
+    },
+    {
+      "check": "double count m=9, g=0: 234*4 + 52*3 = C(9,3)*13",
+      "ok": true,
+      "detail": "1092 vs 1092"
+    },
+    {
+      "check": "double count m=9, g=1: 234*0 + 52*0 = C(9,3)*0",
+      "ok": true,
+      "detail": "0 vs 0"
+    },
+    {
+      "check": "total double count 234*260 + 52*214 = sum_m C(m,3)*N_m",
+      "ok": true,
+      "detail": "71968 vs 71968"
+    },
+    {
+      "check": "claim artifact: cone_triangle = 260",
+      "ok": true,
+      "detail": "260"
+    },
+    {
+      "check": "claim artifact: cone_collinear = 214",
+      "ok": true,
+      "detail": "214"
+    },
+    {
+      "check": "claim artifact: G3 = 0",
+      "ok": true,
+      "detail": "0"
+    },
+    {
+      "check": "claim artifact agrees with the independent census in every field",
+      "ok": true,
+      "detail": "all fields"
+    }
+  ],
+  "failures": [],
+  "verdict": "PASS"
+}

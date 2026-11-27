@@ -1,0 +1,188 @@
+
+== 1. Board verification ==
+PASS  board has exactly 14 non-empty lines (header + 13 lines)  [14]
+PASS  every data row starts with 4 and has 5 tokens
+PASS  board header is '13 13'  [['13', '13']]
+PASS  n = 13 points  [13]
+PASS  number of line rows = 13  [13 rows, header b=13]
+PASS  every line row lists exactly 4 points  [[(4, 13)]]
+PASS  points inside every line are distinct
+PASS  all point labels are in 0..12
+PASS  the 13 lines are pairwise distinct  [13 distinct]
+PASS  every point lies on exactly 4 lines  [[(0, 4), (1, 4), (2, 4), (3, 4), (4, 4), (5, 4), (6, 4), (7, 4), (8, 4), (9, 4), (10, 4), (11, 4), (12, 4)]]
+PASS  every pair of points lies on exactly one line  [78 pairs of C(13,2)=78]
+PASS  every pair of lines meets in exactly one point  [{1: 78}]
+PASS  explicit model: the 13 coordinates are 13 distinct projective points  [[(0, (1, 0, 0)), (1, (0, 1, 0)), (2, (1, 1, 0)), (3, (1, 2, 0)), (4, (0, 0, 1)), (5, (1, 0, 1)), (6, (2, 0, 1)), (7, (0, 1, 1)), (8, (1, 1, 1)), (9, (2, 1, 1)), (10, (0, 2, 1)), (11, (1, 2, 1)), (12, (2, 2, 1))]]
+PASS  explicit model: exactly 13 projective lines of 4 points  [[4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]]
+PASS  explicit F_3^3 model reproduces exactly the 13 board lines  [mismatched lines: []]
+
+== 2. Exhaustive safety census ==
+PASS  total number of subsets tested is 2**13 = 8192  [8192]
+PASS  k=0: safe count 1 equals claim 1  [1 vs 1]
+PASS  k=1: safe count 13 equals claim 13  [13 vs 13]
+PASS  k=2: safe count 78 equals claim 78  [78 vs 78]
+PASS  k=3: safe count 286 equals claim 286  [286 vs 286]
+PASS  k=4: safe count 702 equals claim 702  [702 vs 702]
+PASS  k=5: safe count 1170 equals claim 1170  [1170 vs 1170]
+PASS  k=6: safe count 1248 equals claim 1248  [1248 vs 1248]
+PASS  k=7: safe count 702 equals claim 702  [702 vs 702]
+PASS  k=8: safe count 117 equals claim 117  [117 vs 117]
+PASS  k=9: safe count 13 equals claim 13  [13 vs 13]
+PASS  k=10: no safe sets (max safe size is 9)  [0]
+PASS  k=11: no safe sets (max safe size is 9)  [0]
+PASS  k=12: no safe sets (max safe size is 9)  [0]
+PASS  k=13: no safe sets (max safe size is 9)  [0]
+PASS  no safe 10-set exists (hence max safe size = 9)  [0]
+PASS  total safe sets 4330  [4330 vs 4330]
+PASS  sum of per-size counts equals total  [4330]
+PASS  all 9-sets are exactly the complements of the 13 lines  [13 nine-sets]
+PASS  all 8-sets are exactly 'line complement minus one point' (13*9=117)  [117 eight-sets, expected 117]
+PASS  every line complement is safe
+PASS  every line itself is unsafe (4 points on a line)
+PASS  the 13 unsafe 4-sets are exactly the 13 lines
+PASS  k=4 count = C(13,4) - 13  [702 vs 702]
+PASS  k=5 count = C(13,5) - 13*9  [1170 vs 1170]
+PASS  k=6 count = C(13,6) - 13*C(9,2)  [1248 vs 1248]
+PASS  k=7 count = C(13,7) - 13*C(9,3) + C(13,2)  [702 vs 702]
+PASS  DFS from the empty set enumerates exactly the same safe sets  [4330 sets]
+
+== 3. Full Grundy DP ==
+PASS  Grundy values computed for every safe position
+PASS  only Grundy values 0 and 1 occur  [[0, 1]]
+PASS  k=0: all positions have G=1  [distribution {1: 1}]
+PASS  k=1: all positions have G=0  [distribution {0: 13}]
+PASS  k=2: all positions have G=1  [distribution {1: 78}]
+PASS  k=3: all positions have G=0  [distribution {0: 286}]
+PASS  k=4: all positions have G=1  [distribution {1: 702}]
+PASS  k=5: all positions have G=0  [distribution {0: 1170}]
+PASS  k=6: all positions have G=1  [distribution {1: 1248}]
+PASS  k=7: all positions have G=0  [distribution {0: 702}]
+PASS  k=8: all positions have G=1  [distribution {1: 117}]
+PASS  k=9: all positions have G=0  [distribution {0: 13}]
+PASS  G=0 count 2184  [2184 vs 2184]
+PASS  G=1 count 2146  [2146 vs 2146]
+PASS  G0 + G1 = 4330
+
+-- option statistics / mex chain --
+k= 0 positions=    1 option-counts={13: 1} option-G-sets={(0,): 1}
+k= 1 positions=   13 option-counts={12: 13} option-G-sets={(1,): 13}
+k= 2 positions=   78 option-counts={11: 78} option-G-sets={(0,): 78}
+k= 3 positions=  286 option-counts={9: 52, 10: 234} option-G-sets={(1,): 286}
+k= 4 positions=  702 option-counts={8: 468, 9: 234} option-G-sets={(0,): 702}
+k= 5 positions= 1170 option-counts={6: 702, 7: 468} option-G-sets={(1,): 1170}
+k= 6 positions= 1248 option-counts={3: 234, 4: 936, 6: 78} option-G-sets={(0,): 1248}
+k= 7 positions=  702 option-counts={0: 234, 2: 468} option-G-sets={(1,): 468, (): 234}
+k= 8 positions=  117 option-counts={1: 117} option-G-sets={(0,): 117}
+k= 9 positions=   13 option-counts={0: 13} option-G-sets={(): 13}
+PASS  mex chain k=0: every option has G=0 (so mex is 1)  [{(0,): 1}]
+PASS  mex chain k=1: every option has G=1 (so mex is 0)  [{(1,): 13}]
+PASS  mex chain k=2: every option has G=0 (so mex is 1)  [{(0,): 78}]
+PASS  mex chain k=3: every option has G=1 (so mex is 0)  [{(1,): 286}]
+PASS  mex chain k=4: every option has G=0 (so mex is 1)  [{(0,): 702}]
+PASS  mex chain k=5: every option has G=1 (so mex is 0)  [{(1,): 1170}]
+PASS  mex chain k=6: every option has G=0 (so mex is 1)  [{(0,): 1248}]
+PASS  mex chain k=8: every option has G=0 (so mex is 1)  [{(0,): 117}]
+PASS  mex chain k=7: 234 terminal positions (mex of empty set = 0) and 468 with both options of G=1 (mex {1} = 0); all G=0  [{(1,): 468, (): 234}]
+PASS  mex chain k=9: no options (terminal), G=0  [{(): 13}]
+PASS  terminal positions: 234 of size 7 and 13 of size 9 (247 total)  [{7: 234, 9: 13}]
+PASS  no terminal positions of size <= 6 or of size 8
+PASS  terminal 9-sets are exactly the complements of the 13 lines
+PASS  every safe 8-set has exactly one legal move  [{1: 117}]
+PASS  the 234 Pasch 6-sets are exactly the complements of the terminal 7-sets  [234 Pasch sets]
+PASS  all 234 terminal 7-sets have G=0
+PASS  the 468 non-terminal 7-sets each have exactly 2 moves, all G=1
+PASS  incidence double count k=0: sum of move counts = (k+1)*N_(k+1)  [13 vs 13]
+PASS  incidence double count k=1: sum of move counts = (k+1)*N_(k+1)  [156 vs 156]
+PASS  incidence double count k=2: sum of move counts = (k+1)*N_(k+1)  [858 vs 858]
+PASS  incidence double count k=3: sum of move counts = (k+1)*N_(k+1)  [2808 vs 2808]
+PASS  incidence double count k=4: sum of move counts = (k+1)*N_(k+1)  [5850 vs 5850]
+PASS  incidence double count k=5: sum of move counts = (k+1)*N_(k+1)  [7488 vs 7488]
+PASS  incidence double count k=6: sum of move counts = (k+1)*N_(k+1)  [4914 vs 4914]
+PASS  incidence double count k=7: sum of move counts = (k+1)*N_(k+1)  [936 vs 936]
+PASS  incidence double count k=8: sum of move counts = (k+1)*N_(k+1)  [117 vs 117]
+PASS  234 4-line general-position sets, bijective to the Pasch 6-sets  [234 line sets, 234 point sets]
+PASS  top-down recursion reproduces every bottom-up Grundy value  [0 mismatches]
+
+== 4. Three-point layer (3-caps) ==
+PASS  there are C(13,3)=286 three-point sets  [286]
+PASS  every three-point set is safe (a line holds 4 points)
+PASS  a three-point set lies on at most one line  [[]]
+PASS  collinear triples = 52  [52]
+PASS  non-collinear triples (triangles) = 234  [234]
+PASS  collinear + triangles = 286
+PASS  every three-point set has G=0  [[0]]
+PASS  terminal 7-sets are exactly 'triangle + free 4-arc' (one per triangle)  [234 distinct terminal 7-sets]
+PASS  for every triangle the 4 free points form a cap (no 3 collinear)  [0 failures]
+
+== 5. Cones, T/U tables and double counting ==
+PASS  {0,1,4} is non-collinear (a triangle)
+PASS  {0,1,2} is collinear
+PASS  G({0,1,4}) = 0  [0]
+PASS  G({0,1,2}) = 0  [0]
+PASS  triangle {0,1,4} cone has 260 positions  [260 vs 260]
+PASS  collinear {0,1,2} cone has 214 positions  [214 vs 214]
+PASS  triangle cone size/G histogram equals the claimed T table  [computed {(3, 0): 1, (4, 1): 10, (5, 0): 42, (6, 1): 90, (7, 0): 89, (8, 1): 24, (9, 0): 4}]
+PASS  collinear cone size/G histogram equals the claimed U table  [computed {(3, 0): 1, (4, 1): 9, (5, 0): 36, (6, 1): 75, (7, 0): 72, (8, 1): 18, (9, 0): 3}]
+PASS  all 234 triangles have the same cone size/G histogram
+PASS  all 52 collinear triples have the same cone size/G histogram
+PASS  DFS cone enumeration for {0,1,4} matches the filter census  [260 positions]
+PASS  DFS cone enumeration for {0,1,2} matches the filter census  [214 positions]
+PASS  cone-local DP on {0,1,4} equals the global DP on all 260 positions
+PASS  cone-local DP on {0,1,2} equals the global DP on all 214 positions
+PASS  T_m table matches the claim  [computed {3: {0: 1}, 4: {1: 10}, 5: {0: 42}, 6: {1: 90}, 7: {0: 89}, 8: {1: 24}, 9: {0: 4}}]
+PASS  U_m table matches the claim  [computed {3: {0: 1}, 4: {1: 9}, 5: {0: 36}, 6: {1: 75}, 7: {0: 72}, 8: {1: 18}, 9: {0: 3}}]
+PASS  sum over m of T_m = 260
+PASS  sum over m of U_m = 214
+
+-- double-count table: 234*T_m(g) + 52*U_m(g) = C(m,3)*N_m(g) --
+PASS  double count m=3, g=0: 234*1 + 52*1 = C(3,3)*286  [286 vs 286]
+m=3 g=0: T=  1 U=  1 LHS=  286  C(m,3)= 1 N= 286 RHS=  286
+PASS  double count m=3, g=1: 234*0 + 52*0 = C(3,3)*0  [0 vs 0]
+m=3 g=1: T=  0 U=  0 LHS=    0  C(m,3)= 1 N=   0 RHS=    0
+PASS  double count m=4, g=0: 234*0 + 52*0 = C(4,3)*0  [0 vs 0]
+m=4 g=0: T=  0 U=  0 LHS=    0  C(m,3)= 4 N=   0 RHS=    0
+PASS  double count m=4, g=1: 234*10 + 52*9 = C(4,3)*702  [2808 vs 2808]
+m=4 g=1: T= 10 U=  9 LHS= 2808  C(m,3)= 4 N= 702 RHS= 2808
+PASS  double count m=5, g=0: 234*42 + 52*36 = C(5,3)*1170  [11700 vs 11700]
+m=5 g=0: T= 42 U= 36 LHS=11700  C(m,3)=10 N=1170 RHS=11700
+PASS  double count m=5, g=1: 234*0 + 52*0 = C(5,3)*0  [0 vs 0]
+m=5 g=1: T=  0 U=  0 LHS=    0  C(m,3)=10 N=   0 RHS=    0
+PASS  double count m=6, g=0: 234*0 + 52*0 = C(6,3)*0  [0 vs 0]
+m=6 g=0: T=  0 U=  0 LHS=    0  C(m,3)=20 N=   0 RHS=    0
+PASS  double count m=6, g=1: 234*90 + 52*75 = C(6,3)*1248  [24960 vs 24960]
+m=6 g=1: T= 90 U= 75 LHS=24960  C(m,3)=20 N=1248 RHS=24960
+PASS  double count m=7, g=0: 234*89 + 52*72 = C(7,3)*702  [24570 vs 24570]
+m=7 g=0: T= 89 U= 72 LHS=24570  C(m,3)=35 N= 702 RHS=24570
+PASS  double count m=7, g=1: 234*0 + 52*0 = C(7,3)*0  [0 vs 0]
+m=7 g=1: T=  0 U=  0 LHS=    0  C(m,3)=35 N=   0 RHS=    0
+PASS  double count m=8, g=0: 234*0 + 52*0 = C(8,3)*0  [0 vs 0]
+m=8 g=0: T=  0 U=  0 LHS=    0  C(m,3)=56 N=   0 RHS=    0
+PASS  double count m=8, g=1: 234*24 + 52*18 = C(8,3)*117  [6552 vs 6552]
+m=8 g=1: T= 24 U= 18 LHS= 6552  C(m,3)=56 N= 117 RHS= 6552
+PASS  double count m=9, g=0: 234*4 + 52*3 = C(9,3)*13  [1092 vs 1092]
+m=9 g=0: T=  4 U=  3 LHS= 1092  C(m,3)=84 N=  13 RHS= 1092
+PASS  double count m=9, g=1: 234*0 + 52*0 = C(9,3)*0  [0 vs 0]
+m=9 g=1: T=  0 U=  0 LHS=    0  C(m,3)=84 N=   0 RHS=    0
+PASS  total double count 234*260 + 52*214 = sum_m C(m,3)*N_m  [71968 vs 71968]
+PASS  claim artifact: cone_triangle = 260  [260]
+PASS  claim artifact: cone_collinear = 214  [214]
+PASS  claim artifact: G3 = 0  [0]
+PASS  claim artifact agrees with the independent census in every field  [all fields]
+
+== 6. Summary ==
+ k   safe   G  claim match
+ 0      1   1      1  True
+ 1     13   0     13  True
+ 2     78   1     78  True
+ 3    286   0    286  True
+ 4    702   1    702  True
+ 5   1170   0   1170  True
+ 6   1248   1   1248  True
+ 7    702   0    702  True
+ 8    117   1    117  True
+ 9     13   0     13  True
+total 4330 (G0=2184, G1=2146)
+
+132/132 checks passed
+
+Wrote C:\Users\yuubi\ghq\github.com\yuubinnkyoku\kyouen-researches\research\experiments\pg2q3-s3-20261128\independent\verification.json
