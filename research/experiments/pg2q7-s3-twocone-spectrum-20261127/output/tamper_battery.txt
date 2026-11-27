@@ -1,0 +1,7 @@
+Tamper battery against check_gates.py on combined_fset0.json (all must FAIL the gate):
+tamper gval (grundy_tables['10']['0']+=1): detected OK
+tamper lsize (layers_noncoll['7']+=1): detected OK
+tamper anchor (grundy_tables['5']['0']+=1): detected OK
+tamper maximal (maximal_counts['12']+=1): detected OK
+tamper total (total_positions+=1): detected OK
+Good files: combined_fset0.json -> ALL GATES PASS; combined_fset1.json -> ALL GATES PASS
