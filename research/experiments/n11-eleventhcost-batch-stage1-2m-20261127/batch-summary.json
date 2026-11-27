@@ -1,0 +1,500 @@
+{
+ "schema": "n11-eleventhcost-batch-stage1-summary-v1",
+ "class": "1297036696978718720:0",
+ "head_basis": "research/experiments/n11-tenthcost-k01k02-adoption-20261127/output/merged/merged-exact-s5-chain-plus-tenthcost-k01k02-20261127.cache",
+ "head_sha256": "16b340146fe8a01667ae31fc2f0534a8a3977e56b7c701803d621edc23312ef3",
+ "selection_kit": "research/experiments/n11-eleventhcost-class-s5-exclusive-probe-20261127",
+ "declaration": "research/log/2026-11-27-n11-eleventhcost-batch-stage1-sweep-declaration.md",
+ "stage1_2m": {
+  "keys": 46,
+  "unknown": 46,
+  "cold_pairs_node_identical": 46
+ },
+ "escalation_15m": {
+  "rule": "interleaved key order, WIN-stopping: no new key started after a WIN(1)",
+  "attempted": [
+   "k01"
+  ],
+  "resolved": {
+   "k01": {
+    "result": 1,
+    "nodes": 12755963,
+    "cold_pair_node_identical": true
+   }
+  },
+  "suppressed": [
+   "k02",
+   "k03",
+   "k04",
+   "k05",
+   "k06",
+   "k07",
+   "k08",
+   "k09",
+   "k10",
+   "k11",
+   "k12",
+   "k13",
+   "k14",
+   "k15",
+   "k16",
+   "k17",
+   "k18",
+   "k19",
+   "k20",
+   "k21",
+   "k22",
+   "k23",
+   "k24",
+   "k25",
+   "k26",
+   "k27",
+   "k28",
+   "k29",
+   "k30",
+   "k31",
+   "k32",
+   "k33",
+   "k34",
+   "k35",
+   "k36",
+   "k37",
+   "k38",
+   "k39",
+   "k40",
+   "k41",
+   "k42",
+   "k43",
+   "k44",
+   "k45",
+   "k46"
+  ]
+ },
+ "win_stop_fired": true,
+ "overreach_disclosure": "none: escalation stopped immediately after the k01 WIN pair; no suppressed key was run at any higher budget",
+ "predeclaration_disclosure": "k01 2M sanity run executed before wave A (result 0, nodes 2000000, UNKNOWN); the official at2m-k01 pair below is the record run pair",
+ "pillar_status": "single-implementation (Node.js replica jsreplay 84585617) only; k01 WIN requires the C++ second-implementation scrutiny gate and third-implementation corroboration before any adoption; all other 45 keys stay UNKNOWN at 2M",
+ "status_guard": "Scheduling/batch bookkeeping only; NO verdict is consumed or implied. Nodes are bookkeeping, never evidence. The standard 11x11 empty board, the two-stone root {60,27} and its remaining third moves 100/108 remain UNKNOWN; the k01 WIN row is a cache-bookkeeping row, not a class closure, not a root verdict, and transfers nothing.",
+ "per_key": [
+  {
+   "key": "1297036696978718720:64",
+   "at2m": {
+    "legal": 88,
+    "budget": 2000000,
+    "result": 0,
+    "nodes": 2000000
+   },
+   "at15m": {
+    "legal": 88,
+    "budget": 15000000,
+    "result": 1,
+    "nodes": 12755963
+   }
+  },
+  {
+   "key": "1297036696978718720:65536",
+   "at2m": {
+    "legal": 86,
+    "budget": 2000000,
+    "result": 0,
+    "nodes": 2000000
+   }
+  },
+  {
+   "key": "1297036696978718720:67108864",
+   "at2m": {
+    "legal": 87,
+    "budget": 2000000,
+    "result": 0,
+    "nodes": 2000000
+   }
+  },
+  {
+   "key": "1297036696978718720:68719476736",
+   "at2m": {
+    "legal": 89,
+    "budget": 2000000,
+    "result": 0,
+    "nodes": 2000000
+   }
+  },
+  {
+   "key": "1297036696978726912:0",
+   "at2m": {
+    "legal": 87,
+    "budget": 2000000,
+    "result": 0,
+    "nodes": 2000000
+   }
+  },
+  {
+   "key": "1297037796490346496:0",
+   "at2m": {
+    "legal": 89,
+    "budget": 2000000,
+    "result": 0,
+    "nodes": 2000000
+   }
+  },
+  {
+   "key": "5908722715406106624:0",
+   "at2m": {
+    "legal": 89,
+    "budget": 2000000,
+    "result": 0,
+    "nodes": 2000000
+   }
+  },
+  {
+   "key": "1152921504607895808:553648128",
+   "at2m": {
+    "legal": 96,
+    "budget": 2000000,
+    "result": 0,
+    "nodes": 2000000
+   }
+  },
+  {
+   "key": "1297036696978718720:16",
+   "at2m": {
+    "legal": 99,
+    "budget": 2000000,
+    "result": 0,
+    "nodes": 2000000
+   }
+  },
+  {
+   "key": "1297036696978718720:128",
+   "at2m": {
+    "legal": 98,
+    "budget": 2000000,
+    "result": 0,
+    "nodes": 2000000
+   }
+  },
+  {
+   "key": "1297036696978718724:0",
+   "at2m": {
+    "legal": 98,
+    "budget": 2000000,
+    "result": 0,
+    "nodes": 2000000
+   }
+  },
+  {
+   "key": "1297036696978718752:0",
+   "at2m": {
+    "legal": 97,
+    "budget": 2000000,
+    "result": 0,
+    "nodes": 2000000
+   }
+  },
+  {
+   "key": "1297036696978718848:0",
+   "at2m": {
+    "legal": 91,
+    "budget": 2000000,
+    "result": 0,
+    "nodes": 2000000
+   }
+  },
+  {
+   "key": "1297036696978722816:0",
+   "at2m": {
+    "legal": 99,
+    "budget": 2000000,
+    "result": 0,
+    "nodes": 2000000
+   }
+  },
+  {
+   "key": "1297036696978751488:0",
+   "at2m": {
+    "legal": 94,
+    "budget": 2000000,
+    "result": 0,
+    "nodes": 2000000
+   }
+  },
+  {
+   "key": "1297036696978784256:0",
+   "at2m": {
+    "legal": 97,
+    "budget": 2000000,
+    "result": 0,
+    "nodes": 2000000
+   }
+  },
+  {
+   "key": "1297036696995495936:0",
+   "at2m": {
+    "legal": 91,
+    "budget": 2000000,
+    "result": 0,
+    "nodes": 2000000
+   }
+  },
+  {
+   "key": "1297036697045827584:0",
+   "at2m": {
+    "legal": 96,
+    "budget": 2000000,
+    "result": 0,
+    "nodes": 2000000
+   }
+  },
+  {
+   "key": "1297036697247154176:0",
+   "at2m": {
+    "legal": 94,
+    "budget": 2000000,
+    "result": 0,
+    "nodes": 2000000
+   }
+  },
+  {
+   "key": "1297036698052460544:0",
+   "at2m": {
+    "legal": 94,
+    "budget": 2000000,
+    "result": 0,
+    "nodes": 2000000
+   }
+  },
+  {
+   "key": "1297036765698195456:0",
+   "at2m": {
+    "legal": 95,
+    "budget": 2000000,
+    "result": 0,
+    "nodes": 2000000
+   }
+  },
+  {
+   "key": "1297177434467074048:0",
+   "at2m": {
+    "legal": 94,
+    "budget": 2000000,
+    "result": 0,
+    "nodes": 2000000
+   }
+  },
+  {
+   "key": "1297318171955429376:0",
+   "at2m": {
+    "legal": 96,
+    "budget": 2000000,
+    "result": 0,
+    "nodes": 2000000
+   }
+  },
+  {
+   "key": "1297599646932140032:0",
+   "at2m": {
+    "legal": 94,
+    "budget": 2000000,
+    "result": 0,
+    "nodes": 2000000
+   }
+  },
+  {
+   "key": "1306043896233459712:0",
+   "at2m": {
+    "legal": 96,
+    "budget": 2000000,
+    "result": 0,
+    "nodes": 2000000
+   }
+  },
+  {
+   "key": "1369094291016646656:0",
+   "at2m": {
+    "legal": 91,
+    "budget": 2000000,
+    "result": 0,
+    "nodes": 2000000
+   }
+  },
+  {
+   "key": "1585267073130430464:0",
+   "at2m": {
+    "legal": 99,
+    "budget": 2000000,
+    "result": 0,
+    "nodes": 2000000
+   }
+  },
+  {
+   "key": "1873497449282142208:0",
+   "at2m": {
+    "legal": 94,
+    "budget": 2000000,
+    "result": 0,
+    "nodes": 2000000
+   }
+  },
+  {
+   "key": "3602879706192412672:0",
+   "at2m": {
+    "legal": 94,
+    "budget": 2000000,
+    "result": 0,
+    "nodes": 2000000
+   }
+  },
+  {
+   "key": "10376293541465821184:131072",
+   "at2m": {
+    "legal": 95,
+    "budget": 2000000,
+    "result": 0,
+    "nodes": 2000000
+   }
+  },
+  {
+   "key": "10376293541465821184:33554432",
+   "at2m": {
+    "legal": 96,
+    "budget": 2000000,
+    "result": 0,
+    "nodes": 2000000
+   }
+  },
+  {
+   "key": "10376293541465821184:67108864",
+   "at2m": {
+    "legal": 98,
+    "budget": 2000000,
+    "result": 0,
+    "nodes": 2000000
+   }
+  },
+  {
+   "key": "1152921513197830400:536870912",
+   "at2m": {
+    "legal": 103,
+    "budget": 2000000,
+    "result": 0,
+    "nodes": 2000000
+   }
+  },
+  {
+   "key": "1224979098645823744:536870912",
+   "at2m": {
+    "legal": 101,
+    "budget": 2000000,
+    "result": 0,
+    "nodes": 2000000
+   }
+  },
+  {
+   "key": "1297036692683751680:536870912",
+   "at2m": {
+    "legal": 101,
+    "budget": 2000000,
+    "result": 0,
+    "nodes": 2000000
+   }
+  },
+  {
+   "key": "1297036696978718720:8",
+   "at2m": {
+    "legal": 104,
+    "budget": 2000000,
+    "result": 0,
+    "nodes": 2000000
+   }
+  },
+  {
+   "key": "1297036696978718720:32",
+   "at2m": {
+    "legal": 101,
+    "budget": 2000000,
+    "result": 0,
+    "nodes": 2000000
+   }
+  },
+  {
+   "key": "1297036696978718720:16384",
+   "at2m": {
+    "legal": 102,
+    "budget": 2000000,
+    "result": 0,
+    "nodes": 2000000
+   }
+  },
+  {
+   "key": "1297036696978718720:131072",
+   "at2m": {
+    "legal": 101,
+    "budget": 2000000,
+    "result": 0,
+    "nodes": 2000000
+   }
+  },
+  {
+   "key": "1297036696978718720:16777216",
+   "at2m": {
+    "legal": 103,
+    "budget": 2000000,
+    "result": 0,
+    "nodes": 2000000
+   }
+  },
+  {
+   "key": "1297036696978718720:134217728",
+   "at2m": {
+    "legal": 105,
+    "budget": 2000000,
+    "result": 0,
+    "nodes": 2000000
+   }
+  },
+  {
+   "key": "1297036696978718721:0",
+   "at2m": {
+    "legal": 101,
+    "budget": 2000000,
+    "result": 0,
+    "nodes": 2000000
+   }
+  },
+  {
+   "key": "1297036696978718976:0",
+   "at2m": {
+    "legal": 100,
+    "budget": 2000000,
+    "result": 0,
+    "nodes": 2000000
+   }
+  },
+  {
+   "key": "1297036971856625664:0",
+   "at2m": {
+    "legal": 101,
+    "budget": 2000000,
+    "result": 0,
+    "nodes": 2000000
+   }
+  },
+  {
+   "key": "10376293541465821184:65536",
+   "at2m": {
+    "legal": 100,
+    "budget": 2000000,
+    "result": 0,
+    "nodes": 2000000
+   }
+  },
+  {
+   "key": "10376293541465821184:268435456",
+   "at2m": {
+    "legal": 105,
+    "budget": 2000000,
+    "result": 0,
+    "nodes": 2000000
+   }
+  }
+ ]
+}
