@@ -1,0 +1,252 @@
+{
+ "gates": {
+  "G0:anchors": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "G0:gate-source": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "G0:head-pin": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "G0:schema": {
+   "detail": "n11-ninthcost-4loss-cppgate-rows-v1",
+   "status": "PASS"
+  },
+  "G0:target-expected:k01": {
+   "detail": "89,15000000,2,2163556",
+   "status": "PASS"
+  },
+  "G0:target-expected:k03": {
+   "detail": "86,15000000,2,7753840",
+   "status": "PASS"
+  },
+  "G0:target-expected:k05": {
+   "detail": "91,15000000,2,8687533",
+   "status": "PASS"
+  },
+  "G0:target-expected:k06": {
+   "detail": "99,15000000,2,8130387",
+   "status": "PASS"
+  },
+  "G1:anchor-af039:p1": {
+   "detail": "replay_rows=1 done=True header=True",
+   "status": "PASS"
+  },
+  "G1:anchor-af039:p2": {
+   "detail": "replay_rows=1 done=True header=True",
+   "status": "PASS"
+  },
+  "G1:anchor-aj001:p1": {
+   "detail": "replay_rows=1 done=True header=True",
+   "status": "PASS"
+  },
+  "G1:anchor-aj001:p2": {
+   "detail": "replay_rows=1 done=True header=True",
+   "status": "PASS"
+  },
+  "G1:anchor-at2m:p1": {
+   "detail": "replay_rows=1 done=True header=True",
+   "status": "PASS"
+  },
+  "G1:anchor-at2m:p2": {
+   "detail": "replay_rows=1 done=True header=True",
+   "status": "PASS"
+  },
+  "G1:k01:p1": {
+   "detail": "replay_rows=1 done=True header=True",
+   "status": "PASS"
+  },
+  "G1:k01:p2": {
+   "detail": "replay_rows=1 done=True header=True",
+   "status": "PASS"
+  },
+  "G1:k03:p1": {
+   "detail": "replay_rows=1 done=True header=True",
+   "status": "PASS"
+  },
+  "G1:k03:p2": {
+   "detail": "replay_rows=1 done=True header=True",
+   "status": "PASS"
+  },
+  "G1:k05:p1": {
+   "detail": "replay_rows=1 done=True header=True",
+   "status": "PASS"
+  },
+  "G1:k05:p2": {
+   "detail": "replay_rows=1 done=True header=True",
+   "status": "PASS"
+  },
+  "G1:k06:p1": {
+   "detail": "replay_rows=1 done=True header=True",
+   "status": "PASS"
+  },
+  "G1:k06:p2": {
+   "detail": "replay_rows=1 done=True header=True",
+   "status": "PASS"
+  },
+  "G2:anchor-af039": {
+   "detail": "p1=0,5,89,0,30000000,2,19234232,38,1152921504607895681,68719476736 p2=0,5,89,0,30000000,2,19234232,38,1152921504607895681,68719476736",
+   "status": "PASS"
+  },
+  "G2:anchor-aj001": {
+   "detail": "p1=0,5,84,0,30000000,2,5156075,10,1152922604269469696,65536 p2=0,5,84,0,30000000,2,5156075,10,1152922604269469696,65536",
+   "status": "PASS"
+  },
+  "G2:anchor-at2m": {
+   "detail": "p1=0,5,98,0,2000000,0,2000000,3,1152921504606851072,536870946 p2=0,5,98,0,2000000,0,2000000,3,1152921504606851072,536870946",
+   "status": "PASS"
+  },
+  "G2:k01": {
+   "detail": "p1=0,5,89,0,15000000,2,2163556,4,1297036692683751424,134283264 p2=0,5,89,0,15000000,2,2163556,4,1297036692683751424,134283264",
+   "status": "PASS"
+  },
+  "G2:k03": {
+   "detail": "p1=0,5,86,0,15000000,2,7753840,15,1297036761403228160,134217728 p2=0,5,86,0,15000000,2,7753840,15,1297036761403228160,134217728",
+   "status": "PASS"
+  },
+  "G2:k05": {
+   "detail": "p1=0,5,91,0,15000000,2,8687533,17,1152921504624672768,536903680 p2=0,5,91,0,15000000,2,8687533,18,1152921504624672768,536903680",
+   "status": "PASS"
+  },
+  "G2:k06": {
+   "detail": "p1=0,5,99,0,15000000,2,8130387,16,1152923703764321280,68719476736 p2=0,5,99,0,15000000,2,8130387,15,1152923703764321280,68719476736",
+   "status": "PASS"
+  },
+  "G3:anchor-af039": {
+   "detail": "observed 89,30000000,2,19234232 expected 89,30000000,2,19234232",
+   "status": "PASS"
+  },
+  "G3:anchor-aj001": {
+   "detail": "observed 84,30000000,2,5156075 expected 84,30000000,2,5156075",
+   "status": "PASS"
+  },
+  "G3:anchor-at2m": {
+   "detail": "observed 98,2000000,0,2000000 expected 98,2000000,0,2000000",
+   "status": "PASS"
+  },
+  "G3:k01": {
+   "detail": "observed 89,15000000,2,2163556 expected 89,15000000,2,2163556",
+   "status": "PASS"
+  },
+  "G3:k01:key-pair": {
+   "detail": "1297036692683751424:134283264",
+   "status": "PASS"
+  },
+  "G3:k03": {
+   "detail": "observed 86,15000000,2,7753840 expected 86,15000000,2,7753840",
+   "status": "PASS"
+  },
+  "G3:k03:key-pair": {
+   "detail": "1297036761403228160:134217728",
+   "status": "PASS"
+  },
+  "G3:k05": {
+   "detail": "observed 91,15000000,2,8687533 expected 91,15000000,2,8687533",
+   "status": "PASS"
+  },
+  "G3:k05:key-pair": {
+   "detail": "1152921504624672768:536903680",
+   "status": "PASS"
+  },
+  "G3:k06": {
+   "detail": "observed 99,15000000,2,8130387 expected 99,15000000,2,8130387",
+   "status": "PASS"
+  },
+  "G3:k06:key-pair": {
+   "detail": "1152923703764321280:68719476736",
+   "status": "PASS"
+  },
+  "G4": {
+   "detail": "passes=7/7 bad=0",
+   "status": "PASS"
+  },
+  "G5:anchor-af039": {
+   "detail": "e51a3c9de08c62a54d80547c520876af4245394d05e37bbebf01d74204f64691",
+   "status": "PASS"
+  },
+  "G5:anchor-aj001": {
+   "detail": "2f6daea5ca3b3fe6b7713c8d450af3f3c9f203acacb8a1340255d8e8f656496c",
+   "status": "PASS"
+  },
+  "G5:anchor-at2m": {
+   "detail": "ecc0299b8142abde201fcc40ea9666dac7368d0888d0600abc717af66ddfe348",
+   "status": "PASS"
+  },
+  "G5:k01": {
+   "detail": "5768229a7bc3b5e719b57456e710b4250990f42f75336018eacb4fe3484400c7",
+   "status": "PASS"
+  },
+  "G5:k03": {
+   "detail": "3b33982dea100bcb4f17229b35526052b3a349b4e1a2981701a087c8234385cc",
+   "status": "PASS"
+  },
+  "G5:k05": {
+   "detail": "ed29fa0fe1fcebad260474c42ff473f7b95be1b4a5b1c77a60222e813e72fd67",
+   "status": "PASS"
+  },
+  "G5:k06": {
+   "detail": "ed853a05bbee7734d30abe89dfaae1b6f4d0329904741ec4b964c060d0c53cac",
+   "status": "PASS"
+  },
+  "G6:freshness-absent": {
+   "detail": "present=[]",
+   "status": "PASS"
+  },
+  "G6:head-census": {
+   "detail": "rows=6875 WIN=203 LOSS=6672",
+   "status": "PASS"
+  },
+  "G6:head-env": {
+   "detail": "N9_HEAD must point at the canonical head cache",
+   "status": "PASS"
+  },
+  "G6:head-sha": {
+   "detail": "0935c94c03a9a3fbdf2a55aca90bb986a019dfd26c0097ab2c75709d590e9ca4",
+   "status": "PASS"
+  }
+ },
+ "overall": "PASS",
+ "part": "ninth-cost 4 LOSS row C++ scrutiny gate",
+ "rows": {
+  "anchor-af039": {
+   "budget": "30000000",
+   "expected": "89,30000000,2,19234232",
+   "observed_p1": "89,30000000,2,19234232"
+  },
+  "anchor-aj001": {
+   "budget": "30000000",
+   "expected": "84,30000000,2,5156075",
+   "observed_p1": "84,30000000,2,5156075"
+  },
+  "anchor-at2m": {
+   "budget": "2000000",
+   "expected": "98,2000000,0,2000000",
+   "observed_p1": "98,2000000,0,2000000"
+  },
+  "k01": {
+   "budget": "15000000",
+   "expected": "89,15000000,2,2163556",
+   "observed_p1": "89,15000000,2,2163556"
+  },
+  "k03": {
+   "budget": "15000000",
+   "expected": "86,15000000,2,7753840",
+   "observed_p1": "86,15000000,2,7753840"
+  },
+  "k05": {
+   "budget": "15000000",
+   "expected": "91,15000000,2,8687533",
+   "observed_p1": "91,15000000,2,8687533"
+  },
+  "k06": {
+   "budget": "15000000",
+   "expected": "99,15000000,2,8130387",
+   "observed_p1": "99,15000000,2,8130387"
+  }
+ },
+ "schema": "n11-ninthcost-4loss-cppgate-audit-v1"
+}
