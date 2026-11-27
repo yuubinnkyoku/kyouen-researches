@@ -748,3 +748,28 @@ seven-row-q4-w69-two-edit-negative-20261127（高速レーン・単一オーナ�
    ログの整合）は `research/log/2026-11-27-seven-row-q4-m69-two-edit-sweep.md` 参照。
    次の実行可能課題: 幅69 witness の seeded SA 探索・3-for-3 近傍・
    holes幅70への延伸。
+
+## 追記 (2026-11-27 幅70 holes two-edit 延伸負 — 全199基底)
+
+seven-row-q4-w70-holes-two-edit-20261127（高速レーン・単一オーナー宣言
+`research/log/2026-11-27-seven-row-q4-w70-holes-single-owner.md` の下で
+publish-then-execute により実施）:
+
+1. **w70 holes 2-for-2 全199基底完全掃引**: 448,782,213 row-capacity 候補 /
+   48,971,845 safe / **0 safe maximal row-deficient**（holes は fresh の
+   真上位集合のため、同じ基底の幅70 fresh 2-for-2 負も従属する。
+   2全走 199/199 一致・決定性検証済み）。
+2. **較正**: 出版済み enum エンジン byte-clone（sha256 `ab58c34a...`）で
+   pinned base53 7×57 の再現、幅68 witness 基底の出版 stats_69 との一致、
+   陽性対照（幅68で3基底がちょうど3件・出版の唯一の幅68 witness と同一）、
+   **出版済み幅69 holes 記録 199/199 の完全コールド再現**（総計
+   435,695,973/45,368,697/0 も再現）、tamper 2件 fail-closed、
+   all_pass true（output/w70/calibration.json・機械生成）。
+3. **D4鏡像×並進census（幅70目標・解析的交点計算）**: 並進被覆は最大幅67の
+   まま、幅70の純並進 witness なし（0 hits）。
+4. **主張**: **M_{7,4} ∈ [69, 1929] 不変**・csv 不更新。幅69/70全体の不在
+   主張はしない（既知基底の局所近傍完全負の記録）。正直な開示（環境reset
+   2回・初版driverのwall-budget bugとその無影響検証）は
+   `research/log/2026-11-27-seven-row-q4-w70-holes-extension-negative.md` 参照。
+   次の実行可能課題: 幅69 witness の seeded SA 探索・3-for-3 近傍・
+   frontier breadth 拡大。
