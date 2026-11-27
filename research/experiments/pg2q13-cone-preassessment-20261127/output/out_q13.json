@@ -1,0 +1,44 @@
+{
+ "board": "PG(2,13)",
+ "v": 183,
+ "q": 13,
+ "N_3": 938119,
+ "T_m_cone_layers": {
+  "3": 1,
+  "4": 144,
+  "5": 7920,
+  "6": 192720,
+  "7": 1942560
+ },
+ "N_m_arcs": {
+  "4": 33772284,
+  "5": 742990248,
+  "6": 9039714684,
+  "7": 52067212704
+ },
+ "triangles": [
+  "[0, 169, 182]",
+  "[5, 172, 182]"
+ ],
+ "T_m_second_triangle": {
+  "3": 1,
+  "4": 144,
+  "5": 7920,
+  "6": 192720,
+  "7": 1942560
+ },
+ "gates": {
+  "G1_board": true,
+  "G1_pair_line_unique": true,
+  "G4_two_triangles": true,
+  "G2_T4": true,
+  "G3_divisibility": true,
+  "all": true
+ },
+ "timings_s": [
+  7.2,
+  7.6
+ ],
+ "layer_growth_6_to_7": 10.079701120797012,
+ "note": "layers m<=7 complete enumeration; m>=8 not attempted (estimated >=10^7 states/layer; full cone ~10^7-10^8 => pure-Python single-command infeasible; C/bitset port needed for full PG(2,13) s=2 spectrum)"
+}
