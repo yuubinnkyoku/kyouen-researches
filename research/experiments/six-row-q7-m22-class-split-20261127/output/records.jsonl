@@ -1,6 +1,0 @@
-{"id": "calib-6x20-class2", "board": [6, 20, 7], "class": [2], "krow": [], "minpos": null, "result": "SAT", "conflicts": 641859, "cap_s": 280, "note": "positive control, published value reproduced exact"}
-{"id": "m22-c2k5p7-run1", "board": [6, 22, 7], "class": [2], "krow": ["2:5"], "minpos": 7, "result": "SAT", "conflicts": 2050424, "cap_s": 265, "witness": "w67_22.json", "note": "official run 1"}
-{"id": "m22-c2k5p7-run2", "board": [6, 22, 7], "class": [2], "krow": ["2:5"], "minpos": 7, "result": "SAT", "conflicts": 2050424, "cap_s": 265, "note": "determinism rerun, model lines identical to run1"}
-{"id": "m23-c2k5p6", "board": [6, 23, 7], "class": [2], "krow": ["2:5"], "minpos": 6, "result": "INDET", "conflicts": 4968075, "cap_s": 262, "note": "honest negative, not absence (extension probe beyond declared 6x22 target, disclosed)"}
-{"id": "m23-c2k5p7", "board": [6, 23, 7], "class": [2], "krow": ["2:5"], "minpos": 7, "result": "INDET", "conflicts": 5055896, "cap_s": 262, "note": "honest negative; pre-reset sibling observation 5,076,037@265s same trajectory"}
-{"id": "m23-c2k5p8", "board": [6, 23, 7], "class": [2], "krow": ["2:5"], "minpos": 8, "result": "INDET", "conflicts": 4943522, "cap_s": 262, "note": "honest negative, near-uniform frontier resistance"}

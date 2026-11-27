@@ -73,33 +73,6 @@ artifacts:
 - path: research/log/2026-11-25-rooted-core-seven-pure-triple-five-edges-run-log.md
   role: log
   note: 公式6走のbyte一致（PYTHONHASHSEED/env混在・サンドボックス障害後の別環境再現を含む）と検証電池5/5 PASSの実行記録
-- path: research/experiments/rooted-core-six-graph-full-20261127/proof.md
-  role: proof
-  note: 6点・二点辺を含む最初の完全族（純二点辺clutter全体=グラフ核544型）の全長周期認証・開始500・最小周期34
-- path: research/experiments/rooted-core-six-graph-full-20261127/solve_graph.py
-  role: source
-  note: 公式joint solver。pinned engine + K0682表再利用・7点kit solve_coreの構造適応
-- path: research/experiments/rooted-core-six-graph-full-20261127/verify_independent.py
-  role: verifier
-  note: engine・K0682表不使用の独立第二実装。閉包663状態・544レコードを0..1069で全再計算し全値一致・2走byte同一
-- path: research/experiments/rooted-core-six-graph-full-20261127/verify_direct.py
-  role: verifier
-  note: 原始ラベル付き直接ゲーム木（再帰式・道表不使用）で層化標本76状態×L=0..8の684比較が全一致
-- path: research/experiments/rooted-core-six-graph-full-20261127/verify_enum.py
-  role: verifier
-  note: canonical列挙544型=Burnside軌道数=orbit-stabilizer被覆32768の三重導出
-- path: research/experiments/rooted-core-six-graph-full-20261127/verify_tamper.py
-  role: verifier
-  note: fail-closed改変電池。control PASS・T1値改変/T2 phantom/T3 certified反転/T4窓主張改変が全部検出
-- path: research/experiments/rooted-core-six-graph-full-20261127/output/audit.json
-  role: certificate
-  note: 6点グラフ核544状態の全0..1069整数値と窓証明書。jointly_certified=true・共同開始500・prefix上Grundy最大22
-- path: research/experiments/rooted-core-six-graph-full-20261127/output/crosscheck_seven_point.json
-  role: data
-  note: 出版済み7点≤5本監査の閉包に現れた純二点辺n=6状態102個との全prefix一致（外部交差照合）
-- path: research/log/2026-11-27-rooted-core-six-graph-full.md
-  role: log
-  note: 選定・実行・5軸検証・正直開示（環境reset・検証器shift bugのfail-closed検出・post-hoc実行）
 scope: 任意有限の合法点上のサイズ2・3のclutterと指定根を固定し、その根に長さLの二点禁止道を付ける通常ゲーム。核サイズは無界、核自体はLに依存しない。
 evidence: K0682で5点以下の全6337ラベル付き核・513型を証明。6点純三点辺は高々6本の完全族732型（開始571）を経て、全型（2^20全1048576件・Burnsideで根付き10688型・10688新規閉状態）まで拡張し共同開始637で全長認証。すなわち6点の純三点辺核は全て証明済み。二点辺混在や7点以上の任意核の全称証明・反例は未確定。 7点純三点辺は高々5本の完全族（raw384168件・rooted-core-seven-pure-triple-five-edges-20261125）でも開始571で全長認証済み（新規2604状態・prefix上Grundy最大33）。
 ---
@@ -145,28 +118,10 @@ Burnsideの補題で根付き同型型数は厳密に10688。全10688新規状�
 （二点辺混在族が純三点辺族の全型最大29を超えるGrundy値を生成する最初の実証・観測で全称主張ではない）。
 公式solveは6走（PYTHONHASHSEED=random/1・隔離tree env -i×2 を含む）すべて byte 一致、
 うち2走はサンドボックス障害後の別環境での再現で sha256 も完全一致。
-階層化400状態×長さ0..6の原始subset mex照合（2800検査）・fail-closed改変電池も全検出。 2026-11-27に6点の純二点辺核（グラフ核）の全型（2^15=32768 raw・根付き544型・閉包663状態・K6まで稠密）を全長認証した（rooted-core-six-graph-full-20261127・共同開始500・最小周期34・prefix上Grundy最大22・二点辺を含む核の最初の完全族・7点監査閉包の102状態との全prefix一致・独立第二実装/原始直接実装/Burnside/改変電池の5軸検証）。7点以上のグラフ核・6点の混在核全体は未証明のまま。
+階層化400状態×長さ0..6の原始subset mex照合（2800検査）・fail-closed改変電池も全検出。
 7点の純三点辺でも6本以上は未証明のまま。
 K0682の有限窓定理は候補周期を認証するものであり、認証が必ず成功することは保証しない。
 
 特定の長いprefixで周期が見つからないことだけでは反例にならない。
 反証には、34を周期に持たない最終周期の全称認証や、非周期性・無界性等の証明が必要である。
 K0683により、反例または証明は有限整数点盤の残局にも移せるが、標準全格子盤には直結しない。
-
-## 2026-11-27: 6点グラフ核全型（二点辺を含む初の完全族）
-
-`rooted-core-six-graph-full-20261127` で6頂点の純二点辺clutter全体（根0付き単純グラフ、
-2^15=32768 raw・根付き同型544型・Burnsideとorbit-stabilizerで二重導出）を全長認証した。
-閉包663状態のうち119状態はK0682既知表に一致し、新規544状態は初期型そのもの
-（着手は必ず点数を減らすため中間状態が生じない）。**共同開始500・必要値1069・
-jointly_certified=true・最小最終周期は全544型でちょうど34**（1/2/17への短縮なし）。
-prefix上Grundy最大は22（一意の達成状態 (6,[3,5,6,10,12,18,20,34])・L=159）で、
-純三点辺6点全型の29・7点≤5本族の33を下回る。辺数ヒストグラムは対称単峰
-(1,2,5,13,29,52,76,94,94,76,52,29,13,5,2,1) でK6までの稠密核を含み、
-**二点辺を含む核の完全族としては初めての全長認証**である
-（7点≤5本族の閉包に現れた1379個の二点辺混在状態は着手による退化の副産物で完全族ではなく、
-うち純二点辺のn=6状態102個は本認証と全prefixで一致する）。
-検証は5軸（独立第二実装の全値再計算・原始直接ゲーム木684比較・群論三重導出・
-fail-closed改変電池4件・既出版7点監査との交差照合）。7点以上のグラフ核・
-6点での二点辺+三点辺混在の全体・無界核の全称証明・反例は未解決のまま。
-本項目は有限族の完全な定理でありK0684の予想を閉じない。
