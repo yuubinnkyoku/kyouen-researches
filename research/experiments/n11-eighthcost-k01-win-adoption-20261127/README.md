@@ -30,11 +30,23 @@ Kit layout: scripts/ (maker + pinned merger), output/
 adoption-manifest.json, then merged head + merge-audit-run{1,2,3}.json
 from the run waves).
 
-## Run record
+## Run record (2026-11-27, publish-then-execute per wave A declaration)
 
-PENDING (wave B published; wave C = 3 merger runs on [BASE head,
-increment], expected merged 6,875 rows WIN 203 / LOSS 6,672, any
-non-identity HARD-STOPs the adoption).
+Waves A/B published first (declaration d809f8d3; kit 5f0430a3 with maker
+gates all PASS, 2 runs byte-identical, live C++-gate audit rc=0). Wave C
+(official execution 07:19:09Z): 3 merger runs on [BASE 5b6e77f7,
+increment], all rc=0, byte-identical outputs and audits
+(merge-audit-run{1,2,3}.json all sha256 589617a6...):
+
+**merged head of record = merged-exact-s5-chain-plus-eighthcost-k01-
+20261127.cache, sha256 0935c94c03a9a3fbdf2a55aca90bb986a019dfd26c0097
+ab2c75709d590e9ca4, 6,875 rows WIN 203 / LOSS 6,672** (exactly the
+pre-registered expectation; conflict-free union, dup_elided 0; the k01
+row is present). Wave C commit 62bf0241; fetch-back byte-identical
+(merged cache + 3 audits).
+
+The canonical head of record for all future selections/adoptions
+advances from 5b6e77f7 to **0935c94c** (6,875 rows WIN203/LOSS6672).
 
 ## Scope guards
 
