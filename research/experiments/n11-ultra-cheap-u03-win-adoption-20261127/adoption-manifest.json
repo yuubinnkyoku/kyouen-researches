@@ -1,0 +1,31 @@
+{
+ "schema": "n11-ultra-cheap-u03-win-adoption-manifest-v1",
+ "base": {
+  "path": "merged-exact-s5-chain-plus-ultra-cheap-u02-20261127.cache",
+  "sha256": "82b525777843ecb44c3857b034f7a135284c2587b42dbaa94aa295b01adc7509",
+  "rows": 6892,
+  "win": 210,
+  "loss": 6682
+ },
+ "rows": [
+  {
+   "name": "u03",
+   "key": "1153202979851993088:272",
+   "result": 1,
+   "nodes": 2909040,
+   "class_index": 16371
+  }
+ ],
+ "expected_merged_shape": {
+  "rows": 6893,
+  "win": 211,
+  "loss": 6682
+ },
+ "merger_sha256": "907119610034fb2aebfde012550a4129dfa3b086c6de11194e856747ac74606a",
+ "kits": {
+  "replica": "n11-ultra-cheap-u03-escalation-15m-20261127 (36f0cd2c)",
+  "pillars": "n11-ultra-cheap-u03-win-pillars-20261127 (d6577e97)"
+ },
+ "nodes_total_bookkeeping": 2909040,
+ "status_guard": "adoption bookkeeping only; NO verdict consumed; 11x11 UNKNOWN"
+}
