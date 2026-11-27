@@ -1,0 +1,46 @@
+{
+ "schema": "n11-ultra-cheap-u04-escalation-summary-v1",
+ "part": "ultra-cheap u04 15M escalation (declared in research/log/2026-11-27-n11-ultra-cheap-u04-escalation-declaration.md, commit 236db1b7)",
+ "head_basis": {
+  "sha256_prefix": "c5082866",
+  "rows": 6893,
+  "win": 211,
+  "loss": 6682
+ },
+ "runner": {
+  "name": "jsreplay.js",
+  "sha256": "845856175d3c793a7eb4306f5902ecda3f1c046a8a53e8f34ed375e51febc3df",
+  "mode": "--n=11 --memo=22 --only=5 cold solver per row, no shared TT"
+ },
+ "declared_order": ["u04"],
+ "escalation_15m": {
+  "u04": {
+   "key": "1152921505747697664:1032",
+   "class_index": 23101,
+   "legal": 85,
+   "s5_index": 745184,
+   "result": 1,
+   "nodes": 9149084,
+   "budget": 15000000,
+   "pair_node_identical": true,
+   "pair_byte_identical": true,
+   "status": "WIN(1) resolved at 15M budget (nodes 9,149,084); the last of the four ultra-cheap one-unknown class-completion keys"
+  }
+ },
+ "win_stop_rule": "active but moot (single declared key)",
+ "calibration": {
+  "note": "pre-declaration only; u01 at2m cold run reproducing the published batch raw",
+  "key": "1153485622925590528:0",
+  "result": 0,
+  "nodes": 2000000,
+  "wall_s_published_here": 9,
+  "wall_s_disclosed_in_declaration": 9,
+  "matches_published_at2m_raw": "byte-identical to the published u03 escalation kit cal-u01-at2m.raw (result 0, nodes 2,000,000, forbidden quadruples 95,670, wall_s 9)"
+ },
+ "disclosures": [
+  "declaration published before execution (commit 236db1b7); both escalation runs executed after it",
+  "u04 cold pair is fully byte-identical (replay row and headers identical incl. wall_s 49 on both passes); no other key was run at any budget in this Part (no overreach)",
+  "calibration run (u01 at 2M) was performed before the declaration, is disclosed in the declaration, and is published here as cal-u01-at2m.raw; it is byte-identical to the u03 escalation kit's published calibration raw"
+ ],
+ "status_guard": "batch bookkeeping only; NO verdict consumed; the u04 WIN row is single-implementation (jsreplay replica) and requires the C++ second-implementation scrutiny gate plus a third-implementation corroboration before any adoption; a u04 adoption would additionally require the standing WIN-side flip-census review (class 23101 completion would be Board-verified free_now at adoption time); 11x11 UNKNOWN"
+}
