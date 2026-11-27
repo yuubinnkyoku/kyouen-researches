@@ -44,7 +44,7 @@ A full PG(2,13) s=2 spectrum needs a C/bitset port of the cone DP
 
 ## Files
 
-- scripts/q13_cone_layers.py (sha256 a0f8573d5e000f5c08bd3ed0cc14566dd557e2aad956cc33b56daa67130425f2)
+- scripts/q13_cone_layers.py (sha256 f09034f2aa8ccdfe6a170942b0e48c6cd70a0b5ae2ee7339794d18d4f8ccd5b5)
 - output/out_q13.json (sha256 dc1b79b95bef86463c746e4c28f278edff8928bde4fb0b09f060fd8d2aafa6fc)
 
 Depends on the published board builder in
