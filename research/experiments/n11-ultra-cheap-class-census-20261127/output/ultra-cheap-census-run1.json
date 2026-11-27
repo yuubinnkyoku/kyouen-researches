@@ -1,0 +1,157 @@
+{
+ "claim_sets_checked": [
+  "cert_38",
+  "eighth",
+  "eleventh",
+  "fifth",
+  "focus_35",
+  "fourth_41",
+  "ninth",
+  "parked_6",
+  "sbd_101",
+  "seventh",
+  "sixth",
+  "tenth",
+  "third_39",
+  "twelfth_51",
+  "quarantine_2"
+ ],
+ "closure_ladder": {
+  "rows": 804,
+  "sha256": "d7ae77ddd05d433c0a59555f86efb009e64a5651ad6b918407682bdc5f3178f0",
+  "unknown_recomputed": "all 804 rows match the published unknown_now"
+ },
+ "gates": {
+  "P0:candidates-sha": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P0:closure-sha": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P0:dependency-graph-sha": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P0:head-sha": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P0:quarantine-sha": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P0:supply-sha": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P0:update8-sha": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P1:closure-rows": {
+   "detail": "804",
+   "status": "PASS"
+  },
+  "P1:graph-shape": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P1:head-shape": {
+   "detail": "6890",
+   "status": "PASS"
+  },
+  "P1:receipt-cache-conflicts": {
+   "detail": "0",
+   "status": "PASS"
+  },
+  "P1:supply-shape": {
+   "detail": "4562",
+   "status": "PASS"
+  },
+  "P1:update8-receipts": {
+   "detail": "23",
+   "status": "PASS"
+  },
+  "P1:update8-shape": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P2:closure-unknown-recomputed-804": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P2:one-unknown-classes": {
+   "detail": "[1849, 2251, 16371, 23101]",
+   "status": "PASS"
+  },
+  "P3:claim-sizes": {
+   "detail": "{\"focus_35\": 35, \"cert_38\": 38, \"third_39\": 39, \"fourth_41\": 41, \"fifth\": 44, \"sixth\": 43, \"seventh\": 42, \"eighth\": 43, \"ninth\": 45, \"tenth\": 44, \"eleventh\": 46, \"twelfth_51\": 51, \"sbd_101\": 101, \"parked_6\": 6}",
+   "status": "PASS"
+  },
+  "P3:quarantine-entries": {
+   "detail": "2",
+   "status": "PASS"
+  }
+ },
+ "head_basis": {
+  "loss": 6682,
+  "rows": 6890,
+  "sha256": "1e2eeda2db33738de99612531f9bb67456f90c81ceedf123c8bbba117aff2a17",
+  "win": 208
+ },
+ "meaning": "scheduling bookkeeping only; no verdict is claimed or consumed; resolving a listed key would still require the standing cold-pair + C++-gate + third-implementation pillars before any adoption; the standard 11x11 empty board, all 19 central-reply roots, the two-stone root {60,27} and third moves 100/108 remain UNKNOWN",
+ "one_unknown_classes": [
+  {
+   "claimed_in": [],
+   "class_index": 1849,
+   "class_key": "1152922672972169216:0",
+   "fresh_vs_head": true,
+   "in_probe13_supply": false,
+   "legal": null,
+   "proxy": null,
+   "quarantined": false,
+   "s5_index": 81011,
+   "unknown_key": "1153485622925590528:0"
+  },
+  {
+   "claimed_in": [],
+   "class_index": 2251,
+   "class_key": "1155314042043105280:0",
+   "fresh_vs_head": true,
+   "in_probe13_supply": false,
+   "legal": null,
+   "proxy": null,
+   "quarantined": false,
+   "s5_index": 93815,
+   "unknown_key": "1297036830121656320:131074"
+  },
+  {
+   "claimed_in": [],
+   "class_index": 16371,
+   "class_key": "1153202979851993088:16",
+   "fresh_vs_head": true,
+   "in_probe13_supply": false,
+   "legal": null,
+   "proxy": null,
+   "quarantined": false,
+   "s5_index": 550879,
+   "unknown_key": "1153202979851993088:272"
+  },
+  {
+   "claimed_in": [],
+   "class_index": 23101,
+   "class_key": "1152921504892059648:16",
+   "fresh_vs_head": true,
+   "in_probe13_supply": false,
+   "legal": null,
+   "proxy": null,
+   "quarantined": false,
+   "s5_index": 745184,
+   "unknown_key": "1152921505747697664:1032"
+  }
+ ],
+ "overall": "PASS",
+ "schema": "n11-ultra-cheap-class-census-v1"
+}
