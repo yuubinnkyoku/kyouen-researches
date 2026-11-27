@@ -1,0 +1,46 @@
+{
+ "schema": "n11-ultra-cheap-u01-win-pillars-rows-v1",
+ "targets": {
+  "u01": {
+   "key": "1153485622925590528:0",
+   "class_index": 1849,
+   "legal": 88,
+   "budget": "15000000",
+   "expected": "88,15000000,1,4893014",
+   "input_pin": "52d79efc91f4b12935e9fcf6529e3b53a896d30060e8ef5af5503fc7e6fca21e"
+  }
+ },
+ "anchors": {
+  "anchor-at2m": {
+   "budget": "2000000",
+   "expected": "98,2000000,0,2000000"
+  },
+  "anchor-aj001": {
+   "budget": "30000000",
+   "expected": "84,30000000,2,5156075"
+  },
+  "anchor-af039": {
+   "budget": "30000000",
+   "expected": "89,30000000,2,19234232"
+  }
+ },
+ "head_basis": {
+  "cache": "merged-exact-s5-chain-plus-eleventhcost-k01-20261127.cache",
+  "sha256_prefix": "1e2eeda2",
+  "rows": 6890,
+  "win": 208,
+  "loss": 6682,
+  "target_absent_from_head": true
+ },
+ "third_impl": {
+  "script_sha256": "08ea958ff59c3234ec5ac55c5c40689bd0999a34e101a88ea0546800cc4a1998",
+  "args": "--row=u01 --stones=5 --legal=88 --lo=1153485622925590528 --hi=0 --cap=400000000 --wallcap=260 --memo-power=22",
+  "expected": {
+   "result": 1,
+   "expansions": 5646148,
+   "passes": 2
+  },
+  "note": "expansions pre-registered from the disclosed pre-declaration calibration pair; the official pair is re-run post-declaration"
+ },
+ "status_guard": "pillar bookkeeping only; NO verdict consumed; 11x11 UNKNOWN"
+}
