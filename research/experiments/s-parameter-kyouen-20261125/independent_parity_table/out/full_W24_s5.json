@@ -1,0 +1,44 @@
+{
+ "method": "all",
+ "n": 24,
+ "s": 5,
+ "positions": 168799,
+ "size_counts": {
+  "0": 1,
+  "1": 24,
+  "2": 276,
+  "3": 2024,
+  "4": 10626,
+  "5": 42504,
+  "6": 113344
+ },
+ "maximal_by_size": {
+  "6": 113344
+ },
+ "grundy_dist": {
+  "0": 124247,
+  "1": 44552
+ },
+ "root_grundy": 0,
+ "max_size": 6,
+ "key": "W24_s5",
+ "board_file": "C:/Users/yuubi/ghq/github.com/yuubinnkyoku/kyouen-researches/research/experiments/design-kyouen-witt-20261125/output/board_w24.txt",
+ "validation": {
+  "n": 24,
+  "b": 759,
+  "block_size_hist": {
+   "8": 759
+  },
+  "point_degree_hist": {
+   "253": 24
+  },
+  "pairs_covered": 276,
+  "pairs_expected": 276,
+  "pair_coverage_hist": {
+   "77": 276
+  },
+  "unused_points": 0,
+  "valid_2design": false
+ },
+ "seconds": 13.7
+}

@@ -1,0 +1,127 @@
+{
+ "key": "W24_s6",
+ "board_file": "C:/Users/yuubi/ghq/github.com/yuubinnkyoku/kyouen-researches/research/experiments/design-kyouen-witt-20261125/output/board_w24.txt",
+ "n": 24,
+ "b": 759,
+ "s": 6,
+ "t": 5,
+ "note": "all 5-subsets one orbit (M_24 5-transitive); lambda_5=1",
+ "validation": {
+  "n": 24,
+  "b": 759,
+  "block_size_hist": {
+   "8": 759
+  },
+  "point_degree_hist": {
+   "253": 24
+  },
+  "pairs_covered": 276,
+  "pairs_expected": 276,
+  "pair_coverage_hist": {
+   "77": 276
+  },
+  "unused_points": 0,
+  "valid_2design": false
+ },
+ "cones": [
+  {
+   "F": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "cone_size": 4100,
+   "T": {
+    "5": 1,
+    "6": 19,
+    "7": 168,
+    "8": 840,
+    "9": 1680,
+    "10": 1008,
+    "11": 336,
+    "12": 48
+   },
+   "T_g": {
+    "5": {
+     "1": 1
+    },
+    "6": {
+     "0": 19
+    },
+    "7": {
+     "1": 168
+    },
+    "8": {
+     "0": 840
+    },
+    "9": {
+     "1": 1680
+    },
+    "10": {
+     "0": 1008
+    },
+    "11": {
+     "1": 336
+    },
+    "12": {
+     "0": 48
+    }
+   },
+   "T_max": {
+    "5": 0,
+    "6": 0,
+    "7": 0,
+    "8": 0,
+    "9": 0,
+    "10": 0,
+    "11": 0,
+    "12": 48
+   },
+   "grundy_dist": {
+    "0": 1915,
+    "1": 2185
+   },
+   "maximal_by_size": {
+    "12": 48
+   },
+   "root_grundy": 1,
+   "size_counts": {
+    "5": 1,
+    "6": 19,
+    "7": 168,
+    "8": 840,
+    "9": 1680,
+    "10": 1008,
+    "11": 336,
+    "12": 48
+   },
+   "max_size": 12
+  }
+ ],
+ "orbit_Nt": [
+  42504
+ ],
+ "inflated_N_by_size": {
+  "5": 42504,
+  "6": 134596,
+  "7": 340032,
+  "8": 637560,
+  "9": 566720,
+  "10": 170016,
+  "11": 30912,
+  "12": 2576
+ },
+ "inflated_N_by_grundy": {
+  "0": 944748,
+  "1": 980168
+ },
+ "inflated_maximal_by_size": {
+  "12": 2576
+ },
+ "inflate_issues": [],
+ "max_inflate_issues": [],
+ "max_grundy": 1,
+ "seconds": 0.26
+}

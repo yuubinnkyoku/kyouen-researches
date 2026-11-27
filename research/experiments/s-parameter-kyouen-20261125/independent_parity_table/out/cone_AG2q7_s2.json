@@ -1,0 +1,120 @@
+{
+ "key": "AG2q7_s2",
+ "board_file": "C:/Users/yuubi/ghq/github.com/yuubinnkyoku/kyouen-researches/research/experiments/s-parameter-kyouen-20261125/output/board_ag2q7.txt",
+ "n": 49,
+ "b": 56,
+ "s": 2,
+ "t": 3,
+ "note": "triangle orbit; AGL(2,7) transitive on triangles",
+ "validation": {
+  "n": 49,
+  "b": 56,
+  "block_size_hist": {
+   "7": 56
+  },
+  "point_degree_hist": {
+   "8": 49
+  },
+  "pairs_covered": 1176,
+  "pairs_expected": 1176,
+  "pair_coverage_hist": {
+   "1": 1176
+  },
+  "unused_points": 0,
+  "valid_2design": true
+ },
+ "cones": [
+  {
+   "F": [
+    0,
+    1,
+    7
+   ],
+   "cone_size": 993,
+   "T": {
+    "3": 1,
+    "4": 31,
+    "5": 270,
+    "6": 560,
+    "7": 110,
+    "8": 21
+   },
+   "T_g": {
+    "3": {
+     "1": 1
+    },
+    "4": {
+     "0": 31
+    },
+    "5": {
+     "1": 240,
+     "2": 30
+    },
+    "6": {
+     "0": 540,
+     "1": 20
+    },
+    "7": {
+     "0": 5,
+     "1": 105
+    },
+    "8": {
+     "0": 21
+    }
+   },
+   "T_max": {
+    "3": 0,
+    "4": 0,
+    "5": 0,
+    "6": 330,
+    "7": 5,
+    "8": 21
+   },
+   "grundy_dist": {
+    "0": 597,
+    "1": 366,
+    "2": 30
+   },
+   "maximal_by_size": {
+    "6": 330,
+    "7": 5,
+    "8": 21
+   },
+   "root_grundy": 1,
+   "size_counts": {
+    "3": 1,
+    "4": 31,
+    "5": 270,
+    "6": 560,
+    "7": 110,
+    "8": 21
+   },
+   "max_size": 8
+  }
+ ],
+ "orbit_Nt": [
+  16464
+ ],
+ "inflated_N_by_size": {
+  "3": 16464,
+  "4": 127596,
+  "5": 444528,
+  "6": 460992,
+  "7": 51744,
+  "8": 6174
+ },
+ "inflated_N_by_grundy": {
+  "0": 580650,
+  "1": 477456,
+  "2": 49392
+ },
+ "inflated_maximal_by_size": {
+  "6": 271656,
+  "7": 2352,
+  "8": 6174
+ },
+ "inflate_issues": [],
+ "max_inflate_issues": [],
+ "max_grundy": 2,
+ "seconds": 0.03
+}

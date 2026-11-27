@@ -1,0 +1,57 @@
+{
+ "method": "all",
+ "n": 22,
+ "s": 5,
+ "positions": 2168521,
+ "size_counts": {
+  "0": 1,
+  "1": 22,
+  "2": 231,
+  "3": 1540,
+  "4": 7315,
+  "5": 26334,
+  "6": 74536,
+  "7": 169312,
+  "8": 310530,
+  "9": 454300,
+  "10": 508816,
+  "11": 396816,
+  "12": 176176,
+  "13": 36960,
+  "14": 5280,
+  "15": 352
+ },
+ "maximal_by_size": {
+  "11": 1344,
+  "12": 22176,
+  "15": 352
+ },
+ "grundy_dist": {
+  "0": 784412,
+  "1": 949829,
+  "2": 332640,
+  "3": 101640
+ },
+ "root_grundy": 1,
+ "max_size": 15,
+ "key": "W22_s5",
+ "board_file": "C:/Users/yuubi/ghq/github.com/yuubinnkyoku/kyouen-researches/research/experiments/design-kyouen-witt-20261125/output/board_w22.txt",
+ "validation": {
+  "n": 22,
+  "b": 77,
+  "block_size_hist": {
+   "6": 77
+  },
+  "point_degree_hist": {
+   "21": 22
+  },
+  "pairs_covered": 231,
+  "pairs_expected": 231,
+  "pair_coverage_hist": {
+   "5": 231
+  },
+  "unused_points": 0,
+  "valid_2design": false
+ },
+ "seconds": 26.78
+}
