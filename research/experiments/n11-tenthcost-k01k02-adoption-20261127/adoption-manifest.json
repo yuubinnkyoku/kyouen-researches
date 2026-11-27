@@ -1,0 +1,37 @@
+{
+ "schema": "n11-tenthcost-k01k02-adoption-manifest-v1",
+ "base": {
+  "path": "merged-exact-s5-chain-plus-ninthcost12-20261127.cache",
+  "sha256": "4728007306598298f7fdb43d0368bc4e5fbd6c9435a38f8d1732d1df8368a622",
+  "rows": 6887,
+  "win": 206,
+  "loss": 6681
+ },
+ "rows": [
+  {
+   "name": "k01",
+   "key": "1297036692683751424:131074",
+   "result": 2,
+   "nodes": 6783438
+  },
+  {
+   "name": "k02",
+   "key": "1297036692683751424:131136",
+   "result": 1,
+   "nodes": 8799140
+  }
+ ],
+ "expected_merged_shape": {
+  "rows": 6889,
+  "win": 207,
+  "loss": 6682
+ },
+ "merger_sha256": "907119610034fb2aebfde012550a4129dfa3b086c6de11194e856747ac74606a",
+ "kits": {
+  "replica": "n11-tenthcost-batch-stage1-2m-20261127 (b8049d8b)",
+  "cppgate": "n11-tenthcost-k01k02-cppgate-20261127 (55b65a7f)",
+  "thirdimpl": "n11-tenthcost-k01k02-thirdimpl-corroboration-20261127 (232a4a52)"
+ },
+ "nodes_total_bookkeeping": 15582578,
+ "status_guard": "adoption bookkeeping only; NO verdict consumed; 11x11 UNKNOWN"
+}
