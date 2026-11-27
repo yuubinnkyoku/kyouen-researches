@@ -1,0 +1,48 @@
+{
+ "schema": "n11-ninthcost-k12win-cppgate-rows-v1",
+ "targets": {
+  "k12": {
+   "key": "1297036692683751424:134217792",
+   "lo": "1297036692683751424",
+   "hi": "134217792",
+   "legal": 92,
+   "budget": "15000000",
+   "expected": "92,15000000,1,14521862",
+   "stage_pin": {
+    "at2m": "result 0 / nodes 2000000 cold pair (published ninth-cost kit output/raw/at2m-run{1,2}/k12.out.csv)",
+    "at15m_cold_pair": "result 1 / nodes 14521862 (published ninth-cost kit output/raw/at15m-run{1,2}/k12.out.csv, wave C7 commit 838ee2f2)"
+   },
+   "input_pin": "03311e09112bb9998b4621087abe90f91fa4fdaf61afeed52b62521dafaaa2c2"
+  }
+ },
+ "anchors": {
+  "anchor-at2m": "98,2000000,0,2000000",
+  "anchor-aj001": "84,30000000,2,5156075",
+  "anchor-af039": "89,30000000,2,19234232"
+ },
+ "anchors_runtime": {
+  "anchor-at2m": ["2000000", "98,2000000,0,2000000"],
+  "anchor-aj001": ["30000000", "84,30000000,2,5156075"],
+  "anchor-af039": ["30000000", "89,30000000,2,19234232"]
+ },
+ "gate_source": {
+  "commit": "154f3b7a67b97e13acbaee8b04dc74ddca728d19",
+  "path": "cpp/solvers/kyouen_dfpn_root.cpp",
+  "sha256": "9193f5b6065e0fbcad2ef7c65f386187701cafa1f5b718cc35a5cbb0d138f92e",
+  "header_pins": {
+   "kyouen_residual_micro.hpp": "5976935dcfccb9b5a26fa68f8de20868ce45363dd8c372dcd67d9b841167e7f5",
+   "n11_s5_quarantine.hpp": "2e36d69481fafcde7aede8ae4fedf3d5477f91ee9846bcd4ae2975f32a4ba1a5"
+  }
+ },
+ "canonical_head": {
+  "label": "0935c94c",
+  "sha256": "0935c94c03a9a3fbdf2a55aca90bb986a019dfd26c0097ab2c75709d590e9ca4",
+  "rows": 6875,
+  "WIN": 203,
+  "LOSS": 6672,
+  "path": "research/experiments/n11-eighthcost-k01-win-adoption-20261127/output/merged-exact-s5-chain-plus-eighthcost-k01-20261127.cache"
+ },
+ "determinism": "two fresh-cold passes per row (one process per pass), p1 == p2 on every replay field except wall_s",
+ "stop_rules": "any mismatch, crash, or published-row disagreement: HARD-STOP, fail-closed, no interpretation",
+ "guards": "verdict NOT consumed; k12 stays a gate-verified UNCONSUMED label; 11x11 and every root/class stay UNKNOWN"
+}
