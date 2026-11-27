@@ -1,0 +1,32 @@
+{
+ "n": 100,
+ "checks": {
+  "conic_6subsets": {
+   "checked": 100,
+   "bad": 0,
+   "stats": {
+    "G": {
+     "0": 100
+    },
+    "maximal_sizes": {
+     "(8, 10)": 89,
+     "(10,)": 11
+    },
+    "child_values": {
+     "(1, 1, 1, 1, 1, 1, 1, 1)": 89,
+     "(1, 1, 1, 1)": 11
+    }
+   }
+  },
+  "conic_5subset_child_G0": {
+   "checked": 100,
+   "bad": 0
+  },
+  "no_max7_contains_conic6": {
+   "max7_checked": 31,
+   "six_subsets_checked": 217,
+   "conic_six_subsets": 0
+  }
+ },
+ "failures": []
+}

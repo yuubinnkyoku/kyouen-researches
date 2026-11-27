@@ -1,0 +1,35 @@
+{
+ "n": 200,
+ "checks": {
+  "every_5cap_on_unique_conic": {
+   "checked": 200,
+   "bad": 0
+  },
+  "conic_5subset_addable": {
+   "checked": 200,
+   "missing_conic_points_always_addable": true,
+   "exact_addable_equals_missing": 0
+  },
+  "conic_6subset_addable": {
+   "checked": 200,
+   "missing_conic_points_always_addable": true,
+   "exact_addable_equals_missing": 19
+  },
+  "conic_7subset_addable": {
+   "checked": 200,
+   "missing_conic_points_always_addable": true,
+   "exact_addable_equals_missing": 200
+  },
+  "conic_8subset_addable": {
+   "checked": 200,
+   "missing_conic_points_always_addable": true,
+   "exact_addable_equals_missing": 200
+  },
+  "conic_9subset_addable": {
+   "checked": 200,
+   "missing_conic_points_always_addable": true,
+   "exact_addable_equals_missing": 200
+  }
+ },
+ "failures": []
+}

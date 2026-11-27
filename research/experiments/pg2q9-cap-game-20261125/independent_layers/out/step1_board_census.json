@@ -1,0 +1,295 @@
+{
+ "board": {
+  "n_points": 91,
+  "n_lines": 91,
+  "line_sizes": [
+   10
+  ],
+  "distinct_lines": 91,
+  "labels_ok": true,
+  "line_duplicate_points": 0,
+  "point_degrees": [
+   10
+  ],
+  "n_pairs": 4095,
+  "expected_pairs": 4095,
+  "all_pairs_on_a_line": true,
+  "pair_line_unique": true,
+  "pairwise_line_intersection_sizes": {
+   "1": 4095
+  },
+  "projective_plane_of_order_9": true
+ },
+ "isomorphism": {
+  "point_map": "label i -> standard homogeneous coordinate vector (verified bijection)",
+  "bijection": true,
+  "standard_lines": 91,
+  "standard_line_sizes": [
+   10
+  ],
+  "board_lines_equal_standard_lines": true,
+  "matching_lines": 91,
+  "line_map_bijective": true,
+  "isomorphism": true
+ },
+ "census": {
+  "header": [
+   "N",
+   "91",
+   "B",
+   "91",
+   "SAFE",
+   "128917712"
+  ],
+  "n": 91,
+  "b": 91,
+  "safe": 128917712,
+  "caps": {
+   "0": 1,
+   "1": 91,
+   "2": 4095,
+   "3": 110565,
+   "4": 1769040,
+   "5": 14859936,
+   "6": 52009776,
+   "7": 51554880,
+   "8": 7960680,
+   "9": 589680,
+   "10": 58968
+  },
+  "maximal": {
+   "0": 0,
+   "1": 0,
+   "2": 0,
+   "3": 0,
+   "4": 0,
+   "5": 0,
+   "6": 707616,
+   "7": 2021760,
+   "8": 5307120,
+   "9": 0,
+   "10": 58968
+  }
+ },
+ "arithmetic": {
+  "per_size": {
+   "0": {
+    "census_caps": 1,
+    "census_maximal": 0
+   },
+   "1": {
+    "census_caps": 91,
+    "census_maximal": 0
+   },
+   "2": {
+    "census_caps": 4095,
+    "census_maximal": 0
+   },
+   "3": {
+    "census_caps": 110565,
+    "census_maximal": 0
+   },
+   "4": {
+    "census_caps": 1769040,
+    "census_maximal": 0
+   },
+   "5": {
+    "census_caps": 14859936,
+    "census_maximal": 0,
+    "claim_G": {
+     "1": 14859936
+    },
+    "claim_sum": 14859936,
+    "claim_sum_equals_census": true
+   },
+   "6": {
+    "census_caps": 52009776,
+    "census_maximal": 707616,
+    "claim_G": {
+     "0": 37857456,
+     "2": 14152320
+    },
+    "claim_sum": 52009776,
+    "claim_sum_equals_census": true
+   },
+   "7": {
+    "census_caps": 51554880,
+    "census_maximal": 2021760,
+    "claim_G": {
+     "0": 2021760,
+     "1": 49533120
+    },
+    "claim_sum": 51554880,
+    "claim_sum_equals_census": true
+   },
+   "8": {
+    "census_caps": 7960680,
+    "census_maximal": 5307120,
+    "claim_G": {
+     "0": 7960680
+    },
+    "claim_sum": 7960680,
+    "claim_sum_equals_census": true
+   },
+   "9": {
+    "census_caps": 589680,
+    "census_maximal": 0,
+    "claim_G": {
+     "1": 589680
+    },
+    "claim_sum": 589680,
+    "claim_sum_equals_census": true
+   },
+   "10": {
+    "census_caps": 58968,
+    "census_maximal": 58968,
+    "claim_G": {
+     "0": 58968
+    },
+    "claim_sum": 58968,
+    "claim_sum_equals_census": true
+   }
+  },
+  "checks": {
+   "all_5caps_conic": true,
+   "all_9caps_conic": true,
+   "all_10caps_conic": true,
+   "8caps_are_conic8_or_maximal8": true,
+   "nonmax7_is_caps7_minus_max7": true,
+   "nonmax6_is_caps6_minus_max6": true,
+   "G_sums": {
+    "5": true,
+    "6": true,
+    "7": true,
+    "8": true,
+    "9": true,
+    "10": true
+   },
+   "k6_G2_equals_7_times_max7": true,
+   "k6_G0_plus_G2": true,
+   "k7_G0_plus_G1": true,
+   "k8_G0": true,
+   "k9_G1": true,
+   "k10_G0": true,
+   "k5_G1": true
+  },
+  "analysis_matches_census": true,
+  "total_caps_census": 128917712,
+  "total_caps_analysis": 128917712,
+  "total_caps_match": true,
+  "maximal_total_census": 8095464,
+  "maximal_total_analysis": 8095464,
+  "maximal_total_match": true,
+  "conics": 58968,
+  "conics_formula_9^5-9^2": 58968,
+  "conic_counts": {
+   "3": 7076160,
+   "4": 12383280,
+   "5": 14859936,
+   "6": 12383280,
+   "7": 7076160,
+   "8": 2653560,
+   "9": 589680,
+   "10": 58968
+  },
+  "conic_layer_json_counts": {
+   "3": 7076160,
+   "4": 12383280,
+   "5": 14859936,
+   "6": 12383280,
+   "7": 7076160,
+   "8": 2653560,
+   "9": 589680
+  },
+  "conic_layer_json_matches_C10k_times_conics": true,
+  "conic_k6_k7_are_conic_only": {
+   "6": 12383280,
+   "7": 7076160,
+   "note": "conic_layer.json k>=6 counts are conic k-subsets only, not all k-caps"
+  },
+  "conic_layer_grundy": {
+   "3": [
+    1
+   ],
+   "4": [
+    0
+   ],
+   "5": [
+    1
+   ],
+   "6": [
+    0
+   ],
+   "7": [
+    1
+   ],
+   "8": [
+    0
+   ],
+   "9": [
+    1
+   ]
+  },
+  "sixcap_results_present": true,
+  "sixcap_results_checks": {
+   "n": true,
+   "distinct": true,
+   "duplicates": true
+  },
+  "sixcap_G2_count_from_file": 14152320
+ },
+ "independent_counts": {
+  "0": {
+   "count": 1,
+   "addable_sum": 91,
+   "next_count_from_ext": 91
+  },
+  "1": {
+   "count": 91,
+   "addable_sum": 8190,
+   "next_count_from_ext": 4095
+  },
+  "2": {
+   "count": 4095,
+   "addable_sum": 331695,
+   "next_count_from_ext": 110565
+  },
+  "3": {
+   "count": 110565,
+   "addable_sum": 7076160,
+   "next_count_from_ext": 1769040
+  },
+  "4": {
+   "count": 1769040,
+   "addable_sum": 74299680,
+   "next_count_from_ext": 14859936
+  },
+  "5": {
+   "count": 14859936,
+   "addable_sum": 312058656,
+   "next_count_from_ext": 52009776
+  },
+  "6": {
+   "count": 52009776,
+   "addable_sum": 360884160,
+   "next_count_from_ext": 51554880
+  },
+  "7": {
+   "count": 51554880,
+   "addable_sum": 63685440,
+   "next_count_from_ext": 7960680
+  }
+ },
+ "independent_counts_derived_next": {
+  "0": 91,
+  "1": 4095,
+  "2": 110565,
+  "3": 1769040,
+  "4": 14859936,
+  "5": 52009776,
+  "6": 51554880,
+  "7": 7960680
+ },
+ "independent_counts_match_census_up_to": 8,
+ "independent_counts_all_match": true
+}

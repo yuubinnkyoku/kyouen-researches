@@ -1,0 +1,78 @@
+{
+ "n_per_layer": 200,
+ "conic_summary": {
+  "canonical_forms": 66430,
+  "nondegenerate_forms": 58968,
+  "degenerate_forms": 7462,
+  "bad_size": 0,
+  "bad_det": 0,
+  "distinct_conic_point_sets": 58968,
+  "conics_formula_9^5-9^2": 58968,
+  "all_conics_are_10caps": true,
+  "all_conics_maximal": true,
+  "bad_cap": 0,
+  "bad_maximal": 0
+ },
+ "checks": {
+  "conic8_addable_is_missing_pair": {
+   "checked": 200,
+   "bad": 0
+  },
+  "conic9_addable_is_missing_point": {
+   "checked": 200,
+   "bad": 0
+  },
+  "random_5caps": {
+   "n": 200,
+   "bad": 0,
+   "stats": {
+    "G1": 200,
+    "childset_(0, 2)": 132,
+    "childset_(0,)": 68
+   }
+  },
+  "random_7caps": {
+   "n_maximal": 100,
+   "n_nonmaximal": 100,
+   "bad": 0,
+   "stats": {
+    "max_ext0": 100,
+    "max_G0": 100,
+    "nonmax_ext3": 15,
+    "nonmax_G1": 100,
+    "nonmax_ext1": 85
+   }
+  },
+  "random_8caps": {
+   "n": 200,
+   "bad": 0,
+   "stats": {
+    "ext0": 179,
+    "G0": 200,
+    "ext2": 21
+   }
+  },
+  "random_6caps": {
+   "n": 200,
+   "bad": 0,
+   "stats": {
+    "G0": 145,
+    "G2": 55
+   },
+   "joint_ext_has_max7": {
+    "(0, False)": 1,
+    "(4, False)": 9,
+    "(6, False)": 56,
+    "(7, True)": 55,
+    "(8, False)": 79
+   }
+  },
+  "local_parity_claims": {
+   "nonmax_7_max_ext_in_{8,10}": true,
+   "conic_8_addable_missing_pair": true,
+   "conic_9_addable_missing_point": true,
+   "maximal_7_terminal": true
+  }
+ },
+ "failures": []
+}

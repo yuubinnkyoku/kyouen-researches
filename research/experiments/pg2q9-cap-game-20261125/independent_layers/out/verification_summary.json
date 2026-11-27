@@ -1,0 +1,391 @@
+{
+ "verdict": {
+  "board_is_PG(2,9)": true,
+  "projective_plane_of_order_9": true,
+  "census_and_analysis_agree": true,
+  "all_G_sums_equal_census": true,
+  "conics": {
+   "canonical_forms": 66430,
+   "nondegenerate_forms": 58968,
+   "degenerate_forms": 7462,
+   "bad_size": 0,
+   "bad_det": 0,
+   "distinct_conic_point_sets": 58968,
+   "conics_formula_9^5-9^2": 58968,
+   "all_conics_are_10caps": true,
+   "all_conics_maximal": true,
+   "bad_cap": 0,
+   "bad_maximal": 0
+  },
+  "independent_cap_counts": {
+   "0": {
+    "count": 1,
+    "addable_sum": 91,
+    "next_count_from_ext": 91
+   },
+   "1": {
+    "count": 91,
+    "addable_sum": 8190,
+    "next_count_from_ext": 4095
+   },
+   "2": {
+    "count": 4095,
+    "addable_sum": 331695,
+    "next_count_from_ext": 110565
+   },
+   "3": {
+    "count": 110565,
+    "addable_sum": 7076160,
+    "next_count_from_ext": 1769040
+   },
+   "4": {
+    "count": 1769040,
+    "addable_sum": 74299680,
+    "next_count_from_ext": 14859936
+   },
+   "5": {
+    "count": 14859936,
+    "addable_sum": 312058656,
+    "next_count_from_ext": 52009776
+   },
+   "6": {
+    "count": 52009776,
+    "addable_sum": 360884160,
+    "next_count_from_ext": 51554880
+   },
+   "7": {
+    "count": 51554880,
+    "addable_sum": 63685440,
+    "next_count_from_ext": 7960680
+   }
+  },
+  "independent_counts_match_census_up_to": 8,
+  "samples": {
+   "5cap": {
+    "n": 14,
+    "grundy_values": [
+     1
+    ],
+    "expected_grundy": [
+     1
+    ],
+    "grundy_all_ok": true,
+    "mex_consistency": true,
+    "maximal_sizes_seen": [
+     [
+      6,
+      8,
+      10
+     ],
+     [
+      7,
+      8,
+      10
+     ]
+    ],
+    "parities_seen": [
+     [
+      0
+     ],
+     [
+      0,
+      1
+     ]
+    ],
+    "maximal_sizes_ok": true,
+    "parities_ok": true,
+    "all_maximal_extensions_terminal_G0": true,
+    "upset_size_range": [
+     128,
+     132
+    ],
+    "child_count_range": [
+     21,
+     21
+    ],
+    "children_in_{0,2}": true,
+    "has_G0_child": true
+   },
+   "7cap_max": {
+    "n": 13,
+    "grundy_values": [
+     0
+    ],
+    "expected_grundy": [
+     0
+    ],
+    "grundy_all_ok": true,
+    "mex_consistency": true,
+    "maximal_sizes_seen": [
+     [
+      7
+     ]
+    ],
+    "parities_seen": [
+     [
+      1
+     ]
+    ],
+    "maximal_sizes_ok": true,
+    "parities_ok": true,
+    "all_maximal_extensions_terminal_G0": true,
+    "upset_size_range": [
+     1,
+     1
+    ],
+    "child_count_range": [
+     0,
+     0
+    ]
+   },
+   "7cap_nonmax": {
+    "n": 12,
+    "grundy_values": [
+     1
+    ],
+    "expected_grundy": [
+     1
+    ],
+    "grundy_all_ok": true,
+    "mex_consistency": true,
+    "maximal_sizes_seen": [
+     [
+      8
+     ],
+     [
+      10
+     ]
+    ],
+    "parities_seen": [
+     [
+      0
+     ]
+    ],
+    "maximal_sizes_ok": true,
+    "parities_ok": true,
+    "all_maximal_extensions_terminal_G0": true,
+    "upset_size_range": [
+     2,
+     8
+    ],
+    "child_count_range": [
+     1,
+     3
+    ],
+    "children_all_G0": true
+   },
+   "8cap_conic": {
+    "n": 12,
+    "grundy_values": [
+     0
+    ],
+    "expected_grundy": [
+     0
+    ],
+    "grundy_all_ok": true,
+    "mex_consistency": true,
+    "maximal_sizes_seen": [
+     [
+      10
+     ]
+    ],
+    "parities_seen": [
+     [
+      0
+     ]
+    ],
+    "maximal_sizes_ok": true,
+    "parities_ok": true,
+    "all_maximal_extensions_terminal_G0": true,
+    "upset_size_range": [
+     4,
+     4
+    ],
+    "child_count_range": [
+     2,
+     2
+    ],
+    "children_all_G1": true
+   },
+   "8cap_max": {
+    "n": 13,
+    "grundy_values": [
+     0
+    ],
+    "expected_grundy": [
+     0
+    ],
+    "grundy_all_ok": true,
+    "mex_consistency": true,
+    "maximal_sizes_seen": [
+     [
+      8
+     ]
+    ],
+    "parities_seen": [
+     [
+      0
+     ]
+    ],
+    "maximal_sizes_ok": true,
+    "parities_ok": true,
+    "all_maximal_extensions_terminal_G0": true,
+    "upset_size_range": [
+     1,
+     1
+    ],
+    "child_count_range": [
+     0,
+     0
+    ]
+   },
+   "9cap_conic": {
+    "n": 12,
+    "grundy_values": [
+     1
+    ],
+    "expected_grundy": [
+     1
+    ],
+    "grundy_all_ok": true,
+    "mex_consistency": true,
+    "maximal_sizes_seen": [
+     [
+      10
+     ]
+    ],
+    "parities_seen": [
+     [
+      0
+     ]
+    ],
+    "maximal_sizes_ok": true,
+    "parities_ok": true,
+    "all_maximal_extensions_terminal_G0": true,
+    "upset_size_range": [
+     2,
+     2
+    ],
+    "child_count_range": [
+     1,
+     1
+    ],
+    "children_all_G0": true
+   },
+   "10cap_conic": {
+    "n": 12,
+    "grundy_values": [
+     0
+    ],
+    "expected_grundy": [
+     0
+    ],
+    "grundy_all_ok": true,
+    "mex_consistency": true,
+    "maximal_sizes_seen": [
+     [
+      10
+     ]
+    ],
+    "parities_seen": [
+     [
+      0
+     ]
+    ],
+    "maximal_sizes_ok": true,
+    "parities_ok": true,
+    "all_maximal_extensions_terminal_G0": true,
+    "upset_size_range": [
+     1,
+     1
+    ],
+    "child_count_range": [
+     0,
+     0
+    ]
+   },
+   "6cap_max7_child": {
+    "n": 12,
+    "grundy_values": [
+     2
+    ],
+    "expected_grundy": [
+     2
+    ],
+    "grundy_all_ok": true,
+    "mex_consistency": true,
+    "maximal_sizes_seen": [
+     [
+      7,
+      8
+     ]
+    ],
+    "parities_seen": [
+     [
+      0,
+      1
+     ]
+    ],
+    "maximal_sizes_ok": true,
+    "parities_ok": true,
+    "all_maximal_extensions_terminal_G0": true,
+    "upset_size_range": [
+     11,
+     11
+    ],
+    "child_count_range": [
+     7,
+     7
+    ],
+    "one_max7_child": true,
+    "six_nonmax7_children": true,
+    "maximal_sizes_all_contain_7": true
+   },
+   "6cap_no_max7_child": {
+    "n": 13,
+    "grundy_values": [
+     0
+    ],
+    "expected_grundy": [
+     0
+    ],
+    "grundy_all_ok": true,
+    "mex_consistency": true,
+    "maximal_sizes_seen": [
+     [
+      6
+     ],
+     [
+      8
+     ],
+     [
+      8,
+      10
+     ]
+    ],
+    "parities_seen": [
+     [
+      0
+     ]
+    ],
+    "maximal_sizes_ok": true,
+    "parities_ok": true,
+    "all_maximal_extensions_terminal_G0": true,
+    "upset_size_range": [
+     1,
+     22
+    ],
+    "child_count_range": [
+     0,
+     8
+    ],
+    "no_size7_maximal": true,
+    "maximal_sizes_subset_{6,8,10}": true
+   }
+  },
+  "sample_failures": [],
+  "global_checks_failures": [],
+  "conic_uniqueness_failures": [],
+  "conic6_failures": []
+ }
+}
