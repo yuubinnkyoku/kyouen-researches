@@ -27,11 +27,14 @@ artifacts:
 - path: research/experiments/pg2q7-cap-game-20261125/scripts/grundy_s_stats.c
   role: solver
   note: s パラメータ付き Grundy 計算器（GSIZE 出力）
+- path: research/experiments/ag2q5-s4-20261128/independent/REPORT.md
+  role: log
+  note: 独立検証（54/54 PASS、バイト一致・包除・ブロッキング集合全数）
 - path: research/experiments/ag2q5-s4-20261128/README.md
   role: log
   note: 結果と再現手順
 scope: AG(2,5)（25 点、30 直線、各 5 点）の s=4 共演ゲーム全 16,249,926 局面の Grundy 値のサイズ別完全分解。
-evidence: grundy_s_stats を board_ag2q5.txt s=4 で実行し GSIZE 行を取得。サイズ別の和は SIZE 行、Grundy 別合計は GRUNDY 行 {0:7,967,001, 1:7,919,925, 2:159,000, 3:204,000} と完全一致（総数 16,249,926 = SAFE）。k=0..10 は偶数 G0・奇数 G1 のパリティ則。k=11 で G3 72,000、k=12 で G2 72,000、k=13 で G2 6,000+G3 132,000、k=14 で G2 81,000、k=15 で G1、k=16 は全 28,375 が G0（極大）。極大サイズは 14 (1,500), 15 (6,600), 16 (28,375)。
+evidence: grundy_s_stats を board_ag2q5.txt s=4 で実行し GSIZE 行を取得。サイズ別の和は SIZE 行、Grundy 別合計は GRUNDY 行 {0:7,967,001, 1:7,919,925, 2:159,000, 3:204,000} と完全一致（総数 16,249,926 = SAFE）。k=0..10 は偶数 G0・奇数 G1 のパリティ則。k=11 で G3 72,000、k=12 で G2 72,000、k=13 で G2 6,000+G3 132,000、k=14 で G2 81,000、k=15 で G1、k=16 は全 28,375 が G0（極大）。極大サイズは 14 (1,500), 15 (6,600), 16 (28,375)。**独立検証（54/54 PASS）** では、公開エンジンの出力が**バイト単位で一致**し、別アルゴリズムの完全求解・包除原理によるサイズ数・ブロッキング集合の全数列挙（最小 9、28,375 個）がすべて一致した。
 ---
 
 # AG(2,5) s=4 のサイズ別 Grundy 完全分解

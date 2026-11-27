@@ -1,0 +1,360 @@
+{
+ "claim_file": "../output/gsize_ag2q5_s4.txt",
+ "claim_sha256": "fb500c8d6f6b92b95849aee53b0f14766e94aa9e7612c697bc3c5d829cbd60bf",
+ "published_run_sha256": "fb500c8d6f6b92b95849aee53b0f14766e94aa9e7612c697bc3c5d829cbd60bf",
+ "byte_identical": true,
+ "checks": [
+  {
+   "name": "published run byte-identical to claim",
+   "passed": true,
+   "detail": "claim fb500c8d6f6b92b95849aee53b0f14766e94aa9e7612c697bc3c5d829cbd60bf vs published fb500c8d6f6b92b95849aee53b0f14766e94aa9e7612c697bc3c5d829cbd60bf"
+  },
+  {
+   "name": "POINTS",
+   "passed": true,
+   "detail": "25"
+  },
+  {
+   "name": "CIRCLES",
+   "passed": true,
+   "detail": "30"
+  },
+  {
+   "name": "SAFE",
+   "passed": true,
+   "detail": "16249926"
+  },
+  {
+   "name": "ROOT",
+   "passed": true,
+   "detail": "0"
+  },
+  {
+   "name": "SIZE keys complete 0..16",
+   "passed": true,
+   "detail": "[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]"
+  },
+  {
+   "name": "independent SIZE lines identical",
+   "passed": true,
+   "detail": "claim={0: (1, 0, 1), 1: (25, 0, 0), 2: (300, 0, 300), 3: (2300, 0, 0), 4: (12650, 0, 12650), 5: (53100, 0, 0), 6: (176500, 0, 176500), 7: (475000, 0, 0), 8: (1047375, 0, 1047375), 9: (1898000, 0, 0), 10: (2809700, 0, 2809700), 11: (3340500, 0, 0), 12: (3089000, 0, 3010000), 13: (2103000, 0, 7000), 14: (961500, 1500, 868500), 15: (252600, 6600, 6600), 16: (28375, 28375, 28375)} mine={0: (1, 0, 1), 1: (25, 0, 0), 2: (300, 0, 300), 3: (2300, 0, 0), 4: (12650, 0, 12650), 5: (53100, 0, 0), 6: (176500, 0, 176500), 7: (475000, 0, 0), 8: (1047375, 0, 1047375), 9: (1898000, 0, 0), 10: (2809700, 0, 2809700), 11: (3340500, 0, 0), 12: (3089000, 0, 3010000), 13: (2103000, 0, 7000), 14: (961500, 1500, 868500), 15: (252600, 6600, 6600), 16: (28375, 28375, 28375)}"
+  },
+  {
+   "name": "independent GRUNDY lines identical",
+   "passed": true,
+   "detail": "claim={0: 7967001, 1: 7919925, 2: 159000, 3: 204000} mine={0: 7967001, 1: 7919925, 2: 159000, 3: 204000}"
+  },
+  {
+   "name": "independent GSIZE lines identical",
+   "passed": true,
+   "detail": "claim-only=[] mine-only=[]"
+  },
+  {
+   "name": "independent MAXSIZE is 16",
+   "passed": true,
+   "detail": "16"
+  },
+  {
+   "name": "independent MAXIMAL column agrees with claim SIZE maximal column",
+   "passed": true,
+   "detail": "maximal={14: 1500, 15: 6600, 16: 28375}"
+  },
+  {
+   "name": "independent FIRSTMOVE is {1: 25}",
+   "passed": true,
+   "detail": "{1: 25}"
+  },
+  {
+   "name": "size k=0 count",
+   "passed": true,
+   "detail": "1 != 1"
+  },
+  {
+   "name": "size k=1 count",
+   "passed": true,
+   "detail": "25 != 25"
+  },
+  {
+   "name": "size k=2 count",
+   "passed": true,
+   "detail": "300 != 300"
+  },
+  {
+   "name": "size k=3 count",
+   "passed": true,
+   "detail": "2300 != 2300"
+  },
+  {
+   "name": "size k=4 count",
+   "passed": true,
+   "detail": "12650 != 12650"
+  },
+  {
+   "name": "size k=5 count",
+   "passed": true,
+   "detail": "53100 != 53100"
+  },
+  {
+   "name": "size k=6 count",
+   "passed": true,
+   "detail": "176500 != 176500"
+  },
+  {
+   "name": "size k=7 count",
+   "passed": true,
+   "detail": "475000 != 475000"
+  },
+  {
+   "name": "size k=8 count",
+   "passed": true,
+   "detail": "1047375 != 1047375"
+  },
+  {
+   "name": "size k=9 count",
+   "passed": true,
+   "detail": "1898000 != 1898000"
+  },
+  {
+   "name": "size k=10 count",
+   "passed": true,
+   "detail": "2809700 != 2809700"
+  },
+  {
+   "name": "size k=11 count",
+   "passed": true,
+   "detail": "3340500 != 3340500"
+  },
+  {
+   "name": "size k=12 count",
+   "passed": true,
+   "detail": "3089000 != 3089000"
+  },
+  {
+   "name": "size k=13 count",
+   "passed": true,
+   "detail": "2103000 != 2103000"
+  },
+  {
+   "name": "size k=14 count",
+   "passed": true,
+   "detail": "961500 != 961500"
+  },
+  {
+   "name": "size k=15 count",
+   "passed": true,
+   "detail": "252600 != 252600"
+  },
+  {
+   "name": "size k=16 count",
+   "passed": true,
+   "detail": "28375 != 28375"
+  },
+  {
+   "name": "GRUNDY totals",
+   "passed": true,
+   "detail": "{0: 7967001, 1: 7919925, 2: 159000, 3: 204000}"
+  },
+  {
+   "name": "max Grundy is 3",
+   "passed": true,
+   "detail": "[0, 1, 2, 3]"
+  },
+  {
+   "name": "no Grundy >= 4",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "every size's G counts sum to its SIZE count and g0 column matches",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "per-Grundy totals over sizes equal GRUNDY lines",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "sum of SIZE counts == SAFE",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "sum of GRUNDY totals == SAFE",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "maximal counts only at k=14,15,16",
+   "passed": true,
+   "detail": "{14: 1500, 15: 6600, 16: 28375}"
+  },
+  {
+   "name": "maximal counts 14:1500, 15:6600, 16:28375",
+   "passed": true,
+   "detail": "{14: 1500, 15: 6600, 16: 28375}"
+  },
+  {
+   "name": "JSON artifact ag2q5_s4_gsize.json agrees with the txt claim",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "k=0..10 parity law (even k all G0, odd k all G1)",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "G3 occurs only at sizes 11 and 13",
+   "passed": true,
+   "detail": "[11, 13]"
+  },
+  {
+   "name": "all 28,375 size-16 positions are maximal G0",
+   "passed": true,
+   "detail": "N=28375 maximal=28375 dist={0: 28375}"
+  },
+  {
+   "name": "closed-form inclusion-exclusion matches size counts k=0..10",
+   "passed": true,
+   "detail": "{0: 1, 1: 25, 2: 300, 3: 2300, 4: 12650, 5: 53100, 6: 176500, 7: 475000, 8: 1047375, 9: 1898000, 10: 2809700}"
+  },
+  {
+   "name": "board has 375 intersecting and 60 parallel line pairs",
+   "passed": true,
+   "detail": "375,60"
+  },
+  {
+   "name": "no blocking set of size <= 8 (hence no safe set of size >= 17)",
+   "passed": true,
+   "detail": "{0: 0, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 0, 9: 28375, 10: 252600, 11: 961500, 12: 2103000, 13: 3089000, 14: 3340500}"
+  },
+  {
+   "name": "smallest blocking set has size 9 (hence maximum safe size is 16)",
+   "passed": true,
+   "detail": "blocking[9]=28375"
+  },
+  {
+   "name": "complement blocking count m=9 equals safe count k=16",
+   "passed": true,
+   "detail": "28375 != 28375"
+  },
+  {
+   "name": "complement blocking count m=10 equals safe count k=15",
+   "passed": true,
+   "detail": "252600 != 252600"
+  },
+  {
+   "name": "complement blocking count m=11 equals safe count k=14",
+   "passed": true,
+   "detail": "961500 != 961500"
+  },
+  {
+   "name": "complement blocking count m=12 equals safe count k=13",
+   "passed": true,
+   "detail": "2103000 != 2103000"
+  },
+  {
+   "name": "complement blocking count m=13 equals safe count k=12",
+   "passed": true,
+   "detail": "3089000 != 3089000"
+  },
+  {
+   "name": "complement blocking count m=14 equals safe count k=11",
+   "passed": true,
+   "detail": "3340500 != 3340500"
+  },
+  {
+   "name": "minimal blocking sets m=9,10,11 match maximal counts k=16,15,14",
+   "passed": true,
+   "detail": "28375,6600,1500"
+  },
+  {
+   "name": "no minimal blocking set of size 12,13,14 (no maximal k=13,12,11)",
+   "passed": true,
+   "detail": "{12: 0, 13: 0, 14: 0}"
+  }
+ ],
+ "failed": 0,
+ "passed": 54,
+ "total_checks": 54,
+ "result": "PASS",
+ "size_counts": {
+  "0": 1,
+  "1": 25,
+  "2": 300,
+  "3": 2300,
+  "4": 12650,
+  "5": 53100,
+  "6": 176500,
+  "7": 475000,
+  "8": 1047375,
+  "9": 1898000,
+  "10": 2809700,
+  "11": 3340500,
+  "12": 3089000,
+  "13": 2103000,
+  "14": 961500,
+  "15": 252600,
+  "16": 28375
+ },
+ "maximal_counts": {
+  "14": 1500,
+  "15": 6600,
+  "16": 28375
+ },
+ "grundy_totals": {
+  "0": 7967001,
+  "1": 7919925,
+  "2": 159000,
+  "3": 204000
+ },
+ "safe_total": 16249926,
+ "complement_blocking": {
+  "0": 0,
+  "1": 0,
+  "2": 0,
+  "3": 0,
+  "4": 0,
+  "5": 0,
+  "6": 0,
+  "7": 0,
+  "8": 0,
+  "9": 28375,
+  "10": 252600,
+  "11": 961500,
+  "12": 2103000,
+  "13": 3089000,
+  "14": 3340500
+ },
+ "complement_minimal": {
+  "0": 0,
+  "1": 0,
+  "2": 0,
+  "3": 0,
+  "4": 0,
+  "5": 0,
+  "6": 0,
+  "7": 0,
+  "8": 0,
+  "9": 28375,
+  "10": 6600,
+  "11": 1500,
+  "12": 0,
+  "13": 0,
+  "14": 0
+ },
+ "closed_form_k0_10": {
+  "0": 1,
+  "1": 25,
+  "2": 300,
+  "3": 2300,
+  "4": 12650,
+  "5": 53100,
+  "6": 176500,
+  "7": 475000,
+  "8": 1047375,
+  "9": 1898000,
+  "10": 2809700
+ }
+}
