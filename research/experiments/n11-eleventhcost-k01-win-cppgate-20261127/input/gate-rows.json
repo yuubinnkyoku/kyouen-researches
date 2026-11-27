@@ -1,0 +1,34 @@
+{
+ "schema": "n11-eleventhcost-k01-win-cppgate-rows-v1",
+ "targets": {
+  "k01": {
+   "key": "1297036696978718720:64",
+   "legal": 88,
+   "budget": "15000000",
+   "expected": "88,15000000,1,12755963",
+   "input_pin": "f8255dc7334bfdf638043a1dae1e8c69311da06bd425b8641d0b5a04326afc24"
+  }
+ },
+ "anchors": {
+  "anchor-at2m": {
+   "budget": "2000000",
+   "expected": "98,2000000,0,2000000"
+  },
+  "anchor-aj001": {
+   "budget": "30000000",
+   "expected": "84,30000000,2,5156075"
+  },
+  "anchor-af039": {
+   "budget": "30000000",
+   "expected": "89,30000000,2,19234232"
+  }
+ },
+ "head_basis": {
+  "cache": "merged-exact-s5-chain-plus-tenthcost-k01k02-20261127.cache",
+  "sha256_prefix": "16b34014",
+  "rows": 6889,
+  "win": 207,
+  "loss": 6682
+ },
+ "status_guard": "gate bookkeeping only; NO verdict consumed; 11x11 UNKNOWN"
+}

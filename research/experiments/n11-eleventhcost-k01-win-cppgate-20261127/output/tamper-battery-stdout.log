@@ -1,0 +1,21 @@
+== T1 expected-pin flip (gate-rows k01 expected 1->2)
+T1 rc=1
+AUDIT-FAIL
+  G3: k01 expected 88,15000000,1,12755963 vs 88,15000000,2,12755963
+== T2 raw k01.p1 nodes edit (12755963->12755962)
+T2 rc=1
+AUDIT-FAIL
+  G2: k01 pair 88,15000000,1,12755962 vs 88,15000000,1,12755963
+  G3: k01 expected 88,15000000,1,12755962 vs 88,15000000,1,12755963
+== T3 phantom GATE-PASS in status log
+T3 rc=1
+AUDIT-FAIL
+  G4: passes ['anchor-at2m', 'anchor-aj001', 'anchor-af039', 'k01', 'k99'] vs rows ['k01', 'anchor-at2m', 'anchor-aj001', 'anchor-af039']
+== T4 head byte append
+T4 rc=1
+AUDIT-FAIL
+  G6: head sha 6b598ac7ca1d333dfb4620c8077e248bb9bbe25aff91af0371110efc03f7154b
+  G6: head rows 6890
+== clean control
+CLEAN rc=0
+{"verdict": "AUDIT-PASS", "gates": "G0-G6", "rows": 4, "targets": ["k01"], "head_sha256": "16b340146fe8a01667ae31fc2f0534a8a3977e56b7c701803d621edc23312ef3", "target_keys": {"k01": "1297036696978718720:64"}, "expected": {"k01": "88,15000000,1,12755963"}}
