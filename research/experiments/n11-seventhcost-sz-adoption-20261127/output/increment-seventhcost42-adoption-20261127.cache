@@ -1,0 +1,66 @@
+# n11 seventh-cost 42-row canonical adoption increment (Part SZ,
+#   n11-seventhcost-sz-adoption-20261127, 2026-11-27) - fresh
+#   42-row increment: 41 LOSS (k01..k42 minus k05) + 1 WIN (k05
+#   1152921504607932416:536870912).  Part SZ declares the
+#   seventh-cost canonical adoption: the canonical head of record
+#   advances from merged-exact-s5-chain-plus-sixthlossk38
+#   (sha256 42dbb58f..., 6,832 rows WIN 201 / LOSS 6,631) by
+#   consuming exactly the 42 published seventh-cost rows.
+# Sources of record (all re-verified live by this maker against
+#   published bytes): the Part SW C++ scrutiny gate kit (41 LOSS
+#   rows, 145/145 files, audit_gate.py live PASS), the Part SX
+#   C++ gate kit (k05 WIN row, 24/24 files, audit_gate.py live
+#   PASS), the Part SY third-implementation corroboration kit
+#   (42 targets, 84 raws, 143/143 files, audit_sy.py live
+#   AUDIT-PASS; wave C third-host audit at HEAD 36cb3ab7).
+# Every adopted key is fresh to BASE 42dbb58f... (absent from
+#   the canonical head), quarantine-free and canonical-safe per
+#   s5_evidence_policy; adopted node total 227,552,924
+#   (bookkeeping, never verdicts).
+# NO root verdict is consumed, NO class freed, NO class
+#   excluded; nodes are bookkeeping, never verdicts; the standard
+#   11x11 empty board, every central-reply root, the two-stone
+#   root {60,27} and its remaining third moves {100,108} stay
+#   UNKNOWN.
+s5verdict,1152921504607932416,536870912,5,1,15763505
+s5verdict,1152921504608026624,553648128,5,2,6557441
+s5verdict,1152921513197961216,536870912,5,2,2739658
+s5verdict,1152956688980115456,536870912,5,2,4841679
+s5verdict,1224979098645954560,536870912,5,2,8150456
+s5verdict,1297036692683882496,536870912,5,2,2986255
+s5verdict,1306043891938492416,8,5,2,5484699
+s5verdict,1306043891938492416,16,5,2,4856132
+s5verdict,1306043891938492416,32,5,2,4695043
+s5verdict,1306043891938492416,64,5,2,10134007
+s5verdict,1306043891938492416,128,5,2,3009687
+s5verdict,1306043891938492416,16384,5,2,6238916
+s5verdict,1306043891938492416,65536,5,2,3113635
+s5verdict,1306043891938492416,16777216,5,2,10652524
+s5verdict,1306043891938492416,67108864,5,2,13100811
+s5verdict,1306043891938492416,68719476736,5,2,8175719
+s5verdict,1306043891938492417,0,5,2,5235489
+s5verdict,1306043891938492544,0,5,2,6968873
+s5verdict,1306043891938496512,0,5,2,10889302
+s5verdict,1306043891938500608,0,5,2,2482316
+s5verdict,1306043891938557952,0,5,2,3184572
+s5verdict,1306043891955269632,0,5,2,4499006
+s5verdict,1306043892206927872,0,5,2,1228696
+s5verdict,1306043893012234240,0,5,2,4803039
+s5verdict,1306043960657969152,0,5,2,1831284
+s5verdict,1306044166816399360,0,5,2,3089468
+s5verdict,1306044991450120192,0,5,2,2337950
+s5verdict,1306184629426847744,0,5,2,7363042
+s5verdict,1306606841891913728,0,5,2,2198801
+s5verdict,1378101485976420352,0,5,2,6786255
+s5verdict,1594274268090204160,0,5,2,7990013
+s5verdict,1882504644241915904,0,5,2,4822824
+s5verdict,3611886901152186368,0,5,2,2960039
+s5verdict,5917729910365880320,0,5,2,2314036
+s5verdict,10376293541461623808,68719476744,5,2,7170686
+s5verdict,10376328725833715712,8,5,2,2535682
+s5verdict,10376328725833715712,65536,5,2,3882046
+s5verdict,10376328725833715712,131072,5,2,3329801
+s5verdict,10376328725833715712,33554432,5,2,4837865
+s5verdict,10376328725833715712,67108864,5,2,7435262
+s5verdict,10376328725833715712,268435456,5,2,3831090
+s5verdict,10412357522852679680,0,5,2,3045320
