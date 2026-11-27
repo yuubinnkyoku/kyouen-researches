@@ -1,0 +1,13 @@
+selftest PASS
+curves c=3: 5623
+curves c=4: 238
+curves c=5: 19
+curves c=6: 17
+curves c=7: 1
+Traceback (most recent call last):
+  File "/home/user/knowledge/kyouen-research/_q67-m22-kit/kit/scripts/surgery_general.py", line 231, in <module>
+    main()
+  File "/home/user/knowledge/kyouen-research/_q67-m22-kit/kit/scripts/surgery_general.py", line 103, in main
+    assert max(by_c) <= Q - 1, "seed unsafe"
+           ^^^^^^^^^^^^^^^^^^
+AssertionError: seed unsafe
