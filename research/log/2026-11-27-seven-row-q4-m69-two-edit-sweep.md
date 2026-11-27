@@ -58,3 +58,24 @@
   拡大。witness が見つかれば M_{7,4} ∈ [70,1929] に更新。
 - 標準 11×11 空盤・二石 root {60,27}・第三手 {100,108}・S2・closure class は
   本レーンと無関係で全時点 UNKNOWN・verdict 不消費。
+
+## 追記: 幅69 seeded SA 負記録 (2026-11-27 同セッション)
+
+出版済み `search_seeded.js`（seven-row-q4-band-42-56-20261115・改変なし・
+sha256 は実験キット README 参照）を 7×69 盤 (q=4) で実行した。
+seed は幅68 witness（`witnesses_68.json`・20石）そのまま。
+
+- seed 1 (budget 260s): best **21石**（w68 witness + (68,6)・iters 87,747）。
+- seeds 5, 7 (budget 900s each): ともに best **21石**（同一配置・
+  iters 160,236 / 157,243・改善イベント 0・rejects 0）。
+- 曲線census 1,161,122 本・build 12.3s（単走時）〜74s（並走時）。
+
+3走とも 20石への降下なし（maximalize が (68,6) を埋めて 21石から
+始まり、SA は一度も 20石以下に到達しなかった）。ヒューリスティック
+探索の未発見記録であり、7×69 witness の不在主張ではない。次の候補は
+3-for-3 近傍・frontier breadth 拡大・別 seed（幅65 witness 群）・
+holes 幅70 掃引の先送り判断材料。
+
+実行生ログ: `output/w69/sa/seed{1,5,7}.jsonl`（seed1 は stdout 全量、
+seed5/7 は改善なしで最終行のみ）。seeds 2,3,4,6 は6並走起動時に
+環境上限で沈黙消失（出力なし・計上しない）。
