@@ -1,0 +1,153 @@
+{
+ "gates": {
+  "G0:anchors": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "G0:gate-source": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "G0:head-pin": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "G0:schema": {
+   "detail": "n11-eighthcost-k01-win-cppgate-rows-v1",
+   "status": "PASS"
+  },
+  "G0:target-expected": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "G1:anchor-af039:p1": {
+   "detail": "replay_rows=1 done=True header=True",
+   "status": "PASS"
+  },
+  "G1:anchor-af039:p2": {
+   "detail": "replay_rows=1 done=True header=True",
+   "status": "PASS"
+  },
+  "G1:anchor-aj001:p1": {
+   "detail": "replay_rows=1 done=True header=True",
+   "status": "PASS"
+  },
+  "G1:anchor-aj001:p2": {
+   "detail": "replay_rows=1 done=True header=True",
+   "status": "PASS"
+  },
+  "G1:anchor-at2m:p1": {
+   "detail": "replay_rows=1 done=True header=True",
+   "status": "PASS"
+  },
+  "G1:anchor-at2m:p2": {
+   "detail": "replay_rows=1 done=True header=True",
+   "status": "PASS"
+  },
+  "G1:k01:p1": {
+   "detail": "replay_rows=1 done=True header=True",
+   "status": "PASS"
+  },
+  "G1:k01:p2": {
+   "detail": "replay_rows=1 done=True header=True",
+   "status": "PASS"
+  },
+  "G2:anchor-af039": {
+   "detail": "p1=0,5,89,0,30000000,2,19234232,38,1152921504607895681,68719476736 p2=0,5,89,0,30000000,2,19234232,41,1152921504607895681,68719476736",
+   "status": "PASS"
+  },
+  "G2:anchor-aj001": {
+   "detail": "p1=0,5,84,0,30000000,2,5156075,10,1152922604269469696,65536 p2=0,5,84,0,30000000,2,5156075,10,1152922604269469696,65536",
+   "status": "PASS"
+  },
+  "G2:anchor-at2m": {
+   "detail": "p1=0,5,98,0,2000000,0,2000000,3,1152921504606851072,536870946 p2=0,5,98,0,2000000,0,2000000,4,1152921504606851072,536870946",
+   "status": "PASS"
+  },
+  "G2:k01": {
+   "detail": "p1=0,5,84,0,15000000,1,8514427,16,1297036692750860288,64 p2=0,5,84,0,15000000,1,8514427,18,1297036692750860288,64",
+   "status": "PASS"
+  },
+  "G3:anchor-af039": {
+   "detail": "observed 89,30000000,2,19234232 expected 89,30000000,2,19234232",
+   "status": "PASS"
+  },
+  "G3:anchor-aj001": {
+   "detail": "observed 84,30000000,2,5156075 expected 84,30000000,2,5156075",
+   "status": "PASS"
+  },
+  "G3:anchor-at2m": {
+   "detail": "observed 98,2000000,0,2000000 expected 98,2000000,0,2000000",
+   "status": "PASS"
+  },
+  "G3:k01": {
+   "detail": "observed 84,15000000,1,8514427 expected 84,15000000,1,8514427",
+   "status": "PASS"
+  },
+  "G3:k01:key-pair": {
+   "detail": "1297036692750860288:64",
+   "status": "PASS"
+  },
+  "G4": {
+   "detail": "passes=4/4 bad=0",
+   "status": "PASS"
+  },
+  "G5:anchor-af039": {
+   "detail": "e51a3c9de08c62a54d80547c520876af4245394d05e37bbebf01d74204f64691",
+   "status": "PASS"
+  },
+  "G5:anchor-aj001": {
+   "detail": "2f6daea5ca3b3fe6b7713c8d450af3f3c9f203acacb8a1340255d8e8f656496c",
+   "status": "PASS"
+  },
+  "G5:anchor-at2m": {
+   "detail": "ecc0299b8142abde201fcc40ea9666dac7368d0888d0600abc717af66ddfe348",
+   "status": "PASS"
+  },
+  "G5:k01": {
+   "detail": "a5a18d5e057d7ad87dca39dd17a28057c68554ebb16e40b02d080e50580f923b",
+   "status": "PASS"
+  },
+  "G6:freshness-k01-absent": {
+   "detail": "k01 must stay absent from 5b6e77f7",
+   "status": "PASS"
+  },
+  "G6:head-census": {
+   "detail": "rows=6874 WIN=202 LOSS=6672",
+   "status": "PASS"
+  },
+  "G6:head-env": {
+   "detail": "K01_HEAD must point at the canonical head cache",
+   "status": "PASS"
+  },
+  "G6:head-sha": {
+   "detail": "5b6e77f7d7832d4ce84cb1f080a93e066eb052dcf8b817e5d560f95499fcdde2",
+   "status": "PASS"
+  }
+ },
+ "overall": "PASS",
+ "part": "eighth-cost k01 WIN row C++ scrutiny gate",
+ "rows": {
+  "anchor-af039": {
+   "budget": "30000000",
+   "expected": "89,30000000,2,19234232",
+   "observed_p1": "89,30000000,2,19234232"
+  },
+  "anchor-aj001": {
+   "budget": "30000000",
+   "expected": "84,30000000,2,5156075",
+   "observed_p1": "84,30000000,2,5156075"
+  },
+  "anchor-at2m": {
+   "budget": "2000000",
+   "expected": "98,2000000,0,2000000",
+   "observed_p1": "98,2000000,0,2000000"
+  },
+  "k01": {
+   "budget": "15000000",
+   "expected": "84,15000000,1,8514427",
+   "observed_p1": "84,15000000,1,8514427"
+  }
+ },
+ "schema": "n11-eighthcost-k01-win-cppgate-audit-v1"
+}
