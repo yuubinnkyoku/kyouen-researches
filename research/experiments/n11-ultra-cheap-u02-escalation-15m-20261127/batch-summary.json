@@ -1,0 +1,51 @@
+{
+ "schema": "n11-ultra-cheap-u02-escalation-summary-v1",
+ "part": "ultra-cheap u02/u03/u04 15M escalation (declared in research/log/2026-11-27-n11-ultra-cheap-u02u03u04-escalation-declaration.md, commit 37f1e9f6)",
+ "head_basis": {
+  "sha256_prefix": "0ec4080d",
+  "rows": 6891,
+  "win": 209,
+  "loss": 6682
+ },
+ "runner": {
+  "name": "jsreplay.js",
+  "sha256": "845856175d3c793a7eb4306f5902ecda3f1c046a8a53e8f34ed375e51febc3df",
+  "mode": "--n=11 --memo=22 --only=5 cold solver per row, no shared TT"
+ },
+ "declared_order": ["u02", "u03", "u04"],
+ "escalation_15m": {
+  "u02": {
+   "key": "1297036830121656320:131074",
+   "class_index": 2251,
+   "legal": 80,
+   "s5_index": 93815,
+   "result": 1,
+   "nodes": 3167121,
+   "budget": 15000000,
+   "pair_node_identical": true,
+   "pair_byte_identical": true,
+   "status": "WIN(1) resolved at 15M budget (nodes 3,167,121)"
+  },
+  "u03": {
+   "status": "suppressed (WIN-stop rule fired at u02); stays UNKNOWN at 2M"
+  },
+  "u04": {
+   "status": "suppressed (WIN-stop rule fired at u02); stays UNKNOWN at 2M"
+  }
+ },
+ "win_stop_rule": "active; fired at u02 WIN(1)",
+ "calibration": {
+  "note": "pre-declaration only; u01 at2m cold run reproducing the published batch raw",
+  "key": "1153485622925590528:0",
+  "result": 0,
+  "nodes": 2000000,
+  "wall_s": 9,
+  "matches_published_at2m_raw": true
+ },
+ "disclosures": [
+  "declaration published before execution (commit 37f1e9f6); all escalation runs executed after it",
+  "u02 cold pair is fully byte-identical (wall_s 15 on both passes); u03/u04 were not run at any budget in this Part (no overreach)",
+  "calibration run (u01 at 2M) was performed before the declaration and is disclosed in the declaration and published here as cal-u01-at2m.raw"
+ ],
+ "status_guard": "batch bookkeeping only; NO verdict consumed; u02 WIN row is single-implementation (jsreplay replica) and requires the C++ second-implementation scrutiny gate plus a third-implementation corroboration before any adoption; a u02 adoption would additionally require the standing WIN-side flip-census review; 11x11 UNKNOWN"
+}
