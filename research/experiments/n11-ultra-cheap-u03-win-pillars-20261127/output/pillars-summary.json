@@ -1,0 +1,39 @@
+{
+ "schema": "n11-ultra-cheap-u03-win-pillars-summary-v1",
+ "part": "ultra-cheap u03 WIN-row pillars (declared in research/log/2026-11-27-n11-ultra-cheap-u03-win-pillars-declaration.md, commit 693fecf7)",
+ "row": {
+  "key": "1153202979851993088:272",
+  "class_index": 16371,
+  "legal": 78,
+  "s5_index": 550879,
+  "escalation": "WIN(1) nodes 2909040 @15M (n11-ultra-cheap-u03-escalation-15m-20261127, kit commit 36f0cd2c)"
+ },
+ "cpp_gate": {
+  "source_sha256": "9193f5b6065e0fbcad2ef7c65f386187701cafa1f5b718cc35a5cbb0d138f92e",
+  "headers_sha256": ["5976935dcfccb9b5a26fa68f8de20868ce45363dd8c372dcd67d9b841167e7f5", "2e36d69481fafcde7aede8ae4fedf3d5477f91ee9846bcd4ae2975f32a4ba1a5"],
+  "zig": "0.13.0 (tarball pin d45312e6)",
+  "u03": "GATE-PASS 78,15000000,1,2909040 (cold pair byte-identical)",
+  "anchors": {
+   "anchor-at2m": "GATE-PASS 98,2000000,0,2000000 (cold pair byte-identical)",
+   "anchor-aj001": "GATE-PASS 84,30000000,2,5156075 (cold pair byte-identical)",
+   "anchor-af039": "GATE-PASS 89,30000000,2,19234232 (cold pair node-identical; wall_s 38 vs 39, host wall-clock only)"
+  },
+  "tamper_battery": "4/4 fail-closed (T1 wrong pin rc=43, T2 raw nodes edit rc=42, T3 missing input rc=2, T4 third_impl legal mismatch rc=1 - third_impl's own GATE_FAIL exit code, re-verified directly)"
+ },
+ "third_impl": {
+  "script_sha256": "08ea958ff59c3234ec5ac55c5c40689bd0999a34e101a88ea0546800cc4a1998",
+  "result": 1,
+  "expansions": 3305845,
+  "passes": 2,
+  "pair_identical": "all fields identical except wall_s (9.88 vs 9.97)",
+  "verdict": "CORROBORATION-PASS (verdict-level WIN(1) agreement with the replica and the C++ gate)"
+ },
+ "head_basis": {
+  "sha256_prefix": "82b52577",
+  "rows": 6892,
+  "win": 210,
+  "loss": 6682,
+  "target_absent_from_head": true
+ },
+ "status_guard": "pillar bookkeeping only; NO verdict consumed; the u03 row is NOT adopted by this Part; a u03 adoption additionally requires the standing WIN-side flip-census review; 11x11 UNKNOWN"
+}

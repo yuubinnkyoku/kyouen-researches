@@ -1,0 +1,46 @@
+{
+ "schema": "n11-ultra-cheap-u03-win-pillars-rows-v1",
+ "targets": {
+  "u03": {
+   "key": "1153202979851993088:272",
+   "class_index": 16371,
+   "legal": 78,
+   "budget": "15000000",
+   "expected": "78,15000000,1,2909040",
+   "input_pin": "fbea15350f3e8501328c7c932e23ca10a1588df6fefa61f7e8b1b7b6148bc211"
+  }
+ },
+ "anchors": {
+  "anchor-at2m": {
+   "budget": "2000000",
+   "expected": "98,2000000,0,2000000"
+  },
+  "anchor-aj001": {
+   "budget": "30000000",
+   "expected": "84,30000000,2,5156075"
+  },
+  "anchor-af039": {
+   "budget": "30000000",
+   "expected": "89,30000000,2,19234232"
+  }
+ },
+ "head_basis": {
+  "cache": "merged-exact-s5-chain-plus-ultra-cheap-u02-20261127.cache",
+  "sha256_prefix": "82b52577",
+  "rows": 6892,
+  "win": 210,
+  "loss": 6682,
+  "target_absent_from_head": true
+ },
+ "third_impl": {
+  "script_sha256": "08ea958ff59c3234ec5ac55c5c40689bd0999a34e101a88ea0546800cc4a1998",
+  "args": "--row=u03 --stones=5 --legal=78 --lo=1153202979851993088 --hi=272 --cap=400000000 --wallcap=260 --memo-power=22",
+  "expected": {
+   "result": 1,
+   "expansions": 3305845,
+   "passes": 2
+  },
+  "note": "expansions MEASURED by this Part (declared not pre-registered); both cold passes identical"
+ },
+ "status_guard": "pillar bookkeeping only; NO verdict consumed; 11x11 UNKNOWN"
+}
