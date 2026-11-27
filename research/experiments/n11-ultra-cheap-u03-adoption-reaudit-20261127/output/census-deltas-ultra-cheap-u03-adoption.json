@@ -1,0 +1,4174 @@
+{
+ "adopted": [
+  {
+   "hi": 272,
+   "lo": 1153202979851993088,
+   "nodes": 2909040,
+   "owner_classes": [
+    16371,
+    16404,
+    16930
+   ],
+   "owner_count": 3,
+   "s5_index": 550879,
+   "serving_class": 16371,
+   "verdict": 1
+  }
+ ],
+ "base_cache": {
+  "loss": 6682,
+  "rows": 6892,
+  "sha256": "82b525777843ecb44c3857b034f7a135284c2587b42dbaa94aa295b01adc7509",
+  "win": 210
+ },
+ "base_closure": {
+  "sha256": "535e2684c11e659a9f1c36d70094cd8e0567277c199c708ddd79d35cbf0849e1"
+ },
+ "base_per_root": {
+  "sha256": "a5d0e9dee1ed842557344fb475e28f4bccfaffecc3230523b800fc5610eac57a"
+ },
+ "base_summary": {
+  "sha256": "722c70d89aa125b8abe089807d87b56a893d3fc6113ce42e7d99662b9b9da70d"
+ },
+ "census_recount_base": {
+  "excluded": 390,
+  "excluded_now": 138,
+  "free_now": 39,
+  "unknown": 34382
+ },
+ "census_recount_scen": {
+  "excluded": 390,
+  "excluded_now": 140,
+  "free_now": 39,
+  "unknown": 34380
+ },
+ "closure_byte_identical_to_base": false,
+ "closure_churn": {
+  "entered": [],
+  "left": [
+   16371
+  ],
+  "rank_churn_ranked": [
+   {
+    "base": 47,
+    "class_index": 14338,
+    "scen": 46
+   },
+   {
+    "base": 449,
+    "class_index": 12290,
+    "scen": 448
+   },
+   {
+    "base": 597,
+    "class_index": 22533,
+    "scen": 596
+   },
+   {
+    "base": 403,
+    "class_index": 16397,
+    "scen": 402
+   },
+   {
+    "base": 443,
+    "class_index": 12301,
+    "scen": 442
+   },
+   {
+    "base": 184,
+    "class_index": 6166,
+    "scen": 183
+   },
+   {
+    "base": 296,
+    "class_index": 34839,
+    "scen": 295
+   },
+   {
+    "base": 396,
+    "class_index": 34840,
+    "scen": 395
+   },
+   {
+    "base": 588,
+    "class_index": 6168,
+    "scen": 587
+   },
+   {
+    "base": 756,
+    "class_index": 34841,
+    "scen": 755
+   },
+   {
+    "base": 394,
+    "class_index": 34848,
+    "scen": 393
+   },
+   {
+    "base": 395,
+    "class_index": 34849,
+    "scen": 394
+   },
+   {
+    "base": 53,
+    "class_index": 4137,
+    "scen": 52
+   },
+   {
+    "base": 523,
+    "class_index": 28713,
+    "scen": 522
+   },
+   {
+    "base": 694,
+    "class_index": 28721,
+    "scen": 693
+   },
+   {
+    "base": 713,
+    "class_index": 6197,
+    "scen": 712
+   },
+   {
+    "base": 58,
+    "class_index": 8247,
+    "scen": 57
+   },
+   {
+    "base": 520,
+    "class_index": 6200,
+    "scen": 519
+   },
+   {
+    "base": 798,
+    "class_index": 10297,
+    "scen": 797
+   },
+   {
+    "base": 52,
+    "class_index": 6203,
+    "scen": 51
+   },
+   {
+    "base": 174,
+    "class_index": 34885,
+    "scen": 173
+   },
+   {
+    "base": 82,
+    "class_index": 12359,
+    "scen": 81
+   },
+   {
+    "base": 534,
+    "class_index": 2120,
+    "scen": 533
+   },
+   {
+    "base": 330,
+    "class_index": 16457,
+    "scen": 329
+   },
+   {
+    "base": 218,
+    "class_index": 28750,
+    "scen": 217
+   },
+   {
+    "base": 397,
+    "class_index": 34897,
+    "scen": 396
+   },
+   {
+    "base": 640,
+    "class_index": 32850,
+    "scen": 639
+   },
+   {
+    "base": 734,
+    "class_index": 12369,
+    "scen": 733
+   },
+   {
+    "base": 501,
+    "class_index": 4184,
+    "scen": 500
+   },
+   {
+    "base": 318,
+    "class_index": 14425,
+    "scen": 317
+   },
+   {
+    "base": 89,
+    "class_index": 32858,
+    "scen": 88
+   },
+   {
+    "base": 479,
+    "class_index": 34906,
+    "scen": 478
+   },
+   {
+    "base": 56,
+    "class_index": 6239,
+    "scen": 55
+   },
+   {
+    "base": 552,
+    "class_index": 32865,
+    "scen": 551
+   },
+   {
+    "base": 433,
+    "class_index": 98,
+    "scen": 432
+   },
+   {
+    "base": 455,
+    "class_index": 4195,
+    "scen": 454
+   },
+   {
+    "base": 175,
+    "class_index": 34917,
+    "scen": 174
+   },
+   {
+    "base": 398,
+    "class_index": 34919,
+    "scen": 397
+   },
+   {
+    "base": 741,
+    "class_index": 4199,
+    "scen": 740
+   },
+   {
+    "base": 142,
+    "class_index": 34922,
+    "scen": 141
+   },
+   {
+    "base": 530,
+    "class_index": 10347,
+    "scen": 529
+   },
+   {
+    "base": 49,
+    "class_index": 22637,
+    "scen": 48
+   },
+   {
+    "base": 666,
+    "class_index": 10355,
+    "scen": 665
+   },
+   {
+    "base": 602,
+    "class_index": 6260,
+    "scen": 601
+   },
+   {
+    "base": 143,
+    "class_index": 34934,
+    "scen": 142
+   },
+   {
+    "base": 716,
+    "class_index": 4217,
+    "scen": 715
+   },
+   {
+    "base": 292,
+    "class_index": 32892,
+    "scen": 291
+   },
+   {
+    "base": 122,
+    "class_index": 8316,
+    "scen": 121
+   },
+   {
+    "base": 400,
+    "class_index": 34942,
+    "scen": 399
+   },
+   {
+    "base": 718,
+    "class_index": 34943,
+    "scen": 717
+   },
+   {
+    "base": 760,
+    "class_index": 2175,
+    "scen": 759
+   },
+   {
+    "base": 24,
+    "class_index": 16513,
+    "scen": 23
+   },
+   {
+    "base": 399,
+    "class_index": 34946,
+    "scen": 398
+   },
+   {
+    "base": 278,
+    "class_index": 24707,
+    "scen": 277
+   },
+   {
+    "base": 36,
+    "class_index": 34948,
+    "scen": 35
+   },
+   {
+    "base": 564,
+    "class_index": 4227,
+    "scen": 563
+   },
+   {
+    "base": 800,
+    "class_index": 32898,
+    "scen": 799
+   },
+   {
+    "base": 210,
+    "class_index": 14462,
+    "scen": 209
+   },
+   {
+    "base": 119,
+    "class_index": 6271,
+    "scen": 118
+   },
+   {
+    "base": 454,
+    "class_index": 6286,
+    "scen": 453
+   },
+   {
+    "base": 71,
+    "class_index": 26776,
+    "scen": 70
+   },
+   {
+    "base": 280,
+    "class_index": 26779,
+    "scen": 279
+   },
+   {
+    "base": 802,
+    "class_index": 10395,
+    "scen": 801
+   },
+   {
+    "base": 281,
+    "class_index": 26781,
+    "scen": 280
+   },
+   {
+    "base": 217,
+    "class_index": 26782,
+    "scen": 216
+   },
+   {
+    "base": 476,
+    "class_index": 4255,
+    "scen": 475
+   },
+   {
+    "base": 509,
+    "class_index": 18589,
+    "scen": 508
+   },
+   {
+    "base": 319,
+    "class_index": 14497,
+    "scen": 318
+   },
+   {
+    "base": 653,
+    "class_index": 26784,
+    "scen": 652
+   },
+   {
+    "base": 556,
+    "class_index": 4261,
+    "scen": 555
+   },
+   {
+    "base": 499,
+    "class_index": 12454,
+    "scen": 498
+   },
+   {
+    "base": 500,
+    "class_index": 12455,
+    "scen": 499
+   },
+   {
+    "base": 677,
+    "class_index": 12458,
+    "scen": 676
+   },
+   {
+    "base": 145,
+    "class_index": 4270,
+    "scen": 144
+   },
+   {
+    "base": 554,
+    "class_index": 6318,
+    "scen": 553
+   },
+   {
+    "base": 593,
+    "class_index": 12464,
+    "scen": 592
+   },
+   {
+    "base": 733,
+    "class_index": 24753,
+    "scen": 732
+   },
+   {
+    "base": 267,
+    "class_index": 16562,
+    "scen": 266
+   },
+   {
+    "base": 632,
+    "class_index": 12472,
+    "scen": 631
+   },
+   {
+    "base": 590,
+    "class_index": 12473,
+    "scen": 589
+   },
+   {
+    "base": 581,
+    "class_index": 26818,
+    "scen": 580
+   },
+   {
+    "base": 537,
+    "class_index": 12488,
+    "scen": 536
+   },
+   {
+    "base": 120,
+    "class_index": 6345,
+    "scen": 119
+   },
+   {
+    "base": 299,
+    "class_index": 8394,
+    "scen": 298
+   },
+   {
+    "base": 669,
+    "class_index": 32973,
+    "scen": 668
+   },
+   {
+    "base": 542,
+    "class_index": 28878,
+    "scen": 541
+   },
+   {
+    "base": 445,
+    "class_index": 2257,
+    "scen": 444
+   },
+   {
+    "base": 456,
+    "class_index": 2261,
+    "scen": 455
+   },
+   {
+    "base": 268,
+    "class_index": 16609,
+    "scen": 267
+   },
+   {
+    "base": 77,
+    "class_index": 6372,
+    "scen": 76
+   },
+   {
+    "base": 211,
+    "class_index": 14568,
+    "scen": 210
+   },
+   {
+    "base": 370,
+    "class_index": 33003,
+    "scen": 369
+   },
+   {
+    "base": 372,
+    "class_index": 33005,
+    "scen": 371
+   },
+   {
+    "base": 373,
+    "class_index": 33006,
+    "scen": 372
+   },
+   {
+    "base": 697,
+    "class_index": 12528,
+    "scen": 696
+   },
+   {
+    "base": 103,
+    "class_index": 16635,
+    "scen": 102
+   },
+   {
+    "base": 156,
+    "class_index": 18683,
+    "scen": 155
+   },
+   {
+    "base": 185,
+    "class_index": 6397,
+    "scen": 184
+   },
+   {
+    "base": 462,
+    "class_index": 2299,
+    "scen": 461
+   },
+   {
+    "base": 575,
+    "class_index": 24829,
+    "scen": 574
+   },
+   {
+    "base": 320,
+    "class_index": 14593,
+    "scen": 319
+   },
+   {
+    "base": 340,
+    "class_index": 26881,
+    "scen": 339
+   },
+   {
+    "base": 401,
+    "class_index": 259,
+    "scen": 400
+   },
+   {
+    "base": 341,
+    "class_index": 26884,
+    "scen": 340
+   },
+   {
+    "base": 83,
+    "class_index": 12549,
+    "scen": 82
+   },
+   {
+    "base": 248,
+    "class_index": 10502,
+    "scen": 247
+   },
+   {
+    "base": 342,
+    "class_index": 26886,
+    "scen": 341
+   },
+   {
+    "base": 343,
+    "class_index": 26887,
+    "scen": 342
+   },
+   {
+    "base": 604,
+    "class_index": 16642,
+    "scen": 603
+   },
+   {
+    "base": 650,
+    "class_index": 12545,
+    "scen": 649
+   },
+   {
+    "base": 300,
+    "class_index": 8459,
+    "scen": 299
+   },
+   {
+    "base": 180,
+    "class_index": 4364,
+    "scen": 179
+   },
+   {
+    "base": 204,
+    "class_index": 6419,
+    "scen": 203
+   },
+   {
+    "base": 126,
+    "class_index": 14620,
+    "scen": 125
+   },
+   {
+    "base": 121,
+    "class_index": 6439,
+    "scen": 120
+   },
+   {
+    "base": 369,
+    "class_index": 33069,
+    "scen": 368
+   },
+   {
+    "base": 48,
+    "class_index": 16686,
+    "scen": 47
+   },
+   {
+    "base": 371,
+    "class_index": 33071,
+    "scen": 370
+   },
+   {
+    "base": 168,
+    "class_index": 33072,
+    "scen": 167
+   },
+   {
+    "base": 586,
+    "class_index": 28977,
+    "scen": 585
+   },
+   {
+    "base": 505,
+    "class_index": 28978,
+    "scen": 504
+   },
+   {
+    "base": 768,
+    "class_index": 327,
+    "scen": 767
+   },
+   {
+    "base": 147,
+    "class_index": 8522,
+    "scen": 146
+   },
+   {
+    "base": 205,
+    "class_index": 6475,
+    "scen": 204
+   },
+   {
+    "base": 219,
+    "class_index": 29004,
+    "scen": 218
+   },
+   {
+    "base": 696,
+    "class_index": 20810,
+    "scen": 695
+   },
+   {
+    "base": 321,
+    "class_index": 14672,
+    "scen": 320
+   },
+   {
+    "base": 249,
+    "class_index": 10583,
+    "scen": 248
+   },
+   {
+    "base": 610,
+    "class_index": 22872,
+    "scen": 609
+   },
+   {
+    "base": 361,
+    "class_index": 31065,
+    "scen": 360
+   },
+   {
+    "base": 146,
+    "class_index": 6490,
+    "scen": 145
+   },
+   {
+    "base": 408,
+    "class_index": 16734,
+    "scen": 407
+   },
+   {
+    "base": 23,
+    "class_index": 12643,
+    "scen": 22
+   },
+   {
+    "base": 322,
+    "class_index": 14693,
+    "scen": 321
+   },
+   {
+    "base": 104,
+    "class_index": 22886,
+    "scen": 103
+   },
+   {
+    "base": 228,
+    "class_index": 6503,
+    "scen": 227
+   },
+   {
+    "base": 767,
+    "class_index": 359,
+    "scen": 766
+   },
+   {
+    "base": 663,
+    "class_index": 12650,
+    "scen": 662
+   },
+   {
+    "base": 540,
+    "class_index": 12651,
+    "scen": 539
+   },
+   {
+    "base": 418,
+    "class_index": 4460,
+    "scen": 417
+   },
+   {
+    "base": 576,
+    "class_index": 12653,
+    "scen": 575
+   },
+   {
+    "base": 659,
+    "class_index": 366,
+    "scen": 658
+   },
+   {
+    "base": 730,
+    "class_index": 22891,
+    "scen": 729
+   },
+   {
+    "base": 744,
+    "class_index": 31084,
+    "scen": 743
+   },
+   {
+    "base": 751,
+    "class_index": 369,
+    "scen": 750
+   },
+   {
+    "base": 628,
+    "class_index": 12659,
+    "scen": 627
+   },
+   {
+    "base": 3,
+    "class_index": 16757,
+    "scen": 2
+   },
+   {
+    "base": 64,
+    "class_index": 29046,
+    "scen": 63
+   },
+   {
+    "base": 176,
+    "class_index": 6518,
+    "scen": 175
+   },
+   {
+    "base": 323,
+    "class_index": 14711,
+    "scen": 322
+   },
+   {
+    "base": 571,
+    "class_index": 12661,
+    "scen": 570
+   },
+   {
+    "base": 473,
+    "class_index": 12666,
+    "scen": 472
+   },
+   {
+    "base": 585,
+    "class_index": 12664,
+    "scen": 584
+   },
+   {
+    "base": 655,
+    "class_index": 376,
+    "scen": 654
+   },
+   {
+    "base": 297,
+    "class_index": 6526,
+    "scen": 296
+   },
+   {
+    "base": 497,
+    "class_index": 12672,
+    "scen": 496
+   },
+   {
+    "base": 621,
+    "class_index": 12673,
+    "scen": 620
+   },
+   {
+    "base": 567,
+    "class_index": 386,
+    "scen": 566
+   },
+   {
+    "base": 598,
+    "class_index": 4482,
+    "scen": 597
+   },
+   {
+    "base": 186,
+    "class_index": 6532,
+    "scen": 185
+   },
+   {
+    "base": 402,
+    "class_index": 2437,
+    "scen": 401
+   },
+   {
+    "base": 123,
+    "class_index": 8583,
+    "scen": 122
+   },
+   {
+    "base": 229,
+    "class_index": 6536,
+    "scen": 228
+   },
+   {
+    "base": 790,
+    "class_index": 29063,
+    "scen": 789
+   },
+   {
+    "base": 298,
+    "class_index": 6538,
+    "scen": 297
+   },
+   {
+    "base": 422,
+    "class_index": 2445,
+    "scen": 421
+   },
+   {
+    "base": 466,
+    "class_index": 22925,
+    "scen": 465
+   },
+   {
+    "base": 78,
+    "class_index": 6547,
+    "scen": 77
+   },
+   {
+    "base": 494,
+    "class_index": 12692,
+    "scen": 493
+   },
+   {
+    "base": 40,
+    "class_index": 14743,
+    "scen": 39
+   },
+   {
+    "base": 269,
+    "class_index": 16795,
+    "scen": 268
+   },
+   {
+    "base": 224,
+    "class_index": 4508,
+    "scen": 223
+   },
+   {
+    "base": 193,
+    "class_index": 14756,
+    "scen": 192
+   },
+   {
+    "base": 438,
+    "class_index": 2477,
+    "scen": 437
+   },
+   {
+    "base": 611,
+    "class_index": 12718,
+    "scen": 610
+   },
+   {
+    "base": 324,
+    "class_index": 14767,
+    "scen": 323
+   },
+   {
+    "base": 488,
+    "class_index": 12723,
+    "scen": 487
+   },
+   {
+    "base": 197,
+    "class_index": 31157,
+    "scen": 196
+   },
+   {
+    "base": 453,
+    "class_index": 18876,
+    "scen": 452
+   },
+   {
+    "base": 270,
+    "class_index": 16831,
+    "scen": 269
+   },
+   {
+    "base": 325,
+    "class_index": 14783,
+    "scen": 324
+   },
+   {
+    "base": 258,
+    "class_index": 14788,
+    "scen": 257
+   },
+   {
+    "base": 255,
+    "class_index": 12741,
+    "scen": 254
+   },
+   {
+    "base": 259,
+    "class_index": 14791,
+    "scen": 258
+   },
+   {
+    "base": 326,
+    "class_index": 14792,
+    "scen": 325
+   },
+   {
+    "base": 112,
+    "class_index": 8661,
+    "scen": 111
+   },
+   {
+    "base": 440,
+    "class_index": 14812,
+    "scen": 439
+   },
+   {
+    "base": 684,
+    "class_index": 12764,
+    "scen": 683
+   },
+   {
+    "base": 331,
+    "class_index": 16865,
+    "scen": 330
+   },
+   {
+    "base": 467,
+    "class_index": 23015,
+    "scen": 466
+   },
+   {
+    "base": 670,
+    "class_index": 33260,
+    "scen": 669
+   },
+   {
+    "base": 439,
+    "class_index": 16881,
+    "scen": 438
+   },
+   {
+    "base": 149,
+    "class_index": 10738,
+    "scen": 148
+   },
+   {
+    "base": 202,
+    "class_index": 4596,
+    "scen": 201
+   },
+   {
+    "base": 573,
+    "class_index": 23034,
+    "scen": 572
+   },
+   {
+    "base": 230,
+    "class_index": 6653,
+    "scen": 229
+   },
+   {
+    "base": 260,
+    "class_index": 14846,
+    "scen": 259
+   },
+   {
+    "base": 671,
+    "class_index": 33283,
+    "scen": 670
+   },
+   {
+    "base": 641,
+    "class_index": 33284,
+    "scen": 640
+   },
+   {
+    "base": 35,
+    "class_index": 16901,
+    "scen": 34
+   },
+   {
+    "base": 128,
+    "class_index": 18958,
+    "scen": 127
+   },
+   {
+    "base": 346,
+    "class_index": 29198,
+    "scen": 345
+   },
+   {
+    "base": 282,
+    "class_index": 29201,
+    "scen": 281
+   },
+   {
+    "base": 348,
+    "class_index": 29203,
+    "scen": 347
+   },
+   {
+    "base": 283,
+    "class_index": 29204,
+    "scen": 282
+   },
+   {
+    "base": 169,
+    "class_index": 33301,
+    "scen": 168
+   },
+   {
+    "base": 758,
+    "class_index": 540,
+    "scen": 757
+   },
+   {
+    "base": 17,
+    "class_index": 16930,
+    "scen": 12
+   },
+   {
+    "base": 468,
+    "class_index": 23075,
+    "scen": 467
+   },
+   {
+    "base": 609,
+    "class_index": 23078,
+    "scen": 608
+   },
+   {
+    "base": 345,
+    "class_index": 29226,
+    "scen": 344
+   },
+   {
+    "base": 347,
+    "class_index": 29229,
+    "scen": 346
+   },
+   {
+    "base": 196,
+    "class_index": 29231,
+    "scen": 195
+   },
+   {
+    "base": 349,
+    "class_index": 29232,
+    "scen": 348
+   },
+   {
+    "base": 431,
+    "class_index": 563,
+    "scen": 430
+   },
+   {
+    "base": 633,
+    "class_index": 31284,
+    "scen": 632
+   },
+   {
+    "base": 687,
+    "class_index": 29238,
+    "scen": 686
+   },
+   {
+    "base": 39,
+    "class_index": 12857,
+    "scen": 38
+   },
+   {
+    "base": 698,
+    "class_index": 21050,
+    "scen": 697
+   },
+   {
+    "base": 2,
+    "class_index": 23101,
+    "scen": 1
+   },
+   {
+    "base": 12,
+    "class_index": 16957,
+    "scen": 11
+   },
+   {
+    "base": 98,
+    "class_index": 10814,
+    "scen": 97
+   },
+   {
+    "base": 703,
+    "class_index": 23102,
+    "scen": 702
+   },
+   {
+    "base": 532,
+    "class_index": 23105,
+    "scen": 531
+   },
+   {
+    "base": 412,
+    "class_index": 578,
+    "scen": 411
+   },
+   {
+    "base": 660,
+    "class_index": 23106,
+    "scen": 659
+   },
+   {
+    "base": 700,
+    "class_index": 21069,
+    "scen": 699
+   },
+   {
+    "base": 699,
+    "class_index": 21071,
+    "scen": 698
+   },
+   {
+    "base": 461,
+    "class_index": 21076,
+    "scen": 460
+   },
+   {
+    "base": 155,
+    "class_index": 16982,
+    "scen": 154
+   },
+   {
+    "base": 679,
+    "class_index": 21082,
+    "scen": 678
+   },
+   {
+    "base": 667,
+    "class_index": 31328,
+    "scen": 666
+   },
+   {
+    "base": 539,
+    "class_index": 21090,
+    "scen": 538
+   },
+   {
+    "base": 261,
+    "class_index": 14950,
+    "scen": 260
+   },
+   {
+    "base": 20,
+    "class_index": 8811,
+    "scen": 19
+   },
+   {
+    "base": 213,
+    "class_index": 17004,
+    "scen": 212
+   },
+   {
+    "base": 59,
+    "class_index": 8816,
+    "scen": 58
+   },
+   {
+    "base": 100,
+    "class_index": 12914,
+    "scen": 99
+   },
+   {
+    "base": 54,
+    "class_index": 4725,
+    "scen": 53
+   },
+   {
+    "base": 222,
+    "class_index": 8825,
+    "scen": 221
+   },
+   {
+    "base": 482,
+    "class_index": 19068,
+    "scen": 481
+   },
+   {
+    "base": 779,
+    "class_index": 6783,
+    "scen": 778
+   },
+   {
+    "base": 271,
+    "class_index": 17025,
+    "scen": 270
+   },
+   {
+    "base": 522,
+    "class_index": 25218,
+    "scen": 521
+   },
+   {
+    "base": 592,
+    "class_index": 12930,
+    "scen": 591
+   },
+   {
+    "base": 799,
+    "class_index": 2702,
+    "scen": 798
+   },
+   {
+    "base": 642,
+    "class_index": 33423,
+    "scen": 641
+   },
+   {
+    "base": 306,
+    "class_index": 10897,
+    "scen": 305
+   },
+   {
+    "base": 214,
+    "class_index": 17044,
+    "scen": 213
+   },
+   {
+    "base": 92,
+    "class_index": 4763,
+    "scen": 91
+   },
+   {
+    "base": 362,
+    "class_index": 31388,
+    "scen": 361
+   },
+   {
+    "base": 238,
+    "class_index": 8861,
+    "scen": 237
+   },
+   {
+    "base": 512,
+    "class_index": 2717,
+    "scen": 511
+   },
+   {
+    "base": 62,
+    "class_index": 17061,
+    "scen": 61
+   },
+   {
+    "base": 643,
+    "class_index": 33461,
+    "scen": 642
+   },
+   {
+    "base": 746,
+    "class_index": 4792,
+    "scen": 745
+   },
+   {
+    "base": 272,
+    "class_index": 17081,
+    "scen": 271
+   },
+   {
+    "base": 783,
+    "class_index": 699,
+    "scen": 782
+   },
+   {
+    "base": 582,
+    "class_index": 2752,
+    "scen": 581
+   },
+   {
+    "base": 738,
+    "class_index": 2754,
+    "scen": 737
+   },
+   {
+    "base": 425,
+    "class_index": 19139,
+    "scen": 424
+   },
+   {
+    "base": 515,
+    "class_index": 2755,
+    "scen": 514
+   },
+   {
+    "base": 273,
+    "class_index": 17093,
+    "scen": 272
+   },
+   {
+    "base": 421,
+    "class_index": 8901,
+    "scen": 420
+   },
+   {
+    "base": 772,
+    "class_index": 21188,
+    "scen": 771
+   },
+   {
+    "base": 781,
+    "class_index": 33481,
+    "scen": 780
+   },
+   {
+    "base": 206,
+    "class_index": 6860,
+    "scen": 205
+   },
+   {
+    "base": 262,
+    "class_index": 15052,
+    "scen": 261
+   },
+   {
+    "base": 239,
+    "class_index": 8910,
+    "scen": 238
+   },
+   {
+    "base": 127,
+    "class_index": 17103,
+    "scen": 126
+   },
+   {
+    "base": 73,
+    "class_index": 721,
+    "scen": 72
+   },
+   {
+    "base": 518,
+    "class_index": 13013,
+    "scen": 517
+   },
+   {
+    "base": 763,
+    "class_index": 13014,
+    "scen": 762
+   },
+   {
+    "base": 26,
+    "class_index": 10968,
+    "scen": 25
+   },
+   {
+    "base": 274,
+    "class_index": 17113,
+    "scen": 273
+   },
+   {
+    "base": 591,
+    "class_index": 31448,
+    "scen": 590
+   },
+   {
+    "base": 750,
+    "class_index": 33498,
+    "scen": 749
+   },
+   {
+    "base": 619,
+    "class_index": 13021,
+    "scen": 618
+   },
+   {
+    "base": 332,
+    "class_index": 17118,
+    "scen": 331
+   },
+   {
+    "base": 410,
+    "class_index": 19166,
+    "scen": 409
+   },
+   {
+    "base": 536,
+    "class_index": 13022,
+    "scen": 535
+   },
+   {
+    "base": 333,
+    "class_index": 17121,
+    "scen": 332
+   },
+   {
+    "base": 141,
+    "class_index": 33511,
+    "scen": 140
+   },
+   {
+    "base": 118,
+    "class_index": 4843,
+    "scen": 117
+   },
+   {
+    "base": 460,
+    "class_index": 19181,
+    "scen": 459
+   },
+   {
+    "base": 731,
+    "class_index": 23283,
+    "scen": 730
+   },
+   {
+    "base": 419,
+    "class_index": 4854,
+    "scen": 418
+   },
+   {
+    "base": 45,
+    "class_index": 8956,
+    "scen": 44
+   },
+   {
+    "base": 517,
+    "class_index": 31487,
+    "scen": 516
+   },
+   {
+    "base": 630,
+    "class_index": 11009,
+    "scen": 629
+   },
+   {
+    "base": 338,
+    "class_index": 25359,
+    "scen": 337
+   },
+   {
+    "base": 587,
+    "class_index": 29456,
+    "scen": 586
+   },
+   {
+    "base": 450,
+    "class_index": 23318,
+    "scen": 449
+   },
+   {
+    "base": 533,
+    "class_index": 15127,
+    "scen": 532
+   },
+   {
+    "base": 67,
+    "class_index": 13080,
+    "scen": 66
+   },
+   {
+    "base": 215,
+    "class_index": 17180,
+    "scen": 214
+   },
+   {
+    "base": 307,
+    "class_index": 11038,
+    "scen": 306
+   },
+   {
+    "base": 430,
+    "class_index": 23327,
+    "scen": 429
+   },
+   {
+    "base": 553,
+    "class_index": 33567,
+    "scen": 552
+   },
+   {
+    "base": 644,
+    "class_index": 33570,
+    "scen": 643
+   },
+   {
+    "base": 158,
+    "class_index": 21286,
+    "scen": 157
+   },
+   {
+    "base": 90,
+    "class_index": 33576,
+    "scen": 89
+   },
+   {
+    "base": 148,
+    "class_index": 9001,
+    "scen": 147
+   },
+   {
+    "base": 506,
+    "class_index": 15145,
+    "scen": 505
+   },
+   {
+    "base": 531,
+    "class_index": 23337,
+    "scen": 530
+   },
+   {
+    "base": 580,
+    "class_index": 13096,
+    "scen": 579
+   },
+   {
+    "base": 752,
+    "class_index": 33581,
+    "scen": 751
+   },
+   {
+    "base": 154,
+    "class_index": 15151,
+    "scen": 153
+   },
+   {
+    "base": 577,
+    "class_index": 25392,
+    "scen": 576
+   },
+   {
+    "base": 231,
+    "class_index": 6961,
+    "scen": 230
+   },
+   {
+    "base": 693,
+    "class_index": 33584,
+    "scen": 692
+   },
+   {
+    "base": 88,
+    "class_index": 31542,
+    "scen": 87
+   },
+   {
+    "base": 747,
+    "class_index": 31546,
+    "scen": 746
+   },
+   {
+    "base": 225,
+    "class_index": 4933,
+    "scen": 224
+   },
+   {
+    "base": 692,
+    "class_index": 33607,
+    "scen": 691
+   },
+   {
+    "base": 490,
+    "class_index": 15180,
+    "scen": 489
+   },
+   {
+    "base": 538,
+    "class_index": 15182,
+    "scen": 537
+   },
+   {
+    "base": 493,
+    "class_index": 23375,
+    "scen": 492
+   },
+   {
+    "base": 625,
+    "class_index": 27482,
+    "scen": 624
+   },
+   {
+    "base": 645,
+    "class_index": 858,
+    "scen": 644
+   },
+   {
+    "base": 545,
+    "class_index": 31583,
+    "scen": 544
+   },
+   {
+    "base": 475,
+    "class_index": 31584,
+    "scen": 474
+   },
+   {
+    "base": 129,
+    "class_index": 19299,
+    "scen": 128
+   },
+   {
+    "base": 634,
+    "class_index": 31587,
+    "scen": 633
+   },
+   {
+    "base": 25,
+    "class_index": 31600,
+    "scen": 24
+   },
+   {
+    "base": 682,
+    "class_index": 23408,
+    "scen": 681
+   },
+   {
+    "base": 256,
+    "class_index": 13170,
+    "scen": 255
+   },
+   {
+    "base": 114,
+    "class_index": 11123,
+    "scen": 113
+   },
+   {
+    "base": 496,
+    "class_index": 25458,
+    "scen": 495
+   },
+   {
+    "base": 535,
+    "class_index": 25459,
+    "scen": 534
+   },
+   {
+    "base": 448,
+    "class_index": 25462,
+    "scen": 447
+   },
+   {
+    "base": 636,
+    "class_index": 31603,
+    "scen": 635
+   },
+   {
+    "base": 672,
+    "class_index": 2934,
+    "scen": 671
+   },
+   {
+    "base": 673,
+    "class_index": 2937,
+    "scen": 672
+   },
+   {
+    "base": 159,
+    "class_index": 27514,
+    "scen": 158
+   },
+   {
+    "base": 502,
+    "class_index": 2939,
+    "scen": 501
+   },
+   {
+    "base": 776,
+    "class_index": 31604,
+    "scen": 775
+   },
+   {
+    "base": 63,
+    "class_index": 23426,
+    "scen": 62
+   },
+   {
+    "base": 374,
+    "class_index": 33673,
+    "scen": 373
+   },
+   {
+    "base": 613,
+    "class_index": 23434,
+    "scen": 612
+   },
+   {
+    "base": 728,
+    "class_index": 21387,
+    "scen": 727
+   },
+   {
+    "base": 704,
+    "class_index": 23436,
+    "scen": 703
+   },
+   {
+    "base": 789,
+    "class_index": 27530,
+    "scen": 788
+   },
+   {
+    "base": 263,
+    "class_index": 15246,
+    "scen": 262
+   },
+   {
+    "base": 70,
+    "class_index": 25487,
+    "scen": 69
+   },
+   {
+    "base": 662,
+    "class_index": 25489,
+    "scen": 661
+   },
+   {
+    "base": 795,
+    "class_index": 2961,
+    "scen": 794
+   },
+   {
+    "base": 181,
+    "class_index": 5011,
+    "scen": 180
+   },
+   {
+    "base": 777,
+    "class_index": 31635,
+    "scen": 776
+   },
+   {
+    "base": 646,
+    "class_index": 2965,
+    "scen": 645
+   },
+   {
+    "base": 414,
+    "class_index": 919,
+    "scen": 413
+   },
+   {
+    "base": 420,
+    "class_index": 7070,
+    "scen": 419
+   },
+   {
+    "base": 792,
+    "class_index": 931,
+    "scen": 791
+   },
+   {
+    "base": 189,
+    "class_index": 11172,
+    "scen": 188
+   },
+   {
+    "base": 801,
+    "class_index": 29624,
+    "scen": 800
+   },
+   {
+    "base": 28,
+    "class_index": 23482,
+    "scen": 27
+   },
+   {
+    "base": 543,
+    "class_index": 29626,
+    "scen": 542
+   },
+   {
+    "base": 550,
+    "class_index": 958,
+    "scen": 549
+   },
+   {
+    "base": 84,
+    "class_index": 13248,
+    "scen": 83
+   },
+   {
+    "base": 705,
+    "class_index": 962,
+    "scen": 704
+   },
+   {
+    "base": 631,
+    "class_index": 29636,
+    "scen": 630
+   },
+   {
+    "base": 232,
+    "class_index": 7118,
+    "scen": 231
+   },
+   {
+    "base": 240,
+    "class_index": 9176,
+    "scen": 239
+   },
+   {
+    "base": 480,
+    "class_index": 21470,
+    "scen": 479
+   },
+   {
+    "base": 203,
+    "class_index": 5087,
+    "scen": 202
+   },
+   {
+    "base": 706,
+    "class_index": 992,
+    "scen": 705
+   },
+   {
+    "base": 764,
+    "class_index": 999,
+    "scen": 763
+   },
+   {
+    "base": 250,
+    "class_index": 11247,
+    "scen": 249
+   },
+   {
+    "base": 293,
+    "class_index": 33779,
+    "scen": 292
+   },
+   {
+    "base": 712,
+    "class_index": 1013,
+    "scen": 711
+   },
+   {
+    "base": 51,
+    "class_index": 1016,
+    "scen": 50
+   },
+   {
+    "base": 578,
+    "class_index": 1018,
+    "scen": 577
+   },
+   {
+    "base": 79,
+    "class_index": 9211,
+    "scen": 78
+   },
+   {
+    "base": 565,
+    "class_index": 19455,
+    "scen": 564
+   },
+   {
+    "base": 735,
+    "class_index": 1026,
+    "scen": 734
+   },
+   {
+    "base": 579,
+    "class_index": 1030,
+    "scen": 578
+   },
+   {
+    "base": 375,
+    "class_index": 33806,
+    "scen": 374
+   },
+   {
+    "base": 364,
+    "class_index": 31762,
+    "scen": 363
+   },
+   {
+    "base": 367,
+    "class_index": 31764,
+    "scen": 366
+   },
+   {
+    "base": 291,
+    "class_index": 31765,
+    "scen": 290
+   },
+   {
+    "base": 458,
+    "class_index": 1044,
+    "scen": 457
+   },
+   {
+    "base": 654,
+    "class_index": 31768,
+    "scen": 653
+   },
+   {
+    "base": 549,
+    "class_index": 15387,
+    "scen": 548
+   },
+   {
+    "base": 241,
+    "class_index": 9244,
+    "scen": 240
+   },
+   {
+    "base": 9,
+    "class_index": 13342,
+    "scen": 8
+   },
+   {
+    "base": 622,
+    "class_index": 1054,
+    "scen": 621
+   },
+   {
+    "base": 37,
+    "class_index": 5160,
+    "scen": 36
+   },
+   {
+    "base": 524,
+    "class_index": 15402,
+    "scen": 523
+   },
+   {
+    "base": 134,
+    "class_index": 7212,
+    "scen": 133
+   },
+   {
+    "base": 251,
+    "class_index": 11309,
+    "scen": 250
+   },
+   {
+    "base": 113,
+    "class_index": 9274,
+    "scen": 112
+   },
+   {
+    "base": 498,
+    "class_index": 1088,
+    "scen": 497
+   },
+   {
+    "base": 284,
+    "class_index": 29762,
+    "scen": 283
+   },
+   {
+    "base": 583,
+    "class_index": 27716,
+    "scen": 582
+   },
+   {
+    "base": 437,
+    "class_index": 13392,
+    "scen": 436
+   },
+   {
+    "base": 85,
+    "class_index": 13397,
+    "scen": 84
+   },
+   {
+    "base": 377,
+    "class_index": 33877,
+    "scen": 376
+   },
+   {
+    "base": 242,
+    "class_index": 9303,
+    "scen": 241
+   },
+   {
+    "base": 379,
+    "class_index": 33879,
+    "scen": 378
+   },
+   {
+    "base": 381,
+    "class_index": 33880,
+    "scen": 380
+   },
+   {
+    "base": 551,
+    "class_index": 15448,
+    "scen": 550
+   },
+   {
+    "base": 658,
+    "class_index": 15446,
+    "scen": 657
+   },
+   {
+    "base": 755,
+    "class_index": 33881,
+    "scen": 754
+   },
+   {
+    "base": 41,
+    "class_index": 15453,
+    "scen": 40
+   },
+   {
+    "base": 773,
+    "class_index": 19547,
+    "scen": 772
+   },
+   {
+    "base": 442,
+    "class_index": 9317,
+    "scen": 441
+   },
+   {
+    "base": 376,
+    "class_index": 33894,
+    "scen": 375
+   },
+   {
+    "base": 378,
+    "class_index": 33896,
+    "scen": 377
+   },
+   {
+    "base": 380,
+    "class_index": 33897,
+    "scen": 379
+   },
+   {
+    "base": 93,
+    "class_index": 5231,
+    "scen": 92
+   },
+   {
+    "base": 566,
+    "class_index": 5232,
+    "scen": 565
+   },
+   {
+    "base": 720,
+    "class_index": 5233,
+    "scen": 719
+   },
+   {
+    "base": 135,
+    "class_index": 9330,
+    "scen": 134
+   },
+   {
+    "base": 483,
+    "class_index": 19574,
+    "scen": 482
+   },
+   {
+    "base": 478,
+    "class_index": 1155,
+    "scen": 477
+   },
+   {
+    "base": 220,
+    "class_index": 29828,
+    "scen": 219
+   },
+   {
+    "base": 435,
+    "class_index": 1158,
+    "scen": 434
+   },
+   {
+    "base": 426,
+    "class_index": 1159,
+    "scen": 425
+   },
+   {
+    "base": 606,
+    "class_index": 5254,
+    "scen": 605
+   },
+   {
+    "base": 233,
+    "class_index": 7305,
+    "scen": 232
+   },
+   {
+    "base": 568,
+    "class_index": 5258,
+    "scen": 567
+   },
+   {
+    "base": 243,
+    "class_index": 9355,
+    "scen": 242
+   },
+   {
+    "base": 616,
+    "class_index": 11399,
+    "scen": 615
+   },
+   {
+    "base": 626,
+    "class_index": 27786,
+    "scen": 625
+   },
+   {
+    "base": 766,
+    "class_index": 1167,
+    "scen": 765
+   },
+   {
+    "base": 678,
+    "class_index": 1172,
+    "scen": 677
+   },
+   {
+    "base": 363,
+    "class_index": 31893,
+    "scen": 362
+   },
+   {
+    "base": 366,
+    "class_index": 31894,
+    "scen": 365
+   },
+   {
+    "base": 603,
+    "class_index": 1173,
+    "scen": 602
+   },
+   {
+    "base": 365,
+    "class_index": 31896,
+    "scen": 364
+   },
+   {
+    "base": 124,
+    "class_index": 13469,
+    "scen": 123
+   },
+   {
+    "base": 563,
+    "class_index": 1181,
+    "scen": 562
+   },
+   {
+    "base": 657,
+    "class_index": 1182,
+    "scen": 656
+   },
+   {
+    "base": 150,
+    "class_index": 11426,
+    "scen": 149
+   },
+   {
+    "base": 244,
+    "class_index": 9378,
+    "scen": 243
+   },
+   {
+    "base": 724,
+    "class_index": 13482,
+    "scen": 723
+   },
+   {
+    "base": 459,
+    "class_index": 5291,
+    "scen": 458
+   },
+   {
+    "base": 327,
+    "class_index": 15540,
+    "scen": 326
+   },
+   {
+    "base": 301,
+    "class_index": 9399,
+    "scen": 300
+   },
+   {
+    "base": 519,
+    "class_index": 1207,
+    "scen": 518
+   },
+   {
+    "base": 794,
+    "class_index": 1209,
+    "scen": 793
+   },
+   {
+    "base": 487,
+    "class_index": 19644,
+    "scen": 486
+   },
+   {
+    "base": 589,
+    "class_index": 29887,
+    "scen": 588
+   },
+   {
+    "base": 161,
+    "class_index": 29892,
+    "scen": 160
+   },
+   {
+    "base": 791,
+    "class_index": 1222,
+    "scen": 790
+   },
+   {
+    "base": 685,
+    "class_index": 1224,
+    "scen": 684
+   },
+   {
+    "base": 87,
+    "class_index": 19659,
+    "scen": 86
+   },
+   {
+    "base": 527,
+    "class_index": 19664,
+    "scen": 526
+   },
+   {
+    "base": 513,
+    "class_index": 25809,
+    "scen": 512
+   },
+   {
+    "base": 618,
+    "class_index": 25810,
+    "scen": 617
+   },
+   {
+    "base": 216,
+    "class_index": 23763,
+    "scen": 215
+   },
+   {
+    "base": 745,
+    "class_index": 1236,
+    "scen": 744
+   },
+   {
+    "base": 749,
+    "class_index": 1233,
+    "scen": 748
+   },
+   {
+    "base": 277,
+    "class_index": 23766,
+    "scen": 276
+   },
+   {
+    "base": 548,
+    "class_index": 29911,
+    "scen": 547
+   },
+   {
+    "base": 337,
+    "class_index": 23768,
+    "scen": 336
+   },
+   {
+    "base": 336,
+    "class_index": 23769,
+    "scen": 335
+   },
+   {
+    "base": 491,
+    "class_index": 5336,
+    "scen": 490
+   },
+   {
+    "base": 302,
+    "class_index": 9435,
+    "scen": 301
+   },
+   {
+    "base": 620,
+    "class_index": 25818,
+    "scen": 619
+   },
+   {
+    "base": 495,
+    "class_index": 5341,
+    "scen": 494
+   },
+   {
+    "base": 797,
+    "class_index": 1246,
+    "scen": 796
+   },
+   {
+    "base": 8,
+    "class_index": 5343,
+    "scen": 7
+   },
+   {
+    "base": 413,
+    "class_index": 23777,
+    "scen": 412
+   },
+   {
+    "base": 38,
+    "class_index": 11490,
+    "scen": 37
+   },
+   {
+    "base": 465,
+    "class_index": 1249,
+    "scen": 464
+   },
+   {
+    "base": 95,
+    "class_index": 7397,
+    "scen": 94
+   },
+   {
+    "base": 680,
+    "class_index": 21733,
+    "scen": 679
+   },
+   {
+    "base": 782,
+    "class_index": 1255,
+    "scen": 781
+   },
+   {
+    "base": 584,
+    "class_index": 5352,
+    "scen": 583
+   },
+   {
+    "base": 187,
+    "class_index": 9450,
+    "scen": 186
+   },
+   {
+    "base": 29,
+    "class_index": 25835,
+    "scen": 28
+   },
+   {
+    "base": 199,
+    "class_index": 13547,
+    "scen": 198
+   },
+   {
+    "base": 623,
+    "class_index": 25837,
+    "scen": 622
+   },
+   {
+    "base": 627,
+    "class_index": 5356,
+    "scen": 626
+   },
+   {
+    "base": 675,
+    "class_index": 34026,
+    "scen": 674
+   },
+   {
+    "base": 739,
+    "class_index": 25840,
+    "scen": 738
+   },
+   {
+    "base": 61,
+    "class_index": 15601,
+    "scen": 60
+   },
+   {
+    "base": 600,
+    "class_index": 5363,
+    "scen": 599
+   },
+   {
+    "base": 708,
+    "class_index": 5366,
+    "scen": 707
+   },
+   {
+    "base": 303,
+    "class_index": 9463,
+    "scen": 302
+   },
+   {
+    "base": 761,
+    "class_index": 25850,
+    "scen": 760
+   },
+   {
+    "base": 406,
+    "class_index": 5374,
+    "scen": 405
+   },
+   {
+    "base": 285,
+    "class_index": 29951,
+    "scen": 284
+   },
+   {
+    "base": 177,
+    "class_index": 9478,
+    "scen": 176
+   },
+   {
+    "base": 757,
+    "class_index": 5383,
+    "scen": 756
+   },
+   {
+    "base": 525,
+    "class_index": 19721,
+    "scen": 524
+   },
+   {
+    "base": 484,
+    "class_index": 19723,
+    "scen": 483
+   },
+   {
+    "base": 304,
+    "class_index": 9486,
+    "scen": 303
+   },
+   {
+    "base": 245,
+    "class_index": 9492,
+    "scen": 244
+   },
+   {
+    "base": 762,
+    "class_index": 5396,
+    "scen": 761
+   },
+   {
+    "base": 294,
+    "class_index": 34070,
+    "scen": 293
+   },
+   {
+    "base": 742,
+    "class_index": 5399,
+    "scen": 741
+   },
+   {
+    "base": 246,
+    "class_index": 9496,
+    "scen": 245
+   },
+   {
+    "base": 305,
+    "class_index": 9498,
+    "scen": 304
+   },
+   {
+    "base": 94,
+    "class_index": 5408,
+    "scen": 93
+   },
+   {
+    "base": 683,
+    "class_index": 1315,
+    "scen": 682
+   },
+   {
+    "base": 27,
+    "class_index": 19749,
+    "scen": 26
+   },
+   {
+    "base": 607,
+    "class_index": 19752,
+    "scen": 606
+   },
+   {
+    "base": 753,
+    "class_index": 1322,
+    "scen": 752
+   },
+   {
+    "base": 115,
+    "class_index": 11566,
+    "scen": 114
+   },
+   {
+    "base": 546,
+    "class_index": 13615,
+    "scen": 545
+   },
+   {
+    "base": 192,
+    "class_index": 13616,
+    "scen": 191
+   },
+   {
+    "base": 264,
+    "class_index": 15666,
+    "scen": 263
+   },
+   {
+    "base": 170,
+    "class_index": 34106,
+    "scen": 169
+   },
+   {
+    "base": 234,
+    "class_index": 7486,
+    "scen": 233
+   },
+   {
+    "base": 428,
+    "class_index": 19774,
+    "scen": 427
+   },
+   {
+    "base": 76,
+    "class_index": 3392,
+    "scen": 75
+   },
+   {
+    "base": 784,
+    "class_index": 34114,
+    "scen": 783
+   },
+   {
+    "base": 427,
+    "class_index": 1349,
+    "scen": 426
+   },
+   {
+    "base": 557,
+    "class_index": 34117,
+    "scen": 556
+   },
+   {
+    "base": 350,
+    "class_index": 30026,
+    "scen": 349
+   },
+   {
+    "base": 116,
+    "class_index": 11598,
+    "scen": 115
+   },
+   {
+    "base": 81,
+    "class_index": 11602,
+    "scen": 80
+   },
+   {
+    "base": 423,
+    "class_index": 1362,
+    "scen": 422
+   },
+   {
+    "base": 198,
+    "class_index": 11605,
+    "scen": 197
+   },
+   {
+    "base": 295,
+    "class_index": 34138,
+    "scen": 294
+   },
+   {
+    "base": 736,
+    "class_index": 25947,
+    "scen": 735
+   },
+   {
+    "base": 711,
+    "class_index": 30045,
+    "scen": 710
+   },
+   {
+    "base": 11,
+    "class_index": 5473,
+    "scen": 10
+   },
+   {
+    "base": 572,
+    "class_index": 21857,
+    "scen": 571
+   },
+   {
+    "base": 160,
+    "class_index": 28003,
+    "scen": 159
+   },
+   {
+    "base": 652,
+    "class_index": 25956,
+    "scen": 651
+   },
+   {
+    "base": 562,
+    "class_index": 25957,
+    "scen": 561
+   },
+   {
+    "base": 743,
+    "class_index": 28005,
+    "scen": 742
+   },
+   {
+    "base": 774,
+    "class_index": 28004,
+    "scen": 773
+   },
+   {
+    "base": 608,
+    "class_index": 5487,
+    "scen": 607
+   },
+   {
+    "base": 617,
+    "class_index": 13685,
+    "scen": 616
+   },
+   {
+    "base": 472,
+    "class_index": 13686,
+    "scen": 471
+   },
+   {
+    "base": 46,
+    "class_index": 11641,
+    "scen": 45
+   },
+   {
+    "base": 721,
+    "class_index": 21888,
+    "scen": 720
+   },
+   {
+    "base": 351,
+    "class_index": 30081,
+    "scen": 350
+   },
+   {
+    "base": 382,
+    "class_index": 34178,
+    "scen": 381
+   },
+   {
+    "base": 265,
+    "class_index": 15750,
+    "scen": 264
+   },
+   {
+    "base": 247,
+    "class_index": 9609,
+    "scen": 246
+   },
+   {
+    "base": 778,
+    "class_index": 19851,
+    "scen": 777
+   },
+   {
+    "base": 457,
+    "class_index": 13708,
+    "scen": 456
+   },
+   {
+    "base": 770,
+    "class_index": 19856,
+    "scen": 769
+   },
+   {
+    "base": 65,
+    "class_index": 34197,
+    "scen": 64
+   },
+   {
+    "base": 50,
+    "class_index": 23960,
+    "scen": 49
+   },
+   {
+    "base": 441,
+    "class_index": 7577,
+    "scen": 440
+   },
+   {
+    "base": 615,
+    "class_index": 23962,
+    "scen": 614
+   },
+   {
+    "base": 18,
+    "class_index": 23964,
+    "scen": 17
+   },
+   {
+    "base": 447,
+    "class_index": 13724,
+    "scen": 446
+   },
+   {
+    "base": 69,
+    "class_index": 23966,
+    "scen": 68
+   },
+   {
+    "base": 43,
+    "class_index": 5535,
+    "scen": 42
+   },
+   {
+    "base": 729,
+    "class_index": 23965,
+    "scen": 728
+   },
+   {
+    "base": 740,
+    "class_index": 19870,
+    "scen": 739
+   },
+   {
+    "base": 10,
+    "class_index": 30118,
+    "scen": 9
+   },
+   {
+    "base": 75,
+    "class_index": 34217,
+    "scen": 74
+   },
+   {
+    "base": 252,
+    "class_index": 11689,
+    "scen": 251
+   },
+   {
+    "base": 717,
+    "class_index": 7595,
+    "scen": 716
+   },
+   {
+    "base": 714,
+    "class_index": 32173,
+    "scen": 713
+   },
+   {
+    "base": 144,
+    "class_index": 3502,
+    "scen": 143
+   },
+   {
+    "base": 723,
+    "class_index": 21934,
+    "scen": 722
+   },
+   {
+    "base": 695,
+    "class_index": 17840,
+    "scen": 694
+   },
+   {
+    "base": 689,
+    "class_index": 1461,
+    "scen": 688
+   },
+   {
+    "base": 33,
+    "class_index": 13758,
+    "scen": 32
+   },
+   {
+    "base": 477,
+    "class_index": 32191,
+    "scen": 476
+   },
+   {
+    "base": 383,
+    "class_index": 34240,
+    "scen": 382
+   },
+   {
+    "base": 701,
+    "class_index": 3522,
+    "scen": 700
+   },
+   {
+    "base": 793,
+    "class_index": 32197,
+    "scen": 792
+   },
+   {
+    "base": 165,
+    "class_index": 32198,
+    "scen": 164
+   },
+   {
+    "base": 664,
+    "class_index": 28104,
+    "scen": 663
+   },
+   {
+    "base": 464,
+    "class_index": 15817,
+    "scen": 463
+   },
+   {
+    "base": 235,
+    "class_index": 7626,
+    "scen": 234
+   },
+   {
+    "base": 105,
+    "class_index": 26060,
+    "scen": 104
+   },
+   {
+    "base": 599,
+    "class_index": 3532,
+    "scen": 598
+   },
+   {
+    "base": 286,
+    "class_index": 30158,
+    "scen": 285
+   },
+   {
+    "base": 686,
+    "class_index": 3535,
+    "scen": 685
+   },
+   {
+    "base": 788,
+    "class_index": 3536,
+    "scen": 787
+   },
+   {
+    "base": 508,
+    "class_index": 15825,
+    "scen": 507
+   },
+   {
+    "base": 726,
+    "class_index": 3540,
+    "scen": 725
+   },
+   {
+    "base": 737,
+    "class_index": 26069,
+    "scen": 736
+   },
+   {
+    "base": 32,
+    "class_index": 34263,
+    "scen": 31
+   },
+   {
+    "base": 101,
+    "class_index": 15831,
+    "scen": 100
+   },
+   {
+    "base": 106,
+    "class_index": 28120,
+    "scen": 105
+   },
+   {
+    "base": 190,
+    "class_index": 11735,
+    "scen": 189
+   },
+   {
+    "base": 771,
+    "class_index": 1495,
+    "scen": 770
+   },
+   {
+    "base": 55,
+    "class_index": 5596,
+    "scen": 54
+   },
+   {
+    "base": 6,
+    "class_index": 34269,
+    "scen": 5
+   },
+   {
+    "base": 668,
+    "class_index": 3560,
+    "scen": 667
+   },
+   {
+    "base": 384,
+    "class_index": 34283,
+    "scen": 383
+   },
+   {
+    "base": 474,
+    "class_index": 13804,
+    "scen": 473
+   },
+   {
+    "base": 207,
+    "class_index": 9710,
+    "scen": 206
+   },
+   {
+    "base": 471,
+    "class_index": 15855,
+    "scen": 470
+   },
+   {
+    "base": 489,
+    "class_index": 15854,
+    "scen": 488
+   },
+   {
+    "base": 681,
+    "class_index": 1519,
+    "scen": 680
+   },
+   {
+    "base": 125,
+    "class_index": 13811,
+    "scen": 124
+   },
+   {
+    "base": 785,
+    "class_index": 34296,
+    "scen": 784
+   },
+   {
+    "base": 109,
+    "class_index": 34297,
+    "scen": 108
+   },
+   {
+    "base": 544,
+    "class_index": 30203,
+    "scen": 543
+   },
+   {
+    "base": 510,
+    "class_index": 1534,
+    "scen": 509
+   },
+   {
+    "base": 162,
+    "class_index": 30208,
+    "scen": 161
+   },
+   {
+    "base": 171,
+    "class_index": 34306,
+    "scen": 170
+   },
+   {
+    "base": 151,
+    "class_index": 11779,
+    "scen": 150
+   },
+   {
+    "base": 570,
+    "class_index": 3586,
+    "scen": 569
+   },
+   {
+    "base": 529,
+    "class_index": 1544,
+    "scen": 528
+   },
+   {
+    "base": 385,
+    "class_index": 34313,
+    "scen": 384
+   },
+   {
+    "base": 547,
+    "class_index": 3593,
+    "scen": 546
+   },
+   {
+    "base": 436,
+    "class_index": 34316,
+    "scen": 435
+   },
+   {
+    "base": 469,
+    "class_index": 1548,
+    "scen": 468
+   },
+   {
+    "base": 386,
+    "class_index": 34318,
+    "scen": 385
+   },
+   {
+    "base": 387,
+    "class_index": 34321,
+    "scen": 386
+   },
+   {
+    "base": 725,
+    "class_index": 9746,
+    "scen": 724
+   },
+   {
+    "base": 722,
+    "class_index": 22039,
+    "scen": 721
+   },
+   {
+    "base": 200,
+    "class_index": 3610,
+    "scen": 199
+   },
+   {
+    "base": 236,
+    "class_index": 7710,
+    "scen": 235
+   },
+   {
+    "base": 221,
+    "class_index": 34337,
+    "scen": 220
+   },
+   {
+    "base": 266,
+    "class_index": 15909,
+    "scen": 265
+   },
+   {
+    "base": 485,
+    "class_index": 20006,
+    "scen": 484
+   },
+   {
+    "base": 528,
+    "class_index": 1578,
+    "scen": 527
+   },
+   {
+    "base": 727,
+    "class_index": 1579,
+    "scen": 726
+   },
+   {
+    "base": 612,
+    "class_index": 1581,
+    "scen": 611
+   },
+   {
+    "base": 287,
+    "class_index": 30255,
+    "scen": 286
+   },
+   {
+    "base": 702,
+    "class_index": 24115,
+    "scen": 701
+   },
+   {
+    "base": 22,
+    "class_index": 5687,
+    "scen": 21
+   },
+   {
+    "base": 257,
+    "class_index": 13880,
+    "scen": 256
+   },
+   {
+    "base": 31,
+    "class_index": 5690,
+    "scen": 30
+   },
+   {
+    "base": 732,
+    "class_index": 22095,
+    "scen": 731
+   },
+   {
+    "base": 208,
+    "class_index": 9809,
+    "scen": 207
+   },
+   {
+    "base": 463,
+    "class_index": 15958,
+    "scen": 462
+   },
+   {
+    "base": 429,
+    "class_index": 20055,
+    "scen": 428
+   },
+   {
+    "base": 308,
+    "class_index": 11868,
+    "scen": 307
+   },
+   {
+    "base": 601,
+    "class_index": 15964,
+    "scen": 600
+   },
+   {
+    "base": 409,
+    "class_index": 20071,
+    "scen": 408
+   },
+   {
+    "base": 288,
+    "class_index": 30316,
+    "scen": 287
+   },
+   {
+    "base": 647,
+    "class_index": 34414,
+    "scen": 646
+   },
+   {
+    "base": 57,
+    "class_index": 7791,
+    "scen": 56
+   },
+   {
+    "base": 656,
+    "class_index": 20080,
+    "scen": 655
+   },
+   {
+    "base": 504,
+    "class_index": 20081,
+    "scen": 503
+   },
+   {
+    "base": 60,
+    "class_index": 13938,
+    "scen": 59
+   },
+   {
+    "base": 111,
+    "class_index": 5746,
+    "scen": 110
+   },
+   {
+    "base": 339,
+    "class_index": 26226,
+    "scen": 338
+   },
+   {
+    "base": 452,
+    "class_index": 30325,
+    "scen": 451
+   },
+   {
+    "base": 415,
+    "class_index": 22135,
+    "scen": 414
+   },
+   {
+    "base": 492,
+    "class_index": 13949,
+    "scen": 491
+   },
+   {
+    "base": 624,
+    "class_index": 1662,
+    "scen": 623
+   },
+   {
+    "base": 719,
+    "class_index": 18047,
+    "scen": 718
+   },
+   {
+    "base": 661,
+    "class_index": 13952,
+    "scen": 660
+   },
+   {
+    "base": 191,
+    "class_index": 11905,
+    "scen": 190
+   },
+   {
+    "base": 179,
+    "class_index": 3717,
+    "scen": 178
+   },
+   {
+    "base": 132,
+    "class_index": 22150,
+    "scen": 131
+   },
+   {
+    "base": 648,
+    "class_index": 34439,
+    "scen": 647
+   },
+   {
+    "base": 42,
+    "class_index": 16008,
+    "scen": 41
+   },
+   {
+    "base": 715,
+    "class_index": 1671,
+    "scen": 714
+   },
+   {
+    "base": 275,
+    "class_index": 20111,
+    "scen": 274
+   },
+   {
+    "base": 674,
+    "class_index": 1681,
+    "scen": 673
+   },
+   {
+    "base": 335,
+    "class_index": 20114,
+    "scen": 334
+   },
+   {
+    "base": 334,
+    "class_index": 20116,
+    "scen": 333
+   },
+   {
+    "base": 276,
+    "class_index": 20117,
+    "scen": 275
+   },
+   {
+    "base": 560,
+    "class_index": 20121,
+    "scen": 559
+   },
+   {
+    "base": 209,
+    "class_index": 11941,
+    "scen": 208
+   },
+   {
+    "base": 388,
+    "class_index": 34472,
+    "scen": 387
+   },
+   {
+    "base": 153,
+    "class_index": 13995,
+    "scen": 152
+   },
+   {
+    "base": 4,
+    "class_index": 5804,
+    "scen": 3
+   },
+   {
+    "base": 188,
+    "class_index": 9906,
+    "scen": 187
+   },
+   {
+    "base": 596,
+    "class_index": 34483,
+    "scen": 595
+   },
+   {
+    "base": 352,
+    "class_index": 30390,
+    "scen": 351
+   },
+   {
+    "base": 237,
+    "class_index": 7869,
+    "scen": 236
+   },
+   {
+    "base": 19,
+    "class_index": 5830,
+    "scen": 18
+   },
+   {
+    "base": 108,
+    "class_index": 30409,
+    "scen": 107
+   },
+   {
+    "base": 649,
+    "class_index": 34508,
+    "scen": 648
+   },
+   {
+    "base": 635,
+    "class_index": 30414,
+    "scen": 634
+   },
+   {
+    "base": 486,
+    "class_index": 20175,
+    "scen": 485
+   },
+   {
+    "base": 759,
+    "class_index": 1744,
+    "scen": 758
+   },
+   {
+    "base": 110,
+    "class_index": 34513,
+    "scen": 109
+   },
+   {
+    "base": 133,
+    "class_index": 5842,
+    "scen": 132
+   },
+   {
+    "base": 328,
+    "class_index": 16081,
+    "scen": 327
+   },
+   {
+    "base": 754,
+    "class_index": 34516,
+    "scen": 753
+   },
+   {
+    "base": 194,
+    "class_index": 18134,
+    "scen": 193
+   },
+   {
+    "base": 614,
+    "class_index": 22239,
+    "scen": 613
+   },
+   {
+    "base": 665,
+    "class_index": 28388,
+    "scen": 664
+   },
+   {
+    "base": 555,
+    "class_index": 34537,
+    "scen": 554
+   },
+   {
+    "base": 503,
+    "class_index": 34538,
+    "scen": 502
+   },
+   {
+    "base": 289,
+    "class_index": 30445,
+    "scen": 288
+   },
+   {
+    "base": 201,
+    "class_index": 3822,
+    "scen": 200
+   },
+   {
+    "base": 309,
+    "class_index": 12016,
+    "scen": 308
+   },
+   {
+    "base": 91,
+    "class_index": 34545,
+    "scen": 90
+   },
+   {
+    "base": 558,
+    "class_index": 34548,
+    "scen": 557
+   },
+   {
+    "base": 344,
+    "class_index": 28405,
+    "scen": 343
+   },
+   {
+    "base": 516,
+    "class_index": 1788,
+    "scen": 515
+   },
+   {
+    "base": 710,
+    "class_index": 28414,
+    "scen": 709
+   },
+   {
+    "base": 514,
+    "class_index": 1792,
+    "scen": 513
+   },
+   {
+    "base": 21,
+    "class_index": 16131,
+    "scen": 20
+   },
+   {
+    "base": 451,
+    "class_index": 24325,
+    "scen": 450
+   },
+   {
+    "base": 368,
+    "class_index": 32518,
+    "scen": 367
+   },
+   {
+    "base": 226,
+    "class_index": 5897,
+    "scen": 225
+   },
+   {
+    "base": 96,
+    "class_index": 7948,
+    "scen": 95
+   },
+   {
+    "base": 72,
+    "class_index": 14102,
+    "scen": 71
+   },
+   {
+    "base": 34,
+    "class_index": 14103,
+    "scen": 33
+   },
+   {
+    "base": 432,
+    "class_index": 10008,
+    "scen": 431
+   },
+   {
+    "base": 707,
+    "class_index": 1824,
+    "scen": 706
+   },
+   {
+    "base": 390,
+    "class_index": 34597,
+    "scen": 389
+   },
+   {
+    "base": 392,
+    "class_index": 34598,
+    "scen": 391
+   },
+   {
+    "base": 470,
+    "class_index": 22309,
+    "scen": 469
+   },
+   {
+    "base": 481,
+    "class_index": 34600,
+    "scen": 480
+   },
+   {
+    "base": 637,
+    "class_index": 1831,
+    "scen": 636
+   },
+   {
+    "base": 353,
+    "class_index": 30518,
+    "scen": 352
+   },
+   {
+    "base": 182,
+    "class_index": 5947,
+    "scen": 181
+   },
+   {
+    "base": 444,
+    "class_index": 1857,
+    "scen": 443
+   },
+   {
+    "base": 639,
+    "class_index": 10050,
+    "scen": 638
+   },
+   {
+    "base": 594,
+    "class_index": 10053,
+    "scen": 593
+   },
+   {
+    "base": 80,
+    "class_index": 10056,
+    "scen": 79
+   },
+   {
+    "base": 389,
+    "class_index": 34635,
+    "scen": 388
+   },
+   {
+    "base": 391,
+    "class_index": 34636,
+    "scen": 390
+   },
+   {
+    "base": 354,
+    "class_index": 30541,
+    "scen": 353
+   },
+   {
+    "base": 137,
+    "class_index": 14161,
+    "scen": 136
+   },
+   {
+    "base": 166,
+    "class_index": 32595,
+    "scen": 165
+   },
+   {
+    "base": 329,
+    "class_index": 16211,
+    "scen": 328
+   },
+   {
+    "base": 138,
+    "class_index": 14165,
+    "scen": 137
+   },
+   {
+    "base": 765,
+    "class_index": 32596,
+    "scen": 764
+   },
+   {
+    "base": 780,
+    "class_index": 32599,
+    "scen": 779
+   },
+   {
+    "base": 139,
+    "class_index": 14168,
+    "scen": 138
+   },
+   {
+    "base": 638,
+    "class_index": 8024,
+    "scen": 637
+   },
+   {
+    "base": 140,
+    "class_index": 14170,
+    "scen": 139
+   },
+   {
+    "base": 86,
+    "class_index": 14171,
+    "scen": 85
+   },
+   {
+    "base": 310,
+    "class_index": 12124,
+    "scen": 309
+   },
+   {
+    "base": 404,
+    "class_index": 30557,
+    "scen": 403
+   },
+   {
+    "base": 561,
+    "class_index": 8031,
+    "scen": 560
+   },
+   {
+    "base": 690,
+    "class_index": 30563,
+    "scen": 689
+   },
+   {
+    "base": 417,
+    "class_index": 3940,
+    "scen": 416
+   },
+   {
+    "base": 30,
+    "class_index": 30565,
+    "scen": 29
+   },
+   {
+    "base": 775,
+    "class_index": 30564,
+    "scen": 774
+   },
+   {
+    "base": 507,
+    "class_index": 18279,
+    "scen": 506
+   },
+   {
+    "base": 183,
+    "class_index": 5995,
+    "scen": 182
+   },
+   {
+    "base": 253,
+    "class_index": 12146,
+    "scen": 252
+   },
+   {
+    "base": 407,
+    "class_index": 1906,
+    "scen": 406
+   },
+   {
+    "base": 446,
+    "class_index": 6004,
+    "scen": 445
+   },
+   {
+    "base": 748,
+    "class_index": 8052,
+    "scen": 747
+   },
+   {
+    "base": 212,
+    "class_index": 16246,
+    "scen": 211
+   },
+   {
+    "base": 163,
+    "class_index": 30583,
+    "scen": 162
+   },
+   {
+    "base": 316,
+    "class_index": 14204,
+    "scen": 315
+   },
+   {
+    "base": 74,
+    "class_index": 1924,
+    "scen": 73
+   },
+   {
+    "base": 676,
+    "class_index": 34692,
+    "scen": 675
+   },
+   {
+    "base": 311,
+    "class_index": 12166,
+    "scen": 310
+   },
+   {
+    "base": 164,
+    "class_index": 30599,
+    "scen": 163
+   },
+   {
+    "base": 172,
+    "class_index": 34700,
+    "scen": 171
+   },
+   {
+    "base": 786,
+    "class_index": 34701,
+    "scen": 785
+   },
+   {
+    "base": 223,
+    "class_index": 3984,
+    "scen": 222
+   },
+   {
+    "base": 195,
+    "class_index": 26516,
+    "scen": 194
+   },
+   {
+    "base": 290,
+    "class_index": 30613,
+    "scen": 289
+   },
+   {
+    "base": 541,
+    "class_index": 28564,
+    "scen": 540
+   },
+   {
+    "base": 569,
+    "class_index": 6037,
+    "scen": 568
+   },
+   {
+    "base": 44,
+    "class_index": 6040,
+    "scen": 43
+   },
+   {
+    "base": 136,
+    "class_index": 12184,
+    "scen": 135
+   },
+   {
+    "base": 355,
+    "class_index": 30625,
+    "scen": 354
+   },
+   {
+    "base": 312,
+    "class_index": 12200,
+    "scen": 311
+   },
+   {
+    "base": 317,
+    "class_index": 14251,
+    "scen": 316
+   },
+   {
+    "base": 356,
+    "class_index": 30635,
+    "scen": 355
+   },
+   {
+    "base": 405,
+    "class_index": 6062,
+    "scen": 404
+   },
+   {
+    "base": 424,
+    "class_index": 16304,
+    "scen": 423
+   },
+   {
+    "base": 629,
+    "class_index": 28596,
+    "scen": 628
+   },
+   {
+    "base": 152,
+    "class_index": 12213,
+    "scen": 151
+   },
+   {
+    "base": 102,
+    "class_index": 16310,
+    "scen": 101
+   },
+   {
+    "base": 357,
+    "class_index": 30645,
+    "scen": 356
+   },
+   {
+    "base": 526,
+    "class_index": 1975,
+    "scen": 525
+   },
+   {
+    "base": 651,
+    "class_index": 34743,
+    "scen": 650
+   },
+   {
+    "base": 358,
+    "class_index": 30650,
+    "scen": 357
+   },
+   {
+    "base": 107,
+    "class_index": 28604,
+    "scen": 106
+   },
+   {
+    "base": 359,
+    "class_index": 30653,
+    "scen": 358
+   },
+   {
+    "base": 605,
+    "class_index": 1980,
+    "scen": 604
+   },
+   {
+    "base": 416,
+    "class_index": 10176,
+    "scen": 415
+   },
+   {
+    "base": 130,
+    "class_index": 20417,
+    "scen": 129
+   },
+   {
+    "base": 157,
+    "class_index": 20418,
+    "scen": 156
+   },
+   {
+    "base": 313,
+    "class_index": 12225,
+    "scen": 312
+   },
+   {
+    "base": 5,
+    "class_index": 20421,
+    "scen": 4
+   },
+   {
+    "base": 279,
+    "class_index": 26565,
+    "scen": 278
+   },
+   {
+    "base": 131,
+    "class_index": 20423,
+    "scen": 130
+   },
+   {
+    "base": 688,
+    "class_index": 28614,
+    "scen": 687
+   },
+   {
+    "base": 709,
+    "class_index": 28617,
+    "scen": 708
+   },
+   {
+    "base": 178,
+    "class_index": 12235,
+    "scen": 177
+   },
+   {
+    "base": 595,
+    "class_index": 32715,
+    "scen": 594
+   },
+   {
+    "base": 769,
+    "class_index": 20430,
+    "scen": 768
+   },
+   {
+    "base": 173,
+    "class_index": 34767,
+    "scen": 172
+   },
+   {
+    "base": 787,
+    "class_index": 34768,
+    "scen": 786
+   },
+   {
+    "base": 314,
+    "class_index": 12243,
+    "scen": 313
+   },
+   {
+    "base": 68,
+    "class_index": 14295,
+    "scen": 67
+   },
+   {
+    "base": 434,
+    "class_index": 20440,
+    "scen": 433
+   },
+   {
+    "base": 99,
+    "class_index": 12249,
+    "scen": 98
+   },
+   {
+    "base": 167,
+    "class_index": 32729,
+    "scen": 166
+   },
+   {
+    "base": 691,
+    "class_index": 32730,
+    "scen": 690
+   },
+   {
+    "base": 254,
+    "class_index": 12253,
+    "scen": 253
+   },
+   {
+    "base": 511,
+    "class_index": 20445,
+    "scen": 510
+   },
+   {
+    "base": 315,
+    "class_index": 12255,
+    "scen": 314
+   },
+   {
+    "base": 360,
+    "class_index": 30688,
+    "scen": 359
+   },
+   {
+    "base": 7,
+    "class_index": 12264,
+    "scen": 6
+   },
+   {
+    "base": 559,
+    "class_index": 34794,
+    "scen": 558
+   },
+   {
+    "base": 117,
+    "class_index": 34796,
+    "scen": 116
+   },
+   {
+    "base": 411,
+    "class_index": 20460,
+    "scen": 410
+   },
+   {
+    "base": 227,
+    "class_index": 6126,
+    "scen": 226
+   },
+   {
+    "base": 574,
+    "class_index": 16367,
+    "scen": 573
+   },
+   {
+    "base": 97,
+    "class_index": 8176,
+    "scen": 96
+   },
+   {
+    "base": 796,
+    "class_index": 34802,
+    "scen": 795
+   },
+   {
+    "base": 521,
+    "class_index": 10233,
+    "scen": 520
+   },
+   {
+    "base": 393,
+    "class_index": 34812,
+    "scen": 392
+   },
+   {
+    "base": 66,
+    "class_index": 10237,
+    "scen": 65
+   }
+  ],
+  "rows_base": 802,
+  "rows_scen": 801,
+  "unknown_now_churn": [
+   {
+    "base": 52,
+    "class_index": 16930,
+    "scen": 51
+   }
+  ]
+ },
+ "increment": {
+  "sha256": "0796a210bfd7519922de2bad488fbd6fcb240d287183b8731f49e081afbd2b26"
+ },
+ "joint_greedy": {
+  "base": 43830,
+  "scen": 43830
+ },
+ "loss_owner_class_union": [],
+ "manifest": {
+  "sha256": "f09075f0c680635e45e2c8405d1f00f5b0de39367d0c15c457ce3d51445fa51e"
+ },
+ "owner_class_count_hist": {
+  "3": 1
+ },
+ "per_root_coverage_byte_identical": false,
+ "per_root_free_and_uncovered_identical": true,
+ "per_root_greedy_delta": [
+  {
+   "base": 5228,
+   "root": 26,
+   "scen": 5227
+  },
+  {
+   "base": 2893,
+   "root": 48,
+   "scen": 2980
+  }
+ ],
+ "scen_cache": {
+  "loss": 6682,
+  "rows": 6893,
+  "sha256": "c5082866c1bb61e9cbcb86b80b29c3b2a141b4b5e93a0b8d4b46e04151b631c8",
+  "win": 211
+ },
+ "scen_closure": {
+  "sha256": "137cc49bab8e44dcb18611b07e3fdcec9bd63e78345862e9ea207a0936ec63e0"
+ },
+ "scen_per_root": {
+  "sha256": "4e27453acbf7f463ab92b4b81dba08ba118a7e578f68c09713e14a26cce5b3a2"
+ },
+ "scen_summary": {
+  "sha256": "7cd448790d19181b38895766e948b63cad7d3b355920348f60f6dc89c6deab51"
+ },
+ "serving_class_rows": {
+  "16371": {
+   "adopted_owned_here": 1,
+   "base_status": "excluded_now",
+   "class_mask": [
+    1153202979851993088,
+    16
+   ],
+   "scen_status": "excluded_now",
+   "unknown_after": 0,
+   "unknown_before": 1
+  }
+ },
+ "status_flip_count": 2,
+ "status_flip_count_predicted_by_declaration": 3,
+ "status_flips": [
+  {
+   "base": "unknown",
+   "class_index": 16404,
+   "class_mask": [
+    1154047404580798464,
+    64
+   ],
+   "scen": "excluded_now"
+  },
+  {
+   "base": "unknown",
+   "class_index": 16930,
+   "class_mask": [
+    1152921504875282432,
+    272
+   ],
+   "scen": "excluded_now"
+  }
+ ],
+ "tamper_battery": {
+  "row_append_reproduces_scen_census": true,
+  "row_delete_restores_base_census": true,
+  "tampered_caches_break_sha_gate": true,
+  "verdict_flip_changes_census": true
+ },
+ "update8_new_resolved": [],
+ "update8_refresh_base": {
+  "groups_free_now": 131,
+  "remaining": 31332,
+  "resolved": 284,
+  "resolved_list_len": 284,
+  "win_hit_groups": 35
+ },
+ "update8_refresh_scen": {
+  "groups_free_now": 131,
+  "remaining": 31332,
+  "resolved": 284,
+  "resolved_list_len": 284,
+  "win_hit_groups": 35
+ },
+ "verdict": {
+  "canonical_head_sha256": "c5082866c1bb61e9cbcb86b80b29c3b2a141b4b5e93a0b8d4b46e04151b631c8",
+  "census_counts_identical_to_published_summaries": true,
+  "consumed": "exactly the one published ultra-cheap row (1 WIN u03)",
+  "deviation_from_predeclared_expectation": "the declaration pre-registered the graph-derived THREE-owner union flip prediction (16371, 16404, 16930 all unknown -> excluded_now, census unknown 34,382 -> 34,379, excluded_now 138 -> 141); the MEASURED flip count is TWO (16404 and 16930), because the serving class 16371 was ALREADY excluded_now on the BASE head (its win-hit predates the u03 adoption; the adopted row resolves its LAST unknown child, 1 -> 0, and the class leaves the closure ladder 802 -> 801 without changing census status); the measured census unknown 34,380 / excluded_now 140 supersedes the predicted 34,379 / 141",
+  "note": "declared ultra-cheap u03 adoption measurement; adopting solver-trusted S5 labels flips class-status bookkeeping only: no root verdict is consumed, no root freed, no root excluded, no coverage claim is made or changed; 11x11 stays UNKNOWN; no root verdict; nodes are bookkeeping",
+  "part": "ultra-cheap-u03-flip-census",
+  "part_declared": true,
+  "status_flip_mechanism": "win-hit (the Part EW/EM mechanism): the adopted WIN row u03 (s5 index 550879) flips two of its three owner classes, 16404 (1154047404580798464:64, cost-unknown 98 -> 97) and 16930 (1152921504875282432:272, cost-unknown 52 -> 51, one unknown_now churn cell in the ladder), from unknown to excluded_now; the third owner class, the serving class 16371 (1153202979851993088:16), was ALREADY excluded_now on the BASE head and keeps that status while the adopted row resolves its last unknown cost child (1 -> 0; the class leaves the closure ladder 802 -> 801); no class flips to free_now, free_now stays 39 (Board-verified both sides); the closure ladder re-ranks (797 cells); the per-root coverage MEASURES two individual greedy re-routes (root 26 drops 5,228 -> 5,227, root 48 grows 2,893 -> 2,980, free_now/uncovered identical on all 20 roots); joint greedy is UNCHANGED at 43,830 (a scheduling quantity, not a coverage claim) and the probing worklist row count drops 64,268 -> 64,266 (the adopted key's two membership rows, serving classes 16371 and 16930, leave the worklist; regen content sha differs from the BASE pin); the adopted s5 index 550879 sits OUTSIDE the frozen update8 baseline requirement (resolved 284 -> 284, remaining_now 31,332 -> 31,332, groups_free_now 131 -> 131); the win-hit group set is unchanged (35 -> 35, no added or removed groups)",
+  "status_flips": 2
+ },
+ "win_hit_groups_added": [],
+ "win_hit_groups_identical": true,
+ "worklist_regen_pins": {
+  "base": {
+   "sha256": "9fec423a4c62ce7cf5048b2e5c5f34ece768246e5e5fe2c39e5aeb4ab7689d6b",
+   "size": 3715002
+  },
+  "scen": {
+   "sha256": "ece167236cb3d6d76c9ab8c5c8a8fa20c324dff11a4368bc50bbe70c65438ef5",
+   "size": 3714889
+  }
+ },
+ "worklist_total": {
+  "base": 64268,
+  "scen": 64266
+ }
+}
