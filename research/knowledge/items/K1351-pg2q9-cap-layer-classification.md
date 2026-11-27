@@ -1,5 +1,5 @@
 ---
-id: K1350
+id: K1351
 title: "PG(2,9) のサイズ 5–10 層の Grundy 分類 — 局所パリティによる説明"
 kind: computation
 status: computed
