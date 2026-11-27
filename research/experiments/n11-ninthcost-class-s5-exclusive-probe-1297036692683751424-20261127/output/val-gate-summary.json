@@ -1,0 +1,106 @@
+{
+  "schema": "n11-ninthcost-val-gate-summary-v1",
+  "host": "vibe upgraded sandbox, Node.js v22.20.0",
+  "jsreplay_sha256": "845856175d3c793a7eb4306f5902ecda3f1c046a8a53e8f34ed375e51febc3df",
+  "at2m": {
+    "budget": 2000000,
+    "expected": {
+      "1152921504606851072:536870946": "0,2000000",
+      "1188950301626860544:536870912": "0,2000000"
+    },
+    "runs": 2,
+    "all_pass": true
+  },
+  "at15m": {
+    "budget": 15000000,
+    "expected": {
+      "1152921504606851072:536870946": "2,3651923",
+      "1188950301626860544:536870912": "2,5040200"
+    },
+    "runs": 2,
+    "all_pass": true
+  },
+  "rows": [
+    {
+      "file": "at2m-s5-1152921504606851072-536870946",
+      "run": 1,
+      "quad": [
+        "2000000",
+        "0",
+        "2000000"
+      ],
+      "pass": true
+    },
+    {
+      "file": "at2m-s5-1152921504606851072-536870946",
+      "run": 2,
+      "quad": [
+        "2000000",
+        "0",
+        "2000000"
+      ],
+      "pass": true
+    },
+    {
+      "file": "at2m-s5-1188950301626860544-536870912",
+      "run": 1,
+      "quad": [
+        "2000000",
+        "0",
+        "2000000"
+      ],
+      "pass": true
+    },
+    {
+      "file": "at2m-s5-1188950301626860544-536870912",
+      "run": 2,
+      "quad": [
+        "2000000",
+        "0",
+        "2000000"
+      ],
+      "pass": true
+    },
+    {
+      "file": "first-15m-s5-1152921504606851072-536870946",
+      "run": 1,
+      "quad": [
+        "15000000",
+        "2",
+        "3651923"
+      ],
+      "pass": true
+    },
+    {
+      "file": "first-15m-s5-1152921504606851072-536870946",
+      "run": 2,
+      "quad": [
+        "15000000",
+        "2",
+        "3651923"
+      ],
+      "pass": true
+    },
+    {
+      "file": "second-15m-s5-1188950301626860544-536870912",
+      "run": 1,
+      "quad": [
+        "15000000",
+        "2",
+        "5040200"
+      ],
+      "pass": true
+    },
+    {
+      "file": "second-15m-s5-1188950301626860544-536870912",
+      "run": 2,
+      "quad": [
+        "15000000",
+        "2",
+        "5040200"
+      ],
+      "pass": true
+    }
+  ],
+  "note": "wall_s column not recorded (timing not evidence); node-exact against the published sixth/seventh/eighth-cost val-gate expectations (result 0 / nodes 2000000 at 2M x2 per target; result 2 / nodes 3651923 and 5040200 at 15M x2 per target)."
+}
