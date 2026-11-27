@@ -1,0 +1,17 @@
+{
+  "stage": 1,
+  "board": "../../../research/experiments/design-kyouen-witt-20261125/output/board_w24.txt",
+  "nbasis": 12, "span_size": 4096,
+  "weight_hist": [1,0,0,0,0,0,0,0,759,0,0,0,2576,0,0,0,759,0,0,0,0,0,0,0,1],
+  "dodecads": 2576,
+  "d11_count": 30912, "d11_duplicates": 0, "d11_dup_first": 0,
+  "caps13_count": 30912, "caps13_nonmaximal": 0, "caps13_nonmax_first": 0,
+  "per_cap_dodecad_hist": {"1": 30912},
+  "per_dodecad_caps_min": 12, "per_dodecad_caps_max": 12,
+  "total_incidences": 30912,
+  "d11_per_cap_hist": {"12": 30912},
+  "d11_outside_contained_dodecad": 0,
+  "nond11_count": 2040192, "nond11_duplicates": 0, "nond11_dup_first": 0,
+  "pass": {"weights": true, "dodecads": true, "d11": true, "caps": true, "incidence": true, "split": true, "all": true},
+  "seconds": {"caps_scan": 0.587, "incidence": 0.136, "split": 0.489, "total": 1.352}
+}

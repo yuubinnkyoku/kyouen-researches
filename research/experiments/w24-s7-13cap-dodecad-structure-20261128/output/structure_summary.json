@@ -1,0 +1,115 @@
+{
+  "board": "research/experiments/design-kyouen-witt-20261125/output/board_w24.txt",
+  "s_param": 7,
+  "golay": {
+    "span_size": 4096,
+    "weight_hist": {
+      "0": 1,
+      "8": 759,
+      "12": 2576,
+      "16": 759,
+      "24": 1
+    },
+    "dodecads": 2576,
+    "verified": true
+  },
+  "caps13": {
+    "count": 30912,
+    "all_terminal": true,
+    "dodecads_per_cap": {
+      "1": 30912
+    },
+    "caps_per_dodecad": {
+      "min": 12,
+      "max": 12
+    },
+    "total_incidences": 30912,
+    "verified_each_cap_exactly_one_dodecad": true
+  },
+  "eleven_subsets": {
+    "d11_count": 30912,
+    "d11_distinct": true,
+    "d11_per_cap": {
+      "12": 30912
+    },
+    "d11_grundy": {
+      "0": 30912,
+      "1": 0,
+      "2": 0
+    },
+    "d11_profile": {
+      "0,12": 30912
+    },
+    "d11_all_verified": true,
+    "nond11_count": 2040192,
+    "nond11_distinct": true,
+    "nond11_processed_full": true,
+    "nond11_grundy": {
+      "0": 0,
+      "1": 0,
+      "2": 2040192
+    },
+    "nond11_profile": {
+      "6,1": 510048
+    },
+    "nond11_fails": {
+      "sanity": 0,
+      "order": 0,
+      "grundy_ne_2": 0,
+      "sup13_ne_1": 0
+    },
+    "count_identity": {
+      "caps_times_66": 2040192,
+      "grundy2_size11_total_K1342": 2040192,
+      "match": true
+    },
+    "incidence_identity_dodecad_cap": {
+      "sum_caps_per_dodecad": 30912,
+      "caps13_count": 30912,
+      "match": true
+    },
+    "incidence_identity_d11_cap": {
+      "sum_d11_per_cap": 370944,
+      "sum_sup13_per_d11": 370944,
+      "expected_total": 370944,
+      "match": true
+    }
+  },
+  "dodecads_grundy_s7": {
+    "hist": {
+      "0": 0,
+      "1": 2576,
+      "2": 0
+    },
+    "addable_points_per_dodecad": {
+      "12": 2576
+    },
+    "sup13_per_dodecad": {
+      "12": 2576
+    },
+    "note": "at s=7 a dodecad has 12 safe children (all terminal 13-caps), so G=mex{0}=1; non-terminal, non-maximal"
+  },
+  "python_crosscheck": {
+    "weights_ok": true,
+    "span4096": true,
+    "dodecads_ok": true,
+    "d11_reg_ok": true,
+    "golay_file_ok": true,
+    "d11_file_ok": true,
+    "caps_sorted_strict": true,
+    "caps_popcount_ok": true,
+    "caps_all_safe": true,
+    "caps_count_ok": true,
+    "maximality_sample_size": 102,
+    "maximality_sample_ok": true,
+    "nond11_bin_len_ok": true,
+    "nond11_sorted_strict": true,
+    "nond11_disjoint_d11": true,
+    "sha256_nond11": "1df53ae91999b96128e476118628b544ff3106c642977abc59cbcca44e37b072",
+    "hashes_match": true,
+    "incidence_split_sample_size": 608,
+    "incidence_split_sample_ok": true,
+    "all_ok": true
+  },
+  "all_pass": true
+}

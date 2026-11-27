@@ -1,0 +1,12 @@
+{
+  "stage": 2, "part": 0, "nparts": 1, "limit": 2000, "stride": 0,
+  "nond11_total": 2040192, "nond11_size_mismatch": 0, "processed": 2000,
+  "grundy_hist": {"0": 0, "1": 0, "2": 2000, "3": 0},
+  "max12_ext_min": 6, "max12_ext_max": 6, "sup13_min": 1, "sup13_max": 1,
+  "sum_max12": 12000, "sum_sup13": 2000,
+  "profile_hist": {"6,1": 2000},
+  "fails": {"sanity": 0, "order": 0, "grundy_ne_2": 0, "sup13_ne_1": 0},
+  "fail_examples_grundy": [0, 0, 0, 0, 0],
+  "fail_examples_sup13": [0, 0, 0, 0, 0],
+  "seconds": {"main": 0.113, "extras": 0.000, "total": 0.113}
+}

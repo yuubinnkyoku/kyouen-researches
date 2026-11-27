@@ -1,0 +1,16 @@
+{
+  "stage": 2, "part": 0, "nparts": 4, "limit": 0, "stride": 0,
+  "nond11_total": 2040192, "nond11_size_mismatch": 0, "processed": 510048,
+  "grundy_hist": {"0": 0, "1": 0, "2": 510048, "3": 0},
+  "max12_ext_min": 6, "max12_ext_max": 6, "sup13_min": 1, "sup13_max": 1,
+  "sum_max12": 3060288, "sum_sup13": 510048,
+  "profile_hist": {"6,1": 510048},
+  "fails": {"sanity": 0, "order": 0, "grundy_ne_2": 0, "sup13_ne_1": 0},
+  "fail_examples_grundy": [0, 0, 0, 0, 0],
+  "fail_examples_sup13": [0, 0, 0, 0, 0],
+  "d11_checked": 30912, "d11_grundy_hist": {"0": 30912, "1": 0, "2": 0}, "d11_bad": 0, "d11_bad_first": 0,
+  "d11_profile_hist": {"0,12": 30912},
+  "dodecads_grundy_hist": {"0": 0, "1": 2576, "2": 0}, "dodecads_bad": 0,
+  "dodecad_addable_hist": {"12": 2576}, "dodecad_sup13_hist": {"12": 2576}, "dodecad_mixed_children": 0,
+  "seconds": {"main": 38.986, "extras": 2.866, "total": 41.852}
+}

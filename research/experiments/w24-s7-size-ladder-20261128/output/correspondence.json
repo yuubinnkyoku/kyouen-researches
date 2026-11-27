@@ -1,0 +1,550 @@
+{
+ "board": "research/experiments/design-kyouen-witt-20261125/output/board_w24.txt",
+ "game": "W_24 s=7 (position meets every octad in <= 7 points)",
+ "safe_positions": 7932035,
+ "all_checks_pass": true,
+ "size_ladder": [
+  {
+   "k": 0,
+   "caps": 1,
+   "G0": 1,
+   "G1": 0,
+   "G2": 0,
+   "maximal": 0,
+   "dodecad_subsets_D": 1,
+   "cap13_subsets_T": 1,
+   "D_and_T": 1,
+   "T_only": 0,
+   "D_only": 0,
+   "T_union_D": 1,
+   "caps_in_neither": 0,
+   "layer_explanation": "parity (G = k mod 2); T covers every cap",
+   "parity_expected": 0,
+   "checks_pass": true
+  },
+  {
+   "k": 1,
+   "caps": 24,
+   "G0": 0,
+   "G1": 24,
+   "G2": 0,
+   "maximal": 0,
+   "dodecad_subsets_D": 24,
+   "cap13_subsets_T": 24,
+   "D_and_T": 24,
+   "T_only": 0,
+   "D_only": 0,
+   "T_union_D": 24,
+   "caps_in_neither": 0,
+   "layer_explanation": "parity (G = k mod 2); T covers every cap",
+   "parity_expected": 1,
+   "checks_pass": true
+  },
+  {
+   "k": 2,
+   "caps": 276,
+   "G0": 276,
+   "G1": 0,
+   "G2": 0,
+   "maximal": 0,
+   "dodecad_subsets_D": 276,
+   "cap13_subsets_T": 276,
+   "D_and_T": 276,
+   "T_only": 0,
+   "D_only": 0,
+   "T_union_D": 276,
+   "caps_in_neither": 0,
+   "layer_explanation": "parity (G = k mod 2); T covers every cap",
+   "parity_expected": 0,
+   "checks_pass": true
+  },
+  {
+   "k": 3,
+   "caps": 2024,
+   "G0": 0,
+   "G1": 2024,
+   "G2": 0,
+   "maximal": 0,
+   "dodecad_subsets_D": 2024,
+   "cap13_subsets_T": 2024,
+   "D_and_T": 2024,
+   "T_only": 0,
+   "D_only": 0,
+   "T_union_D": 2024,
+   "caps_in_neither": 0,
+   "layer_explanation": "parity (G = k mod 2); T covers every cap",
+   "parity_expected": 1,
+   "checks_pass": true
+  },
+  {
+   "k": 4,
+   "caps": 10626,
+   "G0": 10626,
+   "G1": 0,
+   "G2": 0,
+   "maximal": 0,
+   "dodecad_subsets_D": 10626,
+   "cap13_subsets_T": 10626,
+   "D_and_T": 10626,
+   "T_only": 0,
+   "D_only": 0,
+   "T_union_D": 10626,
+   "caps_in_neither": 0,
+   "layer_explanation": "parity (G = k mod 2); T covers every cap",
+   "parity_expected": 0,
+   "checks_pass": true
+  },
+  {
+   "k": 5,
+   "caps": 42504,
+   "G0": 0,
+   "G1": 42504,
+   "G2": 0,
+   "maximal": 0,
+   "dodecad_subsets_D": 42504,
+   "cap13_subsets_T": 42504,
+   "D_and_T": 42504,
+   "T_only": 0,
+   "D_only": 0,
+   "T_union_D": 42504,
+   "caps_in_neither": 0,
+   "layer_explanation": "parity (G = k mod 2); T covers every cap",
+   "parity_expected": 1,
+   "checks_pass": true
+  },
+  {
+   "k": 6,
+   "caps": 134596,
+   "G0": 134596,
+   "G1": 0,
+   "G2": 0,
+   "maximal": 0,
+   "dodecad_subsets_D": 134596,
+   "cap13_subsets_T": 134596,
+   "D_and_T": 134596,
+   "T_only": 0,
+   "D_only": 0,
+   "T_union_D": 134596,
+   "caps_in_neither": 0,
+   "layer_explanation": "parity (G = k mod 2); T covers every cap",
+   "parity_expected": 0,
+   "checks_pass": true
+  },
+  {
+   "k": 7,
+   "caps": 346104,
+   "G0": 0,
+   "G1": 346104,
+   "G2": 0,
+   "maximal": 0,
+   "dodecad_subsets_D": 340032,
+   "cap13_subsets_T": 346104,
+   "D_and_T": 340032,
+   "T_only": 6072,
+   "D_only": 0,
+   "T_union_D": 346104,
+   "caps_in_neither": 0,
+   "layer_explanation": "parity (G = k mod 2); T covers every cap",
+   "parity_expected": 1,
+   "checks_pass": true
+  },
+  {
+   "k": 8,
+   "caps": 734712,
+   "G0": 734712,
+   "G1": 0,
+   "G2": 0,
+   "maximal": 0,
+   "dodecad_subsets_D": 637560,
+   "cap13_subsets_T": 734712,
+   "D_and_T": 637560,
+   "T_only": 97152,
+   "D_only": 0,
+   "T_union_D": 734712,
+   "caps_in_neither": 0,
+   "layer_explanation": "parity (G = k mod 2); T covers every cap",
+   "parity_expected": 0,
+   "checks_pass": true
+  },
+  {
+   "k": 9,
+   "caps": 1295360,
+   "G0": 0,
+   "G1": 728640,
+   "G2": 566720,
+   "maximal": 0,
+   "dodecad_subsets_D": 566720,
+   "cap13_subsets_T": 1295360,
+   "D_and_T": 566720,
+   "T_only": 728640,
+   "D_only": 0,
+   "T_union_D": 1295360,
+   "caps_in_neither": 0,
+   "dp_class_G": {
+    "D": {
+     "n": 566720,
+     "G": "2"
+    },
+    "Tonly": {
+     "n": 728640,
+     "G": "1"
+    }
+   },
+   "layer_explanation": "G=2 iff dodecad 9-subset; G=1 iff 13cap-9-subset non-dodecad; every 9-cap is in a 13-cap",
+   "checks_pass": true
+  },
+  {
+   "k": 10,
+   "caps": 1870176,
+   "G0": 1700160,
+   "G1": 170016,
+   "G2": 0,
+   "maximal": 0,
+   "dodecad_subsets_D": 170016,
+   "cap13_subsets_T": 1870176,
+   "D_and_T": 170016,
+   "T_only": 1700160,
+   "D_only": 0,
+   "T_union_D": 1870176,
+   "caps_in_neither": 0,
+   "dp_class_G": {
+    "D": {
+     "n": 170016,
+     "G": "1"
+    },
+    "Tonly": {
+     "n": 1700160,
+     "G": "0"
+    }
+   },
+   "layer_explanation": "G=1 iff dodecad 10-subset; G=0 iff 13cap-10-subset non-dodecad; every 10-cap is in a 13-cap",
+   "checks_pass": true
+  },
+  {
+   "k": 11,
+   "caps": 2071104,
+   "G0": 30912,
+   "G1": 0,
+   "G2": 2040192,
+   "maximal": 0,
+   "dodecad_subsets_D": 30912,
+   "cap13_subsets_T": 2071104,
+   "D_and_T": 30912,
+   "T_only": 2040192,
+   "D_only": 0,
+   "T_union_D": 2071104,
+   "caps_in_neither": 0,
+   "dp_class_G": {
+    "D": {
+     "n": 30912,
+     "G": "0"
+    },
+    "Tonly": {
+     "n": 2040192,
+     "G": "2"
+    }
+   },
+   "layer_explanation": "G=0 iff dodecad 11-subset; G=2 iff 13cap-11-subset non-dodecad; every 11-cap is in a 13-cap",
+   "checks_pass": true
+  },
+  {
+   "k": 12,
+   "caps": 1393616,
+   "G0": 1020096,
+   "G1": 373520,
+   "G2": 0,
+   "maximal": 1020096,
+   "dodecad_subsets_D": 2576,
+   "cap13_subsets_T": 373520,
+   "D_and_T": 2576,
+   "T_only": 370944,
+   "D_only": 0,
+   "T_union_D": 373520,
+   "caps_in_neither": 1020096,
+   "dp_class_G": {
+    "D": {
+     "n": 2576,
+     "G": "1"
+    },
+    "Tonly": {
+     "n": 370944,
+     "G": "1"
+    },
+    "neither": {
+     "n": 1020096,
+     "G": "0"
+    }
+   },
+   "layer_explanation": "G=1 iff 12-subset of a 13-cap (incl. all 2576 dodecads: non-maximal); G=0 iff maximal 12-cap (in no 13-cap)",
+   "checks_pass": true
+  },
+  {
+   "k": 13,
+   "caps": 30912,
+   "G0": 30912,
+   "G1": 0,
+   "G2": 0,
+   "maximal": 30912,
+   "dodecad_subsets_D": 0,
+   "cap13_subsets_T": 30912,
+   "D_and_T": 0,
+   "T_only": 30912,
+   "D_only": 0,
+   "T_union_D": 30912,
+   "caps_in_neither": 0,
+   "dp_class_G": {
+    "Tonly": {
+     "n": 30912,
+     "G": "0"
+    }
+   },
+   "layer_explanation": "G=0 (maximal 13-caps, terminal)",
+   "checks_pass": true
+  }
+ ],
+ "structural_facts": {
+  "every_cap_of_size_le_11_in_some_13cap": true,
+  "d_k_full_for_k_le_6": true,
+  "k7_dodecad_residual": "6072 = 759*8 seven-subsets with 7 points of an octad are in no dodecad",
+  "k8_dodecad_residual": "97152 = 759*8*16 8-caps with 7 points of an octad are in no dodecad",
+  "dodecad_k_subset_in_13caps": {
+   "9": {
+    "21": 566720
+   },
+   "10": {
+    "12": 170016
+   },
+   "11": {
+    "12": 30912
+   },
+   "12": {
+    "12": 2576
+   }
+  },
+  "nondodecad_cap_k_subset_in_13caps_t_hist": {
+   "9": {
+    "14": 728640,
+    "21": 566720
+   },
+   "10": {
+    "4": 1700160,
+    "12": 170016
+   },
+   "11": {
+    "1": 2040192,
+    "12": 30912
+   },
+   "12": {
+    "1": 370944,
+    "12": 2576
+   }
+  },
+  "dodecad_submult_in_dodecads": {
+   "6": {
+    "16": 21252,
+    "18": 113344
+   },
+   "7": {
+    "6": 340032
+   },
+   "8": {
+    "2": 637560
+   }
+  }
+ },
+ "d11_to_13cap_uniformity": {
+  "per_13cap_d11_hist": {
+   "12": 30912
+  },
+  "per_d11_13caps_hist": {
+   "12": 30912
+  },
+  "incidence_total": 370944,
+  "expected": 370944,
+  "d11_cap12_extensions_hist": {
+   "13": 30912
+  },
+  "d11_maximal12_extensions_hist": {
+   "0": 30912
+  },
+  "verdict": "every d11 has exactly 12 maximal 13-cap extensions and 0 maximal 12-cap extensions; total incidence 370944 = 30912*12 (full verification of the K1349 profile {13:12})"
+ },
+ "dodecad_is_not_maximal_at_s7": {
+  "dodecad_grundy_exhaustive": {
+   "class": "D",
+   "n": 2576,
+   "g_hist": {
+    "1": 2576
+   }
+  },
+  "dodecad_in_13caps": {
+   "12": 2576
+  },
+  "maximal12 = caps - T_12": 1020096,
+  "correction": "K1348 k=12 row ('dodecad G=0 maximal terminal') and the K1342 evidence parenthetical 'G=0 1020096 ... (dodecad 2576 included)' are WRONG: every dodecad has 12 legal moves (all maximal 13-caps), G(dodecad)=1, and the 1020096 maximal 12-caps contain no dodecad"
+ },
+ "parity_samples": [
+  {
+   "k": 1,
+   "n": 100,
+   "g_hist": {
+    "1": 100
+   }
+  },
+  {
+   "k": 2,
+   "n": 100,
+   "g_hist": {
+    "0": 100
+   }
+  },
+  {
+   "k": 3,
+   "n": 100,
+   "g_hist": {
+    "1": 100
+   }
+  },
+  {
+   "k": 4,
+   "n": 100,
+   "g_hist": {
+    "0": 100
+   }
+  },
+  {
+   "k": 5,
+   "n": 100,
+   "g_hist": {
+    "1": 100
+   }
+  },
+  {
+   "k": 6,
+   "n": 100,
+   "g_hist": {
+    "0": 100
+   }
+  },
+  {
+   "k": 7,
+   "n": 100,
+   "g_hist": {
+    "1": 100
+   }
+  },
+  {
+   "k": 8,
+   "n": 100,
+   "g_hist": {
+    "0": 100
+   }
+  }
+ ],
+ "class_samples_k_le_8": [
+  {
+   "class": "k6_in_octad",
+   "n": 50,
+   "g_hist": {
+    "0": 50
+   }
+  },
+  {
+   "class": "k6_no_octad",
+   "n": 50,
+   "g_hist": {
+    "0": 50
+   }
+  },
+  {
+   "class": "k7_seven_of_octad",
+   "n": 50,
+   "g_hist": {
+    "1": 50
+   }
+  },
+  {
+   "class": "k8_dodecad_subset",
+   "n": 50,
+   "g_hist": {
+    "0": 50
+   }
+  },
+  {
+   "class": "k8_seven_of_octad_plus_one",
+   "n": 50,
+   "g_hist": {
+    "0": 50
+   }
+  }
+ ],
+ "audit_published_counts": {
+  "K1342_gsize_source": "research/experiments/design-kyouen-witt-20261125/output/grundy_w24_s7_gsize.txt",
+  "K1349_rows_checked": [
+   {
+    "row": "9 dodecad part 566720 G2",
+    "match": true
+   },
+   {
+    "row": "9 non-dodecad 728640 G1",
+    "match": true
+   },
+   {
+    "row": "10 dodecad part 170016 G1",
+    "match": true
+   },
+   {
+    "row": "10 non-dodecad 1700160 G0",
+    "match": true
+   },
+   {
+    "row": "11 dodecad part 30912 G0",
+    "match": true
+   },
+   {
+    "row": "11 13cap part (non-dodecad) 2040192 G2",
+    "match": true
+   },
+   {
+    "row": "12 maximal 1020096 G0",
+    "match": true,
+    "note": "count correct; dodecads are NOT in this class"
+   },
+   {
+    "row": "12 non-maximal 373520 G1",
+    "match": true,
+    "note": "count correct; includes all 2576 dodecads"
+   },
+   {
+    "row": "13 maximal 30912 G0",
+    "match": true
+   }
+  ],
+  "K1349_profile_claims": [
+   {
+    "claim": "dodecad 11-subset maximal extensions {13:12} uniform",
+    "status": "fully verified (census + d11ext, all 30912 d11s)"
+   },
+   {
+    "claim": "non-dodecad 11-cap in exactly one 13-cap ({12:6, 13:1} 13-part)",
+    "status": "fully verified (t_mult_hist k=11: 1 for all 2040192)"
+   },
+   {
+    "claim": "dodecad 9-subset 13-cap count 21",
+    "status": "fully verified (t_mult_hist k=9: 21 for all 566720)"
+   },
+   {
+    "claim": "dodecad 10-subset 13-cap count 12",
+    "status": "fully verified (t_mult_hist k=10: 12 for all 170016)"
+   },
+   {
+    "claim": "maximal 12-cap extension counts ({12:180} etc.)",
+    "status": "not re-verified (sample-only claim, out of scope)"
+   }
+  ],
+  "K1348_k12_row": {
+   "published": "2576, G=0 (maximal, terminal)",
+   "corrected": "2576, G=1 (non-maximal, 12 extensions to 13-caps)"
+  }
+ }
+}

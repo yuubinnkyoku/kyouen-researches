@@ -1,0 +1,15 @@
+{
+  "board": "C:/Users/yuubi/ghq/github.com/yuubinnkyoku/kyouen-researches/research/experiments/design-kyouen-witt-20261125/output/board_w24.txt", "seed": 20261128,
+  "exhaustive": {
+    "note": "exact Grundy of every cap of size 9-13 (6661168 positions), classes: D=dodecad k-subset, Tonly=13cap k-subset not dodecad, neither",
+    "per_k": [
+      {"k": 9, "caps": 1295360, "g_hist": {"1": 728640, "2": 566720}, "classes": [{"class": "D", "n": 566720, "g_hist": {"2": 566720}}, {"class": "Tonly", "n": 728640, "g_hist": {"1": 728640}}, {"class": "neither", "n": 0, "g_hist": {}}]},
+      {"k": 10, "caps": 1870176, "g_hist": {"0": 1700160, "1": 170016}, "classes": [{"class": "D", "n": 170016, "g_hist": {"1": 170016}}, {"class": "Tonly", "n": 1700160, "g_hist": {"0": 1700160}}, {"class": "neither", "n": 0, "g_hist": {}}]},
+      {"k": 11, "caps": 2071104, "g_hist": {"0": 30912, "2": 2040192}, "classes": [{"class": "D", "n": 30912, "g_hist": {"0": 30912}}, {"class": "Tonly", "n": 2040192, "g_hist": {"2": 2040192}}, {"class": "neither", "n": 0, "g_hist": {}}]},
+      {"k": 12, "caps": 1393616, "g_hist": {"0": 1020096, "1": 373520}, "classes": [{"class": "D", "n": 2576, "g_hist": {"1": 2576}}, {"class": "Tonly", "n": 370944, "g_hist": {"1": 370944}}, {"class": "neither", "n": 1020096, "g_hist": {"0": 1020096}}]},
+      {"k": 13, "caps": 30912, "g_hist": {"0": 30912}, "classes": [{"class": "D", "n": 0, "g_hist": {}}, {"class": "Tonly", "n": 30912, "g_hist": {"0": 30912}}, {"class": "neither", "n": 0, "g_hist": {}}]}
+    ]
+  },
+  "parity_samples": [{"k": 1, "n": 100, "g_hist": {"1": 100}}, {"k": 2, "n": 100, "g_hist": {"0": 100}}, {"k": 3, "n": 100, "g_hist": {"1": 100}}, {"k": 4, "n": 100, "g_hist": {"0": 100}}, {"k": 5, "n": 100, "g_hist": {"1": 100}}, {"k": 6, "n": 100, "g_hist": {"0": 100}}, {"k": 7, "n": 100, "g_hist": {"1": 100}}, {"k": 8, "n": 100, "g_hist": {"0": 100}}],
+  "class_samples": [{"class": "k6_in_octad", "n": 50, "g_hist": {"0": 50}}, {"class": "k6_no_octad", "n": 50, "g_hist": {"0": 50}}, {"class": "k7_seven_of_octad", "n": 50, "g_hist": {"1": 50}}, {"class": "k8_dodecad_subset", "n": 50, "g_hist": {"0": 50}}, {"class": "k8_seven_of_octad_plus_one", "n": 50, "g_hist": {"0": 50}}]
+}
