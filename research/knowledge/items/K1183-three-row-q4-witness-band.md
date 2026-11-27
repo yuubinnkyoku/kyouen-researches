@@ -82,6 +82,15 @@ artifacts:
 - path: research/experiments/three-row-q4-m28-partition-20261128/output/records_m28.jsonl
   role: data
   note: "m=28 台帳（row-k 4 + row-sum 10 + (3,2,3)/(2,3,3) leftmost-column 28分割x2・全 UNSAT）・決定性2件含む"
+- path: research/experiments/three-row-q4-m29-partition-20261128/README.md
+  role: proof
+  note: "P(29) SAT 行和分割独立確認の主張・台帳・m=28 との比較（2026-11-28・継続単一オーナー宣言 400f7e86）"
+- path: research/experiments/three-row-q4-m29-partition-20261128/output/m29_partition_closure.json
+  role: data
+  note: "m=29 63-triple 完全被覆台帳（decided 63 / pending 0 / uncovered 0・SAT 0）・全ピース合計 8,915,494 conflicts"
+- path: research/experiments/three-row-q4-m29-partition-20261128/output/records_m29.jsonl
+  role: data
+  note: "m=29 台帳（row-k 4 + row-sum 10 + (3,2,3)/(2,3,3) leftmost-column 29分割x2・全 UNSAT）・決定性2件含む"
 - path: research/experiments/three-row-q4-m26-partition-20261128/scripts/partition_closure_3row.py
   role: verifier
   note: "閉包検査の一般化版（board_tag 引数化・m25 台帳で等価再生成を確認）"
@@ -205,6 +214,13 @@ P(m) ⟺「3×m の全極大安全配置がちょうど (q−1)·3 = 9 石」（
    が検出され、8コミット（5e03ad29, 07d32e0e, 751d9046, 3e83f45b, dfc8b856,
    2fe61d9e, 98f9bcd2, d4979501）で全ファイルが byte-CRC 検証のうえ修復・
    commit-pinned fetch-back 検証済みであることが開示されている。
+   - **m=29 増分（2026-11-28・継続単一オーナー宣言 400f7e86・kit
+     three-row-q4-m29-partition-20261128）**: 同一 63 行和分割で全 triple UNSAT
+     （72実行・合計 8,915,494 conflicts・(3,2,3)/(2,3,3) は leftmost-column 29分割、
+     決定性代表2件 bit-exact・閉包 decided 63 / pending 0 / uncovered 0）。
+     **P(29) も 2方法一致になり、P(24..29) の6幅すべてが SAT 分割と列挙閉包の
+     両方法で確定**（P(30), P(31) は列挙閉包単独のまま）。m≥30 の新幅主張なし。
+     開示: m=29 の s:3,2,2 ベース片は本環境で 107s（272,177 conflicts・決定・UNSAT）。
    ただし P は単調でない（m=31 witness-free でも m≥32 での witness 復活は否定
    されない）。**M_{3,4} ∈ [24, 69]（不変）**: M=24 ⟺ P(m) が m ≥ 32 でもすべて
    成立、残る不確定幅は 32..68 の 37 幅の掃引（m≥32 は pinned wsearch34.js の
