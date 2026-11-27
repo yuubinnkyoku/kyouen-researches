@@ -10,19 +10,30 @@ Part SZ reaudit census published). Declared in
 
 ## Status
 
-Selection and validation-gate stage published (2026-11-27). The ladder probe
-(wave C raws) follows under the pre-registered stopping rules: per key a
-2M-budget cold pair first; a key whose 2M pair resolves exact LOSS with
-node-identical cold passes stops; a key whose 2M pair stays UNKNOWN
-(result 0, nodes 2,000,000 both passes) escalates to a 15M-budget cold pair;
-a key still UNKNOWN at 15M parks (L50M escalation candidate). The WIN
-stopping rule applies: no new key is started after a key resolves WIN(1).
-All rows are single-implementation (Node.js replica) results: a C++
-second-implementation scrutiny gate and a third-implementation corroboration
-are separate future Parts before any adoption (the seventh-cost precedent).
-No verdict of this table may be consumed before the full batch audit, the
-merged cache increment and the SHA-256 manifest are published by the closing
-commit of this lane.
+Ladder checkpoint complete (2026-11-27). All 43 claimed keys executed the
+stage-1 2M cold pair: every pair UNKNOWN (result 0 / nodes 2,000,000,
+node-identical), so all 43 keys were eligible for 15M escalation. The 15M
+escalation started at k01 (pos 1, key 1297036692750860288:64) and k01
+resolved **WIN(1), nodes 8,514,427, cold pair node-identical**; the
+pre-registered WIN stopping rule therefore fired and no further key was
+officially started at any stage. Official tally: 1 resolved WIN row
+(single-implementation), 0 LOSS rows, 0 parked keys, 42 keys stopped at the
+stage-1 2M UNKNOWN pair with escalation suppressed. Machine summary:
+`output/batch-summary.json` (schema n11-eighthcost-batch-checkpoint-summary-v1),
+raw manifest `MANIFEST-raw-sha256.txt` (88 official raw files).
+
+Overreach disclosure: k02's 15M cold pair was executed in the same shell
+batch command after k01 had already resolved WIN(1) (UNKNOWN, nodes
+15,000,000, pair identical). It is NOT an official ladder row, its raws are
+not published, and the values are disclosed in the batch summary as a
+host-local scratch observation only.
+
+The k01 WIN(1) row is single-implementation (Node.js replica) and NOT
+consumed: per the k20/k33/k05 precedent, a C++ second-implementation
+scrutiny gate and a third-implementation corroboration are required before
+any adoption. No cache increment, no class-status change, no coverage
+claim. The standard 11x11 empty board and all closure classes remain
+UNKNOWN.
 
 ## Contents
 
