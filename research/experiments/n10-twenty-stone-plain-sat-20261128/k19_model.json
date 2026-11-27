@@ -1,0 +1,35 @@
+{
+ "witness_id": "W3",
+ "board": "10x10",
+ "point_numbering": "x+10y",
+ "cells": [
+  0,
+  2,
+  4,
+  16,
+  17,
+  18,
+  32,
+  35,
+  36,
+  49,
+  50,
+  51,
+  61,
+  64,
+  78,
+  88,
+  89,
+  93,
+  99
+ ],
+ "size": 19,
+ "forbidden_quads_inside": 0,
+ "quadruples_checked": 3876,
+ "found_by": "seqleast encoding, kissat 4.0.4, 12433 conflicts",
+ "verified_by": "fresh determinant recheck over all C(19,4)",
+ "distinct_from": [
+  "K0035 WIT",
+  "prior lane T"
+ ]
+}
