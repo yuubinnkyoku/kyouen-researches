@@ -1,0 +1,16 @@
+{
+ "board": "PG(2,4)",
+ "minimal_blocking_by_size": {
+  "5": 21,
+  "7": 360,
+  "8": 10080,
+  "9": 280
+ },
+ "maximal_safe_s4_by_size": {
+  "16": 21,
+  "14": 360,
+  "13": 10080,
+  "12": 280
+ },
+ "note": "complement duality K1365: maximal safe size = 21 - minimal blocking size"
+}
