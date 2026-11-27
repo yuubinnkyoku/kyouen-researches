@@ -1,0 +1,90 @@
+{
+ "schema": "n11-ultra-cheap-batch-stage1-summary-v1",
+ "part": "ultra-cheap batch stage-1 sweep (declared in research/log/2026-11-27-n11-ultra-cheap-batch-declaration.md, commit 3781d82f)",
+ "head_basis": {
+  "sha256_prefix": "1e2eeda2",
+  "rows": 6890,
+  "win": 208,
+  "loss": 6682
+ },
+ "runner": {
+  "name": "jsreplay.js",
+  "sha256": "845856175d3c793a7eb4306f5902ecda3f1c046a8a53e8f34ed375e51febc3df",
+  "mode": "--n=11 --memo=22 --only=5 cold solver per row, no shared TT"
+ },
+ "stage1": {
+  "u01": {
+   "key": "1153485622925590528:0",
+   "class_index": 1849,
+   "legal": 88,
+   "s5_index": 81011,
+   "result": 0,
+   "nodes": 2000000,
+   "budget": 2000000,
+   "pair_node_identical": true,
+   "status": "UNKNOWN at 2M"
+  },
+  "u02": {
+   "key": "1297036830121656320:131074",
+   "class_index": 2251,
+   "legal": 80,
+   "s5_index": 93815,
+   "result": 0,
+   "nodes": 2000000,
+   "budget": 2000000,
+   "pair_node_identical": true,
+   "status": "UNKNOWN at 2M"
+  },
+  "u03": {
+   "key": "1153202979851993088:272",
+   "class_index": 16371,
+   "legal": 78,
+   "s5_index": 550879,
+   "result": 0,
+   "nodes": 2000000,
+   "budget": 2000000,
+   "pair_node_identical": true,
+   "status": "UNKNOWN at 2M"
+  },
+  "u04": {
+   "key": "1152921505747697664:1032",
+   "class_index": 23101,
+   "legal": 85,
+   "s5_index": 745184,
+   "result": 0,
+   "nodes": 2000000,
+   "budget": 2000000,
+   "pair_node_identical": true,
+   "status": "UNKNOWN at 2M"
+  }
+ },
+ "escalation_15m": {
+  "u01": {
+   "key": "1153485622925590528:0",
+   "class_index": 1849,
+   "legal": 88,
+   "result": 1,
+   "nodes": 4893014,
+   "budget": 15000000,
+   "pair_node_identical": true,
+   "status": "WIN(1) resolved at 15M budget (nodes 4,893,014)"
+  },
+  "u02": {
+   "status": "suppressed (WIN-stop rule); stays UNKNOWN at 2M"
+  },
+  "u03": {
+   "status": "suppressed (WIN-stop rule); stays UNKNOWN at 2M"
+  },
+  "u04": {
+   "status": "suppressed (WIN-stop rule); stays UNKNOWN at 2M"
+  }
+ },
+ "win_stop_rule": "active; fired at u01 WIN(1)",
+ "disclosures": [
+  "declaration push raced a parallel session commit (6bf68e4b -> f4e65734); identical payload re-pushed against fresh head; disclosed in the declaration log",
+  "pre-declaration 50k-budget INDET calibration run of u01 disclosed in the declaration log",
+  "at2m pair byte-identity: u02/u03 pairs fully byte-identical; u01/u04 pairs differ only in wall_s fields",
+  "wall_s fields are timing, not evidence"
+ ],
+ "status_guard": "batch bookkeeping only; NO verdict consumed; single-implementation rows; u01 WIN row requires C++ gate + third-implementation pillars before any adoption; 11x11 UNKNOWN"
+}
