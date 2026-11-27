@@ -1,0 +1,65 @@
+{
+ "schema": "n11-ultra-cheap-u04-win-cppgate-xhost-summary-v1",
+ "part": "independent cross-host replication of research/experiments/n11-ultra-cheap-u04-win-cppgate-20261127 (commit 378ec332)",
+ "host": "fresh sandbox (zig 0.13.0 tarball pin d45312e61ebcc48032b77bc4cf7fd6915c11fa16e4aad116b66c9468211230ea, zig c++ -std=c++20 -O2)",
+ "gate_source_sha256": "9193f5b6065e0fbcad2ef7c65f386187701cafa1f5b718cc35a5cbb0d138f92e",
+ "headers_sha256": {
+  "kyouen_residual_micro.hpp": "5976935dcfccb9b5a26fa68f8de20868ce45363dd8c372dcd67d9b841167e7f5",
+  "n11_s5_quarantine.hpp": "2e36d69481fafcde7aede8ae4fedf3d5477f91ee9846bcd4ae2975f32a4ba1a5"
+ },
+ "rows": {
+  "u04": {
+   "expected": "85,15000000,1,9149084",
+   "observed": "85,15000000,1,9149084",
+   "pair_node_identical": true,
+   "pass": true,
+   "wall_s": [
+    18,
+    18
+   ]
+  },
+  "anchor-at2m": {
+   "expected": "98,2000000,0,2000000",
+   "observed": "98,2000000,0,2000000",
+   "pair_node_identical": true,
+   "pass": true,
+   "wall_s": [
+    3,
+    3
+   ]
+  },
+  "anchor-aj001": {
+   "expected": "84,30000000,2,5156075",
+   "observed": "84,30000000,2,5156075",
+   "pair_node_identical": true,
+   "pass": true,
+   "wall_s": [
+    9,
+    9
+   ]
+  },
+  "anchor-af039": {
+   "expected": "89,30000000,2,19234232",
+   "observed": "89,30000000,2,19234232",
+   "pair_node_identical": true,
+   "pass": true,
+   "wall_s": [
+    39,
+    38
+   ]
+  }
+ },
+ "all_pass": true,
+ "raw_byte_vs_published": {
+  "u04.p1": "diff wall_s only (18 vs 17)",
+  "u04.p2": "byte-identical",
+  "anchor-at2m.p1": "byte-identical",
+  "anchor-at2m.p2": "byte-identical",
+  "anchor-aj001.p1": "diff wall_s only (9 vs 10)",
+  "anchor-aj001.p2": "diff wall_s only (9 vs 10)",
+  "anchor-af039.p1": "diff wall_s only (39 vs 38)",
+  "anchor-af039.p2": "sha256 equals published af039.p1 (wall_s 38)"
+ },
+ "note": "all 8 raws node-exact vs the published kit raws; wall_s is the only varying field (host wall-clock, disclosed not pinned). Declaration 7c2c4af6 pre-pinned every expected value fail-closed before execution.",
+ "status_guard": "pillar bookkeeping only; NO verdict consumed; 11x11 UNKNOWN"
+}
