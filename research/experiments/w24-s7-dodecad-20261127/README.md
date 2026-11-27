@@ -23,6 +23,12 @@ W_24 s=7 の Grundy 2/0 層がドデカッド（Golay 重み 12 語、2,576 個�
 - 個数: 566,720 = 2,576×C(12,9)（サイズ 9 の G=2 総数）、
   30,912 = 2,576×C(12,11)（サイズ 11 の G=0 総数）。
 
+## 全数検証（fullcheck.c）
+
+- 全 566,720 個の 9-部分集合を完全 DP で計算 → **すべて G=2**（他の値なし）。
+- 全 30,912 個の 11-部分集合 → **すべて G=0**。
+- 個数が K1342 の G=2（566,720）・G=0（30,912）と一致するので集合レベルで完全一致。
+
 ## 再現
 
-`python dodecad_check.py`（結果は results.txt に保存）。
+`gcc -O2 -o fullcheck.exe fullcheck.c && ./fullcheck.exe ../../design-kyouen-witt-20261125/output/board_w24.txt`
