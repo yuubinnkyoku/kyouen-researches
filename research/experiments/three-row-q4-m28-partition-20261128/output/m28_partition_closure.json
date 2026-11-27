@@ -1,0 +1,643 @@
+{
+ "board_tag": "m28",
+ "question": "does a deficient maximal safe config exist on 3x28? (P(28) refutes all 63 triples)",
+ "coverage": [
+  {
+   "triple": [
+    0,
+    0,
+    0
+   ],
+   "piece": "k:0:0",
+   "verdict": "UNSAT",
+   "conflicts": 408
+  },
+  {
+   "triple": [
+    0,
+    0,
+    1
+   ],
+   "piece": "k:0:0",
+   "verdict": "UNSAT",
+   "conflicts": 408
+  },
+  {
+   "triple": [
+    0,
+    0,
+    2
+   ],
+   "piece": "k:0:0",
+   "verdict": "UNSAT",
+   "conflicts": 408
+  },
+  {
+   "triple": [
+    0,
+    0,
+    3
+   ],
+   "piece": "k:0:0",
+   "verdict": "UNSAT",
+   "conflicts": 408
+  },
+  {
+   "triple": [
+    0,
+    1,
+    0
+   ],
+   "piece": "k:0:0",
+   "verdict": "UNSAT",
+   "conflicts": 408
+  },
+  {
+   "triple": [
+    0,
+    1,
+    1
+   ],
+   "piece": "k:0:0",
+   "verdict": "UNSAT",
+   "conflicts": 408
+  },
+  {
+   "triple": [
+    0,
+    1,
+    2
+   ],
+   "piece": "k:0:0",
+   "verdict": "UNSAT",
+   "conflicts": 408
+  },
+  {
+   "triple": [
+    0,
+    1,
+    3
+   ],
+   "piece": "k:0:0",
+   "verdict": "UNSAT",
+   "conflicts": 408
+  },
+  {
+   "triple": [
+    0,
+    2,
+    0
+   ],
+   "piece": "k:0:0",
+   "verdict": "UNSAT",
+   "conflicts": 408
+  },
+  {
+   "triple": [
+    0,
+    2,
+    1
+   ],
+   "piece": "k:0:0",
+   "verdict": "UNSAT",
+   "conflicts": 408
+  },
+  {
+   "triple": [
+    0,
+    2,
+    2
+   ],
+   "piece": "k:0:0",
+   "verdict": "UNSAT",
+   "conflicts": 408
+  },
+  {
+   "triple": [
+    0,
+    2,
+    3
+   ],
+   "piece": "k:0:0",
+   "verdict": "UNSAT",
+   "conflicts": 408
+  },
+  {
+   "triple": [
+    0,
+    3,
+    0
+   ],
+   "piece": "k:0:0",
+   "verdict": "UNSAT",
+   "conflicts": 408
+  },
+  {
+   "triple": [
+    0,
+    3,
+    1
+   ],
+   "piece": "k:0:0",
+   "verdict": "UNSAT",
+   "conflicts": 408
+  },
+  {
+   "triple": [
+    0,
+    3,
+    2
+   ],
+   "piece": "k:0:0",
+   "verdict": "UNSAT",
+   "conflicts": 408
+  },
+  {
+   "triple": [
+    0,
+    3,
+    3
+   ],
+   "piece": "k:0:0",
+   "verdict": "UNSAT",
+   "conflicts": 408
+  },
+  {
+   "triple": [
+    1,
+    0,
+    0
+   ],
+   "piece": "k:0:1",
+   "verdict": "UNSAT",
+   "conflicts": 82598
+  },
+  {
+   "triple": [
+    1,
+    0,
+    1
+   ],
+   "piece": "k:0:1",
+   "verdict": "UNSAT",
+   "conflicts": 82598
+  },
+  {
+   "triple": [
+    1,
+    0,
+    2
+   ],
+   "piece": "k:0:1",
+   "verdict": "UNSAT",
+   "conflicts": 82598
+  },
+  {
+   "triple": [
+    1,
+    0,
+    3
+   ],
+   "piece": "k:0:1",
+   "verdict": "UNSAT",
+   "conflicts": 82598
+  },
+  {
+   "triple": [
+    1,
+    1,
+    0
+   ],
+   "piece": "k:0:1",
+   "verdict": "UNSAT",
+   "conflicts": 82598
+  },
+  {
+   "triple": [
+    1,
+    1,
+    1
+   ],
+   "piece": "k:0:1",
+   "verdict": "UNSAT",
+   "conflicts": 82598
+  },
+  {
+   "triple": [
+    1,
+    1,
+    2
+   ],
+   "piece": "k:0:1",
+   "verdict": "UNSAT",
+   "conflicts": 82598
+  },
+  {
+   "triple": [
+    1,
+    1,
+    3
+   ],
+   "piece": "k:0:1",
+   "verdict": "UNSAT",
+   "conflicts": 82598
+  },
+  {
+   "triple": [
+    1,
+    2,
+    0
+   ],
+   "piece": "k:0:1",
+   "verdict": "UNSAT",
+   "conflicts": 82598
+  },
+  {
+   "triple": [
+    1,
+    2,
+    1
+   ],
+   "piece": "k:0:1",
+   "verdict": "UNSAT",
+   "conflicts": 82598
+  },
+  {
+   "triple": [
+    1,
+    2,
+    2
+   ],
+   "piece": "k:0:1",
+   "verdict": "UNSAT",
+   "conflicts": 82598
+  },
+  {
+   "triple": [
+    1,
+    2,
+    3
+   ],
+   "piece": "k:0:1",
+   "verdict": "UNSAT",
+   "conflicts": 82598
+  },
+  {
+   "triple": [
+    1,
+    3,
+    0
+   ],
+   "piece": "k:0:1",
+   "verdict": "UNSAT",
+   "conflicts": 82598
+  },
+  {
+   "triple": [
+    1,
+    3,
+    1
+   ],
+   "piece": "k:0:1",
+   "verdict": "UNSAT",
+   "conflicts": 82598
+  },
+  {
+   "triple": [
+    1,
+    3,
+    2
+   ],
+   "piece": "k:0:1",
+   "verdict": "UNSAT",
+   "conflicts": 82598
+  },
+  {
+   "triple": [
+    1,
+    3,
+    3
+   ],
+   "piece": "k:0:1",
+   "verdict": "UNSAT",
+   "conflicts": 82598
+  },
+  {
+   "triple": [
+    2,
+    0,
+    0
+   ],
+   "piece": "k:1:0",
+   "verdict": "UNSAT",
+   "conflicts": 380
+  },
+  {
+   "triple": [
+    2,
+    0,
+    1
+   ],
+   "piece": "k:1:0",
+   "verdict": "UNSAT",
+   "conflicts": 380
+  },
+  {
+   "triple": [
+    2,
+    0,
+    2
+   ],
+   "piece": "k:1:0",
+   "verdict": "UNSAT",
+   "conflicts": 380
+  },
+  {
+   "triple": [
+    2,
+    0,
+    3
+   ],
+   "piece": "k:1:0",
+   "verdict": "UNSAT",
+   "conflicts": 380
+  },
+  {
+   "triple": [
+    2,
+    1,
+    0
+   ],
+   "piece": "k:1:1",
+   "verdict": "UNSAT",
+   "conflicts": 78112
+  },
+  {
+   "triple": [
+    2,
+    1,
+    1
+   ],
+   "piece": "k:1:1",
+   "verdict": "UNSAT",
+   "conflicts": 78112
+  },
+  {
+   "triple": [
+    2,
+    1,
+    2
+   ],
+   "piece": "k:1:1",
+   "verdict": "UNSAT",
+   "conflicts": 78112
+  },
+  {
+   "triple": [
+    2,
+    1,
+    3
+   ],
+   "piece": "k:1:1",
+   "verdict": "UNSAT",
+   "conflicts": 78112
+  },
+  {
+   "triple": [
+    2,
+    2,
+    0
+   ],
+   "piece": "k:0:0",
+   "verdict": "UNSAT",
+   "conflicts": 408
+  },
+  {
+   "triple": [
+    2,
+    2,
+    1
+   ],
+   "piece": "k:0:1",
+   "verdict": "UNSAT",
+   "conflicts": 82598
+  },
+  {
+   "triple": [
+    2,
+    2,
+    2
+   ],
+   "piece": "s:2,2,2",
+   "verdict": "UNSAT",
+   "conflicts": 27560
+  },
+  {
+   "triple": [
+    2,
+    2,
+    3
+   ],
+   "piece": "s:3,2,2",
+   "verdict": "UNSAT",
+   "conflicts": 312503
+  },
+  {
+   "triple": [
+    2,
+    3,
+    0
+   ],
+   "piece": "k:0:0",
+   "verdict": "UNSAT",
+   "conflicts": 408
+  },
+  {
+   "triple": [
+    2,
+    3,
+    1
+   ],
+   "piece": "k:0:1",
+   "verdict": "UNSAT",
+   "conflicts": 82598
+  },
+  {
+   "triple": [
+    2,
+    3,
+    2
+   ],
+   "piece": "s:2,3,2",
+   "verdict": "UNSAT",
+   "conflicts": 275232
+  },
+  {
+   "triple": [
+    2,
+    3,
+    3
+   ],
+   "piece": "s:2,3,3",
+   "verdict": "UNSAT",
+   "conflicts": 4220958
+  },
+  {
+   "triple": [
+    3,
+    0,
+    0
+   ],
+   "piece": "k:1:0",
+   "verdict": "UNSAT",
+   "conflicts": 380
+  },
+  {
+   "triple": [
+    3,
+    0,
+    1
+   ],
+   "piece": "k:1:0",
+   "verdict": "UNSAT",
+   "conflicts": 380
+  },
+  {
+   "triple": [
+    3,
+    0,
+    2
+   ],
+   "piece": "k:1:0",
+   "verdict": "UNSAT",
+   "conflicts": 380
+  },
+  {
+   "triple": [
+    3,
+    0,
+    3
+   ],
+   "piece": "k:1:0",
+   "verdict": "UNSAT",
+   "conflicts": 380
+  },
+  {
+   "triple": [
+    3,
+    1,
+    0
+   ],
+   "piece": "k:1:1",
+   "verdict": "UNSAT",
+   "conflicts": 78112
+  },
+  {
+   "triple": [
+    3,
+    1,
+    1
+   ],
+   "piece": "k:1:1",
+   "verdict": "UNSAT",
+   "conflicts": 78112
+  },
+  {
+   "triple": [
+    3,
+    1,
+    2
+   ],
+   "piece": "k:1:1",
+   "verdict": "UNSAT",
+   "conflicts": 78112
+  },
+  {
+   "triple": [
+    3,
+    1,
+    3
+   ],
+   "piece": "k:1:1",
+   "verdict": "UNSAT",
+   "conflicts": 78112
+  },
+  {
+   "triple": [
+    3,
+    2,
+    0
+   ],
+   "piece": "k:0:0",
+   "verdict": "UNSAT",
+   "conflicts": 408
+  },
+  {
+   "triple": [
+    3,
+    2,
+    1
+   ],
+   "piece": "k:0:1",
+   "verdict": "UNSAT",
+   "conflicts": 82598
+  },
+  {
+   "triple": [
+    3,
+    2,
+    2
+   ],
+   "piece": "s:3,2,2",
+   "verdict": "UNSAT",
+   "conflicts": 312503
+  },
+  {
+   "triple": [
+    3,
+    2,
+    3
+   ],
+   "piece": "s:3,2,3",
+   "verdict": "UNSAT",
+   "conflicts": 3364388
+  },
+  {
+   "triple": [
+    3,
+    3,
+    0
+   ],
+   "piece": "k:0:0",
+   "verdict": "UNSAT",
+   "conflicts": 408
+  },
+  {
+   "triple": [
+    3,
+    3,
+    1
+   ],
+   "piece": "k:0:1",
+   "verdict": "UNSAT",
+   "conflicts": 82598
+  },
+  {
+   "triple": [
+    3,
+    3,
+    2
+   ],
+   "piece": "s:2,3,3",
+   "verdict": "UNSAT",
+   "conflicts": 4220958
+  }
+ ],
+ "summary": {
+  "decided": 63,
+  "pending": [],
+  "uncovered": [],
+  "total": 63,
+  "sat_triples": []
+ }
+}
