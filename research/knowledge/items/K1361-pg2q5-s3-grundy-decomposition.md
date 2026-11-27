@@ -1,5 +1,5 @@
 ---
-id: K1359
+id: K1361
 title: "PG(2,5) s=3 の Grundy サイズ別完全分解 — G=4 はサイズ 7 のみ"
 kind: computation
 status: computed

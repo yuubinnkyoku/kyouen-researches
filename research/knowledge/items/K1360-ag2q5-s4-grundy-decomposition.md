@@ -9,8 +9,8 @@ aliases:
 - largest s=4 decomposition computed (16M positions)
 relations:
 - type: related
-  target: K1359
-  note: PG(2,5) s=3 のサイズ別分解（同程度の規模）
+  target: K1361
+  note: PG(2,5) s=3 のサイズ別分解（K1361）（同程度の規模）
 - type: related
   target: K1358
   note: 極大パリティ × 最大 Grundy 表
