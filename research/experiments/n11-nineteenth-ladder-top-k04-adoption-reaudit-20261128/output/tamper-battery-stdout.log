@@ -1,0 +1,29 @@
+external tamper battery: n11 nineteenth k04 adoption reaudit measurer
+(census json sha snapshot 7c0d1649... unchanged throughout; each
+tamper aborted at its own pin BEFORE the census json was written;
+all inputs restored byte-identical, sha-verified)
+
+== MT1 SCEN-cache verdict flip (k04 WIN -> LOSS byte at the pinned SCEN cache path) ==
+measurer rc=1 (abort: assert out["scen_cache"]["sha256"] == SCEN_CACHE_SHA_EXPECTED)
+census json unchanged: YES
+restored SCEN cache sha256 8cc87263... (pin re-verified)
+
+== MT2 BASE closure csv byte-tamper (class index digit on row 2) ==
+measurer rc=1 (abort: AssertionError: base_closure at the BASE closure pin)
+census json unchanged: YES
+restored BASE closure csv sha256 77521463... (pin re-verified)
+
+== MT3 adoption-manifest byte-tamper (nodes 6877739 -> 6877740) ==
+measurer rc=1 (abort: assert out["manifest"]["sha256"] == MANIFEST_SHA_EXPECTED)
+census json unchanged: YES
+restored adoption manifest sha256 52e38b8f... (pin re-verified)
+
+== MT4 SCEN worklist row deletion (probe-worklist.csv line 3) ==
+measurer rc=1 (abort: AssertionError {'sha256': 'c3d5557d...', 'size': 3714089} at the SCEN worklist pin)
+census json unchanged: YES
+restored SCEN worklist sha256 7e3c73d4... / 3,714,150 B (pin re-verified)
+
+== clean control re-PASS ==
+measurer rc=0, census json sha256 7c0d1649... byte-identical to the 3-run battery output
+
+battery verdict: 4/4 fail-closed + clean control re-PASS byte-identical
