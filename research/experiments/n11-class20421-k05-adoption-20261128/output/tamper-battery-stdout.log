@@ -1,0 +1,20 @@
+=== k05 adoption external tamper battery (disclosed pre-round, no MANIFEST re-pins) ===
+2026-11-28T09:46:41Z
+PRE-T1-replica-result-flip-no-repin ABORTED: GATE FAILED: kit MANIFEST mismatch: n11-class20421-k05-escalation-20261128/at15m-k05-p1.raw
+PRE-T2-thirdimpl-expansions-drift-no-repin ABORTED: GATE FAILED: kit MANIFEST mismatch: n11-class20421-k05-thirdimpl-20261128/output/ti/k05.p1.txt
+PRE-T3-gate-raw-quad-flip-no-repin ABORTED: GATE FAILED: kit MANIFEST mismatch: n11-class20421-k05-win-cppgate-20261128/output/raw/k05.p1.out
+(all three probes fail-closed at the kit MANIFEST gate without re-pins, as disclosed in the nineteenth k04 adoption kit; the repinned probes below reach their intended deeper gates)
+=== end pre-round ===
+
+=== k05 adoption external tamper battery (repinned T1-T5 + clean control) ===
+2026-11-28T09:47:23Z
+T1-replica-result-flip ABORTED: GATE FAILED: replica pair mismatch k05
+T2-thirdimpl-expansions-drift ABORTED: GATE FAILED: third-impl pair mismatch k05
+T3-gate-raw-quad-flip ABORTED: GATE FAILED: live gate raw != published raw k05
+T4 repinned QUAR_SHA b7e7a34a
+T4-quarantine-key-injection ABORTED: GATE FAILED: quarantined key k05
+T5 repinned BASE 6376db39 rows 6905/223/6682
+T5-coherent-freshness-world ABORTED: GATE FAILED: freshness: k05 present in BASE
+CLEAN-CONTROL: {"verdict": "MAKER-PASS", "increment_sha256": "6b52595793e8d7fcea2729a5e2584aa24087a735cb6656a998546...
+2026-11-28T09:48:14Z
+=== battery end ===
