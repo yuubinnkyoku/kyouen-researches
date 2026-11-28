@@ -89,3 +89,16 @@ evidence: >-
 - AG(2,q^2) 制限 (Baer 導入直線の除去) での同種の分割構造。
 - 標準 11x11 空盤・19 central-reply roots・二石 root {60,27}・第三手 {100,108}・
   S2・全 closure class は全時点 UNKNOWN・verdict 不消費。
+
+## Addendum (2026-11-28): q=11, 13 への拡張 (宣言 `709c8515`)
+
+- 実験 dir: research/experiments/baer-partition-q11-q13-20261128/
+- **PG(2,121) <= 266 < 363** (111 軌道 × 133 点・per-orbit プロファイル
+  {1:14630, 12:133}・witness プロファイル {2:14497, 13:266})・
+  **PG(2,169) <= 366 < 507** (157 軌道 × 183 点・{1:28548, 14:183}・
+  witness {2:28365, 15:366}) を全数機械検証 (impl1)。
+- 有限検証範囲は q = 2,3,4,5,7,8,9,11,13 (impl1)。
+  q=11,13 は単一実装 (impl2 の gamma 探索は p^{6m} 走査で q>=11 は
+  スケール外)。design・Baer・Singer 商位数の fail-closed 検査は全数実施。
+- 生成元位数の O(ordE) 追加ループは ordE > 600,000 で skip
+  (factor test gamma^{ordE/f} != 1 (all prime f) が位数の完全検証として十分)。
