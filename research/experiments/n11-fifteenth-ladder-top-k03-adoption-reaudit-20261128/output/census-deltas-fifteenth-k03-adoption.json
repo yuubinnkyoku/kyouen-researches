@@ -1,0 +1,176 @@
+{
+ "adopted": [
+  {
+   "hi": 128,
+   "lo": 6053400849139367936,
+   "nodes": 3364655,
+   "owner_classes": [
+    5803,
+    5804
+   ],
+   "owner_count": 2,
+   "s5_index": 212536,
+   "serving_class": 5804,
+   "verdict": 1
+  }
+ ],
+ "base_cache": {
+  "loss": 6682,
+  "rows": 6898,
+  "sha256": "b5f322dda85946e10feb95c62f40123827ef1271fcc27e5542047d17c1d59bcf",
+  "win": 216
+ },
+ "base_closure": {
+  "sha256": "3f3b7154c4af0ed645e9df93a8136d8c395cd63ea60151d3f272fbfed131471b"
+ },
+ "base_per_root": {
+  "sha256": "1638c43550a891cd8ab1773837764281f2108592d09974d0fdac29e7495fd347"
+ },
+ "base_summary": {
+  "sha256": "cafa9c29034aae26b7696349887df26e0205579d2cf36a15d165f3f5b2cb3dbf"
+ },
+ "census_recount_base": {
+  "excluded": 390,
+  "excluded_now": 151,
+  "free_now": 39,
+  "unknown": 34369
+ },
+ "census_recount_scen": {
+  "excluded": 390,
+  "excluded_now": 152,
+  "free_now": 39,
+  "unknown": 34368
+ },
+ "closure_byte_identical_to_base": false,
+ "closure_churn": {
+  "entered": [],
+  "left": [],
+  "rank_churn_ranked": [],
+  "rows_base": 799,
+  "rows_scen": 799,
+  "unknown_now_churn": [
+   {
+    "base": 2,
+    "class_index": 5804,
+    "scen": 1
+   }
+  ]
+ },
+ "increment": {
+  "sha256": "16dd859404627ca6e4e5b9f600390a8da54f79342db6b0f07b9b4dbb40140fc4"
+ },
+ "joint_greedy": {
+  "base": 43149,
+  "scen": 43148
+ },
+ "loss_owner_class_union": [],
+ "manifest": {
+  "sha256": "f3f2bc207284245753a3bf5a1f3cec46a1d5ab85cdb23789eae3c47ed39eed91"
+ },
+ "owner_class_count_hist": {
+  "2": 1
+ },
+ "per_root_coverage_byte_identical": false,
+ "per_root_free_and_uncovered_identical": true,
+ "per_root_greedy_delta": [
+  {
+   "base": 2877,
+   "root": 38,
+   "scen": 2876
+  },
+  {
+   "base": 2691,
+   "root": 49,
+   "scen": 2690
+  }
+ ],
+ "scen_cache": {
+  "loss": 6682,
+  "rows": 6899,
+  "sha256": "3a527d39db7acec32b4c688e0bbbafea8015d9d4aac778cf51e7e5c37afe6a3a",
+  "win": 217
+ },
+ "scen_closure": {
+  "sha256": "01dd4d85155ef75177072e9a045cb9d87115e507fbd08177aa803ba65b9ede66"
+ },
+ "scen_per_root": {
+  "sha256": "fc771d8290fb9b4cb9faecfe2d59ff6dbd738514f7394bfa37e9e052c27b501b"
+ },
+ "scen_summary": {
+  "sha256": "8e37ad17936350ec208638c6d826db723dabc91c903f7fb8741fcaebcde6d31b"
+ },
+ "serving_class_rows": {
+  "5804": {
+   "adopted_owned_here": 1,
+   "base_status": "excluded_now",
+   "class_mask": [
+    6053400849139367936,
+    0
+   ],
+   "scen_status": "excluded_now",
+   "unknown_after": 1,
+   "unknown_before": 2
+  }
+ },
+ "status_flip_count": 1,
+ "status_flip_count_predicted_by_declaration": 1,
+ "status_flips": [
+  {
+   "base": "unknown",
+   "class_index": 5803,
+   "class_mask": [
+    4035225541001871360,
+    0
+   ],
+   "scen": "excluded_now"
+  }
+ ],
+ "tamper_battery": {
+  "row_append_reproduces_scen_census": true,
+  "row_delete_restores_base_census": true,
+  "tampered_caches_break_sha_gate": true,
+  "verdict_flip_changes_census": true
+ },
+ "update8_new_resolved": [],
+ "update8_refresh_base": {
+  "groups_free_now": 131,
+  "remaining": 31332,
+  "resolved": 286,
+  "resolved_list_len": 286,
+  "win_hit_groups": 35
+ },
+ "update8_refresh_scen": {
+  "groups_free_now": 131,
+  "remaining": 31332,
+  "resolved": 286,
+  "resolved_list_len": 286,
+  "win_hit_groups": 35
+ },
+ "verdict": {
+  "canonical_head_sha256": "3a527d39db7acec32b4c688e0bbbafea8015d9d4aac778cf51e7e5c37afe6a3a",
+  "census_counts_identical_to_published_summaries": true,
+  "consumed": "exactly the single published fifteenth k03 re-escalation row (1 WIN: k03, class 5804)",
+  "deviation_from_predeclared_expectation": "NO DEVIATION - the declaration's naive graph-derived ONE-flip prediction ([5803] unknown -> excluded_now, census unknown 34,369 -> 34,368, excluded_now 151 -> 152) HOLDS EXACTLY: the pre-registered shared-owner pre-exclusion caveat materialises on the serving class 5804, which is ALREADY excluded_now at BASE (it flipped unknown -> excluded_now in the fourteenth Part) and does not flip; the serving class stays in the closure ladder at rank 1 with unknown_now 2 -> 1 (k02 remains its last cost-unknown child)",
+  "note": "declared fifteenth k03 adoption measurement; adopting solver-trusted S5 labels flips class-status bookkeeping only: no root verdict is consumed, no root freed, no root excluded, no coverage claim is made or changed; 11x11 stays UNKNOWN; no root verdict; nodes are bookkeeping",
+  "part": "fifteenth-k03-flip-census",
+  "part_declared": true,
+  "status_flip_mechanism": "win-hit (the Part EW/EM mechanism): the adopted WIN row k03 (s5 index 212536, 6053400849139367936:128) has owner union 5803, 5804; the one NOT-pre-excluded owner 5803 flips unknown -> excluded_now (measured flip list is a strict subset of the owner union, the caveat-materialisation case); the serving class 5804 (6053400849139367936:0) is pre-excluded at BASE and does NOT flip, it stays excluded_now and STAYS in the closure ladder at rank 1 (cost-unknown 2 -> 1, NOT a ladder exit; k02 remains its last cost-unknown child); owner 5803 sits outside the ladder on both sides and no closure cell re-ranks (rank churn 0, ladder 799 -> 799 rows); no class flips to free_now, free_now stays 39 (Board-verified both sides); the per-root coverage MEASURES two individual greedy re-routes (root 38 drops 2,877 -> 2,876, root 49 drops 2,691 -> 2,690, free_now/uncovered identical on all 20 roots); joint greedy drops 43,149 -> 43,148 (a scheduling quantity, not a coverage claim) and the probing worklist row count drops 64,260 -> 64,259 (the adopted key's own membership rows leave the worklist; regen content sha differs from the BASE pin); the adopted s5 index 212536 sits OUTSIDE the frozen update8 baseline requirement (resolved 286 -> 286, remaining_now 31,332 -> 31,332, groups_free_now 131 -> 131); the win-hit group set is unchanged (35 -> 35, no added or removed groups; neither owner class is a plan group class)",
+  "status_flips": 1
+ },
+ "win_hit_groups_added": [],
+ "win_hit_groups_identical": true,
+ "worklist_regen_pins": {
+  "base": {
+   "sha256": "0fff5135baed26410089724778a7f6af5350dca942274eb761e8f67ea30b820b",
+   "size": 3714556
+  },
+  "scen": {
+   "sha256": "e165cf369afa5aaa5845b4f2027dab617cc088adcaad23bd1b06540fb4942c5f",
+   "size": 3714501
+  }
+ },
+ "worklist_total": {
+  "base": 64260,
+  "scen": 64259
+ }
+}
