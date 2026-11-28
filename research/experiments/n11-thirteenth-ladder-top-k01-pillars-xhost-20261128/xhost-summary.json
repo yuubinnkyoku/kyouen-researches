@@ -1,0 +1,49 @@
+{
+ "schema": "n11-thirteenth-ladder-top-k01-pillars-xhost-summary-v1",
+ "declaration": {
+  "path": "research/log/2026-11-28-n11-thirteenth-ladder-top-k01-pillars-xhost-declaration.md",
+  "commit": "958232d2468a4557e046108d084e9a64b4cabcaa",
+  "protocol": "publish-then-execute, single owner"
+ },
+ "target": {
+  "key": "1153204147814662144:65536",
+  "class_index": 16757,
+  "legal": 72,
+  "escalation_verdict": "WIN(1) nodes 2678305 @15000000 (published 12d8359c)",
+  "head_basis": "beecb024 (6894 rows WIN212/LOSS6682), target verified fresh/absent"
+ },
+ "gate": {
+  "source_pins": {
+   "kyouen_dfpn_root.cpp": "9193f5b6065e0fbcad2ef7c65f386187701cafa1f5b718cc35a5cbb0d138f92e",
+   "kyouen_residual_micro.hpp": "5976935d",
+   "n11_s5_quarantine.hpp": "2e36d694"
+  },
+  "build": "zig 0.13.0 (tarball pin d45312e6, sha256 verified), -std=c++20 -O2, fresh build on this host",
+  "expected_pinned": "72,15000000,1,2678305",
+  "k01": {
+   "p1": "72,15000000,1,2678305",
+   "p2": "72,15000000,1,2678305",
+   "pair_node_identical": true,
+   "matches_published": true,
+   "raw_vs_published_diff": "none (k01 gate raws byte-identical to the published kit raws, wall_s 5 vs 5)",
+   "wall_s_p1": 5,
+   "wall_s_p2": 5
+  }
+ },
+ "anchors": {
+  "anchor-at2m": {"p1": "98,2000000,0,2000000", "p2": "98,2000000,0,2000000", "matches_published": true, "raw_vs_published_diff": "none (byte-identical)"},
+  "anchor-aj001": {"p1": "84,30000000,2,5156075", "p2": "84,30000000,2,5156075", "matches_published": true, "raw_vs_published_diff": "wall_s only (11 vs 10 on p1; p2 byte-identical)"},
+  "anchor-af039": {"p1": "89,30000000,2,19234232", "p2": "89,30000000,2,19234232", "matches_published": true, "raw_vs_published_diff": "wall_s only (39 vs 38 on p1, 39 vs 38 on p2)"}
+ },
+ "third_impl": {
+  "script_sha256": "08ea958f (standing pin, byte-fetched and verified)",
+  "invocation": "--row=k01 --stones=5 --legal=72 --lo=1153204147814662144 --hi=65536 --cap=400000000 --wallcap=260 --memo-power=22",
+  "expected_pinned": {"result": 1, "expansions": 3024529, "nodes": 1801458, "quads": 95670, "ttOverwrites": 44704},
+  "p1": {"result": 1, "expansions": 3024529, "nodes": 1801458, "quads": 95670, "ttOverwrites": 44704, "wall_s": 9.01},
+  "p2": {"result": 1, "expansions": 3024529, "nodes": 1801458, "quads": 95670, "ttOverwrites": 44704, "wall_s": 8.91},
+  "pair_field_identical": true,
+  "matches_published": true
+ },
+ "verdict": "XHOST-PASS",
+ "status_guard": "third-party replication bookkeeping only; NO verdict consumed; 11x11 UNKNOWN"
+}
