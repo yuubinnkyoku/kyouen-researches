@@ -1,0 +1,107 @@
+{
+ "batch_summary_schema": "n11-twenty-first-ladder-top-escalation-summary-v1",
+ "calibration": {
+  "budget": 2000000,
+  "forbidden_quadruples": 95670,
+  "key": "1153485622925590528:0",
+  "nodes": 2000000,
+  "published_value_agreement": "values identical to the published sixteenth escalation kit calibration (result 0, nodes 2,000,000, fq 95,670); wall_s host-differs (10 published, 9/9-11 in twentieth)",
+  "result": 0,
+  "wall_s": 9
+ },
+ "claim_status": "escalation bookkeeping only; no verdict claimed or consumed; 11x11 empty board, all 19 central-reply roots, two-stone root {60,27}, third-move pair {100,108} and every closure class (34269 included) remain UNKNOWN",
+ "declaration_commit": "3935e27a18dff26e7100b33f9da886039d3d91af",
+ "disclosures": [
+  "stage-1 was not repeated: the published twentieth escalation kit 44290797 stage-1 2M cold pairs remain the standing stage-1 record for k02-k11",
+  "k02 15M cold pair node-identical (wall_s 41/42)",
+  "no verdict consumed; k02 WIN(1) is single-implementation (jsreplay replica) and requires cppgate + third_impl pillars before adoption"
+ ],
+ "head_basis": {
+  "loss": 6682,
+  "rows": 6906,
+  "sha256": "1f1430f3",
+  "win": 224
+ },
+ "keys": {
+  "k02": {
+   "at15m": {
+    "nodes": 8036766,
+    "pair": "node-identical",
+    "result": 1,
+    "wall_s_pair": [
+     "41",
+     "42"
+    ]
+   },
+   "key": "1153484454578094080:68719476736",
+   "legal": 85,
+   "owner_union": ["4715", "34269"],
+   "s5_index": 178184,
+   "stage1_2m": "published in twentieth escalation kit 44290797 (UNKNOWN(0), nodes 2,000,000, pair node-identical)"
+  },
+  "k03": {
+   "at15m": "not escalated (WIN-stop fired at k02)",
+   "key": "1152921504624738304:68719476736",
+   "legal": 85,
+   "s5_index": 355050,
+   "stage1_2m": "published in twentieth escalation kit 44290797 (UNKNOWN(0), nodes 2,000,000, pair node-identical)"
+  },
+  "k04": {
+   "at15m": "not escalated (WIN-stop fired at k02)",
+   "key": "1152921504624705536:68719476736",
+   "legal": 90,
+   "s5_index": 809575,
+   "stage1_2m": "published in twentieth escalation kit 44290797 (UNKNOWN(0), nodes 2,000,000, pair node-identical)"
+  },
+  "k05": {
+   "at15m": "not escalated (WIN-stop fired at k02)",
+   "key": "1152921573344149504:68719476736",
+   "legal": 82,
+   "s5_index": 900276,
+   "stage1_2m": "published in twentieth escalation kit 44290797 (UNKNOWN(0), nodes 2,000,000, pair node-identical)"
+  },
+  "k06": {
+   "at15m": "not escalated (WIN-stop fired at k02)",
+   "key": "1152921504624672768:68720525312",
+   "legal": 80,
+   "s5_index": 900687,
+   "stage1_2m": "published in twentieth escalation kit 44290797 (UNKNOWN(0), nodes 2,000,000, pair node-identical)"
+  },
+  "k07": {
+   "at15m": "not escalated (WIN-stop fired at k02)",
+   "key": "1152921504624689152:68719476736",
+   "legal": 83,
+   "s5_index": 941211,
+   "stage1_2m": "published in twentieth escalation kit 44290797 (UNKNOWN(0), nodes 2,000,000, pair node-identical)"
+  },
+  "k08": {
+   "at15m": "not escalated (WIN-stop fired at k02)",
+   "key": "1152921504624672770:68719476736",
+   "legal": 84,
+   "s5_index": 956329,
+   "stage1_2m": "published in twentieth escalation kit 44290797 (UNKNOWN(0), nodes 2,000,000, pair node-identical)"
+  },
+  "k09": {
+   "at15m": "not escalated (WIN-stop fired at k02)",
+   "key": "1152921504624676864:68719476736",
+   "legal": 88,
+   "s5_index": 957713,
+   "stage1_2m": "published in twentieth escalation kit 44290797 (UNKNOWN(0), nodes 2,000,000, pair node-identical)"
+  },
+  "k10": {
+   "at15m": "not escalated (WIN-stop fired at k02)",
+   "key": "1152921508919640064:68719476736",
+   "legal": 76,
+   "s5_index": 958080,
+   "stage1_2m": "published in twentieth escalation kit 44290797 (UNKNOWN(0), nodes 2,000,000, pair node-identical)"
+  },
+  "k11": {
+   "at15m": "not escalated (WIN-stop fired at k02)",
+   "key": "1152921504607899648:73014444032",
+   "legal": 76,
+   "s5_index": 958143,
+   "stage1_2m": "published in twentieth escalation kit 44290797 (UNKNOWN(0), nodes 2,000,000, pair node-identical)"
+  }
+ },
+ "runner": "jsreplay replica sha256 84585617 (C++ standalone exact-replay path at commit 154f3b7a), fresh cold solver per row, budget-pinned --only=5 --memo=22"
+}
