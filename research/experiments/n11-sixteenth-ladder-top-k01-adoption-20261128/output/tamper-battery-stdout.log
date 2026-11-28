@@ -1,0 +1,14 @@
+# n11 sixteenth ladder-top k01 adoption - tamper battery (5/5 fail-closed + clean control)
+# maker: make_adoption_sixteenth_k01.py (fifteenth k02 maker 26ff68dc mechanical adaptation)
+# every tampered input re-pinned (kit MANIFEST / registry / maker constant) so the
+# intended downstream gate is the thing that fires; each run aborts BEFORE any output
+# (kitout is written only at G5; no output was produced by any tamper run).
+T1 replica result flip (at15m-k01-p1.raw result 1->2, MANIFEST re-pinned) -> GATE FAILED: replica pair mismatch k01 (exit 1)
+T2 third-impl expansions drift (k01.p1.txt 6003522->6003521, MANIFEST re-pinned) -> GATE FAILED: third-impl pair mismatch k01 (exit 1)
+T3 gate raw quad flip (k01.p1.out result 1->2, MANIFEST re-pinned) -> GATE FAILED: live gate raw != published raw k01 (exit 1; caught by the G1 live re-run)
+T4 quarantine-key injection (fully valid active registry entry for 1155454779397246976:131072, registry re-pinned 591e8b3e... + maker QUAR_SHA re-pinned) -> GATE FAILED: quarantined key k01 (exit 1; caught by the intended G4 gate)
+T5 coherent freshness world (k01 row injected into head.cache, BASE re-pinned incl. rows/win 6901/219) -> GATE FAILED: freshness: k01 present in BASE (exit 1; caught by the intended G3 gate)
+CLEAN CONTROL (all inputs restored byte-identical, verified by sha256: registry 81d23160..., head.cache 58110025..., maker restored) -> MAKER-PASS, kitout recursive diff vs run1/run2 clean (byte-identical)
+# maker runs: run1 MAKER-PASS, run2 MAKER-PASS (kitout diff clean), clean-control MAKER-PASS (kitout byte-identical)
+# increment bb029422... merged dbc1d950... (6,901 rows WIN 219 / LOSS 6,682)
+# gate binary rebuilt this session from pinned source 9193f5b6... with zig 0.13.0 (tarball pin d45312e6...), G1 live re-run 15M cold pair ~10s/pass on this host

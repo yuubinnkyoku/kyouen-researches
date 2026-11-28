@@ -1,0 +1,33 @@
+{
+ "schema": "n11-sixteenth-ladder-top-k01-win-adoption-manifest-v1",
+ "base": {
+  "path": "merged-exact-s5-chain-plus-fifteenth-k02-20261128.cache",
+  "sha256": "58110025dd5cca7f1e824d8871b50462dc9fcbeac8b9aa69c5f4d33299c894ae",
+  "rows": 6900,
+  "win": 218,
+  "loss": 6682
+ },
+ "rows": [
+  {
+   "name": "k01",
+   "key": "1155454779397246976:131072",
+   "result": 1,
+   "nodes": 5273778,
+   "class_index": 20421
+  }
+ ],
+ "expected_merged_shape": {
+  "rows": 6901,
+  "win": 219,
+  "loss": 6682
+ },
+ "merger_sha256": "907119610034fb2aebfde012550a4129dfa3b086c6de11194e856747ac74606a",
+ "kits": {
+  "replica": "n11-sixteenth-ladder-top-escalation-20261128 (5cc8e1fb/48ea76d8)",
+  "cppgate": "n11-sixteenth-ladder-top-k01-win-cppgate-20261128 (f2b8f744)",
+  "thirdimpl": "n11-sixteenth-ladder-top-k01-thirdimpl-20261128 (f2b8f744)"
+ },
+ "owner_union_precheck": "[15647, 16901, 20421] derived from the frozen graph in the sixteenth escalation Part; caveat: shared-owner pre-exclusion (other owner classes may already be excluded_now on BASE; serving class 20421 unknown_now rank 1 on BASE)",
+ "nodes_total_bookkeeping": 5273778,
+ "status_guard": "adoption bookkeeping only; NO verdict consumed; 11x11 UNKNOWN"
+}
