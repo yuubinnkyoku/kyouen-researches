@@ -1,0 +1,489 @@
+{
+ "claim_sets_checked": [
+  "cert_38",
+  "class20421_5",
+  "eighth_43",
+  "eleventh_46",
+  "fifteenth_3",
+  "fifth_44",
+  "focus_35",
+  "fourteenth_1",
+  "fourth_41",
+  "ninth_45",
+  "parked_6",
+  "sbd_101",
+  "seventh_42",
+  "sixth_43",
+  "tenth_44",
+  "third_39",
+  "thirteenth_2",
+  "twelfth_51",
+  "ultra_cheap_4",
+  "quarantine_2"
+ ],
+ "closure_ladder": {
+  "rows": 797,
+  "sha256": "a33f0cb9d8b9e3dabe996b82b7e97d8cb65cc1f8795183aa1fde8e9e45eade19",
+  "unknown_recomputed": "all 798 rows match the published unknown_now"
+ },
+ "gates": {
+  "P0:candidates-sha": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P0:closure-sha": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P0:dependency-graph-sha": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P0:eighth_43-sha": {
+   "detail": "research/experiments/n11-eighthcost-class-s5-exclusive-probe-1297036692750860288-20261127/output/eighth-cost-exclusive-keys.json",
+   "status": "PASS"
+  },
+  "P0:eleventh_46-sha": {
+   "detail": "research/experiments/n11-eleventhcost-class-s5-exclusive-probe-20261127/output/eleventh-cost-exclusive-keys.json",
+   "status": "PASS"
+  },
+  "P0:fifth_44-sha": {
+   "detail": "research/experiments/n11-fifthcost-class-s5-exclusive-probe-1152921504612089856-20261121/output/fifth-cost-exclusive-keys.json",
+   "status": "PASS"
+  },
+  "P0:fifthsel-sha": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P0:geometry-sha": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P0:head-sha": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P0:independent-sha": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P0:keymap-sha": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P0:ninth_45-sha": {
+   "detail": "research/experiments/n11-ninthcost-class-s5-exclusive-probe-1297036692683751424-20261127/output/ninth-cost-exclusive-keys.json",
+   "status": "PASS"
+  },
+  "P0:parked2-batch-s5-10376294091217440768-33554432.input.csv-sha": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P0:parked2-batch-s5-1297036830122704896-67108864.input.csv-sha": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P0:parked4-files": {
+   "detail": "['batch-k13.input.csv', 'batch-k19.input.csv', 'batch-k20.input.csv', 'batch-k33.input.csv']",
+   "status": "PASS"
+  },
+  "P0:policy-sha": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P0:quarantine-sha": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P0:seventh_42-sha": {
+   "detail": "research/experiments/n11-seventhcost-class-s5-exclusive-probe-1306043891938492416-20261126/output/seventh-cost-exclusive-keys.json",
+   "status": "PASS"
+  },
+  "P0:sixth_43-sha": {
+   "detail": "research/experiments/n11-sixthcost-class-s5-exclusive-probe-10376293541461626880-20261121/output/sixth-cost-exclusive-keys.json",
+   "status": "PASS"
+  },
+  "P0:supply-sha": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P0:tenth_44-sha": {
+   "detail": "research/experiments/n11-tenthcost-class-s5-exclusive-probe-20261127/output/tenth-cost-exclusive-keys.json",
+   "status": "PASS"
+  },
+  "P0:twelfth_51-sha": {
+   "detail": "research/experiments/n11-twelfthcost-class-s5-exclusive-probe-20261127/output/twelfth-cost-exclusive-keys.json",
+   "status": "PASS"
+  },
+  "P0:update8-sha": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P1:closure-rows": {
+   "detail": "797",
+   "status": "PASS"
+  },
+  "P1:graph-shape": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P1:head-shape": {
+   "detail": "6905",
+   "status": "PASS"
+  },
+  "P1:receipt-cache-conflicts": {
+   "detail": "0",
+   "status": "PASS"
+  },
+  "P1:supply-shape": {
+   "detail": "4562",
+   "status": "PASS"
+  },
+  "P1:update8-receipts": {
+   "detail": "23",
+   "status": "PASS"
+  },
+  "P1:update8-shape": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P2:closure-unknown-recomputed-797": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P2:top5-ladder-rows": {
+   "detail": "[(34269, 11), (12264, 33), (5343, 46), (13342, 50), (30118, 50)]",
+   "status": "PASS"
+  },
+  "P3:claim-sizes": {
+   "detail": "{\"focus_35\": 35, \"cert_38\": 38, \"third_39\": 39, \"fourth_41\": 41, \"fifth_44\": 44, \"sixth_43\": 43, \"seventh_42\": 42, \"eighth_43\": 43, \"ninth_45\": 45, \"tenth_44\": 44, \"eleventh_46\": 46, \"twelfth_51\": 51, \"sbd_101\": 101, \"parked_6\": 6, \"ultra_cheap_4\": 4, \"thirteenth_2\": 2, \"fourteenth_1\": 1, \"fifteenth_3\": 3, \"class20421_5\": 5}",
+   "status": "PASS"
+  },
+  "P3:class20421-adopted": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P3:fifteenth-adopted": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P3:fourteenth-adopted": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P3:quarantine-entries": {
+   "detail": "2",
+   "status": "PASS"
+  },
+  "P3:thirteenth-adopted": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P3:ultra-cheap-adopted": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:selection-class": {
+   "detail": "34269",
+   "status": "PASS"
+  },
+  "P4:selection-found": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:selection-keys": {
+   "detail": "[('10376293541479448576', 68719476736), ('1153484454578094080', 68719476736), ('1152921504624738304', 68719476736), ('1152921504624705536', 68719476736), ('1152921573344149504', 68719476736), ('1152921504624672768', 68720525312), ('1152921504624689152', 68719476736), ('1152921504624672770', 68719476736), ('1152921504624676864', 68719476736), ('1152921508919640064', 68719476736), ('1152921504607899648', 73014444032)]",
+   "status": "PASS"
+  },
+  "P4:selection-legal-dual": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:selection-not-in-supply": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:selection-s5-index": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:selection-unclaimed-quarantine-free": {
+   "detail": "",
+   "status": "PASS"
+  }
+ },
+ "head_basis": {
+  "loss": 6682,
+  "rows": 6905,
+  "sha256": "e1a9cacc54abad5198e455ff53492310fabc28f5f89cf26363a7f3da7fe944de",
+  "win": 223
+ },
+ "meaning": "selection and scheduling bookkeeping only; no verdict is claimed or consumed; resolving a selected key would still require the standing cold-pair + C++-gate + third-implementation pillars before any adoption; the standard 11x11 empty board, all 19 central-reply roots, the two-stone root {60,27} and third moves 100/108 remain UNKNOWN",
+ "overall": "PASS",
+ "published_top5": [
+  {
+   "class_index": 34269,
+   "unknown_now": 11
+  },
+  {
+   "class_index": 12264,
+   "unknown_now": 33
+  },
+  {
+   "class_index": 5343,
+   "unknown_now": 46
+  },
+  {
+   "class_index": 13342,
+   "unknown_now": 50
+  },
+  {
+   "class_index": 30118,
+   "unknown_now": 50
+  }
+ ],
+ "scanned_candidates": [
+  {
+   "all_available": true,
+   "blocked_keys": [],
+   "class_index": 34269,
+   "class_key": "1152921504624672768:68719476736",
+   "class_rank": 1,
+   "unknown_now": 11
+  },
+  {
+   "all_available": true,
+   "blocked_keys": [],
+   "class_index": 12264,
+   "class_key": "1152921504606848033:0",
+   "class_rank": 2,
+   "unknown_now": 33
+  },
+  {
+   "all_available": true,
+   "blocked_keys": [],
+   "class_index": 5343,
+   "class_key": "1171516445255794688:0",
+   "class_rank": 3,
+   "unknown_now": 46
+  },
+  {
+   "all_available": true,
+   "blocked_keys": [],
+   "class_index": 13342,
+   "class_key": "1188950301642588192:0",
+   "class_rank": 4,
+   "unknown_now": 50
+  },
+  {
+   "all_available": true,
+   "blocked_keys": [],
+   "class_index": 30118,
+   "class_key": "1152922604118474753:65536",
+   "class_rank": 5,
+   "unknown_now": 50
+  },
+  {
+   "all_available": true,
+   "blocked_keys": [],
+   "class_index": 5473,
+   "class_key": "1158058422931816448:0",
+   "class_rank": 6,
+   "unknown_now": 51
+  },
+  {
+   "all_available": true,
+   "blocked_keys": [],
+   "class_index": 16957,
+   "class_key": "1152921504606978048:264",
+   "class_rank": 7,
+   "unknown_now": 51
+  },
+  {
+   "all_available": true,
+   "blocked_keys": [],
+   "class_index": 16930,
+   "class_key": "1152921504875282432:272",
+   "class_rank": 8,
+   "unknown_now": 51
+  },
+  {
+   "all_available": true,
+   "blocked_keys": [],
+   "class_index": 8811,
+   "class_key": "6052838174063853568:0",
+   "class_rank": 9,
+   "unknown_now": 51
+  },
+  {
+   "all_available": true,
+   "blocked_keys": [],
+   "class_index": 2634,
+   "class_key": "4035225266258182144:0",
+   "class_rank": 10,
+   "unknown_now": 51
+  },
+  {
+   "all_available": true,
+   "blocked_keys": [],
+   "class_index": 8785,
+   "class_key": "1224979373522681856:1",
+   "class_rank": 11,
+   "unknown_now": 51
+  },
+  {
+   "all_available": false,
+   "blocked_keys": [
+    {
+     "key": "1297107061427929088:16",
+     "reasons": [
+      "claimed"
+     ]
+    }
+   ],
+   "class_index": 1518,
+   "class_key": "1152921505076609024:0",
+   "class_rank": 12,
+   "unknown_now": 51
+  }
+ ],
+ "schema": "n11-twentieth-ladder-top-selection-v1",
+ "selection": {
+  "class_index": 34269,
+  "class_key": "1152921504624672768:68719476736",
+  "probe_order": [
+   {
+    "canonical_safe": true,
+    "d4_canonical": true,
+    "in_probe13_supply": false,
+    "key": "10376293541479448576:68719476736",
+    "legal": 87,
+    "legal_board": 87,
+    "legal_fresh_det": 87,
+    "proxy": null,
+    "s5_index": 38891,
+    "stones": 5
+   },
+   {
+    "canonical_safe": true,
+    "d4_canonical": true,
+    "in_probe13_supply": false,
+    "key": "1153484454578094080:68719476736",
+    "legal": 85,
+    "legal_board": 85,
+    "legal_fresh_det": 85,
+    "proxy": null,
+    "s5_index": 178184,
+    "stones": 5
+   },
+   {
+    "canonical_safe": true,
+    "d4_canonical": true,
+    "in_probe13_supply": false,
+    "key": "1152921504624738304:68719476736",
+    "legal": 85,
+    "legal_board": 85,
+    "legal_fresh_det": 85,
+    "proxy": null,
+    "s5_index": 355050,
+    "stones": 5
+   },
+   {
+    "canonical_safe": true,
+    "d4_canonical": true,
+    "in_probe13_supply": false,
+    "key": "1152921504624705536:68719476736",
+    "legal": 90,
+    "legal_board": 90,
+    "legal_fresh_det": 90,
+    "proxy": null,
+    "s5_index": 809575,
+    "stones": 5
+   },
+   {
+    "canonical_safe": true,
+    "d4_canonical": true,
+    "in_probe13_supply": false,
+    "key": "1152921573344149504:68719476736",
+    "legal": 82,
+    "legal_board": 82,
+    "legal_fresh_det": 82,
+    "proxy": null,
+    "s5_index": 900276,
+    "stones": 5
+   },
+   {
+    "canonical_safe": true,
+    "d4_canonical": true,
+    "in_probe13_supply": false,
+    "key": "1152921504624672768:68720525312",
+    "legal": 80,
+    "legal_board": 80,
+    "legal_fresh_det": 80,
+    "proxy": null,
+    "s5_index": 900687,
+    "stones": 5
+   },
+   {
+    "canonical_safe": true,
+    "d4_canonical": true,
+    "in_probe13_supply": false,
+    "key": "1152921504624689152:68719476736",
+    "legal": 83,
+    "legal_board": 83,
+    "legal_fresh_det": 83,
+    "proxy": null,
+    "s5_index": 941211,
+    "stones": 5
+   },
+   {
+    "canonical_safe": true,
+    "d4_canonical": true,
+    "in_probe13_supply": false,
+    "key": "1152921504624672770:68719476736",
+    "legal": 84,
+    "legal_board": 84,
+    "legal_fresh_det": 84,
+    "proxy": null,
+    "s5_index": 956329,
+    "stones": 5
+   },
+   {
+    "canonical_safe": true,
+    "d4_canonical": true,
+    "in_probe13_supply": false,
+    "key": "1152921504624676864:68719476736",
+    "legal": 88,
+    "legal_board": 88,
+    "legal_fresh_det": 88,
+    "proxy": null,
+    "s5_index": 957713,
+    "stones": 5
+   },
+   {
+    "canonical_safe": true,
+    "d4_canonical": true,
+    "in_probe13_supply": false,
+    "key": "1152921508919640064:68719476736",
+    "legal": 76,
+    "legal_board": 76,
+    "legal_fresh_det": 76,
+    "proxy": null,
+    "s5_index": 958080,
+    "stones": 5
+   },
+   {
+    "canonical_safe": true,
+    "d4_canonical": true,
+    "in_probe13_supply": false,
+    "key": "1152921504607899648:73014444032",
+    "legal": 76,
+    "legal_board": 76,
+    "legal_fresh_det": 76,
+    "proxy": null,
+    "s5_index": 958143,
+    "stones": 5
+   }
+  ]
+ }
+}

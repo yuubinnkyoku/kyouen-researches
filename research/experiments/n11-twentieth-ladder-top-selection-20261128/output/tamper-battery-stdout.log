@@ -1,0 +1,6 @@
+T1: rc=1 overall=FAIL fails=['P2:closure-unknown-recomputed-797', 'P2:top5-ladder-rows'] expected~['P2:closure-unknown-recomputed-797'] -> FAIL-CLOSED OK
+T2: rc=1 overall=FAIL fails=['P2:closure-unknown-recomputed-797', 'P3:class20421-adopted'] expected~['P3:class20421-adopted'] -> FAIL-CLOSED OK
+T3: rc=1 overall=FAIL fails=['P3:class20421-adopted', 'P4:selection-class', 'P4:selection-keys', 'P4:selection-s5-index'] expected~['P4:selection-class'] -> FAIL-CLOSED OK
+T4: rc=1 overall=FAIL fails=['P2:closure-unknown-recomputed-797', 'P4:selection-keys', 'P4:selection-s5-index'] expected~['P2:closure-unknown-recomputed-797'] -> FAIL-CLOSED OK
+T5: rc=1 overall=FAIL fails=['P2:closure-unknown-recomputed-797'] expected~['P2:closure-unknown-recomputed-797'] -> FAIL-CLOSED OK
+ALL: 5/5 FAIL-CLOSED
