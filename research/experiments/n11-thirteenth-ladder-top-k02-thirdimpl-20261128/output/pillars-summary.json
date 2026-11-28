@@ -1,0 +1,23 @@
+{
+ "schema": "n11-thirteenth-ladder-top-k02-thirdimpl-summary-v1",
+ "declaration": "research/log/2026-11-28-n11-thirteenth-ladder-top-k02-pillars-declaration.md (commit 177b1086)",
+ "row": "k02",
+ "key": "1152922672837951488:65792",
+ "class_index": 16757,
+ "stones": 5,
+ "legal": 72,
+ "invocation": "--row=k02 --stones=5 --legal=72 --lo=1152922672837951488 --hi=65792 --cap=400000000 --wallcap=260 --memo-power=22",
+ "script_sha256": "08ea958ff59c3234ec5ac55c5c40689bd0999a34e101a88ea0546800cc4a1998",
+ "result": 1,
+ "expansions": 3910009,
+ "nodes": 2425008,
+ "quads": 95670,
+ "ttOverwrites": 268071,
+ "passes": 2,
+ "pass_identical_except_wall": true,
+ "wall_s": [12.14, 12.04],
+ "escalation_basis": { "kit": "n11-thirteenth-ladder-top-k02-escalation-20261128", "commit": "3087c38b", "row_result": 1, "row_nodes": 3485963 },
+ "companion_cppgate": { "kit": "n11-thirteenth-ladder-top-k02-win-cppgate-20261128", "gate": "GATE-PASS 72,15000000,1,3485963" },
+ "status": "CORROBORATION-PASS (result 1 consistent with the k02 escalation WIN(1) row; two-pillar requirement COMPLETE with the companion cppgate kit; both class 16757 keys now pillar-complete)",
+ "status_guard": "pillar bookkeeping only; NO verdict consumed; 11x11 UNKNOWN"
+}
