@@ -1,0 +1,59 @@
+{
+ "calibration": {
+  "key": "1153485622925590528:0",
+  "matches_published_cal_raw": "byte-identical to the published fifteenth escalation kit calibration raw (05ce2090...) on this host; result 0, nodes 2,000,000, forbidden quadruples 95,670, wall_s 9",
+  "nodes": 2000000,
+  "note": "pre-declared host calibration, run after the declaration was published and before the declared 50M runs",
+  "result": 0,
+  "wall_s": 9
+ },
+ "disclosures": [
+  "declaration published before execution (commit 5cc8e1fb); the calibration and both 50M runs executed after it was on main",
+  "k02 50M cold pair node-identical (result 1, nodes 18,247,029 both); raw files differ only in the wall_s field (98 vs 102), the same host-footprint pattern as the published k02 15M pair",
+  "the k02 input CSV and the calibration input are byte-verified copies of the published re-escalation kit input files (fda5d01d... / 52d79efc...)",
+  "the runner was sha-verified (84585617...) before the runs from the byte-verified local copy of the published runner",
+  "the k02 WIN(1) is single-implementation and requires the C++ second-implementation scrutiny gate plus a third-implementation corroboration before any adoption Part",
+  "class 5804 is ALREADY excluded_now (k01/k03 WIN win-hit, published reaudits 3395d0ec / e6ceb133); the k02 WIN does not change class-status bookkeeping; if k02 is adopted after the 3-pillar chain, class 5804 would hold zero cost-unknown children and its closure-ladder exit would be measured then",
+  "the calibration raw is byte-identical to the published fifteenth escalation kit calibration raw (05ce2090...) on this host"
+ ],
+ "escalation_50m": {
+  "k02": {
+   "budget": 50000000,
+   "class_index": 5804,
+   "key": "6052837899185946628:128",
+   "legal": 87,
+   "nodes": 18247029,
+   "pair_byte_identical": false,
+   "pair_node_identical": true,
+   "result": 1,
+   "s5_index": 212115,
+   "status": "WIN(1) resolved at 50M budget (nodes 18,247,029 of 50,000,000); single-implementation (jsreplay replica, cold pair node-identical, wall_s differs as in the published k02 15M pair); adoption requires the 3-pillar scrutiny chain under a fresh declaration",
+   "wall_s": [
+    98,
+    102
+   ]
+  }
+ },
+ "head_basis": {
+  "loss": 6682,
+  "rows": 6899,
+  "sha256_prefix": "3a527d39",
+  "win": 217
+ },
+ "part": "fifteenth ladder-top k02 L50M escalation (declared in research/log/2026-11-28-n11-fifteenth-ladder-top-k02-l50m-declaration.md, commit 5cc8e1fb)",
+ "prior_pins": {
+  "k02_15m": {
+   "nodes": 15000000,
+   "note": "published k02/k03 re-escalation kit (09358acd) 15M raws (6a3db900... / ccb8a09d...), not re-run in this Part",
+   "result": 0
+  }
+ },
+ "runner": {
+  "mode": "--only=5 --memo=22 cold solver per row, no shared TT",
+  "name": "jsreplay.js",
+  "sha256": "845856175d3c793a7eb4306f5902ecda3f1c046a8a53e8f34ed375e51febc3df",
+  "source_path": "research/experiments/n11-s4bd-fresh-corpus-regen-20261121/scripts/jsreplay.js"
+ },
+ "schema": "n11-fifteenth-ladder-top-k02-l50m-summary-v1",
+ "status_guard": "escalation bookkeeping only: NO verdict is consumed; class 5804 is ALREADY excluded_now and stays excluded_now regardless of this result; the k02 WIN(1) row is single-implementation (jsreplay replica, cold pair) and requires the C++ second-implementation scrutiny gate plus a third-implementation corroboration before any adoption Part; no free_now flip is claimed here; the standard 11x11 empty board, all 19 central-reply roots, the two-stone root {60,27} and third moves 100/108 remain UNKNOWN; nodes are bookkeeping, never verdicts"
+}
