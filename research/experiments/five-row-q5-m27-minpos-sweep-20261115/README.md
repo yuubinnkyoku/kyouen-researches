@@ -1,61 +1,63 @@
 # five-row-q5-m27-minpos-sweep-20261115
 
-高速レーン。**IN FLIGHT claim (2026-11-15 10:2x UTC)**。
+高速レーン。**COMPLETED (2026-11-28 takeover・宣言 `24736c72`・単一オーナー・publish-then-execute)**。
+停滞していた 2026-11-15 レーン (p1..p3 出版後に実行環境喪失・13日停滞) を
+2026-11-28 高速レーンが takeover し p4..p13 掃引を実施・**p=9 で SAT**。
 
-## Claim
+## 結果
+
+- **(5,5) 前線 5×27 class {0} krow=0:3 minpos=9 は SAT**:
+  kissat 4.0.4 **1,556,533 conflicts / 169.09s**・19石 witness
+  rows [3,4,4,4,4] (row0 x=[9,19,21])。
+  2系統検証: sat3.js decode → sat.js verifyConfig ok・
+  verify_frac.py (独立 Fraction 実装) safe+maximal ok (max_curve_stones=4・unblocked=[])。
+  cold pair 再実行: conflicts bit-exact・v-line 同一。
+- **witness 帯は m=5..27 に延伸し M_{5,5} ∈ [28, 336]** (着手前 [27, 336]・上界 K0318 U=336 不変)。
+  **前線は 5×28 へ。** CSV・K0833 更新済み。
+- p4..p8 は cap 285s INDET (honest negatives・不在主張ではない):
+  p4 2,290,237 / p5 2,255,250 / p6 2,526,618 / p7 2,423,463 / p8 2,525,494 conflicts。
+  旧レーンの reported-only 手記値 p4/p5 (3,317,615 / 3,501,337 @400s) は本再実行で置き換え。
+- p1..p3 は旧レーン出版値のまま (再実行せず): INDET 2,961,487 / 3,233,600 / 3,398,950 @400s。
+- **p10..p13 は未掃引 (WIN-stop)**。k=0..2・他の正準欠損クラス・H/V 鏡像類も残る。
+  5×27 全体の不在主張ではない (sat3 H-split の一部クラスの掃引である)。
+
+## 較正 (takeover・宣言前実施・宣言 `24736c72` で開示)
+
+- 生成器: sat3.js md5 d03f908ea99ba819caee2a6fbb471c1b (sat2 282ae832efa0080127c6c153e65e1c3c・
+  sat.js 0cc6021a4e523a0d7f4d5ea0f5f5d40c)。
+- ソルバ: kissat 4.0.4 official prebuilt linux-amd64 md5 3a5eba830aa6008a604fcc9bbe99a325。
+- CNF md5 bit-exact: 5×27 c0k3p0 4d2b52a8203591e13cfc8ae126beb9b5・
+  c0k3p1 6808000255911616de71430c6a0080cb・c0k3p2 47b3f40d6d636b4cf08a5b7765bf71b3・
+  5×25 c0 1d62f2428fd5fb2fdba5cfd19114d78e・5×26 c0 60e71cfd2f1620cfa9b4070f259c1572。
+- エンドツーエンド: 5×25 c0 SAT 35,972 conflicts / 9.16s・5×26 c0 SAT 1,631,556 conflicts / 204.22s
+  — いずれも出版値と conflicts bit-exact。
+- cap は旧計画 400s から **285s に変更** (実行環境の呼び出し上限 300s 内・宣言で開示)。
+
+## 元計画 (2026-11-15・停滞時点の記録として保持)
 
 - 本レーンは **(5,5) 前線 5×27 の class {0} krow=0:3 minpos p=1..13 掃引**を着手する
-  (sat3.js・cap 400s・resumable・records 増分 push)。
-  `five-row-q5-m26-extend-20261115`(COMPLETED)が委譲した残り minpos 帯。
+  (sat3.js・resumable)。`five-row-q5-m26-extend-20261115`(COMPLETED)が委譲した残り minpos 帯。
   sound H-split bound: min(x₁, 26−x₃) ≤ ⌊(m−1)/2⌋ = 13。
-- 着手時点の境界: witness 帯 m=5..26・**M_{5,5} ∈ [27, 336]**(上界 K0318 U=336)。
-  m=27 の honest negatives: c0 plain 250s INDET 1,777,156(session1)/1,924,144(再生成)・
-  c0 deep 817.04s ≥5,424,572・c0k3 240s INDET 1,804,438/1,829,756・
-  c0k3p0 200s INDET 1,644,162(five-row-q5-m26-extend-20261115)。
-  1/2石 surgery 完全列挙負(seed + H鏡像・4,651,200 編集・0 witness)。
-- **SAT ⟹ witness 帯は m=5..27 に延伸し M_{5,5} ∈ [28, 336]**。
-  全 p UNSAT でも単独で 5×27 不在は確定しない(k=0..2・他クラス残る・absence には
-  19 正準類の完全掃引が必要)。INDET は cap 到達であり不在主張ではない。
-- repo 検索時点で 5×27 minpos 掃引は未着手・未 claim。
+- SAT ⟹ witness 帯は m=5..27 に延伸し M_{5,5} ∈ [28, 336]。
+  全 p UNSAT でも単独で 5×27 不在は確定しない (k=0..2・他クラス残る)。
+  INDET は cap 到達であり不在主張ではない。
 
-## 手法・較正
+## 進捗 (2026-11-15・停滞時点の記録として保持)
 
-- 生成器: sat3.js(five-row-q5-m26-extend-20261115/scripts と md5 一致:
-  d03f908ea99ba819caee2a6fbb471c1b)。
-- ソルバ: kissat 4.0.4 official prebuilt linux-amd64(md5 3a5eba830aa6008a604fcc9bbe99a325)。
-- 較正: 同一 toolchain で 5×26 class {0} SAT 1,631,556・5×25 35,972 を本日
-  cross-reset bit-exact 再現済み(five-row-q5-m26-extend-20261115)。
-  c0k3p0 CNF md5 4d2b52a8203591e13cfc8ae126beb9b5(前レーン記録と同一生成器)。
+- p=1..3 着地済み (INDET・records 3件)。p4/p5 はローカル完走も push 前に実行環境喪失で
+  raw log・records とともに喪失 (手記値のみ・reported-only)。records.jsonl には p1..p3 のみ。
+
+## 成果物
+
+- output/records.jsonl: p1..p3 (旧レーン) + 較正2件 + p4..p9 + c0k3p9.p2 (cold pair)
+- output/rc5x25q5_c0.txt / rc5x26q5_c0.txt (較正 raw logs)
+- output/r5x27q5_c0k3p4.txt .. r5x27q5_c0k3p9.txt (p4..p9 raw logs)
+- output/r5x27q5_c0k3p9.p2.txt (cold pair raw log)
+- output/witness_5x27_c0k3p9.json / witness_5x27_c0k3p9_stones.json
 
 ## スコープ
 
 有限機械検証まで。SAT は witness 存在証明。UNSAT は符号化限定の不在。
 INDET は cap 到達であり不在を意味しない。上界不変: K0318 U_{5,5}=336。
-
-## 進捗 (2026-11-15)
-
-- **p=1..3 着地済み**(commit 870665a5・records 3件 + raw logs 3件)。全 INDET at 400s cap:
-  p1 2,961,487 / p2 3,233,600 / p3 3,398,950 conflicts。前線は均質な抵抗・SAT なし。
-- **p=4, p=5 はローカルで 400s cap 完走していたが push 前に実行環境が利用不可になり、
-  raw log・records とともに喪失**(値のみの手記: p4 INDET 3,317,615・p5 INDET 3,501,337。
-  壁時計カットゆえ bit-exact 再現は保証されない)。records.jsonl には p1..p3 のみ収録。
-  **これらの値は reported-only であり、再実行で置き換えること。**
-- 実行環境障害: 本実行の後半、bash・file_system が継続的に
-  "temporarily unavailable" を返し復帰しなかった。GitHub コネクタのみ生存。
-  よって本 note は main 直接追記による状況記録。
-
-## 再開プロトコル (次回実行向け)
-
-1. 実行環境復帰を確認してから着手。ローカル `output/` に p4/p5 の痕跡が残っていても
-   log が無ければ破棄し、p4..p13 を再実行する(records.jsonl は main の p1..p3 から resume・
-   grep skip 付き resumable)。
-2. 復旧: sat3.js を main の five-row-q5-m26-extend-20261115/scripts から
-   md5 d03f908ea99ba819caee2a6fbb471c1b 照合で復元。kissat 4.0.4 公式バイナリ
-   (md5 3a5eba830aa6008a604fcc9bbe99a325)を /home/user/kr55/bin/kissat に配置。
-3. sweep.sh の既知 bug: records の sec 抽出が awk `$NF`(="seconds" を取る)になっており
-   不正 JSON になる。runner の抽出を `awk '{print $(NF-1)}'` に修正するか、
-   push 前に process-time 行から手動修復すること。
-4. SAT 検出時: kissat log の v 行から decode → sat.js verifyConfig +
-   verify_witness_indep.py の 2 系統検証 → witness 帯 m=5..27・M∈[28,336] として
-   CSV/K0833/KNOWLEDGE 更新。全 INDET 完走時も records 増分を push し
-   README を COMPLETED に更新する。
+標準 11×11 空盤・19 central-reply roots・二石 root {60,27}・第三手 {100,108}・S2・
+全 closure class は全時点 UNKNOWN・verdict 不消費・conflicts は bookkeeping。
