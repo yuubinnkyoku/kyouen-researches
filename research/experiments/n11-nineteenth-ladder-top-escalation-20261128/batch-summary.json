@@ -1,0 +1,86 @@
+{
+ "calibration": {
+  "budget": 2000000,
+  "forbidden_quadruples": 95670,
+  "key": "1153485622925590528:0",
+  "nodes": 2000000,
+  "published_value_agreement": "values identical to the published sixteenth/seventeenth/eighteenth escalation kit calibrations (result 0, nodes 2,000,000, fq 95,670); wall_s 9 matches the published value",
+  "result": 0,
+  "wall_s": 9
+ },
+ "declaration_commit": "b27b8f24fd297800d796a01a9f48d0711b2d6378",
+ "disclosures": [
+  "both keys were stage-1 2M UNKNOWN(0) since the published sixteenth escalation kit (85edd462); no stage-1 rerun was needed or performed in this Part",
+  "k04 15M cold pair node-identical (nodes 6877739, wall_s 37/36)",
+  "no verdict consumed; k04 WIN(1) is single-implementation (jsreplay replica, cold pair); adoption requires the C++ gate + third-implementation corroboration + WIN-side flip-census review under fresh declarations",
+  "freshness precheck: both keys verified absent from the head of record 3abecf8b by direct cache scan on this host before the declaration"
+ ],
+ "head_basis": {
+  "loss": 6682,
+  "rows": 6903,
+  "sha256": "3abecf8b1da6735a0cf0719087b0f026e3a82648dce026b9c82aab106e23a023",
+  "win": 221
+ },
+ "keys": {
+  "k04": {
+   "at15m": {
+    "nodes": 6877739,
+    "pair": "node-identical",
+    "result": 1,
+    "wall_s_pair": [
+     "37",
+     "36"
+    ]
+   },
+   "key": "1153062242096250880:540672",
+   "legal": 83,
+   "s5_index": 620742,
+   "stage1_2m": {
+    "nodes": 2000000,
+    "result": 0,
+    "source": "published sixteenth escalation kit raws at2m-k04-p1/p2 (85edd462); not rerun here",
+    "wall_s_pair": [
+     "9",
+     "10"
+    ]
+   }
+  },
+  "k05": {
+   "at15m": "not escalated (WIN-stop fired at k04)",
+   "key": "1152921642046849024:68719477248",
+   "legal": 78,
+   "s5_index": 625899,
+   "stage1_2m": {
+    "nodes": 2000000,
+    "result": 0,
+    "source": "published sixteenth escalation kit raws at2m-k05-p1/p2 (85edd462); not rerun here",
+    "wall_s_pair": [
+     "10",
+     "10"
+    ]
+   }
+  }
+ },
+ "owner_union_precheck": {
+  "graph": "54f9c364...",
+  "k04": [
+   18534,
+   18554,
+   19885,
+   20421
+  ],
+  "k05": [
+   18683,
+   18710,
+   20421
+  ]
+ },
+ "runner": {
+  "name": "jsreplay.js",
+  "sha256": "845856175d3c793a7eb4306f5902ecda3f1c046a8a53e8f34ed375e51febc3df"
+ },
+ "schema": "n11-nineteenth-ladder-top-escalation-summary-v1",
+ "selection_kit": "n11-sixteenth-ladder-top-selection-20261128 (b4e338aa, completion 27829d8c); stage-1 source kit n11-sixteenth-ladder-top-escalation-20261128 (85edd462)",
+ "status_guard": "escalation bookkeeping only; NO verdict consumed; the standard 11x11 empty board, all 19 central-reply roots, the two-stone root {60,27}, third moves 100/108 and every closure class (including 20421, which is NOT complete while k05 remains 2M UNKNOWN) remain UNKNOWN; nodes/wall_s are bookkeeping, never verdicts",
+ "win_stop": "fired at k04 (WIN(1) at 15M, nodes 6877739); k05 stays at stage-1 2M UNKNOWN(0)"
+}
