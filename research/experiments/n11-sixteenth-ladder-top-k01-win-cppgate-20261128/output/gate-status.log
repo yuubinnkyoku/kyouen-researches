@@ -1,0 +1,6 @@
+2026-11-28T06:25:21Z anchor-at2m GATE-PASS 98,2000000,0,2000000 (2-pass determinism + published-raw node-exact)
+2026-11-28T06:25:43Z anchor-aj001 GATE-PASS 84,30000000,2,5156075 (2-pass determinism + published-raw node-exact)
+2026-11-28T06:27:06Z anchor-af039 GATE-PASS 89,30000000,2,19234232 (2-pass determinism + published-raw node-exact)
+2026-11-28T06:27:59Z k01 GATE-PASS 76,15000000,1,5273778 (2-pass determinism + published-raw node-exact)
+2026-11-28T06:28:06Z k01 GATE-FAIL p1=76,15000000,1,5273778 expected=76,15000000,1,5273779
+2026-11-28T06:28:06Z k01 MISMATCH p1=76,15000000,1,5273779 p2=76,15000000,1,5273778

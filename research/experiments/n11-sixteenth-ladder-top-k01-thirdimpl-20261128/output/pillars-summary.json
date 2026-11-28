@@ -1,0 +1,28 @@
+{
+ "schema": "n11-sixteenth-ladder-top-k01-thirdimpl-summary-v1",
+ "declaration_commit": "60f4bac8",
+ "result": "CORROBORATION-PASS",
+ "key": "1155454779397246976:131072",
+ "row": "k01",
+ "class_index": 20421,
+ "s5_index": 528689,
+ "legal": 76,
+ "third_impl_sha256": "08ea958f...",
+ "flags": "--row=k01 --stones=5 --legal=76 --lo=1155454779397246976 --hi=131072 --cap=400000000 --wallcap=260 --memo-power=22",
+ "p1": {
+  "result": 1,
+  "expansions": 6003522,
+  "nodes": 3591656,
+  "ttOverwrites": 1831190,
+  "wall_s": 18.85
+ },
+ "p2": {
+  "result": 1,
+  "expansions": 6003522,
+  "nodes": 3591656,
+  "ttOverwrites": 1831190,
+  "wall_s": 19.47
+ },
+ "identical_except_wall": true,
+ "status_guard": "pillar bookkeeping only; NO verdict consumed; 11x11 UNKNOWN"
+}

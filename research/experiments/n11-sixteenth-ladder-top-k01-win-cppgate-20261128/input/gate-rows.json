@@ -1,0 +1,53 @@
+{
+ "schema": "n11-sixteenth-ladder-top-k01-cppgate-rows-v1",
+ "declaration": "research/log/2026-11-28-n11-sixteenth-ladder-top-k01-pillars-declaration.md (commit 60f4bac8)",
+ "targets": {
+  "k01": {
+   "key": "1155454779397246976:131072",
+   "class_index": 20421,
+   "s5_index": 528689,
+   "legal": 76,
+   "budget": "15000000",
+   "expected": "76,15000000,1,5273778",
+   "input_pin": "6288b82fa9731b7370e2ff2405818f863514256a08f8dd2c9d25432e14464d8c"
+  }
+ },
+ "anchors": {
+  "anchor-at2m": {
+   "budget": "2000000",
+   "expected": "98,2000000,0,2000000",
+   "input_pin": "ecc0299b8142abde201fcc40ea9666dac7368d0888d0600abc717af66ddfe348"
+  },
+  "anchor-aj001": {
+   "budget": "30000000",
+   "expected": "84,30000000,2,5156075",
+   "input_pin": "2f6daea5ca3b3fe6b7713c8d450af3f3c9f203acacb8a1340255d8e8f656496c"
+  },
+  "anchor-af039": {
+   "budget": "30000000",
+   "expected": "89,30000000,2,19234232",
+   "input_pin": "e51a3c9de08c62a54d80547c520876af4245394d05e37bbebf01d74204f64691"
+  }
+ },
+ "gate_source": {
+  "kyouen_dfpn_root.cpp": "9193f5b6065e0fbcad2ef7c65f386187701cafa1f5b718cc35a5cbb0d138f92e",
+  "kyouen_residual_micro.hpp": "5976935dcfccb9b5a26fa68f8de20868ce45363dd8c372dcd67d9b841167e7f5",
+  "n11_s5_quarantine.hpp": "2e36d69481fafcde7aede8ae4fedf3d5477f91ee9846bcd4ae2975f32a4ba1a5",
+  "build": "zig 0.13.0 c++ -std=c++20 -O2 (tarball pin d45312e61ebcc48032b77bc4cf7fd6915c11fa16e4aad116b66c9468211230ea)"
+ },
+ "escalation_basis": {
+  "kit": "n11-sixteenth-ladder-top-escalation-20261128",
+  "commit": "85edd462",
+  "raw_sha256_at15m_p1": "c246e1daeb366e39cebd78b036e66ac00793eb146da346a87f1b328f5b7ed5a2",
+  "raw_sha256_at15m_p2": "4376868df7026428452131d2077cdf47a0fc3ecbd786f7e83a2c599dca0ee7be"
+ },
+ "head_basis": {
+  "cache": "merged-exact-s5-chain-plus-fifteenth-k02-20261128.cache",
+  "sha256_prefix": "58110025",
+  "rows": 6900,
+  "win": 218,
+  "loss": 6682,
+  "target_absent_from_head": true
+ },
+ "status_guard": "pillar bookkeeping only; NO verdict consumed; 11x11 UNKNOWN"
+}
