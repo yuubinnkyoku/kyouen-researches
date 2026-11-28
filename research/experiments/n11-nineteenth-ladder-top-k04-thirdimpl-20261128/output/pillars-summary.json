@@ -1,24 +1,34 @@
 {
- "schema": "n11-nineteenth-ladder-top-k04-thirdimpl-summary-v1",
- "declaration": "research/log/2026-11-28-n11-nineteenth-ladder-top-k04-pillars-declaration.md (commit 855d50fcbe225be974eeb5fb6c730c1136e4b515)",
- "target": {
-  "row": "k04",
-  "key": "1153062242096250880:540672",
   "class_index": 20421,
-  "s5_index": 620742,
+  "companion_cppgate": {
+    "gate": "GATE-PASS 83,15000000,1,6877739",
+    "kit": "n11-nineteenth-ladder-top-k04-win-cppgate-20261128"
+  },
+  "declaration": "research/log/2026-11-28-n11-nineteenth-ladder-top-k04-pillars-declaration.md (commit 855d50fcbe225be974eeb5fb6c730c1136e4b515)",
+  "escalation_basis": {
+    "commit": "73cf1b2f",
+    "kit": "n11-nineteenth-ladder-top-escalation-20261128",
+    "row_nodes": 6877739,
+    "row_result": 1
+  },
+  "expansions": 7920095,
+  "invocation": "--row=k04 --stones=5 --legal=83 --lo=1153062242096250880 --hi=540672 --cap=400000000 --wallcap=260 --memo-power=22",
+  "key": "1153062242096250880:540672",
   "legal": 83,
-  "escalation": "n11-nineteenth-ladder-top-escalation-20261128 (73cf1b2f): WIN(1) nodes 6877739 @15M cold pair node-identical",
-  "cppgate": "n11-nineteenth-ladder-top-k04-win-cppgate: GATE-PASS 83,15000000,1,6877739"
- },
- "invocation": "--row=k04 --stones=5 --legal=83 --lo=1153062242096250880 --hi=540672 --cap=400000000 --wallcap=260 --memo-power=22",
- "runner": {
-  "name": "third_impl.js",
-  "sha256": "08ea958ff59c3234ec5ac55c5c40689bd0999a34e101a88ea0546800cc4a1998"
- },
- "passes": [
-  {"pass": "p1", "result": 1, "expansions": 7920095, "nodes": 4544365, "quads": 95670, "ttOverwrites": 3726116, "memoPower": 22, "wall_s": 26.04},
-  {"pass": "p2", "result": 1, "expansions": 7920095, "nodes": 4544365, "quads": 95670, "ttOverwrites": 3726116, "memoPower": 22, "wall_s": 26.13}
- ],
- "corroboration": "CORROBORATION-PASS: result 1 identical on both cold passes and consistent with the 15M WIN(1) row; verdict-level WIN(1) agreement across all three implementations",
- "status_guard": "pillar bookkeeping only; NO verdict consumed; adoption requires a separate declared Part; class 20421 NOT complete (k05 stage-1 2M UNKNOWN); 11x11 UNKNOWN"
+  "nodes": 4544365,
+  "pass_identical_except_wall": true,
+  "passes": 2,
+  "quads": 95670,
+  "result": 1,
+  "row": "k04",
+  "s5_index": 620742,
+  "schema": "n11-nineteenth-ladder-top-k04-thirdimpl-summary-v1",
+  "script_sha256": "08ea958ff59c3234ec5ac55c5c40689bd0999a34e101a88ea0546800cc4a1998",
+  "status_guard": "pillar bookkeeping only; NO verdict consumed; adoption is a separate declared Part with the standing WIN-side flip-census review; class 20421 is NOT complete (k05 remains stage-1 2M UNKNOWN); the standard 11x11 empty board, all 19 central-reply roots, the two-stone root {60,27} and third moves 100/108 stay UNKNOWN; expansions and nodes are bookkeeping, never verdicts",
+  "stones": 5,
+  "ttOverwrites": 3726116,
+  "wall_s": [
+    26.04,
+    26.13
+  ]
 }
