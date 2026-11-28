@@ -1,0 +1,103 @@
+{
+ "combined_owner_union": [
+  16612,
+  16740,
+  16757,
+  30542
+ ],
+ "control": {
+  "u04": {
+   "derived": [
+    23092,
+    23101,
+    23115,
+    23938
+   ],
+   "published_flip": [
+    23092,
+    23101,
+    23115,
+    23938
+   ],
+   "s5_index": 745184,
+   "verdict": "exact match (zero-deviation flip published in 2092e7a8)"
+  }
+ },
+ "inputs": {
+  "batch_summary": "bf390835a3c2af0484adfc032d0da6705e70145685fd18db5200aeb3d5b144c9",
+  "graph": "54f9c3643eeba139ea5e8d3babb1db9744d19f00f3cf024bbf192ec0d408c00b",
+  "head": "beecb024a648d0ddb29eaf261b09326f9412328cd09f85cb180ee2ffd9ed4544",
+  "k01_input": "eda6e3d6d5d639039b7b57c34aaaaa960ffe5d1172b187aadfe63a9393b8e00f",
+  "k02_input": "6ff8d84eacaa5a3c8091ec91935caf743b74641116f91f9de9d2413e30682aa5",
+  "ladder": "ef3447481abb14af3c56a64251d86e63b178c7fb57b0ce8898e67303c24dc3e2"
+ },
+ "part": "read-only pre-registration of the class-16757 adoption flip inputs",
+ "predicted_combined_adoption_flip": {
+  "caveats": [
+   "u03 precedent: an owner class may already be excluded_now on the BASE side (serving-class pre-exclusion); census status must be measured, not assumed",
+   "u04 precedent: unknown_now churn can be zero when flips land exactly as predicted",
+   "class 16757 leaves the 800-row closure ladder (unknown_now 2->0); ladder churn must be machine-measured",
+   "Board-verified free_now required at adoption time for any class-completion claim",
+   "k02 WIN row pillars are still OPEN at the time of this precheck (declared 177b1086, owned by another lane); no k02 row may be adopted before they close"
+  ],
+  "census_prediction_if_all4_unknown": {
+   "excluded_now": [
+    144,
+    148
+   ],
+   "free_now": [
+    39,
+    39
+   ],
+   "unknown": [
+    34376,
+    34372
+   ]
+  },
+  "expected_class_flips": {
+   "16612": "unknown->excluded_now",
+   "16740": "unknown->excluded_now",
+   "16757": "unknown->excluded_now",
+   "30542": "unknown->excluded_now"
+  },
+  "note": "prediction only; replaced by measurement at the adoption reaudit",
+  "owner_union": [
+   16612,
+   16740,
+   16757,
+   30542
+  ]
+ },
+ "schema": "n11-thirteenth-owner-union-precheck-v1",
+ "serving_class": {
+  "class_index": 16757,
+  "in_800_row_ladder": true,
+  "key": "1153204079095185408:65536",
+  "ladder_rank": 1,
+  "unknown_now": 2
+ },
+ "status_guard": "pre-registration bookkeeping only; NO verdict consumed; 11x11 UNKNOWN",
+ "targets": {
+  "k01": {
+   "escalation": "WIN(1) nodes 2678305 @15000000 (kit 12d8359c)",
+   "key": "1153204147814662144:65536",
+   "owner_classes": [
+    16612,
+    16757,
+    30542
+   ],
+   "pillars": "COMPLETE (f1f5c49d) + XHOST-PASS (this lane, eb542121)",
+   "s5_index": 556117
+  },
+  "k02": {
+   "escalation": "WIN(1) nodes 3485963 @15000000 (kit 3087c38b, other lane; pillars declared 177b1086)",
+   "key": "1152922672837951488:65792",
+   "owner_classes": [
+    16740,
+    16757,
+    30542
+   ],
+   "s5_index": 558553
+  }
+ }
+}

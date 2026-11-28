@@ -1,0 +1,4 @@
+run1 rc=0 PRECHECK-PASS owners k01=[16612, 16757, 30542] k02=[16740, 16757, 30542] union=[16612, 16740, 16757, 30542]
+run2 rc=0 (identical)
+run3 rc=0 (identical)
+output owner-union-precheck.json sha256 identical across all 3 runs (8d70c93f...)

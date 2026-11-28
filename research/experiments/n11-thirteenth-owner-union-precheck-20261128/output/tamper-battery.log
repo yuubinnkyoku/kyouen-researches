@@ -1,0 +1,7 @@
+tamper battery (each on a full kit copy; output dir removed before run):
+T1 graph byte-corrupt (sha gate G0): rc=1 GATE-FAIL G0:graph, no output written
+T2 ladder unknown_now 2->9 for class 16757 with pin updated to tampered sha: rc=1 GATE-FAIL G4:serving-unknown2, no output written
+T3 phantom k01 row appended to head.cache with pin+shape updated: rc=1 GATE-FAIL G5:k01-fresh, no output written
+T4 batch-summary k01 s5_index 556117->556118 with pin updated: rc=1 GATE-FAIL G2:k01-index, no output written
+clean control: rc=0 PRECHECK-PASS owners k01=[16612, 16757, 30542] k02=[16740, 16757, 30542] union=[16612, 16740, 16757, 30542]
+verdict: 4/4 fail-closed + clean PASS

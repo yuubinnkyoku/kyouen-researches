@@ -1,0 +1,69 @@
+{
+ "schema": "n11-thirteenth-ladder-top-escalation-summary-v1",
+ "part": "thirteenth ladder-top class 16757 batch escalation (declared in research/log/2026-11-28-n11-thirteenth-ladder-top-escalation-declaration.md, commit 07003c2a)",
+ "head_basis": {
+  "sha256_prefix": "beecb024",
+  "rows": 6894,
+  "win": 212,
+  "loss": 6682
+ },
+ "runner": {
+  "name": "jsreplay.js",
+  "sha256": "845856175d3c793a7eb4306f5902ecda3f1c046a8a53e8f34ed375e51febc3df",
+  "mode": "--only=5 --memo=22 cold solver per row, no shared TT"
+ },
+ "declared_order": ["k01", "k02"],
+ "stage1_2m": {
+  "k01": {
+   "key": "1153204147814662144:65536", "class_index": 16757, "legal": 72, "s5_index": 556117,
+   "result": 0, "nodes": 2000000, "budget": 2000000,
+   "pair_node_identical": true, "pair_byte_identical": true
+  },
+  "k02": {
+   "key": "1152922672837951488:65792", "class_index": 16757, "legal": 72, "s5_index": 558553,
+   "result": 0, "nodes": 2000000, "budget": 2000000,
+   "pair_node_identical": true, "pair_byte_identical": true
+  }
+ },
+ "escalation_15m": {
+  "k01": {
+   "key": "1153204147814662144:65536",
+   "class_index": 16757,
+   "legal": 72,
+   "s5_index": 556117,
+   "result": 1,
+   "nodes": 2678305,
+   "budget": 15000000,
+   "pair_node_identical": true,
+   "pair_byte_identical": true,
+   "status": "WIN(1) resolved at 15M budget (nodes 2,678,305); first WIN of the declared batch"
+  },
+  "k02": {
+   "key": "1152922672837951488:65792",
+   "class_index": 16757,
+   "legal": 72,
+   "s5_index": 558553,
+   "result": 0,
+   "nodes": 2000000,
+   "budget": 2000000,
+   "status": "escalation suppressed by the WIN-stop rule (k01 WIN(1) at 15M); stays stage-1 2M UNKNOWN; parking/L50M only under a future declaration"
+  }
+ },
+ "win_stop_rule": "fired: k01 WIN(1) at 15M stops the k02 escalation; no other key was run at any budget in this Part",
+ "calibration": {
+  "note": "pre-declaration only; u01 at2m cold run reproducing the published batch raw",
+  "key": "1153485622925590528:0",
+  "result": 0,
+  "nodes": 2000000,
+  "wall_s_published_here": 9,
+  "wall_s_disclosed_in_declaration": 9,
+  "matches_published_at2m_raw": "values identical (result 0, nodes 2,000,000, forbidden quadruples 95,670, wall_s 9) to the published u03/u04 escalation kits' calibration raws"
+ },
+ "disclosures": [
+  "declaration published before execution (commit 07003c2a); all stage-1 and escalation runs executed after it",
+  "k01 15M cold pair fully byte-identical (replay row and headers identical incl. wall_s 12 on both passes); stage-1 pairs byte-identical (wall_s 9 each)",
+  "calibration run (u01 at 2M) was performed before the declaration, is disclosed in the declaration, and is published here as cal-u01-at2m.raw",
+  "class 16757 is NOT complete: k02 remains unknown (2M UNKNOWN, escalation suppressed), so no free_now flip is claimed and no adoption Part is opened by this kit"
+ ],
+ "status_guard": "batch bookkeeping only; NO verdict consumed; the k01 WIN row is single-implementation (jsreplay replica) and requires the C++ second-implementation scrutiny gate plus a third-implementation corroboration before any adoption; a k01 adoption would additionally require the standing WIN-side flip-census review (class 16757 completion would be Board-verified free_now at adoption time, and k02 is still unknown); 11x11 UNKNOWN"
+}
