@@ -1,0 +1,29 @@
+{
+ "schema": "n11-thirteenth-ladder-top-k02-escalation-summary-v1",
+ "declaration": "research/log/2026-11-28-n11-thirteenth-ladder-top-k02-escalation-declaration.md (commit b9c97423)",
+ "key": "1152922672837951488:65792",
+ "class_index": 16757,
+ "s5_index": 558553,
+ "legal": 72,
+ "prior_state": "stage-1 2M UNKNOWN (escalation kit 12d8359c, WIN-stop suppressed)",
+ "runner": {
+  "name": "jsreplay.js",
+  "sha256": "845856175d3c793a7eb4306f5902ecda3f1c046a8a53e8f34ed375e51febc3df",
+  "mode": "--only=5 --memo=22 cold solver per row, no shared TT"
+ },
+ "head_basis": { "sha256_prefix": "beecb024", "rows": 6894, "win": 212, "loss": 6682 },
+ "stage2_15m": {
+  "result": 1,
+  "nodes": 3485963,
+  "budget": 15000000,
+  "wall_s": 17,
+  "pair_byte_identical": true,
+  "status": "WIN(1) resolved at stage-2 15M; stage-3 L50M not required by the declared procedure"
+ },
+ "disclosures": [
+  "declaration published before execution (commit b9c97423); both stage-2 passes executed after it",
+  "cold pair fully byte-identical (replay row and headers identical incl. wall_s 17 on both passes)",
+  "no other key was run at any budget in this Part"
+ ],
+ "status_guard": "batch bookkeeping only; NO verdict consumed; the k02 WIN row is single-implementation (jsreplay replica) and requires the C++ scrutiny gate plus third-implementation corroboration before any adoption; class 16757 adoption additionally requires the standing WIN-side flip-census review and Board-verified free_now; 11x11 UNKNOWN"
+}
