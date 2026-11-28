@@ -1,0 +1,58 @@
+{
+ "pg2q3": {
+  "q": 3,
+  "s": 2,
+  "def_check_maximal_safe": {
+   "n": 234,
+   "failures": 0
+  },
+  "def_check_minimal_db": {
+   "n": 234,
+   "failures": 0
+  },
+  "independent": {
+   "method": "full 2^n direct popcount",
+   "wall_s": 0.0,
+   "maximal_safe_match": true,
+   "minimal_db_match": true,
+   "counts": [
+    234,
+    234
+   ]
+  },
+  "orbit_checks": "all-pass"
+ },
+ "pg2q4": {
+  "q": 4,
+  "s": 3,
+  "def_check_maximal_safe": {
+   "n": 11840,
+   "failures": 0
+  },
+  "def_check_minimal_db": {
+   "n": 11840,
+   "failures": 0
+  },
+  "independent": {
+   "method": "full 2^n direct popcount",
+   "wall_s": 8.1,
+   "maximal_safe_match": true,
+   "minimal_db_match": true,
+   "counts": [
+    11840,
+    11840
+   ]
+  },
+  "orbit_checks": "all-pass",
+  "baer_size7": {
+   "triple_lines": 7,
+   "is_fano_2_7_3_1": true,
+   "line_profile": {
+    "3": 7,
+    "1": 14
+   },
+   "all_360_are_fano_subplanes": true
+  }
+ },
+ "all_ok": true
+}
