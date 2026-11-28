@@ -1,0 +1,18 @@
+# n11 seventeenth k02 adoption reaudit - external tamper battery (4/4 fail-closed + clean control)
+# each tamper reverts byte-exact before the next case; every abort happens at its own pin
+# BEFORE the census json is written (census json sha snapshot unchanged after each case)
+MT1 SCEN-cache verdict flip (adopted row WIN->LOSS) -> rc=1 abort=AssertionError
+MT1 census json untouched (abort at the SCEN cache sha pin)
+MT2 BASE closure csv byte-tamper -> rc=1 abort=AssertionError: base_closure
+MT2 census json untouched (abort at the BASE closure pin)
+MT3 adoption-manifest byte-tamper -> rc=1 abort=AssertionError
+MT3 census json untouched (abort at the manifest pin)
+MT4 SCEN worklist row deletion -> rc=1 abort=AssertionError: {'sha256': 'ae9d23007a1be3e0534f393e13936884aae6853d6ab043dd4adb3bdcdff6eb
+MT4 census json untouched (abort at the SCEN worklist pin)
+CLEAN CONTROL (all inputs restored byte-exact, pins re-verified) -> rc=0 CENSUS-BYTE-IDENTICAL
+# restored pins:
+e56ca5ca   n11-seventeenth-ladder-top-k02-adoption-20261128/output/merged/merged-exact-s5-chain-plus-seventeenth-k02-20261128.cache
+394f27e7   n11-sixteenth-ladder-top-k01-adoption-reaudit-20261128/reaudit/output/closure-classes.csv
+878ac8d5   n11-seventeenth-ladder-top-k02-adoption-20261128/adoption-manifest.json
+6d3cf3ad   n11-seventeenth-ladder-top-k02-adoption-reaudit-20261128/reaudit/output/probe-worklist.csv
+ce6041be   n11-seventeenth-ladder-top-k02-adoption-reaudit-20261128/output/census-deltas-seventeenth-k02-adoption.json
