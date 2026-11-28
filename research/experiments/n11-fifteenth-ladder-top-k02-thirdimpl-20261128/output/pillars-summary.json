@@ -1,0 +1,33 @@
+{
+ "schema": "n11-fifteenth-ladder-top-k02-thirdimpl-summary-v1",
+ "declaration": "research/log/2026-11-28-n11-fifteenth-ladder-top-k02-pillars-declaration.md (commit 66bb19d1)",
+ "row": "k02",
+ "key": "6052837899185946628:128",
+ "class_index": 5804,
+ "stones": 5,
+ "legal": 87,
+ "invocation": "--row=k02 --stones=5 --legal=87 --lo=6052837899185946628 --hi=128 --cap=400000000 --wallcap=260 --memo-power=22",
+ "script_sha256": "08ea958ff59c3234ec5ac55c5c40689bd0999a34e101a88ea0546800cc4a1998",
+ "result": 1,
+ "expansions": 21587934,
+ "nodes": 11683592,
+ "quads": 95670,
+ "ttOverwrites": 17393630,
+ "passes": 2,
+ "pass_identical_except_wall": true,
+ "wall_s": [
+  63.7,
+  63.75
+ ],
+ "escalation_basis": {
+  "kit": "n11-fifteenth-ladder-top-k02-l50m-escalation-20261128",
+  "commit": "48ea76d8",
+  "row_result": 1,
+  "row_nodes": 18247029
+ },
+ "companion_cppgate": {
+  "kit": "n11-fifteenth-ladder-top-k02-win-cppgate-20261128",
+  "gate": "GATE-PASS 87,50000000,1,18247029"
+ },
+ "status_guard": "pillar bookkeeping only; NO verdict consumed; adoption is a separate declared Part with the standing WIN-side flip-census review; class 5804 is NOT complete until the k02 adoption Part; the standard 11x11 empty board, all 19 central-reply roots, the two-stone root {60,27} and third moves 100/108 stay UNKNOWN; expansions and nodes are bookkeeping, never verdicts"
+}
