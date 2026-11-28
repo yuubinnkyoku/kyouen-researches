@@ -1,0 +1,33 @@
+{
+ "schema": "n11-fifteenth-ladder-top-k02-win-adoption-manifest-v1",
+ "base": {
+  "path": "merged-exact-s5-chain-plus-fifteenth-k03-20261128.cache",
+  "sha256": "3a527d39db7acec32b4c688e0bbbafea8015d9d4aac778cf51e7e5c37afe6a3a",
+  "rows": 6899,
+  "win": 217,
+  "loss": 6682
+ },
+ "rows": [
+  {
+   "name": "k02",
+   "key": "6052837899185946628:128",
+   "result": 1,
+   "nodes": 18247029,
+   "class_index": 5804
+  }
+ ],
+ "expected_merged_shape": {
+  "rows": 6900,
+  "win": 218,
+  "loss": 6682
+ },
+ "merger_sha256": "907119610034fb2aebfde012550a4129dfa3b086c6de11194e856747ac74606a",
+ "kits": {
+  "replica": "n11-fifteenth-ladder-top-k02-l50m-escalation-20261128 (5cc8e1fb/48ea76d8)",
+  "cppgate": "n11-fifteenth-ladder-top-k02-win-cppgate-20261128 (f2b8f744)",
+  "thirdimpl": "n11-fifteenth-ladder-top-k02-thirdimpl-20261128 (f2b8f744)"
+ },
+ "owner_union_precheck": "[5788, 5804, 5815, 7678] derived from the frozen graph in the L50M escalation Part; caveat: shared-owner pre-exclusion (serving class 5804 already excluded_now on BASE)",
+ "nodes_total_bookkeeping": 18247029,
+ "status_guard": "adoption bookkeeping only; NO verdict consumed; 11x11 UNKNOWN"
+}

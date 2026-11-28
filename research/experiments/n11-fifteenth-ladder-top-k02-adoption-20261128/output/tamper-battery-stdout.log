@@ -1,0 +1,14 @@
+# n11 fifteenth ladder-top k02 adoption - tamper battery (5/5 fail-closed + clean control)
+# maker: make_adoption_fifteenth_k02.py sha256 50ab39ac3ed6c015bde456961da9006ee6505d5a16776ad42b901b90f17d46cd
+# every tampered input re-pinned (kit MANIFEST / registry / maker constant) so the
+# intended downstream gate is the thing that fires; each run aborts BEFORE any output
+# (kitout is written only at G5; no output was produced by any tamper run).
+T1 replica result flip (at50m-k02-p1.raw result 1->2, MANIFEST re-pinned) -> GATE FAILED: replica pair mismatch k02 (exit 1)
+T2 third-impl expansions drift (k02.p1.txt 21587934->21587933, MANIFEST re-pinned) -> GATE FAILED: third-impl pair mismatch k02 (exit 1)
+T3 gate raw quad flip (k02.p1.out result 1->2, MANIFEST re-pinned) -> GATE FAILED: live gate raw != published raw k02 (exit 1; caught by the G1 live re-run)
+T4 quarantine-key injection (fully valid active registry entry for 6052837899185946628:128, registry re-pinned + maker QUAR_SHA re-pinned) -> GATE FAILED: quarantined key k02 (exit 1; caught by the intended G4 gate)
+T5 coherent freshness world (k02 row injected into head.cache, BASE re-pinned incl. rows/win 6900/218) -> GATE FAILED: freshness: k02 present in BASE (exit 1; caught by the intended G3 gate)
+CLEAN CONTROL (all inputs restored byte-identical, verified by sha256) -> MAKER-PASS, kitout recursive diff vs run1/run2 clean (byte-identical)
+# restored pins after T4/T5: registry 81d23160..., head.cache 3a527d39..., maker 50ab39ac... (byte-identical)
+# gate binary rebuilt this session from pinned source 9193f5b6... with zig 0.13.0 (tarball pin d45312e6...)
+# wall per maker run ~78s (G1 live gate 2 fresh-cold 50M passes) + G2-G6
