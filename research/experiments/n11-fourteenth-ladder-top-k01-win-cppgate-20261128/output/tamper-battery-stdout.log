@@ -1,0 +1,16 @@
+== T1 wrong expected pin (rc=43 expected)
+HARD-STOP: published-row disagreement on k01 (C5: no interpretation)
+rc=43
+== T2 raw nodes edit (rc=42 expected)
+HARD-STOP: determinism mismatch on k01
+rc=42
+== T3 missing input (rc=2 expected)
+missing input/k01.input.csv
+rc=2
+== T4 gate-rows.json expected-pin flip (summary gate, rc=1 expected)
+SUMMARY-FAIL
+G2 expected mismatch k01: 86,15000000,1,4360661 != 86,15000000,1,4360662
+rc=1
+== clean control
+SUMMARY-PASS {"k01": "86,15000000,1,4360661", "anchor-at2m": "98,2000000,0,2000000", "anchor-aj001": "84,30000000,2,5156075", "anchor-af039": "89,30000000,2,19234232"}
+rc=0
