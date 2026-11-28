@@ -1,0 +1,8 @@
+nineteenth k04 adoption maker external tamper battery (5 probes, fail-closed expected; every probe restored from byte-exact backups and sha-verified afterward: BASE 3abecf8b..., quarantine 81d23160..., maker 64a1ebdf..., all kitbuild files diff-clean vs pristine)
+pre-round (no MANIFEST re-pin, disclosed): T1 replica result flip, T2 third-impl expansions drift, T3 gate raw quad flip each FAIL-CLOSED rc=1 at the kit MANIFEST mismatch gate (kitout absent) - the battery then re-pinned each tampered file's MANIFEST line so the probes reach their intended deeper gates:
+T1 replica result flip (at15m-k04-p1.raw result 1->2, MANIFEST re-pinned): FAIL-CLOSED rc=1 at G2 (replica pair mismatch k04)
+T2 third-impl expansions drift (ti/k04.p1.txt + pillars-summary.json expansions 7920095->7920096, MANIFESTs re-pinned): FAIL-CLOSED rc=1 at G2 (third-impl pair mismatch k04)
+T3 gate raw quad flip (k04.p1.out nodes 6877739->6877740, MANIFEST re-pinned): FAIL-CLOSED rc=1 at G1 (live gate raw != published raw k04)
+T4 quarantine-key injection (fully valid active registry entry for [1153062242096250880, 540672], registry sha 9fb1ac72... re-pinned in the maker QUAR_SHA): FAIL-CLOSED rc=1 at G4 (quarantined key k04)
+T5 coherent freshness world (k04 row injected into BASE head.cache, BASE re-pinned incl. rows/win: sha 860e046c..., 6904 rows WIN 222): FAIL-CLOSED rc=1 at G3 (freshness: k04 present in BASE)
+clean control (all inputs restored, sha-verified, kitbuild diff-clean vs pristine): MAKER-PASS increment 7cc20141..., merged 8cc87263... (6,904 rows WIN 222 / LOSS 6,682), kitout recursively byte-identical to run1/run2
