@@ -1,0 +1,53 @@
+{
+ "schema": "n11-seventeenth-ladder-top-k02-cppgate-rows-v1",
+ "declaration": "research/log/2026-11-28-n11-seventeenth-ladder-top-k02-pillars-declaration.md (commit 8e0e2c83)",
+ "targets": {
+  "k02": {
+   "key": "1156299204327378944:131072",
+   "class_index": 20421,
+   "s5_index": 543795,
+   "legal": 73,
+   "budget": "15000000",
+   "expected": "73,15000000,1,4997146",
+   "input_pin": "675267079969a08f8c9b2903a5bc71dc6c3de38338c5ed1e66c4890cc1fb278d"
+  }
+ },
+ "anchors": {
+  "anchor-at2m": {
+   "budget": "2000000",
+   "expected": "98,2000000,0,2000000",
+   "input_pin": "ecc0299b8142abde201fcc40ea9666dac7368d0888d0600abc717af66ddfe348"
+  },
+  "anchor-aj001": {
+   "budget": "30000000",
+   "expected": "84,30000000,2,5156075",
+   "input_pin": "2f6daea5ca3b3fe6b7713c8d450af3f3c9f203acacb8a1340255d8e8f656496c"
+  },
+  "anchor-af039": {
+   "budget": "30000000",
+   "expected": "89,30000000,2,19234232",
+   "input_pin": "e51a3c9de08c62a54d80547c520876af4245394d05e37bbebf01d74204f64691"
+  }
+ },
+ "gate_source": {
+  "kyouen_dfpn_root.cpp": "9193f5b6065e0fbcad2ef7c65f386187701cafa1f5b718cc35a5cbb0d138f92e",
+  "kyouen_residual_micro.hpp": "5976935dcfccb9b5a26fa68f8de20868ce45363dd8c372dcd67d9b841167e7f5",
+  "n11_s5_quarantine.hpp": "2e36d69481fafcde7aede8ae4fedf3d5477f91ee9846bcd4ae2975f32a4ba1a5",
+  "build": "zig 0.13.0 c++ -std=c++20 -O2 (tarball pin d45312e61ebcc48032b77bc4cf7fd6915c11fa16e4aad116b66c9468211230ea)"
+ },
+ "escalation_basis": {
+  "kit": "n11-seventeenth-ladder-top-escalation-20261128",
+  "commit": "bd63d669",
+  "raw_sha256_at15m_p1": "85154222d3500ea58491064017b909f52651c823869be5b561ddc5c056173cef",
+  "raw_sha256_at15m_p2": "322ebd9497a0a4e171b886d5309bf88b8acf58550fd94a5a915cc9196b1f09d6"
+ },
+ "head_basis": {
+  "cache": "merged-exact-s5-chain-plus-sixteenth-k01-20261128.cache",
+  "sha256_prefix": "dbc1d950",
+  "rows": 6901,
+  "win": 219,
+  "loss": 6682,
+  "target_absent_from_head": true
+ },
+ "status_guard": "pillar bookkeeping only; NO verdict consumed; 11x11 UNKNOWN"
+}

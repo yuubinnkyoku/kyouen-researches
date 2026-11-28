@@ -1,0 +1,34 @@
+{
+ "class_index": 20421,
+ "companion_cppgate": {
+  "gate": "GATE-PASS 73,15000000,1,4997146",
+  "kit": "n11-seventeenth-ladder-top-k02-win-cppgate-20261128"
+ },
+ "declaration": "research/log/2026-11-28-n11-seventeenth-ladder-top-k02-pillars-declaration.md (commit 8e0e2c83)",
+ "escalation_basis": {
+  "commit": "bd63d669",
+  "kit": "n11-seventeenth-ladder-top-escalation-20261128",
+  "row_nodes": 4997146,
+  "row_result": 1
+ },
+ "expansions": 5731617,
+ "invocation": "--row=k02 --stones=5 --legal=73 --lo=1156299204327378944 --hi=131072 --cap=400000000 --wallcap=260 --memo-power=22",
+ "key": "1156299204327378944:131072",
+ "legal": 73,
+ "nodes": 3309634,
+ "pass_identical_except_wall": true,
+ "passes": 2,
+ "quads": 95670,
+ "result": 1,
+ "row": "k02",
+ "s5_index": 543795,
+ "schema": "n11-seventeenth-ladder-top-k02-thirdimpl-summary-v1",
+ "script_sha256": "08ea958ff59c3234ec5ac55c5c40689bd0999a34e101a88ea0546800cc4a1998",
+ "status_guard": "pillar bookkeeping only; NO verdict consumed; adoption is a separate declared Part with the standing WIN-side flip-census review; class 20421 is NOT complete (k03-k05 remain stage-1 2M UNKNOWN); the standard 11x11 empty board, all 19 central-reply roots, the two-stone root {60,27} and third moves 100/108 stay UNKNOWN; expansions and nodes are bookkeeping, never verdicts",
+ "stones": 5,
+ "ttOverwrites": 1574985,
+ "wall_s": [
+  17.4,
+  17.2
+ ]
+}
