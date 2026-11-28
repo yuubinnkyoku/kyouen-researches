@@ -1,0 +1,41 @@
+{
+ "schema": "n11-thirteenth-ladder-top-k01k02-win-adoption-manifest-v1",
+ "base": {
+  "path": "merged-exact-s5-chain-plus-ultra-cheap-u04-20261127.cache",
+  "sha256": "beecb024a648d0ddb29eaf261b09326f9412328cd09f85cb180ee2ffd9ed4544",
+  "rows": 6894,
+  "win": 212,
+  "loss": 6682
+ },
+ "rows": [
+  {
+   "name": "k01",
+   "key": "1153204147814662144:65536",
+   "result": 1,
+   "nodes": 2678305,
+   "class_index": 16757
+  },
+  {
+   "name": "k02",
+   "key": "1152922672837951488:65792",
+   "result": 1,
+   "nodes": 3485963,
+   "class_index": 16757
+  }
+ ],
+ "expected_merged_shape": {
+  "rows": 6896,
+  "win": 214,
+  "loss": 6682
+ },
+ "merger_sha256": "907119610034fb2aebfde012550a4129dfa3b086c6de11194e856747ac74606a",
+ "kits": {
+  "replica": "n11-thirteenth-ladder-top-escalation-20261128 (12d8359c) + n11-thirteenth-ladder-top-k02-escalation-20261128 (3087c38b)",
+  "cppgate": "n11-thirteenth-ladder-top-k01-win-cppgate-20261128 (f1f5c49d) + n11-thirteenth-ladder-top-k02-win-cppgate-20261128 (7ebf903e)",
+  "thirdimpl": "n11-thirteenth-ladder-top-k01-thirdimpl-20261128 (f1f5c49d) + n11-thirteenth-ladder-top-k02-thirdimpl-20261128 (7ebf903e)",
+  "xhost": "n11-thirteenth-ladder-top-k01-pillars-xhost-20261128 (eb542121) + n11-thirteenth-ladder-top-k02-pillars-xhost-20261128 (8cc714bf)"
+ },
+ "owner_union_precheck": "n11-thirteenth-owner-union-precheck-20261128 (fdb704d7)",
+ "nodes_total_bookkeeping": 6163868,
+ "status_guard": "adoption bookkeeping only; NO verdict consumed; 11x11 UNKNOWN"
+}
