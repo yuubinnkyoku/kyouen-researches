@@ -1,0 +1,28 @@
+counts {"13": 15500, "14": 372000, "15": 604500, "16": 595975}
+verify size 13 n 15500 bad 0
+VERIFY_OK 13
+counts {"13": 15500, "14": 372000, "15": 604500, "16": 595975}
+verify size 14 n 372000 bad 0
+VERIFY_OK 14
+counts {"13": 15500, "14": 372000, "15": 604500, "16": 595975}
+verify size 15 n 604500 bad 0
+VERIFY_OK 15
+counts {"13": 15500, "14": 372000, "15": 604500, "16": 595975}
+verify size 16 n 595975 bad 0
+VERIFY_OK 16
+counts {"13": 15500, "14": 372000, "15": 604500, "16": 595975}
+python group order 372000
+python orbit sizes 13 [15500]
+ORBIT_OK 13 1 orbits
+counts {"13": 15500, "14": 372000, "15": 604500, "16": 595975}
+python group order 372000
+python orbit sizes 14 [372000]
+ORBIT_OK 14 1 orbits
+counts {"13": 15500, "14": 372000, "15": 604500, "16": 595975}
+python group order 372000
+python orbit sizes 15 [15500, 93000, 124000, 186000, 186000]
+ORBIT_OK 15 5 orbits
+counts {"13": 15500, "14": 372000, "15": 604500, "16": 595975}
+python group order 372000
+python orbit sizes 16 [3100, 3875, 93000, 124000, 186000, 186000]
+ORBIT_OK 16 6 orbits
