@@ -1,0 +1,22 @@
+=== twenty-first k02 adoption external tamper battery (no-repin probes) ===
+2026-11-28T12:00:17Z
+PRE-T1-replica-result-flip-no-repin ABORTED: GATE FAILED: kit MANIFEST mismatch: n11-twenty-first-ladder-top-escalation-20261128/raws/at15m-k02-p1.raw
+PRE-T2-thirdimpl-expansions-drift-no-repin ABORTED: GATE FAILED: kit MANIFEST mismatch: n11-twenty-first-ladder-top-k02-thirdimpl-20261128/output/ti/k02.p1.txt
+PRE-T3-gate-raw-quad-flip-no-repin ABORTED: GATE FAILED: kit MANIFEST mismatch: n11-twenty-first-ladder-top-k02-win-cppgate-20261128/output/raw/k02.p1.out
+restore-then-clean-control: MAKER-PASS
+
+=== repinned T1-T5 + clean control ===
+2026-11-28T12:00:58Z
+T1-replica-result-flip ABORTED: GATE FAILED: gaterun-k02 scratch already exists (stale)
+T2-thirdimpl-expansions-drift ABORTED: GATE FAILED: gaterun-k02 scratch already exists (stale)
+T3-gate-raw-quad-flip ABORTED: GATE FAILED: gaterun-k02 scratch already exists (stale)
+## T1-T3 retry with scratch cleanup (stale gaterun-k02 was left by the preceding clean control; disclosed)
+T1-replica-result-flip ABORTED: GATE FAILED: replica pair mismatch k02
+T2-thirdimpl-expansions-drift ABORTED: GATE FAILED: third-impl pair mismatch k02
+T3-gate-raw-quad-flip ABORTED: GATE FAILED: live gate raw != published raw k02
+T4 repinned QUAR_SHA ef87d350
+T4-quarantine-key-injection ABORTED: FileNotFoundError: [Errno 2] No such file or directory: '/tmp/s5_union_merge.py'
+T5-coherent-freshness-world ABORTED: FileNotFoundError: [Errno 2] No such file or directory: '/tmp/s5_union_merge.py'
+T4-quarantine-key-injection (redo, ROOT-local maker) ABORTED: GATE FAILED: quarantined key k02
+T5-coherent-freshness-world (redo, ROOT-local maker) ABORTED: GATE FAILED: freshness: k02 present in BASE
+Post-battery clean control: {"verdict": "MAKER-PASS", "increment_sha256": "a9bef92d3f8dfec817bd1ae63c55be357fb262b55d73918882f2fcbd3e889d08", "merged_sha256": "b6defe10b12aee6745e8cabcc89b27ba8481a7222524c0caf22bd006de642781", "rows": 6907, "win": 225, "loss": 6682, "manifest_self_line_kits": {"n11-twenty-first-ladder-top-escalation-20261128": 0, "n11-twenty-first-ladder-top-k02-win-cppgate-20261128": 0, "n11-twenty-first-ladder-top-k02-thirdimpl-20261128": 0}}

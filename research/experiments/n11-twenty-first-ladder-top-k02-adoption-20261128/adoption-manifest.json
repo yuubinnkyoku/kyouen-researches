@@ -1,0 +1,33 @@
+{
+ "schema": "n11-twenty-first-ladder-top-k02-win-adoption-manifest-v1",
+ "base": {
+  "path": "merged-exact-s5-chain-plus-twentieth-k01-20261128.cache",
+  "sha256": "1f1430f3ef808af78b4919a0aea97b2d5075957603ecc4668ad21b3407a63faa",
+  "rows": 6906,
+  "win": 224,
+  "loss": 6682
+ },
+ "rows": [
+  {
+   "name": "k02",
+   "key": "1153484454578094080:68719476736",
+   "result": 1,
+   "nodes": 8036766,
+   "class_index": 34269
+  }
+ ],
+ "expected_merged_shape": {
+  "rows": 6907,
+  "win": 225,
+  "loss": 6682
+ },
+ "merger_sha256": "907119610034fb2aebfde012550a4129dfa3b086c6de11194e856747ac74606a",
+ "kits": {
+  "replica": "n11-twenty-first-ladder-top-escalation-20261128 (3935e27a/ddc6760c)",
+  "cppgate": "n11-twenty-first-ladder-top-k02-win-cppgate-20261128 (7bccf228/51dbc130)",
+  "thirdimpl": "n11-twenty-first-ladder-top-k02-thirdimpl-20261128 (7bccf228/51dbc130; flat thirdimpl-summary v1 format republished by amendment eb7a27ba)"
+ },
+ "owner_union_precheck": "[4715, 34269] re-derived from the frozen graph in the twentieth/twenty-first escalation Parts; caveat: shared-owner pre-exclusion (other owner classes may already be excluded_now on BASE); this adoption resolves one cost-unknown of the serving class 34269 (unknown_now 10 -> 9, ladder stay expected, NO class exit), so the follow-up reaudit measures the k02 owner-class flips",
+ "nodes_total_bookkeeping": 8036766,
+ "status_guard": "adoption bookkeeping only; NO verdict consumed; 11x11 UNKNOWN"
+}
