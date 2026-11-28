@@ -1,0 +1,33 @@
+{
+ "schema": "n11-fifteenth-ladder-top-k03-win-adoption-manifest-v1",
+ "base": {
+  "path": "merged-exact-s5-chain-plus-fifteenth-k01-20261128.cache",
+  "sha256": "b5f322dda85946e10feb95c62f40123827ef1271fcc27e5542047d17c1d59bcf",
+  "rows": 6898,
+  "win": 216,
+  "loss": 6682
+ },
+ "rows": [
+  {
+   "name": "k03",
+   "key": "6053400849139367936:128",
+   "result": 1,
+   "nodes": 3364655,
+   "class_index": 5804
+  }
+ ],
+ "expected_merged_shape": {
+  "rows": 6899,
+  "win": 217,
+  "loss": 6682
+ },
+ "merger_sha256": "907119610034fb2aebfde012550a4129dfa3b086c6de11194e856747ac74606a",
+ "kits": {
+  "replica": "n11-fifteenth-ladder-top-k02k03-reescalation-20261128 (88a24418/09358acd)",
+  "cppgate": "n11-fifteenth-ladder-top-k03-win-cppgate-20261128 (ea3f482f)",
+  "thirdimpl": "n11-fifteenth-ladder-top-k03-thirdimpl-20261128 (ea3f482f)"
+ },
+ "owner_union_precheck": "none for this key; owner class union to be derived from the frozen graph in the declared flip-census follow-up Part (caveat: shared-owner pre-exclusion)",
+ "nodes_total_bookkeeping": 3364655,
+ "status_guard": "adoption bookkeeping only; NO verdict consumed; 11x11 UNKNOWN"
+}

@@ -1,0 +1,11 @@
+# tamper battery (coherent-world and simple mutations; every case restores state before the next)
+T1 result flip: rc=1 err=GATE FAILED: replica quad k03: ('92', '15000000', '1', '3364655')
+T2 TI expansions flip: rc=1 err=GATE FAILED: third-impl expansions k03: 3906063
+T3 gate quad flip: rc=1 err=
+T4 quarantined key (coherent): rc=1 err=GATE FAILED: quarantined key k03
+  registry restored byte-identical
+T5 freshness (coherent): rc=1 err=GATE FAILED: freshness: k03 present in BASE
+  head restored byte-identical
+clean control: rc=0 err=
+{"verdict": "MAKER-PASS", "increment_sha256": "16dd859404627ca6e4e5b9f600390a8da54f79342db6b0f07b9b4dbb40140fc4", "merged_sha256": "3a527d39db7acec32b4c688e0bbbafea8015d9d4aac778cf51e7e5c37afe6a3a", "rows": 6899, "win": 217, "loss": 6682, "manifest_self_line_kits": {"n11-fifteenth-ladder-top-k02k03-reescalation-20261128": 0, "n11-fifteenth-ladder-top-k03-win-cppgate-20261128": 0, "n11-fifteenth-ladder-top-k03-thirdimpl-20261128": 0}}
+clean control kitout recursive diff clean
