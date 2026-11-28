@@ -1,0 +1,11 @@
+MT1 rc=1 (expect nonzero, sha pin)
+AssertionError
+MT2 rc=1 (expect nonzero)
+AssertionError: base_closure
+MT3 rc=1 (expect nonzero)
+AssertionError
+MT4 rc=1 (expect nonzero)
+AssertionError: {'sha256': '051011850b949622a33b20a6cfd9531c1f149ceb2ba8e2046f0cf9a984affdf2', 'size': 3713896}
+clean-control rc=0
+b7a70814dcd017a8e8a3b5a5f573255e4c47d9bf981329b7d7467fb643dc9c9a  output/census-deltas-twentieth-k01-adoption.json
+CENSUS-SHA-UNCHANGED
