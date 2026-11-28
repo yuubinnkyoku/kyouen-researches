@@ -1,0 +1,19 @@
+# n11 eighteenth k03 adoption maker - external tamper battery (5/5 fail-closed + clean control)
+# each tamper re-pinned so the intended downstream gate fires; each run must abort BEFORE any output is written (kitout absent)
+GATE FAILED: replica pair mismatch k03
+T1 rc=1 kitout=ABSENT-BEFORE-OUTPUT
+GATE FAILED: third-impl pair mismatch k03
+T2 rc=1 kitout=ABSENT-BEFORE-OUTPUT
+GATE FAILED: live gate raw != published raw k03
+T3 rc=1 kitout=ABSENT-BEFORE-OUTPUT
+quarantine top-level keys: ['schema', 'scope', 'entries']
+GATE FAILED: quarantined key k03
+T4 rc=1 kitout=ABSENT-BEFORE-OUTPUT
+GATE FAILED: freshness: k03 present in BASE
+T5 rc=1 kitout=ABSENT-BEFORE-OUTPUT
+e56ca5ca8d9f4674d23b
+81d231604d3a095c1151
+RESTORE-VERIFY-DONE
+{"verdict": "MAKER-PASS", "increment_sha256": "c208891ec8ae2359f048ad16b7455c53df85ef2e4bc8fb670002047546466b0c", "merged_sha256": "3abecf8b1da6735a0cf0719087b0f026e3a82648dce026b9c82aab106e23a023", "rows": 6903, "win": 221, "loss": 6682, "manifest_self_line_kits": {"n11-eighteenth-ladder-top-escalation-20261128": 0, "n11-eighteenth-ladder-top-k03-win-cppgate-20261128": 0, "n11-eighteenth-ladder-top-k03-thirdimpl-20261128": 0}}
+control rc=0
+CLEAN-CONTROL-KITOUT-BYTE-IDENTICAL

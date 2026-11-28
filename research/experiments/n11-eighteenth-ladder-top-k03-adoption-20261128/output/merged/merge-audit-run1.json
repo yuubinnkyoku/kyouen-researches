@@ -1,0 +1,32 @@
+{
+ "tool": "s5_union_merge.py",
+ "fail_closed_gates": "strict 6-field row schema, depth==5, verdict in {1,2}, WIN/LOSS conflict abort (no output), first-occurrence nodes",
+ "inputs": [
+  {
+   "file": "/home/user/lane23/work/adopt18/head.cache",
+   "sha256": "e56ca5ca8d9f4674d23bb4ddca87dd9b7907c312fd0a4564631ae997aae20302",
+   "rows": 6902,
+   "unique_new": 6902
+  },
+  {
+   "file": "/home/user/lane23/work/adopt18/kitout/research/experiments/n11-eighteenth-ladder-top-k03-adoption-20261128/output/increment-eighteenth-k03-adoption-20261128.cache",
+   "sha256": "c208891ec8ae2359f048ad16b7455c53df85ef2e4bc8fb670002047546466b0c",
+   "rows": 1,
+   "unique_new": 1
+  }
+ ],
+ "unique_rows": 6903,
+ "duplicate_rows_elided": 0,
+ "verdict_counts": {
+  "WIN(1)": 221,
+  "LOSS(2)": 6682
+ },
+ "nodes_field_mismatches_recorded": [],
+ "comments_kept_from_first_input": [
+  "# S5 solver-trusted exact; base=merged-exact-s5-after-js-probe-13.cache (sha256 60e0dc3476920d4e...); increment=101 fresh rows (99 canonical S5 children of S4 1297036692683752448:0 absent from the chain, 2 unclaimed backward-only rows, 1 S6-witness-derived TARGET_S5 row nodes=0); see merge-manifest.json"
+ ],
+ "output_sha256": "3abecf8b1da6735a0cf0719087b0f026e3a82648dce026b9c82aab106e23a023",
+ "output_bytes": 289195,
+ "row_format": "s5verdict,<lo>,<hi>,5,<verdict>,<nodes>",
+ "interpretation_guard": "nodes are bookkeeping, never verdicts; merge of solver-trusted cache rows; no new verdict is created; 11x11 root questions remain UNKNOWN"
+}

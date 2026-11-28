@@ -1,0 +1,33 @@
+{
+ "schema": "n11-eighteenth-ladder-top-k03-win-adoption-manifest-v1",
+ "base": {
+  "path": "merged-exact-s5-chain-plus-seventeenth-k02-20261128.cache",
+  "sha256": "e56ca5ca8d9f4674d23bb4ddca87dd9b7907c312fd0a4564631ae997aae20302",
+  "rows": 6902,
+  "win": 220,
+  "loss": 6682
+ },
+ "rows": [
+  {
+   "name": "k03",
+   "key": "1155173441859489792:131072",
+   "result": 1,
+   "nodes": 5266012,
+   "class_index": 20421
+  }
+ ],
+ "expected_merged_shape": {
+  "rows": 6903,
+  "win": 221,
+  "loss": 6682
+ },
+ "merger_sha256": "907119610034fb2aebfde012550a4129dfa3b086c6de11194e856747ac74606a",
+ "kits": {
+  "replica": "n11-eighteenth-ladder-top-escalation-20261128 (53749821/88e825d5)",
+  "cppgate": "n11-eighteenth-ladder-top-k03-win-cppgate-20261128 (26143236/3549edde)",
+  "thirdimpl": "n11-eighteenth-ladder-top-k03-thirdimpl-20261128 (26143236/3549edde; summary reschema amendment 7fe49b5e)"
+ },
+ "owner_union_precheck": "[18136, 18143, 20128, 20421] derived from the frozen graph in the eighteenth escalation Part; caveat: shared-owner pre-exclusion (other owner classes may already be excluded_now on BASE; serving class 20421 ladder rank 1 on BASE after the seventeenth k02 adoption reaudit)",
+ "nodes_total_bookkeeping": 5266012,
+ "status_guard": "adoption bookkeeping only; NO verdict consumed; 11x11 UNKNOWN"
+}
