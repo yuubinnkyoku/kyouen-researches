@@ -1,0 +1,6 @@
+nineteenth k04 cppgate external tamper battery (4 tamper probes + 1 clean control, all inputs restored from byte-exact backups and sha-verified after each probe)
+T1 target-input byte-tamper (k04.input.csv legal 83->84): FAIL-CLOSED at G0 (input pin mismatch, target k04); cppgate-summary.json aborted before write; input restored byte-identical
+T2 anchor-input byte-tamper (anchor-at2m.input.csv legal 98->99): FAIL-CLOSED at G0 (input pin mismatch, anchor-at2m); summary aborted before write; input restored byte-identical
+T3 expected-row tamper (gate-rows.json k04 expected 83,15000000,1,6877739 -> 83,15000000,1,6877740): FAIL-CLOSED at G2 (expected mismatch, k04: raw 83,15000000,1,6877739); gate-rows.json restored byte-identical
+T4 raw tamper (output/raw/k04.p1.out verdict 1->2): FAIL-CLOSED at G2 (pair mismatch, k04: p1 83,15000000,2,6877739 vs p2 83,15000000,1,6877739); raw restored byte-identical
+clean control (no tamper, all inputs sha-verified clean): SUMMARY-PASS {k04: 83,15000000,1,6877739, anchor-at2m: 98,2000000,0,2000000, anchor-aj001: 84,30000000,2,5156075, anchor-af039: 89,30000000,2,19234232}; battery 4/4 fail-closed + clean re-PASS

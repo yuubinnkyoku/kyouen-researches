@@ -1,0 +1,19 @@
+{
+ "schema": "n11-nineteenth-ladder-top-k04-cppgate-summary-v1",
+ "declaration_commit": "855d50fcbe225be974eeb5fb6c730c1136e4b515",
+ "gate": "GATE-PASS",
+ "results": {
+  "k04": "83,15000000,1,6877739",
+  "anchor-at2m": "98,2000000,0,2000000",
+  "anchor-aj001": "84,30000000,2,5156075",
+  "anchor-af039": "89,30000000,2,19234232"
+ },
+ "runner_pair_determinism": true,
+ "gate_source_sha256": {
+  "kyouen_dfpn_root.cpp": "9193f5b6065e0fbcad2ef7c65f386187701cafa1f5b718cc35a5cbb0d138f92e",
+  "kyouen_residual_micro.hpp": "5976935dcfccb9b5a26fa68f8de20868ce45363dd8c372dcd67d9b841167e7f5",
+  "n11_s5_quarantine.hpp": "2e36d69481fafcde7aede8ae4fedf3d5477f91ee9846bcd4ae2975f32a4ba1a5",
+  "build": "zig 0.13.0 c++ -std=c++20 -O2 (tarball pin d45312e61ebcc48032b77bc4cf7fd6915c11fa16e4aad116b66c9468211230ea)"
+ },
+ "status_guard": "pillar bookkeeping only; NO verdict consumed; 11x11 UNKNOWN"
+}
