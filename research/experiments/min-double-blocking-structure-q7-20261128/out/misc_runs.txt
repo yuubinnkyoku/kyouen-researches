@@ -1,0 +1,13 @@
+== AG(2,3) t=2 minimum (plain sat_min)
+{"kind": "ag", "q": 3, "k": 4, "res": "UNSAT"}
+{"kind": "ag", "q": 3, "k": 5, "res": "UNSAT"}
+{"kind": "ag", "q": 3, "k": 6, "res": "UNSAT"}
+{"kind": "ag", "q": 3, "k": 7, "res": "UNSAT"}
+{"kind": "ag", "q": 3, "k": 8, "res": "SAT", "size": 8, "witness": [1, 2, 3, 4, 5, 6, 7, 8]}
+== PG(2,7) k=21 SAT witness (3q triangle-level)
+{"kind": "pg", "q": 7, "k": 21, "res": "SAT", "size": 21, "witness": [6, 13, 20, 27, 34, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56]}
+== local search witnesses
+{"kind": "ag", "q": 7, "k": 20, "res": "FOUND", "size": 20, "witness": [0, 3, 5, 6, 7, 10, 15, 16, 17, 20, 23, 25, 31, 34, 35, 36, 39, 45, 46, 47], "seed": 12}
+{"kind": "ag", "q": 7, "k": 19, "res": "none", "best_cost": 1, "seed": 11}
+{"kind": "pg", "q": 7, "k": 20, "res": "none", "best_cost": 1, "seed": 1}
+{"kind": "pg", "q": 7, "k": 19, "res": "none", "best_cost": 2, "seed": 4}

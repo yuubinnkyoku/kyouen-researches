@@ -1,0 +1,31 @@
+== AG(2,7) k=17,18 cases A/B
+-- k=17 A
+{"kind": "ag", "q": 7, "k": 17, "case": "A", "res": "UNSAT"}
+-- k=17 B
+{"kind": "ag", "q": 7, "k": 17, "case": "B", "res": "UNSAT"}
+-- k=18 A
+Traceback (most recent call last):
+  File "/home/user/work/a2q7/scripts/sat2.py", line 137, in <module>
+    main()
+  File "/home/user/work/a2q7/scripts/sat2.py", line 124, in main
+    res, model = run(cls, nvars, '%s%d_%d_%s' % (kind, q, k, case), cap)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/work/a2q7/scripts/sat2.py", line 105, in run
+    out = subprocess.run([KISSAT, cnf], capture_output=True, text=True, timeout=cap)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/subprocess.py", line 550, in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/subprocess.py", line 1209, in communicate
+    stdout, stderr = self._communicate(input, endtime, timeout)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/subprocess.py", line 2116, in _communicate
+    self._check_timeout(endtime, orig_timeout, stdout, stderr)
+  File "/usr/local/lib/python3.12/subprocess.py", line 1253, in _check_timeout
+    raise TimeoutExpired(
+subprocess.TimeoutExpired: Command '['/home/user/work/a2q7/kissat', '/tmp/sat2_ag7_18_A/in.cnf']' timed out after 135 seconds
+TIMEOUT k=18 A
+-- k=18 B
+{"kind": "ag", "q": 7, "k": 18, "case": "B", "res": "UNSAT"}
+== AG(2,7) k=18 A long
+{"kind": "ag", "q": 7, "k": 18, "case": "A", "res": "UNSAT"}

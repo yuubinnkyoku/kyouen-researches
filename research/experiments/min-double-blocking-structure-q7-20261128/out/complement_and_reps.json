@@ -1,0 +1,125 @@
+{
+ "ag2q4": {
+  "n_min": 168,
+  "n_max": 168,
+  "complement_min_to_max": true,
+  "complement_max_to_min": true,
+  "minimal_size": 10,
+  "minimal_orbit_reps": [
+   {
+    "orbit_size": 48,
+    "rep": "0x359f",
+    "n_full_lines_in_rep": 5,
+    "full_lines": [
+     [
+      0,
+      4,
+      8,
+      12
+     ],
+     [
+      0,
+      1,
+      2,
+      3
+     ],
+     [
+      2,
+      7,
+      8,
+      13
+     ],
+     [
+      3,
+      4,
+      10,
+      13
+     ],
+     [
+      1,
+      7,
+      10,
+      12
+     ]
+    ]
+   }
+  ],
+  "dual_arc_check": {
+   "union_of_full_lines_eq_C": true,
+   "pairwise_intersections_eq_C": true,
+   "n_pairs": 10
+  }
+ },
+ "ag2q5": {
+  "n_min": 49500,
+  "n_max": 49500,
+  "complement_min_to_max": true,
+  "complement_max_to_min": true,
+  "minimal_size": 14,
+  "minimal_orbit_reps": [
+   {
+    "orbit_size": 6000,
+    "rep": "0x31973f",
+    "n_full_lines_in_rep": 3,
+    "full_lines": [
+     [
+      0,
+      5,
+      10,
+      15,
+      20
+     ],
+     [
+      0,
+      1,
+      2,
+      3,
+      4
+     ],
+     [
+      4,
+      8,
+      12,
+      16,
+      20
+     ]
+    ]
+   },
+   {
+    "orbit_size": 3000,
+    "rep": "0x31d53f",
+    "n_full_lines_in_rep": 4,
+    "full_lines": [
+     [
+      0,
+      5,
+      10,
+      15,
+      20
+     ],
+     [
+      0,
+      1,
+      2,
+      3,
+      4
+     ],
+     [
+      2,
+      8,
+      14,
+      15,
+      21
+     ],
+     [
+      4,
+      8,
+      12,
+      16,
+      20
+     ]
+    ]
+   }
+  ]
+ }
+}

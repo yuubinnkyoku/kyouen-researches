@@ -1,0 +1,40 @@
+== classification AG(2,4)
+loaded 168 masks
+all verified, sizes: {12: 120, 10: 48}
+AGL(2,4) order 2880
+profile classes: 2
+orbits total: 2
+ size 10: 1 orbits
+   orbit size     48 canon 0x359f profile [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 4, 4, 4, 4, 4]
+ size 12: 1 orbits
+   orbit size    120 canon 0x33ff profile [2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4]
+== classification AG(2,5)
+loaded 49500 masks
+all verified, sizes: {16: 12500, 15: 28000, 14: 9000}
+AGL(2,5) order 12000
+profile classes: 7
+orbits total: 9
+ size 14: 2 orbits
+   orbit size   6000 canon 0x31973f profile [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5]
+   orbit size   3000 canon 0x31d53f profile [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 4, 5, 5, 5, 5]
+ size 15: 3 orbits
+   orbit size  12000 canon 0x3197fb profile [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 5, 5, 5]
+   orbit size  12000 canon 0x31a7f7 profile [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 5, 5]
+   orbit size   4000 canon 0x31bbf6 profile [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 5, 5, 5]
+ size 16: 4 orbits
+   orbit size   6000 canon 0x31aeff profile [2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 5, 5, 5]
+   orbit size   3000 canon 0x31befb profile [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 5, 5]
+   orbit size   2000 canon 0x32bebf profile [2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 5, 5, 5]
+   orbit size   1500 canon 0x318fff profile [2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 5, 5, 5, 5]
+== triangle concurrency scan
+{"q": 3, "triangles": 72, "concurrent_D_triangles": 0, "failed_verify": 0, "witness": null}
+{"q": 4, "triangles": 480, "concurrent_D_triangles": 480, "failed_verify": 0, "witness": {"q": 4, "size": 10, "lines": [[0, 4, 8, 12], [0, 1, 2, 3], [1, 4, 11, 14]], "R": 5, "C": [0, 1, 2, 3, 4, 5, 8, 11, 12, 14]}}
+{"q": 5, "triangles": 2000, "concurrent_D_triangles": 0, "failed_verify": 0, "witness": null}
+{"q": 7, "triangles": 16464, "concurrent_D_triangles": 0, "failed_verify": 0, "witness": null}
+== canonical construction
+{'q': 3, 'char': 3, 'size': 8, 'expected': 8, 'min_line_count': 2, 'all_lines_ge_2': True}
+{'q': 4, 'char': 2, 'size': 10, 'expected': 10, 'min_line_count': 2, 'all_lines_ge_2': True}
+{'q': 5, 'char': 5, 'size': 14, 'expected': 14, 'min_line_count': 2, 'all_lines_ge_2': True}
+{'q': 7, 'char': 7, 'size': 20, 'expected': 20, 'min_line_count': 2, 'all_lines_ge_2': True}
+{'q': 8, 'char': 2, 'size': 22, 'expected': 22, 'min_line_count': 2, 'all_lines_ge_2': True}
+{'q': 9, 'char': 3, 'size': 26, 'expected': 26, 'min_line_count': 2, 'all_lines_ge_2': True}

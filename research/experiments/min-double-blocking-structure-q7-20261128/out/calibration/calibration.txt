@@ -1,0 +1,27 @@
+== sat_min calibration (published minima: PG 9/12/15, AG(2,4) 10, AG(2,5) 14)
+{"kind": "pg", "q": 3, "k": 8, "res": "UNSAT"}
+{"kind": "pg", "q": 3, "k": 9, "res": "SAT", "size": 9, "witness": [2, 5, 6, 7, 8, 9, 10, 11, 12]}
+{"kind": "pg", "q": 4, "k": 11, "res": "UNSAT"}
+{"kind": "pg", "q": 4, "k": 12, "res": "SAT", "size": 12, "witness": [3, 7, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]}
+{"kind": "pg", "q": 5, "k": 14, "res": "UNSAT"}
+{"kind": "pg", "q": 5, "k": 15, "res": "SAT", "size": 15, "witness": [4, 9, 14, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30]}
+{"kind": "ag", "q": 4, "k": 9, "res": "UNSAT"}
+{"kind": "ag", "q": 4, "k": 10, "res": "SAT", "size": 10, "witness": [0, 1, 2, 3, 4, 5, 8, 11, 12, 14]}
+{"kind": "ag", "q": 5, "k": 13, "res": "UNSAT"}
+{"kind": "ag", "q": 5, "k": 14, "res": "SAT", "size": 14, "witness": [0, 1, 2, 3, 4, 5, 8, 9, 10, 12, 15, 16, 20, 21]}
+== sat_min with symmetry-breaking fix (UNSAT side)
+{"kind": "pg", "q": 5, "k": 14, "res": "UNSAT"}
+{"kind": "pg", "q": 4, "k": 11, "res": "UNSAT"}
+{"kind": "ag", "q": 5, "k": 13, "res": "UNSAT"}
+{"kind": "ag", "q": 4, "k": 9, "res": "UNSAT"}
+== sat2 case-split calibration
+{"kind": "pg", "q": 5, "k": 14, "case": "A", "res": "UNSAT"}
+{"kind": "pg", "q": 5, "k": 14, "case": "B", "res": "UNSAT"}
+{"kind": "pg", "q": 4, "k": 11, "case": "A", "res": "UNSAT"}
+{"kind": "pg", "q": 4, "k": 11, "case": "B", "res": "UNSAT"}
+{"kind": "ag", "q": 5, "k": 13, "case": "A", "res": "UNSAT"}
+{"kind": "ag", "q": 5, "k": 13, "case": "B", "res": "UNSAT"}
+{"kind": "ag", "q": 5, "k": 13, "case": "C", "res": "UNSAT"}
+{"kind": "ag", "q": 4, "k": 9, "case": "A", "res": "UNSAT"}
+{"kind": "ag", "q": 4, "k": 9, "case": "B", "res": "UNSAT"}
+{"kind": "ag", "q": 4, "k": 9, "case": "C", "res": "UNSAT"}
