@@ -1,0 +1,12 @@
+# tamper battery (fresh rerun with stdout captured; first battery attempt had an rc-echo bug after each mv and is not used as evidence)
+HARD-STOP: published-row disagreement on k01 (C5: no interpretation)
+T1 wrong expected pin: rc=43 (expect 43)
+HARD-STOP: determinism mismatch on k01
+T2 raw nodes edit: rc=42 (expect 42)
+missing input/k01.input.csv
+T3 missing input: rc=2 (expect 2)
+SUMMARY-FAIL
+G2 expected mismatch k01: 82,15000000,1,12803283 != 82,15000000,1,12803284
+T4 gate-rows expected flip via summary G2: rc=1 (expect 1)
+SUMMARY-PASS {"k01": "82,15000000,1,12803283", "anchor-at2m": "98,2000000,0,2000000", "anchor-aj001": "84,30000000,2,5156075", "anchor-af039": "89,30000000,2,19234232"}
+clean control: rc=0 (expect 0)
