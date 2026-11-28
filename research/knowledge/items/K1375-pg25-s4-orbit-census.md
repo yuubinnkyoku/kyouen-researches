@@ -55,3 +55,17 @@ PG(2,5) (31点・直線長6) の s=4 極大 safe 集合 1,587,975 個は、PGL(3
 - 仮番号 K1375 (items dir は contents API 1000件 cap で衝突 check が不完全なため、統合時再採番判定)。
 - 標準 11×11 空盤・19 central-reply roots・二石 root {60,27}・第三手 {100,108}・S2・
   全 closure class は全時点 UNKNOWN・verdict 不消費。
+
+## 追記 (2026-11-28 構造addendum)
+
+- **orbit16-2 (3,100個・stab 120) = 「conic ∪ その内部点」**: 軌道サイズ = PG(2,5) の
+  conic 総数 (372,000/120・stabilizer 計数で確認)。構成例の直線プロファイル
+  {1:6, 3:10, 4:15} が軌道一意の hist と一致し、stab(S) = stab(conic) (位数 120)。
+- **orbit16-5 (3,875個・stab 96) = 「三角形の辺上にない点すべて (16点)」**:
+  軌道サイズ = 三角形総数 (C(31,3) − 31·C(6,3) = 3,875 = 372,000/96)。
+  プロファイル {0:3, 3:16, 4:12} は任意の三角形で組合せ論的に証明済み
+  (辺=0-secant・頂点通過直線=4-secant 12本・その他=3-secant 16本)・極大性も同様。
+- **size-13 軌道 (15,500個・stab 24) と 4-arc**: stab(S) = stab(4-arc (frame))
+  ・4-arc 総数の独立計数 15,500 = 軌道サイズと一致。S = 対角三角形 + frame + 6点軌道
+  の合併 (6点軌道の幾何学は未特定・frame からの明示構成は次回課題)。
+- 詳細: research/experiments/pg25-s4-orbit-census-20261128/out/structure-addendum.md

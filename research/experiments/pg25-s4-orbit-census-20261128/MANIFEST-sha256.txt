@@ -1,10 +1,11 @@
-MANIFEST-sha256 (kit内 file は出版内容、masks25s4.bin/enum binary は pin のみ)
+MANIFEST-sha256 (kit内 file は出版内容・本addendum commit版)
 3b4e58292478ede1960cd4904124cf41ebdcc5a4ad2f4497e1d6727bf16c81fe  scripts/enum.c
 02efeb1ebf8b71e7bc61fb44ff2862baba96eecf4f8ed034dbc962f49e992383  scripts/orbits.js
 e984d218563fd194a86e385d3cf02e30d57cb58cfa880e1b987cfee69b45b69f  scripts/verify.py
 dc64de0c7da13b37fb160251a8d1bcb6ba5bf1e5f8d17b7c0e4ff6518009ad65  out/orbits25s4.json
 0394f7f98d0a17af9c62672c574b6bf63c855da6a289126c3098c77fd5432a86  out/fresh_counts.txt
 d1d859259bafc647a8c9320f1965b6bce00a0091f6b48900e393ab0d89e3eec7  out/verify_log.txt
+733e7274f48226eef6d36eb2123e26f44d672446e26aa6c230c1e7d24dd15b9d  out/structure-addendum.md
 79abc7cfaa04026b92737856fcad6fd227f85b23018214bed04ad03fe4e33972  README.md
 9af9a06a3565520c278aa1b7d91e201d10fc9d67fa366b80508dfa7f8a6dbfc8  masks25s4.bin (非出版・6,351,900 bytes・enum.c再実行でbyte-identical再生成)
 08d2b1bbeb36f900e51e296fb3769b4c1bf04983bbedf024d0bb08c764122792  enum (zig cc 0.13.0 binary・非出版)
