@@ -1,0 +1,122 @@
+{
+ "calibration": {
+  "key": "1153485622925590528:0",
+  "matches_published_cal_raw": "values identical (result 0, nodes 2,000,000, forbidden quadruples 95,670, wall_s 9) to the published fourteenth escalation kit calibration raw; only stdout footer line ordering differs between hosts (buffering), so this kit's raw file sha (05ce2090...) differs from the fourteenth kit's raw (a8c9480d...) while no values differ",
+  "nodes": 2000000,
+  "note": "pre-declaration only; u01 at2m cold run reproducing the published fourteenth escalation kit calibration raw values",
+  "result": 0,
+  "wall_s": 9
+ },
+ "declared_order": [
+  "k01",
+  "k02",
+  "k03"
+ ],
+ "disclosures": [
+  "declaration published before execution (commit 8340f669); amendment c8eed460 corrected the class-5804 parenthetical key string and was published before any stage-1 run; all stage-1 and escalation runs executed after it",
+  "k01 15M cold pair node-identical with wall_s 70 vs 69 (host timing only); k01 2M pair node-identical with wall_s 10 vs 9; k02 2M pair node-identical with wall_s 9 vs 8; k03 2M pair fully byte-identical",
+  "the three key input CSVs are byte-identical copies of the fifteenth selection kit input files (MANIFEST-verified); k01/k02/k03 here are byte-identical to the fourteenth selection kit's k02/k03/k04 inputs",
+  "the runner was fetched fresh from main and sha-verified (84585617...) before the runs"
+ ],
+ "escalation_15m": {
+  "k01": {
+   "budget": 15000000,
+   "class_index": 5804,
+   "key": "6053682324116078592:0",
+   "legal": 82,
+   "nodes": 12803283,
+   "pair_byte_identical": false,
+   "pair_node_identical": true,
+   "result": 1,
+   "s5_index": 207094,
+   "status": "WIN(1) resolved at 15M budget (nodes 12,803,283); first WIN of the declared batch",
+   "wall_s": [
+    70,
+    69
+   ]
+  },
+  "k02": {
+   "budget": 2000000,
+   "class_index": 5804,
+   "key": "6052837899185946628:128",
+   "legal": 87,
+   "nodes": 2000000,
+   "result": 0,
+   "s5_index": 212115,
+   "status": "escalation suppressed by the WIN-stop rule (k01 WIN(1) at 15M); stays stage-1 2M UNKNOWN; parking/L50M only under a future declaration"
+  },
+  "k03": {
+   "budget": 2000000,
+   "class_index": 5804,
+   "key": "6053400849139367936:128",
+   "legal": 92,
+   "nodes": 2000000,
+   "result": 0,
+   "s5_index": 212536,
+   "status": "escalation suppressed by the WIN-stop rule (k01 WIN(1) at 15M); stays stage-1 2M UNKNOWN; parking/L50M only under a future declaration"
+  }
+ },
+ "head_basis": {
+  "loss": 6682,
+  "rows": 6897,
+  "sha256_prefix": "a66f636e",
+  "win": 215
+ },
+ "part": "fifteenth ladder-top class 5804 batch escalation (declared in research/log/2026-11-28-n11-fifteenth-ladder-top-escalation-declaration.md, commit 8340f669, amendment c8eed460)",
+ "runner": {
+  "mode": "--only=5 --memo=22 cold solver per row, no shared TT",
+  "name": "jsreplay.js",
+  "sha256": "845856175d3c793a7eb4306f5902ecda3f1c046a8a53e8f34ed375e51febc3df",
+  "source_path": "research/experiments/n11-s4bd-fresh-corpus-regen-20261121/scripts/jsreplay.js"
+ },
+ "schema": "n11-fifteenth-ladder-top-escalation-summary-v1",
+ "stage1_2m": {
+  "k01": {
+   "budget": 2000000,
+   "class_index": 5804,
+   "key": "6053682324116078592:0",
+   "legal": 82,
+   "nodes": 2000000,
+   "pair_byte_identical": false,
+   "pair_node_identical": true,
+   "result": 0,
+   "s5_index": 207094,
+   "wall_s": [
+    10,
+    9
+   ]
+  },
+  "k02": {
+   "budget": 2000000,
+   "class_index": 5804,
+   "key": "6052837899185946628:128",
+   "legal": 87,
+   "nodes": 2000000,
+   "pair_byte_identical": false,
+   "pair_node_identical": true,
+   "result": 0,
+   "s5_index": 212115,
+   "wall_s": [
+    9,
+    8
+   ]
+  },
+  "k03": {
+   "budget": 2000000,
+   "class_index": 5804,
+   "key": "6053400849139367936:128",
+   "legal": 92,
+   "nodes": 2000000,
+   "pair_byte_identical": true,
+   "pair_node_identical": true,
+   "result": 0,
+   "s5_index": 212536,
+   "wall_s": [
+    9,
+    9
+   ]
+  }
+ },
+ "status_guard": "batch bookkeeping only: NO verdict is consumed; the k01 WIN row is single-implementation (jsreplay replica, cold pair) and requires the C++ second-implementation scrutiny gate plus a third-implementation corroboration before any adoption Part; class 5804 is NOT complete (k02/k03 remain unknown), so no free_now flip is claimed here; the standard 11x11 empty board, all 19 central-reply roots, the two-stone root {60,27} and third moves 100/108 remain UNKNOWN; nodes are bookkeeping, never verdicts",
+ "win_stop_rule": "fired: k01 WIN(1) at 15M (nodes 12,803,283) stops all remaining escalations; k02/k03 stay stage-1 2M UNKNOWN; no other key was run at any higher budget in this Part"
+}
