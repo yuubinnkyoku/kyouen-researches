@@ -1,6 +1,6 @@
 ---
 id: K0833
-title: "4〜6行 q=4,5 行欠損witness帯 — (4,4) m=4..34, (5,4) m=5..39, (6,4) m=6..46, (4,5) m=5..20, (5,5) m=5..26 全幅SAT; M_{4,4}>=35, M_{5,4}>=40, M_{6,4}>=47, M_{4,5}>=21, M_{5,5}>=27; sat3 OOM壁越えと rowY 分割・2クラス被覆で帯延伸"
+title: "4〜6行 q=4,5 行欠損witness帯 — (4,4) m=4..34, (5,4) m=5..39, (6,4) m=6..46, (4,5) m=5..20, (5,5) m=5..27 全幅SAT; M_{4,4}>=35, M_{5,4}>=40, M_{6,4}>=47, M_{4,5}>=21, M_{5,5}>=28; sat3 OOM壁越えと rowY 分割・2クラス被覆で帯延伸"
 kind: proposition
 status: computed
 topics: [rectangles, maximal-safe]
@@ -161,6 +161,10 @@ l SAT dual-verified: m=23以降単一欠損17石, m=31 4.1s/131 conflicts, 全�
 
 scope: "有限機械検証: kissat 4.0.4（公式静的バイナリ）による SAT 判定は符号化の完全性（def-mode = 行欠損極大安全配置の存在と同値, K0810）と lexer の正しさまで; 構成的延伸 witness は sat.js verifyConfig + Python Fraction の2系統; 前線5幅はさらに第3系統; 各ファミリーの記載幅のみ（未実施幅は不在主張ではない）"
 evidence: "完全符号化 SAT インスタンス（sat2.js def-mode）+ 全 witness 2系統検証（jsVerify/pyVerify 全 records true）+ 前線5幅の第3系統検証（ts-verify-cross-family.json）+ 較正（確定閾値6件再現・(4,4) m=4..25 は環境リセット前後で conflicts bit-exact 一致）+ 構成的延伸（(4,4) m=29,31,33,34: cap 到達 witness の純粋空列追加/シフトを verifyConfig が直接検証, ソルバ不使用）"
+- path: research/experiments/five-row-q5-m27-minpos-sweep-20261115/output/records.jsonl
+  role: data
+  note: "(5,5) m=27 minpos sweep takeover (2026-11-28): calibrations 5x25 SAT 35,972 / 5x26 SAT 1,631,556 conflicts bit-exact vs published; p4..p8 INDET 2,255,250..2,526,618 @285s honest negatives; c0k3p9 SAT 1,556,533 conflicts / 169.09s, 19-stone witness rows [3,4,4,4,4] dual-verified (sat.js verifyConfig + independent Fraction verifier), cold pair conflicts and v-lines byte-identical; p10..p13 unswept WIN-stop"
+
 ---
 
 # 4〜6行 q=4,5 行欠損witness帯 — 5ファミリー初の結果
@@ -462,3 +466,25 @@ owY 分割)
 3. 4×22 以降の持続性は未解決のまま (有限機械検証であり数論的証明ではない)。
    4×21 の経験 (deep cap 抵抗バケットも第2石分割1枚あたり ≤185s に落ちる)
    は 4×22 掃引の見通しを与える。11×11 空盤・2石 root {49,60} 系には影響しない。
+
+## 追記 (2026-11-28 高速レーン: (5,5) 5×27 class {0} krow=0:3 minpos=9 SAT・witness 帯 m=5..27・M_{5,5} >= 28)
+
+1. **5×27 欠損極大安全配置 witness 発見** (five-row-q5-m27-minpos-sweep-20261115 の
+   takeover・宣言 `24736c72` publish-then-execute・単一オーナー):
+   class {0} krow=0:3 **minpos=9** が kissat 4.0.4 で **SAT 1,556,533 conflicts / 169.09s**。
+   witness 19石 rows [3,4,4,4,4] (row0 x=[9,19,21])。2系統検証: sat3.js decode →
+   sat.js verifyConfig ok・verify_frac.py (独立 Fraction 実装) safe+maximal ok
+   (max_curve_stones=4・unblocked=[]). cold pair 再実行で conflicts bit-exact・
+   v-line 同一。**witness 帯は m=5..27 に延伸し M_{5,5} ∈ [28, 336]** (上界 K0318 U=336 不変)。
+   前線は **5×28** へ。
+2. 掃引記録: p4..p8 は cap 285s INDET (2,255,250 / 2,290,237 / 2,526,618 / 2,423,463 /
+   2,525,494 conflicts・honest negatives・不在主張ではない)。旧レーンの reported-only
+   手記値 p4/p5 (3,317,615 / 3,501,337 @400s) は本再実行で置き換え。p1..p3
+   (出版済み INDET) は再実行せず。**p10..p13 は未掃引 (WIN-stop)**・k=0..2・
+   他の正準欠損クラスも残る (5×27 全体の不在主張ではない)。
+   較正: CNF md5 5件 bit-exact (c0k3p0/p1/p2・5×25 c0・5×26 c0)・
+   5×25 SAT 35,972・5×26 SAT 1,631,556 conflicts 出版値と bit-exact。
+   cap は停滞レーン計画の 400s から 285s に変更 (実行環境の呼び出し上限・宣言で開示)。
+3. 有限機械検証まで。11×11 空盤・19 central-reply roots・二石 root {60,27}・
+   第三手 {100,108}・S2・全 closure class は全時点 UNKNOWN・verdict 不消費・
+   conflicts は bookkeeping。
