@@ -1,0 +1,123 @@
+{
+ "declaration": "research/log/2026-11-28-t2-blocking-duality-declaration.md commit 9def08790034abc9f87f02203cfd027a7a3733e8, declared-at HEAD 775e1a6",
+ "boards": {
+  "ag2q3s2": {
+   "board": "AG(2,3)",
+   "n": 9,
+   "l": 3,
+   "s": 2,
+   "t": 1,
+   "maximal_safe": {
+    "4": 54
+   },
+   "minimal_blocking": {
+    "5": 54
+   },
+   "role": "small t=1 board"
+  },
+  "pg2q3s2": {
+   "board": "PG(2,3)",
+   "n": 13,
+   "l": 4,
+   "s": 2,
+   "t": 2,
+   "maximal_safe": {
+    "4": 234
+   },
+   "minimal_blocking": {
+    "9": 234
+   },
+   "matches_published": "K1300 maximal arc count 234"
+  },
+  "ag2q4s2": {
+   "board": "AG(2,4)",
+   "n": 16,
+   "l": 4,
+   "s": 2,
+   "t": 2,
+   "maximal_safe": {
+    "4": 120,
+    "6": 48
+   },
+   "minimal_blocking": {
+    "10": 48,
+    "12": 120
+   },
+   "matches_published": "K1300 size set {4,6}"
+  },
+  "pg2q4s3": {
+   "board": "PG(2,4)",
+   "n": 21,
+   "l": 5,
+   "s": 3,
+   "t": 2,
+   "maximal_safe": {
+    "7": 360,
+    "9": 11480
+   },
+   "minimal_blocking": {
+    "12": 11480,
+    "14": 360
+   },
+   "matches_published": "K1355"
+  },
+  "ag2q5s3": {
+   "board": "AG(2,5)",
+   "n": 25,
+   "l": 5,
+   "s": 3,
+   "t": 2,
+   "maximal_safe": {
+    "9": 12500,
+    "10": 28000,
+    "11": 9000
+   },
+   "minimal_blocking": {
+    "14": 9000,
+    "15": 28000,
+    "16": 12500
+   },
+   "matches_published": "K1357 size set {9,10,11}; counts new"
+  },
+  "pg2q5s4": {
+   "board": "PG(2,5)",
+   "n": 31,
+   "l": 6,
+   "s": 4,
+   "t": 2,
+   "maximal_safe": {
+    "13": 15500,
+    "14": 372000,
+    "15": 604500,
+    "16": 595975
+   },
+   "minimal_blocking": {
+    "15": 595975,
+    "16": 604500,
+    "17": 372000,
+    "18": 15500
+   },
+   "note": "both sides new; lists not published, sha256 pinned in MANIFEST"
+  }
+ },
+ "complement_bijection_failures": 0,
+ "runs_byte_identical": true,
+ "calibration_t1": {
+  "ag2q4_s3": 1240,
+  "pg2q3_s3": 247,
+  "pg2q4_s4": 10741,
+  "ag2q5_s4": 36475,
+  "all_size_splits_exact": true
+ },
+ "verify_systems": [
+  "blocking_duality.c full-scan Gray-code, per-mask both-side direct logic, both-direction element-level complement check",
+  "verify_duality.py GF(q) independent board reconstruction + 2-(v,k,1) design check + full dump mask re-verification (all six boards, all_ok)",
+  "brute_third.py pure-python full enumeration, direct definitions, no Gray code (five boards n<=25)",
+  "derived-board rerun: C enumerator on independently constructed relabeled boards reproduces identical counts"
+ ],
+ "observations_finite_only": [
+  "PG(2,q) minimal 2-fold blocking min size = 3q for q=3,4,5 (q=7 needs n=57, full scan infeasible)",
+  "AG(2,q) t=2 min sizes 10 (q=4), 14 (q=5)",
+  "PG(2,5) s=4 maximal sizes 13..16 parity-mixed; K1298 suggests G>=2 exists but Grundy NOT computed here"
+ ]
+}

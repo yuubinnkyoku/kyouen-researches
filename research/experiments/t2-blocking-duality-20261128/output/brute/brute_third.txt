@@ -1,0 +1,12 @@
+# brute_third.py (independent pure-python full enumeration, direct definitions; no Gray code)
+# matches blocking_duality.c on all five boards with n<=25 (AG(2,5) takes ~15 min; PG(2,5) n=31 excluded)
+## PG(2,3)
+maximal_safe {4: 234} minimal_blocking {9: 234}
+## AG(2,3)
+maximal_safe {4: 54} minimal_blocking {5: 54}
+## AG(2,4)
+maximal_safe {4: 120, 6: 48} minimal_blocking {10: 48, 12: 120}
+## PG(2,4)
+maximal_safe {7: 360, 9: 11480} minimal_blocking {12: 11480, 14: 360}
+## AG(2,5)
+maximal_safe {9: 12500, 10: 28000, 11: 9000} minimal_blocking {14: 9000, 15: 28000, 16: 12500}
