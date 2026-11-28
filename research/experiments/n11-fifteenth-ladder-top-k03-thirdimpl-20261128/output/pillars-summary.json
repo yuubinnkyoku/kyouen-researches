@@ -1,0 +1,34 @@
+{
+ "schema": "n11-fifteenth-ladder-top-k03-thirdimpl-summary-v1",
+ "declaration": "research/log/2026-11-28-n11-fifteenth-ladder-top-k03-pillars-declaration.md (commit 24194a4f)",
+ "row": "k03",
+ "key": "6053400849139367936:128",
+ "class_index": 5804,
+ "stones": 5,
+ "legal": 92,
+ "invocation": "--row=k03 --stones=5 --legal=92 --lo=6053400849139367936 --hi=128 --cap=400000000 --wallcap=260 --memo-power=22",
+ "script_sha256": "08ea958ff59c3234ec5ac55c5c40689bd0999a34e101a88ea0546800cc4a1998",
+ "result": 1,
+ "expansions": 3906063,
+ "nodes": 2096923,
+ "quads": 95670,
+ "ttOverwrites": 247245,
+ "passes": 2,
+ "pass_identical_except_wall": true,
+ "wall_s": [
+  10.77,
+  10.82
+ ],
+ "escalation_basis": {
+  "kit": "n11-fifteenth-ladder-top-k02k03-reescalation-20261128",
+  "commit": "09358acd",
+  "row_result": 1,
+  "row_nodes": 3364655
+ },
+ "companion_cppgate": {
+  "kit": "n11-fifteenth-ladder-top-k03-win-cppgate-20261128",
+  "gate": "GATE-PASS 92,15000000,1,3364655"
+ },
+ "status": "CORROBORATION-PASS (result 1 consistent with the re-escalation WIN(1) row; two-pillar requirement COMPLETE with the companion cppgate kit)",
+ "status_guard": "pillar bookkeeping only; NO verdict consumed; 11x11 UNKNOWN"
+}
