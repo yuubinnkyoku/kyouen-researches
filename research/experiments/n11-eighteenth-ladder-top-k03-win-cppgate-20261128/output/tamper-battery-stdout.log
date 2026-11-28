@@ -1,0 +1,18 @@
+# n11 eighteenth k03 cppgate - external tamper battery (4/4 fail-closed + clean control)
+# each tamper reverted byte-exact before the next case; raws and inputs sha-verified after restore
+HARD-STOP: published-row disagreement on k03 (C5: no interpretation)
+T1 rc=43
+HARD-STOP: determinism mismatch on k03
+T2 rc=42
+missing input/k03.input.csv
+T3 rc=2
+SUMMARY-FAIL
+G2 expected mismatch k03: 73,15000000,1,5266012 != 73,15000000,1,5266011
+T4 rc=1
+ff63ed29d22450f5eccc71c160a328d34d718a1bc29a982aadd8f41e1f43869e  input/k03.input.csv
+570968b04be879fc830da1ca80d612c0cc103d5998ecd3bc8c2198b6c25d5f3a  output/raw/k03.p1.out
+k03 GATE-PASS 73,15000000,1,5266012
+control-gate rc=0
+SUMMARY-PASS {"k03": "73,15000000,1,5266012", "anchor-at2m": "98,2000000,0,2000000", "anchor-aj001": "84,30000000,2,5156075", "anchor-af039": "89,30000000,2,19234232"}
+control-summary rc=0
+80b433671a5fdfd588d5cb90b2e2390bc9e9251ff6697fca954c8ec92dc796a1  output/cppgate-summary.json

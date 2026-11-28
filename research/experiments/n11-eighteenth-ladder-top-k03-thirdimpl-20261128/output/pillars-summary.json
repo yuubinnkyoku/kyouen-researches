@@ -1,0 +1,24 @@
+{
+ "schema": "n11-eighteenth-ladder-top-k03-thirdimpl-summary-v1",
+ "declaration": "research/log/2026-11-28-n11-eighteenth-ladder-top-k03-pillars-declaration.md (commit 261432360e30462e9ed67977229fd421bb7af20e)",
+ "target": {
+  "row": "k03",
+  "key": "1155173441859489792:131072",
+  "class_index": 20421,
+  "s5_index": 605961,
+  "legal": 73,
+  "escalation": "n11-eighteenth-ladder-top-escalation-20261128 (88e825d5): WIN(1) nodes 5266012 @15M cold pair node-identical",
+  "cppgate": "n11-eighteenth-ladder-top-k03-win-cppgate: GATE-PASS 73,15000000,1,5266012"
+ },
+ "invocation": "--row=k03 --stones=5 --legal=73 --lo=1155173441859489792 --hi=131072 --cap=400000000 --wallcap=260 --memo-power=22",
+ "runner": {
+  "name": "third_impl.js",
+  "sha256": "08ea958ff59c3234ec5ac55c5c40689bd0999a34e101a88ea0546800cc4a1998"
+ },
+ "passes": [
+  {"pass": "p1", "result": 1, "expansions": 6039011, "nodes": 3524008, "quads": 95670, "ttOverwrites": 1865863, "memoPower": 22, "wall_s": 18.29},
+  {"pass": "p2", "result": 1, "expansions": 6039011, "nodes": 3524008, "quads": 95670, "ttOverwrites": 1865863, "memoPower": 22, "wall_s": 17.77}
+ ],
+ "corroboration": "CORROBORATION-PASS: result 1 identical on both cold passes and consistent with the 15M WIN(1) row; verdict-level WIN(1) agreement across all three implementations",
+ "status_guard": "pillar bookkeeping only; NO verdict consumed; adoption requires a separate declared Part; class 20421 NOT complete (k04-k05 stage-1 2M UNKNOWN); 11x11 UNKNOWN"
+}
