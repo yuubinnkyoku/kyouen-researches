@@ -1,0 +1,354 @@
+{
+ "claim_sets_checked": [
+  "cert_38",
+  "eighth_43",
+  "eleventh_46",
+  "fifth_44",
+  "focus_35",
+  "fourth_41",
+  "ninth_45",
+  "parked_6",
+  "sbd_101",
+  "seventh_42",
+  "sixth_43",
+  "tenth_44",
+  "third_39",
+  "twelfth_51",
+  "ultra_cheap_4",
+  "quarantine_2"
+ ],
+ "closure_ladder": {
+  "rows": 800,
+  "sha256": "ef3447481abb14af3c56a64251d86e63b178c7fb57b0ce8898e67303c24dc3e2",
+  "unknown_recomputed": "all 800 rows match the published unknown_now"
+ },
+ "gates": {
+  "P0:candidates-sha": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P0:closure-sha": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P0:dependency-graph-sha": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P0:eighth_43-sha": {
+   "detail": "research/experiments/n11-eighthcost-class-s5-exclusive-probe-1297036692750860288-20261127/output/eighth-cost-exclusive-keys.json",
+   "status": "PASS"
+  },
+  "P0:eleventh_46-sha": {
+   "detail": "research/experiments/n11-eleventhcost-class-s5-exclusive-probe-20261127/output/eleventh-cost-exclusive-keys.json",
+   "status": "PASS"
+  },
+  "P0:fifth_44-sha": {
+   "detail": "research/experiments/n11-fifthcost-class-s5-exclusive-probe-1152921504612089856-20261121/output/fifth-cost-exclusive-keys.json",
+   "status": "PASS"
+  },
+  "P0:fifthsel-sha": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P0:geometry-sha": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P0:head-sha": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P0:independent-sha": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P0:keymap-sha": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P0:ninth_45-sha": {
+   "detail": "research/experiments/n11-ninthcost-class-s5-exclusive-probe-1297036692683751424-20261127/output/ninth-cost-exclusive-keys.json",
+   "status": "PASS"
+  },
+  "P0:parked2-batch-s5-10376294091217440768-33554432.input.csv-sha": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P0:parked2-batch-s5-1297036830122704896-67108864.input.csv-sha": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P0:parked4-files": {
+   "detail": "['batch-k13.input.csv', 'batch-k19.input.csv', 'batch-k20.input.csv', 'batch-k33.input.csv']",
+   "status": "PASS"
+  },
+  "P0:policy-sha": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P0:quarantine-sha": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P0:seventh_42-sha": {
+   "detail": "research/experiments/n11-seventhcost-class-s5-exclusive-probe-1306043891938492416-20261126/output/seventh-cost-exclusive-keys.json",
+   "status": "PASS"
+  },
+  "P0:sixth_43-sha": {
+   "detail": "research/experiments/n11-sixthcost-class-s5-exclusive-probe-10376293541461626880-20261121/output/sixth-cost-exclusive-keys.json",
+   "status": "PASS"
+  },
+  "P0:supply-sha": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P0:tenth_44-sha": {
+   "detail": "research/experiments/n11-tenthcost-class-s5-exclusive-probe-20261127/output/tenth-cost-exclusive-keys.json",
+   "status": "PASS"
+  },
+  "P0:twelfth_51-sha": {
+   "detail": "research/experiments/n11-twelfthcost-class-s5-exclusive-probe-20261127/output/twelfth-cost-exclusive-keys.json",
+   "status": "PASS"
+  },
+  "P0:update8-sha": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P1:closure-rows": {
+   "detail": "800",
+   "status": "PASS"
+  },
+  "P1:graph-shape": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P1:head-shape": {
+   "detail": "6894",
+   "status": "PASS"
+  },
+  "P1:receipt-cache-conflicts": {
+   "detail": "0",
+   "status": "PASS"
+  },
+  "P1:supply-shape": {
+   "detail": "4562",
+   "status": "PASS"
+  },
+  "P1:update8-receipts": {
+   "detail": "23",
+   "status": "PASS"
+  },
+  "P1:update8-shape": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P2:closure-unknown-recomputed-800": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P2:top5-ladder-rows": {
+   "detail": "[(16757, 2), (5804, 4), (20421, 5), (34269, 11), (12264, 33)]",
+   "status": "PASS"
+  },
+  "P3:claim-sizes": {
+   "detail": "{\"focus_35\": 35, \"cert_38\": 38, \"third_39\": 39, \"fourth_41\": 41, \"fifth_44\": 44, \"sixth_43\": 43, \"seventh_42\": 42, \"eighth_43\": 43, \"ninth_45\": 45, \"tenth_44\": 44, \"eleventh_46\": 46, \"twelfth_51\": 51, \"sbd_101\": 101, \"parked_6\": 6, \"ultra_cheap_4\": 4}",
+   "status": "PASS"
+  },
+  "P3:quarantine-entries": {
+   "detail": "2",
+   "status": "PASS"
+  },
+  "P3:ultra-cheap-adopted": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:selection-class": {
+   "detail": "16757",
+   "status": "PASS"
+  },
+  "P4:selection-found": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:selection-keys": {
+   "detail": "[('1153204147814662144', 65536), ('1152922672837951488', 65792)]",
+   "status": "PASS"
+  },
+  "P4:selection-legal-dual": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:selection-not-in-supply": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:selection-s5-index": {
+   "detail": "",
+   "status": "PASS"
+  },
+  "P4:selection-unclaimed-quarantine-free": {
+   "detail": "",
+   "status": "PASS"
+  }
+ },
+ "head_basis": {
+  "loss": 6682,
+  "rows": 6894,
+  "sha256": "beecb024a648d0ddb29eaf261b09326f9412328cd09f85cb180ee2ffd9ed4544",
+  "win": 212
+ },
+ "meaning": "selection and scheduling bookkeeping only; no verdict is claimed or consumed; resolving a selected key would still require the standing cold-pair + C++-gate + third-implementation pillars before any adoption; the standard 11x11 empty board, all 19 central-reply roots, the two-stone root {60,27} and third moves 100/108 remain UNKNOWN",
+ "overall": "PASS",
+ "published_top5": [
+  {
+   "class_index": 16757,
+   "unknown_now": 2
+  },
+  {
+   "class_index": 5804,
+   "unknown_now": 4
+  },
+  {
+   "class_index": 20421,
+   "unknown_now": 5
+  },
+  {
+   "class_index": 34269,
+   "unknown_now": 11
+  },
+  {
+   "class_index": 12264,
+   "unknown_now": 33
+  }
+ ],
+ "scanned_candidates": [
+  {
+   "all_available": true,
+   "blocked_keys": [],
+   "class_index": 16757,
+   "class_key": "1153204079095185408:65536",
+   "class_rank": 1,
+   "unknown_now": 2
+  },
+  {
+   "all_available": true,
+   "blocked_keys": [],
+   "class_index": 5804,
+   "class_key": "6053400849139367936:0",
+   "class_rank": 2,
+   "unknown_now": 4
+  },
+  {
+   "all_available": true,
+   "blocked_keys": [],
+   "class_index": 20421,
+   "class_key": "1155173304420536320:131072",
+   "class_rank": 3,
+   "unknown_now": 5
+  },
+  {
+   "all_available": true,
+   "blocked_keys": [],
+   "class_index": 34269,
+   "class_key": "1152921504624672768:68719476736",
+   "class_rank": 4,
+   "unknown_now": 11
+  },
+  {
+   "all_available": true,
+   "blocked_keys": [],
+   "class_index": 12264,
+   "class_key": "1152921504606848033:0",
+   "class_rank": 5,
+   "unknown_now": 33
+  },
+  {
+   "all_available": true,
+   "blocked_keys": [],
+   "class_index": 5343,
+   "class_key": "1171516445255794688:0",
+   "class_rank": 6,
+   "unknown_now": 46
+  },
+  {
+   "all_available": true,
+   "blocked_keys": [],
+   "class_index": 13342,
+   "class_key": "1188950301642588192:0",
+   "class_rank": 7,
+   "unknown_now": 50
+  },
+  {
+   "all_available": true,
+   "blocked_keys": [],
+   "class_index": 30118,
+   "class_key": "1152922604118474753:65536",
+   "class_rank": 8,
+   "unknown_now": 50
+  },
+  {
+   "all_available": true,
+   "blocked_keys": [],
+   "class_index": 5473,
+   "class_key": "1158058422931816448:0",
+   "class_rank": 9,
+   "unknown_now": 51
+  },
+  {
+   "all_available": true,
+   "blocked_keys": [],
+   "class_index": 16957,
+   "class_key": "1152921504606978048:264",
+   "class_rank": 10,
+   "unknown_now": 51
+  },
+  {
+   "all_available": true,
+   "blocked_keys": [],
+   "class_index": 16930,
+   "class_key": "1152921504875282432:272",
+   "class_rank": 11,
+   "unknown_now": 51
+  },
+  {
+   "all_available": true,
+   "blocked_keys": [],
+   "class_index": 2634,
+   "class_key": "4035225266258182144:0",
+   "class_rank": 12,
+   "unknown_now": 51
+  }
+ ],
+ "schema": "n11-thirteenth-ladder-top-selection-v1",
+ "selection": {
+  "class_index": 16757,
+  "class_key": "1153204079095185408:65536",
+  "probe_order": [
+   {
+    "canonical_safe": true,
+    "d4_canonical": true,
+    "in_probe13_supply": false,
+    "key": "1153204147814662144:65536",
+    "legal": 72,
+    "legal_board": 72,
+    "legal_fresh_det": 72,
+    "proxy": null,
+    "s5_index": 556117,
+    "stones": 5
+   },
+   {
+    "canonical_safe": true,
+    "d4_canonical": true,
+    "in_probe13_supply": false,
+    "key": "1152922672837951488:65792",
+    "legal": 72,
+    "legal_board": 72,
+    "legal_fresh_det": 72,
+    "proxy": null,
+    "s5_index": 558553,
+    "stones": 5
+   }
+  ]
+ }
+}
