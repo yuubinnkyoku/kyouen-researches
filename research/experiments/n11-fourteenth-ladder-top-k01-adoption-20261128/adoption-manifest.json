@@ -1,0 +1,33 @@
+{
+ "schema": "n11-fourteenth-ladder-top-k01-win-adoption-manifest-v1",
+ "base": {
+  "path": "merged-exact-s5-chain-plus-thirteenth-k01k02-20261128.cache",
+  "sha256": "d772f73c68bf051e7b90e5cd6cfef2a7b1c8e07da888c5f728f7a04b39edd1ec",
+  "rows": 6896,
+  "win": 214,
+  "loss": 6682
+ },
+ "rows": [
+  {
+   "name": "k01",
+   "key": "6053401124017274880:0",
+   "result": 1,
+   "nodes": 4360661,
+   "class_index": 5804
+  }
+ ],
+ "expected_merged_shape": {
+  "rows": 6897,
+  "win": 215,
+  "loss": 6682
+ },
+ "merger_sha256": "907119610034fb2aebfde012550a4129dfa3b086c6de11194e856747ac74606a",
+ "kits": {
+  "replica": "n11-fourteenth-ladder-top-escalation-20261128 (5c670bc6)",
+  "cppgate": "n11-fourteenth-ladder-top-k01-win-cppgate-20261128 (35b5fef1)",
+  "thirdimpl": "n11-fourteenth-ladder-top-k01-thirdimpl-20261128 (35b5fef1)"
+ },
+ "owner_union_precheck": "n11-fourteenth-owner-union-precheck-20261128 (509afbdb)",
+ "nodes_total_bookkeeping": 4360661,
+ "status_guard": "adoption bookkeeping only; NO verdict consumed; 11x11 UNKNOWN"
+}
