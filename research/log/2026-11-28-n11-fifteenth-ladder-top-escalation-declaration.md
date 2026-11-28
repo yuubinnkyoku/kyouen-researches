@@ -9,9 +9,14 @@ until this Part's completion log appears.
 Batch escalation of the three keys selected by the published
 fifteenth ladder-top selection kit
 (`research/experiments/n11-fifteenth-ladder-top-selection-20261128/`,
-kit commit `6f6deac0`, log `7da320b9`): class 5804
-(`6053400849139367936:0`), exactly 3 remaining unknown S5 keys,
-against the canonical head of record `a66f636e...` (6,897 rows
+kit commit `6f6deac0`, log `7da320b9`): ladder-top class 5804, exactly 3
+remaining unknown S5 keys:
+
+- k01 `6053682324116078592:0` (s5 207094, legal 82)
+- k02 `6052837899185946628:128` (s5 212115, legal 87)
+- k03 `6053400849139367936:128` (s5 212536, legal 92)
+
+Against the canonical head of record `a66f636e` (6,897 rows
 WIN 215 / LOSS 6,682). Declaration HEAD pin: 7da320b94556c98ca3d93f30dec6af2c04ed9727.
 
 ## Method and declared order
