@@ -1,0 +1,83 @@
+{
+ "lane": "seven-row-q7-m28-classes012-surgery-20261128",
+ "w": 7,
+ "m": 28,
+ "q": 7,
+ "result": "no SAT; 5 sweep pieces INDET at 272/275s caps; two-edit surgery negative (both placements)",
+ "pieces": [
+  {
+   "class": [
+    3
+   ],
+   "krow": "3:5",
+   "minpos": 5,
+   "status": "INDET",
+   "conflicts": 2914708
+  },
+  {
+   "class": [
+    3
+   ],
+   "krow": "3:5",
+   "minpos": 6,
+   "status": "INDET",
+   "conflicts": 2927565
+  },
+  {
+   "class": [
+    0
+   ],
+   "krow": "0:5",
+   "minpos": 0,
+   "status": "INDET",
+   "conflicts": 2710560
+  },
+  {
+   "class": [
+    1
+   ],
+   "krow": "1:5",
+   "minpos": 0,
+   "status": "INDET",
+   "conflicts": 2724218
+  },
+  {
+   "class": [
+    2
+   ],
+   "krow": "2:5",
+   "minpos": 0,
+   "status": "INDET",
+   "conflicts": 2572706
+  }
+ ],
+ "surgery": {
+  "shift1_target": [
+   0,
+   3
+  ],
+  "shift1_candidates": 2158423,
+  "shift1_safe": 0,
+  "shift1_witnesses": 0,
+  "shift1_tcurve_census": {
+   "c4": 0,
+   "c5": 1
+  },
+  "shift0_target": [
+   27,
+   3
+  ],
+  "shift0_candidates": 2158423,
+  "shift0_safe": 0,
+  "shift0_witnesses": 0,
+  "shift0_tcurve_census": {
+   "c4": 0,
+   "c5": 1
+  },
+  "determinism": "run1/run2 sha256-identical both placements",
+  "spotcheck": "300/300 engine rejections confirmed, 0 missed witnesses",
+  "calibration": "6x26 published case reproduced exactly (836890/0/0)"
+ },
+ "range": "M_{7,7} in [28,708] unchanged; frontier stays 7x28",
+ "non_claims": "no absence claim; 11x11 roots and all closure classes remain UNKNOWN; conflicts are bookkeeping"
+}
