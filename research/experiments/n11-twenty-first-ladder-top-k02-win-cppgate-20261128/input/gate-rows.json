@@ -1,0 +1,53 @@
+{
+ "schema": "n11-twenty-first-ladder-top-k02-cppgate-rows-v1",
+ "declaration": "research/log/2026-11-28-n11-twenty-first-ladder-top-k02-pillars-declaration.md (commit 7bccf228)",
+ "targets": {
+  "k02": {
+   "key": "1153484454578094080:68719476736",
+   "class_index": 34269,
+   "s5_index": 178184,
+   "legal": 85,
+   "budget": "15000000",
+   "expected": "85,15000000,1,8036766",
+   "input_pin": "9d1bb2b539ea742a15815cee24235faa66d140c498171978616d35b01e222c8f"
+  }
+ },
+ "anchors": {
+  "anchor-at2m": {
+   "budget": "2000000",
+   "expected": "98,2000000,0,2000000",
+   "input_pin": "ecc0299b8142abde201fcc40ea9666dac7368d0888d0600abc717af66ddfe348"
+  },
+  "anchor-aj001": {
+   "budget": "30000000",
+   "expected": "84,30000000,2,5156075",
+   "input_pin": "2f6daea5ca3b3fe6b7713c8d450af3f3c9f203acacb8a1340255d8e8f656496c"
+  },
+  "anchor-af039": {
+   "budget": "30000000",
+   "expected": "89,30000000,2,19234232",
+   "input_pin": "e51a3c9de08c62a54d80547c520876af4245394d05e37bbebf01d74204f64691"
+  }
+ },
+ "gate_source": {
+  "kyouen_dfpn_root.cpp": "9193f5b6065e0fbcad2ef7c65f386187701cafa1f5b718cc35a5cbb0d138f92e",
+  "kyouen_residual_micro.hpp": "5976935dcfccb9b5a26fa68f8de20868ce45363dd8c372dcd67d9b841167e7f5",
+  "n11_s5_quarantine.hpp": "2e36d69481fafcde7aede8ae4fedf3d5477f91ee9846bcd4ae2975f32a4ba1a5",
+  "build": "zig 0.13.0 c++ -std=c++20 -O2 (tarball pin d45312e61ebcc48032b77bc4cf7fd6915c11fa16e4aad116b66c9468211230ea)"
+ },
+ "escalation_basis": {
+  "kit": "n11-twenty-first-ladder-top-escalation-20261128",
+  "commit": "ddc6760c",
+  "raw_sha256_at15m_p1": "d05a75835e72da799e0384d83e7bb043394064e920d8092914f216d89dce9228",
+  "raw_sha256_at15m_p2": "5b656bb4a3f9ff2facb78d24c12a8542b92724d10c336032d265db860e090967"
+ },
+ "head_basis": {
+  "cache": "merged-exact-s5-chain-plus-twentieth-k01-20261128.cache",
+  "sha256_prefix": "1f1430f3",
+  "rows": 6906,
+  "win": 224,
+  "loss": 6682,
+  "target_absent_from_head": true
+ },
+ "status_guard": "pillar bookkeeping only; NO verdict consumed; 11x11 UNKNOWN"
+}

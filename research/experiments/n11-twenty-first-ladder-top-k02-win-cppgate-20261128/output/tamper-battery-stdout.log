@@ -1,0 +1,10 @@
+SUMMARY-FAIL
+G2 expected mismatch k02: 85,15000000,1,8036766 != 85,15000000,1,8036767
+SUMMARY-FAIL
+G2 pair mismatch k02: ['85,15000000,1,8036767', '85,15000000,1,8036766']
+SUMMARY-FAIL
+G0 input pin mismatch k02
+SUMMARY-FAIL
+G1 no GATE-PASS line for k02
+# restore check: pre=e0279470c7b201bbf5c6c862a8777c8ba5e5aca9d8b9f88686c173dbe71cb5b4 post=e0279470c7b201bbf5c6c862a8777c8ba5e5aca9d8b9f88686c173dbe71cb5b4 (byte-identical)
+# clean control: SUMMARY-PASS + cppgate-summary.json sha256 13753bf1... byte-identical re-PASS
