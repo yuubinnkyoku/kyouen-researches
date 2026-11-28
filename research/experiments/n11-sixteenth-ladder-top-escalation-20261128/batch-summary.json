@@ -1,0 +1,142 @@
+{
+ "calibration": {
+  "budget": 2000000,
+  "forbidden_quadruples": 95670,
+  "key": "1153485622925590528:0",
+  "nodes": 2000000,
+  "published_value_agreement": "values identical to the published fifteenth escalation kit calibration (result 0, nodes 2,000,000, fq 95,670); wall_s host-differs (9 published)",
+  "result": 0,
+  "wall_s": 10
+ },
+ "declaration_commit": "4d361b73ec1ab85022109d0cfa972ffcf6ded7ad",
+ "disclosures": [
+  "stage-1 prediction (UNKNOWN with budget exhaustion) held for all five keys",
+  "k01 15M cold pair node-identical (wall_s 30/29)",
+  "no verdict consumed; k01 WIN(1) is single-implementation (jsreplay replica)"
+ ],
+ "head_basis": {
+  "loss": 6682,
+  "rows": 6900,
+  "sha256": "58110025dd5cca7f1e824d8871b50462dc9fcbeac8b9aa69c5f4d33299c894ae",
+  "win": 218
+ },
+ "keys": {
+  "k01": {
+   "at15m": {
+    "nodes": 5273778,
+    "pair": "node-identical",
+    "result": 1,
+    "wall_s_pair": [
+     "30",
+     "29"
+    ]
+   },
+   "key": "1155454779397246976:131072",
+   "legal": 76,
+   "s5_index": 528689,
+   "stage1_2m": {
+    "nodes": 2000000,
+    "result": 0,
+    "wall_s_pair": [
+     "10",
+     "10"
+    ]
+   }
+  },
+  "k02": {
+   "at15m": "not escalated (WIN-stop fired at k01)",
+   "key": "1156299204327378944:131072",
+   "legal": 73,
+   "s5_index": 543795,
+   "stage1_2m": {
+    "nodes": 2000000,
+    "result": 0,
+    "wall_s_pair": [
+     "10",
+     "10"
+    ]
+   }
+  },
+  "k03": {
+   "at15m": "not escalated (WIN-stop fired at k01)",
+   "key": "1155173441859489792:131072",
+   "legal": 73,
+   "s5_index": 605961,
+   "stage1_2m": {
+    "nodes": 2000000,
+    "result": 0,
+    "wall_s_pair": [
+     "10",
+     "10"
+    ]
+   }
+  },
+  "k04": {
+   "at15m": "not escalated (WIN-stop fired at k01)",
+   "key": "1153062242096250880:540672",
+   "legal": 83,
+   "s5_index": 620742,
+   "stage1_2m": {
+    "nodes": 2000000,
+    "result": 0,
+    "wall_s_pair": [
+     "9",
+     "10"
+    ]
+   }
+  },
+  "k05": {
+   "at15m": "not escalated (WIN-stop fired at k01)",
+   "key": "1152921642046849024:68719477248",
+   "legal": 78,
+   "s5_index": 625899,
+   "stage1_2m": {
+    "nodes": 2000000,
+    "result": 0,
+    "wall_s_pair": [
+     "10",
+     "10"
+    ]
+   }
+  }
+ },
+ "owner_union_precheck": {
+  "graph": "54f9c364...",
+  "k01": [
+   15647,
+   16901,
+   20421
+  ],
+  "k02": [
+   16104,
+   16132,
+   16656,
+   20421
+  ],
+  "k03": [
+   18136,
+   18143,
+   20128,
+   20421
+  ],
+  "k04": [
+   18534,
+   18554,
+   19885,
+   20421
+  ],
+  "k05": [
+   18683,
+   18710,
+   20421
+  ]
+ },
+ "runner": {
+  "name": "jsreplay.js",
+  "sha256": "845856175d3c793a7eb4306f5902ecda3f1c046a8a53e8f34ed375e51febc3df"
+ },
+ "schema": "n11-sixteenth-ladder-top-escalation-summary-v1",
+ "selection_kit": "n11-sixteenth-ladder-top-selection-20261128 (b4e338aa, completion 27829d8c)",
+ "status_guard": "escalation bookkeeping only; NO verdict consumed; the standard 11x11 empty board, all 19 central-reply roots, the two-stone root {60,27}, third moves 100/108 and every closure class (including 20421) remain UNKNOWN; nodes/wall_s are bookkeeping, never verdicts",
+ "win_stop": "fired at k01 (WIN(1) at 15M); k02-k05 stay at stage-1 2M UNKNOWN(0)"
+}
