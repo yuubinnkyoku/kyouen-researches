@@ -1,0 +1,47 @@
+{
+ "calibration": {
+  "budget": 2000000,
+  "forbidden_quadruples": 95670,
+  "key": "1153485622925590528:0",
+  "nodes": 2000000,
+  "published_value_agreement": "values identical to the published sixteenth/seventeenth/eighteenth/nineteenth escalation kit calibrations (result 0, nodes 2,000,000, fq 95,670); wall_s 10 (host value)",
+  "result": 0,
+  "wall_s": 10
+ },
+ "declaration_commit": "ddff08ce3a1fa625023cef28bdae8f5b31a0995e",
+ "disclosures": [
+  "k05 was stage-1 2M UNKNOWN(0) since the published sixteenth escalation kit (85edd462); no stage-1 rerun was needed or performed in this Part",
+  "k05 15M cold pair node-identical (nodes 2007513, wall_s 9/10 host jitter; raws differ only in the wall_s fields)",
+  "no verdict consumed; k05 WIN(1) is single-implementation (jsreplay replica, cold pair); adoption requires the C++ gate + third-implementation corroboration + WIN-side flip-census review under fresh declarations",
+  "freshness precheck: k05 verified absent from the head of record 8cc87263 by direct cache scan on this host before the declaration",
+  "owner-union precheck (re-derived from the frozen graph): k05 [18683, 18710, 20421]; the serving class 20421 is ladder rank 1 with unknown_now 1 (k05 is its last cost-unknown child)"
+ ],
+ "head_basis": {
+  "loss": 6682,
+  "rows": 6904,
+  "sha256": "8cc87263602898e632ad02cb7016322042d4d0a7d00ee0e860182c3be07a03f4",
+  "win": 222
+ },
+ "keys": {
+  "k05": {
+   "at15m": {
+    "budget": 15000000,
+    "nodes": 2007513,
+    "pair": "node-identical",
+    "result": 1,
+    "wall_s_pair": ["9", "10"]
+   },
+   "key": "1152921642046849024:68719477248",
+   "legal": 78,
+   "owner_union": [18683, 18710, 20421],
+   "s5_index": 625899,
+   "stage1_2m": {
+    "nodes": 2000000,
+    "result": 0,
+    "source": "published sixteenth escalation kit (85edd462); not rerun in this Part"
+   }
+  }
+ },
+ "schema": "n11-class20421-k05-escalation-summary-v1",
+ "status_guard": "escalation bookkeeping only; NO verdict consumed; k05 WIN(1) is single-implementation and requires the C++ gate + third-implementation corroboration before any adoption Part; class 20421 is NOT complete until the adoption chain closes its last cost-unknown; 11x11 UNKNOWN"
+}
