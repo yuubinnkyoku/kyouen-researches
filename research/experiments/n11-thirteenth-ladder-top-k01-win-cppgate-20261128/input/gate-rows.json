@@ -1,0 +1,40 @@
+{
+ "schema": "n11-thirteenth-ladder-top-k01-cppgate-rows-v1",
+ "declaration": "research/log/2026-11-28-n11-thirteenth-ladder-top-k01-pillars-declaration.md (commit c3cb9f7e)",
+ "targets": {
+  "k01": {
+   "key": "1153204147814662144:65536",
+   "class_index": 16757,
+   "s5_index": 556117,
+   "legal": 72,
+   "budget": "15000000",
+   "expected": "72,15000000,1,2678305",
+   "input_pin": "eda6e3d6d5d639039b7b57c34aaaaa960ffe5d1172b187aadfe63a9393b8e00f"
+  }
+ },
+ "anchors": {
+  "anchor-at2m": { "budget": "2000000", "expected": "98,2000000,0,2000000", "input_pin": "ecc0299b8142abde201fcc40ea9666dac7368d0888d0600abc717af66ddfe348" },
+  "anchor-aj001": { "budget": "30000000", "expected": "84,30000000,2,5156075", "input_pin": "2f6daea5ca3b3fe6b7713c8d450af3f3c9f203acacb8a1340255d8e8f656496c" },
+  "anchor-af039": { "budget": "30000000", "expected": "89,30000000,2,19234232", "input_pin": "e51a3c9de08c62a54d80547c520876af4245394d05e37bbebf01d74204f64691" }
+ },
+ "gate_source": {
+  "kyouen_dfpn_root.cpp": "9193f5b6065e0fbcad2ef7c65f386187701cafa1f5b718cc35a5cbb0d138f92e",
+  "kyouen_residual_micro.hpp": "5976935dcfccb9b5a26fa68f8de20868ce45363dd8c372dcd67d9b841167e7f5",
+  "n11_s5_quarantine.hpp": "2e36d69481fafcde7aede8ae4fedf3d5477f91ee9846bcd4ae2975f32a4ba1a5",
+  "build": "zig 0.13.0 c++ -std=c++20 -O2 (tarball pin d45312e61ebcc48032b77bc4cf7fd6915c11fa16e4aad116b66c9468211230ea)"
+ },
+ "escalation_basis": {
+  "kit": "n11-thirteenth-ladder-top-escalation-20261128",
+  "commit": "12d8359c",
+  "raw_sha256_at15m_p1": "7fe1b86f7e04c69db76baac540ec77ba847d58a02eb8f2c78c9211410ec07d6c"
+ },
+ "head_basis": {
+  "cache": "merged-exact-s5-chain-plus-ultra-cheap-u04-20261127.cache",
+  "sha256_prefix": "beecb024",
+  "rows": 6894,
+  "win": 212,
+  "loss": 6682,
+  "target_absent_from_head": true
+ },
+ "status_guard": "pillar bookkeeping only; NO verdict consumed; 11x11 UNKNOWN"
+}

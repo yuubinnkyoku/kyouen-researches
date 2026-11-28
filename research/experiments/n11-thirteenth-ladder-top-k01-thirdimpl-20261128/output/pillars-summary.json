@@ -1,0 +1,31 @@
+{
+ "schema": "n11-thirteenth-ladder-top-k01-thirdimpl-summary-v1",
+ "declaration": "research/log/2026-11-28-n11-thirteenth-ladder-top-k01-pillars-declaration.md (commit c3cb9f7e)",
+ "row": "k01",
+ "key": "1153204147814662144:65536",
+ "class_index": 16757,
+ "stones": 5,
+ "legal": 72,
+ "invocation": "--row=k01 --stones=5 --legal=72 --lo=1153204147814662144 --hi=65536 --cap=400000000 --wallcap=260 --memo-power=22",
+ "script_sha256": "08ea958ff59c3234ec5ac55c5c40689bd0999a34e101a88ea0546800cc4a1998",
+ "result": 1,
+ "expansions": 3024529,
+ "nodes": 1801458,
+ "quads": 95670,
+ "ttOverwrites": 44704,
+ "passes": 2,
+ "pass_identical_except_wall": true,
+ "wall_s": [8.94, 8.9],
+ "escalation_basis": {
+  "kit": "n11-thirteenth-ladder-top-escalation-20261128",
+  "commit": "12d8359c",
+  "row_result": 1,
+  "row_nodes": 2678305
+ },
+ "companion_cppgate": {
+  "kit": "n11-thirteenth-ladder-top-k01-win-cppgate-20261128",
+  "gate": "GATE-PASS 72,15000000,1,2678305"
+ },
+ "status": "CORROBORATION-PASS (result 1 consistent with the escalation WIN(1) row; two-pillar requirement COMPLETE with the companion cppgate kit)",
+ "status_guard": "pillar bookkeeping only; NO verdict consumed; 11x11 UNKNOWN"
+}

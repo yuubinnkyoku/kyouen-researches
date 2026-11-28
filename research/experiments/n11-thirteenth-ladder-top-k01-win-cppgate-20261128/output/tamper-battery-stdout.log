@@ -1,0 +1,13 @@
+== T1 wrong expected pin (rc=43 expected)
+HARD-STOP: published-row disagreement on k01 (C5: no interpretation)
+rc=43
+== T2 raw nodes edit (rc=42 expected)
+HARD-STOP: determinism mismatch on k01
+rc=42
+== T3 missing input (rc=2 expected)
+missing input/k01.input.csv
+rc=2
+== T4 gate-rows.json expected-pin flip (summary gate, rc=1 expected)
+SUMMARY-FAIL
+G2 expected mismatch k01: 72,15000000,1,2678305 != 72,15000000,1,2678306
+rc=1
