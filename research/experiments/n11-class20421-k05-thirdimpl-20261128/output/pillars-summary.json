@@ -1,0 +1,34 @@
+{
+ "class_index": 20421,
+ "companion_cppgate": {
+  "gate": "GATE-PASS 78,15000000,1,2007513",
+  "kit": "n11-class20421-k05-win-cppgate-20261128"
+ },
+ "declaration": "research/log/2026-11-28-n11-class20421-k05-pillars-declaration.md (commit 772c04bc01d22ae3044a3cf198fe25a41d769f77)",
+ "escalation_basis": {
+  "commit": "9a87750e",
+  "kit": "n11-class20421-k05-escalation-20261128",
+  "row_nodes": 2007513,
+  "row_result": 1
+ },
+ "expansions": 2292427,
+ "invocation": "--row=k05 --stones=5 --legal=78 --lo=1152921642046849024 --hi=68719477248 --cap=400000000 --wallcap=260 --memo-power=22",
+ "key": "1152921642046849024:68719477248",
+ "legal": 78,
+ "nodes": 1279838,
+ "pass_identical_except_wall": true,
+ "passes": 2,
+ "quads": 95670,
+ "result": 1,
+ "row": "k05",
+ "s5_index": 625899,
+ "schema": "n11-class20421-k05-thirdimpl-summary-v1",
+ "script_sha256": "08ea958ff59c3234ec5ac55c5c40689bd0999a34e101a88ea0546800cc4a1998",
+ "status_guard": "pillar bookkeeping only; NO verdict consumed; adoption is a separate declared Part with the WIN-side flip-census review measuring the class-20421 closure-ladder EXIT; class 20421 is NOT complete until the adoption chain closes its last cost-unknown; the standard 11x11 empty board, all 19 central-reply roots, the two-stone root {60,27} and third moves 100/108 stay UNKNOWN; expansions and nodes are bookkeeping, never verdicts",
+ "stones": 5,
+ "ttOverwrites": 3031,
+ "wall_s": [
+  7.09,
+  7.27
+ ]
+}
