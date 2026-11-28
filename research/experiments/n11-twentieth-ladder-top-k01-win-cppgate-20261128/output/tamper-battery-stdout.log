@@ -1,0 +1,11 @@
+=== twentieth k01 pillars external tamper battery (T1-T4 + clean control) ===
+2026-11-28T10:31:40Z
+battery start
+T1 target-input-tamper: SUMMARY-FAIL G0 input pin mismatch k01 
+input/k01.input.csv RESTORED-OK
+T2 anchor-input-tamper: SUMMARY-FAIL G0 input pin mismatch anchor-at2m 
+T3 expected-tamper: SUMMARY-FAIL G2 expected mismatch k01: 87,15000000,1,10752246 != 87,15000000,1,10752247 
+T4 raw-verdict-flip: SUMMARY-FAIL G2 pair mismatch k01: ['87,15000000,1,10752246', '87,15000000,2,10752246'] 
+CLEAN-CONTROL: SUMMARY-PASS {"k01": "87,15000000,1,10752246", "anchor-at2m": "98,2000000,0,2000000", "anchor-aj001": "84,30000000,2,5156075", "anchor-af039": "89,30000000,2,19234232"}
+2026-11-28T10:31:41Z
+battery end
