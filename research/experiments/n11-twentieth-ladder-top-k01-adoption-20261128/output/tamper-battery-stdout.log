@@ -1,0 +1,32 @@
+=== twentieth k01 adoption external tamper battery (disclosed pre-round, no MANIFEST re-pins) ===
+2026-11-28T10:38:10Z
+PRE-T1-replica-result-flip-no-repin ABORTED: GATE FAILED: kit MANIFEST mismatch: n11-twentieth-ladder-top-escalation-20261128/raws/at15m-k01-p1.raw
+PRE-T2-thirdimpl-expansions-drift-no-repin ABORTED: GATE FAILED: kit MANIFEST mismatch: n11-twentieth-ladder-top-k01-thirdimpl-20261128/output/ti/k01.p1.txt
+PRE-T3-gate-raw-quad-flip-no-repin ABORTED: GATE FAILED: kit MANIFEST mismatch: n11-twentieth-ladder-top-k01-win-cppgate-20261128/output/raw/k01.p1.out
+(all three probes fail-closed at the kit MANIFEST gate without re-pins; the repinned probes below reach their intended deeper gates)
+=== end pre-round ===
+
+=== twentieth k01 adoption external tamper battery (repinned T1-T5 + clean control) ===
+2026-11-28T10:38:16Z
+T1-replica-result-flip ABORTED: GATE FAILED: replica pair mismatch k01
+T2-thirdimpl-expansions-drift ABORTED: GATE FAILED: third-impl pair mismatch k01
+T3-gate-raw-quad-flip ABORTED: GATE FAILED: live gate raw != published raw k01
+T4 repinned QUAR_SHA eafacc11
+T4-quarantine-key-injection ABORTED: ValueError: invalid S5 quarantine key: 10376293541479448576:68719476736
+(T5 next)
+
+## T4 retry (valid registry entry) - 2026-11-28
+- probe: injected fully-valid quarantine entry (key [10376293541479448576, 68719476736], active true, unsupported_verdict 1, source+reason) into the maker's pinned local copy results/n11-s5-evidence-quarantine.json and repinned QUAR_SHA in the maker copy (two-step coherent world).
+- result: GATE FAILED: quarantined key k01 (rc=1) => T4 PASS (G4 reachable with valid entry; first attempt with repo-side registry edit did not reach the pinned local copy, earlier attempts with malformed entries were caught by registry validation itself - all fail-closed).
+
+## T5 (coherent freshness world) - 2026-11-28
+- probe: appended s5verdict,10376293541479448576,68719476736,5,1,10752246 to head.cache, repinned BASE_SHA/BASE_ROWS(6906)/BASE_WIN(224) in the maker copy.
+- result: GATE FAILED: freshness: k01 present in BASE (rc=1) => T5 PASS.
+
+## Post-tamper clean control - 2026-11-28
+- restored head.cache (sha e1a9cacc...), BASE pins, QUAR pin (81d23160...), removed gaterun-k01/kitout scratch.
+- result: MAKER-PASS, increment sha 0dc2aa74... (pre-fix run), merged sha 1f1430f3..., rows 6906 WIN 224 LOSS 6682; kitout byte-identical to pre-tamper snapshot (diff -r clean). Tamper battery total: 5/5 PASS + clean control PASS.
+
+## Post-battery comment fix + clean control re-run - 2026-11-28
+- fix: the increment header comment inherited a stale k05 string ('adopted node total 2,007,513'); corrected in the maker to the k01 value 10,752,246 (data row always correct: s5verdict,10376293541479448576,68719476736,5,1,10752246).
+- result: MAKER-PASS x2 byte-identical; new increment sha256 57c5314a931c53bd07d3cf8b0a79f8a3d67157e930285038a19fe653e05a9586; merged head sha256 unchanged 1f1430f3ef808af78b4919a0aea97b2d5075957603ecc4668ad21b3407a63faa (rows 6906 WIN 224 / LOSS 6682). Clean control final.
