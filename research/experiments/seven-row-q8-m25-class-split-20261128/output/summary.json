@@ -1,0 +1,35 @@
+{
+ "w": 7,
+ "q": 8,
+ "m_new_witness": 25,
+ "witness": {
+  "stones": 48,
+  "rows": [
+   7,
+   7,
+   7,
+   6,
+   7,
+   7,
+   7
+  ],
+  "row3_x": [
+   2,
+   5,
+   18,
+   21,
+   23,
+   24
+  ]
+ },
+ "deciding": "class {3} krow=3:6 minpos=2 SAT 666158 conflicts (cold pair identical)",
+ "indet": [
+  "minpos=0 4443950@275s",
+  "minpos=1 4488644@275s"
+ ],
+ "control": "7x24 class{3} krow=6 SAT 869797",
+ "sd_vs_ctrl24": 28,
+ "shift1_on_m26": "safe, not maximal, unblocked [(0,3)]",
+ "conclusion": "M_{7,8} >= 26; range [26,651]",
+ "win_stop": "fired at minpos=2; minpos=3..12 and classes {0},{1},{2} not swept (no absence claim)"
+}

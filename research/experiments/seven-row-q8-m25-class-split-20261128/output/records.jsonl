@@ -1,0 +1,4 @@
+{"board": "7x24 q8", "inst": "class{3} krow=6 (control)", "verdict": "SAT", "conflicts": 869797, "note": "post-reset reproduction of the pre-declaration calibration; decoded 48 stones rows [7,7,7,6,7,7,7]"}
+{"board": "7x25 q8", "inst": "class{3} krow=3:6 minpos=0", "verdict": "INDET", "conflicts": 4443950, "note": "275s cap, SIGTERM time-cut"}
+{"board": "7x25 q8", "inst": "class{3} krow=3:6 minpos=1", "verdict": "INDET", "conflicts": 4488644, "note": "275s cap, SIGTERM time-cut"}
+{"board": "7x25 q8", "inst": "class{3} krow=3:6 minpos=2", "verdict": "SAT", "conflicts": 666158, "note": "deciding instance, cold pair run1/run2 identical; witness rows [7,7,7,6,7,7,7]"}
