@@ -1,0 +1,77 @@
+{
+ "combined_owner_union": [
+  5308,
+  5804,
+  8811
+ ],
+ "control": {
+  "u04": {
+   "derived": [
+    23092,
+    23101,
+    23115,
+    23938
+   ],
+   "published_flip": [
+    23092,
+    23101,
+    23115,
+    23938
+   ],
+   "s5_index": 745184,
+   "verdict": "exact match (zero-deviation flip published in 2092e7a8)"
+  }
+ },
+ "inputs": {
+  "batch_summary": "b6ee7a935d973fc28cb31f9e862df817bc584fa0ef7a41536b0d936171451f3a",
+  "graph": "54f9c3643eeba139ea5e8d3babb1db9744d19f00f3cf024bbf192ec0d408c00b",
+  "head": "d772f73c68bf051e7b90e5cd6cfef2a7b1c8e07da888c5f728f7a04b39edd1ec",
+  "k01_input": "fce9ae7a9c6d81c54a45bce79ff4c030940fabb829b7b9696fd3af3767a0136b",
+  "ladder": "be8bcff16a7a557d30703921d9a024a232b0fade5fab16afb015a07666fcdc62"
+ },
+ "part": "read-only pre-registration of the class-5804 k01 adoption flip inputs",
+ "predicted_k01_adoption_flip": {
+  "caveats": [
+   "u03 precedent: an owner class may already be excluded_now on the BASE side (serving-class pre-exclusion); census status must be measured, not assumed",
+   "u04 precedent: unknown_now churn can be zero when flips land exactly as predicted",
+   "owner class 8811 is itself a ladder row (rank 17, unknown_now 52): its census status must be measured; the k01 WIN row does not resolve class 8811",
+   "class 5804 does NOT leave the 799-row ladder on a k01-only adoption (unknown_now 4->3); k02/k03/k04 stay 2M UNKNOWN",
+   "Board-verified free_now required at adoption time for any class-completion claim",
+   "class 5804 completion additionally requires k02/k03/k04 (all still stage-1 2M UNKNOWN, re-escalation only under a future declaration)"
+  ],
+  "expected_class_flips_if_all3_unknown": {
+   "5308": "unknown->excluded_now",
+   "5804": "unknown->excluded_now",
+   "8811": "unknown->excluded_now"
+  },
+  "ladder_prediction": "serving class 5804 stays in the closure ladder (unknown_now 4->3); NOT a ladder exit unlike the thirteenth adoption",
+  "note": "prediction only; replaced by measurement at the adoption reaudit",
+  "owner_union": [
+   5308,
+   5804,
+   8811
+  ]
+ },
+ "schema": "n11-fourteenth-owner-union-precheck-v1",
+ "serving_class": {
+  "class_index": 5804,
+  "in_799_row_ladder": true,
+  "key": "6053400849139367936:0",
+  "ladder_rank": 1,
+  "unknown_now": 4
+ },
+ "status_guard": "pre-registration bookkeeping only; NO verdict consumed; 11x11 UNKNOWN",
+ "targets": {
+  "k01": {
+   "escalation": "WIN(1) nodes 4360661 @15000000 (kit 5c670bc6)",
+   "key": "6053401124017274880:0",
+   "owner_classes": [
+    5308,
+    5804,
+    8811
+   ],
+   "pillars": "COMPLETE (cppgate GATE-PASS 86,15000000,1,4360661 kit 35b5fef1 + thirdimpl CORROBORATION-PASS result 1, log 68852ff2)",
+   "s5_index": 198576
+  }
+ }
+}

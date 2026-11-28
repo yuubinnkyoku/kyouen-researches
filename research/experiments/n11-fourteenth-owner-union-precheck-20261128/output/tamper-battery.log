@@ -1,0 +1,6 @@
+tamper battery (each on a fresh copy of the kit; expected fail-closed rc=1)
+T1 script head-pin digit flip:            GATE-FAIL G0:head -> rc=1 PASS(fail-closed)
+T2 input/head.cache row deletion:          GATE-FAIL G0:head -> rc=1 PASS(fail-closed)
+T3 batch-summary k01 nodes 4360661->...62: GATE-FAIL G0:batch_summary -> rc=1 PASS(fail-closed)
+T4 dependency-graph.json.gz removed:      GATE-FAIL G0:graph -> rc=1 PASS(fail-closed)
+clean control: PRECHECK-PASS, output byte-identical across 3 runs
