@@ -1,0 +1,41 @@
+{
+ "schema": "n11-thirteenth-ladder-top-k02-pillars-xhost-summary-v1",
+ "declaration": {
+  "path": "research/log/2026-11-28-n11-thirteenth-ladder-top-k02-pillars-xhost-declaration.md",
+  "commit": "5e85409f46776d0f723a9941b5b4af5a16a93249",
+  "protocol": "publish-then-execute, single owner"
+ },
+ "target": {
+  "key": "1152922672837951488:65792",
+  "class_index": 16757,
+  "legal": 72,
+  "escalation_verdict": "WIN(1) nodes 3485963 @15000000 (published 3087c38b)",
+  "head_basis": "beecb024 (6894 rows WIN212/LOSS6682), target verified fresh/absent"
+ },
+ "gate": {
+  "build": "same fresh zig 0.13.0 build as the k01 xhost Part (source 9193f5b6 + headers 5976935d/2e36d694, tarball pin d45312e6, sha-verified)",
+  "expected_pinned": "72,15000000,1,3485963",
+  "k02": {
+   "p1": "72,15000000,1,3485963",
+   "p2": "72,15000000,1,3485963",
+   "pair_node_identical": true,
+   "matches_published": true,
+   "raw_vs_published_diff": "none (both gate raws byte-identical to the published cppgate kit raws, including wall_s 8)"
+  }
+ },
+ "anchors": {
+  "note": "not re-run in this Part; this host's anchor evidence (all three node-exact, wall-only diffs disclosed) is published in the k01 xhost kit (eb542121) and was disclosed in this Part's declaration"
+ },
+ "third_impl": {
+  "script_sha256": "08ea958f (standing pin, byte-fetched and verified)",
+  "invocation": "--row=k02 --stones=5 --legal=72 --lo=1152922672837951488 --hi=65792 --cap=400000000 --wallcap=260 --memo-power=22",
+  "expected_pinned": {"result": 1, "expansions": 3910009, "nodes": 2425008, "quads": 95670, "ttOverwrites": 268071},
+  "p1": {"result": 1, "expansions": 3910009, "nodes": 2425008, "quads": 95670, "ttOverwrites": 268071, "wall_s": 12.88},
+  "p2": {"result": 1, "expansions": 3910009, "nodes": 2425008, "quads": 95670, "ttOverwrites": 268071, "wall_s": 12.61},
+  "pair_field_identical": true,
+  "matches_published": true,
+  "raw_vs_published_diff": "wall_s only (12.88/12.61 vs published 12.14/12.04)"
+ },
+ "verdict": "XHOST-PASS",
+ "status_guard": "third-party replication bookkeeping only; NO verdict consumed; 11x11 UNKNOWN"
+}
