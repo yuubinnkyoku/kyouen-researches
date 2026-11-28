@@ -1,28 +1,35 @@
 {
  "schema": "n11-sixteenth-ladder-top-k01-thirdimpl-summary-v1",
- "declaration_commit": "60f4bac8",
- "result": "CORROBORATION-PASS",
- "key": "1155454779397246976:131072",
+ "declaration": "research/log/2026-11-28-n11-sixteenth-ladder-top-k01-pillars-declaration.md (commit 60f4bac8)",
  "row": "k01",
+ "key": "1155454779397246976:131072",
  "class_index": 20421,
  "s5_index": 528689,
+ "stones": 5,
  "legal": 76,
- "third_impl_sha256": "08ea958f...",
- "flags": "--row=k01 --stones=5 --legal=76 --lo=1155454779397246976 --hi=131072 --cap=400000000 --wallcap=260 --memo-power=22",
- "p1": {
-  "result": 1,
-  "expansions": 6003522,
-  "nodes": 3591656,
-  "ttOverwrites": 1831190,
-  "wall_s": 18.85
+ "invocation": "--row=k01 --stones=5 --legal=76 --lo=1155454779397246976 --hi=131072 --cap=400000000 --wallcap=260 --memo-power=22",
+ "script_sha256": "08ea958ff59c3234ec5ac55c5c40689bd0999a34e101a88ea0546800cc4a1998",
+ "result": 1,
+ "expansions": 6003522,
+ "nodes": 3591656,
+ "quads": 95670,
+ "ttOverwrites": 1831190,
+ "passes": 2,
+ "pass_identical_except_wall": true,
+ "wall_s": [
+  18.85,
+  19.47
+ ],
+ "escalation_basis": {
+  "kit": "n11-sixteenth-ladder-top-escalation-20261128",
+  "commit": "85edd462",
+  "row_result": 1,
+  "row_nodes": 5273778
  },
- "p2": {
-  "result": 1,
-  "expansions": 6003522,
-  "nodes": 3591656,
-  "ttOverwrites": 1831190,
-  "wall_s": 19.47
+ "companion_cppgate": {
+  "kit": "n11-sixteenth-ladder-top-k01-win-cppgate-20261128",
+  "gate": "GATE-PASS 76,15000000,1,5273778"
  },
- "identical_except_wall": true,
- "status_guard": "pillar bookkeeping only; NO verdict consumed; 11x11 UNKNOWN"
+ "status_guard": "pillar bookkeeping only; NO verdict consumed; adoption is a separate declared Part with the standing WIN-side flip-census review; class 20421 is NOT complete (k02-k05 remain stage-1 2M UNKNOWN); the standard 11x11 empty board, all 19 central-reply roots, the two-stone root {60,27} and third moves 100/108 stay UNKNOWN; expansions and nodes are bookkeeping, never verdicts",
+ "disclosure": "this file replaces the kit's first pillars-summary.json (published in fd960128), which used a deviating schema (nested p1/p2, string result) rejected fail-closed by the adoption maker G2 cross-check; no measured value changed (same two cold passes, same MANIFEST-pinned raws); corrected to the lineage summary schema before the adoption Part consumed the kit"
 }
