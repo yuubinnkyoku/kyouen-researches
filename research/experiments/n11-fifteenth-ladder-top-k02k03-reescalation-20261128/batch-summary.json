@@ -1,0 +1,83 @@
+{
+ "calibration": {
+  "key": "1153485622925590528:0",
+  "matches_published_cal_raw": "values identical (result 0, nodes 2,000,000, forbidden quadruples 95,670, wall_s 9) to the published fifteenth escalation kit calibration raw values; only stdout footer line ordering may differ between hosts (buffering), so the raw file sha (1c82d7da...) differs from the fifteenth kit's raw (05ce2090...) while no values differ",
+  "nodes": 2000000,
+  "note": "pre-declared host calibration, run after the declaration was published and before the declared 15M runs",
+  "result": 0,
+  "wall_s": 9
+ },
+ "declared_order": [
+  "k02",
+  "k03 (only if k02 does not resolve WIN(1))"
+ ],
+ "disclosures": [
+  "declaration published before execution (commit 88a24418); all calibration and 15M runs executed after it was on main",
+  "k02 15M cold pair node-identical with wall_s 80 vs 80; k03 15M cold pair fully byte-identical (58f2ad9d... both)",
+  "the two key input CSVs are byte-verified copies of the published fifteenth escalation kit input files (fda5d01d... / cad75b29...); the calibration input is the byte-verified copy (52d79efc...)",
+  "the runner was sha-verified (84585617...) before the runs from the byte-verified local copy of the published runner",
+  "k02 stays unresolved at 15M (budget exhausted, nodes 15,000,000); parking/L50M for k02 only under a future declaration",
+  "the k03 WIN(1) is single-implementation (jsreplay replica, cold pair) and requires the C++ second-implementation scrutiny gate plus a third-implementation corroboration before any adoption Part",
+  "class 5804 is ALREADY excluded_now (k01 WIN win-hit, published reaudit 3395d0ec); the k03 WIN does not change class-status bookkeeping; k02 remains unknown so the class is NOT complete"
+ ],
+ "escalation_15m": {
+  "k02": {
+   "budget": 15000000,
+   "class_index": 5804,
+   "key": "6052837899185946628:128",
+   "legal": 87,
+   "nodes": 15000000,
+   "pair_byte_identical": false,
+   "pair_node_identical": true,
+   "result": 0,
+   "s5_index": 212115,
+   "status": "UNKNOWN(0) at 15M budget (nodes 15,000,000, budget exhausted); escalated because no WIN-stop fired before it; stays UNKNOWN, parking/L50M only under a future declaration",
+   "wall_s": [
+    80,
+    80
+   ]
+  },
+  "k03": {
+   "budget": 15000000,
+   "class_index": 5804,
+   "key": "6053400849139367936:128",
+   "legal": 92,
+   "nodes": 3364655,
+   "pair_byte_identical": true,
+   "pair_node_identical": true,
+   "result": 1,
+   "s5_index": 212536,
+   "status": "WIN(1) resolved at 15M budget (nodes 3,364,655); escalated after k02 did not resolve WIN(1); single-implementation, adoption requires the 3-pillar scrutiny chain",
+   "wall_s": [
+    15,
+    15
+   ]
+  }
+ },
+ "head_basis": {
+  "loss": 6682,
+  "rows": 6898,
+  "sha256_prefix": "b5f322dd",
+  "win": 216
+ },
+ "part": "fifteenth class 5804 k02/k03 re-escalation (declared in research/log/2026-11-28-n11-fifteenth-ladder-top-k02k03-reescalation-declaration.md, commit 88a24418)",
+ "runner": {
+  "mode": "--only=5 --memo=22 cold solver per row, no shared TT",
+  "name": "jsreplay.js",
+  "sha256": "845856175d3c793a7eb4306f5902ecda3f1c046a8a53e8f34ed375e51febc3df",
+  "source_path": "research/experiments/n11-s4bd-fresh-corpus-regen-20261121/scripts/jsreplay.js"
+ },
+ "schema": "n11-fifteenth-ladder-top-k02k03-reescalation-summary-v1",
+ "stage1_2m_published_pins": {
+  "k02": {
+   "note": "published fifteenth escalation kit stage-1 raws (55ea4986... / 03c3af56...), not re-run in this Part",
+   "result": 0
+  },
+  "k03": {
+   "note": "published fifteenth escalation kit stage-1 raws (07f6b1be... byte-identical pair), not re-run in this Part",
+   "result": 0
+  }
+ },
+ "status_guard": "re-escalation bookkeeping only: NO verdict is consumed; class 5804 is ALREADY excluded_now (k01 WIN win-hit) and stays excluded_now regardless of these results; the k03 WIN(1) row is single-implementation (jsreplay replica, cold pair) and requires the C++ second-implementation scrutiny gate plus a third-implementation corroboration before any adoption Part; k02 remains UNKNOWN at 15M so the class is NOT complete and no free_now flip is claimed here; the standard 11x11 empty board, all 19 central-reply roots, the two-stone root {60,27} and third moves 100/108 remain UNKNOWN; nodes are bookkeeping, never verdicts",
+ "win_stop_rule": "re-affirmed but NOT fired: k02 did not resolve WIN(1) at 15M (UNKNOWN, budget exhausted), so k03 escalated per the declared order; k03 resolved WIN(1) with no remaining declared keys"
+}
