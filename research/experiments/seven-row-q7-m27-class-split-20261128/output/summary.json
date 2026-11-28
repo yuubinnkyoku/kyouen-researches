@@ -1,0 +1,39 @@
+{
+ "schema": "seven-row-q7-m27-class-split-v1",
+ "deciding_instance": {
+  "w": 7,
+  "m": 27,
+  "q": 7,
+  "class": [
+   3
+  ],
+  "krow": "3:5",
+  "minpos": 0
+ },
+ "result": "SAT",
+ "conflicts": 1458793,
+ "cold_pair": "v-lines byte-identical",
+ "witness": {
+  "stones": 41,
+  "rows": [
+   6,
+   6,
+   6,
+   5,
+   6,
+   6,
+   6
+  ],
+  "span": [
+   0,
+   26
+  ],
+  "dual_verified": true
+ },
+ "consequence": "M_{7,7} >= 28 (range [28,708])",
+ "unswept": {
+  "minpos": "1..13 (WIN-stop)",
+  "classes": "{0},{1},{2}, multi-deficiency"
+ },
+ "date": "2026-11-28"
+}
