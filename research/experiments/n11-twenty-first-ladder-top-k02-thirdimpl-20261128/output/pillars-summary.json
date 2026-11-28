@@ -1,26 +1,24 @@
 {
- "schema": "n11-twenty-first-ladder-top-k02-pillars-summary-v1",
- "declaration_commit": "7bccf228",
- "corroboration": "CORROBORATION-PASS",
- "gate": {
-  "gate": "GATE-PASS",
-  "gate_row": "85,15000000,1,8036766",
-  "raws": "output/raw/k02.p1.out + k02.p2.out (fresh cold pair, node-identical)"
- },
+ "cap": 400000000,
+ "corroboration": "CORROBORATION-PASS (result 1 consistent with the published 15M WIN(1) row)",
+ "declaration": "research/log/2026-11-28-n11-twenty-first-ladder-top-k02-pillars-declaration.md (commit 7bccf228)",
+ "expansions": 9415378,
  "key": "1153484454578094080:68719476736",
  "legal": 85,
- "owner_union": ["4715", "34269"],
- "s5_index": 178184,
- "status_guard": "pillar bookkeeping only; NO verdict consumed; NOT adopted by this Part; 11x11 UNKNOWN",
- "third_impl": {
-  "arguments": "--row=k02 --legal=85 --lo=1153484454578094080 --hi=68719476736 --cap=400000000 --wallcap=260 --memo-power=22",
-  "expansions": 9415378,
-  "nodes": 5058105,
-  "quads": 95670,
-  "result": 1,
-  "script_sha256": "08ea958f",
-  "ttOverwrites": 5221080,
-  "wall_s_pair": ["30.93", "28.26"],
-  "x2_identical": "result + expansions + nodes + ttOverwrites identical; wall_s host-differs"
- }
+ "memo_power": 22,
+ "nodes": 5058105,
+ "passes_identical": true,
+ "quads": 95670,
+ "result": 1,
+ "row": "k02",
+ "schema": "n11-twenty-first-ladder-top-k02-thirdimpl-summary-v1",
+ "status_guard": "pillar bookkeeping only; NO verdict consumed; 11x11 UNKNOWN",
+ "stones": 5,
+ "third_impl_sha256": "08ea958ff59c3234ec5ac55c5c40689bd0999a34e101a88ea0546800cc4a1998",
+ "ttOverwrites": 5221080,
+ "wall_s_pair": [
+  "30.93",
+  "28.26"
+ ],
+ "wallcap": 260
 }
