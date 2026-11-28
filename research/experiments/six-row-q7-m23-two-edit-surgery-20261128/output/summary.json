@@ -1,0 +1,36 @@
+{
+ "lane": "six-row-q7-m23-two-edit-surgery-20261128",
+ "w": 6,
+ "m": 23,
+ "q": 7,
+ "result": "two-edit surgery negative at both placements; no witness within edit distance <=2 of the 6x22 witness",
+ "surgery": {
+  "shift1_target": [
+   0,
+   2
+  ],
+  "shift1_candidates": 777360,
+  "shift1_safe": 0,
+  "shift1_witnesses": 0,
+  "shift1_tcurve_census": {
+   "c4": 0,
+   "c5": 1
+  },
+  "shift0_target": [
+   22,
+   2
+  ],
+  "shift0_candidates": 777360,
+  "shift0_safe": 0,
+  "shift0_witnesses": 0,
+  "shift0_tcurve_census": {
+   "c4": 0,
+   "c5": 1
+  },
+  "determinism": "run1/run2 sha256-identical both placements",
+  "spotcheck": "300/300 engine rejections confirmed, 0 missed witnesses",
+  "calibration": "q=7 6x22 published case reproduced byte-exactly (calib-m22.json == published surgery-m22.run1.json, sha 1ac7c6d8...)"
+ },
+ "range": "M_{6,7} in [23,402] unchanged; frontier stays 6x23",
+ "non_claims": "local negative only (edit distance <=2); no absence claim; 11x11 roots and all closure classes remain UNKNOWN"
+}
