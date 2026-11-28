@@ -1,0 +1,212 @@
+{
+ "calibration": {
+  "budget": 2000000,
+  "forbidden_quadruples": 95670,
+  "key": "1153485622925590528:0",
+  "nodes": 2000000,
+  "published_value_agreement": "values identical to the published sixteenth escalation kit calibration (result 0, nodes 2,000,000, fq 95,670); wall_s host-differs (10 published)",
+  "result": 0,
+  "wall_s": 11
+ },
+ "claim_status": "escalation bookkeeping only; no verdict claimed or consumed; 11x11 empty board, all 19 central-reply roots, two-stone root {60,27}, third-move pair {100,108} and every closure class (34269 included) remain UNKNOWN",
+ "declaration_commit": "f04f1fe23029e4071296662294e652a5e9ff279f",
+ "disclosures": [
+  "stage-1 prediction (UNKNOWN with budget exhaustion) held for all eleven keys",
+  "k01 15M cold pair node-identical (wall_s 69/68)",
+  "no verdict consumed; k01 WIN(1) is single-implementation (jsreplay replica) and requires cppgate + third_impl pillars before adoption"
+ ],
+ "head_basis": {
+  "loss": 6682,
+  "rows": 6905,
+  "sha256": "e1a9cacc54abad5198e455ff53492310fabc28f5f89cf26363a7f3da7fe944de",
+  "win": 223
+ },
+ "keys": {
+  "k01": {
+   "at15m": {
+    "nodes": 10752246,
+    "pair": "node-identical",
+    "result": 1,
+    "wall_s_pair": [
+     "69",
+     "68"
+    ]
+   },
+   "key": "10376293541479448576:68719476736",
+   "legal": 87,
+   "s5_index": 38891,
+   "stage1_2m": {
+    "nodes": 2000000,
+    "pair": "node-identical",
+    "result": 0,
+    "wall_s_pair": [
+     "10",
+     "10"
+    ]
+   }
+  },
+  "k02": {
+   "at15m": "not escalated (WIN-stop fired at k01)",
+   "key": "1153484454578094080:68719476736",
+   "legal": 85,
+   "s5_index": 178184,
+   "stage1_2m": {
+    "nodes": 2000000,
+    "pair": "node-identical",
+    "result": 0,
+    "wall_s_pair": [
+     "10",
+     "10"
+    ]
+   }
+  },
+  "k03": {
+   "at15m": "not escalated (WIN-stop fired at k01)",
+   "key": "1152921504624738304:68719476736",
+   "legal": 85,
+   "s5_index": 355050,
+   "stage1_2m": {
+    "nodes": 2000000,
+    "pair": "node-identical",
+    "result": 0,
+    "wall_s_pair": [
+     "11",
+     "11"
+    ]
+   }
+  },
+  "k04": {
+   "at15m": "not escalated (WIN-stop fired at k01)",
+   "key": "1152921504624705536:68719476736",
+   "legal": 90,
+   "s5_index": 809575,
+   "stage1_2m": {
+    "nodes": 2000000,
+    "pair": "node-identical",
+    "result": 0,
+    "wall_s_pair": [
+     "10",
+     "10"
+    ]
+   }
+  },
+  "k05": {
+   "at15m": "not escalated (WIN-stop fired at k01)",
+   "key": "1152921573344149504:68719476736",
+   "legal": 82,
+   "s5_index": 900276,
+   "stage1_2m": {
+    "nodes": 2000000,
+    "pair": "node-identical",
+    "result": 0,
+    "wall_s_pair": [
+     "10",
+     "11"
+    ]
+   }
+  },
+  "k06": {
+   "at15m": "not escalated (WIN-stop fired at k01)",
+   "key": "1152921504624672768:68720525312",
+   "legal": 80,
+   "s5_index": 900687,
+   "stage1_2m": {
+    "nodes": 2000000,
+    "pair": "node-identical",
+    "result": 0,
+    "wall_s_pair": [
+     "10",
+     "10"
+    ]
+   }
+  },
+  "k07": {
+   "at15m": "not escalated (WIN-stop fired at k01)",
+   "key": "1152921504624689152:68719476736",
+   "legal": 83,
+   "s5_index": 941211,
+   "stage1_2m": {
+    "nodes": 2000000,
+    "pair": "node-identical",
+    "result": 0,
+    "wall_s_pair": [
+     "10",
+     "10"
+    ]
+   }
+  },
+  "k08": {
+   "at15m": "not escalated (WIN-stop fired at k01)",
+   "key": "1152921504624672770:68719476736",
+   "legal": 84,
+   "s5_index": 956329,
+   "stage1_2m": {
+    "nodes": 2000000,
+    "pair": "node-identical",
+    "result": 0,
+    "wall_s_pair": [
+     "10",
+     "10"
+    ]
+   }
+  },
+  "k09": {
+   "at15m": "not escalated (WIN-stop fired at k01)",
+   "key": "1152921504624676864:68719476736",
+   "legal": 88,
+   "s5_index": 957713,
+   "stage1_2m": {
+    "nodes": 2000000,
+    "pair": "node-identical",
+    "result": 0,
+    "wall_s_pair": [
+     "10",
+     "11"
+    ]
+   }
+  },
+  "k10": {
+   "at15m": "not escalated (WIN-stop fired at k01)",
+   "key": "1152921508919640064:68719476736",
+   "legal": 76,
+   "s5_index": 958080,
+   "stage1_2m": {
+    "nodes": 2000000,
+    "pair": "node-identical",
+    "result": 0,
+    "wall_s_pair": [
+     "10",
+     "10"
+    ]
+   }
+  },
+  "k11": {
+   "at15m": "not escalated (WIN-stop fired at k01)",
+   "key": "1152921504607899648:73014444032",
+   "legal": 76,
+   "s5_index": 958143,
+   "stage1_2m": {
+    "nodes": 2000000,
+    "pair": "node-identical",
+    "result": 0,
+    "wall_s_pair": [
+     "10",
+     "10"
+    ]
+   }
+  }
+ },
+ "schema": "n11-twentieth-ladder-top-escalation-summary-v1",
+ "selection_basis": {
+  "class_index": 34269,
+  "class_key": "1152921504624672768:68719476736",
+  "completion_log": "f3a43b7f",
+  "kit_commit": "de1a99db",
+  "unknown_now": 11
+ },
+ "win_stop": {
+  "at": "k01",
+  "fired": true,
+  "later_keys": "stage-1 2M UNKNOWN (parked)"
+ }
+}
